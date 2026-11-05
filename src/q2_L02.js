@@ -162,7 +162,7 @@ QUESTIONS.push(
  stem:'Why should patients on topical retinoids avoid sun exposure and use sunscreen?',
  options:[
   {t:'They may raise the tumor risk from UV light', correct:true, why:'Slide 16: may increase the tumorigenic potential of ultraviolet radiation (animal data); (T 48–53).'},
-  {t:'Sunlight turns them into a sensitizer', correct:false, why:'Being a potent contact sensitizer is a benzoyl peroxide effect (slide 37).'},
+  {t:'Sunlight converts them to benzoic acid', correct:false, why:'Benzoic acid is the metabolite of benzoyl peroxide in the skin (T 498–500), not a retinoid product.'},
   {t:'Sunlight greatly raises their systemic absorption', correct:false, why:'Not a reason given on slide 16.'},
   {t:'UV light makes them comedogenic', correct:false, why:'The comedone flare comes from peeling (T 20–28), not from UV light.'}],
  teach:'Peeling off outer layers leaves the skin more sensitive to UV radiation. Slide 16: retinoids may increase the tumorigenic potential of UV radiation, from animal studies, so counsel patients to avoid or minimize sun exposure and use a sunscreen (T 48–53).',
@@ -224,17 +224,7 @@ QUESTIONS.push(
  teach:'Tretinoin is the acid form of vitamin A (all-trans retinoic acid, ATRA), used for acne. Less than 10% is absorbed, so some drug does reach the circulation from topical use (slide 17; T 60–62).',
  cite:D2+' slide 17; T 60–62'},
 
-{id:'L2-015', skill:'class', prof:'Smith', tier:'new', topic:'l2-tret', sub:'prod', concept:'tretinoin-identity',
- tags:['recall'], source:'both',
- stem:'Which retinoid is the acid form of vitamin A, also known as ATRA?',
- options:[
-  {t:'Tretinoin', correct:true, why:'Slide 17: acid form of vitamin A; all-trans retinoic acid or ATRA.'},
-  {t:'Adapalene', correct:false, why:'Adapalene resembles retinoic acid but is a different compound (slide 18).'},
-  {t:'Acitretin', correct:false, why:'Acitretin is an oral retinoid for psoriasis (slide 20).'},
-  {t:'Calcipotriene', correct:false, why:'Calcipotriene is a vitamin D analog (slide 21).'}],
- teach:'Tretinoin (ATRA) is the acid form of vitamin A and is used topically for acne (slide 17; T 60–62).',
- cite:D2+' slide 17; T 60–62'},
-
+/* L2-015 held out: tretinoin's chemical identity (ATRA) is close to the retinoid structures she excluded (T 102-103). */
 {id:'L2-016', skill:'counsel', prof:'Smith', tier:'new', topic:'l2-tret', sub:'prod', concept:'tretinoin-micro',
  tags:['counseling','case'], source:'both',
  stem:'A patient finds standard topical tretinoin too irritating. Which change fits?',
@@ -290,7 +280,7 @@ QUESTIONS.push(
  teach:'Of the topical retinoids, tazarotene covers psoriasis as well as acne and wrinkles. It causes photosensitivity and needs contraceptive counseling (slide 18; T 75–81).',
  cite:D2+' slide 18; T 75–81'},
 
-{id:'L2-021', skill:'tell', prof:'Smith', tier:'new', topic:'l2-tret', sub:'prod', concept:'tazarotene-vs-adapalene',
+{id:'L2-021', skill:'tell', prof:'Smith', tier:'new', topic:'l2-tret', sub:'prod', concept:'tazarotene-vs-adapalene', dupOf:'L2-017',
  tags:['tell'], source:'both',
  stem:'Which statement separates tazarotene from adapalene?',
  options:[
@@ -418,7 +408,7 @@ QUESTIONS.push(
 
 {id:'L2-032', skill:'adverse', prof:'Smith', tier:'new', topic:'l2-oret', sub:'aci', concept:'acitretin-liver',
  tags:['adverse','counseling'], source:'both',
- stem:'Which adverse effect of acitretin, beyond those of isotretinoin, calls for liver function monitoring?',
+ stem:'Which adverse effect does acitretin add to those of isotretinoin?',
  options:[
   {t:'Hepatotoxicity, including fatal hepatitis', correct:true, why:'Slide 20; (T 104–106) hepatotoxicity has resulted in fatalities, so liver function should be checked.'},
   {t:'Nephrotoxicity needing dose changes', correct:false, why:'Nephrotoxicity is the calcineurin inhibitor concern (slide 30).'},
@@ -709,7 +699,7 @@ QUESTIONS.push(
   {t:'Breaks down cAMP to 5\'-AMP', correct:false, why:'That is phosphodiesterase (slide 32).'},
   {t:'Binds IL-2 at the cell surface', correct:false, why:'IL-2 binds CD25 of its receptor (slide 25).'}],
  teach:'Calcium and calmodulin activate calcineurin, a phosphatase. It dephosphorylates NFAT; active NFAT enters the nucleus and drives IL-2 expression (slide 26; T 319–331).',
- note:'At T 322 she said calcineurin "phosphorylates a transcription factor"; the next line (T 323), her repeat (T 328, "it\'ll [dephosphorylate] this transcription factor NFAT") and the slide 26 notes all describe removal of the phosphate. Keyed to dephosphorylation.',
+ note:'At T 322 she said calcineurin "phosphorylates a transcription factor"; the next line (T 323), her repeat (T 328, transcribed "it\'ll defhospholate this transcription factor NFAT") and the slide 26 notes all describe removal of the phosphate. Keyed to dephosphorylation.',
  cite:D2+' slide 26; T 319–331'},
 
 {id:'L2-058', skill:'mech', prof:'Smith', tier:'new', topic:'l2-tcell', sub:'mech', concept:'nfat-state',
@@ -745,7 +735,7 @@ QUESTIONS.push(
  teach:'Tacrolimus (tac, FK506) inhibits calcineurin by first binding FKBP; cyclosporine binds cyclophilin (slide 26; T 347–355).',
  cite:D2+' slide 26; T 347–355'},
 
-{id:'L2-061', skill:'tell', prof:'Smith', tier:'new', topic:'l2-tcell', sub:'mech', concept:'immunophilin-pair',
+{id:'L2-061', skill:'tell', prof:'Smith', tier:'new', topic:'l2-tcell', sub:'mech', concept:'immunophilin-pair', dupOf:'L2-059',
  tags:['tell'], source:'both',
  stem:'Which pairing of calcineurin inhibitor and binding protein is correct?',
  options:[
@@ -941,14 +931,14 @@ QUESTIONS.push(
 
 {id:'L2-078', skill:'tell', prof:'Smith', tier:'new', topic:'l2-cni', sub:'oral', concept:'tacrolimus-neuropathy', dupOf:'L2-077',
  tags:['case','tell'], source:'both',
- stem:'A transplant patient on an oral calcineurin inhibitor reports tingling in the hands and feet. Which drug is most likely?',
+ stem:'A patient on an oral calcineurin inhibitor develops a neuropathy. Which drug is most likely?',
  options:[
-  {t:'Tacrolimus', correct:true, why:'Slide 30: neuropathies with tacrolimus only; (T 412–419) patients on tacrolimus complained of tingling in their hands and feet.'},
+  {t:'Tacrolimus', correct:true, why:'Slide 30: neuropathies are a tacrolimus-specific effect; (T 409–411).'},
   {t:'Cyclosporine', correct:false, why:'Cyclosporine\'s specific effect is gingival hyperplasia (slide 30).'},
   {t:'Pimecrolimus', correct:false, why:'A topical calcineurin inhibitor for AD (slide 27).'},
   {t:'Apremilast', correct:false, why:'A PDE-4 inhibitor; its side effects are GI distress, headache, weight loss and depression (slide 34).'}],
- teach:'Tingling in the hands and feet points to the tacrolimus-specific neuropathy (slide 30; T 409–419).',
- cite:D2+' slide 30; T 408–419'},
+ teach:'Drug-specific effects of the oral calcineurin inhibitors: gingival hyperplasia with cyclosporine, neuropathies with tacrolimus (slide 30; T 408–411).',
+ cite:D2+' slide 30; T 408–411'},
 
 {id:'L2-079', skill:'pk', prof:'Smith', tier:'new', topic:'l2-cni', sub:'oral', concept:'cni-cyp3a4',
  tags:['interaction'], source:'both',
@@ -1120,14 +1110,14 @@ QUESTIONS.push(
 
 {id:'L2-094', skill:'adverse', prof:'Smith', tier:'new', topic:'l2-ker', sub:'bpo', concept:'bpo-sensitizer',
  tags:['adverse','cue'], source:'both',
- stem:'A patient develops swollen, scaly eyelids after using benzoyl peroxide near the eyes. Which property explains this?',
+ stem:'Besides skin irritation, which adverse property does benzoyl peroxide have?',
  options:[
-  {t:'It is a potent contact sensitizer', correct:true, why:'Slide 37; (T 500–501, 508) "it is a very potent sensitizer".'},
+  {t:'It is a potent contact sensitizer', correct:true, why:'Slide 37; (T 500–501) "it is a very potent sensitizer".'},
   {t:'It causes photosensitivity', correct:false, why:'Photosensitivity is listed for retinoids and calcipotriene (slides 16, 22), not benzoyl peroxide (slide 37).'},
   {t:'It is comedogenic', correct:false, why:'Comedogenic is a sulfur side effect (slide 38).'},
   {t:'It raises the blood salicylate level', correct:false, why:'Salicylism belongs to salicylic acid (slide 40).'}],
  teach:'Slide 37: skin irritation (drying, peeling, burning, blistering, scaling, edema); a potent contact sensitizer; keep it away from the eyes and mucous membranes.',
- cite:D2+' slide 37; T 500–510'},
+ cite:D2+' slide 37; T 500–501'},
 
 {id:'L2-095', skill:'counsel', prof:'Smith', tier:'new', topic:'l2-ker', sub:'bpo', concept:'bpo-counsel', multi:true,
  tags:['counseling','tell'], source:'both',
@@ -1159,7 +1149,7 @@ QUESTIONS.push(
   {t:'Bacteriostatic: it stops bacterial growth', correct:true, why:'Slide 38; (T 516–518) "it doesn\'t kill off the bacteria, but it helps prevent them from, uh, proliferating".'},
   {t:'Bactericidal: it kills P. acnes', correct:false, why:'(T 517) "it doesn\'t kill off the bacteria".'},
   {t:'It binds the 50S subunit of the bacterial ribosome', correct:false, why:'That is chloramphenicol and the macrolides (slide 42).'},
-  {t:'It has no antibacterial effect', correct:false, why:'Slide 38: bacteriostatic properties.'}],
+  {t:'It binds the 30S ribosomal subunit', correct:false, why:'That is the tetracycline class (slide 42).'}],
  teach:'Sulfur is a mild keratolytic with bacteriostatic properties (slide 38; T 515–518).',
  cite:D2+' slide 38; T 515–518'},
 
@@ -1213,10 +1203,10 @@ QUESTIONS.push(
  stem:'What degree of skin effect is the therapeutic goal with salicylic acid for acne?',
  options:[
   {t:'Mild peeling', correct:true, why:'(T 541–543) "the effects of it is should be peeling only. That\'s what we want therapeutically mild peeling"; slide 39.'},
-  {t:'Deep desquamation', correct:false, why:'(T 544–545) desquamation peels off deeper layers: "You don\'t want that happening".'},
+  {t:'Peeling of the deeper skin layers', correct:false, why:'(T 544–545) desquamation peels off deeper layers: "You don\'t want that happening".'},
   {t:'Ulceration of the comedone', correct:false, why:'Ulceration is a side effect of high concentrations (slide 40).'},
   {t:'No visible change in the skin', correct:false, why:'Mild peeling is the intended effect (T 543).'}],
- teach:'Slide 39: effects range from peeling to desquamation. The goal is mild peeling; desquamation removes deeper layers and is unwanted (T 541–545).',
+ teach:'Slide 39 describes the effect as peeling (desquamation) of keratotic debris. In class she set mild peeling as the goal and peeling of deeper layers as unwanted (T 541–545).',
  cite:D2+' slide 39; T 541–545'},
 
 {id:'L2-103', skill:'counsel', prof:'Smith', tier:'new', topic:'l2-ker', sub:'sal', concept:'salicylic-3-6',
@@ -1344,7 +1334,7 @@ QUESTIONS.push(
  note:'lowYield: chloramphenicol appears only in the figure and is not on the drug chart.',
  cite:D2+' slide 42; T 583–607'},
 
-{id:'L2-114', skill:'tell', prof:'Smith', tier:'new', topic:'l2-abx', sub:'ribo', concept:'tetra-vs-macrolide',
+{id:'L2-114', skill:'tell', prof:'Smith', tier:'new', topic:'l2-abx', sub:'ribo', concept:'tetra-vs-macrolide', dupOf:'L2-112',
  tags:['tell','figure'], source:'both',
  stem:'What separates tetracyclines from macrolides at the bacterial ribosome?',
  options:[
