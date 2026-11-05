@@ -125,6 +125,9 @@ const COURSE = {
     {id:'L01b', deck:'Skin-PCol-Students-2026.pdf',
      label:'Lectures 1–3: Dermatitis, psoriasis and acne pharmacology (Smith, from 10/29)',
      prof:'Smith', exam:1, module:'Exam 1: Lectures 1–4'},
+    {id:'L03b', deck:'f26-DEENT-DPAW-mc.pdf',
+     label:'Lectures 3–4: Dermatitis, psoriasis and acne medicinal chemistry (Sikazwe, 11/03–11/04)',
+     prof:'Sikazwe', exam:1, module:'Exam 1: Lectures 1–4'},
   ],
 
   exams: [
@@ -158,10 +161,11 @@ const COURSE = {
   scheduler: {model:'concept'},
 
   files: ['atlas.js', 'diagrams.js',
-          'q1_topics.js'],
+          'q1_topics.js', 'q2_L02.js', 'q3_L03a.js', 'q4_L03b.js', 'q5_L04.js'],
 
   tools: {citeAliases:{'skin-pathophys-students-2026.pdf':'Skin-Pathophys-Students-2026.pdf',
-                       'skin-pcol-students-2026.pdf':'Skin-PCol-Students-2026.pdf'},
+                       'skin-pcol-students-2026.pdf':'Skin-PCol-Students-2026.pdf',
+                       'f26-deent-dpaw-mc.pdf':'f26-DEENT-DPAW-mc.pdf'},
           citeLectures:{}, citeBareMap:{},
           explainTerms:[], harvestMasks:[]},
 
