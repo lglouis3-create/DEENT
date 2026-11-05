@@ -62,12 +62,12 @@ TOPICS.push(
 
 QUESTIONS.push(
 /* ---- Tetracyclines ------------------------------------------------------ */
-{id:'L3-001', skill:'mech', prof:'Smith', tier:'new', topic:'l3-abx', sub:'tet', concept:'tet-30s',
+{id:'L3-001', skill:'mech', prof:'Smith', tier:'new', topic:'l3-abx', sub:'tet', concept:'tet-30s', dupOf:'L2-111',
  tags:['mechanism'], source:'both',
  stem:'How do doxycycline and minocycline stop bacterial protein synthesis?',
  options:[
   {t:'Bind 30S and block tRNA at the acceptor site', correct:true, why:'Tetracyclines bind the 30S subunit and block aminoacyl-tRNA binding to the acceptor site (slide 43; T 29–31).'},
-  {t:'Bind 50S and prevent translocation', correct:false, why:'That is clindamycin and the macrolides (slides 46–47; T 53–55, 66–67).'},
+  {t:'Bind 50S and prevent translocation', correct:false, why:'That is clindamycin (slide 46; T 53–55); tetracyclines bind 30S (slide 43).'},
   {t:'Compete with PABA in bacterial folate synthesis', correct:false, why:'That is sulfamethoxazole, a different class (slide 48; T 75–76).'},
   {t:'Inhibit bacterial dihydrofolate reductase', correct:false, why:'That is trimethoprim (slide 48; T 77–79).'}],
  teach:'The tetracycline class (sarecycline, minocycline, doxycycline) binds the 30S subunit of the bacterial ribosome and keeps the charged tRNA from entering the acceptor site, so the protein is not made (slide 43; T 27–31). Clindamycin and the macrolides act on the other subunit, 50S.',
@@ -230,7 +230,7 @@ QUESTIONS.push(
  cite:D3+' slides 45–47; T 64–65'},
 
 /* ---- Macrolides --------------------------------------------------------- */
-{id:'L3-016', skill:'tell', prof:'Smith', tier:'new', topic:'l3-abx', sub:'macro', concept:'ribosome-subunit-tell',
+{id:'L3-016', skill:'tell', prof:'Smith', tier:'new', topic:'l3-abx', sub:'macro', concept:'ribosome-subunit-tell', dupOf:'L3-001',
  tags:['tell'], source:'both',
  stem:'Which acne antibiotic binds the 30S ribosomal subunit rather than the 50S?',
  options:[
@@ -238,7 +238,7 @@ QUESTIONS.push(
   {t:'Erythromycin', correct:false, why:'Macrolides attach to 50S (slide 47; T 66–67).'},
   {t:'Clindamycin', correct:false, why:'Clindamycin attaches to 50S (slide 46; T 54).'},
   {t:'Azithromycin', correct:false, why:'Macrolides attach to 50S (slide 47; T 66–67).'}],
- teach:'Of the three ribosome-acting acne antibiotics, the tetracyclines bind 30S; clindamycin and the macrolides (erythromycin, azithromycin) bind 50S and prevent translocation (slides 43, 46–47; T 29–31, 53–55, 66–67).',
+ teach:'Of the three ribosome-acting acne antibiotics, the tetracyclines bind 30S; clindamycin and the macrolides (erythromycin, azithromycin) bind 50S (slides 43, 46–47; T 29–31, 53–55, 66–67). Clindamycin prevents translocation (slide 46).',
  cite:D3+' slides 43, 46–47; T 29–31, 53–55, 66–67'},
 
 {id:'L3-017', skill:'adverse', prof:'Smith', tier:'new', topic:'l3-abx', sub:'macro', concept:'macro-ddi',
@@ -344,19 +344,7 @@ QUESTIONS.push(
  teach:'Dapsone treats leprosy and, topically, acne (slide 50; T 90–91, 101–102).',
  cite:D3+' slide 50; T 89–102'},
 
-{id:'L3-026', skill:'epi', prof:'Smith', tier:'new', topic:'l3-fol', sub:'dap', concept:'leprosy-armadillo', lowYield:true,
- tags:['room'], source:'transcript',
- quote:'Room question, 11/03, T 99: "Anybody know what animal carries leprosy?"',
- stem:'Which animal carries leprosy in Texas?',
- options:[
-  {t:'Armadillo', correct:true, why:'Answer given in class: "Armadillos, yeah" (T 99).'},
-  {t:'Raccoon', correct:false, why:'The answer in class was the armadillo (T 99).'},
-  {t:'Field mouse', correct:false, why:'The answer in class was the armadillo (T 99).'},
-  {t:'Opossum', correct:false, why:'The answer in class was the armadillo (T 99).'}],
- teach:'Leprosy, which dapsone treats, is seen sometimes in Texas and is carried by armadillos (T 98–100).',
- cite:D3+' slide 50; T 98–100'},
-
-/* ---- Metronidazole ------------------------------------------------------ */
+/* L3-026 held out: a side remark on leprosy and armadillos (T 98-100), on no slide and outside her exam cues. */
 {id:'L3-027', skill:'class', prof:'Smith', tier:'new', topic:'l3-fol', sub:'metro', concept:'metro-use',
  tags:['recall'], source:'both',
  stem:'Topical metronidazole is usually used for which skin condition?',
@@ -375,7 +363,7 @@ QUESTIONS.push(
  options:[
   {t:'Inhibits Demodex brevis or acts on neutrophils', correct:true, why:'Slide 51; T 104–107: mechanism unknown, these are the proposals.'},
   {t:'Binds the p40 subunit of IL-12 and IL-23', correct:false, why:'That is ustekinumab (slide 67).'},
-  {t:'Inhibits translocation on the 50S subunit', correct:false, why:'That is clindamycin and the macrolides (slides 46–47).'},
+  {t:'Inhibits translocation on the 50S subunit', correct:false, why:'That is clindamycin (slide 46).'},
   {t:'Stops keratinocyte turnover by crosslinking DNA', correct:false, why:'Proposed for coal tar (slide 53).'}],
  teach:'The mechanism of metronidazole in rosacea is unknown. It may inhibit the mite Demodex brevis, or act as an anti-inflammatory through a direct effect on neutrophil function (slide 51; T 104–108).',
  cite:D3+' slide 51; T 104–108'},
@@ -428,7 +416,7 @@ QUESTIONS.push(
 
 {id:'L3-033', skill:'counsel', prof:'Smith', tier:'new', topic:'l3-cyto', sub:'coal', concept:'coal-photo-carc',
  tags:['counseling'], source:'both',
- stem:'A patient has used coal tar for psoriasis for years. Which two concerns did Dr. Smith point out?',
+ stem:'A patient has used coal tar for psoriasis for years. Which two adverse effects are the main concerns?',
  options:[
   {t:'Photosensitivity and carcinogenicity', correct:true, why:'"The photosensitizing ... that\'s a big issue. And then ... it\'s carcinogenic" (T 145–148; slide 54).'},
   {t:'Ototoxicity and staining of the teeth', correct:false, why:'Those are tetracycline effects (slides 44–45).'},
@@ -441,17 +429,16 @@ QUESTIONS.push(
  tags:['reasoning'], source:'both',
  stem:'Why is coal tar a concern on psoriasis with oozing vesicles?',
  options:[
-  {t:'More of it can be absorbed systemically', correct:true, why:'"If your skin is open like that with oozing vesicles, the absorption systemically could occur" (T 152–155; slide 54).'},
+  {t:'More of it can be absorbed systemically', correct:true, why:'"If your skin is open like that with oozing vesicles, the absorption systemically could occur" (T 152–155). Slide 54 lists the caution without a reason.'},
   {t:'It turns the vesicles dark brown', correct:false, why:'Dark brown or black staining is anthralin (slide 56).'},
   {t:'The exudate inactivates the coal tar quickly', correct:false, why:'Not the reason given (T 152–155).'},
   {t:'It causes severe conjunctivitis', correct:false, why:'Severe conjunctivitis with eye contact is anthralin (slide 56).'}],
  teach:'Open skin with vesicles or oozing lets coal tar reach the circulation, so it is used with caution there (T 152–155). Slide 54 also lists cautions in pregnancy and breastfeeding.',
- note:'The advice differs in degree: she said to "use low concentration products" on vesicular or oozing skin (T 152–153); slide 54 says to "avoid even low concentration products" there. The question asks the reason, on which both agree.',
+ note:'Slide 54 also states "Systemic side effects do not occur" for coal tar in ordinary use; the oozing-skin reason is hers (T 154–155). The advice differs in degree: she said to "use low concentration products" on vesicular or oozing skin (T 152–153); slide 54 says to "avoid even low concentration products" there. The question asks the reason, on which both agree.',
  cite:D3+' slide 54; T 150–155'},
 
 {id:'L3-035', skill:'chem', prof:'Smith', tier:'new', topic:'l3-cyto', sub:'anth', concept:'anth-source',
- tags:['room'], source:'both',
- quote:'Room question, 11/03, T 157: "Can anybody say that?" (araroba tree)',
+ tags:['recall'], source:'both',
  stem:'What is anthralin?',
  options:[
   {t:'Synthetic chrysarobin, from araroba tree bark', correct:true, why:'Slide 55; T 156–160.'},
@@ -739,7 +726,7 @@ QUESTIONS.push(
  quote:'Room question, 11/03, T 322–323: "So why do you think we made the drug Abatacept look like CTLA-4?"',
  stem:'Why was abatacept built to look like CTLA-4 rather than CD28?',
  options:[
-  {t:'It probably binds CD80/86 more tightly than CD28', correct:true, why:'Answer given in class: "It probably has better binding affinity to [CD80/86] then like CD28" (T 322–323).'},
+  {t:'CTLA-4 likely binds CD80/86 more tightly than CD28 does', correct:true, why:'Answer given in class: "It probably has better binding affinity to [CD80/86] then like CD28" (T 322–323).'},
   {t:'CTLA-4 gives the drug a longer half-life', correct:false, why:'Longer half-life from PEG is certolizumab pegol (slide 74; T 547–548).'},
   {t:'CTLA-4 lets the drug get inside the T cells to act', correct:false, why:'It acts on the APC surface (slide 63); entering cells is the JAK inhibitors (T 570–573).'},
   {t:'CTLA-4 delivers a positive signal 2', correct:false, why:'CTLA-4 gives a negative signal 2 (T 300–303).'}],
@@ -763,7 +750,7 @@ QUESTIONS.push(
  quote:'Room question, 11/03, T 356: "what signal is this working on?"',
  stem:'Which T-cell activation signal does abatacept act on?',
  options:[
-  {t:'Signal 2', correct:true, why:'Answer given in class: "Signal two, right?" (T 356–357; slide 63).'},
+  {t:'Signal 2', correct:true, why:'Answer given in class: "Signal too [two], right?" (T 356–357; slide 63).'},
   {t:'Signal 1', correct:false, why:'Signal 1 is antigen presentation to the T-cell receptor (T 289–290).'},
   {t:'Signal 3', correct:false, why:'Abatacept acts on the CD80/86 to CD28 step, signal 2 (slide 63).'},
   {t:'JAK signaling', correct:false, why:'That is the JAK inhibitors (slide 75).'}],
@@ -930,7 +917,7 @@ QUESTIONS.push(
  teach:'"Sometimes we\'re binding the compound floating around in the system, like a cytokine. Sometimes we ... made a drug that binds to the receptor. OK, so gotta pay attention to that" (T 429–431). Cytokine binders: secukinumab, ixekizumab, ustekinumab, the IL-23 p19 binders and the TNF-α inhibitors. Receptor binders: brodalumab and dupilumab.',
  cite:D3+' slides 64, 66–68; T 429–431'},
 
-{id:'L3-077', skill:'tell', prof:'Smith', tier:'new', topic:'l3-cytok', sub:'make', concept:'human-list', multi:true,
+{id:'L3-077', skill:'tell', prof:'Smith', tier:'new', topic:'l3-cytok', sub:'make', concept:'human-list', dupOf:'L3-085', multi:true,
  tags:['tell','list'], source:'both',
  stem:'Which of these IL-17 and IL-23 inhibitors are human antibodies? Select all that apply.',
  options:[
@@ -1144,7 +1131,7 @@ QUESTIONS.push(
  teach:'Infliximab can cause acute (within 24 hours) and delayed (24 hours to 14 days) infusion reactions (slide 72) with chills, fever and itch, which can be anaphylactic; patients are premedicated with diphenhydramine or steroids (T 519–522).',
  cite:D3+' slide 72; T 518–522'},
 
-{id:'L3-096', skill:'adverse', prof:'Smith', tier:'new', topic:'l3-tnf', sub:'drugs', concept:'inflix-infusion-why',
+{id:'L3-096', skill:'adverse', prof:'Smith', tier:'new', topic:'l3-tnf', sub:'drugs', concept:'inflix-infusion-why', dupOf:'L3-075',
  tags:['room','reasoning'], source:'both',
  quote:'Room question, 11/03, T 522: "Why would people have infusion reactions? For this drug"',
  stem:'Why are infusion reactions a particular problem with infliximab?',
@@ -1250,7 +1237,7 @@ QUESTIONS.push(
  tags:['tell'], source:'both',
  stem:'What is known about upadacitinib compared with tofacitinib and ruxolitinib?',
  options:[
-  {t:'It hits more JAK targets; better efficacy is unproven', correct:true, why:'T 576–578; slide 76 ("Jury is still out on what selectivity this drug has").'},
+  {t:'It hits more JAK targets; better efficacy is unproven', correct:true, why:'"It\'s binding to more JAK targets, but ... we still don\'t know if it is more efficacious" (T 576–578). Slide 76 gives greater potency at JAK1 and JAK2 than at JAK3 and TYK2 and says its selectivity is still unsettled.'},
   {t:'It binds TNF-α outside the cell', correct:false, why:'It is a small molecule JAK inhibitor (T 569–573).'},
   {t:'It is proven more effective than tofacitinib and ruxolitinib', correct:false, why:'"We still don\'t know if it is more efficacious" (T 577–578).'},
   {t:'It is a humanized antibody to JAK', correct:false, why:'JAK inhibitors are small molecules, not antibodies (T 570–573).'}],
