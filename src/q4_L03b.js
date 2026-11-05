@@ -172,7 +172,7 @@ QUESTIONS.push(
   {t:'Benzoxaborole', correct:true, why:'Slide 7: "Crisaborole: A benzoxaborole soft drug"; a boron-based drug molecule (T 683–689).'},
   {t:'Hydroxyanthrone', correct:false, why:'The class of anthralin (slide 17).'},
   {t:'Furanocoumarin', correct:false, why:'The class of the psoralens such as 8-MOP (slide 18).'},
-  {t:'Pyrrolopyrimidine', correct:false, why:'The class of ruxolitinib (slide 8).'}],
+  {t:'Steroid', correct:false, why:'The class of the glucocorticoids: three six-membered rings and one five-membered ring fused together (slide 20; T 990–995).'}],
  teach:'Crisaborole carries a boron atom in a five-membered oxaborole ring fused to a benzene ring, hence benzoxaborole (slide 7 structure). Very few drugs contain boron (T 683); household boron compounds are borax and boric acid (T 685–686).',
  cite:S3+' slides 7–8, 17–18; T 683–689'},
 
@@ -313,7 +313,7 @@ QUESTIONS.push(
  stem:'Crisaborole\'s metabolic scheme indicates that steps ........... involve glucuronidation?',
  options:[
   {t:'Steps 1 and 2', correct:false, why:'Step 1 is hydrolytic deboronation and step 2 leads to the carboxylic acid (slide 9; T 767–769); neither is glucuronidation.'},
-  {t:'Steps 2 and 3', correct:false, why:'Step 3 forms the sulfate (sulfotransferase), not the glucuronide (slide 9; T 771–772).'},
+  {t:'Steps 2 and 3', correct:false, why:'Step 2 is the oxidation to the carboxylic acid (two dehydrogenases), not a conjugation (slide 9; T 767–769). The keyed pair is 3 and 4, the steps on the route to the glucuronide-bearing products in the scheme (T 774–777).'},
   {t:'Steps 3 and 4', correct:true, why:'His answer: "3 and 4 steps involve gluchroidation" (T 776–777); in the scheme on slide 9, step 4 adds the glucuronide (UGT) and the "3,4" arrow gives the product with sulfate and glucuronide.'}],
  teach:'Slide 9 scheme: 1, hydrolytic deboronation; 2, oxidation to the carboxylic acid (two dehydrogenases); 3, sulfation by sulfotransferases; 4, glucuronidation by UGT; "3,4", both conjugates on one product. "Remember these things, folks" (T 774).',
  note:'At T 774 the transcript reads "a combination of what? UGT and 3F4". In the slide 9 scheme the arrow labelled "3,4" combines steps 3 and 4, so this is read as "3 and 4", not CYP3A4. The key does not depend on it.',
@@ -475,7 +475,7 @@ QUESTIONS.push(
   {t:'UVB', correct:false, why:'UVB stops at a shallower level than UVA in the slide 12 figure.'},
   {t:'UVC', correct:false, why:'UVC is blocked by the ozone layer (slide 12).'},
   {t:'Infrared', correct:false, why:'He crossed infrared out as outside the topic (T 812; slide 12).'}],
- teach:'Longer UV wavelength goes deeper: UVA reaches the dermis, UVB stops higher, and UVC is stopped by ozone (slide 12 figure; T 836–839). Clothing also protects against UVB and UVC (T 837–838).',
+ teach:'On the slide 12 figure UVA reaches the dermis, UVB stops in the epidermis, and UVC is stopped by the ozone layer (T 836–839). Clothing also protects against UVB and UVC (T 837–838).',
  cite:S3+' slide 12; T 820–824, 836–840'},
 
 {id:'S3-036', skill:'adverse', prof:'Sikazwe', tier:'new', topic:'s3-uv', sub:'uvr', concept:'uv-effects',
@@ -682,9 +682,9 @@ QUESTIONS.push(
   {t:'Hydroxyanthrone', correct:true, why:'Slide 17 "Anthralin or Dithranol: A hydroxyanthrone"; (T 919–920).'},
   {t:'Furanocoumarin', correct:false, why:'The class of the psoralens (slide 18).'},
   {t:'Benzoxaborole', correct:false, why:'The class of crisaborole (slide 7).'},
-  {t:'Pyrrolopyrimidine', correct:false, why:'The class of ruxolitinib (slide 8).'}],
+  {t:'Steroid', correct:false, why:'The class of the glucocorticoids: three six-membered rings and one five-membered ring fused together (slide 20; T 990–995).'}],
  teach:'Anthralin is a tricyclic anthrone carrying hydroxyl groups, hence hydroxyanthrone (slide 17 structure). It dates from 1915 and is still in use (T 918–920).',
- cite:S3+' slides 7, 17–18, 20; T 918–920'},
+ cite:S3+' slides 7, 17–18, 20; T 918–920, 990–995'},
 
 {id:'S3-054', skill:'chem', prof:'Sikazwe', tier:'new', topic:'s3-anth', sub:'cbda', concept:'anthralin-autox',
  tags:['cbda'], source:'both',
@@ -773,14 +773,14 @@ QUESTIONS.push(
   {t:'Furanocoumarin', correct:true, why:'Slide 18 "A furanocoumarin"; (T 958–960) "this has a furan ring and a coumarin ring".'},
   {t:'Hydroxyanthrone', correct:false, why:'The class of anthralin (slide 17).'},
   {t:'Benzoxaborole', correct:false, why:'The class of crisaborole (slide 7).'},
-  {t:'Pyrrolopyrimidine', correct:false, why:'The class of ruxolitinib (slide 8).'}],
+  {t:'Steroid', correct:false, why:'The class of the glucocorticoids: three six-membered rings and one five-membered ring fused together (slide 20; T 990–995).'}],
  teach:'A psoralen is a coumarin (benzopyrone) fused to a furan ring; slide 18 marks the pyrone and furan parts. It began as a fish poison used by fishing communities before its antiproliferative use in psoriasis was found (T 954–958).',
  note:'The Dermatology drug chart lists a different class beside methoxsalen on its p.5 because that page\'s chemical-class column is shifted by one row; the deck and the lecture are followed.',
  cite:S3+' slides 7–8, 17–18; T 954–960'},
 
 {id:'S3-062', skill:'pk', prof:'Sikazwe', tier:'new', topic:'s3-psor', sub:'chem', concept:'psoralen-3a4',
  tags:['interaction'], source:'both',
- stem:'Which CYP effect of methoxsalen did he single out as a take-home point?',
+ stem:'Which CYP effect does methoxsalen have?',
  options:[
   {t:'It partially inhibits CYP3A4', correct:true, why:'Slide 18 "ADMET: Several CYPs & it partially inhibits 3A4"; (T 961–963) "That\'s something to take home".'},
   {t:'It is a strong CYP3A4 inducer', correct:false, why:'Inhibition, not induction (slide 18).'},
@@ -823,9 +823,9 @@ QUESTIONS.push(
  teach:'The patient takes or applies methoxsalen, waits, and is then exposed to UVA; the light promotes the crosslinking of DNA base pairs (slide 18; T 967–976).',
  cite:S3+' slides 7, 17–18; T 963–977'},
 
-{id:'S3-066', skill:'tell', prof:'Sikazwe', tier:'new', topic:'s3-psor', sub:'cbda', concept:'which-drug-intercalates',
+{id:'S3-066', skill:'tell', prof:'Sikazwe', tier:'new', topic:'s3-psor', sub:'cbda', concept:'which-drug-intercalates', dupOf:'S3-064',
  tags:['tell'], source:'both',
- stem:'Which drug from this lecture acts by intercalating and crosslinking DNA?',
+ stem:'Which drug acts by intercalating into and crosslinking DNA?',
  options:[
   {t:'Methoxsalen', correct:true, why:'Slide 18; (T 966–967) "the only molecule I\'m going to mention" with this chemical basis of action.'},
   {t:'Anthralin', correct:false, why:'Anthralin works through radicals that disrupt mitochondria (slide 17).'},
@@ -879,7 +879,7 @@ QUESTIONS.push(
   {t:'Ring B', correct:false, why:'Ring B is six-membered (slide 20).'},
   {t:'Ring C', correct:false, why:'Ring C is six-membered and holds C11 (slide 20).'}],
  teach:'Rings A, B and C are six-membered; ring D (C13–C17) is five-membered and carries the side chain at C17 (slide 20; Foye Ch. 24, steroid numbering).',
- cite:S3+' slide 20; T 990–996'},
+ cite:S3+' slide 20; T 990–996; Foye Ch. 24 (support)'},
 
 {id:'S3-071', skill:'chem', prof:'Sikazwe', tier:'new', topic:'s3-gc', sub:'struct', concept:'alpha-beta-face',
  tags:['chem'], source:'both',
@@ -887,7 +887,7 @@ QUESTIONS.push(
  options:[
   {t:'Alpha-facing', correct:true, why:'(T 997–999) bonds "that are hushed [hashed], that are pointing away from you, they are called alpha-facing"; slide 20.'},
   {t:'Beta-facing', correct:false, why:'Beta bonds point toward the viewer (T 999–1000; slide 20).'},
-  {t:'Equatorial bond', correct:false, why:'Not the steroid term he used (slide 20).'},
+  {t:'Equatorial', correct:false, why:'Not the steroid term he used (slide 20).'},
   {t:'Axial', correct:false, why:'Not the steroid term he used (slide 20).'}],
  teach:'Alpha: hashed bond, pointing away from you. Beta: bold wedge, pointing toward you (slide 20; T 996–1000). Orientation is needed, with numbering, to state the SAR (T 1000–1001).',
  cite:S3+' slide 20; T 996–1002'},
@@ -901,7 +901,7 @@ QUESTIONS.push(
   {t:'C5', correct:false, why:'C5 is the A/B junction partway round the loop (slide 20).'},
   {t:'C17', correct:false, why:'C17 ends the second run, the "snake" from C11 (T 1011–1012).'}],
  teach:'His method: from C1 loop around rings A and B to C10; start again at C11 and snake through rings C and D to C17; then "hopscotch" to the methyls C18 and C19; then C20 and C21 on the side chain (slide 20; T 1003–1016). Foye Ch. 24 gives the same order.',
- cite:S3+' slides 20–22; T 1002–1017, 1084–1099'},
+ cite:S3+' slides 20–22; T 1002–1017, 1084–1099; Foye Ch. 24 (support)'},
 
 {id:'S3-073', skill:'chem', prof:'Sikazwe', tier:'new', topic:'s3-gc', sub:'num', concept:'numbering-c11',
  tags:['chem'], source:'both',
@@ -923,7 +923,7 @@ QUESTIONS.push(
   {t:'C10', correct:false, why:'C10 carries the C19 methyl (slide 20).'},
   {t:'C3', correct:false, why:'C3 in ring A carries the ketone of hydrocortisone (slide 23).'}],
  teach:'C17 is the last ring carbon in ring D; the side chain starts at C20 attached to C17 (slide 20; T 1015–1016, 1088–1090). Foye Ch. 24: "The 17-side chain begins with C20."',
- cite:S3+' slides 20, 23; T 1011–1017, 1084–1092'},
+ cite:S3+' slides 20, 23; T 1011–1017, 1084–1092; Foye Ch. 24 (support)'},
 
 {id:'S3-075', skill:'chem', prof:'Sikazwe', tier:'new', topic:'s3-gc', sub:'num', concept:'numbering-c19',
  tags:['chem'], source:'both',
@@ -934,7 +934,7 @@ QUESTIONS.push(
   {t:'C17', correct:false, why:'C17 carries the side chain from C20 (slide 20).'},
   {t:'C9', correct:false, why:'C9 carries the 9α-halogen in active glucocorticoids (slide 20), not a methyl.'}],
  teach:'After C17 he "hopscotches" to the two angular methyls: C18 on C13 first, then C19 on C10 (slide 20; T 1012–1014, 1088–1089). Foye Ch. 24 gives the same assignment.',
- cite:S3+' slide 20; T 1012–1016, 1084–1090'},
+ cite:S3+' slide 20; T 1012–1016, 1084–1090; Foye Ch. 24 (support)'},
 
 {id:'S3-076', skill:'chem', prof:'Sikazwe', tier:'new', topic:'s3-gc', sub:'num', concept:'numbering-vs-orientation',
  tags:['tell'], source:'transcript',
@@ -955,12 +955,12 @@ QUESTIONS.push(
   {t:'6α-halogen', correct:true, why:'SAR item 2 on slide 20; (T 1025, 1067–1069).'},
   {t:'9α-halogen', correct:true, why:'SAR item 3 on slide 20; (T 1069–1070).'},
   {t:'11β-hydroxyl', correct:true, why:'SAR item 4 on slide 20; (T 1070–1072).'},
-  {t:'11α-hydroxyl group', correct:false, why:'The 11-OH must be β (T 1071–1072).'},
+  {t:'11α-hydroxyl', correct:false, why:'The 11-OH must be β (T 1071–1072).'},
   {t:'6β-halogen', correct:false, why:'The 6-halogen must be α (T 1068–1069).'}],
  teach:'"I\'m limiting you to 4 things" (T 1020–1021): C1–C2 double bond, 6α-halogen, 9α-halogen and 11β-OH (slide 20). He called them the minimal stereochemistry for anti-inflammatory properties (T 1072–1073); other positions such as 16 are "free play" (T 1075).',
  cite:S3+' slide 20; T 1019–1075'},
 
-{id:'S3-078', skill:'chem', prof:'Sikazwe', tier:'new', topic:'s3-gc', sub:'sar', concept:'sar-11-beta',
+{id:'S3-078', skill:'chem', prof:'Sikazwe', tier:'new', topic:'s3-gc', sub:'sar', concept:'sar-11-beta', dupOf:'S3-077',
  tags:['sar'], source:'both',
  stem:'For anti-inflammatory activity, what orientation must the hydroxyl at C11 have?',
  options:[
@@ -971,7 +971,7 @@ QUESTIONS.push(
  teach:'The two halogens are α (6α-X, 9α-X); the C11 hydroxyl is β (slide 20; T 1067–1072). Cortisone, which carries a ketone at C11 instead of the 11β-OH, is inactive (slide 26).',
  cite:S3+' slides 20, 26; T 1067–1074'},
 
-{id:'S3-079', skill:'chem', prof:'Sikazwe', tier:'new', topic:'s3-gc', sub:'sar', concept:'sar-9-alpha',
+{id:'S3-079', skill:'chem', prof:'Sikazwe', tier:'new', topic:'s3-gc', sub:'sar', concept:'sar-9-alpha', dupOf:'S3-077',
  tags:['sar'], source:'both',
  stem:'Which substituent at C9 increases glucocorticoid anti-inflammatory activity?',
  options:[
@@ -982,7 +982,7 @@ QUESTIONS.push(
  teach:'In the derivatives on slide 24 the 9α-halogen is fluorine (for example betamethasone dipropionate, clobetasol propionate, triamcinolone acetonide).',
  cite:S3+' slides 20, 24; T 1067–1072'},
 
-{id:'S3-080', skill:'chem', prof:'Sikazwe', tier:'new', topic:'s3-gc', sub:'sar', concept:'sar-c1c2',
+{id:'S3-080', skill:'chem', prof:'Sikazwe', tier:'new', topic:'s3-gc', sub:'sar', concept:'sar-c1c2', dupOf:'S3-077',
  tags:['sar'], source:'both',
  stem:'Where is the double bond that increases glucocorticoid anti-inflammatory activity?',
  options:[
@@ -993,17 +993,7 @@ QUESTIONS.push(
  teach:'Comparing hydrocortisone with clobetasol propionate on slide 25, the added C1–C2 double bond (drawn in color) is one of the structural changes that move a low-potency steroid to high potency (T 1175–1179).',
  cite:S3+' slides 20, 24–25; T 1019–1025, 1075, 1175–1179'},
 
-{id:'S3-081', skill:'chem', prof:'Sikazwe', tier:'new', topic:'s3-gc', sub:'sar', concept:'clobetasol-sar', multi:true,
- tags:['sar','reasoning'], source:'slide',
- stem:'Clobetasol propionate differs from hydrocortisone in several places. Which of its changes are among the four SAR features that raise anti-inflammatory activity? Select all that apply.',
- options:[
-  {t:'C1–C2 double bond', correct:true, why:'SAR item 1 (slide 20), drawn in color on clobetasol propionate (slide 25).'},
-  {t:'9α-fluorine', correct:true, why:'A 9α-halogen, SAR item 3 (slide 20); F on slide 25.'},
-  {t:'16-methyl group', correct:false, why:'Position 16 is "free play", not one of the four features (T 1075).'},
-  {t:'17-propionate ester', correct:false, why:'Not one of the four SAR features on slide 20, though it changes lipophilicity (T 1146–1148).'}],
- teach:'Hydrocortisone already has the 11β-OH. Clobetasol propionate adds a C1–C2 double bond and a 9α-F (two of the four SAR features), plus a 16-methyl and a 17-propionate ester; together these move it from low to super-potent (slides 20, 25; T 1175–1179). He called this structural manipulation, "not metabolism" (T 1177–1178).',
- cite:S3+' slides 20, 24–25; T 1075, 1145–1148, 1175–1179'},
-
+/* S3-081 held out: it needs the slide 25 derivative structures, which he said not to memorize (T 1152-1154); no figure in the bank yet. */
 {id:'S3-082', skill:'chem', prof:'Sikazwe', tier:'new', topic:'s3-gc', sub:'gr', concept:'gr-hbond-type',
  tags:['cbda'], source:'both',
  stem:'What type of interaction underlies glucocorticoid binding to the glucocorticoid receptor?',
@@ -1069,8 +1059,8 @@ QUESTIONS.push(
   {t:'Desonide', correct:true, why:'Slide 24: a derivative of hydrocortisone (T 1151).'},
   {t:'Fluticasone propionate', correct:true, why:'Slide 24: a derivative of hydrocortisone (T 1151).'},
   {t:'Triamcinolone acetonide', correct:true, why:'Slide 24: a derivative of hydrocortisone (T 1151).'},
-  {t:'Crisaborole, a benzoxaborole', correct:false, why:'A benzoxaborole, not a steroid (slide 7).'},
-  {t:'Methoxsalen (8-methoxypsoralen)', correct:false, why:'A furanocoumarin, not a steroid (slide 18).'}],
+  {t:'Crisaborole', correct:false, why:'A benzoxaborole, not a steroid (slide 7).'},
+  {t:'Methoxsalen', correct:false, why:'A furanocoumarin, not a steroid (slide 18).'}],
  teach:'Slide 24: betamethasone dipropionate, desonide, clobetasol propionate, fluticasone propionate and triamcinolone acetonide are derivatives of hydrocortisone, the parent drug. The point is the parent–derivative relation, not the individual structures (T 1150–1154).',
  cite:S3+' slides 7, 18, 24; T 1144–1154'},
 
@@ -1082,7 +1072,7 @@ QUESTIONS.push(
   {t:'They turn the drug into a designed soft drug', correct:false, why:'Soft drug describes crisaborole\'s designed metabolism (slide 7), not steroid potency.'},
   {t:'They let the drug crosslink DNA', correct:false, why:'DNA crosslinking is methoxsalen\'s CBDA (slide 18).'},
   {t:'They add a boron that binds metals', correct:false, why:'Boron coordination is crisaborole\'s CBDA (slide 7).'}],
- teach:'Derivatives are made from hydrocortisone by structural changes that raise or lower lipophilicity and change hydrogen bonding in the receptor, and so change potency (T 1145–1148, 1157–1160).',
+ teach:'Derivatives are made from hydrocortisone by structural changes that raise or lower lipophilicity or change the way the molecule bonds in the receptor, and so change potency (T 1145–1148, 1157–1160).',
  cite:S3+' slides 7, 18, 24–25; T 1145–1160'},
 
 {id:'S3-089', skill:'chem', prof:'Sikazwe', tier:'new', topic:'s3-hc', sub:'pot', concept:'potency-bases', multi:true,
@@ -1126,7 +1116,7 @@ QUESTIONS.push(
  options:[
   {t:'Hydrocortisone acetate 1% cream', correct:true, why:'Slide 25: low potency example.'},
   {t:'Betamethasone valerate 0.1% cream', correct:false, why:'Slide 25: medium potency.'},
-  {t:'Betamethasone dipropionate 0.05%', correct:false, why:'Slide 25: potent, one class above medium.'},
+  {t:'Betamethasone dipropionate 0.05% cream', correct:false, why:'Slide 25: potent, one class above medium.'},
   {t:'Clobetasol propionate 0.05% cream', correct:false, why:'Slide 25: super-potent, the top class.'}],
  teach:'Hydrocortisone is the parent drug and sits at the low-potency end; its derivatives with structural changes (C1–C2 double bond, 9α-F and others) rank higher (slides 24–25; T 1175–1179).',
  cite:S3+' slides 24–25; T 1154–1179'},
@@ -1220,11 +1210,11 @@ QUESTIONS.push(
   {t:'An α-hydroxyl group on carbon 11', correct:false, why:'The 11-OH of hydrocortisone is β (slides 20, 26).'},
   {t:'Eleven hydrogen bonds to a receptor', correct:false, why:'Glucocorticoids make six hydrogen bonds in the receptor (slide 23).'}],
  teach:'The enzyme acts at C11, where hydrocortisone carries its 11β-OH (slide 26). Steroid numbering (slide 20) names the position; β gives the orientation (toward the viewer).',
- cite:S3+' slides 20, 23, 26; T 1190–1196'},
+ cite:S3+' slides 20, 23, 26; T 1190–1196; 11/04 transcript @722–@925'},
 
 {id:'S3-101', skill:'chem', prof:'Sikazwe', tier:'new', topic:'s3-hc', sub:'adme', concept:'cortisone-inactive-why',
  tags:['sar','reasoning'], source:'slide',
- stem:'Cortisone differs from hydrocortisone at C11. Why is cortisone inactive as a glucocorticoid?',
+ stem:'Why is cortisone inactive as a glucocorticoid?',
  options:[
   {t:'It has a C11 ketone instead of the 11β-OH', correct:true, why:'Slide 26 structures: cortisone (inactive) has C=O at C11; the 11β-OH is one of the four SAR features (slide 20).'},
   {t:'It lacks the C4–C5 double bond found in ring A', correct:false, why:'Cortisone keeps the C4–C5 double bond and the C3 ketone (slide 26).'},
@@ -1241,7 +1231,7 @@ QUESTIONS.push(
   {t:'A transferase', correct:false, why:'Transferases such as UGT and sulfotransferase add conjugates (slide 9).'},
   {t:'A hydrolase', correct:false, why:'He named it an oxidoreductase (T 1193).'},
   {t:'A cytochrome P450', correct:false, why:'He named it a hydroxysteroid dehydrogenase, an oxidoreductase (T 1192–1193).'}],
- teach:'11β-HSD oxidizes the C11 hydroxyl to a ketone (hydrocortisone to cortisone) and reduces it back; it is an oxidation–reduction enzyme. Types 1 and 2 exist, but he did not go into them (T 1192–1195).',
+ teach:'11β-HSD oxidizes the C11 hydroxyl of hydrocortisone to the ketone of cortisone; he called it an oxidation–reduction (oxidoreductase) enzyme. Types 1 and 2 exist, but he did not go into them (slide 26; T 1192–1195).',
  cite:S3+' slides 9, 26; T 1190–1196'},
 
 {id:'S3-103', skill:'pk', prof:'Sikazwe', tier:'new', topic:'s3-hc', sub:'adme', concept:'hc-urine', lowYield:true,
