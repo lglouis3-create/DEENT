@@ -874,7 +874,7 @@ QUESTIONS.push(
 
 {id:'L2-073', skill:'adverse', prof:'Smith', tier:'new', topic:'l2-cni', sub:'oral', concept:'oral-cni-boxed',
  tags:['adverse','mechanism'], source:'both',
- stem:'Why does oral cyclosporine carry a boxed warning for lymphoma and other malignancies?',
+ stem:'Why does oral cyclosporine carry a black box warning for lymphoma and other malignancies?',
  options:[
   {t:'It suppresses immune surveillance of cancer', correct:true, why:'Slide 30; (T 399–403) the immune system identifies and fights cancer cells, so suppressing it removes some of that defense.'},
   {t:'It damages DNA in lymphocytes', correct:false, why:'Not the reason she gave (T 399–403).'},

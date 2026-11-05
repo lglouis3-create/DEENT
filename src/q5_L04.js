@@ -102,7 +102,7 @@ QUESTIONS.push(
  tags:['adverse'], source:'both',
  stem:'What is the limiting factor for using vitamin D analogs in psoriasis?',
  options:[
-  {t:'Hypercalcemia', correct:true, why:'Vitamin D increases calcium absorption into the blood; "this becomes the limiting factor" (T@1580–2000); his note on slide 27 reads "limiting factor - hypercalcemia".'},
+  {t:'Hypercalcemia', correct:true, why:'Vitamin D increases calcium absorption into the blood; "this becomes the limiting factor" (T@1580–2000); the annotation on the student copy of slide 27 reads "hypercalcemia - becomes the limiting factor".'},
   {t:'Teratogenicity', correct:false, why:'Teratogenicity is the major limitation of the retinoids (slide 48; T@27300–27450).'},
   {t:'Skin atrophy', correct:false, why:'Not a limitation he gave for vitamin D analogs; the limit he named is the calcium effect (T@1580–2000).'},
   {t:'Hepatic first-pass loss', correct:false, why:'First-pass loss by CYP3A4 limits oral cyclosporine (slide 33), not vitamin D analogs.'}],
@@ -281,7 +281,7 @@ QUESTIONS.push(
  tags:['structure'], source:'both',
  stem:'Which structural features separate pimecrolimus from tacrolimus?',
  options:[
-  {t:'Cl vs OH, and ethyl vs allyl', correct:true, why:'"The only points of difference are that chlorine and that methyl group, and here you have that ylic group and hydroxy" (T@4600–4780); highlighted on slide 28.'},
+  {t:'Cl vs OH, and ethyl vs allyl', correct:true, why:'"The only points of difference are that chlorine and that methyl [the highlighted group is ethyl] group, and here you have that [all]ylic group and hydroxy" (T@4600–4780); highlighted on slide 28.'},
   {t:'A lactam vs a lactone ring', correct:false, why:'Both are lactones (macrolides) (slides 28, 32); the lactam is cyclosporine (slide 33).'},
   {t:'Aromatic vs non-aromatic rings', correct:false, why:'Aromatic ring count classifies retinoids (slides 49–51), not the limus pair.'},
   {t:'An ester prodrug vs an active acid', correct:false, why:'That separates tazarotene from tazarotenic acid (slide 29).'}],
@@ -293,7 +293,7 @@ QUESTIONS.push(
  stem:'What is the mechanism of pimecrolimus and tacrolimus?',
  options:[
   {t:'Calcineurin inhibition', correct:true, why:'Slide 28: "MoA: Calcineurin inhibitors - ↓ release of inflammatory cytokines"; (T@5784).'},
-  {t:'Phosphodiesterase-4 inhibition', correct:false, why:'PDE4 inhibition is apremilast (slide 34) and crisaborole.'},
+  {t:'Phosphodiesterase-4 inhibition', correct:false, why:'PDE4 inhibition is apremilast (slide 34).'},
   {t:'JAK inhibition', correct:false, why:'JAK inhibition is tofacitinib (slide 35).'},
   {t:'DHFR inhibition', correct:false, why:'DHFR inhibition is methotrexate (slide 30).'}],
  teach:'He said he was "Not so worried about mechanism of action" for this pair (T@5702): they inhibit calcineurin and in the end suppress the release of inflammatory cytokines. The point he stressed was skin permeation.',
@@ -301,7 +301,8 @@ QUESTIONS.push(
 
 {id:'S4-020', skill:'chem', prof:'Sikazwe', tier:'new', topic:'s4-limus', sub:'class', concept:'limus-lactone',
  tags:['poll','verbatim'], source:'both',
- stem:'Due to the selected functionality, this Limus drug molecule may be chemically classified as a ........ (The circled group is the ester bond that closes the large ring of pimecrolimus.)',
+ img:'s4-polleve3',
+ stem:'Due to the selected functionality, this Limus drug molecule may be chemically classified as a ........ (The circled group is the -C(=O)-O- link inside the large ring of pimecrolimus.)',
  options:[
   {t:'Lactam', correct:false, why:'A lactam is a cyclic amide: "These are cyclic what amides, right?" (T@11620–11662); that is cyclosporine (slide 33).'},
   {t:'Lactone', correct:true, why:'"this is now part of a cyclic what? Structure And that is an ester functional group ... Are they called lactones? Yes." (T@11453–11700); Polleve-3 key, slide 32.'},
@@ -316,7 +317,7 @@ QUESTIONS.push(
  stem:'Which pairing of drug and ring functional group is correct?',
  options:[
   {t:'Cyclosporine, cyclic amide (lactam)', correct:true, why:'Cyclosporine is an 11 amino acid cyclic peptide; "the cyclic peptide ... can be described then as a what? And a lactam" (slide 33; T@12150–12254).'},
-  {t:'Tacrolimus, cyclic amide (lactam)', correct:false, why:'Tacrolimus closes its ring with an ester, so it is a lactone (slides 28, 32).'},
+  {t:'Tacrolimus, 11 amino acid cyclic peptide', correct:false, why:'Tacrolimus is a macrolide lactone (slides 28, 32); the 11 amino acid cyclic peptide is cyclosporine (slide 33).'},
   {t:'Pimecrolimus, cyclic peroxide bond', correct:false, why:'Pimecrolimus is a lactone, a cyclic ester (slide 32); the peroxide is benzoyl peroxide (slide 47).'},
   {t:'Cyclosporine, cyclic ester (lactone)', correct:false, why:'Its ring is built from amide (peptide) bonds, so it is a lactam (T@12100–12254).'}],
  teach:'Peptide bonds are amide bonds; closing a chain of them into a ring makes a cyclic amide, a lactam (cyclosporine, slide 33). Closing a ring through an ester makes a lactone (pimecrolimus, tacrolimus; slides 28, 32).',
@@ -345,7 +346,7 @@ QUESTIONS.push(
  teach:'Tazarotene (ethyl ester prodrug) → carboxylesterase → tazarotenic acid, the active metabolite with a free carboxylic acid (slides 29, 51; T@6942–7125, T@30193–30300).',
  cite:S4+' slides 29, 51; T@6942–7125'},
 
-{id:'S4-024', skill:'pk', prof:'Sikazwe', tier:'new', topic:'s4-psret', sub:'taz', concept:'ce-enzymes',
+{id:'S4-024', skill:'pk', prof:'Sikazwe', tier:'new', topic:'s4-psret', sub:'taz', concept:'ce-enzymes', dupOf:'S4-023',
  tags:['room'], source:'transcript',
  stem:'What are the "CE" enzymes that activate ester prodrugs such as tazarotene?',
  options:[
@@ -513,7 +514,7 @@ QUESTIONS.push(
  teach:'"When we say peptides, we are simply talking about these amide bonds" (T@12100–12150). A ring of amide bonds is a cyclic amide, a lactam (T@12150–12254).',
  cite:S4+' slide 33; T@12014–12254'},
 
-{id:'S4-039', skill:'chem', prof:'Sikazwe', tier:'new', topic:'s4-sys', sub:'csa', concept:'csa-lactam',
+{id:'S4-039', skill:'chem', prof:'Sikazwe', tier:'new', topic:'s4-sys', sub:'csa', concept:'csa-lactam', dupOf:'S4-021',
  tags:['room'], source:'transcript',
  stem:'Because it is a cyclic peptide, cyclosporine can be classified chemically as what?',
  options:[
@@ -561,7 +562,7 @@ QUESTIONS.push(
  tags:['room','interaction'], source:'both',
  stem:'What would be the effect of co-administering cyclosporine with grapefruit juice?',
  options:[
-  {t:'Higher cyclosporine blood levels', correct:true, why:'"So you can enhance what blood levels of this because you\'ve blocked out this first pass metabolism" (T@13190–13550); note on slide 33: "↑ bioavailability of cyclosporin".'},
+  {t:'Higher cyclosporine blood levels', correct:true, why:'"So you can enhance what blood levels of this because you\'ve blocked out this first pass metabolism" (T@13190–13550); annotation on the student copy of slide 33: "↑ bioavailability of cyclosporin".'},
   {t:'Lower cyclosporine blood levels', correct:false, why:'The reverse; grapefruit juice blocks the 3A4 first-pass loss (T@13450–13550).'},
   {t:'Faster activation by cyclophilin', correct:false, why:'Activation by cyclophilin binding is not changed by grapefruit juice; first-pass metabolism is (slide 33).'},
   {t:'No change, since it is not metabolized', correct:false, why:'Cyclosporine is extensively metabolized by 3A4 (slide 33).'}],
@@ -688,7 +689,7 @@ QUESTIONS.push(
  tags:['recall'], source:'transcript',
  stem:'How does P. acnes stain?',
  options:[
-  {t:'Gram positive', correct:true, why:'"Now this is a gram positive, right? Pacin [P. acnes] is gram. Positive bacteria." (T@35047–35100); note on slide 54.'},
+  {t:'Gram positive', correct:true, why:'"Now this is a gram positive, right? Pacin [P. acnes] is gram. Positive bacteria." (T@35047–35100); annotation on the student copy of slide 54.'},
   {t:'Gram negative', correct:false, why:'The reverse of what he said (T@35047).'},
   {t:'Acid-fast', correct:false, why:'Not stated for P. acnes; he called it gram positive (T@35047).'},
   {t:'It does not take a stain', correct:false, why:'He called it gram positive (T@35047).'}],
@@ -703,18 +704,18 @@ QUESTIONS.push(
   {t:'Its OH is on the carbon next to the COOH', correct:true, why:'"the hydroxy group is on the atom that is alpha to the carboxylic acid. Or next to." (T@20199–20470); slide 44 "OH on alpha-C (i.e., carbon next to -CO2H)".'},
   {t:'Its OH is two carbons from the COOH', correct:false, why:'That is a beta-hydroxy acid, like salicylic acid (T@22100–22230).'},
   {t:'It has an aromatic ring right beside the acid', correct:false, why:'The aromatic ring is in salicylic acid and raises its log P (T@21537–21656).'},
-  {t:'It has two carboxylic acid groups', correct:false, why:'A diacid describes azelaic acid (slide 54) and oxalic acid, the GA metabolite (slide 43).'}],
+  {t:'It has two carboxylic acid groups', correct:false, why:'A diacid describes azelaic acid (slide 54) and the diacid metabolite of glycolic acid (slide 43; T@20850).'}],
  teach:'Hydroxy acid SAR (slide 44): a COOH group; most have the OH on the alpha carbon, the carbon next to CO2H; R is mostly alkyl. Glycolic acid is HO-CH2-COOH.',
  cite:S4+' slides 43–44; T@20199–20470'},
 
 {id:'S4-056', skill:'chem', prof:'Sikazwe', tier:'new', topic:'s4-kera', sub:'ha', concept:'sa-bha',
  tags:['structure','room'], source:'transcript',
- stem:'Why is salicylic acid a beta-hydroxy acid rather than an alpha-hydroxy acid?',
+ stem:'Salicylic acid is which kind of hydroxy acid, and why?',
  options:[
-  {t:'Its OH sits on the beta carbon', correct:true, why:'"This is the alpha carbon. This one is called the beta carbon. So this is a beta hydroxy acid ... 2 carbon removed from the carboxylic acid" (T@22090–22230).'},
-  {t:'It has no carboxylic acid group', correct:false, why:'Salicylic acid has a COOH on the benzene ring (slide 43).'},
-  {t:'Its OH sits on the alpha carbon', correct:false, why:'That would make it an alpha-hydroxy acid like glycolic acid (slide 44).'},
-  {t:'It has a lower pKa than glycolic acid', correct:false, why:'Both have a pKa of about 3 (T@20564, T@21768); pKa does not set alpha or beta.'}],
+  {t:'Beta; its OH is two carbons from the COOH', correct:true, why:'"This is the alpha carbon. This one is called the beta carbon. So this is a beta hydroxy acid ... 2 carbon removed from the carboxylic acid" (T@22090–22230).'},
+  {t:'Alpha; its OH is next to the COOH carbon', correct:false, why:'The carbon next to the COOH is the alpha carbon, and salicylic acid has no OH there (T@22090–22230).'},
+  {t:'Alpha; its COOH sits on an aromatic ring', correct:false, why:'An aromatic ring does not make an acid alpha; the position of the OH relative to the COOH does (slide 44; T@22090–22230).'},
+  {t:'Beta; it carries two COOH groups', correct:false, why:'Salicylic acid has one COOH (slide 43); two COOH groups describe a diacid such as azelaic acid (slide 54).'}],
  teach:'Count from the carboxyl carbon: the next carbon is alpha, the one after is beta. In salicylic acid the OH is on the ring carbon two away from the COOH carbon (the beta carbon) (T@22090–22230).',
  cite:S4+' slide 43; T@22090–22230'},
 
@@ -788,10 +789,10 @@ QUESTIONS.push(
  tags:['structure'], source:'both',
  stem:'Which compound is an alpha-hydroxy acid?',
  options:[
-  {t:'2-Hydroxypropanoic acid (lactic acid)', correct:true, why:'The OH is on C2, the carbon next to the COOH; lactic acid is an AHA from milk (slide 68; T@46989).'},
+  {t:'2-Hydroxypropanoic acid', correct:true, why:'The OH is on C2, the carbon next to the COOH; this is lactic acid, an AHA from milk (slide 68; T@46989).'},
   {t:'3-Hydroxybutanoic acid', correct:false, why:'The OH is on C3, two carbons from the COOH: a beta-hydroxy acid (T@22100–22230).'},
-  {t:'2-Methylpropanoic acid', correct:false, why:'No hydroxyl at all; a hydroxy acid needs an OH (slide 44).'},
-  {t:'2-Hydroxybenzoic acid (salicylic acid)', correct:false, why:'Its OH is on the beta carbon of the ring, so it is a beta-hydroxy acid (T@22090–22230).'}],
+  {t:'2-Methylbutanedioic acid', correct:false, why:'No hydroxyl at all; a hydroxy acid needs an OH (slide 44).'},
+  {t:'2-Hydroxybenzoic acid', correct:false, why:'Salicylic acid: its OH is on the ring carbon two from the COOH, the beta carbon (T@22090–22230).'}],
  teach:'Slide 44 SAR: a COOH, an OH on the alpha carbon (next to CO2H), R mostly alkyl. He walked the class through the same test on the Polleve-4 figure: "Hydroxy group needs to be ... on the carbon that is next to the carboxylic acid" (T@23455–23880).',
  cite:S4+' slides 44, 68; T@22839–23200, T@23455–23880'},
 
@@ -933,13 +934,13 @@ QUESTIONS.push(
 
 {id:'S4-076', skill:'chem', prof:'Sikazwe', tier:'new', topic:'s4-ret', sub:'g1', concept:'iso-c13',
  tags:['structure','room'], source:'both',
- stem:'Counting from the carboxyl carbon, which double bond is cis in isotretinoin?',
+ stem:'Numbering the chain from the ring carbon marked 1 on the structure, at which carbon is the cis double bond of isotretinoin?',
  options:[
   {t:'The double bond at carbon 13', correct:true, why:'"if you were to count the carbons ... you start 1 from here ... when you land over here, this is 13 ... 13 carbon cis" (T@28100–28470); slide 49 "13-cis retinoic acid".'},
   {t:'The double bond at carbon 9', correct:false, why:'He counted to C13 for the cis bond (T@28100–28470).'},
   {t:'The double bond in the ring', correct:false, why:'The ring double bond is the same in both; the change is at C13 of the chain (slide 49).'},
   {t:'Several double bonds in the chain', correct:false, why:'The others stay trans: "they are all trans up to here, but here. Sis" (T@28300–28420).'}],
- teach:'Carbon 1 is the carboxyl carbon. In tretinoin every chain double bond is trans; in isotretinoin the one at C13 is cis (slide 49).',
+ teach:'Carbon 1 is the ring carbon carrying the two methyl groups, as he numbered it on slide 49; counting along the chain, the double bond at carbon 13, the last before the COOH, is cis in isotretinoin. In tretinoin every chain double bond is trans; in isotretinoin the one at C13 is cis (slide 49).',
  cite:S4+' slide 49; T@28100–28540'},
 
 {id:'S4-077', skill:'counsel', prof:'Sikazwe', tier:'new', topic:'s4-ret', sub:'g1', concept:'tret-iso-route',
@@ -972,14 +973,14 @@ QUESTIONS.push(
   {t:'Poor skin penetration and a very short half-life', correct:false, why:'Etretinate is highly lipophilic with a T1/2 of 120 days (slide 50).'},
   {t:'Strong CYP3A4 inhibition and liver injury', correct:false, why:'Strong 3A4 inhibition belongs to the azoles (slide 53).'},
   {t:'PABA-type allergy and photosensitivity', correct:false, why:'Those limit PABA sunscreens (slide 63).'}],
- teach:'Acitretin, the active form, has "some retention of teratogenicity, but not to the extent of" etretinate (T@29300–29450; slide 50 note).',
+ teach:'Acitretin, the active form, has "some retention of teratogenicity, but not to the extent of" etretinate (T@29300–29450; annotation on the student copy of slide 50).',
  cite:S4+' slide 50; T@28898–29500'},
 
 {id:'S4-080', skill:'class', prof:'Sikazwe', tier:'new', topic:'s4-ret', sub:'g3', concept:'gen3-members', multi:true,
  tags:['list','classification'], source:'both',
  stem:'Which are 3rd-generation (poly-aromatic) retinoids? Select all that apply.',
  options:[
-  {t:'Adapalene', correct:true, why:'Slide 51; first synthetic retinoid (T@30100).'},
+  {t:'Adapalene', correct:true, why:'Slide 51: adapalene, the first synthetic retinoid; poly-aromatic (T@30027–30100).'},
   {t:'Trifarotene', correct:true, why:'Slide 51; (T@30100).'},
   {t:'Tazarotene', correct:true, why:'Slide 51, "a prodrug"; (T@30100–30160).'},
   {t:'Acitretin', correct:false, why:'2nd generation, mono-aromatic (slide 50).'},
@@ -1025,7 +1026,7 @@ QUESTIONS.push(
  tags:['structure'], source:'both',
  stem:'Ethinyl estradiol, norgestimate and drospirenone share which structural class?',
  options:[
-  {t:'Steroids', correct:true, why:'"these are all going to be what? Steroids, right? Because you know the structure of steroids A, B, C, D" (T@31000–31200); "Steroids" note on slide 52.'},
+  {t:'Steroids', correct:true, why:'"these are all going to be what? Steroids, right? Because you know the structure of steroids A, B, C, D" (T@31000–31200); "Steroids" annotation on the student copy of slide 52.'},
   {t:'Tetracyclines', correct:false, why:'Tetracyclines have four rings fused in a line, not the steroid nucleus (slide 55; T@35205–35450).'},
   {t:'Pteridines', correct:false, why:'The pteridine is methotrexate (slide 30).'},
   {t:'Lactams', correct:false, why:'The lactam is cyclosporine (slide 33).'}],
@@ -1184,7 +1185,7 @@ QUESTIONS.push(
  tags:['counsel','take-home'], source:'both',
  stem:'How does particle size affect zinc oxide as a sunblock?',
  options:[
-  {t:'Larger particles are more effective', correct:true, why:'"Size Matters here. It\'s important. Larger size ... particle size. Is More effective" (T@38748–38830); slide 61 note.'},
+  {t:'Larger particles are more effective', correct:true, why:'"Size Matters here. It\'s important. Larger size ... particle size. Is More effective" (T@38748–38830); annotation on the student copy of slide 61.'},
   {t:'Smaller particles are more effective', correct:false, why:'That is the rule for sulfur (T@24650–24760); nano zinc oxide loses reflective properties (T@38830–39000).'},
   {t:'Size does not change its action', correct:false, why:'"Size Matters here" (T@38748).'},
   {t:'Nano size improves its reflection', correct:false, why:'Nano-sized zinc oxide turns transparent and starts losing reflective properties (T@38921–39050).'}],
@@ -1206,18 +1207,18 @@ QUESTIONS.push(
  tags:['terms'], source:'both',
  stem:'What does photodegradation of a sunscreen mean?',
  options:[
-  {t:'The light it absorbs also degrades it', correct:true, why:'"when they say photodegradation, that means the same light they\'re absorbing is also degrading them" (T@40950–41140); note on slide 62.'},
+  {t:'The light it absorbs also degrades it', correct:true, why:'"when they say photodegradation, that means the same light they\'re absorbing is also degrading them" (T@40950–41140); annotation on the student copy of slide 62.'},
   {t:'It is broken down by skin esterases', correct:false, why:'That is ester hydrolysis, e.g., of the salicylate sunscreens (slide 64).'},
   {t:'It is metabolized by CYP3A4 in the liver', correct:false, why:'Not the meaning of photodegradation (T@40950–41140).'},
   {t:'It reflects light away from the skin', correct:false, why:'Reflection is how the inorganic sunblocks act (slide 61).'}],
- teach:'"Catch my spelling on that degradation, half-life" (T@40782). The photodegradation half-life sets how often a sunscreen must be reapplied (T@40860–40950).',
+ teach:'The photodegradation half-life sets how often a sunscreen must be reapplied (T@40860–40950). The photodegradation half-life sets how often a sunscreen must be reapplied (T@40860–40950).',
  cite:S4+' slide 62; T@40700–41140'},
 
 {id:'S4-101', skill:'counsel', prof:'Sikazwe', tier:'new', topic:'s4-sun', sub:'org', concept:'avobenzone',
  tags:['counsel','numbers'], source:'both',
- stem:'Avobenzone has a photodegradation half-life of about 2 hours. What does that mean for the user?',
+ stem:'Based on its photodegradation half-life, how often should avobenzone be reapplied?',
  options:[
-  {t:'Reapply about every 2 hours', correct:true, why:'"photo. Degradation ... half-life. Of about what? 2 hours. So that means after every 2 hours, the person has to come up and ... reapply" (T@40700–40950); slide 62 note "t1/2 = 2hrs".'},
+  {t:'Reapply about every 2 hours', correct:true, why:'"photo. Degradation ... half-life. Of about what? 2 hours. So that means after every 2 hours, the person has to come up and ... reapply" (T@40700–40950); annotation on the student copy of slide 62 "t1/2 = 2hrs".'},
   {t:'Reapply about every 12 hours', correct:false, why:'About 12 hours is ensulizole (T@42930).'},
   {t:'Reapply after each swim', correct:false, why:'Reapplying after swimming was the ensulizole drawback (T@43160–43270).'},
   {t:'Apply once a day before sun', correct:false, why:'With a 2-hour photodegradation half-life, once a day is too little (T@40860–40950).'}],
@@ -1228,7 +1229,7 @@ QUESTIONS.push(
  tags:['compare'], source:'both',
  stem:'How does meradimate compare with avobenzone as a UVA sunscreen?',
  options:[
-  {t:'It is degraded by light even faster', correct:true, why:'"It\'s even more rapidly. Degraded. Whereas this might be 2 hours you apply, you probably don\'t have 2 hours essentially with Meradime" (T@41300–41530); slide 62 note "more rapidly degraded".'},
+  {t:'It is degraded by light even faster', correct:true, why:'"It\'s even more rapidly. Degraded. Whereas this might be 2 hours you apply, you probably don\'t have 2 hours essentially with Meradime" (T@41300–41530); annotation on the student copy of slide 62 "more rapidly degraded".'},
   {t:'It is far more photostable', correct:false, why:'The reverse (T@41300–41530).'},
   {t:'It also blocks UVB by reflection', correct:false, why:'Meradimate is an anthranilate that absorbs UVA (slide 62); reflection is the metal oxides (slide 61).'},
   {t:'It is highly absorbed through the skin', correct:false, why:'High skin absorption was the benzophenone worry (slide 65).'}],
@@ -1239,7 +1240,7 @@ QUESTIONS.push(
  tags:['adverse','numbers'], source:'both',
  stem:'Which limitations apply to octinoxate, a UVB cinnamate?',
  options:[
-  {t:'Absorbed through skin; degrades in 1–2 h', correct:true, why:'"Problem Absorbed Through Skin Limitation ... The photo degradation. 1 to 2 hours" (T@41549–41760); notes on slide 63.'},
+  {t:'Absorbed through skin; degrades in 1–2 h', correct:true, why:'"Problem Absorbed Through Skin Limitation ... The photo degradation. 1 to 2 hours" (T@41549–41760); annotation on the student copy of slide 63.'},
   {t:'PABA allergy and photosensitivity', correct:false, why:'Those limit PABA and padimate O (slide 63; T@41918–42260).'},
   {t:'Washes off in water; degrades in 12 h', correct:false, why:'That is ensulizole (slide 64; T@42816–43400).'},
   {t:'Very low skin absorption due to its high MW', correct:false, why:'High molecular weight limits the skin absorption of bemotrizinol (slide 66).'}],
@@ -1250,7 +1251,7 @@ QUESTIONS.push(
  tags:['adverse'], source:'both',
  stem:'Why are PABA and padimate O rarely used as sunscreens?',
  options:[
-  {t:'Some people are allergic to PABA', correct:true, why:'"these are even rarely used ... Because some ... people are allergic to paba ... Paraaminobenzoic acid. Allergies" (T@41918–42100); slide 63 notes.'},
+  {t:'Some people are allergic to PABA', correct:true, why:'"these are even rarely used ... Because some ... people are allergic to paba ... Paraaminobenzoic acid. Allergies" (T@41918–42100); annotation on the student copy of slide 63.'},
   {t:'They photodegrade within minutes', correct:false, why:'He gave allergy as the reason (T@41918–42100).'},
   {t:'They are absorbed and teratogenic', correct:false, why:'Teratogenicity is the retinoid concern (slide 48).'},
   {t:'They wash off when swimming', correct:false, why:'Washing off was the ensulizole drawback (T@43160–43270).'}],
@@ -1276,14 +1277,14 @@ QUESTIONS.push(
   {t:'It photodegrades in about 2 hours', correct:false, why:'Ensulizole\'s photodegradation half-life is about 12 hours, the most photostable to that point (T@42930–43050).'},
   {t:'It is highly absorbed through the skin', correct:false, why:'High skin absorption (log P about 4) is the benzophenone worry (slide 65).'},
   {t:'It causes PABA-type allergy', correct:false, why:'PABA allergy limits PABA and padimate O (slide 63).'}],
- teach:'Ensulizole is a benzimidazole UVB absorber with a sulfonic acid; log P 1, water soluble; photodegradation half-life about 12 h (slide 64 notes; T@42816–43400).',
+ teach:'Ensulizole is a benzimidazole UVB absorber with a sulfonic acid; log P 1, water soluble; photodegradation half-life about 12 h (annotation on the student copy of slide 64; T@42816–43400).',
  cite:S4+' slide 64; T@42816–43400'},
 
 {id:'S4-107', skill:'adverse', prof:'Sikazwe', tier:'new', topic:'s4-sun', sub:'org', concept:'oxybenzone',
  tags:['adverse','numbers'], source:'both',
  stem:'What is the concern with oxybenzone and the other benzophenones?',
  options:[
-  {t:'Log P about 4; highly absorbed through skin', correct:true, why:'"Log P About 4. Hi[ghly] absorbed. Through skin. That\'s a worry" (T@43589–43700); notes on slide 65.'},
+  {t:'Log P about 4; highly absorbed through skin', correct:true, why:'"Log P About 4. Hi[ghly] absorbed. Through skin. That\'s a worry" (T@43589–43700); annotation on the student copy of slide 65.'},
   {t:'Log P about 1; washes off in water', correct:false, why:'That is ensulizole (slide 64).'},
   {t:'A photodegradation half-life of about 90 hours', correct:false, why:'About 90 hours is the photostability of octocrylene (T@44090).'},
   {t:'They block UVB but not UVA', correct:false, why:'Benzophenones absorb full UVB and considerable UVA (slide 65).'}],
@@ -1294,7 +1295,7 @@ QUESTIONS.push(
  tags:['counsel','numbers'], source:'both',
  stem:'Why is octocrylene added to sunscreens that contain oxybenzone?',
  options:[
-  {t:'It photostabilizes the other filters', correct:true, why:'"this is being used ... to provide stability to even what? Oxobenzene [oxybenzone] ... it\'s also providing photo stability to the other components" (T@44585–44800); slide 65 note "used as an additive sunscreen".'},
+  {t:'It photostabilizes the other filters', correct:true, why:'"this is being used ... to provide stability to even what? Oxobenzene [oxybenzone] ... it\'s also providing photo stability to the other components" (T@44585–44800); annotation on the student copy of slide 65 "used as an additive sunscreen".'},
   {t:'It lowers skin absorption of oxybenzone', correct:false, why:'Not the reason he gave; the reason is photostability (T@44585–44800).'},
   {t:'It reflects light like zinc oxide', correct:false, why:'Octocrylene is an organic cinnamate absorber (slide 65); reflection is the metal oxides (slide 61).'},
   {t:'It hydrolyzes to salicylic acid', correct:false, why:'Hydrolysis to salicylic acid is the salicylates (slide 64).'}],
@@ -1332,7 +1333,7 @@ QUESTIONS.push(
   {t:'Octocrylene', correct:true, why:'Slide 65: cinnamate, UVB/UVA, "Absorb full UVB + UVA".'},
   {t:'Bemotrizinol', correct:true, why:'Slide 66: UVB/UVA, "Absorbs UVB & UVA".'},
   {t:'Ensulizole', correct:false, why:'A UVB (280–315 nm) benzimidazole (slide 64).'},
-  {t:'Menthyl anthranilate (meradimate)', correct:false, why:'A UVA anthranilate (slide 62).'}],
+  {t:'Meradimate', correct:false, why:'A UVA anthranilate (slide 62).'}],
  teach:'By band (slides 62–66): UVA, avobenzone and meradimate; UVB, octinoxate, cinoxate, PABA, padimate O, homosalate, octisalate, ensulizole; UVB/UVA, oxybenzone, sulisobenzone, dioxybenzone, octocrylene, bemotrizinol. The inorganic zinc oxide and titanium dioxide are broad spectrum (slide 61).',
  cite:S4+' slides 62–66'},
 

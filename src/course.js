@@ -133,7 +133,7 @@ const COURSE = {
   exams: [
     {id:'exam1', name:'Exam 1', date:'Mon 11/09, 9:00–10:30 AM', when:'2026-11-09T09:00',
      questions:50, minutes:90, sata:null,
-     blurb:'Lecture 1 only (10/29, Dr. Smith) in this preview. Exam 1 covers Lectures 1–4 (syllabus p. 6); the faculty have not announced a split by professor, so practice papers are unweighted.',
+     blurb:'Practice coverage of Lectures 1–4 (Smith 10/29, 10/30, 11/03; Sikazwe 11/03, 11/04). The faculty have not announced a split by professor, so this paper is unweighted. Not yet in the bank: Dr. Smith\'s sun-exposure recording.',
      pools:[
        {key:'smith',   name:'Dr. Smith (pharmacology)',      marks:null, filter:{exam:1, prof:'Smith'}},
        {key:'sikazwe', name:'Dr. Sikazwe (medicinal chemistry)', marks:null, filter:{exam:1, prof:'Sikazwe'}},

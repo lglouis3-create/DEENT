@@ -11,3 +11,8 @@
 ## 2026-11-05: first `main` and Pages
 - Before `main` existed, Pages had been set to build from `claude/jolly-bell-k7ur5m`, so the branch's full build was public for a short time. On Louis's "yes, push main", pushed `main` (`319148c`): placeholder root, Lecture 1 at `/preview/`, sources and state. Louis switched Pages to `main` / root; run "pages build and deployment" for `319148c` completed with success (2026-11-05 05:38 UTC). The site itself was not opened from this session.
 - Louis did not want the placeholder ("I think it should just open to the site"); the full Lecture 1 build now serves the root of `main`.
+
+## 2026-11-05: Lectures 2–4
+- Louis: "i want all the lecture material all the way to today 11/04 on the site".
+- Four writer agents drafted one file each (L2 114, L3a 108, S3 103, S4 119); four separate reviewer agents checked every item against the slides, transcripts, frames, drug chart and readings. Findings: L2 12, L3a 15, S3 17, S4 16 (one wrong key, S4-076, numbering stem; fixed). All applied; held out L2-015, L3-026, S3-081. Bank 509.
+- Notes merged: tell-apart and reference tables per lecture, STYLE.md polls/room questions/exclusions, conflicts in OPEN_QUESTIONS.md. Exam 1 label changed to practice coverage of Lectures 1-4.

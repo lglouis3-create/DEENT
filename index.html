@@ -662,7 +662,7 @@ const COURSE = {
   exams: [
     {id:'exam1', name:'Exam 1', date:'Mon 11/09, 9:00–10:30 AM', when:'2026-11-09T09:00',
      questions:50, minutes:90, sata:null,
-     blurb:'Lecture 1 only (10/29, Dr. Smith) in this preview. Exam 1 covers Lectures 1–4 (syllabus p. 6); the faculty have not announced a split by professor, so practice papers are unweighted.',
+     blurb:'Practice coverage of Lectures 1–4 (Smith 10/29, 10/30, 11/03; Sikazwe 11/03, 11/04). The faculty have not announced a split by professor, so this paper is unweighted. Not yet in the bank: Dr. Smith\'s sun-exposure recording.',
      pools:[
        {key:'smith',   name:'Dr. Smith (pharmacology)',      marks:null, filter:{exam:1, prof:'Smith'}},
        {key:'sikazwe', name:'Dr. Sikazwe (medicinal chemistry)', marks:null, filter:{exam:1, prof:'Sikazwe'}},
@@ -709,7 +709,7 @@ const COURSE = {
    the Topics page shows as "What's new" since this browser last marked an
    entry seen, and Settings shows whole. preview: true in a page built with
    `build.py --preview`, which is served at /preview/ beside the live drill. */
-const BUILD = {stamp:"2026-11-04 23:58 CT", built:"2026-11-05T05:58:59Z", questions:512, images:0, changelog:[{"date": "2026-11-05 (Lecture 1 preview)", "items": ["Lecture 1 (Dr. Smith, 10/29): skin structure, AD, psoriasis, acne, nuclear receptor binders, steroids, retinoids.", "Step-through figures: the acne lesion cascade and direct vs indirect nuclear receptor action.", "Tell-apart and reference tables for Lecture 1; her polls on the major pathology of AD and psoriasis.", "Exam 1 practice paper is unweighted: the faculty have not announced a split by professor."]}], preview:false};
+const BUILD = {stamp:"2026-11-05 00:06 CT", built:"2026-11-05T06:06:54Z", questions:509, images:0, changelog:[{"date": "2026-11-05 (Lectures 2\u20134)", "items": ["Lecture 2 (Smith 10/30): retinoids, calcipotriene, calcineurin inhibitors, PDE-4 inhibitors, keratolytics.", "Lecture 3 (Smith 11/03): acne antibiotics, tars and anthralin, methotrexate, biologics, JAK inhibitors.", "Lectures 3\u20134 (Sikazwe 11/03\u201311/04): structures, SAR, prodrugs, CYP3A4, hydroxy acids, retinoids, sunscreens.", "New tell-apart and reference tables for each lecture; Exam 1 paper now draws from both professors."]}, {"date": "2026-11-05 (Lecture 1 preview)", "items": ["Lecture 1 (Dr. Smith, 10/29): skin structure, AD, psoriasis, acne, nuclear receptor binders, steroids, retinoids.", "Step-through figures: the acne lesion cascade and direct vs indirect nuclear receptor action.", "Tell-apart and reference tables for Lecture 1; her polls on the major pathology of AD and psoriasis.", "Exam 1 practice paper is unweighted: the faculty have not announced a split by professor."]}], preview:false};
 const IMAGES = {};
 /* Atlas of drawn structures. This course has none: the stub keeps the engine
    happy and COURSE.atlas:false hides the tab. See the PHAR 4342 repo's atlas.js
@@ -1864,7 +1864,7 @@ QUESTIONS.push(
  stem:'Why should patients on topical retinoids avoid sun exposure and use sunscreen?',
  options:[
   {t:'They may raise the tumor risk from UV light', correct:true, why:'Slide 16: may increase the tumorigenic potential of ultraviolet radiation (animal data); (T 48–53).'},
-  {t:'Sunlight turns them into a sensitizer', correct:false, why:'Being a potent contact sensitizer is a benzoyl peroxide effect (slide 37).'},
+  {t:'Sunlight converts them to benzoic acid', correct:false, why:'Benzoic acid is the metabolite of benzoyl peroxide in the skin (T 498–500), not a retinoid product.'},
   {t:'Sunlight greatly raises their systemic absorption', correct:false, why:'Not a reason given on slide 16.'},
   {t:'UV light makes them comedogenic', correct:false, why:'The comedone flare comes from peeling (T 20–28), not from UV light.'}],
  teach:'Peeling off outer layers leaves the skin more sensitive to UV radiation. Slide 16: retinoids may increase the tumorigenic potential of UV radiation, from animal studies, so counsel patients to avoid or minimize sun exposure and use a sunscreen (T 48–53).',
@@ -1926,17 +1926,7 @@ QUESTIONS.push(
  teach:'Tretinoin is the acid form of vitamin A (all-trans retinoic acid, ATRA), used for acne. Less than 10% is absorbed, so some drug does reach the circulation from topical use (slide 17; T 60–62).',
  cite:D2+' slide 17; T 60–62'},
 
-{id:'L2-015', skill:'class', prof:'Smith', tier:'new', topic:'l2-tret', sub:'prod', concept:'tretinoin-identity',
- tags:['recall'], source:'both',
- stem:'Which retinoid is the acid form of vitamin A, also known as ATRA?',
- options:[
-  {t:'Tretinoin', correct:true, why:'Slide 17: acid form of vitamin A; all-trans retinoic acid or ATRA.'},
-  {t:'Adapalene', correct:false, why:'Adapalene resembles retinoic acid but is a different compound (slide 18).'},
-  {t:'Acitretin', correct:false, why:'Acitretin is an oral retinoid for psoriasis (slide 20).'},
-  {t:'Calcipotriene', correct:false, why:'Calcipotriene is a vitamin D analog (slide 21).'}],
- teach:'Tretinoin (ATRA) is the acid form of vitamin A and is used topically for acne (slide 17; T 60–62).',
- cite:D2+' slide 17; T 60–62'},
-
+/* L2-015 held out: tretinoin's chemical identity (ATRA) is close to the retinoid structures she excluded (T 102-103). */
 {id:'L2-016', skill:'counsel', prof:'Smith', tier:'new', topic:'l2-tret', sub:'prod', concept:'tretinoin-micro',
  tags:['counseling','case'], source:'both',
  stem:'A patient finds standard topical tretinoin too irritating. Which change fits?',
@@ -1992,7 +1982,7 @@ QUESTIONS.push(
  teach:'Of the topical retinoids, tazarotene covers psoriasis as well as acne and wrinkles. It causes photosensitivity and needs contraceptive counseling (slide 18; T 75–81).',
  cite:D2+' slide 18; T 75–81'},
 
-{id:'L2-021', skill:'tell', prof:'Smith', tier:'new', topic:'l2-tret', sub:'prod', concept:'tazarotene-vs-adapalene',
+{id:'L2-021', skill:'tell', prof:'Smith', tier:'new', topic:'l2-tret', sub:'prod', concept:'tazarotene-vs-adapalene', dupOf:'L2-017',
  tags:['tell'], source:'both',
  stem:'Which statement separates tazarotene from adapalene?',
  options:[
@@ -2120,7 +2110,7 @@ QUESTIONS.push(
 
 {id:'L2-032', skill:'adverse', prof:'Smith', tier:'new', topic:'l2-oret', sub:'aci', concept:'acitretin-liver',
  tags:['adverse','counseling'], source:'both',
- stem:'Which adverse effect of acitretin, beyond those of isotretinoin, calls for liver function monitoring?',
+ stem:'Which adverse effect does acitretin add to those of isotretinoin?',
  options:[
   {t:'Hepatotoxicity, including fatal hepatitis', correct:true, why:'Slide 20; (T 104–106) hepatotoxicity has resulted in fatalities, so liver function should be checked.'},
   {t:'Nephrotoxicity needing dose changes', correct:false, why:'Nephrotoxicity is the calcineurin inhibitor concern (slide 30).'},
@@ -2411,7 +2401,7 @@ QUESTIONS.push(
   {t:'Breaks down cAMP to 5\'-AMP', correct:false, why:'That is phosphodiesterase (slide 32).'},
   {t:'Binds IL-2 at the cell surface', correct:false, why:'IL-2 binds CD25 of its receptor (slide 25).'}],
  teach:'Calcium and calmodulin activate calcineurin, a phosphatase. It dephosphorylates NFAT; active NFAT enters the nucleus and drives IL-2 expression (slide 26; T 319–331).',
- note:'At T 322 she said calcineurin "phosphorylates a transcription factor"; the next line (T 323), her repeat (T 328, "it\'ll [dephosphorylate] this transcription factor NFAT") and the slide 26 notes all describe removal of the phosphate. Keyed to dephosphorylation.',
+ note:'At T 322 she said calcineurin "phosphorylates a transcription factor"; the next line (T 323), her repeat (T 328, transcribed "it\'ll defhospholate this transcription factor NFAT") and the slide 26 notes all describe removal of the phosphate. Keyed to dephosphorylation.',
  cite:D2+' slide 26; T 319–331'},
 
 {id:'L2-058', skill:'mech', prof:'Smith', tier:'new', topic:'l2-tcell', sub:'mech', concept:'nfat-state',
@@ -2447,7 +2437,7 @@ QUESTIONS.push(
  teach:'Tacrolimus (tac, FK506) inhibits calcineurin by first binding FKBP; cyclosporine binds cyclophilin (slide 26; T 347–355).',
  cite:D2+' slide 26; T 347–355'},
 
-{id:'L2-061', skill:'tell', prof:'Smith', tier:'new', topic:'l2-tcell', sub:'mech', concept:'immunophilin-pair',
+{id:'L2-061', skill:'tell', prof:'Smith', tier:'new', topic:'l2-tcell', sub:'mech', concept:'immunophilin-pair', dupOf:'L2-059',
  tags:['tell'], source:'both',
  stem:'Which pairing of calcineurin inhibitor and binding protein is correct?',
  options:[
@@ -2643,14 +2633,14 @@ QUESTIONS.push(
 
 {id:'L2-078', skill:'tell', prof:'Smith', tier:'new', topic:'l2-cni', sub:'oral', concept:'tacrolimus-neuropathy', dupOf:'L2-077',
  tags:['case','tell'], source:'both',
- stem:'A transplant patient on an oral calcineurin inhibitor reports tingling in the hands and feet. Which drug is most likely?',
+ stem:'A patient on an oral calcineurin inhibitor develops a neuropathy. Which drug is most likely?',
  options:[
-  {t:'Tacrolimus', correct:true, why:'Slide 30: neuropathies with tacrolimus only; (T 412–419) patients on tacrolimus complained of tingling in their hands and feet.'},
+  {t:'Tacrolimus', correct:true, why:'Slide 30: neuropathies are a tacrolimus-specific effect; (T 409–411).'},
   {t:'Cyclosporine', correct:false, why:'Cyclosporine\'s specific effect is gingival hyperplasia (slide 30).'},
   {t:'Pimecrolimus', correct:false, why:'A topical calcineurin inhibitor for AD (slide 27).'},
   {t:'Apremilast', correct:false, why:'A PDE-4 inhibitor; its side effects are GI distress, headache, weight loss and depression (slide 34).'}],
- teach:'Tingling in the hands and feet points to the tacrolimus-specific neuropathy (slide 30; T 409–419).',
- cite:D2+' slide 30; T 408–419'},
+ teach:'Drug-specific effects of the oral calcineurin inhibitors: gingival hyperplasia with cyclosporine, neuropathies with tacrolimus (slide 30; T 408–411).',
+ cite:D2+' slide 30; T 408–411'},
 
 {id:'L2-079', skill:'pk', prof:'Smith', tier:'new', topic:'l2-cni', sub:'oral', concept:'cni-cyp3a4',
  tags:['interaction'], source:'both',
@@ -2822,14 +2812,14 @@ QUESTIONS.push(
 
 {id:'L2-094', skill:'adverse', prof:'Smith', tier:'new', topic:'l2-ker', sub:'bpo', concept:'bpo-sensitizer',
  tags:['adverse','cue'], source:'both',
- stem:'A patient develops swollen, scaly eyelids after using benzoyl peroxide near the eyes. Which property explains this?',
+ stem:'Besides skin irritation, which adverse property does benzoyl peroxide have?',
  options:[
-  {t:'It is a potent contact sensitizer', correct:true, why:'Slide 37; (T 500–501, 508) "it is a very potent sensitizer".'},
+  {t:'It is a potent contact sensitizer', correct:true, why:'Slide 37; (T 500–501) "it is a very potent sensitizer".'},
   {t:'It causes photosensitivity', correct:false, why:'Photosensitivity is listed for retinoids and calcipotriene (slides 16, 22), not benzoyl peroxide (slide 37).'},
   {t:'It is comedogenic', correct:false, why:'Comedogenic is a sulfur side effect (slide 38).'},
   {t:'It raises the blood salicylate level', correct:false, why:'Salicylism belongs to salicylic acid (slide 40).'}],
  teach:'Slide 37: skin irritation (drying, peeling, burning, blistering, scaling, edema); a potent contact sensitizer; keep it away from the eyes and mucous membranes.',
- cite:D2+' slide 37; T 500–510'},
+ cite:D2+' slide 37; T 500–501'},
 
 {id:'L2-095', skill:'counsel', prof:'Smith', tier:'new', topic:'l2-ker', sub:'bpo', concept:'bpo-counsel', multi:true,
  tags:['counseling','tell'], source:'both',
@@ -2861,7 +2851,7 @@ QUESTIONS.push(
   {t:'Bacteriostatic: it stops bacterial growth', correct:true, why:'Slide 38; (T 516–518) "it doesn\'t kill off the bacteria, but it helps prevent them from, uh, proliferating".'},
   {t:'Bactericidal: it kills P. acnes', correct:false, why:'(T 517) "it doesn\'t kill off the bacteria".'},
   {t:'It binds the 50S subunit of the bacterial ribosome', correct:false, why:'That is chloramphenicol and the macrolides (slide 42).'},
-  {t:'It has no antibacterial effect', correct:false, why:'Slide 38: bacteriostatic properties.'}],
+  {t:'It binds the 30S ribosomal subunit', correct:false, why:'That is the tetracycline class (slide 42).'}],
  teach:'Sulfur is a mild keratolytic with bacteriostatic properties (slide 38; T 515–518).',
  cite:D2+' slide 38; T 515–518'},
 
@@ -2915,10 +2905,10 @@ QUESTIONS.push(
  stem:'What degree of skin effect is the therapeutic goal with salicylic acid for acne?',
  options:[
   {t:'Mild peeling', correct:true, why:'(T 541–543) "the effects of it is should be peeling only. That\'s what we want therapeutically mild peeling"; slide 39.'},
-  {t:'Deep desquamation', correct:false, why:'(T 544–545) desquamation peels off deeper layers: "You don\'t want that happening".'},
+  {t:'Peeling of the deeper skin layers', correct:false, why:'(T 544–545) desquamation peels off deeper layers: "You don\'t want that happening".'},
   {t:'Ulceration of the comedone', correct:false, why:'Ulceration is a side effect of high concentrations (slide 40).'},
   {t:'No visible change in the skin', correct:false, why:'Mild peeling is the intended effect (T 543).'}],
- teach:'Slide 39: effects range from peeling to desquamation. The goal is mild peeling; desquamation removes deeper layers and is unwanted (T 541–545).',
+ teach:'Slide 39 describes the effect as peeling (desquamation) of keratotic debris. In class she set mild peeling as the goal and peeling of deeper layers as unwanted (T 541–545).',
  cite:D2+' slide 39; T 541–545'},
 
 {id:'L2-103', skill:'counsel', prof:'Smith', tier:'new', topic:'l2-ker', sub:'sal', concept:'salicylic-3-6',
@@ -3046,7 +3036,7 @@ QUESTIONS.push(
  note:'lowYield: chloramphenicol appears only in the figure and is not on the drug chart.',
  cite:D2+' slide 42; T 583–607'},
 
-{id:'L2-114', skill:'tell', prof:'Smith', tier:'new', topic:'l2-abx', sub:'ribo', concept:'tetra-vs-macrolide',
+{id:'L2-114', skill:'tell', prof:'Smith', tier:'new', topic:'l2-abx', sub:'ribo', concept:'tetra-vs-macrolide', dupOf:'L2-112',
  tags:['tell','figure'], source:'both',
  stem:'What separates tetracyclines from macrolides at the bacterial ribosome?',
  options:[
@@ -3122,12 +3112,12 @@ TOPICS.push(
 
 QUESTIONS.push(
 /* ---- Tetracyclines ------------------------------------------------------ */
-{id:'L3-001', skill:'mech', prof:'Smith', tier:'new', topic:'l3-abx', sub:'tet', concept:'tet-30s',
+{id:'L3-001', skill:'mech', prof:'Smith', tier:'new', topic:'l3-abx', sub:'tet', concept:'tet-30s', dupOf:'L2-111',
  tags:['mechanism'], source:'both',
  stem:'How do doxycycline and minocycline stop bacterial protein synthesis?',
  options:[
   {t:'Bind 30S and block tRNA at the acceptor site', correct:true, why:'Tetracyclines bind the 30S subunit and block aminoacyl-tRNA binding to the acceptor site (slide 43; T 29–31).'},
-  {t:'Bind 50S and prevent translocation', correct:false, why:'That is clindamycin and the macrolides (slides 46–47; T 53–55, 66–67).'},
+  {t:'Bind 50S and prevent translocation', correct:false, why:'That is clindamycin (slide 46; T 53–55); tetracyclines bind 30S (slide 43).'},
   {t:'Compete with PABA in bacterial folate synthesis', correct:false, why:'That is sulfamethoxazole, a different class (slide 48; T 75–76).'},
   {t:'Inhibit bacterial dihydrofolate reductase', correct:false, why:'That is trimethoprim (slide 48; T 77–79).'}],
  teach:'The tetracycline class (sarecycline, minocycline, doxycycline) binds the 30S subunit of the bacterial ribosome and keeps the charged tRNA from entering the acceptor site, so the protein is not made (slide 43; T 27–31). Clindamycin and the macrolides act on the other subunit, 50S.',
@@ -3290,7 +3280,7 @@ QUESTIONS.push(
  cite:D3+' slides 45–47; T 64–65'},
 
 /* ---- Macrolides --------------------------------------------------------- */
-{id:'L3-016', skill:'tell', prof:'Smith', tier:'new', topic:'l3-abx', sub:'macro', concept:'ribosome-subunit-tell',
+{id:'L3-016', skill:'tell', prof:'Smith', tier:'new', topic:'l3-abx', sub:'macro', concept:'ribosome-subunit-tell', dupOf:'L3-001',
  tags:['tell'], source:'both',
  stem:'Which acne antibiotic binds the 30S ribosomal subunit rather than the 50S?',
  options:[
@@ -3298,7 +3288,7 @@ QUESTIONS.push(
   {t:'Erythromycin', correct:false, why:'Macrolides attach to 50S (slide 47; T 66–67).'},
   {t:'Clindamycin', correct:false, why:'Clindamycin attaches to 50S (slide 46; T 54).'},
   {t:'Azithromycin', correct:false, why:'Macrolides attach to 50S (slide 47; T 66–67).'}],
- teach:'Of the three ribosome-acting acne antibiotics, the tetracyclines bind 30S; clindamycin and the macrolides (erythromycin, azithromycin) bind 50S and prevent translocation (slides 43, 46–47; T 29–31, 53–55, 66–67).',
+ teach:'Of the three ribosome-acting acne antibiotics, the tetracyclines bind 30S; clindamycin and the macrolides (erythromycin, azithromycin) bind 50S (slides 43, 46–47; T 29–31, 53–55, 66–67). Clindamycin prevents translocation (slide 46).',
  cite:D3+' slides 43, 46–47; T 29–31, 53–55, 66–67'},
 
 {id:'L3-017', skill:'adverse', prof:'Smith', tier:'new', topic:'l3-abx', sub:'macro', concept:'macro-ddi',
@@ -3404,19 +3394,7 @@ QUESTIONS.push(
  teach:'Dapsone treats leprosy and, topically, acne (slide 50; T 90–91, 101–102).',
  cite:D3+' slide 50; T 89–102'},
 
-{id:'L3-026', skill:'epi', prof:'Smith', tier:'new', topic:'l3-fol', sub:'dap', concept:'leprosy-armadillo', lowYield:true,
- tags:['room'], source:'transcript',
- quote:'Room question, 11/03, T 99: "Anybody know what animal carries leprosy?"',
- stem:'Which animal carries leprosy in Texas?',
- options:[
-  {t:'Armadillo', correct:true, why:'Answer given in class: "Armadillos, yeah" (T 99).'},
-  {t:'Raccoon', correct:false, why:'The answer in class was the armadillo (T 99).'},
-  {t:'Field mouse', correct:false, why:'The answer in class was the armadillo (T 99).'},
-  {t:'Opossum', correct:false, why:'The answer in class was the armadillo (T 99).'}],
- teach:'Leprosy, which dapsone treats, is seen sometimes in Texas and is carried by armadillos (T 98–100).',
- cite:D3+' slide 50; T 98–100'},
-
-/* ---- Metronidazole ------------------------------------------------------ */
+/* L3-026 held out: a side remark on leprosy and armadillos (T 98-100), on no slide and outside her exam cues. */
 {id:'L3-027', skill:'class', prof:'Smith', tier:'new', topic:'l3-fol', sub:'metro', concept:'metro-use',
  tags:['recall'], source:'both',
  stem:'Topical metronidazole is usually used for which skin condition?',
@@ -3435,7 +3413,7 @@ QUESTIONS.push(
  options:[
   {t:'Inhibits Demodex brevis or acts on neutrophils', correct:true, why:'Slide 51; T 104–107: mechanism unknown, these are the proposals.'},
   {t:'Binds the p40 subunit of IL-12 and IL-23', correct:false, why:'That is ustekinumab (slide 67).'},
-  {t:'Inhibits translocation on the 50S subunit', correct:false, why:'That is clindamycin and the macrolides (slides 46–47).'},
+  {t:'Inhibits translocation on the 50S subunit', correct:false, why:'That is clindamycin (slide 46).'},
   {t:'Stops keratinocyte turnover by crosslinking DNA', correct:false, why:'Proposed for coal tar (slide 53).'}],
  teach:'The mechanism of metronidazole in rosacea is unknown. It may inhibit the mite Demodex brevis, or act as an anti-inflammatory through a direct effect on neutrophil function (slide 51; T 104–108).',
  cite:D3+' slide 51; T 104–108'},
@@ -3488,7 +3466,7 @@ QUESTIONS.push(
 
 {id:'L3-033', skill:'counsel', prof:'Smith', tier:'new', topic:'l3-cyto', sub:'coal', concept:'coal-photo-carc',
  tags:['counseling'], source:'both',
- stem:'A patient has used coal tar for psoriasis for years. Which two concerns did Dr. Smith point out?',
+ stem:'A patient has used coal tar for psoriasis for years. Which two adverse effects are the main concerns?',
  options:[
   {t:'Photosensitivity and carcinogenicity', correct:true, why:'"The photosensitizing ... that\'s a big issue. And then ... it\'s carcinogenic" (T 145–148; slide 54).'},
   {t:'Ototoxicity and staining of the teeth', correct:false, why:'Those are tetracycline effects (slides 44–45).'},
@@ -3501,17 +3479,16 @@ QUESTIONS.push(
  tags:['reasoning'], source:'both',
  stem:'Why is coal tar a concern on psoriasis with oozing vesicles?',
  options:[
-  {t:'More of it can be absorbed systemically', correct:true, why:'"If your skin is open like that with oozing vesicles, the absorption systemically could occur" (T 152–155; slide 54).'},
+  {t:'More of it can be absorbed systemically', correct:true, why:'"If your skin is open like that with oozing vesicles, the absorption systemically could occur" (T 152–155). Slide 54 lists the caution without a reason.'},
   {t:'It turns the vesicles dark brown', correct:false, why:'Dark brown or black staining is anthralin (slide 56).'},
   {t:'The exudate inactivates the coal tar quickly', correct:false, why:'Not the reason given (T 152–155).'},
   {t:'It causes severe conjunctivitis', correct:false, why:'Severe conjunctivitis with eye contact is anthralin (slide 56).'}],
  teach:'Open skin with vesicles or oozing lets coal tar reach the circulation, so it is used with caution there (T 152–155). Slide 54 also lists cautions in pregnancy and breastfeeding.',
- note:'The advice differs in degree: she said to "use low concentration products" on vesicular or oozing skin (T 152–153); slide 54 says to "avoid even low concentration products" there. The question asks the reason, on which both agree.',
+ note:'Slide 54 also states "Systemic side effects do not occur" for coal tar in ordinary use; the oozing-skin reason is hers (T 154–155). The advice differs in degree: she said to "use low concentration products" on vesicular or oozing skin (T 152–153); slide 54 says to "avoid even low concentration products" there. The question asks the reason, on which both agree.',
  cite:D3+' slide 54; T 150–155'},
 
 {id:'L3-035', skill:'chem', prof:'Smith', tier:'new', topic:'l3-cyto', sub:'anth', concept:'anth-source',
- tags:['room'], source:'both',
- quote:'Room question, 11/03, T 157: "Can anybody say that?" (araroba tree)',
+ tags:['recall'], source:'both',
  stem:'What is anthralin?',
  options:[
   {t:'Synthetic chrysarobin, from araroba tree bark', correct:true, why:'Slide 55; T 156–160.'},
@@ -3799,7 +3776,7 @@ QUESTIONS.push(
  quote:'Room question, 11/03, T 322–323: "So why do you think we made the drug Abatacept look like CTLA-4?"',
  stem:'Why was abatacept built to look like CTLA-4 rather than CD28?',
  options:[
-  {t:'It probably binds CD80/86 more tightly than CD28', correct:true, why:'Answer given in class: "It probably has better binding affinity to [CD80/86] then like CD28" (T 322–323).'},
+  {t:'CTLA-4 likely binds CD80/86 more tightly than CD28 does', correct:true, why:'Answer given in class: "It probably has better binding affinity to [CD80/86] then like CD28" (T 322–323).'},
   {t:'CTLA-4 gives the drug a longer half-life', correct:false, why:'Longer half-life from PEG is certolizumab pegol (slide 74; T 547–548).'},
   {t:'CTLA-4 lets the drug get inside the T cells to act', correct:false, why:'It acts on the APC surface (slide 63); entering cells is the JAK inhibitors (T 570–573).'},
   {t:'CTLA-4 delivers a positive signal 2', correct:false, why:'CTLA-4 gives a negative signal 2 (T 300–303).'}],
@@ -3823,7 +3800,7 @@ QUESTIONS.push(
  quote:'Room question, 11/03, T 356: "what signal is this working on?"',
  stem:'Which T-cell activation signal does abatacept act on?',
  options:[
-  {t:'Signal 2', correct:true, why:'Answer given in class: "Signal two, right?" (T 356–357; slide 63).'},
+  {t:'Signal 2', correct:true, why:'Answer given in class: "Signal too [two], right?" (T 356–357; slide 63).'},
   {t:'Signal 1', correct:false, why:'Signal 1 is antigen presentation to the T-cell receptor (T 289–290).'},
   {t:'Signal 3', correct:false, why:'Abatacept acts on the CD80/86 to CD28 step, signal 2 (slide 63).'},
   {t:'JAK signaling', correct:false, why:'That is the JAK inhibitors (slide 75).'}],
@@ -3990,7 +3967,7 @@ QUESTIONS.push(
  teach:'"Sometimes we\'re binding the compound floating around in the system, like a cytokine. Sometimes we ... made a drug that binds to the receptor. OK, so gotta pay attention to that" (T 429–431). Cytokine binders: secukinumab, ixekizumab, ustekinumab, the IL-23 p19 binders and the TNF-α inhibitors. Receptor binders: brodalumab and dupilumab.',
  cite:D3+' slides 64, 66–68; T 429–431'},
 
-{id:'L3-077', skill:'tell', prof:'Smith', tier:'new', topic:'l3-cytok', sub:'make', concept:'human-list', multi:true,
+{id:'L3-077', skill:'tell', prof:'Smith', tier:'new', topic:'l3-cytok', sub:'make', concept:'human-list', dupOf:'L3-085', multi:true,
  tags:['tell','list'], source:'both',
  stem:'Which of these IL-17 and IL-23 inhibitors are human antibodies? Select all that apply.',
  options:[
@@ -4204,7 +4181,7 @@ QUESTIONS.push(
  teach:'Infliximab can cause acute (within 24 hours) and delayed (24 hours to 14 days) infusion reactions (slide 72) with chills, fever and itch, which can be anaphylactic; patients are premedicated with diphenhydramine or steroids (T 519–522).',
  cite:D3+' slide 72; T 518–522'},
 
-{id:'L3-096', skill:'adverse', prof:'Smith', tier:'new', topic:'l3-tnf', sub:'drugs', concept:'inflix-infusion-why',
+{id:'L3-096', skill:'adverse', prof:'Smith', tier:'new', topic:'l3-tnf', sub:'drugs', concept:'inflix-infusion-why', dupOf:'L3-075',
  tags:['room','reasoning'], source:'both',
  quote:'Room question, 11/03, T 522: "Why would people have infusion reactions? For this drug"',
  stem:'Why are infusion reactions a particular problem with infliximab?',
@@ -4310,7 +4287,7 @@ QUESTIONS.push(
  tags:['tell'], source:'both',
  stem:'What is known about upadacitinib compared with tofacitinib and ruxolitinib?',
  options:[
-  {t:'It hits more JAK targets; better efficacy is unproven', correct:true, why:'T 576–578; slide 76 ("Jury is still out on what selectivity this drug has").'},
+  {t:'It hits more JAK targets; better efficacy is unproven', correct:true, why:'"It\'s binding to more JAK targets, but ... we still don\'t know if it is more efficacious" (T 576–578). Slide 76 gives greater potency at JAK1 and JAK2 than at JAK3 and TYK2 and says its selectivity is still unsettled.'},
   {t:'It binds TNF-α outside the cell', correct:false, why:'It is a small molecule JAK inhibitor (T 569–573).'},
   {t:'It is proven more effective than tofacitinib and ruxolitinib', correct:false, why:'"We still don\'t know if it is more efficacious" (T 577–578).'},
   {t:'It is a humanized antibody to JAK', correct:false, why:'JAK inhibitors are small molecules, not antibodies (T 570–573).'}],
@@ -4526,7 +4503,7 @@ QUESTIONS.push(
   {t:'Benzoxaborole', correct:true, why:'Slide 7: "Crisaborole: A benzoxaborole soft drug"; a boron-based drug molecule (T 683–689).'},
   {t:'Hydroxyanthrone', correct:false, why:'The class of anthralin (slide 17).'},
   {t:'Furanocoumarin', correct:false, why:'The class of the psoralens such as 8-MOP (slide 18).'},
-  {t:'Pyrrolopyrimidine', correct:false, why:'The class of ruxolitinib (slide 8).'}],
+  {t:'Steroid', correct:false, why:'The class of the glucocorticoids: three six-membered rings and one five-membered ring fused together (slide 20; T 990–995).'}],
  teach:'Crisaborole carries a boron atom in a five-membered oxaborole ring fused to a benzene ring, hence benzoxaborole (slide 7 structure). Very few drugs contain boron (T 683); household boron compounds are borax and boric acid (T 685–686).',
  cite:S3+' slides 7–8, 17–18; T 683–689'},
 
@@ -4667,7 +4644,7 @@ QUESTIONS.push(
  stem:'Crisaborole\'s metabolic scheme indicates that steps ........... involve glucuronidation?',
  options:[
   {t:'Steps 1 and 2', correct:false, why:'Step 1 is hydrolytic deboronation and step 2 leads to the carboxylic acid (slide 9; T 767–769); neither is glucuronidation.'},
-  {t:'Steps 2 and 3', correct:false, why:'Step 3 forms the sulfate (sulfotransferase), not the glucuronide (slide 9; T 771–772).'},
+  {t:'Steps 2 and 3', correct:false, why:'Step 2 is the oxidation to the carboxylic acid (two dehydrogenases), not a conjugation (slide 9; T 767–769). The keyed pair is 3 and 4, the steps on the route to the glucuronide-bearing products in the scheme (T 774–777).'},
   {t:'Steps 3 and 4', correct:true, why:'His answer: "3 and 4 steps involve gluchroidation" (T 776–777); in the scheme on slide 9, step 4 adds the glucuronide (UGT) and the "3,4" arrow gives the product with sulfate and glucuronide.'}],
  teach:'Slide 9 scheme: 1, hydrolytic deboronation; 2, oxidation to the carboxylic acid (two dehydrogenases); 3, sulfation by sulfotransferases; 4, glucuronidation by UGT; "3,4", both conjugates on one product. "Remember these things, folks" (T 774).',
  note:'At T 774 the transcript reads "a combination of what? UGT and 3F4". In the slide 9 scheme the arrow labelled "3,4" combines steps 3 and 4, so this is read as "3 and 4", not CYP3A4. The key does not depend on it.',
@@ -4829,7 +4806,7 @@ QUESTIONS.push(
   {t:'UVB', correct:false, why:'UVB stops at a shallower level than UVA in the slide 12 figure.'},
   {t:'UVC', correct:false, why:'UVC is blocked by the ozone layer (slide 12).'},
   {t:'Infrared', correct:false, why:'He crossed infrared out as outside the topic (T 812; slide 12).'}],
- teach:'Longer UV wavelength goes deeper: UVA reaches the dermis, UVB stops higher, and UVC is stopped by ozone (slide 12 figure; T 836–839). Clothing also protects against UVB and UVC (T 837–838).',
+ teach:'On the slide 12 figure UVA reaches the dermis, UVB stops in the epidermis, and UVC is stopped by the ozone layer (T 836–839). Clothing also protects against UVB and UVC (T 837–838).',
  cite:S3+' slide 12; T 820–824, 836–840'},
 
 {id:'S3-036', skill:'adverse', prof:'Sikazwe', tier:'new', topic:'s3-uv', sub:'uvr', concept:'uv-effects',
@@ -5036,9 +5013,9 @@ QUESTIONS.push(
   {t:'Hydroxyanthrone', correct:true, why:'Slide 17 "Anthralin or Dithranol: A hydroxyanthrone"; (T 919–920).'},
   {t:'Furanocoumarin', correct:false, why:'The class of the psoralens (slide 18).'},
   {t:'Benzoxaborole', correct:false, why:'The class of crisaborole (slide 7).'},
-  {t:'Pyrrolopyrimidine', correct:false, why:'The class of ruxolitinib (slide 8).'}],
+  {t:'Steroid', correct:false, why:'The class of the glucocorticoids: three six-membered rings and one five-membered ring fused together (slide 20; T 990–995).'}],
  teach:'Anthralin is a tricyclic anthrone carrying hydroxyl groups, hence hydroxyanthrone (slide 17 structure). It dates from 1915 and is still in use (T 918–920).',
- cite:S3+' slides 7, 17–18, 20; T 918–920'},
+ cite:S3+' slides 7, 17–18, 20; T 918–920, 990–995'},
 
 {id:'S3-054', skill:'chem', prof:'Sikazwe', tier:'new', topic:'s3-anth', sub:'cbda', concept:'anthralin-autox',
  tags:['cbda'], source:'both',
@@ -5127,14 +5104,14 @@ QUESTIONS.push(
   {t:'Furanocoumarin', correct:true, why:'Slide 18 "A furanocoumarin"; (T 958–960) "this has a furan ring and a coumarin ring".'},
   {t:'Hydroxyanthrone', correct:false, why:'The class of anthralin (slide 17).'},
   {t:'Benzoxaborole', correct:false, why:'The class of crisaborole (slide 7).'},
-  {t:'Pyrrolopyrimidine', correct:false, why:'The class of ruxolitinib (slide 8).'}],
+  {t:'Steroid', correct:false, why:'The class of the glucocorticoids: three six-membered rings and one five-membered ring fused together (slide 20; T 990–995).'}],
  teach:'A psoralen is a coumarin (benzopyrone) fused to a furan ring; slide 18 marks the pyrone and furan parts. It began as a fish poison used by fishing communities before its antiproliferative use in psoriasis was found (T 954–958).',
  note:'The Dermatology drug chart lists a different class beside methoxsalen on its p.5 because that page\'s chemical-class column is shifted by one row; the deck and the lecture are followed.',
  cite:S3+' slides 7–8, 17–18; T 954–960'},
 
 {id:'S3-062', skill:'pk', prof:'Sikazwe', tier:'new', topic:'s3-psor', sub:'chem', concept:'psoralen-3a4',
  tags:['interaction'], source:'both',
- stem:'Which CYP effect of methoxsalen did he single out as a take-home point?',
+ stem:'Which CYP effect does methoxsalen have?',
  options:[
   {t:'It partially inhibits CYP3A4', correct:true, why:'Slide 18 "ADMET: Several CYPs & it partially inhibits 3A4"; (T 961–963) "That\'s something to take home".'},
   {t:'It is a strong CYP3A4 inducer', correct:false, why:'Inhibition, not induction (slide 18).'},
@@ -5177,9 +5154,9 @@ QUESTIONS.push(
  teach:'The patient takes or applies methoxsalen, waits, and is then exposed to UVA; the light promotes the crosslinking of DNA base pairs (slide 18; T 967–976).',
  cite:S3+' slides 7, 17–18; T 963–977'},
 
-{id:'S3-066', skill:'tell', prof:'Sikazwe', tier:'new', topic:'s3-psor', sub:'cbda', concept:'which-drug-intercalates',
+{id:'S3-066', skill:'tell', prof:'Sikazwe', tier:'new', topic:'s3-psor', sub:'cbda', concept:'which-drug-intercalates', dupOf:'S3-064',
  tags:['tell'], source:'both',
- stem:'Which drug from this lecture acts by intercalating and crosslinking DNA?',
+ stem:'Which drug acts by intercalating into and crosslinking DNA?',
  options:[
   {t:'Methoxsalen', correct:true, why:'Slide 18; (T 966–967) "the only molecule I\'m going to mention" with this chemical basis of action.'},
   {t:'Anthralin', correct:false, why:'Anthralin works through radicals that disrupt mitochondria (slide 17).'},
@@ -5233,7 +5210,7 @@ QUESTIONS.push(
   {t:'Ring B', correct:false, why:'Ring B is six-membered (slide 20).'},
   {t:'Ring C', correct:false, why:'Ring C is six-membered and holds C11 (slide 20).'}],
  teach:'Rings A, B and C are six-membered; ring D (C13–C17) is five-membered and carries the side chain at C17 (slide 20; Foye Ch. 24, steroid numbering).',
- cite:S3+' slide 20; T 990–996'},
+ cite:S3+' slide 20; T 990–996; Foye Ch. 24 (support)'},
 
 {id:'S3-071', skill:'chem', prof:'Sikazwe', tier:'new', topic:'s3-gc', sub:'struct', concept:'alpha-beta-face',
  tags:['chem'], source:'both',
@@ -5241,7 +5218,7 @@ QUESTIONS.push(
  options:[
   {t:'Alpha-facing', correct:true, why:'(T 997–999) bonds "that are hushed [hashed], that are pointing away from you, they are called alpha-facing"; slide 20.'},
   {t:'Beta-facing', correct:false, why:'Beta bonds point toward the viewer (T 999–1000; slide 20).'},
-  {t:'Equatorial bond', correct:false, why:'Not the steroid term he used (slide 20).'},
+  {t:'Equatorial', correct:false, why:'Not the steroid term he used (slide 20).'},
   {t:'Axial', correct:false, why:'Not the steroid term he used (slide 20).'}],
  teach:'Alpha: hashed bond, pointing away from you. Beta: bold wedge, pointing toward you (slide 20; T 996–1000). Orientation is needed, with numbering, to state the SAR (T 1000–1001).',
  cite:S3+' slide 20; T 996–1002'},
@@ -5255,7 +5232,7 @@ QUESTIONS.push(
   {t:'C5', correct:false, why:'C5 is the A/B junction partway round the loop (slide 20).'},
   {t:'C17', correct:false, why:'C17 ends the second run, the "snake" from C11 (T 1011–1012).'}],
  teach:'His method: from C1 loop around rings A and B to C10; start again at C11 and snake through rings C and D to C17; then "hopscotch" to the methyls C18 and C19; then C20 and C21 on the side chain (slide 20; T 1003–1016). Foye Ch. 24 gives the same order.',
- cite:S3+' slides 20–22; T 1002–1017, 1084–1099'},
+ cite:S3+' slides 20–22; T 1002–1017, 1084–1099; Foye Ch. 24 (support)'},
 
 {id:'S3-073', skill:'chem', prof:'Sikazwe', tier:'new', topic:'s3-gc', sub:'num', concept:'numbering-c11',
  tags:['chem'], source:'both',
@@ -5277,7 +5254,7 @@ QUESTIONS.push(
   {t:'C10', correct:false, why:'C10 carries the C19 methyl (slide 20).'},
   {t:'C3', correct:false, why:'C3 in ring A carries the ketone of hydrocortisone (slide 23).'}],
  teach:'C17 is the last ring carbon in ring D; the side chain starts at C20 attached to C17 (slide 20; T 1015–1016, 1088–1090). Foye Ch. 24: "The 17-side chain begins with C20."',
- cite:S3+' slides 20, 23; T 1011–1017, 1084–1092'},
+ cite:S3+' slides 20, 23; T 1011–1017, 1084–1092; Foye Ch. 24 (support)'},
 
 {id:'S3-075', skill:'chem', prof:'Sikazwe', tier:'new', topic:'s3-gc', sub:'num', concept:'numbering-c19',
  tags:['chem'], source:'both',
@@ -5288,7 +5265,7 @@ QUESTIONS.push(
   {t:'C17', correct:false, why:'C17 carries the side chain from C20 (slide 20).'},
   {t:'C9', correct:false, why:'C9 carries the 9α-halogen in active glucocorticoids (slide 20), not a methyl.'}],
  teach:'After C17 he "hopscotches" to the two angular methyls: C18 on C13 first, then C19 on C10 (slide 20; T 1012–1014, 1088–1089). Foye Ch. 24 gives the same assignment.',
- cite:S3+' slide 20; T 1012–1016, 1084–1090'},
+ cite:S3+' slide 20; T 1012–1016, 1084–1090; Foye Ch. 24 (support)'},
 
 {id:'S3-076', skill:'chem', prof:'Sikazwe', tier:'new', topic:'s3-gc', sub:'num', concept:'numbering-vs-orientation',
  tags:['tell'], source:'transcript',
@@ -5309,12 +5286,12 @@ QUESTIONS.push(
   {t:'6α-halogen', correct:true, why:'SAR item 2 on slide 20; (T 1025, 1067–1069).'},
   {t:'9α-halogen', correct:true, why:'SAR item 3 on slide 20; (T 1069–1070).'},
   {t:'11β-hydroxyl', correct:true, why:'SAR item 4 on slide 20; (T 1070–1072).'},
-  {t:'11α-hydroxyl group', correct:false, why:'The 11-OH must be β (T 1071–1072).'},
+  {t:'11α-hydroxyl', correct:false, why:'The 11-OH must be β (T 1071–1072).'},
   {t:'6β-halogen', correct:false, why:'The 6-halogen must be α (T 1068–1069).'}],
  teach:'"I\'m limiting you to 4 things" (T 1020–1021): C1–C2 double bond, 6α-halogen, 9α-halogen and 11β-OH (slide 20). He called them the minimal stereochemistry for anti-inflammatory properties (T 1072–1073); other positions such as 16 are "free play" (T 1075).',
  cite:S3+' slide 20; T 1019–1075'},
 
-{id:'S3-078', skill:'chem', prof:'Sikazwe', tier:'new', topic:'s3-gc', sub:'sar', concept:'sar-11-beta',
+{id:'S3-078', skill:'chem', prof:'Sikazwe', tier:'new', topic:'s3-gc', sub:'sar', concept:'sar-11-beta', dupOf:'S3-077',
  tags:['sar'], source:'both',
  stem:'For anti-inflammatory activity, what orientation must the hydroxyl at C11 have?',
  options:[
@@ -5325,7 +5302,7 @@ QUESTIONS.push(
  teach:'The two halogens are α (6α-X, 9α-X); the C11 hydroxyl is β (slide 20; T 1067–1072). Cortisone, which carries a ketone at C11 instead of the 11β-OH, is inactive (slide 26).',
  cite:S3+' slides 20, 26; T 1067–1074'},
 
-{id:'S3-079', skill:'chem', prof:'Sikazwe', tier:'new', topic:'s3-gc', sub:'sar', concept:'sar-9-alpha',
+{id:'S3-079', skill:'chem', prof:'Sikazwe', tier:'new', topic:'s3-gc', sub:'sar', concept:'sar-9-alpha', dupOf:'S3-077',
  tags:['sar'], source:'both',
  stem:'Which substituent at C9 increases glucocorticoid anti-inflammatory activity?',
  options:[
@@ -5336,7 +5313,7 @@ QUESTIONS.push(
  teach:'In the derivatives on slide 24 the 9α-halogen is fluorine (for example betamethasone dipropionate, clobetasol propionate, triamcinolone acetonide).',
  cite:S3+' slides 20, 24; T 1067–1072'},
 
-{id:'S3-080', skill:'chem', prof:'Sikazwe', tier:'new', topic:'s3-gc', sub:'sar', concept:'sar-c1c2',
+{id:'S3-080', skill:'chem', prof:'Sikazwe', tier:'new', topic:'s3-gc', sub:'sar', concept:'sar-c1c2', dupOf:'S3-077',
  tags:['sar'], source:'both',
  stem:'Where is the double bond that increases glucocorticoid anti-inflammatory activity?',
  options:[
@@ -5347,17 +5324,7 @@ QUESTIONS.push(
  teach:'Comparing hydrocortisone with clobetasol propionate on slide 25, the added C1–C2 double bond (drawn in color) is one of the structural changes that move a low-potency steroid to high potency (T 1175–1179).',
  cite:S3+' slides 20, 24–25; T 1019–1025, 1075, 1175–1179'},
 
-{id:'S3-081', skill:'chem', prof:'Sikazwe', tier:'new', topic:'s3-gc', sub:'sar', concept:'clobetasol-sar', multi:true,
- tags:['sar','reasoning'], source:'slide',
- stem:'Clobetasol propionate differs from hydrocortisone in several places. Which of its changes are among the four SAR features that raise anti-inflammatory activity? Select all that apply.',
- options:[
-  {t:'C1–C2 double bond', correct:true, why:'SAR item 1 (slide 20), drawn in color on clobetasol propionate (slide 25).'},
-  {t:'9α-fluorine', correct:true, why:'A 9α-halogen, SAR item 3 (slide 20); F on slide 25.'},
-  {t:'16-methyl group', correct:false, why:'Position 16 is "free play", not one of the four features (T 1075).'},
-  {t:'17-propionate ester', correct:false, why:'Not one of the four SAR features on slide 20, though it changes lipophilicity (T 1146–1148).'}],
- teach:'Hydrocortisone already has the 11β-OH. Clobetasol propionate adds a C1–C2 double bond and a 9α-F (two of the four SAR features), plus a 16-methyl and a 17-propionate ester; together these move it from low to super-potent (slides 20, 25; T 1175–1179). He called this structural manipulation, "not metabolism" (T 1177–1178).',
- cite:S3+' slides 20, 24–25; T 1075, 1145–1148, 1175–1179'},
-
+/* S3-081 held out: it needs the slide 25 derivative structures, which he said not to memorize (T 1152-1154); no figure in the bank yet. */
 {id:'S3-082', skill:'chem', prof:'Sikazwe', tier:'new', topic:'s3-gc', sub:'gr', concept:'gr-hbond-type',
  tags:['cbda'], source:'both',
  stem:'What type of interaction underlies glucocorticoid binding to the glucocorticoid receptor?',
@@ -5423,8 +5390,8 @@ QUESTIONS.push(
   {t:'Desonide', correct:true, why:'Slide 24: a derivative of hydrocortisone (T 1151).'},
   {t:'Fluticasone propionate', correct:true, why:'Slide 24: a derivative of hydrocortisone (T 1151).'},
   {t:'Triamcinolone acetonide', correct:true, why:'Slide 24: a derivative of hydrocortisone (T 1151).'},
-  {t:'Crisaborole, a benzoxaborole', correct:false, why:'A benzoxaborole, not a steroid (slide 7).'},
-  {t:'Methoxsalen (8-methoxypsoralen)', correct:false, why:'A furanocoumarin, not a steroid (slide 18).'}],
+  {t:'Crisaborole', correct:false, why:'A benzoxaborole, not a steroid (slide 7).'},
+  {t:'Methoxsalen', correct:false, why:'A furanocoumarin, not a steroid (slide 18).'}],
  teach:'Slide 24: betamethasone dipropionate, desonide, clobetasol propionate, fluticasone propionate and triamcinolone acetonide are derivatives of hydrocortisone, the parent drug. The point is the parent–derivative relation, not the individual structures (T 1150–1154).',
  cite:S3+' slides 7, 18, 24; T 1144–1154'},
 
@@ -5436,7 +5403,7 @@ QUESTIONS.push(
   {t:'They turn the drug into a designed soft drug', correct:false, why:'Soft drug describes crisaborole\'s designed metabolism (slide 7), not steroid potency.'},
   {t:'They let the drug crosslink DNA', correct:false, why:'DNA crosslinking is methoxsalen\'s CBDA (slide 18).'},
   {t:'They add a boron that binds metals', correct:false, why:'Boron coordination is crisaborole\'s CBDA (slide 7).'}],
- teach:'Derivatives are made from hydrocortisone by structural changes that raise or lower lipophilicity and change hydrogen bonding in the receptor, and so change potency (T 1145–1148, 1157–1160).',
+ teach:'Derivatives are made from hydrocortisone by structural changes that raise or lower lipophilicity or change the way the molecule bonds in the receptor, and so change potency (T 1145–1148, 1157–1160).',
  cite:S3+' slides 7, 18, 24–25; T 1145–1160'},
 
 {id:'S3-089', skill:'chem', prof:'Sikazwe', tier:'new', topic:'s3-hc', sub:'pot', concept:'potency-bases', multi:true,
@@ -5480,7 +5447,7 @@ QUESTIONS.push(
  options:[
   {t:'Hydrocortisone acetate 1% cream', correct:true, why:'Slide 25: low potency example.'},
   {t:'Betamethasone valerate 0.1% cream', correct:false, why:'Slide 25: medium potency.'},
-  {t:'Betamethasone dipropionate 0.05%', correct:false, why:'Slide 25: potent, one class above medium.'},
+  {t:'Betamethasone dipropionate 0.05% cream', correct:false, why:'Slide 25: potent, one class above medium.'},
   {t:'Clobetasol propionate 0.05% cream', correct:false, why:'Slide 25: super-potent, the top class.'}],
  teach:'Hydrocortisone is the parent drug and sits at the low-potency end; its derivatives with structural changes (C1–C2 double bond, 9α-F and others) rank higher (slides 24–25; T 1175–1179).',
  cite:S3+' slides 24–25; T 1154–1179'},
@@ -5574,11 +5541,11 @@ QUESTIONS.push(
   {t:'An α-hydroxyl group on carbon 11', correct:false, why:'The 11-OH of hydrocortisone is β (slides 20, 26).'},
   {t:'Eleven hydrogen bonds to a receptor', correct:false, why:'Glucocorticoids make six hydrogen bonds in the receptor (slide 23).'}],
  teach:'The enzyme acts at C11, where hydrocortisone carries its 11β-OH (slide 26). Steroid numbering (slide 20) names the position; β gives the orientation (toward the viewer).',
- cite:S3+' slides 20, 23, 26; T 1190–1196'},
+ cite:S3+' slides 20, 23, 26; T 1190–1196; 11/04 transcript @722–@925'},
 
 {id:'S3-101', skill:'chem', prof:'Sikazwe', tier:'new', topic:'s3-hc', sub:'adme', concept:'cortisone-inactive-why',
  tags:['sar','reasoning'], source:'slide',
- stem:'Cortisone differs from hydrocortisone at C11. Why is cortisone inactive as a glucocorticoid?',
+ stem:'Why is cortisone inactive as a glucocorticoid?',
  options:[
   {t:'It has a C11 ketone instead of the 11β-OH', correct:true, why:'Slide 26 structures: cortisone (inactive) has C=O at C11; the 11β-OH is one of the four SAR features (slide 20).'},
   {t:'It lacks the C4–C5 double bond found in ring A', correct:false, why:'Cortisone keeps the C4–C5 double bond and the C3 ketone (slide 26).'},
@@ -5595,7 +5562,7 @@ QUESTIONS.push(
   {t:'A transferase', correct:false, why:'Transferases such as UGT and sulfotransferase add conjugates (slide 9).'},
   {t:'A hydrolase', correct:false, why:'He named it an oxidoreductase (T 1193).'},
   {t:'A cytochrome P450', correct:false, why:'He named it a hydroxysteroid dehydrogenase, an oxidoreductase (T 1192–1193).'}],
- teach:'11β-HSD oxidizes the C11 hydroxyl to a ketone (hydrocortisone to cortisone) and reduces it back; it is an oxidation–reduction enzyme. Types 1 and 2 exist, but he did not go into them (T 1192–1195).',
+ teach:'11β-HSD oxidizes the C11 hydroxyl of hydrocortisone to the ketone of cortisone; he called it an oxidation–reduction (oxidoreductase) enzyme. Types 1 and 2 exist, but he did not go into them (slide 26; T 1192–1195).',
  cite:S3+' slides 9, 26; T 1190–1196'},
 
 {id:'S3-103', skill:'pk', prof:'Sikazwe', tier:'new', topic:'s3-hc', sub:'adme', concept:'hc-urine', lowYield:true,
@@ -5714,7 +5681,7 @@ QUESTIONS.push(
  tags:['adverse'], source:'both',
  stem:'What is the limiting factor for using vitamin D analogs in psoriasis?',
  options:[
-  {t:'Hypercalcemia', correct:true, why:'Vitamin D increases calcium absorption into the blood; "this becomes the limiting factor" (T@1580–2000); his note on slide 27 reads "limiting factor - hypercalcemia".'},
+  {t:'Hypercalcemia', correct:true, why:'Vitamin D increases calcium absorption into the blood; "this becomes the limiting factor" (T@1580–2000); the annotation on the student copy of slide 27 reads "hypercalcemia - becomes the limiting factor".'},
   {t:'Teratogenicity', correct:false, why:'Teratogenicity is the major limitation of the retinoids (slide 48; T@27300–27450).'},
   {t:'Skin atrophy', correct:false, why:'Not a limitation he gave for vitamin D analogs; the limit he named is the calcium effect (T@1580–2000).'},
   {t:'Hepatic first-pass loss', correct:false, why:'First-pass loss by CYP3A4 limits oral cyclosporine (slide 33), not vitamin D analogs.'}],
@@ -5893,7 +5860,7 @@ QUESTIONS.push(
  tags:['structure'], source:'both',
  stem:'Which structural features separate pimecrolimus from tacrolimus?',
  options:[
-  {t:'Cl vs OH, and ethyl vs allyl', correct:true, why:'"The only points of difference are that chlorine and that methyl group, and here you have that ylic group and hydroxy" (T@4600–4780); highlighted on slide 28.'},
+  {t:'Cl vs OH, and ethyl vs allyl', correct:true, why:'"The only points of difference are that chlorine and that methyl [the highlighted group is ethyl] group, and here you have that [all]ylic group and hydroxy" (T@4600–4780); highlighted on slide 28.'},
   {t:'A lactam vs a lactone ring', correct:false, why:'Both are lactones (macrolides) (slides 28, 32); the lactam is cyclosporine (slide 33).'},
   {t:'Aromatic vs non-aromatic rings', correct:false, why:'Aromatic ring count classifies retinoids (slides 49–51), not the limus pair.'},
   {t:'An ester prodrug vs an active acid', correct:false, why:'That separates tazarotene from tazarotenic acid (slide 29).'}],
@@ -5905,7 +5872,7 @@ QUESTIONS.push(
  stem:'What is the mechanism of pimecrolimus and tacrolimus?',
  options:[
   {t:'Calcineurin inhibition', correct:true, why:'Slide 28: "MoA: Calcineurin inhibitors - ↓ release of inflammatory cytokines"; (T@5784).'},
-  {t:'Phosphodiesterase-4 inhibition', correct:false, why:'PDE4 inhibition is apremilast (slide 34) and crisaborole.'},
+  {t:'Phosphodiesterase-4 inhibition', correct:false, why:'PDE4 inhibition is apremilast (slide 34).'},
   {t:'JAK inhibition', correct:false, why:'JAK inhibition is tofacitinib (slide 35).'},
   {t:'DHFR inhibition', correct:false, why:'DHFR inhibition is methotrexate (slide 30).'}],
  teach:'He said he was "Not so worried about mechanism of action" for this pair (T@5702): they inhibit calcineurin and in the end suppress the release of inflammatory cytokines. The point he stressed was skin permeation.',
@@ -5913,7 +5880,7 @@ QUESTIONS.push(
 
 {id:'S4-020', skill:'chem', prof:'Sikazwe', tier:'new', topic:'s4-limus', sub:'class', concept:'limus-lactone',
  tags:['poll','verbatim'], source:'both',
- stem:'Due to the selected functionality, this Limus drug molecule may be chemically classified as a ........ (The circled group is the ester bond that closes the large ring of pimecrolimus.)',
+ stem:'Due to the selected functionality, this Limus drug molecule may be chemically classified as a ........ (The circled group is the -C(=O)-O- link inside the large ring of pimecrolimus.)',
  options:[
   {t:'Lactam', correct:false, why:'A lactam is a cyclic amide: "These are cyclic what amides, right?" (T@11620–11662); that is cyclosporine (slide 33).'},
   {t:'Lactone', correct:true, why:'"this is now part of a cyclic what? Structure And that is an ester functional group ... Are they called lactones? Yes." (T@11453–11700); Polleve-3 key, slide 32.'},
@@ -5928,7 +5895,7 @@ QUESTIONS.push(
  stem:'Which pairing of drug and ring functional group is correct?',
  options:[
   {t:'Cyclosporine, cyclic amide (lactam)', correct:true, why:'Cyclosporine is an 11 amino acid cyclic peptide; "the cyclic peptide ... can be described then as a what? And a lactam" (slide 33; T@12150–12254).'},
-  {t:'Tacrolimus, cyclic amide (lactam)', correct:false, why:'Tacrolimus closes its ring with an ester, so it is a lactone (slides 28, 32).'},
+  {t:'Tacrolimus, 11 amino acid cyclic peptide', correct:false, why:'Tacrolimus is a macrolide lactone (slides 28, 32); the 11 amino acid cyclic peptide is cyclosporine (slide 33).'},
   {t:'Pimecrolimus, cyclic peroxide bond', correct:false, why:'Pimecrolimus is a lactone, a cyclic ester (slide 32); the peroxide is benzoyl peroxide (slide 47).'},
   {t:'Cyclosporine, cyclic ester (lactone)', correct:false, why:'Its ring is built from amide (peptide) bonds, so it is a lactam (T@12100–12254).'}],
  teach:'Peptide bonds are amide bonds; closing a chain of them into a ring makes a cyclic amide, a lactam (cyclosporine, slide 33). Closing a ring through an ester makes a lactone (pimecrolimus, tacrolimus; slides 28, 32).',
@@ -5957,7 +5924,7 @@ QUESTIONS.push(
  teach:'Tazarotene (ethyl ester prodrug) → carboxylesterase → tazarotenic acid, the active metabolite with a free carboxylic acid (slides 29, 51; T@6942–7125, T@30193–30300).',
  cite:S4+' slides 29, 51; T@6942–7125'},
 
-{id:'S4-024', skill:'pk', prof:'Sikazwe', tier:'new', topic:'s4-psret', sub:'taz', concept:'ce-enzymes',
+{id:'S4-024', skill:'pk', prof:'Sikazwe', tier:'new', topic:'s4-psret', sub:'taz', concept:'ce-enzymes', dupOf:'S4-023',
  tags:['room'], source:'transcript',
  stem:'What are the "CE" enzymes that activate ester prodrugs such as tazarotene?',
  options:[
@@ -6125,7 +6092,7 @@ QUESTIONS.push(
  teach:'"When we say peptides, we are simply talking about these amide bonds" (T@12100–12150). A ring of amide bonds is a cyclic amide, a lactam (T@12150–12254).',
  cite:S4+' slide 33; T@12014–12254'},
 
-{id:'S4-039', skill:'chem', prof:'Sikazwe', tier:'new', topic:'s4-sys', sub:'csa', concept:'csa-lactam',
+{id:'S4-039', skill:'chem', prof:'Sikazwe', tier:'new', topic:'s4-sys', sub:'csa', concept:'csa-lactam', dupOf:'S4-021',
  tags:['room'], source:'transcript',
  stem:'Because it is a cyclic peptide, cyclosporine can be classified chemically as what?',
  options:[
@@ -6173,7 +6140,7 @@ QUESTIONS.push(
  tags:['room','interaction'], source:'both',
  stem:'What would be the effect of co-administering cyclosporine with grapefruit juice?',
  options:[
-  {t:'Higher cyclosporine blood levels', correct:true, why:'"So you can enhance what blood levels of this because you\'ve blocked out this first pass metabolism" (T@13190–13550); note on slide 33: "↑ bioavailability of cyclosporin".'},
+  {t:'Higher cyclosporine blood levels', correct:true, why:'"So you can enhance what blood levels of this because you\'ve blocked out this first pass metabolism" (T@13190–13550); annotation on the student copy of slide 33: "↑ bioavailability of cyclosporin".'},
   {t:'Lower cyclosporine blood levels', correct:false, why:'The reverse; grapefruit juice blocks the 3A4 first-pass loss (T@13450–13550).'},
   {t:'Faster activation by cyclophilin', correct:false, why:'Activation by cyclophilin binding is not changed by grapefruit juice; first-pass metabolism is (slide 33).'},
   {t:'No change, since it is not metabolized', correct:false, why:'Cyclosporine is extensively metabolized by 3A4 (slide 33).'}],
@@ -6300,7 +6267,7 @@ QUESTIONS.push(
  tags:['recall'], source:'transcript',
  stem:'How does P. acnes stain?',
  options:[
-  {t:'Gram positive', correct:true, why:'"Now this is a gram positive, right? Pacin [P. acnes] is gram. Positive bacteria." (T@35047–35100); note on slide 54.'},
+  {t:'Gram positive', correct:true, why:'"Now this is a gram positive, right? Pacin [P. acnes] is gram. Positive bacteria." (T@35047–35100); annotation on the student copy of slide 54.'},
   {t:'Gram negative', correct:false, why:'The reverse of what he said (T@35047).'},
   {t:'Acid-fast', correct:false, why:'Not stated for P. acnes; he called it gram positive (T@35047).'},
   {t:'It does not take a stain', correct:false, why:'He called it gram positive (T@35047).'}],
@@ -6315,18 +6282,18 @@ QUESTIONS.push(
   {t:'Its OH is on the carbon next to the COOH', correct:true, why:'"the hydroxy group is on the atom that is alpha to the carboxylic acid. Or next to." (T@20199–20470); slide 44 "OH on alpha-C (i.e., carbon next to -CO2H)".'},
   {t:'Its OH is two carbons from the COOH', correct:false, why:'That is a beta-hydroxy acid, like salicylic acid (T@22100–22230).'},
   {t:'It has an aromatic ring right beside the acid', correct:false, why:'The aromatic ring is in salicylic acid and raises its log P (T@21537–21656).'},
-  {t:'It has two carboxylic acid groups', correct:false, why:'A diacid describes azelaic acid (slide 54) and oxalic acid, the GA metabolite (slide 43).'}],
+  {t:'It has two carboxylic acid groups', correct:false, why:'A diacid describes azelaic acid (slide 54) and the diacid metabolite of glycolic acid (slide 43; T@20850).'}],
  teach:'Hydroxy acid SAR (slide 44): a COOH group; most have the OH on the alpha carbon, the carbon next to CO2H; R is mostly alkyl. Glycolic acid is HO-CH2-COOH.',
  cite:S4+' slides 43–44; T@20199–20470'},
 
 {id:'S4-056', skill:'chem', prof:'Sikazwe', tier:'new', topic:'s4-kera', sub:'ha', concept:'sa-bha',
  tags:['structure','room'], source:'transcript',
- stem:'Why is salicylic acid a beta-hydroxy acid rather than an alpha-hydroxy acid?',
+ stem:'Salicylic acid is which kind of hydroxy acid, and why?',
  options:[
-  {t:'Its OH sits on the beta carbon', correct:true, why:'"This is the alpha carbon. This one is called the beta carbon. So this is a beta hydroxy acid ... 2 carbon removed from the carboxylic acid" (T@22090–22230).'},
-  {t:'It has no carboxylic acid group', correct:false, why:'Salicylic acid has a COOH on the benzene ring (slide 43).'},
-  {t:'Its OH sits on the alpha carbon', correct:false, why:'That would make it an alpha-hydroxy acid like glycolic acid (slide 44).'},
-  {t:'It has a lower pKa than glycolic acid', correct:false, why:'Both have a pKa of about 3 (T@20564, T@21768); pKa does not set alpha or beta.'}],
+  {t:'Beta; its OH is two carbons from the COOH', correct:true, why:'"This is the alpha carbon. This one is called the beta carbon. So this is a beta hydroxy acid ... 2 carbon removed from the carboxylic acid" (T@22090–22230).'},
+  {t:'Alpha; its OH is next to the COOH carbon', correct:false, why:'The carbon next to the COOH is the alpha carbon, and salicylic acid has no OH there (T@22090–22230).'},
+  {t:'Alpha; its COOH sits on an aromatic ring', correct:false, why:'An aromatic ring does not make an acid alpha; the position of the OH relative to the COOH does (slide 44; T@22090–22230).'},
+  {t:'Beta; it carries two COOH groups', correct:false, why:'Salicylic acid has one COOH (slide 43); two COOH groups describe a diacid such as azelaic acid (slide 54).'}],
  teach:'Count from the carboxyl carbon: the next carbon is alpha, the one after is beta. In salicylic acid the OH is on the ring carbon two away from the COOH carbon (the beta carbon) (T@22090–22230).',
  cite:S4+' slide 43; T@22090–22230'},
 
@@ -6400,10 +6367,10 @@ QUESTIONS.push(
  tags:['structure'], source:'both',
  stem:'Which compound is an alpha-hydroxy acid?',
  options:[
-  {t:'2-Hydroxypropanoic acid (lactic acid)', correct:true, why:'The OH is on C2, the carbon next to the COOH; lactic acid is an AHA from milk (slide 68; T@46989).'},
+  {t:'2-Hydroxypropanoic acid', correct:true, why:'The OH is on C2, the carbon next to the COOH; this is lactic acid, an AHA from milk (slide 68; T@46989).'},
   {t:'3-Hydroxybutanoic acid', correct:false, why:'The OH is on C3, two carbons from the COOH: a beta-hydroxy acid (T@22100–22230).'},
-  {t:'2-Methylpropanoic acid', correct:false, why:'No hydroxyl at all; a hydroxy acid needs an OH (slide 44).'},
-  {t:'2-Hydroxybenzoic acid (salicylic acid)', correct:false, why:'Its OH is on the beta carbon of the ring, so it is a beta-hydroxy acid (T@22090–22230).'}],
+  {t:'2-Methylbutanedioic acid', correct:false, why:'No hydroxyl at all; a hydroxy acid needs an OH (slide 44).'},
+  {t:'2-Hydroxybenzoic acid', correct:false, why:'Salicylic acid: its OH is on the ring carbon two from the COOH, the beta carbon (T@22090–22230).'}],
  teach:'Slide 44 SAR: a COOH, an OH on the alpha carbon (next to CO2H), R mostly alkyl. He walked the class through the same test on the Polleve-4 figure: "Hydroxy group needs to be ... on the carbon that is next to the carboxylic acid" (T@23455–23880).',
  cite:S4+' slides 44, 68; T@22839–23200, T@23455–23880'},
 
@@ -6545,13 +6512,13 @@ QUESTIONS.push(
 
 {id:'S4-076', skill:'chem', prof:'Sikazwe', tier:'new', topic:'s4-ret', sub:'g1', concept:'iso-c13',
  tags:['structure','room'], source:'both',
- stem:'Counting from the carboxyl carbon, which double bond is cis in isotretinoin?',
+ stem:'Numbering the chain from the ring carbon marked 1 on the structure, at which carbon is the cis double bond of isotretinoin?',
  options:[
   {t:'The double bond at carbon 13', correct:true, why:'"if you were to count the carbons ... you start 1 from here ... when you land over here, this is 13 ... 13 carbon cis" (T@28100–28470); slide 49 "13-cis retinoic acid".'},
   {t:'The double bond at carbon 9', correct:false, why:'He counted to C13 for the cis bond (T@28100–28470).'},
   {t:'The double bond in the ring', correct:false, why:'The ring double bond is the same in both; the change is at C13 of the chain (slide 49).'},
   {t:'Several double bonds in the chain', correct:false, why:'The others stay trans: "they are all trans up to here, but here. Sis" (T@28300–28420).'}],
- teach:'Carbon 1 is the carboxyl carbon. In tretinoin every chain double bond is trans; in isotretinoin the one at C13 is cis (slide 49).',
+ teach:'Carbon 1 is the ring carbon carrying the two methyl groups, as he numbered it on slide 49; counting along the chain, the double bond at carbon 13, the last before the COOH, is cis in isotretinoin. In tretinoin every chain double bond is trans; in isotretinoin the one at C13 is cis (slide 49).',
  cite:S4+' slide 49; T@28100–28540'},
 
 {id:'S4-077', skill:'counsel', prof:'Sikazwe', tier:'new', topic:'s4-ret', sub:'g1', concept:'tret-iso-route',
@@ -6584,14 +6551,14 @@ QUESTIONS.push(
   {t:'Poor skin penetration and a very short half-life', correct:false, why:'Etretinate is highly lipophilic with a T1/2 of 120 days (slide 50).'},
   {t:'Strong CYP3A4 inhibition and liver injury', correct:false, why:'Strong 3A4 inhibition belongs to the azoles (slide 53).'},
   {t:'PABA-type allergy and photosensitivity', correct:false, why:'Those limit PABA sunscreens (slide 63).'}],
- teach:'Acitretin, the active form, has "some retention of teratogenicity, but not to the extent of" etretinate (T@29300–29450; slide 50 note).',
+ teach:'Acitretin, the active form, has "some retention of teratogenicity, but not to the extent of" etretinate (T@29300–29450; annotation on the student copy of slide 50).',
  cite:S4+' slide 50; T@28898–29500'},
 
 {id:'S4-080', skill:'class', prof:'Sikazwe', tier:'new', topic:'s4-ret', sub:'g3', concept:'gen3-members', multi:true,
  tags:['list','classification'], source:'both',
  stem:'Which are 3rd-generation (poly-aromatic) retinoids? Select all that apply.',
  options:[
-  {t:'Adapalene', correct:true, why:'Slide 51; first synthetic retinoid (T@30100).'},
+  {t:'Adapalene', correct:true, why:'Slide 51: adapalene, the first synthetic retinoid; poly-aromatic (T@30027–30100).'},
   {t:'Trifarotene', correct:true, why:'Slide 51; (T@30100).'},
   {t:'Tazarotene', correct:true, why:'Slide 51, "a prodrug"; (T@30100–30160).'},
   {t:'Acitretin', correct:false, why:'2nd generation, mono-aromatic (slide 50).'},
@@ -6637,7 +6604,7 @@ QUESTIONS.push(
  tags:['structure'], source:'both',
  stem:'Ethinyl estradiol, norgestimate and drospirenone share which structural class?',
  options:[
-  {t:'Steroids', correct:true, why:'"these are all going to be what? Steroids, right? Because you know the structure of steroids A, B, C, D" (T@31000–31200); "Steroids" note on slide 52.'},
+  {t:'Steroids', correct:true, why:'"these are all going to be what? Steroids, right? Because you know the structure of steroids A, B, C, D" (T@31000–31200); "Steroids" annotation on the student copy of slide 52.'},
   {t:'Tetracyclines', correct:false, why:'Tetracyclines have four rings fused in a line, not the steroid nucleus (slide 55; T@35205–35450).'},
   {t:'Pteridines', correct:false, why:'The pteridine is methotrexate (slide 30).'},
   {t:'Lactams', correct:false, why:'The lactam is cyclosporine (slide 33).'}],
@@ -6796,7 +6763,7 @@ QUESTIONS.push(
  tags:['counsel','take-home'], source:'both',
  stem:'How does particle size affect zinc oxide as a sunblock?',
  options:[
-  {t:'Larger particles are more effective', correct:true, why:'"Size Matters here. It\'s important. Larger size ... particle size. Is More effective" (T@38748–38830); slide 61 note.'},
+  {t:'Larger particles are more effective', correct:true, why:'"Size Matters here. It\'s important. Larger size ... particle size. Is More effective" (T@38748–38830); annotation on the student copy of slide 61.'},
   {t:'Smaller particles are more effective', correct:false, why:'That is the rule for sulfur (T@24650–24760); nano zinc oxide loses reflective properties (T@38830–39000).'},
   {t:'Size does not change its action', correct:false, why:'"Size Matters here" (T@38748).'},
   {t:'Nano size improves its reflection', correct:false, why:'Nano-sized zinc oxide turns transparent and starts losing reflective properties (T@38921–39050).'}],
@@ -6818,18 +6785,18 @@ QUESTIONS.push(
  tags:['terms'], source:'both',
  stem:'What does photodegradation of a sunscreen mean?',
  options:[
-  {t:'The light it absorbs also degrades it', correct:true, why:'"when they say photodegradation, that means the same light they\'re absorbing is also degrading them" (T@40950–41140); note on slide 62.'},
+  {t:'The light it absorbs also degrades it', correct:true, why:'"when they say photodegradation, that means the same light they\'re absorbing is also degrading them" (T@40950–41140); annotation on the student copy of slide 62.'},
   {t:'It is broken down by skin esterases', correct:false, why:'That is ester hydrolysis, e.g., of the salicylate sunscreens (slide 64).'},
   {t:'It is metabolized by CYP3A4 in the liver', correct:false, why:'Not the meaning of photodegradation (T@40950–41140).'},
   {t:'It reflects light away from the skin', correct:false, why:'Reflection is how the inorganic sunblocks act (slide 61).'}],
- teach:'"Catch my spelling on that degradation, half-life" (T@40782). The photodegradation half-life sets how often a sunscreen must be reapplied (T@40860–40950).',
+ teach:'The photodegradation half-life sets how often a sunscreen must be reapplied (T@40860–40950). The photodegradation half-life sets how often a sunscreen must be reapplied (T@40860–40950).',
  cite:S4+' slide 62; T@40700–41140'},
 
 {id:'S4-101', skill:'counsel', prof:'Sikazwe', tier:'new', topic:'s4-sun', sub:'org', concept:'avobenzone',
  tags:['counsel','numbers'], source:'both',
- stem:'Avobenzone has a photodegradation half-life of about 2 hours. What does that mean for the user?',
+ stem:'Based on its photodegradation half-life, how often should avobenzone be reapplied?',
  options:[
-  {t:'Reapply about every 2 hours', correct:true, why:'"photo. Degradation ... half-life. Of about what? 2 hours. So that means after every 2 hours, the person has to come up and ... reapply" (T@40700–40950); slide 62 note "t1/2 = 2hrs".'},
+  {t:'Reapply about every 2 hours', correct:true, why:'"photo. Degradation ... half-life. Of about what? 2 hours. So that means after every 2 hours, the person has to come up and ... reapply" (T@40700–40950); annotation on the student copy of slide 62 "t1/2 = 2hrs".'},
   {t:'Reapply about every 12 hours', correct:false, why:'About 12 hours is ensulizole (T@42930).'},
   {t:'Reapply after each swim', correct:false, why:'Reapplying after swimming was the ensulizole drawback (T@43160–43270).'},
   {t:'Apply once a day before sun', correct:false, why:'With a 2-hour photodegradation half-life, once a day is too little (T@40860–40950).'}],
@@ -6840,7 +6807,7 @@ QUESTIONS.push(
  tags:['compare'], source:'both',
  stem:'How does meradimate compare with avobenzone as a UVA sunscreen?',
  options:[
-  {t:'It is degraded by light even faster', correct:true, why:'"It\'s even more rapidly. Degraded. Whereas this might be 2 hours you apply, you probably don\'t have 2 hours essentially with Meradime" (T@41300–41530); slide 62 note "more rapidly degraded".'},
+  {t:'It is degraded by light even faster', correct:true, why:'"It\'s even more rapidly. Degraded. Whereas this might be 2 hours you apply, you probably don\'t have 2 hours essentially with Meradime" (T@41300–41530); annotation on the student copy of slide 62 "more rapidly degraded".'},
   {t:'It is far more photostable', correct:false, why:'The reverse (T@41300–41530).'},
   {t:'It also blocks UVB by reflection', correct:false, why:'Meradimate is an anthranilate that absorbs UVA (slide 62); reflection is the metal oxides (slide 61).'},
   {t:'It is highly absorbed through the skin', correct:false, why:'High skin absorption was the benzophenone worry (slide 65).'}],
@@ -6851,7 +6818,7 @@ QUESTIONS.push(
  tags:['adverse','numbers'], source:'both',
  stem:'Which limitations apply to octinoxate, a UVB cinnamate?',
  options:[
-  {t:'Absorbed through skin; degrades in 1–2 h', correct:true, why:'"Problem Absorbed Through Skin Limitation ... The photo degradation. 1 to 2 hours" (T@41549–41760); notes on slide 63.'},
+  {t:'Absorbed through skin; degrades in 1–2 h', correct:true, why:'"Problem Absorbed Through Skin Limitation ... The photo degradation. 1 to 2 hours" (T@41549–41760); annotation on the student copy of slide 63.'},
   {t:'PABA allergy and photosensitivity', correct:false, why:'Those limit PABA and padimate O (slide 63; T@41918–42260).'},
   {t:'Washes off in water; degrades in 12 h', correct:false, why:'That is ensulizole (slide 64; T@42816–43400).'},
   {t:'Very low skin absorption due to its high MW', correct:false, why:'High molecular weight limits the skin absorption of bemotrizinol (slide 66).'}],
@@ -6862,7 +6829,7 @@ QUESTIONS.push(
  tags:['adverse'], source:'both',
  stem:'Why are PABA and padimate O rarely used as sunscreens?',
  options:[
-  {t:'Some people are allergic to PABA', correct:true, why:'"these are even rarely used ... Because some ... people are allergic to paba ... Paraaminobenzoic acid. Allergies" (T@41918–42100); slide 63 notes.'},
+  {t:'Some people are allergic to PABA', correct:true, why:'"these are even rarely used ... Because some ... people are allergic to paba ... Paraaminobenzoic acid. Allergies" (T@41918–42100); annotation on the student copy of slide 63.'},
   {t:'They photodegrade within minutes', correct:false, why:'He gave allergy as the reason (T@41918–42100).'},
   {t:'They are absorbed and teratogenic', correct:false, why:'Teratogenicity is the retinoid concern (slide 48).'},
   {t:'They wash off when swimming', correct:false, why:'Washing off was the ensulizole drawback (T@43160–43270).'}],
@@ -6888,14 +6855,14 @@ QUESTIONS.push(
   {t:'It photodegrades in about 2 hours', correct:false, why:'Ensulizole\'s photodegradation half-life is about 12 hours, the most photostable to that point (T@42930–43050).'},
   {t:'It is highly absorbed through the skin', correct:false, why:'High skin absorption (log P about 4) is the benzophenone worry (slide 65).'},
   {t:'It causes PABA-type allergy', correct:false, why:'PABA allergy limits PABA and padimate O (slide 63).'}],
- teach:'Ensulizole is a benzimidazole UVB absorber with a sulfonic acid; log P 1, water soluble; photodegradation half-life about 12 h (slide 64 notes; T@42816–43400).',
+ teach:'Ensulizole is a benzimidazole UVB absorber with a sulfonic acid; log P 1, water soluble; photodegradation half-life about 12 h (annotation on the student copy of slide 64; T@42816–43400).',
  cite:S4+' slide 64; T@42816–43400'},
 
 {id:'S4-107', skill:'adverse', prof:'Sikazwe', tier:'new', topic:'s4-sun', sub:'org', concept:'oxybenzone',
  tags:['adverse','numbers'], source:'both',
  stem:'What is the concern with oxybenzone and the other benzophenones?',
  options:[
-  {t:'Log P about 4; highly absorbed through skin', correct:true, why:'"Log P About 4. Hi[ghly] absorbed. Through skin. That\'s a worry" (T@43589–43700); notes on slide 65.'},
+  {t:'Log P about 4; highly absorbed through skin', correct:true, why:'"Log P About 4. Hi[ghly] absorbed. Through skin. That\'s a worry" (T@43589–43700); annotation on the student copy of slide 65.'},
   {t:'Log P about 1; washes off in water', correct:false, why:'That is ensulizole (slide 64).'},
   {t:'A photodegradation half-life of about 90 hours', correct:false, why:'About 90 hours is the photostability of octocrylene (T@44090).'},
   {t:'They block UVB but not UVA', correct:false, why:'Benzophenones absorb full UVB and considerable UVA (slide 65).'}],
@@ -6906,7 +6873,7 @@ QUESTIONS.push(
  tags:['counsel','numbers'], source:'both',
  stem:'Why is octocrylene added to sunscreens that contain oxybenzone?',
  options:[
-  {t:'It photostabilizes the other filters', correct:true, why:'"this is being used ... to provide stability to even what? Oxobenzene [oxybenzone] ... it\'s also providing photo stability to the other components" (T@44585–44800); slide 65 note "used as an additive sunscreen".'},
+  {t:'It photostabilizes the other filters', correct:true, why:'"this is being used ... to provide stability to even what? Oxobenzene [oxybenzone] ... it\'s also providing photo stability to the other components" (T@44585–44800); annotation on the student copy of slide 65 "used as an additive sunscreen".'},
   {t:'It lowers skin absorption of oxybenzone', correct:false, why:'Not the reason he gave; the reason is photostability (T@44585–44800).'},
   {t:'It reflects light like zinc oxide', correct:false, why:'Octocrylene is an organic cinnamate absorber (slide 65); reflection is the metal oxides (slide 61).'},
   {t:'It hydrolyzes to salicylic acid', correct:false, why:'Hydrolysis to salicylic acid is the salicylates (slide 64).'}],
@@ -6944,7 +6911,7 @@ QUESTIONS.push(
   {t:'Octocrylene', correct:true, why:'Slide 65: cinnamate, UVB/UVA, "Absorb full UVB + UVA".'},
   {t:'Bemotrizinol', correct:true, why:'Slide 66: UVB/UVA, "Absorbs UVB & UVA".'},
   {t:'Ensulizole', correct:false, why:'A UVB (280–315 nm) benzimidazole (slide 64).'},
-  {t:'Menthyl anthranilate (meradimate)', correct:false, why:'A UVA anthranilate (slide 62).'}],
+  {t:'Meradimate', correct:false, why:'A UVA anthranilate (slide 62).'}],
  teach:'By band (slides 62–66): UVA, avobenzone and meradimate; UVB, octinoxate, cinoxate, PABA, padimate O, homosalate, octisalate, ensulizole; UVB/UVA, oxybenzone, sulisobenzone, dioxybenzone, octocrylene, bemotrizinol. The inorganic zinc oxide and titanium dioxide are broad spectrum (slide 61).',
  cite:S4+' slides 62–66'},
 
@@ -7110,6 +7077,120 @@ const REFERENCE_HTML = `
 <tr><td><b>Short-term exacerbations</b></td><td>Mid-strength and high potency</td></tr>
 </tbody></table>
 <p class="prose">Specific steroid products and their potency classes belong to the medicinal chemistry lectures (T 585–587; syllabus: Sikazwe, Lectures 3–4).</p>
+
+<h3 id="ref-l2">Lecture 2: Smith, 10/30 (Skin-PCol slides 16–42)</h3>
+<table class="reftab"><thead><tr><th>Drug</th><th>Class</th><th>Route</th><th>Use (this lecture)</th><th>Key adverse / counseling</th><th>Slide</th></tr></thead><tbody>
+<tr><td>Tretinoin</td><td>Retinoid</td><td>Topical</td><td>Acne</td><td>&lt;10% absorbed; flare 4-6 wk; optimum 8-12 wk; microsphere form less irritating</td><td>16-17</td></tr>
+<tr><td>Adapalene</td><td>Retinoid</td><td>Topical</td><td>Mild to moderate acne</td><td>Sun stable; with BPO; less irritating than tretinoin</td><td>18</td></tr>
+<tr><td>Tazarotene</td><td>Retinoid</td><td>Topical</td><td>Psoriasis, acne, wrinkles</td><td>Photosensitivity; contraceptive counseling; not in pregnancy</td><td>18</td></tr>
+<tr><td>Isotretinoin</td><td>Retinoid</td><td>Oral</td><td>Severe cystic acne, recalcitrant</td><td>Dry skin/mucosa, lipids; skeletal hyperostosis in children; teratogen, iPLEDGE</td><td>19</td></tr>
+<tr><td>Acitretin</td><td>Retinoid</td><td>Oral</td><td>Psoriasis, esp. pustular</td><td>Hepatotoxicity (fatal hepatitis); half-life months; ethanol 2 mo; blood donation and pregnancy 3 yr</td><td>20</td></tr>
+<tr><td>Calcipotriene</td><td>Vitamin D analog</td><td>Topical</td><td>Psoriasis</td><td>Burning/itching, atrophy, hyperpigmentation, folliculitis, mild photosensitivity; steroid reduces irritation; hypercalcemia/hypercalciuria &gt;100 g/week, resolves in days</td><td>21-22</td></tr>
+<tr><td>Pimecrolimus</td><td>Calcineurin inhibitor</td><td>Topical</td><td>AD (&gt;2 yr)</td><td>Burning; local carcinogenesis potential (sun protection); infection if absorbed; stays in skin</td><td>27-28</td></tr>
+<tr><td>Tacrolimus</td><td>Calcineurin inhibitor</td><td>Topical / oral</td><td>AD (topical)</td><td>Topical as above; oral: nephrotoxicity, HTN, URTI, neuropathies, CYP3A4</td><td>27-30</td></tr>
+<tr><td>Cyclosporine</td><td>Calcineurin inhibitor</td><td>Oral</td><td>Severe psoriasis</td><td>Boxed: lymphoma/malignancy, infections; nephrotoxicity, HTN, gingival hyperplasia; CYP3A4; two formulations not interchangeable</td><td>29-30</td></tr>
+<tr><td>Crisaborole</td><td>PDE-4 inhibitor</td><td>Topical 2% ointment</td><td>Mild to moderate AD, ≥2 yr</td><td>Site pain 4%; hypersensitivity &lt;1%, stop at once</td><td>33</td></tr>
+<tr><td>Apremilast</td><td>PDE-4 inhibitor</td><td>Oral</td><td>Psoriasis</td><td>Diarrhea, nausea, headache, weight loss; caution in depression; avoid strong CYP3A4 inducers</td><td>34</td></tr>
+<tr><td>Benzoyl peroxide</td><td>Keratolytic</td><td>Topical</td><td>Acne</td><td>Irritation; potent contact sensitizer; avoid eyes/mucosa; oxidant bleaches hair/fabric</td><td>36-37</td></tr>
+<tr><td>Sulfur</td><td>Keratolytic</td><td>Topical</td><td>Acne</td><td>Bacteriostatic; H2S; irritation, comedogenic, odor</td><td>38</td></tr>
+<tr><td>Salicylic acid</td><td>Keratolytic</td><td>Topical</td><td>Acne (dandruff, psoriasis)</td><td>3-6%; &gt;6% damage; up to 40% warts/corns; salicylism (additive topical salicylates); caution diabetes/PVD</td><td>39-40</td></tr>
+</tbody></table>
+
+<h3 id="ref-l3">Lecture 3: Smith, 11/03 (Skin-PCol slides 43–76)</h3>
+<table class="reftab"><thead><tr><th>Drug</th><th>Class / make</th><th>Target or mechanism</th><th>Route (as taught)</th><th>Key AE or warning</th><th>Slide</th></tr></thead><tbody>
+<tr><td>Sarecycline, minocycline, doxycycline</td><td>Tetracyclines</td><td>30S; block aminoacyl-tRNA at acceptor site; bacteriostatic</td><td>Oral (acne)</td><td>GI N/V/D, pseudomembranous colitis (stop if blood in stool), teeth/bone in young, photosensitivity, superinfection; not in pregnancy or under 8 y; minocycline ototoxicity</td><td>43–45</td></tr>
+<tr><td>Clindamycin</td><td>Lincosamide (chart)</td><td>50S; prevents translocation; bacteriostatic</td><td>Oral, topical</td><td>Pseudomembranous colitis, impaired liver function; ~10% topical absorption; resistance</td><td>46</td></tr>
+<tr><td>Erythromycin, azithromycin</td><td>Macrolides</td><td>50S; prevents translocation; bacteriostatic</td><td>Oral, topical</td><td>Oral N/V/D, epigastric pain, many drug interactions (metabolism); topical burning/drying esp. with benzoyl peroxide; resistance</td><td>47</td></tr>
+<tr><td>Trimethoprim/sulfamethoxazole</td><td>Sulfonamide/pyrimidine</td><td>SMX: PABA competition; TMP: DHFR</td><td>—</td><td>— (not covered)</td><td>48–49</td></tr>
+<tr><td>Dapsone</td><td>Sulfone</td><td>Leprosy: PABA antagonist; acne: anti-inflammatory (neutrophils), not fully understood</td><td>Topical gel (acne)</td><td>—</td><td>50</td></tr>
+<tr><td>Metronidazole</td><td>Nitroimidazole</td><td>Unknown; Demodex brevis or neutrophil effect</td><td>Topical (rosacea)</td><td>Gel drying; cream/lotion better tolerated</td><td>51</td></tr>
+<tr><td>Coal tar</td><td>Cytotoxic agent</td><td>Antiproliferative, anti-inflammatory, DNA crosslinking; phenolics antipruritic</td><td>Topical, OTC</td><td>Photosensitizing, carcinogenic; caution on oozing/vesicular skin</td><td>53–54</td></tr>
+<tr><td>Anthralin</td><td>Cytotoxic agent; synthetic chrysarobin</td><td>Antiproliferative (mitochondria), prevents T-lymphocyte activation</td><td>Ointment, SCAT</td><td>Irritation, severe conjunctivitis, staining; no systemic AEs; avoid face and intertriginous areas</td><td>55–56</td></tr>
+<tr><td>Shale tar (ichthammol)</td><td>Cytotoxic agent</td><td>Unknown</td><td>Topical; ear drops</td><td>Not photosensitizing; less irritating</td><td>57</td></tr>
+<tr><td>Selenium sulfide, zinc pyrithione</td><td>Cytotoxic agents</td><td>Cytostatic and antifungal; MOA unknown</td><td>Shampoo</td><td>—</td><td>57</td></tr>
+<tr><td>Methotrexate</td><td>DHFR inhibitor; folic acid analog</td><td>↓THF → ↓purines, dTMP; ↓T cells</td><td>Tablet</td><td>Cumulative liver toxicity (most significant); rare blood dyscrasias (blood counts); abortifacient, teratogenic; separate counting tray, gloves</td><td>59–61</td></tr>
+<tr><td>Abatacept</td><td>Fusion protein (CTLA-4 ECD + human IgG Fc); inhibitor of co-stimulation</td><td>Binds CD80/86 on APC; blocks positive signal 2</td><td>—</td><td>—</td><td>63</td></tr>
+<tr><td>Dupilumab</td><td>Human IgG4 mAb</td><td>IL-4Rα (blocks IL-4 and IL-13)</td><td>SubQ</td><td>Nasopharyngitis, headache; eye effects can be dose limiting</td><td>64</td></tr>
+<tr><td>Secukinumab</td><td>Human IgG1 mAb</td><td>IL-17A cytokine</td><td>SubQ</td><td>Infection (TB evaluation first), nasopharyngitis ~12%, Crohn's exacerbation</td><td>66</td></tr>
+<tr><td>Ixekizumab</td><td>Humanized IgG4 mAb</td><td>IL-17A cytokine</td><td>—</td><td>—</td><td>66</td></tr>
+<tr><td>Brodalumab</td><td>Human IgG2 mAb</td><td>IL-17RA receptor</td><td>—</td><td>—</td><td>66</td></tr>
+<tr><td>Ustekinumab</td><td>Human mAb</td><td>p40 of IL-12 and IL-23; ↓Th1/Th17</td><td>SubQ</td><td>URTI most common; serious allergy (do not re-give); serious infection (TB evaluation); live vaccines: stop ≥15 wk before, resume ≥2 wk after; malignancy; posterior leukoencephalopathy</td><td>67</td></tr>
+<tr><td>Guselkumab</td><td>Human IgG1λ mAb</td><td>p19 of IL-23</td><td>—</td><td>—</td><td>68</td></tr>
+<tr><td>Tildrakizumab-asmn</td><td>Humanized IgG1κ mAb</td><td>p19 of IL-23</td><td>—</td><td>—</td><td>68</td></tr>
+<tr><td>Risankizumab</td><td>Humanized IgG1 mAb</td><td>p19 of IL-23</td><td>SubQ or IV</td><td>Severe infection, TB reactivation, skin cancer (less common)</td><td>69</td></tr>
+<tr><td>TNF-α inhibitor class</td><td>—</td><td>Bind TNF-α</td><td>—</td><td>BBW: serious infections; lymphoma and other malignancies</td><td>70</td></tr>
+<tr><td>Etanercept</td><td>Fusion protein: two p75 soluble TNF receptors + human IgG1 Fc</td><td>TNF</td><td>SubQ</td><td>Injection site; case reports pancytopenia, demyelination</td><td>71</td></tr>
+<tr><td>Infliximab</td><td>Chimeric mAb (mouse/human IgG1)</td><td>TNF</td><td>IV</td><td>Anti-drug antibodies (14–40%, slide), infusion reactions (premedicate), infection, lupus-like syndrome</td><td>72</td></tr>
+<tr><td>Adalimumab</td><td>Human IgG1 mAb</td><td>TNF</td><td>SubQ</td><td>Injection site, infection; less antigenic</td><td>73</td></tr>
+<tr><td>Golimumab</td><td>Human mAb</td><td>TNF</td><td>—</td><td>—</td><td>74</td></tr>
+<tr><td>Certolizumab pegol</td><td>Pegylated Fab of humanized mAb</td><td>TNF</td><td>SubQ q2w; may extend to q4w after 3 doses</td><td>URTI, rash, UTI</td><td>74</td></tr>
+<tr><td>Tofacitinib</td><td>Small molecule JAK inhibitor</td><td>JAK</td><td>Oral</td><td>BBW severe infection, lymphoma, other malignancy; caution GI perforation</td><td>76</td></tr>
+<tr><td>Ruxolitinib</td><td>Small molecule JAK inhibitor</td><td>JAK1, JAK2</td><td>Topical and oral (slide 76); see conflict</td><td>—</td><td>76</td></tr>
+<tr><td>Upadacitinib</td><td>Small molecule JAK inhibitor</td><td>JAK1, JAK2, maybe JAK3/TYK2</td><td>—</td><td>—</td><td>76</td></tr>
+</tbody></table>
+
+<h3 id="ref-s3">Lecture 3: Sikazwe, 11/03 (DPAW pages 1–26)</h3>
+<table class="reftab"><thead><tr><th>Drug / agent</th><th>Chemical class</th><th>Key ADME / numbers</th><th>CBDA</th><th>Slide; T</th></tr></thead><tbody>
+<tr><td>Crisaborole</td><td>Benzoxaborole (boron-based), soft drug</td><td>log P 3, dermis accumulation; t1/2 12 h; spontaneous hydrolytic deboronation (non-enzymatic) -&gt; benzyl alcohol -&gt; ADH, ALDH -&gt; benzoic acid -&gt; SULT / UGT conjugates</td><td>Boron coordinates Zn2+ and Mg2+ in PDE4 active site</td><td>7, 9; T 664-801</td></tr>
+<tr><td>Ruxolitinib</td><td>Pyrrolopyrimidine (name not to be recalled)</td><td>log P ~2 (spoken); formulated to stay in skin; t1/2 3 h; 3A4/2C9 substrate; some active OH metabolites</td><td>(JAK inhibitor; MoA not tested)</td><td>8; T 729-757</td></tr>
+<tr><td>Upadacitinib</td><td>Imidazopyrrolopyridine (name not to be recalled)</td><td>log P ~2 (spoken); t1/2 8-16 h; 3A4/2D6 substrate; no active metabolites</td><td>(JAK inhibitor)</td><td>8; T 729-757</td></tr>
+<tr><td>Petrolatum</td><td>Hydrocarbons, linear, &gt;25 C</td><td>Most effective emollient</td><td>Palliative: fills scale gaps, prevents water loss</td><td>15; T 870-875</td></tr>
+<tr><td>Lanolin</td><td>Fatty acid esters (wool grease)</td><td>Odor limits use</td><td>Palliative</td><td>15; T 876-881</td></tr>
+<tr><td>Dimethicone / cyclomethicone</td><td>Silicone, linear / cyclic (pentamer) Si-O</td><td>Hypoallergenic, non-comedogenic</td><td>Palliative</td><td>15; T 882-889</td></tr>
+<tr><td>Coal tar</td><td>Phenols, PAHs, heterocycles</td><td>Photosensitizing; with UVB</td><td>MoA unknown, maybe antiproliferative</td><td>16; T 890-902</td></tr>
+<tr><td>Shale tar (ichthammol)</td><td>From sedimentary rock</td><td>Non-photosensitizer</td><td>as tars</td><td>16; T 902-908</td></tr>
+<tr><td>Wood tars</td><td>Pine, birch, juniper</td><td>Non-photosensitizing</td><td>as tars</td><td>16; T 908-911</td></tr>
+<tr><td>Anthralin (dithranol)</td><td>Hydroxyanthrone (1915)</td><td>log P 4 (deck only): lipophilic, excess goes systemic; Lassar's paste; dendrimer/nano formulations improve PK, DoA</td><td>Spontaneous autoxidation -&gt; anthranyl radical + superoxide anion -&gt; keratinocyte mitochondria; anthralin brown, carbon black = stain</td><td>17; T 918-953</td></tr>
+<tr><td>Methoxsalen (8-MOP)</td><td>Furanocoumarin</td><td>log P 2 (deck only); several CYPs; partially inhibits 3A4</td><td>Intercalates, UVA-activated covalent crosslink of DNA pyrimidine bases, decreased DNA synthesis</td><td>18; T 954-976</td></tr>
+<tr><td>Glucocorticoids</td><td>Steroid: tetracyclic, rings A-C six-membered, D five-membered</td><td>SAR up: C1-C2 db, 6α-X, 9α-X, 11β-OH</td><td>6 hydrogen bonds in GR (C3=O x2, 11β-OH, 17α-OH, C20=O, C21-OH)</td><td>20, 23; T 984-1139</td></tr>
+<tr><td>Hydrocortisone</td><td>Natural cortisol; reference (parent)</td><td>log P ~1.5 (spoken); &lt;15% skin vs 95% PO; t1/2 1-2 h (metabolism); DoA 8-12 h (protein binding); 11β-HSD &lt;-&gt; cortisone (inactive); 5β-reductase -&gt; 5β-dihydrocortisol -&gt; 3α-HSD -&gt; urocortisol; cortisone, urocortisol in urine</td><td>GC + MC activity</td><td>24-26; T 1139-1196</td></tr>
+<tr><td>Potency examples</td><td>—</td><td>Super-potent clobetasol propionate 0.05%; potent betamethasone dipropionate 0.05%; medium betamethasone valerate 0.1%; low hydrocortisone acetate 0.5%/1%. Bases: structure, vehicle (propylene glycol), concentration</td><td>—</td><td>25; T 1154-1179</td></tr>
+<tr><td>UVR</td><td>—</td><td>UVC 100-280; UVB from 280; UVA to 400 (from 315 or 320); ozone blocks UVC and ~90% UVB; UVA deepest</td><td>—</td><td>12; T 810-839</td></tr>
+</tbody></table>
+
+<h3 id="ref-s4">Lecture 4: Sikazwe, 11/04 (DPAW pages 27–71)</h3>
+<table class="reftab"><thead><tr><th>Drug / agent</th><th>Chemical class (deck)</th><th>Mechanism / CBDA</th><th>Key PK / numbers</th><th>Caution</th><th>Slide</th></tr></thead><tbody>
+<tr><td>Calcitriol, calcipotriene</td><td>Secosteroids (vitamin D analogs)</td><td>Antiproliferative</td><td>Raise GI calcium absorption</td><td>Hypercalcemia (limiting factor)</td><td>27</td></tr>
+<tr><td>Pimecrolimus</td><td>Macrolide / lactone</td><td>Calcineurin inhibitor, ↓ cytokines</td><td>cLogP 6.0; high non-specific skin protein binding</td><td>Low systemic ADRs</td><td>28, 32</td></tr>
+<tr><td>Tacrolimus</td><td>Macrolide / lactone</td><td>Calcineurin inhibitor</td><td>cLogP 5.8; low skin protein binding</td><td>Systemic entry</td><td>28</td></tr>
+<tr><td>Tazarotene</td><td>Acetylenic (alkyne) retinoid, ethyl ester prodrug; 3rd gen</td><td>RAR/RXR</td><td>CE → tazarotenic acid</td><td>Teratogenic</td><td>29, 51</td></tr>
+<tr><td>Acitretin</td><td>2nd gen mono-aromatic retinoid</td><td>RAR/RXR</td><td>Active form of etretinate</td><td>Some teratogenicity</td><td>29, 50</td></tr>
+<tr><td>Isotretinoin</td><td>1st gen; 13-cis retinoic acid</td><td>RAR/RXR</td><td>Oral</td><td>Teratogenic</td><td>29, 49</td></tr>
+<tr><td>Tretinoin</td><td>1st gen; all-trans retinoic acid</td><td>RAR/RXR</td><td>Topical; first retinoid for acne</td><td>Teratogenic</td><td>49, 70</td></tr>
+<tr><td>Etretinate</td><td>2nd gen; ethyl ester prodrug</td><td>→ acitretin by CE</td><td>t1/2 120 days, highly lipophilic</td><td>Narrow TI, teratogenic, removed 1998</td><td>50</td></tr>
+<tr><td>Adapalene, trifarotene</td><td>3rd gen poly-aromatic</td><td>Directly active (exposed COOH)</td><td>Low systemic absorption</td><td>Teratogenic (class)</td><td>51</td></tr>
+<tr><td>Methotrexate</td><td>Pteridine</td><td>Competitive DHFR inhibitor; also immunosuppressant, anti-inflammatory</td><td>SAR: pteridine (aromatic), PABA, glutamic acid; no aromatic N-alkylation; N-CH3 essential</td><td>—</td><td>30–31</td></tr>
+<tr><td>Cyclosporine</td><td>11 amino acid cyclic peptide (lactam)</td><td>Activated by cyclophilin complexation; inhibits calcineurin phosphatase, T-cell signaling</td><td>F 30% (first pass by 3A4); log P 4; t1/2 19 h</td><td>Grapefruit juice ↑ levels</td><td>33</td></tr>
+<tr><td>Apremilast</td><td>Isoindoline</td><td>PDE4 inhibitor, ↑ cAMP</td><td>3A4 major (1A2, 2A6 minor) O-demethylation → O-glucuronide (UGT)</td><td>Avoid 3A4 inhibitors/inducers</td><td>34</td></tr>
+<tr><td>Tofacitinib</td><td>Pyrrolopyrimidine</td><td>JAK inhibitor</td><td>70% 3A4; 13 metabolites</td><td>3A4 inhibitors/inducers; may be used with MTX</td><td>35</td></tr>
+<tr><td>Glycolic acid</td><td>Alpha-hydroxy acid</td><td>Keratolytic</td><td>pKa ~3, log P ~1, surface; ADH + ALDH → diacid</td><td>Itching; higher conc. for deeper peels</td><td>43, 68</td></tr>
+<tr><td>Salicylic acid</td><td>Beta-hydroxy acid</td><td>Keratolytic; ↑ hydration</td><td>pKa ~3, log P ~1–2; 75% glycine conjugation</td><td>Itching</td><td>43</td></tr>
+<tr><td>Sulfur</td><td>Element</td><td>Thiolysis of keratin disulfides (cysteine)</td><td>Small particle size</td><td>Allergies, smell</td><td>46</td></tr>
+<tr><td>Benzoyl peroxide</td><td>Peroxide</td><td>↓ skin pH (benzoic acid) + free radical (benzoyl radical)</td><td>log P 3.5; benzoic acid in urine</td><td>—</td><td>47</td></tr>
+<tr><td>Ethinyl estradiol + norgestimate / drospirenone</td><td>Steroids</td><td>↓ sebum (OCs, females)</td><td>—</td><td>—</td><td>52</td></tr>
+<tr><td>Spironolactone</td><td>Steroidal antiandrogen</td><td>↓ testosterone biosynthesis</td><td>—</td><td>—</td><td>53</td></tr>
+<tr><td>Ketoconazole</td><td>Azole (non-steroid)</td><td>↓ testosterone biosynthesis</td><td>—</td><td>Strong CYP3A4 inhibitor</td><td>53</td></tr>
+<tr><td>Flutamide</td><td>Non-steroidal antiandrogen</td><td>Blocks testosterone at its receptor</td><td>—</td><td>—</td><td>53</td></tr>
+<tr><td>Azelaic acid</td><td>C9 dicarboxylic acid</td><td>Antibacterial, anti-inflammatory</td><td>—</td><td>—</td><td>54</td></tr>
+<tr><td>Clindamycin</td><td>Lincomycin</td><td>—</td><td>Topical due to GI toxicity</td><td>—</td><td>54</td></tr>
+<tr><td>Erythromycin</td><td>Macrolide</td><td>—</td><td>Poor PO absorption; unstable at pH ≤4</td><td>—</td><td>54</td></tr>
+<tr><td>Tetracycline</td><td>Tetracycline (linear 4 rings)</td><td>Chelates Al3+, Ca2+, Mg2+, Fe3+, Bi3+</td><td>Food (dairy) cuts absorption; t1/2 8.5 h</td><td>Bone/enamel staining, weakening</td><td>55</td></tr>
+<tr><td>Doxycycline, minocycline</td><td>Tetracyclines</td><td>—</td><td>Food no effect; lipophilic; t1/2 11–13 h, 14–22 h</td><td>Cross-allergy</td><td>55</td></tr>
+<tr><td>Zinc oxide, titanium dioxide</td><td>Metal oxides</td><td>Reflect/scatter; UVA/UVB; inert</td><td>Large particles better</td><td>—</td><td>61</td></tr>
+<tr><td>Avobenzone</td><td>Dibenzoylmethane (UVA)</td><td>Chromophore</td><td>Low skin absorption; photodeg. t1/2 ~2 h</td><td>Reapply q2h</td><td>62</td></tr>
+<tr><td>Meradimate</td><td>Anthranilate (UVA)</td><td>Chromophore</td><td>Degrades faster than avobenzone</td><td>—</td><td>62</td></tr>
+<tr><td>Octinoxate</td><td>Cinnamate (UVB)</td><td>Chromophore</td><td>Absorbed through skin; t1/2 1–2 h</td><td>—</td><td>63</td></tr>
+<tr><td>PABA, padimate O</td><td>PABAs (UVB)</td><td>Chromophore</td><td>—</td><td>PABA allergy (photosensitivity)</td><td>63</td></tr>
+<tr><td>Homosalate, octisalate</td><td>Salicylates (UVB)</td><td>Chromophore; ester → salicylic acid (analgesia)</td><td>"supposed to be" photostable</td><td>—</td><td>64</td></tr>
+<tr><td>Ensulizole</td><td>Benzimidazole (UVB)</td><td>Chromophore</td><td>log P 1, water soluble; t1/2 ~12 h</td><td>Reapply after swimming</td><td>64</td></tr>
+<tr><td>Oxybenzone, sulisobenzone, dioxybenzone</td><td>Benzophenones (UVB/UVA)</td><td>Chromophore</td><td>log P ~4, highly absorbed</td><td>Absorption worry</td><td>65</td></tr>
+<tr><td>Octocrylene</td><td>Cinnamate (UVB/UVA)</td><td>Chromophore; photostabilizer additive</td><td>t1/2 ~90 h; lipophilic</td><td>—</td><td>65</td></tr>
+<tr><td>Bemotrizinol</td><td>Methoxybenzene &amp; triazine (UVB/UVA)</td><td>Chromophore</td><td>MW 627.81; photostable t1/2 ~4–8 h</td><td>—</td><td>66</td></tr>
+<tr><td>Hydroquinone</td><td>—</td><td>↓ melanin biosynthesis (tyrosinase)</td><td>Degrades to benzoquinone (colored, inactive)</td><td>Amber bottle; protect from light and O2</td><td>67</td></tr>
+<tr><td>AHAs (glycolic, lactic, tartaric, malic, citric)</td><td>Hydroxy acids</td><td>Remove dead cells, ↑ collagen</td><td>Sources: cane/beet, milk, grapes, apples/grapes</td><td>—</td><td>68</td></tr>
+<tr><td>Hyaluronic acid</td><td>Endogenous mucopolysaccharide</td><td>Hygroscopic viscoelastic film</td><td>High MW surface, low MW deeper; declines with age</td><td>Non-antigenic</td><td>69</td></tr>
+<tr><td>Topical retinoids (tretinoin, isotretinoin, tazarotene)</td><td>Retinoids</td><td>↑ skin collagen</td><td>—</td><td>Teratogenicity</td><td>70</td></tr>
+</tbody></table>
 `;
 
 const TELL_HTML = `
@@ -7132,6 +7213,92 @@ const TELL_HTML = `
 <tr><td><b>CBG</b> vs <b>Hsp90</b></td><td>CBG carries the steroid in the blood. Hsp90 chaperones the receptor in the cell and comes off when the steroid binds.</td><td>Hsp90 as the carrier protein.</td><td>10</td></tr>
 <tr><td><b>Local</b> vs <b>systemic</b> topical steroid effects</td><td>Local: striae, atrophy, perioral dermatitis, acne, rosacea, telangiectasias, purpura, focal hypertrichosis, allergic contact dermatitis. Systemic: HPA axis suppression, infections, hyperglycemia, cataracts, glaucoma, growth retardation in children.</td><td>Thinking low potency rules out systemic effects (T 861–865).</td><td>12</td></tr>
 <tr><td><b>RAR</b> vs <b>RXR</b> targeting retinoids</td><td>RAR: differentiation and proliferation; acne, psoriasis, photoaging. RXR: apoptosis; cancers such as Kaposi sarcoma.</td><td>"RXR" for skin disease: a slip in class (T 901–903); the slide and her next sentence say RAR.</td><td>14</td></tr>
+</tbody></table>
+
+<h3 id="tell-l2">Lecture 2: Smith, 10/30 (Skin-PCol slides 16–42)</h3>
+<table class="reftab"><thead><tr><th>Looks alike</th><th>What separates them</th><th>Trap</th><th>Slide</th></tr></thead><tbody>
+<tr><td>Adapalene vs tretinoin</td><td>Adapalene: photochemically stable, combinable with benzoyl peroxide, less irritating, mild to moderate acne. Tretinoin: ATRA, &lt;10% absorbed, timed-release microsphere form for sensitive skin</td><td>Thinking any retinoid can go with benzoyl peroxide (T 72-73: the others are "way too irritating")</td><td>17-18</td></tr>
+<tr><td>Adapalene vs tazarotene</td><td>Adapalene sun stable, acne; tazarotene causes photosensitivity, used for psoriasis, acne and wrinkles, possibly more absorption, contraceptive counseling</td><td>Treating "sun stable" as "no sun protection needed": sunburn risk stays because of peeling (T 122-130)</td><td>18</td></tr>
+<tr><td>Retinoid photosensitivity vs sunburn</td><td>Photosensitivity: immune reaction after sunlight changes the drug's structure. Sunburn: less protection after outer layers peel</td><td>Adapalene avoids the first, not the second</td><td>16, 18; T 122-130</td></tr>
+<tr><td>Isotretinoin vs acitretin</td><td>Isotretinoin: severe cystic acne, lipid changes, skeletal hyperostosis in children, iPLEDGE (men too). Acitretin: psoriasis (pustular), hepatotoxicity with fatal hepatitis, half-life of months, no ethanol for 2 months, no blood donation and no pregnancy for 3 years</td><td>Mixing the 2 months (ethanol) and 3 years (blood, pregnancy)</td><td>19-20</td></tr>
+<tr><td>Cyclosporine vs tacrolimus (mechanism)</td><td>Cyclosporine binds cyclophilin; tacrolimus (FK506) binds FKBP; each complex inactivates calcineurin</td><td>Swapping the partners; thinking either binds NFAT directly</td><td>26</td></tr>
+<tr><td>Cyclosporine vs tacrolimus (adverse)</td><td>Both: nephrotoxicity, hypertension, URTI, cough, headache, CYP3A4 interactions. Cyclosporine: gingival hyperplasia. Tacrolimus: neuropathies</td><td>Calling nephrotoxicity drug-specific</td><td>30</td></tr>
+<tr><td>Topical pimecrolimus vs topical tacrolimus</td><td>Pimecrolimus stays in the skin better (less systemic absorption). Both: AD, &gt;2 years, burning, sun protection</td><td>Thinking either is approved under 2</td><td>27-28</td></tr>
+<tr><td>Signals 1, 2, 3</td><td>1: MHC II + antigen to TCR. 2: CD80/86 to CD28 (confirmatory). 3: IL-2 to CD25, proliferation. CNIs act in the cascade after 1 and 2</td><td>Placing CNIs at CD25 or at CD28</td><td>25</td></tr>
+<tr><td>Crisaborole vs apremilast</td><td>Crisaborole: topical 2% ointment, mild to moderate AD, ≥2 years, stop at once for hypersensitivity. Apremilast: oral, psoriasis, GI distress, headache, weight loss, caution in depression, avoid strong CYP3A4 inducers</td><td>Assuming the same side effects because the mechanism is the same (T 465-466)</td><td>33-34</td></tr>
+<tr><td>Benzoyl peroxide vs sulfur vs salicylic acid</td><td>BPO: antimicrobial + comedolytic, to benzoic acid, sensitizer, bleaches (oxidant). Sulfur: bacteriostatic, to hydrogen sulfide, comedogenic, odor. Salicylic acid: solubilizes stratum corneum proteins, 3-6%, &gt;6% damage, 40% for warts/corns, salicylism, caution in diabetes/PVD</td><td>Calling sulfur bactericidal</td><td>36-40</td></tr>
+<tr><td>Comedogenic flare: retinoids vs sulfur</td><td>Same reason: peeling brings up comedones under the surface</td><td>Reading it as treatment failure</td><td>16, 38; T 20-28, 526-527</td></tr>
+<tr><td>Tetracyclines vs macrolides/chloramphenicol</td><td>Tetracyclines bind 30S and block entry of the charged tRNA; chloramphenicol and macrolides bind 50S</td><td>Swapping the subunits</td><td>42</td></tr>
+<tr><td>CYP3A4 drugs this day</td><td>Cyclosporine, tacrolimus (many interactions); apremilast (inducers reduce effect)</td><td>—</td><td>30, 34</td></tr>
+</tbody></table>
+
+<h3 id="tell-l3">Lecture 3: Smith, 11/03 (Skin-PCol slides 43–76)</h3>
+<table class="reftab"><thead><tr><th>Looks alike</th><th>What separates</th><th>Trap</th><th>Slide</th></tr></thead><tbody>
+<tr><td>Tetracyclines vs clindamycin/macrolides</td><td>Tetracyclines bind 30S (block aminoacyl-tRNA at acceptor site); clindamycin and macrolides bind 50S (prevent translocation)</td><td>All "ribosome antibiotics"; subunit swapped</td><td>43, 46, 47</td></tr>
+<tr><td>Sulfamethoxazole vs trimethoprim</td><td>SMX competes with PABA (dihydropteroic/dihydrofolic acid step); TMP inhibits DHFR (DHF to THF)</td><td>Both "folate"; step swapped</td><td>48–49</td></tr>
+<tr><td>Trimethoprim vs methotrexate</td><td>Both DHFR inhibitors; TMP acts in the microbe, MTX in the patient's keratinocytes (and T cells)</td><td>"DHFR inhibitor" read as antimicrobial</td><td>48, 59; T 213–215</td></tr>
+<tr><td>Dapsone (leprosy) vs dapsone (acne)</td><td>Leprosy: PABA antagonist like sulfonamides; acne: not fully understood, anti-inflammatory via neutrophils</td><td>Giving the leprosy mechanism for acne</td><td>50</td></tr>
+<tr><td>Clindamycin vehicles vs metronidazole vehicles</td><td>Clindamycin: water-based gel/lotion better tolerated than hydroalcoholic/foam; metronidazole: gel more drying, cream/lotion better tolerated</td><td>"Water-based gel" is the good choice for one and the drying one for the other</td><td>46, 51</td></tr>
+<tr><td>Coal tar vs shale tar</td><td>Shale tar (ichthammol) is not photosensitizing and less irritating; coal tar is photosensitizing and carcinogenic</td><td>Both petroleum tars</td><td>54, 57; T 189–191</td></tr>
+<tr><td>Anthralin vs coal tar staining/systemic</td><td>Anthralin: no systemic effects, stains skin/hair/clothes dark brown-black, severe conjunctivitis; coal tar: systemic absorption concern on oozing skin</td><td>Systemic risk assigned to anthralin</td><td>54, 56</td></tr>
+<tr><td>Selenium sulfide/zinc pyrithione vs tars</td><td>Cytostatic plus antifungal (dandruff shampoos)</td><td>Calling them tars</td><td>57</td></tr>
+<tr><td>Abatacept vs etanercept</td><td>Both fusion proteins with IgG Fc; abatacept = CTLA-4 domain binding CD80/86 (signal 2); etanercept = two p75 TNF receptors binding TNF</td><td>"Fusion protein" alone does not identify</td><td>63, 71</td></tr>
+<tr><td>Positive vs negative signal 2</td><td>CD80/86 + CD28 = positive (activation, IL-2); CD80/86 + CTLA-4 = negative (activation stops)</td><td>Partners swapped</td><td>63; T 294–308</td></tr>
+<tr><td>Dupilumab vs brodalumab</td><td>Both bind a receptor: dupilumab IL-4Rα (blocks IL-4 and IL-13); brodalumab IL-17RA</td><td>Thinking dupilumab binds IL-4 cytokine</td><td>64, 66</td></tr>
+<tr><td>Secukinumab vs ixekizumab</td><td>Same target (IL-17A cytokine); secukinumab human, ixekizumab humanized</td><td>—</td><td>66; T 416–420</td></tr>
+<tr><td>IL-17 cytokine binders vs brodalumab</td><td>Secukinumab and ixekizumab bind IL-17A; brodalumab binds the receptor</td><td>—</td><td>66; T 421–428</td></tr>
+<tr><td>Ustekinumab vs IL-23 inhibitors</td><td>Ustekinumab binds p40 (shared by IL-12 and IL-23); guselkumab, tildrakizumab-asmn, risankizumab bind p19 of IL-23</td><td>p40/p19 swapped</td><td>67–69</td></tr>
+<tr><td>Guselkumab vs tildrakizumab-asmn</td><td>Guselkumab human; tildrakizumab-asmn humanized; both p19</td><td>—</td><td>68; T 471–472</td></tr>
+<tr><td>Risankizumab vs other p19 binders</td><td>Humanized; SQ or IV; moderate to severe plaque psoriasis</td><td>—</td><td>69; T 480–483</td></tr>
+<tr><td>Infliximab vs adalimumab</td><td>Infliximab chimeric, IV, anti-drug antibodies, infusion reactions, lupus-like syndrome; adalimumab human, SubQ, less antigenic</td><td>—</td><td>72–73</td></tr>
+<tr><td>Etanercept vs certolizumab pegol</td><td>Etanercept = receptor-Fc fusion; certolizumab = pegylated Fab of humanized antibody (long half-life, q2w, may extend q4w after 3 doses)</td><td>—</td><td>71, 74</td></tr>
+<tr><td>JAK inhibitors vs monoclonals</td><td>JAK inhibitors are small molecules that enter cells; monoclonals too big</td><td>Calling JAK inhibitors peptides/biologics</td><td>76; T 570–573</td></tr>
+<tr><td>Ruxolitinib vs upadacitinib</td><td>Ruxolitinib JAK1 and JAK2; upadacitinib JAK1, JAK2, maybe JAK3 and TYK2, efficacy advantage unknown</td><td>—</td><td>76; T 573–578</td></tr>
+<tr><td>Tofacitinib vs TNF-α inhibitors</td><td>Same black box (serious infection, lymphoma, other malignancy); tofacitinib oral small molecule</td><td>—</td><td>70, 76</td></tr>
+</tbody></table>
+
+<h3 id="tell-s3">Lecture 3: Sikazwe, 11/03 (DPAW pages 1–26)</h3>
+<table class="reftab"><thead><tr><th>Looks alike</th><th>What separates</th><th>Trap</th><th>Slide</th></tr></thead><tbody>
+<tr><td>Crisaborole vs anthralin (both act without an enzyme at some step)</td><td>Crisaborole: spontaneous hydrolytic deboronation inactivates it (water, no enzyme). Anthralin: spontaneous autoxidation activates it (radicals are the treatment)</td><td>Calling both "autoxidation"; thinking deboronation activates crisaborole</td><td>7, 17</td></tr>
+<tr><td>Anthralin vs 8-MOP (methoxsalen) CBDA</td><td>Anthralin: autoxidation to anthranyl radical + superoxide anion, disrupt keratinocyte mitochondria. 8-MOP: intercalates and, with UVA, covalently crosslinks DNA pyrimidine bases</td><td>Polleve-2: "both involve autoxidation" is false</td><td>17, 18, 19</td></tr>
+<tr><td>Ruxolitinib vs upadacitinib</td><td>Same pharmacological class (JAK inhibitors), different chemical classes; rux t1/2 3 h, 3A4/2C9, some active OH metabolites; upa t1/2 8-16 h, 3A4/2D6, no active metabolites; both log P ~2, kept in skin by formulation</td><td>"Same chemical class"; swapping which has active metabolites</td><td>8</td></tr>
+<tr><td>Crisaborole vs JAK inhibitors (why they stay in skin)</td><td>Crisaborole log P 3, accumulates in dermis by its own nature (stratum corneum layering); JAKi log P ~2, kept local by formulation</td><td>Attributing JAKi locality to their log P</td><td>7, 8</td></tr>
+<tr><td>Soft drug vs hard drug vs prodrug</td><td>Soft: designed predictable metabolism to inactive harmless products. Hard: not metabolized. (Prodrug: activated by metabolism, not his term here)</td><td>Street meaning of "hard drug"</td><td>7 (T 665-672)</td></tr>
+<tr><td>ADH/ALDH vs SULT/UGT (crisaborole)</td><td>Phase 1 to the acid: alcohol dehydrogenase then aldehyde dehydrogenase (2 enzymes, no CYPs). Phase 2: sulfotransferase (step 3), UGT (step 4)</td><td>"Not 3, not 4, not sips"</td><td>7, 9</td></tr>
+<tr><td>UVA vs UVB vs UVC</td><td>UVC 100-280 (blocked by ozone); UVB from 280 (ozone blocks ~90%; used with coal tar); UVA up to 400 (deepest, to dermis; PUVA)</td><td>PUVA with UVB; coal tar with UVA</td><td>12, 16, 18</td></tr>
+<tr><td>Coal tar vs shale tar (ichthammol) vs wood tars</td><td>Coal tar: phenols, PAHs, heterocycles; photosensitizing; used with UVB. Shale: sedimentary rock, non-photosensitizer. Wood: pine/birch/juniper, non-photosensitizing</td><td>Calling all tars photosensitizing</td><td>16</td></tr>
+<tr><td>Petrolatum vs lanolin vs dimethicone vs cyclomethicone</td><td>Linear hydrocarbons &gt;25 C (most effective) / fatty acid esters from sheep wool, odor / linear Si-O / cyclic Si-O (pentamer); silicones hypoallergenic, non-comedogenic</td><td>Swapping linear/cyclic</td><td>15</td></tr>
+<tr><td>Eczema vs psoriasis components</td><td>Eczema: immune response, inflammation. Psoriasis: + keratinocyte hyperproliferation, autoimmune; goal "normalize cell proliferation" is psoriasis only</td><td>Adding hyperproliferation to eczema</td><td>4, 13</td></tr>
+<tr><td>6α-X, 9α-X vs 11β-OH</td><td>Halogens alpha (hashed, away); 11-OH beta (wedge, toward viewer); plus C1-C2 double bond</td><td>11α-OH, 6β-X</td><td>20</td></tr>
+<tr><td>Numbering vs orientation</td><td>Number = position; α/β = bond direction; independent ("Orientation is different from numbering", T 1054)</td><td>Assigning α to odd carbons etc.</td><td>20</td></tr>
+<tr><td>Hydrocortisone vs cortisone</td><td>Hydrocortisone 11β-OH, active, reference molecule; cortisone 11-ketone, inactive; linked by 11β-HSD (oxidoreductase)</td><td>5β-reductase or 3α-HSD as the cortisone enzyme</td><td>26</td></tr>
+<tr><td>Short t1/2 vs long DoA (hydrocortisone)</td><td>t1/2 1-2 h due to metabolism; DoA 8-12 h due to high protein binding</td><td>Swapping the causes</td><td>26</td></tr>
+<tr><td>Hydrocortisone to clobetasol arrow vs metabolism arrows</td><td>Slide 25 arrow = structural manipulation ("not metabolism"); slide 26 arrows = metabolism</td><td>Reading slide 25 as a metabolic step</td><td>25, 26</td></tr>
+</tbody></table>
+
+<h3 id="tell-s4">Lecture 4: Sikazwe, 11/04 (DPAW pages 27–71)</h3>
+<table class="reftab"><thead><tr><th>Looks alike</th><th>What separates</th><th>Trap</th><th>Slide</th></tr></thead><tbody>
+<tr><td>Pimecrolimus vs tacrolimus</td><td>Skin permeation: pimecrolimus high non-specific skin protein binding (stays in skin, low systemic ADRs); tacrolimus low skin protein binding (enters circulation). Structure: Cl + ethyl (pime) vs OH + allyl (tacro)</td><td>Thinking they differ in log P (6.0 vs 5.8, similar) or in mechanism (both calcineurin inhibitors)</td><td>28; T@5890–6070</td></tr>
+<tr><td>Lactone vs lactam</td><td>Lactone = cyclic ester (limus macrolides); lactam = cyclic amide (cyclosporine, a cyclic peptide)</td><td>Calling the limus drugs "peptides" (drug chart) or steroids</td><td>32, 33; T@11453–11720, T@12150–12254</td></tr>
+<tr><td>Calcitriol vs calcipotriene</td><td>Calcipotriene was meant to lose the calcium effect but did not; both raise GI calcium absorption and are limited by hypercalcemia; both secosteroids</td><td>Believing calcipotriene is calcium-neutral</td><td>27; T@2373–2758</td></tr>
+<tr><td>Methotrexate vs folic acid</td><td>MTX has NH2 (folic acid OH) on the pteridine and N-CH3 (folic acid N-H); MTX binds DHFR with higher affinity</td><td>Saying MTX lacks the glutamate or PABA portion</td><td>30–31; T@8700–9300</td></tr>
+<tr><td>Cyclosporine "prodrug" vs tazarotene/etretinate prodrugs</td><td>Cyclosporine activated by complexing cyclophilin (not metabolic); tazarotene and etretinate are ester prodrugs hydrolyzed by carboxylesterases</td><td>Saying CYP3A4 activates cyclosporine (3A4 inactivates it, first pass)</td><td>29, 33, 50; T@12289–12500, T@6942–7125</td></tr>
+<tr><td>Apremilast vs tofacitinib</td><td>Apremilast: isoindoline, PDE4 inhibitor, 3A4 O-demethylation then UGT O-glucuronidation. Tofacitinib: pyrrolopyrimidine, JAK inhibitor, 70% 3A4, 13 metabolites</td><td>Mixing class names; both share "avoid 3A4 inhibitors and inducers"</td><td>34, 35; T@13698–15130</td></tr>
+<tr><td>Glycolic acid vs salicylic acid</td><td>GA: alpha-hydroxy acid, hydrophilic, log P ~1, surface, ADH + ALDH (2 enzymes) to diacid. SA: beta-hydroxy acid, aromatic ring, log P ~1–2, deeper, 75% glycine conjugate. Both pKa ~3 (itching)</td><td>Calling SA an AHA; thinking pKa explains depth</td><td>43–44; T@20199–22520</td></tr>
+<tr><td>Alpha vs beta hydroxy acid</td><td>OH on carbon next to COOH (alpha) vs two carbons away (beta)</td><td>Counting the carboxyl carbon itself as alpha</td><td>44; T@22090–22230</td></tr>
+<tr><td>Sulfur vs ZnO/TiO2 particle size</td><td>Sulfur: small particles more effective. ZnO/TiO2: large particles more effective (nano = transparent, less reflective)</td><td>Applying one rule to both</td><td>46, 61; T@24650–24760, T@38748–39200</td></tr>
+<tr><td>Benzoyl peroxide products</td><td>Benzoic acid lowers skin pH (keratolytic); benzoyl radical kills bacteria (anti-inflammatory)</td><td>Swapping the two roles</td><td>47; T@26000–26600</td></tr>
+<tr><td>Tretinoin vs isotretinoin</td><td>Geometric (cis/trans) isomers: all-trans vs 13-cis; tretinoin topical, isotretinoin oral; both active; 1st gen non-aromatic</td><td>Calling them enantiomers or prodrug/drug</td><td>49; T@27705–28720</td></tr>
+<tr><td>Etretinate vs acitretin</td><td>Etretinate = ethyl ester prodrug (t1/2 120 d, narrow TI, teratogenic, off US market 1998); CE gives acitretin, the active form, still somewhat teratogenic; both 2nd gen mono-aromatic</td><td>Reversing the direction</td><td>50; T@28898–29700</td></tr>
+<tr><td>Adapalene/trifarotene vs tazarotene</td><td>All 3rd gen poly-aromatic; adapalene and trifarotene directly active (exposed COOH); tazarotene ester prodrug → tazarotenic acid</td><td>Calling adapalene a prodrug</td><td>51; T@30193–30300</td></tr>
+<tr><td>Spironolactone vs ketoconazole vs flutamide</td><td>Spironolactone: steroid, lowers testosterone biosynthesis. Ketoconazole: non-steroid azole, lowers biosynthesis, strong 3A4 inhibitor. Flutamide: non-steroid, blocks testosterone at its receptor</td><td>Deck heading groups ketoconazole with flutamide (non-steroidal); by mechanism it goes with spironolactone</td><td>53; T@32075–33140</td></tr>
+<tr><td>Tetracycline vs steroid</td><td>Tetracycline four rings fused in a line; steroid A–D rings stacked/angular</td><td>Counting rings only (both four)</td><td>52–55; T@35205–35450, T@36837</td></tr>
+<tr><td>Tetracycline vs doxycycline/minocycline</td><td>Tetracycline: absorption cut by food (dairy), t1/2 8.5 h. Doxy/mino: food does not affect absorption, lipophilic, longer acting (11–13 h, 14–22 h); cross-allergy from structural similarity</td><td>Assuming a switch avoids allergy</td><td>55; T@36210–36800</td></tr>
+<tr><td>Inorganic sunblocks vs organic sunscreens</td><td>ZnO/TiO2 reflect/scatter, broad spectrum, inert. Organics: chromophores absorb UV and convert to heat, photodegrade</td><td>Calling ZnO an absorber</td><td>61–62; T@38519–40160</td></tr>
+<tr><td>Avobenzone vs meradimate</td><td>Both UVA; avobenzone photodegradation t1/2 ~2 h, low skin absorption; meradimate degrades faster</td><td>Ranking meradimate as more stable</td><td>62; T@40499–41530</td></tr>
+<tr><td>Ensulizole vs octocrylene</td><td>Ensulizole UVB, water soluble (sulfonic acid), log P 1, t1/2 ~12 h, reapply after swimming. Octocrylene UVB/UVA, lipophilic, t1/2 ~90 h, stays on in water, photostabilizes oxybenzone</td><td>Swapping the water behaviour</td><td>64–65; T@42816–44800</td></tr>
+<tr><td>Oxybenzone vs bemotrizinol</td><td>Oxybenzone log P ~4, highly absorbed through skin (worry). Bemotrizinol limited skin absorption due to high MW (627.81), photostable t1/2 ~4–8 h</td><td>Thinking lipophilic always means absorbed</td><td>65–66; T@43589–45700</td></tr>
+<tr><td>High vs low MW hyaluronic acid</td><td>High MW stays on surface; low MW penetrates deeper</td><td>Reversed</td><td>69; T@47917–48100</td></tr>
 </tbody></table>
 `;
 
