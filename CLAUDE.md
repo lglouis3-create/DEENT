@@ -7,7 +7,7 @@ Built with the exam-drill-builder skill from `lglouis3-create/exam-drill-kit`, c
 ## Counts
 - Questions: 68, all Lecture 1 (Dr. Smith), ids `L1-*` in `src/q1_topics.js` (L1-062 held out; see `reviews/OPEN_QUESTIONS.md`).
 - Slide images: 0. Drawn step-through figures: 2 (`acne-cascade`, `nr-action`).
-- Live site: none. `main` does not exist yet and GitHub Pages is off (Louis approves the first push to `main` after he sees the preview).
+- Site: GitHub Pages serves `main` from the root (Louis switched it on 2026-11-05; deploy run for `319148c` completed with success at 05:38 UTC). Louis asked for the site to open straight to the drill (2026-11-05), so `main` carries the full Lecture 1 build at the root, with `/preview/` beside it.
 
 ## Rules from Louis (2026-11-05)
 - Exam 1: `marks: null` (unweighted). As the bank grows, check that both professors and every verified Exam 1 lecture are represented. The first preview is labelled "Lecture 1 only"; once the bank supports a full paper, label it practice coverage with no official per-professor split.
@@ -37,7 +37,7 @@ The engine assigns a question to a lecture by the deck its cite names, so there 
 ## Release steps
 1. `cd src && python3 build.py --preview` (writes `preview/`), then `./run_checks.sh` (writes the root `index.html`).
 2. Commit sources, `preview/` and the root build on the working branch; push the branch.
-3. The first push to `main` and turning on Pages wait for Louis.
+3. Pushing a changed build to `main` changes the live site; it needs Louis's approval of that change in the session.
 
 ## Restore after a container restart
 - Decks (gitignored, put under `src/decks/`): Drive file ids `1jBHgmqOgtILeB4ctKKz2TlPculiPxpvD` (Skin-Pathophys-Students-2026.pdf) and `1tEtUtqk9_fM7LG0lfEgK6jO6n5dsqdHH` (Skin-PCol-Students-2026.pdf, Louis's annotated copy), both (Goodnotes folder Fall 2026/DEENT/Slides/Exam 1).
