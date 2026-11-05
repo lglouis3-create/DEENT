@@ -10,3 +10,4 @@
 
 ## 2026-11-05: first `main` and Pages
 - Before `main` existed, Pages had been set to build from `claude/jolly-bell-k7ur5m`, so the branch's full build was public for a short time. On Louis's "yes, push main", pushed `main` (`319148c`): placeholder root, Lecture 1 at `/preview/`, sources and state. Louis switched Pages to `main` / root; run "pages build and deployment" for `319148c` completed with success (2026-11-05 05:38 UTC). The site itself was not opened from this session.
+- Louis did not want the placeholder ("I think it should just open to the site"); the full Lecture 1 build now serves the root of `main`.
