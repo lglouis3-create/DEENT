@@ -8,6 +8,12 @@ characters.
 
 Every update adds its bullets here in the same commit that makes the change.
 
+## 2026-11-05 (Lectures 2–4)
+- Lecture 2 (Smith 10/30): retinoids, calcipotriene, calcineurin inhibitors, PDE-4 inhibitors, keratolytics.
+- Lecture 3 (Smith 11/03): acne antibiotics, tars and anthralin, methotrexate, biologics, JAK inhibitors.
+- Lectures 3–4 (Sikazwe 11/03–11/04): structures, SAR, prodrugs, CYP3A4, hydroxy acids, retinoids, sunscreens.
+- New tell-apart and reference tables for each lecture; Exam 1 paper now draws from both professors.
+
 ## 2026-11-05 (Lecture 1 preview)
 - Lecture 1 (Dr. Smith, 10/29): skin structure, AD, psoriasis, acne, nuclear receptor binders, steroids, retinoids.
 - Step-through figures: the acne lesion cascade and direct vs indirect nuclear receptor action.

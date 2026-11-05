@@ -125,12 +125,15 @@ const COURSE = {
     {id:'L01b', deck:'Skin-PCol-Students-2026.pdf',
      label:'Lectures 1–3: Dermatitis, psoriasis and acne pharmacology (Smith, from 10/29)',
      prof:'Smith', exam:1, module:'Exam 1: Lectures 1–4'},
+    {id:'L03b', deck:'f26-DEENT-DPAW-mc.pdf',
+     label:'Lectures 3–4: Dermatitis, psoriasis and acne medicinal chemistry (Sikazwe, 11/03–11/04)',
+     prof:'Sikazwe', exam:1, module:'Exam 1: Lectures 1–4'},
   ],
 
   exams: [
     {id:'exam1', name:'Exam 1', date:'Mon 11/09, 9:00–10:30 AM', when:'2026-11-09T09:00',
      questions:50, minutes:90, sata:null,
-     blurb:'Lecture 1 only (10/29, Dr. Smith) in this preview. Exam 1 covers Lectures 1–4 (syllabus p. 6); the faculty have not announced a split by professor, so practice papers are unweighted.',
+     blurb:'Practice coverage of Lectures 1–4 (Smith 10/29, 10/30, 11/03; Sikazwe 11/03, 11/04). The faculty have not announced a split by professor, so this paper is unweighted. Not yet in the bank: Dr. Smith\'s sun-exposure recording.',
      pools:[
        {key:'smith',   name:'Dr. Smith (pharmacology)',      marks:null, filter:{exam:1, prof:'Smith'}},
        {key:'sikazwe', name:'Dr. Sikazwe (medicinal chemistry)', marks:null, filter:{exam:1, prof:'Sikazwe'}},
@@ -158,10 +161,11 @@ const COURSE = {
   scheduler: {model:'concept'},
 
   files: ['atlas.js', 'diagrams.js',
-          'q1_topics.js'],
+          'q1_topics.js', 'q2_L02.js', 'q3_L03a.js', 'q4_L03b.js', 'q5_L04.js'],
 
   tools: {citeAliases:{'skin-pathophys-students-2026.pdf':'Skin-Pathophys-Students-2026.pdf',
-                       'skin-pcol-students-2026.pdf':'Skin-PCol-Students-2026.pdf'},
+                       'skin-pcol-students-2026.pdf':'Skin-PCol-Students-2026.pdf',
+                       'f26-deent-dpaw-mc.pdf':'f26-DEENT-DPAW-mc.pdf'},
           citeLectures:{}, citeBareMap:{},
           explainTerms:[], harvestMasks:[]},
 
