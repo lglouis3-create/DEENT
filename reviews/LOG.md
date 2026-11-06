@@ -16,3 +16,9 @@
 - Louis: "i want all the lecture material all the way to today 11/04 on the site".
 - Four writer agents drafted one file each (L2 114, L3a 108, S3 103, S4 119); four separate reviewer agents checked every item against the slides, transcripts, frames, drug chart and readings. Findings: L2 12, L3a 15, S3 17, S4 16 (one wrong key, S4-076, numbering stem; fixed). All applied; held out L2-015, L3-026, S3-081. Bank 509.
 - Notes merged: tell-apart and reference tables per lecture, STYLE.md polls/room questions/exclusions, conflicts in OPEN_QUESTIONS.md. Exam 1 label changed to practice coverage of Lectures 1-4.
+
+## 2026-11-06: sun-exposure lecture and the Atlas
+- Louis sent Dr. Smith's sun-exposure slides and audio. Local transcription NOT RUN (the network refuses the speech-model hosts); transcribed with Descript in Louis's account (project 030aef20-9873-4d73-a544-7eeef2fda095). The "Slides 5-26" audio is the same lecture without the psoralen opening; only the full lecture was exported.
+- q6_L03c.js: 46 questions; separate review: 24 findings (3 defensible distractors), all applied.
+- Atlas: gen_atlas.py (RDKit) from atlas_data.json; two agents built the data from DPAW pp. 1-35 and 38-71, each drawing compared with its slide; tacrolimus, pimecrolimus and cyclosporine matched ChEMBL InChIKeys. 91 structures. Five questions now show a structure (fg/cmp).
+- Reminder set: 2026-11-07 12:00 Central for Sikazwe's slides-to-avoid list.

@@ -8,6 +8,12 @@ characters.
 
 Every update adds its bullets here in the same commit that makes the change.
 
+## 2026-11-06 (Atlas and sun exposure)
+- Atlas tab: 91 of Dr. Sikazwe's structures, drawn to one scale, with the taught feature shaded.
+- Hide names in the Atlas to quiz yourself on each structure.
+- Dr. Smith's sun-exposure lecture: UVA/UVB, SPF, MED, sunblocks vs sunscreens, psoralens.
+- Some structure questions now show the drawing before you answer.
+
 ## 2026-11-05 (Lectures 2–4)
 - Lecture 2 (Smith 10/30): retinoids, calcipotriene, calcineurin inhibitors, PDE-4 inhibitors, keratolytics.
 - Lecture 3 (Smith 11/03): acne antibiotics, tars and anthralin, methotrexate, biologics, JAK inhibitors.

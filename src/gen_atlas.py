@@ -54,13 +54,14 @@ def draw(smiles, mark=None, label='Chemical structure'):
         raise ValueError('bad SMILES: ' + smiles)
     rdDepictor.SetPreferCoordGen(True)
     rdDepictor.Compute2DCoords(mol)
-    d = rdMolDraw2D.MolDraw2DSVG(-1, -1)          # canvas sized to the molecule
+    d = rdMolDraw2D.MolDraw2DSVG(-1, -1, -1, -1, True)  # sized to the molecule; labels as <text>
     o = d.drawOptions()
     o.fixedBondLength = 24                          # every structure at one scale
     o.clearBackground = False
     o.bondLineWidth = 1.6
     o.minFontSize = 11
     o.padding = 0.06
+    o.flagCloseContactsDist = -1                    # no red close-contact boxes
     o.addStereoAnnotation = False
     pal = {-1: SENT['bond'], 6: SENT['bond'], 1: SENT['bond']}
     for z, k in ELEM.items():
@@ -95,7 +96,34 @@ def draw(smiles, mark=None, label='Chemical structure'):
         raise ValueError('unmapped colour(s) %s in drawing of %s' % (sorted(set(left)), smiles))
     svg = re.sub(r"width='(\d+)px' height='(\d+)px'", r"width='\1' height='\2'", svg, count=1)
     svg = svg.replace('<svg ', '<svg role="img" aria-label="%s" ' % label.replace('"', ''), 1)
+    svg = re.sub(r'(\d+\.\d)\d+', r'\1', svg)            # coordinates to 0.1 px
+    svg = re.sub(r"<!--.*?-->", '', svg, flags=re.S)
+    svg = re.sub(r"\s+class='[^']*'", '', svg)               # RDKit's per-element classes
+    svg = re.sub(r"style='([^']*)'", _short_style, svg)       # keep only what draws
+    svg = re.sub(r" (version|baseProfile|xml:space|xmlns:rdkit|xmlns:xlink)='[^']*'", '', svg)
     return re.sub(r'\s*\n\s*', ' ', svg).strip(), mol
+
+
+KEEP = ('fill', 'stroke', 'stroke-width', 'font-size', 'text-anchor')
+
+
+def _short_style(m):
+    """RDKit writes the same long style on every bond; keep the properties that
+    change the drawing and write them as presentation attributes."""
+    props = dict(p.split(':', 1) for p in m.group(1).split(';') if ':' in p)
+    out = []
+    for k in KEEP:
+        v = props.get(k)
+        if v is None:
+            continue
+        if k == 'stroke-width':
+            v = v.replace('px', '')
+            if v in ('0', '0.0'):
+                continue
+        out.append("%s='%s'" % (k, v))
+    if props.get('font-size'):
+        out.append("font-family='sans-serif'")
+    return ' '.join(out)
 
 
 def main():
@@ -104,7 +132,7 @@ def main():
     if png_dir:
         os.makedirs(png_dir, exist_ok=True)
         from rdkit.Chem import Draw
-    boards, fg, fgq, seen = [], {}, {}, set()
+    boards, fg, seen = [], {}, set()
     n = 0
     for b in data['boards']:
         secs = []
@@ -116,7 +144,6 @@ def main():
                     raise ValueError('duplicate key ' + k)
                 seen.add(k)
                 fg[k], mol = draw(it['smiles'], it.get('mark'), it['name'])
-                fgq[k], _ = draw(it['smiles'], None, 'Chemical structure to identify')
                 if png_dir:
                     Draw.MolToFile(mol, os.path.join(png_dir, k.replace('/', '_').replace(' ', '_') + '.png'), size=(500, 380))
                 items.append({'plain': k, 'n': it['name'], 't': it['tell'],
@@ -131,14 +158,15 @@ def main():
           'const ATLAS = (() => {\n'
           '  const BOARDS = %s;\n'
           '  const FG = %s;\n'
-          '  const FGQ = %s;\n'
+          '  const FGQ = {};\n'
+          '  for (const k in FG) FGQ[k] = FG[k].replace(/aria-label="[^"]*"/, \'aria-label="Chemical structure to identify"\').replace(/<[^>]*var\\(--wash\\)[^>]*>(<\\/[a-z]+>)?/g, \'\');\n'
           '  const ITEM = {};\n'
           '  for (const b of BOARDS) for (const s of b.sections) for (const it of s.items) ITEM[it.plain] = it;\n'
           '  return {boards: BOARDS, FG, FGQ, item: k => ITEM[k] || null};\n'
           '})();\n'
           'const FG = ATLAS.FG, FGQ = ATLAS.FGQ;\n') % (
         json.dumps(boards, ensure_ascii=False, indent=1),
-        json.dumps(fg, ensure_ascii=False), json.dumps(fgq, ensure_ascii=False))
+        json.dumps(fg, ensure_ascii=False))
     open(OUT, 'w').write(js)
     print('wrote atlas.js: %d structures on %d boards (%d KB)' % (n, len(boards), len(js) // 1024))
 

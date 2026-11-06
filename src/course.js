@@ -110,7 +110,7 @@ const COURSE = {
   short: 'PHAR 4346 DEENT',
   ns: 'phar4346-deent-drill',
   output: 'PHAR4346_DEENT_Drill.html',
-  atlas: false,                          // switched on when Dr. Sikazwe's L03b is ingested (Louis, 2026-11-05)
+  atlas: true,                           // Dr. Sikazwe's structures (gen_atlas.py from atlas_data.json; Louis, 2026-11-06)
   professors: ['Smith', 'Sikazwe', 'Patel', 'Lam'],
 
   // Lecture numbers follow the syllabus schedule (SyllabusF26-PHAR4346, pp. 9-15).
@@ -125,6 +125,9 @@ const COURSE = {
     {id:'L01b', deck:'Skin-PCol-Students-2026.pdf',
      label:'Lectures 1–3: Dermatitis, psoriasis and acne pharmacology (Smith, from 10/29)',
      prof:'Smith', exam:1, module:'Exam 1: Lectures 1–4'},
+    {id:'L03c', deck:'DEENT_Sun_Exposure_2026.pdf',
+     label:'Lecture 3: Psoralens and sun protection (Smith, recorded after 11/03)',
+     prof:'Smith', exam:1, module:'Exam 1: Lectures 1–4'},
     {id:'L03b', deck:'f26-DEENT-DPAW-mc.pdf',
      label:'Lectures 3–4: Dermatitis, psoriasis and acne medicinal chemistry (Sikazwe, 11/03–11/04)',
      prof:'Sikazwe', exam:1, module:'Exam 1: Lectures 1–4'},
@@ -133,7 +136,7 @@ const COURSE = {
   exams: [
     {id:'exam1', name:'Exam 1', date:'Mon 11/09, 9:00–10:30 AM', when:'2026-11-09T09:00',
      questions:50, minutes:90, sata:null,
-     blurb:'Practice coverage of Lectures 1–4 (Smith 10/29, 10/30, 11/03; Sikazwe 11/03, 11/04). The faculty have not announced a split by professor, so this paper is unweighted. Not yet in the bank: Dr. Smith\'s sun-exposure recording.',
+     blurb:'Practice coverage of Lectures 1–4 (Smith 10/29, 10/30, 11/03; Sikazwe 11/03, 11/04). The faculty have not announced a split by professor, so this paper is unweighted. Includes Dr. Smith\'s recorded sun-exposure and psoralen lecture.',
      pools:[
        {key:'smith',   name:'Dr. Smith (pharmacology)',      marks:null, filter:{exam:1, prof:'Smith'}},
        {key:'sikazwe', name:'Dr. Sikazwe (medicinal chemistry)', marks:null, filter:{exam:1, prof:'Sikazwe'}},
@@ -161,11 +164,12 @@ const COURSE = {
   scheduler: {model:'concept'},
 
   files: ['atlas.js', 'diagrams.js',
-          'q1_topics.js', 'q2_L02.js', 'q3_L03a.js', 'q4_L03b.js', 'q5_L04.js'],
+          'q1_topics.js', 'q2_L02.js', 'q3_L03a.js', 'q4_L03b.js', 'q5_L04.js', 'q6_L03c.js'],
 
   tools: {citeAliases:{'skin-pathophys-students-2026.pdf':'Skin-Pathophys-Students-2026.pdf',
                        'skin-pcol-students-2026.pdf':'Skin-PCol-Students-2026.pdf',
-                       'f26-deent-dpaw-mc.pdf':'f26-DEENT-DPAW-mc.pdf'},
+                       'f26-deent-dpaw-mc.pdf':'f26-DEENT-DPAW-mc.pdf',
+                       'deent_sun_exposure_2026.pdf':'DEENT_Sun_Exposure_2026.pdf'},
           citeLectures:{}, citeBareMap:{},
           explainTerms:[], harvestMasks:[]},
 

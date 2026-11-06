@@ -359,7 +359,7 @@ QUESTIONS.push(
 
 {id:'S4-025', skill:'chem', prof:'Sikazwe', tier:'new', topic:'s4-psret', sub:'taz', concept:'retinoid-cooh',
  tags:['structure'], source:'transcript',
- stem:'Which functional group do the active retinoids share at one end of the molecule?',
+ fg:'tretinoin', stem:'Which functional group do the active retinoids share at one end of the molecule?',
  options:[
   {t:'A carboxylic acid', correct:true, why:'"they have this common functional group at the end, this carboxylic acid. So that\'s an important common feature" (T@7222–7330).'},
   {t:'A primary alcohol', correct:false, why:'Retinol (vitamin A1), the parent compound, ends in an alcohol (slide 49); the active drugs end in the acid.'},
@@ -393,7 +393,7 @@ QUESTIONS.push(
 /* ---- Methotrexate (slides 30–31) ----------------------------------------- */
 {id:'S4-028', skill:'chem', prof:'Sikazwe', tier:'new', topic:'s4-mtx', sub:'mech', concept:'mtx-pteridine',
  tags:['classification'], source:'both',
- stem:'Methotrexate is classified chemically as which of the following?',
+ fg:'methotrexate', stem:'Methotrexate is classified chemically as which of the following?',
  options:[
   {t:'A pteridine', correct:true, why:'Slide 30 "A pteridine"; "chemically we classify it as a pteridine based on this group here" (T@8238–8330).'},
   {t:'A lactone', correct:false, why:'The lactones are the limus macrolides (slides 28, 32).'},
@@ -516,7 +516,7 @@ QUESTIONS.push(
 
 {id:'S4-039', skill:'chem', prof:'Sikazwe', tier:'new', topic:'s4-sys', sub:'csa', concept:'csa-lactam', dupOf:'S4-021',
  tags:['room'], source:'transcript',
- stem:'Because it is a cyclic peptide, cyclosporine can be classified chemically as what?',
+ fg:'cyclosporine', stem:'Because it is a cyclic peptide, cyclosporine can be classified chemically as what?',
  options:[
   {t:'A lactam', correct:true, why:'"So, here, the cyclic peptide, this can be described then as a what? And a lactam, right? cyclic lactam too." (T@12150–12254).'},
   {t:'A lactone', correct:false, why:'A lactone is a cyclic ester, as in the limus drugs (slide 32).'},
@@ -1103,7 +1103,7 @@ QUESTIONS.push(
 
 {id:'S4-091', skill:'tell', prof:'Sikazwe', tier:'new', topic:'s4-abx', sub:'tet', concept:'tet-vs-steroid',
  tags:['structure','take-home'], source:'both',
- stem:'Both tetracyclines and steroids have four rings. How do the ring arrangements differ?',
+ cmp:['tetracycline','hydrocortisone'], stem:'Both tetracyclines and steroids have four rings. How do the ring arrangements differ?',
  options:[
   {t:'Tetracycline rings run in a line; steroid rings are stacked', correct:true, why:'"be able to identify them 1234. One plan[e] ... linear ... in steroids, they\'re stacked ... 4 rings stuck. This one is just ... one linear molecule" (T@35205–35450).'},
   {t:'Tetracyclines have five rings; steroids have four', correct:false, why:'He counted four rings in tetracyclines, "1234" (T@35205).'},

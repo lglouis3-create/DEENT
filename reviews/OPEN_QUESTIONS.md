@@ -79,3 +79,15 @@ Other mismatches noted, no item affected: deck slide 23 cites "FOYE Chapt. 28, p
 6. Drug chart vs deck (chart is a guide): chart chemical class "Peptides" for pimecrolimus and tacrolimus (and ruxolitinib/upadacitinib) vs deck "Macrolide or lactone" (slide 28) and Polleve-3 "Lactone" (slide 32). Keyed to the deck. Chart page 5 class column is offset one row (cyclosporine "Furanocoumarin", apremilast "Azole"); keyed to the deck (cyclic peptide/lactam slide 33; isoindoline slide 34).
 7. Vitamin D wavelength and enzymes: he said only "light is going to be involved" (T@4371); UVB (VitD L5), CYP2R1 (VitD L65–67), CYP27B1 (VitD L13–14, L67–68) and the pre-D3 isomerization (VitD L61–62) come from the assigned reading, which he made testable for this step. S4-014 carries a note that the band comes from the reading. The slide gives the last enzyme as "1-α-hydroxylase"; the reading calls CYP27B1 "the 1-hydroxylase". S4-011 keys "1-alpha-hydroxylase" (slide wording); no item uses a CYP name as the key except S4-009 (CYP2R1, reading only; the slide gives no enzyme for that arrow).
 8. Deck typo: slide 55 "Zn3+" in the chelation list (zinc is Zn2+). No item asks it.
+
+
+## Atlas: slide drawings that differ from the real drug (drawn as the real drug, noted on the tile)
+- Padimate O (DPAW slide 63) drawn with NH2; the drug has N(CH3)2.
+- Octisalate (DPAW slide 64) drawn as heptan-3-yl salicylate; the drug is 2-ethylhexyl salicylate.
+- Pimecrolimus (DPAW slide 28) Cl drawn hashed (trans to OCH3); slide 32 and the drug have them cis.
+- Hydrocortisone and clobetasol propionate on DPAW slide 25 carry drawing errors at C20/C21; slides 23-24 used.
+- "Benzoyl radical" on DPAW slide 47 is drawn as the benzoyloxy radical; drawn as the slide shows.
+Question for Louis: keep the real-drug drawings (current), or draw exactly what the slide shows?
+
+## Sun exposure
+- On 10/29 Dr. Smith said "I won't get to this section on sun protection and sun relief until Tuesday after your exam" (T 583, about the drug chart); the syllabus puts sun exposure in Lecture 3 (Exam 1). The bank tags it Exam 1. Confirm if she says otherwise.

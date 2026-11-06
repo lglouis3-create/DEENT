@@ -872,7 +872,7 @@ QUESTIONS.push(
 
 {id:'S3-070', skill:'chem', prof:'Sikazwe', tier:'new', topic:'s3-gc', sub:'struct', concept:'ring-d',
  tags:['chem'], source:'both',
- stem:'Which ring of the steroid skeleton is five-membered?',
+ fg:'hydrocortisone', stem:'Which ring of the steroid skeleton is five-membered?',
  options:[
   {t:'Ring D', correct:true, why:'Slide 20 rings A, B, C, D; (T 992–995) the last ring is five-membered.'},
   {t:'Ring A', correct:false, why:'Ring A is six-membered and carries C1–C5 and C10 (slide 20).'},
