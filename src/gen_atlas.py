@@ -10,7 +10,8 @@ atlas_data.json holds the boards the tab shows:
     {"boards": [{"id", "title", "intro", "note"?,
                  "sections": [{"label", "items": [
                      {"key", "name", "smiles", "slide", "tell", "eg"?,
-                      "mark"?: "<SMARTS of the feature to shade>"}]}]}]}
+                      "mark"?: "<SMARTS of the feature to shade>",
+                      "deeper"?: {"text", "sources": [{"cite", "url"}]}}]}]}]}
 
 `key` is the name questions use (`fg:` and option texts); `name` is what the
 tile prints; `tell` says what to look at and carries its source (slide or
@@ -19,6 +20,9 @@ against. Drawings come from the SMILES through RDKit and are written as SVG
 whose bonds follow the page's text colour and whose heteroatoms use the page's
 --at-* colours, so they read in light and dark mode. A `mark` SMARTS shades
 the matched atoms and bonds with --wash, the Atlas's highlighter.
+
+`deeper` is optional enrichment from a published source (never examinable, never
+in a question file); the tile shows it collapsed as "Beyond the lecture".
 
 Every structure is checked against the deck by eye before it ships (see the
 course's reviews/LOG.md); the script only draws what the data says.
@@ -173,7 +177,14 @@ def main():
                 meta = {'priority': pr, 'reason': it.get('priority_reason', ''),
                         'verification': it.get('verification', ''), 'chembl': it.get('chembl_id', ''),
                         'pubchem': it.get('pubchem_cid', ''), 'checked': it.get('verification_date', ''),
-                        'exam': it.get('exam', 'Exam 1')}
+                        'exam': it.get('exam', 'Exam 1'),
+                        'psrc': it.get('priority_source', ''), 'vnote': it.get('verification_note', ''),
+                        'note': it.get('note', '')}
+                if it.get('deeper'):
+                    dp = it['deeper']
+                    if not dp.get('text') or not dp.get('sources') or not all(x.get('cite') and x.get('url') for x in dp['sources']):
+                        raise ValueError('deeper of %s needs text and sources with cite and url' % k)
+                    meta['deeper'] = {'text': dp['text'], 'sources': [{'cite': x['cite'], 'url': x['url']} for x in dp['sources']]}
                 if lec:
                     d = it['discrepancy']
                     meta['discrepancy'] = {kk: d[kk] for kk in ('lecture_shows', 'verified_has', 'where', 'emphasized', 'changes_concept') if kk in d}

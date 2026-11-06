@@ -13,7 +13,14 @@
  *   4. no question shows (fg) or compares (cmp) a reference-only or unverified
  *      structure;
  *   5. the drawing a question shows before the answer has no shading and a
- *      neutral label, so it does not name or point to the answer.
+ *      neutral label, so it does not name or point to the answer;
+ *   6. the tile layout (atlas_ui.js): the citation parser moves every inline
+ *      citation of every tile into "Sources and verification" and loses none;
+ *      every "deeper" entry has text and at least one source with a URL, and
+ *      no deeper text appears in a question file; "Hide names" hides the parts
+ *      that name a structure (page line, also-in-lecture, deeper, sources,
+ *      compare, board and section headings) and gives the drawing a neutral
+ *      label.
  * Exit 0 PASS, 1 FAIL.
  */
 const fs = require('fs'), path = require('path'), vm = require('vm');
@@ -101,6 +108,48 @@ ok(`${used} question structure reference(s) checked against the priority classes
 const leaks = Object.entries(A.FGQ).filter(([k, svg]) => /var\(--wash\)/.test(svg) || !/aria-label="Chemical structure to identify"/.test(svg));
 leaks.length ? fail(`pre-answer drawing(s) with shading or a naming label: ${leaks.map(l => l[0]).join(', ')}`)
              : ok(`all ${Object.keys(A.FGQ).length} pre-answer drawings are unshaded and unnamed`);
+
+// 6. tile layout
+const U = vm.runInContext('ATLAS_UI', sb);
+const CITE_RE = /\(([^()]*)\)/g;
+let nCites = 0; const unparsed = [];
+for (const b of A.boards) for (const s of b.sections) for (const it of s.items) {
+  for (const [part, txt] of [['main', it.t], ['also', it.e]]) {
+    if (!txt) continue;
+    const r = U.strip(txt);
+    if (!r.clean) { unparsed.push(it.plain + ' (' + part + ')'); continue; }
+    const expect = [...txt.matchAll(CITE_RE)].filter(m => U.isCite(m[1])).length + (txt.match(/(^|[.;]\s+)Slide \d+: /g) || []).length;
+    if (r.cites.length !== expect) fail(`${it.plain} (${part}): ${expect} citation(s) in the text, ${r.cites.length} moved to Sources`);
+    for (const c of r.cites) if (!txt.includes(c.replace(/^slide /, 'Slide ')) && !txt.includes(c)) fail(`${it.plain}: citation "${c}" not found in the source text`);
+    if (/\(\s*\)|\s[.,;]/.test(r.text)) fail(`${it.plain} (${part}): stray punctuation after moving citations: ${r.text}`);
+    nCites += r.cites.length;
+  }
+}
+unparsed.length ? fail(`citation parser left ${unparsed.length} part(s) as written: ${unparsed.join(', ')}`)
+                : ok(`all ${items.length} tiles parsed; ${nCites} inline citation(s) moved to "Sources and verification", none lost`);
+const deep = items.filter(it => it.deeper);
+const badDeep = deep.filter(it => !it.deeper.text || !Array.isArray(it.deeper.sources) || !it.deeper.sources.length ||
+  it.deeper.sources.some(x => !x.cite || !/^https:\/\/\S+$/.test(x.url || '')));
+badDeep.length ? fail(`deeper entr(ies) without text or a source with an https URL: ${badDeep.map(i => i.key).join(', ')}`)
+               : ok(`${deep.length} "deeper" entr(ies), each with text and a cited source with a URL`);
+const qText = code.replace(/\s+/g, ' ');
+const inQ = [];
+for (const it of deep) for (const sent of U.sentences(it.deeper.text)) {
+  const probe = sent.replace(/\s+/g, ' ').slice(0, 60);
+  if (probe.length >= 30 && qText.includes(probe)) inQ.push(it.key + ': ' + probe);
+}
+for (const it of deep) for (const x of it.deeper.sources) { const doi = (x.url.match(/10\.\d{4,}\/\S+/) || [])[0]; if (doi && qText.includes(doi)) inQ.push(it.key + ': ' + doi); }
+inQ.length ? fail(`deeper (not tested) text found in question files: ${inQ.join('; ')}`)
+           : ok('no deeper text or its source appears in any question file');
+const ui = fs.readFileSync(path.join(SRC, 'atlas_ui.js'), 'utf8');
+const mustHide = ['.atpg', '.atlbl', '.atalso', '.atdeep', '.atsrcs', '.atcmpbtn', '.atcmp', '.bintro', '.atsub', '.atnote', '.athead-name', '.atexcl'];
+const hideRule = (ui.match(/([^{}]*)\{display:none\}/g) || []).filter(r => /namesoff/.test(r)).join(' ');
+const notHidden = mustHide.filter(c => !new RegExp('#v-atlas\\.namesoff \\' + c + '(?![\\w-])').test(hideRule));
+notHidden.length ? fail(`Hide names does not hide: ${notHidden.join(', ')}`)
+                 : ok('Hide names hides page line, labels, also-in-lecture, deeper, sources, compare and headings');
+/aria-label', off && !shown \? ANON/.test(ui) && /Chemical structure to identify/.test(ui)
+  ? ok('Hide names gives each unrevealed drawing the neutral label "Chemical structure to identify"')
+  : fail('Hide names does not neutralize the drawings\' aria-labels');
 
 if (bad) { console.log(`FAIL: atlas_check.js: ${bad} problem(s)`); process.exit(1); }
 console.log('PASS: atlas_check.js: Atlas data, comparisons and question use are consistent');

@@ -262,7 +262,16 @@
        },
        "pubchem_checked": true,
        "pubchem_cid": 5754,
-       "verification_date": "2026-11-06"
+       "verification_date": "2026-11-06",
+       "deeper": {
+        "text": "Two isozymes of 11β-HSD run this interconversion in opposite directions. 11β-HSD1, mainly a reductase in intact cells, regenerates active cortisol from inert cortisone; it is widely expressed, including in liver and adipose tissue. 11β-HSD2 is a high-affinity dehydrogenase that inactivates cortisol to cortisone; in the distal nephron of the kidney it ensures that only aldosterone acts at the mineralocorticoid receptor. Loss or inhibition of 11β-HSD2 lets cortisol activate renal mineralocorticoid receptors, causing apparent mineralocorticoid excess and hypertension.",
+        "sources": [
+         {
+          "cite": "Chapman K, Holmes M, Seckl J. 11β-hydroxysteroid dehydrogenases: intracellular gate-keepers of tissue glucocorticoid action. Physiol Rev. 2013;93(3):1139-1206. doi:10.1152/physrev.00020.2012. PMID: 23899562",
+          "url": "https://doi.org/10.1152/physrev.00020.2012"
+         }
+        ]
+       }
       },
       {
        "key": "cortisone",
@@ -281,7 +290,16 @@
        "exam": "Exam 1",
        "pubchem_checked": true,
        "pubchem_cid": 222786,
-       "verification_date": "2026-11-06"
+       "verification_date": "2026-11-06",
+       "deeper": {
+        "text": "Cortisone is the inert partner of cortisol. 11β-HSD2, a high-affinity dehydrogenase (for example in the distal nephron of the kidney), forms it from cortisol; 11β-HSD1, mainly a reductase in intact cells (for example in liver and adipose tissue), converts it back to active cortisol.",
+        "sources": [
+         {
+          "cite": "Chapman K, Holmes M, Seckl J. 11β-hydroxysteroid dehydrogenases: intracellular gate-keepers of tissue glucocorticoid action. Physiol Rev. 2013;93(3):1139-1206. doi:10.1152/physrev.00020.2012. PMID: 23899562",
+          "url": "https://doi.org/10.1152/physrev.00020.2012"
+         }
+        ]
+       }
       },
       {
        "key": "5beta-dihydrocortisol",

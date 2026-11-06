@@ -8,6 +8,16 @@ characters.
 
 Every update adds its bullets here in the same commit that makes the change.
 
+## 2026-11-06 (Atlas layout)
+- Each Atlas tile now reads in order: core learning, also in the lecture, then collapsed extras.
+- Slide and transcript citations moved out of the tile text into a collapsed Sources and verification part.
+- Hydrocortisone and cortisone: optional "Deeper understanding" on the two 11β-HSD enzymes, not tested.
+- The structure count follows the search and the reference-only filter; an empty search says why.
+- A one-line legend explains Core, Reference only and Needs verification.
+- Hide names: headings, labels and drawing descriptions no longer give the answer away.
+- Hide names: reveal a structure from the keyboard (Tab, then Enter or Space).
+- Long structure names no longer make the Atlas wider than a phone screen.
+
 ## 2026-11-06 (PubChem check)
 - Every Atlas structure was checked against PubChem; each tile names its PubChem record and status.
 - Compare structures names the PubChem record of the lecture drawing where one exists.

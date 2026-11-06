@@ -25,7 +25,10 @@ const ATLAS = (() => {
        "chembl": "CHEMBL484785",
        "pubchem": 44591583,
        "checked": "2026-11-06",
-       "exam": "Exam 1"
+       "exam": "Exam 1",
+       "psrc": "p.7; T 660-662, 665-668, 683-697, 712-718",
+       "vnote": "Atlas = PubChem CID 44591583 = ChEMBL CHEMBL484785 (full InChIKey).",
+       "note": ""
       }
      },
      {
@@ -41,7 +44,10 @@ const ATLAS = (() => {
        "chembl": "",
        "pubchem": 135391074,
        "checked": "2026-11-06",
-       "exam": "Exam 1"
+       "exam": "Exam 1",
+       "psrc": "p.7, p.9; T 697-704, 723-728",
+       "vnote": "Teaching structure (not forced onto a drug record). PubChem holds this exact structure as CID 135391074.",
+       "note": ""
       }
      },
      {
@@ -57,7 +63,10 @@ const ATLAS = (() => {
        "chembl": "",
        "pubchem": 133080796,
        "checked": "2026-11-06",
-       "exam": "Exam 1"
+       "exam": "Exam 1",
+       "psrc": "p.7, p.9; T 705-711, 767-777",
+       "vnote": "Teaching structure (not forced onto a drug record). PubChem holds this exact structure as CID 133080796.",
+       "note": ""
       }
      }
     ]
@@ -78,7 +87,10 @@ const ATLAS = (() => {
        "chembl": "CHEMBL1789941",
        "pubchem": 25126798,
        "checked": "2026-11-06",
-       "exam": "Exam 1"
+       "exam": "Exam 1",
+       "psrc": "p.8; T 730-757",
+       "vnote": "Atlas = PubChem CID 25126798 = ChEMBL CHEMBL1789941 (full InChIKey).",
+       "note": ""
       }
      },
      {
@@ -94,7 +106,10 @@ const ATLAS = (() => {
        "chembl": "CHEMBL3622821",
        "pubchem": 58557659,
        "checked": "2026-11-06",
-       "exam": "Exam 1"
+       "exam": "Exam 1",
+       "psrc": "p.8; T 730-757",
+       "vnote": "Atlas = PubChem CID 58557659 = ChEMBL CHEMBL3622821 (full InChIKey).",
+       "note": ""
       }
      }
     ]
@@ -123,7 +138,10 @@ const ATLAS = (() => {
        "chembl": "CHEMBL1885178",
        "pubchem": 10913,
        "checked": "2026-11-06",
-       "exam": "Exam 1"
+       "exam": "Exam 1",
+       "psrc": "p.15; T 882-889",
+       "vnote": "Atlas = PubChem CID 10913 = ChEMBL CHEMBL1885178 (full InChIKey).",
+       "note": ""
       }
      }
     ]
@@ -144,7 +162,10 @@ const ATLAS = (() => {
        "chembl": "CHEMBL46469",
        "pubchem": 2202,
        "checked": "2026-11-06",
-       "exam": "Exam 1"
+       "exam": "Exam 1",
+       "psrc": "p.17, p.19; T 918-953, 977-980",
+       "vnote": "Atlas = PubChem CID 2202 = ChEMBL CHEMBL46469 (full InChIKey).",
+       "note": ""
       }
      },
      {
@@ -160,7 +181,10 @@ const ATLAS = (() => {
        "chembl": "CHEMBL416",
        "pubchem": 4114,
        "checked": "2026-11-06",
-       "exam": "Exam 1"
+       "exam": "Exam 1",
+       "psrc": "p.18; T 958-976",
+       "vnote": "Atlas = PubChem CID 4114 = ChEMBL CHEMBL416 (full InChIKey).",
+       "note": ""
       }
      }
     ]
@@ -189,7 +213,10 @@ const ATLAS = (() => {
        "chembl": "",
        "pubchem": 10202,
        "checked": "2026-11-06",
-       "exam": "Exam 1"
+       "exam": "Exam 1",
+       "psrc": "p.20-22; T 987-1017, 1084-1099",
+       "vnote": "Teaching structure (not forced onto a drug record). PubChem holds this exact structure as CID 10202.",
+       "note": ""
       }
      },
      {
@@ -205,7 +232,10 @@ const ATLAS = (() => {
        "chembl": "CHEMBL1473",
        "pubchem": 444036,
        "checked": "2026-11-06",
-       "exam": "Exam 1"
+       "exam": "Exam 1",
+       "psrc": "p.20, p.24; T 1020-1073",
+       "vnote": "Teaching structure (not forced onto a drug record). PubChem holds this exact structure as CID 444036.",
+       "note": "The SAR drawing on slide 20 uses X for the halogens; fluticasone propionate from slide 24 is used here as a molecule that has all four features."
       }
      }
     ]
@@ -227,6 +257,18 @@ const ATLAS = (() => {
        "pubchem": 5754,
        "checked": "2026-11-06",
        "exam": "Exam 1",
+       "psrc": "p.24-26; T 1140-1145, 1181-1196; T@790",
+       "vnote": "Atlas = PubChem CID 5754 = ChEMBL CHEMBL389621 (full InChIKey).",
+       "note": "Slide 25 draws hydrocortisone with HO on C-20 in place of the C-20 ketone; slides 23, 24 and 26 draw the C-20 ketone, which is used here.",
+       "deeper": {
+        "text": "Two isozymes of 11β-HSD run this interconversion in opposite directions. 11β-HSD1, mainly a reductase in intact cells, regenerates active cortisol from inert cortisone; it is widely expressed, including in liver and adipose tissue. 11β-HSD2 is a high-affinity dehydrogenase that inactivates cortisol to cortisone; in the distal nephron of the kidney it ensures that only aldosterone acts at the mineralocorticoid receptor. Loss or inhibition of 11β-HSD2 lets cortisol activate renal mineralocorticoid receptors, causing apparent mineralocorticoid excess and hypertension.",
+        "sources": [
+         {
+          "cite": "Chapman K, Holmes M, Seckl J. 11β-hydroxysteroid dehydrogenases: intracellular gate-keepers of tissue glucocorticoid action. Physiol Rev. 2013;93(3):1139-1206. doi:10.1152/physrev.00020.2012. PMID: 23899562",
+          "url": "https://doi.org/10.1152/physrev.00020.2012"
+         }
+        ]
+       },
        "discrepancy": {
         "lecture_shows": "On DPAW p. 25, C20 is drawn as CH–OH (an alcohol).",
         "verified_has": "A C20 ketone (C=O), as his slides on DPAW p. 24 and p. 26 draw it.",
@@ -249,7 +291,19 @@ const ATLAS = (() => {
        "chembl": "CHEMBL1499",
        "pubchem": 222786,
        "checked": "2026-11-06",
-       "exam": "Exam 1"
+       "exam": "Exam 1",
+       "psrc": "p.26; T 1190-1196; T@722-@925",
+       "vnote": "Atlas = PubChem CID 222786 = ChEMBL CHEMBL1499 (full InChIKey).",
+       "note": "",
+       "deeper": {
+        "text": "Cortisone is the inert partner of cortisol. 11β-HSD2, a high-affinity dehydrogenase (for example in the distal nephron of the kidney), forms it from cortisol; 11β-HSD1, mainly a reductase in intact cells (for example in liver and adipose tissue), converts it back to active cortisol.",
+        "sources": [
+         {
+          "cite": "Chapman K, Holmes M, Seckl J. 11β-hydroxysteroid dehydrogenases: intracellular gate-keepers of tissue glucocorticoid action. Physiol Rev. 2013;93(3):1139-1206. doi:10.1152/physrev.00020.2012. PMID: 23899562",
+          "url": "https://doi.org/10.1152/physrev.00020.2012"
+         }
+        ]
+       }
       }
      },
      {
@@ -265,7 +319,10 @@ const ATLAS = (() => {
        "chembl": "",
        "pubchem": 164838,
        "checked": "2026-11-06",
-       "exam": "Exam 1"
+       "exam": "Exam 1",
+       "psrc": "p.26; T 1196 (recording ends); T@722-@985",
+       "vnote": "Atlas = PubChem CID 164838 (full InChIKey). ChEMBL CHEMBL1079111 is another stereoisomer (atom index 7 of the Atlas SMILES: R here, S in ChEMBL), not this molecule; ChEMBL records with this InChIKey: none. No ChEMBL id is given.",
+       "note": ""
       }
      },
      {
@@ -281,7 +338,10 @@ const ATLAS = (() => {
        "chembl": "CHEMBL1908047",
        "pubchem": 5864,
        "checked": "2026-11-06",
-       "exam": "Exam 1"
+       "exam": "Exam 1",
+       "psrc": "p.26; T 1196; T@722-@985",
+       "vnote": "Atlas = PubChem CID 5864 = ChEMBL CHEMBL1908047 (full InChIKey).",
+       "note": ""
       }
      }
     ]
@@ -302,7 +362,10 @@ const ATLAS = (() => {
        "chembl": "CHEMBL1200384",
        "pubchem": 21800,
        "checked": "2026-11-06",
-       "exam": "Exam 1"
+       "exam": "Exam 1",
+       "psrc": "p.24-25; T 1144-1154",
+       "vnote": "Atlas = PubChem CID 21800 = ChEMBL CHEMBL1200384 (full InChIKey).",
+       "note": ""
       }
      },
      {
@@ -319,6 +382,9 @@ const ATLAS = (() => {
        "pubchem": 32798,
        "checked": "2026-11-06",
        "exam": "Exam 1",
+       "psrc": "p.25; T 1175-1179 (derivatives not memorized: T 1152-1154)",
+       "vnote": "Atlas = PubChem CID 32798 = ChEMBL CHEMBL1159650 (full InChIKey).",
+       "note": "Slide 25 draws clobetasol propionate with OH on C-21; slide 24 draws the 21-Cl of the marketed drug, which is used here.",
        "discrepancy": {
         "lecture_shows": "On DPAW p. 25, C21 carries an OH (that molecule is betamethasone 17-propionate).",
         "verified_has": "Cl on C21, as his derivatives slide (DPAW p. 24) draws it.",
@@ -341,7 +407,10 @@ const ATLAS = (() => {
        "chembl": "CHEMBL1201109",
        "pubchem": 5311066,
        "checked": "2026-11-06",
-       "exam": "Exam 1"
+       "exam": "Exam 1",
+       "psrc": "p.24; T 1151-1154",
+       "vnote": "Atlas = PubChem CID 5311066 = ChEMBL CHEMBL1201109 (full InChIKey).",
+       "note": ""
       }
      },
      {
@@ -357,7 +426,10 @@ const ATLAS = (() => {
        "chembl": "CHEMBL1473",
        "pubchem": 444036,
        "checked": "2026-11-06",
-       "exam": "Exam 1"
+       "exam": "Exam 1",
+       "psrc": "p.24; T 1151-1154",
+       "vnote": "Atlas = PubChem CID 444036 = ChEMBL CHEMBL1473 (full InChIKey).",
+       "note": ""
       }
      },
      {
@@ -373,7 +445,10 @@ const ATLAS = (() => {
        "chembl": "CHEMBL1504",
        "pubchem": 6436,
        "checked": "2026-11-06",
-       "exam": "Exam 1"
+       "exam": "Exam 1",
+       "psrc": "p.24; T 1151-1154",
+       "vnote": "Atlas = PubChem CID 6436 = ChEMBL CHEMBL1504 (full InChIKey).",
+       "note": ""
       }
      }
     ]
@@ -402,7 +477,10 @@ const ATLAS = (() => {
        "chembl": "CHEMBL1797131",
        "pubchem": 439423,
        "checked": "2026-11-06",
-       "exam": "Exam 1"
+       "exam": "Exam 1",
+       "psrc": "p.27; T@985-@1200, @2989-@3660, @4065-@4160, @4371",
+       "vnote": "Atlas = PubChem CID 439423 = ChEMBL CHEMBL1797131 (full InChIKey).",
+       "note": ""
       }
      },
      {
@@ -418,7 +496,10 @@ const ATLAS = (() => {
        "chembl": "CHEMBL1042",
        "pubchem": 5280795,
        "checked": "2026-11-06",
-       "exam": "Exam 1"
+       "exam": "Exam 1",
+       "psrc": "p.27; T@985-@1200, @2989-@3660, @4065-@4160, @4371",
+       "vnote": "Atlas = PubChem CID 5280795 = ChEMBL CHEMBL1042 (full InChIKey).",
+       "note": ""
       }
      },
      {
@@ -434,7 +515,10 @@ const ATLAS = (() => {
        "chembl": "CHEMBL1040",
        "pubchem": 5283731,
        "checked": "2026-11-06",
-       "exam": "Exam 1"
+       "exam": "Exam 1",
+       "psrc": "p.27; T@985-@1200, @2989-@3660, @4065-@4160, @4371",
+       "vnote": "Atlas = PubChem CID 5283731 = ChEMBL CHEMBL1040 (full InChIKey).",
+       "note": ""
       }
      },
      {
@@ -450,7 +534,10 @@ const ATLAS = (() => {
        "chembl": "CHEMBL846",
        "pubchem": 5280453,
        "checked": "2026-11-06",
-       "exam": "Exam 1"
+       "exam": "Exam 1",
+       "psrc": "p.27; T@985-@1200, @2989-@3660, @4065-@4160, @4371",
+       "vnote": "Atlas = PubChem CID 5280453 = ChEMBL CHEMBL846 (full InChIKey).",
+       "note": ""
       }
      }
     ]
@@ -471,7 +558,10 @@ const ATLAS = (() => {
        "chembl": "CHEMBL1200666",
        "pubchem": 5288783,
        "checked": "2026-11-06",
-       "exam": "Exam 1"
+       "exam": "Exam 1",
+       "psrc": "p.27; T@1505-@2830 (hypercalcemia @2758)",
+       "vnote": "Atlas = PubChem CID 5288783 = ChEMBL CHEMBL1200666 (full InChIKey).",
+       "note": "The deck labels it \"Calciprotriene\" (slide 27); the drug name is calcipotriene."
       }
      }
     ]
@@ -501,6 +591,9 @@ const ATLAS = (() => {
        "pubchem": 6509979,
        "checked": "2026-11-06",
        "exam": "Exam 1",
+       "psrc": "p.28, p.32; T@4649-@4734, @4931-@5300, @6022",
+       "vnote": "Atlas = PubChem CID 6509979 = ChEMBL CHEMBL1200686 (full InChIKey).",
+       "note": "Checked against the Polleve-3 drawing (slide 32), which draws Cl and OCH3 cis as in pimecrolimus. Slide 28 draws the Cl hashed like tacrolimus's OH (trans to OCH3); that differs from the marketed drug, so the slide 32 configuration is used.",
        "discrepancy": {
         "lecture_shows": "On DPAW p. 28 the Cl is drawn on the opposite face to the OCH₃ (trans), the same way as tacrolimus’s OH beside it.",
         "verified_has": "Cl on the same face as the OCH₃ (cis), as his Polleve-3 slide (DPAW p. 32) draws it.",
@@ -523,7 +616,10 @@ const ATLAS = (() => {
        "chembl": "CHEMBL269732",
        "pubchem": 445643,
        "checked": "2026-11-06",
-       "exam": "Exam 1"
+       "exam": "Exam 1",
+       "psrc": "p.28; T@4649-@4734, @5414-@5700, @6022",
+       "vnote": "Atlas = PubChem CID 445643 = ChEMBL CHEMBL269732 (full InChIKey).",
+       "note": ""
       }
      }
     ]
@@ -552,7 +648,10 @@ const ATLAS = (() => {
        "chembl": "CHEMBL34259",
        "pubchem": 4112,
        "checked": "2026-11-06",
-       "exam": "Exam 1"
+       "exam": "Exam 1",
+       "psrc": "p.30-31; T@8269, @8732, @9220, @10109-@10851",
+       "vnote": "Same molecule; ChEMBL CHEMBL34259 defines 1 stereo element(s); the Atlas, like the slide and PubChem CID 4112, defines 0.",
+       "note": "The slides draw no stereochemistry at the glutamate carbon, so none is given here."
       }
      },
      {
@@ -568,7 +667,10 @@ const ATLAS = (() => {
        "chembl": "CHEMBL1622",
        "pubchem": 3405,
        "checked": "2026-11-06",
-       "exam": "Exam 1"
+       "exam": "Exam 1",
+       "psrc": "p.30; T@8545-@8779",
+       "vnote": "Same molecule; ChEMBL CHEMBL1622 defines 1 stereo element(s); the Atlas, like the slide and PubChem CID 3405, defines 0. The Atlas draws another tautomer than PubChem (as the slide does); InChI treats the two as one molecule, so the keys agree.",
+       "note": "Drawn as on the slides, with OH at C-4 of the pteridine."
       }
      },
      {
@@ -584,7 +686,10 @@ const ATLAS = (() => {
        "chembl": "CHEMBL2021342",
        "pubchem": 1129,
        "checked": "2026-11-06",
-       "exam": "Exam 1"
+       "exam": "Exam 1",
+       "psrc": "p.30; T@8874-@8960",
+       "vnote": "Same molecule; ChEMBL CHEMBL2021342 defines 1 stereo element(s); the Atlas, like the slide and PubChem CID 1129, defines 0. The Atlas draws another tautomer than PubChem (as the slide does); InChI treats the two as one molecule, so the keys agree.",
+       "note": ""
       }
      }
     ]
@@ -605,7 +710,10 @@ const ATLAS = (() => {
        "chembl": "CHEMBL160",
        "pubchem": 5284373,
        "checked": "2026-11-06",
-       "exam": "Exam 1"
+       "exam": "Exam 1",
+       "psrc": "p.33; T@12000-@12254, @13190-@13550",
+       "vnote": "Atlas = PubChem CID 5284373 = ChEMBL CHEMBL160 (full InChIKey).",
+       "note": ""
       }
      },
      {
@@ -621,7 +729,10 @@ const ATLAS = (() => {
        "chembl": "CHEMBL514800",
        "pubchem": 11561674,
        "checked": "2026-11-06",
-       "exam": "Exam 1"
+       "exam": "Exam 1",
+       "psrc": "p.34; T@13908-@14319",
+       "vnote": "Atlas = PubChem CID 11561674 = ChEMBL CHEMBL514800 (full InChIKey).",
+       "note": ""
       }
      },
      {
@@ -637,7 +748,10 @@ const ATLAS = (() => {
        "chembl": "CHEMBL221959",
        "pubchem": 9926791,
        "checked": "2026-11-06",
-       "exam": "Exam 1"
+       "exam": "Exam 1",
+       "psrc": "p.35; T@14505-@15120",
+       "vnote": "Atlas = PubChem CID 9926791 = ChEMBL CHEMBL221959 (full InChIKey).",
+       "note": ""
       }
      }
     ]
@@ -666,7 +780,10 @@ const ATLAS = (() => {
        "chembl": "CHEMBL1200686",
        "pubchem": 6509979,
        "checked": "2026-11-06",
-       "exam": "Exam 1"
+       "exam": "Exam 1",
+       "psrc": "p.32; T@6292, @11280-@11720",
+       "vnote": "Atlas = PubChem CID 6509979 = ChEMBL CHEMBL1200686 (full InChIKey).",
+       "note": ""
       }
      },
      {
@@ -682,7 +799,10 @@ const ATLAS = (() => {
        "chembl": "CHEMBL160",
        "pubchem": 5284373,
        "checked": "2026-11-06",
-       "exam": "Exam 1"
+       "exam": "Exam 1",
+       "psrc": "p.33; T@12150-@12254",
+       "vnote": "Atlas = PubChem CID 5284373 = ChEMBL CHEMBL160 (full InChIKey).",
+       "note": ""
       }
      }
     ]
@@ -711,7 +831,10 @@ const ATLAS = (() => {
        "chembl": "CHEMBL252557",
        "pubchem": 757,
        "checked": "2026-11-06",
-       "exam": "Exam 1"
+       "exam": "Exam 1",
+       "psrc": "p.43; T@20199-@21110 (@20426)",
+       "vnote": "Atlas = PubChem CID 757 = ChEMBL CHEMBL252557 (full InChIKey).",
+       "note": ""
       }
      },
      {
@@ -727,7 +850,10 @@ const ATLAS = (() => {
        "chembl": "CHEMBL146755",
        "pubchem": 971,
        "checked": "2026-11-06",
-       "exam": "Exam 1"
+       "exam": "Exam 1",
+       "psrc": "p.43; T@20934-@21110",
+       "vnote": "Atlas = PubChem CID 971 = ChEMBL CHEMBL146755 (full InChIKey).",
+       "note": "The slide draws the product without a name; the course outline names it oxalic acid. He said only \"diacid\"."
       }
      },
      {
@@ -743,7 +869,10 @@ const ATLAS = (() => {
        "chembl": "CHEMBL424",
        "pubchem": 338,
        "checked": "2026-11-06",
-       "exam": "Exam 1"
+       "exam": "Exam 1",
+       "psrc": "p.43; T@21537-@22520 (@22189)",
+       "vnote": "Atlas = PubChem CID 338 = ChEMBL CHEMBL424 (full InChIKey).",
+       "note": ""
       }
      }
     ]
@@ -764,7 +893,10 @@ const ATLAS = (() => {
        "chembl": "CHEMBL1236315",
        "pubchem": 875,
        "checked": "2026-11-06",
-       "exam": "Exam 1"
+       "exam": "Exam 1",
+       "psrc": "p.45, p.68; T@23305-@23880, @46324-@47060",
+       "vnote": "Same molecule; ChEMBL CHEMBL1236315 defines 2 stereo element(s); the Atlas, like the slide and PubChem CID 875, defines 0.",
+       "note": ""
       }
      },
      {
@@ -780,7 +912,10 @@ const ATLAS = (() => {
        "chembl": "CHEMBL108778",
        "pubchem": 6590,
        "checked": "2026-11-06",
-       "exam": "Exam 1"
+       "exam": "Exam 1",
+       "psrc": "p.45; T@23305-@23880",
+       "vnote": "Atlas = PubChem CID 6590 = ChEMBL CHEMBL108778 (full InChIKey).",
+       "note": "Name supplied for the unlabelled poll drawing."
       }
      },
      {
@@ -796,7 +931,10 @@ const ATLAS = (() => {
        "chembl": "",
        "pubchem": 85106660,
        "checked": "2026-11-06",
-       "exam": "Exam 1"
+       "exam": "Exam 1",
+       "psrc": "p.45; T@23305-@23880",
+       "vnote": "Teaching structure (not forced onto a drug record). PubChem holds this exact structure as CID 85106660.",
+       "note": "Unnamed on the slide; 1-[carboxy(hydroxy)methyl]cyclopropane-1-carboxylic acid."
       }
      },
      {
@@ -812,7 +950,10 @@ const ATLAS = (() => {
        "chembl": "",
        "pubchem": 271816,
        "checked": "2026-11-06",
-       "exam": "Exam 1"
+       "exam": "Exam 1",
+       "psrc": "p.45; T@23305-@23880",
+       "vnote": "Atlas = PubChem CID 271816 (full InChIKey).",
+       "note": "Unnamed on the slide. He did not speak the final count (T@23865); the definition he gave yields three (tartaric, glycolic, the cyclopropyl diacid)."
       }
      }
     ]
@@ -833,7 +974,10 @@ const ATLAS = (() => {
        "chembl": "CHEMBL1200370",
        "pubchem": 7187,
        "checked": "2026-11-06",
-       "exam": "Exam 1"
+       "exam": "Exam 1",
+       "psrc": "p.47; T@25608-@26600",
+       "vnote": "Atlas = PubChem CID 7187 = ChEMBL CHEMBL1200370 (full InChIKey).",
+       "note": ""
       }
      },
      {
@@ -849,7 +993,10 @@ const ATLAS = (() => {
        "chembl": "CHEMBL541",
        "pubchem": 243,
        "checked": "2026-11-06",
-       "exam": "Exam 1"
+       "exam": "Exam 1",
+       "psrc": "p.47; T@25875-@26100",
+       "vnote": "Atlas = PubChem CID 243 = ChEMBL CHEMBL541 (full InChIKey).",
+       "note": ""
       }
      },
      {
@@ -865,7 +1012,10 @@ const ATLAS = (() => {
        "chembl": "",
        "pubchem": 5359438,
        "checked": "2026-11-06",
-       "exam": "Exam 1"
+       "exam": "Exam 1",
+       "psrc": "p.47; T@26100-@26300",
+       "vnote": "Teaching structure (not forced onto a drug record). PubChem holds this exact structure as CID 5359438.",
+       "note": "The slide labels it \"Benzoyl radical\" but draws the benzoyloxy radical PhC(=O)O·, which is what this SMILES gives."
       }
      }
     ]
@@ -894,7 +1044,10 @@ const ATLAS = (() => {
        "chembl": "CHEMBL986",
        "pubchem": 445354,
        "checked": "2026-11-06",
-       "exam": "Exam 1"
+       "exam": "Exam 1",
+       "psrc": "p.48-49; T@7544, @26805-@27050",
+       "vnote": "Atlas = PubChem CID 445354 = ChEMBL CHEMBL986 (full InChIKey).",
+       "note": ""
       }
      }
     ]
@@ -915,7 +1068,10 @@ const ATLAS = (() => {
        "chembl": "CHEMBL38",
        "pubchem": 444795,
        "checked": "2026-11-06",
-       "exam": "Exam 1"
+       "exam": "Exam 1",
+       "psrc": "p.49; T@27705-@28680 (@28268)",
+       "vnote": "Atlas = PubChem CID 444795 = ChEMBL CHEMBL38 (full InChIKey).",
+       "note": ""
       }
      },
      {
@@ -931,7 +1087,10 @@ const ATLAS = (() => {
        "chembl": "CHEMBL547",
        "pubchem": 5282379,
        "checked": "2026-11-06",
-       "exam": "Exam 1"
+       "exam": "Exam 1",
+       "psrc": "p.49, p.29; T@28100-@28680",
+       "vnote": "Atlas = PubChem CID 5282379 = ChEMBL CHEMBL547 (full InChIKey).",
+       "note": ""
       }
      }
     ]
@@ -952,7 +1111,10 @@ const ATLAS = (() => {
        "chembl": "CHEMBL464",
        "pubchem": 5282375,
        "checked": "2026-11-06",
-       "exam": "Exam 1"
+       "exam": "Exam 1",
+       "psrc": "p.50; T@28898-@29700",
+       "vnote": "Atlas = PubChem CID 5282375 = ChEMBL CHEMBL464 (full InChIKey).",
+       "note": ""
       }
      },
      {
@@ -968,7 +1130,10 @@ const ATLAS = (() => {
        "chembl": "CHEMBL1131",
        "pubchem": 5284513,
        "checked": "2026-11-06",
-       "exam": "Exam 1"
+       "exam": "Exam 1",
+       "psrc": "p.50, p.29; T@28898-@29700, @7222-@7393",
+       "vnote": "Atlas = PubChem CID 5284513 = ChEMBL CHEMBL1131 (full InChIKey).",
+       "note": ""
       }
      }
     ]
@@ -989,7 +1154,10 @@ const ATLAS = (() => {
        "chembl": "CHEMBL1265",
        "pubchem": 60164,
        "checked": "2026-11-06",
-       "exam": "Exam 1"
+       "exam": "Exam 1",
+       "psrc": "p.51; T@30014-@30300 (@30232)",
+       "vnote": "Atlas = PubChem CID 60164 = ChEMBL CHEMBL1265 (full InChIKey).",
+       "note": ""
       }
      },
      {
@@ -1005,7 +1173,10 @@ const ATLAS = (() => {
        "chembl": "CHEMBL3707313",
        "pubchem": 11518241,
        "checked": "2026-11-06",
-       "exam": "Exam 1"
+       "exam": "Exam 1",
+       "psrc": "p.51; T@30014-@30300",
+       "vnote": "Atlas = PubChem CID 11518241 = ChEMBL CHEMBL3707313 (full InChIKey).",
+       "note": ""
       }
      },
      {
@@ -1021,7 +1192,10 @@ const ATLAS = (() => {
        "chembl": "CHEMBL1657",
        "pubchem": 5381,
        "checked": "2026-11-06",
-       "exam": "Exam 1"
+       "exam": "Exam 1",
+       "psrc": "p.29, p.51; T@6810-@7120 (@7108), @30193-@30300",
+       "vnote": "Atlas = PubChem CID 5381 = ChEMBL CHEMBL1657 (full InChIKey).",
+       "note": "The structure label on slide 51 reads \"Tazarac\"; the bullet and slide 70 read Tazorac."
       }
      },
      {
@@ -1037,7 +1211,10 @@ const ATLAS = (() => {
        "chembl": "CHEMBL1201375",
        "pubchem": 147525,
        "checked": "2026-11-06",
-       "exam": "Exam 1"
+       "exam": "Exam 1",
+       "psrc": "p.29, p.51; T@7222, @30193-@30300",
+       "vnote": "Atlas = PubChem CID 147525 = ChEMBL CHEMBL1201375 (full InChIKey).",
+       "note": ""
       }
      }
     ]
@@ -1066,7 +1243,10 @@ const ATLAS = (() => {
        "chembl": "CHEMBL691",
        "pubchem": 5991,
        "checked": "2026-11-06",
-       "exam": "Exam 1"
+       "exam": "Exam 1",
+       "psrc": "p.52; T@30892-@31300 (@31168)",
+       "vnote": "Atlas = PubChem CID 5991 = ChEMBL CHEMBL691 (full InChIKey).",
+       "note": ""
       }
      },
      {
@@ -1082,7 +1262,10 @@ const ATLAS = (() => {
        "chembl": "CHEMBL1200934",
        "pubchem": 6540478,
        "checked": "2026-11-06",
-       "exam": "Exam 1"
+       "exam": "Exam 1",
+       "psrc": "p.52; T@30892-@31300 (@31168)",
+       "vnote": "Atlas = PubChem CID 6540478 = ChEMBL CHEMBL1200934 (full InChIKey).",
+       "note": "Oxime geometry left unspecified; the slide drawing does not mark it."
       }
      },
      {
@@ -1098,7 +1281,10 @@ const ATLAS = (() => {
        "chembl": "CHEMBL1509",
        "pubchem": 68873,
        "checked": "2026-11-06",
-       "exam": "Exam 1"
+       "exam": "Exam 1",
+       "psrc": "p.52; T@30892-@31300 (@31168)",
+       "vnote": "Atlas = PubChem CID 68873 = ChEMBL CHEMBL1509 (full InChIKey).",
+       "note": ""
       }
      },
      {
@@ -1114,7 +1300,10 @@ const ATLAS = (() => {
        "chembl": "CHEMBL1393",
        "pubchem": 5833,
        "checked": "2026-11-06",
-       "exam": "Exam 1"
+       "exam": "Exam 1",
+       "psrc": "p.53; T@32075, @32997-@33105",
+       "vnote": "Atlas = PubChem CID 5833 = ChEMBL CHEMBL1393 (full InChIKey).",
+       "note": ""
       }
      }
     ]
@@ -1135,7 +1324,10 @@ const ATLAS = (() => {
        "chembl": "CHEMBL157101",
        "pubchem": 3823,
        "checked": "2026-11-06",
-       "exam": "Exam 1"
+       "exam": "Exam 1",
+       "psrc": "p.53; T@32300-@32640 (@32490)",
+       "vnote": "Atlas = PubChem CID 3823 = ChEMBL CHEMBL157101 (full InChIKey).",
+       "note": "No stereochemistry is drawn on the slide, so none is given here. Slide 53 lists ketoconazole under \"Non-steroidal AA\"; by mechanism he grouped it with spironolactone (T@32075)."
       }
      },
      {
@@ -1151,7 +1343,10 @@ const ATLAS = (() => {
        "chembl": "CHEMBL806",
        "pubchem": 3397,
        "checked": "2026-11-06",
-       "exam": "Exam 1"
+       "exam": "Exam 1",
+       "psrc": "p.53; T@32723-@33105",
+       "vnote": "Atlas = PubChem CID 3397 = ChEMBL CHEMBL806 (full InChIKey).",
+       "note": ""
       }
      }
     ]
@@ -1180,7 +1375,10 @@ const ATLAS = (() => {
        "chembl": "CHEMBL1238",
        "pubchem": 2266,
        "checked": "2026-11-06",
-       "exam": "Exam 1"
+       "exam": "Exam 1",
+       "psrc": "p.54; T@34051-@34300 (@34211)",
+       "vnote": "Atlas = PubChem CID 2266 = ChEMBL CHEMBL1238 (full InChIKey).",
+       "note": ""
       }
      },
      {
@@ -1196,7 +1394,10 @@ const ATLAS = (() => {
        "chembl": "CHEMBL1753",
        "pubchem": 446598,
        "checked": "2026-11-06",
-       "exam": "Exam 1"
+       "exam": "Exam 1",
+       "psrc": "p.54; T@34300-@34700 (@34534)",
+       "vnote": "Atlas = PubChem CID 446598 = ChEMBL CHEMBL1753 (full InChIKey).",
+       "note": ""
       }
      },
      {
@@ -1213,6 +1414,9 @@ const ATLAS = (() => {
        "pubchem": 12560,
        "checked": "2026-11-06",
        "exam": "Exam 1",
+       "psrc": "p.54; T@34300-@34700 (@34534)",
+       "vnote": "Atlas = PubChem CID 12560 = ChEMBL CHEMBL532 (full InChIKey).",
+       "note": "",
        "discrepancy": {
         "lecture_shows": "The amino sugar (desosamine) is drawn as a cyclohexane, with no ring oxygen.",
         "verified_has": "Desosamine is a pyranose sugar: its six-membered ring contains one oxygen.",
@@ -1240,7 +1444,10 @@ const ATLAS = (() => {
        "chembl": "CHEMBL1440",
        "pubchem": 54675776,
        "checked": "2026-11-06",
-       "exam": "Exam 1"
+       "exam": "Exam 1",
+       "psrc": "p.55; T@35205-@36940 (@36772, @36877)",
+       "vnote": "PubChem CID 54675776 stores another tautomer of the same molecule (equal after tautomer canonicalization); ChEMBL CHEMBL1440 = Atlas, full InChIKey.",
+       "note": ""
       }
      },
      {
@@ -1256,7 +1463,10 @@ const ATLAS = (() => {
        "chembl": "CHEMBL1433",
        "pubchem": 54671203,
        "checked": "2026-11-06",
-       "exam": "Exam 1"
+       "exam": "Exam 1",
+       "psrc": "p.55; T@35205-@36940 (@36772, @36877)",
+       "vnote": "PubChem CID 54671203 stores another tautomer of the same molecule (equal after tautomer canonicalization); ChEMBL CHEMBL1433 = Atlas, full InChIKey.",
+       "note": ""
       }
      },
      {
@@ -1272,7 +1482,10 @@ const ATLAS = (() => {
        "chembl": "CHEMBL1434",
        "pubchem": 54675783,
        "checked": "2026-11-06",
-       "exam": "Exam 1"
+       "exam": "Exam 1",
+       "psrc": "p.55; T@35205-@36940 (@36772, @36877)",
+       "vnote": "PubChem CID 54675783 stores another tautomer of the same molecule (equal after tautomer canonicalization); ChEMBL CHEMBL1434 = Atlas, full InChIKey.",
+       "note": ""
       }
      }
     ]
@@ -1301,7 +1514,10 @@ const ATLAS = (() => {
        "chembl": "",
        "pubchem": 3007857,
        "checked": "2026-11-06",
-       "exam": "Exam 1"
+       "exam": "Exam 1",
+       "psrc": "p.61; T@38519-@39400 (@38748)",
+       "vnote": "Teaching structure (not forced onto a drug record). PubChem holds this exact structure as CID 3007857.",
+       "note": "Shown as formula ions only; slide 61 has no structure drawing."
       }
      },
      {
@@ -1317,7 +1533,10 @@ const ATLAS = (() => {
        "chembl": "",
        "pubchem": "",
        "checked": "2026-11-06",
-       "exam": "Exam 1"
+       "exam": "Exam 1",
+       "psrc": "p.61; T@38519-@39400",
+       "vnote": "Teaching structure (not forced onto a drug record). PubChem holds this exact structure as CID 162651. PubChem CID 162651 holds these ions but is titled \"Titanium oxide (Ti3O)\"; the titanium dioxide record is CID 26042 (O=[Ti]=O). No CID is shown on the tile.",
+       "note": "Shown as formula ions only; slide 61 has no structure drawing."
       }
      }
     ]
@@ -1338,7 +1557,10 @@ const ATLAS = (() => {
        "chembl": "CHEMBL1200522",
        "pubchem": 51040,
        "checked": "2026-11-06",
-       "exam": "Exam 1"
+       "exam": "Exam 1",
+       "psrc": "p.62; T@40499-@41140",
+       "vnote": "Atlas = PubChem CID 51040 = ChEMBL CHEMBL1200522 (full InChIKey).",
+       "note": ""
       }
      },
      {
@@ -1354,7 +1576,10 @@ const ATLAS = (() => {
        "chembl": "CHEMBL1597075",
        "pubchem": 8633,
        "checked": "2026-11-06",
-       "exam": "Exam 1"
+       "exam": "Exam 1",
+       "psrc": "p.62; T@41158-@41530",
+       "vnote": "Atlas = PubChem CID 8633 = ChEMBL CHEMBL1597075 (full InChIKey).",
+       "note": "No stereochemistry is drawn on the slide, so none is given here."
       }
      }
     ]
@@ -1375,7 +1600,10 @@ const ATLAS = (() => {
        "chembl": "CHEMBL3183184",
        "pubchem": 5355130,
        "checked": "2026-11-06",
-       "exam": "Exam 1"
+       "exam": "Exam 1",
+       "psrc": "p.63; T@41549-@41760",
+       "vnote": "Same molecule; ChEMBL CHEMBL3183184 differs from the Atlas and PubChem CID 5355130 in the stereo layer only.",
+       "note": ""
       }
      },
      {
@@ -1391,7 +1619,10 @@ const ATLAS = (() => {
        "chembl": "CHEMBL542",
        "pubchem": 978,
        "checked": "2026-11-06",
-       "exam": "Exam 1"
+       "exam": "Exam 1",
+       "psrc": "p.63; T@41904-@42247",
+       "vnote": "Atlas = PubChem CID 978 = ChEMBL CHEMBL542 (full InChIKey).",
+       "note": ""
       }
      },
      {
@@ -1408,6 +1639,9 @@ const ATLAS = (() => {
        "pubchem": 30541,
        "checked": "2026-11-06",
        "exam": "Exam 1",
+       "psrc": "p.63; T@41904-@42247",
+       "vnote": "Atlas = PubChem CID 30541 = ChEMBL CHEMBL1323699 (full InChIKey).",
+       "note": "Slide 63 draws the ring substituent as NH2 (2-ethylhexyl 4-aminobenzoate); padimate O is the N,N-dimethylamino ester, which is what this SMILES gives. He did not discuss the amine substitution. Check before shipping.",
        "discrepancy": {
         "lecture_shows": "NH₂ on the ring (that molecule is 2-ethylhexyl 4-aminobenzoate).",
         "verified_has": "N(CH₃)₂ on the ring: 2-ethylhexyl 4-(dimethylamino)benzoate.",
@@ -1435,7 +1669,10 @@ const ATLAS = (() => {
        "chembl": "CHEMBL1377575",
        "pubchem": 8362,
        "checked": "2026-11-06",
-       "exam": "Exam 1"
+       "exam": "Exam 1",
+       "psrc": "p.64; T@42247-@42800 (@42551)",
+       "vnote": "Atlas = PubChem CID 8362 = ChEMBL CHEMBL1377575 (full InChIKey).",
+       "note": ""
       }
      },
      {
@@ -1452,6 +1689,9 @@ const ATLAS = (() => {
        "pubchem": 8364,
        "checked": "2026-11-06",
        "exam": "Exam 1",
+       "psrc": "p.64; T@42247-@42800 (@42551)",
+       "vnote": "Atlas = PubChem CID 8364 = ChEMBL CHEMBL1329203 (full InChIKey).",
+       "note": "Slide 64 draws the alcohol part with O on the branch carbon (heptan-3-yl salicylate, C14H20O3); octisalate is 2-ethylhexyl salicylate (C15H22O3), which is what this SMILES gives. He taught only the salicylate part. Check before shipping.",
        "discrepancy": {
         "lecture_shows": "The ester oxygen is bonded directly to the branch carbon (a 7-carbon heptan-3-yl chain).",
         "verified_has": "2-ethylhexyl ester: one CH₂ sits between the ester oxygen and the branch (8 carbons).",
@@ -1474,7 +1714,10 @@ const ATLAS = (() => {
        "chembl": "CHEMBL1987518",
        "pubchem": 33919,
        "checked": "2026-11-06",
-       "exam": "Exam 1"
+       "exam": "Exam 1",
+       "psrc": "p.64; T@42816-@43400",
+       "vnote": "Atlas = PubChem CID 33919 = ChEMBL CHEMBL1987518 (full InChIKey). The Atlas draws another tautomer than PubChem (as the slide does); InChI treats the two as one molecule, so the keys agree.",
+       "note": ""
       }
      }
     ]
@@ -1495,7 +1738,10 @@ const ATLAS = (() => {
        "chembl": "CHEMBL1625",
        "pubchem": 4632,
        "checked": "2026-11-06",
-       "exam": "Exam 1"
+       "exam": "Exam 1",
+       "psrc": "p.65; T@43589-@43700",
+       "vnote": "Atlas = PubChem CID 4632 = ChEMBL CHEMBL1625 (full InChIKey).",
+       "note": ""
       }
      },
      {
@@ -1511,7 +1757,10 @@ const ATLAS = (() => {
        "chembl": "CHEMBL1201147",
        "pubchem": 22571,
        "checked": "2026-11-06",
-       "exam": "Exam 1"
+       "exam": "Exam 1",
+       "psrc": "p.65; T@43958-@45140",
+       "vnote": "Atlas = PubChem CID 22571 = ChEMBL CHEMBL1201147 (full InChIKey).",
+       "note": ""
       }
      },
      {
@@ -1527,7 +1776,10 @@ const ATLAS = (() => {
        "chembl": "CHEMBL2104956",
        "pubchem": 135487856,
        "checked": "2026-11-06",
-       "exam": "Exam 1"
+       "exam": "Exam 1",
+       "psrc": "p.66; T@45151-@45700 (@45175)",
+       "vnote": "Atlas = PubChem CID 135487856 = ChEMBL CHEMBL2104956 (full InChIKey).",
+       "note": ""
       }
      }
     ]
@@ -1556,7 +1808,10 @@ const ATLAS = (() => {
        "chembl": "CHEMBL537",
        "pubchem": 785,
        "checked": "2026-11-06",
-       "exam": "Exam 1"
+       "exam": "Exam 1",
+       "psrc": "p.67; T@45749-@46160 (@45980)",
+       "vnote": "Atlas = PubChem CID 785 = ChEMBL CHEMBL537 (full InChIKey).",
+       "note": ""
       }
      },
      {
@@ -1572,7 +1827,10 @@ const ATLAS = (() => {
        "chembl": "CHEMBL8320",
        "pubchem": 4650,
        "checked": "2026-11-06",
-       "exam": "Exam 1"
+       "exam": "Exam 1",
+       "psrc": "p.67; T@45882-@46160 (@46109)",
+       "vnote": "Atlas = PubChem CID 4650 = ChEMBL CHEMBL8320 (full InChIKey).",
+       "note": ""
       }
      }
     ]
@@ -1593,7 +1851,10 @@ const ATLAS = (() => {
        "chembl": "CHEMBL1200559",
        "pubchem": 612,
        "checked": "2026-11-06",
-       "exam": "Exam 1"
+       "exam": "Exam 1",
+       "psrc": "p.68; T@46324-@47060 (@46839)",
+       "vnote": "Atlas = PubChem CID 612 = ChEMBL CHEMBL1200559 (full InChIKey).",
+       "note": ""
       }
      },
      {
@@ -1609,7 +1870,10 @@ const ATLAS = (() => {
        "chembl": "CHEMBL1455497",
        "pubchem": 525,
        "checked": "2026-11-06",
-       "exam": "Exam 1"
+       "exam": "Exam 1",
+       "psrc": "p.68; T@46324-@47060",
+       "vnote": "Atlas = PubChem CID 525 = ChEMBL CHEMBL1455497 (full InChIKey).",
+       "note": ""
       }
      }
     ]
@@ -1630,7 +1894,10 @@ const ATLAS = (() => {
        "chembl": "",
        "pubchem": 5288907,
        "checked": "2026-11-06",
-       "exam": "Exam 1"
+       "exam": "Exam 1",
+       "psrc": "p.69; T@47069-@48370 (@48263)",
+       "vnote": "Teaching structure (not forced onto a drug record). PubChem holds this exact structure as CID 5288907.",
+       "note": "Slide 69 draws the unit in brackets with open bonds at GlcA C4-O and GlcNAc C1; the generator cannot draw open bonds, so the ends are capped as OH (GlcA 4-OH, GlcNAc 1-OH, beta). Linkage GlcA beta(1-3) GlcNAc, both D."
       }
      }
     ]
@@ -1659,7 +1926,10 @@ const ATLAS = (() => {
        "chembl": "CHEMBL1200559",
        "pubchem": 612,
        "checked": "2026-11-06",
-       "exam": "Exam 1"
+       "exam": "Exam 1",
+       "psrc": "p.44; T@22858-@23200; @20426",
+       "vnote": "Teaching structure (not forced onto a drug record). PubChem holds this exact structure as CID 612.",
+       "note": ""
       }
      },
      {
@@ -1675,7 +1945,10 @@ const ATLAS = (() => {
        "chembl": "CHEMBL424",
        "pubchem": 338,
        "checked": "2026-11-06",
-       "exam": "Exam 1"
+       "exam": "Exam 1",
+       "psrc": "p.43; T@22100-@22230 (@22189)",
+       "vnote": "Teaching structure (not forced onto a drug record). PubChem holds this exact structure as CID 338.",
+       "note": ""
       }
      }
     ]
@@ -1696,7 +1969,10 @@ const ATLAS = (() => {
        "chembl": "CHEMBL1440",
        "pubchem": 54675776,
        "checked": "2026-11-06",
-       "exam": "Exam 1"
+       "exam": "Exam 1",
+       "psrc": "p.55; T@35205-@35450, @36877",
+       "vnote": "PubChem CID 54675776 stores another tautomer of the same molecule (equal after tautomer canonicalization); ChEMBL CHEMBL1440 = Atlas, full InChIKey.",
+       "note": ""
       }
      },
      {
@@ -1712,7 +1988,10 @@ const ATLAS = (() => {
        "chembl": "CHEMBL691",
        "pubchem": 5991,
        "checked": "2026-11-06",
-       "exam": "Exam 1"
+       "exam": "Exam 1",
+       "psrc": "p.52, p.20; T 628-630; T@31168, @35231",
+       "vnote": "Atlas = PubChem CID 5991 = ChEMBL CHEMBL691 (full InChIKey).",
+       "note": ""
       }
      }
     ]
@@ -1733,7 +2012,10 @@ const ATLAS = (() => {
        "chembl": "CHEMBL464",
        "pubchem": 5282375,
        "checked": "2026-11-06",
-       "exam": "Exam 1"
+       "exam": "Exam 1",
+       "psrc": "p.50; T@28898-@29700, @7108",
+       "vnote": "Atlas = PubChem CID 5282375 = ChEMBL CHEMBL464 (full InChIKey).",
+       "note": ""
       }
      },
      {
@@ -1749,7 +2031,10 @@ const ATLAS = (() => {
        "chembl": "CHEMBL1265",
        "pubchem": 60164,
        "checked": "2026-11-06",
-       "exam": "Exam 1"
+       "exam": "Exam 1",
+       "psrc": "p.51; T@30232, @7222",
+       "vnote": "Atlas = PubChem CID 60164 = ChEMBL CHEMBL1265 (full InChIKey).",
+       "note": ""
       }
      }
     ]
@@ -1770,7 +2055,10 @@ const ATLAS = (() => {
        "chembl": "CHEMBL1200370",
        "pubchem": 7187,
        "checked": "2026-11-06",
-       "exam": "Exam 1"
+       "exam": "Exam 1",
+       "psrc": "p.47; T@25608-@26100",
+       "vnote": "Atlas = PubChem CID 7187 = ChEMBL CHEMBL1200370 (full InChIKey).",
+       "note": ""
       }
      },
      {
@@ -1786,7 +2074,10 @@ const ATLAS = (() => {
        "chembl": "CHEMBL532",
        "pubchem": 12560,
        "checked": "2026-11-06",
-       "exam": "Exam 1"
+       "exam": "Exam 1",
+       "psrc": "p.54; T@34560-@34700; T@11280-@11870",
+       "vnote": "Atlas = PubChem CID 12560 = ChEMBL CHEMBL532 (full InChIKey).",
+       "note": ""
       }
      }
     ]
@@ -1820,18 +2111,52 @@ const FG = ATLAS.FG, FGQ = ATLAS.FGQ;
 /* ==========================================================================
    Atlas study controls for PHAR 4346 DEENT (appended to atlas.js by
    gen_atlas.py). The core's Atlas view (views.js renderAtlas) draws the
-   tiles; this adds, without changing the core:
-     - a learning-priority badge on each tile (core / reference only /
-       needs verification) and a toggle that hides reference-only
-       structures (hidden by default, for focused exam review);
-     - a "Key features" toggle that hides or shows the shaded features;
-     - the deck page and exam on each tile;
-     - "Compare structures" on tiles whose lecture drawing differs from the
-       verified drug structure: both drawings side by side, the differing
-       atoms shaded, and what differs.
-   In "Hide names" mode the source line, the compare button and the
-   discrepancy text are hidden, since they name the structure.
+   tiles; this rearranges each tile, without changing the core, into:
+     1. the priority badge (core / reference only / needs verification) and
+        the deck page and exam, as one short line;
+     2. "Core learning": the tile's main text (what is shaded and why), with
+        its inline citations moved to part 5;
+     3. "Also in the lecture": the other taught facts, as a short list;
+     4. "Compare structures" where a lecture drawing differs from the drug;
+     5. "Deeper understanding" (collapsed, only where a published source is
+        cited; beyond the lecture, not tested);
+     6. "Sources and verification" (collapsed): slide and transcript
+        citations, priority reason, PubChem and ChEMBL records, verification.
+   It also adds the reference-only filter (hidden by default), the key-feature
+   toggle, a one-line legend, counts that follow search and filter, an empty
+   search message, and, in "Hide names" mode, keyboard reveal and neutral
+   labels so that no heading, label or hidden text names a structure.
    ========================================================================== */
+/* Citation parser, kept outside the page code so atlas_check.js can test it.
+   A parenthesis is a citation when every ";"-separated part is a slide
+   reference ("slide 7", "slides 48-49") or a transcript reference
+   ("T 683–689, 665–668", "T@20426, T@20690", "11/04 T@2989–@3430, @4330–@4410").
+   A leading "Slide 54: " is a citation too. Any other parenthesis stays. */
+const ATLAS_UI = (() => {
+  const RNG = '@?\\d+(?:[–-]@?\\d+)?';
+  const PART = new RegExp('^(?:slides? \\d+(?:[–-]\\d+)?|(?:\\d{2}/\\d{2} )?T ?' + RNG +
+    '(?:, ?(?:T ?)?' + RNG + ')*)$');
+  const isCite = inner => inner.split(';').every(p => PART.test(p.trim()));
+  function strip(text) {
+    const cites = [];
+    let out = String(text || '').replace(/\s*\(([^()]*)\)/g, (m, inner) => {
+      if (isCite(inner)) { cites.push(inner.trim()); return ''; }
+      return m;
+    });
+    // a leading "Slide 55: " starts its own list item (marked \u0002)
+    out = out.replace(/(^|[.;]\s+)Slide (\d+): (.)/g, (m, pre, n, ch) => { cites.push('slide ' + n); return pre + '\u0002' + ch.toUpperCase(); });
+    out = out.replace(/\s+([.,;:])/g, '$1').replace(/\s{2,}/g, ' ').trim();
+    const marked = out; out = out.replace(/\u0002/g, '');
+    // a citation left in the text means the parser did not understand it
+    const clean = !/\((?:[^()]*?)\b(?:slides? \d|T ?@?\d)/.test(out) && !/\bT ?@\d/.test(out) && !/\bT \d+[–-]\d+/.test(out);
+    return {text: out, marked, cites, clean};
+  }
+  // sentences, without regex lookbehind (older Safari)
+  const sentences = text => String(text).replace(/\.\s+(?=[A-Z0-9"“\u0002])/g, '.\u0001').replace(/\u0002/g, '\u0001')
+    .split('\u0001').map(s => s.trim()).filter(Boolean);
+  return {strip, sentences, isCite};
+})();
+
 (() => {
   if (typeof document === 'undefined') return;
   const store = {
@@ -1843,26 +2168,59 @@ const FG = ATLAS.FG, FGQ = ATLAS.FGQ;
   const TITLE = {
     core: 'Taught or emphasized in lecture: study this structure.',
     reference: 'Shown in lecture to illustrate a concept; the whole structure need not be memorized. The concept stays examinable.',
-    verify: 'Not yet confirmed against the lecture or a chemistry database; kept out of questions.',
+    verify: 'On a slide but not confirmed as taught in the recordings; kept out of questions.',
   };
+  const STATUS = {'exact': 'PubChem and ChEMBL agree', 'exact-pubchem': 'PubChem match (no ChEMBL record)',
+    'stereo-unspecified': 'same molecule; stereo left open in one source', 'tautomer': 'same molecule; PubChem stores another tautomer',
+    'teaching-structure': 'teaching structure'};
+  const ANON = 'Chemical structure to identify';
 
   const css = `
-.atpri{display:inline-block;font-size:10.5px;letter-spacing:.04em;text-transform:uppercase;border-radius:4px;padding:1px 6px;margin-right:6px;border:1px solid var(--line);color:var(--text-dim)}
+.attile{min-width:0}
+.atname{overflow-wrap:anywhere}
+.atmeta{display:flex;flex-wrap:wrap;align-items:center;gap:4px 6px;margin:0}
+.atpri{display:inline-block;font-size:10.5px;letter-spacing:.04em;text-transform:uppercase;border-radius:4px;padding:1px 6px;border:1px solid var(--line);color:var(--text-dim)}
 .atpri.p-core{border-color:var(--accent);color:var(--accent)}
 .atpri.p-verify{border-style:dashed}
-.atsrc{font-size:11px;color:var(--text-dim);margin:0}
+.atpg{font-size:11px;color:var(--text-dim)}
+.atlbl{font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--text-dim);margin:0 0 -4px}
+.atalso ul{margin:0;padding-left:16px;font-size:12px;line-height:1.45;color:var(--text-dim)}
+.atalso li{margin:0 0 2px}
+.atdeep,.atsrcs{font-size:12px;line-height:1.45;color:var(--text-dim);border-top:1px solid var(--line);padding-top:5px}
+.atdeep summary,.atsrcs summary{cursor:pointer;font-size:11.5px;color:var(--text)}
+.atdeep summary small{color:var(--text-dim);font-size:10.5px;letter-spacing:.04em;text-transform:uppercase}
+.atdeep p,.atsrcs p{margin:5px 0 0}
+.atsrcs dl{margin:5px 0 0}
+.atsrcs dt{font-weight:600;color:var(--text);margin-top:4px}
+.atsrcs dd{margin:0;overflow-wrap:anywhere}
+.atsrcs ul{margin:0;padding-left:16px}
+.atdeep a,.atsrcs a{color:var(--accent);overflow-wrap:anywhere}
+.atlegend{font-size:12px;color:var(--text-dim);margin:-8px 0 14px;line-height:1.5}
+.atlegend b{font-weight:600;color:var(--text)}
+.atempty{font-size:13.5px;color:var(--text);margin:8px 0 18px}
+.atempty[hidden]{display:none}
+#v-atlas .at-none{display:none!important}
+.athead-anon{display:none}
 #v-atlas.ref-off .attile.is-ref{display:none}
 #v-atlas.shade-off .atfig svg [fill="var(--wash)"],#v-atlas.shade-off .atfig svg [stroke="var(--wash)"]{display:none}
-#v-atlas.namesoff .atsrc,#v-atlas.namesoff .atcmpbtn,#v-atlas.namesoff .atcmp{display:none}
-#v-atlas.namesoff .attile.shown .atsrc,#v-atlas.namesoff .attile.shown .atcmpbtn{display:block}
+#v-atlas.namesoff .atpg,#v-atlas.namesoff .atlbl,#v-atlas.namesoff .atalso,#v-atlas.namesoff .atdeep,#v-atlas.namesoff .atsrcs,
+#v-atlas.namesoff .atcmpbtn,#v-atlas.namesoff .atcmp,#v-atlas.namesoff .bintro,#v-atlas.namesoff .atsub,#v-atlas.namesoff .atnote,
+#v-atlas.namesoff .athead-name,#v-atlas.namesoff .atexcl{display:none}
+#v-atlas.namesoff .athead-anon{display:inline}
+#v-atlas.namesoff .attile.shown .atpg{display:inline}
+#v-atlas.namesoff .attile.shown .atlbl,#v-atlas.namesoff .attile.shown .atalso,#v-atlas.namesoff .attile.shown .atdeep,
+#v-atlas.namesoff .attile.shown .atsrcs,#v-atlas.namesoff .attile.shown .atcmpbtn{display:block}
+#v-atlas.namesoff .atfig:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 .atcmpbtn{align-self:flex-start}
 .attile.cmp-open{grid-column:1/-1}
+.attile:has(details[open]){grid-column:1/-1}
+.atdeep,.atsrcs{overflow-wrap:anywhere}
 .attile.cmp-open .atfig svg{max-height:220px;width:auto}
 .atcmp{border:1px solid var(--line);border-radius:6px;padding:8px;background:var(--surface)}
 .atcmp[hidden]{display:none}
 .atcmpgrid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
 @media (max-width:520px){.atcmpgrid{grid-template-columns:1fr}}
-.atcmp figure{margin:0;display:flex;flex-direction:column;gap:4px}
+.atcmp figure{margin:0;display:flex;flex-direction:column;gap:4px;min-width:0}
 .atcmp figure svg{max-width:100%;height:auto;color:var(--text)}
 .atcmp figcaption{font-size:11.5px;font-weight:600}
 .atcmp dl{margin:8px 0 0;font-size:12px;line-height:1.45}
@@ -1870,6 +2228,9 @@ const FG = ATLAS.FG, FGQ = ATLAS.FGQ;
 .atcmp dd{margin:0;color:var(--text-dim)}
 .atexcl{font-size:12.5px;color:var(--text-dim);margin-top:18px}
 `;
+
+  const el = (tag, cls, html) => { const e = document.createElement(tag); if (cls) e.className = cls; if (html !== undefined) e.innerHTML = html; return e; };
+  const unparsed = [];
 
   function enhance(view) {
     if (view.dataset.deentAtlas === '1') return;
@@ -1881,34 +2242,56 @@ const FG = ATLAS.FG, FGQ = ATLAS.FGQ;
     const st = document.createElement('style'); st.textContent = css; document.head.appendChild(st);
 
     tiles.forEach((t, i) => {
-      const it = items[i], m = it.meta || {};
+      const it = items[i], m = it.meta || {}, pr = m.priority || 'core';
       t.dataset.key = it.plain;
-      t.classList.add('pri-' + (m.priority || 'core'));
-      if (m.priority === 'reference') t.classList.add('is-ref');
-      const name = t.querySelector('.atname');
-      const badge = document.createElement('span');
-      badge.className = 'atpri p-' + (m.priority || 'core');
-      badge.textContent = LABEL[m.priority || 'core'];
-      badge.title = (TITLE[m.priority || 'core']) + (m.reason ? ' ' + m.reason : '');
-      t.insertBefore(badge, name);
-      const src = document.createElement('p');
-      src.className = 'atsrc';
-      const STATUS = {'exact': 'PubChem and ChEMBL agree', 'exact-pubchem': 'PubChem match (no ChEMBL record)',
-        'stereo-unspecified': 'same molecule; stereo left open in one source', 'tautomer': 'same molecule; PubChem stores another tautomer',
-        'teaching-structure': 'teaching structure'};
-      src.textContent = 'DPAW deck p. ' + it.slide + ' · ' + (m.exam || 'Exam 1') +
-        (m.pubchem ? ' · PubChem CID ' + m.pubchem : '') + (m.chembl ? ' · ChEMBL ' + m.chembl : '') +
-        (STATUS[m.verification] ? ' · ' + STATUS[m.verification] : '');
-      src.title = m.checked ? 'Checked against PubChem and ChEMBL on ' + m.checked : '';
-      t.appendChild(src);
+      t.classList.add('pri-' + pr);
+      if (pr === 'reference') t.classList.add('is-ref');
+      const name = t.querySelector('.atname'), tell = t.querySelector('.attell'), eg = t.querySelector('.ateg');
+      const svg = t.querySelector('.atfig svg');
+      if (svg) svg.dataset.label = svg.getAttribute('aria-label') || '';
+
+      // 1. badge and page
+      const row = el('p', 'atmeta');
+      const badge = el('span', 'atpri p-' + pr);
+      badge.textContent = LABEL[pr];
+      badge.title = TITLE[pr];
+      const pg = el('span', 'atpg');
+      pg.textContent = 'DPAW p. ' + it.slide + ' · ' + (m.exam || 'Exam 1');
+      row.append(badge, pg);
+      t.insertBefore(row, name);
+
+      // 2. core learning
+      const cites = [];
+      const pt = ATLAS_UI.strip(it.t);
+      if (tell) {
+        if (pt.clean) { tell.textContent = pt.text; pt.cites.forEach(c => cites.push(['Core learning', c])); }
+        else unparsed.push(it.plain + ' (main text)');
+        const lbl = el('p', 'atlbl'); lbl.textContent = 'Core learning';
+        t.insertBefore(lbl, tell);
+      }
+
+      // 3. also in the lecture
+      let anchor = tell || name;
+      if (it.e) {
+        const pe = ATLAS_UI.strip(it.e);
+        let lines;
+        if (pe.clean) { lines = ATLAS_UI.sentences(pe.marked); pe.cites.forEach(c => cites.push(['Also in the lecture', c])); }
+        else { lines = [it.e]; unparsed.push(it.plain + ' (also in the lecture)'); }
+        const box = el('div', 'atalso');
+        box.innerHTML = '<p class="atlbl">Also in the lecture</p><ul>' + lines.map(l => '<li>' + esc(l) + '</li>').join('') + '</ul>';
+        if (eg) eg.replaceWith(box); else anchor.after(box);
+        anchor = box;
+      } else if (eg) eg.remove();
+
+      // 4. compare structures
       const c = ATLAS.CMP[it.plain];
+      let after = anchor;
       if (c && m.discrepancy) {
         const d = m.discrepancy;
-        const btn = document.createElement('button');
-        btn.type = 'button'; btn.className = 'chip atcmpbtn'; btn.textContent = 'Compare structures';
+        const btn = el('button', 'chip atcmpbtn');
+        btn.type = 'button'; btn.textContent = 'Compare structures';
         btn.setAttribute('aria-expanded', 'false');
-        const box = document.createElement('div');
-        box.className = 'atcmp'; box.hidden = true;
+        const box = el('div', 'atcmp'); box.hidden = true;
         box.innerHTML = `<div class="atcmpgrid">
             <figure>${c.lecture}<figcaption>As drawn in lecture (DPAW p. ${esc(c.slide)})${c.lecture_cid ? ': this drawing is PubChem CID ' + esc(c.lecture_cid) : ''}</figcaption></figure>
             <figure>${c.verified}<figcaption>Verified Drug Structure${m.pubchem ? ' (PubChem CID ' + esc(m.pubchem) + (m.chembl ? '; ChEMBL ' + esc(m.chembl) : '') + ')' : (m.chembl ? ' (ChEMBL ' + esc(m.chembl) + ')' : '')}</figcaption></figure>
@@ -1919,29 +2302,124 @@ const FG = ATLAS.FG, FGQ = ATLAS.FGQ;
           <dt>What he emphasized</dt><dd>${esc(d.emphasized)}</dd>
           <dt>Does it change the concept?</dt><dd>${esc(d.changes_concept)}</dd></dl>`;
         btn.onclick = () => { box.hidden = !box.hidden; btn.setAttribute('aria-expanded', String(!box.hidden)); t.classList.toggle('cmp-open', !box.hidden); };
-        t.appendChild(btn); t.appendChild(box);
+        t.append(btn, box);
+        after = box;
         badge.textContent += c.primary === 'lecture' ? ' · lecture drawing differs from drug' : ' · one slide draws it differently';
       }
+
+      // 5. deeper understanding (optional, sourced, not tested)
+      if (m.deeper) {
+        const dp = el('details', 'atdeep');
+        dp.innerHTML = '<summary>Deeper understanding <small>· beyond the lecture, not tested</small></summary>' +
+          '<p>' + esc(m.deeper.text) + '</p>' +
+          m.deeper.sources.map(s => '<p>Source: ' + esc(s.cite) + '. <a href="' + esc(s.url) + '" target="_blank" rel="noopener">' + esc(s.url) + '</a></p>').join('');
+        t.appendChild(dp);
+      }
+
+      // 6. sources and verification
+      const rows = [];
+      rows.push(['Lecture', 'DPAW deck p. ' + esc(it.slide) + ' · ' + esc(m.exam || 'Exam 1')]);
+      if (cites.length) rows.push(['Cited in this tile', '<ul>' + cites.map(([part, x]) => '<li>' + esc(part) + ': ' + esc(x) + '</li>').join('') + '</ul>']);
+      rows.push(['Priority', esc(LABEL[pr]) + (m.reason ? ': ' + esc(m.reason) : '') + (m.psrc ? ' (' + esc(m.psrc) + ')' : '')]);
+      const recs = [];
+      if (m.pubchem) recs.push('PubChem CID <a href="https://pubchem.ncbi.nlm.nih.gov/compound/' + esc(m.pubchem) + '" target="_blank" rel="noopener">' + esc(m.pubchem) + '</a>');
+      if (m.chembl) recs.push('ChEMBL <a href="https://www.ebi.ac.uk/chembl/explore/compound/' + esc(m.chembl) + '" target="_blank" rel="noopener">' + esc(m.chembl) + '</a>');
+      if (recs.length) rows.push(['Records', recs.join(' · ')]);
+      if (m.verification) rows.push(['Verification', esc(STATUS[m.verification] || m.verification) +
+        (m.checked ? ', checked ' + esc(m.checked) : '') + (m.vnote ? '. ' + esc(m.vnote) : '')]);
+      if (m.note) rows.push(['Drawing note', esc(m.note)]);
+      const sd = el('details', 'atsrcs');
+      sd.innerHTML = '<summary>Sources and verification</summary><dl>' +
+        rows.map(([k, v]) => '<dt>' + k + '</dt><dd>' + v + '</dd>').join('') + '</dl>';
+      t.appendChild(sd);
+    });
+    if (unparsed.length) console.warn('Atlas: citations left in place on', unparsed.join('; '));
+
+    // board headings: a neutral label replaces the name in Hide names mode
+    view.querySelectorAll('.atboard').forEach((b, n, all) => {
+      const h = b.querySelector('h3'); if (!h) return;
+      const nm = el('span', 'athead-name'); while (h.firstChild) nm.appendChild(h.firstChild);
+      const an = el('span', 'athead-anon'); an.textContent = 'Board ' + (n + 1) + ' of ' + all.length;
+      h.append(nm, an);
     });
 
-    // toolbar toggles
+    // toolbar toggles, legend, empty message
     const bar = view.querySelector('.atbar');
-    const refBtn = document.createElement('button'), shBtn = document.createElement('button');
-    refBtn.className = shBtn.className = 'chip';
+    const refBtn = el('button', 'chip'), shBtn = el('button', 'chip');
+    refBtn.type = shBtn.type = 'button';
     const nRef = tiles.filter(t => t.classList.contains('is-ref')).length;
+    const legend = el('p', 'atlegend', '<b>Core</b>: taught or emphasized; study the structure. ' +
+      '<b>Reference only</b>: shown to illustrate a concept; hidden by default, the concept stays examinable. ' +
+      '<b>Needs verification</b>: on a slide but not confirmed as taught; kept out of questions.');
+    const empty = el('p', 'atempty'); empty.hidden = true; empty.setAttribute('role', 'status');
+    if (bar) { bar.after(legend); legend.after(empty); }
+    const q = view.querySelector('#atq'), count$ = view.querySelector('#atCount');
+    if (count$) count$.setAttribute('aria-live', 'polite');
+
+    const update = () => {
+      const refOff = view.classList.contains('ref-off'), namesOff = view.classList.contains('namesoff');
+      const vis = t => !t.hidden && !(refOff && t.classList.contains('is-ref'));
+      view.querySelectorAll('.atgrid').forEach(g => {
+        const any = [...g.querySelectorAll('.attile')].some(vis);
+        g.classList.toggle('at-none', !any);
+        const lab = g.previousElementSibling;
+        if (lab && lab.classList.contains('atsub')) lab.classList.toggle('at-none', !any);
+      });
+      view.querySelectorAll('.atboard').forEach(b => b.classList.toggle('at-none', ![...b.querySelectorAll('.attile')].some(vis)));
+      const shown = tiles.filter(vis).length, refHid = refOff ? tiles.filter(t => !t.hidden && t.classList.contains('is-ref')).length : 0;
+      const revealed = tiles.filter(t => vis(t) && t.classList.contains('shown')).length;
+      if (count$) count$.textContent = (shown === tiles.length ? tiles.length + ' structures' : shown + ' of ' + tiles.length + ' structures') +
+        (refHid ? ' · ' + refHid + ' reference-only hidden' : '') + (namesOff ? ' · ' + revealed + ' revealed' : '');
+      const term = q ? q.value.trim() : '';
+      empty.hidden = shown > 0;
+      if (!shown) empty.textContent = (term ? 'No structure matches “' + term + '”.' : 'No structure is shown.') +
+        (refHid ? ' ' + refHid + ' reference-only ' + (refHid === 1 ? 'structure matches' : 'structures match') + '; use “Show reference-only” to see ' + (refHid === 1 ? 'it' : 'them') + '.' : ' Clear the search to see all structures.');
+    };
+
     const setRef = on => { view.classList.toggle('ref-off', !on); refBtn.setAttribute('aria-pressed', String(on));
-      refBtn.textContent = (on ? 'Hide' : 'Show') + ' reference-only (' + nRef + ')'; store.set('ref', on); };
+      refBtn.textContent = (on ? 'Hide' : 'Show') + ' reference-only (' + nRef + ')'; store.set('ref', on); update(); };
     const setShade = on => { view.classList.toggle('shade-off', !on); shBtn.setAttribute('aria-pressed', String(!on));
       shBtn.textContent = on ? 'Hide key features' : 'Reveal key features'; store.set('shade', on); };
     refBtn.onclick = () => setRef(view.classList.contains('ref-off'));
     shBtn.onclick = () => setShade(view.classList.contains('shade-off'));
     if (bar) { const sp = bar.querySelector('.spacer'); bar.insertBefore(refBtn, sp); bar.insertBefore(shBtn, sp); }
+    if (q) q.addEventListener('input', update);   // runs after the core's own oninput
     setRef(store.get('ref', false));
     setShade(store.get('shade', true));
 
+    // Hide names: keyboard reveal, neutral accessible names
+    const sync = () => {
+      const off = view.classList.contains('namesoff');
+      tiles.forEach(t => {
+        const fig = t.querySelector('.atfig'), svg = fig && fig.querySelector('svg'), shown = t.classList.contains('shown');
+        if (svg) svg.setAttribute('aria-label', off && !shown ? ANON : (svg.dataset.label || ''));
+        if (!fig) return;
+        if (off) {
+          fig.tabIndex = 0; fig.setAttribute('role', 'button');
+          fig.setAttribute('aria-expanded', String(shown));
+          fig.setAttribute('aria-label', shown ? 'Hide this name' : 'Reveal this name');
+        } else {
+          fig.removeAttribute('tabindex'); fig.removeAttribute('role');
+          fig.removeAttribute('aria-expanded'); fig.removeAttribute('aria-label');
+        }
+      });
+      update();
+    };
+    tiles.forEach(t => {
+      const fig = t.querySelector('.atfig');
+      if (fig) fig.addEventListener('keydown', e => {
+        if (!view.classList.contains('namesoff')) return;
+        if (e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar') { e.preventDefault(); fig.click(); }
+      });
+    });
+    let pending = false;
+    new MutationObserver(() => { if (pending) return; pending = true;
+      Promise.resolve().then(() => { pending = false; sync(); }); })
+      .observe(view, {attributes: true, attributeFilter: ['class'], subtree: true});
+    sync();
+
     if (ATLAS.EXCLUDED && ATLAS.EXCLUDED.length) {
-      const p = document.createElement('p');
-      p.className = 'atexcl';
+      const p = el('p', 'atexcl');
       p.textContent = 'Not in the Atlas, by Dr. Sikazwe\'s instruction: ' +
         ATLAS.EXCLUDED.map(x => x.item + ' (DPAW p. ' + x.page + ')').join('; ') + '.';
       view.appendChild(p);
