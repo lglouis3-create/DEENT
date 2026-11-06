@@ -95,3 +95,6 @@ Resolved 2026-11-06 (Louis's direction): both drawings, with Compare structures;
 ## Atlas items needing verification
 - 5beta-dihydrocortisol and urocortisol (DPAW p.26): drawn but not spoken; the 11/03 recording ends mid-sentence on this slide. Shown with a "Needs verification" badge and kept out of questions.
 - PubChem pass (2026-11-06): both structures match PubChem exactly (5beta-dihydrocortisol CID 164838, urocortisol CID 5864). The ChEMBL record formerly linked to 5beta-dihydrocortisol (CHEMBL1079111) is the 5-alpha epimer and was removed; ChEMBL has no record with its InChIKey. Their lecture status is still open.
+
+## DPAW citation numbers (2026-11-06)
+- The DPAW deck copy in Drive (f26-DEENT-DPAW-mc.pdf, Louis's GoodNotes copy) repeats slide 21 ("Topical Agents-5" on file pages 21 and 22). From printed slide 22 on, the file page is one higher than the printed slide number. 152 of 221 Sikazwe questions, the Atlas and the reference tables cite file pages. If the class deck has no repeated page, every DPAW citation from slide 22 on should drop by one. Waiting for Louis to confirm.

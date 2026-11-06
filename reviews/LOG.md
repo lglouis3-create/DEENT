@@ -55,3 +55,14 @@
 - Atlas: `assigned` on every item (true when the tile's slide or any page in its source is assigned); 9 false: desonide, fluticasone propionate, triamcinolone acetonide (p. 24), tofacitinib (p. 35), hydroquinone, benzoquinone (p. 67), lactic acid, malic acid (p. 68), hyaluronic acid (p. 69). Tiles say "Not on the assigned pages"; priorities unchanged; no question shows one of them. atlas_check.js checks both.
 - Vit. D3 biosynthesis reading (NBK278935): the course has no readings list to add it to; deck p. 2 already lists it as assigned and p. 27 carries the "take-home reading assignment" note. No questions written from it.
 - Checks: 27 PASS, 1 FAIL (scheduler_test.js, the known kit test issue), 0 NOT RUN, 1 REPORT; test.js "33 lowYield kept off the paper".
+
+## 2026-11-06: independent usability review (ChatGPT, published build of 11/05, 509 questions) — reproduced and fixed in the kit
+- Tested against: live main b2c2523 (core 25c643d), kit main 066b06e, DEENT branch claude/jolly-bell-k7ur5m.
+- Kit PRs (all open, none merged; each waits for Louis's approval as a core behaviour change; each had a separate independent review whose findings were fixed):
+  - #58 profile ownership: reproduced on 25c643d and 066b06e (a running exam, quiz or targeted review followed a profile switch; submit recorded A's answers under B; timer and double submit; a quiz place restored under another profile after a reload). Test ownership_test.js (45 checks).
+  - #59 exam Review opens an overview and never grades; select-all wording from sampled draws; neutral chosen-answer style. Test exam_review_test.js (72-73 checks).
+  - #62 targeted repeat keeps its question ids; partial-paper and accuracy/confidence/solid labels; retry wording; empty states; empty filter chips. Test flow_test.js (49 checks).
+  - #70 (stacked on #62) Start here block; sticky first column and side cue on wide tables; tab-bar chevrons and a sticky-bar fix; 44 px stepper controls, arrow keys, Enlarge; Atlas title/noun/example label settings, Reveal-name button, Hide names neutral labels, filter-aware count; read links checked for any shown view. Test ux_test.js (110 checks).
+- Integration: kit main + #58 + #59 + #70 (incl. #62) + #50 merged in a scratch tree and laid over DEENT src: 33 PASS, 1 FAIL (ownership_test.js 3 of 45: its selector predates #59's renamed chosen-answer class; with the class added, 45 of 45 pass; sent back to #58), 0 NOT RUN, 1 REPORT. scheduler_test.js passes there (#50).
+- Course-level (this branch): Atlas layout (3ce3c20), reading links 397 of 555 (2f12d74), Sikazwe assigned pages (d992c61), exam blurb full stop (1fec904).
+- Not done: real Safari/iPhone/iPad test (WebKit runs only in the kit's GitHub jobs); DPAW citations use the file pages of Louis's deck copy, which repeats slide 21 (open question).
