@@ -8,6 +8,12 @@ characters.
 
 Every update adds its bullets here in the same commit that makes the change.
 
+## 2026-11-06 (reading links)
+- Weak spots and "Explain more" now point to a reading section for 397 of 555 questions (was 35).
+- Sikazwe's Lectures 3 and 4 questions now link to their Tell apart and Reference tables.
+- Lecture 2 and 3 questions now link to Dr. Smith's Lecture 2 and 3 tables; Lecture 1 ones to the objective guides.
+- Fixed links that sent some IL-23, salicylic acid and drug-class questions to the wrong table.
+
 ## 2026-11-06 (Atlas layout)
 - Each Atlas tile now reads in order: core learning, also in the lecture, then collapsed extras.
 - Slide and transcript citations moved out of the tile text into a collapsed Sources and verification part.
