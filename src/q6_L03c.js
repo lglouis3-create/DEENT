@@ -1,6 +1,7 @@
 /* ==========================================================================
-   Sun exposure and psoralens (Dr. Smith; recorded after the 11/03 lecture,
-   Exam 1 material per the syllabus, Lecture 3). Deck: DEENT_Sun_Exposure_2026.pdf
+   Sun exposure and psoralens (Dr. Smith; recorded after the 11/03 lecture).
+   Exam assignment PROVISIONAL: Exam 1 per the syllabus (Lecture 3); not
+   confirmed by Dr. Smith (see course.js and reviews/OPEN_QUESTIONS.md). Deck: DEENT_Sun_Exposure_2026.pdf
    (26 slides). "audio mm:ss" = timecode in her recording (full-lecture file),
    transcribed 2026-11-06. Tables shown only as links to the OTC textbook
    (slides 18 and 23) carry no questions: their content is not on the slides.
@@ -46,7 +47,7 @@ QUESTIONS.push(
  tags:['numbers'], source:'slide',
  stem:'PUVA uses UV light in which range to make psoralens intercalate into DNA?',
  options:[
-  {t:'320 to 340 nm', correct:true, why:'Slide 3.'},
+  {t:'320 to 340 nm', correct:true, why:'Slide 3 gives 320 to 340 nm as the UV light at which psoralens intercalate into DNA; this sits at the low end of UVA (320–400 nm, slide 8), which is why PUVA pairs psoralens with UVA.'},
   {t:'290 to 320 nm', correct:false, why:'That is the UVB range on slide 8.'},
   {t:'220 to 400 nm', correct:false, why:'That is the scan used in the critical wavelength test (audio 12:10–12:44).'},
   {t:'370 to 400 nm', correct:false, why:'370 nm is the critical wavelength threshold for a broad-spectrum label (slide 14).'}],
@@ -105,7 +106,7 @@ QUESTIONS.push(
  tags:['definition'], source:'both',
  stem:'What does the UV index rate?',
  options:[
-  {t:'UV reaching the earth at a time and place', correct:true, why:'Slide 7; (audio 02:53–03:28).'},
+  {t:'UV reaching the earth at a time and place', correct:true, why:'Slide 7 defines the UV index as a rating of the UV rays reaching the earth\'s surface at a specific time and location; a higher index means greater exposure (audio 02:53–03:28). It describes the environment, not a product or the skin.'},
   {t:'The SPF that a sunscreen product provides', correct:false, why:'SPF is a ratio of MEDs measured on skin (slide 13).'},
   {t:'The minimum UV dose that reddens skin', correct:false, why:'That is the minimal erythemal dose (slide 12).'},
   {t:'How well a sunscreen stays on wet skin', correct:false, why:'That is substantivity (slide 19).'}],
@@ -128,7 +129,7 @@ QUESTIONS.push(
  tags:['numbers','tell'], source:'both',
  stem:'In Dr. Smith\'s lecture, which wavelength ranges are given for UVB and UVA?',
  options:[
-  {t:'UVB 290–320 nm; UVA 320–400 nm', correct:true, why:'Slide 8; (audio 04:37).'},
+  {t:'UVB 290–320 nm; UVA 320–400 nm', correct:true, why:'Slide 8 and her recording (audio 04:37) give UVB as 290 to 320 nm and UVA as 320 to 400 nm; UVB is the shorter wavelength band.'},
   {t:'UVB 320–400 nm; UVA 290–320 nm', correct:false, why:'Swaps the two ranges on slide 8.'},
   {t:'UVB 320–340 nm; UVA 290–320 nm', correct:false, why:'320–340 nm is the PUVA range for psoralens (slide 3).'},
   {t:'UVB 220–290 nm; UVA 290–320 nm', correct:false, why:'Shifts both bands below slide 8; 290–320 nm is UVB.'}],
@@ -151,7 +152,7 @@ QUESTIONS.push(
  tags:['tell'], source:'both',
  stem:'Which type of UV light is responsible for most phototoxic reactions with drugs?',
  options:[
-  {t:'UVA', correct:true, why:'Slide 8; (audio 05:28–05:54).'},
+  {t:'UVA', correct:true, why:'Slide 8 places "responsible for most of the phototoxic reactions with drugs and chemical substances" under UVA; UVA also reaches deeper into the dermis (audio 05:28–05:54).'},
   {t:'UVB', correct:false, why:'Slide 8 lists the phototoxic reactions under UVA; UVB is tied to sunburn and vitamin D3.'},
   {t:'Visible light', correct:false, why:'Not the band named on slide 8.'},
   {t:'Infrared radiation', correct:false, why:'Infrared is named only as something sunblocks scatter (slide 20).'}],
@@ -162,7 +163,7 @@ QUESTIONS.push(
  tags:['tell'], source:'both',
  stem:'Which type of UV light causes sunburn and produces vitamin D3 in the skin?',
  options:[
-  {t:'UVB', correct:true, why:'Slide 8; (audio 05:00–05:28).'},
+  {t:'UVB', correct:true, why:'Slide 8 lists sunburn and vitamin D3 production under UVB. UVA is less energetic and does not tend to cause sunburn (audio 05:54–06:19).'},
   {t:'UVA', correct:false, why:'(audio 05:54–06:19) UVA does not seem to cause sunburn, because it is less energetic than UVB.'},
   {t:'UVC', correct:false, why:'Not part of Dr. Smith\'s slide 8.'},
   {t:'Visible light', correct:false, why:'Not part of slide 8.'}],
@@ -173,7 +174,7 @@ QUESTIONS.push(
  tags:['counseling','numbers'], source:'both',
  stem:'Between which hours is UVB intensity greatest?',
  options:[
-  {t:'10:00 am to 4:00 pm', correct:true, why:'Slide 8; (audio 05:28).'},
+  {t:'10:00 am to 4:00 pm', correct:true, why:'Slide 8 gives 10:00 am to 4:00 pm as the period of greatest UV intensity, which is when counseling on avoiding sun exposure applies most (audio 05:28).'},
   {t:'6:00 am to 10:00 am', correct:false, why:'Not the window on slide 8.'},
   {t:'4:00 pm to 8:00 pm', correct:false, why:'Not the window on slide 8.'},
   {t:'8:00 am to noon', correct:false, why:'Not the window on slide 8.'}],
@@ -229,7 +230,7 @@ QUESTIONS.push(
  tags:['numbers'], source:'slide',
  stem:'When does the reddening of a sunburn peak?',
  options:[
-  {t:'12 to 24 hours after exposure', correct:true, why:'Slide 11.'},
+  {t:'12 to 24 hours after exposure', correct:true, why:'Slide 11: reddening peaks at 12 to 24 hours after sun exposure; the tan from melanogenesis follows over the next 2 to 3 days.'},
   {t:'5 to 10 minutes after exposure', correct:false, why:'That is when immediate pigmentation starts (slide 10).'},
   {t:'7 to 10 days after exposure', correct:false, why:'That is the peak of delayed pigmentation (slide 10).'},
   {t:'2 to 3 days after exposure', correct:false, why:'Slide 11: melanogenesis follows over the next 2 to 3 days.'}],
@@ -296,7 +297,7 @@ QUESTIONS.push(
  tags:['counseling','numbers'], source:'both',
  stem:'Which product may carry the label "decreases risk of skin cancer and early aging caused by the sun"?',
  options:[
-  {t:'Broad spectrum with SPF 15 or greater', correct:true, why:'Slide 14; (audio 13:37–14:00).'},
+  {t:'Broad spectrum with SPF 15 or greater', correct:true, why:'Slide 14: under FDA guidance, a product needs both a broad-spectrum label (CW of 370 nm or more) and SPF 15 or greater to make this claim (audio 13:37–14:00).'},
   {t:'Any product with SPF 15 or greater', correct:false, why:'It must also be broad spectrum (slide 14).'},
   {t:'Broad spectrum with any SPF', correct:false, why:'It needs SPF 15 or greater (slide 14).'},
   {t:'Any physical sunblock with zinc oxide added', correct:false, why:'The label rule on slide 14 is broad spectrum plus SPF 15 or greater.'}],
@@ -307,7 +308,7 @@ QUESTIONS.push(
  tags:['numbers','counseling'], source:'both',
  stem:'About what share of incoming UVB rays does SPF 15 block?',
  options:[
-  {t:'93%', correct:true, why:'Slide 15; (audio 14:25).'},
+  {t:'93%', correct:true, why:'Slide 15: SPF 15 blocks about 93% of incoming UVB, against about 97% for SPF 30 and 98% for SPF 50 (audio 14:25).'},
   {t:'97%', correct:false, why:'97% is SPF 30 (slide 15).'},
   {t:'98%', correct:false, why:'98% is SPF 50 (slide 15).'},
   {t:'90%', correct:false, why:'About 90% is the share of UVB filtered by ozone (slide 8).'}],
@@ -329,7 +330,7 @@ QUESTIONS.push(
  tags:['counseling'], source:'slide',
  stem:'Which description fits skin type I?',
  options:[
-  {t:'Always burns easily, never tans', correct:true, why:'Slide 16.'},
+  {t:'Always burns easily, never tans', correct:true, why:'Slide 16: type I always burns easily and never tans; type II also burns easily but tans minimally.'},
   {t:'Always burns easily, tans minimally', correct:false, why:'That is skin type II (slide 16).'},
   {t:'Sometimes burns and tans gradually', correct:false, why:'That is skin type III (slide 16).'},
   {t:'Never burns, deeply pigmented', correct:false, why:'That is skin type VI (slide 16).'}],
@@ -340,7 +341,7 @@ QUESTIONS.push(
  tags:['counseling','numbers'], source:'slide',
  stem:'Which SPF is recommended for skin types I and II with increased risk of skin cancer?',
  options:[
-  {t:'SPF greater than 30', correct:true, why:'Slide 17.'},
+  {t:'SPF greater than 30', correct:true, why:'Slide 17: skin types I and II have an increased risk of skin cancer and should use SPF greater than 30; the higher thresholds are for lupus (> 40) and photosensitizing drugs (> 45).'},
   {t:'SPF 15 to 24', correct:false, why:'That is for skin types III to V (slide 17).'},
   {t:'SPF greater than 45', correct:false, why:'That is for patients on photosensitizing drugs (slide 17).'},
   {t:'SPF greater than 40', correct:false, why:'That is for lupus (slide 17).'}],
@@ -351,7 +352,7 @@ QUESTIONS.push(
  tags:['counseling','numbers'], source:'slide',
  stem:'A patient takes a photosensitizing drug. Which SPF is recommended?',
  options:[
-  {t:'SPF greater than 45', correct:true, why:'Slide 17.'},
+  {t:'SPF greater than 45', correct:true, why:'Slide 17 sets SPF greater than 45 for patients on photosensitizing drugs, the highest threshold on the slide, above lupus (> 40) and skin types I–II (> 30).'},
   {t:'SPF greater than 30', correct:false, why:'That is for skin types I and II (slide 17).'},
   {t:'SPF greater than 40', correct:false, why:'That is for lupus (slide 17).'},
   {t:'SPF 15 to 24', correct:false, why:'That is for skin types III to V (slide 17).'}],
@@ -418,7 +419,7 @@ QUESTIONS.push(
  tags:['recall'], source:'both',
  stem:'Which two physical sunblock ingredients are available in the U.S.?',
  options:[
-  {t:'Zinc oxide, titanium dioxide', correct:true, why:'Slide 20; (audio 19:21–19:52).'},
+  {t:'Zinc oxide, titanium dioxide', correct:true, why:'Slide 20: the physical sunblocks available in the U.S. are zinc oxide and titanium dioxide, inorganic particulates that scatter or reflect light (audio 19:21–19:52).'},
   {t:'Avobenzone and oxybenzone (organic)', correct:false, why:'These are organic sunscreens (slide 25).'},
   {t:'PABA and benzophenones', correct:false, why:'Organic sunscreens (slides 24–25), not physical sunblocks.'},
   {t:'Zinc oxide and benzophenone', correct:false, why:'Benzophenones are organic sunscreens (slide 24).'}],
@@ -452,7 +453,7 @@ QUESTIONS.push(
  tags:['mechanism'], source:'both',
  stem:'How do organic sunscreens protect the skin?',
  options:[
-  {t:'They absorb UV and release heat', correct:true, why:'Slide 22; (audio 21:04–21:27).'},
+  {t:'They absorb UV and release heat', correct:true, why:'Slide 22: organic sunscreens absorb UV radiation in the UVB and/or UVA range and convert it to heat energy (audio 21:04–21:27); scattering is the sunblock mechanism.'},
   {t:'They scatter UV radiation off the skin', correct:false, why:'Scattering and reflection describe the inorganic sunblocks (slide 20).'},
   {t:'They raise melanin production in the skin', correct:false, why:'Increased melanin is a psoralen effect (slide 3).'},
   {t:'They thicken the stratum corneum', correct:false, why:'Not the mechanism on slide 22.'}],
@@ -463,7 +464,7 @@ QUESTIONS.push(
  tags:['tell'], source:'both',
  stem:'Which sunscreen family has poor substantivity and can cause sensitization?',
  options:[
-  {t:'Benzophenones', correct:true, why:'Slide 24; (audio 22:09–22:35).'},
+  {t:'Benzophenones', correct:true, why:'Slide 24 gives benzophenones two points: poor substantivity and the ability to cause sensitization; she named both in the recording (audio 22:09–22:35).'},
   {t:'Anthranilates', correct:false, why:'Slide 24: used only in combination products for broad UV coverage.'},
   {t:'Aminobenzoates', correct:false, why:'Slide 24: the most effective UVB absorbers; may stain clothing.'},
   {t:'Dibenzoylmethanes', correct:false, why:'Slide 24: activity starts to decrease after 15 minutes of use.'}],
@@ -485,7 +486,7 @@ QUESTIONS.push(
  tags:['tell'], source:'slide',
  stem:'Which sunscreen family is used only in combination products to give broad UV coverage?',
  options:[
-  {t:'Anthranilates', correct:true, why:'Slide 24 (printed "Anthralates").'},
+  {t:'Anthranilates', correct:true, why:'Slide 24 (printed "Anthralates"): anthranilates are used only in combination products, to give broad UV coverage.'},
   {t:'Aminobenzoates', correct:false, why:'Slide 24: the most effective UVB absorbers.'},
   {t:'Salicylates', correct:false, why:'Slide 24: easily removed by water or perspiration.'},
   {t:'Benzophenones', correct:false, why:'Slide 24: poor substantivity; can cause sensitization.'}],
@@ -496,7 +497,7 @@ QUESTIONS.push(
  tags:['tell','numbers'], source:'slide',
  stem:'For which sunscreen family does activity start to decrease after 15 minutes of use?',
  options:[
-  {t:'Dibenzoylmethanes', correct:true, why:'Slide 24.'},
+  {t:'Dibenzoylmethanes', correct:true, why:'Slide 24: dibenzoylmethane activity starts to decrease after 15 minutes of use; no other family on the slide carries a time point.'},
   {t:'Cinnamates', correct:false, why:'Slide 24: do not adhere well and depend on the vehicle.'},
   {t:'Anthranilates', correct:false, why:'Slide 24: used only in combination products.'},
   {t:'Aminobenzoates', correct:false, why:'Slide 24: the most effective UVB absorbers.'}],
@@ -508,7 +509,7 @@ QUESTIONS.push(
  tags:['tell'], source:'slide',
  stem:'Which sunscreen family does not adhere well and is easily removed by water or perspiration?',
  options:[
-  {t:'Salicylates', correct:true, why:'Slide 24.'},
+  {t:'Salicylates', correct:true, why:'Slide 24: salicylates do not adhere to the skin well and are easily removed by water or perspiration; cinnamates also adhere poorly but depend on the vehicle instead.'},
   {t:'Aminobenzoates', correct:false, why:'Slide 24: the most effective UVB absorbers; may stain clothing.'},
   {t:'Dibenzoylmethanes', correct:false, why:'Slide 24: activity starts to decrease after 15 minutes.'},
   {t:'Anthranilates', correct:false, why:'Slide 24: used only in combination products.'}],

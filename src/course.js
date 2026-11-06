@@ -125,8 +125,11 @@ const COURSE = {
     {id:'L01b', deck:'Skin-PCol-Students-2026.pdf',
      label:'Lectures 1–3: Dermatitis, psoriasis and acne pharmacology (Smith, from 10/29)',
      prof:'Smith', exam:1, module:'Exam 1: Lectures 1–4'},
+    // Exam assignment provisional: the syllabus puts sun exposure in Lecture 3 (Exam 1);
+    // on 10/29 (T 583) Dr. Smith spoke of reaching "sun protection and sun relief"
+    // "until Tuesday after your exam". Unconfirmed; see reviews/OPEN_QUESTIONS.md.
     {id:'L03c', deck:'DEENT_Sun_Exposure_2026.pdf',
-     label:'Lecture 3: Psoralens and sun protection (Smith, recorded after 11/03)',
+     label:'Lecture 3: Psoralens and sun protection (Smith, recorded after 11/03; Exam 1 per the syllabus, not confirmed by Dr. Smith)',
      prof:'Smith', exam:1, module:'Exam 1: Lectures 1–4'},
     {id:'L03b', deck:'f26-DEENT-DPAW-mc.pdf',
      label:'Lectures 3–4: Dermatitis, psoriasis and acne medicinal chemistry (Sikazwe, 11/03–11/04)',
