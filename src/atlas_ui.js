@@ -37,6 +37,8 @@
 #v-atlas.namesoff .atsrc,#v-atlas.namesoff .atcmpbtn,#v-atlas.namesoff .atcmp{display:none}
 #v-atlas.namesoff .attile.shown .atsrc,#v-atlas.namesoff .attile.shown .atcmpbtn{display:block}
 .atcmpbtn{align-self:flex-start}
+.attile.cmp-open{grid-column:1/-1}
+.attile.cmp-open .atfig svg{max-height:220px;width:auto}
 .atcmp{border:1px solid var(--line);border-radius:6px;padding:8px;background:var(--surface)}
 .atcmp[hidden]{display:none}
 .atcmpgrid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
@@ -92,7 +94,7 @@
           <dt>Where</dt><dd>${esc(d.where)}</dd>
           <dt>What he emphasized</dt><dd>${esc(d.emphasized)}</dd>
           <dt>Does it change the concept?</dt><dd>${esc(d.changes_concept)}</dd></dl>`;
-        btn.onclick = () => { box.hidden = !box.hidden; btn.setAttribute('aria-expanded', String(!box.hidden)); };
+        btn.onclick = () => { box.hidden = !box.hidden; btn.setAttribute('aria-expanded', String(!box.hidden)); t.classList.toggle('cmp-open', !box.hidden); };
         t.appendChild(btn); t.appendChild(box);
         badge.textContent += c.primary === 'lecture' ? ' · lecture drawing differs from drug' : ' · one slide draws it differently';
       }
@@ -123,10 +125,14 @@
   }
 
   function watch() {
-    const view = document.getElementById('v-atlas');
-    if (!view) return;
-    enhance(view);
-    new MutationObserver(() => enhance(view)).observe(view, {childList: true});
+    try {
+      const view = document.getElementById && document.getElementById('v-atlas');
+      if (!view || typeof MutationObserver === 'undefined') return;   // not a real browser page
+      enhance(view);
+      new MutationObserver(() => { try { enhance(view); } catch (e) { console.error('Atlas controls:', e); } })
+        .observe(view, {childList: true});
+    } catch (e) { console.error('Atlas controls could not start; the Atlas itself is unaffected.', e); }
   }
+  if (typeof document.addEventListener !== 'function') return;
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', watch); else watch();
 })();

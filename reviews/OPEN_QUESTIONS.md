@@ -87,7 +87,10 @@ Other mismatches noted, no item affected: deck slide 23 cites "FOYE Chapt. 28, p
 - Pimecrolimus (DPAW slide 28) Cl drawn hashed (trans to OCH3); slide 32 and the drug have them cis.
 - Hydrocortisone and clobetasol propionate on DPAW slide 25 carry drawing errors at C20/C21; slides 23-24 used.
 - "Benzoyl radical" on DPAW slide 47 is drawn as the benzoyloxy radical; drawn as the slide shows.
-Question for Louis: keep the real-drug drawings (current), or draw exactly what the slide shows?
+Resolved 2026-11-06 (Louis's direction): both drawings, with Compare structures; lecture drawing primary where it is the only one, the correct lecture slide primary where the deck has one. Erythromycin (p.54) added after the verification pass.
 
 ## Sun exposure
 - On 10/29 Dr. Smith said "I won't get to this section on sun protection and sun relief until Tuesday after your exam" (T 583, about the drug chart); the syllabus puts sun exposure in Lecture 3 (Exam 1). The bank tags it Exam 1. Confirm if she says otherwise.
+
+## Atlas items needing verification
+- 5beta-dihydrocortisol and urocortisol (DPAW p.26): drawn but not spoken; the 11/03 recording ends mid-sentence on this slide. Shown with a "Needs verification" badge and kept out of questions.

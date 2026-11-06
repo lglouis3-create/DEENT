@@ -15,7 +15,14 @@
        "slide": 7,
        "tell": "The shaded ring holds the boron: crisaborole is a benzoxaborole, a boron-bearing soft drug (slide 7; T 683–689, 665–668). In PDE4 the boron binds Zn2+ and Mg2+, its chemical basis of drug action (slide 7; T 712–718).",
        "eg": "LogP 3 with accumulation in the dermis; t1/2 12 h (slide 7; T 690–697).",
-       "mark": "[B]1OCc2ccccc12"
+       "mark": "[B]1OCc2ccccc12",
+       "priority": "core",
+       "priority_reason": "He named crisaborole as an emphasis drug and taught its benzoxaborole (boron) class, soft-drug design, logP 3 and Zn/Mg coordination as its CBDA.",
+       "priority_source": "p.7; T 660-662, 665-668, 683-697, 712-718",
+       "verification": "verified-stereo",
+       "chembl_id": "CHEMBL484785",
+       "verification_note": "Full standard InChIKey match to the ChEMBL canonical SMILES.",
+       "exam": "Exam 1"
       },
       {
        "key": "crisaborole benzyl alcohol metabolite",
@@ -23,7 +30,13 @@
        "smiles": "N#Cc1ccc(Oc2ccc(O)c(CO)c2)cc1",
        "slide": 7,
        "tell": "Hydrolytic deboronation in the skin removes the boron without an enzyme and leaves the phenol and the CH2OH shaded here (slide 7; T 699–704, 723–728).",
-       "mark": "[CH2][OH].c[OH]"
+       "mark": "[CH2][OH].c[OH]",
+       "priority": "core",
+       "priority_reason": "Step-1 product of non-enzymatic hydrolytic deboronation; \"pay attention to what happens to it once it gets into the skin\".",
+       "priority_source": "p.7, p.9; T 697-704, 723-728",
+       "verification": "not-a-drug-record",
+       "verification_note": "Metabolite drawn on p.7 (deboronated benzyl alcohol). Exact-structure search (similarity 100) returned no ChEMBL record. Connectivity follows crisaborole with B-O ring opened: phenol + CH2OH, as drawn.",
+       "exam": "Exam 1"
       },
       {
        "key": "crisaborole benzoic acid metabolite",
@@ -31,7 +44,13 @@
        "smiles": "N#Cc1ccc(Oc2ccc(O)c(C(=O)O)c2)cc1",
        "slide": 7,
        "tell": "The CH2OH becomes the shaded carboxylic acid through two enzymes, alcohol dehydrogenase then aldehyde dehydrogenase (slide 7; T 705–709). Sulfation and glucuronidation (steps 3 and 4) follow (slide 9; T 767–777).",
-       "mark": "C(=O)[OH]"
+       "mark": "C(=O)[OH]",
+       "priority": "core",
+       "priority_reason": "Step-2 product: \"Not 3, not 4, not sips, 2 enzymes\" (ADH then ALDH); the Polleve-1 scheme builds on it.",
+       "priority_source": "p.7, p.9; T 705-711, 767-777",
+       "verification": "not-a-drug-record",
+       "verification_note": "Metabolite drawn on p.7 (step-2 carboxylic acid). No ChEMBL record by exact structure.",
+       "exam": "Exam 1"
       }
      ]
     },
@@ -45,7 +64,14 @@
        "slide": 8,
        "tell": "The shaded bicyclic ring is the pyrrolopyrimidine; compare it with upadacitinib's ring: the two are structurally different (slide 8; T 730–733). He said the class names themselves need not be memorized (T 730–732).",
        "eg": "T1/2 3 h; 3A4/2C9 substrate; some hydroxylated metabolites are active (slide 8; T 745–754).",
-       "mark": "c1ncnc2[nH]ccc12"
+       "mark": "c1ncnc2[nH]ccc12",
+       "priority": "core",
+       "priority_reason": "One of the two emphasized \"-tinib\" drugs; he taught that it is structurally different from upadacitinib, a 3A4 substrate, with active OH metabolites (class names themselves need not be memorized).",
+       "priority_source": "p.8; T 730-757",
+       "verification": "verified-stereo",
+       "chembl_id": "CHEMBL1789941",
+       "verification_note": "Full standard InChIKey match to the ChEMBL canonical SMILES.",
+       "exam": "Exam 1"
       },
       {
        "key": "upadacitinib",
@@ -54,7 +80,14 @@
        "slide": 8,
        "tell": "The shaded tricyclic ring is the imidazopyrrolopyridine, a different ring system from ruxolitinib's pyrrolopyrimidine (slide 8; T 730–733).",
        "eg": "T1/2 8–16 h; 3A4/2D6 substrate; no active metabolites (slide 8; T 745–754).",
-       "mark": "c1cnc2cnc3[nH]ccc3n12"
+       "mark": "c1cnc2cnc3[nH]ccc3n12",
+       "priority": "core",
+       "priority_reason": "Paired with ruxolitinib: different ring system, 3A4 substrate, no active metabolites.",
+       "priority_source": "p.8; T 730-757",
+       "verification": "verified-stereo",
+       "chembl_id": "CHEMBL3622821",
+       "verification_note": "Full standard InChIKey match to the ChEMBL canonical SMILES.",
+       "exam": "Exam 1"
       }
      ]
     }
@@ -73,7 +106,14 @@
        "name": "Cyclomethicone",
        "smiles": "C[Si]1(C)O[Si](C)(C)O[Si](C)(C)O[Si](C)(C)O[Si](C)(C)O1",
        "slide": 15,
-       "tell": "A ring of five Si–O units (\"a pentamer\"): cyclomethicone is the cyclic silicone, dimethicone the linear chain (slide 15; T 885–889). Silicone emollients are hypoallergenic and non-comedogenic (slide 15; T 882–884)."
+       "tell": "A ring of five Si–O units (\"a pentamer\"): cyclomethicone is the cyclic silicone, dimethicone the linear chain (slide 15; T 885–889). Silicone emollients are hypoallergenic and non-comedogenic (slide 15; T 882–884).",
+       "priority": "core",
+       "priority_reason": "He contrasted the silicone emollients: dimethicone linear, cyclomethicone cyclic (\"a pentamer\"); hypoallergenic, non-comedogenic.",
+       "priority_source": "p.15; T 882-889",
+       "verification": "verified-stereo",
+       "chembl_id": "CHEMBL1885178",
+       "verification_note": "Matches CHEMBL1885178, an unnamed record of decamethylcyclopentasiloxane (D5); the name \"cyclomethicone\" returns no ChEMBL record.",
+       "exam": "Exam 1"
       }
      ]
     },
@@ -86,7 +126,14 @@
        "smiles": "Oc1cccc2Cc3cccc(O)c3C(=O)c12",
        "slide": 17,
        "tell": "Three fused rings with a central ketone and two OH groups beside it: a hydroxyanthrone (slide 17; T 920). It autoxidizes without enzymes to the anthranyl radical and superoxide anion, its chemical basis of drug action (slide 17; T 928–942).",
-       "eg": "The deck gives logP = 4 (slide 17); he warned not to apply too much because it will go systemic (T 927–928)."
+       "eg": "The deck gives logP = 4 (slide 17); he warned not to apply too much because it will go systemic (T 927–928).",
+       "priority": "core",
+       "priority_reason": "Hydroxyanthrone class and its CBDA (spontaneous autoxidation to anthranyl radical + superoxide), tested in Polleve-2.",
+       "priority_source": "p.17, p.19; T 918-953, 977-980",
+       "verification": "verified-stereo",
+       "chembl_id": "CHEMBL46469",
+       "verification_note": "Full standard InChIKey match to the ChEMBL canonical SMILES.",
+       "exam": "Exam 1"
       },
       {
        "key": "methoxsalen",
@@ -95,7 +142,14 @@
        "slide": 18,
        "tell": "Shaded: a furan ring fused to a coumarin, so a furanocoumarin, with the methoxy at C-8 (slide 18; T 958–960). With UVA it covalently binds and crosslinks DNA pyrimidine bases; he said it is the only molecule he would mention with this chemical basis of action (slide 18; T 963–967).",
        "eg": "Partially inhibits CYP3A4 (slide 18; T 962–963). Unlike anthralin, its action does not involve autoxidation (slide 19; T 977–980).",
-       "mark": "c1coc2c1cc1ccc(=O)oc1c2"
+       "mark": "c1coc2c1cc1ccc(=O)oc1c2",
+       "priority": "core",
+       "priority_reason": "Furanocoumarin class; the only drug whose CBDA is DNA intercalation/crosslinking with UVA; partial 3A4 inhibitor.",
+       "priority_source": "p.18; T 958-976",
+       "verification": "verified-stereo",
+       "chembl_id": "CHEMBL416",
+       "verification_note": "Full standard InChIKey match to the ChEMBL canonical SMILES.",
+       "exam": "Exam 1"
       }
      ]
     }
@@ -115,7 +169,13 @@
        "smiles": "CC(C)CCCC(C)C1CCC2C3CCC4CCCCC4(C)C3CCC12C",
        "slide": 20,
        "tell": "Numbering runs 1 to 10 as a loop around rings A and B, 11 to 17 as a snake over rings C and D, then 18 (methyl on C-13) and 19 (methyl on C-10), then 20 onward on the side chain at C-17 (slide 20; T 1003–1017, 1084–1099).",
-       "eg": "\"If you know where your 1 is, you know where your 11 is, and your 17, you're good to go\" (T 1098–1099)."
+       "eg": "\"If you know where your 1 is, you know where your 11 is, and your 17, you're good to go\" (T 1098–1099).",
+       "priority": "core",
+       "priority_reason": "\"Structure ... stereochemistry ... numbering. So three things\"; \"practice that\".",
+       "priority_source": "p.20-22; T 987-1017, 1084-1099",
+       "verification": "not-a-drug-record",
+       "verification_note": "Teaching skeleton: the p.20 numbering drawing (C1-C27), saturated cholestane connectivity with no stereo, as the slide draws it. Not a drug record.",
+       "exam": "Exam 1"
       },
       {
        "key": "glucocorticoid sar",
@@ -124,7 +184,14 @@
        "slide": 24,
        "tell": "Shaded are the four features that increase anti-inflammatory activity: the C1–C2 double bond, 6α-halogen, 9α-halogen and 11β-OH (slide 20; T 1020–1073). Fluticasone propionate (slide 24) carries all four.",
        "mark": "[CH;R]=[CH;R].[F][CH;R].[F][CX4H0;R].[OH][CH;R]",
-       "note": "The SAR drawing on slide 20 uses X for the halogens; fluticasone propionate from slide 24 is used here as a molecule that has all four features."
+       "note": "The SAR drawing on slide 20 uses X for the halogens; fluticasone propionate from slide 24 is used here as a molecule that has all four features.",
+       "priority": "core",
+       "priority_reason": "\"I'm limiting you to 4 things\": C1-C2 double bond, 6alpha-X, 9alpha-X, 11beta-OH (tile uses fluticasone propionate to carry all four).",
+       "priority_source": "p.20, p.24; T 1020-1073",
+       "verification": "verified-stereo",
+       "chembl_id": "CHEMBL1473",
+       "verification_note": "Same molecule as fluticasone propionate; full match CHEMBL1473.",
+       "exam": "Exam 1"
       }
      ]
     },
@@ -139,7 +206,28 @@
        "tell": "The reference molecule (parent drug) for glucocorticoid activity (slide 24; T 1140–1145). Shaded is the 11β-OH that 11β-HSD oxidizes to cortisone and back: hydrocortisone \"ping pongs\" between the two (slide 26; T 1190–1196).",
        "eg": "It binds the glucocorticoid receptor through 6 hydrogen bonds (slide 23; T 1133–1139). LogP about 1.5; t1/2 1–2 h due to metabolism (slide 26; T 1182–1188).",
        "mark": "[CX4H1;R][OH]",
-       "note": "Slide 25 draws hydrocortisone with HO on C-20 in place of the C-20 ketone; slides 23, 24 and 26 draw the C-20 ketone, which is used here."
+       "note": "Slide 25 draws hydrocortisone with HO on C-20 in place of the C-20 ketone; slides 23, 24 and 26 draw the C-20 ketone, which is used here.",
+       "priority": "core",
+       "priority_reason": "Reference (parent) molecule for glucocorticoid activity; ADME and the 11beta-HSD \"ping pong\" he asked students to pay attention to.",
+       "priority_source": "p.24-26; T 1140-1145, 1181-1196; T@790",
+       "verification": "verified-stereo",
+       "chembl_id": "CHEMBL389621",
+       "verification_note": "Atlas (C20 ketone, as on p.24 and p.26) matches ChEMBL in full. The p.25 drawing differs (C20 alcohol): see discrepancies.",
+       "exam": "Exam 1",
+       "lecture": {
+        "smiles": "C[C@]12CCC(=O)C=C1CC[C@@H]1[C@@H]2[C@@H](O)C[C@@]2(C)[C@H]1CC[C@]2(O)C(O)CO",
+        "diff": "[CX4H1;!R]([OX2H1])[CH2][OX2H1]",
+        "slide": 25,
+        "primary": false
+       },
+       "discrepancy": {
+        "lecture_shows": "On DPAW p. 25, C20 is drawn as CH–OH (an alcohol).",
+        "verified_has": "A C20 ketone (C=O), as his slides on DPAW p. 24 and p. 26 draw it.",
+        "where": "The side-chain carbon next to C21.",
+        "emphasized": "Hydrocortisone is the reference molecule; on p. 25 he pointed to the changes made to it (C1=C2, 9α-F, 16-CH₃, 17-propionate): \"not metabolism\" (T 1140–1145, 1175–1179).",
+        "changes_concept": "No. C20 is not one of the changes he marked.",
+        "verified_diff": "[CX3;!R](=O)[CH2][OX2H1]"
+       }
       },
       {
        "key": "cortisone",
@@ -148,14 +236,28 @@
        "slide": 26,
        "tell": "Same skeleton as hydrocortisone with a ketone (shaded) at C-11 in place of the 11β-OH; inactive, and formed and reversed by 11β-HSD (slide 26; T 1190–1196; 11/04 T@790).",
        "eg": "Cortisone and urocortisol are excreted in urine (slide 26).",
-       "mark": "[CX4H1;R][C;R](=O)[CH2;R]"
+       "mark": "[CX4H1;R][C;R](=O)[CH2;R]",
+       "priority": "core",
+       "priority_reason": "The other half of the 11beta-HSD \"ping pong\" (inactive 11-keto metabolite).",
+       "priority_source": "p.26; T 1190-1196; T@722-@925",
+       "verification": "verified-stereo",
+       "chembl_id": "CHEMBL1499",
+       "verification_note": "CHEMBL1499 (pref_name CORTISONE).",
+       "exam": "Exam 1"
       },
       {
        "key": "5beta-dihydrocortisol",
        "name": "5β-Dihydrocortisol",
        "smiles": "C[C@]12CCC(=O)C[C@H]1CC[C@@H]1[C@@H]2[C@@H](O)C[C@@]2(C)[C@H]1CC[C@]2(O)C(=O)CO",
        "slide": 26,
-       "tell": "Ring A reduced by 5β-reductase: the C4=C5 double bond is gone and the H at the shaded C-5 is beta; inactive (slide 26)."
+       "tell": "Ring A reduced by 5β-reductase: the C4=C5 double bond is gone and the H at the shaded C-5 is beta; inactive (slide 26).",
+       "priority": "verify",
+       "priority_reason": "On the p.26 scheme (highlighted box) but never spoken: the 11/03 recording ends mid-sentence at L1196 on this slide and 11/04 resumed only on 11beta-HSD. Lecture status cannot be confirmed.",
+       "priority_source": "p.26; T 1196 (recording ends); T@722-@985",
+       "verification": "verified-connectivity",
+       "chembl_id": "CHEMBL1079111",
+       "verification_note": "First InChIKey block matches CHEMBL1079111 (unnamed). That record is the 5alpha epimer (C5 S: H5 anti to C19 in a 3D embedding); the Atlas SMILES has C5 R with H5 cis to C19 = 5beta, as the name and the p.26 drawing require. The other 7 centres match. Consistent with urocortisol, whose 5beta configuration matches CHEMBL1908047 in full.",
+       "exam": "Exam 1"
       },
       {
        "key": "urocortisol",
@@ -163,7 +265,14 @@
        "smiles": "C[C@]12CC[C@@H](O)C[C@H]1CC[C@@H]1[C@@H]2[C@@H](O)C[C@@]2(C)[C@H]1CC[C@]2(O)C(=O)CO",
        "slide": 26,
        "tell": "3α-HSD reduces the C-3 ketone of 5β-dihydrocortisol to the shaded 3α-OH; inactive and excreted in urine (slide 26).",
-       "mark": "[CH;R]([OH])([CH2;R])[CH2;R]"
+       "mark": "[CH;R]([OH])([CH2;R])[CH2;R]",
+       "priority": "verify",
+       "priority_reason": "Same as 5beta-dihydrocortisol: slide-only 3alpha-HSD product; no spoken coverage in either recording.",
+       "priority_source": "p.26; T 1196; T@722-@985",
+       "verification": "verified-stereo",
+       "chembl_id": "CHEMBL1908047",
+       "verification_note": "Matches CHEMBL1908047 in full (unnamed); 3alpha-OH confirmed by 3D embedding (H3 on the C19 face), 5beta as above; = tetrahydrocortisol.",
+       "exam": "Exam 1"
       }
      ]
     },
@@ -177,7 +286,14 @@
        "slide": 24,
        "tell": "Shown in class; he said these derivative structures need not be memorized (T 1152–1154). Shaded: the two propionate esters, at C-17 and C-21; it also has the C1–C2 double bond, 9α-F and 16β-methyl (slide 24).",
        "eg": "Listed as potent, 0.05% (slide 25).",
-       "mark": "CCC(=O)O"
+       "mark": "CCC(=O)O",
+       "priority": "reference",
+       "priority_reason": "He said the hydrocortisone derivatives are not for memorizing (\"It's now [not] for you to memorize this\"). Examinable concept: they are structural derivatives of hydrocortisone and structure changes lipophilicity/potency.",
+       "priority_source": "p.24-25; T 1144-1154",
+       "verification": "verified-stereo",
+       "chembl_id": "CHEMBL1200384",
+       "verification_note": "Full standard InChIKey match to the ChEMBL canonical SMILES.",
+       "exam": "Exam 1"
       },
       {
        "key": "clobetasol propionate",
@@ -187,7 +303,28 @@
        "tell": "Shown in class; he said these derivative structures need not be memorized (T 1152–1154). Compared with hydrocortisone it adds the C1–C2 double bond, 9α-F, 16β-methyl, a 17-propionate and a 21-Cl (shaded); these structural changes, not metabolism, move it from low to high potency (slide 25; T 1175–1179).",
        "eg": "Listed as super-potent, 0.05% (slide 25).",
        "mark": "CCC(=O)O.[Cl]",
-       "note": "Slide 25 draws clobetasol propionate with OH on C-21; slide 24 draws the 21-Cl of the marketed drug, which is used here."
+       "note": "Slide 25 draws clobetasol propionate with OH on C-21; slide 24 draws the 21-Cl of the marketed drug, which is used here.",
+       "priority": "core",
+       "priority_reason": "Besides being a p.24 derivative, it is the worked example on p.25 he walked through: hydrocortisone to clobetasol propionate by added groups and the C1-C2 double bond raises potency (\"this is not metabolism\").",
+       "priority_source": "p.25; T 1175-1179 (derivatives not memorized: T 1152-1154)",
+       "verification": "verified-stereo",
+       "chembl_id": "CHEMBL1159650",
+       "verification_note": "Atlas (21-Cl) matches ChEMBL in full. The p.25 drawing differs (21-OH): see discrepancies.",
+       "exam": "Exam 1",
+       "lecture": {
+        "smiles": "CCC(=O)O[C@]1(C(=O)CO)[C@@H](C)C[C@H]2[C@@H]3CCC4=CC(=O)C=C[C@]4(C)[C@@]3(F)[C@@H](O)C[C@@]21C",
+        "diff": "[CX3;!R](=O)[CH2][OX2H1]",
+        "slide": 25,
+        "primary": false
+       },
+       "discrepancy": {
+        "lecture_shows": "On DPAW p. 25, C21 carries an OH (that molecule is betamethasone 17-propionate).",
+        "verified_has": "Cl on C21, as his derivatives slide (DPAW p. 24) draws it.",
+        "where": "The end of the side chain (C21).",
+        "emphasized": "The added groups and the C1=C2 bond raise potency from hydrocortisone to clobetasol (T 1175–1179). C21 is not highlighted.",
+        "changes_concept": "No. The SAR changes he taught are the same in both drawings.",
+        "verified_diff": "[CX3;!R](=O)[CH2]Cl"
+       }
       },
       {
        "key": "desonide",
@@ -195,7 +332,14 @@
        "smiles": "CC1(C)O[C@@H]2C[C@H]3[C@@H]4CCC5=CC(=O)C=C[C@]5(C)[C@H]4[C@@H](O)C[C@]3(C)[C@]2(C(=O)CO)O1",
        "slide": 24,
        "tell": "Shown in class; he said these derivative structures need not be memorized (T 1152–1154). The shaded ring is a 16α,17α-acetonide (a cyclic acetal with acetone); no fluorine (slide 24).",
-       "mark": "CC1(C)OC~CO1"
+       "mark": "CC1(C)OC~CO1",
+       "priority": "reference",
+       "priority_reason": "Hydrocortisone derivative not to be memorized; concept (derivatives of the parent) stays examinable.",
+       "priority_source": "p.24; T 1151-1154",
+       "verification": "verified-stereo",
+       "chembl_id": "CHEMBL1201109",
+       "verification_note": "Full standard InChIKey match to the ChEMBL canonical SMILES.",
+       "exam": "Exam 1"
       },
       {
        "key": "fluticasone propionate",
@@ -203,7 +347,14 @@
        "smiles": "CCC(=O)O[C@]1(C(=O)SCF)[C@H](C)C[C@H]2[C@@H]3C[C@H](F)C4=CC(=O)C=C[C@]4(C)[C@@]3(F)[C@@H](O)C[C@@]21C",
        "slide": 24,
        "tell": "Shown in class; he said these derivative structures need not be memorized (T 1152–1154). Shaded: 6α-F and 9α-F, and the 17β carbonyl carries S–CH2F (a thioester) (slide 24).",
-       "mark": "[F].C(=O)SCF"
+       "mark": "[F].C(=O)SCF",
+       "priority": "reference",
+       "priority_reason": "Hydrocortisone derivative not to be memorized; it also carries all four SAR features (see the SAR tile).",
+       "priority_source": "p.24; T 1151-1154",
+       "verification": "verified-stereo",
+       "chembl_id": "CHEMBL1473",
+       "verification_note": "Full standard InChIKey match to the ChEMBL canonical SMILES.",
+       "exam": "Exam 1"
       },
       {
        "key": "triamcinolone acetonide",
@@ -211,7 +362,14 @@
        "smiles": "CC1(C)O[C@@H]2C[C@H]3[C@@H]4CCC5=CC(=O)C=C[C@]5(C)[C@@]4(F)[C@@H](O)C[C@]3(C)[C@]2(C(=O)CO)O1",
        "slide": 24,
        "tell": "Shown in class; he said these derivative structures need not be memorized (T 1152–1154). Desonide's 16α,17α-acetonide (shaded) plus a 9α-F (slide 24).",
-       "mark": "CC1(C)OC~CO1.[F]"
+       "mark": "CC1(C)OC~CO1.[F]",
+       "priority": "reference",
+       "priority_reason": "Hydrocortisone derivative not to be memorized; concept stays examinable.",
+       "priority_source": "p.24; T 1151-1154",
+       "verification": "verified-stereo",
+       "chembl_id": "CHEMBL1504",
+       "verification_note": "Full standard InChIKey match to the ChEMBL canonical SMILES.",
+       "exam": "Exam 1"
       }
      ]
     }
@@ -232,7 +390,14 @@
        "slide": 27,
        "tell": "An intact steroid with the shaded 5,7-diene in ring B; the first step opens ring B, and he said light is involved (slide 27; 11/04 T@2989–@3430, @4330–@4410).",
        "eg": "The 2-point take-home question asks for the reactions, organs and enzymes of these steps; see the vitamin D3 biosynthesis reading linked on slide 2 (slide 27; 11/04 T@3530–@3660, @4065–@4160).",
-       "mark": "[C;R]=[CH;R][CH;R]=[C;R]"
+       "mark": "[C;R]=[CH;R][CH;R]=[C;R]",
+       "priority": "core",
+       "priority_reason": "Part of the vitamin D3 scheme behind the announced 2-point take-home question: identify the reaction, organ and enzyme of a step (\"light is going to be involved\" in the first).",
+       "priority_source": "p.27; T@985-@1200, @2989-@3660, @4065-@4160, @4371",
+       "verification": "verified-stereo",
+       "chembl_id": "CHEMBL1797131",
+       "verification_note": "Matches CHEMBL1797131 in full (unnamed record); a name search returns cholecalciferol, which lists \"7-dehydrocholesterol, activated\" as a synonym.",
+       "exam": "Exam 1"
       },
       {
        "key": "cholecalciferol",
@@ -240,7 +405,14 @@
        "smiles": "C=C1CC[C@H](O)C/C1=C/C=C1\\CCC[C@]2(C)[C@@H]([C@H](C)CCCC(C)C)CC[C@@H]12",
        "slide": 27,
        "tell": "Ring B is open (a secosteroid): the shaded triene with the exocyclic CH2 replaces ring B of 7-dehydrocholesterol (slide 27; 11/04 T@2989–@3430).",
-       "mark": "[CH2]=[C;R][C;R]=[CH][CH]=[C;R]"
+       "mark": "[CH2]=[C;R][C;R]=[CH][CH]=[C;R]",
+       "priority": "core",
+       "priority_reason": "Part of the vitamin D3 scheme behind the announced 2-point take-home question: identify the reaction, organ and enzyme of a step (\"light is going to be involved\" in the first).",
+       "priority_source": "p.27; T@985-@1200, @2989-@3660, @4065-@4160, @4371",
+       "verification": "verified-stereo",
+       "chembl_id": "CHEMBL1042",
+       "verification_note": "Full standard InChIKey match to the ChEMBL canonical SMILES.",
+       "exam": "Exam 1"
       },
       {
        "key": "25-hydroxycholecalciferol",
@@ -248,7 +420,14 @@
        "smiles": "C=C1CC[C@H](O)C/C1=C/C=C1\\CCC[C@]2(C)[C@@H]([C@H](C)CCCC(C)(C)O)CC[C@@H]12",
        "slide": 27,
        "tell": "Cholecalciferol with the shaded OH at C-25 of the side chain; the slide labels it the inactive circulating vitamin D3 (slide 27).",
-       "mark": "[CX4]([CH3])([CH3])[OH]"
+       "mark": "[CX4]([CH3])([CH3])[OH]",
+       "priority": "core",
+       "priority_reason": "Part of the vitamin D3 scheme behind the announced 2-point take-home question: identify the reaction, organ and enzyme of a step (\"light is going to be involved\" in the first).",
+       "priority_source": "p.27; T@985-@1200, @2989-@3660, @4065-@4160, @4371",
+       "verification": "verified-stereo",
+       "chembl_id": "CHEMBL1040",
+       "verification_note": "Full standard InChIKey match to the ChEMBL canonical SMILES.",
+       "exam": "Exam 1"
       },
       {
        "key": "calcitriol",
@@ -257,7 +436,14 @@
        "slide": 27,
        "tell": "The active vitamin D3: shaded are the two OH groups added to cholecalciferol, at C-1 (by 1-α-hydroxylase) and C-25 (slide 27). Calcitriol (Rocaltrol) is a secosteroid (slide 27).",
        "eg": "Both calcitriol and calcipotriene increase calcium absorption, so hypercalcemia limits both (11/04 T@2373–@2830).",
-       "mark": "[CX4]([CH3])([CH3])[OH].[OH][CH;R][C;R]=[CH2]"
+       "mark": "[CX4]([CH3])([CH3])[OH].[OH][CH;R][C;R]=[CH2]",
+       "priority": "core",
+       "priority_reason": "Part of the vitamin D3 scheme behind the announced 2-point take-home question: identify the reaction, organ and enzyme of a step (\"light is going to be involved\" in the first).",
+       "priority_source": "p.27; T@985-@1200, @2989-@3660, @4065-@4160, @4371",
+       "verification": "verified-stereo",
+       "chembl_id": "CHEMBL846",
+       "verification_note": "Full standard InChIKey match to the ChEMBL canonical SMILES.",
+       "exam": "Exam 1"
       }
      ]
     },
@@ -271,7 +457,14 @@
        "slide": 27,
        "tell": "Calcitriol's secosteroid core and 1,3-diol with a different side chain: a trans double bond, an OH and the shaded cyclopropyl ring (slide 27). It was an attempt to lower calcium absorption that did not succeed (11/04 T@2373–@2830).",
        "mark": "[OH][CH]C1CC1",
-       "note": "The deck labels it \"Calciprotriene\" (slide 27); the drug name is calcipotriene."
+       "note": "The deck labels it \"Calciprotriene\" (slide 27); the drug name is calcipotriene.",
+       "priority": "core",
+       "priority_reason": "Secosteroid analog; he taught that the attempt to separate it from calcium absorption failed, so hypercalcemia limits both calcipotriene and calcitriol.",
+       "priority_source": "p.27; T@1505-@2830 (hypercalcemia @2758)",
+       "verification": "verified-stereo",
+       "chembl_id": "CHEMBL1200666",
+       "verification_note": "Full standard InChIKey match to the ChEMBL canonical SMILES.",
+       "exam": "Exam 1"
       }
      ]
     }
@@ -293,7 +486,28 @@
        "tell": "Shaded are its two differences from tacrolimus: Cl on the cyclohexyl ring (tacrolimus: OH) and an ethyl group (tacrolimus: allyl) (slide 28; 11/04 T@4534–@4700). Higher non-specific skin protein binding keeps it in the skin, so low systemic ADRs (slide 28; 11/04 T@4931–@5300).",
        "eg": "cLogP 6.0 (slide 28).",
        "mark": "[Cl].[CH3][CH2;!R][CH;R]",
-       "note": "Checked against the Polleve-3 drawing (slide 32), which draws Cl and OCH3 cis as in pimecrolimus. Slide 28 draws the Cl hashed like tacrolimus's OH (trans to OCH3); that differs from the marketed drug, so the slide 32 configuration is used."
+       "note": "Checked against the Polleve-3 drawing (slide 32), which draws Cl and OCH3 cis as in pimecrolimus. Slide 28 draws the Cl hashed like tacrolimus's OH (trans to OCH3); that differs from the marketed drug, so the slide 32 configuration is used.",
+       "priority": "core",
+       "priority_reason": "He named the structural differences from tacrolimus (Cl vs OH, ethyl vs allyl) and the main take-away: differ in skin permeation (high skin protein binding).",
+       "priority_source": "p.28, p.32; T@4649-@4734, @4931-@5300, @6022",
+       "verification": "verified-stereo",
+       "chembl_id": "CHEMBL1200686",
+       "verification_note": "Atlas (Cl cis to OCH3, p.32) matches ChEMBL in full. The p.28 drawing inverts the Cl centre: see discrepancies.",
+       "exam": "Exam 1",
+       "lecture": {
+        "smiles": "CC[C@@H]1/C=C(\\C)C[C@H](C)C[C@H](OC)[C@H]2O[C@@](O)(C(=O)C(=O)N3CCCC[C@H]3C(=O)O[C@H](/C(C)=C/[C@@H]3CC[C@@H](Cl)[C@H](OC)C3)[C@H](C)[C@@H](O)CC1=O)[C@H](C)C[C@@H]2OC",
+        "diff": "[Cl][CH1;R1]",
+        "slide": 28,
+        "primary": false
+       },
+       "discrepancy": {
+        "lecture_shows": "On DPAW p. 28 the Cl is drawn on the opposite face to the OCH₃ (trans), the same way as tacrolimus’s OH beside it.",
+        "verified_has": "Cl on the same face as the OCH₃ (cis), as his Polleve-3 slide (DPAW p. 32) draws it.",
+        "where": "The C–Cl wedge on the cyclohexyl ring.",
+        "emphasized": "Pimecrolimus and tacrolimus differ at Cl vs OH and ethyl vs allyl, and in skin permeation (T@4649–@4734, @6022). He did not discuss stereochemistry.",
+        "changes_concept": "No. The Cl-for-OH swap he taught is the same.",
+        "verified_diff": "[Cl][CH1;R1]"
+       }
       },
       {
        "key": "tacrolimus",
@@ -302,7 +516,14 @@
        "slide": 28,
        "tell": "Shaded are the OH on the cyclohexyl ring and the allyl group, where it differs from pimecrolimus (slide 28; 11/04 T@4534–@4700). Low skin protein binding lets it reach the systemic circulation (slide 28; 11/04 T@5414).",
        "eg": "cLogP 5.8 (slide 28).",
-       "mark": "[OH][CH;R][CH;R]O[CH3].[CH2]=[CH][CH2]"
+       "mark": "[OH][CH;R][CH;R]O[CH3].[CH2]=[CH][CH2]",
+       "priority": "core",
+       "priority_reason": "Paired comparison with pimecrolimus: OH and allyl; low skin binding so it can go systemic.",
+       "priority_source": "p.28; T@4649-@4734, @5414-@5700, @6022",
+       "verification": "verified-stereo",
+       "chembl_id": "CHEMBL269732",
+       "verification_note": "Full standard InChIKey match to the ChEMBL canonical SMILES.",
+       "exam": "Exam 1"
       }
      ]
     }
@@ -311,7 +532,7 @@
   {
    "id": "a-psoriasis-systemic",
    "title": "Psoriasis: retinoids and systemic agents",
-   "intro": "Retinoids (slide 29) and the non-biological systemic agents for psoriasis (slides 30–35; 11/04 T@6344–@15120).",
+   "intro": "The non-biological systemic agents for psoriasis (slides 30–35; 11/04 T@6344–@15120). The slide 29 retinoids (tazarotene, acitretin) are on the retinoid board.",
    "sections": [
     {
      "label": "Methotrexate",
@@ -324,7 +545,14 @@
        "tell": "The shaded pteridine ring is why it is classed as a pteridine (slide 30; 11/04 T@8238). SAR: pteridine ring, p-aminobenzoic acid and glutamic acid; the pteridine must stay aromatic, alkylating its ring amines lowers activity, and the N-CH3 is essential (slide 31; 11/04 T@10109–@10851).",
        "eg": "It competitively inhibits dihydrofolate reductase, binding more tightly than folic acid (slide 30; 11/04 T@8545–@9300).",
        "mark": "c1cnc2ncncc2n1",
-       "note": "The slides draw no stereochemistry at the glutamate carbon, so none is given here."
+       "note": "The slides draw no stereochemistry at the glutamate carbon, so none is given here.",
+       "priority": "core",
+       "priority_reason": "Pteridine class; differs from folic acid only by \"this methyl group and that amine\"; competitive DHFR inhibitor; SAR on p.31.",
+       "priority_source": "p.30-31; T@8269, @8732, @9220, @10109-@10851",
+       "verification": "verified-connectivity",
+       "chembl_id": "CHEMBL34259",
+       "verification_note": "Atlas leaves the glutamate C-alpha unspecified (slides draw none); ChEMBL is L (S). Only stereo block differs.",
+       "exam": "Exam 1"
       },
       {
        "key": "folic acid",
@@ -333,7 +561,14 @@
        "slide": 30,
        "tell": "DHFR's substrate, drawn beside methotrexate: shaded are where they differ, OH (MTX: NH2) on the pteridine and N–H (MTX: N–CH3) (slide 31; 11/04 T@8545–@9300).",
        "mark": "c[OH].[NH](c)[CH2]",
-       "note": "Drawn as on the slides, with OH at C-4 of the pteridine."
+       "note": "Drawn as on the slides, with OH at C-4 of the pteridine.",
+       "priority": "core",
+       "priority_reason": "The comparator he walked through against methotrexate (N-CH3 and NH2 vs OH).",
+       "priority_source": "p.30; T@8545-@8779",
+       "verification": "verified-connectivity",
+       "chembl_id": "CHEMBL1622",
+       "verification_note": "Atlas leaves the glutamate C-alpha unspecified and draws the 4-OH tautomer as the slides do; ChEMBL is L (S) and 4-oxo. Standard InChI folds the tautomer; only the glutamate stereo differs.",
+       "exam": "Exam 1"
       },
       {
        "key": "tetrahydrofolic acid",
@@ -341,7 +576,14 @@
        "smiles": "Nc1nc(O)c2c(n1)NCC(CNc1ccc(C(=O)NC(CCC(=O)O)C(=O)O)cc1)N2",
        "slide": 30,
        "tell": "Folate reduction by dihydrofolate reductase saturates the shaded ring; the product is an essential cofactor for DNA synthesis (slide 30; 11/04 T@8545–@9300).",
-       "mark": "[NH;R][CH;R][CH2;R][NH;R]"
+       "mark": "[NH;R][CH;R][CH2;R][NH;R]",
+       "priority": "reference",
+       "priority_reason": "Shown as the DHFR product; he said folic acid is processed to this essential cofactor. Examinable concept: DHFR reduces folate to THF, which MTX blocks; the structure itself was not discussed.",
+       "priority_source": "p.30; T@8874-@8960",
+       "verification": "verified-connectivity",
+       "chembl_id": "CHEMBL2021342",
+       "verification_note": "CHEMBL2021342 (unnamed) has L-glutamate and C6 unspecified; Atlas has both unspecified (slide draws none). Only the glutamate centre differs.",
+       "exam": "Exam 1"
       }
      ]
     },
@@ -354,7 +596,14 @@
        "smiles": "C/C=C/C[C@@H](C)[C@@H](O)[C@H]1C(=O)N[C@@H](CC)C(=O)N(C)CC(=O)N(C)[C@@H](CC(C)C)C(=O)N[C@@H](C(C)C)C(=O)N(C)[C@@H](CC(C)C)C(=O)N[C@@H](C)C(=O)N[C@H](C)C(=O)N(C)[C@@H](CC(C)C)C(=O)N(C)[C@@H](CC(C)C)C(=O)N(C)[C@@H](C(C)C)C(=O)N1C",
        "slide": 33,
        "tell": "An 11 amino acid cyclic peptide; its amide bonds in a ring make it a cyclic lactam (slide 33; 11/04 T@12014–@12200). A \"prodrug\" activated by complexation with cyclophilin, not by metabolism (slide 33; 11/04 T@12289–@12500).",
-       "eg": "PO bioavailability about 30% from first-pass CYP3A4 metabolism; grapefruit juice raises its blood levels (slide 33; 11/04 T@12824–@13690)."
+       "eg": "PO bioavailability about 30% from first-pass CYP3A4 metabolism; grapefruit juice raises its blood levels (slide 33; 11/04 T@12824–@13690).",
+       "priority": "core",
+       "priority_reason": "11-amino-acid cyclic peptide = cyclic lactam; activated by complexation; 30% F from 3A4 first pass; grapefruit-juice question.",
+       "priority_source": "p.33; T@12000-@12254, @13190-@13550",
+       "verification": "verified-stereo",
+       "chembl_id": "CHEMBL160",
+       "verification_note": "Full standard InChIKey match to the ChEMBL canonical SMILES.",
+       "exam": "Exam 1"
       },
       {
        "key": "apremilast",
@@ -362,7 +611,14 @@
        "smiles": "CCOc1cc([C@@H](CS(C)(=O)=O)N2C(=O)c3cccc(NC(C)=O)c3C2=O)ccc1OC",
        "slide": 34,
        "tell": "The shaded ring system is the isoindoline (slide 34). He stressed its reliance on CYP3A4: O-demethylation to an OH metabolite, then O-glucuronidation (slide 34; 11/04 T@13908–@14319).",
-       "mark": "c12ccccc1C(=O)NC2=O"
+       "mark": "c12ccccc1C(=O)NC2=O",
+       "priority": "core",
+       "priority_reason": "Isoindoline on the slide; his stated take-away is 3A4 reliance via O-demethylation then O-glucuronidation, both readable on the structure.",
+       "priority_source": "p.34; T@13908-@14319",
+       "verification": "verified-stereo",
+       "chembl_id": "CHEMBL514800",
+       "verification_note": "Full standard InChIKey match to the ChEMBL canonical SMILES.",
+       "exam": "Exam 1"
       },
       {
        "key": "tofacitinib",
@@ -371,7 +627,14 @@
        "slide": 35,
        "tell": "The shaded pyrrolopyrimidine is the same ring as ruxolitinib's; it is a JAK inhibitor like the eczema \"-tinibs\" (slide 35; 11/04 T@14505–@14700).",
        "eg": "70% metabolized by CYP3A4; caution with 3A4 inhibitors and inducers (slide 35; 11/04 T@14700–@15120).",
-       "mark": "c1ncnc2[nH]ccc12"
+       "mark": "c1ncnc2[nH]ccc12",
+       "priority": "core",
+       "priority_reason": "Pyrrolopyrimidine like ruxolitinib; 3A4-dependent; avoid 3A4 inhibitors/inducers.",
+       "priority_source": "p.35; T@14505-@15120",
+       "verification": "verified-stereo",
+       "chembl_id": "CHEMBL221959",
+       "verification_note": "Full standard InChIKey match to the ChEMBL canonical SMILES.",
+       "exam": "Exam 1"
       }
      ]
     }
@@ -391,7 +654,14 @@
        "smiles": "CC[C@@H]1/C=C(\\C)C[C@H](C)C[C@H](OC)[C@H]2O[C@@](O)(C(=O)C(=O)N3CCCC[C@H]3C(=O)O[C@H](/C(C)=C/[C@@H]3CC[C@H](Cl)[C@H](OC)C3)[C@H](C)[C@@H](O)CC1=O)[C@H](C)C[C@@H]2OC",
        "slide": 32,
        "tell": "The shaded ester sits inside the macrocycle, so this limus drug is classed as a lactone; it is not a steroid (slide 32; 11/04 T@11453–@11720).",
-       "mark": "[C;R](=O)[O;R]"
+       "mark": "[C;R](=O)[O;R]",
+       "priority": "core",
+       "priority_reason": "Polleve-3: classify the limus by the circled cyclic ester = lactone (\"It will come up\").",
+       "priority_source": "p.32; T@6292, @11280-@11720",
+       "verification": "verified-stereo",
+       "chembl_id": "CHEMBL1200686",
+       "verification_note": "Same molecule as the pimecrolimus tile; full match to CHEMBL1200686.",
+       "exam": "Exam 1"
       },
       {
        "key": "lactam",
@@ -399,7 +669,14 @@
        "smiles": "C/C=C/C[C@@H](C)[C@@H](O)[C@H]1C(=O)N[C@@H](CC)C(=O)N(C)CC(=O)N(C)[C@@H](CC(C)C)C(=O)N[C@@H](C(C)C)C(=O)N(C)[C@@H](CC(C)C)C(=O)N[C@@H](C)C(=O)N[C@H](C)C(=O)N(C)[C@@H](CC(C)C)C(=O)N(C)[C@@H](CC(C)C)C(=O)N(C)[C@@H](C(C)C)C(=O)N1C",
        "slide": 33,
        "tell": "Every shaded amide bond lies in the ring of this cyclic peptide, so it can be described as a cyclic lactam (slide 33; 11/04 T@12014–@12200).",
-       "mark": "[C;R](=O)[N;R]"
+       "mark": "[C;R](=O)[N;R]",
+       "priority": "core",
+       "priority_reason": "He asked the room: the cyclic peptide is \"a lactam ... cyclic lactam too\".",
+       "priority_source": "p.33; T@12150-@12254",
+       "verification": "verified-stereo",
+       "chembl_id": "CHEMBL160",
+       "verification_note": "Same molecule as cyclosporine; full match CHEMBL160.",
+       "exam": "Exam 1"
       }
      ]
     }
@@ -420,7 +697,14 @@
        "slide": 43,
        "mark": "[OX2H][CX4][CX3](=O)[OX2H]",
        "tell": "The OH sits on the carbon next to the carboxylic acid, so glycolic acid is an alpha-hydroxy acid; it is hydrophilic (log P about 1, pKa about 3) and acts mostly on the skin surface (slide 43; T@20426, T@20690).",
-       "eg": "The little that reaches the blood is oxidized to a diacid by two enzymes, alcohol dehydrogenase and aldehyde dehydrogenase (slide 43; T@21007)."
+       "eg": "The little that reaches the blood is oxidized to a diacid by two enzymes, alcohol dehydrogenase and aldehyde dehydrogenase (slide 43; T@21007).",
+       "priority": "core",
+       "priority_reason": "Alpha-hydroxy acid definition, pKa ~3, logP ~1, surface action; two-enzyme (ADH/ALDH) oxidation.",
+       "priority_source": "p.43; T@20199-@21110 (@20426)",
+       "verification": "verified-stereo",
+       "chembl_id": "CHEMBL252557",
+       "verification_note": "Full standard InChIKey match to the ChEMBL canonical SMILES.",
+       "exam": "Exam 1"
       },
       {
        "key": "oxalic acid",
@@ -428,7 +712,14 @@
        "smiles": "OC(=O)C(=O)O",
        "slide": 43,
        "tell": "The diacid drawn as the product of glycolic acid after its minimal metabolism by DMEs (slide 43; T@20934).",
-       "note": "The slide draws the product without a name; the course outline names it oxalic acid. He said only \"diacid\"."
+       "note": "The slide draws the product without a name; the course outline names it oxalic acid. He said only \"diacid\".",
+       "priority": "reference",
+       "priority_reason": "Drawn as the unnamed product of glycolic acid; he said only \"Diaccid\". Examinable concept: minimal metabolism by two enzymes (ADH, ALDH) to a diacid.",
+       "priority_source": "p.43; T@20934-@21110",
+       "verification": "verified-stereo",
+       "chembl_id": "CHEMBL146755",
+       "verification_note": "Full standard InChIKey match to the ChEMBL canonical SMILES.",
+       "exam": "Exam 1"
       },
       {
        "key": "salicylic acid",
@@ -437,7 +728,14 @@
        "slide": 43,
        "mark": "[OX2H]c:c[CX3](=O)[OX2H]",
        "tell": "The OH is on the beta carbon, two carbons from the carboxylic acid, so salicylic acid is a beta-hydroxy acid; the aromatic ring makes it more lipophilic (log P 1-2) than glycolic acid, so it penetrates a little deeper (slide 43; T@22140, T@21540).",
-       "eg": "Of what reaches the systemic circulation, 75% is conjugated with glycine (slide 43; T@22475)."
+       "eg": "Of what reaches the systemic circulation, 75% is conjugated with glycine (slide 43; T@22475).",
+       "priority": "core",
+       "priority_reason": "Beta-hydroxy acid (\"2 carbon removed\"), logP 1-2, glycine conjugation.",
+       "priority_source": "p.43; T@21537-@22520 (@22189)",
+       "verification": "verified-stereo",
+       "chembl_id": "CHEMBL424",
+       "verification_note": "Full standard InChIKey match to the ChEMBL canonical SMILES.",
+       "exam": "Exam 1"
       }
      ]
     },
@@ -451,7 +749,14 @@
        "slide": 45,
        "mark": "[OX2H][CX4][CX3](=O)[OX2H]",
        "tell": "Each OH is on a carbon next to a carboxylic acid, so tartaric acid counts as an alpha-hydroxy acid in Polleve-4 (slide 45; T@23518).",
-       "eg": "Also listed as an AHA from grapes on slide 68."
+       "eg": "Also listed as an AHA from grapes on slide 68.",
+       "priority": "core",
+       "priority_reason": "Polleve-4 molecule he walked through (qualifies as AHA) and listed again among AHAs on p.68 (grapes).",
+       "priority_source": "p.45, p.68; T@23305-@23880, @46324-@47060",
+       "verification": "verified-connectivity",
+       "chembl_id": "CHEMBL1236315",
+       "verification_note": "Atlas has no stereo (slides p.45/p.68 draw none); ChEMBL CHEMBL1236315 is L-(2R,3R).",
+       "exam": "Exam 1"
       },
       {
        "key": "isobutyric acid",
@@ -459,7 +764,14 @@
        "smiles": "CC(C)C(=O)O",
        "slide": 45,
        "tell": "A carboxylic acid with no OH group, so it is not a hydroxy acid; one of the five molecules in Polleve-4 (slide 45; T@23385).",
-       "note": "Name supplied for the unlabelled poll drawing."
+       "note": "Name supplied for the unlabelled poll drawing.",
+       "priority": "core",
+       "priority_reason": "Polleve-4 molecule he walked through one by one to apply the alpha-hydroxy definition (\"How many alpha hydroxy acids do we have?\").",
+       "priority_source": "p.45; T@23305-@23880",
+       "verification": "verified-stereo",
+       "chembl_id": "CHEMBL108778",
+       "verification_note": "Matches CHEMBL108778 in full (unnamed record).",
+       "exam": "Exam 1"
       },
       {
        "key": "polleve-4 cyclopropyl hydroxy diacid",
@@ -468,7 +780,13 @@
        "slide": 45,
        "mark": "[OX2H][CX4][CX3](=O)[OX2H]",
        "tell": "The OH is on the carbon next to the right-hand carboxylic acid, so this molecule qualifies as an alpha-hydroxy acid in Polleve-4 (slide 45; T@23801).",
-       "note": "Unnamed on the slide; 1-[carboxy(hydroxy)methyl]cyclopropane-1-carboxylic acid."
+       "note": "Unnamed on the slide; 1-[carboxy(hydroxy)methyl]cyclopropane-1-carboxylic acid.",
+       "priority": "core",
+       "priority_reason": "Polleve-4 molecule he walked through one by one to apply the alpha-hydroxy definition (\"How many alpha hydroxy acids do we have?\").",
+       "priority_source": "p.45; T@23305-@23880",
+       "verification": "not-a-drug-record",
+       "verification_note": "Unnamed Polleve-4 poll molecule (p.45, zoom checked: HOOC-C(cyclopropane)-CH(OH)-COOH). No ChEMBL record by exact structure.",
+       "exam": "Exam 1"
       },
       {
        "key": "2-hydroxycyclohexanecarboxylic acid",
@@ -477,7 +795,13 @@
        "slide": 45,
        "mark": "[OX2H][CX4][CX4][CX3](=O)[OX2H]",
        "tell": "The OH is on the ring carbon two away from the carboxylic acid (beta), so it does not count; by his definition three of the five molecules in Polleve-4 are alpha-hydroxy acids (slide 45; T@23518).",
-       "note": "Unnamed on the slide. He did not speak the final count (T@23865); the definition he gave yields three (tartaric, glycolic, the cyclopropyl diacid)."
+       "note": "Unnamed on the slide. He did not speak the final count (T@23865); the definition he gave yields three (tartaric, glycolic, the cyclopropyl diacid).",
+       "priority": "core",
+       "priority_reason": "Polleve-4 molecule he walked through one by one to apply the alpha-hydroxy definition (\"How many alpha hydroxy acids do we have?\").",
+       "priority_source": "p.45; T@23305-@23880",
+       "verification": "not-a-drug-record",
+       "verification_note": "Unnamed Polleve-4 poll molecule (p.45). No ChEMBL record by exact structure; drawn without stereo.",
+       "exam": "Exam 1"
       }
      ]
     },
@@ -491,7 +815,14 @@
        "slide": 47,
        "mark": "[OX2][OX2]",
        "tell": "The O-O peroxide bond defines its chemical class; the bond breaks to give benzoic acid, which lowers skin pH, and a radical that kills bacteria (slide 47; T@26051).",
-       "eg": "Slide 47 gives log P = 3.5; he said it penetrates skin well (T@25991)."
+       "eg": "Slide 47 gives log P = 3.5; he said it penetrates skin well (T@25991).",
+       "priority": "core",
+       "priority_reason": "Peroxide class; CBDA = peroxide bond breaks to benzoic acid (lowers pH) and a radical (kills bacteria).",
+       "priority_source": "p.47; T@25608-@26600",
+       "verification": "verified-stereo",
+       "chembl_id": "CHEMBL1200370",
+       "verification_note": "Full standard InChIKey match to the ChEMBL canonical SMILES.",
+       "exam": "Exam 1"
       },
       {
        "key": "benzoic acid",
@@ -499,7 +830,14 @@
        "smiles": "OC(=O)c1ccccc1",
        "slide": 47,
        "mark": "[CX3](=O)[OX2H1]",
-       "tell": "One product of the peroxide bond breaking; it lowers skin pH and adds keratolytic activity, and it is excreted in urine (slide 47; T@26109)."
+       "tell": "One product of the peroxide bond breaking; it lowers skin pH and adds keratolytic activity, and it is excreted in urine (slide 47; T@26109).",
+       "priority": "core",
+       "priority_reason": "BPO product that lowers skin pH (keratolytic), excreted in urine.",
+       "priority_source": "p.47; T@25875-@26100",
+       "verification": "verified-stereo",
+       "chembl_id": "CHEMBL541",
+       "verification_note": "Full standard InChIKey match to the ChEMBL canonical SMILES.",
+       "exam": "Exam 1"
       },
       {
        "key": "benzoyl radical",
@@ -507,7 +845,13 @@
        "smiles": "O=C([O])c1ccccc1",
        "slide": 47,
        "tell": "The other product of the peroxide bond breaking, an oxygen-centred radical that kills bacteria and accounts for the anti-inflammatory claim (slide 47; T@26270).",
-       "note": "The slide labels it \"Benzoyl radical\" but draws the benzoyloxy radical PhC(=O)O·, which is what this SMILES gives."
+       "note": "The slide labels it \"Benzoyl radical\" but draws the benzoyloxy radical PhC(=O)O·, which is what this SMILES gives.",
+       "priority": "core",
+       "priority_reason": "BPO radical product that kills bacteria (\"The benzo a radical. Go to kill some of the Bacteria\").",
+       "priority_source": "p.47; T@26100-@26300",
+       "verification": "not-a-drug-record",
+       "verification_note": "Radical (PhC(=O)O·, the benzoyloxy radical the slide draws). Not a drug record.",
+       "exam": "Exam 1"
       }
      ]
     }
@@ -526,7 +870,14 @@
        "name": "Retinol (vitamin A1)",
        "smiles": "CC1=C(C(C)(C)CCC1)/C=C/C(C)=C/C=C/C(C)=C/CO",
        "slide": 49,
-       "tell": "The \"parent compound\": a trimethylcyclohexene ring and an all-trans polyene chain ending in CH2OH; every retinoid in the deck is derived from it (slides 48-49; T@26805)."
+       "tell": "The \"parent compound\": a trimethylcyclohexene ring and an all-trans polyene chain ending in CH2OH; every retinoid in the deck is derived from it (slides 48-49; T@26805).",
+       "priority": "core",
+       "priority_reason": "Parent compound of all retinoids (\"come from vitamin A\").",
+       "priority_source": "p.48-49; T@7544, @26805-@27050",
+       "verification": "verified-stereo",
+       "chembl_id": "CHEMBL986",
+       "verification_note": "Full standard InChIKey match to the ChEMBL canonical SMILES.",
+       "exam": "Exam 1"
       }
      ]
     },
@@ -539,7 +890,14 @@
        "smiles": "CC1=C(C(C)(C)CCC1)/C=C/C(C)=C/C=C/C(C)=C/C(=O)O",
        "slide": 49,
        "mark": "[CX3](C)=[CX3][CX3](=O)[OX2H]",
-       "tell": "All-trans retinoic acid: no aromatic ring and every chain double bond trans; used topically, the first retinoid for acne (slide 49; T@28259)."
+       "tell": "All-trans retinoic acid: no aromatic ring and every chain double bond trans; used topically, the first retinoid for acne (slide 49; T@28259).",
+       "priority": "core",
+       "priority_reason": "1st generation (non-aromatic); all-trans geometric isomer of isotretinoin.",
+       "priority_source": "p.49; T@27705-@28680 (@28268)",
+       "verification": "verified-stereo",
+       "chembl_id": "CHEMBL38",
+       "verification_note": "Full standard InChIKey match to the ChEMBL canonical SMILES.",
+       "exam": "Exam 1"
       },
       {
        "key": "isotretinoin",
@@ -547,7 +905,14 @@
        "smiles": "CC1=C(C(C)(C)CCC1)/C=C/C(C)=C/C=C/C(C)=C\\C(=O)O",
        "slide": 49,
        "mark": "[CX3](C)=[CX3][CX3](=O)[OX2H]",
-       "tell": "13-cis retinoic acid: counting from the carboxyl carbon, the C13=C14 double bond is cis and every other one is trans; it is a geometric isomer of tretinoin, used orally (slide 49; T@28448, T@28664)."
+       "tell": "13-cis retinoic acid: counting from the carboxyl carbon, the C13=C14 double bond is cis and every other one is trans; it is a geometric isomer of tretinoin, used orally (slide 49; T@28448, T@28664).",
+       "priority": "core",
+       "priority_reason": "13-cis geometric isomer of tretinoin, \"the only difference\".",
+       "priority_source": "p.49, p.29; T@28100-@28680",
+       "verification": "verified-stereo",
+       "chembl_id": "CHEMBL547",
+       "verification_note": "Full standard InChIKey match to the ChEMBL canonical SMILES.",
+       "exam": "Exam 1"
       }
      ]
     },
@@ -561,7 +926,14 @@
        "slide": 50,
        "mark": "[CX3](=O)O[CH2][CH3]",
        "tell": "One aromatic ring (4-methoxy-2,3,6-trimethylphenyl) and an ethyl ester: an ester prodrug that carboxylesterases convert to acitretin; narrow TI, teratogenic, removed from the US market in 1998 (slide 50; T@29146).",
-       "eg": "Slide 50: t1/2 120 days, highly lipophilic."
+       "eg": "Slide 50: t1/2 120 days, highly lipophilic.",
+       "priority": "core",
+       "priority_reason": "2nd generation (mono-aromatic) ethyl ester prodrug activated by CE to acitretin; t1/2 120 d, teratogenic.",
+       "priority_source": "p.50; T@28898-@29700",
+       "verification": "verified-stereo",
+       "chembl_id": "CHEMBL464",
+       "verification_note": "Full standard InChIKey match to the ChEMBL canonical SMILES.",
+       "exam": "Exam 1"
       },
       {
        "key": "acitretin",
@@ -569,7 +941,14 @@
        "smiles": "OC(=O)/C=C(\\C)/C=C/C=C(\\C)/C=C/c1c(C)cc(OC)c(C)c1C",
        "slide": 50,
        "mark": "[CX3](=O)[OX2H1]",
-       "tell": "The free carboxylic acid of etretinate, the active form used directly; it keeps some teratogenicity, but not to the extent of etretinate (slide 50; T@29322)."
+       "tell": "The free carboxylic acid of etretinate, the active form used directly; it keeps some teratogenicity, but not to the extent of etretinate (slide 50; T@29322).",
+       "priority": "core",
+       "priority_reason": "Active acid of etretinate; 2nd generation.",
+       "priority_source": "p.50, p.29; T@28898-@29700, @7222-@7393",
+       "verification": "verified-stereo",
+       "chembl_id": "CHEMBL1131",
+       "verification_note": "Full standard InChIKey match to the ChEMBL canonical SMILES.",
+       "exam": "Exam 1"
       }
      ]
     },
@@ -582,7 +961,14 @@
        "smiles": "COc1ccc(cc1C12CC3CC(CC(C3)C1)C2)-c1ccc2cc(ccc2c1)C(=O)O",
        "slide": 51,
        "mark": "[CX3](=O)[OX2H1]",
-       "tell": "Three aromatic rings (a methoxyphenyl with an adamantyl group, joined to a naphthoic acid); directly active because of its exposed carboxylic acid; the first synthetic retinoid (slide 51; T@30193)."
+       "tell": "Three aromatic rings (a methoxyphenyl with an adamantyl group, joined to a naphthoic acid); directly active because of its exposed carboxylic acid; the first synthetic retinoid (slide 51; T@30193).",
+       "priority": "core",
+       "priority_reason": "3rd generation (poly-aromatic), directly active (exposed carboxylic acid).",
+       "priority_source": "p.51; T@30014-@30300 (@30232)",
+       "verification": "verified-stereo",
+       "chembl_id": "CHEMBL1265",
+       "verification_note": "Full standard InChIKey match to the ChEMBL canonical SMILES.",
+       "exam": "Exam 1"
       },
       {
        "key": "trifarotene",
@@ -590,7 +976,14 @@
        "smiles": "OC(=O)c1ccc(cc1)-c1ccc(OCCO)c(c1)-c1ccc(N2CCCC2)c(c1)C(C)(C)C",
        "slide": 51,
        "mark": "[CX3](=O)[OX2H1]",
-       "tell": "Three benzene rings in a row (terphenyl) carrying a pyrrolidine, a tert-butyl and a hydroxyethoxy group; directly active through its exposed carboxylic acid (slide 51; T@30193)."
+       "tell": "Three benzene rings in a row (terphenyl) carrying a pyrrolidine, a tert-butyl and a hydroxyethoxy group; directly active through its exposed carboxylic acid (slide 51; T@30193).",
+       "priority": "core",
+       "priority_reason": "3rd generation, directly active (exposed carboxylic acid).",
+       "priority_source": "p.51; T@30014-@30300",
+       "verification": "verified-stereo",
+       "chembl_id": "CHEMBL3707313",
+       "verification_note": "Full standard InChIKey match to the ChEMBL canonical SMILES.",
+       "exam": "Exam 1"
       },
       {
        "key": "tazarotene",
@@ -600,7 +993,14 @@
        "mark": "[CX3](=O)O[CH2][CH3]",
        "tell": "A thiochroman and a pyridine joined by an alkyne; the ethyl ester makes it a prodrug that carboxylesterase converts to tazarotenic acid (slide 51; T@30269).",
        "eg": "Also drawn on slide 70 as a topical retinoid that stimulates collagen production; on slide 29 for psoriasis.",
-       "note": "The structure label on slide 51 reads \"Tazarac\"; the bullet and slide 70 read Tazorac."
+       "note": "The structure label on slide 51 reads \"Tazarac\"; the bullet and slide 70 read Tazorac.",
+       "priority": "core",
+       "priority_reason": "Acetylenic retinoid and ester prodrug activated by carboxylesterase (asked \"What are CE enzymes?\").",
+       "priority_source": "p.29, p.51; T@6810-@7120 (@7108), @30193-@30300",
+       "verification": "verified-stereo",
+       "chembl_id": "CHEMBL1657",
+       "verification_note": "Full standard InChIKey match to the ChEMBL canonical SMILES.",
+       "exam": "Exam 1"
       },
       {
        "key": "tazarotenic acid",
@@ -608,7 +1008,14 @@
        "smiles": "OC(=O)c1ccc(nc1)C#Cc1ccc2SCCC(C)(C)c2c1",
        "slide": 51,
        "mark": "[CX3](=O)[OX2H1]",
-       "tell": "The active form of tazarotene: the same skeleton with the ester hydrolysed to a free carboxylic acid (slide 51; T@30269)."
+       "tell": "The active form of tazarotene: the same skeleton with the ester hydrolysed to a free carboxylic acid (slide 51; T@30269).",
+       "priority": "core",
+       "priority_reason": "Active acid of tazarotene; terminal carboxylic acid common to retinoids.",
+       "priority_source": "p.29, p.51; T@7222, @30193-@30300",
+       "verification": "verified-stereo",
+       "chembl_id": "CHEMBL1201375",
+       "verification_note": "Full standard InChIKey match to the ChEMBL canonical SMILES.",
+       "exam": "Exam 1"
       }
      ]
     }
@@ -627,29 +1034,57 @@
        "name": "Ethinyl estradiol",
        "smiles": "C#C[C@]1(O)CC[C@H]2[C@@H]3CCc4cc(O)ccc4[C@H]3CC[C@@]21C",
        "slide": 52,
-       "tell": "A steroid (rings A, B, C, D) with an aromatic A ring bearing a phenol and a 17-ethynyl group; co-formulated with norgestimate or drospirenone (slide 52; T@31168)."
+       "tell": "A steroid (rings A, B, C, D) with an aromatic A ring bearing a phenol and a 17-ethynyl group; co-formulated with norgestimate or drospirenone (slide 52; T@31168).",
+       "priority": "reference",
+       "priority_reason": "He made one class-level point about the OC components: \"these are all going to be what? Steroids ... A, B, C, D\". Examinable concept: recognizing them as steroids (stacked four rings); individual structures were not discussed.",
+       "priority_source": "p.52; T@30892-@31300 (@31168)",
+       "verification": "verified-stereo",
+       "chembl_id": "CHEMBL691",
+       "verification_note": "Full standard InChIKey match to the ChEMBL canonical SMILES.",
+       "exam": "Exam 1"
       },
       {
        "key": "norgestimate",
        "name": "Norgestimate",
-       "smiles": "C#C[C@]1(OC(C)=O)CC[C@H]2[C@@H]3CCC4=CC(=NO)CC[C@@H]4[C@H]3CC[C@@]21CC",
+       "smiles": "C#C[C@]1(OC(C)=O)CC[C@H]2[C@@H]3CCC4=C/C(=N/O)CC[C@@H]4[C@H]3CC[C@@]21CC",
        "slide": 52,
        "tell": "A steroid progestin with a 3-oxime, a 17-acetate ester, a 17-ethynyl and a 13-ethyl group; paired with ethinyl estradiol in Ortho Tri-Cyclen Lo (slide 52; T@31076).",
-       "note": "Oxime geometry left unspecified; the slide drawing does not mark it."
+       "note": "Oxime geometry left unspecified; the slide drawing does not mark it.",
+       "priority": "reference",
+       "priority_reason": "He made one class-level point about the OC components: \"these are all going to be what? Steroids ... A, B, C, D\". Examinable concept: recognizing them as steroids (stacked four rings); individual structures were not discussed.",
+       "priority_source": "p.52; T@30892-@31300 (@31168)",
+       "verification": "verified-connectivity",
+       "chembl_id": "CHEMBL1200934",
+       "verification_note": "Atlas leaves the C3 oxime C=N geometry unspecified; ChEMBL has E. All 6 ring/C17 centres match. The p.52 drawing places OH syn to C2/anti to C4, i.e. E, so the slide does imply the ChEMBL geometry.",
+       "exam": "Exam 1"
       },
       {
        "key": "drospirenone",
        "name": "Drospirenone",
        "smiles": "C[C@]12CCC(=O)C=C1[C@@H]1C[C@@H]1[C@H]1[C@@H]3[C@@H]4C[C@@H]4[C@@]4(CCC(=O)O4)[C@@]3(C)CC[C@@H]12",
        "slide": 52,
-       "tell": "A steroid with two fused cyclopropane rings and a spiro lactone at C17; paired with ethinyl estradiol in Yasmin and Yaz (slide 52; T@31076)."
+       "tell": "A steroid with two fused cyclopropane rings and a spiro lactone at C17; paired with ethinyl estradiol in Yasmin and Yaz (slide 52; T@31076).",
+       "priority": "reference",
+       "priority_reason": "He made one class-level point about the OC components: \"these are all going to be what? Steroids ... A, B, C, D\". Examinable concept: recognizing them as steroids (stacked four rings); individual structures were not discussed.",
+       "priority_source": "p.52; T@30892-@31300 (@31168)",
+       "verification": "verified-stereo",
+       "chembl_id": "CHEMBL1509",
+       "verification_note": "Full standard InChIKey match to the ChEMBL canonical SMILES.",
+       "exam": "Exam 1"
       },
       {
        "key": "spironolactone",
        "name": "Spironolactone (Aldactone)",
        "smiles": "CC(=O)S[C@@H]1CC2=CC(=O)CC[C@]2(C)[C@H]2CC[C@@]3(C)[C@@H](CC[C@@]34CCC(=O)O4)[C@H]12",
        "slide": 53,
-       "tell": "The only steroid of the three antiandrogens (four stacked rings plus a spiro lactone and a 7-thioacetate); it decreases testosterone biosynthesis (slide 53; T@32075)."
+       "tell": "The only steroid of the three antiandrogens (four stacked rings plus a spiro lactone and a 7-thioacetate); it decreases testosterone biosynthesis (slide 53; T@32075).",
+       "priority": "core",
+       "priority_reason": "\"Which one is the steroid? This one\" among the three antiandrogens; decreases testosterone biosynthesis; steroidal vs non-steroidal take-home.",
+       "priority_source": "p.53; T@32075, @32997-@33105",
+       "verification": "verified-stereo",
+       "chembl_id": "CHEMBL1393",
+       "verification_note": "Full standard InChIKey match to the ChEMBL canonical SMILES.",
+       "exam": "Exam 1"
       }
      ]
     },
@@ -663,14 +1098,28 @@
        "slide": 53,
        "mark": "c1cn(C)cn1",
        "tell": "Non-steroidal; the imidazole marks it as an azole antifungal, and azoles are strong CYP3A4 inhibitors; here it decreases testosterone biosynthesis (slide 53; T@32479).",
-       "note": "No stereochemistry is drawn on the slide, so none is given here. Slide 53 lists ketoconazole under \"Non-steroidal AA\"; by mechanism he grouped it with spironolactone (T@32075)."
+       "note": "No stereochemistry is drawn on the slide, so none is given here. Slide 53 lists ketoconazole under \"Non-steroidal AA\"; by mechanism he grouped it with spironolactone (T@32075).",
+       "priority": "core",
+       "priority_reason": "Azole: \"Always when you see [azole] antifungals. Have that enzyme inhibition [3A4] at the front of your mind\"; non-steroidal.",
+       "priority_source": "p.53; T@32300-@32640 (@32490)",
+       "verification": "verified-stereo",
+       "chembl_id": "CHEMBL157101",
+       "verification_note": "Racemic record CHEMBL157101 (no stereo); Atlas also none, as on p.53.",
+       "exam": "Exam 1"
       },
       {
        "key": "flutamide",
        "name": "Flutamide (Eulexin)",
        "smiles": "CC(C)C(=O)Nc1ccc([N+](=O)[O-])c(C(F)(F)F)c1",
        "slide": 53,
-       "tell": "Non-steroidal: an anilide with nitro and trifluoromethyl groups; it blocks testosterone from binding its receptor (slide 53; T@32753)."
+       "tell": "Non-steroidal: an anilide with nitro and trifluoromethyl groups; it blocks testosterone from binding its receptor (slide 53; T@32753).",
+       "priority": "core",
+       "priority_reason": "Non-steroidal antiandrogen that blocks the receptor; steroidal vs non-steroidal approach is \"the take-home message\".",
+       "priority_source": "p.53; T@32723-@33105",
+       "verification": "verified-stereo",
+       "chembl_id": "CHEMBL806",
+       "verification_note": "Full standard InChIKey match to the ChEMBL canonical SMILES.",
+       "exam": "Exam 1"
       }
      ]
     }
@@ -690,14 +1139,28 @@
        "smiles": "OC(=O)CCCCCCCC(=O)O",
        "slide": 54,
        "mark": "[CX3](=O)[OX2H1]",
-       "tell": "A C9 linear chain with a carboxylic acid at each end (a diacid); a small linear antibiotic that is also anti-inflammatory (slide 54; T@34211)."
+       "tell": "A C9 linear chain with a carboxylic acid at each end (a diacid); a small linear antibiotic that is also anti-inflammatory (slide 54; T@34211).",
+       "priority": "core",
+       "priority_reason": "\"It's a dyacid ... small linear antibiotic\" (C9 bi-carboxylic acid).",
+       "priority_source": "p.54; T@34051-@34300 (@34211)",
+       "verification": "verified-stereo",
+       "chembl_id": "CHEMBL1238",
+       "verification_note": "Full standard InChIKey match to the ChEMBL canonical SMILES.",
+       "exam": "Exam 1"
       },
       {
        "key": "clindamycin",
        "name": "Clindamycin",
        "smiles": "CCC[C@@H]1C[C@@H](C(=O)N[C@@H]([C@H]2O[C@H](SC)[C@H](O)[C@@H](O)[C@H]2O)[C@H](C)Cl)N(C)C1",
        "slide": 54,
-       "tell": "A lincomycin: an N-methylpyrrolidine amide linked to a sugar that carries an S-methyl group, with a chlorine on the side chain; used topically because of GI toxicity (slide 54; T@34335)."
+       "tell": "A lincomycin: an N-methylpyrrolidine amide linked to a sugar that carries an S-methyl group, with a chlorine on the side chain; used topically because of GI toxicity (slide 54; T@34335).",
+       "priority": "reference",
+       "priority_reason": "Mentioned only as an option; antibiotic details deferred to ID (\"I'm not going to belabor the point\"). Examinable concept: tell cyclic from linear antibiotic structures.",
+       "priority_source": "p.54; T@34300-@34700 (@34534)",
+       "verification": "verified-stereo",
+       "chembl_id": "CHEMBL1753",
+       "verification_note": "Full standard InChIKey match to the ChEMBL canonical SMILES.",
+       "exam": "Exam 1"
       },
       {
        "key": "erythromycin",
@@ -706,7 +1169,28 @@
        "slide": 54,
        "mark": "[C;R](=O)[O;R]",
        "tell": "A macrolide: a large lactone ring carrying two sugars; a cyclic antibiotic, in contrast to the linear azelaic acid (slide 54; T@34833).",
-       "eg": "Slide 54: poor oral absorption, unstable at pH 4 or lower; acid salts (at the dimethylamino N) and esters (at the sugar OH, both circled) raise water and lipid solubility."
+       "eg": "Slide 54: poor oral absorption, unstable at pH 4 or lower; acid salts (at the dimethylamino N) and esters (at the sugar OH, both circled) raise water and lipid solubility.",
+       "priority": "reference",
+       "priority_reason": "Mentioned only as an option; details deferred to ID. Examinable concept: macrolide (cyclic lactone) vs linear structures (see the macrolide tile).",
+       "priority_source": "p.54; T@34300-@34700 (@34534)",
+       "verification": "verified-stereo",
+       "chembl_id": "CHEMBL532",
+       "verification_note": "Atlas matches ChEMBL in full. The p.54 drawing omits the desosamine ring oxygen: see other_differences.",
+       "exam": "Exam 1",
+       "lecture": {
+        "smiles": "CC[C@H]1OC(=O)[C@H](C)[C@@H](O[C@H]2C[C@@](C)(OC)[C@@H](O)[C@H](C)O2)[C@H](C)[C@@H](O[C@@H]2C[C@H](C)C[C@H](N(C)C)[C@H]2O)[C@](C)(O)C[C@@H](C)C(=O)[C@H](C)[C@@H](O)[C@]1(C)O",
+        "diff": "[CH2;R1]1[CH1;R1]([CH3])[CH2;R1][CH1;R1]([NX3]([CH3])[CH3])[CH1;R1]([OX2H1])[CH1;R1]1O",
+        "slide": 54,
+        "primary": true
+       },
+       "discrepancy": {
+        "lecture_shows": "The amino sugar (desosamine) is drawn as a cyclohexane, with no ring oxygen.",
+        "verified_has": "Desosamine is a pyranose sugar: its six-membered ring contains one oxygen.",
+        "where": "The right-hand sugar carrying the N(CH₃)₂ group, DPAW p. 54.",
+        "emphasized": "Erythromycin is a cyclic (macrolide) antibiotic, unlike linear azelaic acid; the details are left to the infectious disease course (T@34300–@34700).",
+        "changes_concept": "No. The large lactone ring that makes it a macrolide is the same.",
+        "verified_diff": "[OX2;R1]1[CH1;R1]([CH3])[CH2;R1][CH1;R1]([NX3]([CH3])[CH3])[CH1;R1]([OX2H1])[CH1;R1]1O"
+       }
       }
      ]
     },
@@ -720,7 +1204,14 @@
        "slide": 55,
        "mark": "[R]",
        "tell": "Four six-membered rings fused in one straight line (rings 1-2-3-4), unlike the stacked steroid rings; C6 carries OH and CH3 (slide 55; T@35220).",
-       "eg": "Slide 55: chelates Al3+, Ca2+, Mg2+, Fe3+, Bi3+ into insoluble salts that stain and weaken bone and enamel; absorption affected by food; t1/2 8.5 h."
+       "eg": "Slide 55: chelates Al3+, Ca2+, Mg2+, Fe3+, Bi3+ into insoluble salts that stain and weaken bone and enamel; absorption affected by food; t1/2 8.5 h.",
+       "priority": "core",
+       "priority_reason": "\"be able to identify them\": four linear rings vs stacked steroid rings; cross-reactivity due to structural similarity; food effect.",
+       "priority_source": "p.55; T@35205-@36940 (@36772, @36877)",
+       "verification": "verified-stereo",
+       "chembl_id": "CHEMBL1440",
+       "verification_note": "Full standard InChIKey match to the ChEMBL canonical SMILES.",
+       "exam": "Exam 1"
       },
       {
        "key": "doxycycline",
@@ -728,7 +1219,14 @@
        "smiles": "C[C@H]1c2cccc(O)c2C(=O)C2=C(O)[C@]3(O)C(=O)C(C(N)=O)=C(O)[C@@H](N(C)C)[C@@H]3[C@@H](O)[C@@H]21",
        "slide": 55,
        "tell": "The same linear four-ring skeleton; the OH moves from C6 to C5 and C6 keeps only a methyl; made to overcome the food effect (slide 55; T@36346).",
-       "eg": "Structural similarity means a patient allergic to tetracycline is likely allergic to doxycycline and minocycline (slide 55; T@36772). Slide 55: t1/2 11-13 h."
+       "eg": "Structural similarity means a patient allergic to tetracycline is likely allergic to doxycycline and minocycline (slide 55; T@36772). Slide 55: t1/2 11-13 h.",
+       "priority": "core",
+       "priority_reason": "\"be able to identify them\": four linear rings vs stacked steroid rings; cross-reactivity due to structural similarity; food effect.",
+       "priority_source": "p.55; T@35205-@36940 (@36772, @36877)",
+       "verification": "verified-stereo",
+       "chembl_id": "CHEMBL1433",
+       "verification_note": "Full standard InChIKey match to the ChEMBL canonical SMILES.",
+       "exam": "Exam 1"
       },
       {
        "key": "minocycline",
@@ -736,7 +1234,14 @@
        "smiles": "OC1=C(C(=O)N)C([C@]2(C(O)=C3[C@H](C[C@H]2[C@@H]1N(C)C)Cc1c(N(C)C)ccc(O)c1C3=O)O)=O",
        "slide": 55,
        "tell": "The same linear four-ring skeleton with a second dimethylamino group on the aromatic ring (C7) and no substituent at C5 or C6; lipophilic and longer acting (slide 55; T@36346).",
-       "eg": "Slide 55: t1/2 14-22 h."
+       "eg": "Slide 55: t1/2 14-22 h.",
+       "priority": "core",
+       "priority_reason": "\"be able to identify them\": four linear rings vs stacked steroid rings; cross-reactivity due to structural similarity; food effect.",
+       "priority_source": "p.55; T@35205-@36940 (@36772, @36877)",
+       "verification": "verified-stereo",
+       "chembl_id": "CHEMBL1434",
+       "verification_note": "Full standard InChIKey match to the ChEMBL canonical SMILES.",
+       "exam": "Exam 1"
       }
      ]
     }
@@ -756,7 +1261,13 @@
        "smiles": "[O-2].[Zn+2]",
        "slide": 61,
        "tell": "Not a molecule but a particulate metal oxide that physically reflects or scatters UVA and UVB; larger particles are more effective, nano-sized ZnO turns transparent and loses reflection (slide 61; T@38748).",
-       "note": "Shown as formula ions only; slide 61 has no structure drawing."
+       "note": "Shown as formula ions only; slide 61 has no structure drawing.",
+       "priority": "core",
+       "priority_reason": "Inorganic sunblock that reflects/scatters; \"Size Matters\" (larger particles more effective). No structure involved.",
+       "priority_source": "p.61; T@38519-@39400 (@38748)",
+       "verification": "not-a-drug-record",
+       "verification_note": "Inorganic metal oxide shown as formula ions; slide 61 has no structure drawing. Not a drug record (inorganic).",
+       "exam": "Exam 1"
       },
       {
        "key": "titanium dioxide",
@@ -764,7 +1275,13 @@
        "smiles": "[O-2].[O-2].[Ti+4]",
        "slide": 61,
        "tell": "A particulate metal oxide reflector like zinc oxide: broad spectrum (UVA and UVB), inert, and more effective as larger particles (slide 61; T@39323).",
-       "note": "Shown as formula ions only; slide 61 has no structure drawing."
+       "note": "Shown as formula ions only; slide 61 has no structure drawing.",
+       "priority": "core",
+       "priority_reason": "Inorganic sunblock paired with ZnO; same points.",
+       "priority_source": "p.61; T@38519-@39400",
+       "verification": "not-a-drug-record",
+       "verification_note": "Inorganic metal oxide shown as formula ions; no structure drawing. Not a drug record (inorganic).",
+       "exam": "Exam 1"
       }
      ]
     },
@@ -777,7 +1294,14 @@
        "smiles": "COc1ccc(cc1)C(=O)CC(=O)c1ccc(cc1)C(C)(C)C",
        "slide": 62,
        "mark": "C(=O)CC(=O)",
-       "tell": "A dibenzoylmethane: two aryl ketones joined by one CH2 (a 1,3-diketone chromophore); low skin absorption, photodegradation t1/2 about 2 h, so reapply every 2 h (slide 62; T@40775)."
+       "tell": "A dibenzoylmethane: two aryl ketones joined by one CH2 (a 1,3-diketone chromophore); low skin absorption, photodegradation t1/2 about 2 h, so reapply every 2 h (slide 62; T@40775).",
+       "priority": "core",
+       "priority_reason": "UVA dibenzoylmethane; low skin absorption; photodegradation t1/2 ~2 h.",
+       "priority_source": "p.62; T@40499-@41140",
+       "verification": "verified-stereo",
+       "chembl_id": "CHEMBL1200522",
+       "verification_note": "Full standard InChIKey match to the ChEMBL canonical SMILES.",
+       "exam": "Exam 1"
       },
       {
        "key": "meradimate",
@@ -786,7 +1310,14 @@
        "slide": 62,
        "mark": "Nc1ccccc1C(=O)O",
        "tell": "An anthranilate: a 2-aminobenzoate ester of menthol; absorbs UVA and degrades even more rapidly than avobenzone (slide 62; T@41314).",
-       "note": "No stereochemistry is drawn on the slide, so none is given here."
+       "note": "No stereochemistry is drawn on the slide, so none is given here.",
+       "priority": "core",
+       "priority_reason": "UVA anthranilate, degraded even faster than avobenzone.",
+       "priority_source": "p.62; T@41158-@41530",
+       "verification": "verified-stereo",
+       "chembl_id": "CHEMBL1597075",
+       "verification_note": "CHEMBL1597075 has no stereo; Atlas none, as on p.62.",
+       "exam": "Exam 1"
       }
      ]
     },
@@ -799,14 +1330,28 @@
        "smiles": "COc1ccc(cc1)/C=C/C(=O)OCC(CC)CCCC",
        "slide": 63,
        "mark": "c/C=C/C(=O)O",
-       "tell": "A cinnamate: a trans C=C between the methoxyphenyl ring and the ester carbonyl, esterified with 2-ethylhexanol; a UVB absorber that is absorbed through skin, photodegradation t1/2 1-2 h (slide 63; T@41691)."
+       "tell": "A cinnamate: a trans C=C between the methoxyphenyl ring and the ester carbonyl, esterified with 2-ethylhexanol; a UVB absorber that is absorbed through skin, photodegradation t1/2 1-2 h (slide 63; T@41691).",
+       "priority": "core",
+       "priority_reason": "UVB cinnamate; absorbed through skin; photodegradation 1-2 h.",
+       "priority_source": "p.63; T@41549-@41760",
+       "verification": "verified-connectivity",
+       "chembl_id": "CHEMBL3183184",
+       "verification_note": "Atlas specifies E (trans), which the p.63 drawing shows; ChEMBL CHEMBL3183184 leaves the C=C undefined. Connectivity identical.",
+       "exam": "Exam 1"
       },
       {
        "key": "paba",
        "name": "PABA (p-aminobenzoic acid)",
        "smiles": "Nc1ccc(cc1)C(=O)O",
        "slide": 63,
-       "tell": "An amino group para to a carboxylic acid; rarely used because some people are allergic to PABA (slide 63; T@42015)."
+       "tell": "An amino group para to a carboxylic acid; rarely used because some people are allergic to PABA (slide 63; T@42015).",
+       "priority": "core",
+       "priority_reason": "PABA class: rarely used because of PABA allergy (and photosensitivity).",
+       "priority_source": "p.63; T@41904-@42247",
+       "verification": "verified-stereo",
+       "chembl_id": "CHEMBL542",
+       "verification_note": "Full standard InChIKey match to the ChEMBL canonical SMILES.",
+       "exam": "Exam 1"
       },
       {
        "key": "padimate o",
@@ -814,7 +1359,28 @@
        "smiles": "CN(C)c1ccc(cc1)C(=O)OCC(CC)CCCC",
        "slide": 63,
        "tell": "A PABA ester (2-ethylhexyl), rarely used for the same PABA-allergy reason (slide 63; T@41924).",
-       "note": "Slide 63 draws the ring substituent as NH2 (2-ethylhexyl 4-aminobenzoate); padimate O is the N,N-dimethylamino ester, which is what this SMILES gives. He did not discuss the amine substitution. Check before shipping."
+       "note": "Slide 63 draws the ring substituent as NH2 (2-ethylhexyl 4-aminobenzoate); padimate O is the N,N-dimethylamino ester, which is what this SMILES gives. He did not discuss the amine substitution. Check before shipping.",
+       "priority": "core",
+       "priority_reason": "PABA ester, rarely used (PABA allergy). See discrepancy: slide draws NH2.",
+       "priority_source": "p.63; T@41904-@42247",
+       "verification": "verified-stereo",
+       "chembl_id": "CHEMBL1323699",
+       "verification_note": "Atlas N,N-dimethyl matches ChEMBL in full. The p.63 drawing shows NH2: see discrepancies.",
+       "exam": "Exam 1",
+       "lecture": {
+        "smiles": "CCCCC(CC)COC(=O)c1ccc(N)cc1",
+        "diff": "c[NX3H2]",
+        "slide": 63,
+        "primary": true
+       },
+       "discrepancy": {
+        "lecture_shows": "NH₂ on the ring (that molecule is 2-ethylhexyl 4-aminobenzoate).",
+        "verified_has": "N(CH₃)₂ on the ring: 2-ethylhexyl 4-(dimethylamino)benzoate.",
+        "where": "The ring substituent opposite the ester (para position), DPAW p. 63.",
+        "emphasized": "Only that PABA and padimate O are rarely used because of PABA allergy (T@41904–@42247).",
+        "changes_concept": "No. Padimate O is a PABA ester either way, so the allergy point holds.",
+        "verified_diff": "c[NX3H0]([CH3])[CH3]"
+       }
       }
      ]
     },
@@ -827,7 +1393,14 @@
        "smiles": "CC1CC(CC(C)(C)C1)OC(=O)c1ccccc1O",
        "slide": 64,
        "mark": "[OX2H]c1ccccc1C(=O)O",
-       "tell": "A salicylate ester (3,3,5-trimethylcyclohexyl); esters hydrolyse in skin to salicylic acid, which provides analgesia (slide 64; T@42551)."
+       "tell": "A salicylate ester (3,3,5-trimethylcyclohexyl); esters hydrolyse in skin to salicylic acid, which provides analgesia (slide 64; T@42551).",
+       "priority": "core",
+       "priority_reason": "Salicylate ester: hydrolyzes in skin to salicylic acid (analgesia); photostability questioned.",
+       "priority_source": "p.64; T@42247-@42800 (@42551)",
+       "verification": "verified-stereo",
+       "chembl_id": "CHEMBL1377575",
+       "verification_note": "Full standard InChIKey match to the ChEMBL canonical SMILES.",
+       "exam": "Exam 1"
       },
       {
        "key": "octisalate",
@@ -836,7 +1409,28 @@
        "slide": 64,
        "mark": "[OX2H]c1ccccc1C(=O)O",
        "tell": "A salicylate ester (2-ethylhexyl); said to be photostable, though he called that a question mark (slide 64; T@42658).",
-       "note": "Slide 64 draws the alcohol part with O on the branch carbon (heptan-3-yl salicylate, C14H20O3); octisalate is 2-ethylhexyl salicylate (C15H22O3), which is what this SMILES gives. He taught only the salicylate part. Check before shipping."
+       "note": "Slide 64 draws the alcohol part with O on the branch carbon (heptan-3-yl salicylate, C14H20O3); octisalate is 2-ethylhexyl salicylate (C15H22O3), which is what this SMILES gives. He taught only the salicylate part. Check before shipping.",
+       "priority": "core",
+       "priority_reason": "Salicylate ester like homosalate; the taught point is the salicylate part. See discrepancy: slide draws heptan-3-yl.",
+       "priority_source": "p.64; T@42247-@42800 (@42551)",
+       "verification": "verified-stereo",
+       "chembl_id": "CHEMBL1329203",
+       "verification_note": "Atlas 2-ethylhexyl ester matches ChEMBL in full. The p.64 drawing shows heptan-3-yl: see discrepancies.",
+       "exam": "Exam 1",
+       "lecture": {
+        "smiles": "CCCCC(CC)OC(=O)c1ccccc1O",
+        "diff": "C(=O)O[CX4H1]([CH2][CH3])[CH2][CH2][CH2][CH3]",
+        "slide": 64,
+        "primary": true
+       },
+       "discrepancy": {
+        "lecture_shows": "The ester oxygen is bonded directly to the branch carbon (a 7-carbon heptan-3-yl chain).",
+        "verified_has": "2-ethylhexyl ester: one CH₂ sits between the ester oxygen and the branch (8 carbons).",
+        "where": "The alcohol side chain of the ester, DPAW p. 64.",
+        "emphasized": "Salicylate sunscreens are esters that hydrolyze in skin to salicylic acid, giving some analgesia (T@42247–@42800).",
+        "changes_concept": "No. It is a salicylate ester either way; only the alcohol chain differs.",
+        "verified_diff": "C(=O)O[CH2][CX4H1]([CH2][CH3])[CH2][CH2][CH2][CH3]"
+       }
       },
       {
        "key": "ensulizole",
@@ -844,7 +1438,14 @@
        "smiles": "OS(=O)(=O)c1ccc2[nH]c(nc2c1)-c1ccccc1",
        "slide": 64,
        "mark": "S(=O)(=O)[OX2H]",
-       "tell": "A 2-phenylbenzimidazole carrying a sulfonic acid, which makes it water soluble (log P 1); photodegradation t1/2 about 12 h, but it must be reapplied after swimming (slide 64; T@43290)."
+       "tell": "A 2-phenylbenzimidazole carrying a sulfonic acid, which makes it water soluble (log P 1); photodegradation t1/2 about 12 h, but it must be reapplied after swimming (slide 64; T@43290).",
+       "priority": "core",
+       "priority_reason": "Benzimidazole sulfonic acid: logP 1, water soluble, most photostable (12 h), reapply after swimming.",
+       "priority_source": "p.64; T@42816-@43400",
+       "verification": "verified-stereo",
+       "chembl_id": "CHEMBL1987518",
+       "verification_note": "Full standard InChIKey match to the ChEMBL canonical SMILES.",
+       "exam": "Exam 1"
       }
      ]
     },
@@ -857,7 +1458,14 @@
        "smiles": "COc1ccc(C(=O)c2ccccc2)c(O)c1",
        "slide": 65,
        "mark": "c[CX3](=O)c",
-       "tell": "A benzophenone (two benzene rings on one ketone) with 2-OH and 4-OCH3; log P about 4, highly absorbed through skin, which is a worry (slide 65; T@43624)."
+       "tell": "A benzophenone (two benzene rings on one ketone) with 2-OH and 4-OCH3; log P about 4, highly absorbed through skin, which is a worry (slide 65; T@43624).",
+       "priority": "core",
+       "priority_reason": "Benzophenone, logP ~4, highly absorbed through skin (\"That's a worry\").",
+       "priority_source": "p.65; T@43589-@43700",
+       "verification": "verified-stereo",
+       "chembl_id": "CHEMBL1625",
+       "verification_note": "Full standard InChIKey match to the ChEMBL canonical SMILES.",
+       "exam": "Exam 1"
       },
       {
        "key": "octocrylene",
@@ -866,7 +1474,14 @@
        "slide": 65,
        "mark": "C=CC(=O)O",
        "tell": "A cinnamate-type ester: a diphenyl-substituted C=C carrying a nitrile and a 2-ethylhexyl ester; lipophilic, the most photostable (t1/2 about 90 h), and added to stabilize others such as oxybenzone (slide 65; T@44090).",
-       "eg": "He struck \"Hydrophilic\" from the slide 65 ADMET line: these esters are lipophilic and hydrolyse to inactive acids eliminated in urine (T@44969)."
+       "eg": "He struck \"Hydrophilic\" from the slide 65 ADMET line: these esters are lipophilic and hydrolyse to inactive acids eliminated in urine (T@44969).",
+       "priority": "core",
+       "priority_reason": "Best photostability (~90 h), lipophilic, used as additive photostabilizer; ester (he struck \"Hydrophilic\").",
+       "priority_source": "p.65; T@43958-@45140",
+       "verification": "verified-stereo",
+       "chembl_id": "CHEMBL1201147",
+       "verification_note": "Full standard InChIKey match to the ChEMBL canonical SMILES.",
+       "exam": "Exam 1"
       },
       {
        "key": "bemotrizinol",
@@ -875,7 +1490,14 @@
        "slide": 66,
        "mark": "c1ncncn1",
        "tell": "A 1,3,5-triazine carrying a methoxyphenyl and two 2-hydroxy-4-(2-ethylhexyloxy)phenyl rings; photostable (t1/2 4-8 h) with low skin absorption because of its high molecular weight (slide 66; T@45640).",
-       "eg": "Slide 66 gives MW 627.81 (RDKit average MW 627.83 for C38H49N3O5)."
+       "eg": "Slide 66 gives MW 627.81 (RDKit average MW 627.83 for C38H49N3O5).",
+       "priority": "core",
+       "priority_reason": "Triazine \"came from Europe\"; photostable 4-8 h; low skin absorption from high MW 627.81.",
+       "priority_source": "p.66; T@45151-@45700 (@45175)",
+       "verification": "verified-stereo",
+       "chembl_id": "CHEMBL2104956",
+       "verification_note": "Full standard InChIKey match to the ChEMBL canonical SMILES.",
+       "exam": "Exam 1"
       }
      ]
     }
@@ -894,14 +1516,28 @@
        "name": "Hydroquinone",
        "smiles": "Oc1ccc(O)cc1",
        "slide": 67,
-       "tell": "A benzene ring with two para OH groups; it inhibits melanin biosynthesis (tyrosinase), and must be kept in an amber bottle away from light and air (slide 67; T@45980)."
+       "tell": "A benzene ring with two para OH groups; it inhibits melanin biosynthesis (tyrosinase), and must be kept in an amber bottle away from light and air (slide 67; T@45980).",
+       "priority": "core",
+       "priority_reason": "Depigmenting agent; store in amber bottle because it oxidizes to inactive benzoquinone.",
+       "priority_source": "p.67; T@45749-@46160 (@45980)",
+       "verification": "verified-stereo",
+       "chembl_id": "CHEMBL537",
+       "verification_note": "Full standard InChIKey match to the ChEMBL canonical SMILES.",
+       "exam": "Exam 1"
       },
       {
        "key": "benzoquinone",
        "name": "Benzoquinone",
        "smiles": "O=C1C=CC(=O)C=C1",
        "slide": 67,
-       "tell": "The oxidation product of hydroquinone: both OH groups become C=O and the ring is no longer aromatic; coloured and inactive (slide 67; T@46104)."
+       "tell": "The oxidation product of hydroquinone: both OH groups become C=O and the ring is no longer aromatic; coloured and inactive (slide 67; T@46104).",
+       "priority": "core",
+       "priority_reason": "The colored inactive oxidation product of hydroquinone (storage counseling).",
+       "priority_source": "p.67; T@45882-@46160 (@46109)",
+       "verification": "verified-stereo",
+       "chembl_id": "CHEMBL8320",
+       "verification_note": "Full standard InChIKey match to the ChEMBL canonical SMILES.",
+       "exam": "Exam 1"
       }
      ]
     },
@@ -915,7 +1551,14 @@
        "slide": 68,
        "mark": "[OX2H][CX4][CX3](=O)[OX2H]",
        "tell": "An alpha-hydroxy acid (OH on the carbon next to COOH, plus a methyl) found in milk; AHAs remove dead skin cells and stimulate collagen production (slide 68; T@46989).",
-       "eg": "Slide 68 also draws glycolic (sugar cane/beet), tartaric (grapes) and malic acid (apples/grapes); see the keratolytics board for the first two."
+       "eg": "Slide 68 also draws glycolic (sugar cane/beet), tartaric (grapes) and malic acid (apples/grapes); see the keratolytics board for the first two.",
+       "priority": "core",
+       "priority_reason": "AHA he listed with its source (milk; milk-bath story).",
+       "priority_source": "p.68; T@46324-@47060 (@46839)",
+       "verification": "verified-stereo",
+       "chembl_id": "CHEMBL1200559",
+       "verification_note": "Racemic/unspecified record CHEMBL1200559 (LACTIC ACID); Atlas also unspecified.",
+       "exam": "Exam 1"
       },
       {
        "key": "malic acid",
@@ -923,7 +1566,14 @@
        "smiles": "OC(=O)CC(O)C(=O)O",
        "slide": 68,
        "mark": "[OX2H][CX4][CX3](=O)[OX2H]",
-       "tell": "A diacid with one OH, on the carbon next to one of the carboxylic acids, so it is an alpha-hydroxy acid (slide 68; T@46330)."
+       "tell": "A diacid with one OH, on the carbon next to one of the carboxylic acids, so it is an alpha-hydroxy acid (slide 68; T@46330).",
+       "priority": "core",
+       "priority_reason": "AHA he listed (apples/grapes) on the AHA slide.",
+       "priority_source": "p.68; T@46324-@47060",
+       "verification": "verified-stereo",
+       "chembl_id": "CHEMBL1455497",
+       "verification_note": "Unspecified record CHEMBL1455497 (MALIC ACID); Atlas also unspecified.",
+       "exam": "Exam 1"
       }
      ]
     },
@@ -937,7 +1587,13 @@
        "slide": 69,
        "note": "Slide 69 draws the unit in brackets with open bonds at GlcA C4-O and GlcNAc C1; the generator cannot draw open bonds, so the ends are capped as OH (GlcA 4-OH, GlcNAc 1-OH, beta). Linkage GlcA beta(1-3) GlcNAc, both D.",
        "tell": "The repeating disaccharide of a polysaccharide (drawn here as one free unit): glucuronic acid linked to N-acetylglucosamine; endogenous, non-antigenic, and forms a hygroscopic film that holds skin moisture (slide 69; T@47478).",
-       "eg": "High-MW HA stays on the skin surface; low-MW HA penetrates deeper (slide 69; T@47917)."
+       "eg": "High-MW HA stays on the skin surface; low-MW HA penetrates deeper (slide 69; T@47917).",
+       "priority": "core",
+       "priority_reason": "Endogenous polysaccharide of repeating units; non-antigenic; hygroscopic film; MW governs penetration. \"somebody may come with a question\". The drawn repeat unit (GlcA + GlcNAc) is what the slide shows; he described it only as \"repeating of these units\".",
+       "priority_source": "p.69; T@47069-@48370 (@48263)",
+       "verification": "not-a-drug-record",
+       "verification_note": "Polymer; ChEMBL has only structure-less entries (e.g. CHEMBL4297767 hylan G-F 20, no SMILES). Checked internally with RDKit instead: the tile contains beta-D-glucuronic acid and beta-D-GlcNAc with correct chirality (substructure match to beta-D-glucose-derived monomers; GlcNAc monomer key OVRNDRQMDRJTHS-FMDGEEDCSA-N) joined GlcA(1->3)GlcNAc, as drawn on p.69. Ends capped as OH (see other_differences).",
+       "exam": "Exam 1"
       }
      ]
     }
@@ -957,7 +1613,14 @@
        "smiles": "CC(O)C(=O)O",
        "slide": 44,
        "mark": "[OX2H][CX4][CX3](=O)[OX2H]",
-       "tell": "SAR: a COOH group, an OH on the alpha carbon (the carbon next to CO2H), and R mostly alkyl; here R is a methyl (slide 44; T@22834)."
+       "tell": "SAR: a COOH group, an OH on the alpha carbon (the carbon next to CO2H), and R mostly alkyl; here R is a methyl (slide 44; T@22834).",
+       "priority": "core",
+       "priority_reason": "Hydroxy acid SAR: OH on the alpha carbon (carbon next to CO2H); R mostly alkyl.",
+       "priority_source": "p.44; T@22858-@23200; @20426",
+       "verification": "verified-stereo",
+       "chembl_id": "CHEMBL1200559",
+       "verification_note": "Same molecule as lactic acid; full match.",
+       "exam": "Exam 1"
       },
       {
        "key": "beta-hydroxy acid",
@@ -965,7 +1628,14 @@
        "smiles": "OC(=O)c1ccccc1O",
        "slide": 43,
        "mark": "[OX2H]c:c[CX3](=O)[OX2H]",
-       "tell": "Remove one carbon from the alpha position and the OH lands on the beta carbon, two carbons from the carboxylic acid: a beta-hydroxy acid (slide 43; T@22212)."
+       "tell": "Remove one carbon from the alpha position and the OH lands on the beta carbon, two carbons from the carboxylic acid: a beta-hydroxy acid (slide 43; T@22212).",
+       "priority": "core",
+       "priority_reason": "\"This is the beta carbon. So this is a beta hydroxy acid\".",
+       "priority_source": "p.43; T@22100-@22230 (@22189)",
+       "verification": "verified-stereo",
+       "chembl_id": "CHEMBL424",
+       "verification_note": "Same molecule as salicylic acid; full match.",
+       "exam": "Exam 1"
       }
      ]
     },
@@ -978,7 +1648,14 @@
        "smiles": "CN(C)[C@@H]1C(O)=C(C(N)=O)C(=O)[C@@]2(O)C(O)=C3C(=O)c4c(O)cccc4[C@@](C)(O)[C@H]3C[C@@H]12",
        "slide": 55,
        "mark": "[R]",
-       "tell": "Tetracyclines have four six-membered rings fused in one straight line (1-2-3-4) (slide 55; T@35220)."
+       "tell": "Tetracyclines have four six-membered rings fused in one straight line (1-2-3-4) (slide 55; T@35220).",
+       "priority": "core",
+       "priority_reason": "\"identify them ... linear ... in steroids, they're stacked\".",
+       "priority_source": "p.55; T@35205-@35450, @36877",
+       "verification": "verified-stereo",
+       "chembl_id": "CHEMBL1440",
+       "verification_note": "Same molecule as tetracycline; full match.",
+       "exam": "Exam 1"
       },
       {
        "key": "steroid nucleus",
@@ -986,7 +1663,14 @@
        "smiles": "C#C[C@]1(O)CC[C@H]2[C@@H]3CCc4cc(O)ccc4[C@H]3CC[C@@]21C",
        "slide": 52,
        "mark": "[R]",
-       "tell": "Steroids stack three six-membered rings and one five-membered ring (A, B, C, D) in a bent arrangement, unlike the straight line of a tetracycline; shown on ethinyl estradiol (slide 52; T@35303)."
+       "tell": "Steroids stack three six-membered rings and one five-membered ring (A, B, C, D) in a bent arrangement, unlike the straight line of a tetracycline; shown on ethinyl estradiol (slide 52; T@35303).",
+       "priority": "core",
+       "priority_reason": "Stacked A-B-C-D rings; steroid recognition he required (\"I want you to know that because that's important\"; OCs \"A, B, C, D\").",
+       "priority_source": "p.52, p.20; T 628-630; T@31168, @35231",
+       "verification": "verified-stereo",
+       "chembl_id": "CHEMBL691",
+       "verification_note": "Same molecule as ethinyl estradiol; full match.",
+       "exam": "Exam 1"
       }
      ]
     },
@@ -999,7 +1683,14 @@
        "smiles": "CCOC(=O)/C=C(\\C)/C=C/C=C(\\C)/C=C/c1c(C)cc(OC)c(C)c1C",
        "slide": 50,
        "mark": "[CX3](=O)O[CH2][CH3]",
-       "tell": "An ethyl ester at the chain end needs carboxylesterase (CE) bioactivation to the free acid; etretinate to acitretin, tazarotene to tazarotenic acid (slides 50-51; T@7082)."
+       "tell": "An ethyl ester at the chain end needs carboxylesterase (CE) bioactivation to the free acid; etretinate to acitretin, tazarotene to tazarotenic acid (slides 50-51; T@7082).",
+       "priority": "core",
+       "priority_reason": "Ethyl ester prodrug requiring CE bioactivation (etretinate, tazarotene).",
+       "priority_source": "p.50; T@28898-@29700, @7108",
+       "verification": "verified-stereo",
+       "chembl_id": "CHEMBL464",
+       "verification_note": "Same molecule as etretinate; full match.",
+       "exam": "Exam 1"
       },
       {
        "key": "retinoid carboxylic acid",
@@ -1007,7 +1698,14 @@
        "smiles": "COc1ccc(cc1C12CC3CC(CC(C3)C1)C2)-c1ccc2cc(ccc2c1)C(=O)O",
        "slide": 51,
        "mark": "[CX3](=O)[OX2H1]",
-       "tell": "Retinoids with an exposed carboxylic acid (adapalene, trifarotene, tretinoin, acitretin) are directly active (slide 51; T@30193)."
+       "tell": "Retinoids with an exposed carboxylic acid (adapalene, trifarotene, tretinoin, acitretin) are directly active (slide 51; T@30193).",
+       "priority": "core",
+       "priority_reason": "Exposed carboxylic acid = directly active retinoid; terminal COOH common to retinoids.",
+       "priority_source": "p.51; T@30232, @7222",
+       "verification": "verified-stereo",
+       "chembl_id": "CHEMBL1265",
+       "verification_note": "Same molecule as adapalene; full match.",
+       "exam": "Exam 1"
       }
      ]
     },
@@ -1020,7 +1718,14 @@
        "smiles": "O=C(OOC(=O)c1ccccc1)c1ccccc1",
        "slide": 47,
        "mark": "[OX2][OX2]",
-       "tell": "The O-O bond puts benzoyl peroxide in the peroxide chemical class; breaking it gives benzoic acid and a radical (slide 47; T@26051)."
+       "tell": "The O-O bond puts benzoyl peroxide in the peroxide chemical class; breaking it gives benzoic acid and a radical (slide 47; T@26051).",
+       "priority": "core",
+       "priority_reason": "BPO is in the \"peroxide chemical class\"; peroxide bond cleavage is its CBDA.",
+       "priority_source": "p.47; T@25608-@26100",
+       "verification": "verified-stereo",
+       "chembl_id": "CHEMBL1200370",
+       "verification_note": "Same molecule as benzoyl peroxide; full match.",
+       "exam": "Exam 1"
       },
       {
        "key": "macrolide",
@@ -1028,11 +1733,37 @@
        "smiles": "CC[C@H]1OC(=O)[C@H](C)[C@@H](O[C@H]2C[C@@](C)(OC)[C@@H](O)[C@H](C)O2)[C@H](C)[C@@H](O[C@@H]2O[C@H](C)C[C@H](N(C)C)[C@H]2O)[C@](C)(O)C[C@@H](C)C(=O)[C@H](C)[C@@H](O)[C@]1(C)O",
        "slide": 54,
        "mark": "[C;R](=O)[O;R]",
-       "tell": "A macrolide is a large-ring lactone (cyclic ester); erythromycin is a cyclic antibiotic, azelaic acid a small linear one (slide 54; T@34968)."
+       "tell": "A macrolide is a large-ring lactone (cyclic ester); erythromycin is a cyclic antibiotic, azelaic acid a small linear one (slide 54; T@34968). Drawn here as the real erythromycin; the slide 54 drawing leaves out the ring oxygen of the amino sugar (Compare structures on the erythromycin tile).",
+       "priority": "core",
+       "priority_reason": "Classify cyclic vs linear antibiotics; erythromycin \"a macrolide\" (macrocyclic lactone); Polleve-3 format.",
+       "priority_source": "p.54; T@34560-@34700; T@11280-@11870",
+       "verification": "verified-stereo",
+       "chembl_id": "CHEMBL532",
+       "verification_note": "Same molecule as erythromycin; full match. p.54 drawing omits the desosamine ring O (other_differences).",
+       "exam": "Exam 1"
       }
      ]
     }
    ]
   }
- ]
+ ],
+ "excluded": [
+  {
+   "item": "Icotrokinra (Icotyde), oral IL-23 receptor antagonist peptide",
+   "page": 36,
+   "quote": "\"I put this up as FYI. This is the first time we're mentioning this molecule, so this is FYI for now, OK? Next year, I'll probably examine students on this.\"",
+   "source": "11/04 T@17124-@17278 (also T 856-859 on 11/03: \"It's a peptide\"); deck p.36 (printed 35) carries \"* FYI *\"."
+  },
+  {
+   "item": "Biologicals: MAb ADME slide (abatacept, etanercept, adalimumab, infliximab, golimumab, certolizumab pegol, ustekinumab, guselkumab, tildrakizumab, secukinumab, brodalumab, ixekizumab)",
+   "page": 37,
+   "quote": "\"OK, this, we'll forego this for now. OK, don't worry about this slide. I was trying to talk about the PK properties of monoclonal antibodies ... we don't need this for now. ... So skip this slide.\"",
+   "source": "11/04 T@17779-@17972 (@17779 \"don't worry about this slide\", @17954 \"So skip this slide\"); deck p.37 (printed 36) carries \"skip slide\"."
+  }
+ ],
+ "verification_summary": {
+  "pages_36_37": "Rendered p.36 and p.37 at 80 dpi and read their text with pdftotext. p.36 (printed 35, \"Systemic Agents-5\") shows Icotyde (icotrokinra): \"used PO\", \"A peptide\", IL-23 receptor antagonist, T1/2 12 h, poor PO bioavailability, one drawn peptide structure (.xHCl) and \"Peptidases -> Small peptides\"; he declared it FYI, to be examined \"next year\" (T@17124-@17278). p.37 (printed 36, \"Systemic Agents-6\") is a table of 12 MAbs (Rx) plus MAb ADME bullets (poor PO bioavailability, low distribution, t1/2 11-30 days, 150 kDa vs 55 kDa renal limit, eliminated as short peptides); no structure; he said \"don't worry about this slide ... So skip this slide\" (T@17779, @17954). Neither page has an Atlas item, which is correct. The blue \"FYI\" / \"skip slide\" marks on these pages are the student's GoodNotes copy; the outline notes the video frame V1 f_061 shows his own circled FYI.",
+  "count_reconciliation": "Agent A (pages 1-35, atlas/a/atlas_partA.js) produced 38 items; agent B (pages 38-71, atlas/b/atlas_b.js) produced 55; 38 + 55 = 93. Four keys occur in both: acitretin, tazarotene, tazarotenic acid (A drew them from p.29 on board a-psoriasis-systemic; B from p.50/p.51 on b-retinoids) and steroid nucleus. The merge kept B's versions of all four and dropped A's: 93 - 4 = 89. A's three retinoids are the same molecules as B's (identical InChIKeys), so nothing was lost there, but A's \"steroid nucleus\" was a different tile (bare gonane C1CCC2C(C1)CCC1C2CCC2CCCC12, p.20, rings A-D with alpha/beta text) that collided with B's \"steroid nucleus\" (ethinyl estradiol, p.52); the bare-gonane tile is gone from the Atlas (steroid recognition is still covered by the p.52 tile and the numbering skeleton). B's held.json held 2 items out of its 55 (drospirenone p.52, spironolactone p.53); both were added: 89 + 2 = 91. Check: every final key is in A or B except exactly these two; no A or B key is missing from the final set; no key repeats. Of the 91 tiles, 11 reuse a drug's SMILES as a feature tile (glucocorticoid sar, lactone, lactam, alpha-/beta-hydroxy acid, tetracycline four linear rings, steroid nucleus, ester prodrug, retinoid carboxylic acid, peroxide, macrolide), so 80 distinct structures. Side effect: board a-psoriasis-systemic still says \"Retinoids (slide 29) and ...\" in its intro though its retinoid items were removed.",
+  "checked": "2026-11-06, ChEMBL (EMBL-EBI) via InChIKey; PubChem not reachable from the build environment"
+ }
 }

@@ -8,6 +8,13 @@ characters.
 
 Every update adds its bullets here in the same commit that makes the change.
 
+## 2026-11-06 (Atlas refinement)
+- Each Atlas structure is marked Core, Reference only or Needs verification.
+- Reference-only structures are hidden by default; one button shows them.
+- Compare structures: where a slide draws a molecule differently, see both side by side.
+- Hide or reveal the shaded key features to practise spotting them.
+- Clearer explanations on the sun-exposure questions.
+
 ## 2026-11-06 (Atlas and sun exposure)
 - Atlas tab: 91 of Dr. Sikazwe's structures, drawn to one scale, with the taught feature shaded.
 - Hide names in the Atlas to quiz yourself on each structure.

@@ -22,3 +22,11 @@
 - q6_L03c.js: 46 questions; separate review: 24 findings (3 defensible distractors), all applied.
 - Atlas: gen_atlas.py (RDKit) from atlas_data.json; two agents built the data from DPAW pp. 1-35 and 38-71, each drawing compared with its slide; tacrolimus, pimecrolimus and cyclosporine matched ChEMBL InChIKeys. 91 structures. Five questions now show a structure (fg/cmp).
 - Reminder set: 2026-11-07 12:00 Central for Sikazwe's slides-to-avoid list.
+
+## 2026-11-06: Atlas refinement (Louis's standing direction of 2026-11-06)
+- Verification agent: every Atlas SMILES compared with ChEMBL by InChIKey (PubChem not reachable from this environment): 75 full match, 7 connectivity only (unspecified or differing stereo, each explained), 9 not drug records, 0 mismatches. Priority with lecture evidence: core 78, reference 11, verify 2. Pages 36-37 rendered: p.36 icotrokinra (FYI), p.37 antibody slide (skip), both excluded and recorded.
+- Counts reconciled: 38 (A) + 55 (B) = 93; 4 keys in both (acitretin, tazarotene, tazarotenic acid, steroid nucleus) dropped from A = 89; 2 held (drospirenone, spironolactone) added = 91.
+- Six confirmed lecture/drug differences with Compare structures: the five known ones plus erythromycin (p.54 sugar ring O). None changes a taught concept; no question keys on them.
+- Study controls (atlas_ui.js, course-level, no core change): priority badges, reference-only toggle (hidden by default), reveal/hide key features, deck page and exam per tile, compare panel; hidden-names mode hides the source line and comparison.
+- Sun lecture: 24 review findings confirmed resolved; 18 thin explanations rewritten; Exam 1 tag marked provisional.
+- Checks: 27 PASS, 1 FAIL (scheduler_test.js; passes 109/109 with kit PR #50's version, so an upstream test issue), 1 REPORT; atlas_check.js PASS; Atlas controls tested in light/dark, desktop and iPhone 13 emulation, no page errors.
