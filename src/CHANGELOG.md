@@ -8,6 +8,11 @@ characters.
 
 Every update adds its bullets here in the same commit that makes the change.
 
+## 2026-11-06 (optional practice beyond the assigned slides)
+- New topic "Beyond the Exam 1 assigned pages (Dr. Sikazwe, optional)" holds his 23 unassigned-slide questions.
+- Those 23 no longer count toward the Exam 1 pool cards on Weak spots or the exam-date review timing.
+- Practice papers draw single-answer questions; the exam text now says the official format split is not announced.
+
 ## 2026-11-06 (Dr. Sikazwe's assigned pages)
 - Dr. Sikazwe's assigned slides for Exam 1 (11/06) applied: 23 questions outside them now stay off practice exams.
 - Those 23 stay in practice, each with a note saying it is outside his assigned pages.

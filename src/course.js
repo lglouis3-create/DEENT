@@ -139,10 +139,19 @@ const COURSE = {
   exams: [
     {id:'exam1', name:'Exam 1', date:'Mon 11/09, 9:00–10:30 AM', when:'2026-11-09T09:00',
      questions:50, minutes:90, sata:null,
-     blurb:'Practice coverage of Lectures 1–4 (Smith 10/29, 10/30, 11/03; Sikazwe 11/03, 11/04). The faculty have not announced a split by professor, so this paper is unweighted. Includes Dr. Smith\'s recorded sun-exposure and psoralen lecture',
+     // sata:null draws no select-all item onto a practice paper (views.js EXAM_SATA = sata || 0).
+     // No professor has given a select-all count for Exam 1; the syllabus (p. 6) lists
+     // "multiple-choice, select-all, short-answer, true/false, or matching" as possible
+     // formats with no split (Louis, 2026-11-06: no official count is invented). The blurb
+     // says what the practice paper draws and that the format split is not announced.
+     blurb:'Practice coverage of Lectures 1–4 (Smith 10/29, 10/30, 11/03; Sikazwe 11/03, 11/04). The faculty have not announced a split by professor, so this paper is unweighted. Includes Dr. Smith\'s recorded sun-exposure and psoralen lecture. The syllabus lists multiple-choice, select-all, short-answer, true/false and matching as possible formats and gives no count of each; these practice papers draw single-answer questions only, and the select-all questions are in the topic drills',
+     // `unassigned: undefined` keeps a question marked unassigned:true out of both pools:
+     // the 23 on pages outside Dr. Sikazwe's assigned pages for Exam 1 (his list of
+     // 11/06; topic 'sk-beyond' in q5_L04.js). A pool filter is what the paper, the pool
+     // cards on Weak spots and the exam-date scheduling read (shell.html poolFilter).
      pools:[
-       {key:'smith',   name:'Dr. Smith (pharmacology)',      marks:null, filter:{exam:1, prof:'Smith'}},
-       {key:'sikazwe', name:'Dr. Sikazwe (medicinal chemistry)', marks:null, filter:{exam:1, prof:'Sikazwe'}},
+       {key:'smith',   name:'Dr. Smith (pharmacology)',      marks:null, filter:{exam:1, prof:'Smith', unassigned:undefined}},
+       {key:'sikazwe', name:'Dr. Sikazwe (medicinal chemistry)', marks:null, filter:{exam:1, prof:'Sikazwe', unassigned:undefined}},
      ]},
   ],
   activeExam: 'exam1',
