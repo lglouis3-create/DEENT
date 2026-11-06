@@ -14,6 +14,10 @@
  *      structure;
  *   5. the drawing a question shows before the answer has no shading and a
  *      neutral label, so it does not name or point to the answer;
+ *   7. every item carries a boolean `assigned` (on Dr. Sikazwe's assigned
+ *      pages of 11/06), and no scored question (not lowYield) shows (fg) or
+ *      compares (cmp) a structure with assigned:false; the tile shows the
+ *      neutral label "Not on the assigned pages";
  *   6. the tile layout (atlas_ui.js): the citation parser moves every inline
  *      citation of every tile into "Sources and verification" and loses none;
  *      every "deeper" entry has text and at least one source with a URL, and
@@ -103,6 +107,22 @@ for (const q of qsb.QS) {
   }
 }
 ok(`${used} question structure reference(s) checked against the priority classes`);
+
+// 7. assigned pages (Dr. Sikazwe's list of 11/06)
+const noAsg = items.filter(it => typeof it.assigned !== 'boolean');
+noAsg.length ? fail(`${noAsg.length} item(s) without a boolean "assigned": ${noAsg.map(i => i.key).join(', ')}`)
+             : ok(`all ${items.length} items carry "assigned" (${items.filter(i => !i.assigned).length} not on the assigned pages: ${items.filter(i => !i.assigned).map(i => i.key).join(', ')})`);
+const unasgUse = [];
+for (const q of qsb.QS) {
+  const ks = [q.fg, ...(Array.isArray(q.cmp) ? q.cmp : [])].filter(Boolean);
+  for (const k of ks) if (byKey[k] && byKey[k].assigned === false && !q.lowYield) unasgUse.push(q.id + ' -> ' + k);
+}
+unasgUse.length ? fail(`scored question(s) show a structure not on the assigned pages: ${unasgUse.join(', ')}`)
+                : ok('no scored question shows or compares a structure that is not on the assigned pages');
+const uiSrc = fs.readFileSync(path.join(SRC, 'atlas_ui.js'), 'utf8');
+/m\.assigned === false/.test(uiSrc) && /'Not on the assigned pages'/.test(uiSrc)
+  ? ok('tiles with assigned:false carry the label "Not on the assigned pages"')
+  : fail('atlas_ui.js does not label tiles that are not on the assigned pages');
 
 // 5. pre-answer drawings
 const leaks = Object.entries(A.FGQ).filter(([k, svg]) => /var\(--wash\)/.test(svg) || !/aria-label="Chemical structure to identify"/.test(svg));

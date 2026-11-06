@@ -82,7 +82,7 @@ const S3 = 'Lecture 3 (f26-DEENT-DPAW-mc.pdf)';
 
 QUESTIONS.push(
 /* ---- Framing: skin, PPCP, chemical class ------------------------------- */
-{id:'S3-001', skill:'patho', prof:'Sikazwe', tier:'new', topic:'s3-frame', sub:'skin', concept:'skin-functions', multi:true,
+{id:'S3-001', skill:'patho', prof:'Sikazwe', tier:'new', topic:'s3-frame', sub:'skin', concept:'skin-functions', lowYield:true, note:'Outside Dr. Sikazwe\'s assigned pages for Exam 1 (list of 11/06: pp. 7-9, 12, 15-22, 24-33, 42-54, 60-65). Her numbers are the ones printed on the slides; from printed slide 22 on, the slide numbers cited here run one higher.', multi:true,
  tags:['list'], source:'both',
  stem:'Which are functions of the skin? Select all that apply.',
  options:[
@@ -118,7 +118,7 @@ QUESTIONS.push(
  cite:S3+' slides 8, 18; T 630–632, 745–749'},
 
 /* ---- Eczema -------------------------------------------------------------- */
-{id:'S3-004', skill:'patho', prof:'Sikazwe', tier:'new', topic:'s3-ecz', sub:'comp', concept:'eczema-components', multi:true,
+{id:'S3-004', skill:'patho', prof:'Sikazwe', tier:'new', topic:'s3-ecz', sub:'comp', concept:'eczema-components', lowYield:true, note:'Outside Dr. Sikazwe\'s assigned pages for Exam 1 (list of 11/06: pp. 7-9, 12, 15-22, 24-33, 42-54, 60-65). Her numbers are the ones printed on the slides; from printed slide 22 on, the slide numbers cited here run one higher.', multi:true,
  tags:['list'], source:'both',
  stem:'Which are the major druggable components of atopic eczema? Select all that apply.',
  options:[
@@ -129,7 +129,7 @@ QUESTIONS.push(
  teach:'Slide 4: the major druggable components of eczema are the immune response and inflammation, so the treatment goals are to suppress the immune response and suppress inflammation. That is why anti-inflammatory agents and immunosuppressants are used (T 640–646). Of the seven versions of eczema on the slide, atopic eczema is the focus (T 636–637).',
  cite:S3+' slides 4, 13; T 636–646'},
 
-{id:'S3-005', skill:'tell', prof:'Sikazwe', tier:'new', topic:'s3-ecz', sub:'comp', concept:'goals-ecz-vs-pso',
+{id:'S3-005', skill:'tell', prof:'Sikazwe', tier:'new', topic:'s3-ecz', sub:'comp', concept:'goals-ecz-vs-pso', lowYield:true, note:'Outside Dr. Sikazwe\'s assigned pages for Exam 1 (list of 11/06: pp. 7-9, 12, 15-22, 24-33, 42-54, 60-65). Her numbers are the ones printed on the slides; from printed slide 22 on, the slide numbers cited here run one higher.',
  tags:['tell'], source:'both',
  stem:'Which treatment goal applies to psoriasis but not to eczema?',
  options:[
@@ -140,7 +140,7 @@ QUESTIONS.push(
  teach:'Eczema (slide 4): immune response and inflammation, so suppress both. Psoriasis (slide 13): keratinocyte hyperproliferation, inflammation and an autoimmune response, so normalize proliferation and suppress both inflammation and the immune response. The extra component explains the antiproliferative agents (tars, anthralin, psoralens) in the psoriasis list.',
  cite:S3+' slides 4, 13; T 640–646, 842–850'},
 
-{id:'S3-006', skill:'class', prof:'Sikazwe', tier:'new', topic:'s3-ecz', sub:'drugs', concept:'eczema-drug-list', multi:true,
+{id:'S3-006', skill:'class', prof:'Sikazwe', tier:'new', topic:'s3-ecz', sub:'drugs', concept:'eczema-drug-list', lowYield:true, note:'Outside Dr. Sikazwe\'s assigned pages for Exam 1 (list of 11/06: pp. 7-9, 12, 15-22, 24-33, 42-54, 60-65). Her numbers are the ones printed on the slides; from printed slide 22 on, the slide numbers cited here run one higher.', multi:true,
  tags:['list'], source:'both',
  stem:'Which drugs are used for eczema? Select all that apply.',
  options:[
@@ -153,7 +153,7 @@ QUESTIONS.push(
  teach:'Slide 6: steroids (low to medium potency), crisaborole, pimecrolimus, tacrolimus, dupilumab, ruxolitinib and upadacitinib. For eczema he emphasized crisaborole and the "-tinib" drugs (T 660–662); some of the others return under psoriasis (T 662–664).',
  cite:S3+' slides 6, 14, 17–18; T 658–664'},
 
-{id:'S3-007', skill:'class', prof:'Sikazwe', tier:'new', topic:'s3-ecz', sub:'drugs', concept:'eczema-steroid-potency',
+{id:'S3-007', skill:'class', prof:'Sikazwe', tier:'new', topic:'s3-ecz', sub:'drugs', concept:'eczema-steroid-potency', lowYield:true, note:'Outside Dr. Sikazwe\'s assigned pages for Exam 1 (list of 11/06: pp. 7-9, 12, 15-22, 24-33, 42-54, 60-65). Her numbers are the ones printed on the slides; from printed slide 22 on, the slide numbers cited here run one higher.',
  tags:['recall'], source:'slide',
  stem:'Which topical steroid potency range is used for eczema?',
  options:[
@@ -512,7 +512,7 @@ QUESTIONS.push(
  cite:S3+' slide 12; T 830–835'},
 
 /* ---- Psoriasis components and drugs ------------------------------------- */
-{id:'S3-039', skill:'patho', prof:'Sikazwe', tier:'new', topic:'s3-pso', sub:'comp', concept:'psoriasis-components', multi:true,
+{id:'S3-039', skill:'patho', prof:'Sikazwe', tier:'new', topic:'s3-pso', sub:'comp', concept:'psoriasis-components', lowYield:true, note:'Outside Dr. Sikazwe\'s assigned pages for Exam 1 (list of 11/06: pp. 7-9, 12, 15-22, 24-33, 42-54, 60-65). Her numbers are the ones printed on the slides; from printed slide 22 on, the slide numbers cited here run one higher.', multi:true,
  tags:['list'], source:'both',
  stem:'Which are the major components of psoriasis? Select all that apply.',
  options:[
@@ -524,7 +524,7 @@ QUESTIONS.push(
  teach:'Slide 13: keratinocyte hyperproliferation (skin build-up), inflammation and an autoimmune response; the goals are to normalize cell proliferation, suppress inflammation and suppress the immune response (T 842–850).',
  cite:S3+' slide 13; T 840–850'},
 
-{id:'S3-040', skill:'patho', prof:'Sikazwe', tier:'new', topic:'s3-pso', sub:'comp', concept:'autoimmune-def',
+{id:'S3-040', skill:'patho', prof:'Sikazwe', tier:'new', topic:'s3-pso', sub:'comp', concept:'autoimmune-def', lowYield:true, note:'Outside Dr. Sikazwe\'s assigned pages for Exam 1 (list of 11/06: pp. 7-9, 12, 15-22, 24-33, 42-54, 60-65). Her numbers are the ones printed on the slides; from printed slide 22 on, the slide numbers cited here run one higher.',
  tags:['definition'], source:'transcript',
  stem:'What does it mean that psoriasis involves an autoimmune response?',
  options:[
@@ -535,7 +535,7 @@ QUESTIONS.push(
  teach:'Because psoriasis is autoimmune, suppressing the immune response is one of its treatment goals (slide 13; T 848–850).',
  cite:S3+' slide 13; T 846–850'},
 
-{id:'S3-041', skill:'class', prof:'Sikazwe', tier:'new', topic:'s3-pso', sub:'drugs', concept:'pso-systemic', multi:true,
+{id:'S3-041', skill:'class', prof:'Sikazwe', tier:'new', topic:'s3-pso', sub:'drugs', concept:'pso-systemic', lowYield:true, multi:true,
  tags:['list'], source:'both',
  stem:'Which are systemic non-biological agents for psoriasis? Select all that apply.',
  options:[
@@ -546,7 +546,7 @@ QUESTIONS.push(
   {t:'Topical anthralin', correct:false, why:'A topical agent for psoriasis (slides 14, 17).'},
   {t:'Topical coal tar', correct:false, why:'A topical agent for psoriasis (slides 14, 16).'}],
  teach:'Slide 14. Topical: emollients, tars, anthralin, psoralen (topical or oral), corticosteroids, vitamin D3 analogs, retinoids (topical or oral), immunosuppressants. Systemic non-biologicals: methotrexate, cyclosporine, mycophenolate (off-label), apremilast, tofacitinib. Biologicals: monoclonal antibodies.',
- note:'Slide 14 names apremilast by its brand (Otezla); the generic name is used here (Dermatology drug chart).',
+ note:'Slide 14 names apremilast by its brand (Otezla); the generic name is used here (Dermatology drug chart). Outside Dr. Sikazwe\'s assigned pages for Exam 1 (list of 11/06: pp. 7-9, 12, 15-22, 24-33, 42-54, 60-65). Her numbers are the ones printed on the slides; from printed slide 22 on, the slide numbers cited here run one higher.',
  cite:S3+' slides 14, 16–17; T 850–862'},
 
 {id:'S3-042', skill:'class', prof:'Sikazwe', tier:'new', topic:'s3-pso', sub:'drugs', concept:'mycophenolate-offlabel', lowYield:true,
@@ -1029,7 +1029,7 @@ QUESTIONS.push(
  cite:S3+' slides 20, 23; T 1131–1139'},
 
 /* ---- Hydrocortisone, derivatives and potency ----------------------------- */
-{id:'S3-085', skill:'class', prof:'Sikazwe', tier:'new', topic:'s3-hc', sub:'deriv', concept:'hc-reference',
+{id:'S3-085', skill:'class', prof:'Sikazwe', tier:'new', topic:'s3-hc', sub:'deriv', concept:'hc-reference', lowYield:true, note:'Outside Dr. Sikazwe\'s assigned pages for Exam 1 (list of 11/06: pp. 7-9, 12, 15-22, 24-33, 42-54, 60-65). Her numbers are the ones printed on the slides; from printed slide 22 on, the slide numbers cited here run one higher.',
  tags:['recall'], source:'both',
  stem:'What is the reference molecule for glucocorticoid activity?',
  options:[
@@ -1051,7 +1051,7 @@ QUESTIONS.push(
  teach:'Glucocorticoid property means anti-inflammatory property (T 1142). Hydrocortisone has both glucocorticoid and mineralocorticoid activity and is the reference molecule (T 1140–1144).',
  cite:S3+' slide 26; T 1140–1145'},
 
-{id:'S3-087', skill:'class', prof:'Sikazwe', tier:'new', topic:'s3-hc', sub:'deriv', concept:'hc-derivatives', multi:true,
+{id:'S3-087', skill:'class', prof:'Sikazwe', tier:'new', topic:'s3-hc', sub:'deriv', concept:'hc-derivatives', lowYield:true, note:'Outside Dr. Sikazwe\'s assigned pages for Exam 1 (list of 11/06: pp. 7-9, 12, 15-22, 24-33, 42-54, 60-65). Her numbers are the ones printed on the slides; from printed slide 22 on, the slide numbers cited here run one higher.', multi:true,
  tags:['list'], source:'both',
  stem:'Which drugs are structural derivatives of hydrocortisone? Select all that apply.',
  options:[

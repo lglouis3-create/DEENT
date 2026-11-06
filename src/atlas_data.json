@@ -25,7 +25,8 @@
        "exam": "Exam 1",
        "pubchem_checked": true,
        "pubchem_cid": 44591583,
-       "verification_date": "2026-11-06"
+       "verification_date": "2026-11-06",
+       "assigned": true
       },
       {
        "key": "crisaborole benzyl alcohol metabolite",
@@ -42,7 +43,8 @@
        "exam": "Exam 1",
        "pubchem_checked": true,
        "pubchem_cid": 135391074,
-       "verification_date": "2026-11-06"
+       "verification_date": "2026-11-06",
+       "assigned": true
       },
       {
        "key": "crisaborole benzoic acid metabolite",
@@ -59,7 +61,8 @@
        "exam": "Exam 1",
        "pubchem_checked": true,
        "pubchem_cid": 133080796,
-       "verification_date": "2026-11-06"
+       "verification_date": "2026-11-06",
+       "assigned": true
       }
      ]
     },
@@ -83,7 +86,8 @@
        "exam": "Exam 1",
        "pubchem_checked": true,
        "pubchem_cid": 25126798,
-       "verification_date": "2026-11-06"
+       "verification_date": "2026-11-06",
+       "assigned": true
       },
       {
        "key": "upadacitinib",
@@ -102,7 +106,8 @@
        "exam": "Exam 1",
        "pubchem_checked": true,
        "pubchem_cid": 58557659,
-       "verification_date": "2026-11-06"
+       "verification_date": "2026-11-06",
+       "assigned": true
       }
      ]
     }
@@ -131,7 +136,8 @@
        "exam": "Exam 1",
        "pubchem_checked": true,
        "pubchem_cid": 10913,
-       "verification_date": "2026-11-06"
+       "verification_date": "2026-11-06",
+       "assigned": true
       }
      ]
     },
@@ -154,7 +160,8 @@
        "exam": "Exam 1",
        "pubchem_checked": true,
        "pubchem_cid": 2202,
-       "verification_date": "2026-11-06"
+       "verification_date": "2026-11-06",
+       "assigned": true
       },
       {
        "key": "methoxsalen",
@@ -173,7 +180,8 @@
        "exam": "Exam 1",
        "pubchem_checked": true,
        "pubchem_cid": 4114,
-       "verification_date": "2026-11-06"
+       "verification_date": "2026-11-06",
+       "assigned": true
       }
      ]
     }
@@ -202,7 +210,8 @@
        "exam": "Exam 1",
        "pubchem_checked": true,
        "pubchem_cid": 10202,
-       "verification_date": "2026-11-06"
+       "verification_date": "2026-11-06",
+       "assigned": true
       },
       {
        "key": "glucocorticoid sar",
@@ -221,7 +230,8 @@
        "exam": "Exam 1",
        "pubchem_checked": true,
        "pubchem_cid": 444036,
-       "verification_date": "2026-11-06"
+       "verification_date": "2026-11-06",
+       "assigned": true
       }
      ]
     },
@@ -271,7 +281,8 @@
           "url": "https://doi.org/10.1152/physrev.00020.2012"
          }
         ]
-       }
+       },
+       "assigned": true
       },
       {
        "key": "cortisone",
@@ -299,7 +310,8 @@
           "url": "https://doi.org/10.1152/physrev.00020.2012"
          }
         ]
-       }
+       },
+       "assigned": true
       },
       {
        "key": "5beta-dihydrocortisol",
@@ -316,7 +328,8 @@
        "pubchem_checked": true,
        "pubchem_cid": 164838,
        "verification_date": "2026-11-06",
-       "chembl_rejected": "CHEMBL1079111"
+       "chembl_rejected": "CHEMBL1079111",
+       "assigned": true
       },
       {
        "key": "urocortisol",
@@ -334,7 +347,8 @@
        "exam": "Exam 1",
        "pubchem_checked": true,
        "pubchem_cid": 5864,
-       "verification_date": "2026-11-06"
+       "verification_date": "2026-11-06",
+       "assigned": true
       }
      ]
     },
@@ -358,7 +372,8 @@
        "exam": "Exam 1",
        "pubchem_checked": true,
        "pubchem_cid": 21800,
-       "verification_date": "2026-11-06"
+       "verification_date": "2026-11-06",
+       "assigned": true
       },
       {
        "key": "clobetasol propionate",
@@ -394,7 +409,8 @@
        },
        "pubchem_checked": true,
        "pubchem_cid": 32798,
-       "verification_date": "2026-11-06"
+       "verification_date": "2026-11-06",
+       "assigned": true
       },
       {
        "key": "desonide",
@@ -412,7 +428,8 @@
        "exam": "Exam 1",
        "pubchem_checked": true,
        "pubchem_cid": 5311066,
-       "verification_date": "2026-11-06"
+       "verification_date": "2026-11-06",
+       "assigned": false
       },
       {
        "key": "fluticasone propionate",
@@ -430,7 +447,8 @@
        "exam": "Exam 1",
        "pubchem_checked": true,
        "pubchem_cid": 444036,
-       "verification_date": "2026-11-06"
+       "verification_date": "2026-11-06",
+       "assigned": false
       },
       {
        "key": "triamcinolone acetonide",
@@ -448,7 +466,8 @@
        "exam": "Exam 1",
        "pubchem_checked": true,
        "pubchem_cid": 6436,
-       "verification_date": "2026-11-06"
+       "verification_date": "2026-11-06",
+       "assigned": false
       }
      ]
     }
@@ -479,7 +498,8 @@
        "exam": "Exam 1",
        "pubchem_checked": true,
        "pubchem_cid": 439423,
-       "verification_date": "2026-11-06"
+       "verification_date": "2026-11-06",
+       "assigned": true
       },
       {
        "key": "cholecalciferol",
@@ -497,7 +517,8 @@
        "exam": "Exam 1",
        "pubchem_checked": true,
        "pubchem_cid": 5280795,
-       "verification_date": "2026-11-06"
+       "verification_date": "2026-11-06",
+       "assigned": true
       },
       {
        "key": "25-hydroxycholecalciferol",
@@ -515,7 +536,8 @@
        "exam": "Exam 1",
        "pubchem_checked": true,
        "pubchem_cid": 5283731,
-       "verification_date": "2026-11-06"
+       "verification_date": "2026-11-06",
+       "assigned": true
       },
       {
        "key": "calcitriol",
@@ -534,7 +556,8 @@
        "exam": "Exam 1",
        "pubchem_checked": true,
        "pubchem_cid": 5280453,
-       "verification_date": "2026-11-06"
+       "verification_date": "2026-11-06",
+       "assigned": true
       }
      ]
     },
@@ -558,7 +581,8 @@
        "exam": "Exam 1",
        "pubchem_checked": true,
        "pubchem_cid": 5288783,
-       "verification_date": "2026-11-06"
+       "verification_date": "2026-11-06",
+       "assigned": true
       }
      ]
     }
@@ -606,7 +630,8 @@
        },
        "pubchem_checked": true,
        "pubchem_cid": 6509979,
-       "verification_date": "2026-11-06"
+       "verification_date": "2026-11-06",
+       "assigned": true
       },
       {
        "key": "tacrolimus",
@@ -625,7 +650,8 @@
        "exam": "Exam 1",
        "pubchem_checked": true,
        "pubchem_cid": 445643,
-       "verification_date": "2026-11-06"
+       "verification_date": "2026-11-06",
+       "assigned": true
       }
      ]
     }
@@ -657,7 +683,8 @@
        "exam": "Exam 1",
        "pubchem_checked": true,
        "pubchem_cid": 4112,
-       "verification_date": "2026-11-06"
+       "verification_date": "2026-11-06",
+       "assigned": true
       },
       {
        "key": "folic acid",
@@ -676,7 +703,8 @@
        "exam": "Exam 1",
        "pubchem_checked": true,
        "pubchem_cid": 3405,
-       "verification_date": "2026-11-06"
+       "verification_date": "2026-11-06",
+       "assigned": true
       },
       {
        "key": "tetrahydrofolic acid",
@@ -694,7 +722,8 @@
        "exam": "Exam 1",
        "pubchem_checked": true,
        "pubchem_cid": 1129,
-       "verification_date": "2026-11-06"
+       "verification_date": "2026-11-06",
+       "assigned": true
       }
      ]
     },
@@ -717,7 +746,8 @@
        "exam": "Exam 1",
        "pubchem_checked": true,
        "pubchem_cid": 5284373,
-       "verification_date": "2026-11-06"
+       "verification_date": "2026-11-06",
+       "assigned": true
       },
       {
        "key": "apremilast",
@@ -735,7 +765,8 @@
        "exam": "Exam 1",
        "pubchem_checked": true,
        "pubchem_cid": 11561674,
-       "verification_date": "2026-11-06"
+       "verification_date": "2026-11-06",
+       "assigned": true
       },
       {
        "key": "tofacitinib",
@@ -754,7 +785,8 @@
        "exam": "Exam 1",
        "pubchem_checked": true,
        "pubchem_cid": 9926791,
-       "verification_date": "2026-11-06"
+       "verification_date": "2026-11-06",
+       "assigned": false
       }
      ]
     }
@@ -784,7 +816,8 @@
        "exam": "Exam 1",
        "pubchem_checked": true,
        "pubchem_cid": 6509979,
-       "verification_date": "2026-11-06"
+       "verification_date": "2026-11-06",
+       "assigned": true
       },
       {
        "key": "lactam",
@@ -802,7 +835,8 @@
        "exam": "Exam 1",
        "pubchem_checked": true,
        "pubchem_cid": 5284373,
-       "verification_date": "2026-11-06"
+       "verification_date": "2026-11-06",
+       "assigned": true
       }
      ]
     }
@@ -833,7 +867,8 @@
        "exam": "Exam 1",
        "pubchem_checked": true,
        "pubchem_cid": 757,
-       "verification_date": "2026-11-06"
+       "verification_date": "2026-11-06",
+       "assigned": true
       },
       {
        "key": "oxalic acid",
@@ -851,7 +886,8 @@
        "exam": "Exam 1",
        "pubchem_checked": true,
        "pubchem_cid": 971,
-       "verification_date": "2026-11-06"
+       "verification_date": "2026-11-06",
+       "assigned": true
       },
       {
        "key": "salicylic acid",
@@ -870,7 +906,8 @@
        "exam": "Exam 1",
        "pubchem_checked": true,
        "pubchem_cid": 338,
-       "verification_date": "2026-11-06"
+       "verification_date": "2026-11-06",
+       "assigned": true
       }
      ]
     },
@@ -894,7 +931,8 @@
        "exam": "Exam 1",
        "pubchem_checked": true,
        "pubchem_cid": 875,
-       "verification_date": "2026-11-06"
+       "verification_date": "2026-11-06",
+       "assigned": true
       },
       {
        "key": "isobutyric acid",
@@ -912,7 +950,8 @@
        "exam": "Exam 1",
        "pubchem_checked": true,
        "pubchem_cid": 6590,
-       "verification_date": "2026-11-06"
+       "verification_date": "2026-11-06",
+       "assigned": true
       },
       {
        "key": "polleve-4 cyclopropyl hydroxy diacid",
@@ -930,7 +969,8 @@
        "exam": "Exam 1",
        "pubchem_checked": true,
        "pubchem_cid": 85106660,
-       "verification_date": "2026-11-06"
+       "verification_date": "2026-11-06",
+       "assigned": true
       },
       {
        "key": "2-hydroxycyclohexanecarboxylic acid",
@@ -948,7 +988,8 @@
        "exam": "Exam 1",
        "pubchem_checked": true,
        "pubchem_cid": 271816,
-       "verification_date": "2026-11-06"
+       "verification_date": "2026-11-06",
+       "assigned": true
       }
      ]
     },
@@ -972,7 +1013,8 @@
        "exam": "Exam 1",
        "pubchem_checked": true,
        "pubchem_cid": 7187,
-       "verification_date": "2026-11-06"
+       "verification_date": "2026-11-06",
+       "assigned": true
       },
       {
        "key": "benzoic acid",
@@ -990,7 +1032,8 @@
        "exam": "Exam 1",
        "pubchem_checked": true,
        "pubchem_cid": 243,
-       "verification_date": "2026-11-06"
+       "verification_date": "2026-11-06",
+       "assigned": true
       },
       {
        "key": "benzoyl radical",
@@ -1007,7 +1050,8 @@
        "exam": "Exam 1",
        "pubchem_checked": true,
        "pubchem_cid": 5359438,
-       "verification_date": "2026-11-06"
+       "verification_date": "2026-11-06",
+       "assigned": true
       }
      ]
     }
@@ -1036,7 +1080,8 @@
        "exam": "Exam 1",
        "pubchem_checked": true,
        "pubchem_cid": 445354,
-       "verification_date": "2026-11-06"
+       "verification_date": "2026-11-06",
+       "assigned": true
       }
      ]
     },
@@ -1059,7 +1104,8 @@
        "exam": "Exam 1",
        "pubchem_checked": true,
        "pubchem_cid": 444795,
-       "verification_date": "2026-11-06"
+       "verification_date": "2026-11-06",
+       "assigned": true
       },
       {
        "key": "isotretinoin",
@@ -1077,7 +1123,8 @@
        "exam": "Exam 1",
        "pubchem_checked": true,
        "pubchem_cid": 5282379,
-       "verification_date": "2026-11-06"
+       "verification_date": "2026-11-06",
+       "assigned": true
       }
      ]
     },
@@ -1101,7 +1148,8 @@
        "exam": "Exam 1",
        "pubchem_checked": true,
        "pubchem_cid": 5282375,
-       "verification_date": "2026-11-06"
+       "verification_date": "2026-11-06",
+       "assigned": true
       },
       {
        "key": "acitretin",
@@ -1119,7 +1167,8 @@
        "exam": "Exam 1",
        "pubchem_checked": true,
        "pubchem_cid": 5284513,
-       "verification_date": "2026-11-06"
+       "verification_date": "2026-11-06",
+       "assigned": true
       }
      ]
     },
@@ -1142,7 +1191,8 @@
        "exam": "Exam 1",
        "pubchem_checked": true,
        "pubchem_cid": 60164,
-       "verification_date": "2026-11-06"
+       "verification_date": "2026-11-06",
+       "assigned": true
       },
       {
        "key": "trifarotene",
@@ -1160,7 +1210,8 @@
        "exam": "Exam 1",
        "pubchem_checked": true,
        "pubchem_cid": 11518241,
-       "verification_date": "2026-11-06"
+       "verification_date": "2026-11-06",
+       "assigned": true
       },
       {
        "key": "tazarotene",
@@ -1180,7 +1231,8 @@
        "exam": "Exam 1",
        "pubchem_checked": true,
        "pubchem_cid": 5381,
-       "verification_date": "2026-11-06"
+       "verification_date": "2026-11-06",
+       "assigned": true
       },
       {
        "key": "tazarotenic acid",
@@ -1198,7 +1250,8 @@
        "exam": "Exam 1",
        "pubchem_checked": true,
        "pubchem_cid": 147525,
-       "verification_date": "2026-11-06"
+       "verification_date": "2026-11-06",
+       "assigned": true
       }
      ]
     }
@@ -1227,7 +1280,8 @@
        "exam": "Exam 1",
        "pubchem_checked": true,
        "pubchem_cid": 5991,
-       "verification_date": "2026-11-06"
+       "verification_date": "2026-11-06",
+       "assigned": true
       },
       {
        "key": "norgestimate",
@@ -1245,7 +1299,8 @@
        "exam": "Exam 1",
        "pubchem_checked": true,
        "pubchem_cid": 6540478,
-       "verification_date": "2026-11-06"
+       "verification_date": "2026-11-06",
+       "assigned": true
       },
       {
        "key": "drospirenone",
@@ -1262,7 +1317,8 @@
        "exam": "Exam 1",
        "pubchem_checked": true,
        "pubchem_cid": 68873,
-       "verification_date": "2026-11-06"
+       "verification_date": "2026-11-06",
+       "assigned": true
       },
       {
        "key": "spironolactone",
@@ -1279,7 +1335,8 @@
        "exam": "Exam 1",
        "pubchem_checked": true,
        "pubchem_cid": 5833,
-       "verification_date": "2026-11-06"
+       "verification_date": "2026-11-06",
+       "assigned": true
       }
      ]
     },
@@ -1303,7 +1360,8 @@
        "exam": "Exam 1",
        "pubchem_checked": true,
        "pubchem_cid": 3823,
-       "verification_date": "2026-11-06"
+       "verification_date": "2026-11-06",
+       "assigned": true
       },
       {
        "key": "flutamide",
@@ -1320,7 +1378,8 @@
        "exam": "Exam 1",
        "pubchem_checked": true,
        "pubchem_cid": 3397,
-       "verification_date": "2026-11-06"
+       "verification_date": "2026-11-06",
+       "assigned": true
       }
      ]
     }
@@ -1350,7 +1409,8 @@
        "exam": "Exam 1",
        "pubchem_checked": true,
        "pubchem_cid": 2266,
-       "verification_date": "2026-11-06"
+       "verification_date": "2026-11-06",
+       "assigned": true
       },
       {
        "key": "clindamycin",
@@ -1367,7 +1427,8 @@
        "exam": "Exam 1",
        "pubchem_checked": true,
        "pubchem_cid": 446598,
-       "verification_date": "2026-11-06"
+       "verification_date": "2026-11-06",
+       "assigned": true
       },
       {
        "key": "erythromycin",
@@ -1402,7 +1463,8 @@
        },
        "pubchem_checked": true,
        "pubchem_cid": 12560,
-       "verification_date": "2026-11-06"
+       "verification_date": "2026-11-06",
+       "assigned": true
       }
      ]
     },
@@ -1426,7 +1488,8 @@
        "exam": "Exam 1",
        "pubchem_checked": true,
        "pubchem_cid": 54675776,
-       "verification_date": "2026-11-06"
+       "verification_date": "2026-11-06",
+       "assigned": true
       },
       {
        "key": "doxycycline",
@@ -1444,7 +1507,8 @@
        "exam": "Exam 1",
        "pubchem_checked": true,
        "pubchem_cid": 54671203,
-       "verification_date": "2026-11-06"
+       "verification_date": "2026-11-06",
+       "assigned": true
       },
       {
        "key": "minocycline",
@@ -1462,7 +1526,8 @@
        "exam": "Exam 1",
        "pubchem_checked": true,
        "pubchem_cid": 54675783,
-       "verification_date": "2026-11-06"
+       "verification_date": "2026-11-06",
+       "assigned": true
       }
      ]
     }
@@ -1491,7 +1556,8 @@
        "exam": "Exam 1",
        "pubchem_checked": true,
        "pubchem_cid": 3007857,
-       "verification_date": "2026-11-06"
+       "verification_date": "2026-11-06",
+       "assigned": true
       },
       {
        "key": "titanium dioxide",
@@ -1507,7 +1573,8 @@
        "verification_note": "Teaching structure (not forced onto a drug record). PubChem holds this exact structure as CID 162651. PubChem CID 162651 holds these ions but is titled \"Titanium oxide (Ti3O)\"; the titanium dioxide record is CID 26042 (O=[Ti]=O). No CID is shown on the tile.",
        "exam": "Exam 1",
        "pubchem_checked": true,
-       "verification_date": "2026-11-06"
+       "verification_date": "2026-11-06",
+       "assigned": true
       }
      ]
     },
@@ -1530,7 +1597,8 @@
        "exam": "Exam 1",
        "pubchem_checked": true,
        "pubchem_cid": 51040,
-       "verification_date": "2026-11-06"
+       "verification_date": "2026-11-06",
+       "assigned": true
       },
       {
        "key": "meradimate",
@@ -1549,7 +1617,8 @@
        "exam": "Exam 1",
        "pubchem_checked": true,
        "pubchem_cid": 8633,
-       "verification_date": "2026-11-06"
+       "verification_date": "2026-11-06",
+       "assigned": true
       }
      ]
     },
@@ -1572,7 +1641,8 @@
        "exam": "Exam 1",
        "pubchem_checked": true,
        "pubchem_cid": 5355130,
-       "verification_date": "2026-11-06"
+       "verification_date": "2026-11-06",
+       "assigned": true
       },
       {
        "key": "paba",
@@ -1589,7 +1659,8 @@
        "exam": "Exam 1",
        "pubchem_checked": true,
        "pubchem_cid": 978,
-       "verification_date": "2026-11-06"
+       "verification_date": "2026-11-06",
+       "assigned": true
       },
       {
        "key": "padimate o",
@@ -1623,7 +1694,8 @@
        },
        "pubchem_checked": true,
        "pubchem_cid": 30541,
-       "verification_date": "2026-11-06"
+       "verification_date": "2026-11-06",
+       "assigned": true
       }
      ]
     },
@@ -1646,7 +1718,8 @@
        "exam": "Exam 1",
        "pubchem_checked": true,
        "pubchem_cid": 8362,
-       "verification_date": "2026-11-06"
+       "verification_date": "2026-11-06",
+       "assigned": true
       },
       {
        "key": "octisalate",
@@ -1681,7 +1754,8 @@
        },
        "pubchem_checked": true,
        "pubchem_cid": 8364,
-       "verification_date": "2026-11-06"
+       "verification_date": "2026-11-06",
+       "assigned": true
       },
       {
        "key": "ensulizole",
@@ -1699,7 +1773,8 @@
        "exam": "Exam 1",
        "pubchem_checked": true,
        "pubchem_cid": 33919,
-       "verification_date": "2026-11-06"
+       "verification_date": "2026-11-06",
+       "assigned": true
       }
      ]
     },
@@ -1722,7 +1797,8 @@
        "exam": "Exam 1",
        "pubchem_checked": true,
        "pubchem_cid": 4632,
-       "verification_date": "2026-11-06"
+       "verification_date": "2026-11-06",
+       "assigned": true
       },
       {
        "key": "octocrylene",
@@ -1741,7 +1817,8 @@
        "exam": "Exam 1",
        "pubchem_checked": true,
        "pubchem_cid": 22571,
-       "verification_date": "2026-11-06"
+       "verification_date": "2026-11-06",
+       "assigned": true
       },
       {
        "key": "bemotrizinol",
@@ -1760,7 +1837,8 @@
        "exam": "Exam 1",
        "pubchem_checked": true,
        "pubchem_cid": 135487856,
-       "verification_date": "2026-11-06"
+       "verification_date": "2026-11-06",
+       "assigned": true
       }
      ]
     }
@@ -1789,7 +1867,8 @@
        "exam": "Exam 1",
        "pubchem_checked": true,
        "pubchem_cid": 785,
-       "verification_date": "2026-11-06"
+       "verification_date": "2026-11-06",
+       "assigned": false
       },
       {
        "key": "benzoquinone",
@@ -1806,7 +1885,8 @@
        "exam": "Exam 1",
        "pubchem_checked": true,
        "pubchem_cid": 4650,
-       "verification_date": "2026-11-06"
+       "verification_date": "2026-11-06",
+       "assigned": false
       }
      ]
     },
@@ -1830,7 +1910,8 @@
        "exam": "Exam 1",
        "pubchem_checked": true,
        "pubchem_cid": 612,
-       "verification_date": "2026-11-06"
+       "verification_date": "2026-11-06",
+       "assigned": false
       },
       {
        "key": "malic acid",
@@ -1848,7 +1929,8 @@
        "exam": "Exam 1",
        "pubchem_checked": true,
        "pubchem_cid": 525,
-       "verification_date": "2026-11-06"
+       "verification_date": "2026-11-06",
+       "assigned": false
       }
      ]
     },
@@ -1871,7 +1953,8 @@
        "exam": "Exam 1",
        "pubchem_checked": true,
        "pubchem_cid": 5288907,
-       "verification_date": "2026-11-06"
+       "verification_date": "2026-11-06",
+       "assigned": false
       }
      ]
     }
@@ -1901,7 +1984,8 @@
        "exam": "Exam 1",
        "pubchem_checked": true,
        "pubchem_cid": 612,
-       "verification_date": "2026-11-06"
+       "verification_date": "2026-11-06",
+       "assigned": true
       },
       {
        "key": "beta-hydroxy acid",
@@ -1919,7 +2003,8 @@
        "exam": "Exam 1",
        "pubchem_checked": true,
        "pubchem_cid": 338,
-       "verification_date": "2026-11-06"
+       "verification_date": "2026-11-06",
+       "assigned": true
       }
      ]
     },
@@ -1942,7 +2027,8 @@
        "exam": "Exam 1",
        "pubchem_checked": true,
        "pubchem_cid": 54675776,
-       "verification_date": "2026-11-06"
+       "verification_date": "2026-11-06",
+       "assigned": true
       },
       {
        "key": "steroid nucleus",
@@ -1960,7 +2046,8 @@
        "exam": "Exam 1",
        "pubchem_checked": true,
        "pubchem_cid": 5991,
-       "verification_date": "2026-11-06"
+       "verification_date": "2026-11-06",
+       "assigned": true
       }
      ]
     },
@@ -1983,7 +2070,8 @@
        "exam": "Exam 1",
        "pubchem_checked": true,
        "pubchem_cid": 5282375,
-       "verification_date": "2026-11-06"
+       "verification_date": "2026-11-06",
+       "assigned": true
       },
       {
        "key": "retinoid carboxylic acid",
@@ -2001,7 +2089,8 @@
        "exam": "Exam 1",
        "pubchem_checked": true,
        "pubchem_cid": 60164,
-       "verification_date": "2026-11-06"
+       "verification_date": "2026-11-06",
+       "assigned": true
       }
      ]
     },
@@ -2024,7 +2113,8 @@
        "exam": "Exam 1",
        "pubchem_checked": true,
        "pubchem_cid": 7187,
-       "verification_date": "2026-11-06"
+       "verification_date": "2026-11-06",
+       "assigned": true
       },
       {
        "key": "macrolide",
@@ -2042,7 +2132,8 @@
        "exam": "Exam 1",
        "pubchem_checked": true,
        "pubchem_cid": 12560,
-       "verification_date": "2026-11-06"
+       "verification_date": "2026-11-06",
+       "assigned": true
       }
      ]
     }

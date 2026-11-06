@@ -8,6 +8,11 @@ characters.
 
 Every update adds its bullets here in the same commit that makes the change.
 
+## 2026-11-06 (Dr. Sikazwe's assigned pages)
+- Dr. Sikazwe's assigned slides for Exam 1 (11/06) applied: 23 questions outside them now stay off practice exams.
+- Those 23 stay in practice, each with a note saying it is outside his assigned pages.
+- Atlas tiles outside his assigned pages now say "Not on the assigned pages" (9 structures).
+
 ## 2026-11-06 (reading links)
 - Weak spots and "Explain more" now point to a reading section for 397 of 555 questions (was 35).
 - Sikazwe's Lectures 3 and 4 questions now link to their Tell apart and Reference tables.

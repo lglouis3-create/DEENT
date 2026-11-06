@@ -2,8 +2,9 @@
    Atlas study controls for PHAR 4346 DEENT (appended to atlas.js by
    gen_atlas.py). The core's Atlas view (views.js renderAtlas) draws the
    tiles; this rearranges each tile, without changing the core, into:
-     1. the priority badge (core / reference only / needs verification) and
-        the deck page and exam, as one short line;
+     1. the priority badge (core / reference only / needs verification),
+        the deck page and exam, and "Not on the assigned pages" where the
+        item is outside Dr. Sikazwe's assigned pages (11/06), as one short line;
      2. "Core learning": the tile's main text (what is shaded and why), with
         its inline citations moved to part 5;
      3. "Also in the lecture": the other taught facts, as a short list;
@@ -73,6 +74,7 @@ const ATLAS_UI = (() => {
 .atpri.p-core{border-color:var(--accent);color:var(--accent)}
 .atpri.p-verify{border-style:dashed}
 .atpg{font-size:11px;color:var(--text-dim)}
+.atunassigned{font-size:10.5px;color:var(--text-dim);border:1px dashed var(--line);border-radius:4px;padding:1px 6px}
 .atlbl{font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--text-dim);margin:0 0 -4px}
 .atalso ul{margin:0;padding-left:16px;font-size:12px;line-height:1.45;color:var(--text-dim)}
 .atalso li{margin:0 0 2px}
@@ -148,6 +150,12 @@ const ATLAS_UI = (() => {
       const pg = el('span', 'atpg');
       pg.textContent = 'DPAW p. ' + it.slide + ' · ' + (m.exam || 'Exam 1');
       row.append(badge, pg);
+      if (m.assigned === false) {               // not on Dr. Sikazwe's assigned pages (11/06); names nothing, so it stays in Hide names
+        const na = el('span', 'atunassigned');
+        na.textContent = 'Not on the assigned pages';
+        na.title = 'Outside Dr. Sikazwe\'s assigned pages for Exam 1 (list of 11/06: slides 7-9, 12, 15-22, 24-33, 42-54, 60-65, as numbered on the slides)';
+        row.append(na);
+      }
       t.insertBefore(row, name);
 
       // 2. core learning

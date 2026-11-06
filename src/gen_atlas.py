@@ -179,7 +179,8 @@ def main():
                         'pubchem': it.get('pubchem_cid', ''), 'checked': it.get('verification_date', ''),
                         'exam': it.get('exam', 'Exam 1'),
                         'psrc': it.get('priority_source', ''), 'vnote': it.get('verification_note', ''),
-                        'note': it.get('note', '')}
+                        'note': it.get('note', ''),
+                        'assigned': it.get('assigned', True)}
                 if it.get('deeper'):
                     dp = it['deeper']
                     if not dp.get('text') or not dp.get('sources') or not all(x.get('cite') and x.get('url') for x in dp['sources']):
