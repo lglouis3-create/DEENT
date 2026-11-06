@@ -74,8 +74,13 @@
       t.insertBefore(badge, name);
       const src = document.createElement('p');
       src.className = 'atsrc';
+      const STATUS = {'exact': 'PubChem and ChEMBL agree', 'exact-pubchem': 'PubChem match (no ChEMBL record)',
+        'stereo-unspecified': 'same molecule; stereo left open in one source', 'tautomer': 'same molecule; PubChem stores another tautomer',
+        'teaching-structure': 'teaching structure'};
       src.textContent = 'DPAW deck p. ' + it.slide + ' · ' + (m.exam || 'Exam 1') +
-        (m.chembl ? ' · ChEMBL ' + m.chembl : '');
+        (m.pubchem ? ' · PubChem CID ' + m.pubchem : '') + (m.chembl ? ' · ChEMBL ' + m.chembl : '') +
+        (STATUS[m.verification] ? ' · ' + STATUS[m.verification] : '');
+      src.title = m.checked ? 'Checked against PubChem and ChEMBL on ' + m.checked : '';
       t.appendChild(src);
       const c = ATLAS.CMP[it.plain];
       if (c && m.discrepancy) {
@@ -86,8 +91,8 @@
         const box = document.createElement('div');
         box.className = 'atcmp'; box.hidden = true;
         box.innerHTML = `<div class="atcmpgrid">
-            <figure>${c.lecture}<figcaption>As drawn in lecture (DPAW p. ${esc(c.slide)})</figcaption></figure>
-            <figure>${c.verified}<figcaption>Verified Drug Structure${m.chembl ? ' (ChEMBL ' + esc(m.chembl) + ')' : ''}</figcaption></figure>
+            <figure>${c.lecture}<figcaption>As drawn in lecture (DPAW p. ${esc(c.slide)})${c.lecture_cid ? ': this drawing is PubChem CID ' + esc(c.lecture_cid) : ''}</figcaption></figure>
+            <figure>${c.verified}<figcaption>Verified Drug Structure${m.pubchem ? ' (PubChem CID ' + esc(m.pubchem) + (m.chembl ? '; ChEMBL ' + esc(m.chembl) : '') + ')' : (m.chembl ? ' (ChEMBL ' + esc(m.chembl) + ')' : '')}</figcaption></figure>
           </div>
           <dl><dt>Lecture drawing</dt><dd>${esc(d.lecture_shows)}</dd>
           <dt>Verified structure</dt><dd>${esc(d.verified_has)}</dd>

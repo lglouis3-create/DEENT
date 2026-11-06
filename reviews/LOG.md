@@ -30,3 +30,12 @@
 - Study controls (atlas_ui.js, course-level, no core change): priority badges, reference-only toggle (hidden by default), reveal/hide key features, deck page and exam per tile, compare panel; hidden-names mode hides the source line and comparison.
 - Sun lecture: 24 review findings confirmed resolved; 18 thin explanations rewritten; Exam 1 tag marked provisional.
 - Checks: 27 PASS, 1 FAIL (scheduler_test.js; passes 109/109 with kit PR #50's version, so an upstream test issue), 1 REPORT; atlas_check.js PASS; Atlas controls tested in light/dark, desktop and iPhone 13 emulation, no page errors.
+
+## 2026-11-06: PubChem verification pass (Louis: "Run the full PubChem verification pass for all 91 DEENT Atlas structures")
+- Network: Louis approved adding pubchem.ncbi.nlm.nih.gov and www.ebi.ac.uk to the environment allowlist ("allow PubChem and ChEMBL").
+- src/verify_pubchem.py queries PubChem PUG-REST (exact InChIKey, then same connectivity, then name) and ChEMBL by stored id; RDKit computes the Atlas side. Record: src/verification/atlas_verification.json and .md (name, key, deck page, priority, PubChem CID, ChEMBL id, date, status, detail).
+- Result (91 items, all queried): exact 69, exact-pubchem 2, stereo-unspecified 5, tautomer 4, teaching-structure 11; 0 not-found, 0 mismatch. Sum 69+2+5+4+11 = 91, checked.
+- Lecture drawings identified in PubChem: p.25 hydrocortisone CID 165046, p.25 clobetasol CID 93007 (betamethasone 17-propionate), p.28 pimecrolimus CID 16051947, p.63 padimate O CID 11436614, p.64 octisalate CID 46185954; p.54 erythromycin has no record. The six comparisons are unchanged.
+- Independent review (separate agent, recomputed all 91 keys): 5beta-dihydrocortisol's ChEMBL link CHEMBL1079111 is the 5-alpha epimer (removed; status exact-pubchem); titanium dioxide CID 162651 carries a misleading PubChem title (no CID on tile); folate notes now state the drawn tautomer; PubChem titles dropped from the compare caption (two are imprecise). Benzoyl radical keeps the slide label; its note states the drawn benzoyloxy radical.
+- atlas_check.js updated to the PubChem status vocabulary. Checks: 27 PASS, 1 FAIL (scheduler_test.js; 109 PASS with kit PR #50's version, rerun today), 1 REPORT; atlas_check.js PASS; Atlas UI in light/dark, desktop and phone: 80 tiles shown, 11 reference hidden, toggles and hide-names work, no horizontal scroll, no page errors.
+- Nothing pushed to main; the live site is unchanged.

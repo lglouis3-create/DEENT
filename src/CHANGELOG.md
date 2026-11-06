@@ -8,6 +8,10 @@ characters.
 
 Every update adds its bullets here in the same commit that makes the change.
 
+## 2026-11-06 (PubChem check)
+- Every Atlas structure was checked against PubChem; each tile names its PubChem record and status.
+- Compare structures names the PubChem record of the lecture drawing where one exists.
+
 ## 2026-11-06 (Atlas refinement)
 - Each Atlas structure is marked Core, Reference only or Needs verification.
 - Reference-only structures are hidden by default; one button shows them.

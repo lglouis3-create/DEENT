@@ -5,7 +5,8 @@
  * This checks that the data is complete and that the Atlas cannot leak into
  * the wrong place:
  *   1. every item has a priority (core | reference | verify) and a verification
- *      status, and every real drug has a ChEMBL id or says why not;
+ *      status from the PubChem pass (verify_pubchem.py), a PubChem CID for
+ *      every drug and a ChEMBL id where ChEMBL was cross-checked;
  *   2. no excluded item (atlas_data.json "excluded") appears as a tile;
  *   3. every comparison has a lecture drawing and a verified drawing, and the
  *      verified drawing is labelled as such;
@@ -33,13 +34,25 @@ noPri.length ? fail(`${noPri.length} item(s) without a valid priority: ${noPri.m
 const noVer = items.filter(it => !it.verification);
 noVer.length ? fail(`${noVer.length} item(s) without a verification status: ${noVer.map(i => i.key).join(', ')}`)
              : ok('all items carry a verification status');
-const drugNoId = items.filter(it => /^verified/.test(it.verification || '') && !it.chembl_id);
-drugNoId.length ? fail(`verified item(s) without a ChEMBL id: ${drugNoId.map(i => i.key).join(', ')}`)
-                : ok('every verified item names its ChEMBL record');
-const mism = items.filter(it => it.verification === 'mismatch');
-mism.length ? fail(`item(s) whose SMILES does not match the database: ${mism.map(i => i.key).join(', ')}`)
-            : ok('no database mismatches left');
-
+const STATUSES = ['exact', 'exact-pubchem', 'stereo-unspecified', 'tautomer', 'teaching-structure'];
+const badStatus = items.filter(it => !STATUSES.includes(it.verification));
+badStatus.length ? fail(`item(s) with a status outside ${STATUSES.join('/')}: ${badStatus.map(i => i.key + '=' + i.verification).join(', ')}`)
+                 : ok('every status is one of exact, exact-pubchem, stereo-unspecified, tautomer, teaching-structure (no mismatch, no not-found)');
+const notChecked = items.filter(it => it.pubchem_checked !== true || !it.verification_date);
+notChecked.length ? fail(`item(s) not checked against PubChem: ${notChecked.map(i => i.key).join(', ')}`)
+                  : ok(`all ${items.length} items checked against PubChem, with a date`);
+const cidNoCheck = items.filter(it => it.pubchem_cid && it.pubchem_checked !== true);
+cidNoCheck.length ? fail(`PubChem CID shown without a check: ${cidNoCheck.map(i => i.key).join(', ')}`)
+                  : ok('no PubChem CID is shown for an item that was not checked');
+const needCid = items.filter(it => it.verification !== 'teaching-structure' && !/^\d+$/.test(String(it.pubchem_cid || '')));
+needCid.length ? fail(`drug item(s) without a PubChem CID: ${needCid.map(i => i.key).join(', ')}`)
+               : ok('every drug item names its PubChem record');
+const needChembl = items.filter(it => ['exact', 'stereo-unspecified', 'tautomer'].includes(it.verification) && !/^CHEMBL\d+$/.test(it.chembl_id || ''));
+needChembl.length ? fail(`item(s) cross-checked with ChEMBL but no ChEMBL id: ${needChembl.map(i => i.key).join(', ')}`)
+                  : ok('every exact, stereo-unspecified and tautomer item names its ChEMBL record');
+const noNote = items.filter(it => it.verification !== 'exact' && !it.verification_note);
+noNote.length ? fail(`non-exact item(s) without a note: ${noNote.map(i => i.key).join(', ')}`)
+              : ok('every non-exact status carries an explanation');
 // 2. exclusions
 const keys = new Set(items.map(i => i.key));
 const excl = (data.excluded || []).filter(x => keys.has(String(x.item).toLowerCase()));

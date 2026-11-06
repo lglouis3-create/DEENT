@@ -94,3 +94,4 @@ Resolved 2026-11-06 (Louis's direction): both drawings, with Compare structures;
 
 ## Atlas items needing verification
 - 5beta-dihydrocortisol and urocortisol (DPAW p.26): drawn but not spoken; the 11/03 recording ends mid-sentence on this slide. Shown with a "Needs verification" badge and kept out of questions.
+- PubChem pass (2026-11-06): both structures match PubChem exactly (5beta-dihydrocortisol CID 164838, urocortisol CID 5864). The ChEMBL record formerly linked to 5beta-dihydrocortisol (CHEMBL1079111) is the 5-alpha epimer and was removed; ChEMBL has no record with its InChIKey. Their lecture status is still open.

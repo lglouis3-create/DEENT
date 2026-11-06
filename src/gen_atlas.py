@@ -164,6 +164,7 @@ def main():
                     lsvg, _ = draw(lec['smiles'], lec['diff'], it['name'] + ' (lecture drawing)')
                     vsvg, _ = draw(it['smiles'], it['discrepancy']['verified_diff'], it['name'] + ' (verified drug structure)')
                     cmp[k] = {'lecture': lsvg, 'verified': vsvg, 'slide': lec.get('slide', it['slide']),
+                              'lecture_cid': lec.get('pubchem_cid'), 'lecture_title': lec.get('pubchem_title'),
                               'primary': 'lecture' if lec.get('primary', True) else 'verified'}
                 if fg[k] is None:
                     fg[k], mol = draw(it['smiles'], it.get('mark'), it['name'])
@@ -171,6 +172,7 @@ def main():
                     Draw.MolToFile(mol, os.path.join(png_dir, k.replace('/', '_').replace(' ', '_') + '.png'), size=(500, 380))
                 meta = {'priority': pr, 'reason': it.get('priority_reason', ''),
                         'verification': it.get('verification', ''), 'chembl': it.get('chembl_id', ''),
+                        'pubchem': it.get('pubchem_cid', ''), 'checked': it.get('verification_date', ''),
                         'exam': it.get('exam', 'Exam 1')}
                 if lec:
                     d = it['discrepancy']

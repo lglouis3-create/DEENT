@@ -2,6 +2,10 @@
 """Merge the Atlas verification pass into atlas_data.json (one-off helper, kept
 because it produced content; rerun only with a new verify.json).
 
+It writes the ChEMBL-pass statuses. The PubChem pass (verify_pubchem.py
+--merge) replaced them on 2026-11-06, so after any rerun of this script run
+verify_pubchem.py --merge again before gen_atlas.py.
+
     python3 -I apply_verify.py <verify.json>
 
 verify.json (written 2026-11-06 by a separate verification agent) holds, per

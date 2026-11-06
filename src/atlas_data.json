@@ -19,10 +19,13 @@
        "priority": "core",
        "priority_reason": "He named crisaborole as an emphasis drug and taught its benzoxaborole (boron) class, soft-drug design, logP 3 and Zn/Mg coordination as its CBDA.",
        "priority_source": "p.7; T 660-662, 665-668, 683-697, 712-718",
-       "verification": "verified-stereo",
+       "verification": "exact",
        "chembl_id": "CHEMBL484785",
-       "verification_note": "Full standard InChIKey match to the ChEMBL canonical SMILES.",
-       "exam": "Exam 1"
+       "verification_note": "Atlas = PubChem CID 44591583 = ChEMBL CHEMBL484785 (full InChIKey).",
+       "exam": "Exam 1",
+       "pubchem_checked": true,
+       "pubchem_cid": 44591583,
+       "verification_date": "2026-11-06"
       },
       {
        "key": "crisaborole benzyl alcohol metabolite",
@@ -34,9 +37,12 @@
        "priority": "core",
        "priority_reason": "Step-1 product of non-enzymatic hydrolytic deboronation; \"pay attention to what happens to it once it gets into the skin\".",
        "priority_source": "p.7, p.9; T 697-704, 723-728",
-       "verification": "not-a-drug-record",
-       "verification_note": "Metabolite drawn on p.7 (deboronated benzyl alcohol). Exact-structure search (similarity 100) returned no ChEMBL record. Connectivity follows crisaborole with B-O ring opened: phenol + CH2OH, as drawn.",
-       "exam": "Exam 1"
+       "verification": "teaching-structure",
+       "verification_note": "Teaching structure (not forced onto a drug record). PubChem holds this exact structure as CID 135391074.",
+       "exam": "Exam 1",
+       "pubchem_checked": true,
+       "pubchem_cid": 135391074,
+       "verification_date": "2026-11-06"
       },
       {
        "key": "crisaborole benzoic acid metabolite",
@@ -48,9 +54,12 @@
        "priority": "core",
        "priority_reason": "Step-2 product: \"Not 3, not 4, not sips, 2 enzymes\" (ADH then ALDH); the Polleve-1 scheme builds on it.",
        "priority_source": "p.7, p.9; T 705-711, 767-777",
-       "verification": "not-a-drug-record",
-       "verification_note": "Metabolite drawn on p.7 (step-2 carboxylic acid). No ChEMBL record by exact structure.",
-       "exam": "Exam 1"
+       "verification": "teaching-structure",
+       "verification_note": "Teaching structure (not forced onto a drug record). PubChem holds this exact structure as CID 133080796.",
+       "exam": "Exam 1",
+       "pubchem_checked": true,
+       "pubchem_cid": 133080796,
+       "verification_date": "2026-11-06"
       }
      ]
     },
@@ -68,10 +77,13 @@
        "priority": "core",
        "priority_reason": "One of the two emphasized \"-tinib\" drugs; he taught that it is structurally different from upadacitinib, a 3A4 substrate, with active OH metabolites (class names themselves need not be memorized).",
        "priority_source": "p.8; T 730-757",
-       "verification": "verified-stereo",
+       "verification": "exact",
        "chembl_id": "CHEMBL1789941",
-       "verification_note": "Full standard InChIKey match to the ChEMBL canonical SMILES.",
-       "exam": "Exam 1"
+       "verification_note": "Atlas = PubChem CID 25126798 = ChEMBL CHEMBL1789941 (full InChIKey).",
+       "exam": "Exam 1",
+       "pubchem_checked": true,
+       "pubchem_cid": 25126798,
+       "verification_date": "2026-11-06"
       },
       {
        "key": "upadacitinib",
@@ -84,10 +96,13 @@
        "priority": "core",
        "priority_reason": "Paired with ruxolitinib: different ring system, 3A4 substrate, no active metabolites.",
        "priority_source": "p.8; T 730-757",
-       "verification": "verified-stereo",
+       "verification": "exact",
        "chembl_id": "CHEMBL3622821",
-       "verification_note": "Full standard InChIKey match to the ChEMBL canonical SMILES.",
-       "exam": "Exam 1"
+       "verification_note": "Atlas = PubChem CID 58557659 = ChEMBL CHEMBL3622821 (full InChIKey).",
+       "exam": "Exam 1",
+       "pubchem_checked": true,
+       "pubchem_cid": 58557659,
+       "verification_date": "2026-11-06"
       }
      ]
     }
@@ -110,10 +125,13 @@
        "priority": "core",
        "priority_reason": "He contrasted the silicone emollients: dimethicone linear, cyclomethicone cyclic (\"a pentamer\"); hypoallergenic, non-comedogenic.",
        "priority_source": "p.15; T 882-889",
-       "verification": "verified-stereo",
+       "verification": "exact",
        "chembl_id": "CHEMBL1885178",
-       "verification_note": "Matches CHEMBL1885178, an unnamed record of decamethylcyclopentasiloxane (D5); the name \"cyclomethicone\" returns no ChEMBL record.",
-       "exam": "Exam 1"
+       "verification_note": "Atlas = PubChem CID 10913 = ChEMBL CHEMBL1885178 (full InChIKey).",
+       "exam": "Exam 1",
+       "pubchem_checked": true,
+       "pubchem_cid": 10913,
+       "verification_date": "2026-11-06"
       }
      ]
     },
@@ -130,10 +148,13 @@
        "priority": "core",
        "priority_reason": "Hydroxyanthrone class and its CBDA (spontaneous autoxidation to anthranyl radical + superoxide), tested in Polleve-2.",
        "priority_source": "p.17, p.19; T 918-953, 977-980",
-       "verification": "verified-stereo",
+       "verification": "exact",
        "chembl_id": "CHEMBL46469",
-       "verification_note": "Full standard InChIKey match to the ChEMBL canonical SMILES.",
-       "exam": "Exam 1"
+       "verification_note": "Atlas = PubChem CID 2202 = ChEMBL CHEMBL46469 (full InChIKey).",
+       "exam": "Exam 1",
+       "pubchem_checked": true,
+       "pubchem_cid": 2202,
+       "verification_date": "2026-11-06"
       },
       {
        "key": "methoxsalen",
@@ -146,10 +167,13 @@
        "priority": "core",
        "priority_reason": "Furanocoumarin class; the only drug whose CBDA is DNA intercalation/crosslinking with UVA; partial 3A4 inhibitor.",
        "priority_source": "p.18; T 958-976",
-       "verification": "verified-stereo",
+       "verification": "exact",
        "chembl_id": "CHEMBL416",
-       "verification_note": "Full standard InChIKey match to the ChEMBL canonical SMILES.",
-       "exam": "Exam 1"
+       "verification_note": "Atlas = PubChem CID 4114 = ChEMBL CHEMBL416 (full InChIKey).",
+       "exam": "Exam 1",
+       "pubchem_checked": true,
+       "pubchem_cid": 4114,
+       "verification_date": "2026-11-06"
       }
      ]
     }
@@ -173,9 +197,12 @@
        "priority": "core",
        "priority_reason": "\"Structure ... stereochemistry ... numbering. So three things\"; \"practice that\".",
        "priority_source": "p.20-22; T 987-1017, 1084-1099",
-       "verification": "not-a-drug-record",
-       "verification_note": "Teaching skeleton: the p.20 numbering drawing (C1-C27), saturated cholestane connectivity with no stereo, as the slide draws it. Not a drug record.",
-       "exam": "Exam 1"
+       "verification": "teaching-structure",
+       "verification_note": "Teaching structure (not forced onto a drug record). PubChem holds this exact structure as CID 10202.",
+       "exam": "Exam 1",
+       "pubchem_checked": true,
+       "pubchem_cid": 10202,
+       "verification_date": "2026-11-06"
       },
       {
        "key": "glucocorticoid sar",
@@ -188,10 +215,13 @@
        "priority": "core",
        "priority_reason": "\"I'm limiting you to 4 things\": C1-C2 double bond, 6alpha-X, 9alpha-X, 11beta-OH (tile uses fluticasone propionate to carry all four).",
        "priority_source": "p.20, p.24; T 1020-1073",
-       "verification": "verified-stereo",
+       "verification": "teaching-structure",
        "chembl_id": "CHEMBL1473",
-       "verification_note": "Same molecule as fluticasone propionate; full match CHEMBL1473.",
-       "exam": "Exam 1"
+       "verification_note": "Teaching structure (not forced onto a drug record). PubChem holds this exact structure as CID 444036.",
+       "exam": "Exam 1",
+       "pubchem_checked": true,
+       "pubchem_cid": 444036,
+       "verification_date": "2026-11-06"
       }
      ]
     },
@@ -210,15 +240,17 @@
        "priority": "core",
        "priority_reason": "Reference (parent) molecule for glucocorticoid activity; ADME and the 11beta-HSD \"ping pong\" he asked students to pay attention to.",
        "priority_source": "p.24-26; T 1140-1145, 1181-1196; T@790",
-       "verification": "verified-stereo",
+       "verification": "exact",
        "chembl_id": "CHEMBL389621",
-       "verification_note": "Atlas (C20 ketone, as on p.24 and p.26) matches ChEMBL in full. The p.25 drawing differs (C20 alcohol): see discrepancies.",
+       "verification_note": "Atlas = PubChem CID 5754 = ChEMBL CHEMBL389621 (full InChIKey).",
        "exam": "Exam 1",
        "lecture": {
         "smiles": "C[C@]12CCC(=O)C=C1CC[C@@H]1[C@@H]2[C@@H](O)C[C@@]2(C)[C@H]1CC[C@]2(O)C(O)CO",
         "diff": "[CX4H1;!R]([OX2H1])[CH2][OX2H1]",
         "slide": 25,
-        "primary": false
+        "primary": false,
+        "pubchem_cid": 165046,
+        "pubchem_title": "20-Hydroxycortisol"
        },
        "discrepancy": {
         "lecture_shows": "On DPAW p. 25, C20 is drawn as CH–OH (an alcohol).",
@@ -227,7 +259,10 @@
         "emphasized": "Hydrocortisone is the reference molecule; on p. 25 he pointed to the changes made to it (C1=C2, 9α-F, 16-CH₃, 17-propionate): \"not metabolism\" (T 1140–1145, 1175–1179).",
         "changes_concept": "No. C20 is not one of the changes he marked.",
         "verified_diff": "[CX3;!R](=O)[CH2][OX2H1]"
-       }
+       },
+       "pubchem_checked": true,
+       "pubchem_cid": 5754,
+       "verification_date": "2026-11-06"
       },
       {
        "key": "cortisone",
@@ -240,10 +275,13 @@
        "priority": "core",
        "priority_reason": "The other half of the 11beta-HSD \"ping pong\" (inactive 11-keto metabolite).",
        "priority_source": "p.26; T 1190-1196; T@722-@925",
-       "verification": "verified-stereo",
+       "verification": "exact",
        "chembl_id": "CHEMBL1499",
-       "verification_note": "CHEMBL1499 (pref_name CORTISONE).",
-       "exam": "Exam 1"
+       "verification_note": "Atlas = PubChem CID 222786 = ChEMBL CHEMBL1499 (full InChIKey).",
+       "exam": "Exam 1",
+       "pubchem_checked": true,
+       "pubchem_cid": 222786,
+       "verification_date": "2026-11-06"
       },
       {
        "key": "5beta-dihydrocortisol",
@@ -254,10 +292,13 @@
        "priority": "verify",
        "priority_reason": "On the p.26 scheme (highlighted box) but never spoken: the 11/03 recording ends mid-sentence at L1196 on this slide and 11/04 resumed only on 11beta-HSD. Lecture status cannot be confirmed.",
        "priority_source": "p.26; T 1196 (recording ends); T@722-@985",
-       "verification": "verified-connectivity",
-       "chembl_id": "CHEMBL1079111",
-       "verification_note": "First InChIKey block matches CHEMBL1079111 (unnamed). That record is the 5alpha epimer (C5 S: H5 anti to C19 in a 3D embedding); the Atlas SMILES has C5 R with H5 cis to C19 = 5beta, as the name and the p.26 drawing require. The other 7 centres match. Consistent with urocortisol, whose 5beta configuration matches CHEMBL1908047 in full.",
-       "exam": "Exam 1"
+       "verification": "exact-pubchem",
+       "verification_note": "Atlas = PubChem CID 164838 (full InChIKey). ChEMBL CHEMBL1079111 is another stereoisomer (atom index 7 of the Atlas SMILES: R here, S in ChEMBL), not this molecule; ChEMBL records with this InChIKey: none. No ChEMBL id is given.",
+       "exam": "Exam 1",
+       "pubchem_checked": true,
+       "pubchem_cid": 164838,
+       "verification_date": "2026-11-06",
+       "chembl_rejected": "CHEMBL1079111"
       },
       {
        "key": "urocortisol",
@@ -269,10 +310,13 @@
        "priority": "verify",
        "priority_reason": "Same as 5beta-dihydrocortisol: slide-only 3alpha-HSD product; no spoken coverage in either recording.",
        "priority_source": "p.26; T 1196; T@722-@985",
-       "verification": "verified-stereo",
+       "verification": "exact",
        "chembl_id": "CHEMBL1908047",
-       "verification_note": "Matches CHEMBL1908047 in full (unnamed); 3alpha-OH confirmed by 3D embedding (H3 on the C19 face), 5beta as above; = tetrahydrocortisol.",
-       "exam": "Exam 1"
+       "verification_note": "Atlas = PubChem CID 5864 = ChEMBL CHEMBL1908047 (full InChIKey).",
+       "exam": "Exam 1",
+       "pubchem_checked": true,
+       "pubchem_cid": 5864,
+       "verification_date": "2026-11-06"
       }
      ]
     },
@@ -290,10 +334,13 @@
        "priority": "reference",
        "priority_reason": "He said the hydrocortisone derivatives are not for memorizing (\"It's now [not] for you to memorize this\"). Examinable concept: they are structural derivatives of hydrocortisone and structure changes lipophilicity/potency.",
        "priority_source": "p.24-25; T 1144-1154",
-       "verification": "verified-stereo",
+       "verification": "exact",
        "chembl_id": "CHEMBL1200384",
-       "verification_note": "Full standard InChIKey match to the ChEMBL canonical SMILES.",
-       "exam": "Exam 1"
+       "verification_note": "Atlas = PubChem CID 21800 = ChEMBL CHEMBL1200384 (full InChIKey).",
+       "exam": "Exam 1",
+       "pubchem_checked": true,
+       "pubchem_cid": 21800,
+       "verification_date": "2026-11-06"
       },
       {
        "key": "clobetasol propionate",
@@ -307,15 +354,17 @@
        "priority": "core",
        "priority_reason": "Besides being a p.24 derivative, it is the worked example on p.25 he walked through: hydrocortisone to clobetasol propionate by added groups and the C1-C2 double bond raises potency (\"this is not metabolism\").",
        "priority_source": "p.25; T 1175-1179 (derivatives not memorized: T 1152-1154)",
-       "verification": "verified-stereo",
+       "verification": "exact",
        "chembl_id": "CHEMBL1159650",
-       "verification_note": "Atlas (21-Cl) matches ChEMBL in full. The p.25 drawing differs (21-OH): see discrepancies.",
+       "verification_note": "Atlas = PubChem CID 32798 = ChEMBL CHEMBL1159650 (full InChIKey).",
        "exam": "Exam 1",
        "lecture": {
         "smiles": "CCC(=O)O[C@]1(C(=O)CO)[C@@H](C)C[C@H]2[C@@H]3CCC4=CC(=O)C=C[C@]4(C)[C@@]3(F)[C@@H](O)C[C@@]21C",
         "diff": "[CX3;!R](=O)[CH2][OX2H1]",
         "slide": 25,
-        "primary": false
+        "primary": false,
+        "pubchem_cid": 93007,
+        "pubchem_title": "Betamethasone 17-propionate"
        },
        "discrepancy": {
         "lecture_shows": "On DPAW p. 25, C21 carries an OH (that molecule is betamethasone 17-propionate).",
@@ -324,7 +373,10 @@
         "emphasized": "The added groups and the C1=C2 bond raise potency from hydrocortisone to clobetasol (T 1175–1179). C21 is not highlighted.",
         "changes_concept": "No. The SAR changes he taught are the same in both drawings.",
         "verified_diff": "[CX3;!R](=O)[CH2]Cl"
-       }
+       },
+       "pubchem_checked": true,
+       "pubchem_cid": 32798,
+       "verification_date": "2026-11-06"
       },
       {
        "key": "desonide",
@@ -336,10 +388,13 @@
        "priority": "reference",
        "priority_reason": "Hydrocortisone derivative not to be memorized; concept (derivatives of the parent) stays examinable.",
        "priority_source": "p.24; T 1151-1154",
-       "verification": "verified-stereo",
+       "verification": "exact",
        "chembl_id": "CHEMBL1201109",
-       "verification_note": "Full standard InChIKey match to the ChEMBL canonical SMILES.",
-       "exam": "Exam 1"
+       "verification_note": "Atlas = PubChem CID 5311066 = ChEMBL CHEMBL1201109 (full InChIKey).",
+       "exam": "Exam 1",
+       "pubchem_checked": true,
+       "pubchem_cid": 5311066,
+       "verification_date": "2026-11-06"
       },
       {
        "key": "fluticasone propionate",
@@ -351,10 +406,13 @@
        "priority": "reference",
        "priority_reason": "Hydrocortisone derivative not to be memorized; it also carries all four SAR features (see the SAR tile).",
        "priority_source": "p.24; T 1151-1154",
-       "verification": "verified-stereo",
+       "verification": "exact",
        "chembl_id": "CHEMBL1473",
-       "verification_note": "Full standard InChIKey match to the ChEMBL canonical SMILES.",
-       "exam": "Exam 1"
+       "verification_note": "Atlas = PubChem CID 444036 = ChEMBL CHEMBL1473 (full InChIKey).",
+       "exam": "Exam 1",
+       "pubchem_checked": true,
+       "pubchem_cid": 444036,
+       "verification_date": "2026-11-06"
       },
       {
        "key": "triamcinolone acetonide",
@@ -366,10 +424,13 @@
        "priority": "reference",
        "priority_reason": "Hydrocortisone derivative not to be memorized; concept stays examinable.",
        "priority_source": "p.24; T 1151-1154",
-       "verification": "verified-stereo",
+       "verification": "exact",
        "chembl_id": "CHEMBL1504",
-       "verification_note": "Full standard InChIKey match to the ChEMBL canonical SMILES.",
-       "exam": "Exam 1"
+       "verification_note": "Atlas = PubChem CID 6436 = ChEMBL CHEMBL1504 (full InChIKey).",
+       "exam": "Exam 1",
+       "pubchem_checked": true,
+       "pubchem_cid": 6436,
+       "verification_date": "2026-11-06"
       }
      ]
     }
@@ -394,10 +455,13 @@
        "priority": "core",
        "priority_reason": "Part of the vitamin D3 scheme behind the announced 2-point take-home question: identify the reaction, organ and enzyme of a step (\"light is going to be involved\" in the first).",
        "priority_source": "p.27; T@985-@1200, @2989-@3660, @4065-@4160, @4371",
-       "verification": "verified-stereo",
+       "verification": "exact",
        "chembl_id": "CHEMBL1797131",
-       "verification_note": "Matches CHEMBL1797131 in full (unnamed record); a name search returns cholecalciferol, which lists \"7-dehydrocholesterol, activated\" as a synonym.",
-       "exam": "Exam 1"
+       "verification_note": "Atlas = PubChem CID 439423 = ChEMBL CHEMBL1797131 (full InChIKey).",
+       "exam": "Exam 1",
+       "pubchem_checked": true,
+       "pubchem_cid": 439423,
+       "verification_date": "2026-11-06"
       },
       {
        "key": "cholecalciferol",
@@ -409,10 +473,13 @@
        "priority": "core",
        "priority_reason": "Part of the vitamin D3 scheme behind the announced 2-point take-home question: identify the reaction, organ and enzyme of a step (\"light is going to be involved\" in the first).",
        "priority_source": "p.27; T@985-@1200, @2989-@3660, @4065-@4160, @4371",
-       "verification": "verified-stereo",
+       "verification": "exact",
        "chembl_id": "CHEMBL1042",
-       "verification_note": "Full standard InChIKey match to the ChEMBL canonical SMILES.",
-       "exam": "Exam 1"
+       "verification_note": "Atlas = PubChem CID 5280795 = ChEMBL CHEMBL1042 (full InChIKey).",
+       "exam": "Exam 1",
+       "pubchem_checked": true,
+       "pubchem_cid": 5280795,
+       "verification_date": "2026-11-06"
       },
       {
        "key": "25-hydroxycholecalciferol",
@@ -424,10 +491,13 @@
        "priority": "core",
        "priority_reason": "Part of the vitamin D3 scheme behind the announced 2-point take-home question: identify the reaction, organ and enzyme of a step (\"light is going to be involved\" in the first).",
        "priority_source": "p.27; T@985-@1200, @2989-@3660, @4065-@4160, @4371",
-       "verification": "verified-stereo",
+       "verification": "exact",
        "chembl_id": "CHEMBL1040",
-       "verification_note": "Full standard InChIKey match to the ChEMBL canonical SMILES.",
-       "exam": "Exam 1"
+       "verification_note": "Atlas = PubChem CID 5283731 = ChEMBL CHEMBL1040 (full InChIKey).",
+       "exam": "Exam 1",
+       "pubchem_checked": true,
+       "pubchem_cid": 5283731,
+       "verification_date": "2026-11-06"
       },
       {
        "key": "calcitriol",
@@ -440,10 +510,13 @@
        "priority": "core",
        "priority_reason": "Part of the vitamin D3 scheme behind the announced 2-point take-home question: identify the reaction, organ and enzyme of a step (\"light is going to be involved\" in the first).",
        "priority_source": "p.27; T@985-@1200, @2989-@3660, @4065-@4160, @4371",
-       "verification": "verified-stereo",
+       "verification": "exact",
        "chembl_id": "CHEMBL846",
-       "verification_note": "Full standard InChIKey match to the ChEMBL canonical SMILES.",
-       "exam": "Exam 1"
+       "verification_note": "Atlas = PubChem CID 5280453 = ChEMBL CHEMBL846 (full InChIKey).",
+       "exam": "Exam 1",
+       "pubchem_checked": true,
+       "pubchem_cid": 5280453,
+       "verification_date": "2026-11-06"
       }
      ]
     },
@@ -461,10 +534,13 @@
        "priority": "core",
        "priority_reason": "Secosteroid analog; he taught that the attempt to separate it from calcium absorption failed, so hypercalcemia limits both calcipotriene and calcitriol.",
        "priority_source": "p.27; T@1505-@2830 (hypercalcemia @2758)",
-       "verification": "verified-stereo",
+       "verification": "exact",
        "chembl_id": "CHEMBL1200666",
-       "verification_note": "Full standard InChIKey match to the ChEMBL canonical SMILES.",
-       "exam": "Exam 1"
+       "verification_note": "Atlas = PubChem CID 5288783 = ChEMBL CHEMBL1200666 (full InChIKey).",
+       "exam": "Exam 1",
+       "pubchem_checked": true,
+       "pubchem_cid": 5288783,
+       "verification_date": "2026-11-06"
       }
      ]
     }
@@ -490,15 +566,17 @@
        "priority": "core",
        "priority_reason": "He named the structural differences from tacrolimus (Cl vs OH, ethyl vs allyl) and the main take-away: differ in skin permeation (high skin protein binding).",
        "priority_source": "p.28, p.32; T@4649-@4734, @4931-@5300, @6022",
-       "verification": "verified-stereo",
+       "verification": "exact",
        "chembl_id": "CHEMBL1200686",
-       "verification_note": "Atlas (Cl cis to OCH3, p.32) matches ChEMBL in full. The p.28 drawing inverts the Cl centre: see discrepancies.",
+       "verification_note": "Atlas = PubChem CID 6509979 = ChEMBL CHEMBL1200686 (full InChIKey).",
        "exam": "Exam 1",
        "lecture": {
         "smiles": "CC[C@@H]1/C=C(\\C)C[C@H](C)C[C@H](OC)[C@H]2O[C@@](O)(C(=O)C(=O)N3CCCC[C@H]3C(=O)O[C@H](/C(C)=C/[C@@H]3CC[C@@H](Cl)[C@H](OC)C3)[C@H](C)[C@@H](O)CC1=O)[C@H](C)C[C@@H]2OC",
         "diff": "[Cl][CH1;R1]",
         "slide": 28,
-        "primary": false
+        "primary": false,
+        "pubchem_cid": 16051947,
+        "pubchem_title": "17-Epi Pimecrolimus"
        },
        "discrepancy": {
         "lecture_shows": "On DPAW p. 28 the Cl is drawn on the opposite face to the OCH₃ (trans), the same way as tacrolimus’s OH beside it.",
@@ -507,7 +585,10 @@
         "emphasized": "Pimecrolimus and tacrolimus differ at Cl vs OH and ethyl vs allyl, and in skin permeation (T@4649–@4734, @6022). He did not discuss stereochemistry.",
         "changes_concept": "No. The Cl-for-OH swap he taught is the same.",
         "verified_diff": "[Cl][CH1;R1]"
-       }
+       },
+       "pubchem_checked": true,
+       "pubchem_cid": 6509979,
+       "verification_date": "2026-11-06"
       },
       {
        "key": "tacrolimus",
@@ -520,10 +601,13 @@
        "priority": "core",
        "priority_reason": "Paired comparison with pimecrolimus: OH and allyl; low skin binding so it can go systemic.",
        "priority_source": "p.28; T@4649-@4734, @5414-@5700, @6022",
-       "verification": "verified-stereo",
+       "verification": "exact",
        "chembl_id": "CHEMBL269732",
-       "verification_note": "Full standard InChIKey match to the ChEMBL canonical SMILES.",
-       "exam": "Exam 1"
+       "verification_note": "Atlas = PubChem CID 445643 = ChEMBL CHEMBL269732 (full InChIKey).",
+       "exam": "Exam 1",
+       "pubchem_checked": true,
+       "pubchem_cid": 445643,
+       "verification_date": "2026-11-06"
       }
      ]
     }
@@ -549,10 +633,13 @@
        "priority": "core",
        "priority_reason": "Pteridine class; differs from folic acid only by \"this methyl group and that amine\"; competitive DHFR inhibitor; SAR on p.31.",
        "priority_source": "p.30-31; T@8269, @8732, @9220, @10109-@10851",
-       "verification": "verified-connectivity",
+       "verification": "stereo-unspecified",
        "chembl_id": "CHEMBL34259",
-       "verification_note": "Atlas leaves the glutamate C-alpha unspecified (slides draw none); ChEMBL is L (S). Only stereo block differs.",
-       "exam": "Exam 1"
+       "verification_note": "Same molecule; ChEMBL CHEMBL34259 defines 1 stereo element(s); the Atlas, like the slide and PubChem CID 4112, defines 0.",
+       "exam": "Exam 1",
+       "pubchem_checked": true,
+       "pubchem_cid": 4112,
+       "verification_date": "2026-11-06"
       },
       {
        "key": "folic acid",
@@ -565,10 +652,13 @@
        "priority": "core",
        "priority_reason": "The comparator he walked through against methotrexate (N-CH3 and NH2 vs OH).",
        "priority_source": "p.30; T@8545-@8779",
-       "verification": "verified-connectivity",
+       "verification": "stereo-unspecified",
        "chembl_id": "CHEMBL1622",
-       "verification_note": "Atlas leaves the glutamate C-alpha unspecified and draws the 4-OH tautomer as the slides do; ChEMBL is L (S) and 4-oxo. Standard InChI folds the tautomer; only the glutamate stereo differs.",
-       "exam": "Exam 1"
+       "verification_note": "Same molecule; ChEMBL CHEMBL1622 defines 1 stereo element(s); the Atlas, like the slide and PubChem CID 3405, defines 0. The Atlas draws another tautomer than PubChem (as the slide does); InChI treats the two as one molecule, so the keys agree.",
+       "exam": "Exam 1",
+       "pubchem_checked": true,
+       "pubchem_cid": 3405,
+       "verification_date": "2026-11-06"
       },
       {
        "key": "tetrahydrofolic acid",
@@ -580,10 +670,13 @@
        "priority": "reference",
        "priority_reason": "Shown as the DHFR product; he said folic acid is processed to this essential cofactor. Examinable concept: DHFR reduces folate to THF, which MTX blocks; the structure itself was not discussed.",
        "priority_source": "p.30; T@8874-@8960",
-       "verification": "verified-connectivity",
+       "verification": "stereo-unspecified",
        "chembl_id": "CHEMBL2021342",
-       "verification_note": "CHEMBL2021342 (unnamed) has L-glutamate and C6 unspecified; Atlas has both unspecified (slide draws none). Only the glutamate centre differs.",
-       "exam": "Exam 1"
+       "verification_note": "Same molecule; ChEMBL CHEMBL2021342 defines 1 stereo element(s); the Atlas, like the slide and PubChem CID 1129, defines 0. The Atlas draws another tautomer than PubChem (as the slide does); InChI treats the two as one molecule, so the keys agree.",
+       "exam": "Exam 1",
+       "pubchem_checked": true,
+       "pubchem_cid": 1129,
+       "verification_date": "2026-11-06"
       }
      ]
     },
@@ -600,10 +693,13 @@
        "priority": "core",
        "priority_reason": "11-amino-acid cyclic peptide = cyclic lactam; activated by complexation; 30% F from 3A4 first pass; grapefruit-juice question.",
        "priority_source": "p.33; T@12000-@12254, @13190-@13550",
-       "verification": "verified-stereo",
+       "verification": "exact",
        "chembl_id": "CHEMBL160",
-       "verification_note": "Full standard InChIKey match to the ChEMBL canonical SMILES.",
-       "exam": "Exam 1"
+       "verification_note": "Atlas = PubChem CID 5284373 = ChEMBL CHEMBL160 (full InChIKey).",
+       "exam": "Exam 1",
+       "pubchem_checked": true,
+       "pubchem_cid": 5284373,
+       "verification_date": "2026-11-06"
       },
       {
        "key": "apremilast",
@@ -615,10 +711,13 @@
        "priority": "core",
        "priority_reason": "Isoindoline on the slide; his stated take-away is 3A4 reliance via O-demethylation then O-glucuronidation, both readable on the structure.",
        "priority_source": "p.34; T@13908-@14319",
-       "verification": "verified-stereo",
+       "verification": "exact",
        "chembl_id": "CHEMBL514800",
-       "verification_note": "Full standard InChIKey match to the ChEMBL canonical SMILES.",
-       "exam": "Exam 1"
+       "verification_note": "Atlas = PubChem CID 11561674 = ChEMBL CHEMBL514800 (full InChIKey).",
+       "exam": "Exam 1",
+       "pubchem_checked": true,
+       "pubchem_cid": 11561674,
+       "verification_date": "2026-11-06"
       },
       {
        "key": "tofacitinib",
@@ -631,10 +730,13 @@
        "priority": "core",
        "priority_reason": "Pyrrolopyrimidine like ruxolitinib; 3A4-dependent; avoid 3A4 inhibitors/inducers.",
        "priority_source": "p.35; T@14505-@15120",
-       "verification": "verified-stereo",
+       "verification": "exact",
        "chembl_id": "CHEMBL221959",
-       "verification_note": "Full standard InChIKey match to the ChEMBL canonical SMILES.",
-       "exam": "Exam 1"
+       "verification_note": "Atlas = PubChem CID 9926791 = ChEMBL CHEMBL221959 (full InChIKey).",
+       "exam": "Exam 1",
+       "pubchem_checked": true,
+       "pubchem_cid": 9926791,
+       "verification_date": "2026-11-06"
       }
      ]
     }
@@ -658,10 +760,13 @@
        "priority": "core",
        "priority_reason": "Polleve-3: classify the limus by the circled cyclic ester = lactone (\"It will come up\").",
        "priority_source": "p.32; T@6292, @11280-@11720",
-       "verification": "verified-stereo",
+       "verification": "exact",
        "chembl_id": "CHEMBL1200686",
-       "verification_note": "Same molecule as the pimecrolimus tile; full match to CHEMBL1200686.",
-       "exam": "Exam 1"
+       "verification_note": "Atlas = PubChem CID 6509979 = ChEMBL CHEMBL1200686 (full InChIKey).",
+       "exam": "Exam 1",
+       "pubchem_checked": true,
+       "pubchem_cid": 6509979,
+       "verification_date": "2026-11-06"
       },
       {
        "key": "lactam",
@@ -673,10 +778,13 @@
        "priority": "core",
        "priority_reason": "He asked the room: the cyclic peptide is \"a lactam ... cyclic lactam too\".",
        "priority_source": "p.33; T@12150-@12254",
-       "verification": "verified-stereo",
+       "verification": "exact",
        "chembl_id": "CHEMBL160",
-       "verification_note": "Same molecule as cyclosporine; full match CHEMBL160.",
-       "exam": "Exam 1"
+       "verification_note": "Atlas = PubChem CID 5284373 = ChEMBL CHEMBL160 (full InChIKey).",
+       "exam": "Exam 1",
+       "pubchem_checked": true,
+       "pubchem_cid": 5284373,
+       "verification_date": "2026-11-06"
       }
      ]
     }
@@ -701,10 +809,13 @@
        "priority": "core",
        "priority_reason": "Alpha-hydroxy acid definition, pKa ~3, logP ~1, surface action; two-enzyme (ADH/ALDH) oxidation.",
        "priority_source": "p.43; T@20199-@21110 (@20426)",
-       "verification": "verified-stereo",
+       "verification": "exact",
        "chembl_id": "CHEMBL252557",
-       "verification_note": "Full standard InChIKey match to the ChEMBL canonical SMILES.",
-       "exam": "Exam 1"
+       "verification_note": "Atlas = PubChem CID 757 = ChEMBL CHEMBL252557 (full InChIKey).",
+       "exam": "Exam 1",
+       "pubchem_checked": true,
+       "pubchem_cid": 757,
+       "verification_date": "2026-11-06"
       },
       {
        "key": "oxalic acid",
@@ -716,10 +827,13 @@
        "priority": "reference",
        "priority_reason": "Drawn as the unnamed product of glycolic acid; he said only \"Diaccid\". Examinable concept: minimal metabolism by two enzymes (ADH, ALDH) to a diacid.",
        "priority_source": "p.43; T@20934-@21110",
-       "verification": "verified-stereo",
+       "verification": "exact",
        "chembl_id": "CHEMBL146755",
-       "verification_note": "Full standard InChIKey match to the ChEMBL canonical SMILES.",
-       "exam": "Exam 1"
+       "verification_note": "Atlas = PubChem CID 971 = ChEMBL CHEMBL146755 (full InChIKey).",
+       "exam": "Exam 1",
+       "pubchem_checked": true,
+       "pubchem_cid": 971,
+       "verification_date": "2026-11-06"
       },
       {
        "key": "salicylic acid",
@@ -732,10 +846,13 @@
        "priority": "core",
        "priority_reason": "Beta-hydroxy acid (\"2 carbon removed\"), logP 1-2, glycine conjugation.",
        "priority_source": "p.43; T@21537-@22520 (@22189)",
-       "verification": "verified-stereo",
+       "verification": "exact",
        "chembl_id": "CHEMBL424",
-       "verification_note": "Full standard InChIKey match to the ChEMBL canonical SMILES.",
-       "exam": "Exam 1"
+       "verification_note": "Atlas = PubChem CID 338 = ChEMBL CHEMBL424 (full InChIKey).",
+       "exam": "Exam 1",
+       "pubchem_checked": true,
+       "pubchem_cid": 338,
+       "verification_date": "2026-11-06"
       }
      ]
     },
@@ -753,10 +870,13 @@
        "priority": "core",
        "priority_reason": "Polleve-4 molecule he walked through (qualifies as AHA) and listed again among AHAs on p.68 (grapes).",
        "priority_source": "p.45, p.68; T@23305-@23880, @46324-@47060",
-       "verification": "verified-connectivity",
+       "verification": "stereo-unspecified",
        "chembl_id": "CHEMBL1236315",
-       "verification_note": "Atlas has no stereo (slides p.45/p.68 draw none); ChEMBL CHEMBL1236315 is L-(2R,3R).",
-       "exam": "Exam 1"
+       "verification_note": "Same molecule; ChEMBL CHEMBL1236315 defines 2 stereo element(s); the Atlas, like the slide and PubChem CID 875, defines 0.",
+       "exam": "Exam 1",
+       "pubchem_checked": true,
+       "pubchem_cid": 875,
+       "verification_date": "2026-11-06"
       },
       {
        "key": "isobutyric acid",
@@ -768,10 +888,13 @@
        "priority": "core",
        "priority_reason": "Polleve-4 molecule he walked through one by one to apply the alpha-hydroxy definition (\"How many alpha hydroxy acids do we have?\").",
        "priority_source": "p.45; T@23305-@23880",
-       "verification": "verified-stereo",
+       "verification": "exact",
        "chembl_id": "CHEMBL108778",
-       "verification_note": "Matches CHEMBL108778 in full (unnamed record).",
-       "exam": "Exam 1"
+       "verification_note": "Atlas = PubChem CID 6590 = ChEMBL CHEMBL108778 (full InChIKey).",
+       "exam": "Exam 1",
+       "pubchem_checked": true,
+       "pubchem_cid": 6590,
+       "verification_date": "2026-11-06"
       },
       {
        "key": "polleve-4 cyclopropyl hydroxy diacid",
@@ -784,9 +907,12 @@
        "priority": "core",
        "priority_reason": "Polleve-4 molecule he walked through one by one to apply the alpha-hydroxy definition (\"How many alpha hydroxy acids do we have?\").",
        "priority_source": "p.45; T@23305-@23880",
-       "verification": "not-a-drug-record",
-       "verification_note": "Unnamed Polleve-4 poll molecule (p.45, zoom checked: HOOC-C(cyclopropane)-CH(OH)-COOH). No ChEMBL record by exact structure.",
-       "exam": "Exam 1"
+       "verification": "teaching-structure",
+       "verification_note": "Teaching structure (not forced onto a drug record). PubChem holds this exact structure as CID 85106660.",
+       "exam": "Exam 1",
+       "pubchem_checked": true,
+       "pubchem_cid": 85106660,
+       "verification_date": "2026-11-06"
       },
       {
        "key": "2-hydroxycyclohexanecarboxylic acid",
@@ -799,9 +925,12 @@
        "priority": "core",
        "priority_reason": "Polleve-4 molecule he walked through one by one to apply the alpha-hydroxy definition (\"How many alpha hydroxy acids do we have?\").",
        "priority_source": "p.45; T@23305-@23880",
-       "verification": "not-a-drug-record",
-       "verification_note": "Unnamed Polleve-4 poll molecule (p.45). No ChEMBL record by exact structure; drawn without stereo.",
-       "exam": "Exam 1"
+       "verification": "exact-pubchem",
+       "verification_note": "Atlas = PubChem CID 271816 (full InChIKey).",
+       "exam": "Exam 1",
+       "pubchem_checked": true,
+       "pubchem_cid": 271816,
+       "verification_date": "2026-11-06"
       }
      ]
     },
@@ -819,10 +948,13 @@
        "priority": "core",
        "priority_reason": "Peroxide class; CBDA = peroxide bond breaks to benzoic acid (lowers pH) and a radical (kills bacteria).",
        "priority_source": "p.47; T@25608-@26600",
-       "verification": "verified-stereo",
+       "verification": "exact",
        "chembl_id": "CHEMBL1200370",
-       "verification_note": "Full standard InChIKey match to the ChEMBL canonical SMILES.",
-       "exam": "Exam 1"
+       "verification_note": "Atlas = PubChem CID 7187 = ChEMBL CHEMBL1200370 (full InChIKey).",
+       "exam": "Exam 1",
+       "pubchem_checked": true,
+       "pubchem_cid": 7187,
+       "verification_date": "2026-11-06"
       },
       {
        "key": "benzoic acid",
@@ -834,10 +966,13 @@
        "priority": "core",
        "priority_reason": "BPO product that lowers skin pH (keratolytic), excreted in urine.",
        "priority_source": "p.47; T@25875-@26100",
-       "verification": "verified-stereo",
+       "verification": "exact",
        "chembl_id": "CHEMBL541",
-       "verification_note": "Full standard InChIKey match to the ChEMBL canonical SMILES.",
-       "exam": "Exam 1"
+       "verification_note": "Atlas = PubChem CID 243 = ChEMBL CHEMBL541 (full InChIKey).",
+       "exam": "Exam 1",
+       "pubchem_checked": true,
+       "pubchem_cid": 243,
+       "verification_date": "2026-11-06"
       },
       {
        "key": "benzoyl radical",
@@ -849,9 +984,12 @@
        "priority": "core",
        "priority_reason": "BPO radical product that kills bacteria (\"The benzo a radical. Go to kill some of the Bacteria\").",
        "priority_source": "p.47; T@26100-@26300",
-       "verification": "not-a-drug-record",
-       "verification_note": "Radical (PhC(=O)O·, the benzoyloxy radical the slide draws). Not a drug record.",
-       "exam": "Exam 1"
+       "verification": "teaching-structure",
+       "verification_note": "Teaching structure (not forced onto a drug record). PubChem holds this exact structure as CID 5359438.",
+       "exam": "Exam 1",
+       "pubchem_checked": true,
+       "pubchem_cid": 5359438,
+       "verification_date": "2026-11-06"
       }
      ]
     }
@@ -874,10 +1012,13 @@
        "priority": "core",
        "priority_reason": "Parent compound of all retinoids (\"come from vitamin A\").",
        "priority_source": "p.48-49; T@7544, @26805-@27050",
-       "verification": "verified-stereo",
+       "verification": "exact",
        "chembl_id": "CHEMBL986",
-       "verification_note": "Full standard InChIKey match to the ChEMBL canonical SMILES.",
-       "exam": "Exam 1"
+       "verification_note": "Atlas = PubChem CID 445354 = ChEMBL CHEMBL986 (full InChIKey).",
+       "exam": "Exam 1",
+       "pubchem_checked": true,
+       "pubchem_cid": 445354,
+       "verification_date": "2026-11-06"
       }
      ]
     },
@@ -894,10 +1035,13 @@
        "priority": "core",
        "priority_reason": "1st generation (non-aromatic); all-trans geometric isomer of isotretinoin.",
        "priority_source": "p.49; T@27705-@28680 (@28268)",
-       "verification": "verified-stereo",
+       "verification": "exact",
        "chembl_id": "CHEMBL38",
-       "verification_note": "Full standard InChIKey match to the ChEMBL canonical SMILES.",
-       "exam": "Exam 1"
+       "verification_note": "Atlas = PubChem CID 444795 = ChEMBL CHEMBL38 (full InChIKey).",
+       "exam": "Exam 1",
+       "pubchem_checked": true,
+       "pubchem_cid": 444795,
+       "verification_date": "2026-11-06"
       },
       {
        "key": "isotretinoin",
@@ -909,10 +1053,13 @@
        "priority": "core",
        "priority_reason": "13-cis geometric isomer of tretinoin, \"the only difference\".",
        "priority_source": "p.49, p.29; T@28100-@28680",
-       "verification": "verified-stereo",
+       "verification": "exact",
        "chembl_id": "CHEMBL547",
-       "verification_note": "Full standard InChIKey match to the ChEMBL canonical SMILES.",
-       "exam": "Exam 1"
+       "verification_note": "Atlas = PubChem CID 5282379 = ChEMBL CHEMBL547 (full InChIKey).",
+       "exam": "Exam 1",
+       "pubchem_checked": true,
+       "pubchem_cid": 5282379,
+       "verification_date": "2026-11-06"
       }
      ]
     },
@@ -930,10 +1077,13 @@
        "priority": "core",
        "priority_reason": "2nd generation (mono-aromatic) ethyl ester prodrug activated by CE to acitretin; t1/2 120 d, teratogenic.",
        "priority_source": "p.50; T@28898-@29700",
-       "verification": "verified-stereo",
+       "verification": "exact",
        "chembl_id": "CHEMBL464",
-       "verification_note": "Full standard InChIKey match to the ChEMBL canonical SMILES.",
-       "exam": "Exam 1"
+       "verification_note": "Atlas = PubChem CID 5282375 = ChEMBL CHEMBL464 (full InChIKey).",
+       "exam": "Exam 1",
+       "pubchem_checked": true,
+       "pubchem_cid": 5282375,
+       "verification_date": "2026-11-06"
       },
       {
        "key": "acitretin",
@@ -945,10 +1095,13 @@
        "priority": "core",
        "priority_reason": "Active acid of etretinate; 2nd generation.",
        "priority_source": "p.50, p.29; T@28898-@29700, @7222-@7393",
-       "verification": "verified-stereo",
+       "verification": "exact",
        "chembl_id": "CHEMBL1131",
-       "verification_note": "Full standard InChIKey match to the ChEMBL canonical SMILES.",
-       "exam": "Exam 1"
+       "verification_note": "Atlas = PubChem CID 5284513 = ChEMBL CHEMBL1131 (full InChIKey).",
+       "exam": "Exam 1",
+       "pubchem_checked": true,
+       "pubchem_cid": 5284513,
+       "verification_date": "2026-11-06"
       }
      ]
     },
@@ -965,10 +1118,13 @@
        "priority": "core",
        "priority_reason": "3rd generation (poly-aromatic), directly active (exposed carboxylic acid).",
        "priority_source": "p.51; T@30014-@30300 (@30232)",
-       "verification": "verified-stereo",
+       "verification": "exact",
        "chembl_id": "CHEMBL1265",
-       "verification_note": "Full standard InChIKey match to the ChEMBL canonical SMILES.",
-       "exam": "Exam 1"
+       "verification_note": "Atlas = PubChem CID 60164 = ChEMBL CHEMBL1265 (full InChIKey).",
+       "exam": "Exam 1",
+       "pubchem_checked": true,
+       "pubchem_cid": 60164,
+       "verification_date": "2026-11-06"
       },
       {
        "key": "trifarotene",
@@ -980,10 +1136,13 @@
        "priority": "core",
        "priority_reason": "3rd generation, directly active (exposed carboxylic acid).",
        "priority_source": "p.51; T@30014-@30300",
-       "verification": "verified-stereo",
+       "verification": "exact",
        "chembl_id": "CHEMBL3707313",
-       "verification_note": "Full standard InChIKey match to the ChEMBL canonical SMILES.",
-       "exam": "Exam 1"
+       "verification_note": "Atlas = PubChem CID 11518241 = ChEMBL CHEMBL3707313 (full InChIKey).",
+       "exam": "Exam 1",
+       "pubchem_checked": true,
+       "pubchem_cid": 11518241,
+       "verification_date": "2026-11-06"
       },
       {
        "key": "tazarotene",
@@ -997,10 +1156,13 @@
        "priority": "core",
        "priority_reason": "Acetylenic retinoid and ester prodrug activated by carboxylesterase (asked \"What are CE enzymes?\").",
        "priority_source": "p.29, p.51; T@6810-@7120 (@7108), @30193-@30300",
-       "verification": "verified-stereo",
+       "verification": "exact",
        "chembl_id": "CHEMBL1657",
-       "verification_note": "Full standard InChIKey match to the ChEMBL canonical SMILES.",
-       "exam": "Exam 1"
+       "verification_note": "Atlas = PubChem CID 5381 = ChEMBL CHEMBL1657 (full InChIKey).",
+       "exam": "Exam 1",
+       "pubchem_checked": true,
+       "pubchem_cid": 5381,
+       "verification_date": "2026-11-06"
       },
       {
        "key": "tazarotenic acid",
@@ -1012,10 +1174,13 @@
        "priority": "core",
        "priority_reason": "Active acid of tazarotene; terminal carboxylic acid common to retinoids.",
        "priority_source": "p.29, p.51; T@7222, @30193-@30300",
-       "verification": "verified-stereo",
+       "verification": "exact",
        "chembl_id": "CHEMBL1201375",
-       "verification_note": "Full standard InChIKey match to the ChEMBL canonical SMILES.",
-       "exam": "Exam 1"
+       "verification_note": "Atlas = PubChem CID 147525 = ChEMBL CHEMBL1201375 (full InChIKey).",
+       "exam": "Exam 1",
+       "pubchem_checked": true,
+       "pubchem_cid": 147525,
+       "verification_date": "2026-11-06"
       }
      ]
     }
@@ -1038,10 +1203,13 @@
        "priority": "reference",
        "priority_reason": "He made one class-level point about the OC components: \"these are all going to be what? Steroids ... A, B, C, D\". Examinable concept: recognizing them as steroids (stacked four rings); individual structures were not discussed.",
        "priority_source": "p.52; T@30892-@31300 (@31168)",
-       "verification": "verified-stereo",
+       "verification": "exact",
        "chembl_id": "CHEMBL691",
-       "verification_note": "Full standard InChIKey match to the ChEMBL canonical SMILES.",
-       "exam": "Exam 1"
+       "verification_note": "Atlas = PubChem CID 5991 = ChEMBL CHEMBL691 (full InChIKey).",
+       "exam": "Exam 1",
+       "pubchem_checked": true,
+       "pubchem_cid": 5991,
+       "verification_date": "2026-11-06"
       },
       {
        "key": "norgestimate",
@@ -1053,10 +1221,13 @@
        "priority": "reference",
        "priority_reason": "He made one class-level point about the OC components: \"these are all going to be what? Steroids ... A, B, C, D\". Examinable concept: recognizing them as steroids (stacked four rings); individual structures were not discussed.",
        "priority_source": "p.52; T@30892-@31300 (@31168)",
-       "verification": "verified-connectivity",
+       "verification": "exact",
        "chembl_id": "CHEMBL1200934",
-       "verification_note": "Atlas leaves the C3 oxime C=N geometry unspecified; ChEMBL has E. All 6 ring/C17 centres match. The p.52 drawing places OH syn to C2/anti to C4, i.e. E, so the slide does imply the ChEMBL geometry.",
-       "exam": "Exam 1"
+       "verification_note": "Atlas = PubChem CID 6540478 = ChEMBL CHEMBL1200934 (full InChIKey).",
+       "exam": "Exam 1",
+       "pubchem_checked": true,
+       "pubchem_cid": 6540478,
+       "verification_date": "2026-11-06"
       },
       {
        "key": "drospirenone",
@@ -1067,10 +1238,13 @@
        "priority": "reference",
        "priority_reason": "He made one class-level point about the OC components: \"these are all going to be what? Steroids ... A, B, C, D\". Examinable concept: recognizing them as steroids (stacked four rings); individual structures were not discussed.",
        "priority_source": "p.52; T@30892-@31300 (@31168)",
-       "verification": "verified-stereo",
+       "verification": "exact",
        "chembl_id": "CHEMBL1509",
-       "verification_note": "Full standard InChIKey match to the ChEMBL canonical SMILES.",
-       "exam": "Exam 1"
+       "verification_note": "Atlas = PubChem CID 68873 = ChEMBL CHEMBL1509 (full InChIKey).",
+       "exam": "Exam 1",
+       "pubchem_checked": true,
+       "pubchem_cid": 68873,
+       "verification_date": "2026-11-06"
       },
       {
        "key": "spironolactone",
@@ -1081,10 +1255,13 @@
        "priority": "core",
        "priority_reason": "\"Which one is the steroid? This one\" among the three antiandrogens; decreases testosterone biosynthesis; steroidal vs non-steroidal take-home.",
        "priority_source": "p.53; T@32075, @32997-@33105",
-       "verification": "verified-stereo",
+       "verification": "exact",
        "chembl_id": "CHEMBL1393",
-       "verification_note": "Full standard InChIKey match to the ChEMBL canonical SMILES.",
-       "exam": "Exam 1"
+       "verification_note": "Atlas = PubChem CID 5833 = ChEMBL CHEMBL1393 (full InChIKey).",
+       "exam": "Exam 1",
+       "pubchem_checked": true,
+       "pubchem_cid": 5833,
+       "verification_date": "2026-11-06"
       }
      ]
     },
@@ -1102,10 +1279,13 @@
        "priority": "core",
        "priority_reason": "Azole: \"Always when you see [azole] antifungals. Have that enzyme inhibition [3A4] at the front of your mind\"; non-steroidal.",
        "priority_source": "p.53; T@32300-@32640 (@32490)",
-       "verification": "verified-stereo",
+       "verification": "exact",
        "chembl_id": "CHEMBL157101",
-       "verification_note": "Racemic record CHEMBL157101 (no stereo); Atlas also none, as on p.53.",
-       "exam": "Exam 1"
+       "verification_note": "Atlas = PubChem CID 3823 = ChEMBL CHEMBL157101 (full InChIKey).",
+       "exam": "Exam 1",
+       "pubchem_checked": true,
+       "pubchem_cid": 3823,
+       "verification_date": "2026-11-06"
       },
       {
        "key": "flutamide",
@@ -1116,10 +1296,13 @@
        "priority": "core",
        "priority_reason": "Non-steroidal antiandrogen that blocks the receptor; steroidal vs non-steroidal approach is \"the take-home message\".",
        "priority_source": "p.53; T@32723-@33105",
-       "verification": "verified-stereo",
+       "verification": "exact",
        "chembl_id": "CHEMBL806",
-       "verification_note": "Full standard InChIKey match to the ChEMBL canonical SMILES.",
-       "exam": "Exam 1"
+       "verification_note": "Atlas = PubChem CID 3397 = ChEMBL CHEMBL806 (full InChIKey).",
+       "exam": "Exam 1",
+       "pubchem_checked": true,
+       "pubchem_cid": 3397,
+       "verification_date": "2026-11-06"
       }
      ]
     }
@@ -1143,10 +1326,13 @@
        "priority": "core",
        "priority_reason": "\"It's a dyacid ... small linear antibiotic\" (C9 bi-carboxylic acid).",
        "priority_source": "p.54; T@34051-@34300 (@34211)",
-       "verification": "verified-stereo",
+       "verification": "exact",
        "chembl_id": "CHEMBL1238",
-       "verification_note": "Full standard InChIKey match to the ChEMBL canonical SMILES.",
-       "exam": "Exam 1"
+       "verification_note": "Atlas = PubChem CID 2266 = ChEMBL CHEMBL1238 (full InChIKey).",
+       "exam": "Exam 1",
+       "pubchem_checked": true,
+       "pubchem_cid": 2266,
+       "verification_date": "2026-11-06"
       },
       {
        "key": "clindamycin",
@@ -1157,10 +1343,13 @@
        "priority": "reference",
        "priority_reason": "Mentioned only as an option; antibiotic details deferred to ID (\"I'm not going to belabor the point\"). Examinable concept: tell cyclic from linear antibiotic structures.",
        "priority_source": "p.54; T@34300-@34700 (@34534)",
-       "verification": "verified-stereo",
+       "verification": "exact",
        "chembl_id": "CHEMBL1753",
-       "verification_note": "Full standard InChIKey match to the ChEMBL canonical SMILES.",
-       "exam": "Exam 1"
+       "verification_note": "Atlas = PubChem CID 446598 = ChEMBL CHEMBL1753 (full InChIKey).",
+       "exam": "Exam 1",
+       "pubchem_checked": true,
+       "pubchem_cid": 446598,
+       "verification_date": "2026-11-06"
       },
       {
        "key": "erythromycin",
@@ -1173,15 +1362,17 @@
        "priority": "reference",
        "priority_reason": "Mentioned only as an option; details deferred to ID. Examinable concept: macrolide (cyclic lactone) vs linear structures (see the macrolide tile).",
        "priority_source": "p.54; T@34300-@34700 (@34534)",
-       "verification": "verified-stereo",
+       "verification": "exact",
        "chembl_id": "CHEMBL532",
-       "verification_note": "Atlas matches ChEMBL in full. The p.54 drawing omits the desosamine ring oxygen: see other_differences.",
+       "verification_note": "Atlas = PubChem CID 12560 = ChEMBL CHEMBL532 (full InChIKey).",
        "exam": "Exam 1",
        "lecture": {
         "smiles": "CC[C@H]1OC(=O)[C@H](C)[C@@H](O[C@H]2C[C@@](C)(OC)[C@@H](O)[C@H](C)O2)[C@H](C)[C@@H](O[C@@H]2C[C@H](C)C[C@H](N(C)C)[C@H]2O)[C@](C)(O)C[C@@H](C)C(=O)[C@H](C)[C@@H](O)[C@]1(C)O",
         "diff": "[CH2;R1]1[CH1;R1]([CH3])[CH2;R1][CH1;R1]([NX3]([CH3])[CH3])[CH1;R1]([OX2H1])[CH1;R1]1O",
         "slide": 54,
-        "primary": true
+        "primary": true,
+        "pubchem_cid": null,
+        "pubchem_title": null
        },
        "discrepancy": {
         "lecture_shows": "The amino sugar (desosamine) is drawn as a cyclohexane, with no ring oxygen.",
@@ -1190,7 +1381,10 @@
         "emphasized": "Erythromycin is a cyclic (macrolide) antibiotic, unlike linear azelaic acid; the details are left to the infectious disease course (T@34300–@34700).",
         "changes_concept": "No. The large lactone ring that makes it a macrolide is the same.",
         "verified_diff": "[OX2;R1]1[CH1;R1]([CH3])[CH2;R1][CH1;R1]([NX3]([CH3])[CH3])[CH1;R1]([OX2H1])[CH1;R1]1O"
-       }
+       },
+       "pubchem_checked": true,
+       "pubchem_cid": 12560,
+       "verification_date": "2026-11-06"
       }
      ]
     },
@@ -1208,10 +1402,13 @@
        "priority": "core",
        "priority_reason": "\"be able to identify them\": four linear rings vs stacked steroid rings; cross-reactivity due to structural similarity; food effect.",
        "priority_source": "p.55; T@35205-@36940 (@36772, @36877)",
-       "verification": "verified-stereo",
+       "verification": "tautomer",
        "chembl_id": "CHEMBL1440",
-       "verification_note": "Full standard InChIKey match to the ChEMBL canonical SMILES.",
-       "exam": "Exam 1"
+       "verification_note": "PubChem CID 54675776 stores another tautomer of the same molecule (equal after tautomer canonicalization); ChEMBL CHEMBL1440 = Atlas, full InChIKey.",
+       "exam": "Exam 1",
+       "pubchem_checked": true,
+       "pubchem_cid": 54675776,
+       "verification_date": "2026-11-06"
       },
       {
        "key": "doxycycline",
@@ -1223,10 +1420,13 @@
        "priority": "core",
        "priority_reason": "\"be able to identify them\": four linear rings vs stacked steroid rings; cross-reactivity due to structural similarity; food effect.",
        "priority_source": "p.55; T@35205-@36940 (@36772, @36877)",
-       "verification": "verified-stereo",
+       "verification": "tautomer",
        "chembl_id": "CHEMBL1433",
-       "verification_note": "Full standard InChIKey match to the ChEMBL canonical SMILES.",
-       "exam": "Exam 1"
+       "verification_note": "PubChem CID 54671203 stores another tautomer of the same molecule (equal after tautomer canonicalization); ChEMBL CHEMBL1433 = Atlas, full InChIKey.",
+       "exam": "Exam 1",
+       "pubchem_checked": true,
+       "pubchem_cid": 54671203,
+       "verification_date": "2026-11-06"
       },
       {
        "key": "minocycline",
@@ -1238,10 +1438,13 @@
        "priority": "core",
        "priority_reason": "\"be able to identify them\": four linear rings vs stacked steroid rings; cross-reactivity due to structural similarity; food effect.",
        "priority_source": "p.55; T@35205-@36940 (@36772, @36877)",
-       "verification": "verified-stereo",
+       "verification": "tautomer",
        "chembl_id": "CHEMBL1434",
-       "verification_note": "Full standard InChIKey match to the ChEMBL canonical SMILES.",
-       "exam": "Exam 1"
+       "verification_note": "PubChem CID 54675783 stores another tautomer of the same molecule (equal after tautomer canonicalization); ChEMBL CHEMBL1434 = Atlas, full InChIKey.",
+       "exam": "Exam 1",
+       "pubchem_checked": true,
+       "pubchem_cid": 54675783,
+       "verification_date": "2026-11-06"
       }
      ]
     }
@@ -1265,9 +1468,12 @@
        "priority": "core",
        "priority_reason": "Inorganic sunblock that reflects/scatters; \"Size Matters\" (larger particles more effective). No structure involved.",
        "priority_source": "p.61; T@38519-@39400 (@38748)",
-       "verification": "not-a-drug-record",
-       "verification_note": "Inorganic metal oxide shown as formula ions; slide 61 has no structure drawing. Not a drug record (inorganic).",
-       "exam": "Exam 1"
+       "verification": "teaching-structure",
+       "verification_note": "Teaching structure (not forced onto a drug record). PubChem holds this exact structure as CID 3007857.",
+       "exam": "Exam 1",
+       "pubchem_checked": true,
+       "pubchem_cid": 3007857,
+       "verification_date": "2026-11-06"
       },
       {
        "key": "titanium dioxide",
@@ -1279,9 +1485,11 @@
        "priority": "core",
        "priority_reason": "Inorganic sunblock paired with ZnO; same points.",
        "priority_source": "p.61; T@38519-@39400",
-       "verification": "not-a-drug-record",
-       "verification_note": "Inorganic metal oxide shown as formula ions; no structure drawing. Not a drug record (inorganic).",
-       "exam": "Exam 1"
+       "verification": "teaching-structure",
+       "verification_note": "Teaching structure (not forced onto a drug record). PubChem holds this exact structure as CID 162651. PubChem CID 162651 holds these ions but is titled \"Titanium oxide (Ti3O)\"; the titanium dioxide record is CID 26042 (O=[Ti]=O). No CID is shown on the tile.",
+       "exam": "Exam 1",
+       "pubchem_checked": true,
+       "verification_date": "2026-11-06"
       }
      ]
     },
@@ -1298,10 +1506,13 @@
        "priority": "core",
        "priority_reason": "UVA dibenzoylmethane; low skin absorption; photodegradation t1/2 ~2 h.",
        "priority_source": "p.62; T@40499-@41140",
-       "verification": "verified-stereo",
+       "verification": "exact",
        "chembl_id": "CHEMBL1200522",
-       "verification_note": "Full standard InChIKey match to the ChEMBL canonical SMILES.",
-       "exam": "Exam 1"
+       "verification_note": "Atlas = PubChem CID 51040 = ChEMBL CHEMBL1200522 (full InChIKey).",
+       "exam": "Exam 1",
+       "pubchem_checked": true,
+       "pubchem_cid": 51040,
+       "verification_date": "2026-11-06"
       },
       {
        "key": "meradimate",
@@ -1314,10 +1525,13 @@
        "priority": "core",
        "priority_reason": "UVA anthranilate, degraded even faster than avobenzone.",
        "priority_source": "p.62; T@41158-@41530",
-       "verification": "verified-stereo",
+       "verification": "exact",
        "chembl_id": "CHEMBL1597075",
-       "verification_note": "CHEMBL1597075 has no stereo; Atlas none, as on p.62.",
-       "exam": "Exam 1"
+       "verification_note": "Atlas = PubChem CID 8633 = ChEMBL CHEMBL1597075 (full InChIKey).",
+       "exam": "Exam 1",
+       "pubchem_checked": true,
+       "pubchem_cid": 8633,
+       "verification_date": "2026-11-06"
       }
      ]
     },
@@ -1334,10 +1548,13 @@
        "priority": "core",
        "priority_reason": "UVB cinnamate; absorbed through skin; photodegradation 1-2 h.",
        "priority_source": "p.63; T@41549-@41760",
-       "verification": "verified-connectivity",
+       "verification": "stereo-unspecified",
        "chembl_id": "CHEMBL3183184",
-       "verification_note": "Atlas specifies E (trans), which the p.63 drawing shows; ChEMBL CHEMBL3183184 leaves the C=C undefined. Connectivity identical.",
-       "exam": "Exam 1"
+       "verification_note": "Same molecule; ChEMBL CHEMBL3183184 differs from the Atlas and PubChem CID 5355130 in the stereo layer only.",
+       "exam": "Exam 1",
+       "pubchem_checked": true,
+       "pubchem_cid": 5355130,
+       "verification_date": "2026-11-06"
       },
       {
        "key": "paba",
@@ -1348,10 +1565,13 @@
        "priority": "core",
        "priority_reason": "PABA class: rarely used because of PABA allergy (and photosensitivity).",
        "priority_source": "p.63; T@41904-@42247",
-       "verification": "verified-stereo",
+       "verification": "exact",
        "chembl_id": "CHEMBL542",
-       "verification_note": "Full standard InChIKey match to the ChEMBL canonical SMILES.",
-       "exam": "Exam 1"
+       "verification_note": "Atlas = PubChem CID 978 = ChEMBL CHEMBL542 (full InChIKey).",
+       "exam": "Exam 1",
+       "pubchem_checked": true,
+       "pubchem_cid": 978,
+       "verification_date": "2026-11-06"
       },
       {
        "key": "padimate o",
@@ -1363,15 +1583,17 @@
        "priority": "core",
        "priority_reason": "PABA ester, rarely used (PABA allergy). See discrepancy: slide draws NH2.",
        "priority_source": "p.63; T@41904-@42247",
-       "verification": "verified-stereo",
+       "verification": "exact",
        "chembl_id": "CHEMBL1323699",
-       "verification_note": "Atlas N,N-dimethyl matches ChEMBL in full. The p.63 drawing shows NH2: see discrepancies.",
+       "verification_note": "Atlas = PubChem CID 30541 = ChEMBL CHEMBL1323699 (full InChIKey).",
        "exam": "Exam 1",
        "lecture": {
         "smiles": "CCCCC(CC)COC(=O)c1ccc(N)cc1",
         "diff": "c[NX3H2]",
         "slide": 63,
-        "primary": true
+        "primary": true,
+        "pubchem_cid": 11436614,
+        "pubchem_title": "2-Ethylhexyl 4-aminobenzoate"
        },
        "discrepancy": {
         "lecture_shows": "NH₂ on the ring (that molecule is 2-ethylhexyl 4-aminobenzoate).",
@@ -1380,7 +1602,10 @@
         "emphasized": "Only that PABA and padimate O are rarely used because of PABA allergy (T@41904–@42247).",
         "changes_concept": "No. Padimate O is a PABA ester either way, so the allergy point holds.",
         "verified_diff": "c[NX3H0]([CH3])[CH3]"
-       }
+       },
+       "pubchem_checked": true,
+       "pubchem_cid": 30541,
+       "verification_date": "2026-11-06"
       }
      ]
     },
@@ -1397,10 +1622,13 @@
        "priority": "core",
        "priority_reason": "Salicylate ester: hydrolyzes in skin to salicylic acid (analgesia); photostability questioned.",
        "priority_source": "p.64; T@42247-@42800 (@42551)",
-       "verification": "verified-stereo",
+       "verification": "exact",
        "chembl_id": "CHEMBL1377575",
-       "verification_note": "Full standard InChIKey match to the ChEMBL canonical SMILES.",
-       "exam": "Exam 1"
+       "verification_note": "Atlas = PubChem CID 8362 = ChEMBL CHEMBL1377575 (full InChIKey).",
+       "exam": "Exam 1",
+       "pubchem_checked": true,
+       "pubchem_cid": 8362,
+       "verification_date": "2026-11-06"
       },
       {
        "key": "octisalate",
@@ -1413,15 +1641,17 @@
        "priority": "core",
        "priority_reason": "Salicylate ester like homosalate; the taught point is the salicylate part. See discrepancy: slide draws heptan-3-yl.",
        "priority_source": "p.64; T@42247-@42800 (@42551)",
-       "verification": "verified-stereo",
+       "verification": "exact",
        "chembl_id": "CHEMBL1329203",
-       "verification_note": "Atlas 2-ethylhexyl ester matches ChEMBL in full. The p.64 drawing shows heptan-3-yl: see discrepancies.",
+       "verification_note": "Atlas = PubChem CID 8364 = ChEMBL CHEMBL1329203 (full InChIKey).",
        "exam": "Exam 1",
        "lecture": {
         "smiles": "CCCCC(CC)OC(=O)c1ccccc1O",
         "diff": "C(=O)O[CX4H1]([CH2][CH3])[CH2][CH2][CH2][CH3]",
         "slide": 64,
-        "primary": true
+        "primary": true,
+        "pubchem_cid": 46185954,
+        "pubchem_title": "Heptan-3-yl 2-hydroxybenzoate"
        },
        "discrepancy": {
         "lecture_shows": "The ester oxygen is bonded directly to the branch carbon (a 7-carbon heptan-3-yl chain).",
@@ -1430,7 +1660,10 @@
         "emphasized": "Salicylate sunscreens are esters that hydrolyze in skin to salicylic acid, giving some analgesia (T@42247–@42800).",
         "changes_concept": "No. It is a salicylate ester either way; only the alcohol chain differs.",
         "verified_diff": "C(=O)O[CH2][CX4H1]([CH2][CH3])[CH2][CH2][CH2][CH3]"
-       }
+       },
+       "pubchem_checked": true,
+       "pubchem_cid": 8364,
+       "verification_date": "2026-11-06"
       },
       {
        "key": "ensulizole",
@@ -1442,10 +1675,13 @@
        "priority": "core",
        "priority_reason": "Benzimidazole sulfonic acid: logP 1, water soluble, most photostable (12 h), reapply after swimming.",
        "priority_source": "p.64; T@42816-@43400",
-       "verification": "verified-stereo",
+       "verification": "exact",
        "chembl_id": "CHEMBL1987518",
-       "verification_note": "Full standard InChIKey match to the ChEMBL canonical SMILES.",
-       "exam": "Exam 1"
+       "verification_note": "Atlas = PubChem CID 33919 = ChEMBL CHEMBL1987518 (full InChIKey). The Atlas draws another tautomer than PubChem (as the slide does); InChI treats the two as one molecule, so the keys agree.",
+       "exam": "Exam 1",
+       "pubchem_checked": true,
+       "pubchem_cid": 33919,
+       "verification_date": "2026-11-06"
       }
      ]
     },
@@ -1462,10 +1698,13 @@
        "priority": "core",
        "priority_reason": "Benzophenone, logP ~4, highly absorbed through skin (\"That's a worry\").",
        "priority_source": "p.65; T@43589-@43700",
-       "verification": "verified-stereo",
+       "verification": "exact",
        "chembl_id": "CHEMBL1625",
-       "verification_note": "Full standard InChIKey match to the ChEMBL canonical SMILES.",
-       "exam": "Exam 1"
+       "verification_note": "Atlas = PubChem CID 4632 = ChEMBL CHEMBL1625 (full InChIKey).",
+       "exam": "Exam 1",
+       "pubchem_checked": true,
+       "pubchem_cid": 4632,
+       "verification_date": "2026-11-06"
       },
       {
        "key": "octocrylene",
@@ -1478,10 +1717,13 @@
        "priority": "core",
        "priority_reason": "Best photostability (~90 h), lipophilic, used as additive photostabilizer; ester (he struck \"Hydrophilic\").",
        "priority_source": "p.65; T@43958-@45140",
-       "verification": "verified-stereo",
+       "verification": "exact",
        "chembl_id": "CHEMBL1201147",
-       "verification_note": "Full standard InChIKey match to the ChEMBL canonical SMILES.",
-       "exam": "Exam 1"
+       "verification_note": "Atlas = PubChem CID 22571 = ChEMBL CHEMBL1201147 (full InChIKey).",
+       "exam": "Exam 1",
+       "pubchem_checked": true,
+       "pubchem_cid": 22571,
+       "verification_date": "2026-11-06"
       },
       {
        "key": "bemotrizinol",
@@ -1494,10 +1736,13 @@
        "priority": "core",
        "priority_reason": "Triazine \"came from Europe\"; photostable 4-8 h; low skin absorption from high MW 627.81.",
        "priority_source": "p.66; T@45151-@45700 (@45175)",
-       "verification": "verified-stereo",
+       "verification": "exact",
        "chembl_id": "CHEMBL2104956",
-       "verification_note": "Full standard InChIKey match to the ChEMBL canonical SMILES.",
-       "exam": "Exam 1"
+       "verification_note": "Atlas = PubChem CID 135487856 = ChEMBL CHEMBL2104956 (full InChIKey).",
+       "exam": "Exam 1",
+       "pubchem_checked": true,
+       "pubchem_cid": 135487856,
+       "verification_date": "2026-11-06"
       }
      ]
     }
@@ -1520,10 +1765,13 @@
        "priority": "core",
        "priority_reason": "Depigmenting agent; store in amber bottle because it oxidizes to inactive benzoquinone.",
        "priority_source": "p.67; T@45749-@46160 (@45980)",
-       "verification": "verified-stereo",
+       "verification": "exact",
        "chembl_id": "CHEMBL537",
-       "verification_note": "Full standard InChIKey match to the ChEMBL canonical SMILES.",
-       "exam": "Exam 1"
+       "verification_note": "Atlas = PubChem CID 785 = ChEMBL CHEMBL537 (full InChIKey).",
+       "exam": "Exam 1",
+       "pubchem_checked": true,
+       "pubchem_cid": 785,
+       "verification_date": "2026-11-06"
       },
       {
        "key": "benzoquinone",
@@ -1534,10 +1782,13 @@
        "priority": "core",
        "priority_reason": "The colored inactive oxidation product of hydroquinone (storage counseling).",
        "priority_source": "p.67; T@45882-@46160 (@46109)",
-       "verification": "verified-stereo",
+       "verification": "exact",
        "chembl_id": "CHEMBL8320",
-       "verification_note": "Full standard InChIKey match to the ChEMBL canonical SMILES.",
-       "exam": "Exam 1"
+       "verification_note": "Atlas = PubChem CID 4650 = ChEMBL CHEMBL8320 (full InChIKey).",
+       "exam": "Exam 1",
+       "pubchem_checked": true,
+       "pubchem_cid": 4650,
+       "verification_date": "2026-11-06"
       }
      ]
     },
@@ -1555,10 +1806,13 @@
        "priority": "core",
        "priority_reason": "AHA he listed with its source (milk; milk-bath story).",
        "priority_source": "p.68; T@46324-@47060 (@46839)",
-       "verification": "verified-stereo",
+       "verification": "exact",
        "chembl_id": "CHEMBL1200559",
-       "verification_note": "Racemic/unspecified record CHEMBL1200559 (LACTIC ACID); Atlas also unspecified.",
-       "exam": "Exam 1"
+       "verification_note": "Atlas = PubChem CID 612 = ChEMBL CHEMBL1200559 (full InChIKey).",
+       "exam": "Exam 1",
+       "pubchem_checked": true,
+       "pubchem_cid": 612,
+       "verification_date": "2026-11-06"
       },
       {
        "key": "malic acid",
@@ -1570,10 +1824,13 @@
        "priority": "core",
        "priority_reason": "AHA he listed (apples/grapes) on the AHA slide.",
        "priority_source": "p.68; T@46324-@47060",
-       "verification": "verified-stereo",
+       "verification": "exact",
        "chembl_id": "CHEMBL1455497",
-       "verification_note": "Unspecified record CHEMBL1455497 (MALIC ACID); Atlas also unspecified.",
-       "exam": "Exam 1"
+       "verification_note": "Atlas = PubChem CID 525 = ChEMBL CHEMBL1455497 (full InChIKey).",
+       "exam": "Exam 1",
+       "pubchem_checked": true,
+       "pubchem_cid": 525,
+       "verification_date": "2026-11-06"
       }
      ]
     },
@@ -1591,9 +1848,12 @@
        "priority": "core",
        "priority_reason": "Endogenous polysaccharide of repeating units; non-antigenic; hygroscopic film; MW governs penetration. \"somebody may come with a question\". The drawn repeat unit (GlcA + GlcNAc) is what the slide shows; he described it only as \"repeating of these units\".",
        "priority_source": "p.69; T@47069-@48370 (@48263)",
-       "verification": "not-a-drug-record",
-       "verification_note": "Polymer; ChEMBL has only structure-less entries (e.g. CHEMBL4297767 hylan G-F 20, no SMILES). Checked internally with RDKit instead: the tile contains beta-D-glucuronic acid and beta-D-GlcNAc with correct chirality (substructure match to beta-D-glucose-derived monomers; GlcNAc monomer key OVRNDRQMDRJTHS-FMDGEEDCSA-N) joined GlcA(1->3)GlcNAc, as drawn on p.69. Ends capped as OH (see other_differences).",
-       "exam": "Exam 1"
+       "verification": "teaching-structure",
+       "verification_note": "Teaching structure (not forced onto a drug record). PubChem holds this exact structure as CID 5288907.",
+       "exam": "Exam 1",
+       "pubchem_checked": true,
+       "pubchem_cid": 5288907,
+       "verification_date": "2026-11-06"
       }
      ]
     }
@@ -1617,10 +1877,13 @@
        "priority": "core",
        "priority_reason": "Hydroxy acid SAR: OH on the alpha carbon (carbon next to CO2H); R mostly alkyl.",
        "priority_source": "p.44; T@22858-@23200; @20426",
-       "verification": "verified-stereo",
+       "verification": "teaching-structure",
        "chembl_id": "CHEMBL1200559",
-       "verification_note": "Same molecule as lactic acid; full match.",
-       "exam": "Exam 1"
+       "verification_note": "Teaching structure (not forced onto a drug record). PubChem holds this exact structure as CID 612.",
+       "exam": "Exam 1",
+       "pubchem_checked": true,
+       "pubchem_cid": 612,
+       "verification_date": "2026-11-06"
       },
       {
        "key": "beta-hydroxy acid",
@@ -1632,10 +1895,13 @@
        "priority": "core",
        "priority_reason": "\"This is the beta carbon. So this is a beta hydroxy acid\".",
        "priority_source": "p.43; T@22100-@22230 (@22189)",
-       "verification": "verified-stereo",
+       "verification": "teaching-structure",
        "chembl_id": "CHEMBL424",
-       "verification_note": "Same molecule as salicylic acid; full match.",
-       "exam": "Exam 1"
+       "verification_note": "Teaching structure (not forced onto a drug record). PubChem holds this exact structure as CID 338.",
+       "exam": "Exam 1",
+       "pubchem_checked": true,
+       "pubchem_cid": 338,
+       "verification_date": "2026-11-06"
       }
      ]
     },
@@ -1652,10 +1918,13 @@
        "priority": "core",
        "priority_reason": "\"identify them ... linear ... in steroids, they're stacked\".",
        "priority_source": "p.55; T@35205-@35450, @36877",
-       "verification": "verified-stereo",
+       "verification": "tautomer",
        "chembl_id": "CHEMBL1440",
-       "verification_note": "Same molecule as tetracycline; full match.",
-       "exam": "Exam 1"
+       "verification_note": "PubChem CID 54675776 stores another tautomer of the same molecule (equal after tautomer canonicalization); ChEMBL CHEMBL1440 = Atlas, full InChIKey.",
+       "exam": "Exam 1",
+       "pubchem_checked": true,
+       "pubchem_cid": 54675776,
+       "verification_date": "2026-11-06"
       },
       {
        "key": "steroid nucleus",
@@ -1667,10 +1936,13 @@
        "priority": "core",
        "priority_reason": "Stacked A-B-C-D rings; steroid recognition he required (\"I want you to know that because that's important\"; OCs \"A, B, C, D\").",
        "priority_source": "p.52, p.20; T 628-630; T@31168, @35231",
-       "verification": "verified-stereo",
+       "verification": "exact",
        "chembl_id": "CHEMBL691",
-       "verification_note": "Same molecule as ethinyl estradiol; full match.",
-       "exam": "Exam 1"
+       "verification_note": "Atlas = PubChem CID 5991 = ChEMBL CHEMBL691 (full InChIKey).",
+       "exam": "Exam 1",
+       "pubchem_checked": true,
+       "pubchem_cid": 5991,
+       "verification_date": "2026-11-06"
       }
      ]
     },
@@ -1687,10 +1959,13 @@
        "priority": "core",
        "priority_reason": "Ethyl ester prodrug requiring CE bioactivation (etretinate, tazarotene).",
        "priority_source": "p.50; T@28898-@29700, @7108",
-       "verification": "verified-stereo",
+       "verification": "exact",
        "chembl_id": "CHEMBL464",
-       "verification_note": "Same molecule as etretinate; full match.",
-       "exam": "Exam 1"
+       "verification_note": "Atlas = PubChem CID 5282375 = ChEMBL CHEMBL464 (full InChIKey).",
+       "exam": "Exam 1",
+       "pubchem_checked": true,
+       "pubchem_cid": 5282375,
+       "verification_date": "2026-11-06"
       },
       {
        "key": "retinoid carboxylic acid",
@@ -1702,10 +1977,13 @@
        "priority": "core",
        "priority_reason": "Exposed carboxylic acid = directly active retinoid; terminal COOH common to retinoids.",
        "priority_source": "p.51; T@30232, @7222",
-       "verification": "verified-stereo",
+       "verification": "exact",
        "chembl_id": "CHEMBL1265",
-       "verification_note": "Same molecule as adapalene; full match.",
-       "exam": "Exam 1"
+       "verification_note": "Atlas = PubChem CID 60164 = ChEMBL CHEMBL1265 (full InChIKey).",
+       "exam": "Exam 1",
+       "pubchem_checked": true,
+       "pubchem_cid": 60164,
+       "verification_date": "2026-11-06"
       }
      ]
     },
@@ -1722,10 +2000,13 @@
        "priority": "core",
        "priority_reason": "BPO is in the \"peroxide chemical class\"; peroxide bond cleavage is its CBDA.",
        "priority_source": "p.47; T@25608-@26100",
-       "verification": "verified-stereo",
+       "verification": "exact",
        "chembl_id": "CHEMBL1200370",
-       "verification_note": "Same molecule as benzoyl peroxide; full match.",
-       "exam": "Exam 1"
+       "verification_note": "Atlas = PubChem CID 7187 = ChEMBL CHEMBL1200370 (full InChIKey).",
+       "exam": "Exam 1",
+       "pubchem_checked": true,
+       "pubchem_cid": 7187,
+       "verification_date": "2026-11-06"
       },
       {
        "key": "macrolide",
@@ -1737,10 +2018,13 @@
        "priority": "core",
        "priority_reason": "Classify cyclic vs linear antibiotics; erythromycin \"a macrolide\" (macrocyclic lactone); Polleve-3 format.",
        "priority_source": "p.54; T@34560-@34700; T@11280-@11870",
-       "verification": "verified-stereo",
+       "verification": "exact",
        "chembl_id": "CHEMBL532",
-       "verification_note": "Same molecule as erythromycin; full match. p.54 drawing omits the desosamine ring O (other_differences).",
-       "exam": "Exam 1"
+       "verification_note": "Atlas = PubChem CID 12560 = ChEMBL CHEMBL532 (full InChIKey).",
+       "exam": "Exam 1",
+       "pubchem_checked": true,
+       "pubchem_cid": 12560,
+       "verification_date": "2026-11-06"
       }
      ]
     }
