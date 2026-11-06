@@ -139,7 +139,7 @@ const COURSE = {
   exams: [
     {id:'exam1', name:'Exam 1', date:'Mon 11/09, 9:00–10:30 AM', when:'2026-11-09T09:00',
      questions:50, minutes:90, sata:null,
-     blurb:'Practice coverage of Lectures 1–4 (Smith 10/29, 10/30, 11/03; Sikazwe 11/03, 11/04). The faculty have not announced a split by professor, so this paper is unweighted. Includes Dr. Smith\'s recorded sun-exposure and psoralen lecture.',
+     blurb:'Practice coverage of Lectures 1–4 (Smith 10/29, 10/30, 11/03; Sikazwe 11/03, 11/04). The faculty have not announced a split by professor, so this paper is unweighted. Includes Dr. Smith\'s recorded sun-exposure and psoralen lecture',
      pools:[
        {key:'smith',   name:'Dr. Smith (pharmacology)',      marks:null, filter:{exam:1, prof:'Smith'}},
        {key:'sikazwe', name:'Dr. Sikazwe (medicinal chemistry)', marks:null, filter:{exam:1, prof:'Sikazwe'}},
