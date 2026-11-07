@@ -1343,7 +1343,7 @@ QUESTIONS.push(
  options:[
   {t:'They are more lipid soluble', correct:true, why:'Slide 45: doxycycline and minocycline are more lipid soluble, penetrating the pilosebaceous follicle more efficiently.'},
   {t:'They are applied topically', correct:false, why:'The tetracyclines in this lecture are oral (slide 44: side effects of oral tetracyclines).'},
-  {t:'They bind the 50S subunit', correct:false, why:'They bind the 30S subunit (slide 43); binding site does not decide follicle entry.'},
+  {t:'They bind the 50S subunit', correct:false, why:'They bind the 30S subunit (slide 43); slide 45 puts their better follicle entry down to lipid solubility.'},
   {t:'They kill bacteria rather than slow them', correct:false, why:'They are bacteriostatic, keeping bacteria from multiplying (slide 43).'}],
  teach:'The pilosebaceous unit, the hair follicle with its sebaceous gland, is where acne develops (Pathophys slide 30; 10/29 T 408–410), so a drug that enters it well reaches the disease.',
  note:'Slide 45 facts she left to reading (T 51–52).',
@@ -1365,7 +1365,7 @@ QUESTIONS.push(
  stem:'Why does blocking TNF-α reduce psoriatic plaques?',
  options:[
   {t:'It is an inflammatory cytokine in psoriasis', correct:true, why:'Slide 70: TNF-α is an inflammatory cytokine; the inhibitors keep it from its receptors on inflammatory cells and reduce the number and size of plaques (T 489, 493–497). Pathophys slide 21 names TNF-α among the cytokines released in psoriasis.'},
-  {t:'It crosslinks DNA in dividing keratinocytes', correct:false, why:'DNA crosslinking is the proposed action of coal tar (slide 53), not a cytokine role.'},
+  {t:'It crosslinks the DNA of dividing keratinocytes', correct:false, why:'DNA crosslinking is the proposed action of coal tar (slide 53), not a cytokine role.'},
   {t:'It raises sebum output in the follicle', correct:false, why:'Sebum belongs to the acne story (Pathophys slide 32).'},
   {t:'It breaks down cAMP inside mast cells', correct:false, why:'cAMP is broken down by phosphodiesterase (slide 32).'}],
  teach:'In psoriasis, APCs, T cells and keratinocytes release TNF-α, IL-23 and IL-17, which drive keratinocyte hyperproliferation and chronic inflammation (Pathophys slides 21–22). "In general, TNF alpha inhibitors are anti-inflammatory" (T 496–497).',
@@ -1439,7 +1439,7 @@ QUESTIONS.push(
   {l:'Sulfur', r:'Reduced to hydrogen sulfide in keratinocytes', why:'PCol slide 38.'},
   {l:'Salicylic acid', r:'Solubilizes proteins holding the stratum corneum', why:'PCol slide 39.'},
   {l:'Coal tar', r:'Crosslinks DNA to inhibit cell division', why:'PCol slide 53.'},
-  {l:'Anthralin', r:'Acts on keratinocyte mitochondria', why:'PCol slide 55: may reduce mitotic activity by affecting mitochondria; also prevents T-lymphocyte activation.'}],
+  {l:'Anthralin', r:'May act on keratinocyte mitochondria', why:'PCol slide 55: exact mechanism not known; may reduce mitotic activity by affecting mitochondria; also prevents T-lymphocyte activation.'}],
  teach:'Shale tar\'s mechanism is unknown; selenium sulfide and zinc pyrithione are cytostatic and antifungal with mechanism unknown (PCol slide 57). The cytotoxic agents as a group decrease the rate of epidermal cell turnover (PCol slide 53).',
  cite:D2+' slides 36, 38–39, 53, 55, 57'},
 

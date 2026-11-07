@@ -853,7 +853,7 @@ const QUESTIONS = [
  options:[
   {t:'Asthma and rhinitis', correct:true, why:'Slide 10: an inheritance pattern and association with asthma and rhinitis (atopic conditions); (T 121–125) a child with AD, asthma and rhinitis is responding to things they are allergic to.'},
   {t:'Psoriatic arthritis and nail pitting', correct:false, why:'These go with psoriasis (Pathophys slide 26), not with AD.'},
-  {t:'Acne and rosacea', correct:false, why:'Acne is a pilosebaceous disease (slide 30); rosacea is the use of topical metronidazole (PCol slide 51). Neither is an atopic condition.'},
+  {t:'Acne and rosacea', correct:false, why:'Acne is a pilosebaceous disease (slide 30); rosacea is what topical metronidazole is usually used for (PCol slide 51). Neither is an atopic condition.'},
   {t:'Hypertension and kidney disease', correct:false, why:'These are adverse effects of oral calcineurin inhibitors (PCol slide 30), not atopic conditions.'}],
  teach:'Slide 10: AD has an inheritance pattern and goes with asthma and rhinitis, the atopic conditions. The risk of AD is two- to threefold higher with one atopic parent and three- to fivefold higher with two.',
  cite:PP+' slide 10; T 121–125'},
@@ -908,7 +908,7 @@ const QUESTIONS = [
  options:[
   {t:'About 12% of women; 3% of men', correct:true, why:'Slide 31: 12% of girls age 25–58, with periodic premenstrual flares until menopause; 3% of males age 25–58.'},
   {t:'About 3% of women; 12% of men', correct:false, why:'Swaps the two figures (slide 31).'},
-  {t:'About 12% of each', correct:false, why:'Slide 31 gives different figures for the two sexes: 12% and 3%.'},
+  {t:'About 12% of women; 12% of men', correct:false, why:'Slide 31 gives different figures for the two sexes: 12% and 3%.'},
   {t:'About 81% of women; 3% of men', correct:false, why:'81% is the likelihood of acne when both parents had acne (slide 35).'}],
  teach:'Slide 31: in puberty acne is often more severe in boys, while women often have more severe forms during adulthood. In women it can ebb and flow with the menstrual cycle (T 417–418).',
  note:'The transcript garbles the age range ("between the ages of 25, which is a little later than 58", T 415–416); keyed to slide 31.',
@@ -930,7 +930,7 @@ const QUESTIONS = [
  stem:'What is thought to set off the first skin inflammation in atopic dermatitis?',
  options:[
   {t:'Cytokines from irritated or scratched keratinocytes', correct:true, why:'Slide 13: the initial mechanisms are unknown, but neuropeptides, irritation or scratching may release proinflammatory cytokines from keratinocytes (T 163–169).'},
-  {t:'An IgE-mediated reaction on first allergen exposure', correct:false, why:'Slide 13: the first reactions to embedded or ingested allergens are T-cell mediated but IgE-independent; IgE comes later.'},
+  {t:'An IgE-mediated reaction on the first allergen exposure', correct:false, why:'Slide 13: the first reactions to embedded or ingested allergens are T-cell mediated but IgE-independent; IgE comes later.'},
   {t:'P. acnes lipase acting on sebum in the follicle', correct:false, why:'That is how inflammation arises in acne (slide 33).'},
   {t:'A reaction to lithium or a beta blocker', correct:false, why:'These are the medications most often linked to worsening psoriasis (slide 24).'}],
  teach:'Slide 13: the features of AD are skin barrier dysfunction, immune deviation toward TH2 and then increased IgE, complicated by colonization with pathologic organisms.',

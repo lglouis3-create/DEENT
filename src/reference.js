@@ -118,10 +118,10 @@ const REFERENCE_HTML = `
 </tbody></table>
 <h4>Psoriasis (drug chart pp. 4–5)</h4>
 <table class="reftab"><thead><tr><th>Drug</th><th style="width:24%">Source</th></tr></thead><tbody>
-<tr><td><details><summary><b>Coal tar</b></summary>Antiproliferative and anti-inflammatory; crosslinks DNA to inhibit cell division</details></td><td>PCol 53</td></tr>
+<tr><td><details><summary><b>Coal tar</b></summary>Antiproliferative and anti-inflammatory; crosslinks DNA to inhibit cell division (mechanism not fully known)</details></td><td>PCol 53</td></tr>
 <tr><td><details><summary><b>Shale tar (ichthammol)</b></summary>Cytotoxic; mechanism unknown</details></td><td>PCol 57</td></tr>
 <tr><td><details><summary><b>Selenium sulfide, zinc pyrithione</b></summary>Cytostatic and antifungal; mechanism unknown</details></td><td>PCol 57</td></tr>
-<tr><td><details><summary><b>Anthralin</b></summary>Keratinocyte mitochondria (antiproliferative); also prevents T-lymphocyte activation</details></td><td>PCol 55</td></tr>
+<tr><td><details><summary><b>Anthralin</b></summary>Exact mechanism not known: may act on keratinocyte mitochondria, reducing mitotic activity; also prevents T-lymphocyte activation</details></td><td>PCol 55</td></tr>
 <tr><td><details><summary><b>Methotrexate</b></summary>Dihydrofolate reductase (DHFR): less THF, fewer purines</details></td><td>PCol 59; T 215–220</td></tr>
 <tr><td><details><summary><b>Abatacept</b></summary>CD80/86 on antigen-presenting cells, so CD28 cannot bind (blocks positive signal 2)</details></td><td>PCol 63; T 316–323</td></tr>
 <tr><td><details><summary><b>Etanercept, adalimumab, infliximab, golimumab, certolizumab pegol</b></summary>TNF-α, kept from its receptors on inflammatory cells</details></td><td>PCol 70–74; T 493–495</td></tr>

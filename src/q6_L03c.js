@@ -609,7 +609,7 @@ QUESTIONS.push(
  teach:'A product with a critical wavelength of 370 nm or greater may be labeled "broad spectrum"; a broad-spectrum product with SPF 15 or more may claim it "decreases risk of skin cancer and early aging caused by the sun" (slide 14; audio 13:10–14:00).',
  cite:SUN+' slides 8, 12, 14; audio 12:00–14:00'},
 
-{id:'L3C-043', skill:'tell', prof:'Smith', tier:'new', topic:'l3c-spf', sub:'def', concept:'spf-vs-broad',
+{id:'L3C-043', dupOf:'L3C-032', skill:'tell', prof:'Smith', tier:'new', topic:'l3c-spf', sub:'def', concept:'spf-vs-broad',
  tags:['tell','counsel'], source:'both',
  stem:'A sunscreen is labeled SPF 30 but not "broad spectrum." What does its label tell you?',
  options:[
@@ -622,7 +622,7 @@ QUESTIONS.push(
 
 {id:'L3C-044', skill:'adverse', prof:'Smith', tier:'new', topic:'l3c-spf', sub:'sel', concept:'photosens-drugs', multi:true,
  tags:['adverse','photosensitivity','list'], source:'both',
- stem:'A patient asks which of her medicines make her burn more easily in the sun. Which of these drugs are photosensitizing? Select all that apply.',
+ stem:'Which of these drugs are photosensitizing? Select all that apply.',
  options:[
   {t:'Doxycycline', correct:true, why:'PCol slide 44: photosensitivity in fair-skinned people is a side effect of oral tetracyclines (11/03 T 42–44); slide 45: doxycycline more so than minocycline or sarecycline.'},
   {t:'Tazarotene', correct:true, why:'PCol slide 18: tazarotene causes photosensitivity.'},
@@ -634,7 +634,7 @@ QUESTIONS.push(
  note:'Slide 18 links to the OTC textbook table of photosensitizing drugs; its content is not on the slide, so the drugs here are those her own pharmacology slides call photosensitizing.',
  cite:SUN+' slides 3, 8, 17–18; audio 00:30–00:45, 17:27–17:48'},
 
-{id:'L3C-065', skill:'tell', prof:'Smith', tier:'new', topic:'l3c-prod', sub:'blk', concept:'sunblock-ingredient',
+{id:'L3C-065', dupOf:'L3C-052', skill:'tell', prof:'Smith', tier:'new', topic:'l3c-prod', sub:'blk', concept:'sunblock-ingredient',
  tags:['tell'], source:'both',
  stem:'A product\'s active ingredient is titanium dioxide. What kind of product is it, and how does it protect?',
  options:[
@@ -645,7 +645,7 @@ QUESTIONS.push(
  teach:'Sunblocks suit prominently exposed areas like the nose and ears and situations where sun exposure cannot be limited; they may occlude pores and stain clothing, melt in hot sun, and lose protection after 2 hours of direct sun (slides 20–21).',
  cite:SUN+' slides 3, 20–22; audio 18:55–21:05'},
 
-{id:'L3C-066', skill:'tell', prof:'Smith', tier:'new', topic:'l3c-prod', sub:'org', concept:'organic-ingredient',
+{id:'L3C-066', dupOf:'L3C-052', skill:'tell', prof:'Smith', tier:'new', topic:'l3c-prod', sub:'org', concept:'organic-ingredient',
  tags:['tell','mechanism'], source:'both',
  stem:'A sunscreen lists avobenzone and oxybenzone as its active ingredients. How do these protect the skin?',
  options:[
