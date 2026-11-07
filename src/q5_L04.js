@@ -81,7 +81,7 @@ TOPICS.push(
     which carry no questions. These carry lowYield (off practice papers) and
     unassigned (course.js pool filters: in no Exam 1 pool, so out of the pool cards on
     Weak spots and the exam-date scheduling). IDs and citations are unchanged. */
- {id:'sk-beyond', name:'Beyond the Exam 1 assigned pages (Dr. Sikazwe, optional)', prof:'Sikazwe',
+ {id:'sk-beyond', optional:true, name:'Beyond the Exam 1 assigned pages (Dr. Sikazwe, optional)', prof:'Sikazwe',
   cite:'Not on Dr. Sikazwe\'s assigned slides for Exam 1 (his list of 11/06). Kept for optional practice; not on Exam 1 practice papers. f26-DEENT-DPAW-mc.pdf, Lectures 3–4',
   subs:[
    {id:'skin', name:'Functions of the skin (11/03)', cite:'slide 2'},
