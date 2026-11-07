@@ -1,7 +1,8 @@
 /* ==========================================================================
    Sun exposure and psoralens (Dr. Smith; recorded after the 11/03 lecture).
-   Exam assignment PROVISIONAL: Exam 1 per the syllabus (Lecture 3); not
-   confirmed by Dr. Smith (see course.js and reviews/OPEN_QUESTIONS.md). Deck: DEENT_Sun_Exposure_2026.pdf
+   Exam 1: the syllabus (Lecture 3) and Dr. Smith's Exam 1 study hints (pasted by
+   Louis 2026-11-07: "From Sun Exposure lecture: ...") both put it on Exam 1
+   (reviews/OPEN_QUESTIONS.md). Deck: DEENT_Sun_Exposure_2026.pdf
    (26 slides). "audio mm:ss" = timecode in her recording (full-lecture file),
    transcribed 2026-11-06. Tables shown only as links to the OTC textbook
    (slides 18 and 23) carry no questions: their content is not on the slides.
@@ -549,5 +550,124 @@ QUESTIONS.push(
   {t:'Absorption limited to physical sunblocks', correct:false, why:'The observations concern sunscreen actives (slide 25).'}],
  note:'In the recording she said studies "measured zero point five nanograms per mil" (audio 23:51); slide 25 gives 0.5 ng/mL as the FDA threshold that was exceeded. Keyed to the slide.',
  teach:'Studies have found plasma concentrations beyond the FDA threshold of 0.5 ng/mL; what this means is still being watched (slide 25; audio 23:51–24:36).',
- cite:SUN+' slide 25; audio 23:51–24:36'}
+ cite:SUN+' slide 25; audio 23:51–24:36'},
+/* ---- Added 2026-11-07 for Dr. Smith's Exam 1 hints (sunscreen vs sunblock by
+   ingredient, SPF and broad spectrum, photosensitizing drugs, UVA vs UVB damage). */
+{id:'L3C-007', skill:'mech', prof:'Smith', tier:'new', topic:'l3c-pso', sub:'mech', concept:'psoralen-why',
+ tags:['mechanism','reasoning'], source:'both',
+ stem:'Why does DNA intercalation by methoxsalen help psoriasis?',
+ options:[
+  {t:'Cells can no longer divide', correct:true, why:'(Audio 00:59–01:10) once the light-activated psoralen intercalates, "cells can no longer divide", so psoralens treat psoriasis by their antiproliferative effect; slide 3 lists antiproliferative, immunosuppressive and anti-inflammatory effects.'},
+  {t:'Keratinocytes make more filaggrin', correct:false, why:'Filaggrin belongs to the AD barrier story (Pathophys slide 15), not to psoralens.'},
+  {t:'Mast cell cAMP rises', correct:false, why:'Raising cAMP is the action of PDE-4 inhibitors (PCol slide 32).'},
+  {t:'IL-17A is neutralized', correct:false, why:'IL-17A is bound by secukinumab and ixekizumab (PCol slide 66).'}],
+ teach:'Psoriasis is keratinocyte hyperproliferation driven by T cells (Pathophys slides 19, 23). Psoralens normalize the number and arrangement of keratinocytes and are cytotoxic to T cells because they intercalate DNA (slide 3; audio 01:10–01:50).',
+ cite:SUN+' slide 3; audio 00:30–01:50'},
+
+{id:'L3C-023', skill:'tell', prof:'Smith', tier:'new', topic:'l3c-uv', sub:'uvab', concept:'uva-dermis-smith',
+ tags:['tell'], source:'both',
+ stem:'Which type of UV light penetrates further into the dermis?',
+ options:[
+  {t:'UVA', correct:true, why:'Slide 8: UVA penetrates further into the dermis than UVB radiation; (audio 05:30–05:45) "it will penetrate further into the skin compared to UVB".'},
+  {t:'UVB', correct:false, why:'Slide 8 puts the deeper penetration with UVA.'},
+  {t:'Both reach the same depth', correct:false, why:'Slide 8 states a difference: UVA penetrates further.'},
+  {t:'Neither passes the stratum corneum', correct:false, why:'UVA reaches the dermis (slide 8), and UVB causes sunburn in living skin (slide 11).'}],
+ teach:'UVA (320–400 nm) is minimally filtered by ozone, passes glass and reaches deeper; UVB (290–320 nm) is about 90% filtered by ozone and does not pass glass (slide 8).',
+ cite:SUN+' slides 8, 11; audio 04:30–05:45'},
+
+{id:'L3C-024', skill:'tell', prof:'Smith', tier:'new', topic:'l3c-uv', sub:'uvab', concept:'uva-uvb-shared', multi:true,
+ tags:['tell','list'], source:'both',
+ stem:'Which kinds of damage can both UVA and UVB cause? Select all that apply.',
+ options:[
+  {t:'Photoaging', correct:true, why:'Slide 8 lists photoaging under both UVB and UVA (audio 05:00–05:10, 05:55–06:05).'},
+  {t:'Immunosuppression', correct:true, why:'Slide 8 lists immunosuppression under both UVB and UVA.'},
+  {t:'Skin cancer', correct:true, why:'Slide 8 lists skin cancers under both; she called UVB the most concern for skin cancer and said UVA contributes "but not so much as UVB" (audio 05:00–05:10, 06:00–06:10).'},
+  {t:'Sunburn', correct:false, why:'Sunburn is listed for UVB (slide 8); UVA "does not seem to cause sunburn" because it is less energetic (audio 05:55–06:20).'},
+  {t:'Most phototoxic drug reactions', correct:false, why:'Slide 8 gives these to UVA only.'}],
+ teach:'Slide 8: UVB can cause sunburn and produces vitamin D3 in the skin; UVA is responsible for most phototoxic reactions with drugs. Both may cause photoaging, immunosuppression and skin cancers.',
+ cite:SUN+' slide 8; audio 04:30–06:25'},
+
+{id:'L3C-025', skill:'tell', prof:'Smith', tier:'new', topic:'l3c-uv', sub:'uvab', concept:'uva-no-burn',
+ tags:['tell','reasoning'], source:'both',
+ stem:'Why does UVA tend not to cause sunburn?',
+ options:[
+  {t:'It is less energetic than UVB', correct:true, why:'Slide 8: UVA is less energetic than UVB; (audio 06:10–06:20) "It is a little bit less energetic than UVB light. That\'s why it doesn\'t tend to cause sunburn."'},
+  {t:'Ozone filters most of it out', correct:false, why:'UVA is minimally filtered by ozone; it is UVB that is about 90% filtered (slide 8).'},
+  {t:'It cannot pass through glass', correct:false, why:'UVA penetrates glass; UVB does not (slide 8).'},
+  {t:'It stops at the stratum corneum', correct:false, why:'UVA penetrates further into the dermis than UVB (slide 8).'}],
+ teach:'Because sunburn comes from UVB, the SPF number, which measures protection against burning, is a measure of UVB protection (slide 13; audio 11:30–11:50).',
+ cite:SUN+' slides 8, 13; audio 05:45–06:20, 11:30–11:50'},
+
+{id:'L3C-042', skill:'mech', prof:'Smith', tier:'new', topic:'l3c-spf', sub:'def', concept:'critical-wavelength',
+ tags:['definition'], source:'both',
+ stem:'In the critical wavelength method, what is a product\'s critical wavelength?',
+ options:[
+  {t:'Where 90% of its UV absorption is reached', correct:true, why:'(Audio 12:30–13:10) the product is scanned from about 220 to 400 nm, and the wavelength at which 90% of its total absorption has occurred is the critical wavelength; slide 14: this method assesses UVA protection.'},
+  {t:'Where it first begins to absorb any UV light', correct:false, why:'The method finds where 90% of the absorption has occurred, not where absorption begins (audio 12:30–13:10).'},
+  {t:'The shortest wavelength that causes 1 MED', correct:false, why:'MED is the least UV dose giving clear erythema (slide 12); it is used for SPF, not the critical wavelength.'},
+  {t:'The wavelength that ozone stops', correct:false, why:'Ozone filtering separates UVB from UVA (slide 8); it is not how a product is tested.'}],
+ teach:'A product with a critical wavelength of 370 nm or greater may be labeled "broad spectrum"; a broad-spectrum product with SPF 15 or more may claim it "decreases risk of skin cancer and early aging caused by the sun" (slide 14; audio 13:10–14:00).',
+ cite:SUN+' slides 8, 12, 14; audio 12:00–14:00'},
+
+{id:'L3C-043', skill:'tell', prof:'Smith', tier:'new', topic:'l3c-spf', sub:'def', concept:'spf-vs-broad',
+ tags:['tell','counsel'], source:'both',
+ stem:'A sunscreen is labeled SPF 30 but not "broad spectrum." What does its label tell you?',
+ options:[
+  {t:'Its UVB protection, not its UVA coverage', correct:true, why:'Slide 13: SPF is primarily a measure of UVB protection and gives no information on UVA coverage; UVA protection is what the critical wavelength test behind "broad spectrum" assesses (slide 14; audio 11:30–12:00).'},
+  {t:'It blocks about 97% of UVA', correct:false, why:'Slide 15: SPF 30 blocks about 97% of UVB, not UVA.'},
+  {t:'Its critical wavelength is at least 370 nm', correct:false, why:'A critical wavelength of 370 nm or more is what allows the "broad spectrum" label, which this product lacks (slide 14).'},
+  {t:'It may claim to lower skin cancer risk', correct:false, why:'That claim needs broad spectrum with SPF 15 or greater (slide 14).'}],
+ teach:'SPF is the ratio of the UV dose that produces sunburn with the sunscreen to the dose that does without it (slide 13). SPF 15 blocks about 93% of UVB, SPF 30 about 97%, SPF 50 about 98% (slide 15).',
+ cite:SUN+' slides 13–15; audio 10:30–14:00'},
+
+{id:'L3C-044', skill:'adverse', prof:'Smith', tier:'new', topic:'l3c-spf', sub:'sel', concept:'photosens-drugs', multi:true,
+ tags:['adverse','photosensitivity','list'], source:'both',
+ stem:'A patient asks which of her medicines make her burn more easily in the sun. Which of these drugs are photosensitizing? Select all that apply.',
+ options:[
+  {t:'Doxycycline', correct:true, why:'PCol slide 44: photosensitivity in fair-skinned people is a side effect of oral tetracyclines (11/03 T 42–44); slide 45: doxycycline more so than minocycline or sarecycline.'},
+  {t:'Tazarotene', correct:true, why:'PCol slide 18: tazarotene causes photosensitivity.'},
+  {t:'Coal tar', correct:true, why:'PCol slide 54: coal tar is photosensitizing.'},
+  {t:'Methoxsalen', correct:true, why:'Slide 3: psoralens are photosensitizing compounds combined with UVA light (audio 00:30–00:45).'},
+  {t:'Adapalene', correct:false, why:'PCol slide 18: adapalene is photochemically stable ("sun stable"); a patient still needs sun protection because peeling removes outer skin (10/30 T 116–130).'},
+  {t:'Shale tar', correct:false, why:'PCol slide 57: shale tar has no photosensitizing activity, unlike coal tar.'}],
+ teach:'Patients on photosensitizing drugs need sun protection counseling (slide 18; audio 17:27–17:48), and slide 17 sets SPF greater than 45 for them. UVA is responsible for most phototoxic reactions with drugs (slide 8).',
+ note:'Slide 18 links to the OTC textbook table of photosensitizing drugs; its content is not on the slide, so the drugs here are those her own pharmacology slides call photosensitizing.',
+ cite:SUN+' slides 3, 8, 17–18; audio 00:30–00:45, 17:27–17:48'},
+
+{id:'L3C-065', skill:'tell', prof:'Smith', tier:'new', topic:'l3c-prod', sub:'blk', concept:'sunblock-ingredient',
+ tags:['tell'], source:'both',
+ stem:'A product\'s active ingredient is titanium dioxide. What kind of product is it, and how does it protect?',
+ options:[
+  {t:'A sunblock; it scatters and reflects UV', correct:true, why:'Slide 20: sunblocks, or physical sunscreens, are inorganic particulates that scatter or reflect visible, UV and infrared radiation; zinc oxide and titanium dioxide are the U.S. products (audio 18:55–19:35). The drug chart (Sun Protection page) lists titanium oxide and zinc oxide as physical sunscreens.'},
+  {t:'A sunscreen; it absorbs UV as heat', correct:false, why:'Absorbing UV and converting it to heat is how organic sunscreens such as avobenzone work (slide 22).'},
+  {t:'A sunscreen; it absorbs mainly UVB', correct:false, why:'Titanium dioxide is a physical blocker, giving UVA and UVB protection (slide 20).'},
+  {t:'A sunblock; it raises melanin in the skin', correct:false, why:'Raising melanin pigmentation is a psoralen effect (slide 3), not a sunblock action.'}],
+ teach:'Sunblocks suit prominently exposed areas like the nose and ears and situations where sun exposure cannot be limited; they may occlude pores and stain clothing, melt in hot sun, and lose protection after 2 hours of direct sun (slides 20–21).',
+ cite:SUN+' slides 3, 20–22; audio 18:55–21:05'},
+
+{id:'L3C-066', skill:'tell', prof:'Smith', tier:'new', topic:'l3c-prod', sub:'org', concept:'organic-ingredient',
+ tags:['tell','mechanism'], source:'both',
+ stem:'A sunscreen lists avobenzone and oxybenzone as its active ingredients. How do these protect the skin?',
+ options:[
+  {t:'They absorb UV and convert it to heat', correct:true, why:'Slide 22: organic sunscreens absorb UV radiation in the UVB and/or UVA range and convert it to heat energy (audio 21:05–21:30). The drug chart lists avobenzone (dibenzoylmethane) and oxybenzone (benzophenone) as chemical sunscreens.'},
+  {t:'They scatter and reflect UV light back', correct:false, why:'Scattering and reflecting is the sunblock action of inorganic particulates such as zinc oxide (slide 20).'},
+  {t:'They thicken the stratum corneum', correct:false, why:'Epidermal thickness affects tanning (slide 9); it is not how a sunscreen works.'},
+  {t:'They speed melanin production', correct:false, why:'Increased melanin is a psoralen effect (slide 3).'}],
+ teach:'Slide 25: avobenzone and oxybenzone, with PABA, carry the highest risk of dermatologic reactions; physical sunscreen ingredients are less likely to irritate. Slide 24: benzophenones have poor substantivity and can cause sensitization; dibenzoylmethane activity starts to fall after 15 minutes.',
+ cite:SUN+' slides 3, 9, 20, 22, 24–25; audio 21:05–23:40'},
+
+{id:'L3C-067', type:'match', skill:'tell', prof:'Smith', tier:'new', topic:'l3c-prod', sub:'org', concept:'sunscreen-families-match',
+ tags:['tell','match'], source:'slide',
+ stem:'Match each sun protection ingredient to its family.', left:'Ingredient', right:'Family',
+ pairs:[
+  {l:'Padimate O', r:'Aminobenzoate (PABA)', why:'Drug chart, Sun Protection page: octyl dimethyl PABA, padimate O, para-aminobenzoic acid. Slide 24: aminobenzoates are the most effective at absorbing UVB.'},
+  {l:'Octyl methoxycinnamate', r:'Cinnamate', why:'Drug chart: cinnamates. Slide 24: they do not adhere to skin well and depend on the vehicle.'},
+  {l:'Homosalate', r:'Salicylate', why:'Drug chart: salicylates. Slide 24: easily removed by water or perspiration.'},
+  {l:'Oxybenzone', r:'Benzophenone', why:'Drug chart: benzophenones. Slide 24: poor substantivity; can cause sensitization.'},
+  {l:'Menthyl anthranilate', r:'Anthranilate', why:'Drug chart: anthranilates. Slide 24: used only in combination products for broad UV coverage.'},
+  {l:'Avobenzone', r:'Dibenzoylmethane', why:'Drug chart: dibenzoylmethane. Slide 24: activity starts to decrease after 15 minutes.'},
+  {l:'Zinc oxide', r:'Oxide (physical sunblock)', why:'Drug chart: oxides, physical sunscreen. Slide 20: scatters or reflects UV.'}],
+ teach:'The first six are organic (chemical) sunscreens that absorb UV and release heat (slide 22); zinc oxide and titanium dioxide are physical sunblocks that scatter and reflect it (slide 20).',
+ note:'Ingredient names come from the course drug chart (2026 Drug Chart – Dermatology, Sun Protection page), a guide; the families and their properties are on slides 20–24.',
+ cite:SUN+' slides 20, 22, 24'}
 );

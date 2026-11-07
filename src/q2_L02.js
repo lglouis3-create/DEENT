@@ -1343,5 +1343,38 @@ QUESTIONS.push(
   {t:'Both bind 30S at different steps', correct:false, why:'Macrolides bind 50S (slide 42).'},
   {t:'Both act on the cell wall', correct:false, why:'Both act on the ribosome (slide 42).'}],
  teach:'Tetracyclines: 30S, block entry of the charged tRNA. Chloramphenicol and macrolides: 50S (slide 42; T 600–607).',
- cite:D2+' slide 42; T 600–607'}
+ cite:D2+' slide 42; T 600–607'},
+/* ---- Added 2026-11-07 for Dr. Smith's Exam 1 hints (drug targets, boxed warning). */
+{id:'L2-115', skill:'mech', prof:'Smith', tier:'new', topic:'l2-pde', sub:'cris', concept:'crisaborole-target',
+ tags:['mechanism','target'], source:'both',
+ stem:'Which enzyme does crisaborole inhibit in atopic dermatitis?',
+ options:[
+  {t:'Phosphodiesterase 4', correct:true, why:'Slides 32–33: crisaborole is a nonsteroidal anti-inflammatory PDE-4 inhibitor; (T 430–433, 448–450) "anti-inflammatory by inhibiting the PDE4".'},
+  {t:'Calcineurin', correct:false, why:'Calcineurin is the target of pimecrolimus, tacrolimus and cyclosporine (slides 24–27).'},
+  {t:'Janus kinase', correct:false, why:'JAK is inhibited by tofacitinib, ruxolitinib and upadacitinib (slide 76).'},
+  {t:'Dihydrofolate reductase', correct:false, why:'DHFR is inhibited by methotrexate and trimethoprim (slides 48, 59).'}],
+ teach:'With PDE4 blocked, cAMP is not broken down to 5\'-AMP; the higher cAMP inhibits inflammatory cells. PDE4 is the predominant isoform in mast cells, eosinophils, neutrophils, T lymphocytes and macrophages, which is why it suits an inflammatory skin disease (slide 32; T 437–448).',
+ cite:D2+' slides 24–27, 32–33, 48, 59, 76; T 430–450'},
+
+{id:'L2-116', skill:'mech', prof:'Smith', tier:'new', topic:'l2-cni', sub:'top', concept:'pimecrolimus-target',
+ tags:['mechanism','target'], source:'both',
+ stem:'Which enzyme does topical pimecrolimus inhibit in atopic dermatitis?',
+ options:[
+  {t:'Calcineurin', correct:true, why:'Slides 23–27: pimecrolimus is a topical calcineurin inhibitor; blocking calcineurin inhibits activation of T cells and mast cells and the production of proinflammatory cytokines (T 360–365).'},
+  {t:'Phosphodiesterase 4', correct:false, why:'PDE4 is the target of crisaborole and apremilast (slides 32–34).'},
+  {t:'Janus kinase', correct:false, why:'JAK is the target of ruxolitinib, which the drug chart also lists for AD (PCol slide 76).'},
+  {t:'Dihydrofolate reductase', correct:false, why:'DHFR is the target of methotrexate (PCol slide 59).'}],
+ teach:'Calcineurin normally removes the phosphate from NFAT so IL-2 can be transcribed; with it blocked, IL-2 falls, fewer T cells proliferate, mast cells are less active and the itch of AD eases within the first few days (slides 26–27; T 322–328, 360–367).',
+ cite:D2+' slides 23–27, 32–34, 59, 76; T 322–328, 360–367'},
+
+{id:'L2-117', skill:'adverse', prof:'Smith', tier:'new', topic:'l2-cni', sub:'oral', concept:'oral-cni-boxed-content',
+ tags:['adverse','recall'], source:'both',
+ stem:'Which risks make up the black box warning for oral cyclosporine?',
+ options:[
+  {t:'Malignancy and serious infection', correct:true, why:'Slide 30, black box warning: increased risk of lymphoma and other malignancies, particularly of the skin, and increased susceptibility to bacterial, viral, fungal and protozoal infections (T 396–398).'},
+  {t:'Nephrotoxicity and hypertension', correct:false, why:'Slide 30 lists these as side effects of both oral calcineurin inhibitors, under the boxed warning but not in it.'},
+  {t:'Gingival hyperplasia and neuropathy', correct:false, why:'These are the drug-specific side effects: gingival hyperplasia for cyclosporine, neuropathies for tacrolimus (slide 30).'},
+  {t:'Hypercalcemia and hypercalciuria', correct:false, why:'These are systemic effects of topical calcipotriene above 100 g a week (slide 22).'}],
+ teach:'"They have a black box warning. You\'ve got an increased risk of lymphoma and other malignancies, and you also have an increased susceptibility to infections" (T 397–398). Both follow from suppressing the immune system, which normally fights infection and identifies cancer cells (T 399–403).',
+ cite:D2+' slides 22, 30; T 396–403'}
 );

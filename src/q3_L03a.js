@@ -3,8 +3,8 @@
    slides 43-76, with the lecture transcript (T, line numbers of
    DEENT_11_03_Lecture_Only_Transcript.txt, lines 1-587; Dr. Sikazwe starts at 588).
    Slides 41-42 (ribosome figure) were recapped only (T 19-26) and belong to Lecture 2.
-   Slides 77-80 (psoralens) and the sun-exposure lecture were deferred to a recording
-   that is not in the sources (T 556-561, 581-583): no questions on them.
+   Slides 77-80 (psoralens) and the sun-exposure lecture were deferred to her recording
+   (T 556-561, 581-583); their questions are in q6_L03c.js.
    Held out (sources disagree on the keyed fact): MHC class in signal 1, dupilumab
    for psoriasis, whether dapsone's acne effect is tied to its antibacterial action,
    ruxolitinib route, metronidazole's indication table, coal tar in children, the
@@ -1277,4 +1277,216 @@ QUESTIONS.push(
  teach:'Unlike the injected biologicals, tofacitinib is a small molecule given orally (slide 76; T 569–579).',
  note:'Ruxolitinib\'s route is not asked: she said "these are given orally" (T 578–579), slide 76 says ruxolitinib is used topically and orally, and the drug chart lists it as topical for AD.',
  cite:D3+' slide 76; T 569–579'}
+);
+
+/* ---- Added 2026-11-07 for Dr. Smith's Exam 1 hints: targets, within-class
+   differences, why each MOA helps, boxed warnings. "10/30 T" = line numbers of
+   DEENT_10_30_Lecture_Only_Transcript.txt; plain "T" = the 11/03 transcript. */
+TOPICS.push(
+ {id:'l3-sum', name:'Across her pharmacology lectures: targets and boxed warnings', prof:'Smith',
+  cite:'Lectures 1–3 — Skin-PCol-Students-2026.pdf, slides 14–78', subs:[
+   {id:'tgt', name:'Drug targets and what sets drugs apart (matching)', cite:'slides 14–78'},
+   {id:'bbw', name:'Which drugs carry a black box warning', cite:'slides 30, 70, 76'}]}
+);
+
+QUESTIONS.push(
+{id:'L3-109', dupOf:'L3-001', skill:'mech', prof:'Smith', tier:'new', topic:'l3-abx', sub:'tet', concept:'sarecycline-target',
+ tags:['mechanism','target'], source:'both',
+ stem:'Where on the bacterium does sarecycline act to stop protein synthesis?',
+ options:[
+  {t:'The 30S ribosomal subunit', correct:true, why:'Slide 43: the tetracycline class, sarecycline included, binds the 30S subunit irreversibly and blocks aminoacyl-tRNA binding at the acceptor site (T 27–31).'},
+  {t:'The 50S ribosomal subunit', correct:false, why:'Clindamycin and the macrolides bind the 50S subunit (slides 46–47).'},
+  {t:'Bacterial dihydrofolate reductase', correct:false, why:'That is trimethoprim (slide 48).'},
+  {t:'PABA use in folic acid synthesis', correct:false, why:'Sulfamethoxazole competes with PABA (slide 48).'}],
+ teach:'Sarecycline, minocycline and doxycycline are the tetracyclines on the drug list; all bind the 30S subunit and are broad-spectrum bacteriostatic antibiotics (slide 43; T 27–36).',
+ cite:D3+' slides 43, 46–48; T 27–36'},
+
+{id:'L3-110', skill:'tell', prof:'Smith', tier:'new', topic:'l3-abx', sub:'tet', concept:'sarecycline-narrow',
+ tags:['tell'], source:'slide',
+ stem:'Which feature sets sarecycline apart from the other tetracyclines?',
+ options:[
+  {t:'A narrower antimicrobial spectrum', correct:true, why:'Slide 45: sarecycline has a more narrow antimicrobial spectrum than the other tetracyclines, which may mean less disruption of the vulvovaginal and GI microbiome.'},
+  {t:'It binds the 50S ribosomal subunit', correct:false, why:'Like the whole class it binds the 30S subunit (slide 43).'},
+  {t:'It can cause ototoxicity', correct:false, why:'Ototoxicity is the special side effect of minocycline (slide 45; T 50–51).'},
+  {t:'It is safe in children under 8', correct:false, why:'Slide 45: the class should not be used in patients younger than 8 years.'}],
+ teach:'Within the tetracyclines (slide 45): minocycline, doxycycline and sarecycline absorb better from the GI tract than tetracycline; doxycycline and minocycline are more lipid soluble; minocycline can cause ototoxicity; sarecycline has the narrowest spectrum.',
+ note:'Slide 45 facts she left to reading: "You can read the rest of these other little facts I put on this slide" (T 51–52).',
+ cite:D3+' slides 43, 45; T 46–52'},
+
+{id:'L3-111', skill:'tell', prof:'Smith', tier:'new', topic:'l3-abx', sub:'tet', concept:'tet-less-photo',
+ tags:['tell','photosensitivity'], source:'slide',
+ stem:'Which tetracyclines may be less photosensitizing than tetracycline or doxycycline?',
+ options:[
+  {t:'Minocycline and sarecycline', correct:true, why:'Slide 45: minocycline and sarecycline may be less photosensitizing than either tetracycline or doxycycline.'},
+  {t:'Doxycycline and minocycline', correct:false, why:'Doxycycline is one of the two the comparison is made against (slide 45).'},
+  {t:'Doxycycline and sarecycline', correct:false, why:'Doxycycline is one of the two the comparison is made against (slide 45).'},
+  {t:'Tetracycline and minocycline', correct:false, why:'Tetracycline is one of the two the comparison is made against (slide 45).'}],
+ teach:'Photosensitivity in fair-skinned people is a class side effect of oral tetracyclines (slide 44): "you\'re gonna burn easily when you\'re out in the sun, burn quickly and badly" (T 42–44). Slide 45 adds that minocycline and sarecycline may cause less of it.',
+ note:'Slide 45 facts she left to reading (T 51–52).',
+ cite:D3+' slides 44–45; T 42–44, 51–52'},
+
+{id:'L3-112', skill:'mech', prof:'Smith', tier:'new', topic:'l3-abx', sub:'tet', concept:'tet-anti-inflam',
+ tags:['mechanism','reasoning'], source:'slide',
+ stem:'Tetracyclines are antimicrobials. On what may their efficacy in acne depend more?',
+ options:[
+  {t:'Their anti-inflammatory activity', correct:true, why:'Slide 45: although the tetracyclines are antimicrobials, their efficacy in acne may be more dependent on anti-inflammatory activity.'},
+  {t:'Killing P. acnes outright in the follicle', correct:false, why:'Slide 43: they are bacteriostatic, keeping bacteria from multiplying rather than killing them (T 34–36).'},
+  {t:'Lowering androgen production', correct:false, why:'Androgens are the target of the antiandrogen class (Pathophys slides 36–37), not the tetracyclines.'},
+  {t:'Shedding of the stratum corneum', correct:false, why:'That is the action of keratolytics such as salicylic acid (PCol slide 39).'}],
+ teach:'Inflammation with release of inflammatory mediators is one of the four acne factors (Pathophys slide 32), and the acne pathogenesis figure places antibiotics against both P. acnes and the inflammatory response (Pathophys slide 36).',
+ note:'Slide 45 facts she left to reading (T 51–52).',
+ cite:D3+' slides 39, 43, 45; T 34–36, 51–52'},
+
+{id:'L3-113', skill:'tell', prof:'Smith', tier:'new', topic:'l3-abx', sub:'tet', concept:'doxy-mino-lipid',
+ tags:['tell'], source:'slide',
+ stem:'Why do doxycycline and minocycline penetrate the pilosebaceous follicle more efficiently?',
+ options:[
+  {t:'They are more lipid soluble', correct:true, why:'Slide 45: doxycycline and minocycline are more lipid soluble, penetrating the pilosebaceous follicle more efficiently.'},
+  {t:'They are applied topically', correct:false, why:'The tetracyclines in this lecture are oral (slide 44: side effects of oral tetracyclines).'},
+  {t:'They bind the 50S subunit', correct:false, why:'They bind the 30S subunit (slide 43); binding site does not decide follicle entry.'},
+  {t:'They kill bacteria rather than slow them', correct:false, why:'They are bacteriostatic, keeping bacteria from multiplying (slide 43).'}],
+ teach:'The pilosebaceous unit, the hair follicle with its sebaceous gland, is where acne develops (Pathophys slide 30; 10/29 T 408–410), so a drug that enters it well reaches the disease.',
+ note:'Slide 45 facts she left to reading (T 51–52).',
+ cite:D3+' slides 43–45; T 51–52'},
+
+{id:'L3-114', skill:'mech', prof:'Smith', tier:'new', topic:'l3-cytok', sub:'il23', concept:'risan-target',
+ tags:['mechanism','target'], source:'both',
+ stem:'What does risankizumab bind?',
+ options:[
+  {t:'The p19 subunit of IL-23', correct:true, why:'Slide 69: a humanized IgG1 antibody that binds the p19 subunit of IL-23 (T 480–482).'},
+  {t:'The p40 subunit of IL-12 and IL-23', correct:false, why:'That is ustekinumab (slide 67).'},
+  {t:'IL-17 receptor A', correct:false, why:'That is brodalumab (slide 66).'},
+  {t:'The IL-4 receptor alpha subunit', correct:false, why:'That is dupilumab (slide 64).'}],
+ teach:'Guselkumab, tildrakizumab and risankizumab all bind p19 of IL-23. Risankizumab is the one given SubQ or IV, for moderate to severe plaque psoriasis (slides 68–69; T 480–486).',
+ cite:D3+' slides 64, 66–69; T 480–486'},
+
+{id:'L3-115', skill:'mech', prof:'Smith', tier:'new', topic:'l3-tnf', sub:'class', concept:'tnf-why-pso',
+ tags:['mechanism','reasoning'], source:'both',
+ stem:'Why does blocking TNF-α reduce psoriatic plaques?',
+ options:[
+  {t:'It is an inflammatory cytokine in psoriasis', correct:true, why:'Slide 70: TNF-α is an inflammatory cytokine; the inhibitors keep it from its receptors on inflammatory cells and reduce the number and size of plaques (T 489, 493–497). Pathophys slide 21 names TNF-α among the cytokines released in psoriasis.'},
+  {t:'It crosslinks DNA in dividing keratinocytes', correct:false, why:'DNA crosslinking is the proposed action of coal tar (slide 53), not a cytokine role.'},
+  {t:'It raises sebum output in the follicle', correct:false, why:'Sebum belongs to the acne story (Pathophys slide 32).'},
+  {t:'It breaks down cAMP inside mast cells', correct:false, why:'cAMP is broken down by phosphodiesterase (slide 32).'}],
+ teach:'In psoriasis, APCs, T cells and keratinocytes release TNF-α, IL-23 and IL-17, which drive keratinocyte hyperproliferation and chronic inflammation (Pathophys slides 21–22). "In general, TNF alpha inhibitors are anti-inflammatory" (T 496–497).',
+ cite:D3+' slides 32, 53, 70; T 489–497'},
+
+{id:'L3-116', skill:'adverse', prof:'Smith', tier:'new', topic:'l3-tnf', sub:'class', concept:'tnf-bbw-young',
+ tags:['adverse','recall'], source:'slide',
+ stem:'The black box warning of the TNF-α inhibitors reports fatal lymphoma and other malignancies in which patients?',
+ options:[
+  {t:'Children and adolescents', correct:true, why:'Slide 70: lymphoma and other malignancies, some fatal, have been reported in children and adolescent patients.'},
+  {t:'Pregnant women', correct:false, why:'Not part of the boxed warning on slide 70.'},
+  {t:'Adults over 65', correct:false, why:'Not part of the boxed warning on slide 70.'},
+  {t:'Patients with diabetes mellitus', correct:false, why:'Diabetes is a caution for salicylic acid on the extremities (slide 40), not part of this warning.'}],
+ teach:'The class boxed warning has two parts: serious infections that may lead to hospitalization or death, and lymphoma and other malignancies (slide 70; T 497–500).',
+ note:'The children-and-adolescents detail is on slide 70 only; in class she named the two parts, infection and cancer (T 497–500).',
+ cite:D3+' slides 40, 70; T 497–500'},
+
+{id:'L3-117', skill:'adverse', prof:'Smith', tier:'new', topic:'l3-jak', sub:'drugs', concept:'tofa-gi-perf',
+ tags:['adverse'], source:'slide',
+ stem:'Besides its black box warning, which caution applies to tofacitinib?',
+ options:[
+  {t:'Caution at high risk of GI perforation', correct:true, why:'Slide 76: it should also be used with caution in patients who are at high risk for GI perforation.'},
+  {t:'Regular hearing checks during therapy', correct:false, why:'Ototoxicity is minocycline\'s special side effect (slide 45).'},
+  {t:'Count tablets on a separate counting tray', correct:false, why:'That handling rule is for methotrexate (T 253–255).'},
+  {t:'Stop 15 weeks before a live vaccine', correct:false, why:'That timing is for ustekinumab (slide 67).'}],
+ teach:'Tofacitinib is an oral small-molecule JAK inhibitor with a black box warning for severe infection, lymphoma and other malignancies, "just like your TNF alpha inhibitors" (slide 76; T 579–581).',
+ cite:D3+' slides 45, 67, 76; T 253–255, 579–581'},
+
+{id:'L3-118', skill:'tell', prof:'Smith', tier:'new', topic:'l3-sum', sub:'bbw', concept:'bbw-which-drug',
+ tags:['tell','adverse'], source:'both',
+ stem:'Which of these drugs carries a black box warning?',
+ options:[
+  {t:'Oral cyclosporine', correct:true, why:'Slide 30: oral calcineurin inhibitors carry a black box warning for lymphoma and other malignancies and for infections (10/30 T 396–398).'},
+  {t:'Injected dupilumab', correct:false, why:'Its adverse effects are generally mild: nasopharyngitis, headache, eye effects (slide 64); no boxed warning was given.'},
+  {t:'Topical crisaborole', correct:false, why:'Its notable risk is hypersensitivity at the site, in less than 1% (slide 33); no boxed warning was given.'},
+  {t:'Secukinumab', correct:false, why:'Its risks are infection (TB evaluation first) and nasopharyngitis (slide 66); no boxed warning was given.'}],
+ teach:'The black box warnings in her pharmacology lectures: oral cyclosporine (slide 30), the TNF-α inhibitor class (slide 70) and tofacitinib (slide 76); each is for serious infection and for lymphoma and other malignancies. At the end of 11/03 she listed what to know: "What is the target of these drugs? What\'s different between the drugs in each category, and then, did I mention a black box warning?" (T 584–586).',
+ cite:D3+' slides 30, 33, 64, 66, 70, 76; T 497–500, 579–586'},
+
+/* ---- Matching: drug to target. Fill-in-the-blank practice for her target
+   questions is the write-then-check list in Reference ("Drug targets"). ---- */
+{id:'L3-119', type:'match', skill:'mech', prof:'Smith', tier:'new', topic:'l3-sum', sub:'tgt', concept:'tgt-ad',
+ tags:['target','match'], source:'both',
+ stem:'Match each drug used for atopic dermatitis to its target.', left:'Drug', right:'Target',
+ pairs:[
+  {l:'Crisaborole', r:'Phosphodiesterase 4 (PDE4)', why:'Slides 32–33; 10/30 T 430–450.'},
+  {l:'Pimecrolimus', r:'Calcineurin', why:'Slides 24–27; 10/30 T 360–365.'},
+  {l:'Tacrolimus', r:'FKBP, then calcineurin', why:'Slide 26: tacrolimus binds FKBP and the complex inhibits calcineurin.'},
+  {l:'Dupilumab', r:'IL-4 receptor alpha subunit', why:'Slide 64: binds IL-4Rα, shared by the IL-4 and IL-13 receptors.'},
+  {l:'Ruxolitinib', r:'JAK1 and JAK2', why:'Slide 76; T 574–576.'}],
+ teach:'The AD drugs on her drug table (atopic dermatitis page): two calcineurin inhibitors, a PDE-4 inhibitor, an IL-4R antagonist and two JAK inhibitors. Upadacitinib, also a JAK inhibitor, was more potent at JAK1 and JAK2 than at JAK3 and TYK2 in an isolated enzyme assay; its selectivity is still unsettled (slide 76).',
+ cite:D3+' slides 24–27, 32–33, 64, 76; T 574–576'},
+
+{id:'L3-120', type:'match', skill:'mech', prof:'Smith', tier:'new', topic:'l3-sum', sub:'tgt', concept:'tgt-acne-abx',
+ tags:['target','match'], source:'both',
+ stem:'Match each acne antimicrobial to its target.', left:'Drug', right:'Target',
+ pairs:[
+  {l:'Doxycycline', r:'30S ribosomal subunit', why:'Slide 43; T 27–31.'},
+  {l:'Clindamycin', r:'50S subunit; blocks translocation', why:'Slide 46; T 53–55.'},
+  {l:'Sulfamethoxazole', r:'PABA use in dihydrofolic acid synthesis', why:'Slide 48: competes with PABA.'},
+  {l:'Trimethoprim', r:'Bacterial dihydrofolate reductase', why:'Slide 48: dihydrofolic to tetrahydrofolic acid blocked.'},
+  {l:'Topical dapsone (acne)', r:'Neutrophils (anti-inflammatory)', why:'Slide 50: the acne effect is anti-inflammatory, with neutrophils a possible site of action.'}],
+ teach:'Erythromycin and azithromycin, like clindamycin, attach to the 50S subunit (slide 47). Metronidazole\'s mechanism is unknown: Demodex brevis or neutrophils (slide 51).',
+ cite:D3+' slides 43, 46–48, 50–51; T 27–31, 53–55'},
+
+{id:'L3-121', type:'match', skill:'mech', prof:'Smith', tier:'new', topic:'l3-sum', sub:'tgt', concept:'tgt-ker-cyto',
+ tags:['target','match'], source:'slide',
+ stem:'Match each keratolytic or cytotoxic agent to its proposed action.', left:'Agent', right:'Proposed action',
+ pairs:[
+  {l:'Benzoyl peroxide', r:'Antimicrobial against P. acnes; comedolytic', why:'PCol slide 36.'},
+  {l:'Sulfur', r:'Reduced to hydrogen sulfide in keratinocytes', why:'PCol slide 38.'},
+  {l:'Salicylic acid', r:'Solubilizes proteins holding the stratum corneum', why:'PCol slide 39.'},
+  {l:'Coal tar', r:'Crosslinks DNA to inhibit cell division', why:'PCol slide 53.'},
+  {l:'Anthralin', r:'Acts on keratinocyte mitochondria', why:'PCol slide 55: may reduce mitotic activity by affecting mitochondria; also prevents T-lymphocyte activation.'}],
+ teach:'Shale tar\'s mechanism is unknown; selenium sulfide and zinc pyrithione are cytostatic and antifungal with mechanism unknown (PCol slide 57). The cytotoxic agents as a group decrease the rate of epidermal cell turnover (PCol slide 53).',
+ cite:D2+' slides 36, 38–39, 53, 55, 57'},
+
+{id:'L3-122', type:'match', skill:'mech', prof:'Smith', tier:'new', topic:'l3-sum', sub:'tgt', concept:'tgt-pso-small',
+ tags:['target','match'], source:'both',
+ stem:'Match each psoriasis drug to its target.', left:'Drug', right:'Target',
+ pairs:[
+  {l:'Methotrexate', r:'Dihydrofolate reductase', why:'Slide 59; T 215–220.'},
+  {l:'Calcipotriene', r:'Vitamin D receptor', why:'Slide 21.'},
+  {l:'Cyclosporine', r:'Cyclophilin, then calcineurin', why:'Slide 26: the cyclosporine–cyclophilin complex binds calcineurin.'},
+  {l:'Apremilast', r:'Phosphodiesterase 4 (PDE4)', why:'Slide 34; 10/30 T 464–466: "the same mechanism of action" as crisaborole.'},
+  {l:'Methoxsalen', r:'DNA, by intercalation after UVA', why:'Slide 78; sun lecture audio 00:30–01:00.'}],
+ teach:'Tofacitinib, on the psoriasis page of her drug table, inhibits JAK (slide 76). Acitretin and tazarotene are retinoids acting through RAR and RXR (slides 14, 18, 20).',
+ cite:D3+' slides 14, 18, 20–21, 26, 34, 59, 76, 78; T 215–220'},
+
+{id:'L3-123', type:'match', skill:'mech', prof:'Smith', tier:'new', topic:'l3-sum', sub:'tgt', concept:'tgt-biologics',
+ tags:['target','match'], source:'both',
+ stem:'Match each biologic to what it binds.', left:'Drug', right:'Binds',
+ pairs:[
+  {l:'Abatacept', r:'CD80/86 on antigen-presenting cells', why:'Slide 63; T 316–323.'},
+  {l:'Secukinumab', r:'IL-17A cytokine', why:'Slide 66.'},
+  {l:'Brodalumab', r:'IL-17 receptor A', why:'Slide 66; T 422.'},
+  {l:'Ustekinumab', r:'p40 subunit of IL-12 and IL-23', why:'Slide 67.'},
+  {l:'Tildrakizumab-asmn', r:'p19 subunit of IL-23', why:'Slide 68.'}],
+ teach:'Ixekizumab also binds the IL-17A cytokine (humanized; secukinumab is human). Guselkumab and risankizumab also bind p19 of IL-23 (slides 66, 68–69). "Is it human or humanized, and what are they binding to?" (T 476–477).',
+ cite:D3+' slides 63, 66–69; T 316–323, 422, 476–477'},
+
+{id:'L3-124', type:'match', skill:'tell', prof:'Smith', tier:'new', topic:'l3-sum', sub:'tgt', concept:'tgt-tnf-make',
+ tags:['tell','match'], source:'both',
+ stem:'All of these bind TNF-α. Match each to its structure.', left:'Drug', right:'Structure',
+ pairs:[
+  {l:'Etanercept', r:'Two p75 TNF receptors fused to IgG1 Fc', why:'Slide 71; T 501–505.'},
+  {l:'Infliximab', r:'Chimeric mouse–human IgG1 antibody', why:'Slide 72.'},
+  {l:'Adalimumab', r:'Human IgG1 antibody', why:'Slide 73.'},
+  {l:'Certolizumab pegol', r:'PEG-linked Fab of a humanized antibody', why:'Slide 74.'}],
+ teach:'All the marketed TNF-α inhibitors bind TNF-α so it cannot reach its receptors on inflammatory cells (slide 70; T 493–495). Golimumab is a human antibody to TNF-α (slide 74).',
+ cite:D3+' slides 70–74; T 493–505'},
+
+{id:'L3-125', type:'match', skill:'tell', prof:'Smith', tier:'new', topic:'l3-sum', sub:'tgt', concept:'tgt-retinoids',
+ tags:['tell','match'], source:'slide',
+ stem:'Match each retinoid to the feature that sets it apart.', left:'Retinoid', right:'Feature',
+ pairs:[
+  {l:'Tretinoin', r:'All-trans retinoic acid; microsphere form', why:'PCol slide 17.'},
+  {l:'Adapalene', r:'Sun stable; can be used with benzoyl peroxide', why:'PCol slide 18.'},
+  {l:'Tazarotene', r:'Psoriasis, acne and wrinkles; photosensitizing', why:'PCol slide 18.'},
+  {l:'Isotretinoin', r:'Oral, for recalcitrant severe cystic acne', why:'PCol slide 19.'},
+  {l:'Acitretin', r:'Oral, for psoriasis, especially pustular', why:'PCol slide 20.'}],
+ teach:'All of them bind the retinoic acid receptors, RAR and RXR, and change gene transcription at the RARE; the RAR effect on differentiation and proliferation is the one wanted in acne and psoriasis (PCol slide 14).',
+ cite:D2+' slides 14, 17–20'}
 );

@@ -12,7 +12,7 @@
 - "glycerin" (T 448) → glyceride (Pathophys 33). L1-043 note.
 
 ## Missing material for Exam 1
-- Dr. Smith's sun-exposure recording with PCol slides 77-80 (psoralens), promised 11/03.
+- Dr. Smith's sun-exposure recording with PCol slides 77-80 (psoralens), promised 11/03: received 11/06 and in the bank (q6_L03c.js).
 - Dr. Sikazwe's list: received 11/06 as a list of assigned slides (7-9, 12, 15-22, 24-33, 42-54, 60-65, plus the Vit. D3 biosynthesis reading), not a list of slides to avoid. The list says what is assigned, not what is excluded, so the 23 questions taught only on unassigned slides stay in practice with lowYield (off exam papers) and a note. **To confirm with Louis:** remove them from practice altogether instead? Also to confirm: his numbers are read as the numbers printed on the slides (file page minus 1 from p. 23 on, because the file repeats slide 21); read as file pages, apremilast, the tetracyclines and bemotrizinol would fall outside the list (reviews/LOG.md, 2026-11-06).
 
 ## Kit
@@ -90,7 +90,7 @@ Other mismatches noted, no item affected: deck slide 23 cites "FOYE Chapt. 28, p
 Resolved 2026-11-06 (Louis's direction): both drawings, with Compare structures; lecture drawing primary where it is the only one, the correct lecture slide primary where the deck has one. Erythromycin (p.54) added after the verification pass.
 
 ## Sun exposure
-- On 10/29 Dr. Smith said "I won't get to this section on sun protection and sun relief until Tuesday after your exam" (T 583, about the drug chart); the syllabus puts sun exposure in Lecture 3 (Exam 1). The bank tags it Exam 1. Confirm if she says otherwise.
+- **Resolved 2026-11-07.** On 10/29 Dr. Smith said "I won't get to this section on sun protection and sun relief until Tuesday after your exam" (T 583, about the drug chart); the syllabus puts sun exposure in Lecture 3 (Exam 1). Her Exam 1 study hints (pasted by Louis into the session on 2026-11-07) list it under Exam 1: "Hi P2s, Here are some hints for studying for my material on Exam 1. ... From Sun Exposure lecture: Know the difference between sunscreens and sunblocks based on the products' ingredients; Be able to explain SPF and wide spectrum; Know some drugs that cause photosensitivity; Know what damage UV A and UV B cause". The Exam 1 tag stays; the "provisional" wording is removed from course.js, q6_L03c.js and CLAUDE.md. The sunburn-relief anesthetics on the drug chart (benzocaine, dibucaine, tetracaine, lidocaine) are not on her sun slides, so no question asks them.
 
 ## Atlas items needing verification
 - 5beta-dihydrocortisol and urocortisol (DPAW p.26): drawn but not spoken; the 11/03 recording ends mid-sentence on this slide. Shown with a "Needs verification" badge and kept out of questions.
@@ -106,3 +106,8 @@ Resolved 2026-11-06 (Louis's direction): both drawings, with Compare structures;
   - Further hints, not proof: page 70 is titled "Retinoids (slides 46-49)" while those slides print 47-50 here; on 11/04 he said "slides 47, correct this, 47 through 50" (11/04 transcript).
   - Citations of DPAW file page 22 or later (regex count, numbers inside ranges counted at both ends): q5_L04.js 769, q4_L03b.js 148, atlas_data.json 340, reference.js 57, tell.js 45, links.js 3 (section labels), atlas_ui.js 4 (format examples in a code comment, not citations); total 1,366. Lines that already use printed numbers (the 11/06 assigned-pages notes and Atlas tooltip) are left out. atlas.js is generated from atlas_data.json. Per-occurrence list: session scratchpad `dpaw_renumber_plan.json`.
   - Missing: the original class DPAW deck (Canvas copy). With it, a page-by-page comparison settles whether page 22 is in the class deck.
+
+## Dr. Smith's Exam 1 hints (pasted by Louis 2026-11-07): what the bank cannot do
+- Fill-in-the-blank: "a few fill in the blanks. The fill in the blanks focus on drug mechanisms. Know what the drugs target." The core has no typed text-answer item, so target recall is practised with 8 matching items (L3-119 to L3-125, L3C-067) and the Reference list "Drug targets: write it first, then check". Matching items stay off practice papers (no `typed` on exam1). A typed short-answer item type would be a kit change.
+- Drugs on the chart with no target on her slides: spironolactone (class only, Pathophys 37; Dr. Sikazwe's DPAW 53 gives the mechanism), petrolatum, zinc oxide (Desitin), ketoconazole, the sunburn-relief anesthetics, bemotrizinol; the lice/scabies page is not in the Exam 1 lectures. No Smith target question is written for them.
+- Specific topical steroid products: she deferred them to medicinal chemistry (10/29 T 585–586); only the class target (glucocorticoid receptor) is in the targets list.

@@ -30,6 +30,7 @@ const READ_LINKS = (() => {
     rAcne:   ['ref',   'ref-l1-acnemap', 'Reference: acne pathology and drugs'],
     rNR:     ['ref',   'ref-l1-nr', 'Reference: nuclear receptors'],
     rCS:     ['ref',   'ref-l1-steroids', 'Reference: topical corticosteroids'],
+    rTgt:    ['ref',   'ref-targets', 'Reference: drug targets, write it first'],
     // Smith 10/30 and 11/03 (PCol 16-76)
     t2:      ['tell',  'tell-l2', 'Tell apart: Lecture 2 (Smith 10/30)'],
     r2:      ['ref',   'ref-l2', 'Reference: Lecture 2 drugs (Smith 10/30)'],
@@ -51,6 +52,19 @@ const READ_LINKS = (() => {
 
   return {
     byKey: [
+      /* ---- Drug targets across Dr. Smith's lectures (added 2026-11-07, her Exam 1 hints);
+              listed first so these target questions open the targets list ---------- */
+      row('crisaborole-target pimecrolimus-target cyclosporine-cyclophilin tacrolimus-fkbp calcipotriene-moa', 'rTgt', 'r2'),
+      row('sarecycline-target risan-target tet-30s clinda-50s smx-paba tmp-dhfr dup-target secu-target brod-receptor ' +
+          'uste-p40 rux-jak12 abat-mech mtx-mech tnf-class-mech', 'rTgt', 'r3'),
+      row('retinoid-target', 'rTgt', 'g4'),
+      row('tgt-ad tgt-acne-abx tgt-ker-cyto tgt-pso-small tgt-biologics sunblock-ingredient organic-ingredient sunscreen-families-match', 'rTgt'),
+      row('tgt-tnf-make sarecycline-narrow tet-less-photo tet-anti-inflam doxy-mino-lipid tnf-why-pso tnf-bbw-young tofa-gi-perf', 'r3'),
+      row('tgt-retinoids', 'r2'),
+      row('bbw-which-drug', 'r2', 'r3'),
+      row('oral-cni-boxed-content', 'r2'),
+      row('ad-atopic-assoc ad-trend-sex pso-prevalence pso-prevalence-factors acne-adult-sex', 'g2'),
+      row('pso-trigger ad-initial-trigger acne-trigger', 'g3'),
       /* ---- Lecture 1, pathophysiology (Smith 10/29) ---------------------- */
       row('stratum-corneum keratinocyte-migration sebum-composition sebum-function', 'g1'),
       row('ad-incidence hygiene-hypothesis ad-inheritance pso-epi acne-epi acne-genetics', 'g2'),

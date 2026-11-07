@@ -59,7 +59,7 @@ const REFERENCE_HTML = `
 
 <h3 id="ref-l3">Lecture 3: Smith, 11/03 (Skin-PCol slides 43–76)</h3>
 <table class="reftab"><thead><tr><th>Drug</th><th>Class / make</th><th>Target or mechanism</th><th>Route (as taught)</th><th>Key AE or warning</th><th>Slide</th></tr></thead><tbody>
-<tr><td>Sarecycline, minocycline, doxycycline</td><td>Tetracyclines</td><td>30S; block aminoacyl-tRNA at acceptor site; bacteriostatic</td><td>Oral (acne)</td><td>GI N/V/D, pseudomembranous colitis (stop if blood in stool), teeth/bone in young, photosensitivity, superinfection; not in pregnancy or under 8 y; minocycline ototoxicity</td><td>43–45</td></tr>
+<tr><td>Sarecycline, minocycline, doxycycline</td><td>Tetracyclines</td><td>30S; block aminoacyl-tRNA at acceptor site; bacteriostatic</td><td>Oral (acne)</td><td>GI N/V/D, pseudomembranous colitis (stop if blood in stool), teeth/bone in young, photosensitivity, superinfection; not in pregnancy or under 8 y; minocycline ototoxicity. Slide 45: analogs absorb better from the GI tract than tetracycline; doxycycline and minocycline more lipid soluble (enter the follicle better); minocycline and sarecycline may be less photosensitizing; sarecycline narrower spectrum; acne efficacy may depend more on anti-inflammatory activity</td><td>43–45</td></tr>
 <tr><td>Clindamycin</td><td>Lincosamide (chart)</td><td>50S; prevents translocation; bacteriostatic</td><td>Oral, topical</td><td>Pseudomembranous colitis, impaired liver function; ~10% topical absorption; resistance</td><td>46</td></tr>
 <tr><td>Erythromycin, azithromycin</td><td>Macrolides</td><td>50S; prevents translocation; bacteriostatic</td><td>Oral, topical</td><td>Oral N/V/D, epigastric pain, many drug interactions (metabolism); topical burning/drying esp. with benzoyl peroxide; resistance</td><td>47</td></tr>
 <tr><td>Trimethoprim/sulfamethoxazole</td><td>Sulfonamide/pyrimidine</td><td>SMX: PABA competition; TMP: DHFR</td><td>—</td><td>— (not covered)</td><td>48–49</td></tr>
@@ -79,7 +79,7 @@ const REFERENCE_HTML = `
 <tr><td>Guselkumab</td><td>Human IgG1λ mAb</td><td>p19 of IL-23</td><td>—</td><td>—</td><td>68</td></tr>
 <tr><td>Tildrakizumab-asmn</td><td>Humanized IgG1κ mAb</td><td>p19 of IL-23</td><td>—</td><td>—</td><td>68</td></tr>
 <tr><td>Risankizumab</td><td>Humanized IgG1 mAb</td><td>p19 of IL-23</td><td>SubQ or IV</td><td>Severe infection, TB reactivation, skin cancer (less common)</td><td>69</td></tr>
-<tr><td>TNF-α inhibitor class</td><td>—</td><td>Bind TNF-α</td><td>—</td><td>BBW: serious infections; lymphoma and other malignancies</td><td>70</td></tr>
+<tr><td>TNF-α inhibitor class</td><td>—</td><td>Bind TNF-α, an inflammatory cytokine, keeping it from its receptors; fewer and smaller plaques</td><td>—</td><td>BBW: serious infections; lymphoma and other malignancies (some fatal, reported in children and adolescents)</td><td>70</td></tr>
 <tr><td>Etanercept</td><td>Fusion protein: two p75 soluble TNF receptors + human IgG1 Fc</td><td>TNF</td><td>SubQ</td><td>Injection site; case reports pancytopenia, demyelination</td><td>71</td></tr>
 <tr><td>Infliximab</td><td>Chimeric mAb (mouse/human IgG1)</td><td>TNF</td><td>IV</td><td>Anti-drug antibodies (14–40%, slide), infusion reactions (premedicate), infection, lupus-like syndrome</td><td>72</td></tr>
 <tr><td>Adalimumab</td><td>Human IgG1 mAb</td><td>TNF</td><td>SubQ</td><td>Injection site, infection; less antigenic</td><td>73</td></tr>
@@ -88,6 +88,72 @@ const REFERENCE_HTML = `
 <tr><td>Tofacitinib</td><td>Small molecule JAK inhibitor</td><td>JAK</td><td>Oral</td><td>BBW severe infection, lymphoma, other malignancy; caution GI perforation</td><td>76</td></tr>
 <tr><td>Ruxolitinib</td><td>Small molecule JAK inhibitor</td><td>JAK1, JAK2</td><td>Topical and oral (slide 76); see conflict</td><td>—</td><td>76</td></tr>
 <tr><td>Upadacitinib</td><td>Small molecule JAK inhibitor</td><td>JAK1, JAK2, maybe JAK3/TYK2</td><td>—</td><td>—</td><td>76</td></tr>
+</tbody></table>
+
+<h3 id="ref-targets">Drug targets: write it first, then check</h3>
+<p class="prose">Every drug on the course dermatology drug chart, in the chart's order of pages, with its target or mechanism as Dr. Smith's slides give it; each row opens to show it. Dr. Smith: "Be able to not just recognize a drugs target, but be able to write it down" (Exam 1 hints, 2026-11-07). The chart is a guide; the slides decide the content. The lice and scabies page (chart p. 7) is not in the Exam 1 lectures and is left out.</p>
+<h4>Atopic dermatitis (drug chart p. 2)</h4>
+<table class="reftab"><thead><tr><th>Drug</th><th style="width:24%">Source</th></tr></thead><tbody>
+<tr><td><details><summary><b>Crisaborole</b></summary>Phosphodiesterase 4 (PDE-4): cAMP is not broken down, so inflammatory cells are inhibited</details></td><td>PCol 32–33; 10/30 T 430–450</td></tr>
+<tr><td><details><summary><b>Pimecrolimus</b></summary>Calcineurin: less IL-2, less T-cell and mast cell activation</details></td><td>PCol 24–27; 10/30 T 360–365</td></tr>
+<tr><td><details><summary><b>Tacrolimus</b></summary>FKBP; the complex inhibits calcineurin</details></td><td>PCol 26</td></tr>
+<tr><td><details><summary><b>Dupilumab</b></summary>IL-4 receptor alpha subunit, shared by the IL-4 and IL-13 receptors</details></td><td>PCol 64</td></tr>
+<tr><td><details><summary><b>Ruxolitinib</b></summary>JAK1 and JAK2</details></td><td>PCol 76; T 574–576</td></tr>
+<tr><td><details><summary><b>Upadacitinib</b></summary>JAK: more potent at JAK1 and JAK2 than JAK3 and TYK2 in an enzyme assay; selectivity unsettled</details></td><td>PCol 76; T 576–578</td></tr>
+</tbody></table>
+<h4>Acne (drug chart p. 3)</h4>
+<table class="reftab"><thead><tr><th>Drug</th><th style="width:24%">Source</th></tr></thead><tbody>
+<tr><td><details><summary><b>Benzoyl peroxide</b></summary>Antimicrobial against P. acnes, plus peeling and comedolytic effects; benzoic acid is the probable active form</details></td><td>PCol 36</td></tr>
+<tr><td><details><summary><b>Sulfur</b></summary>Reduced to hydrogen sulfide in keratinocytes, which promotes peeling; bacteriostatic</details></td><td>PCol 38</td></tr>
+<tr><td><details><summary><b>Salicylic acid</b></summary>Solubilizes the cell surface proteins that keep the stratum corneum intact</details></td><td>PCol 39</td></tr>
+<tr><td><details><summary><b>Sarecycline, minocycline, doxycycline</b></summary>30S ribosomal subunit: blocks aminoacyl-tRNA binding at the acceptor site</details></td><td>PCol 43; T 27–31</td></tr>
+<tr><td><details><summary><b>Clindamycin</b></summary>50S ribosomal subunit: prevents translocation</details></td><td>PCol 46; T 53–55</td></tr>
+<tr><td><details><summary><b>Erythromycin, azithromycin</b></summary>50S ribosomal subunit</details></td><td>PCol 47</td></tr>
+<tr><td><details><summary><b>Trimethoprim/sulfamethoxazole</b></summary>Sulfamethoxazole: competes with PABA, blocking dihydrofolic acid synthesis. Trimethoprim: bacterial dihydrofolate reductase</details></td><td>PCol 48–49</td></tr>
+<tr><td><details><summary><b>Dapsone</b></summary>Leprosy: PABA antagonist. Acne (topical gel): anti-inflammatory; neutrophils a possible site</details></td><td>PCol 50</td></tr>
+<tr><td><details><summary><b>Metronidazole</b></summary>Unknown: may act on Demodex brevis or on neutrophil function</details></td><td>PCol 51</td></tr>
+<tr><td><details><summary><b>Tretinoin, adapalene</b></summary>Retinoic acid receptors RAR and RXR (nuclear receptors; RAR–RXR binds the RARE)</details></td><td>PCol 14, 17–18</td></tr>
+<tr><td><details><summary><b>Isotretinoin</b></summary>Retinoid (RAR/RXR); in cystic acne the mechanism is not known; appears to inhibit sebaceous gland size and function</details></td><td>PCol 14, 19</td></tr>
+<tr><td><details><summary><b>Spironolactone</b></summary>Antiandrogen (Dr. Smith gives the class only). Dr. Sikazwe: diminishes testosterone biosynthesis</details></td><td>Pathophys 37; DPAW 53</td></tr>
+</tbody></table>
+<h4>Psoriasis (drug chart pp. 4–5)</h4>
+<table class="reftab"><thead><tr><th>Drug</th><th style="width:24%">Source</th></tr></thead><tbody>
+<tr><td><details><summary><b>Coal tar</b></summary>Antiproliferative and anti-inflammatory; crosslinks DNA to inhibit cell division</details></td><td>PCol 53</td></tr>
+<tr><td><details><summary><b>Shale tar (ichthammol)</b></summary>Cytotoxic; mechanism unknown</details></td><td>PCol 57</td></tr>
+<tr><td><details><summary><b>Selenium sulfide, zinc pyrithione</b></summary>Cytostatic and antifungal; mechanism unknown</details></td><td>PCol 57</td></tr>
+<tr><td><details><summary><b>Anthralin</b></summary>Keratinocyte mitochondria (antiproliferative); also prevents T-lymphocyte activation</details></td><td>PCol 55</td></tr>
+<tr><td><details><summary><b>Methotrexate</b></summary>Dihydrofolate reductase (DHFR): less THF, fewer purines</details></td><td>PCol 59; T 215–220</td></tr>
+<tr><td><details><summary><b>Abatacept</b></summary>CD80/86 on antigen-presenting cells, so CD28 cannot bind (blocks positive signal 2)</details></td><td>PCol 63; T 316–323</td></tr>
+<tr><td><details><summary><b>Etanercept, adalimumab, infliximab, golimumab, certolizumab pegol</b></summary>TNF-α, kept from its receptors on inflammatory cells</details></td><td>PCol 70–74; T 493–495</td></tr>
+<tr><td><details><summary><b>Tofacitinib</b></summary>Janus kinase (JAK)</details></td><td>PCol 76</td></tr>
+<tr><td><details><summary><b>Ustekinumab</b></summary>p40 subunit shared by IL-12 and IL-23</details></td><td>PCol 67</td></tr>
+<tr><td><details><summary><b>Guselkumab, tildrakizumab-asmn, risankizumab</b></summary>p19 subunit of IL-23</details></td><td>PCol 68–69</td></tr>
+<tr><td><details><summary><b>Secukinumab, ixekizumab</b></summary>IL-17A cytokine</details></td><td>PCol 66</td></tr>
+<tr><td><details><summary><b>Brodalumab</b></summary>IL-17 receptor A</details></td><td>PCol 66; T 422</td></tr>
+<tr><td><details><summary><b>Acitretin, tazarotene</b></summary>Retinoic acid receptors RAR and RXR</details></td><td>PCol 14, 18, 20</td></tr>
+<tr><td><details><summary><b>Calcipotriene</b></summary>Vitamin D receptor (VDR), which pairs with RXR-α</details></td><td>PCol 21</td></tr>
+<tr><td><details><summary><b>Methoxsalen</b></summary>DNA: intercalates after activation by UVA (320–340 nm)</details></td><td>PCol 78; Sun 3</td></tr>
+<tr><td><details><summary><b>Cyclosporine</b></summary>Cyclophilin; the complex inhibits calcineurin</details></td><td>PCol 26</td></tr>
+<tr><td><details><summary><b>Apremilast</b></summary>Phosphodiesterase 4 (PDE-4), as crisaborole</details></td><td>PCol 34; 10/30 T 464–466</td></tr>
+<tr><td><details><summary><b>Petrolatum</b></summary>Emollient, no drug target (chart). Dr. Sikazwe: fills gaps between scales and prevents water loss</details></td><td>Chart p. 5; DPAW 15</td></tr>
+<tr><td><details><summary><b>Zinc oxide (skin protectant)</b></summary>Physical sunscreen, no drug target (chart); as a sunblock it scatters and reflects UV</details></td><td>Chart p. 5; Sun 20</td></tr>
+<tr><td><details><summary><b>Ketoconazole</b></summary>Azole antifungal (chart). Dr. Sikazwe: diminishes testosterone biosynthesis; strong CYP3A4 inhibitor</details></td><td>Chart p. 5; DPAW 53</td></tr>
+</tbody></table>
+<h4>Topical steroids (drug chart p. 6)</h4>
+<table class="reftab"><thead><tr><th>Drug</th><th style="width:24%">Source</th></tr></thead><tbody>
+<tr><td><details><summary><b>Clobetasol propionate to hydrocortisone (all potency classes)</b></summary>Glucocorticoid receptor; the drug–receptor complex binds the GRE or holds NF-kB and AP-1 off the DNA</details></td><td>PCol 5–7, 10</td></tr>
+</tbody></table>
+<h4>Sun protection (drug chart p. 1)</h4>
+<table class="reftab"><thead><tr><th>Drug</th><th style="width:24%">Source</th></tr></thead><tbody>
+<tr><td><details><summary><b>Padimate O (octyl dimethyl PABA)</b></summary>Organic sunscreen (aminobenzoate): absorbs UV, mainly UVB, and releases heat</details></td><td>Sun 22, 24</td></tr>
+<tr><td><details><summary><b>Octyl methoxycinnamate</b></summary>Organic sunscreen (cinnamate): absorbs UV and releases heat</details></td><td>Sun 22, 24</td></tr>
+<tr><td><details><summary><b>Homosalate, 2-ethylhexyl salicylate</b></summary>Organic sunscreen (salicylate): absorbs UV and releases heat</details></td><td>Sun 22, 24</td></tr>
+<tr><td><details><summary><b>Oxybenzone, dioxybenzone</b></summary>Organic sunscreen (benzophenone): absorbs UV and releases heat</details></td><td>Sun 22, 24</td></tr>
+<tr><td><details><summary><b>Menthyl anthranilate</b></summary>Organic sunscreen (anthranilate), in combination products for broad coverage</details></td><td>Sun 22, 24</td></tr>
+<tr><td><details><summary><b>Avobenzone</b></summary>Organic sunscreen (dibenzoylmethane): absorbs UV and releases heat</details></td><td>Sun 22, 24</td></tr>
+<tr><td><details><summary><b>Bemotrizinol</b></summary>Organic chemical sunscreen (chart); Dr. Sikazwe: UVB/UVA chromophore</details></td><td>Chart p. 1; DPAW 66</td></tr>
+<tr><td><details><summary><b>Zinc oxide, titanium dioxide</b></summary>Physical sunblock: inorganic particles scatter or reflect UV (UVA and UVB)</details></td><td>Sun 20</td></tr>
+<tr><td><details><summary><b>Benzocaine, dibucaine, tetracaine, lidocaine</b></summary>Chart class: Na channel blockers (topical anesthetics for sunburn relief); not on her sun slides</details></td><td>Chart p. 1</td></tr>
 </tbody></table>
 
 <h3 id="ref-s3">Lecture 3: Sikazwe, 11/03 (DPAW pages 1–26)</h3>

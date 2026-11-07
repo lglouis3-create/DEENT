@@ -125,11 +125,11 @@ const COURSE = {
     {id:'L01b', deck:'Skin-PCol-Students-2026.pdf',
      label:'Lectures 1–3: Dermatitis, psoriasis and acne pharmacology (Smith, from 10/29)',
      prof:'Smith', exam:1, module:'Exam 1: Lectures 1–4'},
-    // Exam assignment provisional: the syllabus puts sun exposure in Lecture 3 (Exam 1);
-    // on 10/29 (T 583) Dr. Smith spoke of reaching "sun protection and sun relief"
-    // "until Tuesday after your exam". Unconfirmed; see reviews/OPEN_QUESTIONS.md.
+    // Exam 1: the syllabus puts sun exposure in Lecture 3, and Dr. Smith's Exam 1 study
+    // hints (pasted by Louis 2026-11-07) list "From Sun Exposure lecture" among the Exam 1
+    // material. This settles the 10/29 remark (T 583); see reviews/OPEN_QUESTIONS.md.
     {id:'L03c', deck:'DEENT_Sun_Exposure_2026.pdf',
-     label:'Lecture 3: Psoralens and sun protection (Smith, recorded after 11/03; Exam 1 per the syllabus, not confirmed by Dr. Smith)',
+     label:'Lecture 3: Psoralens and sun protection (Smith, recorded after 11/03)',
      prof:'Smith', exam:1, module:'Exam 1: Lectures 1–4'},
     {id:'L03b', deck:'f26-DEENT-DPAW-mc.pdf',
      label:'Lectures 3–4: Dermatitis, psoriasis and acne medicinal chemistry (Sikazwe, 11/03–11/04)',
@@ -144,7 +144,11 @@ const COURSE = {
      // "multiple-choice, select-all, short-answer, true/false, or matching" as possible
      // formats with no split (Louis, 2026-11-06: no official count is invented). The blurb
      // says what the practice paper draws and that the format split is not announced.
-     blurb:'Practice coverage of Lectures 1–4 (Smith 10/29, 10/30, 11/03; Sikazwe 11/03, 11/04). The faculty have not announced a split by professor, so this paper is unweighted. Includes Dr. Smith\'s recorded sun-exposure and psoralen lecture. The syllabus lists multiple-choice, select-all, short-answer, true/false and matching as possible formats and gives no count of each; these practice papers draw single-answer questions only, and the select-all questions are in the topic drills',
+     // Dr. Smith's own format (her Exam 1 hints, pasted by Louis 2026-11-07): "mostly
+     // multiple choice questions, but a few fill in the blanks. The fill in the blanks
+     // focus on drug mechanisms. ... There are no short essay questions." Dr. Sikazwe has
+     // given no format statement, so the blurb makes none for him.
+     blurb:'Practice coverage of Lectures 1–4 (Smith 10/29, 10/30, 11/03 and her recorded sun-exposure and psoralen lecture; Sikazwe 11/03, 11/04). The faculty have not announced a split by professor, so this paper is unweighted. Dr. Smith says her questions are mostly multiple choice with a few fill-in-the-blanks on what the drugs target, and no short essays. The syllabus lists multiple-choice, select-all, short-answer, true/false and matching as possible formats and gives no count of each. These practice papers draw single-answer questions only; the select-all and drug-target matching questions are in the topic drills, and Reference has a drug-target list to write out before revealing',
      // `unassigned: undefined` keeps a question marked unassigned:true out of both pools:
      // the 23 on pages outside Dr. Sikazwe's assigned pages for Exam 1 (his list of
      // 11/06; topic 'sk-beyond' in q5_L04.js). A pool filter is what the paper, the pool

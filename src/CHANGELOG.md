@@ -8,6 +8,15 @@ characters.
 
 Every update adds its bullets here in the same commit that makes the change.
 
+## 2026-11-07 (Dr. Smith's Exam 1 hints)
+- 32 new questions on Dr. Smith's hint list: epidemiology, disease triggers, drug targets, why each MOA helps.
+- New questions on boxed warnings: cyclosporine's two parts, TNF-α in children, which drugs carry one.
+- New sun questions: sunblock vs sunscreen by ingredient, critical wavelength, UVA vs UVB, photosensitizing drugs.
+- 8 matching questions pair drugs with their targets, structures or families, for her fill-in-the-blank items.
+- Reference: "Drug targets: write it first, then check" lists every drug-chart drug with its target to reveal.
+- The sun-exposure lecture is now confirmed for Exam 1 by Dr. Smith's hints; the provisional label is gone.
+- Exam text now gives Dr. Smith's format: mostly multiple choice, a few fill-in-the-blanks on targets, no essays.
+
 ## 2026-11-06 (optional practice beyond the assigned slides)
 - New topic "Beyond the Exam 1 assigned pages (Dr. Sikazwe, optional)" holds his 23 unassigned-slide questions.
 - Those 23 no longer count toward the Exam 1 pool cards on Weak spots or the exam-date review timing.

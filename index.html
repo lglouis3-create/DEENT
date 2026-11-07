@@ -654,11 +654,11 @@ const COURSE = {
     {id:'L01b', deck:'Skin-PCol-Students-2026.pdf',
      label:'Lectures 1–3: Dermatitis, psoriasis and acne pharmacology (Smith, from 10/29)',
      prof:'Smith', exam:1, module:'Exam 1: Lectures 1–4'},
-    // Exam assignment provisional: the syllabus puts sun exposure in Lecture 3 (Exam 1);
-    // on 10/29 (T 583) Dr. Smith spoke of reaching "sun protection and sun relief"
-    // "until Tuesday after your exam". Unconfirmed; see reviews/OPEN_QUESTIONS.md.
+    // Exam 1: the syllabus puts sun exposure in Lecture 3, and Dr. Smith's Exam 1 study
+    // hints (pasted by Louis 2026-11-07) list "From Sun Exposure lecture" among the Exam 1
+    // material. This settles the 10/29 remark (T 583); see reviews/OPEN_QUESTIONS.md.
     {id:'L03c', deck:'DEENT_Sun_Exposure_2026.pdf',
-     label:'Lecture 3: Psoralens and sun protection (Smith, recorded after 11/03; Exam 1 per the syllabus, not confirmed by Dr. Smith)',
+     label:'Lecture 3: Psoralens and sun protection (Smith, recorded after 11/03)',
      prof:'Smith', exam:1, module:'Exam 1: Lectures 1–4'},
     {id:'L03b', deck:'f26-DEENT-DPAW-mc.pdf',
      label:'Lectures 3–4: Dermatitis, psoriasis and acne medicinal chemistry (Sikazwe, 11/03–11/04)',
@@ -673,7 +673,11 @@ const COURSE = {
      // "multiple-choice, select-all, short-answer, true/false, or matching" as possible
      // formats with no split (Louis, 2026-11-06: no official count is invented). The blurb
      // says what the practice paper draws and that the format split is not announced.
-     blurb:'Practice coverage of Lectures 1–4 (Smith 10/29, 10/30, 11/03; Sikazwe 11/03, 11/04). The faculty have not announced a split by professor, so this paper is unweighted. Includes Dr. Smith\'s recorded sun-exposure and psoralen lecture. The syllabus lists multiple-choice, select-all, short-answer, true/false and matching as possible formats and gives no count of each; these practice papers draw single-answer questions only, and the select-all questions are in the topic drills',
+     // Dr. Smith's own format (her Exam 1 hints, pasted by Louis 2026-11-07): "mostly
+     // multiple choice questions, but a few fill in the blanks. The fill in the blanks
+     // focus on drug mechanisms. ... There are no short essay questions." Dr. Sikazwe has
+     // given no format statement, so the blurb makes none for him.
+     blurb:'Practice coverage of Lectures 1–4 (Smith 10/29, 10/30, 11/03 and her recorded sun-exposure and psoralen lecture; Sikazwe 11/03, 11/04). The faculty have not announced a split by professor, so this paper is unweighted. Dr. Smith says her questions are mostly multiple choice with a few fill-in-the-blanks on what the drugs target, and no short essays. The syllabus lists multiple-choice, select-all, short-answer, true/false and matching as possible formats and gives no count of each. These practice papers draw single-answer questions only; the select-all and drug-target matching questions are in the topic drills, and Reference has a drug-target list to write out before revealing',
      // `unassigned: undefined` keeps a question marked unassigned:true out of both pools:
      // the 23 on pages outside Dr. Sikazwe's assigned pages for Exam 1 (his list of
      // 11/06; topic 'sk-beyond' in q5_L04.js). A pool filter is what the paper, the pool
@@ -725,7 +729,7 @@ const COURSE = {
    the Topics page shows as "What's new" since this browser last marked an
    entry seen, and Settings shows whole. preview: true in a page built with
    `build.py --preview`, which is served at /preview/ beside the live drill. */
-const BUILD = {stamp:"2026-11-06 19:48 CT", built:"2026-11-07T01:48:49Z", questions:555, images:1, changelog:[{"date": "2026-11-06 (optional practice beyond the assigned slides)", "items": ["New topic \"Beyond the Exam 1 assigned pages (Dr. Sikazwe, optional)\" holds his 23 unassigned-slide questions.", "Those 23 no longer count toward the Exam 1 pool cards on Weak spots or the exam-date review timing.", "Practice papers draw single-answer questions; the exam text now says the official format split is not announced."]}, {"date": "2026-11-06 (Dr. Sikazwe's assigned pages)", "items": ["Dr. Sikazwe's assigned slides for Exam 1 (11/06) applied: 23 questions outside them now stay off practice exams.", "Those 23 stay in practice, each with a note saying it is outside his assigned pages.", "Atlas tiles outside his assigned pages now say \"Not on the assigned pages\" (9 structures)."]}, {"date": "2026-11-06 (reading links)", "items": ["Weak spots and \"Explain more\" now point to a reading section for 397 of 555 questions (was 35).", "Sikazwe's Lectures 3 and 4 questions now link to their Tell apart and Reference tables.", "Lecture 2 and 3 questions now link to Dr. Smith's Lecture 2 and 3 tables; Lecture 1 ones to the objective guides.", "Fixed links that sent some IL-23, salicylic acid and drug-class questions to the wrong table."]}, {"date": "2026-11-06 (Atlas layout)", "items": ["Each Atlas tile now reads in order: core learning, also in the lecture, then collapsed extras.", "Slide and transcript citations moved out of the tile text into a collapsed Sources and verification part.", "Hydrocortisone and cortisone: optional \"Deeper understanding\" on the two 11\u03b2-HSD enzymes, not tested.", "The structure count follows the search and the reference-only filter; an empty search says why.", "A one-line legend explains Core, Reference only and Needs verification.", "Hide names: headings, labels and drawing descriptions no longer give the answer away.", "Hide names: reveal a structure from the keyboard (Tab, then Enter or Space).", "Long structure names no longer make the Atlas wider than a phone screen."]}, {"date": "2026-11-06 (PubChem check)", "items": ["Every Atlas structure was checked against PubChem; each tile names its PubChem record and status.", "Compare structures names the PubChem record of the lecture drawing where one exists."]}, {"date": "2026-11-06 (Atlas refinement)", "items": ["Each Atlas structure is marked Core, Reference only or Needs verification.", "Reference-only structures are hidden by default; one button shows them.", "Compare structures: where a slide draws a molecule differently, see both side by side.", "Hide or reveal the shaded key features to practise spotting them.", "Clearer explanations on the sun-exposure questions."]}, {"date": "2026-11-06 (Atlas and sun exposure)", "items": ["Atlas tab: 91 of Dr. Sikazwe's structures, drawn to one scale, with the taught feature shaded.", "Hide names in the Atlas to quiz yourself on each structure.", "Dr. Smith's sun-exposure lecture: UVA/UVB, SPF, MED, sunblocks vs sunscreens, psoralens.", "Some structure questions now show the drawing before you answer."]}, {"date": "2026-11-05 (Lectures 2\u20134)", "items": ["Lecture 2 (Smith 10/30): retinoids, calcipotriene, calcineurin inhibitors, PDE-4 inhibitors, keratolytics.", "Lecture 3 (Smith 11/03): acne antibiotics, tars and anthralin, methotrexate, biologics, JAK inhibitors.", "Lectures 3\u20134 (Sikazwe 11/03\u201311/04): structures, SAR, prodrugs, CYP3A4, hydroxy acids, retinoids, sunscreens.", "New tell-apart and reference tables for each lecture; Exam 1 paper now draws from both professors."]}, {"date": "2026-11-05 (Lecture 1 preview)", "items": ["Lecture 1 (Dr. Smith, 10/29): skin structure, AD, psoriasis, acne, nuclear receptor binders, steroids, retinoids.", "Step-through figures: the acne lesion cascade and direct vs indirect nuclear receptor action.", "Tell-apart and reference tables for Lecture 1; her polls on the major pathology of AD and psoriasis.", "Exam 1 practice paper is unweighted: the faculty have not announced a split by professor."]}], preview:false};
+const BUILD = {stamp:"2026-11-07 17:33 CT", built:"2026-11-07T23:33:10Z", questions:595, images:1, changelog:[{"date": "2026-11-07 (Dr. Smith's Exam 1 hints)", "items": ["32 new questions on Dr. Smith's hint list: epidemiology, disease triggers, drug targets, why each MOA helps.", "New questions on boxed warnings: cyclosporine's two parts, TNF-\u03b1 in children, which drugs carry one.", "New sun questions: sunblock vs sunscreen by ingredient, critical wavelength, UVA vs UVB, photosensitizing drugs.", "8 matching questions pair drugs with their targets, structures or families, for her fill-in-the-blank items.", "Reference: \"Drug targets: write it first, then check\" lists every drug-chart drug with its target to reveal.", "The sun-exposure lecture is now confirmed for Exam 1 by Dr. Smith's hints; the provisional label is gone.", "Exam text now gives Dr. Smith's format: mostly multiple choice, a few fill-in-the-blanks on targets, no essays."]}, {"date": "2026-11-06 (optional practice beyond the assigned slides)", "items": ["New topic \"Beyond the Exam 1 assigned pages (Dr. Sikazwe, optional)\" holds his 23 unassigned-slide questions.", "Those 23 no longer count toward the Exam 1 pool cards on Weak spots or the exam-date review timing.", "Practice papers draw single-answer questions; the exam text now says the official format split is not announced."]}, {"date": "2026-11-06 (Dr. Sikazwe's assigned pages)", "items": ["Dr. Sikazwe's assigned slides for Exam 1 (11/06) applied: 23 questions outside them now stay off practice exams.", "Those 23 stay in practice, each with a note saying it is outside his assigned pages.", "Atlas tiles outside his assigned pages now say \"Not on the assigned pages\" (9 structures)."]}, {"date": "2026-11-06 (reading links)", "items": ["Weak spots and \"Explain more\" now point to a reading section for 397 of 555 questions (was 35).", "Sikazwe's Lectures 3 and 4 questions now link to their Tell apart and Reference tables.", "Lecture 2 and 3 questions now link to Dr. Smith's Lecture 2 and 3 tables; Lecture 1 ones to the objective guides.", "Fixed links that sent some IL-23, salicylic acid and drug-class questions to the wrong table."]}, {"date": "2026-11-06 (Atlas layout)", "items": ["Each Atlas tile now reads in order: core learning, also in the lecture, then collapsed extras.", "Slide and transcript citations moved out of the tile text into a collapsed Sources and verification part.", "Hydrocortisone and cortisone: optional \"Deeper understanding\" on the two 11\u03b2-HSD enzymes, not tested.", "The structure count follows the search and the reference-only filter; an empty search says why.", "A one-line legend explains Core, Reference only and Needs verification.", "Hide names: headings, labels and drawing descriptions no longer give the answer away.", "Hide names: reveal a structure from the keyboard (Tab, then Enter or Space).", "Long structure names no longer make the Atlas wider than a phone screen."]}, {"date": "2026-11-06 (PubChem check)", "items": ["Every Atlas structure was checked against PubChem; each tile names its PubChem record and status.", "Compare structures names the PubChem record of the lecture drawing where one exists."]}, {"date": "2026-11-06 (Atlas refinement)", "items": ["Each Atlas structure is marked Core, Reference only or Needs verification.", "Reference-only structures are hidden by default; one button shows them.", "Compare structures: where a slide draws a molecule differently, see both side by side.", "Hide or reveal the shaded key features to practise spotting them.", "Clearer explanations on the sun-exposure questions."]}, {"date": "2026-11-06 (Atlas and sun exposure)", "items": ["Atlas tab: 91 of Dr. Sikazwe's structures, drawn to one scale, with the taught feature shaded.", "Hide names in the Atlas to quiz yourself on each structure.", "Dr. Smith's sun-exposure lecture: UVA/UVB, SPF, MED, sunblocks vs sunscreens, psoralens.", "Some structure questions now show the drawing before you answer."]}, {"date": "2026-11-05 (Lectures 2\u20134)", "items": ["Lecture 2 (Smith 10/30): retinoids, calcipotriene, calcineurin inhibitors, PDE-4 inhibitors, keratolytics.", "Lecture 3 (Smith 11/03): acne antibiotics, tars and anthralin, methotrexate, biologics, JAK inhibitors.", "Lectures 3\u20134 (Sikazwe 11/03\u201311/04): structures, SAR, prodrugs, CYP3A4, hydroxy acids, retinoids, sunscreens.", "New tell-apart and reference tables for each lecture; Exam 1 paper now draws from both professors."]}, {"date": "2026-11-05 (Lecture 1 preview)", "items": ["Lecture 1 (Dr. Smith, 10/29): skin structure, AD, psoriasis, acne, nuclear receptor binders, steroids, retinoids.", "Step-through figures: the acne lesion cascade and direct vs indirect nuclear receptor action.", "Tell-apart and reference tables for Lecture 1; her polls on the major pathology of AD and psoriasis.", "Exam 1 practice paper is unweighted: the faculty have not announced a split by professor."]}], preview:false};
 const IMAGES = {"s4-polleve3": "data:image/webp;base64,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"};
 /* Atlas of drawn structures for PHAR 4346 DEENT (Dr. Sikazwe's medicinal
    chemistry). GENERATED by gen_atlas.py from atlas_data.json and atlas_ui.js:
@@ -4249,6 +4253,119 @@ const QUESTIONS = [
   {t:'They block IL-17 receptors on keratinocytes', correct:false, why:'IL-17 inhibitors are a separate drug class (PP slide 28).'}],
  teach:'PC slide 15 states the psoriasis mechanism as unknown, possibly anti-inflammatory and antiproliferative; in the treatment rationale retinoids are the cell-turnover agents (PP slide 27).',
  cite:PC+' slide 15; PP slides 27–28; T 916–920'},
+
+/* ---- Added 2026-11-07 for Dr. Smith's Exam 1 hints (epidemiology, etiology,
+   why corticosteroids, retinoid target). Hint text pasted by Louis 2026-11-07. */
+{id:'L1-096', skill:'epi', prof:'Smith', tier:'new', topic:'ad', sub:'clin', concept:'ad-atopic-assoc',
+ tags:['recall'], source:'both',
+ stem:'Atopic dermatitis is often associated with which other atopic conditions?',
+ options:[
+  {t:'Asthma and rhinitis', correct:true, why:'Slide 10: an inheritance pattern and association with asthma and rhinitis (atopic conditions); (T 121–125) a child with AD, asthma and rhinitis is responding to things they are allergic to.'},
+  {t:'Psoriatic arthritis and nail pitting', correct:false, why:'These go with psoriasis (Pathophys slide 26), not with AD.'},
+  {t:'Acne and rosacea', correct:false, why:'Acne is a pilosebaceous disease (slide 30); rosacea is the use of topical metronidazole (PCol slide 51). Neither is an atopic condition.'},
+  {t:'Hypertension and kidney disease', correct:false, why:'These are adverse effects of oral calcineurin inhibitors (PCol slide 30), not atopic conditions.'}],
+ teach:'Slide 10: AD has an inheritance pattern and goes with asthma and rhinitis, the atopic conditions. The risk of AD is two- to threefold higher with one atopic parent and three- to fivefold higher with two.',
+ cite:PP+' slide 10; T 121–125'},
+
+{id:'L1-097', skill:'epi', prof:'Smith', tier:'new', topic:'ad', sub:'clin', concept:'ad-trend-sex',
+ tags:['recall'], source:'both',
+ stem:'Which statement about the epidemiology of atopic dermatitis is correct?',
+ options:[
+  {t:'Its prevalence has risen over recent decades', correct:true, why:'Slide 10: prevalence has increased in developed and developing countries during the last decades (T 105–106).'},
+  {t:'It affects males far more often than females', correct:false, why:'Slide 10: it affects males and females similarly (T 121).'},
+  {t:'It is more common in rural than in urban areas', correct:false, why:'Slide 10 gives the reverse: a lower prevalence in rural areas, explained by the hygiene hypothesis.'},
+  {t:'It is more common in adults than in children', correct:false, why:'Slide 10: 15–30% of children against 2–10% of adults in developed countries.'}],
+ teach:'Slide 10: 15–30% of children and 2–10% of adults in developed countries; prevalence rising; males and females alike; lower in rural areas (hygiene hypothesis). She added that the figure is expected to level out at about 20% as these children grow up (T 108–109).',
+ cite:PP+' slide 10; T 102–121'},
+
+{id:'L1-098', skill:'epi', prof:'Smith', tier:'new', topic:'pso', sub:'clin', concept:'pso-prevalence',
+ tags:['numbers'], source:'both',
+ stem:'About what share of the US population has psoriasis?',
+ options:[
+  {t:'About 3%', correct:true, why:'Slide 20: "Affects about 3% of the US population" (T 305).'},
+  {t:'About 15–30%', correct:false, why:'That is the share of children in developed countries with AD (slide 10).'},
+  {t:'About 2–10%', correct:false, why:'That is the share of adults in developed countries with AD (slide 10).'},
+  {t:'About 90%', correct:false, why:'That is the lifetime prevalence of acne (slide 31).'}],
+ teach:'Psoriasis is the most common immune-mediated inflammatory disease worldwide and affects about 3% of the US population; the prevalence in other countries varies (slide 20; T 304–306).',
+ cite:PP+' slides 10, 20, 31; T 304–306'},
+
+{id:'L1-099', skill:'epi', prof:'Smith', tier:'new', topic:'pso', sub:'clin', concept:'pso-prevalence-factors',
+ tags:['recall'], source:'both',
+ stem:'Which factors are thought to affect how common psoriasis is in a population?',
+ options:[
+  {t:'Climate, sun exposure and ethnicity', correct:true, why:'Slide 20; (T 306–307) the prevalence varies with ethnicity and geographic location, "maybe because climate, sun exposure, and ethnicity are ... linked".'},
+  {t:'Little infection exposure in early childhood', correct:false, why:'That is the hygiene hypothesis, given for the rural–urban difference in AD (slide 10).'},
+  {t:'Androgen production at puberty', correct:false, why:'Androgens trigger acne (slides 31–32).'},
+  {t:'A high glycemic index diet and dairy', correct:false, why:'Diet is listed as a possible acne factor (slide 35).'}],
+ teach:'Slide 20: psoriasis has a genetic basis that probably requires environmental triggers; climate, sun exposure and ethnicity are thought to affect prevalence; males and females are affected equally.',
+ cite:PP+' slides 10, 20, 31–35; T 301–308'},
+
+{id:'L1-100', skill:'patho', prof:'Smith', tier:'new', topic:'pso', sub:'path', concept:'pso-trigger',
+ tags:['process'], source:'both',
+ stem:'How is psoriasis thought to start in a person with the genetic predisposition?',
+ options:[
+  {t:'Skin trauma triggers an abnormal immune response', correct:true, why:'Slide 21: probably starts with some trauma (bug bite, skin infection) that triggers an abnormal immune response (T 313–316).'},
+  {t:'Loss of profilaggrin lets allergens into the skin', correct:false, why:'That is the FLG barrier story of AD (slide 15).'},
+  {t:'Androgens raise sebum and plug the follicle', correct:false, why:'That is the start of acne (slides 32–33).'},
+  {t:'An IgE-mediated reaction to an ingested food', correct:false, why:'Ingested allergens are part of the AD story, and there the first reactions are IgE-independent (slide 13).'}],
+ teach:'After the trigger, APCs present antigen to T cells in the skin; APCs, T cells and keratinocytes release cytokines such as TNF-α, IL-23 and IL-17, which drive keratinocyte hyperproliferation and chronic systemic inflammation (slides 21–22; T 316–322).',
+ cite:PP+' slides 13, 15, 20–22, 32–33; T 301–302, 313–322'},
+
+{id:'L1-101', skill:'epi', prof:'Smith', tier:'new', topic:'acne', sub:'clin', concept:'acne-adult-sex',
+ tags:['numbers'], source:'slide',
+ stem:'Among adults aged 25 to 58, how common is acne in women compared with men?',
+ options:[
+  {t:'About 12% of women; 3% of men', correct:true, why:'Slide 31: 12% of girls age 25–58, with periodic premenstrual flares until menopause; 3% of males age 25–58.'},
+  {t:'About 3% of women; 12% of men', correct:false, why:'Swaps the two figures (slide 31).'},
+  {t:'About 12% of each', correct:false, why:'Slide 31 gives different figures for the two sexes: 12% and 3%.'},
+  {t:'About 81% of women; 3% of men', correct:false, why:'81% is the likelihood of acne when both parents had acne (slide 35).'}],
+ teach:'Slide 31: in puberty acne is often more severe in boys, while women often have more severe forms during adulthood. In women it can ebb and flow with the menstrual cycle (T 417–418).',
+ note:'The transcript garbles the age range ("between the ages of 25, which is a little later than 58", T 415–416); keyed to slide 31.',
+ cite:PP+' slides 31, 35; T 415–421'},
+
+{id:'L1-102', skill:'patho', prof:'Smith', tier:'new', topic:'acne', sub:'clin', concept:'acne-trigger',
+ tags:['recall'], source:'both',
+ stem:'What triggers acne in children?',
+ options:[
+  {t:'The start of androgen production', correct:true, why:'Slide 31: triggered in children with the start of androgen production; usual onset at puberty (T 413–414). Slide 32: increased androgen production leads to the factors of acne.'},
+  {t:'A filaggrin defect in the skin barrier', correct:false, why:'That is the barrier problem of AD (slide 15).'},
+  {t:'T-cell activation after skin trauma', correct:false, why:'That is how psoriasis is thought to start (slide 21).'},
+  {t:'Little infection exposure early in life', correct:false, why:'That is the hygiene hypothesis for AD (slide 10).'}],
+ teach:'Androgens raise sebum output and alter keratinization in the duct; P. acnes colonizes the duct and inflammation follows (slide 32; T 422–428).',
+ cite:PP+' slides 10, 15, 21, 31–32; T 413–414, 422–428'},
+
+{id:'L1-103', skill:'patho', prof:'Smith', tier:'new', topic:'ad', sub:'path', concept:'ad-initial-trigger',
+ tags:['process'], source:'both',
+ stem:'What is thought to set off the first skin inflammation in atopic dermatitis?',
+ options:[
+  {t:'Cytokines from irritated or scratched keratinocytes', correct:true, why:'Slide 13: the initial mechanisms are unknown, but neuropeptides, irritation or scratching may release proinflammatory cytokines from keratinocytes (T 163–169).'},
+  {t:'An IgE-mediated reaction on first allergen exposure', correct:false, why:'Slide 13: the first reactions to embedded or ingested allergens are T-cell mediated but IgE-independent; IgE comes later.'},
+  {t:'P. acnes lipase acting on sebum in the follicle', correct:false, why:'That is how inflammation arises in acne (slide 33).'},
+  {t:'A reaction to lithium or a beta blocker', correct:false, why:'These are the medications most often linked to worsening psoriasis (slide 24).'}],
+ teach:'Slide 13: the features of AD are skin barrier dysfunction, immune deviation toward TH2 and then increased IgE, complicated by colonization with pathologic organisms.',
+ cite:PP+' slides 13, 24, 33; T 163–178'},
+
+{id:'L1-104', skill:'mech', prof:'Smith', tier:'new', topic:'cs', sub:'mech', concept:'cs-why-ad-pso',
+ tags:['mechanism','reasoning'], source:'both',
+ stem:'Why are topical corticosteroids used to treat atopic dermatitis and psoriasis?',
+ options:[
+  {t:'They suppress immune system activity', correct:true, why:'PCol slide 11: used to treat psoriasis and AD because they are immunosuppressive; (T 873–877) "They\'re going to suppress the activity of the immune system", lowering inflammatory cytokines.'},
+  {t:'They crosslink DNA to slow cell division', correct:false, why:'That is the proposed action of coal tar (PCol slide 53).'},
+  {t:'They kill P. acnes in the follicle', correct:false, why:'Antibacterial activity against P. acnes belongs to benzoyl peroxide (PCol slide 36).'},
+  {t:'They block the IL-4 receptor alpha subunit', correct:false, why:'That is dupilumab (PCol slide 64).'}],
+ teach:'Both diseases have an overactive immune component: TH2 deviation in AD (Pathophys slide 16) and a T-cell-mediated inflammatory cascade in psoriasis (Pathophys slides 19, 21). The glucocorticoid–receptor complex changes transcription, lowering inflammatory cytokines and possibly raising anti-inflammatory ones (PCol slides 5–7; T 873–877).',
+ cite:PC+' slides 5–7, 11, 36, 53, 64; T 873–877'},
+
+{id:'L1-105', skill:'mech', prof:'Smith', tier:'new', topic:'ret', sub:'rec', concept:'retinoid-target',
+ tags:['mechanism'], source:'both',
+ stem:'Which receptors do retinoids such as tretinoin bind to change gene expression?',
+ options:[
+  {t:'Retinoic acid receptors, RAR and RXR', correct:true, why:'PCol slide 14: retinoids bind two families of nuclear receptors, RARs and RXRs, which form RAR–RXR heterodimers and bind the RARE (T 895–904).'},
+  {t:'The vitamin D receptor', correct:false, why:'Calcipotriene acts through the vitamin D receptor (PCol slide 21).'},
+  {t:'The glucocorticoid receptor', correct:false, why:'Corticosteroids bind the glucocorticoid receptor (PCol slide 7).'},
+  {t:'Cytokine receptors on the cell surface', correct:false, why:'Retinoid receptors are nuclear receptors (PCol slides 7, 14); cytokine receptors are blocked by drugs such as brodalumab (PCol slide 66).'}],
+ teach:'Tretinoin is all-trans retinoic acid (PCol slide 17). For acne, psoriasis and photoaging the wanted effect is through the RARs, which drive differentiation and proliferation; RXR-targeting retinoids mainly induce apoptosis (PCol slide 14; T 895–904).',
+ cite:PC+' slides 7, 14, 17, 21; T 895–904'}
 ];
 
 /* ==========================================================================
@@ -5596,7 +5713,40 @@ QUESTIONS.push(
   {t:'Both bind 30S at different steps', correct:false, why:'Macrolides bind 50S (slide 42).'},
   {t:'Both act on the cell wall', correct:false, why:'Both act on the ribosome (slide 42).'}],
  teach:'Tetracyclines: 30S, block entry of the charged tRNA. Chloramphenicol and macrolides: 50S (slide 42; T 600–607).',
- cite:D2+' slide 42; T 600–607'}
+ cite:D2+' slide 42; T 600–607'},
+/* ---- Added 2026-11-07 for Dr. Smith's Exam 1 hints (drug targets, boxed warning). */
+{id:'L2-115', skill:'mech', prof:'Smith', tier:'new', topic:'l2-pde', sub:'cris', concept:'crisaborole-target',
+ tags:['mechanism','target'], source:'both',
+ stem:'Which enzyme does crisaborole inhibit in atopic dermatitis?',
+ options:[
+  {t:'Phosphodiesterase 4', correct:true, why:'Slides 32–33: crisaborole is a nonsteroidal anti-inflammatory PDE-4 inhibitor; (T 430–433, 448–450) "anti-inflammatory by inhibiting the PDE4".'},
+  {t:'Calcineurin', correct:false, why:'Calcineurin is the target of pimecrolimus, tacrolimus and cyclosporine (slides 24–27).'},
+  {t:'Janus kinase', correct:false, why:'JAK is inhibited by tofacitinib, ruxolitinib and upadacitinib (slide 76).'},
+  {t:'Dihydrofolate reductase', correct:false, why:'DHFR is inhibited by methotrexate and trimethoprim (slides 48, 59).'}],
+ teach:'With PDE4 blocked, cAMP is not broken down to 5\'-AMP; the higher cAMP inhibits inflammatory cells. PDE4 is the predominant isoform in mast cells, eosinophils, neutrophils, T lymphocytes and macrophages, which is why it suits an inflammatory skin disease (slide 32; T 437–448).',
+ cite:D2+' slides 24–27, 32–33, 48, 59, 76; T 430–450'},
+
+{id:'L2-116', skill:'mech', prof:'Smith', tier:'new', topic:'l2-cni', sub:'top', concept:'pimecrolimus-target',
+ tags:['mechanism','target'], source:'both',
+ stem:'Which enzyme does topical pimecrolimus inhibit in atopic dermatitis?',
+ options:[
+  {t:'Calcineurin', correct:true, why:'Slides 23–27: pimecrolimus is a topical calcineurin inhibitor; blocking calcineurin inhibits activation of T cells and mast cells and the production of proinflammatory cytokines (T 360–365).'},
+  {t:'Phosphodiesterase 4', correct:false, why:'PDE4 is the target of crisaborole and apremilast (slides 32–34).'},
+  {t:'Janus kinase', correct:false, why:'JAK is the target of ruxolitinib, which the drug chart also lists for AD (PCol slide 76).'},
+  {t:'Dihydrofolate reductase', correct:false, why:'DHFR is the target of methotrexate (PCol slide 59).'}],
+ teach:'Calcineurin normally removes the phosphate from NFAT so IL-2 can be transcribed; with it blocked, IL-2 falls, fewer T cells proliferate, mast cells are less active and the itch of AD eases within the first few days (slides 26–27; T 322–328, 360–367).',
+ cite:D2+' slides 23–27, 32–34, 59, 76; T 322–328, 360–367'},
+
+{id:'L2-117', skill:'adverse', prof:'Smith', tier:'new', topic:'l2-cni', sub:'oral', concept:'oral-cni-boxed-content',
+ tags:['adverse','recall'], source:'both',
+ stem:'Which risks make up the black box warning for oral cyclosporine?',
+ options:[
+  {t:'Malignancy and serious infection', correct:true, why:'Slide 30, black box warning: increased risk of lymphoma and other malignancies, particularly of the skin, and increased susceptibility to bacterial, viral, fungal and protozoal infections (T 396–398).'},
+  {t:'Nephrotoxicity and hypertension', correct:false, why:'Slide 30 lists these as side effects of both oral calcineurin inhibitors, under the boxed warning but not in it.'},
+  {t:'Gingival hyperplasia and neuropathy', correct:false, why:'These are the drug-specific side effects: gingival hyperplasia for cyclosporine, neuropathies for tacrolimus (slide 30).'},
+  {t:'Hypercalcemia and hypercalciuria', correct:false, why:'These are systemic effects of topical calcipotriene above 100 g a week (slide 22).'}],
+ teach:'"They have a black box warning. You\'ve got an increased risk of lymphoma and other malignancies, and you also have an increased susceptibility to infections" (T 397–398). Both follow from suppressing the immune system, which normally fights infection and identifies cancer cells (T 399–403).',
+ cite:D2+' slides 22, 30; T 396–403'}
 );
 
 /* ==========================================================================
@@ -5604,8 +5754,8 @@ QUESTIONS.push(
    slides 43-76, with the lecture transcript (T, line numbers of
    DEENT_11_03_Lecture_Only_Transcript.txt, lines 1-587; Dr. Sikazwe starts at 588).
    Slides 41-42 (ribosome figure) were recapped only (T 19-26) and belong to Lecture 2.
-   Slides 77-80 (psoralens) and the sun-exposure lecture were deferred to a recording
-   that is not in the sources (T 556-561, 581-583): no questions on them.
+   Slides 77-80 (psoralens) and the sun-exposure lecture were deferred to her recording
+   (T 556-561, 581-583); their questions are in q6_L03c.js.
    Held out (sources disagree on the keyed fact): MHC class in signal 1, dupilumab
    for psoriasis, whether dapsone's acne effect is tied to its antibacterial action,
    ruxolitinib route, metronidazole's indication table, coal tar in children, the
@@ -6878,6 +7028,218 @@ QUESTIONS.push(
  teach:'Unlike the injected biologicals, tofacitinib is a small molecule given orally (slide 76; T 569–579).',
  note:'Ruxolitinib\'s route is not asked: she said "these are given orally" (T 578–579), slide 76 says ruxolitinib is used topically and orally, and the drug chart lists it as topical for AD.',
  cite:D3+' slide 76; T 569–579'}
+);
+
+/* ---- Added 2026-11-07 for Dr. Smith's Exam 1 hints: targets, within-class
+   differences, why each MOA helps, boxed warnings. "10/30 T" = line numbers of
+   DEENT_10_30_Lecture_Only_Transcript.txt; plain "T" = the 11/03 transcript. */
+TOPICS.push(
+ {id:'l3-sum', name:'Across her pharmacology lectures: targets and boxed warnings', prof:'Smith',
+  cite:'Lectures 1–3 — Skin-PCol-Students-2026.pdf, slides 14–78', subs:[
+   {id:'tgt', name:'Drug targets and what sets drugs apart (matching)', cite:'slides 14–78'},
+   {id:'bbw', name:'Which drugs carry a black box warning', cite:'slides 30, 70, 76'}]}
+);
+
+QUESTIONS.push(
+{id:'L3-109', dupOf:'L3-001', skill:'mech', prof:'Smith', tier:'new', topic:'l3-abx', sub:'tet', concept:'sarecycline-target',
+ tags:['mechanism','target'], source:'both',
+ stem:'Where on the bacterium does sarecycline act to stop protein synthesis?',
+ options:[
+  {t:'The 30S ribosomal subunit', correct:true, why:'Slide 43: the tetracycline class, sarecycline included, binds the 30S subunit irreversibly and blocks aminoacyl-tRNA binding at the acceptor site (T 27–31).'},
+  {t:'The 50S ribosomal subunit', correct:false, why:'Clindamycin and the macrolides bind the 50S subunit (slides 46–47).'},
+  {t:'Bacterial dihydrofolate reductase', correct:false, why:'That is trimethoprim (slide 48).'},
+  {t:'PABA use in folic acid synthesis', correct:false, why:'Sulfamethoxazole competes with PABA (slide 48).'}],
+ teach:'Sarecycline, minocycline and doxycycline are the tetracyclines on the drug list; all bind the 30S subunit and are broad-spectrum bacteriostatic antibiotics (slide 43; T 27–36).',
+ cite:D3+' slides 43, 46–48; T 27–36'},
+
+{id:'L3-110', skill:'tell', prof:'Smith', tier:'new', topic:'l3-abx', sub:'tet', concept:'sarecycline-narrow',
+ tags:['tell'], source:'slide',
+ stem:'Which feature sets sarecycline apart from the other tetracyclines?',
+ options:[
+  {t:'A narrower antimicrobial spectrum', correct:true, why:'Slide 45: sarecycline has a more narrow antimicrobial spectrum than the other tetracyclines, which may mean less disruption of the vulvovaginal and GI microbiome.'},
+  {t:'It binds the 50S ribosomal subunit', correct:false, why:'Like the whole class it binds the 30S subunit (slide 43).'},
+  {t:'It can cause ototoxicity', correct:false, why:'Ototoxicity is the special side effect of minocycline (slide 45; T 50–51).'},
+  {t:'It is safe in children under 8', correct:false, why:'Slide 45: the class should not be used in patients younger than 8 years.'}],
+ teach:'Within the tetracyclines (slide 45): minocycline, doxycycline and sarecycline absorb better from the GI tract than tetracycline; doxycycline and minocycline are more lipid soluble; minocycline can cause ototoxicity; sarecycline has the narrowest spectrum.',
+ note:'Slide 45 facts she left to reading: "You can read the rest of these other little facts I put on this slide" (T 51–52).',
+ cite:D3+' slides 43, 45; T 46–52'},
+
+{id:'L3-111', skill:'tell', prof:'Smith', tier:'new', topic:'l3-abx', sub:'tet', concept:'tet-less-photo',
+ tags:['tell','photosensitivity'], source:'slide',
+ stem:'Which tetracyclines may be less photosensitizing than tetracycline or doxycycline?',
+ options:[
+  {t:'Minocycline and sarecycline', correct:true, why:'Slide 45: minocycline and sarecycline may be less photosensitizing than either tetracycline or doxycycline.'},
+  {t:'Doxycycline and minocycline', correct:false, why:'Doxycycline is one of the two the comparison is made against (slide 45).'},
+  {t:'Doxycycline and sarecycline', correct:false, why:'Doxycycline is one of the two the comparison is made against (slide 45).'},
+  {t:'Tetracycline and minocycline', correct:false, why:'Tetracycline is one of the two the comparison is made against (slide 45).'}],
+ teach:'Photosensitivity in fair-skinned people is a class side effect of oral tetracyclines (slide 44): "you\'re gonna burn easily when you\'re out in the sun, burn quickly and badly" (T 42–44). Slide 45 adds that minocycline and sarecycline may cause less of it.',
+ note:'Slide 45 facts she left to reading (T 51–52).',
+ cite:D3+' slides 44–45; T 42–44, 51–52'},
+
+{id:'L3-112', skill:'mech', prof:'Smith', tier:'new', topic:'l3-abx', sub:'tet', concept:'tet-anti-inflam',
+ tags:['mechanism','reasoning'], source:'slide',
+ stem:'Tetracyclines are antimicrobials. On what may their efficacy in acne depend more?',
+ options:[
+  {t:'Their anti-inflammatory activity', correct:true, why:'Slide 45: although the tetracyclines are antimicrobials, their efficacy in acne may be more dependent on anti-inflammatory activity.'},
+  {t:'Killing P. acnes outright in the follicle', correct:false, why:'Slide 43: they are bacteriostatic, keeping bacteria from multiplying rather than killing them (T 34–36).'},
+  {t:'Lowering androgen production', correct:false, why:'Androgens are the target of the antiandrogen class (Pathophys slides 36–37), not the tetracyclines.'},
+  {t:'Shedding of the stratum corneum', correct:false, why:'That is the action of keratolytics such as salicylic acid (PCol slide 39).'}],
+ teach:'Inflammation with release of inflammatory mediators is one of the four acne factors (Pathophys slide 32), and the acne pathogenesis figure places antibiotics against both P. acnes and the inflammatory response (Pathophys slide 36).',
+ note:'Slide 45 facts she left to reading (T 51–52).',
+ cite:D3+' slides 39, 43, 45; T 34–36, 51–52'},
+
+{id:'L3-113', skill:'tell', prof:'Smith', tier:'new', topic:'l3-abx', sub:'tet', concept:'doxy-mino-lipid',
+ tags:['tell'], source:'slide',
+ stem:'Why do doxycycline and minocycline penetrate the pilosebaceous follicle more efficiently?',
+ options:[
+  {t:'They are more lipid soluble', correct:true, why:'Slide 45: doxycycline and minocycline are more lipid soluble, penetrating the pilosebaceous follicle more efficiently.'},
+  {t:'They are applied topically', correct:false, why:'The tetracyclines in this lecture are oral (slide 44: side effects of oral tetracyclines).'},
+  {t:'They bind the 50S subunit', correct:false, why:'They bind the 30S subunit (slide 43); binding site does not decide follicle entry.'},
+  {t:'They kill bacteria rather than slow them', correct:false, why:'They are bacteriostatic, keeping bacteria from multiplying (slide 43).'}],
+ teach:'The pilosebaceous unit, the hair follicle with its sebaceous gland, is where acne develops (Pathophys slide 30; 10/29 T 408–410), so a drug that enters it well reaches the disease.',
+ note:'Slide 45 facts she left to reading (T 51–52).',
+ cite:D3+' slides 43–45; T 51–52'},
+
+{id:'L3-114', skill:'mech', prof:'Smith', tier:'new', topic:'l3-cytok', sub:'il23', concept:'risan-target',
+ tags:['mechanism','target'], source:'both',
+ stem:'What does risankizumab bind?',
+ options:[
+  {t:'The p19 subunit of IL-23', correct:true, why:'Slide 69: a humanized IgG1 antibody that binds the p19 subunit of IL-23 (T 480–482).'},
+  {t:'The p40 subunit of IL-12 and IL-23', correct:false, why:'That is ustekinumab (slide 67).'},
+  {t:'IL-17 receptor A', correct:false, why:'That is brodalumab (slide 66).'},
+  {t:'The IL-4 receptor alpha subunit', correct:false, why:'That is dupilumab (slide 64).'}],
+ teach:'Guselkumab, tildrakizumab and risankizumab all bind p19 of IL-23. Risankizumab is the one given SubQ or IV, for moderate to severe plaque psoriasis (slides 68–69; T 480–486).',
+ cite:D3+' slides 64, 66–69; T 480–486'},
+
+{id:'L3-115', skill:'mech', prof:'Smith', tier:'new', topic:'l3-tnf', sub:'class', concept:'tnf-why-pso',
+ tags:['mechanism','reasoning'], source:'both',
+ stem:'Why does blocking TNF-α reduce psoriatic plaques?',
+ options:[
+  {t:'It is an inflammatory cytokine in psoriasis', correct:true, why:'Slide 70: TNF-α is an inflammatory cytokine; the inhibitors keep it from its receptors on inflammatory cells and reduce the number and size of plaques (T 489, 493–497). Pathophys slide 21 names TNF-α among the cytokines released in psoriasis.'},
+  {t:'It crosslinks DNA in dividing keratinocytes', correct:false, why:'DNA crosslinking is the proposed action of coal tar (slide 53), not a cytokine role.'},
+  {t:'It raises sebum output in the follicle', correct:false, why:'Sebum belongs to the acne story (Pathophys slide 32).'},
+  {t:'It breaks down cAMP inside mast cells', correct:false, why:'cAMP is broken down by phosphodiesterase (slide 32).'}],
+ teach:'In psoriasis, APCs, T cells and keratinocytes release TNF-α, IL-23 and IL-17, which drive keratinocyte hyperproliferation and chronic inflammation (Pathophys slides 21–22). "In general, TNF alpha inhibitors are anti-inflammatory" (T 496–497).',
+ cite:D3+' slides 32, 53, 70; T 489–497'},
+
+{id:'L3-116', skill:'adverse', prof:'Smith', tier:'new', topic:'l3-tnf', sub:'class', concept:'tnf-bbw-young',
+ tags:['adverse','recall'], source:'slide',
+ stem:'The black box warning of the TNF-α inhibitors reports fatal lymphoma and other malignancies in which patients?',
+ options:[
+  {t:'Children and adolescents', correct:true, why:'Slide 70: lymphoma and other malignancies, some fatal, have been reported in children and adolescent patients.'},
+  {t:'Pregnant women', correct:false, why:'Not part of the boxed warning on slide 70.'},
+  {t:'Adults over 65', correct:false, why:'Not part of the boxed warning on slide 70.'},
+  {t:'Patients with diabetes mellitus', correct:false, why:'Diabetes is a caution for salicylic acid on the extremities (slide 40), not part of this warning.'}],
+ teach:'The class boxed warning has two parts: serious infections that may lead to hospitalization or death, and lymphoma and other malignancies (slide 70; T 497–500).',
+ note:'The children-and-adolescents detail is on slide 70 only; in class she named the two parts, infection and cancer (T 497–500).',
+ cite:D3+' slides 40, 70; T 497–500'},
+
+{id:'L3-117', skill:'adverse', prof:'Smith', tier:'new', topic:'l3-jak', sub:'drugs', concept:'tofa-gi-perf',
+ tags:['adverse'], source:'slide',
+ stem:'Besides its black box warning, which caution applies to tofacitinib?',
+ options:[
+  {t:'Caution at high risk of GI perforation', correct:true, why:'Slide 76: it should also be used with caution in patients who are at high risk for GI perforation.'},
+  {t:'Regular hearing checks during therapy', correct:false, why:'Ototoxicity is minocycline\'s special side effect (slide 45).'},
+  {t:'Count tablets on a separate counting tray', correct:false, why:'That handling rule is for methotrexate (T 253–255).'},
+  {t:'Stop 15 weeks before a live vaccine', correct:false, why:'That timing is for ustekinumab (slide 67).'}],
+ teach:'Tofacitinib is an oral small-molecule JAK inhibitor with a black box warning for severe infection, lymphoma and other malignancies, "just like your TNF alpha inhibitors" (slide 76; T 579–581).',
+ cite:D3+' slides 45, 67, 76; T 253–255, 579–581'},
+
+{id:'L3-118', skill:'tell', prof:'Smith', tier:'new', topic:'l3-sum', sub:'bbw', concept:'bbw-which-drug',
+ tags:['tell','adverse'], source:'both',
+ stem:'Which of these drugs carries a black box warning?',
+ options:[
+  {t:'Oral cyclosporine', correct:true, why:'Slide 30: oral calcineurin inhibitors carry a black box warning for lymphoma and other malignancies and for infections (10/30 T 396–398).'},
+  {t:'Injected dupilumab', correct:false, why:'Its adverse effects are generally mild: nasopharyngitis, headache, eye effects (slide 64); no boxed warning was given.'},
+  {t:'Topical crisaborole', correct:false, why:'Its notable risk is hypersensitivity at the site, in less than 1% (slide 33); no boxed warning was given.'},
+  {t:'Secukinumab', correct:false, why:'Its risks are infection (TB evaluation first) and nasopharyngitis (slide 66); no boxed warning was given.'}],
+ teach:'The black box warnings in her pharmacology lectures: oral cyclosporine (slide 30), the TNF-α inhibitor class (slide 70) and tofacitinib (slide 76); each is for serious infection and for lymphoma and other malignancies. At the end of 11/03 she listed what to know: "What is the target of these drugs? What\'s different between the drugs in each category, and then, did I mention a black box warning?" (T 584–586).',
+ cite:D3+' slides 30, 33, 64, 66, 70, 76; T 497–500, 579–586'},
+
+/* ---- Matching: drug to target. Fill-in-the-blank practice for her target
+   questions is the write-then-check list in Reference ("Drug targets"). ---- */
+{id:'L3-119', type:'match', skill:'mech', prof:'Smith', tier:'new', topic:'l3-sum', sub:'tgt', concept:'tgt-ad',
+ tags:['target','match'], source:'both',
+ stem:'Match each drug used for atopic dermatitis to its target.', left:'Drug', right:'Target',
+ pairs:[
+  {l:'Crisaborole', r:'Phosphodiesterase 4 (PDE4)', why:'Slides 32–33; 10/30 T 430–450.'},
+  {l:'Pimecrolimus', r:'Calcineurin', why:'Slides 24–27; 10/30 T 360–365.'},
+  {l:'Tacrolimus', r:'FKBP, then calcineurin', why:'Slide 26: tacrolimus binds FKBP and the complex inhibits calcineurin.'},
+  {l:'Dupilumab', r:'IL-4 receptor alpha subunit', why:'Slide 64: binds IL-4Rα, shared by the IL-4 and IL-13 receptors.'},
+  {l:'Ruxolitinib', r:'JAK1 and JAK2', why:'Slide 76; T 574–576.'}],
+ teach:'The AD drugs on her drug table (atopic dermatitis page): two calcineurin inhibitors, a PDE-4 inhibitor, an IL-4R antagonist and two JAK inhibitors. Upadacitinib, also a JAK inhibitor, was more potent at JAK1 and JAK2 than at JAK3 and TYK2 in an isolated enzyme assay; its selectivity is still unsettled (slide 76).',
+ cite:D3+' slides 24–27, 32–33, 64, 76; T 574–576'},
+
+{id:'L3-120', type:'match', skill:'mech', prof:'Smith', tier:'new', topic:'l3-sum', sub:'tgt', concept:'tgt-acne-abx',
+ tags:['target','match'], source:'both',
+ stem:'Match each acne antimicrobial to its target.', left:'Drug', right:'Target',
+ pairs:[
+  {l:'Doxycycline', r:'30S ribosomal subunit', why:'Slide 43; T 27–31.'},
+  {l:'Clindamycin', r:'50S subunit; blocks translocation', why:'Slide 46; T 53–55.'},
+  {l:'Sulfamethoxazole', r:'PABA use in dihydrofolic acid synthesis', why:'Slide 48: competes with PABA.'},
+  {l:'Trimethoprim', r:'Bacterial dihydrofolate reductase', why:'Slide 48: dihydrofolic to tetrahydrofolic acid blocked.'},
+  {l:'Topical dapsone (acne)', r:'Neutrophils (anti-inflammatory)', why:'Slide 50: the acne effect is anti-inflammatory, with neutrophils a possible site of action.'}],
+ teach:'Erythromycin and azithromycin, like clindamycin, attach to the 50S subunit (slide 47). Metronidazole\'s mechanism is unknown: Demodex brevis or neutrophils (slide 51).',
+ cite:D3+' slides 43, 46–48, 50–51; T 27–31, 53–55'},
+
+{id:'L3-121', type:'match', skill:'mech', prof:'Smith', tier:'new', topic:'l3-sum', sub:'tgt', concept:'tgt-ker-cyto',
+ tags:['target','match'], source:'slide',
+ stem:'Match each keratolytic or cytotoxic agent to its proposed action.', left:'Agent', right:'Proposed action',
+ pairs:[
+  {l:'Benzoyl peroxide', r:'Antimicrobial against P. acnes; comedolytic', why:'PCol slide 36.'},
+  {l:'Sulfur', r:'Reduced to hydrogen sulfide in keratinocytes', why:'PCol slide 38.'},
+  {l:'Salicylic acid', r:'Solubilizes proteins holding the stratum corneum', why:'PCol slide 39.'},
+  {l:'Coal tar', r:'Crosslinks DNA to inhibit cell division', why:'PCol slide 53.'},
+  {l:'Anthralin', r:'Acts on keratinocyte mitochondria', why:'PCol slide 55: may reduce mitotic activity by affecting mitochondria; also prevents T-lymphocyte activation.'}],
+ teach:'Shale tar\'s mechanism is unknown; selenium sulfide and zinc pyrithione are cytostatic and antifungal with mechanism unknown (PCol slide 57). The cytotoxic agents as a group decrease the rate of epidermal cell turnover (PCol slide 53).',
+ cite:D2+' slides 36, 38–39, 53, 55, 57'},
+
+{id:'L3-122', type:'match', skill:'mech', prof:'Smith', tier:'new', topic:'l3-sum', sub:'tgt', concept:'tgt-pso-small',
+ tags:['target','match'], source:'both',
+ stem:'Match each psoriasis drug to its target.', left:'Drug', right:'Target',
+ pairs:[
+  {l:'Methotrexate', r:'Dihydrofolate reductase', why:'Slide 59; T 215–220.'},
+  {l:'Calcipotriene', r:'Vitamin D receptor', why:'Slide 21.'},
+  {l:'Cyclosporine', r:'Cyclophilin, then calcineurin', why:'Slide 26: the cyclosporine–cyclophilin complex binds calcineurin.'},
+  {l:'Apremilast', r:'Phosphodiesterase 4 (PDE4)', why:'Slide 34; 10/30 T 464–466: "the same mechanism of action" as crisaborole.'},
+  {l:'Methoxsalen', r:'DNA, by intercalation after UVA', why:'Slide 78; sun lecture audio 00:30–01:00.'}],
+ teach:'Tofacitinib, on the psoriasis page of her drug table, inhibits JAK (slide 76). Acitretin and tazarotene are retinoids acting through RAR and RXR (slides 14, 18, 20).',
+ cite:D3+' slides 14, 18, 20–21, 26, 34, 59, 76, 78; T 215–220'},
+
+{id:'L3-123', type:'match', skill:'mech', prof:'Smith', tier:'new', topic:'l3-sum', sub:'tgt', concept:'tgt-biologics',
+ tags:['target','match'], source:'both',
+ stem:'Match each biologic to what it binds.', left:'Drug', right:'Binds',
+ pairs:[
+  {l:'Abatacept', r:'CD80/86 on antigen-presenting cells', why:'Slide 63; T 316–323.'},
+  {l:'Secukinumab', r:'IL-17A cytokine', why:'Slide 66.'},
+  {l:'Brodalumab', r:'IL-17 receptor A', why:'Slide 66; T 422.'},
+  {l:'Ustekinumab', r:'p40 subunit of IL-12 and IL-23', why:'Slide 67.'},
+  {l:'Tildrakizumab-asmn', r:'p19 subunit of IL-23', why:'Slide 68.'}],
+ teach:'Ixekizumab also binds the IL-17A cytokine (humanized; secukinumab is human). Guselkumab and risankizumab also bind p19 of IL-23 (slides 66, 68–69). "Is it human or humanized, and what are they binding to?" (T 476–477).',
+ cite:D3+' slides 63, 66–69; T 316–323, 422, 476–477'},
+
+{id:'L3-124', type:'match', skill:'tell', prof:'Smith', tier:'new', topic:'l3-sum', sub:'tgt', concept:'tgt-tnf-make',
+ tags:['tell','match'], source:'both',
+ stem:'All of these bind TNF-α. Match each to its structure.', left:'Drug', right:'Structure',
+ pairs:[
+  {l:'Etanercept', r:'Two p75 TNF receptors fused to IgG1 Fc', why:'Slide 71; T 501–505.'},
+  {l:'Infliximab', r:'Chimeric mouse–human IgG1 antibody', why:'Slide 72.'},
+  {l:'Adalimumab', r:'Human IgG1 antibody', why:'Slide 73.'},
+  {l:'Certolizumab pegol', r:'PEG-linked Fab of a humanized antibody', why:'Slide 74.'}],
+ teach:'All the marketed TNF-α inhibitors bind TNF-α so it cannot reach its receptors on inflammatory cells (slide 70; T 493–495). Golimumab is a human antibody to TNF-α (slide 74).',
+ cite:D3+' slides 70–74; T 493–505'},
+
+{id:'L3-125', type:'match', skill:'tell', prof:'Smith', tier:'new', topic:'l3-sum', sub:'tgt', concept:'tgt-retinoids',
+ tags:['tell','match'], source:'slide',
+ stem:'Match each retinoid to the feature that sets it apart.', left:'Retinoid', right:'Feature',
+ pairs:[
+  {l:'Tretinoin', r:'All-trans retinoic acid; microsphere form', why:'PCol slide 17.'},
+  {l:'Adapalene', r:'Sun stable; can be used with benzoyl peroxide', why:'PCol slide 18.'},
+  {l:'Tazarotene', r:'Psoriasis, acne and wrinkles; photosensitizing', why:'PCol slide 18.'},
+  {l:'Isotretinoin', r:'Oral, for recalcitrant severe cystic acne', why:'PCol slide 19.'},
+  {l:'Acitretin', r:'Oral, for psoriasis, especially pustular', why:'PCol slide 20.'}],
+ teach:'All of them bind the retinoic acid receptors, RAR and RXR, and change gene transcription at the RARE; the RAR effect on differentiation and proliferation is the one wanted in acne and psoriasis (PCol slide 14).',
+ cite:D2+' slides 14, 17–20'}
 );
 
 /* ==========================================================================
@@ -9560,8 +9922,9 @@ QUESTIONS.push(
 
 /* ==========================================================================
    Sun exposure and psoralens (Dr. Smith; recorded after the 11/03 lecture).
-   Exam assignment PROVISIONAL: Exam 1 per the syllabus (Lecture 3); not
-   confirmed by Dr. Smith (see course.js and reviews/OPEN_QUESTIONS.md). Deck: DEENT_Sun_Exposure_2026.pdf
+   Exam 1: the syllabus (Lecture 3) and Dr. Smith's Exam 1 study hints (pasted by
+   Louis 2026-11-07: "From Sun Exposure lecture: ...") both put it on Exam 1
+   (reviews/OPEN_QUESTIONS.md). Deck: DEENT_Sun_Exposure_2026.pdf
    (26 slides). "audio mm:ss" = timecode in her recording (full-lecture file),
    transcribed 2026-11-06. Tables shown only as links to the OTC textbook
    (slides 18 and 23) carry no questions: their content is not on the slides.
@@ -10109,7 +10472,126 @@ QUESTIONS.push(
   {t:'Absorption limited to physical sunblocks', correct:false, why:'The observations concern sunscreen actives (slide 25).'}],
  note:'In the recording she said studies "measured zero point five nanograms per mil" (audio 23:51); slide 25 gives 0.5 ng/mL as the FDA threshold that was exceeded. Keyed to the slide.',
  teach:'Studies have found plasma concentrations beyond the FDA threshold of 0.5 ng/mL; what this means is still being watched (slide 25; audio 23:51–24:36).',
- cite:SUN+' slide 25; audio 23:51–24:36'}
+ cite:SUN+' slide 25; audio 23:51–24:36'},
+/* ---- Added 2026-11-07 for Dr. Smith's Exam 1 hints (sunscreen vs sunblock by
+   ingredient, SPF and broad spectrum, photosensitizing drugs, UVA vs UVB damage). */
+{id:'L3C-007', skill:'mech', prof:'Smith', tier:'new', topic:'l3c-pso', sub:'mech', concept:'psoralen-why',
+ tags:['mechanism','reasoning'], source:'both',
+ stem:'Why does DNA intercalation by methoxsalen help psoriasis?',
+ options:[
+  {t:'Cells can no longer divide', correct:true, why:'(Audio 00:59–01:10) once the light-activated psoralen intercalates, "cells can no longer divide", so psoralens treat psoriasis by their antiproliferative effect; slide 3 lists antiproliferative, immunosuppressive and anti-inflammatory effects.'},
+  {t:'Keratinocytes make more filaggrin', correct:false, why:'Filaggrin belongs to the AD barrier story (Pathophys slide 15), not to psoralens.'},
+  {t:'Mast cell cAMP rises', correct:false, why:'Raising cAMP is the action of PDE-4 inhibitors (PCol slide 32).'},
+  {t:'IL-17A is neutralized', correct:false, why:'IL-17A is bound by secukinumab and ixekizumab (PCol slide 66).'}],
+ teach:'Psoriasis is keratinocyte hyperproliferation driven by T cells (Pathophys slides 19, 23). Psoralens normalize the number and arrangement of keratinocytes and are cytotoxic to T cells because they intercalate DNA (slide 3; audio 01:10–01:50).',
+ cite:SUN+' slide 3; audio 00:30–01:50'},
+
+{id:'L3C-023', skill:'tell', prof:'Smith', tier:'new', topic:'l3c-uv', sub:'uvab', concept:'uva-dermis-smith',
+ tags:['tell'], source:'both',
+ stem:'Which type of UV light penetrates further into the dermis?',
+ options:[
+  {t:'UVA', correct:true, why:'Slide 8: UVA penetrates further into the dermis than UVB radiation; (audio 05:30–05:45) "it will penetrate further into the skin compared to UVB".'},
+  {t:'UVB', correct:false, why:'Slide 8 puts the deeper penetration with UVA.'},
+  {t:'Both reach the same depth', correct:false, why:'Slide 8 states a difference: UVA penetrates further.'},
+  {t:'Neither passes the stratum corneum', correct:false, why:'UVA reaches the dermis (slide 8), and UVB causes sunburn in living skin (slide 11).'}],
+ teach:'UVA (320–400 nm) is minimally filtered by ozone, passes glass and reaches deeper; UVB (290–320 nm) is about 90% filtered by ozone and does not pass glass (slide 8).',
+ cite:SUN+' slides 8, 11; audio 04:30–05:45'},
+
+{id:'L3C-024', skill:'tell', prof:'Smith', tier:'new', topic:'l3c-uv', sub:'uvab', concept:'uva-uvb-shared', multi:true,
+ tags:['tell','list'], source:'both',
+ stem:'Which kinds of damage can both UVA and UVB cause? Select all that apply.',
+ options:[
+  {t:'Photoaging', correct:true, why:'Slide 8 lists photoaging under both UVB and UVA (audio 05:00–05:10, 05:55–06:05).'},
+  {t:'Immunosuppression', correct:true, why:'Slide 8 lists immunosuppression under both UVB and UVA.'},
+  {t:'Skin cancer', correct:true, why:'Slide 8 lists skin cancers under both; she called UVB the most concern for skin cancer and said UVA contributes "but not so much as UVB" (audio 05:00–05:10, 06:00–06:10).'},
+  {t:'Sunburn', correct:false, why:'Sunburn is listed for UVB (slide 8); UVA "does not seem to cause sunburn" because it is less energetic (audio 05:55–06:20).'},
+  {t:'Most phototoxic drug reactions', correct:false, why:'Slide 8 gives these to UVA only.'}],
+ teach:'Slide 8: UVB can cause sunburn and produces vitamin D3 in the skin; UVA is responsible for most phototoxic reactions with drugs. Both may cause photoaging, immunosuppression and skin cancers.',
+ cite:SUN+' slide 8; audio 04:30–06:25'},
+
+{id:'L3C-025', skill:'tell', prof:'Smith', tier:'new', topic:'l3c-uv', sub:'uvab', concept:'uva-no-burn',
+ tags:['tell','reasoning'], source:'both',
+ stem:'Why does UVA tend not to cause sunburn?',
+ options:[
+  {t:'It is less energetic than UVB', correct:true, why:'Slide 8: UVA is less energetic than UVB; (audio 06:10–06:20) "It is a little bit less energetic than UVB light. That\'s why it doesn\'t tend to cause sunburn."'},
+  {t:'Ozone filters most of it out', correct:false, why:'UVA is minimally filtered by ozone; it is UVB that is about 90% filtered (slide 8).'},
+  {t:'It cannot pass through glass', correct:false, why:'UVA penetrates glass; UVB does not (slide 8).'},
+  {t:'It stops at the stratum corneum', correct:false, why:'UVA penetrates further into the dermis than UVB (slide 8).'}],
+ teach:'Because sunburn comes from UVB, the SPF number, which measures protection against burning, is a measure of UVB protection (slide 13; audio 11:30–11:50).',
+ cite:SUN+' slides 8, 13; audio 05:45–06:20, 11:30–11:50'},
+
+{id:'L3C-042', skill:'mech', prof:'Smith', tier:'new', topic:'l3c-spf', sub:'def', concept:'critical-wavelength',
+ tags:['definition'], source:'both',
+ stem:'In the critical wavelength method, what is a product\'s critical wavelength?',
+ options:[
+  {t:'Where 90% of its UV absorption is reached', correct:true, why:'(Audio 12:30–13:10) the product is scanned from about 220 to 400 nm, and the wavelength at which 90% of its total absorption has occurred is the critical wavelength; slide 14: this method assesses UVA protection.'},
+  {t:'Where it first begins to absorb any UV light', correct:false, why:'The method finds where 90% of the absorption has occurred, not where absorption begins (audio 12:30–13:10).'},
+  {t:'The shortest wavelength that causes 1 MED', correct:false, why:'MED is the least UV dose giving clear erythema (slide 12); it is used for SPF, not the critical wavelength.'},
+  {t:'The wavelength that ozone stops', correct:false, why:'Ozone filtering separates UVB from UVA (slide 8); it is not how a product is tested.'}],
+ teach:'A product with a critical wavelength of 370 nm or greater may be labeled "broad spectrum"; a broad-spectrum product with SPF 15 or more may claim it "decreases risk of skin cancer and early aging caused by the sun" (slide 14; audio 13:10–14:00).',
+ cite:SUN+' slides 8, 12, 14; audio 12:00–14:00'},
+
+{id:'L3C-043', skill:'tell', prof:'Smith', tier:'new', topic:'l3c-spf', sub:'def', concept:'spf-vs-broad',
+ tags:['tell','counsel'], source:'both',
+ stem:'A sunscreen is labeled SPF 30 but not "broad spectrum." What does its label tell you?',
+ options:[
+  {t:'Its UVB protection, not its UVA coverage', correct:true, why:'Slide 13: SPF is primarily a measure of UVB protection and gives no information on UVA coverage; UVA protection is what the critical wavelength test behind "broad spectrum" assesses (slide 14; audio 11:30–12:00).'},
+  {t:'It blocks about 97% of UVA', correct:false, why:'Slide 15: SPF 30 blocks about 97% of UVB, not UVA.'},
+  {t:'Its critical wavelength is at least 370 nm', correct:false, why:'A critical wavelength of 370 nm or more is what allows the "broad spectrum" label, which this product lacks (slide 14).'},
+  {t:'It may claim to lower skin cancer risk', correct:false, why:'That claim needs broad spectrum with SPF 15 or greater (slide 14).'}],
+ teach:'SPF is the ratio of the UV dose that produces sunburn with the sunscreen to the dose that does without it (slide 13). SPF 15 blocks about 93% of UVB, SPF 30 about 97%, SPF 50 about 98% (slide 15).',
+ cite:SUN+' slides 13–15; audio 10:30–14:00'},
+
+{id:'L3C-044', skill:'adverse', prof:'Smith', tier:'new', topic:'l3c-spf', sub:'sel', concept:'photosens-drugs', multi:true,
+ tags:['adverse','photosensitivity','list'], source:'both',
+ stem:'A patient asks which of her medicines make her burn more easily in the sun. Which of these drugs are photosensitizing? Select all that apply.',
+ options:[
+  {t:'Doxycycline', correct:true, why:'PCol slide 44: photosensitivity in fair-skinned people is a side effect of oral tetracyclines (11/03 T 42–44); slide 45: doxycycline more so than minocycline or sarecycline.'},
+  {t:'Tazarotene', correct:true, why:'PCol slide 18: tazarotene causes photosensitivity.'},
+  {t:'Coal tar', correct:true, why:'PCol slide 54: coal tar is photosensitizing.'},
+  {t:'Methoxsalen', correct:true, why:'Slide 3: psoralens are photosensitizing compounds combined with UVA light (audio 00:30–00:45).'},
+  {t:'Adapalene', correct:false, why:'PCol slide 18: adapalene is photochemically stable ("sun stable"); a patient still needs sun protection because peeling removes outer skin (10/30 T 116–130).'},
+  {t:'Shale tar', correct:false, why:'PCol slide 57: shale tar has no photosensitizing activity, unlike coal tar.'}],
+ teach:'Patients on photosensitizing drugs need sun protection counseling (slide 18; audio 17:27–17:48), and slide 17 sets SPF greater than 45 for them. UVA is responsible for most phototoxic reactions with drugs (slide 8).',
+ note:'Slide 18 links to the OTC textbook table of photosensitizing drugs; its content is not on the slide, so the drugs here are those her own pharmacology slides call photosensitizing.',
+ cite:SUN+' slides 3, 8, 17–18; audio 00:30–00:45, 17:27–17:48'},
+
+{id:'L3C-065', skill:'tell', prof:'Smith', tier:'new', topic:'l3c-prod', sub:'blk', concept:'sunblock-ingredient',
+ tags:['tell'], source:'both',
+ stem:'A product\'s active ingredient is titanium dioxide. What kind of product is it, and how does it protect?',
+ options:[
+  {t:'A sunblock; it scatters and reflects UV', correct:true, why:'Slide 20: sunblocks, or physical sunscreens, are inorganic particulates that scatter or reflect visible, UV and infrared radiation; zinc oxide and titanium dioxide are the U.S. products (audio 18:55–19:35). The drug chart (Sun Protection page) lists titanium oxide and zinc oxide as physical sunscreens.'},
+  {t:'A sunscreen; it absorbs UV as heat', correct:false, why:'Absorbing UV and converting it to heat is how organic sunscreens such as avobenzone work (slide 22).'},
+  {t:'A sunscreen; it absorbs mainly UVB', correct:false, why:'Titanium dioxide is a physical blocker, giving UVA and UVB protection (slide 20).'},
+  {t:'A sunblock; it raises melanin in the skin', correct:false, why:'Raising melanin pigmentation is a psoralen effect (slide 3), not a sunblock action.'}],
+ teach:'Sunblocks suit prominently exposed areas like the nose and ears and situations where sun exposure cannot be limited; they may occlude pores and stain clothing, melt in hot sun, and lose protection after 2 hours of direct sun (slides 20–21).',
+ cite:SUN+' slides 3, 20–22; audio 18:55–21:05'},
+
+{id:'L3C-066', skill:'tell', prof:'Smith', tier:'new', topic:'l3c-prod', sub:'org', concept:'organic-ingredient',
+ tags:['tell','mechanism'], source:'both',
+ stem:'A sunscreen lists avobenzone and oxybenzone as its active ingredients. How do these protect the skin?',
+ options:[
+  {t:'They absorb UV and convert it to heat', correct:true, why:'Slide 22: organic sunscreens absorb UV radiation in the UVB and/or UVA range and convert it to heat energy (audio 21:05–21:30). The drug chart lists avobenzone (dibenzoylmethane) and oxybenzone (benzophenone) as chemical sunscreens.'},
+  {t:'They scatter and reflect UV light back', correct:false, why:'Scattering and reflecting is the sunblock action of inorganic particulates such as zinc oxide (slide 20).'},
+  {t:'They thicken the stratum corneum', correct:false, why:'Epidermal thickness affects tanning (slide 9); it is not how a sunscreen works.'},
+  {t:'They speed melanin production', correct:false, why:'Increased melanin is a psoralen effect (slide 3).'}],
+ teach:'Slide 25: avobenzone and oxybenzone, with PABA, carry the highest risk of dermatologic reactions; physical sunscreen ingredients are less likely to irritate. Slide 24: benzophenones have poor substantivity and can cause sensitization; dibenzoylmethane activity starts to fall after 15 minutes.',
+ cite:SUN+' slides 3, 9, 20, 22, 24–25; audio 21:05–23:40'},
+
+{id:'L3C-067', type:'match', skill:'tell', prof:'Smith', tier:'new', topic:'l3c-prod', sub:'org', concept:'sunscreen-families-match',
+ tags:['tell','match'], source:'slide',
+ stem:'Match each sun protection ingredient to its family.', left:'Ingredient', right:'Family',
+ pairs:[
+  {l:'Padimate O', r:'Aminobenzoate (PABA)', why:'Drug chart, Sun Protection page: octyl dimethyl PABA, padimate O, para-aminobenzoic acid. Slide 24: aminobenzoates are the most effective at absorbing UVB.'},
+  {l:'Octyl methoxycinnamate', r:'Cinnamate', why:'Drug chart: cinnamates. Slide 24: they do not adhere to skin well and depend on the vehicle.'},
+  {l:'Homosalate', r:'Salicylate', why:'Drug chart: salicylates. Slide 24: easily removed by water or perspiration.'},
+  {l:'Oxybenzone', r:'Benzophenone', why:'Drug chart: benzophenones. Slide 24: poor substantivity; can cause sensitization.'},
+  {l:'Menthyl anthranilate', r:'Anthranilate', why:'Drug chart: anthranilates. Slide 24: used only in combination products for broad UV coverage.'},
+  {l:'Avobenzone', r:'Dibenzoylmethane', why:'Drug chart: dibenzoylmethane. Slide 24: activity starts to decrease after 15 minutes.'},
+  {l:'Zinc oxide', r:'Oxide (physical sunblock)', why:'Drug chart: oxides, physical sunscreen. Slide 20: scatters or reflects UV.'}],
+ teach:'The first six are organic (chemical) sunscreens that absorb UV and release heat (slide 22); zinc oxide and titanium dioxide are physical sunblocks that scatter and reflect it (slide 20).',
+ note:'Ingredient names come from the course drug chart (2026 Drug Chart – Dermatology, Sun Protection page), a guide; the families and their properties are on slides 20–24.',
+ cite:SUN+' slides 20, 22, 24'}
 );
 
 /* Term glosses for the questions' explanations (see the kit's template for the format). */
@@ -10164,6 +10646,7 @@ const READ_LINKS = (() => {
     rAcne:   ['ref',   'ref-l1-acnemap', 'Reference: acne pathology and drugs'],
     rNR:     ['ref',   'ref-l1-nr', 'Reference: nuclear receptors'],
     rCS:     ['ref',   'ref-l1-steroids', 'Reference: topical corticosteroids'],
+    rTgt:    ['ref',   'ref-targets', 'Reference: drug targets, write it first'],
     // Smith 10/30 and 11/03 (PCol 16-76)
     t2:      ['tell',  'tell-l2', 'Tell apart: Lecture 2 (Smith 10/30)'],
     r2:      ['ref',   'ref-l2', 'Reference: Lecture 2 drugs (Smith 10/30)'],
@@ -10185,6 +10668,19 @@ const READ_LINKS = (() => {
 
   return {
     byKey: [
+      /* ---- Drug targets across Dr. Smith's lectures (added 2026-11-07, her Exam 1 hints);
+              listed first so these target questions open the targets list ---------- */
+      row('crisaborole-target pimecrolimus-target cyclosporine-cyclophilin tacrolimus-fkbp calcipotriene-moa', 'rTgt', 'r2'),
+      row('sarecycline-target risan-target tet-30s clinda-50s smx-paba tmp-dhfr dup-target secu-target brod-receptor ' +
+          'uste-p40 rux-jak12 abat-mech mtx-mech tnf-class-mech', 'rTgt', 'r3'),
+      row('retinoid-target', 'rTgt', 'g4'),
+      row('tgt-ad tgt-acne-abx tgt-ker-cyto tgt-pso-small tgt-biologics sunblock-ingredient organic-ingredient sunscreen-families-match', 'rTgt'),
+      row('tgt-tnf-make sarecycline-narrow tet-less-photo tet-anti-inflam doxy-mino-lipid tnf-why-pso tnf-bbw-young tofa-gi-perf', 'r3'),
+      row('tgt-retinoids', 'r2'),
+      row('bbw-which-drug', 'r2', 'r3'),
+      row('oral-cni-boxed-content', 'r2'),
+      row('ad-atopic-assoc ad-trend-sex pso-prevalence pso-prevalence-factors acne-adult-sex', 'g2'),
+      row('pso-trigger ad-initial-trigger acne-trigger', 'g3'),
       /* ---- Lecture 1, pathophysiology (Smith 10/29) ---------------------- */
       row('stratum-corneum keratinocyte-migration sebum-composition sebum-function', 'g1'),
       row('ad-incidence hygiene-hypothesis ad-inheritance pso-epi acne-epi acne-genetics', 'g2'),
@@ -10325,7 +10821,7 @@ const REFERENCE_HTML = `
 
 <h3 id="ref-l3">Lecture 3: Smith, 11/03 (Skin-PCol slides 43–76)</h3>
 <table class="reftab"><thead><tr><th>Drug</th><th>Class / make</th><th>Target or mechanism</th><th>Route (as taught)</th><th>Key AE or warning</th><th>Slide</th></tr></thead><tbody>
-<tr><td>Sarecycline, minocycline, doxycycline</td><td>Tetracyclines</td><td>30S; block aminoacyl-tRNA at acceptor site; bacteriostatic</td><td>Oral (acne)</td><td>GI N/V/D, pseudomembranous colitis (stop if blood in stool), teeth/bone in young, photosensitivity, superinfection; not in pregnancy or under 8 y; minocycline ototoxicity</td><td>43–45</td></tr>
+<tr><td>Sarecycline, minocycline, doxycycline</td><td>Tetracyclines</td><td>30S; block aminoacyl-tRNA at acceptor site; bacteriostatic</td><td>Oral (acne)</td><td>GI N/V/D, pseudomembranous colitis (stop if blood in stool), teeth/bone in young, photosensitivity, superinfection; not in pregnancy or under 8 y; minocycline ototoxicity. Slide 45: analogs absorb better from the GI tract than tetracycline; doxycycline and minocycline more lipid soluble (enter the follicle better); minocycline and sarecycline may be less photosensitizing; sarecycline narrower spectrum; acne efficacy may depend more on anti-inflammatory activity</td><td>43–45</td></tr>
 <tr><td>Clindamycin</td><td>Lincosamide (chart)</td><td>50S; prevents translocation; bacteriostatic</td><td>Oral, topical</td><td>Pseudomembranous colitis, impaired liver function; ~10% topical absorption; resistance</td><td>46</td></tr>
 <tr><td>Erythromycin, azithromycin</td><td>Macrolides</td><td>50S; prevents translocation; bacteriostatic</td><td>Oral, topical</td><td>Oral N/V/D, epigastric pain, many drug interactions (metabolism); topical burning/drying esp. with benzoyl peroxide; resistance</td><td>47</td></tr>
 <tr><td>Trimethoprim/sulfamethoxazole</td><td>Sulfonamide/pyrimidine</td><td>SMX: PABA competition; TMP: DHFR</td><td>—</td><td>— (not covered)</td><td>48–49</td></tr>
@@ -10345,7 +10841,7 @@ const REFERENCE_HTML = `
 <tr><td>Guselkumab</td><td>Human IgG1λ mAb</td><td>p19 of IL-23</td><td>—</td><td>—</td><td>68</td></tr>
 <tr><td>Tildrakizumab-asmn</td><td>Humanized IgG1κ mAb</td><td>p19 of IL-23</td><td>—</td><td>—</td><td>68</td></tr>
 <tr><td>Risankizumab</td><td>Humanized IgG1 mAb</td><td>p19 of IL-23</td><td>SubQ or IV</td><td>Severe infection, TB reactivation, skin cancer (less common)</td><td>69</td></tr>
-<tr><td>TNF-α inhibitor class</td><td>—</td><td>Bind TNF-α</td><td>—</td><td>BBW: serious infections; lymphoma and other malignancies</td><td>70</td></tr>
+<tr><td>TNF-α inhibitor class</td><td>—</td><td>Bind TNF-α, an inflammatory cytokine, keeping it from its receptors; fewer and smaller plaques</td><td>—</td><td>BBW: serious infections; lymphoma and other malignancies (some fatal, reported in children and adolescents)</td><td>70</td></tr>
 <tr><td>Etanercept</td><td>Fusion protein: two p75 soluble TNF receptors + human IgG1 Fc</td><td>TNF</td><td>SubQ</td><td>Injection site; case reports pancytopenia, demyelination</td><td>71</td></tr>
 <tr><td>Infliximab</td><td>Chimeric mAb (mouse/human IgG1)</td><td>TNF</td><td>IV</td><td>Anti-drug antibodies (14–40%, slide), infusion reactions (premedicate), infection, lupus-like syndrome</td><td>72</td></tr>
 <tr><td>Adalimumab</td><td>Human IgG1 mAb</td><td>TNF</td><td>SubQ</td><td>Injection site, infection; less antigenic</td><td>73</td></tr>
@@ -10354,6 +10850,72 @@ const REFERENCE_HTML = `
 <tr><td>Tofacitinib</td><td>Small molecule JAK inhibitor</td><td>JAK</td><td>Oral</td><td>BBW severe infection, lymphoma, other malignancy; caution GI perforation</td><td>76</td></tr>
 <tr><td>Ruxolitinib</td><td>Small molecule JAK inhibitor</td><td>JAK1, JAK2</td><td>Topical and oral (slide 76); see conflict</td><td>—</td><td>76</td></tr>
 <tr><td>Upadacitinib</td><td>Small molecule JAK inhibitor</td><td>JAK1, JAK2, maybe JAK3/TYK2</td><td>—</td><td>—</td><td>76</td></tr>
+</tbody></table>
+
+<h3 id="ref-targets">Drug targets: write it first, then check</h3>
+<p class="prose">Every drug on the course dermatology drug chart, in the chart's order of pages, with its target or mechanism as Dr. Smith's slides give it; each row opens to show it. Dr. Smith: "Be able to not just recognize a drugs target, but be able to write it down" (Exam 1 hints, 2026-11-07). The chart is a guide; the slides decide the content. The lice and scabies page (chart p. 7) is not in the Exam 1 lectures and is left out.</p>
+<h4>Atopic dermatitis (drug chart p. 2)</h4>
+<table class="reftab"><thead><tr><th>Drug</th><th style="width:24%">Source</th></tr></thead><tbody>
+<tr><td><details><summary><b>Crisaborole</b></summary>Phosphodiesterase 4 (PDE-4): cAMP is not broken down, so inflammatory cells are inhibited</details></td><td>PCol 32–33; 10/30 T 430–450</td></tr>
+<tr><td><details><summary><b>Pimecrolimus</b></summary>Calcineurin: less IL-2, less T-cell and mast cell activation</details></td><td>PCol 24–27; 10/30 T 360–365</td></tr>
+<tr><td><details><summary><b>Tacrolimus</b></summary>FKBP; the complex inhibits calcineurin</details></td><td>PCol 26</td></tr>
+<tr><td><details><summary><b>Dupilumab</b></summary>IL-4 receptor alpha subunit, shared by the IL-4 and IL-13 receptors</details></td><td>PCol 64</td></tr>
+<tr><td><details><summary><b>Ruxolitinib</b></summary>JAK1 and JAK2</details></td><td>PCol 76; T 574–576</td></tr>
+<tr><td><details><summary><b>Upadacitinib</b></summary>JAK: more potent at JAK1 and JAK2 than JAK3 and TYK2 in an enzyme assay; selectivity unsettled</details></td><td>PCol 76; T 576–578</td></tr>
+</tbody></table>
+<h4>Acne (drug chart p. 3)</h4>
+<table class="reftab"><thead><tr><th>Drug</th><th style="width:24%">Source</th></tr></thead><tbody>
+<tr><td><details><summary><b>Benzoyl peroxide</b></summary>Antimicrobial against P. acnes, plus peeling and comedolytic effects; benzoic acid is the probable active form</details></td><td>PCol 36</td></tr>
+<tr><td><details><summary><b>Sulfur</b></summary>Reduced to hydrogen sulfide in keratinocytes, which promotes peeling; bacteriostatic</details></td><td>PCol 38</td></tr>
+<tr><td><details><summary><b>Salicylic acid</b></summary>Solubilizes the cell surface proteins that keep the stratum corneum intact</details></td><td>PCol 39</td></tr>
+<tr><td><details><summary><b>Sarecycline, minocycline, doxycycline</b></summary>30S ribosomal subunit: blocks aminoacyl-tRNA binding at the acceptor site</details></td><td>PCol 43; T 27–31</td></tr>
+<tr><td><details><summary><b>Clindamycin</b></summary>50S ribosomal subunit: prevents translocation</details></td><td>PCol 46; T 53–55</td></tr>
+<tr><td><details><summary><b>Erythromycin, azithromycin</b></summary>50S ribosomal subunit</details></td><td>PCol 47</td></tr>
+<tr><td><details><summary><b>Trimethoprim/sulfamethoxazole</b></summary>Sulfamethoxazole: competes with PABA, blocking dihydrofolic acid synthesis. Trimethoprim: bacterial dihydrofolate reductase</details></td><td>PCol 48–49</td></tr>
+<tr><td><details><summary><b>Dapsone</b></summary>Leprosy: PABA antagonist. Acne (topical gel): anti-inflammatory; neutrophils a possible site</details></td><td>PCol 50</td></tr>
+<tr><td><details><summary><b>Metronidazole</b></summary>Unknown: may act on Demodex brevis or on neutrophil function</details></td><td>PCol 51</td></tr>
+<tr><td><details><summary><b>Tretinoin, adapalene</b></summary>Retinoic acid receptors RAR and RXR (nuclear receptors; RAR–RXR binds the RARE)</details></td><td>PCol 14, 17–18</td></tr>
+<tr><td><details><summary><b>Isotretinoin</b></summary>Retinoid (RAR/RXR); in cystic acne the mechanism is not known; appears to inhibit sebaceous gland size and function</details></td><td>PCol 14, 19</td></tr>
+<tr><td><details><summary><b>Spironolactone</b></summary>Antiandrogen (Dr. Smith gives the class only). Dr. Sikazwe: diminishes testosterone biosynthesis</details></td><td>Pathophys 37; DPAW 53</td></tr>
+</tbody></table>
+<h4>Psoriasis (drug chart pp. 4–5)</h4>
+<table class="reftab"><thead><tr><th>Drug</th><th style="width:24%">Source</th></tr></thead><tbody>
+<tr><td><details><summary><b>Coal tar</b></summary>Antiproliferative and anti-inflammatory; crosslinks DNA to inhibit cell division</details></td><td>PCol 53</td></tr>
+<tr><td><details><summary><b>Shale tar (ichthammol)</b></summary>Cytotoxic; mechanism unknown</details></td><td>PCol 57</td></tr>
+<tr><td><details><summary><b>Selenium sulfide, zinc pyrithione</b></summary>Cytostatic and antifungal; mechanism unknown</details></td><td>PCol 57</td></tr>
+<tr><td><details><summary><b>Anthralin</b></summary>Keratinocyte mitochondria (antiproliferative); also prevents T-lymphocyte activation</details></td><td>PCol 55</td></tr>
+<tr><td><details><summary><b>Methotrexate</b></summary>Dihydrofolate reductase (DHFR): less THF, fewer purines</details></td><td>PCol 59; T 215–220</td></tr>
+<tr><td><details><summary><b>Abatacept</b></summary>CD80/86 on antigen-presenting cells, so CD28 cannot bind (blocks positive signal 2)</details></td><td>PCol 63; T 316–323</td></tr>
+<tr><td><details><summary><b>Etanercept, adalimumab, infliximab, golimumab, certolizumab pegol</b></summary>TNF-α, kept from its receptors on inflammatory cells</details></td><td>PCol 70–74; T 493–495</td></tr>
+<tr><td><details><summary><b>Tofacitinib</b></summary>Janus kinase (JAK)</details></td><td>PCol 76</td></tr>
+<tr><td><details><summary><b>Ustekinumab</b></summary>p40 subunit shared by IL-12 and IL-23</details></td><td>PCol 67</td></tr>
+<tr><td><details><summary><b>Guselkumab, tildrakizumab-asmn, risankizumab</b></summary>p19 subunit of IL-23</details></td><td>PCol 68–69</td></tr>
+<tr><td><details><summary><b>Secukinumab, ixekizumab</b></summary>IL-17A cytokine</details></td><td>PCol 66</td></tr>
+<tr><td><details><summary><b>Brodalumab</b></summary>IL-17 receptor A</details></td><td>PCol 66; T 422</td></tr>
+<tr><td><details><summary><b>Acitretin, tazarotene</b></summary>Retinoic acid receptors RAR and RXR</details></td><td>PCol 14, 18, 20</td></tr>
+<tr><td><details><summary><b>Calcipotriene</b></summary>Vitamin D receptor (VDR), which pairs with RXR-α</details></td><td>PCol 21</td></tr>
+<tr><td><details><summary><b>Methoxsalen</b></summary>DNA: intercalates after activation by UVA (320–340 nm)</details></td><td>PCol 78; Sun 3</td></tr>
+<tr><td><details><summary><b>Cyclosporine</b></summary>Cyclophilin; the complex inhibits calcineurin</details></td><td>PCol 26</td></tr>
+<tr><td><details><summary><b>Apremilast</b></summary>Phosphodiesterase 4 (PDE-4), as crisaborole</details></td><td>PCol 34; 10/30 T 464–466</td></tr>
+<tr><td><details><summary><b>Petrolatum</b></summary>Emollient, no drug target (chart). Dr. Sikazwe: fills gaps between scales and prevents water loss</details></td><td>Chart p. 5; DPAW 15</td></tr>
+<tr><td><details><summary><b>Zinc oxide (skin protectant)</b></summary>Physical sunscreen, no drug target (chart); as a sunblock it scatters and reflects UV</details></td><td>Chart p. 5; Sun 20</td></tr>
+<tr><td><details><summary><b>Ketoconazole</b></summary>Azole antifungal (chart). Dr. Sikazwe: diminishes testosterone biosynthesis; strong CYP3A4 inhibitor</details></td><td>Chart p. 5; DPAW 53</td></tr>
+</tbody></table>
+<h4>Topical steroids (drug chart p. 6)</h4>
+<table class="reftab"><thead><tr><th>Drug</th><th style="width:24%">Source</th></tr></thead><tbody>
+<tr><td><details><summary><b>Clobetasol propionate to hydrocortisone (all potency classes)</b></summary>Glucocorticoid receptor; the drug–receptor complex binds the GRE or holds NF-kB and AP-1 off the DNA</details></td><td>PCol 5–7, 10</td></tr>
+</tbody></table>
+<h4>Sun protection (drug chart p. 1)</h4>
+<table class="reftab"><thead><tr><th>Drug</th><th style="width:24%">Source</th></tr></thead><tbody>
+<tr><td><details><summary><b>Padimate O (octyl dimethyl PABA)</b></summary>Organic sunscreen (aminobenzoate): absorbs UV, mainly UVB, and releases heat</details></td><td>Sun 22, 24</td></tr>
+<tr><td><details><summary><b>Octyl methoxycinnamate</b></summary>Organic sunscreen (cinnamate): absorbs UV and releases heat</details></td><td>Sun 22, 24</td></tr>
+<tr><td><details><summary><b>Homosalate, 2-ethylhexyl salicylate</b></summary>Organic sunscreen (salicylate): absorbs UV and releases heat</details></td><td>Sun 22, 24</td></tr>
+<tr><td><details><summary><b>Oxybenzone, dioxybenzone</b></summary>Organic sunscreen (benzophenone): absorbs UV and releases heat</details></td><td>Sun 22, 24</td></tr>
+<tr><td><details><summary><b>Menthyl anthranilate</b></summary>Organic sunscreen (anthranilate), in combination products for broad coverage</details></td><td>Sun 22, 24</td></tr>
+<tr><td><details><summary><b>Avobenzone</b></summary>Organic sunscreen (dibenzoylmethane): absorbs UV and releases heat</details></td><td>Sun 22, 24</td></tr>
+<tr><td><details><summary><b>Bemotrizinol</b></summary>Organic chemical sunscreen (chart); Dr. Sikazwe: UVB/UVA chromophore</details></td><td>Chart p. 1; DPAW 66</td></tr>
+<tr><td><details><summary><b>Zinc oxide, titanium dioxide</b></summary>Physical sunblock: inorganic particles scatter or reflect UV (UVA and UVB)</details></td><td>Sun 20</td></tr>
+<tr><td><details><summary><b>Benzocaine, dibucaine, tetracaine, lidocaine</b></summary>Chart class: Na channel blockers (topical anesthetics for sunburn relief); not on her sun slides</details></td><td>Chart p. 1</td></tr>
 </tbody></table>
 
 <h3 id="ref-s3">Lecture 3: Sikazwe, 11/03 (DPAW pages 1–26)</h3>
@@ -10543,17 +11105,17 @@ const GUIDE_HTML = `
 <section class="gobj" id="gobj-l1-2">
 <h3>Lecture 1 &mdash; Objective 2 of 5: epidemiology of the three diseases</h3>
 <div class="gbar"><span>OBJECTIVE (slide 3)</span><b>Differentiate between the epidemiologic aspects of the three diseases</b><i>slides 10, 20, 31</i></div>
-<div class="gpt"><h5>Atopic dermatitis (slide 10)</h5><ul><li>15&ndash;30% of children and 2&ndash;10% of adults in developed countries; males and females alike; lower in rural areas (hygiene hypothesis); two- to threefold risk with one atopic parent, three- to fivefold with two.</li></ul></div>
-<div class="gpt"><h5>Psoriasis (slide 20)</h5><ul><li>About 3% of the US population; the most common immune-mediated inflammatory disease worldwide; males and females equally; about 30% have a first-degree relative.</li></ul></div>
-<div class="gpt"><h5>Acne (slides 31, 35)</h5><ul><li>Lifetime prevalence approaches 90%; onset at puberty with androgens; more severe in boys in puberty, in women in adulthood; 81% likelihood if both parents had acne.</li></ul></div>
+<div class="gpt"><h5>Atopic dermatitis (slide 10)</h5><ul><li>15&ndash;30% of children and 2&ndash;10% of adults in developed countries; prevalence risen over recent decades; males and females alike; lower in rural areas (hygiene hypothesis); goes with asthma and rhinitis (atopic conditions); two- to threefold risk with one atopic parent, three- to fivefold with two.</li></ul></div>
+<div class="gpt"><h5>Psoriasis (slide 20)</h5><ul><li>A genetic basis that probably needs environmental triggers; about 3% of the US population; the most common immune-mediated inflammatory disease worldwide; prevalence varies with climate, sun exposure and ethnicity; males and females equally; about 30% have a first-degree relative.</li></ul></div>
+<div class="gpt"><h5>Acne (slides 31, 35)</h5><ul><li>Lifetime prevalence approaches 90%; onset at puberty with androgens; ages 25&ndash;58: 12% of women, 3% of men; more severe in boys in puberty, in women in adulthood; 81% likelihood if both parents had acne.</li></ul></div>
 <div class="gtell"><b>Tell apart</b><ul><li>3% is psoriasis; 15&ndash;30% of children is AD; about 90% lifetime is acne.</li></ul></div>
 </section>
 
 <section class="gobj" id="gobj-l1-3">
 <h3>Lecture 1 &mdash; Objective 3 of 5: etiologies and pathologies</h3>
 <div class="gbar"><span>OBJECTIVE (slide 3)</span><b>Describe the etiologies and pathologies for each of these three conditions</b><i>slides 13&ndash;16, 19&ndash;24, 32&ndash;35</i></div>
-<div class="gpt"><h5>Atopic dermatitis (slides 13&ndash;16)</h5><ul><li>T-cell mediated, IgE-independent at first; skin barrier dysfunction; deviation toward TH2; IgE-mediated reactions on later exposures; secondary infection.</li><li>FLG &rarr; profilaggrin &rarr; filaggrins &rarr; barrier; variants let allergens in. About 40% of people lacking FLG do not develop AD.</li></ul></div>
-<div class="gpt"><h5>Psoriasis (slides 19&ndash;24)</h5><ul><li>Trauma &rarr; APCs present antigen to T cells &rarr; TNF-alpha, interferon-gamma, IL-23, IL-17 &rarr; keratinocyte hyperproliferation and chronic systemic inflammation.</li><li>Keratinocytes: 1.5 days to divide and 4 to shed, against 13 and 26 normally. Koebner response; lithium and beta blockers worsen it.</li></ul></div>
+<div class="gpt"><h5>Atopic dermatitis (slides 13&ndash;16)</h5><ul><li>The first trigger is unknown: neuropeptides, irritation or scratching may release proinflammatory cytokines from keratinocytes (T 163&ndash;169).</li><li>T-cell mediated, IgE-independent at first; skin barrier dysfunction; deviation toward TH2; IgE-mediated reactions on later exposures; secondary infection.</li><li>FLG &rarr; profilaggrin &rarr; filaggrins &rarr; barrier; variants let allergens in. About 40% of people lacking FLG do not develop AD.</li></ul></div>
+<div class="gpt"><h5>Psoriasis (slides 19&ndash;24)</h5><ul><li>Trauma (bug bite, skin infection) &rarr; APCs present antigen to T cells &rarr; TNF-alpha, interferon-gamma, IL-23, IL-17 &rarr; keratinocyte hyperproliferation and chronic systemic inflammation.</li><li>Keratinocytes: 1.5 days to divide and 4 to shed, against 13 and 26 normally. Koebner response; lithium and beta blockers worsen it.</li></ul></div>
 <div class="gpt"><h5>Acne (slides 32&ndash;35)</h5><ul><li>Androgens &rarr; more sebum, altered keratinization in the duct, P. acnes colonization, inflammation. P. acnes lipase makes free fatty acids from sebum glycerides.</li></ul></div>
 <!--DIA:acne-cascade-->
 <div class="gpoll"><b>Her polls (slide 38)</b><ul><li>Major pathology of AD: skin barrier dysfunction (TRUE); keratinocyte hyperproliferation (FALSE, psoriasis); excess sebum (FALSE, acne).</li><li>Major pathology of psoriasis: keratinocyte hyperproliferation (TRUE).</li><li>Major pathology of acne: excess sebum production (TRUE). Keratinocyte hyperproliferation is FALSE: &ldquo;This is a feature of psoriasis&rdquo; (T 573&ndash;577).</li></ul></div>
