@@ -528,7 +528,7 @@ QUESTIONS.push(
  teach:'Because psoriasis is autoimmune, suppressing the immune response is one of its treatment goals (slide 13; T 848–850).',
  cite:S3+' slide 13; T 846–850'},
 
-{id:'S3-041', skill:'class', prof:'Sikazwe', tier:'new', topic:'sk-beyond', sub:'pso', concept:'pso-systemic', lowYield:true, unassigned:true, multi:true,
+{id:'S3-041', skill:'class', prof:'Sikazwe', tier:'new', topic:'sk-beyond', sub:'pso', concept:'pso-systemic-sikazwe', lowYield:true, unassigned:true, multi:true,
  tags:['list'], source:'both',
  stem:'Which are systemic non-biological agents for psoriasis? Select all that apply.',
  options:[
