@@ -145,12 +145,12 @@ const REFERENCE_HTML = `
 </tbody></table>
 <h4>Sun protection (drug chart p. 1)</h4>
 <table class="reftab"><thead><tr><th>Drug</th><th style="width:24%">Source</th></tr></thead><tbody>
-<tr><td><details><summary><b>Padimate O (octyl dimethyl PABA)</b></summary>Organic sunscreen (aminobenzoate): absorbs UV, mainly UVB, and releases heat</details></td><td>Sun 22, 24</td></tr>
-<tr><td><details><summary><b>Octyl methoxycinnamate</b></summary>Organic sunscreen (cinnamate): absorbs UV and releases heat</details></td><td>Sun 22, 24</td></tr>
-<tr><td><details><summary><b>Homosalate, 2-ethylhexyl salicylate</b></summary>Organic sunscreen (salicylate): absorbs UV and releases heat</details></td><td>Sun 22, 24</td></tr>
-<tr><td><details><summary><b>Oxybenzone, dioxybenzone</b></summary>Organic sunscreen (benzophenone): absorbs UV and releases heat</details></td><td>Sun 22, 24</td></tr>
-<tr><td><details><summary><b>Menthyl anthranilate</b></summary>Organic sunscreen (anthranilate), in combination products for broad coverage</details></td><td>Sun 22, 24</td></tr>
-<tr><td><details><summary><b>Avobenzone</b></summary>Organic sunscreen (dibenzoylmethane): absorbs UV and releases heat</details></td><td>Sun 22, 24</td></tr>
+<tr><td><details><summary><b>Padimate O (octyl dimethyl PABA)</b></summary>Organic sunscreen (aminobenzoate): absorbs UV, mainly UVB, and releases heat</details></td><td>Chart p. 1 (ingredient and family); Sun 22, 24</td></tr>
+<tr><td><details><summary><b>Octyl methoxycinnamate</b></summary>Organic sunscreen (cinnamate): absorbs UV and releases heat</details></td><td>Chart p. 1 (ingredient and family); Sun 22, 24</td></tr>
+<tr><td><details><summary><b>Homosalate, 2-ethylhexyl salicylate</b></summary>Organic sunscreen (salicylate): absorbs UV and releases heat</details></td><td>Chart p. 1 (ingredient and family); Sun 22, 24</td></tr>
+<tr><td><details><summary><b>Oxybenzone, dioxybenzone</b></summary>Organic sunscreen (benzophenone): absorbs UV and releases heat</details></td><td>Chart p. 1 (ingredient and family); Sun 22, 24</td></tr>
+<tr><td><details><summary><b>Menthyl anthranilate</b></summary>Organic sunscreen (anthranilate), in combination products for broad coverage</details></td><td>Chart p. 1 (ingredient and family); Sun 22, 24</td></tr>
+<tr><td><details><summary><b>Avobenzone</b></summary>Organic sunscreen (dibenzoylmethane): absorbs UV and releases heat</details></td><td>Chart p. 1 (ingredient and family); Sun 22, 24</td></tr>
 <tr><td><details><summary><b>Bemotrizinol</b></summary>Organic chemical sunscreen (chart); Dr. Sikazwe: UVB/UVA chromophore</details></td><td>Chart p. 1; DPAW 66</td></tr>
 <tr><td><details><summary><b>Zinc oxide, titanium dioxide</b></summary>Physical sunblock: inorganic particles scatter or reflect UV (UVA and UVB)</details></td><td>Sun 20</td></tr>
 <tr><td><details><summary><b>Benzocaine, dibucaine, tetracaine, lidocaine</b></summary>Chart class: Na channel blockers (topical anesthetics for sunburn relief); not on her sun slides</details></td><td>Chart p. 1</td></tr>
