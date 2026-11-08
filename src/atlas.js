@@ -211,7 +211,7 @@ const ATLAS = (() => {
      {
       "plain": "steroid numbering skeleton",
       "n": "Steroid C-atom numbering skeleton",
-      "t": "Numbering runs 1 to 10 as a loop around rings A and B, 11 to 17 as a snake over rings C and D, then 18 (methyl on C-13) and 19 (methyl on C-10), then 20 onward on the side chain at C-17 (slide 20; T 1003–1017, 1084–1099).",
+      "t": "C-1 to C-10 run around rings A and B; numbering restarts at C-11 and runs through rings C and D to C-17; C-18 and C-19 are the angular methyls on C-13 and C-10; the side chain at C-17 starts at C-20 (slide 20; T 1003–1017, 1084–1099).",
       "e": "\"If you know where your 1 is, you know where your 11 is, and your 17, you're good to go\" (T 1098–1099).",
       "slide": 20,
       "meta": {
@@ -2204,10 +2204,12 @@ const FG = ATLAS.FG, FGQ = ATLAS.FGQ;
    gen_atlas.py). The core's Atlas view (views.js renderAtlas) draws the
    tiles; this rearranges each tile, without changing the core, into:
      1. the priority badge (core / reference only / needs verification),
-        the deck page and exam, and "Not on the assigned pages" where the
-        item is outside Dr. Sikazwe's assigned pages (11/06), as one short line;
-     2. "Core learning": the tile's main text (what is shaded and why), with
-        its inline citations moved to part 5;
+        the deck page, and either "Exam 1" (core items on Dr. Sikazwe's
+        assigned pages of 11/06 only) or "Not on the assigned pages" (items
+        outside them), as one short line;
+     2. the tile's main text (what is shaded and why), headed by its
+        priority ("Core learning", "Reference" or "Needs verification"), with
+        its inline citations moved to part 6;
      3. "Also in the lecture": the other taught facts, as a short list;
      4. "Compare structures" where a lecture drawing differs from the drug;
      5. "Deeper understanding" (collapsed, only where a published source is
@@ -2266,6 +2268,9 @@ const ATLAS_UI = (() => {
     'stereo-unspecified': 'same molecule; stereo left open in one source', 'tautomer': 'same molecule; PubChem stores another tautomer',
     'teaching-structure': 'teaching structure'};
   const ANON = 'Chemical structure to identify';
+  // heading over the main text: follows the priority, so a reference or
+  // unverified tile never reads "Core learning"
+  const HEAD = {core: 'Core learning', reference: 'Reference', verify: 'Needs verification'};
 
   const css = `
 .attile{min-width:0}
@@ -2349,7 +2354,10 @@ const ATLAS_UI = (() => {
       badge.textContent = LABEL[pr];
       badge.title = TITLE[pr];
       const pg = el('span', 'atpg');
-      pg.textContent = 'DPAW p. ' + it.slide + ' · ' + (m.exam || 'Exam 1');
+      // "Exam 1" only on core items from the assigned pages; an item outside
+      // them shows "Not on the assigned pages" in its place
+      const onExam = pr === 'core' && m.assigned !== false;
+      pg.textContent = 'DPAW p. ' + it.slide + (onExam ? ' · ' + (m.exam || 'Exam 1') : '');
       row.append(badge, pg);
       if (m.assigned === false) {               // not on Dr. Sikazwe's assigned pages (11/06); names nothing, so it stays in Hide names
         const na = el('span', 'atunassigned');
@@ -2363,9 +2371,9 @@ const ATLAS_UI = (() => {
       const cites = [];
       const pt = ATLAS_UI.strip(it.t);
       if (tell) {
-        if (pt.clean) { tell.textContent = pt.text; pt.cites.forEach(c => cites.push(['Core learning', c])); }
+        if (pt.clean) { tell.textContent = pt.text; pt.cites.forEach(c => cites.push([HEAD[pr] || HEAD.core, c])); }
         else unparsed.push(it.plain + ' (main text)');
-        const lbl = el('p', 'atlbl'); lbl.textContent = 'Core learning';
+        const lbl = el('p', 'atlbl'); lbl.textContent = HEAD[pr] || HEAD.core;
         t.insertBefore(lbl, tell);
       }
 
@@ -2417,7 +2425,8 @@ const ATLAS_UI = (() => {
 
       // 6. sources and verification
       const rows = [];
-      rows.push(['Lecture', 'DPAW deck p. ' + esc(it.slide) + ' · ' + esc(m.exam || 'Exam 1')]);
+      rows.push(['Lecture', 'DPAW deck p. ' + esc(it.slide) + ' · ' + esc(m.exam || 'Exam 1') + ' lecture' +
+        (m.assigned === false ? '; not on the assigned pages' : '')]);
       if (cites.length) rows.push(['Cited in this tile', '<ul>' + cites.map(([part, x]) => '<li>' + esc(part) + ': ' + esc(x) + '</li>').join('') + '</ul>']);
       rows.push(['Priority', esc(LABEL[pr]) + (m.reason ? ': ' + esc(m.reason) : '') + (m.psrc ? ' (' + esc(m.psrc) + ')' : '')]);
       const recs = [];

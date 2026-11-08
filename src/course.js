@@ -169,7 +169,7 @@ const COURSE = {
             ['Practice papers', 'These practice papers draw single-answer questions only; the select-all and drug-target matching questions are in the topic drills, and Reference has a drug-target list to write out before revealing.']],
      factsMain:['Covers'],
      // `unassigned: undefined` keeps a question marked unassigned:true out of both pools:
-     // the 23 on pages outside Dr. Sikazwe's assigned pages for Exam 1 (his list of
+     // the 24 on pages outside Dr. Sikazwe's assigned pages for Exam 1 (his list of
      // 11/06; topic 'sk-beyond' in q5_L04.js). A pool filter is what the paper, the pool
      // cards on Weak spots and the exam-date scheduling read (shell.html poolFilter).
      pools:[

@@ -5,7 +5,7 @@
    reviews/NARRATION_PLAN.md 7.1), to be moved into a kit feature module when
    the kit has one. Written in the shape of PH's player (exam1-drill/src/app.js:
    gwBars, gwOpen, gwPlay, gwShow, gwPause, gwStop, gwEnd) so that port is a
-   move. The kit core (25c643d, and kit main since) is not changed: this is a
+   move. The kit core (08be7a2, the pin in course.js) is not changed: this is a
    course data file (course.js `files`), so the build puts it into the page
    before views.js, in the same script. At load it wraps renderGuide() the way
    likely_ui.js wraps renderQuiz().
@@ -546,6 +546,159 @@ const WALK_UI = (() => {
       return r;
     };
   } catch (e) { console.error('The walkthrough player could not be added; the rest of the page is unaffected.', e); }
-  return {SECS, BY, DECK_SLIDES, order: () => ORDER.slice(), state: () => GW && {id: GW.id, i: GW.i, playing: GW.playing, mode: GW.h && GW.h.mode},
-          open: gwOpen, close: gwClose, play: gwPlay, pause: gwPause, stop: gwStop, show: gwShow, clipKey};
+  return {SECS, BY, DECK_SLIDES, DECKS, order: () => ORDER.slice(), state: () => GW && {id: GW.id, i: GW.i, playing: GW.playing, mode: GW.h && GW.h.mode},
+          open: gwOpen, close: gwClose, play: gwPlay, pause: gwPause, stop: gwStop, show: gwShow, clipKey, pos: posOf, panel};
+})();
+
+/* ==========================================================================
+   THE WALKTHROUGH AS THE OBVIOUS START (Louis, 2026-11-08: Phase 1 of the
+   DEENT plan, its section 8). Course-level, temporary like the player above.
+     - Topics: each topic card that has a walkthrough (WALK_SECTIONS `topics`)
+       gets one row per walkthrough at the top of its list: the walkthrough's
+       title, "Listen" (opens its guide section with the player open and
+       playing) and "Read guide" (opens its guide section, `guide`, at the top).
+     - Start here, "Learn a topic": opens the Guides at a walkthrough, its player
+       open (not playing), focus on Play: the one the reader left part-way,
+       else the first walkthrough of the first topic not yet mastered, else the
+       first walkthrough. Its small text names that walkthrough.
+     - Guides: a short index at the top (collapsed, "Narrated walkthroughs
+       (40)"), by deck, each entry opening that walkthrough's player.
+   Every target is a real button (44 px on touch screens), keyboard focus
+   moves to the player's Play button or the section heading it opens, and the
+   core's Back button returns to the Topics. Reads progress only through the
+   core's poolFor / masteryOf (mastery, never written); stores nothing.
+   ========================================================================== */
+(function learnLinks() {
+  if (typeof WALK_UI === 'undefined' || !WALK_UI || typeof renderTopics !== 'function') return;
+  const {SECS, DECKS} = WALK_UI;
+  const esc = NARR.esc;
+  const byTopic = id => SECS.filter(w => Array.isArray(w.topics) && w.topics.includes(id) && w.guide);
+  const css = `
+#v-topics .lrnrow{display:flex;flex-wrap:wrap;align-items:center;gap:6px 8px;padding:8px 8px 10px;border-bottom:1px solid var(--line-soft,var(--line))}
+#v-topics .lrnrow .lrnt{flex:1 1 12em;min-width:0;font-size:14.5px;overflow-wrap:anywhere}
+#v-topics .lrnrow .lrnt b{font-weight:600}
+#v-topics .lrnrow .lrnt small{display:block;color:var(--text-dim);font-size:12.5px}
+#v-topics .lrnrow .lrnb{display:flex;gap:6px;flex-wrap:wrap}
+#v-topics .lrnrow button,.wkindex button{min-height:44px;min-width:44px}
+.wkindex{margin:6px 0 16px;border:1px solid var(--line);border-radius:var(--r,10px);background:var(--paper);padding:0 14px}
+.wkindex>summary{cursor:pointer;min-height:44px;display:flex;align-items:center;font-weight:600;color:var(--accent);list-style:none}
+.wkindex>summary::-webkit-details-marker{display:none}
+.wkindex>summary::after{content:' \\25B8';display:inline-block;margin-left:6px;transition:transform .15s}
+.wkindex[open]>summary::after{transform:rotate(90deg)}
+.wkindex h3{font-size:14px;margin:10px 0 2px}
+.wkindex ol{margin:0 0 8px;padding:0;list-style:none}
+.wkindex li{margin:0}
+.wkindex li button{display:block;background:none;border:0;border-top:1px solid var(--line-soft,var(--line));padding:10px 0;color:var(--accent);text-align:left;font:inherit;font-size:14px;cursor:pointer;width:100%}
+.wkindex li button:hover{text-decoration:underline}
+.wkindex li button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+@media (prefers-reduced-motion: reduce){.wkindex>summary::after{transition:none}}`;
+  const addCss = () => {
+    if (document.getElementById('lrncss')) return;
+    const st = document.createElement('style'); st.id = 'lrncss'; st.textContent = css; document.head.appendChild(st);
+  };
+  const focusEl = el => { if (!el) return; try { el.focus({preventScroll: true}); } catch (e) { el.focus(); } };
+  // the Guides at one walkthrough: its section in view, the player open (playing when asked)
+  function go(id, how) {
+    const w = WALK_UI.BY[id]; if (!w) return;
+    if (typeof jump === 'function') jump('guide', w.guide); else show('guide');
+    const sec = document.getElementById(w.guide);
+    if (how === 'read') {
+      const h = sec && sec.querySelector('h3');
+      if (sec) settle(sec, h || sec);
+      if (h) { if (!h.hasAttribute('tabindex')) h.setAttribute('tabindex', '-1'); focusEl(h); }
+      return;
+    }
+    const p = WALK_UI.panel(id) || WALK_UI.open(id, false);
+    if (how === 'listen') WALK_UI.play(id, WALK_UI.state() && WALK_UI.state().id === id ? WALK_UI.state().i : WALK_UI.pos(id));
+    const bar = document.querySelector(`.wkbar[data-wk="${id}"]`);
+    // the section heading stays in view when the bar is near it, else the bar is the top
+    const target = sec && bar && bar.getBoundingClientRect().top - sec.getBoundingClientRect().top < window.innerHeight * 0.45 ? sec : bar;
+    if (target) settle(target, bar);
+    focusEl(p && p.querySelector('[data-wkplay]'));
+  }
+  // images above the target can still be loading and push it down: the page is
+  // put back on it a few times in the first two seconds, unless the reader
+  // scrolls, taps or presses a key first
+  function settle(target, bar) {
+    const off = () => (typeof headerOffset === 'function' ? headerOffset() : 0);
+    const put = () => window.scrollTo({top: target.getBoundingClientRect().top + window.scrollY - off(), behavior: 'auto'});
+    put();
+    let moved = false;
+    const stop = () => { moved = true; };
+    const evs = ['wheel', 'touchstart', 'keydown', 'mousedown'];
+    evs.forEach(ev => window.addEventListener(ev, stop, {once: true, passive: true}));
+    [250, 700, 1300, 2000].forEach((ms, k, all) => setTimeout(() => {
+      if (!moved && bar && document.contains(bar)) {
+        const r = bar.getBoundingClientRect();
+        if (r.top < off() - 1 || r.bottom > window.innerHeight) put();
+      }
+      if (k === all.length - 1) evs.forEach(ev => window.removeEventListener(ev, stop));
+    }, ms));
+  }
+  // "Learn a topic": the walkthrough left part-way, else the first one of the first topic not mastered
+  function firstWalk() {
+    const left = SECS.find(w => WALK_UI.pos(w.id) > 0);
+    if (left) return {w: left, why: 'resume'};
+    for (const t of TOPICS) {
+      if (t.optional) continue;
+      const ws = byTopic(t.id); if (!ws.length) continue;
+      const pool = poolFor(t.id, null); if (!pool.length) continue;
+      const m = masteryOf(pool);
+      if (!m.total || m.mastered < m.total) return {w: ws[0], t};
+    }
+    return {w: SECS.find(w => w.guide)};
+  }
+
+  const base = renderTopics;
+  renderTopics = function () {
+    const r = base.apply(this, arguments);
+    try {
+      const el = document.getElementById('v-topics'); if (!el || !el.querySelectorAll) return r;
+      addCss();
+      el.querySelectorAll('details.topic').forEach(card => {
+        const b = card.querySelector('button[data-t]:not([data-t=""])'), subs = card.querySelector('.subs');
+        if (!b || !subs || subs.querySelector('.lrnrow')) return;
+        const ws = byTopic(b.dataset.t); if (!ws.length) return;
+        subs.insertAdjacentHTML('afterbegin', ws.map(w => {
+          const at = WALK_UI.pos(w.id);
+          return `<div class="lrnrow"><span class="lrnt"><b>${esc(w.title || '')}</b><small>Narrated walkthrough · ${w.parts.length} parts${at ? ' · left at part ' + (at + 1) : ''}</small></span>` +
+            `<span class="lrnb"><button type="button" class="btn small" data-lrn="listen" data-wid="${esc(w.id)}" aria-label="${esc('Listen to the walkthrough: ' + (w.title || ''))}">${at ? 'Resume' : 'Listen'}</button>` +
+            `<button type="button" class="btn small ghost" data-lrn="read" data-wid="${esc(w.id)}" aria-label="${esc('Read the guide: ' + (w.title || ''))}">Read guide</button></span></div>`;
+        }).join(''));
+      });
+      const lb = el.querySelector('#startHere button[data-start="learn"]');
+      const f = lb && firstWalk();
+      if (f && f.w) {
+        const sm = lb.querySelector('small');
+        if (sm) sm.textContent = (f.why === 'resume' ? 'Resume the walkthrough: ' : 'Listen to or read the walkthrough: ') + (f.w.title || '');
+        lb.onclick = ev => { ev.preventDefault(); go(f.w.id, 'open'); };
+      }
+    } catch (e) { console.error('The walkthrough links could not be added to the Topics; the topics are unaffected.', e); }
+    return r;
+  };
+  document.addEventListener('click', e => {
+    const b = e.target && e.target.closest ? e.target.closest('[data-lrn]') : null;
+    if (b) go(b.dataset.wid, b.dataset.lrn);
+  });
+
+  const og = renderGuide;
+  renderGuide = function () {
+    const r = og.apply(this, arguments);
+    try {
+      const v = document.getElementById('v-guide'); if (!v || v.querySelector('.wkindex')) return r;
+      const bars = [...v.querySelectorAll('.wkbar[data-wk]')].map(b => WALK_UI.BY[b.dataset.wk]).filter(Boolean);
+      if (!bars.length) return r;
+      addCss();
+      const groups = [];
+      bars.forEach(w => { let g = groups[groups.length - 1]; if (!g || g.deck !== w.deck) groups.push(g = {deck: w.deck, ws: []}); g.ws.push(w); });
+      const d = document.createElement('details');
+      d.className = 'wkindex'; d.id = 'wkindex';
+      d.innerHTML = `<summary>Narrated walkthroughs (${bars.length}): pick one to open its player</summary>` + groups.map(g =>
+        `<h3>${esc(DECKS[g.deck] || g.deck)}</h3><ol role="list">${g.ws.map(w =>
+          `<li><button type="button" data-lrn="open" data-wid="${esc(w.id)}">${esc(w.title || w.id)}</button></li>`).join('')}</ol>`).join('');
+      const intro = v.querySelector('h2 + p.sub') || v.querySelector('h2');
+      if (intro) intro.after(d); else v.prepend(d);
+    } catch (e) { console.error('The walkthrough index could not be drawn; the guide is unaffected.', e); }
+    return r;
+  };
 })();

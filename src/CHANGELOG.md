@@ -8,6 +8,14 @@ characters.
 
 Every update adds its bullets here in the same commit that makes the change.
 
+## 2026-11-08 (Walkthroughs first; Atlas labels)
+- Topics: each topic with a narrated walkthrough now has Listen and Read guide buttons on its card.
+- Learn a topic opens a walkthrough in the Guides, its player ready, not the top of the page.
+- Guides: a list of all 40 narrated walkthroughs at the top, by deck; each opens its player.
+- Atlas: the heading over a tile's text follows its badge: Core learning, Reference or Needs verification.
+- Atlas: "Exam 1" now shows only on core structures from the assigned pages.
+- Atlas: structures off Dr. Sikazwe's assigned pages say "Not on the assigned pages" instead of "Exam 1".
+
 ## 2026-11-08 (Reference and Tell apart tables)
 - Reference and Tell apart: on a phone, each wide table row is now a card with its column names; no sideways scrolling.
 - Long cells are split into short labelled lines; metabolic schemes show one step per line with "→".
