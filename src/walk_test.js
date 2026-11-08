@@ -209,7 +209,12 @@ function fakeVoice() {
       if (!info.why) L.skip('"Hear the why"', 'why_data.js has no spoken whys yet');
       else {
         // a question whose why has no recorded clip (audio_manifest.js), so the device voice reads it
-        const qid = await page.evaluate(() => { const q = QUESTIONS.find(q => WHY_UI.has(q.id) && !AUDIO_CLIPS['q-' + q.id] && !q.type && q.options && !(q.options.filter(o => o.correct).length > 1)); return q && q.id; });
+        // (when every why is recorded, set one clip aside for this part of the test and restore it after)
+        const qid = await page.evaluate(() => {
+          const ok = q => WHY_UI.has(q.id) && !q.type && q.options && !(q.options.filter(o => o.correct).length > 1);
+          let q = QUESTIONS.find(q => ok(q) && !AUDIO_CLIPS['q-' + q.id]);
+          if (!q) { q = QUESTIONS.find(ok); window.__whyKept = {['q-' + q.id]: AUDIO_CLIPS['q-' + q.id]}; delete AUDIO_CLIPS['q-' + q.id]; }
+          return q && q.id; });
         await page.evaluate(id => { WALK_UI.open(WALK_UI.SECS[0].id, false); WALK_UI.play(WALK_UI.SECS[0].id, 0); drillList([QUESTIONS.find(q => q.id === id)], 'why test'); }, qid);
         await page.waitForSelector('#v-quiz .opt');
         L.check(await page.evaluate(() => !document.querySelector('.wyrow') && !/Hear the why/.test(document.getElementById('v-quiz').textContent)), `before answering ${qid}, no "Hear the why"`);
@@ -229,7 +234,7 @@ function fakeVoice() {
           return !!document.querySelector('#v-exam .qcard .wyrow [data-wyplay]');
         }, qid);
         L.check(rev, 'a finished paper\'s review has "Hear the why" on the question');
-        await page.evaluate(() => { EX = null; });
+        await page.evaluate(() => { EX = null; Object.assign(AUDIO_CLIPS, window.__whyKept || {}); });
         // a why with a recorded clip whose hash matches plays the clip
         const rq = await page.evaluate(() => { const q = QUESTIONS.find(q => WHY_UI.has(q.id) && AUDIO_CLIPS['q-' + q.id] && !q.type && q.options && !(q.options.filter(o => o.correct).length > 1)); return q && q.id; });
         if (!rq) L.skip('a recorded why plays its clip', 'audio_manifest.js has no recorded why for a single-answer question');

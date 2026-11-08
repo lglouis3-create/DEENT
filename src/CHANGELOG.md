@@ -23,7 +23,7 @@ Every update adds its bullets here in the same commit that makes the change.
 - Walkthroughs: pause and resume, previous and next part, speed, browse slides, open a slide full size.
 - Walkthroughs remember the part you stopped on, on this device, and can continue into the next one.
 - After you answer a question, "Hear the why" reads its explanation aloud (also in a finished paper's review).
-- Until recordings are added, your device's own voice reads the text.
+- Every walkthrough part and spoken why is recorded; anything without a recording is read by your device's own voice.
 
 ## 2026-11-08 (Guides and Topics by deck)
 - Topics now grouped under the four slide decks, each topic named after the deck's own section, in slide order.
