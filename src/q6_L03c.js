@@ -668,6 +668,9 @@ QUESTIONS.push(
   {l:'Avobenzone', r:'Dibenzoylmethane', why:'Drug chart: dibenzoylmethane. Slide 24: activity starts to decrease after 15 minutes.'},
   {l:'Zinc oxide', r:'Oxide (physical sunblock)', why:'Drug chart: oxides, physical sunscreen. Slide 20: scatters or reflects UV.'}],
  teach:'The first six are organic (chemical) sunscreens that absorb UV and release heat (slide 22); zinc oxide and titanium dioxide are physical sunblocks that scatter and reflect it (slide 20).',
- note:'Optional practice; matching items stay off the Exam 1 practice papers. The ingredient-to-family pairings come from the course drug chart (2026 Drug Chart – Dermatology, p. 1, Sun Protection), a guide, not from the sun slides; the family properties (substantivity, UVB absorption, sensitization) and the sunblock/sunscreen mechanisms are on Sun slides 20–24. The bank has no "chart" source value, so source stays "slide" for the family properties.',
+ // Maintainer note (2026-11-08): optional practice; matching items stay off the Exam 1
+ // practice papers. The bank has no "chart" source value, so `source` stays 'slide' for
+ // the family properties; the pairings themselves are chart-sourced (see note and cite).
+ note:'The ingredient-to-family pairings come from the course drug chart, p. 1; the family properties from Sun slides 20–24.',
  cite:'Drug chart p. 1; Sun 20–24: '+SUN+' slides 20–24'}
 );

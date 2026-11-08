@@ -118,7 +118,7 @@ const DRUGLIST_UI = (() => {
     const use = [];
     if (d.chartUse) use.push({t: d.chartUse, by: 'chart', cite: 'Chart p. ' + (d.pages ? d.pages.join(', ') : d.page)});
     (d.use || []).forEach(u => use.push(u));
-    const notes = (d.notes || []);
+    const notes = (d.notes || []).filter(n => n.by !== 'remark'), remarks = (d.notes || []).filter(n => n.by === 'remark');
     const Q = qs(d), links = readLinks(d);
     const members = DL.D.filter(x => x.cls === d.cls && x.id !== d.id);
     return field('f-class', 'Class', cls) + field('f-use', 'Indication', use) +
@@ -128,6 +128,7 @@ const DRUGLIST_UI = (() => {
       field('f-ae', 'Key adverse effects and cautions', d.ae || []) +
       field('f-ph', d.photo && d.photo.no ? 'Photosensitivity: not photosensitizing' : 'Photosensitizing', d.photo ? [d.photo] : []) +
       field('f-note', 'Also', notes) +
+      (remarks.length ? `<div class="dlf f-note"><b>Note</b><ul>${remarks.map(r => `<li>${esc(cap(r.t))}</li>`).join('')}</ul></div>` : '') +
       (members.length ? `<div class="dlrow"><span class="meta">Compare in class (${esc(DL.CLASSES[d.cls])}):</span>
         <button type="button" class="chip" data-dl="cls" data-cls="${esc(d.cls)}">Show all ${members.length + 1}</button>
         ${members.slice(0, 8).map(m => `<button type="button" class="chip" data-dl="only" data-id="${esc(m.id)}">${esc(m.name)}</button>`).join('')}</div>` : '') +
@@ -179,7 +180,7 @@ const DRUGLIST_UI = (() => {
   function controls(){
     const nShown = DL.D.length;
     return `<h2>Drug list</h2>
-    <p class="sub">Every drug on the dermatology drug chart, pp. 1–6 (${nShown} drugs). Dr. Smith's slides and recordings decide what is examinable; the chart is a guide. Each line names its source: <span class="dlsrc smith">Dr. Smith · slide</span> <span class="dlsrc sikazwe">Dr. Sikazwe · DPAW page</span> <span class="dlsrc chart">Drug chart · page</span></p>
+    <p class="sub">Every drug on the dermatology drug chart, pp. 1–6 (${nShown} drugs). Each professor's slides and recording decide what is examinable for that professor's material (Dr. Smith's lectures; Dr. Sikazwe's assigned pages); the chart is a guide. Each line names its source: <span class="dlsrc smith">Dr. Smith · slide</span> <span class="dlsrc sikazwe">Dr. Sikazwe · DPAW page</span> <span class="dlsrc chart">Drug chart · page</span></p>
     <details class="dlnote"><summary>About this list and the chart</summary>
       <p>Targets and mechanisms come from Reference, "Drug targets: write it first, then check". Not here: the lice and scabies page (chart p. 7), which is not in the Exam 1 lectures. Brand names are reference information from the chart; Dr. Smith asks by generic name.</p>
       <ul>${DL.CHART_NOTES.map(n => `<li>${esc(n)}</li>`).join('')}</ul></details>
@@ -205,7 +206,7 @@ const DRUGLIST_UI = (() => {
         <button type="button" class="chip" data-dl="hideall">Hide all</button>` : ''}
       <button type="button" class="chip" data-dl="flash" aria-pressed="${st.flash}">Flashcards</button>
     </div>
-    ${st.recall ? '<p class="dlself">Recall mode: each card shows the drug only. Write its target or mechanism, then Reveal and compare. This is a self-check: what you type is not graded and not saved, and it is gone when the page reloads.</p>' : ''}
+    ${st.recall ? '<p class="dlself">Recall mode: each card shows the drug only. Write its target or mechanism, then Reveal and compare. This is a self-check: what you type is not graded and not saved, and it is gone when the page reloads. Choosing a class filter or searching by class shows which drugs are in that class.</p>' : ''}
     <p class="dlcount" id="dlcount" aria-live="polite"></p>
     <div id="dllist"></div>`;
   }
@@ -300,6 +301,9 @@ const DRUGLIST_UI = (() => {
       const p = document.getElementById('v-' + ID);
       if (v !== ID) { if (p) p.classList.add('hide'); return orig.apply(this, arguments); }
       try {
+        // newer cores' show() also closes an open figure, scrolls the tab into view on a
+        // narrow nav bar and arms figures; do the same where those functions exist
+        if (typeof figClose === 'function') figClose();
         if (typeof VIEW_NAME !== 'undefined' && !VIEW_NAME[ID]) VIEW_NAME[ID] = 'the drug list';
         VIEW = v;
         document.querySelectorAll('#nav button').forEach(b => b.setAttribute('aria-selected', b.dataset.v === v));
@@ -307,6 +311,13 @@ const DRUGLIST_UI = (() => {
         p.classList.remove('hide');
         window.scrollTo(0, 0);
         render(p);
+        if (typeof navReveal === 'function') navReveal(v);
+        else {                               // older core: bring the tab into the scrolled tab bar here
+          const nav = document.getElementById('nav'), b = nav && nav.querySelector('button[data-v="' + ID + '"]');
+          if (b) { const n = nav.getBoundingClientRect(), r = b.getBoundingClientRect();
+                   if (r.left < n.left) nav.scrollLeft -= n.left - r.left + 16; else if (r.right > n.right) nav.scrollLeft += r.right - n.right + 16; }
+        }
+        if (typeof armFigs === 'function') armFigs(p);
       } catch (e) {
         console.error('The drug list could not be drawn; showing Topics.', e);
         if (p) p.classList.add('hide');

@@ -83,8 +83,21 @@ for (const d of DL.D) {
   for (const k of ['use', 'ae', 'notes']) (d[k] || []).forEach(s => stmts.push([d.id, k, s]));
   for (const k of ['why', 'boxed', 'photo']) if (d[k]) stmts.push([d.id, k, d[k]]);
 }
-const badS = stmts.filter(([, , s]) => !s.t || !citeOk(s));
+const remarks = stmts.filter(([, , s]) => s.by === 'remark');
+const badRemark = remarks.filter(([, k, s]) => k !== 'notes' || !s.t || s.cite);
+check(!badRemark.length, `remarks about the sources (${remarks.length}) are notes only and carry no lecturer or chart citation`, badRemark.map(([id]) => id).join(', '));
+const badS = stmts.filter(([, , s]) => s.by !== 'remark' && (!s.t || !citeOk(s)));
 check(!badS.length, `every statement (${stmts.length}) names its source with a matching citation`, badS.map(([id, k, s]) => `${id}.${k} ${s.by} "${s.cite}"`).join('; '));
+// Dr. Sikazwe's assigned pages for Exam 1 (his list of 11/06, as file pages of the DPAW deck)
+const ASSIGNED = new Set([7, 8, 9, 12].concat([...Array(9)].map((_, i) => 15 + i), [...Array(10)].map((_, i) => 25 + i),
+  [...Array(13)].map((_, i) => 43 + i), [...Array(6)].map((_, i) => 61 + i)));
+const unassignedUnlabelled = stmts.filter(([, , s]) => s.by === 'sikazwe' && [...String(s.cite).matchAll(/DPAW (\d+)(?:[–-](\d+))?/g)]
+  .some(m => { for (let p = +m[1]; p <= +(m[2] || m[1]); p++) if (!ASSIGNED.has(p)) return true; return false; }) &&
+  !/outside his assigned pages/.test(s.t));
+check(!unassignedUnlabelled.length, 'every Dr. Sikazwe statement citing a page outside his assigned pages says so',
+  unassignedUnlabelled.map(([id, k, s]) => `${id}.${k} ${s.cite}`).join('; '));
+const tac = DL.D.find(d => d.id === 'tacrolimus');
+check(tac && !tac.boxed, 'topical tacrolimus carries no boxed-warning flag (the slide\'s warning is for oral calcineurin inhibitors)');
 const notSmithWhy = DL.D.filter(d => d.why && d.why.by !== 'smith');
 check(!notSmithWhy.length, '"Why it helps" lines are Dr. Smith\'s only', notSmithWhy.map(d => d.id).join(', '));
 const smithNoSlide = stmts.filter(([, , s]) => s.by === 'smith' && !/(PCol|Pathophys|Sun) \d|T \d/.test(s.cite));

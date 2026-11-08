@@ -8,8 +8,9 @@
    Source of the drug list: the course dermatology drug chart
    ("2026 Drug Chart - Dermatology", 7 pages; Drive 1wJ2LzXY8V_BjqtghJGI5waVEQ2t-YUib,
    367,545 bytes, the same file as Louis's upload of 2026-11-08). The chart is
-   a guide; Dr. Smith's slides, recordings and Exam 1 hints decide what is
-   examinable.
+   a guide; each professor's slides and recording decide what is examinable
+   for that professor's material (Dr. Smith's Exam 1 hints for hers, Dr.
+   Sikazwe's assigned pages of 11/06 for his).
 
    Where each field comes from:
      target / mechanism   NOT here: read at run time from the Reference tab's
@@ -22,7 +23,9 @@
                           why the drug helps the condition; always `cite`d.
      use, ae, boxed,      each statement is {t, by, cite}; by is 'smith',
      photo, notes         'sikazwe' or 'chart'. Statements from different
-                          lecturers or from the chart are never merged.
+                          lecturers or from the chart are never merged. A note
+                          {t, by: 'remark'} is a remark about the sources
+                          (shown as "Note", with no source chip).
      chartClass, chartUse the chart's pharmacological class and indication,
                           shown labelled "chart". chartUse is null where the
                           chart's columns are misaligned (p. 5, see CHART_NOTES).
@@ -46,6 +49,8 @@ const DRUGLIST = (() => {
   const S = (t, cite) => ({t, by: 'smith', cite});
   const K = (t, cite) => ({t, by: 'sikazwe', cite});
   const C = (t, page) => ({t, by: 'chart', cite: 'Chart p. ' + page});
+  // a maintainer's remark about the sources (no lecturer or chart chip)
+  const R = t => ({t, by: 'remark'});
 
   const CLASSES = {
     sunscreen: 'Chemical (organic) sunscreens',
@@ -123,12 +128,12 @@ const DRUGLIST = (() => {
      status: 'taught', chartClass: 'Chemical sunscreen', chartChem: 'Cinnamates', chartUse: 'Sun protection',
      tgt: 'tgt-octinoxate', why: WHY.sunscreen,
      ae: [S('Cinnamates do not adhere to skin well and depend on the vehicle for substantivity', 'Sun 24')],
-     notes: [K('Octinoxate: cinnamate, UVB; absorbed through skin', 'DPAW 63')], atlas: 'octinoxate', q: 'octinoxate|methoxycinnamate|cinnamate'},
+     notes: [K('Octinoxate: cinnamate, UVB; absorbed through skin', 'DPAW 63'), C('The chart prints "Ethyhexyl p-methoxycinnamate"', 1)], atlas: 'octinoxate', q: 'octinoxate|methoxycinnamate|cinnamate'},
     {id: 'octisalate', name: '2-Ethylhexyl salicylate', alt: ['octisalate'], brands: [], page: 1, cls: 'sunscreen', dz: ['sun'], rx: 'OTC',
      status: 'taught', chartClass: 'Chemical sunscreen', chartChem: 'Salicylates', chartUse: 'Sun protection',
      tgt: 'tgt-salicylates', why: WHY.sunscreen,
      ae: [S('Salicylates do not adhere to skin well and are easily removed by water or perspiration', 'Sun 24')],
-     notes: [K('Octisalate: salicylate, UVB', 'DPAW 64')], atlas: 'octisalate', q: 'octisalate|ethylhexyl salicylate'},
+     notes: [K('Octisalate: salicylate, UVB', 'DPAW 64'), C('The chart prints "2-ethyhexyl salicylate"', 1)], atlas: 'octisalate', q: 'octisalate|ethylhexyl salicylate'},
     {id: 'homosalate', name: 'Homosalate', alt: [], brands: [], page: 1, cls: 'sunscreen', dz: ['sun'], rx: 'OTC',
      status: 'taught', chartClass: 'Chemical sunscreen', chartChem: 'Salicylates', chartUse: 'Sun protection',
      tgt: 'tgt-salicylates', why: WHY.sunscreen,
@@ -179,7 +184,7 @@ const DRUGLIST = (() => {
     {id: 'bemotrizinol', name: 'Bemotrizinol', alt: ['BEMT'], brands: [], page: 1, cls: 'sunscreen', dz: ['sun'], rx: 'OTC',
      status: 'taught', chartClass: 'Organic chemical sunscreen', chartChem: 'Triazine and methoxybenzene', chartUse: 'Sun protection',
      tgt: 'tgt-bemotrizinol', notes: [K('Methoxybenzene and triazine, UVB/UVA; photostable', 'DPAW 66'),
-       S('Not named on Dr. Smith\'s sun slides; her family list (Sun 24) does not include triazines', 'Sun 24')],
+       R('Not named on Dr. Smith\'s sun slides; her list of sunscreen families (Sun 24) has no triazine.')],
      atlas: 'bemotrizinol', q: 'bemotrizinol|\\bBEMT'},
 
     /* ---------- p. 2: atopic dermatitis ---------- */
@@ -198,7 +203,8 @@ const DRUGLIST = (() => {
      status: 'taught', chartClass: 'Calcineurin inhibitor', chartUse: 'Topical: atopic dermatitis; psoriasis (unlabeled)',
      use: [S('Topical, atopic dermatitis in adults and children over 2; psoriasis off label', 'PCol 27')],
      tgt: 'tgt-tacrolimus', why: WHY.cniTop, ae: [AE.cniTop, AE.cniOral, S('Tacrolimus only (oral): neuropathies', 'PCol 30')],
-     boxed: S('Oral calcineurin inhibitors: lymphoma and other malignancies, particularly of the skin; bacterial, viral, fungal and protozoal infections including opportunistic ones (the chart lists topical tacrolimus)', 'PCol 30'),
+     notes: [S('Boxed warning stated for oral calcineurin inhibitors: lymphoma and other malignancies, particularly of the skin; bacterial, viral, fungal and protozoal infections', 'PCol 30'),
+             R('The chart lists topical tacrolimus, so this card is not marked as carrying a boxed warning.')],
      atlas: 'tacrolimus', q: 'tacrolimus'},
     {id: 'dupilumab', name: 'Dupilumab', alt: [], brands: ['Dupixent'], page: 2, cls: 'il4r', dz: ['ad'], rx: 'Rx',
      status: 'taught', chartClass: 'IL-4R and IL-13 receptor antagonist', chartUse: 'Injection: moderate to severe atopic dermatitis',
@@ -258,7 +264,7 @@ const DRUGLIST = (() => {
      tgt: 'tgt-macrolides', why: WHY.abx, ae: [AE.macro], q: 'azithromycin'},
     {id: 'tmpsmx', name: 'Trimethoprim/sulfamethoxazole', alt: ['TMP/SMX'], brands: ['Bactrim DS'], page: 3, cls: 'abx', sub: 'Folate pathway', dz: ['acne'], rx: 'Rx',
      status: 'taught', chartClass: 'Antibiotic (sulfonamide/pyrimidine)', chartUse: 'Acne',
-     tgt: 'tgt-tmpsmx', why: WHY.abx, q: 'trimethoprim|sulfamethoxazole'},
+     tgt: 'tgt-tmpsmx', why: WHY.abx, notes: [C('The chart prints "Trimetoprim"', 3)], q: 'trimethoprim|sulfamethoxazole'},
     {id: 'dapsone', name: 'Dapsone', alt: [], brands: ['Aczone'], page: 3, cls: 'abx', sub: 'Folate pathway', dz: ['acne'], rx: 'Rx',
      status: 'taught', chartClass: 'Antibiotic (sulfone)', chartUse: 'Acne',
      use: [S('Leprosy; topically (gel) for acne', 'PCol 50')],
@@ -305,7 +311,7 @@ const DRUGLIST = (() => {
      photo: Object.assign(S('Not photosensitizing, unlike coal tar', 'PCol 57'), {no: true}), q: 'shale tar|ichthammol'},
     {id: 'selenium', name: 'Selenium sulfide', alt: [], brands: ['Selsun Blue', 'Selseb'], page: 4, cls: 'cytotox', dz: ['pso'], rx: 'OTC',
      status: 'taught', chartClass: 'Cytotoxic agent', chartUse: 'Psoriasis',
-     tgt: 'tgt-selzinc', why: WHY.cyto, q: 'selenium'},
+     tgt: 'tgt-selzinc', why: WHY.cyto, notes: [C('The chart prints the brand as "Selsum Blue"', 4)], q: 'selenium'},
     {id: 'zpt', name: 'Zinc pyrithione', alt: [], brands: [], page: 4, cls: 'cytotox', dz: ['pso'], rx: 'OTC',
      status: 'taught', chartClass: 'Cytotoxic agent', chartUse: 'Psoriasis',
      tgt: 'tgt-selzinc', why: WHY.cyto, q: 'pyrithione'},
@@ -419,13 +425,19 @@ const DRUGLIST = (() => {
      status: 'taught', chartClass: 'Azole antifungal', chartUse: null,
      tgt: 'tgt-ketoconazole',
      notes: [K('Slide 53 lists it under "Non-steroidal AA" with flutamide; in class he grouped it with spironolactone by mechanism (biosynthesis)', 'DPAW 53; 11/04 T@32075–32300'),
-             C('Not on Dr. Smith\'s slides; the chart lists it on the psoriasis page as an azole antifungal', 5)], atlas: 'ketoconazole', q: 'ketoconazole'},
+             R('Not on Dr. Smith\'s slides; the chart lists it on the psoriasis page as an azole antifungal.')], atlas: 'ketoconazole', q: 'ketoconazole'},
     {id: 'apremilast', name: 'Apremilast', alt: [], brands: ['Otezla'], page: 5, cls: 'pde4', dz: ['pso'], rx: 'Rx',
      status: 'taught', chartClass: 'PDE-4 inhibitor', chartUse: null,
      use: [S('Psoriasis (oral)', 'PCol 34')],
      tgt: 'tgt-apremilast', why: WHY.pde4,
      ae: [S('Diarrhea, nausea, headache, weight loss; use cautiously in depression; avoid strong CYP3A4 inducers', 'PCol 34')], atlas: 'apremilast', q: 'apremilast'},
   ];
+
+  // p. 5 rows whose indication cell is blank: the p. 4 "Psoriasis" cell runs across the page break
+  for (const id of ['guselkumab', 'tildrakizumab', 'risankizumab', 'secukinumab', 'brodalumab', 'ixekizumab', 'acitretin']) {
+    const d = D.find(x => x.id === id);
+    (d.notes = d.notes || []).push(C('Indication "Psoriasis" is read from the p. 4 indication cell, which runs across the page break; this row\'s own cell on p. 5 is blank', 5));
+  }
 
   /* ---------- p. 6: topical steroids (chart potency classes) ---------- */
   const STEROIDS = [
@@ -441,7 +453,7 @@ const DRUGLIST = (() => {
     ['hcvalerate', 'Hydrocortisone valerate', ['Westcort'], ['4'], 'class', null, null, 'hydrocortisone valerate'],
     ['triamcinolone', 'Triamcinolone acetonide', ['Kenalog'], ['4'], 'class', K(SIK_UNASSIGNED + ' Drawn on DPAW 24', 'DPAW 24'), null, 'triamcinolone'],
     ['desonide', 'Desonide', ['DesOwen', 'Desonate'], ['5', '6'], 'class', K(SIK_UNASSIGNED + ' Drawn on DPAW 24', 'DPAW 24'), null, 'desonide'],
-    ['hydrocortisone', 'Hydrocortisone', ['Locoid', 'Cortaid', 'Hytone', 'Synacort'], ['5', '7'], 'taught', K('Natural cortisol, the reference (parent) glucocorticoid; low-potency example hydrocortisone acetate 0.5% and 1%', 'DPAW 24–25'), 'hydrocortisone', 'hydrocortisone(?! valerate)|cortisol'],
+    ['hydrocortisone', 'Hydrocortisone', ['Locoid', 'Cortaid', 'Hytone', 'Synacort'], ['5', '7'], 'taught', K('Low-potency example: hydrocortisone acetate 0.5% and 1% creams and ointments', 'DPAW 25'), 'hydrocortisone', 'hydrocortisone(?! valerate)|cortisol'],
     ['prednicarbate', 'Prednicarbate', ['Dermatop'], ['5'], 'class', null, null, 'prednicarbate'],
     ['alclometasone', 'Alclometasone', ['Aclovate'], ['6'], 'class', null, null, 'alclometasone'],
   ];
@@ -450,6 +462,7 @@ const DRUGLIST = (() => {
   for (const [id, name, brands, pot, status, sik, atlas, q] of STEROIDS) {
     const notes = [C(pot.map(p => POTENCY[p]).join('; ') + (pot.length > 1 ? ' (listed twice on the chart, once per product)' : ''), 6), STEROID_CLASS_NOTE];
     if (sik) notes.push(sik);
+    if (id === 'hydrocortisone') notes.push(K(SIK_UNASSIGNED + ' DPAW 24 shows hydrocortisone (natural cortisol) as the reference (parent) glucocorticoid', 'DPAW 24'));
     if (id === 'hydrocortisone') notes.push(S('Low potency (hydrocortisone 1%) for the face and for long-term maintenance', 'PCol 11'));
     if (id === 'desonide') notes.push(C('The chart prints "Desonate (Desonide)", brand first, on the class 6 line', 6));
     const d = {id, name, alt: [], brands, page: 6, cls: 'steroid', dz: ['pso', 'ad'], rx: id === 'hydrocortisone' ? 'Rx (class 5); OTC (class 7)' : 'Rx',
@@ -495,7 +508,7 @@ const DRUGLIST = (() => {
   ];
   const EXCLUDED = {7: 'Lice and scabies (chart p. 7) are not in the Exam 1 lectures (syllabus pp. 9–15); left out of the Exam 1 drug list, as in the Reference target table.'};
   const CHART_NOTES = [
-    'Chart p. 5: from calcipotriene down, the chemical-class and indication columns sit one row off (cyclosporine is printed as a furanocoumarin, apremilast against "Seborrhea, dandruff"), so the chart indication is not shown for those rows; the pharmacological class column is aligned.',
+    'Chart p. 5: the chemical-class column is aligned through calcipotriene and one row off from methoxsalen down (cyclosporine is printed as a furanocoumarin); the indication column is one row off from petrolatum down (apremilast against "Seborrhea, dandruff"), and calcipotriene shares an indication cell with tazarotene. The chart indication is therefore not shown from calcipotriene down; the pharmacological class column is aligned.',
     'Chart p. 4: the TNF-α inhibitor class cell is printed beside etanercept only; adalimumab, infliximab, golimumab and certolizumab pegol are TNF-α inhibitors on Dr. Smith\'s slides (PCol 70–74).',
     'The chart\'s chemical-class column is shown only for the sunscreens, where it names the family; chemical classes elsewhere are Dr. Sikazwe\'s material (Atlas tab).',
   ];
