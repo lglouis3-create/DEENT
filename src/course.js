@@ -157,6 +157,17 @@ const COURSE = {
      // focus on drug mechanisms. ... There are no short essay questions." Dr. Sikazwe has
      // given no format statement, so the blurb makes none for him.
      blurb:'Practice coverage of Lectures 1–4 (Smith 10/29, 10/30, 11/03 and her recorded sun-exposure and psoralen lecture; Sikazwe 11/03, 11/04). The faculty have not announced a split by professor, so this paper is unweighted. Dr. Smith says her questions are mostly multiple choice with a few fill-in-the-blanks on drug mechanisms, and no short essays. The syllabus lists multiple-choice, select-all, short-answer, true/false and matching as possible formats and gives no count of each. These practice papers draw single-answer questions only; the select-all and drug-target matching questions are in the topic drills, and Reference has a drug-target list to write out before revealing',
+     // The Topics card (topics_ui.js) shows the blurb as these label / value rows, the way
+     // the Intro to Pharmacology drill does (Louis, 2026-11-08). Each sentence is the blurb's
+     // own, in order; topics_ui.js uses them only while they join (with spaces) to exactly the
+     // blurb plus its full stop, so edit the blurb and these together. factsMain rows show
+     // first; the rest fold under "More about this exam" (one short card on a phone).
+     facts:[['Covers', 'Practice coverage of Lectures 1–4 (Smith 10/29, 10/30, 11/03 and her recorded sun-exposure and psoralen lecture; Sikazwe 11/03, 11/04).'],
+            ['Weighting', 'The faculty have not announced a split by professor, so this paper is unweighted.'],
+            ['Dr. Smith\'s format', 'Dr. Smith says her questions are mostly multiple choice with a few fill-in-the-blanks on drug mechanisms, and no short essays.'],
+            ['Syllabus formats', 'The syllabus lists multiple-choice, select-all, short-answer, true/false and matching as possible formats and gives no count of each.'],
+            ['Practice papers', 'These practice papers draw single-answer questions only; the select-all and drug-target matching questions are in the topic drills, and Reference has a drug-target list to write out before revealing.']],
+     factsMain:['Covers'],
      // `unassigned: undefined` keeps a question marked unassigned:true out of both pools:
      // the 23 on pages outside Dr. Sikazwe's assigned pages for Exam 1 (his list of
      // 11/06; topic 'sk-beyond' in q5_L04.js). A pool filter is what the paper, the pool
@@ -201,7 +212,10 @@ const COURSE = {
           // the build does not stop on it; the players draw nothing for data that is not there.
           ...['walk_pp.js', 'walk_pc.js', 'walk_sun.js', 'walk_mc.js', 'why_data.js', 'audio_manifest.js']
             .filter(f => { try { return typeof require !== 'function' || require('fs').existsSync(f); } catch (e) { return true; } }),
-          'walk_ui.js', 'why_ui.js'],
+          'walk_ui.js', 'why_ui.js',
+          // Topics: the exam facts card (course-level, Louis 2026-11-08; the deck folders are in
+          // guide.js with the deck grouping)
+          'topics_ui.js'],
 
   tools: {citeAliases:{'skin-pathophys-students-2026.pdf':'Skin-Pathophys-Students-2026.pdf',
                        'skin-pcol-students-2026.pdf':'Skin-PCol-Students-2026.pdf',

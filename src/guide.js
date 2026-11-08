@@ -364,9 +364,18 @@ const GUIDE_HTML = `
    The core lists TOPICS in array order with no grouping. TOPIC_DECKS
    (q1_topics.js) names each deck's topics in slide order. Once every question
    file has pushed its topics, this orders TOPICS by deck, marks each topic
-   with its deck, and adds a heading above the first topic of each deck on the
-   Topics tab. Topic ids, sub ids and questions are unchanged, and progress is
-   kept by question id, so nothing stored changes. */
+   with its deck, and on the Topics tab puts each deck's topic cards in a
+   folder: a heading button (deck name, file, dates, question count, a chevron)
+   that opens and closes them. Folders start closed (Louis, 2026-11-08: "a
+   collapse folder that way it reduces the scrolling need"); the ones a reader
+   opens are remembered on this device only, under `<NS>:deckOpen` (a list of
+   deck ids), never in the progress or history keys. A filter that leaves a
+   deck no topic leaves no folder. An optional topic (outside the exam) stays
+   outside the folders, after them, with its own "Optional" label in view.
+   If something opens a topic card inside a closed folder (the core's "Learn a
+   topic" fallback, a test), the folder opens with it. Topic ids, sub ids and
+   questions are unchanged, and progress is kept by question id, so nothing
+   stored changes. */
 (function topicsByDeck(){
   if (typeof TOPICS === 'undefined' || typeof TOPIC_DECKS === 'undefined') return;
   const rank = {};
@@ -378,28 +387,86 @@ const GUIDE_HTML = `
     const d = TOPIC_DECKS.find(x => x.topics.includes(t.id));
     if (d) t.deck = d.id;
   });
-  if (typeof renderTopics !== 'function') return;
+  if (typeof renderTopics !== 'function' || typeof document === 'undefined') return;
+
+  const KEY = () => { let ns; try { ns = NS; } catch (e) { ns = COURSE.ns; } return ns + ':deckOpen'; };
+  const readOpen = () => {
+    try { const v = JSON.parse(localStorage.getItem(KEY()) || '[]'); return new Set(Array.isArray(v) ? v : []); }
+    catch (e) { return new Set(); }
+  };
+  const saveOpen = set => { try { localStorage.setItem(KEY(), JSON.stringify([...set])); } catch (e) { /* this device only */ } };
+  const CSS = `
+.deckfold{margin:14px 0 0}
+.deckfold>h3{margin:0;font-size:inherit}
+.deckbtn{display:flex;align-items:center;gap:12px;width:100%;min-height:44px;text-align:left;
+  background:var(--paper);color:var(--text);border:1px solid var(--line);border-radius:var(--r,10px);padding:10px 14px}
+.deckbtn:hover{border-color:var(--accent)}
+.deckbtn:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.deckbtn .decktxt{flex:1;min-width:0}
+.deckbtn .deckname{display:block;font-size:16px;font-weight:600;line-height:1.3}
+.deckbtn .deckmeta{display:block;font-size:13px;color:var(--text-dim);margin-top:2px;overflow-wrap:anywhere}
+.deckbtn .deckchev{flex:0 0 auto;display:inline-flex;align-items:center;gap:6px;font-size:13px;color:var(--accent);font-weight:500}
+.deckbtn .deckchev i{font-style:normal;display:inline-block;font-size:18px;line-height:1;transition:transform .15s}
+.deckbtn[aria-expanded="true"] .deckchev i{transform:rotate(90deg)}
+.deckbtn[aria-expanded="true"]{border-color:var(--accent);background:var(--accent-bg)}
+.deckbody{padding:8px 0 0 10px;border-left:3px solid var(--accent-bg);margin-left:6px}
+.deckbody[hidden]{display:none}
+@media (prefers-reduced-motion: reduce){.deckbtn .deckchev i{transition:none}}`;
+  const addCss = () => {
+    if (document.getElementById('deckcss')) return;
+    const s = document.createElement('style'); s.id = 'deckcss'; s.textContent = CSS; document.head.appendChild(s);
+  };
+
   const base = renderTopics;
   renderTopics = function(){
-    base.apply(this, arguments);
+    const r = base.apply(this, arguments);
     try {
       const el = document.getElementById('v-topics');
-      if (!el || !el.querySelectorAll) return;
+      if (!el || !el.querySelectorAll || !document.createElement) return r;
       const cards = [...el.querySelectorAll('details.topic')];
       const shown = TOPICS.filter(t => poolFor(t.id, null).length);
-      if (cards.length !== shown.length) return;
+      if (cards.length !== shown.length) return r;
+      addCss();
       const e = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;'})[c]);
+      const open = readOpen();
+      const folded = (t, i) => !t.optional && TOPIC_DECKS.some(x => x.id === t.deck) ? i : -1;
+      let fold = null;
       shown.forEach((t, i) => {
-        if (i && shown[i - 1].deck === t.deck) return;
-        const d = TOPIC_DECKS.find(x => x.id === t.deck);
-        if (!d) return;
-        const n = shown.filter(x => x.deck === d.id).reduce((s, x) => s + poolFor(x.id, null).length, 0);
-        const h = document.createElement('div');
-        h.className = 'deckhead';
-        h.innerHTML = `<h3 style="margin:22px 0 2px">${e(d.name)}</h3>` +
-          `<p class="sub" style="margin:0 0 10px">${e(d.file)} · ${e(d.when)} · ${n} questions</p>`;
-        cards[i].before(h);
+        if (folded(t, i) < 0) { fold = null; return; }
+        if (!fold || fold.deck !== t.deck) {
+          const d = TOPIC_DECKS.find(x => x.id === t.deck);
+          const mine = shown.filter(x => x.deck === d.id && !x.optional);
+          const n = mine.reduce((s, x) => s + poolFor(x.id, null).length, 0);
+          const isOpen = open.has(d.id);
+          const sec = document.createElement('section');
+          sec.className = 'deckfold'; sec.dataset.deck = d.id;
+          sec.innerHTML = `<h3><button type="button" class="deckbtn" id="deckbtn-${e(d.id)}" aria-expanded="${isOpen}" aria-controls="deckbody-${e(d.id)}">` +
+            `<span class="decktxt"><span class="deckname">${e(d.name)}</span>` +
+            `<span class="deckmeta">${e(d.file)} · ${e(d.when)} · ${n} questions</span></span>` +
+            `<span class="deckchev" aria-hidden="true">${mine.length} topic${mine.length === 1 ? '' : 's'} <i>›</i></span></button></h3>` +
+            `<div class="deckbody" id="deckbody-${e(d.id)}" role="region" aria-labelledby="deckbtn-${e(d.id)}"${isOpen ? '' : ' hidden'}></div>`;
+          cards[i].before(sec);
+          fold = {deck: t.deck, body: sec.querySelector('.deckbody'), btn: sec.querySelector('.deckbtn')};
+          const {body, btn} = fold, id = d.id;
+          const set = (on, keep) => {
+            btn.setAttribute('aria-expanded', String(on)); body.hidden = !on;
+            if (!keep) return;
+            const now = readOpen(); if (on) now.add(id); else now.delete(id); saveOpen(now);
+          };
+          btn.addEventListener('click', () => set(btn.getAttribute('aria-expanded') !== 'true', true));
+          // a topic card opened by code inside a closed folder brings its folder open
+          // (a card the core drew open fires one toggle of its own as it is drawn; that one is not a reason)
+          body.addEventListener('toggle', ev => {
+            const c = ev.target;
+            if (!c || !c.matches || !c.matches('details.topic')) return;
+            if (c.dataset.drawnOpen) { delete c.dataset.drawnOpen; return; }
+            if (c.open && body.hidden) set(true, false);
+          }, true);
+        }
+        if (cards[i].open) cards[i].dataset.drawnOpen = '1';
+        fold.body.appendChild(cards[i]);
       });
     } catch (err) { /* the list stays as the core drew it */ }
+    return r;
   };
 })();
