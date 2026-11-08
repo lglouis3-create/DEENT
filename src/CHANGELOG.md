@@ -20,7 +20,7 @@ Every update adds its bullets here in the same commit that makes the change.
 - Diagrams: acne cascade labels moved off the arrows; nuclear receptor figure redrawn so the bound drug shows.
 
 ## 2026-11-08 (Likely-on-the-exam stars)
-- 109 questions starred as likely on Exam 1, each with its reason and source; Claude's prediction, not an official list.
+- 117 questions starred as likely on Exam 1 (★ badge only; reasons kept in `likely_data.js` as the audit record, not displayed); Claude's prediction from the professors' emphasis, not an official list.
 - Topics: drill all starred questions, or only Dr. Smith's or Dr. Sikazwe's.
 
 ## 2026-11-08 (Drug List)
