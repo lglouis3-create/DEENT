@@ -62,7 +62,7 @@ WALK_SECTIONS.push(
     slide:'pp-24', fig:null, src:'PP 24; T 361-370; L1-035, L1-036'},
    {text:'Nail psoriasis shows pitting, ridging, discoloration and onycholysis, the separation of the nail from its bed. Psoriatic arthritis is asymmetric, affecting joints on one side, unlike rheumatoid arthritis, which usually affects both sides. Skin lesions usually come first, and rheumatoid factor, a blood marker of rheumatoid arthritis, is not raised.',
     slide:'pp-26', fig:null, src:'PP 26; T 376-385; L1-037'},
-   {text:'Treatment follows the two defects. Some drugs reduce the abnormal immune response, such as topical corticosteroids and biologic agents, antibody-type protein drugs, and others slow keratinocyte turnover, such as retinoids, drugs related to vitamin A. Comorbidities are treated too, and quality of life, including depression, is part of care.',
+   {text:'Treatment follows the two defects. Some drugs reduce the abnormal immune response, such as topical corticosteroids and biologic agents, which are protein drugs. Other drugs slow keratinocyte turnover, such as retinoids, drugs related to vitamin A. Comorbidities are treated too, and quality of life, including depression, is part of care.',
     slide:'pp-27', fig:null, src:'PP 27, 28 (28 folded; its IL label held, OPEN_QUESTIONS 3); T 385-401; L1-039'}
   ]},
 
