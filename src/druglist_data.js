@@ -2,7 +2,7 @@
    DRUG LIST DATA, PHAR 4346 DEENT (Exam 1)
    --------------------------------------------------------------------------
    TEMPORARY course-level presentation: this file and druglist_ui.js add a
-   "Drug list" tab on top of the kit core (25c643d) without changing it. Both
+   "Drug list" tab on top of the kit core (08be7a2) without changing it. Both
    are to be replaced by the shared-kit Drug List feature when the kit has one.
 
    Source of the drug list: the course dermatology drug chart
@@ -283,7 +283,10 @@ const DRUGLIST = (() => {
      use: [S('Mild to moderate acne', 'PCol 18')],
      tgt: 'tgt-topretinoids', why: WHY.retAcne,
      ae: [S('Less irritating than tretinoin; "sun stable" (photochemically stable), so it can be combined with benzoyl peroxide', 'PCol 18')],
-     photo: S('Sun stable, yet the sunburn risk remains because outer skin layers are peeled off', '10/30 T 116–130'), atlas: 'adapalene', q: 'adapalene'},
+     // not photosensitizing: "sun stable" (PCol 18), as the bank keys it (L2-017, L3C-044); until 2026-11-08 this card was
+     // flagged photosensitizing from the same line, which contradicted those questions
+     photo: Object.assign(S('Not photosensitizing: "sun stable" (photochemically stable); sun protection is still needed because peeling removes outer skin layers', 'PCol 18; 10/30 T 116–130'), {no: true}),
+     atlas: 'adapalene', q: 'adapalene'},
     {id: 'isotretinoin', name: 'Isotretinoin', alt: [], brands: ['Accutane'], page: 3, cls: 'nrb', sub: 'Retinoids', dz: ['acne'], rx: 'Rx',
      status: 'taught', chartClass: 'Nuclear receptor binder (retinoid)', chartUse: 'Acne',
      use: [S('Severe cystic acne recalcitrant to standard therapy (oral)', 'PCol 19')],
@@ -632,8 +635,26 @@ const DRUGLIST = (() => {
      reverse direction. KIND_HEAD is the short name over each question. */
   const KINDS = {target: 'Target', cls: 'Class', use: 'Indication', clsRev: 'Class → drug', useRev: 'Indication → drug',
     chem: 'Chemical class', rx: 'Rx/OTC', potency: 'Potency class (steroids)',
-    brand: 'Brand names (practice; Dr. Smith\'s exam questions use generic names)'};
-  const KIND_HEAD = Object.assign({}, KINDS, {clsRev: 'Which drug: class', useRev: 'Which drug: indication', potency: 'Potency class', brand: 'Brand name (practice)'});
+    brand: 'Brand names (practice; Dr. Smith\'s exam questions use generic names)',
+    aeUniq: 'Adverse effect → drug', boxed: 'Boxed warning', photo: 'Photosensitizing'};
+  const KIND_HEAD = Object.assign({}, KINDS, {clsRev: 'Which drug: class', useRev: 'Which drug: indication', potency: 'Potency class', brand: 'Brand name (practice)',
+    aeUniq: 'Which drug: adverse effect', boxed: 'Which drug: boxed warning', photo: 'Which drug: photosensitizing'});
+  /* A molecular target: the drugs whose Reference line names a receptor, enzyme, cytokine or
+     binding protein (the 51 with a Target question). For the others the field is "How it acts". */
+  const hasTarget = d => !(NO_TARGET_Q.has(d.cls) || NO_TARGET_ID.has(d.id));
+  const NO_TARGET_WHY = 'No single receptor or enzyme target named in the lecture.';
+  /* Exam 1 scope of a card (plan §9). taught: named on an Exam 1 slide; chart only: on the chart
+     Dr. Smith said is "all going to be on the first exam" but not taught (the four sunburn
+     anesthetics); optional: the topical steroid products Dr. Sikazwe's assigned pages do not name;
+     excluded: chart p. 7 (no card; shown in Chart). */
+  const SCOPES = {taught: 'Exam 1 · taught', chartonly: 'Exam 1 · chart only', optional: 'Optional', excluded: 'Excluded: not on Exam 1'};
+  const SCOPE_WHY = {
+    taught: 'Named on an Exam 1 slide (Dr. Smith, or one of Dr. Sikazwe\'s assigned pages).',
+    chartonly: 'On the drug chart, which Dr. Smith said is "all going to be on the first exam" (10/29 T 606–618); not taught in the lectures.',
+    optional: 'Specific steroid products are Dr. Sikazwe\'s material (Dr. Smith, 10/29 T 585–586); his assigned pages (11/06) do not name this product.',
+    excluded: 'Chart p. 7, lice and scabies: Dr. Smith, 10/29: "I don\'t cover these medications." (T 590–593)'};
+  const scopeOf = d => d.status === 'taught' ? 'taught' : d.status === 'chart' ? 'chartonly' : 'optional';
+  const inExam = d => scopeOf(d) !== 'optional';
   const groupOf = d => d.cls === 'abx' ? 'abx:' + norm(d.chartClass || '') : d.cls;
   /* The keyed values of one field of one drug: [{t, src: [{t, by, cite}]}]. */
   function quizFacts(d, T, kind){
@@ -815,7 +836,53 @@ const DRUGLIST = (() => {
   const mix = (wrong, key, rng) => shuffled(wrong.map(t => ({t, correct: false})).concat([{t: key, correct: true}]), rng);
   const Q = (d, kind, stem, options, src, also) => ({id: d.id + ':' + kind, drug: d.id, name: d.name, kind, stem, options, src, also: also || [], offChart: []});
 
+  /* Adverse effect → drug: only where Dr. Smith names an effect as specific to one drug of its
+     class; the options are that class's drugs on the same slide, each wrong one with its reason. */
+  const AE_UNIQ = {
+    cyclosporine: {effect: 'gingival hyperplasia', within: 'oral calcineurin inhibitors', opts: ['tacrolimus'], src: S('Cyclosporine only: gingival hyperplasia', 'PCol 30'),
+      why: {tacrolimus: S('Tacrolimus only (oral): neuropathies; gingival hyperplasia is cyclosporine\'s', 'PCol 30')}},
+    tacrolimus: {effect: 'neuropathies', within: 'oral calcineurin inhibitors', opts: ['cyclosporine'], src: S('Tacrolimus only (oral): neuropathies', 'PCol 30'),
+      why: {cyclosporine: S('Cyclosporine only: gingival hyperplasia; neuropathies are tacrolimus\'s', 'PCol 30')}},
+    minocycline: {effect: 'ototoxicity', within: 'tetracyclines', opts: ['doxycycline', 'sarecycline'], src: S('Minocycline can cause ototoxicity ("a kind of a special side effect")', 'PCol 45; 11/03 T 50–51'),
+      why: {doxycycline: S('Ototoxicity is stated for minocycline, not doxycycline', 'PCol 45'), sarecycline: S('The slide notes a narrower spectrum for sarecycline, not ototoxicity', 'PCol 45')}},
+  };
+  /* Boxed warning: the 7 cards with Dr. Smith's boxed warning are the keys. Wrong options only
+     from drugs whose adverse effects she gives on a slide with no boxed warning, and that carry
+     none on their labels as far as is commonly known (oral clindamycin, oral metronidazole,
+     ketoconazole, methotrexate, the retinoids, topical calcineurin inhibitors, JAK inhibitors,
+     brodalumab and methoxsalen do, so they are never offered). */
+  const BOX_NONE = ['dupilumab', 'crisaborole', 'secukinumab', 'risankizumab', 'ustekinumab', 'apremilast', 'calcipotriene',
+    'doxycycline', 'minocycline', 'azithromycin', 'erythromycin', 'bpo', 'salicylic', 'anthralin', 'coaltar'];
+  /* Photosensitizing: keys are the cards Dr. Smith marks photosensitizing. Wrong options only
+     where a source says not photosensitizing (shale tar, PCol 57), a physical sunblock (Sun 20),
+     or a drug no course source and no common knowledge links to photosensitivity. Never the
+     chemical sunscreens (PABA, oxybenzone photoallergy), adapalene (sun protection still needed),
+     tars, sulfonamides, methotrexate, calcineurin inhibitors, retinoids or azoles. */
+  const PHOTO_NOT = {shaletar: null, zincoxide: 'sunblock', tio2: 'sunblock', petrolatum: '', dupilumab: '', crisaborole: '', ustekinumab: '',
+    secukinumab: '', guselkumab: '', apremilast: '', erythromycin: '', clindamycin: ''};
+  const byId = id => D.find(d => d.id === id);
   const EXTRA = {
+    aeUniq(d, T, rng){
+      const u = AE_UNIQ[d.id];
+      if (!u) return null;
+      const opts = mix(u.opts.map(id => byId(id).name), d.name, rng);
+      return Object.assign(Q(d, 'aeUniq', `Among the ${u.within}, which one has ${u.effect} as its specific adverse effect?`, opts, [u.src]),
+        {wrongWhy: u.opts.map(id => Object.assign({opt: byId(id).name}, u.why[id]))});
+    },
+    boxed(d, T, rng){
+      if (!d.boxed) return null;
+      const wrong = onePer(BOX_NONE.map(byId), o => o.cls, 3, rng);
+      return Object.assign(Q(d, 'boxed', 'Which of these carries a boxed warning?', mix(wrong.map(o => o.name), d.name, rng), [d.boxed]),
+        {wrongWhy: wrong.map(o => ({opt: o.name, t: 'no boxed warning on Dr. Smith\'s slide of its adverse effects', by: 'smith', cite: o.ae[0].cite}))});
+    },
+    photo(d, T, rng){
+      if (!d.photo || d.photo.no) return null;
+      const wrong = onePer(Object.keys(PHOTO_NOT).map(byId), o => o.cls, 3, rng);
+      return Object.assign(Q(d, 'photo', 'Which of these is photosensitizing?', mix(wrong.map(o => o.name), d.name, rng), [d.photo]),
+        {wrongWhy: wrong.map(o => PHOTO_NOT[o.id] === null ? Object.assign({opt: o.name}, o.photo)
+          : PHOTO_NOT[o.id] === 'sunblock' ? Object.assign({opt: o.name}, WHY.sunblock)
+          : {opt: o.name, t: 'no course source links it to photosensitivity', by: 'remark'})});
+    },
     brand(d, T, rng){
       if (!d.brands.length) return null;
       const key = pickOne(d.brands, rng), src = brandSrc(d).concat([BRAND_QUOTE]);
@@ -889,6 +956,9 @@ const DRUGLIST = (() => {
     if (kind === 'use' && d.id === 'zincoxide') return 'zinc oxide is a skin protectant used on irritated skin, and sulfur + zinc oxide acne mixtures exist (DPAW 46), so no other condition is safely false for it';
     if (kind === 'use' || kind === 'useRev') return quizFacts(d, T, 'use').length ? 'fewer than three safe wrong options'
       : 'no indication on its chart line (p. 5, one row off) and none on a slide';
+    if (kind === 'aeUniq') return 'no adverse effect named as specific to this drug within its class';
+    if (kind === 'boxed') return 'no boxed warning on Dr. Smith\'s slides for this card';
+    if (kind === 'photo') return d.photo && d.photo.no ? 'a source says it is not photosensitizing' : 'not marked photosensitizing';
     if (kind === 'brand') return d.brands.length ? 'fewer than three safe wrong options' : 'no brand on its chart line';
     if (kind === 'potency') return d.potency ? 'fewer than three safe wrong options' : 'not a topical steroid (potency classes are on chart p. 6 only)';
     if (kind === 'chem') { const c = CHEM[d.id]; return !c ? 'no chemical class recorded' : c.no ? {blank: 'cell blank on the chart', group: 'cell names a therapeutic group, not a chemical class',
@@ -911,5 +981,6 @@ const DRUGLIST = (() => {
 
   return {parseTargets, D, CLASS_Q, CLASSES, DISEASES, PAGES, CHART_ROWS, EXCLUDED, CHART_NOTES, questionsFor, classQuestions,
           KINDS, KIND_HEAD, quizFacts, trueValues, makeQuestion, norm, family, NOT_WRONG, OFF_CHART,
-          CHEM, chemFam, rxLines, BRAND_ALSO, brandFits, STEROID_MAYBE, STEROID_MAYBE_ID, STEROID_WRONG_WHY, RX_OPTS, POTENCY, brandBlocked, brandSrc, rxSrc, potSrc, BRAND_PRINT, BRAND_QUOTE, OPEN_USE, hasUse, conflicts, whyNone, coverage};
+          CHEM, chemFam, rxLines, BRAND_ALSO, brandFits, STEROID_MAYBE, STEROID_MAYBE_ID, STEROID_WRONG_WHY, RX_OPTS, POTENCY, brandBlocked, brandSrc, rxSrc, potSrc, BRAND_PRINT, BRAND_QUOTE, OPEN_USE, hasUse, conflicts, whyNone, coverage,
+          hasTarget, NO_TARGET_WHY, SCOPES, SCOPE_WHY, scopeOf, inExam, AE_UNIQ, BOX_NONE, PHOTO_NOT, WHY, AE};
 })();

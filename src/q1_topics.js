@@ -554,7 +554,7 @@ const QUESTIONS = [
 
 {id:'L1-049', skill:'class', prof:'Smith', tier:'new', topic:'acne', sub:'drugs', concept:'acne-drug-map', multi:true,
  tags:['figure'], source:'slide',
- stem:'In the acne pathogenesis figure, which drugs act on both P. acnes proliferation and abnormal keratinization? Select all that apply.',
+ stem:'Which acne drugs act on both P. acnes proliferation and abnormal keratinization? Select all that apply.',
  options:[
   {t:'Benzoyl peroxide', correct:true, why:'Slide 36 lists benzoyl peroxide in both the P. acnes box and the keratinization box.'},
   {t:'Isotretinoin', correct:true, why:'Slide 36 lists isotretinoin in the P. acnes, keratinization and sebum boxes.'},
@@ -566,7 +566,7 @@ const QUESTIONS = [
 
 {id:'L1-050', skill:'class', prof:'Smith', tier:'new', topic:'acne', sub:'drugs', concept:'salicylic-target', dupOf:'L1-049',
  tags:['figure'], source:'slide',
- stem:'In the acne pathogenesis figure, salicylic acid is placed against which component?',
+ stem:'Salicylic acid acts on which pathological component of acne?',
  options:[
   {t:'Abnormal keratinization', correct:true, why:'Slide 36.'},
   {t:'P. acnes proliferation', correct:false, why:'Slide 36 puts benzoyl peroxide, antibiotics and isotretinoin there, not salicylic acid.'},

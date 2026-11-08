@@ -123,6 +123,10 @@ const uiSrc = fs.readFileSync(path.join(SRC, 'atlas_ui.js'), 'utf8');
 /m\.assigned === false/.test(uiSrc) && /'Not on the assigned pages'/.test(uiSrc)
   ? ok('tiles with assigned:false carry the label "Not on the assigned pages"')
   : fail('atlas_ui.js does not label tiles that are not on the assigned pages');
+/const HEAD = \{core: 'Core learning', reference: 'Reference', verify: 'Needs verification'\}/.test(uiSrc) &&
+/const onExam = pr === 'core' && m\.assigned !== false/.test(uiSrc)
+  ? ok(`tile headings follow the priority; "Exam 1" only on core items from the assigned pages (${items.filter(i => (i.priority || 'core') === 'core' && i.assigned).length} items)`)
+  : fail('atlas_ui.js: tile heading or "Exam 1" label does not follow the priority and assigned pages');
 
 // 5. pre-answer drawings
 const leaks = Object.entries(A.FGQ).filter(([k, svg]) => /var\(--wash\)/.test(svg) || !/aria-label="Chemical structure to identify"/.test(svg));

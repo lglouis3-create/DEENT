@@ -50,7 +50,7 @@ const sb = {console, window: {}};
 vm.createContext(sb);
 let src = here('course.js') + '\n';
 for (const f of files) src += here(f) + '\n';
-src += here('reference.js') + '\nthis.X = {QUESTIONS, DRUGLIST, REFERENCE_HTML, ATLAS: typeof ATLAS !== "undefined" ? ATLAS : null};';
+src += here('reference.js') + '\nthis.X = {QUESTIONS, DRUGLIST, REFERENCE_HTML, ATLAS: typeof ATLAS !== "undefined" ? ATLAS : null, DRUGFACTS: typeof DRUGFACTS !== "undefined" ? DRUGFACTS : null};';
 vm.runInContext(src, sb);
 const {QUESTIONS, DRUGLIST: DL, REFERENCE_HTML, ATLAS} = sb.X;
 const ids = new Set(DL.D.map(d => d.id));
@@ -481,10 +481,137 @@ console.log('=== Quiz me (multiple choice) and Recall ===');
   check(made2.clsRev === DL.D.length && made2.useRev === 77 && made.use === 75 && made2.chem === 62,
     `reverse and chemical-class coverage: class → drug ${made2.clsRev}, indication → drug ${made2.useRev}, chemical class ${made2.chem}`);
   const cov = DL.coverage(T);
-  check(Object.keys(DL.KINDS).every(k => cov[k].n === (made[k] !== undefined ? made[k] : made2[k]) && cov[k].n + Object.values(cov[k].none).flat().length === DL.D.length),
+  check(Object.keys(DL.KINDS).filter(k => made[k] !== undefined || made2[k] !== undefined).every(k => cov[k].n === (made[k] !== undefined ? made[k] : made2[k])) &&
+    Object.keys(DL.KINDS).every(k => cov[k].n + Object.values(cov[k].none).flat().length === DL.D.length),
     'the About coverage line agrees with the generated questions and accounts for every drug');
   console.log('  coverage per kind (drugs with a question / 79; reasons for the rest):');
   for (const [k, o] of Object.entries(cov)) console.log(`    ${DL.KIND_HEAD[k]}: ${o.n}` + Object.entries(o.none).map(([r, ns]) => `\n      ${ns.length}: ${r}${ns.length <= 12 ? ' (' + ns.join(', ') + ')' : ''}`).join(''));
+}
+
+console.log('=== Phase 1 (plan 2026-11-08): new kinds, labels, scope ===');
+{
+  const ui = code('druglist_ui.js');
+  const rngOf = seed => () => { seed |= 0; seed = seed + 0x6D2B79F5 | 0; let t = Math.imul(seed ^ seed >>> 15, 1 | seed);
+    t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t; return ((t ^ t >>> 14) >>> 0) / 4294967296; };
+  const byName = n => DL.D.find(d => d.name === n);
+  const u = a => [...new Set(a)].slice(0, 8).join('; ');
+  // labels: "Target" exactly where a target question exists
+  const tq = DL.D.filter(d => DL.makeQuestion(d, T, 'target', rngOf(1)));
+  const ht = DL.D.filter(DL.hasTarget);
+  check(ht.length === 51 && tq.length === 51 && ht.every(d => tq.includes(d)),
+    `"Target" on the ${ht.length} drugs with a molecular target (each has a Target question); the other ${DL.D.length - ht.length} read "How it acts"`);
+  check(/No single receptor or enzyme target named in the lecture/.test(DL.NO_TARGET_WHY) && /How does it act\?/.test(ui) && /'How it acts'/.test(ui),
+    'the "How it acts" label gives its reason, and Recall asks "How does it act?" for those drugs');
+  check(!/ a indication/.test(ui) && !/ a indication/.test(code('druglist_data.js')), 'no "a indication" anywhere in the Drug list');
+  // independent lists for the strict wrong options (drugs with a boxed warning on their US label or a known
+  // photosensitizing effect, from common knowledge; never offered as wrong)
+  const BOXED_REAL = ['methotrexate', 'isotretinoin', 'acitretin', 'tacrolimus', 'pimecrolimus', 'ruxolitinib', 'upadacitinib', 'tofacitinib', 'brodalumab',
+    'methoxsalen', 'clindamycin', 'metronidazole', 'ketoconazole', 'tretinoin', 'spironolactone', 'cyclosporine', 'etanercept', 'adalimumab', 'infliximab', 'golimumab', 'certolizumab'];
+  const PHOTO_REAL = ['padimate', 'oxybenzone', 'dioxybenzone', 'octinoxate', 'octisalate', 'homosalate', 'meradimate', 'avobenzone', 'bemotrizinol', 'adapalene', 'coaltar',
+    'tmpsmx', 'methotrexate', 'tacrolimus', 'pimecrolimus', 'tretinoin', 'isotretinoin', 'acitretin', 'tazarotene', 'ketoconazole', 'dapsone', 'doxycycline', 'minocycline',
+    'sarecycline', 'selenium', 'zpt', 'anthralin', 'spironolactone', 'methoxsalen', 'calcipotriene', 'bpo', 'salicylic', 'sulfur', 'metronidazole'];
+  const bad = {shape: [], key: [], wrong: [], why: [], src: [], name: []}, made3 = {aeUniq: 0, boxed: 0, photo: 0};
+  const RUNS3 = 200;
+  for (const k of Object.keys(made3)) for (const d of DL.D) {
+    let got = 0;
+    for (let r = 0; r < RUNS3; r++) {
+      const q = DL.makeQuestion(d, T, k, rngOf(r * 31 + d.id.length + k.length));
+      if (!q) continue; got++;
+      const tag = d.id + ':' + k, o = q.options, right = o.filter(x => x.correct), wrong = o.filter(x => !x.correct);
+      const want = k === 'aeUniq' ? DL.AE_UNIQ[d.id].opts.length + 1 : 4;
+      if (o.length !== want || right.length !== 1 || new Set(o.map(x => x.t)).size !== o.length) bad.shape.push(tag);
+      if (!right[0] || right[0].t !== d.name) bad.key.push(tag);
+      if (q.stem.includes(d.name)) bad.name.push(tag);
+      for (const w of wrong) {
+        const o2 = byName(w.t);
+        if (!o2) { bad.wrong.push(tag + ' ' + w.t); continue; }
+        if (k === 'boxed' && (o2.boxed || BOXED_REAL.includes(o2.id) || (o2.notes || []).some(n => /boxed/i.test(n.t)) || !DL.BOX_NONE.includes(o2.id))) bad.wrong.push(tag + ' ' + w.t);
+        if (k === 'photo' && ((o2.photo && !o2.photo.no) || PHOTO_REAL.includes(o2.id) || !(o2.id in DL.PHOTO_NOT))) bad.wrong.push(tag + ' ' + w.t);
+        if (k === 'aeUniq' && (o2.cls !== d.cls || !DL.AE_UNIQ[d.id].opts.includes(o2.id))) bad.wrong.push(tag + ' ' + w.t);
+        const why = (q.wrongWhy || []).find(x => x.opt === w.t);
+        if (!why || !why.t || (why.by !== 'remark' && !citeOk(why)) || (k !== 'photo' && why.by === 'remark')) bad.why.push(tag + ' ' + w.t);
+      }
+      if (!q.src.length || !q.src.every(citeOk)) bad.src.push(tag);
+      if (k === 'boxed' && q.src[0] !== d.boxed) bad.src.push(tag + ' not its boxed line');
+      if (k === 'photo' && q.src[0] !== d.photo) bad.src.push(tag + ' not its photo line');
+      if (k === 'aeUniq' && !(d.ae || []).some(a => a.t.toLowerCase().includes(DL.AE_UNIQ[d.id].effect.split(' ')[0]))) bad.src.push(tag + ' effect not on its card');
+    }
+    if (got && got !== RUNS3) bad.shape.push(d.id + ':' + k + ' unstable');
+    if (got) made3[k]++;
+  }
+  const n3 = Object.values(made3).reduce((a, b) => a + b, 0) * RUNS3;
+  check(!bad.shape.length, `adverse effect → drug, boxed warning, photosensitizing: options distinct, exactly one correct, 4 (adverse effect: the class's drugs on the slide) (${n3} questions over ${RUNS3} draws)`, u(bad.shape));
+  check(!bad.key.length && !bad.name.length, 'the key is the drug itself and the stem does not name it', u(bad.key.concat(bad.name)));
+  check(!bad.wrong.length, 'every wrong option is false by source: boxed — none on her slides and none known on its label; photosensitizing — a source says not, a physical sunblock, or no known link; adverse effect — the other drug(s) of the class on the slide', u(bad.wrong));
+  check(!bad.why.length, 'every wrong option shows its reason (cited, or "no course source links it" for photosensitizing only)', u(bad.why));
+  check(!bad.src.length, 'every answer cites the drug\'s own boxed / photosensitizing / adverse-effect line', u(bad.src));
+  check(made3.aeUniq === 3 && made3.boxed === 7 && made3.photo === 8, `coverage: adverse effect → drug ${made3.aeUniq} (cyclosporine, tacrolimus, minocycline), boxed warning ${made3.boxed}, photosensitizing ${made3.photo}`);
+  const ad = DL.D.find(d => d.id === 'adapalene');
+  check(ad.photo && ad.photo.no && /PCol 18/.test(ad.photo.cite), 'adapalene is "sun stable", not photosensitizing (PCol 18), as the bank keys it (L2-017, L3C-044)');
+  check(/aeUniq: 'Adverse effect → drug', boxed: 'Boxed warning', photo: 'Photosensitizing'/.test(code('druglist_data.js')) && /k === 'target' \|\| k === 'cls'/.test(ui),
+    'the three new kinds are in Ask about, off by default (Target and Class stay the default)');
+  check(/why: 'Why it helps'/.test(ui) && /ae: 'Adverse effects'/.test(ui), 'Recall offers Why it helps and Adverse effects');
+  // scope
+  const sc = {}; DL.D.forEach(d => { const k = DL.scopeOf(d); sc[k] = (sc[k] || 0) + 1; });
+  check(sc.taught === 64 && sc.chartonly === 4 && sc.optional === 11 && DL.D.filter(d => DL.scopeOf(d) === 'chartonly').every(d => d.cls === 'anesth') &&
+    DL.D.filter(d => DL.scopeOf(d) === 'optional').every(d => d.cls === 'steroid') && /T 590–593/.test(DL.SCOPE_WHY.excluded) && /T 606–618/.test(DL.SCOPE_WHY.chartonly),
+    `scope tags: Exam 1 · taught ${sc.taught}, Exam 1 · chart only ${sc.chartonly} (sunburn anesthetics), optional ${sc.optional} (steroid products off Dr. Sikazwe's pages); p. 7 excluded`);
+  // the UI: the retry freezes, a rating counts only on a click
+  check(/!quiz\.frozen && quiz\.sig !== qsig\(\)/.test(ui) && /function retrySet/.test(ui) && /quiz\.ans\[q\.id\] === undefined \|\|/.test(ui) && /options: shuffle\(q\.options\)/.test(ui) &&
+    /Back to the filtered list/.test(ui) && /they apply after this set/.test(ui),
+    'Retry the missed: a frozen set (never rebuilt from the filters), with the unanswered questions, the same options reshuffled, Back to the filtered list, and a line when the filters change');
+  const noteCalls = (ui.match(/\bnote\(/g) || []).length;
+  const checkH = (ui.match(/else if \(a === 'check' && d\) \{[\s\S]*?\n    \}/) || [''])[0] + (ui.match(/else if \(a === 'revealall'\)[^\n]*/) || [''])[0];
+  check(noteCalls === 4 && !/note\(/.test(checkH) && /Not counted until you choose one/.test(ui),
+    'a rating is counted only by a click on Forgot / Partly / Knew (or a Quiz me answer); Check and Check all count nothing');
+}
+
+console.log('=== Fact map (drugfacts.js) and status words ===');
+{
+  const ui = code('druglist_ui.js');
+  const DF = sb.X.DRUGFACTS || vm.runInContext('typeof DRUGFACTS !== "undefined" ? DRUGFACTS : null', sb);
+  check(!!DF && C.files.indexOf('drugfacts.js') > C.files.indexOf('druglist_data.js') && C.files.indexOf('drugfacts.js') < C.files.indexOf('druglist_ui.js'),
+    'drugfacts.js is in course.js files, after the data and before the tab');
+  if (DF) {
+    const qb = {}; QUESTIONS.forEach(q => { qb[q.id] = q; });
+    const corr = q => (q.options || []).filter(o => o.correct).map(o => o.t).join(' ');
+    const badM = [], links = Object.entries(DF.MAP).flatMap(([qid, fs]) => fs.map(f => [qid, ...f.split(':')]));
+    for (const [qid, id, f] of links) {
+      const q = qb[qid], d = DL.D.find(x => x.id === id);
+      if (!q) { badM.push(qid + ' not in bank'); continue; }
+      if (!d) { badM.push(qid + ' ' + id + ' no card'); continue; }
+      if (!DF.FIELDS[f]) badM.push(qid + ' ' + f + ' no field');
+      if (q.lowYield) badM.push(qid + ' lowYield');
+      if (!new RegExp(d.q, 'i').test(q.stem + ' • ' + corr(q))) badM.push(`${qid} does not name ${id}`);
+    }
+    check(!badM.length, `every mapping (${links.length} on ${Object.keys(DF.MAP).length} questions) names a bank question that is in scored practice and names its drug in the stem or keyed answer`, badM.slice(0, 8).join('; '));
+    const dup = links.map(l => l.join(':')).filter((x, i, a) => a.indexOf(x) !== i);
+    check(!dup.length, 'no mapping is listed twice', dup.join(', '));
+    const leak = links.filter(([qid, id]) => id === 'padimate' && /sulfamethoxazole|dapsone/i.test(qb[qid].stem));
+    check(!leak.length && !links.some(([, id, f]) => id === 'metronidazole' && f === 'use'),
+      'no mapping from another drug\'s text (PABA in the sulfonamide and dapsone questions); none on the held metronidazole indication conflict');
+    check(links.some(l => l.join(':') === 'L2-060:tacrolimus:target') && links.some(l => l.join(':') === 'L2-076:cyclosporine:ae') && links.some(l => l.join(':') === 'L3-118:cyclosporine:boxed'),
+      'spot checks: L2-060 tacrolimus target (FKBP), L2-076 cyclosporine adverse effect, L3-118 cyclosporine boxed warning');
+    const cnt = {}; links.forEach(([, , f]) => { cnt[f] = (cnt[f] || 0) + 1; });
+    console.log(`  ${links.length} mappings, ${Object.keys(DF.BY).length} drugs: ` + Object.entries(cnt).map(([f, n]) => `${f} ${n}`).join(', '));
+    // status words (plan §4.1)
+    const day = 86400000, t0 = Date.UTC(2026, 10, 2, 15), A = (qid, result, at, conf) => Object.assign({qid, result, at}, conf ? {conf} : {});
+    const S = (ans, q) => DF.status(ans, q || ['Q1']).label;
+    check(S([]) === 'Not practised' && DF.status([], ['Q1']).weak === false, 'untested: "Not practised", never weak');
+    check(S([A('Q2', 'wrong', t0)]) === 'Not practised', 'answers to other questions do not count');
+    check(S([A('Q1', 'correct', t0)]) === 'Remembered', 'one right answer: Remembered');
+    check(S([A('Q1', 'correct', t0), A('Q1', 'correct', t0 + 3600000)]) === 'Remembered', 'two right answers the same day: Remembered, never Kept');
+    check(S([A('Q1', 'correct', t0), A('Q1', 'correct', t0 + day)]) === 'Kept on a later day', 'right again on a later day: Kept on a later day');
+    check(S([A('Q1', 'correct', t0), A('Q1', 'wrong', t0 + day), A('Q1', 'correct', t0 + 2 * day)]) === 'Remembered', 'a miss in between: Remembered, not Kept');
+    check(S([A('Q1', 'correct', t0), A('Q1', 'wrong', t0 + day)]) === 'Forgot' && DF.status([A('Q1', 'wrong', t0)], ['Q1']).weak, 'last answer wrong: Forgot (weak)');
+    check(S([A('Q1', 'correct', t0, 'shaky')]) === 'Right, but unsure' && S([A('Q1', 'guessed', t0)]) === 'Right, but unsure', '"Not sure" or "I guessed": Right, but unsure');
+    check(S([A('Q1', 'correct', t0, 'shaky'), A('Q1', 'correct', t0 + day)]) === 'Remembered', 'unsure, then right next day: Remembered (the unsure answer does not start a Kept run)');
+    const st = DF.status([A('Q1', 'correct', t0 + day), A('Q2', 'wrong', t0)], ['Q1', 'Q2']);
+    check(st.label === 'Remembered' && st.n === 2 && st.right === 1, 'answers in any order: the latest decides; counts of answers and right answers kept apart');
+    // the Drug list never writes the core's progress
+    check(!/\bDB\s*(\.[\w$]+|\[[^\]]+\])*\s*(=[^=]|\+\+|--|\.push\(|\.splice\()|\b(record|save|markShaky|markGuessed|markSure|st)\(/.test(ui.replace(/\.st\(|state: st/g, '')) &&
+      !/\bDB\b/.test(code('drugfacts.js')), 'the Drug list reads the core\'s progress (DB) only: no assignment, record() or save()');
+  }
 }
 
 console.log('=== The original chart pages (chart/, chart_boxes.js) ===');
@@ -538,7 +665,7 @@ console.log('=== The original chart pages (chart/, chart_boxes.js) ===');
 }
 
 console.log('=== Storage and stub DOM ===');
-for (const f of ['druglist_data.js', 'druglist_ui.js']) {
+for (const f of ['druglist_data.js', 'druglist_ui.js', 'drugfacts.js']) {
   const hits = code(f).match(/localStorage|sessionStorage|indexedDB|\.setItem\(|document\.cookie|caches\.open/g);
   check(!hits, `${f} writes to no storage`, hits && hits.join(', '));
 }

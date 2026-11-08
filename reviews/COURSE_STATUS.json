@@ -4,7 +4,7 @@
   "repo": "lglouis3-create/DEENT",
   "site": "https://lglouis3-create.github.io/DEENT/",
   "term": "Fall 2026",
-  "kit_core_pin": "25c643d",
+  "kit_core_pin": "08be7a2",
   "lifecycle": "active",
   "source": {
     "file": "SyllabusF26---PHAR-4346---PT-III-DEENT.pdf",
@@ -15,7 +15,7 @@
   "exams": [
     {"id": "exam1", "name": "Exam 1", "date": "2026-11-09", "time": "9:00-10:30 AM", "questions": 50,
      "coverage": "Lectures 1-4", "weight_pct": 20, "review": "2026-11-13 1:00-1:30 PM",
-     "published_practice": true, "status": "drill published for Lectures 1-4 (live build 2026-11-05; sun-exposure lecture and Atlas waiting on the working branch for approval)"},
+     "published_practice": true, "status": "drill published for Lectures 1-4 with the sun-exposure lecture, Atlas, Drug list, narrated walkthroughs and stars (live main bad5e46, 2026-11-08, Louis: \"Yes publish everything\")"},
     {"id": "exam2", "name": "Exam 2", "date": "2026-11-16", "time": "9:00-10:30 AM", "questions": 50,
      "coverage": "Lectures 1-4 (30%), Lectures 5-8 (70%)", "weight_pct": 20, "review": "2026-11-20 1:00-1:30 PM",
      "published_practice": false, "status": "no material ingested; not shown to students"},
@@ -28,7 +28,7 @@
   ],
   "completion_rule": "The course is complete after the final on 2026-12-07, not when Exam 1 passes. Exam 2 and the final are cumulative, so Exam 1 material stays published.",
   "open_items": [
-    "Dr. Sikazwe's list of slides to avoid (promised by Friday 11/06); not in Drive as of the check on 2026-11-06; reminder set for 2026-11-07 12:00 Central.",
-    "Sun-exposure lecture on Exam 1: syllabus says Lecture 3; Dr. Smith said on 10/29 she would cover it after the exam (reviews/OPEN_QUESTIONS.md)."
+    "Dr. Sikazwe's list: received 11/06 as an assigned-pages list (printed slides 7-9, 12, 15-22, 24-33, 42-54, 60-65); the 24 questions outside it are lowYield in the optional topic sk-beyond. Still to confirm with Louis: keep them as practice, and the printed-number reading (reviews/OPEN_QUESTIONS.md).",
+    "Sun-exposure lecture: on Exam 1 per the syllabus and Dr. Smith's Exam 1 hints (2026-11-07); in the bank (q6_L03c.js)."
   ]
 }

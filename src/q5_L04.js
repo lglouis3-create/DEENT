@@ -142,6 +142,7 @@ QUESTIONS.push(
 
 {id:'S4-005', skill:'chem', prof:'Sikazwe', tier:'new', topic:'s4-vitd', sub:'analog', concept:'secosteroid',
  tags:['classification'], source:'slide',
+ fg:'calcipotriene',
  stem:'Calcitriol and calcipotriene belong to which chemical class?',
  options:[
   {t:'Secosteroids', correct:true, why:'Slide 27: "Calcitriol (Rocaltrol) & Calcipotriene (Dovonex) are Secosteroids".'},
@@ -154,6 +155,7 @@ QUESTIONS.push(
 /* ---- Vitamin D3 biosynthesis: the take-home (slide 27 + reading) ---------- */
 {id:'S4-006', skill:'chem', prof:'Sikazwe', tier:'new', topic:'s4-vitd', sub:'path', concept:'vitd-step1-reaction',
  tags:['take-home','pathway'], source:'both',
+ cmp:['7-dehydrocholesterol','cholecalciferol'],
  stem:'What reaction begins the conversion of 7-dehydrocholesterol into vitamin D3?',
  options:[
   {t:'UV light opens the B ring', correct:true, why:'The reading: D3 is made in the skin from 7-dehydrocholesterol "by UV irradiation, which breaks the B ring to form pre-D3" (Vitamin D reading (Endotext), lines 60–61); "light is going to be involved" (T@4371).'},
@@ -288,7 +290,7 @@ QUESTIONS.push(
 
 {id:'S4-018', skill:'chem', prof:'Sikazwe', tier:'new', topic:'s4-limus', sub:'class', concept:'limus-structure',
  tags:['structure'], source:'both',
- stem:'Which structural features separate pimecrolimus from tacrolimus?',
+ cmp:['pimecrolimus','tacrolimus'], stem:'Which structural features separate pimecrolimus from tacrolimus?',
  options:[
   {t:'Cl vs OH, and ethyl vs allyl', correct:true, why:'"The only points of difference are that chlorine and that methyl [the highlighted group is ethyl] group, and here you have that [all]ylic group and hydroxy" (T@4600–4780); highlighted on slide 28.'},
   {t:'A lactam vs a lactone ring', correct:false, why:'Both are lactones (macrolides) (slides 28, 32); the lactam is cyclosporine (slide 33).'},
@@ -335,6 +337,7 @@ QUESTIONS.push(
 /* ---- Retinoids for psoriasis (slide 29) ---------------------------------- */
 {id:'S4-022', skill:'chem', prof:'Sikazwe', tier:'new', topic:'s4-psret', sub:'taz', concept:'tazarotene-alkyne',
  tags:['structure'], source:'both',
+ fg:'tazarotene',
  stem:'Tazarotene is described chemically as which kind of retinoid?',
  options:[
   {t:'An acetylenic (alkyne) retinoid', correct:true, why:'Slide 29: "An Acetylenic retinoid"; "acetylinic is our kind [alkyne]. Retinoid" (T@6884–6942).'},
@@ -346,6 +349,7 @@ QUESTIONS.push(
 
 {id:'S4-023', skill:'pk', prof:'Sikazwe', tier:'new', topic:'s4-psret', sub:'taz', concept:'tazarotene-prodrug',
  tags:['prodrug'], source:'both',
+ cmp:['tazarotene','tazarotenic acid'],
  stem:'How is tazarotene activated after it is applied to the skin?',
  options:[
   {t:'Ester hydrolysis by carboxylesterases', correct:true, why:'"it\'s also what? And Esther. Pro-drug. So that ... it needs ester hydrolysis by. CE enzymes, right, for activation" (T@6942–7082); "CE" arrow on slide 29.'},
@@ -446,7 +450,7 @@ QUESTIONS.push(
 
 {id:'S4-032', skill:'chem', prof:'Sikazwe', tier:'new', topic:'s4-mtx', sub:'sar', concept:'mtx-vs-folic',
  tags:['structure'], source:'both',
- stem:'Which structural differences separate methotrexate from folic acid?',
+ cmp:['methotrexate','folic acid'], stem:'Which structural differences separate methotrexate from folic acid?',
  options:[
   {t:'An N-methyl group and an amine', correct:true, why:'"the only points of difference are going to be this methyl group and that amine" (T@8700–8800): MTX has N-CH3 and NH2 where folic acid has N-H and OH (slide 31).'},
   {t:'A lactone ring and a chlorine', correct:false, why:'Those features belong to pimecrolimus (slides 28, 32).'},
@@ -457,6 +461,7 @@ QUESTIONS.push(
 
 {id:'S4-033', skill:'chem', prof:'Sikazwe', tier:'new', topic:'s4-mtx', sub:'sar', concept:'mtx-sar-parts', multi:true,
  tags:['sar','list'], source:'both',
+ cmp:['methotrexate','folic acid'],
  stem:'Which structural parts are required for methotrexate-like activity? Select all that apply.',
  options:[
   {t:'Pteridine ring', correct:true, why:'Slide 31 SAR item 1; "One, the teridine ring" (T@10109).'},
@@ -469,6 +474,7 @@ QUESTIONS.push(
 
 {id:'S4-034', skill:'chem', prof:'Sikazwe', tier:'new', topic:'s4-mtx', sub:'sar', concept:'mtx-sar-aromatic',
  tags:['sar'], source:'both',
+ fg:'methotrexate',
  stem:'In the methotrexate SAR, what happens if the double bonds of the pteridine ring are changed so the ring is no longer aromatic?',
  options:[
   {t:'Activity is lost', correct:true, why:'Slide 31: "Pteridine ring should remain aromatic"; "if you change the double bonds within that pteridine ring, you\'re messing up the activity" (T@10402–10583).'},
@@ -480,6 +486,7 @@ QUESTIONS.push(
 
 {id:'S4-035', skill:'chem', prof:'Sikazwe', tier:'new', topic:'s4-mtx', sub:'sar', concept:'mtx-sar-alkylation',
  tags:['sar'], source:'both',
+ fg:'methotrexate',
  stem:'In the methotrexate SAR, what is the effect of alkylating the aromatic amines on the pteridine ring?',
  options:[
   {t:'Activity decreases', correct:true, why:'Slide 31: "Aromatic N-alkylation ↓activity"; "If you alkylate any one of those, you also drop the activity" (T@10583–10750).'},
@@ -490,15 +497,16 @@ QUESTIONS.push(
  cite:S4+' slide 31; T@10583–10750'},
 
 {id:'S4-036', skill:'chem', prof:'Sikazwe', tier:'new', topic:'s4-mtx', sub:'sar', concept:'mtx-sar-nme',
- tags:['sar'], source:'both',
- stem:'In the methotrexate SAR, which group is essential for activity?',
+ tags:['sar','structure'], source:'both',
+ img:'s4-mtx-labelled',
+ cmp:['methotrexate','folic acid'], stem:'Folic acid lacks two of the numbered groups on the methotrexate structure shown. Which of those two is essential for methotrexate\'s activity?',
  options:[
-  {t:'The N-CH3 group', correct:true, why:'Slide 31: "N-CH3 - essential for activity"; "this amethylation [N-methylation] here is also essential for activity" (T@10851).'},
-  {t:'An ester on the glutamate', correct:false, why:'Not part of the SAR; the glutamic acid stays as the acid (slide 31).'},
-  {t:'A chlorine on the benzene ring', correct:false, why:'A chlorine marks pimecrolimus (slide 28), not methotrexate.'},
-  {t:'A cyclic peptide backbone', correct:false, why:'That is cyclosporine (slide 33).'}],
- teach:'With this SAR "we have a blueprint for making molecules that would behave like this" (T@10900–11050). N-CH3 is one of the two features that separate MTX from folic acid (slide 31).',
- cite:S4+' slide 31; T@10851–11050'},
+  {t:'1, the N-CH3 group', correct:true, why:'Slide 31: "N-CH3 - essential for activity"; "this amethylation [N-methylation] here is also essential for activity" (T@10851). Folic acid has N-H at this nitrogen (slide 31).'},
+  {t:'4, the NH2 on the pteridine', correct:false, why:'Folic acid has OH where methotrexate has this NH2, the other point of difference (slide 31; T@8700–8800), but the SAR does not call it essential; for these aromatic amines it says alkylating them lowers activity (slide 31; T@10583–10750).'},
+  {t:'2, the glutamic acid portion', correct:false, why:'Folic acid carries the same glutamic acid portion (slide 31), so it is not one of the two groups folic acid lacks.'},
+  {t:'3, the p-aminobenzoic acid ring', correct:false, why:'Folic acid carries the same p-aminobenzoic acid portion (slide 31), so it is not one of the two groups folic acid lacks.'}],
+ teach:'Slide 31 draws MTX beside folic acid: the same pteridine, p-aminobenzoic acid and glutamic acid parts; MTX has N-CH3 where folic acid has N-H, and NH2 where folic acid has OH (T@8700–8800). The SAR on slide 31: pteridine ring, p-aminobenzoic acid and glutamic acid; the pteridine stays aromatic; aromatic N-alkylation lowers activity; N-CH3 is essential (T@10096–10900). With this SAR "we have a blueprint for making molecules that would behave like this" (T@10900–11050).',
+ cite:S4+' slide 31 (figure: methotrexate from the Atlas structure, groups numbered 1–4); T@8700–8800, T@10583–11050'},
 
 {id:'S4-037', skill:'class', prof:'Sikazwe', tier:'new', topic:'s4-mtx', sub:'mech', concept:'mtx-multitarget',
  tags:['recall'], source:'both',
@@ -514,6 +522,7 @@ QUESTIONS.push(
 /* ---- Cyclosporine (slide 33) ---------------------------------------------- */
 {id:'S4-038', skill:'chem', prof:'Sikazwe', tier:'new', topic:'s4-sys', sub:'csa', concept:'csa-structure',
  tags:['structure'], source:'both',
+ fg:'cyclosporine',
  stem:'How is cyclosporine described structurally?',
  options:[
   {t:'An 11 amino acid cyclic peptide', correct:true, why:'Slide 33: "11 Amino Acid cyclic peptide"; (T@12014–12100).'},
@@ -581,6 +590,7 @@ QUESTIONS.push(
 /* ---- Apremilast (slide 34) ------------------------------------------------ */
 {id:'S4-044', skill:'chem', prof:'Sikazwe', tier:'new', topic:'s4-sys', sub:'apr', concept:'apremilast-class',
  tags:['classification'], source:'slide',
+ fg:'apremilast',
  stem:'Apremilast belongs to which chemical class?',
  options:[
   {t:'Isoindoline', correct:true, why:'Slide 34: "An Isoindoline" (ring drawn in magenta).'},
@@ -614,7 +624,7 @@ QUESTIONS.push(
 
 {id:'S4-047', skill:'pk', prof:'Sikazwe', tier:'new', topic:'s4-sys', sub:'apr', concept:'apremilast-3a4',
  tags:['interaction','take-home'], source:'both',
- stem:'Which interaction caution did he stress for apremilast?',
+ stem:'Which interaction caution applies to apremilast?',
  options:[
   {t:'Avoid CYP3A4 inhibitors and inducers', correct:true, why:'"whatever you do, here, again, avoid what? 384 [3A4] Inhibitors 304 [3A4] Inducers" (T@14290–14360); "the reliance of this molecule on 3A4 for its metabolism" (T@13908–13990).'},
   {t:'Avoid dairy products taken with each dose', correct:false, why:'Food (dairy) lowers tetracycline absorption (slide 55), not apremilast.'},
@@ -708,6 +718,7 @@ QUESTIONS.push(
 /* ---- Hydroxy acids (slides 43–44) ---------------------------------------- */
 {id:'S4-055', skill:'chem', prof:'Sikazwe', tier:'new', topic:'s4-kera', sub:'ha', concept:'aha-definition',
  tags:['structure'], source:'both',
+ fg:'glycolic acid',
  stem:'What makes glycolic acid an alpha-hydroxy acid?',
  options:[
   {t:'Its OH is on the carbon next to the COOH', correct:true, why:'"the hydroxy group is on the atom that is alpha to the carboxylic acid. Or next to." (T@20199–20470); slide 44 "OH on alpha-C (i.e., carbon next to -CO2H)".'},
@@ -719,6 +730,7 @@ QUESTIONS.push(
 
 {id:'S4-056', skill:'chem', prof:'Sikazwe', tier:'new', topic:'s4-kera', sub:'ha', concept:'sa-bha',
  tags:['structure','room'], source:'transcript',
+ fg:'salicylic acid',
  stem:'Salicylic acid is which kind of hydroxy acid, and why?',
  options:[
   {t:'Beta; its OH is two carbons from the COOH', correct:true, why:'"This is the alpha carbon. This one is called the beta carbon. So this is a beta hydroxy acid ... 2 carbon removed from the carboxylic acid" (T@22090–22230).'},
@@ -866,7 +878,7 @@ QUESTIONS.push(
 
 {id:'S4-068', skill:'adverse', prof:'Sikazwe', tier:'new', topic:'s4-kera', sub:'s', concept:'sulfur-drawbacks', multi:true,
  tags:['room','adverse'], source:'transcript',
- stem:'Which drawbacks of sulfur did he name? Select all that apply.',
+ stem:'Which are drawbacks of topical sulfur? Select all that apply.',
  options:[
   {t:'Allergies', correct:true, why:'"What are some of the drawbacks to using sulfur? Cause of allergies." (T@24170–24230).'},
   {t:'Smell', correct:true, why:'"And some people just uh detest sulfur for what? Smell." (T@24230–24285).'},
@@ -946,6 +958,7 @@ QUESTIONS.push(
 
 {id:'S4-075', skill:'chem', prof:'Sikazwe', tier:'new', topic:'s4-ret', sub:'g1', concept:'iso-geometric',
  tags:['structure'], source:'both',
+ cmp:['tretinoin','isotretinoin'],
  stem:'How are tretinoin and isotretinoin related structurally?',
  options:[
   {t:'They are geometric (cis/trans) isomers', correct:true, why:'Slide 49 "Geometric isomer of Tretinoin"; "this relationship, C strands [cis-trans] is called geometric isomerism" (T@28187, T@28620–28720).'},
@@ -957,7 +970,8 @@ QUESTIONS.push(
 
 {id:'S4-076', skill:'chem', prof:'Sikazwe', tier:'new', topic:'s4-ret', sub:'g1', concept:'iso-c13',
  tags:['structure','room'], source:'both',
- stem:'Numbering the chain from the ring carbon marked 1 on the structure, at which carbon is the cis double bond of isotretinoin?',
+ cmp:['tretinoin','isotretinoin'],
+ stem:'In isotretinoin, which double bond is cis?',
  options:[
   {t:'The double bond at carbon 13', correct:true, why:'"if you were to count the carbons ... you start 1 from here ... when you land over here, this is 13 ... 13 carbon cis" (T@28100–28470); slide 49 "13-cis retinoic acid".'},
   {t:'The double bond at carbon 9', correct:false, why:'He counted to C13 for the cis bond (T@28100–28470).'},
@@ -979,6 +993,7 @@ QUESTIONS.push(
 
 {id:'S4-078', skill:'pk', prof:'Sikazwe', tier:'new', topic:'s4-ret', sub:'g2', concept:'etretinate-acitretin',
  tags:['prodrug'], source:'both',
+ cmp:['etretinate','acitretin'],
  stem:'How are etretinate and acitretin related?',
  options:[
   {t:'Carboxylesterases turn etretinate into acitretin', correct:true, why:'Slide 50: etretinate "Ethyl Ester prodrug"; acitretin "Active form of Etretinate"; "This requires bioactivation to this. CEs are involved" (T@29200–29300).'},
@@ -1013,6 +1028,7 @@ QUESTIONS.push(
 
 {id:'S4-081', skill:'chem', prof:'Sikazwe', tier:'new', topic:'s4-ret', sub:'g3', concept:'tazarotene-prodrug', dupOf:'S4-023',
  tags:['prodrug'], source:'both',
+ cmp:['adapalene','tazarotene'],
  stem:'Among the 3rd-generation retinoids, why are adapalene and trifarotene directly active while tazarotene is not?',
  options:[
   {t:'They have an exposed carboxylic acid', correct:true, why:'"these two. Directly active because they have this exposed carboxylic acid ... But [tazarotene] is a prodrug carboxyestrase is [needed]" (T@30193–30300); boxed COOH groups on slide 51.'},
@@ -1081,6 +1097,7 @@ QUESTIONS.push(
 
 {id:'S4-087', skill:'tell', prof:'Sikazwe', tier:'new', topic:'s4-horm', sub:'aa', concept:'flutamide-moa',
  tags:['compare','take-home'], source:'both',
+ cmp:['flutamide','spironolactone'],
  stem:'What separates flutamide from spironolactone in acne therapy?',
  options:[
   {t:'Non-steroid; blocks testosterone at its receptor', correct:true, why:'"Flutamide ... This is non-steroid molecule, and ... it prevents. Testosterone ... From binding. 2, its receptor" (T@32723–32980); slide 53 "Non-steroidal AA".'},
@@ -1104,6 +1121,7 @@ QUESTIONS.push(
 /* ---- Antibiotics (slides 54–55) ------------------------------------------ */
 {id:'S4-089', skill:'chem', prof:'Sikazwe', tier:'new', topic:'s4-abx', sub:'misc', concept:'azelaic-diacid',
  tags:['structure'], source:'both',
+ fg:'azelaic acid',
  stem:'How is azelaic acid described chemically?',
  options:[
   {t:'A C9 dicarboxylic acid (diacid)', correct:true, why:'Slide 54 "A C9 bi-carboxylic acid"; "It\'s a dyacid. Or biacid, meaning to carboxylic acid, and small linear antibiotic" (T@34051–34300).'},
@@ -1159,6 +1177,7 @@ QUESTIONS.push(
 
 {id:'S4-094', skill:'counsel', prof:'Sikazwe', tier:'new', topic:'s4-abx', sub:'tet', concept:'tet-cross-allergy',
  tags:['counsel','room'], source:'both',
+ cmp:['tetracycline','doxycycline','minocycline'],
  stem:'A patient is allergic to tetracycline. What is expected if doxycycline or minocycline is given instead?',
  options:[
   {t:'Likely cross-allergy, from structural similarity', correct:true, why:'"Are they going to be allergic to it as well? ... If you give them minocycline, are they going to be allergic to it? Why? Uh-huh, structural similarity." (T@36452–36790); slide 55 "Cross reactivities due to structure similarity".'},
@@ -1171,7 +1190,7 @@ QUESTIONS.push(
 /* ---- Wrinkle, UV and sun protection (slides 58–66) ----------------------- */
 {id:'S4-095', skill:'patho', prof:'Sikazwe', tier:'new', topic:'sk-beyond', sub:'wrk', concept:'wrinkle-causes', lowYield:true, unassigned:true, note:'Outside Dr. Sikazwe\'s assigned pages for Exam 1 (list of 11/06: pp. 7-9, 12, 15-22, 24-33, 42-54, 60-65). Her numbers are the ones printed on the slides; from printed slide 22 on, the slide numbers cited here run one higher.', multi:true,
  tags:['list'], source:'both',
- stem:'Which causes of fine, coarse and pigmentary skin changes did he give? Select all that apply.',
+ stem:'Which are causes of fine, coarse and pigmentary skin changes? Select all that apply.',
  options:[
   {t:'UV radiation', correct:true, why:'Slide 58 item 1; (T@37380–37450).'},
   {t:'Smoking', correct:true, why:'Slide 58 item 2; "habits like smoking" (T@37403–37450).'},
@@ -1283,6 +1302,7 @@ QUESTIONS.push(
 
 {id:'S4-105', skill:'chem', prof:'Sikazwe', tier:'new', topic:'s4-sun', sub:'org', concept:'salicylate-hydrolysis',
  tags:['structure'], source:'both',
+ cmp:['homosalate','salicylic acid'],
  stem:'Why do the salicylate sunscreens homosalate and octisalate provide some analgesia?',
  options:[
   {t:'Their esters hydrolyze to salicylic acid', correct:true, why:'"They are esters, right, so they can undergo hydrolysis to give you salicylic acid" (T@42535–42620); slide 64 "SA FG. absorbs UVB & provides analgesia".'},

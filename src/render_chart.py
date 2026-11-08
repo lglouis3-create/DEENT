@@ -20,7 +20,21 @@ Writes
         drugs  {cardId: [{page, row, line, x0, y0, x1, y1, text}]}
         other  [{page, row, line, x0, y0, x1, y1, text}]  lines with no card (p. 7)
       row is the drug row's number on its page (1 = first row under the
-      header), line the CHART_ROWS index, text the drug cell's words.
+      header), line the CHART_ROWS index, text the drug cell's words; x0..y1
+      is the row band across the table, and
+        cells  [{col, page, x0, y0, x1, y1, text, merged, cont}]: every cell
+               of the line, one per column: its own cells in its row and each
+               merged (spanning) cell that covers its row (class, chemical
+               class, indication, potency class on p. 6), as printed. merged:
+               the cell is taller than the row; cont: the part of a merged
+               cell on the other side of the p. 4/5 page break (the
+               chemical-class and indication cells of p. 4's last rows run on
+               at the top of p. 5, empty there). Chart errors (p. 5's shifted
+               columns) are kept as printed; nothing is realigned.
+
+How a line's cells are found: the vertical rules give the columns (COLS
+names them); in each column the horizontal rules that cross it bound its
+cells, and the line's cell in that column is the one holding its row's middle.
 
 How a row is found: the chart is a ruled table. The horizontal rules that
 cross the first (Drug) column split the page into rows; a line's row is the
@@ -71,9 +85,18 @@ def brand(line):
     return norm(m.group(1)).split(' ')[0] if m else ''
 
 
-def hrules(page):
+def dark(d):
+    """A drawn rule, not a cell-coloured patch: the chart hides some cell borders
+    by painting them in the cell's background colour (p. 3, the Antibiotics block)."""
+    c = d.get('fill') if d.get('fill') is not None else d.get('color')
+    return c is None or sum(c[:3]) / 3 < 0.5
+
+
+def hrules(page, only_dark=True):
     hs = []
     for d in page.get_drawings():
+        if only_dark and not dark(d):
+            continue
         for it in d['items']:
             if it[0] == 'l' and abs(it[1].y - it[2].y) < 0.6:
                 hs.append((it[1].y, min(it[1].x, it[2].x), max(it[1].x, it[2].x)))
@@ -84,7 +107,7 @@ def hrules(page):
 
 def page_rows(page):
     """[(top, bottom, drug-cell text)] for the table rows, header rows left out."""
-    hs = hrules(page)
+    hs = hrules(page, False)    # as drawn, so the row bands and page crops stay as published
     left = min(h[1] for h in hs)
     first = [h for h in hs if h[1] <= left + 2 and h[2] - h[1] > 60]
     col_r = min(h[2] for h in first if h[2] - h[1] < 300)       # the Drug column's right edge
@@ -100,6 +123,49 @@ def page_rows(page):
             continue
         rows.append((top, bot, txt))
     return rows, left, right
+
+
+COLS = ['Drug', 'Rx/OTC', 'Pharmacological Class', 'Chemical Class', 'Indication']
+COLS6 = ['Drug', 'Rx/OTC', 'Potency Class', 'Pharmacological Class', 'Chemical Class', 'Indication']
+
+
+def vrules(page):
+    vs = []
+    for d in page.get_drawings():
+        if not dark(d):
+            continue
+        for it in d['items']:
+            if it[0] == 'l' and abs(it[1].x - it[2].x) < 0.6:
+                vs.append((it[1].x, min(it[1].y, it[2].y), max(it[1].y, it[2].y)))
+            elif it[0] == 're' and it[1].width < 1.6 and it[1].height > 3:
+                vs.append((it[1].x0, it[1].y0, it[1].y1))
+    return vs
+
+
+def columns(page, pno):
+    """[(name, x0, x1, [rule ys crossing the column])], left to right."""
+    vs, hs = vrules(page), hrules(page)
+    tall = max(b for _, _, b in vs) - min(a for _, a, _ in vs)
+    xs = {}
+    for x, a, b in vs:
+        k = round(x)
+        xs[k] = xs.get(k, 0) + (b - a)
+    xs = sorted(x for x, n in xs.items() if n > 0.4 * tall)
+    names = COLS6 if pno == 6 else COLS
+    if len(xs) - 1 != len(names):
+        sys.exit(f'p. {pno}: {len(xs) - 1} columns found, expected {len(names)}')
+    out = []
+    for name, x0, x1 in zip(names, xs, xs[1:]):
+        ys = sorted({round(h[0], 1) for h in hs if min(h[2], x1) - max(h[1], x0) > 0.8 * (x1 - x0)})
+        out.append((name, x0, x1, ys))
+    return out
+
+
+def cell_at(col, y):
+    name, x0, x1, ys = col
+    top = max([v for v in ys if v <= y], default=None)
+    bot = min([v for v in ys if v > y], default=None)
+    return None if top is None or bot is None else (x0, top, x1, bot)
 
 
 def clip_for(page, top, bot, left, right, pno):
@@ -125,7 +191,7 @@ def main():
         clip = clip_for(page, rows[0][0] - (40 if pno != 5 else 0), rows[-1][1], left, right, pno)
         if pno != 1:
             # keep the page's title and column headers: start at the table's top rule
-            top_rule = min(h[0] for h in hrules(page))
+            top_rule = min(h[0] for h in hrules(page, False))   # the page's top edge, coloured title band included
             clip.y0 = top_rule - 8
         zoom = WIDTH / clip.width
         pix = page.get_pixmap(matrix=pymupdf.Matrix(zoom, zoom), clip=clip, alpha=False)
@@ -133,6 +199,35 @@ def main():
         pix.save(os.path.join(OUT, name), jpg_quality=QUALITY)
         pages[pno] = {'file': name, 'w': pix.width, 'h': pix.height}
         geo[pno] = (rows, left, right, clip)
+    cols = {pno: columns(doc[pno - 1], pno) for pno in range(1, 8)}
+    cell_text = lambda pno, r: re.sub(r'\s+', ' ', doc[pno - 1].get_textbox(pymupdf.Rect(*r))).strip()
+    def frac(pno, r):
+        c = geo[pno][3]
+        return {'x0': round((r[0] - c.x0) / c.width, 4), 'y0': round((r[1] - c.y0) / c.height, 4),
+                'x1': round((r[2] - c.x0) / c.width, 4), 'y1': round((r[3] - c.y0) / c.height, 4)}
+    tb = {p: (min(y for c in cols[p] for y in c[3]), max(y for c in cols[p] for y in c[3])) for p in (4, 5)}
+    def cells_for(pno, top, bot):
+        out = []
+        for ci, col in enumerate(cols[pno]):
+            r = cell_at(col, (top + bot) / 2)
+            if r is None:
+                problems.append(f'p. {pno}: no {col[0]} cell at y {top:.0f}-{bot:.0f}')
+                continue
+            t = cell_text(pno, r)
+            c = dict(col=col[0], page=pno, **frac(pno, r), text=t, merged=(r[3] - r[1]) > (bot - top) + 1, cont=False)
+            out.append(c)
+            # a merged cell cut by the p. 4/5 page break: its part on the other page
+            if pno == 4 and abs(r[3] - tb[4][1]) < 1:
+                o = cell_at(cols[5][ci], tb[5][0] + 1)
+                if o and cell_text(5, o) == '':
+                    out.append(dict(col=col[0], page=5, **frac(5, o), text='', merged=True, cont=True))
+                    c['merged'] = True
+            if pno == 5 and abs(r[1] - tb[5][0]) < 1 and t == '':
+                o = cell_at(cols[4][ci], tb[4][1] - 1)
+                if o:
+                    out.append(dict(col=col[0], page=4, **frac(4, o), text=cell_text(4, o), merged=True, cont=True))
+                    c['merged'] = True
+        return out
     for pno in range(1, 8):
         rows, left, right, clip = geo[pno]
         page = doc[pno - 1]
@@ -160,7 +255,7 @@ def main():
             box = {'page': pno, 'row': hit + 1, 'line': i,
                    'x0': f(left, clip.x0, clip.width), 'y0': f(top, clip.y0, clip.height),
                    'x1': f(right, clip.x0, clip.width), 'y1': f(bot, clip.y0, clip.height),
-                   'text': re.sub(r'\s+', ' ', txt).strip()}
+                   'text': re.sub(r'\s+', ' ', txt).strip(), 'cells': cells_for(pno, top, bot)}
             if card:
                 drugs.setdefault(card, []).append(box)
             else:
@@ -181,32 +276,34 @@ def main():
 
 
 def contact(dest, pages, drugs, other, rows_by_line):
+    """One strip per line and page: every cell of the line outlined on its page."""
     from PIL import Image, ImageDraw
     os.makedirs(dest, exist_ok=True)
+    ims = {p: Image.open(os.path.join(OUT, pages[p]['file'])).convert('RGB') for p in pages}
     allb = [(c, b) for c, bs in drugs.items() for b in bs] + [(None, b) for b in other]
     for pno in range(1, 8):
-        im = Image.open(os.path.join(OUT, pages[pno]['file'])).convert('RGB')
-        W, H = im.size
         strips = []
         for c, b in sorted((x for x in allb if x[1]['page'] == pno), key=lambda x: x[1]['line']):
-            y0, y1 = int(b['y0'] * H), int(b['y1'] * H)
-            crop = im.crop((0, max(0, y0 - 40), W, min(H, y1 + 40))).copy()
-            ov = Image.new('RGBA', crop.size, (0, 0, 0, 0))
-            d = ImageDraw.Draw(ov)
-            d.rectangle((int(b['x0'] * W), y0 - max(0, y0 - 40), int(b['x1'] * W), y1 - max(0, y0 - 40)),
-                        fill=(255, 200, 0, 90), outline=(220, 0, 0, 255), width=4)
-            crop = Image.alpha_composite(crop.convert('RGBA'), ov).convert('RGB')
-            lab = Image.new('RGB', (W, 34), 'white')
-            ImageDraw.Draw(lab).text((8, 8), f'line {b["line"]} -> {c} | row {b["row"]} | CHART_ROWS: {rows_by_line[b["line"]][1]}',
-                                     fill='black')
-            strips += [lab, crop]
-        tot = sum(s.size[1] for s in strips)
-        out = Image.new('RGB', (W, tot), 'white')
+            for sp in sorted({x['page'] for x in b['cells']}, key=lambda q: (q != pno, q)):
+                im = ims[sp]; W, H = im.size
+                cs = [x for x in b['cells'] if x['page'] == sp]
+                y0 = max(0, int(min(x['y0'] for x in cs) * H) - 30); y1 = min(H, int(max(x['y1'] for x in cs) * H) + 30)
+                crop = im.crop((0, y0, W, y1)).convert('RGBA')
+                ov = Image.new('RGBA', crop.size, (0, 0, 0, 0)); d = ImageDraw.Draw(ov)
+                for x in cs:
+                    d.rectangle((int(x['x0'] * W) + 2, int(x['y0'] * H) - y0 + 2, int(x['x1'] * W) - 2, int(x['y1'] * H) - y0 - 2),
+                                fill=(255, 214, 0, 80), outline=(0, 90, 220, 255) if x['merged'] else (220, 0, 0, 255), width=4)
+                crop = Image.alpha_composite(crop, ov).convert('RGB')
+                lab = Image.new('RGB', (W, 30), 'white')
+                ImageDraw.Draw(lab).text((8, 8), f'line {b["line"]} -> {c} | p. {b["page"]} row {b["row"]}' + (f' | PART ON p. {sp}' if sp != pno else '') +
+                                         f' | {rows_by_line[b["line"]][1]} | ' + ' / '.join(f"{x['col']}: {x['text'][:30]}" for x in cs if x['col'] != 'Drug'), fill='black')
+                strips += [lab, crop]
+        out = Image.new('RGB', (strips[0].size[0], sum(s.size[1] for s in strips)), 'white')
         y = 0
-        for s in strips:
-            out.paste(s, (0, y)); y += s.size[1]
-        out.thumbnail((1000, 100000))
-        out.save(os.path.join(dest, f'contact-p{pno}.jpg'), quality=70)
+        for st in strips:
+            out.paste(st, (0, y)); y += st.size[1]
+        out.thumbnail((1100, 100000))
+        out.save(os.path.join(dest, f'contact-p{pno}.jpg'), quality=72)
     print('contact sheets in', dest)
 
 

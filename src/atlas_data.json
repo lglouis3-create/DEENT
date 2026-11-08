@@ -200,7 +200,7 @@
        "name": "Steroid C-atom numbering skeleton",
        "smiles": "CC(C)CCCC(C)C1CCC2C3CCC4CCCCC4(C)C3CCC12C",
        "slide": 20,
-       "tell": "Numbering runs 1 to 10 as a loop around rings A and B, 11 to 17 as a snake over rings C and D, then 18 (methyl on C-13) and 19 (methyl on C-10), then 20 onward on the side chain at C-17 (slide 20; T 1003–1017, 1084–1099).",
+       "tell": "C-1 to C-10 run around rings A and B; numbering restarts at C-11 and runs through rings C and D to C-17; C-18 and C-19 are the angular methyls on C-13 and C-10; the side chain at C-17 starts at C-20 (slide 20; T 1003–1017, 1084–1099).",
        "eg": "\"If you know where your 1 is, you know where your 11 is, and your 17, you're good to go\" (T 1098–1099).",
        "priority": "core",
        "priority_reason": "\"Structure ... stereochemistry ... numbering. So three things\"; \"practice that\".",

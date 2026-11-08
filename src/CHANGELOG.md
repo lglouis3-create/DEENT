@@ -8,6 +8,56 @@ characters.
 
 Every update adds its bullets here in the same commit that makes the change.
 
+## 2026-11-08 (Quiz layout and Explain more)
+- Quiz: switch any drill to "All on one page" to scroll through and answer every question in place.
+- Explain more and Read links open the section just below the tab bar and highlight the lines for your question.
+
+## 2026-11-08 (Own icon and link card)
+- A shared link now shows "DEENT Exam Review" with the drill's own DEENT icon instead of "Exam drill".
+- Adding the drill to a Home Screen gives the new DEENT icon, named "DEENT Review".
+
+## 2026-11-08 (Reaction schemes from Dr. Sikazwe's slides)
+- Guides: 11 reaction schemes from Dr. Sikazwe's slides, drawn clean with every structure checked in PubChem.
+- Step through crisaborole, hydrocortisone, vitamin D3 and salicylic acid metabolism one arrow at a time.
+- Also drawn: anthralin autoxidation, psoralen + UVA crosslink, folate reduction, apremilast, BPO, retinoid prodrugs.
+- Arrow labels are the slide's own; what he said aloud is in the captions with its transcript place.
+
+## 2026-11-08 (Drug list: frozen retry, recall ratings, your bank answers per drug)
+- Drug list, Quiz me: Retry the missed is now a named set that keeps unanswered questions and the same options.
+- During a retry, changed filters wait for "Back to the filtered list"; a line says so, nothing is mixed in.
+- Drugs with no single receptor or enzyme target now read "How it acts" instead of "Target", with the reason.
+- Recall: after Check, rate Forgot, Partly or Knew (criteria shown); only that click counts, for this visit.
+- "Practise what I forgot / partly knew": each fact comes back after other drugs of its class, in the other form.
+- New Ask about kinds: adverse effect → drug, boxed warning and photosensitizing (off by default).
+- Recall adds Why it helps and Adverse effects.
+- Browse: each card shows your saved bank answers per fact (Not practised to Kept on a later day), with Practise.
+- Browse: a line counts the Exam 1 facts you have practised and those to review, with "Practise my weak facts".
+- Every card shows its scope: Exam 1 · taught, Exam 1 · chart only (sunburn anesthetics) or Optional.
+- Adapalene is no longer flagged photosensitizing: it is "sun stable" (PCol 18), as the questions key it.
+- Chart: every cell of a drug's line is outlined, merged cells and page-break parts included.
+
+## 2026-11-08 (Walkthroughs first; Atlas labels)
+- Topics: each topic with a narrated walkthrough now has Listen and Read guide buttons on its card.
+- Learn a topic opens a walkthrough in the Guides, its player ready, not the top of the page.
+- Guides: a list of all 40 narrated walkthroughs at the top, by deck; each opens its player.
+- Atlas: the heading over a tile's text follows its badge: Core learning, Reference or Needs verification.
+- Atlas: "Exam 1" now shows only on core structures from the assigned pages.
+- Atlas: structures off Dr. Sikazwe's assigned pages say "Not on the assigned pages" instead of "Exam 1".
+
+## 2026-11-08 (Reference and Tell apart tables)
+- Reference and Tell apart: on a phone, each wide table row is now a card with its column names; no sideways scrolling.
+- Long cells are split into short labelled lines; metabolic schemes show one step per line with "→".
+- Abbreviations such as t1/2, ADH, SULT, UGT and CBDA are spelled out at first use in each table.
+- "Name not to be recalled" for the JAK inhibitor classes is now a small note under the class name.
+
+## 2026-11-08 (Steroid numbering with the skeleton; literal stems)
+- Steroid numbering questions now show Dr. Sikazwe's steroid skeleton; two ask the number of a circled carbon.
+- His Polleve-1 now shows the crisaborole metabolic scheme it asks about.
+- Stems no longer use his walkthrough words for the numbering, or ask what a professor named or stressed.
+- More of Dr. Sikazwe's class and SAR questions show the molecule before you answer (13 questions).
+- 16 structure-difference questions show the two (or three) structures side by side after you answer.
+- Methotrexate SAR: the "essential group" question now shows the molecule with four numbered groups.
+
 ## 2026-11-08 (Dr. Sikazwe's Polleve-4)
 - New: his Polleve-4 poll, how many alpha-hydroxy acids are in the figure, with each structure explained.
 
