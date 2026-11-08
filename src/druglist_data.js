@@ -88,7 +88,7 @@ const DRUGLIST = (() => {
   // shared statements, so a class's line is written once
   const WHY = {
     pde4: S('PDE-4 is the main PDE isoform in inflammatory cells (mast cells, eosinophils, neutrophils, T cells); more cAMP inhibits those cells', 'PCol 32'),
-    cniTop: S('Inhibits activation of the T cells and mast cells involved in AD, blocking proinflammatory cytokines and mediators; relieves itching within the first few days', 'PCol 27'),
+    cniTop: S('Inhibits activation of the T cells and mast cells involved in AD, blocking proinflammatory cytokines and mediators; relieves itching after the first few days', 'PCol 27'),
     jak: S('Inhibits the production of inflammatory cytokines', 'PCol 75–76'),
     tetra: S('Efficacy in acne may depend more on anti-inflammatory activity than on killing bacteria', 'PCol 45'),
     abx: S('In acne a bacterium contributes to the disease, so antibiotics are used there', '10/30 T 574–576'),

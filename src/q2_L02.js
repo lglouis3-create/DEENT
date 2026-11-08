@@ -1056,11 +1056,11 @@ QUESTIONS.push(
  tags:['interaction'], source:'both',
  stem:'Which drugs should be avoided with apremilast, and why?',
  options:[
-  {t:'Strong CYP3A4 inducers; they cut its effect', correct:true, why:'Slide 34: don\'t use with strong CYP3A4 inducers; (T 470–472) "if you want the drugs to be effective, you don\'t want to have patients also on 3A4 enzyme inducers".'},
-  {t:'Strong CYP3A4 inducers; they raise its toxicity', correct:false, why:'Inducers speed its metabolism and reduce its effect (T 470–472).'},
+  {t:'CYP3A4 inducers; they cut its effect', correct:true, why:'Slide 34 (handwritten note): know the drug interaction with inducers; (T 470–472) "if you want the drugs to be effective, you don\'t want to have patients also on 3A4 enzyme inducers".'},
+  {t:'CYP3A4 inducers; they raise its toxicity', correct:false, why:'Inducers speed its metabolism and reduce its effect (T 470–472).'},
   {t:'Topical steroids; they block PDE4', correct:false, why:'Not an interaction given; steroids are nuclear receptor binders (T 197–200).'},
   {t:'Ethanol; it forms a toxic metabolite', correct:false, why:'The ethanol rule belongs to acitretin (slide 20).'}],
- teach:'Apremilast is metabolized by CYP3A4; strong inducers lower its levels and its efficacy (slide 34; T 470–472).',
+ teach:'Apremilast is metabolized by CYP3A4; CYP3A4 inducers lower its levels and its efficacy (slide 34; T 470–472).',
  cite:D2+' slide 34; T 470–472'},
 
 /* ---- Keratolytics -------------------------------------------------------- */

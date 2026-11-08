@@ -51,7 +51,7 @@ const REFERENCE_HTML = `
 <tr><td>Tacrolimus</td><td>Calcineurin inhibitor</td><td>Topical / oral</td><td>AD (topical)</td><td>Topical as above; oral: nephrotoxicity, HTN, URTI, neuropathies, CYP3A4</td><td>27-30</td></tr>
 <tr><td>Cyclosporine</td><td>Calcineurin inhibitor</td><td>Oral</td><td>Severe psoriasis</td><td>Boxed: lymphoma/malignancy, infections; nephrotoxicity, HTN, gingival hyperplasia; CYP3A4; two formulations not interchangeable</td><td>29-30</td></tr>
 <tr><td>Crisaborole</td><td>PDE-4 inhibitor</td><td>Topical 2% ointment</td><td>Mild to moderate AD, ≥2 yr</td><td>Site pain 4%; hypersensitivity &lt;1%, stop at once</td><td>33</td></tr>
-<tr><td>Apremilast</td><td>PDE-4 inhibitor</td><td>Oral</td><td>Psoriasis</td><td>Diarrhea, nausea, headache, weight loss; caution in depression; avoid strong CYP3A4 inducers</td><td>34</td></tr>
+<tr><td>Apremilast</td><td>PDE-4 inhibitor</td><td>Oral</td><td>Psoriasis</td><td>Diarrhea, nausea, headache, weight loss; caution in depression; avoid CYP3A4 enzyme inducers (10/30 T 470–472)</td><td>34</td></tr>
 <tr><td>Benzoyl peroxide</td><td>Keratolytic</td><td>Topical</td><td>Acne</td><td>Irritation; potent contact sensitizer; avoid eyes/mucosa; oxidant bleaches hair/fabric</td><td>36-37</td></tr>
 <tr><td>Sulfur</td><td>Keratolytic</td><td>Topical</td><td>Acne</td><td>Bacteriostatic; H2S; irritation, comedogenic, odor</td><td>38</td></tr>
 <tr><td>Salicylic acid</td><td>Keratolytic</td><td>Topical</td><td>Acne (dandruff, psoriasis)</td><td>3-6%; &gt;6% damage; up to 40% warts/corns; salicylism (additive topical salicylates); caution diabetes/PVD</td><td>39-40</td></tr>
@@ -181,7 +181,7 @@ const REFERENCE_HTML = `
 </tbody></table>
 <p class="prose">Choose the best substantivity: waterproof, water-resistant or sweat-resistant products (slide 19).</p>
 
-<h3 id="ref-s3">Dermatology Medicinal Chemistry (Dr. Sikazwe): DPAW pages 1–26 (11/03)</h3>
+<h3 id="ref-s3">Dermatology Medicinal Chemistry (Dr. Sikazwe): DPAW slides 1–26 (11/03; slide = PDF page)</h3>
 <table class="reftab"><thead><tr><th>Drug / agent</th><th>Chemical class</th><th>Key ADME / numbers</th><th>CBDA</th><th>Slide; T</th></tr></thead><tbody>
 <tr><td>Crisaborole</td><td>Benzoxaborole (boron-based), soft drug</td><td>log P 3, dermis accumulation; t1/2 12 h; spontaneous hydrolytic deboronation (non-enzymatic) -&gt; benzyl alcohol -&gt; ADH, ALDH -&gt; benzoic acid -&gt; SULT / UGT conjugates</td><td>Boron coordinates Zn2+ and Mg2+ in PDE4 active site</td><td>7, 9; T 664-801</td></tr>
 <tr><td>Ruxolitinib</td><td>Pyrrolopyrimidine (name not to be recalled)</td><td>log P ~2 (spoken); formulated to stay in skin; t1/2 3 h; 3A4/2C9 substrate; some active OH metabolites</td><td>(JAK inhibitor; MoA not tested)</td><td>8; T 729-757</td></tr>
@@ -200,7 +200,7 @@ const REFERENCE_HTML = `
 <tr><td>UVR</td><td>—</td><td>UVC 100-280; UVB from 280; UVA to 400 (from 315 or 320); ozone blocks UVC and ~90% UVB; UVA deepest</td><td>—</td><td>12; T 810-839</td></tr>
 </tbody></table>
 
-<h3 id="ref-s4">Dermatology Medicinal Chemistry (Dr. Sikazwe): DPAW pages 27–71 (11/04)</h3>
+<h3 id="ref-s4">Dermatology Medicinal Chemistry (Dr. Sikazwe): DPAW slides 27–71 (11/04; slide = PDF page)</h3>
 <table class="reftab"><thead><tr><th>Drug / agent</th><th>Chemical class (deck)</th><th>Mechanism / CBDA</th><th>Key PK / numbers</th><th>Caution</th><th>Slide</th></tr></thead><tbody>
 <tr><td>Calcitriol, calcipotriene</td><td>Secosteroids (vitamin D analogs)</td><td>Antiproliferative</td><td>Raise GI calcium absorption</td><td>Hypercalcemia (limiting factor)</td><td>27</td></tr>
 <tr><td>Pimecrolimus</td><td>Macrolide / lactone</td><td>Calcineurin inhibitor, ↓ cytokines</td><td>cLogP 6.0; high non-specific skin protein binding</td><td>Low systemic ADRs</td><td>28, 32</td></tr>
@@ -226,7 +226,7 @@ const REFERENCE_HTML = `
 <tr><td>Azelaic acid</td><td>C9 dicarboxylic acid</td><td>Antibacterial, anti-inflammatory</td><td>—</td><td>—</td><td>54</td></tr>
 <tr><td>Clindamycin</td><td>Lincomycin</td><td>—</td><td>Topical due to GI toxicity</td><td>—</td><td>54</td></tr>
 <tr><td>Erythromycin</td><td>Macrolide</td><td>—</td><td>Poor PO absorption; unstable at pH ≤4</td><td>—</td><td>54</td></tr>
-<tr><td>Tetracycline</td><td>Tetracycline (linear 4 rings)</td><td>Chelates Al3+, Ca2+, Mg2+, Fe3+, Bi3+</td><td>Food (dairy) cuts absorption; t1/2 8.5 h</td><td>Bone/enamel staining, weakening</td><td>55</td></tr>
+<tr><td>Tetracycline</td><td>Tetracycline (linear 4 rings)</td><td>Chelates Al3+, Ca2+, Mg2+, Fe3+, Zn3+ (as printed; zinc ion Zn2+), Bi3+</td><td>Food (dairy) cuts absorption; t1/2 8.5 h</td><td>Bone/enamel staining, weakening</td><td>55</td></tr>
 <tr><td>Doxycycline, minocycline</td><td>Tetracyclines</td><td>—</td><td>Food no effect; lipophilic; t1/2 11–13 h, 14–22 h</td><td>Cross-allergy</td><td>55</td></tr>
 <tr><td>Zinc oxide, titanium dioxide</td><td>Metal oxides</td><td>Reflect/scatter; UVA/UVB; inert</td><td>Large particles better</td><td>—</td><td>61</td></tr>
 <tr><td>Avobenzone</td><td>Dibenzoylmethane (UVA)</td><td>Chromophore</td><td>Low skin absorption; photodeg. t1/2 ~2 h</td><td>Reapply q2h</td><td>62</td></tr>

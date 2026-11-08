@@ -18,9 +18,11 @@ Every update adds its bullets here in the same commit that makes the change.
 - Tell apart: new tables on sun protection and on boxed warnings, pregnancy limits and interactions.
 - Reference: new sun table of SPF blocking, skin types with their SPF, and substantivity by vehicle.
 - Diagrams: acne cascade labels moved off the arrows; nuclear receptor figure redrawn so the bound drug shows.
+- Guides and Tell apart state both professors' UV band limits; each professor's own numbers are keyed.
+- Dr. Sikazwe topics now mark slides outside his assigned list; his slides are numbered by PDF page.
 
 ## 2026-11-08 (Likely-on-the-exam stars)
-- 117 questions starred as likely on Exam 1 (★ badge only; reasons kept in `likely_data.js` as the audit record, not displayed); Claude's prediction from the professors' emphasis, not an official list.
+- 117 questions starred (★) as likely on Exam 1: a prediction, not an official list.
 - Topics: drill all starred questions, or only Dr. Smith's or Dr. Sikazwe's.
 
 ## 2026-11-08 (Drug List)

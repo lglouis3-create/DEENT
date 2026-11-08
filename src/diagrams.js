@@ -86,16 +86,17 @@ const ACNE_CASCADE = (() => {
   const s3 = s2 + arr('M295 50 L295 76', 2) + why(289, 66, 'more sebum', 2, 'end') + box(240, 78, 110, 'Closed comedone', 3);
   const s4 = s3 + arr('M238 91 L112 91', 3) + why(175, 86, 'opens: dilated pore', 3) + box(10, 78, 100, 'Open comedone', 4);
   const s5 = s4 + arr('M295 106 L295 132', 4) + why(289, 122, 'does not open', 4, 'end') + box(240, 134, 110, 'Papule', 5) +
-    arr('M238 147 L112 147', 5) + why(175, 142, 'pus: dilated pore', 5) + box(10, 134, 100, 'Pustule', 6);
+    arr('M238 147 L112 147', 5) + why(175, 142, 'fills with pus', 5) + box(10, 134, 100, 'Pustule', 6) +
+    why(60, 174, 'if it opens: dilated pore', 7);
   const s6 = s5 + arr('M295 162 L295 188', 6) + why(289, 178, 'foreign body response', 6, 'end') + box(240, 190, 110, 'Nodule or cyst', 7);
   return stepper('acne-cascade', 'Cascade of acne lesions', [
     ['A normal follicle: keratinocytes move up and shed, and sebum flows out.', s1],
     ['Abnormal keratinization: cells stick in the follicle and form a microcomedone.', s2],
     ['Increased sebum production turns it into a closed comedone.', s3],
     ['If the closed comedone opens, it becomes an open comedone, seen as a dilated pore.', s4],
-    ['If it does not open, a papule forms; white cells and pus make it a pustule.', s5],
+    ['If it does not open, a papule forms; white cells and pus make it a pustule, which leaves a dilated pore if it opens.', s5],
     ['A foreign body response to the papule gives a nodule or cyst, which does not drain.', s6],
-  ], 262, 'After Skin-Pathophys-Students-2026.pdf slide 34 (DiPiro, Pharmacotherapy 12e); lecture 10/29, T 452–471.');
+  ], 262, 'After Skin-Pathophys-Students-2026.pdf slide 34 (DiPiro, Pharmacotherapy 12e); lecture 10/29, T 452–471 (pustule opening, T 464–466).');
 })();
 
 /* ---------- Nuclear receptor: direct and indirect action (Skin-PCol slides 5–6) --
@@ -120,10 +121,10 @@ const NR_ACTION = (() => {
   const ind = dir + box(205, 150, 120, 22, 'tf') + lbl(265, 165, 'NF-kB / AP-1', 'tfl') + cx(265, 140, 3) +
     lbl(265, 186, 'one complex on the factor:', 'it1', 'lbl xs') + lbl(265, 197, 'factor kept off the DNA', 'it2', 'lbl xs');
   return stepper('nr-action', 'Nuclear receptor binders: direct and indirect', [
-    ['The drug crosses the cell membrane to reach its receptor inside the cell.', s1],
+    ['The drug reaches its receptor inside the cell.', s1],
     ['Drug and receptor form a drug–receptor complex.', s2],
     ['Direct: two complexes bind a response element (glucocorticoid: GRE) and raise anti-inflammatory or lower inflammatory gene expression.', dir],
-    ['Indirect: one complex binds a transcription factor (NF-kB, AP-1) so it cannot drive inflammatory genes at the TRE.', ind],
+    ['Indirect: one complex binds a transcription factor (NF-kB, AP-1), which then cannot drive inflammatory genes.', ind],
   ], 250, 'After Skin-PCol-Students-2026.pdf slides 5–6; lecture 10/29, T 639–746.');
 })();
 

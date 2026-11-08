@@ -18,59 +18,59 @@ const S4 = 'Lecture 4 (f26-DEENT-DPAW-mc.pdf)';
 
 TOPICS.push(
  {id:'s4-vitd', name:'Psoriasis topical agents: vitamin D analogs', prof:'Sikazwe',
-  cite:'p. 27; Vitamin D reading (Endotext) · taught 11/04 (Lecture 4)',
+  cite:'slide 27; Vitamin D reading (Endotext) · taught 11/04 (Lecture 4)',
   subs:[
    {id:'analog', name:'Calcitriol and calcipotriene', cite:'slide 27'},
    {id:'path',   name:'Take-home: reactions, organs, enzymes', cite:'slide 27; reading lines 5–14, 60–71'}]},
  {id:'s4-limus', name:'Psoriasis topical agents: pimecrolimus and tacrolimus', prof:'Sikazwe',
-  cite:'pp. 28, 32 · taught 11/04 (Lecture 4)',
+  cite:'slides 28, 32 · taught 11/04 (Lecture 4)',
   subs:[
    {id:'pk',    name:'Skin protein binding and permeation', cite:'slide 28'},
    {id:'class', name:'Lactone classification (Polleve-3)', cite:'slides 28, 32'}]},
  {id:'s4-psret', name:'Psoriasis topical/oral agents: retinoids', prof:'Sikazwe',
-  cite:'p. 29 · taught 11/04 (Lecture 4)',
+  cite:'slide 29 · taught 11/04 (Lecture 4)',
   subs:[
    {id:'taz', name:'Tazarotene, acitretin, isotretinoin', cite:'slide 29'}]},
  {id:'s4-mtx', name:'Psoriasis systemic agents: methotrexate', prof:'Sikazwe',
-  cite:'pp. 30–31 · taught 11/04 (Lecture 4)',
+  cite:'slides 30–31 · taught 11/04 (Lecture 4)',
   subs:[
    {id:'mech', name:'Pteridine, DHFR and folic acid', cite:'slide 30'},
    {id:'sar',  name:'MTX SAR', cite:'slide 31'}]},
  {id:'s4-sys', name:'Psoriasis systemic agents: cyclosporine and apremilast', prof:'Sikazwe',
-  cite:'pp. 33–34 · taught 11/04 (Lecture 4)',
+  cite:'slides 33–34 · taught 11/04 (Lecture 4)',
   subs:[
    {id:'csa', name:'Cyclosporine', cite:'slide 33'},
    {id:'apr', name:'Apremilast', cite:'slide 34'}]},
  {id:'s4-acne', name:'Acne: terminology, components, pharmacotherapy', prof:'Sikazwe',
-  cite:'pp. 40–42 · taught 11/04 (Lecture 4)',
+  cite:'slides 40–42 (not on his assigned slides) · taught 11/04 (Lecture 4)',
   subs:[
    {id:'terms', name:'Terminology and components', cite:'slides 40–41'},
    {id:'drugs', name:'Pharmacotherapy groups', cite:'slide 42'}]},
  {id:'s4-kera', name:'Acne: keratolytics', prof:'Sikazwe',
-  cite:'pp. 43–47 · taught 11/04 (Lecture 4)',
+  cite:'slides 43–47 · taught 11/04 (Lecture 4)',
   subs:[
    {id:'ha',  name:'Glycolic and salicylic acid; hydroxy acid SAR', cite:'slides 43–44'},
    {id:'s',   name:'Sulfur', cite:'slide 46'},
    {id:'bpo', name:'Benzoyl peroxide', cite:'slide 47'}]},
  {id:'s4-ret', name:'Acne: retinoids by generation', prof:'Sikazwe',
-  cite:'pp. 48–51 · taught 11/04 (Lecture 4)',
+  cite:'slides 48–51 · taught 11/04 (Lecture 4)',
   subs:[
    {id:'gen',  name:'Properties and teratogenicity', cite:'slide 48'},
    {id:'g1',   name:'1st generation: tretinoin and isotretinoin', cite:'slide 49'},
    {id:'g2',   name:'2nd generation: etretinate and acitretin', cite:'slide 50'},
    {id:'g3',   name:'3rd generation and ADMET', cite:'slide 51'}]},
  {id:'s4-horm', name:'Acne: hormones (estrogens, antiandrogens)', prof:'Sikazwe',
-  cite:'pp. 52–53 · taught 11/04 (Lecture 4)',
+  cite:'slides 52–53 · taught 11/04 (Lecture 4)',
   subs:[
    {id:'oc', name:'Oral contraceptives', cite:'slide 52'},
    {id:'aa', name:'Antiandrogens', cite:'slide 53'}]},
  {id:'s4-abx', name:'Acne: antibiotics', prof:'Sikazwe',
-  cite:'pp. 54–55 · taught 11/04 (Lecture 4)',
+  cite:'slides 54–55 · taught 11/04 (Lecture 4)',
   subs:[
    {id:'misc', name:'Azelaic acid, clindamycin, erythromycin', cite:'slide 54'},
    {id:'tet',  name:'Tetracyclines', cite:'slide 55'}]},
  {id:'s4-sun', name:'Wrinkle: sunblocks and sunscreens', prof:'Sikazwe',
-  cite:'pp. 58–66 · taught 11/04 (Lecture 4)',
+  cite:'slides 58–66 (58–60 not on his assigned slides) · taught 11/04 (Lecture 4)',
   subs:[
    {id:'uv',    name:'Wrinkle causes and UV bands (Polleve-5)', cite:'slides 58–60'},
    {id:'inorg', name:'Zinc oxide and titanium dioxide', cite:'slide 61'},

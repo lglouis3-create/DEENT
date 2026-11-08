@@ -74,7 +74,7 @@ const TOPIC_DECKS = [
            'l2-abx', 'l3-abx', 'l3-fol', 'l3-cyto', 'l3-mtx', 'l3-abat', 'l3-cytok', 'l3-tnf', 'l3-jak', 'l3-sum']},
   {id:'sun', name:'Sun Exposure and Psoralens (Dr. Smith)', file:'DEENT_Sun_Exposure_2026.pdf', when:'recorded lecture, posted after 11/03',
    topics:['l3c-pso', 'l3c-uv', 'l3c-spf', 'l3c-prod']},
-  {id:'mc', name:'Dermatology Medicinal Chemistry (Dr. Sikazwe, DPAW)', file:'f26-DEENT-DPAW-mc.pdf', when:'taught 11/03, 11/04',
+  {id:'mc', name:'Dermatology Medicinal Chemistry (Dr. Sikazwe, DPAW)', file:'f26-DEENT-DPAW-mc.pdf (slide numbers = PDF pages)', when:'taught 11/03, 11/04',
    topics:['s3-frame', 's3-cris', 's3-jak', 's3-uv', 's3-pso', 's3-emol', 's3-anth', 's3-psor', 's3-gc', 's3-hc',
            's4-vitd', 's4-limus', 's4-psret', 's4-mtx', 's4-sys', 's4-acne', 's4-kera', 's4-ret', 's4-horm', 's4-abx',
            's4-sun', 'sk-beyond']},
