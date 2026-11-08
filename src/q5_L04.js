@@ -819,14 +819,14 @@ QUESTIONS.push(
 {id:'S4-120', skill:'chem', prof:'Sikazwe', tier:'new', topic:'s4-kera', sub:'ha', concept:'aha-count',
  tags:['poll','verbatim','structure'], source:'both',
  img:'s4-polleve4',
- note:'He did not say the count aloud ("So how many? OK.", T@23865). Keyed from the slide figure and his stated definition (T@23455–23600; slide 44), per Louis 2026-11-08.',
+ note:'He did not say the count aloud ("So how many? OK.", T@23865). Keyed from the slide figure and his stated definition (T@23455–23600; slide 44) (course decision of 2026-11-08).',
  stem:'How many alpha-hydroxy acids are in the figure below?',
  options:[
   {t:'One', correct:false, why:'Glycolic acid is not the only one: tartaric acid and the cyclopropyl diacid also carry an OH on a carbon next to a COOH.'},
   {t:'Two', correct:false, why:'Tartaric acid, glycolic acid and the cyclopropyl diacid all qualify; each has an OH on the carbon next to a COOH.'},
   {t:'Three', correct:true, why:'Tartaric acid, glycolic acid and the cyclopropyl diacid: "Hydroxy group needs to be ... on the carbon that is next to the carboxylic acid" (T@23455–23600).'},
   {t:'Four', correct:false, why:'The cyclohexane acid has its OH on the ring carbon two from the COOH, so it is beta; isobutyric acid has no OH.'}],
- teach:'Apply slide 44 to each structure: find each COOH, step to the carbon next to it (alpha), and look for an OH there. Tartaric acid (top left), HOOC-CH(OH)-CH(OH)-COOH: each OH sits next to a COOH; yes. Glycolic acid (top right), HO-CH2-COOH: yes. Isobutyric acid (left), (CH3)2CH-COOH: no OH at all; no. The cyclopropyl diacid (bottom), HOOC-C(cyclopropane)-CH(OH)-COOH: the OH carbon is next to the right-hand COOH; yes, even though it is two carbons from the other COOH. 2-Hydroxycyclohexane-1-carboxylic acid (right): the COOH is on C1 and the OH on C2, two carbons from the acid carbon, a beta-hydroxy acid like salicylic acid; no.',
+ teach:'Apply slide 44 to each structure: find each COOH, step to the carbon next to it (alpha), and look for an OH there. Tartaric acid (top centre), HOOC-CH(OH)-CH(OH)-COOH: each OH sits next to a COOH; yes. Glycolic acid (top right), HO-CH2-COOH: yes. Isobutyric acid (left), (CH3)2CH-COOH: no OH at all; no. The cyclopropyl diacid (bottom), HOOC-C(cyclopropane)-CH(OH)-COOH: the OH carbon is next to the right-hand COOH; yes, even though it is two carbons from the other COOH. 2-Hydroxycyclohexane-1-carboxylic acid (right): the COOH is on C1 and the OH on C2, two carbons from the acid carbon, a beta-hydroxy acid like salicylic acid; no.',
  quote:'Polleve, 11/04, slide 45',
  cite:S4+' slides 44–45; T@22839–23200, T@23455–23880'},
 
