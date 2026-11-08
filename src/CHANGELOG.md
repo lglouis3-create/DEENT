@@ -8,6 +8,17 @@ characters.
 
 Every update adds its bullets here in the same commit that makes the change.
 
+## 2026-11-08 (Drug list: three study modes)
+- Drug list: choose Browse, Quiz me or Recall at the top; every matching drug shows at once, with no Next button.
+- Quiz me: multiple choice on each drug's target, class or indication, answered in place with the source.
+- Quiz me keeps a score for this visit, with New questions and Retry the missed; nothing is saved.
+- Recall: pick target, mechanism, class or indication, type what you remember, then Check to compare.
+- Drug list filters are grouped under one heading with an active count and Clear filters.
+
+## 2026-11-08 (Wide screens and the tab bar)
+- On a 13-inch iPad and MacBook the page uses the width: exam card beside Start here, two topic columns, a larger slide.
+- The course title scrolls away; the tab bar stays at the top and slides away while you read (Settings > Display).
+
 ## 2026-11-08 (Topics folders)
 - Topics: each slide deck is a folder that opens and closes; folders start closed and stay as you left them.
 - Topics: the exam's date, coverage, format and bank are a short card of labelled rows; more facts fold below it.

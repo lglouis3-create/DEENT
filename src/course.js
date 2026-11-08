@@ -215,7 +215,10 @@ const COURSE = {
           'walk_ui.js', 'why_ui.js',
           // Topics: the exam facts card (course-level, Louis 2026-11-08; the deck folders are in
           // guide.js with the deck grouping)
-          'topics_ui.js'],
+          'topics_ui.js',
+          // Wide screens (iPad Pro 13, MacBook) and the pinned tab strip that hides while reading
+          // (course-level, Louis 2026-11-08; temporary until the kit has these)
+          'wide_ui.js'],
 
   tools: {citeAliases:{'skin-pathophys-students-2026.pdf':'Skin-Pathophys-Students-2026.pdf',
                        'skin-pcol-students-2026.pdf':'Skin-PCol-Students-2026.pdf',
