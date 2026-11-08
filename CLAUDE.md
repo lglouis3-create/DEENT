@@ -29,6 +29,15 @@ The engine assigns a question to a lecture by the deck its cite names, so there 
 ## Dr. Smith's Exam 1 hints (pasted by Louis 2026-11-07)
 - Her format: mostly multiple choice, a few fill-in-the-blanks on what the drugs target, no short essays (quoted in course.js above the exam blurb). Hint coverage audit and the 40 items added for it: reviews/LOG.md 2026-11-07. Fill-in-the-blank practice: 8 matching items and Reference "Drug targets: write it first, then check" (`ref-targets`, every drug on the dermatology drug chart); the core has no typed text answers (reviews/OPEN_QUESTIONS.md).
 
+## Coordination policy (Louis, adopted in this session 2026-11-08: "Yes adopt it")
+Full text: Louis's message of 2026-11-08 (porter session, relayed to DEENT; adopted here on his reply). It adds no implementation, merge or deployment authority.
+- Central decision session: "Exam drill kit Phase 1 setup" (session_01LVkWFC9wTqUxncwEDduxrb). A decision that needs Louis goes there with a notification requested; if that delivery fails, tell Louis in this session and name the failed handoff.
+- Routine questions, dependency checks, reviews and handoffs go directly to the owning session (porter: kit feature modules; main kit/coordinator session: core/ and .github). GitHub is the durable record: owner, exact commit, evidence, dependencies, next action.
+- Only Louis's actual words count as approval; record each decision with a reference, scope and revision, and tell affected sessions. Live-site updates of DEENT still need his approval in this session.
+- Ask ChatGPT on a PR only for a concrete uncertainty (commit, question, evidence); another independent reviewer may suffice; an unanswered request is not approval.
+- On conflicting instructions, pause only the affected action and resolve it through the central session. One owner per implementation; reuse evidence; no new polling tasks or watchers.
+- Each consolidated update lists adoption acknowledgments, unreachable sessions, material handoffs and outstanding central decisions.
+
 ## Exam 1 coverage checklist
 - [x] Lecture 1, Smith 10/29 (Pathophys 2-38, PCol 1-15)
 - [x] Lecture 2, Smith 10/30 (PCol 16-42)
