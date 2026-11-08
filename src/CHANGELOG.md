@@ -20,6 +20,7 @@ Every update adds its bullets here in the same commit that makes the change.
 - Stems no longer use his walkthrough words for the numbering, or ask what a professor named or stressed.
 - More of Dr. Sikazwe's class and SAR questions show the molecule before you answer (13 questions).
 - 16 structure-difference questions show the two (or three) structures side by side after you answer.
+- Methotrexate SAR: the "essential group" question now shows the molecule with four numbered groups.
 
 ## 2026-11-08 (Dr. Sikazwe's Polleve-4)
 - New: his Polleve-4 poll, how many alpha-hydroxy acids are in the figure, with each structure explained.
