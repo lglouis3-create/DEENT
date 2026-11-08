@@ -10,53 +10,74 @@
    topical steroid products (medicinal chemistry, Lectures 3-4 per the syllabus).
    ========================================================================== */
 const TOPICS = [
- {id:'skin', name:'Skin structure and sebum', prof:'Smith', open:true,
-  cite:'Lecture 1 (10/29) — Skin-Pathophys-Students-2026.pdf, slides 5–6',
+ {id:'skin', name:'Review of skin anatomy: layers and sebum', prof:'Smith', open:true,
+  cite:'slides 5–6 · taught 10/29 (Lecture 1)',
   subs:[
-   {id:'layers', name:'Layers and keratinocytes', cite:'slide 5'},
-   {id:'sebum',  name:'Sebaceous gland and sebum', cite:'slide 6'}]},
+   {id:'layers', name:'Anatomy of the skin', cite:'slide 5'},
+   {id:'sebum',  name:'Skin structures: sebum', cite:'slide 6'}]},
  {id:'ad', name:'Atopic dermatitis', prof:'Smith',
-  cite:'Lecture 1 (10/29) — Skin-Pathophys-Students-2026.pdf, slides 8–17',
+  cite:'slides 8–17 · taught 10/29 (Lecture 1)',
   subs:[
-   {id:'clin',  name:'Definition, epidemiology, signs, triggers', cite:'slides 8–12'},
-   {id:'path',  name:'Barrier, T cells, IgE and cytokines', cite:'slides 13, 16'},
-   {id:'gene',  name:'Genetics and filaggrin', cite:'slides 14–15'},
-   {id:'drugs', name:'Drug classes for AD', cite:'slide 17'}]},
+   {id:'clin',  name:'Introduction, epidemiology, signs and symptoms, exacerbating factors', cite:'slides 8–12'},
+   {id:'path',  name:'Etiology and pathophysiology: immune system', cite:'slides 13, 16'},
+   {id:'gene',  name:'Etiology and pathophysiology: genetics and FLG', cite:'slides 14–15'},
+   {id:'drugs', name:'Medications for treating atopic dermatitis', cite:'slide 17'}]},
  {id:'pso', name:'Psoriasis', prof:'Smith',
-  cite:'Lecture 1 (10/29) — Skin-Pathophys-Students-2026.pdf, slides 19–28',
+  cite:'slides 19–28 · taught 10/29 (Lecture 1)',
   subs:[
-   {id:'clin',  name:'Definition and epidemiology', cite:'slides 19–20'},
-   {id:'path',  name:'Immune pathway and cell cycle', cite:'slides 21–23'},
-   {id:'fact',  name:'Contributing factors, nails and joints', cite:'slides 24, 26'},
-   {id:'tx',    name:'Treatment rationale and drug classes', cite:'slides 27–28'}]},
+   {id:'clin',  name:'Introduction and epidemiology', cite:'slides 19–20'},
+   {id:'path',  name:'Etiology and pathophysiology', cite:'slides 21–23'},
+   {id:'fact',  name:'Contributing factors; nail psoriasis and psoriatic arthritis', cite:'slides 24, 26'},
+   {id:'tx',    name:'Treatment rationale and medications for treating psoriasis', cite:'slides 27–28'}]},
  {id:'acne', name:'Acne', prof:'Smith',
-  cite:'Lecture 1 (10/29) — Skin-Pathophys-Students-2026.pdf, slides 30–37',
+  cite:'slides 30–37 · taught 10/29 (Lecture 1)',
   subs:[
-   {id:'clin',  name:'Definition and epidemiology', cite:'slides 30–31'},
-   {id:'path',  name:'The four factors and P. acnes', cite:'slides 32–33'},
-   {id:'casc',  name:'Lesion cascade and exacerbating factors', cite:'slides 34–35'},
-   {id:'drugs', name:'Pathology-to-drug map', cite:'slides 36–37'}]},
- {id:'cmp', name:'The three diseases compared', prof:'Smith',
-  cite:'Lecture 1 (10/29) — Skin-Pathophys-Students-2026.pdf, slides 19, 38',
+   {id:'clin',  name:'Acne vulgaris and epidemiology', cite:'slides 30–31'},
+   {id:'path',  name:'Etiology and pathophysiology', cite:'slides 32–33'},
+   {id:'casc',  name:'Pathogenesis cascade and exacerbating factors', cite:'slides 34–35'},
+   {id:'drugs', name:'Pathogenesis and drug mechanisms; medications for treating acne', cite:'slides 36–37'}]},
+ {id:'cmp', name:'PollEv: the major pathology of each disease', prof:'Smith',
+  cite:'slides 19, 38 · taught 10/29 (Lecture 1)',
   subs:[
-   {id:'poll', name:'Her polls on the major pathology', cite:'slide 38'},
-   {id:'diff', name:'What separates them', cite:'slides 10, 19–20, 31'}]},
- {id:'nrb', name:'Nuclear receptor binders', prof:'Smith',
-  cite:'Lecture 1 (10/29) — Skin-PCol-Students-2026.pdf, slides 5–7',
+   {id:'poll', name:'PollEv: major pathology of AD, psoriasis and acne', cite:'slide 38'},
+   {id:'diff', name:'What separates the three diseases', cite:'slides 10, 19–20, 31'}]},
+ {id:'nrb', name:'Nuclear receptor binders: how they act', prof:'Smith',
+  cite:'slides 5–7 · taught 10/29 (Lecture 1)',
   subs:[
    {id:'mech', name:'Direct and indirect action', cite:'slides 5–6'},
    {id:'recs', name:'Receptors and response elements', cite:'slide 7'}]},
- {id:'cs', name:'Corticosteroids', prof:'Smith',
-  cite:'Lecture 1 (10/29) — Skin-PCol-Students-2026.pdf, slides 8–12',
+ {id:'cs', name:'Nuclear receptor binders: corticosteroids', prof:'Smith',
+  cite:'slides 8–12 · taught 10/29 (Lecture 1)',
   subs:[
    {id:'mech', name:'Uses and mechanism', cite:'slides 8–10'},
    {id:'top',  name:'Topical use', cite:'slide 11'},
    {id:'ae',   name:'Topical adverse effects', cite:'slide 12'}]},
- {id:'ret', name:'Retinoids: mechanism', prof:'Smith',
-  cite:'Lecture 1 (10/29) — Skin-PCol-Students-2026.pdf, slides 14–15',
+ {id:'ret', name:'Nuclear receptor binders: retinoid mechanism', prof:'Smith',
+  cite:'slides 14–15 · taught 10/29 (Lecture 1)',
   subs:[
    {id:'rec', name:'RAR and RXR', cite:'slide 14'},
    {id:'pd',  name:'Effects in acne, psoriasis and aging', cite:'slide 15'}]},
+];
+
+/* The Topics tab groups topics under the slide deck they come from (Louis,
+   2026-11-08), in the decks' own order: Dr. Smith's pathophysiology and
+   pharmacology decks, her recorded sun-exposure deck, then Dr. Sikazwe's DPAW
+   deck. Within a deck the topics follow slide order. Topics are pushed by the
+   later question files, so this list only names them; guide.js orders TOPICS
+   by it once every file has loaded and adds the deck headings on the Topics
+   tab. A topic id missing here keeps its place after the listed ones. */
+const TOPIC_DECKS = [
+  {id:'pp', name:'Skin Pathophysiology (Dr. Smith)', file:'Skin-Pathophys-Students-2026.pdf', when:'taught 10/29',
+   topics:['skin', 'ad', 'pso', 'acne', 'cmp']},
+  {id:'pc', name:'Skin Pharmacology (Dr. Smith)', file:'Skin-PCol-Students-2026.pdf', when:'taught 10/29, 10/30, 11/03',
+   topics:['nrb', 'cs', 'ret', 'l2-tret', 'l2-oret', 'l2-vitd', 'l2-tcell', 'l2-cni', 'l2-pde', 'l2-ker',
+           'l2-abx', 'l3-abx', 'l3-fol', 'l3-cyto', 'l3-mtx', 'l3-abat', 'l3-cytok', 'l3-tnf', 'l3-jak', 'l3-sum']},
+  {id:'sun', name:'Sun Exposure and Psoralens (Dr. Smith)', file:'DEENT_Sun_Exposure_2026.pdf', when:'recorded lecture, posted after 11/03',
+   topics:['l3c-pso', 'l3c-uv', 'l3c-spf', 'l3c-prod']},
+  {id:'mc', name:'Dermatology Medicinal Chemistry (Dr. Sikazwe, DPAW)', file:'f26-DEENT-DPAW-mc.pdf (slide numbers = PDF pages)', when:'taught 11/03, 11/04',
+   topics:['s3-frame', 's3-cris', 's3-jak', 's3-uv', 's3-pso', 's3-emol', 's3-anth', 's3-psor', 's3-gc', 's3-hc',
+           's4-vitd', 's4-limus', 's4-psret', 's4-mtx', 's4-sys', 's4-acne', 's4-kera', 's4-ret', 's4-horm', 's4-abx',
+           's4-sun', 'sk-beyond']},
 ];
 
 const PP = 'Lecture 1 (Skin-Pathophys-Students-2026.pdf)';
@@ -844,4 +865,117 @@ const QUESTIONS = [
   {t:'They block IL-17 receptors on keratinocytes', correct:false, why:'IL-17 inhibitors are a separate drug class (PP slide 28).'}],
  teach:'PC slide 15 states the psoriasis mechanism as unknown, possibly anti-inflammatory and antiproliferative; in the treatment rationale retinoids are the cell-turnover agents (PP slide 27).',
  cite:PC+' slide 15; PP slides 27–28; T 916–920'},
+
+/* ---- Added 2026-11-07 for Dr. Smith's Exam 1 hints (epidemiology, etiology,
+   why corticosteroids, retinoid target). Hint text pasted by Louis 2026-11-07. */
+{id:'L1-096', skill:'epi', prof:'Smith', tier:'new', topic:'ad', sub:'clin', concept:'ad-atopic-assoc',
+ tags:['recall'], source:'both',
+ stem:'Atopic dermatitis is often associated with which other atopic conditions?',
+ options:[
+  {t:'Asthma and rhinitis', correct:true, why:'Slide 10: an inheritance pattern and association with asthma and rhinitis (atopic conditions); (T 121–125) a child with AD, asthma and rhinitis is responding to things they are allergic to.'},
+  {t:'Psoriatic arthritis and nail pitting', correct:false, why:'These go with psoriasis (Pathophys slide 26), not with AD.'},
+  {t:'Acne and rosacea', correct:false, why:'Acne is a pilosebaceous disease (slide 30); rosacea is what topical metronidazole is usually used for (PCol slide 51). Neither is an atopic condition.'},
+  {t:'Hypertension and kidney disease', correct:false, why:'These are adverse effects of oral calcineurin inhibitors (PCol slide 30), not atopic conditions.'}],
+ teach:'Slide 10: AD has an inheritance pattern and goes with asthma and rhinitis, the atopic conditions. The risk of AD is two- to threefold higher with one atopic parent and three- to fivefold higher with two.',
+ cite:PP+' slide 10; T 121–125'},
+
+{id:'L1-097', skill:'epi', prof:'Smith', tier:'new', topic:'ad', sub:'clin', concept:'ad-trend-sex',
+ tags:['recall'], source:'both',
+ stem:'Which statement about the epidemiology of atopic dermatitis is correct?',
+ options:[
+  {t:'Its prevalence has risen over recent decades', correct:true, why:'Slide 10: prevalence has increased in developed and developing countries during the last decades (T 105–106).'},
+  {t:'It affects males far more often than females', correct:false, why:'Slide 10: it affects males and females similarly (T 121).'},
+  {t:'It is more common in rural than in urban areas', correct:false, why:'Slide 10 gives the reverse: a lower prevalence in rural areas, explained by the hygiene hypothesis.'},
+  {t:'It is more common in adults than in children', correct:false, why:'Slide 10: 15–30% of children against 2–10% of adults in developed countries.'}],
+ teach:'Slide 10: 15–30% of children and 2–10% of adults in developed countries; prevalence rising; males and females alike; lower in rural areas (hygiene hypothesis). She added that the figure is expected to level out at about 20% as these children grow up (T 108–109).',
+ cite:PP+' slide 10; T 102–121'},
+
+{id:'L1-098', skill:'epi', prof:'Smith', tier:'new', topic:'pso', sub:'clin', concept:'pso-prevalence',
+ tags:['numbers'], source:'both',
+ stem:'About what share of the US population has psoriasis?',
+ options:[
+  {t:'About 3%', correct:true, why:'Slide 20: "Affects about 3% of the US population" (T 305).'},
+  {t:'About 15–30%', correct:false, why:'That is the share of children in developed countries with AD (slide 10).'},
+  {t:'About 2–10%', correct:false, why:'That is the share of adults in developed countries with AD (slide 10).'},
+  {t:'About 90%', correct:false, why:'That is the lifetime prevalence of acne (slide 31).'}],
+ teach:'Psoriasis is the most common immune-mediated inflammatory disease worldwide and affects about 3% of the US population; the prevalence in other countries varies (slide 20; T 304–306).',
+ cite:PP+' slides 10, 20, 31; T 304–306'},
+
+{id:'L1-099', skill:'epi', prof:'Smith', tier:'new', topic:'pso', sub:'clin', concept:'pso-prevalence-factors',
+ tags:['recall'], source:'both',
+ stem:'Which factors are thought to affect how common psoriasis is in a population?',
+ options:[
+  {t:'Climate, sun exposure and ethnicity', correct:true, why:'Slide 20; (T 306–307) the prevalence varies with ethnicity and geographic location, "maybe because climate, sun exposure, and ethnicity are ... linked".'},
+  {t:'Little infection exposure in early childhood', correct:false, why:'That is the hygiene hypothesis, given for the rural–urban difference in AD (slide 10).'},
+  {t:'Androgen production at puberty', correct:false, why:'Androgens trigger acne (slides 31–32).'},
+  {t:'A high glycemic index diet and dairy', correct:false, why:'Diet is listed as a possible acne factor (slide 35).'}],
+ teach:'Slide 20: psoriasis has a genetic basis that probably requires environmental triggers; climate, sun exposure and ethnicity are thought to affect prevalence; males and females are affected equally.',
+ cite:PP+' slides 10, 20, 31–35; T 301–308'},
+
+{id:'L1-100', skill:'patho', prof:'Smith', tier:'new', topic:'pso', sub:'path', concept:'pso-trigger',
+ tags:['process'], source:'both',
+ stem:'How is psoriasis thought to start in a person with the genetic predisposition?',
+ options:[
+  {t:'Skin trauma triggers an abnormal immune response', correct:true, why:'Slide 21: probably starts with some trauma (bug bite, skin infection) that triggers an abnormal immune response (T 313–316).'},
+  {t:'Loss of profilaggrin lets allergens into the skin', correct:false, why:'That is the FLG barrier story of AD (slide 15).'},
+  {t:'Androgens raise sebum and plug the follicle', correct:false, why:'That is the start of acne (slides 32–33).'},
+  {t:'An IgE-mediated reaction to an ingested food', correct:false, why:'Ingested allergens are part of the AD story, and there the first reactions are IgE-independent (slide 13).'}],
+ teach:'After the trigger, APCs present antigen to T cells in the skin; APCs, T cells and keratinocytes release cytokines such as TNF-α, IL-23 and IL-17, which drive keratinocyte hyperproliferation and chronic systemic inflammation (slides 21–22; T 316–322).',
+ cite:PP+' slides 13, 15, 20–22, 32–33; T 301–302, 313–322'},
+
+{id:'L1-101', skill:'epi', prof:'Smith', tier:'new', topic:'acne', sub:'clin', concept:'acne-adult-sex',
+ tags:['numbers'], source:'slide',
+ stem:'Among adults aged 25 to 58, how common is acne in women compared with men?',
+ options:[
+  {t:'About 12% of women; 3% of men', correct:true, why:'Slide 31: 12% of girls age 25–58, with periodic premenstrual flares until menopause; 3% of males age 25–58.'},
+  {t:'About 3% of women; 12% of men', correct:false, why:'Swaps the two figures (slide 31).'},
+  {t:'About 12% of women; 12% of men', correct:false, why:'Slide 31 gives different figures for the two sexes: 12% and 3%.'},
+  {t:'About 81% of women; 3% of men', correct:false, why:'81% is the likelihood of acne when both parents had acne (slide 35).'}],
+ teach:'Slide 31: in puberty acne is often more severe in boys, while women often have more severe forms during adulthood. In women it can ebb and flow with the menstrual cycle (T 417–418).',
+ note:'The transcript garbles the age range ("between the ages of 25, which is a little later than 58", T 415–416); keyed to slide 31.',
+ cite:PP+' slides 31, 35; T 415–421'},
+
+{id:'L1-102', skill:'patho', prof:'Smith', tier:'new', topic:'acne', sub:'clin', concept:'acne-trigger',
+ tags:['recall'], source:'both',
+ stem:'What triggers acne in children?',
+ options:[
+  {t:'The start of androgen production', correct:true, why:'Slide 31: triggered in children with the start of androgen production; usual onset at puberty (T 413–414). Slide 32: increased androgen production leads to the factors of acne.'},
+  {t:'A filaggrin defect in the skin barrier', correct:false, why:'That is the barrier problem of AD (slide 15).'},
+  {t:'T-cell activation after skin trauma', correct:false, why:'That is how psoriasis is thought to start (slide 21).'},
+  {t:'Little infection exposure early in life', correct:false, why:'That is the hygiene hypothesis for AD (slide 10).'}],
+ teach:'Androgens raise sebum output and alter keratinization in the duct; P. acnes colonizes the duct and inflammation follows (slide 32; T 422–428).',
+ cite:PP+' slides 10, 15, 21, 31–32; T 413–414, 422–428'},
+
+{id:'L1-103', skill:'patho', prof:'Smith', tier:'new', topic:'ad', sub:'path', concept:'ad-initial-trigger',
+ tags:['process'], source:'both',
+ stem:'What is thought to set off the first skin inflammation in atopic dermatitis?',
+ options:[
+  {t:'Cytokines from irritated or scratched keratinocytes', correct:true, why:'Slide 13: the initial mechanisms are unknown, but neuropeptides, irritation or scratching may release proinflammatory cytokines from keratinocytes (T 163–169).'},
+  {t:'An IgE-mediated reaction on the first allergen exposure', correct:false, why:'Slide 13: the first reactions to embedded or ingested allergens are T-cell mediated but IgE-independent; IgE comes later.'},
+  {t:'P. acnes lipase acting on sebum in the follicle', correct:false, why:'That is how inflammation arises in acne (slide 33).'},
+  {t:'A reaction to lithium or a beta blocker', correct:false, why:'These are the medications most often linked to worsening psoriasis (slide 24).'}],
+ teach:'Slide 13: the features of AD are skin barrier dysfunction, immune deviation toward TH2 and then increased IgE, complicated by colonization with pathologic organisms.',
+ cite:PP+' slides 13, 24, 33; T 163–178'},
+
+{id:'L1-104', skill:'mech', prof:'Smith', tier:'new', topic:'cs', sub:'mech', concept:'cs-why-ad-pso',
+ tags:['mechanism','reasoning'], source:'both',
+ stem:'Why are topical corticosteroids used to treat atopic dermatitis and psoriasis?',
+ options:[
+  {t:'They suppress immune system activity', correct:true, why:'PCol slide 11: used to treat psoriasis and AD because they are immunosuppressive; (T 873–877) "They\'re going to suppress the activity of the immune system", lowering inflammatory cytokines.'},
+  {t:'They crosslink DNA to slow cell division', correct:false, why:'That is the proposed action of coal tar (PCol slide 53).'},
+  {t:'They kill P. acnes in the follicle', correct:false, why:'Antibacterial activity against P. acnes belongs to benzoyl peroxide (PCol slide 36).'},
+  {t:'They block the IL-4 receptor alpha subunit', correct:false, why:'That is dupilumab (PCol slide 64).'}],
+ teach:'Both diseases have an overactive immune component: TH2 deviation in AD (Pathophys slide 16) and a T-cell-mediated inflammatory cascade in psoriasis (Pathophys slides 19, 21). The glucocorticoid–receptor complex changes transcription, lowering inflammatory cytokines and possibly raising anti-inflammatory ones (PCol slides 5–7; T 873–877).',
+ cite:PC+' slides 5–7, 11, 36, 53, 64; T 873–877'},
+
+{id:'L1-105', skill:'mech', prof:'Smith', tier:'new', topic:'ret', sub:'rec', concept:'retinoid-target',
+ tags:['mechanism'], source:'both',
+ stem:'Which receptors do retinoids such as tretinoin bind to change gene expression?',
+ options:[
+  {t:'Retinoic acid receptors, RAR and RXR', correct:true, why:'PCol slide 14: retinoids bind two families of nuclear receptors, RARs and RXRs, which form RAR–RXR heterodimers and bind the RARE (T 895–904).'},
+  {t:'The vitamin D receptor', correct:false, why:'Calcipotriene acts through the vitamin D receptor (PCol slide 21).'},
+  {t:'The glucocorticoid receptor', correct:false, why:'Corticosteroids bind the glucocorticoid receptor (PCol slide 7).'},
+  {t:'Cytokine receptors on the cell surface', correct:false, why:'Retinoid receptors are nuclear receptors (PCol slides 7, 14); cytokine receptors are blocked by drugs such as brodalumab (PCol slide 66).'}],
+ teach:'Tretinoin is all-trans retinoic acid (PCol slide 17). For acne, psoriasis and photoaging the wanted effect is through the RARs, which drive differentiation and proliferation; RXR-targeting retinoids mainly induce apoptosis (PCol slide 14; T 895–904).',
+ cite:PC+' slides 7, 14, 17, 21; T 895–904'}
 ];

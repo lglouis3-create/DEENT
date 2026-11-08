@@ -17,72 +17,81 @@
 const S4 = 'Lecture 4 (f26-DEENT-DPAW-mc.pdf)';
 
 TOPICS.push(
- {id:'s4-vitd', name:'Vitamin D analogs and vitamin D3 biosynthesis', prof:'Sikazwe',
-  cite:'Lecture 4 (11/04) — f26-DEENT-DPAW-mc.pdf, slide 27; Vitamin D reading (Endotext)',
+ {id:'s4-vitd', name:'Psoriasis topical agents: vitamin D analogs', prof:'Sikazwe',
+  cite:'slide 27; Vitamin D reading (Endotext) · taught 11/04 (Lecture 4)',
   subs:[
    {id:'analog', name:'Calcitriol and calcipotriene', cite:'slide 27'},
    {id:'path',   name:'Take-home: reactions, organs, enzymes', cite:'slide 27; reading lines 5–14, 60–71'}]},
- {id:'s4-limus', name:'Pimecrolimus and tacrolimus', prof:'Sikazwe',
-  cite:'Lecture 4 (11/04) — f26-DEENT-DPAW-mc.pdf, slides 28, 32',
+ {id:'s4-limus', name:'Psoriasis topical agents: pimecrolimus and tacrolimus', prof:'Sikazwe',
+  cite:'slides 28, 32 · taught 11/04 (Lecture 4)',
   subs:[
    {id:'pk',    name:'Skin protein binding and permeation', cite:'slide 28'},
    {id:'class', name:'Lactone classification (Polleve-3)', cite:'slides 28, 32'}]},
- {id:'s4-psret', name:'Retinoids for psoriasis', prof:'Sikazwe',
-  cite:'Lecture 4 (11/04) — f26-DEENT-DPAW-mc.pdf, slide 29',
+ {id:'s4-psret', name:'Psoriasis topical/oral agents: retinoids', prof:'Sikazwe',
+  cite:'slide 29 · taught 11/04 (Lecture 4)',
   subs:[
    {id:'taz', name:'Tazarotene, acitretin, isotretinoin', cite:'slide 29'}]},
- {id:'s4-mtx', name:'Methotrexate', prof:'Sikazwe',
-  cite:'Lecture 4 (11/04) — f26-DEENT-DPAW-mc.pdf, slides 30–31',
+ {id:'s4-mtx', name:'Psoriasis systemic agents: methotrexate', prof:'Sikazwe',
+  cite:'slides 30–31 · taught 11/04 (Lecture 4)',
   subs:[
    {id:'mech', name:'Pteridine, DHFR and folic acid', cite:'slide 30'},
    {id:'sar',  name:'MTX SAR', cite:'slide 31'}]},
- {id:'s4-sys', name:'Cyclosporine, apremilast, tofacitinib', prof:'Sikazwe',
-  cite:'Lecture 4 (11/04) — f26-DEENT-DPAW-mc.pdf, slides 33–35',
+ {id:'s4-sys', name:'Psoriasis systemic agents: cyclosporine and apremilast', prof:'Sikazwe',
+  cite:'slides 33–34 · taught 11/04 (Lecture 4)',
   subs:[
    {id:'csa', name:'Cyclosporine', cite:'slide 33'},
-   {id:'apr', name:'Apremilast', cite:'slide 34'},
-   {id:'tof', name:'Tofacitinib', cite:'slide 35'}]},
- {id:'s4-acne', name:'Acne: terms, components, drug groups', prof:'Sikazwe',
-  cite:'Lecture 4 (11/04) — f26-DEENT-DPAW-mc.pdf, slides 40–42',
+   {id:'apr', name:'Apremilast', cite:'slide 34'}]},
+ {id:'s4-acne', name:'Acne: terminology, components, pharmacotherapy', prof:'Sikazwe',
+  cite:'slides 40–42 (not on his assigned slides) · taught 11/04 (Lecture 4)',
   subs:[
    {id:'terms', name:'Terminology and components', cite:'slides 40–41'},
    {id:'drugs', name:'Pharmacotherapy groups', cite:'slide 42'}]},
- {id:'s4-kera', name:'Keratolytics', prof:'Sikazwe',
-  cite:'Lecture 4 (11/04) — f26-DEENT-DPAW-mc.pdf, slides 43–47',
+ {id:'s4-kera', name:'Acne: keratolytics', prof:'Sikazwe',
+  cite:'slides 43–47 · taught 11/04 (Lecture 4)',
   subs:[
    {id:'ha',  name:'Glycolic and salicylic acid; hydroxy acid SAR', cite:'slides 43–44'},
    {id:'s',   name:'Sulfur', cite:'slide 46'},
    {id:'bpo', name:'Benzoyl peroxide', cite:'slide 47'}]},
- {id:'s4-ret', name:'Retinoids by generation', prof:'Sikazwe',
-  cite:'Lecture 4 (11/04) — f26-DEENT-DPAW-mc.pdf, slides 48–51',
+ {id:'s4-ret', name:'Acne: retinoids by generation', prof:'Sikazwe',
+  cite:'slides 48–51 · taught 11/04 (Lecture 4)',
   subs:[
    {id:'gen',  name:'Properties and teratogenicity', cite:'slide 48'},
    {id:'g1',   name:'1st generation: tretinoin and isotretinoin', cite:'slide 49'},
    {id:'g2',   name:'2nd generation: etretinate and acitretin', cite:'slide 50'},
    {id:'g3',   name:'3rd generation and ADMET', cite:'slide 51'}]},
- {id:'s4-horm', name:'Hormones for acne', prof:'Sikazwe',
-  cite:'Lecture 4 (11/04) — f26-DEENT-DPAW-mc.pdf, slides 52–53',
+ {id:'s4-horm', name:'Acne: hormones (estrogens, antiandrogens)', prof:'Sikazwe',
+  cite:'slides 52–53 · taught 11/04 (Lecture 4)',
   subs:[
    {id:'oc', name:'Oral contraceptives', cite:'slide 52'},
    {id:'aa', name:'Antiandrogens', cite:'slide 53'}]},
- {id:'s4-abx', name:'Antibiotics for acne', prof:'Sikazwe',
-  cite:'Lecture 4 (11/04) — f26-DEENT-DPAW-mc.pdf, slides 54–55',
+ {id:'s4-abx', name:'Acne: antibiotics', prof:'Sikazwe',
+  cite:'slides 54–55 · taught 11/04 (Lecture 4)',
   subs:[
    {id:'misc', name:'Azelaic acid, clindamycin, erythromycin', cite:'slide 54'},
    {id:'tet',  name:'Tetracyclines', cite:'slide 55'}]},
- {id:'s4-sun', name:'UV, sunblocks and sunscreens', prof:'Sikazwe',
-  cite:'Lecture 4 (11/04) — f26-DEENT-DPAW-mc.pdf, slides 58–66',
+ {id:'s4-sun', name:'Wrinkle: sunblocks and sunscreens', prof:'Sikazwe',
+  cite:'slides 58–66 (58–60 not on his assigned slides) · taught 11/04 (Lecture 4)',
   subs:[
    {id:'uv',    name:'Wrinkle causes and UV bands (Polleve-5)', cite:'slides 58–60'},
    {id:'inorg', name:'Zinc oxide and titanium dioxide', cite:'slide 61'},
    {id:'org',   name:'Organic sunscreens', cite:'slides 62–66'}]},
- {id:'s4-wrk', name:'Hydroquinone, AHAs, hyaluronic acid, topical retinoids', prof:'Sikazwe',
-  cite:'Lecture 4 (11/04) — f26-DEENT-DPAW-mc.pdf, slides 67–70',
+ /* Questions on pages outside Dr. Sikazwe's assigned pages for Exam 1 (his list of
+    11/06: printed slides 7-9, 12, 15-22, 24-33, 42-54, 60-65). Not material he told
+    the class to exclude: that is icotrokinra (p. 36) and the antibody PK slide (p. 37),
+    which carry no questions. These carry lowYield (off practice papers) and
+    unassigned (course.js pool filters: in no Exam 1 pool, so out of the pool cards on
+    Weak spots and the exam-date scheduling). IDs and citations are unchanged. */
+ {id:'sk-beyond', optional:true, name:'Beyond the Exam 1 assigned pages (optional)', prof:'Sikazwe',
+  cite:'Not on Dr. Sikazwe\'s assigned slides for Exam 1 (his list of 11/06). Kept for optional practice; not on Exam 1 practice papers. f26-DEENT-DPAW-mc.pdf, Lectures 3–4',
   subs:[
-   {id:'hq',  name:'Hydroquinone', cite:'slide 67'},
-   {id:'aha', name:'Alpha-hydroxy acids', cite:'slide 68'},
-   {id:'hya', name:'Hyaluronic acid', cite:'slide 69'},
-   {id:'ret', name:'Topical retinoids for wrinkles', cite:'slide 70'}]}
+   {id:'skin', name:'Review of skin anatomy: layers and sebum', cite:'slide 2'},
+   {id:'ecz',  name:'Eczema: components, goals and drug list (11/03)', cite:'slides 4, 6, 13–14, 17–18, 25'},
+   {id:'pso',  name:'Psoriasis', cite:'slides 13–14, 16–17'},
+   {id:'hc',   name:'Hydrocortisone as reference; its derivatives (11/03)', cite:'slides 7, 18, 24–26'},
+   {id:'tof',  name:'Tofacitinib (11/04)', cite:'slide 35'},
+   {id:'acne', name:'Acne', cite:'slides 40–41'},
+   {id:'uv',   name:'UV bands: the slide 58 figure', cite:'slide 58'},
+   {id:'wrk',  name:'Wrinkles: causes, hydroquinone, AHAs, hyaluronic acid, topical retinoids (11/04)', cite:'slides 58, 67–70'}]}
 );
 
 QUESTIONS.push(
@@ -359,7 +368,7 @@ QUESTIONS.push(
 
 {id:'S4-025', skill:'chem', prof:'Sikazwe', tier:'new', topic:'s4-psret', sub:'taz', concept:'retinoid-cooh',
  tags:['structure'], source:'transcript',
- stem:'Which functional group do the active retinoids share at one end of the molecule?',
+ fg:'tretinoin', stem:'Which functional group do the active retinoids share at one end of the molecule?',
  options:[
   {t:'A carboxylic acid', correct:true, why:'"they have this common functional group at the end, this carboxylic acid. So that\'s an important common feature" (T@7222–7330).'},
   {t:'A primary alcohol', correct:false, why:'Retinol (vitamin A1), the parent compound, ends in an alcohol (slide 49); the active drugs end in the acid.'},
@@ -393,7 +402,7 @@ QUESTIONS.push(
 /* ---- Methotrexate (slides 30–31) ----------------------------------------- */
 {id:'S4-028', skill:'chem', prof:'Sikazwe', tier:'new', topic:'s4-mtx', sub:'mech', concept:'mtx-pteridine',
  tags:['classification'], source:'both',
- stem:'Methotrexate is classified chemically as which of the following?',
+ fg:'methotrexate', stem:'Methotrexate is classified chemically as which of the following?',
  options:[
   {t:'A pteridine', correct:true, why:'Slide 30 "A pteridine"; "chemically we classify it as a pteridine based on this group here" (T@8238–8330).'},
   {t:'A lactone', correct:false, why:'The lactones are the limus macrolides (slides 28, 32).'},
@@ -516,7 +525,7 @@ QUESTIONS.push(
 
 {id:'S4-039', skill:'chem', prof:'Sikazwe', tier:'new', topic:'s4-sys', sub:'csa', concept:'csa-lactam', dupOf:'S4-021',
  tags:['room'], source:'transcript',
- stem:'Because it is a cyclic peptide, cyclosporine can be classified chemically as what?',
+ fg:'cyclosporine', stem:'Because it is a cyclic peptide, cyclosporine can be classified chemically as what?',
  options:[
   {t:'A lactam', correct:true, why:'"So, here, the cyclic peptide, this can be described then as a what? And a lactam, right? cyclic lactam too." (T@12150–12254).'},
   {t:'A lactone', correct:false, why:'A lactone is a cyclic ester, as in the limus drugs (slide 32).'},
@@ -615,7 +624,7 @@ QUESTIONS.push(
  cite:S4+' slide 34; T@13908–14385'},
 
 /* ---- Tofacitinib (slide 35) ----------------------------------------------- */
-{id:'S4-048', skill:'class', prof:'Sikazwe', tier:'new', topic:'s4-sys', sub:'tof', concept:'tofacitinib-class',
+{id:'S4-048', skill:'class', prof:'Sikazwe', tier:'new', topic:'sk-beyond', sub:'tof', concept:'tofacitinib-class', lowYield:true, unassigned:true, note:'Outside Dr. Sikazwe\'s assigned pages for Exam 1 (list of 11/06: pp. 7-9, 12, 15-22, 24-33, 42-54, 60-65). Her numbers are the ones printed on the slides; from printed slide 22 on, the slide numbers cited here run one higher.',
  tags:['classification'], source:'both',
  stem:'Tofacitinib is which chemical class, with which mechanism?',
  options:[
@@ -626,7 +635,7 @@ QUESTIONS.push(
  teach:'Tofacitinib works by the same mechanism as the JAK "-tinibs" taught for eczema on 11/03 (T@14505–14700), and it may be used adjunctively with methotrexate (slide 35).',
  cite:S4+' slide 35; T@14505–14700'},
 
-{id:'S4-049', skill:'pk', prof:'Sikazwe', tier:'new', topic:'s4-sys', sub:'tof', concept:'tofacitinib-3a4',
+{id:'S4-049', skill:'pk', prof:'Sikazwe', tier:'new', topic:'sk-beyond', sub:'tof', concept:'tofacitinib-3a4', lowYield:true, unassigned:true, note:'Outside Dr. Sikazwe\'s assigned pages for Exam 1 (list of 11/06: pp. 7-9, 12, 15-22, 24-33, 42-54, 60-65). Her numbers are the ones printed on the slides; from printed slide 22 on, the slide numbers cited here run one higher.',
  tags:['metabolism','numbers'], source:'both',
  stem:'Which statement about tofacitinib metabolism is correct?',
  options:[
@@ -638,7 +647,7 @@ QUESTIONS.push(
  cite:S4+' slide 35; T@14700–15130'},
 
 /* ---- Acne: terms, components, drug groups (slides 40–42) ------------------ */
-{id:'S4-050', skill:'patho', prof:'Sikazwe', tier:'new', topic:'s4-acne', sub:'terms', concept:'acne-components', multi:true,
+{id:'S4-050', skill:'patho', prof:'Sikazwe', tier:'new', topic:'sk-beyond', sub:'acne', concept:'acne-components', lowYield:true, unassigned:true, note:'Outside Dr. Sikazwe\'s assigned pages for Exam 1 (list of 11/06: pp. 7-9, 12, 15-22, 24-33, 42-54, 60-65). Her numbers are the ones printed on the slides; from printed slide 22 on, the slide numbers cited here run one higher.', multi:true,
  tags:['list'], source:'both',
  stem:'Which are major components of acne? Select all that apply.',
  options:[
@@ -650,7 +659,7 @@ QUESTIONS.push(
  teach:'Slide 41 pairs each component with a goal: decrease sebaceous gland activity, normalize follicular keratinization, decrease P. acnes colonization, decrease inflammation. The drug groups follow: hormones (sebum), keratolytics and retinoids (keratinization), antibiotics (P. acnes) (T@18950–19400).',
  cite:S4+' slide 41; T@18431–19387'},
 
-{id:'S4-051', skill:'patho', prof:'Sikazwe', tier:'new', topic:'s4-acne', sub:'terms', concept:'pilosebaceous-unit',
+{id:'S4-051', skill:'patho', prof:'Sikazwe', tier:'new', topic:'sk-beyond', sub:'acne', concept:'pilosebaceous-unit', lowYield:true, unassigned:true, note:'Outside Dr. Sikazwe\'s assigned pages for Exam 1 (list of 11/06: pp. 7-9, 12, 15-22, 24-33, 42-54, 60-65). Her numbers are the ones printed on the slides; from printed slide 22 on, the slide numbers cited here run one higher.',
  tags:['terms'], source:'both',
  stem:'What makes up a pilosebaceous unit?',
  options:[
@@ -1053,7 +1062,7 @@ QUESTIONS.push(
   {t:'They raise estrogen synthesis', correct:false, why:'Not the mechanism given; estrogens are supplied by OCs (slide 52).'},
   {t:'They kill P. acnes in the follicle', correct:false, why:'That is the antibiotics (slide 54).'}],
  teach:'Both lower testosterone production; flutamide instead keeps testosterone from binding its receptor. "you have a steroidal approach, a non-steroidal approach, and you just differentiate them by how they work. This is the take-home message from this slide." (T@32983–33140).',
- note:'Slide 53 places ketoconazole under the "Non-steroidal AA" heading with flutamide; in class he grouped it with spironolactone by mechanism (biosynthesis). Both agree that ketoconazole is not a steroid; this item asks the mechanism only.',
+ note:'Slide 53 places ketoconazole under the "Non-steroidal AA" heading with flutamide; in class he grouped it with spironolactone by mechanism (biosynthesis). Both agree that ketoconazole is not a steroid; this item asks the mechanism only. The keyed mechanism is Dr. Sikazwe\'s statement in his lecture; Dr. Smith\'s slide (Pathophys 37) gives only the antiandrogen class for acne and states no mechanism for spironolactone.',
  cite:S4+' slide 53; T@32150–32720'},
 
 {id:'S4-087', skill:'tell', prof:'Sikazwe', tier:'new', topic:'s4-horm', sub:'aa', concept:'flutamide-moa',
@@ -1103,7 +1112,7 @@ QUESTIONS.push(
 
 {id:'S4-091', skill:'tell', prof:'Sikazwe', tier:'new', topic:'s4-abx', sub:'tet', concept:'tet-vs-steroid',
  tags:['structure','take-home'], source:'both',
- stem:'Both tetracyclines and steroids have four rings. How do the ring arrangements differ?',
+ cmp:['tetracycline','hydrocortisone'], stem:'Both tetracyclines and steroids have four rings. How do the ring arrangements differ?',
  options:[
   {t:'Tetracycline rings run in a line; steroid rings are stacked', correct:true, why:'"be able to identify them 1234. One plan[e] ... linear ... in steroids, they\'re stacked ... 4 rings stuck. This one is just ... one linear molecule" (T@35205–35450).'},
   {t:'Tetracyclines have five rings; steroids have four', correct:false, why:'He counted four rings in tetracyclines, "1234" (T@35205).'},
@@ -1146,7 +1155,7 @@ QUESTIONS.push(
  cite:S4+' slide 55; T@36452–36800'},
 
 /* ---- Wrinkle, UV and sun protection (slides 58–66) ----------------------- */
-{id:'S4-095', skill:'patho', prof:'Sikazwe', tier:'new', topic:'s4-sun', sub:'uv', concept:'wrinkle-causes', multi:true,
+{id:'S4-095', skill:'patho', prof:'Sikazwe', tier:'new', topic:'sk-beyond', sub:'wrk', concept:'wrinkle-causes', lowYield:true, unassigned:true, note:'Outside Dr. Sikazwe\'s assigned pages for Exam 1 (list of 11/06: pp. 7-9, 12, 15-22, 24-33, 42-54, 60-65). Her numbers are the ones printed on the slides; from printed slide 22 on, the slide numbers cited here run one higher.', multi:true,
  tags:['list'], source:'both',
  stem:'Which causes of fine, coarse and pigmentary skin changes did he give? Select all that apply.',
  options:[
@@ -1158,7 +1167,7 @@ QUESTIONS.push(
  teach:'"Environment plays a big role, so UV radiation, habits like smoking, and exposure to just chemicals" (T@37350–37500).',
  cite:S4+' slide 58; T@37300–37511'},
 
-{id:'S4-096', skill:'patho', prof:'Sikazwe', tier:'new', topic:'s4-sun', sub:'uv', concept:'uva-penetration',
+{id:'S4-096', skill:'patho', prof:'Sikazwe', tier:'new', topic:'sk-beyond', sub:'uv', concept:'uva-penetration', lowYield:true, unassigned:true, note:'Outside Dr. Sikazwe\'s assigned pages for Exam 1 (list of 11/06). This slide 58 figure gives UVA as 320–400 nm; his slides 62–63 give 315–400 nm.',
  tags:['poll','verbatim'], source:'both',
  stem:'What UVR band is more skin penetrating?',
  options:[
@@ -1338,7 +1347,7 @@ QUESTIONS.push(
  cite:S4+' slides 62–66'},
 
 /* ---- Hydroquinone, AHAs, hyaluronic acid, topical retinoids (slides 67–70) */
-{id:'S4-112', skill:'mech', prof:'Sikazwe', tier:'new', topic:'s4-wrk', sub:'hq', concept:'hq-moa',
+{id:'S4-112', skill:'mech', prof:'Sikazwe', tier:'new', topic:'sk-beyond', sub:'wrk', concept:'hq-moa', lowYield:true, unassigned:true, note:'Outside Dr. Sikazwe\'s assigned pages for Exam 1 (list of 11/06: pp. 7-9, 12, 15-22, 24-33, 42-54, 60-65). Her numbers are the ones printed on the slides; from printed slide 22 on, the slide numbers cited here run one higher.',
  tags:['mechanism'], source:'both',
  stem:'How does hydroquinone lighten age spots?',
  options:[
@@ -1349,7 +1358,7 @@ QUESTIONS.push(
  teach:'Hydroquinone is used topically for whitening or depigmentation of age spots (slide 67; T@45749–45880).',
  cite:S4+' slide 67; T@45749–46250'},
 
-{id:'S4-113', skill:'counsel', prof:'Sikazwe', tier:'new', topic:'s4-wrk', sub:'hq', concept:'hq-storage',
+{id:'S4-113', skill:'counsel', prof:'Sikazwe', tier:'new', topic:'sk-beyond', sub:'wrk', concept:'hq-storage', lowYield:true, unassigned:true, note:'Outside Dr. Sikazwe\'s assigned pages for Exam 1 (list of 11/06: pp. 7-9, 12, 15-22, 24-33, 42-54, 60-65). Her numbers are the ones printed on the slides; from printed slide 22 on, the slide numbers cited here run one higher.',
  tags:['counsel','take-home'], source:'both',
  stem:'How should hydroquinone be stored, and why?',
  options:[
@@ -1360,7 +1369,7 @@ QUESTIONS.push(
  teach:'"make sure if this is being sold out of your establishment, make sure it\'s well protected" (T@45882–45995). The colored product, benzoquinone, is inactive.',
  cite:S4+' slide 67; T@45882–46160'},
 
-{id:'S4-114', skill:'mech', prof:'Sikazwe', tier:'new', topic:'s4-wrk', sub:'aha', concept:'aha-wrinkle',
+{id:'S4-114', skill:'mech', prof:'Sikazwe', tier:'new', topic:'sk-beyond', sub:'wrk', concept:'aha-wrinkle', lowYield:true, unassigned:true, note:'Outside Dr. Sikazwe\'s assigned pages for Exam 1 (list of 11/06: pp. 7-9, 12, 15-22, 24-33, 42-54, 60-65). Her numbers are the ones printed on the slides; from printed slide 22 on, the slide numbers cited here run one higher.',
  tags:['mechanism'], source:'both',
  stem:'How do alpha-hydroxy acids improve fine wrinkles?',
  options:[
@@ -1371,7 +1380,7 @@ QUESTIONS.push(
  teach:'AHAs on slide 68 and their sources: glycolic (sugar cane/beet), lactic (milk), tartaric (grapes), malic (apples/grapes), citric.',
  cite:S4+' slide 68; T@46324–46700'},
 
-{id:'S4-115', skill:'class', prof:'Sikazwe', tier:'new', topic:'s4-wrk', sub:'aha', concept:'aha-sources',
+{id:'S4-115', skill:'class', prof:'Sikazwe', tier:'new', topic:'sk-beyond', sub:'wrk', concept:'aha-sources', lowYield:true, unassigned:true, note:'Outside Dr. Sikazwe\'s assigned pages for Exam 1 (list of 11/06: pp. 7-9, 12, 15-22, 24-33, 42-54, 60-65). Her numbers are the ones printed on the slides; from printed slide 22 on, the slide numbers cited here run one higher.',
  tags:['recall'], source:'both',
  stem:'Which alpha-hydroxy acid is found in milk?',
  options:[
@@ -1382,7 +1391,7 @@ QUESTIONS.push(
  teach:'Lactic acid (2-hydroxypropanoic acid) has its OH on the carbon next to the COOH, the alpha carbon, which makes it an AHA (slides 44, 68).',
  cite:S4+' slide 68; T@46900–47060'},
 
-{id:'S4-116', skill:'mech', prof:'Sikazwe', tier:'new', topic:'s4-wrk', sub:'hya', concept:'ha-film',
+{id:'S4-116', skill:'mech', prof:'Sikazwe', tier:'new', topic:'sk-beyond', sub:'wrk', concept:'ha-film', lowYield:true, unassigned:true, note:'Outside Dr. Sikazwe\'s assigned pages for Exam 1 (list of 11/06: pp. 7-9, 12, 15-22, 24-33, 42-54, 60-65). Her numbers are the ones printed on the slides; from printed slide 22 on, the slide numbers cited here run one higher.',
  tags:['mechanism'], source:'both',
  stem:'How does topical hyaluronic acid keep skin plump?',
  options:[
@@ -1393,7 +1402,7 @@ QUESTIONS.push(
  teach:'Hyaluronic acid is an endogenous mucopolysaccharide, part of the skin, important for moisture, elasticity and plumpness; it is non-antigenic and non-immunogenic (slide 69; T@47069–47600).',
  cite:S4+' slide 69; T@47069–47750'},
 
-{id:'S4-117', skill:'pk', prof:'Sikazwe', tier:'new', topic:'s4-wrk', sub:'hya', concept:'ha-mw',
+{id:'S4-117', skill:'pk', prof:'Sikazwe', tier:'new', topic:'sk-beyond', sub:'wrk', concept:'ha-mw', lowYield:true, unassigned:true, note:'Outside Dr. Sikazwe\'s assigned pages for Exam 1 (list of 11/06: pp. 7-9, 12, 15-22, 24-33, 42-54, 60-65). Her numbers are the ones printed on the slides; from printed slide 22 on, the slide numbers cited here run one higher.',
  tags:['pk'], source:'both',
  stem:'How does molecular weight change where topical hyaluronic acid acts?',
  options:[
@@ -1404,7 +1413,7 @@ QUESTIONS.push(
  teach:'"as we age, we start losing out on what? Hyaluronic acid. So we can supplement it" (T@48100–48250). "It may not seem that important, but somebody may come with a question. These are still over the counter things." (T@48260–48370).',
  cite:S4+' slide 69; T@47917–48370'},
 
-{id:'S4-118', skill:'chem', prof:'Sikazwe', tier:'new', topic:'s4-wrk', sub:'hya', concept:'ha-structure',
+{id:'S4-118', skill:'chem', prof:'Sikazwe', tier:'new', topic:'sk-beyond', sub:'wrk', concept:'ha-structure', lowYield:true, unassigned:true, note:'Outside Dr. Sikazwe\'s assigned pages for Exam 1 (list of 11/06: pp. 7-9, 12, 15-22, 24-33, 42-54, 60-65). Her numbers are the ones printed on the slides; from printed slide 22 on, the slide numbers cited here run one higher.',
  tags:['structure'], source:'both',
  stem:'What kind of molecule is hyaluronic acid?',
  options:[
@@ -1415,7 +1424,7 @@ QUESTIONS.push(
  teach:'Being part of us, it "doesn\'t have antigenic activity or even immunogenic reactions to it, so advantages" (T@47540–47650).',
  cite:S4+' slide 69; T@47069–47650'},
 
-{id:'S4-119', skill:'mech', prof:'Sikazwe', tier:'new', topic:'s4-wrk', sub:'ret', concept:'topical-ret-collagen',
+{id:'S4-119', skill:'mech', prof:'Sikazwe', tier:'new', topic:'sk-beyond', sub:'wrk', concept:'topical-ret-collagen', lowYield:true, unassigned:true, note:'Outside Dr. Sikazwe\'s assigned pages for Exam 1 (list of 11/06: pp. 7-9, 12, 15-22, 24-33, 42-54, 60-65). Her numbers are the ones printed on the slides; from printed slide 22 on, the slide numbers cited here run one higher.',
  tags:['mechanism'], source:'both',
  stem:'Why are topical retinoids used for wrinkles, and what caution stays with them?',
  options:[

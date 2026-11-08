@@ -1,0 +1,173 @@
+/* ==========================================================================
+   "LIKELY ON THE EXAM" STARS, PHAR 4346 DEENT (Exam 1): data
+   --------------------------------------------------------------------------
+   Louis, 2026-11-08: "star question you think will most likely be in the exam".
+   A star is Claude's prediction from what each professor said and showed, never
+   an official list. Each star names its source: Dr. Smith's Exam 1 hints (pasted
+   by Louis 2026-11-07; quoted in STYLE.md and course.js above the exam blurb;
+   coverage audit in reviews/LOG.md 2026-11-07), the professors' objectives
+   slides, their polls and questions to the room, and what they stressed in
+   lecture (transcript lines as in STYLE.md). Dr. Sikazwe's stars are on his
+   assigned pages only (his list of 11/06; file pp. 7-9, 12, 15-23, 25-34, 43-55,
+   61-66).
+   Shape follows Intro to Pharmacology's `core:true, coreWhy:"..."` (PH
+   exam1-drill, kit FEATURES.md most-likely-stars v1), kept here in one list so
+   the question files stay unchanged: {id, reason, source, ref}.
+   Rules (likely_check.js): every id exists and is in an Exam 1 pool (not
+   lowYield, not unassigned, not in an optional topic, not held out); one star per
+   concept; every source key is defined; no reason contains the text of the
+   question's correct answer, nor a word of it that the stem and the other
+   options do not already show. The reason and source are not displayed
+   (Louis, 2026-11-08: the card shows only a "★ Likely on the exam" badge); they
+   are the audit record of each star, still written not to give the answer away.
+   ========================================================================== */
+const LIKELY = {
+  sources: {
+    'smith-hints':   {by:'smith',   label:"Dr. Smith's Exam 1 hints",
+                      detail:'Her study hints for Exam 1, pasted by Louis on 2026-11-07 (quoted in STYLE.md; coverage audit in reviews/LOG.md 2026-11-07)'},
+    'smith-obj-pp':  {by:'smith',   label:"Dr. Smith's learning objectives",
+                      detail:'Skin-Pathophys-Students-2026.pdf, slide 3 "Learning objectives"'},
+    'smith-obj-pc':  {by:'smith',   label:"Dr. Smith's learning objectives",
+                      detail:'Skin-PCol-Students-2026.pdf, slide 3 "Learning objectives"'},
+    'smith-obj-sun': {by:'smith',   label:"Dr. Smith's learning objectives",
+                      detail:'DEENT_Sun_Exposure_2026.pdf, slide 6 "Objectives"'},
+    'smith-poll':    {by:'smith',   label:"Dr. Smith's in-class poll",
+                      detail:'PollEv, Skin-Pathophys-Students-2026.pdf slide 38, 10/29'},
+    'smith-room':    {by:'smith',   label:'Dr. Smith asked the room',
+                      detail:'A question she put to the class (lecture transcript)'},
+    'smith-cue':     {by:'smith',   label:'Dr. Smith stressed it in lecture',
+                      detail:'Her words in class or in her recording (lecture transcript)'},
+    'sik-poll':      {by:'sikazwe', label:"Dr. Sikazwe's in-class poll",
+                      detail:'Polleve slide in f26-DEENT-DPAW-mc.pdf'},
+    'sik-room':      {by:'sikazwe', label:'Dr. Sikazwe asked the room',
+                      detail:'A question he put to the class (lecture transcript)'},
+    'sik-cue':       {by:'sikazwe', label:'Dr. Sikazwe stressed it in lecture',
+                      detail:'His words in class (lecture transcript)'},
+  },
+  items: [
+    /* ---- Dr. Smith, Pathophysiology deck (10/29) ---- */
+    {id:'L1-060', source:'smith-poll',  ref:'PollEv 1, Pathophys slide 38 (10/29)', reason:'She asked this as a live poll in class, in nearly these words.'},
+    {id:'L1-061', source:'smith-poll',  ref:'PollEv 2, Pathophys slide 38 (10/29)', reason:'She asked this as a live poll in class, in nearly these words.'},
+    {id:'L1-011', source:'smith-hints', ref:'and Pathophys slide 3 objective', reason:'Her hints and her objectives both ask for the epidemiology of each condition.'},
+    {id:'L1-032', source:'smith-hints', ref:'and Pathophys slide 3 objective', reason:'Her hints and her objectives both ask for the epidemiology of each condition.'},
+    {id:'L1-041', source:'smith-hints', ref:'and Pathophys slide 3 objective', reason:'Her hints and her objectives both ask for the epidemiology of each condition.'},
+    {id:'L1-025', source:'smith-obj-pp', ref:'objective: etiologies and pathologies', reason:'An objective asks for the etiology of each condition; she spent a slide and a room question on this gene.'},
+    {id:'L1-027', source:'smith-room',  ref:'10/29, T 226–231 (slide 15)', reason:'She put a puzzle like this to the room: what would that make you think?'},
+    {id:'L1-031', source:'smith-room',  ref:'10/29, T 295–297 (slide 19)', reason:'She asked the room what is going on in the skin in one disease and not the other.'},
+    {id:'L1-042', source:'smith-obj-pp', ref:'objective: etiologies and pathologies', reason:'An objective asks for the pathology of acne; her hints list etiology and pathology for each disease.'},
+    {id:'L1-043', source:'smith-hints', ref:'and Pathophys slide 3 objective', reason:'Her hints ask for the etiology and pathology of each disease; this is the bacterial step of acne.'},
+    {id:'L1-029', source:'smith-obj-pp', ref:'objective: list the classes of medications', reason:'An objective: list the drug classes used for each condition.'},
+    {id:'L1-051', source:'smith-obj-pp', ref:'objective: list the classes of medications', reason:'An objective: list the drug classes used for each condition.'},
+    /* ---- Dr. Smith, Pharmacology deck (10/29, 10/30, 11/03) ---- */
+    {id:'L1-070', source:'smith-obj-pc', ref:'objective: general mechanism of each class', reason:'An objective: explain the general mechanism of each drug class. This is the shared one for a whole group.'},
+    {id:'L1-104', source:'smith-room',  ref:'10/29, T 873–875 (PCol slides 8–12)', reason:'She asked the room this purpose question; her hints ask why each mechanism helps the disease.'},
+    {id:'L1-089', source:'smith-room',  ref:'10/29, T 852–853 (PCol slide 12)', reason:'She asked the room why this happens with these drugs.'},
+    {id:'L1-105', source:'smith-hints', ref:'"Know what the drugs target"', reason:'Her hints: the fill-in-the-blanks focus on what the drugs target.'},
+    {id:'L2-003', source:'smith-cue',   ref:'10/30, T 28–30 (slide 16)', reason:'One of the counseling numbers she stressed on 10/30.'},
+    {id:'L2-011', source:'smith-room',  ref:'10/30, T 116–130 (slides 16, 18)', reason:'She answered this exact question from a student in class and explained it at length.'},
+    {id:'L2-017', source:'smith-hints', ref:'"details of the MOAs differentiate the drugs within the class"', reason:'Her hints: know what sets each drug apart from the others in its class.'},
+    {id:'L2-037', source:'smith-hints', ref:'"differentiate the drugs within the class"', reason:'Her hints: know what sets each drug apart from the others in its class.'},
+    {id:'L2-039', source:'smith-hints', ref:'"Know what the drugs target"', reason:'Her hints: the fill-in-the-blanks focus on what each drug targets.'},
+    {id:'L2-045', source:'smith-room',  ref:'10/30, T 169–171 (slide 22)', reason:'She asked the room to work out why this happens.'},
+    {id:'L2-046', source:'smith-cue',   ref:'10/30 (slide 22), counseling numbers', reason:'One of the counseling numbers she stressed on 10/30.'},
+    {id:'L2-116', source:'smith-hints', ref:'"Know what the drugs target"', reason:'Her hints: the fill-in-the-blanks focus on what each drug targets.'},
+    {id:'L2-059', source:'smith-hints', ref:'"details of the MOAs differentiate the drugs within the class"', reason:'Her hints: the details of the mechanism separate the drugs within a class.'},
+    {id:'L2-060', source:'smith-hints', ref:'"details of the MOAs differentiate the drugs within the class"', reason:'Her hints: the details of the mechanism separate the drugs within a class.'},
+    {id:'L2-056', source:'smith-room',  ref:'10/30, T 290–292 (slide 25)', reason:'She asked the room what results from stopping this cascade.'},
+    {id:'L2-117', source:'smith-hints', ref:'"Know Black Box warning adverse drug reactions"', reason:'Her hints: know the black box warnings.'},
+    {id:'L2-077', source:'smith-hints', ref:'"differentiate the drugs within the class"; 11/03, T 361–364', reason:'Her hints and her 11/03 summary: what makes drugs in one class different, and the side effects she points out.'},
+    {id:'L2-115', source:'smith-hints', ref:'"Know what the drugs target"', reason:'Her hints: the fill-in-the-blanks focus on what each drug targets.'},
+    {id:'L2-086', source:'smith-hints', ref:'"differentiate the drugs within the class"', reason:'Her hints: know what separates the drugs within one class.'},
+    {id:'L2-091', source:'smith-obj-pc', ref:'objective: general mechanism of each class', reason:'An objective: explain the mechanism of each drug class; this is the main drug of its class.'},
+    {id:'L2-103', source:'smith-cue',   ref:'10/30, T 545–552 (slide 40)', reason:'She said the concentrations of these products are important to watch.'},
+    {id:'L2-106', source:'smith-room',  ref:'10/30, T 555 (slide 40)', reason:'She asked the room what this term means.'},
+    {id:'L2-109', source:'smith-room',  ref:'10/30, T 574–576 (slide 41)', reason:'She asked the room this question in almost these words.'},
+    {id:'L2-111', source:'smith-hints', ref:'"Know what the drugs target"', reason:'Her hints: the fill-in-the-blanks focus on what each drug targets.'},
+    {id:'L2-112', source:'smith-hints', ref:'"Know what the drugs target"', reason:'Her hints: the fill-in-the-blanks focus on what each drug targets.'},
+    {id:'L3-008', source:'smith-cue',   ref:'11/03, T 46–51 (slide 45)', reason:'She picked this out as a point to know about the newer drugs of the class.'},
+    {id:'L3-009', source:'smith-cue',   ref:'11/03, T 47–51 (slide 45)', reason:'She named this as a special side effect within the class; her hints ask what separates drugs in a class.'},
+    {id:'L3-110', source:'smith-hints', ref:'"differentiate the drugs within the class"', reason:'Her hints: know what sets each drug apart from the others in its class.'},
+    {id:'L3-022', source:'smith-room',  ref:'11/03, T 85–86 (slide 49)', reason:'She asked the room what this is needed for in cells.'},
+    {id:'L3-038', source:'smith-cue',   ref:'11/03, T 181–182 (slide 56)', reason:'She called this regimen "really important".'},
+    {id:'L3-045', source:'smith-hints', ref:'"explain why that MOA is good for treating the skin conditions"', reason:'Her hints: explain why the mechanism helps the condition it treats.'},
+    {id:'L3-050', source:'smith-cue',   ref:'11/03, T 237–238 (slide 61)', reason:'She said the side effects of this drug are "very important to remember".'},
+    {id:'L3-059', source:'smith-hints', ref:'"Know what the drugs target"', reason:'Her hints: the fill-in-the-blanks focus on what each drug targets.'},
+    {id:'L3-060', source:'smith-room',  ref:'11/03, T 322–323 (slide 63)', reason:'She asked the room why the drug was built this way.'},
+    {id:'L3-061', source:'smith-room',  ref:'11/03, T 350–351 (slide 63)', reason:'She asked the room why the drug carries this name.'},
+    {id:'L3-064', source:'smith-hints', ref:'"Know what the drugs target"', reason:'Her hints: the fill-in-the-blanks focus on what each drug targets.'},
+    {id:'L3-072', source:'smith-room',  ref:'11/03, T 416–417 (slide 66)', reason:'She asked the room this exact question.'},
+    {id:'L3-073', source:'smith-room',  ref:'11/03, T 422 (slide 66)', reason:'She asked the room about this drug\'s distinguishing feature.'},
+    {id:'L3-075', source:'smith-room',  ref:'11/03, T 432–433 (slides 66, 72)', reason:'She asked the room why this matters.'},
+    {id:'L3-084', source:'smith-cue',   ref:'11/03, T 476–477 (slides 67–69)', reason:'"That\'s all you need to know": the drug, how it is made, and what it binds.'},
+    {id:'L3-079', source:'smith-room',  ref:'11/03, T 478–479 (slides 67–68)', reason:'She asked the room why these cytokines are targeted.'},
+    {id:'L3-114', source:'smith-hints', ref:'"Know what the drugs target"', reason:'Her hints: the fill-in-the-blanks focus on what each drug targets; this one had no question before the hints.'},
+    {id:'L3-090', source:'smith-cue',   ref:'11/03, T 497–500 (slide 70); hints: black box warnings', reason:'She called this "one big important thing" about the whole class, and her hints say to know black box warnings.'},
+    {id:'L3-115', source:'smith-hints', ref:'"explain why that MOA is good for treating the skin conditions"', reason:'Her hints: explain why the mechanism helps the condition it treats.'},
+    {id:'L3-093', source:'smith-cue',   ref:'11/03, T 429–432 (slide 72)', reason:'She said to pay attention to how each antibody is made.'},
+    {id:'L3-106', source:'smith-cue',   ref:'11/03, T 584–586 (slide 76); hints: black box warnings', reason:'Her closing advice on 11/03: "did I mention a black box warning?"'},
+    {id:'L3-119', source:'smith-hints', ref:'"a few fill in the blanks ... Know what the drugs target"', reason:'Practice for her fill-in-the-blanks: write each target before you match.'},
+    {id:'L3-122', source:'smith-hints', ref:'"a few fill in the blanks ... Know what the drugs target"', reason:'Practice for her fill-in-the-blanks: write each target before you match.'},
+    {id:'L3-123', source:'smith-hints', ref:'"a few fill in the blanks ... Know what the drugs target"', reason:'Practice for her fill-in-the-blanks: write each target before you match.'},
+    /* ---- Dr. Smith, sun exposure and psoralens (recorded) ---- */
+    {id:'L3C-001', source:'smith-hints', ref:'sun lecture; "Know what the drugs target"', reason:'Her hints name the sun lecture and ask what each drug targets.'},
+    {id:'L3C-007', source:'smith-hints', ref:'"explain why that MOA is good for treating the skin conditions"', reason:'Her hints: explain why the mechanism helps the condition it treats.'},
+    {id:'L3C-014', source:'smith-hints', ref:'sun lecture: UVA and UVB', reason:'Her hints for the sun lecture include the damage done by each UV type.'},
+    {id:'L3C-015', source:'smith-hints', ref:'sun lecture: UVA and UVB', reason:'Her hints for the sun lecture include the damage done by each UV type.'},
+    {id:'L3C-024', source:'smith-hints', ref:'sun lecture: UVA and UVB', reason:'Her hints for the sun lecture include the damage done by each UV type.'},
+    {id:'L3C-030', source:'smith-obj-sun', ref:'objective: define MED, SPF and substantivity', reason:'An objective asks you to define this term.'},
+    {id:'L3C-031', source:'smith-obj-sun', ref:'objective: define MED, SPF and substantivity', reason:'An objective asks you to define this term.'},
+    {id:'L3C-050', source:'smith-obj-sun', ref:'objective: define MED, SPF and substantivity', reason:'An objective asks you to define this term.'},
+    {id:'L3C-032', source:'smith-hints', ref:'sun lecture: SPF and broad spectrum', reason:'Her hints for the sun lecture include what SPF and "broad spectrum" mean.'},
+    {id:'L3C-033', source:'smith-hints', ref:'sun lecture: SPF and broad spectrum', reason:'Her hints for the sun lecture include what SPF and "broad spectrum" mean.'},
+    {id:'L3C-052', source:'smith-obj-sun', ref:'objective: differentiate sunblocks and sunscreens; also in her hints', reason:'An objective and her hints: tell the two kinds of sun protection apart.'},
+    {id:'L3C-044', source:'smith-hints', ref:'sun lecture: photosensitizing drugs', reason:'Her hints for the sun lecture include which drugs are photosensitizing.'},
+    {id:'L3C-039', source:'smith-hints', ref:'sun lecture: photosensitizing drugs', reason:'Her hints for the sun lecture include patients on photosensitizing drugs.'},
+    {id:'L3C-040', source:'smith-cue',   ref:'sun recording 16:32–17:12 (slides 13, 17)', reason:'Her own rule of thumb in the recording, with the reason she gave.'},
+
+    /* added after the independent review (2026-11-08) */
+    {id:'L1-100', source:'smith-hints', ref:'and Pathophys slide 3 objective', reason:'Her hints and her objectives ask for the etiology of each disease; this is how psoriasis is thought to begin.'},
+    {id:'L2-079', source:'smith-obj-pc', ref:'objective: list the drug interactions discussed in class; 10/30, T 419–421', reason:'An objective: list the drug interactions discussed in class. She named this one on 10/30.'},
+    {id:'L2-089', source:'smith-obj-pc', ref:'objective: list the drug interactions discussed in class; 10/30, T 470–472', reason:'An objective: list the drug interactions discussed in class. She named this one on 10/30.'},
+    {id:'L3-017', source:'smith-obj-pc', ref:'objective: list the drug interactions discussed in class; 11/03, T 68–70', reason:'An objective: list the drug interactions discussed in class. She named this one on 11/03.'},
+    {id:'L2-029', source:'smith-cue',   ref:'10/30, T 98–101 (slide 19)', reason:'She stressed this program and the reason for it on 10/30.'},
+    {id:'L3-053', source:'smith-cue',   ref:'11/03, T 244–247 (slide 61)', reason:'She was emphatic about this situation on 11/03 ("absolutely").'},
+    {id:'L3-102', source:'smith-hints', ref:'"explain why that MOA is good for treating the skin conditions"', reason:'Her hints: explain why the mechanism helps the condition it treats.'},
+    {id:'L3C-065', source:'smith-hints', ref:'sun lecture: products by their ingredients; Sun slide 6 objective', reason:'Her hints for the sun lecture: tell the products apart by their ingredients.'},
+
+    /* ---- Dr. Sikazwe, DPAW deck, assigned pages only (11/03, 11/04) ---- */
+    {id:'S3-009', source:'sik-room',   ref:'11/03, T 683–689 (p. 7)', reason:'He made this the chemical point of the drug and asked the room for household examples.'},
+    {id:'S3-016', source:'sik-room',   ref:'11/03, T 706–709 (p. 7)', reason:'He asked the room how many enzymes and which ones.'},
+    {id:'S3-021', source:'sik-poll',   ref:'Polleve-1, p. 9 (11/03)', reason:'His live poll in class, word for word.'},
+    {id:'S3-024', source:'sik-cue',    ref:'11/03, T 732–733 (p. 8)', reason:'He named "are these similar chemicals?" as a question form.'},
+    {id:'S3-032', source:'sik-cue',    ref:'11/03, T 814 (p. 12)', reason:'He said "know those limits".'},
+    {id:'S3-035', source:'sik-cue',    ref:'11/03, T 838–839; 11/04 Polleve-5 (p. 12)', reason:'He asked it in class on 11/03, polled it on 11/04 and said "A question could simply be" this.'},
+    {id:'S3-062', source:'sik-cue',    ref:'11/03, T 961–963 (p. 18)', reason:'"That\'s something to take home."'},
+    {id:'S3-064', source:'sik-cue',    ref:'11/03, T 966–967 (p. 18)', reason:'He said this is the only molecule he would mention with this chemical basis of action.'},
+    {id:'S3-067', source:'sik-poll',   ref:'Polleve-2, p. 19 (11/03)', reason:'His live poll in class (true or false), reframed to four options.'},
+    {id:'S3-077', source:'sik-cue',    ref:'11/03, T 1020–1021 (p. 20)', reason:'He limited the glucocorticoid SAR to a short list he wants you to know.'},
+    {id:'S3-083', source:'sik-cue',    ref:'11/03, T 1137–1139 (p. 23)', reason:'He said a question "might be just counting" these.'},
+    {id:'S3-093', source:'sik-cue',    ref:'11/03, T 1168–1170 (p. 25)', reason:'"Potency, remember that."'},
+    {id:'S3-099', source:'sik-cue',    ref:'11/03, T 1190 (p. 26)', reason:'"If you don\'t understand anything else ... I want you to pay attention to this."'},
+    {id:'S3-100', source:'sik-room',   ref:'11/04, T@824 (p. 26)', reason:'He asked the room this on 11/04, going back over p. 26.'},
+    {id:'S4-006', source:'sik-cue',    ref:'11/04, T@3530–4160 (p. 27); 11/03, T 604–605 (assigned reading, 2 points)', reason:'His take-home activity: a 2-point question on this pathway, from the vitamin D reading he assigned.'},
+    {id:'S4-011', source:'sik-cue',    ref:'11/04, T@3530–4160 (p. 27); 11/03, T 604–605 (assigned reading, 2 points)', reason:'His take-home activity: a 2-point question on this pathway, from the vitamin D reading he assigned.'},
+    {id:'S4-015', source:'sik-cue',    ref:'11/04 (p. 28)', reason:'His slide sets the two drugs side by side and he went over the one difference that matters.'},
+    {id:'S4-020', source:'sik-poll',   ref:'Polleve-3, p. 32 (11/04)', reason:'His live poll in class, word for word; "it could be a question just that simple".'},
+    {id:'S4-039', source:'sik-room',   ref:'11/04, T@12150–12254 (p. 33)', reason:'He asked the room how this ring can be described.'},
+    {id:'S4-023', source:'sik-room',   ref:'11/04, T@6942–7125 (p. 29)', reason:'He walked through this activation step and asked the room about the enzymes.'},
+    {id:'S4-025', source:'sik-cue',    ref:'11/04, T@7222–7330 (p. 29)', reason:'He called this "an important common feature that they need to have".'},
+    {id:'S4-031', source:'sik-room',   ref:'11/04, T@9220 (p. 30)', reason:'He put this comparison to the room.'},
+    {id:'S4-036', source:'sik-cue',    ref:'11/04, T@10851–11050 (p. 31)', reason:'He went through the SAR "blueprint" for this drug part by part.'},
+    {id:'S4-043', source:'sik-room',   ref:'11/04, T@13190–13550 (p. 33)', reason:'He asked the room what this combination would do.'},
+    {id:'S4-047', source:'sik-cue',    ref:'11/04, T@13908–14385 (p. 34)', reason:'He flagged this interaction as a take-home.'},
+    {id:'S4-056', source:'sik-room',   ref:'11/04, T@22090–22200 (p. 43)', reason:'He worked this out with the room.'},
+    {id:'S4-060', source:'sik-room',   ref:'11/04, T@20942–21110 (p. 43)', reason:'"So I would ask you, how many enzymes ..."'},
+    {id:'S4-083', source:'sik-room',   ref:'11/04, T@30883 (p. 52)', reason:'He asked the room about these drugs and summed up what they do.'},
+    {id:'S4-088', source:'sik-cue',    ref:'11/04, T@32560–32640 (p. 53)', reason:'He said to keep this "at the front of your mind" whenever you see this drug group.'},
+    {id:'S4-091', source:'sik-cue',    ref:'11/04, T@36837–36940 (pp. 53, 55)', reason:'He asked: "visually, can you identify tetracyclines and distinguish them from steroids?"'},
+    {id:'S4-094', source:'sik-room',   ref:'11/04, T@36600–36790 (p. 55)', reason:'He asked the room this about the other drugs of the class.'},
+    {id:'S4-098', source:'sik-cue',    ref:'11/04 (p. 61)', reason:'He stressed this point about the blockers on his slide.'},
+    {id:'S4-101', source:'sik-cue',    ref:'11/04 (p. 62)', reason:'"What you need to know about this one": he gave its key numbers.'},
+    {id:'S4-108', source:'sik-cue',    ref:'11/04 (p. 65)', reason:'He called this use "very important".'},
+  ],
+};

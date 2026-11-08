@@ -12,8 +12,8 @@
 - "glycerin" (T 448) → glyceride (Pathophys 33). L1-043 note.
 
 ## Missing material for Exam 1
-- Dr. Smith's sun-exposure recording with PCol slides 77-80 (psoralens), promised 11/03.
-- Dr. Sikazwe's list of slides to avoid, promised by Friday 11/06.
+- Dr. Smith's sun-exposure recording with PCol slides 77-80 (psoralens), promised 11/03: received 11/06 and in the bank (q6_L03c.js).
+- Dr. Sikazwe's list: received 11/06 as a list of assigned slides (7-9, 12, 15-22, 24-33, 42-54, 60-65, plus the Vit. D3 biosynthesis reading), not a list of slides to avoid. The list says what is assigned, not what is excluded, so the 23 questions taught only on unassigned slides stay in practice with lowYield (off exam papers) and a note. **To confirm with Louis:** remove them from practice altogether instead? Also to confirm: his numbers are read as the numbers printed on the slides (file page minus 1 from p. 23 on, because the file repeats slide 21); read as file pages, apremilast, the tetracyclines and bemotrizinol would fall outside the list (reviews/LOG.md, 2026-11-06).
 
 ## Kit
 - `scheduler_test.js` fails on this course because its scratch topic uses the skill ids `recall` and `calc`, which DEENT's taxonomy does not have; with those two ids added to a scratch copy of course.js, all 109 checks pass. A test-only kit fix is proposed; the DEENT taxonomy is not changed to suit the test.
@@ -79,3 +79,35 @@ Other mismatches noted, no item affected: deck slide 23 cites "FOYE Chapt. 28, p
 6. Drug chart vs deck (chart is a guide): chart chemical class "Peptides" for pimecrolimus and tacrolimus (and ruxolitinib/upadacitinib) vs deck "Macrolide or lactone" (slide 28) and Polleve-3 "Lactone" (slide 32). Keyed to the deck. Chart page 5 class column is offset one row (cyclosporine "Furanocoumarin", apremilast "Azole"); keyed to the deck (cyclic peptide/lactam slide 33; isoindoline slide 34).
 7. Vitamin D wavelength and enzymes: he said only "light is going to be involved" (T@4371); UVB (VitD L5), CYP2R1 (VitD L65–67), CYP27B1 (VitD L13–14, L67–68) and the pre-D3 isomerization (VitD L61–62) come from the assigned reading, which he made testable for this step. S4-014 carries a note that the band comes from the reading. The slide gives the last enzyme as "1-α-hydroxylase"; the reading calls CYP27B1 "the 1-hydroxylase". S4-011 keys "1-alpha-hydroxylase" (slide wording); no item uses a CYP name as the key except S4-009 (CYP2R1, reading only; the slide gives no enzyme for that arrow).
 8. Deck typo: slide 55 "Zn3+" in the chelation list (zinc is Zn2+). No item asks it.
+
+
+## Atlas: slide drawings that differ from the real drug (drawn as the real drug, noted on the tile)
+- Padimate O (DPAW slide 63) drawn with NH2; the drug has N(CH3)2.
+- Octisalate (DPAW slide 64) drawn as heptan-3-yl salicylate; the drug is 2-ethylhexyl salicylate.
+- Pimecrolimus (DPAW slide 28) Cl drawn hashed (trans to OCH3); slide 32 and the drug have them cis.
+- Hydrocortisone and clobetasol propionate on DPAW slide 25 carry drawing errors at C20/C21; slides 23-24 used.
+- "Benzoyl radical" on DPAW slide 47 is drawn as the benzoyloxy radical; drawn as the slide shows.
+Resolved 2026-11-06 (Louis's direction): both drawings, with Compare structures; lecture drawing primary where it is the only one, the correct lecture slide primary where the deck has one. Erythromycin (p.54) added after the verification pass.
+
+## Sun exposure
+- **Resolved 2026-11-07.** On 10/29 Dr. Smith said "I won't get to this section on sun protection and sun relief until Tuesday after your exam" (T 583, about the drug chart); the syllabus puts sun exposure in Lecture 3 (Exam 1). Her Exam 1 study hints (pasted by Louis into the session on 2026-11-07) list it under Exam 1: "Hi P2s, Here are some hints for studying for my material on Exam 1. ... From Sun Exposure lecture: Know the difference between sunscreens and sunblocks based on the products' ingredients; Be able to explain SPF and wide spectrum; Know some drugs that cause photosensitivity; Know what damage UV A and UV B cause". The Exam 1 tag stays; the "provisional" wording is removed from course.js, q6_L03c.js and CLAUDE.md. The sunburn-relief anesthetics on the drug chart (benzocaine, dibucaine, tetracaine, lidocaine) are not on her sun slides, so no question asks them.
+
+## Atlas items needing verification
+- 5beta-dihydrocortisol and urocortisol (DPAW p.26): drawn but not spoken; the 11/03 recording ends mid-sentence on this slide. Shown with a "Needs verification" badge and kept out of questions.
+- PubChem pass (2026-11-06): both structures match PubChem exactly (5beta-dihydrocortisol CID 164838, urocortisol CID 5864). The ChEMBL record formerly linked to 5beta-dihydrocortisol (CHEMBL1079111) is the 5-alpha epimer and was removed; ChEMBL has no record with its InChIKey. Their lecture status is still open.
+
+## DPAW citation numbers (2026-11-06)
+- The DPAW deck copy in Drive (f26-DEENT-DPAW-mc.pdf, Louis's GoodNotes copy) repeats slide 21 ("Topical Agents-5" on file pages 21 and 22). From printed slide 22 on, the file page is one higher than the printed slide number. 152 of 221 Sikazwe questions, the Atlas and the reference tables cite file pages. If the class deck has no repeated page, every DPAW citation from slide 22 on should drop by one. Waiting for Louis to confirm.
+- Evidence checked 2026-11-06 (plan only; nothing renumbered):
+  - Drive search (titles with DPAW, Sikazwe, Derm, Med Chem, f26; full text "crisaborole", "benzoxaborole", "Polleve"; slide files modified since 10/15): one copy of the deck exists, `f26-DEENT-DPAW-mc.pdf` (1M4nG4-1FCrh4VDQrJYanEvnZYwUDI64w, Goodnotes Slides/Exam 1 folder, 7,935,402 bytes, modified 2026-11-05 05:35 UTC). The Sikazwe folder holds only the vitamin D reading. No class original (Canvas download, PPTX) was found. For Dr. Smith's PCol deck both a class copy (Fall 2026/DEENT) and Louis's annotated copy exist; for DPAW only the GoodNotes copy does.
+  - The local copy in `src/decks/` is 7,860,578 bytes (sha256 bf495e5e…), so it differs in size from the Drive file now; not re-downloaded in this session.
+  - Printed slide numbers read from every page footer: file pages 1-21 print 1-21; page 22 prints 21 again; pages 23-59 print 22-58; page 60 ("Protection/Treatments") prints 51, where 59 would follow; pages 61-71 print 60-70. Table: session scratchpad `dpaw_page_table.tsv`.
+  - Pages 21 and 22: same title ("Topical Agents-5"), same bullet text, same printed number 21 and the same steroid skeleton; they differ only in red handwritten marks (page 21: C15/C16 notes; page 22: ring circles and carbon numbers 1, 10, 11, 17, 18, 19, 20). Rendered at 40 dpi, 1,188 of 160,200 pixels differ, all inside the drawing area. Whether the class deck has one page 21 or two cannot be told from this copy.
+  - Further hints, not proof: page 70 is titled "Retinoids (slides 46-49)" while those slides print 47-50 here; on 11/04 he said "slides 47, correct this, 47 through 50" (11/04 transcript).
+  - Citations of DPAW file page 22 or later (regex count, numbers inside ranges counted at both ends): q5_L04.js 769, q4_L03b.js 148, atlas_data.json 340, reference.js 57, tell.js 45, links.js 3 (section labels), atlas_ui.js 4 (format examples in a code comment, not citations); total 1,366. Lines that already use printed numbers (the 11/06 assigned-pages notes and Atlas tooltip) are left out. atlas.js is generated from atlas_data.json. Per-occurrence list: session scratchpad `dpaw_renumber_plan.json`.
+  - Missing: the original class DPAW deck (Canvas copy). With it, a page-by-page comparison settles whether page 22 is in the class deck.
+
+## Dr. Smith's Exam 1 hints (pasted by Louis 2026-11-07): what the bank cannot do
+- Fill-in-the-blank: "a few fill in the blanks. The fill in the blanks focus on drug mechanisms. Know what the drugs target." The core has no typed text-answer item, so target recall is practised with 8 matching items (L3-119 to L3-125, L3C-067) and the Reference list "Drug targets: write it first, then check". Matching items stay off practice papers (no `typed` on exam1). A typed short-answer item type would be a kit change.
+- Drugs on the chart with no target on her slides: spironolactone (class only, Pathophys 37; Dr. Sikazwe's DPAW 53 gives the mechanism), petrolatum, zinc oxide (Desitin), ketoconazole, the sunburn-relief anesthetics, bemotrizinol; the lice/scabies page is not in the Exam 1 lectures. No Smith target question is written for them.
+- Specific topical steroid products: she deferred them to medicinal chemistry (10/29 T 585–586); only the class target (glucocorticoid receptor) is in the targets list.

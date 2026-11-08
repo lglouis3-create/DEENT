@@ -19,48 +19,48 @@
 const D2 = 'Lecture 2 (Skin-PCol-Students-2026.pdf)';
 
 TOPICS.push(
- {id:'l2-tret', name:'Topical retinoids', prof:'Smith',
-  cite:'Lecture 2 (10/30) — Skin-PCol-Students-2026.pdf, slides 16–18',
+ {id:'l2-tret', name:'Nuclear receptor binders: topical retinoids', prof:'Smith',
+  cite:'slides 16–18 · taught 10/30 (Lecture 2)',
   subs:[
    {id:'couns', name:'Counseling: onset, amount, application', cite:'slide 16'},
    {id:'ae',    name:'Side effects and sun protection', cite:'slide 16'},
    {id:'prod',  name:'Tretinoin, adapalene, tazarotene', cite:'slides 17–18'}]},
- {id:'l2-oret', name:'Oral retinoids', prof:'Smith',
-  cite:'Lecture 2 (10/30) — Skin-PCol-Students-2026.pdf, slides 19–20',
+ {id:'l2-oret', name:'Nuclear receptor binders: oral retinoids', prof:'Smith',
+  cite:'slides 19–20 · taught 10/30 (Lecture 2)',
   subs:[
    {id:'iso', name:'Isotretinoin', cite:'slide 19'},
    {id:'aci', name:'Acitretin', cite:'slide 20'}]},
- {id:'l2-vitd', name:'Vitamin D analog: calcipotriene', prof:'Smith',
-  cite:'Lecture 2 (10/30) — Skin-PCol-Students-2026.pdf, slides 21–22',
+ {id:'l2-vitd', name:'Nuclear receptor binders: vitamin D analog (calcipotriene)', prof:'Smith',
+  cite:'slides 21–22 · taught 10/30 (Lecture 2)',
   subs:[
    {id:'mech',  name:'Mechanism and pharmacological effect', cite:'slide 21'},
    {id:'ae',    name:'Topical and systemic side effects', cite:'slide 22'},
    {id:'recap', name:'The three nuclear receptor binding classes', cite:'slides 21–22'}]},
  {id:'l2-tcell', name:'Calcineurin inhibitors: T-cell signals and mechanism', prof:'Smith',
-  cite:'Lecture 2 (10/30) — Skin-PCol-Students-2026.pdf, slides 23–26',
+  cite:'slides 23–26 · taught 10/30 (Lecture 2)',
   subs:[
    {id:'intro', name:'Uses and general action', cite:'slide 24'},
    {id:'sig',   name:'Signals 1, 2 and 3', cite:'slide 25'},
    {id:'mech',  name:'Calcineurin, NFAT and the immunophilins', cite:'slide 26'}]},
- {id:'l2-cni', name:'Calcineurin inhibitor products', prof:'Smith',
-  cite:'Lecture 2 (10/30) — Skin-PCol-Students-2026.pdf, slides 27–30',
+ {id:'l2-cni', name:'Calcineurin inhibitors: topical and oral products', prof:'Smith',
+  cite:'slides 27–30 · taught 10/30 (Lecture 2)',
   subs:[
    {id:'top',  name:'Topical pimecrolimus and tacrolimus', cite:'slides 27–28'},
    {id:'oral', name:'Oral cyclosporine and tacrolimus', cite:'slides 29–30'}]},
  {id:'l2-pde', name:'PDE-4 inhibitors', prof:'Smith',
-  cite:'Lecture 2 (10/30) — Skin-PCol-Students-2026.pdf, slides 31–34',
+  cite:'slides 31–34 · taught 10/30 (Lecture 2)',
   subs:[
    {id:'mech', name:'cAMP and inflammatory cells', cite:'slide 32'},
    {id:'cris', name:'Crisaborole', cite:'slide 33'},
    {id:'apr',  name:'Apremilast', cite:'slide 34'}]},
  {id:'l2-ker', name:'Keratolytics', prof:'Smith',
-  cite:'Lecture 2 (10/30) — Skin-PCol-Students-2026.pdf, slides 35–40',
+  cite:'slides 35–40 · taught 10/30 (Lecture 2)',
   subs:[
    {id:'bpo', name:'Benzoyl peroxide', cite:'slides 35–37'},
    {id:'sul', name:'Sulfur', cite:'slide 38'},
    {id:'sal', name:'Salicylic acid', cite:'slides 39–40'}]},
- {id:'l2-abx', name:'Acne antibiotics: the ribosome', prof:'Smith',
-  cite:'Lecture 2 (10/30) — Skin-PCol-Students-2026.pdf, slides 41–42',
+ {id:'l2-abx', name:'Antibiotics/antimicrobials: the bacterial ribosome', prof:'Smith',
+  cite:'slides 41–42 · taught 10/30 (Lecture 2)',
   subs:[
    {id:'ribo', name:'Binding sites on the bacterial ribosome', cite:'slides 41–42'}]}
 );
@@ -1056,11 +1056,11 @@ QUESTIONS.push(
  tags:['interaction'], source:'both',
  stem:'Which drugs should be avoided with apremilast, and why?',
  options:[
-  {t:'Strong CYP3A4 inducers; they cut its effect', correct:true, why:'Slide 34: don\'t use with strong CYP3A4 inducers; (T 470–472) "if you want the drugs to be effective, you don\'t want to have patients also on 3A4 enzyme inducers".'},
-  {t:'Strong CYP3A4 inducers; they raise its toxicity', correct:false, why:'Inducers speed its metabolism and reduce its effect (T 470–472).'},
+  {t:'CYP3A4 inducers; they cut its effect', correct:true, why:'Slide 34 (handwritten note): know the drug interaction with inducers; (T 470–472) "if you want the drugs to be effective, you don\'t want to have patients also on 3A4 enzyme inducers".'},
+  {t:'CYP3A4 inducers; they raise its toxicity', correct:false, why:'Inducers speed its metabolism and reduce its effect (T 470–472).'},
   {t:'Topical steroids; they block PDE4', correct:false, why:'Not an interaction given; steroids are nuclear receptor binders (T 197–200).'},
   {t:'Ethanol; it forms a toxic metabolite', correct:false, why:'The ethanol rule belongs to acitretin (slide 20).'}],
- teach:'Apremilast is metabolized by CYP3A4; strong inducers lower its levels and its efficacy (slide 34; T 470–472).',
+ teach:'Apremilast is metabolized by CYP3A4; CYP3A4 inducers lower its levels and its efficacy (slide 34; T 470–472).',
  cite:D2+' slide 34; T 470–472'},
 
 /* ---- Keratolytics -------------------------------------------------------- */
@@ -1343,5 +1343,38 @@ QUESTIONS.push(
   {t:'Both bind 30S at different steps', correct:false, why:'Macrolides bind 50S (slide 42).'},
   {t:'Both act on the cell wall', correct:false, why:'Both act on the ribosome (slide 42).'}],
  teach:'Tetracyclines: 30S, block entry of the charged tRNA. Chloramphenicol and macrolides: 50S (slide 42; T 600–607).',
- cite:D2+' slide 42; T 600–607'}
+ cite:D2+' slide 42; T 600–607'},
+/* ---- Added 2026-11-07 for Dr. Smith's Exam 1 hints (drug targets, boxed warning). */
+{id:'L2-115', skill:'mech', prof:'Smith', tier:'new', topic:'l2-pde', sub:'cris', concept:'crisaborole-target',
+ tags:['mechanism','target'], source:'both',
+ stem:'Which enzyme does crisaborole inhibit in atopic dermatitis?',
+ options:[
+  {t:'Phosphodiesterase 4', correct:true, why:'Slides 32–33: crisaborole is a nonsteroidal anti-inflammatory PDE-4 inhibitor; (T 430–433, 448–450) "anti-inflammatory by inhibiting the PDE4".'},
+  {t:'Calcineurin', correct:false, why:'Calcineurin is the target of pimecrolimus, tacrolimus and cyclosporine (slides 24–27).'},
+  {t:'Janus kinase', correct:false, why:'JAK is inhibited by tofacitinib, ruxolitinib and upadacitinib (slide 76).'},
+  {t:'Dihydrofolate reductase', correct:false, why:'DHFR is inhibited by methotrexate and trimethoprim (slides 48, 59).'}],
+ teach:'With PDE4 blocked, cAMP is not broken down to 5\'-AMP; the higher cAMP inhibits inflammatory cells. PDE4 is the predominant isoform in mast cells, eosinophils, neutrophils, T lymphocytes and macrophages, which is why it suits an inflammatory skin disease (slide 32; T 437–448).',
+ cite:D2+' slides 24–27, 32–33, 48, 59, 76; T 430–450'},
+
+{id:'L2-116', skill:'mech', prof:'Smith', tier:'new', topic:'l2-cni', sub:'top', concept:'pimecrolimus-target',
+ tags:['mechanism','target'], source:'both',
+ stem:'Which enzyme does topical pimecrolimus inhibit in atopic dermatitis?',
+ options:[
+  {t:'Calcineurin', correct:true, why:'Slides 23–27: pimecrolimus is a topical calcineurin inhibitor; blocking calcineurin inhibits activation of T cells and mast cells and the production of proinflammatory cytokines (T 360–365).'},
+  {t:'Phosphodiesterase 4', correct:false, why:'PDE4 is the target of crisaborole and apremilast (slides 32–34).'},
+  {t:'Janus kinase', correct:false, why:'JAK is the target of ruxolitinib, which the drug chart also lists for AD (PCol slide 76).'},
+  {t:'Dihydrofolate reductase', correct:false, why:'DHFR is the target of methotrexate (PCol slide 59).'}],
+ teach:'Calcineurin normally removes the phosphate from NFAT so IL-2 can be transcribed; with it blocked, IL-2 falls, fewer T cells proliferate, mast cells are less active and the itch of AD eases within the first few days (slides 26–27; T 322–328, 360–367).',
+ cite:D2+' slides 23–27, 32–34, 59, 76; T 322–328, 360–367'},
+
+{id:'L2-117', skill:'adverse', prof:'Smith', tier:'new', topic:'l2-cni', sub:'oral', concept:'oral-cni-boxed-content',
+ tags:['adverse','recall'], source:'both',
+ stem:'Which risks make up the black box warning for oral cyclosporine?',
+ options:[
+  {t:'Malignancy and serious infection', correct:true, why:'Slide 30, black box warning: increased risk of lymphoma and other malignancies, particularly of the skin, and increased susceptibility to bacterial, viral, fungal and protozoal infections (T 396–398).'},
+  {t:'Nephrotoxicity and hypertension', correct:false, why:'Slide 30 lists these as side effects of both oral calcineurin inhibitors, under the boxed warning but not in it.'},
+  {t:'Gingival hyperplasia and neuropathy', correct:false, why:'These are the drug-specific side effects: gingival hyperplasia for cyclosporine, neuropathies for tacrolimus (slide 30).'},
+  {t:'Hypercalcemia and hypercalciuria', correct:false, why:'These are systemic effects of topical calcipotriene above 100 g a week (slide 22).'}],
+ teach:'"They have a black box warning. You\'ve got an increased risk of lymphoma and other malignancies, and you also have an increased susceptibility to infections" (T 397–398). Both follow from suppressing the immune system, which normally fights infection and identifies cancer cells (T 399–403).',
+ cite:D2+' slides 22, 30; T 396–403'}
 );

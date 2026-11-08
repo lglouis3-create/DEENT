@@ -1,0 +1,34 @@
+{
+  "_about": "Course metadata for the exam-drill-kit coordinator and dashboard (kit-owned, not yet built as of 2026-11-06). Not read by the student site. Every date below is from the syllabus named in `source`; update this file when the faculty change a date.",
+  "course": "PHAR 4346 Pharmacotherapeutics III: DEENT",
+  "repo": "lglouis3-create/DEENT",
+  "site": "https://lglouis3-create.github.io/DEENT/",
+  "term": "Fall 2026",
+  "kit_core_pin": "25c643d",
+  "lifecycle": "active",
+  "source": {
+    "file": "SyllabusF26---PHAR-4346---PT-III-DEENT.pdf",
+    "drive_id": "1ixbdMSkjFTeZiMq46qzyOHgm0GFm4tuz",
+    "section": "Tentative exam dates table (\"Tentative exam dates are listed on the course schedule below but are subject to change\") and the grading table",
+    "read": "2026-11-06"
+  },
+  "exams": [
+    {"id": "exam1", "name": "Exam 1", "date": "2026-11-09", "time": "9:00-10:30 AM", "questions": 50,
+     "coverage": "Lectures 1-4", "weight_pct": 20, "review": "2026-11-13 1:00-1:30 PM",
+     "published_practice": true, "status": "drill published for Lectures 1-4 (live build 2026-11-05; sun-exposure lecture and Atlas waiting on the working branch for approval)"},
+    {"id": "exam2", "name": "Exam 2", "date": "2026-11-16", "time": "9:00-10:30 AM", "questions": 50,
+     "coverage": "Lectures 1-4 (30%), Lectures 5-8 (70%)", "weight_pct": 20, "review": "2026-11-20 1:00-1:30 PM",
+     "published_practice": false, "status": "no material ingested; not shown to students"},
+    {"id": "exam3", "name": "Exam 3", "date": "2026-11-23", "time": "9:00-10:30 AM", "questions": 50,
+     "coverage": "Lectures 9-13", "weight_pct": 20, "review": "2026-12-04 1:00-1:30 PM",
+     "published_practice": false, "status": "no material ingested; not shown to students"},
+    {"id": "final", "name": "Final Exam 4 (cumulative)", "date": "2026-12-07", "time": "9:00-10:30 AM", "questions": 60,
+     "coverage": "Lectures 14-18 (50%), prior material (50%)", "weight_pct": 30, "review": "by appointment only",
+     "published_practice": false, "status": "no material ingested; not shown to students"}
+  ],
+  "completion_rule": "The course is complete after the final on 2026-12-07, not when Exam 1 passes. Exam 2 and the final are cumulative, so Exam 1 material stays published.",
+  "open_items": [
+    "Dr. Sikazwe's list of slides to avoid (promised by Friday 11/06); not in Drive as of the check on 2026-11-06; reminder set for 2026-11-07 12:00 Central.",
+    "Sun-exposure lecture on Exam 1: syllabus says Lecture 3; Dr. Smith said on 10/29 she would cover it after the exam (reviews/OPEN_QUESTIONS.md)."
+  ]
+}

@@ -6,6 +6,13 @@
    id, title, short   names shown in the header and the page title
    output             file name of the built page (the site serves it under this name)
    atlas              true only when atlas.js carries drawn structures for an Atlas tab
+   atlasTitle, atlasNoun, atlasExampleLabel
+                      optional, the Atlas's own words: its heading (default
+                      'Functional group atlas'); what one tile is, a word
+                      ('structure', plural + "s") or [one, many] (default
+                      ['group', 'groups']), used in its intro, search box and
+                      count; the label before a tile's `e` line (default 'e.g.';
+                      '' drops it, for `e` lines that are facts, not examples)
    ns                 storage namespace: keep it the same for the whole course so
                       progress carries from Exam 1 through the final
    oldCachePrefix     optional, only for a drill that had its own service worker
@@ -110,7 +117,8 @@ const COURSE = {
   short: 'PHAR 4346 DEENT',
   ns: 'phar4346-deent-drill',
   output: 'PHAR4346_DEENT_Drill.html',
-  atlas: false,                          // switched on when Dr. Sikazwe's L03b is ingested (Louis, 2026-11-05)
+  atlas: true,                           // Dr. Sikazwe's structures (gen_atlas.py from atlas_data.json; Louis, 2026-11-06)
+  atlasTitle: 'Structure atlas', atlasNoun: 'structure',   // the tiles are drug structures, not functional groups (core 9711ce2 names them)
   professors: ['Smith', 'Sikazwe', 'Patel', 'Lam'],
 
   // Lecture numbers follow the syllabus schedule (SyllabusF26-PHAR4346, pp. 9-15).
@@ -125,6 +133,12 @@ const COURSE = {
     {id:'L01b', deck:'Skin-PCol-Students-2026.pdf',
      label:'Lectures 1–3: Dermatitis, psoriasis and acne pharmacology (Smith, from 10/29)',
      prof:'Smith', exam:1, module:'Exam 1: Lectures 1–4'},
+    // Exam 1: the syllabus puts sun exposure in Lecture 3, and Dr. Smith's Exam 1 study
+    // hints (pasted by Louis 2026-11-07) list "From Sun Exposure lecture" among the Exam 1
+    // material. This settles the 10/29 remark (T 583); see reviews/OPEN_QUESTIONS.md.
+    {id:'L03c', deck:'DEENT_Sun_Exposure_2026.pdf',
+     label:'Lecture 3: Psoralens and sun protection (Smith, recorded after 11/03)',
+     prof:'Smith', exam:1, module:'Exam 1: Lectures 1–4'},
     {id:'L03b', deck:'f26-DEENT-DPAW-mc.pdf',
      label:'Lectures 3–4: Dermatitis, psoriasis and acne medicinal chemistry (Sikazwe, 11/03–11/04)',
      prof:'Sikazwe', exam:1, module:'Exam 1: Lectures 1–4'},
@@ -133,10 +147,23 @@ const COURSE = {
   exams: [
     {id:'exam1', name:'Exam 1', date:'Mon 11/09, 9:00–10:30 AM', when:'2026-11-09T09:00',
      questions:50, minutes:90, sata:null,
-     blurb:'Practice coverage of Lectures 1–4 (Smith 10/29, 10/30, 11/03; Sikazwe 11/03, 11/04). The faculty have not announced a split by professor, so this paper is unweighted. Not yet in the bank: Dr. Smith\'s sun-exposure recording.',
+     // sata:null draws no select-all item onto a practice paper (views.js EXAM_SATA = sata || 0).
+     // No professor has given a select-all count for Exam 1; the syllabus (p. 6) lists
+     // "multiple-choice, select-all, short-answer, true/false, or matching" as possible
+     // formats with no split (Louis, 2026-11-06: no official count is invented). The blurb
+     // says what the practice paper draws and that the format split is not announced.
+     // Dr. Smith's own format (her Exam 1 hints, pasted by Louis 2026-11-07): "mostly
+     // multiple choice questions, but a few fill in the blanks. The fill in the blanks
+     // focus on drug mechanisms. ... There are no short essay questions." Dr. Sikazwe has
+     // given no format statement, so the blurb makes none for him.
+     blurb:'Practice coverage of Lectures 1–4 (Smith 10/29, 10/30, 11/03 and her recorded sun-exposure and psoralen lecture; Sikazwe 11/03, 11/04). The faculty have not announced a split by professor, so this paper is unweighted. Dr. Smith says her questions are mostly multiple choice with a few fill-in-the-blanks on drug mechanisms, and no short essays. The syllabus lists multiple-choice, select-all, short-answer, true/false and matching as possible formats and gives no count of each. These practice papers draw single-answer questions only; the select-all and drug-target matching questions are in the topic drills, and Reference has a drug-target list to write out before revealing',
+     // `unassigned: undefined` keeps a question marked unassigned:true out of both pools:
+     // the 23 on pages outside Dr. Sikazwe's assigned pages for Exam 1 (his list of
+     // 11/06; topic 'sk-beyond' in q5_L04.js). A pool filter is what the paper, the pool
+     // cards on Weak spots and the exam-date scheduling read (shell.html poolFilter).
      pools:[
-       {key:'smith',   name:'Dr. Smith (pharmacology)',      marks:null, filter:{exam:1, prof:'Smith'}},
-       {key:'sikazwe', name:'Dr. Sikazwe (medicinal chemistry)', marks:null, filter:{exam:1, prof:'Sikazwe'}},
+       {key:'smith',   name:'Dr. Smith (pharmacology)',      marks:null, filter:{exam:1, prof:'Smith', unassigned:undefined}},
+       {key:'sikazwe', name:'Dr. Sikazwe (medicinal chemistry)', marks:null, filter:{exam:1, prof:'Sikazwe', unassigned:undefined}},
      ]},
   ],
   activeExam: 'exam1',
@@ -161,13 +188,27 @@ const COURSE = {
   scheduler: {model:'concept'},
 
   files: ['atlas.js', 'diagrams.js',
-          'q1_topics.js', 'q2_L02.js', 'q3_L03a.js', 'q4_L03b.js', 'q5_L04.js'],
+          'q1_topics.js', 'q2_L02.js', 'q3_L03a.js', 'q4_L03b.js', 'q5_L04.js', 'q6_L03c.js',
+          // Drug list tab (temporary course-level presentation, to be replaced by the kit's
+          // Drug List feature): its data, then the tab itself (Louis, 2026-11-08)
+          'druglist_data.js', 'druglist_ui.js',
+          // "Likely on the exam" stars (course-level, Louis 2026-11-08): data, then presentation
+          'likely_data.js', 'likely_ui.js',
+          // Narration player (course-level, Louis 2026-11-08, path B of reviews/NARRATION_PLAN.md
+          // 7.1; temporary until a kit module): walkthrough scripts, spoken whys and the recorded-
+          // clip manifest, then the player (walk_ui.js) and "Hear the why" (why_ui.js). When node
+          // evaluates this file (build.py, the checks) a data file not yet written is left out, so
+          // the build does not stop on it; the players draw nothing for data that is not there.
+          ...['walk_pp.js', 'walk_pc.js', 'walk_sun.js', 'walk_mc.js', 'why_data.js', 'audio_manifest.js']
+            .filter(f => { try { return typeof require !== 'function' || require('fs').existsSync(f); } catch (e) { return true; } }),
+          'walk_ui.js', 'why_ui.js'],
 
   tools: {citeAliases:{'skin-pathophys-students-2026.pdf':'Skin-Pathophys-Students-2026.pdf',
                        'skin-pcol-students-2026.pdf':'Skin-PCol-Students-2026.pdf',
-                       'f26-deent-dpaw-mc.pdf':'f26-DEENT-DPAW-mc.pdf'},
+                       'f26-deent-dpaw-mc.pdf':'f26-DEENT-DPAW-mc.pdf',
+                       'deent_sun_exposure_2026.pdf':'DEENT_Sun_Exposure_2026.pdf'},
           citeLectures:{}, citeBareMap:{},
           explainTerms:[], harvestMasks:[]},
 
-  kit: {core: '25c643d'},
+  kit: {core: '08be7a2'},
 };
