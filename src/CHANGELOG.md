@@ -25,7 +25,10 @@ Every update adds its bullets here in the same commit that makes the change.
 - Chemical class cells that are blank, one row off (p. 5) or in conflict with a slide are shown, not asked.
 - About this list: how many drugs each kind covers and why the rest have no question.
 - Recall's example now names a drug outside the current list, so it gives no cue.
-- Methoxsalen's psoriasis indication (DPAW 14, outside the assigned pages) is optional: Quiz me and Recall chip.
+- Methoxsalen's psoriasis indication is Exam 1 practice (Dr. Smith, sun recording); DPAW 14 is an extra source.
+- The antibiotic class is now named "Antibiotics" and is never offered against the antifungal-active drugs.
+- Brand questions never offer a drug that shares the brand (Clearasil, Fostex, Solarcaine, the Oxy products).
+- Zinc oxide has no indication question: no other condition is safely false for a skin protectant.
 - Topical steroid indications: only options the slides make false (acne, sun protection), with the reason after.
 - Triamcinolone has no indication question: acne is not safely false for it (About this list says why).
 

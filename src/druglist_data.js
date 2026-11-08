@@ -61,7 +61,7 @@ const DRUGLIST = (() => {
     il4r:      'IL-4R / IL-13 receptor antagonist',
     jak:       'JAK inhibitors',
     kerat:     'Keratolytics',
-    abx:       'Antibiotics / antimicrobials',
+    abx:       'Antibiotics',
     nrb:       'Nuclear receptor binders (retinoids, vitamin D analog)',
     antiandr:  'Antiandrogen',
     cytotox:   'Cytotoxic agents',
@@ -115,11 +115,6 @@ const DRUGLIST = (() => {
   };
   const PHOTO_RET = S('Topical retinoids may cause photosensitivity', 'PCol 16');
   const SIK_UNASSIGNED = 'Dr. Sikazwe\'s slide for this drug is outside his assigned pages for Exam 1 (list of 11/06).';
-  /* A statement from a page outside Dr. Sikazwe's assigned Exam 1 pages that would
-     key a question carries {outside: true}: such a question is optional practice,
-     never in the default Quiz me / Recall sets, and is counted apart from the
-     Exam 1 coverage (Louis, 2026-11-08). */
-  const OUTSIDE = 'Optional: outside Dr. Sikazwe\'s assigned Exam 1 pages';
   const STEROID_CLASS_NOTE = S('Dr. Smith teaches the class and its mechanism; specific steroid products are Dr. Sikazwe\'s material ("a lot of med chem")', '10/29 T 585–586');
 
   const D = [
@@ -411,7 +406,9 @@ const DRUGLIST = (() => {
      photo: S('Mild photosensitivity', 'PCol 22'), atlas: 'calcipotriene', q: 'calcipotriene'},
     {id: 'methoxsalen', name: 'Methoxsalen', alt: ['8-MOP', '8-methoxypsoralen'], brands: ['Oxsoralen-Ultra', 'Uvadex'], page: 5, cls: 'psoralen', dz: ['pso'], rx: 'Rx',
      status: 'taught', chartClass: 'Psoralen', chartUse: null,
-     use: [S('PUVA: a psoralen combined with UVA light', 'Sun 3'), Object.assign(K(OUTSIDE + ': psoriasis pharmacotherapy, topical agents: "Psoralen (Topical/Oral)"', 'DPAW 14'), {outside: true})],
+     use: [S('PUVA: a psoralen combined with UVA light', 'Sun 3'),
+       S('Psoriasis: "the psoralens like methoxsalen are used ... to treat ... psoriasis" (antiproliferative: cells can no longer divide)', 'Sun 3; audio 00:59–01:10'),
+       K('Also on Dr. Sikazwe\'s psoriasis pharmacotherapy list, topical agents: "Psoralen (Topical/Oral)" (DPAW 14 is outside his assigned pages for Exam 1, list of 11/06)', 'DPAW 14')],
      tgt: 'tgt-methoxsalen', why: S('The phototoxic reaction is antiproliferative, immunosuppressive and anti-inflammatory: normalizes keratinocytes, reorganizes cutaneous blood vessels, is cytotoxic to T cells', 'Sun 3'),
      ae: [S('Pruritus, nausea, erythema and blistering, hyperpigmentation, skin aging, skin cancer, cataracts', 'Sun 4')],
      photo: S('A photosensitizing compound by design (PUVA)', 'Sun 3'), atlas: 'methoxsalen', q: 'methoxsalen|psoralen|PUVA|8-MOP'},
@@ -579,7 +576,10 @@ const DRUGLIST = (() => {
     // a glucocorticoid, an androgen (spironolactone) and a retinoid all bind nuclear receptors;
     // ketoconazole is on Dr. Sikazwe's antiandrogen slide (DPAW 53); psoralens are cytotoxic to
     // T cells (Sun 3); tars are also described as keratolytic
-    ['nrb', 'steroid'], ['nrb', 'antiandr'], ['antiandr', 'azole'], ['psoralen', 'cytotox'], ['kerat', 'cytotox']];
+    ['nrb', 'steroid'], ['nrb', 'antiandr'], ['antiandr', 'azole'], ['psoralen', 'cytotox'], ['kerat', 'cytotox'],
+    // antifungal activity: ketoconazole (azole); selenium sulfide and zinc pyrithione, which "have
+    // cytostatic and antifungal activity" (PCol): never "Antibiotics" for them, nor them for it
+    ['abx', 'azole'], ['abx', 'cytotox']];
   // drug classes whose Reference "target" is not a molecular target (a sunscreen
   // family, a chart class, "no drug target", a mechanism the slide calls unknown)
   const NO_TARGET_Q = new Set(['sunscreen', 'sunblock', 'anesth', 'emollient', 'azole', 'antiandr', 'cytotox', 'kerat']);
@@ -593,7 +593,12 @@ const DRUGLIST = (() => {
   // chart (AD only); held out (reviews/OPEN_QUESTIONS.md, Lecture 3 #2), so never a wrong option
   // petrolatum and atopic dermatitis: emollients are a basic atopic dermatitis measure in practice
   // (no course slide says so; the chart lists petrolatum on its psoriasis page), so never a wrong option
-  const NOT_WRONG = {cyclosporine: ['ad'], methotrexate: ['ad'], coaltar: ['ad'], upadacitinib: ['pso'], zincoxide: ['pso'], dupilumab: ['pso'], petrolatum: ['ad']};
+  const NOT_WRONG = {cyclosporine: ['ad'], methotrexate: ['ad'], coaltar: ['ad'], upadacitinib: ['pso'], zincoxide: ['pso', 'ad', 'burn', 'acne'], dupilumab: ['pso'], petrolatum: ['ad'],
+    // zinc oxide: a skin protectant (the chart's shifted p. 5 cell "diaper rash, minor skin irritations"),
+    // so atopic dermatitis and sunburn are not safely false; acne neither (sulfur + zinc oxide acne
+    // mixtures, DPAW 46): no indication question is left for it (its reason is in About this list);
+    // methoxsalen: PUVA is used for severe atopic dermatitis in practice
+    methoxsalen: ['ad']};
   /* Topical steroids: the chart's indication cell is "Psoriasis, Atopic dermatitis, numerous
      others" (p. 6). A condition a topical steroid could plausibly treat is not a sound wrong
      option, so these are never offered as wrong for a steroid (STEROID_MAYBE, with the
@@ -631,7 +636,7 @@ const DRUGLIST = (() => {
   const KIND_HEAD = Object.assign({}, KINDS, {clsRev: 'Which drug: class', useRev: 'Which drug: indication', potency: 'Potency class', brand: 'Brand name (practice)'});
   const groupOf = d => d.cls === 'abx' ? 'abx:' + norm(d.chartClass || '') : d.cls;
   /* The keyed values of one field of one drug: [{t, src: [{t, by, cite}]}]. */
-  function quizFacts(d, T, kind, o){
+  function quizFacts(d, T, kind){
     if (kind === 'target') {
       if (NO_TARGET_Q.has(d.cls) || NO_TARGET_ID.has(d.id)) return [];
       const parts = [d.tgt, d.tgt2].filter(Boolean).flatMap(id => (T[id] || {parts: []}).parts)
@@ -649,7 +654,7 @@ const DRUGLIST = (() => {
     if (kind === 'use') {
       const texts = [];
       if (d.chartUse) texts.push({t: d.chartUse, by: 'chart', cite: 'Chart p. ' + (d.pages ? d.pages.join(', ') : d.page)});
-      (d.use || []).filter(u => !u.outside || (o && o.outside)).forEach(u => texts.push(u));
+      (d.use || []).forEach(u => texts.push(u));
       return Object.keys(DISEASES).filter(z => d.dz.includes(z)).map(z => ({t: DISEASES[z], z,
         src: texts.filter(s => DZ_RE[z].test(norm(s.t)))})).filter(v => v.src.length);
     }
@@ -666,15 +671,12 @@ const DRUGLIST = (() => {
   }
   const conflicts = (a, b) => CLASS_CONFLICT.some(([x, y]) => (x === a && y === b) || (x === b && y === a));
   /* One question, or null. rng: () => [0, 1). */
-  function makeQuestion(d, T, kind, rng, o){
+  function makeQuestion(d, T, kind, rng){
     rng = rng || Math.random;
-    const q = EXTRA[kind] ? EXTRA[kind](d, T, rng, o) : fieldQuestion(d, T, kind, rng, o);
-    // a question keyed only by a statement outside the assigned pages is optional practice
-    if (q && q.src.length && q.src.every(s => s.outside)) q.optional = OUTSIDE;
-    return q;
+    return EXTRA[kind] ? EXTRA[kind](d, T, rng) : fieldQuestion(d, T, kind, rng);
   }
-  function fieldQuestion(d, T, kind, rng, o){
-    const keys = quizFacts(d, T, kind, o);
+  function fieldQuestion(d, T, kind, rng){
+    const keys = quizFacts(d, T, kind);
     if (!keys.length) return null;
     const truth = trueValues(d, T, kind).concat(keys.map(k => k.t));
     // an indication that a drug of the same class has is not offered as wrong
@@ -693,9 +695,10 @@ const DRUGLIST = (() => {
     for (let i = pool.length - 1; i > 0; i--) { const j = Math.floor(rng() * (i + 1)); [pool[i], pool[j]] = [pool[j], pool[i]]; }
     const wrong = [];
     for (const p of pool) { if (seenFam.has(p.f)) continue; seenFam.add(p.f); wrong.push(p.t); if (wrong.length === 3) break; }
-    // a steroid's indication: only the options false by the sources remain (two at most), so 3 options
+    // an indication has five possible values, so where only two sound wrong options remain (the
+    // steroids, whose cell says "numerous others"; zinc oxide) the question has 3 options
     const steroidUse = kind === 'use' && d.cls === 'steroid';
-    if (wrong.length < (steroidUse ? 2 : 3)) return null;
+    if (wrong.length < (kind === 'use' ? 2 : 3)) return null;
     const key = keys[Math.floor(rng() * keys.length)];
     const options = wrong.map(t => ({t, correct: false})).concat([{t: key.t, correct: true}]);
     for (let i = options.length - 1; i > 0; i--) { const j = Math.floor(rng() * (i + 1)); [options[i], options[j]] = [options[j], options[i]]; }
@@ -719,6 +722,14 @@ const DRUGLIST = (() => {
   const BRAND_PAGE = {zincoxide: {Zinca: 1, Desitin: 5}};
   // hydrocortisone valerate is a hydrocortisone: neither's brands are wrong options for the other
   const BRAND_CONFLICT = [['hydrocortisone', 'hcvalerate']];
+  /* A brand that also fits another drug on the chart: (1) brand lines that name other
+     products (Clearasil and Fostex also sell salicylic acid and sulfur acne products;
+     current Solarcaine products contain lidocaine); (2) a brand family, the brand's first
+     word (Oxy-10 and Oxy Face Scrub, both "Oxy"). Such a brand is never a wrong option for
+     that drug, and that drug never a wrong option for the brand. */
+  const BRAND_ALSO = {Clearasil: ['salicylic', 'sulfur'], Fostex: ['salicylic', 'sulfur'], Solarcaine: ['lidocaine']};
+  const bfam = b => norm(b).split(' ')[0];
+  const brandFits = (b, o) => o.brands.some(x => norm(x) === norm(b) || bfam(x) === bfam(b)) || (BRAND_ALSO[b] || []).includes(o.id);
   const brandBlocked = (a, b) => a === b || BRAND_CONFLICT.some(([x, y]) => (x === a && y === b) || (x === b && y === a));
   function brandSrc(d){
     const by = {};
@@ -812,13 +823,13 @@ const DRUGLIST = (() => {
       const order = shuffled(others.filter(o => o.page === d.page), rng).concat(shuffled(others.filter(o => o.page !== d.page), rng));
       if (rng() < 0.5) {                     // generic -> brand
         const own = new Set(d.brands.map(norm)), wrong = [];
-        for (const o of order) { const b = pickOne(o.brands, rng); if (own.has(norm(b)) || wrong.some(w => norm(w) === norm(b))) continue; wrong.push(b); if (wrong.length === 3) break; }
+        for (const o of order) { const b = pickOne(o.brands, rng); if (own.has(norm(b)) || brandFits(b, d) || wrong.some(w => bfam(w) === bfam(b))) continue; wrong.push(b); if (wrong.length === 3) break; }
         if (wrong.length < 3) return null;
         return Object.assign(Q(d, 'brand', `Which is a brand name of ${d.name} on the chart?`, mix(wrong, key, rng), src, d.brands.filter(b => b !== key)), {dir: 'fwd'});
       }
-      const wrong = order.filter(o => !o.brands.some(b => norm(b) === norm(key))).slice(0, 3).map(o => o.name);   // brand -> generic
+      const wrong = order.filter(o => !brandFits(key, o)).slice(0, 3).map(o => o.name);   // brand -> generic
       if (wrong.length < 3) return null;
-      return Object.assign(Q(d, 'brand', `Which drug is sold under the brand name ${key}?`, mix(wrong, d.name, rng), src), {dir: 'rev', brand: key});
+      return Object.assign(Q(d, 'brand', `Which drug does the chart list under the brand name ${key}?`, mix(wrong, d.name, rng), src), {dir: 'rev', brand: key});
     },
     rx(d, T, rng){
       const ls = rxLines(d), ln = pickOne(ls, rng), split = new Set(ls.map(l => l.rx)).size > 1;
@@ -845,8 +856,8 @@ const DRUGLIST = (() => {
       return Q(d, 'potency', stem, mix(wrong, POTENCY[key], rng), [C('Potency class column: ' + POTENCY[key] + (twice ? ' (one of its two lines)' : ''), 6)],
         d.potency.filter(p => p !== key).map(p => POTENCY[p] + ' (its other line)'));
     },
-    useRev(d, T, rng, o){
-      const vals = quizFacts(d, T, 'use', o).filter(v => onePer(useRevWrong(d, T, v.z), o => o.cls, 3, () => 0).length === 3);
+    useRev(d, T, rng){
+      const vals = quizFacts(d, T, 'use').filter(v => onePer(useRevWrong(d, T, v.z), o => o.cls, 3, () => 0).length === 3);
       if (!vals.length) return null;
       const v = pickOne(vals, rng), wrong = onePer(useRevWrong(d, T, v.z), o => o.cls, 3, rng).map(o => o.name);
       return Object.assign(Q(d, 'useRev', `Which drug is used for ${DISEASES[v.z].toLowerCase()}?`, mix(wrong, d.name, rng), v.src), {z: v.z});
@@ -875,8 +886,8 @@ const DRUGLIST = (() => {
     if (kind === 'target') return NO_TARGET_Q.has(d.cls) ? 'the target line names no molecular target (a sunscreen family, a chart class, "no drug target" or an effect)'
       : NO_TARGET_ID.has(d.id) ? 'the slide calls the mechanism unknown or gives an effect, not a target' : 'fewer than three safe wrong options';
     if (kind === 'use' && d.cls === 'steroid' && STEROID_MAYBE_ID[d.id]) return 'topical steroid: ' + Object.values(STEROID_MAYBE_ID[d.id]).join('; ') + ', and fewer than two options are false by the sources';
+    if (kind === 'use' && d.id === 'zincoxide') return 'zinc oxide is a skin protectant used on irritated skin, and sulfur + zinc oxide acne mixtures exist (DPAW 46), so no other condition is safely false for it';
     if (kind === 'use' || kind === 'useRev') return quizFacts(d, T, 'use').length ? 'fewer than three safe wrong options'
-      : quizFacts(d, T, 'use', {outside: true}).length ? 'its only indication source is outside Dr. Sikazwe\'s assigned Exam 1 pages (optional practice)'
       : 'no indication on its chart line (p. 5, one row off) and none on a slide';
     if (kind === 'brand') return d.brands.length ? 'fewer than three safe wrong options' : 'no brand on its chart line';
     if (kind === 'potency') return d.potency ? 'fewer than three safe wrong options' : 'not a topical steroid (potency classes are on chart p. 6 only)';
@@ -891,10 +902,7 @@ const DRUGLIST = (() => {
       const o = {n: 0, none: {}};
       for (const d of D) {
         let s = 7; const rng = () => { s = (s * 16807) % 2147483647; return s / 2147483647; };
-        if (makeQuestion(d, T, k, rng)) o.n++; else {
-          (o.none[whyNone(d, T, k)] = o.none[whyNone(d, T, k)] || []).push(d.name);
-          if (makeQuestion(d, T, k, rng, {outside: true})) (o.optional = o.optional || []).push(d.name);
-        }
+        if (makeQuestion(d, T, k, rng)) o.n++; else (o.none[whyNone(d, T, k)] = o.none[whyNone(d, T, k)] || []).push(d.name);
       }
       out[k] = o;
     }
@@ -903,5 +911,5 @@ const DRUGLIST = (() => {
 
   return {parseTargets, D, CLASS_Q, CLASSES, DISEASES, PAGES, CHART_ROWS, EXCLUDED, CHART_NOTES, questionsFor, classQuestions,
           KINDS, KIND_HEAD, quizFacts, trueValues, makeQuestion, norm, family, NOT_WRONG, OFF_CHART,
-          CHEM, chemFam, rxLines, OUTSIDE, STEROID_MAYBE, STEROID_MAYBE_ID, STEROID_WRONG_WHY, RX_OPTS, POTENCY, brandBlocked, brandSrc, rxSrc, potSrc, BRAND_PRINT, BRAND_QUOTE, OPEN_USE, hasUse, conflicts, whyNone, coverage};
+          CHEM, chemFam, rxLines, BRAND_ALSO, brandFits, STEROID_MAYBE, STEROID_MAYBE_ID, STEROID_WRONG_WHY, RX_OPTS, POTENCY, brandBlocked, brandSrc, rxSrc, potSrc, BRAND_PRINT, BRAND_QUOTE, OPEN_USE, hasUse, conflicts, whyNone, coverage};
 })();
