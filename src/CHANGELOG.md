@@ -8,6 +8,16 @@ characters.
 
 Every update adds its bullets here in the same commit that makes the change.
 
+## 2026-11-08 (Engine update)
+- Topics opens with a "Start here" block: learn a topic, start practice, review weak concepts or take a paper.
+- Dr. Sikazwe's slides outside his assigned pages form one Optional topic, listed last and kept off exam papers.
+- Switching profile during a practice paper keeps each profile's answers separate; the paper waits for its owner.
+- "Review answers" in a practice paper opens an overview; nothing is submitted until you confirm.
+- Repeating a targeted drill asks the same questions again, not a new set.
+- Empty pages say what to do next; counts say what they count.
+- Wide tables on a phone keep their first column in view while you scroll sideways.
+- Step-through figures: arrow keys, larger buttons and an Enlarge view; Atlas renamed "Structure atlas".
+
 ## 2026-11-08 (Narration player)
 - Guides: "Listen: walkthrough" reads each section part by part, with the lecture slide (or diagram step) beside it.
 - Walkthroughs: pause and resume, previous and next part, speed, browse slides, open a slide full size.

@@ -188,8 +188,12 @@ function fakeVoice() {
       // a recorded clip plays when its hash matches; the device voice reads when it does not
       const first = await page.evaluate(() => WALK_UI.SECS[0].id);
       const texts = await page.evaluate(id => WALK_UI.BY[id].parts.slice(0, 2).map(p => p.text), first);
+      // the course's own recorded clips for this walkthrough are set aside for the check and put back after it
+      audioHits.length = 0;
       await page.evaluate(([id, h1]) => {
         window.AUDIO_CLIPS = window.AUDIO_CLIPS || {};
+        window.__clipsKept = {};
+        for (const k of Object.keys(AUDIO_CLIPS)) if (k.startsWith('gw-' + id + '-')) { __clipsKept[k] = AUDIO_CLIPS[k]; delete AUDIO_CLIPS[k]; }
         AUDIO_CLIPS['gw-' + id + '-1'] = {h: h1, s: 1}; AUDIO_CLIPS['gw-' + id + '-2'] = {h: '000000000000', s: 1};
       }, [first, sha12(texts[0])]);
       await page.evaluate(id => { WALK_UI.open(id, false); WALK_UI.play(id, 0); }, first);
@@ -199,12 +203,13 @@ function fakeVoice() {
       const m2 = await page.evaluate(() => WALK_UI.state() && WALK_UI.state().mode);
       L.check(reached && m2 === 'voice', 'the next part, whose clip was recorded from other words, is read by the device voice', m2);
       L.check(audioHits.some(u => u.endsWith('audio/gw-' + first + '-1.mp3')) && !audioHits.some(u => u.endsWith('-2.mp3')), 'only the matching clip was fetched', audioHits.join(', '));
-      await page.evaluate(() => { WALK_UI.stop(); delete AUDIO_CLIPS['gw-' + WALK_UI.SECS[0].id + '-1']; delete AUDIO_CLIPS['gw-' + WALK_UI.SECS[0].id + '-2']; });
+      await page.evaluate(() => { WALK_UI.stop(); delete AUDIO_CLIPS['gw-' + WALK_UI.SECS[0].id + '-1']; delete AUDIO_CLIPS['gw-' + WALK_UI.SECS[0].id + '-2']; Object.assign(AUDIO_CLIPS, window.__clipsKept || {}); });
 
       // "Hear the why": only after answering, then in a finished paper's review
       if (!info.why) L.skip('"Hear the why"', 'why_data.js has no spoken whys yet');
       else {
-        const qid = await page.evaluate(() => { const q = QUESTIONS.find(q => WHY_UI.has(q.id) && !q.type && q.options && !(q.options.filter(o => o.correct).length > 1)); return q && q.id; });
+        // a question whose why has no recorded clip (audio_manifest.js), so the device voice reads it
+        const qid = await page.evaluate(() => { const q = QUESTIONS.find(q => WHY_UI.has(q.id) && !AUDIO_CLIPS['q-' + q.id] && !q.type && q.options && !(q.options.filter(o => o.correct).length > 1)); return q && q.id; });
         await page.evaluate(id => { WALK_UI.open(WALK_UI.SECS[0].id, false); WALK_UI.play(WALK_UI.SECS[0].id, 0); drillList([QUESTIONS.find(q => q.id === id)], 'why test'); }, qid);
         await page.waitForSelector('#v-quiz .opt');
         L.check(await page.evaluate(() => !document.querySelector('.wyrow') && !/Hear the why/.test(document.getElementById('v-quiz').textContent)), `before answering ${qid}, no "Hear the why"`);
@@ -225,6 +230,20 @@ function fakeVoice() {
         }, qid);
         L.check(rev, 'a finished paper\'s review has "Hear the why" on the question');
         await page.evaluate(() => { EX = null; });
+        // a why with a recorded clip whose hash matches plays the clip
+        const rq = await page.evaluate(() => { const q = QUESTIONS.find(q => WHY_UI.has(q.id) && AUDIO_CLIPS['q-' + q.id] && !q.type && q.options && !(q.options.filter(o => o.correct).length > 1)); return q && q.id; });
+        if (!rq) L.skip('a recorded why plays its clip', 'audio_manifest.js has no recorded why for a single-answer question');
+        else {
+          audioHits.length = 0;
+          await page.evaluate(id => drillList([QUESTIONS.find(q => q.id === id)], 'why clip test'), rq);
+          await page.waitForSelector('#v-quiz .opt');
+          await page.click('#v-quiz .opt');
+          await page.click('#v-quiz [data-wyplay]');
+          const rs = await page.evaluate(() => WHY_UI.state());
+          for (let t = 0; t < 50 && !audioHits.some(u => u.endsWith('audio/q-' + rq + '.mp3')); t++) await page.waitForTimeout(100);
+          L.check(rs && rs.id === rq && rs.mode === 'clip' && audioHits.some(u => u.endsWith('audio/q-' + rq + '.mp3')), `${rq}'s recorded why plays its clip`, JSON.stringify({rs, audioHits}));
+          await page.evaluate(() => WHY_UI.stop());
+        }
       }
       const wide = await page.evaluate(() => document.documentElement.scrollWidth > innerWidth + 1);
       L.check(!wide, 'no horizontal scroll at the end');
