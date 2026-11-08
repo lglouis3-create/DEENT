@@ -109,7 +109,7 @@ const ASSIGNED = new Set([7, 8, 9, 12].concat([...Array(9)].map((_, i) => 15 + i
   [...Array(13)].map((_, i) => 43 + i), [...Array(6)].map((_, i) => 61 + i)));
 const unassignedUnlabelled = stmts.filter(([, , s]) => s.by === 'sikazwe' && [...String(s.cite).matchAll(/DPAW (\d+)(?:[–-](\d+))?/g)]
   .some(m => { for (let p = +m[1]; p <= +(m[2] || m[1]); p++) if (!ASSIGNED.has(p)) return true; return false; }) &&
-  !/outside his assigned pages/.test(s.t));
+  !/outside (his|Dr\. Sikazwe's) assigned/.test(s.t));
 check(!unassignedUnlabelled.length, 'every Dr. Sikazwe statement citing a page outside his assigned pages says so',
   unassignedUnlabelled.map(([id, k, s]) => `${id}.${k} ${s.cite}`).join('; '));
 const tac = DL.D.find(d => d.id === 'tacrolimus');
@@ -162,10 +162,10 @@ console.log('=== Quiz me (multiple choice) and Recall ===');
         const q = DL.makeQuestion(d, T, k, r === RUNS - 1 ? Math.random : rngOf(r * 7919 + d.id.length));
         if (!q) { nulls++; continue; }
         const tag = `${d.id}:${k}`, o = q.options;
-        if (o.length !== 4) bad.shape.push(tag);
+        if (o.length !== (k === 'use' && d.cls === 'steroid' ? 3 : 4)) bad.shape.push(tag);
         const right = o.filter(x => x.correct);
         if (right.length !== 1) bad.one.push(tag);
-        if (new Set(o.map(x => DL.norm(x.t))).size !== 4 || new Set(o.map(x => DL.family(x.t))).size !== 4) bad.distinct.push(tag);
+        if (new Set(o.map(x => DL.norm(x.t))).size !== o.length || new Set(o.map(x => DL.family(x.t))).size !== o.length) bad.distinct.push(tag);
         if (right.length && !keyed.has(right[0].t)) bad.keyed.push(tag);
         for (const w of o.filter(x => !x.correct)) {
           if (tn.has(DL.norm(w.t))) bad.trueWrong.push(tag + ' ' + w.t);
@@ -181,7 +181,7 @@ console.log('=== Quiz me (multiple choice) and Recall ===');
   }
   const u = a => [...new Set(a)].slice(0, 8).join('; ');
   const n = RUNS * kinds.length * DL.D.length;
-  check(!bad.shape.length, `every quiz question has 4 options (${n} questions generated over ${RUNS} draws per drug and field)`, u(bad.shape));
+  check(!bad.shape.length, `every quiz question has 4 options; a topical steroid's indication 3 (${n} questions generated over ${RUNS} draws per drug and field)`, u(bad.shape));
   check(!bad.one.length, 'every quiz question has exactly one correct option', u(bad.one));
   check(!bad.distinct.length, 'the 4 options are distinct (normalized text) and no two say the same thing (one per family)', u(bad.distinct));
   check(!bad.keyed.length, "the correct option is one of the drug's own sourced values", u(bad.keyed));
@@ -245,6 +245,81 @@ console.log('=== Quiz me (multiple choice) and Recall ===');
   check(DL.D.every(d => d.chartClass || d.cls === 'tnf'), 'Recall: every card has a sourced class line');
   const ui = code('druglist_ui.js');
   check(!/data-dl="(next|prev|flash)"|>\s*Next\s*</.test(ui), 'the Drug list has no Next button and no one-card-at-a-time mode');
+
+  console.log('=== Topical steroids: indication options (Louis, 2026-11-08) ===');
+  {
+    // Possibly valid for a topical steroid, so never a wrong option: the chart's p. 6 cell is
+    // "Psoriasis, Atopic dermatitis, numerous others"; a low-potency steroid (hydrocortisone OTC,
+    // class 7) relieves the itch of sunburn and insect bites (the chart's p. 1 sunburn line);
+    // triamcinolone acetonide (Kenalog) is also injected into acne cysts in practice.
+    const MAYBE = {all: ['Sunburn relief'], triamcinolone: ['Acne']};
+    // false for a topical steroid by the course sources: acne is its local adverse effect (PCol 12);
+    // sun protection is the sunscreens' purpose (Sun 20, 22)
+    const FALSE = {Acne: /PCol 12/, 'Sun protection': /Sun 20, 22/};
+    const ster = DL.D.filter(d => d.cls === 'steroid'), sBad = [], sMade = [], sNone = [];
+    for (const d of ster) {
+      let got = 0;
+      for (let r = 0; r < 80; r++) {
+        const q = DL.makeQuestion(d, T, 'use', rngOf(r * 13 + 5));
+        if (!q) continue; got++;
+        for (const w of q.options.filter(x => !x.correct)) {
+          if (MAYBE.all.concat(MAYBE[d.id] || []).includes(w.t)) sBad.push(`${d.id}: ${w.t} (possibly valid)`);
+          if (!FALSE[w.t]) sBad.push(`${d.id}: ${w.t} (not in the false-by-source set)`);
+          const why = (q.wrongWhy || []).find(x => x.opt === w.t);
+          if (!why || !citeOk(why) || !FALSE[w.t].test(why.cite)) sBad.push(`${d.id}: ${w.t} (no cited reason)`);
+        }
+        if (q.options.length !== 3) sBad.push(`${d.id}: ${q.options.length} options`);
+      }
+      if (got) sMade.push(d.id); else sNone.push(d.id);
+    }
+    check(!sBad.length, `steroid indication questions offer only options false by the sources (Acne: PCol 12; Sun protection: Sun 20, 22), each with its cited reason; never Sunburn relief (${ster.length} steroids, 80 draws each)`, u(sBad));
+    check(sNone.join(',') === 'triamcinolone' && sMade.length === ster.length - 1,
+      `steroid indication: ${sMade.length} of ${ster.length} kept (3 options); withheld: ${sNone.join(', ')} (acne not safely false), with its reason in the coverage line`);
+    const covU = DL.coverage(T).use;
+    check(Object.entries(covU.none).some(([r, ns]) => ns.includes('Triamcinolone acetonide') && /acne/.test(r)), 'the About coverage line gives triamcinolone\'s reason');
+    // Indication → drug: no steroid is offered as a drug NOT used for something; when a steroid is the answer,
+    // no wrong option is a drug with that use (or petrolatum for atopic dermatitis)
+    const rBad = [];
+    for (const d of DL.D) for (let r = 0; r < 40; r++) {
+      const q = DL.makeQuestion(d, T, 'useRev', rngOf(r * 17 + 3));
+      if (!q) continue;
+      for (const w of q.options.filter(x => !x.correct)) {
+        const o2 = DL.D.find(x => x.name === w.t);
+        if (o2.cls === 'steroid') rBad.push(`${d.id}: ${w.t}`);
+        if (q.z === 'ad' && o2.id === 'petrolatum') rBad.push(`${d.id}: petrolatum for AD`);
+      }
+    }
+    check(!rBad.length, 'Indication → drug: a steroid is never a wrong option ("numerous others"); petrolatum never a wrong option for atopic dermatitis', u(rBad));
+  }
+
+  console.log('=== Methoxsalen indication: optional, outside the assigned pages ===');
+  {
+    const mx = DL.D.find(d => d.id === 'methoxsalen'), LAB = "Optional: outside Dr. Sikazwe's assigned Exam 1 pages";
+    const dflt = [0, 1, 2, 3, 4].some(r => DL.makeQuestion(mx, T, 'use', rngOf(r)) || DL.makeQuestion(mx, T, 'useRev', rngOf(r)));
+    const opt = [0, 1, 2].map(r => DL.makeQuestion(mx, T, 'use', rngOf(r), {outside: true}));
+    check(!dflt, 'methoxsalen gets no Indication or Indication → drug question in the default sets');
+    check(DL.OUTSIDE === LAB && opt.every(q => q && q.optional === LAB && q.src.every(s => s.outside && /DPAW 14/.test(s.cite))),
+      `with the optional chip on, its question is labelled "${LAB}" and keyed only by DPAW 14`);
+    check(mx.use.some(s => s.outside && s.t.startsWith(LAB)), 'its Browse statement starts with the same label');
+    const covU = DL.coverage(T).use, covR = DL.coverage(T).useRev;
+    check(covU.n === 75 && (covU.optional || []).join() === 'Methoxsalen' && covR.n === 76 && (covR.optional || []).join() === 'Methoxsalen',
+      `Exam 1 coverage counts exclude it (Indication ${covU.n}, Indication → drug ${covR.n}); it is counted apart as optional`);
+    // no default question anywhere rests only on a statement outside the assigned pages
+    const leak = [];
+    for (const d of DL.D) for (const k of ALLK) for (let r = 0; r < 4; r++) {
+      const q = DL.makeQuestion(d, T, k, rngOf(r));
+      if (q && (q.optional || q.src.every(s => s.by === 'sikazwe' && [...String(s.cite).matchAll(/DPAW (\d+)/g)].every(m => !ASSIGNED.has(+m[1]))))) leak.push(`${d.id}:${k}`);
+    }
+    check(!leak.length, 'no default question in any kind is keyed only by Dr. Sikazwe pages outside his assigned list', u(leak));
+    check(/st = Object\.assign\(\{mode: 'browse', outside: false/.test(ui) && /OPTS\(\)/.test(ui) && /\.filter\(u => !u\.outside \|\| allUse\)/.test(ui) && /lines\(d, st\.outside\)/.test(ui),
+      'the UI starts with the optional chip off and passes it to every question; Recall hides the statement unless the chip is on');
+    // the Drug list never feeds the bank, Exam sim or progress
+    const others = C.files.concat(['reference.js']).filter(f => !/^druglist_|^chart_boxes/.test(f) && fs.existsSync(path.join(__dirname, f)))
+      .filter(f => /DRUGLIST|makeQuestion/.test(code(f)));
+    const writesQ = ['druglist_data.js', 'druglist_ui.js'].filter(f => /QUESTIONS\s*(\.push|\.splice|\.unshift|=[^=])|EXAMS?\s*(\.push|=[^=])/.test(code(f)));
+    check(!others.length && !writesQ.length, 'no other course file uses the Drug list questions, and the Drug list adds nothing to the bank or the exams (Exam sim draws only from the bank)',
+      others.concat(writesQ).join(', '));
+  }
 
   console.log('=== Every chart column (Louis, 2026-11-08): the new kinds ===');
   const NEW = ['clsRev', 'useRev', 'chem', 'rx', 'potency', 'brand'];
@@ -360,7 +435,7 @@ console.log('=== Quiz me (multiple choice) and Recall ===');
   const twice = st.filter(d => d.potency.length > 1).map(d => d.id).sort().join(',');
   check(made2.potency === st.length && st.every(d => d.lines.length === d.potency.length) && twice === 'betameth,desonide,fluocinolone,hydrocortisone',
     `potency: every topical steroid (${st.length}) gets a question; the four listed twice (${twice}) are asked "one of them", with the other line's class never offered`);
-  check(made2.clsRev === DL.D.length && made2.useRev === made.use && made2.chem === 62,
+  check(made2.clsRev === DL.D.length && made2.useRev === 76 && made.use === 75 && made2.chem === 62,
     `reverse and chemical-class coverage: class → drug ${made2.clsRev}, indication → drug ${made2.useRev}, chemical class ${made2.chem}`);
   const cov = DL.coverage(T);
   check(Object.keys(DL.KINDS).every(k => cov[k].n === (made[k] !== undefined ? made[k] : made2[k]) && cov[k].n + Object.values(cov[k].none).flat().length === DL.D.length),

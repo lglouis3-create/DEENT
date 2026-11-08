@@ -40,6 +40,12 @@
                the repository root beside slides/ and load from the same base
                as walk_ui.js uses (../ in /preview/); the service worker does
                not precache them.
+   Optional practice outside Dr. Sikazwe's assigned Exam 1 pages (a statement
+   with {outside: true}, today methoxsalen's psoriasis indication, DPAW 14) is
+   asked only when the chip "Optional: outside Dr. Sikazwe's assigned Exam 1
+   pages" is on (off by default), and Recall shows it only then. A topical
+   steroid's indication question offers only options false by the sources
+   (3 options), with the reason for each shown after answering.
    Generic names in every question except the brand kind, which asks brand to
    generic and generic to brand. A score in Quiz me counts this page view only.
 
@@ -62,7 +68,7 @@ const DRUGLIST_UI = (() => {
   const DL = DRUGLIST, ID = 'drugs';
   const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g, c => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'}[c]));
   const NOFILTER = {q: '', dz: '', cls: '', page: '', status: '', boxed: false, photo: false, hasq: false};
-  const st = Object.assign({mode: 'browse', kinds: Object.assign(...Object.keys(DRUGLIST.KINDS).map(k => ({[k]: k === 'target' || k === 'cls'}))), rfield: 'target',
+  const st = Object.assign({mode: 'browse', outside: false, kinds: Object.assign(...Object.keys(DRUGLIST.KINDS).map(k => ({[k]: k === 'target' || k === 'cls'}))), rfield: 'target',
     cpage: 1, chit: null, cq: '', zoom: null, cfrom: null}, NOFILTER);
   // memory only, never stored
   const typed = {}, checked = new Set();
@@ -206,7 +212,8 @@ const DRUGLIST_UI = (() => {
   const activeFilters = () => Object.keys(NOFILTER).filter(k => k === 'q' ? st.q.trim() : st[k]).length;
 
   /* the sourced lines of one field of a card */
-  function lines(d){
+  // allUse: Browse shows the optional outside-assigned statements (labelled); Recall only when chosen
+  function lines(d, allUse){
     const rows = [d.tgt, d.tgt2].filter(Boolean).map(id => targets()[id] || {parts: []});
     const all = [].concat(...rows.map(r => r.parts));
     const cls = [];
@@ -214,13 +221,13 @@ const DRUGLIST_UI = (() => {
     if (!d.chartClass && d.cls === 'tnf') cls.push({t: 'TNF-α inhibitor', by: 'smith', cite: 'PCol 70–74'});
     const use = [];
     if (d.chartUse) use.push({t: d.chartUse, by: 'chart', cite: 'Chart p. ' + (d.pages ? d.pages.join(', ') : d.page)});
-    (d.use || []).forEach(u => use.push(u));
+    (d.use || []).filter(u => !u.outside || allUse).forEach(u => use.push(u));
     return {tg: all.filter(p => p.kind === 'tg'), mo: all.filter(p => p.kind === 'mo'), cls, use};
   }
 
   /* ---------- Browse: one full card ---------- */
   function answer(d){
-    const L = lines(d);
+    const L = lines(d, true);
     const notes = (d.notes || []).filter(n => n.by !== 'remark'), remarks = (d.notes || []).filter(n => n.by === 'remark');
     const Q = qs(d), links = readLinks(d);
     const members = DL.D.filter(x => x.cls === d.cls && x.id !== d.id);
@@ -284,7 +291,7 @@ const DRUGLIST_UI = (() => {
     rx: 'Rx, OTC or both (chart)', potency: 'its potency class (chart)', brand: 'its brand name(s) (chart)'};
   const none = (cls, label, t) => `<div class="dlf ${cls}"><b>${esc(label)}</b><ul><li>${esc(t)}</li></ul></div>`;
   function recallAnswer(d){
-    const L = lines(d), f = st.rfield;
+    const L = lines(d, st.outside), f = st.rfield;
     if (f === 'target') return field('f-tg', 'Target', L.tg);
     // the mechanism line continues the target sentence on the Reference table, so the target comes first
     if (f === 'mech') return L.mo.length ? field('f-tg', 'Target', L.tg) + field('f-mo', 'Mechanism', L.mo)
@@ -325,13 +332,15 @@ const DRUGLIST_UI = (() => {
   }
 
   /* ---------- Quiz me: multiple choice, all at once ---------- */
-  const qsig = () => JSON.stringify([filtered().map(d => d.id), st.kinds]);
+  const qsig = () => JSON.stringify([filtered().map(d => d.id), st.kinds, st.outside]);
+  // optional practice outside Dr. Sikazwe's assigned Exam 1 pages: off unless chosen
+  const OPTS = () => ({outside: st.outside});
   function buildQuiz(only){
     const T = targets(), list = [], skipped = {};
     const kinds = Object.keys(DL.KINDS).filter(k => st.kinds[k]);
-    if (only) for (const q of only) { const n = DL.makeQuestion(DL.D.find(d => d.id === q.drug), T, q.kind); if (n) list.push(n); }
+    if (only) for (const q of only) { const n = DL.makeQuestion(DL.D.find(d => d.id === q.drug), T, q.kind, null, OPTS()); if (n) list.push(n); }
     else for (const d of filtered()) for (const k of kinds) {
-      const q = DL.makeQuestion(d, T, k);
+      const q = DL.makeQuestion(d, T, k, null, OPTS());
       if (q) list.push(q); else skipped[k] = (skipped[k] || 0) + 1;
     }
     quiz = {sig: qsig(), list, ans: {}, skipped, retry: !!only};
@@ -353,11 +362,12 @@ const DRUGLIST_UI = (() => {
     const fb = !done ? '' : `<p class="dlfb">${right ? '<span class="r">Right.</span>' : `<span class="w">Not this one.</span> The answer: <b>${esc(key.t)}</b>.`}</p>
       <div class="dlf ${FCLS[q.kind] || 'f-note'}"><b>Source</b><ul>${q.src.map(li).join('')}</ul></div>
       ${q.also.length ? `<p class="dlfb">Also true for ${esc(q.name)}: ${esc(q.also.join('; '))}.</p>` : ''}
+      ${(q.wrongWhy || []).length ? `<div class="dlf f-note"><b>Why the other options are wrong</b><ul>${q.wrongWhy.map(w => `<li>${esc(w.opt)}: ${esc(w.t)}${src(w)}</li>`).join('')}</ul></div>` : ''}
       ${offChart(q.offChart || [])}
       <div class="dlrow">${chartBtn(DL.D.find(x => x.id === q.drug))}</div>`;
     // a question whose answer is the drug does not name it above the stem
     const rev = q.kind === 'useRev' || q.kind === 'clsRev' || (q.kind === 'brand' && q.dir === 'rev');
-    return `<div class="dlq" data-qid="${esc(q.id)}"><p class="dlqh">${rev ? '' : esc(q.name) + ' · '}${esc(DL.KIND_HEAD[q.kind])}</p>
+    return `<div class="dlq" data-qid="${esc(q.id)}"><p class="dlqh">${rev ? '' : esc(q.name) + ' · '}${esc(DL.KIND_HEAD[q.kind])}${q.optional ? ' · ' + esc(q.optional) : ''}</p>
       <p class="stem" id="dlqs-${esc(q.id)}">${esc(q.stem)}</p>
       <div role="group" aria-labelledby="dlqs-${esc(q.id)}">${opts}</div><div aria-live="polite">${fb}</div></div>`;
   }
@@ -460,6 +470,7 @@ const DRUGLIST_UI = (() => {
   /* ---------- the pane ---------- */
   const opt = (v, label, cur) => `<option value="${esc(v)}"${String(cur) === String(v) ? ' selected' : ''}>${esc(label)}</option>`;
   const sel = (id, label, html) => `<div class="dlfld"><label for="${id}">${esc(label)}</label><select id="${id}">${html}</select></div>`;
+  const outsideChip = () => `<button type="button" class="chip" data-dl="outside" aria-pressed="${st.outside}">${esc(DL.OUTSIDE)}</button>`;
   function controls(){
     const n = activeFilters(), mode = MODES.find(m => m[0] === st.mode);
     let modebar = '';
@@ -467,6 +478,7 @@ const DRUGLIST_UI = (() => {
       const anyMissed = quiz && quiz.list.some(q => quiz.ans[q.id] !== undefined && !q.options[quiz.ans[q.id]].correct);
       modebar = `<div class="dlmodebar"><div class="dlchips" role="group" aria-label="Ask about"><span class="lab">Ask about:</span>
         ${Object.entries(DL.KINDS).map(([k, v]) => `<button type="button" class="chip" data-dl="kind" data-k="${k}" aria-pressed="${!!st.kinds[k]}">${esc(v)}</button>`).join('')}</div>
+        <div class="dlchips">${outsideChip()}</div>
         ${st.kinds.brand ? `<p class="ex">Brand names are practice: Dr. Smith, 10/29: ${esc(DL.BRAND_QUOTE.t)} (T 618–621).</p>` : ''}
         <p class="dlscore" id="dlscore" aria-live="polite">${quiz ? scoreLine() : ''}</p>
         <div class="dlchips"><button type="button" class="btn sm" data-dl="newq">New questions</button>
@@ -474,6 +486,7 @@ const DRUGLIST_UI = (() => {
     } else if (st.mode === 'recall') {
       modebar = `<div class="dlmodebar"><div class="dlchips" role="radiogroup" aria-label="What to recall"><span class="lab">Recall:</span>
         ${Object.entries(RFIELDS).map(([k, v]) => `<button type="button" class="chip" role="radio" data-dl="rfield" data-k="${k}" aria-checked="${st.rfield === k}" aria-pressed="${st.rfield === k}" tabindex="${st.rfield === k ? 0 : -1}">${esc(v)}</button>`).join('')}</div>
+        <div class="dlchips">${outsideChip()}</div>
         <p>Type what you remember in the box under each drug, then press Check (or Enter). ${recallExample()} Spelling and wording don't matter: compare your words with the answer yourself.</p>
         <div class="dlchips"><button type="button" class="btn sm ghost" data-dl="revealall">Check all</button>
         <button type="button" class="btn sm ghost" data-dl="hideall">Hide all answers</button>
@@ -509,6 +522,7 @@ const DRUGLIST_UI = (() => {
     <details class="dlnote"><summary>About this list and the chart</summary>
       <p>Each professor's slides and recording decide what is examinable for that professor's material (Dr. Smith's lectures; Dr. Sikazwe's assigned pages); the chart is a guide. Each line names its source: <span class="dlsrc smith">Dr. Smith · slide</span> <span class="dlsrc sikazwe">Dr. Sikazwe · DPAW page</span> <span class="dlsrc chart">Drug chart · page</span></p>
       <p>Targets and mechanisms come from Reference, "Drug targets: write it first, then check". Not here: the lice and scabies page (chart p. 7), which is not in the Exam 1 lectures (it is shown in Chart, the original pages). Brand names are practice only: Dr. Smith, 10/29: ${esc(DL.BRAND_QUOTE.t)} (T 618–621). Every question uses the generic name except the brand kind.</p>
+      <p>Topical steroids: the chart's indication cell ends "numerous others", so a condition a steroid could plausibly treat (sunburn itch, for example) is never offered as a wrong option; the remaining options are false by the slides, with the reason shown after answering. Questions from pages outside Dr. Sikazwe's assigned Exam 1 pages appear only with the Optional chip on and are counted apart below.</p>
       <p>Quiz me asks only what the cards state: a wrong option is another drug's value that is not also true for this drug. Drugs whose chart line names no molecular target (sunscreens, sunburn anesthetics, keratolytics, tars, petrolatum, ketoconazole, spironolactone, dapsone, metronidazole) get no target question; practise those in Recall.</p>
       <ul>${DL.CHART_NOTES.map(n => `<li>${esc(n)}</li>`).join('')}</ul>
       <p>Quiz me coverage, per kind (of ${DL.D.length} drugs):</p><ul class="dlcov">${coverageList()}</ul></details>
@@ -519,7 +533,8 @@ const DRUGLIST_UI = (() => {
   function coverageList(){
     COV = COV || DL.coverage(targets());
     return Object.entries(COV).map(([k, o]) => `<li><b>${esc(DL.KIND_HEAD[k])}</b>: ${o.n} drugs get a question` +
-      (Object.keys(o.none).length ? '; none for ' + Object.entries(o.none).map(([r, ns]) => ns.length > 12 ? `${ns.length} (${esc(r)})` : `${ns.length} (${esc(r)}: ${esc(ns.join(', '))})`).join('; ') : '') + '.</li>').join('');
+      (Object.keys(o.none).length ? '; none for ' + Object.entries(o.none).map(([r, ns]) => ns.length > 12 ? `${ns.length} (${esc(r)})` : `${ns.length} (${esc(r)}: ${esc(ns.join(', '))})`).join('; ') : '') +
+      (o.optional ? `. Counted apart, ${esc(DL.OUTSIDE.toLowerCase())}: ${o.optional.length} (${esc(o.optional.join(', '))}), only when that chip is on` : '') + '.</li>').join('');
   }
   function drawList(){
     if (st.mode === 'chart') { drawChart(false); return; }
@@ -601,6 +616,7 @@ const DRUGLIST_UI = (() => {
     if (a === 'mode') { if (st.mode !== b.dataset.k) { st.mode = b.dataset.k; st.cfrom = null; rerender(`[data-dl="mode"][data-k="${st.mode}"]`); } }
     else if (a === 'rfield') { if (st.rfield !== b.dataset.k) { st.rfield = b.dataset.k; rerender(`[data-dl="rfield"][data-k="${st.rfield}"]`); } }
     else if (a === 'kind') { st.kinds[b.dataset.k] = !st.kinds[b.dataset.k]; quiz = null; rerender(`[data-dl="kind"][data-k="${b.dataset.k}"]`); }
+    else if (a === 'outside') { st.outside = !st.outside; quiz = null; rerender('[data-dl="outside"]'); }
     else if (a === 'newq') { quiz = null; rerender('[data-dl="newq"]'); }
     else if (a === 'retry') {
       const missed = quiz.list.filter(q => quiz.ans[q.id] !== undefined && !q.options[quiz.ans[q.id]].correct);

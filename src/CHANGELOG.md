@@ -8,6 +8,12 @@ characters.
 
 Every update adds its bullets here in the same commit that makes the change.
 
+## 2026-11-08 (Stars: what Dr. Sikazwe said to know)
+- ★ Likely on the exam: 35 more of Dr. Sikazwe's questions, one for each point he said to know, remember or watch.
+- Among them: steroid shape, numbering and alpha/beta faces; crisaborole in the skin; hydrocortisone's half-life.
+- Also: vitamin D organs (his 2-point take-home), sulfur particle size, retinoid caution, sunscreen drawbacks.
+- All of his stars stay on his assigned pages; topics he named off those pages get no star.
+
 ## 2026-11-08 (Drug list: every chart column)
 - Quiz me, Ask about: new kinds for chemical class, Rx/OTC, potency class (steroids) and brand names.
 - Brand names are practice: Dr. Smith asks by generic name but said you will need to know brands (10/29).
@@ -16,7 +22,9 @@ Every update adds its bullets here in the same commit that makes the change.
 - Chemical class cells that are blank, one row off (p. 5) or in conflict with a slide are shown, not asked.
 - About this list: how many drugs each kind covers and why the rest have no question.
 - Recall's example now names a drug outside the current list, so it gives no cue.
-- Methoxsalen now has an indication question: psoriasis (Dr. Sikazwe's psoriasis drug list, DPAW 14).
+- Methoxsalen's psoriasis indication (DPAW 14, outside the assigned pages) is optional: Quiz me and Recall chip.
+- Topical steroid indications: only options the slides make false (acne, sun protection), with the reason after.
+- Triamcinolone has no indication question: acne is not safely false for it (About this list says why).
 
 ## 2026-11-08 (Drug list: the original chart)
 - Drug list > Chart: the original drug chart pages 1–7, one page at a time, with zoom and Open full size.
