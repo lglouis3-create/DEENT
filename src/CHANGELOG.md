@@ -8,6 +8,12 @@ characters.
 
 Every update adds its bullets here in the same commit that makes the change.
 
+## 2026-11-08 (Reference and Tell apart tables)
+- Reference and Tell apart: on a phone, each wide table row is now a card with its column names; no sideways scrolling.
+- Long cells are split into short labelled lines; metabolic schemes show one step per line with "→".
+- Abbreviations such as t1/2, ADH, SULT, UGT and CBDA are spelled out at first use in each table.
+- "Name not to be recalled" for the JAK inhibitor classes is now a small note under the class name.
+
 ## 2026-11-08 (Steroid numbering with the skeleton; literal stems)
 - Steroid numbering questions now show Dr. Sikazwe's steroid skeleton; two ask the number of a circled carbon.
 - His Polleve-1 now shows the crisaborole metabolic scheme it asks about.

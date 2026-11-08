@@ -219,7 +219,10 @@ const COURSE = {
           'topics_ui.js',
           // Wide screens (iPad Pro 13, MacBook) and the pinned tab strip that hides while reading
           // (course-level, Louis 2026-11-08; temporary until the kit has these)
-          'wide_ui.js'],
+          'wide_ui.js',
+          // Reference and Tell apart tables: short lines inside cells and one card per row on
+          // phones (course-level presentation, 2026-11-08)
+          'tables_ui.js'],
 
   tools: {citeAliases:{'skin-pathophys-students-2026.pdf':'Skin-Pathophys-Students-2026.pdf',
                        'skin-pcol-students-2026.pdf':'Skin-PCol-Students-2026.pdf',
