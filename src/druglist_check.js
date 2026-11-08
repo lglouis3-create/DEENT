@@ -125,8 +125,81 @@ check(!missing.length && linked > 0, `the ${linked} linked question ids all exis
 console.log(`  cards with no question naming the drug (${none.length}): ${none.join(', ')}`);
 check(DL.D.every(d => !/\bbrand\b/i.test(d.q)), 'no question pattern is built on brand names');
 
-console.log('=== Storage and stub DOM ===');
 const code = f => here(f).replace(/\/\*[\s\S]*?\*\//g, '').replace(/(^|[^:'"`])\/\/.*$/gm, '$1');
+console.log('=== Quiz me (multiple choice) and Recall ===');
+{
+  const rngOf = seed => () => { seed |= 0; seed = seed + 0x6D2B79F5 | 0; let t = Math.imul(seed ^ seed >>> 15, 1 | seed);
+    t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t; return ((t ^ t >>> 14) >>> 0) / 4294967296; };
+  const RUNS = 60, kinds = Object.keys(DL.KINDS);
+  const brandRe = new RegExp('\\b(' + [...new Set(DL.D.flatMap(d => d.brands || []))].map(b => b.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|') + ')\\b', 'i');
+  const made = {}, bad = {shape: [], one: [], distinct: [], keyed: [], trueWrong: [], famWrong: [], sameClass: [], brand: [], src: [], unstable: []};
+  for (const k of kinds) {
+    made[k] = 0;
+    for (const d of DL.D) {
+      const truth = DL.trueValues(d, T, k).concat(DL.quizFacts(d, T, k).map(v => v.t));
+      const tn = new Set(truth.map(DL.norm)), tf = new Set(truth.map(DL.family));
+      const keyed = new Set(DL.quizFacts(d, T, k).map(v => v.t));
+      const sameCls = new Set(DL.D.filter(o => o.id !== d.id && o.cls === d.cls && (d.cls !== 'abx' || o.chartClass === d.chartClass))
+        .flatMap(o => DL.quizFacts(o, T, k).map(v => DL.norm(v.t))));
+      let nulls = 0;
+      for (let r = 0; r < RUNS; r++) {
+        const q = DL.makeQuestion(d, T, k, r === RUNS - 1 ? Math.random : rngOf(r * 7919 + d.id.length));
+        if (!q) { nulls++; continue; }
+        const tag = `${d.id}:${k}`, o = q.options;
+        if (o.length !== 4) bad.shape.push(tag);
+        const right = o.filter(x => x.correct);
+        if (right.length !== 1) bad.one.push(tag);
+        if (new Set(o.map(x => DL.norm(x.t))).size !== 4 || new Set(o.map(x => DL.family(x.t))).size !== 4) bad.distinct.push(tag);
+        if (right.length && !keyed.has(right[0].t)) bad.keyed.push(tag);
+        for (const w of o.filter(x => !x.correct)) {
+          if (tn.has(DL.norm(w.t))) bad.trueWrong.push(tag + ' ' + w.t);
+          if (tf.has(DL.family(w.t))) bad.famWrong.push(tag + ' ' + w.t);
+          if (sameCls.has(DL.norm(w.t))) bad.sameClass.push(tag + ' ' + w.t);
+        }
+        if (o.some(x => brandRe.test(x.t)) || brandRe.test(q.stem) || !q.stem.includes(d.name)) bad.brand.push(tag);
+        if (!q.src.length || !q.src.every(citeOk)) bad.src.push(tag);
+      }
+      if (nulls && nulls !== RUNS) bad.unstable.push(`${d.id}:${k}`);
+      if (!nulls) made[k]++;
+    }
+  }
+  const u = a => [...new Set(a)].slice(0, 8).join('; ');
+  const n = RUNS * kinds.length * DL.D.length;
+  check(!bad.shape.length, `every quiz question has 4 options (${n} questions generated over ${RUNS} draws per drug and field)`, u(bad.shape));
+  check(!bad.one.length, 'every quiz question has exactly one correct option', u(bad.one));
+  check(!bad.distinct.length, 'the 4 options are distinct (normalized text) and no two say the same thing (one per family)', u(bad.distinct));
+  check(!bad.keyed.length, "the correct option is one of the drug's own sourced values", u(bad.keyed));
+  check(!bad.trueWrong.length && !bad.famWrong.length, 'no wrong option is also true for the drug (text or family)', u(bad.trueWrong.concat(bad.famWrong)));
+  check(!bad.sameClass.length, "no wrong option is a value from a drug of the same class", u(bad.sameClass));
+  check(!bad.brand.length, 'stems name the drug by generic name; no option or stem carries a brand name', u(bad.brand));
+  check(!bad.src.length, 'every quiz answer shows a source with a matching citation', u(bad.src));
+  check(!bad.unstable.length, 'a drug and field either always or never get a question', u(bad.unstable));
+  check(made.cls === DL.D.length && made.target >= 45 && made.use >= 70,
+    `questions for every field over all ${DL.D.length} drugs: target ${made.target}, class ${made.cls}, indication ${made.use}`);
+  // the cases the exclusions are for
+  const never = (id, k, re, why) => {
+    const d = DL.D.find(x => x.id === id), hits = [];
+    for (let r = 0; r < 200; r++) { const q = DL.makeQuestion(d, T, k, rngOf(r)); if (q) q.options.filter(o => !o.correct && re.test(o.t)).forEach(o => hits.push(o.t)); }
+    check(!hits.length, why, u(hits));
+  };
+  never('tacrolimus', 'target', /calcineurin|cyclophilin/i, 'tacrolimus: calcineurin and cyclophilin are never wrong options for its target');
+  never('cyclosporine', 'target', /calcineurin|fkbp/i, 'cyclosporine: calcineurin and FKBP are never wrong options for its target');
+  never('methotrexate', 'target', /dihydrofolate/i, 'methotrexate: bacterial DHFR is never a wrong option for its target');
+  never('tmpsmx', 'cls', /dihydrofolate/i, 'trimethoprim/sulfamethoxazole: "DHFR inhibitor" is never a wrong class');
+  never('ustekinumab', 'cls', /^IL-23 inhibitors$/, 'ustekinumab: "IL-23 inhibitors" is never a wrong class');
+  never('bpo', 'cls', /antibiotic/i, 'benzoyl peroxide: "antibiotics / antimicrobials" is never a wrong class');
+  never('clobetasol', 'use', /atopic|psoriasis/i, 'a topical steroid: neither of its two uses is a wrong option');
+  never('cyclosporine', 'use', /atopic/i, 'cyclosporine: atopic dermatitis is never a wrong indication');
+  never('ruxolitinib', 'target', /^JAK$|Janus/, 'ruxolitinib: another JAK wording is never a wrong option');
+  // Recall: every drug has an answer to show for each field
+  const noUse = DL.D.filter(d => !d.chartUse && !(d.use || []).length).map(d => d.id).sort().join(',');
+  check(noUse === 'ketoconazole,petrolatum', `Recall: every card has an indication line except the two misaligned chart p. 5 rows (${noUse})`);
+  check(DL.D.every(d => d.chartClass || d.cls === 'tnf'), 'Recall: every card has a sourced class line');
+  const ui = code('druglist_ui.js');
+  check(!/data-dl="(next|prev|flash)"|>\s*Next\s*</.test(ui), 'the Drug list has no Next button and no one-card-at-a-time mode');
+}
+
+console.log('=== Storage and stub DOM ===');
 for (const f of ['druglist_data.js', 'druglist_ui.js']) {
   const hits = code(f).match(/localStorage|sessionStorage|indexedDB|\.setItem\(|document\.cookie|caches\.open/g);
   check(!hits, `${f} writes to no storage`, hits && hits.join(', '));

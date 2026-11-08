@@ -537,5 +537,113 @@ const DRUGLIST = (() => {
     }
     return out;
   }
-  return {parseTargets, D, CLASS_Q, CLASSES, DISEASES, PAGES, CHART_ROWS, EXCLUDED, CHART_NOTES, questionsFor, classQuestions};
+  /* ---------- Multiple-choice practice on the list (Drug list, "Quiz me") ----------
+     Built only from the statements above and the Reference target rows; no new
+     facts. One question asks one field of one drug, by generic name: its
+     target, its class or its indication. The keyed answer is one of the drug's
+     own values (with its source); the three distractors are values of the same
+     field on other cards, and never one that is also true for this drug:
+       - a distractor's normalized text may equal none of the drug's values;
+       - it may not come from a drug of the same class (antibiotics: the same
+         chart class), nor share a "family" with any of the drug's values
+         (FAMILY below: e.g. calcineurin, FKBP and cyclophilin are one family,
+         so calcineurin is never offered as a wrong target for tacrolimus);
+       - classes that overlap (CLASS_CONFLICT) are never offered for each
+         other (ustekinumab is both an IL-12 and an IL-23 inhibitor);
+       - an indication is offered as wrong only if no indication text of the
+         drug (chart or lecture) names it, no drug of its class has it, and
+         it is not in NOT_WRONG.
+     At most one distractor per family, so no two options say the same thing.
+     A drug-field pair with no clean answer (sunscreens' "target", a mechanism
+     the slide calls unknown) or fewer than three safe distractors gets no
+     question. Mechanism lines are fragments of the target sentence on the
+     Reference table, so they are practised in Recall, not as options. */
+  const norm = t => String(t).toLowerCase().replace(/α/g, 'alpha').replace(/[^a-z0-9]+/g, ' ').trim();
+  const FAMILY = [[/calcineurin|fkbp|cyclophilin/, 'calcineurin'], [/dihydrofolate|dhfr/, 'dhfr'], [/\bjak|janus/, 'jak'],
+    [/il 17/, 'il17'], [/retino|\brar\b|\brxr\b|vitamin d|\bvdr\b/, 'nuclear'], [/tnf/, 'tnf'], [/pde 4|phosphodiesterase/, 'pde4'],
+    [/30s|50s|ribosom/, null], [/glucocorticoid/, 'gr']];
+  const family = t => { const n = norm(t); for (const [re, f] of FAMILY) if (re.test(n)) return f || n; return n; };
+  // classes whose drugs can truly be described by the other's name
+  const CLASS_CONFLICT = [['il23', 'il1223'], ['kerat', 'abx'], ['dhfr', 'abx'], ['dhfr', 'cytotox'], ['cytotox', 'azole'], ['emollient', 'sunblock'],
+    ['sunscreen', 'sunblock']];
+  // drug classes whose Reference "target" is not a molecular target (a sunscreen
+  // family, a chart class, "no drug target", a mechanism the slide calls unknown)
+  const NO_TARGET_Q = new Set(['sunscreen', 'sunblock', 'anesth', 'emollient', 'azole', 'antiandr', 'cytotox', 'kerat']);
+  const NO_TARGET_ID = new Set(['dapsone', 'metronidazole']);
+  // uses outside the chart and the slides that are common enough that a wrong
+  // option naming them would mislead (only ever kept OUT of the wrong options;
+  // never shown as an answer): systemic cyclosporine and methotrexate and coal
+  // tar in atopic dermatitis/eczema, upadacitinib in psoriatic disease, and zinc
+  // oxide, which the chart also lists on its psoriasis page (p. 5)
+  const NOT_WRONG = {cyclosporine: ['ad'], methotrexate: ['ad'], coaltar: ['ad'], upadacitinib: ['pso'], zincoxide: ['pso']};
+  const DZ_RE = {ad: /atopic|eczema|\bad\b/, pso: /psoria/, acne: /acne/, sun: /sun protection|sunscreen/, burn: /sunburn/};
+  const KINDS = {target: 'Target', cls: 'Class', use: 'Indication'};
+  const groupOf = d => d.cls === 'abx' ? 'abx:' + norm(d.chartClass || '') : d.cls;
+  /* The keyed values of one field of one drug: [{t, src: [{t, by, cite}]}]. */
+  function quizFacts(d, T, kind){
+    if (kind === 'target') {
+      if (NO_TARGET_Q.has(d.cls) || NO_TARGET_ID.has(d.id)) return [];
+      const parts = [d.tgt, d.tgt2].filter(Boolean).flatMap(id => (T[id] || {parts: []}).parts)
+        .filter(p => p.kind === 'tg' && (p.by === 'smith' || p.by === 'sikazwe'));
+      // option text: a leading component name ("Trimethoprim: ...") is dropped, so a
+      // wrong option never names another drug; the source line keeps the full text
+      const opt = t => { t = t.replace(/^[A-Z][a-z]+: /, ''); return /^[a-z]{2}/.test(t) ? t.charAt(0).toUpperCase() + t.slice(1) : t; };
+      return parts.map(p => ({t: opt(p.t), src: [p]}));
+    }
+    if (kind === 'cls') {
+      const src = d.chartClass ? {t: d.chartClass, by: 'chart', cite: 'Chart p. ' + d.page}
+        : d.cls === 'tnf' ? {t: 'TNF-α inhibitor', by: 'smith', cite: 'PCol 70–74'} : null;
+      return src ? [{t: CLASSES[d.cls], src: [src]}] : [];
+    }
+    if (kind === 'use') {
+      const texts = [];
+      if (d.chartUse) texts.push({t: d.chartUse, by: 'chart', cite: 'Chart p. ' + (d.pages ? d.pages.join(', ') : d.page)});
+      (d.use || []).forEach(u => texts.push(u));
+      return Object.keys(DISEASES).filter(z => d.dz.includes(z)).map(z => ({t: DISEASES[z], z,
+        src: texts.filter(s => DZ_RE[z].test(norm(s.t)))})).filter(v => v.src.length);
+    }
+    return [];
+  }
+  /* Every value a drug could truly be said to have in a field (for exclusion). */
+  function trueValues(d, T, kind){
+    if (kind === 'use') {
+      const txt = norm([d.chartUse || ''].concat((d.use || []).map(u => u.t)).join(' '));
+      return Object.keys(DISEASES).filter(z => d.dz.includes(z) || DZ_RE[z].test(txt) || (NOT_WRONG[d.id] || []).includes(z)).map(z => DISEASES[z]);
+    }
+    if (kind === 'target') return [d.tgt, d.tgt2].filter(Boolean).flatMap(id => (T[id] || {parts: []}).parts).map(p => p.t);
+    return [CLASSES[d.cls]];
+  }
+  const conflicts = (a, b) => CLASS_CONFLICT.some(([x, y]) => (x === a && y === b) || (x === b && y === a));
+  /* One question, or null. rng: () => [0, 1). */
+  function makeQuestion(d, T, kind, rng){
+    rng = rng || Math.random;
+    const keys = quizFacts(d, T, kind);
+    if (!keys.length) return null;
+    const truth = trueValues(d, T, kind).concat(keys.map(k => k.t));
+    // an indication that a drug of the same class has is not offered as wrong
+    // either (crisaborole is never "wrong" for psoriasis, where apremilast is used)
+    if (kind === 'use') D.filter(o => o.cls === d.cls && o.id !== d.id).forEach(o => quizFacts(o, T, kind).forEach(v => truth.push(v.t)));
+    const bad = new Set(truth.map(norm)), badFam = new Set(truth.map(family));
+    const pool = [], seenFam = new Set();
+    for (const o of D) {
+      if (o.id === d.id || groupOf(o) === groupOf(d) || (kind === 'cls' && conflicts(o.cls, d.cls))) continue;
+      for (const v of quizFacts(o, T, kind)) {
+        const n = norm(v.t), f = family(v.t);
+        if (!n || bad.has(n) || badFam.has(f)) continue;
+        pool.push({t: v.t, f});
+      }
+    }
+    for (let i = pool.length - 1; i > 0; i--) { const j = Math.floor(rng() * (i + 1)); [pool[i], pool[j]] = [pool[j], pool[i]]; }
+    const wrong = [];
+    for (const p of pool) { if (seenFam.has(p.f)) continue; seenFam.add(p.f); wrong.push(p.t); if (wrong.length === 3) break; }
+    if (wrong.length < 3) return null;
+    const key = keys[Math.floor(rng() * keys.length)];
+    const options = wrong.map(t => ({t, correct: false})).concat([{t: key.t, correct: true}]);
+    for (let i = options.length - 1; i > 0; i--) { const j = Math.floor(rng() * (i + 1)); [options[i], options[j]] = [options[j], options[i]]; }
+    const stem = kind === 'target' ? `What is the target of ${d.name}?`
+      : kind === 'cls' ? `Which class is ${d.name} in?` : `Which condition is ${d.name} used for?`;
+    return {id: d.id + ':' + kind, drug: d.id, name: d.name, kind, stem, options, src: key.src, also: keys.filter(k => k !== key).map(k => k.t)};
+  }
+  return {parseTargets, D, CLASS_Q, CLASSES, DISEASES, PAGES, CHART_ROWS, EXCLUDED, CHART_NOTES, questionsFor, classQuestions,
+          KINDS, quizFacts, trueValues, makeQuestion, norm, family, NOT_WRONG};
 })();
