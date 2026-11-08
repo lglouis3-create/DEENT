@@ -73,6 +73,19 @@ const pagesOf = cite => {
 const sik = ids.filter(i => QB[i] && QB[i].prof === 'Sikazwe');
 const offPage = sik.filter(i => { const p = pagesOf(QB[i].cite); return !p.length || p.some(n => !ASSIGNED.has(n)); });
 check(!offPage.length, `Dr. Sikazwe's ${sik.length} stars cite only his assigned pages`, offPage.map(i => i + ' (' + pagesOf(QB[i].cite).join(',') + ')').join('; '));
+// the reference of each of his stars names where he said it (11/03 transcript line "T n" or 11/04 offset "T@n", or a Polleve slide)
+// and the deck page(s) "p. n" / "pp. n, m", all of them assigned
+const refPages = ref => {
+  const out = [];
+  (String(ref).match(/\bpp?\.\s*[0-9][0-9,–\-\s]*/g) || []).forEach(m => m.replace(/^pp?\.\s*/, '').split(',').forEach(p => {
+    const r = p.trim().split(/[–-]/).map(Number); if (!r[0]) return;
+    for (let n = r[0]; n <= (r[1] || r[0]); n++) out.push(n); }));
+  return out;
+};
+const badRef = sik.filter(i => { const x = L.items.find(y => y.id === i), p = refPages(x.ref);
+  return !/\bT@?\s?\d|Polleve-\d/.test(x.ref) || !p.length || p.some(n => !ASSIGNED.has(n)); });
+check(!badRef.length, `each of Dr. Sikazwe's ${sik.length} stars names its transcript place or poll and only assigned deck pages`,
+      badRef.map(i => i + ' (' + L.items.find(y => y.id === i).ref + ')').join('; '));
 
 console.log('=== No answer in a reason ===');
 const STOP = new Set('the a an and or of to in on for with by from is are be as at it its this that these those which what who than then not no so do does into their they them about more most less less some each other only also both can may will would'.split(' '));

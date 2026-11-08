@@ -801,7 +801,8 @@ const COURSE = {
           'q1_topics.js', 'q2_L02.js', 'q3_L03a.js', 'q4_L03b.js', 'q5_L04.js', 'q6_L03c.js',
           // Drug list tab (temporary course-level presentation, to be replaced by the kit's
           // Drug List feature): its data, then the tab itself (Louis, 2026-11-08)
-          'druglist_data.js', 'druglist_ui.js',
+          // (chart_boxes.js: the rows of the original chart pages in chart/, from render_chart.py)
+          'chart_boxes.js', 'druglist_data.js', 'druglist_ui.js',
           // "Likely on the exam" stars (course-level, Louis 2026-11-08): data, then presentation
           'likely_data.js', 'likely_ui.js',
           // Narration player (course-level, Louis 2026-11-08, path B of reviews/NARRATION_PLAN.md
@@ -837,8 +838,8 @@ const COURSE = {
    the Topics page shows as "What's new" since this browser last marked an
    entry seen, and Settings shows whole. preview: true in a page built with
    `build.py --preview`, which is served at /preview/ beside the live drill. */
-const BUILD = {stamp:"2026-11-08 11:02 CT", built:"2026-11-08T17:02:21Z", questions:595, images:1, changelog:[{"date": "2026-11-08 (Drug list: three study modes)", "items": ["Drug list: choose Browse, Quiz me or Recall at the top; every matching drug shows at once, with no Next button.", "Quiz me: multiple choice on each drug's target, class or indication, answered in place with the source.", "Quiz me keeps a score for this visit, with New questions and Retry the missed; nothing is saved.", "Recall: pick target, mechanism, class or indication, type what you remember, then Check to compare.", "Drug list filters are grouped under one heading with an active count and Clear filters."]}, {"date": "2026-11-08 (Wide screens and the tab bar)", "items": ["On a 13-inch iPad and MacBook the page uses the width: exam card beside Start here, two topic columns, a larger slide.", "The course title scrolls away; the tab bar stays at the top and slides away while you read (Settings > Display)."]}, {"date": "2026-11-08 (Topics folders)", "items": ["Topics: each slide deck is a folder that opens and closes; folders start closed and stay as you left them.", "Topics: the exam's date, coverage, format and bank are a short card of labelled rows; more facts fold below it."]}, {"date": "2026-11-08 (Engine update)", "items": ["Topics opens with a \"Start here\" block: learn a topic, start practice, review weak concepts or take a paper.", "Dr. Sikazwe's slides outside his assigned pages form one Optional topic, listed last and kept off exam papers.", "Switching profile during a practice paper keeps each profile's answers separate; the paper waits for its owner.", "\"Review answers\" in a practice paper opens an overview; nothing is submitted until you confirm.", "Repeating a targeted drill asks the same questions again, not a new set.", "Empty pages say what to do next; counts say what they count.", "Wide tables on a phone keep their first column in view while you scroll sideways.", "Step-through figures: arrow keys, larger buttons and an Enlarge view; Atlas renamed \"Structure atlas\"."]}, {"date": "2026-11-08 (Narration player)", "items": ["Guides: \"Listen: walkthrough\" reads each section part by part, with the lecture slide (or diagram step) beside it.", "Walkthroughs: pause and resume, previous and next part, speed, browse slides, open a slide full size.", "Walkthroughs remember the part you stopped on, on this device, and can continue into the next one.", "After you answer a question, \"Hear the why\" reads its explanation aloud (also in a finished paper's review).", "Every walkthrough part and spoken why is recorded; anything without a recording is read by your device's own voice."]}, {"date": "2026-11-08 (Guides and Topics by deck)", "items": ["Topics now grouped under the four slide decks, each topic named after the deck's own section, in slide order.", "Guides rewritten: one section per learning objective of each Smith deck, plus Dr. Sikazwe's assigned pages.", "Guides: drugs per disease, each class's target and why it helps, within-class differences, interactions.", "Guides: boxed warnings, side effects and contraindications by drug, each with its slide.", "Guides: sun deck objectives (UVA vs UVB, MED, SPF, broad spectrum, substantivity, sunblock vs sunscreen).", "Guides link to the matching Tell apart, Reference, Drug list and Atlas sections.", "Tell apart: new tables on sun protection and on boxed warnings, pregnancy limits and interactions.", "Reference: new sun table of SPF blocking, skin types with their SPF, and substantivity by vehicle.", "Diagrams: acne cascade labels moved off the arrows; nuclear receptor figure redrawn so the bound drug shows.", "Guides and Tell apart state both professors' UV band limits; each professor's own numbers are keyed.", "Dr. Sikazwe topics now mark slides outside his assigned list; his slides are numbered by PDF page."]}, {"date": "2026-11-08 (Likely-on-the-exam stars)", "items": ["117 questions starred (\u2605) as likely on Exam 1: a prediction, not an official list.", "One more UV question (slide 58) moved to the optional \"beyond the assigned pages\" topic.", "Topics: drill all starred questions, or only Dr. Smith's or Dr. Sikazwe's."]}, {"date": "2026-11-08 (Drug List)", "items": ["New Drug list tab: all 79 drugs on the dermatology chart (pp. 1\u20136), searchable by generic or brand name.", "Filter the Drug list by disease, class, chart page, Exam 1 taught or optional, boxed warning, photosensitizing.", "Recall mode: write a drug's target first, then Reveal to compare; your typing is not graded or saved.", "Each Drug list line names its source: Dr. Smith's slide, Dr. Sikazwe's page or the drug chart.", "From a drug card: practise exactly its questions, open its Reference row, reading section or Atlas tile.", "Flashcards: step through the filtered drugs one card at a time; no score, nothing saved.", "Spironolactone: Dr. Smith's class and Dr. Sikazwe's biosynthesis mechanism are shown as separate statements.", "Sunscreen family matching item now credits the drug chart for the pairings; it stays off practice papers."]}, {"date": "2026-11-07 (Dr. Smith's Exam 1 hints)", "items": ["32 new questions on Dr. Smith's hint list: epidemiology, disease triggers, drug targets, why each MOA helps.", "New questions on boxed warnings: cyclosporine's two parts, TNF-\u03b1 in children, which drugs carry one.", "New sun questions: sunblock vs sunscreen by ingredient, critical wavelength, UVA vs UVB, photosensitizing drugs.", "8 matching questions pair drugs with their targets, structures or families, for her fill-in-the-blank items.", "Reference: \"Drug targets: write it first, then check\" lists every drug-chart drug with its target to reveal.", "The sun-exposure lecture is now confirmed for Exam 1 by Dr. Smith's hints; the provisional label is gone.", "Exam text now gives Dr. Smith's format: mostly multiple choice, a few fill-in-the-blanks on targets, no essays."]}, {"date": "2026-11-06 (optional practice beyond the assigned slides)", "items": ["New topic \"Beyond the Exam 1 assigned pages (Dr. Sikazwe, optional)\" holds his 23 unassigned-slide questions.", "Those 23 no longer count toward the Exam 1 pool cards on Weak spots or the exam-date review timing.", "Practice papers draw single-answer questions; the exam text now says the official format split is not announced."]}, {"date": "2026-11-06 (Dr. Sikazwe's assigned pages)", "items": ["Dr. Sikazwe's assigned slides for Exam 1 (11/06) applied: 23 questions outside them now stay off practice exams.", "Those 23 stay in practice, each with a note saying it is outside his assigned pages.", "Atlas tiles outside his assigned pages now say \"Not on the assigned pages\" (9 structures)."]}, {"date": "2026-11-06 (reading links)", "items": ["Weak spots and \"Explain more\" now point to a reading section for 397 of 555 questions (was 35).", "Sikazwe's Lectures 3 and 4 questions now link to their Tell apart and Reference tables.", "Lecture 2 and 3 questions now link to Dr. Smith's Lecture 2 and 3 tables; Lecture 1 ones to the objective guides.", "Fixed links that sent some IL-23, salicylic acid and drug-class questions to the wrong table."]}, {"date": "2026-11-06 (Atlas layout)", "items": ["Each Atlas tile now reads in order: core learning, also in the lecture, then collapsed extras.", "Slide and transcript citations moved out of the tile text into a collapsed Sources and verification part.", "Hydrocortisone and cortisone: optional \"Deeper understanding\" on the two 11\u03b2-HSD enzymes, not tested.", "The structure count follows the search and the reference-only filter; an empty search says why.", "A one-line legend explains Core, Reference only and Needs verification.", "Hide names: headings, labels and drawing descriptions no longer give the answer away.", "Hide names: reveal a structure from the keyboard (Tab, then Enter or Space).", "Long structure names no longer make the Atlas wider than a phone screen."]}, {"date": "2026-11-06 (PubChem check)", "items": ["Every Atlas structure was checked against PubChem; each tile names its PubChem record and status.", "Compare structures names the PubChem record of the lecture drawing where one exists."]}, {"date": "2026-11-06 (Atlas refinement)", "items": ["Each Atlas structure is marked Core, Reference only or Needs verification.", "Reference-only structures are hidden by default; one button shows them.", "Compare structures: where a slide draws a molecule differently, see both side by side.", "Hide or reveal the shaded key features to practise spotting them.", "Clearer explanations on the sun-exposure questions."]}, {"date": "2026-11-06 (Atlas and sun exposure)", "items": ["Atlas tab: 91 of Dr. Sikazwe's structures, drawn to one scale, with the taught feature shaded.", "Hide names in the Atlas to quiz yourself on each structure.", "Dr. Smith's sun-exposure lecture: UVA/UVB, SPF, MED, sunblocks vs sunscreens, psoralens.", "Some structure questions now show the drawing before you answer."]}, {"date": "2026-11-05 (Lectures 2\u20134)", "items": ["Lecture 2 (Smith 10/30): retinoids, calcipotriene, calcineurin inhibitors, PDE-4 inhibitors, keratolytics.", "Lecture 3 (Smith 11/03): acne antibiotics, tars and anthralin, methotrexate, biologics, JAK inhibitors.", "Lectures 3\u20134 (Sikazwe 11/03\u201311/04): structures, SAR, prodrugs, CYP3A4, hydroxy acids, retinoids, sunscreens.", "New tell-apart and reference tables for each lecture; Exam 1 paper now draws from both professors."]}, {"date": "2026-11-05 (Lecture 1 preview)", "items": ["Lecture 1 (Dr. Smith, 10/29): skin structure, AD, psoriasis, acne, nuclear receptor binders, steroids, retinoids.", "Step-through figures: the acne lesion cascade and direct vs indirect nuclear receptor action.", "Tell-apart and reference tables for Lecture 1; her polls on the major pathology of AD and psoriasis.", "Exam 1 practice paper is unweighted: the faculty have not announced a split by professor."]}], preview:true};
-const IMAGES = {"s4-polleve3": "data:image/webp;base64,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"};
+const BUILD = {stamp:"2026-11-08 15:07 CT", built:"2026-11-08T21:07:16Z", questions:596, images:2, changelog:[{"date": "2026-11-08 (Dr. Sikazwe's Polleve-4)", "items": ["New: his Polleve-4 poll, how many alpha-hydroxy acids are in the figure, with each structure explained."]}, {"date": "2026-11-08 (Stars: what Dr. Sikazwe said to know)", "items": ["\u2605 Likely on the exam: 35 more of Dr. Sikazwe's questions, one for each point he said to know, remember or watch.", "Among them: steroid shape, numbering and alpha/beta faces; crisaborole in the skin; hydrocortisone's half-life.", "Also: vitamin D organs (his 2-point take-home), sulfur particle size, retinoid caution, sunscreen drawbacks.", "All of his stars stay on his assigned pages; topics he named off those pages get no star."]}, {"date": "2026-11-08 (Drug list: every chart column)", "items": ["Quiz me, Ask about: new kinds for chemical class, Rx/OTC, potency class (steroids) and brand names.", "Brand names are practice: Dr. Smith asks by generic name but said you will need to know brands (10/29).", "Class \u2192 drug and Indication \u2192 drug ask the other way round, only where exactly one option fits.", "Recall: type a drug's chemical class, Rx/OTC, potency class or brand, then Check against the chart.", "Chemical class cells that are blank, one row off (p. 5) or in conflict with a slide are shown, not asked.", "About this list: how many drugs each kind covers and why the rest have no question.", "Recall's example now names a drug outside the current list, so it gives no cue.", "Methoxsalen's psoriasis indication is Exam 1 practice (Dr. Smith, sun recording); DPAW 14 is an extra source.", "The antibiotic class is now named \"Antibiotics\" and is never offered against the antifungal-active drugs.", "Brand questions never offer a drug that shares the brand (Clearasil, Fostex, Solarcaine, the Oxy products).", "Zinc oxide has no indication question: no other condition is safely false for a skin protectant.", "Topical steroid indications: only options the slides make false (acne, sun protection), with the reason after.", "Triamcinolone has no indication question: acne is not safely false for it (About this list says why)."]}, {"date": "2026-11-08 (Drug list: the original chart)", "items": ["Drug list > Chart: the original drug chart pages 1\u20137, one page at a time, with zoom and Open full size.", "Chart: type a generic or brand name to turn to its page and highlight its row (both rows if listed twice).", "\"See on the chart (p. N)\" on each Browse card, after a Quiz me answer and in Recall opens the highlighted row.", "Chart page 7 (lice and scabies) is marked not on Exam 1; the misaligned columns of pages 4 and 5 are noted.", "Zinc oxide on the psoriasis page: its lecture role is protecting the skin around plaques in anthralin treatment.", "Cyclosporine no longer shows an atopic dermatitis note; the calcineurin class's use is in the Guide."]}, {"date": "2026-11-08 (Drug list: three study modes)", "items": ["Drug list: choose Browse, Quiz me or Recall at the top; every matching drug shows at once, with no Next button.", "Quiz me: multiple choice on each drug's target, class or indication, answered in place with the source.", "Quiz me keeps a score for this visit, with New questions and Retry the missed; nothing is saved.", "Recall: pick target, mechanism, class or indication, type what you remember, then Check to compare.", "Drug list filters are grouped under one heading with an active count and Clear filters.", "Quiz me, after answering: a use that is off the chart but on a slide (cyclosporine, zinc oxide) shows its source."]}, {"date": "2026-11-08 (Wide screens and the tab bar)", "items": ["On a 13-inch iPad and MacBook the page uses the width: exam card beside Start here, two topic columns, a larger slide.", "The course title scrolls away; the tab bar stays at the top and slides away while you read (Settings > Display)."]}, {"date": "2026-11-08 (Topics folders)", "items": ["Topics: each slide deck is a folder that opens and closes; folders start closed and stay as you left them.", "Topics: the exam's date, coverage, format and bank are a short card of labelled rows; more facts fold below it."]}, {"date": "2026-11-08 (Engine update)", "items": ["Topics opens with a \"Start here\" block: learn a topic, start practice, review weak concepts or take a paper.", "Dr. Sikazwe's slides outside his assigned pages form one Optional topic, listed last and kept off exam papers.", "Switching profile during a practice paper keeps each profile's answers separate; the paper waits for its owner.", "\"Review answers\" in a practice paper opens an overview; nothing is submitted until you confirm.", "Repeating a targeted drill asks the same questions again, not a new set.", "Empty pages say what to do next; counts say what they count.", "Wide tables on a phone keep their first column in view while you scroll sideways.", "Step-through figures: arrow keys, larger buttons and an Enlarge view; Atlas renamed \"Structure atlas\"."]}, {"date": "2026-11-08 (Narration player)", "items": ["Guides: \"Listen: walkthrough\" reads each section part by part, with the lecture slide (or diagram step) beside it.", "Walkthroughs: pause and resume, previous and next part, speed, browse slides, open a slide full size.", "Walkthroughs remember the part you stopped on, on this device, and can continue into the next one.", "After you answer a question, \"Hear the why\" reads its explanation aloud (also in a finished paper's review).", "Every walkthrough part and spoken why is recorded; anything without a recording is read by your device's own voice."]}, {"date": "2026-11-08 (Guides and Topics by deck)", "items": ["Topics now grouped under the four slide decks, each topic named after the deck's own section, in slide order.", "Guides rewritten: one section per learning objective of each Smith deck, plus Dr. Sikazwe's assigned pages.", "Guides: drugs per disease, each class's target and why it helps, within-class differences, interactions.", "Guides: boxed warnings, side effects and contraindications by drug, each with its slide.", "Guides: sun deck objectives (UVA vs UVB, MED, SPF, broad spectrum, substantivity, sunblock vs sunscreen).", "Guides link to the matching Tell apart, Reference, Drug list and Atlas sections.", "Tell apart: new tables on sun protection and on boxed warnings, pregnancy limits and interactions.", "Reference: new sun table of SPF blocking, skin types with their SPF, and substantivity by vehicle.", "Diagrams: acne cascade labels moved off the arrows; nuclear receptor figure redrawn so the bound drug shows.", "Guides and Tell apart state both professors' UV band limits; each professor's own numbers are keyed.", "Dr. Sikazwe topics now mark slides outside his assigned list; his slides are numbered by PDF page."]}, {"date": "2026-11-08 (Likely-on-the-exam stars)", "items": ["117 questions starred (\u2605) as likely on Exam 1: a prediction, not an official list.", "One more UV question (slide 58) moved to the optional \"beyond the assigned pages\" topic.", "Topics: drill all starred questions, or only Dr. Smith's or Dr. Sikazwe's."]}, {"date": "2026-11-08 (Drug List)", "items": ["New Drug list tab: all 79 drugs on the dermatology chart (pp. 1\u20136), searchable by generic or brand name.", "Filter the Drug list by disease, class, chart page, Exam 1 taught or optional, boxed warning, photosensitizing.", "Recall mode: write a drug's target first, then Reveal to compare; your typing is not graded or saved.", "Each Drug list line names its source: Dr. Smith's slide, Dr. Sikazwe's page or the drug chart.", "From a drug card: practise exactly its questions, open its Reference row, reading section or Atlas tile.", "Flashcards: step through the filtered drugs one card at a time; no score, nothing saved.", "Spironolactone: Dr. Smith's class and Dr. Sikazwe's biosynthesis mechanism are shown as separate statements.", "Sunscreen family matching item now credits the drug chart for the pairings; it stays off practice papers."]}, {"date": "2026-11-07 (Dr. Smith's Exam 1 hints)", "items": ["32 new questions on Dr. Smith's hint list: epidemiology, disease triggers, drug targets, why each MOA helps.", "New questions on boxed warnings: cyclosporine's two parts, TNF-\u03b1 in children, which drugs carry one.", "New sun questions: sunblock vs sunscreen by ingredient, critical wavelength, UVA vs UVB, photosensitizing drugs.", "8 matching questions pair drugs with their targets, structures or families, for her fill-in-the-blank items.", "Reference: \"Drug targets: write it first, then check\" lists every drug-chart drug with its target to reveal.", "The sun-exposure lecture is now confirmed for Exam 1 by Dr. Smith's hints; the provisional label is gone.", "Exam text now gives Dr. Smith's format: mostly multiple choice, a few fill-in-the-blanks on targets, no essays."]}, {"date": "2026-11-06 (optional practice beyond the assigned slides)", "items": ["New topic \"Beyond the Exam 1 assigned pages (Dr. Sikazwe, optional)\" holds his 23 unassigned-slide questions.", "Those 23 no longer count toward the Exam 1 pool cards on Weak spots or the exam-date review timing.", "Practice papers draw single-answer questions; the exam text now says the official format split is not announced."]}, {"date": "2026-11-06 (Dr. Sikazwe's assigned pages)", "items": ["Dr. Sikazwe's assigned slides for Exam 1 (11/06) applied: 23 questions outside them now stay off practice exams.", "Those 23 stay in practice, each with a note saying it is outside his assigned pages.", "Atlas tiles outside his assigned pages now say \"Not on the assigned pages\" (9 structures)."]}, {"date": "2026-11-06 (reading links)", "items": ["Weak spots and \"Explain more\" now point to a reading section for 397 of 555 questions (was 35).", "Sikazwe's Lectures 3 and 4 questions now link to their Tell apart and Reference tables.", "Lecture 2 and 3 questions now link to Dr. Smith's Lecture 2 and 3 tables; Lecture 1 ones to the objective guides.", "Fixed links that sent some IL-23, salicylic acid and drug-class questions to the wrong table."]}, {"date": "2026-11-06 (Atlas layout)", "items": ["Each Atlas tile now reads in order: core learning, also in the lecture, then collapsed extras.", "Slide and transcript citations moved out of the tile text into a collapsed Sources and verification part.", "Hydrocortisone and cortisone: optional \"Deeper understanding\" on the two 11\u03b2-HSD enzymes, not tested.", "The structure count follows the search and the reference-only filter; an empty search says why.", "A one-line legend explains Core, Reference only and Needs verification.", "Hide names: headings, labels and drawing descriptions no longer give the answer away.", "Hide names: reveal a structure from the keyboard (Tab, then Enter or Space).", "Long structure names no longer make the Atlas wider than a phone screen."]}, {"date": "2026-11-06 (PubChem check)", "items": ["Every Atlas structure was checked against PubChem; each tile names its PubChem record and status.", "Compare structures names the PubChem record of the lecture drawing where one exists."]}, {"date": "2026-11-06 (Atlas refinement)", "items": ["Each Atlas structure is marked Core, Reference only or Needs verification.", "Reference-only structures are hidden by default; one button shows them.", "Compare structures: where a slide draws a molecule differently, see both side by side.", "Hide or reveal the shaded key features to practise spotting them.", "Clearer explanations on the sun-exposure questions."]}, {"date": "2026-11-06 (Atlas and sun exposure)", "items": ["Atlas tab: 91 of Dr. Sikazwe's structures, drawn to one scale, with the taught feature shaded.", "Hide names in the Atlas to quiz yourself on each structure.", "Dr. Smith's sun-exposure lecture: UVA/UVB, SPF, MED, sunblocks vs sunscreens, psoralens.", "Some structure questions now show the drawing before you answer."]}, {"date": "2026-11-05 (Lectures 2\u20134)", "items": ["Lecture 2 (Smith 10/30): retinoids, calcipotriene, calcineurin inhibitors, PDE-4 inhibitors, keratolytics.", "Lecture 3 (Smith 11/03): acne antibiotics, tars and anthralin, methotrexate, biologics, JAK inhibitors.", "Lectures 3\u20134 (Sikazwe 11/03\u201311/04): structures, SAR, prodrugs, CYP3A4, hydroxy acids, retinoids, sunscreens.", "New tell-apart and reference tables for each lecture; Exam 1 paper now draws from both professors."]}, {"date": "2026-11-05 (Lecture 1 preview)", "items": ["Lecture 1 (Dr. Smith, 10/29): skin structure, AD, psoriasis, acne, nuclear receptor binders, steroids, retinoids.", "Step-through figures: the acne lesion cascade and direct vs indirect nuclear receptor action.", "Tell-apart and reference tables for Lecture 1; her polls on the major pathology of AD and psoriasis.", "Exam 1 practice paper is unweighted: the faculty have not announced a split by professor."]}], preview:true};
+const IMAGES = {"s4-polleve3": "data:image/webp;base64,UklGRpw0AABXRUJQVlA4IJA0AACQAgGdASowAq4BPm00lkikIqIiJDIaKIANiWVu4W8BOM6NILiYD/VdoperqH96/bDngOhYg3Hnmics/73++/kr8wv7B/j/6x/UvhB+cP9l/Vf3/+gD9Rv+f/hutr+3f4q/AX+cf3T/mf5T3iv8T/s/8l7sP9L/pfYD/rH+G/5nrh+w1+3nsEfsf6Wf7U/CB+yn/l/0n7//Qz/Nf7t/5vYA///qAf//q5+Unbt/nP7n+33n7+QfQP4X++f4v/o/3X3GM+fajqQfKfvZ/J/wPpD/yv8r49/Ez/e/x/sF/j/84/yn9u/IXjUQCfof9/85P8jz6/hfPrxWP8fZgfY/sM/rr+vfa4HLpXqVscAIp9cdAVLpWxwAin1x0BUulbG7czedBuOg+AHOg3Gq4kYx5MyZkKQbHThjk1hNyW/m94Ac6DcdB8AMztZl8u2vsf/96lQ5fnPgQ++EQwNBI4in9UzTzb+77+G2Y79Cs9oYCbjoPgBzoNuEj2mwIvXZLYJdRwm6Pe6Eq2mUb0S5a8hFgGbQT8jkPgB2hgJuOg+AHOg25b1LbDeUjHt6diwL8uCoONiWv7rV4ebX9BuOxOVVZzOaNx/HvADlt/imGvhToRsV/9/RT3D82/xV6UyhjFolxcNtIC637Lb21G0T2q5cYwE0elHO1qv//mG4FqjyQo2z7VF5tJf74UYPUY5GD6+Dlagrejd+JJuYE76U3+26duCtoLVJd9T87n8eidewv6DD3TDFGHaLKXR8fTJlxLmWsqYLEyJY7eyIz4M3+WLRuu2H5cln1IU290Zlpe/NKccFBAWKTDIBuZvPCw17RPRkqbm/FP//17eyKWmQQPXm5CDY15jNZ18dIVs1+RcZRzzQNSRa2Q3N5UqnyktR/GPtA12rrCuMLQoD2zVu4tZEW5I2qjA9VHACHCNTgkryaFvvfZe/jXSBaP+9h1ze2O2ultqXX/5Pw0HHxJY4XszGoqz3m/m7s4AK0j3B6Ll8q+f43RNBuOg+A7Gq6nA4v3G7Ajnt4iS1C2szXZFnZAgLO524DPXhRl9kNnouaxj7VEOQPox2i0h6V+u5Z3eM5sJWC4p2DQVS0JDz2cSLgJAepK8e5/YBU6nRAMY/2Cy7vD7XK6U1svvvfbPFvOg3HQ9qqrVtmEdmO1PBA4buSg3aPnX38rOOpPjqt/ACoX5O585RzRH/msbM5o4lXpLHm0bDfWHyn9fBGcdr5tlb9ijOxxJQhPKPX9v0lCTbkogm46D43M3kivcNfcrJ/QR824qVlqxjc8XJt7uxkE4dN+YKAajoCkqEBjqVR92TG0zKoo+OVqdtkfSKkTiAh+QeP9lmKS95rbgBj/z9dviWW8fNH2/224dOu2PKXoWl7cUbEgiVlPzI8Ri8aLU48l3iwWdNP7Swwp8nul7D9pv55knJHYNQvs1TTxmjxOWDSjZFDCf1uwdNlNQJOowAMfHS4H/7QY4wUK571ohgegO72lX4z4gCERr7EuHf6Ozc/NsPvIRTEySUQ+8B6A6HHSzNDemEQ+MLSD4VdfUXpb9tpj+vL9g+q1iTvJRBi9aEMOMOR7cUMzlNNpO/acv5BNbooMP1hcMY4zr5yy9PrgJ+cHJmawSf+Re6r7emF7ugbuAxP24fi+IH9QTysaSFb24ykpbyrIn7toxHPwN6R766I3tZ9Lz+XEkLakkqaHSJVwoxRiw4tms5NNUcv7dXG/tmufPP0qqzzotaEk9tgFr3VUW6LwpW96BTo51loI/gaTi8gUoK2UU1DY+fbyRze8AOc/qaOCIeGgnJf+VLaHRE9//9LW3AD2cI2ktVcY2/m94AmUpOgnCbCTqq/8CJ6OCjqBzQYiU7If/LEnKKGrvn/50Ao7qPsGqwK3FVET08+rSxrVhN7aVVadq2arcirQoiSsPr45x5mPNzfz6DcdCDoO4J2cgewFkIHHdHeJB8L8CeVNFV1ciZfvh4RjrfqualV4NxpYs7N1i4ox1BUsn6tjQ9qmse/k3GbSULxU7vqx4pNwRyB8rFzG691k3vADQ9XAp6TnRCCioS1gwZCDFLGetBbjybtzIj70BL0t042uojcDsuaVQengVHHQ9qqXw1RWZl/eYYUEDfMLxCb79f/lDv5Nrgb6YXvRPwS3u/6qcxiHXl+X85FKYfvoBMfwvO3Xk2sNAL+nD3J8Wj7R/9CxgWlrglIPEg8G5LfzWAKvuMoZ9SOfLw4gBL5H/d2OGnWBcJQpSUpY/GwoUHz8+lerQUiitxo4zSIEoObLe3O6GMbiqrPOhA8Fs5hYYx3FDAJwAsI6d3TqnExlVR3bz4WoXFkyT8owbCfcclA99FveKLuUMYOY6BJqvBuOg+A7Gq8V+tXKzQz85b9gCoqVBUDpbS/l8Re5sr+dN8D2VYGUpc8fXKf3hNa+3ICf/oX18eDRxcjONQ4MGMGL1t+9T+gbVTv9PADnQbkt7fCTEOIskdXlMV0Qrs0rrLVArlaCC2s5sva18pQd4bygXBdSSSVLGwLxzGEmOsYq4um562RJbvqitPfCSNmUr33E0tP6Rfk3rta4qUGdMXyzzxLTHZwiNJIDayPh8aqrPOhA7nSHpg/XC2jgrFYgoEj4zxH8G3HXGfSdbZWZvGII9RVVBcXdy2ya1kzcLqefGITvTf3gT24dtpcIffsM0gM5zW987E/tNlgfhCm515D3gBzoQPBLOjC2Zf7OOr4bLxcipbGGfk4Zaq/5gW4jarwbjoPgCkedBuOg+AHQEjjoPgBzoNx0DwAP77jfK6L33Z6XBzoAAAGMRZ0lEYJUZNaRZdiIfJ/Rr4WmpDOCI7YCuEPKbN4e58y+GNcOu2Pb2/g5ozseFjmVABxORIkGays/sdF0FKoJcT2p2W7/7ectHJFA2mwQoJ2uUYJiNoZjUhGPhlHw4WUVoJij7VshKQKfrFqF67aq7IQz8Gc+1T6JeGZ8cJZ+YDPdTzOTpL7KzJD0YhtGU5p5bjkFz+XjA3xEqEyjXEwbFNBGP1k2uS/lGb7kDQtwiEeS/BhYNm54kb0X9kg1hatrG66r8nowSVv08AbLfmW66U+nEviW8wlaz8UlvufZWT+Os6n1mycOdJ6devmvL4foeA8Q/MV1e306fX/t9N/VSEy5Z9FGOAAmuNbrpFG/10Dcn3a5XRJaz8XC+MXZOYPzGhcnvO9TXf2PCaxielvjf8GGZTERQTGb3JqHzSEc8P6B5ScCmWlOYaygwe5V/DqacNofygB4GHdSqfnPePN3lEIW2ZOlvBoH7Oa3Y2CLLqysAcJ8jfeQTL+mO9hVyg8nDF5f4RH0r8xhMxk66CR2nBu6fE6U4jraTCmei8AbZbQBOBjjoCPq5IBpULRhuhGdT1Vj3Wqlb66e6vgx5vbsx084jbtYsnZOYp/2nmqUDThj0R96nPL+VjtGt7spS4BpHSsRGFWAfT40u+tqdpgrf+OjDqotM+YXYtn45YBYEJXHiPOY3IEtSx07bR7QuVJoHwEgB8gpGkUJ2hpPoHZdQiMCw8hEntZ3N6/nLB2+xyEOFIk0STV7G4v0UG5dcHvJ+bE9j/8/P228rc0AqF0QS0GjjJChOZ/KyGHAU+mpghviXnsFeN12a9oE4o1VWkeSd9TGr+KA2c0KAtVAxXhPOhNieKEWPTloojtIbOXxZwsJtIOAKLZp4BCWn8pqjybxdjUJHntgvy9zA6F1pp7PWJ5n1FUMUI7r4U1F/W0zr8aJ/bg2pQsSqhGiN3l2qN9KRo7LiCQJqTM0QtzZ1aU62kikUpJVZWO6Wkhyt5FZiIXCH6ZuSZ+9hXO2I0W+h2sUnc3riA74P6YqYIGFqd4CnUGBnoHzfGdGD2D1JFa8NMtGIzL4iou4InOBCTNApCr6C3Mwk6YxcugGYEc3rLgA9U9qLjA8Cj16/5rw2hwBilnLW8F35HWuveb4r5JeTArJoya64E3dpoNrmeiPfUTyYOQtieQID6wvIJeQlMKTd1KXopQMZDRpUe2OiRn81oWt0gNFEhbtfhv15aObMsOa3mLuHqBPLlBiQDzNbn9rFa8tRCnpQLCCg+k7C1QK3Y4/t6TBh+ACq0FWw7ePeJSutubuG61E+e7m/9dMw/4JHw7HfDSn8V/xk6DL1KxeGIQN7Wg4kdu77Or6SJt4Z01xHblSrg9Uvr5GeIawvkTOspN05LWhbtjb7QRrdSPEPoedNo04yEsna05d5HvjsBmV40+mNAoF0gRA9wRILOlYXM8PQlbDmJ8kb7Ai/z3sy+lBHH3J7mMJ8zQz1iYF2birhvTIylFEwXRK7BmohIXC3rIyMPy/QFuHOtnP8RsXvhj34JBOz/LG4KgtosuUoYiWu5hOtp95dR+rbkqPISOnSAtlMLYq+026zPfQFYnGA86lYA0FaNnVFEu7M6oTmj3W9kynmeyuUd8g0Hn9/4bppoY/7cD1QxK5UoBkzfCuTSOSwECQ2sbmUSRVs/A+/TULY8fyPa0bOPwM1+lU0JPCZO3tkHEyHNsvP6KUCntO8iunUIoW13r/6jjMrnZyFxx/QV8kgFMf1JVVEr6jmg6JLhbRI9Qht0x1UpM16S9cgkw/uHsnG72rLBoHpOfhHhAb3FOKx/nZqJPwshxZJSS2572leRs7ms0VO2HYL8gVO04aq1g5BysoPM0WhEUk0ZV0+KlHcwhzfsc+U+9ShaqFEHp06EPfQgbKdKjX58obaRAvkCkDfzAJaiwqLcn8YTdnRefPPL4yPTYzRfc5NzFrCtWeKh8X+Fbnuxna7h9JrAz/HzSpSllCmIxsFppWuytwp767OTmzh97X40EjTbmfHc3QxAgO+D5gmvpbO/E3Ox24KqV6pTE6Z5r/n8Gts3SG/ipZRkN/LFyca3eS4iNAPz43K17ieiOzWbloaVfDxnfY/GELreFpa0l9Mf72XbaO9XvqlpvPL10UPdqqY0iXkA8lPSR0ZgrN1NVa1LnxcThxbiAlcE0xCp9NXqfbNrH1o7yDS526dwLDk4GuUdDxDHzqB1zPJa5PP8hFQwU03yYTqOLlEjhr8H6k0J1IRbYUFmCpCEIQ6FKH+HMesPMGeMw5Vnlm1h6fSZFd2imAXmGvnQ2J8gNdNXk1Mu/OrZm/fmoDYjJIui1cByr5DVqfpZ1XwoKbaFjUDY8ljFeQ9Nv2/oHAxJDMHQ04fiZSDR53qPgStqMEu6XytR1lIA9bcvjRy31eRTmKecXfmQ7YXqKuYUyHE2elqBI+tQkT3qgvvbAd6OTbv407gU/uHUU/LrFd/7LasJWAhnWEQnff8xXk2QJcGhZAAl9Wnl47B1ZTCedQk+AY9xFN3u3Ok4vWZJCrPdNKlC26UvbAIo6qvPV9x2EM1UtxLYf5En990e0IQvAVe0zu8O7S+jelJqv54MRAfGejK2pPHLvcXRcSe/2R97UAgZkiKTg1se77fDurETHvU0rqLagklnULowX55j02jvGQ400Dqkbcm5kac8q5jRhqhRqV54IJW1+mXfqIKulSVbLNaMbHUEnmQsii4w1zcLJ/D4M6ZDoZiZN3OyT01E2qyehGPeSBvs2sTTsRKCDVKacCr/L5FoLmtjO1HrYqOkPDGs+Y5c6wfbavtPXhzRlglHm68COjphPMyk8WXInD8b+mzAKrpWfiL9loz1iZcLJT5VMvcSz2XEiJLYw1ik5kUOouw0OGBUl44xtqoPFnxgYr4TLAjgjWzkW/MJ1x6RmxJatjriNPLRl4D5EAn6d8RJB4aCk77xinLVR/1HhrFOv17BmppgFVVg19oWIbyvw/OjijxpZXlXnUlrPbrXIhi2zZqMmif8MUkGDpN0ZBX/4vdYuBjqSfEx1ikXsBSnWgmli9ZbtZroiNj5aBVbO6503+lss92rJCnpr2MwDSAcIpZmbTa0CCJriMDiXKwdPlTXd8XsP3S6CaQpMu+JJex0KGnB4KeJL49OE6GOU9YT7sBCocTMJnZEYNUugO1FZtIPidn86MMq0XbBCglWcNKsiRCn9m6krKHxNYRUnntQ3Y4LHk5rLltNVddo0JDBJlEYguNp6VkGSSKujSFudGk8wVDM8WQu5IGeLacFJuqkNCiaN7gOIJG+A8uJbvQoYdLN442d1jwPj1FSnrsdg0pPjDtJfM1Y+X9aIjHLQxsK4D/JKW1uNF3XxeftGnOY/TZ9CB2dwnN53UWB9g/CazQkXWb8GlvzFCZMxLYQTMoXjKudP9Mbf05f4Mje+gsdu8xsXcPRub7UwTUbV0xOeXPWkI3udmwyfXN5qvoBzYoXF4BP8UP2JVItSQR1rk7cCGneIfxkJfKw2jB+jnqWOikQZj/eDSMpfyKvXrh/m7LnY47IU7yglRFLaa2HB51cq255oFdNqgfnuGABTdufnDhK5037B5hsYxBXplvoE/uL8b56EGDGw/GdH9k8zLZuFIWQyGqsUyoJJ7gNN85fJbtOMJ34oeGn/DMIxl/yX6KBfqYgCwNfv48uxFrFRYMNwEq1RZNkhARzJTsRbmTfIJd8+RKFjeqxQqtLERe0vzEkfuyPjreIvm+9YAhUPU6Rs2rGHvHa444WEyaFRLAmcKVr/LeKWj8ExR4rUBXzy/Zgm5nyInDWqfgLXx1eOMd2+ApbxMuA4vO1Qjd4Y4hLxTQB0IAnJW+MQHgcDMiALPgzTn7guKMFMp/u6fOqKFk6TtGwp+x58fiTrCPkpeqQ/WR6/5P4pqzFHBVEoI226A38NhN4bN698qEeAXP5FaRKNLJvo2j4PMVFxKH6uMBwSD2nBEnYxlKDT1w0b0z/UzhGciwQYXeI20tXVSUREr5qLORh0DTRS3Lpw/b/zyN8vOV9LQA3pHGRTiFAyEGE7w/dIDLIfnfqcTuMq2HVmu6phLKkOm6DNaWws6ZbWvIMG/uV1gNRwJrKn7RdRpefONsse6F5PIrf0VwbHkC7Mv3jJbN/AmqRRj4jKPMs1Rbzgzk54/oqFZBr20wjSvf3Cf5pf+vL4mHJoXvztmdI7ccLCH0ab1UVDmCwmEtfhjLz7A+52A8F7TKgnu98KtoRuuWCU99/GRLdLSwDNnuXg10IeXPG04OMlKK0O85Rp/QbrB9+Dm7SPGsXDXs03sSB9MeToRTVDeEKrKsl0Jak049DP4ZmwZwINWiqcNW7NQNfdQUtFP8Al5nRpskJGHlZdWU93p1hiEulrRb9DK0viLtHP2wi8Kiz+d4UnauEYTeQ+czzEaBPO5O3oednZ+U/WmJq3ZbWqMfy5D2YWljVJ99WGE3xTDJ+2pB+VDTzHnGPZmv8rjgZAafd1WgmL3Mj6HO/BRPM0iOc78q3BHyldyBB0wdYb0jBO/cBMdzJK96XPIIJ7Pnq367FDWxTBMLpG4A8YDvCtO1bTocDGUCJcb8I6TG/f79TsJF1sSH2xKOdo5afBJr47wN16SOPr3uldN/XNAVjqynE2A4m+3gOSVnQyA5fW3D0ATkJVCwySqlugIKltJlk3LF/wNkSypK0GOEttNRWL+NQPxdjSLCCbPKa5O/K+hVXiy03EoFmvl5P8pvK49pLu2azu30SP/opq0g9YMc4Oht7AM7gp1+rduK4wtNSSNmSnDjwX11ga/yfoODgg+/m4s0jGVBxbDFyplQ+ooybpID7cizFCMg3eqNz9uTAjm8pex7mYG5p3eiBAtAUxv12QmT6g+fmJmSg0kK0yH18qcVyfL//o8ZDbXF5jFnjC3JgQ0CdZCPNUCKgAGoRlkmO8LK6EB/IOFtIdNbrZQO+Inaxgvwt5/sg50Nwy1Ti6bMByrSYWNXA4e4RYfDzjjhm0gXSDRpDngX0pzRpBmCUIDC4Gi5lEkOFwhNdW1Y1iEY90LcZ7ChC5N4++75k5lPJUkd2teqEcPebPSJOiHH6rzgsLi5lHR7Cq0d8ZVtqp+LyWq1YfzdYlopV2de/xOBGpTxIsFXOHO31a5faYhdXC39LGY/Of9YxHncotWSO8noa4zVKrayLEHEWC7ov/+fVxB7g4VEPj8gcXyunYu/mGiOrHfGEZqRYRxpmGONuR+cjyRX2xn5kd8l+kM/kBY8X9qCUUmdFla3DJ5DjcMepTQDNepYYotc3qsejwimvS30lBUmfvLaPXwzMP8dctps19XdmiqMcb3cYwFtgtyW8ljMr3Bbs8JsyAPqN3e7Dib4TlLq/bZ5o+bFAuNk7TiUOibX/XLGPeJImNgd/+S5fYV5/cS0QC5Bcqjm7b/zyXp9bN9Y4Jfga1fRn5EkPr06SdMqrRUTai6DIKYfnB/2a7YAkhRsdQ2qHToamrY/sJaKdICM17ObFcT0sRHJ3TOzYM6k4HhGE3CpVsenWGWaL6iV/md9zE1i7Jp8xcSIvYxeRbmdGwen3B+8AnSoVEPoZhleAan0D02ZAr3doF82KR1MBIU6WVFV8q7VQ1BbYCE0Fzo3//clcmAcSuX+ir/WpjmnRTmdDI94p7DX59leScyq0v/l0g0q7gv8EbcIR12IQdkPiMVdxzNLAWMZzFwOAazDGACAlF1MkR2yXuQqPDwBS5isDUVLMIwD/EGPi6YngtGRsoE80B2Z1/fD2/SWXq6qN1m+CAD9uzydvOfMaAwwdT6habcSa0l25YtC/6mnhsbbHy/PaUqoGYQVPR7xykSGfx3ey/tjwKvV2RByXB+bqAhEYTPm9Xyn0oKn0jc/PP44CQtsV+DJbVA/HpAlvodaEYfWwatF+AVHblniTCkjhKbMHh4sFM6TvAgfyKWuR9NRgPZWs6jcdlDQ7Mlhjp0nSHaQ2QYPmIs/VtRAGnkI/X+2zxpYAC2STejJaT+GTObXXnRzz7t3ImBfTpy2jyDXkUeqOe2bz8RxM+cP4JOznLAyvQ355YJXXXDrAg3vkrjIS1ge6L3/imMucc6GnXfvgNWN/+tehqx9mR5tbwP7jw281iHNm+gwhNGgRQc9OaNc3VhAjsypJ5F3hkh11fsjEWWWVi5TdgpU6CsLEeJAZ71k+jN4myLy06WwycfghqMCC/vrEwuxVEcXSz5ddoI5G3+vyrEttWgGO41Dj/NUwXghmkwoxjYbzvy2TGhPctChu3fHX/nefIOtGNr046Y4XLDnyemeSnSvHs1y6my8OZOxfpMiUsJrjqhI8alEUXt4+y12W2TdYirkpI+a5tCCey/APPiOEJQs1TuK0IOKsF2jlwHDPl/Y7bJMhJ1ZhmTvrY0MvtDIVjNUBlkqxuTGxf59fzCsDuqRi1UUPs5S4oCfqH0LvP85MtPH7yrGSBfyLY6/ACTgvyfxruWsW3ByjZit8FO0mYqSAa9afjGxAtYe4ocQ5eTUVgqYdKpq++xGqtfSI/XX1FImpwgHbU4iyKdNXYo4G1tWCL4c6FuvPixVl5/FPDaWSw5vTaHcEQub5JZcU4ixKyBS2FaL1wZ+DlV+Z7WeXV71N0OXomiQTzSbp3+KA7f9vs6Lsl3dkBLSi3J4kGswvk9upSZJ/SzYNDEhnAFYRk/Gf/Jt+CPR/ONVKcbI6qqTCAOIN7NAOdnSywqGWpSCw4Vdrgtpdm1IfH3+wo5Fz3HEEsCdnaii7Bska77jwRwy5xb4vBABRQmUX+D7L8sZFodQhZNe1dh066TYaXYaARjZG6xrv7RfClxRXN29p+sDShglUCJjA1lZOCyPFLzwUkwDHcpVuGK6R8HQKzd78sN5T5Gah8aYt7rd2S7R643DLtfmYYm6kOvH2u2oj7N/3JYLpLQIMSJ+yHFkIVW/XbDV7rlTDZZQvqB65ej3Tr/j3Rrpt+HRlZLrn8J9X2LvaXxWkpD+zIN4vR8R9LsmDoyJsrz+rVXL+DpHTevGVxbzFcL4Q7T/vLxDjVHEiaG1C8sDPdO/It6vMiyPQozyiHD9IrDF2+4l3xdNtivy2RZfdjcnO0IZF6dGBvJxTrXO4GS9J+3nw+2Mz6nWR6GdA+CjAaV/rlDF+gvSiqBFm0Tlx94DqsG0kvQ9pXatfmaf4C1WLqOkzqOfN1o9/HbAWAWNDE/tLEdV5IqRlZ5OxM8Hh93WST6je27TYQ3Ab0qZEOTRQyBc8HxGB2UhWEMu2Rs1Qeupda72TllXui+PJwlpdbQ2cZT2fgb8vHXpTlx+gAiGALbA0qynnwloHtxxqg7lUESv+8csdNyFFTjFixVVtaBZbChf6atpPYEb+NKs8SqE+TaYzs3rpOKGyBP4kGQ+QbWYLSWXvGjwHMSblDzIXcSTT5tEQgMatTLO9h8gd+7kFS2/cqgRo6AJpCqqbOREOkFwh7FsemnB9raC/gLeia5MJF1a/IKUkiUUyTNT6Y63NsIBTv4so62k771NiwadE5suT4Q+cAlXfFXqn95pVbLDxxIGDcVVwUQsua76ny9StA5Qbtk39HzbR7YIARLwvNVLAaS+RLrx/4ba2DJBHXuPvajW8f6i6zSztDwEE7+c2AIxRCvQ7AAZ/gNz2LP4h15HxA6y9cc0YGRIi/ky/tcIZ3wPGq/zcitCPevZHme2s0XmH1TjMxh/5z5HS1Dd2eHn3GUBHTZx/6s+Vfo66v+2jAKzvgBIrcTxw8bLOSEwEUkfM04Ic/9DZmGjZTTt8JKU+akyh5Gn9poc7YWds8fGvbTs6EkU4FmgCCwsUCSy8UYAql7D6eJNUi4IJN1aMgCq/zScY/Y2V8s+8SBwYnkdHSaGCcyVnvrmVSsWkQyYKemdAUq7dwIVod6RbEATBt1BQVc+aVzJ+HHIJI+ZxQRv96K5KjpzoDIjzrhhSbqenHQ8dws1dMHmF0I76WYSV5z6d2CDxO7ytuBH8DJM7KQhbGX6iVejFqDNHEZIBrsU3MkSRfPPSNTDOSCPs7+UP7hFiAirM0CgpwK/BTbDb6vxnemhFCQlGtW5cfmuFLytTV76DiV8hP4m6Q3yXinTdmS4yEsHZ6KEvVrsBePQGPbx2H+MnxHSee2QZhLA0zCuA7kwutq4bPpcgD2M232tSa3ToiQxLwtxUseT01lZxrbuYNdOoa639YZl/8Hvc3OyTh8wt4ZORVua+nuK2pJqMq/BWW2EXxJAaj2FPqyTY8fENNdpavqtIvSdW95Qgbe1qP5tFY5+VtMdy3w64aTjnSRjG/VP3GqyIMnq2+TXFKSpOvcYrjgSkeFQyEJ8LceRr1kRI3wd9z1/5PROm7qapia5BwdWq2XwdsheADFq9823U5LPLBArCDqBX2DPQEND6g3Sr+Lteg3GY/Hhz35c4AABo6HMDyMRRc/weu7gw/XlsQkOAG5GCoTuw5JzeNOCqeiBCpSlx5EY3MinfvPMLTeEzv4jVAbmBEhg5sbTrKucXwyPq4lq0SCxsEpLc53WsNGw0B7Oq71lPEetGRiDM3TrsNwcjqt863J5J6fFtM3+tT+699WhjaB0NoMPGX5jYWynLza95O6Q2mmUDNudokAhLnK5wN81kqbuqxgAvFM1QJ0EycG1S0uYWlum5yMpzvinIvE1LjZ7nCwwFnG0ZE6+GvYw1+Yo6gZqsCmyHpqDGQamudzTCtnD63U2bB63tT3esGUDLSa1Ulqb41MKlymSn+Su0uxAO0PCEVkpWk6kEv4i/UlJjws+cbNjfiXPdIsQigdJwYd01GEJI47z6QXQ5vBq8yE6TL5e5rjYumiGhZCiBMlhbwhnr/d18XqmKFPseJry5JebjfLeSCk6kLLH+im4ek5QR9OeJirmy2iGr1D+F/3D/rjAP9c80cE2DKbB++++FmpbSIshJndvUN8KYlPRFVbsU94qenA7h5+76OdECyE4QSmEI/HOXV/h7QbF77yljDt3jrC3R7yctlbuFbfwZ+lG4uWMVyu5dGHOv9Kc1SO0avUO9sIqHRIPV9FQZLrM8uHaSuhfGuXA7t43q3Kss5x0PABIOK+C4RALZk/ITBApdeb+XuY4qtTsQgwv9IS3KH+EBt2hB1phRg6U+ygJ1nEItsRjEnlj8Dv9EFy8s2dI4ZzbhzjvRG6bNRmnh3xl9EXpOWDEpOmnVEa2OMBQ0uRiAyd0ce3YAdYV4wsctmgkeeDcmfd8IQ1+cW8VAHAgGhhw8dd2W9eCLKzafBOGtQZOsV8R0OR4lE/fB0XXcpIWP/veVuAJIHaL8TFDBr7wunUsBAyqDQsKcxZ7NA9lkd+e6x6gBC3zc2WiDnjYGFJRd2qaYchNImgiBxSHpm1ONwMRuhRkvk8C1wQ/O63MT4S1l9qvptbzedaFt4wJdFblOq+soGNdRNxYWHwuCSDzaqF5JVVN3f/gVvDI/9ing7zjZyu4KbqUGvLiqKQgJQGW22fcYdRPNjqqRcBLEAOCXzDJAzJnkEO0VDWeftWjnMLnJtEfjLu8VPl4rfkdqqhT+e7bA/Uu7mgACZ2JBPxNTkL+SON+ipW4xwQWZQGYV9RzZBtUkQlBW7J9WKjv2ugirb8pJbULea0wKywrYCPvALw/OveUDz+HYnv2rlryWQgezgDOwNfUoNIZDK6+gwTfSW26sP95SfQd6L+7cmSRkBhx1UFGpgwAy61HtZM/Nj7D/eeh76tB0KEPajexEp6pEJXPrWHWgZ5FwJ12EhAiHZbS6Ww1IEPU48wQus8vu9cFQPWFHgmEy4EZ1M0kbPHOAx+8wbXsgofDyrZwn5xipr5vDGdQ0JMc1wK3MFo1NpmMpJHXunR5m/qgz/ZYCwXeMBUmXkoIJFRqB00mwKFMAodw99gQu3FJEgbrRPDBP4HwXQwfI+4t4EClRlF82KEERdZT7nhTT1u4mJQapFJGo9gAFHqh+exJAjNUt5QF+zddb9926VVnWAsWsGL8Z/HK4W5BrMc9Jnll+blVPiHefFgGNx6GvAdcHKdvJRRR9e83R22LgD1TVG1pKzi2Xun4g5qfgqQecMScos51VCJZD7wdRqPj8+WBtho6XTh4MKR5LyXsztQoh35+pM7Q7L1/dZ1lYDXuiwPiGIilCTMzZ3ZQBKHo1/ojt2NCZPD5wAHrcIVp3qvoDwQyx2Ne951ogC+Nx07mziFhgRpfXfTZPV0wflKSy0tU3y6NzPYTHCI+LCqgWdoVx1x7+mjQCBkOMw5Xl7vruulU+svJKbUxNBS5cFoSfR8UVm/TlM7G2ja7BMg+w42DgtTKxsKK6aKYyPERcgqhtIkJvkRFxNNjcgwPsRR4mT8x5kn6/+Am93bYqaFlkDuMMIEyhaN1+mFJI/UndGSL0fOwO4J8Bs59uLK0hHeAPOewYPZnAgTsKqSUD6ZoqXhFdatADsvSU5FKL3yDf6d6kjCwf4cBlARGUjGkk5H9j2xH31RVSpwXzOrXmzP5LF3wCdsAsefFpwvLBrtkhvdStiWbPkUJpPYFPhsWeiZ12SBqH/8Vwjo0zzxm8rDUe6/Ps9Yv/aYcUim0AVoaFT9IUR0pJcvenmztl/Af60WHPBG0jwQl/B0pB9fDi1eqayJEJPBq9fz/MmFkrYFisiopPYcnRK6zv5gyMXXelhgMk9IpWuYh5oKPQ+8GE6FIWNLI7l/GRaOxdpgRD+LdWBuohh8AjCBXqjnsHRlyAQDMyfN0dXAzsaURuZGfH3hPnxSVONgixnsrOGDwnO9Pf+7EtVg9Rz5UyVGrpYB2IZKO7MI1+KZCBUpI1yCGchs4222vwLm4GusDIB+NHORWQ/3hh3VELWN2poiLKiFZNIhWcJ7ltIo5oj4t1++cgEMbNq6icBFaNoDuniAWkgfw+2Ywt6bwTb0knzF5b6OENrR+Rj2hLE+RAlLxpdroQGlcddCSjYH6Ci/aJ0G+cp59QNztZXo15CPbPHYn4R0ofbhw/ItSrUQm2SAbvVMDTr0YC2TfhO+74suMr1R9cdv2JmPT6bB2kBBu0uk5wpwt3tazLaJSdsp0em6fjfxl3aSQ+RAaykt9SIIzL18H2nOYALD3QKdOWRWhHRrjYhZBEYk3SPeL8YAS5Ho+rYuiNkc4X+GFrj5VC7jgRVw4dLxywZUvwohq333+Lj4I+pd6v6CHgdVcgUTbsB8Cm+QGg/ppN3ebOXMh75A4di88E8dHdn8E6t+pMQJL4GDFrfBS6ZE2C3jcT7DMQ19DMg54Kn6z2sv48UDy8WryqDVR8QuGgJtVJSq1q9sQNGRTn5tN47GLsImA0uAvsgSkSSXJddKwx2yV4Ad/75gqo23QsJoQxVWHMQAGB2Iy/1CH+oycGB0Q8la99M9GyU9IBFRz6I1HNudm/NIbKqO90+eIGR7NTXoWT36+fRYYPYV0nnH1giXO77RMkGxmKwizGi736YUENrOaZrBZaY1Urd4lkcFDo+1EhcmYPb2T0oEz9cAFg1nWO4dM2M350M0bTuDhOs/jFY25PkZwQmG+s7tM5VQ5I3yHWSd4oQqhJaWTsqwKlCqZaNcIA76jkAP23jY8rmKBRvKc/T0/C+W4GJC6Qg7BB0g+lVx21aujImkSK3szJDZInsD/suu4VtlygcAF2wEHt1G9ZD6y4oX2A2N52vFEMEvzoQThxBLqflQoFDmzxYK78D4/YQwYMHLahkV5cZ7hX8OklVDKcPSKszMBJaI9rxntDQm9gltbHrCef4Wu8EM+cJyxhAvvNtYgsOwjcaXmSmFC/ANJ+cI2o07pYOYHE0l1LKWbu5p9tEAGpzbSNS1uzQCSRRZMnNqIauowFonoaUamdMwvjM/cd0rMrXGr4WUaBvazsQ0zBqi4+NC8/9+C2ojurjnTlxOODlqGd5ADOaqB8i1ZwIzgHex1q0q/Wr0mQ9kHeqPIfXcLsDmc3hFX6ZnWjlmRWw4RKYbBaj6618V74IvmYIMsh23+57rkjpteXlIkBwXAw3Z4FobSeGA95aS1SZQZxVoTM4rYuhbnPmY2gQuoY7b2UJpHMsyDTlJ5pTvUAOFfnLLrCjwzgaAY6+Ee4CvsB6P3B1qEtOF+nVqEuXIbnMkfHrb9bwSsvjzbzF3g6iFyuZSWLWMkCBVb0v9OviXUqaLgGQGpCL8xyeuhSltm253BwiuG6fyUfBa6URx75UoXJx3vuxBEG5uvxLsCyHgXao4dtSRFiZ6VCeyyQxCDxBhmTKZBVi4V3h/Z2haw2DWrcHkzr1YFkTmslCUbRMzbXQOHN8Bkfp3Tl4DAB7oaGxrNCVOXmmjzNgnSEEmuCqDIHyzdbNjlOEd33bLeRbJQKShZly98N4eawRCGO4kBroT8vpBRXExgdty2MPRuWyjtfebsAG4dtQeVDFiywXvVW5lXbLVEHygsLvKKMN/rjGukz8zW7fWm6t471vLJA0BgYYmYgT8NI429wKv5lI41bUDFq58cpWo/u2Rrv8XfGgclzxYFu8yIUAYf2XWvsAe2a9ZCOACfToWVy990refBc72KdrYQhb0+ONgedDAY7fQtIhooegUNXm0rSROA0cWuGSKT7K06VZs5pSr8kbgwtIm1hitNqxvGMZspV2I2BIiU9fl8REtIrFrjrN9ThJVm/MRSho4x/XfVHveW5tmLhXUfmVix2sKFrVqRynPNWrVWCDic9TLzl3iNpv39WUbd7Pr1l5ilRA6VZe2OwQZQhUBto4eQJHvPy0Ckx+yk4uCnq7MFqULjHP60p+STOoskT0czONGK4dVbpGFMDxVizAlrq1x5QEmrySDwzB0RD4RlpmIgPPSMY3Mj/pU09gRGY5nuMc7U1uRJ6T50QePUAvFDAPobTC0AInw7Pue34sUfGzqkerQCenC9ILYZE9qC8vaUp6P1ZtltqgnWvrYH4jfhWhSOLEIz0E+B7Pk2hbObR2bvtPAjL3WACcNM6K/neq1yMnZ9NiFneqdS/0sKCI8JqJYsxB707frlV5ZSLo5d4YobItPSgoAcc8WIhSkxlgmNS6EUzPW55xioufYQFnT5pfn/PuBGuCvUNM/ujPUV2be2DRyGmgcR3mwRtYdu6fxzHiKw0SJ7VgGlhHDuLxYEz8JUKUF/XUty3+1ko/nLhmgnbYYg5iTSa8U95pDcUr1YiIkVMfUGrDh/+a0UfpfUkrMJ8Q2K9Dye9e0DffTgNJS03iaKVwoOInmxQZHSyYJitDb4HmG/nrivgDyRiwyn2P1n12FJcO9/kRl8hipz943ZjFztcpbg8lsVhgw6QCsbfqgcY3xyH07gf5zzE0GoKnYdXDNyl3vX+tBgyq03Zib0HPlJZ/W5yPAFc4i0qFCuBe16z8AE/ca2OU9S/r87+nQnenw0ZtanFrb3AdyrnIcsb4l/zKzgT51d63MV+CawgiWxc8nsCnp6iREeQbs22ou5JrjzSP3ipkheTAC5KuN086zp/EtLgzNp/vSWP5/PdJ8/XyvAPU7boQuiI1fztlYmQJ6J5aVqDuGTCQuuSNsechiDoUYH1Xt8csFHlAZjUFwNya5EZvyxstcmTZ7PJPHU/09bvnIuoIOyt7tFMVbLiqs6E9zkW5TCDhAMnLYo1GJFhzC+Y6Y6bkZoDX3wellnx9FeOFNTP1LGNwoIJ3iYjiRAKdOX82u73nMasDWBabVoS/lacREunMdzjUFJedUUiA/ewGvhhreXug8jVi7ZhsRlA84sAEWSlA0pNi9+dpkE/MKd8skDsw51/m5b9fiKtksl+QDDBZlhuPOzsp0YENNnM5s772Fg+wX/PMzredTKeFkZF3mgKQT44O0ZO5Ok3dQEo6QgI8S1xIP9z7CJ9RdPupkc2nF9yFRxMb+oMvt1vLFOp8WWX4cDSW6re3kTyMjx8v8uistq4iGSod6ymhcS97hWwMg4tuStdFfG9YIHJzMXnviEuuQEox5WwQmjDmy78DIqbZYW6fXnuiJCZNwEvnkNocON7bYgTVjryFVYuQ7tgEBHH3rrFxg7+Cr7wj59RomoiBWSxU+Ql1EuilPcnz6QwAMudUxiuLBSA1cBiy7XFHoL3RxVr3i06mZq4BTlV4ow6dq6BBsDmMl4HViIAqUjDmFZw4wvCKZJWOUWE7SWyPjkIn1l6KFm2IN8DmqorbnR6+IOBFAIlpNJ0IAZPZZg603l08gK9o1bb7cTx1rdIDFe506vHQrg0xdEvsE25IQO7t6hBPunRBIchVNtqCSqjteb42ZzB7dRZgCh7MsunmZcytOK+KdztpKhPHv1qUCsj7JBf30ORl6Rcd0K6P+8q4LSsjnPH8Yq7J/opcDa63Q3n7PtS6JemrhLYp2wmPbGPaoum+1jul8QLyFk+pXx7HixQSTYRQ53Zr+dNeUwSGx3i72l7a7bDLMdOsffh2MfACzkxiHt6pm0eD90TGjVsELnILADtyRXu7EV53NQcsAczqtSmAAs5bSjdq54nn1sBT8HQRcrOPiStJzVAwY5YFPpzDTG6YsmtSGvkdO2ebcOP4m0kX7sMIBUZ1pElDQH1ghGvTD7BBLEH82mo63eMJF6OGCDD34SXAHd7buL8Q2JZOclj3ioFemGm2cYj50MLg+LxkO0tzgIk9JWk3/pGWgJdQA16MZBlLkdsTKwPYJe5JorbFs1fN7pLEtjTW8f3ns5HlXm+jPPGDc61E0Fg+rmKNMz/Hnvcnt4F1kAyMWt3+QIJEgLMWDwWHJ0ThtzH0p/g6gP4idd22WI2z6Z1A+YQeqnlxgf4reFRUthMzF2OpuIQ3/dA46DV79yteAbUOdQlpIdLXhQ72ncddhbE1EoSx4VDHDMEEWrTd+bdM9zYeDEYDSq2ih03q7ev6oIn3VoR0Z1IzVYzxXTbF7porBVR5CLz8GskxgwFqw9g7Rd65W3EQ33TiUSqjbe/rdV9j7YrGh2zANGOD2uWJEiVFqE8JsxsT3u6juRmVN0zLjCl+N/n0mcJSaGZcJrKQzVzqHIhmieBwY2DB3V/dontXKKZYxbx1k3cyVyWnvP3+gTKUPiP8rmfxFriuzMgnx0Tv/izjiFzEcNA+LAP0X8ch0WZw9BWAsrwy4GKa3tK7i45qpgFvZlpuSrwoKrsmVoZ5qfl7B7coXElek/rlwXSYbi0G2D8WPzJJrxgpez/k9kGFMxqbraYtNngAAAAAAAA", "s4-polleve4": "data:image/webp;base64,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"};
 /* Atlas of drawn structures for PHAR 4346 DEENT (Dr. Sikazwe's medicinal
    chemistry). GENERATED by gen_atlas.py from atlas_data.json and atlas_ui.js:
    edit those and rerun; do not edit this file by hand. */
@@ -9436,7 +9437,21 @@ QUESTIONS.push(
  teach:'"carboxylic acid must be present, and also they must possess a hydroxy ... on the alpha carbon ... You can decorate this with ... aromatic groups, archal [alkyl] groups, but mostly archal groups" (T@22839–23200).',
  cite:S4+' slide 44; T@22839–23200'},
 
-/* ---- Sulfur (slide 46) ----------------------------------------------------- */
+{id:'S4-120', skill:'chem', prof:'Sikazwe', tier:'new', topic:'s4-kera', sub:'ha', concept:'aha-count',
+ tags:['poll','verbatim','structure'], source:'both',
+ img:'s4-polleve4',
+ note:'He did not say the count aloud ("So how many? OK.", T@23865). Keyed from the slide figure and his stated definition (T@23455–23600; slide 44) (course decision of 2026-11-08).',
+ stem:'How many alpha-hydroxy acids are in the figure below?',
+ options:[
+  {t:'One', correct:false, why:'Glycolic acid is not the only one: tartaric acid and the cyclopropyl diacid also carry an OH on a carbon next to a COOH.'},
+  {t:'Two', correct:false, why:'Tartaric acid, glycolic acid and the cyclopropyl diacid all qualify; each has an OH on the carbon next to a COOH.'},
+  {t:'Three', correct:true, why:'Tartaric acid, glycolic acid and the cyclopropyl diacid: "Hydroxy group needs to be ... on the carbon that is next to the carboxylic acid" (T@23455–23600).'},
+  {t:'Four', correct:false, why:'The cyclohexane acid has its OH on the ring carbon two from the COOH, so it is beta; isobutyric acid has no OH.'}],
+ teach:'Apply slide 44 to each structure: find each COOH, step to the carbon next to it (alpha), and look for an OH there. Tartaric acid (top centre), HOOC-CH(OH)-CH(OH)-COOH: each OH sits next to a COOH; yes. Glycolic acid (top right), HO-CH2-COOH: yes. Isobutyric acid (left), (CH3)2CH-COOH: no OH at all; no. The cyclopropyl diacid (bottom), HOOC-C(cyclopropane)-CH(OH)-COOH: the OH carbon is next to the right-hand COOH; yes, even though it is two carbons from the other COOH. 2-Hydroxycyclohexane-1-carboxylic acid (right): the COOH is on C1 and the OH on C2, two carbons from the acid carbon, a beta-hydroxy acid like salicylic acid; no.',
+ quote:'Polleve, 11/04, slide 45',
+ cite:S4+' slides 44–45; T@22839–23200, T@23455–23880'},
+
+/* ---- Sulfur (slide 46)----------------------------------------------------- */
 {id:'S4-065', skill:'mech', prof:'Sikazwe', tier:'new', topic:'s4-kera', sub:'s', concept:'sulfur-thiolysis',
  tags:['mechanism'], source:'both',
  stem:'By what chemical process is sulfur thought to act as a keratolytic?',
@@ -10733,6 +10748,1112 @@ QUESTIONS.push(
  cite:'Drug chart p. 1; Sun 20–24: '+SUN+' slides 20–24'}
 );
 
+/* Generated by render_chart.py from the dermatology drug chart (7 pages, MD5
+   6d768218ff6de08f2e38790146b427bd); do not edit by hand. The row of every
+   chart line in druglist_data.js CHART_ROWS, as fractions of its page image in
+   chart/; checked by druglist_check.js. */
+const CHART_BOXES = {
+ "pages": {
+  "1": {
+   "file": "chart-p1.jpg",
+   "w": 1601,
+   "h": 1102
+  },
+  "2": {
+   "file": "chart-p2.jpg",
+   "w": 1601,
+   "h": 575
+  },
+  "3": {
+   "file": "chart-p3.jpg",
+   "w": 1601,
+   "h": 901
+  },
+  "4": {
+   "file": "chart-p4.jpg",
+   "w": 1601,
+   "h": 998
+  },
+  "5": {
+   "file": "chart-p5.jpg",
+   "w": 1601,
+   "h": 707
+  },
+  "6": {
+   "file": "chart-p6.jpg",
+   "w": 1601,
+   "h": 1005
+  },
+  "7": {
+   "file": "chart-p7.jpg",
+   "w": 1601,
+   "h": 491
+  }
+ },
+ "drugs": {
+  "padimate": [
+   {
+    "page": 1,
+    "row": 1,
+    "line": 0,
+    "x0": 0.0117,
+    "y0": 0.3141,
+    "x1": 0.9883,
+    "y1": 0.3723,
+    "text": "Octyl dimethyl PABA, Padimate O"
+   }
+  ],
+  "octinoxate": [
+   {
+    "page": 1,
+    "row": 2,
+    "line": 1,
+    "x0": 0.0117,
+    "y0": 0.3723,
+    "x1": 0.9883,
+    "y1": 0.4587,
+    "text": "Octyl Methoxycinnamate, Ethyhexyl p- methoxycinnamate"
+   }
+  ],
+  "octisalate": [
+   {
+    "page": 1,
+    "row": 3,
+    "line": 2,
+    "x0": 0.0117,
+    "y0": 0.4587,
+    "x1": 0.9883,
+    "y1": 0.5165,
+    "text": "2-ethyhexyl salicylate, Homosalate"
+   }
+  ],
+  "homosalate": [
+   {
+    "page": 1,
+    "row": 3,
+    "line": 3,
+    "x0": 0.0117,
+    "y0": 0.4587,
+    "x1": 0.9883,
+    "y1": 0.5165,
+    "text": "2-ethyhexyl salicylate, Homosalate"
+   }
+  ],
+  "oxybenzone": [
+   {
+    "page": 1,
+    "row": 4,
+    "line": 4,
+    "x0": 0.0117,
+    "y0": 0.5165,
+    "x1": 0.9883,
+    "y1": 0.5748,
+    "text": "Oxybenzone, Dioxybenzone"
+   }
+  ],
+  "dioxybenzone": [
+   {
+    "page": 1,
+    "row": 4,
+    "line": 5,
+    "x0": 0.0117,
+    "y0": 0.5165,
+    "x1": 0.9883,
+    "y1": 0.5748,
+    "text": "Oxybenzone, Dioxybenzone"
+   }
+  ],
+  "meradimate": [
+   {
+    "page": 1,
+    "row": 5,
+    "line": 6,
+    "x0": 0.0117,
+    "y0": 0.5748,
+    "x1": 0.9883,
+    "y1": 0.6324,
+    "text": "Menthyl anthranilate"
+   }
+  ],
+  "avobenzone": [
+   {
+    "page": 1,
+    "row": 6,
+    "line": 7,
+    "x0": 0.0117,
+    "y0": 0.6324,
+    "x1": 0.9883,
+    "y1": 0.6737,
+    "text": "Avobenzone"
+   }
+  ],
+  "zincoxide": [
+   {
+    "page": 1,
+    "row": 7,
+    "line": 8,
+    "x0": 0.0117,
+    "y0": 0.6737,
+    "x1": 0.9883,
+    "y1": 0.715,
+    "text": "Zinc oxide (Zinca)"
+   },
+   {
+    "page": 5,
+    "row": 13,
+    "line": 63,
+    "x0": 0.0105,
+    "y0": 0.7956,
+    "x1": 0.9895,
+    "y1": 0.8538,
+    "text": "Zinc Oxide (Desitin)"
+   }
+  ],
+  "tio2": [
+   {
+    "page": 1,
+    "row": 8,
+    "line": 9,
+    "x0": 0.0117,
+    "y0": 0.715,
+    "x1": 0.9883,
+    "y1": 0.7558,
+    "text": "Titanium oxide"
+   }
+  ],
+  "benzocaine": [
+   {
+    "page": 1,
+    "row": 9,
+    "line": 10,
+    "x0": 0.0117,
+    "y0": 0.7558,
+    "x1": 0.9883,
+    "y1": 0.8141,
+    "text": "Benzocaine (Americaine, Solarcaine, Lanacane)"
+   }
+  ],
+  "dibucaine": [
+   {
+    "page": 1,
+    "row": 10,
+    "line": 11,
+    "x0": 0.0117,
+    "y0": 0.8141,
+    "x1": 0.9883,
+    "y1": 0.8554,
+    "text": "Dibucaine (Nupercainal)"
+   }
+  ],
+  "tetracaine": [
+   {
+    "page": 1,
+    "row": 11,
+    "line": 12,
+    "x0": 0.0117,
+    "y0": 0.8554,
+    "x1": 0.9883,
+    "y1": 0.8962,
+    "text": "Tetracaine (Dermocaine)"
+   }
+  ],
+  "lidocaine": [
+   {
+    "page": 1,
+    "row": 12,
+    "line": 13,
+    "x0": 0.0117,
+    "y0": 0.8962,
+    "x1": 0.9883,
+    "y1": 0.9375,
+    "text": "Lidocaine (Xylocaine)"
+   }
+  ],
+  "bemotrizinol": [
+   {
+    "page": 1,
+    "row": 13,
+    "line": 14,
+    "x0": 0.0117,
+    "y0": 0.9375,
+    "x1": 0.9883,
+    "y1": 0.9788,
+    "text": "Bemotrizinol (BEMT)"
+   }
+  ],
+  "crisaborole": [
+   {
+    "page": 2,
+    "row": 1,
+    "line": 15,
+    "x0": 0.0113,
+    "y0": 0.3156,
+    "x1": 0.9887,
+    "y1": 0.4225,
+    "text": "Crisaborole (Eucrisa)"
+   }
+  ],
+  "pimecrolimus": [
+   {
+    "page": 2,
+    "row": 2,
+    "line": 16,
+    "x0": 0.0113,
+    "y0": 0.4225,
+    "x1": 0.9887,
+    "y1": 0.5298,
+    "text": "Pimecrolimus (Elidel)"
+   }
+  ],
+  "tacrolimus": [
+   {
+    "page": 2,
+    "row": 3,
+    "line": 17,
+    "x0": 0.0113,
+    "y0": 0.5298,
+    "x1": 0.9887,
+    "y1": 0.6379,
+    "text": "Tacrolimus (Protopic)"
+   }
+  ],
+  "dupilumab": [
+   {
+    "page": 2,
+    "row": 4,
+    "line": 18,
+    "x0": 0.0113,
+    "y0": 0.6379,
+    "x1": 0.9887,
+    "y1": 0.7453,
+    "text": "Dupilumab (Dupixent)"
+   }
+  ],
+  "ruxolitinib": [
+   {
+    "page": 2,
+    "row": 5,
+    "line": 19,
+    "x0": 0.0113,
+    "y0": 0.7453,
+    "x1": 0.9887,
+    "y1": 0.8534,
+    "text": "Ruxolitinib (Opzelura)"
+   }
+  ],
+  "upadacitinib": [
+   {
+    "page": 2,
+    "row": 6,
+    "line": 20,
+    "x0": 0.0113,
+    "y0": 0.8534,
+    "x1": 0.9887,
+    "y1": 0.9607,
+    "text": "Upadacitinib (Rinvoq)"
+   }
+  ],
+  "bpo": [
+   {
+    "page": 3,
+    "row": 1,
+    "line": 21,
+    "x0": 0.0107,
+    "y0": 0.1415,
+    "x1": 0.9893,
+    "y1": 0.2071,
+    "text": "Benzoyl peroxide (Clearasil, Fostex, Oxy-10, Benzac AC, Benzagel Wash)"
+   }
+  ],
+  "sulfur": [
+   {
+    "page": 3,
+    "row": 2,
+    "line": 22,
+    "x0": 0.0107,
+    "y0": 0.2071,
+    "x1": 0.9893,
+    "y1": 0.2532,
+    "text": "Sulfur (Fostril)"
+   }
+  ],
+  "salicylic": [
+   {
+    "page": 3,
+    "row": 3,
+    "line": 23,
+    "x0": 0.0107,
+    "y0": 0.2532,
+    "x1": 0.9893,
+    "y1": 0.3188,
+    "text": "Salicylic Acid (Oxy Face Scrub, Stri-Dex, Wart-Off Treatment, Compound W)"
+   }
+  ],
+  "sarecycline": [
+   {
+    "page": 3,
+    "row": 4,
+    "line": 24,
+    "x0": 0.0107,
+    "y0": 0.3188,
+    "x1": 0.9893,
+    "y1": 0.3653,
+    "text": "Sarecycline (Seysara)"
+   }
+  ],
+  "minocycline": [
+   {
+    "page": 3,
+    "row": 5,
+    "line": 25,
+    "x0": 0.0107,
+    "y0": 0.3653,
+    "x1": 0.9893,
+    "y1": 0.4114,
+    "text": "Minocycline (Minocin)"
+   }
+  ],
+  "doxycycline": [
+   {
+    "page": 3,
+    "row": 6,
+    "line": 26,
+    "x0": 0.0107,
+    "y0": 0.4114,
+    "x1": 0.9893,
+    "y1": 0.458,
+    "text": "Doxycycline (Vibramycin)"
+   }
+  ],
+  "clindamycin": [
+   {
+    "page": 3,
+    "row": 7,
+    "line": 27,
+    "x0": 0.0107,
+    "y0": 0.458,
+    "x1": 0.9893,
+    "y1": 0.5045,
+    "text": "Clindamycin (Cleocin, Cleocin T, C/T/S)"
+   }
+  ],
+  "erythromycin": [
+   {
+    "page": 3,
+    "row": 8,
+    "line": 28,
+    "x0": 0.0107,
+    "y0": 0.5045,
+    "x1": 0.9893,
+    "y1": 0.5623,
+    "text": "Erythromycin"
+   }
+  ],
+  "azithromycin": [
+   {
+    "page": 3,
+    "row": 9,
+    "line": 29,
+    "x0": 0.0107,
+    "y0": 0.5623,
+    "x1": 0.9893,
+    "y1": 0.6088,
+    "text": "Azithromycin"
+   }
+  ],
+  "tmpsmx": [
+   {
+    "page": 3,
+    "row": 10,
+    "line": 30,
+    "x0": 0.0107,
+    "y0": 0.6088,
+    "x1": 0.9893,
+    "y1": 0.674,
+    "text": "Trimetoprim/sulfamethoxazole (Bactrim DS)"
+   }
+  ],
+  "dapsone": [
+   {
+    "page": 3,
+    "row": 11,
+    "line": 31,
+    "x0": 0.0107,
+    "y0": 0.674,
+    "x1": 0.9893,
+    "y1": 0.7205,
+    "text": "Dapsone (Aczone)"
+   }
+  ],
+  "metronidazole": [
+   {
+    "page": 3,
+    "row": 12,
+    "line": 32,
+    "x0": 0.0107,
+    "y0": 0.7205,
+    "x1": 0.9893,
+    "y1": 0.7711,
+    "text": "Metronidazole (Flagyl, Metrogel)"
+   }
+  ],
+  "tretinoin": [
+   {
+    "page": 3,
+    "row": 13,
+    "line": 33,
+    "x0": 0.0107,
+    "y0": 0.7711,
+    "x1": 0.9893,
+    "y1": 0.8363,
+    "text": "Tretinoin (Retin-A, Renova, Avita, Retin-A Micro)"
+   }
+  ],
+  "adapalene": [
+   {
+    "page": 3,
+    "row": 14,
+    "line": 34,
+    "x0": 0.0107,
+    "y0": 0.8363,
+    "x1": 0.9893,
+    "y1": 0.8828,
+    "text": "Adapalene (Differin)"
+   }
+  ],
+  "isotretinoin": [
+   {
+    "page": 3,
+    "row": 15,
+    "line": 35,
+    "x0": 0.0107,
+    "y0": 0.8828,
+    "x1": 0.9893,
+    "y1": 0.9294,
+    "text": "Isotretinoin (Accutane)"
+   }
+  ],
+  "spironolactone": [
+   {
+    "page": 3,
+    "row": 16,
+    "line": 36,
+    "x0": 0.0107,
+    "y0": 0.9294,
+    "x1": 0.9893,
+    "y1": 0.9761,
+    "text": "Spironolactone"
+   }
+  ],
+  "coaltar": [
+   {
+    "page": 4,
+    "row": 1,
+    "line": 37,
+    "x0": 0.0105,
+    "y0": 0.1693,
+    "x1": 0.9895,
+    "y1": 0.2274,
+    "text": "Coal tar (Denorex, DHS Tar, Neutrogena-T/Gel, Tegrin)"
+   }
+  ],
+  "shaletar": [
+   {
+    "page": 4,
+    "row": 2,
+    "line": 38,
+    "x0": 0.0105,
+    "y0": 0.2274,
+    "x1": 0.9895,
+    "y1": 0.3137,
+    "text": "Shale tar, Ichthammol (Boyol Salve, Drawing Out Salve, Black Salve)"
+   }
+  ],
+  "selenium": [
+   {
+    "page": 4,
+    "row": 3,
+    "line": 39,
+    "x0": 0.0105,
+    "y0": 0.3137,
+    "x1": 0.9895,
+    "y1": 0.3712,
+    "text": "Selenium sulfide (Selsum Blue, Selseb)"
+   }
+  ],
+  "zpt": [
+   {
+    "page": 4,
+    "row": 4,
+    "line": 40,
+    "x0": 0.0105,
+    "y0": 0.3712,
+    "x1": 0.9895,
+    "y1": 0.4124,
+    "text": "Zinc Pyrithione"
+   }
+  ],
+  "anthralin": [
+   {
+    "page": 4,
+    "row": 5,
+    "line": 41,
+    "x0": 0.0105,
+    "y0": 0.4124,
+    "x1": 0.9895,
+    "y1": 0.4702,
+    "text": "Anthralin (Antra-Derm, Dithrocreme)"
+   }
+  ],
+  "methotrexate": [
+   {
+    "page": 4,
+    "row": 6,
+    "line": 42,
+    "x0": 0.0105,
+    "y0": 0.4702,
+    "x1": 0.9895,
+    "y1": 0.5283,
+    "text": "Methotrexate (MTX, Rheumatrex)"
+   }
+  ],
+  "abatacept": [
+   {
+    "page": 4,
+    "row": 7,
+    "line": 43,
+    "x0": 0.0105,
+    "y0": 0.5283,
+    "x1": 0.9895,
+    "y1": 0.6429,
+    "text": "Abatacept (Orencia)"
+   }
+  ],
+  "etanercept": [
+   {
+    "page": 4,
+    "row": 8,
+    "line": 44,
+    "x0": 0.0105,
+    "y0": 0.6429,
+    "x1": 0.9895,
+    "y1": 0.6869,
+    "text": "Etanercept (Enbrel)"
+   }
+  ],
+  "adalimumab": [
+   {
+    "page": 4,
+    "row": 9,
+    "line": 45,
+    "x0": 0.0105,
+    "y0": 0.6869,
+    "x1": 0.9895,
+    "y1": 0.7277,
+    "text": "Adalimumab (Humira)"
+   }
+  ],
+  "infliximab": [
+   {
+    "page": 4,
+    "row": 10,
+    "line": 46,
+    "x0": 0.0105,
+    "y0": 0.7277,
+    "x1": 0.9895,
+    "y1": 0.7689,
+    "text": "Infliximab (Remicade)"
+   }
+  ],
+  "golimumab": [
+   {
+    "page": 4,
+    "row": 11,
+    "line": 47,
+    "x0": 0.0105,
+    "y0": 0.7689,
+    "x1": 0.9895,
+    "y1": 0.8101,
+    "text": "Golimumab (Simponi)"
+   }
+  ],
+  "certolizumab": [
+   {
+    "page": 4,
+    "row": 12,
+    "line": 48,
+    "x0": 0.0105,
+    "y0": 0.8101,
+    "x1": 0.9895,
+    "y1": 0.8514,
+    "text": "Certolizumab pegol (Cimzia)"
+   }
+  ],
+  "tofacitinib": [
+   {
+    "page": 4,
+    "row": 13,
+    "line": 49,
+    "x0": 0.0105,
+    "y0": 0.8514,
+    "x1": 0.9895,
+    "y1": 0.8926,
+    "text": "Tofacitinib (Xeljanz)"
+   }
+  ],
+  "ustekinumab": [
+   {
+    "page": 4,
+    "row": 14,
+    "line": 50,
+    "x0": 0.0105,
+    "y0": 0.8926,
+    "x1": 0.9895,
+    "y1": 0.9789,
+    "text": "Ustekinumab (Stelara)"
+   }
+  ],
+  "guselkumab": [
+   {
+    "page": 5,
+    "row": 1,
+    "line": 51,
+    "x0": 0.0105,
+    "y0": 0.0238,
+    "x1": 0.9895,
+    "y1": 0.0993,
+    "text": "Guselkumab (Tremfya)"
+   }
+  ],
+  "tildrakizumab": [
+   {
+    "page": 5,
+    "row": 2,
+    "line": 52,
+    "x0": 0.0105,
+    "y0": 0.0993,
+    "x1": 0.9895,
+    "y1": 0.1575,
+    "text": "Tildrakizumab-asmn (Ilumya)"
+   }
+  ],
+  "risankizumab": [
+   {
+    "page": 5,
+    "row": 3,
+    "line": 53,
+    "x0": 0.0105,
+    "y0": 0.1575,
+    "x1": 0.9895,
+    "y1": 0.2157,
+    "text": "Risankizumab (Skyrizi)"
+   }
+  ],
+  "secukinumab": [
+   {
+    "page": 5,
+    "row": 4,
+    "line": 54,
+    "x0": 0.0105,
+    "y0": 0.2157,
+    "x1": 0.9895,
+    "y1": 0.2784,
+    "text": "Secukinumab (Consentyx)"
+   }
+  ],
+  "brodalumab": [
+   {
+    "page": 5,
+    "row": 5,
+    "line": 55,
+    "x0": 0.0105,
+    "y0": 0.2784,
+    "x1": 0.9895,
+    "y1": 0.3366,
+    "text": "Brodalumab (Siliq)"
+   }
+  ],
+  "ixekizumab": [
+   {
+    "page": 5,
+    "row": 6,
+    "line": 56,
+    "x0": 0.0105,
+    "y0": 0.3366,
+    "x1": 0.9895,
+    "y1": 0.3948,
+    "text": "Ixekizumab (Taltz)"
+   }
+  ],
+  "acitretin": [
+   {
+    "page": 5,
+    "row": 7,
+    "line": 57,
+    "x0": 0.0105,
+    "y0": 0.3948,
+    "x1": 0.9895,
+    "y1": 0.453,
+    "text": "Acitretin (Soriatane)"
+   }
+  ],
+  "tazarotene": [
+   {
+    "page": 5,
+    "row": 8,
+    "line": 58,
+    "x0": 0.0105,
+    "y0": 0.453,
+    "x1": 0.9895,
+    "y1": 0.5105,
+    "text": "Tazarotene (Tazorac)"
+   }
+  ],
+  "calcipotriene": [
+   {
+    "page": 5,
+    "row": 9,
+    "line": 59,
+    "x0": 0.0105,
+    "y0": 0.5105,
+    "x1": 0.9895,
+    "y1": 0.5747,
+    "text": "Calcipotriene (Dovonex)"
+   }
+  ],
+  "methoxsalen": [
+   {
+    "page": 5,
+    "row": 10,
+    "line": 60,
+    "x0": 0.0105,
+    "y0": 0.5747,
+    "x1": 0.9895,
+    "y1": 0.6562,
+    "text": "Methoxsalen (Oxsoralen-Ultra, Uvadex)"
+   }
+  ],
+  "cyclosporine": [
+   {
+    "page": 5,
+    "row": 11,
+    "line": 61,
+    "x0": 0.0105,
+    "y0": 0.6562,
+    "x1": 0.9895,
+    "y1": 0.7383,
+    "text": "Cyclosporine (Neoral, Sandimmune)"
+   }
+  ],
+  "petrolatum": [
+   {
+    "page": 5,
+    "row": 12,
+    "line": 62,
+    "x0": 0.0105,
+    "y0": 0.7383,
+    "x1": 0.9895,
+    "y1": 0.7956,
+    "text": "Petrolatum (Vasoline)"
+   }
+  ],
+  "ketoconazole": [
+   {
+    "page": 5,
+    "row": 14,
+    "line": 64,
+    "x0": 0.0105,
+    "y0": 0.8538,
+    "x1": 0.9895,
+    "y1": 0.912,
+    "text": "Ketoconazole (Nizoral)"
+   }
+  ],
+  "apremilast": [
+   {
+    "page": 5,
+    "row": 15,
+    "line": 65,
+    "x0": 0.0105,
+    "y0": 0.912,
+    "x1": 0.9895,
+    "y1": 0.9702,
+    "text": "Apremilast (Otezla)"
+   }
+  ],
+  "clobetasol": [
+   {
+    "page": 6,
+    "row": 1,
+    "line": 66,
+    "x0": 0.0109,
+    "y0": 0.1593,
+    "x1": 0.9891,
+    "y1": 0.2135,
+    "text": "Clobetasol propionate (Temovate, Clobex)"
+   }
+  ],
+  "betameth": [
+   {
+    "page": 6,
+    "row": 2,
+    "line": 67,
+    "x0": 0.0109,
+    "y0": 0.2135,
+    "x1": 0.9891,
+    "y1": 0.2558,
+    "text": "Betamethasone dipropionate (Diprolene)"
+   },
+   {
+    "page": 6,
+    "row": 4,
+    "line": 69,
+    "x0": 0.0109,
+    "y0": 0.2977,
+    "x1": 0.9891,
+    "y1": 0.3519,
+    "text": "Betamethasone dipropionate (Diprolene Cream AF)"
+   }
+  ],
+  "halobetasol": [
+   {
+    "page": 6,
+    "row": 3,
+    "line": 68,
+    "x0": 0.0109,
+    "y0": 0.2558,
+    "x1": 0.9891,
+    "y1": 0.2977,
+    "text": "Halobetasol propionate (Ultravate)"
+   }
+  ],
+  "mometasone": [
+   {
+    "page": 6,
+    "row": 5,
+    "line": 70,
+    "x0": 0.0109,
+    "y0": 0.3519,
+    "x1": 0.9891,
+    "y1": 0.3941,
+    "text": "Mometasone furoate (Elocon)"
+   }
+  ],
+  "fluocinonide": [
+   {
+    "page": 6,
+    "row": 6,
+    "line": 71,
+    "x0": 0.0109,
+    "y0": 0.3941,
+    "x1": 0.9891,
+    "y1": 0.4367,
+    "text": "Fluocinonide (Lidex)"
+   }
+  ],
+  "desoximetasone": [
+   {
+    "page": 6,
+    "row": 7,
+    "line": 72,
+    "x0": 0.0109,
+    "y0": 0.4367,
+    "x1": 0.9891,
+    "y1": 0.4783,
+    "text": "Desoximetasone (Topicort)"
+   }
+  ],
+  "fluticasone": [
+   {
+    "page": 6,
+    "row": 8,
+    "line": 73,
+    "x0": 0.0109,
+    "y0": 0.4783,
+    "x1": 0.9891,
+    "y1": 0.5325,
+    "text": "Fluticasone propionate (Cutivate)"
+   }
+  ],
+  "fluocinolone": [
+   {
+    "page": 6,
+    "row": 9,
+    "line": 74,
+    "x0": 0.0109,
+    "y0": 0.5325,
+    "x1": 0.9891,
+    "y1": 0.5867,
+    "text": "Fluocinolone acetonide (Synalar)"
+   },
+   {
+    "page": 6,
+    "row": 17,
+    "line": 82,
+    "x0": 0.0109,
+    "y0": 0.8818,
+    "x1": 0.9891,
+    "y1": 0.9241,
+    "text": "Fluocinolone acetonide (Derma-Smoothe)"
+   }
+  ],
+  "hcvalerate": [
+   {
+    "page": 6,
+    "row": 10,
+    "line": 75,
+    "x0": 0.0109,
+    "y0": 0.5867,
+    "x1": 0.9891,
+    "y1": 0.629,
+    "text": "Hydrocortisone valerate (Westcort)"
+   }
+  ],
+  "triamcinolone": [
+   {
+    "page": 6,
+    "row": 11,
+    "line": 76,
+    "x0": 0.0109,
+    "y0": 0.629,
+    "x1": 0.9891,
+    "y1": 0.6708,
+    "text": "Triamcinolone acetonide (Kenalog)"
+   }
+  ],
+  "desonide": [
+   {
+    "page": 6,
+    "row": 12,
+    "line": 77,
+    "x0": 0.0109,
+    "y0": 0.6708,
+    "x1": 0.9891,
+    "y1": 0.7131,
+    "text": "Desonide (DesOwen)"
+   },
+   {
+    "page": 6,
+    "row": 16,
+    "line": 81,
+    "x0": 0.0109,
+    "y0": 0.84,
+    "x1": 0.9891,
+    "y1": 0.8818,
+    "text": "Desonate (Desonide)"
+   }
+  ],
+  "hydrocortisone": [
+   {
+    "page": 6,
+    "row": 13,
+    "line": 78,
+    "x0": 0.0109,
+    "y0": 0.7131,
+    "x1": 0.9891,
+    "y1": 0.7554,
+    "text": "Hydrocortisone (Locoid)"
+   },
+   {
+    "page": 6,
+    "row": 18,
+    "line": 83,
+    "x0": 0.0109,
+    "y0": 0.9241,
+    "x1": 0.9891,
+    "y1": 0.9783,
+    "text": "Hydrocortisone (Cortaid, Hytone, Synacort)"
+   }
+  ],
+  "prednicarbate": [
+   {
+    "page": 6,
+    "row": 14,
+    "line": 79,
+    "x0": 0.0109,
+    "y0": 0.7554,
+    "x1": 0.9891,
+    "y1": 0.7977,
+    "text": "Prednicarbate (Dermatop)"
+   }
+  ],
+  "alclometasone": [
+   {
+    "page": 6,
+    "row": 15,
+    "line": 80,
+    "x0": 0.0109,
+    "y0": 0.7977,
+    "x1": 0.9891,
+    "y1": 0.84,
+    "text": "Alclometasone (Aclovate)"
+   }
+  ]
+ },
+ "other": [
+  {
+   "page": 7,
+   "row": 1,
+   "line": 84,
+   "x0": 0.0109,
+   "y0": 0.3589,
+   "x1": 0.9891,
+   "y1": 0.4277,
+   "text": "Permethrin 1% lotion (Nix)"
+  },
+  {
+   "page": 7,
+   "row": 2,
+   "line": 85,
+   "x0": 0.0109,
+   "y0": 0.4277,
+   "x1": 0.9891,
+   "y1": 0.5397,
+   "text": "Pyrethrins + piperonyl butoxide (Rid)"
+  },
+  {
+   "page": 7,
+   "row": 3,
+   "line": 86,
+   "x0": 0.0109,
+   "y0": 0.5397,
+   "x1": 0.9891,
+   "y1": 0.6268,
+   "text": "Malathion 0.5% (Ovide)"
+  },
+  {
+   "page": 7,
+   "row": 4,
+   "line": 87,
+   "x0": 0.0109,
+   "y0": 0.6268,
+   "x1": 0.9891,
+   "y1": 0.7476,
+   "text": "Benzyl alcohol 5% (Ulesfia)"
+  },
+  {
+   "page": 7,
+   "row": 5,
+   "line": 88,
+   "x0": 0.0109,
+   "y0": 0.7476,
+   "x1": 0.9891,
+   "y1": 0.8347,
+   "text": "Spinosad 0.9%(Natroba)"
+  },
+  {
+   "page": 7,
+   "row": 6,
+   "line": 89,
+   "x0": 0.0109,
+   "y0": 0.8347,
+   "x1": 0.9891,
+   "y1": 0.9556,
+   "text": "Ivermectin (Sklice, Stromectol)"
+  }
+ ]
+};
+
 /* ==========================================================================
    DRUG LIST DATA, PHAR 4346 DEENT (Exam 1)
    --------------------------------------------------------------------------
@@ -10796,7 +11917,7 @@ const DRUGLIST = (() => {
     il4r:      'IL-4R / IL-13 receptor antagonist',
     jak:       'JAK inhibitors',
     kerat:     'Keratolytics',
-    abx:       'Antibiotics / antimicrobials',
+    abx:       'Antibiotics',
     nrb:       'Nuclear receptor binders (retinoids, vitamin D analog)',
     antiandr:  'Antiandrogen',
     cytotox:   'Cytotoxic agents',
@@ -11141,7 +12262,9 @@ const DRUGLIST = (() => {
      photo: S('Mild photosensitivity', 'PCol 22'), atlas: 'calcipotriene', q: 'calcipotriene'},
     {id: 'methoxsalen', name: 'Methoxsalen', alt: ['8-MOP', '8-methoxypsoralen'], brands: ['Oxsoralen-Ultra', 'Uvadex'], page: 5, cls: 'psoralen', dz: ['pso'], rx: 'Rx',
      status: 'taught', chartClass: 'Psoralen', chartUse: null,
-     use: [S('PUVA: a psoralen combined with UVA light', 'Sun 3')],
+     use: [S('PUVA: a psoralen combined with UVA light', 'Sun 3'),
+       S('Psoriasis: "the psoralens like methoxsalen are used ... to treat ... psoriasis" (antiproliferative: cells can no longer divide)', 'Sun 3; audio 00:59–01:10'),
+       K('Also on Dr. Sikazwe\'s psoriasis pharmacotherapy list, topical agents: "Psoralen (Topical/Oral)" (DPAW 14 is outside his assigned pages for Exam 1, list of 11/06)', 'DPAW 14')],
      tgt: 'tgt-methoxsalen', why: S('The phototoxic reaction is antiproliferative, immunosuppressive and anti-inflammatory: normalizes keratinocytes, reorganizes cutaneous blood vessels, is cytotoxic to T cells', 'Sun 3'),
      ae: [S('Pruritus, nausea, erythema and blistering, hyperpigmentation, skin aging, skin cancer, cataracts', 'Sun 4')],
      photo: S('A photosensitizing compound by design (PUVA)', 'Sun 3'), atlas: 'methoxsalen', q: 'methoxsalen|psoralen|PUVA|8-MOP'},
@@ -11194,8 +12317,12 @@ const DRUGLIST = (() => {
   ];
   const POTENCY = {1: 'Class 1, very high potency', 2: 'Class 2, high potency', 3: 'Class 3, upper mid-strength', 4: 'Class 4, mid-strength',
                    5: 'Class 5, lower mid-strength', 6: 'Class 6, mild', 7: 'Class 7, least potent'};
+  // the steroids listed twice: one chart line per product, [potency class, brand(s) on that line, Rx/OTC]
+  const STEROID_LINES = {betameth: [['1', ['Diprolene'], 'Rx'], ['2', ['Diprolene Cream AF'], 'Rx']],
+    fluocinolone: [['4', ['Synalar'], 'Rx'], ['6', ['Derma-Smoothe'], 'Rx']], desonide: [['5', ['DesOwen'], 'Rx'], ['6', ['Desonate'], 'Rx']],
+    hydrocortisone: [['5', ['Locoid'], 'Rx'], ['7', ['Cortaid', 'Hytone', 'Synacort'], 'OTC']]};
   for (const [id, name, brands, pot, status, sik, atlas, q] of STEROIDS) {
-    const notes = [C(pot.map(p => POTENCY[p]).join('; ') + (pot.length > 1 ? ' (listed twice on the chart, once per product)' : ''), 6), STEROID_CLASS_NOTE];
+    const notes = [STEROID_CLASS_NOTE];
     if (sik) notes.push(sik);
     if (id === 'hydrocortisone') notes.push(K(SIK_UNASSIGNED + ' DPAW 24 shows hydrocortisone (natural cortisol) as the reference (parent) glucocorticoid', 'DPAW 24'));
     if (id === 'hydrocortisone') notes.push(S('Low potency (hydrocortisone 1%) for the face and for long-term maintenance', 'PCol 11'));
@@ -11203,7 +12330,8 @@ const DRUGLIST = (() => {
     const d = {id, name, alt: [], brands, page: 6, cls: 'steroid', dz: ['pso', 'ad'], rx: id === 'hydrocortisone' ? 'Rx (class 5); OTC (class 7)' : 'Rx',
       status, chartClass: 'Corticosteroid; potency ' + pot.map(p => 'class ' + p).join(' and '), chartUse: 'Psoriasis, atopic dermatitis, numerous others',
       use: [S('Psoriasis and atopic dermatitis; match potency to severity and site', 'PCol 11')],
-      tgt: 'tgt-steroids', why: WHY.steroid, ae: [AE.steroid], notes, q};
+      tgt: 'tgt-steroids', why: WHY.steroid, ae: [AE.steroid], notes, q,
+      potency: pot, lines: (STEROID_LINES[id] || [[pot[0], brands, 'Rx']]).map(([p, b, rx]) => ({pot: p, brands: b, rx}))};
     if (atlas) d.atlas = atlas;
     D.push(d);
   }
@@ -11245,7 +12373,7 @@ const DRUGLIST = (() => {
   const CHART_NOTES = [
     'Chart p. 5: the chemical-class column is aligned through calcipotriene and one row off from methoxsalen down (cyclosporine is printed as a furanocoumarin); the indication column is one row off from petrolatum down (apremilast against "Seborrhea, dandruff"), and calcipotriene shares an indication cell with tazarotene. The chart indication is therefore not shown from calcipotriene down; the pharmacological class column is aligned.',
     'Chart p. 4: the TNF-α inhibitor class cell is printed beside etanercept only; adalimumab, infliximab, golimumab and certolizumab pegol are TNF-α inhibitors on Dr. Smith\'s slides (PCol 70–74).',
-    'The chart\'s chemical-class column is shown only for the sunscreens, where it names the family; chemical classes elsewhere are Dr. Sikazwe\'s material (Atlas tab).',
+    'Chemical class: the chart\'s column is asked where it is aligned and agrees with the lectures; each card shows the cells that are not asked (blank, one row off on p. 5, or in conflict with a slide) with both sources. Structures are in the Atlas tab (Dr. Sikazwe).',
   ];
   /* The questions on a drug: its `q` pattern against the stem, the keyed
      answer(s), the concept and (matching items) the left-hand column. */
@@ -11300,7 +12428,14 @@ const DRUGLIST = (() => {
   const family = t => { const n = norm(t); for (const [re, f] of FAMILY) if (re.test(n)) return f || n; return n; };
   // classes whose drugs can truly be described by the other's name
   const CLASS_CONFLICT = [['il23', 'il1223'], ['kerat', 'abx'], ['dhfr', 'abx'], ['dhfr', 'cytotox'], ['cytotox', 'azole'], ['emollient', 'sunblock'],
-    ['sunscreen', 'sunblock']];
+    ['sunscreen', 'sunblock'],
+    // a glucocorticoid, an androgen (spironolactone) and a retinoid all bind nuclear receptors;
+    // ketoconazole is on Dr. Sikazwe's antiandrogen slide (DPAW 53); psoralens are cytotoxic to
+    // T cells (Sun 3); tars are also described as keratolytic
+    ['nrb', 'steroid'], ['nrb', 'antiandr'], ['antiandr', 'azole'], ['psoralen', 'cytotox'], ['kerat', 'cytotox'],
+    // antifungal activity: ketoconazole (azole); selenium sulfide and zinc pyrithione, which "have
+    // cytostatic and antifungal activity" (PCol): never "Antibiotics" for them, nor them for it
+    ['abx', 'azole'], ['abx', 'cytotox']];
   // drug classes whose Reference "target" is not a molecular target (a sunscreen
   // family, a chart class, "no drug target", a mechanism the slide calls unknown)
   const NO_TARGET_Q = new Set(['sunscreen', 'sunblock', 'anesth', 'emollient', 'azole', 'antiandr', 'cytotox', 'kerat']);
@@ -11310,9 +12445,51 @@ const DRUGLIST = (() => {
   // never shown as an answer): systemic cyclosporine and methotrexate and coal
   // tar in atopic dermatitis/eczema, upadacitinib in psoriatic disease, and zinc
   // oxide, which the chart also lists on its psoriasis page (p. 5)
-  const NOT_WRONG = {cyclosporine: ['ad'], methotrexate: ['ad'], coaltar: ['ad'], upadacitinib: ['pso'], zincoxide: ['pso']};
+  // dupilumab and psoriasis: spoken in class (11/03 T 380–383) against slide 64 and the
+  // chart (AD only); held out (reviews/OPEN_QUESTIONS.md, Lecture 3 #2), so never a wrong option
+  // petrolatum and atopic dermatitis: emollients are a basic atopic dermatitis measure in practice
+  // (no course slide says so; the chart lists petrolatum on its psoriasis page), so never a wrong option
+  const NOT_WRONG = {cyclosporine: ['ad'], methotrexate: ['ad'], coaltar: ['ad'], upadacitinib: ['pso'], zincoxide: ['pso', 'ad', 'burn', 'acne'], dupilumab: ['pso'], petrolatum: ['ad'],
+    // zinc oxide: a skin protectant (the chart's shifted p. 5 cell "diaper rash, minor skin irritations"),
+    // so atopic dermatitis and sunburn are not safely false; acne neither (sulfur + zinc oxide acne
+    // mixtures, DPAW 46): no indication question is left for it (its reason is in About this list);
+    // methoxsalen: PUVA is used for severe atopic dermatitis in practice
+    methoxsalen: ['ad']};
+  /* Topical steroids: the chart's indication cell is "Psoriasis, Atopic dermatitis, numerous
+     others" (p. 6). A condition a topical steroid could plausibly treat is not a sound wrong
+     option, so these are never offered as wrong for a steroid (STEROID_MAYBE, with the
+     reason). What is left is false for a steroid by the course sources (STEROID_WRONG_WHY),
+     shown after answering. A steroid with fewer than two such options gets no question. */
+  const STEROID_MAYBE = {
+    burn: 'the chart\'s "numerous others"; a low-potency steroid (hydrocortisone OTC, chart p. 6 class 7) relieves the itch of sunburn and insect bites, the uses on the chart\'s p. 1 sunburn line',
+  };
+  const STEROID_MAYBE_ID = {triamcinolone: {acne: 'triamcinolone acetonide (Kenalog) is also injected into inflamed acne cysts in practice, so "acne" is not safely false for it'}};
+  const STEROID_WRONG_WHY = {
+    acne: S('Acne is a local adverse effect of topical corticosteroids, not a use', 'PCol 12'),
+    sun: S('Sun protection is what sunscreens do: they absorb UV radiation and convert it to heat (chemical) or reflect and scatter it (physical)', 'Sun 20, 22'),
+  };
+  for (const d of D) if (d.cls === 'steroid') NOT_WRONG[d.id] = Object.keys(STEROID_MAYBE).concat(Object.keys(STEROID_MAYBE_ID[d.id] || {}));
+  /* Where a NOT_WRONG use is named in the course sources, shown after an
+     Indication question on the drug is answered and on its Browse card (never
+     before answering, never as an option). Each line is a slide or transcript
+     statement, quoted. No course source was found for methotrexate, coal tar
+     (atopic dermatitis) or upadacitinib (psoriasis), so they have no note.
+     Cyclosporine has none either (Louis, 2026-11-08): the calcineurin class's
+     use in atopic dermatitis (PCol 24) is stated in the Guide's calcineurin
+     inhibitor section; atopic dermatitis stays out of its wrong options. */
+  const OFF_CHART = {
+    zincoxide: [{z: 'pso', head: 'Psoriasis: the chart lists zinc oxide on its psoriasis page (p. 5); in the lectures its role there is to protect the healthy skin around the plaques during anthralin treatment. It is not a psoriasis drug.', src: [
+      S('Short-contact anthralin therapy (SCAT): "zinc oxide ointment or nonmedicated stiff paste applied to surrounding normal skin"', 'PCol 56; 11/03 T 173–175'),
+      K('Anthralin "paste (Anthralin + ZnO + Parrafin + Salicylic Acid)"', 'DPAW 17; 11/03 T 921–922')]}],
+  };
   const DZ_RE = {ad: /atopic|eczema|\bad\b/, pso: /psoria/, acne: /acne/, sun: /sun protection|sunscreen/, burn: /sunburn/};
-  const KINDS = {target: 'Target', cls: 'Class', use: 'Indication'};
+  /* The "Ask about" kinds. target, cls, use ask a drug's field (makeQuestion's own
+     path); the rest (extraQuestion, below) cover the chart's other columns and the
+     reverse direction. KIND_HEAD is the short name over each question. */
+  const KINDS = {target: 'Target', cls: 'Class', use: 'Indication', clsRev: 'Class → drug', useRev: 'Indication → drug',
+    chem: 'Chemical class', rx: 'Rx/OTC', potency: 'Potency class (steroids)',
+    brand: 'Brand names (practice; Dr. Smith\'s exam questions use generic names)'};
+  const KIND_HEAD = Object.assign({}, KINDS, {clsRev: 'Which drug: class', useRev: 'Which drug: indication', potency: 'Potency class', brand: 'Brand name (practice)'});
   const groupOf = d => d.cls === 'abx' ? 'abx:' + norm(d.chartClass || '') : d.cls;
   /* The keyed values of one field of one drug: [{t, src: [{t, by, cite}]}]. */
   function quizFacts(d, T, kind){
@@ -11352,6 +12529,9 @@ const DRUGLIST = (() => {
   /* One question, or null. rng: () => [0, 1). */
   function makeQuestion(d, T, kind, rng){
     rng = rng || Math.random;
+    return EXTRA[kind] ? EXTRA[kind](d, T, rng) : fieldQuestion(d, T, kind, rng);
+  }
+  function fieldQuestion(d, T, kind, rng){
     const keys = quizFacts(d, T, kind);
     if (!keys.length) return null;
     const truth = trueValues(d, T, kind).concat(keys.map(k => k.t));
@@ -11371,16 +12551,223 @@ const DRUGLIST = (() => {
     for (let i = pool.length - 1; i > 0; i--) { const j = Math.floor(rng() * (i + 1)); [pool[i], pool[j]] = [pool[j], pool[i]]; }
     const wrong = [];
     for (const p of pool) { if (seenFam.has(p.f)) continue; seenFam.add(p.f); wrong.push(p.t); if (wrong.length === 3) break; }
-    if (wrong.length < 3) return null;
+    // an indication has five possible values, so where only two sound wrong options remain (the
+    // steroids, whose cell says "numerous others"; zinc oxide) the question has 3 options
+    const steroidUse = kind === 'use' && d.cls === 'steroid';
+    if (wrong.length < (kind === 'use' ? 2 : 3)) return null;
     const key = keys[Math.floor(rng() * keys.length)];
     const options = wrong.map(t => ({t, correct: false})).concat([{t: key.t, correct: true}]);
     for (let i = options.length - 1; i > 0; i--) { const j = Math.floor(rng() * (i + 1)); [options[i], options[j]] = [options[j], options[i]]; }
     const stem = kind === 'target' ? `What is the target of ${d.name}?`
       : kind === 'cls' ? `Which class is ${d.name} in?` : `Which condition is ${d.name} used for?`;
-    return {id: d.id + ':' + kind, drug: d.id, name: d.name, kind, stem, options, src: key.src, also: keys.filter(k => k !== key).map(k => k.t)};
+    return {id: d.id + ':' + kind, drug: d.id, name: d.name, kind, stem, options, src: key.src, also: keys.filter(k => k !== key).map(k => k.t),
+            offChart: kind === 'use' ? (OFF_CHART[d.id] || []) : [],
+            wrongWhy: steroidUse ? wrong.map(t => { const z = Object.keys(DISEASES).find(k => DISEASES[k] === t); return Object.assign({opt: t}, STEROID_WRONG_WHY[z]); }) : []};
   }
+  /* ---------- The chart's other columns: brand, Rx/OTC, chemical class, potency ----------
+     Louis, 2026-11-08: "Every section of each drug on the drug chart should be
+     tested in, please." Each key below is the chart's own cell (with its page),
+     except where the cell is blank, one row off (p. 5) or in conflict with a
+     lecture slide: those drugs get no question and the card shows why. */
+
+  // Brand names: practice only. Dr. Smith, 10/29 T 618–621.
+  const BRAND_QUOTE = S('"You will, you will need to know brand name. I only ask questions using the generic name"', '10/29 T 618–621');
+  // the chart's misspellings of a brand (the key is the correct spelling; the source line shows the print)
+  const BRAND_PRINT = {Cosentyx: 'Consentyx', Vaseline: 'Vasoline', 'Selsun Blue': 'Selsum Blue', Desonate: 'Desonate (Desonide)'};
+  // brands printed on another page than the drug's first (zinc oxide is on pp. 1 and 5)
+  const BRAND_PAGE = {zincoxide: {Zinca: 1, Desitin: 5}};
+  // hydrocortisone valerate is a hydrocortisone: neither's brands are wrong options for the other
+  const BRAND_CONFLICT = [['hydrocortisone', 'hcvalerate']];
+  /* A brand that also fits another drug on the chart: (1) brand lines that name other
+     products (Clearasil and Fostex also sell salicylic acid and sulfur acne products;
+     current Solarcaine products contain lidocaine); (2) a brand family, the brand's first
+     word (Oxy-10 and Oxy Face Scrub, both "Oxy"). Such a brand is never a wrong option for
+     that drug, and that drug never a wrong option for the brand. */
+  const BRAND_ALSO = {Clearasil: ['salicylic', 'sulfur'], Fostex: ['salicylic', 'sulfur'], Solarcaine: ['lidocaine']};
+  const bfam = b => norm(b).split(' ')[0];
+  const brandFits = (b, o) => o.brands.some(x => norm(x) === norm(b) || bfam(x) === bfam(b)) || (BRAND_ALSO[b] || []).includes(o.id);
+  const brandBlocked = (a, b) => a === b || BRAND_CONFLICT.some(([x, y]) => (x === a && y === b) || (x === b && y === a));
+  function brandSrc(d){
+    const by = {};
+    for (const b of d.brands) { const p = (BRAND_PAGE[d.id] || {})[b] || d.page; (by[p] = by[p] || []).push(b); }
+    return Object.entries(by).map(([p, bs]) => C(`Brand${bs.length > 1 ? 's' : ''} on the chart: ` + bs.map(b => BRAND_PRINT[b] ? `${b} (the chart prints "${BRAND_PRINT[b]}")` : b).join(', '), p));
+  }
+
+  // Rx/OTC: the chart's column, per line (hydrocortisone is Rx on its class 5 line, OTC on its class 7 line)
+  const RX_OPTS = ['Rx', 'OTC', 'Rx and OTC'];
+  const RX_PRINT = {lidocaine: 'RX/OTC', adapalene: 'OTC/RX'};
+  const rxNorm = r => /rx/i.test(r) && /otc/i.test(r) ? 'Rx and OTC' : /otc/i.test(r) ? 'OTC' : 'Rx';
+  const rxLines = d => d.lines ? d.lines.map(l => ({rx: l.rx, pot: l.pot, page: 6})) : (d.pages || [d.page]).map(p => ({rx: rxNorm(d.rx), page: p}));
+
+  // Chemical class: {t, src} keyed, or {no: code, why, shown: [statements]}.
+  const CHEM = {};
+  const chemKey = (ids, t, page, extra) => ids.forEach(id => { CHEM[id] = {t, src: [C('Chemical class column: ' + t, page)].concat(extra || [])}; });
+  const chemNo = (ids, no, why, shown) => ids.forEach(id => { CHEM[id] = {no, why, shown: shown || []}; });
+  chemKey(['padimate'], 'Para-aminobenzoic acid (PABA)', 1); chemKey(['octinoxate'], 'Cinnamates', 1);
+  chemKey(['octisalate', 'homosalate'], 'Salicylates', 1); chemKey(['oxybenzone', 'dioxybenzone'], 'Benzophenones', 1);
+  chemKey(['meradimate'], 'Anthranilates', 1); chemKey(['avobenzone'], 'Dibenzoylmethane', 1);
+  chemKey(['zincoxide'], 'Oxides', 1, [C('On p. 5 the zinc oxide row reads "Petroleum": that column is one row off there (see About this list)', 5)]);
+  chemKey(['tio2'], 'Oxides', 1); chemKey(['bemotrizinol'], 'Triazine and methoxybenzene', 1);
+  chemNo(['benzocaine', 'tetracaine', 'lidocaine'], 'blank', 'the chart\'s chemical-class cell for this line is blank (p. 1)');
+  chemNo(['dibucaine'], 'group', 'its chemical-class cell (p. 1) reads "Topical Anesthetics", a therapeutic group already in its pharmacological class, not a chemical class',
+    [C('Chemical class column: "Topical Anesthetics" (the cells of benzocaine, tetracaine and lidocaine are blank)', 1)]);
+  chemKey(['crisaborole'], 'Benzoxaborole', 2, [K('Crisaborole: a benzoxaborole soft drug', 'DPAW 7')]);
+  const T570 = S('JAK inhibitors: "they\'re small molecule inhibitors ... They\'re not a monoclonal antibody."', '11/03 T 570–573');
+  chemNo(['pimecrolimus', 'tacrolimus'], 'conflict', 'the chart\'s "Peptides" conflicts with Dr. Sikazwe\'s slide ("Macrolide or lactone immunosuppressants"); held out in reviews/OPEN_QUESTIONS.md (Sikazwe 11/04 #6)',
+    [C('Chemical class column: "Peptides"', 2), K('Macrolide or lactone immunosuppressants', 'DPAW 28')]);
+  chemKey(['dupilumab'], 'Peptides', 2);
+  chemNo(['ruxolitinib', 'upadacitinib'], 'conflict', 'the chart\'s "Peptides" conflicts with Dr. Smith (JAK inhibitors are small molecules); held out in reviews/OPEN_QUESTIONS.md (Lecture 3 #11)',
+    [C('Chemical class column: "Peptides"', 2), T570]);
+  chemNo(['bpo', 'sulfur', 'salicylic'], 'blank', 'the chart\'s chemical-class cell for the keratolytics is blank (p. 3)');
+  CHEM.bpo.shown = [K('Benzoyl peroxide: "peroxide chemical class"', 'DPAW 47')];
+  chemKey(['sarecycline', 'minocycline', 'doxycycline'], 'Tetracyclines', 3); chemKey(['clindamycin'], 'Lincosamide', 3);
+  chemKey(['erythromycin', 'azithromycin'], 'Macrolides', 3); chemKey(['tmpsmx'], 'Sulfonamide/pyrimidine', 3);
+  chemKey(['dapsone'], 'Sulfone', 3); chemKey(['metronidazole'], 'Nitroimidazole', 3);
+  chemKey(['tretinoin', 'adapalene', 'isotretinoin'], 'Retinoids', 3); chemKey(['spironolactone'], 'Steroid', 3);
+  chemKey(['coaltar', 'shaletar', 'selenium', 'zpt', 'anthralin'], 'Tars/selenide/Zn/anthrone', 4);
+  CHEM.anthralin.src.push(K('Anthralin or dithranol: a hydroxyanthrone', 'DPAW 17'));
+  chemKey(['methotrexate'], 'Pteridine', 4);
+  chemKey(['abatacept', 'etanercept', 'adalimumab', 'infliximab', 'golimumab', 'certolizumab', 'ustekinumab'], 'Peptides (proteins)', 4);
+  chemNo(['tofacitinib'], 'conflict', 'the chart\'s p. 4 cell "Peptides (Proteins)" runs down to tofacitinib, a small molecule (Dr. Smith); the same conflict as ruxolitinib and upadacitinib (Lecture 3 #11)',
+    [C('Chemical class column: "Peptides (Proteins)" (one cell from abatacept to ustekinumab)', 4), T570]);
+  // p. 5: the chemical-class cell is blank from guselkumab to acitretin. For the six antibodies the
+  // p. 4 cell "Peptides (Proteins)" is read across the page break (as the indication is), and each
+  // one's own slide confirms an antibody (a protein); acitretin, a retinoid, gets no key.
+  const AB = {guselkumab: S('Human IgG1 lambda monoclonal antibody', 'PCol 68'), tildrakizumab: S('Humanized IgG1/κ monoclonal antibody', 'PCol 68'),
+    risankizumab: S('Humanized IgG1 monoclonal antibody', 'PCol 69'), secukinumab: S('Human IgG1 monoclonal antibody', 'PCol 66'),
+    brodalumab: S('Human IgG2 antibody to the IL-17 receptor A', 'PCol 66'), ixekizumab: S('Humanized IgG4 monoclonal antibody against IL-17A', 'PCol 66')};
+  for (const [id, s] of Object.entries(AB)) CHEM[id] = {t: 'Peptides (proteins)', src: [
+    C('Chemical class: this row\'s cell on p. 5 is blank; "Peptides (Proteins)" is the p. 4 cell, which runs across the page break', 4), s]};
+  chemNo(['acitretin'], 'blank', 'its chemical-class cell on p. 5 is blank (the blank cell also spans the IL-23 and IL-17 antibodies above it)',
+    [S('Metabolite of the aromatic retinoid etretinate', 'PCol 20')]);
+  chemKey(['tazarotene'], 'Retinoid', 5); chemKey(['calcipotriene'], 'Vitamin D derivative', 5);
+  // p. 5 from methoxsalen down: the column is one row off; keyed only where a slide confirms the corrected value
+  CHEM.methoxsalen = {t: 'Furanocoumarin', src: [C('Chemical class column: "Furanocoumarin", printed one row down (on the cyclosporine row; the column is one row off here)', 5),
+    K('Psoralens (8-MOP): a furanocoumarin', 'DPAW 18')]};
+  chemNo(['cyclosporine'], 'offset', 'chart p. 5 is one row off here: its row reads "Furanocoumarin" and its own value, one row down, "Macrolactam"; Dr. Sikazwe\'s slide calls it an 11-amino-acid cyclic peptide, which does not confirm "Macrolactam"',
+    [C('Chemical class column on its row: "Furanocoumarin"; one row down: "Macrolactam"', 5), K('11 amino acid cyclic peptide', 'DPAW 33')]);
+  chemNo(['petrolatum'], 'offset', 'chart p. 5 is one row off here: its row reads "Macrolactam" and its own value, one row down, "Petroleum"; Dr. Sikazwe\'s slide says hydrocarbons, which does not confirm the chart\'s word',
+    [C('Chemical class column on its row: "Macrolactam"; one row down: "Petroleum"', 5), K('Petrolatum (most effective, over 25 carbons): hydrocarbons', 'DPAW 15')]);
+  chemNo(['ketoconazole'], 'offset', 'chart p. 5 is one row off here: its row reads "Oxide" and its own value, one row down, "Azole"; no slide gives its chemical class (its pharmacological class "Azole antifungal" is asked under Class)',
+    [C('Chemical class column on its row: "Oxide"; one row down: "Azole"', 5), K('Listed under "Non-steroidal AA" (antiandrogens) with flutamide', 'DPAW 53')]);
+  chemNo(['apremilast'], 'offset', 'chart p. 5 is one row off here: its row reads "Azole" (ketoconazole\'s value) and no cell is left for apremilast; Dr. Sikazwe\'s slide calls it an isoindoline',
+    [C('Chemical class column on its row: "Azole"', 5), K('Otezla (apremilast): an isoindoline', 'DPAW 34')]);
+  chemKey(D.filter(d => d.cls === 'steroid').map(d => d.id), 'Steroids', 6);
+  // families of chemical classes: never offered as wrong for each other
+  const CHEM_FAM = [[/peptide|protein/, 'peptide'], [/steroid|vitamin d/, 'steroid'], [/retinoid/, 'retinoid'], [/oxide|\bzn\b/, 'zinc'],
+    [/sulfon|pteridine|aminobenzoic|pyrimidine/, 'folate'], [/macrol|lactone/, 'macro'], [/salicylate/, 'salicylate']];
+  const chemFam = t => { const n = norm(t); for (const [re, f] of CHEM_FAM) if (re.test(n)) return f; return n.replace(/s$/, ''); };
+  const chemOf = d => { const c = CHEM[d.id]; return c && !c.no ? c : null; };
+
+  const shuffled = (a, rng) => { a = a.slice(); for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(rng() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
+  const pickOne = (a, rng) => a[Math.floor(rng() * a.length)];
+  // the steroids' indication cell ends "numerous others", so no steroid is offered as a drug
+  // that is NOT used for something (Indication → drug)
+  const OPEN_USE = new Set(['steroid']);
+  const hasUse = (o, T, z) => trueValues(o, T, 'use').includes(DISEASES[z]) || quizFacts(o, T, 'use').some(v => v.z === z);
+  const useRevWrong = (d, T, z) => D.filter(o => o.id !== d.id && !OPEN_USE.has(o.cls) && !D.some(x => x.cls === o.cls && hasUse(x, T, z)));
+  // up to n items, one per group, in random order
+  const onePer = (items, grp, n, rng) => { const out = [], seen = new Set(); for (const it of shuffled(items, rng)) { const g = grp(it); if (seen.has(g)) continue; seen.add(g); out.push(it); if (out.length === n) break; } return out; };
+  const mix = (wrong, key, rng) => shuffled(wrong.map(t => ({t, correct: false})).concat([{t: key, correct: true}]), rng);
+  const Q = (d, kind, stem, options, src, also) => ({id: d.id + ':' + kind, drug: d.id, name: d.name, kind, stem, options, src, also: also || [], offChart: []});
+
+  const EXTRA = {
+    brand(d, T, rng){
+      if (!d.brands.length) return null;
+      const key = pickOne(d.brands, rng), src = brandSrc(d).concat([BRAND_QUOTE]);
+      const others = D.filter(o => !brandBlocked(o.id, d.id) && o.brands.length);
+      const order = shuffled(others.filter(o => o.page === d.page), rng).concat(shuffled(others.filter(o => o.page !== d.page), rng));
+      if (rng() < 0.5) {                     // generic -> brand
+        const own = new Set(d.brands.map(norm)), wrong = [];
+        for (const o of order) { const b = pickOne(o.brands, rng); if (own.has(norm(b)) || brandFits(b, d) || wrong.some(w => bfam(w) === bfam(b))) continue; wrong.push(b); if (wrong.length === 3) break; }
+        if (wrong.length < 3) return null;
+        return Object.assign(Q(d, 'brand', `Which is a brand name of ${d.name} on the chart?`, mix(wrong, key, rng), src, d.brands.filter(b => b !== key)), {dir: 'fwd'});
+      }
+      const wrong = order.filter(o => !brandFits(key, o)).slice(0, 3).map(o => o.name);   // brand -> generic
+      if (wrong.length < 3) return null;
+      return Object.assign(Q(d, 'brand', `Which drug does the chart list under the brand name ${key}?`, mix(wrong, d.name, rng), src), {dir: 'rev', brand: key});
+    },
+    rx(d, T, rng){
+      const ls = rxLines(d), ln = pickOne(ls, rng), split = new Set(ls.map(l => l.rx)).size > 1;
+      const stem = split ? `How does the chart list ${d.name} on its potency class ${ln.pot} line: Rx, OTC, or both?` : `How does the chart list ${d.name}: Rx, OTC, or both?`;
+      const src = [C('Rx/OTC column: ' + (RX_PRINT[d.id] ? `${ln.rx} (printed "${RX_PRINT[d.id]}")` : ln.rx) + (split ? ` on the ${POTENCY[ln.pot]} line` : '') +
+        (ls.length > 1 && !split ? ' (on each of its lines)' : ''), ln.page)];
+      const also = split ? ls.filter(l => l !== ln).map(l => `${l.rx} on its ${POTENCY[l.pot].toLowerCase()} line`) : [];
+      return Q(d, 'rx', stem, RX_OPTS.map(t => ({t, correct: t === ln.rx})), src, also);
+    },
+    chem(d, T, rng){
+      const c = chemOf(d);
+      if (!c) return null;
+      const f = chemFam(c.t), pool = [];
+      for (const o of D) { const oc = chemOf(o); if (oc && chemFam(oc.t) !== f && !pool.some(p => norm(p) === norm(oc.t))) pool.push(oc.t); }
+      const wrong = onePer(pool, chemFam, 3, rng);
+      if (wrong.length < 3) return null;
+      return Q(d, 'chem', `Which chemical class does the chart give ${d.name}?`, mix(wrong, c.t, rng), c.src);
+    },
+    potency(d, T, rng){
+      if (!d.potency) return null;
+      const key = pickOne(d.potency, rng), twice = d.potency.length > 1;
+      const wrong = shuffled(Object.keys(POTENCY).filter(p => !d.potency.includes(p)), rng).slice(0, 3).map(p => POTENCY[p]);
+      const stem = twice ? `${d.name} is on the chart twice, once per product. Which potency class does the chart give one of them?` : `Which potency class does the chart give ${d.name}?`;
+      return Q(d, 'potency', stem, mix(wrong, POTENCY[key], rng), [C('Potency class column: ' + POTENCY[key] + (twice ? ' (one of its two lines)' : ''), 6)],
+        d.potency.filter(p => p !== key).map(p => POTENCY[p] + ' (its other line)'));
+    },
+    useRev(d, T, rng){
+      const vals = quizFacts(d, T, 'use').filter(v => onePer(useRevWrong(d, T, v.z), o => o.cls, 3, () => 0).length === 3);
+      if (!vals.length) return null;
+      const v = pickOne(vals, rng), wrong = onePer(useRevWrong(d, T, v.z), o => o.cls, 3, rng).map(o => o.name);
+      return Object.assign(Q(d, 'useRev', `Which drug is used for ${DISEASES[v.z].toLowerCase()}?`, mix(wrong, d.name, rng), v.src), {z: v.z});
+    },
+    clsRev(d, T, rng){
+      const k = quizFacts(d, T, 'cls')[0];
+      if (!k) return null;
+      const wrong = onePer(D.filter(o => o.cls !== d.cls && !conflicts(o.cls, d.cls)), o => o.cls, 3, rng).map(o => o.name);
+      if (wrong.length < 3) return null;
+      return Q(d, 'clsRev', `Which drug is in this class: ${CLASSES[d.cls]}?`, mix(wrong, d.name, rng), k.src);
+    },
+  };
+
+  /* The sourced lines of the new columns, for the Browse card and the Recall answer. */
+  function rxSrc(d){
+    const ls = rxLines(d), split = new Set(ls.map(l => l.rx)).size > 1;
+    if (split) return ls.map(l => C(`Rx/OTC column: ${l.rx} on the ${POTENCY[l.pot]} line`, l.page));
+    return [C('Rx/OTC column: ' + (RX_PRINT[d.id] ? `${ls[0].rx} (printed "${RX_PRINT[d.id]}")` : ls[0].rx) + (ls.length > 1 ? ' (on each of its lines)' : ''),
+      [...new Set(ls.map(l => l.page))].join(', '))];
+  }
+  const potSrc = (d, withBrands) => (d.lines || []).map(l => C(`Potency class column: ${POTENCY[l.pot]}` +
+    (withBrands && d.lines.length > 1 ? ` (${l.brands.join(', ')}; ${l.rx})` : ''), 6));
+
+  /* Why a drug gets no question of a kind (the coverage line in About this list). */
+  function whyNone(d, T, kind){
+    if (kind === 'target') return NO_TARGET_Q.has(d.cls) ? 'the target line names no molecular target (a sunscreen family, a chart class, "no drug target" or an effect)'
+      : NO_TARGET_ID.has(d.id) ? 'the slide calls the mechanism unknown or gives an effect, not a target' : 'fewer than three safe wrong options';
+    if (kind === 'use' && d.cls === 'steroid' && STEROID_MAYBE_ID[d.id]) return 'topical steroid: ' + Object.values(STEROID_MAYBE_ID[d.id]).join('; ') + ', and fewer than two options are false by the sources';
+    if (kind === 'use' && d.id === 'zincoxide') return 'zinc oxide is a skin protectant used on irritated skin, and sulfur + zinc oxide acne mixtures exist (DPAW 46), so no other condition is safely false for it';
+    if (kind === 'use' || kind === 'useRev') return quizFacts(d, T, 'use').length ? 'fewer than three safe wrong options'
+      : 'no indication on its chart line (p. 5, one row off) and none on a slide';
+    if (kind === 'brand') return d.brands.length ? 'fewer than three safe wrong options' : 'no brand on its chart line';
+    if (kind === 'potency') return d.potency ? 'fewer than three safe wrong options' : 'not a topical steroid (potency classes are on chart p. 6 only)';
+    if (kind === 'chem') { const c = CHEM[d.id]; return !c ? 'no chemical class recorded' : c.no ? {blank: 'cell blank on the chart', group: 'cell names a therapeutic group, not a chemical class',
+      conflict: 'chart cell conflicts with a lecture', offset: 'chart p. 5 column one row off, corrected value not confirmed on a slide'}[c.no] : 'fewer than three safe wrong options'; }
+    return 'fewer than three safe wrong options';
+  }
+  /* Per kind: how many drugs get a question, and the others grouped by reason. */
+  function coverage(T){
+    const out = {};
+    for (const k of Object.keys(KINDS)) {
+      const o = {n: 0, none: {}};
+      for (const d of D) {
+        let s = 7; const rng = () => { s = (s * 16807) % 2147483647; return s / 2147483647; };
+        if (makeQuestion(d, T, k, rng)) o.n++; else (o.none[whyNone(d, T, k)] = o.none[whyNone(d, T, k)] || []).push(d.name);
+      }
+      out[k] = o;
+    }
+    return out;
+  }
+
   return {parseTargets, D, CLASS_Q, CLASSES, DISEASES, PAGES, CHART_ROWS, EXCLUDED, CHART_NOTES, questionsFor, classQuestions,
-          KINDS, quizFacts, trueValues, makeQuestion, norm, family, NOT_WRONG};
+          KINDS, KIND_HEAD, quizFacts, trueValues, makeQuestion, norm, family, NOT_WRONG, OFF_CHART,
+          CHEM, chemFam, rxLines, BRAND_ALSO, brandFits, STEROID_MAYBE, STEROID_MAYBE_ID, STEROID_WRONG_WHY, RX_OPTS, POTENCY, brandBlocked, brandSrc, rxSrc, potSrc, BRAND_PRINT, BRAND_QUOTE, OPEN_USE, hasUse, conflicts, whyNone, coverage};
 })();
 
 /* ==========================================================================
@@ -11400,20 +12787,42 @@ const DRUGLIST = (() => {
    says what to type):
      Browse    every matching drug as a full card, all at once.
      Quiz me   multiple choice, every question for the matching drugs listed
-               at once and answered in place (target, class, indication);
-               questions come from DRUGLIST.makeQuestion (druglist_data.js),
-               which builds them from the cards' own sourced statements.
-     Recall    the drug name only, a box to type the target, mechanism, class
-               or indication, and Check to compare with the answer and source.
-   Generic names only in Quiz me and Recall (brands are on Browse cards, as
-   reference). A score in Quiz me counts this page view only.
+               at once and answered in place. "Ask about" kinds (DL.KINDS):
+               target, class, indication; class → drug and indication →
+               drug (the reverse direction); and every other chart column:
+               chemical class, Rx/OTC, potency class (steroids) and brand
+               names (practice: Dr. Smith asks by generic name, 10/29 T
+               618–621). Target and Class are on by default, the others
+               off, so a set stays short. Questions come from
+               DRUGLIST.makeQuestion (druglist_data.js), which builds them
+               from the cards' own sourced statements and the chart's cells.
+     Recall    the drug name only, a box to type the target, mechanism, class,
+               indication, chemical class, Rx/OTC, potency class or brand,
+               and Check to compare with the answer and source. The worked
+               example names a drug that is not in the current list (or a
+               p. 7 lice/scabies line, never on the list).
+     Chart     the original chart pages (chart/chart-p1.jpg ... p7, rendered
+               by render_chart.py), one page at a time, with a find box: a
+               generic or brand name (the same matching as the filters'
+               Search) turns to the drug's page and highlights its row(s)
+               from CHART_BOXES (chart_boxes.js). "See on the chart (p. N)"
+               on a Browse card, after a Quiz me answer and in a Recall
+               answer opens it there. Louis, 2026-11-08, who authorized
+               showing the chart pages on the public site. The images sit at
+               the repository root beside slides/ and load from the same base
+               as walk_ui.js uses (../ in /preview/); the service worker does
+               not precache them.
+   steroid's indication question offers only options false by the sources
+   (3 options), with the reason for each shown after answering.
+   Generic names in every question except the brand kind, which asks brand to
+   generic and generic to brand. A score in Quiz me counts this page view only.
 
    Data: druglist_data.js (DRUGLIST). Targets and mechanisms are read from the
    Reference tab's "Drug targets" table (REFERENCE_HTML, rows tgt-*), the one
    source of targets. Links use the engine's own drillList(), jump(),
    linksFor() and the RET/backBtn return stack.
 
-   Storage: none. Nothing is written to localStorage, sessionStorage or
+   Storage: none (the Chart view's page, zoom and highlight included). Nothing is written to localStorage, sessionStorage or
    IndexedDB, and nothing goes into the core's progress or history: quiz
    answers, the score and typed recall text live in this page's memory only
    and are gone on reload. (The engine's own place-keeping may remember that
@@ -11427,7 +12836,8 @@ const DRUGLIST_UI = (() => {
   const DL = DRUGLIST, ID = 'drugs';
   const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g, c => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'}[c]));
   const NOFILTER = {q: '', dz: '', cls: '', page: '', status: '', boxed: false, photo: false, hasq: false};
-  const st = Object.assign({mode: 'browse', kinds: {target: true, cls: true, use: false}, rfield: 'target'}, NOFILTER);
+  const st = Object.assign({mode: 'browse', kinds: Object.assign(...Object.keys(DRUGLIST.KINDS).map(k => ({[k]: k === 'target' || k === 'cls'}))), rfield: 'target',
+    cpage: 1, chit: null, cq: '', zoom: null, cfrom: null}, NOFILTER);
   // memory only, never stored
   const typed = {}, checked = new Set();
   let quiz = null;                        // {sig, list: [question], ans: {qid: option index}, skipped: {kind: n}}
@@ -11437,11 +12847,12 @@ const DRUGLIST_UI = (() => {
     ['browse', 'Browse', 'Every drug that matches the filters, shown in full: class, use, target, mechanism, cautions, each line with its source.'],
     ['quiz', 'Quiz me', 'Multiple choice on the drugs that match the filters, all on this page. Tap an answer to see if it is right, the correct answer and its source. Nothing is saved.'],
     ['recall', 'Recall', 'Each drug by name only. Type what you remember, press Check, and compare it yourself with the answer and its source. Not graded, not saved.'],
+    ['chart', 'Chart', 'The original drug chart, page by page. Find a drug by generic or brand name to turn to its page and highlight its row. Pinch or use Zoom to read it; Open full size shows the page image on its own.'],
   ];
-  const RFIELDS = {target: 'Target', mech: 'Mechanism', cls: 'Class', use: 'Indication'};
+  const RFIELDS = {target: 'Target', mech: 'Mechanism', cls: 'Class', use: 'Indication', chem: 'Chemical class', rx: 'Rx/OTC', potency: 'Potency class', brand: 'Brand'};
 
   const css = `
-#v-drugs .dlmodes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;margin:4px 0 6px;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:var(--paper);max-width:520px}
+#v-drugs .dlmodes{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;margin:4px 0 6px;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:var(--paper);max-width:640px}
 #v-drugs .dlmodes button{min-height:44px;font:inherit;font-size:15px;font-weight:500;border:0;border-left:1px solid var(--line);background:transparent;color:var(--text);padding:8px 6px;cursor:pointer}
 #v-drugs .dlmodes button:first-child{border-left:0}
 #v-drugs .dlmodes button[aria-checked="true"]{background:var(--ink);color:#fff}
@@ -11468,6 +12879,8 @@ const DRUGLIST_UI = (() => {
 #v-drugs .dlmodebar{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 12px;margin:0 0 12px}
 #v-drugs .dlmodebar p{margin:6px 0 0;font-size:14px;line-height:1.45}
 #v-drugs .dlmodebar .ex{font-size:13.5px;color:var(--text-dim)}
+#v-drugs .dlcov{margin:6px 0;padding-left:18px}
+#v-drugs .dlcov li{margin:3px 0}
 #v-drugs .dlcount{font-size:14px;color:var(--text-dim);margin:4px 0 10px}
 #v-drugs .dlscore{font-size:15px;font-weight:600;margin:8px 0 0}
 #v-drugs .dlgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,330px),1fr));gap:12px}
@@ -11515,6 +12928,23 @@ const DRUGLIST_UI = (() => {
 #v-drugs .dlfb .r{font-weight:600;color:var(--ok)} #v-drugs .dlfb .w{font-weight:600;color:var(--bad)}
 #v-drugs .dlempty{font-size:14px;color:var(--text);margin:10px 0}
 #v-atlas .attile.dlhit{outline:3px solid var(--accent);outline-offset:2px}
+#v-drugs .dlcres{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0 0}
+#v-drugs .dlcres .chip{text-align:left}
+#v-drugs .dlcnav{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:0 0 8px}
+#v-drugs .dlcnav .lab{font-size:13px;color:var(--text-dim)}
+#v-drugs .dlcnav .chip{min-width:44px;justify-content:center}
+#v-drugs .dlcnav .chip[aria-current="page"]{background:var(--ink);color:#fff;border-color:var(--ink)}
+#v-drugs .dlctools{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:0 0 8px}
+#v-drugs .dlctools a.btn{text-decoration:none;display:inline-flex;align-items:center}
+#v-drugs .dlctitle{font-size:16px;margin:4px 0 6px}
+#v-drugs .dlcframe{overflow:auto;max-width:100%;border:1px solid var(--line);border-radius:8px;background:#fff;-webkit-overflow-scrolling:touch}
+#v-drugs .dlcimg{position:relative;min-width:100%}
+#v-drugs .dlcimg img{position:absolute;inset:0;width:100%;height:100%;display:block}
+#v-drugs .dlhl{position:absolute;background:rgba(255,214,0,.5);mix-blend-mode:multiply;outline:3px solid #C62828;outline-offset:0;border-radius:2px;pointer-events:none}
+#v-drugs .dlcstat{font-size:14.5px;margin:8px 0;line-height:1.45}
+#v-drugs .dlcstat:empty{display:none}
+#v-drugs .dlcnotes{font-size:13.5px;color:var(--text);margin:8px 0 0;padding-left:18px;line-height:1.45}
+#v-drugs .dlcnotes li{margin:3px 0}
 `;
 
   /* ---------- data helpers ---------- */
@@ -11533,6 +12963,8 @@ const DRUGLIST_UI = (() => {
   const cap = t => String(t).charAt(0).toUpperCase() + String(t).slice(1);
   const li = s => `<li>${esc(cap(s.t))}${src(s)}</li>`;
   const field = (cls, label, items) => items && items.length ? `<div class="dlf ${cls}"><b>${esc(label)}</b><ul>${items.map(li).join('')}</ul></div>` : '';
+  // uses kept out of the wrong options that a slide or transcript names (DL.OFF_CHART)
+  const offChart = notes => notes.map(n => `<div class="dlf f-note dloff"><b>${esc(n.head)}</b><ul>${n.src.map(li).join('')}</ul></div>`).join('');
   const STATUS = {taught: ['taught', 'Exam 1 · taught'], class: ['class', 'Optional · class taught, drug on chart only'],
                   chart: ['chart', 'Optional · chart only, not in the Exam 1 lectures']};
   const findText = d => [d.name].concat(d.alt || [], d.brands || [], [DL.CLASSES[d.cls] || '', d.sub || '']).join(' ').toLowerCase();
@@ -11566,13 +12998,13 @@ const DRUGLIST_UI = (() => {
     const notes = (d.notes || []).filter(n => n.by !== 'remark'), remarks = (d.notes || []).filter(n => n.by === 'remark');
     const Q = qs(d), links = readLinks(d);
     const members = DL.D.filter(x => x.cls === d.cls && x.id !== d.id);
-    return field('f-class', 'Class', L.cls) + field('f-use', 'Indication', L.use) +
+    return field('f-class', 'Class', L.cls) + chemField(d) + field('f-note', 'Potency class', DL.potSrc(d, true)) + field('f-use', 'Indication', L.use) +
       field('f-tg', 'Target', L.tg) + field('f-mo', 'Mechanism', L.mo) +
       field('f-why', 'Why it helps (Dr. Smith)', d.why ? [d.why] : []) +
       field('f-box', 'Boxed warning', d.boxed ? [d.boxed] : []) +
       field('f-ae', 'Key adverse effects and cautions', d.ae || []) +
       field('f-ph', d.photo && d.photo.no ? 'Photosensitivity: not photosensitizing' : 'Photosensitizing', d.photo ? [d.photo] : []) +
-      field('f-note', 'Also', notes) +
+      field('f-note', 'Also', notes) + offChart(DL.OFF_CHART[d.id] || []) +
       (remarks.length ? `<div class="dlf f-note"><b>Note</b><ul>${remarks.map(r => `<li>${esc(cap(r.t))}</li>`).join('')}</ul></div>` : '') +
       (members.length ? `<div class="dlrow"><span class="meta">Compare in class (${esc(DL.CLASSES[d.cls])}):</span>
         <button type="button" class="chip" data-dl="cls" data-cls="${esc(d.cls)}">Show all ${members.length + 1}</button>
@@ -11584,6 +13016,13 @@ const DRUGLIST_UI = (() => {
         <button type="button" class="chip" data-dl="ref" data-a="${esc(d.tgt)}">Reference: target table</button>
         ${links.map(([v, a, t]) => `<button type="button" class="chip" data-jump="${esc(v)}:${esc(a)}">${esc(t)}</button>`).join('')}
         ${atlasKey(d) ? `<button type="button" class="chip" data-dl="atlas" data-key="${esc(atlasKey(d))}">Atlas: structure</button>` : ''}</div>`;
+  }
+  /* the chemical class: the keyed chart cell, or the cells not asked, with both sources and why */
+  function chemField(d){
+    const c = DL.CHEM[d.id];
+    if (!c) return '';
+    if (!c.no) return field('f-class', 'Chemical class', c.src);
+    return `<div class="dlf f-class"><b>Chemical class (not asked)</b><ul>${c.shown.map(li).join('')}<li>Not asked in Quiz me: ${esc(c.why)}.</li></ul></div>`;
   }
   function readLinks(d){
     if (typeof linksFor !== 'function') return [];
@@ -11602,7 +13041,7 @@ const DRUGLIST_UI = (() => {
   }
   const head = (d, withBrands) => {
     const [sc, sl] = STATUS[d.status];
-    const brands = withBrands && (d.brands || []).length ? `<p class="dlbrand">Brand${d.brands.length > 1 ? 's' : ''} (chart, reference only): ${esc(d.brands.join(', '))}</p>` : '';
+    const brands = withBrands && (d.brands || []).length ? `<p class="dlbrand">Brand${d.brands.length > 1 ? 's' : ''} (chart; Dr. Smith asks by generic name): ${esc(d.brands.join(', '))}</p>` : '';
     const alt = (d.alt || []).length ? `<p class="dlbrand">Also: ${esc(d.alt.join(', '))}</p>` : '';
     return `<h3>${esc(d.name)}</h3>${alt}${brands}
       <p class="dlmeta"><span class="dlbadge ${sc}">${esc(sl)}</span><span class="dlbadge">Chart p. ${esc(d.pages ? d.pages.join(', ') : d.page)} · ${esc(d.rx)}</span>`;
@@ -11610,11 +13049,14 @@ const DRUGLIST_UI = (() => {
   function card(d){
     const flags = (d.boxed ? '<span class="dlbadge box">Boxed warning</span>' : '') +
                   (d.photo && !d.photo.no ? '<span class="dlbadge ph">Photosensitizing</span>' : '');
-    return `<article class="dlcard${d.status === 'taught' ? '' : ' dlopt'}" data-id="${esc(d.id)}">${head(d, true)}${flags}</p>${answer(d)}</article>`;
+    return `<article class="dlcard${d.status === 'taught' ? '' : ' dlopt'}" data-id="${esc(d.id)}">${head(d, true)}${flags}</p>
+      <div class="dlrow">${chartBtn(d)}</div>${answer(d)}</article>`;
   }
 
   /* ---------- Recall: name, box, Check ---------- */
-  const RLABEL = {target: 'its target', mech: 'its mechanism', cls: 'its class', use: 'what it is used for'};
+  const RLABEL = {target: 'its target', mech: 'its mechanism', cls: 'its class', use: 'what it is used for', chem: 'its chemical class (chart)',
+    rx: 'Rx, OTC or both (chart)', potency: 'its potency class (chart)', brand: 'its brand name(s) (chart)'};
+  const none = (cls, label, t) => `<div class="dlf ${cls}"><b>${esc(label)}</b><ul><li>${esc(t)}</li></ul></div>`;
   function recallAnswer(d){
     const L = lines(d), f = st.rfield;
     if (f === 'target') return field('f-tg', 'Target', L.tg);
@@ -11622,7 +13064,28 @@ const DRUGLIST_UI = (() => {
     if (f === 'mech') return L.mo.length ? field('f-tg', 'Target', L.tg) + field('f-mo', 'Mechanism', L.mo)
       : `<div class="dlf f-mo"><b>Mechanism</b><ul><li>No separate mechanism line on the Reference table; the target line is the answer.</li></ul></div>` + field('f-tg', 'Target', L.tg);
     if (f === 'cls') return field('f-class', 'Class', L.cls.length ? L.cls : [{t: DL.CLASSES[d.cls], by: 'chart', cite: 'Chart p. ' + d.page}]);
-    return L.use.length ? field('f-use', 'Indication', L.use) : `<div class="dlf f-use"><b>Indication</b><ul><li>No indication on the chart line (chart p. 5 columns are misaligned; see About this list)${d.dz.length ? ': listed on the ' + esc(DL.PAGES[d.page]) + ' page' : ''}.</li></ul></div>`;
+    if (f === 'chem') return chemField(d);
+    if (f === 'rx') return field('f-note', 'Rx/OTC', DL.rxSrc(d));
+    if (f === 'potency') return d.potency ? field('f-note', 'Potency class', DL.potSrc(d, false)) : none('f-note', 'Potency class', 'No potency class: not a topical steroid (potency classes are on chart p. 6 only).');
+    if (f === 'brand') return d.brands.length ? field('f-note', 'Brand', DL.brandSrc(d).concat([DL.BRAND_QUOTE])) : none('f-note', 'Brand', 'No brand on its chart line.');
+    if (L.use.length) return field('f-use', 'Indication', L.use) + offChart(DL.OFF_CHART[d.id] || []);
+    return `<div class="dlf f-use"><b>Indication</b><ul><li>No indication on the chart line (chart p. 5 columns are misaligned; see About this list)${d.dz.length ? ': listed on the ' + esc(DL.PAGES[d.page]) + ' page' : ''}.</li></ul></div>` + offChart(DL.OFF_CHART[d.id] || []);
+  }
+  /* the worked example: a drug outside the current list, so it gives no cue (for the chart
+     columns, a line of chart p. 7, which is never on the list) */
+  const P7 = {cls: ['malathion 0.5% (chart p. 7, not on Exam 1)', 'Insecticide'], use: ['malathion 0.5% (chart p. 7, not on Exam 1)', 'Lice'],
+    chem: ['malathion 0.5% (chart p. 7, not on Exam 1)', 'Organophosphate'], rx: ['malathion 0.5% (chart p. 7, not on Exam 1)', 'Rx'],
+    brand: ['permethrin 1% lotion (chart p. 7, not on Exam 1)', 'Nix']};
+  function recallExample(){
+    const f = st.rfield, on = new Set(filtered().map(d => d.id)), out = DL.D.filter(d => !on.has(d.id));
+    const ex = (who, t) => `For example, ${esc(RFIELDS[f].toLowerCase())} of ${esc(who)}: <i>${esc(t)}</i>.`;
+    if (P7[f]) return ex(...P7[f]);
+    if (f === 'potency') { const d = out.find(x => x.potency); return d ? ex(d.name.toLowerCase(), DL.POTENCY[d.potency[0]]) : 'Type a class from 1 (very high potency) to 7 (least potent).'; }
+    for (const d of out) {
+      const L = lines(d), p = f === 'mech' ? L.mo[0] : DL.quizFacts(d, targets(), 'target')[0];
+      if (p) return ex(d.name.toLowerCase(), p.t);
+    }
+    return f === 'mech' ? 'Type how the drug acts on its target.' : 'Type what the drug binds or blocks: a receptor, an enzyme or a cytokine.';
   }
   function rcard(d){
     const k = d.id + ':' + st.rfield, open = checked.has(k), inp = 'dlt-' + d.id;
@@ -11631,7 +13094,7 @@ const DRUGLIST_UI = (() => {
         <div class="dlrow"><input type="text" id="${inp}" autocomplete="off" autocapitalize="off" spellcheck="false" enterkeyhint="done"
           data-dl="typed" data-id="${esc(d.id)}" value="${esc(typed[k] || '')}">
         <button type="button" class="btn sm${open ? ' ghost' : ''}" data-dl="check" data-id="${esc(d.id)}" aria-expanded="${open}" aria-controls="dla-${esc(d.id)}">${open ? 'Hide' : 'Check'}</button></div></div>
-      <div id="dla-${esc(d.id)}" class="dlans">${open ? recallAnswer(d) +
+      <div id="dla-${esc(d.id)}" class="dlans">${open ? recallAnswer(d) + `<div class="dlrow">${chartBtn(d)}</div>` +
         `<details class="dlwhole"><summary>Whole card</summary>${answer(d)}</details>` : ''}</div></article>`;
   }
 
@@ -11652,6 +13115,7 @@ const DRUGLIST_UI = (() => {
     return {done: a.length, right, total: quiz.list.length};
   };
   const LET = 'ABCD';
+  const FCLS = {target: 'f-tg', cls: 'f-class', clsRev: 'f-class', chem: 'f-class', use: 'f-use', useRev: 'f-use'};
   function qblock(q){
     const pick = quiz.ans[q.id], done = pick !== undefined;
     const opts = q.options.map((o, i) => {
@@ -11661,15 +13125,111 @@ const DRUGLIST_UI = (() => {
     }).join('');
     const right = done && q.options[pick].correct, key = q.options.find(o => o.correct);
     const fb = !done ? '' : `<p class="dlfb">${right ? '<span class="r">Right.</span>' : `<span class="w">Not this one.</span> The answer: <b>${esc(key.t)}</b>.`}</p>
-      <div class="dlf ${q.kind === 'target' ? 'f-tg' : q.kind === 'cls' ? 'f-class' : 'f-use'}"><b>Source</b><ul>${q.src.map(li).join('')}</ul></div>
-      ${q.also.length ? `<p class="dlfb">Also true for ${esc(q.name)}: ${esc(q.also.join('; '))}.</p>` : ''}`;
-    return `<div class="dlq" data-qid="${esc(q.id)}"><p class="dlqh">${esc(q.name)} · ${esc(DL.KINDS[q.kind])}</p>
+      <div class="dlf ${FCLS[q.kind] || 'f-note'}"><b>Source</b><ul>${q.src.map(li).join('')}</ul></div>
+      ${q.also.length ? `<p class="dlfb">Also true for ${esc(q.name)}: ${esc(q.also.join('; '))}.</p>` : ''}
+      ${(q.wrongWhy || []).length ? `<div class="dlf f-note"><b>Why the other options are wrong</b><ul>${q.wrongWhy.map(w => `<li>${esc(w.opt)}: ${esc(w.t)}${src(w)}</li>`).join('')}</ul></div>` : ''}
+      ${offChart(q.offChart || [])}
+      <div class="dlrow">${chartBtn(DL.D.find(x => x.id === q.drug))}</div>`;
+    // a question whose answer is the drug does not name it above the stem
+    const rev = q.kind === 'useRev' || q.kind === 'clsRev' || (q.kind === 'brand' && q.dir === 'rev');
+    return `<div class="dlq" data-qid="${esc(q.id)}"><p class="dlqh">${rev ? '' : esc(q.name) + ' · '}${esc(DL.KIND_HEAD[q.kind])}</p>
       <p class="stem" id="dlqs-${esc(q.id)}">${esc(q.stem)}</p>
       <div role="group" aria-labelledby="dlqs-${esc(q.id)}">${opts}</div><div aria-live="polite">${fb}</div></div>`;
   }
   function scoreLine(){
     const s = score();
     return s.total ? `${s.right} of ${s.done} right` + (s.done < s.total ? ` · ${s.total - s.done} still to answer` : ' · all answered') : '';
+  }
+
+  /* ---------- Chart: the original pages, find and highlight ---------- */
+  const CB = typeof CHART_BOXES !== 'undefined' ? CHART_BOXES : null;
+  const CPAGES = Object.assign({}, DL.PAGES, {7: 'Lice and scabies'});
+  const ZOOMS = [1, 1.5, 2, 3];
+  const chartBase = () => { try { return BUILD.preview ? '../' : ''; } catch (e) { return ''; } };
+  const chartSrc = p => chartBase() + 'chart/' + CB.pages[p].file;
+  const boxesOf = id => !CB ? [] : String(id).startsWith('line:') ? CB.other.filter(b => 'line:' + b.line === id) : (CB.drugs[id] || []);
+  const hitName = id => String(id).startsWith('line:') ? DL.CHART_ROWS[+id.slice(5)][1] : (DL.D.find(d => d.id === id) || {}).name;
+  const chartPages = id => [...new Set(boxesOf(id).map(b => b.page))];
+  function chartBtn(d){
+    const ps = chartPages(d.id);
+    return ps.length ? `<button type="button" class="chip" data-dl="chart" data-id="${esc(d.id)}">See on the chart (p. ${esc(ps.join(', '))})</button>` : '';
+  }
+  /* the find box: the cards by the filters' Search matching, then the p. 7 lines by their text */
+  function chartMatches(v){
+    v = v.trim().toLowerCase();
+    if (!v) return [];
+    const out = DL.D.filter(d => findText(d).indexOf(v) !== -1).map(d => ({id: d.id, label: d.name, pages: chartPages(d.id)}));
+    if (CB) for (const b of CB.other) if (DL.CHART_ROWS[b.line][1].toLowerCase().indexOf(v) !== -1)
+      out.push({id: 'line:' + b.line, label: DL.CHART_ROWS[b.line][1], pages: [b.page]});
+    return out;
+  }
+  const rowsText = rs => rs.length === 1 ? 'row ' + rs[0] : 'rows ' + rs.slice(0, -1).join(', ') + ' and ' + rs[rs.length - 1];
+  function chartStatus(){
+    if (!st.chit) return '';
+    const bs = boxesOf(st.chit), here = bs.filter(b => b.page === st.cpage), name = hitName(st.chit);
+    if (!bs.length) return '';
+    const other = [...new Set(bs.filter(b => b.page !== st.cpage).map(b => b.page))];
+    let t = here.length ? `Highlighted: ${esc(name)}, ${rowsText(here.map(b => b.row))} on page ${st.cpage} (the chart prints "${esc(here.map(b => b.text).join('"; "'))}").`
+      : `${esc(name)} is not on page ${st.cpage}.`;
+    if (other.length) t += ' ' + other.map(p => `<button type="button" class="chip" data-dl="cpage" data-p="${p}">${here.length ? 'Also on' : 'Go to'} page ${p}</button>`).join(' ');
+    return t;
+  }
+  function chartNotes(p){
+    const n = [];
+    if (p === 7) n.push('Not on Exam 1: Dr. Smith, 10/29: "I don\'t cover these medications." (lice and scabies; 10/29 T 590–593)');
+    if (p === 5) n.push('Page 5 continues the psoriasis table of page 4 (no title or header row on this page).');
+    DL.CHART_NOTES.filter(x => x.startsWith('Chart p. ' + p + ':')).forEach(x => n.push('Chart note: ' + x.replace(/^Chart p\. \d+: /, '')));
+    return n.length ? `<ul class="dlcnotes">${n.map(x => `<li>${esc(x)}</li>`).join('')}</ul>` : '';
+  }
+  function chartView(){
+    if (!CB) return '<p class="dlempty">The chart pages are not in this build.</p>';
+    // a phone starts at 2x (the page's own text is too small at its width), wider screens fit the width
+    if (st.zoom === null) st.zoom = window.innerWidth < 600 ? 2 : 0;
+    const p = st.cpage, pg = CB.pages[p], z = ZOOMS[st.zoom];
+    const hl = st.chit ? boxesOf(st.chit).filter(b => b.page === p) : [];
+    const from = st.cfrom && DL.D.find(d => d.id === st.cfrom.id);
+    return `${from ? `<p><button type="button" class="btn sm ghost" data-dl="cback">Back to ${esc(from.name)} (${esc(MODES.find(m => m[0] === st.cfrom.mode)[1])})</button></p>` : ''}
+      <div class="dlcnav" role="group" aria-label="Chart pages"><span class="lab">Page:</span>
+      ${Object.keys(CB.pages).map(k => `<button type="button" class="chip" data-dl="cpage" data-p="${k}" aria-label="Page ${k}: ${esc(CPAGES[k])}"${+k === p ? ' aria-current="page"' : ''}>${k}</button>`).join('')}</div>
+      <h3 class="dlctitle" id="dlctitle">Page ${p}: ${esc(CPAGES[p])}${p === 7 ? ' (not on Exam 1)' : ''}</h3>
+      <div class="dlctools"><button type="button" class="btn sm ghost" data-dl="czoom" data-z="-1"${st.zoom ? '' : ' disabled'} aria-label="Zoom out">Zoom −</button>
+        <button type="button" class="btn sm ghost" data-dl="czoom" data-z="1"${st.zoom < ZOOMS.length - 1 ? '' : ' disabled'} aria-label="Zoom in">Zoom +</button>
+        <button type="button" class="btn sm ghost" data-dl="czoom" data-z="0"${st.zoom ? '' : ' disabled'}>Fit width</button>
+        <a class="btn sm ghost" href="${esc(chartSrc(p))}" target="_blank" rel="noopener">Open full size</a></div>
+      <p class="dlcstat" id="dlcstat" aria-live="polite">${chartStatus()}</p>
+      <div class="dlcframe" id="dlcframe"><div class="dlcimg" style="width:${z * 100}%;aspect-ratio:${pg.w} / ${pg.h}">
+        <img src="${esc(chartSrc(p))}" loading="lazy" decoding="async" width="${pg.w}" height="${pg.h}"
+          alt="Drug chart page ${p}: ${esc(CPAGES[p])}${hl.length ? '; highlighted ' + esc(rowsText(hl.map(b => b.row))) + ', ' + esc(hitName(st.chit)) : ''}">
+        ${hl.map(b => `<div class="dlhl" aria-hidden="true" style="left:${b.x0 * 100}%;top:${b.y0 * 100}%;width:${(b.x1 - b.x0) * 100}%;height:${(b.y1 - b.y0) * 100}%"></div>`).join('')}
+      </div></div>
+      ${chartNotes(p)}`;
+  }
+  function chartResults(){
+    const m = chartMatches(st.cq);
+    if (!st.cq.trim()) return '';
+    if (!m.length) return '<p class="dlempty">No drug on the chart matches. Try the generic name, a brand or a class.</p>';
+    return `<p class="dlcount">${m.length === 1 ? '1 match' : m.length + ' matches'}:</p><div class="dlcres">` +
+      m.map(x => `<button type="button" class="chip" data-dl="chit" data-id="${esc(x.id)}"${x.id === st.chit ? ' aria-pressed="true"' : ''}>${esc(x.label)} · p. ${esc(x.pages.join(', '))}</button>`).join('') + '</div>';
+  }
+  function drawChart(scroll){
+    const v = pane.querySelector('#dlcview'), r = pane.querySelector('#dlcres');
+    if (r) r.innerHTML = chartResults();
+    if (v) v.innerHTML = chartView();
+    if (scroll) {
+      const h = pane.querySelector('#dlcframe .dlhl'), fr = pane.querySelector('#dlcframe');
+      if (h && fr) {
+        fr.scrollLeft = 0;
+        fr.scrollTop = Math.max(0, h.offsetTop - fr.clientHeight / 3);
+        const r1 = h.getBoundingClientRect();
+        window.scrollTo(0, Math.max(0, window.scrollY + r1.top - window.innerHeight / 3));
+      }
+    }
+  }
+  function showOnChart(id){
+    const bs = boxesOf(id);
+    if (!bs.length) return;
+    st.chit = id;
+    if (!bs.some(b => b.page === st.cpage)) st.cpage = bs[0].page;
   }
 
   /* ---------- the pane ---------- */
@@ -11682,24 +13242,30 @@ const DRUGLIST_UI = (() => {
       const anyMissed = quiz && quiz.list.some(q => quiz.ans[q.id] !== undefined && !q.options[quiz.ans[q.id]].correct);
       modebar = `<div class="dlmodebar"><div class="dlchips" role="group" aria-label="Ask about"><span class="lab">Ask about:</span>
         ${Object.entries(DL.KINDS).map(([k, v]) => `<button type="button" class="chip" data-dl="kind" data-k="${k}" aria-pressed="${!!st.kinds[k]}">${esc(v)}</button>`).join('')}</div>
+        ${st.kinds.brand ? `<p class="ex">Brand names are practice: Dr. Smith, 10/29: ${esc(DL.BRAND_QUOTE.t)} (T 618–621).</p>` : ''}
         <p class="dlscore" id="dlscore" aria-live="polite">${quiz ? scoreLine() : ''}</p>
         <div class="dlchips"><button type="button" class="btn sm" data-dl="newq">New questions</button>
         <button type="button" class="btn sm ghost" data-dl="retry"${anyMissed ? '' : ' disabled'}>Retry the missed</button></div></div>`;
     } else if (st.mode === 'recall') {
       modebar = `<div class="dlmodebar"><div class="dlchips" role="radiogroup" aria-label="What to recall"><span class="lab">Recall:</span>
         ${Object.entries(RFIELDS).map(([k, v]) => `<button type="button" class="chip" role="radio" data-dl="rfield" data-k="${k}" aria-checked="${st.rfield === k}" aria-pressed="${st.rfield === k}" tabindex="${st.rfield === k ? 0 : -1}">${esc(v)}</button>`).join('')}</div>
-        <p>Type what you remember in the box under each drug, then press Check (or Enter). For example, target of tacrolimus: <i>calcineurin (via FKBP)</i>. Spelling and wording don't matter: compare your words with the answer yourself.</p>
+        <p>Type what you remember in the box under each drug, then press Check (or Enter). ${recallExample()} Spelling and wording don't matter: compare your words with the answer yourself.</p>
         <div class="dlchips"><button type="button" class="btn sm ghost" data-dl="revealall">Check all</button>
         <button type="button" class="btn sm ghost" data-dl="hideall">Hide all answers</button>
         <button type="button" class="btn sm ghost" data-dl="clearbox">Empty the boxes</button></div></div>`;
+    } else if (st.mode === 'chart') {
+      modebar = `<div class="dlmodebar"><div class="dlfld"><label for="dlcq">Find a drug on the chart (generic or brand name, or class)</label>
+        <input type="search" id="dlcq" placeholder="e.g. tacrolimus or Protopic" value="${esc(st.cq)}" autocomplete="off" enterkeyhint="search"></div>
+        <div id="dlcres" aria-live="polite"></div></div>`;
     }
+    const chart = st.mode === 'chart';
     return `<h2>Drug list</h2>
     <p class="sub">Every drug on the dermatology drug chart, pp. 1–6 (${DL.D.length} drugs), with each line's source.</p>
     <div class="dlmodes" role="radiogroup" aria-label="How to study the list">
       ${MODES.map(([k, l]) => `<button type="button" role="radio" data-dl="mode" data-k="${k}" aria-checked="${st.mode === k}" tabindex="${st.mode === k ? 0 : -1}">${esc(l)}</button>`).join('')}</div>
     <p class="dlhow" id="dlhow">${esc(mode[2])}</p>
     ${modebar}
-    <section class="dlfilters" aria-labelledby="dlfh">
+    ${chart ? '' : `<section class="dlfilters" aria-labelledby="dlfh">
       <div class="dlfhead"><h3 id="dlfh">Filters</h3><span class="n" id="dlfn">${n ? n + ' active' : 'none active'}</span>
         <button type="button" class="dllink" data-dl="clear"${n ? '' : ' disabled'}>Clear filters</button></div>
       <div class="dlfgrid">
@@ -11714,16 +13280,25 @@ const DRUGLIST_UI = (() => {
         <button type="button" class="chip" data-dl="flag" data-f="photo" aria-pressed="${st.photo}">Photosensitizing</button>
         <button type="button" class="chip" data-dl="flag" data-f="hasq" aria-pressed="${st.hasq}">Has bank questions</button>
       </div>
-    </section>
+    </section>`}
     <details class="dlnote"><summary>About this list and the chart</summary>
       <p>Each professor's slides and recording decide what is examinable for that professor's material (Dr. Smith's lectures; Dr. Sikazwe's assigned pages); the chart is a guide. Each line names its source: <span class="dlsrc smith">Dr. Smith · slide</span> <span class="dlsrc sikazwe">Dr. Sikazwe · DPAW page</span> <span class="dlsrc chart">Drug chart · page</span></p>
-      <p>Targets and mechanisms come from Reference, "Drug targets: write it first, then check". Not here: the lice and scabies page (chart p. 7), which is not in the Exam 1 lectures. Brand names are reference information from the chart; Dr. Smith asks by generic name, so Quiz me and Recall show generic names only.</p>
+      <p>Targets and mechanisms come from Reference, "Drug targets: write it first, then check". Not here: the lice and scabies page (chart p. 7), which is not in the Exam 1 lectures (it is shown in Chart, the original pages). Brand names are practice only: Dr. Smith, 10/29: ${esc(DL.BRAND_QUOTE.t)} (T 618–621). Every question uses the generic name except the brand kind.</p>
+      <p>Topical steroids: the chart's indication cell ends "numerous others", so a condition a steroid could plausibly treat (sunburn itch, for example) is never offered as a wrong option; the remaining options are false by the slides, with the reason shown after answering.</p>
       <p>Quiz me asks only what the cards state: a wrong option is another drug's value that is not also true for this drug. Drugs whose chart line names no molecular target (sunscreens, sunburn anesthetics, keratolytics, tars, petrolatum, ketoconazole, spironolactone, dapsone, metronidazole) get no target question; practise those in Recall.</p>
-      <ul>${DL.CHART_NOTES.map(n => `<li>${esc(n)}</li>`).join('')}</ul></details>
-    <p class="dlcount" id="dlcount" aria-live="polite"></p>
-    <div id="dllist"></div>`;
+      <ul>${DL.CHART_NOTES.map(n => `<li>${esc(n)}</li>`).join('')}</ul>
+      <p>Quiz me coverage, per kind (of ${DL.D.length} drugs):</p><ul class="dlcov">${coverageList()}</ul></details>
+    ${chart ? '<div id="dlcview"></div>' : `<p class="dlcount" id="dlcount" aria-live="polite"></p>
+    <div id="dllist"></div>`}`;
+  }
+  let COV = null;
+  function coverageList(){
+    COV = COV || DL.coverage(targets());
+    return Object.entries(COV).map(([k, o]) => `<li><b>${esc(DL.KIND_HEAD[k])}</b>: ${o.n} drugs get a question` +
+      (Object.keys(o.none).length ? '; none for ' + Object.entries(o.none).map(([r, ns]) => ns.length > 12 ? `${ns.length} (${esc(r)})` : `${ns.length} (${esc(r)}: ${esc(ns.join(', '))})`).join('; ') : '') + '.</li>').join('');
   }
   function drawList(){
+    if (st.mode === 'chart') { drawChart(false); return; }
     const list = filtered(), out = pane.querySelector('#dllist'), cnt = pane.querySelector('#dlcount');
     const n = activeFilters(), fn = pane.querySelector('#dlfn'), cl = pane.querySelector('[data-dl="clear"]');
     if (fn) fn.textContent = n ? n + ' active' : 'none active';
@@ -11732,11 +13307,11 @@ const DRUGLIST_UI = (() => {
     if (!list.length) { cnt.textContent = drugs; out.innerHTML = '<p class="dlempty">No drug matches this search and these filters. Clear filters to see the whole list.</p>'; return; }
     if (st.mode === 'quiz') {
       if (!quiz || (!quiz.retry && quiz.sig !== qsig())) buildQuiz();
-      const sk = Object.entries(quiz.skipped).map(([k, v]) => `${v} without a ${DL.KINDS[k].toLowerCase()} question`);
+      const sk = Object.entries(quiz.skipped).map(([k, v]) => `${DL.KIND_HEAD[k]}: ${v} drug${v === 1 ? '' : 's'} without a question`);
       cnt.textContent = quiz.retry ? `Retrying ${quiz.list.length} missed question${quiz.list.length === 1 ? '' : 's'} · New questions starts over on ${drugs}`
         : `${drugs} · ${quiz.list.length} question${quiz.list.length === 1 ? '' : 's'}` + (sk.length ? ` (${sk.join(', ')}; see About this list)` : '');
       out.innerHTML = quiz.list.length ? `<div class="dlqlist">${quiz.list.map(qblock).join('')}</div>`
-        : '<p class="dlempty">Choose at least one of Target, Class or Indication above, or widen the filters.</p>';
+        : '<p class="dlempty">Choose at least one kind under Ask about, or widen the filters.</p>';
       const sc = pane.querySelector('#dlscore'); if (sc) sc.textContent = scoreLine();
     } else if (st.mode === 'recall') {
       cnt.textContent = drugs;
@@ -11751,11 +13326,17 @@ const DRUGLIST_UI = (() => {
     if (!document.getElementById('dlcss')) { const s = document.createElement('style'); s.id = 'dlcss'; s.textContent = css; document.head.appendChild(s); }
     p.innerHTML = controls();
     drawList();
+    if (st.mode === 'chart' && st.chit) requestAnimationFrame(() => drawChart(true));
     if (p.dataset.dlWired) return;
     p.dataset.dlWired = '1';
     p.addEventListener('input', e => {
       const t = e.target;
       if (t.id === 'dlq') { st.q = t.value; drawList(); }
+      else if (t.id === 'dlcq') {
+        st.cq = t.value;
+        const m = chartMatches(st.cq);
+        if (m.length === 1 && m[0].id !== st.chit) { showOnChart(m[0].id); drawChart(true); } else { const r = pane.querySelector('#dlcres'); if (r) r.innerHTML = chartResults(); }
+      }
       else if (t.dataset && t.dataset.dl === 'typed') typed[t.dataset.id + ':' + st.rfield] = t.value;
     });
     p.addEventListener('change', e => {
@@ -11764,6 +13345,12 @@ const DRUGLIST_UI = (() => {
     });
     p.addEventListener('keydown', e => {
       const t = e.target;
+      if (e.key === 'Enter' && t.id === 'dlcq') {
+        e.preventDefault();
+        const m = chartMatches(st.cq);
+        if (m.length) { showOnChart(m[0].id); drawChart(true); }
+        return;
+      }
       if (e.key === 'Enter' && t.dataset && t.dataset.dl === 'typed') {
         e.preventDefault();
         const b = t.closest('.dlcard').querySelector('[data-dl="check"]');
@@ -11787,7 +13374,7 @@ const DRUGLIST_UI = (() => {
   function onClick(e){
     const b = e.target.closest('[data-dl]'); if (!b || b.tagName === 'INPUT' || b.disabled) return;
     const a = b.dataset.dl, id = b.dataset.id, d = id && DL.D.find(x => x.id === id);
-    if (a === 'mode') { if (st.mode !== b.dataset.k) { st.mode = b.dataset.k; rerender(`[data-dl="mode"][data-k="${st.mode}"]`); } }
+    if (a === 'mode') { if (st.mode !== b.dataset.k) { st.mode = b.dataset.k; st.cfrom = null; rerender(`[data-dl="mode"][data-k="${st.mode}"]`); } }
     else if (a === 'rfield') { if (st.rfield !== b.dataset.k) { st.rfield = b.dataset.k; rerender(`[data-dl="rfield"][data-k="${st.rfield}"]`); } }
     else if (a === 'kind') { st.kinds[b.dataset.k] = !st.kinds[b.dataset.k]; quiz = null; rerender(`[data-dl="kind"][data-k="${b.dataset.k}"]`); }
     else if (a === 'newq') { quiz = null; rerender('[data-dl="newq"]'); }
@@ -11828,6 +13415,29 @@ const DRUGLIST_UI = (() => {
       backBtn();
     }
     else if (a === 'ref') { jump('ref', b.dataset.a); }
+    else if (a === 'chart' && d) {
+      st.cfrom = {mode: st.mode, id: d.id};
+      st.mode = 'chart'; st.cq = ''; showOnChart(d.id);
+      render(pane); window.scrollTo(0, 0);
+      const s = pane.querySelector('#dlcstat'); if (s) { s.tabIndex = -1; s.focus({preventScroll: true}); }
+    }
+    else if (a === 'chit') { showOnChart(b.dataset.id); drawChart(true); const s = pane.querySelector('#dlcstat'); if (s) { s.tabIndex = -1; s.focus({preventScroll: true}); } }
+    else if (a === 'cpage') {
+      st.cpage = +b.dataset.p; drawChart(!!st.chit && boxesOf(st.chit).some(x => x.page === st.cpage));
+      const nb = pane.querySelector(`[data-dl="cpage"][data-p="${st.cpage}"]`); if (nb) nb.focus();
+    }
+    else if (a === 'czoom') {
+      const z = +b.dataset.z;
+      st.zoom = z === 0 ? 0 : Math.max(0, Math.min(ZOOMS.length - 1, st.zoom + z));
+      drawChart(!!st.chit);
+      const nb = pane.querySelector(`[data-dl="czoom"][data-z="${z}"]:not(:disabled)`) || pane.querySelector('[data-dl="czoom"]:not(:disabled)'); if (nb) nb.focus();
+    }
+    else if (a === 'cback' && st.cfrom) {
+      const f = st.cfrom; st.cfrom = null; st.mode = f.mode;
+      render(pane);
+      const c = pane.querySelector(`.dlcard[data-id="${CSS.escape(f.id)}"], .dlq[data-qid^="${CSS.escape(f.id)}:"]`);
+      if (c) { c.scrollIntoView({block: 'start'}); const fb = c.querySelector('[data-dl="chart"]') || c.querySelector('button'); if (fb) fb.focus({preventScroll: true}); }
+    }
     else if (a === 'atlas') {
       RET.push({view: ID, y: window.scrollY});
       show('atlas'); backBtn();
@@ -12040,7 +13650,7 @@ const LIKELY = {
     {id:'S3-100', source:'sik-room',   ref:'11/04, T@824 (p. 26)', reason:'He asked the room this on 11/04, going back over p. 26.'},
     {id:'S4-006', source:'sik-cue',    ref:'11/04, T@3530–4160 (p. 27); 11/03, T 604–605 (assigned reading, 2 points)', reason:'His take-home activity: a 2-point question on this pathway, from the vitamin D reading he assigned.'},
     {id:'S4-011', source:'sik-cue',    ref:'11/04, T@3530–4160 (p. 27); 11/03, T 604–605 (assigned reading, 2 points)', reason:'His take-home activity: a 2-point question on this pathway, from the vitamin D reading he assigned.'},
-    {id:'S4-015', source:'sik-cue',    ref:'11/04 (p. 28)', reason:'His slide sets the two drugs side by side and he went over the one difference that matters.'},
+    {id:'S4-015', source:'sik-cue',    ref:'11/04, T@5982–6070 (p. 28)', reason:'His slide sets the two drugs side by side and he went over the one difference that matters.'},
     {id:'S4-020', source:'sik-poll',   ref:'Polleve-3, p. 32 (11/04)', reason:'His live poll in class, word for word; "it could be a question just that simple".'},
     {id:'S4-039', source:'sik-room',   ref:'11/04, T@12150–12254 (p. 33)', reason:'He asked the room how this ring can be described.'},
     {id:'S4-023', source:'sik-room',   ref:'11/04, T@6942–7125 (p. 29)', reason:'He walked through this activation step and asked the room about the enzymes.'},
@@ -12055,9 +13665,47 @@ const LIKELY = {
     {id:'S4-088', source:'sik-cue',    ref:'11/04, T@32560–32640 (p. 53)', reason:'He said to keep this "at the front of your mind" whenever you see this drug group.'},
     {id:'S4-091', source:'sik-cue',    ref:'11/04, T@36837–36940 (pp. 53, 55)', reason:'He asked: "visually, can you identify tetracyclines and distinguish them from steroids?"'},
     {id:'S4-094', source:'sik-room',   ref:'11/04, T@36600–36790 (p. 55)', reason:'He asked the room this about the other drugs of the class.'},
-    {id:'S4-098', source:'sik-cue',    ref:'11/04 (p. 61)', reason:'He stressed this point about the blockers on his slide.'},
-    {id:'S4-101', source:'sik-cue',    ref:'11/04 (p. 62)', reason:'"What you need to know about this one": he gave its key numbers.'},
-    {id:'S4-108', source:'sik-cue',    ref:'11/04 (p. 65)', reason:'He called this use "very important".'},
+    {id:'S4-098', source:'sik-cue',    ref:'11/04, T@38735–39200 (p. 61)', reason:'He stressed this point about the blockers on his slide.'},
+    {id:'S4-101', source:'sik-cue',    ref:'11/04, T@40552–40950 (p. 62)', reason:'"What you need to know about this one": he gave its key numbers.'},
+    {id:'S4-108', source:'sik-cue',    ref:'11/04, T@44596 (p. 65)', reason:'He called this use "very important".'},
+    /* added 2026-11-08 after the audit of everything Dr. Sikazwe said to learn and know
+       (11/03 lines and 11/04 character offsets as above; assigned pages only) */
+    {id:'S3-069', source:'sik-cue',    ref:'11/03, T 628–631, 989–994 (pp. 18, 20)', reason:'"I would like for you to know ... what steroids look like ... I want you to know that because that\'s important."'},
+    {id:'S3-003', source:'sik-cue',    ref:'11/03, T 630–633 (pp. 8, 18)', reason:'He said he would stress this for every drug that needs one of these enzymes: "We are clear."'},
+    {id:'S3-011', source:'sik-cue',    ref:'11/03, T 664–672 (p. 7)', reason:'"So that now if I were to ask you what is a hard drug": he set this as a question.'},
+    {id:'S3-014', source:'sik-cue',    ref:'11/03, T 697–704 (p. 7)', reason:'"Also pay attention to what happens to it once it gets into the skin."'},
+    {id:'S3-018', source:'sik-cue',    ref:'11/03, T 712–719 (p. 7)', reason:'"So, that\'s important. That\'s why that boron side becomes important": the chemical basis of drug action.'},
+    {id:'S3-022', source:'sik-room',   ref:'11/03, T 766–774 (p. 9)', reason:'He asked the room for this phase II enzyme and said "Remember these things, folks."'},
+    {id:'S3-026', source:'sik-cue',    ref:'11/03, T 745–749 (p. 8)', reason:'"Pay attention to the fact that these are both" handled by one enzyme; he called the caution "the takeaway".'},
+    {id:'S3-028', source:'sik-cue',    ref:'11/03, T 749–757 (p. 8)', reason:'He made this one of the four points of his summary of these two drugs.'},
+    {id:'S3-037', source:'sik-cue',    ref:'11/03, T 825–830 (p. 12)', reason:'He spelled out which light goes with the psoralen and ruled the others out: "We clear on that."'},
+    {id:'S3-043', source:'sik-cue',    ref:'11/03, T 869–871 (p. 15)', reason:'He named "the key thing" these agents do.'},
+    {id:'S3-058', source:'sik-cue',    ref:'11/03, T 927–928 (p. 17)', reason:'"The key thing" about this molecule, then: "So watch out, do not apply too much of that."'},
+    {id:'S3-057', source:'sik-room',   ref:'11/03, T 948–952 (p. 17)', reason:'He asked the room what these two products are and answered it himself.'},
+    {id:'S3-071', source:'sik-cue',    ref:'11/03, T 989–1002 (p. 20)', reason:'One of the three things he wants you to know about these molecules; "This is important" for describing the SAR.'},
+    {id:'S3-073', source:'sik-cue',    ref:'11/03, T 1002, 1098–1099 (pp. 20–22)', reason:'He said to know where each run of the numbering starts and stops: "you\'re good to go ... but practice that."'},
+    {id:'S3-074', source:'sik-cue',    ref:'11/03, T 1098–1099, 1105–1106 (pp. 20–22)', reason:'He said to know where each run of the numbering starts and stops, and to "bank this" for endocrine.'},
+    {id:'S3-076', source:'sik-room',   ref:'11/03, T 1037–1074 (p. 20)', reason:'He answered a student on exactly this at length on 11/03.'},
+    {id:'S3-082', source:'sik-cue',    ref:'11/03, T 1137–1139 (p. 23)', reason:'He named this as one way the question might be asked about the receptor.'},
+    {id:'S3-089', source:'sik-cue',    ref:'11/03, T 1173–1175 (p. 25)', reason:'"Just know that these potency rankings are going to be driven by" these.'},
+    {id:'S3-097', source:'sik-cue',    ref:'11/03, T 1180–1188 (p. 26)', reason:'"Pay attention to hydrocortisone"; for this point he told the class "please write this".'},
+    {id:'S3-098', source:'sik-cue',    ref:'11/03, T 1180–1189 (p. 26)', reason:'"A notable one is that you pay attention to hydrocortisone"; he gave this point next.'},
+    {id:'S4-002', source:'sik-cue',    ref:'11/04, T@1826–2200 (p. 27)', reason:'He named it "the limiting factor" for this group of drugs, twice.'},
+    {id:'S4-010', source:'sik-cue',    ref:'11/04, T@3530–4160 (p. 27); 11/03, T 604–605 (assigned reading, 2 points)', reason:'His take-home activity: the 2-point question asks for a reaction, an organ or an enzyme of this pathway.'},
+    {id:'S4-033', source:'sik-cue',    ref:'11/04, T@9800–10300 (p. 31)', reason:'He called these "the key features" of molecules that act like methotrexate.'},
+    {id:'S4-055', source:'sik-room',   ref:'11/04, T@23455–23600 (pp. 43–44; Polleve-4, p. 45)', reason:'He asked the room for this definition while working through his poll on hydroxy acids.'},
+    {id:'S4-120', source:'sik-poll',   ref:'Polleve-4, p. 45 (11/04); T@23455–23880', reason:'His live poll in class, word for word; he walked the room through each structure with his definition.'},
+    {id:'S4-067', source:'sik-cue',    ref:'11/04, T@24524–24700 (p. 46)', reason:'"But I caution you": he said this matters for this agent.'},
+    {id:'S4-069', source:'sik-cue',    ref:'11/04, T@25684–26600 (p. 47)', reason:'"All I want to share with you is" how this drug works chemically.'},
+    {id:'S4-072', source:'sik-cue',    ref:'11/04, T@27181–27500 (p. 48)', reason:'"This is a caution that you all need to make sure you carry that with you."'},
+    {id:'S4-075', source:'sik-cue',    ref:'11/04, T@27950–28700 (p. 49)', reason:'He showed the one point where these two drugs differ: "that\'s the only difference".'},
+    {id:'S4-085', source:'sik-room',   ref:'11/04, T@32000–32100 (p. 53)', reason:'He asked the room this about the three drugs on the slide.'},
+    {id:'S4-087', source:'sik-cue',    ref:'11/04, T@32723–33100 (p. 53)', reason:'"This is the take-home message from this slide."'},
+    {id:'S4-089', source:'sik-cue',    ref:'11/04, T@34051–34800 (p. 54)', reason:'"Here, you should be able to uh distinguish" the molecules of this slide by their structures.'},
+    {id:'S4-092', source:'sik-cue',    ref:'11/04, T@35450–35900 (p. 55)', reason:'He named this as the worry with the class: "This is a limitation."'},
+    {id:'S4-102', source:'sik-cue',    ref:'11/04, T@41158–41549 (p. 62)', reason:'"So, that gives you a point of distinction."'},
+    {id:'S4-106', source:'sik-room',   ref:'11/04, T@42816–43400 (p. 64)', reason:'He asked the room: "What is the drawback to using this?"'},
+    {id:'S4-107', source:'sik-cue',    ref:'11/04, T@43400–43700 (p. 65)', reason:'He called this "a worry" and "a drawback" of the family.'},
   ],
 };
 
@@ -12634,7 +14282,7 @@ WALK_SECTIONS.push(
    {text:'Salicylic acid is a beta hydroxy acid, a benzene ring carrying a carboxylic acid and, on the neighboring ring carbon, a hydroxyl, two carbons from the acid carbon. Its aromatic ring raises its log P to about one to two, so it penetrates deeper and suits deeper skin peels. Most of an absorbed dose is joined to the amino acid glycine. Both acids have a p K a, a measure of acid strength in which lower means stronger, of about three, and acids with a p K a this low can make the skin itch.',
     slide:'mc-43', fig:null, src:'DPAW 43 (SA structure, glycine conjugate annotation, pKa annotations); T04 @21450-22600; S4-056, S4-057, S4-061, S4-062'},
    {text:'The hydroxy acid structure activity relationship has three features. A carboxylic acid must be present. Most of these acids carry the hydroxyl on the alpha carbon, the carbon next to the acid. The other group on that carbon is mostly an alkyl group, a chain of carbon and hydrogen.',
-    slide:'mc-44', fig:null, src:'DPAW 44 (printed 43); T04 @22839-23200; S4-063, S4-064. Polleve-4 count (p.45) held'},
+    slide:'mc-44', fig:null, src:'DPAW 44 (printed 43); T04 @22839-23200; S4-063, S4-064; Polleve-4 count (p.45) S4-120'},
    {text:'Sulfur is used alone, for example in petrolatum, or mixed with sodium sulfacetamide or zinc oxide. Its drawbacks are allergies and its smell. Its particles must be small, because large particles work less well. Its mechanism is less clear, but it is thought to act by thiolysis. Keratin, the protein of the outer skin, is held together by disulfide bonds, sulfur to sulfur links between cysteine amino acids, and sulfur breaks these bonds, which loosens the keratin and promotes shedding of skin cells.',
     slide:'mc-46', fig:null, src:'DPAW 46 (printed 45); T04 @23929-25608 (childhood story left out); S4-065, S4-066, S4-067, S4-068'},
    {text:'Benzoyl peroxide belongs to the peroxide chemical class. It is two benzoyl groups, each a benzene ring attached to a carbonyl, a carbon double-bonded to oxygen, joined through an oxygen to oxygen bond. With a log P of three point five it penetrates the skin, where that peroxide bond breaks into two products with two actions. Benzoic acid lowers skin p H, which gives the keratolytic effect, and is excreted in urine. The benzoyl radical, a highly reactive fragment, kills the acne bacteria, and fewer bacteria means less inflammation, the anti-inflammatory effect.',
@@ -14520,7 +16168,7 @@ const READ_LINKS = (() => {
           'hc-reference hc-dual-activity potency-bases clobetasol-superpotent potency-low-example hc-logp hc-bioavail hc-urine', 'rs3'),
 
       /* ---- Lecture 4, Sikazwe 11/04 (DPAW 27-71); Smith's sunblock slides */
-      row('limus-structure mtx-affinity mtx-vs-folic aha-definition aha-identify', 'ts4'),
+      row('limus-structure mtx-affinity mtx-vs-folic aha-definition aha-identify aha-count', 'ts4'),
       row('limus-difference limus-skin-binding limus-moa limus-lactone lactone-vs-lactam calcipotriene-vs-calcitriol vitd-hypercalcemia secosteroid ' +
           'csa-activation csa-lactam apremilast-class apremilast-metab apremilast-3a4 tofacitinib-class tofacitinib-3a4 ' +
           'ga-vs-sa-logp ga-surface ga-metab ha-itch sa-glycine sa-bha sulfur-particle zno-size bpo-two-actions bpo-radical ' +
@@ -15042,7 +16690,7 @@ const GUIDE_HTML = `
 <div class="gpt"><h5><b>Corticosteroids</b> &middot; PCol 8&ndash;11</h5><ul><li><b>Target, mechanism:</b> Glucocorticoid receptor; CBG carries the steroid in blood; Hsp90 leaves the receptor when the steroid binds; the complex binds the GRE</li><li><b>Why it helps:</b> Immunosuppressive, so used for psoriasis and AD (PCol 11; T 873&ndash;875). Low potency (hydrocortisone 1%) for the face and for long-term maintenance; medium potency (betamethasone valerate 0.1%) for the body; mid-strength to high potency for short-term exacerbations; avoid occluded or abraded skin</li></ul></div>
 <div class="gpt"><h5><b>Retinoids</b> (tretinoin, adapalene, tazarotene, isotretinoin, acitretin) &middot; PCol 14&ndash;15, 19</h5><ul><li><b>Target, mechanism:</b> RAR: differentiation and proliferation (acne, psoriasis, photoaging); RXR: apoptosis (Kaposi sarcoma)</li><li><b>Why it helps:</b> Acne: less cohesion between epidermal cells, faster turnover; open comedones expelled, closed ones opened. Psoriasis: precise mechanism unknown, may be anti-inflammatory and antiproliferative. Aging: more collagen, new vessels, thicker epidermis. Isotretinoin: appears to inhibit sebaceous gland size and function (PCol 19)</li></ul></div>
 <div class="gpt"><h5><b>Vitamin D analog</b> (calcipotriene) &middot; PCol 21</h5><ul><li><b>Target, mechanism:</b> Vitamin D receptor, which pairs with RXR-&alpha;</li><li><b>Why it helps:</b> Inhibits proliferation, promotes keratinocyte differentiation, decreases inflammatory cytokine release (psoriasis)</li></ul></div>
-<div class="gpt"><h5><b>Calcineurin inhibitors</b> (pimecrolimus, tacrolimus, cyclosporine) &middot; PCol 24&ndash;27</h5><ul><li><b>Target, mechanism:</b> Cyclosporine binds cyclophilin, tacrolimus binds FKBP; the complex inhibits calcineurin, so less IL-2 is made for T-cell proliferation (in the cascade after signals 1 and 2)</li><li><b>Why it helps:</b> Inhibits activation of T cells and mast cells, blocking proinflammatory cytokines and mediators; topical CNIs relieve pruritus after the first few days of treatment (PCol 27)</li></ul></div>
+<div class="gpt"><h5><b>Calcineurin inhibitors</b> (pimecrolimus, tacrolimus, cyclosporine) &middot; PCol 24&ndash;27</h5><ul><li><b>Target, mechanism:</b> Cyclosporine binds cyclophilin, tacrolimus binds FKBP; the complex inhibits calcineurin, so less IL-2 is made for T-cell proliferation (in the cascade after signals 1 and 2)</li><li><b>Why it helps:</b> Inhibits activation of T cells and mast cells, blocking proinflammatory cytokines and mediators; topical CNIs relieve pruritus after the first few days of treatment (PCol 27)</li><li><b>Uses of the class:</b> &ldquo;used to treat atopic dermatitis, psoriasis&rdquo; (Dr. Smith, PCol 24). The slide gives this for the class; the drug chart lists each drug&rsquo;s own indication.</li></ul></div>
 <div class="gpt"><h5><b>PDE-4 inhibitors</b> (crisaborole, apremilast) &middot; PCol 32&ndash;34</h5><ul><li><b>Target, mechanism:</b> PDE-4, the main PDE isoform in inflammatory cells; cAMP is not broken down</li><li><b>Why it helps:</b> More cAMP inhibits mast cells, eosinophils, neutrophils and T cells (AD: crisaborole; psoriasis: apremilast)</li></ul></div>
 <div class="gpt"><h5><b>Keratolytics</b> (benzoyl peroxide, sulfur, salicylic acid) &middot; PCol 35&ndash;39</h5><ul><li><b>Target, mechanism:</b> BPO: antimicrobial against P. acnes plus peeling and comedolytic (benzoic acid probable active form). Sulfur: reduced to hydrogen sulfide in keratinocytes; bacteriostatic. Salicylic acid: solubilizes the cell surface proteins that hold the stratum corneum together</li><li><b>Why it helps:</b> Break down keratin so cells slough, follicles stay open, plugs clear (acne)</li></ul></div>
 <div class="gpt"><h5><b>Antibiotics/antimicrobials</b> &middot; PCol 42&ndash;50</h5><ul><li><b>Target, mechanism:</b> Tetracyclines: 30S, block aminoacyl-tRNA at the acceptor site. Clindamycin, macrolides: 50S, prevent translocation. All bacteriostatic. Sulfamethoxazole competes with PABA; trimethoprim inhibits bacterial DHFR. Dapsone (acne): anti-inflammatory, neutrophils a possible site</li><li><b>Why it helps:</b> A bacterium (P. acnes) contributes to acne (10/30 T 574&ndash;576); tetracycline efficacy in acne may depend more on anti-inflammatory activity (PCol 45)</li></ul></div>

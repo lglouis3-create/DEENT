@@ -145,7 +145,7 @@ const READ_LINKS = (() => {
           'hc-reference hc-dual-activity potency-bases clobetasol-superpotent potency-low-example hc-logp hc-bioavail hc-urine', 'rs3'),
 
       /* ---- Lecture 4, Sikazwe 11/04 (DPAW 27-71); Smith's sunblock slides */
-      row('limus-structure mtx-affinity mtx-vs-folic aha-definition aha-identify', 'ts4'),
+      row('limus-structure mtx-affinity mtx-vs-folic aha-definition aha-identify aha-count', 'ts4'),
       row('limus-difference limus-skin-binding limus-moa limus-lactone lactone-vs-lactam calcipotriene-vs-calcitriol vitd-hypercalcemia secosteroid ' +
           'csa-activation csa-lactam apremilast-class apremilast-metab apremilast-3a4 tofacitinib-class tofacitinib-3a4 ' +
           'ga-vs-sa-logp ga-surface ga-metab ha-itch sa-glycine sa-bha sulfur-particle zno-size bpo-two-actions bpo-radical ' +

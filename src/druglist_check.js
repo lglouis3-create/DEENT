@@ -19,7 +19,23 @@
      and the questions it links exist in the bank;
    - neither file writes to any storage (localStorage, sessionStorage,
      IndexedDB, cookies), comments aside;
-   - druglist_ui.js does nothing in a stub DOM (the node checks' engine).
+   - druglist_ui.js does nothing in a stub DOM (the node checks' engine);
+   - every chart column (Louis, 2026-11-08): the kinds class → drug,
+     indication → drug, chemical class, Rx/OTC, potency class and brand names
+     (practice) are generated 60 times per drug and kind: 4 options (Rx/OTC:
+     its three), exactly one correct, the key the drug's own chart value, no
+     wrong option true for the drug (own brand, chemical family, other potency
+     line, a drug with the use or class asked), a brand only in brand
+     questions, a cited source on every answer; no chemical-class key from a
+     blank, conflicting or one-row-off cell; the per-kind coverage is printed
+     and must match the About line;
+   - the original chart pages (chart_boxes.js, from render_chart.py): every
+     page image exists in chart/ at its recorded size; every in-scope chart
+     line has a box on its card's page(s) and every p. 7 line one in `other`;
+     each box lies inside its image, holds the line's generic name as the
+     chart prints it (CHART_TYPOS: the chart's own misspellings, disclosed on
+     the cards), and two lines share a row only where the chart prints them
+     in one cell; the Chart view's page 7 line quotes Dr. Smith.
 
      node druglist_check.js
    ========================================================================== */
@@ -93,7 +109,7 @@ const ASSIGNED = new Set([7, 8, 9, 12].concat([...Array(9)].map((_, i) => 15 + i
   [...Array(13)].map((_, i) => 43 + i), [...Array(6)].map((_, i) => 61 + i)));
 const unassignedUnlabelled = stmts.filter(([, , s]) => s.by === 'sikazwe' && [...String(s.cite).matchAll(/DPAW (\d+)(?:[–-](\d+))?/g)]
   .some(m => { for (let p = +m[1]; p <= +(m[2] || m[1]); p++) if (!ASSIGNED.has(p)) return true; return false; }) &&
-  !/outside his assigned pages/.test(s.t));
+  !/outside (his|Dr\. Sikazwe's) assigned/.test(s.t));
 check(!unassignedUnlabelled.length, 'every Dr. Sikazwe statement citing a page outside his assigned pages says so',
   unassignedUnlabelled.map(([id, k, s]) => `${id}.${k} ${s.cite}`).join('; '));
 const tac = DL.D.find(d => d.id === 'tacrolimus');
@@ -130,7 +146,9 @@ console.log('=== Quiz me (multiple choice) and Recall ===');
 {
   const rngOf = seed => () => { seed |= 0; seed = seed + 0x6D2B79F5 | 0; let t = Math.imul(seed ^ seed >>> 15, 1 | seed);
     t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t; return ((t ^ t >>> 14) >>> 0) / 4294967296; };
-  const RUNS = 60, kinds = Object.keys(DL.KINDS);
+  const RUNS = 60, kinds = ['target', 'cls', 'use'], ALLK = Object.keys(DL.KINDS);
+  // indication questions with only two sound wrong options: the steroids ("numerous others") and zinc oxide (sun protection; psoriasis and atopic dermatitis never wrong)
+  const THREE = new Set(DL.D.filter(d => d.cls === 'steroid').map(d => d.id));
   const brandRe = new RegExp('\\b(' + [...new Set(DL.D.flatMap(d => d.brands || []))].map(b => b.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|') + ')\\b', 'i');
   const made = {}, bad = {shape: [], one: [], distinct: [], keyed: [], trueWrong: [], famWrong: [], sameClass: [], brand: [], src: [], unstable: []};
   for (const k of kinds) {
@@ -146,10 +164,10 @@ console.log('=== Quiz me (multiple choice) and Recall ===');
         const q = DL.makeQuestion(d, T, k, r === RUNS - 1 ? Math.random : rngOf(r * 7919 + d.id.length));
         if (!q) { nulls++; continue; }
         const tag = `${d.id}:${k}`, o = q.options;
-        if (o.length !== 4) bad.shape.push(tag);
+        if (o.length !== (k === 'use' && THREE.has(d.id) ? 3 : 4)) bad.shape.push(tag);
         const right = o.filter(x => x.correct);
         if (right.length !== 1) bad.one.push(tag);
-        if (new Set(o.map(x => DL.norm(x.t))).size !== 4 || new Set(o.map(x => DL.family(x.t))).size !== 4) bad.distinct.push(tag);
+        if (new Set(o.map(x => DL.norm(x.t))).size !== o.length || new Set(o.map(x => DL.family(x.t))).size !== o.length) bad.distinct.push(tag);
         if (right.length && !keyed.has(right[0].t)) bad.keyed.push(tag);
         for (const w of o.filter(x => !x.correct)) {
           if (tn.has(DL.norm(w.t))) bad.trueWrong.push(tag + ' ' + w.t);
@@ -165,7 +183,7 @@ console.log('=== Quiz me (multiple choice) and Recall ===');
   }
   const u = a => [...new Set(a)].slice(0, 8).join('; ');
   const n = RUNS * kinds.length * DL.D.length;
-  check(!bad.shape.length, `every quiz question has 4 options (${n} questions generated over ${RUNS} draws per drug and field)`, u(bad.shape));
+  check(!bad.shape.length, `every quiz question has 4 options; an indication with only two sound wrong options has 3 (the 13 steroids) (${n} questions generated over ${RUNS} draws per drug and field)`, u(bad.shape));
   check(!bad.one.length, 'every quiz question has exactly one correct option', u(bad.one));
   check(!bad.distinct.length, 'the 4 options are distinct (normalized text) and no two say the same thing (one per family)', u(bad.distinct));
   check(!bad.keyed.length, "the correct option is one of the drug's own sourced values", u(bad.keyed));
@@ -187,9 +205,41 @@ console.log('=== Quiz me (multiple choice) and Recall ===');
   never('methotrexate', 'target', /dihydrofolate/i, 'methotrexate: bacterial DHFR is never a wrong option for its target');
   never('tmpsmx', 'cls', /dihydrofolate/i, 'trimethoprim/sulfamethoxazole: "DHFR inhibitor" is never a wrong class');
   never('ustekinumab', 'cls', /^IL-23 inhibitors$/, 'ustekinumab: "IL-23 inhibitors" is never a wrong class');
-  never('bpo', 'cls', /antibiotic/i, 'benzoyl peroxide: "antibiotics / antimicrobials" is never a wrong class');
+  never('bpo', 'cls', /antibiotic/i, 'benzoyl peroxide: "Antibiotics" is never a wrong class');
   never('clobetasol', 'use', /atopic|psoriasis/i, 'a topical steroid: neither of its two uses is a wrong option');
   never('cyclosporine', 'use', /atopic/i, 'cyclosporine: atopic dermatitis is never a wrong indication');
+  // uses kept out of the wrong options that a course source names: shown after answering, never as an option
+  const OC = DL.OFF_CHART || {};
+  const ocBad = Object.entries(OC).flatMap(([id, ns]) => ns.filter(n => !ids.has(id) || !(DL.NOT_WRONG[id] || []).includes(n.z) || !n.head ||
+    !n.src.length || !n.src.every(s => s.t && citeOk(s) && /"[^"]+"/.test(s.t))).map(n => id + ':' + n.z));
+  check(Object.keys(OC).length && !ocBad.length, `every off-chart note (${Object.values(OC).flat().length}) is a NOT_WRONG pair with a head and quoted, cited slide or transcript lines`, ocBad.join(', '));
+  const ocQ = [];
+  for (const [id, ns] of Object.entries(OC)) {
+    const d = DL.D.find(x => x.id === id);
+    for (let r = 0; r < 200; r++) for (const k of ALLK) {
+      const q = DL.makeQuestion(d, T, k, rngOf(r));
+      if (!q) continue;
+      if ((k === 'use') !== (q.offChart.length === ns.length && q.offChart.length > 0)) ocQ.push(`${id}:${k} note`);
+      for (const n of ns) if (q.options.some(o => !o.correct && DL.norm(o.t) === DL.norm(DL.DISEASES[n.z]))) ocQ.push(`${id}:${k} wrong ${n.z}`);
+    }
+    never(id, 'use', new RegExp('^' + ns.map(n => DL.DISEASES[n.z]).join('|') + '$', 'i'), `${id}: the off-chart use (${ns.map(n => DL.DISEASES[n.z]).join(', ')}) is never a wrong option`);
+  }
+  check(!ocQ.length, 'off-chart notes ride on Indication questions only, and their use is never a wrong option', u(ocQ));
+  // Louis, 2026-11-08: no atopic-dermatitis note on cyclosporine (the class statement is in the Guide);
+  // zinc oxide's note limited to protecting the skin around plaques in anthralin treatment
+  const cyQ = [];
+  for (let r = 0; r < 50; r++) { const q = DL.makeQuestion(DL.D.find(x => x.id === 'cyclosporine'), T, 'use', rngOf(r)); if (q && q.offChart.length) cyQ.push(r); }
+  check(!OC.cyclosporine && !cyQ.length && (DL.NOT_WRONG.cyclosporine || []).includes('ad'),
+    'cyclosporine has no off-chart note (Browse, Quiz me, Recall) and atopic dermatitis stays out of its wrong options');
+  const ZN = 'Psoriasis: the chart lists zinc oxide on its psoriasis page (p. 5); in the lectures its role there is to protect the healthy skin around the plaques during anthralin treatment. It is not a psoriasis drug.';
+  check((OC.zincoxide || []).length === 1 && OC.zincoxide[0].head === ZN && OC.zincoxide[0].src.length === 2 &&
+    DL.CHART_ROWS.some(r => r[0] === 5 && r[2] === 'zincoxide') && DL.PAGES[5] === 'Psoriasis',
+    'zinc oxide: one note, limited to the skin around plaques in anthralin treatment, two sources; the chart lists it on p. 5 (psoriasis)');
+  const fbSrc = (code('druglist_ui.js').match(/const fb = !done \? '' :[\s\S]*?`;\n/) || [''])[0];
+  const ocUses = (code('druglist_ui.js').match(/offChart\(/g) || []).length;
+  check(/offChart\(q\.offChart/.test(fbSrc) && (code('druglist_ui.js').match(/offChart\(q\./g) || []).length === 1,
+    'Quiz me shows the off-chart note only in the feedback written after an answer (empty before)');
+  check(ocUses >= 3, `the off-chart note is also on the Browse card and the Recall indication answer (${ocUses - 1} call sites)`);
   never('ruxolitinib', 'target', /^JAK$|Janus/, 'ruxolitinib: another JAK wording is never a wrong option');
   // Recall: every drug has an answer to show for each field
   const noUse = DL.D.filter(d => !d.chartUse && !(d.use || []).length).map(d => d.id).sort().join(',');
@@ -197,6 +247,294 @@ console.log('=== Quiz me (multiple choice) and Recall ===');
   check(DL.D.every(d => d.chartClass || d.cls === 'tnf'), 'Recall: every card has a sourced class line');
   const ui = code('druglist_ui.js');
   check(!/data-dl="(next|prev|flash)"|>\s*Next\s*</.test(ui), 'the Drug list has no Next button and no one-card-at-a-time mode');
+
+  console.log('=== Topical steroids: indication options (Louis, 2026-11-08) ===');
+  {
+    // Possibly valid for a topical steroid, so never a wrong option: the chart's p. 6 cell is
+    // "Psoriasis, Atopic dermatitis, numerous others"; a low-potency steroid (hydrocortisone OTC,
+    // class 7) relieves the itch of sunburn and insect bites (the chart's p. 1 sunburn line);
+    // triamcinolone acetonide (Kenalog) is also injected into acne cysts in practice.
+    const MAYBE = {all: ['Sunburn relief'], triamcinolone: ['Acne']};
+    // false for a topical steroid by the course sources: acne is its local adverse effect (PCol 12);
+    // sun protection is the sunscreens' purpose (Sun 20, 22)
+    const FALSE = {Acne: /PCol 12/, 'Sun protection': /Sun 20, 22/};
+    const ster = DL.D.filter(d => d.cls === 'steroid'), sBad = [], sMade = [], sNone = [];
+    for (const d of ster) {
+      let got = 0;
+      for (let r = 0; r < 80; r++) {
+        const q = DL.makeQuestion(d, T, 'use', rngOf(r * 13 + 5));
+        if (!q) continue; got++;
+        for (const w of q.options.filter(x => !x.correct)) {
+          if (MAYBE.all.concat(MAYBE[d.id] || []).includes(w.t)) sBad.push(`${d.id}: ${w.t} (possibly valid)`);
+          if (!FALSE[w.t]) sBad.push(`${d.id}: ${w.t} (not in the false-by-source set)`);
+          const why = (q.wrongWhy || []).find(x => x.opt === w.t);
+          if (!why || !citeOk(why) || !FALSE[w.t].test(why.cite)) sBad.push(`${d.id}: ${w.t} (no cited reason)`);
+        }
+        if (q.options.length !== 3) sBad.push(`${d.id}: ${q.options.length} options`);
+      }
+      if (got) sMade.push(d.id); else sNone.push(d.id);
+    }
+    check(!sBad.length, `steroid indication questions offer only options false by the sources (Acne: PCol 12; Sun protection: Sun 20, 22), each with its cited reason; never Sunburn relief (${ster.length} steroids, 80 draws each)`, u(sBad));
+    check(sNone.join(',') === 'triamcinolone' && sMade.length === ster.length - 1,
+      `steroid indication: ${sMade.length} of ${ster.length} kept (3 options); withheld: ${sNone.join(', ')} (acne not safely false), with its reason in the coverage line`);
+    const covU = DL.coverage(T).use;
+    check(Object.entries(covU.none).some(([r, ns]) => ns.includes('Triamcinolone acetonide') && /acne/.test(r)), 'the About coverage line gives triamcinolone\'s reason');
+    // Indication → drug: no steroid is offered as a drug NOT used for something; when a steroid is the answer,
+    // no wrong option is a drug with that use (or petrolatum for atopic dermatitis)
+    const rBad = [];
+    for (const d of DL.D) for (let r = 0; r < 40; r++) {
+      const q = DL.makeQuestion(d, T, 'useRev', rngOf(r * 17 + 3));
+      if (!q) continue;
+      for (const w of q.options.filter(x => !x.correct)) {
+        const o2 = DL.D.find(x => x.name === w.t);
+        if (o2.cls === 'steroid') rBad.push(`${d.id}: ${w.t}`);
+        if (q.z === 'ad' && o2.id === 'petrolatum') rBad.push(`${d.id}: petrolatum for AD`);
+      }
+    }
+    check(!rBad.length, 'Indication → drug: a steroid is never a wrong option ("numerous others"); petrolatum never a wrong option for atopic dermatitis', u(rBad));
+  }
+
+  console.log('=== Methoxsalen indication: Exam 1 (Dr. Smith, Sun 3 and audio) ===');
+  {
+    const mx = DL.D.find(d => d.id === 'methoxsalen');
+    const qs = [0, 1, 2, 3].map(r => DL.makeQuestion(mx, T, 'use', rngOf(r)));
+    check(qs.every(q => q && q.options.find(o => o.correct).t === 'Psoriasis' && q.src.some(s => s.by === 'smith' && /Sun 3; audio 00:59–01:10/.test(s.cite) && /methoxsalen/.test(s.t))),
+      'methoxsalen: its psoriasis question is in the default set, keyed by Dr. Smith (Sun 3; audio 00:59–01:10)');
+    check(mx.use.some(s => s.by === 'sikazwe' && /DPAW 14/.test(s.cite) && /^Also on/.test(s.t) && /outside his assigned pages/.test(s.t)),
+      'DPAW 14 stays as an additional source line, labelled outside Dr. Sikazwe\'s assigned pages');
+    const covU = DL.coverage(T).use, covR = DL.coverage(T).useRev;
+    check(covU.n === 75 && covR.n === 77 && !Object.values(covU.none).flat().includes('Methoxsalen'),
+      `methoxsalen counts in the Exam 1 coverage (Indication ${covU.n}, Indication → drug ${covR.n})`);
+    check(!/data-dl="outside"|OPTS\(|\.outside/.test(ui) && !DL.D.some(d => (d.use || []).some(u => u.outside)), 'no optional chip remains (nothing uses it)');
+    // no default question anywhere rests only on a statement outside the assigned pages
+    const leak = [];
+    for (const d of DL.D) for (const k of ALLK) for (let r = 0; r < 4; r++) {
+      const q = DL.makeQuestion(d, T, k, rngOf(r));
+      if (q && q.src.every(s => s.by === 'sikazwe' && [...String(s.cite).matchAll(/DPAW (\d+)/g)].every(m => !ASSIGNED.has(+m[1])))) leak.push(`${d.id}:${k}`);
+    }
+    check(!leak.length, 'no question in any kind is keyed only by Dr. Sikazwe pages outside his assigned list', u(leak));
+    // atopic dermatitis is never offered as wrong for zinc oxide (skin protectant) or methoxsalen (PUVA), both directions
+    const adBad = [];
+    for (let r = 0; r < 200; r++) {
+      for (const id of ['zincoxide', 'methoxsalen']) { const q = DL.makeQuestion(DL.D.find(d => d.id === id), T, 'use', rngOf(r));
+        if (q && q.options.some(o => !o.correct && o.t === 'Atopic dermatitis')) adBad.push(id + ':use'); }
+      for (const d of DL.D) { const q = DL.makeQuestion(d, T, 'useRev', rngOf(r * 7 + 1));
+        if (q && q.z === 'ad' && q.options.some(o => !o.correct && /^(Zinc oxide|Methoxsalen)$/.test(o.t))) adBad.push(d.id + ':useRev ' + q.options.map(o => o.t).join('/')); }
+    }
+    const zq = DL.makeQuestion(DL.D.find(d => d.id === 'zincoxide'), T, 'use', rngOf(1));
+    check(!zq && /DPAW 46/.test(DL.whyNone(DL.D.find(d => d.id === 'zincoxide'), T, 'use')),
+      'zinc oxide: no indication question (atopic dermatitis, sunburn and acne are not safely false: skin protectant; sulfur + zinc oxide acne mixtures, DPAW 46), with the reason in About');
+    check(!adBad.length, 'zinc oxide and methoxsalen: atopic dermatitis is never a wrong option for them, and they are never wrong options for it', u(adBad));
+  }
+  {
+    // the Drug list never feeds the bank, Exam sim or progress
+    const others = C.files.concat(['reference.js']).filter(f => !/^druglist_|^chart_boxes/.test(f) && fs.existsSync(path.join(__dirname, f)))
+      .filter(f => /DRUGLIST|makeQuestion/.test(code(f)));
+    const writesQ = ['druglist_data.js', 'druglist_ui.js'].filter(f => /QUESTIONS\s*(\.push|\.splice|\.unshift|=[^=])|EXAMS?\s*(\.push|=[^=])/.test(code(f)));
+    check(!others.length && !writesQ.length, 'no other course file uses the Drug list questions, and the Drug list adds nothing to the bank or the exams (Exam sim draws only from the bank)',
+      others.concat(writesQ).join(', '));
+  }
+
+  console.log('=== Antibiotics vs antifungal activity; brands that fit several drugs ===');
+  {
+    check(DL.CLASSES.abx === 'Antibiotics', 'the antibiotic class reads "Antibiotics" (the chart\'s p. 3 label)');
+    // ketoconazole (azole); selenium sulfide and zinc pyrithione: "Both have cytostatic and antifungal activity" (PCol)
+    const AF = ['ketoconazole', 'selenium', 'zpt'], afBad = [];
+    for (const d of DL.D) for (let r = 0; r < 60; r++) {
+      const c = DL.makeQuestion(d, T, 'cls', rngOf(r)), cr = DL.makeQuestion(d, T, 'clsRev', rngOf(r + 999));
+      if (c && AF.includes(d.id) && c.options.some(o => !o.correct && o.t === 'Antibiotics')) afBad.push(d.id + ': Antibiotics offered');
+      if (c && d.cls === 'abx' && c.options.some(o => !o.correct && /antifungal|cytotoxic/i.test(o.t))) afBad.push(d.id + ': ' + c.options.map(o => o.t).join('/'));
+      if (cr && d.cls === 'abx' && cr.options.some(o => !o.correct && AF.map(id => DL.D.find(x => x.id === id).name).includes(o.t))) afBad.push(d.id + ':clsRev antifungal drug offered');
+      if (cr && AF.includes(d.id) && cr.options.some(o => !o.correct && DL.D.find(x => x.name === o.t).cls === 'abx')) afBad.push(d.id + ':clsRev antibiotic offered');
+    }
+    check(!afBad.length, 'no antifungal-active drug (ketoconazole, selenium sulfide, zinc pyrithione) is offered against the antibiotic class, or the class against it', u(afBad));
+    // brands: explicit cross-product lines and brand families (first word), read independently here
+    const ALSO = {Clearasil: ['salicylic', 'sulfur'], Fostex: ['salicylic', 'sulfur'], Solarcaine: ['lidocaine']};
+    const fam = b => DL.norm(b).split(' ')[0];
+    const fits = (b, o) => o.brands.some(x => fam(x) === fam(b)) || (ALSO[b] || []).includes(o.id);
+    const brBad = [];
+    for (const d of DL.D) for (let r = 0; r < 120; r++) {
+      const q = DL.makeQuestion(d, T, 'brand', rngOf(r * 3 + d.id.length));
+      if (!q) continue;
+      if (q.dir === 'rev') {
+        if (q.stem !== `Which drug does the chart list under the brand name ${q.brand}?`) brBad.push(d.id + ': stem');
+        for (const w of q.options.filter(o => !o.correct)) if (fits(q.brand, DL.D.find(x => x.name === w.t))) brBad.push(`${q.brand} -> ${w.t}`);
+      } else for (const w of q.options.filter(o => !o.correct)) if (fits(w.t, d)) brBad.push(`${d.id} <- ${w.t}`);
+    }
+    check(!brBad.length, 'brand questions: no wrong option fits (Clearasil/Fostex never against salicylic acid or sulfur, Solarcaine never against lidocaine, no shared brand family such as Oxy); reverse stem "Which drug does the chart list under the brand name X?"', u(brBad));
+  }
+
+  console.log('=== Every chart column (Louis, 2026-11-08): the new kinds ===');
+  const NEW = ['clsRev', 'useRev', 'chem', 'rx', 'potency', 'brand'];
+  check(NEW.every(k => DL.KINDS[k] && DL.KIND_HEAD[k]) && /Dr\. Smith's exam questions use generic names/.test(DL.KINDS.brand),
+    'Ask about lists class → drug, indication → drug, chemical class, Rx/OTC, potency class and brand names (labelled practice)');
+  check(/k === 'target' \|\| k === 'cls'/.test(ui), 'Ask about: Target and Class on by default, every other kind off');
+  check(/RFIELDS = \{[^}]*chem:[^}]*rx:[^}]*potency:[^}]*brand:/.test(ui), 'Recall offers chemical class, Rx/OTC, potency class and brand');
+  check(!/target of tacrolimus/.test(ui) && /function recallExample/.test(ui), 'the Recall example is chosen outside the current list (no fixed tacrolimus example)');
+  const bq = DL.BRAND_QUOTE;
+  check(bq.by === 'smith' && bq.cite === '10/29 T 618–621' && /You will, you will need to know brand name\. I only ask questions using the generic name/.test(bq.t),
+    'the brand kind cites Dr. Smith, 10/29 T 618–621 ("You will need to know brand name"; she asks by generic name)');
+  const nm = DL.norm, byName = {}; DL.D.forEach(d => { byName[nm(d.name)] = d; });
+  const brandOwner = {}; DL.D.forEach(d => d.brands.forEach(b => (brandOwner[nm(b)] = brandOwner[nm(b)] || []).push(d.id)));
+  // an independent reading of "the same chemical family" (not the data file's own CHEM_FAM)
+  const CHEM_GROUPS = [['steroid', 'vitamin d'], ['oxide', 'zn'], ['peptide', 'protein'], ['sulfon', 'pteridine', 'aminobenzoic', 'pyrimidine'], ['macrol', 'lactone', 'lactam'], ['retinoid'], ['salicyl']];
+  const sameChem = (a, b) => { a = nm(a).replace(/s\b/g, ''); b = nm(b).replace(/s\b/g, ''); return a === b || CHEM_GROUPS.some(g => g.some(x => a.includes(x)) && g.some(x => b.includes(x))); };
+  const bad2 = {shape: [], one: [], distinct: [], key: [], wrong: [], brand: [], name: [], src: [], unstable: []};
+  const made2 = {}, N2 = RUNS * NEW.length * DL.D.length;
+  for (const k of NEW) {
+    made2[k] = 0;
+    for (const d of DL.D) {
+      let nulls = 0;
+      for (let r = 0; r < RUNS; r++) {
+        const q = DL.makeQuestion(d, T, k, r === RUNS - 1 ? Math.random : rngOf(r * 104729 + d.id.length * 31 + k.length));
+        if (!q) { nulls++; continue; }
+        const tag = `${d.id}:${k}`, o = q.options, right = o.filter(x => x.correct), wrong = o.filter(x => !x.correct), key = right[0] && right[0].t;
+        if (k === 'rx' ? o.length !== 3 || o.map(x => x.t).join('|') !== DL.RX_OPTS.join('|') : o.length !== 4) bad2.shape.push(tag);
+        if (right.length !== 1) bad2.one.push(tag);
+        if (new Set(o.map(x => nm(x.t))).size !== o.length) bad2.distinct.push(tag);
+        const W = (why, t) => bad2.wrong.push(`${tag} ${t} (${why})`);
+        if (k === 'brand' && q.dir === 'fwd') {
+          if (!d.brands.includes(key) || !q.stem.includes(d.name)) bad2.key.push(tag);
+          for (const w of wrong) { const own = brandOwner[nm(w.t)] || [];
+            if (d.brands.some(b => nm(b) === nm(w.t))) W('own brand', w.t);
+            if (!own.length || own.some(id => DL.brandBlocked(id, d.id))) W('not another drug\'s brand', w.t); }
+        } else if (k === 'brand') {
+          if (key !== d.name || !d.brands.includes(q.brand) || !q.stem.includes(q.brand) || q.stem.includes(d.name)) bad2.key.push(tag);
+          for (const w of wrong) { const o2 = byName[nm(w.t)];
+            if (!o2 || o2.brands.some(b => nm(b) === nm(q.brand)) || DL.brandBlocked(o2.id, d.id)) W('has this brand', w.t); }
+        } else if (k === 'rx') {
+          const ls = DL.rxLines(d), m = q.stem.match(/potency class (\d) line/);
+          const want = m ? ls.find(l => l.pot === m[1]).rx : ls[0].rx;
+          if (key !== want || (!m && new Set(ls.map(l => l.rx)).size > 1)) bad2.key.push(tag);
+        } else if (k === 'chem') {
+          const c = DL.CHEM[d.id];
+          if (!c || c.no || key !== c.t) bad2.key.push(tag);
+          for (const w of wrong) {
+            if (DL.chemFam(w.t) === DL.chemFam(c.t) || sameChem(w.t, c.t)) W('same chemical family', w.t);
+            if (!DL.D.some(x => DL.CHEM[x.id] && !DL.CHEM[x.id].no && DL.CHEM[x.id].t === w.t)) W('not a keyed chart value', w.t);
+          }
+        } else if (k === 'potency') {
+          if (!d.potency || !d.potency.map(p => DL.POTENCY[p]).includes(key)) bad2.key.push(tag);
+          for (const w of wrong) if (d.potency.map(p => DL.POTENCY[p]).includes(w.t) || !Object.values(DL.POTENCY).includes(w.t)) W('true or unknown class', w.t);
+        } else if (k === 'useRev') {
+          if (key !== d.name || !DL.hasUse(d, T, q.z) || !DL.quizFacts(d, T, 'use').some(v => v.z === q.z)) bad2.key.push(tag);
+          for (const w of wrong) { const o2 = byName[nm(w.t)];
+            if (!o2 || DL.hasUse(o2, T, q.z) || DL.D.some(x => x.cls === o2.cls && DL.hasUse(x, T, q.z)) || DL.OPEN_USE.has(o2.cls)) W('has this use (itself or its class)', w.t); }
+        } else if (k === 'clsRev') {
+          if (key !== d.name || !q.stem.includes(DL.CLASSES[d.cls])) bad2.key.push(tag);
+          for (const w of wrong) { const o2 = byName[nm(w.t)];
+            if (!o2 || o2.cls === d.cls || DL.conflicts(o2.cls, d.cls)) W('in this class or an overlapping one', w.t); }
+        }
+        // generic names everywhere except the brand kind; a brand only in brand questions
+        if (k !== 'brand' && (brandRe.test(q.stem) || o.some(x => brandRe.test(x.t)))) bad2.brand.push(tag);
+        if (['chem', 'rx', 'potency'].includes(k) && !q.stem.includes(d.name)) bad2.name.push(tag);
+        if (['useRev', 'clsRev'].includes(k) && q.stem.includes(d.name)) bad2.name.push(tag);
+        if (!q.src.length || !q.src.every(citeOk) || (k !== 'brand' && k !== 'useRev' && k !== 'clsRev' && !q.src.some(s => s.by === 'chart')) ||
+            (k === 'brand' && !(q.src.some(s => s.by === 'chart') && q.src.includes(bq)))) bad2.src.push(tag);
+      }
+      if (nulls && nulls !== RUNS) bad2.unstable.push(`${d.id}:${k}`);
+      if (!nulls) made2[k]++;
+    }
+  }
+  check(!bad2.shape.length, `every new question has 4 options (Rx/OTC: the column's three, Rx / OTC / Rx and OTC) (${N2} questions over ${RUNS} draws per drug and kind)`, u(bad2.shape));
+  check(!bad2.one.length, 'every new question has exactly one correct option', u(bad2.one));
+  check(!bad2.distinct.length, 'the options of every new question are distinct (normalized text)', u(bad2.distinct));
+  check(!bad2.key.length, 'the correct option is the drug\'s own chart value (or the drug, in the reverse kinds)', u(bad2.key));
+  check(!bad2.wrong.length, 'no wrong option is true for the drug: not its own brand or a brand of hydrocortisone/its valerate; not its chemical family; not its other potency line; no drug with the use or class asked, or in an overlapping class', u(bad2.wrong));
+  check(!bad2.brand.length, 'a brand name appears only in brand questions', u(bad2.brand));
+  check(!bad2.name.length, 'chemical class, Rx/OTC and potency stems name the generic; reverse stems do not name the answer', u(bad2.name));
+  check(!bad2.src.length, 'every new answer shows a cited source (the chart page for chart columns; brand: the chart and Dr. Smith\'s 10/29 words)', u(bad2.src));
+  check(!bad2.unstable.length, 'a drug and kind either always or never get a question', u(bad2.unstable));
+  // keys from conflicts, misaligned or blank cells
+  const DECL = {blank: 'acitretin,benzocaine,bpo,lidocaine,salicylic,sulfur,tetracaine', group: 'dibucaine',
+    conflict: 'pimecrolimus,ruxolitinib,tacrolimus,tofacitinib,upadacitinib', offset: 'apremilast,cyclosporine,ketoconazole,petrolatum'};
+  const declOk = Object.entries(DECL).every(([c, ids]) => DL.D.filter(d => DL.CHEM[d.id] && DL.CHEM[d.id].no === c).map(d => d.id).sort().join(',') === ids);
+  check(declOk && DL.D.every(d => DL.CHEM[d.id]), 'chemical class: every card has a keyed cell or a recorded reason (blank 7, therapeutic group 1, conflict 5, p. 5 offset 4)');
+  const declQ = DL.D.filter(d => DL.CHEM[d.id].no && [0, 1, 2].some(r => DL.makeQuestion(d, T, 'chem', rngOf(r))));
+  check(!declQ.length, 'no chemical-class question is built from a blank, conflicting or one-row-off cell', declQ.map(d => d.id).join(', '));
+  const declShown = DL.D.filter(d => DL.CHEM[d.id].no && (!DL.CHEM[d.id].why || (DL.CHEM[d.id].no !== 'blank' && !DL.CHEM[d.id].shown.length) || !DL.CHEM[d.id].shown.every(citeOk)));
+  check(!declShown.length, 'each chemical class not asked shows its reason, and the cells and slides behind it with sources', declShown.map(d => d.id).join(', '));
+  const conflictBoth = ['pimecrolimus', 'tacrolimus', 'ruxolitinib', 'upadacitinib', 'tofacitinib'].filter(id => {
+    const sh = DL.CHEM[id].shown; return !(sh.some(s => s.by === 'chart' && /Peptides/.test(s.t)) && sh.some(s => s.by !== 'chart')); });
+  check(!conflictBoth.length, 'the "Peptides" conflicts show both the chart cell and the lecture source', conflictBoth.join(', '));
+  const p5 = ['methoxsalen', 'zincoxide'].filter(id => { const c = DL.CHEM[id]; return id === 'methoxsalen' ? !c.src.some(s => s.by === 'sikazwe' && /DPAW 18/.test(s.cite)) : !/^Chart p\. 1$/.test(c.src[0].cite); });
+  check(!p5.length, 'p. 5 offset rows keyed only with a slide (methoxsalen: furanocoumarin, DPAW 18); zinc oxide keyed from its aligned p. 1 cell', p5.join(', '));
+  const ab = ['guselkumab', 'tildrakizumab', 'risankizumab', 'secukinumab', 'brodalumab', 'ixekizumab'].filter(id => !DL.CHEM[id].src.some(s => s.by === 'smith' && /antibod/i.test(s.t)));
+  check(!ab.length, 'the six p. 5 antibodies ("Peptides (Proteins)" read across the page break) each carry the slide that says antibody', ab.join(', '));
+  // brands
+  const noBrand = DL.D.filter(d => !d.brands.length).map(d => d.id).sort().join(',');
+  check(noBrand === 'avobenzone,azithromycin,bemotrizinol,dioxybenzone,erythromycin,homosalate,meradimate,octinoxate,octisalate,oxybenzone,padimate,spironolactone,tio2,zpt' && made2.brand === 65,
+    `brand: 65 drugs get a question; the 14 with no brand on the chart get none (${made2.brand})`);
+  const typo = [['secukinumab', 'Cosentyx', 'Consentyx'], ['petrolatum', 'Vaseline', 'Vasoline'], ['selenium', 'Selsun Blue', 'Selsum Blue'], ['desonide', 'Desonate', 'Desonate (Desonide)']]
+    .filter(([id, good, printed]) => { const d = DL.D.find(x => x.id === id); return !d.brands.includes(good) || d.brands.includes(printed) || !DL.brandSrc(d).some(s => s.t.includes(`the chart prints "${printed}"`)); });
+  check(!typo.length, 'brand typos: the key is the correct spelling and the source line shows the chart\'s print (Consentyx, Vasoline, Selsum Blue, Desonate (Desonide))', typo.map(t => t[0]).join(', '));
+  // Rx/OTC
+  const rxv = id => DL.rxLines(DL.D.find(x => x.id === id)).map(l => l.rx).join('|');
+  check(rxv('lidocaine') === 'Rx and OTC' && rxv('adapalene') === 'Rx and OTC' && rxv('hydrocortisone') === 'Rx|OTC' && rxv('zincoxide') === 'OTC|OTC' && rxv('padimate') === 'OTC' && rxv('tacrolimus') === 'Rx',
+    'Rx/OTC: lidocaine and adapalene "Rx and OTC"; hydrocortisone Rx on its class 5 line and OTC on its class 7 line (the stem names the line); zinc oxide OTC on both pages');
+  check(made2.rx === DL.D.length, `Rx/OTC: every drug gets a question (${made2.rx})`);
+  // potency
+  const st = DL.D.filter(d => d.cls === 'steroid');
+  const twice = st.filter(d => d.potency.length > 1).map(d => d.id).sort().join(',');
+  check(made2.potency === st.length && st.every(d => d.lines.length === d.potency.length) && twice === 'betameth,desonide,fluocinolone,hydrocortisone',
+    `potency: every topical steroid (${st.length}) gets a question; the four listed twice (${twice}) are asked "one of them", with the other line's class never offered`);
+  check(made2.clsRev === DL.D.length && made2.useRev === 77 && made.use === 75 && made2.chem === 62,
+    `reverse and chemical-class coverage: class → drug ${made2.clsRev}, indication → drug ${made2.useRev}, chemical class ${made2.chem}`);
+  const cov = DL.coverage(T);
+  check(Object.keys(DL.KINDS).every(k => cov[k].n === (made[k] !== undefined ? made[k] : made2[k]) && cov[k].n + Object.values(cov[k].none).flat().length === DL.D.length),
+    'the About coverage line agrees with the generated questions and accounts for every drug');
+  console.log('  coverage per kind (drugs with a question / 79; reasons for the rest):');
+  for (const [k, o] of Object.entries(cov)) console.log(`    ${DL.KIND_HEAD[k]}: ${o.n}` + Object.entries(o.none).map(([r, ns]) => `\n      ${ns.length}: ${r}${ns.length <= 12 ? ' (' + ns.join(', ') + ')' : ''}`).join(''));
+}
+
+console.log('=== The original chart pages (chart/, chart_boxes.js) ===');
+{
+  const CB = sb.CHART_BOXES || vm.runInContext('typeof CHART_BOXES !== "undefined" ? CHART_BOXES : null', sb);
+  check(!!CB, 'chart_boxes.js is in course.js files and defines CHART_BOXES');
+  if (CB) {
+    const jpgSize = f => { const b = fs.readFileSync(f); let i = 2;
+      while (i < b.length) { if (b[i] !== 0xFF) return null; const m = b[i + 1], len = b.readUInt16BE(i + 2);
+        if (m >= 0xC0 && m <= 0xC3) return [b.readUInt16BE(i + 7), b.readUInt16BE(i + 5)]; i += 2 + len; } return null; };
+    const imgBad = [];
+    for (let p = 1; p <= 7; p++) {
+      const pg = CB.pages[p], f = pg && path.join(__dirname, '..', 'chart', pg.file);
+      if (!pg || !fs.existsSync(f)) { imgBad.push(`p. ${p} missing`); continue; }
+      const sz = jpgSize(f);
+      if (!sz || sz[0] !== pg.w || sz[1] !== pg.h) imgBad.push(`p. ${p} size ${sz} vs ${pg.w}x${pg.h}`);
+      if (fs.statSync(f).size > 400000) imgBad.push(`p. ${p} over 400 kB`);
+    }
+    check(!imgBad.length, 'all 7 page images exist in chart/ at their recorded size (each under 400 kB)', imgBad.join('; '));
+    const TYPOS = {trimethoprim: 'trimetoprim', ethylhexyl: 'ethyhexyl'};
+    const gen = l => { let g = DL.norm(l.split(/[,(]/)[0]); for (const [k, v] of Object.entries(TYPOS)) g = g.replace(k, v); return g; };
+    const flat = Object.entries(CB.drugs).flatMap(([id, bs]) => bs.map(b => Object.assign({id}, b))).concat(CB.other.map(b => Object.assign({id: null}, b)));
+    const inScope = rows.map((r, i) => [r, i]).filter(([r]) => r[2]);
+    const missing = inScope.filter(([r, i]) => !flat.some(b => b.line === i && b.id === r[2] && b.page === r[0]));
+    check(!missing.length, `every in-scope chart line (${inScope.length}) has a box on its page under its card`, missing.map(([r]) => r[1]).join('; '));
+    const noBox = DL.D.filter(d => !(CB.drugs[d.id] || []).length || !(d.pages || [d.page]).every(p => CB.drugs[d.id].some(b => b.page === p)));
+    check(!noBox.length, `every card (${DL.D.length}) has a box on each of its chart pages`, noBox.map(d => d.id).join(', '));
+    const p7 = rows.map((r, i) => [r, i]).filter(([r]) => !r[2]);
+    check(p7.every(([r, i]) => CB.other.some(b => b.line === i && b.page === r[0])) && CB.other.length === p7.length,
+      `the ${p7.length} lines with no card (p. 7) have their own boxes`);
+    const geoBad = flat.filter(b => !(b.x0 >= 0 && b.y0 >= 0 && b.x1 <= 1 && b.y1 <= 1 && b.x1 - b.x0 > 0.8 && b.y1 > b.y0 && b.y1 - b.y0 < 0.25 && b.row >= 1));
+    check(!geoBad.length, `every box (${flat.length}) lies inside its page image and spans the table's width, one row high`, geoBad.map(b => rows[b.line][1]).join('; '));
+    const nameBad = flat.filter(b => !DL.norm(b.text).includes(gen(rows[b.line][1])));
+    check(!nameBad.length, 'every box holds the line\'s generic name as the chart prints it', nameBad.map(b => `${rows[b.line][1]} → "${b.text}"`).join('; '));
+    const key = b => b.page + ':' + b.row, byRow = {};
+    flat.forEach(b => (byRow[key(b)] = byRow[key(b)] || []).push(b));
+    const shared = Object.values(byRow).filter(v => v.length > 1).map(v => v.map(b => b.id).sort().join('+')).sort();
+    check(shared.join(',') === 'dioxybenzone+oxybenzone,homosalate+octisalate',
+      `two lines share a row only where the chart prints them in one cell (${shared.join(', ')})`);
+    const dup = DL.D.filter(d => (CB.drugs[d.id] || []).length > 1).map(d => d.id).sort().join(',');
+    check(dup === 'betameth,desonide,fluocinolone,hydrocortisone,zincoxide', `the drugs listed twice have both rows (${dup})`);
+    const tac = (CB.drugs.tacrolimus || [])[0];
+    check(tac && tac.page === 2 && tac.row === 3 && /Tacrolimus \(Protopic\)/.test(tac.text), 'tacrolimus: row 3 on page 2, "Tacrolimus (Protopic)"');
+    const ui = code('druglist_ui.js');
+    check(ui.includes("Dr. Smith, 10/29: \"I don\\'t cover these medications.\"") && /10\/29 T 590–593/.test(ui),
+      'the Chart view marks page 7 with Dr. Smith\'s words, cited (10/29 T 590–593)');
+    check(/BUILD\.preview \? '\.\.\/' : ''/.test(ui) && /'chart\/'/.test(ui), 'the chart images load from chart/ beside the page (../chart/ in /preview/), as slides/ do');
+    const sw = fs.readFileSync(path.join(__dirname, '..', 'sw.js'), 'utf8');
+    check(!/chart\//.test(sw), 'the service worker does not precache the chart images');
+  }
 }
 
 console.log('=== Storage and stub DOM ===');

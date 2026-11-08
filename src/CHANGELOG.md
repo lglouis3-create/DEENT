@@ -8,12 +8,45 @@ characters.
 
 Every update adds its bullets here in the same commit that makes the change.
 
+## 2026-11-08 (Dr. Sikazwe's Polleve-4)
+- New: his Polleve-4 poll, how many alpha-hydroxy acids are in the figure, with each structure explained.
+
+## 2026-11-08 (Stars: what Dr. Sikazwe said to know)
+- ★ Likely on the exam: 35 more of Dr. Sikazwe's questions, one for each point he said to know, remember or watch.
+- Among them: steroid shape, numbering and alpha/beta faces; crisaborole in the skin; hydrocortisone's half-life.
+- Also: vitamin D organs (his 2-point take-home), sulfur particle size, retinoid caution, sunscreen drawbacks.
+- All of his stars stay on his assigned pages; topics he named off those pages get no star.
+
+## 2026-11-08 (Drug list: every chart column)
+- Quiz me, Ask about: new kinds for chemical class, Rx/OTC, potency class (steroids) and brand names.
+- Brand names are practice: Dr. Smith asks by generic name but said you will need to know brands (10/29).
+- Class → drug and Indication → drug ask the other way round, only where exactly one option fits.
+- Recall: type a drug's chemical class, Rx/OTC, potency class or brand, then Check against the chart.
+- Chemical class cells that are blank, one row off (p. 5) or in conflict with a slide are shown, not asked.
+- About this list: how many drugs each kind covers and why the rest have no question.
+- Recall's example now names a drug outside the current list, so it gives no cue.
+- Methoxsalen's psoriasis indication is Exam 1 practice (Dr. Smith, sun recording); DPAW 14 is an extra source.
+- The antibiotic class is now named "Antibiotics" and is never offered against the antifungal-active drugs.
+- Brand questions never offer a drug that shares the brand (Clearasil, Fostex, Solarcaine, the Oxy products).
+- Zinc oxide has no indication question: no other condition is safely false for a skin protectant.
+- Topical steroid indications: only options the slides make false (acne, sun protection), with the reason after.
+- Triamcinolone has no indication question: acne is not safely false for it (About this list says why).
+
+## 2026-11-08 (Drug list: the original chart)
+- Drug list > Chart: the original drug chart pages 1–7, one page at a time, with zoom and Open full size.
+- Chart: type a generic or brand name to turn to its page and highlight its row (both rows if listed twice).
+- "See on the chart (p. N)" on each Browse card, after a Quiz me answer and in Recall opens the highlighted row.
+- Chart page 7 (lice and scabies) is marked not on Exam 1; the misaligned columns of pages 4 and 5 are noted.
+- Zinc oxide on the psoriasis page: its lecture role is protecting the skin around plaques in anthralin treatment.
+- Cyclosporine no longer shows an atopic dermatitis note; the calcineurin class's use is in the Guide.
+
 ## 2026-11-08 (Drug list: three study modes)
 - Drug list: choose Browse, Quiz me or Recall at the top; every matching drug shows at once, with no Next button.
 - Quiz me: multiple choice on each drug's target, class or indication, answered in place with the source.
 - Quiz me keeps a score for this visit, with New questions and Retry the missed; nothing is saved.
 - Recall: pick target, mechanism, class or indication, type what you remember, then Check to compare.
 - Drug list filters are grouped under one heading with an active count and Clear filters.
+- Quiz me, after answering: a use that is off the chart but on a slide (cyclosporine, zinc oxide) shows its source.
 
 ## 2026-11-08 (Wide screens and the tab bar)
 - On a 13-inch iPad and MacBook the page uses the width: exam card beside Start here, two topic columns, a larger slide.

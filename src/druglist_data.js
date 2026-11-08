@@ -61,7 +61,7 @@ const DRUGLIST = (() => {
     il4r:      'IL-4R / IL-13 receptor antagonist',
     jak:       'JAK inhibitors',
     kerat:     'Keratolytics',
-    abx:       'Antibiotics / antimicrobials',
+    abx:       'Antibiotics',
     nrb:       'Nuclear receptor binders (retinoids, vitamin D analog)',
     antiandr:  'Antiandrogen',
     cytotox:   'Cytotoxic agents',
@@ -406,7 +406,9 @@ const DRUGLIST = (() => {
      photo: S('Mild photosensitivity', 'PCol 22'), atlas: 'calcipotriene', q: 'calcipotriene'},
     {id: 'methoxsalen', name: 'Methoxsalen', alt: ['8-MOP', '8-methoxypsoralen'], brands: ['Oxsoralen-Ultra', 'Uvadex'], page: 5, cls: 'psoralen', dz: ['pso'], rx: 'Rx',
      status: 'taught', chartClass: 'Psoralen', chartUse: null,
-     use: [S('PUVA: a psoralen combined with UVA light', 'Sun 3')],
+     use: [S('PUVA: a psoralen combined with UVA light', 'Sun 3'),
+       S('Psoriasis: "the psoralens like methoxsalen are used ... to treat ... psoriasis" (antiproliferative: cells can no longer divide)', 'Sun 3; audio 00:59–01:10'),
+       K('Also on Dr. Sikazwe\'s psoriasis pharmacotherapy list, topical agents: "Psoralen (Topical/Oral)" (DPAW 14 is outside his assigned pages for Exam 1, list of 11/06)', 'DPAW 14')],
      tgt: 'tgt-methoxsalen', why: S('The phototoxic reaction is antiproliferative, immunosuppressive and anti-inflammatory: normalizes keratinocytes, reorganizes cutaneous blood vessels, is cytotoxic to T cells', 'Sun 3'),
      ae: [S('Pruritus, nausea, erythema and blistering, hyperpigmentation, skin aging, skin cancer, cataracts', 'Sun 4')],
      photo: S('A photosensitizing compound by design (PUVA)', 'Sun 3'), atlas: 'methoxsalen', q: 'methoxsalen|psoralen|PUVA|8-MOP'},
@@ -459,8 +461,12 @@ const DRUGLIST = (() => {
   ];
   const POTENCY = {1: 'Class 1, very high potency', 2: 'Class 2, high potency', 3: 'Class 3, upper mid-strength', 4: 'Class 4, mid-strength',
                    5: 'Class 5, lower mid-strength', 6: 'Class 6, mild', 7: 'Class 7, least potent'};
+  // the steroids listed twice: one chart line per product, [potency class, brand(s) on that line, Rx/OTC]
+  const STEROID_LINES = {betameth: [['1', ['Diprolene'], 'Rx'], ['2', ['Diprolene Cream AF'], 'Rx']],
+    fluocinolone: [['4', ['Synalar'], 'Rx'], ['6', ['Derma-Smoothe'], 'Rx']], desonide: [['5', ['DesOwen'], 'Rx'], ['6', ['Desonate'], 'Rx']],
+    hydrocortisone: [['5', ['Locoid'], 'Rx'], ['7', ['Cortaid', 'Hytone', 'Synacort'], 'OTC']]};
   for (const [id, name, brands, pot, status, sik, atlas, q] of STEROIDS) {
-    const notes = [C(pot.map(p => POTENCY[p]).join('; ') + (pot.length > 1 ? ' (listed twice on the chart, once per product)' : ''), 6), STEROID_CLASS_NOTE];
+    const notes = [STEROID_CLASS_NOTE];
     if (sik) notes.push(sik);
     if (id === 'hydrocortisone') notes.push(K(SIK_UNASSIGNED + ' DPAW 24 shows hydrocortisone (natural cortisol) as the reference (parent) glucocorticoid', 'DPAW 24'));
     if (id === 'hydrocortisone') notes.push(S('Low potency (hydrocortisone 1%) for the face and for long-term maintenance', 'PCol 11'));
@@ -468,7 +474,8 @@ const DRUGLIST = (() => {
     const d = {id, name, alt: [], brands, page: 6, cls: 'steroid', dz: ['pso', 'ad'], rx: id === 'hydrocortisone' ? 'Rx (class 5); OTC (class 7)' : 'Rx',
       status, chartClass: 'Corticosteroid; potency ' + pot.map(p => 'class ' + p).join(' and '), chartUse: 'Psoriasis, atopic dermatitis, numerous others',
       use: [S('Psoriasis and atopic dermatitis; match potency to severity and site', 'PCol 11')],
-      tgt: 'tgt-steroids', why: WHY.steroid, ae: [AE.steroid], notes, q};
+      tgt: 'tgt-steroids', why: WHY.steroid, ae: [AE.steroid], notes, q,
+      potency: pot, lines: (STEROID_LINES[id] || [[pot[0], brands, 'Rx']]).map(([p, b, rx]) => ({pot: p, brands: b, rx}))};
     if (atlas) d.atlas = atlas;
     D.push(d);
   }
@@ -510,7 +517,7 @@ const DRUGLIST = (() => {
   const CHART_NOTES = [
     'Chart p. 5: the chemical-class column is aligned through calcipotriene and one row off from methoxsalen down (cyclosporine is printed as a furanocoumarin); the indication column is one row off from petrolatum down (apremilast against "Seborrhea, dandruff"), and calcipotriene shares an indication cell with tazarotene. The chart indication is therefore not shown from calcipotriene down; the pharmacological class column is aligned.',
     'Chart p. 4: the TNF-α inhibitor class cell is printed beside etanercept only; adalimumab, infliximab, golimumab and certolizumab pegol are TNF-α inhibitors on Dr. Smith\'s slides (PCol 70–74).',
-    'The chart\'s chemical-class column is shown only for the sunscreens, where it names the family; chemical classes elsewhere are Dr. Sikazwe\'s material (Atlas tab).',
+    'Chemical class: the chart\'s column is asked where it is aligned and agrees with the lectures; each card shows the cells that are not asked (blank, one row off on p. 5, or in conflict with a slide) with both sources. Structures are in the Atlas tab (Dr. Sikazwe).',
   ];
   /* The questions on a drug: its `q` pattern against the stem, the keyed
      answer(s), the concept and (matching items) the left-hand column. */
@@ -565,7 +572,14 @@ const DRUGLIST = (() => {
   const family = t => { const n = norm(t); for (const [re, f] of FAMILY) if (re.test(n)) return f || n; return n; };
   // classes whose drugs can truly be described by the other's name
   const CLASS_CONFLICT = [['il23', 'il1223'], ['kerat', 'abx'], ['dhfr', 'abx'], ['dhfr', 'cytotox'], ['cytotox', 'azole'], ['emollient', 'sunblock'],
-    ['sunscreen', 'sunblock']];
+    ['sunscreen', 'sunblock'],
+    // a glucocorticoid, an androgen (spironolactone) and a retinoid all bind nuclear receptors;
+    // ketoconazole is on Dr. Sikazwe's antiandrogen slide (DPAW 53); psoralens are cytotoxic to
+    // T cells (Sun 3); tars are also described as keratolytic
+    ['nrb', 'steroid'], ['nrb', 'antiandr'], ['antiandr', 'azole'], ['psoralen', 'cytotox'], ['kerat', 'cytotox'],
+    // antifungal activity: ketoconazole (azole); selenium sulfide and zinc pyrithione, which "have
+    // cytostatic and antifungal activity" (PCol): never "Antibiotics" for them, nor them for it
+    ['abx', 'azole'], ['abx', 'cytotox']];
   // drug classes whose Reference "target" is not a molecular target (a sunscreen
   // family, a chart class, "no drug target", a mechanism the slide calls unknown)
   const NO_TARGET_Q = new Set(['sunscreen', 'sunblock', 'anesth', 'emollient', 'azole', 'antiandr', 'cytotox', 'kerat']);
@@ -575,9 +589,51 @@ const DRUGLIST = (() => {
   // never shown as an answer): systemic cyclosporine and methotrexate and coal
   // tar in atopic dermatitis/eczema, upadacitinib in psoriatic disease, and zinc
   // oxide, which the chart also lists on its psoriasis page (p. 5)
-  const NOT_WRONG = {cyclosporine: ['ad'], methotrexate: ['ad'], coaltar: ['ad'], upadacitinib: ['pso'], zincoxide: ['pso']};
+  // dupilumab and psoriasis: spoken in class (11/03 T 380–383) against slide 64 and the
+  // chart (AD only); held out (reviews/OPEN_QUESTIONS.md, Lecture 3 #2), so never a wrong option
+  // petrolatum and atopic dermatitis: emollients are a basic atopic dermatitis measure in practice
+  // (no course slide says so; the chart lists petrolatum on its psoriasis page), so never a wrong option
+  const NOT_WRONG = {cyclosporine: ['ad'], methotrexate: ['ad'], coaltar: ['ad'], upadacitinib: ['pso'], zincoxide: ['pso', 'ad', 'burn', 'acne'], dupilumab: ['pso'], petrolatum: ['ad'],
+    // zinc oxide: a skin protectant (the chart's shifted p. 5 cell "diaper rash, minor skin irritations"),
+    // so atopic dermatitis and sunburn are not safely false; acne neither (sulfur + zinc oxide acne
+    // mixtures, DPAW 46): no indication question is left for it (its reason is in About this list);
+    // methoxsalen: PUVA is used for severe atopic dermatitis in practice
+    methoxsalen: ['ad']};
+  /* Topical steroids: the chart's indication cell is "Psoriasis, Atopic dermatitis, numerous
+     others" (p. 6). A condition a topical steroid could plausibly treat is not a sound wrong
+     option, so these are never offered as wrong for a steroid (STEROID_MAYBE, with the
+     reason). What is left is false for a steroid by the course sources (STEROID_WRONG_WHY),
+     shown after answering. A steroid with fewer than two such options gets no question. */
+  const STEROID_MAYBE = {
+    burn: 'the chart\'s "numerous others"; a low-potency steroid (hydrocortisone OTC, chart p. 6 class 7) relieves the itch of sunburn and insect bites, the uses on the chart\'s p. 1 sunburn line',
+  };
+  const STEROID_MAYBE_ID = {triamcinolone: {acne: 'triamcinolone acetonide (Kenalog) is also injected into inflamed acne cysts in practice, so "acne" is not safely false for it'}};
+  const STEROID_WRONG_WHY = {
+    acne: S('Acne is a local adverse effect of topical corticosteroids, not a use', 'PCol 12'),
+    sun: S('Sun protection is what sunscreens do: they absorb UV radiation and convert it to heat (chemical) or reflect and scatter it (physical)', 'Sun 20, 22'),
+  };
+  for (const d of D) if (d.cls === 'steroid') NOT_WRONG[d.id] = Object.keys(STEROID_MAYBE).concat(Object.keys(STEROID_MAYBE_ID[d.id] || {}));
+  /* Where a NOT_WRONG use is named in the course sources, shown after an
+     Indication question on the drug is answered and on its Browse card (never
+     before answering, never as an option). Each line is a slide or transcript
+     statement, quoted. No course source was found for methotrexate, coal tar
+     (atopic dermatitis) or upadacitinib (psoriasis), so they have no note.
+     Cyclosporine has none either (Louis, 2026-11-08): the calcineurin class's
+     use in atopic dermatitis (PCol 24) is stated in the Guide's calcineurin
+     inhibitor section; atopic dermatitis stays out of its wrong options. */
+  const OFF_CHART = {
+    zincoxide: [{z: 'pso', head: 'Psoriasis: the chart lists zinc oxide on its psoriasis page (p. 5); in the lectures its role there is to protect the healthy skin around the plaques during anthralin treatment. It is not a psoriasis drug.', src: [
+      S('Short-contact anthralin therapy (SCAT): "zinc oxide ointment or nonmedicated stiff paste applied to surrounding normal skin"', 'PCol 56; 11/03 T 173–175'),
+      K('Anthralin "paste (Anthralin + ZnO + Parrafin + Salicylic Acid)"', 'DPAW 17; 11/03 T 921–922')]}],
+  };
   const DZ_RE = {ad: /atopic|eczema|\bad\b/, pso: /psoria/, acne: /acne/, sun: /sun protection|sunscreen/, burn: /sunburn/};
-  const KINDS = {target: 'Target', cls: 'Class', use: 'Indication'};
+  /* The "Ask about" kinds. target, cls, use ask a drug's field (makeQuestion's own
+     path); the rest (extraQuestion, below) cover the chart's other columns and the
+     reverse direction. KIND_HEAD is the short name over each question. */
+  const KINDS = {target: 'Target', cls: 'Class', use: 'Indication', clsRev: 'Class → drug', useRev: 'Indication → drug',
+    chem: 'Chemical class', rx: 'Rx/OTC', potency: 'Potency class (steroids)',
+    brand: 'Brand names (practice; Dr. Smith\'s exam questions use generic names)'};
+  const KIND_HEAD = Object.assign({}, KINDS, {clsRev: 'Which drug: class', useRev: 'Which drug: indication', potency: 'Potency class', brand: 'Brand name (practice)'});
   const groupOf = d => d.cls === 'abx' ? 'abx:' + norm(d.chartClass || '') : d.cls;
   /* The keyed values of one field of one drug: [{t, src: [{t, by, cite}]}]. */
   function quizFacts(d, T, kind){
@@ -617,6 +673,9 @@ const DRUGLIST = (() => {
   /* One question, or null. rng: () => [0, 1). */
   function makeQuestion(d, T, kind, rng){
     rng = rng || Math.random;
+    return EXTRA[kind] ? EXTRA[kind](d, T, rng) : fieldQuestion(d, T, kind, rng);
+  }
+  function fieldQuestion(d, T, kind, rng){
     const keys = quizFacts(d, T, kind);
     if (!keys.length) return null;
     const truth = trueValues(d, T, kind).concat(keys.map(k => k.t));
@@ -636,14 +695,221 @@ const DRUGLIST = (() => {
     for (let i = pool.length - 1; i > 0; i--) { const j = Math.floor(rng() * (i + 1)); [pool[i], pool[j]] = [pool[j], pool[i]]; }
     const wrong = [];
     for (const p of pool) { if (seenFam.has(p.f)) continue; seenFam.add(p.f); wrong.push(p.t); if (wrong.length === 3) break; }
-    if (wrong.length < 3) return null;
+    // an indication has five possible values, so where only two sound wrong options remain (the
+    // steroids, whose cell says "numerous others"; zinc oxide) the question has 3 options
+    const steroidUse = kind === 'use' && d.cls === 'steroid';
+    if (wrong.length < (kind === 'use' ? 2 : 3)) return null;
     const key = keys[Math.floor(rng() * keys.length)];
     const options = wrong.map(t => ({t, correct: false})).concat([{t: key.t, correct: true}]);
     for (let i = options.length - 1; i > 0; i--) { const j = Math.floor(rng() * (i + 1)); [options[i], options[j]] = [options[j], options[i]]; }
     const stem = kind === 'target' ? `What is the target of ${d.name}?`
       : kind === 'cls' ? `Which class is ${d.name} in?` : `Which condition is ${d.name} used for?`;
-    return {id: d.id + ':' + kind, drug: d.id, name: d.name, kind, stem, options, src: key.src, also: keys.filter(k => k !== key).map(k => k.t)};
+    return {id: d.id + ':' + kind, drug: d.id, name: d.name, kind, stem, options, src: key.src, also: keys.filter(k => k !== key).map(k => k.t),
+            offChart: kind === 'use' ? (OFF_CHART[d.id] || []) : [],
+            wrongWhy: steroidUse ? wrong.map(t => { const z = Object.keys(DISEASES).find(k => DISEASES[k] === t); return Object.assign({opt: t}, STEROID_WRONG_WHY[z]); }) : []};
   }
+  /* ---------- The chart's other columns: brand, Rx/OTC, chemical class, potency ----------
+     Louis, 2026-11-08: "Every section of each drug on the drug chart should be
+     tested in, please." Each key below is the chart's own cell (with its page),
+     except where the cell is blank, one row off (p. 5) or in conflict with a
+     lecture slide: those drugs get no question and the card shows why. */
+
+  // Brand names: practice only. Dr. Smith, 10/29 T 618–621.
+  const BRAND_QUOTE = S('"You will, you will need to know brand name. I only ask questions using the generic name"', '10/29 T 618–621');
+  // the chart's misspellings of a brand (the key is the correct spelling; the source line shows the print)
+  const BRAND_PRINT = {Cosentyx: 'Consentyx', Vaseline: 'Vasoline', 'Selsun Blue': 'Selsum Blue', Desonate: 'Desonate (Desonide)'};
+  // brands printed on another page than the drug's first (zinc oxide is on pp. 1 and 5)
+  const BRAND_PAGE = {zincoxide: {Zinca: 1, Desitin: 5}};
+  // hydrocortisone valerate is a hydrocortisone: neither's brands are wrong options for the other
+  const BRAND_CONFLICT = [['hydrocortisone', 'hcvalerate']];
+  /* A brand that also fits another drug on the chart: (1) brand lines that name other
+     products (Clearasil and Fostex also sell salicylic acid and sulfur acne products;
+     current Solarcaine products contain lidocaine); (2) a brand family, the brand's first
+     word (Oxy-10 and Oxy Face Scrub, both "Oxy"). Such a brand is never a wrong option for
+     that drug, and that drug never a wrong option for the brand. */
+  const BRAND_ALSO = {Clearasil: ['salicylic', 'sulfur'], Fostex: ['salicylic', 'sulfur'], Solarcaine: ['lidocaine']};
+  const bfam = b => norm(b).split(' ')[0];
+  const brandFits = (b, o) => o.brands.some(x => norm(x) === norm(b) || bfam(x) === bfam(b)) || (BRAND_ALSO[b] || []).includes(o.id);
+  const brandBlocked = (a, b) => a === b || BRAND_CONFLICT.some(([x, y]) => (x === a && y === b) || (x === b && y === a));
+  function brandSrc(d){
+    const by = {};
+    for (const b of d.brands) { const p = (BRAND_PAGE[d.id] || {})[b] || d.page; (by[p] = by[p] || []).push(b); }
+    return Object.entries(by).map(([p, bs]) => C(`Brand${bs.length > 1 ? 's' : ''} on the chart: ` + bs.map(b => BRAND_PRINT[b] ? `${b} (the chart prints "${BRAND_PRINT[b]}")` : b).join(', '), p));
+  }
+
+  // Rx/OTC: the chart's column, per line (hydrocortisone is Rx on its class 5 line, OTC on its class 7 line)
+  const RX_OPTS = ['Rx', 'OTC', 'Rx and OTC'];
+  const RX_PRINT = {lidocaine: 'RX/OTC', adapalene: 'OTC/RX'};
+  const rxNorm = r => /rx/i.test(r) && /otc/i.test(r) ? 'Rx and OTC' : /otc/i.test(r) ? 'OTC' : 'Rx';
+  const rxLines = d => d.lines ? d.lines.map(l => ({rx: l.rx, pot: l.pot, page: 6})) : (d.pages || [d.page]).map(p => ({rx: rxNorm(d.rx), page: p}));
+
+  // Chemical class: {t, src} keyed, or {no: code, why, shown: [statements]}.
+  const CHEM = {};
+  const chemKey = (ids, t, page, extra) => ids.forEach(id => { CHEM[id] = {t, src: [C('Chemical class column: ' + t, page)].concat(extra || [])}; });
+  const chemNo = (ids, no, why, shown) => ids.forEach(id => { CHEM[id] = {no, why, shown: shown || []}; });
+  chemKey(['padimate'], 'Para-aminobenzoic acid (PABA)', 1); chemKey(['octinoxate'], 'Cinnamates', 1);
+  chemKey(['octisalate', 'homosalate'], 'Salicylates', 1); chemKey(['oxybenzone', 'dioxybenzone'], 'Benzophenones', 1);
+  chemKey(['meradimate'], 'Anthranilates', 1); chemKey(['avobenzone'], 'Dibenzoylmethane', 1);
+  chemKey(['zincoxide'], 'Oxides', 1, [C('On p. 5 the zinc oxide row reads "Petroleum": that column is one row off there (see About this list)', 5)]);
+  chemKey(['tio2'], 'Oxides', 1); chemKey(['bemotrizinol'], 'Triazine and methoxybenzene', 1);
+  chemNo(['benzocaine', 'tetracaine', 'lidocaine'], 'blank', 'the chart\'s chemical-class cell for this line is blank (p. 1)');
+  chemNo(['dibucaine'], 'group', 'its chemical-class cell (p. 1) reads "Topical Anesthetics", a therapeutic group already in its pharmacological class, not a chemical class',
+    [C('Chemical class column: "Topical Anesthetics" (the cells of benzocaine, tetracaine and lidocaine are blank)', 1)]);
+  chemKey(['crisaborole'], 'Benzoxaborole', 2, [K('Crisaborole: a benzoxaborole soft drug', 'DPAW 7')]);
+  const T570 = S('JAK inhibitors: "they\'re small molecule inhibitors ... They\'re not a monoclonal antibody."', '11/03 T 570–573');
+  chemNo(['pimecrolimus', 'tacrolimus'], 'conflict', 'the chart\'s "Peptides" conflicts with Dr. Sikazwe\'s slide ("Macrolide or lactone immunosuppressants"); held out in reviews/OPEN_QUESTIONS.md (Sikazwe 11/04 #6)',
+    [C('Chemical class column: "Peptides"', 2), K('Macrolide or lactone immunosuppressants', 'DPAW 28')]);
+  chemKey(['dupilumab'], 'Peptides', 2);
+  chemNo(['ruxolitinib', 'upadacitinib'], 'conflict', 'the chart\'s "Peptides" conflicts with Dr. Smith (JAK inhibitors are small molecules); held out in reviews/OPEN_QUESTIONS.md (Lecture 3 #11)',
+    [C('Chemical class column: "Peptides"', 2), T570]);
+  chemNo(['bpo', 'sulfur', 'salicylic'], 'blank', 'the chart\'s chemical-class cell for the keratolytics is blank (p. 3)');
+  CHEM.bpo.shown = [K('Benzoyl peroxide: "peroxide chemical class"', 'DPAW 47')];
+  chemKey(['sarecycline', 'minocycline', 'doxycycline'], 'Tetracyclines', 3); chemKey(['clindamycin'], 'Lincosamide', 3);
+  chemKey(['erythromycin', 'azithromycin'], 'Macrolides', 3); chemKey(['tmpsmx'], 'Sulfonamide/pyrimidine', 3);
+  chemKey(['dapsone'], 'Sulfone', 3); chemKey(['metronidazole'], 'Nitroimidazole', 3);
+  chemKey(['tretinoin', 'adapalene', 'isotretinoin'], 'Retinoids', 3); chemKey(['spironolactone'], 'Steroid', 3);
+  chemKey(['coaltar', 'shaletar', 'selenium', 'zpt', 'anthralin'], 'Tars/selenide/Zn/anthrone', 4);
+  CHEM.anthralin.src.push(K('Anthralin or dithranol: a hydroxyanthrone', 'DPAW 17'));
+  chemKey(['methotrexate'], 'Pteridine', 4);
+  chemKey(['abatacept', 'etanercept', 'adalimumab', 'infliximab', 'golimumab', 'certolizumab', 'ustekinumab'], 'Peptides (proteins)', 4);
+  chemNo(['tofacitinib'], 'conflict', 'the chart\'s p. 4 cell "Peptides (Proteins)" runs down to tofacitinib, a small molecule (Dr. Smith); the same conflict as ruxolitinib and upadacitinib (Lecture 3 #11)',
+    [C('Chemical class column: "Peptides (Proteins)" (one cell from abatacept to ustekinumab)', 4), T570]);
+  // p. 5: the chemical-class cell is blank from guselkumab to acitretin. For the six antibodies the
+  // p. 4 cell "Peptides (Proteins)" is read across the page break (as the indication is), and each
+  // one's own slide confirms an antibody (a protein); acitretin, a retinoid, gets no key.
+  const AB = {guselkumab: S('Human IgG1 lambda monoclonal antibody', 'PCol 68'), tildrakizumab: S('Humanized IgG1/κ monoclonal antibody', 'PCol 68'),
+    risankizumab: S('Humanized IgG1 monoclonal antibody', 'PCol 69'), secukinumab: S('Human IgG1 monoclonal antibody', 'PCol 66'),
+    brodalumab: S('Human IgG2 antibody to the IL-17 receptor A', 'PCol 66'), ixekizumab: S('Humanized IgG4 monoclonal antibody against IL-17A', 'PCol 66')};
+  for (const [id, s] of Object.entries(AB)) CHEM[id] = {t: 'Peptides (proteins)', src: [
+    C('Chemical class: this row\'s cell on p. 5 is blank; "Peptides (Proteins)" is the p. 4 cell, which runs across the page break', 4), s]};
+  chemNo(['acitretin'], 'blank', 'its chemical-class cell on p. 5 is blank (the blank cell also spans the IL-23 and IL-17 antibodies above it)',
+    [S('Metabolite of the aromatic retinoid etretinate', 'PCol 20')]);
+  chemKey(['tazarotene'], 'Retinoid', 5); chemKey(['calcipotriene'], 'Vitamin D derivative', 5);
+  // p. 5 from methoxsalen down: the column is one row off; keyed only where a slide confirms the corrected value
+  CHEM.methoxsalen = {t: 'Furanocoumarin', src: [C('Chemical class column: "Furanocoumarin", printed one row down (on the cyclosporine row; the column is one row off here)', 5),
+    K('Psoralens (8-MOP): a furanocoumarin', 'DPAW 18')]};
+  chemNo(['cyclosporine'], 'offset', 'chart p. 5 is one row off here: its row reads "Furanocoumarin" and its own value, one row down, "Macrolactam"; Dr. Sikazwe\'s slide calls it an 11-amino-acid cyclic peptide, which does not confirm "Macrolactam"',
+    [C('Chemical class column on its row: "Furanocoumarin"; one row down: "Macrolactam"', 5), K('11 amino acid cyclic peptide', 'DPAW 33')]);
+  chemNo(['petrolatum'], 'offset', 'chart p. 5 is one row off here: its row reads "Macrolactam" and its own value, one row down, "Petroleum"; Dr. Sikazwe\'s slide says hydrocarbons, which does not confirm the chart\'s word',
+    [C('Chemical class column on its row: "Macrolactam"; one row down: "Petroleum"', 5), K('Petrolatum (most effective, over 25 carbons): hydrocarbons', 'DPAW 15')]);
+  chemNo(['ketoconazole'], 'offset', 'chart p. 5 is one row off here: its row reads "Oxide" and its own value, one row down, "Azole"; no slide gives its chemical class (its pharmacological class "Azole antifungal" is asked under Class)',
+    [C('Chemical class column on its row: "Oxide"; one row down: "Azole"', 5), K('Listed under "Non-steroidal AA" (antiandrogens) with flutamide', 'DPAW 53')]);
+  chemNo(['apremilast'], 'offset', 'chart p. 5 is one row off here: its row reads "Azole" (ketoconazole\'s value) and no cell is left for apremilast; Dr. Sikazwe\'s slide calls it an isoindoline',
+    [C('Chemical class column on its row: "Azole"', 5), K('Otezla (apremilast): an isoindoline', 'DPAW 34')]);
+  chemKey(D.filter(d => d.cls === 'steroid').map(d => d.id), 'Steroids', 6);
+  // families of chemical classes: never offered as wrong for each other
+  const CHEM_FAM = [[/peptide|protein/, 'peptide'], [/steroid|vitamin d/, 'steroid'], [/retinoid/, 'retinoid'], [/oxide|\bzn\b/, 'zinc'],
+    [/sulfon|pteridine|aminobenzoic|pyrimidine/, 'folate'], [/macrol|lactone/, 'macro'], [/salicylate/, 'salicylate']];
+  const chemFam = t => { const n = norm(t); for (const [re, f] of CHEM_FAM) if (re.test(n)) return f; return n.replace(/s$/, ''); };
+  const chemOf = d => { const c = CHEM[d.id]; return c && !c.no ? c : null; };
+
+  const shuffled = (a, rng) => { a = a.slice(); for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(rng() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
+  const pickOne = (a, rng) => a[Math.floor(rng() * a.length)];
+  // the steroids' indication cell ends "numerous others", so no steroid is offered as a drug
+  // that is NOT used for something (Indication → drug)
+  const OPEN_USE = new Set(['steroid']);
+  const hasUse = (o, T, z) => trueValues(o, T, 'use').includes(DISEASES[z]) || quizFacts(o, T, 'use').some(v => v.z === z);
+  const useRevWrong = (d, T, z) => D.filter(o => o.id !== d.id && !OPEN_USE.has(o.cls) && !D.some(x => x.cls === o.cls && hasUse(x, T, z)));
+  // up to n items, one per group, in random order
+  const onePer = (items, grp, n, rng) => { const out = [], seen = new Set(); for (const it of shuffled(items, rng)) { const g = grp(it); if (seen.has(g)) continue; seen.add(g); out.push(it); if (out.length === n) break; } return out; };
+  const mix = (wrong, key, rng) => shuffled(wrong.map(t => ({t, correct: false})).concat([{t: key, correct: true}]), rng);
+  const Q = (d, kind, stem, options, src, also) => ({id: d.id + ':' + kind, drug: d.id, name: d.name, kind, stem, options, src, also: also || [], offChart: []});
+
+  const EXTRA = {
+    brand(d, T, rng){
+      if (!d.brands.length) return null;
+      const key = pickOne(d.brands, rng), src = brandSrc(d).concat([BRAND_QUOTE]);
+      const others = D.filter(o => !brandBlocked(o.id, d.id) && o.brands.length);
+      const order = shuffled(others.filter(o => o.page === d.page), rng).concat(shuffled(others.filter(o => o.page !== d.page), rng));
+      if (rng() < 0.5) {                     // generic -> brand
+        const own = new Set(d.brands.map(norm)), wrong = [];
+        for (const o of order) { const b = pickOne(o.brands, rng); if (own.has(norm(b)) || brandFits(b, d) || wrong.some(w => bfam(w) === bfam(b))) continue; wrong.push(b); if (wrong.length === 3) break; }
+        if (wrong.length < 3) return null;
+        return Object.assign(Q(d, 'brand', `Which is a brand name of ${d.name} on the chart?`, mix(wrong, key, rng), src, d.brands.filter(b => b !== key)), {dir: 'fwd'});
+      }
+      const wrong = order.filter(o => !brandFits(key, o)).slice(0, 3).map(o => o.name);   // brand -> generic
+      if (wrong.length < 3) return null;
+      return Object.assign(Q(d, 'brand', `Which drug does the chart list under the brand name ${key}?`, mix(wrong, d.name, rng), src), {dir: 'rev', brand: key});
+    },
+    rx(d, T, rng){
+      const ls = rxLines(d), ln = pickOne(ls, rng), split = new Set(ls.map(l => l.rx)).size > 1;
+      const stem = split ? `How does the chart list ${d.name} on its potency class ${ln.pot} line: Rx, OTC, or both?` : `How does the chart list ${d.name}: Rx, OTC, or both?`;
+      const src = [C('Rx/OTC column: ' + (RX_PRINT[d.id] ? `${ln.rx} (printed "${RX_PRINT[d.id]}")` : ln.rx) + (split ? ` on the ${POTENCY[ln.pot]} line` : '') +
+        (ls.length > 1 && !split ? ' (on each of its lines)' : ''), ln.page)];
+      const also = split ? ls.filter(l => l !== ln).map(l => `${l.rx} on its ${POTENCY[l.pot].toLowerCase()} line`) : [];
+      return Q(d, 'rx', stem, RX_OPTS.map(t => ({t, correct: t === ln.rx})), src, also);
+    },
+    chem(d, T, rng){
+      const c = chemOf(d);
+      if (!c) return null;
+      const f = chemFam(c.t), pool = [];
+      for (const o of D) { const oc = chemOf(o); if (oc && chemFam(oc.t) !== f && !pool.some(p => norm(p) === norm(oc.t))) pool.push(oc.t); }
+      const wrong = onePer(pool, chemFam, 3, rng);
+      if (wrong.length < 3) return null;
+      return Q(d, 'chem', `Which chemical class does the chart give ${d.name}?`, mix(wrong, c.t, rng), c.src);
+    },
+    potency(d, T, rng){
+      if (!d.potency) return null;
+      const key = pickOne(d.potency, rng), twice = d.potency.length > 1;
+      const wrong = shuffled(Object.keys(POTENCY).filter(p => !d.potency.includes(p)), rng).slice(0, 3).map(p => POTENCY[p]);
+      const stem = twice ? `${d.name} is on the chart twice, once per product. Which potency class does the chart give one of them?` : `Which potency class does the chart give ${d.name}?`;
+      return Q(d, 'potency', stem, mix(wrong, POTENCY[key], rng), [C('Potency class column: ' + POTENCY[key] + (twice ? ' (one of its two lines)' : ''), 6)],
+        d.potency.filter(p => p !== key).map(p => POTENCY[p] + ' (its other line)'));
+    },
+    useRev(d, T, rng){
+      const vals = quizFacts(d, T, 'use').filter(v => onePer(useRevWrong(d, T, v.z), o => o.cls, 3, () => 0).length === 3);
+      if (!vals.length) return null;
+      const v = pickOne(vals, rng), wrong = onePer(useRevWrong(d, T, v.z), o => o.cls, 3, rng).map(o => o.name);
+      return Object.assign(Q(d, 'useRev', `Which drug is used for ${DISEASES[v.z].toLowerCase()}?`, mix(wrong, d.name, rng), v.src), {z: v.z});
+    },
+    clsRev(d, T, rng){
+      const k = quizFacts(d, T, 'cls')[0];
+      if (!k) return null;
+      const wrong = onePer(D.filter(o => o.cls !== d.cls && !conflicts(o.cls, d.cls)), o => o.cls, 3, rng).map(o => o.name);
+      if (wrong.length < 3) return null;
+      return Q(d, 'clsRev', `Which drug is in this class: ${CLASSES[d.cls]}?`, mix(wrong, d.name, rng), k.src);
+    },
+  };
+
+  /* The sourced lines of the new columns, for the Browse card and the Recall answer. */
+  function rxSrc(d){
+    const ls = rxLines(d), split = new Set(ls.map(l => l.rx)).size > 1;
+    if (split) return ls.map(l => C(`Rx/OTC column: ${l.rx} on the ${POTENCY[l.pot]} line`, l.page));
+    return [C('Rx/OTC column: ' + (RX_PRINT[d.id] ? `${ls[0].rx} (printed "${RX_PRINT[d.id]}")` : ls[0].rx) + (ls.length > 1 ? ' (on each of its lines)' : ''),
+      [...new Set(ls.map(l => l.page))].join(', '))];
+  }
+  const potSrc = (d, withBrands) => (d.lines || []).map(l => C(`Potency class column: ${POTENCY[l.pot]}` +
+    (withBrands && d.lines.length > 1 ? ` (${l.brands.join(', ')}; ${l.rx})` : ''), 6));
+
+  /* Why a drug gets no question of a kind (the coverage line in About this list). */
+  function whyNone(d, T, kind){
+    if (kind === 'target') return NO_TARGET_Q.has(d.cls) ? 'the target line names no molecular target (a sunscreen family, a chart class, "no drug target" or an effect)'
+      : NO_TARGET_ID.has(d.id) ? 'the slide calls the mechanism unknown or gives an effect, not a target' : 'fewer than three safe wrong options';
+    if (kind === 'use' && d.cls === 'steroid' && STEROID_MAYBE_ID[d.id]) return 'topical steroid: ' + Object.values(STEROID_MAYBE_ID[d.id]).join('; ') + ', and fewer than two options are false by the sources';
+    if (kind === 'use' && d.id === 'zincoxide') return 'zinc oxide is a skin protectant used on irritated skin, and sulfur + zinc oxide acne mixtures exist (DPAW 46), so no other condition is safely false for it';
+    if (kind === 'use' || kind === 'useRev') return quizFacts(d, T, 'use').length ? 'fewer than three safe wrong options'
+      : 'no indication on its chart line (p. 5, one row off) and none on a slide';
+    if (kind === 'brand') return d.brands.length ? 'fewer than three safe wrong options' : 'no brand on its chart line';
+    if (kind === 'potency') return d.potency ? 'fewer than three safe wrong options' : 'not a topical steroid (potency classes are on chart p. 6 only)';
+    if (kind === 'chem') { const c = CHEM[d.id]; return !c ? 'no chemical class recorded' : c.no ? {blank: 'cell blank on the chart', group: 'cell names a therapeutic group, not a chemical class',
+      conflict: 'chart cell conflicts with a lecture', offset: 'chart p. 5 column one row off, corrected value not confirmed on a slide'}[c.no] : 'fewer than three safe wrong options'; }
+    return 'fewer than three safe wrong options';
+  }
+  /* Per kind: how many drugs get a question, and the others grouped by reason. */
+  function coverage(T){
+    const out = {};
+    for (const k of Object.keys(KINDS)) {
+      const o = {n: 0, none: {}};
+      for (const d of D) {
+        let s = 7; const rng = () => { s = (s * 16807) % 2147483647; return s / 2147483647; };
+        if (makeQuestion(d, T, k, rng)) o.n++; else (o.none[whyNone(d, T, k)] = o.none[whyNone(d, T, k)] || []).push(d.name);
+      }
+      out[k] = o;
+    }
+    return out;
+  }
+
   return {parseTargets, D, CLASS_Q, CLASSES, DISEASES, PAGES, CHART_ROWS, EXCLUDED, CHART_NOTES, questionsFor, classQuestions,
-          KINDS, quizFacts, trueValues, makeQuestion, norm, family, NOT_WRONG};
+          KINDS, KIND_HEAD, quizFacts, trueValues, makeQuestion, norm, family, NOT_WRONG, OFF_CHART,
+          CHEM, chemFam, rxLines, BRAND_ALSO, brandFits, STEROID_MAYBE, STEROID_MAYBE_ID, STEROID_WRONG_WHY, RX_OPTS, POTENCY, brandBlocked, brandSrc, rxSrc, potSrc, BRAND_PRINT, BRAND_QUOTE, OPEN_USE, hasUse, conflicts, whyNone, coverage};
 })();

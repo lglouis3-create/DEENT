@@ -202,7 +202,8 @@ const COURSE = {
           'q1_topics.js', 'q2_L02.js', 'q3_L03a.js', 'q4_L03b.js', 'q5_L04.js', 'q6_L03c.js',
           // Drug list tab (temporary course-level presentation, to be replaced by the kit's
           // Drug List feature): its data, then the tab itself (Louis, 2026-11-08)
-          'druglist_data.js', 'druglist_ui.js',
+          // (chart_boxes.js: the rows of the original chart pages in chart/, from render_chart.py)
+          'chart_boxes.js', 'druglist_data.js', 'druglist_ui.js',
           // "Likely on the exam" stars (course-level, Louis 2026-11-08): data, then presentation
           'likely_data.js', 'likely_ui.js',
           // Narration player (course-level, Louis 2026-11-08, path B of reviews/NARRATION_PLAN.md
