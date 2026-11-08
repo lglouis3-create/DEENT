@@ -185,7 +185,15 @@ const COURSE = {
           // Drug List feature): its data, then the tab itself (Louis, 2026-11-08)
           'druglist_data.js', 'druglist_ui.js',
           // "Likely on the exam" stars (course-level, Louis 2026-11-08): data, then presentation
-          'likely_data.js', 'likely_ui.js'],
+          'likely_data.js', 'likely_ui.js',
+          // Narration player (course-level, Louis 2026-11-08, path B of reviews/NARRATION_PLAN.md
+          // 7.1; temporary until a kit module): walkthrough scripts, spoken whys and the recorded-
+          // clip manifest, then the player (walk_ui.js) and "Hear the why" (why_ui.js). When node
+          // evaluates this file (build.py, the checks) a data file not yet written is left out, so
+          // the build does not stop on it; the players draw nothing for data that is not there.
+          ...['walk_pp.js', 'walk_pc.js', 'walk_sun.js', 'walk_mc.js', 'why_data.js', 'audio_manifest.js']
+            .filter(f => { try { return typeof require !== 'function' || require('fs').existsSync(f); } catch (e) { return true; } }),
+          'walk_ui.js', 'why_ui.js'],
 
   tools: {citeAliases:{'skin-pathophys-students-2026.pdf':'Skin-Pathophys-Students-2026.pdf',
                        'skin-pcol-students-2026.pdf':'Skin-PCol-Students-2026.pdf',

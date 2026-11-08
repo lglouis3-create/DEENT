@@ -25,7 +25,7 @@ const here = f => fs.readFileSync(path.join(__dirname, f), 'utf8');
 const C = (() => { const sb = {console, window: {}}; vm.createContext(sb); vm.runInContext(here('course.js') + '\nthis.COURSE = COURSE;', sb); return sb.COURSE; })();
 check(C.files.includes('likely_data.js') && C.files.includes('likely_ui.js') &&
       C.files.indexOf('likely_data.js') < C.files.indexOf('likely_ui.js'), 'course.js `files` lists likely_data.js before likely_ui.js');
-const files = C.files.filter(f => !/_ui\.js$/.test(f));
+const files = C.files.filter(f => !/_ui\.js$/.test(f) && fs.existsSync(path.join(__dirname, f)));   // a narration data file not yet written is not in the page either
 const sb = {console, window: {}};
 vm.createContext(sb);
 let src = here('course.js') + '\n';

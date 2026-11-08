@@ -29,7 +29,7 @@ const NAME = 'druglist_check.js';
 const here = f => fs.readFileSync(path.join(__dirname, f), 'utf8');
 
 const C = (() => { const sb = {console, window: {}}; vm.createContext(sb); vm.runInContext(here('course.js') + '\nthis.COURSE = COURSE;', sb); return sb.COURSE; })();
-const files = C.files.filter(f => f !== 'druglist_ui.js');
+const files = C.files.filter(f => f !== 'druglist_ui.js' && fs.existsSync(path.join(__dirname, f)));   // a narration data file not yet written is not in the page either
 const sb = {console, window: {}};
 vm.createContext(sb);
 let src = here('course.js') + '\n';

@@ -8,6 +8,13 @@ characters.
 
 Every update adds its bullets here in the same commit that makes the change.
 
+## 2026-11-08 (Narration player)
+- Guides: "Listen: walkthrough" reads each section part by part, with the lecture slide (or diagram step) beside it.
+- Walkthroughs: pause and resume, previous and next part, speed, browse slides, open a slide full size.
+- Walkthroughs remember the part you stopped on, on this device, and can continue into the next one.
+- After you answer a question, "Hear the why" reads its explanation aloud (also in a finished paper's review).
+- Until recordings are added, your device's own voice reads the text.
+
 ## 2026-11-08 (Guides and Topics by deck)
 - Topics now grouped under the four slide decks, each topic named after the deck's own section, in slide order.
 - Guides rewritten: one section per learning objective of each Smith deck, plus Dr. Sikazwe's assigned pages.
