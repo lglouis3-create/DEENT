@@ -8,6 +8,10 @@ characters.
 
 Every update adds its bullets here in the same commit that makes the change.
 
+## 2026-11-08 (Own icon and link card)
+- A shared link now shows "DEENT Exam Review" with the drill's own DEENT icon instead of "Exam drill".
+- Adding the drill to a Home Screen gives the new DEENT icon, named "DEENT Review".
+
 ## 2026-11-08 (Reaction schemes from Dr. Sikazwe's slides)
 - Guides: 11 reaction schemes from Dr. Sikazwe's slides, drawn clean with every structure checked in PubChem.
 - Step through crisaborole, hydrocortisone, vitamin D3 and salicylic acid metabolism one arrow at a time.
