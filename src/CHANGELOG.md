@@ -8,6 +8,13 @@ characters.
 
 Every update adds its bullets here in the same commit that makes the change.
 
+## 2026-11-08 (Steroid numbering with the skeleton; literal stems)
+- Steroid numbering questions now show Dr. Sikazwe's steroid skeleton; two ask the number of a circled carbon.
+- His Polleve-1 now shows the crisaborole metabolic scheme it asks about.
+- Stems no longer use his walkthrough words for the numbering, or ask what a professor named or stressed.
+- More of Dr. Sikazwe's class and SAR questions show the molecule before you answer (13 questions).
+- 16 structure-difference questions show the two (or three) structures side by side after you answer.
+
 ## 2026-11-08 (Dr. Sikazwe's Polleve-4)
 - New: his Polleve-4 poll, how many alpha-hydroxy acids are in the figure, with each structure explained.
 

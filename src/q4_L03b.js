@@ -160,6 +160,7 @@ QUESTIONS.push(
 /* ---- Crisaborole --------------------------------------------------------- */
 {id:'S3-008', skill:'chem', prof:'Sikazwe', tier:'new', topic:'s3-cris', sub:'chem', concept:'crisaborole-class',
  tags:['class'], source:'both',
+ fg:'crisaborole',
  stem:'Crisaborole belongs to which chemical class?',
  options:[
   {t:'Benzoxaborole', correct:true, why:'Slide 7: "Crisaborole: A benzoxaborole soft drug"; a boron-based drug molecule (T 683–689).'},
@@ -303,6 +304,7 @@ QUESTIONS.push(
 
 {id:'S3-021', skill:'pk', prof:'Sikazwe', tier:'new', topic:'s3-cris', sub:'poll', concept:'crisaborole-gluc-steps',
  tags:['poll','verbatim'], source:'both',
+ img:'s3-polleve1',
  stem:'Crisaborole\'s metabolic scheme indicates that steps ........... involve glucuronidation?',
  options:[
   {t:'Steps 1 and 2', correct:false, why:'Step 1 is hydrolytic deboronation and step 2 leads to the carboxylic acid (slide 9; T 767–769); neither is glucuronidation.'},
@@ -338,6 +340,7 @@ QUESTIONS.push(
 /* ---- Ruxolitinib and upadacitinib ---------------------------------------- */
 {id:'S3-024', skill:'chem', prof:'Sikazwe', tier:'new', topic:'s3-jak', sub:'chem', concept:'jak-diff-class',
  tags:['tell','class'], source:'both',
+ cmp:['ruxolitinib','upadacitinib'],
  stem:'Ruxolitinib and upadacitinib are both JAK inhibitors. How do they compare chemically?',
  options:[
   {t:'Different chemical classes', correct:true, why:'(T 732–733) "are these similar chemical, no, they are not, they are different because they are structurally different"; slide 8.'},
@@ -670,6 +673,7 @@ QUESTIONS.push(
 /* ---- Anthralin ----------------------------------------------------------- */
 {id:'S3-053', skill:'chem', prof:'Sikazwe', tier:'new', topic:'s3-anth', sub:'chem', concept:'anthralin-class',
  tags:['class'], source:'both',
+ fg:'anthralin',
  stem:'Anthralin (dithranol) belongs to which chemical class?',
  options:[
   {t:'Hydroxyanthrone', correct:true, why:'Slide 17 "Anthralin or Dithranol: A hydroxyanthrone"; (T 919–920).'},
@@ -761,6 +765,7 @@ QUESTIONS.push(
 /* ---- Psoralens ----------------------------------------------------------- */
 {id:'S3-061', skill:'chem', prof:'Sikazwe', tier:'new', topic:'s3-psor', sub:'chem', concept:'psoralen-class',
  tags:['class'], source:'both',
+ fg:'methoxsalen',
  stem:'Methoxsalen (8-methoxypsoralen) belongs to which chemical class?',
  options:[
   {t:'Furanocoumarin', correct:true, why:'Slide 18 "A furanocoumarin"; (T 958–960) "this has a furan ring and a coumarin ring".'},
@@ -887,47 +892,51 @@ QUESTIONS.push(
 
 {id:'S3-072', skill:'chem', prof:'Sikazwe', tier:'new', topic:'s3-gc', sub:'num', concept:'numbering-c10',
  tags:['chem'], source:'both',
- stem:'In steroid numbering, which carbon ends the first loop that runs from C1 around rings A and B?',
+ img:'s3-steroid-c10',
+ stem:'On the steroid skeleton shown, what is the number of the circled carbon?',
  options:[
-  {t:'C10', correct:true, why:'(T 1007–1008) from 1, "it\'s going to cover these two rings and stop here, that\'s number 10"; slide 20.'},
-  {t:'C9', correct:false, why:'C9 is the ring B/C junction reached before C10 in the loop (slide 20).'},
-  {t:'C5', correct:false, why:'C5 is the A/B junction partway round the loop (slide 20).'},
-  {t:'C17', correct:false, why:'C17 ends the second run, the "snake" from C11 (T 1011–1012).'}],
- teach:'His method: from C1 loop around rings A and B to C10; start again at C11 and snake through rings C and D to C17; then "hopscotch" to the methyls C18 and C19; then C20 and C21 on the side chain (slide 20; T 1003–1016). Foye Ch. 24 gives the same order.',
- cite:S3+' slides 20–22; T 1002–1017, 1084–1099; Foye Ch. 24 (support)'},
+  {t:'C10', correct:true, why:'The circled carbon is the ring A/B junction carbon that carries a methyl. Numbering starts at C1 in ring A, covers rings A and B and ends here: "stop here, that\'s number 10" (T 1008; slide 20).'},
+  {t:'C5', correct:false, why:'C5 is the other A/B junction carbon, below the circled one, and carries no methyl (slide 20).'},
+  {t:'C9', correct:false, why:'C9 is the ring B/C junction carbon, to the right of the circled one (slide 20).'},
+  {t:'C19', correct:false, why:'C19 is the methyl carbon drawn on the circled atom, not a ring carbon (slide 20; T 1088–1089).'}],
+ teach:'Slide 20 numbers the skeleton: C1 to C10 around rings A and B, ending at the A/B junction carbon that carries a methyl; C11 to C17 through rings C and D; C18 is the methyl on C13 and C19 the methyl on C10; the side chain starts with C20 on C17 (T 1003–1016, 1084–1092). "Always this is going to be one. So if you know where your 1 is, you know where your 11 is, and your 17, you\'re good to go" (T 1098–1099). Foye Ch. 24 gives the same order.',
+ cite:S3+' slides 20–21 (figure: the slide 21 skeleton); T 1002–1017, 1084–1099; Foye Ch. 24 (support)'},
 
 {id:'S3-073', skill:'chem', prof:'Sikazwe', tier:'new', topic:'s3-gc', sub:'num', concept:'numbering-c11',
  tags:['chem'], source:'both',
- stem:'Which carbon begins the run of numbers that snakes through rings C and D?',
+ img:'s3-steroid-c11',
+ stem:'On the steroid skeleton shown, what is the number of the circled carbon?',
  options:[
-  {t:'C11', correct:true, why:'(T 1010–1012) "know where 11 is ... another starting point ... it snakes ... and stops at 17".'},
-  {t:'C10', correct:false, why:'C10 ends the first loop over rings A and B (T 1008).'},
-  {t:'C13', correct:false, why:'C13 is partway along the snake and carries the C18 methyl (slide 20).'},
-  {t:'C18', correct:false, why:'C18 is a methyl reached by "hopscotch" after C17 (T 1013–1014).'}],
- teach:'"if you know where your 1 is, you know where your 11 is, and your 17, you\'re good to go" (T 1098–1099). C11 lies in ring C next to ring B and carries the 11β-OH needed for activity (slide 20).',
- cite:S3+' slide 20; T 1010–1017, 1098–1099'},
+  {t:'C11', correct:true, why:'The circled carbon is in ring C, bonded to the B/C junction carbon C9. After C10, numbering starts again here: "know where 11 is. Because that\'s another starting point" (T 1010), and runs through rings C and D to C17 (T 1011–1012; slide 20).'},
+  {t:'C9', correct:false, why:'C9 is the ring B/C junction carbon bonded to the circled one (slide 20).'},
+  {t:'C12', correct:false, why:'C12 is the next ring C carbon, between the circled carbon and C13 (slide 20).'},
+  {t:'C13', correct:false, why:'C13 is the C/D junction carbon that carries the C18 methyl (slide 20).'}],
+ teach:'"If you know where your 1 is, you know where your 11 is, and your 17, you\'re good to go" (T 1098–1099). C11 lies in ring C next to ring B and carries the 11β-OH needed for anti-inflammatory activity (slide 20; T 1071–1072).',
+ cite:S3+' slides 20–21 (figure: the slide 21 skeleton); T 1010–1017, 1084–1099'},
 
 {id:'S3-074', skill:'chem', prof:'Sikazwe', tier:'new', topic:'s3-gc', sub:'num', concept:'numbering-c17-side',
  tags:['chem'], source:'both',
- stem:'At which carbon does the side chain (C20 onward) attach to the steroid nucleus?',
+ img:'s3-steroid',
+ stem:'On the steroid skeleton shown, at which carbon does the side chain (C20 onward) attach?',
  options:[
-  {t:'C17', correct:true, why:'Slide 20 numbering diagram, C20 on C17; the snake "stops at 17" (T 1012) and the chain continues with 20 and 21 (T 1015–1016).'},
-  {t:'C13', correct:false, why:'C13 carries the C18 methyl (slide 20).'},
-  {t:'C10', correct:false, why:'C10 carries the C19 methyl (slide 20).'},
+  {t:'C17', correct:true, why:'Slide 20 numbering diagram, C20 on C17: numbering through rings C and D "stops at 17" (T 1012), and the chain continues with 20 and 21 (T 1015–1016).'},
+  {t:'C13', correct:false, why:'C13 is the C/D junction carbon that carries the C18 methyl (slide 20).'},
+  {t:'C10', correct:false, why:'C10 is the A/B junction carbon that carries the C19 methyl (slide 20).'},
   {t:'C3', correct:false, why:'C3 in ring A carries the ketone of hydrocortisone (slide 23).'}],
  teach:'C17 is the last ring carbon in ring D; the side chain starts at C20 attached to C17 (slide 20; T 1015–1016, 1088–1090). Foye Ch. 24: "The 17-side chain begins with C20."',
- cite:S3+' slides 20, 23; T 1011–1017, 1084–1092; Foye Ch. 24 (support)'},
+ cite:S3+' slides 20–21 (figure: the slide 21 skeleton), 23; T 1011–1017, 1084–1092; Foye Ch. 24 (support)'},
 
 {id:'S3-075', skill:'chem', prof:'Sikazwe', tier:'new', topic:'s3-gc', sub:'num', concept:'numbering-c19',
  tags:['chem'], source:'both',
- stem:'The angular methyl C19 is attached to which carbon?',
+ img:'s3-steroid',
+ stem:'On the steroid skeleton shown, which carbon carries the angular methyl C19?',
  options:[
   {t:'C10', correct:true, why:'Slide 20 diagram (19 at the A/B ring junction); Foye Ch. 24: C19 attached to C10.'},
-  {t:'C13', correct:false, why:'C13 carries C18, the methyl numbered first in the hopscotch (slide 20; T 1013–1014).'},
+  {t:'C13', correct:false, why:'C13 carries C18, the angular methyl numbered first after C17 (slide 20; T 1013–1014).'},
   {t:'C17', correct:false, why:'C17 carries the side chain from C20 (slide 20).'},
   {t:'C9', correct:false, why:'C9 carries the 9α-halogen in active glucocorticoids (slide 20), not a methyl.'}],
- teach:'After C17 he "hopscotches" to the two angular methyls: C18 on C13 first, then C19 on C10 (slide 20; T 1012–1014, 1088–1089). Foye Ch. 24 gives the same assignment.',
- cite:S3+' slide 20; T 1012–1016, 1084–1090; Foye Ch. 24 (support)'},
+ teach:'After C17 the two angular methyls are numbered: C18 on C13 first, then C19 on C10 (slide 20; T 1012–1014, 1088–1089). Foye Ch. 24 gives the same assignment.',
+ cite:S3+' slides 20–21 (figure: the slide 21 skeleton); T 1012–1016, 1084–1090; Foye Ch. 24 (support)'},
 
 {id:'S3-076', skill:'chem', prof:'Sikazwe', tier:'new', topic:'s3-gc', sub:'num', concept:'numbering-vs-orientation',
  tags:['tell'], source:'transcript',
@@ -1011,6 +1020,7 @@ QUESTIONS.push(
 
 {id:'S3-084', skill:'chem', prof:'Sikazwe', tier:'new', topic:'s3-gc', sub:'gr', concept:'gr-hbond-groups', multi:true,
  tags:['cbda'], source:'slide',
+ fg:'hydrocortisone',
  stem:'Which groups of the glucocorticoid take part in hydrogen bonds in the receptor? Select all that apply.',
  options:[
   {t:'C3 carbonyl', correct:true, why:'Slide 23: bonds to Arg611 and Gln570.'},
@@ -1127,6 +1137,7 @@ QUESTIONS.push(
 
 {id:'S3-094', skill:'chem', prof:'Sikazwe', tier:'new', topic:'s3-hc', sub:'pot', concept:'hc-to-clobetasol-not-metab',
  tags:['tell'], source:'both',
+ cmp:['hydrocortisone','clobetasol propionate'],
  stem:'Going from hydrocortisone to clobetasol propionate is an example of what?',
  options:[
   {t:'Structural changes that raise potency', correct:true, why:'(T 1175–1179) "this is not metabolism, it\'s just an example of a structural manipulation that then changes the potency"; slide 25.'},
@@ -1207,6 +1218,7 @@ QUESTIONS.push(
 
 {id:'S3-101', skill:'chem', prof:'Sikazwe', tier:'new', topic:'s3-hc', sub:'adme', concept:'cortisone-inactive-why',
  tags:['sar','reasoning'], source:'slide',
+ cmp:['hydrocortisone','cortisone'],
  stem:'Why is cortisone inactive as a glucocorticoid?',
  options:[
   {t:'It has a C11 ketone instead of the 11β-OH', correct:true, why:'Slide 26 structures: cortisone (inactive) has C=O at C11; the 11β-OH is one of the four SAR features (slide 20).'},
