@@ -8,6 +8,10 @@ characters.
 
 Every update adds its bullets here in the same commit that makes the change.
 
+## 2026-11-08 (Quiz layout and Explain more)
+- Quiz: switch any drill to "All on one page" to scroll through and answer every question in place.
+- Explain more and Read links open the section just below the tab bar and highlight the lines for your question.
+
 ## 2026-11-08 (Own icon and link card)
 - A shared link now shows "DEENT Exam Review" with the drill's own DEENT icon instead of "Exam drill".
 - Adding the drill to a Home Screen gives the new DEENT icon, named "DEENT Review".
