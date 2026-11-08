@@ -1,0 +1,1186 @@
+{
+ "meta": {
+  "date": "2026-11-08",
+  "sources": {
+   "pubchem": "https://pubchem.ncbi.nlm.nih.gov/rest/pug",
+   "chembl": "https://www.ebi.ac.uk/chembl/api/data",
+   "rdkit": "2026.09.1"
+  },
+  "species": 30
+ },
+ "results": [
+  {
+   "key": "crisaborole",
+   "name": "Crisaborole",
+   "slide": 9,
+   "priority": null,
+   "atlas": {
+    "smiles": "N#Cc1ccc(Oc2ccc3B(O)OCc3c2)cc1",
+    "formula": "C14H10BNO3",
+    "inchikey": "USZAGAREISWJDP-UHFFFAOYSA-N",
+    "stereocentres_defined": 0,
+    "stereocentres": 0,
+    "stereo_double_bonds": 0
+   },
+   "pubchem": {
+    "cid": 44591583,
+    "title": "Crisaborole",
+    "formula": "C14H10BNO3",
+    "mw": "251.05",
+    "smiles": "B1(C2=C(CO1)C=C(C=C2)OC3=CC=C(C=C3)C#N)O",
+    "inchikey": "USZAGAREISWJDP-UHFFFAOYSA-N",
+    "stereocentres_defined": 0,
+    "stereocentres": 0,
+    "stereo_double_bonds": 0,
+    "other_cids_same_query": []
+   },
+   "chembl": {
+    "id": "CHEMBL484785",
+    "pref_name": "CRISABOROLE",
+    "formula": "C14H10BNO3",
+    "inchikey": "USZAGAREISWJDP-UHFFFAOYSA-N",
+    "smiles": "N#Cc1ccc(Oc2ccc3c(c2)COB3O)cc1",
+    "parent": "CHEMBL484785"
+   },
+   "pubchem_checked": true,
+   "how_found": "exact InChIKey",
+   "status": "exact",
+   "detail": "Atlas = PubChem CID 44591583 = ChEMBL CHEMBL484785 (full InChIKey).",
+   "drawn_smiles": "N#Cc1ccc(Oc2ccc3B(O)OCc3c2)cc1",
+   "atlas_item": "crisaborole",
+   "date": "2026-11-08"
+  },
+  {
+   "key": "crisa_alc",
+   "name": "Benzyl alcohol product",
+   "slide": 9,
+   "priority": null,
+   "atlas": {
+    "smiles": "N#Cc1ccc(Oc2ccc(O)c(CO)c2)cc1",
+    "formula": "C14H11NO3",
+    "inchikey": "ZTJKVXTXDBZRNP-UHFFFAOYSA-N",
+    "stereocentres_defined": 0,
+    "stereocentres": 0,
+    "stereo_double_bonds": 0
+   },
+   "pubchem": {
+    "cid": 135391074,
+    "title": "4-(4-Hydroxy-3-(hydroxymethyl)phenoxy)benzonitrile",
+    "formula": "C14H11NO3",
+    "mw": "241.24",
+    "smiles": "C1=CC(=CC=C1C#N)OC2=CC(=C(C=C2)O)CO",
+    "inchikey": "ZTJKVXTXDBZRNP-UHFFFAOYSA-N",
+    "stereocentres_defined": 0,
+    "stereocentres": 0,
+    "stereo_double_bonds": 0,
+    "other_cids_same_query": []
+   },
+   "chembl": null,
+   "pubchem_checked": true,
+   "how_found": "exact InChIKey",
+   "status": "exact-pubchem",
+   "detail": "Atlas = PubChem CID 135391074 (full InChIKey).",
+   "drawn_smiles": "N#Cc1ccc(Oc2ccc(O)c(CO)c2)cc1",
+   "atlas_item": "crisaborole benzyl alcohol metabolite",
+   "date": "2026-11-08"
+  },
+  {
+   "key": "crisa_acid",
+   "name": "Benzoic acid product",
+   "slide": 9,
+   "priority": null,
+   "atlas": {
+    "smiles": "N#Cc1ccc(Oc2ccc(O)c(C(=O)O)c2)cc1",
+    "formula": "C14H9NO4",
+    "inchikey": "BSMXLRCGIICTHS-UHFFFAOYSA-N",
+    "stereocentres_defined": 0,
+    "stereocentres": 0,
+    "stereo_double_bonds": 0
+   },
+   "pubchem": {
+    "cid": 133080796,
+    "title": "5-(4-Cyanophenoxy)-2-hydroxybenzoic acid",
+    "formula": "C14H9NO4",
+    "mw": "255.22",
+    "smiles": "C1=CC(=CC=C1C#N)OC2=CC(=C(C=C2)O)C(=O)O",
+    "inchikey": "BSMXLRCGIICTHS-UHFFFAOYSA-N",
+    "stereocentres_defined": 0,
+    "stereocentres": 0,
+    "stereo_double_bonds": 0,
+    "other_cids_same_query": []
+   },
+   "chembl": null,
+   "pubchem_checked": true,
+   "how_found": "exact InChIKey",
+   "status": "exact-pubchem",
+   "detail": "Atlas = PubChem CID 133080796 (full InChIKey).",
+   "drawn_smiles": "N#Cc1ccc(Oc2ccc(O)c(C(=O)O)c2)cc1",
+   "atlas_item": "crisaborole benzoic acid metabolite",
+   "date": "2026-11-08"
+  },
+  {
+   "key": "hydrocortisone",
+   "name": "Hydrocortisone",
+   "slide": 26,
+   "priority": null,
+   "atlas": {
+    "smiles": "C[C@]12CCC(=O)C=C1CC[C@@H]1[C@@H]2[C@@H](O)C[C@@]2(C)[C@H]1CC[C@]2(O)C(=O)CO",
+    "formula": "C21H30O5",
+    "inchikey": "JYGXADMDTFJGBT-VWUMJDOOSA-N",
+    "stereocentres_defined": 7,
+    "stereocentres": 7,
+    "stereo_double_bonds": 0
+   },
+   "pubchem": {
+    "cid": 5754,
+    "title": "Cortisol",
+    "formula": "C21H30O5",
+    "mw": "362.5",
+    "smiles": "C[C@]12CCC(=O)C=C1CC[C@@H]3[C@@H]2[C@H](C[C@]4([C@H]3CC[C@@]4(C(=O)CO)O)C)O",
+    "inchikey": "JYGXADMDTFJGBT-VWUMJDOOSA-N",
+    "stereocentres_defined": 7,
+    "stereocentres": 7,
+    "stereo_double_bonds": 0,
+    "other_cids_same_query": []
+   },
+   "chembl": {
+    "id": "CHEMBL389621",
+    "pref_name": "HYDROCORTISONE",
+    "formula": "C21H30O5",
+    "inchikey": "JYGXADMDTFJGBT-VWUMJDOOSA-N",
+    "smiles": "C[C@]12CCC(=O)C=C1CC[C@@H]1[C@@H]2[C@@H](O)C[C@@]2(C)[C@H]1CC[C@]2(O)C(=O)CO",
+    "parent": "CHEMBL389621"
+   },
+   "pubchem_checked": true,
+   "how_found": "exact InChIKey",
+   "status": "exact",
+   "detail": "Atlas = PubChem CID 5754 = ChEMBL CHEMBL389621 (full InChIKey).",
+   "drawn_smiles": "C[C@]12CCC(=O)C=C1CC[C@@H]1[C@@H]2[C@@H](O)C[C@@]2(C)[C@H]1CC[C@]2(O)C(=O)CO",
+   "atlas_item": "hydrocortisone",
+   "date": "2026-11-08"
+  },
+  {
+   "key": "cortisone",
+   "name": "Cortisone (Inactive)",
+   "slide": 26,
+   "priority": null,
+   "atlas": {
+    "smiles": "C[C@]12CCC(=O)C=C1CC[C@@H]1[C@@H]2C(=O)C[C@@]2(C)[C@H]1CC[C@]2(O)C(=O)CO",
+    "formula": "C21H28O5",
+    "inchikey": "MFYSYFVPBJMHGN-ZPOLXVRWSA-N",
+    "stereocentres_defined": 6,
+    "stereocentres": 6,
+    "stereo_double_bonds": 0
+   },
+   "pubchem": {
+    "cid": 222786,
+    "title": "Cortisone",
+    "formula": "C21H28O5",
+    "mw": "360.4",
+    "smiles": "C[C@]12CCC(=O)C=C1CC[C@@H]3[C@@H]2C(=O)C[C@]4([C@H]3CC[C@@]4(C(=O)CO)O)C",
+    "inchikey": "MFYSYFVPBJMHGN-ZPOLXVRWSA-N",
+    "stereocentres_defined": 6,
+    "stereocentres": 6,
+    "stereo_double_bonds": 0,
+    "other_cids_same_query": []
+   },
+   "chembl": {
+    "id": "CHEMBL1499",
+    "pref_name": "CORTISONE",
+    "formula": "C21H28O5",
+    "inchikey": "MFYSYFVPBJMHGN-ZPOLXVRWSA-N",
+    "smiles": "C[C@]12CCC(=O)C=C1CC[C@@H]1[C@@H]2C(=O)C[C@@]2(C)[C@H]1CC[C@]2(O)C(=O)CO",
+    "parent": "CHEMBL1499"
+   },
+   "pubchem_checked": true,
+   "how_found": "exact InChIKey",
+   "status": "exact",
+   "detail": "Atlas = PubChem CID 222786 = ChEMBL CHEMBL1499 (full InChIKey).",
+   "drawn_smiles": "C[C@]12CCC(=O)C=C1CC[C@@H]1[C@@H]2C(=O)C[C@@]2(C)[C@H]1CC[C@]2(O)C(=O)CO",
+   "atlas_item": "cortisone",
+   "date": "2026-11-08"
+  },
+  {
+   "key": "dhf5b",
+   "name": "5β-Dihydrocortisol (Inactive)",
+   "slide": 26,
+   "priority": null,
+   "atlas": {
+    "smiles": "C[C@]12CCC(=O)C[C@H]1CC[C@@H]1[C@@H]2[C@@H](O)C[C@@]2(C)[C@H]1CC[C@]2(O)C(=O)CO",
+    "formula": "C21H32O5",
+    "inchikey": "ACSFOIGNUQUIGE-AIPUTVCKSA-N",
+    "stereocentres_defined": 8,
+    "stereocentres": 8,
+    "stereo_double_bonds": 0
+   },
+   "pubchem": {
+    "cid": 164838,
+    "title": "Dihydrocortisol",
+    "formula": "C21H32O5",
+    "mw": "364.5",
+    "smiles": "C[C@]12CCC(=O)C[C@H]1CC[C@@H]3[C@@H]2[C@H](C[C@]4([C@H]3CC[C@@]4(C(=O)CO)O)C)O",
+    "inchikey": "ACSFOIGNUQUIGE-AIPUTVCKSA-N",
+    "stereocentres_defined": 8,
+    "stereocentres": 8,
+    "stereo_double_bonds": 0,
+    "other_cids_same_query": []
+   },
+   "chembl": null,
+   "pubchem_checked": true,
+   "how_found": "exact InChIKey",
+   "status": "exact-pubchem",
+   "detail": "Atlas = PubChem CID 164838 (full InChIKey).",
+   "drawn_smiles": "C[C@]12CCC(=O)C[C@H]1CC[C@@H]1[C@@H]2[C@@H](O)C[C@@]2(C)[C@H]1CC[C@]2(O)C(=O)CO",
+   "atlas_item": "5beta-dihydrocortisol",
+   "date": "2026-11-08"
+  },
+  {
+   "key": "urocortisol",
+   "name": "Urocortisol (Inactive)",
+   "slide": 26,
+   "priority": null,
+   "atlas": {
+    "smiles": "C[C@]12CC[C@@H](O)C[C@H]1CC[C@@H]1[C@@H]2[C@@H](O)C[C@@]2(C)[C@H]1CC[C@]2(O)C(=O)CO",
+    "formula": "C21H34O5",
+    "inchikey": "AODPIQQILQLWGS-GXBDJPPSSA-N",
+    "stereocentres_defined": 9,
+    "stereocentres": 9,
+    "stereo_double_bonds": 0
+   },
+   "pubchem": {
+    "cid": 5864,
+    "title": "Tetrahydrocortisol",
+    "formula": "C21H34O5",
+    "mw": "366.5",
+    "smiles": "C[C@]12CC[C@H](C[C@H]1CC[C@@H]3[C@@H]2[C@H](C[C@]4([C@H]3CC[C@@]4(C(=O)CO)O)C)O)O",
+    "inchikey": "AODPIQQILQLWGS-GXBDJPPSSA-N",
+    "stereocentres_defined": 9,
+    "stereocentres": 9,
+    "stereo_double_bonds": 0,
+    "other_cids_same_query": []
+   },
+   "chembl": {
+    "id": "CHEMBL1908047",
+    "pref_name": null,
+    "formula": "C21H34O5",
+    "inchikey": "AODPIQQILQLWGS-GXBDJPPSSA-N",
+    "smiles": "C[C@]12CC[C@@H](O)C[C@H]1CC[C@@H]1[C@@H]2[C@@H](O)C[C@@]2(C)[C@H]1CC[C@]2(O)C(=O)CO",
+    "parent": "CHEMBL1908047"
+   },
+   "pubchem_checked": true,
+   "how_found": "exact InChIKey",
+   "status": "exact",
+   "detail": "Atlas = PubChem CID 5864 = ChEMBL CHEMBL1908047 (full InChIKey).",
+   "drawn_smiles": "C[C@]12CC[C@@H](O)C[C@H]1CC[C@@H]1[C@@H]2[C@@H](O)C[C@@]2(C)[C@H]1CC[C@]2(O)C(=O)CO",
+   "atlas_item": "urocortisol",
+   "date": "2026-11-08"
+  },
+  {
+   "key": "dhc7",
+   "name": "7-dehydrocholesterol",
+   "slide": 27,
+   "priority": null,
+   "atlas": {
+    "smiles": "CC(C)CCC[C@@H](C)[C@H]1CC[C@H]2C3=CC=C4C[C@@H](O)CC[C@]4(C)[C@H]3CC[C@]12C",
+    "formula": "C27H44O",
+    "inchikey": "UCTLRSWJYQTBFZ-DDPQNLDTSA-N",
+    "stereocentres_defined": 7,
+    "stereocentres": 7,
+    "stereo_double_bonds": 0
+   },
+   "pubchem": {
+    "cid": 439423,
+    "title": "7-Dehydrocholesterol",
+    "formula": "C27H44O",
+    "mw": "384.6",
+    "smiles": "C[C@H](CCCC(C)C)[C@H]1CC[C@@H]2[C@@]1(CC[C@H]3C2=CC=C4[C@@]3(CC[C@@H](C4)O)C)C",
+    "inchikey": "UCTLRSWJYQTBFZ-DDPQNLDTSA-N",
+    "stereocentres_defined": 7,
+    "stereocentres": 7,
+    "stereo_double_bonds": 0,
+    "other_cids_same_query": []
+   },
+   "chembl": {
+    "id": "CHEMBL1797131",
+    "pref_name": null,
+    "formula": "C27H44O",
+    "inchikey": "UCTLRSWJYQTBFZ-DDPQNLDTSA-N",
+    "smiles": "CC(C)CCC[C@@H](C)[C@H]1CC[C@H]2C3=CC=C4C[C@@H](O)CC[C@]4(C)[C@H]3CC[C@]12C",
+    "parent": "CHEMBL1797131"
+   },
+   "pubchem_checked": true,
+   "how_found": "exact InChIKey",
+   "status": "exact",
+   "detail": "Atlas = PubChem CID 439423 = ChEMBL CHEMBL1797131 (full InChIKey).",
+   "drawn_smiles": "CC(C)CCC[C@@H](C)[C@H]1CC[C@H]2C3=CC=C4C[C@@H](O)CC[C@]4(C)[C@H]3CC[C@]12C",
+   "atlas_item": "7-dehydrocholesterol",
+   "date": "2026-11-08"
+  },
+  {
+   "key": "d3",
+   "name": "Cholecalciferol (Vit. D3)",
+   "slide": 27,
+   "priority": null,
+   "atlas": {
+    "smiles": "C=C1CC[C@H](O)C/C1=C/C=C1\\CCC[C@]2(C)[C@@H]([C@H](C)CCCC(C)C)CC[C@@H]12",
+    "formula": "C27H44O",
+    "inchikey": "QYSXJUFSXHHAJI-YRZJJWOYSA-N",
+    "stereocentres_defined": 5,
+    "stereocentres": 5,
+    "stereo_double_bonds": 0
+   },
+   "pubchem": {
+    "cid": 5280795,
+    "title": "Vitamin D3",
+    "formula": "C27H44O",
+    "mw": "384.6",
+    "smiles": "C[C@H](CCCC(C)C)[C@H]1CC[C@@H]\\2[C@@]1(CCC/C2=C\\C=C/3\\C[C@H](CCC3=C)O)C",
+    "inchikey": "QYSXJUFSXHHAJI-YRZJJWOYSA-N",
+    "stereocentres_defined": 5,
+    "stereocentres": 5,
+    "stereo_double_bonds": 0,
+    "other_cids_same_query": []
+   },
+   "chembl": {
+    "id": "CHEMBL1042",
+    "pref_name": "CHOLECALCIFEROL",
+    "formula": "C27H44O",
+    "inchikey": "QYSXJUFSXHHAJI-YRZJJWOYSA-N",
+    "smiles": "C=C1CC[C@H](O)C/C1=C/C=C1\\CCC[C@]2(C)[C@@H]([C@H](C)CCCC(C)C)CC[C@@H]12",
+    "parent": "CHEMBL1042"
+   },
+   "pubchem_checked": true,
+   "how_found": "exact InChIKey",
+   "status": "exact",
+   "detail": "Atlas = PubChem CID 5280795 = ChEMBL CHEMBL1042 (full InChIKey).",
+   "drawn_smiles": "C=C1CC[C@H](O)C/C1=C/C=C1\\CCC[C@]2(C)[C@@H]([C@H](C)CCCC(C)C)CC[C@@H]12",
+   "atlas_item": "cholecalciferol",
+   "date": "2026-11-08"
+  },
+  {
+   "key": "d25",
+   "name": "25-OH-cholecalciferol",
+   "slide": 27,
+   "priority": null,
+   "atlas": {
+    "smiles": "C=C1CC[C@H](O)C/C1=C/C=C1\\CCC[C@]2(C)[C@@H]([C@H](C)CCCC(C)(C)O)CC[C@@H]12",
+    "formula": "C27H44O2",
+    "inchikey": "JWUBBDSIWDLEOM-DTOXIADCSA-N",
+    "stereocentres_defined": 5,
+    "stereocentres": 5,
+    "stereo_double_bonds": 0
+   },
+   "pubchem": {
+    "cid": 5283731,
+    "title": "25-Hydroxyvitamin D3",
+    "formula": "C27H44O2",
+    "mw": "400.6",
+    "smiles": "C[C@H](CCCC(C)(C)O)[C@H]1CC[C@@H]\\2[C@@]1(CCC/C2=C\\C=C/3\\C[C@H](CCC3=C)O)C",
+    "inchikey": "JWUBBDSIWDLEOM-DTOXIADCSA-N",
+    "stereocentres_defined": 5,
+    "stereocentres": 5,
+    "stereo_double_bonds": 0,
+    "other_cids_same_query": []
+   },
+   "chembl": {
+    "id": "CHEMBL1040",
+    "pref_name": "CALCIFEDIOL ANHYDROUS",
+    "formula": "C27H44O2",
+    "inchikey": "JWUBBDSIWDLEOM-DTOXIADCSA-N",
+    "smiles": "C=C1CC[C@H](O)C/C1=C/C=C1\\CCC[C@]2(C)[C@@H]([C@H](C)CCCC(C)(C)O)CC[C@@H]12",
+    "parent": "CHEMBL1040"
+   },
+   "pubchem_checked": true,
+   "how_found": "exact InChIKey",
+   "status": "exact",
+   "detail": "Atlas = PubChem CID 5283731 = ChEMBL CHEMBL1040 (full InChIKey).",
+   "drawn_smiles": "C=C1CC[C@H](O)C/C1=C/C=C1\\CCC[C@]2(C)[C@@H]([C@H](C)CCCC(C)(C)O)CC[C@@H]12",
+   "atlas_item": "25-hydroxycholecalciferol",
+   "date": "2026-11-08"
+  },
+  {
+   "key": "calcitriol",
+   "name": "Calcitriol",
+   "slide": 27,
+   "priority": null,
+   "atlas": {
+    "smiles": "C=C1/C(=C\\C=C2/CCC[C@]3(C)[C@@H]([C@H](C)CCCC(C)(C)O)CC[C@@H]23)C[C@@H](O)C[C@@H]1O",
+    "formula": "C27H44O3",
+    "inchikey": "GMRQFYUYWCNGIN-NKMMMXOESA-N",
+    "stereocentres_defined": 6,
+    "stereocentres": 6,
+    "stereo_double_bonds": 0
+   },
+   "pubchem": {
+    "cid": 5280453,
+    "title": "Calcitriol",
+    "formula": "C27H44O3",
+    "mw": "416.6",
+    "smiles": "C[C@H](CCCC(C)(C)O)[C@H]1CC[C@@H]\\2[C@@]1(CCC/C2=C\\C=C/3\\C[C@H](C[C@@H](C3=C)O)O)C",
+    "inchikey": "GMRQFYUYWCNGIN-NKMMMXOESA-N",
+    "stereocentres_defined": 6,
+    "stereocentres": 6,
+    "stereo_double_bonds": 0,
+    "other_cids_same_query": []
+   },
+   "chembl": {
+    "id": "CHEMBL846",
+    "pref_name": "CALCITRIOL",
+    "formula": "C27H44O3",
+    "inchikey": "GMRQFYUYWCNGIN-NKMMMXOESA-N",
+    "smiles": "C=C1/C(=C\\C=C2/CCC[C@]3(C)[C@@H]([C@H](C)CCCC(C)(C)O)CC[C@@H]23)C[C@@H](O)C[C@@H]1O",
+    "parent": "CHEMBL846"
+   },
+   "pubchem_checked": true,
+   "how_found": "exact InChIKey",
+   "status": "exact",
+   "detail": "Atlas = PubChem CID 5280453 = ChEMBL CHEMBL846 (full InChIKey).",
+   "drawn_smiles": "C=C1/C(=C\\C=C2/CCC[C@]3(C)[C@@H]([C@H](C)CCCC(C)(C)O)CC[C@@H]23)C[C@@H](O)C[C@@H]1O",
+   "atlas_item": "calcitriol",
+   "date": "2026-11-08"
+  },
+  {
+   "key": "anthralin",
+   "name": "Anthralin",
+   "slide": 17,
+   "priority": null,
+   "atlas": {
+    "smiles": "Oc1cccc2Cc3cccc(O)c3C(=O)c12",
+    "formula": "C14H10O3",
+    "inchikey": "NUZWLKWWNNJHPT-UHFFFAOYSA-N",
+    "stereocentres_defined": 0,
+    "stereocentres": 0,
+    "stereo_double_bonds": 0
+   },
+   "pubchem": {
+    "cid": 2202,
+    "title": "Anthralin",
+    "formula": "C14H10O3",
+    "mw": "226.23",
+    "smiles": "C1C2=C(C(=CC=C2)O)C(=O)C3=C1C=CC=C3O",
+    "inchikey": "NUZWLKWWNNJHPT-UHFFFAOYSA-N",
+    "stereocentres_defined": 0,
+    "stereocentres": 0,
+    "stereo_double_bonds": 0,
+    "other_cids_same_query": []
+   },
+   "chembl": {
+    "id": "CHEMBL46469",
+    "pref_name": "ANTHRALIN",
+    "formula": "C14H10O3",
+    "inchikey": "NUZWLKWWNNJHPT-UHFFFAOYSA-N",
+    "smiles": "O=C1c2c(O)cccc2Cc2cccc(O)c21",
+    "parent": "CHEMBL46469"
+   },
+   "pubchem_checked": true,
+   "how_found": "exact InChIKey",
+   "status": "exact",
+   "detail": "Atlas = PubChem CID 2202 = ChEMBL CHEMBL46469 (full InChIKey).",
+   "drawn_smiles": "Oc1cccc2Cc3cccc(O)c3C(=O)c12",
+   "atlas_item": "anthralin",
+   "date": "2026-11-08"
+  },
+  {
+   "key": "anthranyl",
+   "name": "Anthranyl radical",
+   "slide": 17,
+   "priority": null,
+   "atlas": {
+    "smiles": "O=C1c2c(O)cccc2[CH]c2cccc(O)c21",
+    "formula": "C14H9O3",
+    "inchikey": "CPXZLMYENSXLIP-UHFFFAOYSA-N",
+    "stereocentres_defined": 0,
+    "stereocentres": 0,
+    "stereo_double_bonds": 0
+   },
+   "pubchem": {
+    "cid": 59762583,
+    "title": "CID 59762583",
+    "formula": "C14H9O3",
+    "mw": "225.22",
+    "smiles": "C1=CC2=CC3=C(C(=CC=C3)O)C(=C2C(=C1)O)[O]",
+    "inchikey": "CPXZLMYENSXLIP-UHFFFAOYSA-N",
+    "stereocentres_defined": 0,
+    "stereocentres": 0,
+    "stereo_double_bonds": 0,
+    "other_cids_same_query": []
+   },
+   "chembl": null,
+   "pubchem_checked": true,
+   "how_found": "exact InChIKey",
+   "status": "teaching-structure",
+   "detail": "Teaching structure (not forced onto a drug record). PubChem holds this exact structure as CID 59762583.",
+   "drawn_smiles": "O=C1c2c(O)cccc2[CH]c2cccc(O)c21",
+   "atlas_item": null,
+   "date": "2026-11-08"
+  },
+  {
+   "key": "psoralen",
+   "name": "Psoralen",
+   "slide": 18,
+   "priority": null,
+   "atlas": {
+    "smiles": "O=c1ccc2cc3ccoc3cc2o1",
+    "formula": "C11H6O3",
+    "inchikey": "ZCCUUQDIBDJBTK-UHFFFAOYSA-N",
+    "stereocentres_defined": 0,
+    "stereocentres": 0,
+    "stereo_double_bonds": 0
+   },
+   "pubchem": {
+    "cid": 6199,
+    "title": "Psoralen",
+    "formula": "C11H6O3",
+    "mw": "186.16",
+    "smiles": "C1=CC(=O)OC2=CC3=C(C=CO3)C=C21",
+    "inchikey": "ZCCUUQDIBDJBTK-UHFFFAOYSA-N",
+    "stereocentres_defined": 0,
+    "stereocentres": 0,
+    "stereo_double_bonds": 0,
+    "other_cids_same_query": []
+   },
+   "chembl": null,
+   "pubchem_checked": true,
+   "how_found": "exact InChIKey",
+   "status": "exact-pubchem",
+   "detail": "Atlas = PubChem CID 6199 (full InChIKey).",
+   "drawn_smiles": "O=c1ccc2cc3ccoc3cc2o1",
+   "atlas_item": null,
+   "date": "2026-11-08"
+  },
+  {
+   "key": "thymine_dna",
+   "name": "Thymine (on a DNA strand)",
+   "slide": 18,
+   "priority": null,
+   "atlas": {
+    "smiles": "Cc1c[nH]c(=O)[nH]c1=O",
+    "formula": "C5H6N2O2",
+    "inchikey": "RWQNBRDOKXIBIV-UHFFFAOYSA-N",
+    "stereocentres_defined": 0,
+    "stereocentres": 0,
+    "stereo_double_bonds": 0
+   },
+   "pubchem": {
+    "cid": 1135,
+    "title": "Thymine",
+    "formula": "C5H6N2O2",
+    "mw": "126.11",
+    "smiles": "CC1=CNC(=O)NC1=O",
+    "inchikey": "RWQNBRDOKXIBIV-UHFFFAOYSA-N",
+    "stereocentres_defined": 0,
+    "stereocentres": 0,
+    "stereo_double_bonds": 0,
+    "other_cids_same_query": [
+     5274265
+    ]
+   },
+   "chembl": null,
+   "pubchem_checked": true,
+   "how_found": "exact InChIKey",
+   "status": "exact-pubchem",
+   "detail": "Atlas = PubChem CID 1135 (full InChIKey).",
+   "drawn_smiles": "Cc1cn(*)c(=O)[nH]c1=O",
+   "atlas_item": null,
+   "date": "2026-11-08"
+  },
+  {
+   "key": "pso_adduct",
+   "name": "Psoralen–thymine interstrand diadduct",
+   "slide": 18,
+   "priority": null,
+   "atlas": {
+    "smiles": "O=C1NC(=O)N(C)C2C1(C)C3c4cc5c(cc4OC(=O)C32)OC6C5C7(C)C(=O)NC(=O)N(C)C67",
+    "formula": "C23H22N4O7",
+    "inchikey": "WGNSCEXANCLJDM-UHFFFAOYSA-N",
+    "stereocentres_defined": 0,
+    "stereocentres": 8,
+    "stereo_double_bonds": 0
+   },
+   "pubchem": null,
+   "chembl": null,
+   "pubchem_checked": true,
+   "how_found": null,
+   "status": "teaching-structure",
+   "detail": "Teaching structure (not forced onto a drug record). No PubChem record.",
+   "drawn_smiles": "O=C1NC(=O)N(*)C2C1(C)C3c4cc5c(cc4OC(=O)C32)OC6C5C7(C)C(=O)NC(=O)N(*)C67",
+   "atlas_item": null,
+   "date": "2026-11-08"
+  },
+  {
+   "key": "folic",
+   "name": "Folic Acid",
+   "slide": 30,
+   "priority": null,
+   "atlas": {
+    "smiles": "Nc1nc(O)c2nc(CNc3ccc(C(=O)NC(CCC(=O)O)C(=O)O)cc3)cnc2n1",
+    "formula": "C19H19N7O6",
+    "inchikey": "OVBPIULPVIDEAO-UHFFFAOYSA-N",
+    "stereocentres_defined": 0,
+    "stereocentres": 1,
+    "stereo_double_bonds": 0
+   },
+   "pubchem": {
+    "cid": 3405,
+    "title": null,
+    "formula": "C19H19N7O6",
+    "mw": "441.4",
+    "smiles": "C1=CC(=CC=C1C(=O)NC(CCC(=O)O)C(=O)O)NCC2=CN=C3C(=N2)C(=O)N=C(N3)N",
+    "inchikey": "OVBPIULPVIDEAO-UHFFFAOYSA-N",
+    "stereocentres_defined": 0,
+    "stereocentres": 1,
+    "stereo_double_bonds": 0,
+    "other_cids_same_query": [
+     5317366,
+     135444779
+    ]
+   },
+   "chembl": {
+    "id": "CHEMBL1622",
+    "pref_name": "FOLIC ACID",
+    "formula": "C19H19N7O6",
+    "inchikey": "OVBPIULPVIDEAO-LBPRGKRZSA-N",
+    "smiles": "Nc1nc(=O)c2nc(CNc3ccc(C(=O)N[C@@H](CCC(=O)O)C(=O)O)cc3)cnc2[nH]1",
+    "parent": "CHEMBL1622"
+   },
+   "pubchem_checked": true,
+   "how_found": "exact InChIKey",
+   "status": "stereo-unspecified",
+   "detail": "Same molecule; ChEMBL CHEMBL1622 defines 1 stereo element(s); the Atlas, like the slide and PubChem CID 3405, defines 0. The Atlas draws another tautomer than PubChem (as the slide does); InChI treats the two as one molecule, so the keys agree.",
+   "drawn_smiles": "Nc1nc(O)c2nc(CNc3ccc(C(=O)NC(CCC(=O)O)C(=O)O)cc3)cnc2n1",
+   "atlas_item": "folic acid",
+   "date": "2026-11-08"
+  },
+  {
+   "key": "thf",
+   "name": "Tetrahydrofolic Acid",
+   "slide": 30,
+   "priority": null,
+   "atlas": {
+    "smiles": "Nc1nc(O)c2c(n1)NCC(CNc1ccc(C(=O)NC(CCC(=O)O)C(=O)O)cc1)N2",
+    "formula": "C19H23N7O6",
+    "inchikey": "MSTNYGQPCMXVAQ-UHFFFAOYSA-N",
+    "stereocentres_defined": 0,
+    "stereocentres": 2,
+    "stereo_double_bonds": 0
+   },
+   "pubchem": {
+    "cid": 1129,
+    "title": null,
+    "formula": "C19H23N7O6",
+    "mw": "445.4",
+    "smiles": "C1C(NC2=C(N1)NC(=NC2=O)N)CNC3=CC=C(C=C3)C(=O)NC(CCC(=O)O)C(=O)O",
+    "inchikey": "MSTNYGQPCMXVAQ-UHFFFAOYSA-N",
+    "stereocentres_defined": 0,
+    "stereocentres": 2,
+    "stereo_double_bonds": 0,
+    "other_cids_same_query": [
+     135402046
+    ]
+   },
+   "chembl": {
+    "id": "CHEMBL2021342",
+    "pref_name": null,
+    "formula": "C19H23N7O6",
+    "inchikey": "MSTNYGQPCMXVAQ-KIYNQFGBSA-N",
+    "smiles": "Nc1nc(O)c2c(n1)NCC(CNc1ccc(C(=O)N[C@@H](CCC(=O)O)C(=O)O)cc1)N2",
+    "parent": "CHEMBL2021342"
+   },
+   "pubchem_checked": true,
+   "how_found": "exact InChIKey",
+   "status": "stereo-unspecified",
+   "detail": "Same molecule; ChEMBL CHEMBL2021342 defines 1 stereo element(s); the Atlas, like the slide and PubChem CID 1129, defines 0. The Atlas draws another tautomer than PubChem (as the slide does); InChI treats the two as one molecule, so the keys agree.",
+   "drawn_smiles": "Nc1nc(O)c2c(n1)NCC(CNc1ccc(C(=O)NC(CCC(=O)O)C(=O)O)cc1)N2",
+   "atlas_item": "tetrahydrofolic acid",
+   "date": "2026-11-08"
+  },
+  {
+   "key": "apremilast",
+   "name": "Otezla",
+   "slide": 34,
+   "priority": null,
+   "atlas": {
+    "smiles": "CCOc1cc([C@@H](CS(C)(=O)=O)N2C(=O)c3cccc(NC(C)=O)c3C2=O)ccc1OC",
+    "formula": "C22H24N2O7S",
+    "inchikey": "IMOZEMNVLZVGJZ-QGZVFWFLSA-N",
+    "stereocentres_defined": 1,
+    "stereocentres": 1,
+    "stereo_double_bonds": 0
+   },
+   "pubchem": {
+    "cid": 11561674,
+    "title": "Apremilast",
+    "formula": "C22H24N2O7S",
+    "mw": "460.5",
+    "smiles": "CCOC1=C(C=CC(=C1)[C@@H](CS(=O)(=O)C)N2C(=O)C3=C(C2=O)C(=CC=C3)NC(=O)C)OC",
+    "inchikey": "IMOZEMNVLZVGJZ-QGZVFWFLSA-N",
+    "stereocentres_defined": 1,
+    "stereocentres": 1,
+    "stereo_double_bonds": 0,
+    "other_cids_same_query": []
+   },
+   "chembl": {
+    "id": "CHEMBL514800",
+    "pref_name": "APREMILAST",
+    "formula": "C22H24N2O7S",
+    "inchikey": "IMOZEMNVLZVGJZ-QGZVFWFLSA-N",
+    "smiles": "CCOc1cc([C@@H](CS(C)(=O)=O)N2C(=O)c3cccc(NC(C)=O)c3C2=O)ccc1OC",
+    "parent": "CHEMBL514800"
+   },
+   "pubchem_checked": true,
+   "how_found": "exact InChIKey",
+   "status": "exact",
+   "detail": "Atlas = PubChem CID 11561674 = ChEMBL CHEMBL514800 (full InChIKey).",
+   "drawn_smiles": "CCOc1cc([C@@H](CS(C)(=O)=O)N2C(=O)c3cccc(NC(C)=O)c3C2=O)ccc1OC",
+   "atlas_item": "apremilast",
+   "date": "2026-11-08"
+  },
+  {
+   "key": "ga",
+   "name": "GA",
+   "slide": 43,
+   "priority": null,
+   "atlas": {
+    "smiles": "OCC(=O)O",
+    "formula": "C2H4O3",
+    "inchikey": "AEMRFAOFKBGASW-UHFFFAOYSA-N",
+    "stereocentres_defined": 0,
+    "stereocentres": 0,
+    "stereo_double_bonds": 0
+   },
+   "pubchem": {
+    "cid": 757,
+    "title": "Glycolic Acid",
+    "formula": "C2H4O3",
+    "mw": "76.05",
+    "smiles": "C(C(=O)O)O",
+    "inchikey": "AEMRFAOFKBGASW-UHFFFAOYSA-N",
+    "stereocentres_defined": 0,
+    "stereocentres": 0,
+    "stereo_double_bonds": 0,
+    "other_cids_same_query": [
+     3698251
+    ]
+   },
+   "chembl": {
+    "id": "CHEMBL252557",
+    "pref_name": "GLYCOLIC ACID",
+    "formula": "C2H4O3",
+    "inchikey": "AEMRFAOFKBGASW-UHFFFAOYSA-N",
+    "smiles": "O=C(O)CO",
+    "parent": "CHEMBL252557"
+   },
+   "pubchem_checked": true,
+   "how_found": "exact InChIKey",
+   "status": "exact",
+   "detail": "Atlas = PubChem CID 757 = ChEMBL CHEMBL252557 (full InChIKey).",
+   "drawn_smiles": "OCC(=O)O",
+   "atlas_item": "glycolic acid",
+   "date": "2026-11-08"
+  },
+  {
+   "key": "oxalic",
+   "name": "Oxalic acid",
+   "slide": 43,
+   "priority": null,
+   "atlas": {
+    "smiles": "OC(=O)C(=O)O",
+    "formula": "C2H2O4",
+    "inchikey": "MUBZPKHOEPUJKR-UHFFFAOYSA-N",
+    "stereocentres_defined": 0,
+    "stereocentres": 0,
+    "stereo_double_bonds": 0
+   },
+   "pubchem": {
+    "cid": 971,
+    "title": "Oxalic Acid",
+    "formula": "C2H2O4",
+    "mw": "90.03",
+    "smiles": "C(=O)(C(=O)O)O",
+    "inchikey": "MUBZPKHOEPUJKR-UHFFFAOYSA-N",
+    "stereocentres_defined": 0,
+    "stereocentres": 0,
+    "stereo_double_bonds": 0,
+    "other_cids_same_query": [
+     3819775,
+     18676629,
+     173323775
+    ]
+   },
+   "chembl": {
+    "id": "CHEMBL146755",
+    "pref_name": "OXALIC ACID",
+    "formula": "C2H2O4",
+    "inchikey": "MUBZPKHOEPUJKR-UHFFFAOYSA-N",
+    "smiles": "O=C(O)C(=O)O",
+    "parent": "CHEMBL146755"
+   },
+   "pubchem_checked": true,
+   "how_found": "exact InChIKey",
+   "status": "exact",
+   "detail": "Atlas = PubChem CID 971 = ChEMBL CHEMBL146755 (full InChIKey).",
+   "drawn_smiles": "OC(=O)C(=O)O",
+   "atlas_item": "oxalic acid",
+   "date": "2026-11-08"
+  },
+  {
+   "key": "sa",
+   "name": "SA",
+   "slide": 43,
+   "priority": null,
+   "atlas": {
+    "smiles": "OC(=O)c1ccccc1O",
+    "formula": "C7H6O3",
+    "inchikey": "YGSDEFSMJLZEOE-UHFFFAOYSA-N",
+    "stereocentres_defined": 0,
+    "stereocentres": 0,
+    "stereo_double_bonds": 0
+   },
+   "pubchem": {
+    "cid": 338,
+    "title": "Salicylic Acid",
+    "formula": "C7H6O3",
+    "mw": "138.12",
+    "smiles": "C1=CC=C(C(=C1)C(=O)O)O",
+    "inchikey": "YGSDEFSMJLZEOE-UHFFFAOYSA-N",
+    "stereocentres_defined": 0,
+    "stereocentres": 0,
+    "stereo_double_bonds": 0,
+    "other_cids_same_query": [
+     118212070
+    ]
+   },
+   "chembl": {
+    "id": "CHEMBL424",
+    "pref_name": "SALICYLIC ACID",
+    "formula": "C7H6O3",
+    "inchikey": "YGSDEFSMJLZEOE-UHFFFAOYSA-N",
+    "smiles": "O=C(O)c1ccccc1O",
+    "parent": "CHEMBL424"
+   },
+   "pubchem_checked": true,
+   "how_found": "exact InChIKey",
+   "status": "exact",
+   "detail": "Atlas = PubChem CID 338 = ChEMBL CHEMBL424 (full InChIKey).",
+   "drawn_smiles": "OC(=O)c1ccccc1O",
+   "atlas_item": "salicylic acid",
+   "date": "2026-11-08"
+  },
+  {
+   "key": "salicyluric",
+   "name": "Salicyluric acid (glycine conjugate)",
+   "slide": 43,
+   "priority": null,
+   "atlas": {
+    "smiles": "OC(=O)CNC(=O)c1ccccc1O",
+    "formula": "C9H9NO4",
+    "inchikey": "ONJSZLXSECQROL-UHFFFAOYSA-N",
+    "stereocentres_defined": 0,
+    "stereocentres": 0,
+    "stereo_double_bonds": 0
+   },
+   "pubchem": {
+    "cid": 10253,
+    "title": "Salicyluric Acid",
+    "formula": "C9H9NO4",
+    "mw": "195.17",
+    "smiles": "C1=CC=C(C(=C1)C(=O)NCC(=O)O)O",
+    "inchikey": "ONJSZLXSECQROL-UHFFFAOYSA-N",
+    "stereocentres_defined": 0,
+    "stereocentres": 0,
+    "stereo_double_bonds": 0,
+    "other_cids_same_query": []
+   },
+   "chembl": null,
+   "pubchem_checked": true,
+   "how_found": "exact InChIKey",
+   "status": "exact-pubchem",
+   "detail": "Atlas = PubChem CID 10253 (full InChIKey).",
+   "drawn_smiles": "OC(=O)CNC(=O)c1ccccc1O",
+   "atlas_item": null,
+   "date": "2026-11-08"
+  },
+  {
+   "key": "bpo",
+   "name": "Benzoyl peroxide (BPO)",
+   "slide": 47,
+   "priority": null,
+   "atlas": {
+    "smiles": "O=C(OOC(=O)c1ccccc1)c1ccccc1",
+    "formula": "C14H10O4",
+    "inchikey": "OMPJBNCRMGITSC-UHFFFAOYSA-N",
+    "stereocentres_defined": 0,
+    "stereocentres": 0,
+    "stereo_double_bonds": 0
+   },
+   "pubchem": {
+    "cid": 7187,
+    "title": "Benzoyl Peroxide",
+    "formula": "C14H10O4",
+    "mw": "242.23",
+    "smiles": "C1=CC=C(C=C1)C(=O)OOC(=O)C2=CC=CC=C2",
+    "inchikey": "OMPJBNCRMGITSC-UHFFFAOYSA-N",
+    "stereocentres_defined": 0,
+    "stereocentres": 0,
+    "stereo_double_bonds": 0,
+    "other_cids_same_query": []
+   },
+   "chembl": {
+    "id": "CHEMBL1200370",
+    "pref_name": "BENZOYL PEROXIDE",
+    "formula": "C14H10O4",
+    "inchikey": "OMPJBNCRMGITSC-UHFFFAOYSA-N",
+    "smiles": "O=C(OOC(=O)c1ccccc1)c1ccccc1",
+    "parent": "CHEMBL1200370"
+   },
+   "pubchem_checked": true,
+   "how_found": "exact InChIKey",
+   "status": "exact",
+   "detail": "Atlas = PubChem CID 7187 = ChEMBL CHEMBL1200370 (full InChIKey).",
+   "drawn_smiles": "O=C(OOC(=O)c1ccccc1)c1ccccc1",
+   "atlas_item": "benzoyl peroxide",
+   "date": "2026-11-08"
+  },
+  {
+   "key": "benzoic",
+   "name": "Benzoic acid",
+   "slide": 47,
+   "priority": null,
+   "atlas": {
+    "smiles": "OC(=O)c1ccccc1",
+    "formula": "C7H6O2",
+    "inchikey": "WPYMKLBDIGXBTP-UHFFFAOYSA-N",
+    "stereocentres_defined": 0,
+    "stereocentres": 0,
+    "stereo_double_bonds": 0
+   },
+   "pubchem": {
+    "cid": 243,
+    "title": "Benzoic Acid",
+    "formula": "C7H6O2",
+    "mw": "122.12",
+    "smiles": "C1=CC=C(C=C1)C(=O)O",
+    "inchikey": "WPYMKLBDIGXBTP-UHFFFAOYSA-N",
+    "stereocentres_defined": 0,
+    "stereocentres": 0,
+    "stereo_double_bonds": 0,
+    "other_cids_same_query": [
+     20144841
+    ]
+   },
+   "chembl": {
+    "id": "CHEMBL541",
+    "pref_name": "BENZOIC ACID",
+    "formula": "C7H6O2",
+    "inchikey": "WPYMKLBDIGXBTP-UHFFFAOYSA-N",
+    "smiles": "O=C(O)c1ccccc1",
+    "parent": "CHEMBL541"
+   },
+   "pubchem_checked": true,
+   "how_found": "exact InChIKey",
+   "status": "exact",
+   "detail": "Atlas = PubChem CID 243 = ChEMBL CHEMBL541 (full InChIKey).",
+   "drawn_smiles": "OC(=O)c1ccccc1",
+   "atlas_item": "benzoic acid",
+   "date": "2026-11-08"
+  },
+  {
+   "key": "benzoyl_rad",
+   "name": "Benzoyl radical",
+   "slide": 47,
+   "priority": null,
+   "atlas": {
+    "smiles": "O=C([O])c1ccccc1",
+    "formula": "C7H5O2",
+    "inchikey": "GLGSZERYOLHNML-UHFFFAOYSA-N",
+    "stereocentres_defined": 0,
+    "stereocentres": 0,
+    "stereo_double_bonds": 0
+   },
+   "pubchem": {
+    "cid": 5359438,
+    "title": "CID 5359438",
+    "formula": "C7H5O2",
+    "mw": "121.11",
+    "smiles": "C1=CC=C(C=C1)C(=O)[O]",
+    "inchikey": "GLGSZERYOLHNML-UHFFFAOYSA-N",
+    "stereocentres_defined": 0,
+    "stereocentres": 0,
+    "stereo_double_bonds": 0,
+    "other_cids_same_query": []
+   },
+   "chembl": null,
+   "pubchem_checked": true,
+   "how_found": "exact InChIKey",
+   "status": "teaching-structure",
+   "detail": "Teaching structure (not forced onto a drug record). PubChem holds this exact structure as CID 5359438.",
+   "drawn_smiles": "O=C([O])c1ccccc1",
+   "atlas_item": "benzoyl radical",
+   "date": "2026-11-08"
+  },
+  {
+   "key": "etretinate",
+   "name": "Etretinate",
+   "slide": 50,
+   "priority": null,
+   "atlas": {
+    "smiles": "CCOC(=O)/C=C(\\C)/C=C/C=C(\\C)/C=C/c1c(C)cc(OC)c(C)c1C",
+    "formula": "C23H30O3",
+    "inchikey": "HQMNCQVAMBCHCO-DJRRULDNSA-N",
+    "stereocentres_defined": 0,
+    "stereocentres": 0,
+    "stereo_double_bonds": 0
+   },
+   "pubchem": {
+    "cid": 5282375,
+    "title": "Etretinate",
+    "formula": "C23H30O3",
+    "mw": "354.5",
+    "smiles": "CCOC(=O)/C=C(\\C)/C=C/C=C(\\C)/C=C/C1=C(C(=C(C=C1C)OC)C)C",
+    "inchikey": "HQMNCQVAMBCHCO-DJRRULDNSA-N",
+    "stereocentres_defined": 0,
+    "stereocentres": 0,
+    "stereo_double_bonds": 0,
+    "other_cids_same_query": []
+   },
+   "chembl": {
+    "id": "CHEMBL464",
+    "pref_name": "ETRETINATE",
+    "formula": "C23H30O3",
+    "inchikey": "HQMNCQVAMBCHCO-DJRRULDNSA-N",
+    "smiles": "CCOC(=O)/C=C(C)/C=C/C=C(C)/C=C/c1c(C)cc(OC)c(C)c1C",
+    "parent": "CHEMBL464"
+   },
+   "pubchem_checked": true,
+   "how_found": "exact InChIKey",
+   "status": "exact",
+   "detail": "Atlas = PubChem CID 5282375 = ChEMBL CHEMBL464 (full InChIKey).",
+   "drawn_smiles": "CCOC(=O)/C=C(\\C)/C=C/C=C(\\C)/C=C/c1c(C)cc(OC)c(C)c1C",
+   "atlas_item": "etretinate",
+   "date": "2026-11-08"
+  },
+  {
+   "key": "acitretin",
+   "name": "Acitretin",
+   "slide": 50,
+   "priority": null,
+   "atlas": {
+    "smiles": "OC(=O)/C=C(\\C)/C=C/C=C(\\C)/C=C/c1c(C)cc(OC)c(C)c1C",
+    "formula": "C21H26O3",
+    "inchikey": "IHUNBGSDBOWDMA-AQFIFDHZSA-N",
+    "stereocentres_defined": 0,
+    "stereocentres": 0,
+    "stereo_double_bonds": 0
+   },
+   "pubchem": {
+    "cid": 5284513,
+    "title": "Acitretin",
+    "formula": "C21H26O3",
+    "mw": "326.4",
+    "smiles": "CC1=CC(=C(C(=C1/C=C/C(=C/C=C/C(=C/C(=O)O)/C)/C)C)C)OC",
+    "inchikey": "IHUNBGSDBOWDMA-AQFIFDHZSA-N",
+    "stereocentres_defined": 0,
+    "stereocentres": 0,
+    "stereo_double_bonds": 0,
+    "other_cids_same_query": []
+   },
+   "chembl": {
+    "id": "CHEMBL1131",
+    "pref_name": "ACITRETIN",
+    "formula": "C21H26O3",
+    "inchikey": "IHUNBGSDBOWDMA-AQFIFDHZSA-N",
+    "smiles": "COc1cc(C)c(/C=C/C(C)=C/C=C/C(C)=C/C(=O)O)c(C)c1C",
+    "parent": "CHEMBL1131"
+   },
+   "pubchem_checked": true,
+   "how_found": "exact InChIKey",
+   "status": "exact",
+   "detail": "Atlas = PubChem CID 5284513 = ChEMBL CHEMBL1131 (full InChIKey).",
+   "drawn_smiles": "OC(=O)/C=C(\\C)/C=C/C=C(\\C)/C=C/c1c(C)cc(OC)c(C)c1C",
+   "atlas_item": "acitretin",
+   "date": "2026-11-08"
+  },
+  {
+   "key": "tazarotene",
+   "name": "Tazarotene (Tazarac)",
+   "slide": 51,
+   "priority": null,
+   "atlas": {
+    "smiles": "CCOC(=O)c1ccc(nc1)C#Cc1ccc2SCCC(C)(C)c2c1",
+    "formula": "C21H21NO2S",
+    "inchikey": "OGQICQVSFDPSEI-UHFFFAOYSA-N",
+    "stereocentres_defined": 0,
+    "stereocentres": 0,
+    "stereo_double_bonds": 0
+   },
+   "pubchem": {
+    "cid": 5381,
+    "title": "Tazarotene",
+    "formula": "C21H21NO2S",
+    "mw": "351.5",
+    "smiles": "CCOC(=O)C1=CN=C(C=C1)C#CC2=CC3=C(C=C2)SCCC3(C)C",
+    "inchikey": "OGQICQVSFDPSEI-UHFFFAOYSA-N",
+    "stereocentres_defined": 0,
+    "stereocentres": 0,
+    "stereo_double_bonds": 0,
+    "other_cids_same_query": []
+   },
+   "chembl": {
+    "id": "CHEMBL1657",
+    "pref_name": "TAZAROTENE",
+    "formula": "C21H21NO2S",
+    "inchikey": "OGQICQVSFDPSEI-UHFFFAOYSA-N",
+    "smiles": "CCOC(=O)c1ccc(C#Cc2ccc3c(c2)C(C)(C)CCS3)nc1",
+    "parent": "CHEMBL1657"
+   },
+   "pubchem_checked": true,
+   "how_found": "exact InChIKey",
+   "status": "exact",
+   "detail": "Atlas = PubChem CID 5381 = ChEMBL CHEMBL1657 (full InChIKey).",
+   "drawn_smiles": "CCOC(=O)c1ccc(nc1)C#Cc1ccc2SCCC(C)(C)c2c1",
+   "atlas_item": "tazarotene",
+   "date": "2026-11-08"
+  },
+  {
+   "key": "tazarotenic",
+   "name": "Tazarotenic Acid (Active)",
+   "slide": 51,
+   "priority": null,
+   "atlas": {
+    "smiles": "OC(=O)c1ccc(nc1)C#Cc1ccc2SCCC(C)(C)c2c1",
+    "formula": "C19H17NO2S",
+    "inchikey": "IQIBKLWBVJPOQO-UHFFFAOYSA-N",
+    "stereocentres_defined": 0,
+    "stereocentres": 0,
+    "stereo_double_bonds": 0
+   },
+   "pubchem": {
+    "cid": 147525,
+    "title": "Tazarotenic acid",
+    "formula": "C19H17NO2S",
+    "mw": "323.4",
+    "smiles": "CC1(CCSC2=C1C=C(C=C2)C#CC3=NC=C(C=C3)C(=O)O)C",
+    "inchikey": "IQIBKLWBVJPOQO-UHFFFAOYSA-N",
+    "stereocentres_defined": 0,
+    "stereocentres": 0,
+    "stereo_double_bonds": 0,
+    "other_cids_same_query": []
+   },
+   "chembl": {
+    "id": "CHEMBL1201375",
+    "pref_name": "TAZAROTENIC ACID",
+    "formula": "C19H17NO2S",
+    "inchikey": "IQIBKLWBVJPOQO-UHFFFAOYSA-N",
+    "smiles": "CC1(C)CCSc2ccc(C#Cc3ccc(C(=O)O)cn3)cc21",
+    "parent": "CHEMBL1201375"
+   },
+   "pubchem_checked": true,
+   "how_found": "exact InChIKey",
+   "status": "exact",
+   "detail": "Atlas = PubChem CID 147525 = ChEMBL CHEMBL1201375 (full InChIKey).",
+   "drawn_smiles": "OC(=O)c1ccc(nc1)C#Cc1ccc2SCCC(C)(C)c2c1",
+   "atlas_item": "tazarotenic acid",
+   "date": "2026-11-08"
+  }
+ ]
+}

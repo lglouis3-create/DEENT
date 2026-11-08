@@ -8,6 +8,12 @@ characters.
 
 Every update adds its bullets here in the same commit that makes the change.
 
+## 2026-11-08 (Reaction schemes from Dr. Sikazwe's slides)
+- Guides: 11 reaction schemes from Dr. Sikazwe's slides, drawn clean with every structure checked in PubChem.
+- Step through crisaborole, hydrocortisone, vitamin D3 and salicylic acid metabolism one arrow at a time.
+- Also drawn: anthralin autoxidation, psoralen + UVA crosslink, folate reduction, apremilast, BPO, retinoid prodrugs.
+- Arrow labels are the slide's own; what he said aloud is in the captions with its transcript place.
+
 ## 2026-11-08 (Drug list: frozen retry, recall ratings, your bank answers per drug)
 - Drug list, Quiz me: Retry the missed is now a named set that keeps unanswered questions and the same options.
 - During a retry, changed filters wait for "Back to the filtered list"; a line says so, nothing is mixed in.
