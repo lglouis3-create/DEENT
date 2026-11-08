@@ -45,15 +45,39 @@
    Generic names in every question except the brand kind, which asks brand to
    generic and generic to brand. A score in Quiz me counts this page view only.
 
-   Data: druglist_data.js (DRUGLIST). Targets and mechanisms are read from the
+   Phase 1 of the Drug list plan (Louis, 2026-11-08: "Start them and if no
+   errors when tested approve and publish them"):
+     - Retry the missed is a named, frozen set (the missed and the unanswered
+       questions, the same options reshuffled) with "Back to the filtered
+       list"; filters and Ask about changed during it apply after it, and a
+       line says so.
+     - "Target" only where the Reference line names a molecular target
+       (DRUGLIST.hasTarget, 51 drugs); the others read "How it acts".
+     - Recall: after Check, Forgot / Partly / Knew with their criteria; only a
+       click counts. A summary of this visit's ratings and Quiz me answers,
+       and "Practise what I forgot / partly knew", a frozen set that asks
+       each such fact again after other drugs of its class, in the other form
+       (multiple choice after recall, recall after multiple choice). Page
+       memory only.
+     - Ask about: adverse effect → drug, boxed warning, photosensitizing
+       (off by default); Recall: why it helps, adverse effects.
+     - Browse: each card's status from this profile's saved bank answers
+       (read-only: the core's DB.answers and DB.concepts of the profile on
+       screen, through the question-to-fact map in drugfacts.js), with
+       Practise buttons that start those bank questions (drillList), and a
+       whole-chart line counting Exam 1 facts only; scope tags on every card.
+
+   Data: druglist_data.js (DRUGLIST), drugfacts.js (DRUGFACTS). Targets and mechanisms are read from the
    Reference tab's "Drug targets" table (REFERENCE_HTML, rows tgt-*), the one
    source of targets. Links use the engine's own drillList(), jump(),
    linksFor() and the RET/backBtn return stack.
 
    Storage: none (the Chart view's page, zoom and highlight included). Nothing is written to localStorage, sessionStorage or
    IndexedDB, and nothing goes into the core's progress or history: quiz
-   answers, the score and typed recall text live in this page's memory only
-   and are gone on reload. (The engine's own place-keeping may remember that
+   answers, the score, typed recall text and the Forgot / Partly / Knew
+   ratings live in this page's memory only and are gone on reload. The
+   bank-answer status is read from the core's in-memory progress (DB) and
+   never written. (The engine's own place-keeping may remember that
    this tab was open, as it does for every tab.)
    ========================================================================== */
 const DRUGLIST_UI = (() => {
@@ -68,7 +92,12 @@ const DRUGLIST_UI = (() => {
     cpage: 1, chit: null, cq: '', zoom: null, cfrom: null}, NOFILTER);
   // memory only, never stored
   const typed = {}, checked = new Set();
-  let quiz = null;                        // {sig, list: [question], ans: {qid: option index}, skipped: {kind: n}}
+  // {sig, list: [question or recall item], ans: {qid: option index | rating}, skipped: {kind: n},
+  //  frozen: null | {title, note, sig}: a retry or practice set, never rebuilt from the filters}
+  let quiz = null;
+  // this visit's ratings and Quiz me answers (memory only): {key: 'drug:field', form: 'recall'|'mc', rating, tok}
+  const events = [], rated = {};          // rated: card key -> rating shown on the Recall card
+  let seq = 0; const openTok = {};
   let TGT = null, QCACHE = null, pane = null;
 
   const MODES = [
@@ -77,7 +106,18 @@ const DRUGLIST_UI = (() => {
     ['recall', 'Recall', 'Each drug by name only. Type what you remember, press Check, and compare it yourself with the answer and its source. Not graded, not saved.'],
     ['chart', 'Chart', 'The original drug chart, page by page. Find a drug by generic or brand name to turn to its page and highlight its row. Pinch or use Zoom to read it; Open full size shows the page image on its own.'],
   ];
-  const RFIELDS = {target: 'Target', mech: 'Mechanism', cls: 'Class', use: 'Indication', chem: 'Chemical class', rx: 'Rx/OTC', potency: 'Potency class', brand: 'Brand'};
+  const RFIELDS = {target: 'Target / how it acts', mech: 'Mechanism', why: 'Why it helps', cls: 'Class', use: 'Indication', ae: 'Adverse effects',
+    chem: 'Chemical class', rx: 'Rx/OTC', potency: 'Potency class', brand: 'Brand'};
+  // session fields: the Recall fields plus the two Quiz me only ones
+  const SFIELD = Object.assign({}, RFIELDS, {target: 'Target / how it acts', boxed: 'Boxed warning', photo: 'Photosensitizing'});
+  // the session field of each Quiz me kind, and the Quiz me kind of each Recall field (the "other form")
+  const KFIELD = {target: 'target', cls: 'cls', clsRev: 'cls', use: 'use', useRev: 'use', chem: 'chem', rx: 'rx', potency: 'potency', brand: 'brand',
+    aeUniq: 'ae', boxed: 'boxed', photo: 'photo'};
+  const FKIND = {target: 'target', cls: 'cls', use: 'use', chem: 'chem', rx: 'rx', potency: 'potency', brand: 'brand', ae: 'aeUniq', boxed: 'boxed', photo: 'photo'};
+  const RATE = [['forgot', 'Forgot', 'I could not produce it.'], ['partly', 'Partly', 'I had the idea but missed the key term or one part.'],
+    ['knew', 'Knew', 'I wrote the key term without looking.']];
+  const RATE_NAME = {forgot: 'Forgot', partly: 'Partly', knew: 'Knew'};
+  const tgtLabel = d => DL.hasTarget(d) ? 'Target' : 'How it acts';
 
   const css = `
 #v-drugs .dlmodes{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;margin:4px 0 6px;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:var(--paper);max-width:640px}
@@ -168,11 +208,42 @@ const DRUGLIST_UI = (() => {
 #v-drugs .dlcframe{overflow:auto;max-width:100%;border:1px solid var(--line);border-radius:8px;background:#fff;-webkit-overflow-scrolling:touch}
 #v-drugs .dlcimg{position:relative;min-width:100%}
 #v-drugs .dlcimg img{position:absolute;inset:0;width:100%;height:100%;display:block}
-#v-drugs .dlhl{position:absolute;background:rgba(255,214,0,.5);mix-blend-mode:multiply;outline:3px solid #C62828;outline-offset:0;border-radius:2px;pointer-events:none}
+#v-drugs .dlhl{position:absolute;background:rgba(255,214,0,.5);mix-blend-mode:multiply;outline:2px solid #C62828;outline-offset:-1px;border-radius:2px;pointer-events:none}
 #v-drugs .dlcstat{font-size:14.5px;margin:8px 0;line-height:1.45}
 #v-drugs .dlcstat:empty{display:none}
 #v-drugs .dlcnotes{font-size:13.5px;color:var(--text);margin:8px 0 0;padding-left:18px;line-height:1.45}
 #v-drugs .dlcnotes li{margin:3px 0}
+#v-drugs .dlnotgt{font-size:12.5px;color:var(--text-dim);margin:2px 0 0}
+#v-drugs .dlrate{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0 0}
+#v-drugs .dlrate .chip[aria-pressed="true"]{background:var(--ink);color:#fff;border-color:var(--ink)}
+#v-drugs .dlcrit{font-size:12.5px;color:var(--text-dim);margin:4px 0 0;padding-left:16px}
+#v-drugs .dlcrit li{margin:1px 0}
+#v-drugs .dlsess{font-size:13.5px;margin:8px 0 0;line-height:1.45}
+#v-drugs .dlsess:empty{display:none}
+#v-drugs .dlfrozen{border:2px dashed var(--ink);border-radius:10px;padding:10px 12px;margin:0 0 12px;background:var(--paper)}
+#v-drugs .dlfrozen h3{margin:0 0 4px;font-size:16px}
+#v-drugs .dlfrozen p{margin:4px 0;font-size:14px;line-height:1.45}
+#v-drugs .dlpending{font-weight:600;color:var(--warn)}
+#v-drugs .dlpending:empty{display:none}
+#v-drugs .dlfnote{font-size:13px;color:var(--warn);font-weight:600}
+#v-drugs .dlfnote:empty{display:none}
+#v-drugs .dlprog{border-top:1px solid var(--line);padding-top:6px;margin:0}
+#v-drugs .dlprogh{font-size:12px;color:var(--text-dim);margin:0 0 4px}
+#v-drugs .dlpchips{display:flex;flex-wrap:wrap;gap:4px;margin:0;padding:0;list-style:none}
+#v-drugs .dlpchips li{font-size:12px;border:1px solid var(--line);border-radius:4px;padding:1px 6px}
+#v-drugs .dlpchips li.s-forgot{border-color:var(--bad);color:var(--bad)}
+#v-drugs .dlpchips li.s-unsure{border-color:var(--warn);color:var(--warn)}
+#v-drugs .dlpchips li.s-rem,#v-drugs .dlpchips li.s-kept{border-color:var(--ok);color:var(--ok)}
+#v-drugs .dlpchips li.s-due{border-style:dashed}
+#v-drugs .dlprog details summary{cursor:pointer;font-size:13px;color:var(--accent);min-height:44px;display:flex;align-items:center}
+#v-drugs .dlptab{width:100%;border-collapse:collapse;font-size:13px}
+#v-drugs .dlptab td,#v-drugs .dlptab th{border-top:1px solid var(--line);padding:4px 4px;text-align:left;vertical-align:top}
+#v-drugs .dlptab .chip{white-space:nowrap;padding:6px 10px}
+#v-drugs .dlptab td:last-child{width:1%}
+#v-drugs .dlvisit{font-size:12.5px;margin:4px 0 0}
+#v-drugs .dlsum{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 12px;margin:0 0 12px;font-size:14px;line-height:1.45}
+#v-drugs .dlsum p{margin:4px 0}
+#v-drugs .dlsum .dlchips{margin-top:6px}
 `;
 
   /* ---------- data helpers ---------- */
@@ -193,8 +264,8 @@ const DRUGLIST_UI = (() => {
   const field = (cls, label, items) => items && items.length ? `<div class="dlf ${cls}"><b>${esc(label)}</b><ul>${items.map(li).join('')}</ul></div>` : '';
   // uses kept out of the wrong options that a slide or transcript names (DL.OFF_CHART)
   const offChart = notes => notes.map(n => `<div class="dlf f-note dloff"><b>${esc(n.head)}</b><ul>${n.src.map(li).join('')}</ul></div>`).join('');
-  const STATUS = {taught: ['taught', 'Exam 1 · taught'], class: ['class', 'Optional · class taught, drug on chart only'],
-                  chart: ['chart', 'Optional · chart only, not in the Exam 1 lectures']};
+  // scope tags (plan §9): the badge class and the words, with the reason as its tooltip and on the card
+  const SCOPE_CSS = {taught: 'taught', chartonly: 'chart', optional: 'class'};
   const findText = d => [d.name].concat(d.alt || [], d.brands || [], [DL.CLASSES[d.cls] || '', d.sub || '']).join(' ').toLowerCase();
 
   function filtered(){
@@ -202,7 +273,7 @@ const DRUGLIST_UI = (() => {
     return DL.D.filter(d => (!v || findText(d).indexOf(v) !== -1) &&
       (!st.dz || d.dz.includes(st.dz)) && (!st.cls || d.cls === st.cls) &&
       (!st.page || String(d.page) === st.page || (d.pages || []).map(String).includes(st.page)) &&
-      (!st.status || (st.status === 'taught' ? d.status === 'taught' : d.status !== 'taught')) &&
+      (!st.status || (st.status === 'exam' ? DL.inExam(d) : DL.scopeOf(d) === st.status)) &&
       (!st.boxed || d.boxed) && (!st.photo || (d.photo && !d.photo.no)) && (!st.hasq || qs(d).own.length));
   }
   const activeFilters = () => Object.keys(NOFILTER).filter(k => k === 'q' ? st.q.trim() : st[k]).length;
@@ -227,7 +298,7 @@ const DRUGLIST_UI = (() => {
     const Q = qs(d), links = readLinks(d);
     const members = DL.D.filter(x => x.cls === d.cls && x.id !== d.id);
     return field('f-class', 'Class', L.cls) + chemField(d) + field('f-note', 'Potency class', DL.potSrc(d, true)) + field('f-use', 'Indication', L.use) +
-      field('f-tg', 'Target', L.tg) + field('f-mo', 'Mechanism', L.mo) +
+      tgtField(d, L) + field('f-mo', 'Mechanism', L.mo) +
       field('f-why', 'Why it helps (Dr. Smith)', d.why ? [d.why] : []) +
       field('f-box', 'Boxed warning', d.boxed ? [d.boxed] : []) +
       field('f-ae', 'Key adverse effects and cautions', d.ae || []) +
@@ -245,6 +316,9 @@ const DRUGLIST_UI = (() => {
         ${links.map(([v, a, t]) => `<button type="button" class="chip" data-jump="${esc(v)}:${esc(a)}">${esc(t)}</button>`).join('')}
         ${atlasKey(d) ? `<button type="button" class="chip" data-dl="atlas" data-key="${esc(atlasKey(d))}">Atlas: structure</button>` : ''}</div>`;
   }
+  /* the target line: "Target" where the lecture names a molecular target, else "How it acts" with the reason */
+  const tgtField = (d, L) => DL.hasTarget(d) ? field('f-tg', 'Target', L.tg)
+    : L.tg.length ? `<div class="dlf f-tg"><b>How it acts</b><ul>${L.tg.map(li).join('')}</ul><p class="dlnotgt">${esc(DL.NO_TARGET_WHY)}</p></div>` : '';
   /* the chemical class: the keyed chart cell, or the cells not asked, with both sources and why */
   function chemField(d){
     const c = DL.CHEM[d.id];
@@ -268,29 +342,37 @@ const DRUGLIST_UI = (() => {
     return null;
   }
   const head = (d, withBrands) => {
-    const [sc, sl] = STATUS[d.status];
+    const sk = DL.scopeOf(d), sc = SCOPE_CSS[sk], sl = DL.SCOPES[sk];
     const brands = withBrands && (d.brands || []).length ? `<p class="dlbrand">Brand${d.brands.length > 1 ? 's' : ''} (chart; Dr. Smith asks by generic name): ${esc(d.brands.join(', '))}</p>` : '';
     const alt = (d.alt || []).length ? `<p class="dlbrand">Also: ${esc(d.alt.join(', '))}</p>` : '';
     return `<h3>${esc(d.name)}</h3>${alt}${brands}
-      <p class="dlmeta"><span class="dlbadge ${sc}">${esc(sl)}</span><span class="dlbadge">Chart p. ${esc(d.pages ? d.pages.join(', ') : d.page)} · ${esc(d.rx)}</span>`;
+      <p class="dlmeta"><span class="dlbadge ${sc}" title="${esc(DL.SCOPE_WHY[sk])}">${esc(sl)}</span><span class="dlbadge">Chart p. ${esc(d.pages ? d.pages.join(', ') : d.page)} · ${esc(d.rx)}</span>`;
   };
   function card(d){
     const flags = (d.boxed ? '<span class="dlbadge box">Boxed warning</span>' : '') +
                   (d.photo && !d.photo.no ? '<span class="dlbadge ph">Photosensitizing</span>' : '');
     return `<article class="dlcard${d.status === 'taught' ? '' : ' dlopt'}" data-id="${esc(d.id)}">${head(d, true)}${flags}</p>
+      ${DL.scopeOf(d) === 'taught' ? '' : `<p class="dlnotgt">${esc(DL.SCOPE_WHY[DL.scopeOf(d)])}</p>`}
+      ${progBlock(d)}
       <div class="dlrow">${chartBtn(d)}</div>${answer(d)}</article>`;
   }
 
   /* ---------- Recall: name, box, Check ---------- */
-  const RLABEL = {target: 'its target', mech: 'its mechanism', cls: 'its class', use: 'what it is used for', chem: 'its chemical class (chart)',
+  const RLABEL = {target: 'its target', mech: 'its mechanism', why: 'why it helps (Dr. Smith)', cls: 'its class', use: 'what it is used for',
+    ae: 'its key adverse effects and cautions', chem: 'its chemical class (chart)',
     rx: 'Rx, OTC or both (chart)', potency: 'its potency class (chart)', brand: 'its brand name(s) (chart)'};
+  const rlabel = (d, f) => f === 'target' && !DL.hasTarget(d) ? 'How does it act?' : cap(RLABEL[f]);
   const none = (cls, label, t) => `<div class="dlf ${cls}"><b>${esc(label)}</b><ul><li>${esc(t)}</li></ul></div>`;
-  function recallAnswer(d){
-    const L = lines(d), f = st.rfield;
-    if (f === 'target') return field('f-tg', 'Target', L.tg);
+  function recallAnswer(d, f){
+    const L = lines(d);
+    f = f || st.rfield;
+    if (f === 'target') return tgtField(d, L);
+    if (f === 'why') return d.why ? field('f-why', 'Why it helps (Dr. Smith)', [d.why]) : none('f-why', 'Why it helps', 'No "why it helps" line from Dr. Smith for this card.');
+    if (f === 'ae') return (d.ae || []).length ? field('f-ae', 'Key adverse effects and cautions', d.ae) + field('f-box', 'Boxed warning', d.boxed ? [d.boxed] : [])
+      : none('f-ae', 'Adverse effects', 'No adverse-effect line on this card.');
     // the mechanism line continues the target sentence on the Reference table, so the target comes first
     if (f === 'mech') return L.mo.length ? field('f-tg', 'Target', L.tg) + field('f-mo', 'Mechanism', L.mo)
-      : `<div class="dlf f-mo"><b>Mechanism</b><ul><li>No separate mechanism line on the Reference table; the target line is the answer.</li></ul></div>` + field('f-tg', 'Target', L.tg);
+      : `<div class="dlf f-mo"><b>Mechanism</b><ul><li>No separate mechanism line on the Reference table; the ${DL.hasTarget(d) ? 'target' : 'how-it-acts'} line is the answer.</li></ul></div>` + tgtField(d, L);
     if (f === 'cls') return field('f-class', 'Class', L.cls.length ? L.cls : [{t: DL.CLASSES[d.cls], by: 'chart', cite: 'Chart p. ' + d.page}]);
     if (f === 'chem') return chemField(d);
     if (f === 'rx') return field('f-note', 'Rx/OTC', DL.rxSrc(d));
@@ -309,42 +391,129 @@ const DRUGLIST_UI = (() => {
     const ex = (who, t) => `For example, ${esc(RFIELDS[f].toLowerCase())} of ${esc(who)}: <i>${esc(t)}</i>.`;
     if (P7[f]) return ex(...P7[f]);
     if (f === 'potency') { const d = out.find(x => x.potency); return d ? ex(d.name.toLowerCase(), DL.POTENCY[d.potency[0]]) : 'Type a class from 1 (very high potency) to 7 (least potent).'; }
-    for (const d of out) {
+    for (const d of (f === 'why' || f === 'ae') ? [] : out) {
       const L = lines(d), p = f === 'mech' ? L.mo[0] : DL.quizFacts(d, targets(), 'target')[0];
       if (p) return ex(d.name.toLowerCase(), p.t);
     }
-    return f === 'mech' ? 'Type how the drug acts on its target.' : 'Type what the drug binds or blocks: a receptor, an enzyme or a cytokine.';
+    if (f === 'why' || f === 'ae') {
+      const d = out.find(x => f === 'why' ? x.why : (x.ae || []).length);
+      return d ? ex(d.name.toLowerCase(), f === 'why' ? d.why.t : d.ae[0].t) : f === 'why' ? 'Type why the drug helps the condition, as Dr. Smith put it.' : 'Type its main adverse effects and cautions.';
+    }
+    return f === 'mech' ? 'Type how the drug acts on its target.' : 'Type what the drug binds or blocks: a receptor, an enzyme or a cytokine (for a drug with no such target, how it acts).';
   }
   function rcard(d){
     const k = d.id + ':' + st.rfield, open = checked.has(k), inp = 'dlt-' + d.id;
     return `<article class="dlcard${d.status === 'taught' ? '' : ' dlopt'}" data-id="${esc(d.id)}">${head(d, false)}</p>
-      <div class="dlrecall"><label for="${inp}">${esc(cap(RLABEL[st.rfield]))} (type, then Check)</label>
+      <div class="dlrecall"><label for="${inp}">${esc(rlabel(d, st.rfield))} (type, then Check)</label>
         <div class="dlrow"><input type="text" id="${inp}" autocomplete="off" autocapitalize="off" spellcheck="false" enterkeyhint="done"
           data-dl="typed" data-id="${esc(d.id)}" value="${esc(typed[k] || '')}">
         <button type="button" class="btn sm${open ? ' ghost' : ''}" data-dl="check" data-id="${esc(d.id)}" aria-expanded="${open}" aria-controls="dla-${esc(d.id)}">${open ? 'Hide' : 'Check'}</button></div></div>
-      <div id="dla-${esc(d.id)}" class="dlans">${open ? recallAnswer(d) + `<div class="dlrow">${chartBtn(d)}</div>` +
+      <div id="dla-${esc(d.id)}" class="dlans">${open ? recallAnswer(d) + rateBlock(k, 'rate', d.id) + `<div class="dlrow">${chartBtn(d)}</div>` +
         `<details class="dlwhole"><summary>Whole card</summary>${answer(d)}</details>` : ''}</div></article>`;
   }
 
+  /* the Forgot / Partly / Knew buttons with their criteria; a click is the only thing that counts */
+  function rateBlock(k, act, ref){
+    const cur = rated[k];
+    return `<div class="dlrate" role="group" aria-label="How well did you recall it?">${RATE.map(([r, l]) =>
+      `<button type="button" class="chip" data-dl="${act}" data-${act === 'rate' ? 'id' : 'qid'}="${esc(ref)}" data-r="${r}" aria-pressed="${cur === r}">${l}</button>`).join('')}</div>
+      <ul class="dlcrit">${RATE.map(([, l, c]) => `<li><b>${l}:</b> ${esc(c)}</li>`).join('')}</ul>
+      <p class="dlnotgt">${cur ? 'Counted for this visit (not saved): ' + RATE_NAME[cur] + '.' : 'Not counted until you choose one.'}</p>`;
+  }
+  /* one rating or answer of this visit; a new rating of the same opened answer replaces the earlier one */
+  function note(key, form, rating, tok){
+    const i = tok ? events.findIndex(e => e.tok === tok) : -1;
+    const e = {key, form, rating, tok};
+    if (i >= 0) events[i] = e; else events.push(e);
+  }
+  /* the facts whose latest rating this visit is Forgot or Partly, with the form they were last asked in */
+  function weakSession(){
+    const last = {};
+    for (const e of events) last[e.key] = e;
+    return Object.values(last).filter(e => e.rating !== 'knew');
+  }
+  function sessionLine(){
+    if (!events.length) return '';
+    const c = {forgot: 0, partly: 0, knew: 0}, byF = {};
+    for (const e of events) { c[e.rating]++; const f = e.key.split(':')[1]; (byF[f] = byF[f] || {forgot: 0, partly: 0, knew: 0})[e.rating]++; }
+    const w = weakSession().length;
+    return `<b>This visit (not saved):</b> Knew ${c.knew} · Partly ${c.partly} · Forgot ${c.forgot}` +
+      ` (${Object.entries(byF).map(([f, o]) => `${esc(SFIELD[f] || f)}: ${['knew', 'partly', 'forgot'].filter(r => o[r]).map(r => RATE_NAME[r] + ' ' + o[r]).join(', ')}`).join('; ')}).` +
+      ` A right Quiz me answer counts as Knew, a wrong one as Forgot.
+      <span class="dlchips"><button type="button" class="btn sm" data-dl="practise"${w ? '' : ' disabled'}>Practise what I forgot / partly knew (${w})</button></span>`;
+  }
+  const refreshSession = () => { const el = pane && pane.querySelector('#dlsess'); if (el) el.innerHTML = sessionLine(); };
+
   /* ---------- Quiz me: multiple choice, all at once ---------- */
   const qsig = () => JSON.stringify([filtered().map(d => d.id), st.kinds]);
-  function buildQuiz(only){
+  function buildQuiz(){
     const T = targets(), list = [], skipped = {};
     const kinds = Object.keys(DL.KINDS).filter(k => st.kinds[k]);
-    if (only) for (const q of only) { const n = DL.makeQuestion(DL.D.find(d => d.id === q.drug), T, q.kind); if (n) list.push(n); }
-    else for (const d of filtered()) for (const k of kinds) {
+    for (const d of filtered()) for (const k of kinds) {
       const q = DL.makeQuestion(d, T, k);
       if (q) list.push(q); else skipped[k] = (skipped[k] || 0) + 1;
     }
-    quiz = {sig: qsig(), list, ans: {}, skipped, retry: !!only};
+    quiz = {sig: qsig(), list, ans: {}, skipped, frozen: null};
+  }
+  const shuffle = a => { a = a.slice(); for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
+  const isMissed = q => q.recall ? quiz.ans[q.id] !== 'knew' : quiz.ans[q.id] === undefined || !q.options[quiz.ans[q.id]].correct;
+  /* Retry: the missed and the unanswered items of the current set, frozen, each multiple-choice
+     question with the same options in a new order. The filters do not change it. */
+  function retrySet(){
+    const items = quiz.list.filter(isMissed);
+    const missed = items.filter(q => quiz.ans[q.id] !== undefined).length, open = items.length - missed;
+    items.forEach(q => { if (q.recall) { checked.delete(q.id); delete rated[q.id]; } });
+    const list = items.map(q => q.recall ? Object.assign({}, q) : Object.assign({}, q, {options: shuffle(q.options)}));
+    const pl = (n, w) => `${n} ${w}${n === 1 ? '' : 's'}`;
+    quiz = {sig: qsig(), list, ans: {}, skipped: {}, frozen: {kind: 'retry',
+      title: `Retrying ${pl(missed, 'missed question')}${open ? ` and ${open} not yet answered` : ''} from your last set`,
+      note: 'The same questions and answer options, in a new order. The filters and Ask about below do not change this set; they apply when you press Back to the filtered list.', sig: qsig()}};
+  }
+  /* Practise what I forgot / partly knew: each such fact again, after up to two questions on other
+     drugs (its class first), in the other form: multiple choice after recall, recall after
+     multiple choice (the same form again where the field has no other one, said on the item). */
+  function practiseSet(){
+    const T = targets(), list = [], weak = weakSession();
+    let n = 0;
+    const mc = (d, k) => { const q = DL.makeQuestion(d, T, k); return q ? Object.assign(q, {id: 'p' + (n++) + ':' + q.id}) : null; };
+    const rc = (d, f, why) => ({id: 'p' + (n++) + ':' + d.id + ':rc:' + f, recall: true, drug: d.id, name: d.name, field: f, kind: 'recall', why});
+    for (const e of weak) {
+      const [id, f] = e.key.split(':'), d = DL.D.find(x => x.id === id);
+      const same = shuffle(DL.D.filter(x => x.cls === d.cls && x.id !== d.id)), rest = shuffle(DL.D.filter(x => x.cls !== d.cls));
+      let got = 0;
+      for (const o of same.concat(rest)) { if (got === 2) break; const q = mc(o, FKIND[f] && DL.makeQuestion(o, T, FKIND[f]) ? FKIND[f] : 'cls'); if (q) { list.push(q); got++; } }
+      if (e.form === 'recall') {
+        const q = FKIND[f] ? mc(d, FKIND[f]) : null;
+        list.push(q || rc(d, f, 'Asked again as recall: this field has no multiple-choice form for this drug.'));
+      } else {
+        list.push(RFIELDS[f] ? rc(d, f) : Object.assign(mc(d, Object.keys(KFIELD).find(k => KFIELD[k] === f && DL.makeQuestion(d, T, k))) || {}, {why: 'Asked again as multiple choice: this field has no recall form.'}));
+      }
+    }
+    const kept = list.filter(q => q && q.id);
+    quiz = {sig: qsig(), list: kept, ans: {}, skipped: {}, frozen: {kind: 'practise',
+      title: `Practising ${weak.length} fact${weak.length === 1 ? '' : 's'} you forgot or partly knew`,
+      note: 'Each one comes back after questions on other drugs (its class first), in the other form. Ratings and answers here count for this visit only (not saved).', sig: qsig()}};
   }
   const score = () => {
-    const a = Object.keys(quiz.ans), right = a.filter(id => quiz.list.find(q => q.id === id).options[quiz.ans[id]].correct).length;
-    return {done: a.length, right, total: quiz.list.length};
+    const mcq = quiz.list.filter(q => !q.recall), a = mcq.filter(q => quiz.ans[q.id] !== undefined);
+    return {done: a.length, right: a.filter(q => q.options[quiz.ans[q.id]].correct).length, total: mcq.length};
   };
   const LET = 'ABCD';
-  const FCLS = {target: 'f-tg', cls: 'f-class', clsRev: 'f-class', chem: 'f-class', use: 'f-use', useRev: 'f-use'};
+  const FCLS = {target: 'f-tg', cls: 'f-class', clsRev: 'f-class', chem: 'f-class', use: 'f-use', useRev: 'f-use', aeUniq: 'f-ae', boxed: 'f-box', photo: 'f-ph'};
+  const srcOrNot = w => w.by === 'remark' || !w.cite ? '' : src(w);
+  /* a recall item of a practice set: the name, a box, Check, then the answer and Forgot / Partly / Knew */
+  function rblock(q){
+    const d = DL.D.find(x => x.id === q.drug), open = checked.has(q.id), inp = 'dlpt-' + q.id.replace(/[^a-z0-9]/gi, '_');
+    return `<div class="dlq" data-qid="${esc(q.id)}"><p class="dlqh">${esc(q.name)} · Recall: ${esc(SFIELD[q.field])}</p>
+      ${q.why ? `<p class="dlnotgt">${esc(q.why)}</p>` : ''}
+      <div class="dlrecall"><label for="${inp}">${esc(rlabel(d, q.field))} (type, then Check)</label>
+        <div class="dlrow"><input type="text" id="${inp}" autocomplete="off" autocapitalize="off" spellcheck="false" enterkeyhint="done"
+          data-dl="ptyped" data-qid="${esc(q.id)}" value="${esc(typed[q.id] || '')}">
+        <button type="button" class="btn sm${open ? ' ghost' : ''}" data-dl="pcheck" data-qid="${esc(q.id)}" aria-expanded="${open}">${open ? 'Hide' : 'Check'}</button></div></div>
+      <div aria-live="polite">${open ? recallAnswer(d, q.field) + rateBlock(q.id, 'prate', q.id) : ''}</div></div>`;
+  }
   function qblock(q){
+    if (q.recall) return rblock(q);
     const pick = quiz.ans[q.id], done = pick !== undefined;
     const opts = q.options.map((o, i) => {
       const c = !done ? '' : i === pick ? (o.correct ? ' pick-ok' : ' pick-bad') : o.correct ? ' reveal-ok' : '';
@@ -355,12 +524,13 @@ const DRUGLIST_UI = (() => {
     const fb = !done ? '' : `<p class="dlfb">${right ? '<span class="r">Right.</span>' : `<span class="w">Not this one.</span> The answer: <b>${esc(key.t)}</b>.`}</p>
       <div class="dlf ${FCLS[q.kind] || 'f-note'}"><b>Source</b><ul>${q.src.map(li).join('')}</ul></div>
       ${q.also.length ? `<p class="dlfb">Also true for ${esc(q.name)}: ${esc(q.also.join('; '))}.</p>` : ''}
-      ${(q.wrongWhy || []).length ? `<div class="dlf f-note"><b>Why the other options are wrong</b><ul>${q.wrongWhy.map(w => `<li>${esc(w.opt)}: ${esc(w.t)}${src(w)}</li>`).join('')}</ul></div>` : ''}
+      ${(q.wrongWhy || []).length ? `<div class="dlf f-note"><b>Why the other options are wrong</b><ul>${q.wrongWhy.map(w => `<li>${esc(w.opt)}: ${esc(w.t)}${srcOrNot(w)}</li>`).join('')}</ul></div>` : ''}
       ${offChart(q.offChart || [])}
       <div class="dlrow">${chartBtn(DL.D.find(x => x.id === q.drug))}</div>`;
     // a question whose answer is the drug does not name it above the stem
-    const rev = q.kind === 'useRev' || q.kind === 'clsRev' || (q.kind === 'brand' && q.dir === 'rev');
+    const rev = ['useRev', 'clsRev', 'aeUniq', 'boxed', 'photo'].includes(q.kind) || (q.kind === 'brand' && q.dir === 'rev');
     return `<div class="dlq" data-qid="${esc(q.id)}"><p class="dlqh">${rev ? '' : esc(q.name) + ' · '}${esc(DL.KIND_HEAD[q.kind])}</p>
+      ${q.why ? `<p class="dlnotgt">${esc(q.why)}</p>` : ''}
       <p class="stem" id="dlqs-${esc(q.id)}">${esc(q.stem)}</p>
       <div role="group" aria-labelledby="dlqs-${esc(q.id)}">${opts}</div><div aria-live="polite">${fb}</div></div>`;
   }
@@ -378,6 +548,23 @@ const DRUGLIST_UI = (() => {
   const boxesOf = id => !CB ? [] : String(id).startsWith('line:') ? CB.other.filter(b => 'line:' + b.line === id) : (CB.drugs[id] || []);
   const hitName = id => String(id).startsWith('line:') ? DL.CHART_ROWS[+id.slice(5)][1] : (DL.D.find(d => d.id === id) || {}).name;
   const chartPages = id => [...new Set(boxesOf(id).map(b => b.page))];
+  /* every cell of the hit's line(s) drawn on page p (chart_boxes.js `cells`: its own cells and each
+     merged cell covering its row, including a merged cell's part across the p. 4/5 page break);
+     the row band where a box has no cells. Duplicates (a merged cell shared by two lines) once. */
+  function cellsOn(id, p){
+    const seen = new Set(), out = [];
+    for (const b of boxesOf(id)) for (const c of (b.cells && b.cells.length ? b.cells : [Object.assign({col: 'Drug', merged: false}, b)])) {
+      if (c.page !== p) continue;
+      const k = [c.x0, c.y0, c.x1, c.y1].join();
+      if (seen.has(k)) continue;
+      seen.add(k); out.push(Object.assign({rowPage: b.page}, c));
+    }
+    return out;
+  }
+  const cellPages = id => [...new Set(boxesOf(id).flatMap(b => (b.cells || []).map(c => c.page).concat([b.page])))].sort();
+  const andList = a => a.length < 2 ? a.join('') : a.slice(0, -1).join(', ') + ' and ' + a[a.length - 1];
+  const cellNames = cs => { const seen = new Set(); return andList(cs.filter(c => c.col !== 'Drug').map(c => `${c.col} (${c.text || 'blank'})`)
+    .filter(t => !seen.has(t) && seen.add(t))); };
   function chartBtn(d){
     const ps = chartPages(d.id);
     return ps.length ? `<button type="button" class="chip" data-dl="chart" data-id="${esc(d.id)}">See on the chart (p. ${esc(ps.join(', '))})</button>` : '';
@@ -394,12 +581,27 @@ const DRUGLIST_UI = (() => {
   const rowsText = rs => rs.length === 1 ? 'row ' + rs[0] : 'rows ' + rs.slice(0, -1).join(', ') + ' and ' + rs[rs.length - 1];
   function chartStatus(){
     if (!st.chit) return '';
-    const bs = boxesOf(st.chit), here = bs.filter(b => b.page === st.cpage), name = hitName(st.chit);
+    const bs = boxesOf(st.chit), p = st.cpage, here = bs.filter(b => b.page === p), name = hitName(st.chit);
     if (!bs.length) return '';
-    const other = [...new Set(bs.filter(b => b.page !== st.cpage).map(b => b.page))];
-    let t = here.length ? `Highlighted: ${esc(name)}, ${rowsText(here.map(b => b.row))} on page ${st.cpage} (the chart prints "${esc(here.map(b => b.text).join('"; "'))}").`
-      : `${esc(name)} is not on page ${st.cpage}.`;
-    if (other.length) t += ' ' + other.map(p => `<button type="button" class="chip" data-dl="cpage" data-p="${p}">${here.length ? 'Also on' : 'Go to'} page ${p}</button>`).join(' ');
+    const cs = cellsOn(st.chit, p), s = n => n === 1 ? '' : 's';
+    let t;
+    if (here.length) {
+      const merged = cs.filter(c => c.merged && !c.cont && c.col !== 'Drug');
+      t = `Highlighted: ${esc(name)}, ${rowsText(here.map(b => b.row))} on page ${p}` +
+        (merged.length ? `, with its merged ${esc(cellNames(merged))} cell${s(merged.length)}` : '') +
+        ` (the chart prints "${esc(here.map(b => b.text).join('"; "'))}").`;
+      const runOn = here.flatMap(b => (b.cells || []).filter(c => c.cont));
+      if (runOn.length) t += ` Its ${esc(andList([...new Set(runOn.map(c => c.col))]))} cell${s(new Set(runOn.map(c => c.col)).size)} ${runOn[0].page === 4
+        ? 'continue the page 4 cells' : 'continue on page 5'} (the table runs across the page break).`;
+    } else if (cs.length) {
+      const rp = [...new Set(cs.map(c => c.rowPage))];
+      t = `${esc(name)}'s row is on page ${rp.join(', ')}. Highlighted here: its ${esc(cellNames(cs))} cell${s(cs.length)}, ` +
+        `which run across the page break between pages 4 and 5.`;
+    } else t = `${esc(name)} is not on page ${p}.`;
+    const rowPages = new Set(bs.map(b => b.page));
+    const other = cellPages(st.chit).filter(q => q !== p);
+    if (other.length) t += ' ' + other.map(q => `<button type="button" class="chip" data-dl="cpage" data-p="${q}">${!rowPages.has(q)
+      ? 'Its cells on page ' + q : here.length ? 'Also on page ' + q : cs.length ? 'Its row on page ' + q : 'Go to page ' + q}</button>`).join(' ');
     return t;
   }
   function chartNotes(p){
@@ -414,7 +616,7 @@ const DRUGLIST_UI = (() => {
     // a phone starts at 2x (the page's own text is too small at its width), wider screens fit the width
     if (st.zoom === null) st.zoom = window.innerWidth < 600 ? 2 : 0;
     const p = st.cpage, pg = CB.pages[p], z = ZOOMS[st.zoom];
-    const hl = st.chit ? boxesOf(st.chit).filter(b => b.page === p) : [];
+    const hl = st.chit ? boxesOf(st.chit).filter(b => b.page === p) : [], hc = st.chit ? cellsOn(st.chit, p) : [];
     const from = st.cfrom && DL.D.find(d => d.id === st.cfrom.id);
     return `${from ? `<p><button type="button" class="btn sm ghost" data-dl="cback">Back to ${esc(from.name)} (${esc(MODES.find(m => m[0] === st.cfrom.mode)[1])})</button></p>` : ''}
       <div class="dlcnav" role="group" aria-label="Chart pages"><span class="lab">Page:</span>
@@ -427,8 +629,8 @@ const DRUGLIST_UI = (() => {
       <p class="dlcstat" id="dlcstat" aria-live="polite">${chartStatus()}</p>
       <div class="dlcframe" id="dlcframe"><div class="dlcimg" style="width:${z * 100}%;aspect-ratio:${pg.w} / ${pg.h}">
         <img src="${esc(chartSrc(p))}" loading="lazy" decoding="async" width="${pg.w}" height="${pg.h}"
-          alt="Drug chart page ${p}: ${esc(CPAGES[p])}${hl.length ? '; highlighted ' + esc(rowsText(hl.map(b => b.row))) + ', ' + esc(hitName(st.chit)) : ''}">
-        ${hl.map(b => `<div class="dlhl" aria-hidden="true" style="left:${b.x0 * 100}%;top:${b.y0 * 100}%;width:${(b.x1 - b.x0) * 100}%;height:${(b.y1 - b.y0) * 100}%"></div>`).join('')}
+          alt="Drug chart page ${p}: ${esc(CPAGES[p])}${hl.length ? '; highlighted ' + esc(rowsText(hl.map(b => b.row))) + ', ' + esc(hitName(st.chit)) : hc.length ? '; highlighted ' + esc(hitName(st.chit)) + '\'s cells across the page break' : ''}">
+        ${hc.map(c => `<div class="dlhl${c.col === 'Drug' ? ' dlhlrow' : ''}" aria-hidden="true" style="left:${c.x0 * 100}%;top:${c.y0 * 100}%;width:${(c.x1 - c.x0) * 100}%;height:${(c.y1 - c.y0) * 100}%"></div>`).join('')}
       </div></div>
       ${chartNotes(p)}`;
   }
@@ -444,7 +646,8 @@ const DRUGLIST_UI = (() => {
     if (r) r.innerHTML = chartResults();
     if (v) v.innerHTML = chartView();
     if (scroll) {
-      const h = pane.querySelector('#dlcframe .dlhl'), fr = pane.querySelector('#dlcframe');
+      // the drug's own row first (a merged cell can start well above it)
+      const h = pane.querySelector('#dlcframe .dlhlrow') || pane.querySelector('#dlcframe .dlhl'), fr = pane.querySelector('#dlcframe');
       if (h && fr) {
         fr.scrollLeft = 0;
         fr.scrollTop = Math.max(0, h.offsetTop - fr.clientHeight / 3);
@@ -467,20 +670,27 @@ const DRUGLIST_UI = (() => {
     const n = activeFilters(), mode = MODES.find(m => m[0] === st.mode);
     let modebar = '';
     if (st.mode === 'quiz') {
-      const anyMissed = quiz && quiz.list.some(q => quiz.ans[q.id] !== undefined && !q.options[quiz.ans[q.id]].correct);
+      const anyMissed = quiz && quiz.list.some(isMissed);
+      const fz = quiz && quiz.frozen;
       modebar = `<div class="dlmodebar"><div class="dlchips" role="group" aria-label="Ask about"><span class="lab">Ask about:</span>
         ${Object.entries(DL.KINDS).map(([k, v]) => `<button type="button" class="chip" data-dl="kind" data-k="${k}" aria-pressed="${!!st.kinds[k]}">${esc(v)}</button>`).join('')}</div>
         ${st.kinds.brand ? `<p class="ex">Brand names are practice: Dr. Smith, 10/29: ${esc(DL.BRAND_QUOTE.t)} (T 618–621).</p>` : ''}
+        ${['aeUniq', 'boxed', 'photo'].some(k => st.kinds[k]) ? `<p class="ex">Adverse effect → drug, boxed warning and photosensitizing: every wrong option is false by Dr. Smith's slides (the reason shows after answering) or a drug no course source links to that property.</p>` : ''}
         <p class="dlscore" id="dlscore" aria-live="polite">${quiz ? scoreLine() : ''}</p>
         <div class="dlchips"><button type="button" class="btn sm" data-dl="newq">New questions</button>
-        <button type="button" class="btn sm ghost" data-dl="retry"${anyMissed ? '' : ' disabled'}>Retry the missed</button></div></div>`;
+        <button type="button" class="btn sm ghost" data-dl="retry"${anyMissed ? '' : ' disabled'}>Retry the missed</button></div>
+        <p class="dlsess" id="dlsess" aria-live="polite">${sessionLine()}</p></div>
+        ${fz ? `<section class="dlfrozen" aria-labelledby="dlfzh"><h3 id="dlfzh">${esc(fz.title)}</h3><p>${esc(fz.note)}</p>
+          <p class="dlpending" id="dlpending" aria-live="polite">${pendingLine()}</p>
+          <div class="dlchips"><button type="button" class="btn sm" data-dl="back">Back to the filtered list</button></div></section>` : ''}`;
     } else if (st.mode === 'recall') {
       modebar = `<div class="dlmodebar"><div class="dlchips" role="radiogroup" aria-label="What to recall"><span class="lab">Recall:</span>
         ${Object.entries(RFIELDS).map(([k, v]) => `<button type="button" class="chip" role="radio" data-dl="rfield" data-k="${k}" aria-checked="${st.rfield === k}" aria-pressed="${st.rfield === k}" tabindex="${st.rfield === k ? 0 : -1}">${esc(v)}</button>`).join('')}</div>
-        <p>Type what you remember in the box under each drug, then press Check (or Enter). ${recallExample()} Spelling and wording don't matter: compare your words with the answer yourself.</p>
+        <p>Type what you remember in the box under each drug, then press Check (or Enter). <span id="dlrex">${recallExample()}</span> Spelling and wording don't matter: compare your words with the answer yourself, then choose Forgot, Partly or Knew (only that choice counts, for this visit only).</p>
         <div class="dlchips"><button type="button" class="btn sm ghost" data-dl="revealall">Check all</button>
         <button type="button" class="btn sm ghost" data-dl="hideall">Hide all answers</button>
-        <button type="button" class="btn sm ghost" data-dl="clearbox">Empty the boxes</button></div></div>`;
+        <button type="button" class="btn sm ghost" data-dl="clearbox">Empty the boxes</button></div>
+        <p class="dlsess" id="dlsess" aria-live="polite">${sessionLine()}</p></div>`;
     } else if (st.mode === 'chart') {
       modebar = `<div class="dlmodebar"><div class="dlfld"><label for="dlcq">Find a drug on the chart (generic or brand name, or class)</label>
         <input type="search" id="dlcq" placeholder="e.g. tacrolimus or Protopic" value="${esc(st.cq)}" autocomplete="off" enterkeyhint="search"></div>
@@ -495,13 +705,15 @@ const DRUGLIST_UI = (() => {
     ${modebar}
     ${chart ? '' : `<section class="dlfilters" aria-labelledby="dlfh">
       <div class="dlfhead"><h3 id="dlfh">Filters</h3><span class="n" id="dlfn">${n ? n + ' active' : 'none active'}</span>
+        <span class="dlfnote" id="dlfnote">${st.mode === 'quiz' && quiz && quiz.frozen ? 'apply after the set above' : ''}</span>
         <button type="button" class="dllink" data-dl="clear"${n ? '' : ' disabled'}>Clear filters</button></div>
       <div class="dlfgrid">
         <div class="dlfld wide"><label for="dlq">Search</label><input type="search" id="dlq" placeholder="Generic or brand name, or class" value="${esc(st.q)}" autocomplete="off"></div>
         ${sel('dldz', 'Disease', opt('', 'All diseases', st.dz) + Object.entries(DL.DISEASES).map(([k, v]) => opt(k, v, st.dz)).join(''))}
         ${sel('dlcls', 'Class', opt('', 'All classes', st.cls) + Object.entries(DL.CLASSES).map(([k, v]) => opt(k, v, st.cls)).join(''))}
         ${sel('dlpage', 'Chart page', opt('', 'All chart pages', st.page) + Object.entries(DL.PAGES).map(([k, v]) => opt(k, 'p. ' + k + ': ' + v, st.page)).join(''))}
-        ${sel('dlstatus', 'Exam 1', opt('', 'Taught + optional', st.status) + opt('taught', 'Exam 1 taught', st.status) + opt('optional', 'Optional: chart only', st.status))}
+        ${sel('dlstatus', 'Scope', opt('', 'All scopes', st.status) + opt('exam', 'Exam 1 (taught + chart only)', st.status) + opt('taught', DL.SCOPES.taught, st.status) +
+          opt('chartonly', DL.SCOPES.chartonly, st.status) + opt('optional', DL.SCOPES.optional, st.status))}
       </div>
       <div class="dlchips">
         <button type="button" class="chip" data-dl="flag" data-f="boxed" aria-pressed="${st.boxed}">Has a boxed warning</button>
@@ -513,9 +725,12 @@ const DRUGLIST_UI = (() => {
       <p>Each professor's slides and recording decide what is examinable for that professor's material (Dr. Smith's lectures; Dr. Sikazwe's assigned pages); the chart is a guide. Each line names its source: <span class="dlsrc smith">Dr. Smith · slide</span> <span class="dlsrc sikazwe">Dr. Sikazwe · DPAW page</span> <span class="dlsrc chart">Drug chart · page</span></p>
       <p>Targets and mechanisms come from Reference, "Drug targets: write it first, then check". Not here: the lice and scabies page (chart p. 7), which is not in the Exam 1 lectures (it is shown in Chart, the original pages). Brand names are practice only: Dr. Smith, 10/29: ${esc(DL.BRAND_QUOTE.t)} (T 618–621). Every question uses the generic name except the brand kind.</p>
       <p>Topical steroids: the chart's indication cell ends "numerous others", so a condition a steroid could plausibly treat (sunburn itch, for example) is never offered as a wrong option; the remaining options are false by the slides, with the reason shown after answering.</p>
-      <p>Quiz me asks only what the cards state: a wrong option is another drug's value that is not also true for this drug. Drugs whose chart line names no molecular target (sunscreens, sunburn anesthetics, keratolytics, tars, petrolatum, ketoconazole, spironolactone, dapsone, metronidazole) get no target question; practise those in Recall.</p>
+      <p>Quiz me asks only what the cards state: a wrong option is another drug's value that is not also true for this drug. Drugs whose chart line names no molecular target (sunscreens, sunburn anesthetics, keratolytics, tars, petrolatum, ketoconazole, spironolactone, dapsone, metronidazole) get no target question; their card reads "How it acts" (${esc(DL.NO_TARGET_WHY.toLowerCase().replace(/\.$/, ''))}); practise those in Recall.</p>
+      <p>Scope: ${Object.entries(DL.SCOPE_WHY).map(([k, t]) => `<b>${esc(DL.SCOPES[k])}</b>: ${esc(t)}`).join(' ')}</p>
+      <p>Your bank answers on each card: read from this profile's saved answers to the question bank (multiple choice, so recognition), through a reviewed map of which question tests which fact; the Drug list itself saves nothing.</p>
       <ul>${DL.CHART_NOTES.map(n => `<li>${esc(n)}</li>`).join('')}</ul>
       <p>Quiz me coverage, per kind (of ${DL.D.length} drugs):</p><ul class="dlcov">${coverageList()}</ul></details>
+    ${st.mode === 'browse' ? chartSummary() : ''}
     ${chart ? '<div id="dlcview"></div>' : `<p class="dlcount" id="dlcount" aria-live="polite"></p>
     <div id="dllist"></div>`}`;
   }
@@ -525,24 +740,107 @@ const DRUGLIST_UI = (() => {
     return Object.entries(COV).map(([k, o]) => `<li><b>${esc(DL.KIND_HEAD[k])}</b>: ${o.n} drugs get a question` +
       (Object.keys(o.none).length ? '; none for ' + Object.entries(o.none).map(([r, ns]) => ns.length > 12 ? `${ns.length} (${esc(r)})` : `${ns.length} (${esc(r)}: ${esc(ns.join(', '))})`).join('; ') : '') + '.</li>').join('');
   }
+  /* the line that says filters changed during a frozen set apply after it (never mixed in) */
+  function pendingLine(){
+    if (!(quiz && quiz.frozen) || quiz.frozen.sig === qsig()) return '';
+    return 'You changed the filters, the search or Ask about: they apply after this set. Press Back to the filtered list to use them now.';
+  }
+
+  /* ---------- Your bank answers: read-only status per drug and field (drugfacts.js) ---------- */
+  const DF = typeof DRUGFACTS !== 'undefined' ? DRUGFACTS : null;
+  let QBYID = null;
+  const qById = id => { if (!QBYID) { QBYID = {}; for (const q of QUESTIONS) QBYID[q.id] = q; } return QBYID[id]; };
+  // the profile on screen: the core's in-memory progress (read, never written)
+  const bankAnswers = () => { try { return (typeof DB !== 'undefined' && DB && Array.isArray(DB.answers)) ? DB.answers : []; } catch (e) { return []; } };
+  const profileName = () => { try { return typeof PROFILE !== 'undefined' ? PROFILE : ''; } catch (e) { return ''; } };
+  // "Due for review": the core scheduler's state of a question's concept, where it has been answered
+  function dueOf(qids){
+    try {
+      if (typeof isDue !== 'function' || typeof DB === 'undefined' || !DB.concepts) return false;
+      return qids.some(id => { const q = qById(id), c = q && DB.concepts[q.concept]; return !!(c && c.seen > 0 && isDue(c)); });
+    } catch (e) { return false; }
+  }
+  const SCLS = {'Not practised': 'none', Forgot: 'forgot', 'Right, but unsure': 'unsure', Remembered: 'rem', 'Kept on a later day': 'kept'};
+  let FCACHE = {};
+  function factsOf(d){
+    if (!DF || !DF.BY[d.id]) return [];
+    if (FCACHE[d.id]) return FCACHE[d.id];
+    const A = bankAnswers();
+    const out = Object.keys(DF.FIELDS).filter(f => DF.BY[d.id][f]).map(f => {
+      const qids = DF.BY[d.id][f].filter(qById), s = DF.status(A, qids);
+      const due = s.n > 0 && dueOf(qids);
+      return {f, label: f === 'target' ? tgtLabel(d) : DF.FIELDS[f], qids, s, due, weak: s.weak || due};
+    }).filter(x => x.qids.length);
+    return (FCACHE[d.id] = out);
+  }
+  const visitOf = d => { const last = {}; for (const e of events) if (e.key.startsWith(d.id + ':')) last[e.key.split(':')[1]] = e; return last; };
+  const when = t => { const x = new Date(t); return x.toLocaleDateString('en-US', {month: 'short', day: 'numeric'}); };
+  function progBlock(d){
+    const F = factsOf(d), v = visitOf(d), vis = Object.entries(v);
+    const visit = vis.length ? `<p class="dlvisit"><b>This visit (not saved):</b> ${vis.map(([f, e]) => `${esc(SFIELD[f] || f)}: ${RATE_NAME[e.rating]} (${e.form === 'mc' ? 'multiple choice' : 'recall'})`).join(' · ')}</p>` : '';
+    if (!F.length) return `<div class="dlprog"><p class="dlprogh">Your bank answers: no bank question is mapped to this drug's facts.</p>${visit}</div>`;
+    const pr = F.filter(x => x.s.n).length, wk = F.filter(x => x.weak);
+    const chips = F.map(x => `<li class="s-${SCLS[x.s.label]}${x.due ? ' s-due' : ''}"><b>${esc(x.label)}</b>: ${esc(x.s.label)}${x.due ? ' · Due for review' : ''}${x.s.n ? ` (${x.s.right}/${x.s.n})` : ''}</li>`).join('');
+    const rows = F.map(x => `<tr><th scope="row">${esc(x.label)}</th><td>${esc(x.s.label)}${x.due ? '; due for review' : ''}<br>${x.s.n ? `${x.s.n} answer${x.s.n === 1 ? '' : 's'}, ${x.s.right} right · recognition (multiple choice) · last ${when(x.s.last)}` : 'no answer yet'}</td>
+      <td><button type="button" class="chip" data-dl="pq" data-id="${esc(d.id)}" data-f="${esc(x.f)}">Practise (${x.qids.length})</button></td></tr>`).join('');
+    const cw = classWeak(d.cls);
+    return `<div class="dlprog"><p class="dlprogh">Your bank answers (${esc(profileName() || 'no profile')}, saved, read-only): ${pr} of ${F.length} facts practised${wk.length ? ` · ${wk.length} to review` : ''}</p>
+      <ul class="dlpchips">${chips}</ul>
+      <details><summary>Details and practice</summary><p class="dlnotgt">Scope: ${esc(DL.SCOPES[DL.scopeOf(d)])}. Each count is this profile's saved answers to the bank questions mapped to the fact.</p>
+        <table class="dlptab"><tbody>${rows}</tbody></table>
+        <div class="dlchips">${wk.length ? `<button type="button" class="btn sm ghost" data-dl="pweak" data-id="${esc(d.id)}">Practise this drug's weak facts (${uniq(wk.flatMap(x => x.qids)).length})</button>` : ''}
+        ${cw.length ? `<button type="button" class="btn sm ghost" data-dl="pclass" data-cls="${esc(d.cls)}">Weak facts in this class (${cw.length} questions)</button>` : ''}</div></details>${visit}</div>`;
+  }
+  const uniq = a => [...new Set(a)];
+  const classWeak = cls => uniq(DL.D.filter(x => x.cls === cls).flatMap(x => factsOf(x).filter(f => f.weak).flatMap(f => f.qids)));
+  function chartFacts(){
+    const out = [];
+    for (const d of DL.D) for (const x of factsOf(d)) out.push(Object.assign({d, exam: DL.inExam(d)}, x));
+    return out;
+  }
+  function chartSummary(){
+    if (!DF) return '';
+    const all = chartFacts(), ex = all.filter(x => x.exam), pr = ex.filter(x => x.s.n), wk = ex.filter(x => x.weak);
+    const opt = all.length - ex.length, drugs = uniq(ex.map(x => x.d.id)).length;
+    const byF = {}; for (const x of wk) (byF[x.f] = byF[x.f] || []).push(...x.qids);
+    return `<section class="dlsum" aria-labelledby="dlsumh"><p id="dlsumh"><b>Your bank answers (${esc(profileName() || 'no profile')}):</b> ${pr.length} of ${ex.length} Exam 1 facts practised (on ${drugs} drugs) · ${wk.length} need review (forgot, unsure or due)` +
+      `${opt ? ` · ${opt} optional fact${opt === 1 ? '' : 's'} not counted` : ''} · chart p. 7 excluded (not on Exam 1).</p>
+      <p class="dlnotgt">A fact is one field of one drug that has bank questions; read-only from your saved answers (recognition). Not practised is never counted as weak.</p>
+      ${wk.length ? `<div class="dlchips"><button type="button" class="btn sm" data-dl="pall">Practise my weak facts (${uniq(wk.flatMap(x => x.qids)).length} questions)</button>
+        ${Object.entries(byF).map(([f, q]) => `<button type="button" class="btn sm ghost" data-dl="pfield" data-f="${esc(f)}">${esc(DF.FIELDS[f])} (${uniq(q).length})</button>`).join('')}</div>` : ''}</section>`;
+  }
+  function startBank(qids, label){
+    const pool = uniq(qids).map(qById).filter(Boolean);
+    if (!pool.length || typeof drillList !== 'function') return;
+    RET.push({view: ID, y: window.scrollY});
+    drillList(pool, label);
+    backBtn();
+  }
+
   function drawList(){
+    FCACHE = {};
     if (st.mode === 'chart') { drawChart(false); return; }
     const list = filtered(), out = pane.querySelector('#dllist'), cnt = pane.querySelector('#dlcount');
     const n = activeFilters(), fn = pane.querySelector('#dlfn'), cl = pane.querySelector('[data-dl="clear"]');
     if (fn) fn.textContent = n ? n + ' active' : 'none active';
     if (cl) cl.disabled = !n;
     const drugs = list.length === DL.D.length ? `${list.length} drugs` : `${list.length} of ${DL.D.length} drugs`;
-    if (!list.length) { cnt.textContent = drugs; out.innerHTML = '<p class="dlempty">No drug matches this search and these filters. Clear filters to see the whole list.</p>'; return; }
+    const fz = st.mode === 'quiz' && quiz && quiz.frozen;
+    const fnote = pane.querySelector('#dlfnote'); if (fnote) fnote.textContent = fz ? 'apply after the set above' : '';
+    const pend = pane.querySelector('#dlpending'); if (pend) pend.textContent = pendingLine();
+    if (!list.length && !fz) { cnt.textContent = drugs; out.innerHTML = '<p class="dlempty">No drug matches this search and these filters. Clear filters to see the whole list.</p>'; return; }
     if (st.mode === 'quiz') {
-      if (!quiz || (!quiz.retry && quiz.sig !== qsig())) buildQuiz();
+      if (!quiz || (!quiz.frozen && quiz.sig !== qsig())) buildQuiz();
       const sk = Object.entries(quiz.skipped).map(([k, v]) => `${DL.KIND_HEAD[k]}: ${v} drug${v === 1 ? '' : 's'} without a question`);
-      cnt.textContent = quiz.retry ? `Retrying ${quiz.list.length} missed question${quiz.list.length === 1 ? '' : 's'} · New questions starts over on ${drugs}`
+      cnt.textContent = quiz.frozen ? `Frozen set: ${quiz.list.length} item${quiz.list.length === 1 ? '' : 's'} · the filters (now ${drugs}) apply after it`
         : `${drugs} · ${quiz.list.length} question${quiz.list.length === 1 ? '' : 's'}` + (sk.length ? ` (${sk.join(', ')}; see About this list)` : '');
       out.innerHTML = quiz.list.length ? `<div class="dlqlist">${quiz.list.map(qblock).join('')}</div>`
         : '<p class="dlempty">Choose at least one kind under Ask about, or widen the filters.</p>';
       const sc = pane.querySelector('#dlscore'); if (sc) sc.textContent = scoreLine();
     } else if (st.mode === 'recall') {
       cnt.textContent = drugs;
+      // the worked example follows the list: never a drug that is now in it
+      const rex = pane.querySelector('#dlrex'); if (rex) rex.innerHTML = recallExample();
       out.innerHTML = `<div class="dlgrid">${list.map(rcard).join('')}</div>`;
     } else {
       cnt.textContent = drugs;
@@ -550,7 +848,7 @@ const DRUGLIST_UI = (() => {
     }
   }
   function render(p){
-    pane = p;
+    pane = p; FCACHE = {};
     if (!document.getElementById('dlcss')) { const s = document.createElement('style'); s.id = 'dlcss'; s.textContent = css; document.head.appendChild(s); }
     p.innerHTML = controls();
     drawList();
@@ -566,6 +864,7 @@ const DRUGLIST_UI = (() => {
         if (m.length === 1 && m[0].id !== st.chit) { showOnChart(m[0].id); drawChart(true); } else { const r = pane.querySelector('#dlcres'); if (r) r.innerHTML = chartResults(); }
       }
       else if (t.dataset && t.dataset.dl === 'typed') typed[t.dataset.id + ':' + st.rfield] = t.value;
+      else if (t.dataset && t.dataset.dl === 'ptyped') typed[t.dataset.qid] = t.value;
     });
     p.addEventListener('change', e => {
       const t = e.target, k = {dldz: 'dz', dlcls: 'cls', dlpage: 'page', dlstatus: 'status'}[t.id];
@@ -577,6 +876,12 @@ const DRUGLIST_UI = (() => {
         e.preventDefault();
         const m = chartMatches(st.cq);
         if (m.length) { showOnChart(m[0].id); drawChart(true); }
+        return;
+      }
+      if (e.key === 'Enter' && t.dataset && t.dataset.dl === 'ptyped') {
+        e.preventDefault();
+        const b = t.closest('.dlq').querySelector('[data-dl="pcheck"]');
+        if (b && !checked.has(t.dataset.qid)) b.click();
         return;
       }
       if (e.key === 'Enter' && t.dataset && t.dataset.dl === 'typed') {
@@ -604,31 +909,60 @@ const DRUGLIST_UI = (() => {
     const a = b.dataset.dl, id = b.dataset.id, d = id && DL.D.find(x => x.id === id);
     if (a === 'mode') { if (st.mode !== b.dataset.k) { st.mode = b.dataset.k; st.cfrom = null; rerender(`[data-dl="mode"][data-k="${st.mode}"]`); } }
     else if (a === 'rfield') { if (st.rfield !== b.dataset.k) { st.rfield = b.dataset.k; rerender(`[data-dl="rfield"][data-k="${st.rfield}"]`); } }
-    else if (a === 'kind') { st.kinds[b.dataset.k] = !st.kinds[b.dataset.k]; quiz = null; rerender(`[data-dl="kind"][data-k="${b.dataset.k}"]`); }
-    else if (a === 'newq') { quiz = null; rerender('[data-dl="newq"]'); }
+    else if (a === 'kind') { st.kinds[b.dataset.k] = !st.kinds[b.dataset.k]; if (!(quiz && quiz.frozen)) quiz = null; rerender(`[data-dl="kind"][data-k="${b.dataset.k}"]`); }
+    else if (a === 'newq' || a === 'back') { quiz = null; rerender(a === 'newq' ? '[data-dl="newq"]' : '#dlcount'); }
     else if (a === 'retry') {
-      const missed = quiz.list.filter(q => quiz.ans[q.id] !== undefined && !q.options[quiz.ans[q.id]].correct);
-      if (missed.length) { buildQuiz(missed); rerender(); const f = pane.querySelector('.dlq .opt'); if (f) f.focus(); }
+      if (quiz && quiz.list.some(isMissed)) { retrySet(); rerender(); const f = pane.querySelector('#dlfzh'); if (f) { f.tabIndex = -1; f.focus(); } }
     }
+    else if (a === 'practise') {
+      if (!weakSession().length) return;
+      practiseSet(); st.mode = 'quiz'; rerender(); window.scrollTo(0, 0);
+      const f = pane.querySelector('#dlfzh'); if (f) { f.tabIndex = -1; f.focus({preventScroll: true}); }
+    }
+    else if (a === 'rate' && d) {
+      const k = id + ':' + st.rfield;
+      rated[k] = b.dataset.r; note(k, 'recall', b.dataset.r, openTok[k]);
+      const c = b.closest('.dlcard'), tmp = document.createElement('div'); tmp.innerHTML = rcard(d);
+      c.replaceWith(tmp.firstElementChild);
+      const nb = pane.querySelector(`.dlcard[data-id="${CSS.escape(id)}"] [data-dl="rate"][data-r="${b.dataset.r}"]`); if (nb) nb.focus();
+      refreshSession();
+    }
+    else if (a === 'pcheck' || a === 'prate') {
+      const q = quiz && quiz.list.find(x => x.id === b.dataset.qid); if (!q) return;
+      if (a === 'pcheck') { if (checked.has(q.id)) checked.delete(q.id); else { checked.add(q.id); openTok[q.id] = ++seq; } }
+      else { rated[q.id] = b.dataset.r; quiz.ans[q.id] = b.dataset.r; note(q.drug + ':' + q.field, 'recall', b.dataset.r, openTok[q.id]); }
+      const blk = b.closest('.dlq'), tmp = document.createElement('div'); tmp.innerHTML = qblock(q);
+      blk.replaceWith(tmp.firstElementChild);
+      const nb = pane.querySelector(`.dlq[data-qid="${CSS.escape(q.id)}"] ${a === 'pcheck' ? '[data-dl="pcheck"]' : `[data-dl="prate"][data-r="${b.dataset.r}"]`}`); if (nb) nb.focus();
+      refreshSession();
+      const rb = pane.querySelector('[data-dl="retry"]'); if (rb) rb.disabled = !quiz.list.some(isMissed);
+    }
+    else if (a === 'pq' && d) startBank(DF.BY[d.id][b.dataset.f], `Drug list: ${d.name}, ${(b.dataset.f === 'target' ? tgtLabel(d) : DF.FIELDS[b.dataset.f]).toLowerCase()}`);
+    else if (a === 'pweak' && d) startBank(factsOf(d).filter(x => x.weak).flatMap(x => x.qids), `Drug list: weak facts of ${d.name}`);
+    else if (a === 'pclass') startBank(classWeak(b.dataset.cls), `Drug list: weak facts, ${DL.CLASSES[b.dataset.cls]}`);
+    else if (a === 'pall') startBank(chartFacts().filter(x => x.exam && x.weak).flatMap(x => x.qids), 'Drug list: my weak facts');
+    else if (a === 'pfield') startBank(chartFacts().filter(x => x.exam && x.weak && x.f === b.dataset.f).flatMap(x => x.qids), `Drug list: weak facts, ${DF.FIELDS[b.dataset.f].toLowerCase()}`);
     else if (a === 'pick') {
       const q = quiz && quiz.list.find(x => x.id === b.dataset.qid);
       if (!q || quiz.ans[q.id] !== undefined) return;
       quiz.ans[q.id] = +b.dataset.i;
+      if (KFIELD[q.kind]) note(q.drug + ':' + KFIELD[q.kind], 'mc', q.options[+b.dataset.i].correct ? 'knew' : 'forgot');
       const blk = b.closest('.dlq'), tmp = document.createElement('div'); tmp.innerHTML = qblock(q);
       blk.replaceWith(tmp.firstElementChild);
       const nb = pane.querySelector(`.dlq[data-qid="${CSS.escape(q.id)}"] [data-i="${b.dataset.i}"]`); if (nb) nb.focus();
       const sc = pane.querySelector('#dlscore'); if (sc) sc.textContent = scoreLine();
       const rb = pane.querySelector('[data-dl="retry"]');
-      if (rb) rb.disabled = !quiz.list.some(x => quiz.ans[x.id] !== undefined && !x.options[quiz.ans[x.id]].correct);
+      if (rb) rb.disabled = !quiz.list.some(isMissed);
+      refreshSession();
     }
     else if (a === 'check' && d) {
       const k = id + ':' + st.rfield;
-      if (checked.has(k)) checked.delete(k); else checked.add(k);
+      if (checked.has(k)) checked.delete(k); else { checked.add(k); openTok[k] = ++seq; delete rated[k]; }
       const c = b.closest('.dlcard'), tmp = document.createElement('div'); tmp.innerHTML = rcard(d);
       c.replaceWith(tmp.firstElementChild);
       const nb = pane.querySelector(`.dlcard[data-id="${CSS.escape(id)}"] [data-dl="check"]`); if (nb) nb.focus();
     }
-    else if (a === 'revealall') { filtered().forEach(x => checked.add(x.id + ':' + st.rfield)); drawList(); }
+    else if (a === 'revealall') { filtered().forEach(x => { const k = x.id + ':' + st.rfield; if (!checked.has(k)) { checked.add(k); openTok[k] = ++seq; delete rated[k]; } }); drawList(); }
     else if (a === 'hideall') { checked.clear(); drawList(); }
     else if (a === 'clearbox') { Object.keys(typed).forEach(k => delete typed[k]); drawList(); }
     else if (a === 'flag') { st[b.dataset.f] = !st[b.dataset.f]; b.setAttribute('aria-pressed', st[b.dataset.f]); drawList(); }
@@ -651,8 +985,8 @@ const DRUGLIST_UI = (() => {
     }
     else if (a === 'chit') { showOnChart(b.dataset.id); drawChart(true); const s = pane.querySelector('#dlcstat'); if (s) { s.tabIndex = -1; s.focus({preventScroll: true}); } }
     else if (a === 'cpage') {
-      st.cpage = +b.dataset.p; drawChart(!!st.chit && boxesOf(st.chit).some(x => x.page === st.cpage));
-      const nb = pane.querySelector(`[data-dl="cpage"][data-p="${st.cpage}"]`); if (nb) nb.focus();
+      st.cpage = +b.dataset.p; drawChart(!!st.chit && cellsOn(st.chit, st.cpage).length > 0);
+      const nb = pane.querySelector(`[data-dl="cpage"][data-p="${st.cpage}"]`); if (nb) nb.focus({preventScroll: true});
     }
     else if (a === 'czoom') {
       const z = +b.dataset.z;
@@ -722,5 +1056,5 @@ const DRUGLIST_UI = (() => {
       }
     };
   } catch (e) { console.error('The Drug list tab could not be added; the rest of the page is unaffected.', e); }
-  return {render, state: st};
+  return {render, state: st, events, statusOf: d => factsOf(d)};
 })();

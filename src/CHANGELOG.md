@@ -8,6 +8,20 @@ characters.
 
 Every update adds its bullets here in the same commit that makes the change.
 
+## 2026-11-08 (Drug list: frozen retry, recall ratings, your bank answers per drug)
+- Drug list, Quiz me: Retry the missed is now a named set that keeps unanswered questions and the same options.
+- During a retry, changed filters wait for "Back to the filtered list"; a line says so, nothing is mixed in.
+- Drugs with no single receptor or enzyme target now read "How it acts" instead of "Target", with the reason.
+- Recall: after Check, rate Forgot, Partly or Knew (criteria shown); only that click counts, for this visit.
+- "Practise what I forgot / partly knew": each fact comes back after other drugs of its class, in the other form.
+- New Ask about kinds: adverse effect → drug, boxed warning and photosensitizing (off by default).
+- Recall adds Why it helps and Adverse effects.
+- Browse: each card shows your saved bank answers per fact (Not practised to Kept on a later day), with Practise.
+- Browse: a line counts the Exam 1 facts you have practised and those to review, with "Practise my weak facts".
+- Every card shows its scope: Exam 1 · taught, Exam 1 · chart only (sunburn anesthetics) or Optional.
+- Adapalene is no longer flagged photosensitizing: it is "sun stable" (PCol 18), as the questions key it.
+- Chart: every cell of a drug's line is outlined, merged cells and page-break parts included.
+
 ## 2026-11-08 (Walkthroughs first; Atlas labels)
 - Topics: each topic with a narrated walkthrough now has Listen and Read guide buttons on its card.
 - Learn a topic opens a walkthrough in the Guides, its player ready, not the top of the page.
