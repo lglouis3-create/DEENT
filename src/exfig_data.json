@@ -1,0 +1,2735 @@
+{
+ "templates": {
+  "steroid": "[#6:1]1~[#6:2]~[#6:3]~[#6:4]~[#6:5]2~[#6:6]~[#6:7]~[#6:8]3~[#6:9](~[#6:10]~12~[#6:19])~[#6:11]~[#6:12]~[#6:13]4(~[#6:18])~[#6:14]~3~[#6:15]~[#6:16]~[#6:17]~4",
+  "steroid20": "[#6:1]1~[#6:2]~[#6:3]~[#6:4]~[#6:5]2~[#6:6]~[#6:7]~[#6:8]3~[#6:9](~[#6:10]~12~[#6:19])~[#6:11]~[#6:12]~[#6:13]4(~[#6:18])~[#6:14]~3~[#6:15]~[#6:16]~[#6:17](~[#6:20])~4",
+  "gonane": "[#6:1]1~[#6:2]~[#6:3]~[#6:4]~[#6:5]2~[#6:6]~[#6:7]~[#6:8]3~[#6:9](~[#6:10]~12)~[#6:11]~[#6:12]~[#6:13]4~[#6:14]~3~[#6:15]~[#6:16]~[#6:17]~4",
+  "retinoid": "[#6:1]1(-[CH3])(-[CH3])~[#6:2]~[#6:3]~[#6:4]~[#6:5](-[CH3])~[#6:6]~1~[#6:7]~[#6:8]~[#6:9](-[CH3])~[#6:10]~[#6:11]~[#6:12]~[#6:13](-[CH3])~[#6:14]~[#6:15](~[#8])~[#8]",
+  "seco": "[CH2]=[#6:10]1~[#6:1]~[#6:2]~[#6:3]~[#6:4]~[#6:5]~1=[#6:6]~[#6:7]=[#6:8](~[CH2:9])~[CH1:14]",
+  "azelaic": "[#8]~[#6:1](~[#8])~[#6:2]~[#6:3]~[#6:4]~[#6:5]~[#6:6]~[#6:7]~[#6:8]~[#6:9](~[#8])~[#8]"
+ },
+ "figs": [
+  {
+   "id": "aha-poll",
+   "qids": [
+    "S4-120"
+   ],
+   "title": "Polleve-4: find each COOH, step to the α carbon, look for an OH there",
+   "caption": "The five structures of DPAW slide 45, drawn from the Atlas. Marked on each: the COOH, the carbon next to its carbon (α), and an OH on an α carbon (or on the β carbon). The line under each is worked out from the same marked atoms: three are alpha-hydroxy acids. Rule: slide 44, \"OH on alpha-C (i.e., carbon next to -CO2H)\"; \"Hydroxy group needs to be ... on the carbon that is next to the carboxylic acid\" (T@23455–23600).",
+   "slides": [
+    44,
+    45
+   ],
+   "panels": [
+    {
+     "key": "tartaric acid",
+     "auto": "hydroxy-acid",
+     "analysis_smiles": "OC(=O)C(O)C(O)C(=O)O"
+    },
+    {
+     "key": "glycolic acid",
+     "auto": "hydroxy-acid",
+     "analysis_smiles": "OCC(=O)O"
+    },
+    {
+     "key": "isobutyric acid",
+     "name": "Isobutyric acid",
+     "auto": "hydroxy-acid",
+     "analysis_smiles": "CC(C)C(=O)O"
+    },
+    {
+     "key": "polleve-4 cyclopropyl hydroxy diacid",
+     "name": "Cyclopropyl diacid",
+     "auto": "hydroxy-acid",
+     "analysis_smiles": "OC(=O)C1(CC1)C(O)C(=O)O"
+    },
+    {
+     "key": "2-hydroxycyclohexanecarboxylic acid",
+     "name": "2-Hydroxycyclohexane-1-carboxylic acid",
+     "auto": "hydroxy-acid",
+     "analysis_smiles": "OC(=O)C1CCCCC1O"
+    }
+   ],
+   "rows": [
+    [
+     0,
+     1,
+     2
+    ],
+    [
+     3,
+     4
+    ]
+   ],
+   "bl": 40,
+   "yesno": true
+  },
+  {
+   "id": "aha-glycolic",
+   "qids": [
+    "S4-055"
+   ],
+   "title": "Glycolic acid: the OH sits on the α carbon, the carbon next to the COOH",
+   "caption": "Glycolic acid, HO-CH2-COOH, from the Atlas (DPAW slide 43). The hydroxy acid SAR of slide 44: a COOH group, and the OH on the alpha carbon, the carbon next to CO2H.",
+   "slides": [
+    43,
+    44
+   ],
+   "panels": [
+    {
+     "key": "glycolic acid",
+     "auto": "hydroxy-acid"
+    }
+   ],
+   "bl": 40
+  },
+  {
+   "id": "bha-salicylic",
+   "qids": [
+    "S4-056"
+   ],
+   "title": "Salicylic acid: count from the COOH carbon, α then β; the OH is on β",
+   "caption": "Salicylic acid from the Atlas (DPAW slide 43). The ring carbon next to the COOH carbon is alpha and carries no OH; the OH is on the next carbon, beta, two carbons from the COOH carbon (T@22090–22230).",
+   "slides": [
+    43
+   ],
+   "panels": [
+    {
+     "key": "salicylic acid",
+     "auto": "hydroxy-acid"
+    }
+   ],
+   "bl": 40
+  },
+  {
+   "id": "aha-lactic",
+   "qids": [
+    "S4-063"
+   ],
+   "title": "2-Hydroxypropanoic acid has its OH on C2, the α carbon; 2-hydroxybenzoic acid on the β carbon",
+   "caption": "Lactic acid (2-hydroxypropanoic acid, DPAW slide 68) and salicylic acid (2-hydroxybenzoic acid, slide 43) from the Atlas, marked by the slide 44 test: an OH on the alpha carbon, the carbon next to CO2H. The other two options are not drawn.",
+   "slides": [
+    44,
+    68
+   ],
+   "panels": [
+    {
+     "key": "lactic acid",
+     "name": "2-Hydroxypropanoic acid (lactic acid)",
+     "auto": "hydroxy-acid"
+    },
+    {
+     "key": "salicylic acid",
+     "name": "2-Hydroxybenzoic acid (salicylic acid)",
+     "auto": "hydroxy-acid"
+    }
+   ],
+   "bl": 40
+  },
+  {
+   "id": "aha-r",
+   "qids": [
+    "S4-064"
+   ],
+   "title": "The hydroxy acid SAR: COOH, OH on the α carbon, and R (mostly alkyl) on that carbon",
+   "caption": "The slide 44 SAR drawn on its own example (R = CH3, lactic acid), from the Atlas: R is the group on the alpha carbon, \"mostly archal [alkyl] groups\" (T@22839–23200).",
+   "slides": [
+    44
+   ],
+   "panels": [
+    {
+     "key": "alpha-hydroxy acid",
+     "name": "α-Hydroxy acid (R = CH₃)",
+     "auto": "hydroxy-acid",
+     "marks": [
+      {
+       "label": "R: alkyl",
+       "style": "diff",
+       "smarts": "[CH3:1][CX4][CX3](=O)[OH]"
+      }
+     ]
+    }
+   ],
+   "bl": 40
+  },
+  {
+   "id": "steroid-rings",
+   "qids": [
+    "S3-069",
+    "S3-070"
+   ],
+   "title": "Rings A, B and C are six-membered; ring D (C13–C17) is five-membered",
+   "caption": "Hydrocortisone from the Atlas, numbered as on DPAW slide 20. Ring D, the five-membered ring, carries the side chain at C17.",
+   "slides": [
+    20
+   ],
+   "panels": [
+    {
+     "key": "hydrocortisone",
+     "template": "steroid",
+     "rings": [
+      {
+       "label": "A",
+       "pos": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        10
+       ]
+      },
+      {
+       "label": "B",
+       "pos": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+       ]
+      },
+      {
+       "label": "C",
+       "pos": [
+        8,
+        9,
+        11,
+        12,
+        13,
+        14
+       ]
+      },
+      {
+       "label": "D",
+       "pos": [
+        13,
+        14,
+        15,
+        16,
+        17
+       ]
+      }
+     ],
+     "numbers": [
+      13,
+      14,
+      15,
+      16,
+      17
+     ],
+     "marks": [
+      {
+       "label": "ring D: five-membered",
+       "style": "diff",
+       "pos": [
+        13,
+        14,
+        15,
+        16,
+        17
+       ],
+       "dir": 30
+      }
+     ]
+    }
+   ],
+   "bl": 34
+  },
+  {
+   "id": "steroid-c10",
+   "qids": [
+    "S3-072"
+   ],
+   "title": "C10: the A/B junction carbon that carries the methyl C19",
+   "caption": "The numbering skeleton of DPAW slide 20, from the Atlas: C1 to C10 around rings A and B, C11 to C17 through rings C and D, C18 on C13, C19 on C10, the side chain from C20 on C17 (T 1003–1016, 1084–1092).",
+   "slides": [
+    20
+   ],
+   "panels": [
+    {
+     "key": "steroid numbering skeleton",
+     "name": "Steroid numbering (slide 20)",
+     "template": "steroid20",
+     "rings": [
+      {
+       "label": "A",
+       "pos": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        10
+       ]
+      },
+      {
+       "label": "B",
+       "pos": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+       ]
+      },
+      {
+       "label": "C",
+       "pos": [
+        8,
+        9,
+        11,
+        12,
+        13,
+        14
+       ]
+      },
+      {
+       "label": "D",
+       "pos": [
+        13,
+        14,
+        15,
+        16,
+        17
+       ]
+      }
+     ],
+     "numbers": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20
+     ],
+     "marks": [
+      {
+       "label": "C10",
+       "style": "key",
+       "pos": [
+        10
+       ]
+      },
+      {
+       "label": "C19",
+       "style": "diff",
+       "pos": [
+        19
+       ]
+      }
+     ]
+    }
+   ],
+   "bl": 34
+  },
+  {
+   "id": "steroid-c11",
+   "qids": [
+    "S3-073"
+   ],
+   "title": "C11: in ring C, next to ring B",
+   "caption": "The numbering skeleton of DPAW slide 20, from the Atlas. \"If you know where your 1 is, you know where your 11 is, and your 17\" (T 1098–1099).",
+   "slides": [
+    20
+   ],
+   "panels": [
+    {
+     "key": "steroid numbering skeleton",
+     "name": "Steroid numbering (slide 20)",
+     "template": "steroid20",
+     "rings": [
+      {
+       "label": "A",
+       "pos": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        10
+       ]
+      },
+      {
+       "label": "B",
+       "pos": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+       ]
+      },
+      {
+       "label": "C",
+       "pos": [
+        8,
+        9,
+        11,
+        12,
+        13,
+        14
+       ]
+      },
+      {
+       "label": "D",
+       "pos": [
+        13,
+        14,
+        15,
+        16,
+        17
+       ]
+      }
+     ],
+     "numbers": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20
+     ],
+     "marks": [
+      {
+       "label": "C11",
+       "style": "key",
+       "pos": [
+        11
+       ]
+      }
+     ]
+    }
+   ],
+   "bl": 34
+  },
+  {
+   "id": "steroid-c17",
+   "qids": [
+    "S3-074"
+   ],
+   "title": "C17: the side chain starts with C20 on C17",
+   "caption": "The numbering skeleton of DPAW slide 20, from the Atlas. C17 is the last ring carbon in ring D; the side chain begins with C20 (T 1015–1016, 1088–1090).",
+   "slides": [
+    20
+   ],
+   "panels": [
+    {
+     "key": "steroid numbering skeleton",
+     "name": "Steroid numbering (slide 20)",
+     "template": "steroid20",
+     "rings": [
+      {
+       "label": "A",
+       "pos": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        10
+       ]
+      },
+      {
+       "label": "B",
+       "pos": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+       ]
+      },
+      {
+       "label": "C",
+       "pos": [
+        8,
+        9,
+        11,
+        12,
+        13,
+        14
+       ]
+      },
+      {
+       "label": "D",
+       "pos": [
+        13,
+        14,
+        15,
+        16,
+        17
+       ]
+      }
+     ],
+     "numbers": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20
+     ],
+     "marks": [
+      {
+       "label": "C17",
+       "style": "key",
+       "pos": [
+        17
+       ]
+      },
+      {
+       "label": "side chain (C20)",
+       "style": "diff",
+       "pos": [
+        20
+       ]
+      }
+     ]
+    }
+   ],
+   "bl": 34
+  },
+  {
+   "id": "steroid-c19",
+   "qids": [
+    "S3-075"
+   ],
+   "title": "The angular methyls: C18 on C13, C19 on C10",
+   "caption": "The numbering skeleton of DPAW slide 20, from the Atlas. After C17 the two angular methyls are numbered: C18 on C13 first, then C19 on C10 (T 1012–1014, 1088–1089).",
+   "slides": [
+    20
+   ],
+   "panels": [
+    {
+     "key": "steroid numbering skeleton",
+     "name": "Steroid numbering (slide 20)",
+     "template": "steroid20",
+     "rings": [
+      {
+       "label": "A",
+       "pos": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        10
+       ]
+      },
+      {
+       "label": "B",
+       "pos": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+       ]
+      },
+      {
+       "label": "C",
+       "pos": [
+        8,
+        9,
+        11,
+        12,
+        13,
+        14
+       ]
+      },
+      {
+       "label": "D",
+       "pos": [
+        13,
+        14,
+        15,
+        16,
+        17
+       ]
+      }
+     ],
+     "numbers": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20
+     ],
+     "marks": [
+      {
+       "label": "C19 on C10",
+       "style": "key",
+       "pos": [
+        19,
+        10
+       ]
+      },
+      {
+       "label": "C18 on C13",
+       "style": "diff",
+       "pos": [
+        18,
+        13
+       ]
+      }
+     ]
+    }
+   ],
+   "bl": 34
+  },
+  {
+   "id": "gc-sar4",
+   "qids": [
+    "S3-077"
+   ],
+   "title": "The four SAR features on one glucocorticoid",
+   "caption": "Fluticasone propionate, the Atlas's example of the four features of DPAW slide 20 (drawn on slide 24): C1–C2 double bond, 6α-halogen, 9α-halogen, 11β-OH (T 1019–1075). α bonds are hashed (away from you), β bonds wedged (toward you).",
+   "slides": [
+    20,
+    24
+   ],
+   "panels": [
+    {
+     "key": "glucocorticoid sar",
+     "name": "Fluticasone propionate",
+     "template": "steroid",
+     "rings": [
+      {
+       "label": "A",
+       "pos": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        10
+       ]
+      },
+      {
+       "label": "B",
+       "pos": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+       ]
+      },
+      {
+       "label": "C",
+       "pos": [
+        8,
+        9,
+        11,
+        12,
+        13,
+        14
+       ]
+      },
+      {
+       "label": "D",
+       "pos": [
+        13,
+        14,
+        15,
+        16,
+        17
+       ]
+      }
+     ],
+     "marks": [
+      {
+       "label": "C1–C2 double bond",
+       "style": "key",
+       "pos": [
+        1,
+        2
+       ],
+       "dir": 215
+      },
+      {
+       "label": "6α-halogen",
+       "style": "key",
+       "subst": 6,
+       "el": "F",
+       "wedge": "alpha"
+      },
+      {
+       "label": "9α-halogen",
+       "style": "key",
+       "subst": 9,
+       "el": "F",
+       "wedge": "alpha",
+       "dir": 165
+      },
+      {
+       "label": "11β-OH",
+       "style": "key",
+       "subst": 11,
+       "el": "O",
+       "wedge": "beta",
+       "dir": 110
+      }
+     ]
+    }
+   ],
+   "bl": 34
+  },
+  {
+   "id": "gc-11beta",
+   "qids": [
+    "S3-078"
+   ],
+   "title": "The halogens are α (hashed), the C11 hydroxyl is β (wedged)",
+   "caption": "Fluticasone propionate from the Atlas (DPAW slides 20, 24): 6α-X and 9α-X point away from you, the 11β-OH toward you (T 1067–1072).",
+   "slides": [
+    20,
+    24
+   ],
+   "panels": [
+    {
+     "key": "glucocorticoid sar",
+     "name": "Fluticasone propionate",
+     "template": "steroid",
+     "marks": [
+      {
+       "label": "6α-X",
+       "style": "diff",
+       "subst": 6,
+       "el": "F",
+       "wedge": "alpha"
+      },
+      {
+       "label": "9α-X",
+       "style": "diff",
+       "subst": 9,
+       "el": "F",
+       "wedge": "alpha"
+      },
+      {
+       "label": "11β-OH",
+       "style": "key",
+       "subst": 11,
+       "el": "O",
+       "wedge": "beta"
+      }
+     ]
+    }
+   ],
+   "bl": 34
+  },
+  {
+   "id": "gc-9alpha",
+   "qids": [
+    "S3-079"
+   ],
+   "title": "The 9α-halogen of the slide 24 derivatives is fluorine",
+   "caption": "Fluticasone propionate from the Atlas (DPAW slide 24), one of the derivatives with a 9α-fluorine.",
+   "slides": [
+    24
+   ],
+   "panels": [
+    {
+     "key": "glucocorticoid sar",
+     "name": "Fluticasone propionate",
+     "template": "steroid",
+     "numbers": [
+      9
+     ],
+     "marks": [
+      {
+       "label": "9α-halogen: fluorine",
+       "style": "key",
+       "subst": 9,
+       "el": "F",
+       "wedge": "alpha"
+      }
+     ]
+    }
+   ],
+   "bl": 34
+  },
+  {
+   "id": "gc-c1c2",
+   "qids": [
+    "S3-080"
+   ],
+   "title": "The added C1–C2 double bond: hydrocortisone beside clobetasol propionate",
+   "caption": "Both from the Atlas, as compared on DPAW slide 25: ring A of hydrocortisone has a single bond between C1 and C2; clobetasol propionate has the double bond (T 1175–1179).",
+   "slides": [
+    25
+   ],
+   "panels": [
+    {
+     "key": "hydrocortisone",
+     "template": "steroid",
+     "numbers": [
+      1,
+      2
+     ],
+     "marks": [
+      {
+       "label": "C1–C2: no double bond",
+       "style": "diff",
+       "pos": [
+        1,
+        2
+       ]
+      }
+     ]
+    },
+    {
+     "key": "clobetasol propionate",
+     "name": "Clobetasol propionate",
+     "template": "steroid",
+     "numbers": [
+      1,
+      2
+     ],
+     "marks": [
+      {
+       "label": "C1–C2 double bond",
+       "style": "key",
+       "pos": [
+        1,
+        2
+       ]
+      }
+     ]
+    }
+   ],
+   "bl": 30
+  },
+  {
+   "id": "gc-hc-clob",
+   "qids": [
+    "S3-094"
+   ],
+   "title": "Hydrocortisone to clobetasol propionate: groups added and a C1–C2 double bond",
+   "caption": "Both from the Atlas, as compared on DPAW slide 25. Marked on clobetasol propionate are the changes he pointed to on hydrocortisone, \"not metabolism\" (T 1140–1145, 1175–1179).",
+   "slides": [
+    25
+   ],
+   "panels": [
+    {
+     "key": "hydrocortisone",
+     "template": "steroid"
+    },
+    {
+     "key": "clobetasol propionate",
+     "name": "Clobetasol propionate",
+     "template": "steroid20",
+     "marks": [
+      {
+       "label": "C1–C2 double bond",
+       "style": "key",
+       "pos": [
+        1,
+        2
+       ]
+      },
+      {
+       "label": "9α-F",
+       "style": "key",
+       "subst": 9,
+       "el": "F",
+       "wedge": "alpha",
+       "src": "atlas:hydrocortisone"
+      },
+      {
+       "label": "16-CH₃",
+       "style": "key",
+       "subst": 16,
+       "el": "C",
+       "src": "atlas:hydrocortisone"
+      },
+      {
+       "label": "17-propionate",
+       "style": "key",
+       "smarts": "[CH3:1][CH2:2][C:3](=[O:4])[O:5][C;R]",
+       "src": "atlas:hydrocortisone"
+      }
+     ]
+    }
+   ],
+   "bl": 30
+  },
+  {
+   "id": "gc-hbonds",
+   "qids": [
+    "S3-084"
+   ],
+   "title": "The groups that hydrogen-bond in the receptor, and one that cannot",
+   "caption": "Hydrocortisone from the Atlas; the hydrogen bonds of DPAW slide 23: C3 carbonyl (two), 11β-OH, C20 carbonyl, C21-OH, 17α-OH (T 1131–1139). The C18 methyl has no hydrogen-bond donor or acceptor.",
+   "slides": [
+    20,
+    23
+   ],
+   "panels": [
+    {
+     "key": "hydrocortisone",
+     "template": "steroid20",
+     "marks": [
+      {
+       "label": "C3 carbonyl",
+       "style": "key",
+       "subst": 3,
+       "el": "O"
+      },
+      {
+       "label": "11β-OH",
+       "style": "key",
+       "subst": 11,
+       "el": "O",
+       "wedge": "beta"
+      },
+      {
+       "label": "17α-OH",
+       "style": "key",
+       "subst": 17,
+       "el": "O",
+       "wedge": "alpha"
+      },
+      {
+       "label": "C20 carbonyl",
+       "style": "key",
+       "subst": 20,
+       "el": "O"
+      },
+      {
+       "label": "C21-OH",
+       "style": "key",
+       "smarts": "[CX3](=O)[CH2:1][OH:2]"
+      },
+      {
+       "label": "C18 methyl",
+       "style": "diff",
+       "pos": [
+        18
+       ]
+      }
+     ]
+    }
+   ],
+   "bl": 34
+  },
+  {
+   "id": "gc-hbond-count",
+   "qids": [
+    "S3-083"
+   ],
+   "title": "Six hydrogen bonds, from five groups",
+   "caption": "Hydrocortisone from the Atlas, with the receptor residues of DPAW slide 23 (T 1131–1139). The C3 carbonyl makes two of the six.",
+   "slides": [
+    23
+   ],
+   "panels": [
+    {
+     "key": "hydrocortisone",
+     "template": "steroid20",
+     "marks": [
+      {
+       "label": "C3 carbonyl: Arg611, Gln570",
+       "style": "key",
+       "subst": 3,
+       "el": "O"
+      },
+      {
+       "label": "11-OH: Asn564",
+       "style": "key",
+       "subst": 11,
+       "el": "O"
+      },
+      {
+       "label": "17-OH: Gln642",
+       "style": "key",
+       "subst": 17,
+       "el": "O"
+      },
+      {
+       "label": "C20 carbonyl: Thr739",
+       "style": "key",
+       "subst": 20,
+       "el": "O"
+      },
+      {
+       "label": "21-OH: Asn564",
+       "style": "key",
+       "smarts": "[CX3](=O)[CH2:1][OH:2]"
+      }
+     ]
+    }
+   ],
+   "bl": 34
+  },
+  {
+   "id": "gc-11hsd-c11",
+   "qids": [
+    "S3-100"
+   ],
+   "title": "11β: the β-oriented OH on carbon 11",
+   "caption": "Hydrocortisone from the Atlas (DPAW slide 26), numbered as on slide 20: 11β-HSD acts at C11, where hydrocortisone carries its 11β-OH (wedged: toward the viewer).",
+   "slides": [
+    20,
+    26
+   ],
+   "panels": [
+    {
+     "key": "hydrocortisone",
+     "template": "steroid",
+     "numbers": [
+      11
+     ],
+     "marks": [
+      {
+       "label": "11β-OH",
+       "style": "key",
+       "subst": 11,
+       "el": "O",
+       "wedge": "beta"
+      }
+     ]
+    }
+   ],
+   "bl": 32
+  },
+  {
+   "id": "gc-11hsd",
+   "qids": [
+    "S3-101"
+   ],
+   "title": "Hydrocortisone's 11β-OH, cortisone's C11 ketone",
+   "caption": "Both from the Atlas, as drawn on DPAW slide 26: 11β-HSD oxidizes the 11β-OH of hydrocortisone to the 11-ketone of cortisone. The 11β-OH is one of the SAR features of slide 20.",
+   "slides": [
+    26
+   ],
+   "panels": [
+    {
+     "key": "hydrocortisone",
+     "template": "steroid",
+     "numbers": [
+      11
+     ],
+     "marks": [
+      {
+       "label": "11β-OH",
+       "style": "key",
+       "subst": 11,
+       "el": "O",
+       "wedge": "beta"
+      }
+     ]
+    },
+    {
+     "key": "cortisone",
+     "template": "steroid",
+     "numbers": [
+      11
+     ],
+     "marks": [
+      {
+       "label": "C11 ketone",
+       "style": "diff",
+       "subst": 11,
+       "el": "O"
+      }
+     ]
+    }
+   ],
+   "bl": 30
+  },
+  {
+   "id": "vitd-bring",
+   "qids": [
+    "S4-006"
+   ],
+   "title": "UV light opens the B ring of 7-dehydrocholesterol",
+   "caption": "Both from the Atlas (DPAW slide 27). The atoms of ring B are marked in both; in cholecalciferol (vitamin D3) the ring is open (Vitamin D reading (Endotext), lines 60–62).",
+   "slides": [
+    27
+   ],
+   "panels": [
+    {
+     "key": "7-dehydrocholesterol",
+     "name": "7-Dehydrocholesterol",
+     "template": "steroid",
+     "marks": [
+      {
+       "label": "B ring",
+       "style": "diff",
+       "pos": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+       ]
+      }
+     ]
+    },
+    {
+     "key": "cholecalciferol",
+     "name": "Cholecalciferol (vitamin D3)",
+     "template": "seco",
+     "marks": [
+      {
+       "label": "B ring opened",
+       "style": "diff",
+       "pos": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+       ]
+      }
+     ]
+    }
+   ],
+   "bl": 28
+  },
+  {
+   "id": "vitd-seco",
+   "qids": [
+    "S4-005"
+   ],
+   "title": "A secosteroid: a steroid with one ring opened",
+   "caption": "From the Atlas (DPAW slide 27): ring B, closed in 7-dehydrocholesterol, is open in calcipotriene, as in cholecalciferol (T@2989–3200).",
+   "slides": [
+    27
+   ],
+   "panels": [
+    {
+     "key": "7-dehydrocholesterol",
+     "name": "7-Dehydrocholesterol",
+     "template": "steroid",
+     "marks": [
+      {
+       "label": "B ring",
+       "style": "diff",
+       "pos": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+       ]
+      }
+     ]
+    },
+    {
+     "key": "calcipotriene",
+     "name": "Calcipotriene",
+     "template": "seco",
+     "marks": [
+      {
+       "label": "B ring opened",
+       "style": "diff",
+       "pos": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+       ]
+      }
+     ]
+    }
+   ],
+   "bl": 28
+  },
+  {
+   "id": "limus-diff",
+   "qids": [
+    "S4-018"
+   ],
+   "title": "Pimecrolimus and tacrolimus: Cl vs OH, ethyl vs allyl",
+   "caption": "Both from the Atlas (DPAW slide 28, where the two differences are highlighted): pimecrolimus carries Cl and an ethyl group, tacrolimus OH and an allyl group (T@4600–4780). The macrolide skeletons otherwise match.",
+   "slides": [
+    28
+   ],
+   "panels": [
+    {
+     "key": "pimecrolimus",
+     "marks": [
+      {
+       "label": "Cl",
+       "style": "key",
+       "smarts": "[Cl]"
+      },
+      {
+       "label": "ethyl",
+       "style": "diff",
+       "smarts": "[CH3:1][CH2:2][CH1;R]"
+      }
+     ]
+    },
+    {
+     "key": "tacrolimus",
+     "marks": [
+      {
+       "label": "OH",
+       "style": "key",
+       "smarts": "[OX2H1:1][CH1;r6]"
+      },
+      {
+       "label": "allyl",
+       "style": "diff",
+       "smarts": "[CH2:1]=[CH:2][CH2:3][CH1;R]"
+      }
+     ]
+    }
+   ],
+   "bl": 22
+  },
+  {
+   "id": "limus-lactone",
+   "qids": [
+    "S4-020"
+   ],
+   "title": "The circled group: an ester inside the ring, a lactone",
+   "caption": "Pimecrolimus from the Atlas (DPAW slide 32, Polleve-3). The -C(=O)-O- link is part of the large ring: a cyclic ester, a lactone (slide 28: \"Macrolide or lactone immunosuppressants\").",
+   "slides": [
+    28,
+    32
+   ],
+   "panels": [
+    {
+     "key": "pimecrolimus",
+     "marks": [
+      {
+       "label": "lactone: cyclic ester",
+       "style": "key",
+       "smarts": "[#6;R:1](=[OX1:2])[OX2;R:3][#6;R:4]"
+      }
+     ]
+    }
+   ],
+   "bl": 24
+  },
+  {
+   "id": "lactone-lactam",
+   "qids": [
+    "S4-021"
+   ],
+   "title": "A ring closed through an ester (lactone) or through amides (lactam)",
+   "caption": "Pimecrolimus (DPAW slides 28, 32) and cyclosporine (slide 33), from the Atlas. Each amide bond of cyclosporine's ring is marked.",
+   "slides": [
+    28,
+    32,
+    33
+   ],
+   "panels": [
+    {
+     "key": "pimecrolimus",
+     "marks": [
+      {
+       "label": "lactone: cyclic ester",
+       "style": "key",
+       "smarts": "[#6;R:1](=[OX1:2])[OX2;R:3][#6;R:4]"
+      }
+     ]
+    },
+    {
+     "key": "cyclosporine",
+     "name": "Cyclosporine",
+     "marks": [
+      {
+       "label": "lactam: cyclic amide",
+       "style": "diff",
+       "smarts": "[#6;R:1](=[OX1:2])[#7;R:3]",
+       "all": true
+      }
+     ]
+    }
+   ],
+   "bl": 20
+  },
+  {
+   "id": "cyclosporine-amides",
+   "qids": [
+    "S4-038",
+    "S4-039"
+   ],
+   "title": "Cyclosporine: amide bonds closed into a ring, a cyclic amide (lactam)",
+   "caption": "Cyclosporine from the Atlas (DPAW slide 33): eleven amino acids joined by amide (peptide) bonds, every one marked, closed into a ring (T@12100–12254).",
+   "slides": [
+    33
+   ],
+   "panels": [
+    {
+     "key": "cyclosporine",
+     "name": "Cyclosporine",
+     "marks": [
+      {
+       "label": "cyclic amide (lactam)",
+       "style": "key",
+       "smarts": "[#6;R:1](=[OX1:2])[#7;R:3]",
+       "all": true
+      }
+     ]
+    }
+   ],
+   "bl": 22
+  },
+  {
+   "id": "mtx-folic",
+   "qids": [
+    "S4-032"
+   ],
+   "title": "Methotrexate and folic acid: N-CH₃ for N-H, NH₂ for OH",
+   "caption": "Both from the Atlas, side by side as on DPAW slide 31: the same pteridine, p-aminobenzoic acid and glutamic acid parts; the two points of difference are marked (T@8700–8800).",
+   "slides": [
+    30,
+    31
+   ],
+   "panels": [
+    {
+     "key": "methotrexate",
+     "name": "Methotrexate",
+     "marks": [
+      {
+       "label": "N-CH₃",
+       "style": "key",
+       "smarts": "[CH3:1][N:2](c)[CH2]"
+      },
+      {
+       "label": "NH₂",
+       "style": "diff",
+       "smarts": "[NH2:1]c1nc(N)nc2nccnc12"
+      }
+     ]
+    },
+    {
+     "key": "folic acid",
+     "name": "Folic acid",
+     "marks": [
+      {
+       "label": "N-H",
+       "style": "key",
+       "smarts": "[NH1:1](c)[CH2]c"
+      },
+      {
+       "label": "OH",
+       "style": "diff",
+       "smarts": "[OH:1]c1nc(N)nc2nccnc12"
+      }
+     ]
+    }
+   ],
+   "bl": 24
+  },
+  {
+   "id": "mtx-sar",
+   "qids": [
+    "S4-033"
+   ],
+   "title": "The methotrexate SAR: pteridine, p-aminobenzoic acid, glutamic acid, and the N-CH₃",
+   "caption": "Methotrexate from the Atlas, marked with the SAR of DPAW slide 31 (T@10096–10900).",
+   "slides": [
+    31
+   ],
+   "panels": [
+    {
+     "key": "methotrexate",
+     "name": "Methotrexate",
+     "marks": [
+      {
+       "label": "pteridine ring",
+       "style": "key",
+       "smarts": "[#6:1]1:[#7:2]:[#6:3]:[#7:4]:[#6:5]2:[#7:6]:[#6:7]:[#6:8]:[#7:9]:[#6:10]:1:2"
+      },
+      {
+       "label": "p-aminobenzoic acid",
+       "style": "acid",
+       "smarts": "[NH0,NH1:1]([CH2])[c:2]1[c:3][c:4][c:5]([c:6][c:7]1)[C:8](=[O:9])"
+      },
+      {
+       "label": "glutamic acid",
+       "style": "key",
+       "smarts": "[NH1:1][CH1:2]([CH2:3][CH2:4][C:5](=[O:6])[OH:7])[C:8](=[O:9])[OH:10]"
+      },
+      {
+       "label": "N-CH₃: essential",
+       "style": "diff",
+       "smarts": "[CH3:1][N:2](c)[CH2]"
+      }
+     ]
+    }
+   ],
+   "bl": 26
+  },
+  {
+   "id": "mtx-pteridine",
+   "qids": [
+    "S4-034"
+   ],
+   "title": "The pteridine ring stays aromatic",
+   "caption": "Methotrexate from the Atlas (DPAW slide 31): the SAR keeps the aromatic pteridine \"intact\" (T@10700–10800).",
+   "slides": [
+    31
+   ],
+   "panels": [
+    {
+     "key": "methotrexate",
+     "name": "Methotrexate",
+     "marks": [
+      {
+       "label": "pteridine ring: aromatic",
+       "style": "key",
+       "smarts": "[#6:1]1:[#7:2]:[#6:3]:[#7:4]:[#6:5]2:[#7:6]:[#6:7]:[#6:8]:[#7:9]:[#6:10]:1:2"
+      }
+     ]
+    }
+   ],
+   "bl": 26
+  },
+  {
+   "id": "mtx-amines",
+   "qids": [
+    "S4-035"
+   ],
+   "title": "The aromatic amines on the pteridine, and the one N-methyl that is required",
+   "caption": "Methotrexate from the Atlas (DPAW slide 31): alkylating the aromatic amines lowers activity; the N-CH₃ between the pteridine and the benzoyl ring is essential (T@10583–10900).",
+   "slides": [
+    31
+   ],
+   "panels": [
+    {
+     "key": "methotrexate",
+     "name": "Methotrexate",
+     "marks": [
+      {
+       "label": "aromatic amine",
+       "style": "key",
+       "smarts": "[NH2:1]c(n)n"
+      },
+      {
+       "label": "aromatic amine",
+       "style": "key",
+       "smarts": "[NH2:1]c1nc(N)nc2nccnc12"
+      },
+      {
+       "label": "N-CH₃",
+       "style": "diff",
+       "smarts": "[CH3:1][N:2](c)[CH2]"
+      }
+     ]
+    }
+   ],
+   "bl": 26
+  },
+  {
+   "id": "mtx-essential",
+   "qids": [
+    "S4-036"
+   ],
+   "title": "Folic acid lacks the N-CH₃ and the NH₂; the N-CH₃ is the essential one",
+   "caption": "Both from the Atlas, as on DPAW slide 31 (T@8700–8800, T@10583–11050).",
+   "slides": [
+    31
+   ],
+   "panels": [
+    {
+     "key": "methotrexate",
+     "name": "Methotrexate",
+     "marks": [
+      {
+       "label": "N-CH₃: essential",
+       "style": "key",
+       "smarts": "[CH3:1][N:2](c)[CH2]"
+      },
+      {
+       "label": "NH₂",
+       "style": "diff",
+       "smarts": "[NH2:1]c1nc(N)nc2nccnc12"
+      }
+     ]
+    },
+    {
+     "key": "folic acid",
+     "name": "Folic acid",
+     "marks": [
+      {
+       "label": "N-H",
+       "style": "key",
+       "smarts": "[NH1:1](c)[CH2]c"
+      },
+      {
+       "label": "OH",
+       "style": "diff",
+       "smarts": "[OH:1]c1nc(N)nc2nccnc12"
+      }
+     ]
+    }
+   ],
+   "bl": 24
+  },
+  {
+   "id": "mtx-class",
+   "qids": [
+    "S4-028"
+   ],
+   "title": "The pteridine: the fused, nitrogen-rich two-ring system",
+   "caption": "Methotrexate from the Atlas (the pteridine is boxed on DPAW slide 31).",
+   "slides": [
+    30,
+    31
+   ],
+   "panels": [
+    {
+     "key": "methotrexate",
+     "name": "Methotrexate",
+     "marks": [
+      {
+       "label": "pteridine",
+       "style": "key",
+       "smarts": "[#6:1]1:[#7:2]:[#6:3]:[#7:4]:[#6:5]2:[#7:6]:[#6:7]:[#6:8]:[#7:9]:[#6:10]:1:2"
+      }
+     ]
+    }
+   ],
+   "bl": 26
+  },
+  {
+   "id": "taz-alkyne",
+   "qids": [
+    "S4-022"
+   ],
+   "title": "Tazarotene: the triple bond (alkyne, acetylenic) and the ethyl ester",
+   "caption": "Tazarotene from the Atlas (DPAW slides 29, 51).",
+   "slides": [
+    29,
+    51
+   ],
+   "panels": [
+    {
+     "key": "tazarotene",
+     "name": "Tazarotene",
+     "marks": [
+      {
+       "label": "alkyne (acetylenic)",
+       "style": "key",
+       "smarts": "[#6:1]#[#6:2]"
+      },
+      {
+       "label": "ethyl ester",
+       "style": "diff",
+       "smarts": "[CX3:1](=[OX1:2])[OX2:3][CH2:4][CH3:5]"
+      }
+     ]
+    }
+   ],
+   "bl": 28
+  },
+  {
+   "id": "taz-acid",
+   "qids": [
+    "S4-023"
+   ],
+   "title": "Carboxylesterase: ethyl ester in, free carboxylic acid out",
+   "caption": "Tazarotene and tazarotenic acid from the Atlas (DPAW slides 29, 51; T@6942–7125).",
+   "slides": [
+    29,
+    51
+   ],
+   "panels": [
+    {
+     "key": "tazarotene",
+     "name": "Tazarotene",
+     "marks": [
+      {
+       "label": "ethyl ester",
+       "style": "diff",
+       "smarts": "[CX3:1](=[OX1:2])[OX2:3][CH2:4][CH3:5]"
+      }
+     ]
+    },
+    {
+     "key": "tazarotenic acid",
+     "name": "Tazarotenic acid",
+     "marks": [
+      {
+       "label": "carboxylic acid",
+       "style": "key",
+       "smarts": "[CX3:1](=[OX1:2])[OX2H1:3]"
+      }
+     ]
+    }
+   ],
+   "bl": 26
+  },
+  {
+   "id": "retinoid-acid",
+   "qids": [
+    "S4-025"
+   ],
+   "title": "The exposed carboxylic acid, and the esters that must be hydrolyzed to reveal it",
+   "caption": "Adapalene, trifarotene and tazarotene from the Atlas (DPAW slide 51; T@30193–30300).",
+   "slides": [
+    50,
+    51
+   ],
+   "panels": [
+    {
+     "key": "adapalene",
+     "name": "Adapalene",
+     "marks": [
+      {
+       "label": "carboxylic acid",
+       "style": "key",
+       "smarts": "[CX3:1](=[OX1:2])[OX2H1:3]"
+      }
+     ]
+    },
+    {
+     "key": "trifarotene",
+     "name": "Trifarotene",
+     "marks": [
+      {
+       "label": "carboxylic acid",
+       "style": "key",
+       "smarts": "[CX3:1](=[OX1:2])[OX2H1:3]"
+      }
+     ]
+    },
+    {
+     "key": "tazarotene",
+     "name": "Tazarotene",
+     "marks": [
+      {
+       "label": "ester",
+       "style": "diff",
+       "smarts": "[CX3:1](=[OX1:2])[OX2:3][CH2:4][CH3:5]"
+      }
+     ]
+    }
+   ],
+   "bl": 22,
+   "rows": [
+    [
+     0,
+     1
+    ],
+    [
+     2
+    ]
+   ]
+  },
+  {
+   "id": "retinoid-active",
+   "qids": [
+    "S4-081"
+   ],
+   "title": "Adapalene and trifarotene carry an exposed carboxylic acid; tazarotene an ethyl ester",
+   "caption": "From the Atlas (DPAW slide 51; slide 29).",
+   "slides": [
+    29,
+    51
+   ],
+   "panels": [
+    {
+     "key": "adapalene",
+     "name": "Adapalene",
+     "marks": [
+      {
+       "label": "exposed carboxylic acid",
+       "style": "key",
+       "smarts": "[CX3:1](=[OX1:2])[OX2H1:3]"
+      }
+     ]
+    },
+    {
+     "key": "trifarotene",
+     "name": "Trifarotene",
+     "marks": [
+      {
+       "label": "exposed carboxylic acid",
+       "style": "key",
+       "smarts": "[CX3:1](=[OX1:2])[OX2H1:3]"
+      }
+     ]
+    },
+    {
+     "key": "tazarotene",
+     "name": "Tazarotene",
+     "marks": [
+      {
+       "label": "ethyl ester",
+       "style": "diff",
+       "smarts": "[CX3:1](=[OX1:2])[OX2:3][CH2:4][CH3:5]"
+      }
+     ]
+    }
+   ],
+   "bl": 22,
+   "rows": [
+    [
+     0,
+     1
+    ],
+    [
+     2
+    ]
+   ]
+  },
+  {
+   "id": "etretinate-acitretin",
+   "qids": [
+    "S4-078"
+   ],
+   "title": "Etretinate (ethyl ester) and acitretin, its active form",
+   "caption": "From the Atlas (DPAW slide 50): carboxylesterases hydrolyze the ethyl ester of etretinate to acitretin (T@28898–29700).",
+   "slides": [
+    50
+   ],
+   "panels": [
+    {
+     "key": "etretinate",
+     "name": "Etretinate",
+     "marks": [
+      {
+       "label": "ethyl ester",
+       "style": "diff",
+       "smarts": "[CX3:1](=[OX1:2])[OX2:3][CH2:4][CH3:5]"
+      }
+     ]
+    },
+    {
+     "key": "acitretin",
+     "name": "Acitretin",
+     "marks": [
+      {
+       "label": "active form",
+       "style": "key",
+       "smarts": "[CX3:1](=[OX1:2])[OX2H1:3]"
+      }
+     ]
+    }
+   ],
+   "bl": 24
+  },
+  {
+   "id": "retinoid-generations",
+   "qids": [
+    "S4-074"
+   ],
+   "title": "Generations by aromatic rings: none, one, several",
+   "caption": "From the Atlas (DPAW slides 49–51): tretinoin (1st, non-aromatic), etretinate (2nd, mono-aromatic), adapalene (3rd, poly-aromatic). Every aromatic ring is marked.",
+   "slides": [
+    49,
+    50,
+    51
+   ],
+   "panels": [
+    {
+     "key": "tretinoin",
+     "name": "Tretinoin (1st)",
+     "verdict": "non-aromatic"
+    },
+    {
+     "key": "etretinate",
+     "name": "Etretinate (2nd)",
+     "verdict": "mono-aromatic",
+     "marks": [
+      {
+       "label": "aromatic ring",
+       "style": "key",
+       "smarts": "[a:1]1[a:2][a:3][a:4][a:5][a:6]1"
+      }
+     ]
+    },
+    {
+     "key": "adapalene",
+     "name": "Adapalene (3rd)",
+     "verdict": "poly-aromatic",
+     "marks": [
+      {
+       "label": "aromatic rings",
+       "style": "key",
+       "smarts": "[a:1]1[a:2][a:3][a:4][a:5][a:6]1",
+       "all": true
+      }
+     ]
+    }
+   ],
+   "bl": 22,
+   "rows": [
+    [
+     0,
+     1
+    ],
+    [
+     2
+    ]
+   ]
+  },
+  {
+   "id": "retinoid-cis",
+   "qids": [
+    "S4-075"
+   ],
+   "title": "All-trans (tretinoin) and 13-cis (isotretinoin): the only difference",
+   "caption": "Both from the Atlas, numbered as he counted on DPAW slide 49: carbon 1 is the ring carbon with the two methyls (T@28100–28540).",
+   "slides": [
+    49
+   ],
+   "panels": [
+    {
+     "key": "tretinoin",
+     "name": "Tretinoin (all-trans)",
+     "template": "retinoid",
+     "numbers": [
+      1,
+      7,
+      9,
+      11,
+      13
+     ],
+     "marks": [
+      {
+       "label": "all-trans",
+       "style": "key",
+       "pos": [
+        13,
+        14
+       ]
+      }
+     ]
+    },
+    {
+     "key": "isotretinoin",
+     "name": "Isotretinoin (13-cis)",
+     "template": "retinoid",
+     "numbers": [
+      1,
+      7,
+      9,
+      11,
+      13
+     ],
+     "marks": [
+      {
+       "label": "13-cis",
+       "style": "diff",
+       "pos": [
+        13,
+        14
+       ]
+      }
+     ]
+    }
+   ],
+   "bl": 26
+  },
+  {
+   "id": "retinoid-c13",
+   "qids": [
+    "S4-076"
+   ],
+   "title": "Count from carbon 1: the double bond at carbon 13 is the cis one",
+   "caption": "Isotretinoin and tretinoin from the Atlas. Carbon 1 is the ring carbon carrying the two methyl groups (DPAW slide 49); counting along the chain, the double bond at carbon 13, the last before the COOH, is cis in isotretinoin and trans in tretinoin (T@28100–28470).",
+   "slides": [
+    49
+   ],
+   "panels": [
+    {
+     "key": "isotretinoin",
+     "name": "Isotretinoin",
+     "template": "retinoid",
+     "numbers": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+     ],
+     "marks": [
+      {
+       "label": "C13: cis",
+       "style": "diff",
+       "pos": [
+        13,
+        14
+       ]
+      },
+      {
+       "label": "carbon 1",
+       "style": "key",
+       "pos": [
+        1
+       ],
+       "dir": 0
+      }
+     ]
+    },
+    {
+     "key": "tretinoin",
+     "name": "Tretinoin",
+     "template": "retinoid",
+     "numbers": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+     ],
+     "marks": [
+      {
+       "label": "C13: trans",
+       "style": "key",
+       "pos": [
+        13,
+        14
+       ]
+      },
+      {
+       "label": "carbon 1",
+       "style": "key",
+       "pos": [
+        1
+       ],
+       "dir": 0
+      }
+     ]
+    }
+   ],
+   "bl": 26
+  },
+  {
+   "id": "bpo-peroxide",
+   "qids": [
+    "S4-070"
+   ],
+   "title": "The peroxide bond (O–O) breaks: benzoyl radical",
+   "caption": "Benzoyl peroxide and the radical from the Atlas (DPAW slide 47).",
+   "slides": [
+    47
+   ],
+   "panels": [
+    {
+     "key": "benzoyl peroxide",
+     "name": "Benzoyl peroxide",
+     "marks": [
+      {
+       "label": "peroxide bond",
+       "style": "key",
+       "smarts": "[OX2:1][OX2:2]"
+      }
+     ]
+    },
+    {
+     "key": "benzoyl radical",
+     "name": "Benzoyl radical",
+     "marks": [
+      {
+       "label": "radical",
+       "style": "diff",
+       "smarts": "[OX1;v1:1]"
+      }
+     ]
+    }
+   ],
+   "bl": 28
+  },
+  {
+   "id": "steroid-spiro",
+   "qids": [
+    "S4-085"
+   ],
+   "title": "Spironolactone: the A–D steroid nucleus with a lactone ring at C17",
+   "caption": "Spironolactone from the Atlas (DPAW slide 53).",
+   "slides": [
+    53
+   ],
+   "panels": [
+    {
+     "key": "spironolactone",
+     "name": "Spironolactone",
+     "template": "steroid",
+     "rings": [
+      {
+       "label": "A",
+       "pos": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        10
+       ]
+      },
+      {
+       "label": "B",
+       "pos": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+       ]
+      },
+      {
+       "label": "C",
+       "pos": [
+        8,
+        9,
+        11,
+        12,
+        13,
+        14
+       ]
+      },
+      {
+       "label": "D",
+       "pos": [
+        13,
+        14,
+        15,
+        16,
+        17
+       ]
+      }
+     ],
+     "numbers": [
+      17
+     ],
+     "marks": [
+      {
+       "label": "lactone ring at C17",
+       "style": "diff",
+       "smarts": "[C:1]1(=[O:2])[CH2:3][CH2:4][C:5][O:6]1"
+      }
+     ]
+    }
+   ],
+   "bl": 30
+  },
+  {
+   "id": "steroid-nucleus",
+   "qids": [
+    "S4-084"
+   ],
+   "title": "The steroid nucleus: rings A, B, C, D",
+   "caption": "Ethinyl estradiol, the Atlas's example of the steroid nucleus (DPAW slide 52): three six-membered rings and one five-membered ring, stacked.",
+   "slides": [
+    52,
+    53
+   ],
+   "panels": [
+    {
+     "key": "steroid nucleus",
+     "name": "Ethinyl estradiol",
+     "template": "gonane",
+     "rings": [
+      {
+       "label": "A",
+       "pos": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        10
+       ]
+      },
+      {
+       "label": "B",
+       "pos": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+       ]
+      },
+      {
+       "label": "C",
+       "pos": [
+        8,
+        9,
+        11,
+        12,
+        13,
+        14
+       ]
+      },
+      {
+       "label": "D",
+       "pos": [
+        13,
+        14,
+        15,
+        16,
+        17
+       ]
+      }
+     ],
+     "marks": [
+      {
+       "label": "steroid nucleus",
+       "style": "key",
+       "pos": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+       ]
+      }
+     ]
+    }
+   ],
+   "bl": 30
+  },
+  {
+   "id": "flutamide-spiro",
+   "qids": [
+    "S4-087"
+   ],
+   "title": "Steroidal spironolactone, non-steroidal flutamide",
+   "caption": "Both from the Atlas (DPAW slide 53).",
+   "slides": [
+    53
+   ],
+   "panels": [
+    {
+     "key": "flutamide",
+     "name": "Flutamide",
+     "verdict": "non-steroidal"
+    },
+    {
+     "key": "spironolactone",
+     "name": "Spironolactone",
+     "template": "steroid",
+     "verdict": "steroidal",
+     "marks": [
+      {
+       "label": "steroid",
+       "style": "key",
+       "pos": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+       ]
+      }
+     ]
+    }
+   ],
+   "bl": 26
+  },
+  {
+   "id": "azelaic-c9",
+   "qids": [
+    "S4-089"
+   ],
+   "title": "Azelaic acid: nine carbons in a line, a COOH at each end",
+   "caption": "Azelaic acid from the Atlas (DPAW slide 54: \"A C9 bi-carboxylic acid\").",
+   "slides": [
+    54
+   ],
+   "panels": [
+    {
+     "key": "azelaic acid",
+     "name": "Azelaic acid",
+     "template": "azelaic",
+     "numbers": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+     ],
+     "level": true,
+     "marks": [
+      {
+       "label": "COOH",
+       "style": "acid",
+       "smarts": "[CX3:1](=[OX1:2])[OX2H1:3]",
+       "match": 0
+      },
+      {
+       "label": "COOH",
+       "style": "acid",
+       "smarts": "[CX3:1](=[OX1:2])[OX2H1:3]",
+       "match": 1
+      }
+     ]
+    }
+   ],
+   "bl": 30
+  },
+  {
+   "id": "tetra-vs-steroid",
+   "qids": [
+    "S4-091"
+   ],
+   "title": "Four rings in a line (tetracycline) or stacked (steroid)",
+   "caption": "From the Atlas: tetracycline (DPAW slide 55), rings counted 1 2 3 4 as he did (T@35205), and hydrocortisone with the A–D steroid nucleus.",
+   "slides": [
+    53,
+    55
+   ],
+   "panels": [
+    {
+     "key": "tetracycline",
+     "name": "Tetracycline: in a line",
+     "level": true,
+     "ring_auto": [
+      "1",
+      "2",
+      "3",
+      "4"
+     ]
+    },
+    {
+     "key": "hydrocortisone",
+     "name": "Hydrocortisone: stacked",
+     "template": "steroid",
+     "rings": [
+      {
+       "label": "A",
+       "pos": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        10
+       ]
+      },
+      {
+       "label": "B",
+       "pos": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+       ]
+      },
+      {
+       "label": "C",
+       "pos": [
+        8,
+        9,
+        11,
+        12,
+        13,
+        14
+       ]
+      },
+      {
+       "label": "D",
+       "pos": [
+        13,
+        14,
+        15,
+        16,
+        17
+       ]
+      }
+     ]
+    }
+   ],
+   "bl": 24
+  },
+  {
+   "id": "tetra-core",
+   "qids": [
+    "S4-094"
+   ],
+   "title": "The shared core structure of the tetracyclines",
+   "caption": "Tetracycline, doxycycline and minocycline from the Atlas (DPAW slide 55), each with the shared four-ring core marked.",
+   "slides": [
+    55
+   ],
+   "panels": [
+    {
+     "key": "tetracycline",
+     "name": "Tetracycline",
+     "marks": [
+      {
+       "label": "shared core",
+       "style": "key",
+       "ringatoms": true
+      }
+     ]
+    },
+    {
+     "key": "doxycycline",
+     "name": "Doxycycline",
+     "marks": [
+      {
+       "label": "shared core",
+       "style": "key",
+       "ringatoms": true
+      }
+     ]
+    },
+    {
+     "key": "minocycline",
+     "name": "Minocycline",
+     "marks": [
+      {
+       "label": "shared core",
+       "style": "key",
+       "ringatoms": true
+      }
+     ]
+    }
+   ],
+   "bl": 22,
+   "rows": [
+    [
+     0,
+     1
+    ],
+    [
+     2
+    ]
+   ]
+  },
+  {
+   "id": "crisa-class",
+   "qids": [
+    "S3-008"
+   ],
+   "title": "Benzoxaborole: a boron in a five-membered oxaborole ring, fused to a benzene ring",
+   "caption": "Crisaborole from the Atlas (DPAW slide 7).",
+   "slides": [
+    7
+   ],
+   "panels": [
+    {
+     "key": "crisaborole",
+     "name": "Crisaborole",
+     "marks": [
+      {
+       "label": "oxaborole ring",
+       "style": "key",
+       "smarts": "[B:1]1[O:2][CH2:3][c:4][c:5]1"
+      },
+      {
+       "label": "benzene ring",
+       "style": "diff",
+       "smarts": "[c:1]1[c:2][c:3][c:4]2[c:5]([c:6]1)[CH2]O[B]2"
+      }
+     ]
+    }
+   ],
+   "bl": 28
+  },
+  {
+   "id": "crisa-boron",
+   "qids": [
+    "S3-009",
+    "S3-018"
+   ],
+   "title": "The boron: the part that binds the PDE4 metals",
+   "caption": "Crisaborole from the Atlas (DPAW slide 7; T 699–719).",
+   "slides": [
+    7
+   ],
+   "panels": [
+    {
+     "key": "crisaborole",
+     "name": "Crisaborole",
+     "marks": [
+      {
+       "label": "boron",
+       "style": "key",
+       "smarts": "[B:1]"
+      }
+     ]
+    }
+   ],
+   "bl": 28
+  },
+  {
+   "id": "crisa-deboron",
+   "qids": [
+    "S3-019"
+   ],
+   "title": "Without the boron, nothing binds the metals",
+   "caption": "Crisaborole and its deboronated benzyl alcohol product, from the Atlas (DPAW slide 7; T 699–719).",
+   "slides": [
+    7
+   ],
+   "panels": [
+    {
+     "key": "crisaborole",
+     "name": "Crisaborole",
+     "marks": [
+      {
+       "label": "boron",
+       "style": "key",
+       "smarts": "[B:1]"
+      }
+     ]
+    },
+    {
+     "key": "crisaborole benzyl alcohol metabolite",
+     "name": "Benzyl alcohol product",
+     "marks": [
+      {
+       "label": "benzyl alcohol",
+       "style": "diff",
+       "smarts": "[c:1][CH2:2][OH:3]"
+      }
+     ]
+    }
+   ],
+   "bl": 26
+  },
+  {
+   "id": "anthralin-class",
+   "qids": [
+    "S3-053"
+   ],
+   "title": "Hydroxyanthrone: a tricyclic anthrone carrying hydroxyl groups",
+   "caption": "Anthralin from the Atlas (DPAW slide 17).",
+   "slides": [
+    17
+   ],
+   "panels": [
+    {
+     "key": "anthralin",
+     "name": "Anthralin",
+     "marks": [
+      {
+       "label": "anthrone",
+       "style": "key",
+       "smarts": "[c:1][C:2](=[O:3])[c:4]"
+      },
+      {
+       "label": "hydroxyl",
+       "style": "diff",
+       "smarts": "[OH:1]c",
+       "match": 0
+      },
+      {
+       "label": "hydroxyl",
+       "style": "diff",
+       "smarts": "[OH:1]c",
+       "match": 1
+      }
+     ]
+    }
+   ],
+   "bl": 30
+  },
+  {
+   "id": "methoxsalen-class",
+   "qids": [
+    "S3-061"
+   ],
+   "title": "Furanocoumarin: a furan ring fused to a coumarin (benzopyrone)",
+   "caption": "Methoxsalen from the Atlas (DPAW slide 18 marks the pyrone and furan parts).",
+   "slides": [
+    18
+   ],
+   "panels": [
+    {
+     "key": "methoxsalen",
+     "name": "Methoxsalen",
+     "marks": [
+      {
+       "label": "furan",
+       "style": "diff",
+       "smarts": "[o:1]1[c:2][c:3][c:4][c:5]1"
+      },
+      {
+       "label": "pyrone",
+       "style": "key",
+       "smarts": "[c:1]1[c:2][c:3](=[O:7])[o:4][c:5][c:6]1"
+      }
+     ]
+    }
+   ],
+   "bl": 30
+  },
+  {
+   "id": "apremilast-class",
+   "qids": [
+    "S4-044"
+   ],
+   "title": "Isoindoline (as the dione), with the methoxy and ethoxy on the other ring",
+   "caption": "Apremilast from the Atlas (DPAW slide 34 marks the isoindoline).",
+   "slides": [
+    34
+   ],
+   "panels": [
+    {
+     "key": "apremilast",
+     "name": "Apremilast",
+     "marks": [
+      {
+       "label": "isoindoline (dione)",
+       "style": "key",
+       "smarts": "[O:1]=[C:2]1[N:3][C:4](=[O:5])[c:6]2[c:7][c:8][c:9][c:10][c:11]12"
+      },
+      {
+       "label": "methoxy",
+       "style": "diff",
+       "smarts": "[CH3:1][O:2]c"
+      },
+      {
+       "label": "ethoxy",
+       "style": "diff",
+       "smarts": "[CH3:1][CH2:2][O:3]c"
+      }
+     ]
+    }
+   ],
+   "bl": 26
+  },
+  {
+   "id": "avobenzone-dbm",
+   "qids": [
+    "S4-101"
+   ],
+   "title": "Avobenzone: a dibenzoylmethane",
+   "caption": "Avobenzone from the Atlas (DPAW slide 62).",
+   "slides": [
+    62
+   ],
+   "panels": [
+    {
+     "key": "avobenzone",
+     "name": "Avobenzone",
+     "marks": [
+      {
+       "label": "dibenzoylmethane",
+       "style": "key",
+       "smarts": "[c:1][C:2](=[O:3])[CH2:4][C:5](=[O:6])[c:7]"
+      }
+     ]
+    }
+   ],
+   "bl": 26
+  },
+  {
+   "id": "meradimate-avobenzone",
+   "qids": [
+    "S4-102"
+   ],
+   "title": "Meradimate (an anthranilate) and avobenzone (a dibenzoylmethane)",
+   "caption": "Both from the Atlas (DPAW slide 62).",
+   "slides": [
+    62
+   ],
+   "panels": [
+    {
+     "key": "meradimate",
+     "name": "Meradimate",
+     "marks": [
+      {
+       "label": "anthranilate",
+       "style": "key",
+       "smarts": "[NH2:1][c:2]1[c:3][c:4][c:5][c:6][c:7]1[C:8](=[O:9])[O:10]"
+      }
+     ]
+    },
+    {
+     "key": "avobenzone",
+     "name": "Avobenzone",
+     "marks": [
+      {
+       "label": "dibenzoylmethane",
+       "style": "diff",
+       "smarts": "[c:1][C:2](=[O:3])[CH2:4][C:5](=[O:6])[c:7]"
+      }
+     ]
+    }
+   ],
+   "bl": 24
+  },
+  {
+   "id": "salicylate-ester",
+   "qids": [
+    "S4-105"
+   ],
+   "title": "The salicylate ester hydrolyzes to salicylic acid",
+   "caption": "Homosalate and salicylic acid from the Atlas (DPAW slides 64, 43; T@42535–42620).",
+   "slides": [
+    64
+   ],
+   "panels": [
+    {
+     "key": "homosalate",
+     "name": "Homosalate",
+     "marks": [
+      {
+       "label": "ester",
+       "style": "diff",
+       "smarts": "[c:1][C:2](=[O:3])[O:4][C:5]"
+      }
+     ]
+    },
+    {
+     "key": "salicylic acid",
+     "name": "Salicylic acid",
+     "marks": [
+      {
+       "label": "acid after hydrolysis",
+       "style": "key",
+       "smarts": "[CX3:1](=[OX1:2])[OX2H1:3]"
+      }
+     ]
+    }
+   ],
+   "bl": 26
+  },
+  {
+   "id": "ensulizole",
+   "qids": [
+    "S4-106"
+   ],
+   "title": "Ensulizole: a benzimidazole carrying a sulfonic acid",
+   "caption": "Ensulizole from the Atlas (DPAW slide 64).",
+   "slides": [
+    64
+   ],
+   "panels": [
+    {
+     "key": "ensulizole",
+     "name": "Ensulizole",
+     "marks": [
+      {
+       "label": "sulfonic acid",
+       "style": "diff",
+       "smarts": "[S:1](=[O:2])(=[O:3])[OH:4]"
+      },
+      {
+       "label": "benzimidazole",
+       "style": "key",
+       "smarts": "[c:1]1[c:2][c:3][c:4]2[nH:5][c:6][n:7][c:8]2[c:9]1"
+      }
+     ]
+    }
+   ],
+   "bl": 28
+  }
+ ]
+}
