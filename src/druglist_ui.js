@@ -15,11 +15,20 @@
    says what to type):
      Browse    every matching drug as a full card, all at once.
      Quiz me   multiple choice, every question for the matching drugs listed
-               at once and answered in place (target, class, indication);
-               questions come from DRUGLIST.makeQuestion (druglist_data.js),
-               which builds them from the cards' own sourced statements.
-     Recall    the drug name only, a box to type the target, mechanism, class
-               or indication, and Check to compare with the answer and source.
+               at once and answered in place. "Ask about" kinds (DL.KINDS):
+               target, class, indication; class → drug and indication →
+               drug (the reverse direction); and every other chart column:
+               chemical class, Rx/OTC, potency class (steroids) and brand
+               names (practice: Dr. Smith asks by generic name, 10/29 T
+               618–621). Target and Class are on by default, the others
+               off, so a set stays short. Questions come from
+               DRUGLIST.makeQuestion (druglist_data.js), which builds them
+               from the cards' own sourced statements and the chart's cells.
+     Recall    the drug name only, a box to type the target, mechanism, class,
+               indication, chemical class, Rx/OTC, potency class or brand,
+               and Check to compare with the answer and source. The worked
+               example names a drug that is not in the current list (or a
+               p. 7 lice/scabies line, never on the list).
      Chart     the original chart pages (chart/chart-p1.jpg ... p7, rendered
                by render_chart.py), one page at a time, with a find box: a
                generic or brand name (the same matching as the filters'
@@ -31,8 +40,8 @@
                the repository root beside slides/ and load from the same base
                as walk_ui.js uses (../ in /preview/); the service worker does
                not precache them.
-   Generic names only in Quiz me and Recall (brands are on Browse cards, as
-   reference). A score in Quiz me counts this page view only.
+   Generic names in every question except the brand kind, which asks brand to
+   generic and generic to brand. A score in Quiz me counts this page view only.
 
    Data: druglist_data.js (DRUGLIST). Targets and mechanisms are read from the
    Reference tab's "Drug targets" table (REFERENCE_HTML, rows tgt-*), the one
@@ -53,7 +62,7 @@ const DRUGLIST_UI = (() => {
   const DL = DRUGLIST, ID = 'drugs';
   const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g, c => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'}[c]));
   const NOFILTER = {q: '', dz: '', cls: '', page: '', status: '', boxed: false, photo: false, hasq: false};
-  const st = Object.assign({mode: 'browse', kinds: {target: true, cls: true, use: false}, rfield: 'target',
+  const st = Object.assign({mode: 'browse', kinds: Object.assign(...Object.keys(DRUGLIST.KINDS).map(k => ({[k]: k === 'target' || k === 'cls'}))), rfield: 'target',
     cpage: 1, chit: null, cq: '', zoom: null, cfrom: null}, NOFILTER);
   // memory only, never stored
   const typed = {}, checked = new Set();
@@ -66,7 +75,7 @@ const DRUGLIST_UI = (() => {
     ['recall', 'Recall', 'Each drug by name only. Type what you remember, press Check, and compare it yourself with the answer and its source. Not graded, not saved.'],
     ['chart', 'Chart', 'The original drug chart, page by page. Find a drug by generic or brand name to turn to its page and highlight its row. Pinch or use Zoom to read it; Open full size shows the page image on its own.'],
   ];
-  const RFIELDS = {target: 'Target', mech: 'Mechanism', cls: 'Class', use: 'Indication'};
+  const RFIELDS = {target: 'Target', mech: 'Mechanism', cls: 'Class', use: 'Indication', chem: 'Chemical class', rx: 'Rx/OTC', potency: 'Potency class', brand: 'Brand'};
 
   const css = `
 #v-drugs .dlmodes{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;margin:4px 0 6px;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:var(--paper);max-width:640px}
@@ -96,6 +105,8 @@ const DRUGLIST_UI = (() => {
 #v-drugs .dlmodebar{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 12px;margin:0 0 12px}
 #v-drugs .dlmodebar p{margin:6px 0 0;font-size:14px;line-height:1.45}
 #v-drugs .dlmodebar .ex{font-size:13.5px;color:var(--text-dim)}
+#v-drugs .dlcov{margin:6px 0;padding-left:18px}
+#v-drugs .dlcov li{margin:3px 0}
 #v-drugs .dlcount{font-size:14px;color:var(--text-dim);margin:4px 0 10px}
 #v-drugs .dlscore{font-size:15px;font-weight:600;margin:8px 0 0}
 #v-drugs .dlgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,330px),1fr));gap:12px}
@@ -213,7 +224,7 @@ const DRUGLIST_UI = (() => {
     const notes = (d.notes || []).filter(n => n.by !== 'remark'), remarks = (d.notes || []).filter(n => n.by === 'remark');
     const Q = qs(d), links = readLinks(d);
     const members = DL.D.filter(x => x.cls === d.cls && x.id !== d.id);
-    return field('f-class', 'Class', L.cls) + field('f-use', 'Indication', L.use) +
+    return field('f-class', 'Class', L.cls) + chemField(d) + field('f-note', 'Potency class', DL.potSrc(d, true)) + field('f-use', 'Indication', L.use) +
       field('f-tg', 'Target', L.tg) + field('f-mo', 'Mechanism', L.mo) +
       field('f-why', 'Why it helps (Dr. Smith)', d.why ? [d.why] : []) +
       field('f-box', 'Boxed warning', d.boxed ? [d.boxed] : []) +
@@ -232,6 +243,13 @@ const DRUGLIST_UI = (() => {
         ${links.map(([v, a, t]) => `<button type="button" class="chip" data-jump="${esc(v)}:${esc(a)}">${esc(t)}</button>`).join('')}
         ${atlasKey(d) ? `<button type="button" class="chip" data-dl="atlas" data-key="${esc(atlasKey(d))}">Atlas: structure</button>` : ''}</div>`;
   }
+  /* the chemical class: the keyed chart cell, or the cells not asked, with both sources and why */
+  function chemField(d){
+    const c = DL.CHEM[d.id];
+    if (!c) return '';
+    if (!c.no) return field('f-class', 'Chemical class', c.src);
+    return `<div class="dlf f-class"><b>Chemical class (not asked)</b><ul>${c.shown.map(li).join('')}<li>Not asked in Quiz me: ${esc(c.why)}.</li></ul></div>`;
+  }
   function readLinks(d){
     if (typeof linksFor !== 'function') return [];
     const n = {}, keep = {};
@@ -249,7 +267,7 @@ const DRUGLIST_UI = (() => {
   }
   const head = (d, withBrands) => {
     const [sc, sl] = STATUS[d.status];
-    const brands = withBrands && (d.brands || []).length ? `<p class="dlbrand">Brand${d.brands.length > 1 ? 's' : ''} (chart, reference only): ${esc(d.brands.join(', '))}</p>` : '';
+    const brands = withBrands && (d.brands || []).length ? `<p class="dlbrand">Brand${d.brands.length > 1 ? 's' : ''} (chart; Dr. Smith asks by generic name): ${esc(d.brands.join(', '))}</p>` : '';
     const alt = (d.alt || []).length ? `<p class="dlbrand">Also: ${esc(d.alt.join(', '))}</p>` : '';
     return `<h3>${esc(d.name)}</h3>${alt}${brands}
       <p class="dlmeta"><span class="dlbadge ${sc}">${esc(sl)}</span><span class="dlbadge">Chart p. ${esc(d.pages ? d.pages.join(', ') : d.page)} · ${esc(d.rx)}</span>`;
@@ -262,7 +280,9 @@ const DRUGLIST_UI = (() => {
   }
 
   /* ---------- Recall: name, box, Check ---------- */
-  const RLABEL = {target: 'its target', mech: 'its mechanism', cls: 'its class', use: 'what it is used for'};
+  const RLABEL = {target: 'its target', mech: 'its mechanism', cls: 'its class', use: 'what it is used for', chem: 'its chemical class (chart)',
+    rx: 'Rx, OTC or both (chart)', potency: 'its potency class (chart)', brand: 'its brand name(s) (chart)'};
+  const none = (cls, label, t) => `<div class="dlf ${cls}"><b>${esc(label)}</b><ul><li>${esc(t)}</li></ul></div>`;
   function recallAnswer(d){
     const L = lines(d), f = st.rfield;
     if (f === 'target') return field('f-tg', 'Target', L.tg);
@@ -270,8 +290,28 @@ const DRUGLIST_UI = (() => {
     if (f === 'mech') return L.mo.length ? field('f-tg', 'Target', L.tg) + field('f-mo', 'Mechanism', L.mo)
       : `<div class="dlf f-mo"><b>Mechanism</b><ul><li>No separate mechanism line on the Reference table; the target line is the answer.</li></ul></div>` + field('f-tg', 'Target', L.tg);
     if (f === 'cls') return field('f-class', 'Class', L.cls.length ? L.cls : [{t: DL.CLASSES[d.cls], by: 'chart', cite: 'Chart p. ' + d.page}]);
+    if (f === 'chem') return chemField(d);
+    if (f === 'rx') return field('f-note', 'Rx/OTC', DL.rxSrc(d));
+    if (f === 'potency') return d.potency ? field('f-note', 'Potency class', DL.potSrc(d, false)) : none('f-note', 'Potency class', 'No potency class: not a topical steroid (potency classes are on chart p. 6 only).');
+    if (f === 'brand') return d.brands.length ? field('f-note', 'Brand', DL.brandSrc(d).concat([DL.BRAND_QUOTE])) : none('f-note', 'Brand', 'No brand on its chart line.');
     if (L.use.length) return field('f-use', 'Indication', L.use) + offChart(DL.OFF_CHART[d.id] || []);
     return `<div class="dlf f-use"><b>Indication</b><ul><li>No indication on the chart line (chart p. 5 columns are misaligned; see About this list)${d.dz.length ? ': listed on the ' + esc(DL.PAGES[d.page]) + ' page' : ''}.</li></ul></div>` + offChart(DL.OFF_CHART[d.id] || []);
+  }
+  /* the worked example: a drug outside the current list, so it gives no cue (for the chart
+     columns, a line of chart p. 7, which is never on the list) */
+  const P7 = {cls: ['malathion 0.5% (chart p. 7, not on Exam 1)', 'Insecticide'], use: ['malathion 0.5% (chart p. 7, not on Exam 1)', 'Lice'],
+    chem: ['malathion 0.5% (chart p. 7, not on Exam 1)', 'Organophosphate'], rx: ['malathion 0.5% (chart p. 7, not on Exam 1)', 'Rx'],
+    brand: ['permethrin 1% lotion (chart p. 7, not on Exam 1)', 'Nix']};
+  function recallExample(){
+    const f = st.rfield, on = new Set(filtered().map(d => d.id)), out = DL.D.filter(d => !on.has(d.id));
+    const ex = (who, t) => `For example, ${esc(RFIELDS[f].toLowerCase())} of ${esc(who)}: <i>${esc(t)}</i>.`;
+    if (P7[f]) return ex(...P7[f]);
+    if (f === 'potency') { const d = out.find(x => x.potency); return d ? ex(d.name.toLowerCase(), DL.POTENCY[d.potency[0]]) : 'Type a class from 1 (very high potency) to 7 (least potent).'; }
+    for (const d of out) {
+      const L = lines(d), p = f === 'mech' ? L.mo[0] : DL.quizFacts(d, targets(), 'target')[0];
+      if (p) return ex(d.name.toLowerCase(), p.t);
+    }
+    return f === 'mech' ? 'Type how the drug acts on its target.' : 'Type what the drug binds or blocks: a receptor, an enzyme or a cytokine.';
   }
   function rcard(d){
     const k = d.id + ':' + st.rfield, open = checked.has(k), inp = 'dlt-' + d.id;
@@ -301,6 +341,7 @@ const DRUGLIST_UI = (() => {
     return {done: a.length, right, total: quiz.list.length};
   };
   const LET = 'ABCD';
+  const FCLS = {target: 'f-tg', cls: 'f-class', clsRev: 'f-class', chem: 'f-class', use: 'f-use', useRev: 'f-use'};
   function qblock(q){
     const pick = quiz.ans[q.id], done = pick !== undefined;
     const opts = q.options.map((o, i) => {
@@ -310,11 +351,13 @@ const DRUGLIST_UI = (() => {
     }).join('');
     const right = done && q.options[pick].correct, key = q.options.find(o => o.correct);
     const fb = !done ? '' : `<p class="dlfb">${right ? '<span class="r">Right.</span>' : `<span class="w">Not this one.</span> The answer: <b>${esc(key.t)}</b>.`}</p>
-      <div class="dlf ${q.kind === 'target' ? 'f-tg' : q.kind === 'cls' ? 'f-class' : 'f-use'}"><b>Source</b><ul>${q.src.map(li).join('')}</ul></div>
+      <div class="dlf ${FCLS[q.kind] || 'f-note'}"><b>Source</b><ul>${q.src.map(li).join('')}</ul></div>
       ${q.also.length ? `<p class="dlfb">Also true for ${esc(q.name)}: ${esc(q.also.join('; '))}.</p>` : ''}
       ${offChart(q.offChart || [])}
       <div class="dlrow">${chartBtn(DL.D.find(x => x.id === q.drug))}</div>`;
-    return `<div class="dlq" data-qid="${esc(q.id)}"><p class="dlqh">${esc(q.name)} · ${esc(DL.KINDS[q.kind])}</p>
+    // a question whose answer is the drug does not name it above the stem
+    const rev = q.kind === 'useRev' || q.kind === 'clsRev' || (q.kind === 'brand' && q.dir === 'rev');
+    return `<div class="dlq" data-qid="${esc(q.id)}"><p class="dlqh">${rev ? '' : esc(q.name) + ' · '}${esc(DL.KIND_HEAD[q.kind])}</p>
       <p class="stem" id="dlqs-${esc(q.id)}">${esc(q.stem)}</p>
       <div role="group" aria-labelledby="dlqs-${esc(q.id)}">${opts}</div><div aria-live="polite">${fb}</div></div>`;
   }
@@ -424,13 +467,14 @@ const DRUGLIST_UI = (() => {
       const anyMissed = quiz && quiz.list.some(q => quiz.ans[q.id] !== undefined && !q.options[quiz.ans[q.id]].correct);
       modebar = `<div class="dlmodebar"><div class="dlchips" role="group" aria-label="Ask about"><span class="lab">Ask about:</span>
         ${Object.entries(DL.KINDS).map(([k, v]) => `<button type="button" class="chip" data-dl="kind" data-k="${k}" aria-pressed="${!!st.kinds[k]}">${esc(v)}</button>`).join('')}</div>
+        ${st.kinds.brand ? `<p class="ex">Brand names are practice: Dr. Smith, 10/29: ${esc(DL.BRAND_QUOTE.t)} (T 618–621).</p>` : ''}
         <p class="dlscore" id="dlscore" aria-live="polite">${quiz ? scoreLine() : ''}</p>
         <div class="dlchips"><button type="button" class="btn sm" data-dl="newq">New questions</button>
         <button type="button" class="btn sm ghost" data-dl="retry"${anyMissed ? '' : ' disabled'}>Retry the missed</button></div></div>`;
     } else if (st.mode === 'recall') {
       modebar = `<div class="dlmodebar"><div class="dlchips" role="radiogroup" aria-label="What to recall"><span class="lab">Recall:</span>
         ${Object.entries(RFIELDS).map(([k, v]) => `<button type="button" class="chip" role="radio" data-dl="rfield" data-k="${k}" aria-checked="${st.rfield === k}" aria-pressed="${st.rfield === k}" tabindex="${st.rfield === k ? 0 : -1}">${esc(v)}</button>`).join('')}</div>
-        <p>Type what you remember in the box under each drug, then press Check (or Enter). For example, target of tacrolimus: <i>calcineurin (via FKBP)</i>. Spelling and wording don't matter: compare your words with the answer yourself.</p>
+        <p>Type what you remember in the box under each drug, then press Check (or Enter). ${recallExample()} Spelling and wording don't matter: compare your words with the answer yourself.</p>
         <div class="dlchips"><button type="button" class="btn sm ghost" data-dl="revealall">Check all</button>
         <button type="button" class="btn sm ghost" data-dl="hideall">Hide all answers</button>
         <button type="button" class="btn sm ghost" data-dl="clearbox">Empty the boxes</button></div></div>`;
@@ -464,11 +508,18 @@ const DRUGLIST_UI = (() => {
     </section>`}
     <details class="dlnote"><summary>About this list and the chart</summary>
       <p>Each professor's slides and recording decide what is examinable for that professor's material (Dr. Smith's lectures; Dr. Sikazwe's assigned pages); the chart is a guide. Each line names its source: <span class="dlsrc smith">Dr. Smith · slide</span> <span class="dlsrc sikazwe">Dr. Sikazwe · DPAW page</span> <span class="dlsrc chart">Drug chart · page</span></p>
-      <p>Targets and mechanisms come from Reference, "Drug targets: write it first, then check". Not here: the lice and scabies page (chart p. 7), which is not in the Exam 1 lectures (it is shown in Chart, the original pages). Brand names are reference information from the chart; Dr. Smith asks by generic name, so Quiz me and Recall show generic names only.</p>
+      <p>Targets and mechanisms come from Reference, "Drug targets: write it first, then check". Not here: the lice and scabies page (chart p. 7), which is not in the Exam 1 lectures (it is shown in Chart, the original pages). Brand names are practice only: Dr. Smith, 10/29: ${esc(DL.BRAND_QUOTE.t)} (T 618–621). Every question uses the generic name except the brand kind.</p>
       <p>Quiz me asks only what the cards state: a wrong option is another drug's value that is not also true for this drug. Drugs whose chart line names no molecular target (sunscreens, sunburn anesthetics, keratolytics, tars, petrolatum, ketoconazole, spironolactone, dapsone, metronidazole) get no target question; practise those in Recall.</p>
-      <ul>${DL.CHART_NOTES.map(n => `<li>${esc(n)}</li>`).join('')}</ul></details>
+      <ul>${DL.CHART_NOTES.map(n => `<li>${esc(n)}</li>`).join('')}</ul>
+      <p>Quiz me coverage, per kind (of ${DL.D.length} drugs):</p><ul class="dlcov">${coverageList()}</ul></details>
     ${chart ? '<div id="dlcview"></div>' : `<p class="dlcount" id="dlcount" aria-live="polite"></p>
     <div id="dllist"></div>`}`;
+  }
+  let COV = null;
+  function coverageList(){
+    COV = COV || DL.coverage(targets());
+    return Object.entries(COV).map(([k, o]) => `<li><b>${esc(DL.KIND_HEAD[k])}</b>: ${o.n} drugs get a question` +
+      (Object.keys(o.none).length ? '; none for ' + Object.entries(o.none).map(([r, ns]) => ns.length > 12 ? `${ns.length} (${esc(r)})` : `${ns.length} (${esc(r)}: ${esc(ns.join(', '))})`).join('; ') : '') + '.</li>').join('');
   }
   function drawList(){
     if (st.mode === 'chart') { drawChart(false); return; }
@@ -480,11 +531,11 @@ const DRUGLIST_UI = (() => {
     if (!list.length) { cnt.textContent = drugs; out.innerHTML = '<p class="dlempty">No drug matches this search and these filters. Clear filters to see the whole list.</p>'; return; }
     if (st.mode === 'quiz') {
       if (!quiz || (!quiz.retry && quiz.sig !== qsig())) buildQuiz();
-      const sk = Object.entries(quiz.skipped).map(([k, v]) => `${v} without a ${DL.KINDS[k].toLowerCase()} question`);
+      const sk = Object.entries(quiz.skipped).map(([k, v]) => `${DL.KIND_HEAD[k]}: ${v} drug${v === 1 ? '' : 's'} without a question`);
       cnt.textContent = quiz.retry ? `Retrying ${quiz.list.length} missed question${quiz.list.length === 1 ? '' : 's'} · New questions starts over on ${drugs}`
         : `${drugs} · ${quiz.list.length} question${quiz.list.length === 1 ? '' : 's'}` + (sk.length ? ` (${sk.join(', ')}; see About this list)` : '');
       out.innerHTML = quiz.list.length ? `<div class="dlqlist">${quiz.list.map(qblock).join('')}</div>`
-        : '<p class="dlempty">Choose at least one of Target, Class or Indication above, or widen the filters.</p>';
+        : '<p class="dlempty">Choose at least one kind under Ask about, or widen the filters.</p>';
       const sc = pane.querySelector('#dlscore'); if (sc) sc.textContent = scoreLine();
     } else if (st.mode === 'recall') {
       cnt.textContent = drugs;

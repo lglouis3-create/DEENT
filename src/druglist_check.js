@@ -20,6 +20,15 @@
    - neither file writes to any storage (localStorage, sessionStorage,
      IndexedDB, cookies), comments aside;
    - druglist_ui.js does nothing in a stub DOM (the node checks' engine);
+   - every chart column (Louis, 2026-11-08): the kinds class → drug,
+     indication → drug, chemical class, Rx/OTC, potency class and brand names
+     (practice) are generated 60 times per drug and kind: 4 options (Rx/OTC:
+     its three), exactly one correct, the key the drug's own chart value, no
+     wrong option true for the drug (own brand, chemical family, other potency
+     line, a drug with the use or class asked), a brand only in brand
+     questions, a cited source on every answer; no chemical-class key from a
+     blank, conflicting or one-row-off cell; the per-kind coverage is printed
+     and must match the About line;
    - the original chart pages (chart_boxes.js, from render_chart.py): every
      page image exists in chart/ at its recorded size; every in-scope chart
      line has a box on its card's page(s) and every p. 7 line one in `other`;
@@ -137,7 +146,7 @@ console.log('=== Quiz me (multiple choice) and Recall ===');
 {
   const rngOf = seed => () => { seed |= 0; seed = seed + 0x6D2B79F5 | 0; let t = Math.imul(seed ^ seed >>> 15, 1 | seed);
     t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t; return ((t ^ t >>> 14) >>> 0) / 4294967296; };
-  const RUNS = 60, kinds = Object.keys(DL.KINDS);
+  const RUNS = 60, kinds = ['target', 'cls', 'use'], ALLK = Object.keys(DL.KINDS);
   const brandRe = new RegExp('\\b(' + [...new Set(DL.D.flatMap(d => d.brands || []))].map(b => b.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|') + ')\\b', 'i');
   const made = {}, bad = {shape: [], one: [], distinct: [], keyed: [], trueWrong: [], famWrong: [], sameClass: [], brand: [], src: [], unstable: []};
   for (const k of kinds) {
@@ -205,7 +214,7 @@ console.log('=== Quiz me (multiple choice) and Recall ===');
   const ocQ = [];
   for (const [id, ns] of Object.entries(OC)) {
     const d = DL.D.find(x => x.id === id);
-    for (let r = 0; r < 200; r++) for (const k of kinds) {
+    for (let r = 0; r < 200; r++) for (const k of ALLK) {
       const q = DL.makeQuestion(d, T, k, rngOf(r));
       if (!q) continue;
       if ((k === 'use') !== (q.offChart.length === ns.length && q.offChart.length > 0)) ocQ.push(`${id}:${k} note`);
@@ -236,6 +245,128 @@ console.log('=== Quiz me (multiple choice) and Recall ===');
   check(DL.D.every(d => d.chartClass || d.cls === 'tnf'), 'Recall: every card has a sourced class line');
   const ui = code('druglist_ui.js');
   check(!/data-dl="(next|prev|flash)"|>\s*Next\s*</.test(ui), 'the Drug list has no Next button and no one-card-at-a-time mode');
+
+  console.log('=== Every chart column (Louis, 2026-11-08): the new kinds ===');
+  const NEW = ['clsRev', 'useRev', 'chem', 'rx', 'potency', 'brand'];
+  check(NEW.every(k => DL.KINDS[k] && DL.KIND_HEAD[k]) && /Dr\. Smith's exam questions use generic names/.test(DL.KINDS.brand),
+    'Ask about lists class → drug, indication → drug, chemical class, Rx/OTC, potency class and brand names (labelled practice)');
+  check(/k === 'target' \|\| k === 'cls'/.test(ui), 'Ask about: Target and Class on by default, every other kind off');
+  check(/RFIELDS = \{[^}]*chem:[^}]*rx:[^}]*potency:[^}]*brand:/.test(ui), 'Recall offers chemical class, Rx/OTC, potency class and brand');
+  check(!/target of tacrolimus/.test(ui) && /function recallExample/.test(ui), 'the Recall example is chosen outside the current list (no fixed tacrolimus example)');
+  const bq = DL.BRAND_QUOTE;
+  check(bq.by === 'smith' && bq.cite === '10/29 T 618–621' && /You will, you will need to know brand name\. I only ask questions using the generic name/.test(bq.t),
+    'the brand kind cites Dr. Smith, 10/29 T 618–621 ("You will need to know brand name"; she asks by generic name)');
+  const nm = DL.norm, byName = {}; DL.D.forEach(d => { byName[nm(d.name)] = d; });
+  const brandOwner = {}; DL.D.forEach(d => d.brands.forEach(b => (brandOwner[nm(b)] = brandOwner[nm(b)] || []).push(d.id)));
+  // an independent reading of "the same chemical family" (not the data file's own CHEM_FAM)
+  const CHEM_GROUPS = [['steroid', 'vitamin d'], ['oxide', 'zn'], ['peptide', 'protein'], ['sulfon', 'pteridine', 'aminobenzoic', 'pyrimidine'], ['macrol', 'lactone', 'lactam'], ['retinoid'], ['salicyl']];
+  const sameChem = (a, b) => { a = nm(a).replace(/s\b/g, ''); b = nm(b).replace(/s\b/g, ''); return a === b || CHEM_GROUPS.some(g => g.some(x => a.includes(x)) && g.some(x => b.includes(x))); };
+  const bad2 = {shape: [], one: [], distinct: [], key: [], wrong: [], brand: [], name: [], src: [], unstable: []};
+  const made2 = {}, N2 = RUNS * NEW.length * DL.D.length;
+  for (const k of NEW) {
+    made2[k] = 0;
+    for (const d of DL.D) {
+      let nulls = 0;
+      for (let r = 0; r < RUNS; r++) {
+        const q = DL.makeQuestion(d, T, k, r === RUNS - 1 ? Math.random : rngOf(r * 104729 + d.id.length * 31 + k.length));
+        if (!q) { nulls++; continue; }
+        const tag = `${d.id}:${k}`, o = q.options, right = o.filter(x => x.correct), wrong = o.filter(x => !x.correct), key = right[0] && right[0].t;
+        if (k === 'rx' ? o.length !== 3 || o.map(x => x.t).join('|') !== DL.RX_OPTS.join('|') : o.length !== 4) bad2.shape.push(tag);
+        if (right.length !== 1) bad2.one.push(tag);
+        if (new Set(o.map(x => nm(x.t))).size !== o.length) bad2.distinct.push(tag);
+        const W = (why, t) => bad2.wrong.push(`${tag} ${t} (${why})`);
+        if (k === 'brand' && q.dir === 'fwd') {
+          if (!d.brands.includes(key) || !q.stem.includes(d.name)) bad2.key.push(tag);
+          for (const w of wrong) { const own = brandOwner[nm(w.t)] || [];
+            if (d.brands.some(b => nm(b) === nm(w.t))) W('own brand', w.t);
+            if (!own.length || own.some(id => DL.brandBlocked(id, d.id))) W('not another drug\'s brand', w.t); }
+        } else if (k === 'brand') {
+          if (key !== d.name || !d.brands.includes(q.brand) || !q.stem.includes(q.brand) || q.stem.includes(d.name)) bad2.key.push(tag);
+          for (const w of wrong) { const o2 = byName[nm(w.t)];
+            if (!o2 || o2.brands.some(b => nm(b) === nm(q.brand)) || DL.brandBlocked(o2.id, d.id)) W('has this brand', w.t); }
+        } else if (k === 'rx') {
+          const ls = DL.rxLines(d), m = q.stem.match(/potency class (\d) line/);
+          const want = m ? ls.find(l => l.pot === m[1]).rx : ls[0].rx;
+          if (key !== want || (!m && new Set(ls.map(l => l.rx)).size > 1)) bad2.key.push(tag);
+        } else if (k === 'chem') {
+          const c = DL.CHEM[d.id];
+          if (!c || c.no || key !== c.t) bad2.key.push(tag);
+          for (const w of wrong) {
+            if (DL.chemFam(w.t) === DL.chemFam(c.t) || sameChem(w.t, c.t)) W('same chemical family', w.t);
+            if (!DL.D.some(x => DL.CHEM[x.id] && !DL.CHEM[x.id].no && DL.CHEM[x.id].t === w.t)) W('not a keyed chart value', w.t);
+          }
+        } else if (k === 'potency') {
+          if (!d.potency || !d.potency.map(p => DL.POTENCY[p]).includes(key)) bad2.key.push(tag);
+          for (const w of wrong) if (d.potency.map(p => DL.POTENCY[p]).includes(w.t) || !Object.values(DL.POTENCY).includes(w.t)) W('true or unknown class', w.t);
+        } else if (k === 'useRev') {
+          if (key !== d.name || !DL.hasUse(d, T, q.z) || !DL.quizFacts(d, T, 'use').some(v => v.z === q.z)) bad2.key.push(tag);
+          for (const w of wrong) { const o2 = byName[nm(w.t)];
+            if (!o2 || DL.hasUse(o2, T, q.z) || DL.D.some(x => x.cls === o2.cls && DL.hasUse(x, T, q.z)) || DL.OPEN_USE.has(o2.cls)) W('has this use (itself or its class)', w.t); }
+        } else if (k === 'clsRev') {
+          if (key !== d.name || !q.stem.includes(DL.CLASSES[d.cls])) bad2.key.push(tag);
+          for (const w of wrong) { const o2 = byName[nm(w.t)];
+            if (!o2 || o2.cls === d.cls || DL.conflicts(o2.cls, d.cls)) W('in this class or an overlapping one', w.t); }
+        }
+        // generic names everywhere except the brand kind; a brand only in brand questions
+        if (k !== 'brand' && (brandRe.test(q.stem) || o.some(x => brandRe.test(x.t)))) bad2.brand.push(tag);
+        if (['chem', 'rx', 'potency'].includes(k) && !q.stem.includes(d.name)) bad2.name.push(tag);
+        if (['useRev', 'clsRev'].includes(k) && q.stem.includes(d.name)) bad2.name.push(tag);
+        if (!q.src.length || !q.src.every(citeOk) || (k !== 'brand' && k !== 'useRev' && k !== 'clsRev' && !q.src.some(s => s.by === 'chart')) ||
+            (k === 'brand' && !(q.src.some(s => s.by === 'chart') && q.src.includes(bq)))) bad2.src.push(tag);
+      }
+      if (nulls && nulls !== RUNS) bad2.unstable.push(`${d.id}:${k}`);
+      if (!nulls) made2[k]++;
+    }
+  }
+  check(!bad2.shape.length, `every new question has 4 options (Rx/OTC: the column's three, Rx / OTC / Rx and OTC) (${N2} questions over ${RUNS} draws per drug and kind)`, u(bad2.shape));
+  check(!bad2.one.length, 'every new question has exactly one correct option', u(bad2.one));
+  check(!bad2.distinct.length, 'the options of every new question are distinct (normalized text)', u(bad2.distinct));
+  check(!bad2.key.length, 'the correct option is the drug\'s own chart value (or the drug, in the reverse kinds)', u(bad2.key));
+  check(!bad2.wrong.length, 'no wrong option is true for the drug: not its own brand or a brand of hydrocortisone/its valerate; not its chemical family; not its other potency line; no drug with the use or class asked, or in an overlapping class', u(bad2.wrong));
+  check(!bad2.brand.length, 'a brand name appears only in brand questions', u(bad2.brand));
+  check(!bad2.name.length, 'chemical class, Rx/OTC and potency stems name the generic; reverse stems do not name the answer', u(bad2.name));
+  check(!bad2.src.length, 'every new answer shows a cited source (the chart page for chart columns; brand: the chart and Dr. Smith\'s 10/29 words)', u(bad2.src));
+  check(!bad2.unstable.length, 'a drug and kind either always or never get a question', u(bad2.unstable));
+  // keys from conflicts, misaligned or blank cells
+  const DECL = {blank: 'acitretin,benzocaine,bpo,lidocaine,salicylic,sulfur,tetracaine', group: 'dibucaine',
+    conflict: 'pimecrolimus,ruxolitinib,tacrolimus,tofacitinib,upadacitinib', offset: 'apremilast,cyclosporine,ketoconazole,petrolatum'};
+  const declOk = Object.entries(DECL).every(([c, ids]) => DL.D.filter(d => DL.CHEM[d.id] && DL.CHEM[d.id].no === c).map(d => d.id).sort().join(',') === ids);
+  check(declOk && DL.D.every(d => DL.CHEM[d.id]), 'chemical class: every card has a keyed cell or a recorded reason (blank 7, therapeutic group 1, conflict 5, p. 5 offset 4)');
+  const declQ = DL.D.filter(d => DL.CHEM[d.id].no && [0, 1, 2].some(r => DL.makeQuestion(d, T, 'chem', rngOf(r))));
+  check(!declQ.length, 'no chemical-class question is built from a blank, conflicting or one-row-off cell', declQ.map(d => d.id).join(', '));
+  const declShown = DL.D.filter(d => DL.CHEM[d.id].no && (!DL.CHEM[d.id].why || (DL.CHEM[d.id].no !== 'blank' && !DL.CHEM[d.id].shown.length) || !DL.CHEM[d.id].shown.every(citeOk)));
+  check(!declShown.length, 'each chemical class not asked shows its reason, and the cells and slides behind it with sources', declShown.map(d => d.id).join(', '));
+  const conflictBoth = ['pimecrolimus', 'tacrolimus', 'ruxolitinib', 'upadacitinib', 'tofacitinib'].filter(id => {
+    const sh = DL.CHEM[id].shown; return !(sh.some(s => s.by === 'chart' && /Peptides/.test(s.t)) && sh.some(s => s.by !== 'chart')); });
+  check(!conflictBoth.length, 'the "Peptides" conflicts show both the chart cell and the lecture source', conflictBoth.join(', '));
+  const p5 = ['methoxsalen', 'zincoxide'].filter(id => { const c = DL.CHEM[id]; return id === 'methoxsalen' ? !c.src.some(s => s.by === 'sikazwe' && /DPAW 18/.test(s.cite)) : !/^Chart p\. 1$/.test(c.src[0].cite); });
+  check(!p5.length, 'p. 5 offset rows keyed only with a slide (methoxsalen: furanocoumarin, DPAW 18); zinc oxide keyed from its aligned p. 1 cell', p5.join(', '));
+  const ab = ['guselkumab', 'tildrakizumab', 'risankizumab', 'secukinumab', 'brodalumab', 'ixekizumab'].filter(id => !DL.CHEM[id].src.some(s => s.by === 'smith' && /antibod/i.test(s.t)));
+  check(!ab.length, 'the six p. 5 antibodies ("Peptides (Proteins)" read across the page break) each carry the slide that says antibody', ab.join(', '));
+  // brands
+  const noBrand = DL.D.filter(d => !d.brands.length).map(d => d.id).sort().join(',');
+  check(noBrand === 'avobenzone,azithromycin,bemotrizinol,dioxybenzone,erythromycin,homosalate,meradimate,octinoxate,octisalate,oxybenzone,padimate,spironolactone,tio2,zpt' && made2.brand === 65,
+    `brand: 65 drugs get a question; the 14 with no brand on the chart get none (${made2.brand})`);
+  const typo = [['secukinumab', 'Cosentyx', 'Consentyx'], ['petrolatum', 'Vaseline', 'Vasoline'], ['selenium', 'Selsun Blue', 'Selsum Blue'], ['desonide', 'Desonate', 'Desonate (Desonide)']]
+    .filter(([id, good, printed]) => { const d = DL.D.find(x => x.id === id); return !d.brands.includes(good) || d.brands.includes(printed) || !DL.brandSrc(d).some(s => s.t.includes(`the chart prints "${printed}"`)); });
+  check(!typo.length, 'brand typos: the key is the correct spelling and the source line shows the chart\'s print (Consentyx, Vasoline, Selsum Blue, Desonate (Desonide))', typo.map(t => t[0]).join(', '));
+  // Rx/OTC
+  const rxv = id => DL.rxLines(DL.D.find(x => x.id === id)).map(l => l.rx).join('|');
+  check(rxv('lidocaine') === 'Rx and OTC' && rxv('adapalene') === 'Rx and OTC' && rxv('hydrocortisone') === 'Rx|OTC' && rxv('zincoxide') === 'OTC|OTC' && rxv('padimate') === 'OTC' && rxv('tacrolimus') === 'Rx',
+    'Rx/OTC: lidocaine and adapalene "Rx and OTC"; hydrocortisone Rx on its class 5 line and OTC on its class 7 line (the stem names the line); zinc oxide OTC on both pages');
+  check(made2.rx === DL.D.length, `Rx/OTC: every drug gets a question (${made2.rx})`);
+  // potency
+  const st = DL.D.filter(d => d.cls === 'steroid');
+  const twice = st.filter(d => d.potency.length > 1).map(d => d.id).sort().join(',');
+  check(made2.potency === st.length && st.every(d => d.lines.length === d.potency.length) && twice === 'betameth,desonide,fluocinolone,hydrocortisone',
+    `potency: every topical steroid (${st.length}) gets a question; the four listed twice (${twice}) are asked "one of them", with the other line's class never offered`);
+  check(made2.clsRev === DL.D.length && made2.useRev === made.use && made2.chem === 62,
+    `reverse and chemical-class coverage: class → drug ${made2.clsRev}, indication → drug ${made2.useRev}, chemical class ${made2.chem}`);
+  const cov = DL.coverage(T);
+  check(Object.keys(DL.KINDS).every(k => cov[k].n === (made[k] !== undefined ? made[k] : made2[k]) && cov[k].n + Object.values(cov[k].none).flat().length === DL.D.length),
+    'the About coverage line agrees with the generated questions and accounts for every drug');
+  console.log('  coverage per kind (drugs with a question / 79; reasons for the rest):');
+  for (const [k, o] of Object.entries(cov)) console.log(`    ${DL.KIND_HEAD[k]}: ${o.n}` + Object.entries(o.none).map(([r, ns]) => `\n      ${ns.length}: ${r}${ns.length <= 12 ? ' (' + ns.join(', ') + ')' : ''}`).join(''));
 }
 
 console.log('=== The original chart pages (chart/, chart_boxes.js) ===');

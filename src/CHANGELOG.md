@@ -8,6 +8,16 @@ characters.
 
 Every update adds its bullets here in the same commit that makes the change.
 
+## 2026-11-08 (Drug list: every chart column)
+- Quiz me, Ask about: new kinds for chemical class, Rx/OTC, potency class (steroids) and brand names.
+- Brand names are practice: Dr. Smith asks by generic name but said you will need to know brands (10/29).
+- Class → drug and Indication → drug ask the other way round, only where exactly one option fits.
+- Recall: type a drug's chemical class, Rx/OTC, potency class or brand, then Check against the chart.
+- Chemical class cells that are blank, one row off (p. 5) or in conflict with a slide are shown, not asked.
+- About this list: how many drugs each kind covers and why the rest have no question.
+- Recall's example now names a drug outside the current list, so it gives no cue.
+- Methoxsalen now has an indication question: psoriasis (Dr. Sikazwe's psoriasis drug list, DPAW 14).
+
 ## 2026-11-08 (Drug list: the original chart)
 - Drug list > Chart: the original drug chart pages 1–7, one page at a time, with zoom and Open full size.
 - Chart: type a generic or brand name to turn to its page and highlight its row (both rows if listed twice).
