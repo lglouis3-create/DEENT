@@ -8,6 +8,9 @@ characters.
 
 Every update adds its bullets here in the same commit that makes the change.
 
+## 2026-11-08 (Dr. Sikazwe's Polleve-4)
+- New: his Polleve-4 poll, how many alpha-hydroxy acids are in the figure, with each structure explained.
+
 ## 2026-11-08 (Stars: what Dr. Sikazwe said to know)
 - ★ Likely on the exam: 35 more of Dr. Sikazwe's questions, one for each point he said to know, remember or watch.
 - Among them: steroid shape, numbering and alpha/beta faces; crisaborole in the skin; hydrocortisone's half-life.

@@ -159,7 +159,7 @@ Exam cues he stressed (for weighting): "know those limits" (UVR, T 814); "That's
 
 #### Dr. Sikazwe, 11/04 polls (Polleve)
 - Polleve-3 (slide 32): "Due to the selected functionality, this Limus drug molecule may be chemically classified as a ........" (A) Lactam (B) Lactone (C) Steroid (D) Pteridine. Structure: pimecrolimus with the ring ester circled. Answer: Lactone. Spoken: "So this is now part of a cyclic what? Structure And that is an ester functional group. Cyclic esters are called. Are they called like tums? These are cyclic what amides, right? Are they called lactones? Yes. Are they called steroids? Careful now. So, no, no, no." (T@11453–11720). In bank as S4-020.
-- Polleve-4 (slide 45): "How many alpha-hydroxy acids are in the figure below?" One / Two / Three / Four. Spoken walk-through ends "So how many? OK." (T@23865) with no number. Student's GoodNotes highlights "Three". Held out (see d).
+- Polleve-4 (slide 45): "How many alpha-hydroxy acids are in the figure below?" One / Two / Three / Four. Spoken walk-through ends "So how many? OK." (T@23865) with no number. Student's GoodNotes highlights "Three". Resolved 2026-11-08 by the slide figure and his stated definition (Louis: use his PollEvs as a basis): three. In bank as S4-120.
 - Polleve-5 (slide 59): "What UVR band is more skin penetrating?" 100 - 280 nm / 280 - 320 nm / 320 - 400 nm / 400 - 700 nm. Answer: 320 - 400 nm (UVA): "which one is more skin penetrating? Which one? A. So remember that." (T@37511–37664). In bank as S4-096.
 
 #### Dr. Sikazwe, 11/04 room questions (verbatim, with answer)

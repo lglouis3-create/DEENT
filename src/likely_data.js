@@ -195,6 +195,7 @@ const LIKELY = {
     {id:'S4-010', source:'sik-cue',    ref:'11/04, T@3530–4160 (p. 27); 11/03, T 604–605 (assigned reading, 2 points)', reason:'His take-home activity: the 2-point question asks for a reaction, an organ or an enzyme of this pathway.'},
     {id:'S4-033', source:'sik-cue',    ref:'11/04, T@9800–10300 (p. 31)', reason:'He called these "the key features" of molecules that act like methotrexate.'},
     {id:'S4-055', source:'sik-room',   ref:'11/04, T@23455–23600 (pp. 43–44; Polleve-4, p. 45)', reason:'He asked the room for this definition while working through his poll on hydroxy acids.'},
+    {id:'S4-120', source:'sik-poll',   ref:'Polleve-4, p. 45 (11/04); T@23455–23880', reason:'His live poll in class, word for word; he walked the room through each structure with his definition.'},
     {id:'S4-067', source:'sik-cue',    ref:'11/04, T@24524–24700 (p. 46)', reason:'"But I caution you": he said this matters for this agent.'},
     {id:'S4-069', source:'sik-cue',    ref:'11/04, T@25684–26600 (p. 47)', reason:'"All I want to share with you is" how this drug works chemically.'},
     {id:'S4-072', source:'sik-cue',    ref:'11/04, T@27181–27500 (p. 48)', reason:'"This is a caution that you all need to make sure you carry that with you."'},
