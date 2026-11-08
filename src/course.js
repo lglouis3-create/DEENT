@@ -210,5 +210,5 @@ const COURSE = {
           citeLectures:{}, citeBareMap:{},
           explainTerms:[], harvestMasks:[]},
 
-  kit: {core: '9711ce2'},
+  kit: {core: '08be7a2'},
 };
