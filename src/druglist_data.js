@@ -580,14 +580,14 @@ const DRUGLIST = (() => {
      Indication question on the drug is answered and on its Browse card (never
      before answering, never as an option). Each line is a slide or transcript
      statement, quoted. No course source was found for methotrexate, coal tar
-     (atopic dermatitis) or upadacitinib (psoriasis), so they have no note. */
+     (atopic dermatitis) or upadacitinib (psoriasis), so they have no note.
+     Cyclosporine has none either (Louis, 2026-11-08): the calcineurin class's
+     use in atopic dermatitis (PCol 24) is stated in the Guide's calcineurin
+     inhibitor section; atopic dermatitis stays out of its wrong options. */
   const OFF_CHART = {
-    zincoxide: [{z: 'pso', head: 'Psoriasis: zinc oxide in anthralin treatment (not its indication on the drug chart)', src: [
+    zincoxide: [{z: 'pso', head: 'Psoriasis: the chart lists zinc oxide on its psoriasis page (p. 5); in the lectures its role there is to protect the healthy skin around the plaques during anthralin treatment. It is not a psoriasis drug.', src: [
       S('Short-contact anthralin therapy (SCAT): "zinc oxide ointment or nonmedicated stiff paste applied to surrounding normal skin"', 'PCol 56; 11/03 T 173–175'),
       K('Anthralin "paste (Anthralin + ZnO + Parrafin + Salicylic Acid)"', 'DPAW 17; 11/03 T 921–922')]}],
-    cyclosporine: [{z: 'ad', head: 'Atopic dermatitis: named for the calcineurin inhibitor class, not for cyclosporine itself (not on the drug chart)', src: [
-      S('Calcineurin inhibitors (cyclosporine and tacrolimus, PCol 26): "used to treat atopic dermatitis, psoriasis"', 'PCol 24'),
-      S('In her lecture: "the topical tacrolimus products that we use for atopic dermatitis and psoriasis"; cyclosporine "orally for treating … bad psoriasis"', '10/30 T 384–386')]}],
   };
   const DZ_RE = {ad: /atopic|eczema|\bad\b/, pso: /psoria/, acne: /acne/, sun: /sun protection|sunscreen/, burn: /sunburn/};
   const KINDS = {target: 'Target', cls: 'Class', use: 'Indication'};

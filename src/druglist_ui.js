@@ -20,6 +20,17 @@
                which builds them from the cards' own sourced statements.
      Recall    the drug name only, a box to type the target, mechanism, class
                or indication, and Check to compare with the answer and source.
+     Chart     the original chart pages (chart/chart-p1.jpg ... p7, rendered
+               by render_chart.py), one page at a time, with a find box: a
+               generic or brand name (the same matching as the filters'
+               Search) turns to the drug's page and highlights its row(s)
+               from CHART_BOXES (chart_boxes.js). "See on the chart (p. N)"
+               on a Browse card, after a Quiz me answer and in a Recall
+               answer opens it there. Louis, 2026-11-08, who authorized
+               showing the chart pages on the public site. The images sit at
+               the repository root beside slides/ and load from the same base
+               as walk_ui.js uses (../ in /preview/); the service worker does
+               not precache them.
    Generic names only in Quiz me and Recall (brands are on Browse cards, as
    reference). A score in Quiz me counts this page view only.
 
@@ -28,7 +39,7 @@
    source of targets. Links use the engine's own drillList(), jump(),
    linksFor() and the RET/backBtn return stack.
 
-   Storage: none. Nothing is written to localStorage, sessionStorage or
+   Storage: none (the Chart view's page, zoom and highlight included). Nothing is written to localStorage, sessionStorage or
    IndexedDB, and nothing goes into the core's progress or history: quiz
    answers, the score and typed recall text live in this page's memory only
    and are gone on reload. (The engine's own place-keeping may remember that
@@ -42,7 +53,8 @@ const DRUGLIST_UI = (() => {
   const DL = DRUGLIST, ID = 'drugs';
   const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g, c => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'}[c]));
   const NOFILTER = {q: '', dz: '', cls: '', page: '', status: '', boxed: false, photo: false, hasq: false};
-  const st = Object.assign({mode: 'browse', kinds: {target: true, cls: true, use: false}, rfield: 'target'}, NOFILTER);
+  const st = Object.assign({mode: 'browse', kinds: {target: true, cls: true, use: false}, rfield: 'target',
+    cpage: 1, chit: null, cq: '', zoom: null, cfrom: null}, NOFILTER);
   // memory only, never stored
   const typed = {}, checked = new Set();
   let quiz = null;                        // {sig, list: [question], ans: {qid: option index}, skipped: {kind: n}}
@@ -52,11 +64,12 @@ const DRUGLIST_UI = (() => {
     ['browse', 'Browse', 'Every drug that matches the filters, shown in full: class, use, target, mechanism, cautions, each line with its source.'],
     ['quiz', 'Quiz me', 'Multiple choice on the drugs that match the filters, all on this page. Tap an answer to see if it is right, the correct answer and its source. Nothing is saved.'],
     ['recall', 'Recall', 'Each drug by name only. Type what you remember, press Check, and compare it yourself with the answer and its source. Not graded, not saved.'],
+    ['chart', 'Chart', 'The original drug chart, page by page. Find a drug by generic or brand name to turn to its page and highlight its row. Pinch or use Zoom to read it; Open full size shows the page image on its own.'],
   ];
   const RFIELDS = {target: 'Target', mech: 'Mechanism', cls: 'Class', use: 'Indication'};
 
   const css = `
-#v-drugs .dlmodes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;margin:4px 0 6px;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:var(--paper);max-width:520px}
+#v-drugs .dlmodes{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;margin:4px 0 6px;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:var(--paper);max-width:640px}
 #v-drugs .dlmodes button{min-height:44px;font:inherit;font-size:15px;font-weight:500;border:0;border-left:1px solid var(--line);background:transparent;color:var(--text);padding:8px 6px;cursor:pointer}
 #v-drugs .dlmodes button:first-child{border-left:0}
 #v-drugs .dlmodes button[aria-checked="true"]{background:var(--ink);color:#fff}
@@ -130,6 +143,23 @@ const DRUGLIST_UI = (() => {
 #v-drugs .dlfb .r{font-weight:600;color:var(--ok)} #v-drugs .dlfb .w{font-weight:600;color:var(--bad)}
 #v-drugs .dlempty{font-size:14px;color:var(--text);margin:10px 0}
 #v-atlas .attile.dlhit{outline:3px solid var(--accent);outline-offset:2px}
+#v-drugs .dlcres{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0 0}
+#v-drugs .dlcres .chip{text-align:left}
+#v-drugs .dlcnav{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:0 0 8px}
+#v-drugs .dlcnav .lab{font-size:13px;color:var(--text-dim)}
+#v-drugs .dlcnav .chip{min-width:44px;justify-content:center}
+#v-drugs .dlcnav .chip[aria-current="page"]{background:var(--ink);color:#fff;border-color:var(--ink)}
+#v-drugs .dlctools{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:0 0 8px}
+#v-drugs .dlctools a.btn{text-decoration:none;display:inline-flex;align-items:center}
+#v-drugs .dlctitle{font-size:16px;margin:4px 0 6px}
+#v-drugs .dlcframe{overflow:auto;max-width:100%;border:1px solid var(--line);border-radius:8px;background:#fff;-webkit-overflow-scrolling:touch}
+#v-drugs .dlcimg{position:relative;min-width:100%}
+#v-drugs .dlcimg img{position:absolute;inset:0;width:100%;height:100%;display:block}
+#v-drugs .dlhl{position:absolute;background:rgba(255,214,0,.5);mix-blend-mode:multiply;outline:3px solid #C62828;outline-offset:0;border-radius:2px;pointer-events:none}
+#v-drugs .dlcstat{font-size:14.5px;margin:8px 0;line-height:1.45}
+#v-drugs .dlcstat:empty{display:none}
+#v-drugs .dlcnotes{font-size:13.5px;color:var(--text);margin:8px 0 0;padding-left:18px;line-height:1.45}
+#v-drugs .dlcnotes li{margin:3px 0}
 `;
 
   /* ---------- data helpers ---------- */
@@ -227,7 +257,8 @@ const DRUGLIST_UI = (() => {
   function card(d){
     const flags = (d.boxed ? '<span class="dlbadge box">Boxed warning</span>' : '') +
                   (d.photo && !d.photo.no ? '<span class="dlbadge ph">Photosensitizing</span>' : '');
-    return `<article class="dlcard${d.status === 'taught' ? '' : ' dlopt'}" data-id="${esc(d.id)}">${head(d, true)}${flags}</p>${answer(d)}</article>`;
+    return `<article class="dlcard${d.status === 'taught' ? '' : ' dlopt'}" data-id="${esc(d.id)}">${head(d, true)}${flags}</p>
+      <div class="dlrow">${chartBtn(d)}</div>${answer(d)}</article>`;
   }
 
   /* ---------- Recall: name, box, Check ---------- */
@@ -249,7 +280,7 @@ const DRUGLIST_UI = (() => {
         <div class="dlrow"><input type="text" id="${inp}" autocomplete="off" autocapitalize="off" spellcheck="false" enterkeyhint="done"
           data-dl="typed" data-id="${esc(d.id)}" value="${esc(typed[k] || '')}">
         <button type="button" class="btn sm${open ? ' ghost' : ''}" data-dl="check" data-id="${esc(d.id)}" aria-expanded="${open}" aria-controls="dla-${esc(d.id)}">${open ? 'Hide' : 'Check'}</button></div></div>
-      <div id="dla-${esc(d.id)}" class="dlans">${open ? recallAnswer(d) +
+      <div id="dla-${esc(d.id)}" class="dlans">${open ? recallAnswer(d) + `<div class="dlrow">${chartBtn(d)}</div>` +
         `<details class="dlwhole"><summary>Whole card</summary>${answer(d)}</details>` : ''}</div></article>`;
   }
 
@@ -281,7 +312,8 @@ const DRUGLIST_UI = (() => {
     const fb = !done ? '' : `<p class="dlfb">${right ? '<span class="r">Right.</span>' : `<span class="w">Not this one.</span> The answer: <b>${esc(key.t)}</b>.`}</p>
       <div class="dlf ${q.kind === 'target' ? 'f-tg' : q.kind === 'cls' ? 'f-class' : 'f-use'}"><b>Source</b><ul>${q.src.map(li).join('')}</ul></div>
       ${q.also.length ? `<p class="dlfb">Also true for ${esc(q.name)}: ${esc(q.also.join('; '))}.</p>` : ''}
-      ${offChart(q.offChart || [])}`;
+      ${offChart(q.offChart || [])}
+      <div class="dlrow">${chartBtn(DL.D.find(x => x.id === q.drug))}</div>`;
     return `<div class="dlq" data-qid="${esc(q.id)}"><p class="dlqh">${esc(q.name)} · ${esc(DL.KINDS[q.kind])}</p>
       <p class="stem" id="dlqs-${esc(q.id)}">${esc(q.stem)}</p>
       <div role="group" aria-labelledby="dlqs-${esc(q.id)}">${opts}</div><div aria-live="polite">${fb}</div></div>`;
@@ -289,6 +321,97 @@ const DRUGLIST_UI = (() => {
   function scoreLine(){
     const s = score();
     return s.total ? `${s.right} of ${s.done} right` + (s.done < s.total ? ` · ${s.total - s.done} still to answer` : ' · all answered') : '';
+  }
+
+  /* ---------- Chart: the original pages, find and highlight ---------- */
+  const CB = typeof CHART_BOXES !== 'undefined' ? CHART_BOXES : null;
+  const CPAGES = Object.assign({}, DL.PAGES, {7: 'Lice and scabies'});
+  const ZOOMS = [1, 1.5, 2, 3];
+  const chartBase = () => { try { return BUILD.preview ? '../' : ''; } catch (e) { return ''; } };
+  const chartSrc = p => chartBase() + 'chart/' + CB.pages[p].file;
+  const boxesOf = id => !CB ? [] : String(id).startsWith('line:') ? CB.other.filter(b => 'line:' + b.line === id) : (CB.drugs[id] || []);
+  const hitName = id => String(id).startsWith('line:') ? DL.CHART_ROWS[+id.slice(5)][1] : (DL.D.find(d => d.id === id) || {}).name;
+  const chartPages = id => [...new Set(boxesOf(id).map(b => b.page))];
+  function chartBtn(d){
+    const ps = chartPages(d.id);
+    return ps.length ? `<button type="button" class="chip" data-dl="chart" data-id="${esc(d.id)}">See on the chart (p. ${esc(ps.join(', '))})</button>` : '';
+  }
+  /* the find box: the cards by the filters' Search matching, then the p. 7 lines by their text */
+  function chartMatches(v){
+    v = v.trim().toLowerCase();
+    if (!v) return [];
+    const out = DL.D.filter(d => findText(d).indexOf(v) !== -1).map(d => ({id: d.id, label: d.name, pages: chartPages(d.id)}));
+    if (CB) for (const b of CB.other) if (DL.CHART_ROWS[b.line][1].toLowerCase().indexOf(v) !== -1)
+      out.push({id: 'line:' + b.line, label: DL.CHART_ROWS[b.line][1], pages: [b.page]});
+    return out;
+  }
+  const rowsText = rs => rs.length === 1 ? 'row ' + rs[0] : 'rows ' + rs.slice(0, -1).join(', ') + ' and ' + rs[rs.length - 1];
+  function chartStatus(){
+    if (!st.chit) return '';
+    const bs = boxesOf(st.chit), here = bs.filter(b => b.page === st.cpage), name = hitName(st.chit);
+    if (!bs.length) return '';
+    const other = [...new Set(bs.filter(b => b.page !== st.cpage).map(b => b.page))];
+    let t = here.length ? `Highlighted: ${esc(name)}, ${rowsText(here.map(b => b.row))} on page ${st.cpage} (the chart prints "${esc(here.map(b => b.text).join('"; "'))}").`
+      : `${esc(name)} is not on page ${st.cpage}.`;
+    if (other.length) t += ' ' + other.map(p => `<button type="button" class="chip" data-dl="cpage" data-p="${p}">${here.length ? 'Also on' : 'Go to'} page ${p}</button>`).join(' ');
+    return t;
+  }
+  function chartNotes(p){
+    const n = [];
+    if (p === 7) n.push('Not on Exam 1: Dr. Smith, 10/29: "I don\'t cover these medications." (lice and scabies; 10/29 T 590–593)');
+    if (p === 5) n.push('Page 5 continues the psoriasis table of page 4 (no title or header row on this page).');
+    DL.CHART_NOTES.filter(x => x.startsWith('Chart p. ' + p + ':')).forEach(x => n.push('Chart note: ' + x.replace(/^Chart p\. \d+: /, '')));
+    return n.length ? `<ul class="dlcnotes">${n.map(x => `<li>${esc(x)}</li>`).join('')}</ul>` : '';
+  }
+  function chartView(){
+    if (!CB) return '<p class="dlempty">The chart pages are not in this build.</p>';
+    // a phone starts at 2x (the page's own text is too small at its width), wider screens fit the width
+    if (st.zoom === null) st.zoom = window.innerWidth < 600 ? 2 : 0;
+    const p = st.cpage, pg = CB.pages[p], z = ZOOMS[st.zoom];
+    const hl = st.chit ? boxesOf(st.chit).filter(b => b.page === p) : [];
+    const from = st.cfrom && DL.D.find(d => d.id === st.cfrom.id);
+    return `${from ? `<p><button type="button" class="btn sm ghost" data-dl="cback">Back to ${esc(from.name)} (${esc(MODES.find(m => m[0] === st.cfrom.mode)[1])})</button></p>` : ''}
+      <div class="dlcnav" role="group" aria-label="Chart pages"><span class="lab">Page:</span>
+      ${Object.keys(CB.pages).map(k => `<button type="button" class="chip" data-dl="cpage" data-p="${k}" aria-label="Page ${k}: ${esc(CPAGES[k])}"${+k === p ? ' aria-current="page"' : ''}>${k}</button>`).join('')}</div>
+      <h3 class="dlctitle" id="dlctitle">Page ${p}: ${esc(CPAGES[p])}${p === 7 ? ' (not on Exam 1)' : ''}</h3>
+      <div class="dlctools"><button type="button" class="btn sm ghost" data-dl="czoom" data-z="-1"${st.zoom ? '' : ' disabled'} aria-label="Zoom out">Zoom −</button>
+        <button type="button" class="btn sm ghost" data-dl="czoom" data-z="1"${st.zoom < ZOOMS.length - 1 ? '' : ' disabled'} aria-label="Zoom in">Zoom +</button>
+        <button type="button" class="btn sm ghost" data-dl="czoom" data-z="0"${st.zoom ? '' : ' disabled'}>Fit width</button>
+        <a class="btn sm ghost" href="${esc(chartSrc(p))}" target="_blank" rel="noopener">Open full size</a></div>
+      <p class="dlcstat" id="dlcstat" aria-live="polite">${chartStatus()}</p>
+      <div class="dlcframe" id="dlcframe"><div class="dlcimg" style="width:${z * 100}%;aspect-ratio:${pg.w} / ${pg.h}">
+        <img src="${esc(chartSrc(p))}" loading="lazy" decoding="async" width="${pg.w}" height="${pg.h}"
+          alt="Drug chart page ${p}: ${esc(CPAGES[p])}${hl.length ? '; highlighted ' + esc(rowsText(hl.map(b => b.row))) + ', ' + esc(hitName(st.chit)) : ''}">
+        ${hl.map(b => `<div class="dlhl" aria-hidden="true" style="left:${b.x0 * 100}%;top:${b.y0 * 100}%;width:${(b.x1 - b.x0) * 100}%;height:${(b.y1 - b.y0) * 100}%"></div>`).join('')}
+      </div></div>
+      ${chartNotes(p)}`;
+  }
+  function chartResults(){
+    const m = chartMatches(st.cq);
+    if (!st.cq.trim()) return '';
+    if (!m.length) return '<p class="dlempty">No drug on the chart matches. Try the generic name, a brand or a class.</p>';
+    return `<p class="dlcount">${m.length === 1 ? '1 match' : m.length + ' matches'}:</p><div class="dlcres">` +
+      m.map(x => `<button type="button" class="chip" data-dl="chit" data-id="${esc(x.id)}"${x.id === st.chit ? ' aria-pressed="true"' : ''}>${esc(x.label)} · p. ${esc(x.pages.join(', '))}</button>`).join('') + '</div>';
+  }
+  function drawChart(scroll){
+    const v = pane.querySelector('#dlcview'), r = pane.querySelector('#dlcres');
+    if (r) r.innerHTML = chartResults();
+    if (v) v.innerHTML = chartView();
+    if (scroll) {
+      const h = pane.querySelector('#dlcframe .dlhl'), fr = pane.querySelector('#dlcframe');
+      if (h && fr) {
+        fr.scrollLeft = 0;
+        fr.scrollTop = Math.max(0, h.offsetTop - fr.clientHeight / 3);
+        const r1 = h.getBoundingClientRect();
+        window.scrollTo(0, Math.max(0, window.scrollY + r1.top - window.innerHeight / 3));
+      }
+    }
+  }
+  function showOnChart(id){
+    const bs = boxesOf(id);
+    if (!bs.length) return;
+    st.chit = id;
+    if (!bs.some(b => b.page === st.cpage)) st.cpage = bs[0].page;
   }
 
   /* ---------- the pane ---------- */
@@ -311,14 +434,19 @@ const DRUGLIST_UI = (() => {
         <div class="dlchips"><button type="button" class="btn sm ghost" data-dl="revealall">Check all</button>
         <button type="button" class="btn sm ghost" data-dl="hideall">Hide all answers</button>
         <button type="button" class="btn sm ghost" data-dl="clearbox">Empty the boxes</button></div></div>`;
+    } else if (st.mode === 'chart') {
+      modebar = `<div class="dlmodebar"><div class="dlfld"><label for="dlcq">Find a drug on the chart (generic or brand name, or class)</label>
+        <input type="search" id="dlcq" placeholder="e.g. tacrolimus or Protopic" value="${esc(st.cq)}" autocomplete="off" enterkeyhint="search"></div>
+        <div id="dlcres" aria-live="polite"></div></div>`;
     }
+    const chart = st.mode === 'chart';
     return `<h2>Drug list</h2>
     <p class="sub">Every drug on the dermatology drug chart, pp. 1–6 (${DL.D.length} drugs), with each line's source.</p>
     <div class="dlmodes" role="radiogroup" aria-label="How to study the list">
       ${MODES.map(([k, l]) => `<button type="button" role="radio" data-dl="mode" data-k="${k}" aria-checked="${st.mode === k}" tabindex="${st.mode === k ? 0 : -1}">${esc(l)}</button>`).join('')}</div>
     <p class="dlhow" id="dlhow">${esc(mode[2])}</p>
     ${modebar}
-    <section class="dlfilters" aria-labelledby="dlfh">
+    ${chart ? '' : `<section class="dlfilters" aria-labelledby="dlfh">
       <div class="dlfhead"><h3 id="dlfh">Filters</h3><span class="n" id="dlfn">${n ? n + ' active' : 'none active'}</span>
         <button type="button" class="dllink" data-dl="clear"${n ? '' : ' disabled'}>Clear filters</button></div>
       <div class="dlfgrid">
@@ -333,16 +461,17 @@ const DRUGLIST_UI = (() => {
         <button type="button" class="chip" data-dl="flag" data-f="photo" aria-pressed="${st.photo}">Photosensitizing</button>
         <button type="button" class="chip" data-dl="flag" data-f="hasq" aria-pressed="${st.hasq}">Has bank questions</button>
       </div>
-    </section>
+    </section>`}
     <details class="dlnote"><summary>About this list and the chart</summary>
       <p>Each professor's slides and recording decide what is examinable for that professor's material (Dr. Smith's lectures; Dr. Sikazwe's assigned pages); the chart is a guide. Each line names its source: <span class="dlsrc smith">Dr. Smith · slide</span> <span class="dlsrc sikazwe">Dr. Sikazwe · DPAW page</span> <span class="dlsrc chart">Drug chart · page</span></p>
-      <p>Targets and mechanisms come from Reference, "Drug targets: write it first, then check". Not here: the lice and scabies page (chart p. 7), which is not in the Exam 1 lectures. Brand names are reference information from the chart; Dr. Smith asks by generic name, so Quiz me and Recall show generic names only.</p>
+      <p>Targets and mechanisms come from Reference, "Drug targets: write it first, then check". Not here: the lice and scabies page (chart p. 7), which is not in the Exam 1 lectures (it is shown in Chart, the original pages). Brand names are reference information from the chart; Dr. Smith asks by generic name, so Quiz me and Recall show generic names only.</p>
       <p>Quiz me asks only what the cards state: a wrong option is another drug's value that is not also true for this drug. Drugs whose chart line names no molecular target (sunscreens, sunburn anesthetics, keratolytics, tars, petrolatum, ketoconazole, spironolactone, dapsone, metronidazole) get no target question; practise those in Recall.</p>
       <ul>${DL.CHART_NOTES.map(n => `<li>${esc(n)}</li>`).join('')}</ul></details>
-    <p class="dlcount" id="dlcount" aria-live="polite"></p>
-    <div id="dllist"></div>`;
+    ${chart ? '<div id="dlcview"></div>' : `<p class="dlcount" id="dlcount" aria-live="polite"></p>
+    <div id="dllist"></div>`}`;
   }
   function drawList(){
+    if (st.mode === 'chart') { drawChart(false); return; }
     const list = filtered(), out = pane.querySelector('#dllist'), cnt = pane.querySelector('#dlcount');
     const n = activeFilters(), fn = pane.querySelector('#dlfn'), cl = pane.querySelector('[data-dl="clear"]');
     if (fn) fn.textContent = n ? n + ' active' : 'none active';
@@ -370,11 +499,17 @@ const DRUGLIST_UI = (() => {
     if (!document.getElementById('dlcss')) { const s = document.createElement('style'); s.id = 'dlcss'; s.textContent = css; document.head.appendChild(s); }
     p.innerHTML = controls();
     drawList();
+    if (st.mode === 'chart' && st.chit) requestAnimationFrame(() => drawChart(true));
     if (p.dataset.dlWired) return;
     p.dataset.dlWired = '1';
     p.addEventListener('input', e => {
       const t = e.target;
       if (t.id === 'dlq') { st.q = t.value; drawList(); }
+      else if (t.id === 'dlcq') {
+        st.cq = t.value;
+        const m = chartMatches(st.cq);
+        if (m.length === 1 && m[0].id !== st.chit) { showOnChart(m[0].id); drawChart(true); } else { const r = pane.querySelector('#dlcres'); if (r) r.innerHTML = chartResults(); }
+      }
       else if (t.dataset && t.dataset.dl === 'typed') typed[t.dataset.id + ':' + st.rfield] = t.value;
     });
     p.addEventListener('change', e => {
@@ -383,6 +518,12 @@ const DRUGLIST_UI = (() => {
     });
     p.addEventListener('keydown', e => {
       const t = e.target;
+      if (e.key === 'Enter' && t.id === 'dlcq') {
+        e.preventDefault();
+        const m = chartMatches(st.cq);
+        if (m.length) { showOnChart(m[0].id); drawChart(true); }
+        return;
+      }
       if (e.key === 'Enter' && t.dataset && t.dataset.dl === 'typed') {
         e.preventDefault();
         const b = t.closest('.dlcard').querySelector('[data-dl="check"]');
@@ -406,7 +547,7 @@ const DRUGLIST_UI = (() => {
   function onClick(e){
     const b = e.target.closest('[data-dl]'); if (!b || b.tagName === 'INPUT' || b.disabled) return;
     const a = b.dataset.dl, id = b.dataset.id, d = id && DL.D.find(x => x.id === id);
-    if (a === 'mode') { if (st.mode !== b.dataset.k) { st.mode = b.dataset.k; rerender(`[data-dl="mode"][data-k="${st.mode}"]`); } }
+    if (a === 'mode') { if (st.mode !== b.dataset.k) { st.mode = b.dataset.k; st.cfrom = null; rerender(`[data-dl="mode"][data-k="${st.mode}"]`); } }
     else if (a === 'rfield') { if (st.rfield !== b.dataset.k) { st.rfield = b.dataset.k; rerender(`[data-dl="rfield"][data-k="${st.rfield}"]`); } }
     else if (a === 'kind') { st.kinds[b.dataset.k] = !st.kinds[b.dataset.k]; quiz = null; rerender(`[data-dl="kind"][data-k="${b.dataset.k}"]`); }
     else if (a === 'newq') { quiz = null; rerender('[data-dl="newq"]'); }
@@ -447,6 +588,29 @@ const DRUGLIST_UI = (() => {
       backBtn();
     }
     else if (a === 'ref') { jump('ref', b.dataset.a); }
+    else if (a === 'chart' && d) {
+      st.cfrom = {mode: st.mode, id: d.id};
+      st.mode = 'chart'; st.cq = ''; showOnChart(d.id);
+      render(pane); window.scrollTo(0, 0);
+      const s = pane.querySelector('#dlcstat'); if (s) { s.tabIndex = -1; s.focus({preventScroll: true}); }
+    }
+    else if (a === 'chit') { showOnChart(b.dataset.id); drawChart(true); const s = pane.querySelector('#dlcstat'); if (s) { s.tabIndex = -1; s.focus({preventScroll: true}); } }
+    else if (a === 'cpage') {
+      st.cpage = +b.dataset.p; drawChart(!!st.chit && boxesOf(st.chit).some(x => x.page === st.cpage));
+      const nb = pane.querySelector(`[data-dl="cpage"][data-p="${st.cpage}"]`); if (nb) nb.focus();
+    }
+    else if (a === 'czoom') {
+      const z = +b.dataset.z;
+      st.zoom = z === 0 ? 0 : Math.max(0, Math.min(ZOOMS.length - 1, st.zoom + z));
+      drawChart(!!st.chit);
+      const nb = pane.querySelector(`[data-dl="czoom"][data-z="${z}"]:not(:disabled)`) || pane.querySelector('[data-dl="czoom"]:not(:disabled)'); if (nb) nb.focus();
+    }
+    else if (a === 'cback' && st.cfrom) {
+      const f = st.cfrom; st.cfrom = null; st.mode = f.mode;
+      render(pane);
+      const c = pane.querySelector(`.dlcard[data-id="${CSS.escape(f.id)}"], .dlq[data-qid^="${CSS.escape(f.id)}:"]`);
+      if (c) { c.scrollIntoView({block: 'start'}); const fb = c.querySelector('[data-dl="chart"]') || c.querySelector('button'); if (fb) fb.focus({preventScroll: true}); }
+    }
     else if (a === 'atlas') {
       RET.push({view: ID, y: window.scrollY});
       show('atlas'); backBtn();

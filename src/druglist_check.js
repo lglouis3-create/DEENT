@@ -19,7 +19,14 @@
      and the questions it links exist in the bank;
    - neither file writes to any storage (localStorage, sessionStorage,
      IndexedDB, cookies), comments aside;
-   - druglist_ui.js does nothing in a stub DOM (the node checks' engine).
+   - druglist_ui.js does nothing in a stub DOM (the node checks' engine);
+   - the original chart pages (chart_boxes.js, from render_chart.py): every
+     page image exists in chart/ at its recorded size; every in-scope chart
+     line has a box on its card's page(s) and every p. 7 line one in `other`;
+     each box lies inside its image, holds the line's generic name as the
+     chart prints it (CHART_TYPOS: the chart's own misspellings, disclosed on
+     the cards), and two lines share a row only where the chart prints them
+     in one cell; the Chart view's page 7 line quotes Dr. Smith.
 
      node druglist_check.js
    ========================================================================== */
@@ -207,6 +214,16 @@ console.log('=== Quiz me (multiple choice) and Recall ===');
     never(id, 'use', new RegExp('^' + ns.map(n => DL.DISEASES[n.z]).join('|') + '$', 'i'), `${id}: the off-chart use (${ns.map(n => DL.DISEASES[n.z]).join(', ')}) is never a wrong option`);
   }
   check(!ocQ.length, 'off-chart notes ride on Indication questions only, and their use is never a wrong option', u(ocQ));
+  // Louis, 2026-11-08: no atopic-dermatitis note on cyclosporine (the class statement is in the Guide);
+  // zinc oxide's note limited to protecting the skin around plaques in anthralin treatment
+  const cyQ = [];
+  for (let r = 0; r < 50; r++) { const q = DL.makeQuestion(DL.D.find(x => x.id === 'cyclosporine'), T, 'use', rngOf(r)); if (q && q.offChart.length) cyQ.push(r); }
+  check(!OC.cyclosporine && !cyQ.length && (DL.NOT_WRONG.cyclosporine || []).includes('ad'),
+    'cyclosporine has no off-chart note (Browse, Quiz me, Recall) and atopic dermatitis stays out of its wrong options');
+  const ZN = 'Psoriasis: the chart lists zinc oxide on its psoriasis page (p. 5); in the lectures its role there is to protect the healthy skin around the plaques during anthralin treatment. It is not a psoriasis drug.';
+  check((OC.zincoxide || []).length === 1 && OC.zincoxide[0].head === ZN && OC.zincoxide[0].src.length === 2 &&
+    DL.CHART_ROWS.some(r => r[0] === 5 && r[2] === 'zincoxide') && DL.PAGES[5] === 'Psoriasis',
+    'zinc oxide: one note, limited to the skin around plaques in anthralin treatment, two sources; the chart lists it on p. 5 (psoriasis)');
   const fbSrc = (code('druglist_ui.js').match(/const fb = !done \? '' :[\s\S]*?`;\n/) || [''])[0];
   const ocUses = (code('druglist_ui.js').match(/offChart\(/g) || []).length;
   check(/offChart\(q\.offChart/.test(fbSrc) && (code('druglist_ui.js').match(/offChart\(q\./g) || []).length === 1,
@@ -219,6 +236,56 @@ console.log('=== Quiz me (multiple choice) and Recall ===');
   check(DL.D.every(d => d.chartClass || d.cls === 'tnf'), 'Recall: every card has a sourced class line');
   const ui = code('druglist_ui.js');
   check(!/data-dl="(next|prev|flash)"|>\s*Next\s*</.test(ui), 'the Drug list has no Next button and no one-card-at-a-time mode');
+}
+
+console.log('=== The original chart pages (chart/, chart_boxes.js) ===');
+{
+  const CB = sb.CHART_BOXES || vm.runInContext('typeof CHART_BOXES !== "undefined" ? CHART_BOXES : null', sb);
+  check(!!CB, 'chart_boxes.js is in course.js files and defines CHART_BOXES');
+  if (CB) {
+    const jpgSize = f => { const b = fs.readFileSync(f); let i = 2;
+      while (i < b.length) { if (b[i] !== 0xFF) return null; const m = b[i + 1], len = b.readUInt16BE(i + 2);
+        if (m >= 0xC0 && m <= 0xC3) return [b.readUInt16BE(i + 7), b.readUInt16BE(i + 5)]; i += 2 + len; } return null; };
+    const imgBad = [];
+    for (let p = 1; p <= 7; p++) {
+      const pg = CB.pages[p], f = pg && path.join(__dirname, '..', 'chart', pg.file);
+      if (!pg || !fs.existsSync(f)) { imgBad.push(`p. ${p} missing`); continue; }
+      const sz = jpgSize(f);
+      if (!sz || sz[0] !== pg.w || sz[1] !== pg.h) imgBad.push(`p. ${p} size ${sz} vs ${pg.w}x${pg.h}`);
+      if (fs.statSync(f).size > 400000) imgBad.push(`p. ${p} over 400 kB`);
+    }
+    check(!imgBad.length, 'all 7 page images exist in chart/ at their recorded size (each under 400 kB)', imgBad.join('; '));
+    const TYPOS = {trimethoprim: 'trimetoprim', ethylhexyl: 'ethyhexyl'};
+    const gen = l => { let g = DL.norm(l.split(/[,(]/)[0]); for (const [k, v] of Object.entries(TYPOS)) g = g.replace(k, v); return g; };
+    const flat = Object.entries(CB.drugs).flatMap(([id, bs]) => bs.map(b => Object.assign({id}, b))).concat(CB.other.map(b => Object.assign({id: null}, b)));
+    const inScope = rows.map((r, i) => [r, i]).filter(([r]) => r[2]);
+    const missing = inScope.filter(([r, i]) => !flat.some(b => b.line === i && b.id === r[2] && b.page === r[0]));
+    check(!missing.length, `every in-scope chart line (${inScope.length}) has a box on its page under its card`, missing.map(([r]) => r[1]).join('; '));
+    const noBox = DL.D.filter(d => !(CB.drugs[d.id] || []).length || !(d.pages || [d.page]).every(p => CB.drugs[d.id].some(b => b.page === p)));
+    check(!noBox.length, `every card (${DL.D.length}) has a box on each of its chart pages`, noBox.map(d => d.id).join(', '));
+    const p7 = rows.map((r, i) => [r, i]).filter(([r]) => !r[2]);
+    check(p7.every(([r, i]) => CB.other.some(b => b.line === i && b.page === r[0])) && CB.other.length === p7.length,
+      `the ${p7.length} lines with no card (p. 7) have their own boxes`);
+    const geoBad = flat.filter(b => !(b.x0 >= 0 && b.y0 >= 0 && b.x1 <= 1 && b.y1 <= 1 && b.x1 - b.x0 > 0.8 && b.y1 > b.y0 && b.y1 - b.y0 < 0.25 && b.row >= 1));
+    check(!geoBad.length, `every box (${flat.length}) lies inside its page image and spans the table's width, one row high`, geoBad.map(b => rows[b.line][1]).join('; '));
+    const nameBad = flat.filter(b => !DL.norm(b.text).includes(gen(rows[b.line][1])));
+    check(!nameBad.length, 'every box holds the line\'s generic name as the chart prints it', nameBad.map(b => `${rows[b.line][1]} → "${b.text}"`).join('; '));
+    const key = b => b.page + ':' + b.row, byRow = {};
+    flat.forEach(b => (byRow[key(b)] = byRow[key(b)] || []).push(b));
+    const shared = Object.values(byRow).filter(v => v.length > 1).map(v => v.map(b => b.id).sort().join('+')).sort();
+    check(shared.join(',') === 'dioxybenzone+oxybenzone,homosalate+octisalate',
+      `two lines share a row only where the chart prints them in one cell (${shared.join(', ')})`);
+    const dup = DL.D.filter(d => (CB.drugs[d.id] || []).length > 1).map(d => d.id).sort().join(',');
+    check(dup === 'betameth,desonide,fluocinolone,hydrocortisone,zincoxide', `the drugs listed twice have both rows (${dup})`);
+    const tac = (CB.drugs.tacrolimus || [])[0];
+    check(tac && tac.page === 2 && tac.row === 3 && /Tacrolimus \(Protopic\)/.test(tac.text), 'tacrolimus: row 3 on page 2, "Tacrolimus (Protopic)"');
+    const ui = code('druglist_ui.js');
+    check(ui.includes("Dr. Smith, 10/29: \"I don\\'t cover these medications.\"") && /10\/29 T 590–593/.test(ui),
+      'the Chart view marks page 7 with Dr. Smith\'s words, cited (10/29 T 590–593)');
+    check(/BUILD\.preview \? '\.\.\/' : ''/.test(ui) && /'chart\/'/.test(ui), 'the chart images load from chart/ beside the page (../chart/ in /preview/), as slides/ do');
+    const sw = fs.readFileSync(path.join(__dirname, '..', 'sw.js'), 'utf8');
+    check(!/chart\//.test(sw), 'the service worker does not precache the chart images');
+  }
 }
 
 console.log('=== Storage and stub DOM ===');

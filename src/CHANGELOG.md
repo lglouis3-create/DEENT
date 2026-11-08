@@ -8,6 +8,14 @@ characters.
 
 Every update adds its bullets here in the same commit that makes the change.
 
+## 2026-11-08 (Drug list: the original chart)
+- Drug list > Chart: the original drug chart pages 1–7, one page at a time, with zoom and Open full size.
+- Chart: type a generic or brand name to turn to its page and highlight its row (both rows if listed twice).
+- "See on the chart (p. N)" on each Browse card, after a Quiz me answer and in Recall opens the highlighted row.
+- Chart page 7 (lice and scabies) is marked not on Exam 1; the misaligned columns of pages 4 and 5 are noted.
+- Zinc oxide on the psoriasis page: its lecture role is protecting the skin around plaques in anthralin treatment.
+- Cyclosporine no longer shows an atopic dermatitis note; the calcineurin class's use is in the Guide.
+
 ## 2026-11-08 (Drug list: three study modes)
 - Drug list: choose Browse, Quiz me or Recall at the top; every matching drug shows at once, with no Next button.
 - Quiz me: multiple choice on each drug's target, class or indication, answered in place with the source.
