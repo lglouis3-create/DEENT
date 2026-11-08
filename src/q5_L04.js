@@ -90,6 +90,7 @@ TOPICS.push(
    {id:'hc',   name:'Hydrocortisone as reference; its derivatives (11/03)', cite:'slides 7, 18, 24–26'},
    {id:'tof',  name:'Tofacitinib (11/04)', cite:'slide 35'},
    {id:'acne', name:'Acne', cite:'slides 40–41'},
+   {id:'uv',   name:'UV bands: the slide 58 figure', cite:'slide 58'},
    {id:'wrk',  name:'Wrinkles: causes, hydroquinone, AHAs, hyaluronic acid, topical retinoids (11/04)', cite:'slides 58, 67–70'}]}
 );
 
@@ -1166,7 +1167,7 @@ QUESTIONS.push(
  teach:'"Environment plays a big role, so UV radiation, habits like smoking, and exposure to just chemicals" (T@37350–37500).',
  cite:S4+' slide 58; T@37300–37511'},
 
-{id:'S4-096', skill:'patho', prof:'Sikazwe', tier:'new', topic:'s4-sun', sub:'uv', concept:'uva-penetration',
+{id:'S4-096', skill:'patho', prof:'Sikazwe', tier:'new', topic:'sk-beyond', sub:'uv', concept:'uva-penetration', lowYield:true, unassigned:true, note:'Outside Dr. Sikazwe\'s assigned pages for Exam 1 (list of 11/06). This slide 58 figure gives UVA as 320–400 nm; his slides 62–63 give 315–400 nm.',
  tags:['poll','verbatim'], source:'both',
  stem:'What UVR band is more skin penetrating?',
  options:[

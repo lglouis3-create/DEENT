@@ -23,6 +23,7 @@ Every update adds its bullets here in the same commit that makes the change.
 
 ## 2026-11-08 (Likely-on-the-exam stars)
 - 117 questions starred (★) as likely on Exam 1: a prediction, not an official list.
+- One more UV question (slide 58) moved to the optional "beyond the assigned pages" topic.
 - Topics: drill all starred questions, or only Dr. Smith's or Dr. Sikazwe's.
 
 ## 2026-11-08 (Drug List)
