@@ -814,7 +814,10 @@ const COURSE = {
           'walk_ui.js', 'why_ui.js',
           // Topics: the exam facts card (course-level, Louis 2026-11-08; the deck folders are in
           // guide.js with the deck grouping)
-          'topics_ui.js'],
+          'topics_ui.js',
+          // Wide screens (iPad Pro 13, MacBook) and the pinned tab strip that hides while reading
+          // (course-level, Louis 2026-11-08; temporary until the kit has these)
+          'wide_ui.js'],
 
   tools: {citeAliases:{'skin-pathophys-students-2026.pdf':'Skin-Pathophys-Students-2026.pdf',
                        'skin-pcol-students-2026.pdf':'Skin-PCol-Students-2026.pdf',
@@ -834,7 +837,7 @@ const COURSE = {
    the Topics page shows as "What's new" since this browser last marked an
    entry seen, and Settings shows whole. preview: true in a page built with
    `build.py --preview`, which is served at /preview/ beside the live drill. */
-const BUILD = {stamp:"2026-11-08 09:05 CT", built:"2026-11-08T15:05:59Z", questions:595, images:1, changelog:[{"date": "2026-11-08 (Topics folders)", "items": ["Topics: each slide deck is a folder that opens and closes; folders start closed and stay as you left them.", "Topics: the exam's date, coverage, format and bank are a short card of labelled rows; more facts fold below it."]}, {"date": "2026-11-08 (Engine update)", "items": ["Topics opens with a \"Start here\" block: learn a topic, start practice, review weak concepts or take a paper.", "Dr. Sikazwe's slides outside his assigned pages form one Optional topic, listed last and kept off exam papers.", "Switching profile during a practice paper keeps each profile's answers separate; the paper waits for its owner.", "\"Review answers\" in a practice paper opens an overview; nothing is submitted until you confirm.", "Repeating a targeted drill asks the same questions again, not a new set.", "Empty pages say what to do next; counts say what they count.", "Wide tables on a phone keep their first column in view while you scroll sideways.", "Step-through figures: arrow keys, larger buttons and an Enlarge view; Atlas renamed \"Structure atlas\"."]}, {"date": "2026-11-08 (Narration player)", "items": ["Guides: \"Listen: walkthrough\" reads each section part by part, with the lecture slide (or diagram step) beside it.", "Walkthroughs: pause and resume, previous and next part, speed, browse slides, open a slide full size.", "Walkthroughs remember the part you stopped on, on this device, and can continue into the next one.", "After you answer a question, \"Hear the why\" reads its explanation aloud (also in a finished paper's review).", "Every walkthrough part and spoken why is recorded; anything without a recording is read by your device's own voice."]}, {"date": "2026-11-08 (Guides and Topics by deck)", "items": ["Topics now grouped under the four slide decks, each topic named after the deck's own section, in slide order.", "Guides rewritten: one section per learning objective of each Smith deck, plus Dr. Sikazwe's assigned pages.", "Guides: drugs per disease, each class's target and why it helps, within-class differences, interactions.", "Guides: boxed warnings, side effects and contraindications by drug, each with its slide.", "Guides: sun deck objectives (UVA vs UVB, MED, SPF, broad spectrum, substantivity, sunblock vs sunscreen).", "Guides link to the matching Tell apart, Reference, Drug list and Atlas sections.", "Tell apart: new tables on sun protection and on boxed warnings, pregnancy limits and interactions.", "Reference: new sun table of SPF blocking, skin types with their SPF, and substantivity by vehicle.", "Diagrams: acne cascade labels moved off the arrows; nuclear receptor figure redrawn so the bound drug shows.", "Guides and Tell apart state both professors' UV band limits; each professor's own numbers are keyed.", "Dr. Sikazwe topics now mark slides outside his assigned list; his slides are numbered by PDF page."]}, {"date": "2026-11-08 (Likely-on-the-exam stars)", "items": ["117 questions starred (\u2605) as likely on Exam 1: a prediction, not an official list.", "One more UV question (slide 58) moved to the optional \"beyond the assigned pages\" topic.", "Topics: drill all starred questions, or only Dr. Smith's or Dr. Sikazwe's."]}, {"date": "2026-11-08 (Drug List)", "items": ["New Drug list tab: all 79 drugs on the dermatology chart (pp. 1\u20136), searchable by generic or brand name.", "Filter the Drug list by disease, class, chart page, Exam 1 taught or optional, boxed warning, photosensitizing.", "Recall mode: write a drug's target first, then Reveal to compare; your typing is not graded or saved.", "Each Drug list line names its source: Dr. Smith's slide, Dr. Sikazwe's page or the drug chart.", "From a drug card: practise exactly its questions, open its Reference row, reading section or Atlas tile.", "Flashcards: step through the filtered drugs one card at a time; no score, nothing saved.", "Spironolactone: Dr. Smith's class and Dr. Sikazwe's biosynthesis mechanism are shown as separate statements.", "Sunscreen family matching item now credits the drug chart for the pairings; it stays off practice papers."]}, {"date": "2026-11-07 (Dr. Smith's Exam 1 hints)", "items": ["32 new questions on Dr. Smith's hint list: epidemiology, disease triggers, drug targets, why each MOA helps.", "New questions on boxed warnings: cyclosporine's two parts, TNF-\u03b1 in children, which drugs carry one.", "New sun questions: sunblock vs sunscreen by ingredient, critical wavelength, UVA vs UVB, photosensitizing drugs.", "8 matching questions pair drugs with their targets, structures or families, for her fill-in-the-blank items.", "Reference: \"Drug targets: write it first, then check\" lists every drug-chart drug with its target to reveal.", "The sun-exposure lecture is now confirmed for Exam 1 by Dr. Smith's hints; the provisional label is gone.", "Exam text now gives Dr. Smith's format: mostly multiple choice, a few fill-in-the-blanks on targets, no essays."]}, {"date": "2026-11-06 (optional practice beyond the assigned slides)", "items": ["New topic \"Beyond the Exam 1 assigned pages (Dr. Sikazwe, optional)\" holds his 23 unassigned-slide questions.", "Those 23 no longer count toward the Exam 1 pool cards on Weak spots or the exam-date review timing.", "Practice papers draw single-answer questions; the exam text now says the official format split is not announced."]}, {"date": "2026-11-06 (Dr. Sikazwe's assigned pages)", "items": ["Dr. Sikazwe's assigned slides for Exam 1 (11/06) applied: 23 questions outside them now stay off practice exams.", "Those 23 stay in practice, each with a note saying it is outside his assigned pages.", "Atlas tiles outside his assigned pages now say \"Not on the assigned pages\" (9 structures)."]}, {"date": "2026-11-06 (reading links)", "items": ["Weak spots and \"Explain more\" now point to a reading section for 397 of 555 questions (was 35).", "Sikazwe's Lectures 3 and 4 questions now link to their Tell apart and Reference tables.", "Lecture 2 and 3 questions now link to Dr. Smith's Lecture 2 and 3 tables; Lecture 1 ones to the objective guides.", "Fixed links that sent some IL-23, salicylic acid and drug-class questions to the wrong table."]}, {"date": "2026-11-06 (Atlas layout)", "items": ["Each Atlas tile now reads in order: core learning, also in the lecture, then collapsed extras.", "Slide and transcript citations moved out of the tile text into a collapsed Sources and verification part.", "Hydrocortisone and cortisone: optional \"Deeper understanding\" on the two 11\u03b2-HSD enzymes, not tested.", "The structure count follows the search and the reference-only filter; an empty search says why.", "A one-line legend explains Core, Reference only and Needs verification.", "Hide names: headings, labels and drawing descriptions no longer give the answer away.", "Hide names: reveal a structure from the keyboard (Tab, then Enter or Space).", "Long structure names no longer make the Atlas wider than a phone screen."]}, {"date": "2026-11-06 (PubChem check)", "items": ["Every Atlas structure was checked against PubChem; each tile names its PubChem record and status.", "Compare structures names the PubChem record of the lecture drawing where one exists."]}, {"date": "2026-11-06 (Atlas refinement)", "items": ["Each Atlas structure is marked Core, Reference only or Needs verification.", "Reference-only structures are hidden by default; one button shows them.", "Compare structures: where a slide draws a molecule differently, see both side by side.", "Hide or reveal the shaded key features to practise spotting them.", "Clearer explanations on the sun-exposure questions."]}, {"date": "2026-11-06 (Atlas and sun exposure)", "items": ["Atlas tab: 91 of Dr. Sikazwe's structures, drawn to one scale, with the taught feature shaded.", "Hide names in the Atlas to quiz yourself on each structure.", "Dr. Smith's sun-exposure lecture: UVA/UVB, SPF, MED, sunblocks vs sunscreens, psoralens.", "Some structure questions now show the drawing before you answer."]}, {"date": "2026-11-05 (Lectures 2\u20134)", "items": ["Lecture 2 (Smith 10/30): retinoids, calcipotriene, calcineurin inhibitors, PDE-4 inhibitors, keratolytics.", "Lecture 3 (Smith 11/03): acne antibiotics, tars and anthralin, methotrexate, biologics, JAK inhibitors.", "Lectures 3\u20134 (Sikazwe 11/03\u201311/04): structures, SAR, prodrugs, CYP3A4, hydroxy acids, retinoids, sunscreens.", "New tell-apart and reference tables for each lecture; Exam 1 paper now draws from both professors."]}, {"date": "2026-11-05 (Lecture 1 preview)", "items": ["Lecture 1 (Dr. Smith, 10/29): skin structure, AD, psoriasis, acne, nuclear receptor binders, steroids, retinoids.", "Step-through figures: the acne lesion cascade and direct vs indirect nuclear receptor action.", "Tell-apart and reference tables for Lecture 1; her polls on the major pathology of AD and psoriasis.", "Exam 1 practice paper is unweighted: the faculty have not announced a split by professor."]}], preview:true};
+const BUILD = {stamp:"2026-11-08 11:02 CT", built:"2026-11-08T17:02:21Z", questions:595, images:1, changelog:[{"date": "2026-11-08 (Drug list: three study modes)", "items": ["Drug list: choose Browse, Quiz me or Recall at the top; every matching drug shows at once, with no Next button.", "Quiz me: multiple choice on each drug's target, class or indication, answered in place with the source.", "Quiz me keeps a score for this visit, with New questions and Retry the missed; nothing is saved.", "Recall: pick target, mechanism, class or indication, type what you remember, then Check to compare.", "Drug list filters are grouped under one heading with an active count and Clear filters."]}, {"date": "2026-11-08 (Wide screens and the tab bar)", "items": ["On a 13-inch iPad and MacBook the page uses the width: exam card beside Start here, two topic columns, a larger slide.", "The course title scrolls away; the tab bar stays at the top and slides away while you read (Settings > Display)."]}, {"date": "2026-11-08 (Topics folders)", "items": ["Topics: each slide deck is a folder that opens and closes; folders start closed and stay as you left them.", "Topics: the exam's date, coverage, format and bank are a short card of labelled rows; more facts fold below it."]}, {"date": "2026-11-08 (Engine update)", "items": ["Topics opens with a \"Start here\" block: learn a topic, start practice, review weak concepts or take a paper.", "Dr. Sikazwe's slides outside his assigned pages form one Optional topic, listed last and kept off exam papers.", "Switching profile during a practice paper keeps each profile's answers separate; the paper waits for its owner.", "\"Review answers\" in a practice paper opens an overview; nothing is submitted until you confirm.", "Repeating a targeted drill asks the same questions again, not a new set.", "Empty pages say what to do next; counts say what they count.", "Wide tables on a phone keep their first column in view while you scroll sideways.", "Step-through figures: arrow keys, larger buttons and an Enlarge view; Atlas renamed \"Structure atlas\"."]}, {"date": "2026-11-08 (Narration player)", "items": ["Guides: \"Listen: walkthrough\" reads each section part by part, with the lecture slide (or diagram step) beside it.", "Walkthroughs: pause and resume, previous and next part, speed, browse slides, open a slide full size.", "Walkthroughs remember the part you stopped on, on this device, and can continue into the next one.", "After you answer a question, \"Hear the why\" reads its explanation aloud (also in a finished paper's review).", "Every walkthrough part and spoken why is recorded; anything without a recording is read by your device's own voice."]}, {"date": "2026-11-08 (Guides and Topics by deck)", "items": ["Topics now grouped under the four slide decks, each topic named after the deck's own section, in slide order.", "Guides rewritten: one section per learning objective of each Smith deck, plus Dr. Sikazwe's assigned pages.", "Guides: drugs per disease, each class's target and why it helps, within-class differences, interactions.", "Guides: boxed warnings, side effects and contraindications by drug, each with its slide.", "Guides: sun deck objectives (UVA vs UVB, MED, SPF, broad spectrum, substantivity, sunblock vs sunscreen).", "Guides link to the matching Tell apart, Reference, Drug list and Atlas sections.", "Tell apart: new tables on sun protection and on boxed warnings, pregnancy limits and interactions.", "Reference: new sun table of SPF blocking, skin types with their SPF, and substantivity by vehicle.", "Diagrams: acne cascade labels moved off the arrows; nuclear receptor figure redrawn so the bound drug shows.", "Guides and Tell apart state both professors' UV band limits; each professor's own numbers are keyed.", "Dr. Sikazwe topics now mark slides outside his assigned list; his slides are numbered by PDF page."]}, {"date": "2026-11-08 (Likely-on-the-exam stars)", "items": ["117 questions starred (\u2605) as likely on Exam 1: a prediction, not an official list.", "One more UV question (slide 58) moved to the optional \"beyond the assigned pages\" topic.", "Topics: drill all starred questions, or only Dr. Smith's or Dr. Sikazwe's."]}, {"date": "2026-11-08 (Drug List)", "items": ["New Drug list tab: all 79 drugs on the dermatology chart (pp. 1\u20136), searchable by generic or brand name.", "Filter the Drug list by disease, class, chart page, Exam 1 taught or optional, boxed warning, photosensitizing.", "Recall mode: write a drug's target first, then Reveal to compare; your typing is not graded or saved.", "Each Drug list line names its source: Dr. Smith's slide, Dr. Sikazwe's page or the drug chart.", "From a drug card: practise exactly its questions, open its Reference row, reading section or Atlas tile.", "Flashcards: step through the filtered drugs one card at a time; no score, nothing saved.", "Spironolactone: Dr. Smith's class and Dr. Sikazwe's biosynthesis mechanism are shown as separate statements.", "Sunscreen family matching item now credits the drug chart for the pairings; it stays off practice papers."]}, {"date": "2026-11-07 (Dr. Smith's Exam 1 hints)", "items": ["32 new questions on Dr. Smith's hint list: epidemiology, disease triggers, drug targets, why each MOA helps.", "New questions on boxed warnings: cyclosporine's two parts, TNF-\u03b1 in children, which drugs carry one.", "New sun questions: sunblock vs sunscreen by ingredient, critical wavelength, UVA vs UVB, photosensitizing drugs.", "8 matching questions pair drugs with their targets, structures or families, for her fill-in-the-blank items.", "Reference: \"Drug targets: write it first, then check\" lists every drug-chart drug with its target to reveal.", "The sun-exposure lecture is now confirmed for Exam 1 by Dr. Smith's hints; the provisional label is gone.", "Exam text now gives Dr. Smith's format: mostly multiple choice, a few fill-in-the-blanks on targets, no essays."]}, {"date": "2026-11-06 (optional practice beyond the assigned slides)", "items": ["New topic \"Beyond the Exam 1 assigned pages (Dr. Sikazwe, optional)\" holds his 23 unassigned-slide questions.", "Those 23 no longer count toward the Exam 1 pool cards on Weak spots or the exam-date review timing.", "Practice papers draw single-answer questions; the exam text now says the official format split is not announced."]}, {"date": "2026-11-06 (Dr. Sikazwe's assigned pages)", "items": ["Dr. Sikazwe's assigned slides for Exam 1 (11/06) applied: 23 questions outside them now stay off practice exams.", "Those 23 stay in practice, each with a note saying it is outside his assigned pages.", "Atlas tiles outside his assigned pages now say \"Not on the assigned pages\" (9 structures)."]}, {"date": "2026-11-06 (reading links)", "items": ["Weak spots and \"Explain more\" now point to a reading section for 397 of 555 questions (was 35).", "Sikazwe's Lectures 3 and 4 questions now link to their Tell apart and Reference tables.", "Lecture 2 and 3 questions now link to Dr. Smith's Lecture 2 and 3 tables; Lecture 1 ones to the objective guides.", "Fixed links that sent some IL-23, salicylic acid and drug-class questions to the wrong table."]}, {"date": "2026-11-06 (Atlas layout)", "items": ["Each Atlas tile now reads in order: core learning, also in the lecture, then collapsed extras.", "Slide and transcript citations moved out of the tile text into a collapsed Sources and verification part.", "Hydrocortisone and cortisone: optional \"Deeper understanding\" on the two 11\u03b2-HSD enzymes, not tested.", "The structure count follows the search and the reference-only filter; an empty search says why.", "A one-line legend explains Core, Reference only and Needs verification.", "Hide names: headings, labels and drawing descriptions no longer give the answer away.", "Hide names: reveal a structure from the keyboard (Tab, then Enter or Space).", "Long structure names no longer make the Atlas wider than a phone screen."]}, {"date": "2026-11-06 (PubChem check)", "items": ["Every Atlas structure was checked against PubChem; each tile names its PubChem record and status.", "Compare structures names the PubChem record of the lecture drawing where one exists."]}, {"date": "2026-11-06 (Atlas refinement)", "items": ["Each Atlas structure is marked Core, Reference only or Needs verification.", "Reference-only structures are hidden by default; one button shows them.", "Compare structures: where a slide draws a molecule differently, see both side by side.", "Hide or reveal the shaded key features to practise spotting them.", "Clearer explanations on the sun-exposure questions."]}, {"date": "2026-11-06 (Atlas and sun exposure)", "items": ["Atlas tab: 91 of Dr. Sikazwe's structures, drawn to one scale, with the taught feature shaded.", "Hide names in the Atlas to quiz yourself on each structure.", "Dr. Smith's sun-exposure lecture: UVA/UVB, SPF, MED, sunblocks vs sunscreens, psoralens.", "Some structure questions now show the drawing before you answer."]}, {"date": "2026-11-05 (Lectures 2\u20134)", "items": ["Lecture 2 (Smith 10/30): retinoids, calcipotriene, calcineurin inhibitors, PDE-4 inhibitors, keratolytics.", "Lecture 3 (Smith 11/03): acne antibiotics, tars and anthralin, methotrexate, biologics, JAK inhibitors.", "Lectures 3\u20134 (Sikazwe 11/03\u201311/04): structures, SAR, prodrugs, CYP3A4, hydroxy acids, retinoids, sunscreens.", "New tell-apart and reference tables for each lecture; Exam 1 paper now draws from both professors."]}, {"date": "2026-11-05 (Lecture 1 preview)", "items": ["Lecture 1 (Dr. Smith, 10/29): skin structure, AD, psoriasis, acne, nuclear receptor binders, steroids, retinoids.", "Step-through figures: the acne lesion cascade and direct vs indirect nuclear receptor action.", "Tell-apart and reference tables for Lecture 1; her polls on the major pathology of AD and psoriasis.", "Exam 1 practice paper is unweighted: the faculty have not announced a split by professor."]}], preview:true};
 const IMAGES = {"s4-polleve3": "data:image/webp;base64,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"};
 /* Atlas of drawn structures for PHAR 4346 DEENT (Dr. Sikazwe's medicinal
    chemistry). GENERATED by gen_atlas.py from atlas_data.json and atlas_ui.js:
@@ -11269,20 +11272,141 @@ const DRUGLIST = (() => {
     }
     return out;
   }
-  return {parseTargets, D, CLASS_Q, CLASSES, DISEASES, PAGES, CHART_ROWS, EXCLUDED, CHART_NOTES, questionsFor, classQuestions};
+  /* ---------- Multiple-choice practice on the list (Drug list, "Quiz me") ----------
+     Built only from the statements above and the Reference target rows; no new
+     facts. One question asks one field of one drug, by generic name: its
+     target, its class or its indication. The keyed answer is one of the drug's
+     own values (with its source); the three distractors are values of the same
+     field on other cards, and never one that is also true for this drug:
+       - a distractor's normalized text may equal none of the drug's values;
+       - it may not come from a drug of the same class (antibiotics: the same
+         chart class), nor share a "family" with any of the drug's values
+         (FAMILY below: e.g. calcineurin, FKBP and cyclophilin are one family,
+         so calcineurin is never offered as a wrong target for tacrolimus);
+       - classes that overlap (CLASS_CONFLICT) are never offered for each
+         other (ustekinumab is both an IL-12 and an IL-23 inhibitor);
+       - an indication is offered as wrong only if no indication text of the
+         drug (chart or lecture) names it, no drug of its class has it, and
+         it is not in NOT_WRONG.
+     At most one distractor per family, so no two options say the same thing.
+     A drug-field pair with no clean answer (sunscreens' "target", a mechanism
+     the slide calls unknown) or fewer than three safe distractors gets no
+     question. Mechanism lines are fragments of the target sentence on the
+     Reference table, so they are practised in Recall, not as options. */
+  const norm = t => String(t).toLowerCase().replace(/α/g, 'alpha').replace(/[^a-z0-9]+/g, ' ').trim();
+  const FAMILY = [[/calcineurin|fkbp|cyclophilin/, 'calcineurin'], [/dihydrofolate|dhfr/, 'dhfr'], [/\bjak|janus/, 'jak'],
+    [/il 17/, 'il17'], [/retino|\brar\b|\brxr\b|vitamin d|\bvdr\b/, 'nuclear'], [/tnf/, 'tnf'], [/pde 4|phosphodiesterase/, 'pde4'],
+    [/30s|50s|ribosom/, null], [/glucocorticoid/, 'gr']];
+  const family = t => { const n = norm(t); for (const [re, f] of FAMILY) if (re.test(n)) return f || n; return n; };
+  // classes whose drugs can truly be described by the other's name
+  const CLASS_CONFLICT = [['il23', 'il1223'], ['kerat', 'abx'], ['dhfr', 'abx'], ['dhfr', 'cytotox'], ['cytotox', 'azole'], ['emollient', 'sunblock'],
+    ['sunscreen', 'sunblock']];
+  // drug classes whose Reference "target" is not a molecular target (a sunscreen
+  // family, a chart class, "no drug target", a mechanism the slide calls unknown)
+  const NO_TARGET_Q = new Set(['sunscreen', 'sunblock', 'anesth', 'emollient', 'azole', 'antiandr', 'cytotox', 'kerat']);
+  const NO_TARGET_ID = new Set(['dapsone', 'metronidazole']);
+  // uses outside the chart and the slides that are common enough that a wrong
+  // option naming them would mislead (only ever kept OUT of the wrong options;
+  // never shown as an answer): systemic cyclosporine and methotrexate and coal
+  // tar in atopic dermatitis/eczema, upadacitinib in psoriatic disease, and zinc
+  // oxide, which the chart also lists on its psoriasis page (p. 5)
+  const NOT_WRONG = {cyclosporine: ['ad'], methotrexate: ['ad'], coaltar: ['ad'], upadacitinib: ['pso'], zincoxide: ['pso']};
+  const DZ_RE = {ad: /atopic|eczema|\bad\b/, pso: /psoria/, acne: /acne/, sun: /sun protection|sunscreen/, burn: /sunburn/};
+  const KINDS = {target: 'Target', cls: 'Class', use: 'Indication'};
+  const groupOf = d => d.cls === 'abx' ? 'abx:' + norm(d.chartClass || '') : d.cls;
+  /* The keyed values of one field of one drug: [{t, src: [{t, by, cite}]}]. */
+  function quizFacts(d, T, kind){
+    if (kind === 'target') {
+      if (NO_TARGET_Q.has(d.cls) || NO_TARGET_ID.has(d.id)) return [];
+      const parts = [d.tgt, d.tgt2].filter(Boolean).flatMap(id => (T[id] || {parts: []}).parts)
+        .filter(p => p.kind === 'tg' && (p.by === 'smith' || p.by === 'sikazwe'));
+      // option text: a leading component name ("Trimethoprim: ...") is dropped, so a
+      // wrong option never names another drug; the source line keeps the full text
+      const opt = t => { t = t.replace(/^[A-Z][a-z]+: /, ''); return /^[a-z]{2}/.test(t) ? t.charAt(0).toUpperCase() + t.slice(1) : t; };
+      return parts.map(p => ({t: opt(p.t), src: [p]}));
+    }
+    if (kind === 'cls') {
+      const src = d.chartClass ? {t: d.chartClass, by: 'chart', cite: 'Chart p. ' + d.page}
+        : d.cls === 'tnf' ? {t: 'TNF-α inhibitor', by: 'smith', cite: 'PCol 70–74'} : null;
+      return src ? [{t: CLASSES[d.cls], src: [src]}] : [];
+    }
+    if (kind === 'use') {
+      const texts = [];
+      if (d.chartUse) texts.push({t: d.chartUse, by: 'chart', cite: 'Chart p. ' + (d.pages ? d.pages.join(', ') : d.page)});
+      (d.use || []).forEach(u => texts.push(u));
+      return Object.keys(DISEASES).filter(z => d.dz.includes(z)).map(z => ({t: DISEASES[z], z,
+        src: texts.filter(s => DZ_RE[z].test(norm(s.t)))})).filter(v => v.src.length);
+    }
+    return [];
+  }
+  /* Every value a drug could truly be said to have in a field (for exclusion). */
+  function trueValues(d, T, kind){
+    if (kind === 'use') {
+      const txt = norm([d.chartUse || ''].concat((d.use || []).map(u => u.t)).join(' '));
+      return Object.keys(DISEASES).filter(z => d.dz.includes(z) || DZ_RE[z].test(txt) || (NOT_WRONG[d.id] || []).includes(z)).map(z => DISEASES[z]);
+    }
+    if (kind === 'target') return [d.tgt, d.tgt2].filter(Boolean).flatMap(id => (T[id] || {parts: []}).parts).map(p => p.t);
+    return [CLASSES[d.cls]];
+  }
+  const conflicts = (a, b) => CLASS_CONFLICT.some(([x, y]) => (x === a && y === b) || (x === b && y === a));
+  /* One question, or null. rng: () => [0, 1). */
+  function makeQuestion(d, T, kind, rng){
+    rng = rng || Math.random;
+    const keys = quizFacts(d, T, kind);
+    if (!keys.length) return null;
+    const truth = trueValues(d, T, kind).concat(keys.map(k => k.t));
+    // an indication that a drug of the same class has is not offered as wrong
+    // either (crisaborole is never "wrong" for psoriasis, where apremilast is used)
+    if (kind === 'use') D.filter(o => o.cls === d.cls && o.id !== d.id).forEach(o => quizFacts(o, T, kind).forEach(v => truth.push(v.t)));
+    const bad = new Set(truth.map(norm)), badFam = new Set(truth.map(family));
+    const pool = [], seenFam = new Set();
+    for (const o of D) {
+      if (o.id === d.id || groupOf(o) === groupOf(d) || (kind === 'cls' && conflicts(o.cls, d.cls))) continue;
+      for (const v of quizFacts(o, T, kind)) {
+        const n = norm(v.t), f = family(v.t);
+        if (!n || bad.has(n) || badFam.has(f)) continue;
+        pool.push({t: v.t, f});
+      }
+    }
+    for (let i = pool.length - 1; i > 0; i--) { const j = Math.floor(rng() * (i + 1)); [pool[i], pool[j]] = [pool[j], pool[i]]; }
+    const wrong = [];
+    for (const p of pool) { if (seenFam.has(p.f)) continue; seenFam.add(p.f); wrong.push(p.t); if (wrong.length === 3) break; }
+    if (wrong.length < 3) return null;
+    const key = keys[Math.floor(rng() * keys.length)];
+    const options = wrong.map(t => ({t, correct: false})).concat([{t: key.t, correct: true}]);
+    for (let i = options.length - 1; i > 0; i--) { const j = Math.floor(rng() * (i + 1)); [options[i], options[j]] = [options[j], options[i]]; }
+    const stem = kind === 'target' ? `What is the target of ${d.name}?`
+      : kind === 'cls' ? `Which class is ${d.name} in?` : `Which condition is ${d.name} used for?`;
+    return {id: d.id + ':' + kind, drug: d.id, name: d.name, kind, stem, options, src: key.src, also: keys.filter(k => k !== key).map(k => k.t)};
+  }
+  return {parseTargets, D, CLASS_Q, CLASSES, DISEASES, PAGES, CHART_ROWS, EXCLUDED, CHART_NOTES, questionsFor, classQuestions,
+          KINDS, quizFacts, trueValues, makeQuestion, norm, family, NOT_WRONG};
 })();
 
 /* ==========================================================================
    DRUG LIST TAB, PHAR 4346 DEENT (Exam 1)
    --------------------------------------------------------------------------
    TEMPORARY course-level presentation, to be replaced by the shared-kit Drug
-   List feature. The kit core (25c643d) is not changed: this file is a course
-   data file (course.js `files`), so the build puts it into the page before
-   views.js. At load it adds a "Drug list" nav button and its pane #v-drugs,
-   and wraps the engine's show() the way the core's feature-module hook
-   (features.js, X.tab) does, which this course does not switch on. It runs
-   only in a real browser page (MutationObserver and the nav present); in the
-   node checks' stub DOM it does nothing, so they see the core page.
+   List feature. The kit core is not changed: this file is a course data file
+   (course.js `files`), so the build puts it into the page before views.js.
+   At load it adds a "Drug list" nav button and its pane #v-drugs, and wraps
+   the engine's show() the way the core's feature-module hook (features.js,
+   X.tab) does, which this course does not switch on. It runs only in a real
+   browser page (MutationObserver and the nav present); in the node checks'
+   stub DOM it does nothing, so they see the core page.
+
+   Three ways to study the list (Louis, 2026-11-08: everything that matches
+   the filters at once, no Next button; multiple choice; a recall mode that
+   says what to type):
+     Browse    every matching drug as a full card, all at once.
+     Quiz me   multiple choice, every question for the matching drugs listed
+               at once and answered in place (target, class, indication);
+               questions come from DRUGLIST.makeQuestion (druglist_data.js),
+               which builds them from the cards' own sourced statements.
+     Recall    the drug name only, a box to type the target, mechanism, class
+               or indication, and Check to compare with the answer and source.
+   Generic names only in Quiz me and Recall (brands are on Browse cards, as
+   reference). A score in Quiz me counts this page view only.
 
    Data: druglist_data.js (DRUGLIST). Targets and mechanisms are read from the
    Reference tab's "Drug targets" table (REFERENCE_HTML, rows tgt-*), the one
@@ -11290,9 +11414,10 @@ const DRUGLIST = (() => {
    linksFor() and the RET/backBtn return stack.
 
    Storage: none. Nothing is written to localStorage, sessionStorage or
-   IndexedDB; typed recall text lives in this page's memory only and is gone
-   on reload. (The engine's own place-keeping may remember that this tab was
-   open, as it does for every tab.)
+   IndexedDB, and nothing goes into the core's progress or history: quiz
+   answers, the score and typed recall text live in this page's memory only
+   and are gone on reload. (The engine's own place-keeping may remember that
+   this tab was open, as it does for every tab.)
    ========================================================================== */
 const DRUGLIST_UI = (() => {
   const ok = typeof document !== 'undefined' && typeof MutationObserver !== 'undefined' &&
@@ -11301,23 +11426,54 @@ const DRUGLIST_UI = (() => {
   if (!ok) return null;
   const DL = DRUGLIST, ID = 'drugs';
   const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g, c => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'}[c]));
-  const st = {q: '', dz: '', cls: '', page: '', status: '', boxed: false, photo: false, hasq: false,
-              recall: true, showCls: false, flash: false, fi: 0};
-  const revealed = new Set(), typed = {};       // memory only, never stored
+  const NOFILTER = {q: '', dz: '', cls: '', page: '', status: '', boxed: false, photo: false, hasq: false};
+  const st = Object.assign({mode: 'browse', kinds: {target: true, cls: true, use: false}, rfield: 'target'}, NOFILTER);
+  // memory only, never stored
+  const typed = {}, checked = new Set();
+  let quiz = null;                        // {sig, list: [question], ans: {qid: option index}, skipped: {kind: n}}
   let TGT = null, QCACHE = null, pane = null;
 
+  const MODES = [
+    ['browse', 'Browse', 'Every drug that matches the filters, shown in full: class, use, target, mechanism, cautions, each line with its source.'],
+    ['quiz', 'Quiz me', 'Multiple choice on the drugs that match the filters, all on this page. Tap an answer to see if it is right, the correct answer and its source. Nothing is saved.'],
+    ['recall', 'Recall', 'Each drug by name only. Type what you remember, press Check, and compare it yourself with the answer and its source. Not graded, not saved.'],
+  ];
+  const RFIELDS = {target: 'Target', mech: 'Mechanism', cls: 'Class', use: 'Indication'};
+
   const css = `
-#v-drugs .dlbar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:0 0 10px}
-#v-drugs .dlbar input[type=search]{flex:1 1 220px;min-width:0;font:inherit;padding:8px 10px;border:1px solid var(--line);border-radius:8px;background:var(--paper);color:var(--text)}
-#v-drugs .dlbar select{font:inherit;font-size:14px;padding:6px 8px;border:1px solid var(--line);border-radius:8px;background:var(--paper);color:var(--text);max-width:100%;min-width:0;flex:1 1 150px}
-#v-drugs .dlnote{font-size:13px;color:var(--text-dim);margin:0 0 10px;line-height:1.45}
-#v-drugs .dlnote summary{cursor:pointer;color:var(--text)}
+#v-drugs .dlmodes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;margin:4px 0 6px;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:var(--paper);max-width:520px}
+#v-drugs .dlmodes button{min-height:44px;font:inherit;font-size:15px;font-weight:500;border:0;border-left:1px solid var(--line);background:transparent;color:var(--text);padding:8px 6px;cursor:pointer}
+#v-drugs .dlmodes button:first-child{border-left:0}
+#v-drugs .dlmodes button[aria-checked="true"]{background:var(--ink);color:#fff}
+#v-drugs .dlmodes button:focus-visible{outline:3px solid #6FA0E8;outline-offset:-3px}
+#v-drugs .dlhow{font-size:14px;color:var(--text);margin:0 0 12px;line-height:1.45}
+#v-drugs .dlnote{font-size:13px;color:var(--text-dim);margin:0 0 12px;line-height:1.45}
+#v-drugs .dlnote summary{cursor:pointer;color:var(--text);min-height:44px;display:flex;align-items:center}
 #v-drugs .dlnote p,#v-drugs .dlnote ul{margin:6px 0}
-#v-drugs .dlself{font-size:13px;background:var(--accent-bg);border:1px solid var(--line);border-radius:8px;padding:8px 10px;margin:0 0 12px}
-#v-drugs .dlcount{font-size:13px;color:var(--text-dim);margin:4px 0 10px}
+#v-drugs .dlfilters{background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:10px 12px 12px;margin:0 0 12px}
+#v-drugs .dlfhead{display:flex;flex-wrap:wrap;align-items:center;gap:4px 10px;margin:0 0 6px}
+#v-drugs .dlfhead h3{margin:0;font-size:15px}
+#v-drugs .dlfhead .n{font-size:13px;color:var(--text-dim)}
+#v-drugs .dllink{background:none;border:0;padding:0 4px;font:inherit;font-size:14px;color:var(--accent);text-decoration:underline;min-height:44px;cursor:pointer;margin-left:auto}
+#v-drugs .dllink:disabled{color:var(--text-dim);text-decoration:none;cursor:default}
+#v-drugs .dlfgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,150px),1fr));gap:8px}
+#v-drugs .dlfgrid .wide{grid-column:1/-1}
+#v-drugs .dlfld label{display:block;font-size:12px;color:var(--text-dim);margin:0 0 2px}
+#v-drugs .dlfld input,#v-drugs .dlfld select{width:100%;min-width:0;min-height:44px;font:inherit;font-size:15px;padding:6px 9px;border:1px solid var(--line);border-radius:8px;background:var(--paper);color:var(--text)}
+#v-drugs .dlchips{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0 0;align-items:center}
+#v-drugs .dlchips .lab{font-size:13px;color:var(--text-dim);margin-right:2px}
+#v-drugs .chip{font-size:14px;min-height:44px;padding:6px 14px}
+#v-drugs .btn.sm{padding:8px 14px;font-size:14px;min-height:44px}
+#v-drugs .btn.ghost{background:var(--paper);color:var(--text);border:1px solid var(--line)}
+#v-drugs .dlmodebar{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 12px;margin:0 0 12px}
+#v-drugs .dlmodebar p{margin:6px 0 0;font-size:14px;line-height:1.45}
+#v-drugs .dlmodebar .ex{font-size:13.5px;color:var(--text-dim)}
+#v-drugs .dlcount{font-size:14px;color:var(--text-dim);margin:4px 0 10px}
+#v-drugs .dlscore{font-size:15px;font-weight:600;margin:8px 0 0}
 #v-drugs .dlgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,330px),1fr));gap:12px}
+#v-drugs .dlqlist{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,420px),1fr));gap:12px}
 #v-drugs .dlcard{background:var(--paper);border:1px solid var(--line);border-radius:8px;padding:12px;display:flex;flex-direction:column;gap:8px;min-width:0;overflow-wrap:anywhere}
-#v-drugs .dlcard.opt{border-style:dashed}
+#v-drugs .dlcard.dlopt{border-style:dashed}
 #v-drugs .dlcard h3{margin:0;font-size:17px}
 #v-drugs .dlbrand{font-size:12.5px;color:var(--text-dim);margin:-4px 0 0}
 #v-drugs .dlmeta{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:0}
@@ -11341,13 +11497,22 @@ const DRUGLIST_UI = (() => {
 #v-drugs .f-note{border-color:var(--line)} #v-drugs .f-note>b{color:var(--text-dim)}
 #v-drugs .dlsrc{display:inline-block;font-size:11px;color:var(--text-dim);border:1px solid var(--line);border-radius:4px;padding:0 5px;margin-left:4px;white-space:normal}
 #v-drugs .dlsrc.smith{border-color:var(--accent)} #v-drugs .dlsrc.sikazwe{border-style:dotted;border-color:var(--sik)} #v-drugs .dlsrc.chart{border-style:dashed}
-#v-drugs .dlrecall textarea{width:100%;min-height:58px;font:inherit;font-size:14px;padding:7px 9px;border:1px solid var(--line);border-radius:8px;background:var(--surface);color:var(--text);resize:vertical}
-#v-drugs .dlrecall label{display:block;font-size:12.5px;color:var(--text-dim);margin-bottom:3px}
 #v-drugs .dlrow{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
 #v-drugs .dlrow .meta{font-size:12px;color:var(--text-dim)}
-#v-drugs .chip{font-size:13px}
-#v-drugs .btn.sm{padding:6px 12px;font-size:14px}
-#v-drugs .dlflash{display:flex;flex-direction:column;gap:10px;max-width:560px;margin:0 auto}
+#v-drugs .dlrecall label{display:block;font-size:13px;color:var(--text-dim);margin:0 0 3px}
+#v-drugs .dlrecall .dlrow{flex-wrap:nowrap}
+#v-drugs .dlrecall input{flex:1 1 auto;min-width:0;min-height:44px;font:inherit;font-size:16px;padding:6px 9px;border:1px solid var(--line);border-radius:8px;background:var(--surface);color:var(--text)}
+#v-drugs .dlrecall .btn{flex:none}
+#v-drugs .dlwhole summary{cursor:pointer;font-size:13px;color:var(--accent);min-height:44px;display:flex;align-items:center}
+#v-drugs .dlwhole[open]{display:flex;flex-direction:column;gap:8px}
+#v-drugs .dlq{background:var(--paper);border:1px solid var(--line);border-radius:8px;padding:12px;min-width:0;overflow-wrap:anywhere}
+#v-drugs .dlq .dlqh{font-size:12px;color:var(--text-dim);margin:0 0 4px;text-transform:uppercase;letter-spacing:.05em}
+#v-drugs .dlq .stem{font-size:16px;margin:0 0 10px}
+#v-drugs .dlq .opt{min-height:44px;cursor:pointer}
+#v-drugs .dlq .opt[aria-disabled="true"]{cursor:default}
+#v-drugs .dlq .opt[aria-disabled="true"]:not(.pick-ok):not(.pick-bad):not(.reveal-ok){opacity:.75}
+#v-drugs .dlfb{font-size:14px;line-height:1.45;margin:2px 0 0}
+#v-drugs .dlfb .r{font-weight:600;color:var(--ok)} #v-drugs .dlfb .w{font-weight:600;color:var(--bad)}
 #v-drugs .dlempty{font-size:14px;color:var(--text);margin:10px 0}
 #v-atlas .attile.dlhit{outline:3px solid var(--accent);outline-offset:2px}
 `;
@@ -11380,23 +11545,29 @@ const DRUGLIST_UI = (() => {
       (!st.status || (st.status === 'taught' ? d.status === 'taught' : d.status !== 'taught')) &&
       (!st.boxed || d.boxed) && (!st.photo || (d.photo && !d.photo.no)) && (!st.hasq || qs(d).own.length));
   }
+  const activeFilters = () => Object.keys(NOFILTER).filter(k => k === 'q' ? st.q.trim() : st[k]).length;
 
-  /* ---------- one card ---------- */
-  function answer(d){
+  /* the sourced lines of one field of a card */
+  function lines(d){
     const rows = [d.tgt, d.tgt2].filter(Boolean).map(id => targets()[id] || {parts: []});
     const all = [].concat(...rows.map(r => r.parts));
-    const tg = all.filter(p => p.kind === 'tg'), mo = all.filter(p => p.kind === 'mo');
     const cls = [];
     if (d.chartClass) cls.push({t: d.chartClass, by: 'chart', cite: 'Chart p. ' + d.page});
     if (!d.chartClass && d.cls === 'tnf') cls.push({t: 'TNF-α inhibitor', by: 'smith', cite: 'PCol 70–74'});
     const use = [];
     if (d.chartUse) use.push({t: d.chartUse, by: 'chart', cite: 'Chart p. ' + (d.pages ? d.pages.join(', ') : d.page)});
     (d.use || []).forEach(u => use.push(u));
+    return {tg: all.filter(p => p.kind === 'tg'), mo: all.filter(p => p.kind === 'mo'), cls, use};
+  }
+
+  /* ---------- Browse: one full card ---------- */
+  function answer(d){
+    const L = lines(d);
     const notes = (d.notes || []).filter(n => n.by !== 'remark'), remarks = (d.notes || []).filter(n => n.by === 'remark');
     const Q = qs(d), links = readLinks(d);
     const members = DL.D.filter(x => x.cls === d.cls && x.id !== d.id);
-    return field('f-class', 'Class', cls) + field('f-use', 'Indication', use) +
-      field('f-tg', 'Target', tg) + field('f-mo', 'Mechanism', mo) +
+    return field('f-class', 'Class', L.cls) + field('f-use', 'Indication', L.use) +
+      field('f-tg', 'Target', L.tg) + field('f-mo', 'Mechanism', L.mo) +
       field('f-why', 'Why it helps (Dr. Smith)', d.why ? [d.why] : []) +
       field('f-box', 'Boxed warning', d.boxed ? [d.boxed] : []) +
       field('f-ae', 'Key adverse effects and cautions', d.ae || []) +
@@ -11407,8 +11578,8 @@ const DRUGLIST_UI = (() => {
         <button type="button" class="chip" data-dl="cls" data-cls="${esc(d.cls)}">Show all ${members.length + 1}</button>
         ${members.slice(0, 8).map(m => `<button type="button" class="chip" data-dl="only" data-id="${esc(m.id)}">${esc(m.name)}</button>`).join('')}</div>` : '') +
       `<div class="dlrow"><span class="meta">Practice:</span>
-        ${Q.own.length ? `<button type="button" class="chip" data-dl="quiz" data-id="${esc(d.id)}">${Q.own.length} question${Q.own.length > 1 ? 's' : ''} on ${esc(d.name)}</button>` : '<span class="meta">no question names this drug</span>'}
-        ${Q.cls.length ? `<button type="button" class="chip" data-dl="cquiz" data-id="${esc(d.id)}">${Q.cls.length} on the class</button>` : ''}</div>
+        ${Q.own.length ? `<button type="button" class="chip" data-dl="drill" data-id="${esc(d.id)}">${Q.own.length} question${Q.own.length > 1 ? 's' : ''} on ${esc(d.name)}</button>` : '<span class="meta">no question in the bank names this drug</span>'}
+        ${Q.cls.length ? `<button type="button" class="chip" data-dl="cdrill" data-id="${esc(d.id)}">${Q.cls.length} on the class</button>` : ''}</div>
       <div class="dlrow"><span class="meta">Read:</span>
         <button type="button" class="chip" data-dl="ref" data-a="${esc(d.tgt)}">Reference: target table</button>
         ${links.map(([v, a, t]) => `<button type="button" class="chip" data-jump="${esc(v)}:${esc(a)}">${esc(t)}</button>`).join('')}
@@ -11429,73 +11600,151 @@ const DRUGLIST_UI = (() => {
       if (it.plain === d.atlas && (!it.meta || !it.meta.priority || it.meta.priority === 'core')) return d.atlas;
     return null;
   }
-  function card(d){
+  const head = (d, withBrands) => {
     const [sc, sl] = STATUS[d.status];
-    const open = !st.recall || revealed.has(d.id);
-    const brands = (d.brands || []).length ? `<p class="dlbrand">Brand${d.brands.length > 1 ? 's' : ''} (chart, reference only): ${esc(d.brands.join(', '))}</p>` : '';
+    const brands = withBrands && (d.brands || []).length ? `<p class="dlbrand">Brand${d.brands.length > 1 ? 's' : ''} (chart, reference only): ${esc(d.brands.join(', '))}</p>` : '';
     const alt = (d.alt || []).length ? `<p class="dlbrand">Also: ${esc(d.alt.join(', '))}</p>` : '';
-    const flags = open ? (d.boxed ? '<span class="dlbadge box">Boxed warning</span>' : '') +
-                         (d.photo && !d.photo.no ? '<span class="dlbadge ph">Photosensitizing</span>' : '') : '';
-    let h = `<article class="dlcard${d.status === 'taught' ? '' : ' opt'}" data-id="${esc(d.id)}">
-      <h3>${esc(d.name)}</h3>${alt}${brands}
-      <p class="dlmeta"><span class="dlbadge ${sc}">${esc(sl)}</span><span class="dlbadge">Chart p. ${esc(d.pages ? d.pages.join(', ') : d.page)} · ${esc(d.rx)}</span>${flags}</p>`;
-    if (st.recall) {
-      if (st.showCls) h += `<div class="dlf f-class"><b>Class</b><ul><li>${esc(DL.CLASSES[d.cls])}${d.sub ? ' · ' + esc(d.sub) : ''}</li></ul></div>`;
-      h += `<div class="dlrecall"><label for="dlt-${esc(d.id)}">Write the target or mechanism first (self-check: not graded, not saved)</label>
-        <textarea id="dlt-${esc(d.id)}" autocomplete="off" autocapitalize="off" data-dl="typed" data-id="${esc(d.id)}">${esc(typed[d.id] || '')}</textarea></div>
-        <div class="dlrow"><button type="button" class="btn sm${open ? ' ghost' : ''}" data-dl="reveal" data-id="${esc(d.id)}" aria-expanded="${open}" aria-controls="dla-${esc(d.id)}">${open ? 'Hide again' : 'Reveal'}</button></div>`;
+    return `<h3>${esc(d.name)}</h3>${alt}${brands}
+      <p class="dlmeta"><span class="dlbadge ${sc}">${esc(sl)}</span><span class="dlbadge">Chart p. ${esc(d.pages ? d.pages.join(', ') : d.page)} · ${esc(d.rx)}</span>`;
+  };
+  function card(d){
+    const flags = (d.boxed ? '<span class="dlbadge box">Boxed warning</span>' : '') +
+                  (d.photo && !d.photo.no ? '<span class="dlbadge ph">Photosensitizing</span>' : '');
+    return `<article class="dlcard${d.status === 'taught' ? '' : ' dlopt'}" data-id="${esc(d.id)}">${head(d, true)}${flags}</p>${answer(d)}</article>`;
+  }
+
+  /* ---------- Recall: name, box, Check ---------- */
+  const RLABEL = {target: 'its target', mech: 'its mechanism', cls: 'its class', use: 'what it is used for'};
+  function recallAnswer(d){
+    const L = lines(d), f = st.rfield;
+    if (f === 'target') return field('f-tg', 'Target', L.tg);
+    // the mechanism line continues the target sentence on the Reference table, so the target comes first
+    if (f === 'mech') return L.mo.length ? field('f-tg', 'Target', L.tg) + field('f-mo', 'Mechanism', L.mo)
+      : `<div class="dlf f-mo"><b>Mechanism</b><ul><li>No separate mechanism line on the Reference table; the target line is the answer.</li></ul></div>` + field('f-tg', 'Target', L.tg);
+    if (f === 'cls') return field('f-class', 'Class', L.cls.length ? L.cls : [{t: DL.CLASSES[d.cls], by: 'chart', cite: 'Chart p. ' + d.page}]);
+    return L.use.length ? field('f-use', 'Indication', L.use) : `<div class="dlf f-use"><b>Indication</b><ul><li>No indication on the chart line (chart p. 5 columns are misaligned; see About this list)${d.dz.length ? ': listed on the ' + esc(DL.PAGES[d.page]) + ' page' : ''}.</li></ul></div>`;
+  }
+  function rcard(d){
+    const k = d.id + ':' + st.rfield, open = checked.has(k), inp = 'dlt-' + d.id;
+    return `<article class="dlcard${d.status === 'taught' ? '' : ' dlopt'}" data-id="${esc(d.id)}">${head(d, false)}</p>
+      <div class="dlrecall"><label for="${inp}">${esc(cap(RLABEL[st.rfield]))} (type, then Check)</label>
+        <div class="dlrow"><input type="text" id="${inp}" autocomplete="off" autocapitalize="off" spellcheck="false" enterkeyhint="done"
+          data-dl="typed" data-id="${esc(d.id)}" value="${esc(typed[k] || '')}">
+        <button type="button" class="btn sm${open ? ' ghost' : ''}" data-dl="check" data-id="${esc(d.id)}" aria-expanded="${open}" aria-controls="dla-${esc(d.id)}">${open ? 'Hide' : 'Check'}</button></div></div>
+      <div id="dla-${esc(d.id)}" class="dlans">${open ? recallAnswer(d) +
+        `<details class="dlwhole"><summary>Whole card</summary>${answer(d)}</details>` : ''}</div></article>`;
+  }
+
+  /* ---------- Quiz me: multiple choice, all at once ---------- */
+  const qsig = () => JSON.stringify([filtered().map(d => d.id), st.kinds]);
+  function buildQuiz(only){
+    const T = targets(), list = [], skipped = {};
+    const kinds = Object.keys(DL.KINDS).filter(k => st.kinds[k]);
+    if (only) for (const q of only) { const n = DL.makeQuestion(DL.D.find(d => d.id === q.drug), T, q.kind); if (n) list.push(n); }
+    else for (const d of filtered()) for (const k of kinds) {
+      const q = DL.makeQuestion(d, T, k);
+      if (q) list.push(q); else skipped[k] = (skipped[k] || 0) + 1;
     }
-    h += `<div id="dla-${esc(d.id)}" class="dlans">${open ? answer(d) : ''}</div></article>`;
-    return h;
+    quiz = {sig: qsig(), list, ans: {}, skipped, retry: !!only};
+  }
+  const score = () => {
+    const a = Object.keys(quiz.ans), right = a.filter(id => quiz.list.find(q => q.id === id).options[quiz.ans[id]].correct).length;
+    return {done: a.length, right, total: quiz.list.length};
+  };
+  const LET = 'ABCD';
+  function qblock(q){
+    const pick = quiz.ans[q.id], done = pick !== undefined;
+    const opts = q.options.map((o, i) => {
+      const c = !done ? '' : i === pick ? (o.correct ? ' pick-ok' : ' pick-bad') : o.correct ? ' reveal-ok' : '';
+      return `<button type="button" class="opt${c}" data-dl="pick" data-qid="${esc(q.id)}" data-i="${i}"${done ? ' aria-disabled="true"' : ''}>
+        <span class="k" aria-hidden="true">${LET[i]}</span><span>${esc(o.t)}</span></button>`;
+    }).join('');
+    const right = done && q.options[pick].correct, key = q.options.find(o => o.correct);
+    const fb = !done ? '' : `<p class="dlfb">${right ? '<span class="r">Right.</span>' : `<span class="w">Not this one.</span> The answer: <b>${esc(key.t)}</b>.`}</p>
+      <div class="dlf ${q.kind === 'target' ? 'f-tg' : q.kind === 'cls' ? 'f-class' : 'f-use'}"><b>Source</b><ul>${q.src.map(li).join('')}</ul></div>
+      ${q.also.length ? `<p class="dlfb">Also true for ${esc(q.name)}: ${esc(q.also.join('; '))}.</p>` : ''}`;
+    return `<div class="dlq" data-qid="${esc(q.id)}"><p class="dlqh">${esc(q.name)} · ${esc(DL.KINDS[q.kind])}</p>
+      <p class="stem" id="dlqs-${esc(q.id)}">${esc(q.stem)}</p>
+      <div role="group" aria-labelledby="dlqs-${esc(q.id)}">${opts}</div><div aria-live="polite">${fb}</div></div>`;
+  }
+  function scoreLine(){
+    const s = score();
+    return s.total ? `${s.right} of ${s.done} right` + (s.done < s.total ? ` · ${s.total - s.done} still to answer` : ' · all answered') : '';
   }
 
   /* ---------- the pane ---------- */
   const opt = (v, label, cur) => `<option value="${esc(v)}"${String(cur) === String(v) ? ' selected' : ''}>${esc(label)}</option>`;
+  const sel = (id, label, html) => `<div class="dlfld"><label for="${id}">${esc(label)}</label><select id="${id}">${html}</select></div>`;
   function controls(){
-    const nShown = DL.D.length;
+    const n = activeFilters(), mode = MODES.find(m => m[0] === st.mode);
+    let modebar = '';
+    if (st.mode === 'quiz') {
+      const anyMissed = quiz && quiz.list.some(q => quiz.ans[q.id] !== undefined && !q.options[quiz.ans[q.id]].correct);
+      modebar = `<div class="dlmodebar"><div class="dlchips" role="group" aria-label="Ask about"><span class="lab">Ask about:</span>
+        ${Object.entries(DL.KINDS).map(([k, v]) => `<button type="button" class="chip" data-dl="kind" data-k="${k}" aria-pressed="${!!st.kinds[k]}">${esc(v)}</button>`).join('')}</div>
+        <p class="dlscore" id="dlscore" aria-live="polite">${quiz ? scoreLine() : ''}</p>
+        <div class="dlchips"><button type="button" class="btn sm" data-dl="newq">New questions</button>
+        <button type="button" class="btn sm ghost" data-dl="retry"${anyMissed ? '' : ' disabled'}>Retry the missed</button></div></div>`;
+    } else if (st.mode === 'recall') {
+      modebar = `<div class="dlmodebar"><div class="dlchips" role="radiogroup" aria-label="What to recall"><span class="lab">Recall:</span>
+        ${Object.entries(RFIELDS).map(([k, v]) => `<button type="button" class="chip" role="radio" data-dl="rfield" data-k="${k}" aria-checked="${st.rfield === k}" aria-pressed="${st.rfield === k}" tabindex="${st.rfield === k ? 0 : -1}">${esc(v)}</button>`).join('')}</div>
+        <p>Type what you remember in the box under each drug, then press Check (or Enter). For example, target of tacrolimus: <i>calcineurin (via FKBP)</i>. Spelling and wording don't matter: compare your words with the answer yourself.</p>
+        <div class="dlchips"><button type="button" class="btn sm ghost" data-dl="revealall">Check all</button>
+        <button type="button" class="btn sm ghost" data-dl="hideall">Hide all answers</button>
+        <button type="button" class="btn sm ghost" data-dl="clearbox">Empty the boxes</button></div></div>`;
+    }
     return `<h2>Drug list</h2>
-    <p class="sub">Every drug on the dermatology drug chart, pp. 1–6 (${nShown} drugs). Each professor's slides and recording decide what is examinable for that professor's material (Dr. Smith's lectures; Dr. Sikazwe's assigned pages); the chart is a guide. Each line names its source: <span class="dlsrc smith">Dr. Smith · slide</span> <span class="dlsrc sikazwe">Dr. Sikazwe · DPAW page</span> <span class="dlsrc chart">Drug chart · page</span></p>
+    <p class="sub">Every drug on the dermatology drug chart, pp. 1–6 (${DL.D.length} drugs), with each line's source.</p>
+    <div class="dlmodes" role="radiogroup" aria-label="How to study the list">
+      ${MODES.map(([k, l]) => `<button type="button" role="radio" data-dl="mode" data-k="${k}" aria-checked="${st.mode === k}" tabindex="${st.mode === k ? 0 : -1}">${esc(l)}</button>`).join('')}</div>
+    <p class="dlhow" id="dlhow">${esc(mode[2])}</p>
+    ${modebar}
+    <section class="dlfilters" aria-labelledby="dlfh">
+      <div class="dlfhead"><h3 id="dlfh">Filters</h3><span class="n" id="dlfn">${n ? n + ' active' : 'none active'}</span>
+        <button type="button" class="dllink" data-dl="clear"${n ? '' : ' disabled'}>Clear filters</button></div>
+      <div class="dlfgrid">
+        <div class="dlfld wide"><label for="dlq">Search</label><input type="search" id="dlq" placeholder="Generic or brand name, or class" value="${esc(st.q)}" autocomplete="off"></div>
+        ${sel('dldz', 'Disease', opt('', 'All diseases', st.dz) + Object.entries(DL.DISEASES).map(([k, v]) => opt(k, v, st.dz)).join(''))}
+        ${sel('dlcls', 'Class', opt('', 'All classes', st.cls) + Object.entries(DL.CLASSES).map(([k, v]) => opt(k, v, st.cls)).join(''))}
+        ${sel('dlpage', 'Chart page', opt('', 'All chart pages', st.page) + Object.entries(DL.PAGES).map(([k, v]) => opt(k, 'p. ' + k + ': ' + v, st.page)).join(''))}
+        ${sel('dlstatus', 'Exam 1', opt('', 'Taught + optional', st.status) + opt('taught', 'Exam 1 taught', st.status) + opt('optional', 'Optional: chart only', st.status))}
+      </div>
+      <div class="dlchips">
+        <button type="button" class="chip" data-dl="flag" data-f="boxed" aria-pressed="${st.boxed}">Has a boxed warning</button>
+        <button type="button" class="chip" data-dl="flag" data-f="photo" aria-pressed="${st.photo}">Photosensitizing</button>
+        <button type="button" class="chip" data-dl="flag" data-f="hasq" aria-pressed="${st.hasq}">Has bank questions</button>
+      </div>
+    </section>
     <details class="dlnote"><summary>About this list and the chart</summary>
-      <p>Targets and mechanisms come from Reference, "Drug targets: write it first, then check". Not here: the lice and scabies page (chart p. 7), which is not in the Exam 1 lectures. Brand names are reference information from the chart; Dr. Smith asks by generic name.</p>
+      <p>Each professor's slides and recording decide what is examinable for that professor's material (Dr. Smith's lectures; Dr. Sikazwe's assigned pages); the chart is a guide. Each line names its source: <span class="dlsrc smith">Dr. Smith · slide</span> <span class="dlsrc sikazwe">Dr. Sikazwe · DPAW page</span> <span class="dlsrc chart">Drug chart · page</span></p>
+      <p>Targets and mechanisms come from Reference, "Drug targets: write it first, then check". Not here: the lice and scabies page (chart p. 7), which is not in the Exam 1 lectures. Brand names are reference information from the chart; Dr. Smith asks by generic name, so Quiz me and Recall show generic names only.</p>
+      <p>Quiz me asks only what the cards state: a wrong option is another drug's value that is not also true for this drug. Drugs whose chart line names no molecular target (sunscreens, sunburn anesthetics, keratolytics, tars, petrolatum, ketoconazole, spironolactone, dapsone, metronidazole) get no target question; practise those in Recall.</p>
       <ul>${DL.CHART_NOTES.map(n => `<li>${esc(n)}</li>`).join('')}</ul></details>
-    <div class="dlbar">
-      <input type="search" id="dlq" placeholder="Search generic or brand name, or class" aria-label="Search drugs by generic or brand name or class" value="${esc(st.q)}" autocomplete="off">
-    </div>
-    <div class="dlbar">
-      <select id="dldz" aria-label="Filter by disease">${opt('', 'All diseases', st.dz)}${Object.entries(DL.DISEASES).map(([k, v]) => opt(k, v, st.dz)).join('')}</select>
-      <select id="dlcls" aria-label="Filter by drug class">${opt('', 'All classes', st.cls)}${Object.entries(DL.CLASSES).map(([k, v]) => opt(k, v, st.cls)).join('')}</select>
-      <select id="dlpage" aria-label="Filter by chart page">${opt('', 'All chart pages', st.page)}${Object.entries(DL.PAGES).map(([k, v]) => opt(k, 'p. ' + k + ': ' + v, st.page)).join('')}</select>
-      <select id="dlstatus" aria-label="Filter by Exam 1 status">${opt('', 'Taught and optional', st.status)}${opt('taught', 'Exam 1 taught', st.status)}${opt('optional', 'Optional: chart only', st.status)}</select>
-    </div>
-    <div class="dlbar">
-      <button type="button" class="chip" data-dl="flag" data-f="boxed" aria-pressed="${st.boxed}">Has a boxed warning</button>
-      <button type="button" class="chip" data-dl="flag" data-f="photo" aria-pressed="${st.photo}">Photosensitizing</button>
-      <button type="button" class="chip" data-dl="flag" data-f="hasq" aria-pressed="${st.hasq}">Has questions</button>
-      <button type="button" class="chip" data-dl="clear">Clear filters</button>
-    </div>
-    <div class="dlbar">
-      <button type="button" class="chip" data-dl="recall" aria-pressed="${st.recall}">Recall mode</button>
-      ${st.recall ? `<button type="button" class="chip" data-dl="showcls" aria-pressed="${st.showCls}">Show class</button>
-        <button type="button" class="chip" data-dl="revealall">Reveal all shown</button>
-        <button type="button" class="chip" data-dl="hideall">Hide all</button>` : ''}
-      <button type="button" class="chip" data-dl="flash" aria-pressed="${st.flash}">Flashcards</button>
-    </div>
-    ${st.recall ? '<p class="dlself">Recall mode: each card shows the drug only. Write its target or mechanism, then Reveal and compare. This is a self-check: what you type is not graded and not saved, and it is gone when the page reloads. Choosing a class filter or searching by class shows which drugs are in that class.</p>' : ''}
     <p class="dlcount" id="dlcount" aria-live="polite"></p>
     <div id="dllist"></div>`;
   }
   function drawList(){
     const list = filtered(), out = pane.querySelector('#dllist'), cnt = pane.querySelector('#dlcount');
-    cnt.textContent = (list.length === DL.D.length ? `${list.length} drugs` : `${list.length} of ${DL.D.length} drugs`) +
-      (st.flash && list.length ? ` · card ${Math.min(st.fi, list.length - 1) + 1} of ${list.length}` : '');
-    if (!list.length) { out.innerHTML = '<p class="dlempty">No drug matches this search and these filters. Clear filters to see the whole list.</p>'; return; }
-    if (st.flash) {
-      st.fi = Math.max(0, Math.min(st.fi, list.length - 1));
-      out.innerHTML = `<div class="dlflash">${card(list[st.fi])}
-        <div class="dlrow"><button type="button" class="btn ghost sm" data-dl="prev"${st.fi ? '' : ' disabled'}>Previous</button>
-        <button type="button" class="btn ghost sm" data-dl="next"${st.fi < list.length - 1 ? '' : ' disabled'}>Next</button>
-        <span class="meta">Flashcards: one card at a time through the filtered list; no score, nothing saved.</span></div></div>`;
-    } else out.innerHTML = `<div class="dlgrid">${list.map(card).join('')}</div>`;
+    const n = activeFilters(), fn = pane.querySelector('#dlfn'), cl = pane.querySelector('[data-dl="clear"]');
+    if (fn) fn.textContent = n ? n + ' active' : 'none active';
+    if (cl) cl.disabled = !n;
+    const drugs = list.length === DL.D.length ? `${list.length} drugs` : `${list.length} of ${DL.D.length} drugs`;
+    if (!list.length) { cnt.textContent = drugs; out.innerHTML = '<p class="dlempty">No drug matches this search and these filters. Clear filters to see the whole list.</p>'; return; }
+    if (st.mode === 'quiz') {
+      if (!quiz || (!quiz.retry && quiz.sig !== qsig())) buildQuiz();
+      const sk = Object.entries(quiz.skipped).map(([k, v]) => `${v} without a ${DL.KINDS[k].toLowerCase()} question`);
+      cnt.textContent = quiz.retry ? `Retrying ${quiz.list.length} missed question${quiz.list.length === 1 ? '' : 's'} · New questions starts over on ${drugs}`
+        : `${drugs} · ${quiz.list.length} question${quiz.list.length === 1 ? '' : 's'}` + (sk.length ? ` (${sk.join(', ')}; see About this list)` : '');
+      out.innerHTML = quiz.list.length ? `<div class="dlqlist">${quiz.list.map(qblock).join('')}</div>`
+        : '<p class="dlempty">Choose at least one of Target, Class or Indication above, or widen the filters.</p>';
+      const sc = pane.querySelector('#dlscore'); if (sc) sc.textContent = scoreLine();
+    } else if (st.mode === 'recall') {
+      cnt.textContent = drugs;
+      out.innerHTML = `<div class="dlgrid">${list.map(rcard).join('')}</div>`;
+    } else {
+      cnt.textContent = drugs;
+      out.innerHTML = `<div class="dlgrid">${list.map(card).join('')}</div>`;
+    }
   }
   function render(p){
     pane = p;
@@ -11506,40 +11755,76 @@ const DRUGLIST_UI = (() => {
     p.dataset.dlWired = '1';
     p.addEventListener('input', e => {
       const t = e.target;
-      if (t.id === 'dlq') { st.q = t.value; st.fi = 0; drawList(); }
-      else if (t.dataset && t.dataset.dl === 'typed') typed[t.dataset.id] = t.value;
+      if (t.id === 'dlq') { st.q = t.value; drawList(); }
+      else if (t.dataset && t.dataset.dl === 'typed') typed[t.dataset.id + ':' + st.rfield] = t.value;
     });
     p.addEventListener('change', e => {
       const t = e.target, k = {dldz: 'dz', dlcls: 'cls', dlpage: 'page', dlstatus: 'status'}[t.id];
-      if (k) { st[k] = t.value; st.fi = 0; drawList(); }
+      if (k) { st[k] = t.value; drawList(); }
+    });
+    p.addEventListener('keydown', e => {
+      const t = e.target;
+      if (e.key === 'Enter' && t.dataset && t.dataset.dl === 'typed') {
+        e.preventDefault();
+        const b = t.closest('.dlcard').querySelector('[data-dl="check"]');
+        if (b && !checked.has(t.dataset.id + ':' + st.rfield)) b.click();
+        return;
+      }
+      // arrow keys move within a radio group (mode switch, recall field)
+      const g = t.closest && t.closest('[role="radiogroup"]');
+      if (!g || t.getAttribute('role') !== 'radio' || !/^Arrow(Left|Right|Up|Down)$|^Home$|^End$/.test(e.key)) return;
+      const rs = [...g.querySelectorAll('[role="radio"]')], i = rs.indexOf(t);
+      const j = e.key === 'Home' ? 0 : e.key === 'End' ? rs.length - 1 : (i + (/Right|Down/.test(e.key) ? 1 : -1) + rs.length) % rs.length;
+      e.preventDefault();
+      rs[j].click();
     });
     p.addEventListener('click', onClick);
   }
-  function rerender(keepScroll){ const y = window.scrollY; render(pane); if (keepScroll) window.scrollTo(0, y); }
+  function rerender(focusSel){
+    const y = window.scrollY; render(pane); window.scrollTo(0, y);
+    if (focusSel) { const f = pane.querySelector(focusSel); if (f) f.focus(); }
+  }
   function onClick(e){
-    const b = e.target.closest('[data-dl]'); if (!b || b.tagName === 'TEXTAREA') return;
+    const b = e.target.closest('[data-dl]'); if (!b || b.tagName === 'INPUT' || b.disabled) return;
     const a = b.dataset.dl, id = b.dataset.id, d = id && DL.D.find(x => x.id === id);
-    if (a === 'reveal' && d) {
-      if (revealed.has(id)) revealed.delete(id); else revealed.add(id);
-      const c = b.closest('.dlcard'), tmp = document.createElement('div'); tmp.innerHTML = card(d);
-      c.replaceWith(tmp.firstElementChild);
-      const nb = pane.querySelector(`.dlcard[data-id="${id}"] [data-dl="reveal"]`); if (nb) nb.focus();
+    if (a === 'mode') { if (st.mode !== b.dataset.k) { st.mode = b.dataset.k; rerender(`[data-dl="mode"][data-k="${st.mode}"]`); } }
+    else if (a === 'rfield') { if (st.rfield !== b.dataset.k) { st.rfield = b.dataset.k; rerender(`[data-dl="rfield"][data-k="${st.rfield}"]`); } }
+    else if (a === 'kind') { st.kinds[b.dataset.k] = !st.kinds[b.dataset.k]; quiz = null; rerender(`[data-dl="kind"][data-k="${b.dataset.k}"]`); }
+    else if (a === 'newq') { quiz = null; rerender('[data-dl="newq"]'); }
+    else if (a === 'retry') {
+      const missed = quiz.list.filter(q => quiz.ans[q.id] !== undefined && !q.options[quiz.ans[q.id]].correct);
+      if (missed.length) { buildQuiz(missed); rerender(); const f = pane.querySelector('.dlq .opt'); if (f) f.focus(); }
     }
-    else if (a === 'flag') { st[b.dataset.f] = !st[b.dataset.f]; st.fi = 0; rerender(true); }
-    else if (a === 'clear') { Object.assign(st, {q: '', dz: '', cls: '', page: '', status: '', boxed: false, photo: false, hasq: false, fi: 0}); rerender(true); }
-    else if (a === 'recall') { st.recall = !st.recall; rerender(true); }
-    else if (a === 'showcls') { st.showCls = !st.showCls; rerender(true); }
-    else if (a === 'revealall') { filtered().forEach(x => revealed.add(x.id)); drawList(); }
-    else if (a === 'hideall') { revealed.clear(); drawList(); }
-    else if (a === 'flash') { st.flash = !st.flash; st.fi = 0; if (st.flash) st.recall = true; rerender(true); }
-    else if (a === 'prev' || a === 'next') { st.fi += a === 'next' ? 1 : -1; drawList(); }
-    else if (a === 'cls') { Object.assign(st, {q: '', dz: '', page: '', status: '', boxed: false, photo: false, hasq: false, fi: 0, cls: b.dataset.cls}); rerender(); window.scrollTo(0, 0); }
-    else if (a === 'only' && d) { Object.assign(st, {q: d.name, dz: '', cls: '', page: '', status: '', boxed: false, photo: false, hasq: false, fi: 0}); rerender(); window.scrollTo(0, 0); }
-    else if ((a === 'quiz' || a === 'cquiz') && d) {
-      const pool = a === 'quiz' ? qs(d).own : qs(d).cls;
+    else if (a === 'pick') {
+      const q = quiz && quiz.list.find(x => x.id === b.dataset.qid);
+      if (!q || quiz.ans[q.id] !== undefined) return;
+      quiz.ans[q.id] = +b.dataset.i;
+      const blk = b.closest('.dlq'), tmp = document.createElement('div'); tmp.innerHTML = qblock(q);
+      blk.replaceWith(tmp.firstElementChild);
+      const nb = pane.querySelector(`.dlq[data-qid="${CSS.escape(q.id)}"] [data-i="${b.dataset.i}"]`); if (nb) nb.focus();
+      const sc = pane.querySelector('#dlscore'); if (sc) sc.textContent = scoreLine();
+      const rb = pane.querySelector('[data-dl="retry"]');
+      if (rb) rb.disabled = !quiz.list.some(x => quiz.ans[x.id] !== undefined && !x.options[quiz.ans[x.id]].correct);
+    }
+    else if (a === 'check' && d) {
+      const k = id + ':' + st.rfield;
+      if (checked.has(k)) checked.delete(k); else checked.add(k);
+      const c = b.closest('.dlcard'), tmp = document.createElement('div'); tmp.innerHTML = rcard(d);
+      c.replaceWith(tmp.firstElementChild);
+      const nb = pane.querySelector(`.dlcard[data-id="${CSS.escape(id)}"] [data-dl="check"]`); if (nb) nb.focus();
+    }
+    else if (a === 'revealall') { filtered().forEach(x => checked.add(x.id + ':' + st.rfield)); drawList(); }
+    else if (a === 'hideall') { checked.clear(); drawList(); }
+    else if (a === 'clearbox') { Object.keys(typed).forEach(k => delete typed[k]); drawList(); }
+    else if (a === 'flag') { st[b.dataset.f] = !st[b.dataset.f]; b.setAttribute('aria-pressed', st[b.dataset.f]); drawList(); }
+    else if (a === 'clear') { Object.assign(st, NOFILTER); rerender('#dlq'); }
+    else if (a === 'cls') { Object.assign(st, NOFILTER, {cls: b.dataset.cls}); rerender(); window.scrollTo(0, 0); }
+    else if (a === 'only' && d) { Object.assign(st, NOFILTER, {q: d.name}); rerender(); window.scrollTo(0, 0); }
+    else if ((a === 'drill' || a === 'cdrill') && d) {
+      const pool = a === 'drill' ? qs(d).own : qs(d).cls;
       if (!pool.length) return;
       RET.push({view: ID, y: window.scrollY});
-      drillList(pool, a === 'quiz' ? 'Drug list: ' + d.name : 'Drug list: ' + DL.CLASSES[d.cls]);
+      drillList(pool, a === 'drill' ? 'Drug list: ' + d.name : 'Drug list: ' + DL.CLASSES[d.cls]);
       backBtn();
     }
     else if (a === 'ref') { jump('ref', b.dataset.a); }
@@ -11560,7 +11845,7 @@ const DRUGLIST_UI = (() => {
     }
   }
 
-  /* ---------- the tab: nav button, pane, and show() ---------- */
+/* ---------- the tab: nav button, pane, and show() ---------- */
   try {
     const nav = document.getElementById('nav'), main = document.querySelector('main');
     const sec = document.createElement('section'); sec.id = 'v-' + ID; sec.className = 'hide';
@@ -13883,6 +14168,189 @@ const WHY_UI = (() => {
       return r;
     };
   } catch (err) { console.error('The Topics additions could not be added; the rest of the page is unaffected.', err); }
+})();
+
+/* ==========================================================================
+   WIDE SCREENS AND THE PINNED TAB STRIP
+   (course-level, Louis 2026-11-08; temporary until the kit has these)
+   ==========================================================================
+   1. Wide screens (Louis: "make sure the view layout is good for an iPad Pro 13
+      inch and MacBook ... so the space is utilized"). The core keeps the page in
+      one 860 px column at every width. From 1024 px (a 12.9/13-inch iPad in
+      either orientation, every MacBook) the column grows to 1080 px, and from
+      1300 px to 1260 px, as the Intro to Pharmacology drill does (its #146).
+      What uses the width: Topics puts the exam card beside "Start here" and the
+      topic cards of an open deck folder in two columns (an opened card takes
+      the full row); the grids the core already fills by width (Drug list,
+      Atlas, Diagrams) get more columns; the walkthrough player gives the slide
+      the larger share beside the transcript; Reference and guide tables use the
+      full width. What keeps a reading width: a question (Quiz, Exam sim) stays
+      at most 940 px, Settings 860 px, and running text in the guides and Tell
+      apart at most 88 characters a line. Below 1024 px nothing
+      here applies, so phones and small tablets look as before.
+   2. Only the tab strip is pinned (Louis: "Pin only the tabs: the course title
+      scrolls away and only the tab strip stays at the top ... have the option
+      of them disappear after a while and then reappear when scrolling"). The
+      header scrolls away with the page; the tab strip sticks at the top of the
+      window (the core's ux_test.js check "scrolled down under a wrapped title,
+      the tab bar shows below the header" still holds: the strip starts at or
+      below the header's bottom). Once the page is scrolled past the header, the
+      strip slides up out of view after 3 seconds without scrolling, and comes
+      back on any scroll, a touch or a pointer near the top edge, or keyboard
+      focus in it. It is never hidden at the top of the page, while it holds
+      focus or a resting mouse pointer, while its own row is being scrolled sideways, or
+      while a dialog (an enlarged figure, the stop notice) is open. It moves
+      with a transform, so the content under it never jumps; with reduced
+      motion the core's rule turns the slide into a plain show/hide.
+      Settings > Display, "Hide the tab bar while reading" (on by default),
+      turns the hiding off; the choice is kept on this device only, under
+      `<NS>:navAutoHide` ("0" off, "1" on), with direct localStorage calls
+      inside try/catch. Nothing here reads or writes progress, history or any
+      other stored data. */
+(function wideUi(){
+  if (typeof document === 'undefined' || !document.createElement || !document.head) return;
+
+  const CSS = `
+/* ---- pinned tab strip ---- */
+header{position:relative}
+nav#nav{top:0;transition:transform .22s ease,box-shadow .22s ease}
+nav#nav.xpinned{box-shadow:0 2px 8px rgba(0,0,0,.18)}
+nav#nav.xhid{transform:translateY(-100%);box-shadow:none}
+.atbar{top:var(--nav-h,44px);transition:top .22s ease}
+body.xnavhid .atbar{top:0}
+/* ---- wide screens ---- */
+@media (min-width:1024px){
+  main{max-width:1080px}
+  #v-quiz,#v-exam{max-width:940px;margin:0 auto}
+  #v-settings{max-width:860px;margin:0 auto}
+  #v-guide p,#v-guide li,#v-tell p,#v-tell li{max-width:88ch}
+  #v-guide td p,#v-guide td li,#v-tell td p,#v-tell td li{max-width:none}
+  /* Topics: the exam card beside Start here (only when topics_ui.js drew the card) */
+  #v-topics.xtwo{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);column-gap:16px;align-content:start}
+  #v-topics.xtwo>*{grid-column:1/-1;min-width:0}
+  #v-topics.xtwo>#examFacts{grid-column:1;grid-row:2;align-self:start}
+  #v-topics.xtwo>details.xmore{grid-column:1;grid-row:3}
+  #v-topics.xtwo>#startHere{grid-column:2;grid-row:2/4;align-self:start;margin-top:6px}
+  #v-topics.xtwo>#startHere .startgrid{grid-template-columns:1fr 1fr}
+  /* an open deck folder: topic cards two to a row; an opened card takes the row */
+  #v-topics .deckbody{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);column-gap:10px;align-items:start}
+  #v-topics .deckbody[hidden]{display:none}
+  #v-topics .deckbody>*{min-width:0}
+  #v-topics .deckbody>details.topic[open]{grid-column:1/-1}
+  /* the walkthrough player: the slide large, the transcript beside it */
+  .wkbody{grid-template-columns:minmax(0,1.75fr) minmax(0,1fr);gap:14px}
+  .wktx{max-height:min(68vh,620px)}
+}
+@media (min-width:1300px){main{max-width:1260px}}`;
+
+  const addCss = () => {
+    if (document.getElementById('wideuicss')) return;
+    const s = document.createElement('style'); s.id = 'wideuicss'; s.textContent = CSS; document.head.appendChild(s);
+  };
+
+  /* ---------- Topics: mark the page for the two-column top ---------- */
+  function topicsTwo(){
+    const el = document.getElementById('v-topics');
+    if (!el || !el.querySelector || !el.classList) return;
+    const card = document.getElementById('examFacts'), start = document.getElementById('startHere');
+    const h2 = el.querySelector('h2');
+    // only the order topics_ui.js leaves: h2, the card, (More about this exam), Start here
+    let ok = !!(card && start && h2 && card.parentNode === el && start.parentNode === el && h2.nextElementSibling === card);
+    if (ok) { const n = card.nextElementSibling; ok = n === start || (n && n.matches && n.matches('details.xmore') && n.nextElementSibling === start); }
+    el.classList.toggle('xtwo', ok);
+  }
+
+  /* ---------- the tab strip ---------- */
+  const KEY = () => { let ns; try { ns = NS; } catch (e) { ns = (typeof COURSE !== 'undefined' && COURSE.ns) || 'drill'; } return ns + ':navAutoHide'; };
+  const autoHide = () => { try { return localStorage.getItem(KEY()) !== '0'; } catch (e) { return true; } };
+  let AUTO = autoHide();
+  const IDLE_MS = 3000;
+  let timer = null, hovering = false;
+
+  const nav = () => document.getElementById('nav');
+  const head = () => document.querySelector('header');
+  const past = () => { const h = head(); return !!h && window.scrollY > (h.offsetHeight || 0) + 1; };
+  const dialogOpen = () => !!(document.querySelector('[aria-modal="true"]') || (document.body && document.body.classList.contains('figbig')));
+  const holds = n => hovering || (n.contains && n.contains(document.activeElement));
+  function setHidden(h){
+    const n = nav(); if (!n || !n.classList) return;
+    n.classList.toggle('xhid', h);
+    if (document.body) document.body.classList.toggle('xnavhid', h);
+  }
+  function reveal(){
+    const n = nav(); if (!n || !n.classList) return;
+    setHidden(false);
+    n.classList.toggle('xpinned', past());
+    clearTimeout(timer); timer = null;
+    if (AUTO && past()) timer = setTimeout(tryHide, IDLE_MS);
+  }
+  function tryHide(){
+    timer = null;
+    const n = nav(); if (!n || !AUTO || !past()) return;
+    if (holds(n) || dialogOpen()) { timer = setTimeout(tryHide, IDLE_MS); return; }
+    setHidden(true);
+  }
+
+  function wireNav(){
+    const n = nav(); if (!n || !n.addEventListener) return;
+    window.addEventListener('scroll', reveal, {passive: true});
+    window.addEventListener('resize', reveal, {passive: true});
+    n.addEventListener('scroll', reveal, {passive: true});          // its own row scrolled sideways (the chevrons)
+    n.addEventListener('focusin', reveal);
+    // a mouse resting on the strip keeps it (a touch has no hover, so it never holds it)
+    n.addEventListener('pointerenter', ev => { if (ev.pointerType === 'mouse') { hovering = true; reveal(); } });
+    n.addEventListener('pointerleave', ev => { if (hovering) { hovering = false; reveal(); } });
+    // a touch or a pointer near the top edge brings it back
+    const EDGE = 36;
+    document.addEventListener('pointerdown', ev => { if (ev.clientY <= EDGE) reveal(); }, {passive: true});
+    document.addEventListener('pointermove', ev => { if (ev.pointerType === 'mouse' && ev.clientY <= EDGE && n.classList.contains('xhid')) reveal(); }, {passive: true});
+    document.addEventListener('touchstart', ev => { const t = ev.touches && ev.touches[0]; if (t && t.clientY <= EDGE) reveal(); }, {passive: true});
+    reveal();
+  }
+
+  /* ---------- Settings > Display ---------- */
+  function settingsRow(){
+    const el = document.getElementById('v-settings');
+    if (!el || !el.querySelector || el.querySelector('#xNavHide')) return;
+    const box = document.createElement('div');
+    box.innerHTML = `<h3>Display</h3><div class="filters"><div class="frow">
+      <label style="display:flex;align-items:center;gap:8px;min-height:44px;font-size:14px;cursor:pointer">
+        <input type="checkbox" id="xNavHide"${AUTO ? ' checked' : ''} style="width:20px;height:20px">
+        Hide the tab bar while reading</label></div>
+      <p style="font-size:13.5px;color:var(--text-dim);margin:4px 0 0">The course title scrolls away and the tab bar stays at the top of the screen.
+      With this on, the tab bar slides away after 3 seconds without scrolling and comes back when you scroll, touch the top edge or tab to it.
+      Kept on this device only.</p></div>`;
+    const exp = [...el.querySelectorAll('h3')].find(h => /^\s*Export\s*$/.test(h.textContent));
+    const frag = document.createDocumentFragment(); while (box.firstChild) frag.appendChild(box.firstChild);
+    if (exp) exp.before(frag); else el.appendChild(frag);
+    const cb = el.querySelector('#xNavHide');
+    cb.addEventListener('change', () => {
+      AUTO = cb.checked;
+      try { localStorage.setItem(KEY(), AUTO ? '1' : '0'); } catch (e) { /* kept for this visit */ }
+      reveal();
+    });
+  }
+
+  const wrap = (name, after) => {
+    try {
+      // the core's render functions are global function declarations; wrap only those that exist
+      const base = typeof window !== 'undefined' && typeof window[name] === 'function' ? window[name] : null;
+      if (!base) return;
+      window[name] = function(){
+        const r = base.apply(this, arguments);
+        try { after(); } catch (err) { console.error('The wide-screen layout could not finish ' + name + '; the page is unaffected.', err); }
+        return r;
+      };
+    } catch (err) { console.error('The wide-screen layout could not wrap ' + name + '.', err); }
+  };
+
+  try {
+    addCss();
+    wrap('renderTopics', topicsTwo);
+    wrap('renderSettings', settingsRow);
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', wireNav, {once: true});
+    else wireNav();
+  } catch (err) { console.error('The wide-screen layout could not be added; the rest of the page is unaffected.', err); }
 })();
 
 /* Term glosses for the questions' explanations (see the kit's template for the format). */
