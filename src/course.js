@@ -222,7 +222,10 @@ const COURSE = {
           'wide_ui.js',
           // Reference and Tell apart tables: short lines inside cells and one card per row on
           // phones (course-level presentation, 2026-11-08)
-          'tables_ui.js'],
+          'tables_ui.js',
+          // Quiz: "One at a time | All on one page" (course-level, Louis 2026-11-08, after his
+          // Intro to Pharmacology drill's layout toggle; temporary until the kit has it)
+          'topic_list_ui.js'],
 
   tools: {citeAliases:{'skin-pathophys-students-2026.pdf':'Skin-Pathophys-Students-2026.pdf',
                        'skin-pcol-students-2026.pdf':'Skin-PCol-Students-2026.pdf',
