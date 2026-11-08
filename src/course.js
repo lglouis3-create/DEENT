@@ -228,7 +228,10 @@ const COURSE = {
           'tables_ui.js',
           // Quiz: "One at a time | All on one page" (course-level, Louis 2026-11-08, after his
           // Intro to Pharmacology drill's layout toggle; temporary until the kit has it)
-          'topic_list_ui.js'],
+          'topic_list_ui.js',
+          // Jumps to a reading section: land below the pinned tab strip, highlight the section
+          // and the lines that match the question (course-level, Louis 2026-11-08)
+          'jump_ui.js'],
 
   tools: {citeAliases:{'skin-pathophys-students-2026.pdf':'Skin-Pathophys-Students-2026.pdf',
                        'skin-pcol-students-2026.pdf':'Skin-PCol-Students-2026.pdf',
