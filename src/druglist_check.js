@@ -190,6 +190,28 @@ console.log('=== Quiz me (multiple choice) and Recall ===');
   never('bpo', 'cls', /antibiotic/i, 'benzoyl peroxide: "antibiotics / antimicrobials" is never a wrong class');
   never('clobetasol', 'use', /atopic|psoriasis/i, 'a topical steroid: neither of its two uses is a wrong option');
   never('cyclosporine', 'use', /atopic/i, 'cyclosporine: atopic dermatitis is never a wrong indication');
+  // uses kept out of the wrong options that a course source names: shown after answering, never as an option
+  const OC = DL.OFF_CHART || {};
+  const ocBad = Object.entries(OC).flatMap(([id, ns]) => ns.filter(n => !ids.has(id) || !(DL.NOT_WRONG[id] || []).includes(n.z) || !n.head ||
+    !n.src.length || !n.src.every(s => s.t && citeOk(s) && /"[^"]+"/.test(s.t))).map(n => id + ':' + n.z));
+  check(Object.keys(OC).length && !ocBad.length, `every off-chart note (${Object.values(OC).flat().length}) is a NOT_WRONG pair with a head and quoted, cited slide or transcript lines`, ocBad.join(', '));
+  const ocQ = [];
+  for (const [id, ns] of Object.entries(OC)) {
+    const d = DL.D.find(x => x.id === id);
+    for (let r = 0; r < 200; r++) for (const k of kinds) {
+      const q = DL.makeQuestion(d, T, k, rngOf(r));
+      if (!q) continue;
+      if ((k === 'use') !== (q.offChart.length === ns.length && q.offChart.length > 0)) ocQ.push(`${id}:${k} note`);
+      for (const n of ns) if (q.options.some(o => !o.correct && DL.norm(o.t) === DL.norm(DL.DISEASES[n.z]))) ocQ.push(`${id}:${k} wrong ${n.z}`);
+    }
+    never(id, 'use', new RegExp('^' + ns.map(n => DL.DISEASES[n.z]).join('|') + '$', 'i'), `${id}: the off-chart use (${ns.map(n => DL.DISEASES[n.z]).join(', ')}) is never a wrong option`);
+  }
+  check(!ocQ.length, 'off-chart notes ride on Indication questions only, and their use is never a wrong option', u(ocQ));
+  const fbSrc = (code('druglist_ui.js').match(/const fb = !done \? '' :[\s\S]*?`;\n/) || [''])[0];
+  const ocUses = (code('druglist_ui.js').match(/offChart\(/g) || []).length;
+  check(/offChart\(q\.offChart/.test(fbSrc) && (code('druglist_ui.js').match(/offChart\(q\./g) || []).length === 1,
+    'Quiz me shows the off-chart note only in the feedback written after an answer (empty before)');
+  check(ocUses >= 3, `the off-chart note is also on the Browse card and the Recall indication answer (${ocUses - 1} call sites)`);
   never('ruxolitinib', 'target', /^JAK$|Janus/, 'ruxolitinib: another JAK wording is never a wrong option');
   // Recall: every drug has an answer to show for each field
   const noUse = DL.D.filter(d => !d.chartUse && !(d.use || []).length).map(d => d.id).sort().join(',');

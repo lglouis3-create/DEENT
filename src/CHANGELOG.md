@@ -14,6 +14,7 @@ Every update adds its bullets here in the same commit that makes the change.
 - Quiz me keeps a score for this visit, with New questions and Retry the missed; nothing is saved.
 - Recall: pick target, mechanism, class or indication, type what you remember, then Check to compare.
 - Drug list filters are grouped under one heading with an active count and Clear filters.
+- Quiz me, after answering: a use that is off the chart but on a slide (cyclosporine, zinc oxide) shows its source.
 
 ## 2026-11-08 (Wide screens and the tab bar)
 - On a 13-inch iPad and MacBook the page uses the width: exam card beside Start here, two topic columns, a larger slide.

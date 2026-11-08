@@ -148,6 +148,8 @@ const DRUGLIST_UI = (() => {
   const cap = t => String(t).charAt(0).toUpperCase() + String(t).slice(1);
   const li = s => `<li>${esc(cap(s.t))}${src(s)}</li>`;
   const field = (cls, label, items) => items && items.length ? `<div class="dlf ${cls}"><b>${esc(label)}</b><ul>${items.map(li).join('')}</ul></div>` : '';
+  // uses kept out of the wrong options that a slide or transcript names (DL.OFF_CHART)
+  const offChart = notes => notes.map(n => `<div class="dlf f-note dloff"><b>${esc(n.head)}</b><ul>${n.src.map(li).join('')}</ul></div>`).join('');
   const STATUS = {taught: ['taught', 'Exam 1 · taught'], class: ['class', 'Optional · class taught, drug on chart only'],
                   chart: ['chart', 'Optional · chart only, not in the Exam 1 lectures']};
   const findText = d => [d.name].concat(d.alt || [], d.brands || [], [DL.CLASSES[d.cls] || '', d.sub || '']).join(' ').toLowerCase();
@@ -187,7 +189,7 @@ const DRUGLIST_UI = (() => {
       field('f-box', 'Boxed warning', d.boxed ? [d.boxed] : []) +
       field('f-ae', 'Key adverse effects and cautions', d.ae || []) +
       field('f-ph', d.photo && d.photo.no ? 'Photosensitivity: not photosensitizing' : 'Photosensitizing', d.photo ? [d.photo] : []) +
-      field('f-note', 'Also', notes) +
+      field('f-note', 'Also', notes) + offChart(DL.OFF_CHART[d.id] || []) +
       (remarks.length ? `<div class="dlf f-note"><b>Note</b><ul>${remarks.map(r => `<li>${esc(cap(r.t))}</li>`).join('')}</ul></div>` : '') +
       (members.length ? `<div class="dlrow"><span class="meta">Compare in class (${esc(DL.CLASSES[d.cls])}):</span>
         <button type="button" class="chip" data-dl="cls" data-cls="${esc(d.cls)}">Show all ${members.length + 1}</button>
@@ -237,7 +239,8 @@ const DRUGLIST_UI = (() => {
     if (f === 'mech') return L.mo.length ? field('f-tg', 'Target', L.tg) + field('f-mo', 'Mechanism', L.mo)
       : `<div class="dlf f-mo"><b>Mechanism</b><ul><li>No separate mechanism line on the Reference table; the target line is the answer.</li></ul></div>` + field('f-tg', 'Target', L.tg);
     if (f === 'cls') return field('f-class', 'Class', L.cls.length ? L.cls : [{t: DL.CLASSES[d.cls], by: 'chart', cite: 'Chart p. ' + d.page}]);
-    return L.use.length ? field('f-use', 'Indication', L.use) : `<div class="dlf f-use"><b>Indication</b><ul><li>No indication on the chart line (chart p. 5 columns are misaligned; see About this list)${d.dz.length ? ': listed on the ' + esc(DL.PAGES[d.page]) + ' page' : ''}.</li></ul></div>`;
+    if (L.use.length) return field('f-use', 'Indication', L.use) + offChart(DL.OFF_CHART[d.id] || []);
+    return `<div class="dlf f-use"><b>Indication</b><ul><li>No indication on the chart line (chart p. 5 columns are misaligned; see About this list)${d.dz.length ? ': listed on the ' + esc(DL.PAGES[d.page]) + ' page' : ''}.</li></ul></div>` + offChart(DL.OFF_CHART[d.id] || []);
   }
   function rcard(d){
     const k = d.id + ':' + st.rfield, open = checked.has(k), inp = 'dlt-' + d.id;
@@ -277,7 +280,8 @@ const DRUGLIST_UI = (() => {
     const right = done && q.options[pick].correct, key = q.options.find(o => o.correct);
     const fb = !done ? '' : `<p class="dlfb">${right ? '<span class="r">Right.</span>' : `<span class="w">Not this one.</span> The answer: <b>${esc(key.t)}</b>.`}</p>
       <div class="dlf ${q.kind === 'target' ? 'f-tg' : q.kind === 'cls' ? 'f-class' : 'f-use'}"><b>Source</b><ul>${q.src.map(li).join('')}</ul></div>
-      ${q.also.length ? `<p class="dlfb">Also true for ${esc(q.name)}: ${esc(q.also.join('; '))}.</p>` : ''}`;
+      ${q.also.length ? `<p class="dlfb">Also true for ${esc(q.name)}: ${esc(q.also.join('; '))}.</p>` : ''}
+      ${offChart(q.offChart || [])}`;
     return `<div class="dlq" data-qid="${esc(q.id)}"><p class="dlqh">${esc(q.name)} · ${esc(DL.KINDS[q.kind])}</p>
       <p class="stem" id="dlqs-${esc(q.id)}">${esc(q.stem)}</p>
       <div role="group" aria-labelledby="dlqs-${esc(q.id)}">${opts}</div><div aria-live="polite">${fb}</div></div>`;

@@ -576,6 +576,19 @@ const DRUGLIST = (() => {
   // tar in atopic dermatitis/eczema, upadacitinib in psoriatic disease, and zinc
   // oxide, which the chart also lists on its psoriasis page (p. 5)
   const NOT_WRONG = {cyclosporine: ['ad'], methotrexate: ['ad'], coaltar: ['ad'], upadacitinib: ['pso'], zincoxide: ['pso']};
+  /* Where a NOT_WRONG use is named in the course sources, shown after an
+     Indication question on the drug is answered and on its Browse card (never
+     before answering, never as an option). Each line is a slide or transcript
+     statement, quoted. No course source was found for methotrexate, coal tar
+     (atopic dermatitis) or upadacitinib (psoriasis), so they have no note. */
+  const OFF_CHART = {
+    zincoxide: [{z: 'pso', head: 'Psoriasis: zinc oxide in anthralin treatment (not its indication on the drug chart)', src: [
+      S('Short-contact anthralin therapy (SCAT): "zinc oxide ointment or nonmedicated stiff paste applied to surrounding normal skin"', 'PCol 56; 11/03 T 173–175'),
+      K('Anthralin "paste (Anthralin + ZnO + Parrafin + Salicylic Acid)"', 'DPAW 17; 11/03 T 921–922')]}],
+    cyclosporine: [{z: 'ad', head: 'Atopic dermatitis: named for the calcineurin inhibitor class, not for cyclosporine itself (not on the drug chart)', src: [
+      S('Calcineurin inhibitors (cyclosporine and tacrolimus, PCol 26): "used to treat atopic dermatitis, psoriasis"', 'PCol 24'),
+      S('In her lecture: "the topical tacrolimus products that we use for atopic dermatitis and psoriasis"; cyclosporine "orally for treating … bad psoriasis"', '10/30 T 384–386')]}],
+  };
   const DZ_RE = {ad: /atopic|eczema|\bad\b/, pso: /psoria/, acne: /acne/, sun: /sun protection|sunscreen/, burn: /sunburn/};
   const KINDS = {target: 'Target', cls: 'Class', use: 'Indication'};
   const groupOf = d => d.cls === 'abx' ? 'abx:' + norm(d.chartClass || '') : d.cls;
@@ -642,8 +655,9 @@ const DRUGLIST = (() => {
     for (let i = options.length - 1; i > 0; i--) { const j = Math.floor(rng() * (i + 1)); [options[i], options[j]] = [options[j], options[i]]; }
     const stem = kind === 'target' ? `What is the target of ${d.name}?`
       : kind === 'cls' ? `Which class is ${d.name} in?` : `Which condition is ${d.name} used for?`;
-    return {id: d.id + ':' + kind, drug: d.id, name: d.name, kind, stem, options, src: key.src, also: keys.filter(k => k !== key).map(k => k.t)};
+    return {id: d.id + ':' + kind, drug: d.id, name: d.name, kind, stem, options, src: key.src, also: keys.filter(k => k !== key).map(k => k.t),
+            offChart: kind === 'use' ? (OFF_CHART[d.id] || []) : []};
   }
   return {parseTargets, D, CLASS_Q, CLASSES, DISEASES, PAGES, CHART_ROWS, EXCLUDED, CHART_NOTES, questionsFor, classQuestions,
-          KINDS, quizFacts, trueValues, makeQuestion, norm, family, NOT_WRONG};
+          KINDS, quizFacts, trueValues, makeQuestion, norm, family, NOT_WRONG, OFF_CHART};
 })();
