@@ -50,7 +50,64 @@ const CHART_BOXES = {
     "y0": 0.3141,
     "x1": 0.9883,
     "y1": 0.3723,
-    "text": "Octyl dimethyl PABA, Padimate O"
+    "text": "Octyl dimethyl PABA, Padimate O",
+    "cells": [
+     {
+      "col": "Drug",
+      "page": 1,
+      "x0": 0.0109,
+      "y0": 0.3141,
+      "x1": 0.2238,
+      "y1": 0.3723,
+      "text": "Octyl dimethyl PABA, Padimate O",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Rx/OTC",
+      "page": 1,
+      "x0": 0.2238,
+      "y0": 0.3141,
+      "x1": 0.2894,
+      "y1": 0.3723,
+      "text": "OTC",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Pharmacological Class",
+      "page": 1,
+      "x0": 0.2894,
+      "y0": 0.3141,
+      "x1": 0.5109,
+      "y1": 0.6737,
+      "text": "Chemical Sunscreens",
+      "merged": true,
+      "cont": false
+     },
+     {
+      "col": "Chemical Class",
+      "page": 1,
+      "x0": 0.5109,
+      "y0": 0.3141,
+      "x1": 0.7252,
+      "y1": 0.3723,
+      "text": "Para-aminobenzoic acid (PABA)",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Indication",
+      "page": 1,
+      "x0": 0.7252,
+      "y0": 0.3141,
+      "x1": 0.9876,
+      "y1": 0.6737,
+      "text": "Sun protection",
+      "merged": true,
+      "cont": false
+     }
+    ]
    }
   ],
   "octinoxate": [
@@ -62,7 +119,64 @@ const CHART_BOXES = {
     "y0": 0.3723,
     "x1": 0.9883,
     "y1": 0.4587,
-    "text": "Octyl Methoxycinnamate, Ethyhexyl p- methoxycinnamate"
+    "text": "Octyl Methoxycinnamate, Ethyhexyl p- methoxycinnamate",
+    "cells": [
+     {
+      "col": "Drug",
+      "page": 1,
+      "x0": 0.0109,
+      "y0": 0.3723,
+      "x1": 0.2238,
+      "y1": 0.4587,
+      "text": "Octyl Methoxycinnamate, Ethyhexyl p- methoxycinnamate",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Rx/OTC",
+      "page": 1,
+      "x0": 0.2238,
+      "y0": 0.3723,
+      "x1": 0.2894,
+      "y1": 0.4587,
+      "text": "OTC",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Pharmacological Class",
+      "page": 1,
+      "x0": 0.2894,
+      "y0": 0.3141,
+      "x1": 0.5109,
+      "y1": 0.6737,
+      "text": "Chemical Sunscreens",
+      "merged": true,
+      "cont": false
+     },
+     {
+      "col": "Chemical Class",
+      "page": 1,
+      "x0": 0.5109,
+      "y0": 0.3723,
+      "x1": 0.7252,
+      "y1": 0.4587,
+      "text": "Cinnamates",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Indication",
+      "page": 1,
+      "x0": 0.7252,
+      "y0": 0.3141,
+      "x1": 0.9876,
+      "y1": 0.6737,
+      "text": "Sun protection",
+      "merged": true,
+      "cont": false
+     }
+    ]
    }
   ],
   "octisalate": [
@@ -74,7 +188,64 @@ const CHART_BOXES = {
     "y0": 0.4587,
     "x1": 0.9883,
     "y1": 0.5165,
-    "text": "2-ethyhexyl salicylate, Homosalate"
+    "text": "2-ethyhexyl salicylate, Homosalate",
+    "cells": [
+     {
+      "col": "Drug",
+      "page": 1,
+      "x0": 0.0109,
+      "y0": 0.4587,
+      "x1": 0.2238,
+      "y1": 0.5165,
+      "text": "2-ethyhexyl salicylate, Homosalate",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Rx/OTC",
+      "page": 1,
+      "x0": 0.2238,
+      "y0": 0.4587,
+      "x1": 0.2894,
+      "y1": 0.5165,
+      "text": "OTC",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Pharmacological Class",
+      "page": 1,
+      "x0": 0.2894,
+      "y0": 0.3141,
+      "x1": 0.5109,
+      "y1": 0.6737,
+      "text": "Chemical Sunscreens",
+      "merged": true,
+      "cont": false
+     },
+     {
+      "col": "Chemical Class",
+      "page": 1,
+      "x0": 0.5109,
+      "y0": 0.4587,
+      "x1": 0.7252,
+      "y1": 0.5165,
+      "text": "Salicylates",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Indication",
+      "page": 1,
+      "x0": 0.7252,
+      "y0": 0.3141,
+      "x1": 0.9876,
+      "y1": 0.6737,
+      "text": "Sun protection",
+      "merged": true,
+      "cont": false
+     }
+    ]
    }
   ],
   "homosalate": [
@@ -86,7 +257,64 @@ const CHART_BOXES = {
     "y0": 0.4587,
     "x1": 0.9883,
     "y1": 0.5165,
-    "text": "2-ethyhexyl salicylate, Homosalate"
+    "text": "2-ethyhexyl salicylate, Homosalate",
+    "cells": [
+     {
+      "col": "Drug",
+      "page": 1,
+      "x0": 0.0109,
+      "y0": 0.4587,
+      "x1": 0.2238,
+      "y1": 0.5165,
+      "text": "2-ethyhexyl salicylate, Homosalate",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Rx/OTC",
+      "page": 1,
+      "x0": 0.2238,
+      "y0": 0.4587,
+      "x1": 0.2894,
+      "y1": 0.5165,
+      "text": "OTC",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Pharmacological Class",
+      "page": 1,
+      "x0": 0.2894,
+      "y0": 0.3141,
+      "x1": 0.5109,
+      "y1": 0.6737,
+      "text": "Chemical Sunscreens",
+      "merged": true,
+      "cont": false
+     },
+     {
+      "col": "Chemical Class",
+      "page": 1,
+      "x0": 0.5109,
+      "y0": 0.4587,
+      "x1": 0.7252,
+      "y1": 0.5165,
+      "text": "Salicylates",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Indication",
+      "page": 1,
+      "x0": 0.7252,
+      "y0": 0.3141,
+      "x1": 0.9876,
+      "y1": 0.6737,
+      "text": "Sun protection",
+      "merged": true,
+      "cont": false
+     }
+    ]
    }
   ],
   "oxybenzone": [
@@ -98,7 +326,64 @@ const CHART_BOXES = {
     "y0": 0.5165,
     "x1": 0.9883,
     "y1": 0.5748,
-    "text": "Oxybenzone, Dioxybenzone"
+    "text": "Oxybenzone, Dioxybenzone",
+    "cells": [
+     {
+      "col": "Drug",
+      "page": 1,
+      "x0": 0.0109,
+      "y0": 0.5165,
+      "x1": 0.2238,
+      "y1": 0.5748,
+      "text": "Oxybenzone, Dioxybenzone",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Rx/OTC",
+      "page": 1,
+      "x0": 0.2238,
+      "y0": 0.5165,
+      "x1": 0.2894,
+      "y1": 0.5748,
+      "text": "OTC",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Pharmacological Class",
+      "page": 1,
+      "x0": 0.2894,
+      "y0": 0.3141,
+      "x1": 0.5109,
+      "y1": 0.6737,
+      "text": "Chemical Sunscreens",
+      "merged": true,
+      "cont": false
+     },
+     {
+      "col": "Chemical Class",
+      "page": 1,
+      "x0": 0.5109,
+      "y0": 0.5165,
+      "x1": 0.7252,
+      "y1": 0.5748,
+      "text": "Benzophenones",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Indication",
+      "page": 1,
+      "x0": 0.7252,
+      "y0": 0.3141,
+      "x1": 0.9876,
+      "y1": 0.6737,
+      "text": "Sun protection",
+      "merged": true,
+      "cont": false
+     }
+    ]
    }
   ],
   "dioxybenzone": [
@@ -110,7 +395,64 @@ const CHART_BOXES = {
     "y0": 0.5165,
     "x1": 0.9883,
     "y1": 0.5748,
-    "text": "Oxybenzone, Dioxybenzone"
+    "text": "Oxybenzone, Dioxybenzone",
+    "cells": [
+     {
+      "col": "Drug",
+      "page": 1,
+      "x0": 0.0109,
+      "y0": 0.5165,
+      "x1": 0.2238,
+      "y1": 0.5748,
+      "text": "Oxybenzone, Dioxybenzone",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Rx/OTC",
+      "page": 1,
+      "x0": 0.2238,
+      "y0": 0.5165,
+      "x1": 0.2894,
+      "y1": 0.5748,
+      "text": "OTC",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Pharmacological Class",
+      "page": 1,
+      "x0": 0.2894,
+      "y0": 0.3141,
+      "x1": 0.5109,
+      "y1": 0.6737,
+      "text": "Chemical Sunscreens",
+      "merged": true,
+      "cont": false
+     },
+     {
+      "col": "Chemical Class",
+      "page": 1,
+      "x0": 0.5109,
+      "y0": 0.5165,
+      "x1": 0.7252,
+      "y1": 0.5748,
+      "text": "Benzophenones",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Indication",
+      "page": 1,
+      "x0": 0.7252,
+      "y0": 0.3141,
+      "x1": 0.9876,
+      "y1": 0.6737,
+      "text": "Sun protection",
+      "merged": true,
+      "cont": false
+     }
+    ]
    }
   ],
   "meradimate": [
@@ -122,7 +464,64 @@ const CHART_BOXES = {
     "y0": 0.5748,
     "x1": 0.9883,
     "y1": 0.6324,
-    "text": "Menthyl anthranilate"
+    "text": "Menthyl anthranilate",
+    "cells": [
+     {
+      "col": "Drug",
+      "page": 1,
+      "x0": 0.0109,
+      "y0": 0.5748,
+      "x1": 0.2238,
+      "y1": 0.6324,
+      "text": "Menthyl anthranilate",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Rx/OTC",
+      "page": 1,
+      "x0": 0.2238,
+      "y0": 0.5748,
+      "x1": 0.2894,
+      "y1": 0.6324,
+      "text": "OTC",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Pharmacological Class",
+      "page": 1,
+      "x0": 0.2894,
+      "y0": 0.3141,
+      "x1": 0.5109,
+      "y1": 0.6737,
+      "text": "Chemical Sunscreens",
+      "merged": true,
+      "cont": false
+     },
+     {
+      "col": "Chemical Class",
+      "page": 1,
+      "x0": 0.5109,
+      "y0": 0.5748,
+      "x1": 0.7252,
+      "y1": 0.6324,
+      "text": "Anthranilates",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Indication",
+      "page": 1,
+      "x0": 0.7252,
+      "y0": 0.3141,
+      "x1": 0.9876,
+      "y1": 0.6737,
+      "text": "Sun protection",
+      "merged": true,
+      "cont": false
+     }
+    ]
    }
   ],
   "avobenzone": [
@@ -134,7 +533,64 @@ const CHART_BOXES = {
     "y0": 0.6324,
     "x1": 0.9883,
     "y1": 0.6737,
-    "text": "Avobenzone"
+    "text": "Avobenzone",
+    "cells": [
+     {
+      "col": "Drug",
+      "page": 1,
+      "x0": 0.0109,
+      "y0": 0.6324,
+      "x1": 0.2238,
+      "y1": 0.6737,
+      "text": "Avobenzone",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Rx/OTC",
+      "page": 1,
+      "x0": 0.2238,
+      "y0": 0.6324,
+      "x1": 0.2894,
+      "y1": 0.6737,
+      "text": "OTC",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Pharmacological Class",
+      "page": 1,
+      "x0": 0.2894,
+      "y0": 0.3141,
+      "x1": 0.5109,
+      "y1": 0.6737,
+      "text": "Chemical Sunscreens",
+      "merged": true,
+      "cont": false
+     },
+     {
+      "col": "Chemical Class",
+      "page": 1,
+      "x0": 0.5109,
+      "y0": 0.6324,
+      "x1": 0.7252,
+      "y1": 0.6737,
+      "text": "Dibenzoylmethane",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Indication",
+      "page": 1,
+      "x0": 0.7252,
+      "y0": 0.3141,
+      "x1": 0.9876,
+      "y1": 0.6737,
+      "text": "Sun protection",
+      "merged": true,
+      "cont": false
+     }
+    ]
    }
   ],
   "zincoxide": [
@@ -146,7 +602,64 @@ const CHART_BOXES = {
     "y0": 0.6737,
     "x1": 0.9883,
     "y1": 0.715,
-    "text": "Zinc oxide (Zinca)"
+    "text": "Zinc oxide (Zinca)",
+    "cells": [
+     {
+      "col": "Drug",
+      "page": 1,
+      "x0": 0.0109,
+      "y0": 0.6737,
+      "x1": 0.2238,
+      "y1": 0.715,
+      "text": "Zinc oxide (Zinca)",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Rx/OTC",
+      "page": 1,
+      "x0": 0.2238,
+      "y0": 0.6737,
+      "x1": 0.2894,
+      "y1": 0.715,
+      "text": "OTC",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Pharmacological Class",
+      "page": 1,
+      "x0": 0.2894,
+      "y0": 0.6737,
+      "x1": 0.5109,
+      "y1": 0.7558,
+      "text": "Physical Sunscreen",
+      "merged": true,
+      "cont": false
+     },
+     {
+      "col": "Chemical Class",
+      "page": 1,
+      "x0": 0.5109,
+      "y0": 0.6737,
+      "x1": 0.7252,
+      "y1": 0.715,
+      "text": "Oxides",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Indication",
+      "page": 1,
+      "x0": 0.7252,
+      "y0": 0.6737,
+      "x1": 0.9876,
+      "y1": 0.7558,
+      "text": "Sun protection",
+      "merged": true,
+      "cont": false
+     }
+    ]
    },
    {
     "page": 5,
@@ -156,7 +669,64 @@ const CHART_BOXES = {
     "y0": 0.7956,
     "x1": 0.9895,
     "y1": 0.8538,
-    "text": "Zinc Oxide (Desitin)"
+    "text": "Zinc Oxide (Desitin)",
+    "cells": [
+     {
+      "col": "Drug",
+      "page": 5,
+      "x0": 0.0099,
+      "y0": 0.7956,
+      "x1": 0.2167,
+      "y1": 0.8538,
+      "text": "Zinc Oxide (Desitin)",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Rx/OTC",
+      "page": 5,
+      "x0": 0.2167,
+      "y0": 0.7956,
+      "x1": 0.2891,
+      "y1": 0.8538,
+      "text": "OTC",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Pharmacological Class",
+      "page": 5,
+      "x0": 0.2891,
+      "y0": 0.7956,
+      "x1": 0.4867,
+      "y1": 0.8538,
+      "text": "Physical Sunscreen",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Chemical Class",
+      "page": 5,
+      "x0": 0.4867,
+      "y0": 0.7956,
+      "x1": 0.6974,
+      "y1": 0.8538,
+      "text": "Petroleum",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Indication",
+      "page": 5,
+      "x0": 0.6974,
+      "y0": 0.7956,
+      "x1": 0.9898,
+      "y1": 0.8538,
+      "text": "Topical - Skin protectant",
+      "merged": false,
+      "cont": false
+     }
+    ]
    }
   ],
   "tio2": [
@@ -168,7 +738,64 @@ const CHART_BOXES = {
     "y0": 0.715,
     "x1": 0.9883,
     "y1": 0.7558,
-    "text": "Titanium oxide"
+    "text": "Titanium oxide",
+    "cells": [
+     {
+      "col": "Drug",
+      "page": 1,
+      "x0": 0.0109,
+      "y0": 0.715,
+      "x1": 0.2238,
+      "y1": 0.7558,
+      "text": "Titanium oxide",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Rx/OTC",
+      "page": 1,
+      "x0": 0.2238,
+      "y0": 0.715,
+      "x1": 0.2894,
+      "y1": 0.7558,
+      "text": "OTC",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Pharmacological Class",
+      "page": 1,
+      "x0": 0.2894,
+      "y0": 0.6737,
+      "x1": 0.5109,
+      "y1": 0.7558,
+      "text": "Physical Sunscreen",
+      "merged": true,
+      "cont": false
+     },
+     {
+      "col": "Chemical Class",
+      "page": 1,
+      "x0": 0.5109,
+      "y0": 0.715,
+      "x1": 0.7252,
+      "y1": 0.7558,
+      "text": "Oxides",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Indication",
+      "page": 1,
+      "x0": 0.7252,
+      "y0": 0.6737,
+      "x1": 0.9876,
+      "y1": 0.7558,
+      "text": "Sun protection",
+      "merged": true,
+      "cont": false
+     }
+    ]
    }
   ],
   "benzocaine": [
@@ -180,7 +807,64 @@ const CHART_BOXES = {
     "y0": 0.7558,
     "x1": 0.9883,
     "y1": 0.8141,
-    "text": "Benzocaine (Americaine, Solarcaine, Lanacane)"
+    "text": "Benzocaine (Americaine, Solarcaine, Lanacane)",
+    "cells": [
+     {
+      "col": "Drug",
+      "page": 1,
+      "x0": 0.0109,
+      "y0": 0.7558,
+      "x1": 0.2238,
+      "y1": 0.8141,
+      "text": "Benzocaine (Americaine, Solarcaine, Lanacane)",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Rx/OTC",
+      "page": 1,
+      "x0": 0.2238,
+      "y0": 0.7558,
+      "x1": 0.2894,
+      "y1": 0.8141,
+      "text": "OTC",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Pharmacological Class",
+      "page": 1,
+      "x0": 0.2894,
+      "y0": 0.7558,
+      "x1": 0.5109,
+      "y1": 0.9375,
+      "text": "Na Channel Blockers",
+      "merged": true,
+      "cont": false
+     },
+     {
+      "col": "Chemical Class",
+      "page": 1,
+      "x0": 0.5109,
+      "y0": 0.7558,
+      "x1": 0.7252,
+      "y1": 0.8141,
+      "text": "",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Indication",
+      "page": 1,
+      "x0": 0.7252,
+      "y0": 0.7558,
+      "x1": 0.9876,
+      "y1": 0.9375,
+      "text": "Sunburn relief Reduce pain and itching of stings and insect bites",
+      "merged": true,
+      "cont": false
+     }
+    ]
    }
   ],
   "dibucaine": [
@@ -192,7 +876,64 @@ const CHART_BOXES = {
     "y0": 0.8141,
     "x1": 0.9883,
     "y1": 0.8554,
-    "text": "Dibucaine (Nupercainal)"
+    "text": "Dibucaine (Nupercainal)",
+    "cells": [
+     {
+      "col": "Drug",
+      "page": 1,
+      "x0": 0.0109,
+      "y0": 0.8141,
+      "x1": 0.2238,
+      "y1": 0.8554,
+      "text": "Dibucaine (Nupercainal)",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Rx/OTC",
+      "page": 1,
+      "x0": 0.2238,
+      "y0": 0.8141,
+      "x1": 0.2894,
+      "y1": 0.8554,
+      "text": "OTC",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Pharmacological Class",
+      "page": 1,
+      "x0": 0.2894,
+      "y0": 0.7558,
+      "x1": 0.5109,
+      "y1": 0.9375,
+      "text": "Na Channel Blockers",
+      "merged": true,
+      "cont": false
+     },
+     {
+      "col": "Chemical Class",
+      "page": 1,
+      "x0": 0.5109,
+      "y0": 0.8141,
+      "x1": 0.7252,
+      "y1": 0.8554,
+      "text": "Topical Anesthetics",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Indication",
+      "page": 1,
+      "x0": 0.7252,
+      "y0": 0.7558,
+      "x1": 0.9876,
+      "y1": 0.9375,
+      "text": "Sunburn relief Reduce pain and itching of stings and insect bites",
+      "merged": true,
+      "cont": false
+     }
+    ]
    }
   ],
   "tetracaine": [
@@ -204,7 +945,64 @@ const CHART_BOXES = {
     "y0": 0.8554,
     "x1": 0.9883,
     "y1": 0.8962,
-    "text": "Tetracaine (Dermocaine)"
+    "text": "Tetracaine (Dermocaine)",
+    "cells": [
+     {
+      "col": "Drug",
+      "page": 1,
+      "x0": 0.0109,
+      "y0": 0.8554,
+      "x1": 0.2238,
+      "y1": 0.8962,
+      "text": "Tetracaine (Dermocaine)",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Rx/OTC",
+      "page": 1,
+      "x0": 0.2238,
+      "y0": 0.8554,
+      "x1": 0.2894,
+      "y1": 0.8962,
+      "text": "OTC",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Pharmacological Class",
+      "page": 1,
+      "x0": 0.2894,
+      "y0": 0.7558,
+      "x1": 0.5109,
+      "y1": 0.9375,
+      "text": "Na Channel Blockers",
+      "merged": true,
+      "cont": false
+     },
+     {
+      "col": "Chemical Class",
+      "page": 1,
+      "x0": 0.5109,
+      "y0": 0.8554,
+      "x1": 0.7252,
+      "y1": 0.8962,
+      "text": "",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Indication",
+      "page": 1,
+      "x0": 0.7252,
+      "y0": 0.7558,
+      "x1": 0.9876,
+      "y1": 0.9375,
+      "text": "Sunburn relief Reduce pain and itching of stings and insect bites",
+      "merged": true,
+      "cont": false
+     }
+    ]
    }
   ],
   "lidocaine": [
@@ -216,7 +1014,64 @@ const CHART_BOXES = {
     "y0": 0.8962,
     "x1": 0.9883,
     "y1": 0.9375,
-    "text": "Lidocaine (Xylocaine)"
+    "text": "Lidocaine (Xylocaine)",
+    "cells": [
+     {
+      "col": "Drug",
+      "page": 1,
+      "x0": 0.0109,
+      "y0": 0.8962,
+      "x1": 0.2238,
+      "y1": 0.9375,
+      "text": "Lidocaine (Xylocaine)",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Rx/OTC",
+      "page": 1,
+      "x0": 0.2238,
+      "y0": 0.8962,
+      "x1": 0.2894,
+      "y1": 0.9375,
+      "text": "RX/OTC",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Pharmacological Class",
+      "page": 1,
+      "x0": 0.2894,
+      "y0": 0.7558,
+      "x1": 0.5109,
+      "y1": 0.9375,
+      "text": "Na Channel Blockers",
+      "merged": true,
+      "cont": false
+     },
+     {
+      "col": "Chemical Class",
+      "page": 1,
+      "x0": 0.5109,
+      "y0": 0.8962,
+      "x1": 0.7252,
+      "y1": 0.9375,
+      "text": "",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Indication",
+      "page": 1,
+      "x0": 0.7252,
+      "y0": 0.7558,
+      "x1": 0.9876,
+      "y1": 0.9375,
+      "text": "Sunburn relief Reduce pain and itching of stings and insect bites",
+      "merged": true,
+      "cont": false
+     }
+    ]
    }
   ],
   "bemotrizinol": [
@@ -228,7 +1083,64 @@ const CHART_BOXES = {
     "y0": 0.9375,
     "x1": 0.9883,
     "y1": 0.9788,
-    "text": "Bemotrizinol (BEMT)"
+    "text": "Bemotrizinol (BEMT)",
+    "cells": [
+     {
+      "col": "Drug",
+      "page": 1,
+      "x0": 0.0109,
+      "y0": 0.9375,
+      "x1": 0.2238,
+      "y1": 0.9788,
+      "text": "Bemotrizinol (BEMT)",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Rx/OTC",
+      "page": 1,
+      "x0": 0.2238,
+      "y0": 0.9375,
+      "x1": 0.2894,
+      "y1": 0.9788,
+      "text": "OTC",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Pharmacological Class",
+      "page": 1,
+      "x0": 0.2894,
+      "y0": 0.9375,
+      "x1": 0.5109,
+      "y1": 0.9788,
+      "text": "Organic Chemical Sunscreen",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Chemical Class",
+      "page": 1,
+      "x0": 0.5109,
+      "y0": 0.9375,
+      "x1": 0.7252,
+      "y1": 0.9788,
+      "text": "Triazine and Methoxybenzene",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Indication",
+      "page": 1,
+      "x0": 0.7252,
+      "y0": 0.9375,
+      "x1": 0.9876,
+      "y1": 0.9788,
+      "text": "Sun protection",
+      "merged": false,
+      "cont": false
+     }
+    ]
    }
   ],
   "crisaborole": [
@@ -240,7 +1152,64 @@ const CHART_BOXES = {
     "y0": 0.3156,
     "x1": 0.9887,
     "y1": 0.4225,
-    "text": "Crisaborole (Eucrisa)"
+    "text": "Crisaborole (Eucrisa)",
+    "cells": [
+     {
+      "col": "Drug",
+      "page": 2,
+      "x0": 0.0106,
+      "y0": 0.3156,
+      "x1": 0.2277,
+      "y1": 0.4225,
+      "text": "Crisaborole (Eucrisa)",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Rx/OTC",
+      "page": 2,
+      "x0": 0.2277,
+      "y0": 0.3156,
+      "x1": 0.2996,
+      "y1": 0.4225,
+      "text": "Rx",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Pharmacological Class",
+      "page": 2,
+      "x0": 0.2996,
+      "y0": 0.3156,
+      "x1": 0.5309,
+      "y1": 0.4225,
+      "text": "Phosphodiesterase 4 (PDE-4) Inhibitor",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Chemical Class",
+      "page": 2,
+      "x0": 0.5309,
+      "y0": 0.3156,
+      "x1": 0.7268,
+      "y1": 0.4225,
+      "text": "Benzoxaborole",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Indication",
+      "page": 2,
+      "x0": 0.7268,
+      "y0": 0.3156,
+      "x1": 0.9891,
+      "y1": 0.4225,
+      "text": "Topical-Mild to moderate Atopic Dermatitis",
+      "merged": false,
+      "cont": false
+     }
+    ]
    }
   ],
   "pimecrolimus": [
@@ -252,7 +1221,64 @@ const CHART_BOXES = {
     "y0": 0.4225,
     "x1": 0.9887,
     "y1": 0.5298,
-    "text": "Pimecrolimus (Elidel)"
+    "text": "Pimecrolimus (Elidel)",
+    "cells": [
+     {
+      "col": "Drug",
+      "page": 2,
+      "x0": 0.0106,
+      "y0": 0.4225,
+      "x1": 0.2277,
+      "y1": 0.5298,
+      "text": "Pimecrolimus (Elidel)",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Rx/OTC",
+      "page": 2,
+      "x0": 0.2277,
+      "y0": 0.4225,
+      "x1": 0.2996,
+      "y1": 0.5298,
+      "text": "RX",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Pharmacological Class",
+      "page": 2,
+      "x0": 0.2996,
+      "y0": 0.4225,
+      "x1": 0.5309,
+      "y1": 0.6379,
+      "text": "Calcineurin Inhibitors",
+      "merged": true,
+      "cont": false
+     },
+     {
+      "col": "Chemical Class",
+      "page": 2,
+      "x0": 0.5309,
+      "y0": 0.4225,
+      "x1": 0.7268,
+      "y1": 0.6379,
+      "text": "Peptides",
+      "merged": true,
+      "cont": false
+     },
+     {
+      "col": "Indication",
+      "page": 2,
+      "x0": 0.7268,
+      "y0": 0.4225,
+      "x1": 0.9891,
+      "y1": 0.5298,
+      "text": "Topical – Atopic Dermatitis, Psoriasis (unlabeled)",
+      "merged": false,
+      "cont": false
+     }
+    ]
    }
   ],
   "tacrolimus": [
@@ -264,7 +1290,64 @@ const CHART_BOXES = {
     "y0": 0.5298,
     "x1": 0.9887,
     "y1": 0.6379,
-    "text": "Tacrolimus (Protopic)"
+    "text": "Tacrolimus (Protopic)",
+    "cells": [
+     {
+      "col": "Drug",
+      "page": 2,
+      "x0": 0.0106,
+      "y0": 0.5298,
+      "x1": 0.2277,
+      "y1": 0.6379,
+      "text": "Tacrolimus (Protopic)",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Rx/OTC",
+      "page": 2,
+      "x0": 0.2277,
+      "y0": 0.5298,
+      "x1": 0.2996,
+      "y1": 0.6379,
+      "text": "RX",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Pharmacological Class",
+      "page": 2,
+      "x0": 0.2996,
+      "y0": 0.4225,
+      "x1": 0.5309,
+      "y1": 0.6379,
+      "text": "Calcineurin Inhibitors",
+      "merged": true,
+      "cont": false
+     },
+     {
+      "col": "Chemical Class",
+      "page": 2,
+      "x0": 0.5309,
+      "y0": 0.4225,
+      "x1": 0.7268,
+      "y1": 0.6379,
+      "text": "Peptides",
+      "merged": true,
+      "cont": false
+     },
+     {
+      "col": "Indication",
+      "page": 2,
+      "x0": 0.7268,
+      "y0": 0.5298,
+      "x1": 0.9891,
+      "y1": 0.6379,
+      "text": "Topical – Atopic Dermatitis, Psoriasis (unlabeled)",
+      "merged": false,
+      "cont": false
+     }
+    ]
    }
   ],
   "dupilumab": [
@@ -276,7 +1359,64 @@ const CHART_BOXES = {
     "y0": 0.6379,
     "x1": 0.9887,
     "y1": 0.7453,
-    "text": "Dupilumab (Dupixent)"
+    "text": "Dupilumab (Dupixent)",
+    "cells": [
+     {
+      "col": "Drug",
+      "page": 2,
+      "x0": 0.0106,
+      "y0": 0.6379,
+      "x1": 0.2277,
+      "y1": 0.7453,
+      "text": "Dupilumab (Dupixent)",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Rx/OTC",
+      "page": 2,
+      "x0": 0.2277,
+      "y0": 0.6379,
+      "x1": 0.2996,
+      "y1": 0.7453,
+      "text": "Rx",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Pharmacological Class",
+      "page": 2,
+      "x0": 0.2996,
+      "y0": 0.6379,
+      "x1": 0.5309,
+      "y1": 0.7453,
+      "text": "IL-4R and IL-13 receptor antagonist",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Chemical Class",
+      "page": 2,
+      "x0": 0.5309,
+      "y0": 0.6379,
+      "x1": 0.7268,
+      "y1": 0.7453,
+      "text": "Peptides",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Indication",
+      "page": 2,
+      "x0": 0.7268,
+      "y0": 0.6379,
+      "x1": 0.9891,
+      "y1": 0.7453,
+      "text": "Injection – Moderate to severe atopic dermatitis",
+      "merged": false,
+      "cont": false
+     }
+    ]
    }
   ],
   "ruxolitinib": [
@@ -288,7 +1428,64 @@ const CHART_BOXES = {
     "y0": 0.7453,
     "x1": 0.9887,
     "y1": 0.8534,
-    "text": "Ruxolitinib (Opzelura)"
+    "text": "Ruxolitinib (Opzelura)",
+    "cells": [
+     {
+      "col": "Drug",
+      "page": 2,
+      "x0": 0.0106,
+      "y0": 0.7453,
+      "x1": 0.2277,
+      "y1": 0.8534,
+      "text": "Ruxolitinib (Opzelura)",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Rx/OTC",
+      "page": 2,
+      "x0": 0.2277,
+      "y0": 0.7453,
+      "x1": 0.2996,
+      "y1": 0.8534,
+      "text": "Rx",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Pharmacological Class",
+      "page": 2,
+      "x0": 0.2996,
+      "y0": 0.7453,
+      "x1": 0.5309,
+      "y1": 0.9607,
+      "text": "Janus Kinase (JAK) Inhibitor",
+      "merged": true,
+      "cont": false
+     },
+     {
+      "col": "Chemical Class",
+      "page": 2,
+      "x0": 0.5309,
+      "y0": 0.7453,
+      "x1": 0.7268,
+      "y1": 0.8534,
+      "text": "Peptides",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Indication",
+      "page": 2,
+      "x0": 0.7268,
+      "y0": 0.7453,
+      "x1": 0.9891,
+      "y1": 0.8534,
+      "text": "Topical – Mild to moderate atopic dermatitis",
+      "merged": false,
+      "cont": false
+     }
+    ]
    }
   ],
   "upadacitinib": [
@@ -300,7 +1497,64 @@ const CHART_BOXES = {
     "y0": 0.8534,
     "x1": 0.9887,
     "y1": 0.9607,
-    "text": "Upadacitinib (Rinvoq)"
+    "text": "Upadacitinib (Rinvoq)",
+    "cells": [
+     {
+      "col": "Drug",
+      "page": 2,
+      "x0": 0.0106,
+      "y0": 0.8534,
+      "x1": 0.2277,
+      "y1": 0.9607,
+      "text": "Upadacitinib (Rinvoq)",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Rx/OTC",
+      "page": 2,
+      "x0": 0.2277,
+      "y0": 0.8534,
+      "x1": 0.2996,
+      "y1": 0.9607,
+      "text": "Rx",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Pharmacological Class",
+      "page": 2,
+      "x0": 0.2996,
+      "y0": 0.7453,
+      "x1": 0.5309,
+      "y1": 0.9607,
+      "text": "Janus Kinase (JAK) Inhibitor",
+      "merged": true,
+      "cont": false
+     },
+     {
+      "col": "Chemical Class",
+      "page": 2,
+      "x0": 0.5309,
+      "y0": 0.8534,
+      "x1": 0.7268,
+      "y1": 0.9607,
+      "text": "Peptides",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Indication",
+      "page": 2,
+      "x0": 0.7268,
+      "y0": 0.8534,
+      "x1": 0.9891,
+      "y1": 0.9607,
+      "text": "Oral – Mild to moderate atopic dermatitis",
+      "merged": false,
+      "cont": false
+     }
+    ]
    }
   ],
   "bpo": [
@@ -312,7 +1566,64 @@ const CHART_BOXES = {
     "y0": 0.1415,
     "x1": 0.9893,
     "y1": 0.2071,
-    "text": "Benzoyl peroxide (Clearasil, Fostex, Oxy-10, Benzac AC, Benzagel Wash)"
+    "text": "Benzoyl peroxide (Clearasil, Fostex, Oxy-10, Benzac AC, Benzagel Wash)",
+    "cells": [
+     {
+      "col": "Drug",
+      "page": 3,
+      "x0": 0.0101,
+      "y0": 0.1415,
+      "x1": 0.2626,
+      "y1": 0.2071,
+      "text": "Benzoyl peroxide (Clearasil, Fostex, Oxy-10, Benzac AC, Benzagel Wash)",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Rx/OTC",
+      "page": 3,
+      "x0": 0.2626,
+      "y0": 0.1415,
+      "x1": 0.3244,
+      "y1": 0.2071,
+      "text": "OTC",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Pharmacological Class",
+      "page": 3,
+      "x0": 0.3244,
+      "y0": 0.1415,
+      "x1": 0.4909,
+      "y1": 0.3188,
+      "text": "Keratolytics",
+      "merged": true,
+      "cont": false
+     },
+     {
+      "col": "Chemical Class",
+      "page": 3,
+      "x0": 0.4909,
+      "y0": 0.1415,
+      "x1": 0.6508,
+      "y1": 0.2071,
+      "text": "",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Indication",
+      "page": 3,
+      "x0": 0.6508,
+      "y0": 0.1415,
+      "x1": 0.9893,
+      "y1": 0.2071,
+      "text": "Acne",
+      "merged": false,
+      "cont": false
+     }
+    ]
    }
   ],
   "sulfur": [
@@ -324,7 +1635,64 @@ const CHART_BOXES = {
     "y0": 0.2071,
     "x1": 0.9893,
     "y1": 0.2532,
-    "text": "Sulfur (Fostril)"
+    "text": "Sulfur (Fostril)",
+    "cells": [
+     {
+      "col": "Drug",
+      "page": 3,
+      "x0": 0.0101,
+      "y0": 0.2071,
+      "x1": 0.2626,
+      "y1": 0.2532,
+      "text": "Sulfur (Fostril)",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Rx/OTC",
+      "page": 3,
+      "x0": 0.2626,
+      "y0": 0.2071,
+      "x1": 0.3244,
+      "y1": 0.2532,
+      "text": "OTC",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Pharmacological Class",
+      "page": 3,
+      "x0": 0.3244,
+      "y0": 0.1415,
+      "x1": 0.4909,
+      "y1": 0.3188,
+      "text": "Keratolytics",
+      "merged": true,
+      "cont": false
+     },
+     {
+      "col": "Chemical Class",
+      "page": 3,
+      "x0": 0.4909,
+      "y0": 0.2071,
+      "x1": 0.6508,
+      "y1": 0.2532,
+      "text": "",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Indication",
+      "page": 3,
+      "x0": 0.6508,
+      "y0": 0.2071,
+      "x1": 0.9893,
+      "y1": 0.2532,
+      "text": "Acne, psoriasis",
+      "merged": false,
+      "cont": false
+     }
+    ]
    }
   ],
   "salicylic": [
@@ -336,7 +1704,64 @@ const CHART_BOXES = {
     "y0": 0.2532,
     "x1": 0.9893,
     "y1": 0.3188,
-    "text": "Salicylic Acid (Oxy Face Scrub, Stri-Dex, Wart-Off Treatment, Compound W)"
+    "text": "Salicylic Acid (Oxy Face Scrub, Stri-Dex, Wart-Off Treatment, Compound W)",
+    "cells": [
+     {
+      "col": "Drug",
+      "page": 3,
+      "x0": 0.0101,
+      "y0": 0.2532,
+      "x1": 0.2626,
+      "y1": 0.3188,
+      "text": "Salicylic Acid (Oxy Face Scrub, Stri-Dex, Wart-Off Treatment, Compound W)",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Rx/OTC",
+      "page": 3,
+      "x0": 0.2626,
+      "y0": 0.2532,
+      "x1": 0.3244,
+      "y1": 0.3188,
+      "text": "OTC",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Pharmacological Class",
+      "page": 3,
+      "x0": 0.3244,
+      "y0": 0.1415,
+      "x1": 0.4909,
+      "y1": 0.3188,
+      "text": "Keratolytics",
+      "merged": true,
+      "cont": false
+     },
+     {
+      "col": "Chemical Class",
+      "page": 3,
+      "x0": 0.4909,
+      "y0": 0.2532,
+      "x1": 0.6508,
+      "y1": 0.3188,
+      "text": "",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Indication",
+      "page": 3,
+      "x0": 0.6508,
+      "y0": 0.2532,
+      "x1": 0.9893,
+      "y1": 0.3188,
+      "text": "Acne, psoriasis, wart remover",
+      "merged": false,
+      "cont": false
+     }
+    ]
    }
   ],
   "sarecycline": [
@@ -348,7 +1773,64 @@ const CHART_BOXES = {
     "y0": 0.3188,
     "x1": 0.9893,
     "y1": 0.3653,
-    "text": "Sarecycline (Seysara)"
+    "text": "Sarecycline (Seysara)",
+    "cells": [
+     {
+      "col": "Drug",
+      "page": 3,
+      "x0": 0.0101,
+      "y0": 0.3188,
+      "x1": 0.2626,
+      "y1": 0.3653,
+      "text": "Sarecycline (Seysara)",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Rx/OTC",
+      "page": 3,
+      "x0": 0.2626,
+      "y0": 0.3188,
+      "x1": 0.3244,
+      "y1": 0.3653,
+      "text": "Rx",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Pharmacological Class",
+      "page": 3,
+      "x0": 0.3244,
+      "y0": 0.3188,
+      "x1": 0.4909,
+      "y1": 0.458,
+      "text": "",
+      "merged": true,
+      "cont": false
+     },
+     {
+      "col": "Chemical Class",
+      "page": 3,
+      "x0": 0.4909,
+      "y0": 0.3188,
+      "x1": 0.6508,
+      "y1": 0.458,
+      "text": "Tetracyclines",
+      "merged": true,
+      "cont": false
+     },
+     {
+      "col": "Indication",
+      "page": 3,
+      "x0": 0.6508,
+      "y0": 0.3188,
+      "x1": 0.9893,
+      "y1": 0.7711,
+      "text": "Acne",
+      "merged": true,
+      "cont": false
+     }
+    ]
    }
   ],
   "minocycline": [
@@ -360,7 +1842,64 @@ const CHART_BOXES = {
     "y0": 0.3653,
     "x1": 0.9893,
     "y1": 0.4114,
-    "text": "Minocycline (Minocin)"
+    "text": "Minocycline (Minocin)",
+    "cells": [
+     {
+      "col": "Drug",
+      "page": 3,
+      "x0": 0.0101,
+      "y0": 0.3653,
+      "x1": 0.2626,
+      "y1": 0.4114,
+      "text": "Minocycline (Minocin)",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Rx/OTC",
+      "page": 3,
+      "x0": 0.2626,
+      "y0": 0.3653,
+      "x1": 0.3244,
+      "y1": 0.4114,
+      "text": "RX",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Pharmacological Class",
+      "page": 3,
+      "x0": 0.3244,
+      "y0": 0.3188,
+      "x1": 0.4909,
+      "y1": 0.458,
+      "text": "",
+      "merged": true,
+      "cont": false
+     },
+     {
+      "col": "Chemical Class",
+      "page": 3,
+      "x0": 0.4909,
+      "y0": 0.3188,
+      "x1": 0.6508,
+      "y1": 0.458,
+      "text": "Tetracyclines",
+      "merged": true,
+      "cont": false
+     },
+     {
+      "col": "Indication",
+      "page": 3,
+      "x0": 0.6508,
+      "y0": 0.3188,
+      "x1": 0.9893,
+      "y1": 0.7711,
+      "text": "Acne",
+      "merged": true,
+      "cont": false
+     }
+    ]
    }
   ],
   "doxycycline": [
@@ -372,7 +1911,64 @@ const CHART_BOXES = {
     "y0": 0.4114,
     "x1": 0.9893,
     "y1": 0.458,
-    "text": "Doxycycline (Vibramycin)"
+    "text": "Doxycycline (Vibramycin)",
+    "cells": [
+     {
+      "col": "Drug",
+      "page": 3,
+      "x0": 0.0101,
+      "y0": 0.4114,
+      "x1": 0.2626,
+      "y1": 0.458,
+      "text": "Doxycycline (Vibramycin)",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Rx/OTC",
+      "page": 3,
+      "x0": 0.2626,
+      "y0": 0.4114,
+      "x1": 0.3244,
+      "y1": 0.458,
+      "text": "RX",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Pharmacological Class",
+      "page": 3,
+      "x0": 0.3244,
+      "y0": 0.3188,
+      "x1": 0.4909,
+      "y1": 0.458,
+      "text": "",
+      "merged": true,
+      "cont": false
+     },
+     {
+      "col": "Chemical Class",
+      "page": 3,
+      "x0": 0.4909,
+      "y0": 0.3188,
+      "x1": 0.6508,
+      "y1": 0.458,
+      "text": "Tetracyclines",
+      "merged": true,
+      "cont": false
+     },
+     {
+      "col": "Indication",
+      "page": 3,
+      "x0": 0.6508,
+      "y0": 0.3188,
+      "x1": 0.9893,
+      "y1": 0.7711,
+      "text": "Acne",
+      "merged": true,
+      "cont": false
+     }
+    ]
    }
   ],
   "clindamycin": [
@@ -384,7 +1980,64 @@ const CHART_BOXES = {
     "y0": 0.458,
     "x1": 0.9893,
     "y1": 0.5045,
-    "text": "Clindamycin (Cleocin, Cleocin T, C/T/S)"
+    "text": "Clindamycin (Cleocin, Cleocin T, C/T/S)",
+    "cells": [
+     {
+      "col": "Drug",
+      "page": 3,
+      "x0": 0.0101,
+      "y0": 0.458,
+      "x1": 0.2626,
+      "y1": 0.5045,
+      "text": "Clindamycin (Cleocin, Cleocin T, C/T/S)",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Rx/OTC",
+      "page": 3,
+      "x0": 0.2626,
+      "y0": 0.458,
+      "x1": 0.3244,
+      "y1": 0.5045,
+      "text": "RX",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Pharmacological Class",
+      "page": 3,
+      "x0": 0.3244,
+      "y0": 0.458,
+      "x1": 0.4909,
+      "y1": 0.6088,
+      "text": "Antibiotics",
+      "merged": true,
+      "cont": false
+     },
+     {
+      "col": "Chemical Class",
+      "page": 3,
+      "x0": 0.4909,
+      "y0": 0.458,
+      "x1": 0.6508,
+      "y1": 0.5045,
+      "text": "Lincosamide",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Indication",
+      "page": 3,
+      "x0": 0.6508,
+      "y0": 0.3188,
+      "x1": 0.9893,
+      "y1": 0.7711,
+      "text": "Acne",
+      "merged": true,
+      "cont": false
+     }
+    ]
    }
   ],
   "erythromycin": [
@@ -396,7 +2049,64 @@ const CHART_BOXES = {
     "y0": 0.5045,
     "x1": 0.9893,
     "y1": 0.5623,
-    "text": "Erythromycin"
+    "text": "Erythromycin",
+    "cells": [
+     {
+      "col": "Drug",
+      "page": 3,
+      "x0": 0.0101,
+      "y0": 0.5045,
+      "x1": 0.2626,
+      "y1": 0.5623,
+      "text": "Erythromycin",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Rx/OTC",
+      "page": 3,
+      "x0": 0.2626,
+      "y0": 0.5045,
+      "x1": 0.3244,
+      "y1": 0.5623,
+      "text": "RX",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Pharmacological Class",
+      "page": 3,
+      "x0": 0.3244,
+      "y0": 0.458,
+      "x1": 0.4909,
+      "y1": 0.6088,
+      "text": "Antibiotics",
+      "merged": true,
+      "cont": false
+     },
+     {
+      "col": "Chemical Class",
+      "page": 3,
+      "x0": 0.4909,
+      "y0": 0.5045,
+      "x1": 0.6508,
+      "y1": 0.6088,
+      "text": "Macrolides",
+      "merged": true,
+      "cont": false
+     },
+     {
+      "col": "Indication",
+      "page": 3,
+      "x0": 0.6508,
+      "y0": 0.3188,
+      "x1": 0.9893,
+      "y1": 0.7711,
+      "text": "Acne",
+      "merged": true,
+      "cont": false
+     }
+    ]
    }
   ],
   "azithromycin": [
@@ -408,7 +2118,64 @@ const CHART_BOXES = {
     "y0": 0.5623,
     "x1": 0.9893,
     "y1": 0.6088,
-    "text": "Azithromycin"
+    "text": "Azithromycin",
+    "cells": [
+     {
+      "col": "Drug",
+      "page": 3,
+      "x0": 0.0101,
+      "y0": 0.5623,
+      "x1": 0.2626,
+      "y1": 0.6088,
+      "text": "Azithromycin",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Rx/OTC",
+      "page": 3,
+      "x0": 0.2626,
+      "y0": 0.5623,
+      "x1": 0.3244,
+      "y1": 0.6088,
+      "text": "RX",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Pharmacological Class",
+      "page": 3,
+      "x0": 0.3244,
+      "y0": 0.458,
+      "x1": 0.4909,
+      "y1": 0.6088,
+      "text": "Antibiotics",
+      "merged": true,
+      "cont": false
+     },
+     {
+      "col": "Chemical Class",
+      "page": 3,
+      "x0": 0.4909,
+      "y0": 0.5045,
+      "x1": 0.6508,
+      "y1": 0.6088,
+      "text": "Macrolides",
+      "merged": true,
+      "cont": false
+     },
+     {
+      "col": "Indication",
+      "page": 3,
+      "x0": 0.6508,
+      "y0": 0.3188,
+      "x1": 0.9893,
+      "y1": 0.7711,
+      "text": "Acne",
+      "merged": true,
+      "cont": false
+     }
+    ]
    }
   ],
   "tmpsmx": [
@@ -420,7 +2187,64 @@ const CHART_BOXES = {
     "y0": 0.6088,
     "x1": 0.9893,
     "y1": 0.674,
-    "text": "Trimetoprim/sulfamethoxazole (Bactrim DS)"
+    "text": "Trimetoprim/sulfamethoxazole (Bactrim DS)",
+    "cells": [
+     {
+      "col": "Drug",
+      "page": 3,
+      "x0": 0.0101,
+      "y0": 0.6088,
+      "x1": 0.2626,
+      "y1": 0.674,
+      "text": "Trimetoprim/sulfamethoxazole (Bactrim DS)",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Rx/OTC",
+      "page": 3,
+      "x0": 0.2626,
+      "y0": 0.6088,
+      "x1": 0.3244,
+      "y1": 0.674,
+      "text": "RX",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Pharmacological Class",
+      "page": 3,
+      "x0": 0.3244,
+      "y0": 0.6088,
+      "x1": 0.4909,
+      "y1": 0.674,
+      "text": "",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Chemical Class",
+      "page": 3,
+      "x0": 0.4909,
+      "y0": 0.6088,
+      "x1": 0.6508,
+      "y1": 0.674,
+      "text": "Sulfonamide/Pyrimidine",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Indication",
+      "page": 3,
+      "x0": 0.6508,
+      "y0": 0.3188,
+      "x1": 0.9893,
+      "y1": 0.7711,
+      "text": "Acne",
+      "merged": true,
+      "cont": false
+     }
+    ]
    }
   ],
   "dapsone": [
@@ -432,7 +2256,64 @@ const CHART_BOXES = {
     "y0": 0.674,
     "x1": 0.9893,
     "y1": 0.7205,
-    "text": "Dapsone (Aczone)"
+    "text": "Dapsone (Aczone)",
+    "cells": [
+     {
+      "col": "Drug",
+      "page": 3,
+      "x0": 0.0101,
+      "y0": 0.674,
+      "x1": 0.2626,
+      "y1": 0.7205,
+      "text": "Dapsone (Aczone)",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Rx/OTC",
+      "page": 3,
+      "x0": 0.2626,
+      "y0": 0.674,
+      "x1": 0.3244,
+      "y1": 0.7205,
+      "text": "RX",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Pharmacological Class",
+      "page": 3,
+      "x0": 0.3244,
+      "y0": 0.674,
+      "x1": 0.4909,
+      "y1": 0.7205,
+      "text": "",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Chemical Class",
+      "page": 3,
+      "x0": 0.4909,
+      "y0": 0.674,
+      "x1": 0.6508,
+      "y1": 0.7205,
+      "text": "Sulfone",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Indication",
+      "page": 3,
+      "x0": 0.6508,
+      "y0": 0.3188,
+      "x1": 0.9893,
+      "y1": 0.7711,
+      "text": "Acne",
+      "merged": true,
+      "cont": false
+     }
+    ]
    }
   ],
   "metronidazole": [
@@ -444,7 +2325,64 @@ const CHART_BOXES = {
     "y0": 0.7205,
     "x1": 0.9893,
     "y1": 0.7711,
-    "text": "Metronidazole (Flagyl, Metrogel)"
+    "text": "Metronidazole (Flagyl, Metrogel)",
+    "cells": [
+     {
+      "col": "Drug",
+      "page": 3,
+      "x0": 0.0101,
+      "y0": 0.7205,
+      "x1": 0.2626,
+      "y1": 0.7711,
+      "text": "Metronidazole (Flagyl, Metrogel)",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Rx/OTC",
+      "page": 3,
+      "x0": 0.2626,
+      "y0": 0.7205,
+      "x1": 0.3244,
+      "y1": 0.7711,
+      "text": "RX",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Pharmacological Class",
+      "page": 3,
+      "x0": 0.3244,
+      "y0": 0.7205,
+      "x1": 0.4909,
+      "y1": 0.7711,
+      "text": "",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Chemical Class",
+      "page": 3,
+      "x0": 0.4909,
+      "y0": 0.7205,
+      "x1": 0.6508,
+      "y1": 0.7711,
+      "text": "Nitroimidazole",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Indication",
+      "page": 3,
+      "x0": 0.6508,
+      "y0": 0.3188,
+      "x1": 0.9893,
+      "y1": 0.7711,
+      "text": "Acne",
+      "merged": true,
+      "cont": false
+     }
+    ]
    }
   ],
   "tretinoin": [
@@ -456,7 +2394,64 @@ const CHART_BOXES = {
     "y0": 0.7711,
     "x1": 0.9893,
     "y1": 0.8363,
-    "text": "Tretinoin (Retin-A, Renova, Avita, Retin-A Micro)"
+    "text": "Tretinoin (Retin-A, Renova, Avita, Retin-A Micro)",
+    "cells": [
+     {
+      "col": "Drug",
+      "page": 3,
+      "x0": 0.0101,
+      "y0": 0.7711,
+      "x1": 0.2626,
+      "y1": 0.8363,
+      "text": "Tretinoin (Retin-A, Renova, Avita, Retin-A Micro)",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Rx/OTC",
+      "page": 3,
+      "x0": 0.2626,
+      "y0": 0.7711,
+      "x1": 0.3244,
+      "y1": 0.8363,
+      "text": "RX",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Pharmacological Class",
+      "page": 3,
+      "x0": 0.3244,
+      "y0": 0.7711,
+      "x1": 0.4909,
+      "y1": 0.9294,
+      "text": "Nuclear Receptor Binders",
+      "merged": true,
+      "cont": false
+     },
+     {
+      "col": "Chemical Class",
+      "page": 3,
+      "x0": 0.4909,
+      "y0": 0.7711,
+      "x1": 0.6508,
+      "y1": 0.9294,
+      "text": "Retinoids",
+      "merged": true,
+      "cont": false
+     },
+     {
+      "col": "Indication",
+      "page": 3,
+      "x0": 0.6508,
+      "y0": 0.7711,
+      "x1": 0.9893,
+      "y1": 0.8828,
+      "text": "Acne",
+      "merged": true,
+      "cont": false
+     }
+    ]
    }
   ],
   "adapalene": [
@@ -468,7 +2463,64 @@ const CHART_BOXES = {
     "y0": 0.8363,
     "x1": 0.9893,
     "y1": 0.8828,
-    "text": "Adapalene (Differin)"
+    "text": "Adapalene (Differin)",
+    "cells": [
+     {
+      "col": "Drug",
+      "page": 3,
+      "x0": 0.0101,
+      "y0": 0.8363,
+      "x1": 0.2626,
+      "y1": 0.8828,
+      "text": "Adapalene (Differin)",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Rx/OTC",
+      "page": 3,
+      "x0": 0.2626,
+      "y0": 0.8363,
+      "x1": 0.3244,
+      "y1": 0.8828,
+      "text": "OTC/RX",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Pharmacological Class",
+      "page": 3,
+      "x0": 0.3244,
+      "y0": 0.7711,
+      "x1": 0.4909,
+      "y1": 0.9294,
+      "text": "Nuclear Receptor Binders",
+      "merged": true,
+      "cont": false
+     },
+     {
+      "col": "Chemical Class",
+      "page": 3,
+      "x0": 0.4909,
+      "y0": 0.7711,
+      "x1": 0.6508,
+      "y1": 0.9294,
+      "text": "Retinoids",
+      "merged": true,
+      "cont": false
+     },
+     {
+      "col": "Indication",
+      "page": 3,
+      "x0": 0.6508,
+      "y0": 0.7711,
+      "x1": 0.9893,
+      "y1": 0.8828,
+      "text": "Acne",
+      "merged": true,
+      "cont": false
+     }
+    ]
    }
   ],
   "isotretinoin": [
@@ -480,7 +2532,64 @@ const CHART_BOXES = {
     "y0": 0.8828,
     "x1": 0.9893,
     "y1": 0.9294,
-    "text": "Isotretinoin (Accutane)"
+    "text": "Isotretinoin (Accutane)",
+    "cells": [
+     {
+      "col": "Drug",
+      "page": 3,
+      "x0": 0.0101,
+      "y0": 0.8828,
+      "x1": 0.2626,
+      "y1": 0.9294,
+      "text": "Isotretinoin (Accutane)",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Rx/OTC",
+      "page": 3,
+      "x0": 0.2626,
+      "y0": 0.8828,
+      "x1": 0.3244,
+      "y1": 0.9294,
+      "text": "RX",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Pharmacological Class",
+      "page": 3,
+      "x0": 0.3244,
+      "y0": 0.7711,
+      "x1": 0.4909,
+      "y1": 0.9294,
+      "text": "Nuclear Receptor Binders",
+      "merged": true,
+      "cont": false
+     },
+     {
+      "col": "Chemical Class",
+      "page": 3,
+      "x0": 0.4909,
+      "y0": 0.7711,
+      "x1": 0.6508,
+      "y1": 0.9294,
+      "text": "Retinoids",
+      "merged": true,
+      "cont": false
+     },
+     {
+      "col": "Indication",
+      "page": 3,
+      "x0": 0.6508,
+      "y0": 0.8828,
+      "x1": 0.9893,
+      "y1": 0.9294,
+      "text": "Acne",
+      "merged": false,
+      "cont": false
+     }
+    ]
    }
   ],
   "spironolactone": [
@@ -492,7 +2601,64 @@ const CHART_BOXES = {
     "y0": 0.9294,
     "x1": 0.9893,
     "y1": 0.9761,
-    "text": "Spironolactone"
+    "text": "Spironolactone",
+    "cells": [
+     {
+      "col": "Drug",
+      "page": 3,
+      "x0": 0.0101,
+      "y0": 0.9294,
+      "x1": 0.2626,
+      "y1": 0.9761,
+      "text": "Spironolactone",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Rx/OTC",
+      "page": 3,
+      "x0": 0.2626,
+      "y0": 0.9294,
+      "x1": 0.3244,
+      "y1": 0.9761,
+      "text": "RX",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Pharmacological Class",
+      "page": 3,
+      "x0": 0.3244,
+      "y0": 0.9294,
+      "x1": 0.4909,
+      "y1": 0.9761,
+      "text": "Antiandrogen",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Chemical Class",
+      "page": 3,
+      "x0": 0.4909,
+      "y0": 0.9294,
+      "x1": 0.6508,
+      "y1": 0.9761,
+      "text": "Steroid",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Indication",
+      "page": 3,
+      "x0": 0.6508,
+      "y0": 0.9294,
+      "x1": 0.9893,
+      "y1": 0.9761,
+      "text": "Acne",
+      "merged": false,
+      "cont": false
+     }
+    ]
    }
   ],
   "coaltar": [
@@ -504,7 +2670,64 @@ const CHART_BOXES = {
     "y0": 0.1693,
     "x1": 0.9895,
     "y1": 0.2274,
-    "text": "Coal tar (Denorex, DHS Tar, Neutrogena-T/Gel, Tegrin)"
+    "text": "Coal tar (Denorex, DHS Tar, Neutrogena-T/Gel, Tegrin)",
+    "cells": [
+     {
+      "col": "Drug",
+      "page": 4,
+      "x0": 0.0099,
+      "y0": 0.1693,
+      "x1": 0.2167,
+      "y1": 0.2274,
+      "text": "Coal tar (Denorex, DHS Tar, Neutrogena-T/Gel, Tegrin)",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Rx/OTC",
+      "page": 4,
+      "x0": 0.2167,
+      "y0": 0.1693,
+      "x1": 0.2891,
+      "y1": 0.2274,
+      "text": "OTC",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Pharmacological Class",
+      "page": 4,
+      "x0": 0.2891,
+      "y0": 0.1693,
+      "x1": 0.4867,
+      "y1": 0.4702,
+      "text": "Cytotoxic agents",
+      "merged": true,
+      "cont": false
+     },
+     {
+      "col": "Chemical Class",
+      "page": 4,
+      "x0": 0.4867,
+      "y0": 0.1693,
+      "x1": 0.6974,
+      "y1": 0.4702,
+      "text": "Tars/Selenide/Zn/Anthrone",
+      "merged": true,
+      "cont": false
+     },
+     {
+      "col": "Indication",
+      "page": 4,
+      "x0": 0.6974,
+      "y0": 0.1693,
+      "x1": 0.9898,
+      "y1": 0.4702,
+      "text": "Psoriasis",
+      "merged": true,
+      "cont": false
+     }
+    ]
    }
   ],
   "shaletar": [
@@ -516,7 +2739,64 @@ const CHART_BOXES = {
     "y0": 0.2274,
     "x1": 0.9895,
     "y1": 0.3137,
-    "text": "Shale tar, Ichthammol (Boyol Salve, Drawing Out Salve, Black Salve)"
+    "text": "Shale tar, Ichthammol (Boyol Salve, Drawing Out Salve, Black Salve)",
+    "cells": [
+     {
+      "col": "Drug",
+      "page": 4,
+      "x0": 0.0099,
+      "y0": 0.2274,
+      "x1": 0.2167,
+      "y1": 0.3137,
+      "text": "Shale tar, Ichthammol (Boyol Salve, Drawing Out Salve, Black Salve)",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Rx/OTC",
+      "page": 4,
+      "x0": 0.2167,
+      "y0": 0.2274,
+      "x1": 0.2891,
+      "y1": 0.3137,
+      "text": "OTC",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Pharmacological Class",
+      "page": 4,
+      "x0": 0.2891,
+      "y0": 0.1693,
+      "x1": 0.4867,
+      "y1": 0.4702,
+      "text": "Cytotoxic agents",
+      "merged": true,
+      "cont": false
+     },
+     {
+      "col": "Chemical Class",
+      "page": 4,
+      "x0": 0.4867,
+      "y0": 0.1693,
+      "x1": 0.6974,
+      "y1": 0.4702,
+      "text": "Tars/Selenide/Zn/Anthrone",
+      "merged": true,
+      "cont": false
+     },
+     {
+      "col": "Indication",
+      "page": 4,
+      "x0": 0.6974,
+      "y0": 0.1693,
+      "x1": 0.9898,
+      "y1": 0.4702,
+      "text": "Psoriasis",
+      "merged": true,
+      "cont": false
+     }
+    ]
    }
   ],
   "selenium": [
@@ -528,7 +2808,64 @@ const CHART_BOXES = {
     "y0": 0.3137,
     "x1": 0.9895,
     "y1": 0.3712,
-    "text": "Selenium sulfide (Selsum Blue, Selseb)"
+    "text": "Selenium sulfide (Selsum Blue, Selseb)",
+    "cells": [
+     {
+      "col": "Drug",
+      "page": 4,
+      "x0": 0.0099,
+      "y0": 0.3137,
+      "x1": 0.2167,
+      "y1": 0.3712,
+      "text": "Selenium sulfide (Selsum Blue, Selseb)",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Rx/OTC",
+      "page": 4,
+      "x0": 0.2167,
+      "y0": 0.3137,
+      "x1": 0.2891,
+      "y1": 0.3712,
+      "text": "OTC",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Pharmacological Class",
+      "page": 4,
+      "x0": 0.2891,
+      "y0": 0.1693,
+      "x1": 0.4867,
+      "y1": 0.4702,
+      "text": "Cytotoxic agents",
+      "merged": true,
+      "cont": false
+     },
+     {
+      "col": "Chemical Class",
+      "page": 4,
+      "x0": 0.4867,
+      "y0": 0.1693,
+      "x1": 0.6974,
+      "y1": 0.4702,
+      "text": "Tars/Selenide/Zn/Anthrone",
+      "merged": true,
+      "cont": false
+     },
+     {
+      "col": "Indication",
+      "page": 4,
+      "x0": 0.6974,
+      "y0": 0.1693,
+      "x1": 0.9898,
+      "y1": 0.4702,
+      "text": "Psoriasis",
+      "merged": true,
+      "cont": false
+     }
+    ]
    }
   ],
   "zpt": [
@@ -540,7 +2877,64 @@ const CHART_BOXES = {
     "y0": 0.3712,
     "x1": 0.9895,
     "y1": 0.4124,
-    "text": "Zinc Pyrithione"
+    "text": "Zinc Pyrithione",
+    "cells": [
+     {
+      "col": "Drug",
+      "page": 4,
+      "x0": 0.0099,
+      "y0": 0.3712,
+      "x1": 0.2167,
+      "y1": 0.4124,
+      "text": "Zinc Pyrithione",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Rx/OTC",
+      "page": 4,
+      "x0": 0.2167,
+      "y0": 0.3712,
+      "x1": 0.2891,
+      "y1": 0.4124,
+      "text": "OTC",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Pharmacological Class",
+      "page": 4,
+      "x0": 0.2891,
+      "y0": 0.1693,
+      "x1": 0.4867,
+      "y1": 0.4702,
+      "text": "Cytotoxic agents",
+      "merged": true,
+      "cont": false
+     },
+     {
+      "col": "Chemical Class",
+      "page": 4,
+      "x0": 0.4867,
+      "y0": 0.1693,
+      "x1": 0.6974,
+      "y1": 0.4702,
+      "text": "Tars/Selenide/Zn/Anthrone",
+      "merged": true,
+      "cont": false
+     },
+     {
+      "col": "Indication",
+      "page": 4,
+      "x0": 0.6974,
+      "y0": 0.1693,
+      "x1": 0.9898,
+      "y1": 0.4702,
+      "text": "Psoriasis",
+      "merged": true,
+      "cont": false
+     }
+    ]
    }
   ],
   "anthralin": [
@@ -552,7 +2946,64 @@ const CHART_BOXES = {
     "y0": 0.4124,
     "x1": 0.9895,
     "y1": 0.4702,
-    "text": "Anthralin (Antra-Derm, Dithrocreme)"
+    "text": "Anthralin (Antra-Derm, Dithrocreme)",
+    "cells": [
+     {
+      "col": "Drug",
+      "page": 4,
+      "x0": 0.0099,
+      "y0": 0.4124,
+      "x1": 0.2167,
+      "y1": 0.4702,
+      "text": "Anthralin (Antra-Derm, Dithrocreme)",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Rx/OTC",
+      "page": 4,
+      "x0": 0.2167,
+      "y0": 0.4124,
+      "x1": 0.2891,
+      "y1": 0.4702,
+      "text": "RX",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Pharmacological Class",
+      "page": 4,
+      "x0": 0.2891,
+      "y0": 0.1693,
+      "x1": 0.4867,
+      "y1": 0.4702,
+      "text": "Cytotoxic agents",
+      "merged": true,
+      "cont": false
+     },
+     {
+      "col": "Chemical Class",
+      "page": 4,
+      "x0": 0.4867,
+      "y0": 0.1693,
+      "x1": 0.6974,
+      "y1": 0.4702,
+      "text": "Tars/Selenide/Zn/Anthrone",
+      "merged": true,
+      "cont": false
+     },
+     {
+      "col": "Indication",
+      "page": 4,
+      "x0": 0.6974,
+      "y0": 0.1693,
+      "x1": 0.9898,
+      "y1": 0.4702,
+      "text": "Psoriasis",
+      "merged": true,
+      "cont": false
+     }
+    ]
    }
   ],
   "methotrexate": [
@@ -564,7 +3015,75 @@ const CHART_BOXES = {
     "y0": 0.4702,
     "x1": 0.9895,
     "y1": 0.5283,
-    "text": "Methotrexate (MTX, Rheumatrex)"
+    "text": "Methotrexate (MTX, Rheumatrex)",
+    "cells": [
+     {
+      "col": "Drug",
+      "page": 4,
+      "x0": 0.0099,
+      "y0": 0.4702,
+      "x1": 0.2167,
+      "y1": 0.5283,
+      "text": "Methotrexate (MTX, Rheumatrex)",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Rx/OTC",
+      "page": 4,
+      "x0": 0.2167,
+      "y0": 0.4702,
+      "x1": 0.2891,
+      "y1": 0.5283,
+      "text": "RX",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Pharmacological Class",
+      "page": 4,
+      "x0": 0.2891,
+      "y0": 0.4702,
+      "x1": 0.4867,
+      "y1": 0.5283,
+      "text": "Dihydrofolate reductase inhibitor",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Chemical Class",
+      "page": 4,
+      "x0": 0.4867,
+      "y0": 0.4702,
+      "x1": 0.6974,
+      "y1": 0.5283,
+      "text": "Pteridine",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Indication",
+      "page": 4,
+      "x0": 0.6974,
+      "y0": 0.4702,
+      "x1": 0.9898,
+      "y1": 0.9789,
+      "text": "Psoriasis",
+      "merged": true,
+      "cont": false
+     },
+     {
+      "col": "Indication",
+      "page": 5,
+      "x0": 0.6974,
+      "y0": 0.0238,
+      "x1": 0.9898,
+      "y1": 0.453,
+      "text": "",
+      "merged": true,
+      "cont": true
+     }
+    ]
    }
   ],
   "abatacept": [
@@ -576,7 +3095,86 @@ const CHART_BOXES = {
     "y0": 0.5283,
     "x1": 0.9895,
     "y1": 0.6429,
-    "text": "Abatacept (Orencia)"
+    "text": "Abatacept (Orencia)",
+    "cells": [
+     {
+      "col": "Drug",
+      "page": 4,
+      "x0": 0.0099,
+      "y0": 0.5283,
+      "x1": 0.2167,
+      "y1": 0.6429,
+      "text": "Abatacept (Orencia)",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Rx/OTC",
+      "page": 4,
+      "x0": 0.2167,
+      "y0": 0.5283,
+      "x1": 0.2891,
+      "y1": 0.6429,
+      "text": "Rx",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Pharmacological Class",
+      "page": 4,
+      "x0": 0.2891,
+      "y0": 0.5283,
+      "x1": 0.4867,
+      "y1": 0.6429,
+      "text": "Inhibitor of co-stimulation",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Chemical Class",
+      "page": 4,
+      "x0": 0.4867,
+      "y0": 0.5283,
+      "x1": 0.6974,
+      "y1": 0.9789,
+      "text": "Peptides (Proteins)",
+      "merged": true,
+      "cont": false
+     },
+     {
+      "col": "Chemical Class",
+      "page": 5,
+      "x0": 0.4867,
+      "y0": 0.0238,
+      "x1": 0.6974,
+      "y1": 0.453,
+      "text": "",
+      "merged": true,
+      "cont": true
+     },
+     {
+      "col": "Indication",
+      "page": 4,
+      "x0": 0.6974,
+      "y0": 0.4702,
+      "x1": 0.9898,
+      "y1": 0.9789,
+      "text": "Psoriasis",
+      "merged": true,
+      "cont": false
+     },
+     {
+      "col": "Indication",
+      "page": 5,
+      "x0": 0.6974,
+      "y0": 0.0238,
+      "x1": 0.9898,
+      "y1": 0.453,
+      "text": "",
+      "merged": true,
+      "cont": true
+     }
+    ]
    }
   ],
   "etanercept": [
@@ -588,7 +3186,86 @@ const CHART_BOXES = {
     "y0": 0.6429,
     "x1": 0.9895,
     "y1": 0.6869,
-    "text": "Etanercept (Enbrel)"
+    "text": "Etanercept (Enbrel)",
+    "cells": [
+     {
+      "col": "Drug",
+      "page": 4,
+      "x0": 0.0099,
+      "y0": 0.6429,
+      "x1": 0.2167,
+      "y1": 0.6869,
+      "text": "Etanercept (Enbrel)",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Rx/OTC",
+      "page": 4,
+      "x0": 0.2167,
+      "y0": 0.6429,
+      "x1": 0.2891,
+      "y1": 0.6869,
+      "text": "Rx",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Pharmacological Class",
+      "page": 4,
+      "x0": 0.2891,
+      "y0": 0.6429,
+      "x1": 0.4867,
+      "y1": 0.6869,
+      "text": "TNF- inhibitors",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Chemical Class",
+      "page": 4,
+      "x0": 0.4867,
+      "y0": 0.5283,
+      "x1": 0.6974,
+      "y1": 0.9789,
+      "text": "Peptides (Proteins)",
+      "merged": true,
+      "cont": false
+     },
+     {
+      "col": "Chemical Class",
+      "page": 5,
+      "x0": 0.4867,
+      "y0": 0.0238,
+      "x1": 0.6974,
+      "y1": 0.453,
+      "text": "",
+      "merged": true,
+      "cont": true
+     },
+     {
+      "col": "Indication",
+      "page": 4,
+      "x0": 0.6974,
+      "y0": 0.4702,
+      "x1": 0.9898,
+      "y1": 0.9789,
+      "text": "Psoriasis",
+      "merged": true,
+      "cont": false
+     },
+     {
+      "col": "Indication",
+      "page": 5,
+      "x0": 0.6974,
+      "y0": 0.0238,
+      "x1": 0.9898,
+      "y1": 0.453,
+      "text": "",
+      "merged": true,
+      "cont": true
+     }
+    ]
    }
   ],
   "adalimumab": [
@@ -600,7 +3277,86 @@ const CHART_BOXES = {
     "y0": 0.6869,
     "x1": 0.9895,
     "y1": 0.7277,
-    "text": "Adalimumab (Humira)"
+    "text": "Adalimumab (Humira)",
+    "cells": [
+     {
+      "col": "Drug",
+      "page": 4,
+      "x0": 0.0099,
+      "y0": 0.6869,
+      "x1": 0.2167,
+      "y1": 0.7277,
+      "text": "Adalimumab (Humira)",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Rx/OTC",
+      "page": 4,
+      "x0": 0.2167,
+      "y0": 0.6869,
+      "x1": 0.2891,
+      "y1": 0.7277,
+      "text": "Rx",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Pharmacological Class",
+      "page": 4,
+      "x0": 0.2891,
+      "y0": 0.6869,
+      "x1": 0.4867,
+      "y1": 0.8514,
+      "text": "",
+      "merged": true,
+      "cont": false
+     },
+     {
+      "col": "Chemical Class",
+      "page": 4,
+      "x0": 0.4867,
+      "y0": 0.5283,
+      "x1": 0.6974,
+      "y1": 0.9789,
+      "text": "Peptides (Proteins)",
+      "merged": true,
+      "cont": false
+     },
+     {
+      "col": "Chemical Class",
+      "page": 5,
+      "x0": 0.4867,
+      "y0": 0.0238,
+      "x1": 0.6974,
+      "y1": 0.453,
+      "text": "",
+      "merged": true,
+      "cont": true
+     },
+     {
+      "col": "Indication",
+      "page": 4,
+      "x0": 0.6974,
+      "y0": 0.4702,
+      "x1": 0.9898,
+      "y1": 0.9789,
+      "text": "Psoriasis",
+      "merged": true,
+      "cont": false
+     },
+     {
+      "col": "Indication",
+      "page": 5,
+      "x0": 0.6974,
+      "y0": 0.0238,
+      "x1": 0.9898,
+      "y1": 0.453,
+      "text": "",
+      "merged": true,
+      "cont": true
+     }
+    ]
    }
   ],
   "infliximab": [
@@ -612,7 +3368,86 @@ const CHART_BOXES = {
     "y0": 0.7277,
     "x1": 0.9895,
     "y1": 0.7689,
-    "text": "Infliximab (Remicade)"
+    "text": "Infliximab (Remicade)",
+    "cells": [
+     {
+      "col": "Drug",
+      "page": 4,
+      "x0": 0.0099,
+      "y0": 0.7277,
+      "x1": 0.2167,
+      "y1": 0.7689,
+      "text": "Infliximab (Remicade)",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Rx/OTC",
+      "page": 4,
+      "x0": 0.2167,
+      "y0": 0.7277,
+      "x1": 0.2891,
+      "y1": 0.7689,
+      "text": "Rx",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Pharmacological Class",
+      "page": 4,
+      "x0": 0.2891,
+      "y0": 0.6869,
+      "x1": 0.4867,
+      "y1": 0.8514,
+      "text": "",
+      "merged": true,
+      "cont": false
+     },
+     {
+      "col": "Chemical Class",
+      "page": 4,
+      "x0": 0.4867,
+      "y0": 0.5283,
+      "x1": 0.6974,
+      "y1": 0.9789,
+      "text": "Peptides (Proteins)",
+      "merged": true,
+      "cont": false
+     },
+     {
+      "col": "Chemical Class",
+      "page": 5,
+      "x0": 0.4867,
+      "y0": 0.0238,
+      "x1": 0.6974,
+      "y1": 0.453,
+      "text": "",
+      "merged": true,
+      "cont": true
+     },
+     {
+      "col": "Indication",
+      "page": 4,
+      "x0": 0.6974,
+      "y0": 0.4702,
+      "x1": 0.9898,
+      "y1": 0.9789,
+      "text": "Psoriasis",
+      "merged": true,
+      "cont": false
+     },
+     {
+      "col": "Indication",
+      "page": 5,
+      "x0": 0.6974,
+      "y0": 0.0238,
+      "x1": 0.9898,
+      "y1": 0.453,
+      "text": "",
+      "merged": true,
+      "cont": true
+     }
+    ]
    }
   ],
   "golimumab": [
@@ -624,7 +3459,86 @@ const CHART_BOXES = {
     "y0": 0.7689,
     "x1": 0.9895,
     "y1": 0.8101,
-    "text": "Golimumab (Simponi)"
+    "text": "Golimumab (Simponi)",
+    "cells": [
+     {
+      "col": "Drug",
+      "page": 4,
+      "x0": 0.0099,
+      "y0": 0.7689,
+      "x1": 0.2167,
+      "y1": 0.8101,
+      "text": "Golimumab (Simponi)",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Rx/OTC",
+      "page": 4,
+      "x0": 0.2167,
+      "y0": 0.7689,
+      "x1": 0.2891,
+      "y1": 0.8101,
+      "text": "Rx",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Pharmacological Class",
+      "page": 4,
+      "x0": 0.2891,
+      "y0": 0.6869,
+      "x1": 0.4867,
+      "y1": 0.8514,
+      "text": "",
+      "merged": true,
+      "cont": false
+     },
+     {
+      "col": "Chemical Class",
+      "page": 4,
+      "x0": 0.4867,
+      "y0": 0.5283,
+      "x1": 0.6974,
+      "y1": 0.9789,
+      "text": "Peptides (Proteins)",
+      "merged": true,
+      "cont": false
+     },
+     {
+      "col": "Chemical Class",
+      "page": 5,
+      "x0": 0.4867,
+      "y0": 0.0238,
+      "x1": 0.6974,
+      "y1": 0.453,
+      "text": "",
+      "merged": true,
+      "cont": true
+     },
+     {
+      "col": "Indication",
+      "page": 4,
+      "x0": 0.6974,
+      "y0": 0.4702,
+      "x1": 0.9898,
+      "y1": 0.9789,
+      "text": "Psoriasis",
+      "merged": true,
+      "cont": false
+     },
+     {
+      "col": "Indication",
+      "page": 5,
+      "x0": 0.6974,
+      "y0": 0.0238,
+      "x1": 0.9898,
+      "y1": 0.453,
+      "text": "",
+      "merged": true,
+      "cont": true
+     }
+    ]
    }
   ],
   "certolizumab": [
@@ -636,7 +3550,86 @@ const CHART_BOXES = {
     "y0": 0.8101,
     "x1": 0.9895,
     "y1": 0.8514,
-    "text": "Certolizumab pegol (Cimzia)"
+    "text": "Certolizumab pegol (Cimzia)",
+    "cells": [
+     {
+      "col": "Drug",
+      "page": 4,
+      "x0": 0.0099,
+      "y0": 0.8101,
+      "x1": 0.2167,
+      "y1": 0.8514,
+      "text": "Certolizumab pegol (Cimzia)",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Rx/OTC",
+      "page": 4,
+      "x0": 0.2167,
+      "y0": 0.8101,
+      "x1": 0.2891,
+      "y1": 0.8514,
+      "text": "Rx",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Pharmacological Class",
+      "page": 4,
+      "x0": 0.2891,
+      "y0": 0.6869,
+      "x1": 0.4867,
+      "y1": 0.8514,
+      "text": "",
+      "merged": true,
+      "cont": false
+     },
+     {
+      "col": "Chemical Class",
+      "page": 4,
+      "x0": 0.4867,
+      "y0": 0.5283,
+      "x1": 0.6974,
+      "y1": 0.9789,
+      "text": "Peptides (Proteins)",
+      "merged": true,
+      "cont": false
+     },
+     {
+      "col": "Chemical Class",
+      "page": 5,
+      "x0": 0.4867,
+      "y0": 0.0238,
+      "x1": 0.6974,
+      "y1": 0.453,
+      "text": "",
+      "merged": true,
+      "cont": true
+     },
+     {
+      "col": "Indication",
+      "page": 4,
+      "x0": 0.6974,
+      "y0": 0.4702,
+      "x1": 0.9898,
+      "y1": 0.9789,
+      "text": "Psoriasis",
+      "merged": true,
+      "cont": false
+     },
+     {
+      "col": "Indication",
+      "page": 5,
+      "x0": 0.6974,
+      "y0": 0.0238,
+      "x1": 0.9898,
+      "y1": 0.453,
+      "text": "",
+      "merged": true,
+      "cont": true
+     }
+    ]
    }
   ],
   "tofacitinib": [
@@ -648,7 +3641,86 @@ const CHART_BOXES = {
     "y0": 0.8514,
     "x1": 0.9895,
     "y1": 0.8926,
-    "text": "Tofacitinib (Xeljanz)"
+    "text": "Tofacitinib (Xeljanz)",
+    "cells": [
+     {
+      "col": "Drug",
+      "page": 4,
+      "x0": 0.0099,
+      "y0": 0.8514,
+      "x1": 0.2167,
+      "y1": 0.8926,
+      "text": "Tofacitinib (Xeljanz)",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Rx/OTC",
+      "page": 4,
+      "x0": 0.2167,
+      "y0": 0.8514,
+      "x1": 0.2891,
+      "y1": 0.8926,
+      "text": "Rx",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Pharmacological Class",
+      "page": 4,
+      "x0": 0.2891,
+      "y0": 0.8514,
+      "x1": 0.4867,
+      "y1": 0.8926,
+      "text": "Janus kinase (JAK) inhibitor",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Chemical Class",
+      "page": 4,
+      "x0": 0.4867,
+      "y0": 0.5283,
+      "x1": 0.6974,
+      "y1": 0.9789,
+      "text": "Peptides (Proteins)",
+      "merged": true,
+      "cont": false
+     },
+     {
+      "col": "Chemical Class",
+      "page": 5,
+      "x0": 0.4867,
+      "y0": 0.0238,
+      "x1": 0.6974,
+      "y1": 0.453,
+      "text": "",
+      "merged": true,
+      "cont": true
+     },
+     {
+      "col": "Indication",
+      "page": 4,
+      "x0": 0.6974,
+      "y0": 0.4702,
+      "x1": 0.9898,
+      "y1": 0.9789,
+      "text": "Psoriasis",
+      "merged": true,
+      "cont": false
+     },
+     {
+      "col": "Indication",
+      "page": 5,
+      "x0": 0.6974,
+      "y0": 0.0238,
+      "x1": 0.9898,
+      "y1": 0.453,
+      "text": "",
+      "merged": true,
+      "cont": true
+     }
+    ]
    }
   ],
   "ustekinumab": [
@@ -660,7 +3732,86 @@ const CHART_BOXES = {
     "y0": 0.8926,
     "x1": 0.9895,
     "y1": 0.9789,
-    "text": "Ustekinumab (Stelara)"
+    "text": "Ustekinumab (Stelara)",
+    "cells": [
+     {
+      "col": "Drug",
+      "page": 4,
+      "x0": 0.0099,
+      "y0": 0.8926,
+      "x1": 0.2167,
+      "y1": 0.9789,
+      "text": "Ustekinumab (Stelara)",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Rx/OTC",
+      "page": 4,
+      "x0": 0.2167,
+      "y0": 0.8926,
+      "x1": 0.2891,
+      "y1": 0.9789,
+      "text": "Rx",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Pharmacological Class",
+      "page": 4,
+      "x0": 0.2891,
+      "y0": 0.8926,
+      "x1": 0.4867,
+      "y1": 0.9789,
+      "text": "IL-12 & IL-23 Cytokine inhibitor",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Chemical Class",
+      "page": 4,
+      "x0": 0.4867,
+      "y0": 0.5283,
+      "x1": 0.6974,
+      "y1": 0.9789,
+      "text": "Peptides (Proteins)",
+      "merged": true,
+      "cont": false
+     },
+     {
+      "col": "Chemical Class",
+      "page": 5,
+      "x0": 0.4867,
+      "y0": 0.0238,
+      "x1": 0.6974,
+      "y1": 0.453,
+      "text": "",
+      "merged": true,
+      "cont": true
+     },
+     {
+      "col": "Indication",
+      "page": 4,
+      "x0": 0.6974,
+      "y0": 0.4702,
+      "x1": 0.9898,
+      "y1": 0.9789,
+      "text": "Psoriasis",
+      "merged": true,
+      "cont": false
+     },
+     {
+      "col": "Indication",
+      "page": 5,
+      "x0": 0.6974,
+      "y0": 0.0238,
+      "x1": 0.9898,
+      "y1": 0.453,
+      "text": "",
+      "merged": true,
+      "cont": true
+     }
+    ]
    }
   ],
   "guselkumab": [
@@ -672,7 +3823,86 @@ const CHART_BOXES = {
     "y0": 0.0238,
     "x1": 0.9895,
     "y1": 0.0993,
-    "text": "Guselkumab (Tremfya)"
+    "text": "Guselkumab (Tremfya)",
+    "cells": [
+     {
+      "col": "Drug",
+      "page": 5,
+      "x0": 0.0099,
+      "y0": 0.0238,
+      "x1": 0.2167,
+      "y1": 0.0993,
+      "text": "Guselkumab (Tremfya)",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Rx/OTC",
+      "page": 5,
+      "x0": 0.2167,
+      "y0": 0.0238,
+      "x1": 0.2891,
+      "y1": 0.0993,
+      "text": "Rx",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Pharmacological Class",
+      "page": 5,
+      "x0": 0.2891,
+      "y0": 0.0238,
+      "x1": 0.4867,
+      "y1": 0.2157,
+      "text": "IL-23 Cytokine inhibitor",
+      "merged": true,
+      "cont": false
+     },
+     {
+      "col": "Chemical Class",
+      "page": 5,
+      "x0": 0.4867,
+      "y0": 0.0238,
+      "x1": 0.6974,
+      "y1": 0.453,
+      "text": "",
+      "merged": true,
+      "cont": false
+     },
+     {
+      "col": "Chemical Class",
+      "page": 4,
+      "x0": 0.4867,
+      "y0": 0.5283,
+      "x1": 0.6974,
+      "y1": 0.9789,
+      "text": "Peptides (Proteins)",
+      "merged": true,
+      "cont": true
+     },
+     {
+      "col": "Indication",
+      "page": 5,
+      "x0": 0.6974,
+      "y0": 0.0238,
+      "x1": 0.9898,
+      "y1": 0.453,
+      "text": "",
+      "merged": true,
+      "cont": false
+     },
+     {
+      "col": "Indication",
+      "page": 4,
+      "x0": 0.6974,
+      "y0": 0.4702,
+      "x1": 0.9898,
+      "y1": 0.9789,
+      "text": "Psoriasis",
+      "merged": true,
+      "cont": true
+     }
+    ]
    }
   ],
   "tildrakizumab": [
@@ -684,7 +3914,86 @@ const CHART_BOXES = {
     "y0": 0.0993,
     "x1": 0.9895,
     "y1": 0.1575,
-    "text": "Tildrakizumab-asmn (Ilumya)"
+    "text": "Tildrakizumab-asmn (Ilumya)",
+    "cells": [
+     {
+      "col": "Drug",
+      "page": 5,
+      "x0": 0.0099,
+      "y0": 0.0993,
+      "x1": 0.2167,
+      "y1": 0.1575,
+      "text": "Tildrakizumab-asmn (Ilumya)",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Rx/OTC",
+      "page": 5,
+      "x0": 0.2167,
+      "y0": 0.0993,
+      "x1": 0.2891,
+      "y1": 0.1575,
+      "text": "Rx",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Pharmacological Class",
+      "page": 5,
+      "x0": 0.2891,
+      "y0": 0.0238,
+      "x1": 0.4867,
+      "y1": 0.2157,
+      "text": "IL-23 Cytokine inhibitor",
+      "merged": true,
+      "cont": false
+     },
+     {
+      "col": "Chemical Class",
+      "page": 5,
+      "x0": 0.4867,
+      "y0": 0.0238,
+      "x1": 0.6974,
+      "y1": 0.453,
+      "text": "",
+      "merged": true,
+      "cont": false
+     },
+     {
+      "col": "Chemical Class",
+      "page": 4,
+      "x0": 0.4867,
+      "y0": 0.5283,
+      "x1": 0.6974,
+      "y1": 0.9789,
+      "text": "Peptides (Proteins)",
+      "merged": true,
+      "cont": true
+     },
+     {
+      "col": "Indication",
+      "page": 5,
+      "x0": 0.6974,
+      "y0": 0.0238,
+      "x1": 0.9898,
+      "y1": 0.453,
+      "text": "",
+      "merged": true,
+      "cont": false
+     },
+     {
+      "col": "Indication",
+      "page": 4,
+      "x0": 0.6974,
+      "y0": 0.4702,
+      "x1": 0.9898,
+      "y1": 0.9789,
+      "text": "Psoriasis",
+      "merged": true,
+      "cont": true
+     }
+    ]
    }
   ],
   "risankizumab": [
@@ -696,7 +4005,86 @@ const CHART_BOXES = {
     "y0": 0.1575,
     "x1": 0.9895,
     "y1": 0.2157,
-    "text": "Risankizumab (Skyrizi)"
+    "text": "Risankizumab (Skyrizi)",
+    "cells": [
+     {
+      "col": "Drug",
+      "page": 5,
+      "x0": 0.0099,
+      "y0": 0.1575,
+      "x1": 0.2167,
+      "y1": 0.2157,
+      "text": "Risankizumab (Skyrizi)",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Rx/OTC",
+      "page": 5,
+      "x0": 0.2167,
+      "y0": 0.1575,
+      "x1": 0.2891,
+      "y1": 0.2157,
+      "text": "Rx",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Pharmacological Class",
+      "page": 5,
+      "x0": 0.2891,
+      "y0": 0.0238,
+      "x1": 0.4867,
+      "y1": 0.2157,
+      "text": "IL-23 Cytokine inhibitor",
+      "merged": true,
+      "cont": false
+     },
+     {
+      "col": "Chemical Class",
+      "page": 5,
+      "x0": 0.4867,
+      "y0": 0.0238,
+      "x1": 0.6974,
+      "y1": 0.453,
+      "text": "",
+      "merged": true,
+      "cont": false
+     },
+     {
+      "col": "Chemical Class",
+      "page": 4,
+      "x0": 0.4867,
+      "y0": 0.5283,
+      "x1": 0.6974,
+      "y1": 0.9789,
+      "text": "Peptides (Proteins)",
+      "merged": true,
+      "cont": true
+     },
+     {
+      "col": "Indication",
+      "page": 5,
+      "x0": 0.6974,
+      "y0": 0.0238,
+      "x1": 0.9898,
+      "y1": 0.453,
+      "text": "",
+      "merged": true,
+      "cont": false
+     },
+     {
+      "col": "Indication",
+      "page": 4,
+      "x0": 0.6974,
+      "y0": 0.4702,
+      "x1": 0.9898,
+      "y1": 0.9789,
+      "text": "Psoriasis",
+      "merged": true,
+      "cont": true
+     }
+    ]
    }
   ],
   "secukinumab": [
@@ -708,7 +4096,86 @@ const CHART_BOXES = {
     "y0": 0.2157,
     "x1": 0.9895,
     "y1": 0.2784,
-    "text": "Secukinumab (Consentyx)"
+    "text": "Secukinumab (Consentyx)",
+    "cells": [
+     {
+      "col": "Drug",
+      "page": 5,
+      "x0": 0.0099,
+      "y0": 0.2157,
+      "x1": 0.2167,
+      "y1": 0.2784,
+      "text": "Secukinumab (Consentyx)",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Rx/OTC",
+      "page": 5,
+      "x0": 0.2167,
+      "y0": 0.2157,
+      "x1": 0.2891,
+      "y1": 0.2784,
+      "text": "Rx",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Pharmacological Class",
+      "page": 5,
+      "x0": 0.2891,
+      "y0": 0.2157,
+      "x1": 0.4867,
+      "y1": 0.3948,
+      "text": "IL-17A Inhibitor",
+      "merged": true,
+      "cont": false
+     },
+     {
+      "col": "Chemical Class",
+      "page": 5,
+      "x0": 0.4867,
+      "y0": 0.0238,
+      "x1": 0.6974,
+      "y1": 0.453,
+      "text": "",
+      "merged": true,
+      "cont": false
+     },
+     {
+      "col": "Chemical Class",
+      "page": 4,
+      "x0": 0.4867,
+      "y0": 0.5283,
+      "x1": 0.6974,
+      "y1": 0.9789,
+      "text": "Peptides (Proteins)",
+      "merged": true,
+      "cont": true
+     },
+     {
+      "col": "Indication",
+      "page": 5,
+      "x0": 0.6974,
+      "y0": 0.0238,
+      "x1": 0.9898,
+      "y1": 0.453,
+      "text": "",
+      "merged": true,
+      "cont": false
+     },
+     {
+      "col": "Indication",
+      "page": 4,
+      "x0": 0.6974,
+      "y0": 0.4702,
+      "x1": 0.9898,
+      "y1": 0.9789,
+      "text": "Psoriasis",
+      "merged": true,
+      "cont": true
+     }
+    ]
    }
   ],
   "brodalumab": [
@@ -720,7 +4187,86 @@ const CHART_BOXES = {
     "y0": 0.2784,
     "x1": 0.9895,
     "y1": 0.3366,
-    "text": "Brodalumab (Siliq)"
+    "text": "Brodalumab (Siliq)",
+    "cells": [
+     {
+      "col": "Drug",
+      "page": 5,
+      "x0": 0.0099,
+      "y0": 0.2784,
+      "x1": 0.2167,
+      "y1": 0.3366,
+      "text": "Brodalumab (Siliq)",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Rx/OTC",
+      "page": 5,
+      "x0": 0.2167,
+      "y0": 0.2784,
+      "x1": 0.2891,
+      "y1": 0.3366,
+      "text": "Rx",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Pharmacological Class",
+      "page": 5,
+      "x0": 0.2891,
+      "y0": 0.2157,
+      "x1": 0.4867,
+      "y1": 0.3948,
+      "text": "IL-17A Inhibitor",
+      "merged": true,
+      "cont": false
+     },
+     {
+      "col": "Chemical Class",
+      "page": 5,
+      "x0": 0.4867,
+      "y0": 0.0238,
+      "x1": 0.6974,
+      "y1": 0.453,
+      "text": "",
+      "merged": true,
+      "cont": false
+     },
+     {
+      "col": "Chemical Class",
+      "page": 4,
+      "x0": 0.4867,
+      "y0": 0.5283,
+      "x1": 0.6974,
+      "y1": 0.9789,
+      "text": "Peptides (Proteins)",
+      "merged": true,
+      "cont": true
+     },
+     {
+      "col": "Indication",
+      "page": 5,
+      "x0": 0.6974,
+      "y0": 0.0238,
+      "x1": 0.9898,
+      "y1": 0.453,
+      "text": "",
+      "merged": true,
+      "cont": false
+     },
+     {
+      "col": "Indication",
+      "page": 4,
+      "x0": 0.6974,
+      "y0": 0.4702,
+      "x1": 0.9898,
+      "y1": 0.9789,
+      "text": "Psoriasis",
+      "merged": true,
+      "cont": true
+     }
+    ]
    }
   ],
   "ixekizumab": [
@@ -732,7 +4278,86 @@ const CHART_BOXES = {
     "y0": 0.3366,
     "x1": 0.9895,
     "y1": 0.3948,
-    "text": "Ixekizumab (Taltz)"
+    "text": "Ixekizumab (Taltz)",
+    "cells": [
+     {
+      "col": "Drug",
+      "page": 5,
+      "x0": 0.0099,
+      "y0": 0.3366,
+      "x1": 0.2167,
+      "y1": 0.3948,
+      "text": "Ixekizumab (Taltz)",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Rx/OTC",
+      "page": 5,
+      "x0": 0.2167,
+      "y0": 0.3366,
+      "x1": 0.2891,
+      "y1": 0.3948,
+      "text": "Rx",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Pharmacological Class",
+      "page": 5,
+      "x0": 0.2891,
+      "y0": 0.2157,
+      "x1": 0.4867,
+      "y1": 0.3948,
+      "text": "IL-17A Inhibitor",
+      "merged": true,
+      "cont": false
+     },
+     {
+      "col": "Chemical Class",
+      "page": 5,
+      "x0": 0.4867,
+      "y0": 0.0238,
+      "x1": 0.6974,
+      "y1": 0.453,
+      "text": "",
+      "merged": true,
+      "cont": false
+     },
+     {
+      "col": "Chemical Class",
+      "page": 4,
+      "x0": 0.4867,
+      "y0": 0.5283,
+      "x1": 0.6974,
+      "y1": 0.9789,
+      "text": "Peptides (Proteins)",
+      "merged": true,
+      "cont": true
+     },
+     {
+      "col": "Indication",
+      "page": 5,
+      "x0": 0.6974,
+      "y0": 0.0238,
+      "x1": 0.9898,
+      "y1": 0.453,
+      "text": "",
+      "merged": true,
+      "cont": false
+     },
+     {
+      "col": "Indication",
+      "page": 4,
+      "x0": 0.6974,
+      "y0": 0.4702,
+      "x1": 0.9898,
+      "y1": 0.9789,
+      "text": "Psoriasis",
+      "merged": true,
+      "cont": true
+     }
+    ]
    }
   ],
   "acitretin": [
@@ -744,7 +4369,86 @@ const CHART_BOXES = {
     "y0": 0.3948,
     "x1": 0.9895,
     "y1": 0.453,
-    "text": "Acitretin (Soriatane)"
+    "text": "Acitretin (Soriatane)",
+    "cells": [
+     {
+      "col": "Drug",
+      "page": 5,
+      "x0": 0.0099,
+      "y0": 0.3948,
+      "x1": 0.2167,
+      "y1": 0.453,
+      "text": "Acitretin (Soriatane)",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Rx/OTC",
+      "page": 5,
+      "x0": 0.2167,
+      "y0": 0.3948,
+      "x1": 0.2891,
+      "y1": 0.453,
+      "text": "Rx",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Pharmacological Class",
+      "page": 5,
+      "x0": 0.2891,
+      "y0": 0.3948,
+      "x1": 0.4867,
+      "y1": 0.5747,
+      "text": "Nuclear receptor binders",
+      "merged": true,
+      "cont": false
+     },
+     {
+      "col": "Chemical Class",
+      "page": 5,
+      "x0": 0.4867,
+      "y0": 0.0238,
+      "x1": 0.6974,
+      "y1": 0.453,
+      "text": "",
+      "merged": true,
+      "cont": false
+     },
+     {
+      "col": "Chemical Class",
+      "page": 4,
+      "x0": 0.4867,
+      "y0": 0.5283,
+      "x1": 0.6974,
+      "y1": 0.9789,
+      "text": "Peptides (Proteins)",
+      "merged": true,
+      "cont": true
+     },
+     {
+      "col": "Indication",
+      "page": 5,
+      "x0": 0.6974,
+      "y0": 0.0238,
+      "x1": 0.9898,
+      "y1": 0.453,
+      "text": "",
+      "merged": true,
+      "cont": false
+     },
+     {
+      "col": "Indication",
+      "page": 4,
+      "x0": 0.6974,
+      "y0": 0.4702,
+      "x1": 0.9898,
+      "y1": 0.9789,
+      "text": "Psoriasis",
+      "merged": true,
+      "cont": true
+     }
+    ]
    }
   ],
   "tazarotene": [
@@ -756,7 +4460,64 @@ const CHART_BOXES = {
     "y0": 0.453,
     "x1": 0.9895,
     "y1": 0.5105,
-    "text": "Tazarotene (Tazorac)"
+    "text": "Tazarotene (Tazorac)",
+    "cells": [
+     {
+      "col": "Drug",
+      "page": 5,
+      "x0": 0.0099,
+      "y0": 0.453,
+      "x1": 0.2167,
+      "y1": 0.5105,
+      "text": "Tazarotene (Tazorac)",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Rx/OTC",
+      "page": 5,
+      "x0": 0.2167,
+      "y0": 0.453,
+      "x1": 0.2891,
+      "y1": 0.5105,
+      "text": "Rx",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Pharmacological Class",
+      "page": 5,
+      "x0": 0.2891,
+      "y0": 0.3948,
+      "x1": 0.4867,
+      "y1": 0.5747,
+      "text": "Nuclear receptor binders",
+      "merged": true,
+      "cont": false
+     },
+     {
+      "col": "Chemical Class",
+      "page": 5,
+      "x0": 0.4867,
+      "y0": 0.453,
+      "x1": 0.6974,
+      "y1": 0.5105,
+      "text": "Retinoid",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Indication",
+      "page": 5,
+      "x0": 0.6974,
+      "y0": 0.453,
+      "x1": 0.9898,
+      "y1": 0.5747,
+      "text": "Psoriasis Acne/wrinkles OTC -topical",
+      "merged": true,
+      "cont": false
+     }
+    ]
    }
   ],
   "calcipotriene": [
@@ -768,7 +4529,64 @@ const CHART_BOXES = {
     "y0": 0.5105,
     "x1": 0.9895,
     "y1": 0.5747,
-    "text": "Calcipotriene (Dovonex)"
+    "text": "Calcipotriene (Dovonex)",
+    "cells": [
+     {
+      "col": "Drug",
+      "page": 5,
+      "x0": 0.0099,
+      "y0": 0.5105,
+      "x1": 0.2167,
+      "y1": 0.5747,
+      "text": "Calcipotriene (Dovonex)",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Rx/OTC",
+      "page": 5,
+      "x0": 0.2167,
+      "y0": 0.5105,
+      "x1": 0.2891,
+      "y1": 0.5747,
+      "text": "RX",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Pharmacological Class",
+      "page": 5,
+      "x0": 0.2891,
+      "y0": 0.3948,
+      "x1": 0.4867,
+      "y1": 0.5747,
+      "text": "Nuclear receptor binders",
+      "merged": true,
+      "cont": false
+     },
+     {
+      "col": "Chemical Class",
+      "page": 5,
+      "x0": 0.4867,
+      "y0": 0.5105,
+      "x1": 0.6974,
+      "y1": 0.5747,
+      "text": "Vitamin D Derivative",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Indication",
+      "page": 5,
+      "x0": 0.6974,
+      "y0": 0.453,
+      "x1": 0.9898,
+      "y1": 0.5747,
+      "text": "Psoriasis Acne/wrinkles OTC -topical",
+      "merged": true,
+      "cont": false
+     }
+    ]
    }
   ],
   "methoxsalen": [
@@ -780,7 +4598,64 @@ const CHART_BOXES = {
     "y0": 0.5747,
     "x1": 0.9895,
     "y1": 0.6562,
-    "text": "Methoxsalen (Oxsoralen-Ultra, Uvadex)"
+    "text": "Methoxsalen (Oxsoralen-Ultra, Uvadex)",
+    "cells": [
+     {
+      "col": "Drug",
+      "page": 5,
+      "x0": 0.0099,
+      "y0": 0.5747,
+      "x1": 0.2167,
+      "y1": 0.6562,
+      "text": "Methoxsalen (Oxsoralen-Ultra, Uvadex)",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Rx/OTC",
+      "page": 5,
+      "x0": 0.2167,
+      "y0": 0.5747,
+      "x1": 0.2891,
+      "y1": 0.6562,
+      "text": "RX",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Pharmacological Class",
+      "page": 5,
+      "x0": 0.2891,
+      "y0": 0.5747,
+      "x1": 0.4867,
+      "y1": 0.6562,
+      "text": "Psoralen",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Chemical Class",
+      "page": 5,
+      "x0": 0.4867,
+      "y0": 0.5747,
+      "x1": 0.6974,
+      "y1": 0.6562,
+      "text": "Vitamin D analog",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Indication",
+      "page": 5,
+      "x0": 0.6974,
+      "y0": 0.5747,
+      "x1": 0.9898,
+      "y1": 0.6562,
+      "text": "Psoriasis",
+      "merged": false,
+      "cont": false
+     }
+    ]
    }
   ],
   "cyclosporine": [
@@ -792,7 +4667,64 @@ const CHART_BOXES = {
     "y0": 0.6562,
     "x1": 0.9895,
     "y1": 0.7383,
-    "text": "Cyclosporine (Neoral, Sandimmune)"
+    "text": "Cyclosporine (Neoral, Sandimmune)",
+    "cells": [
+     {
+      "col": "Drug",
+      "page": 5,
+      "x0": 0.0099,
+      "y0": 0.6562,
+      "x1": 0.2167,
+      "y1": 0.7383,
+      "text": "Cyclosporine (Neoral, Sandimmune)",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Rx/OTC",
+      "page": 5,
+      "x0": 0.2167,
+      "y0": 0.6562,
+      "x1": 0.2891,
+      "y1": 0.7383,
+      "text": "RX",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Pharmacological Class",
+      "page": 5,
+      "x0": 0.2891,
+      "y0": 0.6562,
+      "x1": 0.4867,
+      "y1": 0.7383,
+      "text": "Calcineurin inhibitor",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Chemical Class",
+      "page": 5,
+      "x0": 0.4867,
+      "y0": 0.6562,
+      "x1": 0.6974,
+      "y1": 0.7383,
+      "text": "Furanocoumarin",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Indication",
+      "page": 5,
+      "x0": 0.6974,
+      "y0": 0.6562,
+      "x1": 0.9898,
+      "y1": 0.7383,
+      "text": "Psoriasis",
+      "merged": false,
+      "cont": false
+     }
+    ]
    }
   ],
   "petrolatum": [
@@ -804,7 +4736,64 @@ const CHART_BOXES = {
     "y0": 0.7383,
     "x1": 0.9895,
     "y1": 0.7956,
-    "text": "Petrolatum (Vasoline)"
+    "text": "Petrolatum (Vasoline)",
+    "cells": [
+     {
+      "col": "Drug",
+      "page": 5,
+      "x0": 0.0099,
+      "y0": 0.7383,
+      "x1": 0.2167,
+      "y1": 0.7956,
+      "text": "Petrolatum (Vasoline)",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Rx/OTC",
+      "page": 5,
+      "x0": 0.2167,
+      "y0": 0.7383,
+      "x1": 0.2891,
+      "y1": 0.7956,
+      "text": "OTC",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Pharmacological Class",
+      "page": 5,
+      "x0": 0.2891,
+      "y0": 0.7383,
+      "x1": 0.4867,
+      "y1": 0.7956,
+      "text": "Emollient",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Chemical Class",
+      "page": 5,
+      "x0": 0.4867,
+      "y0": 0.7383,
+      "x1": 0.6974,
+      "y1": 0.7956,
+      "text": "Macrolactam",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Indication",
+      "page": 5,
+      "x0": 0.6974,
+      "y0": 0.7383,
+      "x1": 0.9898,
+      "y1": 0.7956,
+      "text": "Systemic - Psoriasis",
+      "merged": false,
+      "cont": false
+     }
+    ]
    }
   ],
   "ketoconazole": [
@@ -816,7 +4805,64 @@ const CHART_BOXES = {
     "y0": 0.8538,
     "x1": 0.9895,
     "y1": 0.912,
-    "text": "Ketoconazole (Nizoral)"
+    "text": "Ketoconazole (Nizoral)",
+    "cells": [
+     {
+      "col": "Drug",
+      "page": 5,
+      "x0": 0.0099,
+      "y0": 0.8538,
+      "x1": 0.2167,
+      "y1": 0.912,
+      "text": "Ketoconazole (Nizoral)",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Rx/OTC",
+      "page": 5,
+      "x0": 0.2167,
+      "y0": 0.8538,
+      "x1": 0.2891,
+      "y1": 0.912,
+      "text": "RX",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Pharmacological Class",
+      "page": 5,
+      "x0": 0.2891,
+      "y0": 0.8538,
+      "x1": 0.4867,
+      "y1": 0.912,
+      "text": "Azole antifungal",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Chemical Class",
+      "page": 5,
+      "x0": 0.4867,
+      "y0": 0.8538,
+      "x1": 0.6974,
+      "y1": 0.912,
+      "text": "Oxide",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Indication",
+      "page": 5,
+      "x0": 0.6974,
+      "y0": 0.8538,
+      "x1": 0.9898,
+      "y1": 0.912,
+      "text": "Topical - Diaper rash, minor skin irritations",
+      "merged": false,
+      "cont": false
+     }
+    ]
    }
   ],
   "apremilast": [
@@ -828,7 +4874,64 @@ const CHART_BOXES = {
     "y0": 0.912,
     "x1": 0.9895,
     "y1": 0.9702,
-    "text": "Apremilast (Otezla)"
+    "text": "Apremilast (Otezla)",
+    "cells": [
+     {
+      "col": "Drug",
+      "page": 5,
+      "x0": 0.0099,
+      "y0": 0.912,
+      "x1": 0.2167,
+      "y1": 0.9702,
+      "text": "Apremilast (Otezla)",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Rx/OTC",
+      "page": 5,
+      "x0": 0.2167,
+      "y0": 0.912,
+      "x1": 0.2891,
+      "y1": 0.9702,
+      "text": "RX",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Pharmacological Class",
+      "page": 5,
+      "x0": 0.2891,
+      "y0": 0.912,
+      "x1": 0.4867,
+      "y1": 0.9702,
+      "text": "PDE-4 Inhibitor",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Chemical Class",
+      "page": 5,
+      "x0": 0.4867,
+      "y0": 0.912,
+      "x1": 0.6974,
+      "y1": 0.9702,
+      "text": "Azole",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Indication",
+      "page": 5,
+      "x0": 0.6974,
+      "y0": 0.912,
+      "x1": 0.9898,
+      "y1": 0.9702,
+      "text": "Seborrhea, dandruff",
+      "merged": false,
+      "cont": false
+     }
+    ]
    }
   ],
   "clobetasol": [
@@ -840,7 +4943,75 @@ const CHART_BOXES = {
     "y0": 0.1593,
     "x1": 0.9891,
     "y1": 0.2135,
-    "text": "Clobetasol propionate (Temovate, Clobex)"
+    "text": "Clobetasol propionate (Temovate, Clobex)",
+    "cells": [
+     {
+      "col": "Drug",
+      "page": 6,
+      "x0": 0.0102,
+      "y0": 0.1593,
+      "x1": 0.2916,
+      "y1": 0.2135,
+      "text": "Clobetasol propionate (Temovate, Clobex)",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Rx/OTC",
+      "page": 6,
+      "x0": 0.2916,
+      "y0": 0.1593,
+      "x1": 0.4072,
+      "y1": 0.2135,
+      "text": "RX",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Potency Class",
+      "page": 6,
+      "x0": 0.4072,
+      "y0": 0.1593,
+      "x1": 0.554,
+      "y1": 0.2977,
+      "text": "CLASS 1 Very High Potency",
+      "merged": true,
+      "cont": false
+     },
+     {
+      "col": "Pharmacological Class",
+      "page": 6,
+      "x0": 0.554,
+      "y0": 0.1593,
+      "x1": 0.7199,
+      "y1": 0.9783,
+      "text": "Corticosteroids",
+      "merged": true,
+      "cont": false
+     },
+     {
+      "col": "Chemical Class",
+      "page": 6,
+      "x0": 0.7199,
+      "y0": 0.1593,
+      "x1": 0.7933,
+      "y1": 0.9783,
+      "text": "Steroids",
+      "merged": true,
+      "cont": false
+     },
+     {
+      "col": "Indication",
+      "page": 6,
+      "x0": 0.7933,
+      "y0": 0.1593,
+      "x1": 0.9891,
+      "y1": 0.5325,
+      "text": "Psoriasis, Atopic dermatitis, numerous others",
+      "merged": true,
+      "cont": false
+     }
+    ]
    }
   ],
   "betameth": [
@@ -852,7 +5023,75 @@ const CHART_BOXES = {
     "y0": 0.2135,
     "x1": 0.9891,
     "y1": 0.2558,
-    "text": "Betamethasone dipropionate (Diprolene)"
+    "text": "Betamethasone dipropionate (Diprolene)",
+    "cells": [
+     {
+      "col": "Drug",
+      "page": 6,
+      "x0": 0.0102,
+      "y0": 0.2135,
+      "x1": 0.2916,
+      "y1": 0.2558,
+      "text": "Betamethasone dipropionate (Diprolene)",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Rx/OTC",
+      "page": 6,
+      "x0": 0.2916,
+      "y0": 0.2135,
+      "x1": 0.4072,
+      "y1": 0.2558,
+      "text": "RX",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Potency Class",
+      "page": 6,
+      "x0": 0.4072,
+      "y0": 0.1593,
+      "x1": 0.554,
+      "y1": 0.2977,
+      "text": "CLASS 1 Very High Potency",
+      "merged": true,
+      "cont": false
+     },
+     {
+      "col": "Pharmacological Class",
+      "page": 6,
+      "x0": 0.554,
+      "y0": 0.1593,
+      "x1": 0.7199,
+      "y1": 0.9783,
+      "text": "Corticosteroids",
+      "merged": true,
+      "cont": false
+     },
+     {
+      "col": "Chemical Class",
+      "page": 6,
+      "x0": 0.7199,
+      "y0": 0.1593,
+      "x1": 0.7933,
+      "y1": 0.9783,
+      "text": "Steroids",
+      "merged": true,
+      "cont": false
+     },
+     {
+      "col": "Indication",
+      "page": 6,
+      "x0": 0.7933,
+      "y0": 0.1593,
+      "x1": 0.9891,
+      "y1": 0.5325,
+      "text": "Psoriasis, Atopic dermatitis, numerous others",
+      "merged": true,
+      "cont": false
+     }
+    ]
    },
    {
     "page": 6,
@@ -862,7 +5101,75 @@ const CHART_BOXES = {
     "y0": 0.2977,
     "x1": 0.9891,
     "y1": 0.3519,
-    "text": "Betamethasone dipropionate (Diprolene Cream AF)"
+    "text": "Betamethasone dipropionate (Diprolene Cream AF)",
+    "cells": [
+     {
+      "col": "Drug",
+      "page": 6,
+      "x0": 0.0102,
+      "y0": 0.2977,
+      "x1": 0.2916,
+      "y1": 0.3519,
+      "text": "Betamethasone dipropionate (Diprolene Cream AF)",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Rx/OTC",
+      "page": 6,
+      "x0": 0.2916,
+      "y0": 0.2977,
+      "x1": 0.4072,
+      "y1": 0.3519,
+      "text": "RX",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Potency Class",
+      "page": 6,
+      "x0": 0.4072,
+      "y0": 0.2977,
+      "x1": 0.554,
+      "y1": 0.4783,
+      "text": "CLASS 2 High Potency",
+      "merged": true,
+      "cont": false
+     },
+     {
+      "col": "Pharmacological Class",
+      "page": 6,
+      "x0": 0.554,
+      "y0": 0.1593,
+      "x1": 0.7199,
+      "y1": 0.9783,
+      "text": "Corticosteroids",
+      "merged": true,
+      "cont": false
+     },
+     {
+      "col": "Chemical Class",
+      "page": 6,
+      "x0": 0.7199,
+      "y0": 0.1593,
+      "x1": 0.7933,
+      "y1": 0.9783,
+      "text": "Steroids",
+      "merged": true,
+      "cont": false
+     },
+     {
+      "col": "Indication",
+      "page": 6,
+      "x0": 0.7933,
+      "y0": 0.1593,
+      "x1": 0.9891,
+      "y1": 0.5325,
+      "text": "Psoriasis, Atopic dermatitis, numerous others",
+      "merged": true,
+      "cont": false
+     }
+    ]
    }
   ],
   "halobetasol": [
@@ -874,7 +5181,75 @@ const CHART_BOXES = {
     "y0": 0.2558,
     "x1": 0.9891,
     "y1": 0.2977,
-    "text": "Halobetasol propionate (Ultravate)"
+    "text": "Halobetasol propionate (Ultravate)",
+    "cells": [
+     {
+      "col": "Drug",
+      "page": 6,
+      "x0": 0.0102,
+      "y0": 0.2558,
+      "x1": 0.2916,
+      "y1": 0.2977,
+      "text": "Halobetasol propionate (Ultravate)",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Rx/OTC",
+      "page": 6,
+      "x0": 0.2916,
+      "y0": 0.2558,
+      "x1": 0.4072,
+      "y1": 0.2977,
+      "text": "RX",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Potency Class",
+      "page": 6,
+      "x0": 0.4072,
+      "y0": 0.1593,
+      "x1": 0.554,
+      "y1": 0.2977,
+      "text": "CLASS 1 Very High Potency",
+      "merged": true,
+      "cont": false
+     },
+     {
+      "col": "Pharmacological Class",
+      "page": 6,
+      "x0": 0.554,
+      "y0": 0.1593,
+      "x1": 0.7199,
+      "y1": 0.9783,
+      "text": "Corticosteroids",
+      "merged": true,
+      "cont": false
+     },
+     {
+      "col": "Chemical Class",
+      "page": 6,
+      "x0": 0.7199,
+      "y0": 0.1593,
+      "x1": 0.7933,
+      "y1": 0.9783,
+      "text": "Steroids",
+      "merged": true,
+      "cont": false
+     },
+     {
+      "col": "Indication",
+      "page": 6,
+      "x0": 0.7933,
+      "y0": 0.1593,
+      "x1": 0.9891,
+      "y1": 0.5325,
+      "text": "Psoriasis, Atopic dermatitis, numerous others",
+      "merged": true,
+      "cont": false
+     }
+    ]
    }
   ],
   "mometasone": [
@@ -886,7 +5261,75 @@ const CHART_BOXES = {
     "y0": 0.3519,
     "x1": 0.9891,
     "y1": 0.3941,
-    "text": "Mometasone furoate (Elocon)"
+    "text": "Mometasone furoate (Elocon)",
+    "cells": [
+     {
+      "col": "Drug",
+      "page": 6,
+      "x0": 0.0102,
+      "y0": 0.3519,
+      "x1": 0.2916,
+      "y1": 0.3941,
+      "text": "Mometasone furoate (Elocon)",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Rx/OTC",
+      "page": 6,
+      "x0": 0.2916,
+      "y0": 0.3519,
+      "x1": 0.4072,
+      "y1": 0.3941,
+      "text": "RX",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Potency Class",
+      "page": 6,
+      "x0": 0.4072,
+      "y0": 0.2977,
+      "x1": 0.554,
+      "y1": 0.4783,
+      "text": "CLASS 2 High Potency",
+      "merged": true,
+      "cont": false
+     },
+     {
+      "col": "Pharmacological Class",
+      "page": 6,
+      "x0": 0.554,
+      "y0": 0.1593,
+      "x1": 0.7199,
+      "y1": 0.9783,
+      "text": "Corticosteroids",
+      "merged": true,
+      "cont": false
+     },
+     {
+      "col": "Chemical Class",
+      "page": 6,
+      "x0": 0.7199,
+      "y0": 0.1593,
+      "x1": 0.7933,
+      "y1": 0.9783,
+      "text": "Steroids",
+      "merged": true,
+      "cont": false
+     },
+     {
+      "col": "Indication",
+      "page": 6,
+      "x0": 0.7933,
+      "y0": 0.1593,
+      "x1": 0.9891,
+      "y1": 0.5325,
+      "text": "Psoriasis, Atopic dermatitis, numerous others",
+      "merged": true,
+      "cont": false
+     }
+    ]
    }
   ],
   "fluocinonide": [
@@ -898,7 +5341,75 @@ const CHART_BOXES = {
     "y0": 0.3941,
     "x1": 0.9891,
     "y1": 0.4367,
-    "text": "Fluocinonide (Lidex)"
+    "text": "Fluocinonide (Lidex)",
+    "cells": [
+     {
+      "col": "Drug",
+      "page": 6,
+      "x0": 0.0102,
+      "y0": 0.3941,
+      "x1": 0.2916,
+      "y1": 0.4367,
+      "text": "Fluocinonide (Lidex)",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Rx/OTC",
+      "page": 6,
+      "x0": 0.2916,
+      "y0": 0.3941,
+      "x1": 0.4072,
+      "y1": 0.4367,
+      "text": "RX",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Potency Class",
+      "page": 6,
+      "x0": 0.4072,
+      "y0": 0.2977,
+      "x1": 0.554,
+      "y1": 0.4783,
+      "text": "CLASS 2 High Potency",
+      "merged": true,
+      "cont": false
+     },
+     {
+      "col": "Pharmacological Class",
+      "page": 6,
+      "x0": 0.554,
+      "y0": 0.1593,
+      "x1": 0.7199,
+      "y1": 0.9783,
+      "text": "Corticosteroids",
+      "merged": true,
+      "cont": false
+     },
+     {
+      "col": "Chemical Class",
+      "page": 6,
+      "x0": 0.7199,
+      "y0": 0.1593,
+      "x1": 0.7933,
+      "y1": 0.9783,
+      "text": "Steroids",
+      "merged": true,
+      "cont": false
+     },
+     {
+      "col": "Indication",
+      "page": 6,
+      "x0": 0.7933,
+      "y0": 0.1593,
+      "x1": 0.9891,
+      "y1": 0.5325,
+      "text": "Psoriasis, Atopic dermatitis, numerous others",
+      "merged": true,
+      "cont": false
+     }
+    ]
    }
   ],
   "desoximetasone": [
@@ -910,7 +5421,75 @@ const CHART_BOXES = {
     "y0": 0.4367,
     "x1": 0.9891,
     "y1": 0.4783,
-    "text": "Desoximetasone (Topicort)"
+    "text": "Desoximetasone (Topicort)",
+    "cells": [
+     {
+      "col": "Drug",
+      "page": 6,
+      "x0": 0.0102,
+      "y0": 0.4367,
+      "x1": 0.2916,
+      "y1": 0.4783,
+      "text": "Desoximetasone (Topicort)",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Rx/OTC",
+      "page": 6,
+      "x0": 0.2916,
+      "y0": 0.4367,
+      "x1": 0.4072,
+      "y1": 0.4783,
+      "text": "RX",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Potency Class",
+      "page": 6,
+      "x0": 0.4072,
+      "y0": 0.2977,
+      "x1": 0.554,
+      "y1": 0.4783,
+      "text": "CLASS 2 High Potency",
+      "merged": true,
+      "cont": false
+     },
+     {
+      "col": "Pharmacological Class",
+      "page": 6,
+      "x0": 0.554,
+      "y0": 0.1593,
+      "x1": 0.7199,
+      "y1": 0.9783,
+      "text": "Corticosteroids",
+      "merged": true,
+      "cont": false
+     },
+     {
+      "col": "Chemical Class",
+      "page": 6,
+      "x0": 0.7199,
+      "y0": 0.1593,
+      "x1": 0.7933,
+      "y1": 0.9783,
+      "text": "Steroids",
+      "merged": true,
+      "cont": false
+     },
+     {
+      "col": "Indication",
+      "page": 6,
+      "x0": 0.7933,
+      "y0": 0.1593,
+      "x1": 0.9891,
+      "y1": 0.5325,
+      "text": "Psoriasis, Atopic dermatitis, numerous others",
+      "merged": true,
+      "cont": false
+     }
+    ]
    }
   ],
   "fluticasone": [
@@ -922,7 +5501,75 @@ const CHART_BOXES = {
     "y0": 0.4783,
     "x1": 0.9891,
     "y1": 0.5325,
-    "text": "Fluticasone propionate (Cutivate)"
+    "text": "Fluticasone propionate (Cutivate)",
+    "cells": [
+     {
+      "col": "Drug",
+      "page": 6,
+      "x0": 0.0102,
+      "y0": 0.4783,
+      "x1": 0.2916,
+      "y1": 0.5325,
+      "text": "Fluticasone propionate (Cutivate)",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Rx/OTC",
+      "page": 6,
+      "x0": 0.2916,
+      "y0": 0.4783,
+      "x1": 0.4072,
+      "y1": 0.5325,
+      "text": "RX",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Potency Class",
+      "page": 6,
+      "x0": 0.4072,
+      "y0": 0.4783,
+      "x1": 0.554,
+      "y1": 0.5325,
+      "text": "CLASS 3 Upper Mid-Strength",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Pharmacological Class",
+      "page": 6,
+      "x0": 0.554,
+      "y0": 0.1593,
+      "x1": 0.7199,
+      "y1": 0.9783,
+      "text": "Corticosteroids",
+      "merged": true,
+      "cont": false
+     },
+     {
+      "col": "Chemical Class",
+      "page": 6,
+      "x0": 0.7199,
+      "y0": 0.1593,
+      "x1": 0.7933,
+      "y1": 0.9783,
+      "text": "Steroids",
+      "merged": true,
+      "cont": false
+     },
+     {
+      "col": "Indication",
+      "page": 6,
+      "x0": 0.7933,
+      "y0": 0.1593,
+      "x1": 0.9891,
+      "y1": 0.5325,
+      "text": "Psoriasis, Atopic dermatitis, numerous others",
+      "merged": true,
+      "cont": false
+     }
+    ]
    }
   ],
   "fluocinolone": [
@@ -934,7 +5581,75 @@ const CHART_BOXES = {
     "y0": 0.5325,
     "x1": 0.9891,
     "y1": 0.5867,
-    "text": "Fluocinolone acetonide (Synalar)"
+    "text": "Fluocinolone acetonide (Synalar)",
+    "cells": [
+     {
+      "col": "Drug",
+      "page": 6,
+      "x0": 0.0102,
+      "y0": 0.5325,
+      "x1": 0.2916,
+      "y1": 0.5867,
+      "text": "Fluocinolone acetonide (Synalar)",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Rx/OTC",
+      "page": 6,
+      "x0": 0.2916,
+      "y0": 0.5325,
+      "x1": 0.4072,
+      "y1": 0.5867,
+      "text": "RX",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Potency Class",
+      "page": 6,
+      "x0": 0.4072,
+      "y0": 0.5325,
+      "x1": 0.554,
+      "y1": 0.6708,
+      "text": "CLASS 4 Mid-Strength",
+      "merged": true,
+      "cont": false
+     },
+     {
+      "col": "Pharmacological Class",
+      "page": 6,
+      "x0": 0.554,
+      "y0": 0.1593,
+      "x1": 0.7199,
+      "y1": 0.9783,
+      "text": "Corticosteroids",
+      "merged": true,
+      "cont": false
+     },
+     {
+      "col": "Chemical Class",
+      "page": 6,
+      "x0": 0.7199,
+      "y0": 0.1593,
+      "x1": 0.7933,
+      "y1": 0.9783,
+      "text": "Steroids",
+      "merged": true,
+      "cont": false
+     },
+     {
+      "col": "Indication",
+      "page": 6,
+      "x0": 0.7933,
+      "y0": 0.5325,
+      "x1": 0.9891,
+      "y1": 0.7977,
+      "text": "Psoriasis, Atopic dermatitis, numerous others",
+      "merged": true,
+      "cont": false
+     }
+    ]
    },
    {
     "page": 6,
@@ -944,7 +5659,75 @@ const CHART_BOXES = {
     "y0": 0.8818,
     "x1": 0.9891,
     "y1": 0.9241,
-    "text": "Fluocinolone acetonide (Derma-Smoothe)"
+    "text": "Fluocinolone acetonide (Derma-Smoothe)",
+    "cells": [
+     {
+      "col": "Drug",
+      "page": 6,
+      "x0": 0.0102,
+      "y0": 0.8818,
+      "x1": 0.2916,
+      "y1": 0.9241,
+      "text": "Fluocinolone acetonide (Derma-Smoothe)",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Rx/OTC",
+      "page": 6,
+      "x0": 0.2916,
+      "y0": 0.8818,
+      "x1": 0.4072,
+      "y1": 0.9241,
+      "text": "RX",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Potency Class",
+      "page": 6,
+      "x0": 0.4072,
+      "y0": 0.7977,
+      "x1": 0.554,
+      "y1": 0.9241,
+      "text": "CLASS 6 Mild",
+      "merged": true,
+      "cont": false
+     },
+     {
+      "col": "Pharmacological Class",
+      "page": 6,
+      "x0": 0.554,
+      "y0": 0.1593,
+      "x1": 0.7199,
+      "y1": 0.9783,
+      "text": "Corticosteroids",
+      "merged": true,
+      "cont": false
+     },
+     {
+      "col": "Chemical Class",
+      "page": 6,
+      "x0": 0.7199,
+      "y0": 0.1593,
+      "x1": 0.7933,
+      "y1": 0.9783,
+      "text": "Steroids",
+      "merged": true,
+      "cont": false
+     },
+     {
+      "col": "Indication",
+      "page": 6,
+      "x0": 0.7933,
+      "y0": 0.7977,
+      "x1": 0.9891,
+      "y1": 0.9783,
+      "text": "Psoriasis, Atopic dermatitis, numerous others",
+      "merged": true,
+      "cont": false
+     }
+    ]
    }
   ],
   "hcvalerate": [
@@ -956,7 +5739,75 @@ const CHART_BOXES = {
     "y0": 0.5867,
     "x1": 0.9891,
     "y1": 0.629,
-    "text": "Hydrocortisone valerate (Westcort)"
+    "text": "Hydrocortisone valerate (Westcort)",
+    "cells": [
+     {
+      "col": "Drug",
+      "page": 6,
+      "x0": 0.0102,
+      "y0": 0.5867,
+      "x1": 0.2916,
+      "y1": 0.629,
+      "text": "Hydrocortisone valerate (Westcort)",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Rx/OTC",
+      "page": 6,
+      "x0": 0.2916,
+      "y0": 0.5867,
+      "x1": 0.4072,
+      "y1": 0.629,
+      "text": "RX",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Potency Class",
+      "page": 6,
+      "x0": 0.4072,
+      "y0": 0.5325,
+      "x1": 0.554,
+      "y1": 0.6708,
+      "text": "CLASS 4 Mid-Strength",
+      "merged": true,
+      "cont": false
+     },
+     {
+      "col": "Pharmacological Class",
+      "page": 6,
+      "x0": 0.554,
+      "y0": 0.1593,
+      "x1": 0.7199,
+      "y1": 0.9783,
+      "text": "Corticosteroids",
+      "merged": true,
+      "cont": false
+     },
+     {
+      "col": "Chemical Class",
+      "page": 6,
+      "x0": 0.7199,
+      "y0": 0.1593,
+      "x1": 0.7933,
+      "y1": 0.9783,
+      "text": "Steroids",
+      "merged": true,
+      "cont": false
+     },
+     {
+      "col": "Indication",
+      "page": 6,
+      "x0": 0.7933,
+      "y0": 0.5325,
+      "x1": 0.9891,
+      "y1": 0.7977,
+      "text": "Psoriasis, Atopic dermatitis, numerous others",
+      "merged": true,
+      "cont": false
+     }
+    ]
    }
   ],
   "triamcinolone": [
@@ -968,7 +5819,75 @@ const CHART_BOXES = {
     "y0": 0.629,
     "x1": 0.9891,
     "y1": 0.6708,
-    "text": "Triamcinolone acetonide (Kenalog)"
+    "text": "Triamcinolone acetonide (Kenalog)",
+    "cells": [
+     {
+      "col": "Drug",
+      "page": 6,
+      "x0": 0.0102,
+      "y0": 0.629,
+      "x1": 0.2916,
+      "y1": 0.6708,
+      "text": "Triamcinolone acetonide (Kenalog)",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Rx/OTC",
+      "page": 6,
+      "x0": 0.2916,
+      "y0": 0.629,
+      "x1": 0.4072,
+      "y1": 0.6708,
+      "text": "RX",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Potency Class",
+      "page": 6,
+      "x0": 0.4072,
+      "y0": 0.5325,
+      "x1": 0.554,
+      "y1": 0.6708,
+      "text": "CLASS 4 Mid-Strength",
+      "merged": true,
+      "cont": false
+     },
+     {
+      "col": "Pharmacological Class",
+      "page": 6,
+      "x0": 0.554,
+      "y0": 0.1593,
+      "x1": 0.7199,
+      "y1": 0.9783,
+      "text": "Corticosteroids",
+      "merged": true,
+      "cont": false
+     },
+     {
+      "col": "Chemical Class",
+      "page": 6,
+      "x0": 0.7199,
+      "y0": 0.1593,
+      "x1": 0.7933,
+      "y1": 0.9783,
+      "text": "Steroids",
+      "merged": true,
+      "cont": false
+     },
+     {
+      "col": "Indication",
+      "page": 6,
+      "x0": 0.7933,
+      "y0": 0.5325,
+      "x1": 0.9891,
+      "y1": 0.7977,
+      "text": "Psoriasis, Atopic dermatitis, numerous others",
+      "merged": true,
+      "cont": false
+     }
+    ]
    }
   ],
   "desonide": [
@@ -980,7 +5899,75 @@ const CHART_BOXES = {
     "y0": 0.6708,
     "x1": 0.9891,
     "y1": 0.7131,
-    "text": "Desonide (DesOwen)"
+    "text": "Desonide (DesOwen)",
+    "cells": [
+     {
+      "col": "Drug",
+      "page": 6,
+      "x0": 0.0102,
+      "y0": 0.6708,
+      "x1": 0.2916,
+      "y1": 0.7131,
+      "text": "Desonide (DesOwen)",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Rx/OTC",
+      "page": 6,
+      "x0": 0.2916,
+      "y0": 0.6708,
+      "x1": 0.4072,
+      "y1": 0.7131,
+      "text": "RX",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Potency Class",
+      "page": 6,
+      "x0": 0.4072,
+      "y0": 0.6708,
+      "x1": 0.554,
+      "y1": 0.7977,
+      "text": "CLASS 5 Lower Mid-Strength",
+      "merged": true,
+      "cont": false
+     },
+     {
+      "col": "Pharmacological Class",
+      "page": 6,
+      "x0": 0.554,
+      "y0": 0.1593,
+      "x1": 0.7199,
+      "y1": 0.9783,
+      "text": "Corticosteroids",
+      "merged": true,
+      "cont": false
+     },
+     {
+      "col": "Chemical Class",
+      "page": 6,
+      "x0": 0.7199,
+      "y0": 0.1593,
+      "x1": 0.7933,
+      "y1": 0.9783,
+      "text": "Steroids",
+      "merged": true,
+      "cont": false
+     },
+     {
+      "col": "Indication",
+      "page": 6,
+      "x0": 0.7933,
+      "y0": 0.5325,
+      "x1": 0.9891,
+      "y1": 0.7977,
+      "text": "Psoriasis, Atopic dermatitis, numerous others",
+      "merged": true,
+      "cont": false
+     }
+    ]
    },
    {
     "page": 6,
@@ -990,7 +5977,75 @@ const CHART_BOXES = {
     "y0": 0.84,
     "x1": 0.9891,
     "y1": 0.8818,
-    "text": "Desonate (Desonide)"
+    "text": "Desonate (Desonide)",
+    "cells": [
+     {
+      "col": "Drug",
+      "page": 6,
+      "x0": 0.0102,
+      "y0": 0.84,
+      "x1": 0.2916,
+      "y1": 0.8818,
+      "text": "Desonate (Desonide)",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Rx/OTC",
+      "page": 6,
+      "x0": 0.2916,
+      "y0": 0.84,
+      "x1": 0.4072,
+      "y1": 0.8818,
+      "text": "RX",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Potency Class",
+      "page": 6,
+      "x0": 0.4072,
+      "y0": 0.7977,
+      "x1": 0.554,
+      "y1": 0.9241,
+      "text": "CLASS 6 Mild",
+      "merged": true,
+      "cont": false
+     },
+     {
+      "col": "Pharmacological Class",
+      "page": 6,
+      "x0": 0.554,
+      "y0": 0.1593,
+      "x1": 0.7199,
+      "y1": 0.9783,
+      "text": "Corticosteroids",
+      "merged": true,
+      "cont": false
+     },
+     {
+      "col": "Chemical Class",
+      "page": 6,
+      "x0": 0.7199,
+      "y0": 0.1593,
+      "x1": 0.7933,
+      "y1": 0.9783,
+      "text": "Steroids",
+      "merged": true,
+      "cont": false
+     },
+     {
+      "col": "Indication",
+      "page": 6,
+      "x0": 0.7933,
+      "y0": 0.7977,
+      "x1": 0.9891,
+      "y1": 0.9783,
+      "text": "Psoriasis, Atopic dermatitis, numerous others",
+      "merged": true,
+      "cont": false
+     }
+    ]
    }
   ],
   "hydrocortisone": [
@@ -1002,7 +6057,75 @@ const CHART_BOXES = {
     "y0": 0.7131,
     "x1": 0.9891,
     "y1": 0.7554,
-    "text": "Hydrocortisone (Locoid)"
+    "text": "Hydrocortisone (Locoid)",
+    "cells": [
+     {
+      "col": "Drug",
+      "page": 6,
+      "x0": 0.0102,
+      "y0": 0.7131,
+      "x1": 0.2916,
+      "y1": 0.7554,
+      "text": "Hydrocortisone (Locoid)",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Rx/OTC",
+      "page": 6,
+      "x0": 0.2916,
+      "y0": 0.7131,
+      "x1": 0.4072,
+      "y1": 0.7554,
+      "text": "RX",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Potency Class",
+      "page": 6,
+      "x0": 0.4072,
+      "y0": 0.6708,
+      "x1": 0.554,
+      "y1": 0.7977,
+      "text": "CLASS 5 Lower Mid-Strength",
+      "merged": true,
+      "cont": false
+     },
+     {
+      "col": "Pharmacological Class",
+      "page": 6,
+      "x0": 0.554,
+      "y0": 0.1593,
+      "x1": 0.7199,
+      "y1": 0.9783,
+      "text": "Corticosteroids",
+      "merged": true,
+      "cont": false
+     },
+     {
+      "col": "Chemical Class",
+      "page": 6,
+      "x0": 0.7199,
+      "y0": 0.1593,
+      "x1": 0.7933,
+      "y1": 0.9783,
+      "text": "Steroids",
+      "merged": true,
+      "cont": false
+     },
+     {
+      "col": "Indication",
+      "page": 6,
+      "x0": 0.7933,
+      "y0": 0.5325,
+      "x1": 0.9891,
+      "y1": 0.7977,
+      "text": "Psoriasis, Atopic dermatitis, numerous others",
+      "merged": true,
+      "cont": false
+     }
+    ]
    },
    {
     "page": 6,
@@ -1012,7 +6135,75 @@ const CHART_BOXES = {
     "y0": 0.9241,
     "x1": 0.9891,
     "y1": 0.9783,
-    "text": "Hydrocortisone (Cortaid, Hytone, Synacort)"
+    "text": "Hydrocortisone (Cortaid, Hytone, Synacort)",
+    "cells": [
+     {
+      "col": "Drug",
+      "page": 6,
+      "x0": 0.0102,
+      "y0": 0.9241,
+      "x1": 0.2916,
+      "y1": 0.9783,
+      "text": "Hydrocortisone (Cortaid, Hytone, Synacort)",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Rx/OTC",
+      "page": 6,
+      "x0": 0.2916,
+      "y0": 0.9241,
+      "x1": 0.4072,
+      "y1": 0.9783,
+      "text": "OTC",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Potency Class",
+      "page": 6,
+      "x0": 0.4072,
+      "y0": 0.9241,
+      "x1": 0.554,
+      "y1": 0.9783,
+      "text": "CLASS 7 Least Potent",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Pharmacological Class",
+      "page": 6,
+      "x0": 0.554,
+      "y0": 0.1593,
+      "x1": 0.7199,
+      "y1": 0.9783,
+      "text": "Corticosteroids",
+      "merged": true,
+      "cont": false
+     },
+     {
+      "col": "Chemical Class",
+      "page": 6,
+      "x0": 0.7199,
+      "y0": 0.1593,
+      "x1": 0.7933,
+      "y1": 0.9783,
+      "text": "Steroids",
+      "merged": true,
+      "cont": false
+     },
+     {
+      "col": "Indication",
+      "page": 6,
+      "x0": 0.7933,
+      "y0": 0.7977,
+      "x1": 0.9891,
+      "y1": 0.9783,
+      "text": "Psoriasis, Atopic dermatitis, numerous others",
+      "merged": true,
+      "cont": false
+     }
+    ]
    }
   ],
   "prednicarbate": [
@@ -1024,7 +6215,75 @@ const CHART_BOXES = {
     "y0": 0.7554,
     "x1": 0.9891,
     "y1": 0.7977,
-    "text": "Prednicarbate (Dermatop)"
+    "text": "Prednicarbate (Dermatop)",
+    "cells": [
+     {
+      "col": "Drug",
+      "page": 6,
+      "x0": 0.0102,
+      "y0": 0.7554,
+      "x1": 0.2916,
+      "y1": 0.7977,
+      "text": "Prednicarbate (Dermatop)",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Rx/OTC",
+      "page": 6,
+      "x0": 0.2916,
+      "y0": 0.7554,
+      "x1": 0.4072,
+      "y1": 0.7977,
+      "text": "RX",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Potency Class",
+      "page": 6,
+      "x0": 0.4072,
+      "y0": 0.6708,
+      "x1": 0.554,
+      "y1": 0.7977,
+      "text": "CLASS 5 Lower Mid-Strength",
+      "merged": true,
+      "cont": false
+     },
+     {
+      "col": "Pharmacological Class",
+      "page": 6,
+      "x0": 0.554,
+      "y0": 0.1593,
+      "x1": 0.7199,
+      "y1": 0.9783,
+      "text": "Corticosteroids",
+      "merged": true,
+      "cont": false
+     },
+     {
+      "col": "Chemical Class",
+      "page": 6,
+      "x0": 0.7199,
+      "y0": 0.1593,
+      "x1": 0.7933,
+      "y1": 0.9783,
+      "text": "Steroids",
+      "merged": true,
+      "cont": false
+     },
+     {
+      "col": "Indication",
+      "page": 6,
+      "x0": 0.7933,
+      "y0": 0.5325,
+      "x1": 0.9891,
+      "y1": 0.7977,
+      "text": "Psoriasis, Atopic dermatitis, numerous others",
+      "merged": true,
+      "cont": false
+     }
+    ]
    }
   ],
   "alclometasone": [
@@ -1036,7 +6295,75 @@ const CHART_BOXES = {
     "y0": 0.7977,
     "x1": 0.9891,
     "y1": 0.84,
-    "text": "Alclometasone (Aclovate)"
+    "text": "Alclometasone (Aclovate)",
+    "cells": [
+     {
+      "col": "Drug",
+      "page": 6,
+      "x0": 0.0102,
+      "y0": 0.7977,
+      "x1": 0.2916,
+      "y1": 0.84,
+      "text": "Alclometasone (Aclovate)",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Rx/OTC",
+      "page": 6,
+      "x0": 0.2916,
+      "y0": 0.7977,
+      "x1": 0.4072,
+      "y1": 0.84,
+      "text": "RX",
+      "merged": false,
+      "cont": false
+     },
+     {
+      "col": "Potency Class",
+      "page": 6,
+      "x0": 0.4072,
+      "y0": 0.7977,
+      "x1": 0.554,
+      "y1": 0.9241,
+      "text": "CLASS 6 Mild",
+      "merged": true,
+      "cont": false
+     },
+     {
+      "col": "Pharmacological Class",
+      "page": 6,
+      "x0": 0.554,
+      "y0": 0.1593,
+      "x1": 0.7199,
+      "y1": 0.9783,
+      "text": "Corticosteroids",
+      "merged": true,
+      "cont": false
+     },
+     {
+      "col": "Chemical Class",
+      "page": 6,
+      "x0": 0.7199,
+      "y0": 0.1593,
+      "x1": 0.7933,
+      "y1": 0.9783,
+      "text": "Steroids",
+      "merged": true,
+      "cont": false
+     },
+     {
+      "col": "Indication",
+      "page": 6,
+      "x0": 0.7933,
+      "y0": 0.7977,
+      "x1": 0.9891,
+      "y1": 0.9783,
+      "text": "Psoriasis, Atopic dermatitis, numerous others",
+      "merged": true,
+      "cont": false
+     }
+    ]
    }
   ]
  },
@@ -1049,7 +6376,64 @@ const CHART_BOXES = {
    "y0": 0.3589,
    "x1": 0.9891,
    "y1": 0.4277,
-   "text": "Permethrin 1% lotion (Nix)"
+   "text": "Permethrin 1% lotion (Nix)",
+   "cells": [
+    {
+     "col": "Drug",
+     "page": 7,
+     "x0": 0.0109,
+     "y0": 0.3589,
+     "x1": 0.2758,
+     "y1": 0.4277,
+     "text": "Permethrin 1% lotion (Nix)",
+     "merged": false,
+     "cont": false
+    },
+    {
+     "col": "Rx/OTC",
+     "page": 7,
+     "x0": 0.2758,
+     "y0": 0.3589,
+     "x1": 0.3424,
+     "y1": 0.4277,
+     "text": "OTC",
+     "merged": false,
+     "cont": false
+    },
+    {
+     "col": "Pharmacological Class",
+     "page": 7,
+     "x0": 0.3424,
+     "y0": 0.3589,
+     "x1": 0.5054,
+     "y1": 0.5397,
+     "text": "Insecticide",
+     "merged": true,
+     "cont": false
+    },
+    {
+     "col": "Chemical Class",
+     "page": 7,
+     "x0": 0.5054,
+     "y0": 0.3589,
+     "x1": 0.7622,
+     "y1": 0.5397,
+     "text": "Pyrethroids",
+     "merged": true,
+     "cont": false
+    },
+    {
+     "col": "Indication",
+     "page": 7,
+     "x0": 0.7622,
+     "y0": 0.3589,
+     "x1": 0.9891,
+     "y1": 0.4277,
+     "text": "Lice/Scabies",
+     "merged": false,
+     "cont": false
+    }
+   ]
   },
   {
    "page": 7,
@@ -1059,7 +6443,64 @@ const CHART_BOXES = {
    "y0": 0.4277,
    "x1": 0.9891,
    "y1": 0.5397,
-   "text": "Pyrethrins + piperonyl butoxide (Rid)"
+   "text": "Pyrethrins + piperonyl butoxide (Rid)",
+   "cells": [
+    {
+     "col": "Drug",
+     "page": 7,
+     "x0": 0.0109,
+     "y0": 0.4277,
+     "x1": 0.2758,
+     "y1": 0.5397,
+     "text": "Pyrethrins + piperonyl butoxide (Rid)",
+     "merged": false,
+     "cont": false
+    },
+    {
+     "col": "Rx/OTC",
+     "page": 7,
+     "x0": 0.2758,
+     "y0": 0.4277,
+     "x1": 0.3424,
+     "y1": 0.5397,
+     "text": "OTC",
+     "merged": false,
+     "cont": false
+    },
+    {
+     "col": "Pharmacological Class",
+     "page": 7,
+     "x0": 0.3424,
+     "y0": 0.3589,
+     "x1": 0.5054,
+     "y1": 0.5397,
+     "text": "Insecticide",
+     "merged": true,
+     "cont": false
+    },
+    {
+     "col": "Chemical Class",
+     "page": 7,
+     "x0": 0.5054,
+     "y0": 0.3589,
+     "x1": 0.7622,
+     "y1": 0.5397,
+     "text": "Pyrethroids",
+     "merged": true,
+     "cont": false
+    },
+    {
+     "col": "Indication",
+     "page": 7,
+     "x0": 0.7622,
+     "y0": 0.4277,
+     "x1": 0.9891,
+     "y1": 0.8347,
+     "text": "Lice",
+     "merged": true,
+     "cont": false
+    }
+   ]
   },
   {
    "page": 7,
@@ -1069,7 +6510,64 @@ const CHART_BOXES = {
    "y0": 0.5397,
    "x1": 0.9891,
    "y1": 0.6268,
-   "text": "Malathion 0.5% (Ovide)"
+   "text": "Malathion 0.5% (Ovide)",
+   "cells": [
+    {
+     "col": "Drug",
+     "page": 7,
+     "x0": 0.0109,
+     "y0": 0.5397,
+     "x1": 0.2758,
+     "y1": 0.6268,
+     "text": "Malathion 0.5% (Ovide)",
+     "merged": false,
+     "cont": false
+    },
+    {
+     "col": "Rx/OTC",
+     "page": 7,
+     "x0": 0.2758,
+     "y0": 0.5397,
+     "x1": 0.3424,
+     "y1": 0.6268,
+     "text": "RX",
+     "merged": false,
+     "cont": false
+    },
+    {
+     "col": "Pharmacological Class",
+     "page": 7,
+     "x0": 0.3424,
+     "y0": 0.5397,
+     "x1": 0.5054,
+     "y1": 0.6268,
+     "text": "Insecticide",
+     "merged": false,
+     "cont": false
+    },
+    {
+     "col": "Chemical Class",
+     "page": 7,
+     "x0": 0.5054,
+     "y0": 0.5397,
+     "x1": 0.7622,
+     "y1": 0.6268,
+     "text": "Organophosphate",
+     "merged": false,
+     "cont": false
+    },
+    {
+     "col": "Indication",
+     "page": 7,
+     "x0": 0.7622,
+     "y0": 0.4277,
+     "x1": 0.9891,
+     "y1": 0.8347,
+     "text": "Lice",
+     "merged": true,
+     "cont": false
+    }
+   ]
   },
   {
    "page": 7,
@@ -1079,7 +6577,64 @@ const CHART_BOXES = {
    "y0": 0.6268,
    "x1": 0.9891,
    "y1": 0.7476,
-   "text": "Benzyl alcohol 5% (Ulesfia)"
+   "text": "Benzyl alcohol 5% (Ulesfia)",
+   "cells": [
+    {
+     "col": "Drug",
+     "page": 7,
+     "x0": 0.0109,
+     "y0": 0.6268,
+     "x1": 0.2758,
+     "y1": 0.7476,
+     "text": "Benzyl alcohol 5% (Ulesfia)",
+     "merged": false,
+     "cont": false
+    },
+    {
+     "col": "Rx/OTC",
+     "page": 7,
+     "x0": 0.2758,
+     "y0": 0.6268,
+     "x1": 0.3424,
+     "y1": 0.7476,
+     "text": "RX",
+     "merged": false,
+     "cont": false
+    },
+    {
+     "col": "Pharmacological Class",
+     "page": 7,
+     "x0": 0.3424,
+     "y0": 0.6268,
+     "x1": 0.5054,
+     "y1": 0.7476,
+     "text": "Alcohol/Paralytic",
+     "merged": false,
+     "cont": false
+    },
+    {
+     "col": "Chemical Class",
+     "page": 7,
+     "x0": 0.5054,
+     "y0": 0.6268,
+     "x1": 0.7622,
+     "y1": 0.7476,
+     "text": "Benzyl alcohol",
+     "merged": false,
+     "cont": false
+    },
+    {
+     "col": "Indication",
+     "page": 7,
+     "x0": 0.7622,
+     "y0": 0.4277,
+     "x1": 0.9891,
+     "y1": 0.8347,
+     "text": "Lice",
+     "merged": true,
+     "cont": false
+    }
+   ]
   },
   {
    "page": 7,
@@ -1089,7 +6644,64 @@ const CHART_BOXES = {
    "y0": 0.7476,
    "x1": 0.9891,
    "y1": 0.8347,
-   "text": "Spinosad 0.9%(Natroba)"
+   "text": "Spinosad 0.9%(Natroba)",
+   "cells": [
+    {
+     "col": "Drug",
+     "page": 7,
+     "x0": 0.0109,
+     "y0": 0.7476,
+     "x1": 0.2758,
+     "y1": 0.8347,
+     "text": "Spinosad 0.9%(Natroba)",
+     "merged": false,
+     "cont": false
+    },
+    {
+     "col": "Rx/OTC",
+     "page": 7,
+     "x0": 0.2758,
+     "y0": 0.7476,
+     "x1": 0.3424,
+     "y1": 0.8347,
+     "text": "RX",
+     "merged": false,
+     "cont": false
+    },
+    {
+     "col": "Pharmacological Class",
+     "page": 7,
+     "x0": 0.3424,
+     "y0": 0.7476,
+     "x1": 0.5054,
+     "y1": 0.8347,
+     "text": "Anti-parasitic",
+     "merged": false,
+     "cont": false
+    },
+    {
+     "col": "Chemical Class",
+     "page": 7,
+     "x0": 0.5054,
+     "y0": 0.7476,
+     "x1": 0.7622,
+     "y1": 0.8347,
+     "text": "Lactone",
+     "merged": false,
+     "cont": false
+    },
+    {
+     "col": "Indication",
+     "page": 7,
+     "x0": 0.7622,
+     "y0": 0.4277,
+     "x1": 0.9891,
+     "y1": 0.8347,
+     "text": "Lice",
+     "merged": true,
+     "cont": false
+    }
+   ]
   },
   {
    "page": 7,
@@ -1099,7 +6711,64 @@ const CHART_BOXES = {
    "y0": 0.8347,
    "x1": 0.9891,
    "y1": 0.9556,
-   "text": "Ivermectin (Sklice, Stromectol)"
+   "text": "Ivermectin (Sklice, Stromectol)",
+   "cells": [
+    {
+     "col": "Drug",
+     "page": 7,
+     "x0": 0.0109,
+     "y0": 0.8347,
+     "x1": 0.2758,
+     "y1": 0.9556,
+     "text": "Ivermectin (Sklice, Stromectol)",
+     "merged": false,
+     "cont": false
+    },
+    {
+     "col": "Rx/OTC",
+     "page": 7,
+     "x0": 0.2758,
+     "y0": 0.8347,
+     "x1": 0.3424,
+     "y1": 0.9556,
+     "text": "RX",
+     "merged": false,
+     "cont": false
+    },
+    {
+     "col": "Pharmacological Class",
+     "page": 7,
+     "x0": 0.3424,
+     "y0": 0.8347,
+     "x1": 0.5054,
+     "y1": 0.9556,
+     "text": "Anthelmintic",
+     "merged": false,
+     "cont": false
+    },
+    {
+     "col": "Chemical Class",
+     "page": 7,
+     "x0": 0.5054,
+     "y0": 0.8347,
+     "x1": 0.7622,
+     "y1": 0.9556,
+     "text": "Lactone",
+     "merged": false,
+     "cont": false
+    },
+    {
+     "col": "Indication",
+     "page": 7,
+     "x0": 0.7622,
+     "y0": 0.8347,
+     "x1": 0.9891,
+     "y1": 0.9556,
+     "text": "Topical – Lice Oral – Lice/Scabies",
+     "merged": false,
+     "cont": false
+    }
+   ]
   }
  ]
 };
