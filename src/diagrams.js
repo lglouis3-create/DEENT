@@ -80,14 +80,14 @@ const ACNE_CASCADE = (() => {
   const box = (x, y, w, t, k) => `<rect class="box" data-k="b${k}" x="${x}" y="${y}" width="${w}" height="26" rx="6"/>` +
     `<text class="lbl sm" data-k="t${k}" x="${x + w / 2}" y="${y + 17}" text-anchor="middle">${t}</text>`;
   const arr = (d, k) => `<path class="arrow" data-k="a${k}" d="${d}"/>`;
-  const why = (x, y, t, k) => `<text class="lbl xs" data-k="w${k}" x="${x}" y="${y}" text-anchor="middle">${t}</text>`;
+  const why = (x, y, t, k, a = 'middle') => `<text class="lbl xs" data-k="w${k}" x="${x}" y="${y}" text-anchor="${a}">${t}</text>`;
   const s1 = box(10, 22, 100, 'Normal follicle', 1);
   const s2 = s1 + arr('M112 35 L238 35', 1) + why(175, 30, 'abnormal keratinization', 1) + box(240, 22, 110, 'Microcomedone', 2);
-  const s3 = s2 + arr('M295 50 L295 76', 2) + why(312, 66, 'more sebum', 2) + box(240, 78, 110, 'Closed comedone', 3);
+  const s3 = s2 + arr('M295 50 L295 76', 2) + why(289, 66, 'more sebum', 2, 'end') + box(240, 78, 110, 'Closed comedone', 3);
   const s4 = s3 + arr('M238 91 L112 91', 3) + why(175, 86, 'opens: dilated pore', 3) + box(10, 78, 100, 'Open comedone', 4);
-  const s5 = s4 + arr('M295 106 L295 132', 4) + box(240, 134, 110, 'Papule', 5) +
+  const s5 = s4 + arr('M295 106 L295 132', 4) + why(289, 122, 'does not open', 4, 'end') + box(240, 134, 110, 'Papule', 5) +
     arr('M238 147 L112 147', 5) + why(175, 142, 'pus: dilated pore', 5) + box(10, 134, 100, 'Pustule', 6);
-  const s6 = s5 + arr('M295 162 L295 188', 6) + why(326, 178, 'foreign body response', 6) + box(240, 190, 110, 'Nodule or cyst', 7);
+  const s6 = s5 + arr('M295 162 L295 188', 6) + why(289, 178, 'foreign body response', 6, 'end') + box(240, 190, 110, 'Nodule or cyst', 7);
   return stepper('acne-cascade', 'Cascade of acne lesions', [
     ['A normal follicle: keratinocytes move up and shed, and sebum flows out.', s1],
     ['Abnormal keratinization: cells stick in the follicle and form a microcomedone.', s2],
@@ -98,28 +98,33 @@ const ACNE_CASCADE = (() => {
   ], 262, 'After Skin-Pathophys-Students-2026.pdf slide 34 (DiPiro, Pharmacotherapy 12e); lecture 10/29, T 452–471.');
 })();
 
-/* ---------- Nuclear receptor: direct and indirect action (Skin-PCol slides 5–6) -- */
+/* ---------- Nuclear receptor: direct and indirect action (Skin-PCol slides 5–6) --
+   Each drug–receptor complex is a receptor box with the drug drawn on top of
+   it, so the drug stays visible once it is bound. The first complex keeps its
+   data-k ('drug', 'r1') from step 1 to step 4, so it glides from the cytoplasm
+   onto the GRE; the labels sit under the shape they name, inside the panel. */
 const NR_ACTION = (() => {
   const box = (x, y, w, h, k) => `<rect class="box" data-k="${k}" x="${x}" y="${y}" width="${w}" height="${h}" rx="6"/>`;
-  const lbl = (x, y, t, k, c = 'lbl sm') => `<text class="${c}" data-k="${k}" x="${x}" y="${y}" text-anchor="middle">${t}</text>`;
-  const nucleus = box(10, 96, 340, 92, 'nuc') + lbl(180, 182, 'Nucleus (DNA)', 'nucl', 'lbl xs');
-  const drug = (x, y) => `<circle class="mark" data-k="drug" cx="${x}" cy="${y}" r="8"/>` + lbl(x, y - 12, 'drug', 'dl', 'lbl xs');
-  const rec = (x, y, k) => box(x - 22, y - 10, 44, 20, k) + lbl(x, y + 4, 'receptor', 'l' + k, 'lbl xs');
-  const s1 = nucleus + drug(60, 34) + rec(180, 60, 'r1');
-  const s2 = nucleus + `<circle class="mark" data-k="drug" cx="168" cy="60" r="8"/>` + rec(180, 60, 'r1') +
-    lbl(270, 64, 'drug–receptor complex', 'cx', 'lbl xs');
-  const dir = nucleus + box(60, 128, 90, 22, 'gre') + lbl(105, 143, 'GRE', 'grel') +
-    `<circle class="mark" data-k="drug" cx="86" cy="116" r="7"/><circle class="mark" data-k="drug2" cx="124" cy="116" r="7"/>` +
-    lbl(105, 172, 'two complexes: genes up or down', 'dtxt', 'lbl xs');
-  const ind = dir + box(210, 128, 110, 22, 'tf') + lbl(265, 143, 'NF-kB / AP-1', 'tfl') +
-    `<circle class="mark" data-k="drug3" cx="265" cy="116" r="7"/>` +
-    lbl(265, 172, 'one complex holds the factor off DNA', 'itxt', 'lbl xs');
+  const lbl = (x, y, t, k, c = 'lbl sm', a = 'middle') => `<text class="${c}" data-k="${k}" x="${x}" y="${y}" text-anchor="${a}">${t}</text>`;
+  const nucleus = box(10, 104, 340, 100, 'nuc') + lbl(18, 117, 'Nucleus (DNA)', 'nucl', 'lbl xs', 'start');
+  const dot = (x, y, k) => `<circle class="mark" data-k="${k}" cx="${x}" cy="${y}" r="7"/>`;
+  // a complex: the receptor box, then the drug on its left end
+  const cx = (x, y, n) => box(x - 20, y - 8, 40, 16, 'r' + n) + dot(x - 11, y, n === 1 ? 'drug' : 'drug' + n);
+  const s1 = nucleus + dot(60, 42, 'drug') + lbl(60, 62, 'drug', 'dl', 'lbl xs') +
+    box(158, 52, 64, 20, 'r1') + lbl(190, 66, 'receptor', 'rl', 'lbl xs');
+  const s2 = nucleus + box(158, 52, 64, 20, 'r1') + lbl(196, 66, 'receptor', 'rl', 'lbl xs') + dot(168, 62, 'drug') +
+    lbl(190, 88, 'drug–receptor complex', 'cxl', 'lbl xs');
+  const gre = box(45, 150, 110, 22, 'gre') + lbl(100, 165, 'GRE', 'grel');
+  const dir = nucleus + gre + cx(75, 140, 1) + cx(125, 140, 2) +
+    lbl(100, 186, 'two complexes on the GRE:', 'dt1', 'lbl xs') + lbl(100, 197, 'genes up or down', 'dt2', 'lbl xs');
+  const ind = dir + box(205, 150, 120, 22, 'tf') + lbl(265, 165, 'NF-kB / AP-1', 'tfl') + cx(265, 140, 3) +
+    lbl(265, 186, 'one complex on the factor:', 'it1', 'lbl xs') + lbl(265, 197, 'factor kept off the DNA', 'it2', 'lbl xs');
   return stepper('nr-action', 'Nuclear receptor binders: direct and indirect', [
     ['The drug crosses the cell membrane to reach its receptor inside the cell.', s1],
     ['Drug and receptor form a drug–receptor complex.', s2],
     ['Direct: two complexes bind a response element (glucocorticoid: GRE) and raise anti-inflammatory or lower inflammatory gene expression.', dir],
     ['Indirect: one complex binds a transcription factor (NF-kB, AP-1) so it cannot drive inflammatory genes at the TRE.', ind],
-  ], 230, 'After Skin-PCol-Students-2026.pdf slides 5–6; lecture 10/29, T 639–746.');
+  ], 250, 'After Skin-PCol-Students-2026.pdf slides 5–6; lecture 10/29, T 639–746.');
 })();
 
 const DIA = {
@@ -128,8 +133,8 @@ const DIA = {
 };
 
 const DIAGRAMS = [
-  ['Lecture 1: pathophysiology (Smith)', ['acne-cascade']],
-  ['Lecture 1: pharmacology (Smith)', ['nr-action']],
+  ['Skin Pathophysiology (Dr. Smith)', ['acne-cascade']],
+  ['Skin Pharmacology (Dr. Smith)', ['nr-action']],
 ];
 
 const DIA_NAMES = {};

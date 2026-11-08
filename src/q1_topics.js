@@ -10,53 +10,74 @@
    topical steroid products (medicinal chemistry, Lectures 3-4 per the syllabus).
    ========================================================================== */
 const TOPICS = [
- {id:'skin', name:'Skin structure and sebum', prof:'Smith', open:true,
-  cite:'Lecture 1 (10/29) — Skin-Pathophys-Students-2026.pdf, slides 5–6',
+ {id:'skin', name:'Review of skin anatomy: layers and sebum', prof:'Smith', open:true,
+  cite:'slides 5–6 · taught 10/29 (Lecture 1)',
   subs:[
-   {id:'layers', name:'Layers and keratinocytes', cite:'slide 5'},
-   {id:'sebum',  name:'Sebaceous gland and sebum', cite:'slide 6'}]},
+   {id:'layers', name:'Anatomy of the skin', cite:'slide 5'},
+   {id:'sebum',  name:'Skin structures: sebum', cite:'slide 6'}]},
  {id:'ad', name:'Atopic dermatitis', prof:'Smith',
-  cite:'Lecture 1 (10/29) — Skin-Pathophys-Students-2026.pdf, slides 8–17',
+  cite:'slides 8–17 · taught 10/29 (Lecture 1)',
   subs:[
-   {id:'clin',  name:'Definition, epidemiology, signs, triggers', cite:'slides 8–12'},
-   {id:'path',  name:'Barrier, T cells, IgE and cytokines', cite:'slides 13, 16'},
-   {id:'gene',  name:'Genetics and filaggrin', cite:'slides 14–15'},
-   {id:'drugs', name:'Drug classes for AD', cite:'slide 17'}]},
+   {id:'clin',  name:'Introduction, epidemiology, signs and symptoms, exacerbating factors', cite:'slides 8–12'},
+   {id:'path',  name:'Etiology and pathophysiology: immune system', cite:'slides 13, 16'},
+   {id:'gene',  name:'Etiology and pathophysiology: genetics and FLG', cite:'slides 14–15'},
+   {id:'drugs', name:'Medications for treating atopic dermatitis', cite:'slide 17'}]},
  {id:'pso', name:'Psoriasis', prof:'Smith',
-  cite:'Lecture 1 (10/29) — Skin-Pathophys-Students-2026.pdf, slides 19–28',
+  cite:'slides 19–28 · taught 10/29 (Lecture 1)',
   subs:[
-   {id:'clin',  name:'Definition and epidemiology', cite:'slides 19–20'},
-   {id:'path',  name:'Immune pathway and cell cycle', cite:'slides 21–23'},
-   {id:'fact',  name:'Contributing factors, nails and joints', cite:'slides 24, 26'},
-   {id:'tx',    name:'Treatment rationale and drug classes', cite:'slides 27–28'}]},
+   {id:'clin',  name:'Introduction and epidemiology', cite:'slides 19–20'},
+   {id:'path',  name:'Etiology and pathophysiology', cite:'slides 21–23'},
+   {id:'fact',  name:'Contributing factors; nail psoriasis and psoriatic arthritis', cite:'slides 24, 26'},
+   {id:'tx',    name:'Treatment rationale and medications for treating psoriasis', cite:'slides 27–28'}]},
  {id:'acne', name:'Acne', prof:'Smith',
-  cite:'Lecture 1 (10/29) — Skin-Pathophys-Students-2026.pdf, slides 30–37',
+  cite:'slides 30–37 · taught 10/29 (Lecture 1)',
   subs:[
-   {id:'clin',  name:'Definition and epidemiology', cite:'slides 30–31'},
-   {id:'path',  name:'The four factors and P. acnes', cite:'slides 32–33'},
-   {id:'casc',  name:'Lesion cascade and exacerbating factors', cite:'slides 34–35'},
-   {id:'drugs', name:'Pathology-to-drug map', cite:'slides 36–37'}]},
- {id:'cmp', name:'The three diseases compared', prof:'Smith',
-  cite:'Lecture 1 (10/29) — Skin-Pathophys-Students-2026.pdf, slides 19, 38',
+   {id:'clin',  name:'Acne vulgaris and epidemiology', cite:'slides 30–31'},
+   {id:'path',  name:'Etiology and pathophysiology', cite:'slides 32–33'},
+   {id:'casc',  name:'Pathogenesis cascade and exacerbating factors', cite:'slides 34–35'},
+   {id:'drugs', name:'Pathogenesis and drug mechanisms; medications for treating acne', cite:'slides 36–37'}]},
+ {id:'cmp', name:'PollEv: the major pathology of each disease', prof:'Smith',
+  cite:'slides 19, 38 · taught 10/29 (Lecture 1)',
   subs:[
-   {id:'poll', name:'Her polls on the major pathology', cite:'slide 38'},
-   {id:'diff', name:'What separates them', cite:'slides 10, 19–20, 31'}]},
- {id:'nrb', name:'Nuclear receptor binders', prof:'Smith',
-  cite:'Lecture 1 (10/29) — Skin-PCol-Students-2026.pdf, slides 5–7',
+   {id:'poll', name:'PollEv: major pathology of AD, psoriasis and acne', cite:'slide 38'},
+   {id:'diff', name:'What separates the three diseases', cite:'slides 10, 19–20, 31'}]},
+ {id:'nrb', name:'Nuclear receptor binders: how they act', prof:'Smith',
+  cite:'slides 5–7 · taught 10/29 (Lecture 1)',
   subs:[
    {id:'mech', name:'Direct and indirect action', cite:'slides 5–6'},
    {id:'recs', name:'Receptors and response elements', cite:'slide 7'}]},
- {id:'cs', name:'Corticosteroids', prof:'Smith',
-  cite:'Lecture 1 (10/29) — Skin-PCol-Students-2026.pdf, slides 8–12',
+ {id:'cs', name:'Nuclear receptor binders: corticosteroids', prof:'Smith',
+  cite:'slides 8–12 · taught 10/29 (Lecture 1)',
   subs:[
    {id:'mech', name:'Uses and mechanism', cite:'slides 8–10'},
    {id:'top',  name:'Topical use', cite:'slide 11'},
    {id:'ae',   name:'Topical adverse effects', cite:'slide 12'}]},
- {id:'ret', name:'Retinoids: mechanism', prof:'Smith',
-  cite:'Lecture 1 (10/29) — Skin-PCol-Students-2026.pdf, slides 14–15',
+ {id:'ret', name:'Nuclear receptor binders: retinoid mechanism', prof:'Smith',
+  cite:'slides 14–15 · taught 10/29 (Lecture 1)',
   subs:[
    {id:'rec', name:'RAR and RXR', cite:'slide 14'},
    {id:'pd',  name:'Effects in acne, psoriasis and aging', cite:'slide 15'}]},
+];
+
+/* The Topics tab groups topics under the slide deck they come from (Louis,
+   2026-11-08), in the decks' own order: Dr. Smith's pathophysiology and
+   pharmacology decks, her recorded sun-exposure deck, then Dr. Sikazwe's DPAW
+   deck. Within a deck the topics follow slide order. Topics are pushed by the
+   later question files, so this list only names them; guide.js orders TOPICS
+   by it once every file has loaded and adds the deck headings on the Topics
+   tab. A topic id missing here keeps its place after the listed ones. */
+const TOPIC_DECKS = [
+  {id:'pp', name:'Skin Pathophysiology (Dr. Smith)', file:'Skin-Pathophys-Students-2026.pdf', when:'taught 10/29',
+   topics:['skin', 'ad', 'pso', 'acne', 'cmp']},
+  {id:'pc', name:'Skin Pharmacology (Dr. Smith)', file:'Skin-PCol-Students-2026.pdf', when:'taught 10/29, 10/30, 11/03',
+   topics:['nrb', 'cs', 'ret', 'l2-tret', 'l2-oret', 'l2-vitd', 'l2-tcell', 'l2-cni', 'l2-pde', 'l2-ker',
+           'l2-abx', 'l3-abx', 'l3-fol', 'l3-cyto', 'l3-mtx', 'l3-abat', 'l3-cytok', 'l3-tnf', 'l3-jak', 'l3-sum']},
+  {id:'sun', name:'Sun Exposure and Psoralens (Dr. Smith)', file:'DEENT_Sun_Exposure_2026.pdf', when:'recorded lecture, posted after 11/03',
+   topics:['l3c-pso', 'l3c-uv', 'l3c-spf', 'l3c-prod']},
+  {id:'mc', name:'Dermatology Medicinal Chemistry (Dr. Sikazwe, DPAW)', file:'f26-DEENT-DPAW-mc.pdf', when:'taught 11/03, 11/04',
+   topics:['s3-frame', 's3-cris', 's3-jak', 's3-uv', 's3-pso', 's3-emol', 's3-anth', 's3-psor', 's3-gc', 's3-hc',
+           's4-vitd', 's4-limus', 's4-psret', 's4-mtx', 's4-sys', 's4-acne', 's4-kera', 's4-ret', 's4-horm', 's4-abx',
+           's4-sun', 'sk-beyond']},
 ];
 
 const PP = 'Lecture 1 (Skin-Pathophys-Students-2026.pdf)';

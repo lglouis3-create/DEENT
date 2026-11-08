@@ -712,7 +712,9 @@ const COURSE = {
           'q1_topics.js', 'q2_L02.js', 'q3_L03a.js', 'q4_L03b.js', 'q5_L04.js', 'q6_L03c.js',
           // Drug list tab (temporary course-level presentation, to be replaced by the kit's
           // Drug List feature): its data, then the tab itself (Louis, 2026-11-08)
-          'druglist_data.js', 'druglist_ui.js'],
+          'druglist_data.js', 'druglist_ui.js',
+          // "Likely on the exam" stars (course-level, Louis 2026-11-08): data, then presentation
+          'likely_data.js', 'likely_ui.js'],
 
   tools: {citeAliases:{'skin-pathophys-students-2026.pdf':'Skin-Pathophys-Students-2026.pdf',
                        'skin-pcol-students-2026.pdf':'Skin-PCol-Students-2026.pdf',
@@ -732,7 +734,7 @@ const COURSE = {
    the Topics page shows as "What's new" since this browser last marked an
    entry seen, and Settings shows whole. preview: true in a page built with
    `build.py --preview`, which is served at /preview/ beside the live drill. */
-const BUILD = {stamp:"2026-11-08 01:17 CT", built:"2026-11-08T07:17:24Z", questions:595, images:1, changelog:[{"date": "2026-11-08 (Drug List)", "items": ["New Drug list tab: all 79 drugs on the dermatology chart (pp. 1\u20136), searchable by generic or brand name.", "Filter the Drug list by disease, class, chart page, Exam 1 taught or optional, boxed warning, photosensitizing.", "Recall mode: write a drug's target first, then Reveal to compare; your typing is not graded or saved.", "Each Drug list line names its source: Dr. Smith's slide, Dr. Sikazwe's page or the drug chart.", "From a drug card: practise exactly its questions, open its Reference row, reading section or Atlas tile.", "Flashcards: step through the filtered drugs one card at a time; no score, nothing saved.", "Spironolactone: Dr. Smith's class and Dr. Sikazwe's biosynthesis mechanism are shown as separate statements.", "Sunscreen family matching item now credits the drug chart for the pairings; it stays off practice papers."]}, {"date": "2026-11-07 (Dr. Smith's Exam 1 hints)", "items": ["32 new questions on Dr. Smith's hint list: epidemiology, disease triggers, drug targets, why each MOA helps.", "New questions on boxed warnings: cyclosporine's two parts, TNF-\u03b1 in children, which drugs carry one.", "New sun questions: sunblock vs sunscreen by ingredient, critical wavelength, UVA vs UVB, photosensitizing drugs.", "8 matching questions pair drugs with their targets, structures or families, for her fill-in-the-blank items.", "Reference: \"Drug targets: write it first, then check\" lists every drug-chart drug with its target to reveal.", "The sun-exposure lecture is now confirmed for Exam 1 by Dr. Smith's hints; the provisional label is gone.", "Exam text now gives Dr. Smith's format: mostly multiple choice, a few fill-in-the-blanks on targets, no essays."]}, {"date": "2026-11-06 (optional practice beyond the assigned slides)", "items": ["New topic \"Beyond the Exam 1 assigned pages (Dr. Sikazwe, optional)\" holds his 23 unassigned-slide questions.", "Those 23 no longer count toward the Exam 1 pool cards on Weak spots or the exam-date review timing.", "Practice papers draw single-answer questions; the exam text now says the official format split is not announced."]}, {"date": "2026-11-06 (Dr. Sikazwe's assigned pages)", "items": ["Dr. Sikazwe's assigned slides for Exam 1 (11/06) applied: 23 questions outside them now stay off practice exams.", "Those 23 stay in practice, each with a note saying it is outside his assigned pages.", "Atlas tiles outside his assigned pages now say \"Not on the assigned pages\" (9 structures)."]}, {"date": "2026-11-06 (reading links)", "items": ["Weak spots and \"Explain more\" now point to a reading section for 397 of 555 questions (was 35).", "Sikazwe's Lectures 3 and 4 questions now link to their Tell apart and Reference tables.", "Lecture 2 and 3 questions now link to Dr. Smith's Lecture 2 and 3 tables; Lecture 1 ones to the objective guides.", "Fixed links that sent some IL-23, salicylic acid and drug-class questions to the wrong table."]}, {"date": "2026-11-06 (Atlas layout)", "items": ["Each Atlas tile now reads in order: core learning, also in the lecture, then collapsed extras.", "Slide and transcript citations moved out of the tile text into a collapsed Sources and verification part.", "Hydrocortisone and cortisone: optional \"Deeper understanding\" on the two 11\u03b2-HSD enzymes, not tested.", "The structure count follows the search and the reference-only filter; an empty search says why.", "A one-line legend explains Core, Reference only and Needs verification.", "Hide names: headings, labels and drawing descriptions no longer give the answer away.", "Hide names: reveal a structure from the keyboard (Tab, then Enter or Space).", "Long structure names no longer make the Atlas wider than a phone screen."]}, {"date": "2026-11-06 (PubChem check)", "items": ["Every Atlas structure was checked against PubChem; each tile names its PubChem record and status.", "Compare structures names the PubChem record of the lecture drawing where one exists."]}, {"date": "2026-11-06 (Atlas refinement)", "items": ["Each Atlas structure is marked Core, Reference only or Needs verification.", "Reference-only structures are hidden by default; one button shows them.", "Compare structures: where a slide draws a molecule differently, see both side by side.", "Hide or reveal the shaded key features to practise spotting them.", "Clearer explanations on the sun-exposure questions."]}, {"date": "2026-11-06 (Atlas and sun exposure)", "items": ["Atlas tab: 91 of Dr. Sikazwe's structures, drawn to one scale, with the taught feature shaded.", "Hide names in the Atlas to quiz yourself on each structure.", "Dr. Smith's sun-exposure lecture: UVA/UVB, SPF, MED, sunblocks vs sunscreens, psoralens.", "Some structure questions now show the drawing before you answer."]}, {"date": "2026-11-05 (Lectures 2\u20134)", "items": ["Lecture 2 (Smith 10/30): retinoids, calcipotriene, calcineurin inhibitors, PDE-4 inhibitors, keratolytics.", "Lecture 3 (Smith 11/03): acne antibiotics, tars and anthralin, methotrexate, biologics, JAK inhibitors.", "Lectures 3\u20134 (Sikazwe 11/03\u201311/04): structures, SAR, prodrugs, CYP3A4, hydroxy acids, retinoids, sunscreens.", "New tell-apart and reference tables for each lecture; Exam 1 paper now draws from both professors."]}, {"date": "2026-11-05 (Lecture 1 preview)", "items": ["Lecture 1 (Dr. Smith, 10/29): skin structure, AD, psoriasis, acne, nuclear receptor binders, steroids, retinoids.", "Step-through figures: the acne lesion cascade and direct vs indirect nuclear receptor action.", "Tell-apart and reference tables for Lecture 1; her polls on the major pathology of AD and psoriasis.", "Exam 1 practice paper is unweighted: the faculty have not announced a split by professor."]}], preview:true};
+const BUILD = {stamp:"2026-11-08 02:36 CT", built:"2026-11-08T08:36:57Z", questions:595, images:1, changelog:[{"date": "2026-11-08 (Guides and Topics by deck)", "items": ["Topics now grouped under the four slide decks, each topic named after the deck's own section, in slide order.", "Guides rewritten: one section per learning objective of each Smith deck, plus Dr. Sikazwe's assigned pages.", "Guides: drugs per disease, each class's target and why it helps, within-class differences, interactions.", "Guides: boxed warnings, side effects and contraindications by drug, each with its slide.", "Guides: sun deck objectives (UVA vs UVB, MED, SPF, broad spectrum, substantivity, sunblock vs sunscreen).", "Guides link to the matching Tell apart, Reference, Drug list and Atlas sections.", "Tell apart: new tables on sun protection and on boxed warnings, pregnancy limits and interactions.", "Reference: new sun table of SPF blocking, skin types with their SPF, and substantivity by vehicle.", "Diagrams: acne cascade labels moved off the arrows; nuclear receptor figure redrawn so the bound drug shows."]}, {"date": "2026-11-08 (Likely-on-the-exam stars)", "items": ["109 questions starred as likely on Exam 1, each with its reason and source; Claude's prediction, not an official list.", "Topics: drill all starred questions, or only Dr. Smith's or Dr. Sikazwe's."]}, {"date": "2026-11-08 (Drug List)", "items": ["New Drug list tab: all 79 drugs on the dermatology chart (pp. 1\u20136), searchable by generic or brand name.", "Filter the Drug list by disease, class, chart page, Exam 1 taught or optional, boxed warning, photosensitizing.", "Recall mode: write a drug's target first, then Reveal to compare; your typing is not graded or saved.", "Each Drug list line names its source: Dr. Smith's slide, Dr. Sikazwe's page or the drug chart.", "From a drug card: practise exactly its questions, open its Reference row, reading section or Atlas tile.", "Flashcards: step through the filtered drugs one card at a time; no score, nothing saved.", "Spironolactone: Dr. Smith's class and Dr. Sikazwe's biosynthesis mechanism are shown as separate statements.", "Sunscreen family matching item now credits the drug chart for the pairings; it stays off practice papers."]}, {"date": "2026-11-07 (Dr. Smith's Exam 1 hints)", "items": ["32 new questions on Dr. Smith's hint list: epidemiology, disease triggers, drug targets, why each MOA helps.", "New questions on boxed warnings: cyclosporine's two parts, TNF-\u03b1 in children, which drugs carry one.", "New sun questions: sunblock vs sunscreen by ingredient, critical wavelength, UVA vs UVB, photosensitizing drugs.", "8 matching questions pair drugs with their targets, structures or families, for her fill-in-the-blank items.", "Reference: \"Drug targets: write it first, then check\" lists every drug-chart drug with its target to reveal.", "The sun-exposure lecture is now confirmed for Exam 1 by Dr. Smith's hints; the provisional label is gone.", "Exam text now gives Dr. Smith's format: mostly multiple choice, a few fill-in-the-blanks on targets, no essays."]}, {"date": "2026-11-06 (optional practice beyond the assigned slides)", "items": ["New topic \"Beyond the Exam 1 assigned pages (Dr. Sikazwe, optional)\" holds his 23 unassigned-slide questions.", "Those 23 no longer count toward the Exam 1 pool cards on Weak spots or the exam-date review timing.", "Practice papers draw single-answer questions; the exam text now says the official format split is not announced."]}, {"date": "2026-11-06 (Dr. Sikazwe's assigned pages)", "items": ["Dr. Sikazwe's assigned slides for Exam 1 (11/06) applied: 23 questions outside them now stay off practice exams.", "Those 23 stay in practice, each with a note saying it is outside his assigned pages.", "Atlas tiles outside his assigned pages now say \"Not on the assigned pages\" (9 structures)."]}, {"date": "2026-11-06 (reading links)", "items": ["Weak spots and \"Explain more\" now point to a reading section for 397 of 555 questions (was 35).", "Sikazwe's Lectures 3 and 4 questions now link to their Tell apart and Reference tables.", "Lecture 2 and 3 questions now link to Dr. Smith's Lecture 2 and 3 tables; Lecture 1 ones to the objective guides.", "Fixed links that sent some IL-23, salicylic acid and drug-class questions to the wrong table."]}, {"date": "2026-11-06 (Atlas layout)", "items": ["Each Atlas tile now reads in order: core learning, also in the lecture, then collapsed extras.", "Slide and transcript citations moved out of the tile text into a collapsed Sources and verification part.", "Hydrocortisone and cortisone: optional \"Deeper understanding\" on the two 11\u03b2-HSD enzymes, not tested.", "The structure count follows the search and the reference-only filter; an empty search says why.", "A one-line legend explains Core, Reference only and Needs verification.", "Hide names: headings, labels and drawing descriptions no longer give the answer away.", "Hide names: reveal a structure from the keyboard (Tab, then Enter or Space).", "Long structure names no longer make the Atlas wider than a phone screen."]}, {"date": "2026-11-06 (PubChem check)", "items": ["Every Atlas structure was checked against PubChem; each tile names its PubChem record and status.", "Compare structures names the PubChem record of the lecture drawing where one exists."]}, {"date": "2026-11-06 (Atlas refinement)", "items": ["Each Atlas structure is marked Core, Reference only or Needs verification.", "Reference-only structures are hidden by default; one button shows them.", "Compare structures: where a slide draws a molecule differently, see both side by side.", "Hide or reveal the shaded key features to practise spotting them.", "Clearer explanations on the sun-exposure questions."]}, {"date": "2026-11-06 (Atlas and sun exposure)", "items": ["Atlas tab: 91 of Dr. Sikazwe's structures, drawn to one scale, with the taught feature shaded.", "Hide names in the Atlas to quiz yourself on each structure.", "Dr. Smith's sun-exposure lecture: UVA/UVB, SPF, MED, sunblocks vs sunscreens, psoralens.", "Some structure questions now show the drawing before you answer."]}, {"date": "2026-11-05 (Lectures 2\u20134)", "items": ["Lecture 2 (Smith 10/30): retinoids, calcipotriene, calcineurin inhibitors, PDE-4 inhibitors, keratolytics.", "Lecture 3 (Smith 11/03): acne antibiotics, tars and anthralin, methotrexate, biologics, JAK inhibitors.", "Lectures 3\u20134 (Sikazwe 11/03\u201311/04): structures, SAR, prodrugs, CYP3A4, hydroxy acids, retinoids, sunscreens.", "New tell-apart and reference tables for each lecture; Exam 1 paper now draws from both professors."]}, {"date": "2026-11-05 (Lecture 1 preview)", "items": ["Lecture 1 (Dr. Smith, 10/29): skin structure, AD, psoriasis, acne, nuclear receptor binders, steroids, retinoids.", "Step-through figures: the acne lesion cascade and direct vs indirect nuclear receptor action.", "Tell-apart and reference tables for Lecture 1; her polls on the major pathology of AD and psoriasis.", "Exam 1 practice paper is unweighted: the faculty have not announced a split by professor."]}], preview:true};
 const IMAGES = {"s4-polleve3": "data:image/webp;base64,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"};
 /* Atlas of drawn structures for PHAR 4346 DEENT (Dr. Sikazwe's medicinal
    chemistry). GENERATED by gen_atlas.py from atlas_data.json and atlas_ui.js:
@@ -3356,14 +3358,14 @@ const ACNE_CASCADE = (() => {
   const box = (x, y, w, t, k) => `<rect class="box" data-k="b${k}" x="${x}" y="${y}" width="${w}" height="26" rx="6"/>` +
     `<text class="lbl sm" data-k="t${k}" x="${x + w / 2}" y="${y + 17}" text-anchor="middle">${t}</text>`;
   const arr = (d, k) => `<path class="arrow" data-k="a${k}" d="${d}"/>`;
-  const why = (x, y, t, k) => `<text class="lbl xs" data-k="w${k}" x="${x}" y="${y}" text-anchor="middle">${t}</text>`;
+  const why = (x, y, t, k, a = 'middle') => `<text class="lbl xs" data-k="w${k}" x="${x}" y="${y}" text-anchor="${a}">${t}</text>`;
   const s1 = box(10, 22, 100, 'Normal follicle', 1);
   const s2 = s1 + arr('M112 35 L238 35', 1) + why(175, 30, 'abnormal keratinization', 1) + box(240, 22, 110, 'Microcomedone', 2);
-  const s3 = s2 + arr('M295 50 L295 76', 2) + why(312, 66, 'more sebum', 2) + box(240, 78, 110, 'Closed comedone', 3);
+  const s3 = s2 + arr('M295 50 L295 76', 2) + why(289, 66, 'more sebum', 2, 'end') + box(240, 78, 110, 'Closed comedone', 3);
   const s4 = s3 + arr('M238 91 L112 91', 3) + why(175, 86, 'opens: dilated pore', 3) + box(10, 78, 100, 'Open comedone', 4);
-  const s5 = s4 + arr('M295 106 L295 132', 4) + box(240, 134, 110, 'Papule', 5) +
+  const s5 = s4 + arr('M295 106 L295 132', 4) + why(289, 122, 'does not open', 4, 'end') + box(240, 134, 110, 'Papule', 5) +
     arr('M238 147 L112 147', 5) + why(175, 142, 'pus: dilated pore', 5) + box(10, 134, 100, 'Pustule', 6);
-  const s6 = s5 + arr('M295 162 L295 188', 6) + why(326, 178, 'foreign body response', 6) + box(240, 190, 110, 'Nodule or cyst', 7);
+  const s6 = s5 + arr('M295 162 L295 188', 6) + why(289, 178, 'foreign body response', 6, 'end') + box(240, 190, 110, 'Nodule or cyst', 7);
   return stepper('acne-cascade', 'Cascade of acne lesions', [
     ['A normal follicle: keratinocytes move up and shed, and sebum flows out.', s1],
     ['Abnormal keratinization: cells stick in the follicle and form a microcomedone.', s2],
@@ -3374,28 +3376,33 @@ const ACNE_CASCADE = (() => {
   ], 262, 'After Skin-Pathophys-Students-2026.pdf slide 34 (DiPiro, Pharmacotherapy 12e); lecture 10/29, T 452–471.');
 })();
 
-/* ---------- Nuclear receptor: direct and indirect action (Skin-PCol slides 5–6) -- */
+/* ---------- Nuclear receptor: direct and indirect action (Skin-PCol slides 5–6) --
+   Each drug–receptor complex is a receptor box with the drug drawn on top of
+   it, so the drug stays visible once it is bound. The first complex keeps its
+   data-k ('drug', 'r1') from step 1 to step 4, so it glides from the cytoplasm
+   onto the GRE; the labels sit under the shape they name, inside the panel. */
 const NR_ACTION = (() => {
   const box = (x, y, w, h, k) => `<rect class="box" data-k="${k}" x="${x}" y="${y}" width="${w}" height="${h}" rx="6"/>`;
-  const lbl = (x, y, t, k, c = 'lbl sm') => `<text class="${c}" data-k="${k}" x="${x}" y="${y}" text-anchor="middle">${t}</text>`;
-  const nucleus = box(10, 96, 340, 92, 'nuc') + lbl(180, 182, 'Nucleus (DNA)', 'nucl', 'lbl xs');
-  const drug = (x, y) => `<circle class="mark" data-k="drug" cx="${x}" cy="${y}" r="8"/>` + lbl(x, y - 12, 'drug', 'dl', 'lbl xs');
-  const rec = (x, y, k) => box(x - 22, y - 10, 44, 20, k) + lbl(x, y + 4, 'receptor', 'l' + k, 'lbl xs');
-  const s1 = nucleus + drug(60, 34) + rec(180, 60, 'r1');
-  const s2 = nucleus + `<circle class="mark" data-k="drug" cx="168" cy="60" r="8"/>` + rec(180, 60, 'r1') +
-    lbl(270, 64, 'drug–receptor complex', 'cx', 'lbl xs');
-  const dir = nucleus + box(60, 128, 90, 22, 'gre') + lbl(105, 143, 'GRE', 'grel') +
-    `<circle class="mark" data-k="drug" cx="86" cy="116" r="7"/><circle class="mark" data-k="drug2" cx="124" cy="116" r="7"/>` +
-    lbl(105, 172, 'two complexes: genes up or down', 'dtxt', 'lbl xs');
-  const ind = dir + box(210, 128, 110, 22, 'tf') + lbl(265, 143, 'NF-kB / AP-1', 'tfl') +
-    `<circle class="mark" data-k="drug3" cx="265" cy="116" r="7"/>` +
-    lbl(265, 172, 'one complex holds the factor off DNA', 'itxt', 'lbl xs');
+  const lbl = (x, y, t, k, c = 'lbl sm', a = 'middle') => `<text class="${c}" data-k="${k}" x="${x}" y="${y}" text-anchor="${a}">${t}</text>`;
+  const nucleus = box(10, 104, 340, 100, 'nuc') + lbl(18, 117, 'Nucleus (DNA)', 'nucl', 'lbl xs', 'start');
+  const dot = (x, y, k) => `<circle class="mark" data-k="${k}" cx="${x}" cy="${y}" r="7"/>`;
+  // a complex: the receptor box, then the drug on its left end
+  const cx = (x, y, n) => box(x - 20, y - 8, 40, 16, 'r' + n) + dot(x - 11, y, n === 1 ? 'drug' : 'drug' + n);
+  const s1 = nucleus + dot(60, 42, 'drug') + lbl(60, 62, 'drug', 'dl', 'lbl xs') +
+    box(158, 52, 64, 20, 'r1') + lbl(190, 66, 'receptor', 'rl', 'lbl xs');
+  const s2 = nucleus + box(158, 52, 64, 20, 'r1') + lbl(196, 66, 'receptor', 'rl', 'lbl xs') + dot(168, 62, 'drug') +
+    lbl(190, 88, 'drug–receptor complex', 'cxl', 'lbl xs');
+  const gre = box(45, 150, 110, 22, 'gre') + lbl(100, 165, 'GRE', 'grel');
+  const dir = nucleus + gre + cx(75, 140, 1) + cx(125, 140, 2) +
+    lbl(100, 186, 'two complexes on the GRE:', 'dt1', 'lbl xs') + lbl(100, 197, 'genes up or down', 'dt2', 'lbl xs');
+  const ind = dir + box(205, 150, 120, 22, 'tf') + lbl(265, 165, 'NF-kB / AP-1', 'tfl') + cx(265, 140, 3) +
+    lbl(265, 186, 'one complex on the factor:', 'it1', 'lbl xs') + lbl(265, 197, 'factor kept off the DNA', 'it2', 'lbl xs');
   return stepper('nr-action', 'Nuclear receptor binders: direct and indirect', [
     ['The drug crosses the cell membrane to reach its receptor inside the cell.', s1],
     ['Drug and receptor form a drug–receptor complex.', s2],
     ['Direct: two complexes bind a response element (glucocorticoid: GRE) and raise anti-inflammatory or lower inflammatory gene expression.', dir],
     ['Indirect: one complex binds a transcription factor (NF-kB, AP-1) so it cannot drive inflammatory genes at the TRE.', ind],
-  ], 230, 'After Skin-PCol-Students-2026.pdf slides 5–6; lecture 10/29, T 639–746.');
+  ], 250, 'After Skin-PCol-Students-2026.pdf slides 5–6; lecture 10/29, T 639–746.');
 })();
 
 const DIA = {
@@ -3404,8 +3411,8 @@ const DIA = {
 };
 
 const DIAGRAMS = [
-  ['Lecture 1: pathophysiology (Smith)', ['acne-cascade']],
-  ['Lecture 1: pharmacology (Smith)', ['nr-action']],
+  ['Skin Pathophysiology (Dr. Smith)', ['acne-cascade']],
+  ['Skin Pharmacology (Dr. Smith)', ['nr-action']],
 ];
 
 const DIA_NAMES = {};
@@ -3422,53 +3429,74 @@ const DIA_NAMES = {};
    topical steroid products (medicinal chemistry, Lectures 3-4 per the syllabus).
    ========================================================================== */
 const TOPICS = [
- {id:'skin', name:'Skin structure and sebum', prof:'Smith', open:true,
-  cite:'Lecture 1 (10/29) — Skin-Pathophys-Students-2026.pdf, slides 5–6',
+ {id:'skin', name:'Review of skin anatomy: layers and sebum', prof:'Smith', open:true,
+  cite:'slides 5–6 · taught 10/29 (Lecture 1)',
   subs:[
-   {id:'layers', name:'Layers and keratinocytes', cite:'slide 5'},
-   {id:'sebum',  name:'Sebaceous gland and sebum', cite:'slide 6'}]},
+   {id:'layers', name:'Anatomy of the skin', cite:'slide 5'},
+   {id:'sebum',  name:'Skin structures: sebum', cite:'slide 6'}]},
  {id:'ad', name:'Atopic dermatitis', prof:'Smith',
-  cite:'Lecture 1 (10/29) — Skin-Pathophys-Students-2026.pdf, slides 8–17',
+  cite:'slides 8–17 · taught 10/29 (Lecture 1)',
   subs:[
-   {id:'clin',  name:'Definition, epidemiology, signs, triggers', cite:'slides 8–12'},
-   {id:'path',  name:'Barrier, T cells, IgE and cytokines', cite:'slides 13, 16'},
-   {id:'gene',  name:'Genetics and filaggrin', cite:'slides 14–15'},
-   {id:'drugs', name:'Drug classes for AD', cite:'slide 17'}]},
+   {id:'clin',  name:'Introduction, epidemiology, signs and symptoms, exacerbating factors', cite:'slides 8–12'},
+   {id:'path',  name:'Etiology and pathophysiology: immune system', cite:'slides 13, 16'},
+   {id:'gene',  name:'Etiology and pathophysiology: genetics and FLG', cite:'slides 14–15'},
+   {id:'drugs', name:'Medications for treating atopic dermatitis', cite:'slide 17'}]},
  {id:'pso', name:'Psoriasis', prof:'Smith',
-  cite:'Lecture 1 (10/29) — Skin-Pathophys-Students-2026.pdf, slides 19–28',
+  cite:'slides 19–28 · taught 10/29 (Lecture 1)',
   subs:[
-   {id:'clin',  name:'Definition and epidemiology', cite:'slides 19–20'},
-   {id:'path',  name:'Immune pathway and cell cycle', cite:'slides 21–23'},
-   {id:'fact',  name:'Contributing factors, nails and joints', cite:'slides 24, 26'},
-   {id:'tx',    name:'Treatment rationale and drug classes', cite:'slides 27–28'}]},
+   {id:'clin',  name:'Introduction and epidemiology', cite:'slides 19–20'},
+   {id:'path',  name:'Etiology and pathophysiology', cite:'slides 21–23'},
+   {id:'fact',  name:'Contributing factors; nail psoriasis and psoriatic arthritis', cite:'slides 24, 26'},
+   {id:'tx',    name:'Treatment rationale and medications for treating psoriasis', cite:'slides 27–28'}]},
  {id:'acne', name:'Acne', prof:'Smith',
-  cite:'Lecture 1 (10/29) — Skin-Pathophys-Students-2026.pdf, slides 30–37',
+  cite:'slides 30–37 · taught 10/29 (Lecture 1)',
   subs:[
-   {id:'clin',  name:'Definition and epidemiology', cite:'slides 30–31'},
-   {id:'path',  name:'The four factors and P. acnes', cite:'slides 32–33'},
-   {id:'casc',  name:'Lesion cascade and exacerbating factors', cite:'slides 34–35'},
-   {id:'drugs', name:'Pathology-to-drug map', cite:'slides 36–37'}]},
- {id:'cmp', name:'The three diseases compared', prof:'Smith',
-  cite:'Lecture 1 (10/29) — Skin-Pathophys-Students-2026.pdf, slides 19, 38',
+   {id:'clin',  name:'Acne vulgaris and epidemiology', cite:'slides 30–31'},
+   {id:'path',  name:'Etiology and pathophysiology', cite:'slides 32–33'},
+   {id:'casc',  name:'Pathogenesis cascade and exacerbating factors', cite:'slides 34–35'},
+   {id:'drugs', name:'Pathogenesis and drug mechanisms; medications for treating acne', cite:'slides 36–37'}]},
+ {id:'cmp', name:'PollEv: the major pathology of each disease', prof:'Smith',
+  cite:'slides 19, 38 · taught 10/29 (Lecture 1)',
   subs:[
-   {id:'poll', name:'Her polls on the major pathology', cite:'slide 38'},
-   {id:'diff', name:'What separates them', cite:'slides 10, 19–20, 31'}]},
- {id:'nrb', name:'Nuclear receptor binders', prof:'Smith',
-  cite:'Lecture 1 (10/29) — Skin-PCol-Students-2026.pdf, slides 5–7',
+   {id:'poll', name:'PollEv: major pathology of AD, psoriasis and acne', cite:'slide 38'},
+   {id:'diff', name:'What separates the three diseases', cite:'slides 10, 19–20, 31'}]},
+ {id:'nrb', name:'Nuclear receptor binders: how they act', prof:'Smith',
+  cite:'slides 5–7 · taught 10/29 (Lecture 1)',
   subs:[
    {id:'mech', name:'Direct and indirect action', cite:'slides 5–6'},
    {id:'recs', name:'Receptors and response elements', cite:'slide 7'}]},
- {id:'cs', name:'Corticosteroids', prof:'Smith',
-  cite:'Lecture 1 (10/29) — Skin-PCol-Students-2026.pdf, slides 8–12',
+ {id:'cs', name:'Nuclear receptor binders: corticosteroids', prof:'Smith',
+  cite:'slides 8–12 · taught 10/29 (Lecture 1)',
   subs:[
    {id:'mech', name:'Uses and mechanism', cite:'slides 8–10'},
    {id:'top',  name:'Topical use', cite:'slide 11'},
    {id:'ae',   name:'Topical adverse effects', cite:'slide 12'}]},
- {id:'ret', name:'Retinoids: mechanism', prof:'Smith',
-  cite:'Lecture 1 (10/29) — Skin-PCol-Students-2026.pdf, slides 14–15',
+ {id:'ret', name:'Nuclear receptor binders: retinoid mechanism', prof:'Smith',
+  cite:'slides 14–15 · taught 10/29 (Lecture 1)',
   subs:[
    {id:'rec', name:'RAR and RXR', cite:'slide 14'},
    {id:'pd',  name:'Effects in acne, psoriasis and aging', cite:'slide 15'}]},
+];
+
+/* The Topics tab groups topics under the slide deck they come from (Louis,
+   2026-11-08), in the decks' own order: Dr. Smith's pathophysiology and
+   pharmacology decks, her recorded sun-exposure deck, then Dr. Sikazwe's DPAW
+   deck. Within a deck the topics follow slide order. Topics are pushed by the
+   later question files, so this list only names them; guide.js orders TOPICS
+   by it once every file has loaded and adds the deck headings on the Topics
+   tab. A topic id missing here keeps its place after the listed ones. */
+const TOPIC_DECKS = [
+  {id:'pp', name:'Skin Pathophysiology (Dr. Smith)', file:'Skin-Pathophys-Students-2026.pdf', when:'taught 10/29',
+   topics:['skin', 'ad', 'pso', 'acne', 'cmp']},
+  {id:'pc', name:'Skin Pharmacology (Dr. Smith)', file:'Skin-PCol-Students-2026.pdf', when:'taught 10/29, 10/30, 11/03',
+   topics:['nrb', 'cs', 'ret', 'l2-tret', 'l2-oret', 'l2-vitd', 'l2-tcell', 'l2-cni', 'l2-pde', 'l2-ker',
+           'l2-abx', 'l3-abx', 'l3-fol', 'l3-cyto', 'l3-mtx', 'l3-abat', 'l3-cytok', 'l3-tnf', 'l3-jak', 'l3-sum']},
+  {id:'sun', name:'Sun Exposure and Psoralens (Dr. Smith)', file:'DEENT_Sun_Exposure_2026.pdf', when:'recorded lecture, posted after 11/03',
+   topics:['l3c-pso', 'l3c-uv', 'l3c-spf', 'l3c-prod']},
+  {id:'mc', name:'Dermatology Medicinal Chemistry (Dr. Sikazwe, DPAW)', file:'f26-DEENT-DPAW-mc.pdf', when:'taught 11/03, 11/04',
+   topics:['s3-frame', 's3-cris', 's3-jak', 's3-uv', 's3-pso', 's3-emol', 's3-anth', 's3-psor', 's3-gc', 's3-hc',
+           's4-vitd', 's4-limus', 's4-psret', 's4-mtx', 's4-sys', 's4-acne', 's4-kera', 's4-ret', 's4-horm', 's4-abx',
+           's4-sun', 'sk-beyond']},
 ];
 
 const PP = 'Lecture 1 (Skin-Pathophys-Students-2026.pdf)';
@@ -4392,48 +4420,48 @@ const QUESTIONS = [
 const D2 = 'Lecture 2 (Skin-PCol-Students-2026.pdf)';
 
 TOPICS.push(
- {id:'l2-tret', name:'Topical retinoids', prof:'Smith',
-  cite:'Lecture 2 (10/30) — Skin-PCol-Students-2026.pdf, slides 16–18',
+ {id:'l2-tret', name:'Nuclear receptor binders: topical retinoids', prof:'Smith',
+  cite:'slides 16–18 · taught 10/30 (Lecture 2)',
   subs:[
    {id:'couns', name:'Counseling: onset, amount, application', cite:'slide 16'},
    {id:'ae',    name:'Side effects and sun protection', cite:'slide 16'},
    {id:'prod',  name:'Tretinoin, adapalene, tazarotene', cite:'slides 17–18'}]},
- {id:'l2-oret', name:'Oral retinoids', prof:'Smith',
-  cite:'Lecture 2 (10/30) — Skin-PCol-Students-2026.pdf, slides 19–20',
+ {id:'l2-oret', name:'Nuclear receptor binders: oral retinoids', prof:'Smith',
+  cite:'slides 19–20 · taught 10/30 (Lecture 2)',
   subs:[
    {id:'iso', name:'Isotretinoin', cite:'slide 19'},
    {id:'aci', name:'Acitretin', cite:'slide 20'}]},
- {id:'l2-vitd', name:'Vitamin D analog: calcipotriene', prof:'Smith',
-  cite:'Lecture 2 (10/30) — Skin-PCol-Students-2026.pdf, slides 21–22',
+ {id:'l2-vitd', name:'Nuclear receptor binders: vitamin D analog (calcipotriene)', prof:'Smith',
+  cite:'slides 21–22 · taught 10/30 (Lecture 2)',
   subs:[
    {id:'mech',  name:'Mechanism and pharmacological effect', cite:'slide 21'},
    {id:'ae',    name:'Topical and systemic side effects', cite:'slide 22'},
    {id:'recap', name:'The three nuclear receptor binding classes', cite:'slides 21–22'}]},
  {id:'l2-tcell', name:'Calcineurin inhibitors: T-cell signals and mechanism', prof:'Smith',
-  cite:'Lecture 2 (10/30) — Skin-PCol-Students-2026.pdf, slides 23–26',
+  cite:'slides 23–26 · taught 10/30 (Lecture 2)',
   subs:[
    {id:'intro', name:'Uses and general action', cite:'slide 24'},
    {id:'sig',   name:'Signals 1, 2 and 3', cite:'slide 25'},
    {id:'mech',  name:'Calcineurin, NFAT and the immunophilins', cite:'slide 26'}]},
- {id:'l2-cni', name:'Calcineurin inhibitor products', prof:'Smith',
-  cite:'Lecture 2 (10/30) — Skin-PCol-Students-2026.pdf, slides 27–30',
+ {id:'l2-cni', name:'Calcineurin inhibitors: topical and oral products', prof:'Smith',
+  cite:'slides 27–30 · taught 10/30 (Lecture 2)',
   subs:[
    {id:'top',  name:'Topical pimecrolimus and tacrolimus', cite:'slides 27–28'},
    {id:'oral', name:'Oral cyclosporine and tacrolimus', cite:'slides 29–30'}]},
  {id:'l2-pde', name:'PDE-4 inhibitors', prof:'Smith',
-  cite:'Lecture 2 (10/30) — Skin-PCol-Students-2026.pdf, slides 31–34',
+  cite:'slides 31–34 · taught 10/30 (Lecture 2)',
   subs:[
    {id:'mech', name:'cAMP and inflammatory cells', cite:'slide 32'},
    {id:'cris', name:'Crisaborole', cite:'slide 33'},
    {id:'apr',  name:'Apremilast', cite:'slide 34'}]},
  {id:'l2-ker', name:'Keratolytics', prof:'Smith',
-  cite:'Lecture 2 (10/30) — Skin-PCol-Students-2026.pdf, slides 35–40',
+  cite:'slides 35–40 · taught 10/30 (Lecture 2)',
   subs:[
    {id:'bpo', name:'Benzoyl peroxide', cite:'slides 35–37'},
    {id:'sul', name:'Sulfur', cite:'slide 38'},
    {id:'sal', name:'Salicylic acid', cite:'slides 39–40'}]},
- {id:'l2-abx', name:'Acne antibiotics: the ribosome', prof:'Smith',
-  cite:'Lecture 2 (10/30) — Skin-PCol-Students-2026.pdf, slides 41–42',
+ {id:'l2-abx', name:'Antibiotics/antimicrobials: the bacterial ribosome', prof:'Smith',
+  cite:'slides 41–42 · taught 10/30 (Lecture 2)',
   subs:[
    {id:'ribo', name:'Binding sites on the bacterial ribosome', cite:'slides 41–42'}]}
 );
@@ -5767,48 +5795,48 @@ QUESTIONS.push(
 const D3 = 'Lecture 3 (Skin-PCol-Students-2026.pdf)';
 
 TOPICS.push(
- {id:'l3-abx', name:'Acne antibiotics on the ribosome', prof:'Smith',
-  cite:'Lecture 3 (11/03) — Skin-PCol-Students-2026.pdf, slides 43–47',
+ {id:'l3-abx', name:'Antibiotics/antimicrobials: tetracyclines, clindamycin, macrolides', prof:'Smith',
+  cite:'slides 43–47 · taught 11/03 (Lecture 3)',
   subs:[
    {id:'tet',    name:'Tetracyclines', cite:'slides 43–45'},
    {id:'clinda', name:'Clindamycin', cite:'slide 46'},
    {id:'macro',  name:'Macrolides', cite:'slide 47'}]},
- {id:'l3-fol', name:'Folate-pathway antimicrobials, dapsone, metronidazole', prof:'Smith',
-  cite:'Lecture 3 (11/03) — Skin-PCol-Students-2026.pdf, slides 48–51',
+ {id:'l3-fol', name:'Antibiotics/antimicrobials: TMP/SMX, dapsone, metronidazole', prof:'Smith',
+  cite:'slides 48–51 · taught 11/03 (Lecture 3)',
   subs:[
    {id:'tmpsmx', name:'Trimethoprim/sulfamethoxazole', cite:'slides 48–49'},
    {id:'dap',    name:'Dapsone', cite:'slide 50'},
    {id:'metro',  name:'Metronidazole', cite:'slide 51'}]},
  {id:'l3-cyto', name:'Antipsoriatic cytotoxic agents', prof:'Smith',
-  cite:'Lecture 3 (11/03) — Skin-PCol-Students-2026.pdf, slides 52–57',
+  cite:'slides 52–57 · taught 11/03 (Lecture 3)',
   subs:[
    {id:'coal',  name:'Coal tar', cite:'slides 53–54'},
    {id:'anth',  name:'Anthralin and SCAT', cite:'slides 55–56'},
    {id:'other', name:'Shale tar, selenium sulfide, zinc pyrithione', cite:'slide 57'}]},
- {id:'l3-mtx', name:'Methotrexate', prof:'Smith',
-  cite:'Lecture 3 (11/03) — Skin-PCol-Students-2026.pdf, slides 58–61',
+ {id:'l3-mtx', name:'Dihydrofolate reductase inhibitor: methotrexate', prof:'Smith',
+  cite:'slides 58–61 · taught 11/03 (Lecture 3)',
   subs:[
    {id:'mech', name:'Mechanism and folate cycle', cite:'slides 59–60'},
    {id:'ae',   name:'Adverse effects and handling', cite:'slide 61'}]},
- {id:'l3-abat', name:'Abatacept and co-stimulation', prof:'Smith',
-  cite:'Lecture 3 (11/03) — Skin-PCol-Students-2026.pdf, slides 62–63',
+ {id:'l3-abat', name:'Fusion proteins, monoclonals, small molecules: abatacept', prof:'Smith',
+  cite:'slides 62–63 · taught 11/03 (Lecture 3)',
   subs:[
    {id:'sig',  name:'Signal 1 and positive or negative signal 2', cite:'slide 63'},
    {id:'drug', name:'Abatacept structure and mechanism', cite:'slide 63'}]},
- {id:'l3-cytok', name:'Cytokine antagonists: IL-4Rα, IL-17, IL-12/23, IL-23', prof:'Smith',
-  cite:'Lecture 3 (11/03) — Skin-PCol-Students-2026.pdf, slides 64–69',
+ {id:'l3-cytok', name:'Fusion proteins, monoclonals, small molecules: IL-4Rα, IL-17, IL-12/23, IL-23', prof:'Smith',
+  cite:'slides 64–69 · taught 11/03 (Lecture 3)',
   subs:[
    {id:'dup',  name:'Dupilumab', cite:'slide 64'},
    {id:'il17', name:'IL-17 inhibitors', cite:'slides 65–66'},
    {id:'il23', name:'Ustekinumab and IL-23 inhibitors', cite:'slides 67–69'},
    {id:'make', name:'Cytokine or receptor; human, humanized or chimeric', cite:'slides 64–74'}]},
- {id:'l3-tnf', name:'TNF-alpha inhibitors', prof:'Smith',
-  cite:'Lecture 3 (11/03) — Skin-PCol-Students-2026.pdf, slides 70–74',
+ {id:'l3-tnf', name:'Fusion proteins, monoclonals, small molecules: TNF-alpha inhibitors', prof:'Smith',
+  cite:'slides 70–74 · taught 11/03 (Lecture 3)',
   subs:[
    {id:'class', name:'TNF-α and the class black box warning', cite:'slide 70'},
    {id:'drugs', name:'Etanercept, infliximab, adalimumab, golimumab, certolizumab pegol', cite:'slides 71–74'}]},
- {id:'l3-jak', name:'JAK inhibitors', prof:'Smith',
-  cite:'Lecture 3 (11/03) — Skin-PCol-Students-2026.pdf, slides 75–76',
+ {id:'l3-jak', name:'Fusion proteins, monoclonals, small molecules: JAK inhibitors', prof:'Smith',
+  cite:'slides 75–76 · taught 11/03 (Lecture 3)',
   subs:[
    {id:'mech',  name:'JAK and cytokine receptor signaling', cite:'slide 75'},
    {id:'drugs', name:'Tofacitinib, ruxolitinib, upadacitinib', cite:'slide 76'}]}
@@ -7037,8 +7065,8 @@ QUESTIONS.push(
    differences, why each MOA helps, boxed warnings. "10/30 T" = line numbers of
    DEENT_10_30_Lecture_Only_Transcript.txt; plain "T" = the 11/03 transcript. */
 TOPICS.push(
- {id:'l3-sum', name:'Across her pharmacology lectures: targets and boxed warnings', prof:'Smith',
-  cite:'Lectures 1–3 — Skin-PCol-Students-2026.pdf, slides 14–78', subs:[
+ {id:'l3-sum', name:'Across the deck: drug targets and boxed warnings', prof:'Smith',
+  cite:'slides 14–78 · Lectures 1–3', subs:[
    {id:'tgt', name:'Drug targets and what sets drugs apart (matching)', cite:'slides 14–78'},
    {id:'bbw', name:'Which drugs carry a black box warning', cite:'slides 30, 70, 76'}]}
 );
@@ -7262,56 +7290,56 @@ QUESTIONS.push(
    percentage means more potent" rule.
    ========================================================================== */
 TOPICS.push(
- {id:'s3-frame', name:'Med chem framing: PPCP and chemical class', prof:'Sikazwe',
-  cite:'Lecture 3 (11/03) — f26-DEENT-DPAW-mc.pdf, slide 3',
+ {id:'s3-frame', name:'Objectives: PPCP, chemical class, interactions', prof:'Sikazwe',
+  cite:'p. 3 · taught 11/03 (Lecture 3)',
   subs:[
    {id:'plan', name:'Chemical class and CYP interactions in the plan', cite:'slide 3'}]},
- {id:'s3-cris', name:'Crisaborole: a soft drug', prof:'Sikazwe',
-  cite:'Lecture 3 (11/03) — f26-DEENT-DPAW-mc.pdf, slides 7, 9',
+ {id:'s3-cris', name:'Eczema pharmacotherapy: crisaborole, a soft drug', prof:'Sikazwe',
+  cite:'pp. 7, 9 · taught 11/03 (Lecture 3)',
   subs:[
    {id:'chem', name:'Benzoxaborole and soft drug', cite:'slide 7'},
    {id:'adme', name:'Log P, half-life, deboronation, two enzymes', cite:'slide 7'},
    {id:'poll', name:'Polleve-1: phase 2 steps', cite:'slide 9'},
    {id:'cbda', name:'Boron binding Zn and Mg in PDE4', cite:'slide 7'}]},
- {id:'s3-jak', name:'Ruxolitinib and upadacitinib', prof:'Sikazwe',
-  cite:'Lecture 3 (11/03) — f26-DEENT-DPAW-mc.pdf, slide 8',
+ {id:'s3-jak', name:'Eczema pharmacotherapy: ruxolitinib and upadacitinib', prof:'Sikazwe',
+  cite:'p. 8 · taught 11/03 (Lecture 3)',
   subs:[
    {id:'chem', name:'Chemical class and formulation', cite:'slide 8'},
    {id:'adme', name:'Half-life, CYP3A4, active metabolites', cite:'slide 8'}]},
- {id:'s3-uv', name:'UV radiation and terms', prof:'Sikazwe',
-  cite:'Lecture 3 (11/03) — f26-DEENT-DPAW-mc.pdf, slide 12',
+ {id:'s3-uv', name:'Psoriasis: UV radiation and terms', prof:'Sikazwe',
+  cite:'p. 12 · taught 11/03 (Lecture 3)',
   subs:[
    {id:'uvr',   name:'UVA, UVB, UVC and ozone', cite:'slide 12'},
    {id:'terms', name:'PUVA and antimetabolite', cite:'slide 12'}]},
- {id:'s3-pso', name:'Psoriasis: drugs', prof:'Sikazwe',
-  cite:'Lecture 3 (11/03) — f26-DEENT-DPAW-mc.pdf, slide 14',
+ {id:'s3-pso', name:'Psoriasis pharmacotherapy: topical and systemic agents', prof:'Sikazwe',
+  cite:'p. 14 · taught 11/03 (Lecture 3)',
   subs:[
    {id:'drugs', name:'Topical and systemic agents', cite:'slide 14'}]},
- {id:'s3-emol', name:'Emollients and tars', prof:'Sikazwe',
-  cite:'Lecture 3 (11/03) — f26-DEENT-DPAW-mc.pdf, slides 15–16',
+ {id:'s3-emol', name:'Psoriasis topical agents: emollients and tars', prof:'Sikazwe',
+  cite:'pp. 15–16 · taught 11/03 (Lecture 3)',
   subs:[
    {id:'emol', name:'Petrolatum, lanolin, silicones', cite:'slide 15'},
    {id:'tar',  name:'Coal, shale and wood tars', cite:'slide 16'}]},
- {id:'s3-anth', name:'Anthralin', prof:'Sikazwe',
-  cite:'Lecture 3 (11/03) — f26-DEENT-DPAW-mc.pdf, slides 17, 19',
+ {id:'s3-anth', name:'Psoriasis topical agents: anthralin', prof:'Sikazwe',
+  cite:'pp. 17, 19 · taught 11/03 (Lecture 3)',
   subs:[
    {id:'chem', name:'Hydroxyanthrone, formulations, log P', cite:'slide 17'},
    {id:'cbda', name:'Autoxidation radicals and staining', cite:'slide 17'}]},
- {id:'s3-psor', name:'Psoralens (methoxsalen)', prof:'Sikazwe',
-  cite:'Lecture 3 (11/03) — f26-DEENT-DPAW-mc.pdf, slides 18–19',
+ {id:'s3-psor', name:'Psoriasis topical agents: psoralens (8-MOP)', prof:'Sikazwe',
+  cite:'pp. 18–19 · taught 11/03 (Lecture 3)',
   subs:[
    {id:'chem', name:'Furanocoumarin and CYP3A4', cite:'slide 18'},
    {id:'cbda', name:'DNA intercalation with UVA', cite:'slide 18'},
    {id:'poll', name:'Polleve-2: autoxidation', cite:'slide 19'}]},
- {id:'s3-gc', name:'Glucocorticoid structure and SAR', prof:'Sikazwe',
-  cite:'Lecture 3 (11/03) — f26-DEENT-DPAW-mc.pdf, slides 20–23',
+ {id:'s3-gc', name:'Psoriasis topical agents: glucocorticoid structure and SAR', prof:'Sikazwe',
+  cite:'pp. 20–23 · taught 11/03 (Lecture 3)',
   subs:[
    {id:'struct', name:'Steroid skeleton and alpha/beta faces', cite:'slide 20'},
    {id:'num',    name:'Carbon numbering', cite:'slides 20–22'},
    {id:'sar',    name:'The four SAR features', cite:'slide 20'},
    {id:'gr',     name:'Hydrogen bonds in the receptor', cite:'slide 23'}]},
- {id:'s3-hc', name:'Hydrocortisone, derivatives and potency', prof:'Sikazwe',
-  cite:'Lecture 3 (11/03) — f26-DEENT-DPAW-mc.pdf, slides 24–26',
+ {id:'s3-hc', name:'Psoriasis topical agents: hydrocortisone, derivatives, potency', prof:'Sikazwe',
+  cite:'pp. 24–26 · taught 11/03 (Lecture 3)',
   subs:[
    {id:'deriv', name:'Reference molecule and derivatives', cite:'slide 24'},
    {id:'pot',   name:'Potency ranking', cite:'slide 25'},
@@ -8505,60 +8533,60 @@ QUESTIONS.push(
 const S4 = 'Lecture 4 (f26-DEENT-DPAW-mc.pdf)';
 
 TOPICS.push(
- {id:'s4-vitd', name:'Vitamin D analogs and vitamin D3 biosynthesis', prof:'Sikazwe',
-  cite:'Lecture 4 (11/04) — f26-DEENT-DPAW-mc.pdf, slide 27; Vitamin D reading (Endotext)',
+ {id:'s4-vitd', name:'Psoriasis topical agents: vitamin D analogs', prof:'Sikazwe',
+  cite:'p. 27; Vitamin D reading (Endotext) · taught 11/04 (Lecture 4)',
   subs:[
    {id:'analog', name:'Calcitriol and calcipotriene', cite:'slide 27'},
    {id:'path',   name:'Take-home: reactions, organs, enzymes', cite:'slide 27; reading lines 5–14, 60–71'}]},
- {id:'s4-limus', name:'Pimecrolimus and tacrolimus', prof:'Sikazwe',
-  cite:'Lecture 4 (11/04) — f26-DEENT-DPAW-mc.pdf, slides 28, 32',
+ {id:'s4-limus', name:'Psoriasis topical agents: pimecrolimus and tacrolimus', prof:'Sikazwe',
+  cite:'pp. 28, 32 · taught 11/04 (Lecture 4)',
   subs:[
    {id:'pk',    name:'Skin protein binding and permeation', cite:'slide 28'},
    {id:'class', name:'Lactone classification (Polleve-3)', cite:'slides 28, 32'}]},
- {id:'s4-psret', name:'Retinoids for psoriasis', prof:'Sikazwe',
-  cite:'Lecture 4 (11/04) — f26-DEENT-DPAW-mc.pdf, slide 29',
+ {id:'s4-psret', name:'Psoriasis topical/oral agents: retinoids', prof:'Sikazwe',
+  cite:'p. 29 · taught 11/04 (Lecture 4)',
   subs:[
    {id:'taz', name:'Tazarotene, acitretin, isotretinoin', cite:'slide 29'}]},
- {id:'s4-mtx', name:'Methotrexate', prof:'Sikazwe',
-  cite:'Lecture 4 (11/04) — f26-DEENT-DPAW-mc.pdf, slides 30–31',
+ {id:'s4-mtx', name:'Psoriasis systemic agents: methotrexate', prof:'Sikazwe',
+  cite:'pp. 30–31 · taught 11/04 (Lecture 4)',
   subs:[
    {id:'mech', name:'Pteridine, DHFR and folic acid', cite:'slide 30'},
    {id:'sar',  name:'MTX SAR', cite:'slide 31'}]},
- {id:'s4-sys', name:'Cyclosporine and apremilast', prof:'Sikazwe',
-  cite:'Lecture 4 (11/04) — f26-DEENT-DPAW-mc.pdf, slides 33–34',
+ {id:'s4-sys', name:'Psoriasis systemic agents: cyclosporine and apremilast', prof:'Sikazwe',
+  cite:'pp. 33–34 · taught 11/04 (Lecture 4)',
   subs:[
    {id:'csa', name:'Cyclosporine', cite:'slide 33'},
    {id:'apr', name:'Apremilast', cite:'slide 34'}]},
- {id:'s4-acne', name:'Acne: terms, components, drug groups', prof:'Sikazwe',
-  cite:'Lecture 4 (11/04) — f26-DEENT-DPAW-mc.pdf, slides 40–42',
+ {id:'s4-acne', name:'Acne: terminology, components, pharmacotherapy', prof:'Sikazwe',
+  cite:'pp. 40–42 · taught 11/04 (Lecture 4)',
   subs:[
    {id:'terms', name:'Terminology and components', cite:'slides 40–41'},
    {id:'drugs', name:'Pharmacotherapy groups', cite:'slide 42'}]},
- {id:'s4-kera', name:'Keratolytics', prof:'Sikazwe',
-  cite:'Lecture 4 (11/04) — f26-DEENT-DPAW-mc.pdf, slides 43–47',
+ {id:'s4-kera', name:'Acne: keratolytics', prof:'Sikazwe',
+  cite:'pp. 43–47 · taught 11/04 (Lecture 4)',
   subs:[
    {id:'ha',  name:'Glycolic and salicylic acid; hydroxy acid SAR', cite:'slides 43–44'},
    {id:'s',   name:'Sulfur', cite:'slide 46'},
    {id:'bpo', name:'Benzoyl peroxide', cite:'slide 47'}]},
- {id:'s4-ret', name:'Retinoids by generation', prof:'Sikazwe',
-  cite:'Lecture 4 (11/04) — f26-DEENT-DPAW-mc.pdf, slides 48–51',
+ {id:'s4-ret', name:'Acne: retinoids by generation', prof:'Sikazwe',
+  cite:'pp. 48–51 · taught 11/04 (Lecture 4)',
   subs:[
    {id:'gen',  name:'Properties and teratogenicity', cite:'slide 48'},
    {id:'g1',   name:'1st generation: tretinoin and isotretinoin', cite:'slide 49'},
    {id:'g2',   name:'2nd generation: etretinate and acitretin', cite:'slide 50'},
    {id:'g3',   name:'3rd generation and ADMET', cite:'slide 51'}]},
- {id:'s4-horm', name:'Hormones for acne', prof:'Sikazwe',
-  cite:'Lecture 4 (11/04) — f26-DEENT-DPAW-mc.pdf, slides 52–53',
+ {id:'s4-horm', name:'Acne: hormones (estrogens, antiandrogens)', prof:'Sikazwe',
+  cite:'pp. 52–53 · taught 11/04 (Lecture 4)',
   subs:[
    {id:'oc', name:'Oral contraceptives', cite:'slide 52'},
    {id:'aa', name:'Antiandrogens', cite:'slide 53'}]},
- {id:'s4-abx', name:'Antibiotics for acne', prof:'Sikazwe',
-  cite:'Lecture 4 (11/04) — f26-DEENT-DPAW-mc.pdf, slides 54–55',
+ {id:'s4-abx', name:'Acne: antibiotics', prof:'Sikazwe',
+  cite:'pp. 54–55 · taught 11/04 (Lecture 4)',
   subs:[
    {id:'misc', name:'Azelaic acid, clindamycin, erythromycin', cite:'slide 54'},
    {id:'tet',  name:'Tetracyclines', cite:'slide 55'}]},
- {id:'s4-sun', name:'UV, sunblocks and sunscreens', prof:'Sikazwe',
-  cite:'Lecture 4 (11/04) — f26-DEENT-DPAW-mc.pdf, slides 58–66',
+ {id:'s4-sun', name:'Wrinkle: sunblocks and sunscreens', prof:'Sikazwe',
+  cite:'pp. 58–66 · taught 11/04 (Lecture 4)',
   subs:[
    {id:'uv',    name:'Wrinkle causes and UV bands (Polleve-5)', cite:'slides 58–60'},
    {id:'inorg', name:'Zinc oxide and titanium dioxide', cite:'slide 61'},
@@ -8569,15 +8597,15 @@ TOPICS.push(
     which carry no questions. These carry lowYield (off practice papers) and
     unassigned (course.js pool filters: in no Exam 1 pool, so out of the pool cards on
     Weak spots and the exam-date scheduling). IDs and citations are unchanged. */
- {id:'sk-beyond', optional:true, name:'Beyond the Exam 1 assigned pages (Dr. Sikazwe, optional)', prof:'Sikazwe',
+ {id:'sk-beyond', optional:true, name:'Beyond the Exam 1 assigned pages (optional)', prof:'Sikazwe',
   cite:'Not on Dr. Sikazwe\'s assigned slides for Exam 1 (his list of 11/06). Kept for optional practice; not on Exam 1 practice papers. f26-DEENT-DPAW-mc.pdf, Lectures 3–4',
   subs:[
-   {id:'skin', name:'Functions of the skin (11/03)', cite:'slide 2'},
+   {id:'skin', name:'Review of skin anatomy: layers and sebum', cite:'slide 2'},
    {id:'ecz',  name:'Eczema: components, goals and drug list (11/03)', cite:'slides 4, 6, 13–14, 17–18, 25'},
-   {id:'pso',  name:'Psoriasis: components, goals and systemic agents (11/03)', cite:'slides 13–14, 16–17'},
+   {id:'pso',  name:'Psoriasis', cite:'slides 13–14, 16–17'},
    {id:'hc',   name:'Hydrocortisone as reference; its derivatives (11/03)', cite:'slides 7, 18, 24–26'},
    {id:'tof',  name:'Tofacitinib (11/04)', cite:'slide 35'},
-   {id:'acne', name:'Acne: components and the pilosebaceous unit (11/04)', cite:'slides 40–41'},
+   {id:'acne', name:'Acne', cite:'slides 40–41'},
    {id:'wrk',  name:'Wrinkles: causes, hydroquinone, AHAs, hyaluronic acid, topical retinoids (11/04)', cite:'slides 58, 67–70'}]}
 );
 
@@ -9935,21 +9963,21 @@ QUESTIONS.push(
 const SUN = 'Sun exposure lecture (DEENT_Sun_Exposure_2026.pdf)';
 
 TOPICS.push(
- {id:'l3c-pso', name:'Psoralens (PUVA)', prof:'Smith',
-  cite:SUN+', slides 2–4', subs:[
+ {id:'l3c-pso', name:'Psoralen chromophores: methoxsalen (PUVA)', prof:'Smith',
+  cite:'slides 2–4 · recorded lecture', subs:[
    {id:'mech', name:'Mechanism and effects', cite:'slide 3'},
    {id:'ae',   name:'Side effects', cite:'slide 4'}]},
- {id:'l3c-uv', name:'UV light, tanning and sunburn', prof:'Smith',
-  cite:SUN+', slides 7–11', subs:[
+ {id:'l3c-uv', name:'Sun protection: risk factors, UV types, tanning, sunburn', prof:'Smith',
+  cite:'slides 7–11 · recorded lecture', subs:[
    {id:'risk', name:'Risk factors and UV index', cite:'slide 7'},
    {id:'uvab', name:'UVA vs UVB', cite:'slide 8'},
    {id:'tan',  name:'Tanning and sunburn', cite:'slides 9–11'}]},
- {id:'l3c-spf', name:'MED, SPF and broad spectrum', prof:'Smith',
-  cite:SUN+', slides 12–17', subs:[
+ {id:'l3c-spf', name:'Sun protection: MED, SPF, broad spectrum, SPF selection', prof:'Smith',
+  cite:'slides 12–17 · recorded lecture', subs:[
    {id:'def',  name:'MED, SPF, critical wavelength', cite:'slides 12–15'},
    {id:'sel',  name:'Skin types and SPF selection', cite:'slides 16–17'}]},
- {id:'l3c-prod', name:'Sunblocks and sunscreens', prof:'Smith',
-  cite:SUN+', slides 19–25', subs:[
+ {id:'l3c-prod', name:'Sun protection: substantivity, sunblocks, sunscreens, safety', prof:'Smith',
+  cite:'slides 19–25 · recorded lecture', subs:[
    {id:'sub',  name:'Substantivity', cite:'slide 19'},
    {id:'blk',  name:'Physical sunblocks', cite:'slides 20–21'},
    {id:'org',  name:'Organic sunscreens', cite:'slides 22, 24'},
@@ -11472,6 +11500,278 @@ const DRUGLIST_UI = (() => {
   return {render, state: st};
 })();
 
+/* ==========================================================================
+   "LIKELY ON THE EXAM" STARS, PHAR 4346 DEENT (Exam 1): data
+   --------------------------------------------------------------------------
+   Louis, 2026-11-08: "star question you think will most likely be in the exam".
+   A star is Claude's prediction from what each professor said and showed, never
+   an official list. Each star names its source: Dr. Smith's Exam 1 hints (pasted
+   by Louis 2026-11-07; quoted in STYLE.md and course.js above the exam blurb;
+   coverage audit in reviews/LOG.md 2026-11-07), the professors' objectives
+   slides, their polls and questions to the room, and what they stressed in
+   lecture (transcript lines as in STYLE.md). Dr. Sikazwe's stars are on his
+   assigned pages only (his list of 11/06; file pp. 7-9, 12, 15-23, 25-34, 43-55,
+   61-66).
+   Shape follows Intro to Pharmacology's `core:true, coreWhy:"..."` (PH
+   exam1-drill, kit FEATURES.md most-likely-stars v1), kept here in one list so
+   the question files stay unchanged: {id, reason, source, ref}.
+   Rules (likely_check.js): every id exists and is in an Exam 1 pool (not
+   lowYield, not unassigned, not in an optional topic, not held out); one star per
+   concept; every source key is defined; no reason contains the text of the
+   question's correct answer, nor a word of it that the stem and the other
+   options do not already show. The reason and source are not displayed
+   (Louis, 2026-11-08: the card shows only a "★ Likely on the exam" badge); they
+   are the audit record of each star, still written not to give the answer away.
+   ========================================================================== */
+const LIKELY = {
+  sources: {
+    'smith-hints':   {by:'smith',   label:"Dr. Smith's Exam 1 hints",
+                      detail:'Her study hints for Exam 1, pasted by Louis on 2026-11-07 (quoted in STYLE.md; coverage audit in reviews/LOG.md 2026-11-07)'},
+    'smith-obj-pp':  {by:'smith',   label:"Dr. Smith's learning objectives",
+                      detail:'Skin-Pathophys-Students-2026.pdf, slide 3 "Learning objectives"'},
+    'smith-obj-pc':  {by:'smith',   label:"Dr. Smith's learning objectives",
+                      detail:'Skin-PCol-Students-2026.pdf, slide 3 "Learning objectives"'},
+    'smith-obj-sun': {by:'smith',   label:"Dr. Smith's learning objectives",
+                      detail:'DEENT_Sun_Exposure_2026.pdf, slide 6 "Objectives"'},
+    'smith-poll':    {by:'smith',   label:"Dr. Smith's in-class poll",
+                      detail:'PollEv, Skin-Pathophys-Students-2026.pdf slide 38, 10/29'},
+    'smith-room':    {by:'smith',   label:'Dr. Smith asked the room',
+                      detail:'A question she put to the class (lecture transcript)'},
+    'smith-cue':     {by:'smith',   label:'Dr. Smith stressed it in lecture',
+                      detail:'Her words in class or in her recording (lecture transcript)'},
+    'sik-poll':      {by:'sikazwe', label:"Dr. Sikazwe's in-class poll",
+                      detail:'Polleve slide in f26-DEENT-DPAW-mc.pdf'},
+    'sik-room':      {by:'sikazwe', label:'Dr. Sikazwe asked the room',
+                      detail:'A question he put to the class (lecture transcript)'},
+    'sik-cue':       {by:'sikazwe', label:'Dr. Sikazwe stressed it in lecture',
+                      detail:'His words in class (lecture transcript)'},
+  },
+  items: [
+    /* ---- Dr. Smith, Pathophysiology deck (10/29) ---- */
+    {id:'L1-060', source:'smith-poll',  ref:'PollEv 1, Pathophys slide 38 (10/29)', reason:'She asked this as a live poll in class, in nearly these words.'},
+    {id:'L1-061', source:'smith-poll',  ref:'PollEv 2, Pathophys slide 38 (10/29)', reason:'She asked this as a live poll in class, in nearly these words.'},
+    {id:'L1-011', source:'smith-hints', ref:'and Pathophys slide 3 objective', reason:'Her hints and her objectives both ask for the epidemiology of each condition.'},
+    {id:'L1-032', source:'smith-hints', ref:'and Pathophys slide 3 objective', reason:'Her hints and her objectives both ask for the epidemiology of each condition.'},
+    {id:'L1-041', source:'smith-hints', ref:'and Pathophys slide 3 objective', reason:'Her hints and her objectives both ask for the epidemiology of each condition.'},
+    {id:'L1-025', source:'smith-obj-pp', ref:'objective: etiologies and pathologies', reason:'An objective asks for the etiology of each condition; she spent a slide and a room question on this gene.'},
+    {id:'L1-027', source:'smith-room',  ref:'10/29, T 226–231 (slide 15)', reason:'She put a puzzle like this to the room: what would that make you think?'},
+    {id:'L1-031', source:'smith-room',  ref:'10/29, T 295–297 (slide 19)', reason:'She asked the room what is going on in the skin in one disease and not the other.'},
+    {id:'L1-042', source:'smith-obj-pp', ref:'objective: etiologies and pathologies', reason:'An objective asks for the pathology of acne; her hints list etiology and pathology for each disease.'},
+    {id:'L1-043', source:'smith-hints', ref:'and Pathophys slide 3 objective', reason:'Her hints ask for the etiology and pathology of each disease; this is the bacterial step of acne.'},
+    {id:'L1-029', source:'smith-obj-pp', ref:'objective: list the classes of medications', reason:'An objective: list the drug classes used for each condition.'},
+    {id:'L1-051', source:'smith-obj-pp', ref:'objective: list the classes of medications', reason:'An objective: list the drug classes used for each condition.'},
+    /* ---- Dr. Smith, Pharmacology deck (10/29, 10/30, 11/03) ---- */
+    {id:'L1-070', source:'smith-obj-pc', ref:'objective: general mechanism of each class', reason:'An objective: explain the general mechanism of each drug class. This is the shared one for a whole group.'},
+    {id:'L1-104', source:'smith-room',  ref:'10/29, T 873–875 (PCol slides 8–12)', reason:'She asked the room this purpose question; her hints ask why each mechanism helps the disease.'},
+    {id:'L1-089', source:'smith-room',  ref:'10/29, T 852–853 (PCol slide 12)', reason:'She asked the room why this happens with these drugs.'},
+    {id:'L1-105', source:'smith-hints', ref:'"Know what the drugs target"', reason:'Her hints: the fill-in-the-blanks focus on what the drugs target.'},
+    {id:'L2-003', source:'smith-cue',   ref:'10/30, T 28–30 (slide 16)', reason:'One of the counseling numbers she stressed on 10/30.'},
+    {id:'L2-011', source:'smith-room',  ref:'10/30, T 116–130 (slides 16, 18)', reason:'She answered this exact question from a student in class and explained it at length.'},
+    {id:'L2-017', source:'smith-hints', ref:'"details of the MOAs differentiate the drugs within the class"', reason:'Her hints: know what sets each drug apart from the others in its class.'},
+    {id:'L2-037', source:'smith-hints', ref:'"differentiate the drugs within the class"', reason:'Her hints: know what sets each drug apart from the others in its class.'},
+    {id:'L2-039', source:'smith-hints', ref:'"Know what the drugs target"', reason:'Her hints: the fill-in-the-blanks focus on what each drug targets.'},
+    {id:'L2-045', source:'smith-room',  ref:'10/30, T 169–171 (slide 22)', reason:'She asked the room to work out why this happens.'},
+    {id:'L2-046', source:'smith-cue',   ref:'10/30 (slide 22), counseling numbers', reason:'One of the counseling numbers she stressed on 10/30.'},
+    {id:'L2-116', source:'smith-hints', ref:'"Know what the drugs target"', reason:'Her hints: the fill-in-the-blanks focus on what each drug targets.'},
+    {id:'L2-059', source:'smith-hints', ref:'"details of the MOAs differentiate the drugs within the class"', reason:'Her hints: the details of the mechanism separate the drugs within a class.'},
+    {id:'L2-060', source:'smith-hints', ref:'"details of the MOAs differentiate the drugs within the class"', reason:'Her hints: the details of the mechanism separate the drugs within a class.'},
+    {id:'L2-056', source:'smith-room',  ref:'10/30, T 290–292 (slide 25)', reason:'She asked the room what results from stopping this cascade.'},
+    {id:'L2-117', source:'smith-hints', ref:'"Know Black Box warning adverse drug reactions"', reason:'Her hints: know the black box warnings.'},
+    {id:'L2-077', source:'smith-hints', ref:'"differentiate the drugs within the class"; 11/03, T 361–364', reason:'Her hints and her 11/03 summary: what makes drugs in one class different, and the side effects she points out.'},
+    {id:'L2-115', source:'smith-hints', ref:'"Know what the drugs target"', reason:'Her hints: the fill-in-the-blanks focus on what each drug targets.'},
+    {id:'L2-086', source:'smith-hints', ref:'"differentiate the drugs within the class"', reason:'Her hints: know what separates the drugs within one class.'},
+    {id:'L2-091', source:'smith-obj-pc', ref:'objective: general mechanism of each class', reason:'An objective: explain the mechanism of each drug class; this is the main drug of its class.'},
+    {id:'L2-103', source:'smith-cue',   ref:'10/30, T 545–552 (slide 40)', reason:'She said the concentrations of these products are important to watch.'},
+    {id:'L2-106', source:'smith-room',  ref:'10/30, T 555 (slide 40)', reason:'She asked the room what this term means.'},
+    {id:'L2-109', source:'smith-room',  ref:'10/30, T 574–576 (slide 41)', reason:'She asked the room this question in almost these words.'},
+    {id:'L2-111', source:'smith-hints', ref:'"Know what the drugs target"', reason:'Her hints: the fill-in-the-blanks focus on what each drug targets.'},
+    {id:'L2-112', source:'smith-hints', ref:'"Know what the drugs target"', reason:'Her hints: the fill-in-the-blanks focus on what each drug targets.'},
+    {id:'L3-008', source:'smith-cue',   ref:'11/03, T 46–51 (slide 45)', reason:'She picked this out as a point to know about the newer drugs of the class.'},
+    {id:'L3-009', source:'smith-cue',   ref:'11/03, T 47–51 (slide 45)', reason:'She named this as a special side effect within the class; her hints ask what separates drugs in a class.'},
+    {id:'L3-110', source:'smith-hints', ref:'"differentiate the drugs within the class"', reason:'Her hints: know what sets each drug apart from the others in its class.'},
+    {id:'L3-022', source:'smith-room',  ref:'11/03, T 85–86 (slide 49)', reason:'She asked the room what this is needed for in cells.'},
+    {id:'L3-038', source:'smith-cue',   ref:'11/03, T 181–182 (slide 56)', reason:'She called this regimen "really important".'},
+    {id:'L3-045', source:'smith-hints', ref:'"explain why that MOA is good for treating the skin conditions"', reason:'Her hints: explain why the mechanism helps the condition it treats.'},
+    {id:'L3-050', source:'smith-cue',   ref:'11/03, T 237–238 (slide 61)', reason:'She said the side effects of this drug are "very important to remember".'},
+    {id:'L3-059', source:'smith-hints', ref:'"Know what the drugs target"', reason:'Her hints: the fill-in-the-blanks focus on what each drug targets.'},
+    {id:'L3-060', source:'smith-room',  ref:'11/03, T 322–323 (slide 63)', reason:'She asked the room why the drug was built this way.'},
+    {id:'L3-061', source:'smith-room',  ref:'11/03, T 350–351 (slide 63)', reason:'She asked the room why the drug carries this name.'},
+    {id:'L3-064', source:'smith-hints', ref:'"Know what the drugs target"', reason:'Her hints: the fill-in-the-blanks focus on what each drug targets.'},
+    {id:'L3-072', source:'smith-room',  ref:'11/03, T 416–417 (slide 66)', reason:'She asked the room this exact question.'},
+    {id:'L3-073', source:'smith-room',  ref:'11/03, T 422 (slide 66)', reason:'She asked the room about this drug\'s distinguishing feature.'},
+    {id:'L3-075', source:'smith-room',  ref:'11/03, T 432–433 (slides 66, 72)', reason:'She asked the room why this matters.'},
+    {id:'L3-084', source:'smith-cue',   ref:'11/03, T 476–477 (slides 67–69)', reason:'"That\'s all you need to know": the drug, how it is made, and what it binds.'},
+    {id:'L3-079', source:'smith-room',  ref:'11/03, T 478–479 (slides 67–68)', reason:'She asked the room why these cytokines are targeted.'},
+    {id:'L3-114', source:'smith-hints', ref:'"Know what the drugs target"', reason:'Her hints: the fill-in-the-blanks focus on what each drug targets; this one had no question before the hints.'},
+    {id:'L3-090', source:'smith-cue',   ref:'11/03, T 497–500 (slide 70); hints: black box warnings', reason:'She called this "one big important thing" about the whole class, and her hints say to know black box warnings.'},
+    {id:'L3-115', source:'smith-hints', ref:'"explain why that MOA is good for treating the skin conditions"', reason:'Her hints: explain why the mechanism helps the condition it treats.'},
+    {id:'L3-093', source:'smith-cue',   ref:'11/03, T 429–432 (slide 72)', reason:'She said to pay attention to how each antibody is made.'},
+    {id:'L3-106', source:'smith-cue',   ref:'11/03, T 584–586 (slide 76); hints: black box warnings', reason:'Her closing advice on 11/03: "did I mention a black box warning?"'},
+    {id:'L3-119', source:'smith-hints', ref:'"a few fill in the blanks ... Know what the drugs target"', reason:'Practice for her fill-in-the-blanks: write each target before you match.'},
+    {id:'L3-122', source:'smith-hints', ref:'"a few fill in the blanks ... Know what the drugs target"', reason:'Practice for her fill-in-the-blanks: write each target before you match.'},
+    {id:'L3-123', source:'smith-hints', ref:'"a few fill in the blanks ... Know what the drugs target"', reason:'Practice for her fill-in-the-blanks: write each target before you match.'},
+    /* ---- Dr. Smith, sun exposure and psoralens (recorded) ---- */
+    {id:'L3C-001', source:'smith-hints', ref:'sun lecture; "Know what the drugs target"', reason:'Her hints name the sun lecture and ask what each drug targets.'},
+    {id:'L3C-007', source:'smith-hints', ref:'"explain why that MOA is good for treating the skin conditions"', reason:'Her hints: explain why the mechanism helps the condition it treats.'},
+    {id:'L3C-014', source:'smith-hints', ref:'sun lecture: UVA and UVB', reason:'Her hints for the sun lecture include the damage done by each UV type.'},
+    {id:'L3C-015', source:'smith-hints', ref:'sun lecture: UVA and UVB', reason:'Her hints for the sun lecture include the damage done by each UV type.'},
+    {id:'L3C-024', source:'smith-hints', ref:'sun lecture: UVA and UVB', reason:'Her hints for the sun lecture include the damage done by each UV type.'},
+    {id:'L3C-030', source:'smith-obj-sun', ref:'objective: define MED, SPF and substantivity', reason:'An objective asks you to define this term.'},
+    {id:'L3C-031', source:'smith-obj-sun', ref:'objective: define MED, SPF and substantivity', reason:'An objective asks you to define this term.'},
+    {id:'L3C-050', source:'smith-obj-sun', ref:'objective: define MED, SPF and substantivity', reason:'An objective asks you to define this term.'},
+    {id:'L3C-032', source:'smith-hints', ref:'sun lecture: SPF and broad spectrum', reason:'Her hints for the sun lecture include what SPF and "broad spectrum" mean.'},
+    {id:'L3C-033', source:'smith-hints', ref:'sun lecture: SPF and broad spectrum', reason:'Her hints for the sun lecture include what SPF and "broad spectrum" mean.'},
+    {id:'L3C-052', source:'smith-obj-sun', ref:'objective: differentiate sunblocks and sunscreens; also in her hints', reason:'An objective and her hints: tell the two kinds of sun protection apart.'},
+    {id:'L3C-044', source:'smith-hints', ref:'sun lecture: photosensitizing drugs', reason:'Her hints for the sun lecture include which drugs are photosensitizing.'},
+    {id:'L3C-039', source:'smith-hints', ref:'sun lecture: photosensitizing drugs', reason:'Her hints for the sun lecture include patients on photosensitizing drugs.'},
+    {id:'L3C-040', source:'smith-cue',   ref:'sun recording 16:32–17:12 (slides 13, 17)', reason:'Her own rule of thumb in the recording, with the reason she gave.'},
+
+    /* added after the independent review (2026-11-08) */
+    {id:'L1-100', source:'smith-hints', ref:'and Pathophys slide 3 objective', reason:'Her hints and her objectives ask for the etiology of each disease; this is how psoriasis is thought to begin.'},
+    {id:'L2-079', source:'smith-obj-pc', ref:'objective: list the drug interactions discussed in class; 10/30, T 419–421', reason:'An objective: list the drug interactions discussed in class. She named this one on 10/30.'},
+    {id:'L2-089', source:'smith-obj-pc', ref:'objective: list the drug interactions discussed in class; 10/30, T 470–472', reason:'An objective: list the drug interactions discussed in class. She named this one on 10/30.'},
+    {id:'L3-017', source:'smith-obj-pc', ref:'objective: list the drug interactions discussed in class; 11/03, T 68–70', reason:'An objective: list the drug interactions discussed in class. She named this one on 11/03.'},
+    {id:'L2-029', source:'smith-cue',   ref:'10/30, T 98–101 (slide 19)', reason:'She stressed this program and the reason for it on 10/30.'},
+    {id:'L3-053', source:'smith-cue',   ref:'11/03, T 244–247 (slide 61)', reason:'She was emphatic about this situation on 11/03 ("absolutely").'},
+    {id:'L3-102', source:'smith-hints', ref:'"explain why that MOA is good for treating the skin conditions"', reason:'Her hints: explain why the mechanism helps the condition it treats.'},
+    {id:'L3C-065', source:'smith-hints', ref:'sun lecture: products by their ingredients; Sun slide 6 objective', reason:'Her hints for the sun lecture: tell the products apart by their ingredients.'},
+
+    /* ---- Dr. Sikazwe, DPAW deck, assigned pages only (11/03, 11/04) ---- */
+    {id:'S3-009', source:'sik-room',   ref:'11/03, T 683–689 (p. 7)', reason:'He made this the chemical point of the drug and asked the room for household examples.'},
+    {id:'S3-016', source:'sik-room',   ref:'11/03, T 706–709 (p. 7)', reason:'He asked the room how many enzymes and which ones.'},
+    {id:'S3-021', source:'sik-poll',   ref:'Polleve-1, p. 9 (11/03)', reason:'His live poll in class, word for word.'},
+    {id:'S3-024', source:'sik-cue',    ref:'11/03, T 732–733 (p. 8)', reason:'He named "are these similar chemicals?" as a question form.'},
+    {id:'S3-032', source:'sik-cue',    ref:'11/03, T 814 (p. 12)', reason:'He said "know those limits".'},
+    {id:'S3-035', source:'sik-cue',    ref:'11/03, T 838–839; 11/04 Polleve-5 (p. 12)', reason:'He asked it in class on 11/03, polled it on 11/04 and said "A question could simply be" this.'},
+    {id:'S3-062', source:'sik-cue',    ref:'11/03, T 961–963 (p. 18)', reason:'"That\'s something to take home."'},
+    {id:'S3-064', source:'sik-cue',    ref:'11/03, T 966–967 (p. 18)', reason:'He said this is the only molecule he would mention with this chemical basis of action.'},
+    {id:'S3-067', source:'sik-poll',   ref:'Polleve-2, p. 19 (11/03)', reason:'His live poll in class (true or false), reframed to four options.'},
+    {id:'S3-077', source:'sik-cue',    ref:'11/03, T 1020–1021 (p. 20)', reason:'He limited the glucocorticoid SAR to a short list he wants you to know.'},
+    {id:'S3-083', source:'sik-cue',    ref:'11/03, T 1137–1139 (p. 23)', reason:'He said a question "might be just counting" these.'},
+    {id:'S3-093', source:'sik-cue',    ref:'11/03, T 1168–1170 (p. 25)', reason:'"Potency, remember that."'},
+    {id:'S3-099', source:'sik-cue',    ref:'11/03, T 1190 (p. 26)', reason:'"If you don\'t understand anything else ... I want you to pay attention to this."'},
+    {id:'S3-100', source:'sik-room',   ref:'11/04, T@824 (p. 26)', reason:'He asked the room this on 11/04, going back over p. 26.'},
+    {id:'S4-006', source:'sik-cue',    ref:'11/04, T@3530–4160 (p. 27); 11/03, T 604–605 (assigned reading, 2 points)', reason:'His take-home activity: a 2-point question on this pathway, from the vitamin D reading he assigned.'},
+    {id:'S4-011', source:'sik-cue',    ref:'11/04, T@3530–4160 (p. 27); 11/03, T 604–605 (assigned reading, 2 points)', reason:'His take-home activity: a 2-point question on this pathway, from the vitamin D reading he assigned.'},
+    {id:'S4-015', source:'sik-cue',    ref:'11/04 (p. 28)', reason:'His slide sets the two drugs side by side and he went over the one difference that matters.'},
+    {id:'S4-020', source:'sik-poll',   ref:'Polleve-3, p. 32 (11/04)', reason:'His live poll in class, word for word; "it could be a question just that simple".'},
+    {id:'S4-039', source:'sik-room',   ref:'11/04, T@12150–12254 (p. 33)', reason:'He asked the room how this ring can be described.'},
+    {id:'S4-023', source:'sik-room',   ref:'11/04, T@6942–7125 (p. 29)', reason:'He walked through this activation step and asked the room about the enzymes.'},
+    {id:'S4-025', source:'sik-cue',    ref:'11/04, T@7222–7330 (p. 29)', reason:'He called this "an important common feature that they need to have".'},
+    {id:'S4-031', source:'sik-room',   ref:'11/04, T@9220 (p. 30)', reason:'He put this comparison to the room.'},
+    {id:'S4-036', source:'sik-cue',    ref:'11/04, T@10851–11050 (p. 31)', reason:'He went through the SAR "blueprint" for this drug part by part.'},
+    {id:'S4-043', source:'sik-room',   ref:'11/04, T@13190–13550 (p. 33)', reason:'He asked the room what this combination would do.'},
+    {id:'S4-047', source:'sik-cue',    ref:'11/04, T@13908–14385 (p. 34)', reason:'He flagged this interaction as a take-home.'},
+    {id:'S4-056', source:'sik-room',   ref:'11/04, T@22090–22200 (p. 43)', reason:'He worked this out with the room.'},
+    {id:'S4-060', source:'sik-room',   ref:'11/04, T@20942–21110 (p. 43)', reason:'"So I would ask you, how many enzymes ..."'},
+    {id:'S4-083', source:'sik-room',   ref:'11/04, T@30883 (p. 52)', reason:'He asked the room about these drugs and summed up what they do.'},
+    {id:'S4-088', source:'sik-cue',    ref:'11/04, T@32560–32640 (p. 53)', reason:'He said to keep this "at the front of your mind" whenever you see this drug group.'},
+    {id:'S4-091', source:'sik-cue',    ref:'11/04, T@36837–36940 (pp. 53, 55)', reason:'He asked: "visually, can you identify tetracyclines and distinguish them from steroids?"'},
+    {id:'S4-094', source:'sik-room',   ref:'11/04, T@36600–36790 (p. 55)', reason:'He asked the room this about the other drugs of the class.'},
+    {id:'S4-098', source:'sik-cue',    ref:'11/04 (p. 61)', reason:'He stressed this point about the blockers on his slide.'},
+    {id:'S4-101', source:'sik-cue',    ref:'11/04 (p. 62)', reason:'"What you need to know about this one": he gave its key numbers.'},
+    {id:'S4-108', source:'sik-cue',    ref:'11/04 (p. 65)', reason:'He called this use "very important".'},
+  ],
+};
+
+/* ==========================================================================
+   "LIKELY ON THE EXAM" STARS, PHAR 4346 DEENT (Exam 1): presentation
+   --------------------------------------------------------------------------
+   Course-level and isolated, in the pattern of druglist_ui.js: a course data
+   file (course.js `files`) that the build puts into the page before views.js.
+   The kit core (25c643d) is not changed. At load it wraps two engine
+   functions, the way druglist_ui.js wraps show():
+     - renderQuiz(): after the engine draws a question card in the topic
+       drills, a starred question gets a small "★ Likely on the exam" badge in
+       the card header, before and after answering. No reason text is shown on
+       the card (Louis, 2026-11-08): each star's reason and source stay in
+       likely_data.js as the audit record only. Exam papers are left as they
+       are (Q.examMode).
+     - renderTopics(): a card under the straight passes, "Starred questions",
+       opens exactly the starred ids (all, Dr. Smith's or Dr. Sikazwe's) with
+       the engine's own drillList().
+   It says plainly that the stars are Claude's prediction from the professors'
+   stated emphasis, not an official list.
+   It runs only in a real browser page; in the node checks' stub DOM it does
+   nothing and returns null. Storage: none.
+   ========================================================================== */
+const LIKELY_UI = (() => {
+  const ok = typeof document !== 'undefined' && typeof MutationObserver !== 'undefined' &&
+             typeof document.getElementById === 'function' && document.getElementById('nav') &&
+             typeof document.getElementById('nav').insertBefore === 'function' &&
+             typeof renderQuiz === 'function' && typeof renderTopics === 'function';
+  if (!ok) return null;
+  const L = LIKELY, BY = {};
+  L.items.forEach(x => { BY[x.id] = x; });
+  const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g, c => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'}[c]));
+  const NOTE = "Claude's prediction from the professors' stated emphasis, not an official list.";
+
+  const css = `
+.lkbadge{display:inline-block;font-size:12px;font-weight:600;line-height:1.3;color:var(--accent);border:1px solid var(--accent);border-radius:999px;padding:1px 8px;white-space:nowrap;background:var(--accent-bg)}
+`;
+  const addCss = () => {
+    if (document.getElementById('lkcss')) return;
+    const s = document.createElement('style'); s.id = 'lkcss'; s.textContent = css; document.head.appendChild(s);
+  };
+
+  /* the starred questions that exist in this build, in bank order */
+  const pool = by => QUESTIONS.filter(q => BY[q.id] && (!by || (L.sources[BY[q.id].source] || {}).by === by));
+
+  /* ---------- the badge on the question card (no reason text: see the header) ---------- */
+  function decorateQuiz(){
+    if (typeof Q === 'undefined' || !Q || !Q.current || Q.examMode) return;
+    if (!BY[Q.current.id]) return;
+    const card = document.querySelector('#v-quiz .qcard'), head = card && card.querySelector('.qhead');
+    if (!head || head.querySelector('.lkbadge')) return;
+    const b = document.createElement('span');
+    b.className = 'lkbadge';
+    b.setAttribute('title', NOTE);
+    b.textContent = '★ Likely on the exam';
+    const sp = head.querySelector('.spacer');
+    if (sp) head.insertBefore(b, sp); else head.appendChild(b);
+  }
+
+  /* ---------- the card on Topics ---------- */
+  function decorateTopics(){
+    const v = document.getElementById('v-topics'); if (!v || v.querySelector('.lkcard')) return;
+    const all = pool(), sm = pool('smith'), sk = pool('sikazwe');
+    if (!all.length) return;
+    const d = document.createElement('div');
+    d.className = 'topic lkcard';
+    d.innerHTML = `<div class="subs">
+      <div class="subrow"><span class="sname"><b>★ Starred: likely on the exam (${all.length})</b>
+        <small>${esc(NOTE)}</small></span>
+        <button type="button" data-lk="all">Start</button></div>
+      <div class="subrow"><span class="sname">Dr. Smith's starred questions<small>${sm.length} questions</small></span>
+        <button type="button" class="ghost" data-lk="smith">Start</button></div>
+      <div class="subrow"><span class="sname">Dr. Sikazwe's starred questions<small>${sk.length} questions, on his assigned pages</small></span>
+        <button type="button" class="ghost" data-lk="sikazwe">Start</button></div>
+    </div>`;
+    const sweep = v.querySelector('.sweepcard');
+    if (sweep) sweep.insertAdjacentElement('afterend', d); else v.appendChild(d);
+    d.querySelectorAll('button[data-lk]').forEach(b => b.onclick = () => {
+      const k = b.dataset.lk, list = k === 'all' ? all : pool(k);
+      drillList(list, k === 'all' ? '★ Likely on the exam' : k === 'smith' ? "★ Likely: Dr. Smith" : '★ Likely: Dr. Sikazwe');
+    });
+  }
+
+  try {
+    addCss();
+    const oq = renderQuiz, ot = renderTopics;
+    renderQuiz = function(){
+      const r = oq.apply(this, arguments);
+      try { decorateQuiz(); } catch (e) { console.error('The "likely" star could not be drawn; the question is unaffected.', e); }
+      return r;
+    };
+    renderTopics = function(){
+      const r = ot.apply(this, arguments);
+      try { decorateTopics(); } catch (e) { console.error('The starred-questions card could not be drawn; Topics is unaffected.', e); }
+      return r;
+    };
+  } catch (e) { console.error('The "likely on the exam" stars could not be added; the rest of the page is unaffected.', e); }
+  return {pool, byId: BY};
+})();
+
 /* Term glosses for the questions' explanations (see the kit's template for the format). */
 const GLOSS = [
  {k:'pilosebaceous', p:'pilosebaceous unit', d:'the hair follicle together with its sebaceous gland (Pathophys slide 30; T 407–411)',
@@ -11514,10 +11814,10 @@ const GLOSS = [
 const READ_LINKS = (() => {
   const S = {
     // Lecture 1, Smith 10/29 (Pathophys and PCol 1-15)
-    g1:      ['guide', 'gobj-l1-1', 'Guide: skin layers and sebum (Lecture 1)'],
-    g2:      ['guide', 'gobj-l1-2', 'Guide: epidemiology of the three diseases (Lecture 1)'],
-    g3:      ['guide', 'gobj-l1-3', 'Guide: etiologies and pathologies (Lecture 1)'],
-    g4:      ['guide', 'gobj-l1-4', 'Guide: drug classes and mechanisms (Lecture 1)'],
+    g1:      ['guide', 'gobj-l1-1', 'Guide: skin structure and sebum (Skin Pathophysiology)'],
+    g2:      ['guide', 'gobj-l1-2', 'Guide: epidemiology of the three diseases (Skin Pathophysiology)'],
+    g3:      ['guide', 'gobj-l1-3', 'Guide: etiologies and pathologies (Skin Pathophysiology)'],
+    g4:      ['guide', 'gobj-l1-4', 'Guide: general mechanism of each class (Skin Pharmacology)'],
     t1d:     ['tell',  'tell-l1-diseases', 'Tell apart: the three diseases'],
     t1r:     ['tell',  'tell-l1-drugs', 'Tell apart: nuclear receptor binders'],
     rClass:  ['ref',   'ref-l1-classes', 'Reference: drug classes by disease'],
@@ -11526,15 +11826,23 @@ const READ_LINKS = (() => {
     rCS:     ['ref',   'ref-l1-steroids', 'Reference: topical corticosteroids'],
     rTgt:    ['ref',   'ref-targets', 'Reference: drug targets, write it first'],
     // Smith 10/30 and 11/03 (PCol 16-76)
-    t2:      ['tell',  'tell-l2', 'Tell apart: Lecture 2 (Smith 10/30)'],
-    r2:      ['ref',   'ref-l2', 'Reference: Lecture 2 drugs (Smith 10/30)'],
-    t3:      ['tell',  'tell-l3', 'Tell apart: Lecture 3 (Smith 11/03)'],
-    r3:      ['ref',   'ref-l3', 'Reference: Lecture 3 drugs (Smith 11/03)'],
+    t2:      ['tell',  'tell-l2', 'Tell apart: Skin Pharmacology slides 16–42 (Smith 10/30)'],
+    r2:      ['ref',   'ref-l2', 'Reference: Skin Pharmacology slides 16–42 (Smith 10/30)'],
+    t3:      ['tell',  'tell-l3', 'Tell apart: Skin Pharmacology slides 43–76 (Smith 11/03)'],
+    r3:      ['ref',   'ref-l3', 'Reference: Skin Pharmacology slides 43–76 (Smith 11/03)'],
     // Sikazwe 11/03 and 11/04 (DPAW)
-    ts3:     ['tell',  'tell-s3', 'Tell apart: Lecture 3 (Sikazwe 11/03)'],
-    rs3:     ['ref',   'ref-s3', 'Reference: Lecture 3 agents (Sikazwe 11/03)'],
-    ts4:     ['tell',  'tell-s4', 'Tell apart: Lecture 4 (Sikazwe 11/04)'],
-    rs4:     ['ref',   'ref-s4', 'Reference: Lecture 4 agents (Sikazwe 11/04)'],
+    ts3:     ['tell',  'tell-s3', 'Tell apart: Medicinal Chemistry DPAW pp. 1–26 (Sikazwe 11/03)'],
+    rs3:     ['ref',   'ref-s3', 'Reference: Medicinal Chemistry DPAW pp. 1–26 (Sikazwe 11/03)'],
+    ts4:     ['tell',  'tell-s4', 'Tell apart: Medicinal Chemistry DPAW pp. 27–71 (Sikazwe 11/04)'],
+    rs4:     ['ref',   'ref-s4', 'Reference: Medicinal Chemistry DPAW pp. 27–71 (Sikazwe 11/04)'],
+    // Sun exposure deck, Smith (added 2026-11-08 with the guide sections by objective)
+    gS0:     ['guide', 'gobj-sun-pso', 'Guide: psoralens (Sun Exposure)'],
+    gS1:     ['guide', 'gobj-sun-1', 'Guide: types of UV radiation (Sun Exposure)'],
+    gS4:     ['guide', 'gobj-sun-4', 'Guide: MED, SPF, broad spectrum, substantivity (Sun Exposure)'],
+    gS2:     ['guide', 'gobj-sun-2', 'Guide: sunblocks vs sunscreens (Sun Exposure)'],
+    gSp:     ['guide', 'gobj-sun-photo', 'Guide: photosensitizing drugs (Sun Exposure)'],
+    tS:      ['tell',  'tell-sun', 'Tell apart: sun protection (Smith)'],
+    rSun:    ['ref',   'ref-sun', 'Reference: SPF, skin types, substantivity'],
   };
   const esc = s => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
   const one = c => {
@@ -11605,6 +11913,18 @@ const READ_LINKS = (() => {
           'dup-eye dup-common secu-ae il23-th17 uste-vaccine uste-allergy uste-common uste-pres risan-severe ' +
           'tnf-class-mech etan-ae inflix-premed tnf-human mtx-thf', 'r3'),
 
+      /* ---- Sun exposure deck, Smith (Sun 2-25), added 2026-11-08 ------------ */
+      row('psoralen-uva-range psoralen-effects psoralen-melanin psoralen-ae psoralen-cataract psoralen-why', 'gS0'),
+      row('uvb-range uvb-vs-uva-glass uva-phototoxic uvb-sunburn-vitd uva-dermis-smith uva-uvb-shared tanning-timing', 'tS', 'gS1'),
+      row('uv-peak-hours uv-index severe-burn-risk tan-not-protective sunburn-mediators sunburn-timing severe-sunburn', 'gS1'),
+      row('med-def spf-def spf-uvb-only broad-spectrum cancer-claim spf15-block spf-vs-broad spf-by-skin-type spf-photosensitizing vehicle-substantivity', 'tS', 'gS4'),
+      row('skin-type-i', 'rSun'),
+      row('reapply-interval substantivity-def', 'gS4'),
+      row('sunblock-use sunblock-ae benzophenones-facts aminobenzoates-facts anthranilates-facts dibenzoylmethane-facts ' +
+          'salicylates-cinnamates sunscreen-reaction-risk', 'tS', 'gS2'),
+      row('sunscreen-refer sunscreen-systemic', 'gS2'),
+      row('photosens-drugs', 'gSp'),
+
       /* ---- Lecture 3, Sikazwe 11/03 (DPAW 1-26); Smith's psoralen slide -- */
       row('soft-drug hard-drug crisaborole-sult crisaborole-ugt eczema-components goals-ecz-vs-pso psoriasis-components ' +
           'puva alpha-beta-face numbering-vs-orientation hc-to-clobetasol-not-metab 11bhsd-oxidoreductase autox-anthralin-vs-psoralen', 'ts3'),
@@ -11642,7 +11962,7 @@ const REFERENCE_HTML = `
 <h2>Reference</h2>
 <p class="sub">The tables the questions keep coming back to, each with the slide it was copied from. The course drug chart is a guide only (course introduction deck). Nothing here is scored.</p>
 
-<h3 id="ref-l1-classes">Drug classes by disease (Smith, Lecture 1)</h3>
+<h3 id="ref-l1-classes">Skin Pathophysiology (Dr. Smith): drug classes by disease, slides 17, 28, 37</h3>
 <table class="reftab"><thead><tr><th style="width:20%">Disease</th><th>Drug classes on the slide</th><th style="width:16%">Slide</th></tr></thead><tbody>
 <tr><td><b>Atopic dermatitis</b></td><td>Corticosteroids; calcineurin inhibitors; PDE-4 inhibitor; IL-4 receptor alpha/IL-13 receptor antagonists; JAK inhibitor</td><td>Pathophys 17</td></tr>
 <tr><td><b>Psoriasis</b></td><td>Corticosteroids; DNA synthesis inhibitors; dihydrofolate reductase inhibitor/T-cell and cytokine suppressors; T-cell inhibitors; TNF-alpha inhibitors; JAK inhibitors; IL-12 &amp; IL-13 inhibitors (as printed; see note); IL-23 inhibitor; IL-17A inhibitor; nuclear receptor binders; psoralens; calcineurin inhibitors; cytotoxic agents</td><td>Pathophys 28</td></tr>
@@ -11650,7 +11970,7 @@ const REFERENCE_HTML = `
 </tbody></table>
 <p class="prose">Note: slide 28 prints "IL-12 &amp; IL-13 inhibitors"; slide 21 names IL-23, not IL-13, among the psoriasis cytokines, and the drug chart lists ustekinumab as an IL-12 &amp; IL-23 inhibitor. No question keys on this line until it is settled.</p>
 
-<h3 id="ref-l1-acnemap">Acne: pathology and the drugs aimed at it (Pathophys 36)</h3>
+<h3 id="ref-l1-acnemap">Skin Pathophysiology (Dr. Smith): acne pathology and the drugs aimed at it, slide 36</h3>
 <table class="reftab"><thead><tr><th style="width:28%">Component</th><th>Drugs in the figure</th></tr></thead><tbody>
 <tr><td><b>P. acnes proliferation</b></td><td>Benzoyl peroxide; topical/oral antibiotics; isotretinoin</td></tr>
 <tr><td><b>Abnormal keratinization of follicle</b></td><td>Salicylic acid; benzoyl peroxide; topical retinoids; isotretinoin</td></tr>
@@ -11660,7 +11980,7 @@ const REFERENCE_HTML = `
 
 <!--DIA:acne-cascade-->
 
-<h3 id="ref-l1-nr">Nuclear receptors for DEENT (PCol 7)</h3>
+<h3 id="ref-l1-nr">Skin Pharmacology (Dr. Smith): nuclear receptors for DEENT, slide 7</h3>
 <table class="reftab"><thead><tr><th style="width:34%">Receptor</th><th>DNA binding site on the slide</th></tr></thead><tbody>
 <tr><td><b>Glucocorticoid receptor</b></td><td>GRE, glucocorticoid response element</td></tr>
 <tr><td><b>Retinoic acid receptors RAR/RXR</b></td><td>RARE, retinoic acid response element</td></tr>
@@ -11670,7 +11990,7 @@ const REFERENCE_HTML = `
 
 <!--DIA:nr-action-->
 
-<h3 id="ref-l1-steroids">Topical corticosteroids (PCol 11)</h3>
+<h3 id="ref-l1-steroids">Skin Pharmacology (Dr. Smith): topical corticosteroids, slide 11</h3>
 <table class="reftab"><thead><tr><th style="width:30%">Situation</th><th>Potency on the slide</th></tr></thead><tbody>
 <tr><td><b>Face</b></td><td>Low potency (hydrocortisone 1%)</td></tr>
 <tr><td><b>Body</b></td><td>Medium potency (betamethasone valerate 0.1%)</td></tr>
@@ -11679,7 +11999,7 @@ const REFERENCE_HTML = `
 </tbody></table>
 <p class="prose">Specific steroid products and their potency classes belong to the medicinal chemistry lectures (T 585–587; syllabus: Sikazwe, Lectures 3–4).</p>
 
-<h3 id="ref-l2">Lecture 2: Smith, 10/30 (Skin-PCol slides 16–42)</h3>
+<h3 id="ref-l2">Skin Pharmacology (Dr. Smith): drugs on slides 16–42 (10/30)</h3>
 <table class="reftab"><thead><tr><th>Drug</th><th>Class</th><th>Route</th><th>Use (this lecture)</th><th>Key adverse / counseling</th><th>Slide</th></tr></thead><tbody>
 <tr><td>Tretinoin</td><td>Retinoid</td><td>Topical</td><td>Acne</td><td>&lt;10% absorbed; flare 4-6 wk; optimum 8-12 wk; microsphere form less irritating</td><td>16-17</td></tr>
 <tr><td>Adapalene</td><td>Retinoid</td><td>Topical</td><td>Mild to moderate acne</td><td>Sun stable; with BPO; less irritating than tretinoin</td><td>18</td></tr>
@@ -11697,7 +12017,7 @@ const REFERENCE_HTML = `
 <tr><td>Salicylic acid</td><td>Keratolytic</td><td>Topical</td><td>Acne (dandruff, psoriasis)</td><td>3-6%; &gt;6% damage; up to 40% warts/corns; salicylism (additive topical salicylates); caution diabetes/PVD</td><td>39-40</td></tr>
 </tbody></table>
 
-<h3 id="ref-l3">Lecture 3: Smith, 11/03 (Skin-PCol slides 43–76)</h3>
+<h3 id="ref-l3">Skin Pharmacology (Dr. Smith): drugs on slides 43–76 (11/03)</h3>
 <table class="reftab"><thead><tr><th>Drug</th><th>Class / make</th><th>Target or mechanism</th><th>Route (as taught)</th><th>Key AE or warning</th><th>Slide</th></tr></thead><tbody>
 <tr><td>Sarecycline, minocycline, doxycycline</td><td>Tetracyclines</td><td>30S; block aminoacyl-tRNA at acceptor site; bacteriostatic</td><td>Oral (acne)</td><td>GI N/V/D, pseudomembranous colitis (stop if blood in stool), teeth/bone in young, photosensitivity, superinfection; not in pregnancy or under 8 y; minocycline ototoxicity. Slide 45: analogs absorb better from the GI tract than tetracycline; doxycycline and minocycline more lipid soluble (enter the follicle better); minocycline and sarecycline may be less photosensitizing; sarecycline narrower spectrum; acne efficacy may depend more on anti-inflammatory activity</td><td>43–45</td></tr>
 <tr><td>Clindamycin</td><td>Lincosamide (chart)</td><td>50S; prevents translocation; bacteriostatic</td><td>Oral, topical</td><td>Pseudomembranous colitis, impaired liver function; ~10% topical absorption; resistance</td><td>46</td></tr>
@@ -11796,7 +12116,32 @@ const REFERENCE_HTML = `
 <tr id="tgt-anesthetics" data-by="chart"><td><details><summary><b>Benzocaine, dibucaine, tetracaine, lidocaine</b></summary><span class="tg">Chart class: Na channel blockers (topical anesthetics for sunburn relief)</span>; not on her sun slides</details></td><td>Chart p. 1</td></tr>
 </tbody></table>
 
-<h3 id="ref-s3">Lecture 3: Sikazwe, 11/03 (DPAW pages 1–26)</h3>
+<h3 id="ref-sun">Sun Exposure (Dr. Smith): SPF, skin types and substantivity, slides 15–19</h3>
+<table class="reftab"><thead><tr><th style="width:30%">SPF</th><th>UVB blocked (slide 15)</th></tr></thead><tbody>
+<tr><td><b>SPF 15</b></td><td>About 93%</td></tr>
+<tr><td><b>SPF 30</b></td><td>About 97%</td></tr>
+<tr><td><b>SPF 50</b></td><td>About 98%</td></tr>
+</tbody></table>
+<table class="reftab"><thead><tr><th style="width:14%">Skin type</th><th>Burning and tanning (slide 16)</th><th style="width:30%">SPF (slide 17)</th></tr></thead><tbody>
+<tr><td><b>I</b></td><td>Always burns easily, never tans; blue or green eyes, blond or red hair</td><td rowspan="2">Over 30 (increased skin cancer risk)</td></tr>
+<tr><td><b>II</b></td><td>Always burns easily, tans minimally; blue, hazel or brown eyes, blond, red or brown hair</td></tr>
+<tr><td><b>III</b></td><td>Sometimes burns, tans gradually</td><td rowspan="3">15 to 24</td></tr>
+<tr><td><b>IV</b></td><td>Burns minimally, always tans well</td></tr>
+<tr><td><b>V</b></td><td>Rarely burns, tans profusely (brown skin)</td></tr>
+<tr><td><b>VI</b></td><td>Never burns, deeply pigmented (black skin)</td><td>&mdash;</td></tr>
+<tr><td><b>Lupus</b></td><td>&mdash;</td><td>Over 40</td></tr>
+<tr><td><b>Photosensitizing drugs</b></td><td>&mdash;</td><td>Over 45</td></tr>
+</tbody></table>
+<p class="prose">Slide 17 also: start high and go low; adding a higher SPF after 1 MED will not help much; apply the correct amount at the correct time; reapply every 90&ndash;120 minutes.</p>
+<table class="reftab"><thead><tr><th style="width:30%">Vehicle</th><th>Substantivity (slide 19)</th></tr></thead><tbody>
+<tr><td><b>Oils</b></td><td>Best, but not pleasant dosage forms</td></tr>
+<tr><td><b>Polyacrylamide bases</b></td><td>Good: not easily washed off</td></tr>
+<tr><td><b>Creams</b></td><td>Better than alcohol-based vehicles</td></tr>
+<tr><td><b>Alcohols</b></td><td>Worst</td></tr>
+</tbody></table>
+<p class="prose">Choose the best substantivity: waterproof, water-resistant or sweat-resistant products (slide 19).</p>
+
+<h3 id="ref-s3">Dermatology Medicinal Chemistry (Dr. Sikazwe): DPAW pages 1–26 (11/03)</h3>
 <table class="reftab"><thead><tr><th>Drug / agent</th><th>Chemical class</th><th>Key ADME / numbers</th><th>CBDA</th><th>Slide; T</th></tr></thead><tbody>
 <tr><td>Crisaborole</td><td>Benzoxaborole (boron-based), soft drug</td><td>log P 3, dermis accumulation; t1/2 12 h; spontaneous hydrolytic deboronation (non-enzymatic) -&gt; benzyl alcohol -&gt; ADH, ALDH -&gt; benzoic acid -&gt; SULT / UGT conjugates</td><td>Boron coordinates Zn2+ and Mg2+ in PDE4 active site</td><td>7, 9; T 664-801</td></tr>
 <tr><td>Ruxolitinib</td><td>Pyrrolopyrimidine (name not to be recalled)</td><td>log P ~2 (spoken); formulated to stay in skin; t1/2 3 h; 3A4/2C9 substrate; some active OH metabolites</td><td>(JAK inhibitor; MoA not tested)</td><td>8; T 729-757</td></tr>
@@ -11815,7 +12160,7 @@ const REFERENCE_HTML = `
 <tr><td>UVR</td><td>—</td><td>UVC 100-280; UVB from 280; UVA to 400 (from 315 or 320); ozone blocks UVC and ~90% UVB; UVA deepest</td><td>—</td><td>12; T 810-839</td></tr>
 </tbody></table>
 
-<h3 id="ref-s4">Lecture 4: Sikazwe, 11/04 (DPAW pages 27–71)</h3>
+<h3 id="ref-s4">Dermatology Medicinal Chemistry (Dr. Sikazwe): DPAW pages 27–71 (11/04)</h3>
 <table class="reftab"><thead><tr><th>Drug / agent</th><th>Chemical class (deck)</th><th>Mechanism / CBDA</th><th>Key PK / numbers</th><th>Caution</th><th>Slide</th></tr></thead><tbody>
 <tr><td>Calcitriol, calcipotriene</td><td>Secosteroids (vitamin D analogs)</td><td>Antiproliferative</td><td>Raise GI calcium absorption</td><td>Hypercalcemia (limiting factor)</td><td>27</td></tr>
 <tr><td>Pimecrolimus</td><td>Macrolide / lactone</td><td>Calcineurin inhibitor, ↓ cytokines</td><td>cLogP 6.0; high non-specific skin protein binding</td><td>Low systemic ADRs</td><td>28, 32</td></tr>
@@ -11864,7 +12209,7 @@ const TELL_HTML = `
 <h2>Tell apart</h2>
 <p class="sub">Pairs that share wording. Each row gives the feature that separates them and the slide it comes from. Nothing here is scored.</p>
 
-<h3 id="tell-l1-diseases">Lecture 1: the three diseases (Skin-Pathophys-Students-2026.pdf)</h3>
+<h3 id="tell-l1-diseases">Skin Pathophysiology (Dr. Smith): the three diseases, slides 15–38</h3>
 <table class="reftab"><thead><tr><th style="width:22%">Looks alike</th><th>What separates them</th><th style="width:26%">The trap</th><th style="width:9%">Slide</th></tr></thead><tbody>
 <tr><td><b>Atopic dermatitis</b> vs <b>psoriasis</b> vs <b>acne</b></td><td>Major pathology: AD, skin barrier dysfunction; psoriasis, keratinocyte hyperproliferation; acne, excess sebum production.</td><td>Keratinocyte hyperproliferation offered for acne: in class she said it is a feature of psoriasis, not acne (T 573–577).</td><td>38</td></tr>
 <tr><td><b>AD keratinocytes</b> vs <b>psoriasis keratinocytes</b></td><td>AD: a structural defect; too little profilaggrin and filaggrin, cells do not lie flat, gaps let allergens in. Psoriasis: cells divide too fast and do not mature.</td><td>Calling both "hyperproliferation".</td><td>15, 19</td></tr>
@@ -11874,7 +12219,7 @@ const TELL_HTML = `
 <tr><td><b>Acne mechanica</b> vs <b>cosmetica</b> vs <b>occupational</b></td><td>Mechanica: occlusion or irritation of the skin. Cosmetica: comedogenic oils in cosmetics. Occupational: dirt, vaporized cooking oil, industrial chemicals.</td><td>A helmet or strap called cosmetica.</td><td>35</td></tr>
 </tbody></table>
 
-<h3 id="tell-l1-drugs">Lecture 1: nuclear receptor binders (Skin-PCol-Students-2026.pdf)</h3>
+<h3 id="tell-l1-drugs">Skin Pharmacology (Dr. Smith): nuclear receptor binders, slides 5–14 (10/29)</h3>
 <table class="reftab"><thead><tr><th style="width:22%">Looks alike</th><th>What separates them</th><th style="width:26%">The trap</th><th style="width:9%">Slide</th></tr></thead><tbody>
 <tr><td><b>Direct</b> vs <b>indirect</b> nuclear receptor action</td><td>Direct: two drug–receptor complexes bind a response element (GRE). Indirect: one complex binds a transcription factor (NF-kB, AP-1) and keeps it off the DNA.</td><td>Reversing the number of complexes.</td><td>5–6</td></tr>
 <tr><td><b>CBG</b> vs <b>Hsp90</b></td><td>CBG carries the steroid in the blood. Hsp90 chaperones the receptor in the cell and comes off when the steroid binds.</td><td>Hsp90 as the carrier protein.</td><td>10</td></tr>
@@ -11882,7 +12227,7 @@ const TELL_HTML = `
 <tr><td><b>RAR</b> vs <b>RXR</b> targeting retinoids</td><td>RAR: differentiation and proliferation; acne, psoriasis, photoaging. RXR: apoptosis; cancers such as Kaposi sarcoma.</td><td>"RXR" for skin disease: a slip in class (T 901–903); the slide and her next sentence say RAR.</td><td>14</td></tr>
 </tbody></table>
 
-<h3 id="tell-l2">Lecture 2: Smith, 10/30 (Skin-PCol slides 16–42)</h3>
+<h3 id="tell-l2">Skin Pharmacology (Dr. Smith): slides 16–42 (10/30)</h3>
 <table class="reftab"><thead><tr><th>Looks alike</th><th>What separates them</th><th>Trap</th><th>Slide</th></tr></thead><tbody>
 <tr><td>Adapalene vs tretinoin</td><td>Adapalene: photochemically stable, combinable with benzoyl peroxide, less irritating, mild to moderate acne. Tretinoin: ATRA, &lt;10% absorbed, timed-release microsphere form for sensitive skin</td><td>Thinking any retinoid can go with benzoyl peroxide (T 72-73: the others are "way too irritating")</td><td>17-18</td></tr>
 <tr><td>Adapalene vs tazarotene</td><td>Adapalene sun stable, acne; tazarotene causes photosensitivity, used for psoriasis, acne and wrinkles, possibly more absorption, contraceptive counseling</td><td>Treating "sun stable" as "no sun protection needed": sunburn risk stays because of peeling (T 122-130)</td><td>18</td></tr>
@@ -11899,7 +12244,7 @@ const TELL_HTML = `
 <tr><td>CYP3A4 drugs this day</td><td>Cyclosporine, tacrolimus (many interactions); apremilast (inducers reduce effect)</td><td>—</td><td>30, 34</td></tr>
 </tbody></table>
 
-<h3 id="tell-l3">Lecture 3: Smith, 11/03 (Skin-PCol slides 43–76)</h3>
+<h3 id="tell-l3">Skin Pharmacology (Dr. Smith): slides 43–76 (11/03)</h3>
 <table class="reftab"><thead><tr><th>Looks alike</th><th>What separates</th><th>Trap</th><th>Slide</th></tr></thead><tbody>
 <tr><td>Tetracyclines vs clindamycin/macrolides</td><td>Tetracyclines bind 30S (block aminoacyl-tRNA at acceptor site); clindamycin and macrolides bind 50S (prevent translocation)</td><td>All "ribosome antibiotics"; subunit swapped</td><td>43, 46, 47</td></tr>
 <tr><td>Sulfamethoxazole vs trimethoprim</td><td>SMX competes with PABA (dihydropteroic/dihydrofolic acid step); TMP inhibits DHFR (DHF to THF)</td><td>Both "folate"; step swapped</td><td>48–49</td></tr>
@@ -11924,7 +12269,37 @@ const TELL_HTML = `
 <tr><td>Tofacitinib vs TNF-α inhibitors</td><td>Same black box (serious infection, lymphoma, other malignancy); tofacitinib oral small molecule</td><td>—</td><td>70, 76</td></tr>
 </tbody></table>
 
-<h3 id="tell-s3">Lecture 3: Sikazwe, 11/03 (DPAW pages 1–26)</h3>
+<h3 id="tell-smith-safety">Skin Pharmacology (Dr. Smith): boxed warnings, pregnancy and interactions</h3>
+<table class="reftab"><thead><tr><th>Looks alike</th><th>What separates them</th><th>Trap</th><th>Slide</th></tr></thead><tbody>
+<tr><td>Oral vs topical calcineurin inhibitors</td><td>Oral (cyclosporine, tacrolimus): boxed warning for lymphoma and other malignancies, particularly of the skin, and for bacterial, viral, fungal and protozoal infections. Topical (pimecrolimus, tacrolimus): burning, potential local skin carcinogenesis, infection if blood levels get high; no boxed warning on her topical slides</td><td>Moving the oral boxed warning onto the topical products</td><td>27–28, 30</td></tr>
+<tr><td>TNF-α inhibitors vs tofacitinib (boxed warnings)</td><td>Same boxed content: serious infection, lymphoma and other malignancy. TNF-α: malignancies reported in children and adolescents. Tofacitinib: also caution with high risk of GI perforation</td><td>Giving the GI perforation caution to the TNF-α class</td><td>70, 76; T 498–500</td></tr>
+<tr><td>Boxed warning vs infection warning (IL-17, IL-12/23, IL-23)</td><td>Her slides mark boxed warnings only for oral calcineurin inhibitors, TNF-α inhibitors and tofacitinib. Secukinumab, ustekinumab and risankizumab carry infection and TB-evaluation warnings without a boxed label on her slides</td><td>Calling every biologic's infection warning a boxed warning</td><td>30, 66–70, 76</td></tr>
+<tr><td>Isotretinoin vs acitretin vs tazarotene (pregnancy)</td><td>Isotretinoin: teratogen, iPLEDGE, men enrolled too. Acitretin: no pregnancy during treatment and for 3 years after; no blood donation for 3 years. Tazarotene: not in pregnancy; contraceptive counseling</td><td>Applying acitretin's 3 years to isotretinoin</td><td>18–20; T 130–132</td></tr>
+<tr><td>Methotrexate vs tetracyclines (pregnancy and age)</td><td>Methotrexate: abortifacient and teratogenic; handle with gloves and a separate counting tray. Tetracyclines: not in pregnancy or under 8 years (teeth and bones)</td><td>Giving the age limit of 8 years to methotrexate</td><td>45, 61</td></tr>
+<tr><td>Cyclosporine/tacrolimus vs apremilast (CYP3A4)</td><td>Oral cyclosporine and tacrolimus are metabolized by CYP3A4: many interactions. Apremilast: avoid strong CYP3A4 inducers, which lower its effect</td><td>Saying apremilast levels rise with inducers</td><td>30, 34</td></tr>
+<tr><td>Oral vs topical macrolides</td><td>Oral: N/V/D, epigastric pain, many drug interactions. Topical: burning and drying, more with benzoyl peroxide</td><td>Giving the drug-interaction warning to the topical form</td><td>47</td></tr>
+<tr><td>Adapalene vs tretinoin/tazarotene with benzoyl peroxide</td><td>Adapalene can be combined with benzoyl peroxide; the others are too irritating with it</td><td>Combining any retinoid with BPO</td><td>18; T 72–73</td></tr>
+</tbody></table>
+
+<h3 id="tell-sun">Sun Exposure and Psoralens (Dr. Smith): DEENT_Sun_Exposure_2026.pdf slides 2–25</h3>
+<table class="reftab"><thead><tr><th>Looks alike</th><th>What separates them</th><th>Trap</th><th>Slide</th></tr></thead><tbody>
+<tr><td>UVB vs UVA</td><td>UVB 290–320 nm, more energetic, about 90% filtered by ozone, stopped by glass, causes sunburn, makes vitamin D3. UVA 320–400 nm, minimally filtered, passes glass, deeper into the dermis, most drug phototoxic reactions. Both: photoaging, immunosuppression, skin cancers</td><td>Calling UVA the sunburn band</td><td>8</td></tr>
+<tr><td>MED vs SPF</td><td>MED: the smallest single UV dose that gives clearly marginated erythema. SPF: the ratio of the sunburn dose with the sunscreen to the dose without it</td><td>Defining SPF as a dose</td><td>12–13</td></tr>
+<tr><td>SPF vs critical wavelength</td><td>SPF measures mainly UVB protection and says nothing about UVA. The critical wavelength tests UVA: 370 nm or more allows "broad spectrum"</td><td>Reading a high SPF as UVA coverage</td><td>13–14</td></tr>
+<tr><td>Broad spectrum vs the skin cancer claim</td><td>Broad spectrum needs a CW of 370 nm or more; the "decreases risk of skin cancer and early aging" claim needs broad spectrum plus SPF 15 or more</td><td>Allowing the claim below SPF 15</td><td>14</td></tr>
+<tr><td>SPF 15 vs 30 vs 50</td><td>About 93%, 97% and 98% of UVB blocked</td><td>Thinking SPF 30 blocks twice as much as SPF 15</td><td>15</td></tr>
+<tr><td>SPF > 30 vs > 40 vs > 45 vs 15–24</td><td>Skin types I–II: > 30. Lupus: > 40. Photosensitizing drugs: > 45. Skin types III–V: 15–24</td><td>Swapping lupus and photosensitizing drugs</td><td>17</td></tr>
+<tr><td>Immediate vs delayed pigmentation</td><td>Immediate: starts 5–10 minutes after exposure, lasts 24–48 h. Delayed: after 48–72 h, peaks at 7–10 days, lasts weeks to months</td><td>Swapping the hours and the days</td><td>10</td></tr>
+<tr><td>Sunburn reddening vs tan</td><td>Reddening peaks at 12–24 h; melanogenesis over the next 2–3 days gives the tan</td><td>—</td><td>11</td></tr>
+<tr><td>Oils vs alcohols vs creams vs polyacrylamide (substantivity)</td><td>Oils best but unpleasant; alcohols worst; creams better than alcohol bases; polyacrylamide bases good, not easily washed off</td><td>Ranking alcohol bases above creams</td><td>19</td></tr>
+<tr><td>Sunblock vs sunscreen</td><td>Sunblock (zinc oxide, titanium dioxide): inorganic particles scatter or reflect visible, UV and infrared light; UVA and UVB; less irritating; may occlude pores and stain clothing; protection falls after 2 hours of direct sun. Sunscreen (organic): absorbs UVB and/or UVA and converts it to heat</td><td>Calling zinc oxide an absorber</td><td>20–22, 25</td></tr>
+<tr><td>Benzophenones vs salicylates vs cinnamates</td><td>Benzophenones: poor substantivity, can sensitize. Salicylates: adhere poorly, removed by water or sweat. Cinnamates: adhere poorly, depend on the vehicle</td><td>—</td><td>24</td></tr>
+<tr><td>Aminobenzoates vs dibenzoylmethanes vs anthranilates</td><td>Aminobenzoates: most effective UVB absorbers, may stain clothing. Dibenzoylmethanes: activity falls after 15 minutes. Anthranilates: only in combination products, for broad coverage</td><td>—</td><td>24</td></tr>
+<tr><td>Physical vs chemical ingredients (safety)</td><td>Physical ingredients less likely to irritate. Most chemical actives linked to skin reactions; higher risk with PABA, avobenzone and oxybenzone</td><td>Naming zinc oxide among the higher-risk ingredients</td><td>25</td></tr>
+<tr><td>Dr. Smith's psoralen vs Dr. Sikazwe's 8-MOP</td><td>Same drug (methoxsalen). Dr. Smith: with UVA of 320–340 nm it intercalates into DNA; antiproliferative, immunosuppressive, anti-inflammatory. Dr. Sikazwe: a furanocoumarin that intercalates and, with UVA, crosslinks pyrimidine bases; partially inhibits CYP3A4</td><td>—</td><td>Sun 3; DPAW 18</td></tr>
+</tbody></table>
+
+<h3 id="tell-s3">Dermatology Medicinal Chemistry (Dr. Sikazwe): DPAW pages 1–26 (11/03)</h3>
 <table class="reftab"><thead><tr><th>Looks alike</th><th>What separates</th><th>Trap</th><th>Slide</th></tr></thead><tbody>
 <tr><td>Crisaborole vs anthralin (both act without an enzyme at some step)</td><td>Crisaborole: spontaneous hydrolytic deboronation inactivates it (water, no enzyme). Anthralin: spontaneous autoxidation activates it (radicals are the treatment)</td><td>Calling both "autoxidation"; thinking deboronation activates crisaborole</td><td>7, 17</td></tr>
 <tr><td>Anthralin vs 8-MOP (methoxsalen) CBDA</td><td>Anthralin: autoxidation to anthranyl radical + superoxide anion, disrupt keratinocyte mitochondria. 8-MOP: intercalates and, with UVA, covalently crosslinks DNA pyrimidine bases</td><td>Polleve-2: "both involve autoxidation" is false</td><td>17, 18, 19</td></tr>
@@ -11943,7 +12318,7 @@ const TELL_HTML = `
 <tr><td>Hydrocortisone to clobetasol arrow vs metabolism arrows</td><td>Slide 25 arrow = structural manipulation ("not metabolism"); slide 26 arrows = metabolism</td><td>Reading slide 25 as a metabolic step</td><td>25, 26</td></tr>
 </tbody></table>
 
-<h3 id="tell-s4">Lecture 4: Sikazwe, 11/04 (DPAW pages 27–71)</h3>
+<h3 id="tell-s4">Dermatology Medicinal Chemistry (Dr. Sikazwe): DPAW pages 27–71 (11/04)</h3>
 <table class="reftab"><thead><tr><th>Looks alike</th><th>What separates</th><th>Trap</th><th>Slide</th></tr></thead><tbody>
 <tr><td>Pimecrolimus vs tacrolimus</td><td>Skin permeation: pimecrolimus high non-specific skin protein binding (stays in skin, low systemic ADRs); tacrolimus low skin protein binding (enters circulation). Structure: Cl + ethyl (pime) vs OH + allyl (tacro)</td><td>Thinking they differ in log P (6.0 vs 5.8, similar) or in mechanism (both calcineurin inhibitors)</td><td>28; T@5890–6070</td></tr>
 <tr><td>Lactone vs lactam</td><td>Lactone = cyclic ester (limus macrolides); lactam = cyclic amide (cyclosporine, a cyclic peptide)</td><td>Calling the limus drugs "peptides" (drug chart) or steroids</td><td>32, 33; T@11453–11720, T@12150–12254</td></tr>
@@ -11969,46 +12344,409 @@ const TELL_HTML = `
 </tbody></table>
 `;
 
+/* ==========================================================================
+   GUIDES: one section per learning objective, grouped by slide deck
+   ==========================================================================
+   Order (Louis, 2026-11-08): Dr. Smith's Skin Pathophysiology deck (her five
+   objectives, slide 3), her Skin Pharmacology deck (five objectives, slide 3),
+   her sun-exposure deck (five objectives, slide 6, plus the psoralen slides
+   2-4), then Dr. Sikazwe's DPAW deck (his objectives, p. 3), section by
+   section over his assigned pages for Exam 1 (11/06).
+
+   Anchors links.js uses are kept: gobj-l1-1 (skin structure), gobj-l1-2
+   (epidemiology), gobj-l1-3 (etiology and pathology), gobj-l1-4 (general
+   mechanisms by drug class, now Skin Pharmacology objective 2). Every fact is
+   cited: PP = Skin-Pathophys-Students-2026.pdf slide, PCol =
+   Skin-PCol-Students-2026.pdf slide, Sun = DEENT_Sun_Exposure_2026.pdf slide,
+   DPAW = f26-DEENT-DPAW-mc.pdf file page; T = lecture-only transcript line
+   (10/29, 10/30, 11/03), audio = sun-lecture recording time, T@ = 11/04 time.
+   Long tables are not repeated here; the chips jump to Tell apart, Reference,
+   the Drug list and the Atlas.
+   ========================================================================== */
 const GUIDE_HTML = `
-<h2>Objective guides</h2>
-<p class="sub">One section per learning objective on Dr. Smith's Lecture 1 slides, with the points in slide order and what she said in lecture marked (T). Nothing here is scored.</p>
+<h2>Guides by slide deck and learning objective</h2>
+<p class="sub">Each deck's own learning objectives, one section per objective, with what the lecture taught for it and the slide it comes from. PP = Skin-Pathophys-Students-2026.pdf, PCol = Skin-PCol-Students-2026.pdf, Sun = DEENT_Sun_Exposure_2026.pdf, DPAW = f26-DEENT-DPAW-mc.pdf (file page); (T) = said in lecture. Nothing here is scored.</p>
+
+<h2 class="gdeck" id="gdeck-pp">Skin Pathophysiology (Dr. Smith, 10/29)</h2>
 
 <section class="gobj" id="gobj-l1-1">
-<h3>Lecture 1 (Skin-Pathophys-Students-2026.pdf) &mdash; Objective 1 of 5: basic structures and functions of the skin</h3>
-<div class="gbar"><span>OBJECTIVE (slide 3)</span><b>Describe the basic structures and functions of the skin</b><i>slides 5&ndash;6</i></div>
-<div class="gpt"><h5>1. Layers and keratinocytes (slide 5)</h5><ul><li>Epidermis (outer), dermis (middle; vessels and nerves), hypodermis (inner; vessels, adipose, some nerve endings) (T 32&ndash;37).</li><li>Keratinocytes start cuboidal in the stratum basale, move up, flatten, make keratin and lose the nucleus by the stratum corneum (T 39&ndash;48).</li></ul></div>
-<div class="gpt"><h5>2. Sebum (slide 6)</h5><ul><li>Glycerides, wax esters and cholesterol; retards water loss; most on face, scalp, back and neck.</li><li>(T) &ldquo;the most important thing to remember here is we have [sebum] produced by the sebaceous gland, and these cuboidal keratinocytes, they do move on up&rdquo; (T 78&ndash;80).</li></ul></div>
+<h3>Skin Pathophysiology &middot; Objective 1: basic structures and functions of the skin</h3>
+<div class="gbar"><span>Objective (PP 3)</span><b>Describe the basic structures and functions of the skin</b><i>PP 4&ndash;6</i></div>
+<div class="gpt"><h5>Layers and keratinocytes (PP 5)</h5><ul><li>Epidermis (outer), dermis (middle; vessels and nerves), hypodermis (inner; vessels, adipose, some nerve endings) (T 32&ndash;37).</li><li>Keratinocytes start cuboidal in the stratum basale, move up, flatten, make keratin and lose the nucleus by the stratum corneum (T 39&ndash;48). The flat cells of the stratum corneum lie in overlapping layers that keep bacteria out and fluid in (T 48&ndash;54).</li></ul></div>
+<div class="gpt"><h5>Sebum (PP 6)</h5><ul><li>Made by the sebaceous gland: glycerides, wax esters and cholesterol; retards water loss; most on face, scalp, back and neck.</li><li>(T) &ldquo;the most important thing to remember here is we have [sebum] produced by the sebaceous gland, and these cuboidal keratinocytes, they do move on up&rdquo; (T 78&ndash;80).</li></ul></div>
+<div class="gtell"><b>Where each disease starts from this anatomy</b><ul><li>AD: a barrier defect in the epidermis (filaggrin, PP 15). Psoriasis: keratinocytes divide too fast and do not mature (PP 19, 23). Acne: the pilosebaceous unit, with more sebum (PP 30, 32).</li></ul></div>
 </section>
 
 <section class="gobj" id="gobj-l1-2">
-<h3>Lecture 1 &mdash; Objective 2 of 5: epidemiology of the three diseases</h3>
-<div class="gbar"><span>OBJECTIVE (slide 3)</span><b>Differentiate between the epidemiologic aspects of the three diseases</b><i>slides 10, 20, 31</i></div>
-<div class="gpt"><h5>Atopic dermatitis (slide 10)</h5><ul><li>15&ndash;30% of children and 2&ndash;10% of adults in developed countries; prevalence risen over recent decades; males and females alike; lower in rural areas (hygiene hypothesis); goes with asthma and rhinitis (atopic conditions); two- to threefold risk with one atopic parent, three- to fivefold with two.</li></ul></div>
-<div class="gpt"><h5>Psoriasis (slide 20)</h5><ul><li>A genetic basis that probably needs environmental triggers; about 3% of the US population; the most common immune-mediated inflammatory disease worldwide; prevalence varies with climate, sun exposure and ethnicity; males and females equally; about 30% have a first-degree relative.</li></ul></div>
-<div class="gpt"><h5>Acne (slides 31, 35)</h5><ul><li>Lifetime prevalence approaches 90%; onset at puberty with androgens; ages 25&ndash;58: 12% of women, 3% of men; more severe in boys in puberty, in women in adulthood; 81% likelihood if both parents had acne.</li></ul></div>
-<div class="gtell"><b>Tell apart</b><ul><li>3% is psoriasis; 15&ndash;30% of children is AD; about 90% lifetime is acne.</li></ul></div>
+<h3>Skin Pathophysiology &middot; Objective 2: epidemiology of the three diseases</h3>
+<div class="gbar"><span>Objective (PP 3)</span><b>Differentiate between the epidemiologic aspects of the three diseases</b><i>PP 10, 20, 31, 35</i></div>
+<table class="reftab"><thead><tr><th style="width:18%">Disease</th><th>Prevalence</th><th>Sex and age</th><th>Family and setting</th></tr></thead><tbody>
+<tr><td><b>Atopic dermatitis</b> (PP 10)</td><td>15&ndash;30% of children and 2&ndash;10% of adults in developed countries; risen over recent decades</td><td>Males and females alike</td><td>Lower in rural areas (hygiene hypothesis); goes with asthma and rhinitis (atopic conditions); two- to threefold risk with one atopic parent, three- to fivefold with two</td></tr>
+<tr><td><b>Psoriasis</b> (PP 20)</td><td>About 3% of the US population; the most common immune-mediated inflammatory disease worldwide; varies with climate, sun exposure and ethnicity</td><td>Males and females equally</td><td>A genetic basis that probably needs environmental triggers; about 30% have a first-degree relative with it</td></tr>
+<tr><td><b>Acne</b> (PP 31, 35)</td><td>Lifetime prevalence approaches 90%; the most common disease treated by dermatologists</td><td>Onset at puberty with androgens; ages 25&ndash;58: 12% of women, 3% of men; more severe in boys in puberty, in women in adulthood</td><td>81% likelihood if both parents had acne (PP 35)</td></tr>
+</tbody></table>
+<div class="gtell"><b>Tell apart</b><ul><li>3% is psoriasis; 15&ndash;30% of children is AD; about 90% lifetime is acne.</li><li>Family numbers: AD two- to threefold (one parent) and three- to fivefold (two); psoriasis about 30% first-degree relative; acne 81% with both parents.</li></ul></div>
 </section>
 
 <section class="gobj" id="gobj-l1-3">
-<h3>Lecture 1 &mdash; Objective 3 of 5: etiologies and pathologies</h3>
-<div class="gbar"><span>OBJECTIVE (slide 3)</span><b>Describe the etiologies and pathologies for each of these three conditions</b><i>slides 13&ndash;16, 19&ndash;24, 32&ndash;35</i></div>
-<div class="gpt"><h5>Atopic dermatitis (slides 13&ndash;16)</h5><ul><li>The first trigger is unknown: neuropeptides, irritation or scratching may release proinflammatory cytokines from keratinocytes (T 163&ndash;169).</li><li>T-cell mediated, IgE-independent at first; skin barrier dysfunction; deviation toward TH2; IgE-mediated reactions on later exposures; secondary infection.</li><li>FLG &rarr; profilaggrin &rarr; filaggrins &rarr; barrier; variants let allergens in. About 40% of people lacking FLG do not develop AD.</li></ul></div>
-<div class="gpt"><h5>Psoriasis (slides 19&ndash;24)</h5><ul><li>Trauma (bug bite, skin infection) &rarr; APCs present antigen to T cells &rarr; TNF-alpha, interferon-gamma, IL-23, IL-17 &rarr; keratinocyte hyperproliferation and chronic systemic inflammation.</li><li>Keratinocytes: 1.5 days to divide and 4 to shed, against 13 and 26 normally. Koebner response; lithium and beta blockers worsen it.</li></ul></div>
-<div class="gpt"><h5>Acne (slides 32&ndash;35)</h5><ul><li>Androgens &rarr; more sebum, altered keratinization in the duct, P. acnes colonization, inflammation. P. acnes lipase makes free fatty acids from sebum glycerides.</li></ul></div>
+<h3>Skin Pathophysiology &middot; Objective 3: etiologies and pathologies</h3>
+<div class="gbar"><span>Objective (PP 3)</span><b>Describe the etiologies and pathologies for each of these three conditions</b><i>PP 8&ndash;16, 19&ndash;26, 30&ndash;35</i></div>
+<div class="gpt"><h5>Atopic dermatitis (PP 8&ndash;16)</h5><ul>
+<li>Definition: a chronic, pruritic inflammatory skin disease, often called eczema; pruritus is the primary symptom (PP 8).</li>
+<li>Signs: red to brownish-gray patches, itch worst at night, small vesicles that leak and crust, thickened or scaly skin; hands and feet in adults, face and scalp in children; secondary bacterial infection common (PP 11).</li>
+<li>Exacerbating factors: allergens (foods, soaps, detergents, fragrances), long hot baths, dry skin, stress, sweating, rapid temperature change or low humidity, wool or man-made fabrics (PP 12).</li>
+<li>The first trigger is unknown: neuropeptides, irritation or scratching may release proinflammatory cytokines from keratinocytes; allergens may cause T-cell mediated, IgE-independent reactions (PP 13; T 163&ndash;169).</li>
+<li>Features: skin barrier dysfunction; deviation toward TH2; then increased IgE; complicated by colonization with pathologic organisms (PP 13).</li>
+<li>Genes: epidermal structural proteins and immune-system genes (PP 14). FLG &rarr; profilaggrin &rarr; filaggrins &rarr; barrier; variants let allergens in. About 40% of people lacking FLG do not develop AD (PP 15).</li>
+<li>TH1 cytokines (interferon-gamma, IL-12) suppress IgE; TH2 cytokines (IL-5, IL-13) increase it. AD has more TH2 activity: IL-3, IL-4, IL-5, IL-10, IL-13, blood eosinophilia, high total IgE, more mast cells. &ldquo;Some of our therapies antagonize these cytokines&rdquo; (PP 16).</li></ul></div>
+<div class="gpt"><h5>Psoriasis (PP 19&ndash;26)</h5><ul>
+<li>Definition: recurrent exacerbations and remissions of thickened, erythematous, scaly plaques; keratinocyte hyperproliferation and incomplete differentiation; a T-cell-mediated systemic inflammatory disease (PP 19).</li>
+<li>Trauma (bug bite, skin infection) &rarr; APCs present antigen to T cells &rarr; TNF-alpha, interferon-gamma, IL-23, IL-17 &rarr; keratinocyte hyperproliferation and chronic systemic inflammation; comorbidities follow from the chronic inflammation (PP 21&ndash;22).</li>
+<li>Keratinocytes: 1.5 days to divide and 4 to shed, against 13 and 26 normally (PP 23).</li>
+<li>Contributing factors: climate, stress, infections, trauma (Koebner response: lesions at previously clear sites after friction, venipuncture, bites, surgery or pressure), medications, most commonly lithium and beta blockers (PP 24).</li>
+<li>Nail psoriasis: pitting, ridging, discoloration, onycholysis. Psoriatic arthritis: asymmetric (hands, feet, knees), skin lesions usually first, no rheumatoid factor elevation (PP 26).</li></ul></div>
+<div class="gpt"><h5>Acne (PP 30&ndash;35)</h5><ul>
+<li>Definition: a common, self-limiting disease of the pilosebaceous units, on the face, upper back and chest (PP 30).</li>
+<li>Androgens &rarr; more sebum, altered keratinization and hyperproliferation of the ductal epidermis, P. acnes colonization of the duct, inflammation (PP 32).</li>
+<li>Skin cells stick together and plug the channel with sebum. P. acnes lipase turns sebum glycerides into free fatty acids, which irritate the follicle wall and are antigenic (PP 33).</li>
+<li>Exacerbating factors: humidity and sweating; acne mechanica (occlusion or irritation), occupational acne, acne cosmetica (comedogenic oils); stress; hormones; drug-induced acne (phenytoin, isoniazid, phenobarbital, lithium, steroids, azathioprine, quinine, rifampin and others); genetics; high glycemic index diet, perhaps dairy (PP 35).</li></ul></div>
 <!--DIA:acne-cascade-->
-<div class="gpoll"><b>Her polls (slide 38)</b><ul><li>Major pathology of AD: skin barrier dysfunction (TRUE); keratinocyte hyperproliferation (FALSE, psoriasis); excess sebum (FALSE, acne).</li><li>Major pathology of psoriasis: keratinocyte hyperproliferation (TRUE).</li><li>Major pathology of acne: excess sebum production (TRUE). Keratinocyte hyperproliferation is FALSE: &ldquo;This is a feature of psoriasis&rdquo; (T 573&ndash;577).</li></ul></div>
+<div class="gpoll"><b>Her polls (PP 38)</b><ul><li>Major pathology of AD: skin barrier dysfunction (TRUE); keratinocyte hyperproliferation (FALSE, psoriasis); excess sebum (FALSE, acne).</li><li>Major pathology of psoriasis: keratinocyte hyperproliferation (TRUE).</li><li>Major pathology of acne: excess sebum production (TRUE). Keratinocyte hyperproliferation is FALSE: &ldquo;This is a feature of psoriasis&rdquo; (T 573&ndash;577).</li></ul></div>
+<div style="display:flex;flex-wrap:wrap;gap:7px;margin:8px 0"><button type="button" class="chip" data-jump="tell:tell-l1-diseases">Tell apart: the three diseases</button></div>
+</section>
+
+<section class="gobj" id="gobj-pp-4">
+<h3>Skin Pathophysiology &middot; Objective 4: classes of medications for each condition</h3>
+<div class="gbar"><span>Objective (PP 3)</span><b>List the classes of medications used to treat each of these conditions</b><i>PP 17, 28, 37</i></div>
+<table class="reftab"><thead><tr><th style="width:18%">Disease</th><th>Classes on her slide</th></tr></thead><tbody>
+<tr><td><b>Atopic dermatitis</b> (PP 17)</td><td>Corticosteroids; calcineurin inhibitors; PDE-4 inhibitor; IL-4 receptor alpha/IL-13 receptor antagonists; JAK inhibitor</td></tr>
+<tr><td><b>Psoriasis</b> (PP 28)</td><td>Corticosteroids; DNA synthesis inhibitors; dihydrofolate reductase inhibitor/T-cell and cytokine suppressors; T-cell inhibitors; TNF-alpha inhibitors; JAK inhibitors; IL-12 &amp; IL-13 inhibitors (as printed); IL-23 inhibitor; IL-17A inhibitor; nuclear receptor binders; psoralens; calcineurin inhibitors; cytotoxic agents</td></tr>
+<tr><td><b>Acne</b> (PP 37)</td><td>Keratolytics; antibiotics; nuclear receptor binders; antiandrogens</td></tr>
+</tbody></table>
+<div class="gtell"><b>Classes on more than one list</b><ul><li>Corticosteroids and calcineurin inhibitors: AD and psoriasis. JAK inhibitors: AD and psoriasis. Nuclear receptor binders: psoriasis and acne (PP 17, 28, 37).</li><li>Only acne: keratolytics, antibiotics, antiandrogens. Only AD: PDE-4 inhibitor and IL-4R&alpha;/IL-13R antagonists on PP 17 (apremilast, a PDE-4 inhibitor, is taught for psoriasis on PCol 34).</li></ul></div>
+<div style="display:flex;flex-wrap:wrap;gap:7px;margin:8px 0"><button type="button" class="chip" data-jump="ref:ref-l1-classes">Reference: drug classes by disease</button><button type="button" class="chip" data-jump="ref:ref-l1-acnemap">Reference: acne pathology and drugs</button></div>
+</section>
+
+<section class="gobj" id="gobj-pp-5">
+<h3>Skin Pathophysiology &middot; Objective 5: general mechanisms of the drug classes</h3>
+<div class="gbar"><span>Objective (PP 3)</span><b>Describe the general mechanisms of actions of the drug classes used to treat these three conditions</b><i>PP 16, 27, 36</i></div>
+<div class="gpt"><h5>Each pathology and the classes aimed at it</h5><ul>
+<li>AD: TH2 cytokines drive IgE; &ldquo;some of our therapies antagonize these cytokines&rdquo; (PP 16): dupilumab blocks IL-4R&alpha;, shared by the IL-4 and IL-13 receptors (PCol 64). Corticosteroids and calcineurin inhibitors suppress the immune response (PCol 11, 27).</li>
+<li>Psoriasis treatment rationale (PP 27): agents that modulate the abnormal immune response (topical corticosteroids, biologic response modifiers) and medications that affect cell turnover (retinoids); manage comorbidities; patient-specific; quality of life.</li>
+<li>Acne (PP 36): P. acnes proliferation &rarr; benzoyl peroxide, antibiotics, isotretinoin; abnormal keratinization &rarr; salicylic acid, benzoyl peroxide, topical retinoids, isotretinoin; inflammation &rarr; corticosteroids, antibiotics; abnormal sebum &rarr; antiandrogens, isotretinoin.</li></ul></div>
+<div class="gask"><b>Mechanism of each class</b><ul><li>The class-by-class mechanisms are in Skin Pharmacology, Objective 2, below.</li></ul></div>
+<div style="display:flex;flex-wrap:wrap;gap:7px;margin:8px 0"><button type="button" class="chip" data-jump="guide:gobj-l1-4">Guide: general mechanism of each class</button><button type="button" class="chip" data-jump="ref:ref-l1-acnemap">Reference: acne pathology and drugs</button></div>
+</section>
+
+<h2 class="gdeck" id="gdeck-pc">Skin Pharmacology (Dr. Smith, 10/29, 10/30, 11/03)</h2>
+<div class="gask"><b>Her Exam 1 hints (pasted by Louis, 2026-11-07)</b><ul><li>&ldquo;The drugs in each pharmacological class (know the drug table); The general mechanism of action for each drug class. This includes being able to explain why that MOA is good for treating the skin conditions it is indicated for.; The details of the MOAs differentiate the drugs within the class; ... Know Black Box warning adverse drug reactions&rdquo;.</li><li>&ldquo;Know what the drugs target.&rdquo; Fill-in-the-blanks focus on drug mechanisms. She asks with generic names only (10/29, T 618&ndash;621).</li></ul></div>
+
+<section class="gobj" id="gobj-pc-1">
+<h3>Skin Pharmacology &middot; Objective 1: which medications treat AD, psoriasis and acne</h3>
+<div class="gbar"><span>Objective (PCol 3)</span><b>List which medications are used for treating atopic dermatitis, psoriasis, and acne</b><i>PCol 8&ndash;76; Sun 2&ndash;4</i></div>
+<table class="reftab"><thead><tr><th style="width:16%">Disease</th><th>Drugs (class)</th></tr></thead><tbody>
+<tr><td><b>Atopic dermatitis</b></td><td>Topical corticosteroids (PCol 11); pimecrolimus, tacrolimus topical, over 2 years of age (calcineurin inhibitors, PCol 27&ndash;28); crisaborole topical (PDE-4 inhibitor, PCol 33); dupilumab (IL-4R&alpha; antagonist, PCol 64); ruxolitinib, upadacitinib (JAK inhibitors, PCol 76; PP 17)</td></tr>
+<tr><td><b>Psoriasis</b></td><td>Corticosteroids (PCol 11); acitretin, tazarotene (retinoids, PCol 18, 20); calcipotriene (vitamin D analog, PCol 21); cyclosporine oral (calcineurin inhibitor, PCol 29); apremilast oral (PDE-4 inhibitor, PCol 34); coal tar, anthralin, shale tar, selenium sulfide, zinc pyrithione (cytotoxic agents, PCol 53&ndash;57); methotrexate (DHFR inhibitor, PCol 59); abatacept (co-stimulation inhibitor, PCol 63); secukinumab, ixekizumab, brodalumab (IL-17, PCol 65&ndash;66); ustekinumab (IL-12/23, PCol 67); guselkumab, tildrakizumab-asmn, risankizumab (IL-23, PCol 68&ndash;69); etanercept, infliximab, adalimumab, golimumab, certolizumab pegol (TNF-&alpha;, PCol 70&ndash;74); tofacitinib (JAK, PCol 76); methoxsalen with UVA (psoralen, Sun 3)</td></tr>
+<tr><td><b>Acne</b></td><td>Tretinoin, adapalene, tazarotene topical; isotretinoin oral for severe cystic acne (retinoids, PCol 16&ndash;19); benzoyl peroxide, sulfur, salicylic acid (keratolytics, PCol 35&ndash;40); sarecycline, minocycline, doxycycline (tetracyclines, PCol 43&ndash;45); clindamycin (PCol 46); erythromycin, azithromycin (macrolides, PCol 47); dapsone topical gel (PCol 50); antiandrogens (class only, PP 37)</td></tr>
+<tr><td><b>Other uses on her slides</b></td><td>Metronidazole: rosacea (PCol 51). Trimethoprim/sulfamethoxazole: mechanism only (PCol 48&ndash;49). Tazarotene also for wrinkles (PCol 18).</td></tr>
+</tbody></table>
+<div style="display:flex;flex-wrap:wrap;gap:7px;margin:8px 0"><button type="button" class="chip" data-jump="drugs:">Drug list: every chart drug as a card</button><button type="button" class="chip" data-jump="ref:ref-targets">Reference: drug targets, write it first</button></div>
 </section>
 
 <section class="gobj" id="gobj-l1-4">
-<h3>Lecture 1 &mdash; Objectives 4 and 5 of 5: drug classes and their general mechanisms</h3>
-<div class="gbar"><span>OBJECTIVE (slide 3)</span><b>List the classes of medications used to treat each condition and describe their general mechanisms</b><i>Pathophys 17, 28, 36&ndash;37; PCol 5&ndash;15</i></div>
-<div class="gpt"><h5>Nuclear receptor binders (PCol 5&ndash;7)</h5><ul><li>Promote or inhibit transcription, directly at a response element or indirectly by binding NF-kB or AP-1.</li><li>(T) &ldquo;either enhance the expression of anti-inflammatory proteins, or decrease the expression of inflammatory proteins&rdquo; (T 680&ndash;683).</li></ul></div>
+<h3>Skin Pharmacology &middot; Objective 2: general mechanism of each class, and why it helps</h3>
+<div class="gbar"><span>Objective (PCol 3)</span><b>Explain the general mechanisms of action of each pharmacological drug class</b><i>PCol 5&ndash;76; Sun 3</i></div>
+<div class="gpt"><h5>Nuclear receptor binders (PCol 5&ndash;7): corticosteroids, retinoids, vitamin D analog</h5><ul><li>The drug binds a receptor inside the cell; the complex acts directly at a response element or indirectly by binding NF-kB or AP-1, to promote or inhibit transcription.</li><li>(T) &ldquo;either enhance the expression of anti-inflammatory proteins, or decrease the expression of inflammatory proteins&rdquo; (T 680&ndash;683).</li></ul></div>
 <!--DIA:nr-action-->
-<div class="gpt"><h5>Corticosteroids (PCol 8&ndash;12)</h5><ul><li>CBG carries the steroid; Hsp90 leaves the receptor when the steroid binds; complex binds the GRE.</li><li>Low potency for the face and for maintenance; avoid occluded or abraded skin; systemic effects possible even with low potency.</li></ul></div>
-<div class="gpt"><h5>Retinoids (PCol 14&ndash;15)</h5><ul><li>RAR: differentiation and proliferation (acne, psoriasis, photoaging); RXR: apoptosis (Kaposi sarcoma).</li><li>Acne: less cohesion, faster turnover, comedones opened. Aging: more collagen, new vessels, thicker epidermis.</li></ul></div>
-<div class="gask"><b>How it is asked</b><ul><li>She asks with generic names only (T 618&ndash;621).</li></ul></div>
+<div class="gpt"><h5><b>Corticosteroids</b> &middot; PCol 8&ndash;11</h5><ul><li><b>Target, mechanism:</b> Glucocorticoid receptor; CBG carries the steroid in blood; Hsp90 leaves the receptor when the steroid binds; the complex binds the GRE</li><li><b>Why it helps:</b> Immunosuppressive, so used for psoriasis and AD (PCol 11; T 873&ndash;875). Low potency for the face and for long-term maintenance; mid to high potency for short-term exacerbations; avoid occluded or abraded skin</li></ul></div>
+<div class="gpt"><h5><b>Retinoids</b> (tretinoin, adapalene, tazarotene, isotretinoin, acitretin) &middot; PCol 14&ndash;15, 19</h5><ul><li><b>Target, mechanism:</b> RAR: differentiation and proliferation (acne, psoriasis, photoaging); RXR: apoptosis (Kaposi sarcoma)</li><li><b>Why it helps:</b> Acne: less cohesion between epidermal cells, faster turnover; open comedones expelled, closed ones opened. Psoriasis: precise mechanism unknown, may be anti-inflammatory and antiproliferative. Aging: more collagen, new vessels, thicker epidermis. Isotretinoin: appears to inhibit sebaceous gland size and function (PCol 19)</li></ul></div>
+<div class="gpt"><h5><b>Vitamin D analog</b> (calcipotriene) &middot; PCol 21</h5><ul><li><b>Target, mechanism:</b> Vitamin D receptor, which pairs with RXR-&alpha;</li><li><b>Why it helps:</b> Inhibits proliferation, promotes keratinocyte differentiation, decreases inflammatory cytokine release (psoriasis)</li></ul></div>
+<div class="gpt"><h5><b>Calcineurin inhibitors</b> (pimecrolimus, tacrolimus, cyclosporine) &middot; PCol 24&ndash;27</h5><ul><li><b>Target, mechanism:</b> Cyclosporine binds cyclophilin, tacrolimus binds FKBP; the complex inhibits calcineurin, so less IL-2 is made for T-cell proliferation (in the cascade after signals 1 and 2)</li><li><b>Why it helps:</b> Inhibits activation of T cells and mast cells, blocking proinflammatory cytokines and mediators; topical CNIs relieve AD itching within the first few days</li></ul></div>
+<div class="gpt"><h5><b>PDE-4 inhibitors</b> (crisaborole, apremilast) &middot; PCol 32&ndash;34</h5><ul><li><b>Target, mechanism:</b> PDE-4, the main PDE isoform in inflammatory cells; cAMP is not broken down</li><li><b>Why it helps:</b> More cAMP inhibits mast cells, eosinophils, neutrophils and T cells (AD: crisaborole; psoriasis: apremilast)</li></ul></div>
+<div class="gpt"><h5><b>Keratolytics</b> (benzoyl peroxide, sulfur, salicylic acid) &middot; PCol 35&ndash;39</h5><ul><li><b>Target, mechanism:</b> BPO: antimicrobial against P. acnes plus peeling and comedolytic (benzoic acid probable active form). Sulfur: reduced to hydrogen sulfide in keratinocytes; bacteriostatic. Salicylic acid: solubilizes the cell surface proteins that hold the stratum corneum together</li><li><b>Why it helps:</b> Break down keratin so cells slough, follicles stay open, plugs clear (acne)</li></ul></div>
+<div class="gpt"><h5><b>Antibiotics/antimicrobials</b> &middot; PCol 42&ndash;50</h5><ul><li><b>Target, mechanism:</b> Tetracyclines: 30S, block aminoacyl-tRNA at the acceptor site. Clindamycin, macrolides: 50S, prevent translocation. All bacteriostatic. Sulfamethoxazole competes with PABA; trimethoprim inhibits bacterial DHFR. Dapsone (acne): anti-inflammatory, neutrophils a possible site</li><li><b>Why it helps:</b> A bacterium (P. acnes) contributes to acne (10/30 T 574&ndash;576); tetracycline efficacy in acne may depend more on anti-inflammatory activity (PCol 45)</li></ul></div>
+<div class="gpt"><h5><b>Cytotoxic agents</b> (coal tar, anthralin, shale tar, selenium sulfide, zinc pyrithione) &middot; PCol 53&ndash;57</h5><ul><li><b>Target, mechanism:</b> Coal tar: antiproliferative, anti-inflammatory, crosslinks DNA. Anthralin: may act on keratinocyte mitochondria; prevents T-lymphocyte activation. Shale tar: unknown. Selenium sulfide, zinc pyrithione: cytostatic and antifungal</li><li><b>Why it helps:</b> Decrease the rate of epidermal cell turnover (psoriasis)</li></ul></div>
+<div class="gpt"><h5><b>DHFR inhibitor</b> (methotrexate) &middot; PCol 59</h5><ul><li><b>Target, mechanism:</b> Folic acid analog; inhibits DHFR, so less THF and fewer purines; cell death; may be directly anti-inflammatory</li><li><b>Why it helps:</b> Reduces keratinocyte hyperproliferation and the number of T cells (psoriasis)</li></ul></div>
+<div class="gpt"><h5><b>Co-stimulation inhibitor</b> (abatacept) &middot; PCol 63</h5><ul><li><b>Target, mechanism:</b> Fusion protein (CTLA-4 domain + IgG Fc) binds CD80/86 on APCs, so CD28 cannot bind</li><li><b>Why it helps:</b> Blocks the positive second signal needed for T-cell activation</li></ul></div>
+<div class="gpt"><h5><b>IL-4R&alpha; antagonist</b> (dupilumab) &middot; PCol 64</h5><ul><li><b>Target, mechanism:</b> IL-4 receptor alpha subunit, shared by the IL-4 and IL-13 receptors</li><li><b>Why it helps:</b> IL-4 and IL-13 promote IgE synthesis; blocking lowers proinflammatory cytokines, chemokines and IgE (AD)</li></ul></div>
+<div class="gpt"><h5><b>IL-17 inhibitors</b> (secukinumab, ixekizumab, brodalumab) &middot; PCol 65&ndash;66</h5><ul><li><b>Target, mechanism:</b> Secukinumab, ixekizumab: IL-17A cytokine. Brodalumab: IL-17 receptor A</li><li><b>Why it helps:</b> Keratinocytes are the main IL-17 target in psoriasis (hyperproliferation, barrier dysfunction); blocking reduces number and size of plaques</li></ul></div>
+<div class="gpt"><h5><b>IL-12/23 and IL-23 inhibitors</b> (ustekinumab; guselkumab, tildrakizumab-asmn, risankizumab) &middot; PCol 67&ndash;69</h5><ul><li><b>Target, mechanism:</b> Ustekinumab: p40, shared by IL-12 and IL-23. The others: p19 of IL-23</li><li><b>Why it helps:</b> Suppress proinflammatory Th1 and Th17 cells; less release of proinflammatory cytokines and chemokines</li></ul></div>
+<div class="gpt"><h5><b>TNF-&alpha; inhibitors</b> (etanercept, infliximab, adalimumab, golimumab, certolizumab pegol) &middot; PCol 70&ndash;74</h5><ul><li><b>Target, mechanism:</b> Bind TNF-&alpha;, keeping it from its receptors on inflammatory cells</li><li><b>Why it helps:</b> TNF-&alpha; is an inflammatory cytokine; blocking it reduces the number and size of plaques</li></ul></div>
+<div class="gpt"><h5><b>JAK inhibitors</b> (tofacitinib, ruxolitinib, upadacitinib) &middot; PCol 75&ndash;76</h5><ul><li><b>Target, mechanism:</b> Inhibit Janus kinase; small molecules that get inside the cell (T 570&ndash;573)</li><li><b>Why it helps:</b> Inhibit the production of inflammatory cytokines</li></ul></div>
+<div class="gpt"><h5><b>Psoralens</b> (methoxsalen + UVA) &middot; Sun 3; PCol 78</h5><ul><li><b>Target, mechanism:</b> With UV light of 320&ndash;340 nm, psoralens intercalate into DNA</li><li><b>Why it helps:</b> Antiproliferative, immunosuppressive, anti-inflammatory: normalizes keratinocytes, reorganizes blood vessels, cytotoxic to T cells; increases melanin</li></ul></div>
+<div style="display:flex;flex-wrap:wrap;gap:7px;margin:8px 0"><button type="button" class="chip" data-jump="ref:ref-targets">Reference: drug targets, write it first</button><button type="button" class="chip" data-jump="tell:tell-l1-drugs">Tell apart: nuclear receptor binders</button></div>
+</section>
+
+<section class="gobj" id="gobj-pc-3">
+<h3>Skin Pharmacology &middot; Objective 3: differences between drugs in the same class</h3>
+<div class="gbar"><span>Objective (PCol 3)</span><b>Explain the differences between the drugs within the same class</b><i>PCol 16&ndash;76</i></div>
+<table class="reftab"><thead><tr><th style="width:17%">Class</th><th>What separates the drugs</th><th style="width:10%">Slide</th></tr></thead><tbody>
+<tr><td><b>Topical retinoids</b></td><td>Tretinoin: &lt;10% absorbed; microsphere form less irritating. Adapalene: photochemically stable, can be combined with benzoyl peroxide, less irritating, mild to moderate acne. Tazarotene: photosensitivity, psoriasis, acne and wrinkles, not in pregnancy</td><td>PCol 17&ndash;18</td></tr>
+<tr><td><b>Oral retinoids</b></td><td>Isotretinoin: severe cystic acne, lipid changes, skeletal hyperostosis in children, iPLEDGE (men too). Acitretin: psoriasis (pustular), hepatotoxicity, half-life of months, no ethanol for 2 months, no blood donation or pregnancy for 3 years</td><td>PCol 19&ndash;20</td></tr>
+<tr><td><b>Calcineurin inhibitors</b></td><td>Pimecrolimus stays in the skin better than topical tacrolimus. Cyclosporine binds cyclophilin, tacrolimus FKBP. Cyclosporine only: gingival hyperplasia; tacrolimus only: neuropathies. Cyclosporine's Neoral (microemulsion) and Sandimmune are not bioequivalent and not interchangeable</td><td>PCol 26&ndash;30</td></tr>
+<tr><td><b>PDE-4 inhibitors</b></td><td>Crisaborole: topical 2% ointment, mild to moderate AD, 2 years and older. Apremilast: oral, psoriasis, GI effects, headache, weight loss, caution in depression</td><td>PCol 33&ndash;34</td></tr>
+<tr><td><b>Keratolytics</b></td><td>BPO: antimicrobial and comedolytic, sensitizer, bleaches. Sulfur: bacteriostatic, hydrogen sulfide, comedogenic, odor. Salicylic acid: 3&ndash;6% for acne, &gt;6% damages tissue, up to 40% for warts and corns</td><td>PCol 36&ndash;40</td></tr>
+<tr><td><b>Antibiotics</b></td><td>Tetracyclines 30S; clindamycin and macrolides 50S. Doxycycline and minocycline more lipid soluble; minocycline and sarecycline may be less photosensitizing; sarecycline narrower spectrum; minocycline ototoxicity. Clindamycin: water-based gel or lotion better tolerated; metronidazole: gel more drying, cream or lotion better tolerated</td><td>PCol 43&ndash;51</td></tr>
+<tr><td><b>Cytotoxic agents</b></td><td>Coal tar photosensitizing and carcinogenic; shale tar not photosensitizing and less irritating; anthralin stains and has no systemic effects; selenium sulfide and zinc pyrithione cytostatic and antifungal</td><td>PCol 53&ndash;57</td></tr>
+<tr><td><b>IL-17, IL-12/23, IL-23</b></td><td>Secukinumab (human) and ixekizumab (humanized) bind IL-17A; brodalumab binds the receptor. Ustekinumab binds p40 (IL-12 and IL-23); guselkumab (human), tildrakizumab-asmn and risankizumab (humanized) bind p19</td><td>PCol 66&ndash;69</td></tr>
+<tr><td><b>TNF-&alpha; inhibitors</b></td><td>Etanercept: two p75 TNF receptors + IgG1 Fc. Infliximab: chimeric, IV, anti-drug antibodies, infusion reactions, lupus-like syndrome. Adalimumab: human, SubQ, less antigenic. Golimumab: human. Certolizumab pegol: pegylated Fab, every 2 weeks, may extend to 4 after 3 doses</td><td>PCol 71&ndash;74</td></tr>
+<tr><td><b>JAK inhibitors</b></td><td>Tofacitinib: oral, boxed warning. Ruxolitinib: JAK1 and JAK2, topical and oral. Upadacitinib: more potent at JAK1 and JAK2 than JAK3 and TYK2 in an enzyme assay; selectivity unsettled</td><td>PCol 76</td></tr>
+</tbody></table>
+<div style="display:flex;flex-wrap:wrap;gap:7px;margin:8px 0"><button type="button" class="chip" data-jump="tell:tell-l2">Tell apart: Smith 10/30</button><button type="button" class="chip" data-jump="tell:tell-l3">Tell apart: Smith 11/03</button></div>
+</section>
+
+<section class="gobj" id="gobj-pc-4">
+<h3>Skin Pharmacology &middot; Objective 4: drug interactions discussed in class</h3>
+<div class="gbar"><span>Objective (PCol 3)</span><b>List the drug interactions discussed in class</b><i>PCol 18, 20, 22, 30, 34, 40, 47, 67</i></div>
+<table class="reftab"><thead><tr><th style="width:22%">Drug</th><th>Interaction</th><th style="width:12%">Slide</th></tr></thead><tbody>
+<tr><td><b>Cyclosporine, tacrolimus</b> (oral)</td><td>Multiple drug interactions because they are metabolized by CYP3A4</td><td>PCol 30</td></tr>
+<tr><td><b>Apremilast</b></td><td>Avoid strong CYP3A4 inducers (they reduce its effect)</td><td>PCol 34</td></tr>
+<tr><td><b>Erythromycin, azithromycin</b></td><td>Orally, many drug interactions. Topically, burning and drying, especially when combined with benzoyl peroxide</td><td>PCol 47</td></tr>
+<tr><td><b>Adapalene + benzoyl peroxide</b></td><td>Adapalene can be combined with benzoyl peroxide; the other retinoids are &ldquo;way too irritating&rdquo; with it</td><td>PCol 18; 10/30 T 72&ndash;73</td></tr>
+<tr><td><b>Salicylic acid</b></td><td>Salicylism risk adds up with other topical salicylates</td><td>PCol 40</td></tr>
+<tr><td><b>Calcipotriene + topical steroid</b></td><td>The steroid reduces calcipotriene's irritation</td><td>PCol 22</td></tr>
+<tr><td><b>Acitretin + ethanol</b></td><td>Ethanol must be strictly avoided during treatment and for 2 months after</td><td>PCol 20</td></tr>
+<tr><td><b>Ustekinumab + live vaccines</b></td><td>Stop at least 15 weeks before a live vaccine; resume at least 2 weeks after</td><td>PCol 67</td></tr>
+</tbody></table>
+<div style="display:flex;flex-wrap:wrap;gap:7px;margin:8px 0"><button type="button" class="chip" data-jump="tell:tell-smith-safety">Tell apart: boxed warnings, pregnancy, interactions</button><button type="button" class="chip" data-jump="guide:gobj-mc-ddi">Guide: interactions Dr. Sikazwe named</button></div>
+</section>
+
+<section class="gobj" id="gobj-pc-5">
+<h3>Skin Pharmacology &middot; Objective 5: side effects, contraindications and boxed warnings</h3>
+<div class="gbar"><span>Objective (PCol 3)</span><b>List the side effects and contraindications discussed in class</b><i>PCol 12&ndash;76; Sun 4</i></div>
+<h4>Boxed (black box) warnings on her slides</h4>
+<table class="reftab"><thead><tr><th style="width:22%">Drug or class</th><th>Boxed warning</th><th style="width:12%">Slide</th></tr></thead><tbody>
+<tr><td><b>Oral calcineurin inhibitors</b> (cyclosporine; tacrolimus)</td><td>Increased risk of lymphoma and other malignancies, particularly of the skin; increased susceptibility to bacterial, viral, fungal and protozoal infections, including opportunistic infection</td><td>PCol 30</td></tr>
+<tr><td><b>TNF-&alpha; inhibitors</b> (all five)</td><td>Serious infections that may lead to hospitalization or death; lymphoma and other malignancies, some fatal, reported in children and adolescents</td><td>PCol 70; T 498&ndash;500</td></tr>
+<tr><td><b>Tofacitinib</b></td><td>Severe infection, lymphoma and other malignancies; also caution in patients at high risk for GI perforation</td><td>PCol 76</td></tr>
+</tbody></table>
+<h4>Side effects and contraindications by drug</h4>
+<div class="gpt"><ul>
+<li><b>Topical corticosteroids</b> (PCol 11&ndash;12): Local: striae, atrophy, perioral dermatitis, acne, rosacea, telangiectasia, purpura, hypertrichosis, allergic contact dermatitis. Systemic: HPA suppression, infection, hyperglycemia, cataracts, glaucoma, growth retardation; possible even with low potency (T 861&ndash;865). <i>Cautions:</i> Avoid occluded or abraded skin; low potency on the face.</li>
+<li><b>Topical retinoids</b> (PCol 16, 18): Erythema and dryness early; photosensitivity; comedones may flare in weeks 4&ndash;6; may raise the tumorigenic potential of UV. <i>Cautions:</i> Apply to dry skin; avoid corners of nose, eyes, mouth and mucous membranes; sun protection. Tazarotene: not in pregnancy, contraceptive counseling.</li>
+<li><b>Isotretinoin</b> (PCol 19): Dry skin and mucosa, lipid changes, skeletal hyperostosis in children. <i>Cautions:</i> Teratogen; iPLEDGE, men enrolled too (T 130&ndash;132).</li>
+<li><b>Acitretin</b> (PCol 20): Hepatotoxicity, with fatal hepatitis. <i>Cautions:</i> Teratogenic: no pregnancy during treatment or for 3 years after; no blood donation for 3 years; no ethanol for 2 months.</li>
+<li><b>Calcipotriene</b> (PCol 22): Burning, itching, atrophy, hyperpigmentation, folliculitis, mild photosensitivity; hypercalcemia and hypercalciuria above 100 g a week, resolving in days.</li>
+<li><b>Topical pimecrolimus, tacrolimus</b> (PCol 27&ndash;28): Burning at the site; potential local skin carcinogenesis; infection if blood levels get high. <i>Cautions:</i> Over 2 years of age; sun protection.</li>
+<li><b>Oral cyclosporine, tacrolimus</b> (PCol 29&ndash;30): Nephrotoxicity, hypertension, upper respiratory infections (most common), cough, headache; cyclosporine gingival hyperplasia; tacrolimus neuropathies. <i>Cautions:</i> Boxed warning (above); blood levels to prevent toxicity.</li>
+<li><b>Crisaborole</b> (PCol 33): Application-site pain 4%; hypersensitivity &lt;1%. <i>Cautions:</i> Stop at once for hypersensitivity; 2 years and older.</li>
+<li><b>Apremilast</b> (PCol 34): Diarrhea, nausea, headache, weight loss. <i>Cautions:</i> Use cautiously in depression.</li>
+<li><b>Benzoyl peroxide</b> (PCol 36&ndash;37): Irritation; potent contact sensitizer; bleaches hair and fabric. <i>Cautions:</i> Avoid eyes and mucous membranes.</li>
+<li><b>Sulfur</b> (PCol 38): Irritation, comedogenic, odor.</li>
+<li><b>Salicylic acid</b> (PCol 39&ndash;40): Salicylism; tissue damage above 6%. <i>Cautions:</i> Caution on extremities in diabetes or peripheral vascular disease.</li>
+<li><b>Tetracyclines</b> (PCol 44&ndash;45): N/V/D, pseudomembranous colitis (stop if blood in stool), discolored teeth and bones in the young, photosensitivity, superinfection; minocycline ototoxicity. <i>Cautions:</i> Not in pregnancy or under 8 years.</li>
+<li><b>Clindamycin</b> (PCol 46): Pseudomembranous colitis, impaired liver function; about 10% absorbed topically; resistance.</li>
+<li><b>Macrolides</b> (PCol 47): Oral N/V/D, epigastric pain; topical burning and drying; resistance.</li>
+<li><b>Coal tar</b> (PCol 54): Photosensitizing, carcinogenic. <i>Cautions:</i> Avoid even low concentrations in acute dermatitis with vesiculation or oozing; use in pregnancy not studied.</li>
+<li><b>Anthralin</b> (PCol 56): Irritation, severe conjunctivitis, staining of skin, hair and clothes; no systemic effects. <i>Cautions:</i> Caution, if at all, on face and intertriginous areas.</li>
+<li><b>Methotrexate</b> (PCol 61): Cumulative liver toxicity (most significant); nausea, pulmonary toxicity, myelosuppression, megaloblastic anemia, lymphoma, pancytopenia (rare). <i>Cautions:</i> Abortifacient and teratogenic; separate counting tray and gloves.</li>
+<li><b>Dupilumab</b> (PCol 64): Nasopharyngitis, headache; eye effects can be dose limiting.</li>
+<li><b>Secukinumab</b> (PCol 66): Infection, nasopharyngitis about 12%, Crohn's exacerbation. <i>Cautions:</i> Evaluate for tuberculosis first.</li>
+<li><b>Ustekinumab</b> (PCol 67): Upper respiratory infection most common; serious infection; malignancy; posterior leukoencephalopathy. <i>Cautions:</i> Serious allergy: do not give again; TB evaluation; live vaccines (Objective 4).</li>
+<li><b>Risankizumab</b> (PCol 69): Severe infection, TB reactivation, skin cancer (less common).</li>
+<li><b>Etanercept, infliximab, adalimumab, certolizumab</b> (PCol 71&ndash;74): Etanercept: injection site, case reports of pancytopenia and demyelination. Infliximab: anti-drug antibodies, infusion reactions, lupus-like syndrome. Adalimumab: injection site, infection. Certolizumab: URTI, rash, UTI. <i>Cautions:</i> Class boxed warning (above).</li>
+<li><b>Methoxsalen (PUVA)</b> (Sun 4; PCol 79): Pruritus, nausea, erythema and blistering, hyperpigmentation, skin aging, skin cancer, cataracts.</li>
+</ul></div>
+<div style="display:flex;flex-wrap:wrap;gap:7px;margin:8px 0"><button type="button" class="chip" data-jump="ref:ref-l2">Reference: Smith 10/30 drugs</button><button type="button" class="chip" data-jump="ref:ref-l3">Reference: Smith 11/03 drugs</button><button type="button" class="chip" data-jump="tell:tell-smith-safety">Tell apart: boxed warnings, pregnancy, interactions</button></div>
+</section>
+
+<h2 class="gdeck" id="gdeck-sun">Sun Exposure and Psoralens (Dr. Smith, recorded lecture)</h2>
+<p class="prose">Objectives on Sun 6: describe the types of ultraviolet radiation; categorize sunscreens and sunblocks into pharmacological or therapeutic classes; differentiate the mechanisms of action of products for protection from sunburn; define MED, SPF and substantivity; differentiate sunblocks and sunscreens. The psoralen slides (Sun 2&ndash;4) repeat PCol 77&ndash;79.</p>
+
+<section class="gobj" id="gobj-sun-pso">
+<h3>Sun Exposure &middot; Psoralen chromophores (Sun 2&ndash;4)</h3>
+<div class="gbar"><span>Slides</span><b>Methoxsalen: mechanism, effects and side effects</b><i>Sun 3&ndash;4; PCol 78&ndash;79</i></div>
+<div class="gpt"><ul>
+<li>PUVA combines UVA light with a psoralen; with UV light of 320&ndash;340 nm the psoralen intercalates into DNA, so cells can no longer divide (Sun 3; audio 00:29&ndash;01:20).</li>
+<li>Effects: normalizes the number and arrangement of keratinocytes; reorganizes cutaneous blood vessels; cytotoxic to T cells; increases melanin pigmentation (used for uneven pigmentation, not for psoriasis; audio 01:47&ndash;02:10) (Sun 3).</li>
+<li>Side effects: pruritus, nausea, erythema and blistering, hyperpigmentation, increased skin aging, increased skin cancer risk, cataracts (Sun 4).</li></ul></div>
+</section>
+
+<section class="gobj" id="gobj-sun-1">
+<h3>Sun Exposure &middot; Objective 1: types of ultraviolet radiation</h3>
+<div class="gbar"><span>Objective (Sun 6)</span><b>Describe the types of ultraviolet radiation</b><i>Sun 7&ndash;11</i></div>
+<table class="reftab"><thead><tr><th style="width:20%"></th><th>UVB</th><th>UVA</th></tr></thead><tbody>
+<tr><td><b>Wavelength</b></td><td>290&ndash;320 nm; more energetic</td><td>320&ndash;400 nm; less energetic</td></tr>
+<tr><td><b>Ozone and glass</b></td><td>About 90% filtered by ozone; does not pass glass</td><td>Minimally filtered; passes glass</td></tr>
+<tr><td><b>Depth</b></td><td>&mdash;</td><td>Penetrates further into the dermis</td></tr>
+<tr><td><b>Damage</b></td><td>Sunburn; photoaging, immunosuppression, skin cancers; greatest intensity 10:00 am to 4:00 pm</td><td>Most phototoxic reactions with drugs and chemicals; photoaging, immunosuppression, skin cancers</td></tr>
+<tr><td><b>Other</b></td><td>Produces vitamin D3 in the skin</td><td>Tanning: immediate pigmentation 5&ndash;10 minutes after exposure, lasts 24&ndash;48 h; delayed pigmentation after 48&ndash;72 h, peaks at 7&ndash;10 days (Sun 10)</td></tr>
+</tbody></table>
+<div class="gpt"><ul>
+<li>Risk factors: the UV index, which rates the amount of UV rays reaching the earth&rsquo;s surface at a given time and place (the higher, the greater the exposure; it depends on time of day, season, altitude and latitude, ozone and land cover), skin melanin, the product's SPF, cumulative exposure; one severe sunburn before age 18 doubles the lifetime risk of skin cancers (Sun 7).</li>
+<li>Sunburn: an acute inflammatory reaction (endothelial swelling, red cells leaking from capillaries; histamine, cytokines, prostaglandins); symptoms are mild erythema, tenderness and edema; reddening peaks at 12&ndash;24 h, then melanogenesis gives a tan over 2&ndash;3 days. A severe sunburn is a second-degree burn with blisters and can bring fever, chills, weakness and shock (Sun 11).</li>
+<li>A deeper tan does not protect the skin from sun damage (audio 07:09&ndash;07:30).</li></ul></div>
+<div style="display:flex;flex-wrap:wrap;gap:7px;margin:8px 0"><button type="button" class="chip" data-jump="tell:tell-sun">Tell apart: sun protection</button></div>
+</section>
+
+<section class="gobj" id="gobj-sun-4">
+<h3>Sun Exposure &middot; Objective 4: MED, SPF, broad spectrum and substantivity</h3>
+<div class="gbar"><span>Objective (Sun 6)</span><b>Define MED, SPF and substantivity</b><i>Sun 12&ndash;17, 19</i></div>
+<div class="gpt"><ul>
+<li><b>MED</b>: the minimum single dose of UV radiation that produces clearly marginated erythema in the irradiated site (Sun 12).</li>
+<li><b>SPF</b>: the ratio of the dose of sunlight that produces sunburn with the sunscreen to the dose that does without it. The higher the SPF, the less likely a burn and the longer the time in the sun. SPF is primarily a measure of UVB protection and says nothing about UVA (Sun 13).</li>
+<li>SPF 15 blocks about 93% of UVB, SPF 30 about 97%, SPF 50 about 98% (Sun 15).</li>
+<li><b>Broad spectrum</b>: UVA protection is tested by the critical wavelength method; a CW of 370 nm or more may be labeled &ldquo;broad spectrum&rdquo;; broad spectrum with SPF 15 or more may claim it &ldquo;decreases risk of skin cancer and early aging caused by the sun&rdquo; (Sun 14).</li>
+<li>Selection: skin types I&ndash;II, SPF &gt; 30; lupus, SPF &gt; 40; photosensitizing drugs, SPF &gt; 45; skin types III&ndash;V, SPF 15&ndash;24. Apply the correct amount at the correct time; reapply every 90&ndash;120 minutes; adding a higher SPF after 1 MED does not help much (Sun 16&ndash;17).</li>
+<li><b>Substantivity</b>: how well a sunscreen adheres and stays after water and sweat. Oils best (unpleasant); alcohols worst; creams better than alcohol bases; polyacrylamide bases good. Choose waterproof, water-resistant or sweat-resistant products (Sun 19).</li></ul></div>
+<div style="display:flex;flex-wrap:wrap;gap:7px;margin:8px 0"><button type="button" class="chip" data-jump="ref:ref-sun">Reference: SPF, skin types, substantivity</button><button type="button" class="chip" data-jump="tell:tell-sun">Tell apart: sun protection</button></div>
+</section>
+
+<section class="gobj" id="gobj-sun-2">
+<h3>Sun Exposure &middot; Objectives 2, 3 and 5: sunblocks vs sunscreens, classes and mechanisms</h3>
+<div class="gbar"><span>Objectives (Sun 6)</span><b>Categorize sunscreens and sunblocks; differentiate their mechanisms; differentiate sunblocks and sunscreens</b><i>Sun 20&ndash;25</i></div>
+<table class="reftab"><thead><tr><th style="width:20%"></th><th>Sunblocks (physical sunscreens)</th><th>Organic sunscreens</th></tr></thead><tbody>
+<tr><td><b>Ingredients</b></td><td>Zinc oxide, titanium dioxide (UVA and UVB)</td><td>Families: benzophenones, anthranilates, dibenzoylmethanes, aminobenzoates, cinnamates, salicylates; products may combine them</td></tr>
+<tr><td><b>Mechanism</b></td><td>Inorganic particles scatter or reflect visible, UV and infrared radiation</td><td>Organic compounds absorb UVB and/or UVA and convert it to heat</td></tr>
+<tr><td><b>Use and notes</b></td><td>Prominent areas (nose, ears) and where sun exposure cannot be limited; microsize and nanosize forms less opaque; not easily washed off but melt in hot sun; protection falls after 2 hours of direct sun</td><td>&mdash;</td></tr>
+<tr><td><b>Side effects</b></td><td>May occlude pores (miliaria, folliculitis, acne); may stain clothing; less likely to irritate</td><td>Most have been linked to skin reactions; risk higher with PABA, avobenzone and oxybenzone</td></tr>
+</tbody></table>
+<div class="gpt"><h5>One point per sunscreen family (Sun 24)</h5><ul>
+<li>Benzophenones: poor substantivity; can cause sensitization.</li>
+<li>Anthranilates: only in combination products, for broad UV coverage.</li>
+<li>Dibenzoylmethanes: activity starts to fall after 15 minutes.</li>
+<li>Aminobenzoates: most effective UVB absorbers; may stain clothing.</li>
+<li>Cinnamates: adhere poorly; depend on the vehicle for substantivity.</li>
+<li>Salicylates: adhere poorly; easily removed by water or sweat.</li></ul></div>
+<div class="gpt"><h5>Safety (Sun 25)</h5><ul><li>Reactions: irritant, allergic, phototoxic, photoallergic; rash, vesicles, hives or an exaggerated sunburn: refer.</li><li>Studies found plasma levels above the FDA threshold of 0.5 ng/mL; implications not yet known.</li></ul></div>
+<div style="display:flex;flex-wrap:wrap;gap:7px;margin:8px 0"><button type="button" class="chip" data-jump="ref:ref-targets">Reference: sunscreen ingredients by family</button><button type="button" class="chip" data-jump="atlas:at-b-sunscreens">Atlas: sunblocks and sunscreens</button></div>
+</section>
+
+<section class="gobj" id="gobj-sun-photo">
+<h3>Sun Exposure &middot; Drugs that cause photosensitivity</h3>
+<div class="gbar"><span>Slides</span><b>Photosensitizing drugs and sun protection</b><i>Sun 8, 17&ndash;18</i></div>
+<div class="gpt"><ul>
+<li>Sun 18 shows an APhA table of drug categories linked to photosensitivity; patients on such drugs need sun protection counseling (audio 17:27&ndash;17:48) and SPF &gt; 45 (Sun 17). UVA causes most drug phototoxic reactions (Sun 8).</li>
+<li>Photosensitizing drugs on her pharmacology slides: tazarotene (PCol 18); topical retinoids (PCol 16); tetracyclines, with minocycline and sarecycline possibly less (PCol 44&ndash;45); coal tar (PCol 54); calcipotriene, mild (PCol 22); psoralens (Sun 3).</li>
+<li>Sun protection counseled for other reasons: adapalene is sun stable, but peeling still raises sunburn risk (10/30 T 122&ndash;130); topical pimecrolimus and tacrolimus carry a potential for local skin cancer (PCol 28). Shale tar is not photosensitizing (PCol 57).</li></ul></div>
+</section>
+
+<h2 class="gdeck" id="gdeck-mc">Dermatology Medicinal Chemistry (Dr. Sikazwe, DPAW, 11/03&ndash;11/04)</h2>
+
+<section class="gobj" id="gobj-mc-0">
+<h3>Medicinal Chemistry &middot; His objectives and the assigned pages</h3>
+<div class="gbar"><span>Objectives (DPAW p. 3)</span><b>ASSESS: targets, drug classes. PLAN: CBDA, ADMET, functional groups and SAR, drug interactions</b><i>DPAW p. 3</i></div>
+<div class="gpt"><ul>
+<li>ASSESS: identify the therapeutic targets; identify, and pharmacologically and chemically classify, the drug classes and drugs (DPAW p. 3).</li>
+<li>PLAN: the chemical and pharmacological basis of drug action (CBDA), indication and contraindication; ADMET and how it changes with patient factors; physicochemical properties, functional groups and SAR; drug interactions that may influence the plan (DPAW p. 3).</li>
+<li>Assigned for Exam 1 (his list of 11/06): printed slides 7&ndash;9, 12, 15&ndash;22, 24&ndash;33, 42&ndash;54, 60&ndash;65, which are file pages 7&ndash;9, 12, 15&ndash;23, 25&ndash;34, 43&ndash;55, 61&ndash;66. The sections below follow those pages.</li></ul></div>
+</section>
+
+<section class="gobj" id="gobj-mc-ecz">
+<h3>Medicinal Chemistry &middot; Eczema pharmacotherapy (DPAW pp. 7&ndash;9)</h3>
+<div class="gbar"><span>Pages</span><b>Crisaborole; ruxolitinib and upadacitinib</b><i>DPAW pp. 7&ndash;9</i></div>
+<div class="gpt"><ul>
+<li>Crisaborole: a benzoxaborole (boron-based) soft drug, designed for predictable metabolism to inactive, harmless products; log P 3, accumulates in the dermis; t&frac12; 12 h. Spontaneous hydrolytic deboronation (no enzyme) &rarr; benzyl alcohol &rarr; ADH, then ALDH (two enzymes, no CYPs) &rarr; benzoic acid &rarr; SULT and UGT conjugates (Polleve-1, p. 9). CBDA: the boron coordinates Zn<sup>2+</sup> and Mg<sup>2+</sup> in the PDE4 active site (p. 7).</li>
+<li>Ruxolitinib and upadacitinib: same pharmacological class (JAK inhibitors), different chemical classes (names not to be recalled). Ruxolitinib t&frac12; 3 h, CYP3A4/2C9, some active hydroxyl metabolites; upadacitinib t&frac12; 8&ndash;16 h, CYP3A4/2D6, no active metabolites; both log P about 2, kept in the skin by formulation (p. 8).</li></ul></div>
+<div style="display:flex;flex-wrap:wrap;gap:7px;margin:8px 0"><button type="button" class="chip" data-jump="atlas:at-a-eczema">Atlas: eczema drugs</button><button type="button" class="chip" data-jump="tell:tell-s3">Tell apart: Sikazwe 11/03</button><button type="button" class="chip" data-jump="ref:ref-s3">Reference: Sikazwe 11/03</button></div>
+</section>
+
+<section class="gobj" id="gobj-mc-psotop">
+<h3>Medicinal Chemistry &middot; Psoriasis: UV and topical agents (DPAW pp. 12, 15&ndash;23, 25&ndash;29)</h3>
+<div class="gbar"><span>Pages</span><b>UV; emollients and tars; anthralin; 8-MOP; glucocorticoids; vitamin D; limus drugs; retinoids</b><i>DPAW pp. 12&ndash;29</i></div>
+<div class="gpt"><h5>UV radiation (p. 12)</h5><ul><li>UVC 100&ndash;280 nm, blocked by ozone; UVB from 280 nm, about 90% blocked by ozone, used with coal tar; UVA up to 400 nm, deepest, used in PUVA.</li></ul></div>
+<div class="gpt"><h5>Emollients and tars (pp. 15&ndash;16)</h5><ul><li>Petrolatum: linear hydrocarbons over 25 carbons, the most effective emollient; lanolin: fatty acid esters from wool grease, odor; dimethicone (linear Si&ndash;O) and cyclomethicone (cyclic Si&ndash;O): hypoallergenic, non-comedogenic. Emollients fill gaps between scales and prevent water loss.</li><li>Coal tar: phenols, PAHs, heterocycles; photosensitizing; used with UVB. Shale tar (ichthammol, from sedimentary rock) and wood tars (pine, birch, juniper): not photosensitizing.</li></ul></div>
+<div class="gpt"><h5>Anthralin and 8-MOP (pp. 17&ndash;19)</h5><ul><li>Anthralin (dithranol): a hydroxyanthrone; spontaneous autoxidation gives the anthranyl radical and superoxide anion, which act on keratinocyte mitochondria; brown anthralin products and carbon black stain; log P 4 (lipophilic).</li><li>8-MOP (methoxsalen): a furanocoumarin; intercalates into DNA and, with UVA, covalently crosslinks pyrimidine bases; partially inhibits CYP3A4.</li><li>Polleve-2 (p. 19): the two do not both act by autoxidation.</li></ul></div>
+<div class="gpt"><h5>Glucocorticoids (pp. 20&ndash;23, 25&ndash;26)</h5><ul><li>Steroid skeleton: four fused rings, A&ndash;C six-membered, D five-membered. Potency up with: C1&ndash;C2 double bond, 6&alpha;-halogen, 9&alpha;-halogen, 11&beta;-OH. &alpha; = hashed bond (away), &beta; = wedge (toward the viewer); numbering and orientation are independent (pp. 20&ndash;22).</li><li>Six hydrogen bonds in the receptor: C3=O (two), 11&beta;-OH, 17&alpha;-OH, C20=O, C21-OH (p. 23).</li><li>Potency (p. 25): clobetasol propionate 0.05% super-potent; betamethasone dipropionate 0.05% potent; betamethasone valerate 0.1% medium; hydrocortisone acetate 0.5% and 1% low. Potency depends on structure, vehicle and concentration. The hydrocortisone-to-clobetasol arrow is a structural change, not metabolism.</li><li>Hydrocortisone (p. 26): under 15% absorbed through skin against 95% orally; t&frac12; 1&ndash;2 h (metabolism) but duration 8&ndash;12 h (protein binding); 11&beta;-HSD converts it to and from cortisone (11-ketone, inactive).</li></ul></div>
+<div class="gpt"><h5>Vitamin D, limus drugs, retinoids (pp. 27&ndash;29)</h5><ul><li>Calcitriol and calcipotriene: secosteroids; calcipotriene was meant to lose the calcium effect but still raises GI calcium absorption; hypercalcemia is the limiting factor (p. 27).</li><li>Pimecrolimus vs tacrolimus: both macrolide lactones and calcineurin inhibitors with similar cLogP (6.0, 5.8); pimecrolimus has high non-specific skin protein binding and stays in the skin (low systemic ADRs), tacrolimus low binding and enters the circulation; structure: Cl and ethyl (pimecrolimus) vs OH and allyl (tacrolimus) (p. 28).</li><li>Tazarotene: acetylenic (alkyne) retinoid, ethyl ester prodrug hydrolyzed by carboxylesterases to tazarotenic acid; with acitretin and isotretinoin for psoriasis (p. 29).</li></ul></div>
+<div style="display:flex;flex-wrap:wrap;gap:7px;margin:8px 0"><button type="button" class="chip" data-jump="atlas:at-a-psoriasis-topical">Atlas: emollients, anthralin, psoralen</button><button type="button" class="chip" data-jump="atlas:at-a-glucocorticoids">Atlas: glucocorticoids</button><button type="button" class="chip" data-jump="atlas:at-a-vitamin-d">Atlas: vitamin D</button><button type="button" class="chip" data-jump="atlas:at-a-limus">Atlas: limus drugs</button><button type="button" class="chip" data-jump="tell:tell-s3">Tell apart: Sikazwe 11/03</button><button type="button" class="chip" data-jump="tell:tell-s4">Tell apart: Sikazwe 11/04</button></div>
+</section>
+
+<section class="gobj" id="gobj-mc-psosys">
+<h3>Medicinal Chemistry &middot; Psoriasis: systemic agents (DPAW pp. 30&ndash;34)</h3>
+<div class="gbar"><span>Pages</span><b>Methotrexate; lactone vs lactam; cyclosporine; apremilast</b><i>DPAW pp. 30&ndash;34</i></div>
+<div class="gpt"><ul>
+<li>Methotrexate: a pteridine; competitive DHFR inhibitor, also immunosuppressant and anti-inflammatory. Against folic acid it has NH<sub>2</sub> (folic acid OH) on the pteridine and N&ndash;CH<sub>3</sub> (folic acid N&ndash;H), and binds DHFR with higher affinity. SAR: pteridine (aromatic), p-aminobenzoic acid and glutamic acid parts; no alkylation of the aromatic N; the N&ndash;CH<sub>3</sub> is essential (pp. 30&ndash;31).</li>
+<li>Polleve-3 (p. 32): lactone = cyclic ester (pimecrolimus, tacrolimus); lactam = cyclic amide (cyclosporine).</li>
+<li>Cyclosporine: an 11-amino-acid cyclic peptide; activated by forming a complex with cyclophilin (not by metabolism), then inhibits calcineurin; oral bioavailability 30% (first pass by CYP3A4); log P 4; t&frac12; 19 h; grapefruit juice raises levels (p. 33).</li>
+<li>Apremilast: an isoindoline; PDE4 inhibitor, raises cAMP; CYP3A4 (major) O-demethylation then UGT O-glucuronidation; avoid CYP3A4 inhibitors and inducers (p. 34).</li></ul></div>
+<div style="display:flex;flex-wrap:wrap;gap:7px;margin:8px 0"><button type="button" class="chip" data-jump="atlas:at-a-psoriasis-systemic">Atlas: retinoids and systemic agents</button><button type="button" class="chip" data-jump="atlas:at-a-features">Atlas: lactone and lactam</button><button type="button" class="chip" data-jump="ref:ref-s4">Reference: Sikazwe 11/04</button></div>
+</section>
+
+<section class="gobj" id="gobj-mc-acne">
+<h3>Medicinal Chemistry &middot; Acne (DPAW pp. 43&ndash;55)</h3>
+<div class="gbar"><span>Pages</span><b>Keratolytics; retinoids by generation; hormones; antibiotics</b><i>DPAW pp. 43&ndash;55</i></div>
+<div class="gpt"><h5>Keratolytics (pp. 43&ndash;47)</h5><ul><li>Glycolic acid: alpha-hydroxy acid, hydrophilic, log P about 1, acts at the surface; ADH then ALDH to the diacid. Salicylic acid: beta-hydroxy acid with an aromatic ring, log P about 1&ndash;2, deeper; 75% glycine conjugate. Both pKa about 3 (itching).</li><li>Alpha vs beta: the OH on the carbon next to the COOH (alpha) or two carbons away (beta) (p. 44).</li><li>Sulfur: thiolysis of keratin disulfide (cysteine) bonds; small particles work better. Benzoyl peroxide: a peroxide; benzoic acid lowers skin pH (keratolytic) and the benzoyl radical kills bacteria; log P 3.5 (pp. 46&ndash;47).</li></ul></div>
+<div class="gpt"><h5>Retinoids by generation (pp. 48&ndash;51)</h5><ul><li>1st generation (non-aromatic): tretinoin (all-trans, topical) and isotretinoin (13-cis, oral), geometric isomers, both active.</li><li>2nd generation (mono-aromatic): etretinate, an ethyl ester prodrug (t&frac12; 120 days, narrow therapeutic index, off the US market 1998), hydrolyzed by carboxylesterases to acitretin, the active form.</li><li>3rd generation (poly-aromatic): adapalene and trifarotene, directly active (exposed COOH); tazarotene, ester prodrug. The class is teratogenic.</li></ul></div>
+<div class="gpt"><h5>Hormones (pp. 52&ndash;53)</h5><ul><li>Oral contraceptives (ethinyl estradiol with norgestimate or drospirenone) lower sebum in females. Spironolactone (steroidal) and ketoconazole (non-steroidal azole, strong CYP3A4 inhibitor) lower testosterone biosynthesis; flutamide (non-steroidal) blocks testosterone at its receptor.</li></ul></div>
+<div class="gpt"><h5>Antibiotics (pp. 54&ndash;55)</h5><ul><li>Azelaic acid: a C9 dicarboxylic acid, antibacterial and anti-inflammatory. Clindamycin: topical because of GI toxicity. Erythromycin: poor oral absorption, unstable at pH 4 or below.</li><li>Tetracycline: four rings fused in a line (a steroid's rings are angular); chelates Al<sup>3+</sup>, Ca<sup>2+</sup>, Mg<sup>2+</sup>, Fe<sup>3+</sup>, Bi<sup>3+</sup>; food (dairy) cuts absorption; t&frac12; 8.5 h. Doxycycline and minocycline: food has no effect, lipophilic, t&frac12; 11&ndash;13 h and 14&ndash;22 h; cross-allergy from structural similarity.</li></ul></div>
+<div style="display:flex;flex-wrap:wrap;gap:7px;margin:8px 0"><button type="button" class="chip" data-jump="atlas:at-b-acne-keratolytics">Atlas: keratolytics</button><button type="button" class="chip" data-jump="atlas:at-b-retinoids">Atlas: retinoids</button><button type="button" class="chip" data-jump="atlas:at-b-hormones">Atlas: hormones</button><button type="button" class="chip" data-jump="atlas:at-b-antibiotics">Atlas: antibiotics</button><button type="button" class="chip" data-jump="tell:tell-s4">Tell apart: Sikazwe 11/04</button></div>
+</section>
+
+<section class="gobj" id="gobj-mc-sun">
+<h3>Medicinal Chemistry &middot; Sunblocks and sunscreens (DPAW pp. 61&ndash;66)</h3>
+<div class="gbar"><span>Pages</span><b>Inorganic sunblocks and organic sunscreens by UV band</b><i>DPAW pp. 61&ndash;66</i></div>
+<table class="reftab"><thead><tr><th style="width:18%">Band</th><th>Agents and the point he made</th><th style="width:10%">Page</th></tr></thead><tbody>
+<tr><td><b>Sunblocks</b></td><td>Zinc oxide, titanium dioxide: reflect and scatter UVA and UVB; inert; large particles work better (nano forms are transparent and reflect less)</td><td>61</td></tr>
+<tr><td><b>All organics</b></td><td>Chromophores absorb UV and convert it to heat; they photodegrade</td><td>62</td></tr>
+<tr><td><b>UVA</b></td><td>Avobenzone (dibenzoylmethane): low skin absorption, photodegradation t&frac12; about 2 h. Meradimate (anthranilate): degrades faster than avobenzone</td><td>62</td></tr>
+<tr><td><b>UVB</b></td><td>Octinoxate (cinnamate): absorbed through skin, t&frac12; 1&ndash;2 h. PABA, padimate O: PABA allergy. Homosalate, octisalate (salicylates): ester hydrolyzed to salicylic acid. Ensulizole (benzimidazole): water soluble, log P 1, t&frac12; about 12 h, reapply after swimming</td><td>63&ndash;64</td></tr>
+<tr><td><b>UVB/UVA</b></td><td>Oxybenzone (benzophenone): log P about 4, highly absorbed through skin. Octocrylene: lipophilic, t&frac12; about 90 h, photostabilizes other sunscreens. Bemotrizinol: MW 627.81, limited skin absorption, photostable</td><td>65&ndash;66</td></tr>
+</tbody></table>
+<div style="display:flex;flex-wrap:wrap;gap:7px;margin:8px 0"><button type="button" class="chip" data-jump="atlas:at-b-sunscreens">Atlas: sunblocks and sunscreens</button><button type="button" class="chip" data-jump="guide:gobj-sun-2">Guide: Dr. Smith's sunblocks vs sunscreens</button></div>
+</section>
+
+<section class="gobj" id="gobj-mc-ddi">
+<h3>Medicinal Chemistry &middot; Drug interactions he named</h3>
+<div class="gbar"><span>Objective (DPAW p. 3)</span><b>Explain drug interactions that may influence the therapeutic plan</b><i>DPAW pp. 7&ndash;55</i></div>
+<table class="reftab"><thead><tr><th style="width:22%">Drug</th><th>Interaction or enzyme</th><th style="width:10%">Page</th></tr></thead><tbody>
+<tr><td><b>Crisaborole</b></td><td>No CYPs: ADH and ALDH, then SULT and UGT</td><td>7, 9</td></tr>
+<tr><td><b>Ruxolitinib; upadacitinib</b></td><td>CYP3A4 and 2C9; CYP3A4 and 2D6</td><td>8</td></tr>
+<tr><td><b>Methoxsalen (8-MOP)</b></td><td>Several CYPs; partially inhibits CYP3A4</td><td>18</td></tr>
+<tr><td><b>Cyclosporine</b></td><td>First pass by CYP3A4; grapefruit juice raises levels</td><td>33</td></tr>
+<tr><td><b>Apremilast</b></td><td>CYP3A4 major (1A2, 2A6 minor); avoid CYP3A4 inhibitors and inducers</td><td>34</td></tr>
+<tr><td><b>Ketoconazole</b></td><td>Strong CYP3A4 inhibitor</td><td>53</td></tr>
+<tr><td><b>Tetracycline</b></td><td>Chelates Al<sup>3+</sup>, Ca<sup>2+</sup>, Mg<sup>2+</sup>, Fe<sup>3+</sup>, Bi<sup>3+</sup>; food (dairy) cuts absorption; not so for doxycycline and minocycline</td><td>55</td></tr>
+</tbody></table>
+<div style="display:flex;flex-wrap:wrap;gap:7px;margin:8px 0"><button type="button" class="chip" data-jump="guide:gobj-pc-4">Guide: interactions Dr. Smith named</button></div>
 </section>
 `;
+
+/* ==========================================================================
+   TOPICS TAB, GROUPED BY SLIDE DECK (Louis, 2026-11-08)
+   ==========================================================================
+   The core lists TOPICS in array order with no grouping. TOPIC_DECKS
+   (q1_topics.js) names each deck's topics in slide order. Once every question
+   file has pushed its topics, this orders TOPICS by deck, marks each topic
+   with its deck, and adds a heading above the first topic of each deck on the
+   Topics tab. Topic ids, sub ids and questions are unchanged, and progress is
+   kept by question id, so nothing stored changes. */
+(function topicsByDeck(){
+  if (typeof TOPICS === 'undefined' || typeof TOPIC_DECKS === 'undefined') return;
+  const rank = {};
+  TOPIC_DECKS.forEach((d, di) => d.topics.forEach((id, ti) => { rank[id] = [di, ti]; }));
+  const sorted = TOPICS.map((t, i) => ({t, k: rank[t.id] || [TOPIC_DECKS.length, i]}))
+    .sort((a, b) => a.k[0] - b.k[0] || a.k[1] - b.k[1]).map(x => x.t);
+  sorted.forEach((t, i) => {
+    TOPICS[i] = t;
+    const d = TOPIC_DECKS.find(x => x.topics.includes(t.id));
+    if (d) t.deck = d.id;
+  });
+  if (typeof renderTopics !== 'function') return;
+  const base = renderTopics;
+  renderTopics = function(){
+    base.apply(this, arguments);
+    try {
+      const el = document.getElementById('v-topics');
+      if (!el || !el.querySelectorAll) return;
+      const cards = [...el.querySelectorAll('details.topic')];
+      const shown = TOPICS.filter(t => poolFor(t.id, null).length);
+      if (cards.length !== shown.length) return;
+      const e = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;'})[c]);
+      shown.forEach((t, i) => {
+        if (i && shown[i - 1].deck === t.deck) return;
+        const d = TOPIC_DECKS.find(x => x.id === t.deck);
+        if (!d) return;
+        const n = shown.filter(x => x.deck === d.id).reduce((s, x) => s + poolFor(x.id, null).length, 0);
+        const h = document.createElement('div');
+        h.className = 'deckhead';
+        h.innerHTML = `<h3 style="margin:22px 0 2px">${e(d.name)}</h3>` +
+          `<p class="sub" style="margin:0 0 10px">${e(d.file)} · ${e(d.when)} · ${n} questions</p>`;
+        cards[i].before(h);
+      });
+    } catch (err) { /* the list stays as the core drew it */ }
+  };
+})();
 
 
 /* Which exam the simulator and the weighted pass follow, and its pools. A pool

@@ -20,10 +20,10 @@
 const READ_LINKS = (() => {
   const S = {
     // Lecture 1, Smith 10/29 (Pathophys and PCol 1-15)
-    g1:      ['guide', 'gobj-l1-1', 'Guide: skin layers and sebum (Lecture 1)'],
-    g2:      ['guide', 'gobj-l1-2', 'Guide: epidemiology of the three diseases (Lecture 1)'],
-    g3:      ['guide', 'gobj-l1-3', 'Guide: etiologies and pathologies (Lecture 1)'],
-    g4:      ['guide', 'gobj-l1-4', 'Guide: drug classes and mechanisms (Lecture 1)'],
+    g1:      ['guide', 'gobj-l1-1', 'Guide: skin structure and sebum (Skin Pathophysiology)'],
+    g2:      ['guide', 'gobj-l1-2', 'Guide: epidemiology of the three diseases (Skin Pathophysiology)'],
+    g3:      ['guide', 'gobj-l1-3', 'Guide: etiologies and pathologies (Skin Pathophysiology)'],
+    g4:      ['guide', 'gobj-l1-4', 'Guide: general mechanism of each class (Skin Pharmacology)'],
     t1d:     ['tell',  'tell-l1-diseases', 'Tell apart: the three diseases'],
     t1r:     ['tell',  'tell-l1-drugs', 'Tell apart: nuclear receptor binders'],
     rClass:  ['ref',   'ref-l1-classes', 'Reference: drug classes by disease'],
@@ -32,15 +32,23 @@ const READ_LINKS = (() => {
     rCS:     ['ref',   'ref-l1-steroids', 'Reference: topical corticosteroids'],
     rTgt:    ['ref',   'ref-targets', 'Reference: drug targets, write it first'],
     // Smith 10/30 and 11/03 (PCol 16-76)
-    t2:      ['tell',  'tell-l2', 'Tell apart: Lecture 2 (Smith 10/30)'],
-    r2:      ['ref',   'ref-l2', 'Reference: Lecture 2 drugs (Smith 10/30)'],
-    t3:      ['tell',  'tell-l3', 'Tell apart: Lecture 3 (Smith 11/03)'],
-    r3:      ['ref',   'ref-l3', 'Reference: Lecture 3 drugs (Smith 11/03)'],
+    t2:      ['tell',  'tell-l2', 'Tell apart: Skin Pharmacology slides 16–42 (Smith 10/30)'],
+    r2:      ['ref',   'ref-l2', 'Reference: Skin Pharmacology slides 16–42 (Smith 10/30)'],
+    t3:      ['tell',  'tell-l3', 'Tell apart: Skin Pharmacology slides 43–76 (Smith 11/03)'],
+    r3:      ['ref',   'ref-l3', 'Reference: Skin Pharmacology slides 43–76 (Smith 11/03)'],
     // Sikazwe 11/03 and 11/04 (DPAW)
-    ts3:     ['tell',  'tell-s3', 'Tell apart: Lecture 3 (Sikazwe 11/03)'],
-    rs3:     ['ref',   'ref-s3', 'Reference: Lecture 3 agents (Sikazwe 11/03)'],
-    ts4:     ['tell',  'tell-s4', 'Tell apart: Lecture 4 (Sikazwe 11/04)'],
-    rs4:     ['ref',   'ref-s4', 'Reference: Lecture 4 agents (Sikazwe 11/04)'],
+    ts3:     ['tell',  'tell-s3', 'Tell apart: Medicinal Chemistry DPAW pp. 1–26 (Sikazwe 11/03)'],
+    rs3:     ['ref',   'ref-s3', 'Reference: Medicinal Chemistry DPAW pp. 1–26 (Sikazwe 11/03)'],
+    ts4:     ['tell',  'tell-s4', 'Tell apart: Medicinal Chemistry DPAW pp. 27–71 (Sikazwe 11/04)'],
+    rs4:     ['ref',   'ref-s4', 'Reference: Medicinal Chemistry DPAW pp. 27–71 (Sikazwe 11/04)'],
+    // Sun exposure deck, Smith (added 2026-11-08 with the guide sections by objective)
+    gS0:     ['guide', 'gobj-sun-pso', 'Guide: psoralens (Sun Exposure)'],
+    gS1:     ['guide', 'gobj-sun-1', 'Guide: types of UV radiation (Sun Exposure)'],
+    gS4:     ['guide', 'gobj-sun-4', 'Guide: MED, SPF, broad spectrum, substantivity (Sun Exposure)'],
+    gS2:     ['guide', 'gobj-sun-2', 'Guide: sunblocks vs sunscreens (Sun Exposure)'],
+    gSp:     ['guide', 'gobj-sun-photo', 'Guide: photosensitizing drugs (Sun Exposure)'],
+    tS:      ['tell',  'tell-sun', 'Tell apart: sun protection (Smith)'],
+    rSun:    ['ref',   'ref-sun', 'Reference: SPF, skin types, substantivity'],
   };
   const esc = s => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
   const one = c => {
@@ -110,6 +118,18 @@ const READ_LINKS = (() => {
           'mtx-mech mtx-analog mtx-folate-cycle mtx-pd mtx-liver mtx-blood mtx-pregnancy mtx-dispense ' +
           'dup-eye dup-common secu-ae il23-th17 uste-vaccine uste-allergy uste-common uste-pres risan-severe ' +
           'tnf-class-mech etan-ae inflix-premed tnf-human mtx-thf', 'r3'),
+
+      /* ---- Sun exposure deck, Smith (Sun 2-25), added 2026-11-08 ------------ */
+      row('psoralen-uva-range psoralen-effects psoralen-melanin psoralen-ae psoralen-cataract psoralen-why', 'gS0'),
+      row('uvb-range uvb-vs-uva-glass uva-phototoxic uvb-sunburn-vitd uva-dermis-smith uva-uvb-shared tanning-timing', 'tS', 'gS1'),
+      row('uv-peak-hours uv-index severe-burn-risk tan-not-protective sunburn-mediators sunburn-timing severe-sunburn', 'gS1'),
+      row('med-def spf-def spf-uvb-only broad-spectrum cancer-claim spf15-block spf-vs-broad spf-by-skin-type spf-photosensitizing vehicle-substantivity', 'tS', 'gS4'),
+      row('skin-type-i', 'rSun'),
+      row('reapply-interval substantivity-def', 'gS4'),
+      row('sunblock-use sunblock-ae benzophenones-facts aminobenzoates-facts anthranilates-facts dibenzoylmethane-facts ' +
+          'salicylates-cinnamates sunscreen-reaction-risk', 'tS', 'gS2'),
+      row('sunscreen-refer sunscreen-systemic', 'gS2'),
+      row('photosens-drugs', 'gSp'),
 
       /* ---- Lecture 3, Sikazwe 11/03 (DPAW 1-26); Smith's psoralen slide -- */
       row('soft-drug hard-drug crisaborole-sult crisaborole-ugt eczema-components goals-ecz-vs-pso psoriasis-components ' +

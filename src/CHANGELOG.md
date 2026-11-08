@@ -8,6 +8,21 @@ characters.
 
 Every update adds its bullets here in the same commit that makes the change.
 
+## 2026-11-08 (Guides and Topics by deck)
+- Topics now grouped under the four slide decks, each topic named after the deck's own section, in slide order.
+- Guides rewritten: one section per learning objective of each Smith deck, plus Dr. Sikazwe's assigned pages.
+- Guides: drugs per disease, each class's target and why it helps, within-class differences, interactions.
+- Guides: boxed warnings, side effects and contraindications by drug, each with its slide.
+- Guides: sun deck objectives (UVA vs UVB, MED, SPF, broad spectrum, substantivity, sunblock vs sunscreen).
+- Guides link to the matching Tell apart, Reference, Drug list and Atlas sections.
+- Tell apart: new tables on sun protection and on boxed warnings, pregnancy limits and interactions.
+- Reference: new sun table of SPF blocking, skin types with their SPF, and substantivity by vehicle.
+- Diagrams: acne cascade labels moved off the arrows; nuclear receptor figure redrawn so the bound drug shows.
+
+## 2026-11-08 (Likely-on-the-exam stars)
+- 109 questions starred as likely on Exam 1, each with its reason and source; Claude's prediction, not an official list.
+- Topics: drill all starred questions, or only Dr. Smith's or Dr. Sikazwe's.
+
 ## 2026-11-08 (Drug List)
 - New Drug list tab: all 79 drugs on the dermatology chart (pp. 1–6), searchable by generic or brand name.
 - Filter the Drug list by disease, class, chart page, Exam 1 taught or optional, boxed warning, photosensitizing.

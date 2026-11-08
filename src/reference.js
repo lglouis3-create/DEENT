@@ -2,7 +2,7 @@ const REFERENCE_HTML = `
 <h2>Reference</h2>
 <p class="sub">The tables the questions keep coming back to, each with the slide it was copied from. The course drug chart is a guide only (course introduction deck). Nothing here is scored.</p>
 
-<h3 id="ref-l1-classes">Drug classes by disease (Smith, Lecture 1)</h3>
+<h3 id="ref-l1-classes">Skin Pathophysiology (Dr. Smith): drug classes by disease, slides 17, 28, 37</h3>
 <table class="reftab"><thead><tr><th style="width:20%">Disease</th><th>Drug classes on the slide</th><th style="width:16%">Slide</th></tr></thead><tbody>
 <tr><td><b>Atopic dermatitis</b></td><td>Corticosteroids; calcineurin inhibitors; PDE-4 inhibitor; IL-4 receptor alpha/IL-13 receptor antagonists; JAK inhibitor</td><td>Pathophys 17</td></tr>
 <tr><td><b>Psoriasis</b></td><td>Corticosteroids; DNA synthesis inhibitors; dihydrofolate reductase inhibitor/T-cell and cytokine suppressors; T-cell inhibitors; TNF-alpha inhibitors; JAK inhibitors; IL-12 &amp; IL-13 inhibitors (as printed; see note); IL-23 inhibitor; IL-17A inhibitor; nuclear receptor binders; psoralens; calcineurin inhibitors; cytotoxic agents</td><td>Pathophys 28</td></tr>
@@ -10,7 +10,7 @@ const REFERENCE_HTML = `
 </tbody></table>
 <p class="prose">Note: slide 28 prints "IL-12 &amp; IL-13 inhibitors"; slide 21 names IL-23, not IL-13, among the psoriasis cytokines, and the drug chart lists ustekinumab as an IL-12 &amp; IL-23 inhibitor. No question keys on this line until it is settled.</p>
 
-<h3 id="ref-l1-acnemap">Acne: pathology and the drugs aimed at it (Pathophys 36)</h3>
+<h3 id="ref-l1-acnemap">Skin Pathophysiology (Dr. Smith): acne pathology and the drugs aimed at it, slide 36</h3>
 <table class="reftab"><thead><tr><th style="width:28%">Component</th><th>Drugs in the figure</th></tr></thead><tbody>
 <tr><td><b>P. acnes proliferation</b></td><td>Benzoyl peroxide; topical/oral antibiotics; isotretinoin</td></tr>
 <tr><td><b>Abnormal keratinization of follicle</b></td><td>Salicylic acid; benzoyl peroxide; topical retinoids; isotretinoin</td></tr>
@@ -20,7 +20,7 @@ const REFERENCE_HTML = `
 
 <!--DIA:acne-cascade-->
 
-<h3 id="ref-l1-nr">Nuclear receptors for DEENT (PCol 7)</h3>
+<h3 id="ref-l1-nr">Skin Pharmacology (Dr. Smith): nuclear receptors for DEENT, slide 7</h3>
 <table class="reftab"><thead><tr><th style="width:34%">Receptor</th><th>DNA binding site on the slide</th></tr></thead><tbody>
 <tr><td><b>Glucocorticoid receptor</b></td><td>GRE, glucocorticoid response element</td></tr>
 <tr><td><b>Retinoic acid receptors RAR/RXR</b></td><td>RARE, retinoic acid response element</td></tr>
@@ -30,7 +30,7 @@ const REFERENCE_HTML = `
 
 <!--DIA:nr-action-->
 
-<h3 id="ref-l1-steroids">Topical corticosteroids (PCol 11)</h3>
+<h3 id="ref-l1-steroids">Skin Pharmacology (Dr. Smith): topical corticosteroids, slide 11</h3>
 <table class="reftab"><thead><tr><th style="width:30%">Situation</th><th>Potency on the slide</th></tr></thead><tbody>
 <tr><td><b>Face</b></td><td>Low potency (hydrocortisone 1%)</td></tr>
 <tr><td><b>Body</b></td><td>Medium potency (betamethasone valerate 0.1%)</td></tr>
@@ -39,7 +39,7 @@ const REFERENCE_HTML = `
 </tbody></table>
 <p class="prose">Specific steroid products and their potency classes belong to the medicinal chemistry lectures (T 585–587; syllabus: Sikazwe, Lectures 3–4).</p>
 
-<h3 id="ref-l2">Lecture 2: Smith, 10/30 (Skin-PCol slides 16–42)</h3>
+<h3 id="ref-l2">Skin Pharmacology (Dr. Smith): drugs on slides 16–42 (10/30)</h3>
 <table class="reftab"><thead><tr><th>Drug</th><th>Class</th><th>Route</th><th>Use (this lecture)</th><th>Key adverse / counseling</th><th>Slide</th></tr></thead><tbody>
 <tr><td>Tretinoin</td><td>Retinoid</td><td>Topical</td><td>Acne</td><td>&lt;10% absorbed; flare 4-6 wk; optimum 8-12 wk; microsphere form less irritating</td><td>16-17</td></tr>
 <tr><td>Adapalene</td><td>Retinoid</td><td>Topical</td><td>Mild to moderate acne</td><td>Sun stable; with BPO; less irritating than tretinoin</td><td>18</td></tr>
@@ -57,7 +57,7 @@ const REFERENCE_HTML = `
 <tr><td>Salicylic acid</td><td>Keratolytic</td><td>Topical</td><td>Acne (dandruff, psoriasis)</td><td>3-6%; &gt;6% damage; up to 40% warts/corns; salicylism (additive topical salicylates); caution diabetes/PVD</td><td>39-40</td></tr>
 </tbody></table>
 
-<h3 id="ref-l3">Lecture 3: Smith, 11/03 (Skin-PCol slides 43–76)</h3>
+<h3 id="ref-l3">Skin Pharmacology (Dr. Smith): drugs on slides 43–76 (11/03)</h3>
 <table class="reftab"><thead><tr><th>Drug</th><th>Class / make</th><th>Target or mechanism</th><th>Route (as taught)</th><th>Key AE or warning</th><th>Slide</th></tr></thead><tbody>
 <tr><td>Sarecycline, minocycline, doxycycline</td><td>Tetracyclines</td><td>30S; block aminoacyl-tRNA at acceptor site; bacteriostatic</td><td>Oral (acne)</td><td>GI N/V/D, pseudomembranous colitis (stop if blood in stool), teeth/bone in young, photosensitivity, superinfection; not in pregnancy or under 8 y; minocycline ototoxicity. Slide 45: analogs absorb better from the GI tract than tetracycline; doxycycline and minocycline more lipid soluble (enter the follicle better); minocycline and sarecycline may be less photosensitizing; sarecycline narrower spectrum; acne efficacy may depend more on anti-inflammatory activity</td><td>43–45</td></tr>
 <tr><td>Clindamycin</td><td>Lincosamide (chart)</td><td>50S; prevents translocation; bacteriostatic</td><td>Oral, topical</td><td>Pseudomembranous colitis, impaired liver function; ~10% topical absorption; resistance</td><td>46</td></tr>
@@ -156,7 +156,32 @@ const REFERENCE_HTML = `
 <tr id="tgt-anesthetics" data-by="chart"><td><details><summary><b>Benzocaine, dibucaine, tetracaine, lidocaine</b></summary><span class="tg">Chart class: Na channel blockers (topical anesthetics for sunburn relief)</span>; not on her sun slides</details></td><td>Chart p. 1</td></tr>
 </tbody></table>
 
-<h3 id="ref-s3">Lecture 3: Sikazwe, 11/03 (DPAW pages 1–26)</h3>
+<h3 id="ref-sun">Sun Exposure (Dr. Smith): SPF, skin types and substantivity, slides 15–19</h3>
+<table class="reftab"><thead><tr><th style="width:30%">SPF</th><th>UVB blocked (slide 15)</th></tr></thead><tbody>
+<tr><td><b>SPF 15</b></td><td>About 93%</td></tr>
+<tr><td><b>SPF 30</b></td><td>About 97%</td></tr>
+<tr><td><b>SPF 50</b></td><td>About 98%</td></tr>
+</tbody></table>
+<table class="reftab"><thead><tr><th style="width:14%">Skin type</th><th>Burning and tanning (slide 16)</th><th style="width:30%">SPF (slide 17)</th></tr></thead><tbody>
+<tr><td><b>I</b></td><td>Always burns easily, never tans; blue or green eyes, blond or red hair</td><td rowspan="2">Over 30 (increased skin cancer risk)</td></tr>
+<tr><td><b>II</b></td><td>Always burns easily, tans minimally; blue, hazel or brown eyes, blond, red or brown hair</td></tr>
+<tr><td><b>III</b></td><td>Sometimes burns, tans gradually</td><td rowspan="3">15 to 24</td></tr>
+<tr><td><b>IV</b></td><td>Burns minimally, always tans well</td></tr>
+<tr><td><b>V</b></td><td>Rarely burns, tans profusely (brown skin)</td></tr>
+<tr><td><b>VI</b></td><td>Never burns, deeply pigmented (black skin)</td><td>&mdash;</td></tr>
+<tr><td><b>Lupus</b></td><td>&mdash;</td><td>Over 40</td></tr>
+<tr><td><b>Photosensitizing drugs</b></td><td>&mdash;</td><td>Over 45</td></tr>
+</tbody></table>
+<p class="prose">Slide 17 also: start high and go low; adding a higher SPF after 1 MED will not help much; apply the correct amount at the correct time; reapply every 90&ndash;120 minutes.</p>
+<table class="reftab"><thead><tr><th style="width:30%">Vehicle</th><th>Substantivity (slide 19)</th></tr></thead><tbody>
+<tr><td><b>Oils</b></td><td>Best, but not pleasant dosage forms</td></tr>
+<tr><td><b>Polyacrylamide bases</b></td><td>Good: not easily washed off</td></tr>
+<tr><td><b>Creams</b></td><td>Better than alcohol-based vehicles</td></tr>
+<tr><td><b>Alcohols</b></td><td>Worst</td></tr>
+</tbody></table>
+<p class="prose">Choose the best substantivity: waterproof, water-resistant or sweat-resistant products (slide 19).</p>
+
+<h3 id="ref-s3">Dermatology Medicinal Chemistry (Dr. Sikazwe): DPAW pages 1–26 (11/03)</h3>
 <table class="reftab"><thead><tr><th>Drug / agent</th><th>Chemical class</th><th>Key ADME / numbers</th><th>CBDA</th><th>Slide; T</th></tr></thead><tbody>
 <tr><td>Crisaborole</td><td>Benzoxaborole (boron-based), soft drug</td><td>log P 3, dermis accumulation; t1/2 12 h; spontaneous hydrolytic deboronation (non-enzymatic) -&gt; benzyl alcohol -&gt; ADH, ALDH -&gt; benzoic acid -&gt; SULT / UGT conjugates</td><td>Boron coordinates Zn2+ and Mg2+ in PDE4 active site</td><td>7, 9; T 664-801</td></tr>
 <tr><td>Ruxolitinib</td><td>Pyrrolopyrimidine (name not to be recalled)</td><td>log P ~2 (spoken); formulated to stay in skin; t1/2 3 h; 3A4/2C9 substrate; some active OH metabolites</td><td>(JAK inhibitor; MoA not tested)</td><td>8; T 729-757</td></tr>
@@ -175,7 +200,7 @@ const REFERENCE_HTML = `
 <tr><td>UVR</td><td>—</td><td>UVC 100-280; UVB from 280; UVA to 400 (from 315 or 320); ozone blocks UVC and ~90% UVB; UVA deepest</td><td>—</td><td>12; T 810-839</td></tr>
 </tbody></table>
 
-<h3 id="ref-s4">Lecture 4: Sikazwe, 11/04 (DPAW pages 27–71)</h3>
+<h3 id="ref-s4">Dermatology Medicinal Chemistry (Dr. Sikazwe): DPAW pages 27–71 (11/04)</h3>
 <table class="reftab"><thead><tr><th>Drug / agent</th><th>Chemical class (deck)</th><th>Mechanism / CBDA</th><th>Key PK / numbers</th><th>Caution</th><th>Slide</th></tr></thead><tbody>
 <tr><td>Calcitriol, calcipotriene</td><td>Secosteroids (vitamin D analogs)</td><td>Antiproliferative</td><td>Raise GI calcium absorption</td><td>Hypercalcemia (limiting factor)</td><td>27</td></tr>
 <tr><td>Pimecrolimus</td><td>Macrolide / lactone</td><td>Calcineurin inhibitor, ↓ cytokines</td><td>cLogP 6.0; high non-specific skin protein binding</td><td>Low systemic ADRs</td><td>28, 32</td></tr>

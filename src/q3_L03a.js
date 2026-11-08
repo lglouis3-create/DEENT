@@ -13,48 +13,48 @@
 const D3 = 'Lecture 3 (Skin-PCol-Students-2026.pdf)';
 
 TOPICS.push(
- {id:'l3-abx', name:'Acne antibiotics on the ribosome', prof:'Smith',
-  cite:'Lecture 3 (11/03) — Skin-PCol-Students-2026.pdf, slides 43–47',
+ {id:'l3-abx', name:'Antibiotics/antimicrobials: tetracyclines, clindamycin, macrolides', prof:'Smith',
+  cite:'slides 43–47 · taught 11/03 (Lecture 3)',
   subs:[
    {id:'tet',    name:'Tetracyclines', cite:'slides 43–45'},
    {id:'clinda', name:'Clindamycin', cite:'slide 46'},
    {id:'macro',  name:'Macrolides', cite:'slide 47'}]},
- {id:'l3-fol', name:'Folate-pathway antimicrobials, dapsone, metronidazole', prof:'Smith',
-  cite:'Lecture 3 (11/03) — Skin-PCol-Students-2026.pdf, slides 48–51',
+ {id:'l3-fol', name:'Antibiotics/antimicrobials: TMP/SMX, dapsone, metronidazole', prof:'Smith',
+  cite:'slides 48–51 · taught 11/03 (Lecture 3)',
   subs:[
    {id:'tmpsmx', name:'Trimethoprim/sulfamethoxazole', cite:'slides 48–49'},
    {id:'dap',    name:'Dapsone', cite:'slide 50'},
    {id:'metro',  name:'Metronidazole', cite:'slide 51'}]},
  {id:'l3-cyto', name:'Antipsoriatic cytotoxic agents', prof:'Smith',
-  cite:'Lecture 3 (11/03) — Skin-PCol-Students-2026.pdf, slides 52–57',
+  cite:'slides 52–57 · taught 11/03 (Lecture 3)',
   subs:[
    {id:'coal',  name:'Coal tar', cite:'slides 53–54'},
    {id:'anth',  name:'Anthralin and SCAT', cite:'slides 55–56'},
    {id:'other', name:'Shale tar, selenium sulfide, zinc pyrithione', cite:'slide 57'}]},
- {id:'l3-mtx', name:'Methotrexate', prof:'Smith',
-  cite:'Lecture 3 (11/03) — Skin-PCol-Students-2026.pdf, slides 58–61',
+ {id:'l3-mtx', name:'Dihydrofolate reductase inhibitor: methotrexate', prof:'Smith',
+  cite:'slides 58–61 · taught 11/03 (Lecture 3)',
   subs:[
    {id:'mech', name:'Mechanism and folate cycle', cite:'slides 59–60'},
    {id:'ae',   name:'Adverse effects and handling', cite:'slide 61'}]},
- {id:'l3-abat', name:'Abatacept and co-stimulation', prof:'Smith',
-  cite:'Lecture 3 (11/03) — Skin-PCol-Students-2026.pdf, slides 62–63',
+ {id:'l3-abat', name:'Fusion proteins, monoclonals, small molecules: abatacept', prof:'Smith',
+  cite:'slides 62–63 · taught 11/03 (Lecture 3)',
   subs:[
    {id:'sig',  name:'Signal 1 and positive or negative signal 2', cite:'slide 63'},
    {id:'drug', name:'Abatacept structure and mechanism', cite:'slide 63'}]},
- {id:'l3-cytok', name:'Cytokine antagonists: IL-4Rα, IL-17, IL-12/23, IL-23', prof:'Smith',
-  cite:'Lecture 3 (11/03) — Skin-PCol-Students-2026.pdf, slides 64–69',
+ {id:'l3-cytok', name:'Fusion proteins, monoclonals, small molecules: IL-4Rα, IL-17, IL-12/23, IL-23', prof:'Smith',
+  cite:'slides 64–69 · taught 11/03 (Lecture 3)',
   subs:[
    {id:'dup',  name:'Dupilumab', cite:'slide 64'},
    {id:'il17', name:'IL-17 inhibitors', cite:'slides 65–66'},
    {id:'il23', name:'Ustekinumab and IL-23 inhibitors', cite:'slides 67–69'},
    {id:'make', name:'Cytokine or receptor; human, humanized or chimeric', cite:'slides 64–74'}]},
- {id:'l3-tnf', name:'TNF-alpha inhibitors', prof:'Smith',
-  cite:'Lecture 3 (11/03) — Skin-PCol-Students-2026.pdf, slides 70–74',
+ {id:'l3-tnf', name:'Fusion proteins, monoclonals, small molecules: TNF-alpha inhibitors', prof:'Smith',
+  cite:'slides 70–74 · taught 11/03 (Lecture 3)',
   subs:[
    {id:'class', name:'TNF-α and the class black box warning', cite:'slide 70'},
    {id:'drugs', name:'Etanercept, infliximab, adalimumab, golimumab, certolizumab pegol', cite:'slides 71–74'}]},
- {id:'l3-jak', name:'JAK inhibitors', prof:'Smith',
-  cite:'Lecture 3 (11/03) — Skin-PCol-Students-2026.pdf, slides 75–76',
+ {id:'l3-jak', name:'Fusion proteins, monoclonals, small molecules: JAK inhibitors', prof:'Smith',
+  cite:'slides 75–76 · taught 11/03 (Lecture 3)',
   subs:[
    {id:'mech',  name:'JAK and cytokine receptor signaling', cite:'slide 75'},
    {id:'drugs', name:'Tofacitinib, ruxolitinib, upadacitinib', cite:'slide 76'}]}
@@ -1283,8 +1283,8 @@ QUESTIONS.push(
    differences, why each MOA helps, boxed warnings. "10/30 T" = line numbers of
    DEENT_10_30_Lecture_Only_Transcript.txt; plain "T" = the 11/03 transcript. */
 TOPICS.push(
- {id:'l3-sum', name:'Across her pharmacology lectures: targets and boxed warnings', prof:'Smith',
-  cite:'Lectures 1–3 — Skin-PCol-Students-2026.pdf, slides 14–78', subs:[
+ {id:'l3-sum', name:'Across the deck: drug targets and boxed warnings', prof:'Smith',
+  cite:'slides 14–78 · Lectures 1–3', subs:[
    {id:'tgt', name:'Drug targets and what sets drugs apart (matching)', cite:'slides 14–78'},
    {id:'bbw', name:'Which drugs carry a black box warning', cite:'slides 30, 70, 76'}]}
 );

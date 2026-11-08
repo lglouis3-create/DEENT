@@ -19,48 +19,48 @@
 const D2 = 'Lecture 2 (Skin-PCol-Students-2026.pdf)';
 
 TOPICS.push(
- {id:'l2-tret', name:'Topical retinoids', prof:'Smith',
-  cite:'Lecture 2 (10/30) — Skin-PCol-Students-2026.pdf, slides 16–18',
+ {id:'l2-tret', name:'Nuclear receptor binders: topical retinoids', prof:'Smith',
+  cite:'slides 16–18 · taught 10/30 (Lecture 2)',
   subs:[
    {id:'couns', name:'Counseling: onset, amount, application', cite:'slide 16'},
    {id:'ae',    name:'Side effects and sun protection', cite:'slide 16'},
    {id:'prod',  name:'Tretinoin, adapalene, tazarotene', cite:'slides 17–18'}]},
- {id:'l2-oret', name:'Oral retinoids', prof:'Smith',
-  cite:'Lecture 2 (10/30) — Skin-PCol-Students-2026.pdf, slides 19–20',
+ {id:'l2-oret', name:'Nuclear receptor binders: oral retinoids', prof:'Smith',
+  cite:'slides 19–20 · taught 10/30 (Lecture 2)',
   subs:[
    {id:'iso', name:'Isotretinoin', cite:'slide 19'},
    {id:'aci', name:'Acitretin', cite:'slide 20'}]},
- {id:'l2-vitd', name:'Vitamin D analog: calcipotriene', prof:'Smith',
-  cite:'Lecture 2 (10/30) — Skin-PCol-Students-2026.pdf, slides 21–22',
+ {id:'l2-vitd', name:'Nuclear receptor binders: vitamin D analog (calcipotriene)', prof:'Smith',
+  cite:'slides 21–22 · taught 10/30 (Lecture 2)',
   subs:[
    {id:'mech',  name:'Mechanism and pharmacological effect', cite:'slide 21'},
    {id:'ae',    name:'Topical and systemic side effects', cite:'slide 22'},
    {id:'recap', name:'The three nuclear receptor binding classes', cite:'slides 21–22'}]},
  {id:'l2-tcell', name:'Calcineurin inhibitors: T-cell signals and mechanism', prof:'Smith',
-  cite:'Lecture 2 (10/30) — Skin-PCol-Students-2026.pdf, slides 23–26',
+  cite:'slides 23–26 · taught 10/30 (Lecture 2)',
   subs:[
    {id:'intro', name:'Uses and general action', cite:'slide 24'},
    {id:'sig',   name:'Signals 1, 2 and 3', cite:'slide 25'},
    {id:'mech',  name:'Calcineurin, NFAT and the immunophilins', cite:'slide 26'}]},
- {id:'l2-cni', name:'Calcineurin inhibitor products', prof:'Smith',
-  cite:'Lecture 2 (10/30) — Skin-PCol-Students-2026.pdf, slides 27–30',
+ {id:'l2-cni', name:'Calcineurin inhibitors: topical and oral products', prof:'Smith',
+  cite:'slides 27–30 · taught 10/30 (Lecture 2)',
   subs:[
    {id:'top',  name:'Topical pimecrolimus and tacrolimus', cite:'slides 27–28'},
    {id:'oral', name:'Oral cyclosporine and tacrolimus', cite:'slides 29–30'}]},
  {id:'l2-pde', name:'PDE-4 inhibitors', prof:'Smith',
-  cite:'Lecture 2 (10/30) — Skin-PCol-Students-2026.pdf, slides 31–34',
+  cite:'slides 31–34 · taught 10/30 (Lecture 2)',
   subs:[
    {id:'mech', name:'cAMP and inflammatory cells', cite:'slide 32'},
    {id:'cris', name:'Crisaborole', cite:'slide 33'},
    {id:'apr',  name:'Apremilast', cite:'slide 34'}]},
  {id:'l2-ker', name:'Keratolytics', prof:'Smith',
-  cite:'Lecture 2 (10/30) — Skin-PCol-Students-2026.pdf, slides 35–40',
+  cite:'slides 35–40 · taught 10/30 (Lecture 2)',
   subs:[
    {id:'bpo', name:'Benzoyl peroxide', cite:'slides 35–37'},
    {id:'sul', name:'Sulfur', cite:'slide 38'},
    {id:'sal', name:'Salicylic acid', cite:'slides 39–40'}]},
- {id:'l2-abx', name:'Acne antibiotics: the ribosome', prof:'Smith',
-  cite:'Lecture 2 (10/30) — Skin-PCol-Students-2026.pdf, slides 41–42',
+ {id:'l2-abx', name:'Antibiotics/antimicrobials: the bacterial ribosome', prof:'Smith',
+  cite:'slides 41–42 · taught 10/30 (Lecture 2)',
   subs:[
    {id:'ribo', name:'Binding sites on the bacterial ribosome', cite:'slides 41–42'}]}
 );

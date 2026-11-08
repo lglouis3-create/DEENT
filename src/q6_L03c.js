@@ -10,21 +10,21 @@
 const SUN = 'Sun exposure lecture (DEENT_Sun_Exposure_2026.pdf)';
 
 TOPICS.push(
- {id:'l3c-pso', name:'Psoralens (PUVA)', prof:'Smith',
-  cite:SUN+', slides 2–4', subs:[
+ {id:'l3c-pso', name:'Psoralen chromophores: methoxsalen (PUVA)', prof:'Smith',
+  cite:'slides 2–4 · recorded lecture', subs:[
    {id:'mech', name:'Mechanism and effects', cite:'slide 3'},
    {id:'ae',   name:'Side effects', cite:'slide 4'}]},
- {id:'l3c-uv', name:'UV light, tanning and sunburn', prof:'Smith',
-  cite:SUN+', slides 7–11', subs:[
+ {id:'l3c-uv', name:'Sun protection: risk factors, UV types, tanning, sunburn', prof:'Smith',
+  cite:'slides 7–11 · recorded lecture', subs:[
    {id:'risk', name:'Risk factors and UV index', cite:'slide 7'},
    {id:'uvab', name:'UVA vs UVB', cite:'slide 8'},
    {id:'tan',  name:'Tanning and sunburn', cite:'slides 9–11'}]},
- {id:'l3c-spf', name:'MED, SPF and broad spectrum', prof:'Smith',
-  cite:SUN+', slides 12–17', subs:[
+ {id:'l3c-spf', name:'Sun protection: MED, SPF, broad spectrum, SPF selection', prof:'Smith',
+  cite:'slides 12–17 · recorded lecture', subs:[
    {id:'def',  name:'MED, SPF, critical wavelength', cite:'slides 12–15'},
    {id:'sel',  name:'Skin types and SPF selection', cite:'slides 16–17'}]},
- {id:'l3c-prod', name:'Sunblocks and sunscreens', prof:'Smith',
-  cite:SUN+', slides 19–25', subs:[
+ {id:'l3c-prod', name:'Sun protection: substantivity, sunblocks, sunscreens, safety', prof:'Smith',
+  cite:'slides 19–25 · recorded lecture', subs:[
    {id:'sub',  name:'Substantivity', cite:'slide 19'},
    {id:'blk',  name:'Physical sunblocks', cite:'slides 20–21'},
    {id:'org',  name:'Organic sunscreens', cite:'slides 22, 24'},

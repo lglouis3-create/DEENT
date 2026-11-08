@@ -2,7 +2,7 @@ const TELL_HTML = `
 <h2>Tell apart</h2>
 <p class="sub">Pairs that share wording. Each row gives the feature that separates them and the slide it comes from. Nothing here is scored.</p>
 
-<h3 id="tell-l1-diseases">Lecture 1: the three diseases (Skin-Pathophys-Students-2026.pdf)</h3>
+<h3 id="tell-l1-diseases">Skin Pathophysiology (Dr. Smith): the three diseases, slides 15–38</h3>
 <table class="reftab"><thead><tr><th style="width:22%">Looks alike</th><th>What separates them</th><th style="width:26%">The trap</th><th style="width:9%">Slide</th></tr></thead><tbody>
 <tr><td><b>Atopic dermatitis</b> vs <b>psoriasis</b> vs <b>acne</b></td><td>Major pathology: AD, skin barrier dysfunction; psoriasis, keratinocyte hyperproliferation; acne, excess sebum production.</td><td>Keratinocyte hyperproliferation offered for acne: in class she said it is a feature of psoriasis, not acne (T 573–577).</td><td>38</td></tr>
 <tr><td><b>AD keratinocytes</b> vs <b>psoriasis keratinocytes</b></td><td>AD: a structural defect; too little profilaggrin and filaggrin, cells do not lie flat, gaps let allergens in. Psoriasis: cells divide too fast and do not mature.</td><td>Calling both "hyperproliferation".</td><td>15, 19</td></tr>
@@ -12,7 +12,7 @@ const TELL_HTML = `
 <tr><td><b>Acne mechanica</b> vs <b>cosmetica</b> vs <b>occupational</b></td><td>Mechanica: occlusion or irritation of the skin. Cosmetica: comedogenic oils in cosmetics. Occupational: dirt, vaporized cooking oil, industrial chemicals.</td><td>A helmet or strap called cosmetica.</td><td>35</td></tr>
 </tbody></table>
 
-<h3 id="tell-l1-drugs">Lecture 1: nuclear receptor binders (Skin-PCol-Students-2026.pdf)</h3>
+<h3 id="tell-l1-drugs">Skin Pharmacology (Dr. Smith): nuclear receptor binders, slides 5–14 (10/29)</h3>
 <table class="reftab"><thead><tr><th style="width:22%">Looks alike</th><th>What separates them</th><th style="width:26%">The trap</th><th style="width:9%">Slide</th></tr></thead><tbody>
 <tr><td><b>Direct</b> vs <b>indirect</b> nuclear receptor action</td><td>Direct: two drug–receptor complexes bind a response element (GRE). Indirect: one complex binds a transcription factor (NF-kB, AP-1) and keeps it off the DNA.</td><td>Reversing the number of complexes.</td><td>5–6</td></tr>
 <tr><td><b>CBG</b> vs <b>Hsp90</b></td><td>CBG carries the steroid in the blood. Hsp90 chaperones the receptor in the cell and comes off when the steroid binds.</td><td>Hsp90 as the carrier protein.</td><td>10</td></tr>
@@ -20,7 +20,7 @@ const TELL_HTML = `
 <tr><td><b>RAR</b> vs <b>RXR</b> targeting retinoids</td><td>RAR: differentiation and proliferation; acne, psoriasis, photoaging. RXR: apoptosis; cancers such as Kaposi sarcoma.</td><td>"RXR" for skin disease: a slip in class (T 901–903); the slide and her next sentence say RAR.</td><td>14</td></tr>
 </tbody></table>
 
-<h3 id="tell-l2">Lecture 2: Smith, 10/30 (Skin-PCol slides 16–42)</h3>
+<h3 id="tell-l2">Skin Pharmacology (Dr. Smith): slides 16–42 (10/30)</h3>
 <table class="reftab"><thead><tr><th>Looks alike</th><th>What separates them</th><th>Trap</th><th>Slide</th></tr></thead><tbody>
 <tr><td>Adapalene vs tretinoin</td><td>Adapalene: photochemically stable, combinable with benzoyl peroxide, less irritating, mild to moderate acne. Tretinoin: ATRA, &lt;10% absorbed, timed-release microsphere form for sensitive skin</td><td>Thinking any retinoid can go with benzoyl peroxide (T 72-73: the others are "way too irritating")</td><td>17-18</td></tr>
 <tr><td>Adapalene vs tazarotene</td><td>Adapalene sun stable, acne; tazarotene causes photosensitivity, used for psoriasis, acne and wrinkles, possibly more absorption, contraceptive counseling</td><td>Treating "sun stable" as "no sun protection needed": sunburn risk stays because of peeling (T 122-130)</td><td>18</td></tr>
@@ -37,7 +37,7 @@ const TELL_HTML = `
 <tr><td>CYP3A4 drugs this day</td><td>Cyclosporine, tacrolimus (many interactions); apremilast (inducers reduce effect)</td><td>—</td><td>30, 34</td></tr>
 </tbody></table>
 
-<h3 id="tell-l3">Lecture 3: Smith, 11/03 (Skin-PCol slides 43–76)</h3>
+<h3 id="tell-l3">Skin Pharmacology (Dr. Smith): slides 43–76 (11/03)</h3>
 <table class="reftab"><thead><tr><th>Looks alike</th><th>What separates</th><th>Trap</th><th>Slide</th></tr></thead><tbody>
 <tr><td>Tetracyclines vs clindamycin/macrolides</td><td>Tetracyclines bind 30S (block aminoacyl-tRNA at acceptor site); clindamycin and macrolides bind 50S (prevent translocation)</td><td>All "ribosome antibiotics"; subunit swapped</td><td>43, 46, 47</td></tr>
 <tr><td>Sulfamethoxazole vs trimethoprim</td><td>SMX competes with PABA (dihydropteroic/dihydrofolic acid step); TMP inhibits DHFR (DHF to THF)</td><td>Both "folate"; step swapped</td><td>48–49</td></tr>
@@ -62,7 +62,37 @@ const TELL_HTML = `
 <tr><td>Tofacitinib vs TNF-α inhibitors</td><td>Same black box (serious infection, lymphoma, other malignancy); tofacitinib oral small molecule</td><td>—</td><td>70, 76</td></tr>
 </tbody></table>
 
-<h3 id="tell-s3">Lecture 3: Sikazwe, 11/03 (DPAW pages 1–26)</h3>
+<h3 id="tell-smith-safety">Skin Pharmacology (Dr. Smith): boxed warnings, pregnancy and interactions</h3>
+<table class="reftab"><thead><tr><th>Looks alike</th><th>What separates them</th><th>Trap</th><th>Slide</th></tr></thead><tbody>
+<tr><td>Oral vs topical calcineurin inhibitors</td><td>Oral (cyclosporine, tacrolimus): boxed warning for lymphoma and other malignancies, particularly of the skin, and for bacterial, viral, fungal and protozoal infections. Topical (pimecrolimus, tacrolimus): burning, potential local skin carcinogenesis, infection if blood levels get high; no boxed warning on her topical slides</td><td>Moving the oral boxed warning onto the topical products</td><td>27–28, 30</td></tr>
+<tr><td>TNF-α inhibitors vs tofacitinib (boxed warnings)</td><td>Same boxed content: serious infection, lymphoma and other malignancy. TNF-α: malignancies reported in children and adolescents. Tofacitinib: also caution with high risk of GI perforation</td><td>Giving the GI perforation caution to the TNF-α class</td><td>70, 76; T 498–500</td></tr>
+<tr><td>Boxed warning vs infection warning (IL-17, IL-12/23, IL-23)</td><td>Her slides mark boxed warnings only for oral calcineurin inhibitors, TNF-α inhibitors and tofacitinib. Secukinumab, ustekinumab and risankizumab carry infection and TB-evaluation warnings without a boxed label on her slides</td><td>Calling every biologic's infection warning a boxed warning</td><td>30, 66–70, 76</td></tr>
+<tr><td>Isotretinoin vs acitretin vs tazarotene (pregnancy)</td><td>Isotretinoin: teratogen, iPLEDGE, men enrolled too. Acitretin: no pregnancy during treatment and for 3 years after; no blood donation for 3 years. Tazarotene: not in pregnancy; contraceptive counseling</td><td>Applying acitretin's 3 years to isotretinoin</td><td>18–20; T 130–132</td></tr>
+<tr><td>Methotrexate vs tetracyclines (pregnancy and age)</td><td>Methotrexate: abortifacient and teratogenic; handle with gloves and a separate counting tray. Tetracyclines: not in pregnancy or under 8 years (teeth and bones)</td><td>Giving the age limit of 8 years to methotrexate</td><td>45, 61</td></tr>
+<tr><td>Cyclosporine/tacrolimus vs apremilast (CYP3A4)</td><td>Oral cyclosporine and tacrolimus are metabolized by CYP3A4: many interactions. Apremilast: avoid strong CYP3A4 inducers, which lower its effect</td><td>Saying apremilast levels rise with inducers</td><td>30, 34</td></tr>
+<tr><td>Oral vs topical macrolides</td><td>Oral: N/V/D, epigastric pain, many drug interactions. Topical: burning and drying, more with benzoyl peroxide</td><td>Giving the drug-interaction warning to the topical form</td><td>47</td></tr>
+<tr><td>Adapalene vs tretinoin/tazarotene with benzoyl peroxide</td><td>Adapalene can be combined with benzoyl peroxide; the others are too irritating with it</td><td>Combining any retinoid with BPO</td><td>18; T 72–73</td></tr>
+</tbody></table>
+
+<h3 id="tell-sun">Sun Exposure and Psoralens (Dr. Smith): DEENT_Sun_Exposure_2026.pdf slides 2–25</h3>
+<table class="reftab"><thead><tr><th>Looks alike</th><th>What separates them</th><th>Trap</th><th>Slide</th></tr></thead><tbody>
+<tr><td>UVB vs UVA</td><td>UVB 290–320 nm, more energetic, about 90% filtered by ozone, stopped by glass, causes sunburn, makes vitamin D3. UVA 320–400 nm, minimally filtered, passes glass, deeper into the dermis, most drug phototoxic reactions. Both: photoaging, immunosuppression, skin cancers</td><td>Calling UVA the sunburn band</td><td>8</td></tr>
+<tr><td>MED vs SPF</td><td>MED: the smallest single UV dose that gives clearly marginated erythema. SPF: the ratio of the sunburn dose with the sunscreen to the dose without it</td><td>Defining SPF as a dose</td><td>12–13</td></tr>
+<tr><td>SPF vs critical wavelength</td><td>SPF measures mainly UVB protection and says nothing about UVA. The critical wavelength tests UVA: 370 nm or more allows "broad spectrum"</td><td>Reading a high SPF as UVA coverage</td><td>13–14</td></tr>
+<tr><td>Broad spectrum vs the skin cancer claim</td><td>Broad spectrum needs a CW of 370 nm or more; the "decreases risk of skin cancer and early aging" claim needs broad spectrum plus SPF 15 or more</td><td>Allowing the claim below SPF 15</td><td>14</td></tr>
+<tr><td>SPF 15 vs 30 vs 50</td><td>About 93%, 97% and 98% of UVB blocked</td><td>Thinking SPF 30 blocks twice as much as SPF 15</td><td>15</td></tr>
+<tr><td>SPF > 30 vs > 40 vs > 45 vs 15–24</td><td>Skin types I–II: > 30. Lupus: > 40. Photosensitizing drugs: > 45. Skin types III–V: 15–24</td><td>Swapping lupus and photosensitizing drugs</td><td>17</td></tr>
+<tr><td>Immediate vs delayed pigmentation</td><td>Immediate: starts 5–10 minutes after exposure, lasts 24–48 h. Delayed: after 48–72 h, peaks at 7–10 days, lasts weeks to months</td><td>Swapping the hours and the days</td><td>10</td></tr>
+<tr><td>Sunburn reddening vs tan</td><td>Reddening peaks at 12–24 h; melanogenesis over the next 2–3 days gives the tan</td><td>—</td><td>11</td></tr>
+<tr><td>Oils vs alcohols vs creams vs polyacrylamide (substantivity)</td><td>Oils best but unpleasant; alcohols worst; creams better than alcohol bases; polyacrylamide bases good, not easily washed off</td><td>Ranking alcohol bases above creams</td><td>19</td></tr>
+<tr><td>Sunblock vs sunscreen</td><td>Sunblock (zinc oxide, titanium dioxide): inorganic particles scatter or reflect visible, UV and infrared light; UVA and UVB; less irritating; may occlude pores and stain clothing; protection falls after 2 hours of direct sun. Sunscreen (organic): absorbs UVB and/or UVA and converts it to heat</td><td>Calling zinc oxide an absorber</td><td>20–22, 25</td></tr>
+<tr><td>Benzophenones vs salicylates vs cinnamates</td><td>Benzophenones: poor substantivity, can sensitize. Salicylates: adhere poorly, removed by water or sweat. Cinnamates: adhere poorly, depend on the vehicle</td><td>—</td><td>24</td></tr>
+<tr><td>Aminobenzoates vs dibenzoylmethanes vs anthranilates</td><td>Aminobenzoates: most effective UVB absorbers, may stain clothing. Dibenzoylmethanes: activity falls after 15 minutes. Anthranilates: only in combination products, for broad coverage</td><td>—</td><td>24</td></tr>
+<tr><td>Physical vs chemical ingredients (safety)</td><td>Physical ingredients less likely to irritate. Most chemical actives linked to skin reactions; higher risk with PABA, avobenzone and oxybenzone</td><td>Naming zinc oxide among the higher-risk ingredients</td><td>25</td></tr>
+<tr><td>Dr. Smith's psoralen vs Dr. Sikazwe's 8-MOP</td><td>Same drug (methoxsalen). Dr. Smith: with UVA of 320–340 nm it intercalates into DNA; antiproliferative, immunosuppressive, anti-inflammatory. Dr. Sikazwe: a furanocoumarin that intercalates and, with UVA, crosslinks pyrimidine bases; partially inhibits CYP3A4</td><td>—</td><td>Sun 3; DPAW 18</td></tr>
+</tbody></table>
+
+<h3 id="tell-s3">Dermatology Medicinal Chemistry (Dr. Sikazwe): DPAW pages 1–26 (11/03)</h3>
 <table class="reftab"><thead><tr><th>Looks alike</th><th>What separates</th><th>Trap</th><th>Slide</th></tr></thead><tbody>
 <tr><td>Crisaborole vs anthralin (both act without an enzyme at some step)</td><td>Crisaborole: spontaneous hydrolytic deboronation inactivates it (water, no enzyme). Anthralin: spontaneous autoxidation activates it (radicals are the treatment)</td><td>Calling both "autoxidation"; thinking deboronation activates crisaborole</td><td>7, 17</td></tr>
 <tr><td>Anthralin vs 8-MOP (methoxsalen) CBDA</td><td>Anthralin: autoxidation to anthranyl radical + superoxide anion, disrupt keratinocyte mitochondria. 8-MOP: intercalates and, with UVA, covalently crosslinks DNA pyrimidine bases</td><td>Polleve-2: "both involve autoxidation" is false</td><td>17, 18, 19</td></tr>
@@ -81,7 +111,7 @@ const TELL_HTML = `
 <tr><td>Hydrocortisone to clobetasol arrow vs metabolism arrows</td><td>Slide 25 arrow = structural manipulation ("not metabolism"); slide 26 arrows = metabolism</td><td>Reading slide 25 as a metabolic step</td><td>25, 26</td></tr>
 </tbody></table>
 
-<h3 id="tell-s4">Lecture 4: Sikazwe, 11/04 (DPAW pages 27–71)</h3>
+<h3 id="tell-s4">Dermatology Medicinal Chemistry (Dr. Sikazwe): DPAW pages 27–71 (11/04)</h3>
 <table class="reftab"><thead><tr><th>Looks alike</th><th>What separates</th><th>Trap</th><th>Slide</th></tr></thead><tbody>
 <tr><td>Pimecrolimus vs tacrolimus</td><td>Skin permeation: pimecrolimus high non-specific skin protein binding (stays in skin, low systemic ADRs); tacrolimus low skin protein binding (enters circulation). Structure: Cl + ethyl (pime) vs OH + allyl (tacro)</td><td>Thinking they differ in log P (6.0 vs 5.8, similar) or in mechanism (both calcineurin inhibitors)</td><td>28; T@5890–6070</td></tr>
 <tr><td>Lactone vs lactam</td><td>Lactone = cyclic ester (limus macrolides); lactam = cyclic amide (cyclosporine, a cyclic peptide)</td><td>Calling the limus drugs "peptides" (drug chart) or steroids</td><td>32, 33; T@11453–11720, T@12150–12254</td></tr>

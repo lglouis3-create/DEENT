@@ -17,60 +17,60 @@
 const S4 = 'Lecture 4 (f26-DEENT-DPAW-mc.pdf)';
 
 TOPICS.push(
- {id:'s4-vitd', name:'Vitamin D analogs and vitamin D3 biosynthesis', prof:'Sikazwe',
-  cite:'Lecture 4 (11/04) — f26-DEENT-DPAW-mc.pdf, slide 27; Vitamin D reading (Endotext)',
+ {id:'s4-vitd', name:'Psoriasis topical agents: vitamin D analogs', prof:'Sikazwe',
+  cite:'p. 27; Vitamin D reading (Endotext) · taught 11/04 (Lecture 4)',
   subs:[
    {id:'analog', name:'Calcitriol and calcipotriene', cite:'slide 27'},
    {id:'path',   name:'Take-home: reactions, organs, enzymes', cite:'slide 27; reading lines 5–14, 60–71'}]},
- {id:'s4-limus', name:'Pimecrolimus and tacrolimus', prof:'Sikazwe',
-  cite:'Lecture 4 (11/04) — f26-DEENT-DPAW-mc.pdf, slides 28, 32',
+ {id:'s4-limus', name:'Psoriasis topical agents: pimecrolimus and tacrolimus', prof:'Sikazwe',
+  cite:'pp. 28, 32 · taught 11/04 (Lecture 4)',
   subs:[
    {id:'pk',    name:'Skin protein binding and permeation', cite:'slide 28'},
    {id:'class', name:'Lactone classification (Polleve-3)', cite:'slides 28, 32'}]},
- {id:'s4-psret', name:'Retinoids for psoriasis', prof:'Sikazwe',
-  cite:'Lecture 4 (11/04) — f26-DEENT-DPAW-mc.pdf, slide 29',
+ {id:'s4-psret', name:'Psoriasis topical/oral agents: retinoids', prof:'Sikazwe',
+  cite:'p. 29 · taught 11/04 (Lecture 4)',
   subs:[
    {id:'taz', name:'Tazarotene, acitretin, isotretinoin', cite:'slide 29'}]},
- {id:'s4-mtx', name:'Methotrexate', prof:'Sikazwe',
-  cite:'Lecture 4 (11/04) — f26-DEENT-DPAW-mc.pdf, slides 30–31',
+ {id:'s4-mtx', name:'Psoriasis systemic agents: methotrexate', prof:'Sikazwe',
+  cite:'pp. 30–31 · taught 11/04 (Lecture 4)',
   subs:[
    {id:'mech', name:'Pteridine, DHFR and folic acid', cite:'slide 30'},
    {id:'sar',  name:'MTX SAR', cite:'slide 31'}]},
- {id:'s4-sys', name:'Cyclosporine and apremilast', prof:'Sikazwe',
-  cite:'Lecture 4 (11/04) — f26-DEENT-DPAW-mc.pdf, slides 33–34',
+ {id:'s4-sys', name:'Psoriasis systemic agents: cyclosporine and apremilast', prof:'Sikazwe',
+  cite:'pp. 33–34 · taught 11/04 (Lecture 4)',
   subs:[
    {id:'csa', name:'Cyclosporine', cite:'slide 33'},
    {id:'apr', name:'Apremilast', cite:'slide 34'}]},
- {id:'s4-acne', name:'Acne: terms, components, drug groups', prof:'Sikazwe',
-  cite:'Lecture 4 (11/04) — f26-DEENT-DPAW-mc.pdf, slides 40–42',
+ {id:'s4-acne', name:'Acne: terminology, components, pharmacotherapy', prof:'Sikazwe',
+  cite:'pp. 40–42 · taught 11/04 (Lecture 4)',
   subs:[
    {id:'terms', name:'Terminology and components', cite:'slides 40–41'},
    {id:'drugs', name:'Pharmacotherapy groups', cite:'slide 42'}]},
- {id:'s4-kera', name:'Keratolytics', prof:'Sikazwe',
-  cite:'Lecture 4 (11/04) — f26-DEENT-DPAW-mc.pdf, slides 43–47',
+ {id:'s4-kera', name:'Acne: keratolytics', prof:'Sikazwe',
+  cite:'pp. 43–47 · taught 11/04 (Lecture 4)',
   subs:[
    {id:'ha',  name:'Glycolic and salicylic acid; hydroxy acid SAR', cite:'slides 43–44'},
    {id:'s',   name:'Sulfur', cite:'slide 46'},
    {id:'bpo', name:'Benzoyl peroxide', cite:'slide 47'}]},
- {id:'s4-ret', name:'Retinoids by generation', prof:'Sikazwe',
-  cite:'Lecture 4 (11/04) — f26-DEENT-DPAW-mc.pdf, slides 48–51',
+ {id:'s4-ret', name:'Acne: retinoids by generation', prof:'Sikazwe',
+  cite:'pp. 48–51 · taught 11/04 (Lecture 4)',
   subs:[
    {id:'gen',  name:'Properties and teratogenicity', cite:'slide 48'},
    {id:'g1',   name:'1st generation: tretinoin and isotretinoin', cite:'slide 49'},
    {id:'g2',   name:'2nd generation: etretinate and acitretin', cite:'slide 50'},
    {id:'g3',   name:'3rd generation and ADMET', cite:'slide 51'}]},
- {id:'s4-horm', name:'Hormones for acne', prof:'Sikazwe',
-  cite:'Lecture 4 (11/04) — f26-DEENT-DPAW-mc.pdf, slides 52–53',
+ {id:'s4-horm', name:'Acne: hormones (estrogens, antiandrogens)', prof:'Sikazwe',
+  cite:'pp. 52–53 · taught 11/04 (Lecture 4)',
   subs:[
    {id:'oc', name:'Oral contraceptives', cite:'slide 52'},
    {id:'aa', name:'Antiandrogens', cite:'slide 53'}]},
- {id:'s4-abx', name:'Antibiotics for acne', prof:'Sikazwe',
-  cite:'Lecture 4 (11/04) — f26-DEENT-DPAW-mc.pdf, slides 54–55',
+ {id:'s4-abx', name:'Acne: antibiotics', prof:'Sikazwe',
+  cite:'pp. 54–55 · taught 11/04 (Lecture 4)',
   subs:[
    {id:'misc', name:'Azelaic acid, clindamycin, erythromycin', cite:'slide 54'},
    {id:'tet',  name:'Tetracyclines', cite:'slide 55'}]},
- {id:'s4-sun', name:'UV, sunblocks and sunscreens', prof:'Sikazwe',
-  cite:'Lecture 4 (11/04) — f26-DEENT-DPAW-mc.pdf, slides 58–66',
+ {id:'s4-sun', name:'Wrinkle: sunblocks and sunscreens', prof:'Sikazwe',
+  cite:'pp. 58–66 · taught 11/04 (Lecture 4)',
   subs:[
    {id:'uv',    name:'Wrinkle causes and UV bands (Polleve-5)', cite:'slides 58–60'},
    {id:'inorg', name:'Zinc oxide and titanium dioxide', cite:'slide 61'},
@@ -81,15 +81,15 @@ TOPICS.push(
     which carry no questions. These carry lowYield (off practice papers) and
     unassigned (course.js pool filters: in no Exam 1 pool, so out of the pool cards on
     Weak spots and the exam-date scheduling). IDs and citations are unchanged. */
- {id:'sk-beyond', optional:true, name:'Beyond the Exam 1 assigned pages (Dr. Sikazwe, optional)', prof:'Sikazwe',
+ {id:'sk-beyond', optional:true, name:'Beyond the Exam 1 assigned pages (optional)', prof:'Sikazwe',
   cite:'Not on Dr. Sikazwe\'s assigned slides for Exam 1 (his list of 11/06). Kept for optional practice; not on Exam 1 practice papers. f26-DEENT-DPAW-mc.pdf, Lectures 3–4',
   subs:[
-   {id:'skin', name:'Functions of the skin (11/03)', cite:'slide 2'},
+   {id:'skin', name:'Review of skin anatomy: layers and sebum', cite:'slide 2'},
    {id:'ecz',  name:'Eczema: components, goals and drug list (11/03)', cite:'slides 4, 6, 13–14, 17–18, 25'},
-   {id:'pso',  name:'Psoriasis: components, goals and systemic agents (11/03)', cite:'slides 13–14, 16–17'},
+   {id:'pso',  name:'Psoriasis', cite:'slides 13–14, 16–17'},
    {id:'hc',   name:'Hydrocortisone as reference; its derivatives (11/03)', cite:'slides 7, 18, 24–26'},
    {id:'tof',  name:'Tofacitinib (11/04)', cite:'slide 35'},
-   {id:'acne', name:'Acne: components and the pilosebaceous unit (11/04)', cite:'slides 40–41'},
+   {id:'acne', name:'Acne', cite:'slides 40–41'},
    {id:'wrk',  name:'Wrinkles: causes, hydroquinone, AHAs, hyaluronic acid, topical retinoids (11/04)', cite:'slides 58, 67–70'}]}
 );
 
