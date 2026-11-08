@@ -1061,7 +1061,7 @@ QUESTIONS.push(
   {t:'They raise estrogen synthesis', correct:false, why:'Not the mechanism given; estrogens are supplied by OCs (slide 52).'},
   {t:'They kill P. acnes in the follicle', correct:false, why:'That is the antibiotics (slide 54).'}],
  teach:'Both lower testosterone production; flutamide instead keeps testosterone from binding its receptor. "you have a steroidal approach, a non-steroidal approach, and you just differentiate them by how they work. This is the take-home message from this slide." (T@32983–33140).',
- note:'Slide 53 places ketoconazole under the "Non-steroidal AA" heading with flutamide; in class he grouped it with spironolactone by mechanism (biosynthesis). Both agree that ketoconazole is not a steroid; this item asks the mechanism only.',
+ note:'Slide 53 places ketoconazole under the "Non-steroidal AA" heading with flutamide; in class he grouped it with spironolactone by mechanism (biosynthesis). Both agree that ketoconazole is not a steroid; this item asks the mechanism only. The keyed mechanism is Dr. Sikazwe\'s statement in his lecture; Dr. Smith\'s slide (Pathophys 37) gives only the antiandrogen class for acne and states no mechanism for spironolactone.',
  cite:S4+' slide 53; T@32150–32720'},
 
 {id:'S4-087', skill:'tell', prof:'Sikazwe', tier:'new', topic:'s4-horm', sub:'aa', concept:'flutamide-moa',

@@ -8,6 +8,16 @@ characters.
 
 Every update adds its bullets here in the same commit that makes the change.
 
+## 2026-11-08 (Drug List)
+- New Drug list tab: all 79 drugs on the dermatology chart (pp. 1–6), searchable by generic or brand name.
+- Filter the Drug list by disease, class, chart page, Exam 1 taught or optional, boxed warning, photosensitizing.
+- Recall mode: write a drug's target first, then Reveal to compare; your typing is not graded or saved.
+- Each Drug list line names its source: Dr. Smith's slide, Dr. Sikazwe's page or the drug chart.
+- From a drug card: practise exactly its questions, open its Reference row, reading section or Atlas tile.
+- Flashcards: step through the filtered drugs one card at a time; no score, nothing saved.
+- Spironolactone: Dr. Smith's class and Dr. Sikazwe's biosynthesis mechanism are shown as separate statements.
+- Sunscreen family matching item now credits the drug chart for the pairings; it stays off practice papers.
+
 ## 2026-11-07 (Dr. Smith's Exam 1 hints)
 - 32 new questions on Dr. Smith's hint list: epidemiology, disease triggers, drug targets, why each MOA helps.
 - New questions on boxed warnings: cyclosporine's two parts, TNF-α in children, which drugs carry one.

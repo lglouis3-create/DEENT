@@ -180,7 +180,10 @@ const COURSE = {
   scheduler: {model:'concept'},
 
   files: ['atlas.js', 'diagrams.js',
-          'q1_topics.js', 'q2_L02.js', 'q3_L03a.js', 'q4_L03b.js', 'q5_L04.js', 'q6_L03c.js'],
+          'q1_topics.js', 'q2_L02.js', 'q3_L03a.js', 'q4_L03b.js', 'q5_L04.js', 'q6_L03c.js',
+          // Drug list tab (temporary course-level presentation, to be replaced by the kit's
+          // Drug List feature): its data, then the tab itself (Louis, 2026-11-08)
+          'druglist_data.js', 'druglist_ui.js'],
 
   tools: {citeAliases:{'skin-pathophys-students-2026.pdf':'Skin-Pathophys-Students-2026.pdf',
                        'skin-pcol-students-2026.pdf':'Skin-PCol-Students-2026.pdf',

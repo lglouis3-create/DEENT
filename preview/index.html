@@ -709,7 +709,10 @@ const COURSE = {
   scheduler: {model:'concept'},
 
   files: ['atlas.js', 'diagrams.js',
-          'q1_topics.js', 'q2_L02.js', 'q3_L03a.js', 'q4_L03b.js', 'q5_L04.js', 'q6_L03c.js'],
+          'q1_topics.js', 'q2_L02.js', 'q3_L03a.js', 'q4_L03b.js', 'q5_L04.js', 'q6_L03c.js',
+          // Drug list tab (temporary course-level presentation, to be replaced by the kit's
+          // Drug List feature): its data, then the tab itself (Louis, 2026-11-08)
+          'druglist_data.js', 'druglist_ui.js'],
 
   tools: {citeAliases:{'skin-pathophys-students-2026.pdf':'Skin-Pathophys-Students-2026.pdf',
                        'skin-pcol-students-2026.pdf':'Skin-PCol-Students-2026.pdf',
@@ -729,7 +732,7 @@ const COURSE = {
    the Topics page shows as "What's new" since this browser last marked an
    entry seen, and Settings shows whole. preview: true in a page built with
    `build.py --preview`, which is served at /preview/ beside the live drill. */
-const BUILD = {stamp:"2026-11-07 17:49 CT", built:"2026-11-07T23:49:58Z", questions:595, images:1, changelog:[{"date": "2026-11-07 (Dr. Smith's Exam 1 hints)", "items": ["32 new questions on Dr. Smith's hint list: epidemiology, disease triggers, drug targets, why each MOA helps.", "New questions on boxed warnings: cyclosporine's two parts, TNF-\u03b1 in children, which drugs carry one.", "New sun questions: sunblock vs sunscreen by ingredient, critical wavelength, UVA vs UVB, photosensitizing drugs.", "8 matching questions pair drugs with their targets, structures or families, for her fill-in-the-blank items.", "Reference: \"Drug targets: write it first, then check\" lists every drug-chart drug with its target to reveal.", "The sun-exposure lecture is now confirmed for Exam 1 by Dr. Smith's hints; the provisional label is gone.", "Exam text now gives Dr. Smith's format: mostly multiple choice, a few fill-in-the-blanks on targets, no essays."]}, {"date": "2026-11-06 (optional practice beyond the assigned slides)", "items": ["New topic \"Beyond the Exam 1 assigned pages (Dr. Sikazwe, optional)\" holds his 23 unassigned-slide questions.", "Those 23 no longer count toward the Exam 1 pool cards on Weak spots or the exam-date review timing.", "Practice papers draw single-answer questions; the exam text now says the official format split is not announced."]}, {"date": "2026-11-06 (Dr. Sikazwe's assigned pages)", "items": ["Dr. Sikazwe's assigned slides for Exam 1 (11/06) applied: 23 questions outside them now stay off practice exams.", "Those 23 stay in practice, each with a note saying it is outside his assigned pages.", "Atlas tiles outside his assigned pages now say \"Not on the assigned pages\" (9 structures)."]}, {"date": "2026-11-06 (reading links)", "items": ["Weak spots and \"Explain more\" now point to a reading section for 397 of 555 questions (was 35).", "Sikazwe's Lectures 3 and 4 questions now link to their Tell apart and Reference tables.", "Lecture 2 and 3 questions now link to Dr. Smith's Lecture 2 and 3 tables; Lecture 1 ones to the objective guides.", "Fixed links that sent some IL-23, salicylic acid and drug-class questions to the wrong table."]}, {"date": "2026-11-06 (Atlas layout)", "items": ["Each Atlas tile now reads in order: core learning, also in the lecture, then collapsed extras.", "Slide and transcript citations moved out of the tile text into a collapsed Sources and verification part.", "Hydrocortisone and cortisone: optional \"Deeper understanding\" on the two 11\u03b2-HSD enzymes, not tested.", "The structure count follows the search and the reference-only filter; an empty search says why.", "A one-line legend explains Core, Reference only and Needs verification.", "Hide names: headings, labels and drawing descriptions no longer give the answer away.", "Hide names: reveal a structure from the keyboard (Tab, then Enter or Space).", "Long structure names no longer make the Atlas wider than a phone screen."]}, {"date": "2026-11-06 (PubChem check)", "items": ["Every Atlas structure was checked against PubChem; each tile names its PubChem record and status.", "Compare structures names the PubChem record of the lecture drawing where one exists."]}, {"date": "2026-11-06 (Atlas refinement)", "items": ["Each Atlas structure is marked Core, Reference only or Needs verification.", "Reference-only structures are hidden by default; one button shows them.", "Compare structures: where a slide draws a molecule differently, see both side by side.", "Hide or reveal the shaded key features to practise spotting them.", "Clearer explanations on the sun-exposure questions."]}, {"date": "2026-11-06 (Atlas and sun exposure)", "items": ["Atlas tab: 91 of Dr. Sikazwe's structures, drawn to one scale, with the taught feature shaded.", "Hide names in the Atlas to quiz yourself on each structure.", "Dr. Smith's sun-exposure lecture: UVA/UVB, SPF, MED, sunblocks vs sunscreens, psoralens.", "Some structure questions now show the drawing before you answer."]}, {"date": "2026-11-05 (Lectures 2\u20134)", "items": ["Lecture 2 (Smith 10/30): retinoids, calcipotriene, calcineurin inhibitors, PDE-4 inhibitors, keratolytics.", "Lecture 3 (Smith 11/03): acne antibiotics, tars and anthralin, methotrexate, biologics, JAK inhibitors.", "Lectures 3\u20134 (Sikazwe 11/03\u201311/04): structures, SAR, prodrugs, CYP3A4, hydroxy acids, retinoids, sunscreens.", "New tell-apart and reference tables for each lecture; Exam 1 paper now draws from both professors."]}, {"date": "2026-11-05 (Lecture 1 preview)", "items": ["Lecture 1 (Dr. Smith, 10/29): skin structure, AD, psoriasis, acne, nuclear receptor binders, steroids, retinoids.", "Step-through figures: the acne lesion cascade and direct vs indirect nuclear receptor action.", "Tell-apart and reference tables for Lecture 1; her polls on the major pathology of AD and psoriasis.", "Exam 1 practice paper is unweighted: the faculty have not announced a split by professor."]}], preview:true};
+const BUILD = {stamp:"2026-11-08 00:35 CT", built:"2026-11-08T06:35:47Z", questions:595, images:1, changelog:[{"date": "2026-11-08 (Drug List)", "items": ["New Drug list tab: all 79 drugs on the dermatology chart (pp. 1\u20136), searchable by generic or brand name.", "Filter the Drug list by disease, class, chart page, Exam 1 taught or optional, boxed warning, photosensitizing.", "Recall mode: write a drug's target first, then Reveal to compare; your typing is not graded or saved.", "Each Drug list line names its source: Dr. Smith's slide, Dr. Sikazwe's page or the drug chart.", "From a drug card: practise exactly its questions, open its Reference row, reading section or Atlas tile.", "Flashcards: step through the filtered drugs one card at a time; no score, nothing saved.", "Spironolactone: Dr. Smith's class and Dr. Sikazwe's biosynthesis mechanism are shown as separate statements.", "Sunscreen family matching item now credits the drug chart for the pairings; it stays off practice papers."]}, {"date": "2026-11-07 (Dr. Smith's Exam 1 hints)", "items": ["32 new questions on Dr. Smith's hint list: epidemiology, disease triggers, drug targets, why each MOA helps.", "New questions on boxed warnings: cyclosporine's two parts, TNF-\u03b1 in children, which drugs carry one.", "New sun questions: sunblock vs sunscreen by ingredient, critical wavelength, UVA vs UVB, photosensitizing drugs.", "8 matching questions pair drugs with their targets, structures or families, for her fill-in-the-blank items.", "Reference: \"Drug targets: write it first, then check\" lists every drug-chart drug with its target to reveal.", "The sun-exposure lecture is now confirmed for Exam 1 by Dr. Smith's hints; the provisional label is gone.", "Exam text now gives Dr. Smith's format: mostly multiple choice, a few fill-in-the-blanks on targets, no essays."]}, {"date": "2026-11-06 (optional practice beyond the assigned slides)", "items": ["New topic \"Beyond the Exam 1 assigned pages (Dr. Sikazwe, optional)\" holds his 23 unassigned-slide questions.", "Those 23 no longer count toward the Exam 1 pool cards on Weak spots or the exam-date review timing.", "Practice papers draw single-answer questions; the exam text now says the official format split is not announced."]}, {"date": "2026-11-06 (Dr. Sikazwe's assigned pages)", "items": ["Dr. Sikazwe's assigned slides for Exam 1 (11/06) applied: 23 questions outside them now stay off practice exams.", "Those 23 stay in practice, each with a note saying it is outside his assigned pages.", "Atlas tiles outside his assigned pages now say \"Not on the assigned pages\" (9 structures)."]}, {"date": "2026-11-06 (reading links)", "items": ["Weak spots and \"Explain more\" now point to a reading section for 397 of 555 questions (was 35).", "Sikazwe's Lectures 3 and 4 questions now link to their Tell apart and Reference tables.", "Lecture 2 and 3 questions now link to Dr. Smith's Lecture 2 and 3 tables; Lecture 1 ones to the objective guides.", "Fixed links that sent some IL-23, salicylic acid and drug-class questions to the wrong table."]}, {"date": "2026-11-06 (Atlas layout)", "items": ["Each Atlas tile now reads in order: core learning, also in the lecture, then collapsed extras.", "Slide and transcript citations moved out of the tile text into a collapsed Sources and verification part.", "Hydrocortisone and cortisone: optional \"Deeper understanding\" on the two 11\u03b2-HSD enzymes, not tested.", "The structure count follows the search and the reference-only filter; an empty search says why.", "A one-line legend explains Core, Reference only and Needs verification.", "Hide names: headings, labels and drawing descriptions no longer give the answer away.", "Hide names: reveal a structure from the keyboard (Tab, then Enter or Space).", "Long structure names no longer make the Atlas wider than a phone screen."]}, {"date": "2026-11-06 (PubChem check)", "items": ["Every Atlas structure was checked against PubChem; each tile names its PubChem record and status.", "Compare structures names the PubChem record of the lecture drawing where one exists."]}, {"date": "2026-11-06 (Atlas refinement)", "items": ["Each Atlas structure is marked Core, Reference only or Needs verification.", "Reference-only structures are hidden by default; one button shows them.", "Compare structures: where a slide draws a molecule differently, see both side by side.", "Hide or reveal the shaded key features to practise spotting them.", "Clearer explanations on the sun-exposure questions."]}, {"date": "2026-11-06 (Atlas and sun exposure)", "items": ["Atlas tab: 91 of Dr. Sikazwe's structures, drawn to one scale, with the taught feature shaded.", "Hide names in the Atlas to quiz yourself on each structure.", "Dr. Smith's sun-exposure lecture: UVA/UVB, SPF, MED, sunblocks vs sunscreens, psoralens.", "Some structure questions now show the drawing before you answer."]}, {"date": "2026-11-05 (Lectures 2\u20134)", "items": ["Lecture 2 (Smith 10/30): retinoids, calcipotriene, calcineurin inhibitors, PDE-4 inhibitors, keratolytics.", "Lecture 3 (Smith 11/03): acne antibiotics, tars and anthralin, methotrexate, biologics, JAK inhibitors.", "Lectures 3\u20134 (Sikazwe 11/03\u201311/04): structures, SAR, prodrugs, CYP3A4, hydroxy acids, retinoids, sunscreens.", "New tell-apart and reference tables for each lecture; Exam 1 paper now draws from both professors."]}, {"date": "2026-11-05 (Lecture 1 preview)", "items": ["Lecture 1 (Dr. Smith, 10/29): skin structure, AD, psoriasis, acne, nuclear receptor binders, steroids, retinoids.", "Step-through figures: the acne lesion cascade and direct vs indirect nuclear receptor action.", "Tell-apart and reference tables for Lecture 1; her polls on the major pathology of AD and psoriasis.", "Exam 1 practice paper is unweighted: the faculty have not announced a split by professor."]}], preview:true};
 const IMAGES = {"s4-polleve3": "data:image/webp;base64,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"};
 /* Atlas of drawn structures for PHAR 4346 DEENT (Dr. Sikazwe's medicinal
    chemistry). GENERATED by gen_atlas.py from atlas_data.json and atlas_ui.js:
@@ -9546,7 +9549,7 @@ QUESTIONS.push(
   {t:'They raise estrogen synthesis', correct:false, why:'Not the mechanism given; estrogens are supplied by OCs (slide 52).'},
   {t:'They kill P. acnes in the follicle', correct:false, why:'That is the antibiotics (slide 54).'}],
  teach:'Both lower testosterone production; flutamide instead keeps testosterone from binding its receptor. "you have a steroidal approach, a non-steroidal approach, and you just differentiate them by how they work. This is the take-home message from this slide." (T@32983–33140).',
- note:'Slide 53 places ketoconazole under the "Non-steroidal AA" heading with flutamide; in class he grouped it with spironolactone by mechanism (biosynthesis). Both agree that ketoconazole is not a steroid; this item asks the mechanism only.',
+ note:'Slide 53 places ketoconazole under the "Non-steroidal AA" heading with flutamide; in class he grouped it with spironolactone by mechanism (biosynthesis). Both agree that ketoconazole is not a steroid; this item asks the mechanism only. The keyed mechanism is Dr. Sikazwe\'s statement in his lecture; Dr. Smith\'s slide (Pathophys 37) gives only the antiandrogen class for acne and states no mechanism for spironolactone.',
  cite:S4+' slide 53; T@32150–32720'},
 
 {id:'S4-087', skill:'tell', prof:'Sikazwe', tier:'new', topic:'s4-horm', sub:'aa', concept:'flutamide-moa',
@@ -10590,9 +10593,857 @@ QUESTIONS.push(
   {l:'Avobenzone', r:'Dibenzoylmethane', why:'Drug chart: dibenzoylmethane. Slide 24: activity starts to decrease after 15 minutes.'},
   {l:'Zinc oxide', r:'Oxide (physical sunblock)', why:'Drug chart: oxides, physical sunscreen. Slide 20: scatters or reflects UV.'}],
  teach:'The first six are organic (chemical) sunscreens that absorb UV and release heat (slide 22); zinc oxide and titanium dioxide are physical sunblocks that scatter and reflect it (slide 20).',
- note:'Ingredient names come from the course drug chart (2026 Drug Chart – Dermatology, Sun Protection page), a guide; the families and their properties are on slides 20–24.',
- cite:SUN+' slides 20, 22, 24'}
+ note:'Optional practice; matching items stay off the Exam 1 practice papers. The ingredient-to-family pairings come from the course drug chart (2026 Drug Chart – Dermatology, p. 1, Sun Protection), a guide, not from the sun slides; the family properties (substantivity, UVB absorption, sensitization) and the sunblock/sunscreen mechanisms are on Sun slides 20–24. The bank has no "chart" source value, so source stays "slide" for the family properties.',
+ cite:'Drug chart p. 1; Sun 20–24: '+SUN+' slides 20–24'}
 );
+
+/* ==========================================================================
+   DRUG LIST DATA, PHAR 4346 DEENT (Exam 1)
+   --------------------------------------------------------------------------
+   TEMPORARY course-level presentation: this file and druglist_ui.js add a
+   "Drug list" tab on top of the kit core (25c643d) without changing it. Both
+   are to be replaced by the shared-kit Drug List feature when the kit has one.
+
+   Source of the drug list: the course dermatology drug chart
+   ("2026 Drug Chart - Dermatology", 7 pages; Drive 1wJ2LzXY8V_BjqtghJGI5waVEQ2t-YUib,
+   367,545 bytes, the same file as Louis's upload of 2026-11-08). The chart is
+   a guide; Dr. Smith's slides, recordings and Exam 1 hints decide what is
+   examinable.
+
+   Where each field comes from:
+     target / mechanism   NOT here: read at run time from the Reference tab's
+                          "Drug targets: write it first, then check" table
+                          (reference.js, section ref-targets), the single
+                          source of targets. `tgt` names its row id. Each part
+                          carries its lecturer (data-by, default smith) and
+                          citation (data-cite, default the row's Source cell).
+     why                  only where Dr. Smith's own slide or recording says
+                          why the drug helps the condition; always `cite`d.
+     use, ae, boxed,      each statement is {t, by, cite}; by is 'smith',
+     photo, notes         'sikazwe' or 'chart'. Statements from different
+                          lecturers or from the chart are never merged.
+     chartClass, chartUse the chart's pharmacological class and indication,
+                          shown labelled "chart". chartUse is null where the
+                          chart's columns are misaligned (p. 5, see CHART_NOTES).
+   Abbreviations in cites: PCol = Skin-PCol-Students-2026.pdf slide,
+   Pathophys = Skin-Pathophys-Students-2026.pdf slide, Sun =
+   DEENT_Sun_Exposure_2026.pdf slide, DPAW = f26-DEENT-DPAW-mc.pdf file page,
+   T = lecture-only transcript line (10/29, 10/30, 11/03) or 11/04 T@ time.
+
+   status   'taught'  the drug is named on an Exam 1 slide (Smith, or one of
+                      Dr. Sikazwe's assigned pages);
+            'class'   its class is taught for Exam 1 but the drug itself is
+                      named only on the chart (or only on a page outside
+                      Dr. Sikazwe's assigned pages): optional;
+            'chart'   chart only: optional, not in the Exam 1 lectures.
+   q        a regular expression (source text, case-insensitive) run over each
+            question's stem, correct answer and concept, to list the questions
+            on the drug. Nothing here changes a question.
+   No storage of any kind is used by the Drug list.
+   ========================================================================== */
+const DRUGLIST = (() => {
+  const S = (t, cite) => ({t, by: 'smith', cite});
+  const K = (t, cite) => ({t, by: 'sikazwe', cite});
+  const C = (t, page) => ({t, by: 'chart', cite: 'Chart p. ' + page});
+
+  const CLASSES = {
+    sunscreen: 'Chemical (organic) sunscreens',
+    sunblock:  'Physical sunscreens (sunblocks)',
+    anesth:    'Topical anesthetics (Na channel blockers)',
+    pde4:      'PDE-4 inhibitors',
+    cni:       'Calcineurin inhibitors',
+    il4r:      'IL-4R / IL-13 receptor antagonist',
+    jak:       'JAK inhibitors',
+    kerat:     'Keratolytics',
+    abx:       'Antibiotics / antimicrobials',
+    nrb:       'Nuclear receptor binders (retinoids, vitamin D analog)',
+    antiandr:  'Antiandrogen',
+    cytotox:   'Cytotoxic agents',
+    dhfr:      'Dihydrofolate reductase inhibitor',
+    costim:    'Inhibitor of co-stimulation',
+    tnf:       'TNF-α inhibitors',
+    il1223:    'IL-12 & IL-23 inhibitor',
+    il23:      'IL-23 inhibitors',
+    il17:      'IL-17 inhibitors',
+    psoralen:  'Psoralen',
+    emollient: 'Emollient',
+    azole:     'Azole antifungal',
+    steroid:   'Topical corticosteroids',
+  };
+  // questions on a class as a whole (shown beside a drug's own questions)
+  const CLASS_Q = {steroid: 'corticosteroid|glucocorticoid', sunscreen: 'sunscreen|organic sunscreen', sunblock: 'sunblock|physical sunscreen',
+    pde4: 'PDE-?4', cni: 'calcineurin', jak: '\\bJAK', kerat: 'keratolytic', abx: 'antibiotic|antimicrobial|tetracycline|macrolide',
+    nrb: 'retinoid|nuclear receptor|vitamin D', cytotox: 'cytotoxic|\\btars?\\b', tnf: 'TNF', il23: 'IL-23', il17: 'IL-17'};
+  const DISEASES = {ad: 'Atopic dermatitis', pso: 'Psoriasis', acne: 'Acne',
+                    sun: 'Sun protection', burn: 'Sunburn relief'};
+  const PAGES = {1: 'Sun protection and sunburn relief', 2: 'Atopic dermatitis', 3: 'Acne',
+                 4: 'Psoriasis', 5: 'Psoriasis', 6: 'Topical steroids'};
+
+  // shared statements, so a class's line is written once
+  const WHY = {
+    pde4: S('PDE-4 is the main PDE isoform in inflammatory cells (mast cells, eosinophils, neutrophils, T cells); more cAMP inhibits those cells', 'PCol 32'),
+    cniTop: S('Inhibits activation of the T cells and mast cells involved in AD, blocking proinflammatory cytokines and mediators; relieves itching within the first few days', 'PCol 27'),
+    jak: S('Inhibits the production of inflammatory cytokines', 'PCol 75–76'),
+    tetra: S('Efficacy in acne may depend more on anti-inflammatory activity than on killing bacteria', 'PCol 45'),
+    abx: S('In acne a bacterium contributes to the disease, so antibiotics are used there', '10/30 T 574–576'),
+    retAcne: S('Less cohesion between epidermal cells and faster cell turnover: open comedones are expelled and closed ones open', 'PCol 15'),
+    retPso: S('For psoriasis the precise mechanism is unknown; it may relate to anti-inflammatory and antiproliferative actions', 'PCol 15'),
+    cyto: S('Cytotoxic agents decrease the rate of epidermal cell turnover', 'PCol 53'),
+    tnf: S('TNF-α is an inflammatory cytokine; blocking it reduces the number and size of plaques', 'PCol 70'),
+    il23: S('Inhibits the release of proinflammatory cytokines and chemokines', 'PCol 68–69'),
+    il17: S('Keratinocytes are the main target of IL-17 in psoriasis, where it drives epidermal hyperproliferation and barrier dysfunction; blocking it reduces the number and size of plaques', 'PCol 65–66'),
+    steroid: S('Used for psoriasis and atopic dermatitis because they are immunosuppressive', 'PCol 11'),
+    sunscreen: S('Absorbs UV radiation (UVB and/or UVA) and converts it to heat', 'Sun 22'),
+    sunblock: S('Inorganic particles scatter or reflect UV, visible and infrared radiation; for exposed areas such as nose and ears', 'Sun 20'),
+  };
+  const AE = {
+    cniTop: S('Burning at the application site; potential local skin carcinogenesis (recommend sun protection); infections if high blood levels are reached', 'PCol 28'),
+    cniOral: S('Oral: nephrotoxicity, hypertension, upper respiratory infections (most common), cough, headache; many CYP3A4 interactions', 'PCol 30'),
+    tetra: S('Pseudomembranous colitis; bones and teeth discolored and growth impaired in the young; photosensitivity; superinfection; not in pregnancy or under 8 years', 'PCol 44–45'),
+    macro: S('Oral: N/V/D, epigastric pain, many drug interactions. Topical: burning and drying, especially with benzoyl peroxide; resistance', 'PCol 47'),
+    topRet: S('Erythema and dryness early on; may increase the tumorigenic potential of UV (counsel sun avoidance and sunscreen); photosensitivity; comedones may flare in weeks 4–6', 'PCol 16'),
+    tnfBox: S('Serious infections that may lead to hospitalization or death; lymphoma and other malignancies, some fatal, reported in children and adolescents', 'PCol 70; 11/03 T 498–500'),
+    il17: S('Infection risk: evaluate for tuberculosis before starting; nasopharyngitis about 12%', 'PCol 66'),
+    steroid: S('Local: striae and atrophy, perioral dermatitis, acne, rosacea, telangiectasia, purpura; systemic (with potency, site, occlusion, area, duration): HPA suppression, infection, hyperglycemia, cataracts, glaucoma, growth retardation', 'PCol 12'),
+    sunblock: S('May occlude pores (miliaria, folliculitis); may stain clothing; protection falls after 2 hours of direct sun', 'Sun 21'),
+  };
+  const PHOTO_RET = S('Topical retinoids may cause photosensitivity', 'PCol 16');
+  const SIK_UNASSIGNED = 'Dr. Sikazwe\'s slide for this drug is outside his assigned pages for Exam 1 (list of 11/06).';
+  const STEROID_CLASS_NOTE = S('Dr. Smith teaches the class and its mechanism; specific steroid products are Dr. Sikazwe\'s material ("a lot of med chem")', '10/29 T 585–586');
+
+  const D = [
+    /* ---------- p. 1: sun protection and sunburn relief ---------- */
+    {id: 'padimate', name: 'Padimate O', alt: ['octyl dimethyl PABA'], brands: [], page: 1, cls: 'sunscreen', dz: ['sun'], rx: 'OTC',
+     status: 'taught', chartClass: 'Chemical sunscreen', chartChem: 'Para-aminobenzoic acid (PABA)', chartUse: 'Sun protection',
+     tgt: 'tgt-padimate', why: WHY.sunscreen,
+     ae: [S('Aminobenzoates: the most effective at absorbing UVB; may stain clothing', 'Sun 24')],
+     notes: [K('PABAs: UVB; PABA allergy (photosensitivity)', 'DPAW 63')], atlas: 'padimate o', q: 'padimate|aminobenzoate|\\bPABA'},
+    {id: 'octinoxate', name: 'Octyl methoxycinnamate', alt: ['ethylhexyl p-methoxycinnamate', 'octinoxate'], brands: [], page: 1, cls: 'sunscreen', dz: ['sun'], rx: 'OTC',
+     status: 'taught', chartClass: 'Chemical sunscreen', chartChem: 'Cinnamates', chartUse: 'Sun protection',
+     tgt: 'tgt-octinoxate', why: WHY.sunscreen,
+     ae: [S('Cinnamates do not adhere to skin well and depend on the vehicle for substantivity', 'Sun 24')],
+     notes: [K('Octinoxate: cinnamate, UVB; absorbed through skin', 'DPAW 63')], atlas: 'octinoxate', q: 'octinoxate|methoxycinnamate|cinnamate'},
+    {id: 'octisalate', name: '2-Ethylhexyl salicylate', alt: ['octisalate'], brands: [], page: 1, cls: 'sunscreen', dz: ['sun'], rx: 'OTC',
+     status: 'taught', chartClass: 'Chemical sunscreen', chartChem: 'Salicylates', chartUse: 'Sun protection',
+     tgt: 'tgt-salicylates', why: WHY.sunscreen,
+     ae: [S('Salicylates do not adhere to skin well and are easily removed by water or perspiration', 'Sun 24')],
+     notes: [K('Octisalate: salicylate, UVB', 'DPAW 64')], atlas: 'octisalate', q: 'octisalate|ethylhexyl salicylate'},
+    {id: 'homosalate', name: 'Homosalate', alt: [], brands: [], page: 1, cls: 'sunscreen', dz: ['sun'], rx: 'OTC',
+     status: 'taught', chartClass: 'Chemical sunscreen', chartChem: 'Salicylates', chartUse: 'Sun protection',
+     tgt: 'tgt-salicylates', why: WHY.sunscreen,
+     ae: [S('Salicylates do not adhere to skin well and are easily removed by water or perspiration', 'Sun 24')],
+     notes: [K('Homosalate: salicylate, UVB', 'DPAW 64')], atlas: 'homosalate', q: 'homosalate'},
+    {id: 'oxybenzone', name: 'Oxybenzone', alt: [], brands: [], page: 1, cls: 'sunscreen', dz: ['sun'], rx: 'OTC',
+     status: 'taught', chartClass: 'Chemical sunscreen', chartChem: 'Benzophenones', chartUse: 'Sun protection',
+     tgt: 'tgt-benzophenones', why: WHY.sunscreen,
+     ae: [S('Benzophenones: poor substantivity; can cause sensitization', 'Sun 24')],
+     notes: [K('Benzophenones: UVB/UVA; highly absorbed through skin', 'DPAW 65')], atlas: 'oxybenzone', q: 'oxybenzone|benzophenone'},
+    {id: 'dioxybenzone', name: 'Dioxybenzone', alt: [], brands: [], page: 1, cls: 'sunscreen', dz: ['sun'], rx: 'OTC',
+     status: 'taught', chartClass: 'Chemical sunscreen', chartChem: 'Benzophenones', chartUse: 'Sun protection',
+     tgt: 'tgt-benzophenones', why: WHY.sunscreen,
+     ae: [S('Benzophenones: poor substantivity; can cause sensitization', 'Sun 24')],
+     notes: [K('Benzophenones: UVB/UVA', 'DPAW 65')], q: 'dioxybenzone'},
+    {id: 'meradimate', name: 'Menthyl anthranilate', alt: ['meradimate'], brands: [], page: 1, cls: 'sunscreen', dz: ['sun'], rx: 'OTC',
+     status: 'taught', chartClass: 'Chemical sunscreen', chartChem: 'Anthranilates', chartUse: 'Sun protection',
+     tgt: 'tgt-anthranilate', why: WHY.sunscreen,
+     ae: [S('Anthranilates are used only in combination products to give broad UV coverage', 'Sun 24')],
+     notes: [K('Meradimate: anthranilate, UVA; degrades faster than avobenzone', 'DPAW 62')], atlas: 'meradimate', q: 'anthranilate|meradimate'},
+    {id: 'avobenzone', name: 'Avobenzone', alt: [], brands: [], page: 1, cls: 'sunscreen', dz: ['sun'], rx: 'OTC',
+     status: 'taught', chartClass: 'Chemical sunscreen', chartChem: 'Dibenzoylmethane', chartUse: 'Sun protection',
+     tgt: 'tgt-avobenzone', why: WHY.sunscreen,
+     ae: [S('Dibenzoylmethanes: activity starts to decrease after 15 minutes of use', 'Sun 24')],
+     notes: [K('Avobenzone: UVA; photodegrades (half-life about 2 h), reapply every 2 h', 'DPAW 62')], atlas: 'avobenzone', q: 'avobenzone|dibenzoylmethane'},
+    {id: 'zincoxide', name: 'Zinc oxide', alt: [], brands: ['Zinca', 'Desitin'], page: 1, pages: [1, 5], cls: 'sunblock', dz: ['sun'], rx: 'OTC',
+     status: 'taught', chartClass: 'Physical sunscreen', chartChem: 'Oxides', chartUse: 'Sun protection (p. 1); topical skin protectant (p. 5)',
+     tgt: 'tgt-sunblocks', tgt2: 'tgt-zincprot', why: WHY.sunblock, ae: [AE.sunblock],
+     notes: [C('Listed twice: sun protection (p. 1, Zinca) and on the psoriasis page as a skin protectant (p. 5, Desitin); its second target row is the Reference row "Zinc oxide (skin protectant)"', 1),
+             K('Metal oxides reflect and scatter UVA and UVB; inert', 'DPAW 61')], atlas: 'zinc oxide', q: 'zinc oxide'},
+    {id: 'tio2', name: 'Titanium dioxide', alt: ['titanium oxide'], brands: [], page: 1, cls: 'sunblock', dz: ['sun'], rx: 'OTC',
+     status: 'taught', chartClass: 'Physical sunscreen', chartChem: 'Oxides', chartUse: 'Sun protection',
+     tgt: 'tgt-sunblocks', why: WHY.sunblock, ae: [AE.sunblock],
+     notes: [C('The chart prints "Titanium oxide"; the slides say titanium dioxide', 1), K('Metal oxides reflect and scatter UVA and UVB; inert', 'DPAW 61')],
+     atlas: 'titanium dioxide', q: 'titanium'},
+    {id: 'benzocaine', name: 'Benzocaine', alt: [], brands: ['Americaine', 'Solarcaine', 'Lanacane'], page: 1, cls: 'anesth', dz: ['burn'], rx: 'OTC',
+     status: 'chart', chartClass: 'Na channel blockers (topical anesthetics)', chartUse: 'Sunburn relief; pain and itching of stings and insect bites',
+     tgt: 'tgt-anesthetics', q: 'benzocaine'},
+    {id: 'dibucaine', name: 'Dibucaine', alt: [], brands: ['Nupercainal'], page: 1, cls: 'anesth', dz: ['burn'], rx: 'OTC',
+     status: 'chart', chartClass: 'Na channel blockers (topical anesthetics)', chartUse: 'Sunburn relief; pain and itching of stings and insect bites',
+     tgt: 'tgt-anesthetics', q: 'dibucaine'},
+    {id: 'tetracaine', name: 'Tetracaine', alt: [], brands: ['Dermocaine'], page: 1, cls: 'anesth', dz: ['burn'], rx: 'OTC',
+     status: 'chart', chartClass: 'Na channel blockers (topical anesthetics)', chartUse: 'Sunburn relief; pain and itching of stings and insect bites',
+     tgt: 'tgt-anesthetics', q: 'tetracaine'},
+    {id: 'lidocaine', name: 'Lidocaine', alt: [], brands: ['Xylocaine'], page: 1, cls: 'anesth', dz: ['burn'], rx: 'Rx/OTC',
+     status: 'chart', chartClass: 'Na channel blockers (topical anesthetics)', chartUse: 'Sunburn relief; pain and itching of stings and insect bites',
+     tgt: 'tgt-anesthetics', q: 'lidocaine'},
+    {id: 'bemotrizinol', name: 'Bemotrizinol', alt: ['BEMT'], brands: [], page: 1, cls: 'sunscreen', dz: ['sun'], rx: 'OTC',
+     status: 'taught', chartClass: 'Organic chemical sunscreen', chartChem: 'Triazine and methoxybenzene', chartUse: 'Sun protection',
+     tgt: 'tgt-bemotrizinol', notes: [K('Methoxybenzene and triazine, UVB/UVA; photostable', 'DPAW 66'),
+       S('Not named on Dr. Smith\'s sun slides; her family list (Sun 24) does not include triazines', 'Sun 24')],
+     atlas: 'bemotrizinol', q: 'bemotrizinol|\\bBEMT'},
+
+    /* ---------- p. 2: atopic dermatitis ---------- */
+    {id: 'crisaborole', name: 'Crisaborole', alt: [], brands: ['Eucrisa'], page: 2, cls: 'pde4', dz: ['ad'], rx: 'Rx',
+     status: 'taught', chartClass: 'Phosphodiesterase 4 (PDE-4) inhibitor', chartUse: 'Topical: mild to moderate atopic dermatitis',
+     use: [S('Mild-to-moderate atopic dermatitis, age 2 years and older', 'PCol 33')],
+     tgt: 'tgt-crisaborole', why: WHY.pde4,
+     ae: [S('Application site pain (4%); hypersensitivity (under 1%): discontinue immediately; long-term safety unknown', 'PCol 33')],
+     atlas: 'crisaborole', q: 'crisaborole'},
+    {id: 'pimecrolimus', name: 'Pimecrolimus', alt: [], brands: ['Elidel'], page: 2, cls: 'cni', dz: ['ad', 'pso'], rx: 'Rx',
+     status: 'taught', chartClass: 'Calcineurin inhibitor', chartUse: 'Topical: atopic dermatitis; psoriasis (unlabeled)',
+     use: [S('Topical, atopic dermatitis in adults and children over 2; psoriasis off label', 'PCol 27')],
+     tgt: 'tgt-pimecrolimus', why: WHY.cniTop, ae: [AE.cniTop],
+     notes: [S('May preferentially distribute to the skin rather than the systemic circulation', 'PCol 27')], atlas: 'pimecrolimus', q: 'pimecrolimus'},
+    {id: 'tacrolimus', name: 'Tacrolimus', alt: [], brands: ['Protopic'], page: 2, cls: 'cni', dz: ['ad', 'pso'], rx: 'Rx',
+     status: 'taught', chartClass: 'Calcineurin inhibitor', chartUse: 'Topical: atopic dermatitis; psoriasis (unlabeled)',
+     use: [S('Topical, atopic dermatitis in adults and children over 2; psoriasis off label', 'PCol 27')],
+     tgt: 'tgt-tacrolimus', why: WHY.cniTop, ae: [AE.cniTop, AE.cniOral, S('Tacrolimus only (oral): neuropathies', 'PCol 30')],
+     boxed: S('Oral calcineurin inhibitors: lymphoma and other malignancies, particularly of the skin; bacterial, viral, fungal and protozoal infections including opportunistic ones (the chart lists topical tacrolimus)', 'PCol 30'),
+     atlas: 'tacrolimus', q: 'tacrolimus'},
+    {id: 'dupilumab', name: 'Dupilumab', alt: [], brands: ['Dupixent'], page: 2, cls: 'il4r', dz: ['ad'], rx: 'Rx',
+     status: 'taught', chartClass: 'IL-4R and IL-13 receptor antagonist', chartUse: 'Injection: moderate to severe atopic dermatitis',
+     use: [S('Adults with moderate-to-severe AD not controlled with topical therapy; given SQ', 'PCol 64')],
+     tgt: 'tgt-dupilumab',
+     why: S('IL-4 and IL-13 promote IgE synthesis; blocking IL-4Rα lowers release of proinflammatory cytokines, chemokines and IgE', 'PCol 64'),
+     ae: [S('Generally mild: nasopharyngitis and headache most frequent; injection site reactions, conjunctivitis, blepharitis, oral herpes, keratitis, eye pruritus, dry eye', 'PCol 64')],
+     q: 'dupilumab'},
+    {id: 'ruxolitinib', name: 'Ruxolitinib', alt: [], brands: ['Opzelura'], page: 2, cls: 'jak', dz: ['ad'], rx: 'Rx',
+     status: 'taught', chartClass: 'Janus kinase (JAK) inhibitor', chartUse: 'Topical: mild to moderate atopic dermatitis',
+     use: [S('Used topically and orally (slide 76)', 'PCol 76')],
+     tgt: 'tgt-ruxolitinib', why: WHY.jak, atlas: 'ruxolitinib', q: 'ruxolitinib'},
+    {id: 'upadacitinib', name: 'Upadacitinib', alt: [], brands: ['Rinvoq'], page: 2, cls: 'jak', dz: ['ad'], rx: 'Rx',
+     status: 'taught', chartClass: 'Janus kinase (JAK) inhibitor', chartUse: 'Oral: mild to moderate atopic dermatitis',
+     tgt: 'tgt-upadacitinib', why: WHY.jak, atlas: 'upadacitinib', q: 'upadacitinib'},
+
+    /* ---------- p. 3: acne ---------- */
+    {id: 'bpo', name: 'Benzoyl peroxide', alt: ['BPO'], brands: ['Clearasil', 'Fostex', 'Oxy-10', 'Benzac AC', 'Benzagel Wash'], page: 3, cls: 'kerat', dz: ['acne'], rx: 'OTC',
+     status: 'taught', chartClass: 'Keratolytic', chartUse: 'Acne',
+     tgt: 'tgt-bpo', why: S('Loosens keratinocytes so they slough off, increases their turnover, prevents closure of follicles and acts against P. acnes', 'PCol 36'),
+     ae: [S('Irritation (drying, peeling, burning, blistering, scaling, edema); potent contact sensitizer; avoid eyes and mucous membranes; an oxidant that can bleach hair and colored fabric', 'PCol 37')],
+     atlas: 'benzoyl peroxide', q: 'benzoyl peroxide|\\bBPO\\b'},
+    {id: 'sulfur', name: 'Sulfur', alt: [], brands: ['Fostril'], page: 3, cls: 'kerat', dz: ['acne', 'pso'], rx: 'OTC',
+     status: 'taught', chartClass: 'Keratolytic', chartUse: 'Acne, psoriasis',
+     tgt: 'tgt-sulfur', why: S('Hydrogen sulfide formed in keratinocytes causes inflammation that promotes peeling and unblocking of plugs', 'PCol 38'),
+     ae: [S('Redness, skin irritation, peeling; comedogenic', 'PCol 38')], q: '\\bsulfur\\b(?! ?mustard)'},
+    {id: 'salicylic', name: 'Salicylic acid', alt: [], brands: ['Oxy Face Scrub', 'Stri-Dex', 'Wart-Off Treatment', 'Compound W'], page: 3, cls: 'kerat', dz: ['acne', 'pso'], rx: 'OTC',
+     status: 'taught', chartClass: 'Keratolytic', chartUse: 'Acne, psoriasis, wart remover',
+     use: [S('3–6% for dandruff, acne and psoriasis; over 6% may damage skin; up to 40% for warts and corns', 'PCol 40')],
+     tgt: 'tgt-salicylic', why: S('Promotes shedding of the stratum corneum: desquamation of keratotic debris', 'PCol 39'),
+     ae: [S('Irritation, ulceration at high concentrations, allergy; salicylism; caution on the extremities of patients with diabetes or peripheral vascular disease', 'PCol 40')],
+     atlas: 'salicylic acid', q: 'salicylic acid|salicylism'},
+    {id: 'sarecycline', name: 'Sarecycline', alt: [], brands: ['Seysara'], page: 3, cls: 'abx', sub: 'Tetracyclines', dz: ['acne'], rx: 'Rx',
+     status: 'taught', chartClass: 'Antibiotic (tetracycline)', chartUse: 'Acne',
+     tgt: 'tgt-tetracyclines', why: WHY.tetra, ae: [AE.tetra],
+     notes: [S('Narrower spectrum than the other tetracyclines (less GI and vulvovaginal disruption); with minocycline, may be less photosensitizing', 'PCol 45')],
+     photo: S('Tetracyclines: photosensitivity in fair-skinned people; sarecycline and minocycline may be less photosensitizing', 'PCol 44–45'), q: 'sarecycline'},
+    {id: 'minocycline', name: 'Minocycline', alt: [], brands: ['Minocin'], page: 3, cls: 'abx', sub: 'Tetracyclines', dz: ['acne'], rx: 'Rx',
+     status: 'taught', chartClass: 'Antibiotic (tetracycline)', chartUse: 'Acne',
+     tgt: 'tgt-tetracyclines', why: WHY.tetra, ae: [AE.tetra, S('Minocycline can cause ototoxicity', 'PCol 45')],
+     notes: [S('More lipid soluble than tetracycline, entering the pilosebaceous follicle better', 'PCol 45')],
+     photo: S('Tetracyclines: photosensitivity in fair-skinned people; minocycline and sarecycline may be less photosensitizing', 'PCol 44–45'), atlas: 'minocycline', q: 'minocycline'},
+    {id: 'doxycycline', name: 'Doxycycline', alt: [], brands: ['Vibramycin'], page: 3, cls: 'abx', sub: 'Tetracyclines', dz: ['acne'], rx: 'Rx',
+     status: 'taught', chartClass: 'Antibiotic (tetracycline)', chartUse: 'Acne',
+     tgt: 'tgt-tetracyclines', why: WHY.tetra, ae: [AE.tetra],
+     notes: [S('More lipid soluble than tetracycline, entering the pilosebaceous follicle better', 'PCol 45')],
+     photo: S('Tetracyclines: photosensitivity in fair-skinned people', 'PCol 44'), atlas: 'doxycycline', q: 'doxycycline'},
+    {id: 'clindamycin', name: 'Clindamycin', alt: [], brands: ['Cleocin', 'Cleocin T', 'C/T/S'], page: 3, cls: 'abx', sub: 'Lincosamide', dz: ['acne'], rx: 'Rx',
+     status: 'taught', chartClass: 'Antibiotic (lincosamide)', chartUse: 'Acne',
+     tgt: 'tgt-clindamycin', why: WHY.abx,
+     ae: [S('Oral: pseudomembranous colitis, impaired liver function, rare neutropenia. Topical: about 10% absorbed, so a rare colitis risk; resistance a problem', 'PCol 46')], q: 'clindamycin'},
+    {id: 'erythromycin', name: 'Erythromycin', alt: [], brands: [], page: 3, cls: 'abx', sub: 'Macrolides', dz: ['acne'], rx: 'Rx',
+     status: 'taught', chartClass: 'Antibiotic (macrolide)', chartUse: 'Acne',
+     tgt: 'tgt-macrolides', why: WHY.abx, ae: [AE.macro], q: 'erythromycin'},
+    {id: 'azithromycin', name: 'Azithromycin', alt: [], brands: [], page: 3, cls: 'abx', sub: 'Macrolides', dz: ['acne'], rx: 'Rx',
+     status: 'taught', chartClass: 'Antibiotic (macrolide)', chartUse: 'Acne',
+     tgt: 'tgt-macrolides', why: WHY.abx, ae: [AE.macro], q: 'azithromycin'},
+    {id: 'tmpsmx', name: 'Trimethoprim/sulfamethoxazole', alt: ['TMP/SMX'], brands: ['Bactrim DS'], page: 3, cls: 'abx', sub: 'Folate pathway', dz: ['acne'], rx: 'Rx',
+     status: 'taught', chartClass: 'Antibiotic (sulfonamide/pyrimidine)', chartUse: 'Acne',
+     tgt: 'tgt-tmpsmx', why: WHY.abx, q: 'trimethoprim|sulfamethoxazole'},
+    {id: 'dapsone', name: 'Dapsone', alt: [], brands: ['Aczone'], page: 3, cls: 'abx', sub: 'Folate pathway', dz: ['acne'], rx: 'Rx',
+     status: 'taught', chartClass: 'Antibiotic (sulfone)', chartUse: 'Acne',
+     use: [S('Leprosy; topically (gel) for acne', 'PCol 50')],
+     tgt: 'tgt-dapsone', why: S('Its anti-inflammatory activity, apparently not its antibacterial action, is what helps in acne', 'PCol 50'), q: 'dapsone'},
+    {id: 'metronidazole', name: 'Metronidazole', alt: [], brands: ['Flagyl', 'Metrogel'], page: 3, cls: 'abx', sub: 'Nitroimidazole', dz: ['acne'], rx: 'Rx',
+     status: 'taught', chartClass: 'Antibiotic (nitroimidazole)', chartUse: 'Acne',
+     tgt: 'tgt-metronidazole',
+     ae: [S('Water-based gel: dry skin, redness, watering eyes; cream and lotion may be better tolerated', 'PCol 51')], q: 'metronidazole'},
+    {id: 'tretinoin', name: 'Tretinoin', alt: ['all-trans retinoic acid', 'ATRA'], brands: ['Retin-A', 'Renova', 'Avita', 'Retin-A Micro'], page: 3, cls: 'nrb', sub: 'Retinoids', dz: ['acne'], rx: 'Rx',
+     status: 'taught', chartClass: 'Nuclear receptor binder (retinoid)', chartUse: 'Acne',
+     tgt: 'tgt-topretinoids', why: WHY.retAcne,
+     ae: [AE.topRet, S('Under 10% absorbed; best results in 8–12 weeks; microsphere form (Retin-A Micro) may be less irritating', 'PCol 17')],
+     photo: PHOTO_RET, atlas: 'tretinoin', q: '\\btretinoin|\\bATRA\\b'},
+    {id: 'adapalene', name: 'Adapalene', alt: [], brands: ['Differin'], page: 3, cls: 'nrb', sub: 'Retinoids', dz: ['acne'], rx: 'OTC/Rx',
+     status: 'taught', chartClass: 'Nuclear receptor binder (retinoid)', chartUse: 'Acne',
+     use: [S('Mild to moderate acne', 'PCol 18')],
+     tgt: 'tgt-topretinoids', why: WHY.retAcne,
+     ae: [S('Less irritating than tretinoin; "sun stable" (photochemically stable), so it can be combined with benzoyl peroxide', 'PCol 18')],
+     photo: S('Sun stable, yet the sunburn risk remains because outer skin layers are peeled off', '10/30 T 116–130'), atlas: 'adapalene', q: 'adapalene'},
+    {id: 'isotretinoin', name: 'Isotretinoin', alt: [], brands: ['Accutane'], page: 3, cls: 'nrb', sub: 'Retinoids', dz: ['acne'], rx: 'Rx',
+     status: 'taught', chartClass: 'Nuclear receptor binder (retinoid)', chartUse: 'Acne',
+     use: [S('Severe cystic acne recalcitrant to standard therapy (oral)', 'PCol 19')],
+     tgt: 'tgt-isotretinoin', why: S('Appears to inhibit sebaceous gland size and function', 'PCol 19'),
+     ae: [S('Dry, itchy skin and mucous membranes; lipid abnormalities; skeletal hyperostosis in children; teratogenic: iPLEDGE registration, men included because sperm is affected', 'PCol 19; 10/30 T 130–132')],
+     atlas: 'isotretinoin', q: 'isotretinoin|iPLEDGE'},
+    {id: 'spironolactone', name: 'Spironolactone', alt: [], brands: [], page: 3, cls: 'antiandr', dz: ['acne'], rx: 'Rx',
+     status: 'taught', chartClass: 'Antiandrogen', chartUse: 'Acne',
+     use: [S('Antiandrogens are one of the four acne drug classes on her slide; the slide does not name spironolactone', 'Pathophys 37')],
+     tgt: 'tgt-spironolactone',
+     notes: [K('Steroidal antiandrogen; with ketoconazole, lowers testosterone biosynthesis; flutamide instead blocks testosterone at its receptor', 'DPAW 53; 11/04 T@32150–32980')],
+     atlas: 'spironolactone', q: 'spironolactone'},
+
+    /* ---------- pp. 4–5: psoriasis ---------- */
+    {id: 'coaltar', name: 'Coal tar', alt: [], brands: ['Denorex', 'DHS Tar', 'Neutrogena-T/Gel', 'Tegrin'], page: 4, cls: 'cytotox', dz: ['pso'], rx: 'OTC',
+     status: 'taught', chartClass: 'Cytotoxic agent', chartUse: 'Psoriasis',
+     tgt: 'tgt-coaltar', why: WHY.cyto,
+     ae: [S('Irritation, folliculitis, contact dermatitis; photosensitizing; carcinogenic; stains light skin and hair; odor; no systemic effects', 'PCol 54')],
+     photo: S('Photosensitizing', 'PCol 54'), q: 'coal tar'},
+    {id: 'shaletar', name: 'Shale tar (ichthammol)', alt: ['ichthammol'], brands: ['Boyol Salve', 'Drawing Out Salve', 'Black Salve'], page: 4, cls: 'cytotox', dz: ['pso'], rx: 'OTC',
+     status: 'taught', chartClass: 'Cytotoxic agent', chartUse: 'Psoriasis',
+     use: [S('Symptomatic relief, no clinical studies of effectiveness; also eczema, rosacea and acute otitis', 'PCol 57')],
+     tgt: 'tgt-shaletar', why: WHY.cyto,
+     ae: [S('Less irritating than coal tar', 'PCol 57')],
+     photo: Object.assign(S('Not photosensitizing, unlike coal tar', 'PCol 57'), {no: true}), q: 'shale tar|ichthammol'},
+    {id: 'selenium', name: 'Selenium sulfide', alt: [], brands: ['Selsun Blue', 'Selseb'], page: 4, cls: 'cytotox', dz: ['pso'], rx: 'OTC',
+     status: 'taught', chartClass: 'Cytotoxic agent', chartUse: 'Psoriasis',
+     tgt: 'tgt-selzinc', why: WHY.cyto, q: 'selenium'},
+    {id: 'zpt', name: 'Zinc pyrithione', alt: [], brands: [], page: 4, cls: 'cytotox', dz: ['pso'], rx: 'OTC',
+     status: 'taught', chartClass: 'Cytotoxic agent', chartUse: 'Psoriasis',
+     tgt: 'tgt-selzinc', why: WHY.cyto, q: 'pyrithione'},
+    {id: 'anthralin', name: 'Anthralin', alt: ['dithranol'], brands: ['Antra-Derm', 'Dithrocreme'], page: 4, cls: 'cytotox', dz: ['pso'], rx: 'Rx',
+     status: 'taught', chartClass: 'Cytotoxic agent', chartUse: 'Psoriasis',
+     tgt: 'tgt-anthralin', why: S('Suppresses hyperplastic keratinocytes', 'PCol 55'),
+     ae: [S('Local irritation, folliculitis, allergic contact dermatitis; severe conjunctivitis on eye contact; stains skin, hair and clothes; no systemic effects; caution on face and intertriginous areas; short-contact therapy (SCAT)', 'PCol 56')],
+     atlas: 'anthralin', q: 'anthralin|dithranol|\\bSCAT\\b'},
+    {id: 'methotrexate', name: 'Methotrexate', alt: ['MTX'], brands: ['Rheumatrex'], page: 4, cls: 'dhfr', dz: ['pso'], rx: 'Rx',
+     status: 'taught', chartClass: 'Dihydrofolate reductase inhibitor', chartUse: 'Psoriasis',
+     tgt: 'tgt-methotrexate', why: S('Reduces keratinocyte hyperproliferation and the number of T cells', 'PCol 59'),
+     ae: [S('Cumulative liver toxicity is the most significant; nausea, pulmonary toxicity, rare pancytopenia and myelosuppression, megaloblastic anemia, lymphoma; abortifacient and teratogenic', 'PCol 61')],
+     atlas: 'methotrexate', q: 'methotrexate|\\bMTX\\b'},
+    {id: 'abatacept', name: 'Abatacept', alt: [], brands: ['Orencia'], page: 4, cls: 'costim', dz: ['pso'], rx: 'Rx',
+     status: 'taught', chartClass: 'Inhibitor of co-stimulation', chartUse: 'Psoriasis',
+     tgt: 'tgt-abatacept', why: S('Blocks the second signal needed for T-cell activation', 'PCol 63'),
+     notes: [S('Fusion protein: extracellular domain of CTLA-4 fused to human IgG Fc', 'PCol 63')], q: 'abatacept|CTLA-4'},
+    {id: 'etanercept', name: 'Etanercept', alt: [], brands: ['Enbrel'], page: 4, cls: 'tnf', dz: ['pso'], rx: 'Rx',
+     status: 'taught', chartClass: 'TNF-α inhibitor', chartUse: 'Psoriasis',
+     tgt: 'tgt-tnf', why: WHY.tnf, boxed: AE.tnfBox,
+     ae: [S('Usually rare: injection-site reactions; case reports of pancytopenia and demyelinating syndromes', 'PCol 71')],
+     notes: [S('Fusion protein: two p75 soluble TNF receptors on a human IgG1 Fc; SQ', 'PCol 71')], q: 'etanercept'},
+    {id: 'adalimumab', name: 'Adalimumab', alt: [], brands: ['Humira'], page: 4, cls: 'tnf', dz: ['pso'], rx: 'Rx',
+     status: 'taught', chartClass: null, chartUse: 'Psoriasis',
+     tgt: 'tgt-tnf', why: WHY.tnf, boxed: AE.tnfBox,
+     ae: [S('Injection-site reactions most common; infections; less antigenic than infliximab', 'PCol 73')],
+     notes: [S('Human IgG1 antibody to TNF; SQ', 'PCol 73')], q: 'adalimumab'},
+    {id: 'infliximab', name: 'Infliximab', alt: [], brands: ['Remicade'], page: 4, cls: 'tnf', dz: ['pso'], rx: 'Rx',
+     status: 'taught', chartClass: null, chartUse: 'Psoriasis',
+     tgt: 'tgt-tnf', why: WHY.tnf, boxed: AE.tnfBox,
+     ae: [S('Anti-drug antibodies in 14–40%, with acute and delayed infusion reactions (premedicate) and lower efficacy; infection; lupus-like syndrome', 'PCol 72')],
+     notes: [S('Chimeric mouse/human IgG1; IV infusion', 'PCol 72')], q: 'infliximab'},
+    {id: 'golimumab', name: 'Golimumab', alt: [], brands: ['Simponi'], page: 4, cls: 'tnf', dz: ['pso'], rx: 'Rx',
+     status: 'taught', chartClass: null, chartUse: 'Psoriasis',
+     tgt: 'tgt-tnf', why: WHY.tnf, boxed: AE.tnfBox, notes: [S('Human antibody to TNF-α', 'PCol 74')], q: 'golimumab'},
+    {id: 'certolizumab', name: 'Certolizumab pegol', alt: [], brands: ['Cimzia'], page: 4, cls: 'tnf', dz: ['pso'], rx: 'Rx',
+     status: 'taught', chartClass: null, chartUse: 'Psoriasis',
+     tgt: 'tgt-tnf', why: WHY.tnf, boxed: AE.tnfBox,
+     ae: [S('Upper respiratory infections, rash, urinary tract infections', 'PCol 74')],
+     notes: [S('PEG-attached Fab fragment of a humanized anti-TNF antibody; SQ every other week, may extend to every 4 weeks after the first three doses', 'PCol 74')], q: 'certolizumab'},
+    {id: 'tofacitinib', name: 'Tofacitinib', alt: [], brands: ['Xeljanz'], page: 4, cls: 'jak', dz: ['pso'], rx: 'Rx',
+     status: 'taught', chartClass: 'Janus kinase (JAK) inhibitor', chartUse: 'Psoriasis',
+     use: [S('Oral small molecule that gets inside the cell', 'PCol 76')],
+     tgt: 'tgt-tofacitinib', why: WHY.jak,
+     boxed: S('Severe infection, lymphoma and other malignancies', 'PCol 76; 11/03 T 579'),
+     ae: [S('Caution in patients at high risk of GI perforation', 'PCol 76')],
+     notes: [K(SIK_UNASSIGNED + ' (DPAW 35)', 'DPAW 35')], atlas: 'tofacitinib', q: 'tofacitinib'},
+    {id: 'ustekinumab', name: 'Ustekinumab', alt: [], brands: ['Stelara'], page: 4, cls: 'il1223', dz: ['pso'], rx: 'Rx',
+     status: 'taught', chartClass: 'IL-12 & IL-23 cytokine inhibitor', chartUse: 'Psoriasis',
+     tgt: 'tgt-ustekinumab', why: S('Keeps IL-12 and IL-23 off their receptor on CD4 T cells and NK cells, suppressing proinflammatory Th1 and Th17 cells; fewer and smaller plaques', 'PCol 67'),
+     ae: [S('Upper respiratory infection most common; serious allergy; serious (mycobacterial) infection, evaluate for TB; no live vaccines (stop 15 weeks before, resume 2 weeks after); malignancy (rare); one case of reversible posterior leukoencephalopathy', 'PCol 67')],
+     q: 'ustekinumab'},
+    {id: 'guselkumab', name: 'Guselkumab', alt: [], brands: ['Tremfya'], page: 5, cls: 'il23', dz: ['pso'], rx: 'Rx',
+     status: 'taught', chartClass: 'IL-23 cytokine inhibitor', chartUse: 'Psoriasis',
+     tgt: 'tgt-il23', why: WHY.il23, notes: [S('Human IgG1 lambda monoclonal antibody', 'PCol 68')], q: 'guselkumab'},
+    {id: 'tildrakizumab', name: 'Tildrakizumab-asmn', alt: ['tildrakizumab'], brands: ['Ilumya'], page: 5, cls: 'il23', dz: ['pso'], rx: 'Rx',
+     status: 'taught', chartClass: 'IL-23 cytokine inhibitor', chartUse: 'Psoriasis',
+     tgt: 'tgt-il23', why: WHY.il23, notes: [S('Humanized IgG1/κ monoclonal antibody', 'PCol 68')], q: 'tildrakizumab'},
+    {id: 'risankizumab', name: 'Risankizumab', alt: [], brands: ['Skyrizi'], page: 5, cls: 'il23', dz: ['pso'], rx: 'Rx',
+     status: 'taught', chartClass: 'IL-23 cytokine inhibitor', chartUse: 'Psoriasis',
+     use: [S('Moderate to severe plaque psoriasis; SQ and IV', 'PCol 69')],
+     tgt: 'tgt-il23', why: WHY.il23,
+     ae: [S('Common: fatigue, arthralgia, nasopharyngitis, headache, rashes, injection reactions. Less common: severe infections, TB reactivation, skin cancer', 'PCol 69')], q: 'risankizumab'},
+    {id: 'secukinumab', name: 'Secukinumab', alt: [], brands: ['Cosentyx'], page: 5, cls: 'il17', dz: ['pso'], rx: 'Rx',
+     status: 'taught', chartClass: 'IL-17A inhibitor', chartUse: 'Psoriasis',
+     tgt: 'tgt-il17a', why: WHY.il17, ae: [AE.il17],
+     notes: [S('Human IgG1 monoclonal antibody; SQ', 'PCol 66'), C('The chart prints the brand as "Consentyx"', 5)], q: 'secukinumab'},
+    {id: 'brodalumab', name: 'Brodalumab', alt: [], brands: ['Siliq'], page: 5, cls: 'il17', dz: ['pso'], rx: 'Rx',
+     status: 'taught', chartClass: 'IL-17A inhibitor', chartUse: 'Psoriasis',
+     tgt: 'tgt-brodalumab', why: WHY.il17,
+     notes: [S('Human IgG2 antibody to the IL-17 receptor A: blocks IL-17A, IL-17F, IL-17C, IL-17A/F and IL-25', 'PCol 66')], q: 'brodalumab'},
+    {id: 'ixekizumab', name: 'Ixekizumab', alt: [], brands: ['Taltz'], page: 5, cls: 'il17', dz: ['pso'], rx: 'Rx',
+     status: 'taught', chartClass: 'IL-17A inhibitor', chartUse: 'Psoriasis',
+     tgt: 'tgt-il17a', why: WHY.il17, notes: [S('Humanized IgG4 monoclonal antibody against IL-17A', 'PCol 66')], q: 'ixekizumab'},
+    {id: 'acitretin', name: 'Acitretin', alt: [], brands: ['Soriatane'], page: 5, cls: 'nrb', sub: 'Retinoids', dz: ['pso'], rx: 'Rx',
+     status: 'taught', chartClass: 'Nuclear receptor binder (retinoid)', chartUse: 'Psoriasis',
+     use: [S('Psoriasis, especially pustular forms (oral)', 'PCol 20')],
+     tgt: 'tgt-acitazar', why: WHY.retPso,
+     ae: [S('As isotretinoin, plus hepatotoxicity (fatal hepatitis reported); teratogenic: no pregnancy during and for 3 years after; no ethanol during and for 2 months after; no blood donation for 3 years', 'PCol 20')],
+     notes: [S('Metabolite of the aromatic retinoid etretinate', 'PCol 20')], atlas: 'acitretin', q: 'acitretin|etretinate'},
+    {id: 'tazarotene', name: 'Tazarotene', alt: [], brands: ['Tazorac'], page: 5, cls: 'nrb', sub: 'Retinoids', dz: ['pso', 'acne'], rx: 'Rx',
+     status: 'taught', chartClass: 'Nuclear receptor binder (retinoid)', chartUse: 'Psoriasis; acne/wrinkles',
+     use: [S('Psoriasis, mild to moderately severe facial acne, wrinkles', 'PCol 18')],
+     tgt: 'tgt-acitazar', why: WHY.retPso,
+     ae: [S('Women of childbearing age only after contraceptive counseling; not in pregnancy', 'PCol 18')],
+     photo: S('Causes photosensitivity', 'PCol 18'), atlas: 'tazarotene', q: 'tazarotene'},
+    {id: 'calcipotriene', name: 'Calcipotriene', alt: [], brands: ['Dovonex'], page: 5, cls: 'nrb', sub: 'Vitamin D analog', dz: ['pso'], rx: 'Rx',
+     status: 'taught', chartClass: 'Nuclear receptor binder (vitamin D derivative)', chartUse: null,
+     use: [S('Psoriasis, topical', 'PCol 21')],
+     tgt: 'tgt-calcipotriene', why: S('Inhibits proliferation and promotes keratinocyte differentiation; decreases inflammatory cytokine release', 'PCol 21'),
+     ae: [S('Burning, itching, erythema, dry skin, atrophy, hyperpigmentation, folliculitis; a topical steroid reduces the irritation; hypercalcemia and hypercalciuria above 100 g/week, resolving within days of stopping', 'PCol 22')],
+     photo: S('Mild photosensitivity', 'PCol 22'), atlas: 'calcipotriene', q: 'calcipotriene'},
+    {id: 'methoxsalen', name: 'Methoxsalen', alt: ['8-MOP', '8-methoxypsoralen'], brands: ['Oxsoralen-Ultra', 'Uvadex'], page: 5, cls: 'psoralen', dz: ['pso'], rx: 'Rx',
+     status: 'taught', chartClass: 'Psoralen', chartUse: null,
+     use: [S('PUVA: a psoralen combined with UVA light', 'Sun 3')],
+     tgt: 'tgt-methoxsalen', why: S('The phototoxic reaction is antiproliferative, immunosuppressive and anti-inflammatory: normalizes keratinocytes, reorganizes cutaneous blood vessels, is cytotoxic to T cells', 'Sun 3'),
+     ae: [S('Pruritus, nausea, erythema and blistering, hyperpigmentation, skin aging, skin cancer, cataracts', 'Sun 4')],
+     photo: S('A photosensitizing compound by design (PUVA)', 'Sun 3'), atlas: 'methoxsalen', q: 'methoxsalen|psoralen|PUVA|8-MOP'},
+    {id: 'cyclosporine', name: 'Cyclosporine', alt: [], brands: ['Neoral', 'Sandimmune'], page: 5, cls: 'cni', dz: ['pso'], rx: 'Rx',
+     status: 'taught', chartClass: 'Calcineurin inhibitor', chartUse: null,
+     use: [S('Psoriasis, oral; Neoral and Sandimmune are not bioequivalent and not interchangeable', 'PCol 29')],
+     tgt: 'tgt-cyclosporine', why: S('Inhibits activation of T cells and mast cells, blocking proinflammatory cytokines and mediators: an immunosuppressant', 'PCol 24'),
+     boxed: S('Lymphoma and other malignancies, particularly of the skin; bacterial, viral, fungal and protozoal infections including opportunistic ones', 'PCol 30; 10/30 T 397'),
+     ae: [AE.cniOral, S('Cyclosporine only: gingival hyperplasia', 'PCol 30')], atlas: 'cyclosporine', q: 'cyclosporin'},
+    {id: 'petrolatum', name: 'Petrolatum', alt: [], brands: ['Vaseline'], page: 5, cls: 'emollient', dz: ['pso'], rx: 'OTC',
+     status: 'taught', chartClass: 'Emollient', chartUse: null,
+     tgt: 'tgt-petrolatum',
+     notes: [K('Most effective emollient (hydrocarbons, over 25 carbons)', 'DPAW 15'), C('The chart prints the brand as "Vasoline"', 5)],
+     q: 'petrolatum'},
+    {id: 'ketoconazole', name: 'Ketoconazole', alt: [], brands: ['Nizoral'], page: 5, cls: 'azole', dz: ['pso'], rx: 'Rx',
+     status: 'taught', chartClass: 'Azole antifungal', chartUse: null,
+     tgt: 'tgt-ketoconazole',
+     notes: [K('Slide 53 lists it under "Non-steroidal AA" with flutamide; in class he grouped it with spironolactone by mechanism (biosynthesis)', 'DPAW 53; 11/04 T@32075–32300'),
+             C('Not on Dr. Smith\'s slides; the chart lists it on the psoriasis page as an azole antifungal', 5)], atlas: 'ketoconazole', q: 'ketoconazole'},
+    {id: 'apremilast', name: 'Apremilast', alt: [], brands: ['Otezla'], page: 5, cls: 'pde4', dz: ['pso'], rx: 'Rx',
+     status: 'taught', chartClass: 'PDE-4 inhibitor', chartUse: null,
+     use: [S('Psoriasis (oral)', 'PCol 34')],
+     tgt: 'tgt-apremilast', why: WHY.pde4,
+     ae: [S('Diarrhea, nausea, headache, weight loss; use cautiously in depression; avoid strong CYP3A4 inducers', 'PCol 34')], atlas: 'apremilast', q: 'apremilast'},
+  ];
+
+  /* ---------- p. 6: topical steroids (chart potency classes) ---------- */
+  const STEROIDS = [
+    // [id, name, brands, potency classes on the chart, status, Sikazwe note, atlas key, question regex]
+    ['clobetasol', 'Clobetasol propionate', ['Temovate', 'Clobex'], ['1'], 'taught', K('Super-potent example: clobetasol propionate 0.05% cream and ointment', 'DPAW 25'), 'clobetasol propionate', 'clobetasol'],
+    ['betameth', 'Betamethasone dipropionate', ['Diprolene', 'Diprolene Cream AF'], ['1', '2'], 'taught', K('Potent example: betamethasone dipropionate 0.05% cream and ointment', 'DPAW 25'), null, 'betamethasone dipropionate'],
+    ['halobetasol', 'Halobetasol propionate', ['Ultravate'], ['1'], 'class', null, null, 'halobetasol'],
+    ['mometasone', 'Mometasone furoate', ['Elocon'], ['2'], 'class', null, null, 'mometasone'],
+    ['fluocinonide', 'Fluocinonide', ['Lidex'], ['2'], 'class', null, null, 'fluocinonide'],
+    ['desoximetasone', 'Desoximetasone', ['Topicort'], ['2'], 'class', null, null, 'desoximetasone'],
+    ['fluticasone', 'Fluticasone propionate', ['Cutivate'], ['3'], 'class', K(SIK_UNASSIGNED + ' Drawn on DPAW 24; DPAW 20 uses it for the glucocorticoid SAR features', 'DPAW 20, 24'), null, 'fluticasone'],
+    ['fluocinolone', 'Fluocinolone acetonide', ['Synalar', 'Derma-Smoothe'], ['4', '6'], 'class', null, null, 'fluocinolone'],
+    ['hcvalerate', 'Hydrocortisone valerate', ['Westcort'], ['4'], 'class', null, null, 'hydrocortisone valerate'],
+    ['triamcinolone', 'Triamcinolone acetonide', ['Kenalog'], ['4'], 'class', K(SIK_UNASSIGNED + ' Drawn on DPAW 24', 'DPAW 24'), null, 'triamcinolone'],
+    ['desonide', 'Desonide', ['DesOwen', 'Desonate'], ['5', '6'], 'class', K(SIK_UNASSIGNED + ' Drawn on DPAW 24', 'DPAW 24'), null, 'desonide'],
+    ['hydrocortisone', 'Hydrocortisone', ['Locoid', 'Cortaid', 'Hytone', 'Synacort'], ['5', '7'], 'taught', K('Natural cortisol, the reference (parent) glucocorticoid; low-potency example hydrocortisone acetate 0.5% and 1%', 'DPAW 24–25'), 'hydrocortisone', 'hydrocortisone(?! valerate)|cortisol'],
+    ['prednicarbate', 'Prednicarbate', ['Dermatop'], ['5'], 'class', null, null, 'prednicarbate'],
+    ['alclometasone', 'Alclometasone', ['Aclovate'], ['6'], 'class', null, null, 'alclometasone'],
+  ];
+  const POTENCY = {1: 'Class 1, very high potency', 2: 'Class 2, high potency', 3: 'Class 3, upper mid-strength', 4: 'Class 4, mid-strength',
+                   5: 'Class 5, lower mid-strength', 6: 'Class 6, mild', 7: 'Class 7, least potent'};
+  for (const [id, name, brands, pot, status, sik, atlas, q] of STEROIDS) {
+    const notes = [C(pot.map(p => POTENCY[p]).join('; ') + (pot.length > 1 ? ' (listed twice on the chart, once per product)' : ''), 6), STEROID_CLASS_NOTE];
+    if (sik) notes.push(sik);
+    if (id === 'hydrocortisone') notes.push(S('Low potency (hydrocortisone 1%) for the face and for long-term maintenance', 'PCol 11'));
+    if (id === 'desonide') notes.push(C('The chart prints "Desonate (Desonide)", brand first, on the class 6 line', 6));
+    const d = {id, name, alt: [], brands, page: 6, cls: 'steroid', dz: ['pso', 'ad'], rx: id === 'hydrocortisone' ? 'Rx (class 5); OTC (class 7)' : 'Rx',
+      status, chartClass: 'Corticosteroid; potency ' + pot.map(p => 'class ' + p).join(' and '), chartUse: 'Psoriasis, atopic dermatitis, numerous others',
+      use: [S('Psoriasis and atopic dermatitis; match potency to severity and site', 'PCol 11')],
+      tgt: 'tgt-steroids', why: WHY.steroid, ae: [AE.steroid], notes, q};
+    if (atlas) d.atlas = atlas;
+    D.push(d);
+  }
+
+  /* Every drug line of the chart, page by page, and the card that carries it
+     (or why it is left out). druglist_check.js reads this against the cards. */
+  const CHART_ROWS = [
+    [1, 'Octyl dimethyl PABA, Padimate O', 'padimate'], [1, 'Octyl Methoxycinnamate, Ethylhexyl p-methoxycinnamate', 'octinoxate'],
+    [1, '2-ethylhexyl salicylate', 'octisalate'], [1, 'Homosalate', 'homosalate'], [1, 'Oxybenzone', 'oxybenzone'], [1, 'Dioxybenzone', 'dioxybenzone'],
+    [1, 'Menthyl anthranilate', 'meradimate'], [1, 'Avobenzone', 'avobenzone'], [1, 'Zinc oxide (Zinca)', 'zincoxide'], [1, 'Titanium oxide', 'tio2'],
+    [1, 'Benzocaine (Americaine, Solarcaine, Lanacane)', 'benzocaine'], [1, 'Dibucaine (Nupercainal)', 'dibucaine'], [1, 'Tetracaine (Dermocaine)', 'tetracaine'],
+    [1, 'Lidocaine (Xylocaine)', 'lidocaine'], [1, 'Bemotrizinol (BEMT)', 'bemotrizinol'],
+    [2, 'Crisaborole (Eucrisa)', 'crisaborole'], [2, 'Pimecrolimus (Elidel)', 'pimecrolimus'], [2, 'Tacrolimus (Protopic)', 'tacrolimus'],
+    [2, 'Dupilumab (Dupixent)', 'dupilumab'], [2, 'Ruxolitinib (Opzelura)', 'ruxolitinib'], [2, 'Upadacitinib (Rinvoq)', 'upadacitinib'],
+    [3, 'Benzoyl peroxide', 'bpo'], [3, 'Sulfur (Fostril)', 'sulfur'], [3, 'Salicylic Acid', 'salicylic'], [3, 'Sarecycline (Seysara)', 'sarecycline'],
+    [3, 'Minocycline (Minocin)', 'minocycline'], [3, 'Doxycycline (Vibramycin)', 'doxycycline'], [3, 'Clindamycin (Cleocin, Cleocin T, C/T/S)', 'clindamycin'],
+    [3, 'Erythromycin', 'erythromycin'], [3, 'Azithromycin', 'azithromycin'], [3, 'Trimethoprim/sulfamethoxazole (Bactrim DS)', 'tmpsmx'],
+    [3, 'Dapsone (Aczone)', 'dapsone'], [3, 'Metronidazole (Flagyl, Metrogel)', 'metronidazole'], [3, 'Tretinoin (Retin-A, Renova, Avita, Retin-A Micro)', 'tretinoin'],
+    [3, 'Adapalene (Differin)', 'adapalene'], [3, 'Isotretinoin (Accutane)', 'isotretinoin'], [3, 'Spironolactone', 'spironolactone'],
+    [4, 'Coal tar', 'coaltar'], [4, 'Shale tar, Ichthammol', 'shaletar'], [4, 'Selenium sulfide', 'selenium'], [4, 'Zinc Pyrithione', 'zpt'],
+    [4, 'Anthralin', 'anthralin'], [4, 'Methotrexate', 'methotrexate'], [4, 'Abatacept (Orencia)', 'abatacept'], [4, 'Etanercept (Enbrel)', 'etanercept'],
+    [4, 'Adalimumab (Humira)', 'adalimumab'], [4, 'Infliximab (Remicade)', 'infliximab'], [4, 'Golimumab (Simponi)', 'golimumab'],
+    [4, 'Certolizumab pegol (Cimzia)', 'certolizumab'], [4, 'Tofacitinib (Xeljanz)', 'tofacitinib'], [4, 'Ustekinumab (Stelara)', 'ustekinumab'],
+    [5, 'Guselkumab (Tremfya)', 'guselkumab'], [5, 'Tildrakizumab-asmn (Ilumya)', 'tildrakizumab'], [5, 'Risankizumab (Skyrizi)', 'risankizumab'],
+    [5, 'Secukinumab (Consentyx)', 'secukinumab'], [5, 'Brodalumab (Siliq)', 'brodalumab'], [5, 'Ixekizumab (Taltz)', 'ixekizumab'],
+    [5, 'Acitretin (Soriatane)', 'acitretin'], [5, 'Tazarotene (Tazorac)', 'tazarotene'], [5, 'Calcipotriene (Dovonex)', 'calcipotriene'],
+    [5, 'Methoxsalen (Oxsoralen-Ultra, Uvadex)', 'methoxsalen'], [5, 'Cyclosporine (Neoral, Sandimmune)', 'cyclosporine'],
+    [5, 'Petrolatum (Vasoline)', 'petrolatum'], [5, 'Zinc Oxide (Desitin)', 'zincoxide'], [5, 'Ketoconazole (Nizoral)', 'ketoconazole'], [5, 'Apremilast (Otezla)', 'apremilast'],
+    [6, 'Clobetasol propionate (Temovate, Clobex)', 'clobetasol'], [6, 'Betamethasone dipropionate (Diprolene)', 'betameth'], [6, 'Halobetasol propionate (Ultravate)', 'halobetasol'],
+    [6, 'Betamethasone dipropionate (Diprolene Cream AF)', 'betameth'], [6, 'Mometasone furoate (Elocon)', 'mometasone'], [6, 'Fluocinonide (Lidex)', 'fluocinonide'],
+    [6, 'Desoximetasone (Topicort)', 'desoximetasone'], [6, 'Fluticasone propionate (Cutivate)', 'fluticasone'], [6, 'Fluocinolone acetonide (Synalar)', 'fluocinolone'],
+    [6, 'Hydrocortisone valerate (Westcort)', 'hcvalerate'], [6, 'Triamcinolone acetonide (Kenalog)', 'triamcinolone'], [6, 'Desonide (DesOwen)', 'desonide'],
+    [6, 'Hydrocortisone (Locoid)', 'hydrocortisone'], [6, 'Prednicarbate (Dermatop)', 'prednicarbate'], [6, 'Alclometasone (Aclovate)', 'alclometasone'],
+    [6, 'Desonate (Desonide)', 'desonide'], [6, 'Fluocinolone acetonide (Derma-Smoothe)', 'fluocinolone'], [6, 'Hydrocortisone (Cortaid, Hytone, Synacort)', 'hydrocortisone'],
+    [7, 'Permethrin 1% lotion (Nix)', null], [7, 'Pyrethrins + piperonyl butoxide (Rid)', null], [7, 'Malathion 0.5% (Ovide)', null],
+    [7, 'Benzyl alcohol 5% (Ulesfia)', null], [7, 'Spinosad 0.9% (Natroba)', null], [7, 'Ivermectin (Sklice, Stromectol)', null],
+  ];
+  const EXCLUDED = {7: 'Lice and scabies (chart p. 7) are not in the Exam 1 lectures (syllabus pp. 9–15); left out of the Exam 1 drug list, as in the Reference target table.'};
+  const CHART_NOTES = [
+    'Chart p. 5: from calcipotriene down, the chemical-class and indication columns sit one row off (cyclosporine is printed as a furanocoumarin, apremilast against "Seborrhea, dandruff"), so the chart indication is not shown for those rows; the pharmacological class column is aligned.',
+    'Chart p. 4: the TNF-α inhibitor class cell is printed beside etanercept only; adalimumab, infliximab, golimumab and certolizumab pegol are TNF-α inhibitors on Dr. Smith\'s slides (PCol 70–74).',
+    'The chart\'s chemical-class column is shown only for the sunscreens, where it names the family; chemical classes elsewhere are Dr. Sikazwe\'s material (Atlas tab).',
+  ];
+  /* The questions on a drug: its `q` pattern against the stem, the keyed
+     answer(s), the concept and (matching items) the left-hand column. */
+  const qText = q => [q.stem, q.concept, (q.options || []).filter(o => o.correct).map(o => o.t).join(' '),
+    (q.pairs || []).map(p => p.l).join(' ')].join(' • ');
+  const questionsFor = (d, qs) => { const re = new RegExp(d.q, 'i'); return qs.filter(q => re.test(qText(q))); };
+  const classQuestions = (cls, qs) => { if(!CLASS_Q[cls]) return []; const re = new RegExp(CLASS_Q[cls], 'i'); return qs.filter(q => re.test(qText(q))); };
+  /* The Reference target rows (reference.js, ref-targets), read from its HTML:
+     {rowId: {cite, parts: [{kind: 'tg'|'mo', t, by, cite}]}}. A part's lecturer
+     is its data-by, else the row's, else 'smith'; its citation its data-cite,
+     else the row's Source cell. Used by the page and by druglist_check.js. */
+  function parseTargets(html){
+    const strip = s => String(s).replace(/<[^>]+>/g, '').replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/\s+/g, ' ').trim();
+    const attr = (a, n) => { const m = String(a || '').match(new RegExp('data-' + n + '="([^"]*)"')); return m ? m[1] : null; };
+    const out = {};
+    for (const m of String(html).matchAll(/<tr id="(tgt-[^"]+)"([^>]*)>([\s\S]*?)<\/tr>/g)) {
+      const [, id, trAttr, body] = m;
+      const cells = [...body.matchAll(/<td>([\s\S]*?)<\/td>/g)].map(c => c[1]);
+      const cite = strip(cells[1] || '');
+      const parts = [...(cells[0] || '').matchAll(/<span class="(tg|mo)"([^>]*)>([\s\S]*?)<\/span>/g)].map(s => ({
+        kind: s[1], t: strip(s[3]).replace(/[.;:,]\s*$/, ''), by: attr(s[2], 'by') || attr(trAttr, 'by') || 'smith', cite: attr(s[2], 'cite') || cite}));
+      const sum = (cells[0] || '').match(/<summary>([\s\S]*?)<\/summary>/);
+      out[id] = {cite, parts, label: sum ? strip(sum[1]) : id};
+    }
+    return out;
+  }
+  return {parseTargets, D, CLASS_Q, CLASSES, DISEASES, PAGES, CHART_ROWS, EXCLUDED, CHART_NOTES, questionsFor, classQuestions};
+})();
+
+/* ==========================================================================
+   DRUG LIST TAB, PHAR 4346 DEENT (Exam 1)
+   --------------------------------------------------------------------------
+   TEMPORARY course-level presentation, to be replaced by the shared-kit Drug
+   List feature. The kit core (25c643d) is not changed: this file is a course
+   data file (course.js `files`), so the build puts it into the page before
+   views.js. At load it adds a "Drug list" nav button and its pane #v-drugs,
+   and wraps the engine's show() the way the core's feature-module hook
+   (features.js, X.tab) does, which this course does not switch on. It runs
+   only in a real browser page (MutationObserver and the nav present); in the
+   node checks' stub DOM it does nothing, so they see the core page.
+
+   Data: druglist_data.js (DRUGLIST). Targets and mechanisms are read from the
+   Reference tab's "Drug targets" table (REFERENCE_HTML, rows tgt-*), the one
+   source of targets. Links use the engine's own drillList(), jump(),
+   linksFor() and the RET/backBtn return stack.
+
+   Storage: none. Nothing is written to localStorage, sessionStorage or
+   IndexedDB; typed recall text lives in this page's memory only and is gone
+   on reload. (The engine's own place-keeping may remember that this tab was
+   open, as it does for every tab.)
+   ========================================================================== */
+const DRUGLIST_UI = (() => {
+  const ok = typeof document !== 'undefined' && typeof MutationObserver !== 'undefined' &&
+             typeof document.getElementById === 'function' && document.getElementById('nav') &&
+             typeof document.getElementById('nav').insertBefore === 'function';
+  if (!ok) return null;
+  const DL = DRUGLIST, ID = 'drugs';
+  const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g, c => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'}[c]));
+  const st = {q: '', dz: '', cls: '', page: '', status: '', boxed: false, photo: false, hasq: false,
+              recall: true, showCls: false, flash: false, fi: 0};
+  const revealed = new Set(), typed = {};       // memory only, never stored
+  let TGT = null, QCACHE = null, pane = null;
+
+  const css = `
+#v-drugs .dlbar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:0 0 10px}
+#v-drugs .dlbar input[type=search]{flex:1 1 220px;min-width:0;font:inherit;padding:8px 10px;border:1px solid var(--line);border-radius:8px;background:var(--paper);color:var(--text)}
+#v-drugs .dlbar select{font:inherit;font-size:14px;padding:6px 8px;border:1px solid var(--line);border-radius:8px;background:var(--paper);color:var(--text);max-width:100%;min-width:0;flex:1 1 150px}
+#v-drugs .dlnote{font-size:13px;color:var(--text-dim);margin:0 0 10px;line-height:1.45}
+#v-drugs .dlnote summary{cursor:pointer;color:var(--text)}
+#v-drugs .dlnote p,#v-drugs .dlnote ul{margin:6px 0}
+#v-drugs .dlself{font-size:13px;background:var(--accent-bg);border:1px solid var(--line);border-radius:8px;padding:8px 10px;margin:0 0 12px}
+#v-drugs .dlcount{font-size:13px;color:var(--text-dim);margin:4px 0 10px}
+#v-drugs .dlgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,330px),1fr));gap:12px}
+#v-drugs .dlcard{background:var(--paper);border:1px solid var(--line);border-radius:8px;padding:12px;display:flex;flex-direction:column;gap:8px;min-width:0;overflow-wrap:anywhere}
+#v-drugs .dlcard.opt{border-style:dashed}
+#v-drugs .dlcard h3{margin:0;font-size:17px}
+#v-drugs .dlbrand{font-size:12.5px;color:var(--text-dim);margin:-4px 0 0}
+#v-drugs .dlmeta{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:0}
+#v-drugs .dlbadge{display:inline-block;font-size:10.5px;letter-spacing:.04em;text-transform:uppercase;border-radius:4px;padding:1px 6px;border:1px solid var(--line);color:var(--text-dim)}
+#v-drugs .dlbadge.taught{border-color:var(--accent);color:var(--accent)}
+#v-drugs .dlbadge.class,#v-drugs .dlbadge.chart{border-style:dashed}
+#v-drugs .dlbadge.box{border-color:var(--bad);color:var(--bad);background:var(--bad-bg)}
+#v-drugs .dlbadge.ph{border-color:var(--at-s);color:var(--at-s)}
+#v-drugs .dlf{border-left:4px solid var(--line);padding:2px 0 2px 9px;margin:0}
+#v-drugs .dlf > b{display:block;font-size:10.5px;letter-spacing:.07em;text-transform:uppercase;margin-bottom:1px}
+#v-drugs .dlf ul{margin:0;padding-left:16px}
+#v-drugs .dlf li{font-size:14px;line-height:1.45;margin:1px 0}
+#v-drugs .f-class{border-color:var(--ink)} #v-drugs .f-class>b{color:var(--ink)}
+#v-drugs .f-use{border-color:var(--text-dim)} #v-drugs .f-use>b{color:var(--text-dim)}
+#v-drugs .f-tg{border-color:var(--at-x)} #v-drugs .f-tg>b{color:var(--at-x)}
+#v-drugs .f-mo{border-color:var(--at-n)} #v-drugs .f-mo>b{color:var(--at-n)}
+#v-drugs .f-why{border-color:var(--yen)} #v-drugs .f-why>b{color:var(--yen)}
+#v-drugs .f-ae{border-color:var(--warn)} #v-drugs .f-ae>b{color:var(--warn)}
+#v-drugs .f-box{border-color:var(--bad);background:var(--bad-bg);border-radius:0 6px 6px 0} #v-drugs .f-box>b{color:var(--bad)}
+#v-drugs .f-ph{border-color:var(--at-s)} #v-drugs .f-ph>b{color:var(--at-s)}
+#v-drugs .f-note{border-color:var(--line)} #v-drugs .f-note>b{color:var(--text-dim)}
+#v-drugs .dlsrc{display:inline-block;font-size:11px;color:var(--text-dim);border:1px solid var(--line);border-radius:4px;padding:0 5px;margin-left:4px;white-space:normal}
+#v-drugs .dlsrc.smith{border-color:var(--accent)} #v-drugs .dlsrc.sikazwe{border-style:dotted;border-color:var(--sik)} #v-drugs .dlsrc.chart{border-style:dashed}
+#v-drugs .dlrecall textarea{width:100%;min-height:58px;font:inherit;font-size:14px;padding:7px 9px;border:1px solid var(--line);border-radius:8px;background:var(--surface);color:var(--text);resize:vertical}
+#v-drugs .dlrecall label{display:block;font-size:12.5px;color:var(--text-dim);margin-bottom:3px}
+#v-drugs .dlrow{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+#v-drugs .dlrow .meta{font-size:12px;color:var(--text-dim)}
+#v-drugs .chip{font-size:13px}
+#v-drugs .btn.sm{padding:6px 12px;font-size:14px}
+#v-drugs .dlflash{display:flex;flex-direction:column;gap:10px;max-width:560px;margin:0 auto}
+#v-drugs .dlempty{font-size:14px;color:var(--text);margin:10px 0}
+#v-atlas .attile.dlhit{outline:3px solid var(--accent);outline-offset:2px}
+`;
+
+  /* ---------- data helpers ---------- */
+  const targets = () => TGT || (TGT = DL.parseTargets(typeof REFERENCE_HTML !== 'undefined' ? REFERENCE_HTML : ''));
+  const qs = d => {
+    if (!QCACHE) QCACHE = {};
+    if (!QCACHE[d.id]) {
+      const own = DL.questionsFor(d, QUESTIONS);
+      const ids = new Set(own.map(q => q.id));
+      QCACHE[d.id] = {own, cls: DL.classQuestions(d.cls, QUESTIONS).filter(q => !ids.has(q.id))};
+    }
+    return QCACHE[d.id];
+  };
+  const byName = {smith: 'Dr. Smith', sikazwe: 'Dr. Sikazwe', chart: 'Drug chart'};
+  const src = s => `<span class="dlsrc ${esc(s.by)}">${esc(byName[s.by] || s.by)} · ${esc(s.cite)}</span>`;
+  const cap = t => String(t).charAt(0).toUpperCase() + String(t).slice(1);
+  const li = s => `<li>${esc(cap(s.t))}${src(s)}</li>`;
+  const field = (cls, label, items) => items && items.length ? `<div class="dlf ${cls}"><b>${esc(label)}</b><ul>${items.map(li).join('')}</ul></div>` : '';
+  const STATUS = {taught: ['taught', 'Exam 1 · taught'], class: ['class', 'Optional · class taught, drug on chart only'],
+                  chart: ['chart', 'Optional · chart only, not in the Exam 1 lectures']};
+  const findText = d => [d.name].concat(d.alt || [], d.brands || [], [DL.CLASSES[d.cls] || '', d.sub || '']).join(' ').toLowerCase();
+
+  function filtered(){
+    const v = st.q.trim().toLowerCase();
+    return DL.D.filter(d => (!v || findText(d).indexOf(v) !== -1) &&
+      (!st.dz || d.dz.includes(st.dz)) && (!st.cls || d.cls === st.cls) &&
+      (!st.page || String(d.page) === st.page || (d.pages || []).map(String).includes(st.page)) &&
+      (!st.status || (st.status === 'taught' ? d.status === 'taught' : d.status !== 'taught')) &&
+      (!st.boxed || d.boxed) && (!st.photo || (d.photo && !d.photo.no)) && (!st.hasq || qs(d).own.length));
+  }
+
+  /* ---------- one card ---------- */
+  function answer(d){
+    const rows = [d.tgt, d.tgt2].filter(Boolean).map(id => targets()[id] || {parts: []});
+    const all = [].concat(...rows.map(r => r.parts));
+    const tg = all.filter(p => p.kind === 'tg'), mo = all.filter(p => p.kind === 'mo');
+    const cls = [];
+    if (d.chartClass) cls.push({t: d.chartClass, by: 'chart', cite: 'Chart p. ' + d.page});
+    if (!d.chartClass && d.cls === 'tnf') cls.push({t: 'TNF-α inhibitor', by: 'smith', cite: 'PCol 70–74'});
+    const use = [];
+    if (d.chartUse) use.push({t: d.chartUse, by: 'chart', cite: 'Chart p. ' + (d.pages ? d.pages.join(', ') : d.page)});
+    (d.use || []).forEach(u => use.push(u));
+    const notes = (d.notes || []);
+    const Q = qs(d), links = readLinks(d);
+    const members = DL.D.filter(x => x.cls === d.cls && x.id !== d.id);
+    return field('f-class', 'Class', cls) + field('f-use', 'Indication', use) +
+      field('f-tg', 'Target', tg) + field('f-mo', 'Mechanism', mo) +
+      field('f-why', 'Why it helps (Dr. Smith)', d.why ? [d.why] : []) +
+      field('f-box', 'Boxed warning', d.boxed ? [d.boxed] : []) +
+      field('f-ae', 'Key adverse effects and cautions', d.ae || []) +
+      field('f-ph', d.photo && d.photo.no ? 'Photosensitivity: not photosensitizing' : 'Photosensitizing', d.photo ? [d.photo] : []) +
+      field('f-note', 'Also', notes) +
+      (members.length ? `<div class="dlrow"><span class="meta">Compare in class (${esc(DL.CLASSES[d.cls])}):</span>
+        <button type="button" class="chip" data-dl="cls" data-cls="${esc(d.cls)}">Show all ${members.length + 1}</button>
+        ${members.slice(0, 8).map(m => `<button type="button" class="chip" data-dl="only" data-id="${esc(m.id)}">${esc(m.name)}</button>`).join('')}</div>` : '') +
+      `<div class="dlrow"><span class="meta">Practice:</span>
+        ${Q.own.length ? `<button type="button" class="chip" data-dl="quiz" data-id="${esc(d.id)}">${Q.own.length} question${Q.own.length > 1 ? 's' : ''} on ${esc(d.name)}</button>` : '<span class="meta">no question names this drug</span>'}
+        ${Q.cls.length ? `<button type="button" class="chip" data-dl="cquiz" data-id="${esc(d.id)}">${Q.cls.length} on the class</button>` : ''}</div>
+      <div class="dlrow"><span class="meta">Read:</span>
+        <button type="button" class="chip" data-dl="ref" data-a="${esc(d.tgt)}">Reference: target table</button>
+        ${links.map(([v, a, t]) => `<button type="button" class="chip" data-jump="${esc(v)}:${esc(a)}">${esc(t)}</button>`).join('')}
+        ${atlasKey(d) ? `<button type="button" class="chip" data-dl="atlas" data-key="${esc(atlasKey(d))}">Atlas: structure</button>` : ''}</div>`;
+  }
+  function readLinks(d){
+    if (typeof linksFor !== 'function') return [];
+    const n = {}, keep = {};
+    for (const q of qs(d).own) for (const l of linksFor(q)) {
+      if (l[1] === 'ref-targets') continue;
+      const k = l[0] + ':' + l[1]; n[k] = (n[k] || 0) + 1; keep[k] = l;
+    }
+    return Object.keys(n).sort((a, b) => n[b] - n[a]).slice(0, 3).map(k => keep[k]);
+  }
+  function atlasKey(d){
+    if (!d.atlas || typeof ATLAS === 'undefined' || !ATLAS.boards) return null;
+    for (const b of ATLAS.boards) for (const s of b.sections) for (const it of s.items)
+      if (it.plain === d.atlas && (!it.meta || !it.meta.priority || it.meta.priority === 'core')) return d.atlas;
+    return null;
+  }
+  function card(d){
+    const [sc, sl] = STATUS[d.status];
+    const open = !st.recall || revealed.has(d.id);
+    const brands = (d.brands || []).length ? `<p class="dlbrand">Brand${d.brands.length > 1 ? 's' : ''} (chart, reference only): ${esc(d.brands.join(', '))}</p>` : '';
+    const alt = (d.alt || []).length ? `<p class="dlbrand">Also: ${esc(d.alt.join(', '))}</p>` : '';
+    const flags = open ? (d.boxed ? '<span class="dlbadge box">Boxed warning</span>' : '') +
+                         (d.photo && !d.photo.no ? '<span class="dlbadge ph">Photosensitizing</span>' : '') : '';
+    let h = `<article class="dlcard${d.status === 'taught' ? '' : ' opt'}" data-id="${esc(d.id)}">
+      <h3>${esc(d.name)}</h3>${alt}${brands}
+      <p class="dlmeta"><span class="dlbadge ${sc}">${esc(sl)}</span><span class="dlbadge">Chart p. ${esc(d.pages ? d.pages.join(', ') : d.page)} · ${esc(d.rx)}</span>${flags}</p>`;
+    if (st.recall) {
+      if (st.showCls) h += `<div class="dlf f-class"><b>Class</b><ul><li>${esc(DL.CLASSES[d.cls])}${d.sub ? ' · ' + esc(d.sub) : ''}</li></ul></div>`;
+      h += `<div class="dlrecall"><label for="dlt-${esc(d.id)}">Write the target or mechanism first (self-check: not graded, not saved)</label>
+        <textarea id="dlt-${esc(d.id)}" autocomplete="off" autocapitalize="off" data-dl="typed" data-id="${esc(d.id)}">${esc(typed[d.id] || '')}</textarea></div>
+        <div class="dlrow"><button type="button" class="btn sm${open ? ' ghost' : ''}" data-dl="reveal" data-id="${esc(d.id)}" aria-expanded="${open}" aria-controls="dla-${esc(d.id)}">${open ? 'Hide again' : 'Reveal'}</button></div>`;
+    }
+    h += `<div id="dla-${esc(d.id)}" class="dlans">${open ? answer(d) : ''}</div></article>`;
+    return h;
+  }
+
+  /* ---------- the pane ---------- */
+  const opt = (v, label, cur) => `<option value="${esc(v)}"${String(cur) === String(v) ? ' selected' : ''}>${esc(label)}</option>`;
+  function controls(){
+    const nShown = DL.D.length;
+    return `<h2>Drug list</h2>
+    <p class="sub">Every drug on the dermatology drug chart, pp. 1–6 (${nShown} drugs). Dr. Smith's slides and recordings decide what is examinable; the chart is a guide. Each line names its source: <span class="dlsrc smith">Dr. Smith · slide</span> <span class="dlsrc sikazwe">Dr. Sikazwe · DPAW page</span> <span class="dlsrc chart">Drug chart · page</span></p>
+    <details class="dlnote"><summary>About this list and the chart</summary>
+      <p>Targets and mechanisms come from Reference, "Drug targets: write it first, then check". Not here: the lice and scabies page (chart p. 7), which is not in the Exam 1 lectures. Brand names are reference information from the chart; Dr. Smith asks by generic name.</p>
+      <ul>${DL.CHART_NOTES.map(n => `<li>${esc(n)}</li>`).join('')}</ul></details>
+    <div class="dlbar">
+      <input type="search" id="dlq" placeholder="Search generic or brand name, or class" aria-label="Search drugs by generic or brand name or class" value="${esc(st.q)}" autocomplete="off">
+    </div>
+    <div class="dlbar">
+      <select id="dldz" aria-label="Filter by disease">${opt('', 'All diseases', st.dz)}${Object.entries(DL.DISEASES).map(([k, v]) => opt(k, v, st.dz)).join('')}</select>
+      <select id="dlcls" aria-label="Filter by drug class">${opt('', 'All classes', st.cls)}${Object.entries(DL.CLASSES).map(([k, v]) => opt(k, v, st.cls)).join('')}</select>
+      <select id="dlpage" aria-label="Filter by chart page">${opt('', 'All chart pages', st.page)}${Object.entries(DL.PAGES).map(([k, v]) => opt(k, 'p. ' + k + ': ' + v, st.page)).join('')}</select>
+      <select id="dlstatus" aria-label="Filter by Exam 1 status">${opt('', 'Taught and optional', st.status)}${opt('taught', 'Exam 1 taught', st.status)}${opt('optional', 'Optional: chart only', st.status)}</select>
+    </div>
+    <div class="dlbar">
+      <button type="button" class="chip" data-dl="flag" data-f="boxed" aria-pressed="${st.boxed}">Has a boxed warning</button>
+      <button type="button" class="chip" data-dl="flag" data-f="photo" aria-pressed="${st.photo}">Photosensitizing</button>
+      <button type="button" class="chip" data-dl="flag" data-f="hasq" aria-pressed="${st.hasq}">Has questions</button>
+      <button type="button" class="chip" data-dl="clear">Clear filters</button>
+    </div>
+    <div class="dlbar">
+      <button type="button" class="chip" data-dl="recall" aria-pressed="${st.recall}">Recall mode</button>
+      ${st.recall ? `<button type="button" class="chip" data-dl="showcls" aria-pressed="${st.showCls}">Show class</button>
+        <button type="button" class="chip" data-dl="revealall">Reveal all shown</button>
+        <button type="button" class="chip" data-dl="hideall">Hide all</button>` : ''}
+      <button type="button" class="chip" data-dl="flash" aria-pressed="${st.flash}">Flashcards</button>
+    </div>
+    ${st.recall ? '<p class="dlself">Recall mode: each card shows the drug only. Write its target or mechanism, then Reveal and compare. This is a self-check: what you type is not graded and not saved, and it is gone when the page reloads.</p>' : ''}
+    <p class="dlcount" id="dlcount" aria-live="polite"></p>
+    <div id="dllist"></div>`;
+  }
+  function drawList(){
+    const list = filtered(), out = pane.querySelector('#dllist'), cnt = pane.querySelector('#dlcount');
+    cnt.textContent = (list.length === DL.D.length ? `${list.length} drugs` : `${list.length} of ${DL.D.length} drugs`) +
+      (st.flash && list.length ? ` · card ${Math.min(st.fi, list.length - 1) + 1} of ${list.length}` : '');
+    if (!list.length) { out.innerHTML = '<p class="dlempty">No drug matches this search and these filters. Clear filters to see the whole list.</p>'; return; }
+    if (st.flash) {
+      st.fi = Math.max(0, Math.min(st.fi, list.length - 1));
+      out.innerHTML = `<div class="dlflash">${card(list[st.fi])}
+        <div class="dlrow"><button type="button" class="btn ghost sm" data-dl="prev"${st.fi ? '' : ' disabled'}>Previous</button>
+        <button type="button" class="btn ghost sm" data-dl="next"${st.fi < list.length - 1 ? '' : ' disabled'}>Next</button>
+        <span class="meta">Flashcards: one card at a time through the filtered list; no score, nothing saved.</span></div></div>`;
+    } else out.innerHTML = `<div class="dlgrid">${list.map(card).join('')}</div>`;
+  }
+  function render(p){
+    pane = p;
+    if (!document.getElementById('dlcss')) { const s = document.createElement('style'); s.id = 'dlcss'; s.textContent = css; document.head.appendChild(s); }
+    p.innerHTML = controls();
+    drawList();
+    if (p.dataset.dlWired) return;
+    p.dataset.dlWired = '1';
+    p.addEventListener('input', e => {
+      const t = e.target;
+      if (t.id === 'dlq') { st.q = t.value; st.fi = 0; drawList(); }
+      else if (t.dataset && t.dataset.dl === 'typed') typed[t.dataset.id] = t.value;
+    });
+    p.addEventListener('change', e => {
+      const t = e.target, k = {dldz: 'dz', dlcls: 'cls', dlpage: 'page', dlstatus: 'status'}[t.id];
+      if (k) { st[k] = t.value; st.fi = 0; drawList(); }
+    });
+    p.addEventListener('click', onClick);
+  }
+  function rerender(keepScroll){ const y = window.scrollY; render(pane); if (keepScroll) window.scrollTo(0, y); }
+  function onClick(e){
+    const b = e.target.closest('[data-dl]'); if (!b || b.tagName === 'TEXTAREA') return;
+    const a = b.dataset.dl, id = b.dataset.id, d = id && DL.D.find(x => x.id === id);
+    if (a === 'reveal' && d) {
+      if (revealed.has(id)) revealed.delete(id); else revealed.add(id);
+      const c = b.closest('.dlcard'), tmp = document.createElement('div'); tmp.innerHTML = card(d);
+      c.replaceWith(tmp.firstElementChild);
+      const nb = pane.querySelector(`.dlcard[data-id="${id}"] [data-dl="reveal"]`); if (nb) nb.focus();
+    }
+    else if (a === 'flag') { st[b.dataset.f] = !st[b.dataset.f]; st.fi = 0; rerender(true); }
+    else if (a === 'clear') { Object.assign(st, {q: '', dz: '', cls: '', page: '', status: '', boxed: false, photo: false, hasq: false, fi: 0}); rerender(true); }
+    else if (a === 'recall') { st.recall = !st.recall; rerender(true); }
+    else if (a === 'showcls') { st.showCls = !st.showCls; rerender(true); }
+    else if (a === 'revealall') { filtered().forEach(x => revealed.add(x.id)); drawList(); }
+    else if (a === 'hideall') { revealed.clear(); drawList(); }
+    else if (a === 'flash') { st.flash = !st.flash; st.fi = 0; if (st.flash) st.recall = true; rerender(true); }
+    else if (a === 'prev' || a === 'next') { st.fi += a === 'next' ? 1 : -1; drawList(); }
+    else if (a === 'cls') { Object.assign(st, {q: '', dz: '', page: '', status: '', boxed: false, photo: false, hasq: false, fi: 0, cls: b.dataset.cls}); rerender(); window.scrollTo(0, 0); }
+    else if (a === 'only' && d) { Object.assign(st, {q: d.name, dz: '', cls: '', page: '', status: '', boxed: false, photo: false, hasq: false, fi: 0}); rerender(); window.scrollTo(0, 0); }
+    else if ((a === 'quiz' || a === 'cquiz') && d) {
+      const pool = a === 'quiz' ? qs(d).own : qs(d).cls;
+      if (!pool.length) return;
+      RET.push({view: ID, y: window.scrollY});
+      drillList(pool, a === 'quiz' ? 'Drug list: ' + d.name : 'Drug list: ' + DL.CLASSES[d.cls]);
+      backBtn();
+    }
+    else if (a === 'ref') { jump('ref', b.dataset.a); }
+    else if (a === 'atlas') {
+      RET.push({view: ID, y: window.scrollY});
+      show('atlas'); backBtn();
+      const view = document.getElementById('v-atlas'), q = view && view.querySelector('#atq');
+      if (q && q.value) { q.value = ''; q.dispatchEvent(new Event('input', {bubbles: true})); }
+      // the Atlas controls (atlas_ui.js) key the tiles just after the Atlas is first drawn
+      const key = b.dataset.key;
+      const go = n => {
+        const t = view && view.querySelector(`.attile[data-key="${CSS.escape(key)}"]`);
+        if (!t) { if (n < 10) setTimeout(() => go(n + 1), 60); return; }
+        t.hidden = false; t.classList.add('dlhit'); setTimeout(() => t.classList.remove('dlhit'), 2600);
+        if (typeof scrollToEl === 'function') scrollToEl(t); else t.scrollIntoView();
+      };
+      go(0);
+    }
+  }
+
+  /* ---------- the tab: nav button, pane, and show() ---------- */
+  try {
+    const nav = document.getElementById('nav'), main = document.querySelector('main');
+    const sec = document.createElement('section'); sec.id = 'v-' + ID; sec.className = 'hide';
+    const atSec = document.getElementById('v-atlas');
+    if (atSec) main.insertBefore(sec, atSec); else main.appendChild(sec);
+    const btn = document.createElement('button'); btn.setAttribute('data-v', ID); btn.textContent = 'Drug list';
+    btn.onclick = () => show(ID);
+    const atBtn = nav.querySelector('button[data-v="atlas"]');
+    if (atBtn) nav.insertBefore(btn, atBtn); else nav.appendChild(btn);
+    const orig = show;
+    show = function(v){
+      const p = document.getElementById('v-' + ID);
+      if (v !== ID) { if (p) p.classList.add('hide'); return orig.apply(this, arguments); }
+      try {
+        if (typeof VIEW_NAME !== 'undefined' && !VIEW_NAME[ID]) VIEW_NAME[ID] = 'the drug list';
+        VIEW = v;
+        document.querySelectorAll('#nav button').forEach(b => b.setAttribute('aria-selected', b.dataset.v === v));
+        VIEWS.forEach(k => { const x = document.getElementById('v-' + k); if (x) x.classList.add('hide'); });
+        p.classList.remove('hide');
+        window.scrollTo(0, 0);
+        render(p);
+      } catch (e) {
+        console.error('The drug list could not be drawn; showing Topics.', e);
+        if (p) p.classList.add('hide');
+        return orig.call(this, 'topics');
+      }
+    };
+  } catch (e) { console.error('The Drug list tab could not be added; the rest of the page is unaffected.', e); }
+  return {render, state: st};
+})();
 
 /* Term glosses for the questions' explanations (see the kit's template for the format). */
 const GLOSS = [
@@ -10853,69 +11704,69 @@ const REFERENCE_HTML = `
 </tbody></table>
 
 <h3 id="ref-targets">Drug targets: write it first, then check</h3>
-<p class="prose">Every drug on the course dermatology drug chart, in the chart's order of pages, with its target or mechanism as Dr. Smith's slides give it; each row opens to show it. Dr. Smith: "Be able to not just recognize a drugs target, but be able to write it down" (Exam 1 hints, 2026-11-07). The chart is a guide; the slides decide the content. The lice and scabies page (chart p. 7) is not in the Exam 1 lectures and is left out.</p>
+<p class="prose">Every drug on the course dermatology drug chart, in the chart's order of pages, with its target or mechanism as Dr. Smith's slides give it; each row opens to show it. Dr. Smith: "Be able to not just recognize a drugs target, but be able to write it down" (Exam 1 hints, 2026-11-07). The chart is a guide; the slides decide the content. The lice and scabies page (chart p. 7) is not in the Exam 1 lectures and is left out. Where a drug is not on her slides, the row says whose statement each part is (Dr. Sikazwe, or the chart). The Drug list tab shows these rows card by card.</p>
 <h4>Atopic dermatitis (drug chart p. 2)</h4>
 <table class="reftab"><thead><tr><th>Drug</th><th style="width:24%">Source</th></tr></thead><tbody>
-<tr><td><details><summary><b>Crisaborole</b></summary>Phosphodiesterase 4 (PDE-4): cAMP is not broken down, so inflammatory cells are inhibited</details></td><td>PCol 32–33; 10/30 T 430–450</td></tr>
-<tr><td><details><summary><b>Pimecrolimus</b></summary>Calcineurin: less IL-2, less T-cell and mast cell activation</details></td><td>PCol 24–27; 10/30 T 360–365</td></tr>
-<tr><td><details><summary><b>Tacrolimus</b></summary>FKBP; the complex inhibits calcineurin</details></td><td>PCol 26</td></tr>
-<tr><td><details><summary><b>Dupilumab</b></summary>IL-4 receptor alpha subunit, shared by the IL-4 and IL-13 receptors</details></td><td>PCol 64</td></tr>
-<tr><td><details><summary><b>Ruxolitinib</b></summary>JAK1 and JAK2</details></td><td>PCol 76; T 574–576</td></tr>
-<tr><td><details><summary><b>Upadacitinib</b></summary>JAK: more potent at JAK1 and JAK2 than JAK3 and TYK2 in an enzyme assay; selectivity unsettled</details></td><td>PCol 76; T 576–578</td></tr>
+<tr id="tgt-crisaborole"><td><details><summary><b>Crisaborole</b></summary><span class="tg">Phosphodiesterase 4 (PDE-4)</span>: <span class="mo">cAMP is not broken down, so inflammatory cells are inhibited</span></details></td><td>PCol 32–33; 10/30 T 430–450</td></tr>
+<tr id="tgt-pimecrolimus"><td><details><summary><b>Pimecrolimus</b></summary><span class="tg">Calcineurin</span>: <span class="mo">less IL-2, less T-cell and mast cell activation</span></details></td><td>PCol 24–27; 10/30 T 360–365</td></tr>
+<tr id="tgt-tacrolimus"><td><details><summary><b>Tacrolimus</b></summary><span class="tg">FKBP</span>; <span class="mo">the complex inhibits calcineurin</span></details></td><td>PCol 26</td></tr>
+<tr id="tgt-dupilumab"><td><details><summary><b>Dupilumab</b></summary><span class="tg">IL-4 receptor alpha subunit, shared by the IL-4 and IL-13 receptors</span></details></td><td>PCol 64</td></tr>
+<tr id="tgt-ruxolitinib"><td><details><summary><b>Ruxolitinib</b></summary><span class="tg">JAK1 and JAK2</span></details></td><td>PCol 76; T 574–576</td></tr>
+<tr id="tgt-upadacitinib"><td><details><summary><b>Upadacitinib</b></summary><span class="tg">JAK</span>: <span class="mo">more potent at JAK1 and JAK2 than JAK3 and TYK2 in an enzyme assay; selectivity unsettled</span></details></td><td>PCol 76; T 576–578</td></tr>
 </tbody></table>
 <h4>Acne (drug chart p. 3)</h4>
 <table class="reftab"><thead><tr><th>Drug</th><th style="width:24%">Source</th></tr></thead><tbody>
-<tr><td><details><summary><b>Benzoyl peroxide</b></summary>Antimicrobial against P. acnes, plus peeling and comedolytic effects; benzoic acid is the probable active form</details></td><td>PCol 36</td></tr>
-<tr><td><details><summary><b>Sulfur</b></summary>Reduced to hydrogen sulfide in keratinocytes, which promotes peeling; bacteriostatic</details></td><td>PCol 38</td></tr>
-<tr><td><details><summary><b>Salicylic acid</b></summary>Solubilizes the cell surface proteins that keep the stratum corneum intact</details></td><td>PCol 39</td></tr>
-<tr><td><details><summary><b>Sarecycline, minocycline, doxycycline</b></summary>30S ribosomal subunit: blocks aminoacyl-tRNA binding at the acceptor site</details></td><td>PCol 43; T 27–31</td></tr>
-<tr><td><details><summary><b>Clindamycin</b></summary>50S ribosomal subunit: prevents translocation</details></td><td>PCol 46; T 53–55</td></tr>
-<tr><td><details><summary><b>Erythromycin, azithromycin</b></summary>50S ribosomal subunit</details></td><td>PCol 47</td></tr>
-<tr><td><details><summary><b>Trimethoprim/sulfamethoxazole</b></summary>Sulfamethoxazole: competes with PABA, blocking dihydrofolic acid synthesis. Trimethoprim: bacterial dihydrofolate reductase</details></td><td>PCol 48–49</td></tr>
-<tr><td><details><summary><b>Dapsone</b></summary>Leprosy: PABA antagonist. Acne (topical gel): anti-inflammatory; neutrophils a possible site</details></td><td>PCol 50</td></tr>
-<tr><td><details><summary><b>Metronidazole</b></summary>Unknown: may act on Demodex brevis or on neutrophil function</details></td><td>PCol 51</td></tr>
-<tr><td><details><summary><b>Tretinoin, adapalene</b></summary>Retinoic acid receptors RAR and RXR (nuclear receptors; RAR–RXR binds the RARE)</details></td><td>PCol 14, 17–18</td></tr>
-<tr><td><details><summary><b>Isotretinoin</b></summary>Retinoid (RAR/RXR); in cystic acne the mechanism is not known; appears to inhibit sebaceous gland size and function</details></td><td>PCol 14, 19</td></tr>
-<tr><td><details><summary><b>Spironolactone</b></summary>Antiandrogen (Dr. Smith gives the class only). Dr. Sikazwe: diminishes testosterone biosynthesis</details></td><td>Pathophys 37; DPAW 53</td></tr>
+<tr id="tgt-bpo"><td><details><summary><b>Benzoyl peroxide</b></summary><span class="tg">Antimicrobial against P. acnes, plus peeling and comedolytic effects</span>; <span class="mo">benzoic acid is the probable active form</span></details></td><td>PCol 36</td></tr>
+<tr id="tgt-sulfur"><td><details><summary><b>Sulfur</b></summary><span class="mo">Reduced to hydrogen sulfide in keratinocytes, which promotes peeling</span>; <span class="tg">bacteriostatic</span></details></td><td>PCol 38</td></tr>
+<tr id="tgt-salicylic"><td><details><summary><b>Salicylic acid</b></summary><span class="tg">Solubilizes the cell surface proteins that keep the stratum corneum intact</span></details></td><td>PCol 39</td></tr>
+<tr id="tgt-tetracyclines"><td><details><summary><b>Sarecycline, minocycline, doxycycline</b></summary><span class="tg">30S ribosomal subunit</span>: <span class="mo">blocks aminoacyl-tRNA binding at the acceptor site</span></details></td><td>PCol 43; T 27–31</td></tr>
+<tr id="tgt-clindamycin"><td><details><summary><b>Clindamycin</b></summary><span class="tg">50S ribosomal subunit</span>: <span class="mo">prevents translocation</span></details></td><td>PCol 46; T 53–55</td></tr>
+<tr id="tgt-macrolides"><td><details><summary><b>Erythromycin, azithromycin</b></summary><span class="tg">50S ribosomal subunit</span></details></td><td>PCol 47</td></tr>
+<tr id="tgt-tmpsmx"><td><details><summary><b>Trimethoprim/sulfamethoxazole</b></summary><span class="mo">Sulfamethoxazole: competes with PABA, blocking dihydrofolic acid synthesis.</span> <span class="tg">Trimethoprim: bacterial dihydrofolate reductase</span></details></td><td>PCol 48–49</td></tr>
+<tr id="tgt-dapsone"><td><details><summary><b>Dapsone</b></summary><span class="tg">Leprosy: PABA antagonist.</span> <span class="mo">Acne (topical gel): anti-inflammatory; neutrophils a possible site</span></details></td><td>PCol 50</td></tr>
+<tr id="tgt-metronidazole"><td><details><summary><b>Metronidazole</b></summary><span class="tg">Unknown: may act on Demodex brevis or on neutrophil function</span></details></td><td>PCol 51</td></tr>
+<tr id="tgt-topretinoids"><td><details><summary><b>Tretinoin, adapalene</b></summary><span class="tg">Retinoic acid receptors RAR and RXR</span> <span class="mo">(nuclear receptors; RAR–RXR binds the RARE)</span></details></td><td>PCol 14, 17–18</td></tr>
+<tr id="tgt-isotretinoin"><td><details><summary><b>Isotretinoin</b></summary><span class="tg">Retinoid (RAR/RXR)</span>; <span class="mo">in cystic acne the mechanism is not known; appears to inhibit sebaceous gland size and function</span></details></td><td>PCol 14, 19</td></tr>
+<tr id="tgt-spironolactone"><td><details><summary><b>Spironolactone</b></summary><span class="tg" data-by="smith" data-cite="Pathophys 37">Dr. Smith: antiandrogen (her slide gives the class for acne, not the drug's target or mechanism).</span> <span class="mo" data-by="sikazwe" data-cite="DPAW 53; 11/04 T@32150–32300">Dr. Sikazwe: diminishes testosterone biosynthesis.</span> Two lecturers' statements, kept apart.</details></td><td>Pathophys 37 (Smith); DPAW 53, 11/04 T@32150–32300 (Sikazwe)</td></tr>
 </tbody></table>
 <h4>Psoriasis (drug chart pp. 4–5)</h4>
 <table class="reftab"><thead><tr><th>Drug</th><th style="width:24%">Source</th></tr></thead><tbody>
-<tr><td><details><summary><b>Coal tar</b></summary>Antiproliferative and anti-inflammatory; crosslinks DNA to inhibit cell division (mechanism not fully known)</details></td><td>PCol 53</td></tr>
-<tr><td><details><summary><b>Shale tar (ichthammol)</b></summary>Cytotoxic; mechanism unknown</details></td><td>PCol 57</td></tr>
-<tr><td><details><summary><b>Selenium sulfide, zinc pyrithione</b></summary>Cytostatic and antifungal; mechanism unknown</details></td><td>PCol 57</td></tr>
-<tr><td><details><summary><b>Anthralin</b></summary>Exact mechanism not known: may act on keratinocyte mitochondria, reducing mitotic activity; also prevents T-lymphocyte activation</details></td><td>PCol 55</td></tr>
-<tr><td><details><summary><b>Methotrexate</b></summary>Dihydrofolate reductase (DHFR): less THF, fewer purines</details></td><td>PCol 59; T 215–220</td></tr>
-<tr><td><details><summary><b>Abatacept</b></summary>CD80/86 on antigen-presenting cells, so CD28 cannot bind (blocks positive signal 2)</details></td><td>PCol 63; T 316–323</td></tr>
-<tr><td><details><summary><b>Etanercept, adalimumab, infliximab, golimumab, certolizumab pegol</b></summary>TNF-α, kept from its receptors on inflammatory cells</details></td><td>PCol 70–74; T 493–495</td></tr>
-<tr><td><details><summary><b>Tofacitinib</b></summary>Janus kinase (JAK)</details></td><td>PCol 76</td></tr>
-<tr><td><details><summary><b>Ustekinumab</b></summary>p40 subunit shared by IL-12 and IL-23</details></td><td>PCol 67</td></tr>
-<tr><td><details><summary><b>Guselkumab, tildrakizumab-asmn, risankizumab</b></summary>p19 subunit of IL-23</details></td><td>PCol 68–69</td></tr>
-<tr><td><details><summary><b>Secukinumab, ixekizumab</b></summary>IL-17A cytokine</details></td><td>PCol 66</td></tr>
-<tr><td><details><summary><b>Brodalumab</b></summary>IL-17 receptor A</details></td><td>PCol 66; T 422</td></tr>
-<tr><td><details><summary><b>Acitretin, tazarotene</b></summary>Retinoic acid receptors RAR and RXR</details></td><td>PCol 14, 18, 20</td></tr>
-<tr><td><details><summary><b>Calcipotriene</b></summary>Vitamin D receptor (VDR), which pairs with RXR-α</details></td><td>PCol 21</td></tr>
-<tr><td><details><summary><b>Methoxsalen</b></summary>DNA: intercalates after activation by UVA (320–340 nm)</details></td><td>PCol 78; Sun 3</td></tr>
-<tr><td><details><summary><b>Cyclosporine</b></summary>Cyclophilin; the complex inhibits calcineurin</details></td><td>PCol 26</td></tr>
-<tr><td><details><summary><b>Apremilast</b></summary>Phosphodiesterase 4 (PDE-4), as crisaborole</details></td><td>PCol 34; 10/30 T 464–466</td></tr>
-<tr><td><details><summary><b>Petrolatum</b></summary>Emollient, no drug target (chart). Dr. Sikazwe: fills gaps between scales and prevents water loss</details></td><td>Chart p. 5; DPAW 15</td></tr>
-<tr><td><details><summary><b>Zinc oxide (skin protectant)</b></summary>Physical sunscreen, no drug target (chart); as a sunblock it scatters and reflects UV</details></td><td>Chart p. 5; Sun 20</td></tr>
-<tr><td><details><summary><b>Ketoconazole</b></summary>Azole antifungal (chart). Dr. Sikazwe: diminishes testosterone biosynthesis; strong CYP3A4 inhibitor</details></td><td>Chart p. 5; DPAW 53</td></tr>
+<tr id="tgt-coaltar"><td><details><summary><b>Coal tar</b></summary><span class="tg">Antiproliferative and anti-inflammatory</span>; <span class="mo">crosslinks DNA to inhibit cell division (mechanism not fully known)</span></details></td><td>PCol 53</td></tr>
+<tr id="tgt-shaletar"><td><details><summary><b>Shale tar (ichthammol)</b></summary><span class="tg">Cytotoxic; mechanism unknown</span></details></td><td>PCol 57</td></tr>
+<tr id="tgt-selzinc"><td><details><summary><b>Selenium sulfide, zinc pyrithione</b></summary><span class="tg">Cytostatic and antifungal; mechanism unknown</span></details></td><td>PCol 57</td></tr>
+<tr id="tgt-anthralin"><td><details><summary><b>Anthralin</b></summary><span class="tg">Exact mechanism not known: may act on keratinocyte mitochondria</span>, <span class="mo">reducing mitotic activity; also prevents T-lymphocyte activation</span></details></td><td>PCol 55</td></tr>
+<tr id="tgt-methotrexate"><td><details><summary><b>Methotrexate</b></summary><span class="tg">Dihydrofolate reductase (DHFR)</span>: <span class="mo">less THF, fewer purines</span></details></td><td>PCol 59; T 215–220</td></tr>
+<tr id="tgt-abatacept"><td><details><summary><b>Abatacept</b></summary><span class="tg">CD80/86 on antigen-presenting cells</span>, <span class="mo">so CD28 cannot bind (blocks positive signal 2)</span></details></td><td>PCol 63; T 316–323</td></tr>
+<tr id="tgt-tnf"><td><details><summary><b>Etanercept, adalimumab, infliximab, golimumab, certolizumab pegol</b></summary><span class="tg">TNF-α</span>, <span class="mo">kept from its receptors on inflammatory cells</span></details></td><td>PCol 70–74; T 493–495</td></tr>
+<tr id="tgt-tofacitinib"><td><details><summary><b>Tofacitinib</b></summary><span class="tg">Janus kinase (JAK)</span></details></td><td>PCol 76</td></tr>
+<tr id="tgt-ustekinumab"><td><details><summary><b>Ustekinumab</b></summary><span class="tg">p40 subunit shared by IL-12 and IL-23</span></details></td><td>PCol 67</td></tr>
+<tr id="tgt-il23"><td><details><summary><b>Guselkumab, tildrakizumab-asmn, risankizumab</b></summary><span class="tg">p19 subunit of IL-23</span></details></td><td>PCol 68–69</td></tr>
+<tr id="tgt-il17a"><td><details><summary><b>Secukinumab, ixekizumab</b></summary><span class="tg">IL-17A cytokine</span></details></td><td>PCol 66</td></tr>
+<tr id="tgt-brodalumab"><td><details><summary><b>Brodalumab</b></summary><span class="tg">IL-17 receptor A</span></details></td><td>PCol 66; T 422</td></tr>
+<tr id="tgt-acitazar"><td><details><summary><b>Acitretin, tazarotene</b></summary><span class="tg">Retinoic acid receptors RAR and RXR</span></details></td><td>PCol 14, 18, 20</td></tr>
+<tr id="tgt-calcipotriene"><td><details><summary><b>Calcipotriene</b></summary><span class="tg">Vitamin D receptor (VDR)</span>, <span class="mo">which pairs with RXR-α</span></details></td><td>PCol 21</td></tr>
+<tr id="tgt-methoxsalen"><td><details><summary><b>Methoxsalen</b></summary><span class="tg">DNA</span>: <span class="mo">intercalates after activation by UVA (320–340 nm)</span></details></td><td>PCol 78; Sun 3</td></tr>
+<tr id="tgt-cyclosporine"><td><details><summary><b>Cyclosporine</b></summary><span class="tg">Cyclophilin</span>; <span class="mo">the complex inhibits calcineurin</span></details></td><td>PCol 26</td></tr>
+<tr id="tgt-apremilast"><td><details><summary><b>Apremilast</b></summary><span class="tg">Phosphodiesterase 4 (PDE-4)</span>, <span class="mo">as crisaborole</span></details></td><td>PCol 34; 10/30 T 464–466</td></tr>
+<tr id="tgt-petrolatum"><td><details><summary><b>Petrolatum</b></summary><span class="tg" data-by="chart" data-cite="Chart p. 5">Emollient, no drug target (chart).</span> <span class="mo" data-by="sikazwe" data-cite="DPAW 15">Dr. Sikazwe: fills gaps between scales and prevents water loss</span></details></td><td>Chart p. 5; DPAW 15</td></tr>
+<tr id="tgt-zincprot"><td><details><summary><b>Zinc oxide (skin protectant)</b></summary><span class="tg" data-by="chart" data-cite="Chart p. 5">Physical sunscreen, no drug target (chart)</span>; <span class="mo" data-by="smith" data-cite="Sun 20">as a sunblock it scatters and reflects UV</span></details></td><td>Chart p. 5; Sun 20</td></tr>
+<tr id="tgt-ketoconazole"><td><details><summary><b>Ketoconazole</b></summary><span class="tg" data-by="chart" data-cite="Chart p. 5">Azole antifungal (chart).</span> <span class="mo" data-by="sikazwe" data-cite="DPAW 53">Dr. Sikazwe: diminishes testosterone biosynthesis; strong CYP3A4 inhibitor</span></details></td><td>Chart p. 5; DPAW 53</td></tr>
 </tbody></table>
 <h4>Topical steroids (drug chart p. 6)</h4>
 <table class="reftab"><thead><tr><th>Drug</th><th style="width:24%">Source</th></tr></thead><tbody>
-<tr><td><details><summary><b>Clobetasol propionate to hydrocortisone (all potency classes)</b></summary>Glucocorticoid receptor; the drug–receptor complex binds the GRE or holds NF-kB and AP-1 off the DNA</details></td><td>PCol 5–7, 10</td></tr>
+<tr id="tgt-steroids"><td><details><summary><b>Clobetasol propionate to hydrocortisone (all potency classes)</b></summary><span class="tg">Glucocorticoid receptor</span>; <span class="mo">the drug–receptor complex binds the GRE or holds NF-kB and AP-1 off the DNA</span></details></td><td>PCol 5–7, 10</td></tr>
 </tbody></table>
 <h4>Sun protection (drug chart p. 1)</h4>
 <table class="reftab"><thead><tr><th>Drug</th><th style="width:24%">Source</th></tr></thead><tbody>
-<tr><td><details><summary><b>Padimate O (octyl dimethyl PABA)</b></summary>Organic sunscreen (aminobenzoate): absorbs UV, mainly UVB, and releases heat</details></td><td>Chart p. 1 (ingredient and family); Sun 22, 24</td></tr>
-<tr><td><details><summary><b>Octyl methoxycinnamate</b></summary>Organic sunscreen (cinnamate): absorbs UV and releases heat</details></td><td>Chart p. 1 (ingredient and family); Sun 22, 24</td></tr>
-<tr><td><details><summary><b>Homosalate, 2-ethylhexyl salicylate</b></summary>Organic sunscreen (salicylate): absorbs UV and releases heat</details></td><td>Chart p. 1 (ingredient and family); Sun 22, 24</td></tr>
-<tr><td><details><summary><b>Oxybenzone, dioxybenzone</b></summary>Organic sunscreen (benzophenone): absorbs UV and releases heat</details></td><td>Chart p. 1 (ingredient and family); Sun 22, 24</td></tr>
-<tr><td><details><summary><b>Menthyl anthranilate</b></summary>Organic sunscreen (anthranilate), in combination products for broad coverage</details></td><td>Chart p. 1 (ingredient and family); Sun 22, 24</td></tr>
-<tr><td><details><summary><b>Avobenzone</b></summary>Organic sunscreen (dibenzoylmethane): absorbs UV and releases heat</details></td><td>Chart p. 1 (ingredient and family); Sun 22, 24</td></tr>
-<tr><td><details><summary><b>Bemotrizinol</b></summary>Organic chemical sunscreen (chart); Dr. Sikazwe: UVB/UVA chromophore</details></td><td>Chart p. 1; DPAW 66</td></tr>
-<tr><td><details><summary><b>Zinc oxide, titanium dioxide</b></summary>Physical sunblock: inorganic particles scatter or reflect UV (UVA and UVB)</details></td><td>Sun 20</td></tr>
-<tr><td><details><summary><b>Benzocaine, dibucaine, tetracaine, lidocaine</b></summary>Chart class: Na channel blockers (topical anesthetics for sunburn relief); not on her sun slides</details></td><td>Chart p. 1</td></tr>
+<tr id="tgt-padimate"><td><details><summary><b>Padimate O (octyl dimethyl PABA)</b></summary><span class="tg" data-by="chart" data-cite="Chart p. 1">Organic sunscreen (aminobenzoate)</span>: <span class="mo" data-by="smith" data-cite="Sun 22, 24">absorbs UV, mainly UVB, and releases heat</span></details></td><td>Chart p. 1 (ingredient and family); Sun 22, 24</td></tr>
+<tr id="tgt-octinoxate"><td><details><summary><b>Octyl methoxycinnamate</b></summary><span class="tg" data-by="chart" data-cite="Chart p. 1">Organic sunscreen (cinnamate)</span>: <span class="mo" data-by="smith" data-cite="Sun 22">absorbs UV and releases heat</span></details></td><td>Chart p. 1 (ingredient and family); Sun 22, 24</td></tr>
+<tr id="tgt-salicylates"><td><details><summary><b>Homosalate, 2-ethylhexyl salicylate</b></summary><span class="tg" data-by="chart" data-cite="Chart p. 1">Organic sunscreen (salicylate)</span>: <span class="mo" data-by="smith" data-cite="Sun 22">absorbs UV and releases heat</span></details></td><td>Chart p. 1 (ingredient and family); Sun 22, 24</td></tr>
+<tr id="tgt-benzophenones"><td><details><summary><b>Oxybenzone, dioxybenzone</b></summary><span class="tg" data-by="chart" data-cite="Chart p. 1">Organic sunscreen (benzophenone)</span>: <span class="mo" data-by="smith" data-cite="Sun 22">absorbs UV and releases heat</span></details></td><td>Chart p. 1 (ingredient and family); Sun 22, 24</td></tr>
+<tr id="tgt-anthranilate"><td><details><summary><b>Menthyl anthranilate</b></summary><span class="tg" data-by="chart" data-cite="Chart p. 1">Organic sunscreen (anthranilate)</span>, <span class="mo" data-by="smith" data-cite="Sun 24">in combination products for broad coverage</span></details></td><td>Chart p. 1 (ingredient and family); Sun 22, 24</td></tr>
+<tr id="tgt-avobenzone"><td><details><summary><b>Avobenzone</b></summary><span class="tg" data-by="chart" data-cite="Chart p. 1">Organic sunscreen (dibenzoylmethane)</span>: <span class="mo" data-by="smith" data-cite="Sun 22">absorbs UV and releases heat</span></details></td><td>Chart p. 1 (ingredient and family); Sun 22, 24</td></tr>
+<tr id="tgt-bemotrizinol"><td><details><summary><b>Bemotrizinol</b></summary><span class="tg" data-by="chart" data-cite="Chart p. 1">Organic chemical sunscreen (chart)</span>; <span class="mo" data-by="sikazwe" data-cite="DPAW 66">Dr. Sikazwe: UVB/UVA chromophore</span></details></td><td>Chart p. 1; DPAW 66</td></tr>
+<tr id="tgt-sunblocks"><td><details><summary><b>Zinc oxide, titanium dioxide</b></summary><span class="tg">Physical sunblock</span>: <span class="mo">inorganic particles scatter or reflect UV (UVA and UVB)</span></details></td><td>Sun 20</td></tr>
+<tr id="tgt-anesthetics" data-by="chart"><td><details><summary><b>Benzocaine, dibucaine, tetracaine, lidocaine</b></summary><span class="tg">Chart class: Na channel blockers (topical anesthetics for sunburn relief)</span>; not on her sun slides</details></td><td>Chart p. 1</td></tr>
 </tbody></table>
 
 <h3 id="ref-s3">Lecture 3: Sikazwe, 11/03 (DPAW pages 1–26)</h3>
