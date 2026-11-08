@@ -8,6 +8,10 @@ characters.
 
 Every update adds its bullets here in the same commit that makes the change.
 
+## 2026-11-08 (Topics folders)
+- Topics: each slide deck is a folder that opens and closes; folders start closed and stay as you left them.
+- Topics: the exam's date, coverage, format and bank are a short card of labelled rows; more facts fold below it.
+
 ## 2026-11-08 (Engine update)
 - Topics opens with a "Start here" block: learn a topic, start practice, review weak concepts or take a paper.
 - Dr. Sikazwe's slides outside his assigned pages form one Optional topic, listed last and kept off exam papers.
