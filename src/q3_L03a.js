@@ -101,7 +101,7 @@ QUESTIONS.push(
  options:[
   {t:'Stop the doxycycline', correct:true, why:'Blood in the stool suggests pseudomembranous colitis; "they need to stop taking these medications" (T 38–41; slide 44).'},
   {t:'Take it with milk to settle the gut', correct:false, why:'Not advised; blood in the stool is a reason to stop (T 40–41).'},
-  {t:'Switch to a higher dose', correct:false, why:'The GI effect is from the drug; more drug does not help (T 37–41).'},
+  {t:'Switch to oral clindamycin', correct:false, why:'Oral clindamycin also causes pseudomembranous colitis (slide 46); the doxycycline is stopped (T 39–40).'},
   {t:'Continue and add an antacid', correct:false, why:'She said to stop the drug when blood appears (T 40–41).'}],
  teach:'GI nausea, vomiting and diarrhea from tetracyclines can be significant, and some patients develop pseudomembranous colitis, an inflammation of the GI tract; blood in the stool means the drug must be stopped (slide 44; T 36–41).',
  cite:D3+' slide 44; T 36–41'},
@@ -167,7 +167,7 @@ QUESTIONS.push(
  options:[
   {t:'The class should not be used in pregnancy', correct:true, why:'Slide 45: should not be used during pregnancy or in patients younger than 8 years.'},
   {t:'It is too weak to clear acne during pregnancy', correct:false, why:'Slide 45: tetracyclines are effective and inexpensive.'},
-  {t:'It must be given by IV infusion', correct:false, why:'It is given orally for acne (slide 44, oral tetracyclines).'},
+  {t:'It is acceptable after the first trimester', correct:false, why:'Slide 45: tetracyclines should not be used during pregnancy.'},
   {t:'It causes cumulative liver toxicity', correct:false, why:'That is methotrexate (slide 61; T 237–240).'}],
  teach:'Slide 45: tetracyclines should not be used during pregnancy or in patients younger than 8 years, because they discolor bones and teeth and impair growth (slide 44; T 41–42).',
  cite:D3+' slides 44–45; T 41–42'},
@@ -202,7 +202,7 @@ QUESTIONS.push(
  options:[
   {t:'About 10% of the applied dose is absorbed', correct:true, why:'Slide 46; T 59–61: even that smallish absorption leaves a (rare) risk.'},
   {t:'The foam vehicle irritates the gut', correct:false, why:'The vehicles cause drying and irritation of the skin (slide 46; T 61–63).'},
-  {t:'It is converted to a macrolide in the skin', correct:false, why:'Not stated; clindamycin itself is absorbed (slide 46).'},
+  {t:'About 1% of an applied dose is absorbed into blood', correct:false, why:'Slide 46 gives about 10% of the applied dose absorbed.'},
   {t:'About 90% of the dose reaches the blood', correct:false, why:'Slide 46 gives approximately 10%, not 90%.'}],
  teach:'Approximately 10% of an applied topical dose of clindamycin is absorbed, so there is still a risk, though rare, of pseudomembranous colitis (slide 46; T 58–61). The Katzung reading gives the same figure.',
  cite:D3+' slide 46; T 58–61'},
@@ -621,7 +621,7 @@ QUESTIONS.push(
  stem:'How is the liver protected during long-term methotrexate therapy for psoriasis?',
  options:[
   {t:'Stop at the cumulative dose limit', correct:true, why:'T 239–240: "Once they reach that cumulative dose, we have to stop them".'},
-  {t:'Give it with an antacid', correct:false, why:'Not the measure she described (T 239–240).'},
+  {t:'Monitor blood counts at each visit', correct:false, why:'Blood counts look for the rare blood problems (slide 61); the liver is protected by the cumulative dose limit (T 237–247).'},
   {t:'Premedicate with a corticosteroid each time', correct:false, why:'Premedication is for infliximab infusion reactions (slide 72; T 521–522).'},
   {t:'Switch to the topical form', correct:false, why:'Methotrexate is discussed as a tablet (T 249).'}],
  teach:'Because the liver toxicity is cumulative, the total methotrexate dose a patient has received is followed and the drug is stopped at the cumulative dose (T 237–240).',
@@ -632,7 +632,7 @@ QUESTIONS.push(
  stem:'Why are periodic blood counts done in patients taking methotrexate?',
  options:[
   {t:'To catch rare blood problems', correct:true, why:'Slide 61; T 241–244: rare, but watched for.'},
-  {t:'To measure the drug\'s IgE effect', correct:false, why:'IgE reduction is dupilumab (slide 64).'},
+  {t:'To track its cumulative liver toxicity', correct:false, why:'Liver toxicity is tracked through the cumulative dose (T 237–247); blood counts look for pancytopenia and myelosuppression (slide 61).'},
   {t:'To screen for tuberculosis', correct:false, why:'TB screening is stated for secukinumab and ustekinumab (slides 66–67).'},
   {t:'To detect anti-drug antibodies', correct:false, why:'Anti-drug antibodies are an infliximab problem (slide 72).'}],
  teach:'Blood problems with methotrexate (megaloblastic anemia, increased lymphoma, pancytopenia) are rare, but patients get blood counts at regular intervals (slide 61; T 241–244). Slide 61 also lists nausea, pulmonary toxicity and acute myelosuppression.',
@@ -655,7 +655,7 @@ QUESTIONS.push(
  options:[
   {t:'On a separate counting tray, with gloves', correct:true, why:'"Methotrexate should be counted on a separate counting tray, and women ... should be using gloves" (T 253–255).'},
   {t:'On the shared tray, then crushed', correct:false, why:'A separate tray is used, kept in its own area (T 253–260).'},
-  {t:'In a refrigerator to protect the tablet coating', correct:false, why:'Not stated; she described an uncoated tablet counted on its own tray (T 249–255).'},
+  {t:'On a separate counting tray, without gloves', correct:false, why:'She named both a separate counting tray and gloves (T 253–255).'},
   {t:'By the patient at home', correct:false, why:'Not stated (T 253–260).'}],
  teach:'Because methotrexate is abortifacient and teratogenic, it is counted on a separate counting tray kept in its own area, and women handling it should wear gloves (T 247–260).',
  cite:D3+' slide 61; T 247–260'},
@@ -1115,7 +1115,7 @@ QUESTIONS.push(
   {t:'Patients make antibodies against the chimeric drug', correct:true, why:'Slide 72; T 513–518.'},
   {t:'TNF receptors on inflammatory cells are downregulated', correct:false, why:'Not the reason given; the body makes antibodies against the drug (T 513–518).'},
   {t:'The liver toxicity limit is reached', correct:false, why:'A cumulative liver limit is methotrexate (slide 61).'},
-  {t:'Bacteria become resistant', correct:false, why:'Resistance applies to the acne antibiotics (slides 46–47).'}],
+  {t:'Patients make antibodies against its PEG group', correct:false, why:'Infliximab is not pegylated (certolizumab is, slide 74); the antibodies are against the chimeric drug (slide 72).'}],
  teach:'Because infliximab is chimeric ("mousy"), many patients make antibodies against it; the body fights and breaks down the drug, so it is less effective (slide 72; T 513–518). Slide 72 gives antibodies in 14% to 40% of patients.',
  note:'She said "up to 40%" (T 518); slide 72 says 14% to 40%. No option uses the number.',
  cite:D3+' slide 72; T 513–518'},
@@ -1125,7 +1125,7 @@ QUESTIONS.push(
  stem:'What is done to prevent infusion reactions to infliximab?',
  options:[
   {t:'Premedicate with diphenhydramine or a steroid', correct:true, why:'Slide 72 ("premedicate"); T 519–522 (diphenhydramine, which she named by brand, or steroids).'},
-  {t:'Give it with zinc oxide paste', correct:false, why:'Zinc oxide protects skin in SCAT (slide 56).'},
+  {t:'Give it subcutaneously instead', correct:false, why:'Infliximab is given by IV infusion (slide 72); the reactions come from antibodies to the chimeric drug, and the remedy is premedication.'},
   {t:'Stop it for 15 weeks before each infusion is due', correct:false, why:'The 15-week stop is ustekinumab before live vaccines (slide 67).'},
   {t:'Count it on a separate tray', correct:false, why:'That is methotrexate dispensing (T 253–255).'}],
  teach:'Infliximab can cause acute (within 24 hours) and delayed (24 hours to 14 days) infusion reactions (slide 72) with chills, fever and itch, which can be anaphylactic; patients are premedicated with diphenhydramine or steroids (T 519–522).',
@@ -1172,7 +1172,7 @@ QUESTIONS.push(
   {t:'Greatly lengthens its half-life', correct:true, why:'"We increase its half-life by a lot" (T 547–548; slide 74).'},
   {t:'Lets it enter keratinocytes', correct:false, why:'Entering cells is the small molecule JAK inhibitors (T 570–573).'},
   {t:'Makes it bind the TNF receptor instead', correct:false, why:'It is a Fab fragment against TNF-α (slide 74).'},
-  {t:'Lets it be taken by mouth', correct:false, why:'It is given subcutaneously (slide 74; T 549).'}],
+  {t:'Makes it bind TNF more tightly', correct:false, why:'Slide 74: the PEG is attached for a longer half-life, not for binding.'}],
  teach:'Certolizumab pegol is a Fab fragment of a humanized anti-TNF-α antibody attached to polyethylene glycol; linking PEG to a biological product increases its half-life a great deal, so it is dosed SubQ every other week (slide 74; T 546–550).',
  cite:D3+' slide 74; T 546–550'},
 

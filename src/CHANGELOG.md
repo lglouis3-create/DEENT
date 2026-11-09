@@ -8,6 +8,12 @@ characters.
 
 Every update adds its bullets here in the same commit that makes the change.
 
+## 2026-11-09 (Harder practice, Lectures 1–4)
+- 84 harder questions on Dr. Smith's lectures: finer slide details, two facts in one question and closer answer choices.
+- 45 harder questions on Dr. Sikazwe's assigned pages: enzymes, organs, chemical classes and pairs that look alike.
+- They sit in the same topics as the earlier questions; 30 of them, on facts already starred, carry the star.
+- 36 older questions get a closer wrong answer in place of one that was easy to rule out.
+
 ## 2026-11-09 (Listen to the figures)
 - Every step-through figure with narration has a Listen button: it reads each step and moves the figure on as it goes.
 - All 40 narrated figures, Dr. Smith's and Dr. Sikazwe's and the vitamin D reading's, use the walkthroughs' narrator.

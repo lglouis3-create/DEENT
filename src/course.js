@@ -211,6 +211,8 @@ const COURSE = {
           // Mechanism step-throughs from Dr. Smith's PCol slides (Louis, 2026-11-09): adds to DIA
           'moa_figs.js',
           'q1_topics.js', 'q2_L02.js', 'q3_L03a.js', 'q4_L03b.js', 'q5_L04.js', 'q6_L03c.js',
+          // harder practice for Exam 2 (Louis, 11/09: finer details, two facts combined, closer choices)
+          'q8_hard_smith.js', 'q9_hard_sik.js',
           // the step-throughs of moa_figs.js in the explanations of the matching Smith questions
           'moa_links.js',
           // Drug list tab (temporary course-level presentation, to be replaced by the kit's

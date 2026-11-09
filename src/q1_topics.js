@@ -456,7 +456,7 @@ const QUESTIONS = [
  options:[
   {t:'The pilosebaceous unit', correct:true, why:'Slide 30: a common, self-limiting disease of the pilosebaceous units, typically on the face, upper back and chest.'},
   {t:'The stratum basale', correct:false, why:'The stratum basale is where keratinocytes start (slide 5); acne begins in the follicle.'},
-  {t:'The dermal blood vessels', correct:false, why:'Not the site named on slide 30.'},
+  {t:'The sebaceous gland alone', correct:false, why:'Slide 30: the pilosebaceous unit, the hair follicle with its sebaceous gland, not the gland alone.'},
   {t:'The hypodermis', correct:false, why:'The hypodermis is the inner fat-containing layer (slide 5).'}],
  teach:'The pilosebaceous unit is the hair follicle together with its sebaceous gland (T 407–411).',
  cite:PP+' slides 5, 30; T 407–411'},
@@ -760,7 +760,7 @@ const QUESTIONS = [
   {t:'Too much reaches the systemic circulation', correct:true, why:'(T 829–834) "you\'ll get too much absorption into the systemic circulation"; PC slide 11: hydration or occlusion alters absorption.'},
   {t:'The steroid is inactivated by sweat', correct:false, why:'Not a reason given; the concern is more absorption, not less activity.'},
   {t:'The vehicle cannot penetrate', correct:false, why:'The opposite: occluded or broken skin lets more drug through (T 826–834).'},
-  {t:'It raises sebum production', correct:false, why:'Sebum is not part of the steroid absorption discussion (PC slide 11).'}],
+  {t:'It causes allergic contact dermatitis from the vehicle', correct:false, why:'Contact dermatitis is often from the vehicle (PCol slide 12); occlusion and broken skin raise absorption into the circulation (slide 11).'}],
  teach:'The goal in AD and psoriasis is a local effect in the skin. Wet or occluded skin, or a change of vehicle, alters absorption (PC slide 11; T 826–834).',
  cite:PC+' slide 11; T 826–834'},
 

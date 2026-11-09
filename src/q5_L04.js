@@ -515,7 +515,7 @@ QUESTIONS.push(
   {t:'Cancer and arthritic conditions', correct:true, why:'"It is used in cancer chemotherapy. It is used in some arthritic conditions. And here we are using it for psoriasis" (T@7980–8200).'},
   {t:'Acne and age spots', correct:false, why:'Not uses he gave for methotrexate; acne drugs are on slide 42, hydroquinone treats age spots (slide 67).'},
   {t:'Fungal infection and hypertension', correct:false, why:'Not uses he gave; azole antifungals were taught for their 3A4 inhibition (slide 53).'},
-  {t:'Hypocalcemia and bone loss', correct:false, why:'Calcium and bone relate to the vitamin D analogs (slide 27).'}],
+  {t:'Leprosy and acne', correct:false, why:'Those are the two uses of dapsone in Dr. Smith\'s pharmacology slides (PCol slide 50), not methotrexate.'}],
  teach:'"So, that means it has multi-target capabilities. And it can act in different mechanisms" (T@8150–8238). Slide 30 adds immunosuppressant and anti-inflammatory activities to the antiproliferative action.',
  cite:S4+' slide 30; T@7980–8238'},
 
@@ -550,7 +550,7 @@ QUESTIONS.push(
   {t:'By complexing with cyclophilin', correct:true, why:'Slide 33: "Activated by complexation with cyclophilin receptor"; "how it\'s bioactivated is not metabolic. It\'s simply by its binding to its receptor" (T@12289–12500).'},
   {t:'By CYP3A4 oxidation in the liver', correct:false, why:'CYP3A4 metabolizes and inactivates cyclosporine in first pass (slide 33); activation is not metabolic.'},
   {t:'By carboxylesterase hydrolysis', correct:false, why:'That activates the ester prodrugs tazarotene and etretinate (slides 29, 50).'},
-  {t:'By UV light breaking a ring', correct:false, why:'UV opens the B ring of 7-dehydrocholesterol (slide 27; Bikle, Endotext 2025, Overview).'}],
+  {t:'By complexing with FKBP', correct:false, why:'FKBP is the binding protein of tacrolimus (PCol slide 26); cyclosporine pairs with cyclophilin (slide 33).'}],
  teach:'The cyclosporine–cyclophilin complex is the active species; it inhibits calcineurin phosphatase and T-cell signaling (slide 33; T@12430–12700).',
  cite:S4+' slide 33; T@12289–12700'},
 
@@ -571,7 +571,7 @@ QUESTIONS.push(
  options:[
   {t:'First-pass metabolism by CYP3A4', correct:true, why:'Slide 33: "PO bioavailability = 30% - 1st pass effect ... Extensively metabolized by 3A4"; (T@12824–13060).'},
   {t:'Peptidase breakdown in the stomach', correct:false, why:'Not the reason he gave for cyclosporine; he ascribed it to first-pass metabolism by 3A4 (T@12860–13060).'},
-  {t:'High skin protein binding', correct:false, why:'Skin protein binding explains topical pimecrolimus (slide 28).'},
+  {t:'Glucuronidation by UGT in the gut', correct:false, why:'Slide 33 and T@12824–13060 give first-pass metabolism by CYP3A4.'},
   {t:'Chelation with dietary calcium', correct:false, why:'Chelation with food cations lowers tetracycline absorption (slide 55).'}],
  teach:'"The or[al] bioavailability is uh. Very poor ... 30%. This is ascribed to first pass metabolism ... carried out by 3F4 [3A4]" (T@12824–13060). Slide 33 also lists log P = 4 and T1/2 = 19 h.',
  cite:S4+' slide 33; T@12824–13060'},
@@ -711,7 +711,7 @@ QUESTIONS.push(
   {t:'Gram positive', correct:true, why:'"Now this is a gram positive, right? Pacin [P. acnes] is gram. Positive bacteria." (T@35047–35100); annotation on the student copy of slide 54.'},
   {t:'Gram negative', correct:false, why:'The reverse of what he said (T@35047).'},
   {t:'Acid-fast', correct:false, why:'Not stated for P. acnes; he called it gram positive (T@35047).'},
-  {t:'It does not take a stain', correct:false, why:'He called it gram positive (T@35047).'}],
+  {t:'Gram variable', correct:false, why:'Slide 54: P. acnes is gram positive (T@35047–35100).'}],
  teach:'P. acnes lives harmlessly on everyone\'s skin; when sebum and keratin build up in the follicle, it flourishes and drives inflammation, so knocking it down with antibiotics knocks down inflammation (T@18700–18950).',
  cite:S4+' slide 54; T@35047–35100'},
 
@@ -769,7 +769,7 @@ QUESTIONS.push(
   {t:'By using a higher concentration', correct:true, why:'Slide 43: "Higher concs. - for deeper skin peels"; (T@21408).'},
   {t:'By converting it to an ester prodrug', correct:false, why:'No ester of glycolic acid was taught; the ester prodrugs were retinoids (slides 29, 50).'},
   {t:'By using a large particle size', correct:false, why:'Particle size was taught for sulfur (small is better) and zinc oxide (large is better) (slides 46, 61).'},
-  {t:'By combining it with a 3A4 inhibitor', correct:false, why:'Glycolic acid has minimal metabolism by ADH and ALDH, not 3A4 (slide 43; T@20780–21110).'}],
+  {t:'By using a smaller particle size', correct:false, why:'Particle size matters for sulfur (slide 46); for glycolic acid, slide 43 gives higher concentrations for deeper peels.'}],
  teach:'Glycolic acid kills surface skin cells and promotes desquamation; a higher concentration reaches deeper layers (T@21300–21450).',
  cite:S4+' slide 43; T@21300–21450'},
 
@@ -929,7 +929,7 @@ QUESTIONS.push(
   {t:'Teratogenicity', correct:true, why:'Slide 48 "Teratogenic"; "This is the major limitation ... If they are teratogenic, can everyone use them? No ... this is a caution that you all need to make sure you carry that with you" (T@27150–27450).'},
   {t:'Hypercalcemia', correct:false, why:'Hypercalcemia limits the vitamin D analogs (slide 27).'},
   {t:'Strong CYP3A4 inhibition', correct:false, why:'Strong 3A4 inhibition belongs to the azoles such as ketoconazole (slide 53).'},
-  {t:'PABA allergy', correct:false, why:'PABA allergy limits PABA sunscreens (slide 63).'}],
+  {t:'Poor skin penetration', correct:false, why:'Slide 51: the retinoids are lipophilic; their major limitation is teratogenicity (slide 48).'}],
  teach:'Retinoids are potent; less concentrated products may be usable, "but there\'s always that caveat" (T@27450–27700). The same teratogenicity worry carries into topical retinoids for wrinkles (slide 70; T@48700–48760).',
  cite:S4+' slide 48; T@27150–27700'},
 
@@ -1295,7 +1295,7 @@ QUESTIONS.push(
  options:[
   {t:'Some people are allergic to PABA', correct:true, why:'"these are even rarely used ... Because some ... people are allergic to paba ... Paraaminobenzoic acid. Allergies" (T@41918–42100); annotation on the student copy of slide 63.'},
   {t:'They photodegrade within minutes', correct:false, why:'He gave allergy as the reason (T@41918–42100).'},
-  {t:'They are absorbed and teratogenic', correct:false, why:'Teratogenicity is the retinoid concern (slide 48).'},
+  {t:'They are highly absorbed through skin', correct:false, why:'High skin absorption (log P about 4) is the benzophenones\' drawback (slide 65); PABA is avoided for allergy (T@41950–42050).'},
   {t:'They wash off when swimming', correct:false, why:'Washing off was the ensulizole drawback (T@43160–43270).'}],
  teach:'PABA (p-aminobenzoic acid) and padimate O are UVB absorbers. "there\'s also photosensitivity that comes ... with that, but I\'ll just say parba allergies" (T@42100–42260).',
  cite:S4+' slide 63; T@41918–42267'},
