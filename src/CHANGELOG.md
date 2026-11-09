@@ -8,6 +8,9 @@ characters.
 
 Every update adds its bullets here in the same commit that makes the change.
 
+## 2026-11-09 (Tazarotene label)
+- The tazarotene reaction figure now spells the brand Tazorac.
+
 ## 2026-11-09 (Narrated figures, Dr. Sikazwe)
 - Spoken step-by-step texts for Dr. Sikazwe's reaction, drug-action, steroid and vitamin D reading figures.
 
