@@ -16,6 +16,7 @@ Every update adds its bullets here in the same commit that makes the change.
 
 ## 2026-11-09 (Vitamin D answers)
 - Vitamin D figure step 5: pre-D3 becomes D3 by a slow, heat-driven step (full assigned reading).
+- Vitamin D kidney question: the skin and pancreas explanations now match the full reading.
 - Vitamin D organ and enzyme questions now open the reaction at step 5, where the answers are named.
 
 ## 2026-11-08 (Reaction beside the why)

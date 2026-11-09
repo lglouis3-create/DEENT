@@ -204,8 +204,8 @@ QUESTIONS.push(
  options:[
   {t:'Kidney', correct:true, why:'25OHD is "further metabolized to 1,25(OH)2D principally in the kidney, by the enzyme CYP27B1" (Bikle, Endotext 2025, Overview).'},
   {t:'Liver', correct:false, why:'The liver does the step before, the 25-hydroxylation (Bikle, Endotext 2025, Overview).'},
-  {t:'Skin', correct:false, why:'The skin makes D3 with UV light (Bikle, Endotext 2025, Overview); keratinocytes can make some calcitriol, but the principal site is the kidney (Bikle, Overview).'},
-  {t:'Pancreas', correct:false, why:'Not a site of this step in the reading (Bikle, Overview).'}],
+  {t:'Skin', correct:false, why:'The skin makes D3 with UV light (Bikle, Endotext 2025, Overview); keratinocytes express CYP27B1 for local use, but the kidney is the main source of circulating calcitriol (Bikle, Renal Production of 1,25(OH)2D).'},
+  {t:'Pancreas', correct:false, why:'Pancreatic beta cells have CYP27B1 for local use, but the kidney is the main source of circulating calcitriol (Bikle, Pancreatic Beta-Cells).'}],
  teach:'Slide 27 gives the enzyme of this step, 1-alpha-hydroxylase, and asks for the organ: "here, I\'ve already given you the enzyme, and you can fit in what organ is here" (T@3813). The reading: principally the kidney (Bikle, Endotext 2025, Overview).',
  cite:S4+' slide 27; T@3813–3900'},
 
