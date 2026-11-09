@@ -225,11 +225,16 @@ const COURSE = {
           // clip manifest, then the player (walk_ui.js) and "Hear the why" (why_ui.js). When node
           // evaluates this file (build.py, the checks) a data file not yet written is left out, so
           // the build does not stop on it; the players draw nothing for data that is not there.
-          ...['walk_pp.js', 'walk_pc.js', 'walk_sun.js', 'walk_mc.js', 'walk_rd.js', 'why_data.js', 'audio_manifest.js']
+          // dianarr_smith.js, dianarr_sik.js: spoken text for each step of the drawn step-throughs (Louis,
+          // 2026-11-09: "can the diagram have narration explaining the steps of each as a walk through?")
+          ...['walk_pp.js', 'walk_pc.js', 'walk_sun.js', 'walk_mc.js', 'walk_rd.js', 'why_data.js',
+              'dianarr_smith.js', 'dianarr_sik.js', 'audio_manifest.js']
             .filter(f => { try { return typeof require !== 'function' || require('fs').existsSync(f); } catch (e) { return true; } }),
           // reaction figures for the why of mapped questions (why_figs.js, read by why_ui.js)
           'why_figs.js',
           'walk_ui.js', 'why_ui.js',
+          // "Listen" on each drawn step-through with narration (uses walk_ui.js's player)
+          'dianarr_ui.js',
           // Topics: the exam facts card (course-level, Louis 2026-11-08; the deck folders are in
           // guide.js with the deck grouping)
           'topics_ui.js',

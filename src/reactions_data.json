@@ -31,7 +31,7 @@
   {"id": "benzoyl_rad", "name": "Benzoyl radical", "atlas": "benzoyl radical", "smiles": "O=C([O])c1ccccc1", "teaching": true, "slide": 47, "note": "The slide labels it \"Benzoyl radical\" and draws PhC(=O)O· (the benzoyloxy radical), as the Atlas tile does."},
   {"id": "etretinate", "name": "Etretinate", "atlas": "etretinate", "smiles": "CCOC(=O)/C=C(\\C)/C=C/C=C(\\C)/C=C/c1c(C)cc(OC)c(C)c1C", "chembl_id": "CHEMBL464", "slide": 50},
   {"id": "acitretin", "name": "Acitretin", "atlas": "acitretin", "smiles": "OC(=O)/C=C(\\C)/C=C/C=C(\\C)/C=C/c1c(C)cc(OC)c(C)c1C", "chembl_id": "CHEMBL1131", "slide": 50},
-  {"id": "tazarotene", "name": "Tazarotene (Tazarac)", "atlas": "tazarotene", "smiles": "CCOC(=O)c1ccc(nc1)C#Cc1ccc2SCCC(C)(C)c2c1", "chembl_id": "CHEMBL1657", "slide": 51},
+  {"id": "tazarotene", "name": "Tazarotene (Tazorac)", "atlas": "tazarotene", "smiles": "CCOC(=O)c1ccc(nc1)C#Cc1ccc2SCCC(C)(C)c2c1", "chembl_id": "CHEMBL1657", "slide": 51},
   {"id": "tazarotenic", "name": "Tazarotenic Acid (Active)", "atlas": "tazarotenic acid", "smiles": "OC(=O)c1ccc(nc1)C#Cc1ccc2SCCC(C)(C)c2c1", "chembl_id": "CHEMBL1201375", "slide": 51}
  ],
  "figures": [

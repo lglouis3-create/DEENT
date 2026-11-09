@@ -8,6 +8,17 @@ characters.
 
 Every update adds its bullets here in the same commit that makes the change.
 
+## 2026-11-09 (Listen to the figures)
+- Every step-through figure with narration has a Listen button: it reads each step and moves the figure on as it goes.
+- All 40 narrated figures, Dr. Smith's and Dr. Sikazwe's and the vitamin D reading's, use the walkthroughs' narrator.
+- Back, Next or a step dot stops the reading and keeps the figure on the step you chose; Pause and Stop are beside it.
+
+## 2026-11-09 (Tazarotene label)
+- The tazarotene reaction figure now spells the brand Tazorac.
+
+## 2026-11-09 (Narrated figures, Dr. Sikazwe)
+- Spoken step-by-step texts for Dr. Sikazwe's reaction, drug-action, steroid and vitamin D reading figures.
+
 ## 2026-11-09 (Mechanisms step by step)
 - Five new step-through figures of Dr. Smith's mechanisms: PDE-4 and cAMP, the ribosome, two folate figures, abatacept.
 - Ribosome: where tetracyclines, clindamycin and macrolides bind, after the four steps of protein building.

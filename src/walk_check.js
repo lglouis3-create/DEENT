@@ -47,9 +47,9 @@ let src = here('course.js') + '\n';
 for (const f of F.filter(f => !/_ui\.js$/.test(f) && fs.existsSync(path.join(SRC, f)))) src += here(f) + '\n';
 src += here('guide.js') + '\nthis.X = {QUESTIONS, GUIDE_HTML, DIA: typeof DIA !== "undefined" ? DIA : {},' +
   ' W: typeof WALK_SECTIONS !== "undefined" ? WALK_SECTIONS : [], Y: typeof WHY_AUDIO !== "undefined" ? WHY_AUDIO : {},' +
-  ' CL: typeof AUDIO_CLIPS !== "undefined" ? AUDIO_CLIPS : {}};';
+  ' CL: typeof AUDIO_CLIPS !== "undefined" ? AUDIO_CLIPS : {}, D: typeof DIA_NARR !== "undefined" ? DIA_NARR : {}};';
 vm.runInContext(src, sb);
-const {QUESTIONS, GUIDE_HTML, DIA, W, Y, CL} = sb.X;
+const {QUESTIONS, GUIDE_HTML, DIA, W, Y, CL, D} = sb.X;
 
 console.log('=== Walkthroughs (WALK_SECTIONS) ===');
 const DECKS = ['pp', 'pc', 'sun', 'mc', 'rd'];   // rd: an assigned reading, no slide deck of its own
@@ -89,10 +89,10 @@ const badWhy = yids.filter(id => !Y[id] || typeof Y[id].text !== 'string' || !Y[
 check(!badWhy.length, 'every spoken why has text and a tier (A or B)', badWhy.join(', '));
 
 console.log('=== Recorded clips (audio_manifest.js) ===');
-const T = NH.texts(W, Y), TB = Object.fromEntries(T.map(x => [x.id, x]));
+const T = NH.texts(W, Y, D), TB = Object.fromEntries(T.map(x => [x.id, x]));
 const keys = Object.keys(CL || {});
 const unknown = keys.filter(k => !TB[k]);
-check(!unknown.length, `every manifest entry (${keys.length}) names a walkthrough part or a spoken why`, unknown.join(', '));
+check(!unknown.length, `every manifest entry (${keys.length}) names a walkthrough part, a spoken why or a figure step (dianarr_*.js)`, unknown.join(', '));
 const stale = keys.filter(k => TB[k] && (!CL[k] || CL[k].h !== TB[k].hash));
 check(!stale.length, 'every manifest hash matches its current text', stale.join(', '));
 const nofile = keys.filter(k => TB[k] && !fs.existsSync(path.join(ROOT, 'audio', k + '.mp3')));
