@@ -8,6 +8,10 @@ characters.
 
 Every update adds its bullets here in the same commit that makes the change.
 
+## 2026-11-09 (Vitamin D answers)
+- Vitamin D figure step 5: pre-D3 becomes D3 by a slow, heat-driven step (full assigned reading).
+- Vitamin D organ and enzyme questions now open the reaction at step 5, where the answers are named.
+
 ## 2026-11-08 (Reaction beside the why)
 - After answering a reaction question of Dr. Sikazwe's, "Show the reaction" opens its scheme at the step asked.
 - "Hear the why" shows that scheme beside the spoken why (above it on a phone), with "Open in Guide".
