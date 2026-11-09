@@ -8,6 +8,13 @@ characters.
 
 Every update adds its bullets here in the same commit that makes the change.
 
+## 2026-11-09 (Fill in the blank)
+- 87 fill-in-the-blank questions: type the drug target, number or term, as on Dr. Smith's exam.
+- Dr. Smith 28 (targets, receptors, key numbers), Dr. Sikazwe 11 (assigned pages), Dr. Patel 48.
+- Spelling counts: an answer close to an accepted one is marked wrong with "Not accepted … Check the exact term".
+- They come up in Quiz, topic drills and the missed list; practice papers stay multiple choice for now.
+- Shared links show the DEENT Exam Review card from the engine itself; nothing changes on the page.
+
 ## 2026-11-09 (Lecture 5 review)
 - Lecture 5: five answer choices and wordings matched more exactly to Dr. Patel's slides after a source check.
 

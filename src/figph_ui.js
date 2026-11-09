@@ -1,5 +1,8 @@
 /* ==========================================================================
    ENLARGE PLACEHOLDER: exact height (course-level, temporary)
+   OBSOLETE since 2026-11-09: no longer in course.js `files`. Kit #90 (in the
+   core from pin 6c877b6) gives figBig's placeholder the exact height itself.
+   Kept for the record only.
    ==========================================================================
    When a step-through is enlarged, the core's figBig (views.js) puts a
    placeholder where the figure stood, so the page keeps its length and the
