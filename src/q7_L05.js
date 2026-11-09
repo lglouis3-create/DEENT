@@ -168,7 +168,7 @@ QUESTIONS.push(
 
 {id:'P5-009', skill:'dose', prof:'Patel', tier:'new', topic:'p5-qty', sub:'calc', concept:'p5-tube-scalp-week',
  tags:['calculation'], source:'slide',
- stem:'An adult applies a solution to the scalp twice daily for 7 days. Tubes of 15, 30, 45 and 60 g are available. Which is dispensed?',
+ stem:'An adult applies a cream to the scalp twice daily for 7 days. Tubes of 15, 30, 45 and 60 g are available. Which is dispensed?',
  options:[
   {t:'30 g', correct:true, why:'Scalp 3 FTU × 0.5 g = 1.5 g per application; × 2 × 7 = 21 g; the first size above 21 g is 30 g (slides 10–11).'},
   {t:'15 g', correct:false, why:'15 g is 10 applications at 1.5 g; 14 applications need 21 g.'},
@@ -229,7 +229,7 @@ QUESTIONS.push(
   {t:'45 g', correct:true, why:'Slide 10; slide 13 prescribes 45 g for the face and neck BID for two weeks.'},
   {t:'80 g', correct:true, why:'Slide 10; (T@6829) "15 g 30 g, 45, 60, 80, and 100".'},
   {t:'100 g', correct:true, why:'Slide 10; slide 13 rounds 98 g up to 100 g.'},
-  {t:'50 g', correct:false, why:'Not on slide 10. In class she mentioned a 50 g unit only as an example of "depending on what is available" (T@9636); the slide sizes skip from 45 to 60 g.'},
+  {t:'25 g', correct:false, why:'Not a tube size on slide 10.'},
   {t:'90 g', correct:false, why:'Not a size on slide 10; after 80 g the next is 100 g.'}],
  teach:'Topical medications are often most cost effective in the standard tube sizes (slide 10).',
  cite:P5+' slides 10, 13; T@6829, T@9636'},
@@ -934,7 +934,7 @@ QUESTIONS.push(
   {t:'Pimecrolimus 1% cream', correct:false, why:'Slides 38–40: not for children under 2 years.'},
   {t:'Tacrolimus 0.03% ointment', correct:false, why:'For > 2 years of age (slide 39).'},
   {t:'Dupilumab injection', correct:false, why:'Not under 6 months of age (slide 43), and it is for moderate–severe AD.'}],
- teach:'Lower age limits on her slides: crisaborole 3 months (slide 41); dupilumab 6 months (slide 43); TCIs 2 years (slide 40); JAK inhibitors 12 years (slide 46).',
+ teach:'Lower age limits on her slides: crisaborole 3 months (slide 41); dupilumab 6 months (slide 43); TCIs 2 years (slide 40); JAK inhibitors over 12 years (slide 46).',
  cite:P5+' slides 39–43; T@45322–46076'},
 
 {id:'P5-077', skill:'counsel', prof:'Patel', tier:'new', topic:'p5-tci', sub:'cris', concept:'p5-crisaborole-use',
@@ -1099,7 +1099,7 @@ QUESTIONS.push(
  tags:['two-facts'], source:'both',
  stem:'For which patients are JAK inhibitors indicated in atopic dermatitis?',
  options:[
-  {t:'Moderate–severe AD, 12 years and older, refractory to other systemic and biologic therapy', correct:true, why:'Slide 46: indicated for moderate-severe AD in > 12 years of age; refractory option, whose disease is not adequately controlled with other systemic, biologic therapies (T@53419–53841).'},
+  {t:'Moderate–severe AD, over 12 years of age, refractory to other systemic and biologic therapy', correct:true, why:'Slide 46: indicated for moderate-severe AD in > 12 years of age; refractory option, whose disease is not adequately controlled with other systemic, biologic therapies (T@53419–53841).'},
   {t:'Mild–moderate AD, 2 years and older, after a topical steroid', correct:false, why:'That describes the TCIs (slides 38–39).'},
   {t:'Moderate–severe AD, 6 months and older, first systemic agent', correct:false, why:'6 months is dupilumab\'s lower age limit (slide 43); JAK inhibitors are a last-line refractory option.'},
   {t:'Mild–moderate AD, 3 months and older, third line', correct:false, why:'That is crisaborole (slide 41).'}],
@@ -1137,7 +1137,7 @@ QUESTIONS.push(
   {t:'Lymphoma and other malignancies', correct:true, why:'Slide 46: malignancies.'},
   {t:'DVT, PE and arterial thrombosis', correct:true, why:'Slide 46: thrombosis (T@54970).'},
   {t:'Hypercalcemia', correct:false, why:'Hypercalcemia is not among the boxed warnings on slide 46.'},
-  {t:'Use under 2 years not recommended', correct:false, why:'A TCI boxed warning point (slide 40); JAK inhibitors are for 12 years and older.'}],
+  {t:'Use under 2 years not recommended', correct:false, why:'A TCI boxed warning point (slide 40); JAK inhibitors are for patients over 12 years of age.'}],
  teach:'Slide 46 also lists MACE: CV death, MI and stroke. "Many serious box warnings, right?" (T@54970).',
  cite:P5+' slide 46; T@54220–54970'},
 
@@ -1431,7 +1431,7 @@ QUESTIONS.push(
  stem:'For the same infant, which nonpharmacologic advice should the father receive?',
  options:[
   {t:'Follow ABCDE: air dry, barrier, gentle cleansing, change every 2 hours, education', correct:true, why:'Her PollEv answer: "A B C D E, every 2 hours" (T@82496); slide 62.'},
-  {t:'Switch to cloth diapers and change every 4 hours', correct:false, why:'Disposable diapers have fewer rash episodes (slide 57); ABCDE says every 2 hours (slide 62).'},
+  {t:'Switch to cloth diapers and change only when soiled', correct:false, why:'Disposable diapers have fewer rash episodes (slide 57); ABCDE: change every 2 hours (slide 62).'},
   {t:'Bathe in a dilute bleach bath twice a week', correct:false, why:'The bleach bath is for moderate–severe atopic dermatitis (slide 31).'},
   {t:'Use alcohol wipes at each change to disinfect', correct:false, why:'Slide 57 names alcohol-free wipes; slide 62: soft cloth and warm water, or a baby wipe when stool is present.'}],
  teach:'Her PollEv of 11/06 (open response: "What are some appropriate nonpharmacologic methods the father should be educated on?").',

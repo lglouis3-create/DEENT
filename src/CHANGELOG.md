@@ -8,6 +8,9 @@ characters.
 
 Every update adds its bullets here in the same commit that makes the change.
 
+## 2026-11-09 (Lecture 5 review)
+- Lecture 5: five answer choices and wordings matched more exactly to Dr. Patel's slides after a source check.
+
 ## 2026-11-09 (Harder practice, Lectures 1–4)
 - 84 harder questions on Dr. Smith's lectures: finer slide details, two facts in one question and closer answer choices.
 - 45 harder questions on Dr. Sikazwe's assigned pages: enzymes, organs, chemical classes and pairs that look alike.
