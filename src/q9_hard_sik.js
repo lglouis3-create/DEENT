@@ -290,7 +290,7 @@ QUESTIONS.push(
   {t:'A pteridine; it competitively inhibits DHFR', correct:true, why:'Slide 30: a pteridine that competitively inhibits dihydrofolate reductase; it sits in the same enzyme cavity as folic acid (T@8238–9500).'},
   {t:'A pteridine; it binds an allosteric site on DHFR', correct:false, why:'Slide 30: the inhibition is competitive, in the same cavity.'},
   {t:'An isoindoline; it competitively inhibits DHFR', correct:false, why:'Apremilast is the isoindoline (slide 34).'},
-  {t:'A pyrrolopyrimidine; it competitively inhibits DHFR', correct:false, why:'Ruxolitinib is a pyrrolopyrimidine (slide 8).'}],
+  {t:'A benzoxaborole; it competitively inhibits DHFR', correct:false, why:'Crisaborole is the benzoxaborole (slide 7).'}],
  teach:'Slide 30: methotrexate is a pteridine and an antimetabolite (slide 12: a substrate mimic that inhibits cellular metabolism). It competes with folic acid for DHFR, with higher affinity (T@9220), blocking DNA and RNA synthesis; it is also immunosuppressant and anti-inflammatory.',
  cite:HQ_S4+' slides 8, 12, 30, 34; T@8238–9500'},
 
@@ -368,7 +368,7 @@ QUESTIONS.push(
   {t:'3-Hydroxybutanoic acid', correct:true, why:'Its OH is on C3, two carbons from the COOH: the beta carbon (T@22090–22200).'},
   {t:'2-Hydroxypropanoic acid', correct:false, why:'OH on C2, next to the COOH: an alpha-hydroxy acid (slide 44).'},
   {t:'Hydroxyacetic acid (glycolic acid)', correct:false, why:'Glycolic acid is an α-hydroxy acid (slide 43).'},
-  {t:'2-Hydroxybutanedioic acid', correct:false, why:'Its OH on C2 is next to a COOH (C1), so it is an alpha-hydroxy acid (slide 44).'}],
+  {t:'2-Hydroxybutanoic acid', correct:false, why:'Its OH on C2 is next to the COOH: an alpha-hydroxy acid (slide 44).'}],
  teach:'Slide 44, hydroxy acid SAR: COOH group(s) and, for most, an OH on the alpha carbon, the carbon next to the COOH; R is mostly alkyl. "This is the alpha carbon. This one is called the beta carbon. So this is a beta hydroxy acid" (T@22090–22200).',
  cite:HQ_S4+' slides 43–44; T@22090–23880'},
 
@@ -462,7 +462,7 @@ QUESTIONS.push(
   {t:'They reflect or scatter UVA and UVB and do not irritate the skin', correct:true, why:'Slide 61: metal oxides that physically reflect or scatter light, broad spectrum (UVA/B), inert, do not irritate (T@38519–38748).'},
   {t:'They absorb UVA and UVB and release it as heat; they do not irritate', correct:false, why:'Absorbing UV and releasing heat is what the organic sunscreens do (slide 62).'},
   {t:'They reflect UVB only and irritate the skin', correct:false, why:'Slide 61: broad spectrum and inert.'},
-  {t:'They reflect UVA and UVB and photodegrade within 2 hours', correct:false, why:'A photodegradation half-life of about 2 h is avobenzone\'s (slide 62).'}],
+  {t:'They reflect UVB only and do not irritate the skin', correct:false, why:'Slide 61: they are broad spectrum (UVA/B).'}],
  teach:'Slide 61: zinc oxide and titanium dioxide are inorganic metal oxides that physically reflect or scatter light, cover UVA and UVB, are inert and do not irritate the skin, and come in micronized forms; larger particles are more effective.',
  cite:HQ_S4+' slides 61–62; T@38519–39200'},
 

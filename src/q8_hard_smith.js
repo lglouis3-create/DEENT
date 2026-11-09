@@ -108,7 +108,7 @@ QUESTIONS.push(
   {t:'Psoriasis: about 3% of the US; acne: lifetime prevalence near 90%', correct:true, why:'Pathophys slide 20 (about 3% of the US population) and slide 31 (lifetime prevalence approaches 90%); (T 412–413).'},
   {t:'Psoriasis: about 30% of the US; acne: lifetime prevalence near 90%', correct:false, why:'30% is the share of psoriasis patients with a first-degree relative who has it (slide 20; T 310).'},
   {t:'Psoriasis: about 3% of the US; acne: lifetime prevalence near 81%', correct:false, why:'81% is the likelihood of acne when both parents had acne (slide 35; T 488–489).'},
-  {t:'Psoriasis: 2–10% of adults; acne: about 12% of adults', correct:false, why:'2–10% of adults is the AD figure (slide 10); 12% is acne in women aged 25–58 (slide 31).'}],
+  {t:'Psoriasis: 2–10% of adults; acne: about 12% of women aged 25–58', correct:false, why:'2–10% of adults is the AD figure (slide 10); 12% is acne in women aged 25–58 (slide 31).'}],
  teach:'Figures that look alike: AD 15–30% of children and 2–10% of adults (slide 10); psoriasis about 3% of the US, with 30% of patients having an affected first-degree relative (slide 20); acne lifetime prevalence near 90%, 12% of women and 3% of men aged 25–58, and 81% if both parents had acne (slides 31, 35).',
  cite:HQ_PP+' slides 10, 20, 31, 35; T 304–310, 412–419, 488–489'},
 
@@ -237,7 +237,7 @@ QUESTIONS.push(
   {t:'Hydrocortisone 1% on the face; betamethasone valerate 0.1% on the body', correct:true, why:'PCol slide 11: low potency (hydrocortisone 1%) for the face, medium potency (betamethasone valerate 0.1%) for the body; (T 818–821).'},
   {t:'Betamethasone valerate 0.1% on the face; hydrocortisone 1% on the body', correct:false, why:'Reversed: nothing more potent than low potency goes on the face (T 818–819).'},
   {t:'Hydrocortisone 0.1% on the face; betamethasone valerate 1% on the body', correct:false, why:'The strengths are swapped: hydrocortisone 1% and betamethasone valerate 0.1% (slide 11).'},
-  {t:'Hydrocortisone 1% on the face; clobetasol propionate 0.05% on the body', correct:false, why:'Clobetasol propionate is Dr. Sikazwe\'s super-potent example (DPAW slide 25); her medium-potency body example is betamethasone valerate 0.1%.'}],
+  {t:'Clobetasol propionate 0.05% on the face; betamethasone valerate 0.1% on the body', correct:false, why:'Nothing more potent than low potency goes on the face (T 818–819); clobetasol propionate is super-potent (DPAW slide 25).'}],
  teach:'Slide 11: match potency to severity and site. Low potency (hydrocortisone 1%) for the face and for long-duration maintenance; medium potency (betamethasone valerate 0.1%) for the body; mid and high potency for short-term management of exacerbations.',
  cite:HQ_PC1+' slide 11; T 815–823'},
 
@@ -362,7 +362,7 @@ QUESTIONS.push(
  options:[
   {t:'They are reversible when the drug is stopped', correct:true, why:'Slide 19: the less common side effects are reversible with drug discontinuation.'},
   {t:'They persist for 3 years after stopping', correct:false, why:'Three years is the acitretin blood-donation and pregnancy wait (slide 20).'},
-  {t:'They resolve within days of stopping, like hypercalcemia', correct:false, why:'Resolution within days is said of calcipotriene hypercalcemia (slide 22).'},
+  {t:'They are permanent even after the drug is stopped', correct:false, why:'Slide 19: they are reversible with drug discontinuation.'},
   {t:'They are expected and need no change in therapy', correct:false, why:'She said patients probably need to stop the drug if these occur (T 94–96).'}],
  teach:'Slide 19: common effects of isotretinoin are dryness and itching of skin and mucous membranes and lipid changes; less common ones (headache, corneal opacities, pseudotumor cerebri, IBD, anorexia, alopecia, muscle and joint pain) are reversible when it is stopped. Skeletal hyperostosis is possible in children.',
  cite:HQ_PC2+' slides 19–22; T 93–98'},
