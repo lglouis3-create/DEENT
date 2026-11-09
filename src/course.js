@@ -244,7 +244,10 @@ const COURSE = {
           'exfig.js', 'exfig_ui.js',
           // Jumps to a reading section: land below the pinned tab strip, highlight the section
           // and the lines that match the question (course-level, Louis 2026-11-08)
-          'jump_ui.js'],
+          'jump_ui.js',
+          // Enlarge: the placeholder takes the figure's exact (fractional) height, so closing an
+          // enlarged figure leaves the page where it was (temporary until the kit core's figBig does)
+          'figph_ui.js'],
 
   tools: {citeAliases:{'skin-pathophys-students-2026.pdf':'Skin-Pathophys-Students-2026.pdf',
                        'skin-pcol-students-2026.pdf':'Skin-PCol-Students-2026.pdf',
