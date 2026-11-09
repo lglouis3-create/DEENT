@@ -11,7 +11,8 @@
    likely_ui.js wraps renderQuiz().
 
    Data (plain JS, every one optional; a missing one means nothing is drawn):
-     WALK_SECTIONS  walk_pp.js, walk_pc.js, walk_sun.js, walk_mc.js
+     WALK_SECTIONS  walk_pp.js, walk_pc.js, walk_sun.js, walk_mc.js, walk_rd.js (an assigned
+                    reading: no deck of its own; parts show figures, a slide only from a lecture deck)
                     [{id, deck, guide:'gobj-…', title, topics, parts:[{text,
                     slide:'<deck>-<NN>' | null, fig:{id, step (1-based)} | null,
                     src}]}]; `src` is never spoken or shown; a part with both
@@ -257,7 +258,8 @@ const WALK_UI = (() => {
   const {esc, st, save} = NARR;
   const BY = {}; SECS.forEach(w => { BY[w.id] = w; });
   const DECKS = {pp: 'Skin Pathophysiology (Dr. Smith)', pc: 'Skin Pharmacology (Dr. Smith)',
-                 sun: 'Sun exposure (Dr. Smith)', mc: 'Dermatologic medicinal chemistry (Dr. Sikazwe)'};
+                 sun: 'Sun exposure (Dr. Smith)', mc: 'Dermatologic medicinal chemistry (Dr. Sikazwe)',
+                 rd: 'Assigned reading: vitamin D (Dr. Sikazwe)'};
   // the slides each deck's walkthroughs show, in page order: what "browse the slides" steps through
   const DECK_SLIDES = {};
   SECS.forEach(w => w.parts.forEach(p => {

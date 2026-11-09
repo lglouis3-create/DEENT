@@ -8,6 +8,17 @@ characters.
 
 Every update adds its bullets here in the same commit that makes the change.
 
+## 2026-11-09 (The vitamin D reading, narrated)
+- New narrated walkthrough of the vitamin D reading Dr. Sikazwe assigned: 10 sections, 32 parts, about 21 minutes.
+- It answers his take-home (reactions, organs, enzymes) first, then regulation, transport, the receptor and skin.
+- Seven new step-through figures: skin, blood transport, CYP27B1 and CYP24A1 control, the receptor, organs, immunity.
+- Vitamin D explanations now cite the reading's section names instead of line numbers.
+
+## 2026-11-09 (Vitamin D answers)
+- Vitamin D figure step 5: pre-D3 becomes D3 by a slow, heat-driven step (full assigned reading).
+- Vitamin D kidney question: the skin and pancreas explanations now match the full reading.
+- Vitamin D organ and enzyme questions now open the reaction at step 5, where the answers are named.
+
 ## 2026-11-08 (Reaction beside the why)
 - After answering a reaction question of Dr. Sikazwe's, "Show the reaction" opens its scheme at the step asked.
 - "Hear the why" shows that scheme beside the spoken why (above it on a phone), with "Open in Guide".

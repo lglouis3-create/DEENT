@@ -32,13 +32,13 @@ const WHY_FIGS = {
   'S3-102': {fig: 'rx-hydrocortisone', step: 2, why: '11β-HSD oxidizes and reduces back'},
   // Vitamin D3 (slide 27): 1 7-DHC, 2 ring B opened in the skin, 3 25-hydroxylation, 4 1α-hydroxylation
   'S4-006': {fig: 'rx-vitd', step: 2, why: 'UV light opens ring B'},
-  'S4-007': {fig: 'rx-vitd', step: 2, why: 'the first arrow, in the skin'},
+  'S4-007': {fig: 'rx-vitd', step: 5, why: 'the first arrow, in the skin'},
   'S4-013': {fig: 'rx-vitd', step: 2, why: 'pre-D3 to D3, still the first arrow'},
   'S4-014': {fig: 'rx-vitd', step: 2, why: 'UVB drives the first arrow'},
-  'S4-008': {fig: 'rx-vitd', step: 3, why: '25-hydroxylation in the liver'},
-  'S4-009': {fig: 'rx-vitd', step: 3, why: 'the 25-hydroxylase'},
+  'S4-008': {fig: 'rx-vitd', step: 5, why: '25-hydroxylation in the liver'},
+  'S4-009': {fig: 'rx-vitd', step: 5, why: 'the 25-hydroxylase'},
   'S4-012': {fig: 'rx-vitd', step: 3, why: '25-OH-cholecalciferol, inactive circulating form'},
-  'S4-010': {fig: 'rx-vitd', step: 4, why: '1α-hydroxylation in the kidney'},
+  'S4-010': {fig: 'rx-vitd', step: 5, why: '1α-hydroxylation in the kidney'},
   'S4-011': {fig: 'rx-vitd', step: 4, why: '1-α-hydroxylase makes calcitriol'},
   // Anthralin (slide 17)
   'S3-054': {fig: 'rx-anthralin', why: 'spontaneous autoxidation'},

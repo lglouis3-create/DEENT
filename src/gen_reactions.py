@@ -232,9 +232,9 @@ def f_vitd():
         text(102, 348, '(1,25-di-OH-cholecalciferol, Active Vit. D3)', 'lbl xs')
     # step 5: the assigned reading's answers, kept apart from the slide: numbered marks at the
     # three arrows and a band under the scheme, headed as the reading's (Bikle, Endotext,
-    # lines 5-8, 60-68, as the bank items S4-006 to S4-014 key them; heat-driven step: Figure 1
+    # Abstract and Overview, as the bank items S4-006 to S4-014 key them; heat-driven step: Figure 1
     # legend "thermal induced rearrangement" and "at 37oC pre-D3 is slowly converted to D3",
-    # section "Vitamin D3 production in the skin", Endotext update of June 15, 2025)
+    # section "Cutaneous Production of Vitamin D3", Endotext update of June 15, 2025)
     s5 = s4 + text(233, 112, '① skin', 'cl') + text(380, 177, '② liver', 'cl', 'start') + \
         text(236, 226, '③ kidney', 'cl') + \
         '<rect class="box" x="2" y="358" width="476" height="98" rx="6"/>' + \

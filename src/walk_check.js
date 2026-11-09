@@ -37,7 +37,7 @@ console.log('=== course.js `files` ===');
 const data = F.filter(f => /^walk_(?!ui)[a-z0-9]+\.js$/.test(f) || f === 'why_data.js' || f === 'audio_manifest.js').filter(f => fs.existsSync(path.join(SRC, f)));
 check(at('walk_ui.js') >= 0 && at('why_ui.js') > at('walk_ui.js'), 'walk_ui.js and why_ui.js are listed, walk_ui.js first');
 check(data.every(f => at(f) < at('walk_ui.js')), `the narration data files on disk (${data.join(', ') || 'none'}) come before walk_ui.js`);
-const onDisk = fs.readdirSync(SRC).filter(f => /^walk_(pp|pc|sun|mc)\.js$/.test(f) || f === 'why_data.js' || f === 'audio_manifest.js');
+const onDisk = fs.readdirSync(SRC).filter(f => /^walk_(pp|pc|sun|mc|rd)\.js$/.test(f) || f === 'why_data.js' || f === 'audio_manifest.js');
 check(onDisk.every(f => F.includes(f)), `every narration data file on disk is in the page (${onDisk.join(', ')})`, onDisk.filter(f => !F.includes(f)).join(', '));
 
 /* the bank, the guide and the figures, as the page has them, without the *_ui.js presentation files */
@@ -52,19 +52,19 @@ vm.runInContext(src, sb);
 const {QUESTIONS, GUIDE_HTML, DIA, W, Y, CL} = sb.X;
 
 console.log('=== Walkthroughs (WALK_SECTIONS) ===');
-const DECKS = ['pp', 'pc', 'sun', 'mc'];
+const DECKS = ['pp', 'pc', 'sun', 'mc', 'rd'];   // rd: an assigned reading, no slide deck of its own
 const gobj = new Set([...GUIDE_HTML.matchAll(/<section class="gobj" id="([^"]+)"/g)].map(m => m[1]));
 const steps = k => { const h = DIA[k]; return typeof h === 'string' ? (h.match(/class="st[ "]/g) || []).length : 0; };
 const ids = W.map(w => w && w.id);
 check(new Set(ids).size === ids.length, `walkthrough ids are unique (${ids.length})`, ids.filter((x, i) => ids.indexOf(x) !== i).join(', '));
-const badSec = W.filter(w => !w || !/^(pp|pc|sun|mc)-\d+$/.test(w.id) || !DECKS.includes(w.deck) || !w.id.startsWith(w.deck + '-') ||
+const badSec = W.filter(w => !w || !/^(pp|pc|sun|mc|rd)-\d+$/.test(w.id) || !DECKS.includes(w.deck) || !w.id.startsWith(w.deck + '-') ||
   typeof w.title !== 'string' || !w.title.trim() || !Array.isArray(w.parts) || !w.parts.length);
 check(!badSec.length, 'every walkthrough has id <deck>-<n>, its deck, a title and parts', badSec.map(w => w && w.id).join(', '));
 const noGuide = W.filter(w => !gobj.has(w.guide));
 check(!noGuide.length, `every walkthrough's guide id is a guide section (${gobj.size} sections in guide.js)`, noGuide.map(w => `${w.id} -> ${w.guide}`).join(', '));
 const parts = W.flatMap(w => (w.parts || []).map((p, i) => ({w, p, i})));
 const badPart = parts.filter(({w, p}) => !p || typeof p.text !== 'string' || !p.text.trim() || typeof p.src !== 'string' ||
-  !(p.slide == null || (typeof p.slide === 'string' && new RegExp('^' + w.deck + '-\\d{2}$').test(p.slide))) ||
+  !(p.slide == null || (typeof p.slide === 'string' && new RegExp('^' + (w.deck === 'rd' ? '(pp|pc|sun|mc)' : w.deck) + '-\\d{2}$').test(p.slide))) ||   // a reading's part may point to a lecture slide
   !(p.fig == null || (p.fig && DIA[p.fig.id] && Number.isInteger(p.fig.step) && p.fig.step >= 1 && p.fig.step <= Math.max(1, steps(p.fig.id)))));   // a static figure (no steps) is step 1
 check(!badPart.length, `every part (${parts.length}) has text, a src, a slide of its own deck or null, and a drawn step that exists (1-based; step 1 for a figure without steps) or null`,
   badPart.slice(0, 12).map(({w, i, p}) => `${w.id} part ${i + 1} (${JSON.stringify({slide: p && p.slide, fig: p && p.fig})})`).join('; '));
