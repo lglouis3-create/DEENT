@@ -8,6 +8,11 @@ characters.
 
 Every update adds its bullets here in the same commit that makes the change.
 
+## 2026-11-08 (See it on the structure)
+- 59 of Dr. Sikazwe's structure and SAR questions now show a marked drawing after you answer.
+- The drawing points at what the explanation names: COOH, α carbon, 11β-OH, ring D, N-CH₃, 13-cis and more.
+- Polleve-4: each acid is marked COOH, α carbon and OH, with a yes or no under it; three qualify.
+
 ## 2026-11-08 (Quiz layout and Explain more)
 - Quiz: switch any drill to "All on one page" to scroll through and answer every question in place.
 - Explain more and Read links open the section just below the tab bar and highlight the lines for your question.
