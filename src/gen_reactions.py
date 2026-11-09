@@ -332,7 +332,7 @@ def f_tazarotene():
 
 
 # drawn mirrored so the slide's left end is on the left (by species name)
-FLIP = {'Crisaborole', 'Etretinate', 'Tazarotene (Tazarac)'}
+FLIP = {'Crisaborole', 'Etretinate', 'Tazarotene (Tazorac)'}
 
 # a product drawn in the orientation of the species it comes from (common part matched)
 ALIGN = {'crisa_alc': 'crisaborole', 'crisa_acid': 'crisaborole', 'cortisone': 'hydrocortisone',
