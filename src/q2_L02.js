@@ -106,7 +106,7 @@ QUESTIONS.push(
  options:[
   {t:'Enough for slight erythema and mild peeling', correct:true, why:'Slide 16; (T 31) "only use enough to just cause a slight erythema with mild peeling".'},
   {t:'Enough to cause visible blistering', correct:false, why:'Blistering means the product is too strong (slide 16; T 46–48).'},
-  {t:'A thick layer left on overnight under a dressing', correct:false, why:'Not part of her counseling; irritation calls for less, not more (slide 16; T 31–35).'},
+  {t:'Enough for marked redness and heavy peeling of the skin', correct:false, why:'Slide 16: only enough for slight erythema with mild peeling; with more, the concentration or frequency is decreased.'},
   {t:'As much as needed to stop the peeling', correct:false, why:'Mild peeling is the expected effect (slide 16).'}],
  teach:'The goal is slight erythema with mild peeling. More irritation than that means the strength is too high for that patient (slide 16; T 31–35).',
  cite:D2+' slide 16; T 31–35'},
@@ -220,7 +220,7 @@ QUESTIONS.push(
   {t:'Less than 10%', correct:true, why:'Slide 17; (T 61–62) "a little bit less than 10% absorption into the circulation".'},
   {t:'About 50%', correct:false, why:'Slide 17 gives less than 10%.'},
   {t:'More than 90%', correct:false, why:'Slide 17 gives less than 10%.'},
-  {t:'Zero, it stays in the skin', correct:false, why:'(T 62) "you do absorb some of it, even when you use it topically".'}],
+  {t:'About 10–20%', correct:false, why:'Slide 17: less than 10% is absorbed into the circulation (T 61).'}],
  teach:'Tretinoin is the acid form of vitamin A (all-trans retinoic acid, ATRA), used for acne. Less than 10% is absorbed, so some drug does reach the circulation from topical use (slide 17; T 60–62).',
  cite:D2+' slide 17; T 60–62'},
 
@@ -424,7 +424,7 @@ QUESTIONS.push(
   {t:'A half-life of months', correct:true, why:'Slide 20: very long half-life, months; (T 107) "This has a very, very long half-life, half-life for months".'},
   {t:'Strong CYP3A4 induction', correct:false, why:'CYP3A4 appears with calcineurin inhibitors and apremilast (slides 30, 34), not as the acitretin reason.'},
   {t:'Binding to the vitamin D receptor', correct:false, why:'That is calcipotriene (slide 21).'},
-  {t:'Poor oral absorption', correct:false, why:'Not a reason given; the issue is persistence in the body (T 107–116).'}],
+  {t:'Rapid hepatic metabolism', correct:false, why:'Rapid metabolism would shorten the waits; acitretin has a half-life of months (T 107).'}],
  teach:'The long half-life means the retinoid stays in the body long after the last dose; hence the waits before pregnancy and blood donation (slide 20; T 107–116).',
  cite:D2+' slide 20; T 107–116'},
 
@@ -433,9 +433,9 @@ QUESTIONS.push(
  stem:'After stopping acitretin, how long must a woman avoid becoming pregnant?',
  options:[
   {t:'At least 3 years', correct:true, why:'Slide 20: must not be used by women who may become pregnant during treatment or for at least 3 years after it is stopped.'},
-  {t:'1 week', correct:false, why:'Far too short for a drug with a half-life of months (slide 20).'},
+  {t:'At least 1 year', correct:false, why:'Slide 20: at least 3 years after treatment is discontinued.'},
   {t:'Until the next menstrual period', correct:false, why:'Slide 20 gives at least 3 years.'},
-  {t:'No wait once the drug is stopped', correct:false, why:'The drug persists for months after the last dose (T 107–109).'}],
+  {t:'At least 2 months', correct:false, why:'Two months is the ethanol rule after acitretin (slide 20); pregnancy waits at least 3 years.'}],
  teach:'Slide 20: teratogenic; no pregnancy during treatment or for at least 3 years after it is stopped; in the USA prescribers use the Do Your P.A.R.T. program. In class: "months" before trying to get pregnant because of the long half-life (T 107–109).',
  note:'In class she said "months" (T 107–109) without a figure; the slide and Katzung ch 61 (K61 941–942) give at least 3 years. No option is a span of months.',
  cite:D2+' slide 20; T 107–109'},
@@ -457,7 +457,7 @@ QUESTIONS.push(
  stem:'A patient who stopped acitretin a year ago wants to donate blood. What applies?',
  options:[
   {t:'Wait until 3 years after stopping', correct:true, why:'Slide 20; (T 113–116) "You have to wait 3 years. After discontinuing therapy"; "That\'s a pretty odd statement to make that you gotta wait 3 years, right?"'},
-  {t:'Donate now; it has cleared', correct:false, why:'With a half-life of months, the drug persists (T 113–115).'},
+  {t:'Wait until 2 years after stopping', correct:false, why:'Slide 20: no blood donation for 3 years after discontinuing therapy.'},
   {t:'Wait 2 months after stopping', correct:false, why:'2 months is the ethanol rule (slide 20).'},
   {t:'Donate if liver function tests are normal', correct:false, why:'Liver monitoring is for hepatotoxicity (slide 20), not for donation.'}],
  teach:'Blood with acitretin in it could cause birth defects in a recipient, and the drug stays for a long time, so no donation during treatment and for 3 years after (slide 20; T 113–116).',
@@ -583,7 +583,7 @@ QUESTIONS.push(
  options:[
   {t:'It resolves within days', correct:true, why:'Slide 22: resolves within days of discontinuation; (T 194–196).'},
   {t:'It persists for about 3 years', correct:false, why:'3 years belongs to acitretin (slide 20).'},
-  {t:'It needs dialysis to clear', correct:false, why:'Slide 22: it resolves within days of stopping.'},
+  {t:'It resolves over several months', correct:false, why:'Slide 22: it resolves within days of discontinuation.'},
   {t:'It turns into hypocalcemia', correct:false, why:'Not stated; calcium levels fall back (T 194–195).'}],
  teach:'Lowering or stopping the dose clears the high calcium, and the product might be restarted at a lower dose (slide 22; T 194–196).',
  cite:D2+' slide 22; T 191–196'},
@@ -619,7 +619,7 @@ QUESTIONS.push(
   {t:'Reduce symptom extent and severity', correct:true, why:'Slide 24; (T 212–213) "They don\'t stop it. They\'re just trying to treat the symptoms".'},
   {t:'Cure the disease after one full course', correct:false, why:'(T 212) "They don\'t stop it."'},
   {t:'Replace the missing filaggrin', correct:false, why:'Filaggrin is the AD barrier protein (Lecture 1, PP slide 15), not a CNI target.'},
-  {t:'Kill bacteria on the skin', correct:false, why:'Antibiotics are for acne (T 574–582).'}],
+  {t:'Restore normal keratinocyte turnover', correct:false, why:'Normalizing turnover is the retinoid effect (PCol slide 15); calcineurin inhibitors reduce the extent and severity of symptoms (slide 24).'}],
  teach:'Slide 24: used for AD and psoriasis to reduce extent and severity of symptoms.',
  cite:D2+' slide 24; T 211–215'},
 
@@ -777,7 +777,7 @@ QUESTIONS.push(
   {t:'Within the first few days', correct:true, why:'Slide 27: both significantly relieve pruritus after the first few days; (T 365–367).'},
   {t:'After 8–12 weeks', correct:false, why:'8–12 weeks is the topical retinoid timeline for acne (slide 16).'},
   {t:'After 4–6 weeks of a flare', correct:false, why:'4–6 weeks is the retinoid comedone flare (slide 16).'},
-  {t:'Within minutes of the first dose', correct:false, why:'Slide 27 gives the first few days.'}],
+  {t:'After about 2 months', correct:false, why:'Slide 27: both relieve pruritus after the first few days of treatment (T 366).'}],
  teach:'By lowering T cells and then mast cells, they reduce inflammation and the itch within a few days (slide 27; T 362–367).',
  cite:D2+' slide 27; T 362–367'},
 
@@ -800,7 +800,7 @@ QUESTIONS.push(
   {t:'It is not FDA approved under age 2', correct:true, why:'Slide 27; (T 376–377) "you cannot use this product in children younger than 2. It\'s not FDA approved."'},
   {t:'It is approved from birth', correct:false, why:'Slide 27: adults and children older than 2.'},
   {t:'It is approved from 6 months', correct:false, why:'Slide 27 gives older than 2 years.'},
-  {t:'It is approved if used on the face', correct:false, why:'The age limit does not depend on site (slide 27).'}],
+  {t:'It is approved from 12 months of age', correct:false, why:'Slide 27: use in children younger than 2 years is not FDA approved.'}],
  teach:'Both topical calcineurin inhibitors are approved for AD in adults and children older than 2; use below 2 is not FDA approved (slide 27; T 373–377).',
  cite:D2+' slide 27; T 373–377'},
 
@@ -855,7 +855,7 @@ QUESTIONS.push(
  options:[
   {t:'They are not interchangeable', correct:true, why:'Slide 29 (Micromedex): not bioequivalent and cannot be used interchangeably; (T 387, 394–395) "They are not equivalent for oral cyclosporine".'},
   {t:'They can be swapped dose for dose', correct:false, why:'(T 387) "They are not dosing equivalent".'},
-  {t:'They differ in color, not in dose', correct:false, why:'They differ in bioavailability (slide 29).'},
+  {t:'They are interchangeable if blood levels are checked', correct:false, why:'Slide 29: they cannot be used interchangeably; blood levels and dose adjustments are needed with either to prevent toxicity.'},
   {t:'One is for topical use', correct:false, why:'Both are oral formulations (slide 29).'}],
  teach:'Two oral cyclosporine products: Neoral, a microemulsion, and Sandimmune, the original. They are not bioequivalent; blood levels and dose adjustments help prevent toxicity (slide 29; T 386–396).',
  cite:D2+' slide 29; T 386–396'},
@@ -1204,7 +1204,7 @@ QUESTIONS.push(
  options:[
   {t:'Mild peeling', correct:true, why:'(T 541–543) "the effects of it is should be peeling only. That\'s what we want therapeutically mild peeling"; slide 39.'},
   {t:'Peeling of the deeper skin layers', correct:false, why:'(T 544–545) desquamation peels off deeper layers: "You don\'t want that happening".'},
-  {t:'Ulceration of the comedone', correct:false, why:'Ulceration is a side effect of high concentrations (slide 40).'},
+  {t:'Blistering and crusting', correct:false, why:'Blistering and crusting mean a product is too strong (PCol slide 16); with salicylic acid the aim is mild peeling (slide 39; T 541–545).'},
   {t:'No visible change in the skin', correct:false, why:'Mild peeling is the intended effect (T 543).'}],
  teach:'Slide 39 describes the effect as peeling (desquamation) of keratotic debris. In class she set mild peeling as the goal and peeling of deeper layers as unwanted (T 541–545).',
  cite:D2+' slide 39; T 541–545'},

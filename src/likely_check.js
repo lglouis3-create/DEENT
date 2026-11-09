@@ -54,7 +54,7 @@ const noReason = L.items.filter(x => !x.reason || x.reason.trim().length < 12 ||
 check(!noReason.length, 'every star has a reason and a reference', noReason.map(x => x.id).join(', '));
 const badSrc = L.items.filter(x => !L.sources[x.source] || !L.sources[x.source].label || !L.sources[x.source].detail);
 check(!badSrc.length, 'every star names a defined source', badSrc.map(x => x.id + '→' + x.source).join(', '));
-const PROF = {smith: 'Smith', sikazwe: 'Sikazwe'};
+const PROF = {smith: 'Smith', sikazwe: 'Sikazwe', patel: 'Patel'};
 const wrongProf = L.items.filter(x => QB[x.id] && L.sources[x.source] && PROF[L.sources[x.source].by] !== QB[x.id].prof);
 check(!wrongProf.length, "every star's source is the question's own professor", wrongProf.map(x => x.id).join(', '));
 const unused = Object.keys(L.sources).filter(k => !L.items.some(x => x.source === k));

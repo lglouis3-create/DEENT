@@ -12,7 +12,8 @@
        likely_data.js as the audit record only. Exam papers are left as they
        are (Q.examMode).
      - renderTopics(): a card under the straight passes, "Starred questions",
-       opens exactly the starred ids (all, Dr. Smith's or Dr. Sikazwe's) with
+       opens exactly the starred ids (all, Dr. Smith's, Dr. Sikazwe's or, from
+       Exam 2, Dr. Patel's; that row shows only when she has stars) with
        the engine's own drillList().
    It says plainly that the stars are Claude's prediction from the professors'
    stated emphasis, not an official list.
@@ -58,7 +59,7 @@ const LIKELY_UI = (() => {
   /* ---------- the card on Topics ---------- */
   function decorateTopics(){
     const v = document.getElementById('v-topics'); if (!v || v.querySelector('.lkcard')) return;
-    const all = pool(), sm = pool('smith'), sk = pool('sikazwe');
+    const all = pool(), sm = pool('smith'), sk = pool('sikazwe'), pa = pool('patel');
     if (!all.length) return;
     const d = document.createElement('div');
     d.className = 'topic lkcard';
@@ -69,13 +70,15 @@ const LIKELY_UI = (() => {
       <div class="subrow"><span class="sname">Dr. Smith's starred questions<small>${sm.length} questions</small></span>
         <button type="button" class="ghost" data-lk="smith">Start</button></div>
       <div class="subrow"><span class="sname">Dr. Sikazwe's starred questions<small>${sk.length} questions, on his assigned pages</small></span>
-        <button type="button" class="ghost" data-lk="sikazwe">Start</button></div>
+        <button type="button" class="ghost" data-lk="sikazwe">Start</button></div>${pa.length ? `
+      <div class="subrow"><span class="sname">Dr. Patel's starred questions<small>${pa.length} questions, Exam 2</small></span>
+        <button type="button" class="ghost" data-lk="patel">Start</button></div>` : ''}
     </div>`;
     const sweep = v.querySelector('.sweepcard');
     if (sweep) sweep.insertAdjacentElement('afterend', d); else v.appendChild(d);
     d.querySelectorAll('button[data-lk]').forEach(b => b.onclick = () => {
       const k = b.dataset.lk, list = k === 'all' ? all : pool(k);
-      drillList(list, k === 'all' ? '★ Likely on the exam' : k === 'smith' ? "★ Likely: Dr. Smith" : '★ Likely: Dr. Sikazwe');
+      drillList(list, k === 'all' ? '★ Likely on the exam' : k === 'smith' ? "★ Likely: Dr. Smith" : k === 'patel' ? '★ Likely: Dr. Patel' : '★ Likely: Dr. Sikazwe');
     });
   }
 

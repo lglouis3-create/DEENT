@@ -264,7 +264,7 @@ QUESTIONS.push(
  options:[
   {t:'It limits systemic exposure', correct:true, why:'Slide 7: "Hydrolytic deboronation limits systemic exposure"; the product is inactive and goes out harmless (T 666–667).'},
   {t:'It activates the drug in skin', correct:false, why:'Intact crisaborole is the form that binds PDE4 (T 788–791); deboronation inactivates it.'},
-  {t:'It lets the drug enter blood', correct:false, why:'The reverse: it limits systemic exposure (slide 7).'},
+  {t:'It converts the drug to an active acid', correct:false, why:'Slide 7: deboronation inactivates the drug; the products are inactive.'},
   {t:'It raises its affinity for PDE4', correct:false, why:'The boron is what binds the PDE4 metals (T 712–719); losing it removes that binding.'}],
  teach:'Crisaborole binds PDE4 through its boron (slide 7 CBDA). Once water removes the boron, the product cannot bind that way, and it is further oxidized and conjugated for elimination (T 699–711). This predictable inactivation keeps systemic exposure low.',
  cite:S3+' slide 7; T 664–668, 699–719, 788–791'},
@@ -457,7 +457,7 @@ QUESTIONS.push(
  stem:'About what share of solar UVB does the ozone layer block?',
  options:[
   {t:'About 90%', correct:true, why:'Slide 12: "Ozone: blocks 100% UVC & 90% UVB"; (T 821–822) "like 90% of UVB ... we receive about 10%".'},
-  {t:'About 10%', correct:false, why:'10% is what reaches us, not what ozone blocks (T 822).'},
+  {t:'About 70%', correct:false, why:'Slide 12: the ozone layer blocks about 90% of UVB.'},
   {t:'About 50%', correct:false, why:'Not the figure on slide 12 or in T 821–822.'},
   {t:'About 25%', correct:false, why:'Not the figure on slide 12 or in T 821–822.'}],
  teach:'Ozone blocks UVC (slide 12: 100%; spoken "most of that", T 821) and about 90% of UVB, so about 10% of UVB reaches us, still enough to penetrate the skin (T 822–823).',
@@ -1178,7 +1178,7 @@ QUESTIONS.push(
   {t:'Because of metabolism', correct:true, why:'(T 1187–1188) "It has a, a short half-life due to, please write this, metabolism"; slide 26 T1/2 = 1–2 h.'},
   {t:'Because of protein binding', correct:false, why:'High protein binding explains its long duration of action, 8–12 h (slide 26; T 1188).'},
   {t:'Because of poor penetration', correct:false, why:'Poor penetration explains low skin bioavailability (slide 26), not the half-life.'},
-  {t:'Because of autoxidation', correct:false, why:'Spontaneous autoxidation is anthralin (slide 17).'}],
+  {t:'Because of poor oral absorption', correct:false, why:'Slide 26: oral bioavailability is 95%.'}],
  teach:'Slide 26: T1/2 = 1–2 h due to metabolism; duration of action = 8–12 h due to high protein binding. Metabolism includes 11β-HSD (to cortisone) and 5β-reductase (to 5β-dihydrocortisol) (slide 26).',
  cite:S3+' slides 17, 26; T 1187–1189'},
 

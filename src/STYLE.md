@@ -197,3 +197,48 @@ Exam cues he stressed (for weighting): "know those limits" (UVR, T 814); "That's
 - Antibiotics deferred to ID: "So, here, I'm not going to belabor the point." (T@34517). Kept to structure, chelation, food, cross-allergy; clindamycin item S4-090 marked `lowYield`.
 - Slides to avoid: "I'll send out, you know, some of the slides that I don't want you to, you know, kind of focus on too much for the exam" (T@15133) and "by Friday I'll communicate what, you know, things to avoid and maybe, um, yeah, slides to avoid" (T@48924–49019). Not received; when it arrives, drop or `lowYield` the matching S4 items.
 - Personal anecdotes left out: the sulfur-in-Vaseline childhood story (T@24290–24450), the opening remarks, the milk-bath story beyond the lactic acid fact.
+
+## Lecture 5: Patel, 11/06 (Dermatitis Therapeutics, Exam 2): polls, room questions, cues and exclusions
+
+Deck: Patel_Dermatitis-Therapeutics-Student.pdf (71 slides). Transcript places are byte offsets (T@n) in "DEENT 11.06 Lecture Transcript.txt". Questions: q7_L05.js (P5-*).
+
+Her format (11/06): "poll everywhere will always be utilized in my lectures. This is how we encourage participation, as well as you guys learn a little bit more about my exam questions" (T@1918–2297). Case stems (CC, HPI, PMH, current meds, other, physical assessment); a calculation ("there will be a calculation on the exam", T@11799; "I will always tell you what's available in the exam question", T@9636); four options, once five with "None of the above". Brand names of OTC products appear in her options (Aquaphor).
+
+#### PollEv, 11/06, verbatim (PollEV_Dr_Patel.pdf)
+| Poll | Options | Her answer | Item |
+|---|---|---|---|
+| "Patient is a 18 year old male applying a Hydrocortisone ointment to their face and neck TID for 14 days. What is the most appropriate size tube to dispense?" | 15 / 30 / 45 / 60 grams / None of the above | 60 g (52.5 g; T@11444–11799) | P5-007 |
+| "What is another name for Atopic Dermatitis?" | Eczema / Psoriasis / Atopic Lesions / Plaques | Eczema (T@24148) | P5-016 |
+| "How would you best describe the severity/status of this patient's clinical presentation?" | Mild, Acute / Moderate, Acute / Moderate, Subacute / Severe, Subacute | Moderate, Subacute (T@25991–26757) | P5-032 |
+| "What would be the most appropriate first-line maintenance therapy option for this patient?" | Basic Management + Topical Corticosteroid / Pimecrolimus / Crisaborole 2% / Topical Corticosteroid | A (T@58910–59410) | P5-100 |
+| "What would be the most appropriate prescription details for the recommendation made previously?" | HC 1% thin layer BID 3–7 days / Mometasone furoate 0.1% once daily 3–7 days / HC 1% once daily 3 days / Triamcinolone 0.1% thick layer BID 3–7 days | A (T@60158) | P5-101 |
+| "What would you educate the patient on to optimize the use of the medication appropriately?" | open | thin layer, rub in, wash hands, 7 days (T@67283–68043) | P5-050 |
+| "When should the patient seek help or return to their PCP if the medication is not helping?" | open | 7 days (T@68450) | P5-102 |
+| "What would be an appropriate first-line treatment option?" (diaper case) | Skin protectant containing hydrocortisone / miconazole / zinc oxide / Aquaphor Ointment | zinc oxide (T@81725) | P5-118 |
+| "When should the father be educated to follow-up on the improvement of the skin lesions?" | 5 / 2 / 7 / 14 days | 7 days (T@82081–82496) | P5-119 |
+| "What are some appropriate nonpharmacologic methods the father should be educated on?" | open | ABCDE, every 2 hours (T@82496) | P5-120 |
+
+#### Room questions, verbatim with answer
+- "what was the amount of grams that we said per one fingertip unit? 0.5." (T@9259); "And what was the closest size tube that you would round up to? 60." (T@11799).
+- "So what does pruritus mean? ... Itching" (T@13017–13378). "what does the HPI stand for? History of present illness." (T@24148).
+- "What's mild? Less than 25. And what's severe? Greater than 50." (T@25991). "what is the difference between acute and subacute? The dryness" (T@26353).
+- "what would be the difference between an ointment versus a lotion? ... thickness" (T@38498). "Is it first line or second line? Second line." (T@44161).
+- "What are some examples of live vaccines?" (T@48048; examples not on her slides). "How do we convert pounds to kilos? ... Divide by 2.2" (T@49983).
+- "what strength and what medication of a corticosteroid is only applied to the face? Good. Hydrocortisone 1%" (T@56931). "how many days are we not surpassing? 14." (T@56572).
+- "what medication are we not applying [a wet wrap] with? ... TCIs" (T@62649). "Which one was the 1 to 8 weeks? TCIs." (T@64280).
+
+#### Cues she gave (verbatim)
+- "you will need to know this chart" (FTU, T@7616); "you do need to memorize that chart for the adults" (T@12169).
+- "I've highlighted and underlined the certain characteristics that I want you to understand the difference between mild, moderate, and severe" (T@21818); "not only do I want you to know the severity, but we also need to define if it's acute, sub-acute or chronic" (T@22904).
+- Steroid table: "the ones that are highlighted for you in the black arrows are the ones that I want you to concentrate on" (T@37900); mometasone ointment vs cream: "Highlight that, please" (T@39633).
+- TCIs: "I want you to kinda understand the difference between the two" (T@43342); "the bolded areas, the age, what percentage of the medication, what dosage form ... our biggest things to understand" (T@43718).
+- Dupilumab: "I may include it on a case and then you know to not recommend it ... I give you guys tips of my exam questions, so write it down" (live vaccines, T@48048); "I want you to only know the adult and children dosing" (T@50408).
+- "I want you guys to remember A B C D E" (T@74574); exclusions for self-treatment: "So please know this list" (T@80993).
+
+#### Stated exclusions (verbatim)
+- Skin anatomy: "I don't need you to need to know anything, you know, but that" (epidermis, dermis, subcutis; T@6438).
+- Pediatric FTU: "I don't necessarily want you guys to memorize the pediatric fingertip units, but it is here for your reference" (T@8797); "I don't want you to worry about pediatrics" (T@10021).
+- Infant dupilumab dosing: "that is there for your reference ... I want you to only know the adult and children dosing" (T@50408).
+- Newborn and infant ages for diaper changes: "I'm not gonna test you on this" (T@71019).
+- SCORAD calculation: "we do not need to calculate the score at scale score. That is on the physician to do so" (T@21052).
+- Her graded Atopic Dermatitis Patient Case (Canvas, due 11/10) is not used for questions.

@@ -142,6 +142,13 @@ const COURSE = {
     {id:'L03b', deck:'f26-DEENT-DPAW-mc.pdf',
      label:'Lectures 3–4: Dermatitis, psoriasis and acne medicinal chemistry (Sikazwe, 11/03–11/04)',
      prof:'Sikazwe', exam:1, module:'Exam 1: Lectures 1–4'},
+    // Exam 2 (syllabus p. 6: Lectures 1-4 30%, Lectures 5-8 70%). Lectures 5-8 are Dr. Patel's
+    // therapeutics lectures: 5 Dermatitis 11/06; 6 Acne and 7 Scaly Dermatoses/Psoriasis 11/10-11/11;
+    // 8 Outdoor Exposure, Sun Exposure, Wound Care, WCC 11/12. Each new deck gets its own entry here
+    // with exam:2 and this module. (Her slide 5 numbers them "Lectures 5-9"; the syllabus numbering is used.)
+    {id:'L05', deck:'Patel_Dermatitis-Therapeutics-Student.pdf',
+     label:'Lecture 5: Atopic and diaper dermatitis therapeutics (Patel, 11/06)',
+     prof:'Patel', exam:2, module:'Exam 2: Lectures 5–8'},
   ],
 
   exams: [
@@ -176,8 +183,32 @@ const COURSE = {
        {key:'smith',   name:'Dr. Smith (pharmacology)',      marks:null, filter:{exam:1, prof:'Smith', unassigned:undefined}},
        {key:'sikazwe', name:'Dr. Sikazwe (medicinal chemistry)', marks:null, filter:{exam:1, prof:'Sikazwe', unassigned:undefined}},
      ]},
+    // Exam 2 (syllabus p. 6): 50 questions, Mon 11/16 9:00-10:30, Lectures 1-4 30% and Lectures 5-8 70%.
+    // The core weights pools by marks (views.js drawPaper: each pool supplies its marks' worth of
+    // questions), so 30% of 50 = 15 and 70% of 50 = 35. Lectures 6-8 are not taught yet (11/09): the
+    // 5-8 pool now holds Lecture 5 only, and the blurb says so (Louis's Exam 1 rule: label coverage
+    // honestly). The 1-4 pool keeps Exam 1's exclusions (Dr. Sikazwe's pages outside his assigned list,
+    // unassigned:true) and has no split by professor, none being announced. Dr. Patel's format: her
+    // PollEv questions of 11/06 (case-based; tube-size calculation; four options, once five with "None
+    // of the above") and "there will be a calculation on the exam" (11/06 transcript, T@11799).
+    {id:'exam2', name:'Exam 2', date:'Mon 11/16, 9:00–10:30 AM', when:'2026-11-16T09:00',
+     questions:50, minutes:90, sata:null,
+     blurb:'Practice coverage of Lectures 1–5 so far. Lectures 1–4 (Smith, Sikazwe) supply 30% of each paper and Lecture 5 (Patel, atopic and diaper dermatitis, 11/06) supplies the 70% that the syllabus gives to Lectures 5–8. Lectures 6–8 (Patel: acne; scaly dermatoses and psoriasis; outdoor exposure, sun exposure, wound care, warts, corns and calluses) join the 70% pool once they are taught. Dr. Patel says there will be a calculation on the exam, and her in-class polls are case-based: tube size, severity and status, first-line choice, prescription details, counseling and follow-up timing. The syllabus lists multiple-choice, select-all, short-answer, true/false and matching as possible formats and gives no count of each. These practice papers draw single-answer questions only; the select-all and matching questions are in the topic drills',
+     facts:[['Covers', 'Practice coverage of Lectures 1–5 so far.'],
+            ['Weighting', 'Lectures 1–4 (Smith, Sikazwe) supply 30% of each paper and Lecture 5 (Patel, atopic and diaper dermatitis, 11/06) supplies the 70% that the syllabus gives to Lectures 5–8.'],
+            ['Still to come', 'Lectures 6–8 (Patel: acne; scaly dermatoses and psoriasis; outdoor exposure, sun exposure, wound care, warts, corns and calluses) join the 70% pool once they are taught.'],
+            ['Dr. Patel\'s format', 'Dr. Patel says there will be a calculation on the exam, and her in-class polls are case-based: tube size, severity and status, first-line choice, prescription details, counseling and follow-up timing.'],
+            ['Syllabus formats', 'The syllabus lists multiple-choice, select-all, short-answer, true/false and matching as possible formats and gives no count of each.'],
+            ['Practice papers', 'These practice papers draw single-answer questions only; the select-all and matching questions are in the topic drills.']],
+     factsMain:['Covers', 'Weighting'],
+     pools:[
+       {key:'l14', name:'Lectures 1–4 (Smith, Sikazwe): 30%', marks:15, filter:{exam:1, unassigned:undefined}},
+       {key:'l58', name:'Lectures 5–8 (Patel): 70%, Lecture 5 so far', marks:35, filter:{exam:2}},
+     ]},
   ],
-  activeExam: 'exam1',
+  // Exam 1 was on Mon 11/09; the Exam view, the weighted pass and Weak spots follow Exam 2 from
+  // 11/09 (the core draws papers for one exam, the active one). Exam 1's own entry above is kept.
+  activeExam: 'exam2',
 
   // What a question asks the student to do. The first four follow Dr. Smith, 11/03:
   // "what are these drugs targeting, why are they targeting it, and what makes them
@@ -192,6 +223,10 @@ const COURSE = {
     {id:'class',   label:'Drug class and indication',         short:'Class'},
     {id:'chem',    label:'Structure, functional group, SAR',  short:'Chem'},
     {id:'pk',      label:'PK, metabolism, interactions',      short:'PK'},
+    // Dr. Patel's therapeutics (Lecture 5 on): quantity and dose calculations, and reading a case
+    // (severity, status, line of therapy, referral), the two kinds her 11/06 polls asked
+    {id:'dose',    label:'Dose, quantity and tube size',      short:'Dose'},
+    {id:'case',    label:'Case assessment and treatment choice', short:'Case'},
   ],
 
   paceDefault: 'cram',
@@ -211,6 +246,10 @@ const COURSE = {
           // Mechanism step-throughs from Dr. Smith's PCol slides (Louis, 2026-11-09): adds to DIA
           'moa_figs.js',
           'q1_topics.js', 'q2_L02.js', 'q3_L03a.js', 'q4_L03b.js', 'q5_L04.js', 'q6_L03c.js',
+          // harder practice for Exam 2 (Louis, 11/09: finer details, two facts combined, closer choices)
+          'q8_hard_smith.js', 'q9_hard_sik.js',
+          // Dr. Patel, Lecture 5 (Exam 2): pushes its deck folder into TOPIC_DECKS, its TOPICS and questions
+          'q7_L05.js',
           // the step-throughs of moa_figs.js in the explanations of the matching Smith questions
           'moa_links.js',
           // Drug list tab (temporary course-level presentation, to be replaced by the kit's
@@ -261,7 +300,8 @@ const COURSE = {
   tools: {citeAliases:{'skin-pathophys-students-2026.pdf':'Skin-Pathophys-Students-2026.pdf',
                        'skin-pcol-students-2026.pdf':'Skin-PCol-Students-2026.pdf',
                        'f26-deent-dpaw-mc.pdf':'f26-DEENT-DPAW-mc.pdf',
-                       'deent_sun_exposure_2026.pdf':'DEENT_Sun_Exposure_2026.pdf'},
+                       'deent_sun_exposure_2026.pdf':'DEENT_Sun_Exposure_2026.pdf',
+                       'patel_dermatitis-therapeutics-student.pdf':'Patel_Dermatitis-Therapeutics-Student.pdf'},
           citeLectures:{}, citeBareMap:{},
           explainTerms:[], harvestMasks:[]},
 

@@ -189,7 +189,7 @@ QUESTIONS.push(
   {t:'No; the tan does not protect', correct:true, why:'(audio 07:09–07:30) "people that tan more deeply, their skin is not protected from sun damage"; she repeated it as important.'},
   {t:'Yes; melanin blocks UVB fully', correct:false, why:'She stated the opposite (audio 07:09–07:30).'},
   {t:'Yes, after the delayed tan peaks', correct:false, why:'Neither kind of tanning is good for the skin (audio 07:37–07:55).'},
-  {t:'Yes, if the tan formed gradually', correct:false, why:'She gave no exception (audio 07:09–07:30).'}],
+  {t:'From UVB, but not from UVA', correct:false, why:'She said that people who tan more deeply are not protected from sun damage (audio 07:09).'}],
  teach:'She said this twice as an important point: a deeper tan does not protect the skin from sun damage (audio 07:09–07:30).',
  cite:SUN+' slide 9; audio 07:09–07:30'},
 
@@ -245,7 +245,7 @@ QUESTIONS.push(
   {t:'A second-degree burn', correct:true, why:'Slide 11: severe sunburn, a second-degree burn with blisters; (audio 09:08–09:35).'},
   {t:'A first-degree burn', correct:false, why:'Blistering marks a second-degree burn (slide 11).'},
   {t:'A phototoxic drug reaction', correct:false, why:'Phototoxic reactions are tied to drugs and UVA (slide 8).'},
-  {t:'Immediate pigmentation', correct:false, why:'Pigmentation is tanning (slide 10), not a burn.'}],
+  {t:'A third-degree burn', correct:false, why:'Slide 11: a sunburn with blisters is a second-degree burn (audio 09:08).'}],
  teach:'Severe sunburn can bring fever, chills, weakness and shock (slide 11; audio 09:08–09:35).',
  cite:SUN+' slide 11; audio 09:08–09:35'},
 
@@ -378,7 +378,7 @@ QUESTIONS.push(
   {t:'Every 90–120 minutes', correct:true, why:'Slide 17; (audio 17:12) "Usually, it\'s every ninety to a hundred and twenty minutes."'},
   {t:'Every 4–6 hours', correct:false, why:'Not the interval on slide 17.'},
   {t:'Once each morning before going outside', correct:false, why:'Slide 17 calls for reapplication every 90–120 minutes.'},
-  {t:'Every 15 minutes', correct:false, why:'15 minutes is when dibenzoylmethane activity starts to decrease (slide 24), not the reapplication interval.'}],
+  {t:'Every 3–4 hours', correct:false, why:'Slide 17: re-apply every 90–120 minutes (audio 17:12).'}],
  teach:'Reapply as the label instructs, usually every 90–120 minutes (slide 17; audio 16:54–17:12).',
  cite:SUN+' slides 17, 24; audio 16:54–17:12'},
 
@@ -536,7 +536,7 @@ QUESTIONS.push(
   {t:'Refer the patient to a provider', correct:true, why:'Slide 25: rash, vesicles, hives or exaggerated sunburn, refer patient; (audio 22:59).'},
   {t:'Switch to a higher SPF of the same product', correct:false, why:'A reaction of this kind calls for referral (slide 25).'},
   {t:'Reapply the product more often', correct:false, why:'A reaction of this kind calls for referral (slide 25).'},
-  {t:'Expect it to fade within 15 minutes', correct:false, why:'A reaction of this kind calls for referral (slide 25).'}],
+  {t:'Switch to a physical sunblock and continue', correct:false, why:'Physical sunblocks irritate less (slide 25), but rash, vesicles, hives or an exaggerated sunburn call for referral.'}],
  teach:'Mild skin irritation from sunscreens is common; rash, vesicles, hives or an exaggerated sunburn need referral (slide 25; audio 22:35–23:21).',
  cite:SUN+' slide 25; audio 22:35–23:21'},
 
