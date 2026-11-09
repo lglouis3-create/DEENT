@@ -8,6 +8,12 @@ characters.
 
 Every update adds its bullets here in the same commit that makes the change.
 
+## 2026-11-09 (Mechanisms step by step)
+- Five new step-through figures of Dr. Smith's mechanisms: PDE-4 and cAMP, the ribosome, two folate figures, abatacept.
+- Ribosome: where tetracyclines, clindamycin and macrolides bind, after the four steps of protein building.
+- Folate: sulfonamides and trimethoprim block in sequence; methotrexate stops the folate cycle at DHFR.
+- They are in the Guide, the Diagrams tab, the walkthroughs, and after you answer 29 of her questions.
+
 ## 2026-11-09 (Five new step-through drawings)
 - Steroid skeleton step by step: rings, α and β faces, numbers 1–21, the four SAR features, six receptor H-bonds.
 - Dr. Smith's biologics: which drug binds IL-4Rα, p40, p19, IL-17A or IL-17RA, drawn on one map.
