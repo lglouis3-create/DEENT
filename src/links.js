@@ -49,6 +49,17 @@ const READ_LINKS = (() => {
     gSp:     ['guide', 'gobj-sun-photo', 'Guide: photosensitizing drugs (Sun Exposure)'],
     tS:      ['tell',  'tell-sun', 'Tell apart: sun protection (Smith)'],
     rSun:    ['ref',   'ref-sun', 'Reference: SPF, skin types, substantivity'],
+    // Dr. Patel, Lecture 5 (Exam 2): guide sections by her objectives, and her tables
+    gP2:     ['guide', 'gobj-p5-2', 'Guide: name the condition (Dermatitis Therapeutics)'],
+    gP3:     ['guide', 'gobj-p5-3', 'Guide: self-care candidate and exclusions (Dermatitis Therapeutics)'],
+    gP4:     ['guide', 'gobj-p5-4', 'Guide: treatment goals (Dermatitis Therapeutics)'],
+    gP5:     ['guide', 'gobj-p5-5', 'Guide: non-drug therapy (Dermatitis Therapeutics)'],
+    gP6:     ['guide', 'gobj-p5-6', 'Guide: best treatment and the step-care algorithm (Dermatitis Therapeutics)'],
+    gP7:     ['guide', 'gobj-p5-7', 'Guide: follow-up (Dermatitis Therapeutics)'],
+    rPftu:   ['ref',   'ref-p5-ftu', 'Reference: adult fingertip units and tube sizes (Dr. Patel)'],
+    rPtcs:   ['ref',   'ref-p5-tcs', 'Reference: topical corticosteroid potency (Dr. Patel)'],
+    rPdrug:  ['ref',   'ref-p5-drugs', 'Reference: atopic dermatitis drugs by line (Dr. Patel)'],
+    rPdd:    ['ref',   'ref-p5-diaper', 'Reference: diaper dermatitis products and limits (Dr. Patel)'],
   };
   const esc = s => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
   const one = c => {
@@ -158,6 +169,33 @@ const READ_LINKS = (() => {
           'ga-deeper-peel sulfur-thiolysis cysteine-disulfide sulfur-drawbacks bpo-class retinoid-teratogen oc-acne oc-steroid ' +
           'azelaic-diacid clinda-topical tet-chelation octinoxate paba-allergy salicylate-hydrolysis photostability-rank uva-uvb-coverage ' +
           'hq-moa hq-storage aha-wrinkle aha-sources ha-film ha-structure topical-ret-collagen sunblock-products', 'rs4'),
+
+      /* ---- Lecture 5, Patel 11/06 (Dermatitis Therapeutics; Exam 2) ------ */
+      row('p5-ftu-grams p5-ftu-face-neck p5-ftu-arm-leg p5-ftu-trunk p5-tube-round-up p5-tube-face-tid p5-tube-trunk-bid ' +
+          'p5-tube-scalp-week p5-tube-arm p5-tube-two-areas p5-tube-days-last p5-tube-leg-daily p5-tube-sizes p5-tube-face-bid', 'rPftu', 'gP6'),
+      row('p5-ad-other-name p5-ad-features p5-ad-barrier-patho p5-ad-emollient-prevent p5-atopic-triad-vs-march p5-ad-risk-factors ' +
+          'p5-ad-trigger-category p5-ad-trigger-personal p5-ad-infant-pres p5-ad-onset-timing p5-ad-adult-region p5-ad-onset-persistence ' +
+          'p5-scorad-ranges p5-severity-sleep p5-severity-moderate-desc p5-status-defs p5-case-severity-status p5-case-severe-chronic ' +
+          'p5-ad-complications p5-dd-etiology p5-dd-signs p5-globiad-category', 'gP2'),
+      row('p5-ad-goals p5-dd-goals', 'gP4'),
+      row('p5-ftu-chart-match', 'rPftu'),
+      row('p5-emollient-3-min p5-counsel-thin-layer p5-tcs-absorption p5-tcs-storage-duration p5-tcs-air-dry', 'gP6'),
+      row('p5-pharmacist-role p5-pa-denied', 'gP7'),
+      row('p5-dupilumab-indications', 'rPdrug'),
+      row('p5-fix-barrier-steps p5-bleach-bath p5-bleach-amount p5-bath-practice p5-wet-wrap-tci p5-compress-weeping p5-nonpharm-counsel ' +
+          'p5-moist-most-effective p5-moist-urea p5-moist-aquaphor p5-lotion-frequency p5-dd-prevention-infant p5-iad-prevention-adult ' +
+          'p5-abcde p5-dd-case-nonpharm', 'gP5'),
+      row('p5-otc-followup-steroid-atrophy p5-dd-do-not-use p5-dd-exclusions p5-dd-exclusion-comorbid', 'gP3'),
+      row('p5-case-return-7d p5-dd-followup-7d p5-dd-case-followup', 'gP7'),
+      row('p5-vehicle-order p5-mometasone-vehicle p5-clobetasol-very-high p5-triamcinolone-medium p5-high-potency-arrowed p5-hc-lowest-class ' +
+          'p5-tcs-combination p5-hc-face-only', 'rPtcs', 'gP6'),
+      row('p5-tcs-adr p5-tcs-contraindication p5-otc-hc-regimen p5-tcs-onset-24-48 p5-tci-line-indication p5-pime-vs-tacro p5-tacro-strength-age ' +
+          'p5-tci-counsel-bathe p5-tci-bbw p5-tci-reassess-6wk p5-tci-adr p5-crisaborole-line p5-age-limits-compare p5-crisaborole-use ' +
+          'p5-crisaborole-adr p5-dupilumab-cyp-live p5-dupilumab-admin p5-dupilumab-adult-dose p5-dupilumab-child-lb p5-dupilumab-child-light ' +
+          'p5-dupilumab-child-heavy p5-dupilumab-combo p5-tralokinumab-target p5-tralokinumab-dose p5-tralokinumab-q4w p5-tralokinumab-ae ' +
+          'p5-jak-place p5-jak-doses p5-ruxolitinib-topical p5-jak-bbw p5-jak-mace', 'rPdrug', 'gP6'),
+      row('p5-algo-mild-acute p5-algo-moderate-maint p5-algo-severe p5-algo-not-resolved p5-algo-moderate-acute p5-case-first-line-maint p5-case-rx-details', 'gP6'),
+      row('p5-zinc-oxide-range p5-protectant-no-zinc p5-protectant-apply p5-dd-case-first-line p5-dd-complication-organisms', 'rPdd', 'gP6'),
     ],
     bySub: {},
     byLecture: {},

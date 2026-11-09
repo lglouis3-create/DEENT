@@ -243,4 +243,51 @@ const REFERENCE_HTML = `
 <tr><td><b>Hyaluronic acid</b></td><td>Endogenous mucopolysaccharide</td><td>Hygroscopic viscoelastic film</td><td><span class="ln">High MW surface, low MW deeper</span><span class="ln">declines with age</span></td><td>Non-antigenic</td><td>69</td></tr>
 <tr><td><b>Topical retinoids (tretinoin, isotretinoin, tazarotene)</b></td><td>Retinoids</td><td>↑ skin collagen</td><td>—</td><td>Teratogenicity</td><td>70</td></tr>
 </tbody></table>
+<h3 id="ref-p5-ftu">Dr. Patel: adult fingertip units and tube sizes, slides 10&ndash;13</h3>
+<table class="reftab"><thead><tr><th style="width:40%">Area (adult)</th><th>Fingertip units</th><th>Grams (&times; 0.5 g)</th></tr></thead><tbody>
+<tr><td><b>Scalp</b></td><td>3</td><td>1.5</td></tr>
+<tr><td><b>Face and neck</b></td><td>2.5</td><td>1.25</td></tr>
+<tr><td><b>One hand, front and back, with fingers</b></td><td>1</td><td>0.5</td></tr>
+<tr><td><b>One arm including the entire hand</b></td><td>4</td><td>2</td></tr>
+<tr><td><b>Elbows</b></td><td>1</td><td>0.5</td></tr>
+<tr><td><b>Both soles</b></td><td>1.5</td><td>0.75</td></tr>
+<tr><td><b>One foot including toes</b></td><td>2</td><td>1</td></tr>
+<tr><td><b>One leg including foot</b></td><td>8</td><td>4</td></tr>
+<tr><td><b>Buttocks</b></td><td>4</td><td>2</td></tr>
+<tr><td><b>Knees</b></td><td>1</td><td>0.5</td></tr>
+<tr><td><b>Trunk, both sides (7 each side)</b></td><td>14</td><td>7</td></tr>
+</tbody></table>
+<p class="prose">Slide 10: one adult fingertip unit (FTU) = 0.5 g; tubes 15, 30, 45, 60, 80, 100 g; prescribed amounts are rounded up to available tube sizes. Grams = FTU &times; 0.5 &times; applications a day &times; days. Slide 13: face and neck BID for two weeks, 35 g, prescribe 45 g; one side of the trunk BID for two weeks, 98 g, prescribe 100 g. The grams column is the FTU column times 0.5 g. Pediatric amounts (slides 12&ndash;13) are for reference only (11/06, T@8797, T@10021).</p>
+
+<h3 id="ref-p5-tcs">Dr. Patel: topical corticosteroid potency, the arrowed products, slide 37</h3>
+<table class="reftab"><thead><tr><th style="width:20%">Potency</th><th>Product and strength</th><th>Dosage forms</th></tr></thead><tbody>
+<tr><td><b>I. Very high</b></td><td>Clobetasol propionate 0.05%</td><td>Cream, foam, ointment</td></tr>
+<tr><td><b>II. High</b></td><td>Betamethasone dipropionate 0.05%</td><td>Cream, foam, ointment, solution</td></tr>
+<tr><td><b>II. High</b></td><td>Fluocinonide 0.05%</td><td>Cream, gel, ointment, solution</td></tr>
+<tr><td><b>II. High</b></td><td>Mometasone furoate 0.1% <b>ointment</b></td><td>Ointment</td></tr>
+<tr><td><b>III&ndash;IV. Medium</b></td><td>Mometasone furoate 0.1% <b>cream</b></td><td>Cream</td></tr>
+<tr><td><b>III&ndash;IV. Medium</b></td><td>Triamcinolone acetonide 0.1%</td><td>Cream, ointment</td></tr>
+<tr><td><b>VII. Lowest (OTC)</b></td><td>Hydrocortisone 0.25%, 0.5%, 1%</td><td>Cream, lotion, ointment, solution</td></tr>
+</tbody></table>
+<p class="prose">Slide 37: the steroid vehicle influences the strength, highest to weakest: ointment &gt; cream &gt; lotion &gt; solution &gt; gel &gt; spray. For atopic dermatitis only single-ingredient products are recommended (11/06, T@41713). Hydrocortisone 1% is the strength used on the face (slide 36; T@37425); slide 36 calls it &ldquo;low to medium potency&rdquo;, the slide 37 table class VII.</p>
+
+<h3 id="ref-p5-drugs">Dr. Patel: atopic dermatitis drugs by line, slides 35&ndash;46</h3>
+<table class="reftab"><thead><tr><th style="width:18%">Drug</th><th>Use and line</th><th>Dose, age, onset</th><th>Cautions on her slide</th><th style="width:8%">Slide</th></tr></thead><tbody>
+<tr><td><b>Topical corticosteroids</b>; OTC hydrocortisone 1%</td><td>First line; HC 1% for flares, body and face</td><td>BID, max 3&ndash;7 days; seek help at 7 days; never past 2 weeks; improvement in 24&ndash;48 h</td><td>Burning, tingling, cracking, pruritus, acne, alopecia, headache, atrophy, delayed wound healing; not for diaper dermatitis or systemic fungal infection</td><td>35&ndash;36, 52</td></tr>
+<tr><td><b>Pimecrolimus</b> 1% cream</td><td>Second line (TCI); mild-to-moderate</td><td>BID; over 2 years; response in 1&ndash;8 weeks</td><td>TCI boxed warning: rare lymphoma and skin malignancy; reassess at 6 weeks; under 2 not recommended; sun protection; no bathing, showering or swimming right after; no wet wraps</td><td>38&ndash;40</td></tr>
+<tr><td><b>Tacrolimus</b> ointment</td><td>Second line (TCI); moderate-to-severe</td><td>BID; 0.1% adults (&gt; 16 y); 0.03% from 2 to 15 y</td><td>As pimecrolimus</td><td>38&ndash;40</td></tr>
+<tr><td><b>Crisaborole</b> 2% ointment (PDE-4 inhibitor)</td><td>Third line; mild&ndash;moderate; flares, when a steroid is not appropriate or as adjunct</td><td>Thin layer BID; adults and children over 3 months</td><td>Burning and stinging; not under 3 months</td><td>41&ndash;42</td></tr>
+<tr><td><b>Dupilumab</b> (IL-4 antagonist), SC</td><td>Moderate&ndash;severe after topicals; also asthma, eosinophilic esophagitis, prurigo nodularis, rhinosinusitis with polyposis; specialty, prior authorization</td><td>Adult 600 mg (2 &times; 300) then 300 mg every other week. 6&ndash;17 y: &gt; 60 kg adult dose; 30&ndash;60 kg 400 mg (2 &times; 200) then 200 mg every other week; 15&ndash;30 kg 600 mg (2 &times; 300) then 300 mg every 4 weeks</td><td>Urticaria, angioedema, rash, erythema, injection-site reaction; may interact with CYP-450 (warfarin, cyclosporine); no live vaccines; not under 6 months; 90&deg; into thigh or lower abdomen (upper arm allowed), rotate sites; refrigerate, 30&ndash;45 min to room temperature; may be combined with TCS or TCI</td><td>43&ndash;44</td></tr>
+<tr><td><b>Tralokinumab</b> (IL-13 inhibitor), SC</td><td>Moderate&ndash;severe; alternative to dupilumab</td><td>600 mg as four 150 mg, then 300 mg as two 150 mg every other week; every 4 weeks if &lt; 100 kg and clear skin after 16 weeks</td><td>Ocular adverse events, upper respiratory tract infections, injection-site reactions</td><td>45</td></tr>
+<tr><td><b>JAK inhibitors</b>: abrocitinib, upadacitinib (oral); ruxolitinib (topical)</td><td>Moderate&ndash;severe, 12 years and older; refractory, last line</td><td>Abrocitinib 100 mg daily, may increase to 200 mg after 12 weeks; upadacitinib 15 mg daily, may increase to 30 mg; ruxolitinib 60 g per week or 100 g per two weeks</td><td>Boxed: serious infections (TB, invasive fungal; topical: avoid in active serious infection); mortality incl. sudden CV death; lymphoma and other malignancy; MACE (CV death, MI, stroke); thrombosis (DVT, PE, arterial)</td><td>46</td></tr>
+</tbody></table>
+
+<h3 id="ref-p5-diaper">Dr. Patel: diaper dermatitis products and limits, slides 63&ndash;66</h3>
+<table class="reftab"><thead><tr><th style="width:26%">Item</th><th>On her slide</th></tr></thead><tbody>
+<tr><td><b>Skin protectants</b></td><td>17 FDA-approved ingredients. Zinc oxide 1&ndash;40% (active ingredient; common, excellent, thick and tacky). Petrolatum 30&ndash;100% (ointment base). Apply liberally at every change; remove old gently; cover red areas completely; continue after healing</td></tr>
+<tr><td><b>Combination products</b></td><td>Desitin (zinc oxide, petrolatum, mineral oil); A &amp; D Ointment (lanolin, petrolatum); Boudreaux&rsquo;s Butt Paste (zinc oxide, Peruvian balsam, boric acid, castor oil, mineral oil, white wax, petrolatum); Dr Smith&rsquo;s ointment (zinc oxide, beeswax, lanolin, mineral oil, olive oil, paraffin wax, petrolatum, thymol iodide); Burt&rsquo;s Bees Baby (zinc oxide with plant oils)</td></tr>
+<tr><td><b>Not self-care products</b></td><td>Topical antifungals (miconazole), topical antibacterials, topical anesthetics (benzocaine, lidocaine), hydrocortisone or any topical corticosteroid</td></tr>
+<tr><td><b>Follow-up at 7 days</b></td><td>Improved, not healed: continue until healed. Not healed, not improved, or worse: refer</td></tr>
+<tr><td><b>Complications</b></td><td>Candida albicans; Staphylococcus aureus; secondary to an untreated or improperly treated rash (slide 67)</td></tr>
+</tbody></table>
 `;

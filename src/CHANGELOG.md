@@ -14,6 +14,17 @@ Every update adds its bullets here in the same commit that makes the change.
 - They sit in the same topics as the earlier questions; 30 of them, on facts already starred, carry the star.
 - 36 older questions get a closer wrong answer in place of one that was easy to rule out.
 
+## 2026-11-09 (Exam 2 and Dr. Patel's Lecture 5)
+- Exam 2 (Mon 11/16) is now the practice paper: 15 questions from Lectures 1–4 and 35 from Lectures 5–8.
+- Lectures 6–8 are not taught yet, so the 35 come from Lecture 5 for now; the Topics card says so.
+- Dr. Patel's Dermatitis Therapeutics: 121 new questions in eight topics, in her own deck folder.
+- Fingertip units and tube sizes, with the arithmetic in every answer, including her 60 g tube poll.
+- Case questions like her polls: severity and status, first-line choice, prescription details, follow-up timing.
+- Steroid potency by product and vehicle, TCIs, crisaborole, dupilumab doses by weight, tralokinumab, JAK warnings.
+- Diaper and incontinence dermatitis: causes, ABCDE, zinc oxide, products not to use, exclusions for self-care.
+- Guides for her seven objectives and four Reference tables: fingertip units, steroid potency, AD drugs, diaper care.
+- 35 of her questions carry the "Likely on the exam" star, with a Dr. Patel row on the starred card.
+
 ## 2026-11-09 (Listen to the figures)
 - Every step-through figure with narration has a Listen button: it reads each step and moves the figure on as it goes.
 - All 40 narrated figures, Dr. Smith's and Dr. Sikazwe's and the vitamin D reading's, use the walkthroughs' narrator.
