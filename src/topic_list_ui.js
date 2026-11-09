@@ -5,7 +5,7 @@
    an option with answering questions in the topic to scroll and see all the
    questions"; his design: the layout toggle of his Intro to Pharmacology
    drill, app.js layoutToggle() / renderAll()). Temporary until the kit has it.
-   The kit core (6c877b6) is not changed. At load it wraps renderQuiz():
+   The kit core (b0a4302) is not changed. At load it wraps renderQuiz():
      - One at a time (the core drill, unchanged): a row "Answer: One at a time
        | All on one page" above the question card.
      - All on one page: every question of the drill that is open (Q: a topic,
