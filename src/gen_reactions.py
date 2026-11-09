@@ -232,14 +232,16 @@ def f_vitd():
         text(102, 348, '(1,25-di-OH-cholecalciferol, Active Vit. D3)', 'lbl xs')
     # step 5: the assigned reading's answers, kept apart from the slide: numbered marks at the
     # three arrows and a band under the scheme, headed as the reading's (Bikle, Endotext,
-    # lines 5-8, 60-68, as the bank items S4-006 to S4-014 key them)
+    # lines 5-8, 60-68, as the bank items S4-006 to S4-014 key them; heat-driven step: Figure 1
+    # legend "thermal induced rearrangement" and "at 37oC pre-D3 is slowly converted to D3",
+    # section "Vitamin D3 production in the skin", Endotext update of June 15, 2025)
     s5 = s4 + text(233, 112, '① skin', 'cl') + text(380, 177, '② liver', 'cl', 'start') + \
         text(236, 226, '③ kidney', 'cl') + \
         '<rect class="box" x="2" y="358" width="476" height="98" rx="6"/>' + \
         text(10, 373, 'From the assigned reading (Bikle, Endotext), not on the slide:', 'lbl sm', 'start') + \
         mol('pred3', 8, 378, 124, 76, 'Pre-vitamin D3') + \
         text(140, 394, '① Skin, no enzyme: UVB light opens ring B → pre-vitamin D3,', 'lbl sm', 'start') + \
-        text(152, 407, 'which isomerizes to vitamin D3 (cholecalciferol).', 'lbl sm', 'start') + \
+        text(152, 407, 'which turns into vitamin D3 by a slow, heat-driven step.', 'lbl sm', 'start') + \
         text(140, 425, '② Liver: 25-hydroxylase, mainly CYP2R1.', 'lbl sm', 'start') + \
         text(140, 443, '③ Kidney: 1-α-hydroxylase (printed on the slide), CYP27B1.', 'lbl sm', 'start')
     return 460, [
