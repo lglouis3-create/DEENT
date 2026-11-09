@@ -1,0 +1,354 @@
+{
+ "about": "Chemical basis of drug action (CBDA) figures from Dr. Sikazwe's assigned Exam 1 pages; built by gen_cbda.py into cbda.js; checked by cbda_check.js.",
+ "assigned_pages": [
+  7,
+  8,
+  9,
+  12,
+  15,
+  16,
+  17,
+  18,
+  19,
+  20,
+  21,
+  22,
+  23,
+  25,
+  26,
+  27,
+  28,
+  29,
+  30,
+  31,
+  32,
+  33,
+  34,
+  43,
+  44,
+  45,
+  46,
+  47,
+  48,
+  49,
+  50,
+  51,
+  52,
+  53,
+  54,
+  55,
+  61,
+  62,
+  63,
+  64,
+  65,
+  66
+ ],
+ "species": [
+  {
+   "id": "crisaborole",
+   "name": "Crisaborole",
+   "atlas": "crisaborole",
+   "smiles": "N#Cc1ccc(Oc2ccc3B(O)OCc3c2)cc1",
+   "slide": 7
+  },
+  {
+   "id": "crisa_boronate",
+   "name": "Crisaborole as the tetrahedral boronate in the PDE4 site",
+   "smiles": "N#Cc1ccc(Oc2ccc3[B-](O)(O)OCc3c2)cc1",
+   "slide": 7,
+   "teaching": true,
+   "teaching_note": "Drawn after the slide 7 inset (J Med Chem 2021;64(24):17706-17727, as the slide cites): the boron bound to a third oxygen that bridges Zn2+ and Mg2+. The slide puts the negative charge on that oxygen; RDKit places the formal charge on the four-coordinate boron. Same atoms and bonds; not a PubChem compound record."
+  },
+  {
+   "id": "folic",
+   "name": "Folic acid",
+   "atlas": "folic acid",
+   "smiles": "Nc1nc(O)c2nc(CNc3ccc(C(=O)NC(CCC(=O)O)C(=O)O)cc3)cnc2n1",
+   "slide": 31
+  },
+  {
+   "id": "mtx",
+   "name": "Methotrexate",
+   "atlas": "methotrexate",
+   "smiles": "CN(Cc1cnc2nc(N)nc(N)c2n1)c1ccc(C(=O)NC(CCC(=O)O)C(=O)O)cc1",
+   "slide": 31
+  },
+  {
+   "id": "cyclosporine",
+   "name": "Cyclosporine",
+   "atlas": "cyclosporine",
+   "smiles": "C/C=C/C[C@@H](C)[C@@H](O)[C@H]1C(=O)N[C@@H](CC)C(=O)N(C)CC(=O)N(C)[C@@H](CC(C)C)C(=O)N[C@@H](C(C)C)C(=O)N(C)[C@@H](CC(C)C)C(=O)N[C@@H](C)C(=O)N[C@H](C)C(=O)N(C)[C@@H](CC(C)C)C(=O)N(C)[C@@H](CC(C)C)C(=O)N(C)[C@@H](C(C)C)C(=O)N1C",
+   "slide": 33
+  },
+  {
+   "id": "tetracycline",
+   "name": "Tetracycline",
+   "atlas": "tetracycline",
+   "smiles": "CN(C)[C@@H]1C(O)=C(C(N)=O)C(=O)[C@@]2(O)C(O)=C3C(=O)c4c(O)cccc4[C@@](C)(O)[C@H]3C[C@@H]12",
+   "slide": 55
+  },
+  {
+   "id": "homosalate",
+   "name": "Homosalate",
+   "atlas": "homosalate",
+   "smiles": "CC1CC(CC(C)(C)C1)OC(=O)c1ccccc1O",
+   "slide": 64
+  },
+  {
+   "id": "octisalate",
+   "name": "Octisalate",
+   "atlas": "octisalate",
+   "smiles": "CCCCC(CC)COC(=O)c1ccccc1O",
+   "slide": 64
+  },
+  {
+   "id": "sa",
+   "name": "Salicylic acid",
+   "atlas": "salicylic acid",
+   "smiles": "OC(=O)c1ccccc1O",
+   "slide": 43
+  },
+  {
+   "id": "ga",
+   "name": "Glycolic acid",
+   "atlas": "glycolic acid",
+   "smiles": "OCC(=O)O",
+   "slide": 43
+  },
+  {
+   "id": "spironolactone",
+   "name": "Spironolactone",
+   "atlas": "spironolactone",
+   "smiles": "CC(=O)S[C@@H]1CC2=CC(=O)CC[C@]2(C)[C@H]2CC[C@@]3(C)[C@@H](CC[C@@]34CCC(=O)O4)[C@H]12",
+   "slide": 53
+  },
+  {
+   "id": "ketoconazole",
+   "name": "Ketoconazole",
+   "atlas": "ketoconazole",
+   "smiles": "CC(=O)N1CCN(CC1)c1ccc(OCC2COC(Cn3ccnc3)(O2)c2ccc(Cl)cc2Cl)cc1",
+   "slide": 53
+  },
+  {
+   "id": "flutamide",
+   "name": "Flutamide",
+   "atlas": "flutamide",
+   "smiles": "CC(C)C(=O)Nc1ccc([N+](=O)[O-])c(C(F)(F)F)c1",
+   "slide": 53
+  },
+  {
+   "id": "tretinoin",
+   "name": "Tretinoin",
+   "atlas": "tretinoin",
+   "smiles": "CC1=C(C(C)(C)CCC1)/C=C/C(C)=C/C=C/C(C)=C/C(=O)O",
+   "slide": 49
+  },
+  {
+   "id": "isotretinoin",
+   "name": "Isotretinoin",
+   "atlas": "isotretinoin",
+   "smiles": "CC1=C(C(C)(C)CCC1)/C=C/C(C)=C/C=C/C(C)=C\\C(=O)O",
+   "slide": 49
+  },
+  {
+   "id": "pimecrolimus",
+   "name": "Pimecrolimus",
+   "atlas": "pimecrolimus",
+   "smiles": "CC[C@@H]1/C=C(\\C)C[C@H](C)C[C@H](OC)[C@H]2O[C@@](O)(C(=O)C(=O)N3CCCC[C@H]3C(=O)O[C@H](/C(C)=C/[C@@H]3CC[C@H](Cl)[C@H](OC)C3)[C@H](C)[C@@H](O)CC1=O)[C@H](C)C[C@@H]2OC",
+   "slide": 28
+  },
+  {
+   "id": "tacrolimus",
+   "name": "Tacrolimus",
+   "atlas": "tacrolimus",
+   "smiles": "C=CC[C@@H]1/C=C(\\C)C[C@H](C)C[C@H](OC)[C@H]2O[C@@](O)(C(=O)C(=O)N3CCCC[C@H]3C(=O)O[C@H](/C(C)=C/[C@@H]3CC[C@@H](O)[C@H](OC)C3)[C@H](C)[C@@H](O)CC1=O)[C@H](C)C[C@@H]2OC",
+   "slide": 28
+  },
+  {
+   "id": "hydrocortisone",
+   "name": "Hydrocortisone",
+   "atlas": "hydrocortisone",
+   "smiles": "C[C@]12CCC(=O)C=C1CC[C@@H]1[C@@H]2[C@@H](O)C[C@@]2(C)[C@H]1CC[C@]2(O)C(=O)CO",
+   "slide": 25
+  },
+  {
+   "id": "clobetasol",
+   "name": "Clobetasol propionate",
+   "atlas": "clobetasol propionate",
+   "smiles": "CCC(=O)O[C@]1(C(=O)CCl)[C@@H](C)C[C@H]2[C@@H]3CCC4=CC(=O)C=C[C@]4(C)[C@@]3(F)[C@@H](O)C[C@@]21C",
+   "slide": 25
+  },
+  {
+   "id": "adapalene",
+   "name": "Adapalene",
+   "atlas": "adapalene",
+   "smiles": "COc1ccc(cc1C12CC3CC(CC(C3)C1)C2)-c1ccc2cc(ccc2c1)C(=O)O",
+   "slide": 51
+  },
+  {
+   "id": "trifarotene",
+   "name": "Trifarotene",
+   "atlas": "trifarotene",
+   "smiles": "OC(=O)c1ccc(cc1)-c1ccc(OCCO)c(c1)-c1ccc(N2CCCC2)c(c1)C(C)(C)C",
+   "slide": 51
+  },
+  {
+   "id": "tazarotene",
+   "name": "Tazarotene",
+   "atlas": "tazarotene",
+   "smiles": "CCOC(=O)c1ccc(nc1)C#Cc1ccc2SCCC(C)(C)c2c1",
+   "slide": 51
+  }
+ ],
+ "figures": [
+  {
+   "key": "cb-crisaborole",
+   "title": "Crisaborole: boron at the PDE4 zinc and magnesium",
+   "slides": [
+    7
+   ],
+   "guide": "gobj-mc-ecz",
+   "transcript": "11/03 T 712–719, 786–793",
+   "species": [
+    "crisaborole",
+    "crisa_boronate"
+   ],
+   "caption": "After DPAW slide 7 (its CBDA inset, from J Med Chem 2021;64(24):17706&ndash;17727, residues and dotted bonds as printed; the site outline is schematic). He: the boron group coordinates two cations, magnesium and zinc, in the PDE4 active site, &ldquo;that is the basis&rdquo; (11/03 T 712&ndash;719); intact drug binds the active site and stays there (T 786&ndash;793). The slide draws the negative charge on the bridging oxygen; RDKit puts it on the four-coordinate boron (same atoms and bonds)."
+  },
+  {
+   "key": "cb-mtx",
+   "title": "Methotrexate vs folic acid at DHFR",
+   "slides": [
+    30,
+    31
+   ],
+   "guide": "gobj-mc-psosys",
+   "transcript": "11/04 T@8256–@9300",
+   "species": [
+    "folic",
+    "mtx"
+   ],
+   "caption": "After DPAW slides 30&ndash;31 (structures, part colours and the slide 30 annotation &ldquo;sits in the same enzyme cavity to competitively inhibit folic acid&rdquo;); the cavity is schematic. He: methotrexate &ldquo;goes in there and sits in the same enzyme cavity and competitively inhibits the binding of folic acid&rdquo;, with the higher affinity (11/04 T@8900&ndash;@9230). The DHFR reduction itself: Reaction &ldquo;Folate reduction by DHFR&rdquo;."
+  },
+  {
+   "key": "cb-cyclosporine",
+   "title": "Cyclosporine: activated by cyclophilin",
+   "slides": [
+    33
+   ],
+   "guide": "gobj-mc-psosys",
+   "transcript": "11/04 T@12270–@12900",
+   "species": [
+    "cyclosporine"
+   ],
+   "caption": "After DPAW slide 33 (&ldquo;prodrug&rdquo;; &ldquo;Activated by complexation with cyclophilin receptor&rdquo;; &ldquo;Inhibits calcineurin phosphatase &amp; T-cell signaling&rdquo;; the slide&rsquo;s ribbon diagram, PDB 1CWA, is shown here as labelled shapes). He: &ldquo;how it&rsquo;s bioactivated is not metabolic. It&rsquo;s simply by its binding to its receptor&rdquo;; the complex binds the active site (11/04 T@12378&ndash;@12620). Dr. Smith&rsquo;s calcineurin&ndash;NFAT steps are in her figures."
+  },
+  {
+   "key": "cb-tetracycline",
+   "title": "Tetracycline: chelation of metal ions",
+   "slides": [
+    55
+   ],
+   "guide": "gobj-mc-acne",
+   "transcript": "11/04 T@35100–@36300",
+   "species": [
+    "tetracycline"
+   ],
+   "caption": "After DPAW slide 55 (ions as printed, including &ldquo;Zn<sup>3+</sup>&rdquo;; &ldquo;insoluble salts&rdquo;; food, dairy). The salt is drawn as a bracket because neither the slide nor the lecture names the binding atoms. He: the molecules chelate these elements, bone has a lot of calcium, the insoluble salts remain there and weaken bone or enamel (11/04 T@35844&ndash;@36050; &ldquo;chelate&rdquo; is transcribed &ldquo;kill it&rdquo;)."
+  },
+  {
+   "key": "cb-salicylates",
+   "title": "Salicylate sunscreens: ester hydrolysis to salicylic acid",
+   "slides": [
+    64
+   ],
+   "guide": "gobj-mc-sun",
+   "transcript": "11/04 T@42460–@42700",
+   "species": [
+    "homosalate",
+    "octisalate",
+    "sa"
+   ],
+   "caption": "After DPAW slide 64 (&ldquo;Salicylates (SA FG absorbs UVB &amp; provides analgesia)&rdquo;). The slide draws no reaction arrow; the hydrolysis is his spoken explanation: &ldquo;They are esters, right, so they can undergo hydrolysis to give you salicylic acid&rdquo; (11/04 T@42498&ndash;@42640). The alcohol released is not named on the slide, so it is not drawn."
+  },
+  {
+   "key": "cb-hydroxyacids",
+   "title": "Hydroxy acids: alpha and beta",
+   "slides": [
+    43,
+    44
+   ],
+   "guide": "gobj-mc-acne",
+   "transcript": "11/04 T@22100–@22330",
+   "species": [
+    "ga",
+    "sa"
+   ],
+   "caption": "After DPAW slides 43&ndash;44 (slide 44 marks the &alpha; carbon and prints the SAR). He: &ldquo;This is the alpha carbon. This one is called the beta carbon. So this is a beta hydroxy acid ... 2 carbon removed from the carboxylic acid&rdquo; (11/04 T@22100&ndash;@22330). Polleve-4 (slide 45) is held and not drawn."
+  },
+  {
+   "key": "cb-antiandrogens",
+   "title": "Antiandrogens: biosynthesis vs receptor",
+   "slides": [
+    53
+   ],
+   "guide": "gobj-mc-acne",
+   "transcript": "11/04 T@32237–@33000",
+   "species": [
+    "spironolactone",
+    "ketoconazole",
+    "flutamide"
+   ],
+   "caption": "After DPAW slide 53 (steroidal and non-steroidal antiandrogens, with Louis&rsquo;s notes &ldquo;diminish testosterone biosynthesis&rdquo; and &ldquo;prevent testosterone from binding to its receptor&rdquo;). He: spironolactone and ketoconazole decrease testosterone biosynthesis; azole antifungals are strong 3A4 inhibitors; flutamide blocks testosterone from binding its receptor (11/04 T@32237&ndash;@33000)."
+  },
+  {
+   "key": "cb-retinoids",
+   "title": "Retinoids: C13 isomers; exposed acid vs ester",
+   "slides": [
+    49,
+    51
+   ],
+   "guide": "gobj-mc-acne",
+   "transcript": "11/04 T@28100–@30300",
+   "species": [
+    "tretinoin",
+    "isotretinoin",
+    "adapalene",
+    "trifarotene",
+    "tazarotene"
+   ],
+   "caption": "After DPAW slides 49 (&ldquo;All-trans retinoic acid&rdquo;; &ldquo;13-cis retinoic acid&rdquo;; &ldquo;Geometric isomer of Tretinoin&rdquo;) and 51 (3rd generation, poly-aromatic; tazarotene &ldquo;a prodrug&rdquo;). Ringed: the C13 double bond, counted from the COOH end as he counted it, trans in tretinoin and cis in isotretinoin (11/04 T@28100&ndash;@28700). Shaded: the exposed carboxylic acid that makes adapalene and trifarotene directly active, and tazarotene&rsquo;s ethyl ester (11/04 T@29800&ndash;@30300); its hydrolysis is the Reaction &ldquo;Tazarotene to tazarotenic acid&rdquo;."
+  },
+  {
+   "key": "cb-limus",
+   "title": "Pimecrolimus vs tacrolimus: two differences, one lactone",
+   "slides": [
+    28,
+    32
+   ],
+   "guide": "gobj-mc-psotop",
+   "transcript": "11/04 T@4400–@5600",
+   "species": [
+    "pimecrolimus",
+    "tacrolimus"
+   ],
+   "caption": "After DPAW slide 28 (structures; Cl and the ethyl of pimecrolimus, OH and the allyl of tacrolimus highlighted; cLogP 6.0 and 5.8; skin protein binding) and slide 32 (Polleve-3: lactone = cyclic ester). He: &ldquo;The only points of difference are that chlorine and that methyl group, and here you have that [allyl] group and hydroxy&rdquo;; pimecrolimus binds to the skin, tacrolimus has low skin binding and can go in (11/04 T@4400&ndash;@5600). Both act as calcineurin inhibitors (slide 28)."
+  },
+  {
+   "key": "cb-gc-potency",
+   "title": "Hydrocortisone to clobetasol propionate",
+   "slides": [
+    25,
+    20
+   ],
+   "guide": "gobj-mc-psotop",
+   "transcript": "11/03 T 1152–1179",
+   "species": [
+    "hydrocortisone",
+    "clobetasol"
+   ],
+   "caption": "After DPAW slide 25 (the dashed arrow and the changes it highlights; potency rests on structure, delivery vehicle and concentration) and slide 20 (SAR). Slide 25 draws clobetasol propionate with OH on C21; the marketed drug&rsquo;s 21-Cl is drawn here, as in the Atlas (reviews/OPEN_QUESTIONS.md notes the slide&rsquo;s drawing error). He: these derivative structures need not be memorized; structural changes, not metabolism, raise the potency (11/03 T 1152&ndash;1154, 1175&ndash;1179)."
+  }
+ ]
+}
