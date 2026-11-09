@@ -230,11 +230,25 @@ def f_vitd():
     s4 = s3 + arrow(268, 255, 205, 255) + text(236, 240, 'organ??', 'lbl xs') + text(236, 270, '(1-α-hydroxylase)', 'lbl xs') + \
         mol('calcitriol', 5, 188, 195, 140, False) + text(102, 336, 'Calcitriol', 'lbl sm') + \
         text(102, 348, '(1,25-di-OH-cholecalciferol, Active Vit. D3)', 'lbl xs')
-    return 352, [
-        ('7-Dehydrocholesterol: an intact steroid, rings A–D, with the 5,7-diene in ring B (slide 27).', s1),
+    # step 5: the assigned reading's answers, kept apart from the slide: numbered marks at the
+    # three arrows and a band under the scheme, headed as the reading's (Bikle, Endotext,
+    # lines 5-8, 60-68, as the bank items S4-006 to S4-014 key them)
+    s5 = s4 + text(233, 112, '① skin', 'cl') + text(380, 177, '② liver', 'cl', 'start') + \
+        text(236, 226, '③ kidney', 'cl') + \
+        '<rect class="box" x="2" y="358" width="476" height="98" rx="6"/>' + \
+        text(10, 373, 'From the assigned reading (Bikle, Endotext), not on the slide:', 'lbl sm', 'start') + \
+        mol('pred3', 8, 378, 124, 76, 'Pre-vitamin D3') + \
+        text(140, 394, '① Skin, no enzyme: UVB light opens ring B → pre-vitamin D3,', 'lbl sm', 'start') + \
+        text(152, 407, 'which isomerizes to vitamin D3 (cholecalciferol).', 'lbl sm', 'start') + \
+        text(140, 425, '② Liver: 25-hydroxylase, mainly CYP2R1.', 'lbl sm', 'start') + \
+        text(140, 443, '③ Kidney: 1-α-hydroxylase (printed on the slide), CYP27B1.', 'lbl sm', 'start')
+    return 460, [
+        ('Slide 27 as printed (steps 1–4). 7-Dehydrocholesterol: an intact steroid, rings A–D, with the 5,7-diene in ring B.', s1),
         ('First: a reaction that opens ring B, in an organ; he said light is involved (11/04 T@4330–@4410). Cholecalciferol is a secosteroid.', s2),
         ('Then 25-hydroxylation in another organ: 25-OH-cholecalciferol, the inactive circulating form (slide 27).', s3),
-        ('Last, 1-α-hydroxylase adds the 1-OH: calcitriol, the active form. Reactions, organs and enzymes: the assigned reading (slide 27; T@3000–@4100).', s4),
+        ('Last, 1-α-hydroxylase adds the 1-OH: calcitriol, the active form. The reactions, organs and enzymes are the take-home; step 5 (T@3000–@4100).', s4),
+        ('Step 5 is the reading he assigned, not the slide: the answers to his 2-point take-home question (11/03 T 603–606; 11/04 T@2873–@4440).', s5,
+         'From the assigned reading'),
     ]
 
 
@@ -320,7 +334,7 @@ FLIP = {'Crisaborole', 'Etretinate', 'Tazarotene (Tazarac)'}
 
 # a product drawn in the orientation of the species it comes from (common part matched)
 ALIGN = {'crisa_alc': 'crisaborole', 'crisa_acid': 'crisaborole', 'cortisone': 'hydrocortisone',
-         'dhf5b': 'hydrocortisone', 'urocortisol': 'hydrocortisone', 'd25': 'd3', 'calcitriol': 'd3',
+         'dhf5b': 'hydrocortisone', 'urocortisol': 'hydrocortisone', 'd25': 'd3', 'calcitriol': 'd3', 'pred3': 'd3',
          'thf': 'folic', 'acitretin': 'etretinate', 'tazarotenic': 'tazarotene', 'anthranyl': 'anthralin',
          'salicyluric': 'sa', 'benzoyl_rad': 'benzoic'}
 
@@ -362,10 +376,11 @@ def build(fig):
     h0, steps = out
     h = h0 + CAPBAND
     g = ''
-    for i, (c, inner) in enumerate(steps):
+    for i, (c, inner, *tg) in enumerate(steps):        # an optional third item tags the step (as diagrams.js stepper)
         lines = wrap(c)
         g += '<g class="st%s" data-step="%d">%s' % (' on' if i == 0 else '', i + 1, inner)
-        g += text(6, h - 12 - len(lines) * 10, 'Step %d of %d' % (i + 1, len(steps)), 'lbl sm capt', 'start')
+        g += text(6, h - 12 - len(lines) * 10, 'Step %d of %d%s' % (i + 1, len(steps), (' · ' + esc(tg[0])) if tg else ''),
+                  'lbl sm capt', 'start')
         for k, l in enumerate(lines):
             g += text(6, h - 2 - (len(lines) - 1 - k) * 10, esc(l), 'lbl xs capt', 'start')
         g += '</g>'

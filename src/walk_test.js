@@ -103,16 +103,17 @@ function fakeVoice() {
             out.parts++;
             const f = p.querySelector('.wkvis'), part = w.parts[i];
             if (+p.dataset.at !== i || !p.querySelector(`.wktx li[data-wki="${i}"].on`)) out.bad.push(`${w.id} part ${i + 1}: not shown`);
-            if (part.slide) {
+            if (part.fig && part.fig.id) {             // a drawn step is shown before the part's slide (walk_ui.js visFor)
+              const n = f.querySelectorAll('figure.fig .st').length, on = f.querySelector('figure.fig .st.on');
+              if (n ? (!on || +on.dataset.step !== part.fig.step) : !f.querySelector('figure.fig svg')) out.bad.push(`${w.id} part ${i + 1}: figure ${part.fig.id} step ${part.fig.step} not shown`);
+              if (part.slide && !f.querySelector(`[data-wkslide="0"]`)) out.bad.push(`${w.id} part ${i + 1}: no button to its slide ${part.slide}`);
+              last = 'fig';
+            } else if (part.slide) {
               const img = f.querySelector('img');
               if (!img || !img.src.endsWith('slides/' + part.slide + '.jpg')) out.bad.push(`${w.id} part ${i + 1}: slide ${part.slide} not shown`);
               else if (!(await loaded(img))) out.bad.push(`${w.id} part ${i + 1}: ${part.slide} did not load`);
               if (last && last !== part.slide) out.follow++;
               last = part.slide;
-            } else if (part.fig) {
-              const on = f.querySelector('figure.fig .st.on');
-              if (!on || +on.dataset.step !== part.fig.step) out.bad.push(`${w.id} part ${i + 1}: figure ${part.fig.id} step ${part.fig.step} not shown`);
-              last = 'fig';
             }
             if (document.documentElement.scrollWidth > innerWidth + 1) out.wide++;
           }
@@ -135,7 +136,7 @@ function fakeVoice() {
       const adv = await page.waitForFunction(() => WALK_UI.state() && WALK_UI.state().i >= 1, null, {timeout: 15000}).then(() => true, () => false);
       L.check(adv, `playing moves on to the next part by itself (${multi})`);
       const slideNow = await page.evaluate(id => { const p = document.querySelector(`.wkpanel[data-wkp="${id}"]`); return {at: +p.dataset.at, k: p.querySelector('.wkvis').dataset.k}; }, multi);
-      const want = await page.evaluate(([id, i]) => { const p = WALK_UI.BY[id].parts; for (let k = i; k >= 0; k--) { if (p[k].slide) return 'slide:' + p[k].slide; if (p[k].fig) return 'fig:' + p[k].fig.id; } return ''; }, [multi, slideNow.at]);
+      const want = await page.evaluate(([id, i]) => { const p = WALK_UI.BY[id].parts; for (let k = i; k >= 0; k--) { if (p[k].fig && p[k].fig.id) return 'fig:' + p[k].fig.id; if (p[k].slide) return 'slide:' + p[k].slide; } return ''; }, [multi, slideNow.at]);
       L.check(slideNow.k === want, `while playing, the visual is the current part's (${slideNow.k})`);
       await page.click(`.wkpanel[data-wkp="${multi}"] [data-wkplay]`);
       const held = await page.evaluate(() => WALK_UI.state());

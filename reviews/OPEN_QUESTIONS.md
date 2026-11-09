@@ -114,3 +114,6 @@ Resolved 2026-11-06 (Louis's direction): both drawings, with Compare structures;
 
 ## Drug chart (2026-11-08, found while adding chemical-class practice)
 - Tofacitinib chemical class: the chart's p. 4 cell "Peptides (Proteins)" is drawn from abatacept down through tofacitinib; tofacitinib is a small-molecule JAK inhibitor (Dr. Smith 11/03 T 570–573 on the JAK inhibitors as small molecules; PCol 76). Not keyed in the Drug list; the card shows both.
+
+## Upadacitinib ring name (2026-11-08, found while drawing structure figures)
+- S3-024's explanation, following DPAW slide 8, calls upadacitinib an "imidazopyrrolopyridine". The Atlas structure (PubChem-verified, `src/verification/`) has a six-membered ring with two nitrogens, so RDKit's ring composition reads it as an imidazo-pyrrolo-pyrazine. The keyed answer ("Different chemical classes", T 732–733) does not depend on the ring name, so S3-024 stays in scored practice; it has no "See it on the structure" figure until the wording is settled (keep the slide's term, or add a note naming the pyrazine ring).

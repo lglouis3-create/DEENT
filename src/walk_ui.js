@@ -14,7 +14,8 @@
      WALK_SECTIONS  walk_pp.js, walk_pc.js, walk_sun.js, walk_mc.js
                     [{id, deck, guide:'gobj-…', title, topics, parts:[{text,
                     slide:'<deck>-<NN>' | null, fig:{id, step (1-based)} | null,
-                    src}]}]; `src` is never spoken or shown
+                    src}]}]; `src` is never spoken or shown; a part with both
+                    `fig` and `slide` shows the drawn step, its slide one button away
      AUDIO_CLIPS    audio_manifest.js {'gw-<id>-<part 1-based>': {h, s}}: the
                     recorded clip audio/gw-<id>-<n>.mp3 plays only while `h`
                     equals the first 12 hex of sha256(text); otherwise the
@@ -344,11 +345,21 @@ const WALK_UI = (() => {
         `<li data-wki="${i}" tabindex="0">${NARR.sentHTML(p.text, 'wks')}</li>`).join('')}</ol></div>
       <p class="wknote" data-wknote hidden></p></div>`;
   }
-  // the visual for part i: its slide or drawn step, else the last one an earlier part named, else the first one
+  // the visual for part i: its drawn step or slide, else the last one an earlier part named, else the first one.
+  // A part that names both shows the drawn step, with its slide one button away (the caption's "Slide" chip),
+  // so the slide stays in the deck's slide browser.
+  const own = p => p.fig && p.fig.id ? {fig: p.fig, slide: p.slide || ''} : p.slide ? {slide: p.slide} : null;
   function visFor(w, i) {
-    for (let k = i; k >= 0; k--) { const p = w.parts[k]; if (p.slide) return {slide: p.slide}; if (p.fig && p.fig.id) return {fig: p.fig}; }
-    const f = w.parts.find(p => p.slide || (p.fig && p.fig.id));
-    return f ? (f.slide ? {slide: f.slide} : {fig: f.fig}) : null;
+    for (let k = i; k >= 0; k--) { const v = own(w.parts[k]); if (v) return v; }
+    const f = w.parts.find(p => own(p));
+    return f ? own(f) : null;
+  }
+  // the caption under a drawn step: which step, and the part's slide when it names one
+  function figCap(vis) {
+    const n = typeof DIA !== 'undefined' && DIA && typeof DIA[vis.fig.id] === 'string' ? (DIA[vis.fig.id].match(/class="st[ "]/g) || []).length : 0;
+    const nn = vis.slide ? +vis.slide.split('-')[1] : 0;
+    return `<span>${n ? `Drawn figure, step ${+vis.fig.step || 1} of ${n}` : 'Drawn figure'}</span><span class="sp"></span>` +
+      (vis.slide ? `<button type="button" class="chip" data-wkslide="0" aria-label="${esc('Show the slide, page ' + nn)}">Slide p. ${nn}</button>` : '');
   }
   function figHTML(fig) {
     const html = typeof DIA !== 'undefined' && DIA && DIA[fig.id];
@@ -375,28 +386,30 @@ const WALK_UI = (() => {
     if (li && changed && ol.scrollHeight > ol.clientHeight) ol.scrollTop = li.offsetTop - ol.offsetTop - 8;
     p.querySelector('.wkpos').textContent = `Part ${i + 1} of ${w.parts.length}`;
     const fill = p.querySelector('.wkfill > div'); if (fill && changed) fill.style.width = Math.round(100 * i / w.parts.length) + '%';
-    const vis = sel ? {slide: sel} : visFor(w, i), f = p.querySelector('.wkvis');
+    const vis = sel ? {slide: sel} : visFor(w, i), f = p.querySelector('.wkvis'), drawn = sel && visFor(w, i);
     if (!vis) { f.innerHTML = ''; f.hidden = true; f.dataset.k = ''; return; }
     f.hidden = false;
-    if (vis.slide) {
-      const k = 'slide:' + vis.slide; if (f.dataset.k === k) return;
+    if (!vis.fig) {                     // a slide (a drawn step, below, may also name its slide)
+      const k = 'slide:' + vis.slide + (drawn && drawn.fig ? '+fig' : ''); if (f.dataset.k === k) return;
       const [d, nn] = vis.slide.split('-'), list = DECK_SLIDES[d] || [vis.slide], at = list.indexOf(vis.slide), src = slideSrc(vis.slide);
       f.classList.remove('noimg'); f.dataset.k = k; f.dataset.slide = vis.slide;
       f.innerHTML = `<a href="${esc(src)}" target="_blank" rel="noopener" title="Open the slide full size"><img src="${esc(src)}" alt="${esc((DECKS[d] || d) + ', page ' + (+nn))}" decoding="async"></a>
         <p class="wknoimg">The slide image did not load.</p>
         <figcaption class="wkcap"><span>${esc(DECKS[d] || d)} · page ${+nn}</span><span class="sp"></span>
           <button type="button" class="chip" data-wkslide="-1" ${at > 0 ? '' : 'disabled'} aria-label="Previous slide">‹ Slide</button><button type="button" class="chip" data-wkslide="1" ${at >= 0 && at < list.length - 1 ? '' : 'disabled'} aria-label="Next slide">Slide ›</button>
-          <a href="${esc(src)}" target="_blank" rel="noopener">Full size</a></figcaption>`;
+          <a href="${esc(src)}" target="_blank" rel="noopener">Full size</a>${drawn && drawn.fig ? '<button type="button" class="chip" data-wkfig aria-label="Back to the drawn figure">Drawn figure</button>' : ''}</figcaption>`;
       const img = f.querySelector('img'); img.onerror = () => f.classList.add('noimg');
     } else {
       const k = 'fig:' + vis.fig.id;
       if (f.dataset.k !== k) {
         const h = figHTML(vis.fig);
-        f.dataset.k = k; f.dataset.slide = ''; f.classList.remove('noimg');
-        f.innerHTML = h ? h + `<figcaption class="wkcap"><span>Drawn figure, step ${+vis.fig.step || 1}</span></figcaption>` : '<p class="wknoimg" style="display:block">The figure is not in this build.</p>';
+        f.dataset.k = k; f.classList.remove('noimg');
+        f.innerHTML = h ? h + `<figcaption class="wkcap">${figCap(vis)}</figcaption>` : '<p class="wknoimg" style="display:block">The figure is not in this build.</p>';
         const fig = f.querySelector('figure.fig');
         if (fig) { fig.querySelectorAll('.st').forEach((s, j) => s.classList.toggle('on', j === 0)); fig.querySelectorAll('.sdot').forEach((d, j) => d.classList.toggle('on', j === 0)); }
-      } else { const c = f.querySelector('.wkcap span'); if (c) c.textContent = `Drawn figure, step ${+vis.fig.step || 1}`; }
+        if (fig && typeof armFigs === 'function') armFigs(f);   // the step in words and Enlarge, as in the Guide (views.js)
+      } else { const c = f.querySelector('figcaption.wkcap'); if (c) c.innerHTML = figCap(vis); }
+      f.dataset.slide = vis.slide || '';
       setStep(f, vis.fig.step);
     }
   }
@@ -504,6 +517,7 @@ const WALK_UI = (() => {
     if (t.closest('[data-wkplay]')) { toggle(id, at); return; }
     if (t.closest('[data-wkclose]')) { gwClose(id); return; }
     const sp = t.closest('[data-wkstep]'); if (sp) { move(id, at + +sp.dataset.wkstep); return; }
+    if (t.closest('[data-wkfig]')) { gwShow(id, at); return; }
     const sl = t.closest('[data-wkslide]');
     if (sl) {
       const f = p.querySelector('.wkvis'), cur = f.dataset.slide; if (!cur) return;
