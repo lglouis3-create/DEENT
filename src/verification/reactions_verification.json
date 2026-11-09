@@ -6,7 +6,7 @@
    "chembl": "https://www.ebi.ac.uk/chembl/api/data",
    "rdkit": "2026.09.1"
   },
-  "species": 30
+  "species": 31
  },
  "results": [
   {
@@ -314,6 +314,40 @@
    "detail": "Atlas = PubChem CID 439423 = ChEMBL CHEMBL1797131 (full InChIKey).",
    "drawn_smiles": "CC(C)CCC[C@@H](C)[C@H]1CC[C@H]2C3=CC=C4C[C@@H](O)CC[C@]4(C)[C@H]3CC[C@]12C",
    "atlas_item": "7-dehydrocholesterol",
+   "date": "2026-11-08"
+  },
+  {
+   "key": "pred3",
+   "name": "Pre-vitamin D3",
+   "slide": 27,
+   "priority": null,
+   "atlas": {
+    "smiles": "CC1=C(C[C@H](CC1)O)/C=C\\C2=CCC[C@]3([C@H]2CC[C@@H]3[C@H](C)CCCC(C)C)C",
+    "formula": "C27H44O",
+    "inchikey": "YUGCAAVRZWBXEQ-WHTXLNIXSA-N",
+    "stereocentres_defined": 5,
+    "stereocentres": 5,
+    "stereo_double_bonds": 0
+   },
+   "pubchem": {
+    "cid": 5281058,
+    "title": "Previtamin D3",
+    "formula": "C27H44O",
+    "mw": "384.6",
+    "smiles": "CC1=C(C[C@H](CC1)O)/C=C\\C2=CCC[C@]3([C@H]2CC[C@@H]3[C@H](C)CCCC(C)C)C",
+    "inchikey": "YUGCAAVRZWBXEQ-WHTXLNIXSA-N",
+    "stereocentres_defined": 5,
+    "stereocentres": 5,
+    "stereo_double_bonds": 0,
+    "other_cids_same_query": []
+   },
+   "chembl": null,
+   "pubchem_checked": true,
+   "how_found": "exact InChIKey",
+   "status": "exact-pubchem",
+   "detail": "Atlas = PubChem CID 5281058 (full InChIKey).",
+   "drawn_smiles": "CC1=C(C[C@H](CC1)O)/C=C\\C2=CCC[C@]3([C@H]2CC[C@@H]3[C@H](C)CCCC(C)C)C",
+   "atlas_item": null,
    "date": "2026-11-08"
   },
   {

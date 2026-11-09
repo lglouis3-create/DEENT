@@ -65,8 +65,8 @@ check(!noGuide.length, `every walkthrough's guide id is a guide section (${gobj.
 const parts = W.flatMap(w => (w.parts || []).map((p, i) => ({w, p, i})));
 const badPart = parts.filter(({w, p}) => !p || typeof p.text !== 'string' || !p.text.trim() || typeof p.src !== 'string' ||
   !(p.slide == null || (typeof p.slide === 'string' && new RegExp('^' + w.deck + '-\\d{2}$').test(p.slide))) ||
-  !(p.fig == null || (p.fig && DIA[p.fig.id] && Number.isInteger(p.fig.step) && p.fig.step >= 1 && p.fig.step <= steps(p.fig.id))));
-check(!badPart.length, `every part (${parts.length}) has text, a src, a slide of its own deck or null, and a drawn step that exists (1-based) or null`,
+  !(p.fig == null || (p.fig && DIA[p.fig.id] && Number.isInteger(p.fig.step) && p.fig.step >= 1 && p.fig.step <= Math.max(1, steps(p.fig.id)))));   // a static figure (no steps) is step 1
+check(!badPart.length, `every part (${parts.length}) has text, a src, a slide of its own deck or null, and a drawn step that exists (1-based; step 1 for a figure without steps) or null`,
   badPart.slice(0, 12).map(({w, i, p}) => `${w.id} part ${i + 1} (${JSON.stringify({slide: p && p.slide, fig: p && p.fig})})`).join('; '));
 const slides = [...new Set(parts.map(x => x.p && x.p.slide).filter(Boolean))].sort();
 const missing = slides.filter(s => !fs.existsSync(path.join(ROOT, 'slides', s + '.jpg')));

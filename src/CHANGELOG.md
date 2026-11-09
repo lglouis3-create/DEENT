@@ -8,6 +8,12 @@ characters.
 
 Every update adds its bullets here in the same commit that makes the change.
 
+## 2026-11-08 (Reaction figures in the walkthroughs)
+- Vitamin D3 figure: a step 5 fills the slide's blanks from the reading Dr. Sikazwe assigned, kept apart from the slide.
+- Step 5 draws pre-vitamin D3 and names the organs (skin, liver, kidney) and enzymes (CYP2R1, CYP27B1).
+- Dr. Sikazwe's walkthroughs show his reaction schemes while the narration explains them (13 parts).
+- A walkthrough part showing a drawn figure keeps its slide one tap away ("Slide p." button).
+
 ## 2026-11-08 (See it on the structure)
 - 59 of Dr. Sikazwe's structure and SAR questions now show a marked drawing after you answer.
 - The drawing points at what the explanation names: COOH, α carbon, 11β-OH, ring D, N-CH₃, 13-cis and more.
