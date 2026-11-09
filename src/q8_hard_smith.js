@@ -581,7 +581,7 @@ QUESTIONS.push(
 
 {id:'L3H-004', skill:'adverse', prof:'Smith', tier:'new', topic:'l3-abx', sub:'tet', concept:'h-tet-age-reason',
  tags:['hard','numbers'], source:'both', dupOf:'L3-005',
- stem:'Below which age are tetracyclines not used, and why?',
+ stem:'Under which age are tetracyclines not used, and why?',
  options:[
   {t:'8 years; teeth and bones are discolored and growth is impaired', correct:true, why:'Slide 45 (not in patients younger than 8) and slide 44 (bones and teeth discolored and growth impaired in the young); (T 41–42).'},
   {t:'12 years; teeth and bones are discolored and growth is impaired', correct:false, why:'Slide 45 gives younger than 8 years.'},
