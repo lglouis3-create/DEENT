@@ -8,6 +8,13 @@ characters.
 
 Every update adds its bullets here in the same commit that makes the change.
 
+## 2026-11-09 (Five new step-through drawings)
+- Steroid skeleton step by step: rings, α and β faces, numbers 1–21, the four SAR features, six receptor H-bonds.
+- Dr. Smith's biologics: which drug binds IL-4Rα, p40, p19, IL-17A or IL-17RA, drawn on one map.
+- Calcineurin inhibitors: signals 1–3, calcineurin removing NFAT's phosphate, IL-2, cyclophilin and FKBP.
+- Sun protection: MED, SPF, UVB blocked at SPF 15, 30 and 50, and the 370 nm broad-spectrum line.
+- Sunblocks reflect or scatter, sunscreens absorb and give off heat; each professor's UV numbers kept apart.
+
 ## 2026-11-09 (The vitamin D reading, narrated)
 - New narrated walkthrough of the vitamin D reading Dr. Sikazwe assigned: 10 sections, 32 parts, about 21 minutes.
 - It answers his take-home (reactions, organs, enzymes) first, then regulation, transport, the receptor and skin.
