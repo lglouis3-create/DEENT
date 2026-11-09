@@ -4,7 +4,7 @@
    Louis, 2026-11-09: "Also can the diagram have narration explaining the steps
    of each as a walk through?" TEMPORARY course-level presentation (course.js
    `files`), like walk_ui.js, until the kit has a narration module. The kit core
-   (338cfa3) is not changed: this file is put into the page before views.js, in
+   (64302e2) is not changed: this file is put into the page before views.js, in
    the same script, and works on the figures the core draws.
 
    Data: DIA_NARR (dianarr_smith.js, dianarr_sik.js): {'<DIA key>': {steps:
