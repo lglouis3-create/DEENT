@@ -8,6 +8,11 @@ characters.
 
 Every update adds its bullets here in the same commit that makes the change.
 
+## 2026-11-09 (Listen to the figures)
+- Every step-through figure with narration has a Listen button: it reads each step and moves the figure on as it goes.
+- All 40 narrated figures, Dr. Smith's and Dr. Sikazwe's and the vitamin D reading's, use the walkthroughs' narrator.
+- Back, Next or a step dot stops the reading and keeps the figure on the step you chose; Pause and Stop are beside it.
+
 ## 2026-11-09 (Tazarotene label)
 - The tazarotene reaction figure now spells the brand Tazorac.
 
