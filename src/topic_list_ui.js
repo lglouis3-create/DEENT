@@ -81,6 +81,7 @@ const TOPIC_LIST_UI = (() => {
 #v-quiz .tlcard .qfoot{flex-wrap:wrap}
 #v-quiz .tlrec{font-size:13.5px;color:var(--text-dim)}
 #v-quiz .tlall{max-width:100%;overflow-wrap:anywhere}
+#v-quiz .tlall .matchtab{table-layout:fixed;width:100%}#v-quiz .tlall .matchtab td,#v-quiz .tlall .matchtab th{overflow-wrap:anywhere}#v-quiz .tlall .matchtab select{width:100%;min-width:0}
 #v-quiz .tlall .qcard,#v-quiz .tlall .qbody{min-width:0}
 #v-quiz .tlall table.matchtab{max-width:100%}
 #v-quiz .tlall select{max-width:100%}`;

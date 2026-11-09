@@ -25,6 +25,7 @@ function loadBank(src){
   return {C,Q:ctx.Q,T:ctx.T};
 }
 const L = loadBank(src);
+ctx.QUESTIONS = L.Q;  // since kit #101 gradeBlank reads the bank (another item's accepted answer is plain wrong)
 const B = L.Q.filter(q => q.type === 'blank');
 const W = {
  'BL1-001': ['GRE', 'retinoid response element', 'TRE'],
@@ -123,7 +124,7 @@ for (const q of B) {
   for (const x of [q.accept[0].toUpperCase(), q.accept[0] + '.', ' ' + q.accept[0] + ' ']) { n++; if (!ctx.gradeBlank(q, x).ok) { fail++; console.log('VARIANT GRADED WRONG', q.id, JSON.stringify(x)); } }
   const w = W[q.id];
   if (!w || w.length !== 3) { fail++; console.log('NO WRONG TYPINGS', q.id); continue; }
-  for (const x of w) { n++; const g = ctx.gradeBlank(q, x); if (g.ok) { fail++; console.log('WRONG GRADED RIGHT', q.id, x); } if (g.near) nearCount++; rows.push(`${q.id}\t${x}\t${g.ok ? 'RIGHT' : 'wrong'}${g.near ? ' (Close: check the spelling)' : ''}`); }
+  for (const x of w) { n++; const g = ctx.gradeBlank(q, x); if (g.ok) { fail++; console.log('WRONG GRADED RIGHT', q.id, x); } if (g.near) nearCount++; rows.push(`${q.id}\t${x}\t${g.ok ? 'RIGHT' : 'wrong'}${g.near ? ' (near: close to an accepted answer)' : ''}`); }
 }
 const missing = Object.keys(W).filter(id => !B.some(q => q.id === id));
 if (missing.length) { fail++; console.log('wrong typings for ids not in bank:', missing.join(' ')); }
