@@ -1,4 +1,11 @@
-"""Release step 1b (DEENT, 2026-11-08): the link preview of a shared drill link.
+"""OBSOLETE since 2026-11-09: do not run. The kit core (kit #88, pin 6c877b6) writes these tags
+from course.js `share` and `manifest.short_name` at every build; release step 1b is retired.
+Kept for the record. Differences from what this script wrote: the core escapes the apostrophe
+(&#x27;), orders the tags differently, and does not write og:site_name, og:image:width/height/alt
+or apple-mobile-web-app-title (the kit leaves the iOS Home Screen name to the manifest); the
+live page's tab icon link is now added by icon_ui.js.
+
+Release step 1b (DEENT, 2026-11-08): the link preview of a shared drill link.
 
 The core's shell.html has a fixed <title>Exam drill</title> and no Open Graph
 tags, and build.py has no course field for them (kit request to the main kit session,

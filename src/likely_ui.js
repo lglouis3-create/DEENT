@@ -3,7 +3,7 @@
    --------------------------------------------------------------------------
    Course-level and isolated, in the pattern of druglist_ui.js: a course data
    file (course.js `files`) that the build puts into the page before views.js.
-   The kit core (08be7a2) is not changed. At load it wraps two engine
+   The kit core (6c877b6) is not changed. At load it wraps two engine
    functions, the way druglist_ui.js wraps show():
      - renderQuiz(): after the engine draws a question card in the topic
        drills, a starred question gets a small "★ Likely on the exam" badge in

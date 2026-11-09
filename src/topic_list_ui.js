@@ -5,7 +5,7 @@
    an option with answering questions in the topic to scroll and see all the
    questions"; his design: the layout toggle of his Intro to Pharmacology
    drill, app.js layoutToggle() / renderAll()). Temporary until the kit has it.
-   The kit core (08be7a2) is not changed. At load it wraps renderQuiz():
+   The kit core (6c877b6) is not changed. At load it wraps renderQuiz():
      - One at a time (the core drill, unchanged): a row "Answer: One at a time
        | All on one page" above the question card.
      - All on one page: every question of the drill that is open (Q: a topic,
@@ -16,6 +16,10 @@
        fgShow, optFig, glossify, renderTeach, cmpStrip, explainRow, srcFlag,
        matchBody) and the same CSS classes, so a card looks and grades as the
        drill's card does.
+     - Fill in the blank (kit #97, 2026-11-09): the core's text box size
+       (blankCap), grading (gradeBlank, strict) and verdict (blankVerdict); the
+       typed text is what is recorded, as the core's quiz records it. Enter or
+       Check answer grades it; until then the text is kept on the card.
    Recording: an answer here goes through the core's record(q, result, picked,
    ms), exactly as answer() / submitMulti() / the matching check call it, once
    per card (a card is answered once; it is not offered again in this drill).
@@ -145,6 +149,18 @@ const TOPIC_LIST_UI = (() => {
     if (kind === 'match') {
       h += matchHtml(q, st);
       if (st.revealed) h += explainRow(q);
+    } else if (kind === 'blank' && typeof blankVerdict === 'function') {
+      // fill in the blank (kit #97): the core's text box, grading and verdict, on this card's state
+      if (!st.revealed) {
+        h += `<div class="numin blankin"><input type="text" data-tlblank value="${esc(st.draft || '')}" maxlength="${blankCap(q)}" placeholder="your answer" aria-label="your answer to question ${i + 1}" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false"></div>`;
+      } else {
+        h += `<div class="why">${blankVerdict(q, st.picked, st.ok)}`;
+        if (q.why) h += `<p class="prose" style="margin:10px 0 0">${esc(q.why)}</p>`;
+        if (q.teach) h += `<div class="teach"><h4>The concept behind this</h4>${renderTeach(q.teach)}</div>`;
+        if (q.note) h += `<p class="prose" style="margin:13px 0 0;font-size:14.5px">${esc(q.note)}</p>`;
+        h += `<div class="cite">${q.quote ? `<span class="quote">“${esc(q.quote)}”</span>` : ''}${srcFlag(q)}${esc(q.cite)}</div>`;
+        h += explainRow(q) + `</div>`;
+      }
     } else if (kind !== 'mc') {
       h += `<p class="sub">This kind of question is answered one at a time.</p>`;
     } else {
@@ -192,6 +208,8 @@ const TOPIC_LIST_UI = (() => {
       if (kind === 'match') {
         const m = (st.picked || []).filter(x => x !== null && x !== undefined).length;
         h += `<button class="btn" data-tlcheck${m === q.pairs.length ? '' : ' disabled'}>Check answer</button><span class="tlmc" style="font-size:13px;color:var(--text-dim)">${m} of ${q.pairs.length} matched</span>`;
+      } else if (kind === 'blank' && typeof blankVerdict === 'function') {
+        h += `<button class="btn" data-tlcheck${(st.draft || '').trim() ? '' : ' disabled'}>Check answer</button>`;
       } else if (multi) {
         const m = (st.picked || []).length;
         h += `<button class="btn" data-tlcheck${m ? '' : ' disabled'}>Check answer</button><span style="font-size:13px;color:var(--text-dim)">${m} selected</span>`;
@@ -338,6 +356,13 @@ const TOPIC_LIST_UI = (() => {
       finish(id, picks.every((x, i) => x === i), picks, picks.map((x, i) => x === i));
       return;
     }
+    if (q.type === 'blank') {
+      const text = blankClip(q, (st.draft || '').trim());   // as the core's quiz: trimmed, then cut to the cap
+      if (!text) return;
+      st.picked = text;
+      finish(id, gradeBlank(q, text).ok, text);
+      return;
+    }
     if (!st.picked || !st.picked.length) return;
     const picks = st.picked.slice().sort((a, b) => a - b);
     finish(id, gradeMulti(q, picks), picks);
@@ -386,6 +411,19 @@ const TOPIC_LIST_UI = (() => {
       if (t.dataset.tlconf) return conf(id, t.dataset.tlconf);
       if (t.dataset.o !== undefined) return pick(id, +t.dataset.o);
     } catch (err) { console.error('The all-on-one-page drill could not take that tap.', err); }
+  });
+  // fill in the blank: keep the typed text on the card's state (a redraw keeps it); Enter checks it
+  pane.addEventListener('input', e => {
+    const f = e.target && e.target.closest ? e.target.closest('.tlcard input[data-tlblank]') : null; if (!f || !Q || !Q.tlSt) return;
+    const card = f.closest('.tlcard'), st = Q.tlSt[card.dataset.tlq]; if (!st || st.revealed) return;
+    st.draft = f.value;
+    const b = card.querySelector('[data-tlcheck]'); if (b) b.disabled = !f.value.trim();
+  });
+  pane.addEventListener('keydown', e => {
+    const f = e.target && e.target.closest ? e.target.closest('.tlcard input[data-tlblank]') : null;
+    if (!f || e.key !== 'Enter' || !Q || !Q.tlSt) return;
+    e.preventDefault();
+    try { check(f.closest('.tlcard').dataset.tlq); } catch (err) { console.error('The all-on-one-page drill could not check that answer.', err); }
   });
   pane.addEventListener('change', e => {
     const s = e.target && e.target.closest ? e.target.closest('.tlcard select[data-row]') : null; if (!s || !Q || !Q.tlSt) return;

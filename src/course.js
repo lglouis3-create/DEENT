@@ -250,6 +250,8 @@ const COURSE = {
           'q8_hard_smith.js', 'q9_hard_sik.js',
           // Dr. Patel, Lecture 5 (Exam 2): pushes its deck folder into TOPIC_DECKS, its TOPICS and questions
           'q7_L05.js',
+          // fill-in-the-blank items (kit type 'blank', 2026-11-09): Quiz, topic drills and the missed list
+          'q10_blank.js',
           // the step-throughs of moa_figs.js in the explanations of the matching Smith questions
           'moa_links.js',
           // Drug list tab (temporary course-level presentation, to be replaced by the kit's
@@ -293,9 +295,10 @@ const COURSE = {
           // Jumps to a reading section: land below the pinned tab strip, highlight the section
           // and the lines that match the question (course-level, Louis 2026-11-08)
           'jump_ui.js',
-          // Enlarge: the placeholder takes the figure's exact (fractional) height, so closing an
-          // enlarged figure leaves the page where it was (temporary until the kit core's figBig does)
-          'figph_ui.js'],
+          // Browser-tab icon on the live page (brand.py wrote it into the <head> until 2026-11-09)
+          'icon_ui.js'],
+  // (figph_ui.js, the course-level Enlarge placeholder fix, left the list on 2026-11-09: kit
+  // #90 put the same fix into the core's figBig.)
 
   tools: {citeAliases:{'skin-pathophys-students-2026.pdf':'Skin-Pathophys-Students-2026.pdf',
                        'skin-pcol-students-2026.pdf':'Skin-PCol-Students-2026.pdf',
@@ -305,5 +308,13 @@ const COURSE = {
           citeLectures:{}, citeBareMap:{},
           explainTerms:[], harvestMasks:[]},
 
-  kit: {core: '08be7a2'},
+  // Link preview of a shared address and the Home Screen name (kit #88; these replace
+  // release step 1b, src/brand.py, from 2026-11-09). Values as brand.py wrote them.
+  share: {title: 'DEENT Exam Review',
+          description: 'PHAR 4346 Exam 1 practice: questions, structures and drug targets for Dr. Smith\'s and Dr. Sikazwe\'s lectures.',
+          url: 'https://lglouis3-create.github.io/DEENT/',
+          image: 'og-image.png'},
+  manifest: {short_name: 'DEENT Review'},
+
+  kit: {core: '6c877b6'},
 };

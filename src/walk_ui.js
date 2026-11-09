@@ -5,7 +5,7 @@
    reviews/NARRATION_PLAN.md 7.1), to be moved into a kit feature module when
    the kit has one. Written in the shape of PH's player (exam1-drill/src/app.js:
    gwBars, gwOpen, gwPlay, gwShow, gwPause, gwStop, gwEnd) so that port is a
-   move. The kit core (08be7a2, the pin in course.js) is not changed: this is a
+   move. The kit core (6c877b6, the pin in course.js) is not changed: this is a
    course data file (course.js `files`), so the build puts it into the page
    before views.js, in the same script. At load it wraps renderGuide() the way
    likely_ui.js wraps renderQuiz().
