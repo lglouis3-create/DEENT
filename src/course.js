@@ -316,5 +316,5 @@ const COURSE = {
           image: 'og-image.png'},
   manifest: {short_name: 'DEENT Review'},
 
-  kit: {core: 'b0a4302'},
+  kit: {core: '338cfa3'},
 };
