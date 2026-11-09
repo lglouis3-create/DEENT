@@ -205,6 +205,9 @@ const COURSE = {
           'cbda.js',
           // Figures for the narrated walkthrough of Dr. Sikazwe's assigned vitamin D reading (adds to DIA)
           'diagrams_rd.js',
+          // Drawn step-throughs from the visuals evaluation, items 3-7 (fig-steroid, fig-il-axis,
+          // fig-cni-nfat, fig-spf, fig-block-vs-screen; adds to DIA, DIA_NAMES and DIAGRAMS)
+          'figs2.js',
           'q1_topics.js', 'q2_L02.js', 'q3_L03a.js', 'q4_L03b.js', 'q5_L04.js', 'q6_L03c.js',
           // Drug list tab (temporary course-level presentation, to be replaced by the kit's
           // Drug List feature): its data, then the tab itself (Louis, 2026-11-08)
@@ -241,7 +244,10 @@ const COURSE = {
           'exfig.js', 'exfig_ui.js',
           // Jumps to a reading section: land below the pinned tab strip, highlight the section
           // and the lines that match the question (course-level, Louis 2026-11-08)
-          'jump_ui.js'],
+          'jump_ui.js',
+          // Enlarge: the placeholder takes the figure's exact (fractional) height, so closing an
+          // enlarged figure leaves the page where it was (temporary until the kit core's figBig does)
+          'figph_ui.js'],
 
   tools: {citeAliases:{'skin-pathophys-students-2026.pdf':'Skin-Pathophys-Students-2026.pdf',
                        'skin-pcol-students-2026.pdf':'Skin-PCol-Students-2026.pdf',
