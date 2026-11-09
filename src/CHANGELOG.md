@@ -8,6 +8,9 @@ characters.
 
 Every update adds its bullets here in the same commit that makes the change.
 
+## 2026-11-09 (Narrated figures, Dr. Sikazwe)
+- Spoken step-by-step texts for Dr. Sikazwe's reaction, drug-action, steroid and vitamin D reading figures.
+
 ## 2026-11-09 (Mechanisms step by step)
 - Five new step-through figures of Dr. Smith's mechanisms: PDE-4 and cAMP, the ribosome, two folate figures, abatacept.
 - Ribosome: where tetracyclines, clindamycin and macrolides bind, after the four steps of protein building.
