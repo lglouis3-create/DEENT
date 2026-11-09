@@ -218,6 +218,8 @@ const COURSE = {
           // the build does not stop on it; the players draw nothing for data that is not there.
           ...['walk_pp.js', 'walk_pc.js', 'walk_sun.js', 'walk_mc.js', 'why_data.js', 'audio_manifest.js']
             .filter(f => { try { return typeof require !== 'function' || require('fs').existsSync(f); } catch (e) { return true; } }),
+          // reaction figures for the why of mapped questions (why_figs.js, read by why_ui.js)
+          'why_figs.js',
           'walk_ui.js', 'why_ui.js',
           // Topics: the exam facts card (course-level, Louis 2026-11-08; the deck folders are in
           // guide.js with the deck grouping)

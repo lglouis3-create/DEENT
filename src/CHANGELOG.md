@@ -8,6 +8,10 @@ characters.
 
 Every update adds its bullets here in the same commit that makes the change.
 
+## 2026-11-08 (Reaction beside the why)
+- After answering a reaction question of Dr. Sikazwe's, "Show the reaction" opens its scheme at the step asked.
+- "Hear the why" shows that scheme beside the spoken why (above it on a phone), with "Open in Guide".
+
 ## 2026-11-08 (Reaction figures in the walkthroughs)
 - Vitamin D3 figure: a step 5 fills the slide's blanks from the reading Dr. Sikazwe assigned, kept apart from the slide.
 - Step 5 draws pre-vitamin D3 and names the organs (skin, liver, kidney) and enzymes (CYP2R1, CYP27B1).
