@@ -300,12 +300,12 @@ QUESTIONS.push(
 {id:'L3-022', skill:'mech', prof:'Smith', tier:'new', topic:'l3-fol', sub:'tmpsmx', concept:'folate-purines',
  tags:['reasoning','room'], source:'both',
  quote:'Room question, 11/03, T 85–86: "what is folic acid needed for in cells? Anybody remember?"',
- stem:'Why does blocking tetrahydrofolic acid production stop a microbe from dividing?',
+ stem:'Trimethoprim lowers tetrahydrofolic acid in the microbe. Which of these does the microbe then fail to make?',
  options:[
-  {t:'It cannot make purines for DNA', correct:true, why:'Answer given in class: "Production of like your purines, right?" (T 86–89).'},
-  {t:'Its ribosome cannot read mRNA', correct:false, why:'Ribosome blockade is the tetracycline, clindamycin and macrolide mechanism (slides 43–47).'},
-  {t:'Its cell wall loses peptidoglycan', correct:false, why:'Not part of the folate pathway taught (slide 49).'},
-  {t:'Its membrane fills with sterols', correct:false, why:'Not part of the folate pathway taught (slide 49).'}],
+  {t:'Purines', correct:true, why:'Answer given in class to "what is folic acid needed for in cells?": "Production of like your purines, right?" (T 85–89). Without purines for DNA the microbe cannot divide.'},
+  {t:'Dihydrofolic acid', correct:false, why:'Dihydrofolic acid is what trimethoprim stops DHFR from converting (slide 48); it is the substrate of the blocked step, not a product the microbe loses.'},
+  {t:'Dihydropteroic acid', correct:false, why:'Dihydropteroic acid is made from PABA at the earlier step that sulfamethoxazole blocks (slide 49), before the trimethoprim step.'},
+  {t:'PABA', correct:false, why:'PABA is the starting material that the sulfonamides compete with (slide 49), upstream of tetrahydrofolic acid.'}],
  teach:'Folate is needed to make purines, two of the DNA bases; without purines the microbe does not have the machinery to divide (T 85–89). Methotrexate uses the same logic in keratinocytes (slide 59; T 219–223).',
  cite:D3+' slide 49; T 84–89'},
 

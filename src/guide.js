@@ -520,11 +520,68 @@ const GUIDE_HTML = `
 .deckbtn[aria-expanded="true"]{border-color:var(--accent);background:var(--accent-bg)}
 .deckbody{padding:8px 0 0 10px;border-left:3px solid var(--accent-bg);margin-left:6px}
 .deckbody[hidden]{display:none}
+.examfold{margin:16px 0 0}
+.examfold>h3{margin:0;font-size:inherit}
+.exambtn{border-width:2px}
+.exambtn .deckname{font-size:17px;font-weight:700}
+.exambody{padding:2px 0 0 6px}
+.exambody[hidden]{display:none}
 @media (prefers-reduced-motion: reduce){.deckbtn .deckchev i{transition:none}}`;
   const addCss = () => {
     if (document.getElementById('deckcss')) return;
     const s = document.createElement('style'); s.id = 'deckcss'; s.textContent = CSS; document.head.appendChild(s);
   };
+
+  /* Exam folders (Louis, 2026-11-10: "Group the lecture per exam like intro to pharmacology/
+     pharmacokinetics where the lecture are closed in an exam 1 folder"). Each deck folder goes
+     into the folder of the exam its deck is on (TOPIC_DECKS `exam`); an optional topic stays
+     after the folders, its "Optional" label in view (the core's optional_test). The active exam's folder starts open and the others
+     closed; a reader's own open or close is kept on this device under `<NS>:examOpen`
+     ({exam number: true|false}), never in progress or history. */
+  const EKEY = () => KEY().replace(/deckOpen$/, 'examOpen');
+  const readEx = () => { try { const v = JSON.parse(localStorage.getItem(EKEY()) || '{}'); return v && typeof v === 'object' ? v : {}; } catch (err) { return {}; } };
+  const saveEx = v => { try { localStorage.setItem(EKEY(), JSON.stringify(v)); } catch (err) { /* this device only */ } };
+  const activeN = () => { const m = String(COURSE.activeExam || '').match(/(\d+)$/); return m ? +m[1] : null; };
+  function groupByExam(el, cards, shown, e) {
+    const examOf = t => (TOPIC_DECKS.find(x => x.id === t.deck) || {}).exam;
+    const nums = [...new Set(shown.map(examOf).filter(n => n != null))].sort((a, b) => a - b);
+    if (nums.length < 1) return;
+    const saved = readEx();
+    nums.forEach(n => {
+      const decks = [...el.querySelectorAll('section.deckfold')].filter(s => (TOPIC_DECKS.find(x => x.id === s.dataset.deck) || {}).exam === n);
+      if (!decks.length) return;
+      const ex = (COURSE.exams || []).find(x => x.id === 'exam' + n) || {};
+      const lec = (COURSE.lectures || []).find(l => l.exam === n && l.module);
+      const title = lec ? lec.module.replace(/^(Exam \d+): /, '$1 · ') : 'Exam ' + n;
+      const tops = shown.filter(t => examOf(t) === n && !t.optional);
+      const q = tops.reduce((s, t) => s + poolFor(t.id, null).length, 0);
+      const isOpen = n in saved ? !!saved[n] : n === activeN();
+      const sec = document.createElement('section');
+      sec.className = 'examfold'; sec.dataset.exam = String(n);
+      sec.innerHTML = `<h3><button type="button" class="deckbtn exambtn" id="exambtn-${n}" aria-expanded="${isOpen}" aria-controls="exambody-${n}">` +
+        `<span class="decktxt"><span class="deckname">${e(title)}</span>` +
+        `<span class="deckmeta">${ex.date ? e(ex.date) + ' · ' : ''}${decks.length} lecture deck${decks.length === 1 ? '' : 's'} · ${q} questions</span></span>` +
+        `<span class="deckchev" aria-hidden="true">${isOpen ? 'Close' : 'Open'} <i>›</i></span></button></h3>` +
+        `<div class="exambody" id="exambody-${n}" role="region" aria-labelledby="exambtn-${n}"${isOpen ? '' : ' hidden'}></div>`;
+      decks[0].before(sec);
+      const body = sec.querySelector('.exambody'), btn = sec.querySelector('.exambtn');
+      decks.forEach(d => body.appendChild(d));
+      const set = (on, keep) => {
+        btn.setAttribute('aria-expanded', String(on)); body.hidden = !on;
+        btn.querySelector('.deckchev').firstChild.textContent = (on ? 'Close' : 'Open') + ' ';
+        if (!keep) return;
+        const now = readEx(); now[n] = on; saveEx(now);
+      };
+      btn.addEventListener('click', () => set(btn.getAttribute('aria-expanded') !== 'true', true));
+      // a topic card opened by code in a closed exam folder brings the folder open
+      // (the deck folder's listener, inside this one, clears the drawn-open mark)
+      body.addEventListener('toggle', ev => {
+        const c = ev.target;
+        if (!c || !c.matches || !c.matches('details.topic') || c.dataset.drawnOpen) return;
+        if (c.open && body.hidden) set(true, false);
+      }, true);
+    });
+  }
 
   const base = renderTopics;
   renderTopics = function(){
@@ -575,6 +632,7 @@ const GUIDE_HTML = `
         if (cards[i].open) cards[i].dataset.drawnOpen = '1';
         fold.body.appendChild(cards[i]);
       });
+      groupByExam(el, cards, shown, e);
     } catch (err) { /* the list stays as the core drew it */ }
     return r;
   };

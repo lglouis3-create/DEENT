@@ -67,14 +67,14 @@ const TOPICS = [
    by it once every file has loaded and adds the deck headings on the Topics
    tab. A topic id missing here keeps its place after the listed ones. */
 const TOPIC_DECKS = [
-  {id:'pp', name:'Skin Pathophysiology (Dr. Smith)', file:'Skin-Pathophys-Students-2026.pdf', when:'taught 10/29',
+  {id:'pp', exam:1, name:'Skin Pathophysiology (Dr. Smith)', file:'Skin-Pathophys-Students-2026.pdf', when:'taught 10/29',
    topics:['skin', 'ad', 'pso', 'acne', 'cmp']},
-  {id:'pc', name:'Skin Pharmacology (Dr. Smith)', file:'Skin-PCol-Students-2026.pdf', when:'taught 10/29, 10/30, 11/03',
+  {id:'pc', exam:1, name:'Skin Pharmacology (Dr. Smith)', file:'Skin-PCol-Students-2026.pdf', when:'taught 10/29, 10/30, 11/03',
    topics:['nrb', 'cs', 'ret', 'l2-tret', 'l2-oret', 'l2-vitd', 'l2-tcell', 'l2-cni', 'l2-pde', 'l2-ker',
            'l2-abx', 'l3-abx', 'l3-fol', 'l3-cyto', 'l3-mtx', 'l3-abat', 'l3-cytok', 'l3-tnf', 'l3-jak', 'l3-sum']},
-  {id:'sun', name:'Sun Exposure and Psoralens (Dr. Smith)', file:'DEENT_Sun_Exposure_2026.pdf', when:'recorded lecture, posted after 11/03',
+  {id:'sun', exam:1, name:'Sun Exposure and Psoralens (Dr. Smith)', file:'DEENT_Sun_Exposure_2026.pdf', when:'recorded lecture, posted after 11/03',
    topics:['l3c-pso', 'l3c-uv', 'l3c-spf', 'l3c-prod']},
-  {id:'mc', name:'Dermatology Medicinal Chemistry (Dr. Sikazwe, DPAW)', file:'f26-DEENT-DPAW-mc.pdf (slide numbers = PDF pages)', when:'taught 11/03, 11/04',
+  {id:'mc', exam:1, name:'Dermatology Medicinal Chemistry (Dr. Sikazwe, DPAW)', file:'f26-DEENT-DPAW-mc.pdf (slide numbers = PDF pages)', when:'taught 11/03, 11/04',
    topics:['s3-frame', 's3-cris', 's3-jak', 's3-uv', 's3-pso', 's3-emol', 's3-anth', 's3-psor', 's3-gc', 's3-hc',
            's4-vitd', 's4-limus', 's4-psret', 's4-mtx', 's4-sys', 's4-acne', 's4-kera', 's4-ret', 's4-horm', 's4-abx',
            's4-sun', 'sk-beyond']},
