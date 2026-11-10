@@ -300,12 +300,12 @@ QUESTIONS.push(
 {id:'L3-022', skill:'mech', prof:'Smith', tier:'new', topic:'l3-fol', sub:'tmpsmx', concept:'folate-purines',
  tags:['reasoning','room'], source:'both',
  quote:'Room question, 11/03, T 85–86: "what is folic acid needed for in cells? Anybody remember?"',
- stem:'Trimethoprim lowers tetrahydrofolic acid in the microbe. Which of these does the microbe then fail to make?',
+ stem:'How does trimethoprim work?',
  options:[
-  {t:'Purines', correct:true, why:'Answer given in class to "what is folic acid needed for in cells?": "Production of like your purines, right?" (T 85–89). Without purines for DNA the microbe cannot divide.'},
-  {t:'Dihydrofolic acid', correct:false, why:'Dihydrofolic acid is what trimethoprim stops DHFR from converting (slide 48); it is the substrate of the blocked step, not a product the microbe loses.'},
-  {t:'Dihydropteroic acid', correct:false, why:'Dihydropteroic acid is made from PABA at the earlier step that sulfamethoxazole blocks (slide 49), before the trimethoprim step.'},
-  {t:'PABA', correct:false, why:'PABA is the starting material that the sulfonamides compete with (slide 49), upstream of tetrahydrofolic acid.'}],
+  {t:'It blocks dihydrofolic acid synthesis', correct:false, why:'That is sulfamethoxazole: it competes with PABA and blocks dihydrofolic acid synthesis (slide 49). Trimethoprim acts one step later.'},
+  {t:'It competes with PABA at DHFR', correct:false, why:'Competing with PABA is the sulfonamide action, at the dihydropteroic acid step (slide 49); trimethoprim inhibits DHFR itself (slide 48).'},
+  {t:'It inhibits DHFR, so purines run short', correct:true, why:'Trimethoprim reversibly inhibits dihydrofolate reductase (slide 48), so less tetrahydrofolic acid is made, and folic acid is needed for "your purines" (T 85–89).'},
+  {t:'It inhibits DHFR, so PABA runs short', correct:false, why:'PABA is the starting material upstream that the sulfonamides compete with (slide 49); blocking DHFR does not remove it.'}],
  teach:'Folate is needed to make purines, two of the DNA bases; without purines the microbe does not have the machinery to divide (T 85–89). Methotrexate uses the same logic in keratinocytes (slide 59; T 219–223).',
  cite:D3+' slide 49; T 84–89'},
 
