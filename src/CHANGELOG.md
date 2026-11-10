@@ -10,7 +10,8 @@ Every update adds its bullets here in the same commit that makes the change.
 
 ## 2026-11-10 (Exam folders)
 - Topics: lecture folders now sit inside an Exam 1 and an Exam 2 folder; Exam 1 starts closed.
-- The trimethoprim and purines question no longer hints at its answer in the stem; its spoken why is re-recorded.
+- The trimethoprim question is rewritten in Dr. Smith's exam style; its spoken why is re-recorded.
+- Drug list: drugs with no known or stated target no longer come up in Target or Mechanism drills.
 
 ## 2026-11-09 (Fill in the blank)
 - 87 fill-in-the-blank questions: type the drug target, number or term, as on Dr. Smith's exam.

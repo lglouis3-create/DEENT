@@ -586,7 +586,10 @@ const DRUGLIST = (() => {
   // drug classes whose Reference "target" is not a molecular target (a sunscreen
   // family, a chart class, "no drug target", a mechanism the slide calls unknown)
   const NO_TARGET_Q = new Set(['sunscreen', 'sunblock', 'anesth', 'emollient', 'azole', 'antiandr', 'cytotox', 'kerat']);
-  const NO_TARGET_ID = new Set(['dapsone', 'metronidazole']);
+  // isotretinoin (Louis, 2026-11-10: a drug whose target is not known or stated is not drilled as a
+  // target): its Reference line gives the retinoid class (RAR/RXR) but slide 19 says its mechanism in
+  // cystic acne is not known, so it gets no target question.
+  const NO_TARGET_ID = new Set(['dapsone', 'metronidazole', 'isotretinoin']);
   // uses outside the chart and the slides that are common enough that a wrong
   // option naming them would mislead (only ever kept OUT of the wrong options;
   // never shown as an answer): systemic cyclosporine and methotrexate and coal
@@ -640,7 +643,7 @@ const DRUGLIST = (() => {
   const KIND_HEAD = Object.assign({}, KINDS, {clsRev: 'Which drug: class', useRev: 'Which drug: indication', potency: 'Potency class', brand: 'Brand name (practice)',
     aeUniq: 'Which drug: adverse effect', boxed: 'Which drug: boxed warning', photo: 'Which drug: photosensitizing'});
   /* A molecular target: the drugs whose Reference line names a receptor, enzyme, cytokine or
-     binding protein (the 51 with a Target question). For the others the field is "How it acts". */
+     binding protein (the 50 with a Target question). For the others the field is "How it acts". */
   const hasTarget = d => !(NO_TARGET_Q.has(d.cls) || NO_TARGET_ID.has(d.id));
   const NO_TARGET_WHY = 'No single receptor or enzyme target named in the lecture.';
   /* Exam 1 scope of a card (plan §9). taught: named on an Exam 1 slide; chart only: on the chart
