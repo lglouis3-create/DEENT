@@ -498,7 +498,7 @@ console.log('=== Phase 1 (plan 2026-11-08): new kinds, labels, scope ===');
   // labels: "Target" exactly where a target question exists
   const tq = DL.D.filter(d => DL.makeQuestion(d, T, 'target', rngOf(1)));
   const ht = DL.D.filter(DL.hasTarget);
-  check(ht.length === 51 && tq.length === 51 && ht.every(d => tq.includes(d)),
+  check(ht.length === 50 && tq.length === 50 && ht.every(d => tq.includes(d)),
     `"Target" on the ${ht.length} drugs with a molecular target (each has a Target question); the other ${DL.D.length - ht.length} read "How it acts"`);
   check(/No single receptor or enzyme target named in the lecture/.test(DL.NO_TARGET_WHY) && /How does it act\?/.test(ui) && /'How it acts'/.test(ui),
     'the "How it acts" label gives its reason, and Recall asks "How does it act?" for those drugs');

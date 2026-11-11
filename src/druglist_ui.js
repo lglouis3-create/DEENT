@@ -52,7 +52,10 @@
        list"; filters and Ask about changed during it apply after it, and a
        line says so.
      - "Target" only where the Reference line names a molecular target
-       (DRUGLIST.hasTarget, 51 drugs); the others read "How it acts".
+       (DRUGLIST.hasTarget, 50 drugs); the others read "How it acts" on their
+       Browse card and are left out of the Target and Mechanism drills in
+       Quiz me and Recall (Louis, 2026-11-10: "if the drug target isn't known
+       or stated it shouldn't be material that pops up").
      - Recall: after Check, Forgot / Partly / Knew with their criteria; only a
        click counts. A summary of this visit's ratings and Quiz me answers,
        and "Practise what I forgot / partly knew", a frozen set that asks
@@ -106,7 +109,7 @@ const DRUGLIST_UI = (() => {
     ['recall', 'Recall', 'Each drug by name only. Type what you remember, press Check, and compare it yourself with the answer and its source. Not graded, not saved.'],
     ['chart', 'Chart', 'The original drug chart, page by page. Find a drug by generic or brand name to turn to its page and highlight its row. Pinch or use Zoom to read it; Open full size shows the page image on its own.'],
   ];
-  const RFIELDS = {target: 'Target / how it acts', mech: 'Mechanism', why: 'Why it helps', cls: 'Class', use: 'Indication', ae: 'Adverse effects',
+  const RFIELDS = {target: 'Target', mech: 'Mechanism', why: 'Why it helps', cls: 'Class', use: 'Indication', ae: 'Adverse effects',
     chem: 'Chemical class', rx: 'Rx/OTC', potency: 'Potency class', brand: 'Brand'};
   // session fields: the Recall fields plus the two Quiz me only ones
   const SFIELD = Object.assign({}, RFIELDS, {target: 'Target / how it acts', boxed: 'Boxed warning', photo: 'Photosensitizing'});
@@ -725,7 +728,7 @@ const DRUGLIST_UI = (() => {
       <p>Each professor's slides and recording decide what is examinable for that professor's material (Dr. Smith's lectures; Dr. Sikazwe's assigned pages); the chart is a guide. Each line names its source: <span class="dlsrc smith">Dr. Smith · slide</span> <span class="dlsrc sikazwe">Dr. Sikazwe · DPAW page</span> <span class="dlsrc chart">Drug chart · page</span></p>
       <p>Targets and mechanisms come from Reference, "Drug targets: write it first, then check". Not here: the lice and scabies page (chart p. 7), which is not in the Exam 1 lectures (it is shown in Chart, the original pages). Brand names are practice only: Dr. Smith, 10/29: ${esc(DL.BRAND_QUOTE.t)} (T 618–621). Every question uses the generic name except the brand kind.</p>
       <p>Topical steroids: the chart's indication cell ends "numerous others", so a condition a steroid could plausibly treat (sunburn itch, for example) is never offered as a wrong option; the remaining options are false by the slides, with the reason shown after answering.</p>
-      <p>Quiz me asks only what the cards state: a wrong option is another drug's value that is not also true for this drug. Drugs whose chart line names no molecular target (sunscreens, sunburn anesthetics, keratolytics, tars, petrolatum, ketoconazole, spironolactone, dapsone, metronidazole) get no target question; their card reads "How it acts" (${esc(DL.NO_TARGET_WHY.toLowerCase().replace(/\.$/, ''))}); practise those in Recall.</p>
+      <p>Quiz me asks only what the cards state: a wrong option is another drug's value that is not also true for this drug. Drugs whose target is not known or not stated (sunscreens, sunburn anesthetics, keratolytics, tars, petrolatum, ketoconazole, spironolactone, dapsone, metronidazole, isotretinoin) get no target or mechanism question in Quiz me or Recall; their card reads "How it acts" (${esc(DL.NO_TARGET_WHY.toLowerCase().replace(/\.$/, ''))}).</p>
       <p>Scope: ${Object.entries(DL.SCOPE_WHY).map(([k, t]) => `<b>${esc(DL.SCOPES[k])}</b>: ${esc(t)}`).join(' ')}</p>
       <p>Your bank answers on each card: read from this profile's saved answers to the question bank (multiple choice, so recognition), through a reviewed map of which question tests which fact; the Drug list itself saves nothing.</p>
       <ul>${DL.CHART_NOTES.map(n => `<li>${esc(n)}</li>`).join('')}</ul>
@@ -841,7 +844,10 @@ const DRUGLIST_UI = (() => {
       cnt.textContent = drugs;
       // the worked example follows the list: never a drug that is now in it
       const rex = pane.querySelector('#dlrex'); if (rex) rex.innerHTML = recallExample();
-      out.innerHTML = `<div class="dlgrid">${list.map(rcard).join('')}</div>`;
+      // Target and Mechanism: only drugs with a stated molecular target (Louis, 2026-11-10)
+      const tf = st.rfield === 'target' || st.rfield === 'mech', rl = tf ? list.filter(DL.hasTarget) : list, left = list.length - rl.length;
+      if (tf) cnt.textContent = `${rl.length} drug${rl.length === 1 ? '' : 's'}` + (left ? ` (${left} with no stated target left out)` : '');
+      out.innerHTML = rl.length ? `<div class="dlgrid">${rl.map(rcard).join('')}</div>` : '<p class="dlempty">No drug in this list has a stated target. Widen the filters.</p>';
     } else {
       cnt.textContent = drugs;
       out.innerHTML = `<div class="dlgrid">${list.map(card).join('')}</div>`;

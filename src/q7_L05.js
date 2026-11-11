@@ -25,7 +25,7 @@
 const P5 = 'Lecture 5 (Patel_Dermatitis-Therapeutics-Student.pdf)';
 
 TOPIC_DECKS.push(
-  {id:'p5', name:'Dermatitis Therapeutics (Dr. Patel)', file:'Patel_Dermatitis-Therapeutics-Student.pdf', when:'taught 11/06 (Exam 2)',
+  {id:'p5', exam:2, name:'Dermatitis Therapeutics (Dr. Patel)', file:'Patel_Dermatitis-Therapeutics-Student.pdf', when:'taught 11/06 (Exam 2)',
    topics:['p5-qty', 'p5-ad', 'p5-care', 'p5-tcs', 'p5-tci', 'p5-sys', 'p5-alg', 'p5-dd']});
 
 TOPICS.push(

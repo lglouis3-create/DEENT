@@ -300,12 +300,12 @@ QUESTIONS.push(
 {id:'L3-022', skill:'mech', prof:'Smith', tier:'new', topic:'l3-fol', sub:'tmpsmx', concept:'folate-purines',
  tags:['reasoning','room'], source:'both',
  quote:'Room question, 11/03, T 85–86: "what is folic acid needed for in cells? Anybody remember?"',
- stem:'Why does blocking tetrahydrofolic acid production stop a microbe from dividing?',
+ stem:'How does trimethoprim work?',
  options:[
-  {t:'It cannot make purines for DNA', correct:true, why:'Answer given in class: "Production of like your purines, right?" (T 86–89).'},
-  {t:'Its ribosome cannot read mRNA', correct:false, why:'Ribosome blockade is the tetracycline, clindamycin and macrolide mechanism (slides 43–47).'},
-  {t:'Its cell wall loses peptidoglycan', correct:false, why:'Not part of the folate pathway taught (slide 49).'},
-  {t:'Its membrane fills with sterols', correct:false, why:'Not part of the folate pathway taught (slide 49).'}],
+  {t:'It blocks dihydrofolic acid synthesis', correct:false, why:'That is sulfamethoxazole: it competes with PABA and blocks dihydrofolic acid synthesis (slide 49). Trimethoprim acts one step later.'},
+  {t:'It competes with PABA at DHFR', correct:false, why:'Competing with PABA is the sulfonamide action, at the dihydropteroic acid step (slide 49); trimethoprim inhibits DHFR itself (slide 48).'},
+  {t:'It inhibits DHFR, so purines run short', correct:true, why:'Trimethoprim reversibly inhibits dihydrofolate reductase (slide 48), so less tetrahydrofolic acid is made, and folic acid is needed for "your purines" (T 85–89).'},
+  {t:'It inhibits DHFR, so PABA runs short', correct:false, why:'PABA is the starting material upstream that the sulfonamides compete with (slide 49); blocking DHFR does not remove it.'}],
  teach:'Folate is needed to make purines, two of the DNA bases; without purines the microbe does not have the machinery to divide (T 85–89). Methotrexate uses the same logic in keratinocytes (slide 59; T 219–223).',
  cite:D3+' slide 49; T 84–89'},
 

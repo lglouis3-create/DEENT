@@ -17,6 +17,15 @@ Formats (Louis, 2026-11-05: the same professor as Intro to Pharmacology, whose g
 - Her Exam 1 hints (pasted by Louis 2026-11-07): "I have mostly multiple choice questions, but a few fill in the blanks. The fill in the blanks focus on drug mechanisms. Know what the drugs target. There are no short essay questions." Pharmacology: "The drugs in each pharmacological class (know the drug table); The general mechanism of action for each drug class. This includes being able to explain why that MOA is good for treating the skin conditions it is indicated for.; The details of the MOAs differentiate the drugs within the class; ... Know Black Box warning adverse drug reactions".
 - Her stated focus (11/03, T 361–364): "what are these drugs targeting, why are they targeting it, and what makes them different from each other, and then significant side effects that I point out to you."
 
+### How her exam questions are built (Louis after Exam 1, 2026-11-10)
+Louis: "They're using info that the student would know but changing piece of the right answer with the wrong answer. So one would think it's right based on that one piece of information, but get it wrong because they didn't know the information exactly." On a long, parallel version: "this is too detailed and obvious". On the approved abatacept draft: "this is the closest version I've seen so far ... This is how Dr. Smith framed her questions, but this is the level of difficulty that is expected on the exam". His Exam 1 recollections: a calcineurin question that mentioned NFAT, where "some answers were correct in the process but the step was off"; abatacept options such as "It inhibit the positive signal of CD80/86 between CD28" and "It activates a negative signal on CD28". Exam stems varied in structure.
+- Options short (one clause, about 4–10 words), not written as parallel sentences that differ by one word.
+- Each wrong option is built from something true the student learned (the right molecule, the drug's class, a neighbouring step, a related drug's mechanism) with one key detail wrong, so a student with general knowledge picks it.
+- No option that is wrong in every part (another class's mechanism, an unrelated organ).
+- A swap is used only when the source clearly makes it wrong.
+- Approved example (abatacept, slide 63; T 292–328): "How does abatacept work?" A. It activates a negative signal on CD28 / B. It inhibits the positive signal between CD80/86 and CD28 (key) / C. It mimics CTLA-4 to send a negative signal / D. It inhibits signal 1 to the T cell.
+- Approved example (tacrolimus, slide 26): "How does tacrolimus lower IL-2?" A. It binds cyclophilin to block calcineurin / B. It inhibits NFAT directly / C. It inhibits calcineurin, so NFAT stays inactive (key) / D. It inhibits calcineurin, so NFAT is dephosphorylated.
+
 ### Polls and in-class questions, 10/29 (Skin-Pathophys-Students-2026.pdf slide 38)
 
 - PollEv 1: "What is one of the major pathologies of atopic dermatitis?"  options: Skin barrier dysfuntion / Karatinocyte hyperproliferation / Excess sebum production  answer: Skin barrier dysfunction (final room result 95% / 4% / 1%).
