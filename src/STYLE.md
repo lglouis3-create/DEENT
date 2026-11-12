@@ -26,6 +26,13 @@ Louis: "They're using info that the student would know but changing piece of the
 - Approved example (abatacept, slide 63; T 292–328): "How does abatacept work?" A. It activates a negative signal on CD28 / B. It inhibits the positive signal between CD80/86 and CD28 (key) / C. It mimics CTLA-4 to send a negative signal / D. It inhibits signal 1 to the T cell.
 - Approved example (tacrolimus, slide 26): "How does tacrolimus lower IL-2?" A. It binds cyclophilin to block calcineurin / B. It inhibits NFAT directly / C. It inhibits calcineurin, so NFAT stays inactive (key) / D. It inhibits calcineurin, so NFAT is dephosphorylated.
 
+### Exam questions Louis recalls (standing rule, Louis 2026-11-12)
+Louis: "Whenever i send more example questions use them as a basis/reference to build and raise the difficulty for each professor in the course." Each recalled question is recorded here with its professor, then used as the model for new items on that professor's material (same structure, same kind of detail, same difficulty), shown to Louis before publishing.
+- Smith, Exam 1 (fill in the blank): "The max for Salicylic acid OTC is __ %." Source fact: PCol 40, "Up to 40% wart and corn removal (Compound W, Duofilm, Freezone)"; 3 to 6% treats dandruff, acne and psoriasis; T 546–549. Bank: BL2-003 (40%).
+- Smith, Exam 1 (fill in the blank), Louis 2026-11-09: calcipotriene → VDR; tacrolimus → FKBP; salicylic acid max %. Calcipotriene's wording, Louis 2026-11-10: "Calcipotriene is a drug that binds to ______ drug target".
+- Smith, Exam 1 (multiple choice): a calcineurin question that mentioned NFAT, with options right about the pathway but at the wrong step; abatacept with options such as "It inhibit the positive signal of CD80/86 between CD28" and "It activates a negative signal on CD28".
+- Sikazwe, Exam 1: Polleve-4 again or a close variant ("How many alpha-hydroxy acids are in the figure below?"); Louis missed it for not knowing how to identify an AHA.
+
 ### Polls and in-class questions, 10/29 (Skin-Pathophys-Students-2026.pdf slide 38)
 
 - PollEv 1: "What is one of the major pathologies of atopic dermatitis?"  options: Skin barrier dysfuntion / Karatinocyte hyperproliferation / Excess sebum production  answer: Skin barrier dysfunction (final room result 95% / 4% / 1%).

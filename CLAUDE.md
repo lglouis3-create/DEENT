@@ -56,6 +56,9 @@ Full text: Louis's message of 2026-11-08 (porter session, relayed to DEENT; adop
 - Dr. Patel's format: STYLE.md "Lecture 5: Patel" (her PollEv of 11/06 verbatim; case stems; a calculation on the exam, T@11799). Skills `dose` and `case` added for her items. Deck, PollEv PDF and the 11/06 transcript are gitignored in `src/decks/` (Louis's uploads of 2026-11-09). Her graded Atopic Dermatitis Patient Case (due 11/10) is not used.
 - Lecture 5: guide sections `gobj-p5-1`..`gobj-p5-7` (her objectives, slides 7-8), Reference `ref-p5-ftu`, `ref-p5-tcs`, `ref-p5-drugs`, `ref-p5-diaper`, 35 stars (`patel-*` sources), open points in reviews/OPEN_QUESTIONS.md "Lecture 5". Fill-in-the-blank candidates (49) were written to the session scratchpad for the kit's fill-in type.
 
+## Recalled exam questions (Louis, 2026-11-12)
+"Whenever i send more example questions use them as a basis/reference to build and raise the difficulty for each professor in the course." Record each in src/STYLE.md "Exam questions Louis recalls" under its professor and model new items for that professor on it; drafts go to Louis before publishing. Dr. Smith's construction rule: STYLE.md "How her exam questions are built". The no-length-cue rule is Dr. Smith's; Dr. Patel's own polls have the key longest in 8 of 20 single-answer polls (11/06, 11/10), so her bank is not re-balanced for length (Louis asked why, 2026-11-12).
+
 ## Exam 1 coverage checklist
 - [x] Lecture 1, Smith 10/29 (Pathophys 2-38, PCol 1-15)
 - [x] Lecture 2, Smith 10/30 (PCol 16-42)
