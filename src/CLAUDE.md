@@ -15,8 +15,7 @@ Standing rules for every question, table and guide written here:
 - When two sources disagree, state both and which one an exam written from
   the lectures would key.
 - Stems ask the subject, in the professor's own formats from `STYLE.md`; never
-  "what does the slide say". Options short and parallel; the correct one is not
-  the longest; every option has a `why`; every question a `skill` from
+  "what does the slide say". Options short and parallel; every option has a `why`; every question a `skill` from
   `course.js`.
 - No metaphors, no study advice, no sentence about the drill itself.
 - Every update adds its bullets to `CHANGELOG.md` in the same commit, one short

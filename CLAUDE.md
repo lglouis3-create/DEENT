@@ -20,7 +20,7 @@ Built with the exam-drill-builder skill from `lglouis3-create/exam-drill-kit`, c
 - Sources: the testing professor's slides and recording together are primary for that professor's material. The drug chart is a guide; assigned reading is support. Clear verbal slips are resolved against the slide and her surrounding explanation. If a conflict still affects the correct answer, the item stays out of scored practice and is flagged in `reviews/OPEN_QUESTIONS.md`.
 - Material a professor explicitly excluded stays out of the exam pools. Personal anecdotes stay off the public site.
 - Features: existing kit core plus course files. Atlas on (Louis, 2026-11-06: "structures are important in Sikazwe's material"). Calculation modules off. `most-likely-stars` is done in DEENT as `likely_*` (Louis, 2026-11-08); `structure-compare` deferred (the Atlas's "Compare structures" covers the six lecture/verified comparisons). `core/profile.py` and feature trials are kit backlog.
-- Dr. Smith is the same professor as in Intro to Pharmacology; that drill's format notes apply (four options, no absolute words, no length cue); question formats otherwise from the DEENT materials.
+- Dr. Smith is the same professor as in Intro to Pharmacology; that drill's format notes apply (four options, no absolute words; the no-length-cue rule removed by Louis 2026-11-12); question formats otherwise from the DEENT materials.
 
 ## Lecture map (syllabus pp. 9-15)
 | Entry in course.js | Deck | Taught | Status |
@@ -57,7 +57,7 @@ Full text: Louis's message of 2026-11-08 (porter session, relayed to DEENT; adop
 - Lecture 5: guide sections `gobj-p5-1`..`gobj-p5-7` (her objectives, slides 7-8), Reference `ref-p5-ftu`, `ref-p5-tcs`, `ref-p5-drugs`, `ref-p5-diaper`, 35 stars (`patel-*` sources), open points in reviews/OPEN_QUESTIONS.md "Lecture 5". Fill-in-the-blank candidates (49) were written to the session scratchpad for the kit's fill-in type.
 
 ## Recalled exam questions (Louis, 2026-11-12)
-"Whenever i send more example questions use them as a basis/reference to build and raise the difficulty for each professor in the course." Record each in src/STYLE.md "Exam questions Louis recalls" under its professor and model new items for that professor on it; drafts go to Louis before publishing. Dr. Smith's construction rule: STYLE.md "How her exam questions are built". The no-length-cue rule is Dr. Smith's; Dr. Patel's own polls have the key longest in 8 of 20 single-answer polls (11/06, 11/10), so her bank is not re-balanced for length (Louis asked why, 2026-11-12).
+"Whenever i send more example questions use them as a basis/reference to build and raise the difficulty for each professor in the course." Record each in src/STYLE.md "Exam questions Louis recalls" under its professor and model new items for that professor on it; drafts go to Louis before publishing. Dr. Smith's construction rule: STYLE.md "How her exam questions are built". No rule on the key's length for any professor (Louis, 2026-11-12: "omit this rule, it should not be in here").
 
 ## Exam 1 coverage checklist
 - [x] Lecture 1, Smith 10/29 (Pathophys 2-38, PCol 1-15)

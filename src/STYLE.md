@@ -12,7 +12,7 @@
 ## Dr. Smith (pharmacology)
 
 Formats (Louis, 2026-11-05: the same professor as Intro to Pharmacology, whose guidance applies):
-- Four options, no absolute words, no length cue (Intro-Pharmacology drill notes, her quiz format).
+- Four options, no absolute words (Intro-Pharmacology drill notes, her quiz format).
 - Generic names only: "I only ask questions using the generic name" (10/29, T 619).
 - Her Exam 1 hints (pasted by Louis 2026-11-07): "I have mostly multiple choice questions, but a few fill in the blanks. The fill in the blanks focus on drug mechanisms. Know what the drugs target. There are no short essay questions." Pharmacology: "The drugs in each pharmacological class (know the drug table); The general mechanism of action for each drug class. This includes being able to explain why that MOA is good for treating the skin conditions it is indicated for.; The details of the MOAs differentiate the drugs within the class; ... Know Black Box warning adverse drug reactions".
 - Her stated focus (11/03, T 361–364): "what are these drugs targeting, why are they targeting it, and what makes them different from each other, and then significant side effects that I point out to you."

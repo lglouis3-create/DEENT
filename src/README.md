@@ -154,8 +154,7 @@ distractor, stem ending "Select all that apply."); a `why` on every option;
 `cite` names the deck file and slide; `skill` from the course taxonomy;
 `concept` shared by wordings of one idea; `dupOf` for two wordings of one fact;
 `lowYield` for an aside that should stay off the exam paper; stems ask the
-subject, never "what does the slide say"; options short and parallel, the
-correct one never the longest; British or American spelling as the professor
+subject, never "what does the slide say"; options short and parallel; British or American spelling as the professor
 uses it, consistently.
 
 ## Files
