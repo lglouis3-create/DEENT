@@ -465,6 +465,138 @@ const GUIDE_HTML = `
 <div class="gpt"><ul><li>Topical steroid for AD: improvement in 24&ndash;48 hours; refer if not better after 7 days; never past 2 weeks (DT 36, 52). Her poll answer: 7 days (T@68450).</li><li>Atrophy or infection on a topical steroid: discontinue and refer (DT 33).</li><li>Diaper dermatitis at 7 days: improved but not healed, continue until healed; not healed, not improved or worse, refer (DT 66). Her poll answer: 7 days (T@82496).</li><li>JAK inhibitors: specialty follow-up every 2 weeks (T@55363).</li></ul></div>
 <div class="gpt"><h5>Pharmacist role and access (DT 50, 53)</h5><ul><li>Improve adherence through education; therapy optimization and monitoring; recommend moisturizers and OTC products; patient-friendly education on the plan; accessible support (DT 50). The SCORAD score is the physician&rsquo;s to calculate (T@21052).</li><li>Barriers: high out-of-pocket costs, limited formularies, prior authorization and step therapy. A denied prior authorization goes to appeal and a peer-to-peer conversation; the PCP writes the statement (T@66410). Manufacturer patient assistance programs and grant foundations help patients with limited or no coverage (DT 53).</li></ul></div>
 </section>
+
+<h2 class="gdeck" id="gdeck-p6">Acne Therapeutics (Dr. Patel, 11/10; Exam 2)</h2>
+<p class="sub">AT = Patel_Acne-Therapeutics-Student.pdf, slide = PDF page; T@ = place in the 11/10 lecture transcript; PollEv = her in-class polls of 11/10. Her nine objectives (AT 2), one section each.</p>
+<div class="gask"><b>How she asks (11/10)</b><ul><li>&ldquo;All questions are fair game in terms of multiple choice, select all possible, fill in the blank ... calculations ... matching&rdquo;; &ldquo;I do create questions based on the objectives that I start off with&rdquo; (T@2398).</li><li>Severity words: one, some, many. &ldquo;Those are the terms that I will also use on my cases on the exam ... I&rsquo;m not gonna tell you like 10&rdquo; (T@13918).</li><li>Cases: &ldquo;what is first line for that severity? ... know exactly what has the patient tried and what is left to try&rdquo; (T@60314). Pregnancy tests: &ldquo;I said it twice because hint, it&rsquo;s a question&rdquo; (T@49632).</li></ul></div>
+
+<section class="gobj" id="gobj-p6-1">
+<h3>Acne Therapeutics &middot; Objective 1: classify the stage and severity of acne</h3>
+<div class="gbar"><span>Objective (AT 2)</span><b>Classify stages of acne</b><i>AT 5&ndash;8</i></div>
+<div class="gpt"><ul><li>Non-inflammatory: open comedone (blackhead), closed comedone (whitehead). Inflammatory: papule (raised, red, no pus), pustule (visible white pus), nodule or cyst (large, under the skin; worst stage) (AT 5&ndash;6; T@6156&ndash;7508).</li></ul></div>
+<table class="reftab"><thead><tr><th style="width:18%">Grade (AT 7&ndash;8)</th><th>Non-inflammatory</th><th>Inflammatory</th><th>Nodules; scarring</th></tr></thead><tbody>
+<tr><td><b>Mildly clear</b></td><td>Rare; no more than 1 small lesion</td><td>&mdash;</td><td>&mdash;</td></tr>
+<tr><td><b>Mild</b></td><td>Some</td><td>No more than a few papules and pustules</td><td>No nodules; minimal scarring</td></tr>
+<tr><td><b>Moderate</b></td><td>Many</td><td>Some</td><td>No more than one nodule; mild scarring possible</td></tr>
+<tr><td><b>Severe</b></td><td>Many</td><td>Many</td><td>A few nodules; moderate to extensive scarring</td></tr>
+</tbody></table>
+<div class="gpoll"><b>Her polls</b><ul><li>Case 1 (16-year-old, some open and closed comedones, no inflammation): mild acne (T@12560&ndash;14612).</li><li>Case 2 (cysts on cheek, back and shoulders): severe; &ldquo;is it no more than one cystic lesion or is it more than one?&rdquo; (T@68494&ndash;69094).</li></ul></div>
+</section>
+
+<section class="gobj" id="gobj-p6-2">
+<h3>Acne Therapeutics &middot; Objective 2: is the patient a self-care candidate?</h3>
+<div class="gbar"><span>Objective (AT 2)</span><b>Determine if the patient is an appropriate self-care candidate</b><i>AT 9&ndash;11, 17&ndash;18</i></div>
+<div class="gpt"><ul><li>Exclusions for self-care (AT 18): severe acne, possible rosacea, exacerbating factors, comedogenic drugs: a straight referral to dermatology (T@19247&ndash;19941).</li><li>Drugs that cause or worsen acne (AT 10): corticosteroids, androgens, progesterone contraceptives; TCAs, lithium, antiepileptics, aripiprazole, SSRIs; vitamins B1, B6, B12; dactinomycin, cyclosporine, sirolimus; isoniazid, rifampin, ethionamide; iodine, bromine, chlorine.</li><li>Complications (AT 11): anxiety, depression, scarring; scarring the most common (T@11250).</li><li>No routine endocrine or microbiologic testing; exception: high suspicion of PCOS or another hormonal disorder (AT 17).</li></ul></div>
+</section>
+
+<section class="gobj" id="gobj-p6-3">
+<h3>Acne Therapeutics &middot; Objective 3: treatment goals and the overall approach</h3>
+<div class="gbar"><span>Objective (AT 2)</span><b>Recommend appropriate non-pharmacologic and pharmacologic therapy</b><i>AT 3, 13, 47</i></div>
+<div class="gpt"><ul><li>Goals (AT 13): alleviate symptoms; reduce the number and severity of lesions; improve appearance; slow progression; limit duration and recurrence; prevent long-term scarring and hyperpigmentation. No cure (AT 3; T@11895).</li><li>Plan (AT 47): the smallest number of agents at the lowest possible dosages; topical before oral; taper over time, never stop abruptly (T@71629).</li></ul></div>
+</section>
+
+<section class="gobj" id="gobj-p6-4">
+<h3>Acne Therapeutics &middot; Objective 4: non-drug counseling</h3>
+<div class="gbar"><span>Objective (AT 2)</span><b>Counsel patients on non-pharmacologic strategies</b><i>AT 19, 24, 43</i></div>
+<div class="gpt"><ul><li>Cleanse twice a day with a mild soap or non-soap cleanser; no abrasive products, devices or excessive cleansing; remove dirt and makeup with an oil-based cleanser before a water-based one (AT 19; T@20370, T@28136).</li><li>Vehicle by skin type (AT 24): oily to normal, gels, solutions, lotions; normal to dry, lotions and creams; ointments and bars not usually recommended.</li><li>Shaving (AT 43): electric or safety razor; soften the beard; shave lightly and infrequently with a sharp blade, in the direction of hair growth, each area once.</li></ul></div>
+</section>
+
+<section class="gobj" id="gobj-p6-5">
+<h3>Acne Therapeutics &middot; Objective 5: OTC and prescription-only products</h3>
+<div class="gbar"><span>Objective (AT 2)</span><b>Recognize non-prescription and prescription-only products</b><i>AT 22&ndash;33</i></div>
+<table class="reftab"><thead><tr><th style="width:24%">OTC agent (AT 23)</th><th>Bactericidal</th><th>Keratolytic</th><th>Comedolytic</th></tr></thead><tbody>
+<tr><td><b>Benzoyl peroxide</b></td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
+<tr><td><b>Topical retinoid</b></td><td>No</td><td>Yes</td><td>Yes</td></tr>
+<tr><td><b>Alpha and beta hydroxy acids</b></td><td>No</td><td>Yes</td><td>Yes</td></tr>
+<tr><td><b>Sulfur</b></td><td>No</td><td>Yes</td><td>Yes</td></tr>
+<tr><td><b>Resorcinol</b></td><td>Yes (and antifungal)</td><td>Yes</td><td>No</td></tr>
+</tbody></table>
+<div class="gpt"><ul><li>&ldquo;Benzoyl peroxide targets all three ... So that means that benzoyl peroxide will be our first-line agent&rdquo; (T@24800). See Reference, &ldquo;Dr. Patel: acne agents&rdquo;.</li></ul></div>
+</section>
+
+<section class="gobj" id="gobj-p6-6">
+<h3>Acne Therapeutics &middot; Objective 6: guidelines, algorithm and first-line agents</h3>
+<div class="gbar"><span>Objective (AT 2)</span><b>Apply guidelines and algorithms; recognize first-line agents</b><i>AT 20, 25, 40</i></div>
+<div class="gpt"><ul><li>Step by step: one agent, then the other, then combinations of two, then three; topical before oral; an oral antibiotic after the topical combinations; isotretinoin absolute last line (T@54687, T@57819, T@59132).</li><li>Topical antibiotics are not used alone: always with BP, to reduce resistance (AT 25, 31; T@28783, T@36940).</li></ul></div>
+<div class="gpoll"><b>Her polls</b><ul><li>Case 1 first line: benzoyl peroxide BID to affected areas; &ldquo;keyword in this question? First line&rdquo; (T@66568).</li><li>Case 2 next line after 8 months of doxycycline + retinoid + BP, irregular periods: combined oral contraceptive over spironolactone (T@69094&ndash;69647).</li></ul></div>
+<div style="display:flex;flex-wrap:wrap;gap:7px;margin:8px 0"><button type="button" class="chip" data-jump="ref:ref-p6-alg">Reference: acne algorithm by severity</button></div>
+</section>
+
+<section class="gobj" id="gobj-p6-7">
+<h3>Acne Therapeutics &middot; Objective 7: topical product by symptoms</h3>
+<div class="gbar"><span>Objective (AT 2)</span><b>Recommend appropriate topical products based on patient symptoms</b><i>AT 23&ndash;31</i></div>
+<div class="gpt"><ul><li>Benzoyl peroxide 2.5&ndash;10% OTC, 1&ndash;2 times daily; irritation settles in 1&ndash;2 weeks; drying, photosensitivity, bleaches hair and clothing (AT 23, 26).</li><li>Adapalene (Differin) 0.1% OTC: at night; BP in the morning; not with sulfur, resorcinol, salicylic acid or vitamin C; moisturizer and sunscreen; over 12 years (AT 27; T@30492&ndash;31851).</li><li>Salicylic acid: once or twice daily as a cleanser or gel; maximum effect 4&ndash;6 weeks; limited efficacy data (AT 29). AHAs: trial form; 2&ndash;4 weeks between peels; sunscreen (AT 28). Tea tree oil in a lotion or gel vehicle (AT 30).</li><li>Prescription (AT 31): topical antibiotics (wait 30 minutes to shave or apply cosmetics); azelaic acid for post-inflammatory dyspigmentation; dapsone (G6PD; CBC, reticulocytes).</li></ul></div>
+</section>
+
+<section class="gobj" id="gobj-p6-8">
+<h3>Acne Therapeutics &middot; Objective 8: counseling on drug and non-drug therapy</h3>
+<div class="gbar"><span>Objective (AT 2)</span><b>Counseling points for non-drug and drug therapies</b><i>AT 33&ndash;38, 41&ndash;43</i></div>
+<div class="gpt"><ul><li>Topicals (AT 42): wash, pat dry, wait 20&ndash;30 minutes; a thin layer in the evening, avoiding eyes, ears, nostrils, mouth; if irritation, decrease frequency.</li><li>Orals (AT 42): swallow whole with a full glass of water; may take after eating; caution driving at night; sunscreen.</li><li>Tetracyclines over 12 years only (tooth discoloration), photosensitivity, avoid in pregnancy; re-evaluate at 3&ndash;4 months (AT 33; T@39928). TMP/SMX only with macrolide and tetracycline allergy, not in sulfur allergy.</li><li>COC: female wanting contraception; over 14 or 2 years past menarche; non-smoker under 35; VTE risk (AT 34&ndash;36).</li><li>Isotretinoin and iPledge: see Reference, &ldquo;Dr. Patel: isotretinoin and iPledge&rdquo;.</li></ul></div>
+<div class="gpoll"><b>Her polls</b><ul><li>Best COC candidate: the 22-year-old who does not want to be pregnant (not DVT, not a 35-year-old smoker, not 12) (T@45257&ndash;46636).</li><li>NOT an isotretinoin counseling point: dairy (T@69647&ndash;70327).</li></ul></div>
+<div style="display:flex;flex-wrap:wrap;gap:7px;margin:8px 0"><button type="button" class="chip" data-jump="ref:ref-p6-ipledge">Reference: isotretinoin and iPledge</button></div>
+</section>
+
+<section class="gobj" id="gobj-p6-9">
+<h3>Acne Therapeutics &middot; Objective 9: side effects, expectations, monitoring</h3>
+<div class="gbar"><span>Objective (AT 2)</span><b>Side effects, expectations of treatment, education</b><i>AT 37&ndash;38, 41, 44, 48</i></div>
+<div class="gpt"><ul><li>8 weeks or more to see visible benefits (AT 41). Lesion count down 10&ndash;25% within 4&ndash;8 weeks, &gt;50% within 2&ndash;4 months; comedones resolve by 3&ndash;4 months; patient monitors daily, pharmacist every 4&ndash;8 weeks (AT 44).</li><li>No response (AT 48): check adherence and use; change the vehicle to suit the skin type; avoid overuse of cleansers.</li></ul></div>
+</section>
+
+<h2 class="gdeck" id="gdeck-p7">Scaly Dermatoses Therapeutics (Dr. Patel, 11/10&ndash;11/11; Exam 2)</h2>
+<p class="sub">SD = Patel_Scaly-Dermatoses-Therapeutics-Student.pdf (11/11 version), slide = PDF page; T@ = place in the 11/10 or 11/11 transcript, dated; PollEv = her polls of 11/10 and 11/11. Her seven objectives (SD 2&ndash;3), one section each.</p>
+<div class="gask"><b>How she asks (11/10&ndash;11/11)</b><ul><li>Adult fingertip units again: &ldquo;hint, please know this chart, OK? So adult only&rdquo; (SD 4; T@76480 11/10).</li><li>Biologics: &ldquo;know the generic names, know the brand names, understand what class to follow through, and exactly what&rsquo;s bolded on the slide&rdquo; (T@22212 11/11); TNF-&alpha; in heart failure: &ldquo;I&rsquo;m saying this twice for a reason&rdquo; (T@22212 11/11).</li><li>&ldquo;Know exactly what we would trial with a mild to moderate patient or a moderate to severe patient first&rdquo; (T@33701 11/11). Not asked: cyclosporine dosing (T@17897 11/11), the exact turnover multiples (T@83726 11/10), severity tools other than BSA (T@10671 11/11).</li></ul></div>
+
+<section class="gobj" id="gobj-p7-1">
+<h3>Scaly Dermatoses &middot; Objective 1: the patient interview and care process</h3>
+<div class="gbar"><span>Objective (SD 2)</span><b>Perform the components of the Patient-Centered Care / STEPS process in the patient interview for dermatologic conditions</b><i>SD 29&ndash;30, 48</i></div>
+<div class="gpt"><ul><li>Collect, assess, plan, implement, follow-up (monitor and evaluate) around patient-centered care (SD 29).</li><li>Factors in choosing psoriasis therapy (SD 30): age and sex, socioeconomic status, severity, location of lesions, past and current treatment, comorbidities. &ldquo;Age is huge&rdquo; (T@9650 11/11).</li></ul></div>
+</section>
+
+<section class="gobj" id="gobj-p7-2">
+<h3>Scaly Dermatoses &middot; Objective 2: dandruff, seborrheic dermatitis or psoriasis?</h3>
+<div class="gbar"><span>Objective (SD 2)</span><b>Determine if the patient has rosacea, psoriasis, psoriatic arthritis, seborrhea or dandruff by typical signs and symptoms and patient history</b><i>SD 6, 8, 11&ndash;13, 21&ndash;27, 31</i></div>
+<table class="reftab"><thead><tr><th style="width:18%">SD 6</th><th>Dandruff</th><th>Seborrheic dermatitis</th><th>Psoriasis</th></tr></thead><tbody>
+<tr><td><b>Location</b></td><td>Scalp</td><td>Scalp, face, trunk</td><td>Scalp, elbows, knees, trunk, lower extremities</td></tr>
+<tr><td><b>Exacerbating factors</b></td><td>Generally stable; dry climate, cold, stress</td><td>Immunosuppression, neurologic conditions, environment, stress</td><td>Environment, infection, medications, stress, alcohol, tobacco</td></tr>
+<tr><td><b>Appearance</b></td><td>Thin, white or grey flakes</td><td>Macules, patches, thin plaques of yellow, oily scales on red skin</td><td>Discrete symmetrical red plaques, sharp borders; silvery white scales, bleeding points</td></tr>
+<tr><td><b>Inflammation; hyperplasia</b></td><td>Absent; absent</td><td>Present; present</td><td>Present; present</td></tr>
+<tr><td><b>Turnover</b></td><td>Slowest</td><td>Second fastest</td><td>Fastest</td></tr>
+</tbody></table>
+<div class="gpt"><ul><li>Dandruff: Malassezia; non-inflammatory, the mild inflammation is secondary to scratching; puberty onset (SD 8; T@84375 11/10). Seborrheic dermatitis: Malassezia; infants (cradle cap, scalp only, up to 30 months) and adults (yellow greasy scales on head, ears, face; men &gt; women) (SD 11&ndash;12).</li><li>Psoriasis (SD 21, 26): 3% of the US; peaks at 20&ndash;30 and 50&ndash;60 years; no gender preference; plaque type &gt;80%; plaques red-violet, at least 0.5 cm, well demarcated, silver flaking scales; pruritus in &gt;50%.</li><li>Severity by BSA (SD 31): mild &le; 5%; moderate &ge; 8%; severe &ge; 10% (&ldquo;corrected to 10% ... follow this slide&rdquo;, T@10484 11/11).</li></ul></div>
+<div class="gpoll"><b>Her polls</b><ul><li>Dandruff case: Malassezia; mild presentation; non-medicated shampoo (T@81752, T@82442 11/10).</li><li>Adult and infant cases: seborrheic dermatitis (T@94640, T@95306 11/10).</li><li>Psoriasis case, BSA 7%: mild to moderate psoriasis; &ldquo;like a 9%&rdquo; would be moderate to severe (T@34825&ndash;35074 11/11).</li></ul></div>
+</section>
+
+<section class="gobj" id="gobj-p7-3">
+<h3>Scaly Dermatoses &middot; Objective 3: is the patient a self-care candidate?</h3>
+<div class="gbar"><span>Objective (SD 2)</span><b>Determine if the patient is an appropriate self-care candidate</b><i>SD 9, 16, 18, 51</i></div>
+<div class="gpt"><ul><li>Dandruff and adult seborrheic dermatitis: OTC shampoos; seborrheic dermatitis that worsens or lasts longer than 7 days: consult a health care provider (SD 16; T@89612 11/10).</li><li>Infants: no ketoconazole, no corticosteroids (SD 18; T@95994 11/10).</li><li>Mild to moderate scaly dermatoses can often be managed with topical non-prescription products (SD 51). Systemic and biologic psoriasis therapy is prescribed and often specialty (SD 40, 47).</li></ul></div>
+</section>
+
+<section class="gobj" id="gobj-p7-4">
+<h3>Scaly Dermatoses &middot; Objective 4: treatment goals</h3>
+<div class="gbar"><span>Objective (SD 2)</span><b>List treatment goals</b><i>SD 9, 14, 28</i></div>
+<div class="gpt"><ul><li>Dandruff (SD 9): reduce epidermal turnover and Malassezia; minimize visible scaling and itching.</li><li>Psoriasis (SD 28): minimize plaques and scales; alleviate pruritus; reduce flare-ups; treat associated conditions (hypertension, dyslipidemia, diabetes, depression); screen lifestyle factors (stress, smoking, obesity); counsel; cost-effective therapy; avoid adverse effects; quality of life.</li></ul></div>
+</section>
+
+<section class="gobj" id="gobj-p7-5">
+<h3>Scaly Dermatoses &middot; Objective 5: non-drug therapy</h3>
+<div class="gbar"><span>Objective (SD 2)</span><b>Recommend appropriate non-drug therapy</b><i>SD 15, 18, 33&ndash;34</i></div>
+<div class="gpt"><ul><li>Seborrheic dermatitis scale softening: mineral or olive oil, or a cream with salicylic acid or sulfur; dishwashing liquid for tough scale (SD 15). Infants: massage with baby or vegetable oil, non-medicated shampoo, soft bristle brush; face, mild soap and emollient (SD 18).</li><li>Psoriasis, every patient (SD 33&ndash;34): reduce stress, regular exercise, weight management (BMI 18.5&ndash;24.9), moderate alcohol, stop smoking; moisturizers, oatmeal baths, sunscreen SPF 30+ with UVA protection (T@11707&ndash;12577 11/11).</li></ul></div>
+</section>
+
+<section class="gobj" id="gobj-p7-6">
+<h3>Scaly Dermatoses &middot; Objective 6: recommend the best treatment</h3>
+<div class="gbar"><span>Objective (SD 3)</span><b>Dosing frequency and maximum days; topical vs oral; onset; length of treatment; adverse effects; contraindications and interactions</b><i>SD 4, 7, 9, 16&ndash;18, 35&ndash;45</i></div>
+<div class="gpt"><ul><li>OTC chart (SD 7): hydrocortisone 1% not for dandruff; sulfur not for psoriasis.</li><li>Shampoo schedules: see Reference, &ldquo;Dr. Patel: dandruff and seborrheic dermatitis&rdquo;.</li><li>Psoriasis, mild to moderate (SD 35): topical agents first; systemic agent last line; non-drug care for all. Moderate to severe (SD 37): systemic agent (most likely methotrexate) &plusmn; topical; then a more potent systemic or a biologic; biologics last line (T@14941&ndash;15451 11/11).</li><li>Topicals (SD 36): corticosteroids the most effective, 2&ndash;4 times daily, &le; 4 weeks; calcipotriene; tazarotene, adapalene at bedtime; anthralin &le; 2 hours on thick plaques; coal tar overnight; salicylic acid shampoo for the scalp; pimecrolimus for intertriginous areas.</li></ul></div>
+<div class="gpoll"><b>Her polls</b><ul><li>Adult seborrheic dermatitis, first line: ketoconazole shampoo (T@94640 11/10). Infant scalp: massage with baby oil (T@95994 11/10).</li><li>Psoriasis case, OTC agent: topical corticosteroids (T@35288 11/11).</li></ul></div>
+<div style="display:flex;flex-wrap:wrap;gap:7px;margin:8px 0"><button type="button" class="chip" data-jump="ref:ref-p7-shampoo">Reference: shampoo schedules</button><button type="button" class="chip" data-jump="ref:ref-p7-pso">Reference: psoriasis severity and topicals</button><button type="button" class="chip" data-jump="ref:ref-p7-sys">Reference: psoriasis systemic agents</button><button type="button" class="chip" data-jump="ref:ref-p7-bio">Reference: biologics</button></div>
+</section>
+
+<section class="gobj" id="gobj-p7-7">
+<h3>Scaly Dermatoses &middot; Objective 7: follow-up</h3>
+<div class="gbar"><span>Objective (SD 3)</span><b>Provide follow-up recommendations</b><i>SD 16, 38&ndash;39, 48, 51</i></div>
+<div class="gpt"><ul><li>Seborrheic dermatitis: worse or lasting longer than 7 days, refer (SD 16).</li><li>Psoriasis: contact the patient in 1&ndash;2 weeks (SD 48; T@31466, T@36225 11/11); SD 51 reads &ldquo;a week after self-treatment begins&rdquo;. Expected response: methotrexate 3&ndash;6 weeks, apremilast by week 4, acitretin maximum at 3&ndash;6 months (SD 38&ndash;39).</li><li>Biologics: TB screening before and during, PPD every year; CBC and LFTs for TNF-&alpha; inhibitors (SD 40&ndash;41).</li></ul></div>
+</section>
 `;
 
 /* ==========================================================================

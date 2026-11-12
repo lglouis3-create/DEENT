@@ -285,9 +285,9 @@ QUESTIONS.push(
  stem:'How does emollient therapy help prevent atopic dermatitis?',
  options:[
   {t:'It improves the skin barrier and blocks the inflammatory cascade', correct:true, why:'Slide 18, "Atopic dermatitis prevention": emollient therapy improves skin barrier and blocks inflammatory cascade (T@14303).'},
-  {t:'It suppresses T-cell activation in the dermis', correct:false, why:'That is what the anti-inflammatory drugs do; slide 18 credits emollients with restoring the barrier.'},
-  {t:'It kills S. aureus colonizing the lesions', correct:false, why:'Emollients are not antibacterial; the bleach bath on slide 31 is the measure aimed at recurrent bacterial infection.'},
-  {t:'It replaces the missing filaggrin protein', correct:false, why:'Slide 18 names the FLG mutation as a cause of the barrier defect; it does not say emollients replace filaggrin.'}],
+  {t:'It suppresses T-cell activation and lowers IgE in the dermis', correct:false, why:'Suppressing the immune response is the job of the anti-inflammatory drugs (slides 35, 38); slide 18 credits emollients with improving the skin barrier (T@14303).'},
+  {t:'It kills S. aureus on the skin and prevents secondary infection', correct:false, why:'Emollients are not antibacterial; the measure aimed at recurrent bacterial infection is the bleach bath for moderate–severe AD (slide 31).'},
+  {t:'It replaces the missing filaggrin protein and corrects the FLG defect', correct:false, why:'Slide 19 names the FLG loss-of-function mutation as a risk factor; an emollient strengthens the barrier from outside and does not replace filaggrin or correct the gene (T@13944–14303).'}],
  teach:'"In terms of prevention, how can we prevent it? Well, that\'s how we go ahead and strengthen the skin barrier on the epidermis. So by applying emollient therapy" (T@13944–14303).',
  cite:P5+' slide 18; T@13944–14303'},
 
@@ -364,9 +364,9 @@ QUESTIONS.push(
  stem:'Where is atopic dermatitis more common in adults than in infants?',
  options:[
   {t:'Hands, neck, inner elbows, back of knees and ankles', correct:true, why:'Slide 21, Adulthood: less common on the face and more common on the hands, neck, inner elbows, back of knees, and ankles.'},
-  {t:'Face, scalp and trunk', correct:false, why:'Face and scalp are the infant regions on slide 21; in adults AD is less common on the face.'},
-  {t:'Buttocks, upper thighs and genital region', correct:false, why:'That is where diaper dermatitis erythema appears (slide 58).'},
-  {t:'Scalp, nails and lower back', correct:false, why:'Not the adult AD regions on slide 21.'}],
+  {t:'Face, scalp, trunk, arms and legs', correct:false, why:'Those are the infancy regions on slide 21 (0–2 years); in adults AD is less common on the face.'},
+  {t:'Buttocks, upper thighs, abdomen and genital region', correct:false, why:'That is where diaper dermatitis erythema appears (slide 58), not adult atopic dermatitis.'},
+  {t:'Face, neck creases, elbows, wrists, knees and ankles', correct:false, why:'That is the childhood list on slide 21 (2 years to puberty), which still includes the face; in adults AD is less common on the face and more common on the hands, neck, inner elbows, back of knees and ankles.'}],
  teach:'The adult case on slide 15: a 21-year-old with itching, dryness and irritation on the back of the knees and inside of the elbows.',
  cite:P5+' slides 15, 21; T@19481'},
 
@@ -408,9 +408,9 @@ QUESTIONS.push(
  stem:'Which description separates moderate from mild atopic dermatitis?',
  options:[
   {t:'Frequent itching with a moderate impact on activities and sleep', correct:true, why:'Slide 23, Moderate: mild characteristics with frequent itching, moderate impact on everyday activities, sleep (T@21419).'},
-  {t:'Infrequent itching with small areas of redness', correct:false, why:'That is mild on slide 23.'},
-  {t:'Nightly loss of sleep and severe limitation to activities', correct:false, why:'That is severe on slide 23.'},
-  {t:'Lichenified plaques on the flexures', correct:false, why:'Lichenification marks the chronic status (slide 24), not a severity grade.'}],
+  {t:'Infrequent itching with little impact on activities and sleep', correct:false, why:'That is mild on slide 23 (areas of dry skin, infrequent itching, little impact on everyday activities, sleep).'},
+  {t:'Incessant itching with nightly loss of sleep and severe limits', correct:false, why:'That is severe on slide 23; "biggest key here is nightly loss of sleep" (T@21289).'},
+  {t:'Lichenified plaques with a moderate impact on activities', correct:false, why:'Lichenification marks the chronic status (slide 24), not a severity grade; moderate is defined by frequent itching with a moderate impact on activities and sleep (slide 23).'}],
  teach:'Severity (slide 23) and status (slide 24) are separate calls: her poll asked for both together.',
  cite:P5+' slide 23; T@21419'},
 
@@ -501,9 +501,9 @@ QUESTIONS.push(
  stem:'A bleach bath (0.005% sodium hypochlorite) is suggested for which patients, and how often?',
  options:[
   {t:'Moderate–severe AD; twice a week', correct:true, why:'Slide 31: may add bleach (0.005% Na hypochlorite = ½ cup bleach to a full tub of water) twice a week to prevent recurrent bacterial skin infections (moderate–severe). "We\'re not recommending this for mild" (T@31877).'},
-  {t:'All severities; daily', correct:false, why:'Daily is the oatmeal or baking soda bath on slide 31; bleach is twice a week and for moderate–severe only.'},
-  {t:'Mild AD; twice a week', correct:false, why:'Slide 31 limits it to moderate–severe; she said it is not for mild AD (T@31877).'},
-  {t:'Moderate–severe AD; daily', correct:false, why:'The severity is right; slide 31 gives twice a week.'}],
+  {t:'Any severity of AD; once daily', correct:false, why:'Daily is the oatmeal or baking soda bath on slide 31; bleach is twice a week and for moderate–severe AD: "we\'re not recommending this for mild" (T@31877).'},
+  {t:'Any severity of AD; twice a week', correct:false, why:'The frequency is right, but slide 31 limits bleach to moderate–severe AD; she said it is not for mild AD (T@31877).'},
+  {t:'Moderate–severe AD; once daily', correct:false, why:'The severity is right; slide 31 gives twice a week. Daily is the oatmeal or baking soda bath.'}],
  teach:'Slide 31 note: guidelines state this, but it can lead to irritation. "My recommendation is, this is very much so last line" (T@32279); soak about 10 minutes (T@31877).',
  cite:P5+' slide 31; T@31505–32279'},
 
@@ -534,9 +534,9 @@ QUESTIONS.push(
  stem:'A patient using tacrolimus ointment asks about wet wraps for weeping lesions. Which advice fits her slides?',
  options:[
   {t:'Wet wraps are short-term and not used with a topical calcineurin inhibitor', correct:true, why:'Slide 30: wet wrap, short-term and not with topical calcineurin inhibitors (TCIs); slide 51: cool compresses "but not to TCI\'s"; "what medication are we not applying that with? ... TCIs" (T@62649).'},
-  {t:'Wet wraps over tacrolimus increase its effect and are preferred', correct:false, why:'She ruled out wet wraps with TCIs (slide 30; T@30366, T@62649).'},
-  {t:'Wet wraps may be used nightly for several months', correct:false, why:'Slide 30: wet wrap therapy is short-term.'},
-  {t:'Wet wraps replace the need for a moisturizer', correct:false, why:'Not on her slides; moisturizer use continues as basic management (slide 48).'}],
+  {t:'Wet wraps over tacrolimus increase its effect and are preferred at night', correct:false, why:'She ruled out wet wraps with TCIs (slide 30; T@30366, T@62649).'},
+  {t:'Wet wraps may be used nightly for months, over tacrolimus or a steroid', correct:false, why:'Slide 30: wet wrap therapy is short-term and not with TCIs.'},
+  {t:'Wet wraps are short-term and replace the moisturizer while they are on', correct:false, why:'Short-term is right; moisturizer use continues as basic management for every patient (slide 48), and wet wraps are not used with a TCI (slide 30).'}],
  teach:'In the step-care algorithm, wet-wrap therapy appears as acute treatment to help gain control in severe AD (slide 48).',
  cite:P5+' slides 30, 48, 51; T@30366, T@62649–63034'},
 
@@ -580,9 +580,9 @@ QUESTIONS.push(
  stem:'A moisturizer that is a humectant and can burn or sting on broken skin belongs to which group?',
  options:[
   {t:'Urea-containing (Carmol, Lac-Hydrin)', correct:true, why:'Slide 32: urea-containing, Carmol 10%, 20%, Lac-Hydrin 5%; humectant; side effects burning, stinging, irritation on broken skin (T@33793).'},
-  {t:'Ceramide-containing (CeraVe)', correct:false, why:'Ceramide creams provide a barrier (slide 32); no burning is listed for them.'},
-  {t:'Petroleum-containing (Aquaphor)', correct:false, why:'Petroleum products are occlusive and can be greasy (slide 32), not humectants.'},
-  {t:'Emollient lotion (Cetaphil)', correct:false, why:'Lotions are less effective and need frequent application (slide 32); no burning listed.'}],
+  {t:'Ceramide-containing (CeraVe, Aveeno eczema therapy)', correct:false, why:'Ceramide creams provide a barrier (slide 32); no burning is listed for them.'},
+  {t:'Petroleum-containing (Aquaphor, Eucerin)', correct:false, why:'Petroleum products are occlusive and can be greasy (slide 32), not humectants.'},
+  {t:'Emollient lotion (Cetaphil, Keri Original)', correct:false, why:'Lotions are less effective and need 3 x/day or more (slide 32); no burning listed.'}],
  teach:'She called urea products "very limited in use" and mostly humectants, not moisturizing as much as petrolatum or ceramide products (T@33793).',
  cite:P5+' slide 32; T@33793'},
 
@@ -602,9 +602,9 @@ QUESTIONS.push(
  stem:'A patient prefers Cetaphil lotion. How often should it be applied?',
  options:[
   {t:'3 times a day or more, after bathing or washing', correct:true, why:'Slide 32, emollients (Cetaphil lotion, Keri Original, Neutrogena lotion): less effective; apply 3 x/day or more, after bathing/washing.'},
-  {t:'Once daily at bedtime', correct:false, why:'Lotions absorb quickly and need to be applied several times a day (slide 32; T@34267).'},
-  {t:'Twice weekly', correct:false, why:'Twice weekly is the bleach bath (slide 31).'},
-  {t:'Twice daily for 3–7 days', correct:false, why:'That is the OTC hydrocortisone regimen (slide 36).'}],
+  {t:'Once daily, within 3 minutes after bathing', correct:false, why:'The 3-minute rule is when any emollient goes on after bathing (slide 52); a lotion is less effective and needs 3 x/day or more (slide 32; T@34267).'},
+  {t:'Twice a week, after a lukewarm 10-minute bath', correct:false, why:'Twice a week is the bleach bath, and the 10-minute lukewarm bath is the bathing advice (slide 31); lotions are applied 3 x/day or more (slide 32).'},
+  {t:'Twice daily for 3–7 days, then as needed', correct:false, why:'That is the OTC hydrocortisone regimen (slide 36); a moisturizer is daily basic management, and a lotion needs 3 x/day or more (slide 32).'}],
  teach:'"Remember that creams are thicker. Lotions have a lot more water containing properties in them ... You would have to apply a lotion multiple times in a day" (T@34267).',
  cite:P5+' slide 32; T@34267'},
 
@@ -647,9 +647,9 @@ QUESTIONS.push(
  stem:'A patient using an OTC topical steroid develops skin atrophy at the site. What is advised?',
  options:[
   {t:'Discontinue the steroid and refer to a physician', correct:true, why:'Slide 33: if atrophy of the skin or infection occurs while using the topical steroid, discontinue and refer to a physician.'},
-  {t:'Switch to a higher-potency steroid', correct:false, why:'Atrophy is an adverse effect of topical steroids (slide 35); slide 33 says discontinue and refer.'},
-  {t:'Continue for the full 14 days, then stop', correct:false, why:'Slide 33: discontinue when atrophy occurs.'},
-  {t:'Apply the steroid under occlusion', correct:false, why:'Occlusion raises absorption (T@40748); slide 33 says discontinue and refer.'}],
+  {t:'Switch to a higher-potency steroid and recheck in 7 days', correct:false, why:'Atrophy is an adverse effect of topical steroids (slide 35); a stronger steroid adds to it. Slide 33 says discontinue and refer.'},
+  {t:'Finish the 2-week course, then see a physician', correct:false, why:'Slide 33: discontinue when atrophy occurs, not after the course; 2 weeks is the outer limit of use (slide 36).'},
+  {t:'Change to a thinner layer once daily and continue', correct:false, why:'A thin layer is how every topical steroid is applied (slide 35); once atrophy appears, slide 33 says discontinue and refer.'}],
  teach:'Skin atrophy is on the topical corticosteroid adverse effect list (slide 35).',
  cite:P5+' slides 33, 35'},
 
@@ -706,9 +706,9 @@ QUESTIONS.push(
  stem:'Which factors change how much of a topical corticosteroid is absorbed?',
  options:[
   {t:'Age, skin integrity, skin thickness and anatomic location', correct:true, why:'Slide 35, pharmacokinetics: absorption varies depending on age, skin integrity, thickness of skin, and anatomic location (T@36649).'},
-  {t:'Food intake, gastric pH and CYP3A4 activity', correct:false, why:'Those affect oral drugs; slide 35 lists skin and patient factors for topical absorption.'},
-  {t:'Time of day and room temperature only', correct:false, why:'Not on slide 35; storage temperature is a counseling point, not an absorption factor.'},
-  {t:'Kidney function and body weight', correct:false, why:'Not the factors on slide 35.'}],
+  {t:'Food intake, gastric pH, CYP3A4 activity and protein binding', correct:false, why:'Those affect oral drugs; slide 35 lists skin and patient factors for topical absorption.'},
+  {t:'Age, kidney function, body weight and time of day', correct:false, why:'Age is on slide 35; kidney function, body weight and time of day are not. Slide 35: age, skin integrity, thickness of skin and anatomic location.'},
+  {t:'Skin color, hair density, room temperature and humidity', correct:false, why:'Not the factors on slide 35; room temperature is a storage point (slide 35), and humidity a trigger (slide 20).'}],
  teach:'Occlusion raises absorption too: "we don\'t want to wrap the medication cause that\'ll increase the absorption" (T@40748).',
  cite:P5+' slide 35; T@36649, T@40748'},
 
@@ -716,10 +716,10 @@ QUESTIONS.push(
  tags:['numbers','two-facts'], source:'both',
  stem:'What is the OTC hydrocortisone 1% regimen for an atopic dermatitis flare?',
  options:[
-  {t:'Twice daily for up to 3–7 days, never past 2 weeks', correct:true, why:'Slide 36: applied twice daily for max 3–7 days, or until the flare-up is cleared; not resolved in 7 days, seek assistance; do not apply for longer than 2 weeks (T@37425–37900).'},
-  {t:'Once daily for 7–14 days', correct:false, why:'Slide 36 gives twice daily for a maximum of 3–7 days; at 7 days without resolution the patient seeks assistance.'},
-  {t:'Three times daily for 2 weeks', correct:false, why:'Slide 36: twice daily, max 3–7 days.'},
-  {t:'Twice daily for 1–8 weeks', correct:false, why:'1–8 weeks is the TCI response time (slide 38).'}],
+  {t:'Twice daily for up to 3–7 days, not past 2 weeks', correct:true, why:'Slide 36: applied twice daily for max 3–7 days, or until the flare-up is cleared; not resolved in 7 days, seek assistance; do not apply for longer than 2 weeks (T@37425–37900).'},
+  {t:'Once daily for up to 7–14 days, not past 3 weeks', correct:false, why:'Slide 36 gives twice daily for a maximum of 3–7 days, and no use past 2 weeks; at 7 days without resolution the patient seeks assistance.'},
+  {t:'Three times daily for up to 7 days, not past 2 weeks', correct:false, why:'The 2-week limit is right; slide 36 gives twice daily, not three times daily, for 3–7 days.'},
+  {t:'Twice daily for up to 1–8 weeks, reassessed at 6 weeks', correct:false, why:'1–8 weeks is the TCI response time (slide 38) and 6 weeks the TCI reassessment point (slide 40).'}],
  teach:'"Within 7 days, I want you to also remember that that is also when we need to seek assistance if it still hasn\'t resolved ... we\'re also recommending that the patient not use it past 14 days" (T@37425–37900).',
  cite:P5+' slide 36; T@37425–37900'},
 
@@ -739,9 +739,9 @@ QUESTIONS.push(
  stem:'Which pair of topical corticosteroid counseling points is on her slide?',
  options:[
   {t:'Store cool, dry, room temperature; do not apply longer than 2 weeks', correct:true, why:'Slide 35 counseling: store in a cool, dry, room temperature location; do not apply for longer than 2 weeks (T@37049).'},
-  {t:'Refrigerate; do not apply longer than 2 weeks', correct:false, why:'Refrigeration is for dupilumab (slide 43); topical steroids are stored at room temperature.'},
-  {t:'Store cool and dry; do not apply longer than 6 weeks', correct:false, why:'6 weeks is the TCI reassessment point (slide 40); topical steroids stop at 2 weeks.'},
-  {t:'Store in the bathroom; apply a thick layer', correct:false, why:'Not the bathroom (T@37049), and a thin layer rubbed in gently (slide 35).'}],
+  {t:'Store in the refrigerator; do not apply longer than 2 weeks', correct:false, why:'Refrigeration is for dupilumab (slide 43); topical steroids are stored in a cool, dry, room temperature place (slide 35).'},
+  {t:'Store cool, dry, room temperature; do not apply longer than 6 weeks', correct:false, why:'6 weeks is the TCI reassessment point (slide 40); topical steroids stop at 2 weeks (slide 35).'},
+  {t:'Store in the refrigerator; do not apply longer than 6 weeks', correct:false, why:'Both are other drugs\' points: refrigeration is dupilumab (slide 43), 6 weeks the TCI reassessment (slide 40).'}],
  teach:'Slide 35 counseling: apply to a clean, dry area; a thin layer, rubbed in gently until the medication vanishes; store cool, dry, room temperature; not longer than 2 weeks.',
  cite:P5+' slide 35; T@36649–37049'},
 
@@ -829,9 +829,9 @@ QUESTIONS.push(
  stem:'A patient will dress over an area just treated with a topical steroid. What did she advise?',
  options:[
   {t:'Rub in until it vanishes, then let it air dry 3–5 minutes before clothing', correct:true, why:'"If it is going to be on a body part, that clothing will be on it, then we usually recommend at least 3 to 5 minutes of letting it air dry" (T@40748).'},
-  {t:'Cover it with plastic wrap under the clothing', correct:false, why:'"We don\'t want to wrap the medication cause that\'ll increase the absorption" (T@40748).'},
-  {t:'Wait 30–45 minutes before dressing', correct:false, why:'30–45 minutes is how long dupilumab sits out of the refrigerator before injection (slide 43).'},
-  {t:'Apply a thick layer so the clothing does not wipe it off', correct:false, why:'Thin layer, rubbed in until it vanishes (slide 35).'}],
+  {t:'Rub in until it vanishes, then cover it with plastic wrap before clothing', correct:false, why:'"We don\'t want to wrap the medication cause that\'ll increase the absorption" (T@40748).'},
+  {t:'Leave a visible film on the skin, then air dry 3–5 minutes before clothing', correct:false, why:'The wait is right, but slide 35 says rub in gently until the medication vanishes.'},
+  {t:'Apply a thick layer, then air dry 30–45 minutes before clothing', correct:false, why:'Thin layer (slide 35); 30–45 minutes is how long dupilumab sits out of the refrigerator before injection (slide 43).'}],
  teach:'A student\'s question in class (T@40682–41129).',
  cite:P5+' slide 35; T@40748–41129'},
 
@@ -841,9 +841,9 @@ QUESTIONS.push(
  stem:'Topical calcineurin inhibitors are used for which severity of atopic dermatitis, and at which line?',
  options:[
   {t:'Mild–moderate; second line after topical steroids', correct:true, why:'Slide 38: mild–moderate AD, second-line option if unresponsive to topical steroids; "Is it first line or second line? Second line" (T@44161).'},
-  {t:'Mild–moderate; first line', correct:false, why:'Topical steroids are first line; TCIs are second (slide 38).'},
-  {t:'Moderate–severe; third line', correct:false, why:'Third line is crisaborole (slide 41); TCIs are second line.'},
-  {t:'Severe only; after dupilumab', correct:false, why:'Dupilumab is for moderate–severe AD after topicals fail (slides 43, 48); TCIs come earlier.'}],
+  {t:'Mild–moderate; first line before topical steroids', correct:false, why:'Topical steroids are first line; TCIs are second line if the patient is unresponsive to them (slide 38; T@44161).'},
+  {t:'Moderate–severe; first line before topical steroids', correct:false, why:'Slide 38 gives the class mild–moderate AD and second line; first line is the topical steroid.'},
+  {t:'Mild–moderate; third line after crisaborole', correct:false, why:'Crisaborole is itself the third-line option, after TCIs (slide 41); TCIs are second line.'}],
  teach:'Within the class (slide 39): pimecrolimus is for mild-to-moderate eczema, tacrolimus for moderate-to-severe.',
  cite:P5+' slides 38–39; T@41713–42092, T@44161'},
 
@@ -941,10 +941,10 @@ QUESTIONS.push(
  tags:['two-facts'], source:'both',
  stem:'How is crisaborole 2% ointment used?',
  options:[
-  {t:'Thin layer twice daily to treat flares, when a steroid is not appropriate or as an adjunct', correct:true, why:'Slide 42: apply a thin layer twice daily for mild to moderate eczema; treat flares; only when a steroid is not appropriate or as an adjunct therapy (T@45675).'},
-  {t:'Thin layer once daily every day of the year as maintenance', correct:false, why:'"We\'re treating the flares, right? We\'re not applying this every day of our life" (T@46076); slide 42 says twice daily.'},
-  {t:'Thick layer three times daily with a wet wrap', correct:false, why:'Slide 42: thin layer, twice daily.'},
-  {t:'Twice daily, always in place of a steroid as first-line', correct:false, why:'Slide 41: third-line option; slide 42: when a steroid is not appropriate or as adjunct.'}],
+  {t:'Thin layer twice daily for flares, when a steroid is not appropriate or as an adjunct', correct:true, why:'Slide 42: apply a thin layer twice daily for mild to moderate eczema; treat flares; only when a steroid is not appropriate or as an adjunct therapy (T@45675).'},
+  {t:'Thin layer once daily as year-round maintenance, in place of topical steroids', correct:false, why:'"We\'re treating the flares, right? We\'re not applying this every day of our life" (T@46076); slide 42 says twice daily, as an adjunct or when a steroid is not appropriate.'},
+  {t:'Thick layer three times daily under a wet wrap, when a steroid has failed', correct:false, why:'Slide 42: a thin layer, twice daily; slide 41 counseling is as for a TCI (thin layer, rubbed in until it vanishes).'},
+  {t:'Thin layer twice daily for flares, as the first-line agent before any steroid', correct:false, why:'Slide 41: crisaborole is the third-line option if all other options fail; topical steroids are first line (slide 48).'}],
  teach:'Adverse effects (slide 41): skin burning and stinging. Counseling as for TCIs, including no bathing, showering or swimming right after application.',
  cite:P5+' slides 41–42; T@45675–46458'},
 
@@ -977,10 +977,10 @@ QUESTIONS.push(
  tags:['interaction','two-facts'], source:'both',
  stem:'A patient on warfarin is starting dupilumab. Which two cautions on her slide apply to dupilumab?',
  options:[
-  {t:'May interact with CYP-450 (adjust warfarin or cyclosporine); no live vaccines', correct:true, why:'Slide 43: may interact with CYP-450 enzymes (may need to adjust warfarin or cyclosporine doses); do not use with live vaccines and < 6 months of age (T@47593–48048).'},
-  {t:'Avoid sun exposure; reassess after 6 weeks', correct:false, why:'Those are TCI boxed-warning points (slide 40).'},
-  {t:'Risk of thrombosis; higher all-cause mortality', correct:false, why:'Those are JAK inhibitor boxed warnings (slide 46).'},
-  {t:'No use under 2 years; do not swim after use', correct:false, why:'TCI points (slide 38); dupilumab\'s age limit is 6 months.'}],
+  {t:'May interact with CYP-450 enzymes; do not use with live vaccines', correct:true, why:'Slide 43: may interact with CYP-450 enzymes (may need to adjust warfarin or cyclosporine doses); do not use with live vaccines and < 6 months of age (T@47593–48048).'},
+  {t:'May raise the risk of thrombosis; do not use with live vaccines', correct:false, why:'No live vaccines is right; thrombosis (DVT, PE, arterial thrombosis) is a JAK inhibitor boxed warning (slide 46).'},
+  {t:'May interact with CYP-450 enzymes; protect against sun exposure', correct:false, why:'The CYP-450 caution is right; sun protection is a TCI boxed-warning point (slide 40).'},
+  {t:'May raise all-cause mortality; reassess treatment after 6 weeks', correct:false, why:'Higher all-cause mortality is a JAK inhibitor boxed warning (slide 46); reassess after 6 weeks is the TCI boxed warning (slide 40).'}],
  teach:'"Definitely review your list of live vaccines, you guys. I may include it on a case and then you know to not recommend it" (T@48048).',
  cite:P5+' slide 43; T@47593–48467'},
 
@@ -989,9 +989,9 @@ QUESTIONS.push(
  stem:'How is dupilumab injected and stored?',
  options:[
   {t:'90° into thigh or lower abdomen; refrigerate, then 30–45 min to room temperature', correct:true, why:'Slide 43: inject at a 90-degree angle into thigh or lower abdomen, may administer in upper arm; rotate sites; store in refrigerator, allow solution to reach room temperature for 30–45 min before administration (T@48832–49587).'},
-  {t:'45° into the upper arm only; store at room temperature', correct:false, why:'Slide 43: 90 degrees, thigh or lower abdomen (upper arm allowed); stored in the refrigerator.'},
+  {t:'45° into the upper arm or thigh; refrigerate, then 30–45 min to room temperature', correct:false, why:'The storage is right; slide 43: inject at 90 degrees, into the thigh or lower abdomen (upper arm allowed).'},
   {t:'90° into thigh or lower abdomen; inject straight from the refrigerator', correct:false, why:'Let it warm 30–45 minutes first: "It tends to sting less" (T@49587).'},
-  {t:'Into the same site each time; refrigerate', correct:false, why:'Slide 43: rotate injection sites.'}],
+  {t:'90° into the same site each time; store at room temperature until use', correct:false, why:'Slide 43: rotate injection sites, and store in the refrigerator.'}],
  teach:'"The lower abdomen hurts the less" (T@48832). Clean and dry the site first; it comes as a pre-filled syringe with or without a needle shield (slides 43–44).',
  cite:P5+' slides 43–44; T@48467–49587'},
 
@@ -1032,10 +1032,10 @@ QUESTIONS.push(
  tags:['calculation','case'], source:'both',
  stem:'A 16-year-old weighing 154 lb starts dupilumab. Which dosing applies?',
  options:[
-  {t:'Adult dosing: 600 mg once, then 300 mg every other week', correct:true, why:'154 lb ÷ 2.2 = 70 kg; children 6–17 years over 60 kg use adult dosing (slide 44; T@49983).'},
-  {t:'400 mg once, then 200 mg every other week', correct:false, why:'That is 30–60 kg; 70 kg is above 60 (slide 44).'},
-  {t:'600 mg once, then 300 mg every 4 weeks', correct:false, why:'That is 15–30 kg (slide 44).'},
-  {t:'Not allowed until age 18', correct:false, why:'Slide 44 gives dosing for ages 6–17; slide 43 sets the lower limit at 6 months.'}],
+  {t:'600 mg once (2 × 300 mg), then 300 mg every other week', correct:true, why:'154 lb ÷ 2.2 = 70 kg; children 6–17 years over 60 kg use adult dosing, 600 mg SUBQ once (2 × 300 mg injections), then 300 mg every other week (slide 44; T@49983).'},
+  {t:'400 mg once (2 × 200 mg), then 200 mg every other week', correct:false, why:'That is 30–60 kg; 70 kg is above 60 (slide 44).'},
+  {t:'600 mg once (2 × 300 mg), then 300 mg every 4 weeks', correct:false, why:'That is 15–30 kg (slide 44); every 4 weeks is the lighter band.'},
+  {t:'400 mg once (2 × 200 mg), then 200 mg every 4 weeks', correct:false, why:'No band for ages 6–17 on slide 44 gives 200 mg every 4 weeks; at 70 kg this patient takes adult dosing.'}],
  teach:'Read the weight in pounds, convert once, then place it in the band.',
  cite:P5+' slide 44; T@49983'},
 
@@ -1044,9 +1044,9 @@ QUESTIONS.push(
  stem:'Dupilumab may be used together with which topical agents?',
  options:[
   {t:'Topical corticosteroids or topical calcineurin inhibitors', correct:true, why:'Slide 44: may be used concomitantly with topical corticosteroids or topical calcineurin inhibitors; "Only those two?" (T@51207).'},
-  {t:'Crisaborole only', correct:false, why:'Slide 44 names topical steroids and TCIs.'},
-  {t:'Topical JAK inhibitor (ruxolitinib) only', correct:false, why:'Topical ruxolitinib is not named with dupilumab on slide 44.'},
-  {t:'None: it replaces all topical therapy', correct:false, why:'Slide 44 allows concomitant topical steroids or TCIs.'}],
+  {t:'Topical corticosteroids or crisaborole 2% ointment', correct:false, why:'Topical steroids are right; slide 44 names topical calcineurin inhibitors as the other partner, not crisaborole. "Only those two?" (T@51207).'},
+  {t:'Topical calcineurin inhibitors or topical ruxolitinib', correct:false, why:'TCIs are right; topical ruxolitinib (a JAK inhibitor, slide 46) is not named with dupilumab on slide 44.'},
+  {t:'Crisaborole 2% ointment or topical ruxolitinib cream', correct:false, why:'Neither is named on slide 44, which allows topical corticosteroids or topical calcineurin inhibitors.'}],
  teach:'Dupilumab comes as single-dose boxes; the 600 mg start is two boxes (T@51787).',
  cite:P5+' slide 44; T@51207'},
 
@@ -1089,9 +1089,9 @@ QUESTIONS.push(
  stem:'Which set of common adverse events belongs to tralokinumab?',
  options:[
   {t:'Ocular events, upper respiratory tract infections, injection-site reactions', correct:true, why:'Slide 45: common adverse events, ocular adverse events, upper respiratory tract infections, injection-site reactions.'},
-  {t:'Urticaria, angioedema, rash, erythema, injection-site reaction', correct:false, why:'That is the dupilumab ADR list (slide 43).'},
-  {t:'Skin burning, tingling, coughing, flu-like symptoms', correct:false, why:'That is the TCI list (slide 38).'},
-  {t:'Thrombosis, MACE, malignancy, serious infection', correct:false, why:'JAK inhibitor boxed warnings (slide 46).'}],
+  {t:'Urticaria, angioedema, skin rash, erythema, injection-site reactions', correct:false, why:'That is the dupilumab ADR list (slide 43).'},
+  {t:'Skin burning, tingling, cracking, coughing, flu-like symptoms', correct:false, why:'That is the TCI list (slide 38).'},
+  {t:'Serious infections, thrombosis, malignancy, major cardiovascular events', correct:false, why:'Those are the JAK inhibitor boxed warnings (slide 46).'}],
  teach:'She named URTI and injection-site reactions as the main ones (T@52628); the slide adds ocular adverse events.',
  cite:P5+' slides 38, 43, 45–46; T@52628'},
 
@@ -1099,10 +1099,10 @@ QUESTIONS.push(
  tags:['two-facts'], source:'both',
  stem:'For which patients are JAK inhibitors indicated in atopic dermatitis?',
  options:[
-  {t:'Moderate–severe AD, over 12 years of age, refractory to other systemic and biologic therapy', correct:true, why:'Slide 46: indicated for moderate-severe AD in > 12 years of age; refractory option, whose disease is not adequately controlled with other systemic, biologic therapies (T@53419–53841).'},
-  {t:'Mild–moderate AD, 2 years and older, after a topical steroid', correct:false, why:'That describes the TCIs (slides 38–39).'},
-  {t:'Moderate–severe AD, 6 months and older, first systemic agent', correct:false, why:'6 months is dupilumab\'s lower age limit (slide 43); JAK inhibitors are a last-line refractory option.'},
-  {t:'Mild–moderate AD, 3 months and older, third line', correct:false, why:'That is crisaborole (slide 41).'}],
+  {t:'Moderate–severe AD, over 12 years, refractory to other systemic and biologic therapy', correct:true, why:'Slide 46: indicated for moderate-severe AD in > 12 years of age; refractory option, whose disease is not adequately controlled with other systemic, biologic therapies (T@53419–53841).'},
+  {t:'Mild–moderate AD, 2 years and older, second line after a topical steroid', correct:false, why:'That describes the TCIs (slides 38–39).'},
+  {t:'Moderate–severe AD, 6 months and older, before other systemic or biologic therapy', correct:false, why:'6 months is dupilumab\'s lower age limit (slide 43); JAK inhibitors are a last-line refractory option, after other systemic and biologic therapy (slide 46).'},
+  {t:'Mild–moderate AD, over 3 months of age, third line after the other topicals fail', correct:false, why:'That is crisaborole (slides 41–42).'}],
  teach:'"This is why it\'s absolute last-line refractory option if we have nothing else to rely on" (T@54970). Patients are followed every 2 weeks (T@55363).',
  cite:P5+' slide 46; T@53419–55363'},
 
@@ -1111,9 +1111,9 @@ QUESTIONS.push(
  stem:'Which JAK inhibitor regimen matches her slide?',
  options:[
   {t:'Abrocitinib 100 mg orally once daily, may increase to 200 mg after 12 weeks', correct:true, why:'Slide 46: abrocitinib (Cibinqo) 100 mg by mouth once daily, may increase to 200 mg once daily after 12 weeks.'},
-  {t:'Upadacitinib 100 mg orally once daily, may increase to 200 mg', correct:false, why:'Slide 46: upadacitinib (Rinvoq) 15 mg once daily, may increase to 30 mg.'},
-  {t:'Abrocitinib 15 mg orally once daily, may increase to 30 mg', correct:false, why:'15 to 30 mg is upadacitinib (slide 46).'},
-  {t:'Ruxolitinib 15 mg orally once daily', correct:false, why:'Ruxolitinib (Opzelura) is topical: apply 60 g per week or 100 g per two weeks (slide 46).'}],
+  {t:'Upadacitinib 100 mg orally once daily, may increase to 200 mg after 12 weeks', correct:false, why:'Those are abrocitinib\'s doses; slide 46: upadacitinib (Rinvoq) 15 mg once daily, may increase to 30 mg.'},
+  {t:'Abrocitinib 15 mg orally once daily, may increase to 30 mg after 12 weeks', correct:false, why:'15 to 30 mg is upadacitinib (slide 46); abrocitinib is 100 mg, may increase to 200 mg after 12 weeks.'},
+  {t:'Ruxolitinib 15 mg orally once daily, may increase to 30 mg after 12 weeks', correct:false, why:'Ruxolitinib (Opzelura) is topical: apply 60 g per week or 100 g per two weeks (slide 46).'}],
  teach:'Upadacitinib (Rinvoq) is the most commonly prescribed JAK inhibitor (T@53841).',
  cite:P5+' slide 46; T@53841'},
 
@@ -1169,9 +1169,9 @@ QUESTIONS.push(
  stem:'In moderate atopic dermatitis, how is maintenance topical corticosteroid used?',
  options:[
   {t:'Low potency 1–2 times daily, including the face; medium potency 1–2 times weekly, except the face', correct:true, why:'Slide 48, moderate, maintenance TCS: low potency 1x–2x daily (including face); medium potency 1x–2x weekly (except face) (T@56931).'},
-  {t:'Medium potency 1–2 times daily, including the face; low potency weekly', correct:false, why:'Reversed: daily is low potency; medium potency is weekly and not on the face (slide 48).'},
-  {t:'High potency twice daily for 3–7 days beyond clearance', correct:false, why:'Medium-to-high potency twice daily for 3–7 days is acute treatment for moderate–severe AD (slide 48).'},
-  {t:'Low potency 2–3 times weekly, except the face', correct:false, why:'2x–3x weekly is the maintenance TCI option on slide 48.'}],
+  {t:'Medium potency 1–2 times daily, including the face; low potency 1–2 times weekly, except the face', correct:false, why:'Reversed: daily is low potency; medium potency is weekly and not on the face (slide 48).'},
+  {t:'Low potency 1–2 times daily, except the face; medium potency 1–2 times weekly, including the face', correct:false, why:'The frequencies are right but the face rule is reversed: low potency includes the face; medium potency is except the face (slide 48; hydrocortisone 1% is the only face steroid, T@37425).'},
+  {t:'Low potency 2–3 times weekly, including the face; high potency twice daily, except the face', correct:false, why:'2x–3x weekly is the maintenance TCI option on slide 48; high potency twice daily is acute treatment for a moderate–severe flare, not maintenance (slide 48).'}],
  teach:'"So they may have two different topical corticosteroids, and that\'s OK" (T@57389). Alternatives (slide 48): OR maintenance TCI (pimecrolimus, tacrolimus) 1x–2x daily or 2x–3x weekly; OR crisaborole 2% twice daily.',
  cite:P5+' slide 48; T@56931–57389'},
 
@@ -1236,9 +1236,9 @@ QUESTIONS.push(
  stem:'A patient with moderate AD on daily hydrocortisone 1% maintenance has an acute flare on the trunk. Which acute treatment fits the algorithm?',
  options:[
   {t:'Medium-to-high potency TCS twice daily for 3–7 days beyond clearance', correct:true, why:'Slide 48, moderate and severe, acute: medium-to-high potency TCS 2x daily for 3–7 days beyond clearance; "they probably have tried a low potency steroid. We\'re going up" (T@58143).'},
-  {t:'Low-potency TCS once daily for 14 days', correct:false, why:'Low potency is maintenance here; slide 48 steps up to medium-to-high for an acute flare.'},
-  {t:'Very high potency TCS twice daily for 4 weeks', correct:false, why:'Slide 48 gives 3–7 days beyond clearance; topical steroids stop at 2 weeks (slide 35).'},
-  {t:'Start a JAK inhibitor', correct:false, why:'JAK inhibitors are a refractory option for moderate–severe AD after other systemic and biologic therapies (slide 46).'}],
+  {t:'Low-potency TCS twice daily for 3–7 days beyond clearance', correct:false, why:'Low potency is her maintenance already; slide 48 steps up to medium-to-high potency for an acute flare in moderate AD ("We\'re going up", T@58143).'},
+  {t:'Very high potency TCS twice daily for 4 weeks beyond clearance', correct:false, why:'Slide 48 gives medium-to-high potency for 3–7 days beyond clearance; topical steroids stop at 2 weeks (slide 35).'},
+  {t:'Medium-to-high potency TCS 1–2 times weekly as added maintenance', correct:false, why:'Weekly use is medium-potency maintenance in moderate AD (slide 48), not acute treatment; a flare takes twice daily for 3–7 days beyond clearance.'}],
  teach:'The trunk is not the face, so a medium or high potency steroid is allowed there (slide 48: medium potency except face).',
  cite:P5+' slide 48; T@58143–58538'},
 
@@ -1284,9 +1284,9 @@ QUESTIONS.push(
  stem:'Which presentation is typical of diaper dermatitis?',
  options:[
   {t:'Red to bright red, shiny, wet-looking patches on buttocks, upper thighs, abdomen or genitals', correct:true, why:'Slide 58: erythema in patches (buttocks, upper thighs, abdomen, genital region); red to bright red, shiny, wet-looking patches and lesions (T@72543).'},
-  {t:'Lichenified plaques with silvery scale in the skin folds', correct:false, why:'"You\'re not gonna see symptoms of atopic dermatitis here ... a rash that doesn\'t include lichenification" (T@72543).'},
-  {t:'Dry, cracked skin on the hands and inner elbows', correct:false, why:'That is adult atopic dermatitis (slide 21).'},
-  {t:'Oozing papules on the face and scalp', correct:false, why:'That is infant atopic dermatitis (slide 21).'}],
+  {t:'Lichenified plaques with dry, silvery scale in the flexures of the elbows and knees', correct:false, why:'"You\'re not gonna see symptoms of atopic dermatitis here ... a rash that doesn\'t include lichenification" (T@72543); lichenified, silvery or scaly plaques are atopic dermatitis (slide 21).'},
+  {t:'Dry, flaky, rough, cracked skin on the hands, neck, inner elbows and ankles', correct:false, why:'That is atopic dermatitis in childhood and adulthood (slide 21), not diaper dermatitis.'},
+  {t:'Oozing, erythematous papular rash on the face, scalp, trunk, arms and legs', correct:false, why:'That is infant atopic dermatitis (slide 21).'}],
  teach:'Slide 58 grades severity A to E: slight, mild, moderate, moderate to severe, severe, by how far past the crease the redness spreads (T@71811–72172).',
  cite:P5+' slides 21, 58; T@71811–72543'},
 
@@ -1317,9 +1317,9 @@ QUESTIONS.push(
  stem:'In the ABCDE mnemonic for diaper dermatitis, what do B and D stand for?',
  options:[
   {t:'B: barrier protectant liberally each change; D: change the diaper every 2 hours and when soiled', correct:true, why:'Slide 62: B = Barrier, apply barrier skin protectant liberally with each diaper change; D = Diaper, change frequently (every 2 hours) and as soon as soiled, absorbent disposable diapers if affordable (T@74933–75778).'},
-  {t:'B: bathe the area daily; D: dry the skin before the new diaper', correct:false, why:'Drying is A = Air; cleansing is C (slide 62).'},
-  {t:'B: barrier protectant once daily; D: change every 4 hours', correct:false, why:'Slide 62: with each diaper change, and every 2 hours.'},
-  {t:'B: baby wipe; D: diaper-free time', correct:false, why:'Wipes are under C (cleansing); diaper-free time is A (air) (slide 62).'}],
+  {t:'B: bathe the area with soap once daily; D: dry the skin fully before the next diaper', correct:false, why:'Neither letter: drying and diaper-free time are A = Air; cleansing (soft cloth and warm water) is C (slide 62).'},
+  {t:'B: barrier protectant once daily at bedtime; D: change the diaper every 2 hours and when soiled', correct:false, why:'D is right; B is applied liberally with each diaper change, not once daily (slides 62–63).'},
+  {t:'B: barrier protectant liberally each change; D: diaper-free time to let the skin air dry', correct:false, why:'B is right; diaper-free time is A = Air. D = Diaper: change frequently (every 2 hours) and as soon as soiled (slide 62).'}],
  teach:'Slide 62: A = Air (air dry, diaper-free time); B = Barrier; C = Cleansing (soft cloth and warm water, or a baby wipe when stool is present); D = Diaper; E = Education of parents and caregivers. "I want you guys to remember A B C D E" (T@74574).',
  cite:P5+' slide 62; T@74574–76171'},
 
@@ -1328,9 +1328,9 @@ QUESTIONS.push(
  stem:'Which statement about the skin protectants zinc oxide and petrolatum matches her slide?',
  options:[
   {t:'Zinc oxide 1–40%, the active ingredient; petrolatum 30–100%, the ointment base', correct:true, why:'Slide 64: zinc oxide 1–40%, common and excellent protectant, usually thick and tacky; petrolatum 30–100%, ointment base (T@76969–77778).'},
-  {t:'Zinc oxide 30–100%; petrolatum 1–40%', correct:false, why:'Reversed (slide 64).'},
-  {t:'Zinc oxide 1–10%; petrolatum 30–100%', correct:false, why:'Slide 64 gives up to 40% zinc oxide: "40% being the highest dose" (T@76969).'},
-  {t:'Zinc oxide 1–40%, the base; petrolatum, the active ingredient', correct:false, why:'"Zinc oxide, active ingredient, petrolatin is the base for the most effective diaper cream" (T@77778).'}],
+  {t:'Zinc oxide 30–100%, the active ingredient; petrolatum 1–40%, the ointment base', correct:false, why:'The ranges are reversed: zinc oxide 1–40%, petrolatum 30–100% (slide 64).'},
+  {t:'Zinc oxide 1–10%, the active ingredient; petrolatum 30–100%, the ointment base', correct:false, why:'Slide 64 gives up to 40% zinc oxide: "40% being the highest dose" (T@76969).'},
+  {t:'Zinc oxide 1–40%, the ointment base; petrolatum 30–100%, the active ingredient', correct:false, why:'The roles are reversed: "Zinc oxide, active ingredient, petrolatin is the base for the most effective diaper cream" (T@77778).'}],
  teach:'FDA approved 17 ingredients as skin protectants for infant diaper dermatitis (slide 63); zinc oxide is "the most recommended and effective ingredient" (T@76969).',
  note:'She first said "Zinc oxide 1%" and corrected herself to "1 to 40%" (T@76969); the slide says 1–40%.',
  cite:P5+' slides 63–64; T@76171–77778'},
@@ -1351,9 +1351,9 @@ QUESTIONS.push(
  stem:'How is a skin protectant applied for diaper dermatitis?',
  options:[
   {t:'Liberally at every change, fully covering red areas, and continued after the rash heals', correct:true, why:'Slide 63: apply liberally to skin in diaper/perineal area every diaper change or incontinence care; remove old gently; completely cover erythematous areas; can continue after the rash heals to prevent recurrence (T@76607–76969).'},
-  {t:'A thin layer twice daily, stopped once the rash heals', correct:false, why:'A thin layer twice daily is the topical steroid instruction (slides 35–36); protectants are applied liberally at every change and may continue after healing.'},
-  {t:'Liberally once daily, over the old layer', correct:false, why:'Slide 63: every change, after gently removing the old product.'},
-  {t:'Only when the skin is broken', correct:false, why:'Slide 62: to prevent and treat diaper dermatitis; broken skin is an exclusion for self-treatment (slide 68).'}],
+  {t:'A thin layer twice daily, rubbed in until it vanishes, and stopped once the rash heals', correct:false, why:'A thin layer rubbed in until it vanishes is the topical steroid instruction (slide 35); a protectant goes on liberally at every change and can continue after healing (slide 63).'},
+  {t:'Liberally once daily, over the old layer, and continued after the rash heals', correct:false, why:'Slide 63: at every diaper change, after gently removing the old product with any adherents.'},
+  {t:'A thin layer at every change, rubbed in until it vanishes, continued after healing', correct:false, why:'Slide 63: applied liberally so it completely covers the erythematous areas; rubbing in until it vanishes is the topical steroid instruction (slide 35).'}],
  teach:'Protectants provide a physical barrier and lubrication to the skin (slide 63).',
  cite:P5+' slide 63; T@76607–76969'},
 
@@ -1431,9 +1431,9 @@ QUESTIONS.push(
  stem:'For the same infant, which nonpharmacologic advice should the father receive?',
  options:[
   {t:'Follow ABCDE: air dry, barrier, gentle cleansing, change every 2 hours, education', correct:true, why:'Her PollEv answer: "A B C D E, every 2 hours" (T@82496); slide 62.'},
-  {t:'Switch to cloth diapers and change only when soiled', correct:false, why:'Disposable diapers have fewer rash episodes (slide 57); ABCDE: change every 2 hours (slide 62).'},
-  {t:'Bathe in a dilute bleach bath twice a week', correct:false, why:'The bleach bath is for moderate–severe atopic dermatitis (slide 31).'},
-  {t:'Use alcohol wipes at each change to disinfect', correct:false, why:'Slide 57 names alcohol-free wipes; slide 62: soft cloth and warm water, or a baby wipe when stool is present.'}],
+  {t:'Follow ABCDE: air dry, barrier, gentle cleansing, change every 4 hours, education', correct:false, why:'The change interval is every 2 hours (slide 62; her answer "every 2 hours", T@82496).'},
+  {t:'Follow ABCDE: air dry, bleach bath, gentle cleansing, change every 2 hours, education', correct:false, why:'B stands for Barrier (slide 62); the bleach bath is for moderate–severe atopic dermatitis (slide 31).'},
+  {t:'Follow ABCDE: air dry, barrier, alcohol wipes, change every 2 hours, education', correct:false, why:'Cleansing is gentle: slide 57 names alcohol-free wipes; slide 62: soft cloth and warm water, or a baby wipe when stool is present.'}],
  teach:'Her PollEv of 11/06 (open response: "What are some appropriate nonpharmacologic methods the father should be educated on?").',
  cite:P5+' slides 57, 62; PollEv 11/06; T@82496–82849'},
 
@@ -1442,9 +1442,9 @@ QUESTIONS.push(
  stem:'Which set lists the therapy goals for diaper and incontinence dermatitis?',
  options:[
   {t:'Relieve symptoms, get rid of the dermatitis, prevent secondary infection, prevent recurrences', correct:true, why:'Slide 61: 1. relieve the symptoms; 2. get rid of the dermatitis; 3. prevent secondary infection; 4. prevent recurrences (T@74169–74574).'},
-  {t:'Eliminate triggers, reduce TEWL, prevent flares, minimize ADRs', correct:false, why:'Those are atopic dermatitis goals (slide 27).'},
-  {t:'Relieve symptoms, sterilize the skin, prevent recurrences', correct:false, why:'Sterilizing the skin is not a goal on slide 61; antibacterials are not self-care products (slide 65).'},
-  {t:'Get rid of the dermatitis, then stop all barrier products', correct:false, why:'Protectants can continue after the rash heals to prevent recurrence (slide 63).'}],
+  {t:'Eliminate triggers, reduce trans-epidermal water loss, prevent flares, minimize ADRs', correct:false, why:'Those are atopic dermatitis goals (slide 27).'},
+  {t:'Relieve symptoms, sterilize the skin, prevent secondary infection, prevent recurrences', correct:false, why:'Sterilizing the skin is not a goal on slide 61; antibacterials are not self-care products for diaper dermatitis (slide 65).'},
+  {t:'Relieve symptoms, get rid of the dermatitis, eliminate triggers, reduce TEWL', correct:false, why:'The first two are slide 61 goals; eliminating triggers and reducing TEWL are atopic dermatitis goals (slide 27). Slide 61 adds prevent secondary infection and prevent recurrences.'}],
  teach:'Prevent recurrences: the caregiver follows the education given (T@74574).',
  cite:P5+' slide 61; T@74169–74574'}
 );

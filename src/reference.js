@@ -290,4 +290,88 @@ const REFERENCE_HTML = `
 <tr><td><b>Follow-up at 7 days</b></td><td>Improved, not healed: continue until healed. Not healed, not improved, or worse: refer</td></tr>
 <tr><td><b>Complications</b></td><td>Candida albicans; Staphylococcus aureus; secondary to an untreated or improperly treated rash (slide 67)</td></tr>
 </tbody></table>
+<h3 id="ref-p6-alg">Dr. Patel: acne grades and treatment by severity, slides 7&ndash;8, 20, 40</h3>
+<table class="reftab"><thead><tr><th style="width:16%">Severity</th><th>Lesions (her words)</th><th>First line</th><th>Second line</th></tr></thead><tbody>
+<tr><td><b>Mildly clear</b></td><td>Rare non-inflammatory; no more than 1 small lesion</td><td>&plusmn; BP alone, or essential oils</td><td>&mdash;</td></tr>
+<tr><td><b>Mild</b></td><td>Some non-inflammatory; no more than a few papules or pustules; no nodules; minimal scarring</td><td>Topical single therapy: BP or a topical retinoid; or a topical combination (BP + topical antibiotic, BP + retinoid, or all three)</td><td>Add the retinoid or BP if not on it; an alternate retinoid; topical dapsone</td></tr>
+<tr><td><b>Moderate</b></td><td>Many non-inflammatory; some inflammatory; no more than one nodule; mild scarring possible</td><td>Topical combination; then oral antibiotic + topical combination, after the topicals have been tried</td><td>Change the combination or the oral antibiotic; consider oral isotretinoin (last line)</td></tr>
+<tr><td><b>Severe</b></td><td>Many of both; a few nodules; moderate to extensive scarring</td><td>Oral antibiotic + topical combination</td><td>Change the oral antibiotic; add a COC or oral spironolactone (females only); consider oral isotretinoin</td></tr>
+</tbody></table>
+<p class="prose">Order she gave (11/10): one agent, then two, then three; topical before oral; &ldquo;topical combination first before you add an oral antibiotic to a moderate patient&rdquo; (T@57819); isotretinoin &ldquo;absolute last line&rdquo; (T@59132, T@60314). Slide 40 also prints isotretinoin in the severe first-line box; the items here follow her spoken order. Topical antibiotics are not used alone (slides 25, 31). Her Case 2: irregular periods made the COC the next line over spironolactone (T@69647).</p>
+
+<h3 id="ref-p6-agents">Dr. Patel: acne agents, OTC and prescription, slides 23&ndash;34</h3>
+<table class="reftab"><thead><tr><th style="width:20%">Agent</th><th>Use and dose</th><th>Cautions and counseling</th><th style="width:8%">Slide</th></tr></thead><tbody>
+<tr><td><b>Benzoyl peroxide</b> (OTC 2.5&ndash;10%)</td><td>First-line OTC; bactericidal, keratolytic, comedolytic; 1&ndash;2 times daily; prevents P. acnes resistance</td><td>Irritation (more at higher strengths), settles in 1&ndash;2 weeks; drying; photosensitivity; bleaches hair and clothing; contact allergy</td><td>23, 25&ndash;26</td></tr>
+<tr><td><b>Adapalene</b> (Differin) 0.1% OTC</td><td>At night; moisturizer and sunscreen</td><td>Separate from BP (am vs pm); not with sulfur, resorcinol, salicylic acid or vitamin C; over 12 years</td><td>27</td></tr>
+<tr><td><b>Salicylic acid</b></td><td>Once or twice daily, cleanser or gel (affected area); maximum effect 4&ndash;6 weeks</td><td>Limited efficacy data; photosensitivity</td><td>29</td></tr>
+<tr><td><b>Alpha hydroxy acids</b></td><td>Glycolic, lactic, citric; exfoliate non-inflammatory lesions</td><td>Trial on a small area; 2&ndash;4 weeks between peels; sunscreen</td><td>28</td></tr>
+<tr><td><b>Topical antibiotics</b></td><td>Clindamycin 1%, erythromycin 2%, minocycline foam 4%</td><td>Not as monotherapy: add BP; wait 30 minutes to shave or apply cosmetics</td><td>25, 31</td></tr>
+<tr><td><b>Azelaic acid</b>; <b>dapsone</b></td><td>Azelaic acid 15&ndash;20%: adjunct for post-inflammatory dyspigmentation. Dapsone 5&ndash;7.5%: mild second line</td><td>Azelaic: wait until dry for cosmetics. Dapsone: G6PD; monitor CBC and reticulocytes</td><td>25, 31, 40</td></tr>
+<tr><td><b>Doxycycline, minocycline</b></td><td>50&ndash;100 mg BID or 100 mg daily; most prescribed</td><td>Over 12 years (tooth discoloration); photosensitivity; avoid in pregnancy; shortest duration, re-evaluate at 3&ndash;4 months</td><td>32&ndash;33</td></tr>
+<tr><td><b>Sarecycline</b></td><td>Non-nodular moderate to severe: 60 mg (33&ndash;54 kg), 100 mg (55&ndash;84 kg), 150 mg (85&ndash;136 kg) daily</td><td>Tetracycline derivative</td><td>33</td></tr>
+<tr><td><b>TMP/SMX</b>; <b>macrolides</b></td><td>TMP/SMX limited to macrolide and tetracycline allergy</td><td>TMP/SMX not in sulfur allergy; macrolides less used due to resistance</td><td>33</td></tr>
+<tr><td><b>Combined oral contraceptives</b></td><td>Female who wants contraception; over 14 or 2 years past menarche; non-smoker under 35. FDA-approved: EE/norgestimate, EE/norethindrone acetate, EE/drospirenone</td><td>Risks: VTE, MI, breast or cervical cancer, decreased bone mass. Benefits: contraception, fewer hyperandrogen symptoms, fewer colorectal, ovarian, endometrial cancers; irregular menses</td><td>34&ndash;36</td></tr>
+<tr><td><b>Spironolactone, flutamide</b></td><td>Oral anti-androgens; spironolactone severe second line (females)</td><td>Gynecomastia, hyperkalemia</td><td>34, 40</td></tr>
+</tbody></table>
+
+<h3 id="ref-p6-ipledge">Dr. Patel: isotretinoin and iPledge, slides 37&ndash;38</h3>
+<table class="reftab"><thead><tr><th style="width:26%">Item</th><th>On her slide</th></tr></thead><tbody>
+<tr><td><b>Use and dose</b></td><td>Severe refractory nodular acne; absolute last line. 0.5&ndash;1 mg/kg/day in 2 divided doses (she starts at 0.5); 15&ndash;20 weeks; 30-day supply, no refills</td></tr>
+<tr><td><b>Adverse effects; labs</b></td><td>Boxed warning: birth defects. Dry nose, eyes, mouth; lip inflammation; mood disorders, depression, suicidal ideation. Labs: triglycerides, cholesterol, LFTs, CBC</td></tr>
+<tr><td><b>All patients</b></td><td>Register with iPledge; consent; no blood donation during and 1 month after; swallow whole; do not use with vitamin A supplements, tetracyclines, steroids, progestin-only contraceptives</td></tr>
+<tr><td><b>Females of reproductive potential</b></td><td>Two negative pregnancy tests before starting, then monthly (&ldquo;I said it twice because hint, it&rsquo;s a question&rdquo;, T@49632); 2 forms of birth control 1 month before, during and 1 month after; <b>7-day</b> window to fill</td></tr>
+<tr><td><b>Males; females who cannot get pregnant</b></td><td><b>30-day</b> window to fill</td></tr>
+</tbody></table>
+<p class="prose">Acne monitoring (slide 44): lesion count down 10&ndash;25% within 4&ndash;8 weeks and more than 50% within 2&ndash;4 months; comedones resolve by 3&ndash;4 months; 8 weeks or more to see visible benefits (slide 41).</p>
+
+<h3 id="ref-p7-shampoo">Dr. Patel: dandruff and seborrheic dermatitis, slides 6&ndash;9, 15&ndash;18</h3>
+<table class="reftab"><thead><tr><th style="width:24%">Patient</th><th>Treatment</th><th>Schedule and limits</th></tr></thead><tbody>
+<tr><td><b>Dandruff, mild</b> (intermittent, mild inflammation)</td><td>Non-medicated shampoo</td><td>Daily or every other day</td></tr>
+<tr><td><b>Dandruff, moderate to severe</b> (daily, moderate&ndash;severe inflammation)</td><td>OTC medicated shampoo: pyrithione zinc, selenium sulfide, coal tar</td><td>Leave on 3&ndash;5 minutes, rinse; daily &times; 1 week, then 2&ndash;3 times weekly for 2&ndash;3 weeks, then once weekly for control</td></tr>
+<tr><td><b>Seborrheic dermatitis, adult scalp</b></td><td>Ketoconazole shampoo first line; selenium sulfide, pyrithione zinc, ciclopirox, coal tar second line; resistant cases add a corticosteroid lotion</td><td>Leave on 3&ndash;5 minutes; daily 1&ndash;2 weeks, then 2&ndash;3 times a week for 4 weeks; improved after 4 weeks: once weekly. Worse or longer than 7 days: refer</td></tr>
+<tr><td><b>Seborrheic dermatitis, adult face and body</b></td><td>Antifungal creams; corticosteroid creams for other parts of the body</td><td>Scales softened with mineral or olive oil, or a salicylic acid or sulfur cream</td></tr>
+<tr><td><b>Infants (cradle cap)</b></td><td>Massage with baby or vegetable oil, then non-medicated shampoo, soft bristle brush; face: mild cleanser and emollient; severe: salicylic acid 3&ndash;5% in olive oil or water-soluble base</td><td>No corticosteroids; no ketoconazole (T@95994 11/10)</td></tr>
+</tbody></table>
+<p class="prose">OTC chart (slide 7): coal tar, ketoconazole, pyrithione zinc, salicylic acid and selenium sulfide for all three conditions; sulfur not for psoriasis; hydrocortisone 1% not for dandruff (T@83062 11/10). Adult fingertip units (slide 4) are the same chart as Lecture 5: see &ldquo;Dr. Patel: adult fingertip units and tube sizes&rdquo;.</p>
+
+<h3 id="ref-p7-pso">Dr. Patel: psoriasis severity, algorithms and topicals, slides 31, 35&ndash;37</h3>
+<table class="reftab"><thead><tr><th style="width:24%">BSA (slide 31)</th><th>Category</th><th>Approach</th></tr></thead><tbody>
+<tr><td><b>&le; 5%</b></td><td>Mild</td><td>Mild-to-moderate algorithm (slide 35): topical agents first; systemic agent last line; non-drug care for all</td></tr>
+<tr><td><b>Between 5% and 8%</b> (her poll, 7%)</td><td>Mild to moderate</td><td>As above; her poll: topical corticosteroids (T@35288 11/11)</td></tr>
+<tr><td><b>&ge; 8%</b></td><td>Moderate</td><td>Either algorithm: moderate after the topicals have been tried moves to systemic (T@14644 11/11)</td></tr>
+<tr><td><b>Between 8% and 10%</b> (&ldquo;like a 9%&rdquo;)</td><td>Moderate to severe</td><td>Moderate-to-severe algorithm (slide 37): systemic agent (eg, MTX) &plusmn; topical or phototherapy; biologic considered early with comorbidities such as psoriatic arthritis; then a more potent systemic or a biologic; then a biologic</td></tr>
+<tr><td><b>&ge; 10%</b></td><td>Severe</td><td>As above. She first said 20%, then &ldquo;it has been corrected to 10% ... follow this slide&rdquo; (T@10484 11/11)</td></tr>
+</tbody></table>
+<table class="reftab"><thead><tr><th style="width:24%">Topical (slide 36)</th><th>Regimen</th></tr></thead><tbody>
+<tr><td><b>Corticosteroids</b> (most effective, T@13916 11/11)</td><td>2&ndash;4 times daily: cream or lotion in the day, ointment at night; low potency for face and skin folds; limit duration (&le; 4 weeks) and surface area</td></tr>
+<tr><td><b>Calcipotriene</b> (vitamin D3 analogue)</td><td>Once or twice daily (ointment); twice daily (cream or foam)</td></tr>
+<tr><td><b>Tazarotene, adapalene</b></td><td>Once daily at bedtime</td></tr>
+<tr><td><b>Anthralin</b></td><td>Thick plaques only, 2 hours or less, then wiped off; zinc oxide around the edges</td></tr>
+<tr><td><b>Coal tar</b></td><td>In the evening; washed off in the morning</td></tr>
+<tr><td><b>Salicylic acid</b></td><td>Shampoo for scalp lesions</td></tr>
+<tr><td><b>Pimecrolimus</b></td><td>Intertriginous areas</td></tr>
+</tbody></table>
+
+<h3 id="ref-p7-sys">Dr. Patel: psoriasis systemic agents and PUVA, slides 38&ndash;39, 44&ndash;45</h3>
+<table class="reftab"><thead><tr><th style="width:18%">Agent</th><th>Class</th><th>Key points on her slide</th><th style="width:8%">Slide</th></tr></thead><tbody>
+<tr><td><b>Methotrexate</b></td><td>T-cell and cytokine suppressor; oral DMARD</td><td>Usually first line, most affordable (T@17093 11/11); psoriasis and PsA; onset 3&ndash;6 weeks; folic acid 1&ndash;5 mg daily (nausea, marrow suppression, hepatic toxicity); screening CBC, LFTs; contraindicated in pregnancy, cirrhosis, blood dyscrasias; hepatotoxicity risk with diabetes, obesity, alcoholism, &gt; 4 g cumulative dose</td><td>39</td></tr>
+<tr><td><b>Cyclosporine</b></td><td>T-cell and cytokine suppressor; oral DMARD</td><td>Less than 4 months (nephrotoxic); dosed on actual body weight; many interactions (CYP3A4 and 2C9 inhibitor, major 3A4 substrate); contraindicated in systemic malignancy, untreated hypertension or infections; elderly: hypertension</td><td>39</td></tr>
+<tr><td><b>Apremilast</b> (Otezla)</td><td>PDE-4 blocker</td><td>Titrated to max 30 mg BID over the first week; once daily in renal impairment; response by week 4; N/V/D, depression, weight loss</td><td>38</td></tr>
+<tr><td><b>Tofacitinib</b> (Xeljanz)</td><td>JAK inhibitor</td><td>PsA after failure on methotrexate; immunosuppressive; no live vaccines; not with biologic DMARDs; serious infections, thrombosis, lymphoma; boxed warning (2021): serious cardiac events, cancer, blood clots, death</td><td>38</td></tr>
+<tr><td><b>Acitretin</b></td><td>Oral retinoid</td><td>Not immunosuppressive; maximum response 3&ndash;6 months; no alcohol; women of reproductive age: no pregnancy, or plans for it, within 3 years after stopping</td><td>38</td></tr>
+<tr><td><b>Abatacept</b> (Orencia)</td><td>Blocks T-cell activation</td><td>SubQ; TB screening; live vaccines; COPD</td><td>39</td></tr>
+<tr><td><b>PUVA</b></td><td>Oral psoralen + UVA</td><td>Psoralen cross-links DNA under UVA; absolute last line, severe refractory psoriasis; skin biopsy first; about 90% respond; serious burns, blistering, peeling, itching, nausea, possible basal cell or melanoma cancers, photoaging</td><td>44&ndash;45</td></tr>
+</tbody></table>
+<p class="prose">Follow-up: contact the patient in 1&ndash;2 weeks (slide 48; T@31466 11/11). Drugs that can precipitate psoriasis (slide 24): lithium, NSAIDs, antimalarials such as chloroquine, &beta;-blockers, fluoxetine, corticosteroid withdrawal.</p>
+
+<h3 id="ref-p7-bio">Dr. Patel: psoriasis biologics by class, slides 40&ndash;43</h3>
+<table class="reftab"><thead><tr><th style="width:24%">Generic (Brand)</th><th>Class</th><th>Cautions on her slide</th></tr></thead><tbody>
+<tr><td><b>Adalimumab</b> (Humira); <b>etanercept</b> (Enbrel); <b>infliximab</b> (Remicade); <b>golimumab</b> (Simponi); <b>certolizumab</b> (Cimzia)</td><td>TNF-&alpha; inhibitors</td><td>PPD for all, repeated yearly; hepatitis B screening; CBC and LFTs. Do not use: live vaccines; patients or first-degree relatives with demyelinating disease or MS; <b>congestive heart failure</b> (&ldquo;I&rsquo;m saying this twice for a reason&rdquo;, T@22212 11/11)</td></tr>
+<tr><td><b>Ustekinumab</b> (Stelara)</td><td>IL-12 and IL-23</td><td>Avoid in active TB; no live vaccines; monitor PPD, CBC, infection, levels of cyclosporine and warfarin, Crohn&rsquo;s symptoms</td></tr>
+<tr><td><b>Tildrakizumab</b> (Ilumya); <b>risankizumab</b> (Skyriza); <b>guselkumab</b> (Tremfya)</td><td>IL-23</td><td>Avoid in active TB; no live vaccines</td></tr>
+<tr><td><b>Secukinumab</b> (Cosentyx)</td><td>IL-17A</td><td>Avoid in Crohn&rsquo;s disease</td></tr>
+<tr><td><b>Ixekizumab</b> (Taltz)</td><td>IL-17A</td><td>&mdash;</td></tr>
+<tr><td><b>Brodalumab</b> (Siliq)</td><td>IL-17A</td><td>Boxed warning, increased suicide risk; must complete REMS</td></tr>
+</tbody></table>
+<p class="prose">Every biologic (slides 40, 43): specialty medicines; no live vaccines (non-live vaccines are allowed, T@25389 11/11); screen for TB before and during therapy, PPD annually; stop during an active infection (flu, cold, COVID); common: injection site reaction, headache, rhinitis, upper respiratory infection; serious: infections, hypersensitivity, lymphoma and other malignancies, anaphylaxis. Anti-TNFs: heart failure worsening, demyelinating disease, hepatitis B reactivation, cytopenias, lupus-like syndrome. Anti-ILs: inflammatory bowel disease, depression worsening. Biologics are last line, after topical and oral systemic agents (T@15451 11/11). Doses are on slide 42 and were not stressed in class.</p>
 `;
