@@ -597,6 +597,193 @@ const GUIDE_HTML = `
 <div class="gbar"><span>Objective (SD 3)</span><b>Provide follow-up recommendations</b><i>SD 16, 38&ndash;39, 48, 51</i></div>
 <div class="gpt"><ul><li>Seborrheic dermatitis: worse or lasting longer than 7 days, refer (SD 16).</li><li>Psoriasis: contact the patient in 1&ndash;2 weeks (SD 48; T@31466, T@36225 11/11); SD 51 reads &ldquo;a week after self-treatment begins&rdquo;. Expected response: methotrexate 3&ndash;6 weeks, apremilast by week 4, acitretin maximum at 3&ndash;6 months (SD 38&ndash;39).</li><li>Biologics: TB screening before and during, PPD every year; CBC and LFTs for TNF-&alpha; inhibitors (SD 40&ndash;41).</li></ul></div>
 </section>
+
+<h2 class="gdeck" id="gdeck-p8o">Outdoor Exposure Therapeutics (Dr. Patel, 11/12; Exam 2)</h2>
+<p class="sub">OE = Patel_Outdoor-Exposures-Student.pdf, slide = PDF page; T@ = place in the 11/12 transcript; PollEv = her polls of 11/12. Her seven objectives (OE 3), one section each.</p>
+<div class="gask"><b>How she asks (11/12)</b><ul><li>&ldquo;4 to 5 questions per lecture hour is how we calculate it out&rdquo; (T@1239 11/12). &ldquo;Multiple choice, select all and then fill in the blank for my portion. Fill in the blank is calculations&rdquo; (T@96227 11/12).</li><li>Adult fingertip units: &ldquo;It&rsquo;s come back 3 times now, so make sure you practice calculations with this only adult conversion chart&rdquo; (OE 5; T@1737 11/12).</li><li>&ldquo;Pay attention to the age of the patient. Pay attention to certain key facts like we practice [in] Poll Everywhere&rdquo; (T@45397 11/12); &ldquo;make note of the certain duration of time&rdquo; (T@20438 11/12).</li><li>Not asked: repellent ingredients (T@11557 11/12); types of mosquito (T@13776 11/12); doses for the flea-borne diseases (T@15070 11/12); the antivenin protocol on OE 59 (T@42049 11/12).</li></ul></div>
+
+<section class="gobj" id="gobj-p8o-1">
+<h3>Outdoor Exposures &middot; Objective 1: which exposure is it?</h3>
+<div class="gbar"><span>Objective (OE 3)</span><b>Determine if the patient has an insect bite, sting, plant dermatitis, lice, scabies, envenomated snake bite or rabies exposure by typical signs and symptoms and patient history</b><i>OE 8, 10, 20, 27&ndash;28, 42, 50, 52, 58, 62</i></div>
+<table class="reftab"><thead><tr><th style="width:22%">Exposure</th><th>Signs and history</th><th style="width:10%">Slide</th></tr></thead><tbody>
+<tr><td><b>Plant dermatitis</b></td><td>Itching, then erythema, then vesicles and papules; small blisters in a line; rash 2&ndash;48 hours after contact with poison ivy, oak or sumac, lasting 1&ndash;3 weeks</td><td>OE 8, 10</td></tr>
+<tr><td><b>Insect bite</b></td><td>Mosquitoes, fleas, bedbugs, ticks, chiggers; nonvenomous; mild pruritus, erythema, papules</td><td>OE 20</td></tr>
+<tr><td><b>Insect sting</b></td><td>Bees, wasps, yellow jackets, hornets, fire ants; venomous; pain, pruritus, irritation</td><td>OE 20</td></tr>
+<tr><td><b>Vector-borne disease</b></td><td>Fever, headache, myalgias, rash 2&ndash;14 days after a tick bite; murine typhus: rash from the trunk to the arms and legs 5&ndash;6 days after the first symptoms</td><td>OE 27&ndash;28</td></tr>
+<tr><td><b>Head lice</b></td><td>Itching, scratch marks, live moving lice, nits within 4 mm of the scalp; shared personal items</td><td>OE 42, 48</td></tr>
+<tr><td><b>Scabies</b></td><td>Inflammation and itching on fingers, wrists, buttocks, armpits, skin folds; prolonged physical contact</td><td>OE 50</td></tr>
+<tr><td><b>Spider</b></td><td>Brown recluse: fever, blood in urine, rash, joint pain within 48 hours, necrosis. Black widow: abdominal pain like appendicitis, muscle pain, sweating, swollen eyelids</td><td>OE 52</td></tr>
+<tr><td><b>Pit viper</b></td><td>Graded minimal, moderate or severe by local, systemic and coagulation signs</td><td>OE 58</td></tr>
+<tr><td><b>Rabies exposure</b></td><td>A bite (raccoons, bats, foxes, skunks, cats, dogs), or saliva on a scratch, open wound or mucous membrane</td><td>OE 62</td></tr>
+</tbody></table>
+<div class="gpt"><ul><li>&ldquo;Pay attention to what insects fall under the bites versus the stings&rdquo; (T@10123 11/12).</li><li>Pit viper grades: &ldquo;local, systemic and coagulation, minimum, moderate, and severe&rdquo; (T@41933 11/12).</li></ul></div>
+<div style="display:flex;flex-wrap:wrap;gap:7px;margin:8px 0"><button type="button" class="chip" data-jump="ref:ref-p8-bites">Reference: bites and stings</button><button type="button" class="chip" data-jump="ref:ref-p8-venom">Reference: spiders, snakes, rabies</button></div>
+</section>
+
+<section class="gobj" id="gobj-p8o-2">
+<h3>Outdoor Exposures &middot; Objective 2: is the patient a self-care candidate?</h3>
+<div class="gbar"><span>Objective (OE 3)</span><b>Determine if the patient is an appropriate self-care candidate</b><i>OE 12, 16, 31, 36, 40, 44, 53, 56, 62</i></div>
+<div class="gpt"><ul><li>Plant dermatitis, refer (OE 16): no improvement after 7 days; worse; a large area of the face or swollen eyelids; genitalia; secondary infection.</li><li>Bites, refer (OE 31, 40): symptoms after 7 days of treatment or worse during it; fever, joint pain, lymph node enlargement, neurologic symptoms; a suspected vector-borne disease.</li><li>Stings, emergency care (OE 36): a severe reaction history; hives, dizziness, nausea or vomiting, difficulty breathing at any time after the sting.</li><li>Under 2 years: no hydrocortisone, local anesthetic or counterirritant (OE 12, 25, 39).</li><li>Lice, not self-care (OE 44): no live lice seen; allergy to chrysanthemums, ragweed or an ingredient; secondary skin infection; under 2 years for pyrethrins, under 2 months for permethrin; eyelids or eyebrows; pregnancy or breast-feeding; active tumors.</li><li>Never self-care: venomous spider bite, snake bite (emergency room), rabies exposure (referral for prophylaxis) (OE 53, 56, 62).</li></ul></div>
+<div class="gpoll"><b>Her polls</b><ul><li>A hunter with symptoms after a tick exposure: immediate medical referral (not a cold and flu product, not watching for 3&ndash;5 days) (T@21518 11/12).</li><li>Wasp or bee sting with hives and swelling: immediate referral to the emergency room (T@23898 11/12).</li><li>When is OTC lice treatment not appropriate: &ldquo;pay attention to the age category&rdquo; (T@33447 11/12).</li></ul></div>
+<div style="display:flex;flex-wrap:wrap;gap:7px;margin:8px 0"><button type="button" class="chip" data-jump="ref:ref-p8-bites">Reference: bites and stings</button><button type="button" class="chip" data-jump="ref:ref-p8-lice">Reference: lice and scabies</button></div>
+</section>
+
+<section class="gobj" id="gobj-p8o-3">
+<h3>Outdoor Exposures &middot; Objective 3: treatment goals</h3>
+<div class="gbar"><span>Objective (OE 3)</span><b>Apply treatment goals to recommendations</b><i>OE 11, 23, 35, 42, 51</i></div>
+<div class="gpt"><ul><li>Plant dermatitis (OE 11): treat the inflammation; relieve itching and excessive scratching; relieve the debris from oozing, crusting and scaling; minimize medication adverse effects.</li><li>Insect bites (OE 23): relieve symptoms; prevent secondary bacterial infections; minimize medication adverse effects; identify and eradicate transmissible diseases.</li><li>Stings (OE 35): relieve itching and pain; minimize medication adverse effects.</li><li>Lice (OE 42): kill adult and nymph lice; remove eggs and nits.</li><li>Scabies (OE 51): kill the mites and eggs; reduce symptoms; minimize medication adverse effects.</li></ul></div>
+</section>
+
+<section class="gobj" id="gobj-p8o-4">
+<h3>Outdoor Exposures &middot; Objective 4: non-drug therapy</h3>
+<div class="gbar"><span>Objective (OE 3)</span><b>Recommend appropriate non-drug therapy</b><i>OE 9, 14, 21, 24, 35, 38, 43</i></div>
+<div class="gpt"><ul><li>Plant: protective clothing and gloves; after exposure remove urushiol as soon as possible, large volumes of water, then soap and water including under the nails; cool soaks; colloidal oatmeal bath 15&ndash;20 minutes twice daily (OE 9, 11, 14). Urushiol enters the skin within 10 minutes (OE 8).</li><li>Bites: ice pack promptly; no scratching, nails trimmed; no rough clothing over the bite. Tick: tweezers at the head, pull gently, clean with rubbing alcohol, keep the tick in a plastic bag (OE 24). Prevention: repellent, covered skin, pant legs cuffed into socks, no standing water (OE 21).</li><li>Stings: remove the stinger and venom sac without squeezing; soap and water; ice or a cold pack (OE 35, 38).</li><li>Lice: FDA-approved nit comb; no shared combs, brushes, towels, hats; clothing, bedding, brushes and combs washed in hot water (OE 43).</li></ul></div>
+<div style="display:flex;flex-wrap:wrap;gap:7px;margin:8px 0"><button type="button" class="chip" data-jump="ref:ref-p8-plant">Reference: plant dermatitis</button></div>
+</section>
+
+<section class="gobj" id="gobj-p8o-5">
+<h3>Outdoor Exposures &middot; Objective 5: recommend the best treatment</h3>
+<div class="gbar"><span>Objective (OE 3)</span><b>Dosing frequency and max days of use; length of treatment; onset; adverse effects; contraindications and interactions</b><i>OE 5, 12&ndash;15, 25, 27&ndash;30, 39, 45, 51</i></div>
+<div class="gpt"><ul><li>Topical OTC chart (OE 12&ndash;13): the class, the condition and the comment for each (T@6763 11/12). Diphenhydramine cream: not on plant dermatitis, sunburn, chicken pox or broken skin. The &ldquo;caines&rdquo;: not under occlusion or on broken skin; methemoglobinemia.</li><li>Plant dermatitis (OE 12&ndash;15): itch, an oral antihistamine; dry lesions, hydrocortisone, an anesthetic or a counterirritant; weeping lesions, an astringent (aluminum acetate); no topical antihistamine or topical antibiotic.</li><li>Bites and stings (OE 25, 39): protectant, hydrocortisone, anesthetic, counterirritant or oral antihistamine; anesthetics and counterirritants 3&ndash;4 times daily, not longer than 7 days.</li><li>Antibiotic by disease (OE 27&ndash;30): murine typhus, doxycycline; Lyme prophylaxis within 72 hours of detaching the tick, doxycycline 200 mg once; erythema migrans, doxycycline 10 days, amoxicillin 14, cefuroxime axetil 14, azithromycin 7 (second line); rickettsial fevers, doxycycline; STARI, no antibiotic.</li><li>Lice (OE 45): pyrethrins and malathion over 2 years; permethrin and dimethicone over 2 months; ivermectin, benzyl alcohol, spinosad over 6 months. Scabies (OE 51): a list of options with no first, second or third line (T@35653 11/12).</li><li>Quantity (OE 5): grams = fingertip units &times; 0.5 g &times; applications a day &times; days, rounded up to the tube size.</li></ul></div>
+<div class="gpoll"><b>Her polls</b><ul><li>Hydrocortisone 1% to both feet twice daily for 3 days: 15 grams (T@1904 11/12).</li><li>Poison ivy itch: diphenhydramine by mouth (&ldquo;any oral antihistamine&rdquo;, T@9933 11/12); not the aluminum acetate compress, not diphenhydramine 2% cream. To reduce weeping: aluminum acetate (T@9484 11/12).</li><li>Bedbug itch, neomycin allergy: oral diphenhydramine; not witch hazel, not Neosporin (T@19887 11/12).</li><li>Head lice, 10 years old: permethrin; not malathion, not lindane (T@33250 11/12).</li></ul></div>
+<div style="display:flex;flex-wrap:wrap;gap:7px;margin:8px 0"><button type="button" class="chip" data-jump="ref:ref-p8-otc">Reference: topical OTC chart</button><button type="button" class="chip" data-jump="ref:ref-p8-plant">Reference: plant dermatitis</button><button type="button" class="chip" data-jump="ref:ref-p8-vector">Reference: antibiotic by disease</button><button type="button" class="chip" data-jump="ref:ref-p8-lice">Reference: lice and scabies</button><button type="button" class="chip" data-jump="ref:ref-p5-ftu">Reference: fingertip units</button></div>
+</section>
+
+<section class="gobj" id="gobj-p8o-6">
+<h3>Outdoor Exposures &middot; Objective 6: monitoring and follow-up</h3>
+<div class="gbar"><span>Objective (OE 3)</span><b>Provide monitoring and follow-up recommendations</b><i>OE 13, 16, 31, 36, 39, 47, 51</i></div>
+<div class="gpt"><ul><li>Seven days is the self-care limit for plant dermatitis, bites, stings and topical antibiotics (OE 13, 16, 31, 36, 39).</li><li>Lice (OE 47): repeat in 7 to 10 days if lice or nits are seen; follow up with the caregiver in a week; live lice after 2 rounds one week apart, refer for a prescription product. OE 42 prints &ldquo;in 7 days&rdquo;; see Reference.</li><li>Scabies (OE 51): itch can last 4 weeks after treatment; an oral antihistamine (T@36103 11/12).</li></ul></div>
+<div class="gpoll"><b>Her polls</b><ul><li>Maximum treatment duration for self-care: seven days (not three, ten or fourteen) (T@20142 11/12).</li></ul></div>
+</section>
+
+<section class="gobj" id="gobj-p8o-7">
+<h3>Outdoor Exposures &middot; Objective 7: actions after an outdoor exposure</h3>
+<div class="gbar"><span>Objective (OE 3)</span><b>Counsel a patient on the actions needed after an &ldquo;outdoor exposure&rdquo;</b><i>OE 9, 24, 35, 47, 53, 56, 62&ndash;63, 65</i></div>
+<div class="gpt"><ul><li>Lice product (OE 45, 47): no conditioner first; enough to wet the dry hair and scalp; a full 10 minutes; rinse; nit comb in sections; no re-washing for 1&ndash;2 days.</li><li>Spider bite (OE 53): soap and water, cold pack, elevate the limb, acetaminophen, emergency room.</li><li>Snake bite (OE 56): calm and still; a photo, no capture; remove jewelry and tight clothing; soap and water; immobilize, even with or slightly lower than the heart; call poison control, 1-800-222-1222, and transport. &ldquo;Biggest thing to remember, immobilize&rdquo; (T@39310 11/12).</li><li>Rabies (OE 62&ndash;63): wash with soap and water at once; prophylaxis as soon as possible, &ldquo;urgency, not emergency&rdquo; (T@44130 11/12). Not previously vaccinated: immune globulin plus vaccine on days 0, 3, 7, 14. Previously vaccinated: no immune globulin; vaccine on days 0 and 3.</li></ul></div>
+<div class="gpoll"><b>Her polls</b><ul><li>Counseling points for the lice patient and his mother (open response); her answer: dry hair, 10 minutes, rinse, nit comb, repeat in 7 to 10 days (T@33250&ndash;34351 11/12).</li></ul></div>
+<div style="display:flex;flex-wrap:wrap;gap:7px;margin:8px 0"><button type="button" class="chip" data-jump="ref:ref-p8-lice">Reference: lice and scabies</button><button type="button" class="chip" data-jump="ref:ref-p8-venom">Reference: spiders, snakes, rabies</button></div>
+</section>
+
+<h2 class="gdeck" id="gdeck-p8s">Sun Exposure Therapeutics (Dr. Patel, 11/12; Exam 2)</h2>
+<p class="sub">SE = Patel_Sun-Exposure-Student.pdf, slide = PDF page; T@ = place in the 11/12 transcript; PollEv = her polls of 11/12. Her seven objectives (SE 3&ndash;4), one section each. Dr. Smith&rsquo;s Exam 1 sun lecture is a separate deck with its own guide above.</p>
+<div class="gask"><b>How she asks (11/12)</b><ul><li>&ldquo;Learning objectives very similar to all my lecture slides, so please review it. This is how I create my questions&rdquo; (T@46619 11/12).</li><li>&ldquo;For exam purposes, broad spectrum SPF greater than or equal to 15&rdquo; (T@53466 11/12); &ldquo;So hint, broad-spectrum SPF greater than or equal to 15 ... Know how much to apply. Know how often to apply&rdquo; (T@66751 11/12).</li><li>&ldquo;For her questions, pay attention to what she&rsquo;s focused on. For my questions, recommendation in terms of treatment ... if I ask you a question that&rsquo;s specific to an age, like I&rsquo;ll make it obvious&rdquo; (T@56238&ndash;56572 11/12).</li><li>Reference only: UVA against UVB detail, left to Dr. Smith&rsquo;s and Dr. Sikazwe&rsquo;s slides (T@47346 11/12); the anti-aging approaches table on SE 41 (T@70385 11/12); plant extracts on SE 51 (T@75069 11/12).</li></ul></div>
+
+<section class="gobj" id="gobj-p8s-1">
+<h3>Sun Exposure &middot; Objective 1: the self-care interview</h3>
+<div class="gbar"><span>Objective (SE 3)</span><b>Perform the components of the SCHOLAR-MAC/QuEST and the Pharmacist&rsquo;s Patient Care Process in the self-care interview for dermatologic conditions</b><i>SE 8&ndash;11, 19</i></div>
+<div class="gpt"><ul><li>History for sun protection (SE 19): allergies; skin sensitivities or disorders; current medications and complementary products; excluded from sunscreens; photosensitizing agents; a previous adverse reaction to a sunscreen; exposure and use pattern.</li><li>Photosensitizing drugs she named (SE 10; T@49890&ndash;50187 11/12): doxycycline and the tetracyclines, ibuprofen, combined oral contraceptives, retinoids. &ldquo;Highlight the ones that we&rsquo;ve talked about to treat our derm conditions&rdquo; (T@50187 11/12).</li><li>Highest risk (SE 8&ndash;9): Fitzpatrick types I and II; blonde, red or light brown hair; a blistering sunburn; tanning beds; a family member with melanoma; immunosuppressive medications.</li></ul></div>
+</section>
+
+<section class="gobj" id="gobj-p8s-2">
+<h3>Sun Exposure &middot; Objective 2: name the condition</h3>
+<div class="gbar"><span>Objective (SE 3)</span><b>Determine the dermatologic condition based on the patient&rsquo;s signs and symptoms and history</b><i>SE 24, 28, 39&ndash;40</i></div>
+<div class="gpt"><ul><li>Sunburn (SE 24): symptoms start about 4 hours after exposure; erythema peaks at around 24 hours; may last up to 5 days.</li><li>Suspicious lesion, ABCDE (SE 28): Asymmetry; Border irregular; Color uneven; Diameter, most larger than 6 millimeters; Evolving over weeks or months.</li><li>Photoaging (SE 40): coarse wrinkles, leathery skin, lentigines, yellow cobblestone appearance, telangiectasis. Chronologic aging: thin skin, fine wrinkles, xerosis, laxity.</li><li>Glogau types (SE 39): I mild, no wrinkles, 20&ndash;30 years (T@68961 11/12); II wrinkles in motion, 30&ndash;40; III wrinkles at rest, 50 or older; IV only wrinkles, 60 or older.</li></ul></div>
+</section>
+
+<section class="gobj" id="gobj-p8s-3">
+<h3>Sun Exposure &middot; Objective 3: is the patient a self-care candidate?</h3>
+<div class="gbar"><span>Objective (SE 3)</span><b>Determine if the patient is an appropriate self-care candidate</b><i>SE 13, 30, 37, 46, 48</i></div>
+<div class="gpt"><ul><li>Sunburn, not self-care (SE 30): large areas of blistering; fever; extreme pain; headache or confusion; lightheadedness or vision changes; severe swelling; signs of infection.</li><li>Excluded from sunscreen (SE 13): under 6 months of age; allergy to all sunscreen ingredients.</li><li>A lesion that meets the ABCDE rule is seen by a health care provider (SE 37).</li><li>Hydroquinone: when prescribed by a licensed provider (SE 48). Chemical peels: not self-applied OTC (T@72287 11/12).</li></ul></div>
+<div class="gpoll"><b>Her polls</b><ul><li>Can she use the product on her four-month-old: the infant wears protective clothing and sunlight is restricted (not applying it twice daily before exposure; not waiting until over 7 or over 8 months of age) (T@66129&ndash;66269 11/12).</li></ul></div>
+</section>
+
+<section class="gobj" id="gobj-p8s-4">
+<h3>Sun Exposure &middot; Objective 4: treatment goals</h3>
+<div class="gbar"><span>Objective (SE 3)</span><b>List treatment goals</b><i>SE 13, 29, 42</i></div>
+<div class="gpt"><ul><li>Sunburn (SE 29): hydration; relieve pain; provide physical protection; reduce the chances of infection or scarring; minimize medication adverse effects.</li><li>Sun protection (SE 13): everyone should wear sunscreen; UV radiation causes premature skin aging and skin cancers.</li><li>Photoaging: no goals slide; prevention (SE 42, 53): photoaging is preventable and cumulative; sunscreen, protective clothing, less exposure to air pollution and smoking.</li></ul></div>
+</section>
+
+<section class="gobj" id="gobj-p8s-5">
+<h3>Sun Exposure &middot; Objective 5: non-drug therapy</h3>
+<div class="gbar"><span>Objective (SE 3)</span><b>Recommend appropriate non-drug therapy</b><i>SE 12, 29, 37, 53</i></div>
+<div class="gpt"><ul><li>Sun safety (SE 12, 37): limit sun from 10 am to 4 pm; check the UV index, a cloudy day is not protective; wide-brimmed hat (4 inches); tight-weave clothing; sunglasses with UV protection; shade; no tanning beds; snow and sand reflect UV radiation.</li><li>Sunburn (SE 29): the first treatment is non-drug; within the past 20 minutes, cool water or cool wet cloths.</li><li>Photoaging (SE 53): face cleaned twice daily with a mild cleanser; moisturizer twice daily or more often, lips included.</li></ul></div>
+</section>
+
+<section class="gobj" id="gobj-p8s-6">
+<h3>Sun Exposure &middot; Objective 6: recommend the best treatment</h3>
+<div class="gbar"><span>Objective (SE 4)</span><b>Dosing frequency and max days of use; onset; length of treatment; common and rare but serious adverse effects; contraindications and interactions</b><i>SE 14&ndash;18, 21, 31&ndash;33, 43&ndash;49, 54</i></div>
+<div class="gpt"><ul><li>Sunscreen (SE 14&ndash;15): broad spectrum, SPF &ge; 15, prefer 30+; water resistant for swimming or sweating. About 1 ounce, 15 minutes before; reapply every 40&ndash;80 minutes and after towel drying (SE 21).</li><li>Sensitive skin or a previous reaction (SE 17): zinc oxide or titanium dioxide; avoid PABA. &ldquo;What two ingredients are most effective, OK? Zinc oxide, titanium dioxide&rdquo; (T@55166 11/12).</li><li>Sunburn (SE 31&ndash;33): systemic analgesic for the first 1&ndash;2 days; skin protectant after 24 hours; aloe vera on intact skin as an alternative; first-aid antiseptics and topical anesthetics not recommended.</li><li>Photoaging (SE 43&ndash;49, 54): retinoid once at bedtime to dry skin, SPF 30+ by day; alpha hydroxy acid to dry skin within 15 minutes of cleansing; hydroquinone 4% for hyperpigmentation, three months at most, with sunscreen, not FDA-approved for OTC sale, ochronosis.</li></ul></div>
+<div class="gpoll"><b>Her polls</b><ul><li>Sunburn pain and tenderness: oral ibuprofen (not topical bacitracin, hydrocortisone or benzocaine) (T@65246 11/12).</li><li>Daily use to prevent skin cancer: water-resistant broad-spectrum sunscreen, SPF 50 (not SPF 10; not SPF 30 without broad spectrum; not clothing and hats alone) (T@65588&ndash;65673 11/12).</li><li>Hyperpigmentation: hydroquinone (not benzoyl peroxide, sodium hyaluronate or lactic acid) (T@76234 11/12).</li></ul></div>
+<div style="display:flex;flex-wrap:wrap;gap:7px;margin:8px 0"><button type="button" class="chip" data-jump="ref:ref-p8-sun">Reference: sunscreen, sunburn, photoaging</button><button type="button" class="chip" data-jump="ref:ref-p8-smithpatel">Reference: Dr. Smith and Dr. Patel compared</button></div>
+</section>
+
+<section class="gobj" id="gobj-p8s-7">
+<h3>Sun Exposure &middot; Objective 7: follow-up</h3>
+<div class="gbar"><span>Objective (SE 4)</span><b>Provide follow-up recommendations</b><i>SE 34, 37, 53</i></div>
+<div class="gpt"><ul><li>Sunburn (SE 34): progressed or worse after 24&ndash;48 hours, or not healed in 7 days: refer. &ldquo;7-day policy applies here as well&rdquo; (T@64695 11/12).</li><li>Sunscreen (SE 37): stop any product that causes redness, itching, rash or exaggerated sunburn; on a photosensitizing drug, sunscreen and protective clothing every day.</li><li>Photoaging (SE 53): results take at least four weeks.</li></ul></div>
+</section>
+
+<h2 class="gdeck" id="gdeck-p8w">Wound Care Therapeutics (Dr. Patel, 11/12; Exam 2)</h2>
+<p class="sub">WC = Patel_Wound-Care.pdf, slide = PDF page; T@ = place in the 11/12 transcript. Her three objectives (WC 2), one section each. No PollEv questions were asked in this lecture.</p>
+<div class="gask"><b>How she asks (11/12)</b><ul><li>&ldquo;I&rsquo;m gonna tell you guys exactly what I want you guys to know. There&rsquo;s more information in these slides for your reference&rdquo; (T@77775 11/12); &ldquo;All that I mentioned, key terms, key points is what I want you to know&rdquo; (T@87898 11/12).</li><li>Self-care exclusions: &ldquo;I need you to know them&rdquo; (WC 7; T@79663 11/12). Dressings: &ldquo;Know the advantages, know the disadvantages&rdquo; (WC 8&ndash;9; T@80276 11/12). Burn categories: &ldquo;I want you to know&rdquo; (WC 16; T@83577 11/12).</li></ul></div>
+
+<section class="gobj" id="gobj-p8w-1">
+<h3>Wound Care &middot; Objective 1: wound type and severity</h3>
+<div class="gbar"><span>Objective (WC 2)</span><b>Identify wound type and severity</b><i>WC 4&ndash;6, 16</i></div>
+<div class="gpt"><ul><li>Types (WC 4): abrasions; punctures (bites, sharp objects); lacerations; burns (thermal, electrical, chemical, UV radiation).</li><li>Stages by depth (WC 5): 1, unbroken, reddened, non-blanching skin; 2, blister or partial-thickness loss (epidermis and part of the dermis); 3, full-thickness loss; 4, into subcutaneous tissue, muscle, tendon and bone. The higher the stage, the longer the healing (T@79102 11/12).</li><li>Healing phases (WC 6, 27): inflammatory, proliferative, remodeling.</li><li>Burns (WC 16): minor, under 15% BSA superficial in an adult, under 10% in a child; moderate, 15%&ndash;25% adult, 10&ndash;20% child; major, over 25% adult, over 20% child, or eyes, ears, face, genitalia, inhalation or electrical burns, poor-risk patients.</li></ul></div>
+<div style="display:flex;flex-wrap:wrap;gap:7px;margin:8px 0"><button type="button" class="chip" data-jump="ref:ref-p8-wound">Reference: wound stages and burn categories</button></div>
+</section>
+
+<section class="gobj" id="gobj-p8w-2">
+<h3>Wound Care &middot; Objective 2: assess and recommend treatment</h3>
+<div class="gbar"><span>Objective (WC 2)</span><b>Assess and recommend treatment for wounds</b><i>WC 3, 8&ndash;11, 14&ndash;15, 18&ndash;20, 25, 27</i></div>
+<div class="gpt"><ul><li>Goals (WC 3): facilitate healing; reduce scarring; prevent secondary bacterial skin infection; refer if necessary.</li><li>Order (WC 27; T@82489, T@87422 11/12): cleanse with clean water or saline; an antibiotic only when indicated; then a dressing suited to the wound; a moist healing environment.</li><li>First-aid antibiotics (WC 11, 20): bacitracin, neomycin, polymyxin B; after cleansing and before bandaging; 1 to 3 times a day; neomycin systemic toxicity with large areas.</li><li>Topical anesthetics (WC 14, 20): up to 4 times daily; relief for 15 to 45 minutes; small amounts on broken skin; benzocaine, methemoglobinemia. &ldquo;Understand the systemic toxicity of overuse&rdquo; (T@85399 11/12).</li><li>Antiseptics (WC 15, 19): intact skin at the wound edges; inside the wound they reduce healing.</li><li>Dressings (WC 8&ndash;9): gauze absorbs but gives no moist environment and needs frequent changes; hydrocolloid and transparent film give a moist environment, for uninfected wounds only; film is not absorptive.</li><li>Minor burn (WC 18&ndash;20): cool water; acetaminophen or an NSAID; skin protectant; antibiotic or anesthetic as above.</li><li>Smoking (WC 25): 1 pack per day, 3 times the flap necrosis; 2 packs, 6 times.</li></ul></div>
+<div style="display:flex;flex-wrap:wrap;gap:7px;margin:8px 0"><button type="button" class="chip" data-jump="ref:ref-p8-wound">Reference: wound products and burns</button></div>
+</section>
+
+<section class="gobj" id="gobj-p8w-3">
+<h3>Wound Care &middot; Objective 3: referral and follow-up</h3>
+<div class="gbar"><span>Objective (WC 2)</span><b>Provide appropriate referral and/or follow-up for wound care</b><i>WC 7, 16&ndash;17, 20</i></div>
+<div class="gpt"><ul><li>Refer a wound (WC 7): face, hands, feet, major joints, genitals or perineum; larger than 3 inches; animal or human bite; chemical, electrical, inhalation or circumferential burn; deep partial thickness or deeper; signs of infection; diabetes or another disorder that complicates management; foreign matter after irrigation; chronic wound.</li><li>Follow-up (WC 7; T@79459 11/12): worse or not healed in 24&ndash;48 hours and/or 7 days. Topical antibiotic with no improvement within 7 days: primary care provider (WC 20).</li><li>Refer a burn (WC 16&ndash;17): moderate or major; 2% BSA or more of a moderate to severe burn; eyes, ears, face, hands, feet or perineum; chemical (after first aid), electrical or inhalation; advanced age; diabetes or multiple medical disorders; immunocompromised.</li></ul></div>
+</section>
+
+<h2 class="gdeck" id="gdeck-p8c">Warts, Corns and Calluses Therapeutics (Dr. Patel, 11/12; Exam 2)</h2>
+<p class="sub">WCC = Patel_Warts-Corns-Calluses.pdf, slide = PDF page; T@ = place in the 11/12 transcript. Her seven objectives (WCC 2&ndash;3), one section each. No PollEv questions were asked in this lecture.</p>
+<div class="gask"><b>How she asks (11/12)</b><ul><li>&ldquo;Pay attention to how many days you&rsquo;re using the products for. How many times can we repeat it for, OK? When do we refer the patient? Those are big things with this PowerPoint&rdquo; (T@94913 11/12).</li><li>Wart types: &ldquo;Know what is self-treatable&rdquo; (WCC 6; T@90202 11/12).</li></ul></div>
+
+<section class="gobj" id="gobj-p8c-1">
+<h3>Warts, Corns and Calluses &middot; Objective 1: the self-care interview</h3>
+<div class="gbar"><span>Objective (WCC 2)</span><b>Perform the components of the SCHOLAR-MAC/QuEST and the Pharmacist&rsquo;s Patient Care Process in the self-care interview for dermatologic conditions</b><i>WCC 5&ndash;6, 16</i></div>
+<div class="gpt"><ul><li>Answers that change the plan: where the lesion is and what it looks like (WCC 5&ndash;6); diabetes or poor blood circulation; irritated, infected or reddened skin; a mole or birthmark (WCC 16).</li><li>Footwear &ldquo;tends to be the most common cause&rdquo; of corns and calluses (T@93710 11/12).</li></ul></div>
+</section>
+
+<section class="gobj" id="gobj-p8c-2">
+<h3>Warts, Corns and Calluses &middot; Objective 2: wart, corn or callus?</h3>
+<div class="gbar"><span>Objective (WCC 2)</span><b>Determine the dermatologic condition based on the patient&rsquo;s signs and symptoms and history</b><i>WCC 4&ndash;6, 13</i></div>
+<div class="gpt"><ul><li>Wart (WCC 4&ndash;5): HPV, limited to the epidermis; rough, cauliflower-like; a plantar wart disrupts the skin ridges; hands HPV-2, -4, -27, -57, feet HPV-1.</li><li>Corn (WCC 5, 13): over a bony prominence of the foot; small, raised, sharply demarcated, with a central core; painful; a few millimeters to 1 cm.</li><li>Callus (WCC 5, 13): weight-bearing areas; broad base, diffuse borders, yellowish, normal skin ridges; usually not painful; a few millimeters to several centimeters.</li></ul></div>
+<div style="display:flex;flex-wrap:wrap;gap:7px;margin:8px 0"><button type="button" class="chip" data-jump="ref:ref-p8-wcc">Reference: wart, corn or callus</button></div>
+</section>
+
+<section class="gobj" id="gobj-p8c-3">
+<h3>Warts, Corns and Calluses &middot; Objective 3: is the patient a self-care candidate?</h3>
+<div class="gbar"><span>Objective (WCC 2)</span><b>Determine if the patient is an appropriate self-care candidate</b><i>WCC 6, 16</i></div>
+<div class="gpt"><ul><li>Self-treatable warts (WCC 6): common warts (hands) and plantar warts (feet). Not self-treatable: flat (face), mosaic (grouped plantar), periungual (around the nail), filiform (face).</li><li>No salicylic acid (WCC 16): diabetes; poor blood circulation; irritated, infected or reddened skin; moles or birthmarks; face, genital or mucous membrane warts.</li></ul></div>
+</section>
+
+<section class="gobj" id="gobj-p8c-4">
+<h3>Warts, Corns and Calluses &middot; Objective 4: treatment goals</h3>
+<div class="gbar"><span>Objective (WCC 2)</span><b>List treatment goals</b><i>WCC 7, 14</i></div>
+<div class="gpt"><ul><li>Warts (WCC 7): eliminate signs and symptoms; remove the lesion without scarring; prevent recurrence; prevent the spread of HPV.</li><li>Corns and calluses (WCC 14): symptomatic relief; remove the corn or callus; prevent recurrence by correcting the cause.</li></ul></div>
+</section>
+
+<section class="gobj" id="gobj-p8c-5">
+<h3>Warts, Corns and Calluses &middot; Objective 5: non-drug therapy</h3>
+<div class="gbar"><span>Objective (WCC 2)</span><b>Recommend appropriate non-drug therapy</b><i>WCC 8, 15</i></div>
+<div class="gpt"><ul><li>Warts (WCC 8): no cutting, shaving or picking; hands washed before and after touching the wart; a designated towel; no shared towels, razors, socks or shoes; the wart kept covered; foot coverings in bathrooms and public spaces; padding over a plantar wart.</li><li>Corns and calluses (WCC 15): soak 5 minutes in warm water daily; remove dead tissue gently; circular foam or gel cushioning pads; well-fitting, non-binding footwear; orthotics.</li></ul></div>
+</section>
+
+<section class="gobj" id="gobj-p8c-6">
+<h3>Warts, Corns and Calluses &middot; Objective 6: recommend the best treatment</h3>
+<div class="gbar"><span>Objective (WCC 3)</span><b>Dosing frequency and max days of use; onset; length of treatment; amount of topical product and tube size; adverse effects; contraindications and interactions</b><i>WCC 9&ndash;12, 16&ndash;17</i></div>
+<div class="gpt"><ul><li>Wart, salicylic acid (WCC 10): 40% pad removed after 48 hours and repeated every 48 hours; 17% liquid 1&ndash;2 times a day; either for up to 12 weeks. Salicylic acid &ldquo;is the most effective&rdquo; (T@92731 11/12).</li><li>Wart, cryotherapy (WCC 11): about 20 seconds for a common wart, about 40 seconds for a plantar wart; repeated after 2 weeks if needed; up to 3 treatments. Warts only.</li><li>Corn or callus, salicylic acid (WCC 17): 17% no more than twice daily for up to 14 days; 40% plaster removed within 48 hours, reapplied every 48 hours, no longer than 14 days (7 applications).</li><li>Before each (WCC 10, 17): wash, soak 5 minutes in warm water, dry; keep the product off healthy skin.</li><li>Objective 6.4 names the amount and tube size of a topical product; this deck has no worked calculation. The adult fingertip-unit chart is in Reference.</li></ul></div>
+<div style="display:flex;flex-wrap:wrap;gap:7px;margin:8px 0"><button type="button" class="chip" data-jump="ref:ref-p8-wcc">Reference: salicylic acid and cryotherapy directions</button><button type="button" class="chip" data-jump="ref:ref-p5-ftu">Reference: fingertip units</button></div>
+</section>
+
+<section class="gobj" id="gobj-p8c-7">
+<h3>Warts, Corns and Calluses &middot; Objective 7: follow-up</h3>
+<div class="gbar"><span>Objective (WCC 3)</span><b>Provide follow-up recommendations</b><i>WCC 4, 10&ndash;11, 17</i></div>
+<div class="gpt"><ul><li>Corn or callus (WCC 17; T@94630 11/12): medical attention if redness or irritation occurs, or if it is not removed after 14 days of treatment. It may take several days to months to resolve.</li><li>Wart (WCC 10&ndash;11): the product limits are 12 weeks of salicylic acid and 3 cryotherapy treatments. WCC 4 prints &ldquo;Recurrent or recalcitrant warts should be referred&rdquo;; she said &ldquo;if you see reoccurrence of the wart, that&rsquo;s when we need treatment&rdquo; (T@88519 11/12); see Reference.</li></ul></div>
+</section>
 `;
 
 /* ==========================================================================

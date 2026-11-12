@@ -212,3 +212,12 @@
 - q12_L06.js (acne, 84) and q13_L07.js (dandruff, seborrheic dermatitis and psoriasis, 91: 46 psoriasis items incl. her 11/11 polls, BSA as she corrected it: mild <=5%, moderate >=8%, severe >=10%); Guide gobj-p6-*, gobj-p7-*; Reference ref-p6-*, ref-p7-*. Drafts reviewed independently (102 items, 14 fixed, P6-033 dropped; 34 harder items, 2 dropped, 11 fixed); psoriasis items reviewed independently after writing (8 fixed). 32 stars. Prediction ranking of 39 Patel concepts: session scratchpad exam2/patel_prediction.md.
 - course.js: lectures L06, L07; Exam 2 description now Lectures 1-7. Bank 1,194 questions.
 - Disease-map section: proposal only, lglouis3-create/DEENT#2 (for ChatGPT review); not implemented.
+
+## 2026-11-12 (late): Lecture 8 (Patel, 11/12) added and released
+- Louis: "First generate Lecture 8 material and publish." Sources: his uploads of the four decks, the 11/12 transcript (pasted) and the 11/12 PollEv pages.
+- 176 items: q15_L08_outdoor.js 67 (55 single, 7 select-all, 5 calculation blanks), q16_L08_sun.js 51 (43, 8), q17_L08_wound.js 30 (26, 4), q18_L08_warts.js 28 (23, 5). Drafted per deck, then two independent reviews against the slide images and transcript: no wrong key or number; 22 items reworded; none deleted.
+- The 12 poll items were first written with reconstructed options (the polls were not uploaded yet); after Louis sent the PollEv pages they were replaced with her exact options. Two reconstructed keys were wrong and are corrected: bedbug itch (oral diphenhydramine, not hydrocortisone) and lice first line (permethrin, not pyrethrins).
+- Not keyed, unresolved slide-vs-speech conflicts: listed in each file's header comment and stated with both readings in Reference (ref-p8-*).
+- course.js: lectures L08, L08b, L08c, L08d; Exam 2 blurb and facts now cover Lectures 1–8 and quote her 11/12 format statement. 32 stars (12 patel-poll, the rest her "know this" cues). blank_check rows for BP8O-001..005.
+- Reference ref-p8-otc, -plant, -bites, -vector, -lice, -venom, -sun, -smithpatel, -wound, -wcc; Guide gobj-p8o-1..7, gobj-p8s-1..7, gobj-p8w-1..3, gobj-p8c-1..7; links.js rows for all 176 concepts. links.js key gS2 was defined twice (Smith gobj-sun-2 and Lecture 7 gobj-p7-2); the Lecture 7 key is now gSD2, so Dr. Smith's sunscreen items link to her guide again.
+- Open with Louis: the exam's question total; the "Three Days" highlight on his PollEv copy; whether to cut the three Lyme weight-based dose items (kept as practice).
