@@ -262,6 +262,8 @@ const COURSE = {
             .filter(f => { try { return typeof require !== 'function' || require('fs').existsSync(f); } catch (e) { return true; } }),
           // fill-in-the-blank items (kit type 'blank', 2026-11-09): Quiz, topic drills and the missed list
           'q10_blank.js',
+          // exam-style items, Dr. Smith and Dr. Sikazwe (2026-11-12: one detail swapped per wrong option)
+          'q11_new_smith_sik.js',
           // the step-throughs of moa_figs.js in the explanations of the matching Smith questions
           'moa_links.js',
           // Drug list tab (temporary course-level presentation, to be replaced by the kit's

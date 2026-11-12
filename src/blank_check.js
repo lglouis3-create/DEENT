@@ -115,6 +115,10 @@ const W = {
  'BP5-046': ['acidic', 'neutral', 'alkalin'],
  'BP5-047': ['Staphylococcus aureus', 'Malassezia', 'Candida albican'],
  'BP5-048': ['3', '14', '2'],
+ 'BSX-001': ['6', '10', '400'],
+ 'BSX-002': ['40', '5', '3'],
+ 'BKX-001': ['steroid', 'sterol', 'secosterod'],
+ 'BKX-002': ['25-hydroxylase', 'CYP2R1', '1-beta-hydroxylase'],
 };
 let fail = 0, nearCount = 0, n = 0;
 const rows = [];
