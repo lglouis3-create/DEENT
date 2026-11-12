@@ -641,7 +641,7 @@ QUESTIONS.push(
 
 {id:'P7-039', skill:'class', prof:'Patel', tier:'new', topic:'p7-psotx', sub:'topical', concept:'p7-tcs-most-effective',
  tags:['two-facts'], source:'both',
- stem:'Which topical class for psoriasis has been shown to be the most effective, and how often is it applied?',
+ stem:'Which topical class for psoriasis is the most effective, and how often is it applied?',
  options:[
   {t:'Calcipotriene; once or twice daily as an ointment', correct:false, why:'Calcipotriene’s regimen (slide 36); corticosteroids are the most effective (T@13916 11/11).'},
   {t:'Corticosteroids; 2 to 4 times daily', correct:true, why:'"In general, corticosteroids has been shown to be the most effective" (T@13916 11/11); slide 36: apply 2 to 4 times daily (T@13549 11/11).'},
@@ -1014,7 +1014,7 @@ QUESTIONS.push(
 
 {id:'P7-070', skill:'adverse', prof:'Patel', tier:'new', topic:'p7-bio', sub:'il', concept:'p7-brodalumab-rems',
  tags:['bbw'], source:'both',
- stem:'Which biologic carries a boxed warning for increased suicide risk and requires completion of a REMS program?',
+ stem:'Which biologic carries a black box warning for increased suicide risk and requires completion of a REMS program?',
  options:[
   {t:'Ixekizumab (Taltz)', correct:false, why:'IL-17A, 80 mg every 4 weeks (slide 42); no REMS listed.'},
   {t:'Brodalumab (Siliq)', correct:true, why:'Slide 42: brodalumab (Siliq), IL-17A; boxed warning, increased suicide risk; must complete REMS (T@23480 11/11).'},

@@ -650,7 +650,7 @@ QUESTIONS.push(
 {id:'BKX-002', type:'blank', skill:'chem', prof:'Sikazwe', tier:'new', topic:'s4-vitd', sub:'path', concept:'x-b-vitd-kidney-enzyme',
  tags:['blank','exam-style'], source:'both', dupOf:'S4-011',
  stem:'In the kidney, 25-OH-cholecalciferol is converted to calcitriol by the enzyme ___.',
- accept:['1-alpha-hydroxylase', '1α-hydroxylase', '1-α-hydroxylase', '1-hydroxylase', 'CYP27B1', '1 alpha-hydroxylase', '1-alpha hydroxylase', '1 alpha hydroxylase', '1α hydroxylase', '1alpha-hydroxylase'],
+ accept:['1-alpha-hydroxylase', '1α-hydroxylase', '1-hydroxylase', 'CYP27B1'],
  why:'Slide 27 names "1-α-hydroxylase" for this arrow; the reading calls CYP27B1 "the 1-hydroxylase" and places it mainly in the kidney (VitD L13–14, L67–68). He set "the reactions, the organs ... and the enzymes" of this pathway as testable (T@3530–4160).',
  cite:XQ_S4+' slide 27; T@3530–4160; VitD L13–14, L67–68'}
 );
