@@ -258,6 +258,8 @@ const COURSE = {
           'q7_L05.js',
           // harder Lecture 5 items and new-patient case versions of her polls (Louis, 2026-11-12)
           'q14_L05_harder.js',
+          // Dr. Patel, Lectures 6 (acne, 11/10) and 7 (scaly dermatoses and psoriasis, 11/10-11/11)
+          'q12_L06.js', 'q13_L07.js',
           // fill-in-the-blank items (kit type 'blank', 2026-11-09): Quiz, topic drills and the missed list
           'q10_blank.js',
           // exam-style items, Dr. Smith and Dr. Sikazwe (2026-11-12: one detail swapped per wrong option)
@@ -314,7 +316,9 @@ const COURSE = {
                        'skin-pcol-students-2026.pdf':'Skin-PCol-Students-2026.pdf',
                        'f26-deent-dpaw-mc.pdf':'f26-DEENT-DPAW-mc.pdf',
                        'deent_sun_exposure_2026.pdf':'DEENT_Sun_Exposure_2026.pdf',
-                       'patel_dermatitis-therapeutics-student.pdf':'Patel_Dermatitis-Therapeutics-Student.pdf'},
+                       'patel_dermatitis-therapeutics-student.pdf':'Patel_Dermatitis-Therapeutics-Student.pdf',
+                       'patel_acne-therapeutics-student.pdf':'Patel_Acne-Therapeutics-Student.pdf',
+                       'patel_scaly-dermatoses-therapeutics-student.pdf':'Patel_Scaly-Dermatoses-Therapeutics-Student.pdf'},
           citeLectures:{}, citeBareMap:{},
           explainTerms:[], harvestMasks:[]},
 
