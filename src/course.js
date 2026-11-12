@@ -256,10 +256,6 @@ const COURSE = {
           'q8_hard_smith.js', 'q9_hard_sik.js',
           // Dr. Patel, Lecture 5 (Exam 2): pushes its deck folder into TOPIC_DECKS, its TOPICS and questions
           'q7_L05.js',
-          // 2026-11-12 (Louis: "decide yourself what you think is best"): new exam-style Smith/Sikazwe items,
-          // Patel Lectures 6 and 7, harder Lecture 5 items; each file is left out until it exists
-          ...['q11_new_smith_sik.js', 'q12_L06.js', 'q13_L07.js', 'q14_L05_harder.js']
-            .filter(f => { try { return typeof require !== 'function' || require('fs').existsSync(f); } catch (e) { return true; } }),
           // fill-in-the-blank items (kit type 'blank', 2026-11-09): Quiz, topic drills and the missed list
           'q10_blank.js',
           // exam-style items, Dr. Smith and Dr. Sikazwe (2026-11-12: one detail swapped per wrong option)
