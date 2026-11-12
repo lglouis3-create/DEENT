@@ -1,0 +1,56 @@
+/* dz_check.js: consistency of the Diseases tab data (dz_data.js) and code (dz_ui.js).
+   node dz_check.js   (reads the sources; no built page needed) */
+const fs = require('fs'), vm = require('vm'), path = require('path');
+const ctx = {}; vm.createContext(ctx);
+vm.runInContext(fs.readFileSync(path.join(__dirname, 'dz_data.js'), 'utf8') + '\nthis.DZ = DZ;', ctx);
+const DZ = ctx.DZ; let fail = 0, n = 0;
+const check = (ok, label, detail) => { n++; if (!ok) fail++; console.log((ok ? '  ok    ' : '  FAIL  ') + label + (ok || !detail ? '' : '  — ' + String(detail).slice(0, 600))); };
+// question topics
+const Q = {TOPIC_DECKS: [], TOPICS: [], QUESTIONS: []}; vm.createContext(Q);
+const files = fs.readFileSync(path.join(__dirname, 'course.js'), 'utf8').match(/'q\d+[A-Za-z0-9_]*\.js'/g).map(s => s.slice(1, -1));
+vm.runInContext('var IMAGES={};', Q);
+for (const f of files) { try { vm.runInContext(fs.readFileSync(path.join(__dirname, f), 'utf8'), Q); } catch (e) { console.log('  note  could not load ' + f + ': ' + e.message.slice(0, 80)); } }
+const topics = new Set(vm.runInContext('TOPICS.map(t => t.id)', Q));
+const all = JSON.stringify(DZ);
+const bad = [];
+check(DZ.cards.length >= 20, `cards: ${DZ.cards.length}`);
+check(new Set(DZ.cards.map(c => c.id)).size === DZ.cards.length, 'card ids are unique');
+DZ.cards.forEach(c => (c.topics || []).forEach(t => { if (!topics.has(t)) bad.push(c.id + ': ' + t); }));
+check(!bad.length, 'every card topic exists in the question bank', bad.join('; '));
+const noQ = DZ.cards.filter(c => !(c.topics || []).length).map(c => c.id);
+check(!noQ.length, 'every card has practice topics', noQ.join(', '));
+const miss = new Set();
+JSON.stringify(DZ.cards).replace(/<<([^|>]+)\|/g, (m, k) => { if (!DZ.drugs[k]) miss.add(k); });
+DZ.cards.forEach(c => (c.steps || []).forEach(s => (s.blocks || []).forEach(b => (b.drugs || []).forEach(k => { if (!DZ.drugs[k]) miss.add(c.id + ' line: ' + k); }))));
+check(!miss.size, 'every drug button resolves to a drug panel', [...miss].join('; '));
+const mt = new Set(); all.replace(/\[\[([^|\]]+)\|/g, (m, k) => { if (!DZ.terms[k]) mt.add(k); });
+check(!mt.size, 'every underlined term has a definition', [...mt].join(', '));
+const ph = new Set(DZ.photos.map(p => p.id)), mp = [];
+DZ.cards.forEach(c => (c.steps || []).forEach(s => (s.blocks || []).forEach(b => { if (b.k === 'photo' && !ph.has(b.id)) mp.push(c.id + ': ' + b.id); })));
+(DZ.tell || []).forEach(t => { if (t.photo && !ph.has(t.photo)) mp.push('tell ' + t.id + ': ' + t.photo); });
+check(!mp.length, 'every photo block has a photo', mp.join('; '));
+const mf = DZ.photos.filter(p => !fs.existsSync(path.join(__dirname, '..', 'dz', p.file))).map(p => p.file);
+check(!mf.length, `every photo file is in dz/ (${DZ.photos.length})`, mf.join(', '));
+const ids = new Set(DZ.cards.map(c => c.id)), md = [];
+Object.entries(DZ.drugs).forEach(([k, d]) => (d.pa || []).forEach(r => { if (!ids.has(r.dz)) md.push(k + ' → ' + r.dz); }));
+check(!md.length, 'every drug use names an existing card', md.join('; '));
+const ns = [];
+DZ.cards.forEach(c => (c.steps || []).forEach(s => { if (!s.src) ns.push(c.id + ': ' + s.title); }));
+check(!ns.length, 'every step carries a source', ns.join('; '));
+const bp = [];
+DZ.cards.forEach(c => (c.patients || []).forEach((p, i) => { if (!(p.o && p.o.length === 4 && p.a >= 0 && p.a < 4 && p.w)) bp.push(c.id + ' #' + (i + 1)); else p.o.forEach((o, j) => { if (j !== p.a && !(p.x && p.x[o])) bp.push(c.id + ' #' + (i + 1) + ' no reason for "' + o.slice(0, 30) + '"'); }); }));
+check(!bp.length, 'every practice patient has four choices, one answer, and a reason for each wrong choice', bp.join('; '));
+const long = [];
+DZ.cards.forEach(c => (c.patients || []).forEach((p, i) => { const L = p.o.map(o => o.length); if (L[p.a] === Math.max(...L) && L[p.a] > 1.5 * Math.max(...L.filter((x, j) => j !== p.a))) long.push(c.id + ' #' + (i + 1)); }));
+check(!long.length, 'no practice patient whose right answer is much the longest choice', long.join('; '));
+const jumps = [], g = fs.readFileSync(path.join(__dirname, 'guide.js'), 'utf8') + fs.readFileSync(path.join(__dirname, 'reference.js'), 'utf8') + ['walk_pp.js', 'walk_pc.js', 'walk_sun.js', 'walk_mc.js', 'walk_rd.js', 'figs2.js', 'diagrams.js'].map(f => { try { return fs.readFileSync(path.join(__dirname, f), 'utf8'); } catch (e) { return ''; } }).join('');
+all.replace(/"jump":\s*"([a-z]+):([^"]+)"/g, (m, v, a) => { if (!g.includes(a)) jumps.push(v + ':' + a); });
+check(!jumps.length, 'every "watch how it works" link names an existing section or figure', jumps.join('; '));
+const ui = fs.readFileSync(path.join(__dirname, 'dz_ui.js'), 'utf8').replace(/\/\*[\s\S]*?\*\//g, '');
+const st = ui.match(/localStorage|sessionStorage|indexedDB|\.setItem\(|document\.cookie|caches\.open/g);
+check(!st, 'dz_ui.js writes to no storage', st && st.join(', '));
+check(!/<[a-z]+[ >]/i.test(all.replace(/<<[^>]+>>/g, '')), 'no HTML in the data (marks only)');
+const nc = Object.entries(DZ.drugs).filter(([k, d]) => !(d.counsel || []).length).map(([k]) => k);
+console.log('  note  drugs without counseling points: ' + nc.length + (nc.length ? ' (' + nc.join(', ') + ')' : ''));
+console.log((fail ? 'FAIL' : 'PASS') + `: dz_check.js: ${fail ? fail + ' of ' : ''}${n} checks${fail ? ' failed' : ' passed'}`);
+process.exit(fail ? 1 : 0);
