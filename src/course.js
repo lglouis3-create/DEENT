@@ -199,17 +199,17 @@ const COURSE = {
     // of the above") and "there will be a calculation on the exam" (11/06 transcript, T@11799).
     {id:'exam2', name:'Exam 2', date:'Mon 11/16, 9:00–10:30 AM', when:'2026-11-16T09:00',
      questions:50, minutes:90, sata:null,
-     blurb:'Practice coverage of Lectures 1–5 so far. Lectures 1–4 (Smith, Sikazwe) supply 30% of each paper and Lecture 5 (Patel, atopic and diaper dermatitis, 11/06) supplies the 70% that the syllabus gives to Lectures 5–8. Lectures 6–8 (Patel: acne; scaly dermatoses and psoriasis; outdoor exposure, sun exposure, wound care, warts, corns and calluses) join the 70% pool once they are taught. Dr. Patel says there will be a calculation on the exam, and her in-class polls are case-based: tube size, severity and status, first-line choice, prescription details, counseling and follow-up timing. The syllabus lists multiple-choice, select-all, short-answer, true/false and matching as possible formats and gives no count of each. These practice papers draw single-answer questions only; the select-all and matching questions are in the topic drills',
-     facts:[['Covers', 'Practice coverage of Lectures 1–5 so far.'],
-            ['Weighting', 'Lectures 1–4 (Smith, Sikazwe) supply 30% of each paper and Lecture 5 (Patel, atopic and diaper dermatitis, 11/06) supplies the 70% that the syllabus gives to Lectures 5–8.'],
-            ['Still to come', 'Lectures 6–8 (Patel: acne; scaly dermatoses and psoriasis; outdoor exposure, sun exposure, wound care, warts, corns and calluses) join the 70% pool once they are taught.'],
+     blurb:'Practice coverage of Lectures 1–7 so far. Lectures 1–4 (Smith, Sikazwe) supply 30% of each paper and Lectures 5–7 (Patel: atopic and diaper dermatitis, 11/06; acne, 11/10; dandruff, seborrheic dermatitis and psoriasis, 11/10–11/11) supply the 70% that the syllabus gives to Lectures 5–8. Lecture 8 (Patel: outdoor exposure, sun exposure, wound care, warts, corns and calluses) joins the 70% pool once it is taught. Dr. Patel says there will be a calculation on the exam, and her in-class polls are case-based: tube size, severity and status, first-line choice, prescription details, counseling and follow-up timing. The syllabus lists multiple-choice, select-all, short-answer, true/false and matching as possible formats and gives no count of each. These practice papers draw single-answer questions only; the select-all and matching questions are in the topic drills',
+     facts:[['Covers', 'Practice coverage of Lectures 1–7 so far.'],
+            ['Weighting', 'Lectures 1–4 (Smith, Sikazwe) supply 30% of each paper and Lectures 5–7 (Patel: atopic and diaper dermatitis, 11/06; acne, 11/10; dandruff, seborrheic dermatitis and psoriasis, 11/10–11/11) supply the 70% that the syllabus gives to Lectures 5–8.'],
+            ['Still to come', 'Lecture 8 (Patel: outdoor exposure, sun exposure, wound care, warts, corns and calluses) joins the 70% pool once it is taught.'],
             ['Dr. Patel\'s format', 'Dr. Patel says there will be a calculation on the exam, and her in-class polls are case-based: tube size, severity and status, first-line choice, prescription details, counseling and follow-up timing.'],
             ['Syllabus formats', 'The syllabus lists multiple-choice, select-all, short-answer, true/false and matching as possible formats and gives no count of each.'],
             ['Practice papers', 'These practice papers draw single-answer questions only; the select-all and matching questions are in the topic drills.']],
      factsMain:['Covers', 'Weighting'],
      pools:[
        {key:'l14', name:'Lectures 1–4 (Smith, Sikazwe): 30%', marks:15, filter:{exam:1, unassigned:undefined}},
-       {key:'l58', name:'Lectures 5–8 (Patel): 70%, Lecture 5 so far', marks:35, filter:{exam:2}},
+       {key:'l58', name:'Lectures 5–8 (Patel): 70%, Lectures 5–7 so far', marks:35, filter:{exam:2}},
      ]},
   ],
   // Exam 1 was on Mon 11/09; the Exam view, the weighted pass and Weak spots follow Exam 2 from
