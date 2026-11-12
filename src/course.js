@@ -256,6 +256,8 @@ const COURSE = {
           'q8_hard_smith.js', 'q9_hard_sik.js',
           // Dr. Patel, Lecture 5 (Exam 2): pushes its deck folder into TOPIC_DECKS, its TOPICS and questions
           'q7_L05.js',
+          // harder Lecture 5 items and new-patient case versions of her polls (Louis, 2026-11-12)
+          'q14_L05_harder.js',
           // fill-in-the-blank items (kit type 'blank', 2026-11-09): Quiz, topic drills and the missed list
           'q10_blank.js',
           // exam-style items, Dr. Smith and Dr. Sikazwe (2026-11-12: one detail swapped per wrong option)

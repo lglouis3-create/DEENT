@@ -8,6 +8,11 @@ characters.
 
 Every update adds its bullets here in the same commit that makes the change.
 
+## 2026-11-12 (Dr. Patel, harder Lecture 5)
+- 30 harder Lecture 5 questions: new patients, next steps after a failed therapy, new tube-size numbers.
+- 14 of them retell her polls and class examples with a different patient, as her exam cases do.
+- 28 Lecture 5 questions get closer wrong answers, so the right one no longer stands out by its length.
+
 ## 2026-11-10 (Exam folders)
 - Topics: lecture folders now sit inside an Exam 1 and an Exam 2 folder; Exam 1 starts closed.
 - The trimethoprim question is rewritten in Dr. Smith's exam style; its spoken why is re-recorded.
