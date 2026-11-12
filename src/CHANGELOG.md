@@ -8,6 +8,12 @@ characters.
 
 Every update adds its bullets here in the same commit that makes the change.
 
+## 2026-11-12 (Dr. Patel, Lecture 8)
+- Lecture 8 (11/12) added: outdoor exposures, sun exposure, wound care, and warts, corns and calluses.
+- 176 new questions: her 12 polls in her own words, new-patient cases, select-all, tube-size calculations.
+- Exam 2 practice papers now draw from all of Lectures 5–8 for Dr. Patel's 70%.
+- Guide sections for her Lecture 8 objectives and new Reference tables, including Smith vs Patel on sunscreen.
+
 ## 2026-11-12 (Dr. Patel, Lectures 6 and 7)
 - Acne (Dr. Patel, 11/10): her PollEv cases plus questions on grades, the algorithm, isotretinoin and iPledge.
 - Dandruff and seborrheic dermatitis (11/10): her PollEv cases, shampoo schedules, infant care.
