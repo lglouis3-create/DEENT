@@ -1431,9 +1431,9 @@ QUESTIONS.push(
  stem:'For the same infant, which nonpharmacologic advice should the father receive?',
  options:[
   {t:'Follow ABCDE: air dry, barrier, gentle cleansing, change every 2 hours, education', correct:true, why:'Her PollEv answer: "A B C D E, every 2 hours" (T@82496); slide 62.'},
-  {t:'Switch to cloth diapers and change only when soiled', correct:false, why:'Disposable diapers have fewer rash episodes (slide 57); ABCDE: change every 2 hours (slide 62).'},
-  {t:'Bathe in a dilute bleach bath twice a week', correct:false, why:'The bleach bath is for moderate–severe atopic dermatitis (slide 31).'},
-  {t:'Use alcohol wipes at each change to disinfect', correct:false, why:'Slide 57 names alcohol-free wipes; slide 62: soft cloth and warm water, or a baby wipe when stool is present.'}],
+  {t:'Follow ABCDE: air dry, barrier, gentle cleansing, change every 4 hours, education', correct:false, why:'The change interval is every 2 hours (slide 62; her answer "every 2 hours", T@82496).'},
+  {t:'Follow ABCDE: air dry, bleach bath, gentle cleansing, change every 2 hours, education', correct:false, why:'B stands for Barrier (slide 62); the bleach bath is for moderate–severe atopic dermatitis (slide 31).'},
+  {t:'Follow ABCDE: air dry, barrier, alcohol wipes, change every 2 hours, education', correct:false, why:'Cleansing is gentle: slide 57 names alcohol-free wipes; slide 62: soft cloth and warm water, or a baby wipe when stool is present.'}],
  teach:'Her PollEv of 11/06 (open response: "What are some appropriate nonpharmacologic methods the father should be educated on?").',
  cite:P5+' slides 57, 62; PollEv 11/06; T@82496–82849'},
 
