@@ -20,7 +20,7 @@ Built with the exam-drill-builder skill from `lglouis3-create/exam-drill-kit`, c
 - Sources: the testing professor's slides and recording together are primary for that professor's material. The drug chart is a guide; assigned reading is support. Clear verbal slips are resolved against the slide and her surrounding explanation. If a conflict still affects the correct answer, the item stays out of scored practice and is flagged in `reviews/OPEN_QUESTIONS.md`.
 - Material a professor explicitly excluded stays out of the exam pools. Personal anecdotes stay off the public site.
 - Features: existing kit core plus course files. Atlas on (Louis, 2026-11-06: "structures are important in Sikazwe's material"). Calculation modules off. `most-likely-stars` is done in DEENT as `likely_*` (Louis, 2026-11-08); `structure-compare` deferred (the Atlas's "Compare structures" covers the six lecture/verified comparisons). `core/profile.py` and feature trials are kit backlog.
-- Dr. Smith is the same professor as in Intro to Pharmacology; that drill's format notes apply (four options, no absolute words; the no-length-cue rule removed by Louis 2026-11-12); question formats otherwise from the DEENT materials.
+- Dr. Smith is the same professor as in Intro to Pharmacology; that drill's format notes apply (four options, no absolute words; the right answer must not stand out, see "Recalled exam questions" below); question formats otherwise from the DEENT materials.
 
 ## Lecture map (syllabus pp. 9-15)
 | Entry in course.js | Deck | Taught | Status |
@@ -64,7 +64,7 @@ Full text: Louis's message of 2026-11-08 (porter session, relayed to DEENT; adop
 - Item-writing reference: NBME Item-Writing Guide (Constructing Written Test Questions), e.g. the "cover-the-options" rule: a well-focused stem can be answered before the options are seen. https://info.nbme.org/rs/552-QHC-046/images/NBME_Item-Writing-Guide.pdf
 
 ## Recalled exam questions (Louis, 2026-11-12)
-"Whenever i send more example questions use them as a basis/reference to build and raise the difficulty for each professor in the course." Record each in src/STYLE.md "Exam questions Louis recalls" under its professor and model new items for that professor on it; drafts go to Louis before publishing. Dr. Smith's construction rule: STYLE.md "How her exam questions are built". No rule on the key's length for any professor (Louis, 2026-11-12: "omit this rule, it should not be in here").
+"Whenever i send more example questions use them as a basis/reference to build and raise the difficulty for each professor in the course." Record each in src/STYLE.md "Exam questions Louis recalls" under its professor and model new items for that professor on it; drafts go to Louis before publishing. Dr. Smith's construction rule: STYLE.md "How her exam questions are built". The right answer must not stand out (Louis, 2026-11-12: "its mainly that it shouldn't be the obvious for the student bc it defeats the purpose in actually knowing the material"): not the longest or most detailed option, not the only one echoing the stem, not the only one that fits grammatically; wrong options as complete and specific as the key (NBME Item-Writing Guide, technical flaws that reward testwiseness).
 
 ## Exam 1 coverage checklist
 - [x] Lecture 1, Smith 10/29 (Pathophys 2-38, PCol 1-15)
