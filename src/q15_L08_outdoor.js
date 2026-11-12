@@ -105,7 +105,7 @@ QUESTIONS.push(
  stem:"An adult female has been prescribed hydrocortisone 1% cream twice daily x 3 days to treat ant bites on both feet. What would be the most appropriate tube size to dispense?",
  options:[
   {t:"15 grams", correct:true, why:"Slide 5: one foot including toes 2 FTU, so 4 FTU; 4 × 0.5 g = 2 g; × 2 a day × 3 days = 12 g; round up to 15 g (T@2209–2436 11/12)."},
-  {t:"30 grams", correct:false, why:"30 g fits 1 g per FTU (24 g). The slide gives about 0.5 g per FTU."},
+  {t:"30 grams", correct:false, why:"30 g fits 1 g per FTU (24 g); one FTU is about 0.5 g (slide 5)."},
   {t:"60 grams", correct:false, why:"60 g fits one leg including the foot (8 FTU) used for a week, not two feet for 3 days."},
   {t:"90 grams", correct:false, why:"12 g is needed (slide 5); 90 g is more than seven times that."}],
  teach:'Grams = FTU × 0.5 × applications a day × days. "It’s come back 3 times now, so make sure you practice calculations" (T@1737 11/12).',
@@ -117,7 +117,7 @@ QUESTIONS.push(
  options:[
   {t:'15 g', correct:false, why:'15 g fits once-daily use (10 g). Twice a day doubles it.'},
   {t:'30 g', correct:true, why:'Slide 5: one arm including entire hand 4 FTU; 4 × 0.5 g = 2 g; × 2 × 5 = 20 g; round up to 30 g.'},
-  {t:'45 g', correct:false, why:'45 g fits 1 g per FTU (40 g); the slide gives about 0.5 g.'},
+  {t:'45 g', correct:false, why:'45 g fits 1 g per FTU (40 g); one FTU is about 0.5 g (slide 5).'},
   {t:'60 g', correct:false, why:'60 g fits one leg including the foot (8 FTU) for a week.'}],
  teach:'One arm including the hand is 4 FTU; one hand alone is 1 FTU (slide 5).',
  cite:P8OQ+' slide 5; T@2209 11/12'},
@@ -231,7 +231,7 @@ QUESTIONS.push(
  stem:'A camper asks when a poison ivy rash appears after exposure and how long it continues. Which answer is correct?',
  options:[
   {t:'Within 10 minutes; continues 1–3 weeks', correct:false, why:'10 minutes is how fast urushiol enters the skin (slide 8), not when the rash appears.'},
-  {t:'2–48 hours; continues up to 7 days', correct:false, why:'7 days is the point to refer if there is no improvement (slide 16); the rash continues 1–3 weeks.'},
+  {t:'2–48 hours; continues up to 7 days', correct:false, why:'Referral follows 7 days without improvement (slide 16); the rash continues 1–3 weeks.'},
   {t:'2–14 days; continues 1–3 weeks', correct:false, why:'2 to 14 days is when tick-borne symptoms occur (slide 28).'},
   {t:'2–48 hours; continues 1–3 weeks', correct:true, why:'Slide 8: "Rash may appear 2 – 48 hours after exposure; Rash continues for 1 – 3 weeks" (T@3128 11/12).'}],
  teach:'Urushiol enters skin within 10 minutes; rash in 2–48 hours; lasts 1–3 weeks with or without treatment (slides 8, 11).',
@@ -250,7 +250,7 @@ QUESTIONS.push(
 
 {id:'P8O-014', skill:'patho', prof:'Patel', tier:'new', topic:'p8o-plant', sub:'path', concept:'p8o-vesicle-fluid-not-antigenic',
  tags:['counsel'], source:'slide',
- stem:'A mother asks whether fluid from her son’s poison ivy vesicles can give the rash to his sister. Which answer fits the lecture?',
+ stem:'A mother asks whether fluid from her son’s poison ivy vesicles can give the rash to his sister. What is the answer?',
  options:[
   {t:'Yes; vesicle fluid carries urushiol for 48 hours', correct:false, why:'48 hours is the outer limit for the rash to appear (slide 8). The vesicles do not contain antigenic material (slide 10).'},
   {t:'No; urushiol is inactive once it dries', correct:false, why:'Slide 9: urushiol remains active on dead, dried plants or contaminated objects for several years.'},
@@ -401,7 +401,7 @@ QUESTIONS.push(
 
 {id:'P8O-027', skill:'case', prof:'Patel', tier:'new', topic:'p8o-vector', sub:'flea', concept:'p8o-typhus-doxycycline',
  tags:['case','new-patient'], source:'both',
- stem:'A Texas man who feeds stray cats has had headache, fever, nausea and body aches for a week. Yesterday a rash began on his trunk and it is spreading to his arms and legs. His physician diagnoses murine typhus. Which antibiotic does the lecture list for it?',
+ stem:'A Texas man who feeds stray cats has had headache, fever, nausea and body aches for a week. Yesterday a rash began on his trunk and it is spreading to his arms and legs. His physician diagnoses murine typhus. Which antibiotic treats it?',
  options:[
   {t:'Streptomycin', correct:false, why:'On the bubonic plague list (slide 27).'},
   {t:'Amoxicillin', correct:false, why:'A Lyme erythema migrans option (slide 29).'},
@@ -423,7 +423,7 @@ QUESTIONS.push(
 
 {id:'P8O-029', skill:'tell', prof:'Patel', tier:'new', topic:'p8o-vector', sub:'flea', concept:'p8o-plague-antibiotic',
  tags:['tell'], source:'both',
- stem:'A rancher in the Southwest U.S. is diagnosed with bubonic plague (Yersinia pestis). Which of these is on the lecture’s treatment list for plague?',
+ stem:'A rancher in the Southwest U.S. is diagnosed with bubonic plague (Yersinia pestis). Which of these treats plague?',
  options:[
   {t:'Cefuroxime axetil', correct:false, why:'A Lyme erythema migrans option (slide 29).'},
   {t:'Levofloxacin', correct:true, why:'Slide 27: streptomycin, ciprofloxacin, levofloxacin, moxifloxacin, doxycycline, aminoglycosides (T@14952 11/12).'},
@@ -434,7 +434,7 @@ QUESTIONS.push(
 
 {id:'P8O-030', skill:'case', prof:'Patel', tier:'new', topic:'p8o-vector', sub:'lyme', concept:'p8o-lyme-prophylaxis-72h',
  tags:['case','new-patient'], source:'both',
- stem:'A 35-year-old woman removed a black-legged (Ixodes) tick yesterday after a weekend in a high-endemic area; it had been attached for about 2 days. She has no rash and no symptoms. Which regimen does the lecture give for prophylaxis?',
+ stem:'A 35-year-old woman removed a black-legged (Ixodes) tick yesterday after a weekend in a high-endemic area; it had been attached for about 2 days. She has no rash and no symptoms. Which prophylaxis regimen is appropriate?',
  options:[
   {t:'Doxycycline 100 mg twice daily for 10 days', correct:false, why:'That is treatment of the acute skin lesion, erythema migrans (slide 29).'},
   {t:'Amoxicillin 500 mg three times daily for 14 days', correct:false, why:'An erythema migrans treatment regimen (slide 29).'},
@@ -445,7 +445,7 @@ QUESTIONS.push(
 
 {id:'P8O-031', skill:'case', prof:'Patel', tier:'new', topic:'p8o-vector', sub:'lyme', concept:'p8o-lyme-em-doxy-10d',
  tags:['case','new-patient','timing-changes-answer'], source:'both',
- stem:'A 35-year-old man removed an Ixodes tick 6 days ago. He now has an erythema migrans lesion on his thigh and no neurologic or cardiac symptoms. He has no drug allergies. Which regimen does the lecture give?',
+ stem:'A 35-year-old man removed an Ixodes tick 6 days ago. He now has an erythema migrans lesion on his thigh and no neurologic or cardiac symptoms. He has no drug allergies. Which regimen is appropriate?',
  options:[
   {t:'Doxycycline 200 mg once', correct:false, why:'Prophylaxis, within 72 hours of detaching the tick (slide 29); he is at 6 days with a lesion.'},
   {t:'Doxycycline 100 mg twice daily for 7 days', correct:false, why:'7 days is the rickettsial spotted fever course (slide 30).'},
@@ -456,7 +456,7 @@ QUESTIONS.push(
 
 {id:'P8O-032', skill:'case', prof:'Patel', tier:'new', topic:'p8o-vector', sub:'lyme', concept:'p8o-lyme-second-line-azithro',
  tags:['case','new-patient','what-was-tried'], source:'both',
- stem:'An adult with erythema migrans cannot take doxycycline, amoxicillin or cefuroxime axetil. Which second-line agent and duration does the lecture give?',
+ stem:'An adult with erythema migrans cannot take doxycycline, amoxicillin or cefuroxime axetil. Which second-line agent and duration are used?',
  options:[
   {t:'Azithromycin for 14 days', correct:false, why:'Right drug; 14 days belongs to amoxicillin and cefuroxime axetil (slide 29).'},
   {t:'Azithromycin for 7 days', correct:true, why:'Slide 29: second-line agent: azithromycin, adults 500 mg daily × 7 days. "Azithromycin is the shortest time frame, 7 days" (T@16970–17190 11/12).'},
@@ -467,7 +467,7 @@ QUESTIONS.push(
 
 {id:'P8O-033', skill:'dose', prof:'Patel', tier:'new', topic:'p8o-qty', sub:'wt', concept:'p8o-lyme-proph-child-max',
  tags:['calc','new-patient','max-dose'], source:'both',
- stem:'A 50-kg adolescent qualifies for Lyme disease prophylaxis within 72 hours of removing the tick. Using the lecture’s pediatric dose of doxycycline, what single dose is given?',
+ stem:'A 50-kg adolescent qualifies for Lyme disease prophylaxis within 72 hours of removing the tick. At the pediatric dose of doxycycline, what single dose is given?',
  options:[
   {t:'100 mg', correct:false, why:'100 mg is the per-dose maximum for erythema migrans treatment (slide 29), not the prophylaxis dose.'},
   {t:'110 mg', correct:false, why:'That is 2.2 mg/kg, the rickettsial daily dose (slide 30). Prophylaxis is 4.4 mg/kg.'},
@@ -478,7 +478,7 @@ QUESTIONS.push(
 
 {id:'P8O-034', skill:'tell', prof:'Patel', tier:'new', topic:'p8o-vector', sub:'rick', concept:'p8o-stari-no-antibiotic',
  tags:['tell'], source:'both',
- stem:'A patient develops a rash illness after a Lone Star tick bite and is diagnosed with Southern Tick-Associated Rash Illness (STARI). What does the lecture give for antibiotic therapy?',
+ stem:'A patient develops a rash illness after a Lone Star tick bite and is diagnosed with Southern Tick-Associated Rash Illness (STARI). What antibiotic therapy is recommended?',
  options:[
   {t:'Doxycycline 200 mg once within 72 hours', correct:false, why:'Lyme prophylaxis after an Ixodes bite (slide 29).'},
   {t:'Doxycycline 100 mg twice daily for 7 days', correct:false, why:'The rickettsial spotted fever regimen (slide 30).'},
@@ -489,7 +489,7 @@ QUESTIONS.push(
 
 {id:'P8O-035', skill:'case', prof:'Patel', tier:'new', topic:'p8o-vector', sub:'rick', concept:'p8o-rickettsial-doxy',
  tags:['case','new-patient'], source:'both',
- stem:'A 6-year-old is suspected to have Rocky Mountain spotted fever after a tick bite. Which antibiotic does the lecture recommend for suspected rickettsial infections?',
+ stem:'A 6-year-old is suspected to have Rocky Mountain spotted fever after a tick bite. Which antibiotic is recommended for suspected rickettsial infections?',
  options:[
   {t:'Doxycycline', correct:true, why:'Slide 30: doxycycline is the recommended treatment for all suspected rickettsial infections (Rocky Mountain, Gulf coast, Pacific coast, rickettsialpox); children 2.2 mg/kg daily in two divided doses × 7 days (T@17901 11/12).'},
   {t:'Amoxicillin', correct:false, why:'A Lyme erythema migrans option (slide 29), not a rickettsial treatment.'},
@@ -661,7 +661,7 @@ QUESTIONS.push(
 /* ---- Scabies (slides 50-51) ---------------------------------------------------- */
 {id:'P8O-050', skill:'class', prof:'Patel', tier:'new', topic:'p8o-scab', sub:'tx', concept:'p8o-scabies-options',
  tags:['tell'], source:'both',
- stem:'Which of these is on the lecture’s list of scabies treatments?',
+ stem:'Which of these is a scabies treatment?',
  options:[
   {t:'Dimethicone 100%', correct:false, why:'A head lice product (LiceMD; slide 45).'},
   {t:'Crotamiton 10% lotion or cream', correct:true, why:'Slide 51: permethrin 5% cream (Elimite); crotamiton lotion or cream 10%; sulfur 5–10% ointment; lindane lotion 1%; oral ivermectin 200 mcg/kg/dose × 2 one week apart (T@35370 11/12).'},
@@ -717,7 +717,7 @@ QUESTIONS.push(
 
 {id:'P8O-055', skill:'counsel', prof:'Patel', tier:'new', topic:'p8o-venom', sub:'snake', concept:'p8o-snake-first-aid-list', multi:true,
  tags:['list','counsel'], source:'both',
- stem:'A hiker’s friend has just been bitten on the ankle by a snake. Which first-aid steps are on the lecture’s list? Select all that apply.',
+ stem:'A hiker’s friend has just been bitten on the ankle by a snake. Which first-aid steps are appropriate? Select all that apply.',
  options:[
   {t:'Keep the patient calm and still', correct:true, why:'Slide 56 (T@38894 11/12).'},
   {t:'Remove jewelry and tight clothing from the limb', correct:true, why:'Slide 56: remove any constrictions from the limb (T@39141 11/12).'},
@@ -729,7 +729,7 @@ QUESTIONS.push(
 
 {id:'P8O-056', skill:'counsel', prof:'Patel', tier:'new', topic:'p8o-venom', sub:'snake', concept:'p8o-poison-control-number',
  tags:['counsel'], source:'both',
- stem:'Which statement about the poison control hotline matches the lecture?',
+ stem:'Which statement about the poison control hotline is correct?',
  options:[
   {t:'1-800-222-1222; 24/7; envenomations and overdoses', correct:true, why:'Slides 56, 65: 1-800-222-1222; 24/7 hotline; envenomations to regular overdose support. "Remember this phone number" (T@45793 11/12); nationwide (T@39823).'},
   {t:'1-800-222-1222; Texas callers; snake bites', correct:false, why:'"This is a nationwide number, so it’s not state-specific ... not a number just for snake bites" (T@39823 11/12).'},
@@ -740,7 +740,7 @@ QUESTIONS.push(
 
 {id:'P8O-057', skill:'tell', prof:'Patel', tier:'new', topic:'p8o-venom', sub:'snake', concept:'p8o-coral-no-antivenin',
  tags:['tell'], source:'slide',
- stem:'In the lecture’s snake bite medical care, how is antivenin handled for a coral snake bite compared with a pit viper bite?',
+ stem:'In Dr. Patel’s snake bite medical care, how is antivenin handled for a coral snake bite compared with a pit viper bite?',
  options:[
   {t:'Coral: antivenin if available. Pit viper: no antivenin, supportive care.', correct:false, why:'Reversed: the coral snake bite gets no antivenin; the pit viper bite is scored (slide 57).'},
   {t:'Coral: scored to decide. Pit viper: no antivenin, supportive care.', correct:false, why:'Slide 57: the pit viper bite is the one scored, and severe envenomation gets antivenin if available; the coral snake bite gets no antivenin.'},
@@ -762,7 +762,7 @@ QUESTIONS.push(
 
 {id:'P8O-059', skill:'case', prof:'Patel', tier:'new', topic:'p8o-venom', sub:'sev', concept:'p8o-pitviper-severe-antivenin',
  tags:['case','severity','next-step'], source:'both',
- stem:'After a copperhead bite on the calf, the whole leg has swollen rapidly. Systolic blood pressure is 76 mm Hg, the patient is confused and tachypneic, and he is bleeding with a platelet count under 20,000/µL. Which grade and plan fit the lecture?',
+ stem:'After a copperhead bite on the calf, the whole leg has swollen rapidly. Systolic blood pressure is 76 mm Hg, the patient is confused and tachypneic, and he is bleeding with a platelet count under 20,000/µL. Which grade and plan fit?',
  options:[
   {t:'Moderate; supportive therapy', correct:false, why:'Moderate is non-life-threatening signs and no significant bleeding (slide 58).'},
   {t:'Moderate; give antivenin if available', correct:false, why:'These findings are the severe column (slide 58); mild or moderate gets supportive therapy (slide 57).'},
@@ -785,7 +785,7 @@ QUESTIONS.push(
 
 {id:'P8O-061', skill:'case', prof:'Patel', tier:'new', topic:'p8o-rabies', sub:'pep', concept:'p8o-rabies-pep-previously-vaccinated',
  tags:['case','new-patient','history-changes-answer'], source:'both',
- stem:'A veterinary technician who completed pre-exposure rabies vaccination is bitten by a bat. After wound cleansing, which postexposure regimen does the lecture give?',
+ stem:'A veterinary technician who completed pre-exposure rabies vaccination is bitten by a bat. After wound cleansing, which postexposure regimen is given?',
  options:[
   {t:'Vaccine on days 0 and 3; no HRIG', correct:true, why:'Slide 63, previously vaccinated: HRIG do not administer; vaccine 1 mL in the deltoid on days 0 and 3. "Notice in terms of duration, differs" (T@44752–44919 11/12).'},
   {t:'Vaccine on days 0, 3, 7 and 14; no HRIG', correct:false, why:'Days 0, 3, 7 and 14 are for the not previously vaccinated (slide 63).'},
@@ -823,20 +823,20 @@ QUESTIONS.push(
 {id:'BP8O-003', type:'blank', skill:'dose', prof:'Patel', tier:'new', topic:'p8o-qty', sub:'calc', concept:'b-p8o-ftu-leg-grams',
  tags:['blank','calc'], source:'slide', dupOf:'P8O-003',
  stem:'An adult applies hydrocortisone 1% cream twice a day for 7 days to poison ivy dermatitis on one leg, including the foot. Total cream needed: ___ g.',
- accept:['56', '56 g', '56 grams', 'fifty-six', 'fifty six'],
+ accept:['56', '56 g', '56 grams', 'fifty-six'],
  why:'Slide 5: one leg including foot 8 FTU; 8 × 0.5 g = 4 g; × 2 × 7 = 56 g (a 60 g tube).',
  cite:P8OQ+' slide 5'},
 
 {id:'BP8O-004', type:'blank', skill:'dose', prof:'Patel', tier:'new', topic:'p8o-qty', sub:'wt', concept:'b-p8o-lyme-proph-child-mg',
  tags:['blank','calc'], source:'both',
  stem:'A 20-kg child qualifies for Lyme disease prophylaxis within 72 hours of removing the tick. Doxycycline single dose: ___ mg.',
- accept:['88', '88 mg', 'eighty-eight', 'eighty eight'],
+ accept:['88', '88 mg', 'eighty-eight'],
  why:'Slide 29: children 4.4 mg/kg up to 200 mg × once; 4.4 × 20 = 88 mg (T@15815 11/12).',
  cite:P8OQ+' slide 29; T@15815 11/12'},
 
 {id:'BP8O-005', type:'blank', skill:'dose', prof:'Patel', tier:'new', topic:'p8o-qty', sub:'wt', concept:'b-p8o-lyme-amox-child-mg',
  tags:['blank','calc'], source:'both',
- stem:'A 24-kg child with erythema migrans is given amoxicillin at the lecture’s pediatric dose, three times a day. Each dose: ___ mg.',
+ stem:'A 24-kg child with erythema migrans is given amoxicillin at the pediatric dose, in three divided doses a day. Each dose: ___ mg.',
  accept:['400', '400 mg', 'four hundred'],
  why:'Slide 29: children 50 mg/kg daily in three divided doses (max 500 mg/dose) × 14 days; 50 × 24 = 1,200 mg a day ÷ 3 = 400 mg (T@16579 11/12).',
  cite:P8OQ+' slide 29; T@16579 11/12'}

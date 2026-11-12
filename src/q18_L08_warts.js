@@ -95,7 +95,7 @@ QUESTIONS.push(
  tags:['tell','know-this'], source:'slide',
  stem:'A flat, thickened lesion is on the sole of the foot. Which finding points to a plantar wart and away from a callus?',
  options:[
-  {t:'Pain when pressure is applied to it', correct:false, why:'Slide 5: both a wart and a callus may hurt in areas under pressure such as the soles.'},
+  {t:'Pain when pressure is applied to it', correct:false, why:'Pressure on the sole makes a wart or a callus painful (slide 5).'},
   {t:'Disruption of the normal skin ridges', correct:true, why:'Slide 5: "plantar warts disrupt normal skin ridges"; a callus keeps the "normal pattern of skin ridges". Slide 6: plantar warts are callus-like "with disruption of normal skin markings".'},
   {t:'Yellowish thickening of the skin', correct:false, why:'Slide 5: a callus feature.'},
   {t:'A broad base with diffuse borders', correct:false, why:'Slide 5: a callus feature.'}],
