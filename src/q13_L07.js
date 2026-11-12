@@ -522,7 +522,7 @@ QUESTIONS.push(
  teach:'BSA cut-offs (slide 31): ≤ 5% mild, ≥ 8% moderate, ≥ 10% severe.',
  cite:P7Q+' slides 25, 31; T@10231–10484, T@35074 11/11'},
 
-{id:'P7H-009', skill:'adverse', prof:'Patel', tier:'new', topic:'p7-pso', sub:'risk', concept:'p7h-case-nsaid-worsen',
+{id:'P7H-009', skill:'adverse', prof:'Patel', tier:'new', topic:'p7-pso', sub:'risk', concept:'p7h-case-nsaid-worsen', dupOf:'P7-029',
  tags:['hard','case'], source:'both',
  stem:'A 52-year-old woman with new plaques of psoriasis on both elbows asks which OTC product to avoid while she treats them. Which one can worsen psoriasis?',
  options:[
@@ -530,7 +530,7 @@ QUESTIONS.push(
   {t:'A thick fragrance-free emollient', correct:false, why:'Moisturizers and emollients are recommended (slide 34).'},
   {t:'A colloidal oatmeal bath product', correct:false, why:'Oatmeal baths are on her non-drug list (slide 34).'},
   {t:'A broad-spectrum SPF 30 sunscreen', correct:false, why:'Sunscreen SPF 30+ with UVA protection is recommended (slide 34).'}],
- teach:'Her poll offered NSAIDs as a wrong OTC choice; they are on the slide 24 list.',
+ teach:'Slide 24 medications that may worsen psoriasis: lithium, NSAIDs, antimalarials such as chloroquine, β-adrenergic blockers, fluoxetine, withdrawal of corticosteroids.',
  cite:P7Q+' slides 24, 34; T@5483, T@12466 11/11'},
 
 /* ---- Psoriasis: who, triggers, comorbidities, signs (slides 21-27) -------- */
@@ -586,22 +586,22 @@ QUESTIONS.push(
  stem:'A 41-year-old woman has a few psoriasis plaques on her knees. The provider calculates a BSA of 3%. How is her psoriasis classified?',
  options:[
   {t:'Mild', correct:true, why:'Slide 31: "Mild: BSA ≤ 5%" (T@10231 11/11).'},
-  {t:'Mild to moderate', correct:false, why:'That is a BSA between 5% and 8%, as in her 7% poll case (T@34939 11/11).'},
   {t:'Moderate', correct:false, why:'Moderate: BSA ≥ 8% (slide 31).'},
-  {t:'Moderate to severe', correct:false, why:'Between 8% and 10% (T@35074 11/11).'}],
- teach:'Mild ≤ 5%; moderate ≥ 8%; severe ≥ 10% (slide 31). "I only want you to know the BSA" (T@10671 11/11).',
- cite:P7Q+' slide 31; T@10231, T@10671, T@34939 11/11'},
+  {t:'Moderate to severe', correct:false, why:'Between 8% and 10%, "like a 9%" (T@35074 11/11).'},
+  {t:'Severe', correct:false, why:'Severe: BSA ≥ 10% (slide 31; T@10484 11/11).'}],
+ teach:'Mild ≤ 5%; moderate ≥ 8%; severe ≥ 10% (slide 31). A BSA between two cut-offs takes both names, as in her 7% poll case (T@34945 11/11). "I only want you to know the BSA" (T@10673 11/11).',
+ cite:P7Q+' slide 31; T@10231, T@10484, T@10673, T@34945, T@35074 11/11'},
 
 {id:'P7-035', skill:'case', prof:'Patel', tier:'new', topic:'p7-pso', sub:'sev', concept:'p7-bsa-severe',
  tags:['case','numbers'], source:'both',
  stem:'A 47-year-old man has plaques over his back, chest and both legs. The provider calculates a BSA of 12%. How is his psoriasis classified?',
  options:[
   {t:'Moderate', correct:false, why:'Moderate starts at 8% (slide 31); 12% passes the severe cut-off.'},
-  {t:'Moderate to severe', correct:false, why:'Between moderate and severe is 8–10%, "like a 9%" (T@35074 11/11).'},
+  {t:'Mild', correct:false, why:'Mild: BSA ≤ 5% (slide 31).'},
   {t:'Severe', correct:true, why:'Slide 31: "Severe: BSA ≥ 10%". "It has been corrected to 10% ... I want you to follow this slide" (T@10484 11/11).'},
   {t:'Mild to moderate', correct:false, why:'Between 5% and 8% (T@34939 11/11).'}],
- teach:'She first said 20% (T@7390 11/11), then corrected it: follow the slide, 10% (T@10484 11/11).',
- cite:P7Q+' slides 26, 31; T@7390, T@10484, T@35074 11/11'},
+ teach:'She first said 20% (T@7390 11/11), then corrected it: follow the slide, 10% (T@10484 11/11). Between 8% and 10%, "like a 9%", is moderate to severe (T@35074 11/11).',
+ cite:P7Q+' slides 26, 31; T@7390, T@10484, T@34945, T@35074 11/11'},
 
 {id:'P7-036', skill:'patho', prof:'Patel', tier:'new', topic:'p7-pso', sub:'sev', concept:'p7-bsa-how',
  tags:['recall'], source:'both',
@@ -692,9 +692,9 @@ QUESTIONS.push(
   {t:'Try another topical, such as calcipotriene', correct:true, why:'Mild to moderate: topical agents first (slide 35). "If corticosteroids has been tried, they’ve tried the low potency, they’ve increased the potency over time, they’ve waited about a month or so, then that’s when we go ahead and see if other options are available" (T@14093 11/11); calcipotriene is a topical option (slide 36).'},
   {t:'Start methotrexate with folic acid 1–5 mg daily', correct:false, why:'A systemic agent is the last line for mild to moderate psoriasis (T@13117 11/11); other topicals remain.'},
   {t:'Start adalimumab after a PPD test', correct:false, why:'Biologics come after topical and systemic agents (T@15451 11/11).'},
-  {t:'Refer for PUVA photochemotherapy', correct:false, why:'PUVA is absolute last line, for severe refractory psoriasis (slide 45; T@28274 11/11).'}],
+  {t:'Keep the higher-potency steroid for 3 more months', correct:false, why:'Slide 36: limit topical corticosteroid duration (≤ 4 weeks) and surface area; after about a month she looks to other options (T@14100 11/11).'}],
  teach:'Mild to moderate, step by step: other topical options before systemic therapy.',
- cite:P7Q+' slides 35–36, 45; T@13117, T@14093, T@15451, T@28274 11/11'},
+ cite:P7Q+' slides 35–36; T@13117, T@14100, T@15451 11/11'},
 
 {id:'P7-043', skill:'case', prof:'Patel', tier:'new', topic:'p7-psotx', sub:'alg', concept:'p7-mod-sev-first-systemic',
  tags:['case'], source:'both',
@@ -748,7 +748,7 @@ QUESTIONS.push(
   {t:'Reduce the frequency of flare-ups', correct:true, why:'Slide 28 (T@8262 11/11).'},
   {t:'Treat associated conditions such as hypertension and depression', correct:true, why:'Slide 28: hypertension, dyslipidemia, diabetes, clinical depression.'},
   {t:'Cure the psoriasis within 4 weeks', correct:false, why:'Psoriasis is chronic; flares come back (slide 21; T@8262 11/11).'},
-  {t:'Stop all therapy once the plaques clear', correct:false, why:'Slides 35, 37: continue if controlled, stepping down to the lowest doses that keep control.'}],
+  {t:'Stop the therapy once the plaques clear', correct:false, why:'Slides 35, 37: continue if controlled, stepping down to the lowest doses that keep control.'}],
  teach:'Slide 28 also: alleviate pruritus, screen lifestyle factors, cost-effective therapy, avoid adverse effects, quality of life.',
  cite:P7Q+' slides 21, 28, 35, 37; T@8262 11/11'},
 
@@ -777,7 +777,7 @@ QUESTIONS.push(
 
 {id:'P7-050', skill:'case', prof:'Patel', tier:'new', topic:'p7-psosys', sub:'mtx', concept:'p7-mtx-cirrhosis',
  tags:['case'], source:'both',
- stem:'A 55-year-old man with moderate-to-severe psoriasis also has cirrhosis. Which systemic agent should be avoided?',
+ stem:'A 55-year-old man with moderate-to-severe psoriasis also has cirrhosis. Which agent should be avoided?',
  options:[
   {t:'Apremilast (Otezla)', correct:false, why:'Slide 38 lists renal impairment (once-daily dosing), not cirrhosis, for apremilast.'},
   {t:'Methotrexate', correct:true, why:'Slide 39: contraindications pregnancy, cirrhosis, blood dyscrasias. "If a patient is diagnosed with cirrhosis ... we would look for a medication that doesn’t ... have a risk for worsening hepatotoxicity" (T@18926 11/11).'},
@@ -882,9 +882,9 @@ QUESTIONS.push(
  options:[
   {t:'Absolute last line for severe refractory disease; about 90% respond', correct:true, why:'Slides 44–45: efficacy 90% with oral psoralens + UVA; reserved for severe, refractory psoriasis. "It is absolute last line ... 90% do respond well" (T@28274–28462 11/11).'},
   {t:'First line for mild disease of the elbows; about 50% respond', correct:false, why:'Topical agents are first for mild disease (slide 35).'},
-  {t:'Second line after topical steroids in mild to moderate disease; no burns', correct:false, why:'Serious burns are a side effect (slide 44); she called PUVA absolute last line.'},
+  {t:'Used before methotrexate in moderate disease; no skin biopsy needed', correct:false, why:'A skin biopsy confirms the diagnosis first (slide 44); she called PUVA absolute last line (T@28274 11/11).'},
   {t:'Used in place of a biologic for psoriatic arthritis; about 90% respond', correct:false, why:'Not on slides 44–45.'}],
- teach:'A skin biopsy confirms the diagnosis first (slide 44).',
+ teach:'Side effects: serious burns, blistering, peeling, itching, nausea, possible basal cell or melanoma cancer, photoaging (slide 44).',
  cite:P7Q+' slides 35, 44–45; T@28274–29194 11/11'},
 
 {id:'P7-060', skill:'mech', prof:'Patel', tier:'new', topic:'p7-psosys', sub:'puva', concept:'p7-puva-moa-ae',
@@ -927,8 +927,8 @@ QUESTIONS.push(
  stem:'A patient on ustekinumab asks whether she can be vaccinated during therapy. What is appropriate?',
  options:[
   {t:'Yes, with vaccines that are not live', correct:true, why:'"They can be vaccinated, but just not a live vaccine" (T@25389 11/11); slides 40, 42–43: no live vaccines.'},
-  {t:'No vaccines of any kind during therapy', correct:false, why:'Only live vaccines are avoided (T@25389 11/11).'},
-  {t:'Yes, any vaccine, after a negative PPD', correct:false, why:'A PPD screens for TB; live vaccines stay off (slide 42).'},
+  {t:'No, vaccines wait until therapy ends', correct:false, why:'Only live vaccines are avoided; "they can be vaccinated" (T@25389 11/11).'},
+  {t:'Yes, live or inactivated, after a negative PPD', correct:false, why:'A PPD screens for TB; live vaccines stay off (slide 42).'},
   {t:'Yes, live vaccines in particular, as they need no booster', correct:false, why:'Live vaccines are the ones avoided (slides 40, 42).'}],
  teach:'All biologics: avoid live vaccines (slide 43).',
  cite:P7Q+' slides 40, 42–43; T@25389 11/11'},
