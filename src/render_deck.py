@@ -147,7 +147,8 @@ def main():
             os.makedirs(dest, exist_ok=True)
             with tempfile.TemporaryDirectory() as t:
                 jobs = []
-                for p in (pages or range(1, n + 1)):
+                omitted = {o[1] for o in S.get('omit', []) if o[0] == did}   # course-administration pages are not drawn
+                for p in [q for q in (pages or range(1, n + 1)) if q not in omitted]:
                     base = os.path.join(t, f'p{p}')
                     subprocess.run(['pdftoppm', '-png', '-scale-to-x', str(WIDTH), '-scale-to-y', '-1', '-f', str(p), '-l', str(p),
                                     '-singlefile', pdf, base], check=True, stderr=subprocess.DEVNULL)

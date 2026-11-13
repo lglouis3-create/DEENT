@@ -87,10 +87,14 @@ for (const id of ids) {
 check(!badMap.length, 'every page map entry points to a page that exists', badMap.join('; '));
 const noImg = [];
 let bytes = 0, count = 0;
+const OMIT = new Set((S.omit || []).map(o => o[0] + ' ' + o[1]));   // course-administration pages: no picture, no link
+const omitFiles = (S.omit || []).filter(o => fs.existsSync(path.join(ROOT, P.file(o[0], o[1])))).map(o => P.file(o[0], o[1]));
 for (const id of ids) for (let p = 1; p <= D[id].pages; p++) {
+  if (OMIT.has(id + ' ' + p)) continue;
   const f = path.join(ROOT, P.file(id, p));
   if (!fs.existsSync(f)) noImg.push(P.file(id, p)); else { bytes += fs.statSync(f).size; count++; }
 }
+check(omitFiles.length === 0 && OMIT.size === 2, `the ${OMIT.size} omitted pages (course dates) have no picture in ${S.dir}/ and no cited number resolves to them`, omitFiles.join(', '));
 check(!noImg.length, `every clean page has its image in ${S.dir}/ (${count} images, ${(bytes / 1e6).toFixed(1)} MB)`, noImg.slice(0, 12).join(', '));
 const extra = [];
 if (fs.existsSync(path.join(ROOT, S.dir))) for (const d of fs.readdirSync(path.join(ROOT, S.dir))) {
@@ -421,6 +425,8 @@ check(links.length > 0 && !bad.length, `every link resolves to a clean page (${l
 check(!missing.length, 'every link\'s image is on disk', [...new Set(missing)].slice(0, 10).join(', '));
 const outside = refused.filter(x => x.outside);
 check(!outside.length, 'no cited number falls outside its deck', outside.slice(0, 10).map(x => `${x.u.group} ${x.u.where}: "${x.raw}" ${x.why}`).join(' | '));
+const toOmitted = links.filter(l => { for (let n = l.n; n <= (l.to || l.n); n++) { const r = P.resolve(l.deck, n, l.printed); if (r && OMIT.has(r.deck + ' ' + r.page)) return true; } return false; });
+check(!toOmitted.length && P.resolve('p5', 5, true) === null && P.resolve('p8s', 2, true) === null, 'no link opens an omitted page (Dermatitis 5, Sun Exposure 2)', toOmitted.slice(0, 5).map(l => l.deck + ' ' + l.n).join(', '));
 // the two sun decks never cross: a question of one professor never links to the other's sun deck
 const cross = links.filter(l => l.u.q && (l.deck === 'sun' || l.deck === 'p8s') && D[l.deck].prof !== l.u.q.prof);
 check(!cross.length, 'a Sun citation in a question\'s source line goes to that question\'s own professor\'s deck', cross.slice(0, 6).map(l => l.u.where).join(', '));

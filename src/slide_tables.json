@@ -7,138 +7,739 @@
   "printed: [deck id, clean page, number]. Only for a deck cited by page (Dr. Sikazwe's): the viewer says which slide number is printed on a page and takes it to be the clean page's own place in the file, except for the rows here. Read from the clean deck with pdftotext on 2026-11-13: all 70 clean pages print their own place except page 59, which prints 51."
  ],
  "names": [
-  ["Smith Sun Exposure", "sun", 0],
-  ["Smith Sun", "sun", 1],
-  ["Dr. Smith's Sun Exposure", "sun", 0],
-  ["Patel Sun Exposure", "p8s", 0],
-  ["Patel Sun", "p8s", 1],
-  ["Dr. Patel's Sun Exposure", "p8s", 0],
-  ["Sun Exposure", "sun?", 0],
-  ["Sun", "sun?", 1],
-  ["SE", "p8s", 1],
-  ["Skin Pathophysiology", "pp", 0],
-  ["Skin-Pathophys", "pp", 0],
-  ["Smith Pathophys", "pp", 1],
-  ["Pathophysiology", "pp", 0],
-  ["Pathophys", "pp", 1],
-  ["PP", "pp", 1],
-  ["Skin Pharmacology", "pc", 0],
-  ["Smith PCol", "pc", 1],
-  ["PCol", "pc", 1],
-  ["PC", "pc", 1],
-  ["DPAW deck", "mc", 0],
-  ["DPAW", "mc", 1],
-  ["Patel Dermatitis", "p5", 1],
-  ["DT", "p5", 1],
-  ["Patel Acne", "p6", 1],
-  ["AT", "p6", 1],
-  ["Patel Scaly Dermatoses", "p7", 0],
-  ["Patel Scaly", "p7", 1],
-  ["Scaly Dermatoses", "p7", 0],
-  ["Scaly", "p7", 0],
-  ["SD", "p7", 1],
-  ["Patel Outdoor Exposures", "p8o", 0],
-  ["Patel Outdoor", "p8o", 1],
-  ["Outdoor Exposures", "p8o", 0],
-  ["Outdoor Exposure", "p8o", 0],
-  ["Outdoor", "p8o", 0],
-  ["OE", "p8o", 1],
-  ["Patel Wound Care", "p8w", 0],
-  ["Patel Wound", "p8w", 1],
-  ["Wound Care", "p8w", 0],
-  ["Wound", "p8w", 0],
-  ["WC", "p8w", 1],
-  ["Patel Warts", "p8c", 1],
-  ["Warts, Corns and Calluses", "p8c", 0],
-  ["Corns and Calluses", "p8c", 0],
-  ["Warts", "p8c", 0],
-  ["WCC", "p8c", 1]
+  [
+   "Smith Sun Exposure",
+   "sun",
+   0
+  ],
+  [
+   "Smith Sun",
+   "sun",
+   1
+  ],
+  [
+   "Dr. Smith's Sun Exposure",
+   "sun",
+   0
+  ],
+  [
+   "Patel Sun Exposure",
+   "p8s",
+   0
+  ],
+  [
+   "Patel Sun",
+   "p8s",
+   1
+  ],
+  [
+   "Dr. Patel's Sun Exposure",
+   "p8s",
+   0
+  ],
+  [
+   "Sun Exposure",
+   "sun?",
+   0
+  ],
+  [
+   "Sun",
+   "sun?",
+   1
+  ],
+  [
+   "SE",
+   "p8s",
+   1
+  ],
+  [
+   "Skin Pathophysiology",
+   "pp",
+   0
+  ],
+  [
+   "Skin-Pathophys",
+   "pp",
+   0
+  ],
+  [
+   "Smith Pathophys",
+   "pp",
+   1
+  ],
+  [
+   "Pathophysiology",
+   "pp",
+   0
+  ],
+  [
+   "Pathophys",
+   "pp",
+   1
+  ],
+  [
+   "PP",
+   "pp",
+   1
+  ],
+  [
+   "Skin Pharmacology",
+   "pc",
+   0
+  ],
+  [
+   "Smith PCol",
+   "pc",
+   1
+  ],
+  [
+   "PCol",
+   "pc",
+   1
+  ],
+  [
+   "PC",
+   "pc",
+   1
+  ],
+  [
+   "DPAW deck",
+   "mc",
+   0
+  ],
+  [
+   "DPAW",
+   "mc",
+   1
+  ],
+  [
+   "Patel Dermatitis",
+   "p5",
+   1
+  ],
+  [
+   "DT",
+   "p5",
+   1
+  ],
+  [
+   "Patel Acne",
+   "p6",
+   1
+  ],
+  [
+   "AT",
+   "p6",
+   1
+  ],
+  [
+   "Patel Scaly Dermatoses",
+   "p7",
+   0
+  ],
+  [
+   "Patel Scaly",
+   "p7",
+   1
+  ],
+  [
+   "Scaly Dermatoses",
+   "p7",
+   0
+  ],
+  [
+   "Scaly",
+   "p7",
+   0
+  ],
+  [
+   "SD",
+   "p7",
+   1
+  ],
+  [
+   "Patel Outdoor Exposures",
+   "p8o",
+   0
+  ],
+  [
+   "Patel Outdoor",
+   "p8o",
+   1
+  ],
+  [
+   "Outdoor Exposures",
+   "p8o",
+   0
+  ],
+  [
+   "Outdoor Exposure",
+   "p8o",
+   0
+  ],
+  [
+   "Outdoor",
+   "p8o",
+   0
+  ],
+  [
+   "OE",
+   "p8o",
+   1
+  ],
+  [
+   "Patel Wound Care",
+   "p8w",
+   0
+  ],
+  [
+   "Patel Wound",
+   "p8w",
+   1
+  ],
+  [
+   "Wound Care",
+   "p8w",
+   0
+  ],
+  [
+   "Wound",
+   "p8w",
+   0
+  ],
+  [
+   "WC",
+   "p8w",
+   1
+  ],
+  [
+   "Patel Warts",
+   "p8c",
+   1
+  ],
+  [
+   "Warts, Corns and Calluses",
+   "p8c",
+   0
+  ],
+  [
+   "Corns and Calluses",
+   "p8c",
+   0
+  ],
+  [
+   "Warts",
+   "p8c",
+   0
+  ],
+  [
+   "WCC",
+   "p8c",
+   1
+  ]
  ],
  "sections": [
-  ["ref-l1-classes", "pp", "Reference: Skin Pathophysiology, drug classes by disease", "sun"],
-  ["ref-l1-acnemap", "pp", "Reference: Skin Pathophysiology, acne pathology and its drugs", "sun"],
-  ["ref-l1-nr", "pc", "Reference: Skin Pharmacology, nuclear receptors", "sun"],
-  ["ref-l1-steroids", "pc", "Reference: Skin Pharmacology, topical corticosteroids", "sun"],
-  ["ref-l2", "pc", "Reference: Skin Pharmacology slides 16-42", "sun"],
-  ["ref-l3", "pc", "Reference: Skin Pharmacology slides 43-76", "sun"],
-  ["ref-targets", null, "Reference: drug targets; rows from several decks, each cell names its deck", "sun"],
-  ["ref-sun", "sun", "Reference: Dr. Smith's Sun Exposure", "sun"],
-  ["ref-s3", "mc", "Reference: DPAW pages 1-26", "sun"],
-  ["ref-s4", "mc", "Reference: DPAW pages 27-71", "sun"],
-  ["ref-p5-", "p5", "Reference: Dr. Patel, Dermatitis", "p8s"],
-  ["ref-p6-", "p6", "Reference: Dr. Patel, Acne", "p8s"],
-  ["ref-p7-", "p7", "Reference: Dr. Patel, Scaly Dermatoses", "p8s"],
-  ["ref-p8-otc", "p8o", "Reference: Dr. Patel, Outdoor Exposures", "p8s"],
-  ["ref-p8-plant", "p8o", "Reference: Dr. Patel, Outdoor Exposures", "p8s"],
-  ["ref-p8-bites", "p8o", "Reference: Dr. Patel, Outdoor Exposures", "p8s"],
-  ["ref-p8-vector", "p8o", "Reference: Dr. Patel, Outdoor Exposures", "p8s"],
-  ["ref-p8-lice", "p8o", "Reference: Dr. Patel, Outdoor Exposures", "p8s"],
-  ["ref-p8-venom", "p8o", "Reference: Dr. Patel, Outdoor Exposures", "p8s"],
-  ["ref-p8-sun", "p8s", "Reference: Dr. Patel, Sun Exposure", "p8s"],
-  ["ref-p8-smithpatel", ["sun", "p8s"], "Reference: where the two sun lectures differ: both sun decks, so a bare number needs its professor (a column heading or a name beside it)"],
-  ["ref-p8-wound", "p8w", "Reference: Dr. Patel, Wound Care", "p8s"],
-  ["ref-p8-wcc", "p8c", "Reference: Dr. Patel, Warts, Corns and Calluses", "p8s"],
-  ["tell-l1-diseases", "pp", "Tell apart: Skin Pathophysiology, the three diseases", "sun"],
-  ["tell-l1-drugs", "pc", "Tell apart: Skin Pharmacology slides 5-14", "sun"],
-  ["tell-l2", "pc", "Tell apart: Skin Pharmacology slides 16-42", "sun"],
-  ["tell-l3", "pc", "Tell apart: Skin Pharmacology slides 43-76", "sun"],
-  ["tell-smith-safety", "pc", "Tell apart: Skin Pharmacology, boxed warnings, pregnancy and interactions", "sun"],
-  ["tell-sun", "sun", "Tell apart: Dr. Smith's Sun Exposure and psoralens", "sun"],
-  ["tell-s3", "mc", "Tell apart: DPAW pages 1-26", "sun"],
-  ["tell-s4", "mc", "Tell apart: DPAW pages 27-71", "sun"],
-  ["gdeck-pp", "pp", "Guide heading: Skin Pathophysiology", "sun"],
-  ["gdeck-pc", "pc", "Guide heading: Skin Pharmacology", "sun"],
-  ["gdeck-sun", "sun", "Guide heading: Dr. Smith's Sun Exposure", "sun"],
-  ["gdeck-mc", "mc", "Guide heading: DPAW", "sun"],
-  ["gdeck-p5", "p5", "Guide heading: Dr. Patel, Dermatitis", "p8s"],
-  ["gdeck-p6", "p6", "Guide heading: Dr. Patel, Acne", "p8s"],
-  ["gdeck-p7", "p7", "Guide heading: Dr. Patel, Scaly Dermatoses", "p8s"],
-  ["gdeck-p8o", "p8o", "Guide heading: Dr. Patel, Outdoor Exposures", "p8s"],
-  ["gdeck-p8s", "p8s", "Guide heading: Dr. Patel, Sun Exposure", "p8s"],
-  ["gdeck-p8w", "p8w", "Guide heading: Dr. Patel, Wound Care", "p8s"],
-  ["gdeck-p8c", "p8c", "Guide heading: Dr. Patel, Warts, Corns and Calluses", "p8s"],
-  ["gobj-l1-4", "pc", "Guide: general mechanism of each class (under Skin Pharmacology)", "sun"],
-  ["gobj-l1-", "pp", "Guide: Skin Pathophysiology objectives 1-3", "sun"],
-  ["gobj-pp-", "pp", "Guide: Skin Pathophysiology", "sun"],
-  ["gobj-pc-", "pc", "Guide: Skin Pharmacology", "sun"],
-  ["gobj-sun-", "sun", "Guide: Dr. Smith's Sun Exposure", "sun"],
-  ["gobj-mc-", "mc", "Guide: DPAW", "sun"],
-  ["gobj-p5-", "p5", "Guide: Dr. Patel, Dermatitis", "p8s"],
-  ["gobj-p6-", "p6", "Guide: Dr. Patel, Acne", "p8s"],
-  ["gobj-p7-", "p7", "Guide: Dr. Patel, Scaly Dermatoses", "p8s"],
-  ["gobj-p8o-", "p8o", "Guide: Dr. Patel, Outdoor Exposures", "p8s"],
-  ["gobj-p8s-", "p8s", "Guide: Dr. Patel, Sun Exposure", "p8s"],
-  ["gobj-p8w-", "p8w", "Guide: Dr. Patel, Wound Care", "p8s"],
-  ["gobj-p8c-", "p8c", "Guide: Dr. Patel, Warts, Corns and Calluses", "p8s"],
-  ["at-", "mc", "Atlas board: every structure is from Dr. Sikazwe's DPAW deck", "sun"],
-  ["dzcases-atopic-dermatitis", "p5", "Diseases: the practice patients of this card are Dr. Patel's cases from this deck", "p8s"],
-  ["dzcases-diaper-dermatitis", "p5", "Diseases: the practice patients of this card are Dr. Patel's cases from this deck", "p8s"],
-  ["dzcases-acne", "p6", "Diseases: the practice patients of this card are Dr. Patel's cases from this deck", "p8s"],
-  ["dzcases-psoriasis", "p7", "Diseases: the practice patients of this card are Dr. Patel's cases from this deck", "p8s"],
-  ["dzcases-dandruff", "p7", "Diseases: the practice patients of this card are Dr. Patel's cases from this deck", "p8s"],
-  ["dzcases-seborrheic-dermatitis", "p7", "Diseases: the practice patients of this card are Dr. Patel's cases from this deck", "p8s"],
-  ["dzcases-cradle-cap", "p7", "Diseases: the practice patients of this card are Dr. Patel's cases from this deck", "p8s"],
-  ["dzcases-plant-dermatitis", "p8o", "Diseases: the practice patients of this card are Dr. Patel's cases from this deck", "p8s"],
-  ["dzcases-insect-bites", "p8o", "Diseases: the practice patients of this card are Dr. Patel's cases from this deck", "p8s"],
-  ["dzcases-vector-borne", "p8o", "Diseases: the practice patients of this card are Dr. Patel's cases from this deck", "p8s"],
-  ["dzcases-insect-stings", "p8o", "Diseases: the practice patients of this card are Dr. Patel's cases from this deck", "p8s"],
-  ["dzcases-lice", "p8o", "Diseases: the practice patients of this card are Dr. Patel's cases from this deck", "p8s"],
-  ["dzcases-scabies", "p8o", "Diseases: the practice patients of this card are Dr. Patel's cases from this deck", "p8s"],
-  ["dzcases-spider-bites", "p8o", "Diseases: the practice patients of this card are Dr. Patel's cases from this deck", "p8s"],
-  ["dzcases-snake-bites", "p8o", "Diseases: the practice patients of this card are Dr. Patel's cases from this deck", "p8s"],
-  ["dzcases-rabies", "p8o", "Diseases: the practice patients of this card are Dr. Patel's cases from this deck", "p8s"],
-  ["dzcases-sun-protection", "p8s", "Diseases: the practice patients of this card are Dr. Patel's cases from this deck", "p8s"],
-  ["dzcases-sunburn", "p8s", "Diseases: the practice patients of this card are Dr. Patel's cases from this deck", "p8s"],
-  ["dzcases-photoaging", "p8s", "Diseases: the practice patients of this card are Dr. Patel's cases from this deck", "p8s"],
-  ["dzcases-wounds", "p8w", "Diseases: the practice patients of this card are Dr. Patel's cases from this deck", "p8s"],
-  ["dzcases-burns", "p8w", "Diseases: the practice patients of this card are Dr. Patel's cases from this deck", "p8s"],
-  ["dzcases-warts", "p8c", "Diseases: the practice patients of this card are Dr. Patel's cases from this deck", "p8s"],
-  ["dzcases-corns-calluses", "p8c", "Diseases: the practice patients of this card are Dr. Patel's cases from this deck", "p8s"]
+  [
+   "ref-l1-classes",
+   "pp",
+   "Reference: Skin Pathophysiology, drug classes by disease",
+   "sun"
+  ],
+  [
+   "ref-l1-acnemap",
+   "pp",
+   "Reference: Skin Pathophysiology, acne pathology and its drugs",
+   "sun"
+  ],
+  [
+   "ref-l1-nr",
+   "pc",
+   "Reference: Skin Pharmacology, nuclear receptors",
+   "sun"
+  ],
+  [
+   "ref-l1-steroids",
+   "pc",
+   "Reference: Skin Pharmacology, topical corticosteroids",
+   "sun"
+  ],
+  [
+   "ref-l2",
+   "pc",
+   "Reference: Skin Pharmacology slides 16-42",
+   "sun"
+  ],
+  [
+   "ref-l3",
+   "pc",
+   "Reference: Skin Pharmacology slides 43-76",
+   "sun"
+  ],
+  [
+   "ref-targets",
+   null,
+   "Reference: drug targets; rows from several decks, each cell names its deck",
+   "sun"
+  ],
+  [
+   "ref-sun",
+   "sun",
+   "Reference: Dr. Smith's Sun Exposure",
+   "sun"
+  ],
+  [
+   "ref-s3",
+   "mc",
+   "Reference: DPAW pages 1-26",
+   "sun"
+  ],
+  [
+   "ref-s4",
+   "mc",
+   "Reference: DPAW pages 27-71",
+   "sun"
+  ],
+  [
+   "ref-p5-",
+   "p5",
+   "Reference: Dr. Patel, Dermatitis",
+   "p8s"
+  ],
+  [
+   "ref-p6-",
+   "p6",
+   "Reference: Dr. Patel, Acne",
+   "p8s"
+  ],
+  [
+   "ref-p7-",
+   "p7",
+   "Reference: Dr. Patel, Scaly Dermatoses",
+   "p8s"
+  ],
+  [
+   "ref-p8-otc",
+   "p8o",
+   "Reference: Dr. Patel, Outdoor Exposures",
+   "p8s"
+  ],
+  [
+   "ref-p8-plant",
+   "p8o",
+   "Reference: Dr. Patel, Outdoor Exposures",
+   "p8s"
+  ],
+  [
+   "ref-p8-bites",
+   "p8o",
+   "Reference: Dr. Patel, Outdoor Exposures",
+   "p8s"
+  ],
+  [
+   "ref-p8-vector",
+   "p8o",
+   "Reference: Dr. Patel, Outdoor Exposures",
+   "p8s"
+  ],
+  [
+   "ref-p8-lice",
+   "p8o",
+   "Reference: Dr. Patel, Outdoor Exposures",
+   "p8s"
+  ],
+  [
+   "ref-p8-venom",
+   "p8o",
+   "Reference: Dr. Patel, Outdoor Exposures",
+   "p8s"
+  ],
+  [
+   "ref-p8-sun",
+   "p8s",
+   "Reference: Dr. Patel, Sun Exposure",
+   "p8s"
+  ],
+  [
+   "ref-p8-smithpatel",
+   [
+    "sun",
+    "p8s"
+   ],
+   "Reference: where the two sun lectures differ: both sun decks, so a bare number needs its professor (a column heading or a name beside it)"
+  ],
+  [
+   "ref-p8-wound",
+   "p8w",
+   "Reference: Dr. Patel, Wound Care",
+   "p8s"
+  ],
+  [
+   "ref-p8-wcc",
+   "p8c",
+   "Reference: Dr. Patel, Warts, Corns and Calluses",
+   "p8s"
+  ],
+  [
+   "tell-l1-diseases",
+   "pp",
+   "Tell apart: Skin Pathophysiology, the three diseases",
+   "sun"
+  ],
+  [
+   "tell-l1-drugs",
+   "pc",
+   "Tell apart: Skin Pharmacology slides 5-14",
+   "sun"
+  ],
+  [
+   "tell-l2",
+   "pc",
+   "Tell apart: Skin Pharmacology slides 16-42",
+   "sun"
+  ],
+  [
+   "tell-l3",
+   "pc",
+   "Tell apart: Skin Pharmacology slides 43-76",
+   "sun"
+  ],
+  [
+   "tell-smith-safety",
+   "pc",
+   "Tell apart: Skin Pharmacology, boxed warnings, pregnancy and interactions",
+   "sun"
+  ],
+  [
+   "tell-sun",
+   "sun",
+   "Tell apart: Dr. Smith's Sun Exposure and psoralens",
+   "sun"
+  ],
+  [
+   "tell-s3",
+   "mc",
+   "Tell apart: DPAW pages 1-26",
+   "sun"
+  ],
+  [
+   "tell-s4",
+   "mc",
+   "Tell apart: DPAW pages 27-71",
+   "sun"
+  ],
+  [
+   "gdeck-pp",
+   "pp",
+   "Guide heading: Skin Pathophysiology",
+   "sun"
+  ],
+  [
+   "gdeck-pc",
+   "pc",
+   "Guide heading: Skin Pharmacology",
+   "sun"
+  ],
+  [
+   "gdeck-sun",
+   "sun",
+   "Guide heading: Dr. Smith's Sun Exposure",
+   "sun"
+  ],
+  [
+   "gdeck-mc",
+   "mc",
+   "Guide heading: DPAW",
+   "sun"
+  ],
+  [
+   "gdeck-p5",
+   "p5",
+   "Guide heading: Dr. Patel, Dermatitis",
+   "p8s"
+  ],
+  [
+   "gdeck-p6",
+   "p6",
+   "Guide heading: Dr. Patel, Acne",
+   "p8s"
+  ],
+  [
+   "gdeck-p7",
+   "p7",
+   "Guide heading: Dr. Patel, Scaly Dermatoses",
+   "p8s"
+  ],
+  [
+   "gdeck-p8o",
+   "p8o",
+   "Guide heading: Dr. Patel, Outdoor Exposures",
+   "p8s"
+  ],
+  [
+   "gdeck-p8s",
+   "p8s",
+   "Guide heading: Dr. Patel, Sun Exposure",
+   "p8s"
+  ],
+  [
+   "gdeck-p8w",
+   "p8w",
+   "Guide heading: Dr. Patel, Wound Care",
+   "p8s"
+  ],
+  [
+   "gdeck-p8c",
+   "p8c",
+   "Guide heading: Dr. Patel, Warts, Corns and Calluses",
+   "p8s"
+  ],
+  [
+   "gobj-l1-4",
+   "pc",
+   "Guide: general mechanism of each class (under Skin Pharmacology)",
+   "sun"
+  ],
+  [
+   "gobj-l1-",
+   "pp",
+   "Guide: Skin Pathophysiology objectives 1-3",
+   "sun"
+  ],
+  [
+   "gobj-pp-",
+   "pp",
+   "Guide: Skin Pathophysiology",
+   "sun"
+  ],
+  [
+   "gobj-pc-",
+   "pc",
+   "Guide: Skin Pharmacology",
+   "sun"
+  ],
+  [
+   "gobj-sun-",
+   "sun",
+   "Guide: Dr. Smith's Sun Exposure",
+   "sun"
+  ],
+  [
+   "gobj-mc-",
+   "mc",
+   "Guide: DPAW",
+   "sun"
+  ],
+  [
+   "gobj-p5-",
+   "p5",
+   "Guide: Dr. Patel, Dermatitis",
+   "p8s"
+  ],
+  [
+   "gobj-p6-",
+   "p6",
+   "Guide: Dr. Patel, Acne",
+   "p8s"
+  ],
+  [
+   "gobj-p7-",
+   "p7",
+   "Guide: Dr. Patel, Scaly Dermatoses",
+   "p8s"
+  ],
+  [
+   "gobj-p8o-",
+   "p8o",
+   "Guide: Dr. Patel, Outdoor Exposures",
+   "p8s"
+  ],
+  [
+   "gobj-p8s-",
+   "p8s",
+   "Guide: Dr. Patel, Sun Exposure",
+   "p8s"
+  ],
+  [
+   "gobj-p8w-",
+   "p8w",
+   "Guide: Dr. Patel, Wound Care",
+   "p8s"
+  ],
+  [
+   "gobj-p8c-",
+   "p8c",
+   "Guide: Dr. Patel, Warts, Corns and Calluses",
+   "p8s"
+  ],
+  [
+   "at-",
+   "mc",
+   "Atlas board: every structure is from Dr. Sikazwe's DPAW deck",
+   "sun"
+  ],
+  [
+   "dzcases-atopic-dermatitis",
+   "p5",
+   "Diseases: the practice patients of this card are Dr. Patel's cases from this deck",
+   "p8s"
+  ],
+  [
+   "dzcases-diaper-dermatitis",
+   "p5",
+   "Diseases: the practice patients of this card are Dr. Patel's cases from this deck",
+   "p8s"
+  ],
+  [
+   "dzcases-acne",
+   "p6",
+   "Diseases: the practice patients of this card are Dr. Patel's cases from this deck",
+   "p8s"
+  ],
+  [
+   "dzcases-psoriasis",
+   "p7",
+   "Diseases: the practice patients of this card are Dr. Patel's cases from this deck",
+   "p8s"
+  ],
+  [
+   "dzcases-dandruff",
+   "p7",
+   "Diseases: the practice patients of this card are Dr. Patel's cases from this deck",
+   "p8s"
+  ],
+  [
+   "dzcases-seborrheic-dermatitis",
+   "p7",
+   "Diseases: the practice patients of this card are Dr. Patel's cases from this deck",
+   "p8s"
+  ],
+  [
+   "dzcases-cradle-cap",
+   "p7",
+   "Diseases: the practice patients of this card are Dr. Patel's cases from this deck",
+   "p8s"
+  ],
+  [
+   "dzcases-plant-dermatitis",
+   "p8o",
+   "Diseases: the practice patients of this card are Dr. Patel's cases from this deck",
+   "p8s"
+  ],
+  [
+   "dzcases-insect-bites",
+   "p8o",
+   "Diseases: the practice patients of this card are Dr. Patel's cases from this deck",
+   "p8s"
+  ],
+  [
+   "dzcases-vector-borne",
+   "p8o",
+   "Diseases: the practice patients of this card are Dr. Patel's cases from this deck",
+   "p8s"
+  ],
+  [
+   "dzcases-insect-stings",
+   "p8o",
+   "Diseases: the practice patients of this card are Dr. Patel's cases from this deck",
+   "p8s"
+  ],
+  [
+   "dzcases-lice",
+   "p8o",
+   "Diseases: the practice patients of this card are Dr. Patel's cases from this deck",
+   "p8s"
+  ],
+  [
+   "dzcases-scabies",
+   "p8o",
+   "Diseases: the practice patients of this card are Dr. Patel's cases from this deck",
+   "p8s"
+  ],
+  [
+   "dzcases-spider-bites",
+   "p8o",
+   "Diseases: the practice patients of this card are Dr. Patel's cases from this deck",
+   "p8s"
+  ],
+  [
+   "dzcases-snake-bites",
+   "p8o",
+   "Diseases: the practice patients of this card are Dr. Patel's cases from this deck",
+   "p8s"
+  ],
+  [
+   "dzcases-rabies",
+   "p8o",
+   "Diseases: the practice patients of this card are Dr. Patel's cases from this deck",
+   "p8s"
+  ],
+  [
+   "dzcases-sun-protection",
+   "p8s",
+   "Diseases: the practice patients of this card are Dr. Patel's cases from this deck",
+   "p8s"
+  ],
+  [
+   "dzcases-sunburn",
+   "p8s",
+   "Diseases: the practice patients of this card are Dr. Patel's cases from this deck",
+   "p8s"
+  ],
+  [
+   "dzcases-photoaging",
+   "p8s",
+   "Diseases: the practice patients of this card are Dr. Patel's cases from this deck",
+   "p8s"
+  ],
+  [
+   "dzcases-wounds",
+   "p8w",
+   "Diseases: the practice patients of this card are Dr. Patel's cases from this deck",
+   "p8s"
+  ],
+  [
+   "dzcases-burns",
+   "p8w",
+   "Diseases: the practice patients of this card are Dr. Patel's cases from this deck",
+   "p8s"
+  ],
+  [
+   "dzcases-warts",
+   "p8c",
+   "Diseases: the practice patients of this card are Dr. Patel's cases from this deck",
+   "p8s"
+  ],
+  [
+   "dzcases-corns-calluses",
+   "p8c",
+   "Diseases: the practice patients of this card are Dr. Patel's cases from this deck",
+   "p8s"
+  ]
  ],
  "notes": [
-  ["pp", 38, "The PollEv questions cited at this slide were asked in class while it was up. The slide does not print them."]
+  [
+   "pp",
+   38,
+   "The PollEv questions cited at this slide were asked in class while it was up. The slide does not print them."
+  ]
  ],
  "printed": [
-  ["mc", 59, 51]
+  [
+   "mc",
+   59,
+   51
+  ]
+ ],
+ "omit": [
+  [
+   "p5",
+   5,
+   "Syllabus review: assignment due dates, exam dates and the review-session time"
+  ],
+  [
+   "p8s",
+   2,
+   "Reminders: assignment due dates and the review-session time"
+  ]
  ]
 }

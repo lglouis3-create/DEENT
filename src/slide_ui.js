@@ -122,7 +122,12 @@ const SLIDE_UI = (() => {
 
     /* a cited number of a deck -> what is shown: {deck, page} (the deck may be another one: Dr.
        Smith's Sun slides 1-4 are slides of her Skin Pharmacology deck); null = nothing to show */
+    const OMIT = {}; (S.omit || []).forEach(o => { OMIT[o[0] + ' ' + o[1]] = 1; });   // pages the viewer does not show (course administration)
     function resolve(deck, n, printed){
+      const r = resolveAny(deck, n, printed);
+      return r && !OMIT[r.deck + ' ' + r.page] ? r : null;
+    }
+    function resolveAny(deck, n, printed){
       const d = D[deck]; if (!d || !(n >= 1)) return null;
       if (printed) return n <= d.pages ? {deck, page: n} : null;
       if (n > d.cited) return null;

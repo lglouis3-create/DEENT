@@ -113,5 +113,6 @@ const SLIDES = {
   ["dzcases-corns-calluses", "p8c", "Diseases: the practice patients of this card are Dr. Patel's cases from this deck", "p8s"]
  ],
  "notes": [["pp", 38, "The PollEv questions cited at this slide were asked in class while it was up. The slide does not print them."]],
- "printed": [["mc", 59, 51]]
+ "printed": [["mc", 59, 51]],
+ "omit": [["p5", 5, "Syllabus review: assignment due dates, exam dates and the review-session time"], ["p8s", 2, "Reminders: assignment due dates and the review-session time"]]
 };
