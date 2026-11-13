@@ -388,7 +388,7 @@ const onDisk = (deck, n, printed) => { const r = P.resolve(deck, n, printed); re
         const look = await page.evaluate(() => { __answered('L2-017');
           const cs = b => { const c = getComputedStyle(b); return {display: c.display, color: c.color, size: c.fontSize}; };
           const bs = [...document.querySelectorAll('#v-quiz .cmpcell figcaption .slk')], ref = document.querySelector('#v-quiz .why .cite .slk');
-          return {n: bs.length, strip: bs.map(cs), ref: ref ? cs(ref) : null, cap: bs.length ? getComputedStyle(bs[0].parentElement).fontSize : '', sameLine: bs.every(b => { const r = b.getBoundingClientRect(), p = b.previousSibling; if (!p || p.nodeType !== 3 || !p.data.trim()) return true;
+          return {n: bs.length, strip: bs.map(cs), ref: ref ? cs(ref) : null, cap: bs.length ? getComputedStyle(bs[0].parentElement).fontSize : '', sameLine: bs.every(b => { const t0 = document.createRange(); t0.selectNodeContents(b); const r = t0.getBoundingClientRect(), p = b.previousSibling;   // the link's own text: its box carries 6 px of touch padding if (!p || p.nodeType !== 3 || !p.data.trim()) return true;
             const g = document.createRange(); g.setStart(p, Math.max(0, p.data.length - 1)); g.setEnd(p, p.data.length); const q = g.getBoundingClientRect(); return Math.abs(q.top - r.top) < 4 || r.left < q.left; })}; });
         check(look.n > 0 && !!look.ref && look.strip.every(c => c.display === 'inline' && c.color === look.ref.color && c.size === look.cap) && look.sameLine,
           `a citation under a structure stays in its line and has the color of the other slide links (${look.n} in L2-017)`, {strip: look.strip[0], ref: look.ref, cap: look.cap, sameLine: look.sameLine});

@@ -821,7 +821,7 @@ dialog.slv::backdrop{background:rgba(0,0,0,.55)}
     main = document.querySelector('main');
     // under a structure of an explanation the core draws every span of the caption as a block of small dim text
     // (".cmpcell figcaption span"); a citation there stays in its line and looks like the other slide links
-    const STRIP_CSS = '.cmpcell figcaption span.slk{display:inline;margin:0;font-size:inherit;color:var(--accent,#2F5FA8)}\n@media print{.cmpcell figcaption span.slk{color:inherit}}\n';
+    const STRIP_CSS = '.cmpcell figcaption span.slk{display:inline;font-size:inherit;color:var(--accent,#2F5FA8)}\n@media print{.cmpcell figcaption span.slk{color:inherit}}\n';
     const style = document.createElement('style'); style.textContent = CSS + STRIP_CSS; document.head.appendChild(style);
     let heldKey = null;                                           // the key whose press opened the viewer, until it is let go
     // first in line: a slide link does nothing but open its slide
