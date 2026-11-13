@@ -330,6 +330,8 @@ const COURSE = {
           // (course-level, Louis 2026-11-13). After jump_ui.js: it wraps that file's scrollToEl and
           // jump, and its wrappers of renderGuide/renderTell/renderRef run after every other file's.
           'examfold_ui.js',
+          // Space and a rule between the sections of Reference, Guides and Tell apart (Louis 2026-11-13)
+          'refsep_ui.js',
           // Browser-tab icon on the live page (brand.py wrote it into the <head> until 2026-11-09)
           'icon_ui.js'],
   // (figph_ui.js, the course-level Enlarge placeholder fix, left the list on 2026-11-09: kit

@@ -14,6 +14,7 @@ Every update adds its bullets here in the same commit that makes the change.
 - A slide citation (for example "PCol slide 24") is now a link: tap it to see that slide of the deck.
 - The slide viewer has Previous, Next and Open full size; it shows the clean copy of all 11 decks.
 - Slide links appear after an answer and in Reference, Tell apart, Guides, Atlas, Drug list and Diseases.
+- Reference, Guides and Tell apart: each section now has a rule and more space above it, so a table, its note and its figure no longer run into the next section.
 
 ## 2026-11-13 (wide windows)
 - On a Mac or iPad the page now grows with the window (up to 1,680 px wide) and no longer leaves wide margins.
