@@ -84,7 +84,7 @@ QUESTIONS.push(
 {id:'BL2-007', type:'blank', skill:'mech', prof:'Smith', tier:'new', topic:'l2-pde', sub:'cris', concept:'b-pde4-target',
  tags:['blank'], source:'slide', dupOf:'L2-115',
  stem:"Crisaborole and apremilast inhibit the enzyme ___.",
- accept:["phosphodiesterase 4", "PDE4", "PDE-4", "PDE 4", "PDE", "phosphodiesterase4", "phosphodiesterase type 4", "phosphodiesterase 4 (PDE-4)"],
+ accept:["phosphodiesterase 4", "PDE4", "PDE-4", "PDE", "phosphodiesterase4", "phosphodiesterase type 4", "phosphodiesterase 4 (PDE-4)"],
  why:"Slides 32–34, \"Phosphodiesterase 4 (PDE-4) inhibitors\": crisaborole (slide 33) and apremilast (slide 34). PDE4 is the predominant PDE isoform in inflammatory cells (slide 32).",
  cite:BQ_PC2+" slides 32–34"},
 
