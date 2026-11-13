@@ -111,8 +111,13 @@ const onDisk = (deck, n, printed) => { const r = P.resolve(deck, n, printed); re
       });
       check(post.inCite >= 1 && post.inWhy > post.inCite && !post.inOpt, `after the answer: the source line has ${post.inCite} slide button(s), the explanation ${post.inWhy - post.inCite} more, the options none`, post);
       check(/; T \d/.test(post.cite) && !post.tr && !post.texts.some(t => /^T\b/.test(t)), 'the transcript lines in that source line stay text', post.cite);
+      const role = await page.evaluate(() => { const b = document.querySelector('#v-quiz .cite .slk'); return {role: b.getAttribute('role'), tab: b.tabIndex, label: b.getAttribute('aria-label'), text: b.textContent}; });
+      check(role.role === 'button' && role.tab === 0 && role.label.indexOf(role.text) === 0 && /: open Dr\. Smith, Skin Pharmacology, slide \d+$/.test(role.label), 'a slide link is a button to the keyboard and a screen reader, named by its own text and its slide', role);
       const one = await opens('question source line', pickIn('#v-quiz .cite .slk'), 'key');
       if (one) {
+        await page.keyboard.press('Escape'); await settle(150);
+        await page.keyboard.press(' '); const sp = await loaded();
+        check(!!sp && sp.open && sp.src === '../' + one.want.file, 'Space opens it too');
         const p0 = one.want.r.page, d0 = one.want.r.deck, at = async () => { const v = await loaded(); return v.src; };
         await page.keyboard.press('ArrowRight'); const a = await at();
         await page.evaluate(() => document.querySelector('dialog.slv [data-slv=prev]').click()); const b = await at();
@@ -164,6 +169,20 @@ const onDisk = (deck, n, printed) => { const r = P.resolve(deck, n, printed); re
       }
       const bold = await page.evaluate(() => { show('ref'); const b = document.querySelector('#v-ref h3 .slk'); return b ? getComputedStyle(b).fontWeight === getComputedStyle(b.parentElement).fontWeight : null; });
       check(bold !== false, 'a slide button in a heading keeps the heading\'s weight');
+      // the links change no line: with them taken out again, each tab is exactly as tall
+      const tall = await page.evaluate(async () => {
+        const out = {};
+        for (const v of ['ref', 'tell', 'guide', 'atlas', 'drugs', 'diagrams']) {
+          show(v); await new Promise(r => setTimeout(r, 700));
+          const el = document.getElementById('v-' + v), h1 = el.getBoundingClientRect().height, n = el.querySelectorAll('.slk').length;
+          el.querySelectorAll('.slk').forEach(b => { const p = b.parentNode; p.replaceChild(document.createTextNode(b.textContent), b); p.normalize(); });
+          const h0 = el.getBoundingClientRect().height;
+          SLIDE_UI.relink();
+          out[v] = {n, back: el.querySelectorAll('.slk').length, d: Math.abs(h1 - h0)};
+        }
+        return out;
+      });
+      check(Object.values(tall).every(x => x.n > 0 && x.back === x.n && x.d < 0.5), 'with the links taken out, every reading tab is exactly as tall (no line re-wraps), and they come back', tall);
 
       /* ---- Diseases: a card, a practice patient, a drug panel (a dialog over a dialog) ---- */
       await page.evaluate(() => { show('dz'); const c = DZ.cards.find(x => x.id === 'acne'); DZ_UI.state.view = 'cards'; DZ_UI.state.card = c.id; c.steps.forEach((s, i) => { DZ_UI.state.open[c.id + ':' + i] = true; }); DZ_UI.render(); });
@@ -239,10 +258,31 @@ const onDisk = (deck, n, printed) => { const r = P.resolve(deck, n, printed); re
       await page.evaluate(() => document.querySelector('dialog.slv [data-slv=close]').click()); await settle(150);
       check(await page.evaluate(() => !document.querySelector('dialog.slv').open && document.activeElement.hasAttribute('data-slt')), 'Close closes it and focus is back on the citation');
 
+      /* ---- a slide with a note; a browser without <dialog> ---- */
+      await page.evaluate(() => { show('topics'); SLIDE_UI.open('pp', 38, 0, false, null); });
+      const n38 = await loaded();
+      check(!!n38 && n38.open && /PollEv questions/.test(n38.note) && n38.src === '../' + P.file('pp', 38), 'Skin Pathophysiology slide 38 opens with its note about the PollEv questions', n38 && n38.note);
+      await page.evaluate(() => { SLIDE_UI.open('pp', 37, 0, false, null); }); await settle(200);
+      check(!(await viewer()).note, 'the slide before it has no note');
+      await page.evaluate(() => SLIDE_UI.close());
+      await page.evaluate(() => { show('ref'); HTMLDialogElement.prototype.showModal = undefined; });
+      await settle(800);
+      const fbOk = await page.evaluate(async () => {
+        try { const b = document.querySelector('#v-ref td .slk'); b.scrollIntoView({block: 'center'}); b.focus(); b.click(); await new Promise(r => setTimeout(r, 500));
+          const all = document.querySelectorAll('dialog.slv'), d = all[all.length - 1], r = d.getBoundingClientRect(), cs = getComputedStyle(d);
+          const shown = d.hasAttribute('open') && cs.display !== 'none' && cs.position === 'fixed' && r.width > 200 && r.left >= 0 && r.right <= innerWidth + 0.5 && !!d.querySelector('.slv-img').getAttribute('src');
+          d.dispatchEvent(new KeyboardEvent('keydown', {key: 'Escape', bubbles: true})); await new Promise(r => setTimeout(r, 200));
+          return {shown, closed: !d.hasAttribute('open'), back: document.activeElement === b, n: all.length};
+        } catch (e) { return {error: String(e)}; }
+      });
+      check(fbOk.shown && fbOk.closed && fbOk.back, 'in a browser without <dialog> the viewer still opens over the page, Escape closes it and focus goes back', fbOk);
+
       /* ---- quiet when nothing changes; nothing stored ---- */
-      await page.evaluate(() => show('guide')); await settle(1200);
-      const idle = await page.evaluate(() => new Promise(r => { const a = SLIDE_UI.stats.runs; setTimeout(() => r(SLIDE_UI.stats.runs - a), 1200); }));
-      check(idle === 0, 'with Guides open and nothing changing, the linkifier does not run', idle + ' runs in 1.2 s');
+      for (const v of ['guide', 'atlas', 'drugs', 'dz']) {
+        await page.evaluate(v => show(v), v); await settle(1200);
+        const idle = await page.evaluate(() => new Promise(r => { const a = SLIDE_UI.stats.runs; setTimeout(() => r(SLIDE_UI.stats.runs - a), 1200); }));
+        check(idle === 0, `with ${v} open and nothing changing, the linkifier does not run`, idle + ' runs in 1.2 s');
+      }
       const st = await page.evaluate(() => ({ms: Math.round(SLIDE_UI.stats.ms), runs: SLIDE_UI.stats.runs, links: SLIDE_UI.stats.links}));
       console.log(`  linkifier: ${st.runs} passes, ${st.links} buttons made, ${st.ms} ms in all`);
       const keys1 = await page.evaluate(() => Object.keys(localStorage).concat(Object.keys(sessionStorage)).sort());

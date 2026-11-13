@@ -4,7 +4,8 @@
    it says this slides and links them to the corresponding slide", and the
    Exam 2 decks after them).
 
-   Wherever the page cites a slide of a deck, the citation becomes a button
+   Wherever the page cites a slide of a deck, the citation becomes a control
+   (an inline span with the role of a button, so the line wraps as it did)
    that opens that slide from the clean copy of the deck (deck/<deck>/<NN>.webp,
    render_deck.py; the page map and the tables are slide_data.js, written by
    slide_map.py from the decks and slide_tables.json).
@@ -252,7 +253,8 @@ const SLIDE_UI = (() => {
   const UNIT_SEL = 'p,li,td,th,dd,dt,figcaption,h2,h3,h4,h5,h6,small,div,section,article,span.ln,span.dlsrc,span.dzsrc,span.wtxt,span.atpg,span.stepwhy';
   const DZPROF = {sm: 'Smith', sk: 'Sikazwe', pa: 'Patel'};
   const SLIDE_HEAD = /^\s*(?:slides?|pages?)\s*(?:;.*)?$/i;
-  const seen = new WeakSet();          // text nodes already read
+  const seen = new WeakMap();          // text node -> its text when it was read (a node whose text changed is read again)
+  const mark = n => seen.set(n, n.data);
   const stats = {runs: 0, links: 0, ms: 0};
   const txt = el => (el && el.textContent) || '';
 
@@ -327,7 +329,7 @@ const SLIDE_UI = (() => {
       nodes.push({n, at: text.length, skip: !!p.closest(SKIP)});
       text += n.data;
     }
-    nodes.forEach(x => seen.add(x.n));
+    nodes.forEach(x => mark(x.n));
     if (!/\d/.test(text)) return 0;
     const ctx = Object.assign({decks: []}, ctxOf(unit) || {});
     // a figure caption: the one deck it names; a table cell: the one deck its column heading names
@@ -347,15 +349,17 @@ const SLIDE_UI = (() => {
       if (!x || x.skip || !x.n.parentNode) return;               // split over two nodes, or inside a control: left as text
       const r = P.resolve(l.deck, l.n, l.printed); if (!r) return;
       const mid = x.n.splitText(l.s - x.at); mid.splitText(l.e - l.s);
-      const b = document.createElement('button');
-      b.type = 'button'; b.className = 'slk';
+      // a span with the role of a button: it wraps inside a line as the text did (a <button> is one
+      // unbreakable box, which re-wrapped lines and changed the height of the page after it was drawn)
+      const b = document.createElement('span');
+      b.className = 'slk'; b.setAttribute('role', 'button'); b.setAttribute('tabindex', '0');
       b.setAttribute('data-deck', l.deck); b.setAttribute('data-n', l.n);
       if (l.to) b.setAttribute('data-to', l.to);
       if (l.printed) b.setAttribute('data-printed', '1');
       b.setAttribute('aria-haspopup', 'dialog');
       b.setAttribute('aria-label', mid.data + ': open ' + D[r.deck].label + ', ' + D[r.deck].unit.toLowerCase() + ' ' + P.citedOf(r.deck, r.page));
       mid.parentNode.insertBefore(b, mid); b.appendChild(mid);
-      seen.add(mid); if (b.previousSibling) seen.add(b.previousSibling); if (b.nextSibling) seen.add(b.nextSibling);
+      mark(mid); if (b.previousSibling && b.previousSibling.nodeType === 3) mark(b.previousSibling); if (b.nextSibling && b.nextSibling.nodeType === 3) mark(b.nextSibling);
       made++;
     });
     return made;
@@ -366,8 +370,8 @@ const SLIDE_UI = (() => {
       const units = new Set(), w = document.createTreeWalker(root, 4);
       let n;
       while ((n = w.nextNode())) {
-        if (seen.has(n)) continue;
-        seen.add(n);
+        if (seen.get(n) === n.data) continue;
+        mark(n);
         const p = n.parentElement;
         if (!p || !/\d/.test(n.data) || p.closest(SKIP)) continue;
         const u = p.closest(UNIT_SEL);
@@ -423,6 +427,7 @@ const SLIDE_UI = (() => {
     let msg = '';
     if (f && f.deck !== V.deck) msg = 'Cited as ' + D[f.deck].label + ', ' + D[f.deck].unit.toLowerCase() + ' ' + f.n + '. That slide is ' + unit.toLowerCase() + ' ' + P.citedOf(V.deck, f.page) + ' of this deck.';
     else if (f && f.to) msg = 'Cited: ' + unit.toLowerCase() + 's ' + f.n + '–' + f.to + '.';
+    (SLIDES.notes || []).forEach(r => { if (r[0] === V.deck && r[1] === V.page) msg += (msg ? ' ' : '') + r[2]; });
     note.textContent = msg; note.hidden = !msg;
     const img = q('.slv-img');
     q('.slv-err').hidden = true; img.classList.remove('bad');
@@ -448,7 +453,7 @@ const SLIDE_UI = (() => {
     const d = V.dlg;
     if (!d.open) {
       V.modal = typeof d.showModal === 'function';
-      if (V.modal) d.showModal(); else d.setAttribute('open', '');
+      if (V.modal) d.showModal(); else { d.classList.add('slv-fb'); d.setAttribute('open', ''); }   // a browser without <dialog>
     }
     const x = d.querySelector('.slv-x'); if (x) { try { x.focus({preventScroll: true}); } catch (e) {} }
     return true;
@@ -460,16 +465,14 @@ const SLIDE_UI = (() => {
   }
 
   const CSS = `
-.slk{font:inherit;line-height:inherit;letter-spacing:inherit;color:var(--accent,#2F5FA8);background:none;border:0;border-radius:3px;margin:0;padding:0;
-  min-height:0;display:inline;text-align:inherit;white-space:normal;cursor:pointer;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:2px;
-  -webkit-appearance:none;appearance:none;-webkit-tap-highlight-color:rgba(47,95,168,.18)}
+.slk{color:var(--accent,#2F5FA8);border-radius:3px;cursor:pointer;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:2px;
+  -webkit-tap-highlight-color:rgba(47,95,168,.18)}
 .slk:hover{background:var(--accent-bg,rgba(47,95,168,.1))}
 .slk:focus-visible{outline:2px solid var(--accent,#2F5FA8);outline-offset:1px}
-h3 .slk,h4 .slk,h5 .slk{font-weight:inherit}
 dialog.slv{border:0;border-radius:14px;padding:0;width:min(1120px,calc(100vw - 16px));max-width:none;max-height:calc(100vh - 16px);max-height:calc(100dvh - 16px);
   background:var(--paper,#fff);color:var(--text,#1d2733);overflow:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;box-sizing:border-box}
 dialog.slv:not([open]){display:none}
-dialog.slv[open]:not(:modal){position:fixed;inset:8px;margin:auto;z-index:2147483000;box-shadow:0 0 0 100vmax rgba(0,0,0,.45)}
+dialog.slv.slv-fb[open]{display:block;position:fixed;top:8px;left:8px;right:8px;margin:0 auto;z-index:2147483000;box-shadow:0 0 0 100vmax rgba(0,0,0,.45)}
 dialog.slv::backdrop{background:rgba(0,0,0,.55)}
 .slv-in{padding:10px 12px 12px}
 .slv-head{display:flex;align-items:flex-start;gap:10px}
@@ -514,14 +517,16 @@ dialog.slv::backdrop{background:rgba(0,0,0,.55)}
   try {
     main = document.querySelector('main');
     const style = document.createElement('style'); style.textContent = CSS; document.head.appendChild(style);
-    // one listener, first in line: a slide button does nothing but open its slide
-    document.addEventListener('click', e => {
-      const b = e.target && e.target.closest ? e.target.closest('button.slk') : null;
-      if (!b) return;
+    // first in line: a slide link does nothing but open its slide
+    const act = e => {
+      const b = e.target && e.target.closest ? e.target.closest('.slk') : null;
+      if (!b || (e.type === 'keydown' && e.key !== 'Enter' && e.key !== ' ')) return;
       e.preventDefault(); e.stopPropagation();
       try { open(b.getAttribute('data-deck'), +b.getAttribute('data-n'), +b.getAttribute('data-to') || 0, b.hasAttribute('data-printed'), b); }
       catch (err) { console.error('The slide could not be opened.', err); }
-    }, true);
+    };
+    document.addEventListener('click', act, true);
+    document.addEventListener('keydown', act, true);            // Enter and Space, as on a button
     // a change inside a control is never a citation (dianarr_ui.js rewrites its Listen buttons every frame)
     mo = new MutationObserver(recs => {
       for (let i = 0; i < recs.length; i++) {

@@ -47,7 +47,7 @@ check(!!P && typeof P.scan === 'function' && Object.keys(UI).length === 1, 'slid
 check(files.indexOf('slide_data.js') >= 0 && files.indexOf('slide_ui.js') === files.indexOf('slide_data.js') + 1 && files.indexOf('slide_data.js') > files.indexOf('dz_ui.js'),
   'course.js `files` lists slide_data.js then slide_ui.js, after dz_ui.js');
 const tables = JSON.parse(fs.readFileSync(path.join(SRC, 'slide_tables.json'), 'utf8'));
-check(JSON.stringify(tables.names) === JSON.stringify(S.names) && JSON.stringify(tables.sections) === JSON.stringify(S.sections),
+check(JSON.stringify(tables.names) === JSON.stringify(S.names) && JSON.stringify(tables.sections) === JSON.stringify(S.sections) && JSON.stringify(tables.notes || []) === JSON.stringify(S.notes || []),
   'slide_data.js carries slide_tables.json as it stands (python3 slide_map.py --tables after an edit)');
 const lectures = vm.runInContext('COURSE.lectures', sb);
 const noDeck = lectures.filter(l => !ids.some(id => D[id].files.includes(l.deck)));
@@ -56,7 +56,8 @@ const profBad = lectures.filter(l => { const id = ids.find(i => D[i].files.inclu
 check(!profBad.length, 'each deck carries the professor and exam course.js gives it', profBad.map(l => l.deck).join(', '));
 const badName = (S.names || []).filter(r => r[1] !== 'sun?' && !D[r[1]]);
 const badSec = (S.sections || []).filter(r => (Array.isArray(r[1]) ? r[1] : r[1] === null ? [] : [r[1]]).some(d => !D[d]) || (r[3] && !D[r[3]]));
-check(!badName.length && !badSec.length, `the names (${S.names.length}) and sections (${S.sections.length}) tables name only decks that exist`, badName.concat(badSec).map(r => r[0]).join(', '));
+const badNote = (S.notes || []).filter(r => !D[r[0]] || !(r[1] >= 1 && r[1] <= D[r[0]].pages) || typeof r[2] !== 'string' || !r[2].trim());
+check(!badName.length && !badSec.length && !badNote.length, `the names (${S.names.length}), sections (${S.sections.length}) and notes (${(S.notes || []).length}) tables name only decks and pages that exist`, badName.concat(badSec, badNote).map(r => r[0]).join(', '));
 const badMap = [];
 for (const id of ids) {
   const d = D[id];
@@ -363,6 +364,23 @@ else {
   console.log(`\n  To look at (${miss.length}): the words of the answer and explanation are not on the linked slide. The usual reasons: the fact was said in lecture (the source line also gives a transcript place), the slide shows it as a picture or a structure, or the question combines slides.`);
   (ALL ? miss : miss.slice(0, 40)).forEach(x => console.log(`    ${x.q.id}  ${[...new Set(x.pages.map(r => r.deck + ' ' + r.page))].join(', ')}  answer words on the slide ${x.kh.length}/${x.keyW.length}, explanation words ${x.eh.length}/${x.expl.length}  | ${x.q.cite}`));
   if (!ALL && miss.length > 40) console.log(`    … ${miss.length - 40} more with --all`);
+
+  /* the bare numbers in explanations and reading sections took their deck from their place. Is
+     another deck of the same professor, at the same number, a better fit for the line's words? */
+  const bare = links.filter(l => /^(bare|Slide column)/.test(l.form) && !l.printed);
+  let same = 0, better = 0, blank = 0;
+  const odd = [];
+  for (const l of bare) {
+    const lw = [...new Set(words(l.u.text))];
+    const hits = d => { let t = ''; for (let n = l.n; n <= (l.to || l.n); n++) { const r = P.resolve(d, n); if (r) t += '\n' + (pageText[r.deck][r.page - 1] || ''); } const pw = new Set(words(t)); return {h: lw.filter(w => pw.has(w)).length, size: pw.size}; };
+    const own = hits(l.deck);
+    if (own.size < 12) { blank++; continue; }
+    const alts = ids.filter(d => d !== l.deck && D[d].prof === D[l.deck].prof && (l.to || l.n) <= D[d].cited).map(d => [d, hits(d).h]).sort((x, y) => y[1] - x[1]);
+    if (alts.length && alts[0][1] >= own.h + 3 && own.h <= 1) { better++; odd.push({l, own: own.h, alt: alts[0]}); } else same++;
+  }
+  console.log(`\n  Bare numbers (${bare.length}: explanations, reading sections, Diseases): the line's own words against the linked slide and against the same number in the professor's other decks`);
+  console.log(`  ${same} fit the linked deck as well as or better than any other; ${blank} point to picture slides; ${better} have at most one word on the linked slide and at least three more on another deck's slide of that number:`);
+  (ALL ? odd : odd.slice(0, 30)).forEach(x => console.log(`    ${x.l.u.group} ${x.l.u.where}: ${JSON.stringify(x.l.u.text.slice(Math.max(0, x.l.s - 70), x.l.e + 10))} -> ${x.l.deck} ${x.l.n} (${x.own} words); ${x.alt[0]} ${x.l.n} has ${x.alt[1]}`));
 }
 
 console.log(`\n${fails ? 'FAIL' : 'PASS'}: ${passes} checks passed, ${fails} failed; ${links.length} links, ${refused.length} citations left as text`);

@@ -2,7 +2,8 @@
  "about": [
   "Hand-kept tables for the slide links. slide_map.py copies them into slide_data.js (python3 slide_map.py --tables, no deck needed); slide_check.js checks them against the reading files.",
   "names: [name, deck id, bare]. How running text names a deck directly before 'slide N'. bare = 1: the number may follow the name itself ('PCol 55', 'PP 8'). 'sun?' = the word Sun, shared by Dr. Smith's Exam 1 deck and Dr. Patel's Exam 2 deck: it goes to the deck of the professor named with it, else to the fourth field of the section's row, and is never guessed.",
-  "sections: [id or id prefix ending in '-', deck id or null, note, sun deck]. The deck a bare 'slide N', '(p. N)' or Slide-column number belongs to, by the section it is read in: an <h3 id> of reference.js or tell.js, a <section class=gobj id> or <h2 class=gdeck id> of guide.js, an Atlas board (at-), the practice patients of a Diseases card (dzcases-<card id>). null = the section draws on more than one deck, so a bare number there is not linked; a list of decks = a bare number is linked only where a professor named with it, or the column heading, leaves one of them. The fourth field says which deck 'Sun' means in that section ('sun' = Dr. Smith's, 'p8s' = Dr. Patel's); left out where a section sets both side by side."
+  "sections: [id or id prefix ending in '-', deck id or null, note, sun deck]. The deck a bare 'slide N', '(p. N)' or Slide-column number belongs to, by the section it is read in: an <h3 id> of reference.js or tell.js, a <section class=gobj id> or <h2 class=gdeck id> of guide.js, an Atlas board (at-), the practice patients of a Diseases card (dzcases-<card id>). null = the section draws on more than one deck, so a bare number there is not linked; a list of decks = a bare number is linked only where a professor named with it, or the column heading, leaves one of them. The fourth field says which deck 'Sun' means in that section ('sun' = Dr. Smith's, 'p8s' = Dr. Patel's); left out where a section sets both side by side.",
+  "notes: [deck id, clean page, text]. A line the viewer shows with that slide, for a citation whose content is not printed on the clean slide."
  ],
  "names": [
   ["Smith Sun Exposure", "sun", 0],
@@ -132,5 +133,8 @@
   ["dzcases-burns", "p8w", "Diseases: the practice patients of this card are Dr. Patel's cases from this deck", "p8s"],
   ["dzcases-warts", "p8c", "Diseases: the practice patients of this card are Dr. Patel's cases from this deck", "p8s"],
   ["dzcases-corns-calluses", "p8c", "Diseases: the practice patients of this card are Dr. Patel's cases from this deck", "p8s"]
+ ],
+ "notes": [
+  ["pp", 38, "The PollEv questions cited at this slide were asked in class while it was up. The slide does not print them."]
  ]
 }
