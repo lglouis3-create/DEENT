@@ -1,0 +1,3380 @@
+{
+ "cards": [
+  {
+   "id": "atopic-dermatitis",
+   "name": "Atopic dermatitis (eczema)",
+   "group": "algorithm",
+   "lectures": "Smith 10/29, 10/30 · Sikazwe 11/03, 11/04 · Patel 11/06",
+   "topics": [
+    "p5-alg",
+    "p5-tcs",
+    "p5-tci",
+    "p5-sys",
+    "p5-qty",
+    "p5-ad",
+    "p5-care",
+    "ad"
+   ],
+   "short": [
+    "A weak skin barrier lets allergens in; the immune response shifts to TH2 and IgE rises.",
+    "The hallmark symptom is itching; the look and the site change with age.",
+    "Severity is graded by SCORAD (25 and 50 are the cut-offs); status is acute, subacute or chronic.",
+    "Order of treatment: topical corticosteroid, then calcineurin inhibitor, then crisaborole, then dupilumab or tralokinumab, then a JAK inhibitor.",
+    "Basic management for every patient; on a topical steroid, seek help at 7 days and never pass 2 weeks."
+   ],
+   "steps": [
+    {
+     "title": "Who gets it, and what sets it off",
+     "profs": [
+      "sm",
+      "pa"
+     ],
+     "q": "What are the atopic triad and the atopic march, and which four groups of triggers does she list?",
+     "src": "Smith Pathophys slides 8, 10, 12; Patel Dermatitis slides 17, 19–22",
+     "blocks": [
+      {
+       "k": "facts",
+       "rows": [
+        [
+         "Other name",
+         "{{Eczema}} ★ her poll"
+        ],
+        [
+         "Course",
+         "Chronic or relapsing; often starts in childhood; no cure; not contagious"
+        ],
+        [
+         "Hallmark symptom",
+         "{{Pruritus}} (itching)"
+        ],
+        [
+         "Onset",
+         [
+          "Most common onset at {{3–6 months}} of age",
+          "Majority by age {{one}}; up to {{90%}} by age 5",
+          "{{70–90%}} may resolve by adulthood",
+          "Earlier onset = longer persistence"
+         ]
+        ],
+        [
+         "Risk factors",
+         [
+          "Personal or family history of atopic disorders",
+          "[[atopic-triad|Atopic triad]]: {{allergic rhinitis, asthma, atopic dermatitis}}",
+          "[[atopic-march|Atopic march]]: the triad plus {{food allergies}}",
+          "Loss-of-function mutation in the {{FLG}} gene",
+          "Urban environment; smaller family size; higher parental education"
+         ]
+        ],
+        [
+         "Triggers",
+         [
+          "Irritants: tobacco smoke, air pollution, cosmetics, fragrances, soaps, detergents, dyes",
+          "Allergens: foods (eggs, milk, peanut, soy, wheat, nuts, tomato); wool and polyester; dust mites, pollens, pet dander, molds",
+          "Environment: extreme temperatures",
+          "Personal: stress; excessive skin washing and sanitizing"
+         ]
+        ]
+       ]
+      },
+      {
+       "k": "prof",
+       "p": "sm",
+       "rows": [
+        [
+         "How common",
+         "{{15–30%}} of children, {{2–10%}} of adults (developed countries)"
+        ],
+        [
+         "Sex",
+         "Males and females alike"
+        ],
+        [
+         "Where",
+         "Lower in rural areas (hygiene hypothesis)"
+        ],
+        [
+         "Family",
+         "Risk {{two- to threefold}} with one atopic parent, {{three- to fivefold}} with two"
+        ],
+        [
+         "Makes it worse",
+         [
+          "Long, hot baths or showers",
+          "Dry skin; sweating; stress",
+          "Soaps, detergents, fragrances",
+          "Wool or man-made fabrics"
+         ]
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "title": "What goes wrong",
+     "profs": [
+      "sm",
+      "pa"
+     ],
+     "q": "Name the three features of the pathophysiology, and say which drug acts on which target.",
+     "src": "Smith Pathophys slides 13–17; Patel Dermatitis slides 18, 27, 29",
+     "blocks": [
+      {
+       "k": "prof",
+       "p": "sm",
+       "rows": [
+        [
+         "First trigger",
+         "Unknown; scratching, irritation or neuropeptides may release proinflammatory cytokines from keratinocytes"
+        ],
+        [
+         "Three features",
+         [
+          "{{Skin barrier dysfunction}} ★ her poll",
+          "Immune deviation toward {{TH2}}",
+          "Then increased {{IgE}}"
+         ]
+        ],
+        [
+         "Complicated by",
+         "Colonization with pathologic organisms"
+        ],
+        [
+         "Barrier gene",
+         [
+          "{{FLG}} → profilaggrin → [[flg|filaggrins]] → skin barrier",
+          "A variant lets allergens penetrate the skin",
+          "About {{40%}} of people lacking FLG do not develop it"
+         ]
+        ],
+        [
+         "TH1 cytokines",
+         "Interferon-γ and IL-12 {{suppress}} IgE"
+        ],
+        [
+         "TH2 cytokines",
+         "IL-5 and IL-13 {{increase}} IgE"
+        ],
+        [
+         "In this disease",
+         "More TH2 activity: IL-3, {{IL-4}}, IL-5, IL-10, {{IL-13}}; blood eosinophilia; high serum IgE; more mast cells"
+        ]
+       ]
+      },
+      {
+       "k": "map",
+       "title": "Which drug acts on which target",
+       "rows": [
+        [
+         "Glucocorticoid receptor",
+         "Topical corticosteroids (hydrocortisone to clobetasol)"
+        ],
+        [
+         "Calcineurin",
+         "Pimecrolimus; tacrolimus (binds FKBP first)"
+        ],
+        [
+         "[[pde4|PDE-4]]",
+         "Crisaborole"
+        ],
+        [
+         "IL-4 receptor α (shared by the IL-4 and IL-13 receptors)",
+         "Dupilumab"
+        ],
+        [
+         "IL-13 cytokine",
+         "Tralokinumab (Dr. Patel's slide 45; not on Dr. Smith's slides)"
+        ],
+        [
+         "JAK",
+         "Ruxolitinib (JAK1 and JAK2), upadacitinib, abrocitinib"
+        ]
+       ],
+       "src": "Smith PCol slides 5–7, 10, 24–27, 32–33, 64, 76; Patel Dermatitis slides 45–46"
+      },
+      {
+       "k": "fig",
+       "label": "Watch how it works: calcineurin inhibitors",
+       "jump": "guide:fig-cni-nfat"
+      },
+      {
+       "k": "facts",
+       "rows": [
+        [
+         "Dr. Patel's sequence",
+         "Disrupted barrier (FLG mutation or dryness) → allergens and irritants enter → inflammatory T-cell response"
+        ],
+        [
+         "So treatment aims to",
+         [
+          "Not strip the weak epidermis: gentle cleansers, limited bathing time",
+          "Rebuild it: thick emollients, hydration",
+          "Reduce inflammation: topical medications"
+         ]
+        ],
+        [
+         "Goals",
+         [
+          "Eliminate triggers; reduce pruritus and dermatitis",
+          "Prevent flare-ups and secondary infection",
+          "Reduce [[tewl|trans-epidermal water loss (TEWL)]]",
+          "No oral antibiotics, and no topical antibiotics over large areas"
+         ]
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "title": "How it looks, and how she grades it",
+     "profs": [
+      "sm",
+      "pa"
+     ],
+     "q": "Give the SCORAD cut-offs, and define acute, subacute and chronic.",
+     "src": "Patel Dermatitis slides 21, 23–25; 11/06 lecture; Smith Pathophys slide 11",
+     "blocks": [
+      {
+       "k": "sub",
+       "text": "By age (Dr. Patel, slide 21)"
+      },
+      {
+       "k": "facts",
+       "rows": [
+        [
+         "Infancy, 0–2 years",
+         "Red papular rash that tends to {{ooze}}; face, scalp, trunk, arms, legs"
+        ],
+        [
+         "Childhood, 2 to puberty",
+         "Dry, flaky, cracked skin, crusting, {{lichenification}}; face, creases of the neck, elbows, wrists, knees, ankles"
+        ],
+        [
+         "Adulthood",
+         "More diffuse, dry, scaly, lichenified; {{less on the face}}; hands, neck, inner elbows, back of knees, ankles"
+        ]
+       ]
+      },
+      {
+       "k": "prof",
+       "p": "sm",
+       "rows": [
+        [
+         "Signs",
+         [
+          "Red to brownish-gray patches",
+          "Itch that may be severe, especially {{at night}}",
+          "Small vesicles that leak and crust",
+          "Thickened, cracked or scaly skin"
+         ]
+        ],
+        [
+         "Site",
+         "Hands and feet in adults; face and scalp in children"
+        ],
+        [
+         "Common",
+         "Secondary bacterial infection"
+        ]
+       ]
+      },
+      {
+       "k": "sub",
+       "text": "Severity by [[scorad|SCORAD]] ★ her cases give the words and the score"
+      },
+      {
+       "k": "grades",
+       "rows": [
+        [
+         "Mild",
+         "SCORAD {{< 25}}",
+         "Dry areas, {{infrequent}} itching; little impact on activities and sleep"
+        ],
+        [
+         "Moderate",
+         "SCORAD {{25–50}}",
+         "{{Frequent}} itching; moderate impact on activities and sleep"
+        ],
+        [
+         "Severe",
+         "SCORAD {{> 50}}",
+         "Widespread dry skin, {{incessant}} itching, thickening, bleeding, oozing; sleep lost nightly"
+        ]
+       ]
+      },
+      {
+       "k": "sub",
+       "text": "Status ★ \"define this as well as the severity\""
+      },
+      {
+       "k": "grades",
+       "rows": [
+        [
+         "Acute",
+         "Acutely inflamed papules, {{vesicles, exudate and crusts}}",
+         "No dryness"
+        ],
+        [
+         "Subacute",
+         "{{Dry}}, inflamed papules, patches or plaques",
+         ""
+        ],
+        [
+         "Chronic",
+         "{{Lichenified}} papules or plaques",
+         "[[lichenification|Lichenification]]: she calls it the silvery, scaly plaque"
+        ]
+       ]
+      },
+      {
+       "k": "photo",
+       "id": "ad-status"
+      },
+      {
+       "k": "facts",
+       "rows": [
+        [
+         "Her poll patient",
+         "Dry and inflamed, no infection, no lichenified plaques, SCORAD 40 = {{moderate, subacute}} ★"
+        ],
+        [
+         "Who scores it",
+         "The physician calculates SCORAD; the case gives the score"
+        ],
+        [
+         "Complications",
+         [
+          "Sleep disturbance; depression; quality of life",
+          "Skin infection: {{S. aureus}}; prone to {{herpes simplex virus}}"
+         ]
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Treat it: her order of treatment",
+     "profs": [
+      "pa",
+      "sm",
+      "sk"
+     ],
+     "q": "Name the lines in order with one age limit for each, and say which steroid goes on the face.",
+     "src": "Patel Dermatitis slides 29–32, 34–48; 11/06 lecture; Smith PCol slide 11",
+     "blocks": [
+      {
+       "k": "facts",
+       "rows": [
+        [
+         "Every patient: basic management",
+         [
+          "Bath: {{10 minutes}}, lukewarm, gentle non-soap cleanser, pat dry",
+          "Occlusive moisturizer right after the bath; emollient within {{3 minutes}} while skin is damp",
+          "Avoid triggers; soft cotton clothing; lower stress",
+          "Wet wraps: short-term, {{not with calcineurin inhibitors}}",
+          "Bleach bath ({{0.005%}} sodium hypochlorite = ½ cup per full tub) {{twice a week}} for moderate–severe, to prevent repeat bacterial infection; can irritate"
+         ]
+        ],
+        [
+         "Drugs treat flares",
+         "Non-drug care is daily; the medication is for the flare"
+        ]
+       ]
+      },
+      {
+       "k": "line",
+       "label": "First",
+       "title": "[[tcs|Topical corticosteroid]]",
+       "drugs": [
+        "steroid",
+        "hydrocortisone",
+        "moisturizer"
+       ],
+       "pts": [
+        "★ First line for every severity, with basic management (her poll)",
+        "Start {{low}} potency and go up one step at a time",
+        "OTC hydrocortisone 1%: {{twice daily}} for max {{3–7 days}}",
+        "Improvement in {{24–48 hours}}",
+        "Single-ingredient products only"
+       ],
+       "warn": "Not resolved in 7 days: seek help. Never longer than 2 weeks.",
+       "pick": [
+        [
+         "Face",
+         "★ {{Hydrocortisone 1%}}: \"the only dose and strength that you can utilize on your face\". Dr. Smith: low potency (hydrocortisone 1%) for the face"
+        ],
+        [
+         "Not on a steroid now, even if one helped before",
+         "Start again at low potency: hydrocortisone 1% (her poll)"
+        ],
+        [
+         "Mild or non-lesional, flare",
+         "Low-to-medium potency twice daily, 3–7 days"
+        ],
+        [
+         "Moderate, maintenance",
+         "Low potency 1–2 times daily (face included); medium potency 1–2 times {{weekly}} (not the face)"
+        ],
+        [
+         "Moderate or severe, flare",
+         "Medium-to-high potency twice daily, 3–7 days"
+        ],
+        [
+         "Needs more strength from the same drug",
+         "Vehicle: {{ointment}} > cream > lotion > solution > gel > spray"
+        ],
+        [
+         "Mometasone 0.1%",
+         "★ Ointment = {{high}} potency; cream = {{medium}} potency"
+        ],
+        [
+         "Diaper area",
+         "No topical corticosteroid as self-care"
+        ]
+       ],
+       "move": "Move to the next line when: there is no response to the topical steroid."
+      },
+      {
+       "k": "line",
+       "label": "Next",
+       "title": "[[tci|Topical calcineurin inhibitor]] (second line)",
+       "drugs": [
+        "pimecrolimus",
+        "tacrolimus"
+       ],
+       "pts": [
+        "Twice daily; short-term and intermittent",
+        "Response in {{1–8 weeks}} (slower than a steroid) ★ she asked the room",
+        "Reassess at {{6 weeks}}"
+       ],
+       "warn": "Boxed warning: rare lymphoma and skin malignancy. Not under 2 years of age.",
+       "pick": [
+        [
+         "Mild to moderate",
+         "{{Pimecrolimus}} 1% cream"
+        ],
+        [
+         "Moderate to severe",
+         "{{Tacrolimus}} ointment"
+        ],
+        [
+         "Tacrolimus, older than 16 years",
+         "{{0.1%}}"
+        ],
+        [
+         "Tacrolimus, 2 to 15 years",
+         "{{0.03%}}"
+        ],
+        [
+         "Under 2 years",
+         "Neither"
+        ],
+        [
+         "Weeping lesions on wet wraps or compresses",
+         "Not with a calcineurin inhibitor"
+        ]
+       ],
+       "move": "Move to the next line when: the steroid and the calcineurin inhibitor have been tried."
+      },
+      {
+       "k": "line",
+       "label": "Then",
+       "title": "Crisaborole 2% ointment (third line)",
+       "drugs": [
+        "crisaborole"
+       ],
+       "pts": [
+        "Thin layer {{twice daily}}; mild to moderate; treats flares",
+        "Used when a steroid is not appropriate, or as an adjunct",
+        "Burning and stinging"
+       ],
+       "pick": [
+        [
+         "Age",
+         "Adults and children older than {{3 months}}"
+        ],
+        [
+         "Under 3 months",
+         "Do not use"
+        ]
+       ],
+       "move": "Move to the next line when: moderate to severe disease is not controlled after the topical agents."
+      },
+      {
+       "k": "line",
+       "label": "Then",
+       "title": "Injectable biologic (moderate to severe, after topicals)",
+       "drugs": [
+        "dupilumab",
+        "tralokinumab"
+       ],
+       "pts": [
+        "Specialty drugs; prior authorization",
+        "Dupilumab adult: {{600 mg}} once (2 × 300 mg), then {{300 mg every other week}}",
+        "May be combined with a topical corticosteroid or calcineurin inhibitor",
+        "Tralokinumab: the alternative to dupilumab"
+       ],
+       "warn": "★ Dupilumab: no live vaccines (\"I may include it on a case\").",
+       "pick": [
+        [
+         "Age 6–17, over 60 kg",
+         "Adult dose"
+        ],
+        [
+         "Age 6–17, 30–60 kg",
+         "{{400 mg}} once (2 × 200 mg), then {{200 mg}} every other week"
+        ],
+        [
+         "Age 6–17, 15–30 kg",
+         "600 mg once (2 × 300 mg), then 300 mg every {{4 weeks}}"
+        ],
+        [
+         "Weight given in pounds",
+         "★ Divide by {{2.2}} to get kg"
+        ],
+        [
+         "Under 6 months",
+         "No dupilumab"
+        ],
+        [
+         "On warfarin or cyclosporine",
+         "Dupilumab may interact with CYP-450; doses may need adjusting"
+        ],
+        [
+         "Tralokinumab",
+         "600 mg as {{four 150 mg}} injections, then 300 mg (two 150 mg) every other week; every 4 weeks if under 100 kg and clear at 16 weeks"
+        ]
+       ],
+       "move": "Move to the next line when: disease is not controlled with other systemic or biologic therapy."
+      },
+      {
+       "k": "line",
+       "label": "Last",
+       "title": "JAK inhibitor (refractory)",
+       "drugs": [
+        "jak"
+       ],
+       "pts": [
+        "Abrocitinib and upadacitinib by mouth; ruxolitinib topical",
+        "Moderate to severe, older than {{12 years}}",
+        "Specialty follow-up every {{2 weeks}}"
+       ],
+       "warn": "Boxed warnings: serious infections, mortality, malignancy, [[mace|MACE]], thrombosis."
+      },
+      {
+       "k": "sub",
+       "text": "Her step-care slide, by severity"
+      },
+      {
+       "k": "facts",
+       "rows": [
+        [
+         "Mild or non-lesional",
+         "Basic management; a flare gets a low-to-medium potency steroid"
+        ],
+        [
+         "Moderate",
+         "Maintenance steroid, OR calcineurin inhibitor, OR crisaborole 2% twice daily"
+        ],
+        [
+         "Severe",
+         [
+          "Referral to a specialist",
+          "Phototherapy; {{dupilumab}}",
+          "Systemic immunosuppressants (cyclosporine, methotrexate, mycophenolate, azathioprine: not FDA-approved for this)",
+          "Systemic corticosteroids: not for long-term maintenance"
+         ]
+        ],
+        [
+         "Flare not resolved in 7 days",
+         "Consider nonadherence, infection, misdiagnosis, contact allergy to the medication; refer"
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Counsel, calculate the tube, follow up",
+     "profs": [
+      "pa"
+     ],
+     "q": "How many grams is one adult fingertip unit, and on which day does the patient seek help?",
+     "src": "Patel Dermatitis slides 10–13, 33, 35–36, 51–52; 11/06 lecture",
+     "blocks": [
+      {
+       "k": "facts",
+       "rows": [
+        [
+         "How to apply",
+         [
+          "Wash hands before and after",
+          "Clean, dry area",
+          "Thin layer, rubbed in until it vanishes",
+          "Do not wrap (raises absorption); air dry {{3–5 minutes}} before clothing",
+          "Store cool and dry at room temperature, not the bathroom"
+         ]
+        ],
+        [
+         "Calcineurin inhibitor or crisaborole",
+         "No bathing, showering or swimming right after application"
+        ],
+        [
+         "Calcineurin inhibitor",
+         "Sun protection and sunscreen"
+        ],
+        [
+         "Weeping lesions",
+         "Cool tap-water compresses {{5–20 minutes}}, 4–6 times daily"
+        ],
+        [
+         "Scratching",
+         "Short, clean nails; cotton gloves or socks at night"
+        ],
+        [
+         "Moisturizers",
+         [
+          "Petroleum-containing (Aquaphor, Eucerin): {{most effective}}, thickest, longest-lasting; greasy",
+          "Ceramide-containing creams (CeraVe, Aveeno eczema therapy): barrier",
+          "Urea-containing: humectant; stings on broken skin",
+          "Lotions (Cetaphil, Keri): less effective; 3 times a day or more"
+         ]
+        ]
+       ]
+      },
+      {
+       "k": "sub",
+       "text": "Tube size by [[ftu|fingertip units]] ★ \"there will be a calculation on the exam\""
+      },
+      {
+       "k": "facts",
+       "rows": [
+        [
+         "One adult unit",
+         "{{0.5 g}}"
+        ],
+        [
+         "Formula",
+         "Units × 0.5 g × applications a day × days; round {{up}} to a tube size"
+        ],
+        [
+         "Tube sizes",
+         "15, 30, 45, 60, 80, 100 g"
+        ],
+        [
+         "Adult units",
+         [
+          "Scalp {{3}}",
+          "Face and neck {{2.5}}",
+          "One hand {{1}}",
+          "One arm with the hand {{4}}",
+          "One leg with the foot {{8}}",
+          "One foot {{2}}; both soles 1.5",
+          "Trunk {{7}} each side (14 both)",
+          "Buttocks 4; elbows 1; knees 1"
+         ]
+        ],
+        [
+         "Her poll",
+         "Face and neck, three times a day, 14 days: 1.25 g × 3 × 14 = 52.5 g → {{60 g}}"
+        ],
+        [
+         "Not tested",
+         "Pediatric fingertip units"
+        ]
+       ]
+      },
+      {
+       "k": "fig",
+       "label": "Open the fingertip-unit table",
+       "jump": "ref:ref-p5-ftu"
+      },
+      {
+       "k": "sub",
+       "text": "Follow-up"
+      },
+      {
+       "k": "facts",
+       "rows": [
+        [
+         "On a topical steroid",
+         "★ Seek help at {{7 days}} if not resolved (her poll); never past {{2 weeks}}"
+        ],
+        [
+         "Self-care slide 33",
+         "Refer if no better or worse after {{2–3 days}} of self-treatment (her slides give both figures; her poll answer is 7 days)"
+        ],
+        [
+         "Stop and refer",
+         "Skin atrophy or infection while on the topical steroid"
+        ],
+        [
+         "Calcineurin inhibitor",
+         "Reassess at 6 weeks"
+        ]
+       ]
+      }
+     ]
+    }
+   ],
+   "patients": [
+    {
+     "t": "A 21-year-old man has itching behind the knees and inside the elbows. The skin is dry and inflamed, with no infection and no lichenified plaques. SCORAD is 40.",
+     "q": "How do you describe the severity and status?",
+     "o": [
+      "Mild, acute",
+      "Moderate, acute",
+      "Moderate, subacute",
+      "Severe, chronic"
+     ],
+     "a": 2,
+     "w": "SCORAD 25–50 is moderate; dry, inflamed lesions without lichenification are subacute. This is her poll patient (slides 23–24, 49).",
+     "x": {
+      "Mild, acute": "SCORAD 40 is above 25, and acute lesions have vesicles, exudate and crusts with no dryness.",
+      "Moderate, acute": "The score fits, but dry inflamed skin without vesicles or exudate is subacute.",
+      "Severe, chronic": "Severe is above 50, and chronic needs lichenified plaques, which he does not have."
+     }
+    },
+    {
+     "t": "The same 21-year-old was diagnosed at age 10. Corticosteroids helped in the past, but he uses none now. He takes loratadine for allergic rhinitis.",
+     "q": "Which prescription fits first-line maintenance for him?",
+     "o": [
+      "Hydrocortisone 1%, thin layer twice daily for 3–7 days",
+      "Mometasone furoate 0.1%, thin layer once daily for 3–7 days",
+      "Pimecrolimus 1% cream, thin layer twice daily for 6 weeks",
+      "Triamcinolone 0.1%, thick layer twice daily for 3–7 days"
+     ],
+     "a": 0,
+     "w": "First line is basic management plus a topical corticosteroid, started at low potency: \"we're starting again from low potency and climbing up the ladder slowly\" (her polls; slides 36, 48).",
+     "x": {
+      "Mometasone furoate 0.1%, thin layer once daily for 3–7 days": "Mometasone is medium (cream) or high (ointment) potency; he is not on a steroid now, so she starts low.",
+      "Pimecrolimus 1% cream, thin layer twice daily for 6 weeks": "A calcineurin inhibitor is second line, after no response to a topical steroid.",
+      "Triamcinolone 0.1%, thick layer twice daily for 3–7 days": "Medium potency is not the starting step, and the layer is thin, not thick."
+     }
+    },
+    {
+     "t": "An 18-month-old has mild-to-moderate atopic dermatitis on the arms and legs. Hydrocortisone 1% used correctly gave no response. The parents ask what comes next.",
+     "q": "Which option fits this child?",
+     "o": [
+      "Pimecrolimus 1% cream twice daily",
+      "Tacrolimus 0.03% ointment twice daily",
+      "Crisaborole 2% ointment twice daily",
+      "Dupilumab 300 mg every 4 weeks"
+     ],
+     "a": 2,
+     "w": "Calcineurin inhibitors are not used under 2 years (slides 38–40). Crisaborole is used from 3 months of age when a steroid is not appropriate or as an adjunct (slides 41–42).",
+     "x": {
+      "Pimecrolimus 1% cream twice daily": "Second line by order, but not for children under 2 years.",
+      "Tacrolimus 0.03% ointment twice daily": "The 0.03% strength is for ages 2 to 15; under 2 it is not recommended.",
+      "Dupilumab 300 mg every 4 weeks": "Injectables are for moderate-to-severe disease after the topical agents."
+     }
+    },
+    {
+     "t": "An adult is prescribed triamcinolone 0.1% cream to both arms, hands included, twice daily for 5 days.",
+     "q": "Which tube do you dispense?",
+     "o": [
+      "30 g",
+      "45 g",
+      "60 g",
+      "80 g"
+     ],
+     "a": 1,
+     "w": "One arm with the hand is 4 units, so two arms are 8 units = 4 g per application. 4 g × 2 × 5 = 40 g, rounded up to 45 g (slides 10–11, 13).",
+     "x": {
+      "30 g": "30 g would cover 20 g, the amount for one arm (2 g × 2 × 5).",
+      "60 g": "Larger than needed; 40 g rounds up to the next size, which is 45 g.",
+      "80 g": "80 g would be the result if a fingertip unit were counted as 1 g."
+     }
+    },
+    {
+     "t": "A 13-year-old who weighs 110 lb has moderate-to-severe atopic dermatitis not controlled with topical therapy. Dupilumab is ordered.",
+     "q": "Which regimen matches the weight?",
+     "o": [
+      "600 mg once, then 300 mg every other week",
+      "400 mg once, then 200 mg every other week",
+      "600 mg once, then 300 mg every 4 weeks",
+      "600 mg as four injections, then 300 mg every other week"
+     ],
+     "a": 1,
+     "w": "110 ÷ 2.2 = 50 kg. Ages 6–17 at 30–60 kg: 400 mg (2 × 200 mg) once, then 200 mg every other week (slide 44). She said she will give the weight and expects the conversion.",
+     "x": {
+      "600 mg once, then 300 mg every other week": "That is the adult dose, used at ages 6–17 only above 60 kg; 110 lb is 50 kg.",
+      "600 mg once, then 300 mg every 4 weeks": "That is the 15–30 kg regimen.",
+      "600 mg as four injections, then 300 mg every other week": "Four 150 mg injections is the tralokinumab loading dose."
+     }
+    },
+    {
+     "t": "A 30-year-old has used OTC hydrocortisone 1% twice daily on her forearms for 8 days. The patches are no better, and one now has yellow crusts and pus.",
+     "q": "What do you tell her?",
+     "o": [
+      "Continue hydrocortisone 1% to day 14, then reassess",
+      "Change to an OTC petrolatum ointment and return in 7 days",
+      "Add a wet wrap over the hydrocortisone at night",
+      "Stop the steroid and see a physician"
+     ],
+     "a": 3,
+     "w": "Not resolved in 7 days: seek assistance (slides 36, 52). Infection while using the topical steroid: discontinue and refer (slide 33).",
+     "x": {
+      "Continue hydrocortisone 1% to day 14, then reassess": "Seven days without resolution is the point to seek help; 2 weeks is the limit never to pass.",
+      "Change to an OTC petrolatum ointment and return in 7 days": "A moisturizer is part of basic management but does not address a possible infection.",
+      "Add a wet wrap over the hydrocortisone at night": "Wrapping raises steroid absorption, and it does not address the infection."
+     }
+    }
+   ],
+   "numbers": [
+    [
+     "< 25 / 25–50 / > 50",
+     "SCORAD: mild / moderate / severe",
+     "Patel Dermatitis slide 23"
+    ],
+    [
+     "0.5 g",
+     "one adult fingertip unit",
+     "Patel Dermatitis slide 10"
+    ],
+    [
+     "2.5 units",
+     "face and neck (adult); arm with hand 4, leg with foot 8, trunk 7 each side, scalp 3",
+     "Patel Dermatitis slide 11"
+    ],
+    [
+     "3–7 days",
+     "OTC hydrocortisone 1%, twice daily, maximum",
+     "Patel Dermatitis slide 36"
+    ],
+    [
+     "7 days / 2 weeks",
+     "seek help if not resolved / never use longer",
+     "Patel Dermatitis slides 36, 52"
+    ],
+    [
+     "24–48 hours",
+     "improvement on a topical steroid",
+     "Patel Dermatitis slide 52"
+    ],
+    [
+     "1–8 weeks; 6 weeks",
+     "response to a calcineurin inhibitor; reassess",
+     "Patel Dermatitis slides 38, 40"
+    ],
+    [
+     "2 years",
+     "no calcineurin inhibitor below this age",
+     "Patel Dermatitis slides 38–40"
+    ],
+    [
+     "0.1% / 0.03%",
+     "tacrolimus: older than 16 years / 2 to 15 years",
+     "Patel Dermatitis slide 39"
+    ],
+    [
+     "3 months",
+     "no crisaborole below this age",
+     "Patel Dermatitis slides 41–42"
+    ],
+    [
+     "600 mg, then 300 mg every other week",
+     "dupilumab, adult; not under 6 months",
+     "Patel Dermatitis slides 43–44"
+    ],
+    [
+     "12 years",
+     "JAK inhibitors: older than this",
+     "Patel Dermatitis slide 46"
+    ]
+   ]
+  },
+  {
+   "id": "diaper-dermatitis",
+   "name": "Diaper dermatitis",
+   "group": "selfcare",
+   "lectures": "Patel 11/06",
+   "topics": [
+    "p5-dd"
+   ],
+   "short": [
+    "Occlusion, moisture and friction under the diaper, with enzymes, bile salts and an alkaline skin pH.",
+    "Red to bright red, shiny, wet-looking patches in the diaper area; no lichenification.",
+    "Refer for lesions over 7 days, signs of infection, broken skin, rash outside the diaper area, or fever.",
+    "Treat with ABCDE and a skin protectant: zinc oxide in a petrolatum base at every change.",
+    "No hydrocortisone, antifungal, antibacterial or anesthetic as self-care; follow up at 7 days."
+   ],
+   "steps": [
+    {
+     "title": "Cause and prevention",
+     "profs": [
+      "pa"
+     ],
+     "q": "Name the six causes on her slide.",
+     "src": "Patel Dermatitis slides 56–57, 59; 11/06 lecture",
+     "blocks": [
+      {
+       "k": "facts",
+       "rows": [
+        [
+         "Causes",
+         [
+          "{{Occlusion}}",
+          "{{Moisture}}",
+          "{{Microbes}}",
+          "GI tract {{proteolytic enzymes and bile salts}}",
+          "Mechanical {{chafing and friction}}",
+          "{{Alkaline}} skin pH"
+         ]
+        ],
+        [
+         "Fewer rashes with",
+         [
+          "Disposable diapers",
+          "Breastfeeding (pH)"
+         ]
+        ],
+        [
+         "Cleaning",
+         "At every change; no difference between cloth, water, mild soap or alcohol-free wipe; dry before the barrier cream"
+        ],
+        [
+         "Adults (incontinence)",
+         [
+          "Bath oil or pH-neutral cleansing foam; pat with a soft cloth",
+          "Skin hydration; barrier cream",
+          "Pressure sore prevention",
+          "Good nutrition: protein, vitamins"
+         ]
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Recognise it",
+     "profs": [
+      "pa"
+     ],
+     "q": "What does the rash look like, where is it, and what separates it from atopic dermatitis?",
+     "src": "Patel Dermatitis slides 58, 60, 67; 11/06 lecture",
+     "blocks": [
+      {
+       "k": "facts",
+       "rows": [
+        [
+         "Look",
+         "Erythema in patches: {{red to bright red, shiny, wet-looking}}"
+        ],
+        [
+         "Where",
+         "Buttocks, upper thighs, abdomen, genital region"
+        ],
+        [
+         "Not seen",
+         "{{Lichenification}}"
+        ],
+        [
+         "Severity (infants)",
+         "A slight → B mild → C moderate → D moderate to severe → E severe (wider area)"
+        ],
+        [
+         "Adults ([[globiad|GLOBIAD]])",
+         [
+          "Category 1: {{persistent redness}}",
+          "Category 2: {{skin loss}}",
+          "A = without, B = with clinical signs of infection"
+         ]
+        ],
+        [
+         "Most common complication",
+         "Fungal and bacterial infection: {{Candida albicans}}, {{Staphylococcus aureus}}"
+        ]
+       ]
+      },
+      {
+       "k": "photo",
+       "id": "dd-severity"
+      }
+     ]
+    },
+    {
+     "title": "Self-care, or refer?",
+     "profs": [
+      "pa"
+     ],
+     "q": "Name as many of her exclusions for self-treatment as you can.",
+     "src": "Patel Dermatitis slide 68; 11/06 lecture (\"please know this list\")",
+     "blocks": [
+      {
+       "k": "pts",
+       "items": [
+        "★ Lesions for more than {{7 days}}, or no improvement in 7 days despite care",
+        "{{Secondary infection}} (viral, bacterial, fungal)",
+        "Rash {{outside the diaper region}}",
+        "Possible {{urinary tract infection}}",
+        "Broken skin: ulceration, blistering, peeling",
+        "Oozing, blood, vesicles or pus; bullae; onion-skin appearance",
+        "Chronic or frequently recurring lesions",
+        "Constitutional symptoms: {{fever}}, diarrhea, nausea, vomiting, swollen inguinal lymph nodes, rapid pulse, rash elsewhere",
+        "Behavior change: lethargy, incessant crying",
+        "Comorbid conditions: HIV, organ transplant, immunosuppressive therapy, hepatitis with skin signs",
+        "Lesions part of, or caused by, another disease"
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Treat it: ABCDE and a skin protectant",
+     "profs": [
+      "pa"
+     ],
+     "q": "What do A, B, C, D and E stand for, and which four product types are not used?",
+     "src": "Patel Dermatitis slides 61–66, 69; 11/06 lecture",
+     "blocks": [
+      {
+       "k": "facts",
+       "rows": [
+        [
+         "Goals",
+         "Relieve symptoms; clear the dermatitis; prevent secondary infection; prevent recurrence"
+        ]
+       ]
+      },
+      {
+       "k": "line",
+       "label": "Every change",
+       "title": "[[abcde|ABCDE]] ★ \"I want you guys to remember\"",
+       "drugs": [],
+       "pts": [
+        "{{A}}ir: air dry; diaper-free time",
+        "{{B}}arrier: protectant, liberally, at each change",
+        "{{C}}leansing: soft cloth and warm water, or a baby wipe when stool is present",
+        "{{D}}iaper: change every {{2 hours}} and as soon as soiled",
+        "{{E}}ducation of parents and caregivers"
+       ]
+      },
+      {
+       "k": "line",
+       "label": "Red, wet rash",
+       "title": "[[skin-protectant|Skin protectant]]",
+       "drugs": [
+        "zinc-oxide",
+        "moisturizer"
+       ],
+       "pts": [
+        "★ Her poll answer: a protectant containing {{zinc oxide}}",
+        "Zinc oxide {{1–40%}} = the active ingredient; thick and tacky",
+        "Petrolatum {{30–100%}} = the ointment base",
+        "Apply liberally at every change; remove the old product gently",
+        "Cover red areas completely",
+        "Continue after healing to prevent recurrence"
+       ],
+       "pick": [
+        [
+         "Father asks for a first product",
+         "Zinc oxide protectant (Desitin: zinc oxide, petrolatum, mineral oil)"
+        ],
+        [
+         "Aquaphor alone",
+         "Petrolatum only: moisturizes, does not treat (her poll)"
+        ],
+        [
+         "A & D Ointment",
+         "Lanolin and petrolatum; {{no zinc oxide}}"
+        ],
+        [
+         "Body lotion already in use",
+         "Not a skin protectant"
+        ]
+       ]
+      },
+      {
+       "k": "line",
+       "label": "Not for self-care",
+       "title": "Products she does not use here",
+       "drugs": [
+        "hydrocortisone"
+       ],
+       "pts": [
+        "Topical {{antifungals}} (miconazole)",
+        "Topical {{antibacterials}}",
+        "Topical {{anesthetics}} (benzocaine, lidocaine)",
+        "{{Hydrocortisone}} or any topical corticosteroid"
+       ],
+       "warn": "★ \"The biggest difference\" from atopic dermatitis: no topical corticosteroid. The diaper area is a large share of a baby's body surface, so topical products can cause systemic effects."
+      },
+      {
+       "k": "line",
+       "label": "At 7 days",
+       "title": "Follow-up ★ her poll",
+       "drugs": [],
+       "pick": [
+        [
+         "Improved, not healed",
+         "{{Continue}} until healed"
+        ],
+        [
+         "Not healed, not improved, or worse",
+         "{{Refer}} to a physician"
+        ]
+       ]
+      }
+     ]
+    }
+   ],
+   "patients": [
+    {
+     "t": "A father says his 5-month-old's diaper area has red, wet lesions that became worse over the past week. No fever. He has used only the baby's usual body lotion.",
+     "q": "Which first-line product do you recommend?",
+     "o": [
+      "Skin protectant with zinc oxide",
+      "Skin protectant with hydrocortisone",
+      "Skin protectant with miconazole",
+      "Petrolatum ointment (Aquaphor)"
+     ],
+     "a": 0,
+     "w": "Her poll: zinc oxide. \"Aquaphor is just a petrolatum moisturizer ... zinc oxide would be treating the skin\" (slides 64–65, 69).",
+     "x": {
+      "Skin protectant with hydrocortisone": "No topical corticosteroid is used as self-care for diaper dermatitis.",
+      "Skin protectant with miconazole": "Topical antifungals are not self-care products here.",
+      "Petrolatum ointment (Aquaphor)": "Petrolatum alone moisturizes; zinc oxide is the active ingredient that treats."
+     }
+    },
+    {
+     "t": "The same father returns 7 days later. With zinc oxide at every change the rash is smaller and paler but still visible.",
+     "q": "What do you advise?",
+     "o": [
+      "Refer to a physician today",
+      "Stop the protectant and use air drying only",
+      "Continue the same care until healed",
+      "Add hydrocortisone 1% for 3 days"
+     ],
+     "a": 2,
+     "w": "Improved but not healed after 7 days: continue treatment until healed (slide 66). The protectant can continue after healing to prevent recurrence (slide 63).",
+     "x": {
+      "Refer to a physician today": "Referral at 7 days is for a rash that is not healed and not improved, or worse.",
+      "Stop the protectant and use air drying only": "Barrier is one of the five ABCDE steps and continues.",
+      "Add hydrocortisone 1% for 3 days": "Topical corticosteroids are not used as self-care in the diaper area."
+     }
+    },
+    {
+     "t": "A mother asks for a diaper cream for her 8-month-old. The rash started 3 days ago, extends onto the lower back above the diaper line, and the baby has a fever and has been unusually sleepy.",
+     "q": "What is the right action?",
+     "o": [
+      "Zinc oxide 40% at every change for 7 days",
+      "Refer to a physician",
+      "Petrolatum ointment plus diaper-free time",
+      "Zinc oxide now and refer if not healed in 7 days"
+     ],
+     "a": 1,
+     "w": "Exclusions for self-treatment include rash outside the diaper region, constitutional symptoms such as fever, and behavioral changes such as lethargy (slide 68; \"please know this list\").",
+     "x": {
+      "Zinc oxide 40% at every change for 7 days": "Rash outside the diaper region, fever and lethargy are each exclusions for self-treatment.",
+      "Petrolatum ointment plus diaper-free time": "ABCDE alone is not offered when exclusions are present.",
+      "Zinc oxide now and refer if not healed in 7 days": "The 7-day check applies to self-care candidates; this child is excluded now."
+     }
+    },
+    {
+     "t": "A caregiver of a 6-month-old with a mild diaper rash changes cloth diapers every 4 hours, wipes at each change, and applies A & D Ointment once a day.",
+     "q": "Which change matches her ABCDE advice?",
+     "o": [
+      "Change every 2 hours and apply a protectant at each change",
+      "Keep every 4 hours and add miconazole cream",
+      "Change every 2 hours and stop the barrier product",
+      "Keep every 4 hours and apply the protectant twice daily"
+     ],
+     "a": 0,
+     "w": "D: change every 2 hours and as soon as soiled. B: protectant liberally at each change (slide 62; her poll answer \"ABCDE, every 2 hours\").",
+     "x": {
+      "Keep every 4 hours and add miconazole cream": "Antifungals are not self-care products, and 4 hours is longer than her 2-hour answer.",
+      "Change every 2 hours and stop the barrier product": "Barrier is applied liberally at each change.",
+      "Keep every 4 hours and apply the protectant twice daily": "The protectant goes on at every change, and she changes every 2 hours."
+     }
+    }
+   ],
+   "numbers": [
+    [
+     "7 days",
+     "follow-up: improved but not healed = continue; not improved or worse = refer",
+     "Patel Dermatitis slide 66"
+    ],
+    [
+     "> 7 days",
+     "lesions this long: not a self-care candidate",
+     "Patel Dermatitis slide 68"
+    ],
+    [
+     "2 hours",
+     "diaper change in ABCDE (her poll answer)",
+     "Patel Dermatitis slide 62"
+    ],
+    [
+     "1–40%",
+     "zinc oxide, the active ingredient",
+     "Patel Dermatitis slide 64"
+    ],
+    [
+     "30–100%",
+     "petrolatum, the ointment base",
+     "Patel Dermatitis slide 64"
+    ],
+    [
+     "17",
+     "FDA-approved skin protectant ingredients",
+     "Patel Dermatitis slide 63"
+    ]
+   ]
+  },
+  {
+   "id": "acne",
+   "name": "Acne",
+   "group": "algorithm",
+   "lectures": "Smith 10/29, 10/30, 11/03 · Sikazwe 11/04 · Patel 11/10",
+   "topics": [
+    "p6-alg",
+    "p6-cls",
+    "p6-iso",
+    "p6-oral",
+    "p6-otc",
+    "p6-rxt",
+    "p6-couns",
+    "p6-risk",
+    "p6-np",
+    "acne"
+   ],
+   "short": [
+    "Androgens raise sebum; keratin plugs the follicle; P. acnes grows; inflammation follows.",
+    "Lesions: comedones (non-inflammatory), then papules, pustules, nodules or cysts (inflammatory).",
+    "Her grades use the words rare, some, many and no more than one nodule.",
+    "One agent, then two, then three; topical before oral; benzoyl peroxide first.",
+    "Visible benefit takes 8 weeks or more; isotretinoin needs iPledge."
+   ],
+   "steps": [
+    {
+     "title": "Who gets it, and what makes it worse",
+     "profs": [
+      "sm",
+      "pa"
+     ],
+     "q": "Which drugs cause or worsen acne, and which four findings exclude self-care?",
+     "src": "Smith Pathophys slides 30–31, 35; Patel Acne slides 3, 9–11, 17–18",
+     "blocks": [
+      {
+       "k": "prof",
+       "p": "sm",
+       "rows": [
+        [
+         "What it is",
+         "A common, self-limiting disease of the {{pilosebaceous units}}; face, upper back, chest"
+        ],
+        [
+         "How common",
+         "Lifetime prevalence approaches {{90%}}"
+        ],
+        [
+         "Onset",
+         "Puberty, with the start of {{androgen}} production"
+        ],
+        [
+         "Sex",
+         "More severe in boys in puberty; in women in adulthood"
+        ],
+        [
+         "Family",
+         "{{81%}} likelihood if both parents had acne"
+        ],
+        [
+         "Makes it worse",
+         [
+          "High humidity or sweating",
+          "Acne mechanica: occlusion or irritation",
+          "Acne cosmetica: comedogenic oils",
+          "Stress; hormones",
+          "High glycemic index diet; dairy may be a factor"
+         ]
+        ],
+        [
+         "Drug-induced",
+         "Phenytoin, isoniazid, phenobarbital, {{lithium}}, {{steroids}}, azathioprine, quinine, rifampin"
+        ]
+       ]
+      },
+      {
+       "k": "facts",
+       "rows": [
+        [
+         "Risk factors (Dr. Patel)",
+         [
+          "Age {{12–20}} years",
+          "Oil-based skin products",
+          "First-degree relative with acne",
+          "Humidity and sweating; skin friction",
+          "Medications"
+         ]
+        ],
+        [
+         "Her drug list",
+         [
+          "Hormones: {{corticosteroids, androgens, progesterone contraceptives}}",
+          "TCAs, {{lithium}}, antiepileptics, aripiprazole, SSRIs",
+          "Vitamins {{B1, B6, B12}}",
+          "Dactinomycin; cyclosporine, sirolimus",
+          "{{Isoniazid, rifampin}}, ethionamide",
+          "Iodine, bromine, chlorine"
+         ]
+        ],
+        [
+         "Complications",
+         "Anxiety, depression, {{scarring}} (the most common)"
+        ],
+        [
+         "Lab testing",
+         "None routinely; exception: high suspicion of [[pcos|PCOS]] or another hormonal disorder"
+        ]
+       ]
+      },
+      {
+       "k": "sub",
+       "text": "Not a self-care candidate: refer to dermatology"
+      },
+      {
+       "k": "pts",
+       "items": [
+        "{{Severe}} acne",
+        "Possible {{rosacea}}",
+        "Exacerbating factors",
+        "{{Comedogenic drugs}}"
+       ]
+      }
+     ]
+    },
+    {
+     "title": "What goes wrong",
+     "profs": [
+      "sm",
+      "pa"
+     ],
+     "q": "Name the four factors, and say which agents act on each.",
+     "src": "Smith Pathophys slides 32–34, 36–37; Patel Acne slides 17, 21–23",
+     "blocks": [
+      {
+       "k": "prof",
+       "p": "sm",
+       "rows": [
+        [
+         "Start",
+         "Increased {{androgen}} production"
+        ],
+        [
+         "Four factors",
+         [
+          "Increased {{sebum}} production ★ her poll: the major pathology",
+          "Altered {{keratinization}}; hyperproliferation of the ductal epidermis",
+          "{{P. acnes}} colonizes the duct",
+          "{{Inflammation}}"
+         ]
+        ],
+        [
+         "The plug",
+         "Skin cells stick together and are not shed; cells and sebum plug the channel"
+        ],
+        [
+         "P. acnes",
+         "Its {{lipase}} turns sebum glycerides into {{free fatty acids}}, which irritate the follicle wall and are antigenic"
+        ],
+        [
+         "Lesion order",
+         "Microcomedone → closed [[comedone|comedone]] → open comedone, or papule → pustule → nodule or cyst"
+        ],
+        [
+         "Her poll",
+         "Keratinocyte hyperproliferation as the major pathology is false for acne: \"a feature of psoriasis\""
+        ]
+       ]
+      },
+      {
+       "k": "map",
+       "title": "Which agent acts on which factor (Dr. Smith's figure)",
+       "rows": [
+        [
+         "Abnormal sebum",
+         "Antiandrogens; isotretinoin; topical/oral antibiotics; corticosteroids; estrogens (not covered in class)"
+        ],
+        [
+         "Abnormal keratinization of the follicle",
+         "Salicylic acid; benzoyl peroxide; topical retinoids; isotretinoin"
+        ],
+        [
+         "P. acnes proliferation",
+         "Benzoyl peroxide; topical/oral antibiotics; isotretinoin"
+        ],
+        [
+         "Inflammatory response",
+         "Intralesional corticosteroids; oral corticosteroids; topical/oral antibiotics"
+        ]
+       ],
+       "src": "Smith Pathophys slide 36"
+      },
+      {
+       "k": "fig",
+       "label": "Watch how it works: the cascade of acne lesions",
+       "jump": "ref:ref-l1-acnemap"
+      },
+      {
+       "k": "sub",
+       "text": "Dr. Patel: what each OTC agent does (slide 23)"
+      },
+      {
+       "k": "facts",
+       "rows": [
+        [
+         "Benzoyl peroxide",
+         "★ [[bactericidal|Bactericidal]], [[keratolytic|keratolytic]] and [[comedolytic|comedolytic]]: \"targets all three\", so first line"
+        ],
+        [
+         "Topical retinoid",
+         "Keratolytic, comedolytic; not bactericidal"
+        ],
+        [
+         "Hydroxy acids",
+         "Keratolytic, comedolytic (β-hydroxy acids); not bactericidal"
+        ],
+        [
+         "Sulfur",
+         "Keratolytic, comedolytic; not bactericidal"
+        ],
+        [
+         "Resorcinol",
+         "Bactericidal (and antifungal), keratolytic; {{not comedolytic}}"
+        ],
+        [
+         "Her four targets",
+         "Reduce sebum; suppress P. acnes; reduce inflammation; decrease hyperkeratinization"
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Lesions, and her four grades",
+     "profs": [
+      "pa"
+     ],
+     "q": "Define each grade in her words: which one allows no more than one nodule?",
+     "src": "Patel Acne slides 5–8; 11/10 lecture",
+     "blocks": [
+      {
+       "k": "facts",
+       "rows": [
+        [
+         "Non-inflammatory",
+         [
+          "Open comedone = {{blackhead}}",
+          "Closed comedone = {{whitehead}}"
+         ]
+        ],
+        [
+         "Inflammatory",
+         [
+          "[[papule|Papule]]: raised, red, no pus",
+          "[[pustule|Pustule]]: visible white pus",
+          "[[nodule|Nodule or cyst]]: large, under the skin; the worst stage"
+         ]
+        ]
+       ]
+      },
+      {
+       "k": "photo",
+       "id": "acne-comedones"
+      },
+      {
+       "k": "sub",
+       "text": "Grades ★ \"those are the terms that I will also use on my cases on the exam\""
+      },
+      {
+       "k": "grades",
+       "rows": [
+        [
+         "Mildly clear",
+         "{{Rare}} non-inflammatory lesions; no more than {{1 small lesion}}",
+         ""
+        ],
+        [
+         "Mild",
+         "{{Some}} non-inflammatory; no more than {{a few}} papules and pustules",
+         "{{No nodules}}; minimal scarring"
+        ],
+        [
+         "Moderate",
+         "{{Many}} non-inflammatory; {{some}} inflammatory",
+         "No more than {{one nodule}}; mild scarring possible"
+        ],
+        [
+         "Severe",
+         "{{Many}} non-inflammatory and inflammatory",
+         "No more than {{a few}} nodular lesions; moderate to extensive scarring"
+        ]
+       ]
+      },
+      {
+       "k": "facts",
+       "rows": [
+        [
+         "Moderate or severe?",
+         "★ \"Is it no more than one cystic lesion or is it more than one?\" More than one = severe"
+        ],
+        [
+         "Her Case 1",
+         "16-year-old, some comedones, no inflammation = {{mild}}"
+        ],
+        [
+         "Her Case 2",
+         "Comedones, papules, cysts on cheek, back and shoulders = {{severe}}"
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Treat it: her algorithm by severity",
+     "profs": [
+      "pa"
+     ],
+     "q": "Give the first line for each grade, and say when an oral antibiotic is added.",
+     "src": "Patel Acne slides 19–20, 24–34, 40, 47; 11/10 lecture",
+     "blocks": [
+      {
+       "k": "facts",
+       "rows": [
+        [
+         "Every patient, non-drug",
+         [
+          "Cleanse {{twice a day}} with a mild soap or non-soap cleanser",
+          "No abrasive products or excessive cleansing",
+          "Oil-based cleanser before a water-based one to remove makeup",
+          "Do not pop, squeeze or pick",
+          "Low-glycemic-index foods; stay hydrated"
+         ]
+        ],
+        [
+         "★ Her order",
+         [
+          "{{One}} agent, then two, then three",
+          "{{Topical before oral}}",
+          "Smallest number of agents at the lowest doses",
+          "\"Know exactly what has the patient tried and what is left to try\""
+         ]
+        ],
+        [
+         "Never alone",
+         "★ A topical antibiotic: always with {{benzoyl peroxide}}, to reduce resistance"
+        ]
+       ]
+      },
+      {
+       "k": "line",
+       "label": "Mildly clear",
+       "title": "± Benzoyl peroxide alone, or essential oils",
+       "drugs": [
+        "bpo"
+       ],
+       "pts": [
+        "Lesions: comedones",
+        "Tea tree oil goes in a lotion or gel vehicle; it irritates if applied directly"
+       ]
+      },
+      {
+       "k": "line",
+       "label": "Mild",
+       "title": "One topical agent, then a topical combination",
+       "drugs": [
+        "bpo",
+        "adapalene",
+        "tretinoin",
+        "tazarotene",
+        "topical-abx",
+        "dapsone",
+        "salicylic-acid",
+        "aha",
+        "azelaic-acid"
+       ],
+       "pts": [
+        "First: {{benzoyl peroxide}} (preferred) OR a topical retinoid",
+        "Then a combination: [[bp|BP]] + topical antibiotic, BP + retinoid, or all three",
+        "Second line: add the retinoid or BP if not on it; an alternate retinoid; topical dapsone",
+        "Other OTC keratolytics: salicylic acid (limited efficacy data); alpha hydroxy acids for non-inflammatory lesions",
+        "Azelaic acid: adjunct for post-inflammatory dyspigmentation"
+       ],
+       "pick": [
+        [
+         "Her Case 1 (16, some comedones, no medications)",
+         "★ Benzoyl peroxide twice daily to affected areas: \"keyword? First line\""
+        ],
+        [
+         "Tried benzoyl peroxide, no benefit",
+         "Topical retinoid"
+        ],
+        [
+         "OTC retinoid wanted",
+         "Adapalene 0.1% at night; benzoyl peroxide in the morning; label: persons over 12 years of age"
+        ],
+        [
+         "Tried everything else topical",
+         "Dapsone: \"absolute last line\" of the mild column; G6PD concern"
+        ]
+       ],
+       "move": "Move on when: the agent was used for its stated duration and the lesions have not decreased."
+      },
+      {
+       "k": "line",
+       "label": "Moderate",
+       "title": "Topical combination; then add an oral antibiotic",
+       "drugs": [
+        "bpo",
+        "adapalene",
+        "topical-abx",
+        "doxycycline",
+        "minocycline",
+        "sarecycline",
+        "tmp-smx",
+        "coc",
+        "spironolactone",
+        "isotretinoin"
+       ],
+       "pts": [
+        "First: BP + retinoid, or BP + topical antibiotic, or all three",
+        "★ \"Topical combination first before you add an oral antibiotic to a moderate patient\"",
+        "Then: oral antibiotic + the topical combination",
+        "Second line: change the combination or the oral antibiotic; add a [[coc|COC]] or spironolactone (females only)",
+        "Isotretinoin: \"absolute last line for moderate patients\""
+       ],
+       "pick": [
+        [
+         "Has tried all the topical combinations",
+         "Add an oral antibiotic (doxycycline or minocycline are the most prescribed)"
+        ],
+        [
+         "12 years old or younger",
+         "★ No tetracycline: \"greater than 12 ... there is no 12 years and equal to\" (tooth discoloration)"
+        ],
+        [
+         "Pregnant",
+         "No tetracycline (fetal harm)"
+        ],
+        [
+         "Allergic to macrolides and tetracyclines",
+         "TMP/SMX, unless allergic to sulfa"
+        ],
+        [
+         "Female with irregular menses",
+         "COC"
+        ]
+       ],
+       "move": "Move on when: the topical combination plus an oral antibiotic has had its duration (re-evaluate the antibiotic at 3–4 months)."
+      },
+      {
+       "k": "line",
+       "label": "Severe",
+       "title": "Oral antibiotic + topical combination",
+       "drugs": [
+        "doxycycline",
+        "minocycline",
+        "sarecycline",
+        "bpo",
+        "adapalene",
+        "coc",
+        "spironolactone",
+        "isotretinoin"
+       ],
+       "pts": [
+        "First: oral antibiotic + (BP + retinoid), or + (BP + topical antibiotic), or + all three",
+        "Second line: change the oral antibiotic; add a COC or oral spironolactone (females only); consider oral isotretinoin",
+        "Severe acne is an exclusion for self-care: refer"
+       ],
+       "warn": "Slide 40 prints oral isotretinoin in the severe first-line box; in class (11/10) she gave oral antibiotic + topical combination first and called isotretinoin \"absolute last line\". Both are stated here; the bank does not key isotretinoin as severe first line.",
+       "pick": [
+        [
+         "Her Case 2: 8 months of doxycycline + retinoid + BP, irregular periods",
+         "★ {{Combined oral contraceptive}} over spironolactone: the irregular periods are the hint"
+        ],
+        [
+         "COC candidate",
+         "Female who wants contraception; older than {{14}} or more than {{2 years}} past menarche; non-smoker under {{35}}"
+        ],
+        [
+         "History of DVT; smoker aged 35",
+         "Not a COC candidate (her poll)"
+        ],
+        [
+         "Non-nodular moderate to severe",
+         "Sarecycline, dosed by weight band"
+        ],
+        [
+         "Severe refractory nodular acne",
+         "Isotretinoin with iPledge"
+        ]
+       ]
+      },
+      {
+       "k": "sub",
+       "text": "Vehicle by skin type (slide 24)"
+      },
+      {
+       "k": "facts",
+       "rows": [
+        [
+         "Oily to normal",
+         "{{Gels, solutions, lotions}}"
+        ],
+        [
+         "Normal to dry",
+         "{{Lotions and creams}}"
+        ],
+        [
+         "Not usually recommended",
+         "Ointments and bars"
+        ]
+       ]
+      },
+      {
+       "k": "fig",
+       "label": "Open her algorithm table",
+       "jump": "ref:ref-p6-alg"
+      }
+     ]
+    },
+    {
+     "title": "Counsel, monitor, and what to do with no response",
+     "profs": [
+      "pa"
+     ],
+     "q": "How long until visible benefit, and what does iPledge require of a female patient of reproductive potential?",
+     "src": "Patel Acne slides 26–29, 33, 37–38, 41–44, 47–48; 11/10 lecture",
+     "blocks": [
+      {
+       "k": "facts",
+       "rows": [
+        [
+         "Time to benefit",
+         "{{8 weeks or more}} to see visible benefit"
+        ],
+        [
+         "Topicals",
+         [
+          "Wash with a mild soap, pat dry, wait {{20–30 minutes}}",
+          "Thin layer in the evening; avoid eyes, ears, nostrils, mouth",
+          "Irritation: stop for a time or apply less often",
+          "Daily {{sunscreen}}"
+         ]
+        ],
+        [
+         "Orals",
+         [
+          "Swallow whole with a full glass of water; may take after eating",
+          "Caution driving at night",
+          "Daily sunscreen"
+         ]
+        ],
+        [
+         "Shaving",
+         "Electric or safety razor; sharp blade; light and infrequent; with the direction of hair growth; each area once"
+        ],
+        [
+         "Stopping",
+         "Taper over time; never stop abruptly"
+        ]
+       ]
+      },
+      {
+       "k": "sub",
+       "text": "Isotretinoin and [[ipledge|iPledge]]"
+      },
+      {
+       "k": "facts",
+       "rows": [
+        [
+         "Dose",
+         "{{0.5–1 mg/kg/day}} in {{2}} divided doses; she starts at 0.5"
+        ],
+        [
+         "Course",
+         "{{15–20 weeks}}; {{30-day}} supply, {{no refills}}"
+        ],
+        [
+         "Boxed warning",
+         "Birth defects"
+        ],
+        [
+         "Adverse effects",
+         "Dry nose, eyes, mouth; lip inflammation; mood disorders, depression, suicidal ideation"
+        ],
+        [
+         "Labs",
+         "Triglycerides, cholesterol, LFTs, CBC"
+        ],
+        [
+         "All patients",
+         [
+          "Register with iPledge; sign consent",
+          "No blood donation during and for {{1 month}} after",
+          "Swallow the capsule whole",
+          "Not with vitamin A supplements, tetracyclines, steroids, progestin-only contraceptives"
+         ]
+        ],
+        [
+         "Females of reproductive potential",
+         [
+          "★ Pregnancy test {{twice}} before starting, then {{monthly}} (\"hint, it's a question\")",
+          "{{2 forms}} of birth control 1 month before, during, and 1 month after",
+          "{{7-day}} window to fill"
+         ]
+        ],
+        [
+         "Males; females who cannot get pregnant",
+         "{{30-day}} window to fill"
+        ],
+        [
+         "Not a counseling point",
+         "Avoiding dairy (her poll)"
+        ]
+       ]
+      },
+      {
+       "k": "fig",
+       "label": "Open the isotretinoin and iPledge table",
+       "jump": "ref:ref-p6-ipledge"
+      },
+      {
+       "k": "sub",
+       "text": "Monitoring"
+      },
+      {
+       "k": "facts",
+       "rows": [
+        [
+         "Lesion count",
+         "Down {{10–25%}} within 4–8 weeks; more than {{50%}} within 2–4 months"
+        ],
+        [
+         "Comedones",
+         "Resolve by {{3–4 months}}"
+        ],
+        [
+         "Who checks",
+         "Patient daily; pharmacist every {{4 to 8 weeks}}"
+        ],
+        [
+         "Oral antibiotic",
+         "Shortest possible duration; re-evaluate at {{3–4 months}}"
+        ]
+       ]
+      },
+      {
+       "k": "sub",
+       "text": "No response to current therapy (slide 48)"
+      },
+      {
+       "k": "facts",
+       "rows": [
+        [
+         "Non-drug",
+         "Check acne-provoking agents, stress, diet, comedogenic cosmetics, endocrine profile"
+        ],
+        [
+         "Drug",
+         "Change the vehicle to suit the skin type; check the oral antibiotic and dose; check P. acnes resistance; check how the topical was applied; for a woman, the contraceptive type"
+        ],
+        [
+         "Adherence",
+         "Check frequency of use and understanding"
+        ],
+        [
+         "Adverse events",
+         "Change class, lower the dose or change the formulation; avoid overuse of cleansers"
+        ]
+       ]
+      }
+     ]
+    }
+   ],
+   "patients": [
+    {
+     "t": "A 16-year-old girl asks about acne on her face before a school dance. She takes only ibuprofen now and then. Assessment: no inflammation, some comedones on the cheeks and chin, heavy makeup.",
+     "q": "Which first-line therapy do you recommend?",
+     "o": [
+      "Doxycycline by mouth once daily",
+      "Benzoyl peroxide twice daily to affected areas",
+      "Salicylic acid cleanser used frequently through the day",
+      "Combined oral contraceptive once daily"
+     ],
+     "a": 1,
+     "w": "Some non-inflammatory lesions and no inflammation is mild acne; first line is a single topical agent, benzoyl peroxide preferred. Her Case 1 poll: \"keyword in this question? First line\" (slides 7, 40).",
+     "x": {
+      "Doxycycline by mouth once daily": "Oral antibiotics come after the topical combinations, in moderate or severe acne.",
+      "Salicylic acid cleanser used frequently through the day": "Excessive cleansing is discouraged, and salicylic acid has limited efficacy data.",
+      "Combined oral contraceptive once daily": "A COC is a second-line addition in moderate or severe acne."
+     }
+    },
+    {
+     "t": "A 15-year-old boy has many comedones, some papules and pustules, and one nodule on the jaw. For 3 months he has used benzoyl peroxide in the morning and adapalene at night, and before that benzoyl peroxide with clindamycin, each as directed.",
+     "q": "What is the next step?",
+     "o": [
+      "Add oral doxycycline to his topical combination",
+      "Replace both topicals with oral isotretinoin",
+      "Replace both topicals with topical clindamycin",
+      "Add oral spironolactone to his topical combination"
+     ],
+     "a": 0,
+     "w": "Many non-inflammatory, some inflammatory and no more than one nodule is moderate. \"Patient has tried all topical agents, that's when you add an oral antibiotic\", in combination with the topicals (slide 40; 11/10 lecture). He is older than 12.",
+     "x": {
+      "Replace both topicals with oral isotretinoin": "For a moderate patient she calls isotretinoin the absolute last line, after the other options.",
+      "Replace both topicals with topical clindamycin": "A topical antibiotic is never used alone.",
+      "Add oral spironolactone to his topical combination": "Spironolactone is listed for females only."
+     }
+    },
+    {
+     "t": "Four women with acne ask about a combined oral contraceptive.",
+     "q": "Who is the best candidate?",
+     "o": [
+      "A 25-year-old with a history of DVT",
+      "A 35-year-old who smokes half a pack a day",
+      "A 12-year-old in good health",
+      "A 22-year-old who does not want to be pregnant"
+     ],
+     "a": 3,
+     "w": "For women who also want contraception; older than 14 or more than 2 years since menarche; non-smoker under 35 (slides 34, 36; her poll).",
+     "x": {
+      "A 25-year-old with a history of DVT": "COCs raise the risk of venous thrombotic events.",
+      "A 35-year-old who smokes half a pack a day": "The candidate is a non-smoker under 35.",
+      "A 12-year-old in good health": "She should be older than 14, or more than 2 years past menarche."
+     }
+    },
+    {
+     "t": "A 16-year-old girl has had 8 months of oral doxycycline, a topical retinoid and benzoyl peroxide. She has comedones on the forehead, papules and cysts on the cheek, and cystic lesions on the back and shoulders. She reports irregular periods and is not sexually active.",
+     "q": "Which next-line therapy fits her?",
+     "o": [
+      "Oral spironolactone",
+      "Combined oral contraceptive",
+      "Oral corticosteroid course",
+      "Facial cleansing four times a day"
+     ],
+     "a": 1,
+     "w": "More than one cystic lesion makes it severe. She is already on an oral antibiotic with a topical combination; second line adds a COC or spironolactone, and the \"hint in the case\" is the irregular periods (slides 8, 34, 40; her Case 2 polls).",
+     "x": {
+      "Oral spironolactone": "An option for females, but the irregular periods are the compelling reason for the COC.",
+      "Oral corticosteroid course": "Not in her algorithm; corticosteroids are on her list of drugs that cause acne.",
+      "Facial cleansing four times a day": "Excessive cleansing is discouraged."
+     }
+    },
+    {
+     "t": "A 19-year-old woman of reproductive potential is starting isotretinoin. She is registered in iPledge.",
+     "q": "Which statement is correct for her?",
+     "o": [
+      "One negative pregnancy test before starting, then every 3 months; 30 days to fill",
+      "Two negative pregnancy tests before starting, then monthly; 7 days to fill",
+      "Two negative pregnancy tests before starting, then monthly; 30 days to fill",
+      "One negative pregnancy test before each fill; refills allowed for 15–20 weeks"
+     ],
+     "a": 1,
+     "w": "Females of reproductive potential: pregnancy test initially × 2 and monthly; 2 forms of birth control 1 month before, during and 1 month after; 7-day window to fill (slide 38; \"I said it twice because hint, it's a question\").",
+     "x": {
+      "One negative pregnancy test before starting, then every 3 months; 30 days to fill": "Two tests are required initially and then monthly; her fill window is 7 days.",
+      "Two negative pregnancy tests before starting, then monthly; 30 days to fill": "The 30-day window is for males and females who cannot get pregnant.",
+      "One negative pregnancy test before each fill; refills allowed for 15–20 weeks": "It is a 30-day supply with no refills, and two tests are needed before starting."
+     }
+    },
+    {
+     "t": "An 11-year-old girl has moderate acne that has not improved on benzoyl peroxide with a topical retinoid, used as directed. Her mother asks for the antibiotic her older son takes, doxycycline.",
+     "q": "What is the main reason doxycycline does not fit her?",
+     "o": [
+      "It is reserved for severe nodular acne",
+      "It cannot be combined with benzoyl peroxide",
+      "It is used only in patients older than 12",
+      "It requires registration in iPledge"
+     ],
+     "a": 2,
+     "w": "Tetracyclines are for patients older than 12: permanent tooth discoloration if used under 12 (slide 33). \"Notice that there is no 12 years and equal to ... greater than 12.\"",
+     "x": {
+      "It is reserved for severe nodular acne": "Oral antibiotics are used in moderate acne after the topical combinations.",
+      "It cannot be combined with benzoyl peroxide": "Oral antibiotics are given with the topical combination.",
+      "It requires registration in iPledge": "iPledge is for isotretinoin."
+     }
+    }
+   ],
+   "numbers": [
+    [
+     "8 weeks or more",
+     "to see visible benefit",
+     "Patel Acne slides 41, 47"
+    ],
+    [
+     "10–25% / > 50%",
+     "lesion count down within 4–8 weeks / within 2–4 months",
+     "Patel Acne slide 44"
+    ],
+    [
+     "3–4 months",
+     "comedones resolve; re-evaluate an oral antibiotic",
+     "Patel Acne slides 33, 44"
+    ],
+    [
+     "2.5–10%",
+     "benzoyl peroxide, OTC; 1–2 times daily",
+     "Patel Acne slides 23, 26"
+    ],
+    [
+     "> 12 years",
+     "tetracyclines (tooth discoloration under 12)",
+     "Patel Acne slide 33; 11/10 lecture"
+    ],
+    [
+     "50–100 mg twice daily or 100 mg daily",
+     "doxycycline or minocycline",
+     "Patel Acne slide 33"
+    ],
+    [
+     "60 / 100 / 150 mg daily",
+     "sarecycline at 33–54 / 55–84 / 85–136 kg",
+     "Patel Acne slide 33"
+    ],
+    [
+     "> 14 years; < 35 years",
+     "COC: age (or 2 years past menarche); non-smoker under 35",
+     "Patel Acne slide 34"
+    ],
+    [
+     "0.5–1 mg/kg/day",
+     "isotretinoin, in 2 divided doses; 15–20 weeks",
+     "Patel Acne slide 37"
+    ],
+    [
+     "2 tests, then monthly",
+     "pregnancy tests in iPledge",
+     "Patel Acne slide 38"
+    ],
+    [
+     "7 days / 30 days",
+     "fill window: female of reproductive potential / everyone else",
+     "Patel Acne slide 38"
+    ],
+    [
+     "20–30 minutes",
+     "wait after washing before a topical",
+     "Patel Acne slide 42"
+    ]
+   ]
+  }
+ ],
+ "drugs": {
+  "steroid": {
+   "name": "Topical corticosteroids",
+   "brand": "",
+   "sm": {
+    "text": "Target: the glucocorticoid receptor. The drug–receptor complex binds the GRE, or holds NF-kB and AP-1 off the DNA. Low potency (hydrocortisone 1%) for the face and long-term maintenance; medium potency for the body; higher potency for short-term flares.",
+    "src": "PCol slides 5–7, 10–11"
+   },
+   "sk": {
+    "text": "Steroid, four rings. Six hydrogen bonds in the receptor. Potency rises with a C1–C2 double bond, 6α or 9α halogen, and 11β-OH. Super-potent clobetasol propionate 0.05%; low hydrocortisone acetate 0.5%/1%.",
+    "src": "DPAW pages 20, 23, 25"
+   },
+   "pa": [
+    {
+     "dz": "atopic-dermatitis",
+     "role": "First line for every severity, with basic management. Start low and go up.",
+     "how": "Very high: clobetasol 0.05%. High: betamethasone dipropionate 0.05%, fluocinonide 0.05%, mometasone 0.1% ointment. Medium: mometasone 0.1% cream, triamcinolone 0.1%. Lowest: hydrocortisone. Ointment > cream > lotion > solution > gel > spray.",
+     "src": "Patel Dermatitis slides 35–37, 47–48"
+    }
+   ],
+   "counsel": [
+    "Wash hands before and after.",
+    "Apply a thin layer to a clean, dry area and rub in until it vanishes.",
+    "Do not wrap the area; let it air dry 3–5 minutes before clothing.",
+    "Twice daily for 3–7 days; improvement in 24–48 hours.",
+    "Not resolved in 7 days: seek help. Never longer than 2 weeks.",
+    "Store cool and dry at room temperature, not in the bathroom."
+   ],
+   "counselSrc": "Patel Dermatitis slides 35–36, 52; 11/06 lecture",
+   "avoid": [
+    "Diaper dermatitis",
+    "Systemic fungal infection; hypersensitivity",
+    "Face: only hydrocortisone 1%",
+    "Stop and refer for skin atrophy or infection",
+    "Adverse effects: burning, tingling, cracking, pruritus, acne, alopecia, headache, atrophy, delayed wound healing",
+    "Dr. Smith: systemic effects (HPA axis suppression, growth retardation in children) can occur even with low potency"
+   ]
+  },
+  "hydrocortisone": {
+   "name": "Hydrocortisone 1% (OTC)",
+   "brand": "",
+   "sm": {
+    "text": "Target: the glucocorticoid receptor. Low potency: the choice for the face and for long-duration maintenance.",
+    "src": "PCol slides 5–7, 10–11"
+   },
+   "sk": {
+    "text": "Natural cortisol, the reference steroid. Skin absorption under 15%. 11β-HSD converts it to inactive cortisone. Glucocorticoid and mineralocorticoid activity.",
+    "src": "DPAW pages 24–26"
+   },
+   "pa": [
+    {
+     "dz": "atopic-dermatitis",
+     "role": "The OTC steroid; the starting step; the only steroid for the face.",
+     "how": "Twice daily, max 3–7 days or until the flare clears. Slide 36 calls it low to medium potency; the slide 37 table puts it in class VII, lowest. Also sold as 0.25% and 0.5%.",
+     "src": "Patel Dermatitis slides 36–37; 11/06 lecture"
+    },
+    {
+     "dz": "diaper-dermatitis",
+     "role": "Not used as a self-care product.",
+     "how": "The diaper area is a large share of a baby's body surface; systemic effects are possible.",
+     "src": "Patel Dermatitis slide 65"
+    }
+   ],
+   "counsel": [
+    "Thin layer twice daily, rubbed in until it vanishes.",
+    "Seek help if not resolved in 7 days.",
+    "Do not use longer than 2 weeks."
+   ],
+   "counselSrc": "Patel Dermatitis slides 35–36, 52",
+   "avoid": [
+    "Diaper rash",
+    "Use past 2 weeks"
+   ]
+  },
+  "pimecrolimus": {
+   "name": "Pimecrolimus 1% cream",
+   "brand": "Elidel",
+   "sm": {
+    "text": "Target: calcineurin. Less IL-2, so less T-cell and mast cell activation.",
+    "src": "PCol slides 24–27"
+   },
+   "sk": {
+    "text": "Macrolide lactone. cLogP 6.0; high non-specific binding to skin protein, so few systemic adverse effects.",
+    "src": "DPAW pages 28, 32"
+   },
+   "pa": [
+    {
+     "dz": "atopic-dermatitis",
+     "role": "Second line (topical calcineurin inhibitor) for mild-to-moderate disease.",
+     "how": "Twice daily; older than 2 years and adults; response in 1–8 weeks; reassess at 6 weeks.",
+     "src": "Patel Dermatitis slides 38–40"
+    }
+   ],
+   "counsel": [
+    "Thin layer to a clean, dry area twice daily.",
+    "Do not bathe, shower or swim right after applying.",
+    "Expect a response in weeks (1–8); keep applying.",
+    "Protect the skin from the sun and use sunscreen.",
+    "Short-term, intermittent use; the minimum amount, on involved areas only."
+   ],
+   "counselSrc": "Patel Dermatitis slides 38, 40",
+   "avoid": [
+    "Children under 2 years",
+    "Boxed warning: rare lymphoma and skin malignancy; avoid on malignant or premalignant skin",
+    "Not with wet wraps or compresses",
+    "Safety of intermittent use beyond 1 year not established"
+   ]
+  },
+  "tacrolimus": {
+   "name": "Tacrolimus ointment 0.03%, 0.1%",
+   "brand": "Protopic",
+   "sm": {
+    "text": "Binds FKBP; the complex inhibits calcineurin.",
+    "src": "PCol slide 26"
+   },
+   "sk": {
+    "text": "Macrolide lactone. cLogP 5.8; low skin protein binding, so more enters the circulation than with pimecrolimus.",
+    "src": "DPAW page 28"
+   },
+   "pa": [
+    {
+     "dz": "atopic-dermatitis",
+     "role": "Second line (topical calcineurin inhibitor) for moderate-to-severe disease.",
+     "how": "Twice daily. 0.1% for adults (older than 16 years); 0.03% from 2 to 15 years.",
+     "src": "Patel Dermatitis slides 38–40"
+    }
+   ],
+   "counsel": [
+    "Thin layer to a clean, dry area twice daily.",
+    "Do not bathe, shower or swim right after applying.",
+    "Expect a response in 1–8 weeks.",
+    "Protect the skin from the sun and use sunscreen."
+   ],
+   "counselSrc": "Patel Dermatitis slides 38, 40",
+   "avoid": [
+    "Children under 2 years",
+    "Boxed warning: rare lymphoma and skin malignancy",
+    "Not with wet wraps or compresses",
+    "Reassess at 6 weeks"
+   ]
+  },
+  "crisaborole": {
+   "name": "Crisaborole 2% ointment",
+   "brand": "Eucrisa",
+   "sm": {
+    "text": "Target: phosphodiesterase 4 (PDE-4). cAMP is not broken down, so inflammatory cells are inhibited.",
+    "src": "PCol slides 32–33"
+   },
+   "sk": {
+    "text": "Benzoxaborole (boron-based), a soft drug. Boron coordinates Zn2+ and Mg2+ in the PDE4 active site. log P 3; half-life 12 h; spontaneous hydrolytic deboronation.",
+    "src": "DPAW pages 7, 9"
+   },
+   "pa": [
+    {
+     "dz": "atopic-dermatitis",
+     "role": "Third line; mild to moderate; treats flares; when a steroid is not appropriate or as an adjunct.",
+     "how": "Thin layer twice daily; adults and children older than 3 months.",
+     "src": "Patel Dermatitis slides 41–42"
+    }
+   ],
+   "counsel": [
+    "Thin layer to a clean, dry area twice daily.",
+    "Do not bathe, shower or swim right after applying.",
+    "Burning and stinging can occur.",
+    "Store cool and dry at room temperature."
+   ],
+   "counselSrc": "Patel Dermatitis slides 41–42",
+   "avoid": [
+    "Under 3 months of age",
+    "Hypersensitivity"
+   ]
+  },
+  "dupilumab": {
+   "name": "Dupilumab",
+   "brand": "Dupixent",
+   "sm": {
+    "text": "A monoclonal IgG4 antibody that binds the IL-4 receptor α subunit shared by the IL-4 and IL-13 receptors, so it blocks both IL-4 and IL-13 signaling.",
+    "src": "PCol slide 64"
+   },
+   "pa": [
+    {
+     "dz": "atopic-dermatitis",
+     "role": "Moderate-to-severe disease after the topical agents. Her slide calls it an IL-4 antagonist. Specialty drug; prior authorization.",
+     "how": "Adult 600 mg once (2 × 300 mg), then 300 mg every other week. Ages 6–17: over 60 kg adult dose; 30–60 kg 400 mg then 200 mg every other week; 15–30 kg 600 mg then 300 mg every 4 weeks. May be combined with a topical corticosteroid or calcineurin inhibitor.",
+     "src": "Patel Dermatitis slides 43–44"
+    }
+   ],
+   "counsel": [
+    "Clean and dry the site.",
+    "Inject at 90 degrees into the thigh or lower abdomen; the upper arm is allowed.",
+    "Rotate injection sites.",
+    "Keep in the refrigerator; let it reach room temperature for 30–45 minutes before injecting.",
+    "No live vaccines."
+   ],
+   "counselSrc": "Patel Dermatitis slides 43–44; 11/06 lecture",
+   "avoid": [
+    "Live vaccines",
+    "Under 6 months of age",
+    "May interact with CYP-450: warfarin or cyclosporine doses may need adjusting",
+    "Adverse effects: urticaria, angioedema, rash, erythema, injection-site reaction"
+   ]
+  },
+  "tralokinumab": {
+   "name": "Tralokinumab",
+   "brand": "",
+   "pa": [
+    {
+     "dz": "atopic-dermatitis",
+     "role": "IL-13 cytokine inhibitor; moderate-to-severe disease not controlled with, or unable to use, topical therapy; the alternative to dupilumab.",
+     "how": "600 mg as four 150 mg injections, then 300 mg (two 150 mg) every other week; every 4 weeks if under 100 kg with clear skin after 16 weeks. Comes only as 150 mg.",
+     "src": "Patel Dermatitis slide 45"
+    }
+   ],
+   "counsel": [
+    "Subcutaneous injection.",
+    "The first dose is four injections; each later dose is two."
+   ],
+   "counselSrc": "Patel Dermatitis slide 45; 11/06 lecture",
+   "avoid": [
+    "Adverse events: ocular events, upper respiratory tract infections, injection-site reactions"
+   ]
+  },
+  "jak": {
+   "name": "JAK inhibitors: abrocitinib, upadacitinib, ruxolitinib",
+   "brand": "Cibinqo, Rinvoq, Opzelura",
+   "sm": {
+    "text": "Target: Janus kinase. Ruxolitinib: JAK1 and JAK2. Upadacitinib: more potent at JAK1 and JAK2 than JAK3 and TYK2 in an enzyme assay.",
+    "src": "PCol slide 76"
+   },
+   "sk": {
+    "text": "Ruxolitinib: log P about 2, half-life 3 h, CYP3A4/2C9 substrate, some active metabolites. Upadacitinib: half-life 8–16 h, CYP3A4/2D6 substrate, no active metabolites.",
+    "src": "DPAW page 8"
+   },
+   "pa": [
+    {
+     "dz": "atopic-dermatitis",
+     "role": "Last line: moderate-to-severe, refractory disease, older than 12 years.",
+     "how": "Abrocitinib 100 mg daily, may increase to 200 mg after 12 weeks. Upadacitinib 15 mg daily, may increase to 30 mg. Ruxolitinib topical: 60 g per week or 100 g per two weeks.",
+     "src": "Patel Dermatitis slide 46"
+    }
+   ],
+   "counsel": [
+    "Specialty medication with follow-up every 2 weeks."
+   ],
+   "counselSrc": "Patel Dermatitis slide 46; 11/06 lecture",
+   "avoid": [
+    "Boxed: serious infections (active TB, invasive fungal); topical: avoid with active serious infection",
+    "Boxed: higher all-cause mortality, including sudden CV death",
+    "Boxed: lymphoma and other malignancies",
+    "Boxed: MACE (CV death, MI, stroke)",
+    "Boxed: thrombosis (DVT, PE, arterial)"
+   ]
+  },
+  "moisturizer": {
+   "name": "Moisturizers and skin protectants (petrolatum)",
+   "brand": "Aquaphor, Eucerin, Lubriderm, CeraVe, Cetaphil",
+   "sk": {
+    "text": "Petrolatum: linear hydrocarbons of more than 25 carbons; the most effective emollient; fills the gaps between scales and prevents water loss. Lanolin: fatty acid esters; odor limits use. Dimethicone: silicone, hypoallergenic, non-comedogenic.",
+    "src": "DPAW page 15"
+   },
+   "pa": [
+    {
+     "dz": "atopic-dermatitis",
+     "role": "Basic management for every patient, every day.",
+     "how": "Petroleum-containing: occlusive, most effective, thickest, longest-lasting, greasy. Ceramide-containing creams: barrier. Urea-containing: humectant, stings on broken skin. Lotions: less effective, 3 times a day or more.",
+     "src": "Patel Dermatitis slides 31–32; 11/06 lecture"
+    },
+    {
+     "dz": "diaper-dermatitis",
+     "role": "Petrolatum 30–100% is the ointment base of diaper protectants. Alone (Aquaphor) it moisturizes and does not treat.",
+     "how": "Liberally at every change.",
+     "src": "Patel Dermatitis slides 63–64; 11/06 lecture"
+    }
+   ],
+   "counsel": [
+    "Apply right after the bath, within 3 minutes, while the skin is still damp.",
+    "Lotions: 3 times a day or more, after bathing or washing."
+   ],
+   "counselSrc": "Patel Dermatitis slides 31–32, 52",
+   "avoid": [
+    "Urea products on broken skin: burning, stinging, irritation"
+   ]
+  },
+  "zinc-oxide": {
+   "name": "Zinc oxide 1–40% (skin protectant)",
+   "brand": "Desitin",
+   "sm": {
+    "text": "No drug target; as a sunblock the particles scatter and reflect UV.",
+    "src": "Drug chart page 5; Sun Exposure slide 20"
+   },
+   "sk": {
+    "text": "Metal oxide; inert; reflects and scatters UVA and UVB.",
+    "src": "DPAW page 61"
+   },
+   "pa": [
+    {
+     "dz": "diaper-dermatitis",
+     "role": "First-line product (her poll); the active ingredient of diaper creams; common, excellent protectant.",
+     "how": "1–40%; thick and tacky. Liberally at every change; cover red areas completely; continue after healing.",
+     "src": "Patel Dermatitis slides 63–64, 69"
+    }
+   ],
+   "counsel": [
+    "Apply liberally at every diaper change.",
+    "Remove the old product gently.",
+    "Cover all red areas.",
+    "Keep using it after the rash heals to prevent another.",
+    "Check at 7 days: improved, continue until healed; not improved or worse, see a physician."
+   ],
+   "counselSrc": "Patel Dermatitis slides 63, 66",
+   "avoid": [
+    "Not enough alone when an exclusion for self-care is present (infection, broken skin, fever, rash outside the diaper area)"
+   ]
+  },
+  "bpo": {
+   "name": "Benzoyl peroxide",
+   "brand": "",
+   "sm": {
+    "text": "Antimicrobial against P. acnes, with peeling and comedolytic effects; benzoic acid is the probable active form. An oxidant: bleaches hair and fabric; a potent contact sensitizer.",
+    "src": "PCol slides 36–37"
+   },
+   "sk": {
+    "text": "A peroxide. Breaks down to benzoic acid, which lowers skin pH, and a benzoyl free radical. log P 3.5.",
+    "src": "DPAW page 47"
+   },
+   "pa": [
+    {
+     "dz": "acne",
+     "role": "First-line OTC agent: bactericidal, keratolytic and comedolytic. In every topical combination; prevents P. acnes resistance.",
+     "how": "OTC 2.5–10%; prescription up to 20%; 1–2 times daily.",
+     "src": "Patel Acne slides 23, 25–26, 40"
+    }
+   ],
+   "counsel": [
+    "Apply 1–2 times daily to affected areas.",
+    "Irritation is the most common effect and settles within 1–2 weeks.",
+    "It dries the skin and raises sun sensitivity: use sunscreen.",
+    "It bleaches hair and clothing.",
+    "With adapalene: benzoyl peroxide in the morning, adapalene at night."
+   ],
+   "counselSrc": "Patel Acne slides 23, 26–27",
+   "avoid": [
+    "Contact allergy",
+    "Higher strengths irritate more"
+   ]
+  },
+  "adapalene": {
+   "name": "Adapalene",
+   "brand": "Differin",
+   "sm": {
+    "text": "Target: retinoic acid receptors RAR and RXR (nuclear receptors); RAR–RXR binds the RARE.",
+    "src": "PCol slides 14, 17–18"
+   },
+   "sk": {
+    "text": "Third-generation poly-aromatic retinoid; directly active (exposed COOH); low systemic absorption.",
+    "src": "DPAW page 51"
+   },
+   "pa": [
+    {
+     "dz": "acne",
+     "role": "The OTC topical retinoid (0.1% gel, OTC since 2016): keratolytic and comedolytic. Single agent or in combination with benzoyl peroxide.",
+     "how": "At night after washing; thin layer over the whole affected area; prescription 0.3%.",
+     "src": "Patel Acne slides 23, 27, 31"
+    }
+   ],
+   "counsel": [
+    "Apply at night; benzoyl peroxide goes on in the morning.",
+    "Thin layer; avoid the eyes, lips and mucous membranes.",
+    "Use a moisturizer and sunscreen.",
+    "Do not use with sulfur, resorcinol, salicylic acid or vitamin C products.",
+    "Irritation settles within 1–2 weeks."
+   ],
+   "counselSrc": "Patel Acne slide 27",
+   "avoid": [
+    "OTC labeling: persons over 12 years of age",
+    "Erythema, scaling, dryness, pruritus, burning"
+   ]
+  },
+  "tretinoin": {
+   "name": "Tretinoin",
+   "brand": "Retin-A, Altreno",
+   "sm": {
+    "text": "Target: retinoic acid receptors RAR and RXR. In acne: less cohesion between epidermal cells and faster turnover; open comedones are expelled, closed ones opened.",
+    "src": "PCol slides 14–15, 17–18"
+   },
+   "sk": {
+    "text": "First generation: all-trans retinoic acid; topical; the first retinoid for acne; teratogenic.",
+    "src": "DPAW pages 49, 70"
+   },
+   "pa": [
+    {
+     "dz": "acne",
+     "role": "Prescription topical retinoid: reduces inflammation, normalizes keratinocyte differentiation.",
+     "how": "Apply to clean, dry skin; avoid eyes, mucous membranes and abrasions.",
+     "src": "Patel Acne slide 31"
+    }
+   ],
+   "counsel": [
+    "Apply to clean, dry skin in the evening.",
+    "Avoid eyes, mucous membranes and broken skin.",
+    "Use sunscreen: photosensitivity, irritation and peeling."
+   ],
+   "counselSrc": "Patel Acne slides 31, 42",
+   "avoid": [
+    "Photosensitivity, photo-irritation, severe peeling"
+   ]
+  },
+  "tazarotene": {
+   "name": "Tazarotene",
+   "brand": "Tazorac, Fabior",
+   "sm": {
+    "text": "Target: retinoic acid receptors RAR and RXR.",
+    "src": "PCol slides 14, 18, 20"
+   },
+   "sk": {
+    "text": "Third-generation acetylenic retinoid; an ethyl ester prodrug that carboxylesterase turns into tazarotenic acid; teratogenic.",
+    "src": "DPAW pages 29, 51"
+   },
+   "pa": [
+    {
+     "dz": "acne",
+     "role": "Prescription topical retinoid, 0.05–0.1%; an alternate retinoid in the algorithm.",
+     "how": "Apply to clean, dry skin.",
+     "src": "Patel Acne slides 31, 40"
+    }
+   ],
+   "counsel": [
+    "Apply to clean, dry skin in the evening.",
+    "Avoid eyes, mucous membranes and broken skin.",
+    "Use sunscreen."
+   ],
+   "counselSrc": "Patel Acne slides 31, 42",
+   "avoid": [
+    "Photosensitivity, photo-irritation, severe peeling"
+   ]
+  },
+  "salicylic-acid": {
+   "name": "Salicylic acid",
+   "brand": "",
+   "sm": {
+    "text": "Solubilizes the cell surface proteins that keep the stratum corneum intact (keratolytic).",
+    "src": "PCol slide 39"
+   },
+   "sk": {
+    "text": "A beta-hydroxy acid; keratolytic; raises hydration. pKa about 3; 75% glycine conjugation.",
+    "src": "DPAW page 43"
+   },
+   "pa": [
+    {
+     "dz": "acne",
+     "role": "OTC beta-hydroxy acid, 0.5–2%: keratolytic and comedolytic, not bactericidal. Limited efficacy data.",
+     "how": "Once or twice daily as a cleanser or gel; gel on the affected area only; maximum effect at 4–6 weeks.",
+     "src": "Patel Acne slides 23, 29"
+    }
+   ],
+   "counsel": [
+    "Once or twice daily as a cleanser or gel.",
+    "Apply a gel only to the affected area.",
+    "It dries the skin and raises sun sensitivity: use sunscreen.",
+    "Not together with adapalene."
+   ],
+   "counselSrc": "Patel Acne slides 27, 29",
+   "avoid": [
+    "Frequent washing with it: excessive cleansing is discouraged (her Case 1 poll)"
+   ]
+  },
+  "aha": {
+   "name": "Alpha hydroxy acids (glycolic, lactic, citric)",
+   "brand": "",
+   "sk": {
+    "text": "Glycolic acid: an alpha-hydroxy acid; keratolytic; pKa about 3, stays at the surface; higher concentrations for deeper peels; itching.",
+    "src": "DPAW pages 43, 68"
+   },
+   "pa": [
+    {
+     "dz": "acne",
+     "role": "Exfoliate non-inflammatory lesions; at high concentration a chemical peel for scarring (not OTC).",
+     "how": "Glycolic acid is applied in a trial form first; wait 2–4 weeks between peels.",
+     "src": "Patel Acne slide 28"
+    }
+   ],
+   "counsel": [
+    "Try it on a small area first.",
+    "Wait 2–4 weeks between peels.",
+    "Use sunscreen: it raises sun sensitivity."
+   ],
+   "counselSrc": "Patel Acne slide 28",
+   "avoid": [
+    "Photosensitivity without sunscreen"
+   ]
+  },
+  "azelaic-acid": {
+   "name": "Azelaic acid 15–20%",
+   "brand": "Azelex, Finacea",
+   "sk": {
+    "text": "A C9 dicarboxylic acid; antibacterial and anti-inflammatory.",
+    "src": "DPAW page 54"
+   },
+   "pa": [
+    {
+     "dz": "acne",
+     "role": "Adjunct for post-inflammatory dyspigmentation; reduces inflammation and bacterial growth.",
+     "how": "Prescription topical.",
+     "src": "Patel Acne slides 25, 31"
+    }
+   ],
+   "counsel": [
+    "Wait until it is dry before applying cosmetics."
+   ],
+   "counselSrc": "Patel Acne slide 31",
+   "avoid": [
+    "Hypersensitivity; hypopigmentation; skin irritation and peeling"
+   ]
+  },
+  "dapsone": {
+   "name": "Dapsone gel 5–7.5%",
+   "brand": "Aczone",
+   "sm": {
+    "text": "In leprosy a PABA antagonist; in acne (topical gel) anti-inflammatory, with neutrophils a possible site.",
+    "src": "PCol slide 50"
+   },
+   "pa": [
+    {
+     "dz": "acne",
+     "role": "Topical anti-inflammatory for inflammatory acne; second line in the mild column, after the other topical options.",
+     "how": "Prescription gel.",
+     "src": "Patel Acne slides 25, 31, 40; 11/10 lecture"
+    }
+   ],
+   "counsel": [
+    "Blood counts are checked while on it."
+   ],
+   "counselSrc": "Patel Acne slide 31",
+   "avoid": [
+    "G6PD concern",
+    "Monitor CBC and reticulocyte counts"
+   ]
+  },
+  "topical-abx": {
+   "name": "Topical antibiotics: clindamycin 1%, erythromycin 2%, minocycline foam 4%",
+   "brand": "",
+   "sm": {
+    "text": "Clindamycin: 50S ribosomal subunit, prevents translocation. Erythromycin: 50S subunit.",
+    "src": "PCol slides 46–47"
+   },
+   "sk": {
+    "text": "Clindamycin: a lincomycin, used topically because of GI toxicity. Erythromycin: a macrolide, poorly absorbed by mouth and unstable at pH 4 or below.",
+    "src": "DPAW page 54"
+   },
+   "pa": [
+    {
+     "dz": "acne",
+     "role": "Part of a topical combination; reduce inflammation and bacterial growth. Never monotherapy: add benzoyl peroxide to reduce resistance.",
+     "how": "Thin layer to affected areas 1–2 times daily. Macrolides are less used because of resistance.",
+     "src": "Patel Acne slides 25, 31, 33"
+    }
+   ],
+   "counsel": [
+    "Always use it with benzoyl peroxide.",
+    "Wait 30 minutes before shaving or applying cosmetics.",
+    "Skin or eye irritation and peeling can occur."
+   ],
+   "counselSrc": "Patel Acne slide 31",
+   "avoid": [
+    "Use alone"
+   ]
+  },
+  "doxycycline": {
+   "name": "Doxycycline",
+   "brand": "",
+   "sm": {
+    "text": "Target: the 30S ribosomal subunit; blocks aminoacyl-tRNA binding at the acceptor site.",
+    "src": "PCol slide 43"
+   },
+   "sk": {
+    "text": "A tetracycline; lipophilic; food has no effect on absorption; half-life 11–13 h or 14–22 h (doxycycline, minocycline); the class chelates metal ions and stains bone and enamel.",
+    "src": "DPAW page 55"
+   },
+   "pa": [
+    {
+     "dz": "acne",
+     "role": "Oral antibiotic added to a topical combination in moderate acne after the topicals, and first line with the combination in severe acne. Most commonly prescribed.",
+     "how": "50–100 mg twice daily or 100 mg daily; older than 12 years; shortest possible duration; re-evaluate at 3–4 months.",
+     "src": "Patel Acne slides 32–33, 40"
+    }
+   ],
+   "counsel": [
+    "Swallow whole with a full glass of water; it may be taken after eating.",
+    "Use sunscreen every day: photosensitivity.",
+    "Keep using the topical combination with it.",
+    "It is used for the shortest time possible; expect a review at 3–4 months."
+   ],
+   "counselSrc": "Patel Acne slides 33, 42",
+   "avoid": [
+    "12 years old or younger: permanent tooth discoloration",
+    "Pregnancy: fetal harm",
+    "With isotretinoin",
+    "Adverse effects: abdominal pain, diarrhea, nausea and vomiting, hepatotoxicity, hyperpigmentation"
+   ]
+  },
+  "minocycline": {
+   "name": "Minocycline",
+   "brand": "",
+   "sm": {
+    "text": "Target: the 30S ribosomal subunit; blocks aminoacyl-tRNA binding at the acceptor site.",
+    "src": "PCol slide 43"
+   },
+   "sk": {
+    "text": "A tetracycline; lipophilic; food has no effect on absorption.",
+    "src": "DPAW page 55"
+   },
+   "pa": [
+    {
+     "dz": "acne",
+     "role": "Oral tetracycline, used as doxycycline; also a 4% topical foam.",
+     "how": "50–100 mg twice daily or 100 mg daily; older than 12 years.",
+     "src": "Patel Acne slides 31, 33"
+    }
+   ],
+   "counsel": [
+    "Swallow whole with a full glass of water.",
+    "Use sunscreen every day."
+   ],
+   "counselSrc": "Patel Acne slides 33, 42",
+   "avoid": [
+    "12 years old or younger",
+    "Pregnancy",
+    "With isotretinoin"
+   ]
+  },
+  "sarecycline": {
+   "name": "Sarecycline",
+   "brand": "",
+   "sm": {
+    "text": "Target: the 30S ribosomal subunit, as the other tetracyclines.",
+    "src": "PCol slide 43"
+   },
+   "pa": [
+    {
+     "dz": "acne",
+     "role": "Tetracycline derivative for non-nodular moderate to severe acne.",
+     "how": "Once daily by weight: 60 mg (33–54 kg), 100 mg (55–84 kg), 150 mg (85–136 kg).",
+     "src": "Patel Acne slide 33"
+    }
+   ],
+   "counsel": [
+    "Once daily; swallow whole with a full glass of water.",
+    "Use sunscreen every day."
+   ],
+   "counselSrc": "Patel Acne slides 33, 42",
+   "avoid": [
+    "Tetracycline class cautions: pregnancy, photosensitivity"
+   ]
+  },
+  "tmp-smx": {
+   "name": "Trimethoprim/sulfamethoxazole",
+   "brand": "",
+   "sm": {
+    "text": "Sulfamethoxazole competes with PABA and blocks dihydrofolic acid synthesis; trimethoprim inhibits bacterial dihydrofolate reductase.",
+    "src": "PCol slides 48–49"
+   },
+   "pa": [
+    {
+     "dz": "acne",
+     "role": "Limited use: only for patients allergic to macrolides and tetracyclines.",
+     "how": "Oral.",
+     "src": "Patel Acne slides 32–33"
+    }
+   ],
+   "counsel": [
+    "Swallow with a full glass of water.",
+    "Use sunscreen every day."
+   ],
+   "counselSrc": "Patel Acne slides 33, 42",
+   "avoid": [
+    "Sulfa allergy (slide: \"allergic to sulfur\")",
+    "Hepatotoxicity; sulfonamide reaction"
+   ]
+  },
+  "coc": {
+   "name": "Combined oral contraceptives",
+   "brand": "",
+   "sk": {
+    "text": "Ethinyl estradiol with norgestimate or drospirenone: steroids that lower sebum (females).",
+    "src": "DPAW page 52"
+   },
+   "pa": [
+    {
+     "dz": "acne",
+     "role": "Second-line addition in moderate or severe acne for a female who also wants contraception; a help with irregular menses.",
+     "how": "Older than 14, or more than 2 years past menarche; non-smoker under 35. FDA-approved for acne: ethinyl estradiol with norgestimate, norethindrone acetate, or drospirenone.",
+     "src": "Patel Acne slides 34–36, 40"
+    }
+   ],
+   "counsel": [
+    "Benefits: contraception, fewer hyperandrogen symptoms, lower risk of colorectal, ovarian and endometrial cancers.",
+    "Risks: venous thrombotic events, myocardial infarction, breast or cervical cancer, decreased bone mass."
+   ],
+   "counselSrc": "Patel Acne slides 35–36",
+   "avoid": [
+    "History of DVT",
+    "Smoker, or 35 and older",
+    "14 or younger and less than 2 years past menarche",
+    "Males"
+   ]
+  },
+  "spironolactone": {
+   "name": "Spironolactone",
+   "brand": "",
+   "sm": {
+    "text": "Class for acne: antiandrogen (her slide gives the class, not the target).",
+    "src": "Pathophys slides 36–37"
+   },
+   "sk": {
+    "text": "Steroidal antiandrogen; diminishes testosterone biosynthesis.",
+    "src": "DPAW page 53"
+   },
+   "pa": [
+    {
+     "dz": "acne",
+     "role": "Oral anti-androgen; second-line addition in moderate or severe acne, females only.",
+     "how": "In her Case 2 the COC was chosen over it because of irregular periods.",
+     "src": "Patel Acne slides 32, 34, 40; 11/10 lecture"
+    }
+   ],
+   "counsel": [
+    "Used in addition to the topical regimen."
+   ],
+   "counselSrc": "Patel Acne slides 34, 40",
+   "avoid": [
+    "Males: gynecomastia",
+    "Hyperkalemia"
+   ]
+  },
+  "isotretinoin": {
+   "name": "Isotretinoin",
+   "brand": "Accutane, Absorica",
+   "sm": {
+    "text": "A retinoid (RAR/RXR). In cystic acne the mechanism is not known; it appears to inhibit sebaceous gland size and function. Her figure places it on sebum, keratinization and P. acnes.",
+    "src": "PCol slides 14, 19; Pathophys slide 36"
+   },
+   "sk": {
+    "text": "First generation: 13-cis retinoic acid; oral; teratogenic.",
+    "src": "DPAW pages 29, 49"
+   },
+   "pa": [
+    {
+     "dz": "acne",
+     "role": "Severe refractory nodular acne, or acne causing significant scarring. In class: \"absolute last line\". Slide 40 also prints it in the severe first-line box.",
+     "how": "0.5–1 mg/kg/day in 2 divided doses (she starts at 0.5); 15–20 weeks; 30-day supply, no refills. Labs: triglycerides, cholesterol, LFTs, CBC.",
+     "src": "Patel Acne slides 37–38, 40; 11/10 lecture"
+    }
+   ],
+   "counsel": [
+    "Register with iPledge and sign the consent.",
+    "Female of reproductive potential: two negative pregnancy tests before starting, then one every month.",
+    "Two forms of birth control from 1 month before to 1 month after.",
+    "Fill within 7 days (30 days for males and for females who cannot get pregnant).",
+    "Do not donate blood during treatment or for 1 month after.",
+    "Swallow the capsule whole.",
+    "Expect dry nose, eyes, mouth and lips; report mood changes or thoughts of suicide."
+   ],
+   "counselSrc": "Patel Acne slides 37–38; 11/10 lecture",
+   "avoid": [
+    "Pregnancy: boxed warning for birth defects",
+    "Vitamin A supplements, tetracyclines, steroids, progestin-only contraceptives",
+    "Mood disorders, depression, suicidal ideation"
+   ]
+  }
+ },
+ "terms": {
+  "scorad": [
+   "SCORAD",
+   "SCORing Atopic Dermatitis: a clinical tool for the extent and severity of atopic dermatitis; under 25 mild, 25–50 moderate, over 50 severe.",
+   "Patel Dermatitis slide 23"
+  ],
+  "ftu": [
+   "Fingertip unit (FTU)",
+   "The amount of topical product used to size the tube; one adult unit = 0.5 g.",
+   "Patel Dermatitis slide 10"
+  ],
+  "lichenification": [
+   "Lichenification",
+   "Thickened skin; in class she called it the silvery, scaly plaque. It marks chronic atopic dermatitis.",
+   "Patel Dermatitis slides 21, 24; 11/06 lecture"
+  ],
+  "atopic-triad": [
+   "Atopic triad",
+   "Allergic rhinitis (hay fever), asthma and atopic dermatitis.",
+   "Patel Dermatitis slide 19"
+  ],
+  "atopic-march": [
+   "Atopic march",
+   "The typical progression of allergic diseases that begin early in life: allergic rhinitis, asthma, atopic dermatitis and food allergies.",
+   "Patel Dermatitis slide 19"
+  ],
+  "flg": [
+   "Filaggrin (FLG gene)",
+   "FLG encodes profilaggrin, which degrades to filaggrins; they form the skin barrier, and their breakdown products are natural moisturizers.",
+   "Smith Pathophys slide 15"
+  ],
+  "tewl": [
+   "TEWL",
+   "Trans-epidermal water loss; reducing it is a treatment goal.",
+   "Patel Dermatitis slide 27"
+  ],
+  "tci": [
+   "TCI",
+   "Topical calcineurin inhibitor: pimecrolimus or tacrolimus.",
+   "Patel Dermatitis slides 38–39"
+  ],
+  "tcs": [
+   "TCS",
+   "Topical corticosteroid (topical steroid).",
+   "Patel Dermatitis slides 47–48"
+  ],
+  "pde4": [
+   "PDE-4",
+   "Phosphodiesterase 4, the enzyme that breaks down cAMP in inflammatory cells; crisaborole inhibits it.",
+   "Smith PCol slides 32–33; Patel Dermatitis slide 41"
+  ],
+  "mace": [
+   "MACE",
+   "On her slide: CV death, MI and stroke (a JAK inhibitor boxed warning).",
+   "Patel Dermatitis slide 46"
+  ],
+  "abcde": [
+   "ABCDE",
+   "Air, Barrier, Cleansing, Diaper, Education: prevention and non-drug treatment of diaper dermatitis.",
+   "Patel Dermatitis slide 62"
+  ],
+  "globiad": [
+   "GLOBIAD",
+   "The adult incontinence-associated dermatitis categories: 1 persistent redness, 2 skin loss; A without and B with clinical signs of infection.",
+   "Patel Dermatitis slide 60; 11/06 lecture"
+  ],
+  "skin-protectant": [
+   "Skin protectant",
+   "A product that gives a physical barrier and lubrication to the skin.",
+   "Patel Dermatitis slide 63"
+  ],
+  "comedone": [
+   "Comedone",
+   "A plugged follicle, non-inflammatory: open = blackhead, closed = whitehead.",
+   "Patel Acne slides 5–6"
+  ],
+  "papule": [
+   "Papule",
+   "An inflammatory lesion: raised and red, with no visible pus.",
+   "Patel Acne slides 5–6; 11/10 lecture"
+  ],
+  "pustule": [
+   "Pustule",
+   "An inflammatory lesion with visible white pus.",
+   "Patel Acne slides 5–6; 11/10 lecture"
+  ],
+  "nodule": [
+   "Nodule or cyst",
+   "A large inflammatory lesion under the skin; the worst stage of acne. A foreign body response to the papule; it does not drain (Dr. Smith).",
+   "Patel Acne slides 5–6; Smith Pathophys slide 34"
+  ],
+  "bactericidal": [
+   "Bactericidal",
+   "Destroys bacteria.",
+   "Patel Acne slide 22"
+  ],
+  "keratolytic": [
+   "Keratolytic",
+   "Thins the skin on and around the lesion; the outer layer loosens and sheds; softens keratin.",
+   "Patel Acne slide 22"
+  ],
+  "comedolytic": [
+   "Comedolytic",
+   "Lyses comedones and prevents new ones; loosens the plug of cells and oil.",
+   "Patel Acne slide 22"
+  ],
+  "ipledge": [
+   "iPledge",
+   "The FDA-regulated program (a REMS) for isotretinoin, a potent teratogen: registration, consent, pregnancy tests and limited fill windows.",
+   "Patel Acne slides 37–38"
+  ],
+  "coc": [
+   "COC",
+   "Combined oral contraceptive.",
+   "Patel Acne slide 34"
+  ],
+  "pcos": [
+   "PCOS",
+   "Polycystic ovary syndrome (plain meaning, not from the slides); her slide names it as the exception for endocrine testing.",
+   "Patel Acne slide 17"
+  ],
+  "bp": [
+   "BP",
+   "Benzoyl peroxide, in the key of her algorithm slide.",
+   "Patel Acne slides 20, 40"
+  ]
+ },
+ "tell": [
+  {
+   "id": "ad-pso-acne",
+   "title": "Atopic dermatitis, psoriasis or acne: the major pathology",
+   "cols": [
+    "Atopic dermatitis",
+    "Psoriasis",
+    "Acne"
+   ],
+   "path": [
+    {
+     "q": "Is the main problem a weak skin barrier?",
+     "a": [
+      "Yes → **atopic dermatitis**",
+      "No → next question"
+     ]
+    },
+    {
+     "q": "Do keratinocytes multiply too fast, or is too much sebum made?",
+     "a": [
+      "Keratinocyte hyperproliferation → **psoriasis**",
+      "Excess sebum → **acne**"
+     ]
+    }
+   ],
+   "rows": [
+    [
+     "Major pathology (her poll)",
+     [
+      "{{Skin barrier dysfunction}}",
+      "{{Keratinocyte hyperproliferation}}",
+      "{{Excess sebum production}}"
+     ],
+     "Keratinocyte hyperproliferation is false for acne: \"a feature of psoriasis\""
+    ],
+    [
+     "Where it starts",
+     [
+      "Epidermal barrier (filaggrin)",
+      "Keratinocytes divide too fast and do not mature",
+      "The pilosebaceous unit"
+     ],
+     ""
+    ],
+    [
+     "Immune picture",
+     [
+      "Deviation toward TH2; IgE rises",
+      "T-cell-mediated, systemic: TNF-α, IL-23, IL-17",
+      "P. acnes and inflammation in the follicle"
+     ],
+     ""
+    ],
+    [
+     "How common",
+     [
+      "15–30% of children; 2–10% of adults",
+      "About 3% of the US population",
+      "Lifetime prevalence approaches 90%"
+     ],
+     ""
+    ],
+    [
+     "Family figure",
+     [
+      "Two- to threefold (one atopic parent); three- to fivefold (two)",
+      "About 30% have a first-degree relative",
+      "81% if both parents had acne"
+     ],
+     ""
+    ],
+    [
+     "Drug classes on her slide",
+     [
+      "Corticosteroids; calcineurin inhibitors; PDE-4 inhibitor; IL-4Rα/IL-13 receptor antagonists; JAK inhibitor",
+      "Corticosteroids, DHFR inhibitor, TNF-α, IL-23 and IL-17A inhibitors, and others",
+      "Keratolytics; antibiotics; nuclear receptor binders; antiandrogens"
+     ],
+     ""
+    ]
+   ],
+   "src": "Smith Pathophys slides 10, 13, 15, 17, 19–21, 28, 31–32, 35, 37–38; 10/29 lecture"
+  },
+  {
+   "id": "acne-grades",
+   "title": "Her four acne grades",
+   "cols": [
+    "Mildly clear",
+    "Mild",
+    "Moderate",
+    "Severe"
+   ],
+   "path": [
+    {
+     "q": "Any nodules or cysts?",
+     "a": [
+      "More than one → **severe**",
+      "No more than one → next question"
+     ]
+    },
+    {
+     "q": "How many non-inflammatory lesions: rare, some or many?",
+     "a": [
+      "Rare → **mildly clear**",
+      "Some, with no more than a few papules or pustules → **mild**",
+      "Many, with some inflammatory lesions → **moderate**"
+     ]
+    }
+   ],
+   "rows": [
+    [
+     "Non-inflammatory lesions",
+     [
+      "{{Rare}}; no more than 1 small lesion",
+      "{{Some}}",
+      "{{Many}}",
+      "{{Many}}"
+     ],
+     ""
+    ],
+    [
+     "Inflammatory lesions",
+     [
+      "—",
+      "No more than {{a few}} papules and pustules",
+      "{{Some}}",
+      "{{Many}}"
+     ],
+     ""
+    ],
+    [
+     "Nodules",
+     [
+      "—",
+      "{{None}}",
+      "No more than {{one}}",
+      "No more than {{a few}}"
+     ],
+     "One nodule or more than one separates moderate from severe"
+    ],
+    [
+     "Scarring",
+     [
+      "—",
+      "Minimal",
+      "Mild, possible",
+      "Moderate to extensive"
+     ],
+     ""
+    ],
+    [
+     "Lesion type on the algorithm",
+     [
+      "Comedones",
+      "Comedones / papulopustular",
+      "Papulopustular / comedones",
+      "Papulopustular / nodular"
+     ],
+     ""
+    ],
+    [
+     "First line",
+     [
+      "± Benzoyl peroxide alone, or essential oils",
+      "One topical: benzoyl peroxide or a retinoid; or a topical combination",
+      "Topical combination",
+      "Oral antibiotic + topical combination"
+     ],
+     "Slide 40 also prints oral isotretinoin in the severe first-line box; in class she called it last line"
+    ],
+    [
+     "Second line",
+     [
+      "—",
+      "Add the retinoid or BP; alternate retinoid; topical dapsone",
+      "Change the combination or oral antibiotic; COC or spironolactone (females); consider isotretinoin",
+      "Change the oral antibiotic; COC or spironolactone (females); consider isotretinoin"
+     ],
+     ""
+    ]
+   ],
+   "photo": "acne-comedones",
+   "src": "Patel Acne slides 7–8, 20, 40; 11/10 lecture"
+  },
+  {
+   "id": "ad-status",
+   "title": "Atopic dermatitis: acute, subacute or chronic",
+   "cols": [
+    "Acute",
+    "Subacute",
+    "Chronic"
+   ],
+   "path": [
+    {
+     "q": "Are there lichenified plaques?",
+     "a": [
+      "Yes → **chronic**",
+      "No → next question"
+     ]
+    },
+    {
+     "q": "Is the skin dry, or are there vesicles, exudate and crusts?",
+     "a": [
+      "Vesicles, exudate, crusts → **acute**",
+      "Dry and inflamed → **subacute**"
+     ]
+    }
+   ],
+   "rows": [
+    [
+     "Lesions",
+     [
+      "Acutely inflamed papules, {{vesicles, exudate and crusts}}",
+      "{{Dry}}, inflamed papules, patches or plaques",
+      "{{Lichenified}} papules or plaques"
+     ],
+     "Her case states whether lichenified plaques are present"
+    ],
+    [
+     "Dryness",
+     [
+      "No dryness",
+      "Dry",
+      "Fine scale; hypo- or hyperpigmentation"
+     ],
+     ""
+    ],
+    [
+     "In the photo",
+     [
+      "Top row",
+      "Middle row",
+      "Bottom row"
+     ],
+     ""
+    ],
+    [
+     "Her poll patient",
+     [
+      "—",
+      "Dry and inflamed, no infection, no lichenified plaques (with SCORAD 40: moderate, subacute)",
+      "—"
+     ],
+     ""
+    ]
+   ],
+   "photo": "ad-status",
+   "src": "Patel Dermatitis slides 24, 49; 11/06 lecture"
+  }
+ ],
+ "pairs": [
+  {
+   "title": "Pimecrolimus or tacrolimus?",
+   "a": [
+    "Pimecrolimus (Elidel)",
+    "1% cream; mild to moderate; older than 2 years and adults"
+   ],
+   "b": [
+    "Tacrolimus (Protopic)",
+    "Ointment; moderate to severe; 0.1% older than 16 years, 0.03% from 2 to 15 years"
+   ],
+   "same": "Topical calcineurin inhibitors: second line for atopic dermatitis, twice daily, response in 1–8 weeks, not under 2 years, boxed warning for rare lymphoma and skin malignancy.",
+   "profs": [
+    [
+     "pa",
+     "\"Understand the difference between the two\": severity, dosage form, strength and age (Patel Dermatitis slide 39)."
+    ],
+    [
+     "sm",
+     "Tacrolimus binds FKBP and the complex inhibits calcineurin; pimecrolimus is listed as a calcineurin inhibitor (PCol slides 24–27)."
+    ],
+    [
+     "sk",
+     "Pimecrolimus cLogP 6.0 with high skin protein binding, so few systemic effects; tacrolimus cLogP 5.8 with low skin protein binding, so more systemic entry (DPAW pages 28, 32)."
+    ]
+   ]
+  },
+  {
+   "title": "Two PDE-4 inhibitors: crisaborole or apremilast?",
+   "a": [
+    "Crisaborole (Eucrisa)",
+    "Topical 2% ointment; atopic dermatitis"
+   ],
+   "b": [
+    "Apremilast",
+    "Oral; psoriasis"
+   ],
+   "same": "Both inhibit phosphodiesterase 4, so cAMP is not broken down and inflammatory cells are inhibited.",
+   "profs": [
+    [
+     "sm",
+     "PDE-4 inhibitors: crisaborole for atopic dermatitis, apremilast for psoriasis (PCol slides 32–34)."
+    ],
+    [
+     "sk",
+     "Crisaborole: a benzoxaborole whose boron coordinates Zn2+ and Mg2+ in the PDE4 site (DPAW pages 7, 9). Apremilast: an isoindoline, CYP3A4 substrate; avoid 3A4 inhibitors and inducers (DPAW page 34)."
+    ],
+    [
+     "pa",
+     "Crisaborole: third line, mild-to-moderate atopic dermatitis, from 3 months of age (Patel Dermatitis slides 41–42)."
+    ]
+   ]
+  },
+  {
+   "title": "Dupilumab or tralokinumab: which target?",
+   "a": [
+    "Dupilumab (Dupixent)",
+    "Binds the IL-4 receptor α subunit, blocking IL-4 and IL-13 signaling; two 300 mg injections to load"
+   ],
+   "b": [
+    "Tralokinumab",
+    "Inhibits the IL-13 cytokine; four 150 mg injections to load"
+   ],
+   "same": "Subcutaneous biologics for moderate-to-severe atopic dermatitis after topical therapy; maintenance every other week.",
+   "profs": [
+    [
+     "sm",
+     "Dupilumab binds IL-4Rα, shared by the IL-4 and IL-13 receptor complexes (PCol slide 64). Tralokinumab is not on her slides."
+    ],
+    [
+     "pa",
+     "Her slide titles dupilumab an IL-4 antagonist (slide 43) and tralokinumab an IL-13 cytokine inhibitor, the alternative to dupilumab (slide 45)."
+    ]
+   ]
+  },
+  {
+   "title": "Mometasone 0.1%: ointment or cream?",
+   "a": [
+    "Mometasone furoate 0.1% ointment",
+    "High potency (class II)"
+   ],
+   "b": [
+    "Mometasone furoate 0.1% cream",
+    "Medium potency (class III–IV)"
+   ],
+   "same": "The same drug at the same strength; the vehicle changes the potency. Ointment > cream > lotion > solution > gel > spray.",
+   "profs": [
+    [
+     "pa",
+     "\"Highlight that, please, so you understand that there is a difference there\" (Patel Dermatitis slide 37; 11/06 lecture)."
+    ],
+    [
+     "sm",
+     "Changing the vehicle, hydration or occlusion may alter absorption and effectiveness (PCol slide 11)."
+    ]
+   ]
+  },
+  {
+   "title": "Topical retinoids: adapalene, tretinoin or tazarotene?",
+   "a": [
+    "Adapalene (Differin)",
+    "OTC at 0.1% (prescription 0.3%); directly active"
+   ],
+   "b": [
+    "Tretinoin (Retin-A); tazarotene (Tazorac)",
+    "Prescription only; tazarotene is an ester prodrug"
+   ],
+   "same": "Topical retinoids acting at RAR/RXR: keratolytic and comedolytic, not bactericidal; applied in the evening with sunscreen by day.",
+   "profs": [
+    [
+     "pa",
+     "Adapalene 0.1% gel became OTC in 2016; at night, apart from benzoyl peroxide. Prescription retinoids: tretinoin, adapalene 0.3%, tazarotene, trifarotene (Patel Acne slides 27, 31)."
+    ],
+    [
+     "sm",
+     "Tretinoin, adapalene and tazarotene bind RAR and RXR (PCol slides 14, 17–18, 20)."
+    ],
+    [
+     "sk",
+     "Tretinoin: first generation, all-trans retinoic acid. Adapalene: third generation, exposed COOH, directly active. Tazarotene: third generation, ethyl ester prodrug to tazarotenic acid (DPAW pages 29, 49, 51)."
+    ]
+   ]
+  },
+  {
+   "title": "Oral tetracyclines: doxycycline and minocycline, or sarecycline?",
+   "a": [
+    "Doxycycline, minocycline",
+    "50–100 mg twice daily or 100 mg daily; the most prescribed"
+   ],
+   "b": [
+    "Sarecycline",
+    "Once daily by weight band (60, 100 or 150 mg); non-nodular moderate to severe acne"
+   ],
+   "same": "Tetracyclines that bind the 30S ribosomal subunit; photosensitivity; avoided in pregnancy; with a topical combination, never as the only therapy.",
+   "profs": [
+    [
+     "pa",
+     "Tetracyclines only above 12 years (tooth discoloration); re-evaluate at 3–4 months (Patel Acne slide 33; 11/10 lecture)."
+    ],
+    [
+     "sm",
+     "Sarecycline, minocycline and doxycycline block aminoacyl-tRNA binding at the 30S acceptor site (PCol slide 43)."
+    ],
+    [
+     "sk",
+     "Doxycycline and minocycline are lipophilic and food does not cut their absorption, unlike tetracycline with dairy (DPAW page 55)."
+    ]
+   ]
+  }
+ ],
+ "photos": [
+  {
+   "id": "ad-status",
+   "file": "ad-status.jpg",
+   "alt": "Six photographs in three rows. Top row, acute: inflamed papules with exudate and crusts. Middle row, subacute: dry, inflamed patches. Bottom row, chronic: thickened, lichenified plaques.",
+   "src": "Patel Dermatitis slide 24"
+  },
+  {
+   "id": "dd-severity",
+   "file": "dd-severity.jpg",
+   "alt": "Five photographs of the diaper area labelled A to E, from slight redness in the crease (A) to redness covering both buttocks (E).",
+   "src": "Patel Dermatitis slide 58"
+  },
+  {
+   "id": "acne-comedones",
+   "file": "acne-comedones.jpg",
+   "alt": "Two drawings of a follicle in cross-section. Left: an open comedone (blackhead), with a dark plug open to the surface. Right: a closed comedone (whitehead), with a pale plug under the skin surface.",
+   "src": "Patel Acne slide 5"
+  }
+ ]
+}

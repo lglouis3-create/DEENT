@@ -1,0 +1,3110 @@
+{
+ "cards": [
+  {
+   "id": "psoriasis",
+   "name": "Psoriasis",
+   "group": "algorithm",
+   "lectures": "Smith 10/29, 11/03 · Sikazwe 11/03–11/04 · Patel 11/11",
+   "topics": [
+    "p7-pso",
+    "p7-psotx",
+    "p7-psosys",
+    "p7-bio",
+    "pso"
+   ],
+   "short": [
+    "T cells release IL-23, IL-17 and TNF-α, so keratinocytes divide too fast.",
+    "Sharp-edged red plaques with silvery scale on elbows and knees.",
+    "Severity is graded by BSA: 5%, 8% and 10% are the cut-offs.",
+    "Order of treatment: topicals, then an oral systemic agent, then a biologic, then PUVA.",
+    "Before any biologic: TB screening, and no live vaccines."
+   ],
+   "steps": [
+    {
+     "title": "Who gets it, and what sets it off",
+     "profs": [
+      "sm",
+      "pa"
+     ],
+     "q": "Which drugs can bring psoriasis on, what is the Koebner response, and which comorbidities come with it?",
+     "src": "Smith Pathophys slides 20, 24, 26; Patel Scaly slides 21, 24–25; 11/11 lecture",
+     "blocks": [
+      {
+       "k": "facts",
+       "rows": [
+        [
+         "How common",
+         "About 3% of the US population"
+        ],
+        [
+         "Peak age",
+         "{{20–30}} years; second peak at 50–60"
+        ],
+        [
+         "Children",
+         "Infrequent (< 0.2%)"
+        ],
+        [
+         "Sex",
+         "No gender preference"
+        ],
+        [
+         "Type",
+         "Plaque type in more than {{80%}}"
+        ],
+        [
+         "Family",
+         "About {{30%}} have a first-degree relative with psoriasis"
+        ],
+        [
+         "Triggers",
+         [
+          "Stress",
+          "Infection (viral or streptococcal skin infection)",
+          "Alcohol, smoking, obesity or metabolic syndrome",
+          "Skin injury: new lesions where skin was injured = the [[koebner|Koebner response]]"
+         ]
+        ],
+        [
+         "Drugs that can bring it on",
+         [
+          "{{Lithium}}",
+          "{{NSAIDs}}",
+          "Antimalarials such as chloroquine",
+          "{{β-blockers}}",
+          "{{Fluoxetine}}",
+          "Corticosteroid withdrawal"
+         ]
+        ]
+       ]
+      },
+      {
+       "k": "sub",
+       "text": "Possible comorbidities (Dr. Patel, slide 25)"
+      },
+      {
+       "k": "facts",
+       "rows": [
+        [
+         "Joints",
+         "[[psa|Psoriatic arthritis]]: “a common condition that may occur over time”"
+        ],
+        [
+         "Heart and vessels",
+         [
+          "Myocardial infarction",
+          "Stroke",
+          "Peripheral vascular disease"
+         ]
+        ],
+        [
+         "Metabolic",
+         "Metabolic syndrome"
+        ],
+        [
+         "Malignancy",
+         "{{T-cell lymphoma}}"
+        ],
+        [
+         "Bowel",
+         "Inflammatory bowel diseases: Crohn’s disease, ulcerative colitis"
+        ],
+        [
+         "Psychological",
+         "Anxiety, depression"
+        ],
+        [
+         "Kidney",
+         "Renal disease"
+        ]
+       ]
+      },
+      {
+       "k": "prof",
+       "p": "sm",
+       "rows": [
+        [
+         "Most common drug triggers",
+         "Lithium and β-blockers"
+        ],
+        [
+         "Psoriatic arthritis",
+         "Asymmetric: hands, feet, knees; no rheumatoid factor elevation"
+        ],
+        [
+         "Nail psoriasis",
+         "Pitting, ridging, discoloration, onycholysis"
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "title": "What goes wrong",
+     "profs": [
+      "sm"
+     ],
+     "q": "Which cytokines drive it, and how fast do the keratinocytes turn over?",
+     "src": "Smith Pathophys slides 19, 21–23; Smith PCol slides 66–74",
+     "blocks": [
+      {
+       "k": "prof",
+       "p": "sm",
+       "rows": [
+        [
+         "Type of disease",
+         "{{T-cell}}-mediated, systemic, inflammatory"
+        ],
+        [
+         "Cells involved",
+         "Antigen-presenting cells, T cells, keratinocytes"
+        ],
+        [
+         "Cytokines released",
+         [
+          "{{TNF-α}}",
+          "Interferon-γ",
+          "{{IL-23}}",
+          "{{IL-17}}"
+         ]
+        ],
+        [
+         "Result",
+         "Keratinocytes multiply too fast and do not finish differentiating"
+        ],
+        [
+         "Keratinocyte timing",
+         [
+          "Psoriasis: divide in {{1.5 days}}, shed in {{4 days}}",
+          "Normal skin: 13 and 26 days"
+         ]
+        ]
+       ]
+      },
+      {
+       "k": "map",
+       "title": "Which drug blocks which signal",
+       "rows": [
+        [
+         "TNF-α",
+         "Adalimumab, etanercept, infliximab, golimumab, certolizumab"
+        ],
+        [
+         "IL-12 and IL-23",
+         "Ustekinumab (binds p40, which both share)"
+        ],
+        [
+         "IL-23 alone",
+         "Risankizumab, guselkumab, tildrakizumab (bind p19)"
+        ],
+        [
+         "IL-17A",
+         "Secukinumab, ixekizumab"
+        ],
+        [
+         "IL-17 receptor A",
+         "Brodalumab"
+        ]
+       ],
+       "src": "Smith PCol slides 66–74"
+      },
+      {
+       "k": "fig",
+       "label": "Watch how it works: where each cytokine biologic binds",
+       "jump": "guide:fig-il-axis"
+      },
+      {
+       "k": "pts",
+       "items": [
+        "Dr. Patel: psoriasis has the fastest epidermal turnover of the three scaly conditions (11/10 and 11/11 lectures)."
+       ]
+      }
+     ]
+    },
+    {
+     "title": "How it looks, and how she grades it",
+     "profs": [
+      "pa"
+     ],
+     "q": "What are the three BSA cut-offs, and where do 7% and 9% fall?",
+     "src": "Patel Scaly slides 6, 22, 26–27, 31–32; 11/11 lecture",
+     "blocks": [
+      {
+       "k": "facts",
+       "rows": [
+        [
+         "[[plaque|Plaques]]",
+         "Red-violet, symmetrical, {{sharp borders}} (well demarcated), at least 0.5 cm across"
+        ],
+        [
+         "Scale",
+         "{{Silvery-white}}, flaking; bleeding points"
+        ],
+        [
+         "Where",
+         "Single lesions at the {{knees and elbows}}, or generalized; also scalp, trunk, lower extremities"
+        ],
+        [
+         "Itching",
+         "In more than 50% of patients; can be severe"
+        ]
+       ]
+      },
+      {
+       "k": "photo",
+       "id": "ps-plaque"
+      },
+      {
+       "k": "sub",
+       "text": "Severity by [[bsa|body surface area (BSA)]]"
+      },
+      {
+       "k": "grades",
+       "rows": [
+        [
+         "Mild",
+         "BSA {{≤ 5%}}",
+         ""
+        ],
+        [
+         "Moderate",
+         "BSA {{≥ 8%}}",
+         ""
+        ],
+        [
+         "Severe",
+         "BSA {{≥ 10%}}",
+         "★ “it has been corrected to 10% … I want you to follow this slide”"
+        ]
+       ]
+      },
+      {
+       "k": "facts",
+       "rows": [
+        [
+         "In between",
+         [
+          "★ {{7%}} = mild to moderate (her poll)",
+          "“like a {{9%}}” = moderate to severe"
+         ]
+        ],
+        [
+         "How BSA is found",
+         "The provider takes the plaque-covered area as a share of the whole body"
+        ],
+        [
+         "Her BSA figure, adult",
+         [
+          "Head 9%",
+          "Each arm 9%",
+          "Chest 18%; back 18%",
+          "Each leg 18%",
+          "Perineum 1%"
+         ]
+        ],
+        [
+         "Other tools",
+         "PASI and DLQI also mark severe at 10: “I only want you to know the BSA”"
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Treat it: her order of treatment",
+     "profs": [
+      "pa"
+     ],
+     "q": "Name the four lines in order, say where each algorithm starts, and say what moves a patient to the next line.",
+     "src": "Patel Scaly slides 33–45, 48; 11/11 lecture",
+     "blocks": [
+      {
+       "k": "facts",
+       "rows": [
+        [
+         "Every patient, non-drug",
+         [
+          "Lower stress; regular exercise; weight management (BMI 18.5–24.9)",
+          "Moderate alcohol; stop smoking",
+          "Moisturizers; oatmeal baths; sunscreen SPF 30+ with UVA protection"
+         ]
+        ],
+        [
+         "What decides the choice",
+         "Age, severity, location of lesions, comorbidities, past and current treatment, cost"
+        ]
+       ]
+      },
+      {
+       "k": "sub",
+       "text": "The two algorithms (slides 35 and 37)"
+      },
+      {
+       "k": "facts",
+       "rows": [
+        [
+         "Mild to moderate",
+         [
+          "★ {{Topical agents}} first",
+          "Systemic agent is the last line, with the topical continued",
+          "Slide 35 also shows topical agents + phototherapy as the middle step (not spoken in class)"
+         ]
+        ],
+        [
+         "Moderate to severe",
+         [
+          "Moderate after the topical agents have been tried, or severe",
+          "Starts with a systemic agent (“most likely methotrexate”) ± a topical agent",
+          "Then a more potent systemic agent or a biologic",
+          "★ Last line: a biologic",
+          "Biologic considered earlier with comorbidities such as psoriatic arthritis"
+         ]
+        ],
+        [
+         "Both",
+         "Moisturizers; continue if controlled; step down to the lowest dose or potency that keeps control"
+        ]
+       ]
+      },
+      {
+       "k": "line",
+       "label": "First",
+       "title": "Topical agents (mild to moderate)",
+       "drugs": [
+        "steroid",
+        "calcipotriene",
+        "tazarotene",
+        "anthralin",
+        "coal-tar",
+        "salicylic-acid",
+        "pimecrolimus"
+       ],
+       "pts": [
+        "★ Corticosteroids are the {{most effective}}",
+        "Low potency on the face and skin folds",
+        "Limit to {{≤ 4 weeks}} and limit the surface area",
+        "The choice depends on what was tried before and what is used now"
+       ],
+       "facts": [
+        [
+         "How each is applied",
+         [
+          "Corticosteroid: 2–4 times daily; cream or lotion by day, ointment at night",
+          "Calcipotriene: ointment once or twice daily; cream or foam twice daily",
+          "Tazarotene (or adapalene): once daily at bedtime",
+          "Anthralin: thick plaques only, 2 hours or less, then wiped off; zinc oxide around the edges",
+          "Coal tar: on in the evening, washed off in the morning",
+          "Salicylic acid: shampoo for scalp lesions",
+          "Pimecrolimus: intertriginous areas"
+         ]
+        ]
+       ],
+       "pick": [
+        [
+         "Face or skin folds",
+         "Low-potency corticosteroid"
+        ],
+        [
+         "Skin folds ([[intertriginous|intertriginous]] areas)",
+         "Pimecrolimus"
+        ],
+        [
+         "Thick plaques",
+         "Anthralin: on for 2 hours or less, then wiped off; zinc oxide around the edges"
+        ],
+        [
+         "Scalp lesions",
+         "Salicylic acid shampoo"
+        ],
+        [
+         "Wants once daily",
+         "Tazarotene at bedtime"
+        ],
+        [
+         "Evening routine",
+         "Coal tar in the evening, washed off in the morning"
+        ],
+        [
+         "Steroid stepped up in potency for about a month, little change",
+         "Another topical option"
+        ]
+       ],
+       "move": "Move to the next line when: the psoriasis is moderate and the topical agents have been tried, or it is severe. Topical steroids are limited to 4 weeks, and she contacts the patient at 1–2 weeks."
+      },
+      {
+       "k": "line",
+       "label": "Next",
+       "title": "Oral systemic agent, with the topical continued",
+       "drugs": [
+        "methotrexate",
+        "cyclosporine",
+        "apremilast",
+        "acitretin",
+        "tofacitinib",
+        "abatacept"
+       ],
+       "pts": [
+        "★ {{Methotrexate}} is usually first (most affordable)",
+        "Give {{folic acid}} 1–5 mg daily with it",
+        "“That topical medication’s always going to be continued”",
+        "No fixed order among the systemic agents: chosen by age and safety profile"
+       ],
+       "pick": [
+        [
+         "Pregnancy or cirrhosis",
+         "Not methotrexate"
+        ],
+        [
+         "Needs short-term control",
+         "Cyclosporine, for {{less than 4 months}} (nephrotoxic)"
+        ],
+        [
+         "Untreated hypertension, systemic malignancy or infection",
+         "Not cyclosporine"
+        ],
+        [
+         "Should not be immunosuppressed",
+         "Acitretin (not immunosuppressive); no alcohol"
+        ],
+        [
+         "Woman of reproductive age",
+         "Not acitretin: no pregnancy within {{3 years}} after stopping"
+        ],
+        [
+         "Depression or weight loss",
+         "Caution with apremilast"
+        ],
+        [
+         "Renal impairment",
+         "Apremilast once daily"
+        ],
+        [
+         "Psoriatic arthritis after methotrexate failed",
+         "Tofacitinib (JAK inhibitor); not with a biologic; no live vaccines"
+        ]
+       ],
+       "move": "Move to the next line when: topicals and an oral systemic agent have failed."
+      },
+      {
+       "k": "line",
+       "label": "Then",
+       "title": "Biologic",
+       "drugs": [
+        "tnf-inhibitors",
+        "ustekinumab",
+        "il23-inhibitors",
+        "secukinumab",
+        "ixekizumab",
+        "brodalumab"
+       ],
+       "pts": [
+        "★ “Know the generic name, know the brand name, and know what class they fall in”"
+       ],
+       "warn": "★ TNF-α inhibitors: contraindicated in congestive heart failure (“I’m saying this twice for a reason”).",
+       "facts": [
+        [
+         "Before the first dose",
+         [
+          "Screen for {{TB}}; [[ppd|PPD]] repeated every year",
+          "No {{live vaccines}} (vaccines that are not live are allowed)",
+          "TNF-α inhibitors: hepatitis B screening"
+         ]
+        ],
+        [
+         "While on it",
+         [
+          "Stop during an active infection (flu, cold, COVID)",
+          "Monitor CBC and LFTs",
+          "Common: injection site reaction, headache, rhinitis, upper respiratory infection"
+         ]
+        ]
+       ],
+       "pick": [
+        [
+         "Congestive heart failure",
+         "No TNF-α inhibitor (adalimumab and its class)"
+        ],
+        [
+         "Demyelinating disease or MS, in the patient or a first-degree relative",
+         "No TNF-α inhibitor"
+        ],
+        [
+         "Crohn’s disease",
+         "Avoid {{secukinumab}}"
+        ],
+        [
+         "Depression or suicide risk",
+         "{{Brodalumab}} carries a boxed warning for suicide risk and needs a [[rems|REMS]]"
+        ],
+        [
+         "On warfarin or cyclosporine",
+         "Ustekinumab: monitor their levels"
+        ],
+        [
+         "Psoriatic arthritis",
+         "A biologic is considered earlier"
+        ]
+       ],
+       "move": "Move to the next line when: the psoriasis is severe and [[refractory|refractory]]."
+      },
+      {
+       "k": "line",
+       "label": "Last",
+       "title": "[[puva|PUVA]]",
+       "drugs": [
+        "puva"
+       ],
+       "pts": [
+        "Oral psoralen plus UVA",
+        "“Absolute last line”: severe, refractory psoriasis",
+        "About {{90%}} respond",
+        "Skin biopsy first, to confirm psoriasis",
+        "Risk: serious burns, blistering, peeling"
+       ]
+      },
+      {
+       "k": "warn",
+       "text": "After starting any treatment: contact the patient in 1–2 weeks."
+      }
+     ]
+    }
+   ],
+   "patients": [
+    {
+     "t": "A 52-year-old woman has two new 2 cm plaques with silvery scale, one on each elbow. BSA is 7%. No treatment has been tried this time.",
+     "q": "What do you recommend?",
+     "o": [
+      "A topical agent",
+      "An oral systemic agent",
+      "A biologic",
+      "PUVA"
+     ],
+     "a": 0,
+     "w": "7% is mild to moderate and nothing has been tried, so treatment starts with a topical agent. Her poll answer for this patient was a topical corticosteroid.",
+     "x": {
+      "A biologic": "A biologic comes after topical and oral systemic agents have failed.",
+      "PUVA": "PUVA is the absolute last line, for severe psoriasis that nothing else has controlled.",
+      "An oral systemic agent": "An oral systemic agent comes after the topical agents have been tried in moderate psoriasis, or in severe psoriasis."
+     }
+    },
+    {
+     "t": "A 34-year-old man has plaques with silvery scale on the trunk and legs. The provider calculates a BSA of 9%.",
+     "q": "How is his psoriasis classified?",
+     "o": [
+      "Mild",
+      "Mild to moderate",
+      "Moderate to severe",
+      "Severe"
+     ],
+     "a": 2,
+     "w": "Moderate starts at 8% and severe at 10%. “Like a 9%, right? So in between that moderate as well as severe.”",
+     "x": {
+      "Mild": "Mild is a BSA of 5% or less.",
+      "Mild to moderate": "Mild to moderate is a BSA between 5% and 8%, such as her 7% poll patient.",
+      "Severe": "Severe is a BSA of 10% or more."
+     }
+    },
+    {
+     "t": "A patient has moderate psoriasis. Topical corticosteroids, calcipotriene and coal tar have been used, and the plaques remain.",
+     "q": "What do you recommend next?",
+     "o": [
+      "A topical agent",
+      "An oral systemic agent",
+      "A biologic",
+      "PUVA"
+     ],
+     "a": 1,
+     "w": "Moderate psoriasis after the topical agents have been tried moves to an oral systemic agent, with the topical continued. Methotrexate is usually first.",
+     "x": {
+      "A topical agent": "The topical agents have already been tried; a topical is continued, with an oral agent added.",
+      "A biologic": "A biologic comes after topical and oral systemic agents have failed.",
+      "PUVA": "PUVA is the absolute last line, for severe psoriasis that nothing else has controlled."
+     }
+    },
+    {
+     "t": "A patient has used topical agents and methotrexate. Neither has controlled the psoriasis.",
+     "q": "What do you recommend next?",
+     "o": [
+      "A topical agent",
+      "An oral systemic agent",
+      "A biologic",
+      "PUVA"
+     ],
+     "a": 2,
+     "w": "A biologic comes after topical and oral systemic agents have failed. Screen for TB before the first dose; no live vaccines.",
+     "x": {
+      "A topical agent": "Topical agents have already been tried and are not enough alone.",
+      "PUVA": "PUVA is the absolute last line, for severe psoriasis that nothing else has controlled.",
+      "An oral systemic agent": "An oral systemic agent (methotrexate) has already failed."
+     }
+    },
+    {
+     "t": "A patient is about to start a biologic. The medical history includes congestive heart failure.",
+     "q": "Which biologic should be avoided?",
+     "o": [
+      "Adalimumab (Humira)",
+      "Ustekinumab (Stelara)",
+      "Secukinumab (Cosentyx)",
+      "Risankizumab (Skyriza)"
+     ],
+     "a": 0,
+     "w": "Adalimumab is a TNF-α inhibitor, and TNF-α inhibitors are contraindicated in congestive heart failure (“I’m saying this twice for a reason”).",
+     "x": {
+      "Ustekinumab (Stelara)": "Ustekinumab blocks IL-12 and IL-23; the heart failure warning is on the TNF-α inhibitors.",
+      "Secukinumab (Cosentyx)": "Secukinumab blocks IL-17A; its caution is Crohn’s disease.",
+      "Risankizumab (Skyriza)": "Risankizumab blocks IL-23; the heart failure warning is on the TNF-α inhibitors."
+     }
+    },
+    {
+     "t": "A patient has severe psoriasis. Topical agents, an oral systemic agent and a biologic have all failed.",
+     "q": "What is left?",
+     "o": [
+      "A topical agent",
+      "An oral systemic agent",
+      "A biologic",
+      "PUVA"
+     ],
+     "a": 3,
+     "w": "PUVA (oral psoralen plus UVA) is the absolute last line, for severe refractory psoriasis.",
+     "x": {
+      "A topical agent": "Topical agents have already failed.",
+      "A biologic": "A biologic has already failed.",
+      "An oral systemic agent": "An oral systemic agent has already failed."
+     }
+    }
+   ],
+   "numbers": [
+    [
+     "≤ 5%",
+     "mild psoriasis (BSA)",
+     "Patel Scaly slide 31"
+    ],
+    [
+     "≥ 8%",
+     "moderate psoriasis (BSA)",
+     "Patel Scaly slide 31"
+    ],
+    [
+     "≥ 10%",
+     "severe psoriasis (BSA); she first said 20%, then corrected it",
+     "Patel Scaly slide 31; 11/11 lecture"
+    ],
+    [
+     "2–4 times daily, ≤ 4 weeks",
+     "topical corticosteroid: frequency and limit",
+     "Patel Scaly slide 36"
+    ],
+    [
+     "2 hours or less",
+     "anthralin stays on thick plaques, then is wiped off",
+     "Patel Scaly slide 36"
+    ],
+    [
+     "3–6 weeks",
+     "methotrexate onset",
+     "Patel Scaly slide 39"
+    ],
+    [
+     "1–5 mg daily",
+     "folic acid with methotrexate",
+     "Patel Scaly slide 39"
+    ],
+    [
+     "< 4 months",
+     "cyclosporine (nephrotoxic)",
+     "Patel Scaly slide 39"
+    ],
+    [
+     "Week 4",
+     "apremilast response; titrated to 30 mg twice daily over the first week",
+     "Patel Scaly slide 38"
+    ],
+    [
+     "3 years",
+     "no pregnancy after stopping acitretin; maximum response 3–6 months",
+     "Patel Scaly slide 38"
+    ],
+    [
+     "About 90%",
+     "respond to PUVA",
+     "Patel Scaly slide 44; 11/11 lecture"
+    ],
+    [
+     "1–2 weeks",
+     "contact the patient after starting treatment",
+     "Patel Scaly slide 48; 11/11 lecture"
+    ]
+   ]
+  },
+  {
+   "id": "dandruff",
+   "name": "Dandruff",
+   "group": "selfcare",
+   "lectures": "Patel 11/10 · Smith 11/03 (shampoo ingredients)",
+   "topics": [
+    "p7-dand",
+    "p7-otc",
+    "p7-cmp"
+   ],
+   "short": [
+    "Malassezia fungi on the scalp; non-inflammatory; starts at puberty.",
+    "Thin white or grey flakes on the scalp only.",
+    "Mild (intermittent): non-medicated shampoo daily or every other day.",
+    "Moderate to severe (daily): medicated shampoo, left on 3–5 minutes.",
+    "Daily for 1 week, then 2–3 times weekly for 2–3 weeks, then once weekly."
+   ],
+   "steps": [
+    {
+     "title": "Cause and who",
+     "profs": [
+      "pa"
+     ],
+     "q": "Which organism is linked to dandruff, when does it start, and why can a non-inflammatory scalp look inflamed?",
+     "src": "Patel Scaly slides 6, 8; 11/10 lecture",
+     "blocks": [
+      {
+       "k": "facts",
+       "rows": [
+        [
+         "What it is",
+         "Chronic, {{non-inflammatory}}, hyperproliferative scalp condition"
+        ],
+        [
+         "Organism",
+         "★ {{Malassezia}} fungi (her poll)"
+        ],
+        [
+         "What happens",
+         "Faster epidermal cell turnover and abnormal keratinization: flaking and [[pruritus|pruritus]]"
+        ],
+        [
+         "Who",
+         [
+          "{{1–3%}} of the population",
+          "Starts at {{puberty}}; peaks in adulthood",
+          "No gender preference"
+         ]
+        ],
+        [
+         "Worse with",
+         "Dry climate, cold temperature, stress; otherwise generally stable"
+        ],
+        [
+         "Mild inflammation",
+         "{{Secondary}}, from scratching: “it’s not gonna be from the start of that condition”"
+        ]
+       ]
+      },
+      {
+       "k": "pts",
+       "items": [
+        "★ Dandruff has the slowest [[kinetics|epidermal turnover]] of the three scaly conditions; psoriasis the fastest. She asks the order only."
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Recognise it, and grade it",
+     "profs": [
+      "pa"
+     ],
+     "q": "What separates mild dandruff from moderate to severe dandruff?",
+     "src": "Patel Scaly slides 5–6, 9–10; 11/10 lecture",
+     "blocks": [
+      {
+       "k": "facts",
+       "rows": [
+        [
+         "Scale",
+         "Thin, {{white or grey}} flakes"
+        ],
+        [
+         "Where",
+         "{{Scalp}} only"
+        ],
+        [
+         "Inflammation",
+         "{{Absent}}"
+        ],
+        [
+         "Epidermal [[hyperplasia|hyperplasia]]",
+         "Absent"
+        ]
+       ]
+      },
+      {
+       "k": "photo",
+       "id": "dandruff-scalp"
+      },
+      {
+       "k": "grades",
+       "rows": [
+        [
+         "Mild",
+         "{{Intermittent}} dandruff, mild inflammation",
+         "★ Her poll: “Intermittent white flakes, right? Not daily”"
+        ],
+        [
+         "Moderate to severe",
+         "{{Daily}} dandruff, moderate–severe inflammation",
+         "Two groups only: “it’s either mild or it’s moderate to severe”"
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Self-care, or something else?",
+     "profs": [
+      "pa"
+     ],
+     "q": "Which findings mean the flaking is not dandruff?",
+     "src": "Patel Scaly slides 6, 9, 51; 11/10 lecture",
+     "blocks": [
+      {
+       "k": "facts",
+       "rows": [
+        [
+         "Self-care",
+         "Both grades are treated with a nonprescription shampoo"
+        ],
+        [
+         "Not dandruff",
+         [
+          "{{Inflammation}} from the start",
+          "{{Yellow, oily}} scales on red skin, or scale beyond the scalp (face, trunk) → seborrheic dermatitis",
+          "{{Silvery-white}} scale on sharp-bordered red plaques → psoriasis",
+          "Scalp scaling in an infant → cradle cap; dandruff starts at {{puberty}}"
+         ]
+        ],
+        [
+         "Follow-up",
+         "Slide 51: a week after self-treatment begins; she said 1 to 2 weeks (11/11)"
+        ]
+       ]
+      },
+      {
+       "k": "pts",
+       "items": [
+        "Her slides give a time to refer (worse, or longer than 7 days) on the seborrheic dermatitis slide, not on the dandruff slide."
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Treat it: match the shampoo to the severity",
+     "profs": [
+      "pa",
+      "sm"
+     ],
+     "q": "What does each grade get, how long does a medicated shampoo stay on, and what is the weekly taper?",
+     "src": "Patel Scaly slides 7, 9; 11/10 lecture; Smith PCol slides 53, 57",
+     "blocks": [
+      {
+       "k": "facts",
+       "rows": [
+        [
+         "Goals",
+         [
+          "Slow the epidermal turnover of the scalp",
+          "Reduce the [[malassezia|Malassezia]] fungi",
+          "Less visible scaling; less itching"
+         ]
+        ]
+       ]
+      },
+      {
+       "k": "line",
+       "label": "Mild",
+       "title": "Non-medicated shampoo",
+       "drugs": [],
+       "pts": [
+        "★ Her poll answer for intermittent flakes with no inflammation",
+        "{{Daily or every other day}}"
+       ]
+      },
+      {
+       "k": "line",
+       "label": "Moderate to severe",
+       "title": "OTC medicated shampoo",
+       "drugs": [
+        "pyrithione-zinc",
+        "selenium-sulfide",
+        "coal-tar"
+       ],
+       "pts": [
+        "Pyrithione zinc is the main ingredient in most OTC products",
+        "“There are many options available”: any of the three"
+       ],
+       "facts": [
+        [
+         "How to use it",
+         [
+          "Leave on the scalp {{3 to 5 minutes}}",
+          "Rinse well with water",
+          "Daily for {{1 week}}",
+          "Then {{2–3 times weekly}} for {{2 to 3 weeks}}",
+          "Then {{once weekly}} for control"
+         ]
+        ]
+       ]
+      },
+      {
+       "k": "line",
+       "label": "Not effective",
+       "title": "Hydrocortisone 1%",
+       "drugs": [
+        "hydrocortisone"
+       ],
+       "pts": [
+        "★ The dandruff “no” on her OTC chart: “Hydrocortisone 1%, not effective in dandruff”"
+       ]
+      },
+      {
+       "k": "prof",
+       "p": "sm",
+       "rows": [
+        [
+         "Selenium sulfide, zinc pyrithione",
+         "Cytostatic and antifungal; mechanism unknown"
+        ],
+        [
+         "Coal tar",
+         "Antiproliferative and anti-inflammatory; crosslinks DNA"
+        ]
+       ]
+      }
+     ]
+    }
+   ],
+   "patients": [
+    {
+     "t": "A young man sees white flakes on his dark clothing now and then. His scalp is not itchy and does not look inflamed. He takes no medications.",
+     "q": "What do you recommend?",
+     "o": [
+      "A non-medicated shampoo",
+      "A pyrithione zinc shampoo",
+      "Baby oil massage and a soft brush",
+      "Hydrocortisone 1% lotion"
+     ],
+     "a": 0,
+     "w": "Intermittent flakes with no inflammation is mild dandruff; mild dandruff gets a non-medicated shampoo daily or every other day (her poll).",
+     "x": {
+      "A pyrithione zinc shampoo": "A medicated shampoo is for moderate to severe dandruff: daily flakes with moderate–severe inflammation.",
+      "Baby oil massage and a soft brush": "Oil massage and a soft bristle brush are the care for cradle cap in an infant.",
+      "Hydrocortisone 1% lotion": "Hydrocortisone 1% is not effective for dandruff."
+     }
+    },
+    {
+     "t": "A 30-year-old man has flakes every day, and his scalp is itchy and moderately inflamed. There are no yellow scales, and the skin off the scalp is clear.",
+     "q": "What do you recommend?",
+     "o": [
+      "A non-medicated shampoo",
+      "A pyrithione zinc shampoo",
+      "Baby oil massage and a soft brush",
+      "Hydrocortisone 1% lotion"
+     ],
+     "a": 1,
+     "w": "Daily dandruff with moderate–severe inflammation is moderate to severe; it gets an OTC medicated shampoo (pyrithione zinc, selenium sulfide or coal tar).",
+     "x": {
+      "A non-medicated shampoo": "A non-medicated shampoo is for mild, intermittent dandruff.",
+      "Baby oil massage and a soft brush": "Oil massage and a soft bristle brush are the care for cradle cap in an infant.",
+      "Hydrocortisone 1% lotion": "Hydrocortisone 1% is not effective for dandruff."
+     }
+    },
+    {
+     "t": "The same man has used a selenium sulfide shampoo every day for 1 week and is improving.",
+     "q": "How should he use it now?",
+     "o": [
+      "Stop, and restart if the flakes return",
+      "2–3 times weekly for 2–3 weeks, then once weekly",
+      "2–3 times weekly for 4 weeks, then once weekly",
+      "Daily for 3 more weeks, then stop"
+     ],
+     "a": 1,
+     "w": "Dandruff schedule: daily for 1 week, then 2–3 times weekly for 2 to 3 weeks, then once weekly for control.",
+     "x": {
+      "Stop, and restart if the flakes return": "The schedule tapers to once weekly for control; it does not stop after week 1.",
+      "2–3 times weekly for 4 weeks, then once weekly": "Four weeks at 2–3 times weekly is the seborrheic dermatitis schedule.",
+      "Daily for 3 more weeks, then stop": "Daily use is for the first week only."
+     }
+    },
+    {
+     "t": "A woman starting a pyrithione zinc shampoo for daily dandruff asks how long to leave it on her scalp.",
+     "q": "What do you tell her?",
+     "o": [
+      "Rinse it off at once",
+      "3 to 5 minutes, then rinse well",
+      "10 to 15 minutes, then rinse well",
+      "Overnight, then rinse in the morning"
+     ],
+     "a": 1,
+     "w": "A medicated shampoo stays on the scalp 3 to 5 minutes and is then rinsed well with water.",
+     "x": {
+      "Rinse it off at once": "It must stay on 3 to 5 minutes before it is rinsed.",
+      "10 to 15 minutes, then rinse well": "Her slide gives 3 to 5 minutes.",
+      "Overnight, then rinse in the morning": "Evening on, morning off is coal tar for psoriasis plaques, not a dandruff shampoo."
+     }
+    },
+    {
+     "t": "A patient with daily dandruff asks which of four OTC products on the shelf will not work for it.",
+     "q": "Which one is not effective for dandruff?",
+     "o": [
+      "Coal tar",
+      "Selenium sulfide",
+      "Hydrocortisone 1%",
+      "Sulfur"
+     ],
+     "a": 2,
+     "w": "Her OTC chart has two “no” cells: hydrocortisone 1% for dandruff, and sulfur for psoriasis.",
+     "x": {
+      "Coal tar": "Coal tar 0.5–5% is on the chart for dandruff.",
+      "Selenium sulfide": "Selenium sulfide 1% is on the chart for dandruff.",
+      "Sulfur": "Sulfur 2–5% is on the chart for dandruff; its “no” is psoriasis."
+     }
+    }
+   ],
+   "numbers": [
+    [
+     "3–5 minutes",
+     "medicated shampoo stays on the scalp",
+     "Patel Scaly slide 9"
+    ],
+    [
+     "1 week",
+     "daily use of the medicated shampoo",
+     "Patel Scaly slide 9"
+    ],
+    [
+     "2–3 times weekly for 2–3 weeks",
+     "second stage of the dandruff taper",
+     "Patel Scaly slide 9"
+    ],
+    [
+     "Once weekly",
+     "for control",
+     "Patel Scaly slide 9"
+    ],
+    [
+     "Daily or every other day",
+     "non-medicated shampoo in mild dandruff",
+     "Patel Scaly slide 9"
+    ],
+    [
+     "1–3%",
+     "of the population has dandruff",
+     "Patel Scaly slide 8"
+    ],
+    [
+     "0.3–2%",
+     "pyrithione zinc, rinse-off, for dandruff (0.1–0.25% residual)",
+     "Patel Scaly slide 7"
+    ],
+    [
+     "1%",
+     "selenium sulfide; ketoconazole shampoo 1%",
+     "Patel Scaly slide 7"
+    ],
+    [
+     "0.5–5%",
+     "coal tar",
+     "Patel Scaly slide 7"
+    ]
+   ]
+  },
+  {
+   "id": "seborrheic-dermatitis",
+   "name": "Seborrheic dermatitis (adolescents and adults)",
+   "group": "selfcare",
+   "lectures": "Patel 11/10 · Smith 11/03 (shampoo ingredients)",
+   "topics": [
+    "p7-sd",
+    "p7-otc",
+    "p7-cmp"
+   ],
+   "short": [
+    "Chronic inflammation where sebaceous glands are active; Malassezia.",
+    "Yellow, greasy scales on red skin: scalp, face, ears, chest.",
+    "Refer if it worsens or lasts longer than 7 days.",
+    "Scalp: ketoconazole shampoo first line. Face and body: antifungal cream.",
+    "Resistant: ketoconazole shampoo plus a corticosteroid lotion."
+   ],
+   "steps": [
+    {
+     "title": "Cause, who and triggers",
+     "profs": [
+      "pa"
+     ],
+     "q": "Who gets it, and which six risk factors or triggers are on her slide?",
+     "src": "Patel Scaly slides 6, 11, 13; 11/10 lecture",
+     "blocks": [
+      {
+       "k": "facts",
+       "rows": [
+        [
+         "What it is",
+         "Chronic {{inflammatory}} disorder in areas of sebaceous gland activity"
+        ],
+        [
+         "Organism",
+         "{{Malassezia}}, a yeast-like fungus that grows in the sebum"
+        ],
+        [
+         "Course",
+         "Chronic, no specific cure; neither harmful nor contagious"
+        ],
+        [
+         "Who",
+         [
+          "Adolescents and adults: {{1–3%}}",
+          "{{Men}} more than women",
+          "Infants: see the cradle cap card"
+         ]
+        ],
+        [
+         "Risk factors and triggers",
+         [
+          "Physical stress, fatigue, travel",
+          "{{Zinc deficiency}}",
+          "Change of season: worse in {{cold}} weather",
+          "{{HIV}} infection; AIDS",
+          "{{Parkinson}} disease",
+          "Immunosuppression; neurologic conditions (slide 6)"
+         ]
+        ]
+       ]
+      },
+      {
+       "k": "pts",
+       "items": [
+        "★ Second-fastest epidermal turnover of the three scaly conditions; she asks the order only."
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Recognise it",
+     "profs": [
+      "pa"
+     ],
+     "q": "What do the scales look like, and where are they?",
+     "src": "Patel Scaly slides 6, 12, 19; 11/10 lecture",
+     "blocks": [
+      {
+       "k": "facts",
+       "rows": [
+        [
+         "Scale",
+         "★ {{Yellow, greasy}} scales in patches or plaques, with exudate and crusting"
+        ],
+        [
+         "Skin under it",
+         "{{Red, inflamed}}: inflammation from the start"
+        ],
+        [
+         "Where",
+         [
+          "Head, ears and face, often with itching and stinging",
+          "Chest, mid-upper trunk, gluteal crease",
+          "[[intertriginous|Intertriginous]] areas (skin folds)"
+         ]
+        ],
+        [
+         "Darker skin",
+         "May present with {{hypopigmentation}}"
+        ],
+        [
+         "Her case",
+         "Scalp, eyebrows, ear canal; yellowish scales in the nasolabial creases"
+        ]
+       ]
+      },
+      {
+       "k": "photo",
+       "id": "sd-face"
+      },
+      {
+       "k": "pts",
+       "items": [
+        "★ Her key words for the poll: “greasy, scaling, yellowish scales … as well as the location”."
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Self-care, or refer?",
+     "profs": [
+      "pa"
+     ],
+     "q": "After how many days without improvement is the patient referred?",
+     "src": "Patel Scaly slides 16, 19; 11/10 lecture",
+     "blocks": [
+      {
+       "k": "facts",
+       "rows": [
+        [
+         "Self-care",
+         "An adult starts with an {{OTC antifungal shampoo}}"
+        ],
+        [
+         "Refer",
+         [
+          "The disorder {{worsens}}",
+          "Symptoms persist longer than {{7 days}}"
+         ]
+        ],
+        [
+         "Her words",
+         "★ “Again, the 7-day period comes into play, referral straight to healthcare provider”"
+        ],
+        [
+         "Her case",
+         "OTC dandruff shampoos gave only temporary relief: she still chose the first-line shampoo, not referral"
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Treat it: match the product to the site and the problem",
+     "profs": [
+      "pa"
+     ],
+     "q": "What is first line for the adult scalp, what is second line, and what is the schedule?",
+     "src": "Patel Scaly slides 7, 14–17; 11/10 lecture",
+     "blocks": [
+      {
+       "k": "facts",
+       "rows": [
+        [
+         "Goals",
+         [
+          "Reduce inflammation and epidermal turnover",
+          "Minimize or remove visible [[erythema|erythema]] and scaling"
+         ]
+        ],
+        [
+         "General care",
+         [
+          "Avoid perfumes, aftershave, ointments, soaps",
+          "Control secondary infections",
+          "Moisturizing [[emollient|emollients]] after washing"
+         ]
+        ]
+       ]
+      },
+      {
+       "k": "line",
+       "label": "Thick scale or crust",
+       "title": "Soften, then wash",
+       "drugs": [
+        "salicylic-acid",
+        "sulfur"
+       ],
+       "pts": [
+        "Soften with mineral oil or olive oil",
+        "Or a cream containing salicylic acid or sulfur",
+        "Wash the skin often: slide 15 says more often than twice daily; she said twice a day",
+        "Dishwashing liquid may be used on tough scale"
+       ]
+      },
+      {
+       "k": "line",
+       "label": "Scalp",
+       "title": "OTC antifungal shampoo",
+       "drugs": [
+        "ketoconazole",
+        "selenium-sulfide",
+        "pyrithione-zinc",
+        "ciclopirox",
+        "coal-tar"
+       ],
+       "pts": [
+        "★ First line: {{ketoconazole}} shampoo (“first line is your key term here”)",
+        "Second line: selenium sulfide, pyrithione zinc, ciclopirox, coal tar"
+       ],
+       "facts": [
+        [
+         "How to use it",
+         [
+          "Leave on hair, scalp and affected areas {{3 to 5 minutes}}, then rinse; may repeat",
+          "Daily for {{1–2 weeks}}",
+          "Then 2–3 times a week for {{4 weeks}}",
+          "Improved after 4 weeks: {{once weekly}}",
+          "Not improved at 4 weeks: keep the same frequency"
+         ]
+        ]
+       ]
+      },
+      {
+       "k": "line",
+       "label": "Face and body",
+       "title": "Antifungal cream",
+       "drugs": [],
+       "pts": [
+        "Topical {{antifungal creams}} to decrease fungal growth",
+        "Ultraviolet light therapy is also listed"
+       ]
+      },
+      {
+       "k": "line",
+       "label": "Redness and itching",
+       "title": "Topical corticosteroid",
+       "drugs": [
+        "steroid",
+        "hydrocortisone"
+       ],
+       "pts": [
+        "Scalp: corticosteroid {{lotion}}",
+        "Other parts of the body: corticosteroid cream",
+        "Mild to potent",
+        "OTC chart: hydrocortisone 0.5–1%"
+       ]
+      },
+      {
+       "k": "line",
+       "label": "Resistant",
+       "title": "Combine the two",
+       "drugs": [
+        "ketoconazole",
+        "steroid"
+       ],
+       "pts": [
+        "Ketoconazole shampoo and a {{corticosteroid lotion}} must often be combined in therapy-resistant cases"
+       ]
+      }
+     ]
+    }
+   ],
+   "patients": [
+    {
+     "t": "A 35-year-old man has itching, redness and scaling of the scalp, eyebrows and ear canal. OTC dandruff shampoos gave only temporary relief. There is greasy scale on the scalp and yellowish scale in the nasolabial creases.",
+     "q": "Which product is first line?",
+     "o": [
+      "Selenium sulfide shampoo",
+      "Ketoconazole shampoo",
+      "Pyrithione zinc shampoo",
+      "Coal tar shampoo"
+     ],
+     "a": 1,
+     "w": "This is seborrheic dermatitis in an adult, and ketoconazole shampoo is first line (her poll: “first line is your key term here”).",
+     "x": {
+      "Selenium sulfide shampoo": "Selenium sulfide is second line for seborrheic dermatitis.",
+      "Pyrithione zinc shampoo": "Pyrithione zinc is second line for seborrheic dermatitis.",
+      "Coal tar shampoo": "Coal tar is second line for seborrheic dermatitis."
+     }
+    },
+    {
+     "t": "A 40-year-old woman used ketoconazole shampoo daily for 2 weeks, then 2–3 times a week for 4 weeks. Her scalp is much improved.",
+     "q": "What is the next step?",
+     "o": [
+      "Stop the shampoo",
+      "Reduce to once weekly",
+      "Return to daily use",
+      "Add a corticosteroid lotion"
+     ],
+     "a": 1,
+     "w": "If there is improvement after 4 weeks, the frequency may be reduced to once weekly.",
+     "x": {
+      "Stop the shampoo": "The condition is chronic with no specific cure; the schedule steps down to once weekly.",
+      "Return to daily use": "Daily use is the first 1–2 weeks.",
+      "Add a corticosteroid lotion": "The lotion is added in therapy-resistant cases; she has improved."
+     }
+    },
+    {
+     "t": "A 38-year-old man has yellow, greasy scales on red skin in the eyebrows and nasolabial folds. His scalp is clear.",
+     "q": "Which product fits these sites?",
+     "o": [
+      "A ketoconazole shampoo",
+      "A coal tar shampoo",
+      "An antifungal cream",
+      "A non-medicated shampoo"
+     ],
+     "a": 2,
+     "w": "Face and body: topical treatment with antifungal creams. The shampoos are for the scalp.",
+     "x": {
+      "A ketoconazole shampoo": "Ketoconazole shampoo is first line for the scalp; his scalp is clear.",
+      "A coal tar shampoo": "Coal tar shampoo is a second-line scalp product.",
+      "A non-medicated shampoo": "A non-medicated shampoo is for mild dandruff and for infants."
+     }
+    },
+    {
+     "t": "An adult’s scalp seborrheic dermatitis has not responded to ketoconazole shampoo alone, used as directed.",
+     "q": "What is added?",
+     "o": [
+      "A corticosteroid lotion",
+      "A corticosteroid cream",
+      "A sulfur cream",
+      "Mineral oil"
+     ],
+     "a": 0,
+     "w": "Ketoconazole shampoo and a corticosteroid lotion must often be combined in therapy-resistant cases; lotion is the form for the scalp.",
+     "x": {
+      "A corticosteroid cream": "Corticosteroid creams are for other parts of the body; the scalp gets a lotion.",
+      "A sulfur cream": "A sulfur cream softens scales; it is not the add-on for resistant cases.",
+      "Mineral oil": "Mineral oil softens scales before washing."
+     }
+    },
+    {
+     "t": "A 29-year-old man began ketoconazole shampoo 8 days ago for seborrheic dermatitis. The redness and scaling are worse.",
+     "q": "What do you recommend?",
+     "o": [
+      "Continue daily for 2 more weeks",
+      "Reduce to once weekly",
+      "Switch to selenium sulfide",
+      "See a health care provider"
+     ],
+     "a": 3,
+     "w": "If the disorder worsens or symptoms persist longer than 7 days, a health care provider should be consulted.",
+     "x": {
+      "Continue daily for 2 more weeks": "He is worse and past 7 days, which is her point of referral.",
+      "Reduce to once weekly": "Once weekly is for a patient who has improved after 4 weeks.",
+      "Switch to selenium sulfide": "A second-line shampoo does not replace referral once the disorder has worsened."
+     }
+    }
+   ],
+   "numbers": [
+    [
+     "3–5 minutes",
+     "shampoo stays on hair, scalp and affected areas",
+     "Patel Scaly slide 16"
+    ],
+    [
+     "1–2 weeks",
+     "daily use",
+     "Patel Scaly slide 16"
+    ],
+    [
+     "4 weeks",
+     "at 2–3 times a week",
+     "Patel Scaly slide 16"
+    ],
+    [
+     "Once weekly",
+     "if improved after 4 weeks",
+     "Patel Scaly slide 16"
+    ],
+    [
+     "7 days",
+     "worse, or symptoms longer than this: see a health care provider",
+     "Patel Scaly slide 16"
+    ],
+    [
+     "1–3%",
+     "of adolescents and adults; men more than women",
+     "Patel Scaly slide 11"
+    ],
+    [
+     "1%",
+     "ketoconazole shampoo, OTC",
+     "Patel Scaly slide 7"
+    ],
+    [
+     "0.5–1%",
+     "hydrocortisone, OTC, for seborrheic dermatitis",
+     "Patel Scaly slide 7"
+    ],
+    [
+     "2–5%",
+     "sulfur (dandruff and seborrheic dermatitis; not psoriasis)",
+     "Patel Scaly slide 7"
+    ]
+   ]
+  },
+  {
+   "id": "cradle-cap",
+   "name": "Cradle cap (seborrheic dermatitis in infants)",
+   "group": "selfcare",
+   "lectures": "Patel 11/10",
+   "topics": [
+    "p7-inf"
+   ],
+   "short": [
+    "Seborrheic dermatitis of an infant’s scalp; neither harmful nor contagious.",
+    "Greasy or dry scaling, on the scalp only.",
+    "Daily: oil massage, non-medicated shampoo, soft bristle brush.",
+    "No corticosteroids and no ketoconazole in infants.",
+    "Severe cases only: salicylic acid 3–5% in olive oil or a water-soluble base."
+   ],
+   "steps": [
+    {
+     "title": "Cause and timing",
+     "profs": [
+      "pa"
+     ],
+     "q": "How long can it persist, and is it harmful or contagious?",
+     "src": "Patel Scaly slides 11, 20; 11/10 lecture",
+     "blocks": [
+      {
+       "k": "facts",
+       "rows": [
+        [
+         "What it is",
+         "{{Seborrheic dermatitis}} in an infant: “think of the [[cradle-cap|cradle cap]]”"
+        ],
+        [
+         "Organism",
+         "Malassezia species, as in dandruff"
+        ],
+        [
+         "How long",
+         "May persist up to {{30 months}} of age"
+        ],
+        [
+         "Is it dangerous?",
+         "Neither {{harmful}} nor {{contagious}}"
+        ],
+        [
+         "Not dandruff",
+         "Dandruff starts at puberty"
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Recognise it",
+     "profs": [
+      "pa"
+     ],
+     "q": "How does cradle cap differ from seborrheic dermatitis in an adult?",
+     "src": "Patel Scaly slides 12, 20; 11/10 lecture",
+     "blocks": [
+      {
+       "k": "facts",
+       "rows": [
+        [
+         "Scale",
+         "{{Greasy or dry}} scaling"
+        ],
+        [
+         "Where",
+         "★ The {{scalp}}: “infants, it’s only on the scalp”"
+        ],
+        [
+         "Adult, for contrast",
+         "{{Yellow}}, greasy scales on red skin of the head, ears, face and trunk"
+        ],
+        [
+         "Her case",
+         "An infant a couple of weeks old with a scaly scalp: “this is an example of cradle cap”"
+        ]
+       ]
+      },
+      {
+       "k": "photo",
+       "id": "cradle-cap"
+      }
+     ]
+    },
+    {
+     "title": "Treat it: daily care of the scalp and face",
+     "profs": [
+      "pa"
+     ],
+     "q": "List the three daily care steps for the scalp, and the care for the face.",
+     "src": "Patel Scaly slides 15, 18; 11/10 lecture",
+     "blocks": [
+      {
+       "k": "line",
+       "label": "Scalp, every day",
+       "title": "Remove the scale",
+       "drugs": [],
+       "pts": [
+        "★ Massage the scalp with {{baby oil or vegetable oil}} (her poll answer)",
+        "Then shampoo with a {{non-medicated}} shampoo",
+        "Use a {{soft bristle brush}}",
+        "Mineral oil or olive oil also softens the scales"
+       ]
+      },
+      {
+       "k": "line",
+       "label": "Face",
+       "title": "Cleanser and emollient",
+       "drugs": [],
+       "pts": [
+        "Wash with a {{mild soap or cleanser}}",
+        "Apply a facial [[emollient|emollient]]"
+       ]
+      },
+      {
+       "k": "pts",
+       "items": [
+        "“With our infants, we’re mostly using non-pharm therapy.”"
+       ]
+      }
+     ]
+    },
+    {
+     "title": "What is not used in infants, and severe cases",
+     "profs": [
+      "pa"
+     ],
+     "q": "Which two products are not used in infants, and what is the option for severe cases?",
+     "src": "Patel Scaly slide 18; 11/10 lecture",
+     "blocks": [
+      {
+       "k": "line",
+       "label": "Not used",
+       "title": "Corticosteroids and ketoconazole",
+       "drugs": [
+        "hydrocortisone",
+        "ketoconazole"
+       ],
+       "pts": [
+        "★ Slide 18: “DO NOT suggest {{corticosteroids}}”; “Hydrocortisone, absolutely not”",
+        "★ “{{Ketoconazole}} shampoo is not recommended in infants”: it irritates infant skin",
+        "Face too: “We’re still not recommending corticosteroids cause remember the age parameter”",
+        "Nystatin ointment: “would not be beneficial”"
+       ]
+      },
+      {
+       "k": "line",
+       "label": "Severe",
+       "title": "Salicylic acid 3–5%",
+       "drugs": [
+        "salicylic-acid"
+       ],
+       "pts": [
+        "{{Salicylic acid 3–5%}} in {{olive oil}} or a water-soluble base",
+        "“Severe cases only”: “an option if nothing else has worked”",
+        "Why last: an infant’s skin is thin, absorbs more, and is more prone to irritation"
+       ]
+      }
+     ]
+    }
+   ],
+   "patients": [
+    {
+     "t": "A new mother brings an infant a couple of weeks old. The scalp has greasy scale, and the skin elsewhere is clear. She asks what to use on the scalp.",
+     "q": "What do you recommend?",
+     "o": [
+      "Ketoconazole 1% shampoo, left on 3–5 minutes",
+      "Hydrocortisone 1% cream, twice daily",
+      "Baby oil massage, then non-medicated shampoo",
+      "Selenium sulfide shampoo, twice weekly"
+     ],
+     "a": 2,
+     "w": "Infant care is non-drug: massage the scalp with baby oil or vegetable oil, then a non-medicated shampoo and a soft bristle brush (her poll).",
+     "x": {
+      "Ketoconazole 1% shampoo, left on 3–5 minutes": "“Ketoconazole shampoo is not recommended in infants.”",
+      "Hydrocortisone 1% cream, twice daily": "Her slide: do not suggest corticosteroids. “Hydrocortisone, absolutely not.”",
+      "Selenium sulfide shampoo, twice weekly": "Medicated shampoos are adult products; infants get a non-medicated shampoo."
+     }
+    },
+    {
+     "t": "A 6-month-old’s thick cradle cap has not cleared after weeks of daily oil massage, non-medicated shampoo and a soft brush.",
+     "q": "Which option is there for a severe case?",
+     "o": [
+      "Salicylic acid 3–5% in olive oil",
+      "Ketoconazole 1% shampoo daily",
+      "Hydrocortisone 1% lotion daily",
+      "Coal tar 0.5–5% shampoo daily"
+     ],
+     "a": 0,
+     "w": "For severe cases only: salicylic acid 3–5% in olive oil or a water-soluble base.",
+     "x": {
+      "Ketoconazole 1% shampoo daily": "Ketoconazole is not recommended in infants.",
+      "Hydrocortisone 1% lotion daily": "Corticosteroids are not suggested for infants.",
+      "Coal tar 0.5–5% shampoo daily": "Coal tar is not on her infant slide; it is a medicated shampoo for adults."
+     }
+    },
+    {
+     "t": "A 3-week-old has cradle cap and some scaling on the cheeks. The mother asks whether her own hydrocortisone 1% cream can go on the baby’s face.",
+     "q": "What do you recommend for the face?",
+     "o": [
+      "Hydrocortisone 1% cream for 7 days",
+      "An antifungal cream twice daily",
+      "Ketoconazole shampoo as a face wash",
+      "Mild cleanser, then a facial emollient"
+     ],
+     "a": 3,
+     "w": "On the face: wash with a mild soap or cleanser and apply a facial emollient. “We’re still not recommending corticosteroids cause remember the age parameter.”",
+     "x": {
+      "Hydrocortisone 1% cream for 7 days": "Corticosteroids are not suggested for infants, on the scalp or the face.",
+      "An antifungal cream twice daily": "Antifungal creams for the face and body are for adults.",
+      "Ketoconazole shampoo as a face wash": "Ketoconazole is not recommended in infants."
+     }
+    },
+    {
+     "t": "The mother of a 2-month-old with cradle cap asks whether it is dangerous and whether her older child can catch it.",
+     "q": "What do you tell her?",
+     "o": [
+      "Harmless, but contagious",
+      "Harmless and not contagious",
+      "Not contagious, but needs a physician",
+      "Contagious, and needs a physician"
+     ],
+     "a": 1,
+     "w": "Seborrheic dermatitis is neither harmful nor contagious. In infants it may persist up to 30 months of age.",
+     "x": {
+      "Harmless, but contagious": "It is not contagious.",
+      "Not contagious, but needs a physician": "It is not harmful; daily non-drug care is the treatment.",
+      "Contagious, and needs a physician": "It is neither harmful nor contagious."
+     }
+    }
+   ],
+   "numbers": [
+    [
+     "30 months",
+     "age up to which it may persist",
+     "Patel Scaly slide 11"
+    ],
+    [
+     "3–5%",
+     "salicylic acid in olive oil or a water-soluble base, severe cases only",
+     "Patel Scaly slide 18"
+    ],
+    [
+     "Daily",
+     "oil massage, non-medicated shampoo, soft bristle brush",
+     "Patel Scaly slide 18"
+    ],
+    [
+     "Scalp only",
+     "where cradle cap is; the adult form is on the head, ears, face and trunk",
+     "Patel Scaly slide 12; 11/10 lecture"
+    ]
+   ]
+  }
+ ],
+ "drugs": {
+  "steroid": {
+   "name": "Topical corticosteroids",
+   "brand": "",
+   "sm": {
+    "text": "Target: the glucocorticoid receptor. The drug–receptor complex binds the GRE, or keeps NF-κB and AP-1 off the DNA. Face: low potency (hydrocortisone 1%); body: medium potency (betamethasone valerate 0.1%).",
+    "src": "PCol slides 5–7, 10–11"
+   },
+   "sk": {
+    "text": "Steroid skeleton (rings A–C six-membered, D five-membered). Potency rises with a C1–C2 double bond, a 6α-halogen, a 9α-halogen and the 11β-OH.",
+    "src": "DPAW pages 20, 23"
+   },
+   "pa": [
+    {
+     "dz": "psoriasis",
+     "role": "First line for mild to moderate psoriasis; the most effective topical; her poll answer for the 7% patient",
+     "how": "2–4 times daily: cream or lotion by day, ointment at night. Low potency on the face and skin folds. Limit to ≤ 4 weeks and limit the surface area.",
+     "src": "Patel Scaly slides 35–36; 11/11 lecture"
+    },
+    {
+     "dz": "seborrheic-dermatitis",
+     "role": "Adults: reduces erythema and itching; combined with ketoconazole shampoo in therapy-resistant cases",
+     "how": "Lotion for the scalp; cream for other parts of the body; mild to potent.",
+     "src": "Patel Scaly slide 17; 11/10 lecture"
+    }
+   ],
+   "counsel": [
+    "Psoriasis: apply 2 to 4 times a day; a cream or lotion in the daytime and an ointment at night.",
+    "Use a low-potency product on the face and in skin folds.",
+    "Do not use it longer than 4 weeks, and keep the treated area small.",
+    "If a month of treatment with stepped-up potency has changed little, another topical option is tried.",
+    "Expect a follow-up contact in 1–2 weeks.",
+    "Seborrheic dermatitis: a lotion goes on the scalp, a cream on the body; moisturize after washing."
+   ],
+   "counselSrc": "Patel Scaly slides 17, 36, 48; 11/10 and 11/11 lectures",
+   "avoid": [
+    "Infants with cradle cap: “DO NOT suggest corticosteroids” (slide 18)",
+    "Not for longer than 4 weeks in psoriasis (slide 36)",
+    "Withdrawal of corticosteroids can precipitate psoriasis (slide 24)"
+   ]
+  },
+  "hydrocortisone": {
+   "name": "Hydrocortisone 0.5–1% (OTC)",
+   "brand": "",
+   "sm": {
+    "text": "Glucocorticoid receptor agonist; the low-potency steroid, the one for the face (hydrocortisone 1%).",
+    "src": "PCol slides 5–7, 11"
+   },
+   "sk": {
+    "text": "Natural cortisol, the parent structure. Less than 15% is absorbed through skin. 11β-HSD converts it to inactive cortisone.",
+    "src": "DPAW pages 24–26"
+   },
+   "pa": [
+    {
+     "dz": "dandruff",
+     "role": "Not effective: the dandruff “no” on her OTC chart",
+     "how": "Not used.",
+     "src": "Patel Scaly slide 7; 11/10 lecture"
+    },
+    {
+     "dz": "seborrheic-dermatitis",
+     "role": "OTC option, 0.5–1%, for redness and itching in adults",
+     "how": "Lotion for the scalp; cream for other parts of the body.",
+     "src": "Patel Scaly slides 7, 17"
+    },
+    {
+     "dz": "psoriasis",
+     "role": "OTC option, 0.5–1%; topical corticosteroids were her poll answer for the OTC agent in mild to moderate psoriasis",
+     "how": "As the topical corticosteroids: 2–4 times daily, ≤ 4 weeks.",
+     "src": "Patel Scaly slides 7, 36, 50; 11/11 lecture"
+    },
+    {
+     "dz": "cradle-cap",
+     "role": "Not used in infants",
+     "how": "“Hydrocortisone, absolutely not.”",
+     "src": "Patel Scaly slide 18; 11/10 lecture"
+    }
+   ],
+   "counsel": [
+    "It does not treat dandruff.",
+    "Psoriasis: 2 to 4 times a day, for no longer than 4 weeks.",
+    "Seborrheic dermatitis: see a health care provider if it worsens or lasts longer than 7 days."
+   ],
+   "counselSrc": "Patel Scaly slides 7, 16, 36",
+   "avoid": [
+    "Infants with cradle cap, on the scalp or the face (slide 18)",
+    "Dandruff: not effective (slide 7)"
+   ]
+  },
+  "calcipotriene": {
+   "name": "Calcipotriene",
+   "brand": "",
+   "sm": {
+    "text": "Target: binds the vitamin D receptor (VDR), which pairs with RXR-α and changes gene expression. Cautions: burning and itching; hypercalcemia above 100 g per week; a steroid reduces the irritation.",
+    "src": "PCol slides 21–22"
+   },
+   "sk": {
+    "text": "A vitamin D analog (secosteroid). Antiproliferative; it raises GI calcium absorption, and hypercalcemia is the limiting factor.",
+    "src": "DPAW page 27"
+   },
+   "pa": [
+    {
+     "dz": "psoriasis",
+     "role": "Vitamin D3 analogue; a topical option for mild to moderate psoriasis, e.g. after a corticosteroid has been tried",
+     "how": "Ointment once or twice daily; cream or foam twice daily.",
+     "src": "Patel Scaly slide 36; 11/11 lecture"
+    }
+   ],
+   "counsel": [
+    "Ointment: apply once or twice a day.",
+    "Cream or foam: apply twice a day.",
+    "Expect a follow-up contact in 1–2 weeks."
+   ],
+   "counselSrc": "Patel Scaly slides 36, 48",
+   "avoid": [
+    "Dr. Smith: more than 100 g per week risks hypercalcemia and hypercalciuria (PCol slides 21–22)"
+   ]
+  },
+  "tazarotene": {
+   "name": "Tazarotene",
+   "brand": "",
+   "sm": {
+    "text": "Target: retinoic acid receptors RAR and RXR. Topical retinoid for psoriasis, acne and wrinkles. Photosensitivity; contraceptive counseling; not in pregnancy.",
+    "src": "PCol slides 14, 18"
+   },
+   "sk": {
+    "text": "Acetylenic third-generation retinoid; an ethyl ester prodrug that carboxylesterase turns into tazarotenic acid. Teratogenic.",
+    "src": "DPAW pages 29, 51"
+   },
+   "pa": [
+    {
+     "dz": "psoriasis",
+     "role": "Topical retinoid option for mild to moderate psoriasis (listed with adapalene)",
+     "how": "Once daily at bedtime.",
+     "src": "Patel Scaly slide 36"
+    }
+   ],
+   "counsel": [
+    "Apply once a day, at bedtime.",
+    "Expect a follow-up contact in 1–2 weeks."
+   ],
+   "counselSrc": "Patel Scaly slides 36, 48",
+   "avoid": [
+    "Pregnancy (Dr. Smith, PCol slide 18; Dr. Sikazwe: teratogenic, DPAW page 29)"
+   ]
+  },
+  "anthralin": {
+   "name": "Anthralin",
+   "brand": "",
+   "sm": {
+    "text": "Exact mechanism not known: may act on keratinocyte mitochondria and reduce mitotic activity; also prevents T-lymphocyte activation. Irritation, staining; avoid the face and intertriginous areas.",
+    "src": "PCol slides 55–56"
+   },
+   "sk": {
+    "text": "A hydroxyanthrone (dithranol). Spontaneous autoxidation gives an anthranyl radical and superoxide anion, which act on keratinocyte mitochondria; the oxidation products stain brown.",
+    "src": "DPAW page 17"
+   },
+   "pa": [
+    {
+     "dz": "psoriasis",
+     "role": "Topical option for thick plaque lesions",
+     "how": "Applied only to the thick plaques for 2 hours or less, then wiped off. Zinc oxide around the edges protects normal skin.",
+     "src": "Patel Scaly slide 36"
+    }
+   ],
+   "counsel": [
+    "Put it only on the thick plaques.",
+    "Leave it on for 2 hours or less, then wipe it off.",
+    "Put zinc oxide around the edges first to protect the normal skin."
+   ],
+   "counselSrc": "Patel Scaly slide 36",
+   "avoid": [
+    "Normal skin around the plaque (slide 36)",
+    "Dr. Smith: the face and intertriginous areas (PCol slides 55–56)"
+   ]
+  },
+  "coal-tar": {
+   "name": "Coal tar",
+   "brand": "",
+   "sm": {
+    "text": "Antiproliferative and anti-inflammatory; crosslinks DNA to inhibit cell division (mechanism not fully known). Photosensitizing; caution on oozing or vesicular skin.",
+    "src": "PCol slides 53–54"
+   },
+   "sk": {
+    "text": "A mixture of phenols, polycyclic aromatic hydrocarbons and heterocycles. Photosensitizing; used with UVB.",
+    "src": "DPAW page 16"
+   },
+   "pa": [
+    {
+     "dz": "psoriasis",
+     "role": "Topical option for mild to moderate psoriasis; OTC 0.5–5%",
+     "how": "Apply in the evening; wash off in the morning.",
+     "src": "Patel Scaly slides 7, 36"
+    },
+    {
+     "dz": "dandruff",
+     "role": "One of the three OTC medicated shampoos for moderate to severe dandruff; 0.5–5%",
+     "how": "Leave on 3–5 minutes, rinse well. Daily for 1 week, then 2–3 times weekly for 2–3 weeks, then once weekly.",
+     "src": "Patel Scaly slides 7, 9"
+    },
+    {
+     "dz": "seborrheic-dermatitis",
+     "role": "Second-line shampoo (ketoconazole is first line); 0.5–5%",
+     "how": "Leave on 3–5 minutes, rinse. Daily for 1–2 weeks, then 2–3 times a week for 4 weeks; once weekly if improved.",
+     "src": "Patel Scaly slides 7, 16"
+    }
+   ],
+   "counsel": [
+    "Psoriasis plaques: apply in the evening and wash it off in the morning.",
+    "As a shampoo: leave it on the scalp 3 to 5 minutes, then rinse well.",
+    "Dandruff: daily for 1 week, then 2–3 times a week for 2–3 weeks, then once a week.",
+    "Seborrheic dermatitis: see a health care provider if it worsens or lasts longer than 7 days."
+   ],
+   "counselSrc": "Patel Scaly slides 9, 16, 36",
+   "avoid": [
+    "Dr. Smith: photosensitizing; caution on oozing or vesicular skin (PCol slides 53–54)"
+   ]
+  },
+  "salicylic-acid": {
+   "name": "Salicylic acid",
+   "brand": "",
+   "sm": {
+    "text": "Keratolytic: solubilizes the cell surface proteins that keep the stratum corneum intact.",
+    "src": "PCol slide 39"
+   },
+   "sk": {
+    "text": "A beta-hydroxy acid; keratolytic, raises hydration.",
+    "src": "DPAW page 43"
+   },
+   "pa": [
+    {
+     "dz": "psoriasis",
+     "role": "Topical option; OTC 1.8–3%",
+     "how": "Shampoo for scalp lesions.",
+     "src": "Patel Scaly slides 7, 36"
+    },
+    {
+     "dz": "seborrheic-dermatitis",
+     "role": "A cream containing salicylic acid softens scales and crusts; OTC 1.8–3%",
+     "how": "Applied to soften the scale before washing.",
+     "src": "Patel Scaly slides 7, 15"
+    },
+    {
+     "dz": "cradle-cap",
+     "role": "Severe cases only, “if nothing else has worked”",
+     "how": "3–5% in olive oil or a water-soluble base.",
+     "src": "Patel Scaly slide 18; 11/10 lecture"
+    },
+    {
+     "dz": "dandruff",
+     "role": "On her OTC chart for dandruff, 1.8–3%",
+     "how": "Not one of the three shampoos named on her dandruff slide.",
+     "src": "Patel Scaly slides 7, 9"
+    }
+   ],
+   "counsel": [
+    "Psoriasis: use the shampoo on scalp lesions.",
+    "Seborrheic dermatitis: it softens the scale so it can be washed off.",
+    "Infant: only for a severe case, 3–5%, mixed in olive oil or a water-soluble base."
+   ],
+   "counselSrc": "Patel Scaly slides 15, 18, 36; 11/10 lecture",
+   "avoid": [
+    "Infants, except severe cases: thin skin, higher absorption, more irritation (11/10 lecture)"
+   ]
+  },
+  "pimecrolimus": {
+   "name": "Pimecrolimus",
+   "brand": "",
+   "sm": {
+    "text": "Target: calcineurin; less IL-2, less T-cell and mast cell activation.",
+    "src": "PCol slides 24–27"
+   },
+   "sk": {
+    "text": "A macrolide (lactone) calcineurin inhibitor; high non-specific skin protein binding keeps it in the skin.",
+    "src": "DPAW pages 28, 32"
+   },
+   "pa": [
+    {
+     "dz": "psoriasis",
+     "role": "Topical calcineurin inhibitor option",
+     "how": "Apply to intertriginous areas (skin folds).",
+     "src": "Patel Scaly slide 36"
+    }
+   ],
+   "counsel": [
+    "In psoriasis it is for plaques in the skin folds."
+   ],
+   "counselSrc": "Patel Scaly slide 36",
+   "avoid": []
+  },
+  "methotrexate": {
+   "name": "Methotrexate",
+   "brand": "",
+   "sm": {
+    "text": "Target: inhibits dihydrofolate reductase (DHFR): less tetrahydrofolate, fewer purines, so fast-dividing cells slow. Cumulative liver toxicity is the most significant adverse effect.",
+    "src": "PCol slides 59–61"
+   },
+   "sk": {
+    "text": "A folic acid analog: its pteridine ring matches folic acid’s, so the two compete at DHFR.",
+    "src": "DPAW pages 30–31"
+   },
+   "pa": [
+    {
+     "dz": "psoriasis",
+     "role": "Usually the first oral systemic agent (“first line, most affordable”); psoriasis and psoriatic arthritis; T-cell and cytokine suppressor, oral DMARD",
+     "how": "Onset 3–6 weeks. Folic acid 1–5 mg daily. Screening: CBC, LFTs. The topical is continued.",
+     "src": "Patel Scaly slides 37, 39; 11/11 lecture"
+    }
+   ],
+   "counsel": [
+    "Take folic acid 1–5 mg every day with it: it lowers nausea, bone marrow suppression and liver toxicity.",
+    "Expect a response in 3 to 6 weeks.",
+    "Keep using your topical medicine.",
+    "Blood tests (CBC and liver tests) are checked.",
+    "Avoid alcohol: liver toxicity is the most common concern.",
+    "Expect a follow-up contact in 1–2 weeks."
+   ],
+   "counselSrc": "Patel Scaly slides 39, 48; 11/11 lecture",
+   "avoid": [
+    "Pregnancy",
+    "Cirrhosis",
+    "Blood dyscrasias",
+    "Higher risk of hepatotoxicity: diabetes, obesity, alcoholism, more than 4 g total cumulative dose"
+   ]
+  },
+  "cyclosporine": {
+   "name": "Cyclosporine",
+   "brand": "",
+   "sm": {
+    "text": "Target: binds cyclophilin, and the complex inhibits calcineurin. Boxed warnings: lymphoma and malignancy, infections; nephrotoxicity, hypertension.",
+    "src": "PCol slides 26, 29–30"
+   },
+   "sk": {
+    "text": "An 11-amino-acid cyclic peptide, activated by binding cyclophilin; first-pass metabolism by CYP3A4; grapefruit juice raises its levels.",
+    "src": "DPAW page 33"
+   },
+   "pa": [
+    {
+     "dz": "psoriasis",
+     "role": "Oral systemic option for short-term use; T-cell and cytokine suppressor, oral DMARD; “we tend to stay away from this medication, but again, it is an option”",
+     "how": "Less than 4 months (nephrotoxic). Dosed on actual body weight. Many drug interactions: CYP3A4 and 2C9 inhibitor, major 3A4 substrate.",
+     "src": "Patel Scaly slide 39; 11/11 lecture"
+    }
+   ],
+   "counsel": [
+    "It is used for less than 4 months, because it can harm the kidneys.",
+    "Tell the pharmacist every medicine you take: it has many interactions.",
+    "Keep using your topical medicine.",
+    "Expect a follow-up contact in 1–2 weeks."
+   ],
+   "counselSrc": "Patel Scaly slides 39, 48; 11/11 lecture",
+   "avoid": [
+    "Untreated hypertension",
+    "Systemic malignancy",
+    "Infections",
+    "Elderly: increased risk of hypertension"
+   ]
+  },
+  "apremilast": {
+   "name": "Apremilast",
+   "brand": "Otezla",
+   "sm": {
+    "text": "Target: phosphodiesterase 4 (PDE-4), as crisaborole. Diarrhea, nausea, headache, weight loss; caution in depression.",
+    "src": "PCol slide 34"
+   },
+   "sk": {
+    "text": "An isoindoline PDE4 inhibitor that raises cAMP; metabolized mainly by CYP3A4, so 3A4 inducers are avoided.",
+    "src": "DPAW page 34"
+   },
+   "pa": [
+    {
+     "dz": "psoriasis",
+     "role": "Oral systemic option; PDE-4 blocker",
+     "how": "Titrated to a maximum of 30 mg twice daily over the first week. Once daily in renal impairment. Response by week 4.",
+     "src": "Patel Scaly slide 38; 11/11 lecture"
+    }
+   ],
+   "counsel": [
+    "The dose is stepped up over the first week to 30 mg twice a day.",
+    "You should see a response by week 4.",
+    "Report nausea, vomiting or diarrhea, low mood, or weight loss.",
+    "Expect a follow-up contact in 1–2 weeks."
+   ],
+   "counselSrc": "Patel Scaly slides 38, 48",
+   "avoid": [
+    "Caution: depression; weight loss",
+    "Renal impairment: once-daily dosing"
+   ]
+  },
+  "acitretin": {
+   "name": "Acitretin",
+   "brand": "",
+   "sm": {
+    "text": "Target: retinoic acid receptors RAR and RXR. Oral retinoid for psoriasis. Hepatotoxicity; no ethanol; no blood donation or pregnancy for 3 years.",
+    "src": "PCol slides 14, 20"
+   },
+   "sk": {
+    "text": "Second-generation mono-aromatic retinoid; the active form of etretinate.",
+    "src": "DPAW pages 29, 50"
+   },
+   "pa": [
+    {
+     "dz": "psoriasis",
+     "role": "Oral retinoid option; not immunosuppressive",
+     "how": "Maximum response in 3 to 6 months.",
+     "src": "Patel Scaly slide 38; 11/11 lecture"
+    }
+   ],
+   "counsel": [
+    "Do not drink alcohol.",
+    "Do not become pregnant, or plan to, during treatment or within 3 years after stopping.",
+    "The full response takes 3 to 6 months.",
+    "Expect a follow-up contact in 1–2 weeks."
+   ],
+   "counselSrc": "Patel Scaly slides 38, 48; 11/11 lecture",
+   "avoid": [
+    "Women of reproductive age: pregnant, or planning pregnancy within 3 years after stopping (“not an option”)",
+    "Alcohol"
+   ]
+  },
+  "tofacitinib": {
+   "name": "Tofacitinib",
+   "brand": "Xeljanz",
+   "sm": {
+    "text": "Target: Janus kinase (JAK); a small molecule that gets inside the cell. Boxed warning: severe infection, lymphoma, other malignancy.",
+    "src": "PCol slides 75–76"
+   },
+   "sk": {
+    "text": "A pyrrolopyrimidine JAK inhibitor; about 70% metabolized by CYP3A4; may be used with methotrexate.",
+    "src": "DPAW page 35"
+   },
+   "pa": [
+    {
+     "dz": "psoriasis",
+     "role": "JAK inhibitor for psoriatic arthritis after failure on methotrexate; immunosuppressive",
+     "how": "Monitor lymphocytes, neutrophils, hemoglobin, liver enzymes and lipids.",
+     "src": "Patel Scaly slide 38; 11/11 lecture"
+    }
+   ],
+   "counsel": [
+    "No live vaccines.",
+    "Report any sign of infection: serious TB, fungal, viral and bacterial infections occur.",
+    "Boxed warning: serious cardiac events such as heart attack or stroke, cancer, blood clots, and death.",
+    "Blood tests are monitored."
+   ],
+   "counselSrc": "Patel Scaly slide 38",
+   "avoid": [
+    "Not with biologic DMARDs or potent immunosuppressants",
+    "Live vaccines",
+    "Risk of thrombosis and lymphoma"
+   ]
+  },
+  "abatacept": {
+   "name": "Abatacept",
+   "brand": "Orencia",
+   "sm": {
+    "text": "Target: a fusion protein (CTLA-4 domain + IgG Fc) that binds CD80/86 on antigen-presenting cells, so CD28 cannot bind: blocks the positive second signal for T-cell activation.",
+    "src": "PCol slide 63"
+   },
+   "pa": [
+    {
+     "dz": "psoriasis",
+     "role": "Systemic option that blocks T-cell activation",
+     "how": "Subcutaneous injection. Screening: TB.",
+     "src": "Patel Scaly slide 39; 11/11 lecture"
+    }
+   ],
+   "counsel": [
+    "It is an injection under the skin.",
+    "You are screened for TB before it is started.",
+    "No live vaccines."
+   ],
+   "counselSrc": "Patel Scaly slide 39; 11/11 lecture",
+   "avoid": [
+    "Live vaccines",
+    "COPD (listed under interactions on slide 39)"
+   ]
+  },
+  "puva": {
+   "name": "PUVA (oral psoralen + UVA)",
+   "brand": "",
+   "sm": {
+    "text": "Methoxsalen: with UV light of 320–340 nm, psoralens intercalate into DNA. Antiproliferative, immunosuppressive, anti-inflammatory.",
+    "src": "PCol slide 78; Sun slide 3"
+   },
+   "sk": {
+    "text": "Methoxsalen (8-MOP) is a furanocoumarin: it intercalates, and UVA activates a covalent crosslink of DNA pyrimidine bases, lowering DNA synthesis.",
+    "src": "DPAW page 18"
+   },
+   "pa": [
+    {
+     "dz": "psoriasis",
+     "role": "Photochemotherapy; “absolute last line”, reserved for severe, refractory psoriasis",
+     "how": "Oral psoralen plus UVA light. Efficacy about 90%. A skin biopsy of a lesion confirms psoriasis first.",
+     "src": "Patel Scaly slides 44–45; 11/11 lecture"
+    }
+   ],
+   "counsel": [
+    "About 90% of patients respond.",
+    "A skin biopsy is taken first to confirm psoriasis.",
+    "Side effects: serious burns, blistering, peeling, itching, nausea, photoaging.",
+    "It may raise the rate of certain skin cancers (basal cell, melanoma)."
+   ],
+   "counselSrc": "Patel Scaly slide 44; 11/11 lecture",
+   "avoid": [
+    "Anything short of severe, refractory psoriasis: it is the last line"
+   ]
+  },
+  "tnf-inhibitors": {
+   "name": "TNF-α inhibitors: adalimumab, etanercept, infliximab, golimumab, certolizumab",
+   "brand": "Humira, Enbrel, Remicade, Simponi, Cimzia",
+   "sm": {
+    "text": "Target: bind TNF-α, an inflammatory cytokine, and keep it from its receptors; fewer and smaller plaques. Class boxed warning: serious infections; lymphoma and other malignancies.",
+    "src": "PCol slides 70–74"
+   },
+   "pa": [
+    {
+     "dz": "psoriasis",
+     "role": "Biologic class; after topical and oral systemic agents. Humira, Enbrel and Remicade are the most commonly prescribed.",
+     "how": "PPD for all patients, repeated yearly. Hepatitis B screening. Monitor CBC and LFTs.",
+     "src": "Patel Scaly slides 41, 43; 11/11 lecture"
+    }
+   ],
+   "counsel": [
+    "It is an injection; a specialty pharmacy and the clinic follow you often.",
+    "You are screened for TB before the first dose and during therapy, with a PPD every year.",
+    "No live vaccines while on it; vaccines that are not live are allowed.",
+    "Stop it and call if you get an infection, including flu, a cold or COVID.",
+    "Common: injection site reaction, headache, runny nose, upper respiratory infection.",
+    "Expect a follow-up contact in 1–2 weeks.",
+    "You are screened for hepatitis B before starting.",
+    "Report shortness of breath or swelling: this class can worsen or bring on heart failure."
+   ],
+   "counselSrc": "Patel Scaly slides 40–41, 43, 48; 11/11 lecture",
+   "avoid": [
+    "Congestive heart failure: “completely contraindicated” (said twice)",
+    "Demyelinating disease or multiple sclerosis, in the patient or a first-degree relative",
+    "Live vaccines",
+    "Active infection",
+    "Class cautions: hepatitis B reactivation, cytopenias, lupus-like syndrome"
+   ]
+  },
+  "ustekinumab": {
+   "name": "Ustekinumab",
+   "brand": "Stelara",
+   "sm": {
+    "text": "Target: the p40 subunit shared by IL-12 and IL-23; fewer Th1 and Th17 cells.",
+    "src": "PCol slide 67"
+   },
+   "pa": [
+    {
+     "dz": "psoriasis",
+     "role": "Biologic, IL-12 and IL-23 class; after topical and oral systemic agents",
+     "how": "Subcutaneous. Monitor PPD, CBC, signs of infection, levels of cyclosporine and warfarin, Crohn’s symptoms.",
+     "src": "Patel Scaly slide 42; 11/11 lecture"
+    }
+   ],
+   "counsel": [
+    "It is an injection; a specialty pharmacy and the clinic follow you often.",
+    "You are screened for TB before the first dose and during therapy, with a PPD every year.",
+    "No live vaccines while on it; vaccines that are not live are allowed.",
+    "Stop it and call if you get an infection, including flu, a cold or COVID.",
+    "Common: injection site reaction, headache, runny nose, upper respiratory infection.",
+    "Expect a follow-up contact in 1–2 weeks.",
+    "Tell the pharmacist if you take warfarin or cyclosporine: their levels are monitored."
+   ],
+   "counselSrc": "Patel Scaly slides 40, 42–43, 48; 11/11 lecture",
+   "avoid": [
+    "Active TB",
+    "Live vaccines",
+    "Interacts with cyclosporine and warfarin"
+   ]
+  },
+  "il23-inhibitors": {
+   "name": "IL-23 inhibitors: risankizumab, guselkumab, tildrakizumab",
+   "brand": "Skyriza, Tremfya, Ilumya",
+   "sm": {
+    "text": "Target: the p19 subunit of IL-23 (IL-23 alone).",
+    "src": "PCol slides 68–69"
+   },
+   "pa": [
+    {
+     "dz": "psoriasis",
+     "role": "Biologic, IL-23 class; after topical and oral systemic agents. “Skyriza tends to be the most commonly prescribed.”",
+     "how": "Subcutaneous.",
+     "src": "Patel Scaly slide 42; 11/11 lecture"
+    }
+   ],
+   "counsel": [
+    "It is an injection; a specialty pharmacy and the clinic follow you often.",
+    "You are screened for TB before the first dose and during therapy, with a PPD every year.",
+    "No live vaccines while on it; vaccines that are not live are allowed.",
+    "Stop it and call if you get an infection, including flu, a cold or COVID.",
+    "Common: injection site reaction, headache, runny nose, upper respiratory infection.",
+    "Expect a follow-up contact in 1–2 weeks."
+   ],
+   "counselSrc": "Patel Scaly slides 40, 43, 48; 11/11 lecture",
+   "avoid": [
+    "Active TB",
+    "Live vaccines"
+   ]
+  },
+  "secukinumab": {
+   "name": "Secukinumab",
+   "brand": "Cosentyx",
+   "sm": {
+    "text": "Target: the IL-17A cytokine. TB evaluation first; Crohn’s exacerbation.",
+    "src": "PCol slide 66"
+   },
+   "pa": [
+    {
+     "dz": "psoriasis",
+     "role": "Biologic, IL-17A class; after topical and oral systemic agents",
+     "how": "Subcutaneous.",
+     "src": "Patel Scaly slide 42; 11/11 lecture"
+    }
+   ],
+   "counsel": [
+    "It is an injection; a specialty pharmacy and the clinic follow you often.",
+    "You are screened for TB before the first dose and during therapy, with a PPD every year.",
+    "No live vaccines while on it; vaccines that are not live are allowed.",
+    "Stop it and call if you get an infection, including flu, a cold or COVID.",
+    "Common: injection site reaction, headache, runny nose, upper respiratory infection.",
+    "Expect a follow-up contact in 1–2 weeks.",
+    "Report new bowel symptoms."
+   ],
+   "counselSrc": "Patel Scaly slides 40, 43, 48; 11/11 lecture",
+   "avoid": [
+    "Crohn’s disease: “we’re avoiding any patients with Crohn’s disease on Cosentyx”",
+    "Live vaccines",
+    "Anti-IL class cautions: inflammatory bowel disease, depression worsening"
+   ]
+  },
+  "ixekizumab": {
+   "name": "Ixekizumab",
+   "brand": "Taltz",
+   "sm": {
+    "text": "Target: the IL-17A cytokine.",
+    "src": "PCol slide 66"
+   },
+   "pa": [
+    {
+     "dz": "psoriasis",
+     "role": "Biologic, IL-17A class; after topical and oral systemic agents",
+     "how": "No caution of its own on her slide.",
+     "src": "Patel Scaly slide 42"
+    }
+   ],
+   "counsel": [
+    "It is an injection; a specialty pharmacy and the clinic follow you often.",
+    "You are screened for TB before the first dose and during therapy, with a PPD every year.",
+    "No live vaccines while on it; vaccines that are not live are allowed.",
+    "Stop it and call if you get an infection, including flu, a cold or COVID.",
+    "Common: injection site reaction, headache, runny nose, upper respiratory infection.",
+    "Expect a follow-up contact in 1–2 weeks."
+   ],
+   "counselSrc": "Patel Scaly slides 40, 43, 48; 11/11 lecture",
+   "avoid": [
+    "Live vaccines",
+    "Anti-IL class cautions: inflammatory bowel disease, depression worsening"
+   ]
+  },
+  "brodalumab": {
+   "name": "Brodalumab",
+   "brand": "Siliq",
+   "sm": {
+    "text": "Target: binds IL-17 receptor A, not the IL-17A cytokine itself.",
+    "src": "PCol slide 66"
+   },
+   "pa": [
+    {
+     "dz": "psoriasis",
+     "role": "Biologic; her slide lists its class as IL-17A (Dr. Smith: it binds the receptor)",
+     "how": "Subcutaneous. The prescriber and patient must complete a REMS program.",
+     "src": "Patel Scaly slide 42; 11/11 lecture"
+    }
+   ],
+   "counsel": [
+    "It is an injection; a specialty pharmacy and the clinic follow you often.",
+    "You are screened for TB before the first dose and during therapy, with a PPD every year.",
+    "No live vaccines while on it; vaccines that are not live are allowed.",
+    "Stop it and call if you get an infection, including flu, a cold or COVID.",
+    "Common: injection site reaction, headache, runny nose, upper respiratory infection.",
+    "Expect a follow-up contact in 1–2 weeks.",
+    "Boxed warning: increased suicide risk. Report low mood or thoughts of self-harm at once.",
+    "A REMS program must be completed before it is dispensed."
+   ],
+   "counselSrc": "Patel Scaly slides 40, 42–43, 48; 11/11 lecture",
+   "avoid": [
+    "Depression or suicide risk: boxed warning",
+    "Live vaccines",
+    "Anti-IL class cautions: inflammatory bowel disease, depression worsening"
+   ]
+  },
+  "pyrithione-zinc": {
+   "name": "Pyrithione zinc",
+   "brand": "",
+   "sm": {
+    "text": "Cytostatic and antifungal; mechanism unknown. Used as a shampoo.",
+    "src": "PCol slide 57"
+   },
+   "pa": [
+    {
+     "dz": "dandruff",
+     "role": "OTC medicated shampoo for moderate to severe dandruff; the main ingredient in most OTC products. Rinse-off 0.3–2%; residual 0.1–0.25%.",
+     "how": "Leave on 3–5 minutes, rinse well. Daily for 1 week, then 2–3 times weekly for 2–3 weeks, then once weekly.",
+     "src": "Patel Scaly slides 7, 9; 11/10 lecture"
+    },
+    {
+     "dz": "seborrheic-dermatitis",
+     "role": "Second-line shampoo (ketoconazole is first line). Rinse-off 0.95–2%.",
+     "how": "Leave on 3–5 minutes, rinse. Daily for 1–2 weeks, then 2–3 times a week for 4 weeks; once weekly if improved.",
+     "src": "Patel Scaly slides 7, 16"
+    }
+   ],
+   "counsel": [
+    "Leave it on the scalp 3 to 5 minutes, then rinse well with water.",
+    "Dandruff: daily for 1 week, then 2–3 times a week for 2–3 weeks, then once a week for control.",
+    "Seborrheic dermatitis: see a health care provider if it worsens or lasts longer than 7 days."
+   ],
+   "counselSrc": "Patel Scaly slides 9, 16",
+   "avoid": [
+    "Infants with cradle cap: a non-medicated shampoo is used (slide 18)"
+   ]
+  },
+  "selenium-sulfide": {
+   "name": "Selenium sulfide",
+   "brand": "",
+   "sm": {
+    "text": "Cytostatic and antifungal; mechanism unknown. Used as a shampoo.",
+    "src": "PCol slide 57"
+   },
+   "pa": [
+    {
+     "dz": "dandruff",
+     "role": "OTC medicated shampoo for moderate to severe dandruff; 1%",
+     "how": "Leave on 3–5 minutes, rinse well. Daily for 1 week, then 2–3 times weekly for 2–3 weeks, then once weekly.",
+     "src": "Patel Scaly slides 7, 9"
+    },
+    {
+     "dz": "seborrheic-dermatitis",
+     "role": "Second-line shampoo: the wrong choice on her “first-line” poll",
+     "how": "Leave on 3–5 minutes, rinse. Daily for 1–2 weeks, then 2–3 times a week for 4 weeks; once weekly if improved.",
+     "src": "Patel Scaly slides 7, 16; 11/10 lecture"
+    }
+   ],
+   "counsel": [
+    "Leave it on the scalp 3 to 5 minutes, then rinse well with water.",
+    "Dandruff: daily for 1 week, then 2–3 times a week for 2–3 weeks, then once a week for control.",
+    "Seborrheic dermatitis: see a health care provider if it worsens or lasts longer than 7 days."
+   ],
+   "counselSrc": "Patel Scaly slides 9, 16",
+   "avoid": [
+    "Infants with cradle cap: a non-medicated shampoo is used (slide 18)"
+   ]
+  },
+  "ketoconazole": {
+   "name": "Ketoconazole shampoo 1%",
+   "brand": "",
+   "sm": {
+    "text": "Azole antifungal (dermatology drug chart).",
+    "src": "Drug chart p. 5"
+   },
+   "sk": {
+    "text": "A non-steroid azole; taught as an antiandrogen: it lowers testosterone biosynthesis and is a strong CYP3A4 inhibitor.",
+    "src": "DPAW page 53"
+   },
+   "pa": [
+    {
+     "dz": "seborrheic-dermatitis",
+     "role": "First-line OTC antifungal shampoo for the adult scalp (her poll answer)",
+     "how": "Leave on hair, scalp and affected areas 3–5 minutes, then rinse; may repeat. Daily for 1–2 weeks, then 2–3 times a week for 4 weeks; once weekly if improved.",
+     "src": "Patel Scaly slides 7, 16; 11/10 lecture"
+    },
+    {
+     "dz": "cradle-cap",
+     "role": "Not recommended in infants",
+     "how": "“Usually will never be in infant products just because of the irritation that it can cause the skin.”",
+     "src": "11/10 lecture"
+    },
+    {
+     "dz": "dandruff",
+     "role": "On her OTC chart at 1%",
+     "how": "Her dandruff slide names pyrithione zinc, selenium sulfide and coal tar.",
+     "src": "Patel Scaly slides 7, 9"
+    }
+   ],
+   "counsel": [
+    "Leave it on the hair and scalp 3 to 5 minutes, then rinse well.",
+    "Use it daily for 1 to 2 weeks, then 2 to 3 times a week for 4 weeks.",
+    "If you have improved after 4 weeks, use it once a week.",
+    "See a health care provider if it gets worse, or if symptoms last longer than 7 days.",
+    "Resistant cases: a corticosteroid lotion is added."
+   ],
+   "counselSrc": "Patel Scaly slides 16–17; 11/10 lecture",
+   "avoid": [
+    "Infants (cradle cap)"
+   ]
+  },
+  "ciclopirox": {
+   "name": "Ciclopirox",
+   "brand": "",
+   "pa": [
+    {
+     "dz": "seborrheic-dermatitis",
+     "role": "Second-line shampoo for the adult scalp (ketoconazole is first line)",
+     "how": "Leave on 3–5 minutes, rinse. Daily for 1–2 weeks, then 2–3 times a week for 4 weeks; once weekly if improved.",
+     "src": "Patel Scaly slide 16"
+    }
+   ],
+   "counsel": [
+    "Leave it on the scalp 3 to 5 minutes, then rinse.",
+    "See a health care provider if it gets worse, or if symptoms last longer than 7 days."
+   ],
+   "counselSrc": "Patel Scaly slide 16",
+   "avoid": []
+  },
+  "sulfur": {
+   "name": "Sulfur",
+   "brand": "",
+   "sm": {
+    "text": "Keratolytic: reduced to hydrogen sulfide in keratinocytes, which promotes peeling; bacteriostatic. Irritation, odor.",
+    "src": "PCol slide 38"
+   },
+   "sk": {
+    "text": "The element; thiolysis of the disulfide bonds of keratin.",
+    "src": "DPAW page 46"
+   },
+   "pa": [
+    {
+     "dz": "seborrheic-dermatitis",
+     "role": "A cream containing sulfur softens scales and crusts; OTC 2–5%",
+     "how": "Applied to soften the scale before washing.",
+     "src": "Patel Scaly slides 7, 15"
+    },
+    {
+     "dz": "dandruff",
+     "role": "On her OTC chart at 2–5%; a wrong choice on her mild-dandruff poll",
+     "how": "Her dandruff slide names pyrithione zinc, selenium sulfide and coal tar.",
+     "src": "Patel Scaly slides 7, 9; 11/10 lecture"
+    },
+    {
+     "dz": "psoriasis",
+     "role": "Not effective: the psoriasis “no” on her OTC chart",
+     "how": "Not used.",
+     "src": "Patel Scaly slide 7; 11/10 lecture"
+    }
+   ],
+   "counsel": [
+    "It softens the scale so it can be washed off.",
+    "It is still sold for psoriasis, but it is not effective for it."
+   ],
+   "counselSrc": "Patel Scaly slides 7, 15; 11/10 lecture",
+   "avoid": [
+    "Psoriasis: not effective"
+   ]
+  }
+ },
+ "terms": {
+  "bsa": [
+   "Body surface area (BSA)",
+   "The share of the skin that is affected, as a percentage. Dr. Patel: “I only want you to know the BSA.”",
+   "Patel Scaly slides 31–32; 11/11 lecture"
+  ],
+  "koebner": [
+   "Koebner response",
+   "New psoriasis lesions that form where the skin was injured.",
+   "Smith Pathophys slide 24"
+  ],
+  "ppd": [
+   "PPD",
+   "The tuberculosis skin test: injected into the skin, then read as a positive or negative reaction.",
+   "11/11 lecture"
+  ],
+  "refractory": [
+   "Refractory",
+   "Not responding to the treatments already tried.",
+   "plain meaning, not from the slides"
+  ],
+  "rems": [
+   "REMS",
+   "Risk Evaluation and Mitigation Strategy: a safety program the prescriber and patient must complete before the drug is dispensed.",
+   "plain meaning, not from the slides"
+  ],
+  "puva": [
+   "PUVA",
+   "Oral psoralen followed by UVA light. The psoralen cross-links DNA under UVA.",
+   "Patel Scaly slides 44–45"
+  ],
+  "plaque": [
+   "Plaque",
+   "A raised lesion. In plaque psoriasis: red-violet, at least 0.5 cm across, well demarcated, covered by silver flaking scale.",
+   "Patel Scaly slide 26"
+  ],
+  "psa": [
+   "Psoriatic arthritis (PsA)",
+   "Arthritis that develops over time in a patient with psoriasis. Dr. Smith: asymmetric, in the hands, feet and knees, without rheumatoid factor.",
+   "Patel Scaly slide 25; Smith Pathophys slide 26"
+  ],
+  "dmard": [
+   "DMARD",
+   "Disease-modifying antirheumatic drug. Her slide labels methotrexate and cyclosporine oral DMARDs.",
+   "Patel Scaly slide 39; expansion is the plain meaning"
+  ],
+  "tnf": [
+   "TNF-α",
+   "Tumor necrosis factor alpha, an inflammatory cytokine released in psoriasis.",
+   "Smith Pathophys slide 21; PCol slide 70"
+  ],
+  "biologic": [
+   "Biologic",
+   "An injected specialty medicine (an antibody or fusion protein) that binds one cytokine or receptor.",
+   "Patel Scaly slide 40; Smith PCol slides 63–74"
+  ],
+  "malassezia": [
+   "Malassezia",
+   "A yeast-like fungus that grows in the sebum of the skin; linked to dandruff and seborrheic dermatitis.",
+   "Patel Scaly slides 8, 13"
+  ],
+  "intertriginous": [
+   "Intertriginous areas",
+   "Skin folds, or surfaces of the skin that lie against each other.",
+   "Patel Scaly slide 12"
+  ],
+  "pruritus": [
+   "Pruritus",
+   "Itching.",
+   "11/10 lecture"
+  ],
+  "erythema": [
+   "Erythema",
+   "Redness of the skin.",
+   "11/10 lecture"
+  ],
+  "emollient": [
+   "Emollient",
+   "A moisturizer: “we’re talking about lotions and creams”.",
+   "11/10 lecture"
+  ],
+  "hyperplasia": [
+   "Epidermal hyperplasia",
+   "Thickening of the epidermis.",
+   "11/10 lecture"
+  ],
+  "kinetics": [
+   "Epidermal kinetics",
+   "How fast the epidermis turns over and sheds.",
+   "Patel Scaly slide 6; 11/10 lecture"
+  ],
+  "cradle-cap": [
+   "Cradle cap",
+   "Seborrheic dermatitis of an infant’s scalp: greasy or dry scaling.",
+   "Patel Scaly slide 12"
+  ]
+ },
+ "tell": [
+  {
+   "id": "scaly3",
+   "title": "Dandruff, seborrheic dermatitis or psoriasis",
+   "cols": [
+    "Dandruff",
+    "Seborrheic dermatitis",
+    "Psoriasis"
+   ],
+   "path": [
+    {
+     "q": "Is the skin inflamed?",
+     "a": [
+      "No → **dandruff**",
+      "Yes → next question"
+     ]
+    },
+    {
+     "q": "What does the scale look like, and where is it?",
+     "a": [
+      "Yellow and oily, on the scalp, face or trunk → **seborrheic dermatitis**",
+      "Silvery-white, on sharp-edged plaques at the elbows or knees → **psoriasis**"
+     ]
+    }
+   ],
+   "rows": [
+    [
+     "Where",
+     [
+      "{{Scalp}}",
+      "{{Scalp, face, trunk}}",
+      "Scalp, {{elbows, knees}}, trunk, lower extremities"
+     ]
+    ],
+    [
+     "Scale",
+     [
+      "Thin {{white or grey}} flakes",
+      "{{Yellow, oily}} scales on red skin",
+      "{{Silvery-white}} scales on red plaques with sharp borders; bleeding points"
+     ],
+     "Scale colour separates seborrheic dermatitis (yellow, oily) from psoriasis (silvery)."
+    ],
+    [
+     "Inflammation and epidermal hyperplasia",
+     [
+      "{{Absent}}",
+      "Present",
+      "Present"
+     ],
+     "Dandruff is the only one of the three without inflammation; any it has is secondary to scratching."
+    ],
+    [
+     "Epidermal turnover",
+     [
+      "{{Slowest}} of the three",
+      "Second fastest",
+      "{{Fastest}}"
+     ],
+     "★ She asks the order only: “I’m not gonna be asking you, is it 8 or 5.”"
+    ],
+    [
+     "Organism",
+     [
+      "Malassezia",
+      "Malassezia",
+      "None: T-cell-mediated inflammation"
+     ]
+    ],
+    [
+     "Worse with",
+     [
+      "Dry climate, cold, stress; generally stable",
+      "Immunosuppression, neurologic conditions, environment, stress",
+      "Environment, infection, medications, stress, alcohol, tobacco"
+     ]
+    ],
+    [
+     "First choice",
+     [
+      "Mild: non-medicated shampoo. Moderate to severe: OTC medicated shampoo (pyrithione zinc, selenium sulfide, coal tar)",
+      "Adult scalp: {{ketoconazole}} shampoo",
+      "Mild to moderate: {{topical corticosteroids}}"
+     ]
+    ],
+    [
+     "OTC product that is not used",
+     [
+      "{{Hydrocortisone 1%}}",
+      "None on her chart",
+      "{{Sulfur}}"
+     ],
+     "Her OTC chart lists coal tar, ketoconazole, pyrithione zinc, salicylic acid and selenium sulfide for all three."
+    ],
+    [
+     "Infants",
+     [
+      "Not covered: starts at puberty",
+      "Cradle cap: oil massage, non-medicated shampoo; no corticosteroids, no ketoconazole",
+      "Infrequent in children (< 0.2%)"
+     ]
+    ]
+   ],
+   "photo": "scaly3",
+   "src": "Patel Scaly slides 6–9, 15–18, 21, 36; 11/10 lecture"
+  },
+  {
+   "id": "pso-algorithms",
+   "title": "Psoriasis: mild-to-moderate or moderate-to-severe algorithm",
+   "cols": [
+    "Mild to moderate",
+    "Moderate to severe"
+   ],
+   "path": [
+    {
+     "q": "What is the BSA?",
+     "a": [
+      "≤ 5%, or between 5% and 8% (her 7% patient) → **mild to moderate**",
+      "≥ 10%, or between 8% and 10% (“like a 9%”) → **moderate to severe**"
+     ]
+    },
+    {
+     "q": "Moderate: have the topical agents been tried?",
+     "a": [
+      "Not yet → topical agents first (**mild to moderate**)",
+      "Yes, and not enough → systemic agent (**moderate to severe**)"
+     ]
+    }
+   ],
+   "rows": [
+    [
+     "Who is in it",
+     [
+      "Mild (BSA {{≤ 5%}}) and moderate (BSA {{≥ 8%}}) patients",
+      "A moderate patient who has tried the topical agents, and a severe patient (BSA {{≥ 10%}})"
+     ]
+    ],
+    [
+     "Starts with",
+     [
+      "{{Topical agents}}",
+      "{{Systemic agent}} (eg, methotrexate) ± a topical agent or phototherapy"
+     ],
+     "★ “Know exactly what we would trial with a mild to moderate patient or a moderate to severe patient first.”"
+    ],
+    [
+     "If inadequate",
+     [
+      "Slide: topical agents + phototherapy (not spoken in class)",
+      "A more potent systemic agent, or a biologic"
+     ]
+    ],
+    [
+     "Last step",
+     [
+      "Topical agents + {{systemic agent}}",
+      "{{Biologic}} (if not already used) ± other agents"
+     ],
+     "Her summary: “topical agents first, last line systemic; moderate to severe … systemic agents, last-line biologics.”"
+    ],
+    [
+     "Biologic",
+     [
+      "Not in this algorithm",
+      "Considered early if comorbidities exist (eg, psoriatic arthritis)"
+     ]
+    ],
+    [
+     "Topical agent",
+     [
+      "The base of every step",
+      "Continued: “you’re always going to apply that topical agent”"
+     ]
+    ],
+    [
+     "Both",
+     [
+      "Moisturizers; non-drug care; step down to the lowest dose or potency that keeps control",
+      "Moisturizers; non-drug care; step down to the lowest dose or potency that keeps control"
+     ]
+    ],
+    [
+     "Her example",
+     [
+      "BSA 7%, nothing tried: topical corticosteroid (poll)",
+      "BSA “like a 9%”"
+     ]
+    ]
+   ],
+   "src": "Patel Scaly slides 31, 35, 37, 50; 11/11 lecture"
+  }
+ ],
+ "pairs": [
+  {
+   "title": "IL-17A cytokine or IL-17 receptor?",
+   "a": [
+    "Secukinumab, ixekizumab",
+    "bind the IL-17A cytokine"
+   ],
+   "b": [
+    "Brodalumab",
+    "binds IL-17 receptor A"
+   ],
+   "same": "All three act on the IL-17 pathway and are biologics, so they come after topical and oral systemic agents. Dr. Patel’s slide lists all three as class IL-17A.",
+   "profs": [
+    [
+     "sm",
+     "The cytokine-against-receptor split is hers (PCol slide 66)."
+    ],
+    [
+     "pa",
+     "Secukinumab: avoid in Crohn’s disease. Brodalumab: boxed warning for suicide risk, REMS (Scaly slide 42)."
+    ]
+   ]
+  },
+  {
+   "title": "IL-12 and IL-23, or IL-23 alone?",
+   "a": [
+    "Ustekinumab",
+    "binds p40, the subunit IL-12 and IL-23 share"
+   ],
+   "b": [
+    "Guselkumab, tildrakizumab, risankizumab",
+    "bind p19, which only IL-23 has"
+   ],
+   "same": "Both groups block IL-23 and are subcutaneous biologics.",
+   "profs": [
+    [
+     "sm",
+     "p40 against p19 (PCol slides 67–69)."
+    ],
+    [
+     "pa",
+     "Both groups: avoid in active TB, no live vaccines. Ustekinumab also: monitor cyclosporine and warfarin levels (Scaly slide 42)."
+    ]
+   ]
+  },
+  {
+   "title": "Two retinoids for psoriasis",
+   "a": [
+    "Tazarotene",
+    "topical; once daily at bedtime"
+   ],
+   "b": [
+    "Acitretin",
+    "oral; no pregnancy within 3 years after stopping; no alcohol"
+   ],
+   "same": "Both are retinoids used in psoriasis.",
+   "profs": [
+    [
+     "sm",
+     "Both act on the retinoic acid receptors RAR and RXR (PCol slides 14, 18, 20)."
+    ],
+    [
+     "sk",
+     "Tazarotene is an ethyl ester prodrug that carboxylesterase turns into tazarotenic acid; acitretin is the active form of etretinate (DPAW pages 29, 50–51)."
+    ],
+    [
+     "pa",
+     "Tazarotene is a first-line topical option (Scaly slide 36); acitretin is an oral systemic option that is not immunosuppressive, maximum response 3–6 months (Scaly slide 38)."
+    ]
+   ]
+  },
+  {
+   "title": "Two oral immunosuppressants",
+   "a": [
+    "Methotrexate",
+    "inhibits DHFR; usually first; folic acid; onset 3–6 weeks"
+   ],
+   "b": [
+    "Cyclosporine",
+    "binds cyclophilin, and the complex inhibits calcineurin; less than 4 months (nephrotoxic)"
+   ],
+   "same": "Both are oral systemic agents for psoriasis, used with the topical continued.",
+   "profs": [
+    [
+     "sm",
+     "Methotrexate: DHFR (PCol slide 59). Cyclosporine: cyclophilin, then calcineurin (PCol slide 26)."
+    ],
+    [
+     "pa",
+     "Both are T-cell and cytokine suppressors and oral DMARDs on her slide 39. Methotrexate: not in pregnancy, cirrhosis or blood dyscrasias. Cyclosporine: not in untreated hypertension, systemic malignancy or infections."
+    ]
+   ]
+  },
+  {
+   "title": "Ketoconazole or a dandruff-shampoo ingredient?",
+   "a": [
+    "Ketoconazole shampoo",
+    "first line for seborrheic dermatitis of the adult scalp"
+   ],
+   "b": [
+    "Selenium sulfide, pyrithione zinc, coal tar",
+    "the three medicated shampoos on her dandruff slide; second line for seborrheic dermatitis (with ciclopirox)"
+   ],
+   "same": "All are OTC medicated shampoos, left on 3–5 minutes and rinsed. None is used on an infant.",
+   "profs": [
+    [
+     "pa",
+     "Her poll: ketoconazole shampoo was right and selenium sulfide shampoo wrong for the first-line choice in the adult with seborrheic dermatitis: “first line is your key term here” (Scaly slides 9, 16; 11/10 lecture)."
+    ],
+    [
+     "sm",
+     "Selenium sulfide and zinc pyrithione: cytostatic and antifungal, mechanism unknown (PCol slide 57). Ketoconazole: azole antifungal (drug chart p. 5)."
+    ]
+   ]
+  },
+  {
+   "title": "The two “no” cells on her OTC chart",
+   "a": [
+    "Hydrocortisone 1%",
+    "not effective for dandruff; 0.5–1% for seborrheic dermatitis and psoriasis"
+   ],
+   "b": [
+    "Sulfur",
+    "not effective for psoriasis; 2–5% for dandruff and seborrheic dermatitis"
+   ],
+   "same": "Both are OTC ingredients on her chart, each with one condition marked “no”.",
+   "profs": [
+    [
+     "pa",
+     "“Hydrocortisone 1%, not effective in dandruff, sulfur, not effective in psoriasis” (Scaly slide 7; 11/10 lecture)."
+    ],
+    [
+     "sm",
+     "Hydrocortisone: glucocorticoid receptor (PCol slides 5–7). Sulfur: keratolytic, reduced to hydrogen sulfide in keratinocytes (PCol slide 38)."
+    ]
+   ]
+  },
+  {
+   "title": "Anti-TNF or anti-IL: which caution goes with which?",
+   "a": [
+    "TNF-α inhibitors (adalimumab, etanercept, infliximab, golimumab, certolizumab)",
+    "heart failure worsening; demyelinating disease; hepatitis B reactivation; cytopenias; lupus-like syndrome"
+   ],
+   "b": [
+    "IL inhibitors (ustekinumab; IL-23 and IL-17A agents)",
+    "inflammatory bowel disease; depression worsening"
+   ],
+   "same": "All biologics: serious infections including TB, malignancies and lymphomas, anaphylaxis; no live vaccines; PPD every year.",
+   "profs": [
+    [
+     "pa",
+     "Congestive heart failure is “completely contraindicated in TNF alpha” (said twice). Within the anti-ILs: Crohn’s disease goes with secukinumab, the suicide-risk boxed warning with brodalumab (Scaly slides 41–43; 11/11 lecture)."
+    ],
+    [
+     "sm",
+     "TNF-α inhibitors bind TNF-α and keep it from its receptors (PCol slides 70–74)."
+    ]
+   ]
+  }
+ ],
+ "photos": [
+  {
+   "id": "ps-plaque",
+   "file": "ps-plaque.jpg",
+   "alt": "Arm and trunk with red plaques covered by thick silvery-white scale",
+   "src": "Patel Scaly slide 22 (panel B of the JAMA 2020 figure)"
+  },
+  {
+   "id": "dandruff-scalp",
+   "file": "dandruff-scalp.jpg",
+   "alt": "White flakes among the hairs of a scalp",
+   "src": "Patel Scaly slide 5 (unlabelled photo on the section title slide)"
+  },
+  {
+   "id": "sd-face",
+   "file": "sd-face.jpg",
+   "alt": "Adult face with redness and fine scale beside the nose and in the nasolabial creases",
+   "src": "Patel Scaly slide 12"
+  },
+  {
+   "id": "cradle-cap",
+   "file": "cradle-cap.jpg",
+   "alt": "Infant scalp with a patch of yellowish greasy scale",
+   "src": "Patel Scaly slide 20"
+  },
+  {
+   "id": "scaly3",
+   "file": "scaly3.jpg",
+   "alt": "Left to right: white flakes on a scalp (dandruff); redness and scale beside the nose (seborrheic dermatitis); silvery-scaled plaques on an arm (psoriasis)",
+   "src": "Composite of crops from Patel Scaly slides 5, 12 and 22"
+  }
+ ]
+}

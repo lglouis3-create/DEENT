@@ -27,7 +27,8 @@ const DZ_UI = (() => {
   const ID = 'dz';
   const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g, c => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'}[c]));
   const PROF = {sm: 'Dr. Smith', sk: 'Dr. Sikazwe', pa: 'Dr. Patel'};
-  const st = {view: 'cards', card: (DZ.cards[0] || {}).id, recall: false, filter: '', q: '', pt: {}, rate: {}};
+  const st = {view: 'cards', card: (DZ.cards[0] || {}).id, recall: false, filter: '', q: '', pt: {}, rate: {}, open: {}};
+  const isOpen = (c, i) => st.recall || !!st.open[c.id + ':' + i];
   let pane = null;
 
   /* inline marks: {{covered fact}}, [[term|shown]], <<drug|shown>>, **bold**, leading star */
@@ -87,11 +88,12 @@ const DZ_UI = (() => {
       <p class="dzsrc">${esc(c.lectures || '')}</p>
       ${(c.short || []).length ? `<div class="dzshort"><h3>The short version</h3><ol>${c.short.map(x => '<li>' + mk(x) + '</li>').join('')}</ol></div>` : ''}
       ${profs.length > 1 ? `<div class="dzbar" role="group" aria-label="Professor">Show: ${[['', 'All']].concat(profs.map(p => [p, PROF[p]])).map(([k, l]) => `<button type="button" class="f${k}" data-filter="${k}" aria-pressed="${st.filter === k}">${l}</button>`).join('')}</div>` : ''}
-      <ol class="dzsteps">${(c.steps || []).map((s, i) => `<li class="${st.filter && !(s.profs || []).includes(st.filter) ? 'dim' : ''}">
-        <div class="sh"><h3>${mk(s.title)}</h3>${(s.profs || []).map(p => `<span class="dztag ${p}">${PROF[p].replace('Dr. ', '')}</span>`).join('')}</div>
-        ${s.q ? `<p class="dzq">${mk(s.q)}</p>` : ''}${(s.blocks || []).map(block).join('')}
+      <div class="dzbar"><button type="button" data-dz="openall">${(c.steps || []).every((s, i) => isOpen(c, i)) ? 'Close all steps' : 'Open all steps'}</button></div>
+      <ol class="dzsteps">${(c.steps || []).map((s, i) => `<li class="${st.filter && !(s.profs || []).includes(st.filter) ? 'dim' : ''}${isOpen(c, i) ? ' open' : ''}">
+        <button type="button" class="sh" data-step="${i}" aria-expanded="${isOpen(c, i)}"><h3>${mk(s.title)}</h3>${(s.profs || []).map(p => `<span class="dztag ${p}">${PROF[p].replace('Dr. ', '')}</span>`).join('')}<span class="chev" aria-hidden="true">${isOpen(c, i) ? '−' : '+'}</span></button>
+        <div class="stepbody">${s.q ? `<p class="dzq">${mk(s.q)}</p>` : ''}${(s.blocks || []).map(block).join('')}
         ${s.src ? `<p class="dzsrc">${esc(s.src)}</p>` : ''}
-        <div class="dzrate"><button type="button" data-rate="g" data-i="${i}" class="${st.rate[c.id + i] === 'g' ? 'on' : ''}">I had it</button><button type="button" data-rate="m" data-i="${i}" class="${st.rate[c.id + i] === 'm' ? 'on' : ''}">I missed some</button></div></li>`).join('')}</ol>
+        <div class="dzrate"><button type="button" data-rate="g" data-i="${i}" class="${st.rate[c.id + i] === 'g' ? 'on' : ''}">I had it</button><button type="button" data-rate="m" data-i="${i}" class="${st.rate[c.id + i] === 'm' ? 'on' : ''}">I missed some</button></div></div></li>`).join('')}</ol>
       ${patients(c)}
       ${(c.numbers || []).length ? `<section class="dzbox"><h3>Numbers to know</h3><dl class="dzfacts nums">${c.numbers.map(r => `<div><dt>${mk('{{' + r[0] + '}}')}</dt><dd>${mk(r[1])} <span class="dzsrc">${esc(r[2] || '')}</span></dd></div>`).join('')}</dl></section>` : ''}
       ${n ? `<button type="button" class="btn dzpractise" data-dz="practise">Practise ${esc(c.name.toLowerCase())}: ${n} questions</button>` : ''}
@@ -166,11 +168,12 @@ const DZ_UI = (() => {
     const c = DZ.cards.find(x => x.id === st.card) || DZ.cards[0];
     if (t.classList.contains('dzcz')) { if (t.closest('.recall')) t.classList.add('open'); return; }
     if (t.dataset.view) { st.view = t.dataset.view; render(); return; }
-    if (t.dataset.card && t.closest('.dzpicker')) { st.card = t.dataset.card; st.filter = ''; render(); return; }
+    if (t.dataset.card && t.closest('.dzpicker')) { st.card = t.dataset.card; st.filter = ''; render(); const el = pane.querySelector('.dzcard'); if (el && el.getBoundingClientRect().top > window.innerHeight * 0.6) { if (typeof scrollToEl === 'function') scrollToEl(el); else el.scrollIntoView(); } return; }
     if (t.dataset.drug) { drugPanel(t.dataset.drug); return; }
     if (t.dataset.term) { const x = DZ.terms[t.dataset.term]; dlg(`<h3>${esc(x[0])}</h3><p>${mk(x[1])}</p><p class="dzsrc">Source: ${esc(x[2] || '')}</p>`); return; }
     if (t.dataset.go) { const d = pane.querySelector('.dzdlg'); if (d.open) d.close(); st.view = 'cards'; st.card = t.dataset.go; st.filter = ''; render(); window.scrollTo(0, 0); return; }
     if (t.dataset.filter != null && t.closest('.dzbar')) { st.filter = t.dataset.filter; render(); return; }
+    if (t.dataset.step != null) { const k = c.id + ':' + t.dataset.step; st.open[k] = !st.open[k]; const y = window.scrollY; render(); window.scrollTo(0, y); return; }
     if (t.dataset.rate) { st.rate[c.id + t.dataset.i] = t.dataset.rate; t.parentNode.querySelectorAll('button').forEach(b => b.classList.toggle('on', b === t)); return; }
     if (t.dataset.opt != null) { const s = st.pt[c.id], p = c.patients[s.k]; if (s.pick != null) return; s.pick = +t.dataset.opt; if (s.pick === p.a) s.right++; rerenderCases(c); return; }
     if (t.dataset.hit) {
@@ -185,6 +188,7 @@ const DZ_UI = (() => {
     const a = t.dataset.dz;
     if (a === 'close') { const d = pane.querySelector('.dzdlg'); if (d.open && d.close) d.close(); else d.removeAttribute('open'); }
     else if (a === 'recall') { st.recall = !st.recall; render(); }
+    else if (a === 'openall') { const all = (c.steps || []).every((s, i) => isOpen(c, i)); (c.steps || []).forEach((s, i) => { st.open[c.id + ':' + i] = !all; }); render(); }
     else if (a === 'nextpt') { const s = st.pt[c.id]; if (s.k < c.patients.length - 1) s.k++; else { s.k = 0; s.right = 0; } s.pick = null; rerenderCases(c); }
     else if (a === 'practise') { const pool = qsOf(c); if (pool.length && typeof drillList === 'function') { RET.push({view: ID, y: window.scrollY}); drillList(pool, 'Diseases: ' + c.name); backBtn(); } }
   }
@@ -193,6 +197,7 @@ const DZ_UI = (() => {
   const CSS = `
 #v-dz{--dz-sm:#7a3db8;--dz-smbg:#f1e8fb;--dz-sk:#b35a00;--dz-skbg:#fdf0e3;--dz-pa:#0f7a6b;--dz-pabg:#e3f5f2;--dz-star:#b8860b;--dz-bad:#b3261e;--dz-badbg:#fdecea}
 @media (prefers-color-scheme:dark){#v-dz{--dz-sm:#c79bf2;--dz-smbg:#2d2240;--dz-sk:#f0b072;--dz-skbg:#3a2b1c;--dz-pa:#6fd6c4;--dz-pabg:#173430;--dz-star:#e6c25a;--dz-bad:#f28b82;--dz-badbg:#3b1f1d}}
+#v-dz{overflow-wrap:anywhere}#v-dz dt,#v-dz dd,#v-dz li,#v-dz h3,#v-dz h4,#v-dz p{min-width:0}#v-dz .dzline,#v-dz .dzfacts,#v-dz .dzfacts>div,#v-dz .dzpick{min-width:0;max-width:100%}
 #v-dz .dztitle{margin:4px 0 2px}#v-dz .dzintro{color:var(--text-dim);margin:0 0 10px;font-size:14.5px}
 #v-dz .dzsearch span{display:block;font-size:12.5px;color:var(--text-dim)}
 #v-dz .dzsearch input{width:100%;min-height:44px;font:inherit;font-size:16px;padding:6px 10px;border:1px solid var(--line);border-radius:8px;background:var(--paper);color:var(--text);box-sizing:border-box}
@@ -220,7 +225,8 @@ const DZ_UI = (() => {
 #v-dz ol.dzsteps>li:last-child{border-left-color:transparent}
 #v-dz ol.dzsteps>li::before{content:counter(dz);position:absolute;left:-15px;top:0;width:28px;height:28px;border-radius:50%;background:var(--accent);color:#fff;font-weight:700;display:grid;place-items:center;font-size:14px}
 #v-dz ol.dzsteps>li.dim{opacity:.25}
-#v-dz .sh{display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin:2px 0 6px}#v-dz .sh h3{margin:0;font-size:16.5px}
+#v-dz .sh{display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin:0 0 6px;width:100%;min-height:36px;font:inherit;color:inherit;text-align:left;background:none;border:0;padding:0;cursor:pointer}#v-dz .sh h3{margin:0;font-size:16.5px}#v-dz .sh .chev{margin-left:auto;font-size:20px;color:var(--accent);width:28px;text-align:center}
+#v-dz ol.dzsteps>li:not(.open)>.stepbody{display:none}
 #v-dz .dztag{font-size:11.5px;border-radius:999px;padding:1px 8px}
 #v-dz .dztag.sm{background:var(--dz-smbg);color:var(--dz-sm)}#v-dz .dztag.sk{background:var(--dz-skbg);color:var(--dz-sk)}#v-dz .dztag.pa{background:var(--dz-pabg);color:var(--dz-pa)}
 #v-dz .dzq{display:none;font-weight:600;margin:0 0 6px}#v-dz .recall .dzq{display:block}
@@ -239,8 +245,8 @@ const DZ_UI = (() => {
 #v-dz .dzprof.sm b.t{color:var(--dz-sm)}#v-dz .dzprof.sk b.t{color:var(--dz-sk)}#v-dz .dzprof.pa b.t{color:var(--dz-pa)}
 #v-dz .dzprof p{margin:2px 0}
 #v-dz .dzline{border:1px solid var(--line);border-radius:10px;padding:8px 10px;background:var(--surface,transparent);margin:0 0 8px}
-#v-dz .dzline h4{margin:0 0 4px;font-size:14.5px}
-#v-dz .lbl{display:inline-block;background:var(--accent);color:#fff;border-radius:6px;padding:0 8px;font-size:13px;margin-right:4px}
+#v-dz .dzline h4{margin:0 0 4px;font-size:14.5px;white-space:normal;text-transform:none;letter-spacing:0}#v-dz .dzline h4 .lbl{white-space:normal}
+#v-dz .lbl{display:inline-block;max-width:100%;box-sizing:border-box;overflow-wrap:anywhere;background:var(--accent);color:#fff;border-radius:6px;padding:0 8px;font-size:13px;margin-right:4px}
 #v-dz .dzdrugs{display:flex;flex-wrap:wrap;gap:6px;margin:4px 0}
 #v-dz .dzdrug{font:inherit;font-size:13.5px;min-height:32px;border:1px solid var(--accent);background:var(--accent-bg,#eaf0f9);color:var(--accent);border-radius:999px;padding:2px 11px;cursor:pointer}
 #v-dz .dzplain{font-size:13.5px;border:1px solid var(--line);border-radius:999px;padding:2px 11px}

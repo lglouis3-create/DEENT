@@ -6,8 +6,8 @@ vm.runInContext(fs.readFileSync(path.join(__dirname, 'dz_data.js'), 'utf8') + '\
 const DZ = ctx.DZ; let fail = 0, n = 0;
 const check = (ok, label, detail) => { n++; if (!ok) fail++; console.log((ok ? '  ok    ' : '  FAIL  ') + label + (ok || !detail ? '' : '  — ' + String(detail).slice(0, 600))); };
 // question topics
-const Q = {TOPIC_DECKS: [], TOPICS: [], QUESTIONS: []}; vm.createContext(Q);
-const files = fs.readFileSync(path.join(__dirname, 'course.js'), 'utf8').match(/'q\d+[A-Za-z0-9_]*\.js'/g).map(s => s.slice(1, -1));
+const Q = {}; vm.createContext(Q);
+const files = fs.readFileSync(path.join(__dirname, 'course.js'), 'utf8').match(/'q\d+[A-Za-z0-9_]*\.js'/g).map(s => s.slice(1, -1)).filter((x, i, a) => a.indexOf(x) === i);
 vm.runInContext('var IMAGES={};', Q);
 for (const f of files) { try { vm.runInContext(fs.readFileSync(path.join(__dirname, f), 'utf8'), Q); } catch (e) { console.log('  note  could not load ' + f + ': ' + e.message.slice(0, 80)); } }
 const topics = new Set(vm.runInContext('TOPICS.map(t => t.id)', Q));
@@ -23,7 +23,7 @@ const miss = new Set();
 JSON.stringify(DZ.cards).replace(/<<([^|>]+)\|/g, (m, k) => { if (!DZ.drugs[k]) miss.add(k); });
 DZ.cards.forEach(c => (c.steps || []).forEach(s => (s.blocks || []).forEach(b => (b.drugs || []).forEach(k => { if (!DZ.drugs[k]) miss.add(c.id + ' line: ' + k); }))));
 check(!miss.size, 'every drug button resolves to a drug panel', [...miss].join('; '));
-const mt = new Set(); all.replace(/\[\[([^|\]]+)\|/g, (m, k) => { if (!DZ.terms[k]) mt.add(k); });
+const mt = new Set(); all.replace(/\[\[([a-z0-9-]+)\|/g, (m, k) => { if (!DZ.terms[k]) mt.add(k); });
 check(!mt.size, 'every underlined term has a definition', [...mt].join(', '));
 const ph = new Set(DZ.photos.map(p => p.id)), mp = [];
 DZ.cards.forEach(c => (c.steps || []).forEach(s => (s.blocks || []).forEach(b => { if (b.k === 'photo' && !ph.has(b.id)) mp.push(c.id + ': ' + b.id); })));

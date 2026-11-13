@@ -285,6 +285,8 @@ const COURSE = {
           // (chart_boxes.js: the rows of the original chart pages in chart/, from render_chart.py;
           // drugfacts.js: bank questions mapped to Drug list facts, read-only, Phase 1 of the plan)
           'chart_boxes.js', 'druglist_data.js', 'drugfacts.js', 'druglist_ui.js',
+          // the Diseases tab (Louis, 2026-11-13): cards per condition, drug panels, tell-apart sets (dz_build.py, dz_check.js)
+          'dz_data.js', 'dz_ui.js',
           // "Likely on the exam" stars (course-level, Louis 2026-11-08): data, then presentation
           'likely_data.js', 'likely_ui.js',
           // Narration player (course-level, Louis 2026-11-08, path B of reviews/NARRATION_PLAN.md
