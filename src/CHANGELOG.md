@@ -8,6 +8,11 @@ characters.
 
 Every update adds its bullets here in the same commit that makes the change.
 
+## 2026-11-13 (wide windows)
+- On a Mac or iPad the page now grows with the window (up to 1,680 px wide) and no longer leaves wide margins.
+- Diseases on a wide screen: practice patients sit beside the steps; comparisons run side by side.
+- Settings, Display: Refit the page to the window, for an iPad window that stays narrow after it is widened.
+
 ## 2026-11-13 (Diseases tab fixes)
 - American spelling across the site: Practice, Recognize, color, labeled, signaling.
 - Diseases: every row shows whose content it is (Dr. Smith, Dr. Sikazwe, Dr. Patel), and Show filters by row.

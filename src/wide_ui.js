@@ -5,8 +5,12 @@
    1. Wide screens (Louis: "make sure the view layout is good for an iPad Pro 13
       inch and MacBook ... so the space is utilized"). The core keeps the page in
       one 860 px column at every width. From 1024 px (a 12.9/13-inch iPad in
-      either orientation, every MacBook) the column grows to 1080 px, and from
-      1300 px to 1260 px, as the Intro to Pharmacology drill does (its #146).
+      either orientation, every MacBook) the column grows with the window, up
+      to 1680 px, with side padding of 14 to 44 px (Louis, 2026-11-12: a
+      widened window "leads to white screen area"; until then the column
+      stopped at 1260 px, which left 234 px of empty background on each side
+      of a 1728 px window). From 1500 px a question may be 1040 px wide and an
+      open deck folder shows three topic cards to a row.
       What uses the width: Topics puts the exam card beside "Start here" and the
       topic cards of an open deck folder in two columns (an opened card takes
       the full row); the grids the core already fills by width (Drug list,
@@ -48,7 +52,7 @@ nav#nav.xhid{transform:translateY(-100%);box-shadow:none}
 body.xnavhid .atbar{top:0}
 /* ---- wide screens ---- */
 @media (min-width:1024px){
-  main{max-width:1080px}
+  main{max-width:1680px;padding-left:clamp(14px,2.4vw,44px);padding-right:clamp(14px,2.4vw,44px)}
   #v-quiz,#v-exam{max-width:940px;margin:0 auto}
   #v-settings{max-width:860px;margin:0 auto}
   #v-guide p,#v-guide li,#v-tell p,#v-tell li{max-width:88ch}
@@ -69,7 +73,10 @@ body.xnavhid .atbar{top:0}
   .wkbody{grid-template-columns:minmax(0,1.75fr) minmax(0,1fr);gap:14px}
   .wktx{max-height:min(68vh,620px)}
 }
-@media (min-width:1300px){main{max-width:1260px}}`;
+@media (min-width:1500px){
+  #v-quiz,#v-exam{max-width:1040px}
+  #v-topics .deckbody{grid-template-columns:repeat(3,minmax(0,1fr))}
+}`;
 
   const addCss = () => {
     if (document.getElementById('wideuicss')) return;
@@ -123,6 +130,9 @@ body.xnavhid .atbar{top:0}
     const n = nav(); if (!n || !n.addEventListener) return;
     window.addEventListener('scroll', reveal, {passive: true});
     window.addEventListener('resize', reveal, {passive: true});
+    ['resize', 'orientationchange', 'pageshow', 'focus'].forEach(ev => window.addEventListener(ev, () => setTimeout(maybeRefit, 350), {passive: true}));
+    document.addEventListener('visibilitychange', () => { if (!document.hidden) setTimeout(maybeRefit, 350); });
+    try { if (window.visualViewport) visualViewport.addEventListener('resize', () => setTimeout(maybeRefit, 350)); } catch (e) {}
     n.addEventListener('scroll', reveal, {passive: true});          // its own row scrolled sideways (the chevrons)
     n.addEventListener('focusin', reveal);
     // a mouse resting on the strip keeps it (a touch has no hover, so it never holds it)
@@ -130,7 +140,7 @@ body.xnavhid .atbar{top:0}
     n.addEventListener('pointerleave', ev => { if (hovering) { hovering = false; reveal(); } });
     // a touch or a pointer near the top edge brings it back
     const EDGE = 36;
-    document.addEventListener('pointerdown', ev => { if (ev.clientY <= EDGE) reveal(); }, {passive: true});
+    document.addEventListener('pointerdown', ev => { if (ev.clientY <= EDGE) reveal(); maybeRefit(); }, {passive: true});
     document.addEventListener('pointermove', ev => { if (ev.pointerType === 'mouse' && ev.clientY <= EDGE && n.classList.contains('xhid')) reveal(); }, {passive: true});
     document.addEventListener('touchstart', ev => { const t = ev.touches && ev.touches[0]; if (t && t.clientY <= EDGE) reveal(); }, {passive: true});
     reveal();
@@ -147,7 +157,12 @@ body.xnavhid .atbar{top:0}
         Hide the tab bar while reading</label></div>
       <p style="font-size:13.5px;color:var(--text-dim);margin:4px 0 0">The course title scrolls away and the tab bar stays at the top of the screen.
       With this on, the tab bar slides away after 3 seconds without scrolling and comes back when you scroll, touch the top edge or tab to it.
-      Kept on this device only.</p></div>`;
+      Kept on this device only.</p></div>
+      <details class="xfit" style="margin:10px 0 0"><summary style="cursor:pointer;min-height:44px;display:flex;align-items:center;font-size:14px">If the page does not fill the window</summary>
+        <p style="font-size:13.5px;color:var(--text-dim);margin:4px 0 8px">On an iPad, after a window is made wider, the browser can keep the page at its old width and leave the rest of the window blank.
+        Refit asks the browser to measure the window again. If the blank area stays, reload the page.</p>
+        <button type="button" class="btn sm" id="xRefit" style="min-height:44px">Refit the page to the window</button>
+        <p id="xFitNow" style="font-size:13px;color:var(--text-dim);margin:8px 0 0"></p></details>`;
     const exp = [...el.querySelectorAll('h3')].find(h => /^\s*Export\s*$/.test(h.textContent));
     const frag = document.createDocumentFragment(); while (box.firstChild) frag.appendChild(box.firstChild);
     if (exp) exp.before(frag); else el.appendChild(frag);
@@ -157,6 +172,47 @@ body.xnavhid .atbar{top:0}
       try { localStorage.setItem(KEY(), AUTO ? '1' : '0'); } catch (e) { /* kept for this visit */ }
       reveal();
     });
+    const rf = el.querySelector('#xRefit'), now = el.querySelector('#xFitNow');
+    const say = () => { if (now) now.textContent = fitText(); };
+    if (rf) rf.addEventListener('click', () => { refit(); setTimeout(say, 300); });
+    const dt = el.querySelector('details.xfit'); if (dt) dt.addEventListener('toggle', say);
+    say();
+  }
+
+  /* ---------- a page the browser left at an old, narrower width ----------
+     Louis's iPad (iPadOS 26, Chrome, a resizable window), 2026-11-12: after the window was widened the page stayed
+     laid out for the old width (746 px in a 1,376 px window), pinned to the left, the rest of the window showing the
+     page background. Nothing in the page sets a width: the header and the tab strip are plain blocks, so they are as
+     wide as the layout width the browser reports. Chromium never does this. What the page can do is ask the browser
+     to work the viewport out again, by writing the viewport meta once with an equivalent value and putting it back.
+     That is done from the Settings button, and by itself only on a touch device whose window is reported wider than
+     the page is laid out (at most 3 times per visit, 2 seconds apart). On a desktop browser it never runs by itself:
+     there a docked side panel legitimately makes the window wider than the page. Untested on the device. */
+  const laidOut = () => (document.documentElement && document.documentElement.clientWidth) || 0;
+  const fitText = () => {
+    let vv = ''; try { if (window.visualViewport) vv = '; visible ' + Math.round(visualViewport.width) + ' px at scale ' + (Math.round(visualViewport.scale * 100) / 100); } catch (e) {}
+    return 'Now: page laid out for ' + laidOut() + ' px; window ' + (window.innerWidth || 0) + ' px inside, ' + (window.outerWidth || 0) + ' px outside' + vv + '; screen ' + ((window.screen && screen.width) || 0) + ' px.';
+  };
+  let fits = 0, lastFit = 0;
+  function refit(){
+    try {
+      const m = document.querySelector('meta[name="viewport"]'); if (!m) return false;
+      const orig = m.getAttribute('content') || 'width=device-width, initial-scale=1';
+      m.setAttribute('content', orig + ', minimum-scale=1');
+      const back = () => { try { m.setAttribute('content', orig); window.dispatchEvent(new Event('resize')); } catch (e) {} };
+      if (typeof requestAnimationFrame === 'function') requestAnimationFrame(() => requestAnimationFrame(back)); else setTimeout(back, 50);
+      return true;
+    } catch (e) { return false; }
+  }
+  function maybeRefit(){
+    try {
+      const touch = (navigator.maxTouchPoints || 0) > 1, t = Date.now();
+      if (!touch || fits >= 3 || t - lastFit < 2000) return;
+      const out = window.outerWidth || 0, lay = laidOut();
+      let scale = 1; try { if (window.visualViewport) scale = visualViewport.scale; } catch (e) {}
+      if (!out || !lay || Math.abs(scale - 1) > 0.02 || out - lay < 60) return;
+      fits++; lastFit = t; refit();
+    } catch (e) { /* the page is unaffected */ }
   }
 
   const wrap = (name, after) => {
