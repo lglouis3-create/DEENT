@@ -76,6 +76,9 @@
    figure that is being read aloud inside it is paused (its Pause button has
    just left the screen). That folder then stays closed when the tab is drawn
    again, until the reader, a jump or "Listen" opens it.
+   A Tell apart row that opens a comparison in the Diseases tab sets that
+   tab's sub-view and clears its search; the Back button puts both back as
+   they were, when the reader has changed neither in between.
    If the folders cannot be drawn, the tab is drawn again as the core and the
    other files draw it, flat, and one console line says so. */
 const EXAMFOLD_UI = (function examFoldUi(){
@@ -345,16 +348,20 @@ const EXAMFOLD_UI = (function examFoldUi(){
   //    jump_ui.js has already replaced it with its landing below the pinned strip; this wraps that one.
   try { const land = scrollToEl; scrollToEl = function(el){ try { reveal(el); } catch (e) {} return land.apply(this, arguments); }; } catch (e) { /* an older core without it */ }
   // 2. jump(view, anchor): the tab is drawn with the target's folder open; the tab left behind keeps its folders for Back
+  let DZWAS = null;     // {view, q, to}: the Diseases tab's sub-view and search before a Tell apart row set them (5 below)
   if (typeof jump === 'function') {
     const j0 = jump;
     jump = function(view, anchor){
       let left = null, n0 = 0;
       try { left = snapshot(VIEW); n0 = RET.length; } catch (e) {}
+      const dzWas = DZWAS; DZWAS = null;
       WANT = anchor || null; SAME = left && left.view === view ? left : null;
       try { return j0.apply(this, arguments); }
       finally {
         WANT = null; SAME = null;
         try { if (left && RET.length > n0 && RET[n0] && RET[n0].view === left.view) RET[n0].rfold = left.open; } catch (e) {}
+        // the Back entry this jump made also carries what the Diseases tab showed before the row was tapped
+        try { if (dzWas && view === 'dz' && RET.length > n0 && RET[n0]) RET[n0].rfdz = dzWas; } catch (e) {}
       }
     };
   }
@@ -402,11 +409,21 @@ const EXAMFOLD_UI = (function examFoldUi(){
         const r = RET[RET.length - 1];
         BACK = r && r.rfold ? {view: r.view, open: r.rfold} : null;
         setTimeout(() => { BACK = null; }, 0);
+        // and the Diseases tab gets back the sub-view and search it had before a Tell apart row opened it (5),
+        // when it is still as that row set it: a sub-view or search the reader chose there since is kept
+        const w = r && r.rfdz, s = w && typeof DZ_UI !== 'undefined' && DZ_UI ? DZ_UI.state : null;
+        if (s && s.view === w.to && s.q === '') { s.view = w.view; s.q = w.q; }
         return;
       }
-      // 5. a comparison of the Diseases tab: that tab is set to the view the button names before the core jumps to it
+      // 5. a comparison of the Diseases tab: that tab is set to the view the button names before the core jumps to
+      //    it. What it showed before goes with the jump (2), for the Back button.
       const dz = t.closest('[data-rfdz]');
-      if (dz && typeof DZ_UI !== 'undefined' && DZ_UI && DZ_UI.state) { DZ_UI.state.view = dz.dataset.rfdz; DZ_UI.state.q = ''; }
+      if (dz && typeof DZ_UI !== 'undefined' && DZ_UI && DZ_UI.state) {
+        const s = DZ_UI.state;
+        DZWAS = {view: s.view, q: typeof s.q === 'string' ? s.q : '', to: dz.dataset.rfdz};
+        setTimeout(() => { DZWAS = null; }, 0);          // for the jump this click makes, and no other
+        s.view = dz.dataset.rfdz; s.q = '';
+      }
       // 6. a control inside a closed folder that code clicks (a reader cannot: it is not on screen), e.g. a walkthrough's bar
       if (t.closest('.rfold') && !t.closest('.rfhead')) reveal(t);
     } catch (err) { /* the click goes on as before */ }

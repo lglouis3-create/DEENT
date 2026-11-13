@@ -26,7 +26,9 @@
    - I: a reload with the Exam 1 header itself as the first line on screen (Reference and Tell apart; Exam 1 closed
      as first drawn, closed by the reader, opened by the reader) leaves the folders and the page height as they were;
    - K: closing a folder by its header pauses the walkthrough or the narrated figure that is being read aloud inside
-     it; the folder then stays closed when the tab is drawn again, until the walkthrough index opens it; */
+     it; the folder then stays closed when the tab is drawn again, until the walkthrough index opens it;
+   - L: a Tell apart row that opens the Diseases tab, then Back: the Diseases tab has the sub-view and the search it
+     had before; a sub-view or a search the reader chose there after the row is kept. */
 const path = require('path'), fs = require('fs');
 const NAME = 'examfold_test.js';
 let chromium;
@@ -678,6 +680,46 @@ async function nsOf(browser) {
     d = await fig();
     check(d.playing && !d.playing.paused && d.pressed === 'true', `${w}x${h}: with the folder open again, Resume goes on reading`, d);
     await p.evaluate(() => DIA_NARR_UI.stop());
+    check(!errs.length, `${w}x${h}: no page error`, errs.slice(0, 4));
+    await ctx.close();
+  }
+
+  /* ---------- L. a Tell apart row into the Diseases tab, and Back ---------- */
+  if (run('L')) for (const [w, h] of SIZES2) {
+    console.log(`\n=== ${w}x${h}: the Diseases tab after a Tell apart row and Back ===`);
+    const {ctx, p, errs} = await open(browser, w, {height: h});
+    const strip = v => tabTap(p, v);
+    const dzs = () => p.evaluate(() => ({VIEW, view: DZ_UI.state.view, q: DZ_UI.state.q, card: DZ_UI.state.card}));
+    const row = async sel => { const r = p.locator(sel); await r.scrollIntoViewIfNeeded(); const y = await p.evaluate(() => Math.round(scrollY)); await r.click(); return y; };
+    await strip('dz');
+    await p.fill('#dzq', 'permethrin');
+    const d0 = await dzs();
+    check(d0.view === 'cards' && d0.q === 'permethrin', `${w}x${h}: the Diseases tab is on "By disease" with "permethrin" typed in its search`, d0);
+    await strip('tell');
+    const y1 = await row('#rfold-tell-2 [data-rfdz="tell"] >> nth=-1');
+    let d = await dzs();
+    check(d.VIEW === 'dz' && d.view === 'tell' && d.q === '', `${w}x${h}: a row of the Tell apart Exam 2 list opens the Diseases tab on its Tell apart view, the search cleared`, d);
+    await p.click('#backbtn');
+    d = await dzs();
+    const bk = await p.evaluate(() => Math.round(scrollY));
+    check(d.VIEW === 'tell' && Math.abs(bk - y1) <= 2 && await st(p, 'tell') === '1:false 2:true' && d.view === 'cards' && d.q === 'permethrin' && d.card === d0.card,
+      `${w}x${h}: Back returns to Tell apart at the same scroll position, and the Diseases tab has its sub-view and search back`, {d, bk, y1});
+    await strip('dz');
+    const shown = await p.evaluate(() => ({input: (document.getElementById('dzq') || {}).value, tab: (document.querySelector('#v-dz .dzviews [aria-selected="true"]') || {}).textContent, results: document.querySelectorAll('#v-dz .dzres button').length}));
+    check(shown.input === 'permethrin' && shown.tab === 'By disease' && shown.results > 0, `${w}x${h}: the Diseases tab opened from the strip shows "By disease" with the search and its ${shown.results} results as before`, shown);
+    // what the reader chooses in the Diseases tab after the row is kept
+    await strip('tell');
+    await row('#rfold-tell-2 [data-rfdz="pairs"]');
+    await p.click('#v-dz .dzviews [data-view="rules"]');
+    await p.click('#backbtn');
+    d = await dzs();
+    check(d.VIEW === 'tell' && d.view === 'rules' && d.q === '', `${w}x${h}: a sub-view the reader chose in the Diseases tab after the row is kept by Back`, d);
+    await row('#rfold-tell-2 [data-rfdz="tell"] >> nth=0');
+    await p.fill('#dzq', 'acne');
+    await p.click('#backbtn');
+    d = await dzs();
+    check(d.VIEW === 'tell' && d.view === 'tell' && d.q === 'acne', `${w}x${h}: a search the reader typed there after the row is kept by Back`, d);
+    check(await stored(p) === null && await over(p) <= 0, `${w}x${h}: nothing stored, no sideways scroll`, [await stored(p), await over(p)]);
     check(!errs.length, `${w}x${h}: no page error`, errs.slice(0, 4));
     await ctx.close();
   }
