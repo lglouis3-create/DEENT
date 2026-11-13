@@ -28,7 +28,8 @@
    - J: real taps into a closed folder: "Explain more" on a question, a "Read" chip of the Weak spots review plan,
      "Read guide" and "Listen" on a Topics card; the folder is closed again when the tab is opened from the strip;
    - K: closing a folder by its header pauses the walkthrough or the narrated figure that is being read aloud inside
-     it; the folder then stays closed when the tab is drawn again, until the walkthrough index opens it;
+     it (between two steps of a figure, stops it); the folder then stays closed when the tab is drawn again, until
+     the walkthrough index opens it;
    - L: a Tell apart row that opens the Diseases tab, then Back: the Diseases tab has the sub-view and the search it
      had before; a sub-view or a search the reader chose there after the row is kept.
    Once:
@@ -787,6 +788,29 @@ async function nsOf(browser) {
     d = await fig();
     check(d.playing && !d.playing.paused && d.pressed === 'true', `${w}x${h}: with the folder open again, Resume goes on reading`, d);
     await p.evaluate(() => DIA_NARR_UI.stop());
+    // between two steps there is no clip to pause: the narration is stopped, and no next step starts in the closed folder.
+    // Another figure with the short clip; the header is clicked from the page at the moment its first clip has ended.
+    await p.route('**/audio/dn-*.mp3', r => r.fulfill({status: 200, contentType: 'audio/wav', body: wav}));
+    const gap = await p.evaluate(() => new Promise(res => {
+      const steps = b => b.closest('figure').querySelectorAll('svg .st').length;
+      const b = [...document.querySelectorAll('#rfold-guide-1 [data-dnplay]')].filter(b => b.dataset.dnplay !== 'fig-ribosome' && steps(b) > 2).sort((x, y) => steps(y) - steps(x))[0];
+      if (!b) return res({none: true});
+      b.click();
+      const t0 = Date.now(), out = {key: b.dataset.dnplay, steps: steps(b), started: !!DIA_NARR_UI.playing(), gap: false};
+      const tick = () => {
+        const d = DIA_NARR_UI.playing();
+        if (d && !NARR.current()) {
+          document.querySelector('#rfold-guide-1 > summary').click();
+          Object.assign(out, {gap: true, step: d.step, open: document.getElementById('rfold-guide-1').open, after: DIA_NARR_UI.playing()});
+          return setTimeout(() => { out.later = {playing: DIA_NARR_UI.playing(), reading: !!NARR.current(), label: b.textContent.trim()}; res(out); }, 900);
+        }
+        if (Date.now() - t0 > 8000) return res(out);
+        setTimeout(tick, 5);
+      };
+      tick();
+    }));
+    check(gap.started && gap.gap && gap.open === false && gap.after === null && gap.later && gap.later.playing === null && !gap.later.reading && gap.later.label === '♪ Listen',
+      `${w}x${h}: closed between two steps of a narrated figure (${gap.key}, after step ${gap.step} of ${gap.steps}), the narration is stopped and no next step starts`, gap);
     check(!errs.length, `${w}x${h}: no page error`, errs.slice(0, 4));
     await ctx.close();
   }
