@@ -62,7 +62,8 @@ const SLIDE_UI = (() => {
     const alt = keys => keys.slice().sort((a, b) => b.length - a.length).map(k => rx(k).replace(/'/g, "['’]")).join('|');
     const SP = '[\\s\\xa0]';
     const DASH = '[\\u2013\\u2014\\u2011-]';
-    const NUM = '\\d{1,3}(?![\\d/:%@]|\\.\\d)';
+    // a colon ends a number only when a digit follows it (a clock time 12:30, a ratio 1:1); "Slide 12: text" is a citation
+    const NUM = '\\d{1,3}(?![\\d/%@]|:\\d|\\.\\d)';
     const RNG = NUM + '(?:\\s?' + DASH + '\\s?' + NUM + ')?';
     // a later number of a list is not one when a unit or a count follows it ("slide 12, 3 times daily")
     const UNIT = '(?:%|mg|mcg|g|mL|ml|kg|cm|mm|nm|hours?|hrs?|h|days?|weeks?|wks?|months?|years?|yrs?|minutes?|min|times|\\xd7|x|FTU|fingertip|others?|of|to|or more|more|grams?|drops?|doses?|tubes?|patients?|questions?|points?|marks?|items?)';
