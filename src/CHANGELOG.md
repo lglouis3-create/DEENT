@@ -8,6 +8,12 @@ characters.
 
 Every update adds its bullets here in the same commit that makes the change.
 
+## 2026-11-13 (Diseases tab)
+- New Diseases tab: 23 conditions, each from cause to counseling, in short labelled rows.
+- Treatment lines show which drug fits which patient; practice patients explain each wrong choice.
+- Tap a drug for each professor's point, what to tell the patient, and who should not get it.
+- Tell apart, Drugs that get confused, Rules that repeat, photos from her slides, and search.
+
 ## 2026-11-12 (Dr. Patel, Lecture 8)
 - Lecture 8 (11/12) added: outdoor exposures, sun exposure, wound care, and warts, corns and calluses.
 - 176 new questions: her 12 polls in her own words, new-patient cases, select-all, tube-size calculations.

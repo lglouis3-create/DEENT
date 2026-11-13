@@ -281,7 +281,8 @@ const DZ_UI = (() => {
 #v-dz .dzrow .key{font-size:14px;margin:0;padding:6px 10px;border-top:1px solid var(--line);background:var(--accent-bg,#eaf0f9)}#v-dz .recall .key{display:none}
 #v-dz .dzpair .vs{display:grid;grid-template-columns:1fr 1fr;gap:8px}#v-dz .dzpair .vs>div{border:1px solid var(--line);border-radius:8px;padding:6px 8px;font-size:14.5px}#v-dz .dzpair .vs b{display:block}
 #v-dz .dzpair .same{font-size:14px;color:var(--text-dim);margin:6px 0 0}
-#v-dz .dzdlg{border:0;border-radius:14px;padding:0;max-width:540px;width:calc(100% - 32px);background:var(--paper);color:var(--text);max-height:86vh}
+#v-dz .dzdlg{border:0;border-radius:14px;padding:0;max-width:540px;width:calc(100% - 32px);background:var(--paper);color:var(--text);max-height:86vh;overflow-y:auto;-webkit-overflow-scrolling:touch;overscroll-behavior:contain}
+#v-dz .dzdlg .x{position:sticky;top:0;background:var(--paper);border-radius:8px;z-index:1}
 #v-dz .dzdlg::backdrop{background:rgba(0,0,0,.45)}
 #v-dz .dzdlg .in{padding:16px;overflow-wrap:anywhere}#v-dz .dzdlg h3{margin:0 0 6px}
 #v-dz .dzdlg .x{float:right;font:inherit;border:0;background:none;color:var(--accent);font-size:15px;min-height:44px;padding:0 6px}

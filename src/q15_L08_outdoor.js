@@ -10,18 +10,13 @@
    Exam 2 statements from about T@95400, "Focus on treatment algorithms" at T@95722).
    Polls: PollEV_Dr_Patel.pdf has no 11/12 pages and the slides print the case
    stems only. Each poll item keeps her case and her question as she read them
-   aloud; the OPTION LISTS ARE RECONSTRUCTED from her discussion of the
-   answers. Where she named the letter (hunter "B", sting "D", lice "A",
-   poison ivy "B would treat weeping", "C" the topical antihistamine) the
-   option keeps that letter. Two keys rest on the slide because she did not
-   say the keyed product aloud:
-     P8O-019 (bedbug itch): she named two wrong options (witch hazel; a
-       neomycin product) and not the right one; keyed hydrocortisone from
-       slides 12 and 25.
-     P8O-041 (lice, "A ... first-line agent ... age-wise appropriate"): she did
-       not name the product. Slide 47 counsels on "the pyrethrin/piperonyl
-       butoxide shampoo"; the option list has no permethrin, so the item does
-       not decide between pyrethrins and permethrin.
+   aloud; the option lists are her own, from PollEV_Dr_Patel_11.12.pdf
+   pages 6-7 (Louis's upload of 2026-11-12, after the first draft, whose
+   option lists had been rebuilt from her discussion). Two rebuilt keys were
+   wrong and are corrected: P8O-019 (bedbug itch) is oral diphenhydramine and
+   P8O-041 (lice first line) is permethrin. On "maximum treatment duration for
+   self-care" his copy highlights Three Days; she said "Good, 7 days" and
+   slides 31 and 39 give 7 days, so 7 days is keyed.
    Not keyed (see outdoor_prediction.md, conflicts): the class of benzyl
    alcohol (counterirritant on slide 13, local anesthetic on slide 39) and of
    calamine (counterirritant on slide 13, skin protectant on slides 25, 39);
