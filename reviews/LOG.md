@@ -228,3 +228,8 @@
 - 23 cards (3 "treatment by line": atopic dermatitis, acne, psoriasis; 20 "self-care or refer"), 76 drug panels (Dr. Smith's target, Dr. Sikazwe's chemistry, Dr. Patel's use per disease, what to tell the patient, who should not get it), 14 tell-apart sets with a "How to decide" path, 23 pairs, 3 rules that repeat, 79 terms, 19 photos. Steps start folded (the atopic dermatitis card was about 15,600 px tall on a phone when open).
 - Checks: dz_check.js (15), run_checks.sh, the course checks and browser tests, and a Playwright pass over all 23 cards, the four views, a drug panel, search and Practise at 390 and 1280 px.
 - Corrected in the same release: the stale header comment of q15_L08_outdoor.js (the poll keys are oral diphenhydramine and permethrin).
+
+## 2026-11-13: Diseases tab, two fixes after release
+- Louis: after "Watch how it works", Back went to Guides and then to Diseases. Cause: dz_ui.js called jump() for its data-jump buttons and the core's document-level [data-jump] handler called it again, so the Back stack held two entries (three for the calcineurin figure). dz_ui.js now leaves the jump to the core's handler.
+- Seen in his screenshot (device in dark mode): the tab's dark-mode colour variants applied on the page's light theme, and a practice patient's right answer was dark text on a dark fill. The dark variants are removed; the core has no dark theme.
+- New src/dz_test.js (35 checks at 390 and 1280 px: every card, a drug panel, a practice patient, search, Practise and Back, every "Watch how it works" button puts one entry on the Back stack, colours equal in dark mode). It fails on the release of e88e7fa (9 checks) and passes on the fix.

@@ -8,6 +8,10 @@ characters.
 
 Every update adds its bullets here in the same commit that makes the change.
 
+## 2026-11-13 (Diseases tab fixes)
+- Diseases: after "Watch how it works", one press of Back returns to the Diseases tab.
+- Diseases: colours no longer change when the device is in dark mode (answers were hard to read).
+
 ## 2026-11-13 (Diseases tab)
 - New Diseases tab: 23 conditions, each from cause to counseling, in short labelled rows.
 - Treatment lines show which drug fits which patient; practice patients explain each wrong choice.

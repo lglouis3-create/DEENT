@@ -184,7 +184,9 @@ const DZ_UI = (() => {
       else { st.view = 'cards'; st.card = k; st.q = ''; render(); }
       return;
     }
-    if (t.dataset.jump) { const [v, a] = t.dataset.jump.split(':'); if (typeof jump === 'function') jump(v, a); return; }
+    // a "Watch how it works" button carries data-jump: the core's own document-level handler makes the jump
+    // (one entry on the Back stack). Calling jump() here as well put two entries there (Louis, 2026-11-13).
+    if (t.dataset.jump) return;
     const a = t.dataset.dz;
     if (a === 'close') { const d = pane.querySelector('.dzdlg'); if (d.open && d.close) d.close(); else d.removeAttribute('open'); }
     else if (a === 'recall') { st.recall = !st.recall; render(); }
@@ -196,7 +198,7 @@ const DZ_UI = (() => {
 
   const CSS = `
 #v-dz{--dz-sm:#7a3db8;--dz-smbg:#f1e8fb;--dz-sk:#b35a00;--dz-skbg:#fdf0e3;--dz-pa:#0f7a6b;--dz-pabg:#e3f5f2;--dz-star:#b8860b;--dz-bad:#b3261e;--dz-badbg:#fdecea}
-@media (prefers-color-scheme:dark){#v-dz{--dz-sm:#c79bf2;--dz-smbg:#2d2240;--dz-sk:#f0b072;--dz-skbg:#3a2b1c;--dz-pa:#6fd6c4;--dz-pabg:#173430;--dz-star:#e6c25a;--dz-bad:#f28b82;--dz-badbg:#3b1f1d}}
+/* the page is light on every device (the core has no dark theme), so these colours do not follow the device's dark mode */
 #v-dz{overflow-wrap:anywhere}#v-dz dt,#v-dz dd,#v-dz li,#v-dz h3,#v-dz h4,#v-dz p{min-width:0}#v-dz .dzline,#v-dz .dzfacts,#v-dz .dzfacts>div,#v-dz .dzpick{min-width:0;max-width:100%}
 #v-dz .dztitle{margin:4px 0 2px}#v-dz .dzintro{color:var(--text-dim);margin:0 0 10px;font-size:14.5px}
 #v-dz .dzsearch span{display:block;font-size:12.5px;color:var(--text-dim)}
