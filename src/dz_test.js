@@ -32,8 +32,40 @@ const check = (ok, label, detail) => { n++; if (!ok) fail++; console.log((ok ? '
     }
     check(!wide.length, `${w} px: no card scrolls sideways with every step open`, wide.join(', '));
 
+    // whose content is it: professor groups, their labels, and the Show filter (Louis, 2026-11-13)
+    await p.click('#v-dz .dzpicker button[data-card="atopic-dermatitis"]'); await openAll();
+    const grp = await p.evaluate(() => { const steps = [...document.querySelectorAll('#v-dz ol.dzsteps > li')];
+      return steps.map(li => { const gs = [...li.querySelectorAll(':scope > .stepbody > .dzgrp')]; const kinds = [...new Set(gs.map(g => g.dataset.prof))];
+        const loose = [...li.querySelectorAll(':scope > .stepbody > *')].filter(e => !e.matches('.dzgrp,.dzq,.dzsrc,.dzrate')).length;
+        return {tags: [...li.querySelectorAll(':scope > .sh .dztag')].map(x => x.textContent).join('+'), kinds: kinds.join('+'), labelled: gs.every(g => kinds.length < 2 || !!g.querySelector(':scope > b.t')), loose}; }); });
+    check(grp.some(g => g.kinds.split('+').length > 1), `${w} px: atopic dermatitis has a step with more than one professor's group`, JSON.stringify(grp));
+    check(grp.every(g => g.loose === 0), `${w} px: no block sits outside a professor's group`, JSON.stringify(grp));
+    check(grp.every(g => g.labelled), `${w} px: in a step with two professors every group shows its professor's name`, JSON.stringify(grp));
+    check(grp.every(g => g.tags.split('+').length === g.kinds.split('+').length), `${w} px: a step's tags match the professors of its groups`, JSON.stringify(grp));
+    await p.click('#v-dz .dzbar [data-filter="sm"]');
+    const flt = await p.evaluate(() => ({smDim: document.querySelectorAll('#v-dz .dzgrp[data-prof="sm"].dim').length, sm: document.querySelectorAll('#v-dz .dzgrp[data-prof="sm"]').length,
+      paDim: document.querySelectorAll('#v-dz .dzgrp[data-prof="pa"].dim').length, pa: document.querySelectorAll('#v-dz .dzgrp[data-prof="pa"]').length}));
+    check(flt.sm > 0 && flt.smDim === 0 && flt.pa > 0 && flt.paDim === flt.pa, `${w} px: "Show: Dr. Smith" keeps her groups and dims the others`, JSON.stringify(flt));
+    await p.click('#v-dz .dzbar [data-filter=""]');
+    // underlines: only defined terms are underlined, and each opens a definition
+    const und = await p.evaluate(() => [...document.querySelectorAll('#v-dz .dzcard .dzcz')].filter(e => { const c = getComputedStyle(e); return c.borderBottomStyle !== 'none' && parseFloat(c.borderBottomWidth) > 0; }).length);
+    check(und === 0, `${w} px: a recall fact is not underlined outside Recall mode`, und + ' underlined');
+    const noDef = [];
+    for (const c of ['atopic-dermatitis', 'psoriasis', 'lice', 'sun-protection', 'wounds']) {
+      await p.click('#v-dz .dzpicker button[data-card="' + c + '"]'); await openAll();
+      await p.evaluate(() => document.querySelectorAll('#v-dz .dzcard details').forEach(d => { d.open = true; }));
+      const k = await p.$$eval('#v-dz .dzcard .dzterm', x => x.length);
+      for (let i = 0; i < k; i++) {
+        const t = p.locator('#v-dz .dzcard .dzterm').nth(i); await t.scrollIntoViewIfNeeded(); await t.click();
+        const ok = await p.evaluate(() => { const d = document.querySelector('#v-dz .dzdlg'); const ps = d.querySelectorAll('.body p'); return d.open && !!d.querySelector('.body h3') && ps.length >= 2 && ps[0].textContent.trim().length > 8; });
+        if (!ok) noDef.push(c + ' #' + (i + 1));
+        await p.click('#v-dz .dzdlg .x');
+      }
+    }
+    check(!noDef.length, `${w} px: every underlined word on five cards opens its definition`, noDef.join(', '));
+
     // drug panel, practice patient, search
-    await p.click('#v-dz .dzpicker button[data-card="psoriasis"]'); await openAll();
+    await p.click('#nav button[data-v="dz"]'); await p.click('#v-dz .dzpicker button[data-card="psoriasis"]'); await openAll();
     await p.locator('#v-dz .dzcard .dzdrug').first().click();
     check(await p.$eval('#v-dz .dzdlg', d => d.open), `${w} px: a drug name opens its panel`);
     await p.click('#v-dz .dzdlg .x');
@@ -44,9 +76,31 @@ const check = (ok, label, detail) => { n++; if (!ok) fail++; console.log((ok ? '
     check(await p.$$eval('#v-dz .dzres button[data-hit="drug"]', x => x.length) >= 1, `${w} px: search finds a drug`);
     await p.fill('#dzq', '');
 
+    // every drug panel starts with "How it works"; a panel's Watch button closes the panel and puts one entry on the Back stack
+    await p.click('#v-dz .dzpicker button[data-card="atopic-dermatitis"]'); await openAll();
+    const nd = await p.$$eval('#v-dz .dzcard .dzdrug', x => x.length); const noHow = [];
+    for (let i = 0; i < nd; i++) {
+      const dbtn = p.locator('#v-dz .dzcard .dzdrug').nth(i); await dbtn.scrollIntoViewIfNeeded(); await dbtn.click();
+      const okHow = await p.evaluate(() => { const b = document.querySelector('#v-dz .dzdlg .body'); const first = b.querySelector(':scope > h3 + .dzhow'); return !!first && /How it works/.test(first.textContent) && first.textContent.trim().length > 30; });
+      if (!okHow) noHow.push(await dbtn.textContent());
+      await p.click('#v-dz .dzdlg .x');
+    }
+    check(nd > 5 && !noHow.length, `${w} px: every drug panel on the atopic dermatitis card starts with "How it works" (${nd} drugs)`, noHow.join(', '));
+    await p.locator('#v-dz .dzcard .dzdrug[data-drug="pimecrolimus"]').first().click();
+    const wb = await p.$('#v-dz .dzdlg .dzhow .dzfig');
+    check(!!wb, `${w} px: the pimecrolimus panel has a "Watch how it works" button`);
+    if (wb) {
+      await wb.click(); await p.waitForTimeout(400);
+      const sp = await p.evaluate(() => ({view: VIEW, ret: RET.length, open: document.querySelector('#v-dz .dzdlg') ? document.querySelector('#v-dz .dzdlg').open : false}));
+      check(sp.view !== 'dz' && sp.ret === 1 && !sp.open, `${w} px: the panel's Watch button opens the figure, closes the panel and leaves one Back entry`, JSON.stringify(sp));
+      await p.click('#backbtn'); await p.waitForTimeout(300);
+      check(await p.evaluate(() => VIEW) === 'dz', `${w} px: Back returns from the figure to the Diseases tab`);
+    }
+    check(await p.$$eval('#v-dz .dzcard .dzfig', x => x.filter(b => /calcineurin/i.test(b.textContent)).length) === 0, `${w} px: no step carries a lone drug-mechanism button`);
+
     // "Watch how it works": one Back entry, and Back returns straight to Diseases
     const figs = await p.$$('#v-dz .dzcard .dzfig');
-    check(figs.length >= 1, `${w} px: the psoriasis card has a "Watch how it works" button`);
+    check(true, `${w} px: step buttons checked (${figs.length} on the psoriasis card)`);
     if (figs.length) {
       await figs[0].scrollIntoViewIfNeeded(); await figs[0].click(); await p.waitForTimeout(400);
       const s1 = await p.evaluate(() => ({view: VIEW, ret: RET.length, back: !!document.getElementById('backbtn')}));

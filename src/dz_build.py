@@ -39,6 +39,11 @@ for p in parts:
         if not o: out['drugs'][k] = d; continue
         for key in ('sm', 'sk', 'brand'):
             if not o.get(key) and d.get(key): o[key] = d[key]
+        # "How it works": the first part's text stands (the parts carry the same text for a shared drug);
+        # a part that has a mechanism replaces an explicit none; figures are the union, by jump target
+        if d.get('how') and (not o.get('how') or (o['how'].get('none') and not d['how'].get('none'))): o['how'] = d['how']
+        seen = {f.get('jump') for f in (o.get('figs') or [])}
+        o['figs'] = (o.get('figs') or []) + [f for f in (d.get('figs') or []) if f.get('jump') not in seen]
         o['pa'] = (o.get('pa') or []) + [r for r in (d.get('pa') or []) if r.get('dz') not in {x.get('dz') for x in (o.get('pa') or [])}]
         o['counsel'] = uniq((o.get('counsel') or []) + (d.get('counsel') or []))
         o['avoid'] = uniq((o.get('avoid') or []) + (d.get('avoid') or []))

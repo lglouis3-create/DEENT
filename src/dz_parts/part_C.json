@@ -60,7 +60,8 @@
          "Prevention",
          "Protective clothing and gloves when working outside near vegetation"
         ]
-       ]
+       ],
+       "p": "pa"
       }
      ]
     },
@@ -83,7 +84,7 @@
          "Order of symptoms",
          [
           "{{Itching}}",
-          "[[erythema|Erythema]]",
+          "Erythema",
           "Vesicles and [[papule|papules]]"
          ]
         ],
@@ -95,11 +96,13 @@
          "Smoke",
          "Inhaling smoke from burning poison ivy, oak or sumac can cause {{severe respiratory symptoms}}"
         ]
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "photo",
-       "id": "pi-line"
+       "id": "pi-line",
+       "p": "pa"
       }
      ]
     },
@@ -113,7 +116,8 @@
      "blocks": [
       {
        "k": "sub",
-       "text": "Refer to a physician if"
+       "text": "Refer to a physician if",
+       "p": "pa"
       },
       {
        "k": "pts",
@@ -123,7 +127,8 @@
         "Rash covers a large area of the {{face}}, or the {{eyelids}} swell",
         "Rash involves the {{genitalia}}",
         "{{Secondary infection}}"
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "facts",
@@ -132,7 +137,8 @@
          "Expected course",
          "Symptoms can last up to {{3 weeks}}"
         ]
-       ]
+       ],
+       "p": "pa"
       }
      ]
     },
@@ -153,7 +159,8 @@
         "Rinse with {{large volumes of water}}",
         "Then wash with soap and water, including {{under the nails}}",
         "Other agents: Tecnu, Zanfel, Dial Ultra dishwashing soap"
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "line",
@@ -168,7 +175,8 @@
         "Oatmeal bath: soak {{15–20 minutes}} twice daily, pat the skin dry",
         "Cool soaks or baths"
        ],
-       "warn": "Not used for plant dermatitis: <<topical-antihistamine|topical antihistamines>> and <<topical-antibiotics|topical antibiotics>>."
+       "warn": "Not used for plant dermatitis: <<topical-antihistamine|topical antihistamines>> and <<topical-antibiotics|topical antibiotics>>.",
+       "p": "pa"
       },
       {
        "k": "line",
@@ -182,7 +190,8 @@
         "★ Her poll answer: {{aluminum acetate}} (Burow's solution), an [[astringent|astringent]], as a {{soak or wet dressing}}",
         "Aluminum sulfate/calcium acetate is used the same way",
         "Hydrocortisone is listed for wet or dry plant dermatitis"
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "line",
@@ -207,7 +216,8 @@
          "Vesicles open or oozing",
          "No topical anesthetic and no counterirritant"
         ]
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "line",
@@ -217,12 +227,14 @@
        "pts": [
         "Topical corticosteroids suit any presentation; oral corticosteroids are for severe cases"
        ],
-       "move": "Refer when: no improvement after 7 days, worse, face or eyelids, genitalia, or infection."
+       "move": "Refer when: no improvement after 7 days, worse, face or eyelids, genitalia, or infection.",
+       "p": "pa"
       },
       {
        "k": "fig",
        "label": "Reference table: plant dermatitis by symptom",
-       "jump": "ref:ref-p8-plant"
+       "jump": "ref:ref-p8-plant",
+       "p": "pa"
       }
      ]
     }
@@ -423,7 +435,8 @@
           "Remove standing water and wood piles"
          ]
         ]
-       ]
+       ],
+       "p": "pa"
       }
      ]
     },
@@ -440,13 +453,14 @@
        "rows": [
         [
          "Local effects",
-         "{{Mild}} [[pruritus|pruritus]], {{erythema}}, {{papules}}"
+         "{{Mild}} pruritus, {{erythema}}, {{papules}}"
         ],
         [
          "Not a bite",
          "Pain with venom and allergenic proteins is a sting (bees, wasps, yellow jackets, hornets, fire ants)"
         ]
-       ]
+       ],
+       "p": "pa"
       }
      ]
     },
@@ -460,7 +474,8 @@
      "blocks": [
       {
        "k": "sub",
-       "text": "Refer to a physician if"
+       "text": "Refer to a physician if",
+       "p": "pa"
       },
       {
        "k": "pts",
@@ -469,7 +484,8 @@
         "Symptoms {{worsen}} during treatment",
         "Secondary infection: {{fever}}, {{joint pain}}, {{lymph node enlargement}}, neurologic symptoms",
         "A vector-borne disease is suspected: refer to the prescriber"
-       ]
+       ],
+       "p": "pa"
       }
      ]
     },
@@ -490,7 +506,8 @@
         "Apply an ice pack promptly: less swelling, itching and pain",
         "Avoid scratching; keep fingernails trimmed",
         "No rough, irritating clothing over the bite"
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "line",
@@ -501,7 +518,8 @@
         "Grasp the tick's {{head}} and pull gently; remove the head",
         "Clean the skin with {{rubbing alcohol}}",
         "Keep the tick in a {{plastic bag}}"
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "line",
@@ -517,7 +535,7 @@
        "pts": [
         "★ Her bedbug poll: {{oral diphenhydramine}} for the itch",
         "Hydrocortisone treats pruritus and inflammation",
-        "Topical anesthetics (pramoxine, benzocaine) and counterirritants (camphor, menthol): {{3–4 times daily}}, not longer than {{7 days}}",
+        "Topical anesthetics (pramoxine, benzocaine) and [[counterirritant|counterirritants]] (camphor, menthol): {{3–4 times daily}}, not longer than {{7 days}}",
         "Her chart also lists topical diphenhydramine 0.5 to 2% for bites and stings"
        ],
        "pick": [
@@ -527,13 +545,14 @@
         ],
         [
          "Asks about witch hazel",
-         "An astringent, used for wet or weeping dermatitis"
+         "An [[astringent|astringent]], used for wet or weeping dermatitis"
         ],
         [
          "Broken or oozing skin",
          "No topical antihistamine, anesthetic or counterirritant"
         ]
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "line",
@@ -546,16 +565,19 @@
         "★ [[skin-protectant|Skin protectants]] (petrolatum, calamine, zinc oxide) can be used under {{2 years}}",
         "As needed, up to {{4 times daily}}"
        ],
-       "warn": "Under 2 years: no hydrocortisone, no local anesthetic, no counterirritant."
+       "warn": "Under 2 years: no hydrocortisone, no local anesthetic, no counterirritant.",
+       "p": "pa"
       },
       {
        "k": "warn",
-       "text": "Do not use hydrocortisone on scabies, bacterial infections or fungal infections: steroids can mask or worsen them."
+       "text": "Do not use hydrocortisone on scabies, bacterial infections or fungal infections: steroids can mask or worsen them.",
+       "p": "pa"
       },
       {
        "k": "fig",
        "label": "Reference table: insect bites and stings",
-       "jump": "ref:ref-p8-bites"
+       "jump": "ref:ref-p8-bites",
+       "p": "pa"
       }
      ]
     }
@@ -727,7 +749,8 @@
           "Tick attached more than {{36 hours}}"
          ]
         ]
-       ]
+       ],
+       "p": "pa"
       }
      ]
     },
@@ -758,11 +781,13 @@
          "Lyme skin lesion",
          "[[erythema-migrans|Erythema migrans]]: early localized disease"
         ]
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "photo",
-       "id": "vb-hunter-rash"
+       "id": "vb-hunter-rash",
+       "p": "pa"
       }
      ]
     },
@@ -779,13 +804,15 @@
        "items": [
         "★ Her hunter poll: flu-like symptoms, muscle aches and a leg rash about 10 days after a hunting trip: {{immediate medical referral}}",
         "Her cues: the duration and the symptoms",
-        "If a vector-borne disease is suspected, refer to the {{prescriber}}",
+        "If a [[vector|vector-borne]] disease is suspected, refer to the {{prescriber}}",
         "{{Fever}}, joint pain, lymph node enlargement or neurologic symptoms after a bite: refer"
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "warn",
-       "text": "Not self-care: a suspected vector-borne disease is referred."
+       "text": "Not self-care: a suspected vector-borne disease is referred.",
+       "p": "pa"
       }
      ]
     },
@@ -814,11 +841,12 @@
          "Doxycycline, 7 days; recommended for all suspected rickettsial infections"
         ],
         [
-         "STARI (Lone Star tick)",
+         "[[stari|STARI]] (Lone Star tick)",
          "IDSA: {{no antibiotic}} recommendation"
         ]
        ],
-       "src": "Patel Outdoor slides 27, 30"
+       "src": "Patel Outdoor slides 27, 30",
+       "p": "pa"
       },
       {
        "k": "line",
@@ -828,9 +856,10 @@
         "doxycycline"
        ],
        "pts": [
-        "★ [[prophylaxis|Prophylaxis]] is given within {{72 hours}} of detaching the tick (\"pay attention to the hour\")",
+        "★ Prophylaxis is given within {{72 hours}} of detaching the tick (\"pay attention to the hour\")",
         "Doxycycline 200 mg by mouth {{once}}; children 4.4 mg/kg up to 200 mg once"
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "line",
@@ -847,7 +876,8 @@
         "★ Amoxicillin 500 mg TID for {{14 days}}",
         "★ Cefuroxime axetil 500 mg BID for {{14 days}}",
         "★ Second line: azithromycin 500 mg daily for {{7 days}}"
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "line",
@@ -858,12 +888,14 @@
         "Neurologic: IV ceftriaxone, penicillin G or oral doxycycline, 14 to 21 days",
         "Cardiac: hospitalized, IV ceftriaxone; not hospitalized, an oral agent, 14–21 days",
         "Arthritic: oral antibiotics for 28 days"
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "fig",
        "label": "Reference table: antibiotic by flea-borne and tick-borne disease",
-       "jump": "ref:ref-p8-vector"
+       "jump": "ref:ref-p8-vector",
+       "p": "pa"
       }
      ]
     }
@@ -1048,7 +1080,8 @@
          "Referral slide adds",
          "Scorpion stings"
         ]
-       ]
+       ],
+       "p": "pa"
       }
      ]
     },
@@ -1071,11 +1104,13 @@
          "Her case",
          "A swollen, bright red patch on the thigh that hurts and itches"
         ]
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "photo",
-       "id": "sting-local"
+       "id": "sting-local",
+       "p": "pa"
       }
      ]
     },
@@ -1089,7 +1124,8 @@
      "blocks": [
       {
        "k": "sub",
-       "text": "Emergency care immediately"
+       "text": "Emergency care immediately",
+       "p": "pa"
       },
       {
        "k": "pts",
@@ -1097,17 +1133,20 @@
         "{{Severe reaction history}}",
         "★ At any time after the sting: {{hives}}, {{dizziness}}, nausea or vomiting, {{difficulty breathing}}",
         "★ Her poll: a wasp or bee sting with hives and swelling: {{immediate referral to the emergency room}}"
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "sub",
-       "text": "Triage to a provider"
+       "text": "Triage to a provider",
+       "p": "pa"
       },
       {
        "k": "pts",
        "items": [
         "Symptoms worsen or do not improve after {{7 days}} of topical treatment"
-       ]
+       ],
+       "p": "pa"
       }
      ]
     },
@@ -1129,7 +1168,8 @@
         "Wash the area with {{soap and water}}",
         "Apply {{ice or a cold pack}}: slows absorption, reduces pain and swelling",
         "Clean with rubbing alcohol; avoid scratching; no rough clothing over the area"
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "line",
@@ -1143,19 +1183,20 @@
         "skin-protectants"
        ],
        "pts": [
-        "Local anesthetics and counterirritants: {{3–4 times daily}}, not longer than 7 days",
+        "Local anesthetics and [[counterirritant|counterirritants]]: {{3–4 times daily}}, not longer than 7 days",
         "Pramoxine or benzyl alcohol: less likely to cause [[sensitization|sensitization]] or adverse effects"
        ],
        "pick": [
         [
          "Under 2 years",
-         "Skin protectant (zinc oxide, calamine); no hydrocortisone, anesthetic or counterirritant"
+         "[[skin-protectant|Skin protectant]] (zinc oxide, calamine); no hydrocortisone, anesthetic or counterirritant"
         ],
         [
          "Broken skin",
          "No topical anesthetic or counterirritant"
         ]
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "line",
@@ -1164,12 +1205,14 @@
        "drugs": [],
        "pts": [
         "If a topical does not relieve the pain, consider an {{oral analgesic}}"
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "fig",
        "label": "Reference table: insect bites and stings",
-       "jump": "ref:ref-p8-bites"
+       "jump": "ref:ref-p8-bites",
+       "p": "pa"
       }
      ]
     }
@@ -1331,7 +1374,8 @@
          "Goals",
          "Kill adult and nymph lice; remove eggs ([[nit|nits]])"
         ]
-       ]
+       ],
+       "p": "pa"
       }
      ]
     },
@@ -1358,11 +1402,13 @@
          "Needed for self-care",
          "{{Live lice}} seen"
         ]
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "photo",
-       "id": "lice-nits"
+       "id": "lice-nits",
+       "p": "pa"
       }
      ]
     },
@@ -1376,7 +1422,8 @@
      "blocks": [
       {
        "k": "sub",
-       "text": "Not a self-care candidate"
+       "text": "Not a self-care candidate",
+       "p": "pa"
       },
       {
        "k": "pts",
@@ -1389,18 +1436,21 @@
         "Lice of the {{eyelids or eyebrows}}",
         "{{Pregnancy}} or breast-feeding",
         "Active tumors"
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "sub",
-       "text": "Refer during treatment"
+       "text": "Refer during treatment",
+       "p": "pa"
       },
       {
        "k": "pts",
        "items": [
         "Live lice after {{2 treatment rounds}} one week apart: primary care provider, for a prescription product",
         "Significant skin irritation, or product in the eyes: medical attention"
-       ]
+       ],
+       "p": "pa"
       }
      ]
     },
@@ -1441,7 +1491,8 @@
          "Under 2 months, pregnant or breast-feeding",
          "Refer"
         ]
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "line",
@@ -1456,7 +1507,8 @@
         "Benzyl alcohol lotion 5% (Ulesfia), Rx: over 6 months; 10 minutes",
         "Spinosad 0.9% (Natroba), Rx: over 6 months; 10 minutes",
         "Malathion lotion 0.5% (Ovide), Rx: over 2 years; {{8–12 hours}}"
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "line",
@@ -1471,7 +1523,8 @@
         "Do not re-wash the hair for 1–2 days",
         "★ Repeat in {{7 to 10 days}} if lice or nits are seen (slide 47); slide 42: \"may need to repeat treatment in 7 days\"",
         "Follow up with the caregiver in a week"
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "line",
@@ -1484,16 +1537,19 @@
         "Wash clothing, bedding, brushes and combs in hot water",
         "Clean shared sports equipment before and after use",
         "AirAllé: a machine that applies heat to dehydrate the lice"
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "warn",
-       "text": "Do not use the same product more than 2–3 times if it is not working (slide 45); slide 47 refers after 2 rounds one week apart."
+       "text": "Do not use the same product more than 2–3 times if it is not working (slide 45); slide 47 refers after 2 rounds one week apart.",
+       "p": "pa"
       },
       {
        "k": "fig",
        "label": "Reference table: head lice products and scabies",
-       "jump": "ref:ref-p8-lice"
+       "jump": "ref:ref-p8-lice",
+       "p": "pa"
       }
      ]
     }
@@ -1701,7 +1757,8 @@
          "High risk of secondary infection",
          "Weakened immune systems; the elderly"
         ]
-       ]
+       ],
+       "p": "pa"
       }
      ]
     },
@@ -1724,11 +1781,13 @@
          "Sites",
          "{{Fingers}}, {{wrists}}, buttocks, {{armpits}}, skin folds"
         ]
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "photo",
-       "id": "scabies-hand"
+       "id": "scabies-hand",
+       "p": "pa"
       }
      ]
     },
@@ -1745,7 +1804,8 @@
        "items": [
         "Slide 51 lists treatment options; no self-care criteria are listed",
         "★ Do not use {{hydrocortisone}} on scabies: steroids can {{mask or worsen}} it"
-       ]
+       ],
+       "p": "pa"
       }
      ]
     },
@@ -1773,7 +1833,8 @@
         "Lindane 1% lotion",
         "Oral ivermectin 200 mcg/kg/dose × {{2 doses one week apart}}",
         "★ \"There isn't first line, second line, or third line\": the choice depends on the patient and the severity"
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "line",
@@ -1786,12 +1847,14 @@
         "Pruritus can last {{4 weeks}} after treatment, from a {{hypersensitivity}} reaction",
         "★ \"Most likely we're leaning on that oral antihistamine\"",
         "The slide also lists topical steroids for this itch"
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "fig",
        "label": "Reference table: head lice products and scabies",
-       "jump": "ref:ref-p8-lice"
+       "jump": "ref:ref-p8-lice",
+       "p": "pa"
       }
      ]
     }
@@ -1943,15 +2006,18 @@
          "Most spiders",
          "Listed with the {{nonvenomous}} bites (slide 20)"
         ]
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "photo",
-       "id": "spider-recluse"
+       "id": "spider-recluse",
+       "p": "pa"
       },
       {
        "k": "photo",
-       "id": "spider-widow"
+       "id": "spider-widow",
+       "p": "pa"
       }
      ]
     },
@@ -1970,7 +2036,7 @@
          "★ Brown recluse",
          [
           "Fever, {{blood in urine}}, rash, joint pain within {{48 hours}}",
-          "Tissue [[necrosis|necrosis]]",
+          "Tissue necrosis",
           "May need {{surgical intervention}}"
          ]
         ],
@@ -1986,7 +2052,8 @@
           "Swollen eyelids"
          ]
         ]
-       ]
+       ],
+       "p": "pa"
       }
      ]
     },
@@ -2003,7 +2070,8 @@
        "items": [
         "Not self-care: the bite victim goes to the {{emergency room}}",
         "Identify the spider: the slide says kill or capture it in a {{sealed container}} and bring it; she said to take a {{picture}} if possible"
-       ]
+       ],
+       "p": "pa"
       }
      ]
     },
@@ -2024,7 +2092,8 @@
         "Clean the wound with {{soap and water}}",
         "Apply a {{cold pack}}",
         "{{Elevate}} the limb to reduce swelling"
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "line",
@@ -2035,7 +2104,8 @@
        ],
        "pts": [
         "★ \"Tylenol over ibuprofen\""
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "line",
@@ -2044,12 +2114,14 @@
        "drugs": [],
        "pts": [
         "Severe black widow bites: [[antivenin|antivenom]] (Latrodectus mactans), {{equine}}"
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "fig",
        "label": "Reference table: spiders, snake bites, poison control and rabies",
-       "jump": "ref:ref-p8-venom"
+       "jump": "ref:ref-p8-venom",
+       "p": "pa"
       }
      ]
     }
@@ -2194,13 +2266,15 @@
           "Control insect and {{rodent}} populations"
          ]
         ]
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "pts",
        "items": [
         "She does not ask the species: \"Just know that in terms of prevention, prevention is key\""
-       ]
+       ],
+       "p": "pa"
       }
      ]
     },
@@ -2222,7 +2296,7 @@
         ],
         [
          "Moderate",
-         "Swelling, erythema or [[ecchymosis|ecchymosis]] {{beyond the bite site}}",
+         "Swelling, erythema or ecchymosis {{beyond the bite site}}",
          "Systemic signs not life-threatening: nausea or vomiting, mild hypotension, perioral paresthesias, myokymia; coagulation mildly abnormal without significant bleeding"
         ],
         [
@@ -2230,14 +2304,16 @@
          "Rapid swelling of the {{entire body part}}",
          "Systolic {{< 80 mm Hg}}, altered sensorium, tachycardia, tachypnea, respiratory distress; abnormal coagulation {{with bleeding}}, platelets < 20,000/µL"
         ]
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "pts",
        "items": [
         "★ She asks the three sign types (local, systemic, coagulation) across the three grades",
         "Symptoms usually evolve over several hours"
-       ]
+       ],
+       "p": "pa"
       }
      ]
     },
@@ -2268,7 +2344,8 @@
          "Then",
          "Transport to a medical facility"
         ]
-       ]
+       ],
+       "p": "pa"
       }
      ]
     },
@@ -2294,7 +2371,8 @@
         "Limb position: slide 56 {{even with or slightly lower than the heart}}; she said \"keep it lower ... than the heart\" and also \"most likely elevating the leg is just fine\"; no walking on the leg",
         "Check for envenomation; mark the leading edge of swelling and tenderness",
         "Treat pain"
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "line",
@@ -2305,7 +2383,7 @@
         "Tetanus injection",
         "Consider antibiotics to cover {{gram-negative}} organisms from the snake's mouth",
         "Coral snake bite: {{no antivenin}}; supportive care only",
-        "Pit viper bite: scored to assess the need for antivenin"
+        "Pit viper bite: scored to assess the need for [[antivenin|antivenin]]"
        ],
        "pick": [
         [
@@ -2316,18 +2394,21 @@
          "Severe",
          "Antivenin if available; supportive therapy; watch for [[compartment-syndrome|compartment syndrome]] and call surgery"
         ]
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "pts",
        "items": [
         "The antivenin dosing protocol (slide 59) is \"just for reference\""
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "fig",
        "label": "Reference table: spiders, snake bites, poison control and rabies",
-       "jump": "ref:ref-p8-venom"
+       "jump": "ref:ref-p8-venom",
+       "p": "pa"
       }
      ]
     }
@@ -2490,7 +2571,8 @@
          "Untreated",
          "Fatal"
         ]
-       ]
+       ],
+       "p": "pa"
       }
      ]
     },
@@ -2508,7 +2590,8 @@
         "Wash the wound {{at once}} with {{soap and water}}",
         "If available, irrigate with {{povidone-iodine}} solution",
         "The same wound cleansing applies whether or not the patient was vaccinated before"
-       ]
+       ],
+       "p": "pa"
       }
      ]
     },
@@ -2526,7 +2609,8 @@
         "Not self-care: refer {{as soon after exposure as possible}} for [[pep|postexposure prophylaxis (PEP)]]",
         "★ \"Remember, it's {{urgency, not emergency}}\"",
         "Untreated rabies is {{fatal}}"
-       ]
+       ],
+       "p": "pa"
       }
      ]
     },
@@ -2550,7 +2634,8 @@
         "Human rabies immune globulin ([[hrig|HRIG]]) {{20 IU/kg}}: around and into the wounds; the remainder IM away from the vaccine site",
         "★ Vaccine 1 mL IM, unaffected deltoid, on days {{0, 3, 7 and 14}}",
         "Immunosuppressed: a fifth dose on day {{28}}"
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "line",
@@ -2562,16 +2647,19 @@
        "pts": [
         "★ HRIG: {{do not administer}}",
         "★ Vaccine 1 mL in the deltoid on days {{0 and 3}}"
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "warn",
-       "text": "Vaccine and immune globulin are never given at the same site or in the same syringe."
+       "text": "Vaccine and immune globulin are never given at the same site or in the same syringe.",
+       "p": "pa"
       },
       {
        "k": "fig",
        "label": "Reference table: spiders, snake bites, poison control and rabies",
-       "jump": "ref:ref-p8-venom"
+       "jump": "ref:ref-p8-venom",
+       "p": "pa"
       }
      ]
     }
@@ -2721,6 +2809,29 @@
    "avoid": [
     "Child under 2 years old",
     "Scabies, bacterial infections, fungal infections: steroids can mask or worsen them"
+   ],
+   "how": {
+    "p": "sm",
+    "text": "A low-potency corticosteroid. It binds the glucocorticoid receptor; the drug–receptor complex binds the GRE on DNA, or holds NF-kB and AP-1 off the DNA, so fewer inflammatory proteins are made.",
+    "src": "Smith PCol slides 5–7, 10–11"
+   },
+   "figs": [
+    {
+     "label": "Watch how it works: nuclear receptor binders, direct and indirect action (corticosteroids, retinoids, vitamin D analogs)",
+     "jump": "ref:ref-l1-nr"
+    },
+    {
+     "label": "Watch how it works: the steroid skeleton, what raises its activity, and its hydrogen bonds in the receptor (Dr. Sikazwe)",
+     "jump": "guide:fig-steroid"
+    },
+    {
+     "label": "Watch how it works: potency by structure, hydrocortisone to clobetasol propionate (Dr. Sikazwe)",
+     "jump": "guide:cb-gc-potency"
+    },
+    {
+     "label": "See the reaction: hydrocortisone metabolism (11β-HSD to and from inactive cortisone)",
+     "jump": "guide:rx-hydrocortisone"
+    }
    ]
   },
   "topical-anesthetics": {
@@ -2760,7 +2871,13 @@
     "Children younger than 2 years",
     "Broken skin; under an occlusive dressing",
     "Adverse effect of the \"caines\": methemoglobinemia"
-   ]
+   ],
+   "how": {
+    "p": "pa",
+    "text": "Relieve pain and itching by numbing the skin; relief lasts 15 to 45 minutes.",
+    "src": "Patel Outdoor slide 12; Wound slides 14, 20; 11/12 lecture T@83300"
+   },
+   "figs": []
   },
   "topical-antihistamine": {
    "name": "Topical antihistamine (diphenhydramine 0.5 to 2% cream)",
@@ -2790,7 +2907,14 @@
     "Plant dermatitis",
     "Sunburn",
     "Broken, oozing skin"
-   ]
+   ],
+   "how": {
+    "p": "pa",
+    "text": "",
+    "src": "",
+    "none": true
+   },
+   "figs": []
   },
   "oral-antihistamines": {
    "name": "Oral antihistamines (e.g. diphenhydramine)",
@@ -2825,7 +2949,14 @@
     "It works through the whole body, so it suits a rash that is not limited to one area (her reason for oral over topical)"
    ],
    "counselSrc": "11/12 lecture",
-   "avoid": []
+   "avoid": [],
+   "how": {
+    "p": "pa",
+    "text": "",
+    "src": "",
+    "none": true
+   },
+   "figs": []
   },
   "counterirritants": {
    "name": "Antipruritics or counterirritants (camphor, menthol, phenol)",
@@ -2859,7 +2990,14 @@
    "avoid": [
     "Children younger than 2 years",
     "Broken skin or a wound"
-   ]
+   ],
+   "how": {
+    "p": "pa",
+    "text": "",
+    "src": "",
+    "none": true
+   },
+   "figs": []
   },
   "astringents": {
    "name": "Astringents (aluminum acetate, witch hazel)",
@@ -2883,7 +3021,13 @@
     "It reduces weeping and decreases itch; it cools and dries the skin"
    ],
    "counselSrc": "Patel Outdoor slides 13, 15",
-   "avoid": []
+   "avoid": [],
+   "how": {
+    "p": "pa",
+    "text": "Reduce inflammation by vasoconstriction, cool and dry the skin by evaporation, and retard oozing, weeping or bleeding.",
+    "src": "Patel Outdoor slide 13"
+   },
+   "figs": []
   },
   "topical-antibiotics": {
    "name": "Topical antibiotics (bacitracin, neomycin, polymyxin B sulfate, mupirocin)",
@@ -2909,7 +3053,13 @@
    "counselSrc": "Patel Outdoor slide 13",
    "avoid": [
     "Neomycin allergy (her bedbug case: neomycin worsened the rash)"
-   ]
+   ],
+   "how": {
+    "p": "pa",
+    "text": "Ingredients with antibacterial properties: the product delivers a concentrated antimicrobial agent to the wound site, to prevent infection.",
+    "src": "Patel Wound slides 11–12; 11/12 lecture T@81400–81900"
+   },
+   "figs": []
   },
   "skin-protectants": {
    "name": "Skin protectants (petrolatum, calamine, zinc oxide)",
@@ -2935,7 +3085,13 @@
     "May be used in bacterial infection"
    ],
    "counselSrc": "Patel Outdoor slide 39",
-   "avoid": []
+   "avoid": [],
+   "how": {
+    "p": "pa",
+    "text": "Provide a physical barrier and lubrication to the skin; her slides add that they reduce irritation or inflammation and help with rehydration.",
+    "src": "Patel Dermatitis slide 63; Outdoor slide 39; Sun slide 31"
+   },
+   "figs": []
   },
   "colloidal-oatmeal": {
    "name": "Colloidal oatmeal bath",
@@ -2955,7 +3111,14 @@
     "The tub becomes very slippery"
    ],
    "counselSrc": "Patel Outdoor slide 14",
-   "avoid": []
+   "avoid": [],
+   "how": {
+    "p": "pa",
+    "text": "",
+    "src": "",
+    "none": true
+   },
+   "figs": []
   },
   "permethrin": {
    "name": "Permethrin",
@@ -2987,7 +3150,14 @@
     "Under 2 months old",
     "Hypersensitivity to chrysanthemums, ragweed or a pediculicide ingredient",
     "Pregnancy or breast-feeding; lice of the eyelids or eyebrows; secondary skin infection (refer)"
-   ]
+   ],
+   "how": {
+    "p": "pa",
+    "text": "",
+    "src": "",
+    "none": true
+   },
+   "figs": []
   },
   "pyrethrins": {
    "name": "Pyrethrins + piperonyl butoxide",
@@ -3013,7 +3183,14 @@
     "Under 2 years of age",
     "Allergy to chrysanthemums; hypersensitivity to ragweed",
     "Pregnancy or breast-feeding; lice of the eyelids or eyebrows; secondary skin infection (refer)"
-   ]
+   ],
+   "how": {
+    "p": "pa",
+    "text": "",
+    "src": "",
+    "none": true
+   },
+   "figs": []
   },
   "dimethicone": {
    "name": "Dimethicone 100%",
@@ -3033,7 +3210,13 @@
    "counselSrc": "Patel Outdoor slide 45",
    "avoid": [
     "Under 2 months old"
-   ]
+   ],
+   "how": {
+    "p": "pa",
+    "text": "A wetting / occlusive agent. In class: it wets the lice, which dehydrates and kills them.",
+    "src": "Patel Outdoor slide 46; 11/12 lecture T@31043"
+   },
+   "figs": []
   },
   "ivermectin": {
    "name": "Ivermectin",
@@ -3058,7 +3241,14 @@
    "counselSrc": "Patel Outdoor slide 47",
    "avoid": [
     "Lotion: under 6 months old"
-   ]
+   ],
+   "how": {
+    "p": "pa",
+    "text": "",
+    "src": "",
+    "none": true
+   },
+   "figs": []
   },
   "lice-rx": {
    "name": "Prescription lice products (benzyl alcohol, spinosad, malathion)",
@@ -3079,7 +3269,14 @@
    "avoid": [
     "Benzyl alcohol, spinosad: under 6 months",
     "Malathion: under 2 years"
-   ]
+   ],
+   "how": {
+    "p": "pa",
+    "text": "",
+    "src": "",
+    "none": true
+   },
+   "figs": []
   },
   "scabies-agents": {
    "name": "Other scabies agents (crotamiton, sulfur, lindane)",
@@ -3096,7 +3293,14 @@
     "Itching can last 4 weeks after treatment; this is a hypersensitivity reaction"
    ],
    "counselSrc": "Patel Outdoor slide 51",
-   "avoid": []
+   "avoid": [],
+   "how": {
+    "p": "pa",
+    "text": "",
+    "src": "",
+    "none": true
+   },
+   "figs": []
   },
   "doxycycline": {
    "name": "Doxycycline",
@@ -3148,6 +3352,17 @@
    "avoid": [
     "Photosensitivity",
     "Acne lecture: over 12 years (tooth discoloration); avoid in pregnancy (Patel Acne slides 32–33, Reference)"
+   ],
+   "how": {
+    "p": "sm",
+    "text": "Binds the 30S ribosomal subunit irreversibly and blocks aminoacyl-tRNA binding at the acceptor site, so bacterial protein synthesis stops (bacteriostatic). In acne the effect may depend more on anti-inflammatory activity.",
+    "src": "Smith PCol slides 43, 45"
+   },
+   "figs": [
+    {
+     "label": "Watch how it works: antibiotics at the bacterial ribosome",
+     "jump": "guide:g-fig-ribosome"
+    }
    ]
   },
   "amoxicillin": {
@@ -3163,7 +3378,14 @@
    ],
    "avoid": [
     "Amoxicillin allergy (her sting case patient: rash)"
-   ]
+   ],
+   "how": {
+    "p": "pa",
+    "text": "",
+    "src": "",
+    "none": true
+   },
+   "figs": []
   },
   "cefuroxime": {
    "name": "Cefuroxime axetil",
@@ -3176,7 +3398,14 @@
      "src": "Patel Outdoor slide 29"
     }
    ],
-   "avoid": []
+   "avoid": [],
+   "how": {
+    "p": "pa",
+    "text": "",
+    "src": "",
+    "none": true
+   },
+   "figs": []
   },
   "azithromycin": {
    "name": "Azithromycin",
@@ -3193,7 +3422,18 @@
      "src": "Patel Outdoor slide 29"
     }
    ],
-   "avoid": []
+   "avoid": [],
+   "how": {
+    "p": "sm",
+    "text": "A macrolide: it attaches to the 50S subunit of the bacterial ribosome and stops bacterial protein synthesis (bacteriostatic). Slide 47 prints \"prevents translocation\"; the slide 42 figure caption prints \"block peptide bond formation\".",
+    "src": "Smith PCol slides 42, 47"
+   },
+   "figs": [
+    {
+     "label": "Watch how it works: antibiotics at the bacterial ribosome",
+     "jump": "guide:g-fig-ribosome"
+    }
+   ]
   },
   "acetaminophen": {
    "name": "Acetaminophen",
@@ -3210,7 +3450,14 @@
     "Clean with soap and water, apply a cold pack, elevate the limb; go to the emergency room"
    ],
    "counselSrc": "Patel Outdoor slide 53",
-   "avoid": []
+   "avoid": [],
+   "how": {
+    "p": "pa",
+    "text": "",
+    "src": "",
+    "none": true
+   },
+   "figs": []
   },
   "rabies-vaccine": {
    "name": "Rabies vaccine (HDCV or PCECV)",
@@ -3231,7 +3478,14 @@
    "counselSrc": "Patel Outdoor slides 62–63; 11/12 lecture",
    "avoid": [
     "Never at the same site or in the same syringe as the immune globulin"
-   ]
+   ],
+   "how": {
+    "p": "pa",
+    "text": "",
+    "src": "",
+    "none": true
+   },
+   "figs": []
   },
   "rabies-ig": {
    "name": "Human rabies immune globulin (HRIG)",
@@ -3247,7 +3501,14 @@
    "avoid": [
     "Previously immunized patients: do not administer",
     "Never at the same site or in the same syringe as the vaccine"
-   ]
+   ],
+   "how": {
+    "p": "pa",
+    "text": "",
+    "src": "",
+    "none": true
+   },
+   "figs": []
   }
  },
  "terms": {
@@ -3258,23 +3519,13 @@
   ],
   "vesicle": [
    "Vesicle",
-   "A small blister.",
-   "Patel Outdoor slide 10"
+   "A small blister; Dr. Patel’s slide writes “blisters (vesicles)”. Dr. Smith: in atopic dermatitis small, raised vesicles may leak fluid and crust over when scratched.",
+   "Patel Outdoor slide 10; Smith Pathophys slide 11"
   ],
   "papule": [
    "Papule",
-   "A small raised bump on the skin.",
-   "plain meaning, not from the slides"
-  ],
-  "erythema": [
-   "Erythema",
-   "Redness of the skin.",
-   "plain meaning, not from the slides"
-  ],
-  "pruritus": [
-   "Pruritus",
-   "Itching.",
-   "plain meaning, not from the slides"
+   "A small, raised, solid bump on the skin. In acne (Dr. Patel): an inflammatory lesion, raised and red, with no visible pus.",
+   "Patel Acne slides 5–6; 11/10 lecture; the first sentence is the plain meaning"
   ],
   "astringent": [
    "Astringent",
@@ -3288,8 +3539,8 @@
   ],
   "skin-protectant": [
    "Skin protectant",
-   "A product such as petrolatum, zinc oxide or calamine that reduces irritation or inflammation.",
-   "Patel Outdoor slides 25, 39"
+   "A product such as zinc oxide, petrolatum, calamine or cocoa butter that gives the skin a physical barrier and lubrication and reduces irritation.",
+   "Patel Dermatitis slide 63; Outdoor slide 39; Sun slide 31"
   ],
   "sensitization": [
    "Sensitization",
@@ -3298,8 +3549,8 @@
   ],
   "methemoglobinemia": [
    "Methemoglobinemia",
-   "The adverse effect her chart lists for the \"caine\" topical anesthetics; a form of hemoglobin that carries oxygen poorly.",
-   "Patel Outdoor slide 12; definition is plain meaning"
+   "A condition in which the blood holds methemoglobin, a form of hemoglobin that carries oxygen poorly. Her slides list it as the adverse effect of the \"caine\" topical anesthetics; with benzocaine that is absorbed systemically: risk of cyanosis, dyspnea, syncope, seizures, coma.",
+   "Patel Outdoor slide 12; Wound slide 14; the first sentence is the plain meaning"
   ],
   "vector": [
    "Disease vector",
@@ -3310,11 +3561,6 @@
    "Erythema migrans",
    "The acute skin lesion of early localized Lyme disease.",
    "Patel Outdoor slide 29"
-  ],
-  "prophylaxis": [
-   "Prophylaxis",
-   "Treatment given to prevent a disease before it develops.",
-   "plain meaning, not from the slides"
   ],
   "pep": [
    "Postexposure prophylaxis (PEP)",
@@ -3356,20 +3602,15 @@
    "A snake bite that delivers no venom.",
    "Patel Outdoor slide 54"
   ],
-  "ecchymosis": [
-   "Ecchymosis",
-   "Bruising.",
-   "plain meaning, not from the slides"
-  ],
   "compartment-syndrome": [
    "Compartment syndrome",
    "Pressure that builds inside a swollen limb and cuts off its blood supply; her slide says to call surgery.",
    "Patel Outdoor slide 57; definition is plain meaning"
   ],
-  "necrosis": [
-   "Necrosis",
-   "Death of tissue.",
-   "plain meaning, not from the slides"
+  "stari": [
+   "STARI",
+   "Southern tick-associated rash illness, from the Lone Star tick. The Infectious Diseases Society of America (IDSA) makes no antibiotic recommendation for it.",
+   "Patel Outdoor slide 30; the expansion of IDSA is the plain meaning"
   ]
  },
  "tell": [

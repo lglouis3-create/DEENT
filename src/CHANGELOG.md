@@ -10,6 +10,9 @@ Every update adds its bullets here in the same commit that makes the change.
 
 ## 2026-11-13 (Diseases tab fixes)
 - American spelling across the site: Practice, Recognize, color, labeled, signaling.
+- Diseases: every row shows whose content it is (Dr. Smith, Dr. Sikazwe, Dr. Patel), and Show filters by row.
+- Diseases: each drug panel opens with How it works, with a Watch button where a figure exists.
+- Diseases: only defined terms are underlined; course terms added, general words dropped (91 terms).
 - Diseases: after "Watch how it works", one press of Back returns to the Diseases tab.
 - Diseases: colors no longer change when the device is in dark mode (answers were hard to read).
 

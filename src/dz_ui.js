@@ -51,14 +51,15 @@ const DZ_UI = (() => {
     const p = (DZ.photos || []).find(x => x.id === id); if (!p) return '';
     return `<figure class="dzphoto"><img loading="lazy" src="${base()}dz/${esc(p.file)}" alt="${esc(p.alt)}"><figcaption>${esc(p.alt)} <span class="dzsrc">${esc(p.src)}</span></figcaption></figure>`;
   }
-  function block(b){
+  function block(b, framed){
     switch (b.k) {
       case 'facts': return facts(b.rows);
       case 'pts': return pts(b.items);
       case 'sub': return `<p class="dzsub">${mk(b.text)}</p>`;
       case 'warn': return `<p class="dzwarn">${mk(b.text)}</p>`;
       case 'grades': return '<div class="dzgrades">' + (b.rows || []).map(r => `<div><span class="lvl">${mk(r[0])}</span><span>${mk(r[1])}${r[2] ? ' <span class="dzsrc">' + mk(r[2]) + '</span>' : ''}</span></div>`).join('') + '</div>';
-      case 'prof': return `<div class="dzprof ${esc(b.p)}"><b class="t">${PROF[b.p] || ''}</b>${b.rows ? facts(b.rows) : ''}${b.text ? '<p>' + mk(b.text) + '</p>' : ''}${b.src ? '<p class="dzsrc">' + esc(b.src) + '</p>' : ''}</div>`;
+      case 'prof': { const inner = `${b.rows ? facts(b.rows) : ''}${b.text ? '<p>' + mk(b.text) + '</p>' : ''}${b.src ? '<p class="dzsrc">' + esc(b.src) + '</p>' : ''}`;
+        return framed ? inner : `<div class="dzprof ${esc(b.p)}"><b class="t">${PROF[b.p] || ''}</b>${inner}</div>`; }
       case 'map': return `<p class="dzsub">${mk(b.title || '')}</p>` + facts(b.rows, 'map') + (b.src ? `<p class="dzsrc">${esc(b.src)}</p>` : '');
       case 'photo': return photo(b.id);
       case 'fig': return `<button type="button" class="dzfig" data-jump="${esc(b.jump)}">▶ ${esc(b.label)}</button>`;
@@ -69,6 +70,25 @@ const DZ_UI = (() => {
         (b.move ? `<p class="dzmove">${mk(b.move)}</p>` : '') + '</div>';
       default: return '';
     }
+  }
+  /* Whose content is it. Every block carries p (sm, sk, pa); a block without one takes the step's professor when
+     the step has exactly one. Consecutive blocks of one professor form a group. On a card with more than one
+     professor each group gets that professor's colour on its left edge, and in a step with more than one
+     professor also the professor's name, so no row is left unattributed (Louis, 2026-11-13). */
+  const ORDER = ['sm', 'sk', 'pa'];
+  const profOf = (s, b) => (b.p && PROF[b.p]) ? b.p : ((s.profs || []).length === 1 ? s.profs[0] : '');
+  const stepProfs = s => { const set = new Set((s.blocks || []).map(b => profOf(s, b)).filter(Boolean)); (s.profs || []).forEach(x => { if (!(s.blocks || []).some(b => b.p)) set.add(x); }); return ORDER.filter(x => set.has(x)); };
+  function stepBody(s, cardMulti){
+    const groups = [];
+    (s.blocks || []).forEach(b => { const pr = profOf(s, b), g = groups[groups.length - 1]; if (g && g.p === pr) g.blocks.push(b); else groups.push({p: pr, blocks: [b]}); });
+    const mixed = stepProfs(s).length > 1;
+    return groups.map(g => {
+      const frame = cardMulti && !!g.p;
+      const html = g.blocks.map(b => block(b, frame)).join('');
+      if (!frame) return html;
+      const dim = st.filter && g.p !== st.filter ? ' dim' : '';
+      return `<div class="dzgrp ${g.p}${dim}" data-prof="${g.p}">${mixed ? `<b class="t">${PROF[g.p]}</b>` : ''}${html}</div>`;
+    }).join('');
   }
   const qsOf = c => (typeof QUESTIONS === 'undefined' ? [] : QUESTIONS.filter(q => (c.topics || []).includes(q.topic) && !q.lowYield));
   function patients(c){
@@ -81,7 +101,8 @@ const DZ_UI = (() => {
         <button type="button" class="btn sm" data-dz="nextpt">${s.k < P.length - 1 ? 'Next patient' : 'Start again (' + s.right + ' of ' + P.length + ' right)'}</button>` : '') + '</section>';
   }
   function card(c){
-    const profs = [...new Set((c.steps || []).flatMap(s => s.profs || []))];
+    const profs = ORDER.filter(x => (c.steps || []).some(s => stepProfs(s).includes(x)));
+    const multi = profs.length > 1;
     const n = qsOf(c).length;
     return `<article class="dzcard${st.recall ? ' recall' : ''}" data-card="${esc(c.id)}">
       <div class="dzhead"><h2>${esc(c.name)}</h2><button type="button" class="btn sm ghost" data-dz="recall" aria-pressed="${st.recall}">${st.recall ? 'Show everything' : 'Recall mode'}</button></div>
@@ -89,9 +110,9 @@ const DZ_UI = (() => {
       ${(c.short || []).length ? `<div class="dzshort"><h3>The short version</h3><ol>${c.short.map(x => '<li>' + mk(x) + '</li>').join('')}</ol></div>` : ''}
       ${profs.length > 1 ? `<div class="dzbar" role="group" aria-label="Professor">Show: ${[['', 'All']].concat(profs.map(p => [p, PROF[p]])).map(([k, l]) => `<button type="button" class="f${k}" data-filter="${k}" aria-pressed="${st.filter === k}">${l}</button>`).join('')}</div>` : ''}
       <div class="dzbar"><button type="button" data-dz="openall">${(c.steps || []).every((s, i) => isOpen(c, i)) ? 'Close all steps' : 'Open all steps'}</button></div>
-      <ol class="dzsteps">${(c.steps || []).map((s, i) => `<li class="${st.filter && !(s.profs || []).includes(st.filter) ? 'dim' : ''}${isOpen(c, i) ? ' open' : ''}">
-        <button type="button" class="sh" data-step="${i}" aria-expanded="${isOpen(c, i)}"><h3>${mk(s.title)}</h3>${(s.profs || []).map(p => `<span class="dztag ${p}">${PROF[p].replace('Dr. ', '')}</span>`).join('')}<span class="chev" aria-hidden="true">${isOpen(c, i) ? '−' : '+'}</span></button>
-        <div class="stepbody">${s.q ? `<p class="dzq">${mk(s.q)}</p>` : ''}${(s.blocks || []).map(block).join('')}
+      <ol class="dzsteps">${(c.steps || []).map((s, i) => `<li class="${st.filter && !stepProfs(s).includes(st.filter) ? 'dim' : ''}${isOpen(c, i) ? ' open' : ''}">
+        <button type="button" class="sh" data-step="${i}" aria-expanded="${isOpen(c, i)}"><h3>${mk(s.title)}</h3>${stepProfs(s).map(p => `<span class="dztag ${p}">${PROF[p].replace('Dr. ', '')}</span>`).join('')}<span class="chev" aria-hidden="true">${isOpen(c, i) ? '−' : '+'}</span></button>
+        <div class="stepbody">${s.q ? `<p class="dzq">${mk(s.q)}</p>` : ''}${stepBody(s, multi)}
         ${s.src ? `<p class="dzsrc">${esc(s.src)}</p>` : ''}
         <div class="dzrate"><button type="button" data-rate="g" data-i="${i}" class="${st.rate[c.id + i] === 'g' ? 'on' : ''}">I had it</button><button type="button" data-rate="m" data-i="${i}" class="${st.rate[c.id + i] === 'm' ? 'on' : ''}">I missed some</button></div></div></li>`).join('')}</ol>
       ${patients(c)}
@@ -156,9 +177,18 @@ const DZ_UI = (() => {
   function drugPanel(k){
     const d = DZ.drugs[k]; if (!d) return;
     const name = id => (DZ.cards.find(c => c.id === id) || {}).name || id;
+    // "How it works" comes first in every panel, in the same place for every drug (Louis, 2026-11-13): the
+    // mechanism as the lectures teach it, then a button for each drawn step-through or reaction that shows it.
+    const how = d.how && d.how.text ? d.how : null, same = (a, b) => plain(a || '').trim() === plain(b || '').trim();
+    const figs = (d.figs || []).map(f => `<button type="button" class="dzfig" data-jump="${esc(f.jump)}">▶ ${esc(f.label)}</button>`).join('');
     dlg(`<h3>${esc(d.name)}${d.brand ? ' (' + esc(d.brand) + ')' : ''}</h3>
-      ${d.sm ? `<div class="dzprof sm"><b class="t">Dr. Smith · target</b><p>${mk(d.sm.text)}</p><p class="dzsrc">${esc(d.sm.src || '')}</p></div>` : ''}
-      ${d.sk ? `<div class="dzprof sk"><b class="t">Dr. Sikazwe · chemistry</b><p>${mk(d.sk.text)}</p><p class="dzsrc">${esc(d.sk.src || '')}</p></div>` : ''}
+      <div class="dzhow"><b class="t">How it works</b>
+        ${how ? `<div class="dzprof ${esc(how.p)}"><b class="t">${PROF[how.p] || ''}</b><p>${mk(how.text)}</p>${how.p === 'sm' && d.sm && !same(how.text, d.sm.text) ? `<p class="tgt"><b>On her target list:</b> ${mk(d.sm.text)}</p>` : ''}<p class="dzsrc">${esc(how.src || '')}</p></div>`
+              : (d.sm ? `<div class="dzprof sm"><b class="t">Dr. Smith</b><p>${mk(d.sm.text)}</p><p class="dzsrc">${esc(d.sm.src || '')}</p></div>`
+                      : '<p class="dzsrc">The lectures give no mechanism for this product.</p>')}
+        ${figs}</div>
+      ${d.sm && how && how.p !== 'sm' ? `<div class="dzprof sm"><b class="t">Dr. Smith · target</b><p>${mk(d.sm.text)}</p><p class="dzsrc">${esc(d.sm.src || '')}</p></div>` : ''}
+      ${d.sk && !(how && how.p === 'sk' && same(how.text, d.sk.text)) ? `<div class="dzprof sk"><b class="t">Dr. Sikazwe · chemistry</b><p>${mk(d.sk.text)}</p><p class="dzsrc">${esc(d.sk.src || '')}</p></div>` : ''}
       ${(d.pa || []).length ? `<div class="dzprof pa"><b class="t">Dr. Patel · where it is used</b>${d.pa.map(r => `<div class="use"><button type="button" class="dzgo" data-go="${esc(r.dz)}">${esc(name(r.dz))}</button><p><b>${mk(r.role || '')}</b>${r.how ? '<br>' + mk(r.how) : ''}</p><p class="dzsrc">${esc(r.src || '')}</p></div>`).join('')}</div>` : ''}
       ${(d.counsel || []).length ? `<div class="dzcounsel"><b class="t">What to tell the patient</b>${pts(d.counsel)}<p class="dzsrc">${esc(d.counselSrc || '')}</p></div>` : ''}
       ${(d.avoid || []).length ? `<div class="dzavoid"><b class="t">Who should not get it, and cautions</b>${pts(d.avoid)}</div>` : ''}`);
@@ -170,7 +200,16 @@ const DZ_UI = (() => {
     if (t.dataset.view) { st.view = t.dataset.view; render(); return; }
     if (t.dataset.card && t.closest('.dzpicker')) { st.card = t.dataset.card; st.filter = ''; render(); const el = pane.querySelector('.dzcard'); if (el && el.getBoundingClientRect().top > window.innerHeight * 0.6) { if (typeof scrollToEl === 'function') scrollToEl(el); else el.scrollIntoView(); } return; }
     if (t.dataset.drug) { drugPanel(t.dataset.drug); return; }
-    if (t.dataset.term) { const x = DZ.terms[t.dataset.term]; dlg(`<h3>${esc(x[0])}</h3><p>${mk(x[1])}</p><p class="dzsrc">Source: ${esc(x[2] || '')}</p>`); return; }
+    if (t.dataset.term) {
+      const x = DZ.terms[t.dataset.term], inDlg = t.closest('.dzdlg');
+      if (inDlg) {   // a term inside a drug panel: show its meaning under the line, so the panel stays
+        const host = t.closest('p, li, dd, div') || t.parentNode, old = host.parentNode.querySelector(':scope > .dzdef[data-for="' + t.dataset.term + '"]');
+        if (old) { old.remove(); return; }
+        const d = document.createElement('p'); d.className = 'dzdef'; d.dataset.for = t.dataset.term;
+        d.innerHTML = `<b>${esc(x[0])}:</b> ${mk(x[1])} <span class="dzsrc">${esc(x[2] || '')}</span>`; host.after(d); return;
+      }
+      dlg(`<h3>${esc(x[0])}</h3><p>${mk(x[1])}</p><p class="dzsrc">Source: ${esc(x[2] || '')}</p>`); return;
+    }
     if (t.dataset.go) { const d = pane.querySelector('.dzdlg'); if (d.open) d.close(); st.view = 'cards'; st.card = t.dataset.go; st.filter = ''; render(); window.scrollTo(0, 0); return; }
     if (t.dataset.filter != null && t.closest('.dzbar')) { st.filter = t.dataset.filter; render(); return; }
     if (t.dataset.step != null) { const k = c.id + ':' + t.dataset.step; st.open[k] = !st.open[k]; const y = window.scrollY; render(); window.scrollTo(0, y); return; }
@@ -186,7 +225,7 @@ const DZ_UI = (() => {
     }
     // a "Watch how it works" button carries data-jump: the core's own document-level handler makes the jump
     // (one entry on the Back stack). Calling jump() here as well put two entries there (Louis, 2026-11-13).
-    if (t.dataset.jump) return;
+    if (t.dataset.jump) { const d = pane.querySelector('.dzdlg'); if (d && d.open && d.close) d.close(); return; }   // a panel's own button: close the panel, the core jumps
     const a = t.dataset.dz;
     if (a === 'close') { const d = pane.querySelector('.dzdlg'); if (d.open && d.close) d.close(); else d.removeAttribute('open'); }
     else if (a === 'recall') { st.recall = !st.recall; render(); }
@@ -246,6 +285,12 @@ const DZ_UI = (() => {
 #v-dz .dzprof b.t,#v-dz .dzcounsel b.t,#v-dz .dzavoid b.t{font-size:12.5px;display:block}
 #v-dz .dzprof.sm b.t{color:var(--dz-sm)}#v-dz .dzprof.sk b.t{color:var(--dz-sk)}#v-dz .dzprof.pa b.t{color:var(--dz-pa)}
 #v-dz .dzprof p{margin:2px 0}
+#v-dz .dzgrp{border-left:4px solid var(--line);padding:2px 0 2px 12px;margin:10px 0;border-radius:0}
+#v-dz .dzgrp.sm{border-color:var(--dz-sm)}#v-dz .dzgrp.sk{border-color:var(--dz-sk)}#v-dz .dzgrp.pa{border-color:var(--dz-pa)}
+#v-dz .dzgrp>b.t{display:inline-block;font-size:12.5px;border-radius:999px;padding:1px 9px;margin:0 0 4px}
+#v-dz .dzgrp.sm>b.t{background:var(--dz-smbg);color:var(--dz-sm)}#v-dz .dzgrp.sk>b.t{background:var(--dz-skbg);color:var(--dz-sk)}#v-dz .dzgrp.pa>b.t{background:var(--dz-pabg);color:var(--dz-pa)}
+#v-dz .dzgrp.dim{opacity:.25}
+#v-dz .dzgrp>:last-child{margin-bottom:0}
 #v-dz .dzline{border:1px solid var(--line);border-radius:10px;padding:8px 10px;background:var(--surface,transparent);margin:0 0 8px}
 #v-dz .dzline h4{margin:0 0 4px;font-size:14.5px;white-space:normal;text-transform:none;letter-spacing:0}#v-dz .dzline h4 .lbl{white-space:normal}
 #v-dz .lbl{display:inline-block;max-width:100%;box-sizing:border-box;overflow-wrap:anywhere;background:var(--accent);color:#fff;border-radius:6px;padding:0 8px;font-size:13px;margin-right:4px}
@@ -261,7 +306,7 @@ const DZ_UI = (() => {
 #v-dz .dzfig{font:inherit;font-size:14px;min-height:40px;border:1px solid var(--accent);background:transparent;color:var(--accent);border-radius:8px;padding:6px 12px;margin:4px 0;text-align:left}
 #v-dz .dzphoto{margin:8px 0}#v-dz .dzphoto img{max-width:100%;max-height:340px;border-radius:8px;border:1px solid var(--line);display:block}
 #v-dz .dzphoto figcaption{font-size:13px;color:var(--text-dim);margin-top:3px}
-#v-dz .dzcz{border-bottom:1px dotted var(--text-dim)}
+#v-dz .dzcz{border-bottom:0}
 #v-dz .recall .dzcz:not(.open){background:var(--line);color:transparent;border-radius:4px;cursor:pointer;user-select:none;border:0;padding:0 6px}
 #v-dz .recall .dzcz:not(.open) *{visibility:hidden}
 #v-dz .recall .dzcz.open{background:var(--accent-bg,#eaf0f9);border-radius:4px;padding:0 3px}
@@ -290,6 +335,9 @@ const DZ_UI = (() => {
 #v-dz .dzdlg .x{float:right;font:inherit;border:0;background:none;color:var(--accent);font-size:15px;min-height:44px;padding:0 6px}
 #v-dz .dzdlg .use{border-top:1px solid var(--line);padding:6px 0}#v-dz .dzdlg .use:first-of-type{border-top:0}#v-dz .dzdlg .use p{margin:2px 0}
 #v-dz .dzgo{font:inherit;font-size:13px;border:1px solid var(--dz-pa);color:var(--dz-pa);background:var(--dz-pabg);border-radius:999px;padding:1px 10px;min-height:30px}
+#v-dz .dzhow .tgt{font-size:14px;margin:4px 0 2px}
+#v-dz .dzdef{background:var(--accent-bg,#eaf0f9);border-radius:8px;padding:6px 10px;margin:4px 0;font-size:14px}
+#v-dz .dzhow{border:1px solid var(--line);border-radius:10px;padding:8px 10px;margin:8px 0;background:var(--surface,transparent)}#v-dz .dzhow>b.t{display:block;font-size:14px;margin:0 0 2px}#v-dz .dzhow .dzfig{display:block;width:100%;margin:6px 0 0}
 #v-dz .dzcounsel{border-left:3px solid var(--accent);padding:2px 0 2px 10px;margin:8px 0}#v-dz .dzcounsel b.t{color:var(--accent)}
 #v-dz .dzavoid{border-left:3px solid var(--dz-bad);padding:2px 0 2px 10px;margin:8px 0}#v-dz .dzavoid b.t{color:var(--dz-bad)}
 `;

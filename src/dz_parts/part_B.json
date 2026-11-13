@@ -72,11 +72,13 @@
           "Corticosteroid withdrawal"
          ]
         ]
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "sub",
-       "text": "Possible comorbidities (Dr. Patel, slide 25)"
+       "text": "Possible comorbidities (Dr. Patel, slide 25)",
+       "p": "pa"
       },
       {
        "k": "facts",
@@ -113,7 +115,8 @@
          "Kidney",
          "Renal disease"
         ]
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "prof",
@@ -137,7 +140,7 @@
         ],
         [
          "Nail psoriasis",
-         "Pitting, ridging, discoloration, onycholysis"
+         "Pitting, ridging, discoloration, [[onycholysis|onycholysis]]"
         ]
        ]
       }
@@ -146,10 +149,11 @@
     {
      "title": "What goes wrong",
      "profs": [
-      "sm"
+      "sm",
+      "pa"
      ],
      "q": "Which cytokines drive it, and how fast do the keratinocytes turn over?",
-     "src": "Smith Pathophys slides 19, 21–23; Smith PCol slides 66–74",
+     "src": "Smith Pathophys slides 19, 21–23; Smith PCol slides 66–74; Patel 11/10 and 11/11 lectures",
      "blocks": [
       {
        "k": "prof",
@@ -190,7 +194,7 @@
        "title": "Which drug blocks which signal",
        "rows": [
         [
-         "TNF-α",
+         "[[tnf|TNF-α]]",
          "Adalimumab, etanercept, infliximab, golimumab, certolizumab"
         ],
         [
@@ -210,18 +214,15 @@
          "Brodalumab"
         ]
        ],
-       "src": "Smith PCol slides 66–74"
-      },
-      {
-       "k": "fig",
-       "label": "Watch how it works: where each cytokine biologic binds",
-       "jump": "guide:fig-il-axis"
+       "src": "Smith PCol slides 66–74",
+       "p": "sm"
       },
       {
        "k": "pts",
        "items": [
-        "Dr. Patel: psoriasis has the fastest epidermal turnover of the three scaly conditions (11/10 and 11/11 lectures)."
-       ]
+        "Dr. Patel: psoriasis has the fastest [[kinetics|epidermal turnover]] of the three scaly conditions (11/10 and 11/11 lectures)."
+       ],
+       "p": "pa"
       }
      ]
     },
@@ -252,15 +253,18 @@
          "Itching",
          "In more than 50% of patients; can be severe"
         ]
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "photo",
-       "id": "ps-plaque"
+       "id": "ps-plaque",
+       "p": "pa"
       },
       {
        "k": "sub",
-       "text": "Severity by [[bsa|body surface area (BSA)]]"
+       "text": "Severity by [[bsa|body surface area (BSA)]]",
+       "p": "pa"
       },
       {
        "k": "grades",
@@ -280,7 +284,8 @@
          "BSA {{≥ 10%}}",
          "★ “it has been corrected to 10% … I want you to follow this slide”"
         ]
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "facts",
@@ -308,9 +313,10 @@
         ],
         [
          "Other tools",
-         "PASI and DLQI also mark severe at 10: “I only want you to know the BSA”"
+         "[[pasi|PASI]] and [[dlqi|DLQI]] also mark severe at 10: “I only want you to know the BSA”"
         ]
-       ]
+       ],
+       "p": "pa"
       }
      ]
     },
@@ -330,18 +336,20 @@
          [
           "Lower stress; regular exercise; weight management (BMI 18.5–24.9)",
           "Moderate alcohol; stop smoking",
-          "Moisturizers; oatmeal baths; sunscreen SPF 30+ with UVA protection"
+          "Moisturizers; oatmeal baths; sunscreen [[spf|SPF]] 30+ with [[uva|UVA]] protection"
          ]
         ],
         [
          "What decides the choice",
          "Age, severity, location of lesions, comorbidities, past and current treatment, cost"
         ]
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "sub",
-       "text": "The two algorithms (slides 35 and 37)"
+       "text": "The two algorithms (slides 35 and 37)",
+       "p": "pa"
       },
       {
        "k": "facts",
@@ -359,7 +367,7 @@
          [
           "Moderate after the topical agents have been tried, or severe",
           "Starts with a systemic agent (“most likely methotrexate”) ± a topical agent",
-          "Then a more potent systemic agent or a biologic",
+          "Then a more potent systemic agent or a [[biologic|biologic]]",
           "★ Last line: a biologic",
           "Biologic considered earlier with comorbidities such as psoriatic arthritis"
          ]
@@ -368,7 +376,8 @@
          "Both",
          "Moisturizers; continue if controlled; step down to the lowest dose or potency that keeps control"
         ]
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "line",
@@ -399,7 +408,7 @@
           "Anthralin: thick plaques only, 2 hours or less, then wiped off; zinc oxide around the edges",
           "Coal tar: on in the evening, washed off in the morning",
           "Salicylic acid: shampoo for scalp lesions",
-          "Pimecrolimus: intertriginous areas"
+          "Pimecrolimus: [[intertriginous|intertriginous]] areas"
          ]
         ]
        ],
@@ -409,7 +418,7 @@
          "Low-potency corticosteroid"
         ],
         [
-         "Skin folds ([[intertriginous|intertriginous]] areas)",
+         "Skin folds (intertriginous areas)",
          "Pimecrolimus"
         ],
         [
@@ -425,7 +434,8 @@
          "Another topical option"
         ]
        ],
-       "move": "Move to the next line when: the psoriasis is moderate and the topical agents have been tried, or it is severe. Topical steroids are limited to 4 weeks, and she contacts the patient at 1–2 weeks."
+       "move": "Move to the next line when: the psoriasis is moderate and the topical agents have been tried, or it is severe. Topical steroids are limited to 4 weeks, and she contacts the patient at 1–2 weeks.",
+       "p": "pa"
       },
       {
        "k": "line",
@@ -477,10 +487,11 @@
         ],
         [
          "Psoriatic arthritis after methotrexate failed",
-         "Tofacitinib (JAK inhibitor); not with a biologic; no live vaccines"
+         "Tofacitinib ([[jak|JAK]] inhibitor); not with a biologic; no live vaccines"
         ]
        ],
-       "move": "Move to the next line when: topicals and an oral systemic agent have failed."
+       "move": "Move to the next line when: topicals and an oral systemic agent have failed.",
+       "p": "pa"
       },
       {
        "k": "line",
@@ -542,7 +553,8 @@
          "A biologic is considered earlier"
         ]
        ],
-       "move": "Move to the next line when: the psoriasis is severe and [[refractory|refractory]]."
+       "move": "Move to the next line when: the psoriasis is severe and refractory.",
+       "p": "pa"
       },
       {
        "k": "line",
@@ -557,11 +569,13 @@
         "About {{90%}} respond",
         "Skin biopsy first, to confirm psoriasis",
         "Risk: serious burns, blistering, peeling"
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "warn",
-       "text": "After starting any treatment: contact the patient in 1–2 weeks."
+       "text": "After starting any treatment: contact the patient in 1–2 weeks.",
+       "p": "pa"
       }
      ]
     }
@@ -772,7 +786,7 @@
         ],
         [
          "What happens",
-         "Faster epidermal cell turnover and abnormal keratinization: flaking and [[pruritus|pruritus]]"
+         "Faster epidermal cell turnover and abnormal keratinization: flaking and pruritus"
         ],
         [
          "Who",
@@ -790,13 +804,15 @@
          "Mild inflammation",
          "{{Secondary}}, from scratching: “it’s not gonna be from the start of that condition”"
         ]
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "pts",
        "items": [
         "★ Dandruff has the slowest [[kinetics|epidermal turnover]] of the three scaly conditions; psoriasis the fastest. She asks the order only."
-       ]
+       ],
+       "p": "pa"
       }
      ]
     },
@@ -827,11 +843,13 @@
          "Epidermal [[hyperplasia|hyperplasia]]",
          "Absent"
         ]
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "photo",
-       "id": "dandruff-scalp"
+       "id": "dandruff-scalp",
+       "p": "pa"
       },
       {
        "k": "grades",
@@ -846,7 +864,8 @@
          "{{Daily}} dandruff, moderate–severe inflammation",
          "Two groups only: “it’s either mild or it’s moderate to severe”"
         ]
-       ]
+       ],
+       "p": "pa"
       }
      ]
     },
@@ -870,29 +889,31 @@
          [
           "{{Inflammation}} from the start",
           "{{Yellow, oily}} scales on red skin, or scale beyond the scalp (face, trunk) → seborrheic dermatitis",
-          "{{Silvery-white}} scale on sharp-bordered red plaques → psoriasis",
-          "Scalp scaling in an infant → cradle cap; dandruff starts at {{puberty}}"
+          "{{Silvery-white}} scale on sharp-bordered red [[plaque|plaques]] → psoriasis",
+          "Scalp scaling in an infant → [[cradle-cap|cradle cap]]; dandruff starts at {{puberty}}"
          ]
         ],
         [
          "Follow-up",
          "Slide 51: a week after self-treatment begins; she said 1 to 2 weeks (11/11)"
         ]
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "pts",
        "items": [
         "Her slides give a time to refer (worse, or longer than 7 days) on the seborrheic dermatitis slide, not on the dandruff slide."
-       ]
+       ],
+       "p": "pa"
       }
      ]
     },
     {
      "title": "Treat it: match the shampoo to the severity",
      "profs": [
-      "pa",
-      "sm"
+      "sm",
+      "pa"
      ],
      "q": "What does each grade get, how long does a medicated shampoo stay on, and what is the weekly taper?",
      "src": "Patel Scaly slides 7, 9; 11/10 lecture; Smith PCol slides 53, 57",
@@ -908,7 +929,8 @@
           "Less visible scaling; less itching"
          ]
         ]
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "line",
@@ -918,7 +940,8 @@
        "pts": [
         "★ Her poll answer for intermittent flakes with no inflammation",
         "{{Daily or every other day}}"
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "line",
@@ -944,7 +967,8 @@
           "Then {{once weekly}} for control"
          ]
         ]
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "line",
@@ -955,7 +979,8 @@
        ],
        "pts": [
         "★ The dandruff “no” on her OTC chart: “Hydrocortisone 1%, not effective in dandruff”"
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "prof",
@@ -963,7 +988,7 @@
        "rows": [
         [
          "Selenium sulfide, zinc pyrithione",
-         "Cytostatic and antifungal; mechanism unknown"
+         "[[cytostatic|Cytostatic]] and antifungal; mechanism unknown"
         ],
         [
          "Coal tar",
@@ -1155,7 +1180,7 @@
          [
           "Adolescents and adults: {{1–3%}}",
           "{{Men}} more than women",
-          "Infants: see the cradle cap card"
+          "Infants: see the [[cradle-cap|cradle cap]] card"
          ]
         ],
         [
@@ -1169,13 +1194,15 @@
           "Immunosuppression; neurologic conditions (slide 6)"
          ]
         ]
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "pts",
        "items": [
-        "★ Second-fastest epidermal turnover of the three scaly conditions; she asks the order only."
-       ]
+        "★ Second-fastest [[kinetics|epidermal turnover]] of the three scaly conditions; she asks the order only."
+       ],
+       "p": "pa"
       }
      ]
     },
@@ -1192,7 +1219,7 @@
        "rows": [
         [
          "Scale",
-         "★ {{Yellow, greasy}} scales in patches or plaques, with exudate and crusting"
+         "★ {{Yellow, greasy}} scales in patches or [[plaque|plaques]], with exudate and crusting"
         ],
         [
          "Skin under it",
@@ -1214,17 +1241,20 @@
          "Her case",
          "Scalp, eyebrows, ear canal; yellowish scales in the nasolabial creases"
         ]
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "photo",
-       "id": "sd-face"
+       "id": "sd-face",
+       "p": "pa"
       },
       {
        "k": "pts",
        "items": [
         "★ Her key words for the poll: “greasy, scaling, yellowish scales … as well as the location”."
-       ]
+       ],
+       "p": "pa"
       }
      ]
     },
@@ -1258,7 +1288,8 @@
          "Her case",
          "OTC dandruff shampoos gave only temporary relief: she still chose the first-line shampoo, not referral"
         ]
-       ]
+       ],
+       "p": "pa"
       }
      ]
     },
@@ -1277,7 +1308,7 @@
          "Goals",
          [
           "Reduce inflammation and epidermal turnover",
-          "Minimize or remove visible [[erythema|erythema]] and scaling"
+          "Minimize or remove visible erythema and scaling"
          ]
         ],
         [
@@ -1288,7 +1319,8 @@
           "Moisturizing [[emollient|emollients]] after washing"
          ]
         ]
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "line",
@@ -1303,7 +1335,8 @@
         "Or a cream containing salicylic acid or sulfur",
         "Wash the skin often: slide 15 says more often than twice daily; she said twice a day",
         "Dishwashing liquid may be used on tough scale"
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "line",
@@ -1331,7 +1364,8 @@
           "Not improved at 4 weeks: keep the same frequency"
          ]
         ]
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "line",
@@ -1341,7 +1375,8 @@
        "pts": [
         "Topical {{antifungal creams}} to decrease fungal growth",
         "Ultraviolet light therapy is also listed"
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "line",
@@ -1356,7 +1391,8 @@
         "Other parts of the body: corticosteroid cream",
         "Mild to potent",
         "OTC chart: hydrocortisone 0.5–1%"
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "line",
@@ -1368,7 +1404,8 @@
        ],
        "pts": [
         "Ketoconazole shampoo and a {{corticosteroid lotion}} must often be combined in therapy-resistant cases"
-       ]
+       ],
+       "p": "pa"
       }
      ]
     }
@@ -1541,7 +1578,7 @@
         ],
         [
          "Organism",
-         "Malassezia species, as in dandruff"
+         "[[malassezia|Malassezia]] species, as in dandruff"
         ],
         [
          "How long",
@@ -1555,7 +1592,8 @@
          "Not dandruff",
          "Dandruff starts at puberty"
         ]
-       ]
+       ],
+       "p": "pa"
       }
      ]
     },
@@ -1586,11 +1624,13 @@
          "Her case",
          "An infant a couple of weeks old with a scaly scalp: “this is an example of cradle cap”"
         ]
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "photo",
-       "id": "cradle-cap"
+       "id": "cradle-cap",
+       "p": "pa"
       }
      ]
     },
@@ -1612,7 +1652,8 @@
         "Then shampoo with a {{non-medicated}} shampoo",
         "Use a {{soft bristle brush}}",
         "Mineral oil or olive oil also softens the scales"
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "line",
@@ -1622,13 +1663,15 @@
        "pts": [
         "Wash with a {{mild soap or cleanser}}",
         "Apply a facial [[emollient|emollient]]"
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "pts",
        "items": [
         "“With our infants, we’re mostly using non-pharm therapy.”"
-       ]
+       ],
+       "p": "pa"
       }
      ]
     },
@@ -1653,7 +1696,8 @@
         "★ “{{Ketoconazole}} shampoo is not recommended in infants”: it irritates infant skin",
         "Face too: “We’re still not recommending corticosteroids cause remember the age parameter”",
         "Nystatin ointment: “would not be beneficial”"
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "line",
@@ -1666,7 +1710,8 @@
         "{{Salicylic acid 3–5%}} in {{olive oil}} or a water-soluble base",
         "“Severe cases only”: “an option if nothing else has worked”",
         "Why last: an infant’s skin is thin, absorbs more, and is more prone to irritation"
-       ]
+       ],
+       "p": "pa"
       }
      ]
     }
@@ -1804,6 +1849,25 @@
     "Infants with cradle cap: “DO NOT suggest corticosteroids” (slide 18)",
     "Not for longer than 4 weeks in psoriasis (slide 36)",
     "Withdrawal of corticosteroids can precipitate psoriasis (slide 24)"
+   ],
+   "how": {
+    "p": "sm",
+    "text": "Binds the glucocorticoid receptor inside the cell. The drug–receptor complex binds the GRE on DNA, or holds NF-kB and AP-1 off the DNA, so anti-inflammatory proteins rise and inflammatory proteins fall.",
+    "src": "Smith PCol slides 5–7, 10"
+   },
+   "figs": [
+    {
+     "label": "Watch how it works: nuclear receptor binders, direct and indirect action (corticosteroids, retinoids, vitamin D analogs)",
+     "jump": "ref:ref-l1-nr"
+    },
+    {
+     "label": "Watch how it works: the steroid skeleton, what raises its activity, and its hydrogen bonds in the receptor (Dr. Sikazwe)",
+     "jump": "guide:fig-steroid"
+    },
+    {
+     "label": "Watch how it works: potency by structure, hydrocortisone to clobetasol propionate (Dr. Sikazwe)",
+     "jump": "guide:cb-gc-potency"
+    }
    ]
   },
   "hydrocortisone": {
@@ -1852,6 +1916,29 @@
    "avoid": [
     "Infants with cradle cap, on the scalp or the face (slide 18)",
     "Dandruff: not effective (slide 7)"
+   ],
+   "how": {
+    "p": "sm",
+    "text": "A low-potency corticosteroid. It binds the glucocorticoid receptor; the drug–receptor complex binds the GRE on DNA, or holds NF-kB and AP-1 off the DNA, so fewer inflammatory proteins are made.",
+    "src": "Smith PCol slides 5–7, 10–11"
+   },
+   "figs": [
+    {
+     "label": "Watch how it works: nuclear receptor binders, direct and indirect action (corticosteroids, retinoids, vitamin D analogs)",
+     "jump": "ref:ref-l1-nr"
+    },
+    {
+     "label": "Watch how it works: the steroid skeleton, what raises its activity, and its hydrogen bonds in the receptor (Dr. Sikazwe)",
+     "jump": "guide:fig-steroid"
+    },
+    {
+     "label": "Watch how it works: potency by structure, hydrocortisone to clobetasol propionate (Dr. Sikazwe)",
+     "jump": "guide:cb-gc-potency"
+    },
+    {
+     "label": "See the reaction: hydrocortisone metabolism (11β-HSD to and from inactive cortisone)",
+     "jump": "guide:rx-hydrocortisone"
+    }
    ]
   },
   "calcipotriene": {
@@ -1881,6 +1968,21 @@
    "counselSrc": "Patel Scaly slides 36, 48",
    "avoid": [
     "Dr. Smith: more than 100 g per week risks hypercalcemia and hypercalciuria (PCol slides 21–22)"
+   ],
+   "how": {
+    "p": "sm",
+    "text": "Binds the vitamin D receptor (VDR); the VDR–drug complex pairs with RXR-α and changes gene expression. Keratinocytes multiply less and differentiate, and less inflammatory cytokine is released.",
+    "src": "Smith PCol slide 21"
+   },
+   "figs": [
+    {
+     "label": "Watch how it works: nuclear receptor binders, direct and indirect action (corticosteroids, retinoids, vitamin D analogs)",
+     "jump": "ref:ref-l1-nr"
+    },
+    {
+     "label": "See the reaction: vitamin D3 to calcitriol in the body (calcipotriene is a vitamin D3 analog)",
+     "jump": "guide:rx-vitd"
+    }
    ]
   },
   "tazarotene": {
@@ -1909,6 +2011,25 @@
    "counselSrc": "Patel Scaly slides 36, 48",
    "avoid": [
     "Pregnancy (Dr. Smith, PCol slide 18; Dr. Sikazwe: teratogenic, DPAW page 29)"
+   ],
+   "how": {
+    "p": "sm",
+    "text": "A retinoid: it binds RAR and RXR, which form an RAR–RXR heterodimer that moves into the nucleus and binds the RARE on DNA to change gene transcription. In acne: less cohesion between epidermal cells and faster cell turnover; in psoriasis the precise mechanism is unknown and may be anti-inflammatory and antiproliferative.",
+    "src": "Smith PCol slides 14–15, 18"
+   },
+   "figs": [
+    {
+     "label": "Watch how it works: nuclear receptor binders, direct and indirect action (corticosteroids, retinoids, vitamin D analogs)",
+     "jump": "ref:ref-l1-nr"
+    },
+    {
+     "label": "Watch how it works: retinoid structures, exposed acid (directly active) or ester prodrug (Dr. Sikazwe)",
+     "jump": "guide:cb-retinoids"
+    },
+    {
+     "label": "See the reaction: tazarotene, an ester prodrug, to tazarotenic acid",
+     "jump": "guide:rx-tazarotene"
+    }
    ]
   },
   "anthralin": {
@@ -1939,6 +2060,21 @@
    "avoid": [
     "Normal skin around the plaque (slide 36)",
     "Dr. Smith: the face and intertriginous areas (PCol slides 55–56)"
+   ],
+   "how": {
+    "p": "sm",
+    "text": "Exact mechanism not known: it may act on the mitochondria of keratinocytes and reduce mitotic activity, and it prevents T-lymphocyte activation. The overgrowth of keratinocytes is suppressed.",
+    "src": "Smith PCol slide 55"
+   },
+   "figs": [
+    {
+     "label": "Watch how it works: Dr. Smith’s narrated walkthrough “Antipsoriatic cytotoxic agents” (opens her guide section; choose that walkthrough)",
+     "jump": "guide:gobj-l1-4"
+    },
+    {
+     "label": "See the reaction: anthralin autoxidation to the anthranyl radical and superoxide",
+     "jump": "guide:rx-anthralin"
+    }
    ]
   },
   "coal-tar": {
@@ -1981,6 +2117,17 @@
    "counselSrc": "Patel Scaly slides 9, 16, 36",
    "avoid": [
     "Dr. Smith: photosensitizing; caution on oozing or vesicular skin (PCol slides 53–54)"
+   ],
+   "how": {
+    "p": "sm",
+    "text": "Antiproliferative and anti-inflammatory: it cross-links with DNA to inhibit cell division, so epidermal cell turnover slows. The mechanism is not fully known.",
+    "src": "Smith PCol slide 53"
+   },
+   "figs": [
+    {
+     "label": "Watch how it works: Dr. Smith’s narrated walkthrough “Antipsoriatic cytotoxic agents” (opens her guide section; choose that walkthrough)",
+     "jump": "guide:gobj-l1-4"
+    }
    ]
   },
   "salicylic-acid": {
@@ -2028,6 +2175,21 @@
    "counselSrc": "Patel Scaly slides 15, 18, 36; 11/10 lecture",
    "avoid": [
     "Infants, except severe cases: thin skin, higher absorption, more irritation (11/10 lecture)"
+   ],
+   "how": {
+    "p": "sm",
+    "text": "A keratolytic: it may solubilize the cell-surface proteins that keep the stratum corneum intact, so the stratum corneum is shed (desquamation).",
+    "src": "Smith PCol slide 39"
+   },
+   "figs": [
+    {
+     "label": "Watch how it works: Dr. Smith’s narrated walkthrough “Keratolytics” (opens her guide section; choose that walkthrough)",
+     "jump": "guide:gobj-l1-4"
+    },
+    {
+     "label": "See the reaction: glycolic and salicylic acid metabolism",
+     "jump": "guide:rx-hydroxyacids"
+    }
    ]
   },
   "pimecrolimus": {
@@ -2053,7 +2215,18 @@
     "In psoriasis it is for plaques in the skin folds."
    ],
    "counselSrc": "Patel Scaly slide 36",
-   "avoid": []
+   "avoid": [],
+   "how": {
+    "p": "sm",
+    "text": "Inhibits calcineurin, so less IL-2 is made. T cells and mast cells are not activated, and fewer proinflammatory cytokines and mediators are produced.",
+    "src": "Smith PCol slides 24–27"
+   },
+   "figs": [
+    {
+     "label": "Watch how it works: calcineurin inhibitors (calcineurin, NFAT and IL-2)",
+     "jump": "guide:fig-cni-nfat"
+    }
+   ]
   },
   "methotrexate": {
    "name": "Methotrexate",
@@ -2069,7 +2242,7 @@
    "pa": [
     {
      "dz": "psoriasis",
-     "role": "Usually the first oral systemic agent (“first line, most affordable”); psoriasis and psoriatic arthritis; T-cell and cytokine suppressor, oral DMARD",
+     "role": "Usually the first oral systemic agent (“first line, most affordable”); psoriasis and psoriatic arthritis; T-cell and cytokine suppressor, oral [[dmard|DMARD]]",
      "how": "Onset 3–6 weeks. Folic acid 1–5 mg daily. Screening: CBC, LFTs. The topical is continued.",
      "src": "Patel Scaly slides 37, 39; 11/11 lecture"
     }
@@ -2088,6 +2261,25 @@
     "Cirrhosis",
     "Blood dyscrasias",
     "Higher risk of hepatotoxicity: diabetes, obesity, alcoholism, more than 4 g total cumulative dose"
+   ],
+   "how": {
+    "p": "sm",
+    "text": "A folic acid analog that inhibits dihydrofolate reductase (DHFR), so tetrahydrofolate is not made, purines run short and cells die. Keratinocyte hyperproliferation and the number of T cells fall.",
+    "src": "Smith PCol slide 59"
+   },
+   "figs": [
+    {
+     "label": "Watch how it works: methotrexate and the folate cycle",
+     "jump": "guide:g-fig-folate-cycle"
+    },
+    {
+     "label": "Watch how it works: methotrexate against folic acid in the DHFR cavity (Dr. Sikazwe)",
+     "jump": "guide:cb-mtx"
+    },
+    {
+     "label": "See the reaction: folate reduction by DHFR, the step methotrexate blocks",
+     "jump": "guide:rx-folate"
+    }
    ]
   },
   "cyclosporine": {
@@ -2121,6 +2313,21 @@
     "Systemic malignancy",
     "Infections",
     "Elderly: increased risk of hypertension"
+   ],
+   "how": {
+    "p": "sm",
+    "text": "Binds cyclophilin, and the complex inhibits calcineurin, so less IL-2 is made for T-cell proliferation.",
+    "src": "Smith PCol slide 26"
+   },
+   "figs": [
+    {
+     "label": "Watch how it works: calcineurin inhibitors (calcineurin, NFAT and IL-2)",
+     "jump": "guide:fig-cni-nfat"
+    },
+    {
+     "label": "Watch how it works: cyclosporine is activated by binding cyclophilin (Dr. Sikazwe)",
+     "jump": "guide:cb-cyclosporine"
+    }
    ]
   },
   "apremilast": {
@@ -2152,6 +2359,21 @@
    "avoid": [
     "Caution: depression; weight loss",
     "Renal impairment: once-daily dosing"
+   ],
+   "how": {
+    "p": "sm",
+    "text": "Inhibits phosphodiesterase 4 (PDE-4), the main PDE in inflammatory cells, so cAMP is not broken down. With more cAMP the inflammatory cells are inhibited.",
+    "src": "Smith PCol slides 32, 34"
+   },
+   "figs": [
+    {
+     "label": "Watch how it works: PDE-4 inhibitors, why cAMP rises",
+     "jump": "guide:g-fig-pde4-camp"
+    },
+    {
+     "label": "See the reaction: apremilast metabolism (CYP3A4, then glucuronidation)",
+     "jump": "guide:rx-apremilast"
+    }
    ]
   },
   "acitretin": {
@@ -2183,6 +2405,21 @@
    "avoid": [
     "Women of reproductive age: pregnant, or planning pregnancy within 3 years after stopping (“not an option”)",
     "Alcohol"
+   ],
+   "how": {
+    "p": "sm",
+    "text": "An oral retinoid: it binds the retinoic acid receptors RAR and RXR, and the RAR–RXR pair binds the RARE on DNA and changes gene transcription. In psoriasis the precise mechanism is unknown; it may be anti-inflammatory and antiproliferative.",
+    "src": "Smith PCol slides 14–15, 20"
+   },
+   "figs": [
+    {
+     "label": "Watch how it works: nuclear receptor binders, direct and indirect action (corticosteroids, retinoids, vitamin D analogs)",
+     "jump": "ref:ref-l1-nr"
+    },
+    {
+     "label": "See the reaction: etretinate to acitretin, its active form",
+     "jump": "guide:rx-etretinate"
+    }
    ]
   },
   "tofacitinib": {
@@ -2215,6 +2452,17 @@
     "Not with biologic DMARDs or potent immunosuppressants",
     "Live vaccines",
     "Risk of thrombosis and lymphoma"
+   ],
+   "how": {
+    "p": "sm",
+    "text": "Inhibits Janus kinase (JAK), so fewer inflammatory cytokines are produced. It is a small molecule that gets inside the cell.",
+    "src": "Smith PCol slides 75–76; 11/03 lecture"
+   },
+   "figs": [
+    {
+     "label": "Watch how it works: Dr. Smith’s narrated walkthrough “JAK inhibitors” (opens her guide section; choose that walkthrough)",
+     "jump": "guide:gobj-l1-4"
+    }
    ]
   },
   "abatacept": {
@@ -2241,6 +2489,17 @@
    "avoid": [
     "Live vaccines",
     "COPD (listed under interactions on slide 39)"
+   ],
+   "how": {
+    "p": "sm",
+    "text": "A fusion protein (CTLA-4 domain + IgG Fc) that binds CD80/86 on antigen-presenting cells, so CD28 on the T cell cannot bind. The positive second signal is blocked and the T cell is not activated.",
+    "src": "Smith PCol slide 63"
+   },
+   "figs": [
+    {
+     "label": "Watch how it works: abatacept, inhibitor of co-stimulation",
+     "jump": "guide:g-fig-costim"
+    }
    ]
   },
   "puva": {
@@ -2271,6 +2530,21 @@
    "counselSrc": "Patel Scaly slide 44; 11/11 lecture",
    "avoid": [
     "Anything short of severe, refractory psoriasis: it is the last line"
+   ],
+   "how": {
+    "p": "sm",
+    "text": "With UV light of 320–340 nm the psoralen (methoxsalen) intercalates into the DNA strand. The effects are antiproliferative, immunosuppressive and anti-inflammatory: keratinocytes normalize, and it is cytotoxic to T cells.",
+    "src": "Smith PCol slide 78; Sun slide 3"
+   },
+   "figs": [
+    {
+     "label": "Watch how it works: Dr. Smith’s narrated walkthrough “Psoralens and PUVA” (opens her guide section)",
+     "jump": "guide:gobj-sun-pso"
+    },
+    {
+     "label": "See the reaction: psoralen plus UVA cross-links DNA (Dr. Sikazwe)",
+     "jump": "guide:rx-psoralen"
+    }
    ]
   },
   "tnf-inhibitors": {
@@ -2305,6 +2579,17 @@
     "Live vaccines",
     "Active infection",
     "Class cautions: hepatitis B reactivation, cytopenias, lupus-like syndrome"
+   ],
+   "how": {
+    "p": "sm",
+    "text": "All five bind TNF-α, an inflammatory cytokine, and keep it from its receptors on inflammatory cells. The plaques become fewer and smaller.",
+    "src": "Smith PCol slide 70"
+   },
+   "figs": [
+    {
+     "label": "Watch how it works: Dr. Smith’s narrated walkthrough “TNF-alpha inhibitors” (opens her guide section; choose that walkthrough)",
+     "jump": "guide:gobj-pc-3"
+    }
    ]
   },
   "ustekinumab": {
@@ -2336,6 +2621,17 @@
     "Active TB",
     "Live vaccines",
     "Interacts with cyclosporine and warfarin"
+   ],
+   "how": {
+    "p": "sm",
+    "text": "An antibody to p40, the subunit that IL-12 and IL-23 share, so neither can bind the IL-12 receptor β1 on CD4 T cells and NK cells. Fewer proinflammatory Th1 and Th17 cells form.",
+    "src": "Smith PCol slide 67"
+   },
+   "figs": [
+    {
+     "label": "Watch how it works: cytokine biologics, what each one binds",
+     "jump": "guide:fig-il-axis"
+    }
    ]
   },
   "il23-inhibitors": {
@@ -2365,6 +2661,17 @@
    "avoid": [
     "Active TB",
     "Live vaccines"
+   ],
+   "how": {
+    "p": "sm",
+    "text": "Antibodies that bind p19, the subunit only IL-23 has, so IL-23 cannot act on its receptor. Less proinflammatory cytokine and chemokine is released.",
+    "src": "Smith PCol slides 68–69"
+   },
+   "figs": [
+    {
+     "label": "Watch how it works: cytokine biologics, what each one binds",
+     "jump": "guide:fig-il-axis"
+    }
    ]
   },
   "secukinumab": {
@@ -2396,6 +2703,17 @@
     "Crohn’s disease: “we’re avoiding any patients with Crohn’s disease on Cosentyx”",
     "Live vaccines",
     "Anti-IL class cautions: inflammatory bowel disease, depression worsening"
+   ],
+   "how": {
+    "p": "sm",
+    "text": "A human antibody that binds the IL-17A cytokine, so it cannot reach its receptor. Keratinocytes are the major target of IL-17 in psoriasis; the plaques become fewer and smaller.",
+    "src": "Smith PCol slides 65–66"
+   },
+   "figs": [
+    {
+     "label": "Watch how it works: cytokine biologics, what each one binds",
+     "jump": "guide:fig-il-axis"
+    }
    ]
   },
   "ixekizumab": {
@@ -2425,6 +2743,17 @@
    "avoid": [
     "Live vaccines",
     "Anti-IL class cautions: inflammatory bowel disease, depression worsening"
+   ],
+   "how": {
+    "p": "sm",
+    "text": "A humanized antibody against the IL-17A cytokine. Keratinocytes are the major target of IL-17 in psoriasis.",
+    "src": "Smith PCol slides 65–66"
+   },
+   "figs": [
+    {
+     "label": "Watch how it works: cytokine biologics, what each one binds",
+     "jump": "guide:fig-il-axis"
+    }
    ]
   },
   "brodalumab": {
@@ -2457,6 +2786,17 @@
     "Depression or suicide risk: boxed warning",
     "Live vaccines",
     "Anti-IL class cautions: inflammatory bowel disease, depression worsening"
+   ],
+   "how": {
+    "p": "sm",
+    "text": "A human antibody that binds IL-17 receptor A, not the cytokine, so IL-17A and the other IL-17 cytokines cannot act on it. Release of proinflammatory cytokines and chemokines is blocked.",
+    "src": "Smith PCol slide 66"
+   },
+   "figs": [
+    {
+     "label": "Watch how it works: cytokine biologics, what each one binds",
+     "jump": "guide:fig-il-axis"
+    }
    ]
   },
   "pyrithione-zinc": {
@@ -2488,6 +2828,17 @@
    "counselSrc": "Patel Scaly slides 9, 16",
    "avoid": [
     "Infants with cradle cap: a non-medicated shampoo is used (slide 18)"
+   ],
+   "how": {
+    "p": "sm",
+    "text": "Cytostatic (it stops keratinocytes from proliferating so much) and antifungal; the mechanism is not known. She said the antifungal activity may be what helps in dandruff shampoos.",
+    "src": "Smith PCol slide 57; 11/03 lecture"
+   },
+   "figs": [
+    {
+     "label": "Watch how it works: Dr. Smith’s narrated walkthrough “Antipsoriatic cytotoxic agents” (opens her guide section; choose that walkthrough)",
+     "jump": "guide:gobj-l1-4"
+    }
    ]
   },
   "selenium-sulfide": {
@@ -2519,6 +2870,17 @@
    "counselSrc": "Patel Scaly slides 9, 16",
    "avoid": [
     "Infants with cradle cap: a non-medicated shampoo is used (slide 18)"
+   ],
+   "how": {
+    "p": "sm",
+    "text": "Cytostatic (it stops keratinocytes from proliferating so much) and antifungal; the mechanism is not known. She said the antifungal activity may be what helps in dandruff shampoos.",
+    "src": "Smith PCol slide 57; 11/03 lecture"
+   },
+   "figs": [
+    {
+     "label": "Watch how it works: Dr. Smith’s narrated walkthrough “Antipsoriatic cytotoxic agents” (opens her guide section; choose that walkthrough)",
+     "jump": "guide:gobj-l1-4"
+    }
    ]
   },
   "ketoconazole": {
@@ -2562,6 +2924,17 @@
    "counselSrc": "Patel Scaly slides 16–17; 11/10 lecture",
    "avoid": [
     "Infants (cradle cap)"
+   ],
+   "how": {
+    "p": "pa",
+    "text": "An antifungal shampoo. It decreases the growth of Malassezia, the yeast-like fungus that grows in the sebum.",
+    "src": "Patel Scaly slides 13–14, 16"
+   },
+   "figs": [
+    {
+     "label": "Watch how it works: antiandrogens, where ketoconazole lowers testosterone synthesis (Dr. Sikazwe, taught for acne)",
+     "jump": "guide:cb-antiandrogens"
+    }
    ]
   },
   "ciclopirox": {
@@ -2580,7 +2953,13 @@
     "See a health care provider if it gets worse, or if symptoms last longer than 7 days."
    ],
    "counselSrc": "Patel Scaly slide 16",
-   "avoid": []
+   "avoid": [],
+   "how": {
+    "p": "pa",
+    "text": "On her slide it is one of the antifungal shampoos used to decrease fungal growth (Malassezia) on the scalp. No lecture gives more of its mechanism.",
+    "src": "Patel Scaly slides 14, 16"
+   },
+   "figs": []
   },
   "sulfur": {
    "name": "Sulfur",
@@ -2620,14 +2999,25 @@
    "counselSrc": "Patel Scaly slides 7, 15; 11/10 lecture",
    "avoid": [
     "Psoriasis: not effective"
+   ],
+   "how": {
+    "p": "sm",
+    "text": "A mild keratolytic with bacteriostatic properties. Inside the keratinocytes it is reduced to hydrogen sulfide, which causes inflammation that promotes peeling.",
+    "src": "Smith PCol slide 38"
+   },
+   "figs": [
+    {
+     "label": "Watch how it works: Dr. Smith’s narrated walkthrough “Keratolytics” (opens her guide section; choose that walkthrough)",
+     "jump": "guide:gobj-l1-4"
+    }
    ]
   }
  },
  "terms": {
   "bsa": [
    "Body surface area (BSA)",
-   "The share of the skin that is affected, as a percentage. Dr. Patel: “I only want you to know the BSA.”",
-   "Patel Scaly slides 31–32; 11/11 lecture"
+   "The share of the skin that is affected, as a percentage. Dr. Patel grades psoriasis by it (“I only want you to know the BSA”) and sizes burns by it.",
+   "Patel Scaly slides 31–32; 11/11 lecture; Patel Wound slide 16"
   ],
   "koebner": [
    "Koebner response",
@@ -2638,11 +3028,6 @@
    "PPD",
    "The tuberculosis skin test: injected into the skin, then read as a positive or negative reaction.",
    "11/11 lecture"
-  ],
-  "refractory": [
-   "Refractory",
-   "Not responding to the treatments already tried.",
-   "plain meaning, not from the slides"
   ],
   "rems": [
    "REMS",
@@ -2676,8 +3061,8 @@
   ],
   "biologic": [
    "Biologic",
-   "An injected specialty medicine (an antibody or fusion protein) that binds one cytokine or receptor.",
-   "Patel Scaly slide 40; Smith PCol slides 63–74"
+   "An injected specialty medicine, an antibody or fusion protein, that binds one cytokine or receptor. Atopic dermatitis: dupilumab, tralokinumab. Psoriasis: the TNF-α, IL-12/23, IL-23 and IL-17 inhibitors.",
+   "Summary of Patel Scaly slides 40–43, Patel Dermatitis slides 43–45 and Smith PCol slides 62–74; no slide defines the word"
   ],
   "malassezia": [
    "Malassezia",
@@ -2689,20 +3074,10 @@
    "Skin folds, or surfaces of the skin that lie against each other.",
    "Patel Scaly slide 12"
   ],
-  "pruritus": [
-   "Pruritus",
-   "Itching.",
-   "11/10 lecture"
-  ],
-  "erythema": [
-   "Erythema",
-   "Redness of the skin.",
-   "11/10 lecture"
-  ],
   "emollient": [
    "Emollient",
-   "A moisturizer: “we’re talking about lotions and creams”.",
-   "11/10 lecture"
+   "A moisturizer that improves the skin barrier. Dr. Patel’s examples: creams and ointments such as Aquaphor (11/06); “lotions and creams” (11/10). Dr. Sikazwe: emollients prevent skin water loss.",
+   "11/06 and 11/10 lectures; Patel Dermatitis slides 29, 32; Sikazwe DPAW page 15"
   ],
   "hyperplasia": [
    "Epidermal hyperplasia",
@@ -2718,6 +3093,41 @@
    "Cradle cap",
    "Seborrheic dermatitis of an infant’s scalp: greasy or dry scaling.",
    "Patel Scaly slide 12"
+  ],
+  "onycholysis": [
+   "Onycholysis",
+   "Separation of the nail from the nail bed. Dr. Smith lists it with pitting, ridging and discoloration in nail psoriasis.",
+   "Smith Pathophys slide 26; the definition is the plain meaning, not from the slides"
+  ],
+  "pasi": [
+   "PASI",
+   "Psoriasis Area and Severity Index, one of the severity measures on her slide (severe: over 10). Dr. Patel: “I only want you to know the BSA.”",
+   "Patel Scaly slide 31; 11/11 lecture"
+  ],
+  "dlqi": [
+   "DLQI",
+   "Dermatology Life Quality Index, one of the severity measures on her slide (severe: over 10). Dr. Patel: “I only want you to know the BSA.”",
+   "Patel Scaly slide 31; 11/11 lecture"
+  ],
+  "spf": [
+   "SPF (sun protection factor)",
+   "A number that indicates UVB protection only. Dr. Smith: the ratio of the sunlight dose that burns with the sunscreen to the dose that burns without it.",
+   "Patel Sun slide 15; Smith Sun slide 13"
+  ],
+  "jak": [
+   "JAK (Janus kinase)",
+   "An enzyme. A JAK inhibitor blocks it, so fewer inflammatory cytokines are produced (Dr. Smith) and the downstream immune-mediated inflammatory response decreases (Dr. Patel).",
+   "Smith PCol slides 75–76; Patel Dermatitis slide 46"
+  ],
+  "cytostatic": [
+   "Cytostatic",
+   "Stops cells from multiplying so much. Dr. Smith on selenium sulfide and zinc pyrithione: they stop keratinocytes from proliferating so much.",
+   "Smith PCol slide 57; 11/03 lecture"
+  ],
+  "uva": [
+   "UVA",
+   "Ultraviolet A, 320–400 nm: the largest contributor of UV to sunlight; it penetrates deeper into the skin and causes skin aging; blocked by broad spectrum sunscreens. Dr. Smith: UVA causes most drug phototoxic reactions.",
+   "Patel Sun slide 7; Smith Sun slide 8"
   ]
  },
  "tell": [

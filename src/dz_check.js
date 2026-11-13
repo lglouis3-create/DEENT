@@ -37,6 +37,28 @@ check(!md.length, 'every drug use names an existing card', md.join('; '));
 const ns = [];
 DZ.cards.forEach(c => (c.steps || []).forEach(s => { if (!s.src) ns.push(c.id + ': ' + s.title); }));
 check(!ns.length, 'every step carries a source', ns.join('; '));
+// whose content is it: every block names its professor, and the step's tags equal the professors of its blocks
+const np = [], sp = [];
+DZ.cards.forEach(c => (c.steps || []).forEach(s => {
+  (s.blocks || []).forEach((b, i) => { if (!['sm', 'sk', 'pa'].includes(b.p)) np.push(c.id + ' / ' + s.title + ' #' + (i + 1) + ' (' + b.k + ')'); });
+  const a = [...new Set((s.blocks || []).map(b => b.p).filter(Boolean))].sort().join(','), d = [...new Set(s.profs || [])].sort().join(',');
+  if (a !== d) sp.push(c.id + ' / ' + s.title + ': blocks ' + a + ' vs tags ' + d);
+}));
+check(!np.length, 'every block of every step names its professor', np.slice(0, 12).join('; ') + (np.length > 12 ? ' … ' + np.length + ' in all' : ''));
+check(!sp.length, "every step's professor tags equal the professors of its blocks", sp.join('; '));
+const once = [];
+DZ.cards.forEach(c => { const seen = {}; JSON.stringify(c).replace(/\[\[([a-z0-9-]+)\|/g, (m, k) => { seen[k] = (seen[k] || 0) + 1; }); Object.entries(seen).forEach(([k, v]) => { if (v > 1) once.push(c.id + ': ' + k + ' ×' + v); }); });
+check(!once.length, 'a term is underlined at most once on a card', once.join('; '));
+const usedT = new Set(); all.replace(/\[\[([a-z0-9-]+)\|/g, (m, k) => { usedT.add(k); });
+const idle = Object.keys(DZ.terms).filter(k => !usedT.has(k));
+check(!idle.length, 'every definition is used by an underlined term', idle.join(', '));
+const bad3 = Object.entries(DZ.terms).filter(([k, t]) => !(Array.isArray(t) && t.length === 3 && t[0] && t[1] && t[2])).map(([k]) => k);
+check(!bad3.length, 'every definition has a name, a meaning and a source', bad3.join(', '));
+const nh = Object.entries(DZ.drugs).filter(([k, d]) => !(d.how && (d.how.none === true || (d.how.text && d.how.src && ['sm', 'sk', 'pa'].includes(d.how.p))) && Array.isArray(d.figs))).map(([k]) => k);
+check(!nh.length, 'every drug panel has "How it works" (a sourced mechanism or an explicit none) and a list of figures', nh.join(', '));
+const sf = [];
+DZ.cards.forEach(c => (c.steps || []).forEach(s => (s.blocks || []).forEach(b => { if (b.k === 'fig' && /how it works/i.test(b.label || '') && /fig-(cni|pde4|ribosome|folate|costim)/.test(b.jump || '')) sf.push(c.id + ': ' + b.label); })));
+check(!sf.length, 'a figure of how a drug works sits in the drug panels, not in a step', sf.join('; '));
 const bp = [];
 DZ.cards.forEach(c => (c.patients || []).forEach((p, i) => { if (!(p.o && p.o.length === 4 && p.a >= 0 && p.a < 4 && p.w)) bp.push(c.id + ' #' + (i + 1)); else p.o.forEach((o, j) => { if (j !== p.a && !(p.x && p.x[o])) bp.push(c.id + ' #' + (i + 1) + ' no reason for "' + o.slice(0, 30) + '"'); }); }));
 check(!bp.length, 'every practice patient has four choices, one answer, and a reason for each wrong choice', bp.join('; '));

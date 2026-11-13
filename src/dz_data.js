@@ -76,7 +76,8 @@ const DZ = {
           "Personal: stress; excessive skin washing and sanitizing"
          ]
         ]
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "prof",
@@ -92,7 +93,7 @@ const DZ = {
         ],
         [
          "Where",
-         "Lower in rural areas (hygiene hypothesis)"
+         "Lower in rural areas ([[hygiene|hygiene hypothesis]])"
         ],
         [
          "Family",
@@ -164,6 +165,7 @@ const DZ = {
       },
       {
        "k": "map",
+       "p": "sm",
        "title": "Which drug acts on which target",
        "rows": [
         [
@@ -172,7 +174,7 @@ const DZ = {
         ],
         [
          "Calcineurin",
-         "Pimecrolimus; tacrolimus (binds FKBP first)"
+         "Pimecrolimus; tacrolimus (binds [[fkbp|FKBP]] first)"
         ],
         [
          "[[pde4|PDE-4]]",
@@ -183,20 +185,27 @@ const DZ = {
          "Dupilumab"
         ],
         [
+         "[[jak|JAK]]",
+         "Ruxolitinib (JAK1 and JAK2), upadacitinib"
+        ]
+       ],
+       "src": "Smith PCol slides 5–7, 10, 24–27, 32–33, 64, 76"
+      },
+      {
+       "k": "map",
+       "p": "pa",
+       "title": "On Dr. Patel's slides only",
+       "rows": [
+        [
          "IL-13 cytokine",
          "Tralokinumab (Dr. Patel's slide 45; not on Dr. Smith's slides)"
         ],
         [
          "JAK",
-         "Ruxolitinib (JAK1 and JAK2), upadacitinib, abrocitinib"
+         "Abrocitinib (Dr. Patel's slide 46; not on Dr. Smith's slides)"
         ]
        ],
-       "src": "Smith PCol slides 5–7, 10, 24–27, 32–33, 64, 76; Patel Dermatitis slides 45–46"
-      },
-      {
-       "k": "fig",
-       "label": "Watch how it works: calcineurin inhibitors",
-       "jump": "guide:fig-cni-nfat"
+       "src": "Patel Dermatitis slides 45–46"
       },
       {
        "k": "facts",
@@ -209,7 +218,7 @@ const DZ = {
          "So treatment aims to",
          [
           "Not strip the weak epidermis: gentle cleansers, limited bathing time",
-          "Rebuild it: thick emollients, hydration",
+          "Rebuild it: thick [[emollient|emollients]], hydration",
           "Reduce inflammation: topical medications"
          ]
         ],
@@ -222,7 +231,8 @@ const DZ = {
           "No oral antibiotics, and no topical antibiotics over large areas"
          ]
         ]
-       ]
+       ],
+       "p": "pa"
       }
      ]
     },
@@ -237,7 +247,8 @@ const DZ = {
      "blocks": [
       {
        "k": "sub",
-       "text": "By age (Dr. Patel, slide 21)"
+       "text": "By age (Dr. Patel, slide 21)",
+       "p": "pa"
       },
       {
        "k": "facts",
@@ -254,7 +265,8 @@ const DZ = {
          "Adulthood",
          "More diffuse, dry, scaly, lichenified; {{less on the face}}; hands, neck, inner elbows, back of knees, ankles"
         ]
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "prof",
@@ -265,7 +277,7 @@ const DZ = {
          [
           "Red to brownish-gray patches",
           "Itch that may be severe, especially {{at night}}",
-          "Small vesicles that leak and crust",
+          "Small [[vesicle|vesicles]] that leak and crust",
           "Thickened, cracked or scaly skin"
          ]
         ],
@@ -281,7 +293,8 @@ const DZ = {
       },
       {
        "k": "sub",
-       "text": "Severity by [[scorad|SCORAD]] ★ her cases give the words and the score"
+       "text": "Severity by [[scorad|SCORAD]] ★ her cases give the words and the score",
+       "p": "pa"
       },
       {
        "k": "grades",
@@ -301,23 +314,25 @@ const DZ = {
          "SCORAD {{> 50}}",
          "Widespread dry skin, {{incessant}} itching, thickening, bleeding, oozing; sleep lost nightly"
         ]
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "sub",
-       "text": "Status ★ \"define this as well as the severity\""
+       "text": "Status ★ \"define this as well as the severity\"",
+       "p": "pa"
       },
       {
        "k": "grades",
        "rows": [
         [
          "Acute",
-         "Acutely inflamed papules, {{vesicles, exudate and crusts}}",
+         "Acutely inflamed [[papule|papules]], {{vesicles, exudate and crusts}}",
          "No dryness"
         ],
         [
          "Subacute",
-         "{{Dry}}, inflamed papules, patches or plaques",
+         "{{Dry}}, inflamed papules, patches or [[plaque|plaques]]",
          ""
         ],
         [
@@ -325,11 +340,13 @@ const DZ = {
          "{{Lichenified}} papules or plaques",
          "[[lichenification|Lichenification]]: she calls it the silvery, scaly plaque"
         ]
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "photo",
-       "id": "ad-status"
+       "id": "ad-status",
+       "p": "pa"
       },
       {
        "k": "facts",
@@ -349,19 +366,20 @@ const DZ = {
           "Skin infection: {{S. aureus}}; prone to {{herpes simplex virus}}"
          ]
         ]
-       ]
+       ],
+       "p": "pa"
       }
      ]
     },
     {
      "title": "Treat it: her order of treatment",
      "profs": [
-      "pa",
       "sm",
-      "sk"
+      "sk",
+      "pa"
      ],
      "q": "Name the lines in order with one age limit for each, and say which steroid goes on the face.",
-     "src": "Patel Dermatitis slides 29–32, 34–48; 11/06 lecture; Smith PCol slide 11",
+     "src": "Patel Dermatitis slides 29–32, 34–48; 11/06 lecture; Smith PCol slide 11; Sikazwe DPAW pages 7, 20, 28",
      "blocks": [
       {
        "k": "facts",
@@ -370,7 +388,7 @@ const DZ = {
          "Every patient: basic management",
          [
           "Bath: {{10 minutes}}, lukewarm, gentle non-soap cleanser, pat dry",
-          "Occlusive moisturizer right after the bath; emollient within {{3 minutes}} while skin is damp",
+          "[[occlusive|Occlusive]] moisturizer right after the bath; emollient within {{3 minutes}} while skin is damp",
           "Avoid triggers; soft cotton clothing; lower stress",
           "Wet wraps: short-term, {{not with calcineurin inhibitors}}",
           "Bleach bath ({{0.005%}} sodium hypochlorite = ½ cup per full tub) {{twice a week}} for moderate–severe, to prevent repeat bacterial infection; can irritate"
@@ -380,7 +398,8 @@ const DZ = {
          "Drugs treat flares",
          "Non-drug care is daily; the medication is for the flare"
         ]
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "line",
@@ -402,7 +421,7 @@ const DZ = {
        "pick": [
         [
          "Face",
-         "★ {{Hydrocortisone 1%}}: \"the only dose and strength that you can utilize on your face\". Dr. Smith: low potency (hydrocortisone 1%) for the face"
+         "★ {{Hydrocortisone 1%}}: \"the only dose and strength that you can utilize on your face\"."
         ],
         [
          "Not on a steroid now, even if one helped before",
@@ -433,7 +452,19 @@ const DZ = {
          "No topical corticosteroid as self-care"
         ]
        ],
-       "move": "Move to the next line when: there is no response to the topical steroid."
+       "move": "Move to the next line when: there is no response to the topical steroid.",
+       "p": "pa"
+      },
+      {
+       "k": "prof",
+       "p": "sm",
+       "rows": [
+        [
+         "Face",
+         "Low potency (hydrocortisone 1%) for the face"
+        ]
+       ],
+       "src": "Smith PCol slide 11"
       },
       {
        "k": "line",
@@ -475,7 +506,8 @@ const DZ = {
          "Not with a calcineurin inhibitor"
         ]
        ],
-       "move": "Move to the next line when: the steroid and the calcineurin inhibitor have been tried."
+       "move": "Move to the next line when: the steroid and the calcineurin inhibitor have been tried.",
+       "p": "pa"
       },
       {
        "k": "line",
@@ -499,12 +531,13 @@ const DZ = {
          "Do not use"
         ]
        ],
-       "move": "Move to the next line when: moderate to severe disease is not controlled after the topical agents."
+       "move": "Move to the next line when: moderate to severe disease is not controlled after the topical agents.",
+       "p": "pa"
       },
       {
        "k": "line",
        "label": "Then",
-       "title": "Injectable biologic (moderate to severe, after topicals)",
+       "title": "Injectable [[biologic|biologic]] (moderate to severe, after topicals)",
        "drugs": [
         "dupilumab",
         "tralokinumab"
@@ -546,7 +579,8 @@ const DZ = {
          "600 mg as {{four 150 mg}} injections, then 300 mg (two 150 mg) every other week; every 4 weeks if under 100 kg and clear at 16 weeks"
         ]
        ],
-       "move": "Move to the next line when: disease is not controlled with other systemic or biologic therapy."
+       "move": "Move to the next line when: disease is not controlled with other systemic or biologic therapy.",
+       "p": "pa"
       },
       {
        "k": "line",
@@ -560,11 +594,13 @@ const DZ = {
         "Moderate to severe, older than {{12 years}}",
         "Specialty follow-up every {{2 weeks}}"
        ],
-       "warn": "Boxed warnings: serious infections, mortality, malignancy, [[mace|MACE]], thrombosis."
+       "warn": "Boxed warnings: serious infections, mortality, malignancy, [[mace|MACE]], thrombosis.",
+       "p": "pa"
       },
       {
        "k": "sub",
-       "text": "Her step-care slide, by severity"
+       "text": "Her step-care slide, by severity",
+       "p": "pa"
       },
       {
        "k": "facts",
@@ -590,7 +626,27 @@ const DZ = {
          "Flare not resolved in 7 days",
          "Consider nonadherence, infection, misdiagnosis, contact allergy to the medication; refer"
         ]
-       ]
+       ],
+       "p": "pa"
+      },
+      {
+       "k": "prof",
+       "p": "sk",
+       "rows": [
+        [
+         "Corticosteroid activity",
+         "Anti-inflammatory activity rises with a C1–C2 double bond, a 6α or 9α halogen and an 11β-OH (DPAW page 20)"
+        ],
+        [
+         "Pimecrolimus or tacrolimus",
+         "Similar in lipophilicity, structure and mechanism; pimecrolimus binds skin protein more (few systemic adverse effects), tacrolimus less (DPAW page 28)"
+        ],
+        [
+         "Crisaborole",
+         "A benzoxaborole soft drug; its boron coordinates Zn2+ and Mg2+ in the PDE4 active site (DPAW page 7)"
+        ]
+       ],
+       "src": "Sikazwe DPAW pages 7, 20, 28; 11/03 and 11/04 lectures"
       }
      ]
     },
@@ -636,15 +692,17 @@ const DZ = {
          [
           "Petroleum-containing (Aquaphor, Eucerin): {{most effective}}, thickest, longest-lasting; greasy",
           "Ceramide-containing creams (CeraVe, Aveeno eczema therapy): barrier",
-          "Urea-containing: humectant; stings on broken skin",
+          "Urea-containing: [[humectant|humectant]]; stings on broken skin",
           "Lotions (Cetaphil, Keri): less effective; 3 times a day or more"
          ]
         ]
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "sub",
-       "text": "Tube size by [[ftu|fingertip units]] ★ \"there will be a calculation on the exam\""
+       "text": "Tube size by [[ftu|fingertip units]] ★ \"there will be a calculation on the exam\"",
+       "p": "pa"
       },
       {
        "k": "facts",
@@ -682,16 +740,19 @@ const DZ = {
          "Not tested",
          "Pediatric fingertip units"
         ]
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "fig",
        "label": "Open the fingertip-unit table",
-       "jump": "ref:ref-p5-ftu"
+       "jump": "ref:ref-p5-ftu",
+       "p": "pa"
       },
       {
        "k": "sub",
-       "text": "Follow-up"
+       "text": "Follow-up",
+       "p": "pa"
       },
       {
        "k": "facts",
@@ -712,7 +773,8 @@ const DZ = {
          "Calcineurin inhibitor",
          "Reassess at 6 weeks"
         ]
-       ]
+       ],
+       "p": "pa"
       }
      ]
     }
@@ -947,7 +1009,7 @@ const DZ = {
          [
           "High humidity or sweating",
           "Acne mechanica: occlusion or irritation",
-          "Acne cosmetica: comedogenic oils",
+          "Acne cosmetica: [[comedogenic|comedogenic]] oils",
           "Stress; hormones",
           "High glycemic index diet; dairy may be a factor"
          ]
@@ -990,11 +1052,13 @@ const DZ = {
          "Lab testing",
          "None routinely; exception: high suspicion of [[pcos|PCOS]] or another hormonal disorder"
         ]
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "sub",
-       "text": "Not a self-care candidate: refer to dermatology"
+       "text": "Not a self-care candidate: refer to dermatology",
+       "p": "pa"
       },
       {
        "k": "pts",
@@ -1003,7 +1067,8 @@ const DZ = {
         "Possible {{rosacea}}",
         "Exacerbating factors",
         "{{Comedogenic drugs}}"
-       ]
+       ],
+       "p": "pa"
       }
      ]
     },
@@ -1038,12 +1103,12 @@ const DZ = {
          "Skin cells stick together and are not shed; cells and sebum plug the channel"
         ],
         [
-         "P. acnes",
+         "[[p-acnes|P. acnes]]",
          "Its {{lipase}} turns sebum glycerides into {{free fatty acids}}, which irritate the follicle wall and are antigenic"
         ],
         [
          "Lesion order",
-         "Microcomedone → closed [[comedone|comedone]] → open comedone, or papule → pustule → nodule or cyst"
+         "[[microcomedone|Microcomedone]] → closed [[comedone|comedone]] → open comedone, or papule → pustule → nodule or cyst"
         ],
         [
          "Her poll",
@@ -1072,16 +1137,19 @@ const DZ = {
          "Intralesional corticosteroids; oral corticosteroids; topical/oral antibiotics"
         ]
        ],
-       "src": "Smith Pathophys slide 36"
+       "src": "Smith Pathophys slide 36",
+       "p": "sm"
       },
       {
        "k": "fig",
        "label": "Watch how it works: the cascade of acne lesions",
-       "jump": "ref:ref-l1-acnemap"
+       "jump": "ref:ref-l1-acnemap",
+       "p": "sm"
       },
       {
        "k": "sub",
-       "text": "Dr. Patel: what each OTC agent does (slide 23)"
+       "text": "Dr. Patel: what each OTC agent does (slide 23)",
+       "p": "pa"
       },
       {
        "k": "facts",
@@ -1110,7 +1178,8 @@ const DZ = {
          "Her four targets",
          "Reduce sebum; suppress P. acnes; reduce inflammation; decrease hyperkeratinization"
         ]
-       ]
+       ],
+       "p": "pa"
       }
      ]
     },
@@ -1140,15 +1209,18 @@ const DZ = {
           "[[nodule|Nodule or cyst]]: large, under the skin; the worst stage"
          ]
         ]
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "photo",
-       "id": "acne-comedones"
+       "id": "acne-comedones",
+       "p": "pa"
       },
       {
        "k": "sub",
-       "text": "Grades ★ \"those are the terms that I will also use on my cases on the exam\""
+       "text": "Grades ★ \"those are the terms that I will also use on my cases on the exam\"",
+       "p": "pa"
       },
       {
        "k": "grades",
@@ -1173,7 +1245,8 @@ const DZ = {
          "{{Many}} non-inflammatory and inflammatory",
          "No more than {{a few}} nodular lesions; moderate to extensive scarring"
         ]
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "facts",
@@ -1190,7 +1263,8 @@ const DZ = {
          "Her Case 2",
          "Comedones, papules, cysts on cheek, back and shoulders = {{severe}}"
         ]
-       ]
+       ],
+       "p": "pa"
       }
      ]
     },
@@ -1228,7 +1302,8 @@ const DZ = {
          "Never alone",
          "★ A topical antibiotic: always with {{benzoyl peroxide}}, to reduce resistance"
         ]
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "line",
@@ -1240,7 +1315,8 @@ const DZ = {
        "pts": [
         "Lesions: comedones",
         "Tea tree oil goes in a lotion or gel vehicle; it irritates if applied directly"
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "line",
@@ -1279,10 +1355,11 @@ const DZ = {
         ],
         [
          "Tried everything else topical",
-         "Dapsone: \"absolute last line\" of the mild column; G6PD concern"
+         "Dapsone: \"absolute last line\" of the mild column; [[g6pd|G6PD]] concern"
         ]
        ],
-       "move": "Move on when: the agent was used for its stated duration and the lesions have not decreased."
+       "move": "Move on when: the agent was used for its stated duration and the lesions have not decreased.",
+       "p": "pa"
       },
       {
        "k": "line",
@@ -1329,7 +1406,8 @@ const DZ = {
          "COC"
         ]
        ],
-       "move": "Move on when: the topical combination plus an oral antibiotic has had its duration (re-evaluate the antibiotic at 3–4 months)."
+       "move": "Move on when: the topical combination plus an oral antibiotic has had its duration (re-evaluate the antibiotic at 3–4 months).",
+       "p": "pa"
       },
       {
        "k": "line",
@@ -1372,11 +1450,13 @@ const DZ = {
          "Severe refractory nodular acne",
          "Isotretinoin with iPledge"
         ]
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "sub",
-       "text": "Vehicle by skin type (slide 24)"
+       "text": "Vehicle by skin type (slide 24)",
+       "p": "pa"
       },
       {
        "k": "facts",
@@ -1393,12 +1473,14 @@ const DZ = {
          "Not usually recommended",
          "Ointments and bars"
         ]
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "fig",
        "label": "Open her algorithm table",
-       "jump": "ref:ref-p6-alg"
+       "jump": "ref:ref-p6-alg",
+       "p": "pa"
       }
      ]
     },
@@ -1442,11 +1524,13 @@ const DZ = {
          "Stopping",
          "Taper over time; never stop abruptly"
         ]
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "sub",
-       "text": "Isotretinoin and [[ipledge|iPledge]]"
+       "text": "Isotretinoin and [[ipledge|iPledge]]",
+       "p": "pa"
       },
       {
        "k": "facts",
@@ -1496,16 +1580,19 @@ const DZ = {
          "Not a counseling point",
          "Avoiding dairy (her poll)"
         ]
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "fig",
        "label": "Open the isotretinoin and iPledge table",
-       "jump": "ref:ref-p6-ipledge"
+       "jump": "ref:ref-p6-ipledge",
+       "p": "pa"
       },
       {
        "k": "sub",
-       "text": "Monitoring"
+       "text": "Monitoring",
+       "p": "pa"
       },
       {
        "k": "facts",
@@ -1526,11 +1613,13 @@ const DZ = {
          "Oral antibiotic",
          "Shortest possible duration; re-evaluate at {{3–4 months}}"
         ]
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "sub",
-       "text": "No response to current therapy (slide 48)"
+       "text": "No response to current therapy (slide 48)",
+       "p": "pa"
       },
       {
        "k": "facts",
@@ -1551,7 +1640,8 @@ const DZ = {
          "Adverse events",
          "Change class, lower the dose or change the formulation; avoid overuse of cleansers"
         ]
-       ]
+       ],
+       "p": "pa"
       }
      ]
     }
@@ -1795,11 +1885,13 @@ const DZ = {
           "Corticosteroid withdrawal"
          ]
         ]
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "sub",
-       "text": "Possible comorbidities (Dr. Patel, slide 25)"
+       "text": "Possible comorbidities (Dr. Patel, slide 25)",
+       "p": "pa"
       },
       {
        "k": "facts",
@@ -1836,7 +1928,8 @@ const DZ = {
          "Kidney",
          "Renal disease"
         ]
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "prof",
@@ -1860,7 +1953,7 @@ const DZ = {
         ],
         [
          "Nail psoriasis",
-         "Pitting, ridging, discoloration, onycholysis"
+         "Pitting, ridging, discoloration, [[onycholysis|onycholysis]]"
         ]
        ]
       }
@@ -1869,10 +1962,11 @@ const DZ = {
     {
      "title": "What goes wrong",
      "profs": [
-      "sm"
+      "sm",
+      "pa"
      ],
      "q": "Which cytokines drive it, and how fast do the keratinocytes turn over?",
-     "src": "Smith Pathophys slides 19, 21–23; Smith PCol slides 66–74",
+     "src": "Smith Pathophys slides 19, 21–23; Smith PCol slides 66–74; Patel 11/10 and 11/11 lectures",
      "blocks": [
       {
        "k": "prof",
@@ -1913,7 +2007,7 @@ const DZ = {
        "title": "Which drug blocks which signal",
        "rows": [
         [
-         "TNF-α",
+         "[[tnf|TNF-α]]",
          "Adalimumab, etanercept, infliximab, golimumab, certolizumab"
         ],
         [
@@ -1933,18 +2027,15 @@ const DZ = {
          "Brodalumab"
         ]
        ],
-       "src": "Smith PCol slides 66–74"
-      },
-      {
-       "k": "fig",
-       "label": "Watch how it works: where each cytokine biologic binds",
-       "jump": "guide:fig-il-axis"
+       "src": "Smith PCol slides 66–74",
+       "p": "sm"
       },
       {
        "k": "pts",
        "items": [
-        "Dr. Patel: psoriasis has the fastest epidermal turnover of the three scaly conditions (11/10 and 11/11 lectures)."
-       ]
+        "Dr. Patel: psoriasis has the fastest [[kinetics|epidermal turnover]] of the three scaly conditions (11/10 and 11/11 lectures)."
+       ],
+       "p": "pa"
       }
      ]
     },
@@ -1975,15 +2066,18 @@ const DZ = {
          "Itching",
          "In more than 50% of patients; can be severe"
         ]
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "photo",
-       "id": "ps-plaque"
+       "id": "ps-plaque",
+       "p": "pa"
       },
       {
        "k": "sub",
-       "text": "Severity by [[bsa|body surface area (BSA)]]"
+       "text": "Severity by [[bsa|body surface area (BSA)]]",
+       "p": "pa"
       },
       {
        "k": "grades",
@@ -2003,7 +2097,8 @@ const DZ = {
          "BSA {{≥ 10%}}",
          "★ “it has been corrected to 10% … I want you to follow this slide”"
         ]
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "facts",
@@ -2031,9 +2126,10 @@ const DZ = {
         ],
         [
          "Other tools",
-         "PASI and DLQI also mark severe at 10: “I only want you to know the BSA”"
+         "[[pasi|PASI]] and [[dlqi|DLQI]] also mark severe at 10: “I only want you to know the BSA”"
         ]
-       ]
+       ],
+       "p": "pa"
       }
      ]
     },
@@ -2053,18 +2149,20 @@ const DZ = {
          [
           "Lower stress; regular exercise; weight management (BMI 18.5–24.9)",
           "Moderate alcohol; stop smoking",
-          "Moisturizers; oatmeal baths; sunscreen SPF 30+ with UVA protection"
+          "Moisturizers; oatmeal baths; sunscreen [[spf|SPF]] 30+ with [[uva|UVA]] protection"
          ]
         ],
         [
          "What decides the choice",
          "Age, severity, location of lesions, comorbidities, past and current treatment, cost"
         ]
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "sub",
-       "text": "The two algorithms (slides 35 and 37)"
+       "text": "The two algorithms (slides 35 and 37)",
+       "p": "pa"
       },
       {
        "k": "facts",
@@ -2082,7 +2180,7 @@ const DZ = {
          [
           "Moderate after the topical agents have been tried, or severe",
           "Starts with a systemic agent (“most likely methotrexate”) ± a topical agent",
-          "Then a more potent systemic agent or a biologic",
+          "Then a more potent systemic agent or a [[biologic|biologic]]",
           "★ Last line: a biologic",
           "Biologic considered earlier with comorbidities such as psoriatic arthritis"
          ]
@@ -2091,7 +2189,8 @@ const DZ = {
          "Both",
          "Moisturizers; continue if controlled; step down to the lowest dose or potency that keeps control"
         ]
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "line",
@@ -2122,7 +2221,7 @@ const DZ = {
           "Anthralin: thick plaques only, 2 hours or less, then wiped off; zinc oxide around the edges",
           "Coal tar: on in the evening, washed off in the morning",
           "Salicylic acid: shampoo for scalp lesions",
-          "Pimecrolimus: intertriginous areas"
+          "Pimecrolimus: [[intertriginous|intertriginous]] areas"
          ]
         ]
        ],
@@ -2132,7 +2231,7 @@ const DZ = {
          "Low-potency corticosteroid"
         ],
         [
-         "Skin folds ([[intertriginous|intertriginous]] areas)",
+         "Skin folds (intertriginous areas)",
          "Pimecrolimus"
         ],
         [
@@ -2148,7 +2247,8 @@ const DZ = {
          "Another topical option"
         ]
        ],
-       "move": "Move to the next line when: the psoriasis is moderate and the topical agents have been tried, or it is severe. Topical steroids are limited to 4 weeks, and she contacts the patient at 1–2 weeks."
+       "move": "Move to the next line when: the psoriasis is moderate and the topical agents have been tried, or it is severe. Topical steroids are limited to 4 weeks, and she contacts the patient at 1–2 weeks.",
+       "p": "pa"
       },
       {
        "k": "line",
@@ -2200,10 +2300,11 @@ const DZ = {
         ],
         [
          "Psoriatic arthritis after methotrexate failed",
-         "Tofacitinib (JAK inhibitor); not with a biologic; no live vaccines"
+         "Tofacitinib ([[jak|JAK]] inhibitor); not with a biologic; no live vaccines"
         ]
        ],
-       "move": "Move to the next line when: topicals and an oral systemic agent have failed."
+       "move": "Move to the next line when: topicals and an oral systemic agent have failed.",
+       "p": "pa"
       },
       {
        "k": "line",
@@ -2265,7 +2366,8 @@ const DZ = {
          "A biologic is considered earlier"
         ]
        ],
-       "move": "Move to the next line when: the psoriasis is severe and [[refractory|refractory]]."
+       "move": "Move to the next line when: the psoriasis is severe and refractory.",
+       "p": "pa"
       },
       {
        "k": "line",
@@ -2280,11 +2382,13 @@ const DZ = {
         "About {{90%}} respond",
         "Skin biopsy first, to confirm psoriasis",
         "Risk: serious burns, blistering, peeling"
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "warn",
-       "text": "After starting any treatment: contact the patient in 1–2 weeks."
+       "text": "After starting any treatment: contact the patient in 1–2 weeks.",
+       "p": "pa"
       }
      ]
     }
@@ -2514,7 +2618,8 @@ const DZ = {
           "Good nutrition: protein, vitamins"
          ]
         ]
-       ]
+       ],
+       "p": "pa"
       }
      ]
     },
@@ -2557,11 +2662,13 @@ const DZ = {
          "Most common complication",
          "Fungal and bacterial infection: {{Candida albicans}}, {{Staphylococcus aureus}}"
         ]
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "photo",
-       "id": "dd-severity"
+       "id": "dd-severity",
+       "p": "pa"
       }
      ]
     },
@@ -2581,13 +2688,14 @@ const DZ = {
         "Rash {{outside the diaper region}}",
         "Possible {{urinary tract infection}}",
         "Broken skin: ulceration, blistering, peeling",
-        "Oozing, blood, vesicles or pus; bullae; onion-skin appearance",
+        "Oozing, blood, [[vesicle|vesicles]] or pus; [[bullae|bullae]]; onion-skin appearance",
         "Chronic or frequently recurring lesions",
         "Constitutional symptoms: {{fever}}, diarrhea, nausea, vomiting, swollen inguinal lymph nodes, rapid pulse, rash elsewhere",
         "Behavior change: lethargy, incessant crying",
         "Comorbid conditions: HIV, organ transplant, immunosuppressive therapy, hepatitis with skin signs",
         "Lesions part of, or caused by, another disease"
-       ]
+       ],
+       "p": "pa"
       }
      ]
     },
@@ -2606,7 +2714,8 @@ const DZ = {
          "Goals",
          "Relieve symptoms; clear the dermatitis; prevent secondary infection; prevent recurrence"
         ]
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "line",
@@ -2619,7 +2728,8 @@ const DZ = {
         "{{C}}leansing: soft cloth and warm water, or a baby wipe when stool is present",
         "{{D}}iaper: change every {{2 hours}} and as soon as soiled",
         "{{E}}ducation of parents and caregivers"
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "line",
@@ -2654,7 +2764,8 @@ const DZ = {
          "Body lotion already in use",
          "Not a skin protectant"
         ]
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "line",
@@ -2669,7 +2780,8 @@ const DZ = {
         "Topical {{anesthetics}} (benzocaine, lidocaine)",
         "{{Hydrocortisone}} or any topical corticosteroid"
        ],
-       "warn": "★ \"The biggest difference\" from atopic dermatitis: no topical corticosteroid. The diaper area is a large share of a baby's body surface, so topical products can cause systemic effects."
+       "warn": "★ \"The biggest difference\" from atopic dermatitis: no topical corticosteroid. The diaper area is a large share of a baby's body surface, so topical products can cause systemic effects.",
+       "p": "pa"
       },
       {
        "k": "line",
@@ -2685,7 +2797,8 @@ const DZ = {
          "Not healed, not improved, or worse",
          "{{Refer}} to a physician"
         ]
-       ]
+       ],
+       "p": "pa"
       }
      ]
     }
@@ -2832,7 +2945,7 @@ const DZ = {
         ],
         [
          "What happens",
-         "Faster epidermal cell turnover and abnormal keratinization: flaking and [[pruritus|pruritus]]"
+         "Faster epidermal cell turnover and abnormal keratinization: flaking and pruritus"
         ],
         [
          "Who",
@@ -2850,13 +2963,15 @@ const DZ = {
          "Mild inflammation",
          "{{Secondary}}, from scratching: “it’s not gonna be from the start of that condition”"
         ]
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "pts",
        "items": [
         "★ Dandruff has the slowest [[kinetics|epidermal turnover]] of the three scaly conditions; psoriasis the fastest. She asks the order only."
-       ]
+       ],
+       "p": "pa"
       }
      ]
     },
@@ -2887,11 +3002,13 @@ const DZ = {
          "Epidermal [[hyperplasia|hyperplasia]]",
          "Absent"
         ]
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "photo",
-       "id": "dandruff-scalp"
+       "id": "dandruff-scalp",
+       "p": "pa"
       },
       {
        "k": "grades",
@@ -2906,7 +3023,8 @@ const DZ = {
          "{{Daily}} dandruff, moderate–severe inflammation",
          "Two groups only: “it’s either mild or it’s moderate to severe”"
         ]
-       ]
+       ],
+       "p": "pa"
       }
      ]
     },
@@ -2930,29 +3048,31 @@ const DZ = {
          [
           "{{Inflammation}} from the start",
           "{{Yellow, oily}} scales on red skin, or scale beyond the scalp (face, trunk) → seborrheic dermatitis",
-          "{{Silvery-white}} scale on sharp-bordered red plaques → psoriasis",
-          "Scalp scaling in an infant → cradle cap; dandruff starts at {{puberty}}"
+          "{{Silvery-white}} scale on sharp-bordered red [[plaque|plaques]] → psoriasis",
+          "Scalp scaling in an infant → [[cradle-cap|cradle cap]]; dandruff starts at {{puberty}}"
          ]
         ],
         [
          "Follow-up",
          "Slide 51: a week after self-treatment begins; she said 1 to 2 weeks (11/11)"
         ]
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "pts",
        "items": [
         "Her slides give a time to refer (worse, or longer than 7 days) on the seborrheic dermatitis slide, not on the dandruff slide."
-       ]
+       ],
+       "p": "pa"
       }
      ]
     },
     {
      "title": "Treat it: match the shampoo to the severity",
      "profs": [
-      "pa",
-      "sm"
+      "sm",
+      "pa"
      ],
      "q": "What does each grade get, how long does a medicated shampoo stay on, and what is the weekly taper?",
      "src": "Patel Scaly slides 7, 9; 11/10 lecture; Smith PCol slides 53, 57",
@@ -2968,7 +3088,8 @@ const DZ = {
           "Less visible scaling; less itching"
          ]
         ]
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "line",
@@ -2978,7 +3099,8 @@ const DZ = {
        "pts": [
         "★ Her poll answer for intermittent flakes with no inflammation",
         "{{Daily or every other day}}"
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "line",
@@ -3004,7 +3126,8 @@ const DZ = {
           "Then {{once weekly}} for control"
          ]
         ]
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "line",
@@ -3015,7 +3138,8 @@ const DZ = {
        ],
        "pts": [
         "★ The dandruff “no” on her OTC chart: “Hydrocortisone 1%, not effective in dandruff”"
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "prof",
@@ -3023,7 +3147,7 @@ const DZ = {
        "rows": [
         [
          "Selenium sulfide, zinc pyrithione",
-         "Cytostatic and antifungal; mechanism unknown"
+         "[[cytostatic|Cytostatic]] and antifungal; mechanism unknown"
         ],
         [
          "Coal tar",
@@ -3215,7 +3339,7 @@ const DZ = {
          [
           "Adolescents and adults: {{1–3%}}",
           "{{Men}} more than women",
-          "Infants: see the cradle cap card"
+          "Infants: see the [[cradle-cap|cradle cap]] card"
          ]
         ],
         [
@@ -3229,13 +3353,15 @@ const DZ = {
           "Immunosuppression; neurologic conditions (slide 6)"
          ]
         ]
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "pts",
        "items": [
-        "★ Second-fastest epidermal turnover of the three scaly conditions; she asks the order only."
-       ]
+        "★ Second-fastest [[kinetics|epidermal turnover]] of the three scaly conditions; she asks the order only."
+       ],
+       "p": "pa"
       }
      ]
     },
@@ -3252,7 +3378,7 @@ const DZ = {
        "rows": [
         [
          "Scale",
-         "★ {{Yellow, greasy}} scales in patches or plaques, with exudate and crusting"
+         "★ {{Yellow, greasy}} scales in patches or [[plaque|plaques]], with exudate and crusting"
         ],
         [
          "Skin under it",
@@ -3274,17 +3400,20 @@ const DZ = {
          "Her case",
          "Scalp, eyebrows, ear canal; yellowish scales in the nasolabial creases"
         ]
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "photo",
-       "id": "sd-face"
+       "id": "sd-face",
+       "p": "pa"
       },
       {
        "k": "pts",
        "items": [
         "★ Her key words for the poll: “greasy, scaling, yellowish scales … as well as the location”."
-       ]
+       ],
+       "p": "pa"
       }
      ]
     },
@@ -3318,7 +3447,8 @@ const DZ = {
          "Her case",
          "OTC dandruff shampoos gave only temporary relief: she still chose the first-line shampoo, not referral"
         ]
-       ]
+       ],
+       "p": "pa"
       }
      ]
     },
@@ -3337,7 +3467,7 @@ const DZ = {
          "Goals",
          [
           "Reduce inflammation and epidermal turnover",
-          "Minimize or remove visible [[erythema|erythema]] and scaling"
+          "Minimize or remove visible erythema and scaling"
          ]
         ],
         [
@@ -3348,7 +3478,8 @@ const DZ = {
           "Moisturizing [[emollient|emollients]] after washing"
          ]
         ]
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "line",
@@ -3363,7 +3494,8 @@ const DZ = {
         "Or a cream containing salicylic acid or sulfur",
         "Wash the skin often: slide 15 says more often than twice daily; she said twice a day",
         "Dishwashing liquid may be used on tough scale"
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "line",
@@ -3391,7 +3523,8 @@ const DZ = {
           "Not improved at 4 weeks: keep the same frequency"
          ]
         ]
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "line",
@@ -3401,7 +3534,8 @@ const DZ = {
        "pts": [
         "Topical {{antifungal creams}} to decrease fungal growth",
         "Ultraviolet light therapy is also listed"
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "line",
@@ -3416,7 +3550,8 @@ const DZ = {
         "Other parts of the body: corticosteroid cream",
         "Mild to potent",
         "OTC chart: hydrocortisone 0.5–1%"
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "line",
@@ -3428,7 +3563,8 @@ const DZ = {
        ],
        "pts": [
         "Ketoconazole shampoo and a {{corticosteroid lotion}} must often be combined in therapy-resistant cases"
-       ]
+       ],
+       "p": "pa"
       }
      ]
     }
@@ -3601,7 +3737,7 @@ const DZ = {
         ],
         [
          "Organism",
-         "Malassezia species, as in dandruff"
+         "[[malassezia|Malassezia]] species, as in dandruff"
         ],
         [
          "How long",
@@ -3615,7 +3751,8 @@ const DZ = {
          "Not dandruff",
          "Dandruff starts at puberty"
         ]
-       ]
+       ],
+       "p": "pa"
       }
      ]
     },
@@ -3646,11 +3783,13 @@ const DZ = {
          "Her case",
          "An infant a couple of weeks old with a scaly scalp: “this is an example of cradle cap”"
         ]
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "photo",
-       "id": "cradle-cap"
+       "id": "cradle-cap",
+       "p": "pa"
       }
      ]
     },
@@ -3672,7 +3811,8 @@ const DZ = {
         "Then shampoo with a {{non-medicated}} shampoo",
         "Use a {{soft bristle brush}}",
         "Mineral oil or olive oil also softens the scales"
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "line",
@@ -3682,13 +3822,15 @@ const DZ = {
        "pts": [
         "Wash with a {{mild soap or cleanser}}",
         "Apply a facial [[emollient|emollient]]"
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "pts",
        "items": [
         "“With our infants, we’re mostly using non-pharm therapy.”"
-       ]
+       ],
+       "p": "pa"
       }
      ]
     },
@@ -3713,7 +3855,8 @@ const DZ = {
         "★ “{{Ketoconazole}} shampoo is not recommended in infants”: it irritates infant skin",
         "Face too: “We’re still not recommending corticosteroids cause remember the age parameter”",
         "Nystatin ointment: “would not be beneficial”"
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "line",
@@ -3726,7 +3869,8 @@ const DZ = {
         "{{Salicylic acid 3–5%}} in {{olive oil}} or a water-soluble base",
         "“Severe cases only”: “an option if nothing else has worked”",
         "Why last: an infant’s skin is thin, absorbs more, and is more prone to irritation"
-       ]
+       ],
+       "p": "pa"
       }
      ]
     }
@@ -3884,7 +4028,8 @@ const DZ = {
          "Prevention",
          "Protective clothing and gloves when working outside near vegetation"
         ]
-       ]
+       ],
+       "p": "pa"
       }
      ]
     },
@@ -3907,7 +4052,7 @@ const DZ = {
          "Order of symptoms",
          [
           "{{Itching}}",
-          "[[erythema|Erythema]]",
+          "Erythema",
           "Vesicles and [[papule|papules]]"
          ]
         ],
@@ -3919,11 +4064,13 @@ const DZ = {
          "Smoke",
          "Inhaling smoke from burning poison ivy, oak or sumac can cause {{severe respiratory symptoms}}"
         ]
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "photo",
-       "id": "pi-line"
+       "id": "pi-line",
+       "p": "pa"
       }
      ]
     },
@@ -3937,7 +4084,8 @@ const DZ = {
      "blocks": [
       {
        "k": "sub",
-       "text": "Refer to a physician if"
+       "text": "Refer to a physician if",
+       "p": "pa"
       },
       {
        "k": "pts",
@@ -3947,7 +4095,8 @@ const DZ = {
         "Rash covers a large area of the {{face}}, or the {{eyelids}} swell",
         "Rash involves the {{genitalia}}",
         "{{Secondary infection}}"
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "facts",
@@ -3956,7 +4105,8 @@ const DZ = {
          "Expected course",
          "Symptoms can last up to {{3 weeks}}"
         ]
-       ]
+       ],
+       "p": "pa"
       }
      ]
     },
@@ -3977,7 +4127,8 @@ const DZ = {
         "Rinse with {{large volumes of water}}",
         "Then wash with soap and water, including {{under the nails}}",
         "Other agents: Tecnu, Zanfel, Dial Ultra dishwashing soap"
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "line",
@@ -3992,7 +4143,8 @@ const DZ = {
         "Oatmeal bath: soak {{15–20 minutes}} twice daily, pat the skin dry",
         "Cool soaks or baths"
        ],
-       "warn": "Not used for plant dermatitis: <<topical-antihistamine|topical antihistamines>> and <<topical-antibiotics|topical antibiotics>>."
+       "warn": "Not used for plant dermatitis: <<topical-antihistamine|topical antihistamines>> and <<topical-antibiotics|topical antibiotics>>.",
+       "p": "pa"
       },
       {
        "k": "line",
@@ -4006,7 +4158,8 @@ const DZ = {
         "★ Her poll answer: {{aluminum acetate}} (Burow's solution), an [[astringent|astringent]], as a {{soak or wet dressing}}",
         "Aluminum sulfate/calcium acetate is used the same way",
         "Hydrocortisone is listed for wet or dry plant dermatitis"
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "line",
@@ -4031,7 +4184,8 @@ const DZ = {
          "Vesicles open or oozing",
          "No topical anesthetic and no counterirritant"
         ]
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "line",
@@ -4041,12 +4195,14 @@ const DZ = {
        "pts": [
         "Topical corticosteroids suit any presentation; oral corticosteroids are for severe cases"
        ],
-       "move": "Refer when: no improvement after 7 days, worse, face or eyelids, genitalia, or infection."
+       "move": "Refer when: no improvement after 7 days, worse, face or eyelids, genitalia, or infection.",
+       "p": "pa"
       },
       {
        "k": "fig",
        "label": "Reference table: plant dermatitis by symptom",
-       "jump": "ref:ref-p8-plant"
+       "jump": "ref:ref-p8-plant",
+       "p": "pa"
       }
      ]
     }
@@ -4247,7 +4403,8 @@ const DZ = {
           "Remove standing water and wood piles"
          ]
         ]
-       ]
+       ],
+       "p": "pa"
       }
      ]
     },
@@ -4264,13 +4421,14 @@ const DZ = {
        "rows": [
         [
          "Local effects",
-         "{{Mild}} [[pruritus|pruritus]], {{erythema}}, {{papules}}"
+         "{{Mild}} pruritus, {{erythema}}, {{papules}}"
         ],
         [
          "Not a bite",
          "Pain with venom and allergenic proteins is a sting (bees, wasps, yellow jackets, hornets, fire ants)"
         ]
-       ]
+       ],
+       "p": "pa"
       }
      ]
     },
@@ -4284,7 +4442,8 @@ const DZ = {
      "blocks": [
       {
        "k": "sub",
-       "text": "Refer to a physician if"
+       "text": "Refer to a physician if",
+       "p": "pa"
       },
       {
        "k": "pts",
@@ -4293,7 +4452,8 @@ const DZ = {
         "Symptoms {{worsen}} during treatment",
         "Secondary infection: {{fever}}, {{joint pain}}, {{lymph node enlargement}}, neurologic symptoms",
         "A vector-borne disease is suspected: refer to the prescriber"
-       ]
+       ],
+       "p": "pa"
       }
      ]
     },
@@ -4314,7 +4474,8 @@ const DZ = {
         "Apply an ice pack promptly: less swelling, itching and pain",
         "Avoid scratching; keep fingernails trimmed",
         "No rough, irritating clothing over the bite"
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "line",
@@ -4325,7 +4486,8 @@ const DZ = {
         "Grasp the tick's {{head}} and pull gently; remove the head",
         "Clean the skin with {{rubbing alcohol}}",
         "Keep the tick in a {{plastic bag}}"
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "line",
@@ -4341,7 +4503,7 @@ const DZ = {
        "pts": [
         "★ Her bedbug poll: {{oral diphenhydramine}} for the itch",
         "Hydrocortisone treats pruritus and inflammation",
-        "Topical anesthetics (pramoxine, benzocaine) and counterirritants (camphor, menthol): {{3–4 times daily}}, not longer than {{7 days}}",
+        "Topical anesthetics (pramoxine, benzocaine) and [[counterirritant|counterirritants]] (camphor, menthol): {{3–4 times daily}}, not longer than {{7 days}}",
         "Her chart also lists topical diphenhydramine 0.5 to 2% for bites and stings"
        ],
        "pick": [
@@ -4351,13 +4513,14 @@ const DZ = {
         ],
         [
          "Asks about witch hazel",
-         "An astringent, used for wet or weeping dermatitis"
+         "An [[astringent|astringent]], used for wet or weeping dermatitis"
         ],
         [
          "Broken or oozing skin",
          "No topical antihistamine, anesthetic or counterirritant"
         ]
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "line",
@@ -4370,16 +4533,19 @@ const DZ = {
         "★ [[skin-protectant|Skin protectants]] (petrolatum, calamine, zinc oxide) can be used under {{2 years}}",
         "As needed, up to {{4 times daily}}"
        ],
-       "warn": "Under 2 years: no hydrocortisone, no local anesthetic, no counterirritant."
+       "warn": "Under 2 years: no hydrocortisone, no local anesthetic, no counterirritant.",
+       "p": "pa"
       },
       {
        "k": "warn",
-       "text": "Do not use hydrocortisone on scabies, bacterial infections or fungal infections: steroids can mask or worsen them."
+       "text": "Do not use hydrocortisone on scabies, bacterial infections or fungal infections: steroids can mask or worsen them.",
+       "p": "pa"
       },
       {
        "k": "fig",
        "label": "Reference table: insect bites and stings",
-       "jump": "ref:ref-p8-bites"
+       "jump": "ref:ref-p8-bites",
+       "p": "pa"
       }
      ]
     }
@@ -4551,7 +4717,8 @@ const DZ = {
           "Tick attached more than {{36 hours}}"
          ]
         ]
-       ]
+       ],
+       "p": "pa"
       }
      ]
     },
@@ -4582,11 +4749,13 @@ const DZ = {
          "Lyme skin lesion",
          "[[erythema-migrans|Erythema migrans]]: early localized disease"
         ]
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "photo",
-       "id": "vb-hunter-rash"
+       "id": "vb-hunter-rash",
+       "p": "pa"
       }
      ]
     },
@@ -4603,13 +4772,15 @@ const DZ = {
        "items": [
         "★ Her hunter poll: flu-like symptoms, muscle aches and a leg rash about 10 days after a hunting trip: {{immediate medical referral}}",
         "Her cues: the duration and the symptoms",
-        "If a vector-borne disease is suspected, refer to the {{prescriber}}",
+        "If a [[vector|vector-borne]] disease is suspected, refer to the {{prescriber}}",
         "{{Fever}}, joint pain, lymph node enlargement or neurologic symptoms after a bite: refer"
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "warn",
-       "text": "Not self-care: a suspected vector-borne disease is referred."
+       "text": "Not self-care: a suspected vector-borne disease is referred.",
+       "p": "pa"
       }
      ]
     },
@@ -4638,11 +4809,12 @@ const DZ = {
          "Doxycycline, 7 days; recommended for all suspected rickettsial infections"
         ],
         [
-         "STARI (Lone Star tick)",
+         "[[stari|STARI]] (Lone Star tick)",
          "IDSA: {{no antibiotic}} recommendation"
         ]
        ],
-       "src": "Patel Outdoor slides 27, 30"
+       "src": "Patel Outdoor slides 27, 30",
+       "p": "pa"
       },
       {
        "k": "line",
@@ -4652,9 +4824,10 @@ const DZ = {
         "doxycycline"
        ],
        "pts": [
-        "★ [[prophylaxis|Prophylaxis]] is given within {{72 hours}} of detaching the tick (\"pay attention to the hour\")",
+        "★ Prophylaxis is given within {{72 hours}} of detaching the tick (\"pay attention to the hour\")",
         "Doxycycline 200 mg by mouth {{once}}; children 4.4 mg/kg up to 200 mg once"
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "line",
@@ -4671,7 +4844,8 @@ const DZ = {
         "★ Amoxicillin 500 mg TID for {{14 days}}",
         "★ Cefuroxime axetil 500 mg BID for {{14 days}}",
         "★ Second line: azithromycin 500 mg daily for {{7 days}}"
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "line",
@@ -4682,12 +4856,14 @@ const DZ = {
         "Neurologic: IV ceftriaxone, penicillin G or oral doxycycline, 14 to 21 days",
         "Cardiac: hospitalized, IV ceftriaxone; not hospitalized, an oral agent, 14–21 days",
         "Arthritic: oral antibiotics for 28 days"
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "fig",
        "label": "Reference table: antibiotic by flea-borne and tick-borne disease",
-       "jump": "ref:ref-p8-vector"
+       "jump": "ref:ref-p8-vector",
+       "p": "pa"
       }
      ]
     }
@@ -4872,7 +5048,8 @@ const DZ = {
          "Referral slide adds",
          "Scorpion stings"
         ]
-       ]
+       ],
+       "p": "pa"
       }
      ]
     },
@@ -4895,11 +5072,13 @@ const DZ = {
          "Her case",
          "A swollen, bright red patch on the thigh that hurts and itches"
         ]
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "photo",
-       "id": "sting-local"
+       "id": "sting-local",
+       "p": "pa"
       }
      ]
     },
@@ -4913,7 +5092,8 @@ const DZ = {
      "blocks": [
       {
        "k": "sub",
-       "text": "Emergency care immediately"
+       "text": "Emergency care immediately",
+       "p": "pa"
       },
       {
        "k": "pts",
@@ -4921,17 +5101,20 @@ const DZ = {
         "{{Severe reaction history}}",
         "★ At any time after the sting: {{hives}}, {{dizziness}}, nausea or vomiting, {{difficulty breathing}}",
         "★ Her poll: a wasp or bee sting with hives and swelling: {{immediate referral to the emergency room}}"
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "sub",
-       "text": "Triage to a provider"
+       "text": "Triage to a provider",
+       "p": "pa"
       },
       {
        "k": "pts",
        "items": [
         "Symptoms worsen or do not improve after {{7 days}} of topical treatment"
-       ]
+       ],
+       "p": "pa"
       }
      ]
     },
@@ -4953,7 +5136,8 @@ const DZ = {
         "Wash the area with {{soap and water}}",
         "Apply {{ice or a cold pack}}: slows absorption, reduces pain and swelling",
         "Clean with rubbing alcohol; avoid scratching; no rough clothing over the area"
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "line",
@@ -4967,19 +5151,20 @@ const DZ = {
         "skin-protectants"
        ],
        "pts": [
-        "Local anesthetics and counterirritants: {{3–4 times daily}}, not longer than 7 days",
+        "Local anesthetics and [[counterirritant|counterirritants]]: {{3–4 times daily}}, not longer than 7 days",
         "Pramoxine or benzyl alcohol: less likely to cause [[sensitization|sensitization]] or adverse effects"
        ],
        "pick": [
         [
          "Under 2 years",
-         "Skin protectant (zinc oxide, calamine); no hydrocortisone, anesthetic or counterirritant"
+         "[[skin-protectant|Skin protectant]] (zinc oxide, calamine); no hydrocortisone, anesthetic or counterirritant"
         ],
         [
          "Broken skin",
          "No topical anesthetic or counterirritant"
         ]
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "line",
@@ -4988,12 +5173,14 @@ const DZ = {
        "drugs": [],
        "pts": [
         "If a topical does not relieve the pain, consider an {{oral analgesic}}"
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "fig",
        "label": "Reference table: insect bites and stings",
-       "jump": "ref:ref-p8-bites"
+       "jump": "ref:ref-p8-bites",
+       "p": "pa"
       }
      ]
     }
@@ -5155,7 +5342,8 @@ const DZ = {
          "Goals",
          "Kill adult and nymph lice; remove eggs ([[nit|nits]])"
         ]
-       ]
+       ],
+       "p": "pa"
       }
      ]
     },
@@ -5182,11 +5370,13 @@ const DZ = {
          "Needed for self-care",
          "{{Live lice}} seen"
         ]
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "photo",
-       "id": "lice-nits"
+       "id": "lice-nits",
+       "p": "pa"
       }
      ]
     },
@@ -5200,7 +5390,8 @@ const DZ = {
      "blocks": [
       {
        "k": "sub",
-       "text": "Not a self-care candidate"
+       "text": "Not a self-care candidate",
+       "p": "pa"
       },
       {
        "k": "pts",
@@ -5213,18 +5404,21 @@ const DZ = {
         "Lice of the {{eyelids or eyebrows}}",
         "{{Pregnancy}} or breast-feeding",
         "Active tumors"
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "sub",
-       "text": "Refer during treatment"
+       "text": "Refer during treatment",
+       "p": "pa"
       },
       {
        "k": "pts",
        "items": [
         "Live lice after {{2 treatment rounds}} one week apart: primary care provider, for a prescription product",
         "Significant skin irritation, or product in the eyes: medical attention"
-       ]
+       ],
+       "p": "pa"
       }
      ]
     },
@@ -5265,7 +5459,8 @@ const DZ = {
          "Under 2 months, pregnant or breast-feeding",
          "Refer"
         ]
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "line",
@@ -5280,7 +5475,8 @@ const DZ = {
         "Benzyl alcohol lotion 5% (Ulesfia), Rx: over 6 months; 10 minutes",
         "Spinosad 0.9% (Natroba), Rx: over 6 months; 10 minutes",
         "Malathion lotion 0.5% (Ovide), Rx: over 2 years; {{8–12 hours}}"
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "line",
@@ -5295,7 +5491,8 @@ const DZ = {
         "Do not re-wash the hair for 1–2 days",
         "★ Repeat in {{7 to 10 days}} if lice or nits are seen (slide 47); slide 42: \"may need to repeat treatment in 7 days\"",
         "Follow up with the caregiver in a week"
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "line",
@@ -5308,16 +5505,19 @@ const DZ = {
         "Wash clothing, bedding, brushes and combs in hot water",
         "Clean shared sports equipment before and after use",
         "AirAllé: a machine that applies heat to dehydrate the lice"
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "warn",
-       "text": "Do not use the same product more than 2–3 times if it is not working (slide 45); slide 47 refers after 2 rounds one week apart."
+       "text": "Do not use the same product more than 2–3 times if it is not working (slide 45); slide 47 refers after 2 rounds one week apart.",
+       "p": "pa"
       },
       {
        "k": "fig",
        "label": "Reference table: head lice products and scabies",
-       "jump": "ref:ref-p8-lice"
+       "jump": "ref:ref-p8-lice",
+       "p": "pa"
       }
      ]
     }
@@ -5525,7 +5725,8 @@ const DZ = {
          "High risk of secondary infection",
          "Weakened immune systems; the elderly"
         ]
-       ]
+       ],
+       "p": "pa"
       }
      ]
     },
@@ -5548,11 +5749,13 @@ const DZ = {
          "Sites",
          "{{Fingers}}, {{wrists}}, buttocks, {{armpits}}, skin folds"
         ]
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "photo",
-       "id": "scabies-hand"
+       "id": "scabies-hand",
+       "p": "pa"
       }
      ]
     },
@@ -5569,7 +5772,8 @@ const DZ = {
        "items": [
         "Slide 51 lists treatment options; no self-care criteria are listed",
         "★ Do not use {{hydrocortisone}} on scabies: steroids can {{mask or worsen}} it"
-       ]
+       ],
+       "p": "pa"
       }
      ]
     },
@@ -5597,7 +5801,8 @@ const DZ = {
         "Lindane 1% lotion",
         "Oral ivermectin 200 mcg/kg/dose × {{2 doses one week apart}}",
         "★ \"There isn't first line, second line, or third line\": the choice depends on the patient and the severity"
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "line",
@@ -5610,12 +5815,14 @@ const DZ = {
         "Pruritus can last {{4 weeks}} after treatment, from a {{hypersensitivity}} reaction",
         "★ \"Most likely we're leaning on that oral antihistamine\"",
         "The slide also lists topical steroids for this itch"
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "fig",
        "label": "Reference table: head lice products and scabies",
-       "jump": "ref:ref-p8-lice"
+       "jump": "ref:ref-p8-lice",
+       "p": "pa"
       }
      ]
     }
@@ -5767,15 +5974,18 @@ const DZ = {
          "Most spiders",
          "Listed with the {{nonvenomous}} bites (slide 20)"
         ]
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "photo",
-       "id": "spider-recluse"
+       "id": "spider-recluse",
+       "p": "pa"
       },
       {
        "k": "photo",
-       "id": "spider-widow"
+       "id": "spider-widow",
+       "p": "pa"
       }
      ]
     },
@@ -5794,7 +6004,7 @@ const DZ = {
          "★ Brown recluse",
          [
           "Fever, {{blood in urine}}, rash, joint pain within {{48 hours}}",
-          "Tissue [[necrosis|necrosis]]",
+          "Tissue necrosis",
           "May need {{surgical intervention}}"
          ]
         ],
@@ -5810,7 +6020,8 @@ const DZ = {
           "Swollen eyelids"
          ]
         ]
-       ]
+       ],
+       "p": "pa"
       }
      ]
     },
@@ -5827,7 +6038,8 @@ const DZ = {
        "items": [
         "Not self-care: the bite victim goes to the {{emergency room}}",
         "Identify the spider: the slide says kill or capture it in a {{sealed container}} and bring it; she said to take a {{picture}} if possible"
-       ]
+       ],
+       "p": "pa"
       }
      ]
     },
@@ -5848,7 +6060,8 @@ const DZ = {
         "Clean the wound with {{soap and water}}",
         "Apply a {{cold pack}}",
         "{{Elevate}} the limb to reduce swelling"
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "line",
@@ -5859,7 +6072,8 @@ const DZ = {
        ],
        "pts": [
         "★ \"Tylenol over ibuprofen\""
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "line",
@@ -5868,12 +6082,14 @@ const DZ = {
        "drugs": [],
        "pts": [
         "Severe black widow bites: [[antivenin|antivenom]] (Latrodectus mactans), {{equine}}"
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "fig",
        "label": "Reference table: spiders, snake bites, poison control and rabies",
-       "jump": "ref:ref-p8-venom"
+       "jump": "ref:ref-p8-venom",
+       "p": "pa"
       }
      ]
     }
@@ -6018,13 +6234,15 @@ const DZ = {
           "Control insect and {{rodent}} populations"
          ]
         ]
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "pts",
        "items": [
         "She does not ask the species: \"Just know that in terms of prevention, prevention is key\""
-       ]
+       ],
+       "p": "pa"
       }
      ]
     },
@@ -6046,7 +6264,7 @@ const DZ = {
         ],
         [
          "Moderate",
-         "Swelling, erythema or [[ecchymosis|ecchymosis]] {{beyond the bite site}}",
+         "Swelling, erythema or ecchymosis {{beyond the bite site}}",
          "Systemic signs not life-threatening: nausea or vomiting, mild hypotension, perioral paresthesias, myokymia; coagulation mildly abnormal without significant bleeding"
         ],
         [
@@ -6054,14 +6272,16 @@ const DZ = {
          "Rapid swelling of the {{entire body part}}",
          "Systolic {{< 80 mm Hg}}, altered sensorium, tachycardia, tachypnea, respiratory distress; abnormal coagulation {{with bleeding}}, platelets < 20,000/µL"
         ]
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "pts",
        "items": [
         "★ She asks the three sign types (local, systemic, coagulation) across the three grades",
         "Symptoms usually evolve over several hours"
-       ]
+       ],
+       "p": "pa"
       }
      ]
     },
@@ -6092,7 +6312,8 @@ const DZ = {
          "Then",
          "Transport to a medical facility"
         ]
-       ]
+       ],
+       "p": "pa"
       }
      ]
     },
@@ -6118,7 +6339,8 @@ const DZ = {
         "Limb position: slide 56 {{even with or slightly lower than the heart}}; she said \"keep it lower ... than the heart\" and also \"most likely elevating the leg is just fine\"; no walking on the leg",
         "Check for envenomation; mark the leading edge of swelling and tenderness",
         "Treat pain"
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "line",
@@ -6129,7 +6351,7 @@ const DZ = {
         "Tetanus injection",
         "Consider antibiotics to cover {{gram-negative}} organisms from the snake's mouth",
         "Coral snake bite: {{no antivenin}}; supportive care only",
-        "Pit viper bite: scored to assess the need for antivenin"
+        "Pit viper bite: scored to assess the need for [[antivenin|antivenin]]"
        ],
        "pick": [
         [
@@ -6140,18 +6362,21 @@ const DZ = {
          "Severe",
          "Antivenin if available; supportive therapy; watch for [[compartment-syndrome|compartment syndrome]] and call surgery"
         ]
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "pts",
        "items": [
         "The antivenin dosing protocol (slide 59) is \"just for reference\""
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "fig",
        "label": "Reference table: spiders, snake bites, poison control and rabies",
-       "jump": "ref:ref-p8-venom"
+       "jump": "ref:ref-p8-venom",
+       "p": "pa"
       }
      ]
     }
@@ -6314,7 +6539,8 @@ const DZ = {
          "Untreated",
          "Fatal"
         ]
-       ]
+       ],
+       "p": "pa"
       }
      ]
     },
@@ -6332,7 +6558,8 @@ const DZ = {
         "Wash the wound {{at once}} with {{soap and water}}",
         "If available, irrigate with {{povidone-iodine}} solution",
         "The same wound cleansing applies whether or not the patient was vaccinated before"
-       ]
+       ],
+       "p": "pa"
       }
      ]
     },
@@ -6350,7 +6577,8 @@ const DZ = {
         "Not self-care: refer {{as soon after exposure as possible}} for [[pep|postexposure prophylaxis (PEP)]]",
         "★ \"Remember, it's {{urgency, not emergency}}\"",
         "Untreated rabies is {{fatal}}"
-       ]
+       ],
+       "p": "pa"
       }
      ]
     },
@@ -6374,7 +6602,8 @@ const DZ = {
         "Human rabies immune globulin ([[hrig|HRIG]]) {{20 IU/kg}}: around and into the wounds; the remainder IM away from the vaccine site",
         "★ Vaccine 1 mL IM, unaffected deltoid, on days {{0, 3, 7 and 14}}",
         "Immunosuppressed: a fifth dose on day {{28}}"
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "line",
@@ -6386,16 +6615,19 @@ const DZ = {
        "pts": [
         "★ HRIG: {{do not administer}}",
         "★ Vaccine 1 mL in the deltoid on days {{0 and 3}}"
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "warn",
-       "text": "Vaccine and immune globulin are never given at the same site or in the same syringe."
+       "text": "Vaccine and immune globulin are never given at the same site or in the same syringe.",
+       "p": "pa"
       },
       {
        "k": "fig",
        "label": "Reference table: spiders, snake bites, poison control and rabies",
-       "jump": "ref:ref-p8-venom"
+       "jump": "ref:ref-p8-venom",
+       "p": "pa"
       }
      ]
     }
@@ -6520,11 +6752,11 @@ const DZ = {
     {
      "title": "Who is at risk",
      "profs": [
-      "pa",
-      "sm"
+      "sm",
+      "pa"
      ],
      "q": "Which skin types are at highest risk, and which photosensitizing drugs did she name?",
-     "src": "Patel Sun slides 8–11, 13; 11/12 lecture T@49012–50187",
+     "src": "Patel Sun slides 8–11, 13; 11/12 lecture T@49012–50187; Smith Sun slide 8; Smith PCol slides 18, 44, 54, 78",
      "blocks": [
       {
        "k": "facts",
@@ -6552,7 +6784,8 @@ const DZ = {
           "A UV-induced skin disorder; an autoimmune disease"
          ]
         ]
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "grades",
@@ -6581,11 +6814,13 @@ const DZ = {
          "VI",
          "Dark brown: {{never burns}}, always tans"
         ]
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "sub",
-       "text": "Photosensitizing drugs she named"
+       "text": "[[photosens|Photosensitizing]] drugs she named",
+       "p": "pa"
       },
       {
        "k": "pts",
@@ -6595,7 +6830,8 @@ const DZ = {
         "{{Combined oral contraceptives}} (her case patient takes Yazmin)",
         "{{Retinoids}}: acitretin, isotretinoin",
         "★ \"Highlight the ones that we've talked about to treat our derm conditions\"; the rest of slide 10 is a long list she did not read"
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "prof",
@@ -6607,23 +6843,24 @@ const DZ = {
         ],
         [
          "Which UV",
-         "UVA causes most drug phototoxic reactions (Sun slide 8)"
+         "[[uva|UVA]] causes most drug phototoxic reactions (Sun slide 8)"
         ]
        ]
       },
       {
        "k": "fig",
        "label": "Dr. Smith's guide section: drugs that cause photosensitivity",
-       "jump": "guide:gobj-sun-photo"
+       "jump": "guide:gobj-sun-photo",
+       "p": "sm"
       }
      ]
     },
     {
      "title": "Choose the sunscreen",
      "profs": [
-      "pa",
       "sm",
-      "sk"
+      "sk",
+      "pa"
      ],
      "q": "What three things does Dr. Patel's sunscreen answer contain, and which two ingredients does she prefer?",
      "src": "Patel Sun slides 14–20; 11/12 lecture T@53069–56238; Smith Sun slides 15–17, 20–25; Sikazwe DPAW pages 61–66",
@@ -6644,7 +6881,7 @@ const DZ = {
          "{{UVB}} protection only"
         ],
         [
-         "UVB blocked",
+         "[[uvb|UVB]] blocked",
          "SPF 15: {{93%}} · SPF 30: {{97%}} · SPF 50: {{98%}} · SPF 100: {{99%}}"
         ],
         [
@@ -6659,7 +6896,8 @@ const DZ = {
          "Not GRASE",
          "{{Aminobenzoic acid (PABA)}}, trolamine salicylate"
         ]
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "line",
@@ -6672,7 +6910,8 @@ const DZ = {
        "pts": [
         "Avoid {{PABA}}",
         "Chemical ingredients \"tend to irritate the skin\""
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "line",
@@ -6685,7 +6924,8 @@ const DZ = {
        "pts": [
         "A product that mixes chemical and physical ingredients: avobenzone with padimate O or octocrylene, meradimate, titanium dioxide, benzophenones",
         "Sunscreen and protective clothing {{every day}}"
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "line",
@@ -6698,7 +6938,8 @@ const DZ = {
        "pts": [
         "★ Her poll answer: water resistant, broad spectrum, SPF 50",
         "Reapply more often"
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "prof",
@@ -6715,6 +6956,10 @@ const DZ = {
         [
          "Most reactions",
          "PABA, avobenzone, oxybenzone (Sun slide 25)"
+        ],
+        [
+         "Broad coverage",
+         "Anthranilates are used only in combination products, for broad UV coverage (Sun slide 24)"
         ]
        ]
       },
@@ -6733,32 +6978,35 @@ const DZ = {
         [
          "UVB and UVA",
          "Zinc oxide and titanium dioxide (metal oxides, reflect and scatter); benzophenones such as oxybenzone; octocrylene; bemotrizinol (DPAW pages 61, 65–66)"
-        ],
-        [
-         "Link to broad spectrum",
-         "Dr. Patel's conclusion: \"sunscreen ingredients are UV length specific\" (slide 55). Dr. Smith: anthranilates are used only in combination products, for broad UV coverage (Sun slide 24)"
         ]
        ]
       },
       {
-       "k": "fig",
-       "label": "Figure: sunblocks reflect, sunscreens absorb (Dr. Smith and Dr. Sikazwe)",
-       "jump": "guide:fig-block-vs-screen"
+       "k": "facts",
+       "rows": [
+        [
+         "Link to broad spectrum",
+         "Dr. Patel's conclusion: \"sunscreen ingredients are UV length specific\" (slide 55)"
+        ]
+       ],
+       "p": "pa"
       },
       {
        "k": "fig",
        "label": "Dr. Smith's guide section: MED, SPF, broad spectrum and substantivity",
-       "jump": "guide:gobj-sun-4"
+       "jump": "guide:gobj-sun-4",
+       "p": "sm"
       }
      ]
     },
     {
      "title": "Who does not get sunscreen",
      "profs": [
+      "sm",
       "pa"
      ],
      "q": "Which two groups are excluded from sunscreen, and what does an infant get instead?",
-     "src": "Patel Sun slides 13, 19; 11/12 lecture T@51824, T@66129–66269",
+     "src": "Patel Sun slides 13, 19; 11/12 lecture T@51824, T@66129–66269; Smith Sun slide 25",
      "blocks": [
       {
        "k": "facts",
@@ -6779,7 +7027,8 @@ const DZ = {
          "Stop the product",
          "Redness, itching, rash or exaggerated sunburn"
         ]
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "pts",
@@ -6787,7 +7036,8 @@ const DZ = {
         "★ Her poll: a four-month-old does not get the mother's sunscreen",
         "★ \"Remember, 6 months of age, OK, so not 7, not 8\"",
         "Exactly 6 months is not settled: slide 13 excludes \"< 6 months\"; slide 19 reads \"children > 6 months\""
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "prof",
@@ -6795,7 +7045,7 @@ const DZ = {
        "rows": [
         [
          "Reaction to a sunscreen",
-         "Rash, vesicles, hives or exaggerated sunburn: refer (Sun slide 25)"
+         "Rash, [[vesicle|vesicles]], hives or exaggerated sunburn: refer (Sun slide 25)"
         ]
        ]
       }
@@ -6804,9 +7054,9 @@ const DZ = {
     {
      "title": "Apply it and counsel",
      "profs": [
-      "pa",
       "sm",
-      "sk"
+      "sk",
+      "pa"
      ],
      "q": "How much sunscreen, how long before the sun, and how often is it reapplied (Dr. Patel's numbers, then Dr. Smith's)?",
      "src": "Patel Sun slides 12, 21, 23, 36–37; 11/12 lecture T@66751; Smith Sun slides 17, 19, 21; Sikazwe DPAW pages 62, 64",
@@ -6842,53 +7092,112 @@ const DZ = {
          "Product care",
          "Check the expiration date; keep it out of direct sunlight"
         ]
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "map",
-       "title": "Same point, each professor's number",
+       "title": "Same point, each professor's number: Dr. Patel",
        "rows": [
         [
          "Reapply",
-         "Patel: every 40–80 minutes (slides 21, 36). Smith: every 90–120 minutes (Sun slide 17; \"usually\" in her recording). Smith also: a physical sunblock protects less after 2 hours of direct sun (Sun slide 21). Sikazwe: avobenzone photodegrades with a half-life of about 2 hours, reapply every 2 hours (DPAW page 62)"
+         "Every 40–80 minutes (slides 21, 36)"
         ],
         [
          "SPF",
-         "Patel: ≥ 15 for everyone, prefer 30+ (slide 15). Smith: by group, > 30, > 40, > 45 or 15–24 (Sun slide 17)"
+         "≥ 15 for everyone, prefer 30+ (slide 15)"
         ],
         [
          "Amount and timing",
-         "Patel: 1 ounce, 15 minutes before. Smith: \"correct amount at correct time\", no figure"
+         "1 ounce, 15 minutes before"
         ],
         [
          "UVB range",
-         "Patel's figure: 280–320 nm (slide 7). Smith: 290–320 nm. Sikazwe: 280–315 nm"
+         "280–320 nm (slide 7)"
         ],
         [
          "After swimming",
-         "Patel: reapply after moisture or towel drying. Sikazwe: ensulizole is water soluble, reapply after swimming (DPAW page 64)"
+         "Reapply after moisture or towel drying"
         ]
        ],
-       "src": "Reference: where Dr. Smith's and Dr. Patel's lectures differ"
+       "src": "Patel Sun slides 7, 15, 21, 36; Reference: where Dr. Smith's and Dr. Patel's lectures differ",
+       "p": "pa"
+      },
+      {
+       "k": "map",
+       "title": "Same point, each professor's number: Dr. Smith",
+       "rows": [
+        [
+         "Reapply",
+         "Every 90–120 minutes (Sun slide 17; \"usually\" in her recording). A physical sunblock protects less after 2 hours of direct sun (Sun slide 21)"
+        ],
+        [
+         "SPF",
+         "By group, > 30, > 40, > 45 or 15–24 (Sun slide 17)"
+        ],
+        [
+         "Amount and timing",
+         "\"correct amount at correct time\", no figure"
+        ],
+        [
+         "UVB range",
+         "290–320 nm"
+        ]
+       ],
+       "src": "Smith Sun slides 8, 17, 21; Reference: where Dr. Smith's and Dr. Patel's lectures differ",
+       "p": "sm"
+      },
+      {
+       "k": "map",
+       "title": "Same point, each professor's number: Dr. Sikazwe",
+       "rows": [
+        [
+         "Reapply",
+         "Avobenzone photodegrades with a half-life of about 2 hours, reapply every 2 hours (DPAW page 62)"
+        ],
+        [
+         "UVB range",
+         "280–315 nm"
+        ],
+        [
+         "After swimming",
+         "Ensulizole is water soluble, reapply after swimming (DPAW page 64)"
+        ]
+       ],
+       "src": "Sikazwe DPAW pages 62–64",
+       "p": "sk"
       },
       {
        "k": "fig",
        "label": "Reference table: Dr. Smith against Dr. Patel on sun exposure",
-       "jump": "ref:ref-p8-smithpatel"
+       "jump": "ref:ref-p8-smithpatel",
+       "p": "pa"
       },
       {
        "k": "sub",
-       "text": "Sun safety without a product"
+       "text": "Sun safety without a product",
+       "p": "pa"
       },
       {
        "k": "pts",
        "items": [
-        "Limit sun between {{10 am and 4 pm}} (both professors)",
-        "A cloudy or overcast day is {{not protective}}; check the UV index",
+        "Limit sun between {{10 am and 4 pm}}",
+        "A cloudy or overcast day is {{not protective}}; check the [[uvindex|UV index]]",
         "Hat with a wide brim ({{4 inches}})",
         "Tight-weave or high-SPF clothing; sunglasses with UV protection and side panels",
         "Shade or an umbrella; no tanning beds",
         "Snow and sand reflect UV radiation"
+       ],
+       "p": "pa"
+      },
+      {
+       "k": "prof",
+       "p": "sm",
+       "rows": [
+        [
+         "Same hours",
+         "UVB: greatest UV intensity between 10 am and 4 pm (Sun slide 8)"
+        ]
        ]
       },
       {
@@ -6902,7 +7211,8 @@ const DZ = {
          "Suspicious lesion",
          "Have a health care provider look at it"
         ]
-       ]
+       ],
+       "p": "pa"
       }
      ]
     }
@@ -7071,8 +7381,8 @@ const DZ = {
     {
      "title": "Cause and timing",
      "profs": [
-      "pa",
-      "sm"
+      "sm",
+      "pa"
      ],
      "q": "When do sunburn symptoms start, when does the redness peak, and how long can it last?",
      "src": "Patel Sun slide 24; 11/12 lecture T@58911–59161; Smith Sun slide 11",
@@ -7089,14 +7399,15 @@ const DZ = {
          "About {{4 hours}} after exposure"
         ],
         [
-         "[[erythema|Erythema]] peaks",
+         "Erythema peaks",
          "At around {{24 hours}}"
         ],
         [
          "Lasts",
          "Up to {{5 days}}"
         ]
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "prof",
@@ -7132,7 +7443,8 @@ const DZ = {
         "Lightheadedness or {{vision changes}}",
         "Severe swelling",
         "Signs of infection: red areas or streaking that move away from open blisters; {{pus}} from open blisters"
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "facts",
@@ -7145,7 +7457,8 @@ const DZ = {
          "Not healed",
          "Refer if not healed in {{7 days}}"
         ]
-       ]
+       ],
+       "p": "pa"
       }
      ]
     },
@@ -7169,7 +7482,8 @@ const DZ = {
           "Less chance of infection or scarring"
          ]
         ]
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "line",
@@ -7179,7 +7493,8 @@ const DZ = {
        "pts": [
         "Burn within the past {{20 minutes}}: immerse in cool water or use cool wet cloths",
         "Then any combination of the products below, by symptom and patient preference"
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "line",
@@ -7194,12 +7509,13 @@ const DZ = {
         "Acts longer than a topical anesthetic",
         "Use for the first {{1–2 days}}",
         "Slide: \"prefer one with anti-inflammatory properties (NSAIDs, APAP)\"; she said \"it could be Tylenol, it could be ibuprofen\""
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "line",
        "label": "Dryness, irritation",
-       "title": "Skin protectant",
+       "title": "[[skin-protectant|Skin protectant]]",
        "drugs": [
         "skin-protectants"
        ],
@@ -7207,7 +7523,8 @@ const DZ = {
         "Cocoa butter, petrolatum",
         "As often as needed",
         "Start {{after 24 hours}}"
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "line",
@@ -7221,7 +7538,8 @@ const DZ = {
         "May decrease pain by inhibiting {{bradykinin}}",
         "{{Not}} FDA-approved for burn treatment",
         "No internal use"
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "line",
@@ -7235,16 +7553,18 @@ const DZ = {
         "★ \"Be careful that you're not recommending these products\"",
         "If a topical anesthetic is used anyway: {{1–2% BSA}} of intact skin, no more than {{3 to 4}} times a day"
        ],
-       "warn": "Topical anesthetics may cause a hypersensitivity reaction and systemic symptoms."
+       "warn": "Topical anesthetics may cause a hypersensitivity reaction and systemic symptoms.",
+       "p": "pa"
       },
       {
        "k": "facts",
        "rows": [
         [
          "Next time",
-         "Broad spectrum sunscreen, SPF ≥ 15, water resistant for water activities"
+         "[[broad|Broad spectrum]] sunscreen, [[spf|SPF]] ≥ 15, water resistant for water activities"
         ]
-       ]
+       ],
+       "p": "pa"
       }
      ]
     }
@@ -7430,7 +7750,8 @@ const DZ = {
          "By age 50",
          "Fair North Americans show photodamaged skin"
         ]
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "facts",
@@ -7456,7 +7777,8 @@ const DZ = {
           "Seborrheic keratoses, senile angiomas"
          ]
         ]
-       ]
+       ],
+       "p": "pa"
       }
      ]
     },
@@ -7491,21 +7813,23 @@ const DZ = {
          "{{60}} or older",
          "{{Only wrinkles}}; yellow-gray skin"
         ]
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "pts",
        "items": [
         "★ \"Know that type 1 mild photoaging is 20 to 30 years of age\""
-       ]
+       ],
+       "p": "pa"
       }
      ]
     },
     {
      "title": "Treat it: match the product to the goal",
      "profs": [
-      "pa",
-      "sk"
+      "sk",
+      "pa"
      ],
      "q": "What treats hyperpigmentation and what are its limits? What treats wrinkles? Which treatment is not self-applied?",
      "src": "Patel Sun slides 42–49; 11/12 lecture T@72287–76364; Sikazwe DPAW pages 67–70",
@@ -7521,7 +7845,8 @@ const DZ = {
        "pts": [
         "Sunscreen, protective clothing, sunglasses, hat",
         "Less air pollution exposure; stop smoking"
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "line",
@@ -7537,7 +7862,8 @@ const DZ = {
         "Wear {{sunscreen}}",
         "{{Not}} FDA-approved for OTC sale"
        ],
-       "warn": "Ochronosis that may be permanent; rashes; facial swelling."
+       "warn": "[[ochronosis|Ochronosis]] that may be permanent; rashes; facial swelling.",
+       "p": "pa"
       },
       {
        "k": "line",
@@ -7551,7 +7877,8 @@ const DZ = {
         "Rx: tretinoin, tazarotene",
         "More keratinocyte division; new collagen and elastic fibers; less melanin",
         "Benefit comes with long-term daily use"
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "line",
@@ -7563,7 +7890,8 @@ const DZ = {
        "pts": [
         "Lactic, glycolic, citric, malic acid",
         "Thicker dermis, more exfoliation, less hyperpigmentation"
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "line",
@@ -7576,7 +7904,8 @@ const DZ = {
         "Niacinamide (B3), ascorbic acid (C), vitamin E, coenzyme Q-10, alpha-lipoic acid",
         "Some evidence of protection from sun and pollutant damage",
         "Hard to deliver to the skin; no proven formula"
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "line",
@@ -7586,7 +7915,8 @@ const DZ = {
        "pts": [
         "Not recommended as self-applied OTC products",
         "Deep peels: professional use only"
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "prof",
@@ -7645,19 +7975,21 @@ const DZ = {
         ],
         [
          "Daily",
-         "Broad spectrum sunscreen SPF ≥ 15, reapplied often"
+         "[[broad|Broad spectrum]] sunscreen [[spf|SPF]] ≥ 15, reapplied often"
         ],
         [
          "Skin care",
          "Mild cleanser twice daily; moisturizer; not near eyes or mucus membranes"
         ]
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "pts",
        "items": [
         "Photoaging is {{preventable}} and {{cumulative}}"
-       ]
+       ],
+       "p": "pa"
       }
      ]
     },
@@ -7692,11 +8024,13 @@ const DZ = {
          "E",
          "{{Evolving}}: changed over the past few weeks or months"
         ]
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "warn",
-       "text": "A suspicious lesion is not self-care: a health care provider looks at it."
+       "text": "A suspicious lesion is not self-care: a health care provider looks at it.",
+       "p": "pa"
       }
      ]
     }
@@ -7885,7 +8219,8 @@ const DZ = {
          "Staged by",
          "★ {{Depth}} of the wound"
         ]
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "grades",
@@ -7910,11 +8245,13 @@ const DZ = {
          "Deeper still",
          "Subcutaneous tissue, underlying {{muscle, tendon and bone}}"
         ]
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "photo",
-       "id": "wound-stages"
+       "id": "wound-stages",
+       "p": "pa"
       },
       {
        "k": "pts",
@@ -7922,7 +8259,8 @@ const DZ = {
         "★ \"There's 4 stages of a wound, so know each stage\"",
         "★ The higher the stage, the {{longer}} the healing",
         "★ Three healing phases: {{inflammatory}}, {{proliferative}}, {{remodeling}}"
-       ]
+       ],
+       "p": "pa"
       }
      ]
     },
@@ -7940,7 +8278,7 @@ const DZ = {
         "★ {{Face, hands, feet, major joints, genitals}} or perineum",
         "★ Larger than {{3 inches}} in diameter",
         "★ Worse or not healed in {{24–48 hours}} and/or {{7 days}}",
-        "Chemical, electrical or inhalation burn; [[circumferential|circumferential]] burn",
+        "Chemical, electrical or inhalation burn; circumferential burn",
         "Animal or human {{bite}}",
         "Deep partial-thickness, full-thickness or subdermal injury",
         "Suspected non-accidental injury",
@@ -7948,11 +8286,13 @@ const DZ = {
         "A preexisting disorder that complicates management, such as {{diabetes}}",
         "Foreign matter left after irrigation",
         "Chronic wound"
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "warn",
-       "text": "\"This complete list, you would not recommend a patient to treat themselves.\""
+       "text": "\"This complete list, you would not recommend a patient to treat themselves.\"",
+       "p": "pa"
       }
      ]
     },
@@ -7976,7 +8316,8 @@ const DZ = {
           "Refer if necessary"
          ]
         ]
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "line",
@@ -7986,7 +8327,8 @@ const DZ = {
        "pts": [
         "★ \"First step in treating a wound, cleaning the area, cleansing it with water or saline\"",
         "She also said \"first aid antiseptics, of course, cleaning the skin, first step\"; slide 27 and her conclusion give water or saline"
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "line",
@@ -8016,7 +8358,8 @@ const DZ = {
          "Many shapes and sizes",
          "Adhesive bandage: cost effective, less adherent than plain gauze; many give no moist environment"
         ]
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "line",
@@ -8032,7 +8375,8 @@ const DZ = {
         "{{1 to 3}} times a day",
         "No improvement within {{7 days}}: primary care provider"
        ],
-       "warn": "Toxicity risk rises with large areas of application. Short time, small area."
+       "warn": "Toxicity risk rises with large areas of application. Short time, small area.",
+       "p": "pa"
       },
       {
        "k": "line",
@@ -8047,7 +8391,8 @@ const DZ = {
         "Up to {{4 times}} daily",
         "Small quantities, low concentrations on broken skin"
        ],
-       "warn": "★ \"Understand the systemic toxicity of overuse.\" Benzocaine absorbed systemically: methemoglobinemia."
+       "warn": "★ \"Understand the systemic toxicity of overuse.\" Benzocaine absorbed systemically: [[methemoglobinemia|methemoglobinemia]].",
+       "p": "pa"
       },
       {
        "k": "line",
@@ -8060,7 +8405,8 @@ const DZ = {
         "Chlorhexidine, hydrogen peroxide, povidone-iodine",
         "On {{intact}} skin at the wound edges, after debris is removed",
         "May cause [[cytotoxic|cytotoxicity]] that {{reduces healing}} within the wound"
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "facts",
@@ -8074,7 +8420,8 @@ const DZ = {
           "Consistent wound care"
          ]
         ]
-       ]
+       ],
+       "p": "pa"
       }
      ]
     },
@@ -8119,7 +8466,8 @@ const DZ = {
          "Smoking",
          "★ \"Notice the pack per day\": 1 pack per day = {{3 times}} the flap necrosis; 2 packs per day = {{6 times}} (slide); she said 2 packs \"doubles the frequency\""
         ]
-       ]
+       ],
+       "p": "pa"
       }
      ]
     }
@@ -8296,7 +8644,8 @@ const DZ = {
          "Graded by",
          "[[bsa|BSA]] (\"I want you to know\")"
         ]
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "grades",
@@ -8316,7 +8665,8 @@ const DZ = {
          "Adult {{> 25%}} · child {{> 20%}}",
          "Superficial partial-thickness burn"
         ]
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "facts",
@@ -8334,11 +8684,13 @@ const DZ = {
           "Poor-risk patient: diabetes, cancer, other chronic illness"
          ]
         ]
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "warn",
-       "text": "Not settled: a deep partial-thickness or full-thickness burn under 2% BSA. Slide 16 lists it under \"Minor - Self-Care\" (not eyes, ears, face or genitalia). Slide 7 excludes deep partial-thickness and full-thickness injuries from self-treatment. Her comment in class did not decide it."
+       "text": "Not settled: a deep partial-thickness or full-thickness burn under 2% BSA. Slide 16 lists it under \"Minor - Self-Care\" (not eyes, ears, face or genitalia). Slide 7 excludes deep partial-thickness and full-thickness injuries from self-treatment. Her comment in class did not decide it.",
+       "p": "pa"
       }
      ]
     },
@@ -8361,11 +8713,13 @@ const DZ = {
         "{{Diabetes}} or multiple medical disorders",
         "{{Immunocompromised}}",
         "Circumferential burn (wound list, slide 7)"
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "warn",
-       "text": "★ \"Anything besides minor would be straight referral.\""
+       "text": "★ \"Anything besides minor would be straight referral.\"",
+       "p": "pa"
       }
      ]
     },
@@ -8386,7 +8740,8 @@ const DZ = {
         "Reduces the burning sensation; decreases morbidity",
         "Honey: evidence of faster healing of superficial and partial-thickness burns",
         "Aloe vera: traditional"
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "line",
@@ -8397,18 +8752,20 @@ const DZ = {
        ],
        "pts": [
         "OTC systemic analgesics; minor burns only"
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "line",
        "label": "Dry, healing skin",
-       "title": "Skin protectant",
+       "title": "[[skin-protectant|Skin protectant]]",
        "drugs": [
         "skin-protectants"
        ],
        "pts": [
         "Allantoin, cocoa butter, petrolatum, Aquaphor"
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "line",
@@ -8421,7 +8778,8 @@ const DZ = {
         "{{1 to 3}} times a day",
         "No improvement within {{7 days}}: primary care provider",
         "Neomycin: systemic toxicity; polymyxin B: hypersensitivity"
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "line",
@@ -8435,7 +8793,8 @@ const DZ = {
         "Relief lasts {{15 to 45 minutes}}; continuous pain control cannot be achieved",
         "Small quantities, low concentrations on broken skin"
        ],
-       "warn": "★ Systemic toxicity with overuse (lidocaine); benzocaine: methemoglobinemia."
+       "warn": "★ Systemic toxicity with overuse (lidocaine); benzocaine: [[methemoglobinemia|methemoglobinemia]].",
+       "p": "pa"
       },
       {
        "k": "line",
@@ -8447,7 +8806,8 @@ const DZ = {
        "pts": [
         "Intact skin, after debris is removed",
         "Reduces healing within the wound"
-       ]
+       ],
+       "p": "pa"
       }
      ]
     }
@@ -8645,7 +9005,8 @@ const DZ = {
          "Course",
          "May resolve without treatment"
         ]
-       ]
+       ],
+       "p": "pa"
       }
      ]
     },
@@ -8662,7 +9023,7 @@ const DZ = {
        "rows": [
         [
          "Look",
-         "Rough, {{cauliflower-like}}; [[plantar|plantar]] warts {{disrupt}} the normal skin ridges"
+         "Rough, {{cauliflower-like}}; plantar warts {{disrupt}} the normal skin ridges"
         ],
         [
          "Pain",
@@ -8672,11 +9033,13 @@ const DZ = {
          "Size",
          "May grow to about {{1 inch}}"
         ]
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "photo",
-       "id": "wart-common"
+       "id": "wart-common",
+       "p": "pa"
       },
       {
        "k": "grades",
@@ -8711,17 +9074,20 @@ const DZ = {
          "{{Not}} self-treatable",
          "Flesh-colored, fast-growing, threadlike projections"
         ]
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "pts",
        "items": [
         "★ \"Know what is self-treatable and know what is not self-treatable\""
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "photo",
-       "id": "wart-plantar"
+       "id": "wart-plantar",
+       "p": "pa"
       }
      ]
     },
@@ -8743,19 +9109,21 @@ const DZ = {
         "{{Diabetes}} or poor blood circulation (salicylic acid products)",
         "Product limits: salicylic acid may be used for up to {{12 weeks}}; cryotherapy for up to {{3}} treatments (slides 10–11)",
         "Slide 4: \"Recurrent or recalcitrant warts should be referred\""
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "warn",
-       "text": "Not settled: a wart that comes back. Slide 4 refers recurrent warts; she said \"if you see reoccurrence of the wart, that's when we need treatment\"."
+       "text": "Not settled: a wart that comes back. Slide 4 refers recurrent warts; she said \"if you see reoccurrence of the wart, that's when we need treatment\".",
+       "p": "pa"
       }
      ]
     },
     {
      "title": "Treat it: non-drug, salicylic acid or cryotherapy",
      "profs": [
-      "pa",
-      "sm"
+      "sm",
+      "pa"
      ],
      "q": "Give the directions and the maximum duration for salicylic acid 40%, salicylic acid 17% and cryotherapy.",
      "src": "Patel Warts slides 7–12; 11/12 lecture T@90398–92731; Smith PCol slides 39–40",
@@ -8771,7 +9139,8 @@ const DZ = {
           "Prevent spread of HPV"
          ]
         ]
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "line",
@@ -8785,7 +9154,8 @@ const DZ = {
         "Keep the wart {{covered}}",
         "Foot coverings in bathrooms and public spaces",
         "Plantar wart: padding over pressure points"
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "line",
@@ -8796,7 +9166,8 @@ const DZ = {
         "Wash hands",
         "Soak in warm water for {{5 minutes}}",
         "Wash and dry thoroughly"
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "line",
@@ -8810,7 +9181,8 @@ const DZ = {
         "★ Remove after {{48 hours}}",
         "★ Repeat every {{48 hours}} until the wart resolves",
         "★ Up to {{12 weeks}}"
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "line",
@@ -8825,7 +9197,8 @@ const DZ = {
         "Cover with a self-adhesive disc or occlusive tape",
         "★ {{1–2 times}} a day",
         "★ Up to {{12 weeks}}"
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "line",
@@ -8842,13 +9215,15 @@ const DZ = {
         "★ Repeat after {{2 weeks}} if needed",
         "★ Up to {{3 treatments}}"
        ],
-       "warn": "Flammable: not near heat sources. Keep the canister away from the face, body and clothing."
+       "warn": "Flammable: not near heat sources. Keep the canister away from the face, body and clothing.",
+       "p": "pa"
       },
       {
        "k": "pts",
        "items": [
         "\"The salicylic acid is the most effective to treat the warts\""
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "prof",
@@ -9047,7 +9422,8 @@ const DZ = {
          "Onset",
          "Variable; may progressively enlarge"
         ]
-       ]
+       ],
+       "p": "pa"
       }
      ]
     },
@@ -9083,32 +9459,36 @@ const DZ = {
           "Heel, ball of the foot, toes, sides of the foot"
          ]
         ]
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "photo",
-       "id": "corn-callus-foot"
+       "id": "corn-callus-foot",
+       "p": "pa"
       },
       {
        "k": "pts",
        "items": [
         "She said: \"corns, painful regardless, but callus, when a weight is applied\""
-       ]
+       ],
+       "p": "pa"
       }
      ]
     },
     {
      "title": "Self-care, or refer?",
      "profs": [
-      "pa",
-      "sm"
+      "sm",
+      "pa"
      ],
      "q": "Who should not use a salicylic acid corn or callus remover, and when is the patient referred?",
      "src": "Patel Warts slides 16–17; 11/12 lecture T@94074, T@94630; Smith PCol slides 39–40",
      "blocks": [
       {
        "k": "sub",
-       "text": "Do not use salicylic acid"
+       "text": "Do not use salicylic acid",
+       "p": "pa"
       },
       {
        "k": "pts",
@@ -9117,18 +9497,21 @@ const DZ = {
         "{{Poor blood circulation}}",
         "Irritated, infected or reddened skin",
         "Moles or birthmarks"
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "sub",
-       "text": "Refer"
+       "text": "Refer",
+       "p": "pa"
       },
       {
        "k": "pts",
        "items": [
         "Redness or irritation of the skin during treatment",
         "★ Not removed after {{14 days}} of treatment"
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "prof",
@@ -9161,7 +9544,8 @@ const DZ = {
           "Prevent recurrence by correcting the cause"
          ]
         ]
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "line",
@@ -9174,7 +9558,8 @@ const DZ = {
         "Circular foam or gel cushioning pads",
         "{{Well-fitting}}, non-binding footwear",
         "Orthotics"
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "line",
@@ -9186,7 +9571,8 @@ const DZ = {
         "Soak in warm water for {{5 minutes}}",
         "Rub off the soft white skin with a rough towel, pumice stone or callus file",
         "Do not debride healthy skin"
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "line",
@@ -9200,7 +9586,8 @@ const DZ = {
         "Remove within {{48 hours}}",
         "Reapply every {{48 hours}} as needed",
         "★ No longer than {{14 days}} = no more than {{7 applications}}"
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "line",
@@ -9216,7 +9603,8 @@ const DZ = {
         "Petroleum jelly on the surrounding healthy skin",
         "On healthy skin: wash off at once with soap and water",
         "Cap tightly after use: evaporation raises the concentration"
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "facts",
@@ -9225,13 +9613,15 @@ const DZ = {
          "How long to resolve",
          "Several days to months"
         ]
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "pts",
        "items": [
         "★ \"Pay attention to how many days you're using the products for. How many times can we repeat it ... When do we refer the patient?\""
-       ]
+       ],
+       "p": "pa"
       }
      ]
     }
@@ -9402,6 +9792,25 @@ const DZ = {
     "Infants with cradle cap: “DO NOT suggest corticosteroids” (slide 18)",
     "Psoriasis / Seborrheic dermatitis: not for longer than 4 weeks in psoriasis (slide 36)",
     "Psoriasis / Seborrheic dermatitis: withdrawal of corticosteroids can precipitate psoriasis (slide 24)"
+   ],
+   "how": {
+    "p": "sm",
+    "text": "Binds the glucocorticoid receptor inside the cell. The drug–receptor complex binds the GRE on DNA, or holds NF-kB and AP-1 off the DNA, so anti-inflammatory proteins rise and inflammatory proteins fall.",
+    "src": "Smith PCol slides 5–7, 10"
+   },
+   "figs": [
+    {
+     "label": "Watch how it works: nuclear receptor binders, direct and indirect action (corticosteroids, retinoids, vitamin D analogs)",
+     "jump": "ref:ref-l1-nr"
+    },
+    {
+     "label": "Watch how it works: the steroid skeleton, what raises its activity, and its hydrogen bonds in the receptor (Dr. Sikazwe)",
+     "jump": "guide:fig-steroid"
+    },
+    {
+     "label": "Watch how it works: potency by structure, hydrocortisone to clobetasol propionate (Dr. Sikazwe)",
+     "jump": "guide:cb-gc-potency"
+    }
    ]
   },
   "hydrocortisone": {
@@ -9495,6 +9904,29 @@ const DZ = {
     "Dandruff: not effective (slide 7)",
     "Poison ivy / Insect bites / Insect stings / Scabies: child under 2 years old",
     "Scabies, bacterial infections, fungal infections: steroids can mask or worsen them"
+   ],
+   "how": {
+    "p": "sm",
+    "text": "A low-potency corticosteroid. It binds the glucocorticoid receptor; the drug–receptor complex binds the GRE on DNA, or holds NF-kB and AP-1 off the DNA, so fewer inflammatory proteins are made.",
+    "src": "Smith PCol slides 5–7, 10–11"
+   },
+   "figs": [
+    {
+     "label": "Watch how it works: nuclear receptor binders, direct and indirect action (corticosteroids, retinoids, vitamin D analogs)",
+     "jump": "ref:ref-l1-nr"
+    },
+    {
+     "label": "Watch how it works: the steroid skeleton, what raises its activity, and its hydrogen bonds in the receptor (Dr. Sikazwe)",
+     "jump": "guide:fig-steroid"
+    },
+    {
+     "label": "Watch how it works: potency by structure, hydrocortisone to clobetasol propionate (Dr. Sikazwe)",
+     "jump": "guide:cb-gc-potency"
+    },
+    {
+     "label": "See the reaction: hydrocortisone metabolism (11β-HSD to and from inactive cortisone)",
+     "jump": "guide:rx-hydrocortisone"
+    }
    ]
   },
   "pimecrolimus": {
@@ -9536,6 +9968,17 @@ const DZ = {
     "Atopic dermatitis: boxed warning: rare lymphoma and skin malignancy; avoid on malignant or premalignant skin",
     "Atopic dermatitis: not with wet wraps or compresses",
     "Atopic dermatitis: safety of intermittent use beyond 1 year not established"
+   ],
+   "how": {
+    "p": "sm",
+    "text": "Inhibits calcineurin, so less IL-2 is made. T cells and mast cells are not activated, and fewer proinflammatory cytokines and mediators are produced.",
+    "src": "Smith PCol slides 24–27"
+   },
+   "figs": [
+    {
+     "label": "Watch how it works: calcineurin inhibitors (calcineurin, NFAT and IL-2)",
+     "jump": "guide:fig-cni-nfat"
+    }
    ]
   },
   "tacrolimus": {
@@ -9569,6 +10012,17 @@ const DZ = {
     "Boxed warning: rare lymphoma and skin malignancy",
     "Not with wet wraps or compresses",
     "Reassess at 6 weeks"
+   ],
+   "how": {
+    "p": "sm",
+    "text": "Binds FKBP inside the T cell; the tacrolimus–FKBP complex inactivates calcineurin. Less IL-2 is made, so T cells do not proliferate.",
+    "src": "Smith PCol slides 24–26"
+   },
+   "figs": [
+    {
+     "label": "Watch how it works: calcineurin inhibitors (calcineurin, NFAT and IL-2)",
+     "jump": "guide:fig-cni-nfat"
+    }
    ]
   },
   "crisaborole": {
@@ -9600,6 +10054,25 @@ const DZ = {
    "avoid": [
     "Under 3 months of age",
     "Hypersensitivity"
+   ],
+   "how": {
+    "p": "sm",
+    "text": "Inhibits phosphodiesterase 4 (PDE-4), the main PDE in inflammatory cells, so cAMP is not broken down. The higher cAMP inhibits the inflammatory cells.",
+    "src": "Smith PCol slides 32–33"
+   },
+   "figs": [
+    {
+     "label": "Watch how it works: PDE-4 inhibitors, why cAMP rises",
+     "jump": "guide:g-fig-pde4-camp"
+    },
+    {
+     "label": "Watch how it works: boron at the zinc and magnesium of the PDE4 site (Dr. Sikazwe)",
+     "jump": "guide:cb-crisaborole"
+    },
+    {
+     "label": "See the reaction: crisaborole metabolism",
+     "jump": "guide:rx-crisaborole"
+    }
    ]
   },
   "dupilumab": {
@@ -9630,6 +10103,17 @@ const DZ = {
     "Under 6 months of age",
     "May interact with CYP-450: warfarin or cyclosporine doses may need adjusting",
     "Adverse effects: urticaria, angioedema, rash, erythema, injection-site reaction"
+   ],
+   "how": {
+    "p": "sm",
+    "text": "A monoclonal antibody that binds the IL-4 receptor α subunit, which the IL-4 and IL-13 receptors share. IL-4 and IL-13 signaling is blocked, so fewer proinflammatory cytokines, chemokines and IgE are released.",
+    "src": "Smith PCol slide 64"
+   },
+   "figs": [
+    {
+     "label": "Watch how it works: cytokine biologics, what each one binds",
+     "jump": "guide:fig-il-axis"
+    }
    ]
   },
   "tralokinumab": {
@@ -9650,7 +10134,13 @@ const DZ = {
    "counselSrc": "Patel Dermatitis slide 45; 11/06 lecture",
    "avoid": [
     "Adverse events: ocular events, upper respiratory tract infections, injection-site reactions"
-   ]
+   ],
+   "how": {
+    "p": "pa",
+    "text": "Dr. Patel’s slide gives its mechanism of action as “IL-13 cytokine inhibitor”. It is not on Dr. Smith’s slides.",
+    "src": "Patel Dermatitis slide 45"
+   },
+   "figs": []
   },
   "jak": {
    "name": "JAK inhibitors: abrocitinib, upadacitinib, ruxolitinib",
@@ -9681,6 +10171,17 @@ const DZ = {
     "Boxed: lymphoma and other malignancies",
     "Boxed: MACE (CV death, MI, stroke)",
     "Boxed: thrombosis (DVT, PE, arterial)"
+   ],
+   "how": {
+    "p": "sm",
+    "text": "Inhibit Janus kinase (JAK), which lowers the production of inflammatory cytokines. Ruxolitinib inhibits JAK1 and JAK2.",
+    "src": "Smith PCol slides 75–76"
+   },
+   "figs": [
+    {
+     "label": "Watch how it works: Dr. Smith’s narrated walkthrough “JAK inhibitors” (opens her guide section; choose that walkthrough)",
+     "jump": "guide:gobj-l1-4"
+    }
    ]
   },
   "moisturizer": {
@@ -9711,6 +10212,17 @@ const DZ = {
    "counselSrc": "Patel Dermatitis slides 31–32, 52",
    "avoid": [
     "Urea products on broken skin: burning, stinging, irritation"
+   ],
+   "how": {
+    "p": "sk",
+    "text": "Emollients prevent water loss from the skin. Petrolatum, the most effective, fills the gaps between scales.",
+    "src": "Sikazwe DPAW page 15; 11/03 lecture"
+   },
+   "figs": [
+    {
+     "label": "Watch how it works: Dr. Sikazwe’s narrated walkthrough “Psoriasis: ultraviolet bands, emollients and tars”, the emollients part (opens his guide section; choose that walkthrough)",
+     "jump": "guide:gobj-mc-psotop"
+    }
    ]
   },
   "zinc-oxide": {
@@ -9750,6 +10262,21 @@ const DZ = {
    "avoid": [
     "Diaper dermatitis: not enough alone when an exclusion for self-care is present (infection, broken skin, fever, rash outside the diaper area)",
     "Sun protection and sunscreen: under 6 months of age: no sunscreen"
+   ],
+   "how": {
+    "p": "sm",
+    "text": "As a sunblock: inorganic particles scatter or reflect visible, UV and infrared radiation, so it covers UVA and UVB. As a skin protectant (Dr. Patel, diaper rash): it gives the skin a physical barrier and lubrication.",
+    "src": "Smith Sun slide 20; Patel Dermatitis slides 63–64"
+   },
+   "figs": [
+    {
+     "label": "Watch how it works: sunblocks reflect and scatter, sunscreens absorb (zinc oxide is a sunblock)",
+     "jump": "guide:fig-block-vs-screen"
+    },
+    {
+     "label": "Watch how it works: MED, SPF and broad spectrum, what the label numbers measure",
+     "jump": "guide:fig-spf"
+    }
    ]
   },
   "bpo": {
@@ -9782,6 +10309,21 @@ const DZ = {
    "avoid": [
     "Contact allergy",
     "Higher strengths irritate more"
+   ],
+   "how": {
+    "p": "sm",
+    "text": "Antimicrobial against P. acnes, with peeling and comedolytic effects: it loosens keratinocytes, speeds their turnover and keeps follicles from closing. It penetrates the stratum corneum or follicle openings and is then metabolized to benzoic acid.",
+    "src": "Smith PCol slide 36"
+   },
+   "figs": [
+    {
+     "label": "Watch how it works: Dr. Smith’s narrated walkthrough “Keratolytics” (opens her guide section; choose that walkthrough)",
+     "jump": "guide:gobj-l1-4"
+    },
+    {
+     "label": "See the reaction: benzoyl peroxide breakdown in the skin",
+     "jump": "guide:rx-bpo"
+    }
    ]
   },
   "adapalene": {
@@ -9814,6 +10356,21 @@ const DZ = {
    "avoid": [
     "OTC labeling: persons over 12 years of age",
     "Erythema, scaling, dryness, pruritus, burning"
+   ],
+   "how": {
+    "p": "sm",
+    "text": "A retinoid: it binds RAR and RXR, which form an RAR–RXR heterodimer that moves into the nucleus and binds the RARE on DNA to change gene transcription. In acne: less cohesion between epidermal cells and faster cell turnover, so open comedones are expelled and closed ones open.",
+    "src": "Smith PCol slides 14–15, 18"
+   },
+   "figs": [
+    {
+     "label": "Watch how it works: nuclear receptor binders, direct and indirect action (corticosteroids, retinoids, vitamin D analogs)",
+     "jump": "ref:ref-l1-nr"
+    },
+    {
+     "label": "Watch how it works: retinoid structures, exposed acid (directly active) or ester prodrug (Dr. Sikazwe)",
+     "jump": "guide:cb-retinoids"
+    }
    ]
   },
   "tretinoin": {
@@ -9857,6 +10414,21 @@ const DZ = {
     "Photoaging and skin-cancer signs: phototoxicity: sun protection every day",
     "Photoaging and skin-cancer signs: retinoids are on her list of medications that increase sun sensitivity",
     "Photoaging and skin-cancer signs: dr. Sikazwe: teratogenic"
+   ],
+   "how": {
+    "p": "sm",
+    "text": "A retinoid: it binds RAR and RXR, which form an RAR–RXR heterodimer that moves into the nucleus and binds the RARE on DNA to change gene transcription. In acne: less cohesion between epidermal cells and faster cell turnover, so open comedones are expelled and closed ones open; with prolonged use for aging: more dermal collagen, new blood vessels and a thicker epidermis.",
+    "src": "Smith PCol slides 14–15, 17"
+   },
+   "figs": [
+    {
+     "label": "Watch how it works: nuclear receptor binders, direct and indirect action (corticosteroids, retinoids, vitamin D analogs)",
+     "jump": "ref:ref-l1-nr"
+    },
+    {
+     "label": "Watch how it works: retinoid structures, exposed acid (directly active) or ester prodrug (Dr. Sikazwe)",
+     "jump": "guide:cb-retinoids"
+    }
    ]
   },
   "tazarotene": {
@@ -9895,6 +10467,25 @@ const DZ = {
    "avoid": [
     "Acne: photosensitivity, photo-irritation, severe peeling",
     "Psoriasis: pregnancy (Dr. Smith, PCol slide 18; Dr. Sikazwe: teratogenic, DPAW page 29)"
+   ],
+   "how": {
+    "p": "sm",
+    "text": "A retinoid: it binds RAR and RXR, which form an RAR–RXR heterodimer that moves into the nucleus and binds the RARE on DNA to change gene transcription. In acne: less cohesion between epidermal cells and faster cell turnover; in psoriasis the precise mechanism is unknown and may be anti-inflammatory and antiproliferative.",
+    "src": "Smith PCol slides 14–15, 18"
+   },
+   "figs": [
+    {
+     "label": "Watch how it works: nuclear receptor binders, direct and indirect action (corticosteroids, retinoids, vitamin D analogs)",
+     "jump": "ref:ref-l1-nr"
+    },
+    {
+     "label": "Watch how it works: retinoid structures, exposed acid (directly active) or ester prodrug (Dr. Sikazwe)",
+     "jump": "guide:cb-retinoids"
+    },
+    {
+     "label": "See the reaction: tazarotene, an ester prodrug, to tazarotenic acid",
+     "jump": "guide:rx-tazarotene"
+    }
    ]
   },
   "salicylic-acid": {
@@ -9988,6 +10579,21 @@ const DZ = {
     "Warts / Corns and calluses: irritated, infected or reddened skin",
     "Warts / Corns and calluses: moles, birthmarks, warts with hair growing from them",
     "Warts / Corns and calluses: warts on the face, genital warts, warts on mucous membranes"
+   ],
+   "how": {
+    "p": "sm",
+    "text": "A keratolytic: it may solubilize the cell-surface proteins that keep the stratum corneum intact, so the stratum corneum is shed (desquamation).",
+    "src": "Smith PCol slide 39"
+   },
+   "figs": [
+    {
+     "label": "Watch how it works: Dr. Smith’s narrated walkthrough “Keratolytics” (opens her guide section; choose that walkthrough)",
+     "jump": "guide:gobj-l1-4"
+    },
+    {
+     "label": "See the reaction: glycolic and salicylic acid metabolism",
+     "jump": "guide:rx-hydroxyacids"
+    }
    ]
   },
   "aha": {
@@ -10025,6 +10631,21 @@ const DZ = {
     "Acne: photosensitivity without sunscreen",
     "Photoaging and skin-cancer signs: alpha hydroxy acids in cosmetics are on her list of products that increase sun sensitivity",
     "Photoaging and skin-cancer signs: chemical peels are not self-applied OTC products; deep peels are for professionals"
+   ],
+   "how": {
+    "p": "sk",
+    "text": "Keratolytics: they promote skin shedding and the removal of dead skin cells, and stimulate collagen production.",
+    "src": "Sikazwe DPAW pages 42–43, 68"
+   },
+   "figs": [
+    {
+     "label": "Watch how it works: Dr. Sikazwe’s narrated walkthrough “Acne: keratolytics” (opens his guide section; choose that walkthrough)",
+     "jump": "guide:gobj-mc-acne"
+    },
+    {
+     "label": "See the reaction: glycolic and salicylic acid metabolism",
+     "jump": "guide:rx-hydroxyacids"
+    }
    ]
   },
   "azelaic-acid": {
@@ -10048,6 +10669,17 @@ const DZ = {
    "counselSrc": "Patel Acne slide 31",
    "avoid": [
     "Hypersensitivity; hypopigmentation; skin irritation and peeling"
+   ],
+   "how": {
+    "p": "sk",
+    "text": "An anti-inflammatory agent; Dr. Sikazwe lists it with the antibiotics for acne.",
+    "src": "Sikazwe DPAW page 54"
+   },
+   "figs": [
+    {
+     "label": "Watch how it works: Dr. Sikazwe’s narrated walkthrough “Acne: hormones and antibiotics” (opens his guide section; choose that walkthrough)",
+     "jump": "guide:gobj-mc-acne"
+    }
    ]
   },
   "dapsone": {
@@ -10072,6 +10704,17 @@ const DZ = {
    "avoid": [
     "G6PD concern",
     "Monitor CBC and reticulocyte counts"
+   ],
+   "how": {
+    "p": "sm",
+    "text": "In acne (topical gel) it is anti-inflammatory; the mechanism is not fully understood, and neutrophils and their products may be the site of action. In leprosy it competes with PABA, like the sulfonamides.",
+    "src": "Smith PCol slide 50"
+   },
+   "figs": [
+    {
+     "label": "Watch how it works: the bacterial folate pathway (dapsone in leprosy acts like the sulfonamides)",
+     "jump": "guide:g-fig-folate-path"
+    }
    ]
   },
   "topical-abx": {
@@ -10101,6 +10744,17 @@ const DZ = {
    "counselSrc": "Patel Acne slide 31",
    "avoid": [
     "Use alone"
+   ],
+   "how": {
+    "p": "sm",
+    "text": "Clindamycin binds the 50S ribosomal subunit and prevents translocation; erythromycin also binds the 50S subunit. Minocycline, a tetracycline, binds the 30S subunit and blocks aminoacyl-tRNA binding; bacterial protein synthesis stops.",
+    "src": "Smith PCol slides 43, 46–47"
+   },
+   "figs": [
+    {
+     "label": "Watch how it works: antibiotics at the bacterial ribosome",
+     "jump": "guide:g-fig-ribosome"
+    }
    ]
   },
   "doxycycline": {
@@ -10167,6 +10821,17 @@ const DZ = {
     "Acne: adverse effects: abdominal pain, diarrhea, nausea and vomiting, hepatotoxicity, hyperpigmentation",
     "Flea-borne and tick-borne disease: photosensitivity",
     "Acne lecture: over 12 years (tooth discoloration); avoid in pregnancy (Patel Acne slides 32–33, Reference)"
+   ],
+   "how": {
+    "p": "sm",
+    "text": "Binds the 30S ribosomal subunit irreversibly and blocks aminoacyl-tRNA binding at the acceptor site, so bacterial protein synthesis stops (bacteriostatic). In acne the effect may depend more on anti-inflammatory activity.",
+    "src": "Smith PCol slides 43, 45"
+   },
+   "figs": [
+    {
+     "label": "Watch how it works: antibiotics at the bacterial ribosome",
+     "jump": "guide:g-fig-ribosome"
+    }
    ]
   },
   "minocycline": {
@@ -10197,6 +10862,17 @@ const DZ = {
     "12 years old or younger",
     "Pregnancy",
     "With isotretinoin"
+   ],
+   "how": {
+    "p": "sm",
+    "text": "Binds the 30S ribosomal subunit irreversibly and blocks aminoacyl-tRNA binding at the acceptor site, so bacterial protein synthesis stops (bacteriostatic). In acne the effect may depend more on anti-inflammatory activity.",
+    "src": "Smith PCol slides 43, 45"
+   },
+   "figs": [
+    {
+     "label": "Watch how it works: antibiotics at the bacterial ribosome",
+     "jump": "guide:g-fig-ribosome"
+    }
    ]
   },
   "sarecycline": {
@@ -10221,6 +10897,17 @@ const DZ = {
    "counselSrc": "Patel Acne slides 33, 42",
    "avoid": [
     "Tetracycline class cautions: pregnancy, photosensitivity"
+   ],
+   "how": {
+    "p": "sm",
+    "text": "Binds the 30S ribosomal subunit irreversibly and blocks aminoacyl-tRNA binding at the acceptor site, so bacterial protein synthesis stops (bacteriostatic). In acne the effect may depend more on anti-inflammatory activity.",
+    "src": "Smith PCol slides 43, 45"
+   },
+   "figs": [
+    {
+     "label": "Watch how it works: antibiotics at the bacterial ribosome",
+     "jump": "guide:g-fig-ribosome"
+    }
    ]
   },
   "tmp-smx": {
@@ -10246,6 +10933,17 @@ const DZ = {
    "avoid": [
     "Sulfa allergy (slide: \"allergic to sulfur\")",
     "Hepatotoxicity; sulfonamide reaction"
+   ],
+   "how": {
+    "p": "sm",
+    "text": "Sulfamethoxazole competes with PABA and blocks bacterial synthesis of dihydrofolic acid; trimethoprim inhibits bacterial dihydrofolate reductase, the next step. The two blocks in sequence work much better than either drug alone.",
+    "src": "Smith PCol slides 48–49"
+   },
+   "figs": [
+    {
+     "label": "Watch how it works: sulfonamides and trimethoprim in the bacterial folate pathway",
+     "jump": "guide:g-fig-folate-path"
+    }
    ]
   },
   "coc": {
@@ -10273,6 +10971,17 @@ const DZ = {
     "Smoker, or 35 and older",
     "14 or younger and less than 2 years past menarche",
     "Males"
+   ],
+   "how": {
+    "p": "sk",
+    "text": "Oral contraceptives act against the hormonal triggers of acne: they regulate androgen levels and so prevent excess sebum production.",
+    "src": "Sikazwe DPAW pages 52–53"
+   },
+   "figs": [
+    {
+     "label": "Watch how it works: Dr. Sikazwe’s narrated walkthrough “Acne: hormones and antibiotics” (opens his guide section; choose that walkthrough)",
+     "jump": "guide:gobj-mc-acne"
+    }
    ]
   },
   "spironolactone": {
@@ -10301,6 +11010,21 @@ const DZ = {
    "avoid": [
     "Males: gynecomastia",
     "Hyperkalemia"
+   ],
+   "how": {
+    "p": "sk",
+    "text": "A steroidal antiandrogen: it diminishes testosterone biosynthesis. Antiandrogens regulate androgen levels and prevent excess sebum production.",
+    "src": "Sikazwe DPAW page 53; 11/04 lecture"
+   },
+   "figs": [
+    {
+     "label": "Watch how it works: antiandrogens, testosterone biosynthesis or its receptor (Dr. Sikazwe)",
+     "jump": "guide:cb-antiandrogens"
+    },
+    {
+     "label": "Watch how it works: Dr. Sikazwe’s narrated walkthrough “Acne: hormones and antibiotics” (opens his guide section; choose that walkthrough)",
+     "jump": "guide:gobj-mc-acne"
+    }
    ]
   },
   "isotretinoin": {
@@ -10336,6 +11060,21 @@ const DZ = {
     "Pregnancy: boxed warning for birth defects",
     "Vitamin A supplements, tetracyclines, steroids, progestin-only contraceptives",
     "Mood disorders, depression, suicidal ideation"
+   ],
+   "how": {
+    "p": "sm",
+    "text": "A retinoid (RAR/RXR). In cystic acne its mechanism of action is not known; it appears to inhibit sebaceous gland size and function.",
+    "src": "Smith PCol slides 14, 19"
+   },
+   "figs": [
+    {
+     "label": "Watch how it works: nuclear receptor binders, direct and indirect action (corticosteroids, retinoids, vitamin D analogs)",
+     "jump": "ref:ref-l1-nr"
+    },
+    {
+     "label": "Watch how it works: retinoid structures, exposed acid (directly active) or ester prodrug (Dr. Sikazwe)",
+     "jump": "guide:cb-retinoids"
+    }
    ]
   },
   "calcipotriene": {
@@ -10365,6 +11104,21 @@ const DZ = {
    "counselSrc": "Patel Scaly slides 36, 48",
    "avoid": [
     "Dr. Smith: more than 100 g per week risks hypercalcemia and hypercalciuria (PCol slides 21–22)"
+   ],
+   "how": {
+    "p": "sm",
+    "text": "Binds the vitamin D receptor (VDR); the VDR–drug complex pairs with RXR-α and changes gene expression. Keratinocytes multiply less and differentiate, and less inflammatory cytokine is released.",
+    "src": "Smith PCol slide 21"
+   },
+   "figs": [
+    {
+     "label": "Watch how it works: nuclear receptor binders, direct and indirect action (corticosteroids, retinoids, vitamin D analogs)",
+     "jump": "ref:ref-l1-nr"
+    },
+    {
+     "label": "See the reaction: vitamin D3 to calcitriol in the body (calcipotriene is a vitamin D3 analog)",
+     "jump": "guide:rx-vitd"
+    }
    ]
   },
   "anthralin": {
@@ -10395,6 +11149,21 @@ const DZ = {
    "avoid": [
     "Normal skin around the plaque (slide 36)",
     "Dr. Smith: the face and intertriginous areas (PCol slides 55–56)"
+   ],
+   "how": {
+    "p": "sm",
+    "text": "Exact mechanism not known: it may act on the mitochondria of keratinocytes and reduce mitotic activity, and it prevents T-lymphocyte activation. The overgrowth of keratinocytes is suppressed.",
+    "src": "Smith PCol slide 55"
+   },
+   "figs": [
+    {
+     "label": "Watch how it works: Dr. Smith’s narrated walkthrough “Antipsoriatic cytotoxic agents” (opens her guide section; choose that walkthrough)",
+     "jump": "guide:gobj-l1-4"
+    },
+    {
+     "label": "See the reaction: anthralin autoxidation to the anthranyl radical and superoxide",
+     "jump": "guide:rx-anthralin"
+    }
    ]
   },
   "coal-tar": {
@@ -10437,6 +11206,17 @@ const DZ = {
    "counselSrc": "Patel Scaly slides 9, 16, 36",
    "avoid": [
     "Dr. Smith: photosensitizing; caution on oozing or vesicular skin (PCol slides 53–54)"
+   ],
+   "how": {
+    "p": "sm",
+    "text": "Antiproliferative and anti-inflammatory: it cross-links with DNA to inhibit cell division, so epidermal cell turnover slows. The mechanism is not fully known.",
+    "src": "Smith PCol slide 53"
+   },
+   "figs": [
+    {
+     "label": "Watch how it works: Dr. Smith’s narrated walkthrough “Antipsoriatic cytotoxic agents” (opens her guide section; choose that walkthrough)",
+     "jump": "guide:gobj-l1-4"
+    }
    ]
   },
   "methotrexate": {
@@ -10453,7 +11233,7 @@ const DZ = {
    "pa": [
     {
      "dz": "psoriasis",
-     "role": "Usually the first oral systemic agent (“first line, most affordable”); psoriasis and psoriatic arthritis; T-cell and cytokine suppressor, oral DMARD",
+     "role": "Usually the first oral systemic agent (“first line, most affordable”); psoriasis and psoriatic arthritis; T-cell and cytokine suppressor, oral [[dmard|DMARD]]",
      "how": "Onset 3–6 weeks. Folic acid 1–5 mg daily. Screening: CBC, LFTs. The topical is continued.",
      "src": "Patel Scaly slides 37, 39; 11/11 lecture"
     }
@@ -10472,6 +11252,25 @@ const DZ = {
     "Cirrhosis",
     "Blood dyscrasias",
     "Higher risk of hepatotoxicity: diabetes, obesity, alcoholism, more than 4 g total cumulative dose"
+   ],
+   "how": {
+    "p": "sm",
+    "text": "A folic acid analog that inhibits dihydrofolate reductase (DHFR), so tetrahydrofolate is not made, purines run short and cells die. Keratinocyte hyperproliferation and the number of T cells fall.",
+    "src": "Smith PCol slide 59"
+   },
+   "figs": [
+    {
+     "label": "Watch how it works: methotrexate and the folate cycle",
+     "jump": "guide:g-fig-folate-cycle"
+    },
+    {
+     "label": "Watch how it works: methotrexate against folic acid in the DHFR cavity (Dr. Sikazwe)",
+     "jump": "guide:cb-mtx"
+    },
+    {
+     "label": "See the reaction: folate reduction by DHFR, the step methotrexate blocks",
+     "jump": "guide:rx-folate"
+    }
    ]
   },
   "cyclosporine": {
@@ -10505,6 +11304,21 @@ const DZ = {
     "Systemic malignancy",
     "Infections",
     "Elderly: increased risk of hypertension"
+   ],
+   "how": {
+    "p": "sm",
+    "text": "Binds cyclophilin, and the complex inhibits calcineurin, so less IL-2 is made for T-cell proliferation.",
+    "src": "Smith PCol slide 26"
+   },
+   "figs": [
+    {
+     "label": "Watch how it works: calcineurin inhibitors (calcineurin, NFAT and IL-2)",
+     "jump": "guide:fig-cni-nfat"
+    },
+    {
+     "label": "Watch how it works: cyclosporine is activated by binding cyclophilin (Dr. Sikazwe)",
+     "jump": "guide:cb-cyclosporine"
+    }
    ]
   },
   "apremilast": {
@@ -10536,6 +11350,21 @@ const DZ = {
    "avoid": [
     "Caution: depression; weight loss",
     "Renal impairment: once-daily dosing"
+   ],
+   "how": {
+    "p": "sm",
+    "text": "Inhibits phosphodiesterase 4 (PDE-4), the main PDE in inflammatory cells, so cAMP is not broken down. With more cAMP the inflammatory cells are inhibited.",
+    "src": "Smith PCol slides 32, 34"
+   },
+   "figs": [
+    {
+     "label": "Watch how it works: PDE-4 inhibitors, why cAMP rises",
+     "jump": "guide:g-fig-pde4-camp"
+    },
+    {
+     "label": "See the reaction: apremilast metabolism (CYP3A4, then glucuronidation)",
+     "jump": "guide:rx-apremilast"
+    }
    ]
   },
   "acitretin": {
@@ -10567,6 +11396,21 @@ const DZ = {
    "avoid": [
     "Women of reproductive age: pregnant, or planning pregnancy within 3 years after stopping (“not an option”)",
     "Alcohol"
+   ],
+   "how": {
+    "p": "sm",
+    "text": "An oral retinoid: it binds the retinoic acid receptors RAR and RXR, and the RAR–RXR pair binds the RARE on DNA and changes gene transcription. In psoriasis the precise mechanism is unknown; it may be anti-inflammatory and antiproliferative.",
+    "src": "Smith PCol slides 14–15, 20"
+   },
+   "figs": [
+    {
+     "label": "Watch how it works: nuclear receptor binders, direct and indirect action (corticosteroids, retinoids, vitamin D analogs)",
+     "jump": "ref:ref-l1-nr"
+    },
+    {
+     "label": "See the reaction: etretinate to acitretin, its active form",
+     "jump": "guide:rx-etretinate"
+    }
    ]
   },
   "tofacitinib": {
@@ -10599,6 +11443,17 @@ const DZ = {
     "Not with biologic DMARDs or potent immunosuppressants",
     "Live vaccines",
     "Risk of thrombosis and lymphoma"
+   ],
+   "how": {
+    "p": "sm",
+    "text": "Inhibits Janus kinase (JAK), so fewer inflammatory cytokines are produced. It is a small molecule that gets inside the cell.",
+    "src": "Smith PCol slides 75–76; 11/03 lecture"
+   },
+   "figs": [
+    {
+     "label": "Watch how it works: Dr. Smith’s narrated walkthrough “JAK inhibitors” (opens her guide section; choose that walkthrough)",
+     "jump": "guide:gobj-l1-4"
+    }
    ]
   },
   "abatacept": {
@@ -10625,6 +11480,17 @@ const DZ = {
    "avoid": [
     "Live vaccines",
     "COPD (listed under interactions on slide 39)"
+   ],
+   "how": {
+    "p": "sm",
+    "text": "A fusion protein (CTLA-4 domain + IgG Fc) that binds CD80/86 on antigen-presenting cells, so CD28 on the T cell cannot bind. The positive second signal is blocked and the T cell is not activated.",
+    "src": "Smith PCol slide 63"
+   },
+   "figs": [
+    {
+     "label": "Watch how it works: abatacept, inhibitor of co-stimulation",
+     "jump": "guide:g-fig-costim"
+    }
    ]
   },
   "puva": {
@@ -10655,6 +11521,21 @@ const DZ = {
    "counselSrc": "Patel Scaly slide 44; 11/11 lecture",
    "avoid": [
     "Anything short of severe, refractory psoriasis: it is the last line"
+   ],
+   "how": {
+    "p": "sm",
+    "text": "With UV light of 320–340 nm the psoralen (methoxsalen) intercalates into the DNA strand. The effects are antiproliferative, immunosuppressive and anti-inflammatory: keratinocytes normalize, and it is cytotoxic to T cells.",
+    "src": "Smith PCol slide 78; Sun slide 3"
+   },
+   "figs": [
+    {
+     "label": "Watch how it works: Dr. Smith’s narrated walkthrough “Psoralens and PUVA” (opens her guide section)",
+     "jump": "guide:gobj-sun-pso"
+    },
+    {
+     "label": "See the reaction: psoralen plus UVA cross-links DNA (Dr. Sikazwe)",
+     "jump": "guide:rx-psoralen"
+    }
    ]
   },
   "tnf-inhibitors": {
@@ -10689,6 +11570,17 @@ const DZ = {
     "Live vaccines",
     "Active infection",
     "Class cautions: hepatitis B reactivation, cytopenias, lupus-like syndrome"
+   ],
+   "how": {
+    "p": "sm",
+    "text": "All five bind TNF-α, an inflammatory cytokine, and keep it from its receptors on inflammatory cells. The plaques become fewer and smaller.",
+    "src": "Smith PCol slide 70"
+   },
+   "figs": [
+    {
+     "label": "Watch how it works: Dr. Smith’s narrated walkthrough “TNF-alpha inhibitors” (opens her guide section; choose that walkthrough)",
+     "jump": "guide:gobj-pc-3"
+    }
    ]
   },
   "ustekinumab": {
@@ -10720,6 +11612,17 @@ const DZ = {
     "Active TB",
     "Live vaccines",
     "Interacts with cyclosporine and warfarin"
+   ],
+   "how": {
+    "p": "sm",
+    "text": "An antibody to p40, the subunit that IL-12 and IL-23 share, so neither can bind the IL-12 receptor β1 on CD4 T cells and NK cells. Fewer proinflammatory Th1 and Th17 cells form.",
+    "src": "Smith PCol slide 67"
+   },
+   "figs": [
+    {
+     "label": "Watch how it works: cytokine biologics, what each one binds",
+     "jump": "guide:fig-il-axis"
+    }
    ]
   },
   "il23-inhibitors": {
@@ -10749,6 +11652,17 @@ const DZ = {
    "avoid": [
     "Active TB",
     "Live vaccines"
+   ],
+   "how": {
+    "p": "sm",
+    "text": "Antibodies that bind p19, the subunit only IL-23 has, so IL-23 cannot act on its receptor. Less proinflammatory cytokine and chemokine is released.",
+    "src": "Smith PCol slides 68–69"
+   },
+   "figs": [
+    {
+     "label": "Watch how it works: cytokine biologics, what each one binds",
+     "jump": "guide:fig-il-axis"
+    }
    ]
   },
   "secukinumab": {
@@ -10780,6 +11694,17 @@ const DZ = {
     "Crohn’s disease: “we’re avoiding any patients with Crohn’s disease on Cosentyx”",
     "Live vaccines",
     "Anti-IL class cautions: inflammatory bowel disease, depression worsening"
+   ],
+   "how": {
+    "p": "sm",
+    "text": "A human antibody that binds the IL-17A cytokine, so it cannot reach its receptor. Keratinocytes are the major target of IL-17 in psoriasis; the plaques become fewer and smaller.",
+    "src": "Smith PCol slides 65–66"
+   },
+   "figs": [
+    {
+     "label": "Watch how it works: cytokine biologics, what each one binds",
+     "jump": "guide:fig-il-axis"
+    }
    ]
   },
   "ixekizumab": {
@@ -10809,6 +11734,17 @@ const DZ = {
    "avoid": [
     "Live vaccines",
     "Anti-IL class cautions: inflammatory bowel disease, depression worsening"
+   ],
+   "how": {
+    "p": "sm",
+    "text": "A humanized antibody against the IL-17A cytokine. Keratinocytes are the major target of IL-17 in psoriasis.",
+    "src": "Smith PCol slides 65–66"
+   },
+   "figs": [
+    {
+     "label": "Watch how it works: cytokine biologics, what each one binds",
+     "jump": "guide:fig-il-axis"
+    }
    ]
   },
   "brodalumab": {
@@ -10841,6 +11777,17 @@ const DZ = {
     "Depression or suicide risk: boxed warning",
     "Live vaccines",
     "Anti-IL class cautions: inflammatory bowel disease, depression worsening"
+   ],
+   "how": {
+    "p": "sm",
+    "text": "A human antibody that binds IL-17 receptor A, not the cytokine, so IL-17A and the other IL-17 cytokines cannot act on it. Release of proinflammatory cytokines and chemokines is blocked.",
+    "src": "Smith PCol slide 66"
+   },
+   "figs": [
+    {
+     "label": "Watch how it works: cytokine biologics, what each one binds",
+     "jump": "guide:fig-il-axis"
+    }
    ]
   },
   "pyrithione-zinc": {
@@ -10872,6 +11819,17 @@ const DZ = {
    "counselSrc": "Patel Scaly slides 9, 16",
    "avoid": [
     "Infants with cradle cap: a non-medicated shampoo is used (slide 18)"
+   ],
+   "how": {
+    "p": "sm",
+    "text": "Cytostatic (it stops keratinocytes from proliferating so much) and antifungal; the mechanism is not known. She said the antifungal activity may be what helps in dandruff shampoos.",
+    "src": "Smith PCol slide 57; 11/03 lecture"
+   },
+   "figs": [
+    {
+     "label": "Watch how it works: Dr. Smith’s narrated walkthrough “Antipsoriatic cytotoxic agents” (opens her guide section; choose that walkthrough)",
+     "jump": "guide:gobj-l1-4"
+    }
    ]
   },
   "selenium-sulfide": {
@@ -10903,6 +11861,17 @@ const DZ = {
    "counselSrc": "Patel Scaly slides 9, 16",
    "avoid": [
     "Infants with cradle cap: a non-medicated shampoo is used (slide 18)"
+   ],
+   "how": {
+    "p": "sm",
+    "text": "Cytostatic (it stops keratinocytes from proliferating so much) and antifungal; the mechanism is not known. She said the antifungal activity may be what helps in dandruff shampoos.",
+    "src": "Smith PCol slide 57; 11/03 lecture"
+   },
+   "figs": [
+    {
+     "label": "Watch how it works: Dr. Smith’s narrated walkthrough “Antipsoriatic cytotoxic agents” (opens her guide section; choose that walkthrough)",
+     "jump": "guide:gobj-l1-4"
+    }
    ]
   },
   "ketoconazole": {
@@ -10946,6 +11915,17 @@ const DZ = {
    "counselSrc": "Patel Scaly slides 16–17; 11/10 lecture",
    "avoid": [
     "Infants (cradle cap)"
+   ],
+   "how": {
+    "p": "pa",
+    "text": "An antifungal shampoo. It decreases the growth of Malassezia, the yeast-like fungus that grows in the sebum.",
+    "src": "Patel Scaly slides 13–14, 16"
+   },
+   "figs": [
+    {
+     "label": "Watch how it works: antiandrogens, where ketoconazole lowers testosterone synthesis (Dr. Sikazwe, taught for acne)",
+     "jump": "guide:cb-antiandrogens"
+    }
    ]
   },
   "ciclopirox": {
@@ -10964,7 +11944,13 @@ const DZ = {
     "See a health care provider if it gets worse, or if symptoms last longer than 7 days."
    ],
    "counselSrc": "Patel Scaly slide 16",
-   "avoid": []
+   "avoid": [],
+   "how": {
+    "p": "pa",
+    "text": "On her slide it is one of the antifungal shampoos used to decrease fungal growth (Malassezia) on the scalp. No lecture gives more of its mechanism.",
+    "src": "Patel Scaly slides 14, 16"
+   },
+   "figs": []
   },
   "sulfur": {
    "name": "Sulfur",
@@ -11004,6 +11990,17 @@ const DZ = {
    "counselSrc": "Patel Scaly slides 7, 15; 11/10 lecture",
    "avoid": [
     "Psoriasis: not effective"
+   ],
+   "how": {
+    "p": "sm",
+    "text": "A mild keratolytic with bacteriostatic properties. Inside the keratinocytes it is reduced to hydrogen sulfide, which causes inflammation that promotes peeling.",
+    "src": "Smith PCol slide 38"
+   },
+   "figs": [
+    {
+     "label": "Watch how it works: Dr. Smith’s narrated walkthrough “Keratolytics” (opens her guide section; choose that walkthrough)",
+     "jump": "guide:gobj-l1-4"
+    }
    ]
   },
   "topical-anesthetics": {
@@ -11068,7 +12065,13 @@ const DZ = {
     "Wounds / Burns / Sunburn: benzocaine absorbed systemically: methemoglobinemia (cyanosis, dyspnea, syncope, seizures, coma)",
     "Sunburn: not recommended; hypersensitivity reaction and systemic symptoms",
     "Wounds / Burns / Sunburn: her OTC chart: not under an occlusive dressing or on broken skin"
-   ]
+   ],
+   "how": {
+    "p": "pa",
+    "text": "Relieve pain and itching by numbing the skin; relief lasts 15 to 45 minutes.",
+    "src": "Patel Outdoor slide 12; Wound slides 14, 20; 11/12 lecture T@83300"
+   },
+   "figs": []
   },
   "topical-antihistamine": {
    "name": "Topical antihistamine (diphenhydramine 0.5 to 2% cream)",
@@ -11098,7 +12101,14 @@ const DZ = {
     "Plant dermatitis",
     "Sunburn",
     "Broken, oozing skin"
-   ]
+   ],
+   "how": {
+    "p": "pa",
+    "text": "",
+    "src": "",
+    "none": true
+   },
+   "figs": []
   },
   "oral-antihistamines": {
    "name": "Oral antihistamines (e.g. diphenhydramine)",
@@ -11133,7 +12143,14 @@ const DZ = {
     "It works through the whole body, so it suits a rash that is not limited to one area (her reason for oral over topical)"
    ],
    "counselSrc": "11/12 lecture",
-   "avoid": []
+   "avoid": [],
+   "how": {
+    "p": "pa",
+    "text": "",
+    "src": "",
+    "none": true
+   },
+   "figs": []
   },
   "counterirritants": {
    "name": "Antipruritics or counterirritants (camphor, menthol, phenol)",
@@ -11167,7 +12184,14 @@ const DZ = {
    "avoid": [
     "Children younger than 2 years",
     "Broken skin or a wound"
-   ]
+   ],
+   "how": {
+    "p": "pa",
+    "text": "",
+    "src": "",
+    "none": true
+   },
+   "figs": []
   },
   "astringents": {
    "name": "Astringents (aluminum acetate, witch hazel)",
@@ -11191,7 +12215,13 @@ const DZ = {
     "It reduces weeping and decreases itch; it cools and dries the skin"
    ],
    "counselSrc": "Patel Outdoor slides 13, 15",
-   "avoid": []
+   "avoid": [],
+   "how": {
+    "p": "pa",
+    "text": "Reduce inflammation by vasoconstriction, cool and dry the skin by evaporation, and retard oozing, weeping or bleeding.",
+    "src": "Patel Outdoor slide 13"
+   },
+   "figs": []
   },
   "topical-antibiotics": {
    "name": "Topical antibiotics (bacitracin, neomycin, polymyxin B sulfate, mupirocin)",
@@ -11242,7 +12272,13 @@ const DZ = {
     "Wounds / Burns / Sunburn: toxicity risk rises with large areas of application",
     "Wounds / Burns / Sunburn: neomycin: systemic toxicity",
     "Wounds / Burns / Sunburn: polymyxin B: hypersensitivity"
-   ]
+   ],
+   "how": {
+    "p": "pa",
+    "text": "Ingredients with antibacterial properties: the product delivers a concentrated antimicrobial agent to the wound site, to prevent infection.",
+    "src": "Patel Wound slides 11–12; 11/12 lecture T@81400–81900"
+   },
+   "figs": []
   },
   "skin-protectants": {
    "name": "Skin protectants (petrolatum, calamine, zinc oxide)",
@@ -11290,6 +12326,12 @@ const DZ = {
    "avoid": [
     "Sunburn: not in the first 24 hours"
    ],
+   "how": {
+    "p": "pa",
+    "text": "Provide a physical barrier and lubrication to the skin; her slides add that they reduce irritation or inflammation and help with rehydration.",
+    "src": "Patel Dermatitis slide 63; Outdoor slide 39; Sun slide 31"
+   },
+   "figs": [],
    "sk": {
     "text": "Petrolatum: linear hydrocarbons of more than 25 carbons; the most effective emollient; fills the gaps between scales and prevents water loss.",
     "src": "DPAW page 15"
@@ -11313,7 +12355,14 @@ const DZ = {
     "The tub becomes very slippery"
    ],
    "counselSrc": "Patel Outdoor slide 14",
-   "avoid": []
+   "avoid": [],
+   "how": {
+    "p": "pa",
+    "text": "",
+    "src": "",
+    "none": true
+   },
+   "figs": []
   },
   "permethrin": {
    "name": "Permethrin",
@@ -11345,7 +12394,14 @@ const DZ = {
     "Under 2 months old",
     "Hypersensitivity to chrysanthemums, ragweed or a pediculicide ingredient",
     "Pregnancy or breast-feeding; lice of the eyelids or eyebrows; secondary skin infection (refer)"
-   ]
+   ],
+   "how": {
+    "p": "pa",
+    "text": "",
+    "src": "",
+    "none": true
+   },
+   "figs": []
   },
   "pyrethrins": {
    "name": "Pyrethrins + piperonyl butoxide",
@@ -11371,7 +12427,14 @@ const DZ = {
     "Under 2 years of age",
     "Allergy to chrysanthemums; hypersensitivity to ragweed",
     "Pregnancy or breast-feeding; lice of the eyelids or eyebrows; secondary skin infection (refer)"
-   ]
+   ],
+   "how": {
+    "p": "pa",
+    "text": "",
+    "src": "",
+    "none": true
+   },
+   "figs": []
   },
   "dimethicone": {
    "name": "Dimethicone 100%",
@@ -11391,7 +12454,13 @@ const DZ = {
    "counselSrc": "Patel Outdoor slide 45",
    "avoid": [
     "Under 2 months old"
-   ]
+   ],
+   "how": {
+    "p": "pa",
+    "text": "A wetting / occlusive agent. In class: it wets the lice, which dehydrates and kills them.",
+    "src": "Patel Outdoor slide 46; 11/12 lecture T@31043"
+   },
+   "figs": []
   },
   "ivermectin": {
    "name": "Ivermectin",
@@ -11416,7 +12485,14 @@ const DZ = {
    "counselSrc": "Patel Outdoor slide 47",
    "avoid": [
     "Lotion: under 6 months old"
-   ]
+   ],
+   "how": {
+    "p": "pa",
+    "text": "",
+    "src": "",
+    "none": true
+   },
+   "figs": []
   },
   "lice-rx": {
    "name": "Prescription lice products (benzyl alcohol, spinosad, malathion)",
@@ -11437,7 +12513,14 @@ const DZ = {
    "avoid": [
     "Benzyl alcohol, spinosad: under 6 months",
     "Malathion: under 2 years"
-   ]
+   ],
+   "how": {
+    "p": "pa",
+    "text": "",
+    "src": "",
+    "none": true
+   },
+   "figs": []
   },
   "scabies-agents": {
    "name": "Other scabies agents (crotamiton, sulfur, lindane)",
@@ -11454,7 +12537,14 @@ const DZ = {
     "Itching can last 4 weeks after treatment; this is a hypersensitivity reaction"
    ],
    "counselSrc": "Patel Outdoor slide 51",
-   "avoid": []
+   "avoid": [],
+   "how": {
+    "p": "pa",
+    "text": "",
+    "src": "",
+    "none": true
+   },
+   "figs": []
   },
   "amoxicillin": {
    "name": "Amoxicillin",
@@ -11469,7 +12559,14 @@ const DZ = {
    ],
    "avoid": [
     "Amoxicillin allergy (her sting case patient: rash)"
-   ]
+   ],
+   "how": {
+    "p": "pa",
+    "text": "",
+    "src": "",
+    "none": true
+   },
+   "figs": []
   },
   "cefuroxime": {
    "name": "Cefuroxime axetil",
@@ -11482,7 +12579,14 @@ const DZ = {
      "src": "Patel Outdoor slide 29"
     }
    ],
-   "avoid": []
+   "avoid": [],
+   "how": {
+    "p": "pa",
+    "text": "",
+    "src": "",
+    "none": true
+   },
+   "figs": []
   },
   "azithromycin": {
    "name": "Azithromycin",
@@ -11499,7 +12603,18 @@ const DZ = {
      "src": "Patel Outdoor slide 29"
     }
    ],
-   "avoid": []
+   "avoid": [],
+   "how": {
+    "p": "sm",
+    "text": "A macrolide: it attaches to the 50S subunit of the bacterial ribosome and stops bacterial protein synthesis (bacteriostatic). Slide 47 prints \"prevents translocation\"; the slide 42 figure caption prints \"block peptide bond formation\".",
+    "src": "Smith PCol slides 42, 47"
+   },
+   "figs": [
+    {
+     "label": "Watch how it works: antibiotics at the bacterial ribosome",
+     "jump": "guide:g-fig-ribosome"
+    }
+   ]
   },
   "acetaminophen": {
    "name": "Acetaminophen",
@@ -11516,7 +12631,14 @@ const DZ = {
     "Clean with soap and water, apply a cold pack, elevate the limb; go to the emergency room"
    ],
    "counselSrc": "Patel Outdoor slide 53",
-   "avoid": []
+   "avoid": [],
+   "how": {
+    "p": "pa",
+    "text": "",
+    "src": "",
+    "none": true
+   },
+   "figs": []
   },
   "rabies-vaccine": {
    "name": "Rabies vaccine (HDCV or PCECV)",
@@ -11537,7 +12659,14 @@ const DZ = {
    "counselSrc": "Patel Outdoor slides 62–63; 11/12 lecture",
    "avoid": [
     "Never at the same site or in the same syringe as the immune globulin"
-   ]
+   ],
+   "how": {
+    "p": "pa",
+    "text": "",
+    "src": "",
+    "none": true
+   },
+   "figs": []
   },
   "rabies-ig": {
    "name": "Human rabies immune globulin (HRIG)",
@@ -11553,7 +12682,14 @@ const DZ = {
    "avoid": [
     "Previously immunized patients: do not administer",
     "Never at the same site or in the same syringe as the vaccine"
-   ]
+   ],
+   "how": {
+    "p": "pa",
+    "text": "",
+    "src": "",
+    "none": true
+   },
+   "figs": []
   },
   "sunscreen-chemical": {
    "name": "Chemical (organic) sunscreens",
@@ -11595,6 +12731,25 @@ const DZ = {
     "Sensitive skin or a previous reaction: avoid PABA; use zinc oxide or titanium dioxide",
     "PABA and trolamine salicylate are not GRASE",
     "Oxybenzone had the highest blood level in FDA testing (threshold 0.5 ng/mL)"
+   ],
+   "how": {
+    "p": "sm",
+    "text": "Organic compounds absorb UVB and/or UVA radiation and convert it to heat; products may combine several families.",
+    "src": "Smith Sun slide 22"
+   },
+   "figs": [
+    {
+     "label": "Watch how it works: sunblocks reflect and scatter, sunscreens absorb (organic sunscreens absorb UV)",
+     "jump": "guide:fig-block-vs-screen"
+    },
+    {
+     "label": "Watch how it works: MED, SPF and broad spectrum, what the label numbers measure",
+     "jump": "guide:fig-spf"
+    },
+    {
+     "label": "See the reaction: salicylate sunscreens, ester hydrolysis to salicylic acid",
+     "jump": "guide:cb-salicylates"
+    }
    ]
   },
   "titanium-dioxide": {
@@ -11622,6 +12777,21 @@ const DZ = {
    "counselSrc": "Patel Sun slides 21, 36",
    "avoid": [
     "Under 6 months of age: no sunscreen"
+   ],
+   "how": {
+    "p": "sm",
+    "text": "A sunblock: inorganic particles scatter or reflect visible, UV and infrared radiation; it covers UVA and UVB.",
+    "src": "Smith Sun slide 20"
+   },
+   "figs": [
+    {
+     "label": "Watch how it works: sunblocks reflect and scatter, sunscreens absorb (titanium dioxide is a sunblock)",
+     "jump": "guide:fig-block-vs-screen"
+    },
+    {
+     "label": "Watch how it works: MED, SPF and broad spectrum, what the label numbers measure",
+     "jump": "guide:fig-spf"
+    }
    ]
   },
   "systemic-analgesics": {
@@ -11648,7 +12818,13 @@ const DZ = {
    "counselSrc": "Patel Sun slides 31, 34",
    "avoid": [
     "Ibuprofen and the other NSAIDs are on her list of medications that increase sun sensitivity"
-   ]
+   ],
+   "how": {
+    "p": "pa",
+    "text": "Systemic analgesics decrease pain, erythema and edema and act longer than topical anesthetics; her slide prefers one with anti-inflammatory properties.",
+    "src": "Patel Sun slide 31; 11/12 lecture T@61876"
+   },
+   "figs": []
   },
   "aloe-vera": {
    "name": "Aloe vera",
@@ -11676,7 +12852,13 @@ const DZ = {
    "avoid": [
     "Not FDA-approved for burn treatment",
     "Internal use: multiple drug interactions and adverse effects"
-   ]
+   ],
+   "how": {
+    "p": "pa",
+    "text": "May decrease pain by inhibiting bradykinin and the inflammatory process.",
+    "src": "Patel Sun slide 32"
+   },
+   "figs": []
   },
   "hydroquinone": {
    "name": "Hydroquinone 4%",
@@ -11703,7 +12885,13 @@ const DZ = {
    "avoid": [
     "Not FDA-approved for over-the-counter sale",
     "Ochronosis that may be permanent; rashes; facial swelling"
-   ]
+   ],
+   "how": {
+    "p": "sk",
+    "text": "Inhibits melanin biosynthesis through tyrosinase inhibition; used topically for whitening or depigmentation of aged spots.",
+    "src": "Sikazwe DPAW page 67"
+   },
+   "figs": []
   },
   "antioxidants": {
    "name": "Topical antioxidants (vitamin C, niacinamide, vitamin E, coenzyme Q-10, alpha-lipoic acid)",
@@ -11723,7 +12911,14 @@ const DZ = {
    "counselSrc": "Patel Sun slide 53",
    "avoid": [
     "No proven formula"
-   ]
+   ],
+   "how": {
+    "p": "pa",
+    "text": "",
+    "src": "",
+    "none": true
+   },
+   "figs": []
   },
   "antiseptics": {
    "name": "First-aid antiseptics: hydrogen peroxide, chlorhexidine, povidone-iodine",
@@ -11756,7 +12951,13 @@ const DZ = {
    "avoid": [
     "Inside the wound: reduces healing",
     "Sunburn"
-   ]
+   ],
+   "how": {
+    "p": "pa",
+    "text": "In class: they clean the skin of debris and help prevent infection of the wound. Her slide adds the harm: they may cause cytotoxicity, which reduces wound healing.",
+    "src": "11/12 lecture T@83292, T@85006; Patel Wound slides 15, 19"
+   },
+   "figs": []
   },
   "dressings": {
    "name": "Wound dressings",
@@ -11777,7 +12978,13 @@ const DZ = {
    "avoid": [
     "Hydrocolloid or film on an infected wound",
     "Film on a wound with a large amount of exudate (maceration)"
-   ]
+   ],
+   "how": {
+    "p": "pa",
+    "text": "The aim is a moist healing environment. Hydrocolloid and transparent film dressings provide it; a hydrocolloid manages exudate by particle swelling, and gauze absorbs exudate without giving a moist environment.",
+    "src": "Patel Wound slides 8–9"
+   },
+   "figs": []
   },
   "cryotherapy": {
    "name": "OTC cryotherapy (dimethyl ether and propane; nitrous oxide)",
@@ -11802,7 +13009,13 @@ const DZ = {
     "Flammable: not near heat sources",
     "Keep the canister away from the face, body and clothing",
     "Wart types that are not self-treatable: flat, mosaic, periungual, filiform"
-   ]
+   ],
+   "how": {
+    "p": "pa",
+    "text": "Freezes the wart off: the product is held on the wart until a halo appears.",
+    "src": "11/12 lecture T@91042, T@91947; Patel Warts slide 11"
+   },
+   "figs": []
   }
  },
  "terms": {
@@ -11873,8 +13086,8 @@ const DZ = {
   ],
   "skin-protectant": [
    "Skin protectant",
-   "A product that gives a physical barrier and lubrication to the skin.",
-   "Patel Dermatitis slide 63"
+   "A product such as zinc oxide, petrolatum, calamine or cocoa butter that gives the skin a physical barrier and lubrication and reduces irritation.",
+   "Patel Dermatitis slide 63; Outdoor slide 39; Sun slide 31"
   ],
   "comedone": [
    "Comedone",
@@ -11883,8 +13096,8 @@ const DZ = {
   ],
   "papule": [
    "Papule",
-   "An inflammatory lesion: raised and red, with no visible pus.",
-   "Patel Acne slides 5–6; 11/10 lecture"
+   "A small, raised, solid bump on the skin. In acne (Dr. Patel): an inflammatory lesion, raised and red, with no visible pus.",
+   "Patel Acne slides 5–6; 11/10 lecture; the first sentence is the plain meaning"
   ],
   "pustule": [
    "Pustule",
@@ -11903,8 +13116,8 @@ const DZ = {
   ],
   "keratolytic": [
    "Keratolytic",
-   "Thins the skin on and around the lesion; the outer layer loosens and sheds; softens keratin.",
-   "Patel Acne slide 22"
+   "Thins the skin on and around the lesion, so the outer layer loosens and sheds; softens keratin. Benzoyl peroxide, sulfur, salicylic acid and the alpha hydroxy acids are keratolytics.",
+   "Patel Acne slide 22; Smith PCol slides 35–39; Patel Sun slide 45"
   ],
   "comedolytic": [
    "Comedolytic",
@@ -11931,10 +13144,80 @@ const DZ = {
    "Benzoyl peroxide, in the key of her algorithm slide.",
    "Patel Acne slides 20, 40"
   ],
+  "hygiene": [
+   "Hygiene hypothesis",
+   "The absence of early childhood exposure to infectious agents increases susceptibility to allergic diseases. Dr. Smith’s slide gives it with the lower prevalence in rural areas.",
+   "Smith Pathophys slide 10"
+  ],
+  "fkbp": [
+   "FKBP",
+   "The protein that tacrolimus (FK506) binds inside the T cell; the tacrolimus–FKBP complex inactivates calcineurin.",
+   "Smith PCol slide 26"
+  ],
+  "jak": [
+   "JAK (Janus kinase)",
+   "An enzyme. A JAK inhibitor blocks it, so fewer inflammatory cytokines are produced (Dr. Smith) and the downstream immune-mediated inflammatory response decreases (Dr. Patel).",
+   "Smith PCol slides 75–76; Patel Dermatitis slide 46"
+  ],
+  "emollient": [
+   "Emollient",
+   "A moisturizer that improves the skin barrier. Dr. Patel’s examples: creams and ointments such as Aquaphor (11/06); “lotions and creams” (11/10). Dr. Sikazwe: emollients prevent skin water loss.",
+   "11/06 and 11/10 lectures; Patel Dermatitis slides 29, 32; Sikazwe DPAW page 15"
+  ],
+  "occlusive": [
+   "Occlusive moisturizer",
+   "A moisturizer that decreases the release of moisture from the skin; on Dr. Patel’s slide, the petroleum-containing products (Aquaphor, Eucerin, Lubriderm).",
+   "Patel Dermatitis slides 31–32"
+  ],
+  "humectant": [
+   "Humectant",
+   "An ingredient that draws water into the outer layer of the skin; on Dr. Patel’s slide the urea-containing products are the humectant type.",
+   "Patel Dermatitis slide 32; the definition is the plain meaning"
+  ],
+  "vesicle": [
+   "Vesicle",
+   "A small blister; Dr. Patel’s slide writes “blisters (vesicles)”. Dr. Smith: in atopic dermatitis small, raised vesicles may leak fluid and crust over when scratched.",
+   "Patel Outdoor slide 10; Smith Pathophys slide 11"
+  ],
+  "biologic": [
+   "Biologic",
+   "An injected specialty medicine, an antibody or fusion protein, that binds one cytokine or receptor. Atopic dermatitis: dupilumab, tralokinumab. Psoriasis: the TNF-α, IL-12/23, IL-23 and IL-17 inhibitors.",
+   "Summary of Patel Scaly slides 40–43, Patel Dermatitis slides 43–45 and Smith PCol slides 62–74; no slide defines the word"
+  ],
+  "bullae": [
+   "Bullae",
+   "Large blisters; a vesicle is a small one.",
+   "plain meaning, not from the slides"
+  ],
+  "comedogenic": [
+   "Comedogenic",
+   "Tending to cause comedones by plugging the follicle. Dr. Smith: acne cosmetica comes from comedogenic oils in cosmetics; Dr. Patel: comedogenic drugs are an exclusion for self-care.",
+   "plain meaning, not from the slides; the word is on Smith Pathophys slide 35 and Patel Acne slide 18"
+  ],
+  "microcomedone": [
+   "Microcomedone",
+   "The first acne lesion: abnormal keratinization makes cells stick in a normal follicle; more sebum then turns it into a closed comedone.",
+   "Smith Pathophys slide 34"
+  ],
+  "p-acnes": [
+   "P. acnes",
+   "Propionibacterium acnes, the bacterium that colonizes the follicle duct in acne; its lipase turns sebum glycerides into free fatty acids.",
+   "Smith Pathophys slides 32–33"
+  ],
+  "g6pd": [
+   "G6PD",
+   "Glucose-6-phosphate dehydrogenase. Dr. Patel’s slide lists a “G6PD concern” for topical dapsone, with monitoring of the CBC and reticulocyte counts.",
+   "Patel Acne slide 31; the expansion is the plain meaning"
+  ],
+  "plaque": [
+   "Plaque",
+   "A raised lesion. In plaque psoriasis: red-violet, at least 0.5 cm across, well demarcated, covered by silver flaking scale.",
+   "Patel Scaly slide 26"
+  ],
   "bsa": [
    "Body surface area (BSA)",
-   "The share of the skin that is affected, as a percentage. Dr. Patel: “I only want you to know the BSA.”",
-   "Patel Scaly slides 31–32; 11/11 lecture"
+   "The share of the skin that is affected, as a percentage. Dr. Patel grades psoriasis by it (“I only want you to know the BSA”) and sizes burns by it.",
+   "Patel Scaly slides 31–32; 11/11 lecture; Patel Wound slide 16"
   ],
   "koebner": [
    "Koebner response",
@@ -11946,11 +13229,6 @@ const DZ = {
    "The tuberculosis skin test: injected into the skin, then read as a positive or negative reaction.",
    "11/11 lecture"
   ],
-  "refractory": [
-   "Refractory",
-   "Not responding to the treatments already tried.",
-   "plain meaning, not from the slides"
-  ],
   "rems": [
    "REMS",
    "Risk Evaluation and Mitigation Strategy: a safety program the prescriber and patient must complete before the drug is dispensed.",
@@ -11960,11 +13238,6 @@ const DZ = {
    "PUVA",
    "Oral psoralen followed by UVA light. The psoralen cross-links DNA under UVA.",
    "Patel Scaly slides 44–45"
-  ],
-  "plaque": [
-   "Plaque",
-   "A raised lesion. In plaque psoriasis: red-violet, at least 0.5 cm across, well demarcated, covered by silver flaking scale.",
-   "Patel Scaly slide 26"
   ],
   "psa": [
    "Psoriatic arthritis (PsA)",
@@ -11981,11 +13254,6 @@ const DZ = {
    "Tumor necrosis factor alpha, an inflammatory cytokine released in psoriasis.",
    "Smith Pathophys slide 21; PCol slide 70"
   ],
-  "biologic": [
-   "Biologic",
-   "An injected specialty medicine (an antibody or fusion protein) that binds one cytokine or receptor.",
-   "Patel Scaly slide 40; Smith PCol slides 63–74"
-  ],
   "malassezia": [
    "Malassezia",
    "A yeast-like fungus that grows in the sebum of the skin; linked to dandruff and seborrheic dermatitis.",
@@ -11995,21 +13263,6 @@ const DZ = {
    "Intertriginous areas",
    "Skin folds, or surfaces of the skin that lie against each other.",
    "Patel Scaly slide 12"
-  ],
-  "pruritus": [
-   "Pruritus",
-   "Itching.",
-   "11/10 lecture"
-  ],
-  "erythema": [
-   "Erythema",
-   "Redness of the skin.",
-   "11/10 lecture"
-  ],
-  "emollient": [
-   "Emollient",
-   "A moisturizer: “we’re talking about lotions and creams”.",
-   "11/10 lecture"
   ],
   "hyperplasia": [
    "Epidermal hyperplasia",
@@ -12026,15 +13279,40 @@ const DZ = {
    "Seborrheic dermatitis of an infant’s scalp: greasy or dry scaling.",
    "Patel Scaly slide 12"
   ],
+  "onycholysis": [
+   "Onycholysis",
+   "Separation of the nail from the nail bed. Dr. Smith lists it with pitting, ridging and discoloration in nail psoriasis.",
+   "Smith Pathophys slide 26; the definition is the plain meaning, not from the slides"
+  ],
+  "pasi": [
+   "PASI",
+   "Psoriasis Area and Severity Index, one of the severity measures on her slide (severe: over 10). Dr. Patel: “I only want you to know the BSA.”",
+   "Patel Scaly slide 31; 11/11 lecture"
+  ],
+  "dlqi": [
+   "DLQI",
+   "Dermatology Life Quality Index, one of the severity measures on her slide (severe: over 10). Dr. Patel: “I only want you to know the BSA.”",
+   "Patel Scaly slide 31; 11/11 lecture"
+  ],
+  "spf": [
+   "SPF (sun protection factor)",
+   "A number that indicates UVB protection only. Dr. Smith: the ratio of the sunlight dose that burns with the sunscreen to the dose that burns without it.",
+   "Patel Sun slide 15; Smith Sun slide 13"
+  ],
+  "cytostatic": [
+   "Cytostatic",
+   "Stops cells from multiplying so much. Dr. Smith on selenium sulfide and zinc pyrithione: they stop keratinocytes from proliferating so much.",
+   "Smith PCol slide 57; 11/03 lecture"
+  ],
+  "uva": [
+   "UVA",
+   "Ultraviolet A, 320–400 nm: the largest contributor of UV to sunlight; it penetrates deeper into the skin and causes skin aging; blocked by broad spectrum sunscreens. Dr. Smith: UVA causes most drug phototoxic reactions.",
+   "Patel Sun slide 7; Smith Sun slide 8"
+  ],
   "urushiol": [
    "Urushiol",
    "The oily liquid in poison ivy, oak and sumac that causes the rash; the active irritant.",
    "Patel Outdoor slide 8"
-  ],
-  "vesicle": [
-   "Vesicle",
-   "A small blister.",
-   "Patel Outdoor slide 10"
   ],
   "astringent": [
    "Astringent",
@@ -12053,8 +13331,8 @@ const DZ = {
   ],
   "methemoglobinemia": [
    "Methemoglobinemia",
-   "The adverse effect her chart lists for the \"caine\" topical anesthetics; a form of hemoglobin that carries oxygen poorly.",
-   "Patel Outdoor slide 12; definition is plain meaning"
+   "A condition in which the blood holds methemoglobin, a form of hemoglobin that carries oxygen poorly. Her slides list it as the adverse effect of the \"caine\" topical anesthetics; with benzocaine that is absorbed systemically: risk of cyanosis, dyspnea, syncope, seizures, coma.",
+   "Patel Outdoor slide 12; Wound slide 14; the first sentence is the plain meaning"
   ],
   "vector": [
    "Disease vector",
@@ -12065,11 +13343,6 @@ const DZ = {
    "Erythema migrans",
    "The acute skin lesion of early localized Lyme disease.",
    "Patel Outdoor slide 29"
-  ],
-  "prophylaxis": [
-   "Prophylaxis",
-   "Treatment given to prevent a disease before it develops.",
-   "plain meaning, not from the slides"
   ],
   "pep": [
    "Postexposure prophylaxis (PEP)",
@@ -12111,25 +13384,15 @@ const DZ = {
    "A snake bite that delivers no venom.",
    "Patel Outdoor slide 54"
   ],
-  "ecchymosis": [
-   "Ecchymosis",
-   "Bruising.",
-   "plain meaning, not from the slides"
-  ],
   "compartment-syndrome": [
    "Compartment syndrome",
    "Pressure that builds inside a swollen limb and cuts off its blood supply; her slide says to call surgery.",
    "Patel Outdoor slide 57; definition is plain meaning"
   ],
-  "necrosis": [
-   "Necrosis",
-   "Death of tissue.",
-   "plain meaning, not from the slides"
-  ],
-  "spf": [
-   "SPF (sun protection factor)",
-   "A number that indicates UVB protection only. Dr. Smith: the ratio of the sunlight dose that burns with the sunscreen to the dose that burns without it.",
-   "Patel Sun slide 15; Smith Sun slide 13"
+  "stari": [
+   "STARI",
+   "Southern tick-associated rash illness, from the Lone Star tick. The Infectious Diseases Society of America (IDSA) makes no antibiotic recommendation for it.",
+   "Patel Outdoor slide 30; the expansion of IDSA is the plain meaning"
   ],
   "broad": [
    "Broad spectrum",
@@ -12171,11 +13434,6 @@ const DZ = {
    "Damage to cells; antiseptics may cause it and so reduce wound healing.",
    "Patel Wound slide 15"
   ],
-  "circumferential": [
-   "Circumferential burn",
-   "A burn that goes all the way around a limb or body part.",
-   "plain meaning, not from the slides"
-  ],
   "hpv": [
    "HPV",
    "Human papillomavirus, the cause of warts.",
@@ -12184,11 +13442,6 @@ const DZ = {
   "autoinoc": [
    "Auto-inoculation",
    "Spread of the virus from one site to another on the same person.",
-   "plain meaning, not from the slides"
-  ],
-  "plantar": [
-   "Plantar",
-   "On the sole of the foot.",
    "plain meaning, not from the slides"
   ],
   "clavus": [
@@ -12200,6 +13453,26 @@ const DZ = {
    "Cryotherapy",
    "Freezing a wart with an OTC device (dimethyl ether and propane, or nitrous oxide).",
    "Patel Warts slides 9, 11"
+  ],
+  "uvb": [
+   "UVB",
+   "Ultraviolet B, 280–320 nm on Dr. Patel's slide: the region most responsible for sunburn; blocked by most sunscreens; the band that SPF measures. Dr. Smith gives 290–320 nm and Dr. Sikazwe 280–315 nm.",
+   "Patel Sun slides 7, 15; Smith Sun slide 8; Sikazwe DPAW pages 63–64"
+  ],
+  "photosens": [
+   "Photosensitizing drug",
+   "A medication associated with increased sun sensitivity. A patient who takes one uses sunscreen and protective clothing every day.",
+   "Patel Sun slides 10, 37"
+  ],
+  "uvindex": [
+   "UV index",
+   "A rating of the amount of UV rays that reach the earth's surface at a given time and place; the higher the index, the greater the exposure.",
+   "Smith Sun slide 7; the term is on Patel Sun slide 12"
+  ],
+  "ochronosis": [
+   "Ochronosis",
+   "Skin discoloration that may be permanent: a serious side effect reported with hydroquinone skin-lightening products.",
+   "Patel Sun slide 48"
   ]
  },
  "tell": [
