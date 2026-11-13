@@ -460,7 +460,7 @@ const SLIDE_UI = (() => {
   }
 
   const CSS = `
-.slk{font:inherit;line-height:inherit;letter-spacing:inherit;color:var(--accent,#2F5FA8);background:none;border:0;border-radius:4px;margin:0;padding:1px 2px;
+.slk{font:inherit;line-height:inherit;letter-spacing:inherit;color:var(--accent,#2F5FA8);background:none;border:0;border-radius:3px;margin:0;padding:0;
   min-height:0;display:inline;text-align:inherit;white-space:normal;cursor:pointer;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:2px;
   -webkit-appearance:none;appearance:none;-webkit-tap-highlight-color:rgba(47,95,168,.18)}
 .slk:hover{background:var(--accent-bg,rgba(47,95,168,.1))}
