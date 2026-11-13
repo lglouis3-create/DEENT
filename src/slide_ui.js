@@ -25,7 +25,9 @@
       b. a bare "slide N", "slides N-M", "p. N" (Dr. Sikazwe's deck only: it is
          the one cited by page), or a number in a column headed Slide: it
          takes the deck its place declares (2), or the deck named earlier in
-         the same sentence when the place declares none. A professor's name
+         the same sentence when the place declares none, or when the number
+         is past the end of the place's deck and that deck has it ("PCol slide
+         44: ...; slide 45: ..." in a place of the Sun deck). A professor's name
          before it ("Dr. Patel's slide 45") or in brackets right after it
          ("slide 12 (Dr. Patel)") must be that deck's professor. "printed
          slides 24-33" (Dr. Sikazwe's deck) are the numbers printed on the
@@ -33,7 +35,10 @@
       c. anything else stays text: transcript lines (T 573-577, T@12345),
          recording times, dates, chart, syllabus and textbook pages (also "the
          drug chart ... on its p.5": the chart is named earlier in the
-         sentence and no deck after it), a number outside the deck.
+         sentence and no deck after it, with a number or without: "the chart
+         agrees with DPAW; see p. 5" is his page), a number outside the deck.
+         A later item of a list is left whole when a unit follows it ("slides
+         3, 9-11 days": 3 alone is linked, never "9").
       A number ends a citation before a colon ("Slide 12: ...", "Slides
       24-26: ...") unless a digit follows the colon (a time 12:30, a ratio).
       The text of a line is joined from its text nodes with nothing between
@@ -90,7 +95,8 @@ const SLIDE_UI = (() => {
     const RNG = NUM + '(?:\\s?' + DASH + '\\s?' + NUM + ')?';
     // a later number of a list is not one when a unit or a count follows it ("slide 12, 3 times daily")
     const UNIT = '(?:%|mg|mcg|g|mL|ml|kg|cm|mm|nm|hours?|hrs?|h|days?|weeks?|wks?|months?|years?|yrs?|minutes?|min|times|\\xd7|x|FTU|fingertip|others?|of|to|or more|more|grams?|drops?|doses?|tubes?|patients?|questions?|points?|marks?|items?|applications?|tablets?|capsules?|units?|puffs?|sprays?)';
-    const LIST = RNG + '(?:(?:,\\s?|,?\\s(?:and|or|&)\\s)' + RNG + '(?!\\s?' + UNIT + '\\b))*';
+    // (nor is the first number of a range whose last number has one: "slides 3, 9–11 days" stops after 3, it never links "9" alone)
+    const LIST = RNG + '(?:(?:,\\s?|,?\\s(?:and|or|&)\\s)' + RNG + '(?!\\s?' + UNIT + '\\b|\\s?' + DASH + '\\s?\\d))*';
     const WORD = '(?:[Ss]lides?|SLIDES?|pp?\\.|[Pp]ages?)';
     const RE_FILE = new RegExp('(' + alt(Object.keys(FILE)) + ')(?:\\)?[,:;]?' + SP + '+(?:(' + WORD + ')' + SP + '*)?(' + LIST + '))?', 'g');
     const RE_NAME = new RegExp('(' + alt(Object.keys(NAME)) + ')(?:' + SP + '+deck)?(?:' + SP + '+|' + SP + '*\\(' + SP + '*)(?:(' + WORD + ')' + SP + '*)?(' + LIST + ')', 'g');
@@ -106,6 +112,7 @@ const SLIDE_UI = (() => {
     const NOT_DECK = /(?:\b[Cc]hart|\b[Ss]yllabus|\b[Rr]eading|\b[Hh]andout|\b[Tt]extbook|\b[Bb]ook|\b[Aa]ssignment|\b(?:Foye|Katzung|Golan|DiPiro|Goodman|Endotext|Bikle)\b[^;]*|Chapt?\.\s?\d+,?|\bJ Med Chem[^;]*)[\s\xa0,(]*$/;
     // the same sources named anywhere earlier in the sentence ("The drug chart lists ... on its p.5")
     const NOT_DECK_WORD = /\b(?:[Cc]harts?|[Ss]yllabus|[Rr]eadings?|[Hh]andouts?|[Tt]extbooks?|[Bb]ooks?|[Aa]ssignments?|Foye|Katzung|Golan|DiPiro|Goodman|Endotext|Bikle|J Med Chem)\b/g;
+    const RE_DECKNAME = new RegExp('(?:^|[^A-Za-z0-9’\'-])(?:' + alt(Object.keys(NAME).filter(k => NAME[k].bare)) + ')(?![A-Za-z0-9’\'-])');   // "DPAW", "PCol" without a number
     const PRINTED = /\bprinted[\s\xa0(]*$/;
     const SENT = /[.!?]["'”’)\]]?\s+(?=[A-Z(“])/g;
     const ABBR = /(?:\b(?:Dr|vs|Chapt?|No|Fig|al)|\be\.g|\bi\.e)$/;      // a period after one of these does not end a sentence
@@ -219,7 +226,8 @@ const SLIDE_UI = (() => {
         const seg = text.slice(from, at);
         NOT_DECK_WORD.lastIndex = 0;
         while ((x = NOT_DECK_WORD.exec(seg))) last = from + x.index;
-        return last >= 0 && !files.some(i => i > last && i < at) && !kept.some(k => k.pri <= 1 && k.s > last && k.s < at);
+        // a deck named after it, with a number or without ("the chart agrees with DPAW; see p. 5"), takes the page back
+        return last >= 0 && !files.some(i => i > last && i < at) && !kept.some(k => k.pri <= 1 && k.s > last && k.s < at) && !RE_DECKNAME.test(text.slice(last, at));
       };
       kept.forEach(c => {
         const raw = text.slice(c.s, c.e), before = text.slice(Math.max(0, c.s - 60), c.s);
@@ -248,6 +256,12 @@ const SLIDE_UI = (() => {
             const carry = last && sentenceStart(text, c.s) <= last.s && fits(last.deck) ? last.deck : null;
             // the place decides; the deck named earlier in the sentence only where the place does not
             deck = place || (carry && (!here.length || here.indexOf(carry) >= 0) ? carry : null);
+            // "PCol slide 44: …; slide 45: …" in a place of the Sun deck (26 slides): a number past the end of the
+            // place's deck is a number of the deck named earlier in the same sentence, when that deck has every one
+            if (deck && deck === place && carry && carry !== deck && !printed && !c.page) {
+              const its = items(c.list, c.ls), has = d => its.every(it => it.a >= 1 && Math.max(it.a, it.b) <= D[d].cited && resolve(d, it.a));
+              if (its.length && its.every(it => Math.min(it.a, it.b) > D[deck].cited) && has(carry)) deck = carry;
+            }
             if (!deck && !why && adjacent && decksOfProf(prof).length === 1) deck = decksOfProf(prof)[0];   // "Dr. Sikazwe's slide 62": he has one deck
             if (!deck && !why) why = !ctxDecks.length ? 'a bare number where no deck is declared'
               : here.length > 1 ? 'a bare number where more than one deck is declared (' + here.join(', ') + ')'
@@ -631,17 +645,35 @@ dialog.slv::backdrop{background:rgba(0,0,0,.55)}
   const soon = () => { if (!timer) timer = setTimeout(run, 80); };
   try {
     main = document.querySelector('main');
-    const style = document.createElement('style'); style.textContent = CSS; document.head.appendChild(style);
+    // under a structure of an explanation the core draws every span of the caption as a block of small dim text
+    // (".cmpcell figcaption span"); a citation there stays in its line and looks like the other slide links
+    const STRIP_CSS = '.cmpcell figcaption span.slk{display:inline;margin:0;font-size:inherit;color:var(--accent,#2F5FA8)}\n@media print{.cmpcell figcaption span.slk{color:inherit}}\n';
+    const style = document.createElement('style'); style.textContent = CSS + STRIP_CSS; document.head.appendChild(style);
+    let heldKey = null;                                           // the key whose press opened the viewer, until it is let go
     // first in line: a slide link does nothing but open its slide
     const act = e => {
       const b = e.target && e.target.closest ? e.target.closest('.slk') : null;
       if (!b || (e.type === 'keydown' && e.key !== 'Enter' && e.key !== ' ')) return;
       e.preventDefault(); e.stopPropagation();
       if (e.type === 'keydown' && e.repeat) return;               // a key held down opens the slide once
-      try { open(b.getAttribute('data-deck'), +b.getAttribute('data-n'), +b.getAttribute('data-to') || 0, b.hasAttribute('data-printed'), b); }
+      // a range of printed slide numbers ("printed slides 24–33") opens without the viewer's "Cited: pages N–M" line:
+      // that line counts by the pages of the file, which from printed slide 22 on run one higher
+      const printed = b.hasAttribute('data-printed');
+      try { if (open(b.getAttribute('data-deck'), +b.getAttribute('data-n'), printed ? 0 : +b.getAttribute('data-to') || 0, printed, b) && e.type === 'keydown') heldKey = e.key; }
       catch (err) { console.error('The slide could not be opened.', err); }
     };
+    // the key press that opened the viewer is over when the key is let go: until then its repeats (Enter held down)
+    // and its release (Space) do not press Close, on which the focus now stands
+    const heldGuard = e => {
+      if (heldKey === null || e.key !== heldKey) { if (e.type === 'keydown' && !e.repeat) heldKey = null; return; }
+      const inViewer = !!V.dlg && !!e.target && V.dlg.contains(e.target);
+      if (e.type === 'keyup') { heldKey = null; if (inViewer) e.preventDefault(); }
+      else if (e.repeat) { if (inViewer) e.preventDefault(); }
+      else heldKey = null;                                        // a new press of the same key
+    };
     document.addEventListener('click', act, true);
+    document.addEventListener('keydown', heldGuard, true);      // before act: a new press ends the one that opened the viewer
+    document.addEventListener('keyup', heldGuard, true);
     document.addEventListener('keydown', act, true);            // Enter and Space, as on a button
     // a change inside a control, or the tick of the practice-exam clock, is never a citation (SKIP): it starts no pass
     mo = new MutationObserver(recs => {
