@@ -446,10 +446,11 @@ const EXAMFOLD_UI = (function examFoldUi(){
   let PRINT = null;
   if (typeof window !== 'undefined' && window.addEventListener) {
     window.addEventListener('beforeprint', () => {
-      try { PRINT = {y: window.scrollY, shut: [...document.querySelectorAll('details.rfold:not([open])')]}; PRINT.shut.forEach(f => setOpen(f, true, false)); } catch (e) {}
+      // the folders the reader closed by their headers are noted first: opening for the print is not the reader opening them
+      try { PRINT = {y: window.scrollY, marks: Object.assign({}, SHUT), shut: [...document.querySelectorAll('details.rfold:not([open])')]}; PRINT.shut.forEach(f => setOpen(f, true, false)); } catch (e) {}
     });
     window.addEventListener('afterprint', () => {
-      try { const p = PRINT; PRINT = null; if (!p) return; p.shut.forEach(f => { if (f.isConnected) setOpen(f, false, false); }); window.scrollTo(0, p.y); } catch (e) {}
+      try { const p = PRINT; PRINT = null; if (!p) return; p.shut.forEach(f => { if (f.isConnected) { setOpen(f, false, false); if (p.marks && p.marks[shutKey(f)]) SHUT[shutKey(f)] = true; } }); window.scrollTo(0, p.y); } catch (e) {}
     });
   }
 

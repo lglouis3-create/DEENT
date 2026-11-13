@@ -755,6 +755,13 @@ async function nsOf(browser) {
     s = await walk();
     check(await st(p, 'guide') === '1:false 2:true' && !s.playing && s.panel && !s.seen && (await mine() || {})['1'] === false,
       `${w}x${h}: Guides drawn again keeps the folder the reader closed, the walkthrough still paused inside it`, {s, st: await st(p, 'guide'), stored: await mine()});
+    // printing opens every folder for the print and closes this one again: it is still the folder the reader closed
+    const pr = await p.evaluate(async () => { const g = () => [...document.querySelectorAll('#v-guide > .rfold')].map(f => f.dataset.exam + ':' + f.open).join(' ');
+      const a = g(); window.dispatchEvent(new Event('beforeprint')); const b = g(); await new Promise(r => setTimeout(r, 60)); window.dispatchEvent(new Event('afterprint')); await new Promise(r => setTimeout(r, 60)); return [a, b, g()]; });
+    await strip('ref'); await strip('guide');
+    s = await walk();
+    check(pr.join('|') === '1:false 2:true|1:true 2:true|1:false 2:true' && await st(p, 'guide') === '1:false 2:true' && !s.playing && s.panel && !s.seen && (await mine() || {})['1'] === false,
+      `${w}x${h}: after a print (every folder open for it, then as before), Guides drawn again still keeps the folder the reader closed`, {pr, s, st: await st(p, 'guide'), stored: await mine()});
     // the walkthrough index goes to it: the folder opens for the visit, the stored choice stays
     await p.evaluate(() => window.scrollTo(0, 0));
     await p.click('#wkindex > summary');
