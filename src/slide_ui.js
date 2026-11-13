@@ -66,7 +66,7 @@ const SLIDE_UI = (() => {
     const NUM = '\\d{1,3}(?![\\d/%@]|:\\d|\\.\\d)';
     const RNG = NUM + '(?:\\s?' + DASH + '\\s?' + NUM + ')?';
     // a later number of a list is not one when a unit or a count follows it ("slide 12, 3 times daily")
-    const UNIT = '(?:%|mg|mcg|g|mL|ml|kg|cm|mm|nm|hours?|hrs?|h|days?|weeks?|wks?|months?|years?|yrs?|minutes?|min|times|\\xd7|x|FTU|fingertip|others?|of|to|or more|more|grams?|drops?|doses?|tubes?|patients?|questions?|points?|marks?|items?)';
+    const UNIT = '(?:%|mg|mcg|g|mL|ml|kg|cm|mm|nm|hours?|hrs?|h|days?|weeks?|wks?|months?|years?|yrs?|minutes?|min|times|\\xd7|x|FTU|fingertip|others?|of|to|or more|more|grams?|drops?|doses?|tubes?|patients?|questions?|points?|marks?|items?|applications?|tablets?|capsules?|units?|puffs?|sprays?)';
     const LIST = RNG + '(?:(?:,\\s?|,?\\s(?:and|or|&)\\s)' + RNG + '(?!\\s?' + UNIT + '\\b))*';
     const WORD = '(?:[Ss]lides?|SLIDES?|pp?\\.|[Pp]ages?)';
     const RE_FILE = new RegExp('(' + alt(Object.keys(FILE)) + ')(?:\\)?[,:;]?' + SP + '+(?:(' + WORD + ')' + SP + '*)?(' + LIST + '))?', 'g');
@@ -81,8 +81,11 @@ const SLIDE_UI = (() => {
     const PROF_AFTER = /^[\s\xa0]*\((?:Dr\.\s*)?(Smith|Patel|Sikazwe)\)/;
     // before "p. N" / "page N": a page of something that is not a slide deck
     const NOT_DECK = /(?:\b[Cc]hart|\b[Ss]yllabus|\b[Rr]eading|\b[Hh]andout|\b[Tt]extbook|\b[Bb]ook|\b[Aa]ssignment|\b(?:Foye|Katzung|Golan|DiPiro|Goodman|Endotext|Bikle)\b[^;]*|Chapt?\.\s?\d+,?|\bJ Med Chem[^;]*)[\s\xa0,(]*$/;
+    // the same sources named anywhere earlier in the sentence ("The drug chart lists ... on its p.5")
+    const NOT_DECK_WORD = /\b(?:[Cc]harts?|[Ss]yllabus|[Rr]eadings?|[Hh]andouts?|[Tt]extbooks?|[Bb]ooks?|[Aa]ssignments?|Foye|Katzung|Golan|DiPiro|Goodman|Endotext|Bikle|J Med Chem)\b/g;
     const PRINTED = /\bprinted[\s\xa0(]*$/;
     const SENT = /[.!?]["'”’)\]]?\s+(?=[A-Z(“])/g;
+    const ABBR = /(?:\b(?:Dr|vs|Chapt?|No|Fig|al)|\be\.g|\bi\.e)$/;      // a period after one of these does not end a sentence
     const isWordCh = c => !!c && /[A-Za-z0-9’'-]/.test(c);
     const SUN = {Smith: 'sun', Patel: 'p8s'};
     const decksOfProf = p => IDS.filter(id => D[id].prof === p);
@@ -136,41 +139,47 @@ const SLIDE_UI = (() => {
             sun     'sun' | 'p8s': the deck "Sun" means here
             column  true: the text is a cell of a column headed Slide or Page
             chart   true: "p. N" here is a page of the drug chart (the Drug list)
-       links:   [{s, e, deck, n, to, printed, form}]: text[s..e) becomes a button that opens cited
-                number n of `deck` (the citation runs to `to`)
+            breaks  [offset, ...]: where a new element's text starts in a text joined from several
+                    elements ("…of the skin" + "PP 4–6" in a guide bar); such a start is a word start
+       links:   [{s, e, alt, deck, n, to, printed, form}]: text[s..e) becomes a button that opens cited
+                number n of `deck` (the citation runs to `to`); alt: where its slide word or its
+                number starts, after a deck name
        refused: [{s, e, raw, why}]: a citation left as text, with the reason
        decks:   the decks the line names itself, in order */
     function scan(text, ctx){
       ctx = ctx || {};
-      const cand = [], links = [], refused = [], named = [], ctxDecks = ctx.decks || [];
+      const cand = [], links = [], refused = [], named = [], ctxDecks = ctx.decks || [], files = [];
+      const brk = ctx.breaks || [], cut = i => brk.indexOf(i) >= 0;      // a new element's text starts here: a word start
       let m;
       RE_FILE.lastIndex = 0;
       while ((m = RE_FILE.exec(text))) {
         const deck = FILE[m[1]];
         if (named.indexOf(deck) < 0) named.push(deck);
+        files.push(m.index);
         if (m[3] !== undefined) {
           const ls = m.index + m[0].length - m[3].length, ws = m[2] ? text.lastIndexOf(m[2], ls) : ls;
-          cand.push({pri: 0, s: m.index, e: m.index + m[0].length, from: ws, ls, list: m[3], deck, form: 'file name'});
+          cand.push({pri: 0, s: m.index, e: m.index + m[0].length, from: ws, alt: ws, ls, list: m[3], deck, form: 'file name'});
         }
       }
       RE_NAME.lastIndex = 0;
       while ((m = RE_NAME.exec(text))) {
-        if (isWordCh(text[m.index - 1])) continue;
+        if (isWordCh(text[m.index - 1]) && !cut(m.index)) continue;
         const nm = NAME[m[1].replace(/’/g, "'")]; if (!nm) continue;
         const e = m.index + m[0].length, ls = e - m[3].length;
         if (!m[2] && !nm.bare) continue;                                  // "Wound 12" is not a citation; "Wound Care slide 12" is
         if (!m[2] && AFTER_UNIT.test(text.slice(items(m[3], ls)[0].e))) continue;   // "SD 4 weeks"
-        cand.push({pri: 1, s: m.index, e, from: m.index, ls, list: m[3], deck: nm.deck, form: m[2] ? 'deck name + ' + (/^p/i.test(m[2]) ? 'page' : 'slide') : 'deck name + number'});
+        if (!m[2] && /[A-Za-z]/.test(text[e] || '') && !cut(e)) continue;   // "PP 2B" is a name of something else
+        cand.push({pri: 1, s: m.index, e, from: m.index, alt: m[2] ? text.lastIndexOf(m[2], ls) : ls, ls, list: m[3], deck: nm.deck, form: m[2] ? 'deck name + ' + (/^p/i.test(m[2]) ? 'page' : 'slide') : 'deck name + number'});
       }
       RE_BARE.lastIndex = 0;
       while ((m = RE_BARE.exec(text))) {
-        if (/[A-Za-z]/.test(text[m.index - 1] || '')) continue;           // "app. 3"
+        if (/[A-Za-z]/.test(text[m.index - 1] || '') && !cut(m.index)) continue;   // "app. 3"
         const e = m.index + m[0].length, page = /^p/i.test(m[1]);
-        cand.push({pri: 2, s: m.index, e, from: m.index, ls: e - m[2].length, list: m[2], deck: null, page, form: page ? 'bare page' : 'bare slide'});
+        cand.push({pri: 2, s: m.index, e, from: m.index, alt: m.index, ls: e - m[2].length, list: m[2], deck: null, page, form: page ? 'bare page' : 'bare slide'});
       }
       if (ctx.column && (m = RE_COL.exec(text))) {
         const ls = m[0].length - m[1].length;
-        cand.push({pri: 3, s: ls, e: m[0].length, from: ls, ls, list: m[1], deck: null, form: 'Slide column'});
+        cand.push({pri: 3, s: ls, e: m[0].length, from: ls, alt: ls, ls, list: m[1], deck: null, form: 'Slide column'});
       }
       // a deck-naming citation wins over a bare one it overlaps ("PCol slide 12" holds a bare "slide 12")
       cand.sort((a, b) => a.pri - b.pri || a.s - b.s);
@@ -178,6 +187,17 @@ const SLIDE_UI = (() => {
       cand.forEach(c => { if (!kept.some(k => c.s < k.e && k.s < c.e)) kept.push(c); });
       kept.sort((a, b) => a.s - b.s);
       const explicit = [];
+      /* "The drug chart lists a different class on its p.5": a chart, the syllabus, a reading or a
+         textbook is named earlier in the sentence and no deck is named after it, so the page is its page */
+      const otherSource = at => {
+        let from = 0, last = -1, x;
+        SENT.lastIndex = 0;
+        while ((x = SENT.exec(text)) && x.index + x[0].length <= at) if (!ABBR.test(text.slice(0, x.index))) from = x.index + x[0].length;
+        const seg = text.slice(from, at);
+        NOT_DECK_WORD.lastIndex = 0;
+        while ((x = NOT_DECK_WORD.exec(seg))) last = from + x.index;
+        return last >= 0 && !files.some(i => i > last && i < at) && !kept.some(k => k.pri <= 1 && k.s > last && k.s < at);
+      };
       kept.forEach(c => {
         const raw = text.slice(c.s, c.e), before = text.slice(Math.max(0, c.s - 60), c.s);
         let deck = c.deck, printed = false, why = '';
@@ -186,12 +206,14 @@ const SLIDE_UI = (() => {
           if (!deck) why = 'two decks are called Sun (Dr. Smith, Dr. Patel) and nothing here says which';
         } else if (deck === null) {
           printed = PRINTED.test(before);
-          if (c.page && !printed && (ctx.chart || NOT_DECK.test(before))) why = 'a page of the chart, the syllabus, a reading or a textbook, not of a slide deck';
+          // a professor named right before it, or "his" / "her" after one professor was named, or a
+          // professor in brackets right after it ("slide 12 (Dr. Patel)")
+          let prof = (PROF_TAIL.exec(before) || [])[1] || null;
+          if (!prof && PRONOUN_TAIL.test(before)) { const ps = profsIn(text.slice(0, c.s)); prof = ps.length ? ps[ps.length - 1] : null; }
+          if (!prof) prof = (PROF_AFTER.exec(text.slice(c.e)) || [])[1] || null;
+          const adjacent = !!prof;
+          if (c.page && !printed && (ctx.chart || NOT_DECK.test(before) || (!adjacent && otherSource(c.s)))) why = 'a page of the chart, the syllabus, a reading or a textbook, not of a slide deck';
           else {
-            // a professor named right before it, or "his" / "her" after one professor was named
-            let prof = (PROF_TAIL.exec(before) || [])[1] || null;
-            if (!prof && PRONOUN_TAIL.test(before)) { const ps = profsIn(text.slice(0, c.s)); prof = ps.length ? ps[ps.length - 1] : null; }
-            const adjacent = !!prof;
             // where the place declares several decks: the one professor named in this sentence, else the block's own
             if (!prof && ctxDecks.length > 1) {
               const ps = profsIn(text.slice(sentenceStart(text, c.s), c.s)).filter((p, i, all) => all.indexOf(p) === i);
@@ -220,7 +242,7 @@ const SLIDE_UI = (() => {
           const top = printed ? D[deck].pages : D[deck].cited;
           const out = it.a < 1 || Math.max(it.a, it.b) > top;
           if (!n || out) { refused.push({s: it.s, e: it.e, raw: text.slice(it.s, it.e), deck, outside: out, why: out ? 'outside the deck (' + D[deck].label + ' has ' + top + ')' : 'no clean page for this number'}); return; }
-          links.push({s: i === 0 ? c.from : it.s, e: it.e, deck, n, to: it.b > it.a ? it.b : 0, printed, form: c.form});
+          links.push({s: i === 0 ? c.from : it.s, e: it.e, alt: i === 0 ? c.alt : it.s, deck, n, to: it.b > it.a ? it.b : 0, printed, form: c.form});
         });
       });
       return {links, refused, decks: named};
