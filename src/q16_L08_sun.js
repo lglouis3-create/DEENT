@@ -410,7 +410,7 @@ QUESTIONS.push(
   {t:'Wait until 80 minutes have passed', correct:false, why:'40–80 minutes is the interval between reapplications (slide 21); towel drying calls for reapplying.'},
   {t:'Reapply once the skin starts to redden', correct:false, why:'Sunburn symptoms start about 4 hours after exposure (slide 24), too late to guide reapplication.'},
   {t:'Skip it; the product is water resistant', correct:false, why:'Slide 36: reapply more often if swimming or sweating.'}],
- teach:'After moisture or towel drying, and at least every 40–80 minutes as labelled (slides 21, 36).',
+ teach:'After moisture or towel drying, and at least every 40–80 minutes as labeled (slides 21, 36).',
  cite:P8SQ+' slides 21, 24, 36; T@57714 11/12'},
 
 {id:'P8S-030', skill:'counsel', prof:'Patel', tier:'new', topic:'p8s-prot', sub:'apply', concept:'p8s-reapply-interval',
@@ -418,7 +418,7 @@ QUESTIONS.push(
  stem:'In Dr. Patel’s therapeutics lecture, how often is sunscreen reapplied?',
  options:[
   {t:'Every 15 minutes', correct:false, why:'15 minutes is the lead time before exposure (slide 21).'},
-  {t:'Every 40–80 minutes', correct:true, why:'Slide 21: "Reapply every 40-80 min increments"; slide 36: "at least every 40 - 80 minutes (as labelled)" (T@57714 11/12). "How frequent are we applying it?" (T@66751 11/12).'},
+  {t:'Every 40–80 minutes', correct:true, why:'Slide 21: "Reapply every 40-80 min increments"; slide 36: "at least every 40 - 80 minutes (as labeled)" (T@57714 11/12). "How frequent are we applying it?" (T@66751 11/12).'},
   {t:'Every 4 hours', correct:false, why:'4 hours is when sunburn symptoms start (slide 24).'},
   {t:'Every 24 hours', correct:false, why:'24 hours is the erythema peak (slide 24).'}],
  teach:'More often if swimming, sweating or using a non-water-resistant product (slide 36).',

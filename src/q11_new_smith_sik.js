@@ -270,7 +270,7 @@ QUESTIONS.push(
   {t:'It binds DNA to speed epidermal turnover', correct:false, why:'DNA is right, but the direction is reversed: cytotoxic agents act by "decreasing the rate of epidermal cell turnover" (slide 53).'},
   {t:'Its phenolic constituents block keratinocyte division', correct:false, why:'Phenolics are its named constituents, but they are antipruritic (slide 53; 11/03 T 139–145).'},
   {t:'It crosslinks DNA to slow cell division', correct:true, why:'Slide 53: coal tar "Cross links with DNA to inhibit cell division for antimitotic action but mechanism not fully known" (T 129–139).'},
-  {t:'It acts on keratinocyte mitochondria to cut mitosis', correct:false, why:'An antiproliferative action of a neighbouring cytotoxic agent: that is anthralin (slide 55).'}],
+  {t:'It acts on keratinocyte mitochondria to cut mitosis', correct:false, why:'An antiproliferative action of a neighboring cytotoxic agent: that is anthralin (slide 55).'}],
  teach:'The antipsoriatic cytotoxic agents decrease the rate of epidermal cell turnover. Coal tar crosslinks DNA to inhibit cell division (mechanism not fully known); its phenolic constituents are antipruritic (slide 53).',
  cite:XQ_PC3+' slides 53, 55; T 129–145'},
 

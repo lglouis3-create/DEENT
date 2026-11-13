@@ -27,7 +27,7 @@
                           {t, by: 'remark'} is a remark about the sources
                           (shown as "Note", with no source chip).
      chartClass, chartUse the chart's pharmacological class and indication,
-                          shown labelled "chart". chartUse is null where the
+                          shown labeled "chart". chartUse is null where the
                           chart's columns are misaligned (p. 5, see CHART_NOTES).
    Abbreviations in cites: PCol = Skin-PCol-Students-2026.pdf slide,
    Pathophys = Skin-Pathophys-Students-2026.pdf slide, Sun =
@@ -567,7 +567,7 @@ const DRUGLIST = (() => {
      A drug-field pair with no clean answer (sunscreens' "target", a mechanism
      the slide calls unknown) or fewer than three safe distractors gets no
      question. Mechanism lines are fragments of the target sentence on the
-     Reference table, so they are practised in Recall, not as options. */
+     Reference table, so they are practiced in Recall, not as options. */
   const norm = t => String(t).toLowerCase().replace(/α/g, 'alpha').replace(/[^a-z0-9]+/g, ' ').trim();
   const FAMILY = [[/calcineurin|fkbp|cyclophilin/, 'calcineurin'], [/dihydrofolate|dhfr/, 'dhfr'], [/\bjak|janus/, 'jak'],
     [/il 17/, 'il17'], [/retino|\brar\b|\brxr\b|vitamin d|\bvdr\b/, 'nuclear'], [/tnf/, 'tnf'], [/pde 4|phosphodiesterase/, 'pde4'],

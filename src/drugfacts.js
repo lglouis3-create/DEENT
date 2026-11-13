@@ -23,7 +23,7 @@
 
    status(): the plan's status words (DEENT Drug List plan §4.1), computed
    from the profile's saved bank answers ({qid, result, conf, at}):
-     Not practised        no answer to any of the fact's questions
+     Not practiced        no answer to any of the fact's questions
      Forgot               the last answer was wrong
      Right, but unsure    the last answer was right with "Not sure" (conf
                           'shaky') or "I guessed" (result 'guessed')
@@ -130,7 +130,7 @@ const DRUGFACTS = (() => {
     const day = dayKey || dayOf, set = new Set(qids);
     const at = (answers || []).filter(a => a && set.has(a.qid)).slice().sort((a, b) => a.at - b.at);
     const n = at.length, right = at.filter(a => a.result === 'correct' || a.result === 'guessed').length;
-    if (!n) return {label: 'Not practised', n, right, weak: false, last: null};
+    if (!n) return {label: 'Not practiced', n, right, weak: false, last: null};
     const last = at[n - 1], base = {n, right, last: last.at};
     if (last.result === 'wrong') return Object.assign(base, {label: 'Forgot', weak: true});
     if (!solid(last)) return Object.assign(base, {label: 'Right, but unsure', weak: true});

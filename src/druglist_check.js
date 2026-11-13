@@ -597,8 +597,8 @@ console.log('=== Fact map (drugfacts.js) and status words ===');
     // status words (plan §4.1)
     const day = 86400000, t0 = Date.UTC(2026, 10, 2, 15), A = (qid, result, at, conf) => Object.assign({qid, result, at}, conf ? {conf} : {});
     const S = (ans, q) => DF.status(ans, q || ['Q1']).label;
-    check(S([]) === 'Not practised' && DF.status([], ['Q1']).weak === false, 'untested: "Not practised", never weak');
-    check(S([A('Q2', 'wrong', t0)]) === 'Not practised', 'answers to other questions do not count');
+    check(S([]) === 'Not practiced' && DF.status([], ['Q1']).weak === false, 'untested: "Not practiced", never weak');
+    check(S([A('Q2', 'wrong', t0)]) === 'Not practiced', 'answers to other questions do not count');
     check(S([A('Q1', 'correct', t0)]) === 'Remembered', 'one right answer: Remembered');
     check(S([A('Q1', 'correct', t0), A('Q1', 'correct', t0 + 3600000)]) === 'Remembered', 'two right answers the same day: Remembered, never Kept');
     check(S([A('Q1', 'correct', t0), A('Q1', 'correct', t0 + day)]) === 'Kept on a later day', 'right again on a later day: Kept on a later day');

@@ -258,3 +258,7 @@ Her format (11/06): "poll everywhere will always be utilized in my lectures. Thi
 - Newborn and infant ages for diaper changes: "I'm not gonna test you on this" (T@71019).
 - SCORAD calculation: "we do not need to calculate the score at scale score. That is on the physician to do so" (T@21052).
 - Her graded Atopic Dermatitis Patient Case (Canvas, due 11/10) is not used for questions.
+
+
+## Spelling (Louis, 2026-11-13: "It should say practice, this is America")
+American spelling in everything a student reads: practice (noun and verb), recognize, color, labeled, center, signaling, favor, hydrolyze, behavior, aging. A professor's own slide wording is quoted as written (Dr. Patel's slides print "grey"). `python3 us_spelling.py .` lists what would change; `--write` applies it to the text fields of the question files, the Diseases part files and the prose files, never to ids, concept names or code. After it changes narrated text, `node narration_hash.js --check` lists the clips whose text hash moved; the spoken words are the same, so the manifest hash is updated and nothing is re-recorded.

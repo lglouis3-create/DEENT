@@ -146,7 +146,7 @@ QUESTIONS.push(
  quote:'PollEv 11/10 (Case 2): "Which of the following is the most appropriate next line therapy for this patient?"',
  stem:'Same patient (16-year-old girl, severe acne after 8 months of oral doxycycline, a topical retinoid and benzoyl peroxide; irregular periods; not sexually active). Which of the following is the most appropriate next line therapy for this patient?',
  options:[
-  {t:'Spironolactone', correct:false, why:'Spironolactone is on the same severe second line (slide 40), but her irregular periods favour the COC: "Irregular periods ... that could be a reason to why COC over spironolactone" (T@69094–69647 11/10).'},
+  {t:'Spironolactone', correct:false, why:'Spironolactone is on the same severe second line (slide 40), but her irregular periods favor the COC: "Irregular periods ... that could be a reason to why COC over spironolactone" (T@69094–69647 11/10).'},
   {t:'Increase facial cleansing', correct:false, why:'Slide 19: avoid excessive cleansing; it does not treat severe acne.'},
   {t:'Oral corticosteroids', correct:false, why:'Corticosteroids are on her list of drugs that cause acne (slide 10).'},
   {t:'Oral combined contraceptives', correct:true, why:'Slide 40, severe second line: "Add Combined Oral contraceptive or oral spironolactone (females only)"; slide 34: COCs "might be beneficial for irregular menses" (T@69647 11/10).'}],
@@ -897,7 +897,7 @@ QUESTIONS.push(
   {t:'A change in the oral antibiotic', correct:false, why:'On the severe second line (slide 40), with no age limit on her slides; she is over 12 for tetracyclines (slide 33).'},
   {t:'Oral spironolactone', correct:false, why:'On the severe second line for females (slide 40); no age limit is given for it.'},
   {t:'Oral isotretinoin', correct:false, why:'"Consider oral isotretinoin" is on the severe second line (slide 40); no age limit excludes her.'}],
- teach:'Irregular periods favour a COC (Case 2), but only after age 14 or 2 years past menarche.',
+ teach:'Irregular periods favor a COC (Case 2), but only after age 14 or 2 years past menarche.',
  cite:P6Q+' slides 33–34, 40; T@41984, T@45949 11/10'},
 
 {id:'P6H-005', skill:'case', prof:'Patel', tier:'new', topic:'p6-alg', sub:'sev', concept:'p6h-smoker-spiro',

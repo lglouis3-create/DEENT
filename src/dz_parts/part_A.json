@@ -75,7 +75,8 @@
           "Personal: stress; excessive skin washing and sanitizing"
          ]
         ]
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "prof",
@@ -91,7 +92,7 @@
         ],
         [
          "Where",
-         "Lower in rural areas (hygiene hypothesis)"
+         "Lower in rural areas ([[hygiene|hygiene hypothesis]])"
         ],
         [
          "Family",
@@ -163,6 +164,7 @@
       },
       {
        "k": "map",
+       "p": "sm",
        "title": "Which drug acts on which target",
        "rows": [
         [
@@ -171,7 +173,7 @@
         ],
         [
          "Calcineurin",
-         "Pimecrolimus; tacrolimus (binds FKBP first)"
+         "Pimecrolimus; tacrolimus (binds [[fkbp|FKBP]] first)"
         ],
         [
          "[[pde4|PDE-4]]",
@@ -182,20 +184,27 @@
          "Dupilumab"
         ],
         [
+         "[[jak|JAK]]",
+         "Ruxolitinib (JAK1 and JAK2), upadacitinib"
+        ]
+       ],
+       "src": "Smith PCol slides 5–7, 10, 24–27, 32–33, 64, 76"
+      },
+      {
+       "k": "map",
+       "p": "pa",
+       "title": "On Dr. Patel's slides only",
+       "rows": [
+        [
          "IL-13 cytokine",
          "Tralokinumab (Dr. Patel's slide 45; not on Dr. Smith's slides)"
         ],
         [
          "JAK",
-         "Ruxolitinib (JAK1 and JAK2), upadacitinib, abrocitinib"
+         "Abrocitinib (Dr. Patel's slide 46; not on Dr. Smith's slides)"
         ]
        ],
-       "src": "Smith PCol slides 5–7, 10, 24–27, 32–33, 64, 76; Patel Dermatitis slides 45–46"
-      },
-      {
-       "k": "fig",
-       "label": "Watch how it works: calcineurin inhibitors",
-       "jump": "guide:fig-cni-nfat"
+       "src": "Patel Dermatitis slides 45–46"
       },
       {
        "k": "facts",
@@ -208,7 +217,7 @@
          "So treatment aims to",
          [
           "Not strip the weak epidermis: gentle cleansers, limited bathing time",
-          "Rebuild it: thick emollients, hydration",
+          "Rebuild it: thick [[emollient|emollients]], hydration",
           "Reduce inflammation: topical medications"
          ]
         ],
@@ -221,7 +230,8 @@
           "No oral antibiotics, and no topical antibiotics over large areas"
          ]
         ]
-       ]
+       ],
+       "p": "pa"
       }
      ]
     },
@@ -236,7 +246,8 @@
      "blocks": [
       {
        "k": "sub",
-       "text": "By age (Dr. Patel, slide 21)"
+       "text": "By age (Dr. Patel, slide 21)",
+       "p": "pa"
       },
       {
        "k": "facts",
@@ -253,7 +264,8 @@
          "Adulthood",
          "More diffuse, dry, scaly, lichenified; {{less on the face}}; hands, neck, inner elbows, back of knees, ankles"
         ]
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "prof",
@@ -264,7 +276,7 @@
          [
           "Red to brownish-gray patches",
           "Itch that may be severe, especially {{at night}}",
-          "Small vesicles that leak and crust",
+          "Small [[vesicle|vesicles]] that leak and crust",
           "Thickened, cracked or scaly skin"
          ]
         ],
@@ -280,7 +292,8 @@
       },
       {
        "k": "sub",
-       "text": "Severity by [[scorad|SCORAD]] ★ her cases give the words and the score"
+       "text": "Severity by [[scorad|SCORAD]] ★ her cases give the words and the score",
+       "p": "pa"
       },
       {
        "k": "grades",
@@ -300,23 +313,25 @@
          "SCORAD {{> 50}}",
          "Widespread dry skin, {{incessant}} itching, thickening, bleeding, oozing; sleep lost nightly"
         ]
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "sub",
-       "text": "Status ★ \"define this as well as the severity\""
+       "text": "Status ★ \"define this as well as the severity\"",
+       "p": "pa"
       },
       {
        "k": "grades",
        "rows": [
         [
          "Acute",
-         "Acutely inflamed papules, {{vesicles, exudate and crusts}}",
+         "Acutely inflamed [[papule|papules]], {{vesicles, exudate and crusts}}",
          "No dryness"
         ],
         [
          "Subacute",
-         "{{Dry}}, inflamed papules, patches or plaques",
+         "{{Dry}}, inflamed papules, patches or [[plaque|plaques]]",
          ""
         ],
         [
@@ -324,11 +339,13 @@
          "{{Lichenified}} papules or plaques",
          "[[lichenification|Lichenification]]: she calls it the silvery, scaly plaque"
         ]
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "photo",
-       "id": "ad-status"
+       "id": "ad-status",
+       "p": "pa"
       },
       {
        "k": "facts",
@@ -348,19 +365,20 @@
           "Skin infection: {{S. aureus}}; prone to {{herpes simplex virus}}"
          ]
         ]
-       ]
+       ],
+       "p": "pa"
       }
      ]
     },
     {
      "title": "Treat it: her order of treatment",
      "profs": [
-      "pa",
       "sm",
-      "sk"
+      "sk",
+      "pa"
      ],
      "q": "Name the lines in order with one age limit for each, and say which steroid goes on the face.",
-     "src": "Patel Dermatitis slides 29–32, 34–48; 11/06 lecture; Smith PCol slide 11",
+     "src": "Patel Dermatitis slides 29–32, 34–48; 11/06 lecture; Smith PCol slide 11; Sikazwe DPAW pages 7, 20, 28",
      "blocks": [
       {
        "k": "facts",
@@ -369,7 +387,7 @@
          "Every patient: basic management",
          [
           "Bath: {{10 minutes}}, lukewarm, gentle non-soap cleanser, pat dry",
-          "Occlusive moisturizer right after the bath; emollient within {{3 minutes}} while skin is damp",
+          "[[occlusive|Occlusive]] moisturizer right after the bath; emollient within {{3 minutes}} while skin is damp",
           "Avoid triggers; soft cotton clothing; lower stress",
           "Wet wraps: short-term, {{not with calcineurin inhibitors}}",
           "Bleach bath ({{0.005%}} sodium hypochlorite = ½ cup per full tub) {{twice a week}} for moderate–severe, to prevent repeat bacterial infection; can irritate"
@@ -379,7 +397,8 @@
          "Drugs treat flares",
          "Non-drug care is daily; the medication is for the flare"
         ]
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "line",
@@ -401,7 +420,7 @@
        "pick": [
         [
          "Face",
-         "★ {{Hydrocortisone 1%}}: \"the only dose and strength that you can utilize on your face\". Dr. Smith: low potency (hydrocortisone 1%) for the face"
+         "★ {{Hydrocortisone 1%}}: \"the only dose and strength that you can utilize on your face\"."
         ],
         [
          "Not on a steroid now, even if one helped before",
@@ -432,7 +451,19 @@
          "No topical corticosteroid as self-care"
         ]
        ],
-       "move": "Move to the next line when: there is no response to the topical steroid."
+       "move": "Move to the next line when: there is no response to the topical steroid.",
+       "p": "pa"
+      },
+      {
+       "k": "prof",
+       "p": "sm",
+       "rows": [
+        [
+         "Face",
+         "Low potency (hydrocortisone 1%) for the face"
+        ]
+       ],
+       "src": "Smith PCol slide 11"
       },
       {
        "k": "line",
@@ -474,7 +505,8 @@
          "Not with a calcineurin inhibitor"
         ]
        ],
-       "move": "Move to the next line when: the steroid and the calcineurin inhibitor have been tried."
+       "move": "Move to the next line when: the steroid and the calcineurin inhibitor have been tried.",
+       "p": "pa"
       },
       {
        "k": "line",
@@ -498,12 +530,13 @@
          "Do not use"
         ]
        ],
-       "move": "Move to the next line when: moderate to severe disease is not controlled after the topical agents."
+       "move": "Move to the next line when: moderate to severe disease is not controlled after the topical agents.",
+       "p": "pa"
       },
       {
        "k": "line",
        "label": "Then",
-       "title": "Injectable biologic (moderate to severe, after topicals)",
+       "title": "Injectable [[biologic|biologic]] (moderate to severe, after topicals)",
        "drugs": [
         "dupilumab",
         "tralokinumab"
@@ -545,7 +578,8 @@
          "600 mg as {{four 150 mg}} injections, then 300 mg (two 150 mg) every other week; every 4 weeks if under 100 kg and clear at 16 weeks"
         ]
        ],
-       "move": "Move to the next line when: disease is not controlled with other systemic or biologic therapy."
+       "move": "Move to the next line when: disease is not controlled with other systemic or biologic therapy.",
+       "p": "pa"
       },
       {
        "k": "line",
@@ -559,11 +593,13 @@
         "Moderate to severe, older than {{12 years}}",
         "Specialty follow-up every {{2 weeks}}"
        ],
-       "warn": "Boxed warnings: serious infections, mortality, malignancy, [[mace|MACE]], thrombosis."
+       "warn": "Boxed warnings: serious infections, mortality, malignancy, [[mace|MACE]], thrombosis.",
+       "p": "pa"
       },
       {
        "k": "sub",
-       "text": "Her step-care slide, by severity"
+       "text": "Her step-care slide, by severity",
+       "p": "pa"
       },
       {
        "k": "facts",
@@ -589,7 +625,27 @@
          "Flare not resolved in 7 days",
          "Consider nonadherence, infection, misdiagnosis, contact allergy to the medication; refer"
         ]
-       ]
+       ],
+       "p": "pa"
+      },
+      {
+       "k": "prof",
+       "p": "sk",
+       "rows": [
+        [
+         "Corticosteroid activity",
+         "Anti-inflammatory activity rises with a C1–C2 double bond, a 6α or 9α halogen and an 11β-OH (DPAW page 20)"
+        ],
+        [
+         "Pimecrolimus or tacrolimus",
+         "Similar in lipophilicity, structure and mechanism; pimecrolimus binds skin protein more (few systemic adverse effects), tacrolimus less (DPAW page 28)"
+        ],
+        [
+         "Crisaborole",
+         "A benzoxaborole soft drug; its boron coordinates Zn2+ and Mg2+ in the PDE4 active site (DPAW page 7)"
+        ]
+       ],
+       "src": "Sikazwe DPAW pages 7, 20, 28; 11/03 and 11/04 lectures"
       }
      ]
     },
@@ -635,15 +691,17 @@
          [
           "Petroleum-containing (Aquaphor, Eucerin): {{most effective}}, thickest, longest-lasting; greasy",
           "Ceramide-containing creams (CeraVe, Aveeno eczema therapy): barrier",
-          "Urea-containing: humectant; stings on broken skin",
+          "Urea-containing: [[humectant|humectant]]; stings on broken skin",
           "Lotions (Cetaphil, Keri): less effective; 3 times a day or more"
          ]
         ]
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "sub",
-       "text": "Tube size by [[ftu|fingertip units]] ★ \"there will be a calculation on the exam\""
+       "text": "Tube size by [[ftu|fingertip units]] ★ \"there will be a calculation on the exam\"",
+       "p": "pa"
       },
       {
        "k": "facts",
@@ -681,16 +739,19 @@
          "Not tested",
          "Pediatric fingertip units"
         ]
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "fig",
        "label": "Open the fingertip-unit table",
-       "jump": "ref:ref-p5-ftu"
+       "jump": "ref:ref-p5-ftu",
+       "p": "pa"
       },
       {
        "k": "sub",
-       "text": "Follow-up"
+       "text": "Follow-up",
+       "p": "pa"
       },
       {
        "k": "facts",
@@ -711,7 +772,8 @@
          "Calcineurin inhibitor",
          "Reassess at 6 weeks"
         ]
-       ]
+       ],
+       "p": "pa"
       }
      ]
     }
@@ -941,12 +1003,13 @@
           "Good nutrition: protein, vitamins"
          ]
         ]
-       ]
+       ],
+       "p": "pa"
       }
      ]
     },
     {
-     "title": "Recognise it",
+     "title": "Recognize it",
      "profs": [
       "pa"
      ],
@@ -984,11 +1047,13 @@
          "Most common complication",
          "Fungal and bacterial infection: {{Candida albicans}}, {{Staphylococcus aureus}}"
         ]
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "photo",
-       "id": "dd-severity"
+       "id": "dd-severity",
+       "p": "pa"
       }
      ]
     },
@@ -1008,13 +1073,14 @@
         "Rash {{outside the diaper region}}",
         "Possible {{urinary tract infection}}",
         "Broken skin: ulceration, blistering, peeling",
-        "Oozing, blood, vesicles or pus; bullae; onion-skin appearance",
+        "Oozing, blood, [[vesicle|vesicles]] or pus; [[bullae|bullae]]; onion-skin appearance",
         "Chronic or frequently recurring lesions",
         "Constitutional symptoms: {{fever}}, diarrhea, nausea, vomiting, swollen inguinal lymph nodes, rapid pulse, rash elsewhere",
         "Behavior change: lethargy, incessant crying",
         "Comorbid conditions: HIV, organ transplant, immunosuppressive therapy, hepatitis with skin signs",
         "Lesions part of, or caused by, another disease"
-       ]
+       ],
+       "p": "pa"
       }
      ]
     },
@@ -1033,7 +1099,8 @@
          "Goals",
          "Relieve symptoms; clear the dermatitis; prevent secondary infection; prevent recurrence"
         ]
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "line",
@@ -1046,7 +1113,8 @@
         "{{C}}leansing: soft cloth and warm water, or a baby wipe when stool is present",
         "{{D}}iaper: change every {{2 hours}} and as soon as soiled",
         "{{E}}ducation of parents and caregivers"
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "line",
@@ -1081,7 +1149,8 @@
          "Body lotion already in use",
          "Not a skin protectant"
         ]
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "line",
@@ -1096,7 +1165,8 @@
         "Topical {{anesthetics}} (benzocaine, lidocaine)",
         "{{Hydrocortisone}} or any topical corticosteroid"
        ],
-       "warn": "★ \"The biggest difference\" from atopic dermatitis: no topical corticosteroid. The diaper area is a large share of a baby's body surface, so topical products can cause systemic effects."
+       "warn": "★ \"The biggest difference\" from atopic dermatitis: no topical corticosteroid. The diaper area is a large share of a baby's body surface, so topical products can cause systemic effects.",
+       "p": "pa"
       },
       {
        "k": "line",
@@ -1112,7 +1182,8 @@
          "Not healed, not improved, or worse",
          "{{Refer}} to a physician"
         ]
-       ]
+       ],
+       "p": "pa"
       }
      ]
     }
@@ -1283,7 +1354,7 @@
          [
           "High humidity or sweating",
           "Acne mechanica: occlusion or irritation",
-          "Acne cosmetica: comedogenic oils",
+          "Acne cosmetica: [[comedogenic|comedogenic]] oils",
           "Stress; hormones",
           "High glycemic index diet; dairy may be a factor"
          ]
@@ -1326,11 +1397,13 @@
          "Lab testing",
          "None routinely; exception: high suspicion of [[pcos|PCOS]] or another hormonal disorder"
         ]
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "sub",
-       "text": "Not a self-care candidate: refer to dermatology"
+       "text": "Not a self-care candidate: refer to dermatology",
+       "p": "pa"
       },
       {
        "k": "pts",
@@ -1339,7 +1412,8 @@
         "Possible {{rosacea}}",
         "Exacerbating factors",
         "{{Comedogenic drugs}}"
-       ]
+       ],
+       "p": "pa"
       }
      ]
     },
@@ -1374,12 +1448,12 @@
          "Skin cells stick together and are not shed; cells and sebum plug the channel"
         ],
         [
-         "P. acnes",
+         "[[p-acnes|P. acnes]]",
          "Its {{lipase}} turns sebum glycerides into {{free fatty acids}}, which irritate the follicle wall and are antigenic"
         ],
         [
          "Lesion order",
-         "Microcomedone → closed [[comedone|comedone]] → open comedone, or papule → pustule → nodule or cyst"
+         "[[microcomedone|Microcomedone]] → closed [[comedone|comedone]] → open comedone, or papule → pustule → nodule or cyst"
         ],
         [
          "Her poll",
@@ -1408,16 +1482,19 @@
          "Intralesional corticosteroids; oral corticosteroids; topical/oral antibiotics"
         ]
        ],
-       "src": "Smith Pathophys slide 36"
+       "src": "Smith Pathophys slide 36",
+       "p": "sm"
       },
       {
        "k": "fig",
        "label": "Watch how it works: the cascade of acne lesions",
-       "jump": "ref:ref-l1-acnemap"
+       "jump": "ref:ref-l1-acnemap",
+       "p": "sm"
       },
       {
        "k": "sub",
-       "text": "Dr. Patel: what each OTC agent does (slide 23)"
+       "text": "Dr. Patel: what each OTC agent does (slide 23)",
+       "p": "pa"
       },
       {
        "k": "facts",
@@ -1446,7 +1523,8 @@
          "Her four targets",
          "Reduce sebum; suppress P. acnes; reduce inflammation; decrease hyperkeratinization"
         ]
-       ]
+       ],
+       "p": "pa"
       }
      ]
     },
@@ -1476,15 +1554,18 @@
           "[[nodule|Nodule or cyst]]: large, under the skin; the worst stage"
          ]
         ]
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "photo",
-       "id": "acne-comedones"
+       "id": "acne-comedones",
+       "p": "pa"
       },
       {
        "k": "sub",
-       "text": "Grades ★ \"those are the terms that I will also use on my cases on the exam\""
+       "text": "Grades ★ \"those are the terms that I will also use on my cases on the exam\"",
+       "p": "pa"
       },
       {
        "k": "grades",
@@ -1509,7 +1590,8 @@
          "{{Many}} non-inflammatory and inflammatory",
          "No more than {{a few}} nodular lesions; moderate to extensive scarring"
         ]
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "facts",
@@ -1526,7 +1608,8 @@
          "Her Case 2",
          "Comedones, papules, cysts on cheek, back and shoulders = {{severe}}"
         ]
-       ]
+       ],
+       "p": "pa"
       }
      ]
     },
@@ -1564,7 +1647,8 @@
          "Never alone",
          "★ A topical antibiotic: always with {{benzoyl peroxide}}, to reduce resistance"
         ]
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "line",
@@ -1576,7 +1660,8 @@
        "pts": [
         "Lesions: comedones",
         "Tea tree oil goes in a lotion or gel vehicle; it irritates if applied directly"
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "line",
@@ -1615,10 +1700,11 @@
         ],
         [
          "Tried everything else topical",
-         "Dapsone: \"absolute last line\" of the mild column; G6PD concern"
+         "Dapsone: \"absolute last line\" of the mild column; [[g6pd|G6PD]] concern"
         ]
        ],
-       "move": "Move on when: the agent was used for its stated duration and the lesions have not decreased."
+       "move": "Move on when: the agent was used for its stated duration and the lesions have not decreased.",
+       "p": "pa"
       },
       {
        "k": "line",
@@ -1665,7 +1751,8 @@
          "COC"
         ]
        ],
-       "move": "Move on when: the topical combination plus an oral antibiotic has had its duration (re-evaluate the antibiotic at 3–4 months)."
+       "move": "Move on when: the topical combination plus an oral antibiotic has had its duration (re-evaluate the antibiotic at 3–4 months).",
+       "p": "pa"
       },
       {
        "k": "line",
@@ -1708,11 +1795,13 @@
          "Severe refractory nodular acne",
          "Isotretinoin with iPledge"
         ]
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "sub",
-       "text": "Vehicle by skin type (slide 24)"
+       "text": "Vehicle by skin type (slide 24)",
+       "p": "pa"
       },
       {
        "k": "facts",
@@ -1729,12 +1818,14 @@
          "Not usually recommended",
          "Ointments and bars"
         ]
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "fig",
        "label": "Open her algorithm table",
-       "jump": "ref:ref-p6-alg"
+       "jump": "ref:ref-p6-alg",
+       "p": "pa"
       }
      ]
     },
@@ -1778,11 +1869,13 @@
          "Stopping",
          "Taper over time; never stop abruptly"
         ]
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "sub",
-       "text": "Isotretinoin and [[ipledge|iPledge]]"
+       "text": "Isotretinoin and [[ipledge|iPledge]]",
+       "p": "pa"
       },
       {
        "k": "facts",
@@ -1832,16 +1925,19 @@
          "Not a counseling point",
          "Avoiding dairy (her poll)"
         ]
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "fig",
        "label": "Open the isotretinoin and iPledge table",
-       "jump": "ref:ref-p6-ipledge"
+       "jump": "ref:ref-p6-ipledge",
+       "p": "pa"
       },
       {
        "k": "sub",
-       "text": "Monitoring"
+       "text": "Monitoring",
+       "p": "pa"
       },
       {
        "k": "facts",
@@ -1862,11 +1958,13 @@
          "Oral antibiotic",
          "Shortest possible duration; re-evaluate at {{3–4 months}}"
         ]
-       ]
+       ],
+       "p": "pa"
       },
       {
        "k": "sub",
-       "text": "No response to current therapy (slide 48)"
+       "text": "No response to current therapy (slide 48)",
+       "p": "pa"
       },
       {
        "k": "facts",
@@ -1887,7 +1985,8 @@
          "Adverse events",
          "Change class, lower the dose or change the formulation; avoid overuse of cleansers"
         ]
-       ]
+       ],
+       "p": "pa"
       }
      ]
     }
@@ -2096,6 +2195,25 @@
     "Stop and refer for skin atrophy or infection",
     "Adverse effects: burning, tingling, cracking, pruritus, acne, alopecia, headache, atrophy, delayed wound healing",
     "Dr. Smith: systemic effects (HPA axis suppression, growth retardation in children) can occur even with low potency"
+   ],
+   "how": {
+    "p": "sm",
+    "text": "Binds the glucocorticoid receptor inside the cell. The drug–receptor complex binds the GRE on DNA, or holds NF-kB and AP-1 off the DNA, so anti-inflammatory proteins rise and inflammatory proteins fall.",
+    "src": "Smith PCol slides 5–7, 10"
+   },
+   "figs": [
+    {
+     "label": "Watch how it works: nuclear receptor binders, direct and indirect action (corticosteroids, retinoids, vitamin D analogs)",
+     "jump": "ref:ref-l1-nr"
+    },
+    {
+     "label": "Watch how it works: the steroid skeleton, what raises its activity, and its hydrogen bonds in the receptor (Dr. Sikazwe)",
+     "jump": "guide:fig-steroid"
+    },
+    {
+     "label": "Watch how it works: potency by structure, hydrocortisone to clobetasol propionate (Dr. Sikazwe)",
+     "jump": "guide:cb-gc-potency"
+    }
    ]
   },
   "hydrocortisone": {
@@ -2132,6 +2250,29 @@
    "avoid": [
     "Diaper dermatitis: not used on diaper rash",
     "Atopic dermatitis: use past 2 weeks"
+   ],
+   "how": {
+    "p": "sm",
+    "text": "A low-potency corticosteroid. It binds the glucocorticoid receptor; the drug–receptor complex binds the GRE on DNA, or holds NF-kB and AP-1 off the DNA, so fewer inflammatory proteins are made.",
+    "src": "Smith PCol slides 5–7, 10–11"
+   },
+   "figs": [
+    {
+     "label": "Watch how it works: nuclear receptor binders, direct and indirect action (corticosteroids, retinoids, vitamin D analogs)",
+     "jump": "ref:ref-l1-nr"
+    },
+    {
+     "label": "Watch how it works: the steroid skeleton, what raises its activity, and its hydrogen bonds in the receptor (Dr. Sikazwe)",
+     "jump": "guide:fig-steroid"
+    },
+    {
+     "label": "Watch how it works: potency by structure, hydrocortisone to clobetasol propionate (Dr. Sikazwe)",
+     "jump": "guide:cb-gc-potency"
+    },
+    {
+     "label": "See the reaction: hydrocortisone metabolism (11β-HSD to and from inactive cortisone)",
+     "jump": "guide:rx-hydrocortisone"
+    }
    ]
   },
   "pimecrolimus": {
@@ -2166,6 +2307,17 @@
     "Boxed warning: rare lymphoma and skin malignancy; avoid on malignant or premalignant skin",
     "Not with wet wraps or compresses",
     "Safety of intermittent use beyond 1 year not established"
+   ],
+   "how": {
+    "p": "sm",
+    "text": "Inhibits calcineurin, so less IL-2 is made. T cells and mast cells are not activated, and fewer proinflammatory cytokines and mediators are produced.",
+    "src": "Smith PCol slides 24–27"
+   },
+   "figs": [
+    {
+     "label": "Watch how it works: calcineurin inhibitors (calcineurin, NFAT and IL-2)",
+     "jump": "guide:fig-cni-nfat"
+    }
    ]
   },
   "tacrolimus": {
@@ -2199,6 +2351,17 @@
     "Boxed warning: rare lymphoma and skin malignancy",
     "Not with wet wraps or compresses",
     "Reassess at 6 weeks"
+   ],
+   "how": {
+    "p": "sm",
+    "text": "Binds FKBP inside the T cell; the tacrolimus–FKBP complex inactivates calcineurin. Less IL-2 is made, so T cells do not proliferate.",
+    "src": "Smith PCol slides 24–26"
+   },
+   "figs": [
+    {
+     "label": "Watch how it works: calcineurin inhibitors (calcineurin, NFAT and IL-2)",
+     "jump": "guide:fig-cni-nfat"
+    }
    ]
   },
   "crisaborole": {
@@ -2230,6 +2393,25 @@
    "avoid": [
     "Under 3 months of age",
     "Hypersensitivity"
+   ],
+   "how": {
+    "p": "sm",
+    "text": "Inhibits phosphodiesterase 4 (PDE-4), the main PDE in inflammatory cells, so cAMP is not broken down. The higher cAMP inhibits the inflammatory cells.",
+    "src": "Smith PCol slides 32–33"
+   },
+   "figs": [
+    {
+     "label": "Watch how it works: PDE-4 inhibitors, why cAMP rises",
+     "jump": "guide:g-fig-pde4-camp"
+    },
+    {
+     "label": "Watch how it works: boron at the zinc and magnesium of the PDE4 site (Dr. Sikazwe)",
+     "jump": "guide:cb-crisaborole"
+    },
+    {
+     "label": "See the reaction: crisaborole metabolism",
+     "jump": "guide:rx-crisaborole"
+    }
    ]
   },
   "dupilumab": {
@@ -2260,6 +2442,17 @@
     "Under 6 months of age",
     "May interact with CYP-450: warfarin or cyclosporine doses may need adjusting",
     "Adverse effects: urticaria, angioedema, rash, erythema, injection-site reaction"
+   ],
+   "how": {
+    "p": "sm",
+    "text": "A monoclonal antibody that binds the IL-4 receptor α subunit, which the IL-4 and IL-13 receptors share. IL-4 and IL-13 signaling is blocked, so fewer proinflammatory cytokines, chemokines and IgE are released.",
+    "src": "Smith PCol slide 64"
+   },
+   "figs": [
+    {
+     "label": "Watch how it works: cytokine biologics, what each one binds",
+     "jump": "guide:fig-il-axis"
+    }
    ]
   },
   "tralokinumab": {
@@ -2280,7 +2473,13 @@
    "counselSrc": "Patel Dermatitis slide 45; 11/06 lecture",
    "avoid": [
     "Adverse events: ocular events, upper respiratory tract infections, injection-site reactions"
-   ]
+   ],
+   "how": {
+    "p": "pa",
+    "text": "Dr. Patel’s slide gives its mechanism of action as “IL-13 cytokine inhibitor”. It is not on Dr. Smith’s slides.",
+    "src": "Patel Dermatitis slide 45"
+   },
+   "figs": []
   },
   "jak": {
    "name": "JAK inhibitors: abrocitinib, upadacitinib, ruxolitinib",
@@ -2311,6 +2510,17 @@
     "Boxed: lymphoma and other malignancies",
     "Boxed: MACE (CV death, MI, stroke)",
     "Boxed: thrombosis (DVT, PE, arterial)"
+   ],
+   "how": {
+    "p": "sm",
+    "text": "Inhibit Janus kinase (JAK), which lowers the production of inflammatory cytokines. Ruxolitinib inhibits JAK1 and JAK2.",
+    "src": "Smith PCol slides 75–76"
+   },
+   "figs": [
+    {
+     "label": "Watch how it works: Dr. Smith’s narrated walkthrough “JAK inhibitors” (opens her guide section; choose that walkthrough)",
+     "jump": "guide:gobj-l1-4"
+    }
    ]
   },
   "moisturizer": {
@@ -2341,6 +2551,17 @@
    "counselSrc": "Patel Dermatitis slides 31–32, 52",
    "avoid": [
     "Urea products on broken skin: burning, stinging, irritation"
+   ],
+   "how": {
+    "p": "sk",
+    "text": "Emollients prevent water loss from the skin. Petrolatum, the most effective, fills the gaps between scales.",
+    "src": "Sikazwe DPAW page 15; 11/03 lecture"
+   },
+   "figs": [
+    {
+     "label": "Watch how it works: Dr. Sikazwe’s narrated walkthrough “Psoriasis: ultraviolet bands, emollients and tars”, the emollients part (opens his guide section; choose that walkthrough)",
+     "jump": "guide:gobj-mc-psotop"
+    }
    ]
   },
   "zinc-oxide": {
@@ -2372,6 +2593,21 @@
    "counselSrc": "Patel Dermatitis slides 63, 66",
    "avoid": [
     "Not enough alone when an exclusion for self-care is present (infection, broken skin, fever, rash outside the diaper area)"
+   ],
+   "how": {
+    "p": "sm",
+    "text": "As a sunblock: inorganic particles scatter or reflect visible, UV and infrared radiation, so it covers UVA and UVB. As a skin protectant (Dr. Patel, diaper rash): it gives the skin a physical barrier and lubrication.",
+    "src": "Smith Sun slide 20; Patel Dermatitis slides 63–64"
+   },
+   "figs": [
+    {
+     "label": "Watch how it works: sunblocks reflect and scatter, sunscreens absorb (zinc oxide is a sunblock)",
+     "jump": "guide:fig-block-vs-screen"
+    },
+    {
+     "label": "Watch how it works: MED, SPF and broad spectrum, what the label numbers measure",
+     "jump": "guide:fig-spf"
+    }
    ]
   },
   "bpo": {
@@ -2404,6 +2640,21 @@
    "avoid": [
     "Contact allergy",
     "Higher strengths irritate more"
+   ],
+   "how": {
+    "p": "sm",
+    "text": "Antimicrobial against P. acnes, with peeling and comedolytic effects: it loosens keratinocytes, speeds their turnover and keeps follicles from closing. It penetrates the stratum corneum or follicle openings and is then metabolized to benzoic acid.",
+    "src": "Smith PCol slide 36"
+   },
+   "figs": [
+    {
+     "label": "Watch how it works: Dr. Smith’s narrated walkthrough “Keratolytics” (opens her guide section; choose that walkthrough)",
+     "jump": "guide:gobj-l1-4"
+    },
+    {
+     "label": "See the reaction: benzoyl peroxide breakdown in the skin",
+     "jump": "guide:rx-bpo"
+    }
    ]
   },
   "adapalene": {
@@ -2436,6 +2687,21 @@
    "avoid": [
     "OTC labeling: persons over 12 years of age",
     "Erythema, scaling, dryness, pruritus, burning"
+   ],
+   "how": {
+    "p": "sm",
+    "text": "A retinoid: it binds RAR and RXR, which form an RAR–RXR heterodimer that moves into the nucleus and binds the RARE on DNA to change gene transcription. In acne: less cohesion between epidermal cells and faster cell turnover, so open comedones are expelled and closed ones open.",
+    "src": "Smith PCol slides 14–15, 18"
+   },
+   "figs": [
+    {
+     "label": "Watch how it works: nuclear receptor binders, direct and indirect action (corticosteroids, retinoids, vitamin D analogs)",
+     "jump": "ref:ref-l1-nr"
+    },
+    {
+     "label": "Watch how it works: retinoid structures, exposed acid (directly active) or ester prodrug (Dr. Sikazwe)",
+     "jump": "guide:cb-retinoids"
+    }
    ]
   },
   "tretinoin": {
@@ -2465,6 +2731,21 @@
    "counselSrc": "Patel Acne slides 31, 42",
    "avoid": [
     "Photosensitivity, photo-irritation, severe peeling"
+   ],
+   "how": {
+    "p": "sm",
+    "text": "A retinoid: it binds RAR and RXR, which form an RAR–RXR heterodimer that moves into the nucleus and binds the RARE on DNA to change gene transcription. In acne: less cohesion between epidermal cells and faster cell turnover, so open comedones are expelled and closed ones open; with prolonged use for aging: more dermal collagen, new blood vessels and a thicker epidermis.",
+    "src": "Smith PCol slides 14–15, 17"
+   },
+   "figs": [
+    {
+     "label": "Watch how it works: nuclear receptor binders, direct and indirect action (corticosteroids, retinoids, vitamin D analogs)",
+     "jump": "ref:ref-l1-nr"
+    },
+    {
+     "label": "Watch how it works: retinoid structures, exposed acid (directly active) or ester prodrug (Dr. Sikazwe)",
+     "jump": "guide:cb-retinoids"
+    }
    ]
   },
   "tazarotene": {
@@ -2494,6 +2775,25 @@
    "counselSrc": "Patel Acne slides 31, 42",
    "avoid": [
     "Photosensitivity, photo-irritation, severe peeling"
+   ],
+   "how": {
+    "p": "sm",
+    "text": "A retinoid: it binds RAR and RXR, which form an RAR–RXR heterodimer that moves into the nucleus and binds the RARE on DNA to change gene transcription. In acne: less cohesion between epidermal cells and faster cell turnover; in psoriasis the precise mechanism is unknown and may be anti-inflammatory and antiproliferative.",
+    "src": "Smith PCol slides 14–15, 18"
+   },
+   "figs": [
+    {
+     "label": "Watch how it works: nuclear receptor binders, direct and indirect action (corticosteroids, retinoids, vitamin D analogs)",
+     "jump": "ref:ref-l1-nr"
+    },
+    {
+     "label": "Watch how it works: retinoid structures, exposed acid (directly active) or ester prodrug (Dr. Sikazwe)",
+     "jump": "guide:cb-retinoids"
+    },
+    {
+     "label": "See the reaction: tazarotene, an ester prodrug, to tazarotenic acid",
+     "jump": "guide:rx-tazarotene"
+    }
    ]
   },
   "salicylic-acid": {
@@ -2524,6 +2824,21 @@
    "counselSrc": "Patel Acne slides 27, 29",
    "avoid": [
     "Acne: frequent washing with it; excessive cleansing is discouraged (her Case 1 poll)"
+   ],
+   "how": {
+    "p": "sm",
+    "text": "A keratolytic: it may solubilize the cell-surface proteins that keep the stratum corneum intact, so the stratum corneum is shed (desquamation).",
+    "src": "Smith PCol slide 39"
+   },
+   "figs": [
+    {
+     "label": "Watch how it works: Dr. Smith’s narrated walkthrough “Keratolytics” (opens her guide section; choose that walkthrough)",
+     "jump": "guide:gobj-l1-4"
+    },
+    {
+     "label": "See the reaction: glycolic and salicylic acid metabolism",
+     "jump": "guide:rx-hydroxyacids"
+    }
    ]
   },
   "aha": {
@@ -2549,6 +2864,21 @@
    "counselSrc": "Patel Acne slide 28",
    "avoid": [
     "Photosensitivity without sunscreen"
+   ],
+   "how": {
+    "p": "sk",
+    "text": "Keratolytics: they promote skin shedding and the removal of dead skin cells, and stimulate collagen production.",
+    "src": "Sikazwe DPAW pages 42–43, 68"
+   },
+   "figs": [
+    {
+     "label": "Watch how it works: Dr. Sikazwe’s narrated walkthrough “Acne: keratolytics” (opens his guide section; choose that walkthrough)",
+     "jump": "guide:gobj-mc-acne"
+    },
+    {
+     "label": "See the reaction: glycolic and salicylic acid metabolism",
+     "jump": "guide:rx-hydroxyacids"
+    }
    ]
   },
   "azelaic-acid": {
@@ -2572,6 +2902,17 @@
    "counselSrc": "Patel Acne slide 31",
    "avoid": [
     "Hypersensitivity; hypopigmentation; skin irritation and peeling"
+   ],
+   "how": {
+    "p": "sk",
+    "text": "An anti-inflammatory agent; Dr. Sikazwe lists it with the antibiotics for acne.",
+    "src": "Sikazwe DPAW page 54"
+   },
+   "figs": [
+    {
+     "label": "Watch how it works: Dr. Sikazwe’s narrated walkthrough “Acne: hormones and antibiotics” (opens his guide section; choose that walkthrough)",
+     "jump": "guide:gobj-mc-acne"
+    }
    ]
   },
   "dapsone": {
@@ -2596,6 +2937,17 @@
    "avoid": [
     "G6PD concern",
     "Monitor CBC and reticulocyte counts"
+   ],
+   "how": {
+    "p": "sm",
+    "text": "In acne (topical gel) it is anti-inflammatory; the mechanism is not fully understood, and neutrophils and their products may be the site of action. In leprosy it competes with PABA, like the sulfonamides.",
+    "src": "Smith PCol slide 50"
+   },
+   "figs": [
+    {
+     "label": "Watch how it works: the bacterial folate pathway (dapsone in leprosy acts like the sulfonamides)",
+     "jump": "guide:g-fig-folate-path"
+    }
    ]
   },
   "topical-abx": {
@@ -2625,6 +2977,17 @@
    "counselSrc": "Patel Acne slide 31",
    "avoid": [
     "Use alone"
+   ],
+   "how": {
+    "p": "sm",
+    "text": "Clindamycin binds the 50S ribosomal subunit and prevents translocation; erythromycin also binds the 50S subunit. Minocycline, a tetracycline, binds the 30S subunit and blocks aminoacyl-tRNA binding; bacterial protein synthesis stops.",
+    "src": "Smith PCol slides 43, 46–47"
+   },
+   "figs": [
+    {
+     "label": "Watch how it works: antibiotics at the bacterial ribosome",
+     "jump": "guide:g-fig-ribosome"
+    }
    ]
   },
   "doxycycline": {
@@ -2658,6 +3021,17 @@
     "Pregnancy: fetal harm",
     "With isotretinoin",
     "Adverse effects: abdominal pain, diarrhea, nausea and vomiting, hepatotoxicity, hyperpigmentation"
+   ],
+   "how": {
+    "p": "sm",
+    "text": "Binds the 30S ribosomal subunit irreversibly and blocks aminoacyl-tRNA binding at the acceptor site, so bacterial protein synthesis stops (bacteriostatic). In acne the effect may depend more on anti-inflammatory activity.",
+    "src": "Smith PCol slides 43, 45"
+   },
+   "figs": [
+    {
+     "label": "Watch how it works: antibiotics at the bacterial ribosome",
+     "jump": "guide:g-fig-ribosome"
+    }
    ]
   },
   "minocycline": {
@@ -2688,6 +3062,17 @@
     "12 years old or younger",
     "Pregnancy",
     "With isotretinoin"
+   ],
+   "how": {
+    "p": "sm",
+    "text": "Binds the 30S ribosomal subunit irreversibly and blocks aminoacyl-tRNA binding at the acceptor site, so bacterial protein synthesis stops (bacteriostatic). In acne the effect may depend more on anti-inflammatory activity.",
+    "src": "Smith PCol slides 43, 45"
+   },
+   "figs": [
+    {
+     "label": "Watch how it works: antibiotics at the bacterial ribosome",
+     "jump": "guide:g-fig-ribosome"
+    }
    ]
   },
   "sarecycline": {
@@ -2712,6 +3097,17 @@
    "counselSrc": "Patel Acne slides 33, 42",
    "avoid": [
     "Tetracycline class cautions: pregnancy, photosensitivity"
+   ],
+   "how": {
+    "p": "sm",
+    "text": "Binds the 30S ribosomal subunit irreversibly and blocks aminoacyl-tRNA binding at the acceptor site, so bacterial protein synthesis stops (bacteriostatic). In acne the effect may depend more on anti-inflammatory activity.",
+    "src": "Smith PCol slides 43, 45"
+   },
+   "figs": [
+    {
+     "label": "Watch how it works: antibiotics at the bacterial ribosome",
+     "jump": "guide:g-fig-ribosome"
+    }
    ]
   },
   "tmp-smx": {
@@ -2737,6 +3133,17 @@
    "avoid": [
     "Sulfa allergy (slide: \"allergic to sulfur\")",
     "Hepatotoxicity; sulfonamide reaction"
+   ],
+   "how": {
+    "p": "sm",
+    "text": "Sulfamethoxazole competes with PABA and blocks bacterial synthesis of dihydrofolic acid; trimethoprim inhibits bacterial dihydrofolate reductase, the next step. The two blocks in sequence work much better than either drug alone.",
+    "src": "Smith PCol slides 48–49"
+   },
+   "figs": [
+    {
+     "label": "Watch how it works: sulfonamides and trimethoprim in the bacterial folate pathway",
+     "jump": "guide:g-fig-folate-path"
+    }
    ]
   },
   "coc": {
@@ -2764,6 +3171,17 @@
     "Smoker, or 35 and older",
     "14 or younger and less than 2 years past menarche",
     "Males"
+   ],
+   "how": {
+    "p": "sk",
+    "text": "Oral contraceptives act against the hormonal triggers of acne: they regulate androgen levels and so prevent excess sebum production.",
+    "src": "Sikazwe DPAW pages 52–53"
+   },
+   "figs": [
+    {
+     "label": "Watch how it works: Dr. Sikazwe’s narrated walkthrough “Acne: hormones and antibiotics” (opens his guide section; choose that walkthrough)",
+     "jump": "guide:gobj-mc-acne"
+    }
    ]
   },
   "spironolactone": {
@@ -2792,6 +3210,21 @@
    "avoid": [
     "Males: gynecomastia",
     "Hyperkalemia"
+   ],
+   "how": {
+    "p": "sk",
+    "text": "A steroidal antiandrogen: it diminishes testosterone biosynthesis. Antiandrogens regulate androgen levels and prevent excess sebum production.",
+    "src": "Sikazwe DPAW page 53; 11/04 lecture"
+   },
+   "figs": [
+    {
+     "label": "Watch how it works: antiandrogens, testosterone biosynthesis or its receptor (Dr. Sikazwe)",
+     "jump": "guide:cb-antiandrogens"
+    },
+    {
+     "label": "Watch how it works: Dr. Sikazwe’s narrated walkthrough “Acne: hormones and antibiotics” (opens his guide section; choose that walkthrough)",
+     "jump": "guide:gobj-mc-acne"
+    }
    ]
   },
   "isotretinoin": {
@@ -2827,6 +3260,21 @@
     "Pregnancy: boxed warning for birth defects",
     "Vitamin A supplements, tetracyclines, steroids, progestin-only contraceptives",
     "Mood disorders, depression, suicidal ideation"
+   ],
+   "how": {
+    "p": "sm",
+    "text": "A retinoid (RAR/RXR). In cystic acne its mechanism of action is not known; it appears to inhibit sebaceous gland size and function.",
+    "src": "Smith PCol slides 14, 19"
+   },
+   "figs": [
+    {
+     "label": "Watch how it works: nuclear receptor binders, direct and indirect action (corticosteroids, retinoids, vitamin D analogs)",
+     "jump": "ref:ref-l1-nr"
+    },
+    {
+     "label": "Watch how it works: retinoid structures, exposed acid (directly active) or ester prodrug (Dr. Sikazwe)",
+     "jump": "guide:cb-retinoids"
+    }
    ]
   }
  },
@@ -2898,8 +3346,8 @@
   ],
   "skin-protectant": [
    "Skin protectant",
-   "A product that gives a physical barrier and lubrication to the skin.",
-   "Patel Dermatitis slide 63"
+   "A product such as zinc oxide, petrolatum, calamine or cocoa butter that gives the skin a physical barrier and lubrication and reduces irritation.",
+   "Patel Dermatitis slide 63; Outdoor slide 39; Sun slide 31"
   ],
   "comedone": [
    "Comedone",
@@ -2908,8 +3356,8 @@
   ],
   "papule": [
    "Papule",
-   "An inflammatory lesion: raised and red, with no visible pus.",
-   "Patel Acne slides 5–6; 11/10 lecture"
+   "A small, raised, solid bump on the skin. In acne (Dr. Patel): an inflammatory lesion, raised and red, with no visible pus.",
+   "Patel Acne slides 5–6; 11/10 lecture; the first sentence is the plain meaning"
   ],
   "pustule": [
    "Pustule",
@@ -2928,8 +3376,8 @@
   ],
   "keratolytic": [
    "Keratolytic",
-   "Thins the skin on and around the lesion; the outer layer loosens and sheds; softens keratin.",
-   "Patel Acne slide 22"
+   "Thins the skin on and around the lesion, so the outer layer loosens and sheds; softens keratin. Benzoyl peroxide, sulfur, salicylic acid and the alpha hydroxy acids are keratolytics.",
+   "Patel Acne slide 22; Smith PCol slides 35–39; Patel Sun slide 45"
   ],
   "comedolytic": [
    "Comedolytic",
@@ -2955,6 +3403,76 @@
    "BP",
    "Benzoyl peroxide, in the key of her algorithm slide.",
    "Patel Acne slides 20, 40"
+  ],
+  "hygiene": [
+   "Hygiene hypothesis",
+   "The absence of early childhood exposure to infectious agents increases susceptibility to allergic diseases. Dr. Smith’s slide gives it with the lower prevalence in rural areas.",
+   "Smith Pathophys slide 10"
+  ],
+  "fkbp": [
+   "FKBP",
+   "The protein that tacrolimus (FK506) binds inside the T cell; the tacrolimus–FKBP complex inactivates calcineurin.",
+   "Smith PCol slide 26"
+  ],
+  "jak": [
+   "JAK (Janus kinase)",
+   "An enzyme. A JAK inhibitor blocks it, so fewer inflammatory cytokines are produced (Dr. Smith) and the downstream immune-mediated inflammatory response decreases (Dr. Patel).",
+   "Smith PCol slides 75–76; Patel Dermatitis slide 46"
+  ],
+  "emollient": [
+   "Emollient",
+   "A moisturizer that improves the skin barrier. Dr. Patel’s examples: creams and ointments such as Aquaphor (11/06); “lotions and creams” (11/10). Dr. Sikazwe: emollients prevent skin water loss.",
+   "11/06 and 11/10 lectures; Patel Dermatitis slides 29, 32; Sikazwe DPAW page 15"
+  ],
+  "occlusive": [
+   "Occlusive moisturizer",
+   "A moisturizer that decreases the release of moisture from the skin; on Dr. Patel’s slide, the petroleum-containing products (Aquaphor, Eucerin, Lubriderm).",
+   "Patel Dermatitis slides 31–32"
+  ],
+  "humectant": [
+   "Humectant",
+   "An ingredient that draws water into the outer layer of the skin; on Dr. Patel’s slide the urea-containing products are the humectant type.",
+   "Patel Dermatitis slide 32; the definition is the plain meaning"
+  ],
+  "vesicle": [
+   "Vesicle",
+   "A small blister; Dr. Patel’s slide writes “blisters (vesicles)”. Dr. Smith: in atopic dermatitis small, raised vesicles may leak fluid and crust over when scratched.",
+   "Patel Outdoor slide 10; Smith Pathophys slide 11"
+  ],
+  "biologic": [
+   "Biologic",
+   "An injected specialty medicine, an antibody or fusion protein, that binds one cytokine or receptor. Atopic dermatitis: dupilumab, tralokinumab. Psoriasis: the TNF-α, IL-12/23, IL-23 and IL-17 inhibitors.",
+   "Summary of Patel Scaly slides 40–43, Patel Dermatitis slides 43–45 and Smith PCol slides 62–74; no slide defines the word"
+  ],
+  "bullae": [
+   "Bullae",
+   "Large blisters; a vesicle is a small one.",
+   "plain meaning, not from the slides"
+  ],
+  "comedogenic": [
+   "Comedogenic",
+   "Tending to cause comedones by plugging the follicle. Dr. Smith: acne cosmetica comes from comedogenic oils in cosmetics; Dr. Patel: comedogenic drugs are an exclusion for self-care.",
+   "plain meaning, not from the slides; the word is on Smith Pathophys slide 35 and Patel Acne slide 18"
+  ],
+  "microcomedone": [
+   "Microcomedone",
+   "The first acne lesion: abnormal keratinization makes cells stick in a normal follicle; more sebum then turns it into a closed comedone.",
+   "Smith Pathophys slide 34"
+  ],
+  "p-acnes": [
+   "P. acnes",
+   "Propionibacterium acnes, the bacterium that colonizes the follicle duct in acne; its lipase turns sebum glycerides into free fatty acids.",
+   "Smith Pathophys slides 32–33"
+  ],
+  "g6pd": [
+   "G6PD",
+   "Glucose-6-phosphate dehydrogenase. Dr. Patel’s slide lists a “G6PD concern” for topical dapsone, with monitoring of the CBC and reticulocyte counts.",
+   "Patel Acne slide 31; the expansion is the plain meaning"
+  ],
+  "plaque": [
+   "Plaque",
+   "A raised lesion. In plaque psoriasis: red-violet, at least 0.5 cm across, well demarcated, covered by silver flaking scale.",
+   "Patel Scaly slide 26"
   ]
  },
  "tell": [
@@ -3367,7 +3885,7 @@
   {
    "id": "dd-severity",
    "file": "dd-severity.jpg",
-   "alt": "Five photographs of the diaper area labelled A to E, from slight redness in the crease (A) to redness covering both buttocks (E).",
+   "alt": "Five photographs of the diaper area labeled A to E, from slight redness in the crease (A) to redness covering both buttocks (E).",
    "src": "Patel Dermatitis slide 58"
   },
   {
