@@ -101,13 +101,18 @@ const DIA_NARR_UI = (() => {
   function stopPlayAll() {   // the engine's own "Play all", if it is running
     try { if (typeof ANIM !== 'undefined' && ANIM) { clearInterval(ANIM.t); ANIM.b.textContent = '▶ Play all'; ANIM = null; } } catch (e) {}
   }
+  // Writes only what changed. Setting textContent replaces the button's text node also when
+  // the text is the same; the observer at the end of this file sees that as a change to the
+  // page and draws again on the next frame, so an unconditional write here never stops.
   function ui() {
     document.querySelectorAll('[data-dnplay]').forEach(b => {
       const fig = b.closest('figure'), on = !!(P && P.fig === fig);
       const paused = on && P.h && P.h.paused;
-      b.textContent = !on ? '♪ Listen' : paused ? '▶ Resume' : '❚❚ Pause';
-      b.setAttribute('aria-pressed', on && !paused ? 'true' : 'false');
-      const s = fig && fig.querySelector('[data-dnstop]'); if (s) s.hidden = !on;
+      const label = !on ? '♪ Listen' : paused ? '▶ Resume' : '❚❚ Pause';
+      if (b.textContent !== label) b.textContent = label;
+      const pressed = on && !paused ? 'true' : 'false';
+      if (b.getAttribute('aria-pressed') !== pressed) b.setAttribute('aria-pressed', pressed);
+      const s = fig && fig.querySelector('[data-dnstop]'); if (s && s.hidden !== !on) s.hidden = !on;
     });
   }
   function stop() {

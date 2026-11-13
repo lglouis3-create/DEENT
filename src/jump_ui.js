@@ -308,8 +308,9 @@ mark.jmark{background-color:var(--jmp-mark);color:inherit;border-radius:2px;padd
   // a tab that lays itself out after it is drawn (the Atlas keys its tiles, figures load) moves
   // the target after the jump: land it again while the reader has not scrolled
   // (only once the page has stopped moving: an instant scroll during the smooth one misses)
+  // (not after handOff(): a file that lands the jump itself, walk_ui.js with a walkthrough's bar, has taken it over)
   function reland(act, el, n){
-    const live = () => ACT === act && !act.user && el.isConnected;
+    const live = () => ACT === act && !act.user && !act.handed && el.isConnected;
     const check = tries => {
       if (!live()) return;
       const y0 = window.scrollY;
@@ -406,8 +407,12 @@ mark.jmark{background-color:var(--jmp-mark);color:inherit;border-radius:2px;padd
   const coreShow = show;
   show = function(){ clear(); return coreShow.apply(this, arguments); };
 
-  // for the checks (jump_test.js) and nothing else
+  // for the checks (walk_test.js, examfold_test.js), and handOff() for a file that lands a jump itself: walk_ui.js
+  // puts a walkthrough's bar at the top, and the re-landing above would move the page back to the section heading,
+  // one to two screens above the player on a phone. After handOff() only the re-landing stops; the highlight stays
+  // until the reader scrolls it away, taps elsewhere, presses Escape or changes tab, as after any jump.
   window.JUMP_UI = {termsFor: ctx => [...termsFor(ctx)], clear, pinnedOffset, last: null,
+    handOff: () => { if (ACT) ACT.handed = true; },
     lines: (anchor, ctx) => { const t = document.getElementById(anchor); const ls = linesIn(regionOf(t));
       return {n: ls.length, vis: ls.filter(visible).length, scored: scoreLines(ls.filter(visible), termsFor(ctx)).filter(s => s.score).map(s => [s.score, s.terms.join('/'), norm(s.el.textContent).slice(0, 60)])}; }};
 })();
