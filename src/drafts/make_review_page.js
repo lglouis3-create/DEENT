@@ -68,7 +68,7 @@ code{font-size:12.5px}
 </style>
 <main>
 <h1>Exam 1 style drafts</h1>
-<p class="lede">22 practice items written from your 25 recalled Exam 1 questions and Dr. Sikazwe's stated cues: 12 for Dr. Sikazwe, 10 for Dr. Smith. Nothing here is in the drill yet. Tap "why" under an option for the reason it is right or wrong, and "What it teaches" for the sources.</p>
+<p class="lede">22 practice items written from your 25 recalled Exam 1 questions and Dr. Sikazwe's stated cues: 12 for Dr. Sikazwe, 10 for Dr. Smith. Nothing here is in the drill yet. An independent check against the slides and the 11/04 transcript found citation and wording problems (wrong slide number for apremilast, two attributions that came from the lecture and not the slide, one distractor that could be defended, a stem that gave away its key); they are fixed in this version. Tap "why" under an option for the reason it is right or wrong, and "What it teaches" for the sources.</p>
 
 <div class="panel">
 <h3>What these add to the bank</h3>
