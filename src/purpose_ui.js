@@ -59,11 +59,12 @@ const PURPOSE_UI = (() => {
      drawn (a Guide, Reference, Diagrams, an answered question) and moves no page afterwards. The
      walkthrough player has its own words, so the line is hidden there. */
   const esc = t => String(t).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
-  const OPEN = '<figure class="fig">';
+  const OPEN_RX = /^<figure class="fig[^"]*">/;   // "fig", "fig rxfig", "fig rxfig cbfig"
   Object.keys(PURPOSE).forEach(k => {
     const h = DIA[k];
-    if (typeof h !== 'string' || h.indexOf(OPEN) !== 0 || h.indexOf('dnpurpose') >= 0) return;
-    DIA[k] = OPEN + '<p class="dnpurpose"><b>Purpose.</b> ' + esc(PURPOSE[k]) + '</p>' + h.slice(OPEN.length);
+    const m = typeof h === 'string' && h.match(OPEN_RX);
+    if (!m || h.indexOf('dnpurpose') >= 0) return;
+    DIA[k] = m[0] + '<p class="dnpurpose"><b>Purpose.</b> ' + esc(PURPOSE[k]) + '</p>' + h.slice(m[0].length);
   });
 
   const css = `.dnpurpose{margin:2px 0 8px;font-size:13.5px;line-height:1.45;color:var(--text,inherit)}.dnpurpose b{font-weight:700}
