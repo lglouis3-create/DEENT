@@ -20,16 +20,17 @@ the clean page with the same text, in order), and writes, per deck:
   files             the file names the citations use for it (course.js `lectures[].deck`)
   label             what a reader sees in the viewer ("Dr. Smith, Skin Pharmacology")
   unit              'Slide' or 'Page' (Dr. Sikazwe's deck is cited by the page of the file)
-  pages             the number of clean pages (images deck/<id>/<NN>.jpg, render_deck.py)
+  pages, ar         the number of clean pages (images deck/<id>/<NN>.webp, render_deck.py) and their
+                    width over height
   cited             the highest number a citation of this deck may carry
   map               {cited number: clean page} ONLY where the two differ; a cited number that
                     has no clean page maps to 0 and is never linked; null = every cited number
                     is its own clean page
   titles            one line per clean page, for the image's alt text
 
-and the tables slide_ui.js resolves a citation with (hand-kept, in this file):
-NAMES (how a citation names a deck in words) and SECTIONS (which deck a bare
-"slide 12" belongs to inside a Reference, Tell apart or Guide section).
+and copies in the two hand-kept tables of slide_tables.json that slide_ui.js resolves a
+citation with: names (how a citation names a deck in words) and sections (which deck
+a bare "slide 12" belongs to inside a Reference, Tell apart or Guide section).
 
 A page pair whose text does not settle it (few words on the page, or a low
 score) is compared as a picture as well (pdftoppm, 48 px wide, grey), and the
@@ -58,38 +59,26 @@ DECKS = [
     ('p8c', 'Patel',   2, 'Patel_Warts-Corns-Calluses.pdf', 'Patel_WartsCornsCalluses.pdf', 'Dr. Patel, Warts, Corns and Calluses', 'Slide'),
 ]
 
-# ---- hand-kept tables (slide_ui.js and slide_check.js read them from slide_data.js) ----------
-# NAMES: how running text names a deck directly before "slide N", or before the number itself
-# ("PCol 55", "DPAW p. 43", "Patel Scaly slide 12"). Longest names are tried first. A name maps
-# to a deck id, or to 'sun?' for the bare word "Sun", which two decks share: it is then settled by
-# the professor named beside it or by the declared context, and is not linked when neither says.
-NAMES = [
-    ['Smith Sun Exposure', 'sun'], ['Smith Sun', 'sun'], ["Dr. Smith's Sun", 'sun'],
-    ['Patel Sun Exposure', 'p8s'], ['Patel Sun', 'p8s'], ["Dr. Patel's Sun", 'p8s'],
-    ['Sun Exposure', 'sun?'], ['Sun', 'sun?'], ['SE', 'p8s'],
-    ['Skin Pathophysiology', 'pp'], ['Skin-Pathophys', 'pp'], ['Smith Pathophys', 'pp'], ['Pathophysiology', 'pp'],
-    ['Pathophys', 'pp'], ['PP', 'pp'],
-    ['Skin Pharmacology', 'pc'], ['Smith PCol', 'pc'], ['PCol', 'pc'], ['PC', 'pc'],
-    ['DPAW deck', 'mc'], ['DPAW', 'mc'],
-    ['Patel Dermatitis', 'p5'], ['Dermatitis', 'p5'], ['DT', 'p5'],
-    ['Patel Acne', 'p6'], ['Acne', 'p6'], ['AT', 'p6'],
-    ['Patel Scaly Dermatoses', 'p7'], ['Patel Scaly', 'p7'], ['Scaly Dermatoses', 'p7'], ['Scaly', 'p7'], ['SD', 'p7'],
-    ['Patel Outdoor Exposures', 'p8o'], ['Patel Outdoor', 'p8o'], ['Outdoor Exposures', 'p8o'], ['Outdoor Exposure', 'p8o'],
-    ['Outdoor', 'p8o'], ['OE', 'p8o'],
-    ['Patel Wound Care', 'p8w'], ['Patel Wound', 'p8w'], ['Wound Care', 'p8w'], ['Wound', 'p8w'], ['WC', 'p8w'],
-    ['Patel Warts', 'p8c'], ['Warts, Corns and Calluses', 'p8c'], ['Warts', 'p8c'], ['WCC', 'p8c'],
-]
-# SECTIONS: the deck of a bare "slide N" / "(p. N)" / Slide-column number, by the id of the
-# section it is read in, longest prefix first. A section that mixes decks is listed with null:
-# bare numbers there are never linked (a citation that names its deck still is).
-# ref-*, tell-*: the <h3 id> the block sits under in reference.js / tell.js;
-# gobj-*: the guide section (guide.js); at-*: an Atlas board; deckbody-<deck file>: a Topics folder.
-SECTIONS = []   # filled in by sections() below from src/slide_sections.json
+# ---- hand-kept tables: src/slide_tables.json (slide_ui.js and slide_check.js read them from
+# slide_data.js, where this script copies them) ------------------------------------------------
+#   names     [name, deck id, bare]: how running text names a deck directly before "slide N"
+#             ("Patel Scaly slide 12", "DPAW p. 43"); with bare = 1 the number may follow the name
+#             itself ("PCol 55", "PP 8"). Longest names are tried first. The deck 'sun?' is the
+#             word "Sun", which two decks share: it is settled by the professor named beside it or
+#             by the section it is read in, and is not linked when neither says.
+#   sections  [id or id prefix ending in "-", deck id or null, note]: the deck of a bare "slide N",
+#             "(p. N)" or Slide-column number, by the section it is read in (the <h3 id> of
+#             reference.js and tell.js, the <section class="gobj" id> of guide.js, an Atlas board
+#             at-*, a drawn figure dg-rx-* / dg-cb-*). null = the section draws on more than one
+#             deck: a bare number there is never linked (a citation that names its deck still is).
+#             An exact id wins over a prefix, a longer prefix over a shorter one. slide_check.js
+#             fails when a section of the three reading files has no row here.
+TABLES = os.path.join(HERE, 'slide_tables.json')
 
 
-def sections():
-    p = os.path.join(HERE, 'slide_sections.json')
-    return json.load(open(p, encoding='utf-8')) if os.path.exists(p) else []
+def tables():
+    t = json.load(open(TABLES, encoding='utf-8'))
+    return t['names'], t['sections']
 
 
 def deck_dirs():
@@ -97,6 +86,12 @@ def deck_dirs():
     if not d:
         d = next((x for x in DEFAULT_DECKS if os.path.isfile(os.path.join(x, DECKS[0][3]))), DEFAULT_DECKS[0])
     return d, os.environ.get('CLEAN_DIR') or os.path.join(d, 'clean')
+
+
+def aspect(pdf):
+    """Width over height of the deck's pages (the viewer reserves the picture's space with it)."""
+    m = re.search(r'Page size:\s+([\d.]+) x ([\d.]+)', subprocess.run(['pdfinfo', pdf], capture_output=True, text=True, check=True).stdout)
+    return round(float(m.group(1)) / float(m.group(2)), 4)
 
 
 def page_texts(pdf):
@@ -336,7 +331,7 @@ def build(report):
             report.append('  - look at: ' + line)
         titles = [title_of(C[k], k + 1) for k in range(len(C))]
         decks[did] = {'id': did, 'prof': prof, 'exam': exam, 'files': [afile], 'clean': cfile, 'label': label, 'unit': unit,
-                      'pages': len(C), 'cited': len(A),
+                      'pages': len(C), 'cited': len(A), 'ar': aspect(cp),
                       'map': (None if ident else {str(a): m[a] for a in range(1, len(A) + 1) if m[a] != a}),
                       'titles': titles}
         report.append('')
@@ -349,9 +344,10 @@ def read_existing():
 
 
 def write(decks):
-    data = {'dir': 'deck', 'ext': 'jpg', 'decks': decks, 'names': NAMES, 'sections': sections()}
+    names, sections = tables()
+    data = {'dir': 'deck', 'ext': 'webp', 'decks': decks, 'names': names, 'sections': sections}
     head = ('/* slide_data.js: GENERATED by slide_map.py (the page maps and titles from the decks; the\n'
-            '   names and sections tables from slide_map.py and slide_sections.json). Do not edit by hand:\n'
+            '   names and sections tables from slide_tables.json). Do not edit by hand:\n'
             '   change the table and run `python3 slide_map.py --tables` (no deck needed), or the whole\n'
             '   script when a deck changes. Read by slide_ui.js (the slide links and the viewer) and\n'
             '   slide_check.js. `map` lists only the cited numbers whose clean page differs; 0 = no clean\n'
@@ -361,7 +357,7 @@ def write(decks):
     for k, did in enumerate(ids):
         d = decks[did]
         body.append(f'  {json.dumps(did)}: {{' + ', '.join(f'{json.dumps(f)}: {json.dumps(d[f], ensure_ascii=False)}'
-                    for f in ('id', 'prof', 'exam', 'files', 'clean', 'label', 'unit', 'pages', 'cited', 'map')) + ',')
+                    for f in ('id', 'prof', 'exam', 'files', 'clean', 'label', 'unit', 'pages', 'cited', 'ar', 'map')) + ',')
         body.append('   "titles": ' + json.dumps(d['titles'], ensure_ascii=False) + '}' + (',' if k < len(ids) - 1 else ''))
     body.append(' },')
     body.append(' "names": ' + json.dumps(data['names'], ensure_ascii=False) + ',')
@@ -379,7 +375,7 @@ def main():
     if '--tables' in a:
         decks = read_existing()['decks']
         write(decks)
-        print(f'slide_data.js: tables rewritten ({len(NAMES)} names, {len(sections())} section rules); page maps kept')
+        print('slide_data.js: tables rewritten ({} names, {} section rules); page maps kept'.format(*map(len, tables())))
         return
     report = ['## Page map: annotated copy (what the citations number) against the clean copy (what is shown)', '']
     decks = build(report)
