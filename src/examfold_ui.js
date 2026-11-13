@@ -66,9 +66,23 @@
        were when the reader left it, so the kept scroll position is right;
      - the place kept across a reload: a record written before the folders
        existed names none of them, so they are put at their usual state and
-       the saved line's folder is opened;
-     - a walkthrough player that is open keeps its folder open;
+       the folder around the saved line is opened (a line inside a folder's
+       body; when the saved line is a closed folder's own header, the folder
+       stays closed);
+     - a walkthrough player that is open keeps its folder open, unless the
+       reader has closed that folder by its header since;
      - printing opens every folder for the print and closes them after.
+   When the reader closes a folder by its header, a walkthrough or a narrated
+   figure that is being read aloud inside it is paused (its Pause button has
+   just left the screen). That folder then stays closed when the tab is drawn
+   again, until the reader, a jump or "Listen" opens it.
+   A Tell apart row that opens a comparison in the Diseases tab sets that
+   tab's sub-view and clears its search; the Back button puts both back as
+   they were, when the reader has changed neither in between.
+   The core keeps every table's scroll box in a set (views.js TABLE_BOXES) and
+   drops one that has left the page only at a window resize; a kept box keeps
+   the folder it was in. After each drawing of the three tabs the boxes that
+   have left the page are dropped here.
    If the folders cannot be drawn, the tab is drawn again as the core and the
    other files draw it, flat, and one console line says so. */
 const EXAMFOLD_UI = (function examFoldUi(){
@@ -191,10 +205,35 @@ const EXAMFOLD_UI = (function examFoldUi(){
   function measure(f){
     try { if (typeof sideCue === 'function') bodyOf(f).querySelectorAll('.tscroll').forEach(sideCue); } catch (e) { /* the tables still scroll */ }
   }
+  // a folder the reader closed by its header and nothing has opened since (page memory, never stored): a walkthrough
+  // player inside it does not bring it open again when the tab is next drawn
+  const SHUT = {};
+  const shutKey = f => f.dataset.view + ':' + f.dataset.exam;
   function setOpen(f, on, keep){
     if (f.open !== on) f.open = on;
-    if (on) measure(f);          // now, not at the toggle event: a landing that follows measures the final layout
+    if (on) { delete SHUT[shutKey(f)]; measure(f); }   // measured now, not at the toggle event: a landing that follows measures the final layout
     if (keep) saveSt(f.dataset.view, f.dataset.exam, on);
+  }
+  // the reader closes a folder: a walkthrough or a narrated figure that is being read aloud inside it is paused
+  // (its Pause button leaves the screen with the folder, and the voice would go on with nothing in view to stop it)
+  function hush(f){
+    const body = bodyOf(f); if (!body) return;
+    try {
+      const s = typeof WALK_UI !== 'undefined' && WALK_UI && typeof WALK_UI.state === 'function' ? WALK_UI.state() : null;
+      const p = s && s.playing && typeof WALK_UI.panel === 'function' ? WALK_UI.panel(s.id) : null;
+      if (p && body.contains(p) && typeof WALK_UI.pause === 'function') WALK_UI.pause();
+    } catch (e) { /* it plays on, as before */ }
+    try {
+      // dianarr_ui.js marks the Listen button of the figure it is reading aria-pressed="true"; its narration is the one
+      // NARR (walk_ui.js) holds with owner 'dianarr', paused through the handle that figure's own Pause button uses.
+      // Between two steps there is no handle to pause: the narration is stopped, the figure stays on its step.
+      const d = typeof DIA_NARR_UI !== 'undefined' && DIA_NARR_UI && typeof DIA_NARR_UI.playing === 'function' ? DIA_NARR_UI.playing() : null;
+      if (d && !d.paused && body.querySelector('[data-dnplay][aria-pressed="true"]')) {
+        const h = typeof NARR !== 'undefined' && NARR && typeof NARR.current === 'function' ? NARR.current() : null;
+        if (h && h.owner === 'dianarr' && !h.done && typeof h.pause === 'function') h.pause();
+        else if (typeof DIA_NARR_UI.stop === 'function') DIA_NARR_UI.stop();
+      }
+    } catch (e) { /* it plays on, as before */ }
   }
   // open the closed folder around an element (a jump target, a walkthrough, a line kept across a reload); never stored
   function reveal(el){
@@ -250,13 +289,20 @@ const EXAMFOLD_UI = (function examFoldUi(){
       mine.forEach(r => r.els.forEach(el => body.appendChild(el)));
       f.querySelector('.rfmeta').textContent = (exm.date ? exm.date + ' · ' : '') + T.count(body);
       let open = was ? !!was[n] : usual(view, n, nums);
-      // a jump's target, or a walkthrough player that is open, is never left in a closed folder
-      if (!open && ((want && body.contains(want)) || body.querySelector('.wkpanel'))) open = true;
+      // a jump's target is never left in a closed folder; nor is a walkthrough player that is open, unless the reader
+      // has closed this folder by its header since (the walkthrough was paused then; a jump or "Listen" opens it again)
+      if (!open && ((want && body.contains(want)) || (body.querySelector('.wkpanel') && !SHUT[view + ':' + n]))) open = true;
       f.open = open;
-      // only the reader's own tap or key on the header is remembered
-      f.querySelector('summary').addEventListener('click', ev => { ev.preventDefault(); setOpen(f, !f.open, true); });
+      if (open) delete SHUT[view + ':' + n];
+      // only the reader's own tap or key on the header is remembered; closing pauses what is read aloud inside
+      f.querySelector('summary').addEventListener('click', ev => {
+        ev.preventDefault();
+        const on = !f.open;
+        if (!on) { hush(f); SHUT[shutKey(f)] = true; }
+        setOpen(f, on, true);
+      });
       // however else it opens (find-in-page, the core's place-keeping, jump_ui.js), its tables are measured
-      f.addEventListener('toggle', () => { if (f.open) measure(f); });
+      f.addEventListener('toggle', () => { if (f.open) { delete SHUT[shutKey(f)]; measure(f); } });
     });
     // the "Listen" row of a narrated figure (dianarr_ui.js) is added now instead of at the next frame, so a landing or
     // the Back button's scroll position that follows this drawing is not moved by the rows above it
@@ -286,15 +332,25 @@ const EXAMFOLD_UI = (function examFoldUi(){
       });
     }
   }
+  // The core keeps every table's scroll box in TABLE_BOXES (views.js boxTables) so a window resize can measure it
+  // again, and drops a box that has left the page only then (sideCue). A drawing replaces the tab's boxes; each one
+  // still in the set keeps what it was drawn in, here a whole folder. They are dropped after each drawing.
+  function dropGone(){
+    try {
+      if (typeof TABLE_BOXES === 'undefined' || !TABLE_BOXES || typeof TABLE_BOXES.forEach !== 'function' || typeof TABLE_BOXES.delete !== 'function') return;
+      TABLE_BOXES.forEach(b => { if (b && b.isConnected === false) TABLE_BOXES.delete(b); });
+    } catch (e) { /* a core without the set: nothing to drop */ }
+  }
   const after = (og, view) => function(){
     const r = og.apply(this, arguments);          // a throw from the tab's own drawing passes through as before
-    if (BROKEN[view]) return r;
+    if (BROKEN[view]) { dropGone(); return r; }
     try { fold(view); }
     catch (e) {
       BROKEN[view] = true;
       console.error('The exam folders could not be drawn; the tab is shown without them.', e);
       try { og.apply(this, arguments); } catch (e2) { /* as drawn */ }   // drawn again, flat
     }
+    dropGone();
     return r;
   };
   if (typeof renderGuide === 'function') renderGuide = after(renderGuide, 'guide');
@@ -306,22 +362,28 @@ const EXAMFOLD_UI = (function examFoldUi(){
   //    jump_ui.js has already replaced it with its landing below the pinned strip; this wraps that one.
   try { const land = scrollToEl; scrollToEl = function(el){ try { reveal(el); } catch (e) {} return land.apply(this, arguments); }; } catch (e) { /* an older core without it */ }
   // 2. jump(view, anchor): the tab is drawn with the target's folder open; the tab left behind keeps its folders for Back
+  let DZWAS = null;     // {view, q, to}: the Diseases tab's sub-view and search before a Tell apart row set them (5 below)
   if (typeof jump === 'function') {
     const j0 = jump;
     jump = function(view, anchor){
       let left = null, n0 = 0;
       try { left = snapshot(VIEW); n0 = RET.length; } catch (e) {}
+      const dzWas = DZWAS; DZWAS = null;
       WANT = anchor || null; SAME = left && left.view === view ? left : null;
       try { return j0.apply(this, arguments); }
       finally {
         WANT = null; SAME = null;
         try { if (left && RET.length > n0 && RET[n0] && RET[n0].view === left.view) RET[n0].rfold = left.open; } catch (e) {}
+        // the Back entry this jump made also carries what the Diseases tab showed before the row was tapped
+        try { if (dzWas && view === 'dz' && RET.length > n0 && RET[n0]) RET[n0].rfdz = dzWas; } catch (e) {}
       }
     };
   }
   // 3. the place kept across a reload (views.js placeRestore, placeScroll): the core has just set every <details>
   //    of the tab from its record. A record that names no exam folder was written before the folders existed (or
-  //    with all of them closed): they go to their usual state. Then the saved line's folder is opened.
+  //    with all of them closed): they go to their usual state. Then the folder around the saved line is opened.
+  //    The saved line can be a folder itself: the core takes the first element with an id whose top edge is on
+  //    screen, and a closed folder's header is one. That folder stays as the record and the usual state left it.
   function placeFolders(pl){
     if (!pl || pl.rfDone) return;
     const pane = document.getElementById('v-' + pl.v), fs = foldsOf(pl.v);
@@ -336,7 +398,7 @@ const EXAMFOLD_UI = (function examFoldUi(){
     const a = pl.a; let el = null;
     if (a && a.id) el = document.getElementById(a.id);
     else if (a && a.tag) el = [...pane.querySelectorAll(a.tag)].filter(x => (x.textContent || '').replace(/\s+/g, ' ').trim().slice(0, 80) === a.txt)[a.n] || null;
-    if (el && pane.contains(el)) reveal(el);
+    if (el && pane.contains(el) && el.closest('.rfbody')) reveal(el);   // a line inside a folder's body, never the folder or its header
     fs.forEach(f => { if (f.open) measure(f); });
   }
   try { const ps = placeScroll; placeScroll = function(pl){ try { placeFolders(pl); } catch (e) {} return ps.apply(this, arguments); }; } catch (e) { /* an older core without it */ }
@@ -361,11 +423,21 @@ const EXAMFOLD_UI = (function examFoldUi(){
         const r = RET[RET.length - 1];
         BACK = r && r.rfold ? {view: r.view, open: r.rfold} : null;
         setTimeout(() => { BACK = null; }, 0);
+        // and the Diseases tab gets back the sub-view and search it had before a Tell apart row opened it (5),
+        // when it is still as that row set it: a sub-view or search the reader chose there since is kept
+        const w = r && r.rfdz, s = w && typeof DZ_UI !== 'undefined' && DZ_UI ? DZ_UI.state : null;
+        if (s && s.view === w.to && s.q === '') { s.view = w.view; s.q = w.q; }
         return;
       }
-      // 5. a comparison of the Diseases tab: that tab is set to the view the button names before the core jumps to it
+      // 5. a comparison of the Diseases tab: that tab is set to the view the button names before the core jumps to
+      //    it. What it showed before goes with the jump (2), for the Back button.
       const dz = t.closest('[data-rfdz]');
-      if (dz && typeof DZ_UI !== 'undefined' && DZ_UI && DZ_UI.state) { DZ_UI.state.view = dz.dataset.rfdz; DZ_UI.state.q = ''; }
+      if (dz && typeof DZ_UI !== 'undefined' && DZ_UI && DZ_UI.state) {
+        const s = DZ_UI.state;
+        DZWAS = {view: s.view, q: typeof s.q === 'string' ? s.q : '', to: dz.dataset.rfdz};
+        setTimeout(() => { DZWAS = null; }, 0);          // for the jump this click makes, and no other
+        s.view = dz.dataset.rfdz; s.q = '';
+      }
       // 6. a control inside a closed folder that code clicks (a reader cannot: it is not on screen), e.g. a walkthrough's bar
       if (t.closest('.rfold') && !t.closest('.rfhead')) reveal(t);
     } catch (err) { /* the click goes on as before */ }
@@ -374,10 +446,11 @@ const EXAMFOLD_UI = (function examFoldUi(){
   let PRINT = null;
   if (typeof window !== 'undefined' && window.addEventListener) {
     window.addEventListener('beforeprint', () => {
-      try { PRINT = {y: window.scrollY, shut: [...document.querySelectorAll('details.rfold:not([open])')]}; PRINT.shut.forEach(f => setOpen(f, true, false)); } catch (e) {}
+      // the folders the reader closed by their headers are noted first: opening for the print is not the reader opening them
+      try { PRINT = {y: window.scrollY, marks: Object.assign({}, SHUT), shut: [...document.querySelectorAll('details.rfold:not([open])')]}; PRINT.shut.forEach(f => setOpen(f, true, false)); } catch (e) {}
     });
     window.addEventListener('afterprint', () => {
-      try { const p = PRINT; PRINT = null; if (!p) return; p.shut.forEach(f => { if (f.isConnected) setOpen(f, false, false); }); window.scrollTo(0, p.y); } catch (e) {}
+      try { const p = PRINT; PRINT = null; if (!p) return; p.shut.forEach(f => { if (f.isConnected) { setOpen(f, false, false); if (p.marks && p.marks[shutKey(f)]) SHUT[shutKey(f)] = true; } }); window.scrollTo(0, p.y); } catch (e) {}
     });
   }
 
