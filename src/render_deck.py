@@ -26,7 +26,8 @@ slides (Warts, Corns and Calluses 17, 370 words; DPAW 26, the vitamin D scheme):
   WebP 1920 q60   about 35 MB; no gain at the sizes the viewer shows
 
 Contact details are covered before a page is saved: every text line that holds an email
-address or the words "office hours" (and the lines that continue it) is painted over in the
+address, the words "office hours" or a Poll Everywhere join address (pollev.com/<handle>, the
+handle being the local part of the email), and the lines that continue it, is painted over in the
 color of the slide beside it (cover_rects below; the pages are listed as they are rendered). These are a professor's own
 details on title, "Communication" and closing slides, not course content, and the site is
 public. A telephone number is left as it is (the Poison Control number is slide content).
@@ -47,12 +48,13 @@ def slides():
 
 COVER_EMAIL = re.compile(r'[\w.+-]+@[\w-]+\.[\w.-]+')
 COVER_BLOCK = re.compile(r'office\s+hours?', re.I)
+COVER_JOIN = re.compile(r'pollev\.com/\S', re.I)      # a personal Poll Everywhere join address (its handle is the email's)
 
 
 def cover_rects(pdf, p):
     """The rectangles to paint over on page p (1-based), as fractions of the page: every text
-    line that holds an email address or the words "office hours", and the lines that continue
-    such a line directly below it."""
+    line that holds an email address, the words "office hours" or a Poll Everywhere join
+    address, and the lines that continue such a line directly below it."""
     import pymupdf
     doc = pymupdf.open(pdf)
     page = doc[p - 1]
@@ -62,7 +64,7 @@ def cover_rects(pdf, p):
         for ln in blk.get('lines', []):
             lines.append((tuple(ln['bbox']), ''.join(sp['text'] for sp in ln['spans'])))
     doc.close()
-    hit = [bb for bb, t in lines if COVER_EMAIL.search(t) or COVER_BLOCK.search(t)]
+    hit = [bb for bb, t in lines if COVER_EMAIL.search(t) or COVER_BLOCK.search(t) or COVER_JOIN.search(t)]
     grew = True
     while grew:                       # a wrapped line under a covered one, overlapping it sideways
         grew = False
