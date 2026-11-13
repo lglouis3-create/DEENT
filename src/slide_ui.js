@@ -8,7 +8,10 @@
    (an inline span with the role of a button, so the line wraps as it did)
    that opens that slide from the clean copy of the deck (deck/<deck>/<NN>.webp,
    render_deck.py; the page map and the tables are slide_data.js, written by
-   slide_map.py from the decks and slide_tables.json).
+   slide_map.py from the decks and slide_tables.json). The control's name is
+   its own text; what it opens ("Open Dr. Smith, Skin Pharmacology, slide 24")
+   is its title and its description, so a heading that holds citations is
+   read as it is written.
 
    1. THE PARSER (no DOM; slide_check.js runs this same code over the source
       files). In one line of text it finds, in this order of priority:
@@ -16,29 +19,49 @@
          Students-2026.pdf) slides 24-26") or a name from SLIDES.names
          ("PCol 55", "DPAW p. 43", "Patel Scaly slide 12", "PP 8"). "Sun" is
          the name of two decks: it goes to the deck of the professor named
-         with it, else to the sun deck its place declares, else nowhere;
+         with it, else to the sun deck its place declares, else nowhere. A
+         name with a number alone is not a citation when a count word follows
+         the number ("SE 2 applications") or a letter does ("PP 2B");
       b. a bare "slide N", "slides N-M", "p. N" (Dr. Sikazwe's deck only: it is
          the one cited by page), or a number in a column headed Slide: it
          takes the deck its place declares (2), or the deck named earlier in
          the same sentence when the place declares none. A professor's name
-         before it ("Dr. Patel's slide 45") must be that deck's professor;
+         before it ("Dr. Patel's slide 45") or in brackets right after it
+         ("slide 12 (Dr. Patel)") must be that deck's professor. "printed
+         slides 24-33" (Dr. Sikazwe's deck) are the numbers printed on the
+         slides, not the pages of the file;
       c. anything else stays text: transcript lines (T 573-577, T@12345),
-         recording times, dates, chart, syllabus and textbook pages, a number
-         outside the deck.
+         recording times, dates, chart, syllabus and textbook pages (also "the
+         drug chart ... on its p.5": the chart is named earlier in the
+         sentence and no deck after it), a number outside the deck.
+      A number ends a citation before a colon ("Slide 12: ...", "Slides
+      24-26: ...") unless a digit follows the colon (a time 12:30, a ratio).
+      The text of a line is joined from its text nodes with nothing between
+      them; where the text of another element starts, a word starts ("...of
+      the skin" + "PP 4-6" in a guide's objective bar).
    2. THE PLACE (declared, never read out of prose): after a question is
       answered, the deck its own source line names first (the deck the engine
       files the question under); in Reference, Tell apart and Guides, the
       section's deck from SLIDES.sections (a section that draws on several
       decks has none), or the one deck a table column's heading names; a
-      figure caption, the one deck it names; an Atlas board, Dr. Sikazwe's
-      deck; a Drug list line, the deck its source chip names; in Diseases, the
-      deck(s) the nearest source line names, within a professor's block that
-      professor's, and for the practice patients the card's deck.
+      figure caption, the one deck it names; an Atlas board, and the notes
+      under the structures an explanation sets side by side (they are the
+      Atlas notes), Dr. Sikazwe's deck; a Drug list line, the deck its source
+      chip names; in Diseases, the deck(s) the nearest source line names,
+      within a professor's block or group that professor's, for the practice
+      patients the card's deck, and for a drug panel's "Who should not get
+      it" line that starts with its conditions the one deck the panel's rows
+      for those conditions name. In Weak spots a missed question's own source
+      line gives the place, as after an answer; a card of "What to review
+      next" takes the place of the question whose stem it shows.
    3. WHERE: only in what the page shows after an answer (the explanation and
-      its source line, the exam review, the missed list) and in the reading
-      tabs (Reference, Tell apart, Guides, Atlas, Drug list, Diseases, figure
+      its source line, the line under each pair of a matching question, the
+      exam review, the missed list, the review plan) and in the reading tabs
+      (Reference, Tell apart, Guides, Atlas, Drug list, Diseases, figure
       captions). Never inside a button, link, summary, label or form field,
-      never in an answer option, never in a drawn figure.
+      never in an answer option, never in a drawn figure, never in the
+      practice-exam clock. A citation is linked only inside one text node
+      (from its slide word on, when its deck name is under a jump highlight).
    4. THE VIEWER: one <dialog> with the deck, "Slide N of M" (Dr. Sikazwe's
       deck: "Page N", the page of the file the citations count by), the
       picture, Previous, Next, "Open full size" and Close. A picture is
@@ -272,7 +295,7 @@ const SLIDE_UI = (() => {
 
   /* ------------------------------------------------------------- linkifier */
   const D = SLIDES.decks;
-  const SKIP = 'button,a,summary,label,input,select,textarea,option,svg,script,style,code,.slk,.dzcz,.opt,nav,[contenteditable]';
+  const SKIP = 'button,a,summary,label,input,select,textarea,option,svg,script,style,code,.slk,.dzcz,.opt,.clock,nav,[contenteditable]';
   const UNIT_SEL = 'p,li,td,th,dd,dt,figcaption,h2,h3,h4,h5,h6,small,div,section,article,span.ln,span.dlsrc,span.dzsrc,span.wtxt,span.atpg,span.stepwhy';
   const DZPROF = {sm: 'Smith', sk: 'Sikazwe', pa: 'Patel'};
   const SLIDE_HEAD = /^\s*(?:slides?|pages?)\s*(?:;.*)?$/i;
@@ -299,7 +322,27 @@ const SLIDE_UI = (() => {
   /* Diseases: the deck(s) the source line(s) of the nearest block name; inside a professor's
      block, that professor; for the practice patients, the card's deck (SLIDES.sections "dzcases-") */
   function dzCtx(el, view){
-    const blk = el.closest('.dzprof'), prof = blk ? DZPROF[['sm', 'sk', 'pa'].filter(k => blk.classList.contains(k))[0]] || null : null;
+    // a professor's block: .dzprof, or on a card with more than one professor the group .dzgrp.sm|sk|pa (dz_ui.js stepBody)
+    const blk = el.closest('.dzprof,.dzgrp'), prof = blk ? DZPROF[['sm', 'sk', 'pa'].filter(k => blk.classList.contains(k))[0]] || null : null;
+    // a drug panel's "Who should not get it" list has no source line. A line that starts with its conditions
+    // ("Psoriasis / Seborrheic dermatitis: …", written by dz_build.py from the rows of the part that gave the line)
+    // takes the deck the panel's own rows for exactly those conditions name, when they name one deck
+    const av = el.closest('.dzavoid');
+    if (av) {
+      const li = el.closest('li') || el, m = /^([^:]{3,200}): /.exec(txt(li)), want = m ? m[1].split(' / ').map(x => x.trim()) : [];
+      const rows = av.parentElement ? av.parentElement.querySelectorAll('.dzprof.pa .use') : [], src = [];
+      let all = want.length > 0;
+      want.forEach(name => {
+        let hit = false;
+        for (let i = 0; i < rows.length; i++) {
+          const go = rows[i].querySelector('.dzgo');
+          if (go && txt(go).replace(/\s*\(.*?\)/g, '').trim() === name) { hit = true; rows[i].querySelectorAll('.dzsrc').forEach(x => src.push(txt(x))); }
+        }
+        if (!hit) all = false;
+      });
+      const decks = all && src.length ? P.decksNamed(src.join('; ')) : [];
+      return {decks: decks.length === 1 ? decks : [], prof: null};
+    }
     for (let a = el; a && a !== view; a = a.parentElement) {
       const src = [];
       for (let c = a.firstElementChild; c; c = c.nextElementSibling) if (c.classList && c.classList.contains('dzsrc')) src.push(txt(c));
@@ -328,35 +371,74 @@ const SLIDE_UI = (() => {
     else if (id === 'v-diagrams') view.querySelectorAll('figcaption').forEach(f => out.push([f, () => ({decks: []})]));
     else {
       // after an answer: the explanation block and its source line; the exam review; the missed list
-      view.querySelectorAll('.why').forEach(w => { const c = w.querySelector('.cite'); const x = P.questionCtx(c ? txt(c) : ''); out.push([w, () => x]); });
+      view.querySelectorAll('.why').forEach(w => {
+        const c = w.querySelector('.cite'); const x = P.questionCtx(c ? txt(c) : ''); out.push([w, () => x]);
+        // a matching question: the line under each pair stands in the table before the explanation block
+        if (w.parentElement) w.parentElement.querySelectorAll(':scope > table.matchtab .stepwhy').forEach(e => out.push([e, () => x]));
+      });
       view.querySelectorAll('.qbody').forEach(b => {
         if (b.querySelector('.why')) return;
         const c = b.querySelector(':scope > .cite'); if (!c) return;       // a question not yet answered has no source line
         const x = P.questionCtx(txt(c));
         b.querySelectorAll(':scope > .wrow, :scope > .teach, :scope > .cite, :scope > .prose').forEach(e => out.push([e, () => x]));
       });
-      view.querySelectorAll('.missq .mmeta').forEach(e => out.push([e, () => ({decks: []})]));
+      // the missed list: the last line of an entry is the question's own source line, so it gives the place as it
+      // does after an answer; the Answer and You picked lines declare nothing
+      view.querySelectorAll('.missq').forEach(mq => {
+        const ms = mq.querySelectorAll(':scope > .mmeta'), cite = ms[ms.length - 1];
+        ms.forEach(e => { const x = e === cite ? P.questionCtx(txt(e)) : {decks: []}; out.push([e, () => x]); });
+      });
+      // Weak spots, "What to review next": a card shows one question (its stem, why the option picked is not the
+      // answer, the idea). The place is that question's, when the stem shown is the stem of questions of one deck
+      view.querySelectorAll('.plan .pconcept').forEach(pc => {
+        const pq = pc.querySelector(':scope > .pq'), bank = typeof QUESTIONS !== 'undefined' && Array.isArray(QUESTIONS) ? QUESTIONS : [];
+        if (!pq || !bank.length) return;
+        const t = txt(pq), isStem = q => !!q && typeof q.stem === 'string';
+        let qs = bank.filter(q => isStem(q) && q.stem === t);
+        if (!qs.length && t.slice(-1) === '…') qs = bank.filter(q => isStem(q) && q.stem.length > 160 && q.stem.slice(0, 160) === t.slice(0, -1));
+        const xs = qs.map(q => P.questionCtx(q.cite || ''));
+        if (!xs.length || !xs[0].decks.length || xs.some(x => x.decks[0] !== xs[0].decks[0])) return;
+        pc.querySelectorAll(':scope > .pw > .meta, :scope > .pi').forEach(e => out.push([e, () => xs[0]]));
+      });
     }
     return out;
   }
   const headOf = cell => {
     try { const t = cell.closest('table'); return t ? txt(t.querySelectorAll('thead th')[cell.cellIndex]) : ''; } catch (e) { return ''; }
   };
+  /* two text nodes one after the other that read as one run of text: side by side in one element, or parted
+     only by the edge of a slide link this file made or of a jump highlight (neither changes how the text reads) */
+  const SOFT = el => !!el && el.nodeType === 1 && (el.classList.contains('slk') || (el.tagName === 'MARK' && el.classList.contains('jmark')));
+  function sameRun(a, b){
+    let x = a, y = b;
+    while (!x.nextSibling && SOFT(x.parentNode)) x = x.parentNode;
+    while (!y.previousSibling && SOFT(y.parentNode)) y = y.parentNode;
+    return x.nextSibling === y;
+  }
   function linkUnit(unit, ctxOf){
     // the unit's text, with the place of every text node in it
-    const nodes = [], w = document.createTreeWalker(unit, 4 /* text */);
-    let text = '', n;
+    const nodes = [], breaks = [], w = document.createTreeWalker(unit, 4 /* text */);
+    let text = '', n, prev = null;
     while ((n = w.nextNode())) {
       const p = n.parentElement;
       if (!p || p.closest('svg,script,style')) continue;
+      // the text is joined with nothing in between, so that every offset is an offset in a text node; where the
+      // next text node belongs to another element ("…of the skin" | "PP 4–6" in a guide bar) its start is
+      // recorded: there a deck name starts a word although a letter stands before it in the joined text
+      if (prev && !sameRun(prev, n)) breaks.push(text.length);
       nodes.push({n, at: text.length, skip: !!p.closest(SKIP)});
-      text += n.data;
+      text += n.data; prev = n;
     }
     nodes.forEach(x => mark(x.n));
     if (!/\d/.test(text)) return 0;
     const ctx = Object.assign({decks: []}, ctxOf(unit) || {});
+    if (breaks.length) ctx.breaks = breaks;
+    // a structure strip in an explanation ("The structures side by side"): its captions are the Atlas notes, which
+    // cite Dr. Sikazwe's deck whatever deck the question is filed under (the row "at-", as on the Atlas tab)
+    const strip = !!unit.closest('.cmpcell');
+    if (strip) { const at = P.sectionDeck('at-') || {decks: []}; ctx.decks = at.decks; ctx.sun = at.sun || null; ctx.prof = null; }
     // a figure caption: the one deck it names; a table cell: the one deck its column heading names
-    const cap = unit.closest('figcaption');
+    const cap = strip ? null : unit.closest('figcaption');
     if (cap) { const d = P.decksNamed(txt(cap)); if (d.length === 1) ctx.decks = d; }
     const cell = unit.tagName === 'TD' ? unit : unit.closest('td');
     if (cell) {
@@ -368,10 +450,18 @@ const SLIDE_UI = (() => {
     let made = 0;
     // from the end, so the offsets of earlier links stay true
     res.links.slice().sort((a, b) => b.s - a.s).forEach(l => {
-      const x = nodes.filter(k => k.at <= l.s && l.e <= k.at + k.n.data.length)[0];
+      let s = l.s, x = nodes.filter(k => k.at <= s && l.e <= k.at + k.n.data.length)[0];
+      if (!x && l.alt > l.s) {
+        // the deck name is under a highlight (jump_ui.js wraps the words it found in <mark class="jmark">, so
+        // "Warts (slide 4" is two text nodes): the citation is linked from its slide word or its number on, when
+        // that part is in one text node and nothing but highlights splits the citation
+        const over = nodes.filter(k => k.at < l.e && l.s < k.at + k.n.data.length), last = over[over.length - 1];
+        const hl = k => !!k.n.parentElement.closest('mark.jmark');
+        if (last && last.at <= l.alt && over.every((k, i) => !i || hl(k) || hl(over[i - 1]))) { s = l.alt; x = last; }
+      }
       if (!x || x.skip || !x.n.parentNode) return;               // split over two nodes, or inside a control: left as text
       const r = P.resolve(l.deck, l.n, l.printed); if (!r) return;
-      const mid = x.n.splitText(l.s - x.at); mid.splitText(l.e - l.s);
+      const mid = x.n.splitText(s - x.at); mid.splitText(l.e - s);
       // a span with the role of a button: it wraps inside a line as the text did (a <button> is one
       // unbreakable box, which re-wrapped lines and changed the height of the page after it was drawn)
       const b = document.createElement('span');
@@ -380,7 +470,9 @@ const SLIDE_UI = (() => {
       if (l.to) b.setAttribute('data-to', l.to);
       if (l.printed) b.setAttribute('data-printed', '1');
       b.setAttribute('aria-haspopup', 'dialog');
-      b.setAttribute('aria-label', mid.data + ': open ' + D[r.deck].label + ', ' + D[r.deck].unit.toLowerCase() + ' ' + P.citedOf(r.deck, r.page));
+      // its name is its own text (a heading that holds links is then read as it is written); where it leads is the description
+      const dest = 'Open ' + D[r.deck].label + ', ' + D[r.deck].unit.toLowerCase() + ' ' + P.citedOf(r.deck, r.page);
+      b.setAttribute('title', dest); b.setAttribute('aria-description', dest);
       mid.parentNode.insertBefore(b, mid); b.appendChild(mid);
       mark(mid); if (b.previousSibling && b.previousSibling.nodeType === 3) mark(b.previousSibling); if (b.nextSibling && b.nextSibling.nodeType === 3) mark(b.nextSibling);
       made++;
@@ -545,12 +637,13 @@ dialog.slv::backdrop{background:rgba(0,0,0,.55)}
       const b = e.target && e.target.closest ? e.target.closest('.slk') : null;
       if (!b || (e.type === 'keydown' && e.key !== 'Enter' && e.key !== ' ')) return;
       e.preventDefault(); e.stopPropagation();
+      if (e.type === 'keydown' && e.repeat) return;               // a key held down opens the slide once
       try { open(b.getAttribute('data-deck'), +b.getAttribute('data-n'), +b.getAttribute('data-to') || 0, b.hasAttribute('data-printed'), b); }
       catch (err) { console.error('The slide could not be opened.', err); }
     };
     document.addEventListener('click', act, true);
     document.addEventListener('keydown', act, true);            // Enter and Space, as on a button
-    // a change inside a control is never a citation (dianarr_ui.js rewrites its Listen buttons every frame)
+    // a change inside a control, or the tick of the practice-exam clock, is never a citation (SKIP): it starts no pass
     mo = new MutationObserver(recs => {
       for (let i = 0; i < recs.length; i++) {
         const t = recs[i].target, el = t && (t.nodeType === 1 ? t : t.parentElement);
