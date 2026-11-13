@@ -2,21 +2,36 @@
  *
  *     node slide_check.js            the gate: PASS / FAIL lines, then the counts and reports
  *     node slide_check.js --all      also every link and every citation left as text
+ *     node slide_check.js --model F  also write to F what it expects the page to link in the places
+ *                                    slide_test.js compares with the built page
+ *     node slide_check.js --json F   also write to F every link and every citation left as text,
+ *                                    with the text around it (to compare two runs)
  *     CLEAN_DIR=/path                where the clean decks are, for the fact-on-slide sample
  *                                    (default: src/decks/clean/, else the main checkout's)
  *
  * It runs slide_ui.js's own parser (the file is loaded as the page loads it; with no
  * DOM it hands back the parser alone) over every text that cites a slide: each
- * question's source line and explanations, reference.js, tell.js, guide.js, the
- * Diseases data, the Drug list, the Atlas, the walkthrough texts and the figure
- * captions, each with what its place declares, as slide_ui.js does on the page
- * (slide_test.js then reads the page itself).
+ * question's source line and explanations (the line under each pair of a matching
+ * question and the notes of its structure strip among them), reference.js, tell.js,
+ * guide.js, the Diseases tab (the cards' steps and the three other views from the
+ * HTML dz_ui.js itself writes; the drug panels, terms, practice patients and numbers
+ * from the data), the Drug list, the Atlas, the walkthrough texts and the figure
+ * captions, each with what its place declares, as slide_ui.js does on the page. A
+ * text of the reading files is joined from its text runs as the page joins its text
+ * nodes: a run that starts after a tag starts a word, and a citation with a tag
+ * inside it is not linked (slide_test.js then reads the page itself and compares).
  *
  * Fails when: a table of slide_data.js names a deck that does not exist; a section of
  * the three reading files has no row in SLIDES.sections; a page of a deck has no
  * image in deck/; a link's target image is missing; a cited number falls outside
  * its deck; a question's source line names no deck the parser reads; a transcript
- * reference is linked.
+ * reference is linked; one of the parser's rules no longer reads its example lines
+ * (a citation before a colon, a clock time, a chart page named earlier in the
+ * sentence, "SE 2 applications", "PP 2B", a professor in brackets after a number,
+ * a word start at an element boundary); the assigned-pages note is not in printed
+ * numbers; a guide's objective bar has no link in its slide list or a citation is
+ * split by a tag; a structure-strip note links outside Dr. Sikazwe's deck; a pair
+ * line of a matching question that cites a slide has no link.
  * Reports (not gates): links per deck and per form, the citations left as text and
  * why, and the fact-on-slide sample: for question citations, the distinctive words
  * of the right answer and the explanation looked for in the text of the linked
@@ -25,6 +40,8 @@
 const fs = require('fs'), path = require('path'), vm = require('vm'), child = require('child_process');
 const SRC = __dirname, ROOT = path.join(SRC, '..');
 const ALL = process.argv.includes('--all');
+const argOf = k => { const i = process.argv.indexOf(k); return i >= 0 ? process.argv[i + 1] || '' : ''; };
+const JSON_OUT = argOf('--json'), MODEL_OUT = argOf('--model');
 let fails = 0, passes = 0;
 const check = (ok, what, detail) => { if (ok) passes++; else fails++; console.log((ok ? '  PASS  ' : '  FAIL  ') + what + (!ok && detail ? '\n          ' + String(detail).slice(0, 900) : '')); };
 
@@ -108,10 +125,10 @@ const VOID = new Set('br hr img input meta link col wbr'.split(' '));
 const noRule = [];
 function htmlUnits(html, group, opts){
   opts = opts || {};
-  const stack = [], tabs = [];            // open elements {tag, id, col}; open tables {heads, inHead}
-  let buf = '', skips = [], headId = '', skipDepth = 0, skipStart = 0;
+  const stack = [], tabs = [];            // open elements {tag, id, cls, col}; open tables {heads, inHead}
+  let buf = '', skips = [], brks = [], headId = '', skipDepth = 0, skipStart = 0;
   const flush = () => {
-    const text = buf, sk = skips; buf = ''; skips = [];
+    const text = buf, sk = skips, bk = brks; buf = ''; skips = []; brks = [];
     const top = stack[stack.length - 1], tab = tabs[tabs.length - 1];
     if (top && top.tag === 'th' && tab && tab.inHead) tab.heads[top.col] = text;
     if (!/\d/.test(text)) return;
@@ -127,13 +144,17 @@ function htmlUnits(html, group, opts){
       if (d.length === 1) ctx.decks = d;
       ctx.column = SLIDE_HEAD.test(head);
     }
-    units.push({group, where, text, ctx, skip: sk, rule: rule ? rule.rule : ''});
+    // a guide's objective bar: <div class="gbar"><span>Objective (PP 3)</span><b>…</b><i>PP 4–6</i></div>, one unit
+    const bar = stack.some(x => /\bgbar\b/.test(x.cls || ''));
+    units.push({group, where, text, ctx, skip: sk, breaks: bk, rule: rule ? rule.rule : '', kind: bar ? 'gbar' : '', key: bar ? where : ''});
   };
   const re = /<!--[\s\S]*?-->|<(\/?)([a-zA-Z][a-zA-Z0-9]*)((?:"[^"]*"|'[^']*'|[^'">])*)>|[^<]+/g;
   let m;
   while ((m = re.exec(html))) {
     if (m[0].startsWith('<!--')) continue;
-    if (m[2] === undefined) { buf += decode(m[0]); continue; }
+    // the page joins the text nodes of a unit with nothing between them; where a text run starts after a tag
+    // (or a comment) it is another text node, and slide_ui.js reads its start as the start of a word
+    if (m[2] === undefined) { if (buf.length) brks.push(buf.length); buf += decode(m[0]); continue; }
     const tag = m[2].toLowerCase(), closing = m[1] === '/', attrs = m[3] || '';
     if (BLOCK.has(tag)) flush();
     if (!closing) {
@@ -147,7 +168,7 @@ function htmlUnits(html, group, opts){
       if ((tag === 'h2' || tag === 'h3') && id) { headId = id; if (opts.sections && !P.sectionDeck(id)) noRule.push(group + ' #' + id); }
       if (tag === 'section' && id && /\bclass="[^"]*\bgobj\b/.test(attrs) && opts.sections && !P.sectionDeck(id)) noRule.push(group + ' #' + id);
       if (NOLINK.has(tag)) { if (!skipDepth) skipStart = buf.length; skipDepth++; }
-      if (!VOID.has(tag) && !/\/$/.test(attrs)) stack.push({tag, id, col: c});
+      if (!VOID.has(tag) && !/\/$/.test(attrs)) stack.push({tag, id, cls: (/\bclass="([^"]*)"/.exec(attrs) || [])[1] || '', col: c});
     } else {
       const tab = tabs[tabs.length - 1];
       if (tag === 'thead' && tab) tab.inHead = false;
@@ -163,6 +184,23 @@ htmlUnits(g('TELL_HTML'), 'Tell apart', {sections: true});
 htmlUnits(g('GUIDE_HTML'), 'Guides', {sections: true});
 check(!noRule.length, 'every section of reference.js, tell.js and guide.js has its row in SLIDES.sections (a deck, or null for a mixed section)', noRule.join(', '));
 
+/* the structure strip: which structures a question sets side by side and the note under each. These
+   are the core's rules (views.js fgKey, cmpNames, fgTell: the first sentence of the Atlas note), copied
+   here; slide_test.js compares what they give with the strips the page draws */
+const FG = g('FG') || {}, FG_INDEX = {};
+Object.keys(FG).forEach(k => { FG_INDEX[k.toLowerCase()] = k; const first = k.toLowerCase().split(' ')[0]; if (!(first in FG_INDEX)) FG_INDEX[first] = k; });
+const fgKey = name => !name ? null : FG[name] ? name : FG_INDEX[String(name).toLowerCase().trim()] || null;
+const cmpNames = q => {
+  if (Array.isArray(q.cmp)) return q.cmp.map(fgKey).filter(Boolean);
+  const opts = (q.options || []).map(o => fgKey(o.t));
+  if (!opts.length || !opts.every(Boolean)) return [];
+  const right = fgKey(((q.options || []).find(o => o.correct) || {}).t);
+  return right ? [right].concat(opts.filter(t => t !== right)) : opts;
+};
+const fgTell = k => { const it = ATLAS && ATLAS.item ? ATLAS.item(k) : null; if (!it) return ''; const plain = String(it.t).replace(/<[^>]+>/g, ''), stop = plain.search(/[.!?]/); return decode(stop > 0 ? plain.slice(0, stop + 1) : plain); };
+const stripOf = q => { const names = cmpNames(q); return names.length < 2 ? [] : names.map(fgTell); };
+const atlasRow = P.sectionDeck('at-') || {decks: []}, atlasCtx = {decks: atlasRow.decks, sun: atlasRow.sun || null};
+
 /* questions: the source line, then what the page shows with it after the answer; the place is
    the deck the source line names first */
 const ctxOfQ = {};
@@ -172,7 +210,10 @@ for (const q of QUESTIONS) {
   add('Question source line', q.id, q.cite, ctx, {q});
   (q.options || []).forEach((o, i) => add('Question explanation', q.id + ' option ' + (i + 1), o.why, ctx));
   for (const k of ['teach', 'note', 'why']) add('Question explanation', q.id + ' ' + k, q[k], ctx);
-  (q.pairs || []).forEach((p, i) => add('Question explanation', q.id + ' pair ' + (i + 1), p.why, ctx));
+  (q.pairs || []).forEach((p, i) => add('Question explanation', q.id + ' pair ' + (i + 1), p.why, ctx, {kind: 'pair', key: q.id}));
+  // the structure strip of an answered multiple-choice question ("The structures side by side"): its captions
+  // are the Atlas notes, so their place is the Atlas's (the row "at-"), whatever deck the question is filed under
+  if (!q.type && q.teach) stripOf(q).forEach((t, i) => add('Question explanation', q.id + ' structure ' + (i + 1), t, atlasCtx, {kind: 'strip', key: q.id}));
 }
 const qNoDeck = QUESTIONS.filter(q => !ctxOfQ[q.id].decks.length);
 check(!qNoDeck.length, `every question's source line names a deck the parser reads (${QUESTIONS.length} questions)`, qNoDeck.slice(0, 10).map(q => q.id + ': ' + q.cite).join(' | '));
@@ -182,8 +223,97 @@ check(!qOther.length, 'the deck the parser takes for a question is the deck the 
 const qProf = QUESTIONS.filter(q => ctxOfQ[q.id].decks.length && D[ctxOfQ[q.id].decks[0]].prof !== q.prof);
 check(!qProf.length, 'that deck is a deck of the question\'s own professor', qProf.slice(0, 8).map(q => q.id + ' (' + q.prof + ', ' + ctxOfQ[q.id].decks[0] + ')').join(', '));
 
+/* A small tree of an HTML string and slide_ui.js's linkifier applied to it as on the page: the unit of a
+   text (UNIT_SEL), the controls it skips (SKIP), the text nodes joined with their element boundaries, a link
+   only inside one text node and never twice. Used for the Diseases cards, whose HTML dz_ui.js writes. */
+const SKIP_TAG = new Set('button a summary label input select textarea option svg script style code nav'.split(' ')), SKIP_CLS = ['slk', 'dzcz', 'opt', 'clock'];
+const UNIT_TAG = new Set('p li td th dd dt figcaption h2 h3 h4 h5 h6 small div section article'.split(' ')), UNIT_SPAN = ['ln', 'dlsrc', 'dzsrc', 'wtxt', 'atpg', 'stepwhy'];
+function tree(html){
+  const root = {tag: '#root', cls: [], kids: [], parent: null}, re = /<!--[\s\S]*?-->|<(\/?)([a-zA-Z][a-zA-Z0-9]*)((?:"[^"]*"|'[^']*'|[^'">])*)>|[^<]+/g;
+  let cur = root, m;
+  while ((m = re.exec(html))) {
+    if (m[0].startsWith('<!--')) { cur.kids.push({comment: true, parent: cur}); continue; }
+    if (m[2] === undefined) { cur.kids.push({text: decode(m[0]), parent: cur, done: []}); continue; }
+    const tag = m[2].toLowerCase(), attrs = m[3] || '';
+    if (m[1] === '/') { for (let a = cur; a && a !== root; a = a.parent) if (a.tag === tag) { cur = a.parent; break; } continue; }
+    const el = {tag, cls: ((/\bclass="([^"]*)"/.exec(attrs) || [])[1] || '').split(/\s+/).filter(Boolean), attr: k => (new RegExp('\\b' + k + '="([^"]*)"').exec(attrs) || [])[1], edit: /\bcontenteditable\b/.test(attrs), kids: [], parent: cur};
+    cur.kids.push(el);
+    if (!VOID.has(tag) && !/\/$/.test(attrs)) cur = el;
+  }
+  return root;
+}
+const has = (el, c) => !!el && !!el.cls && el.cls.includes(c);
+const up = (n, f) => { for (let a = n; a; a = a.parent) if (a.tag && f(a)) return a; return null; };
+const texts = (el, out) => { out = out || []; (el.kids || []).forEach(k => { if (k.text !== undefined) out.push(k); else if (k.tag) texts(k, out); }); return out; };
+const textOf = el => texts(el).map(t => t.text).join('');
+const all = (el, f, out) => { out = out || []; (el.kids || []).forEach(k => { if (k.tag) { if (f(k)) out.push(k); all(k, f, out); } }); return out; };
+const isSkip = el => SKIP_TAG.has(el.tag) || SKIP_CLS.some(c => has(el, c)) || el.edit;
+const isUnit = el => UNIT_TAG.has(el.tag) || (el.tag === 'span' && UNIT_SPAN.some(c => has(el, c)));
+/* linkView + linkUnit of slide_ui.js over the tree under `root`; ctxOf(unit) is what the unit's place declares */
+function linkTree(root, ctxOf, group, where, more){
+  const todo = [], hidden = [];
+  texts(root).forEach(t => { if (!/\d/.test(t.text)) return; const u = up(t.parent, isUnit); if (!u) return; if (up(t.parent, isSkip)) hidden.push([t, u]); else if (todo.indexOf(u) < 0) todo.push(u); });
+  // a citation inside a control or a covered fact, in a unit the page never reads (its other text has no number): reported
+  hidden.filter(([t, u]) => todo.indexOf(u) < 0).forEach(([t, u]) => {
+    const r = P.scan(t.text, Object.assign({decks: []}, ctxOf(u) || {}));
+    if (r.links.length) units.push(Object.assign({group, where: typeof where === 'function' ? where(u) : where, text: t.text, ctx: {}, skip: [], pre: {links: [], refused: r.links.map(l => ({s: l.s, e: l.e, raw: t.text.slice(l.s, l.e), why: 'inside a link, a button or a covered fact'}))}}, more || {}));
+  });
+  todo.forEach(unit => {
+    const nodes = [], breaks = [];
+    let text = '', prev = null;
+    texts(unit).forEach(t => {
+      if (up(t.parent, a => a.tag === 'svg' || a.tag === 'script' || a.tag === 'style')) return;
+      if (prev && !(prev.parent === t.parent && t.parent.kids[t.parent.kids.indexOf(prev) + 1] === t)) breaks.push(text.length);
+      nodes.push({t, at: text.length, skip: !!up(t.parent, isSkip)}); text += t.text; prev = t;
+    });
+    if (!/\d/.test(text)) return;
+    const ctx = Object.assign({decks: []}, ctxOf(unit) || {});
+    if (breaks.length) ctx.breaks = breaks;
+    const cap = up(unit, a => a.tag === 'figcaption');
+    if (cap) { const d = P.decksNamed(textOf(cap)); if (d.length === 1) ctx.decks = d; }
+    const r = P.scan(text, ctx), pre = {links: [], refused: r.refused.slice()};
+    r.links.forEach(l => {
+      const x = nodes.filter(k => k.at <= l.s && l.e <= k.at + k.t.text.length)[0];
+      if (!x) { pre.refused.push({s: l.s, e: l.e, raw: text.slice(l.s, l.e), why: 'split over two elements of the page (a tag stands inside the citation)'}); return; }
+      if (x.skip) { pre.refused.push({s: l.s, e: l.e, raw: text.slice(l.s, l.e), why: 'inside a link, a button or a covered fact'}); return; }
+      if (x.t.done.some(([a, b]) => l.s - x.at < b && a < l.e - x.at)) return;       // linked already, as part of a unit around this one
+      x.t.done.push([l.s - x.at, l.e - x.at]); pre.links.push(l);
+    });
+    units.push(Object.assign({group, where: typeof where === 'function' ? where(unit) : where, text, ctx, skip: [], pre}, more || {}));
+  });
+}
+/* dz_ui.js's own HTML for a view of the Diseases tab: the file is run with a stand-in for the page that only
+   keeps what render() writes (its tab is not added: there is no page) */
+const dzPage = (() => {
+  if (!DZ) return null;
+  try {
+    const quiet = {log(){}, error(){}, warn(){}}, nav = {insertBefore(){}, appendChild(){}, querySelector(){ return null; }};
+    const box = {console: quiet, MutationObserver: function(){}, document: {getElementById: id => id === 'nav' ? nav : null, createElement(){ throw new Error('no page here'); }, querySelector(){ return null; }, querySelectorAll(){ return []; }}};
+    vm.createContext(box);
+    vm.runInContext(fs.readFileSync(path.join(SRC, 'dz_data.js'), 'utf8') + '\n' + fs.readFileSync(path.join(SRC, 'dz_ui.js'), 'utf8') + '\nthis.UI = DZ_UI; this.DATA = DZ;', box, {filename: 'dz_ui.js'});
+    const st = box.UI.state;
+    return set => { set(st, box.DATA); st.q = ''; st.filter = ''; st.recall = false; const pane = {innerHTML: ''}; box.UI.render(pane); return tree(pane.innerHTML); };
+  } catch (e) { return null; }
+})();
+/* dzCtx of slide_ui.js on the tree: the deck(s) the nearest source line(s) name; inside a professor's block
+   (.dzprof, or the group .dzgrp of a card with more than one professor) that professor */
+const DZP = {sm: 'Smith', sk: 'Sikazwe', pa: 'Patel'}, dzProfs = {};
+function dzCtxOf(el){
+  const blk = up(el, a => has(a, 'dzprof') || has(a, 'dzgrp')), prof = blk ? DZP[['sm', 'sk', 'pa'].filter(k => has(blk, k))[0]] || null : null;
+  for (let a = el; a && a.tag !== '#root'; a = a.parent) {
+    const src = a.kids.filter(c => c.tag && has(c, 'dzsrc')).map(textOf);
+    if (has(a, 'dzsrc')) src.push(textOf(a));
+    const decks = src.length ? P.decksNamed(src.join('; ')) : [];
+    if (decks.length) return {decks, prof};
+    if (has(a, 'dzcases')) { const card = up(a, x => x.attr('data-card') !== undefined), r = card ? P.sectionDeck('dzcases-' + card.attr('data-card')) : undefined; return {decks: r ? r.decks : [], prof}; }
+  }
+  return {decks: [], prof};
+}
+check(!DZ || !!dzPage, 'dz_ui.js runs without a page and hands over the HTML of a Diseases card (the card steps are read from it)');
+
 /* Diseases: the place is the nearest source line, as dz_ui.js lays the card out; inside a
-   professor's block that professor; the practice patients take the card's row */
+   professor's block that professor; the practice patients take the card's row. The steps of each
+   card are read from the HTML dz_ui.js writes (above); the rest from the data. */
 if (DZ) {
   const named = t => P.decksNamed(t || '');
   const PROFS = {sm: 'Smith', sk: 'Sikazwe', pa: 'Patel'};
@@ -192,19 +322,13 @@ if (DZ) {
     const w = 'card ' + c.id;
     add('Diseases', w + ' lectures', c.lectures, []);
     (c.short || []).forEach(t => add('Diseases', w + ' short', t, []));
-    (c.steps || []).forEach((s, i) => {
-      const stepSrc = [s.src].concat((s.blocks || []).filter(b => b.k === 'map').map(b => b.src)).filter(Boolean);
-      const sd = named(stepSrc.join('; '));
-      stepSrc.forEach(t => add('Diseases', w + ' step ' + (i + 1) + ' source', t, sd));
-      add('Diseases', w + ' step ' + (i + 1), s.title, sd); add('Diseases', w + ' step ' + (i + 1), s.q, sd);
-      (s.blocks || []).forEach(b => {
-        const own = b.k === 'prof' && b.src ? named(b.src) : [];
-        const ctx = {decks: own.length ? own : sd, prof: b.k === 'prof' ? PROFS[b.p] || null : null};
-        if (b.k === 'prof' && b.src) add('Diseases', w + ' step ' + (i + 1) + ' source', b.src, ctx);
-        if (b.k === 'grades') (b.rows || []).forEach(r => { const rd = named(r[2]); add('Diseases', w + ' step ' + (i + 1), r[0], sd); add('Diseases', w + ' step ' + (i + 1), r[1], sd); add('Diseases', w + ' step ' + (i + 1) + ' source', r[2], rd.length ? rd : sd); });
-        else strings(Object.assign({}, b, {src: undefined, k: undefined, p: undefined, id: undefined, jump: undefined, drugs: undefined})).forEach(t => add('Diseases', w + ' step ' + (i + 1), t, ctx));
-      });
-    });
+    if (dzPage) {
+      const page = dzPage(st => { st.view = 'cards'; st.card = c.id; (c.steps || []).forEach((s, i) => { st.open[c.id + ':' + i] = true; }); });
+      const lis = all(page, a => a.tag === 'li' && a.parent && a.parent.tag === 'ol' && has(a.parent, 'dzsteps'));
+      const profs = new Set(all(page, a => has(a, 'dztag')).map(a => ['sm', 'sk', 'pa'].filter(k => has(a, k))[0]));
+      dzProfs[c.id] = profs.size;
+      lis.forEach((li, i) => linkTree(li, dzCtxOf, 'Diseases', u => w + ' step ' + (i + 1) + (has(u, 'dzsrc') ? ' source' : ''), {kind: 'dzstep', key: c.id}));
+    }
     const pr = P.sectionDeck('dzcases-' + c.id), pd = pr ? pr.decks : [];
     (c.patients || []).forEach(p => [p.t, p.q, p.w].concat(Object.values(p.x || {})).forEach(t => add('Diseases', w + ' patient', t, pd)));
     (c.numbers || []).forEach(r => { const d = named(r[2]); add('Diseases', w + ' number', r[0], d); add('Diseases', w + ' number', r[1], d); add('Diseases', w + ' number source', r[2], d); });
@@ -214,13 +338,23 @@ if (DZ) {
     for (const p of ['sm', 'sk']) if (d[p]) { const ctx = {decks: named(d[p].src), prof: PROFS[p]}; add('Diseases', w + ' ' + p, d[p].text, ctx); add('Diseases', w + ' ' + p + ' source', d[p].src, ctx); }
     (d.pa || []).forEach(r => { const ctx = {decks: named(r.src), prof: 'Patel'}; add('Diseases', w + ' use', r.role, ctx); add('Diseases', w + ' use', r.how, ctx); add('Diseases', w + ' use source', r.src, ctx); });
     const cd = named(d.counselSrc); (d.counsel || []).forEach(t => add('Diseases', w + ' counsel', t, cd)); add('Diseases', w + ' counsel source', d.counselSrc, cd);
-    (d.avoid || []).forEach(t => add('Diseases', w + ' avoid', t, []));
+    // "Who should not get it": no source line; a line labelled with its conditions takes the one deck the panel's
+    // rows for exactly those conditions name (dzCtx in slide_ui.js)
+    (d.avoid || []).forEach(t => {
+      const m = /^([^:]{3,200}): /.exec(t), want = m ? m[1].split(' / ').map(x => x.trim()) : [];
+      const rowsOf = n => (d.pa || []).filter(r => String((DZ.cards.find(c => c.id === r.dz) || {}).name || r.dz).replace(/\s*\(.*?\)/g, '').trim() === n);
+      const src = want.flatMap(n => rowsOf(n).map(r => r.src || ''));
+      const decks = want.length && want.every(n => rowsOf(n).length) && src.length ? named(src.join('; ')) : [];
+      add('Diseases', w + ' avoid', t, decks.length === 1 ? decks : [], {kind: 'dzavoid', key: k});
+    });
   }
   for (const [k, t] of Object.entries(DZ.terms)) { const d = named(t[2]); add('Diseases', 'term ' + k, t[1], d); add('Diseases', 'term ' + k + ' source', 'Source: ' + (t[2] || ''), d); }
-  for (const t of DZ.tell || []) { const d = named(t.src); strings([t.title, t.path, t.rows]).forEach(x => add('Diseases', 'tell ' + t.id, x, d)); add('Diseases', 'tell ' + t.id + ' source', t.src, d); }
-  for (const p of DZ.pairs || []) { strings([p.title, p.a, p.b, p.same]).forEach(x => add('Diseases', 'pair', x, [])); (p.profs || []).forEach(x => add('Diseases', 'pair', x[1], {decks: [], prof: PROFS[x[0]] || null})); }
-  for (const r of DZ.rules || []) { const d = named(r.src); strings([r.title, r.rows, r.items]).forEach(x => add('Diseases', 'rule', x, d)); add('Diseases', 'rule source', r.src, d); }
-  for (const p of DZ.photos || []) add('Diseases', 'photo ' + p.id + ' source', p.src, named(p.src));
+  // Tell apart, Drugs that get confused, Rules that repeat: from the HTML dz_ui.js writes for each view
+  if (dzPage) for (const v of ['tell', 'pairs', 'rules']) {
+    const page = dzPage(st => { st.view = v; }), body = all(page, a => has(a, 'dzbody'))[0];
+    const where = u => { const sec = up(u, a => a.tag === 'section'), src = has(u, 'dzsrc') ? ' source' : ''; return v === 'tell' ? 'tell ' + String((sec && sec.attr('id')) || '').replace(/^dz-tell-/, '') + src : v === 'pairs' ? 'pair' : 'rule' + src; };
+    if (body) linkTree(body, dzCtxOf, 'Diseases', where, {kind: 'dz' + v, key: ''});
+  }
 }
 /* Drug list: a source chip reads "<who> · <cite>"; a line's place is the one deck its chip names */
 if (DL) {
@@ -264,9 +398,16 @@ for (const [k, h] of Object.entries(DIA)) {
 /* ---- run the parser over every unit ---------------------------------------- */
 const links = [], refused = [];
 for (const u of units) {
-  const r = P.scan(u.text, u.ctx);
+  if (u.pre) { u.pre.links.forEach(l => links.push(Object.assign({u}, l))); u.pre.refused.forEach(x => refused.push(Object.assign({u}, x))); continue; }
+  const bk = u.breaks || [];
+  const r = P.scan(u.text, bk.length ? Object.assign({}, u.ctx, {breaks: bk}) : u.ctx);
   const inSkip = l => u.skip.some(([s, e]) => l.s < e && s < l.e);
-  for (const l of r.links) { if (inSkip(l)) refused.push({u, raw: u.text.slice(l.s, l.e), why: 'inside a link, a button or a folder heading', s: l.s, e: l.e}); else links.push(Object.assign({u}, l)); }
+  const split = l => bk.some(b => l.s < b && b < l.e);          // the page links a citation only inside one text node
+  for (const l of r.links) {
+    if (inSkip(l)) refused.push({u, raw: u.text.slice(l.s, l.e), why: 'inside a link, a button or a folder heading', s: l.s, e: l.e});
+    else if (split(l)) refused.push({u, raw: u.text.slice(l.s, l.e), why: 'split over two elements of the page (a tag stands inside the citation)', s: l.s, e: l.e});
+    else links.push(Object.assign({u}, l));
+  }
   for (const x of r.refused) refused.push(Object.assign({u}, x));
 }
 console.log('\n=== The links the parser makes ===');
@@ -293,6 +434,40 @@ check(mcShift && P.resolve('mc', 22).page === 21 && P.resolve('mc', 21).page ===
 check(P.resolve('sun', 5).page === 1 && P.resolve('sun', 26).page === 22 && P.resolve('sun', 3).deck === 'pc' && P.resolve('sun', 3).page === 78,
   'Dr. Smith\'s Sun slide N opens clean page N - 4; slides 2-4 open her Skin Pharmacology slides 77-79');
 
+/* ---- the parser's rules, one line each (the text a link holds > what it opens) ---- */
+const read = (t, ctx) => P.scan(t, Array.isArray(ctx) ? {decks: ctx} : ctx).links.map(l => t.slice(l.s, l.e) + '>' + l.deck + ' ' + l.n + (l.to ? '-' + l.to : '') + (l.printed ? ' printed' : '')).join('|');
+check(read('Slide 6: sebum', ['pp']) === 'Slide 6>pp 6' && read('Slides 32–33: x', ['pc']) === 'Slides 32–33>pc 32-33' && read('Slides 20, 40: x', ['pc']) === 'Slides 20>pc 20|40>pc 40' &&
+  read('PCol 55: coal tar', ['pp']) === 'PCol 55>pc 55' && read('p. 43: x', ['mc']) === 'p. 43>mc 43' && read('Lecture 2 (Skin-PCol-Students-2026.pdf) slide 18: tazarotene', []) === 'slide 18>pc 18',
+  'a citation that ends at a colon is linked whole ("Slide 6: …", "Slides 32–33: …", "Slides 20, 40: …", "PCol 55: …")');
+check(['slide 12:34', 'Sun 17:27', 'PCol 12:30', 'page 7:30', 'slide 5:1 ratio', 'audio 00:30–00:45, 17:27–17:48', 'PCol 11/03: x', 'slide 5%: x', '10/30 T 430–450: x', 'T 409–419: x', 'T@12345: x'].every(t => read(t, ['sun']) === '') && read('slide 5, 1:1 ratio', ['pc']) === 'slide 5>pc 5',
+  'a clock time, a ratio, a date, a percentage and a transcript line stay text when a colon follows');
+const NOTE = 'Outside Dr. Sikazwe\'s assigned pages for Exam 1 (list of 11/06: printed slides 7–9, 12, 15–22, 24–33, 42–54, 60–65). The list uses the numbers printed on the slides; from printed slide 22 on, the slide numbers cited here run one higher.';
+const noteQs = QUESTIONS.filter(q => /list of 11\/06: /.test(q.note || '')), noteBad = noteQs.filter(q => q.note.indexOf(NOTE) < 0);
+const noteOpens = P.scan(NOTE, {decks: ['mc']}).links.map(l => (l.printed ? 'printed ' : '') + l.n + '>' + P.resolve(l.deck, l.n, l.printed).page).join(' ');
+check(noteQs.length === 23 && !noteBad.length && noteOpens === 'printed 7>7 printed 12>12 printed 15>15 printed 24>24 printed 42>42 printed 60>60 printed 22>22',
+  `the assigned-pages note (${noteQs.length} questions) gives printed slide numbers, and each opens the clean page of that number (7, 12, 15, 24, 42, 60; printed slide 22)`, noteBad.map(q => q.id).join(', ') + ' | ' + noteOpens);
+check(read('The Dermatology drug chart lists a different class beside methoxsalen on its p.5 because that page is shifted', ['mc']) === '' &&
+  read('The syllabus gives the date on p. 9.', ['mc']) === '' && read('Foye covers it; see p. 1112.', ['mc']) === '' &&
+  read('The drug chart says X, but DPAW p. 43 draws it and p. 44 too', ['mc']) === 'DPAW p. 43>mc 43|p. 44>mc 44' && read('The drug chart says X; Dr. Sikazwe\'s p. 43 draws it', ['mc']) === 'p. 43>mc 43' &&
+  read('The chart is on another page. See p. 43 for the ring.', ['mc']) === 'p. 43>mc 43',
+  'a bare page is not linked when a chart, the syllabus, a reading or a textbook is named earlier in its sentence and no deck after it');
+check(read('SE 2 applications', []) === '' && read('AT 2 tablets; DT 3 puffs; OE 4 sprays; WC 2 units; SD 2 capsules; PC 4 doses; PP 3 times; OE 2 drops', []) === '' && read('PP 2B is calcineurin', []) === '' && read('PP 2, 3B', []) === '' &&
+  read('PP 2 is the title slide', []) === 'PP 2>pp 2' && read('PCol slide 2B', []) === 'PCol slide 2>pc 2',
+  'a deck name and a number are not a citation when a count word or a letter follows the number ("SE 2 applications", "PP 2B")');
+check(read('see slide 12 (Dr. Patel)', {decks: ['sun']}) === '' && read('see slide 12 (Dr. Smith)', {decks: ['sun']}) === 'slide 12>sun 12' && read('see slide 12 (Patel)', {decks: ['sun', 'p8s']}) === 'slide 12>p8s 12' && read('see slide 62 (Dr. Sikazwe)', {decks: ['sun']}) === 'slide 62>mc 62',
+  'a professor named in brackets right after a bare number decides its deck, and another professor\'s number is not linked into the place\'s deck');
+const BAR = ['Objective (PP 3)', 'Describe the basic structures and functions of the skin', 'PP 4–6'];
+check(read(BAR.join(''), ['pp']) === 'PP 3>pp 3' && read(BAR.join(''), {decks: ['pp'], breaks: [BAR[0].length, BAR[0].length + BAR[1].length]}) === 'PP 3>pp 3|PP 4–6>pp 4-6' &&
+  read('applications. 3', {decks: ['pc'], breaks: [3]}) === '' && read('the skinslide 4', ['pp']) === '' && read('the skinslide 4', {decks: ['pp'], breaks: [8]}) === 'slide 4>pp 4',
+  'where a new element\'s text starts, a deck name or "slide" starts a word although a letter stands before it in the joined text (a guide\'s objective bar)');
+const gbars = units.filter(u => u.kind === 'gbar'), barIn = gbars.filter(u => links.some(l => l.u === u && u.breaks.length && l.s >= u.breaks[u.breaks.length - 1]));
+const barSplit = refused.filter(x => /^split over/.test(x.why));
+check(gbars.length === 69 && barIn.length === gbars.length && !barSplit.length, `every objective bar of the guides (${gbars.length}) has links in its slide list, and no citation of the reading files is split by a tag`, gbars.filter(u => barIn.indexOf(u) < 0).map(u => u.where).concat(barSplit.map(x => x.u.where + ': ' + x.raw)).join(', '));
+const strips = links.filter(l => l.u.kind === 'strip'), stripQ = [...new Set(units.filter(u => u.kind === 'strip').map(u => u.key))], stripOther = stripQ.filter(id => { const q = QUESTIONS.find(x => x.id === id); return q && q.prof !== 'Sikazwe'; });
+check(strips.length > 0 && strips.every(l => l.deck === 'mc') && stripOther.length >= 5, `the notes under the structures of an answered question (${stripQ.length} questions, ${stripOther.length} of another professor) are linked to Dr. Sikazwe's deck only (${strips.length} links)`, strips.filter(l => l.deck !== 'mc').slice(0, 6).map(l => l.u.where + ' ' + l.deck + ' ' + l.n).join(', '));
+const pairU = units.filter(u => u.kind === 'pair'), pairL = links.filter(l => l.u.kind === 'pair');
+check(pairU.length > 0 && pairU.every(u => pairL.some(l => l.u === u)), `every pair line of a matching question that cites a slide is linked (${pairL.length} links in ${new Set(pairU.map(u => u.key)).size} questions)`, pairU.filter(u => !pairL.some(l => l.u === u)).map(u => u.where).join(', '));
+
 const tab = (rows, heads) => { const w = heads.map((h, i) => Math.max(h.length, ...rows.map(r => String(r[i]).length))); const line = r => '  ' + r.map((c, i) => String(c).padEnd(w[i])).join('  '); console.log(line(heads)); rows.forEach(r => console.log(line(r))); };
 const tally = (list, key) => { const m = {}; list.forEach(x => { const k = key(x); m[k] = (m[k] || 0) + 1; }); return m; };
 console.log('\n  Links by deck:');
@@ -310,6 +485,22 @@ Object.entries(tally(refused, key)).sort((a, b) => b[1] - a[1]).forEach(([k, n])
   (ALL ? ex : ex.slice(0, 6)).forEach(x => console.log(`           ${x.u.group} ${x.u.where}: …${x.u.text.slice(Math.max(0, (x.s || 0) - 46), (x.s || 0)).replace(/\s+/g, ' ')}[${x.raw}]${x.u.text.slice(x.e || 0, (x.e || 0) + 30).replace(/\s+/g, ' ')}…`));
 });
 if (ALL) { console.log('\n  Every link:'); links.forEach(l => { const r = P.resolve(l.deck, l.n, l.printed); console.log(`  ${l.u.group} | ${l.u.where} | ${JSON.stringify(l.u.text.slice(l.s, l.e))} | ${l.form} | ${l.deck} ${l.n}${l.to ? '-' + l.to : ''} -> ${P.file(r.deck, r.page)}`); }); }
+// --model FILE: what this file expects the page to link in the places slide_test.js compares with the built page
+// (a matching question's pair lines, a guide's objective bar, the steps of a Diseases card, a structure strip,
+// a drug panel's "Who should not get it" list): per place, the links as "deck number[-to][ printed]"
+if (MODEL_OUT) {
+  const sig = l => l.deck + ' ' + l.n + (l.to ? '-' + l.to : '') + (l.printed ? ' printed' : '');
+  const by = kind => { const m = {}; units.forEach(u => { if (u.kind === kind && !m[u.key]) m[u.key] = []; }); links.forEach(l => { if (l.u.kind === kind) m[l.u.key].push(sig(l)); }); return m; };
+  fs.writeFileSync(MODEL_OUT, JSON.stringify({pair: by('pair'), gbar: by('gbar'), dzstep: by('dzstep'), strip: by('strip'), dzavoid: by('dzavoid'), dzProfs,
+    dzview: {tell: (by('dztell')[''] || []), pairs: (by('dzpairs')[''] || []), rules: (by('dzrules')[''] || [])}}));
+}
+// --json FILE: every link and every citation left as text, with the text around it (for a comparison of two runs)
+if (JSON_OUT) {
+  const row = x => ({group: x.u.group, where: x.u.where, kind: x.u.kind || '', key: x.u.key || '', s: x.s || 0, e: x.e || 0, raw: x.raw !== undefined ? x.raw : x.u.text.slice(x.s, x.e), before: x.u.text.slice(Math.max(0, (x.s || 0) - 80), x.s || 0), after: x.u.text.slice(x.e || 0, (x.e || 0) + 60)});
+  fs.writeFileSync(JSON_OUT, JSON.stringify({
+    links: links.map(l => { const r = P.resolve(l.deck, l.n, l.printed); return Object.assign(row(l), {deck: l.deck, n: l.n, to: l.to || 0, printed: !!l.printed, form: l.form, opens: r ? r.deck + ' ' + r.page : ''}); }),
+    refused: refused.map(x => Object.assign(row(x), {why: x.why}))}));
+}
 // the bare numbers, by the place that gave them a deck, for a person to read once
 console.log('\n  Bare numbers linked through their place, per section of the reading files:');
 Object.entries(tally(links.filter(l => /^(bare|Slide column)/.test(l.form) && ['Reference', 'Tell apart', 'Guides'].includes(l.u.group)), l => `${l.u.group} #${l.u.where} -> ${l.deck}`))
