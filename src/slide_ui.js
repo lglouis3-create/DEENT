@@ -7,26 +7,32 @@
    Wherever the page cites a slide of a deck, the citation becomes a button
    that opens that slide from the clean copy of the deck (deck/<deck>/<NN>.webp,
    render_deck.py; the page map and the tables are slide_data.js, written by
-   slide_map.py).
+   slide_map.py from the decks and slide_tables.json).
 
    1. THE PARSER (no DOM; slide_check.js runs this same code over the source
       files). In one line of text it finds, in this order of priority:
       a. a citation that names its deck: a deck file name ("... (Skin-PCol-
          Students-2026.pdf) slides 24-26") or a name from SLIDES.names
-         ("PCol 55", "DPAW p. 43", "Patel Scaly slide 12", "PP 8");
-      b. a bare "slide N", "slides N-M", "p. N", or a number in a column
-         headed Slide: it takes the deck named earlier in the same sentence,
-         else the deck its place declares (below). A professor's name before
-         it ("Dr. Patel's slide 45") must agree with that deck;
+         ("PCol 55", "DPAW p. 43", "Patel Scaly slide 12", "PP 8"). "Sun" is
+         the name of two decks: it goes to the deck of the professor named
+         with it, else to the sun deck its place declares, else nowhere;
+      b. a bare "slide N", "slides N-M", "p. N" (Dr. Sikazwe's deck only: it is
+         the one cited by page), or a number in a column headed Slide: it
+         takes the deck its place declares (2), or the deck named earlier in
+         the same sentence when the place declares none. A professor's name
+         before it ("Dr. Patel's slide 45") must be that deck's professor;
       c. anything else stays text: transcript lines (T 573-577, T@12345),
-         recording times, dates, chart and syllabus pages, textbook pages, a
-         number outside the deck, a "Sun" citation that nothing assigns to
-         Dr. Smith's or Dr. Patel's deck.
+         recording times, dates, chart, syllabus and textbook pages, a number
+         outside the deck.
    2. THE PLACE (declared, never read out of prose): after a question is
-      answered, the deck its own source line names; in Reference, Tell apart
-      and Guides, the section's deck from SLIDES.sections (a section that
-      draws on several decks has none); an Atlas board, Dr. Sikazwe's deck; in
-      Diseases, the deck(s) the nearest source line names.
+      answered, the deck its own source line names first (the deck the engine
+      files the question under); in Reference, Tell apart and Guides, the
+      section's deck from SLIDES.sections (a section that draws on several
+      decks has none), or the one deck a table column's heading names; a
+      figure caption, the one deck it names; an Atlas board, Dr. Sikazwe's
+      deck; a Drug list line, the deck its source chip names; in Diseases, the
+      deck(s) the nearest source line names, within a professor's block that
+      professor's, and for the practice patients the card's deck.
    3. WHERE: only in what the page shows after an answer (the explanation and
       its source line, the exam review, the missed list) and in the reading
       tabs (Reference, Tell apart, Guides, Atlas, Drug list, Diseases, figure
@@ -47,32 +53,37 @@ const SLIDE_UI = (() => {
 
   /* ---------------------------------------------------------------- parser */
   const P = (S => {
-    const D = S.decks;
+    const D = S.decks, IDS = Object.keys(D);
     const rx = s => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
     const FILE = {}, NAME = {};
-    Object.keys(D).forEach(id => (D[id].files || []).forEach(f => { FILE[f] = id; }));
+    IDS.forEach(id => (D[id].files || []).forEach(f => { FILE[f] = id; }));
     (S.names || []).forEach(r => { NAME[r[0]] = {deck: r[1], bare: !!r[2]}; });
     const alt = keys => keys.slice().sort((a, b) => b.length - a.length).map(k => rx(k).replace(/'/g, "['’]")).join('|');
-    const SP = '[\\s\\u00a0]';
+    const SP = '[\\s\\xa0]';
+    const DASH = '[\\u2013\\u2014\\u2011-]';
     const NUM = '\\d{1,3}(?![\\d/:%@]|\\.\\d)';
-    const RNG = NUM + '(?:\\s?[\\u2013\\u2014\\u2011-]\\s?' + NUM + ')?';
+    const RNG = NUM + '(?:\\s?' + DASH + '\\s?' + NUM + ')?';
     // a later number of a list is not one when a unit or a count follows it ("slide 12, 3 times daily")
-    const UNIT = '(?:%|mg|mcg|g|mL|ml|kg|cm|mm|nm|hours?|hrs?|h|days?|weeks?|wks?|months?|years?|yrs?|minutes?|min|times|\\u00d7|x|FTU|fingertip|others?|of|to|or more|more|grams?|drops?|doses?|tubes?|patients?|questions?|points?|marks?|items?)';
+    const UNIT = '(?:%|mg|mcg|g|mL|ml|kg|cm|mm|nm|hours?|hrs?|h|days?|weeks?|wks?|months?|years?|yrs?|minutes?|min|times|\\xd7|x|FTU|fingertip|others?|of|to|or more|more|grams?|drops?|doses?|tubes?|patients?|questions?|points?|marks?|items?)';
     const LIST = RNG + '(?:(?:,\\s?|,?\\s(?:and|or|&)\\s)' + RNG + '(?!\\s?' + UNIT + '\\b))*';
     const WORD = '(?:[Ss]lides?|SLIDES?|pp?\\.|[Pp]ages?)';
     const RE_FILE = new RegExp('(' + alt(Object.keys(FILE)) + ')(?:\\)?[,:;]?' + SP + '+(?:(' + WORD + ')' + SP + '*)?(' + LIST + '))?', 'g');
     const RE_NAME = new RegExp('(' + alt(Object.keys(NAME)) + ')(?:' + SP + '+deck)?(?:' + SP + '+|' + SP + '*\\(' + SP + '*)(?:(' + WORD + ')' + SP + '*)?(' + LIST + ')', 'g');
     const RE_BARE = new RegExp('(' + WORD + ')' + SP + '*(' + LIST + ')', 'g');
     const RE_COL = new RegExp('^' + SP + '*(' + LIST + ')');
-    const RE_ITEM = /(\d{1,3})(?:\s?[–—‑-]\s?(\d{1,3}))?/g;
+    const RE_ITEM = new RegExp('(\\d{1,3})(?:\\s?' + DASH + '\\s?(\\d{1,3}))?', 'g');
     const AFTER_UNIT = new RegExp('^\\s?' + UNIT + '\\b');
     const PROF = /(?:Dr\.\s*)?\b(Smith|Patel|Sikazwe)\b(?:['’]s)?/g;
-    const PROF_TAIL = /(?:Dr\.\s*)?\b(Smith|Patel|Sikazwe)(?:['’]s)?[\s ,(:·]*$/;
-    const PROF_AFTER = /^[\s ]*\((?:Dr\.\s*)?(Smith|Patel|Sikazwe)\)/;
-    const NOT_DECK = /(?:\b[Cc]hart|\b[Ss]yllabus|\bPDF|\b[Rr]eading|\b[Hh]andout|\b[Tt]extbook|\b[Bb]ook|\b[Aa]ssignment|\b(?:Foye|Katzung|Golan|DiPiro|Goodman|Endotext|Bikle)\b[^;]*|Chapt?\.\s?\d+,?|\bJ Med Chem[^;]*)[\s ,(]*$/;
-    const PRINTED = /\bprinted[\s (]*$/;
-    const SENTENCE = /[.!?]["'”’)\]]?\s+[A-Z(“]/;
+    const PROF_TAIL = /(?:Dr\.\s*)?\b(Smith|Patel|Sikazwe)(?:['’]s)?(?:\s+(?:deck|lecture))?[\s\xa0,(:·]*$/;
+    const PRONOUN_TAIL = /\b(?:his|her)(?:\s+(?:deck|lecture))?[\s\xa0,(]*$/;
+    const PROF_AFTER = /^[\s\xa0]*\((?:Dr\.\s*)?(Smith|Patel|Sikazwe)\)/;
+    // before "p. N" / "page N": a page of something that is not a slide deck
+    const NOT_DECK = /(?:\b[Cc]hart|\b[Ss]yllabus|\b[Rr]eading|\b[Hh]andout|\b[Tt]extbook|\b[Bb]ook|\b[Aa]ssignment|\b(?:Foye|Katzung|Golan|DiPiro|Goodman|Endotext|Bikle)\b[^;]*|Chapt?\.\s?\d+,?|\bJ Med Chem[^;]*)[\s\xa0,(]*$/;
+    const PRINTED = /\bprinted[\s\xa0(]*$/;
+    const SENT = /[.!?]["'”’)\]]?\s+(?=[A-Z(“])/g;
     const isWordCh = c => !!c && /[A-Za-z0-9’'-]/.test(c);
+    const SUN = {Smith: 'sun', Patel: 'p8s'};
+    const decksOfProf = p => IDS.filter(id => D[id].prof === p);
 
     /* a cited number of a deck -> what is shown: {deck, page} (the deck may be another one: Dr.
        Smith's Sun slides 1-4 are slides of her Skin Pharmacology deck); null = nothing to show */
@@ -92,16 +103,22 @@ const SLIDE_UI = (() => {
       if (!d.inv) { d.inv = {}; for (let n = d.cited; n >= 1; n--) { const r = resolve(deck, n); if (r && r.deck === deck) d.inv[r.page] = n; } }
       return d.inv[page] || page;
     }
-    const lastProf = s => { let m, p = null; PROF.lastIndex = 0; while ((m = PROF.exec(s))) p = m[1]; return p; };
+    const profsIn = s => { const out = []; let m; PROF.lastIndex = 0; while ((m = PROF.exec(s))) out.push(m[1]); return out; };
+    const sentenceStart = (text, at) => { let s = 0, m; SENT.lastIndex = 0; while ((m = SENT.exec(text)) && m.index + m[0].length <= at) s = m.index + m[0].length; return s; };
     /* which of the two decks called "Sun": the professor named in brackets right after, else the
-       last professor named before it in the line, else the one sun deck the place declares */
+       last of Dr. Smith / Dr. Patel named before it in the line, else what the place declares */
     function sunDeck(text, s, e, ctx){
-      const a = PROF_AFTER.exec(text.slice(e)), prof = a ? a[1] : lastProf(text.slice(0, s));
-      if (prof === 'Smith') return 'sun';
-      if (prof === 'Patel') return 'p8s';
-      if (prof) return null;
-      const c = ((ctx && ctx.decks) || []).filter(x => x === 'sun' || x === 'p8s');
-      return c.length === 1 ? c[0] : null;
+      const a = PROF_AFTER.exec(text.slice(e));
+      const before = profsIn(text.slice(0, s)).filter(p => SUN[p]);
+      const prof = a && SUN[a[1]] ? a[1] : before.length ? before[before.length - 1] : null;
+      if (prof) return SUN[prof];
+      const decks = (ctx && ctx.decks) || [];
+      const c = decks.filter(x => x === 'sun' || x === 'p8s');
+      if (c.length === 1) return c[0];
+      if (ctx && ctx.prof && SUN[ctx.prof]) return SUN[ctx.prof];
+      if (ctx && ctx.sun && D[ctx.sun]) return ctx.sun;
+      const ps = decks.map(d => D[d].prof).filter((p, i, all) => all.indexOf(p) === i);
+      return decks.length && ps.length === 1 && SUN[ps[0]] ? SUN[ps[0]] : null;
     }
     /* the list "12, 15-18 and 20" starting at offset `at` -> its items with their offsets */
     function items(list, at){
@@ -111,14 +128,18 @@ const SLIDE_UI = (() => {
     }
 
     /* scan(text, ctx) -> {links, refused, decks}
-       ctx: {decks: [deck id, ...] (what the place declares; one deck = a bare number is linked),
-             column: true (the text is a cell of a column headed Slide or Page)}
+       ctx: what the place declares:
+            decks   [deck id, ...]: one deck = a bare number is that deck's
+            prof    'Smith' | 'Patel' | 'Sikazwe': the professor whose block this is
+            sun     'sun' | 'p8s': the deck "Sun" means here
+            column  true: the text is a cell of a column headed Slide or Page
        links:   [{s, e, deck, n, to, printed, form}]: text[s..e) becomes a button that opens cited
-                number n of `deck` (and cites up to `to`)
+                number n of `deck` (the citation runs to `to`)
        refused: [{s, e, raw, why}]: a citation left as text, with the reason
        decks:   the decks the line names itself, in order */
     function scan(text, ctx){
-      const cand = [], links = [], refused = [], named = [];
+      ctx = ctx || {};
+      const cand = [], links = [], refused = [], named = [], ctxDecks = ctx.decks || [];
       let m;
       RE_FILE.lastIndex = 0;
       while ((m = RE_FILE.exec(text))) {
@@ -136,15 +157,15 @@ const SLIDE_UI = (() => {
         const e = m.index + m[0].length, ls = e - m[3].length;
         if (!m[2] && !nm.bare) continue;                                  // "Wound 12" is not a citation; "Wound Care slide 12" is
         if (!m[2] && AFTER_UNIT.test(text.slice(items(m[3], ls)[0].e))) continue;   // "SD 4 weeks"
-        cand.push({pri: 1, s: m.index, e, from: m.index, ls, list: m[3], deck: nm.deck, form: m[2] ? 'deck name + ' + (/^p/i.test(m[2]) ? 'page' : 'slide') : 'deck name + number', name: m[1]});
+        cand.push({pri: 1, s: m.index, e, from: m.index, ls, list: m[3], deck: nm.deck, form: m[2] ? 'deck name + ' + (/^p/i.test(m[2]) ? 'page' : 'slide') : 'deck name + number'});
       }
       RE_BARE.lastIndex = 0;
       while ((m = RE_BARE.exec(text))) {
-        if (/[A-Za-z]/.test(text[m.index - 1] || '')) continue;           // "upslides 4", "app. 3"
-        const e = m.index + m[0].length;
-        cand.push({pri: 2, s: m.index, e, from: m.index, ls: e - m[2].length, list: m[2], deck: null, form: /^p/i.test(m[1]) ? 'bare page' : 'bare slide'});
+        if (/[A-Za-z]/.test(text[m.index - 1] || '')) continue;           // "app. 3"
+        const e = m.index + m[0].length, page = /^p/i.test(m[1]);
+        cand.push({pri: 2, s: m.index, e, from: m.index, ls: e - m[2].length, list: m[2], deck: null, page, form: page ? 'bare page' : 'bare slide'});
       }
-      if (ctx && ctx.column && (m = RE_COL.exec(text))) {
+      if (ctx.column && (m = RE_COL.exec(text))) {
         const ls = m[0].length - m[1].length;
         cand.push({pri: 3, s: ls, e: m[0].length, from: ls, ls, list: m[1], deck: null, form: 'Slide column'});
       }
@@ -161,39 +182,47 @@ const SLIDE_UI = (() => {
           deck = sunDeck(text, c.s, c.e, ctx);
           if (!deck) why = 'two decks are called Sun (Dr. Smith, Dr. Patel) and nothing here says which';
         } else if (deck === null) {
-          const prof = (PROF_TAIL.exec(before) || [])[1] || null;
-          if (PRINTED.test(before)) printed = true;
-          if (!printed && NOT_DECK.test(before)) why = 'a page of the chart, syllabus, a reading or a textbook, not of a slide deck';
+          printed = PRINTED.test(before);
+          if (c.page && !printed && NOT_DECK.test(before)) why = 'a page of the chart, the syllabus, a reading or a textbook, not of a slide deck';
           else {
-            // the deck named earlier in the same sentence, else the deck the place declares
-            const last = explicit.length ? explicit[explicit.length - 1] : null;
-            const carry = last && !SENTENCE.test(text.slice(last.e, c.s)) ? last.deck : null;
-            const fits = d => !prof || (D[d] && D[d].prof === prof);
-            if (carry && fits(carry)) deck = carry;
-            else {
-              const c2 = ((ctx && ctx.decks) || []).filter(fits);
-              if (c2.length === 1) deck = c2[0];
-              else why = !((ctx && ctx.decks) || []).length ? 'a bare number where no deck is declared'
-                : c2.length ? 'a bare number where more than one deck is declared (' + c2.join(', ') + ')'
-                : 'the professor named before it (' + prof + ') has no deck declared here';
+            // a professor named right before it, or "his" / "her" after one professor was named
+            let prof = (PROF_TAIL.exec(before) || [])[1] || null;
+            if (!prof && PRONOUN_TAIL.test(before)) { const ps = profsIn(text.slice(0, c.s)); prof = ps.length ? ps[ps.length - 1] : null; }
+            const adjacent = !!prof;
+            // where the place declares several decks: the one professor named in this sentence, else the block's own
+            if (!prof && ctxDecks.length > 1) {
+              const ps = profsIn(text.slice(sentenceStart(text, c.s), c.s)).filter((p, i, all) => all.indexOf(p) === i);
+              prof = ps.length === 1 ? ps[0] : (!ps.length && ctx.prof) || null;
             }
-            if (printed && deck !== 'mc') { why = why || 'a printed slide number outside Dr. Sikazwe’s deck'; deck = null; }
+            const fits = d => !prof || (D[d] && D[d].prof === prof);
+            const here = ctxDecks.filter(fits), place = here.length === 1 ? here[0] : null;
+            const last = explicit.length ? explicit[explicit.length - 1] : null;
+            const carry = last && sentenceStart(text, c.s) <= last.s && fits(last.deck) ? last.deck : null;
+            // the place decides; the deck named earlier in the sentence only where the place does not
+            deck = place || (carry && (!here.length || here.indexOf(carry) >= 0) ? carry : null);
+            if (!deck && !why && adjacent && decksOfProf(prof).length === 1) deck = decksOfProf(prof)[0];   // "Dr. Sikazwe's slide 62": he has one deck
+            if (!deck && !why) why = !ctxDecks.length ? 'a bare number where no deck is declared'
+              : here.length > 1 ? 'a bare number where more than one deck is declared (' + here.join(', ') + ')'
+              : 'the professor named with it (' + prof + ') has no deck declared here';
+            if (deck && c.page && !printed && D[deck].unit !== 'Page') { why = 'a page number, where the deck (' + deck + ') is cited by slide'; deck = null; }
+            if (deck && printed && D[deck].unit !== 'Page') { why = 'a printed slide number outside Dr. Sikazwe’s deck'; deck = null; }
           }
         }
         if (!deck) { refused.push({s: c.s, e: c.e, raw, why}); return; }
-        if (c.pri <= 1) { explicit.push({e: c.e, deck}); if (named.indexOf(deck) < 0) named.push(deck); }
+        if (c.pri <= 1) { explicit.push({s: c.s, e: c.e, deck}); if (named.indexOf(deck) < 0) named.push(deck); }
         items(c.list, c.ls).forEach((it, i) => {
           let n = 0;
           if (it.b >= it.a) { for (let k = it.a; k <= it.b && k - it.a < 200; k++) if (resolve(deck, k, printed)) { n = k; break; } }
           else if (resolve(deck, it.a, printed)) n = it.a;
-          const out = it.a < 1 || Math.max(it.a, it.b) > (printed ? D[deck].pages : D[deck].cited);
-          if (!n || out) { refused.push({s: it.s, e: it.e, raw: text.slice(it.s, it.e), deck, outside: out, why: out ? 'outside the deck (' + D[deck].label + ' has ' + (printed ? D[deck].pages : D[deck].cited) + ')' : 'no clean page for this number'}); return; }
+          const top = printed ? D[deck].pages : D[deck].cited;
+          const out = it.a < 1 || Math.max(it.a, it.b) > top;
+          if (!n || out) { refused.push({s: it.s, e: it.e, raw: text.slice(it.s, it.e), deck, outside: out, why: out ? 'outside the deck (' + D[deck].label + ' has ' + top + ')' : 'no clean page for this number'}); return; }
           links.push({s: i === 0 ? c.from : it.s, e: it.e, deck, n, to: it.b > it.a ? it.b : 0, printed, form: c.form});
         });
       });
       return {links, refused, decks: named};
     }
-    /* the deck a section id declares: an exact id, else the longest prefix; undefined = no rule */
+    /* what a section id declares: an exact id, else the longest prefix; undefined = no row */
     function sectionDeck(id){
       let best, len = -1;
       (S.sections || []).forEach(r => {
@@ -201,10 +230,15 @@ const SLIDE_UI = (() => {
         if (k === id) { best = r; len = 1e9; }
         else if (k.slice(-1) === '-' && id.indexOf(k) === 0 && k.length > len) { best = r; len = k.length; }
       });
-      return best ? {deck: best[1], rule: best[0]} : undefined;
+      return best ? {decks: Array.isArray(best[1]) ? best[1] : best[1] ? [best[1]] : [], rule: best[0], sun: best[3] || null} : undefined;
+    }
+    /* the place of a question: the deck its source line names first, and its professor's sun deck */
+    function questionCtx(cite){
+      const d = scan(cite || '', null).decks;
+      return d.length ? {decks: [d[0]], sun: SUN[D[d[0]].prof] || null} : {decks: []};
     }
     const file = (deck, page) => S.dir + '/' + deck + '/' + (page < 10 ? '0' : '') + page + '.' + S.ext;
-    return {scan, resolve, citedOf, sectionDeck, file, decksNamed: t => scan(t, null).decks};
+    return {scan, resolve, citedOf, sectionDeck, questionCtx, file, decksNamed: t => scan(t, null).decks};
   })(SLIDES);
 
   const ok = typeof document !== 'undefined' && typeof MutationObserver !== 'undefined' && typeof document.createTreeWalker === 'function' &&
@@ -215,65 +249,75 @@ const SLIDE_UI = (() => {
   const D = SLIDES.decks;
   const SKIP = 'button,a,summary,label,input,select,textarea,option,svg,script,style,code,.slk,.dzcz,.opt,nav,[contenteditable]';
   const UNIT_SEL = 'p,li,td,th,dd,dt,figcaption,h2,h3,h4,h5,h6,small,div,section,article,span.ln,span.dlsrc,span.dzsrc,span.wtxt,span.atpg,span.stepwhy';
+  const DZPROF = {sm: 'Smith', sk: 'Sikazwe', pa: 'Patel'};
+  const SLIDE_HEAD = /^\s*(?:slides?|pages?)\s*(?:;.*)?$/i;
   const seen = new WeakSet();          // text nodes already read
   const stats = {runs: 0, links: 0, ms: 0};
   const txt = el => (el && el.textContent) || '';
 
-  /* the decks a place declares for a bare number; [] = none */
+  /* Reference, Tell apart, Guides, Atlas: an enclosing element with a row in SLIDES.sections (a
+     guide section, an Atlas board), else the heading above */
   function sectionCtx(el, view){
-    // an enclosing element with a rule (a guide section, an Atlas board), else the heading above
-    for (let a = el; a && a !== view; a = a.parentElement) {
-      if (a.id) { const r = P.sectionDeck(a.id); if (r) return r.deck ? [r.deck] : []; }
+    let r;
+    for (let a = el; a && a !== view && !r; a = a.parentElement) if (a.id) r = P.sectionDeck(a.id);
+    if (!r) {
+      const heads = view.querySelectorAll('h2[id],h3[id]');
+      let best = null;
+      for (let i = 0; i < heads.length; i++) {
+        if ((heads[i].compareDocumentPosition(el) & 4) /* el comes after the heading */ || heads[i].contains(el)) best = heads[i]; else break;
+      }
+      r = best ? P.sectionDeck(best.id) : undefined;
     }
-    const heads = view.querySelectorAll('h2[id],h3[id]');
-    let best = null;
-    for (let i = 0; i < heads.length; i++) {
-      if (heads[i].compareDocumentPosition(el) & 4 /* el follows the heading */ || heads[i].contains(el)) best = heads[i]; else break;
-    }
-    const r = best ? P.sectionDeck(best.id) : undefined;
-    return r && r.deck ? [r.deck] : [];
+    return r ? {decks: r.decks, sun: r.sun} : {decks: []};
   }
+  /* Diseases: the deck(s) the source line(s) of the nearest block name; inside a professor's
+     block, that professor; for the practice patients, the card's deck (SLIDES.sections "dzcases-") */
   function dzCtx(el, view){
-    // Diseases: the deck(s) named by the source line(s) of the nearest block that has one
+    const blk = el.closest('.dzprof'), prof = blk ? DZPROF[['sm', 'sk', 'pa'].filter(k => blk.classList.contains(k))[0]] || null : null;
     for (let a = el; a && a !== view; a = a.parentElement) {
       const src = [];
       for (let c = a.firstElementChild; c; c = c.nextElementSibling) if (c.classList && c.classList.contains('dzsrc')) src.push(txt(c));
       if (a.classList && a.classList.contains('dzsrc')) src.push(txt(a));
       const decks = src.length ? P.decksNamed(src.join('; ')) : [];
-      if (decks.length) return decks;
+      if (decks.length) return {decks, prof};
+      if (a.classList && a.classList.contains('dzcases')) {
+        const card = a.closest('[data-card]'), r = card ? P.sectionDeck('dzcases-' + card.getAttribute('data-card')) : undefined;
+        return {decks: r ? r.decks : [], prof};
+      }
     }
-    return [];
+    return {decks: [], prof};
   }
-  /* the places of a view: [root element, ctx(unit) -> deck list] */
+  /* Drug list: the deck the line's own source chip names */
+  function drugCtx(el){
+    const li = el.closest('li'), chips = li ? li.querySelectorAll('.dlsrc') : [];
+    const decks = chips.length ? P.decksNamed(Array.prototype.map.call(chips, txt).join('; ')) : [];
+    return {decks: decks.length === 1 ? decks : []};
+  }
+  /* the places of a view: [root element, unit -> what its place declares] */
   function places(view){
-    const out = [];
-    const id = view.id;
+    const out = [], id = view.id;
     if (id === 'v-ref' || id === 'v-tell' || id === 'v-guide' || id === 'v-atlas') out.push([view, u => sectionCtx(u, view)]);
-    else if (id === 'v-drugs') out.push([view, () => []]);
+    else if (id === 'v-drugs') out.push([view, drugCtx]);
     else if (id === 'v-dz') out.push([view, u => dzCtx(u, view)]);
-    else if (id === 'v-diagrams') view.querySelectorAll('figcaption').forEach(f => out.push([f, () => []]));
+    else if (id === 'v-diagrams') view.querySelectorAll('figcaption').forEach(f => out.push([f, () => ({decks: []})]));
     else {
       // after an answer: the explanation block and its source line; the exam review; the missed list
-      view.querySelectorAll('.why').forEach(w => { const c = w.querySelector('.cite'); const d = c ? P.decksNamed(txt(c)) : []; out.push([w, () => d]); });
+      view.querySelectorAll('.why').forEach(w => { const c = w.querySelector('.cite'); const x = P.questionCtx(c ? txt(c) : ''); out.push([w, () => x]); });
       view.querySelectorAll('.qbody').forEach(b => {
         if (b.querySelector('.why')) return;
         const c = b.querySelector(':scope > .cite'); if (!c) return;       // a question not yet answered has no source line
-        const d = P.decksNamed(txt(c));
-        b.querySelectorAll(':scope > .wrow, :scope > .teach, :scope > .cite, :scope > .prose').forEach(x => out.push([x, () => d]));
+        const x = P.questionCtx(txt(c));
+        b.querySelectorAll(':scope > .wrow, :scope > .teach, :scope > .cite, :scope > .prose').forEach(e => out.push([e, () => x]));
       });
-      view.querySelectorAll('.missq .mmeta').forEach(x => out.push([x, () => []]));
+      view.querySelectorAll('.missq .mmeta').forEach(e => out.push([e, () => ({decks: []})]));
     }
     return out;
   }
-  const inSlideColumn = cell => {
-    try {
-      if (!cell || cell.tagName !== 'TD') return false;
-      const table = cell.closest('table'), th = table && table.querySelectorAll('thead th')[cell.cellIndex];
-      return !!th && /^\s*(?:slides?|pages?)\s*(?:;.*)?$/i.test(txt(th));
-    } catch (e) { return false; }
+  const headOf = cell => {
+    try { const t = cell.closest('table'); return t ? txt(t.querySelectorAll('thead th')[cell.cellIndex]) : ''; } catch (e) { return ''; }
   };
   function linkUnit(unit, ctxOf){
-    // the unit's text with the place of every text node in it
+    // the unit's text, with the place of every text node in it
     const nodes = [], w = document.createTreeWalker(unit, 4 /* text */);
     let text = '', n;
     while ((n = w.nextNode())) {
@@ -284,9 +328,17 @@ const SLIDE_UI = (() => {
     }
     nodes.forEach(x => seen.add(x.n));
     if (!/\d/.test(text)) return 0;
+    const ctx = Object.assign({decks: []}, ctxOf(unit) || {});
+    // a figure caption: the one deck it names; a table cell: the one deck its column heading names
+    const cap = unit.closest('figcaption');
+    if (cap) { const d = P.decksNamed(txt(cap)); if (d.length === 1) ctx.decks = d; }
     const cell = unit.tagName === 'TD' ? unit : unit.closest('td');
-    const column = !!cell && inSlideColumn(cell) && (cell === unit || txt(cell).trim() === text.trim());
-    const res = P.scan(text, {decks: ctxOf(unit) || [], column});
+    if (cell) {
+      const head = headOf(cell), d = head ? P.decksNamed(head) : [];
+      if (d.length === 1) ctx.decks = d;
+      ctx.column = SLIDE_HEAD.test(head) && (cell === unit || txt(cell).trim() === text.trim());
+    }
+    const res = P.scan(text, ctx);
     let made = 0;
     // from the end, so the offsets of earlier links stay true
     res.links.slice().sort((a, b) => b.s - a.s).forEach(l => {
@@ -327,7 +379,6 @@ const SLIDE_UI = (() => {
 
   /* ---------------------------------------------------------------- viewer */
   const base = () => { try { return BUILD.preview ? '../' : ''; } catch (e) { return ''; } };
-  const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g, c => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'}[c]));
   const V = {dlg: null, deck: null, page: 0, from: null, opener: null, modal: false};
   function build(){
     const d = document.createElement('dialog');
