@@ -112,5 +112,6 @@ const SLIDES = {
   ["dzcases-warts", "p8c", "Diseases: the practice patients of this card are Dr. Patel's cases from this deck", "p8s"],
   ["dzcases-corns-calluses", "p8c", "Diseases: the practice patients of this card are Dr. Patel's cases from this deck", "p8s"]
  ],
- "notes": [["pp", 38, "The PollEv questions cited at this slide were asked in class while it was up. The slide does not print them."]]
+ "notes": [["pp", 38, "The PollEv questions cited at this slide were asked in class while it was up. The slide does not print them."]],
+ "printed": [["mc", 59, 51]]
 };

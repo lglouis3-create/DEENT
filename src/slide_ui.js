@@ -513,7 +513,13 @@ const SLIDE_UI = (() => {
 
   /* ---------------------------------------------------------------- viewer */
   const base = () => { try { return BUILD.preview ? '../' : ''; } catch (e) { return ''; } };
-  const V = {dlg: null, deck: null, page: 0, from: null, opener: null, modal: false};
+  /* deck, page: the picture on screen. cdeck, n: the cited number it stands for, in the deck the citation
+     named; Previous and Next follow that deck's numbering (Dr. Smith's Sun slides 1-4 are pictures of her Skin
+     Pharmacology deck, and Next from Sun 4 is Sun 5). from: the citation that opened the viewer */
+  const V = {dlg: null, deck: null, page: 0, cdeck: null, n: 0, from: null, opener: null, modal: false, lock: null, refocus: false};
+  /* the number printed on a clean page of a deck cited by page: the page's own place in the file, except the
+     rows of SLIDES.printed (pdftotext of the clean deck) */
+  const printedOn = (deck, page) => { let n = page; (SLIDES.printed || []).forEach(r => { if (r[0] === deck && r[1] === page) n = r[2]; }); return n; };
   function build(){
     const d = document.createElement('dialog');
     d.className = 'slv'; d.setAttribute('aria-labelledby', 'slv-deck');
@@ -521,7 +527,8 @@ const SLIDE_UI = (() => {
       <div class="slv-head"><div class="slv-t"><p id="slv-deck" class="slv-deck"></p><p class="slv-pos" aria-live="polite"></p></div>
         <button type="button" class="slv-x" data-slv="close">Close</button></div>
       <p class="slv-note" hidden></p>
-      <div class="slv-pic"><a class="slv-a" target="_blank" rel="noopener"><img class="slv-img" alt="" decoding="async" loading="lazy"></a>
+      <div class="slv-pic"><a class="slv-a" target="_blank" rel="noopener"><img class="slv-img" alt="" decoding="async"></a>
+        <p class="slv-wait" hidden></p>
         <p class="slv-err" role="alert" hidden>The picture of this slide did not load. Check the connection, then press Try again. <button type="button" class="btn sm" data-slv="again">Try again</button></p></div>
       <div class="slv-bar"><button type="button" class="btn ghost" data-slv="prev">◂ Previous</button><button type="button" class="btn ghost" data-slv="next">Next ▸</button>
         <span class="slv-sp"></span><a class="slv-full" target="_blank" rel="noopener">Open full size</a></div></div>`;
@@ -531,74 +538,221 @@ const SLIDE_UI = (() => {
       if (t) { const a = t.getAttribute('data-slv'); if (a === 'close') close(); else if (a === 'prev') go(-1); else if (a === 'next') go(1); else if (a === 'again') draw(true); return; }
       if (e.target === d) close();                                   // a tap on the dimmed page around the box
     });
-    d.addEventListener('keydown', e => {
-      if (e.key === 'ArrowLeft') { e.preventDefault(); go(-1); }
-      else if (e.key === 'ArrowRight') { e.preventDefault(); go(1); }
-      else if (e.key === 'Escape' && !V.modal) { e.preventDefault(); close(); }
-    });
-    d.addEventListener('close', () => {
-      const o = V.opener; V.opener = null;
-      d.querySelector('.slv-img').removeAttribute('src');
-      if (o && o.isConnected && typeof o.focus === 'function') { try { o.focus({preventScroll: true}); } catch (e) { o.focus(); } }
-    });
+    // Escape and Tab are the viewer's while it is open, wherever focus is, and the page's own key handlers never
+    // see them (an enlarged figure behind the viewer took Tab for its own buttons and closed on the first
+    // Escape): Escape closes the viewer, Tab goes round inside it. The keys that scroll move nothing when the
+    // box has nothing to scroll (they would scroll the page behind); Space still presses a button
+    const SCROLLS = ['PageUp', 'PageDown', 'Home', 'End', 'ArrowUp', 'ArrowDown', ' ', 'Spacebar'];
+    const sane = () => { if (V.lock && !(d.open && d.isConnected)) unlock(false); };     // a lock never outlives the viewer
+    window.addEventListener('pointerdown', sane, true);
+    window.addEventListener('keydown', e => {
+      sane();
+      if (!d.open) return;
+      // the left and right arrows page, also when focus is on nothing in the box (after a click on its text)
+      if ((e.key === 'ArrowLeft' || e.key === 'ArrowRight') && (V.modal || d.contains(e.target))) { e.preventDefault(); go(e.key === 'ArrowLeft' ? -1 : 1); return; }
+      if (V.modal && SCROLLS.indexOf(e.key) >= 0 && d.scrollHeight <= d.clientHeight + 1 && !((e.key === ' ' || e.key === 'Spacebar') && e.target && e.target.tagName === 'BUTTON')) { e.preventDefault(); return; }
+      if (e.key !== 'Escape' && e.key !== 'Tab') return;
+      if (e.key === 'Escape') { e.stopPropagation(); e.preventDefault(); close(); return; }
+      if (!V.modal) return;                                          // without <dialog> the page around the box is still in use
+      e.stopPropagation();
+      const f = Array.prototype.filter.call(d.querySelectorAll('button,a[href]'), x => !x.disabled && x.getClientRects().length && getComputedStyle(x).visibility !== 'hidden');
+      const i = f.indexOf(document.activeElement), to = e.shiftKey ? (i <= 0 ? f[f.length - 1] : null) : (i < 0 || i === f.length - 1 ? f[0] : null);
+      if (to) { e.preventDefault(); try { to.focus({preventScroll: true}); } catch (err) {} }
+    }, true);
+    // a finger dragged, or a wheel turned, on the dimmed page around the box or on a box with nothing to scroll
+    // moves nothing; two fingers, a zoomed page and Ctrl with the wheel (zoom) are left to the browser
+    const still = e => { if (e.cancelable && (e.target === d || d.scrollHeight <= d.clientHeight + 1)) e.preventDefault(); };
+    d.addEventListener('touchmove', e => {
+      const vv = window.visualViewport;
+      if (!(e.touches && e.touches.length > 1) && !(vv && vv.scale > 1.01)) still(e);
+    }, {passive: false});
+    d.addEventListener('wheel', e => { if (!e.ctrlKey) still(e); }, {passive: false});
+    d.addEventListener('close', closed);                             // Escape; and close(), which has done it already
     const img = d.querySelector('.slv-img');
-    img.addEventListener('error', () => { if (img.getAttribute('src')) { d.querySelector('.slv-err').hidden = false; img.classList.add('bad'); } });
-    img.addEventListener('load', () => { d.querySelector('.slv-err').hidden = true; img.classList.remove('bad'); });
+    // an answer for a picture that is no longer the one asked for (Next pressed again, the viewer closed) is ignored
+    const mine = () => !!img.getAttribute('src') && img.complete;
+    img.addEventListener('error', () => { if (mine()) state('bad'); });
+    img.addEventListener('load', () => { if (mine() && img.naturalWidth > 0) state(''); });
     return d;
+  }
+  /* the picture box: 'wait' from the moment a picture is asked for until it arrives (the picture before it is
+     taken off at once, the box keeps its size and a line says which slide is loading), 'bad' when it did not
+     load (the message and Try again), '' when it is shown. Focus is never left on something that was hidden
+     (Try again; the picture's link when there is no picture): it goes to Close, and back to Try again when
+     the picture fails once more */
+  function state(s, line){
+    const d = V.dlg, q = sel => d.querySelector(sel), err = q('.slv-err'), x = q('.slv-x');
+    const act = document.activeElement, onErr = !!act && err.contains(act), onPic = act === q('.slv-a');
+    const focus = el => { try { el.focus({preventScroll: true}); } catch (e) {} };
+    q('.slv-pic').className = 'slv-pic' + (s ? ' ' + s : '');
+    if (line !== undefined) q('.slv-wait').textContent = line;
+    q('.slv-wait').hidden = s !== 'wait';
+    err.hidden = s !== 'bad';
+    if (s === 'bad') {
+      if (V.refocus && act === x) focus(q('[data-slv=again]'));     // Try again was pressed and the picture failed once more
+      else if (onPic) focus(x);
+      V.refocus = false;
+    } else if (onErr) { focus(x); V.refocus = s === 'wait'; }
+    else if (s === '') V.refocus = false;
+  }
+  /* the next cited number of the cited deck, one way, whose slide is another picture than the one on screen
+     (two numbers can share a slide, a number can have none): {n, r}, or null at the end of that deck */
+  function step(dir){
+    const c = D[V.cdeck]; if (!c) return null;
+    for (let n = V.n + dir; n >= 1 && n <= c.cited; n += dir) {
+      const r = P.resolve(V.cdeck, n);
+      if (r && !(r.deck === V.deck && r.page === V.page)) return {n, r};
+    }
+    return null;
   }
   function draw(again){
     const d = V.dlg, k = D[V.deck], q = sel => d.querySelector(sel);
-    const cited = P.citedOf(V.deck, V.page), unit = k.unit, title = (k.titles || [])[V.page - 1] || '';
+    const cited = P.citedOf(V.deck, V.page), unit = k.unit, low = unit.toLowerCase(), title = (k.titles || [])[V.page - 1] || '';
     const src = base() + P.file(V.deck, V.page) + (again ? '?r=' + Date.now() : '');
+    const pr = printedOn(V.deck, V.page);
     q('.slv-deck').textContent = k.label;
-    q('.slv-pos').textContent = unit + ' ' + cited + ' of ' + k.cited + (unit === 'Page' && cited !== V.page ? ' · slide number printed on it: ' + V.page : '');
-    const note = q('.slv-note'), f = V.from;
-    let msg = '';
-    if (f && f.deck !== V.deck) msg = 'Cited as ' + D[f.deck].label + ', ' + D[f.deck].unit.toLowerCase() + ' ' + f.n + '. That slide is ' + unit.toLowerCase() + ' ' + P.citedOf(V.deck, f.page) + ' of this deck.';
-    else if (f && f.to) msg = 'Cited: ' + unit.toLowerCase() + 's ' + f.n + '–' + f.to + '.';
-    (SLIDES.notes || []).forEach(r => { if (r[0] === V.deck && r[1] === V.page) msg += (msg ? ' ' : '') + r[2]; });
-    note.textContent = msg; note.hidden = !msg;
+    q('.slv-pos').textContent = unit + ' ' + cited + ' of ' + k.cited + (unit === 'Page' && pr !== cited ? ' · slide number printed on it: ' + pr : '');
+    const f = V.from, at = !!f && f.rdeck === V.deck && f.page === V.page;      // the slide the citation opened is on screen
+    const msg = [];
+    if (V.cdeck !== V.deck) {
+      // a slide of another deck than the one cited
+      const what = D[V.cdeck].label + ', ' + D[V.cdeck].unit.toLowerCase() + ' ' + V.n;
+      msg.push(at && f.deck === V.cdeck && f.n === V.n ? 'Cited as ' + what + '. That slide is ' + low + ' ' + cited + ' of this deck.' : what + ' is ' + low + ' ' + cited + ' of this deck.');
+    } else {
+      // a number of the lecture copy that has no page of its own in the clean copy (DPAW page 22 repeats page 21)
+      if (at && !f.printed && f.deck === V.deck && f.n !== cited)
+        msg.push('Cited as ' + low + ' ' + f.n + '. ' + unit + ' ' + f.n + ' of the lecture copy is the same slide as ' + low + ' ' + cited + '.');
+      // a cited range, only while the slide on screen is inside it
+      if (f && f.to && f.deck === V.deck && (f.printed ? V.page >= f.n && V.page <= f.to : V.n >= f.n && V.n <= f.to))
+        msg.push('Cited: ' + (f.printed ? 'printed slide numbers ' : low + 's ') + f.n + '–' + f.to + '.');
+    }
+    (SLIDES.notes || []).forEach(r => { if (r[0] === V.deck && r[1] === V.page) msg.push(r[2]); });
+    const note = q('.slv-note');
+    note.textContent = msg.join(' '); note.hidden = !msg.length;
     const img = q('.slv-img');
-    q('.slv-err').hidden = true; img.classList.remove('bad');
-    img.style.aspectRatio = String(k.ar || 1.3333);
-    img.alt = k.label + ', ' + unit.toLowerCase() + ' ' + cited + (title ? ': ' + title : '');
-    img.src = src;
+    d.style.setProperty('--slv-ar', String(k.ar || 1.3333));     // the box takes the slide's shape before the picture has data
+    img.alt = k.label + ', ' + low + ' ' + cited + (title ? ': ' + title : '');
     q('.slv-a').href = src; q('.slv-full').href = src;
-    q('[data-slv=prev]').disabled = V.page <= 1;
-    q('[data-slv=next]').disabled = V.page >= k.pages;
+    if (img.getAttribute('src') === src && img.complete && img.naturalWidth > 0) state('');
+    else { state('wait', 'Loading ' + low + ' ' + cited + '…'); img.src = src; }
+    const pv = q('[data-slv=prev]'), nx = q('[data-slv=next]'), act = document.activeElement;
+    pv.disabled = !step(-1);
+    nx.disabled = !step(1);
+    // Previous or Next goes off at an end of the deck while focus is on it: focus goes to the other one (to
+    // Close when both are off), so that it stays in the viewer
+    if (d.open && (act === pv || act === nx) && act.disabled) {
+      const to = act === pv ? nx : pv;
+      try { (to.disabled ? q('.slv-x') : to).focus({preventScroll: true}); } catch (e) {}
+    }
   }
-  function go(step){
-    const k = D[V.deck], p = V.page + step;
-    if (!k || p < 1 || p > k.pages) return;
-    if (V.from && V.from.deck !== V.deck) V.from = null;      // the "cited as" line belongs to the slide that was opened
-    V.page = p; draw();
+  function go(dir){
+    const s = step(dir); if (!s) return;
+    V.n = s.n; V.deck = s.r.deck; V.page = s.r.page; V.refocus = false; draw();
+  }
+  /* the page behind does not scroll while the viewer is open and is at the same place when it closes, and
+     nothing on it moves sideways. Where the page's scrollbar takes no room (phones, tablets, a Mac's own
+     setting) the root stops scrolling (overflow hidden). Where the scrollbar takes room it stays as it is,
+     since taking it away would make the page wider: there the wheel and the keys are stopped at the viewer
+     (build), and whatever else scrolls the page (a drag on the scrollbar) is put back at once */
+  const put = (x, y) => { try { window.scrollTo({left: x, top: y, behavior: 'instant'}); } catch (e) { window.scrollTo(x, y); } };
+  function lock(x, y){
+    if (V.lock) unlock(false);
+    const r = document.documentElement, k = V.lock = {x, y, w: window.innerWidth, h: window.innerHeight, o: r.style.overflow, hid: false, snap: null, turned: false};
+    if (window.innerWidth - r.clientWidth > 0) {
+      k.snap = () => {
+        if (V.lock !== k || !V.dlg || !V.dlg.open) { window.removeEventListener('scroll', k.snap); return; }
+        if (window.innerWidth !== k.w) { k.turned = true; k.w = window.innerWidth; k.x = window.scrollX; k.y = window.scrollY; return; }   // a resized window: where the browser put the page
+        if (window.scrollX !== k.x || window.scrollY !== k.y) put(k.x, k.y);
+      };
+      window.addEventListener('scroll', k.snap);
+    } else { r.style.overflow = 'hidden'; k.hid = true; }
+  }
+  function unlock(back){
+    const k = V.lock; if (!k) return;
+    V.lock = null;
+    if (k.snap) window.removeEventListener('scroll', k.snap);
+    if (k.hid) document.documentElement.style.overflow = k.o;
+    // back to the same place; not when the page behind was drawn anew meanwhile (the citation is gone), and a
+    // window that was resized or turned is left where the browser put the page
+    if (back && window.innerWidth === k.w && (window.scrollX !== k.x || window.scrollY !== k.y)) put(k.x, k.y);
   }
   function open(deck, n, to, printed, opener){
     const r = P.resolve(deck, n, printed); if (!r) return false;
     if (!V.dlg) V.dlg = build();
-    V.deck = r.deck; V.page = r.page; V.from = {deck, n, to: to || 0, page: r.page};
-    V.opener = opener || document.activeElement;
-    draw();
     const d = V.dlg;
+    V.deck = r.deck; V.page = r.page; V.cdeck = deck; V.n = printed ? P.citedOf(r.deck, r.page) : n;
+    V.from = {deck, n, to: to || 0, printed: !!printed, rdeck: r.deck, page: r.page};
+    if (opener || !d.open) V.opener = opener || document.activeElement;
     if (!d.open) {
+      const x = window.scrollX, y = window.scrollY;
       V.modal = typeof d.showModal === 'function';
       if (V.modal) d.showModal(); else { d.classList.add('slv-fb'); d.setAttribute('open', ''); }   // a browser without <dialog>
+      try { lock(x, y); } catch (e) {}
     }
+    draw();                         // once the box is on screen: the picture is asked for by a box that is laid out
     const x = d.querySelector('.slv-x'); if (x) { try { x.focus({preventScroll: true}); } catch (e) {} }
     return true;
   }
+  /* after the viewer closed, once: by close() at once, or by the browser's close event after Escape. The event
+     of an earlier closing that arrives when the viewer is open again finds it open and does nothing */
+  function closed(){
+    const d = V.dlg; if (!d || d.open) return;
+    const o = V.opener; V.opener = null; V.refocus = false;
+    d.querySelector('.slv-img').removeAttribute('src');
+    // the citation that was tapped is still on the page: focus goes back to it and the page to its place
+    const there = !!o && o.isConnected && o.getClientRects().length > 0;
+    const k = V.lock, turned = !!k && (k.turned || window.innerWidth !== k.w || window.innerHeight !== k.h);
+    try { if (there && typeof o.focus === 'function') { try { o.focus({preventScroll: true}); } catch (e) { o.focus(); } } }
+    finally { unlock(there || !o); }
+    // the window was resized or turned while the viewer was open: the page is not put back at its old place
+    // (unlock), so the citation is brought on screen when it is not there
+    if (there && turned) {
+      try {
+        const b = o.getBoundingClientRect();
+        if (b.top < 0 || b.left < 0 || b.bottom > window.innerHeight || b.right > window.innerWidth) {
+          try { o.scrollIntoView({block: 'center', inline: 'nearest', behavior: 'instant'}); } catch (e) { o.scrollIntoView(); }
+        }
+      } catch (e) {}
+    }
+  }
   function close(){
     const d = V.dlg; if (!d) return;
-    if (d.open && typeof d.close === 'function') d.close();
-    else { d.removeAttribute('open'); d.dispatchEvent(new Event('close')); }
+    if (d.open && typeof d.close === 'function') d.close(); else d.removeAttribute('open');
+    closed();
   }
+  /* A slide link's touch area reaches 6 px past its text (the style sheet below), also into the lines above and
+     below it. Where that margin lies over another control (a button, a link, a cover on the line above), a tap
+     there is that control's; where it lies over the text of another slide link, that link's. Only for a tap
+     or click at a point (a key press and a click made by a script carry none) */
+  const CTL = 'button,a[href],summary,input,select,textarea,label,[role=button],[role=checkbox],[tabindex]:not([tabindex="-1"])';
+  const within = (rects, x, y) => Array.prototype.some.call(rects, r => x >= r.left && x <= r.right && y >= r.top && y <= r.bottom);
+  const textOf = l => { const r = document.createRange(); r.selectNodeContents(l); return r.getClientRects(); };
+  try {
+    document.addEventListener('click', e => {
+      try {
+        const l = e.target && e.target.closest ? e.target.closest('.slk') : null, x = e.clientX, y = e.clientY;
+        if (!l || !e.detail || !within(l.getClientRects(), x, y) || within(textOf(l), x, y)) return;
+        const was = l.style.pointerEvents;
+        l.style.pointerEvents = 'none';
+        const under = document.elementFromPoint(x, y);
+        l.style.pointerEvents = was;
+        const c = under && under.closest ? under.closest(CTL) : null;
+        if (!c || c.contains(l) || (c.classList.contains('slk') && !within(textOf(c), x, y))) return;
+        e.preventDefault(); e.stopImmediatePropagation();
+        c.click();
+      } catch (err) {}
+    }, true);
+  } catch (e) {}
 
   const CSS = `
 .slk{color:var(--accent,#2F5FA8);border-radius:3px;cursor:pointer;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:2px;
-  -webkit-tap-highlight-color:rgba(47,95,168,.18)}
-.slk:hover{background:var(--accent-bg,rgba(47,95,168,.1))}
-.slk:focus-visible{outline:2px solid var(--accent,#2F5FA8);outline-offset:1px}
-dialog.slv{border:0;border-radius:14px;padding:0;width:min(1120px,calc(100vw - 16px));max-width:none;max-height:calc(100vh - 16px);max-height:calc(100dvh - 16px);
+  padding:6px;margin:0 -6px;background-clip:content-box;-webkit-tap-highlight-color:rgba(47,95,168,.18)}
+.slk:hover{background-color:var(--accent-bg,rgba(47,95,168,.1))}
+.slk:focus-visible{outline:2px solid var(--accent,#2F5FA8);outline-offset:-5px}
+.gbar .slk{color:inherit;font-size:inherit;letter-spacing:inherit;text-transform:inherit;opacity:1}
+.gbar .slk:hover{background-color:rgba(0,0,0,.22)}
+.gbar .slk:focus-visible{outline-color:#fff}
+dialog.slv{--slv-r:190px;border:0;border-radius:14px;padding:0;width:min(1120px,calc(100vw - 16px));max-width:none;max-height:calc(100vh - 16px);max-height:calc(100dvh - 16px);
   background:var(--paper,#fff);color:var(--text,#1d2733);overflow:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;box-sizing:border-box}
 dialog.slv:not([open]){display:none}
 dialog.slv.slv-fb[open]{display:block;position:fixed;top:8px;left:8px;right:8px;margin:0 auto;z-index:2147483000;box-shadow:0 0 0 100vmax rgba(0,0,0,.45)}
@@ -610,17 +764,32 @@ dialog.slv::backdrop{background:rgba(0,0,0,.55)}
 .slv-pos{margin:1px 0 0;font-size:14px;color:var(--text-dim,#5b6877)}
 .slv-note{margin:6px 0 0;font-size:13.5px;color:var(--text-dim,#5b6877)}
 .slv-x{font:inherit;font-size:15px;min-height:44px;min-width:60px;border:1px solid var(--line,#d5dbe3);border-radius:8px;background:var(--paper,#fff);color:var(--accent,#2F5FA8);padding:0 12px;cursor:pointer}
-.slv-pic{margin:8px 0;background:var(--surface,#f2f4f7);border:1px solid var(--line,#d5dbe3);border-radius:8px;display:flex;flex-direction:column;align-items:center;justify-content:center;overflow:hidden}
-.slv-a{display:block;width:100%;line-height:0;text-align:center}
-.slv-img{display:block;margin:0 auto;width:auto;height:auto;max-width:100%;max-height:calc(100vh - 190px);max-height:calc(100dvh - 190px);background:#fff}
-.slv-img.bad{visibility:hidden;max-height:60px}
+.slv-pic{margin:8px 0;background:var(--surface,#f2f4f7);border:1px solid var(--line,#d5dbe3);border-radius:8px;display:grid;grid-template-columns:minmax(0,1fr);justify-items:center;align-items:center;overflow:hidden}
+.slv-pic>*{grid-area:1/1}
+.slv-a{display:block;line-height:0;background:#fff;width:100%;width:min(100%,calc((100vh - var(--slv-r))*var(--slv-ar,1.3333)));width:min(100%,calc((100dvh - var(--slv-r))*var(--slv-ar,1.3333)));aspect-ratio:var(--slv-ar,1.3333)}
+.slv-img{display:block;width:100%;height:auto}
+@supports (aspect-ratio:1){.slv-img{height:100%;object-fit:contain}}
+.slv-pic.wait .slv-img,.slv-pic.bad .slv-a{visibility:hidden}
+.slv-wait{margin:0;padding:0 14px;font-size:15px;text-align:center;color:var(--text-dim,#5b6877);animation:slv-wait .01s linear .3s both}
+@keyframes slv-wait{from{opacity:0}to{opacity:1}}
 .slv-err{margin:0;padding:14px;font-size:15px;text-align:center}
 .slv-bar{display:flex;flex-wrap:wrap;align-items:center;gap:8px}
-.slv-bar .btn{min-height:44px}
+.slv-bar .btn{min-height:44px;white-space:nowrap}
 .slv-bar .btn[disabled]{opacity:.45;cursor:default}
 .slv-sp{flex:1}
 .slv-full{display:inline-flex;align-items:center;min-height:44px;padding:0 4px;color:var(--accent,#2F5FA8);font-size:15px}
 @media (max-width:480px){.slv-in{padding:8px}.slv-bar .btn{flex:1}.slv-full{flex-basis:100%;justify-content:center}}
+@media (max-height:480px) and (min-width:560px) and (min-aspect-ratio:5/3){
+  dialog.slv{--slv-r:36px}
+  .slv-in{display:grid;grid-template-columns:minmax(0,1fr) 232px;grid-template-rows:auto auto 1fr;gap:6px 10px;padding:8px}
+  .slv-pic{grid-column:1;grid-row:1/4;margin:0;align-self:start}
+  .slv-head{grid-column:2;grid-row:1}
+  .slv-note{grid-column:2;grid-row:2;margin:0}
+  .slv-bar{grid-column:2;grid-row:3;align-content:flex-end}
+  .slv-bar .btn{flex:1 1 auto;padding-left:10px;padding-right:10px}
+  .slv-sp{display:none}
+  .slv-full{flex-basis:100%;justify-content:center}
+}
 @media print{.slk{color:inherit;text-decoration:none}dialog.slv{display:none}}
 `;
 
