@@ -287,6 +287,9 @@ const COURSE = {
           'chart_boxes.js', 'druglist_data.js', 'drugfacts.js', 'druglist_ui.js',
           // the Diseases tab (Louis, 2026-11-13): cards per condition, drug panels, tell-apart sets (dz_build.py, dz_check.js)
           'dz_data.js', 'dz_ui.js',
+          // Slide links (Louis, 2026-11-13): a slide citation opens that slide from the clean decks in deck/
+          // (slide_data.js: the page map and tables, written by slide_map.py; slide_check.js, slide_test.js)
+          'slide_data.js', 'slide_ui.js',
           // "Likely on the exam" stars (course-level, Louis 2026-11-08): data, then presentation
           'likely_data.js', 'likely_ui.js',
           // Narration player (course-level, Louis 2026-11-08, path B of reviews/NARRATION_PLAN.md
