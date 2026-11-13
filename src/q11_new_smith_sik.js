@@ -423,6 +423,13 @@ QUESTIONS.push(
  why:'Slide 40: "3 to 6% - treats skin conditions like dandruff, acne and psoriasis"; "You want to use products that are only 3 to 6% salicylic acid" (10/30 T 546–547). Above 6% may damage the skin (T 547–548); up to 40% is for warts and corns.',
  cite:XQ_PC2+' slide 40; T 546–549'},
 
+{id:'BSX-003', type:'blank', skill:'counsel', prof:'Smith', tier:'new', topic:'l2-ker', sub:'sal', concept:'x-b-salicylic-acne-up-to',
+ tags:['blank','exam-style'], source:'both', dupOf:'L2-103',
+ stem:'A salicylic acid concentration up to ___% may be used to safely treat acne.',
+ accept:['6', '6%', '6 %', '3-6', '3 to 6', '3-6%', '3', 'six', '6 percent'],
+ why:'Slide 40: "3 to 6% - treats skin conditions like dandruff, acne and psoriasis"; "You want to use products that are only 3 to 6% salicylic acid" (10/30 T 546–547). Exam 1 asked this blank and keyed 6, 3-6 and 3. The 40% figure is the wart and corn product (BL2-003).',
+ cite:XQ_PC2+' slide 40; T 546–549'},
+
 /* =========================== Dr. Sikazwe ================================== */
 /* ---- Crisaborole and the JAK inhibitors (pp. 7–9) ------------------------ */
 {id:'KX-001', skill:'pk', prof:'Sikazwe', tier:'new', topic:'s3-cris', sub:'adme', concept:'x-cris-nonenzymatic-step',

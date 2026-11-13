@@ -9,6 +9,7 @@ const REFERENCE_HTML = `
 <tr><td><b>Acne</b></td><td>Keratolytics; antibiotics; nuclear receptor binders; antiandrogens</td><td>Pathophys 37</td></tr>
 </tbody></table>
 <p class="prose">Note: slide 28 prints "IL-12 &amp; IL-13 inhibitors"; slide 21 names IL-23, not IL-13, among the psoriasis cytokines, and the drug chart lists ustekinumab as an IL-12 &amp; IL-23 inhibitor. No question keys on this line until it is settled.</p>
+<p class="prose">Class lists and product slides differ on keratolytics. Slide 28 lists no keratolytics and no PDE-4 inhibitors for psoriasis, and slide 37 lists keratolytics for acne; PCol slide 40 gives salicylic acid at 3 to 6% for acne, dandruff and psoriasis, and Dr. Sikazwe's slide 33 gives apremilast, a PDE-4 inhibitor, for plaque psoriasis. In the class lists, keratolytics appear under acne (slide 37) and not under psoriasis (slide 28), and PDE-4 inhibitors appear under atopic dermatitis (slide 17) and not under psoriasis (slide 28).</p>
 
 <h3 id="ref-l1-acnemap">Skin Pathophysiology (Dr. Smith): acne pathology and the drugs aimed at it, slide 36</h3>
 <table class="reftab"><thead><tr><th style="width:28%">Component</th><th>Drugs in the figure</th></tr></thead><tbody>
