@@ -3,13 +3,12 @@
    and what it's showing"). Each sentence is written from the figure's own steps (diagrams.js,
    figs2.js, cbda.js) and its spoken script (dianarr_smith.js, dianarr_sik.js).
 
-   The figure is found the way dianarr_ui.js finds it: a step-through by its [data-anim] control,
-   a static figure by the aria-label of its drawing. A figure with no entry below, and a figure
-   inside the walkthrough player (it has its own words), gets no line. The line is plain text, is
-   added once per figure (data-dpurp) and is not read aloud: the narration scripts are unchanged.
-   Storage: none. Needs DIA, DIA_NAMES from diagrams.js; does nothing without them. */
+   The line is written into the figure's markup in DIA when this file loads (after the files that
+   add to DIA), so nothing is inserted into the page later. A figure with no entry below gets no
+   line. The line is plain text and is not read aloud: the narration scripts are unchanged.
+   Storage: none. Needs DIA from diagrams.js; does nothing without it. */
 const PURPOSE_UI = (() => {
-  if (typeof document === 'undefined' || typeof MutationObserver === 'undefined' || typeof DIA === 'undefined' || !DIA) return null;
+  if (typeof document === 'undefined' || typeof DIA === 'undefined' || !DIA) return null;
 
   const PURPOSE = {
     'acne-cascade': 'Shows how a normal follicle becomes each acne lesion, from the comedones to the nodule or cyst, so you can name the stage a lesion is at and what comes next.',
@@ -56,45 +55,24 @@ const PURPOSE_UI = (() => {
     'fig-vitd-evidence': 'Sets the benefits suggested by animal and observational studies against what randomized trials found, so you can separate what is suggested from what is shown.'
   };
 
-  /* a static figure is found by the aria-label of its drawing, as dianarr_ui.js does */
-  const unq = s => String(s).replace(/&quot;/g, '"').replace(/&#39;/g, "'").replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&amp;/g, '&');
-  const STATIC = new Map();
+  /* The sentence is written into each figure's own markup, so it is in place whenever the figure is
+     drawn (a Guide, Reference, Diagrams, an answered question) and moves no page afterwards. The
+     walkthrough player has its own words, so the line is hidden there. */
+  const esc = t => String(t).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+  const OPEN = '<figure class="fig">';
   Object.keys(PURPOSE).forEach(k => {
-    const h = DIA[k]; if (typeof h !== 'string' || /data-anim=/.test(h)) return;
-    const m = h.match(/<svg[^>]*\saria-label="([^"]*)"/); if (m) STATIC.set(unq(m[1]), k);
+    const h = DIA[k];
+    if (typeof h !== 'string' || h.indexOf(OPEN) !== 0 || h.indexOf('dnpurpose') >= 0) return;
+    DIA[k] = OPEN + '<p class="dnpurpose"><b>Purpose.</b> ' + esc(PURPOSE[k]) + '</p>' + h.slice(OPEN.length);
   });
-  const keyOf = fig => {
-    const ctl = fig.querySelector(':scope > [data-anim]');
-    if (ctl) return PURPOSE[ctl.dataset.anim] ? ctl.dataset.anim : null;
-    const svg = fig.querySelector('svg');
-    return svg ? STATIC.get(svg.getAttribute('aria-label') || '') || null : null;
-  };
 
   const css = `.dnpurpose{margin:2px 0 8px;font-size:13.5px;line-height:1.45;color:var(--text,inherit)}.dnpurpose b{font-weight:700}
+.wkpanel .dnpurpose{display:none}
 @media print{.dnpurpose{color:#000}}`;
-  const addCss = () => {
-    if (document.getElementById('dpurpcss')) return;
-    const s = document.createElement('style'); s.id = 'dpurpcss'; s.textContent = css; document.head.appendChild(s);
-  };
-
-  function arm(root) {
-    (root || document).querySelectorAll('figure.fig:not([data-dpurp])').forEach(fig => {
-      if (fig.closest('.wkpanel')) { fig.dataset.dpurp = '0'; return; }
-      const k = keyOf(fig); fig.dataset.dpurp = k ? '1' : '0';
-      if (!k) return;
-      const p = document.createElement('p'); p.className = 'dnpurpose';
-      const b = document.createElement('b'); b.textContent = 'Purpose. ';
-      p.append(b, document.createTextNode(PURPOSE[k]));
-      fig.prepend(p);
-    });
-  }
-
-  addCss();
-  let queued = false;
-  new MutationObserver(() => {
-    if (queued) return; queued = true;
-    (window.requestAnimationFrame || setTimeout)(() => { queued = false; arm(document); });
-  }).observe(document.body, {childList: true, subtree: true});
-  arm(document);
-  return {arm, keys: () => Object.keys(PURPOSE), text: k => PURPOSE[k]};
+  try {
+    if (!document.getElementById('dpurpcss')) {
+      const s = document.createElement('style'); s.id = 'dpurpcss'; s.textContent = css; document.head.appendChild(s);
+    }
+  } catch (e) {}
+  return {keys: () => Object.keys(PURPOSE), text: k => PURPOSE[k]};
 })();

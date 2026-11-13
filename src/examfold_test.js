@@ -537,8 +537,8 @@ async function nsOf(browser) {
         const figs = [...f.querySelectorAll('figure')].map(x => { const s = x.querySelector('svg'); return s ? Math.round(s.getBoundingClientRect().width) : 0; });
         return {boxes: bs.length, unmarked: bs.filter(b => ov(b) !== b.classList.contains('wide')).length, figs, rows: f.querySelectorAll('tr[id^="tgt-"]').length, want: (REFERENCE_HTML.match(/<tr id="tgt-/g) || []).length,
           rowVis: [...f.querySelectorAll('tr[id^="tgt-"]')].every(r => r.checkVisibility() && r.getClientRects().length > 0), side: document.documentElement.scrollWidth - innerWidth}; });
-      check(rf.boxes > 10 && !rf.unmarked && rf.figs.length === 2 && rf.figs.every(x => x > 100) && rf.rows === rf.want && rf.rows > 40 && rf.rowVis && rf.side <= 0,
-        `${w} px: Exam 1 of Reference opened by its header: ${rf.boxes} tables marked right, both figures drawn, the ${rf.rows} drug-target rows on the page`, rf);
+      check(rf.boxes > 10 && !rf.unmarked && rf.figs.length === 4 && rf.figs.every(x => x > 100) && rf.rows === rf.want && rf.rows > 40 && rf.rowVis && rf.side <= 0,
+        `${w} px: Exam 1 of Reference opened by its header: ${rf.boxes} tables marked right, the four figures drawn (acne cascade and the three nuclear receptors), the ${rf.rows} drug-target rows on the page`, rf);
       check(!errs.length, `${w} px: no page error inside the opened folders`, errs.slice(0, 4));
       await ctx.close();
     }
