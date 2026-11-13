@@ -1911,7 +1911,7 @@
      }
     },
     {
-     "t": "A 15-year-old boy has many comedones, some papules and pustules, and one nodule on the jaw. For 3 months he has used benzoyl peroxide in the morning and adapalene at night, and before that benzoyl peroxide with clindamycin, each as directed.",
+     "t": "A 15-year-old boy has many comedones, some papules and pustules, and one nodule on the jaw. For 3 months he has used benzoyl peroxide in the morning and adapalene at night, before that benzoyl peroxide with clindamycin, and then all three together, each as directed.",
      "q": "What is the next step?",
      "o": [
       "Add oral doxycycline to his topical combination",
@@ -2065,7 +2065,7 @@
    "name": "Topical corticosteroids",
    "brand": "",
    "sm": {
-    "text": "Target: the glucocorticoid receptor. The drug–receptor complex binds the GRE, or holds NF-kB and AP-1 off the DNA. Low potency (hydrocortisone 1%) for the face and long-term maintenance; medium potency for the body; higher potency for short-term flares.",
+    "text": "Target: the glucocorticoid receptor. The drug–receptor complex binds the GRE, or holds NF-kB and AP-1 off the DNA. Low potency (hydrocortisone 1%) for the face and long-term maintenance; medium potency for the body; mid-strength and high potency for short-term exacerbations.",
     "src": "PCol slides 5–7, 10–11"
    },
    "sk": {
@@ -2084,15 +2084,15 @@
     "Wash hands before and after.",
     "Apply a thin layer to a clean, dry area and rub in until it vanishes.",
     "Do not wrap the area; let it air dry 3–5 minutes before clothing.",
-    "Twice daily for 3–7 days; improvement in 24–48 hours.",
-    "Not resolved in 7 days: seek help. Never longer than 2 weeks.",
+    "Atopic dermatitis: twice daily for 3–7 days; improvement in 24–48 hours.",
+    "Atopic dermatitis: not resolved in 7 days, seek help; never longer than 2 weeks.",
     "Store cool and dry at room temperature, not in the bathroom."
    ],
    "counselSrc": "Patel Dermatitis slides 35–36, 52; 11/06 lecture",
    "avoid": [
     "Diaper dermatitis",
     "Systemic fungal infection; hypersensitivity",
-    "Face: only hydrocortisone 1%",
+    "Atopic dermatitis, face: only hydrocortisone 1%",
     "Stop and refer for skin atrophy or infection",
     "Adverse effects: burning, tingling, cracking, pruritus, acne, alopecia, headache, atrophy, delayed wound healing",
     "Dr. Smith: systemic effects (HPA axis suppression, growth retardation in children) can occur even with low potency"
@@ -2125,13 +2125,13 @@
    ],
    "counsel": [
     "Thin layer twice daily, rubbed in until it vanishes.",
-    "Seek help if not resolved in 7 days.",
-    "Do not use longer than 2 weeks."
+    "Atopic dermatitis: seek help if not resolved in 7 days.",
+    "Atopic dermatitis: do not use longer than 2 weeks."
    ],
    "counselSrc": "Patel Dermatitis slides 35–36, 52",
    "avoid": [
-    "Diaper rash",
-    "Use past 2 weeks"
+    "Diaper dermatitis: not used on diaper rash",
+    "Atopic dermatitis: use past 2 weeks"
    ]
   },
   "pimecrolimus": {
@@ -2421,7 +2421,7 @@
     {
      "dz": "acne",
      "role": "The OTC topical retinoid (0.1% gel, OTC since 2016): keratolytic and comedolytic. Single agent or in combination with benzoyl peroxide.",
-     "how": "At night after washing; thin layer over the whole affected area; prescription 0.3%.",
+     "how": "At night after washing; thin layer over the whole affected area.",
      "src": "Patel Acne slides 23, 27, 31"
     }
    ],
@@ -2516,14 +2516,14 @@
     }
    ],
    "counsel": [
-    "Once or twice daily as a cleanser or gel.",
-    "Apply a gel only to the affected area.",
+    "Acne: once or twice daily as a cleanser or gel.",
+    "Acne: apply a gel only to the affected area.",
     "It dries the skin and raises sun sensitivity: use sunscreen.",
-    "Not together with adapalene."
+    "Acne: not together with adapalene."
    ],
    "counselSrc": "Patel Acne slides 27, 29",
    "avoid": [
-    "Frequent washing with it: excessive cleansing is discouraged (her Case 1 poll)"
+    "Acne: frequent washing with it; excessive cleansing is discouraged (her Case 1 poll)"
    ]
   },
   "aha": {
@@ -3308,7 +3308,7 @@
    "title": "Topical retinoids: adapalene, tretinoin or tazarotene?",
    "a": [
     "Adapalene (Differin)",
-    "OTC at 0.1% (prescription 0.3%); directly active"
+    "OTC at 0.1% gel; directly active"
    ],
    "b": [
     "Tretinoin (Retin-A); tazarotene (Tazorac)",
@@ -3318,7 +3318,7 @@
    "profs": [
     [
      "pa",
-     "Adapalene 0.1% gel became OTC in 2016; at night, apart from benzoyl peroxide. Prescription retinoids: tretinoin, adapalene 0.3%, tazarotene, trifarotene (Patel Acne slides 27, 31)."
+     "Adapalene 0.1% gel became OTC in 2016; at night, apart from benzoyl peroxide. Prescription retinoids: tretinoin, tazarotene, trifarotene (Patel Acne slides 27, 31)."
     ],
     [
      "sm",

@@ -13,8 +13,24 @@ def uniq(a):
     for x in a:
         if x not in seen: seen.add(x); r.append(x)
     return r
-for f in sorted(glob.glob(os.path.join(src, 'part_*.json'))):
-    p = json.load(open(f, encoding='utf-8'))
+import re
+parts = [json.load(open(f, encoding='utf-8')) for f in sorted(glob.glob(os.path.join(src, 'part_*.json')))]
+names = {c['id']: re.sub(r'\s*\(.*?\)', '', c['name']) for p in parts for c in p.get('cards', [])}
+count = {}
+KEYW = ['atopic', 'acne', 'psoriasis', 'dandruff', 'seborrheic', 'cradle', 'infant', 'wart', 'corn', 'callus', 'sunburn', 'wound', 'burn', 'poison', 'plant', 'insect', 'lice', 'scabies', 'bite', 'sting', 'photoaging', 'sun protection', 'diaper', 'lyme', 'tick']
+for p in parts:
+    for k in p.get('drugs', {}): count[k] = count.get(k, 0) + 1
+def label(d, lines):
+    # a drug written by more than one part: say which condition each unlabelled counseling line is for
+    tag = ' / '.join(uniq(names.get(r.get('dz'), r.get('dz', '')) for r in (d.get('pa') or [])))
+    def has(x):
+        m = re.match(r'^([A-Z][^:.]{2,60}): ', x)
+        return bool(m) and any(w in m.group(1).lower() for w in KEYW)
+    return [x if (not tag or has(x)) else tag + ': ' + x[0].lower() + x[1:] if not re.match(r'^[A-Z]{2}|^[A-Z][a-z]*[A-Z]', x) else tag + ': ' + x for x in (lines or [])]
+for p in parts:
+    for k, d in p.get('drugs', {}).items():
+        if count[k] > 1: d['counsel'] = label(d, d.get('counsel')); d['avoid'] = label(d, d.get('avoid'))
+for p in parts:
     out['cards'] += p.get('cards', [])
     out['tell'] += p.get('tell', []); out['pairs'] += p.get('pairs', []); out['photos'] += p.get('photos', [])
     for k, t in p.get('terms', {}).items(): out['terms'].setdefault(k, t)

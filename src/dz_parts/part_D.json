@@ -348,11 +348,11 @@
       },
       {
        "k": "map",
-       "title": "Same question, different number: answer by the professor who asks",
+       "title": "Same point, each professor's number",
        "rows": [
         [
          "Reapply",
-         "Patel: every 40–80 minutes (slides 21, 36). Smith: usually every 90–120 minutes (Sun slide 17). Smith also: a physical sunblock protects less after 2 hours of direct sun (Sun slide 21). Sikazwe: avobenzone photodegrades with a half-life of about 2 hours, reapply every 2 hours (DPAW page 62)"
+         "Patel: every 40–80 minutes (slides 21, 36). Smith: every 90–120 minutes (Sun slide 17; \"usually\" in her recording). Smith also: a physical sunblock protects less after 2 hours of direct sun (Sun slide 21). Sikazwe: avobenzone photodegrades with a half-life of about 2 hours, reapply every 2 hours (DPAW page 62)"
         ],
         [
          "SPF",
@@ -402,7 +402,7 @@
         ],
         [
          "Suspicious lesion",
-         "Have a health care provider look at it (the ABCDE rule is on the photoaging card)"
+         "Have a health care provider look at it"
         ]
        ]
       }
@@ -479,8 +479,8 @@
      }
     },
     {
-     "t": "A 40-year-old woman applies a water resistant, broad spectrum SPF 30 sunscreen at 9:45 am for a 10 am pool party. She asks Dr. Patel's rule for reapplying.",
-     "q": "What is it?",
+     "t": "A 40-year-old woman applies a water resistant, broad spectrum SPF 30 sunscreen at 9:45 am for a 10 am pool party.",
+     "q": "By Dr. Patel's slides, how often is it reapplied?",
      "o": [
       "Every 40–80 minutes, and after towel drying",
       "Every 90–120 minutes, and after towel drying",
@@ -640,11 +640,11 @@
        "k": "facts",
        "rows": [
         [
-         "Follow-up",
+         "Worse",
          "Refer if the burn has progressed or worsened after {{24–48 hours}}"
         ],
         [
-         "",
+         "Not healed",
          "Refer if not healed in {{7 days}}"
         ]
        ]
@@ -782,7 +782,7 @@
      "w": "Dryness and irritation are treated with a skin protectant (cocoa butter, petrolatum), started after 24 hours and used as often as needed.",
      "x": {
       "A first-aid antiseptic spray": "First-aid antiseptics are not recommended for sunburn.",
-      "Lidocaine spray over both shoulders": "Topical anesthetics are not recommended, and both shoulders exceed the 1–2% BSA limit.",
+      "Lidocaine spray over both shoulders": "Topical anesthetics are not recommended for sunburn; if used, only on small areas (1–2% BSA).",
       "Aloe vera juice by mouth": "Aloe vera is used topically; internal use is avoided."
      }
     },
@@ -1104,7 +1104,7 @@
         ],
         [
          "Topical retinoids",
-         "Raise skin collagen; teratogenic (DPAW page 70)"
+         "Raise skin collagen (DPAW page 70); retinoids as a class are teratogenic (DPAW page 48)"
         ]
        ]
       }
@@ -1226,7 +1226,7 @@
      "q": "What do you tell her?",
      "o": [
       "Continue; add sunscreen",
-      "Stop: use is limited to three months",
+      "Stop; the limit is three months",
       "Double the applications",
       "Switch to a deep chemical peel at home"
      ],
@@ -1515,8 +1515,8 @@
          "Transparent adhesive film: semi-occlusive, not absorptive; uninfected wounds only"
         ],
         [
-         "Small cut",
-         "Adhesive bandage: cost effective, less adherent than gauze"
+         "Many shapes and sizes",
+         "Adhesive bandage: cost effective, less adherent than plain gauze; many give no moist environment"
         ]
        ]
       },
@@ -1897,7 +1897,9 @@
        "drugs": [
         "systemic-analgesics"
        ],
-       "pts": []
+       "pts": [
+        "OTC systemic analgesics; minor burns only"
+       ]
       },
       {
        "k": "line",
@@ -1971,7 +1973,7 @@
      }
     },
     {
-     "t": "A 6-year-old has a burn with blisters over about 12% BSA on the back after a kettle spill.",
+     "t": "A 6-year-old has a superficial partial-thickness burn (blisters) over about 12% BSA on the back after a kettle spill.",
      "q": "How is this burn graded, and what is done?",
      "o": [
       "Minor; self-care",
@@ -2241,12 +2243,13 @@
         "Warts with hair growing from them",
         "Irritated, infected or reddened skin; moles or birthmarks",
         "{{Diabetes}} or poor blood circulation (salicylic acid products)",
-        "Past the limit: {{12 weeks}} of salicylic acid or {{3}} cryotherapy treatments"
+        "Product limits: salicylic acid may be used for up to {{12 weeks}}; cryotherapy for up to {{3}} treatments (slides 10–11)",
+        "Slide 4: \"Recurrent or recalcitrant warts should be referred\""
        ]
       },
       {
        "k": "warn",
-       "text": "Not settled: a wart that comes back. Slide 4 prints \"Recurrent or recalcitrant warts should be referred\"; she said \"if you see reoccurrence of the wart, that's when we need treatment\"."
+       "text": "Not settled: a wart that comes back. Slide 4 refers recurrent warts; she said \"if you see reoccurrence of the wart, that's when we need treatment\"."
       }
      ]
     },
@@ -2411,7 +2414,7 @@
       "Hold the device on for 80 seconds"
      ],
      "a": 2,
-     "w": "The product may be used for up to 3 treatments; after that the patient is referred.",
+     "w": "The product may be used for up to 3 treatments (slide 11); a recalcitrant wart should be referred (slide 4).",
      "x": {
       "A fourth treatment in 2 weeks": "3 treatments is the maximum.",
       "Treat weekly from now on": "The interval is 2 weeks and the maximum is 3.",
@@ -2741,12 +2744,12 @@
      "q": "What do you recommend?",
      "o": [
       "Salicylic acid 40% pad every 48 hours for up to 12 weeks",
-      "Salicylic acid 40% pad every 48 hours for up to 14 days, and wider shoes",
+      "Salicylic acid 40% pad every 48 hours for up to 14 days",
       "Cryotherapy for about 40 seconds",
       "Salicylic acid 17% liquid 4 times a day for 14 days"
      ],
      "a": 1,
-     "w": "This is a corn. The 40% pad is reapplied every 48 hours for no longer than 14 days (7 applications), and the cause, footwear, is corrected.",
+     "w": "This is a corn. The 40% pad is reapplied every 48 hours for no longer than 14 days (7 applications). The cause is also corrected: well-fitting, non-binding footwear.",
      "x": {
       "Salicylic acid 40% pad every 48 hours for up to 12 weeks": "12 weeks is the limit for a wart; a corn or callus is 14 days.",
       "Cryotherapy for about 40 seconds": "Cryotherapy is a wart treatment.",
@@ -2948,7 +2951,7 @@
     {
      "dz": "sunburn",
      "role": "Recommended: decrease pain, erythema and edema; act longer than topical anesthetics. Her poll answer for pain and tenderness: oral ibuprofen",
-     "how": "Use for the first 1–2 days",
+     "how": "Use for the first 1–2 days. Slide 31: \"prefer one with anti-inflammatory properties (NSAIDs, APAP)\"; she said \"it could be Tylenol, it could be ibuprofen\"",
      "src": "Patel Sun slide 31; T@65246"
     },
     {
@@ -2964,8 +2967,7 @@
    ],
    "counselSrc": "Patel Sun slides 31, 34",
    "avoid": [
-    "Ibuprofen and the other NSAIDs are on her list of medications that increase sun sensitivity",
-    "Slide 31 reads \"prefer one with anti-inflammatory properties (NSAIDs, APAP)\"; she said \"it could be Tylenol, it could be ibuprofen\". No dose or age limit is on these slides."
+    "Ibuprofen and the other NSAIDs are on her list of medications that increase sun sensitivity"
    ]
   },
   "aloe-vera": {
@@ -3050,7 +3052,7 @@
     "Use for no longer than three months.",
     "Wear sunscreen every day while using it.",
     "Use it when prescribed by a licensed health care provider.",
-    "Stop and see the provider for skin darkening, a rash or facial swelling."
+    "Check the product label of a nonprescription skin-lightening product for hydroquinone."
    ],
    "counselSrc": "Patel Sun slides 47–48",
    "avoid": [
@@ -3066,8 +3068,8 @@
     "src": "Smith PCol slides 14, 17–18"
    },
    "sk": {
-    "text": "Tretinoin is all-trans retinoic acid, a first-generation retinoid. Topical retinoids raise skin collagen; teratogenic.",
-    "src": "DPAW pages 49, 70"
+    "text": "Tretinoin is all-trans retinoic acid, a first-generation retinoid. Retinoids are RAR and RXR agonists and teratogenic. Topical retinoids stimulate the skin's collagen production.",
+    "src": "DPAW pages 48–49, 70"
    },
    "pa": [
     {
@@ -3254,7 +3256,7 @@
     {
      "dz": "wounds",
      "role": "Keep a moist healing environment with a dressing that fits the wound. \"Know the advantages, know the disadvantages\"",
-     "how": "Gauze: cheap, highly absorbent, nonocclusive; no moist environment alone, needs a secondary dressing and frequent changes, removal may bleed or hurt. Nonadherent gauze: less adherent. Adhesive bandage: cost effective, many shapes. Hydrocolloid: moist, long wear, occlusive, impermeable to fluids and bacteria, reduces pain; uninfected wounds only, hard to assess the wound, less cost effective. Transparent film: moist, semi-occlusive, gas-permeable, easy inspection; not absorptive, uninfected wounds only",
+     "how": "Gauze: cost effective, highly absorbent, nonocclusive; no moist environment alone, needs a secondary dressing and frequent changes, removal may bleed or hurt. Nonadherent gauze: less adherent. Adhesive bandage: cost effective, many shapes. Hydrocolloid: moist, long wear, occlusive, impermeable to fluids and bacteria, reduces pain; uninfected wounds only, hard to assess the wound, less cost effective. Transparent film: moist, semi-occlusive, gas-permeable, easy inspection; not absorptive, uninfected wounds only",
      "src": "Patel Wound slides 8–9; T@80276"
     }
    ],
@@ -3306,12 +3308,12 @@
     }
    ],
    "counsel": [
-    "Wash and dry the area, then soak it in warm water for 5 minutes before each application.",
+    "Before each application: soak the area in warm water for 5 minutes; wash and dry it thoroughly.",
     "Pad or plaster: trim it to the lesion so that it does not touch healthy skin; cover with occlusive tape.",
     "Liquid: 1 drop at a time until the lesion is covered; let it dry; if it touches healthy skin, wash it off at once with soap and water.",
     "Cap the liquid tightly after use and store it away from sunlight and heat.",
-    "Wart: stop at 12 weeks. Corn or callus: stop at 14 days (7 pads).",
-    "See a provider if the skin becomes red or irritated, or if the lesion is still there at the limit."
+    "Wart: may be used for up to 12 weeks. Corn or callus: no longer than 14 days (7 pads).",
+    "Corn or callus: seek medical attention if the skin becomes red or irritated, or if it is not removed after 14 days."
    ],
    "counselSrc": "Patel Warts slides 10, 17; 11/12 lecture T@94581–95016",
    "avoid": [
@@ -3666,7 +3668,7 @@
       "Longer",
       "Longest"
      ],
-     "The higher the stage, the longer the healing; she gave no keyed times."
+     "The higher the stage, the longer the healing."
     ]
    ],
    "photo": "wound-stages",
@@ -3803,7 +3805,7 @@
     [
      "Coverage (Sikazwe)",
      [
-      "One range each: avobenzone UVA; octinoxate, padimate O UVB; benzophenones both",
+      "Avobenzone UVA; octinoxate, padimate O UVB; benzophenones UVB and UVA",
       "UVA and UVB"
      ]
     ],
@@ -3907,13 +3909,13 @@
    ],
    "b": [
     "Dr. Smith",
-    "usually every 90–120 minutes"
+    "every 90–120 minutes (\"usually\" in her recording)"
    ],
-   "same": "Both: sunscreen must be reapplied, and the correct amount at the correct time matters. Each professor's number is the answer to her own question.",
+   "same": "Both professors: sunscreen must be reapplied.",
    "profs": [
     [
      "pa",
-     "Sun slides 21, 36. \"For my questions, recommendation in terms of treatment\" (T@56238)."
+     "Sun slides 21, 36. \"For her questions, pay attention to what she's focused on. For my questions, recommendation in terms of treatment\" (T@56238)."
     ],
     [
      "sm",

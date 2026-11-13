@@ -53,16 +53,12 @@
          "Plaque type in more than {{80%}}"
         ],
         [
-         "Family",
-         "About {{30%}} have a first-degree relative with psoriasis"
-        ],
-        [
          "Triggers",
          [
           "Stress",
           "Infection (viral or streptococcal skin infection)",
           "Alcohol, smoking, obesity or metabolic syndrome",
-          "Skin injury: new lesions where skin was injured = the [[koebner|Koebner response]]"
+          "Injury to the skin (her example: a horsefly bite)"
          ]
         ],
         [
@@ -123,6 +119,14 @@
        "k": "prof",
        "p": "sm",
        "rows": [
+        [
+         "Family",
+         "About {{30%}} have a first-degree relative with psoriasis"
+        ],
+        [
+         "[[koebner|Koebner response]]",
+         "Lesions begin at previously clear sites after trauma: friction, venipuncture, bites, surgery, pressure"
+        ],
         [
          "Most common drug triggers",
          "Lithium and β-blockers"
@@ -293,9 +297,9 @@
          "The provider takes the plaque-covered area as a share of the whole body"
         ],
         [
-         "Her BSA figure, adult",
+         "BSA figure, adult (slide 32)",
          [
-          "Head 9%",
+          "Head 9% (front and back)",
           "Each arm 9%",
           "Chest 18%; back 18%",
           "Each leg 18%",
@@ -417,14 +421,6 @@
          "Salicylic acid shampoo"
         ],
         [
-         "Wants once daily",
-         "Tazarotene at bedtime"
-        ],
-        [
-         "Evening routine",
-         "Coal tar in the evening, washed off in the morning"
-        ],
-        [
          "Steroid stepped up in potency for about a month, little change",
          "Another topical option"
         ]
@@ -447,7 +443,8 @@
         "★ {{Methotrexate}} is usually first (most affordable)",
         "Give {{folic acid}} 1–5 mg daily with it",
         "“That topical medication’s always going to be continued”",
-        "No fixed order among the systemic agents: chosen by age and safety profile"
+        "No fixed order among the systemic agents: chosen by age and safety profile",
+        "Abatacept, on the same slides, is a subcutaneous injection: TB screening; interacts with live vaccines"
        ],
        "pick": [
         [
@@ -475,8 +472,8 @@
          "Caution with apremilast"
         ],
         [
-         "Renal impairment",
-         "Apremilast once daily"
+         "Apremilast in renal impairment",
+         "Once-daily dosing"
         ],
         [
          "Psoriatic arthritis after methotrexate failed",
@@ -1796,10 +1793,10 @@
    ],
    "counsel": [
     "Psoriasis: apply 2 to 4 times a day; a cream or lotion in the daytime and an ointment at night.",
-    "Use a low-potency product on the face and in skin folds.",
-    "Do not use it longer than 4 weeks, and keep the treated area small.",
-    "If a month of treatment with stepped-up potency has changed little, another topical option is tried.",
-    "Expect a follow-up contact in 1–2 weeks.",
+    "Psoriasis: low potency on the face and in skin folds.",
+    "Psoriasis: not longer than 4 weeks; limit the surface area treated.",
+    "Psoriasis: if about a month with stepped-up potency has changed little, another topical option is tried.",
+    "Psoriasis: follow-up contact in 1–2 weeks.",
     "Seborrheic dermatitis: a lotion goes on the scalp, a cream on the body; moisturize after washing."
    ],
    "counselSrc": "Patel Scaly slides 17, 36, 48; 11/10 and 11/11 lectures",
@@ -1813,7 +1810,7 @@
    "name": "Hydrocortisone 0.5–1% (OTC)",
    "brand": "",
    "sm": {
-    "text": "Glucocorticoid receptor agonist; the low-potency steroid, the one for the face (hydrocortisone 1%).",
+    "text": "Target: the glucocorticoid receptor; the low-potency steroid, the one for the face (hydrocortisone 1%).",
     "src": "PCol slides 5–7, 11"
    },
    "sk": {
@@ -1847,7 +1844,7 @@
     }
    ],
    "counsel": [
-    "It does not treat dandruff.",
+    "Dandruff: it does not treat dandruff.",
     "Psoriasis: 2 to 4 times a day, for no longer than 4 weeks.",
     "Seborrheic dermatitis: see a health care provider if it worsens or lasts longer than 7 days."
    ],
@@ -2082,7 +2079,7 @@
     "Expect a response in 3 to 6 weeks.",
     "Keep using your topical medicine.",
     "Blood tests (CBC and liver tests) are checked.",
-    "Avoid alcohol: liver toxicity is the most common concern.",
+    "Liver toxicity is the most common concern, more so with alcohol.",
     "Expect a follow-up contact in 1–2 weeks."
    ],
    "counselSrc": "Patel Scaly slides 39, 48; 11/11 lecture",
@@ -2114,7 +2111,7 @@
    ],
    "counsel": [
     "It is used for less than 4 months, because it can harm the kidneys.",
-    "Tell the pharmacist every medicine you take: it has many interactions.",
+    "Many drug interactions (CYP3A4 and 2C9).",
     "Keep using your topical medicine.",
     "Expect a follow-up contact in 1–2 weeks."
    ],
@@ -2148,7 +2145,7 @@
    "counsel": [
     "The dose is stepped up over the first week to 30 mg twice a day.",
     "You should see a response by week 4.",
-    "Report nausea, vomiting or diarrhea, low mood, or weight loss.",
+    "Adverse effects: nausea, vomiting, diarrhea; depression; weight loss.",
     "Expect a follow-up contact in 1–2 weeks."
    ],
    "counselSrc": "Patel Scaly slides 38, 48",
@@ -2209,7 +2206,7 @@
    ],
    "counsel": [
     "No live vaccines.",
-    "Report any sign of infection: serious TB, fungal, viral and bacterial infections occur.",
+    "High risk of serious invasive infections: TB, fungal, viral, bacterial.",
     "Boxed warning: serious cardiac events such as heart attack or stroke, cancer, blood clots, and death.",
     "Blood tests are monitored."
    ],
@@ -2299,7 +2296,7 @@
     "Common: injection site reaction, headache, runny nose, upper respiratory infection.",
     "Expect a follow-up contact in 1–2 weeks.",
     "You are screened for hepatitis B before starting.",
-    "Report shortness of breath or swelling: this class can worsen or bring on heart failure."
+    "This class can worsen heart failure or bring it on."
    ],
    "counselSrc": "Patel Scaly slides 40–41, 43, 48; 11/11 lecture",
    "avoid": [
@@ -2332,7 +2329,7 @@
     "Stop it and call if you get an infection, including flu, a cold or COVID.",
     "Common: injection site reaction, headache, runny nose, upper respiratory infection.",
     "Expect a follow-up contact in 1–2 weeks.",
-    "Tell the pharmacist if you take warfarin or cyclosporine: their levels are monitored."
+    "Warfarin and cyclosporine levels are monitored while on it."
    ],
    "counselSrc": "Patel Scaly slides 40, 42–43, 48; 11/11 lecture",
    "avoid": [
@@ -2392,7 +2389,7 @@
     "Stop it and call if you get an infection, including flu, a cold or COVID.",
     "Common: injection site reaction, headache, runny nose, upper respiratory infection.",
     "Expect a follow-up contact in 1–2 weeks.",
-    "Report new bowel symptoms."
+    "Anti-IL class: bowel disease is watched for; a GI reaction can be a reason to stop."
    ],
    "counselSrc": "Patel Scaly slides 40, 43, 48; 11/11 lecture",
    "avoid": [
@@ -2452,7 +2449,7 @@
     "Stop it and call if you get an infection, including flu, a cold or COVID.",
     "Common: injection site reaction, headache, runny nose, upper respiratory infection.",
     "Expect a follow-up contact in 1–2 weeks.",
-    "Boxed warning: increased suicide risk. Report low mood or thoughts of self-harm at once.",
+    "Boxed warning: increased suicide risk; mental health is monitored.",
     "A REMS program must be completed before it is dispensed."
    ],
    "counselSrc": "Patel Scaly slides 40, 42–43, 48; 11/11 lecture",
@@ -2840,15 +2837,16 @@
     {
      "q": "What is the BSA?",
      "a": [
-      "≤ 5%, or between 5% and 8% (her 7% patient) → **mild to moderate**",
-      "≥ 10%, or between 8% and 10% (“like a 9%”) → **moderate to severe**"
+      "≤ 5% → mild; 7% (her poll) → mild to moderate",
+      "≥ 8% → moderate; “like a 9%” → moderate to severe",
+      "≥ 10% → severe"
      ]
     },
     {
-     "q": "Moderate: have the topical agents been tried?",
+     "q": "Have the topical agents been tried?",
      "a": [
-      "Not yet → topical agents first (**mild to moderate**)",
-      "Yes, and not enough → systemic agent (**moderate to severe**)"
+      "Mild, or moderate and not yet tried → **mild-to-moderate algorithm**: topical agents first",
+      "Moderate and already tried, or severe → **moderate-to-severe algorithm**: systemic agent"
      ]
     }
    ],
@@ -2908,7 +2906,7 @@
      "Her example",
      [
       "BSA 7%, nothing tried: topical corticosteroid (poll)",
-      "BSA “like a 9%”"
+      "Moderate, all topical agents tried: systemic agent, “most likely methotrexate”"
      ]
     ]
    ],

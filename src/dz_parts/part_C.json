@@ -302,7 +302,7 @@
      "o": [
       "Colloidal oatmeal bath",
       "Cool soaks",
-      "Soap and water washing",
+      "Aluminum acetate soak",
       "Topical hydrocortisone"
      ],
      "a": 3,
@@ -310,7 +310,7 @@
      "x": {
       "Colloidal oatmeal bath": "Her slide gives no age limit for the oatmeal bath.",
       "Cool soaks": "Cool soaks or baths are a non-drug measure with no age limit on her slide.",
-      "Soap and water washing": "Washing removes urushiol and has no age limit."
+      "Aluminum acetate soak": "Her slides give no age limit for the astringent soak."
      }
     },
     {
@@ -388,7 +388,7 @@
     "Local effects: mild pruritus, erythema, papules.",
     "Self-care for at most 7 days; refer if worse, infected, or a vector-borne disease is suspected.",
     "Any one or a combination: skin protectant, hydrocortisone, topical anesthetic, counterirritant, oral antihistamine.",
-    "Under 2 years: a skin protectant only."
+    "Under 2 years: a skin protectant; no hydrocortisone, local anesthetic or counterirritant."
    ],
    "steps": [
     {
@@ -785,7 +785,7 @@
       },
       {
        "k": "warn",
-       "text": "Not self-care: no OTC product treats a vector-borne infection."
+       "text": "Not self-care: a suspected vector-borne disease is referred."
       }
      ]
     },
@@ -1296,7 +1296,7 @@
     "Head lice are the most common: head-to-head contact or shared personal items; school children.",
     "Self-care needs live lice seen and no exclusion (age, chrysanthemum or ragweed allergy, eyelids, pregnancy, infection).",
     "OTC: pyrethrins + piperonyl butoxide (over 2 years), permethrin (over 2 months), dimethicone (over 2 months).",
-    "Dry hair, a full 10 minutes, rinse, nit comb in sections; repeat in 7 to 10 days if lice or nits are seen.",
+    "Dry hair, a full 10 minutes, rinse, nit comb in sections; repeat in 7 to 10 days if lice or nits are seen (slide 42: in 7 days).",
     "Live lice after 2 rounds one week apart: refer for a prescription product."
    ],
    "steps": [
@@ -1469,7 +1469,7 @@
         "★ Leave on a full 10 minutes; rinse with water",
         "★ Nit comb: part the hair into segments and comb each one",
         "Do not re-wash the hair for 1–2 days",
-        "★ Repeat in {{7 to 10 days}} if lice or nits are seen",
+        "★ Repeat in {{7 to 10 days}} if lice or nits are seen (slide 47); slide 42: \"may need to repeat treatment in 7 days\"",
         "Follow up with the caregiver in a week"
        ]
       },
@@ -1605,12 +1605,12 @@
    "numbers": [
     [
      "> 2 years",
-     "pyrethrins + piperonyl butoxide; malathion",
+     "pyrethrins + piperonyl butoxide; malathion (slide 45 \"> 2 years\"; slide 44 excludes \"< 2 years\" for pyrethrins)",
      "Patel Outdoor slides 44–45"
     ],
     [
      "> 2 months",
-     "permethrin; dimethicone",
+     "permethrin; dimethicone (slide 45 \"> 2 months\"; slide 44 excludes \"< 2 months\" for permethrin)",
      "Patel Outdoor slides 44–45"
     ],
     [
@@ -1737,13 +1737,13 @@
      "profs": [
       "pa"
      ],
-     "q": "Is there an OTC self-care path on her slide, and which OTC cream is not used?",
+     "q": "Which OTC cream is not used on scabies, and why?",
      "src": "Patel Outdoor slides 40, 51",
      "blocks": [
       {
        "k": "pts",
        "items": [
-        "Her slide gives treatment options and no self-care criteria; the options come from a {{prescriber}}",
+        "Slide 51 lists treatment options; no self-care criteria are listed",
         "★ Do not use {{hydrocortisone}} on scabies: steroids can {{mask or worsen}} it"
        ]
       }
@@ -1820,11 +1820,11 @@
      "o": [
       "Use it with a topical antibiotic",
       "Apply it twice daily for 7 days",
-      "Do not use it; see a prescriber",
+      "Do not use it on suspected scabies",
       "Apply it under an occlusive dressing"
      ],
      "a": 2,
-     "w": "Hydrocortisone is not used on scabies: steroids can mask or worsen it. The scabies treatments on her slide come from a prescriber.",
+     "w": "Hydrocortisone is not used on scabies: steroids can mask or worsen it (slide 40).",
      "x": {
       "Apply it twice daily for 7 days": "Hydrocortisone is not used on scabies.",
       "Apply it under an occlusive dressing": "Hydrocortisone is not used on scabies.",
@@ -2291,7 +2291,7 @@
         "Remove constrictions from the limb: {{jewelry, tight clothing}}",
         "Wash the bite with {{soap and water}}",
         "★ {{Immobilize}} the bitten area (\"Biggest thing to remember\")",
-        "Keep it {{even with or slightly lower than the heart}} (slide); she said \"lower than the heart\" and no walking on the leg",
+        "Limb position: slide 56 {{even with or slightly lower than the heart}}; she said \"keep it lower ... than the heart\" and also \"most likely elevating the leg is just fine\"; no walking on the leg",
         "Check for envenomation; mark the leading edge of swelling and tenderness",
         "Treat pain"
        ]
@@ -2339,14 +2339,14 @@
      "o": [
       "Keep him still; remove boot and bracelet",
       "Catch the snake and bring it along",
-      "Raise the leg well above the heart",
+      "Tie a tight band above the bite",
       "Have him walk to keep blood moving"
      ],
      "a": 0,
      "w": "Keep the patient calm and still, remove constrictions (jewelry, tight clothing), wash with soap and water and immobilize the limb.",
      "x": {
       "Have him walk to keep blood moving": "The patient is kept calm and still, and the limb is immobilized.",
-      "Raise the leg well above the heart": "Her slide keeps the limb even with or slightly lower than the heart.",
+      "Tie a tight band above the bite": "Her slide removes constrictions from the limb; a tight band is not on it.",
       "Catch the snake and bring it along": "Take a photo; do not try to capture the snake."
      }
     },
@@ -2714,7 +2714,7 @@
     }
    ],
    "counsel": [
-    "Apply to the affected area only; the amount comes from fingertip units (1 unit ≈ 0.5 g)",
+    "Amount by fingertip units: 1 unit ≈ 0.5 g (adult chart)",
     "Come back if there is no improvement after 7 days, or if it gets worse"
    ],
    "counselSrc": "Patel Outdoor slides 5, 16, 31",
@@ -2828,13 +2828,13 @@
    "avoid": []
   },
   "counterirritants": {
-   "name": "Antipruritics or counterirritants (camphor, menthol, phenol, calamine)",
+   "name": "Antipruritics or counterirritants (camphor, menthol, phenol)",
    "brand": "",
    "pa": [
     {
      "dz": "plant-dermatitis",
      "role": "Dry rash only; relieve pain and pruritus",
-     "how": "Not on broken skin or a wound",
+     "how": "Not on broken skin or a wound. Slide 13 also lists benzyl alcohol and calamine in this class; slide 39 lists benzyl alcohol as a local anesthetic and calamine as a skin protectant",
      "src": "Patel Outdoor slide 13"
     },
     {
@@ -2858,8 +2858,7 @@
    "counselSrc": "Patel Outdoor slides 13, 39",
    "avoid": [
     "Children younger than 2 years",
-    "Broken skin or a wound",
-    "Her slides differ on two members: slide 13 lists benzyl alcohol and calamine here; slide 39 lists benzyl alcohol as a local anesthetic and calamine as a skin protectant"
+    "Broken skin or a wound"
    ]
   },
   "astringents": {
@@ -2887,7 +2886,7 @@
    "avoid": []
   },
   "topical-antibiotics": {
-   "name": "Topical antibiotics (bacitracin, neomycin, polymyxin B)",
+   "name": "Topical antibiotics (bacitracin, neomycin, polymyxin B sulfate, mupirocin)",
    "brand": "Neosporin (contains neomycin)",
    "pa": [
     {
@@ -2909,8 +2908,7 @@
    ],
    "counselSrc": "Patel Outdoor slide 13",
    "avoid": [
-    "Neomycin allergy (her bedbug case: neomycin worsened the rash)",
-    "The chart also lists mupirocin in this class"
+    "Neomycin allergy (her bedbug case: neomycin worsened the rash)"
    ]
   },
   "skin-protectants": {
@@ -2981,15 +2979,14 @@
     "Apply enough to wet the dry hair and scalp; leave on a full 10 minutes; rinse with water",
     "Comb with a nit comb, the hair parted into segments",
     "Do not re-wash the hair for 1–2 days",
-    "Repeat in 7 to 10 days if lice or nits are seen",
+    "Repeat in 7 to 10 days if lice or nits are seen (slide 47; slide 42 says 7 days)",
     "Live lice after 2 rounds one week apart: see the primary care provider"
    ],
    "counselSrc": "Patel Outdoor slides 45, 47",
    "avoid": [
     "Under 2 months old",
     "Hypersensitivity to chrysanthemums, ragweed or a pediculicide ingredient",
-    "Pregnancy or breast-feeding; lice of the eyelids or eyebrows; secondary skin infection (refer)",
-    "Her slide prints no strength for Nix; the course drug chart lists permethrin 1%"
+    "Pregnancy or breast-feeding; lice of the eyelids or eyebrows; secondary skin infection (refer)"
    ]
   },
   "pyrethrins": {
@@ -3008,7 +3005,7 @@
     "Apply enough to wet the dry hair and scalp; leave on a full 10 minutes; rinse with water",
     "Comb with a nit comb, the hair parted into segments",
     "Do not re-wash the hair for 1–2 days",
-    "Repeat in 7 to 10 days if lice or nits are seen",
+    "Repeat in 7 to 10 days if lice or nits are seen (slide 47; slide 42 says 7 days)",
     "Significant skin irritation, or product in the eyes: get medical attention"
    ],
    "counselSrc": "Patel Outdoor slides 45, 47",
@@ -3210,7 +3207,7 @@
     }
    ],
    "counsel": [
-    "First aid does not replace the emergency room: clean with soap and water, cold pack, elevate the limb, then go"
+    "Clean with soap and water, apply a cold pack, elevate the limb; go to the emergency room"
    ],
    "counselSrc": "Patel Outdoor slide 53",
    "avoid": []
@@ -3229,7 +3226,7 @@
    "counsel": [
     "Wash the wound with soap and water first",
     "Be seen as soon after the exposure as possible: an urgency, not an emergency",
-    "Return for every dose of the schedule; untreated rabies is fatal"
+    "Untreated rabies is fatal"
    ],
    "counselSrc": "Patel Outdoor slides 62–63; 11/12 lecture",
    "avoid": [
@@ -3695,7 +3692,7 @@
     "Permethrin (Nix)",
     "over 2 months"
    ],
-   "same": "Both are OTC head lice products left on dry hair for 10 minutes and repeated in 7 to 10 days if lice or nits are seen.",
+   "same": "Both are OTC head lice products left on dry hair for 10 minutes and repeated in 7 to 10 days if lice or nits are seen (slide 47; slide 42 says 7 days).",
    "profs": [
     [
      "pa",

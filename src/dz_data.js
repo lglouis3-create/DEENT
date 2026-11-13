@@ -1575,7 +1575,7 @@ const DZ = {
      }
     },
     {
-     "t": "A 15-year-old boy has many comedones, some papules and pustules, and one nodule on the jaw. For 3 months he has used benzoyl peroxide in the morning and adapalene at night, and before that benzoyl peroxide with clindamycin, each as directed.",
+     "t": "A 15-year-old boy has many comedones, some papules and pustules, and one nodule on the jaw. For 3 months he has used benzoyl peroxide in the morning and adapalene at night, before that benzoyl peroxide with clindamycin, and then all three together, each as directed.",
      "q": "What is the next step?",
      "o": [
       "Add oral doxycycline to his topical combination",
@@ -1776,16 +1776,12 @@ const DZ = {
          "Plaque type in more than {{80%}}"
         ],
         [
-         "Family",
-         "About {{30%}} have a first-degree relative with psoriasis"
-        ],
-        [
          "Triggers",
          [
           "Stress",
           "Infection (viral or streptococcal skin infection)",
           "Alcohol, smoking, obesity or metabolic syndrome",
-          "Skin injury: new lesions where skin was injured = the [[koebner|Koebner response]]"
+          "Injury to the skin (her example: a horsefly bite)"
          ]
         ],
         [
@@ -1846,6 +1842,14 @@ const DZ = {
        "k": "prof",
        "p": "sm",
        "rows": [
+        [
+         "Family",
+         "About {{30%}} have a first-degree relative with psoriasis"
+        ],
+        [
+         "[[koebner|Koebner response]]",
+         "Lesions begin at previously clear sites after trauma: friction, venipuncture, bites, surgery, pressure"
+        ],
         [
          "Most common drug triggers",
          "Lithium and β-blockers"
@@ -2016,9 +2020,9 @@ const DZ = {
          "The provider takes the plaque-covered area as a share of the whole body"
         ],
         [
-         "Her BSA figure, adult",
+         "BSA figure, adult (slide 32)",
          [
-          "Head 9%",
+          "Head 9% (front and back)",
           "Each arm 9%",
           "Chest 18%; back 18%",
           "Each leg 18%",
@@ -2140,14 +2144,6 @@ const DZ = {
          "Salicylic acid shampoo"
         ],
         [
-         "Wants once daily",
-         "Tazarotene at bedtime"
-        ],
-        [
-         "Evening routine",
-         "Coal tar in the evening, washed off in the morning"
-        ],
-        [
          "Steroid stepped up in potency for about a month, little change",
          "Another topical option"
         ]
@@ -2170,7 +2166,8 @@ const DZ = {
         "★ {{Methotrexate}} is usually first (most affordable)",
         "Give {{folic acid}} 1–5 mg daily with it",
         "“That topical medication’s always going to be continued”",
-        "No fixed order among the systemic agents: chosen by age and safety profile"
+        "No fixed order among the systemic agents: chosen by age and safety profile",
+        "Abatacept, on the same slides, is a subcutaneous injection: TB screening; interacts with live vaccines"
        ],
        "pick": [
         [
@@ -2198,8 +2195,8 @@ const DZ = {
          "Caution with apremilast"
         ],
         [
-         "Renal impairment",
-         "Apremilast once daily"
+         "Apremilast in renal impairment",
+         "Once-daily dosing"
         ],
         [
          "Psoriatic arthritis after methotrexate failed",
@@ -4129,7 +4126,7 @@ const DZ = {
      "o": [
       "Colloidal oatmeal bath",
       "Cool soaks",
-      "Soap and water washing",
+      "Aluminum acetate soak",
       "Topical hydrocortisone"
      ],
      "a": 3,
@@ -4137,7 +4134,7 @@ const DZ = {
      "x": {
       "Colloidal oatmeal bath": "Her slide gives no age limit for the oatmeal bath.",
       "Cool soaks": "Cool soaks or baths are a non-drug measure with no age limit on her slide.",
-      "Soap and water washing": "Washing removes urushiol and has no age limit."
+      "Aluminum acetate soak": "Her slides give no age limit for the astringent soak."
      }
     },
     {
@@ -4215,7 +4212,7 @@ const DZ = {
     "Local effects: mild pruritus, erythema, papules.",
     "Self-care for at most 7 days; refer if worse, infected, or a vector-borne disease is suspected.",
     "Any one or a combination: skin protectant, hydrocortisone, topical anesthetic, counterirritant, oral antihistamine.",
-    "Under 2 years: a skin protectant only."
+    "Under 2 years: a skin protectant; no hydrocortisone, local anesthetic or counterirritant."
    ],
    "steps": [
     {
@@ -4612,7 +4609,7 @@ const DZ = {
       },
       {
        "k": "warn",
-       "text": "Not self-care: no OTC product treats a vector-borne infection."
+       "text": "Not self-care: a suspected vector-borne disease is referred."
       }
      ]
     },
@@ -5123,7 +5120,7 @@ const DZ = {
     "Head lice are the most common: head-to-head contact or shared personal items; school children.",
     "Self-care needs live lice seen and no exclusion (age, chrysanthemum or ragweed allergy, eyelids, pregnancy, infection).",
     "OTC: pyrethrins + piperonyl butoxide (over 2 years), permethrin (over 2 months), dimethicone (over 2 months).",
-    "Dry hair, a full 10 minutes, rinse, nit comb in sections; repeat in 7 to 10 days if lice or nits are seen.",
+    "Dry hair, a full 10 minutes, rinse, nit comb in sections; repeat in 7 to 10 days if lice or nits are seen (slide 42: in 7 days).",
     "Live lice after 2 rounds one week apart: refer for a prescription product."
    ],
    "steps": [
@@ -5296,7 +5293,7 @@ const DZ = {
         "★ Leave on a full 10 minutes; rinse with water",
         "★ Nit comb: part the hair into segments and comb each one",
         "Do not re-wash the hair for 1–2 days",
-        "★ Repeat in {{7 to 10 days}} if lice or nits are seen",
+        "★ Repeat in {{7 to 10 days}} if lice or nits are seen (slide 47); slide 42: \"may need to repeat treatment in 7 days\"",
         "Follow up with the caregiver in a week"
        ]
       },
@@ -5432,12 +5429,12 @@ const DZ = {
    "numbers": [
     [
      "> 2 years",
-     "pyrethrins + piperonyl butoxide; malathion",
+     "pyrethrins + piperonyl butoxide; malathion (slide 45 \"> 2 years\"; slide 44 excludes \"< 2 years\" for pyrethrins)",
      "Patel Outdoor slides 44–45"
     ],
     [
      "> 2 months",
-     "permethrin; dimethicone",
+     "permethrin; dimethicone (slide 45 \"> 2 months\"; slide 44 excludes \"< 2 months\" for permethrin)",
      "Patel Outdoor slides 44–45"
     ],
     [
@@ -5564,13 +5561,13 @@ const DZ = {
      "profs": [
       "pa"
      ],
-     "q": "Is there an OTC self-care path on her slide, and which OTC cream is not used?",
+     "q": "Which OTC cream is not used on scabies, and why?",
      "src": "Patel Outdoor slides 40, 51",
      "blocks": [
       {
        "k": "pts",
        "items": [
-        "Her slide gives treatment options and no self-care criteria; the options come from a {{prescriber}}",
+        "Slide 51 lists treatment options; no self-care criteria are listed",
         "★ Do not use {{hydrocortisone}} on scabies: steroids can {{mask or worsen}} it"
        ]
       }
@@ -5647,11 +5644,11 @@ const DZ = {
      "o": [
       "Use it with a topical antibiotic",
       "Apply it twice daily for 7 days",
-      "Do not use it; see a prescriber",
+      "Do not use it on suspected scabies",
       "Apply it under an occlusive dressing"
      ],
      "a": 2,
-     "w": "Hydrocortisone is not used on scabies: steroids can mask or worsen it. The scabies treatments on her slide come from a prescriber.",
+     "w": "Hydrocortisone is not used on scabies: steroids can mask or worsen it (slide 40).",
      "x": {
       "Apply it twice daily for 7 days": "Hydrocortisone is not used on scabies.",
       "Apply it under an occlusive dressing": "Hydrocortisone is not used on scabies.",
@@ -6118,7 +6115,7 @@ const DZ = {
         "Remove constrictions from the limb: {{jewelry, tight clothing}}",
         "Wash the bite with {{soap and water}}",
         "★ {{Immobilize}} the bitten area (\"Biggest thing to remember\")",
-        "Keep it {{even with or slightly lower than the heart}} (slide); she said \"lower than the heart\" and no walking on the leg",
+        "Limb position: slide 56 {{even with or slightly lower than the heart}}; she said \"keep it lower ... than the heart\" and also \"most likely elevating the leg is just fine\"; no walking on the leg",
         "Check for envenomation; mark the leading edge of swelling and tenderness",
         "Treat pain"
        ]
@@ -6166,14 +6163,14 @@ const DZ = {
      "o": [
       "Keep him still; remove boot and bracelet",
       "Catch the snake and bring it along",
-      "Raise the leg well above the heart",
+      "Tie a tight band above the bite",
       "Have him walk to keep blood moving"
      ],
      "a": 0,
      "w": "Keep the patient calm and still, remove constrictions (jewelry, tight clothing), wash with soap and water and immobilize the limb.",
      "x": {
       "Have him walk to keep blood moving": "The patient is kept calm and still, and the limb is immobilized.",
-      "Raise the leg well above the heart": "Her slide keeps the limb even with or slightly lower than the heart.",
+      "Tie a tight band above the bite": "Her slide removes constrictions from the limb; a tight band is not on it.",
       "Catch the snake and bring it along": "Take a photo; do not try to capture the snake."
      }
     },
@@ -6849,11 +6846,11 @@ const DZ = {
       },
       {
        "k": "map",
-       "title": "Same question, different number: answer by the professor who asks",
+       "title": "Same point, each professor's number",
        "rows": [
         [
          "Reapply",
-         "Patel: every 40–80 minutes (slides 21, 36). Smith: usually every 90–120 minutes (Sun slide 17). Smith also: a physical sunblock protects less after 2 hours of direct sun (Sun slide 21). Sikazwe: avobenzone photodegrades with a half-life of about 2 hours, reapply every 2 hours (DPAW page 62)"
+         "Patel: every 40–80 minutes (slides 21, 36). Smith: every 90–120 minutes (Sun slide 17; \"usually\" in her recording). Smith also: a physical sunblock protects less after 2 hours of direct sun (Sun slide 21). Sikazwe: avobenzone photodegrades with a half-life of about 2 hours, reapply every 2 hours (DPAW page 62)"
         ],
         [
          "SPF",
@@ -6903,7 +6900,7 @@ const DZ = {
         ],
         [
          "Suspicious lesion",
-         "Have a health care provider look at it (the ABCDE rule is on the photoaging card)"
+         "Have a health care provider look at it"
         ]
        ]
       }
@@ -6980,8 +6977,8 @@ const DZ = {
      }
     },
     {
-     "t": "A 40-year-old woman applies a water resistant, broad spectrum SPF 30 sunscreen at 9:45 am for a 10 am pool party. She asks Dr. Patel's rule for reapplying.",
-     "q": "What is it?",
+     "t": "A 40-year-old woman applies a water resistant, broad spectrum SPF 30 sunscreen at 9:45 am for a 10 am pool party.",
+     "q": "By Dr. Patel's slides, how often is it reapplied?",
      "o": [
       "Every 40–80 minutes, and after towel drying",
       "Every 90–120 minutes, and after towel drying",
@@ -7141,11 +7138,11 @@ const DZ = {
        "k": "facts",
        "rows": [
         [
-         "Follow-up",
+         "Worse",
          "Refer if the burn has progressed or worsened after {{24–48 hours}}"
         ],
         [
-         "",
+         "Not healed",
          "Refer if not healed in {{7 days}}"
         ]
        ]
@@ -7283,7 +7280,7 @@ const DZ = {
      "w": "Dryness and irritation are treated with a skin protectant (cocoa butter, petrolatum), started after 24 hours and used as often as needed.",
      "x": {
       "A first-aid antiseptic spray": "First-aid antiseptics are not recommended for sunburn.",
-      "Lidocaine spray over both shoulders": "Topical anesthetics are not recommended, and both shoulders exceed the 1–2% BSA limit.",
+      "Lidocaine spray over both shoulders": "Topical anesthetics are not recommended for sunburn; if used, only on small areas (1–2% BSA).",
       "Aloe vera juice by mouth": "Aloe vera is used topically; internal use is avoided."
      }
     },
@@ -7605,7 +7602,7 @@ const DZ = {
         ],
         [
          "Topical retinoids",
-         "Raise skin collagen; teratogenic (DPAW page 70)"
+         "Raise skin collagen (DPAW page 70); retinoids as a class are teratogenic (DPAW page 48)"
         ]
        ]
       }
@@ -7727,7 +7724,7 @@ const DZ = {
      "q": "What do you tell her?",
      "o": [
       "Continue; add sunscreen",
-      "Stop: use is limited to three months",
+      "Stop; the limit is three months",
       "Double the applications",
       "Switch to a deep chemical peel at home"
      ],
@@ -8016,8 +8013,8 @@ const DZ = {
          "Transparent adhesive film: semi-occlusive, not absorptive; uninfected wounds only"
         ],
         [
-         "Small cut",
-         "Adhesive bandage: cost effective, less adherent than gauze"
+         "Many shapes and sizes",
+         "Adhesive bandage: cost effective, less adherent than plain gauze; many give no moist environment"
         ]
        ]
       },
@@ -8398,7 +8395,9 @@ const DZ = {
        "drugs": [
         "systemic-analgesics"
        ],
-       "pts": []
+       "pts": [
+        "OTC systemic analgesics; minor burns only"
+       ]
       },
       {
        "k": "line",
@@ -8472,7 +8471,7 @@ const DZ = {
      }
     },
     {
-     "t": "A 6-year-old has a burn with blisters over about 12% BSA on the back after a kettle spill.",
+     "t": "A 6-year-old has a superficial partial-thickness burn (blisters) over about 12% BSA on the back after a kettle spill.",
      "q": "How is this burn graded, and what is done?",
      "o": [
       "Minor; self-care",
@@ -8742,12 +8741,13 @@ const DZ = {
         "Warts with hair growing from them",
         "Irritated, infected or reddened skin; moles or birthmarks",
         "{{Diabetes}} or poor blood circulation (salicylic acid products)",
-        "Past the limit: {{12 weeks}} of salicylic acid or {{3}} cryotherapy treatments"
+        "Product limits: salicylic acid may be used for up to {{12 weeks}}; cryotherapy for up to {{3}} treatments (slides 10–11)",
+        "Slide 4: \"Recurrent or recalcitrant warts should be referred\""
        ]
       },
       {
        "k": "warn",
-       "text": "Not settled: a wart that comes back. Slide 4 prints \"Recurrent or recalcitrant warts should be referred\"; she said \"if you see reoccurrence of the wart, that's when we need treatment\"."
+       "text": "Not settled: a wart that comes back. Slide 4 refers recurrent warts; she said \"if you see reoccurrence of the wart, that's when we need treatment\"."
       }
      ]
     },
@@ -8912,7 +8912,7 @@ const DZ = {
       "Hold the device on for 80 seconds"
      ],
      "a": 2,
-     "w": "The product may be used for up to 3 treatments; after that the patient is referred.",
+     "w": "The product may be used for up to 3 treatments (slide 11); a recalcitrant wart should be referred (slide 4).",
      "x": {
       "A fourth treatment in 2 weeks": "3 treatments is the maximum.",
       "Treat weekly from now on": "The interval is 2 weeks and the maximum is 3.",
@@ -9242,12 +9242,12 @@ const DZ = {
      "q": "What do you recommend?",
      "o": [
       "Salicylic acid 40% pad every 48 hours for up to 12 weeks",
-      "Salicylic acid 40% pad every 48 hours for up to 14 days, and wider shoes",
+      "Salicylic acid 40% pad every 48 hours for up to 14 days",
       "Cryotherapy for about 40 seconds",
       "Salicylic acid 17% liquid 4 times a day for 14 days"
      ],
      "a": 1,
-     "w": "This is a corn. The 40% pad is reapplied every 48 hours for no longer than 14 days (7 applications), and the cause, footwear, is corrected.",
+     "w": "This is a corn. The 40% pad is reapplied every 48 hours for no longer than 14 days (7 applications). The cause is also corrected: well-fitting, non-binding footwear.",
      "x": {
       "Salicylic acid 40% pad every 48 hours for up to 12 weeks": "12 weeks is the limit for a wart; a corn or callus is 14 days.",
       "Cryotherapy for about 40 seconds": "Cryotherapy is a wart treatment.",
@@ -9350,7 +9350,7 @@ const DZ = {
    "name": "Topical corticosteroids",
    "brand": "",
    "sm": {
-    "text": "Target: the glucocorticoid receptor. The drug–receptor complex binds the GRE, or holds NF-kB and AP-1 off the DNA. Low potency (hydrocortisone 1%) for the face and long-term maintenance; medium potency for the body; higher potency for short-term flares.",
+    "text": "Target: the glucocorticoid receptor. The drug–receptor complex binds the GRE, or holds NF-kB and AP-1 off the DNA. Low potency (hydrocortisone 1%) for the face and long-term maintenance; medium potency for the body; mid-strength and high potency for short-term exacerbations.",
     "src": "PCol slides 5–7, 10–11"
    },
    "sk": {
@@ -9378,30 +9378,30 @@ const DZ = {
     }
    ],
    "counsel": [
-    "Wash hands before and after.",
-    "Apply a thin layer to a clean, dry area and rub in until it vanishes.",
-    "Do not wrap the area; let it air dry 3–5 minutes before clothing.",
-    "Twice daily for 3–7 days; improvement in 24–48 hours.",
-    "Not resolved in 7 days: seek help. Never longer than 2 weeks.",
-    "Store cool and dry at room temperature, not in the bathroom.",
+    "Atopic dermatitis: wash hands before and after.",
+    "Atopic dermatitis: apply a thin layer to a clean, dry area and rub in until it vanishes.",
+    "Atopic dermatitis: do not wrap the area; let it air dry 3–5 minutes before clothing.",
+    "Atopic dermatitis: twice daily for 3–7 days; improvement in 24–48 hours.",
+    "Atopic dermatitis: not resolved in 7 days, seek help; never longer than 2 weeks.",
+    "Atopic dermatitis: store cool and dry at room temperature, not in the bathroom.",
     "Psoriasis: apply 2 to 4 times a day; a cream or lotion in the daytime and an ointment at night.",
-    "Use a low-potency product on the face and in skin folds.",
-    "Do not use it longer than 4 weeks, and keep the treated area small.",
-    "If a month of treatment with stepped-up potency has changed little, another topical option is tried.",
-    "Expect a follow-up contact in 1–2 weeks.",
+    "Psoriasis: low potency on the face and in skin folds.",
+    "Psoriasis: not longer than 4 weeks; limit the surface area treated.",
+    "Psoriasis: if about a month with stepped-up potency has changed little, another topical option is tried.",
+    "Psoriasis: follow-up contact in 1–2 weeks.",
     "Seborrheic dermatitis: a lotion goes on the scalp, a cream on the body; moisturize after washing."
    ],
    "counselSrc": "Patel Dermatitis slides 35–36, 52; 11/06 lecture; Patel Scaly slides 17, 36, 48; 11/10 and 11/11 lectures",
    "avoid": [
-    "Diaper dermatitis",
-    "Systemic fungal infection; hypersensitivity",
-    "Face: only hydrocortisone 1%",
-    "Stop and refer for skin atrophy or infection",
-    "Adverse effects: burning, tingling, cracking, pruritus, acne, alopecia, headache, atrophy, delayed wound healing",
-    "Dr. Smith: systemic effects (HPA axis suppression, growth retardation in children) can occur even with low potency",
+    "Atopic dermatitis: diaper dermatitis",
+    "Atopic dermatitis: systemic fungal infection; hypersensitivity",
+    "Atopic dermatitis, face: only hydrocortisone 1%",
+    "Atopic dermatitis: stop and refer for skin atrophy or infection",
+    "Atopic dermatitis: adverse effects: burning, tingling, cracking, pruritus, acne, alopecia, headache, atrophy, delayed wound healing",
+    "Atopic dermatitis: dr. Smith: systemic effects (HPA axis suppression, growth retardation in children) can occur even with low potency",
     "Infants with cradle cap: “DO NOT suggest corticosteroids” (slide 18)",
-    "Not for longer than 4 weeks in psoriasis (slide 36)",
-    "Withdrawal of corticosteroids can precipitate psoriasis (slide 24)"
+    "Psoriasis / Seborrheic dermatitis: not for longer than 4 weeks in psoriasis (slide 36)",
+    "Psoriasis / Seborrheic dermatitis: withdrawal of corticosteroids can precipitate psoriasis (slide 24)"
    ]
   },
   "hydrocortisone": {
@@ -9478,22 +9478,22 @@ const DZ = {
     }
    ],
    "counsel": [
-    "Thin layer twice daily, rubbed in until it vanishes.",
-    "Seek help if not resolved in 7 days.",
-    "Do not use longer than 2 weeks.",
-    "It does not treat dandruff.",
+    "Atopic dermatitis / Diaper dermatitis: thin layer twice daily, rubbed in until it vanishes.",
+    "Atopic dermatitis: seek help if not resolved in 7 days.",
+    "Atopic dermatitis: do not use longer than 2 weeks.",
+    "Dandruff: it does not treat dandruff.",
     "Psoriasis: 2 to 4 times a day, for no longer than 4 weeks.",
     "Seborrheic dermatitis: see a health care provider if it worsens or lasts longer than 7 days.",
-    "Apply to the affected area only; the amount comes from fingertip units (1 unit ≈ 0.5 g)",
-    "Come back if there is no improvement after 7 days, or if it gets worse"
+    "Poison ivy / Insect bites / Insect stings / Scabies: amount by fingertip units: 1 unit ≈ 0.5 g (adult chart)",
+    "Poison ivy / Insect bites / Insect stings / Scabies: come back if there is no improvement after 7 days, or if it gets worse"
    ],
    "counselSrc": "Patel Dermatitis slides 35–36, 52; Patel Scaly slides 7, 16, 36; Patel Outdoor slides 5, 16, 31",
    "avoid": [
-    "Diaper rash",
-    "Use past 2 weeks",
-    "Infants with cradle cap, on the scalp or the face (slide 18)",
+    "Diaper dermatitis: not used on diaper rash",
+    "Atopic dermatitis: use past 2 weeks",
+    "Dandruff / Seborrheic dermatitis / Psoriasis / Cradle cap: infants with cradle cap, on the scalp or the face (slide 18)",
     "Dandruff: not effective (slide 7)",
-    "Child under 2 years old",
+    "Poison ivy / Insect bites / Insect stings / Scabies: child under 2 years old",
     "Scabies, bacterial infections, fungal infections: steroids can mask or worsen them"
    ]
   },
@@ -9523,19 +9523,19 @@ const DZ = {
     }
    ],
    "counsel": [
-    "Thin layer to a clean, dry area twice daily.",
-    "Do not bathe, shower or swim right after applying.",
-    "Expect a response in weeks (1–8); keep applying.",
-    "Protect the skin from the sun and use sunscreen.",
-    "Short-term, intermittent use; the minimum amount, on involved areas only.",
-    "In psoriasis it is for plaques in the skin folds."
+    "Atopic dermatitis: thin layer to a clean, dry area twice daily.",
+    "Atopic dermatitis: do not bathe, shower or swim right after applying.",
+    "Atopic dermatitis: expect a response in weeks (1–8); keep applying.",
+    "Atopic dermatitis: protect the skin from the sun and use sunscreen.",
+    "Atopic dermatitis: short-term, intermittent use; the minimum amount, on involved areas only.",
+    "Psoriasis: in psoriasis it is for plaques in the skin folds."
    ],
    "counselSrc": "Patel Dermatitis slides 38, 40; Patel Scaly slide 36",
    "avoid": [
-    "Children under 2 years",
-    "Boxed warning: rare lymphoma and skin malignancy; avoid on malignant or premalignant skin",
-    "Not with wet wraps or compresses",
-    "Safety of intermittent use beyond 1 year not established"
+    "Atopic dermatitis: children under 2 years",
+    "Atopic dermatitis: boxed warning: rare lymphoma and skin malignancy; avoid on malignant or premalignant skin",
+    "Atopic dermatitis: not with wet wraps or compresses",
+    "Atopic dermatitis: safety of intermittent use beyond 1 year not established"
    ]
   },
   "tacrolimus": {
@@ -9739,17 +9739,17 @@ const DZ = {
     }
    ],
    "counsel": [
-    "Apply liberally at every diaper change.",
-    "Remove the old product gently.",
-    "Cover all red areas.",
-    "Keep using it after the rash heals to prevent another.",
-    "Check at 7 days: improved, continue until healed; not improved or worse, see a physician.",
-    "Same directions as any sunscreen: 1 ounce, 15 minutes before, reapply every 40–80 minutes and after towel drying."
+    "Diaper dermatitis: apply liberally at every diaper change.",
+    "Diaper dermatitis: remove the old product gently.",
+    "Diaper dermatitis: cover all red areas.",
+    "Diaper dermatitis: keep using it after the rash heals to prevent another.",
+    "Diaper dermatitis: check at 7 days: improved, continue until healed; not improved or worse, see a physician.",
+    "Sun protection and sunscreen: same directions as any sunscreen: 1 ounce, 15 minutes before, reapply every 40–80 minutes and after towel drying."
    ],
    "counselSrc": "Patel Dermatitis slides 63, 66; Patel Sun slides 21, 36",
    "avoid": [
-    "Not enough alone when an exclusion for self-care is present (infection, broken skin, fever, rash outside the diaper area)",
-    "Under 6 months of age: no sunscreen"
+    "Diaper dermatitis: not enough alone when an exclusion for self-care is present (infection, broken skin, fever, rash outside the diaper area)",
+    "Sun protection and sunscreen: under 6 months of age: no sunscreen"
    ]
   },
   "bpo": {
@@ -9799,7 +9799,7 @@ const DZ = {
     {
      "dz": "acne",
      "role": "The OTC topical retinoid (0.1% gel, OTC since 2016): keratolytic and comedolytic. Single agent or in combination with benzoyl peroxide.",
-     "how": "At night after washing; thin layer over the whole affected area; prescription 0.3%.",
+     "how": "At night after washing; thin layer over the whole affected area.",
      "src": "Patel Acne slides 23, 27, 31"
     }
    ],
@@ -9842,21 +9842,21 @@ const DZ = {
     }
    ],
    "counsel": [
-    "Apply to clean, dry skin in the evening.",
-    "Avoid eyes, mucous membranes and broken skin.",
-    "Use sunscreen: photosensitivity, irritation and peeling.",
-    "Apply once a day at bedtime, to dry skin, after cleansing.",
-    "By day, use a moisturizer or foundation with SPF 30 or higher.",
-    "Expect dryness, scaling, redness or burning; the product can be used on alternate days to reduce this.",
-    "The benefit comes with long-term daily use and may take months.",
-    "Keep it away from the eyes and mucus membranes."
+    "Acne: apply to clean, dry skin in the evening.",
+    "Acne: avoid eyes, mucous membranes and broken skin.",
+    "Acne: use sunscreen: photosensitivity, irritation and peeling.",
+    "Photoaging and skin-cancer signs: apply once a day at bedtime, to dry skin, after cleansing.",
+    "Photoaging and skin-cancer signs: by day, use a moisturizer or foundation with SPF 30 or higher.",
+    "Photoaging and skin-cancer signs: expect dryness, scaling, redness or burning; the product can be used on alternate days to reduce this.",
+    "Photoaging and skin-cancer signs: the benefit comes with long-term daily use and may take months.",
+    "Photoaging and skin-cancer signs: keep it away from the eyes and mucus membranes."
    ],
    "counselSrc": "Patel Acne slides 31, 42; Patel Sun slides 44, 53–54",
    "avoid": [
-    "Photosensitivity, photo-irritation, severe peeling",
-    "Phototoxicity: sun protection every day",
-    "Retinoids are on her list of medications that increase sun sensitivity",
-    "Dr. Sikazwe: teratogenic"
+    "Acne: photosensitivity, photo-irritation, severe peeling",
+    "Photoaging and skin-cancer signs: phototoxicity: sun protection every day",
+    "Photoaging and skin-cancer signs: retinoids are on her list of medications that increase sun sensitivity",
+    "Photoaging and skin-cancer signs: dr. Sikazwe: teratogenic"
    ]
   },
   "tazarotene": {
@@ -9885,16 +9885,16 @@ const DZ = {
     }
    ],
    "counsel": [
-    "Apply to clean, dry skin in the evening.",
-    "Avoid eyes, mucous membranes and broken skin.",
-    "Use sunscreen.",
-    "Apply once a day, at bedtime.",
-    "Expect a follow-up contact in 1–2 weeks."
+    "Acne: apply to clean, dry skin in the evening.",
+    "Acne: avoid eyes, mucous membranes and broken skin.",
+    "Acne: use sunscreen.",
+    "Psoriasis: apply once a day, at bedtime.",
+    "Psoriasis: expect a follow-up contact in 1–2 weeks."
    ],
    "counselSrc": "Patel Acne slides 31, 42; Patel Scaly slides 36, 48",
    "avoid": [
-    "Photosensitivity, photo-irritation, severe peeling",
-    "Pregnancy (Dr. Smith, PCol slide 18; Dr. Sikazwe: teratogenic, DPAW page 29)"
+    "Acne: photosensitivity, photo-irritation, severe peeling",
+    "Psoriasis: pregnancy (Dr. Smith, PCol slide 18; Dr. Sikazwe: teratogenic, DPAW page 29)"
    ]
   },
   "salicylic-acid": {
@@ -9965,29 +9965,29 @@ const DZ = {
     }
    ],
    "counsel": [
-    "Once or twice daily as a cleanser or gel.",
-    "Apply a gel only to the affected area.",
-    "It dries the skin and raises sun sensitivity: use sunscreen.",
-    "Not together with adapalene.",
+    "Acne: once or twice daily as a cleanser or gel.",
+    "Acne: apply a gel only to the affected area.",
+    "Acne: it dries the skin and raises sun sensitivity: use sunscreen.",
+    "Acne: not together with adapalene.",
     "Psoriasis: use the shampoo on scalp lesions.",
     "Seborrheic dermatitis: it softens the scale so it can be washed off.",
     "Infant: only for a severe case, 3–5%, mixed in olive oil or a water-soluble base.",
-    "Wash and dry the area, then soak it in warm water for 5 minutes before each application.",
-    "Pad or plaster: trim it to the lesion so that it does not touch healthy skin; cover with occlusive tape.",
-    "Liquid: 1 drop at a time until the lesion is covered; let it dry; if it touches healthy skin, wash it off at once with soap and water.",
-    "Cap the liquid tightly after use and store it away from sunlight and heat.",
-    "Wart: stop at 12 weeks. Corn or callus: stop at 14 days (7 pads).",
-    "See a provider if the skin becomes red or irritated, or if the lesion is still there at the limit."
+    "Warts / Corns and calluses: before each application: soak the area in warm water for 5 minutes; wash and dry it thoroughly.",
+    "Warts / Corns and calluses: pad or plaster: trim it to the lesion so that it does not touch healthy skin; cover with occlusive tape.",
+    "Warts / Corns and calluses: liquid: 1 drop at a time until the lesion is covered; let it dry; if it touches healthy skin, wash it off at once with soap and water.",
+    "Warts / Corns and calluses: cap the liquid tightly after use and store it away from sunlight and heat.",
+    "Wart: may be used for up to 12 weeks. Corn or callus: no longer than 14 days (7 pads).",
+    "Corn or callus: seek medical attention if the skin becomes red or irritated, or if it is not removed after 14 days."
    ],
    "counselSrc": "Patel Acne slides 27, 29; Patel Scaly slides 15, 18, 36; 11/10 lecture; Patel Warts slides 10, 17; 11/12 lecture T@94581–95016",
    "avoid": [
-    "Frequent washing with it: excessive cleansing is discouraged (her Case 1 poll)",
+    "Acne: frequent washing with it; excessive cleansing is discouraged (her Case 1 poll)",
     "Infants, except severe cases: thin skin, higher absorption, more irritation (11/10 lecture)",
-    "Diabetes",
-    "Poor blood circulation",
-    "Irritated, infected or reddened skin",
-    "Moles, birthmarks, warts with hair growing from them",
-    "Warts on the face, genital warts, warts on mucous membranes"
+    "Warts / Corns and calluses: diabetes",
+    "Warts / Corns and calluses: poor blood circulation",
+    "Warts / Corns and calluses: irritated, infected or reddened skin",
+    "Warts / Corns and calluses: moles, birthmarks, warts with hair growing from them",
+    "Warts / Corns and calluses: warts on the face, genital warts, warts on mucous membranes"
    ]
   },
   "aha": {
@@ -10012,19 +10012,19 @@ const DZ = {
     }
    ],
    "counsel": [
-    "Try it on a small area first.",
-    "Wait 2–4 weeks between peels.",
-    "Use sunscreen: it raises sun sensitivity.",
-    "Apply to dry skin within 15 minutes of cleansing.",
-    "Expect stinging, burning, itching, skin lightening or dryness.",
-    "Use sunscreen daily.",
-    "Results take at least four weeks."
+    "Acne: try it on a small area first.",
+    "Acne: wait 2–4 weeks between peels.",
+    "Acne: use sunscreen: it raises sun sensitivity.",
+    "Photoaging and skin-cancer signs: apply to dry skin within 15 minutes of cleansing.",
+    "Photoaging and skin-cancer signs: expect stinging, burning, itching, skin lightening or dryness.",
+    "Photoaging and skin-cancer signs: use sunscreen daily.",
+    "Photoaging and skin-cancer signs: results take at least four weeks."
    ],
    "counselSrc": "Patel Acne slide 28; Patel Sun slides 53–54",
    "avoid": [
-    "Photosensitivity without sunscreen",
-    "Alpha hydroxy acids in cosmetics are on her list of products that increase sun sensitivity",
-    "Chemical peels are not self-applied OTC products; deep peels are for professionals"
+    "Acne: photosensitivity without sunscreen",
+    "Photoaging and skin-cancer signs: alpha hydroxy acids in cosmetics are on her list of products that increase sun sensitivity",
+    "Photoaging and skin-cancer signs: chemical peels are not self-applied OTC products; deep peels are for professionals"
    ]
   },
   "azelaic-acid": {
@@ -10153,19 +10153,19 @@ const DZ = {
     }
    ],
    "counsel": [
-    "Swallow whole with a full glass of water; it may be taken after eating.",
-    "Use sunscreen every day: photosensitivity.",
-    "Keep using the topical combination with it.",
-    "It is used for the shortest time possible; expect a review at 3–4 months.",
-    "A photosensitizing drug: she named doxycycline and the tetracyclines in the sun exposure lecture"
+    "Acne: swallow whole with a full glass of water; it may be taken after eating.",
+    "Acne: use sunscreen every day: photosensitivity.",
+    "Acne: keep using the topical combination with it.",
+    "Acne: it is used for the shortest time possible; expect a review at 3–4 months.",
+    "Flea-borne and tick-borne disease: a photosensitizing drug: she named doxycycline and the tetracyclines in the sun exposure lecture"
    ],
    "counselSrc": "Patel Acne slides 33, 42; Patel Sun slide 10; 11/12 lecture (Reference)",
    "avoid": [
-    "12 years old or younger: permanent tooth discoloration",
-    "Pregnancy: fetal harm",
-    "With isotretinoin",
-    "Adverse effects: abdominal pain, diarrhea, nausea and vomiting, hepatotoxicity, hyperpigmentation",
-    "Photosensitivity",
+    "Acne: 12 years old or younger: permanent tooth discoloration",
+    "Acne: pregnancy: fetal harm",
+    "Acne: with isotretinoin",
+    "Acne: adverse effects: abdominal pain, diarrhea, nausea and vomiting, hepatotoxicity, hyperpigmentation",
+    "Flea-borne and tick-borne disease: photosensitivity",
     "Acne lecture: over 12 years (tooth discoloration); avoid in pregnancy (Patel Acne slides 32–33, Reference)"
    ]
   },
@@ -10463,7 +10463,7 @@ const DZ = {
     "Expect a response in 3 to 6 weeks.",
     "Keep using your topical medicine.",
     "Blood tests (CBC and liver tests) are checked.",
-    "Avoid alcohol: liver toxicity is the most common concern.",
+    "Liver toxicity is the most common concern, more so with alcohol.",
     "Expect a follow-up contact in 1–2 weeks."
    ],
    "counselSrc": "Patel Scaly slides 39, 48; 11/11 lecture",
@@ -10495,7 +10495,7 @@ const DZ = {
    ],
    "counsel": [
     "It is used for less than 4 months, because it can harm the kidneys.",
-    "Tell the pharmacist every medicine you take: it has many interactions.",
+    "Many drug interactions (CYP3A4 and 2C9).",
     "Keep using your topical medicine.",
     "Expect a follow-up contact in 1–2 weeks."
    ],
@@ -10529,7 +10529,7 @@ const DZ = {
    "counsel": [
     "The dose is stepped up over the first week to 30 mg twice a day.",
     "You should see a response by week 4.",
-    "Report nausea, vomiting or diarrhea, low mood, or weight loss.",
+    "Adverse effects: nausea, vomiting, diarrhea; depression; weight loss.",
     "Expect a follow-up contact in 1–2 weeks."
    ],
    "counselSrc": "Patel Scaly slides 38, 48",
@@ -10590,7 +10590,7 @@ const DZ = {
    ],
    "counsel": [
     "No live vaccines.",
-    "Report any sign of infection: serious TB, fungal, viral and bacterial infections occur.",
+    "High risk of serious invasive infections: TB, fungal, viral, bacterial.",
     "Boxed warning: serious cardiac events such as heart attack or stroke, cancer, blood clots, and death.",
     "Blood tests are monitored."
    ],
@@ -10680,7 +10680,7 @@ const DZ = {
     "Common: injection site reaction, headache, runny nose, upper respiratory infection.",
     "Expect a follow-up contact in 1–2 weeks.",
     "You are screened for hepatitis B before starting.",
-    "Report shortness of breath or swelling: this class can worsen or bring on heart failure."
+    "This class can worsen heart failure or bring it on."
    ],
    "counselSrc": "Patel Scaly slides 40–41, 43, 48; 11/11 lecture",
    "avoid": [
@@ -10713,7 +10713,7 @@ const DZ = {
     "Stop it and call if you get an infection, including flu, a cold or COVID.",
     "Common: injection site reaction, headache, runny nose, upper respiratory infection.",
     "Expect a follow-up contact in 1–2 weeks.",
-    "Tell the pharmacist if you take warfarin or cyclosporine: their levels are monitored."
+    "Warfarin and cyclosporine levels are monitored while on it."
    ],
    "counselSrc": "Patel Scaly slides 40, 42–43, 48; 11/11 lecture",
    "avoid": [
@@ -10773,7 +10773,7 @@ const DZ = {
     "Stop it and call if you get an infection, including flu, a cold or COVID.",
     "Common: injection site reaction, headache, runny nose, upper respiratory infection.",
     "Expect a follow-up contact in 1–2 weeks.",
-    "Report new bowel symptoms."
+    "Anti-IL class: bowel disease is watched for; a GI reaction can be a reason to stop."
    ],
    "counselSrc": "Patel Scaly slides 40, 43, 48; 11/11 lecture",
    "avoid": [
@@ -10833,7 +10833,7 @@ const DZ = {
     "Stop it and call if you get an infection, including flu, a cold or COVID.",
     "Common: injection site reaction, headache, runny nose, upper respiratory infection.",
     "Expect a follow-up contact in 1–2 weeks.",
-    "Boxed warning: increased suicide risk. Report low mood or thoughts of self-harm at once.",
+    "Boxed warning: increased suicide risk; mental health is monitored.",
     "A REMS program must be completed before it is dispensed."
    ],
    "counselSrc": "Patel Scaly slides 40, 42–43, 48; 11/11 lecture",
@@ -11052,22 +11052,22 @@ const DZ = {
     }
    ],
    "counsel": [
-    "Apply to the bite area 3–4 times daily",
-    "Do not use longer than 7 days",
-    "Pramoxine (or benzyl alcohol) is less likely to cause sensitization or adverse effects",
-    "Use small amounts, up to 4 times a day.",
-    "Relief lasts 15 to 45 minutes; the pain will return between doses, and more frequent use is not safe.",
-    "Do not cover large areas."
+    "Poison ivy / Insect bites / Insect stings: apply to the bite area 3–4 times daily",
+    "Poison ivy / Insect bites / Insect stings: do not use longer than 7 days",
+    "Poison ivy / Insect bites / Insect stings: pramoxine (or benzyl alcohol) is less likely to cause sensitization or adverse effects",
+    "Wounds / Burns / Sunburn: use small amounts, up to 4 times a day.",
+    "Wounds / Burns / Sunburn: relief lasts 15 to 45 minutes; the pain will return between doses, and more frequent use is not safe.",
+    "Wounds / Burns / Sunburn: do not cover large areas."
    ],
    "counselSrc": "Patel Outdoor slide 39; Patel Wound slide 20; 11/12 lecture T@85399",
    "avoid": [
-    "Children younger than 2 years",
-    "Broken skin; under an occlusive dressing",
-    "Adverse effect of the \"caines\": methemoglobinemia",
-    "★ Overuse: systemic toxicity (lidocaine)",
-    "Benzocaine absorbed systemically: methemoglobinemia (cyanosis, dyspnea, syncope, seizures, coma)",
+    "Poison ivy / Insect bites / Insect stings: children younger than 2 years",
+    "Poison ivy / Insect bites / Insect stings: broken skin; under an occlusive dressing",
+    "Poison ivy / Insect bites / Insect stings: adverse effect of the \"caines\": methemoglobinemia",
+    "Wounds / Burns / Sunburn: ★ Overuse: systemic toxicity (lidocaine)",
+    "Wounds / Burns / Sunburn: benzocaine absorbed systemically: methemoglobinemia (cyanosis, dyspnea, syncope, seizures, coma)",
     "Sunburn: not recommended; hypersensitivity reaction and systemic symptoms",
-    "Her OTC chart: not under an occlusive dressing or on broken skin"
+    "Wounds / Burns / Sunburn: her OTC chart: not under an occlusive dressing or on broken skin"
    ]
   },
   "topical-antihistamine": {
@@ -11136,13 +11136,13 @@ const DZ = {
    "avoid": []
   },
   "counterirritants": {
-   "name": "Antipruritics or counterirritants (camphor, menthol, phenol, calamine)",
+   "name": "Antipruritics or counterirritants (camphor, menthol, phenol)",
    "brand": "",
    "pa": [
     {
      "dz": "plant-dermatitis",
      "role": "Dry rash only; relieve pain and pruritus",
-     "how": "Not on broken skin or a wound",
+     "how": "Not on broken skin or a wound. Slide 13 also lists benzyl alcohol and calamine in this class; slide 39 lists benzyl alcohol as a local anesthetic and calamine as a skin protectant",
      "src": "Patel Outdoor slide 13"
     },
     {
@@ -11166,8 +11166,7 @@ const DZ = {
    "counselSrc": "Patel Outdoor slides 13, 39",
    "avoid": [
     "Children younger than 2 years",
-    "Broken skin or a wound",
-    "Her slides differ on two members: slide 13 lists benzyl alcohol and calamine here; slide 39 lists benzyl alcohol as a local anesthetic and calamine as a skin protectant"
+    "Broken skin or a wound"
    ]
   },
   "astringents": {
@@ -11195,7 +11194,7 @@ const DZ = {
    "avoid": []
   },
   "topical-antibiotics": {
-   "name": "Topical antibiotics (bacitracin, neomycin, polymyxin B)",
+   "name": "Topical antibiotics (bacitracin, neomycin, polymyxin B sulfate, mupirocin)",
    "brand": "Neosporin (contains neomycin)",
    "pa": [
     {
@@ -11230,20 +11229,19 @@ const DZ = {
     }
    ],
    "counsel": [
-    "They prevent or treat minor infection in minor burns and cuts",
-    "Contact the physician if there is no improvement after 7 days",
-    "Cleanse the wound first, apply the antibiotic, then the bandage.",
-    "Apply 1 to 3 times a day.",
-    "Use it for a short time on a small area.",
-    "See a primary care provider if there is no improvement within 7 days."
+    "Poison ivy / Insect bites: they prevent or treat minor infection in minor burns and cuts",
+    "Poison ivy / Insect bites: contact the physician if there is no improvement after 7 days",
+    "Wounds / Burns / Sunburn: cleanse the wound first, apply the antibiotic, then the bandage.",
+    "Wounds / Burns / Sunburn: apply 1 to 3 times a day.",
+    "Wounds / Burns / Sunburn: use it for a short time on a small area.",
+    "Wounds / Burns / Sunburn: see a primary care provider if there is no improvement within 7 days."
    ],
    "counselSrc": "Patel Outdoor slide 13; Patel Wound slides 11, 20; 11/12 lecture T@81569, T@82489",
    "avoid": [
-    "Neomycin allergy (her bedbug case: neomycin worsened the rash)",
-    "The chart also lists mupirocin in this class",
-    "Toxicity risk rises with large areas of application",
-    "Neomycin: systemic toxicity",
-    "Polymyxin B: hypersensitivity"
+    "Poison ivy / Insect bites: neomycin allergy (her bedbug case: neomycin worsened the rash)",
+    "Wounds / Burns / Sunburn: toxicity risk rises with large areas of application",
+    "Wounds / Burns / Sunburn: neomycin: systemic toxicity",
+    "Wounds / Burns / Sunburn: polymyxin B: hypersensitivity"
    ]
   },
   "skin-protectants": {
@@ -11282,11 +11280,11 @@ const DZ = {
     }
    ],
    "counsel": [
-    "Apply to the affected area as needed, up to 4 times daily",
-    "They reduce irritation or inflammation",
-    "They can be applied to the skin of children younger than 2 years",
-    "May be used in bacterial infection",
-    "On a sunburn, wait 24 hours, then apply as often as needed."
+    "Insect bites / Insect stings: apply to the affected area as needed, up to 4 times daily",
+    "Insect bites / Insect stings: they reduce irritation or inflammation",
+    "Insect bites / Insect stings: they can be applied to the skin of children younger than 2 years",
+    "Insect bites / Insect stings: may be used in bacterial infection",
+    "Sunburn / Burns / Corns and calluses: on a sunburn, wait 24 hours, then apply as often as needed."
    ],
    "counselSrc": "Patel Outdoor slide 39; Patel Sun slide 31",
    "avoid": [
@@ -11339,15 +11337,14 @@ const DZ = {
     "Apply enough to wet the dry hair and scalp; leave on a full 10 minutes; rinse with water",
     "Comb with a nit comb, the hair parted into segments",
     "Do not re-wash the hair for 1–2 days",
-    "Repeat in 7 to 10 days if lice or nits are seen",
+    "Repeat in 7 to 10 days if lice or nits are seen (slide 47; slide 42 says 7 days)",
     "Live lice after 2 rounds one week apart: see the primary care provider"
    ],
    "counselSrc": "Patel Outdoor slides 45, 47",
    "avoid": [
     "Under 2 months old",
     "Hypersensitivity to chrysanthemums, ragweed or a pediculicide ingredient",
-    "Pregnancy or breast-feeding; lice of the eyelids or eyebrows; secondary skin infection (refer)",
-    "Her slide prints no strength for Nix; the course drug chart lists permethrin 1%"
+    "Pregnancy or breast-feeding; lice of the eyelids or eyebrows; secondary skin infection (refer)"
    ]
   },
   "pyrethrins": {
@@ -11366,7 +11363,7 @@ const DZ = {
     "Apply enough to wet the dry hair and scalp; leave on a full 10 minutes; rinse with water",
     "Comb with a nit comb, the hair parted into segments",
     "Do not re-wash the hair for 1–2 days",
-    "Repeat in 7 to 10 days if lice or nits are seen",
+    "Repeat in 7 to 10 days if lice or nits are seen (slide 47; slide 42 says 7 days)",
     "Significant skin irritation, or product in the eyes: get medical attention"
    ],
    "counselSrc": "Patel Outdoor slides 45, 47",
@@ -11516,7 +11513,7 @@ const DZ = {
     }
    ],
    "counsel": [
-    "First aid does not replace the emergency room: clean with soap and water, cold pack, elevate the limb, then go"
+    "Clean with soap and water, apply a cold pack, elevate the limb; go to the emergency room"
    ],
    "counselSrc": "Patel Outdoor slide 53",
    "avoid": []
@@ -11535,7 +11532,7 @@ const DZ = {
    "counsel": [
     "Wash the wound with soap and water first",
     "Be seen as soon after the exposure as possible: an urgency, not an emergency",
-    "Return for every dose of the schedule; untreated rabies is fatal"
+    "Untreated rabies is fatal"
    ],
    "counselSrc": "Patel Outdoor slides 62–63; 11/12 lecture",
    "avoid": [
@@ -11634,7 +11631,7 @@ const DZ = {
     {
      "dz": "sunburn",
      "role": "Recommended: decrease pain, erythema and edema; act longer than topical anesthetics. Her poll answer for pain and tenderness: oral ibuprofen",
-     "how": "Use for the first 1–2 days",
+     "how": "Use for the first 1–2 days. Slide 31: \"prefer one with anti-inflammatory properties (NSAIDs, APAP)\"; she said \"it could be Tylenol, it could be ibuprofen\"",
      "src": "Patel Sun slide 31; T@65246"
     },
     {
@@ -11650,8 +11647,7 @@ const DZ = {
    ],
    "counselSrc": "Patel Sun slides 31, 34",
    "avoid": [
-    "Ibuprofen and the other NSAIDs are on her list of medications that increase sun sensitivity",
-    "Slide 31 reads \"prefer one with anti-inflammatory properties (NSAIDs, APAP)\"; she said \"it could be Tylenol, it could be ibuprofen\". No dose or age limit is on these slides."
+    "Ibuprofen and the other NSAIDs are on her list of medications that increase sun sensitivity"
    ]
   },
   "aloe-vera": {
@@ -11701,7 +11697,7 @@ const DZ = {
     "Use for no longer than three months.",
     "Wear sunscreen every day while using it.",
     "Use it when prescribed by a licensed health care provider.",
-    "Stop and see the provider for skin darkening, a rash or facial swelling."
+    "Check the product label of a nonprescription skin-lightening product for hydroquinone."
    ],
    "counselSrc": "Patel Sun slides 47–48",
    "avoid": [
@@ -11769,7 +11765,7 @@ const DZ = {
     {
      "dz": "wounds",
      "role": "Keep a moist healing environment with a dressing that fits the wound. \"Know the advantages, know the disadvantages\"",
-     "how": "Gauze: cheap, highly absorbent, nonocclusive; no moist environment alone, needs a secondary dressing and frequent changes, removal may bleed or hurt. Nonadherent gauze: less adherent. Adhesive bandage: cost effective, many shapes. Hydrocolloid: moist, long wear, occlusive, impermeable to fluids and bacteria, reduces pain; uninfected wounds only, hard to assess the wound, less cost effective. Transparent film: moist, semi-occlusive, gas-permeable, easy inspection; not absorptive, uninfected wounds only",
+     "how": "Gauze: cost effective, highly absorbent, nonocclusive; no moist environment alone, needs a secondary dressing and frequent changes, removal may bleed or hurt. Nonadherent gauze: less adherent. Adhesive bandage: cost effective, many shapes. Hydrocolloid: moist, long wear, occlusive, impermeable to fluids and bacteria, reduces pain; uninfected wounds only, hard to assess the wound, less cost effective. Transparent film: moist, semi-occlusive, gas-permeable, easy inspection; not absorptive, uninfected wounds only",
      "src": "Patel Wound slides 8–9; T@80276"
     }
    ],
@@ -12571,15 +12567,16 @@ const DZ = {
     {
      "q": "What is the BSA?",
      "a": [
-      "≤ 5%, or between 5% and 8% (her 7% patient) → **mild to moderate**",
-      "≥ 10%, or between 8% and 10% (“like a 9%”) → **moderate to severe**"
+      "≤ 5% → mild; 7% (her poll) → mild to moderate",
+      "≥ 8% → moderate; “like a 9%” → moderate to severe",
+      "≥ 10% → severe"
      ]
     },
     {
-     "q": "Moderate: have the topical agents been tried?",
+     "q": "Have the topical agents been tried?",
      "a": [
-      "Not yet → topical agents first (**mild to moderate**)",
-      "Yes, and not enough → systemic agent (**moderate to severe**)"
+      "Mild, or moderate and not yet tried → **mild-to-moderate algorithm**: topical agents first",
+      "Moderate and already tried, or severe → **moderate-to-severe algorithm**: systemic agent"
      ]
     }
    ],
@@ -12639,7 +12636,7 @@ const DZ = {
      "Her example",
      [
       "BSA 7%, nothing tried: topical corticosteroid (poll)",
-      "BSA “like a 9%”"
+      "Moderate, all topical agents tried: systemic agent, “most likely methotrexate”"
      ]
     ]
    ],
@@ -13159,7 +13156,7 @@ const DZ = {
       "Longer",
       "Longest"
      ],
-     "The higher the stage, the longer the healing; she gave no keyed times."
+     "The higher the stage, the longer the healing."
     ]
    ],
    "photo": "wound-stages",
@@ -13296,7 +13293,7 @@ const DZ = {
     [
      "Coverage (Sikazwe)",
      [
-      "One range each: avobenzone UVA; octinoxate, padimate O UVB; benzophenones both",
+      "Avobenzone UVA; octinoxate, padimate O UVB; benzophenones UVB and UVA",
       "UVA and UVB"
      ]
     ],
@@ -13412,7 +13409,7 @@ const DZ = {
    "title": "Topical retinoids: adapalene, tretinoin or tazarotene?",
    "a": [
     "Adapalene (Differin)",
-    "OTC at 0.1% (prescription 0.3%); directly active"
+    "OTC at 0.1% gel; directly active"
    ],
    "b": [
     "Tretinoin (Retin-A); tazarotene (Tazorac)",
@@ -13422,7 +13419,7 @@ const DZ = {
    "profs": [
     [
      "pa",
-     "Adapalene 0.1% gel became OTC in 2016; at night, apart from benzoyl peroxide. Prescription retinoids: tretinoin, adapalene 0.3%, tazarotene, trifarotene (Patel Acne slides 27, 31)."
+     "Adapalene 0.1% gel became OTC in 2016; at night, apart from benzoyl peroxide. Prescription retinoids: tretinoin, tazarotene, trifarotene (Patel Acne slides 27, 31)."
     ],
     [
      "sm",
@@ -13646,7 +13643,7 @@ const DZ = {
     "Permethrin (Nix)",
     "over 2 months"
    ],
-   "same": "Both are OTC head lice products left on dry hair for 10 minutes and repeated in 7 to 10 days if lice or nits are seen.",
+   "same": "Both are OTC head lice products left on dry hair for 10 minutes and repeated in 7 to 10 days if lice or nits are seen (slide 47; slide 42 says 7 days).",
    "profs": [
     [
      "pa",
@@ -13796,13 +13793,13 @@ const DZ = {
    ],
    "b": [
     "Dr. Smith",
-    "usually every 90–120 minutes"
+    "every 90–120 minutes (\"usually\" in her recording)"
    ],
-   "same": "Both: sunscreen must be reapplied, and the correct amount at the correct time matters. Each professor's number is the answer to her own question.",
+   "same": "Both professors: sunscreen must be reapplied.",
    "profs": [
     [
      "pa",
-     "Sun slides 21, 36. \"For my questions, recommendation in terms of treatment\" (T@56238)."
+     "Sun slides 21, 36. \"For her questions, pay attention to what she's focused on. For my questions, recommendation in terms of treatment\" (T@56238)."
     ],
     [
      "sm",
