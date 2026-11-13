@@ -66,7 +66,9 @@
        were when the reader left it, so the kept scroll position is right;
      - the place kept across a reload: a record written before the folders
        existed names none of them, so they are put at their usual state and
-       the saved line's folder is opened;
+       the folder around the saved line is opened (a line inside a folder's
+       body; when the saved line is a closed folder's own header, the folder
+       stays closed);
      - a walkthrough player that is open keeps its folder open;
      - printing opens every folder for the print and closes them after.
    If the folders cannot be drawn, the tab is drawn again as the core and the
@@ -321,7 +323,9 @@ const EXAMFOLD_UI = (function examFoldUi(){
   }
   // 3. the place kept across a reload (views.js placeRestore, placeScroll): the core has just set every <details>
   //    of the tab from its record. A record that names no exam folder was written before the folders existed (or
-  //    with all of them closed): they go to their usual state. Then the saved line's folder is opened.
+  //    with all of them closed): they go to their usual state. Then the folder around the saved line is opened.
+  //    The saved line can be a folder itself: the core takes the first element with an id whose top edge is on
+  //    screen, and a closed folder's header is one. That folder stays as the record and the usual state left it.
   function placeFolders(pl){
     if (!pl || pl.rfDone) return;
     const pane = document.getElementById('v-' + pl.v), fs = foldsOf(pl.v);
@@ -336,7 +340,7 @@ const EXAMFOLD_UI = (function examFoldUi(){
     const a = pl.a; let el = null;
     if (a && a.id) el = document.getElementById(a.id);
     else if (a && a.tag) el = [...pane.querySelectorAll(a.tag)].filter(x => (x.textContent || '').replace(/\s+/g, ' ').trim().slice(0, 80) === a.txt)[a.n] || null;
-    if (el && pane.contains(el)) reveal(el);
+    if (el && pane.contains(el) && el.closest('.rfbody')) reveal(el);   // a line inside a folder's body, never the folder or its header
     fs.forEach(f => { if (f.open) measure(f); });
   }
   try { const ps = placeScroll; placeScroll = function(pl){ try { placeFolders(pl); } catch (e) {} return ps.apply(this, arguments); }; } catch (e) { /* an older core without it */ }

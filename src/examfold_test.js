@@ -21,7 +21,10 @@
    - the browser's own navigation into a closed folder (a #fragment, the mechanism find-in-page uses) opens it;
      printing opens every folder and closes them after;
    - when the folders cannot be drawn the tab is shown flat with one console line;
-   - no page error, no sideways scroll. */
+   - no page error, no sideways scroll.
+   At 390x844 and 1376x1032 (a phone, and an iPad Pro 13 window):
+   - I: a reload with the Exam 1 header itself as the first line on screen (Reference and Tell apart; Exam 1 closed
+     as first drawn, closed by the reader, opened by the reader) leaves the folders and the page height as they were; */
 const path = require('path'), fs = require('fs');
 const NAME = 'examfold_test.js';
 let chromium;
@@ -574,6 +577,33 @@ async function nsOf(browser) {
       const lines = errs.filter(e => /exam folders could not be drawn/.test(e));
       check(lines.length === 2 && errs.length === 2, `${w} px: one console line per tab says so, and nothing else is logged`, errs.slice(0, 4));
       await ctx.close();
+    }
+  }
+
+  const SIZES2 = [[390, 844], [1376, 1032]];        // a phone; an iPad Pro 13 window
+  /* ---------- I. a reload with a closed folder's own header as the first line on screen ---------- */
+  if (run('I')) for (const [w, h] of SIZES2) {
+    console.log(`\n=== ${w}x${h}: a reload with the closed Exam 1 header as the first line ===`);
+    // Exam 1 closed as first drawn, closed by the reader (two taps on its header), and, for the other direction, opened by the reader
+    for (const v of ['ref', 'tell']) for (const [how, taps, want, key] of [['as first drawn', 0, '1:false 2:true', null], ['closed by the reader', 2, '1:false 2:true', `{"${v}":{"1":false}}`], ['opened by the reader', 1, '1:true 2:true', `{"${v}":{"1":true}}`]]) {
+      const o = await open(browser, w, {height: h});
+      await o.p.evaluate(v => show(v), v);
+      for (let i = 0; i < taps; i++) await o.p.click(`#rfold-${v}-1 > summary`);
+      // the header 18 px below the top of the window (or as near as the page scrolls), then a move by the reader: the core saves the place
+      await o.p.evaluate(v => { const f = document.getElementById(`rfold-${v}-1`); window.scrollTo(0, f.getBoundingClientRect().top + scrollY - 18); }, v);
+      await o.p.mouse.wheel(0, 1); await o.p.waitForTimeout(800);
+      const snap = () => o.p.evaluate(v => { const f = document.getElementById(`rfold-${v}-1`), pl = JSON.parse(sessionStorage.getItem(NS + ':place') || 'null');
+        return {view: VIEW, st: [...document.querySelectorAll(`#v-${v} > .rfold`)].map(x => x.dataset.exam + ':' + x.open).join(' '), page: document.documentElement.scrollHeight,
+          head: Math.round(f.getBoundingClientRect().top), rec: pl && pl.a ? pl.a.id || pl.a.tag : null, stored: localStorage.getItem(EXAMFOLD_UI.key())}; }, v);
+      const before = await snap(), state = want === '1:false 2:true' ? 'closed' : 'open';
+      check(before.rec === `rfold-${v}-1` && before.st === want && before.head >= 0 && before.head < h && before.stored === key,
+        `${w}x${h}, ${NAMES[v]}, Exam 1 ${how}: with the ${state} Exam 1 header as the first line, the line the core saves is the folder itself`, before);
+      await o.p.reload(); await ready(o.p); await o.p.waitForTimeout(1500);
+      const after = await snap();
+      check(after.view === v && after.st === before.st && after.page === before.page && Math.abs(after.head - before.head) <= 4 && after.stored === before.stored,
+        `${w}x${h}, ${NAMES[v]}, Exam 1 ${how}: after the reload Exam 1 is still ${state}, the page is as tall as before (${before.page} px) and the header is at the same height`, {before, after});
+      check(!o.errs.length, `${w}x${h}, ${NAMES[v]}, Exam 1 ${how}: no page error across the reload`, o.errs.slice(0, 3));
+      await o.ctx.close();
     }
   }
 
