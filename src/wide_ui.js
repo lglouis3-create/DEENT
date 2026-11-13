@@ -98,7 +98,15 @@ body.xnavhid .atbar{top:0}
   /* ---------- the tab strip ---------- */
   const KEY = () => { let ns; try { ns = NS; } catch (e) { ns = (typeof COURSE !== 'undefined' && COURSE.ns) || 'drill'; } return ns + ':navAutoHide'; };
   const autoHide = () => { try { return localStorage.getItem(KEY()) !== '0'; } catch (e) { return true; } };
-  let AUTO = autoHide();
+  // The setting is read again once the core's NS exists. This file runs before the line that declares NS, so the
+  // first reading looks under COURSE.ns; on the preview page NS is COURSE.ns + '-preview', the name the checkbox
+  // writes under, and a choice of "off" was lost at every reload there.
+  let AUTO = autoHide(), autoRead = false;
+  const loadAuto = () => {
+    if (autoRead) return;
+    try { void NS; } catch (e) { return; }
+    autoRead = true; AUTO = autoHide();
+  };
   const IDLE_MS = 3000;
   let timer = null, hovering = false;
 
@@ -136,6 +144,7 @@ body.xnavhid .atbar{top:0}
   }
 
   function wireNav(){
+    loadAuto();
     const n = nav(); if (!n || !n.addEventListener) return;
     window.addEventListener('scroll', reveal, {passive: true});
     window.addEventListener('resize', reveal, {passive: true});
@@ -159,6 +168,7 @@ body.xnavhid .atbar{top:0}
   function settingsRow(){
     const el = document.getElementById('v-settings');
     if (!el || !el.querySelector || el.querySelector('#xNavHide')) return;
+    loadAuto();
     const box = document.createElement('div');
     box.innerHTML = `<h3>Display</h3><div class="filters"><div class="frow">
       <label style="display:flex;align-items:center;gap:8px;min-height:44px;font-size:14px;cursor:pointer">
@@ -177,6 +187,7 @@ body.xnavhid .atbar{top:0}
     if (exp) exp.before(frag); else el.appendChild(frag);
     const cb = el.querySelector('#xNavHide');
     cb.addEventListener('change', () => {
+      autoRead = true;
       AUTO = cb.checked;
       try { localStorage.setItem(KEY(), AUTO ? '1' : '0'); } catch (e) { /* kept for this visit */ }
       reveal();

@@ -7,7 +7,9 @@
    - Settings has "Refit the page to the window": it leaves the viewport meta as it was, causes no error, and by
      itself the refit never runs on a desktop browser;
    - the pinned tab strip hides while reading after a real tap (390x844) or click (1366x1024) on a tab, and stays
-     for a mouse resting on it and for focus reached with the Tab key (review finding E-F2, 2026-11-13). */
+     for a mouse resting on it and for focus reached with the Tab key (review finding E-F2, 2026-11-13);
+   - "Hide the tab bar while reading" turned off in Settings is still off after a reload (the preview page keeps
+     its settings under its own name). */
 const path = require('path');
 const {chromium} = require('playwright');
 const PAGE = 'file://' + path.resolve(__dirname, process.env.DRILL_PAGE || '../preview/index.html');
@@ -169,6 +171,46 @@ const measure = p => p.evaluate(() => { const r = e => e ? e.getBoundingClientRe
       check(inNav && s.focusIn && s.focusVisible === true && !s.hidden && s.pinned && s.y > 300, '1366x1024, focus moved onto the strip with the Tab key, then a scroll down: the strip is still shown 4.5 s later', JSON.stringify(s));
       await p.close();
     }
+  }
+  /* "Hide the tab bar while reading" turned off stays off after a reload (skeptic's finding, 2026-11-13). wide_ui.js
+     read the setting once, while its file ran, before the core's NS exists, so it looked under COURSE.ns; the
+     checkbox writes under NS, which on the preview page is COURSE.ns + '-preview'. There the choice was lost at
+     every reload. The key is taken from the page (NS), so the case is the same on the root page. */
+  {
+    const errs = [];
+    const ctx = await b.newContext({viewport: {width: 390, height: 844}, hasTouch: true, isMobile: true});
+    const p = await ctx.newPage();
+    p.on('pageerror', e => errs.push(e.message));
+    await p.goto(PAGE); await p.waitForTimeout(900);
+    await p.tap('#nav button[data-v="settings"]'); await p.waitForTimeout(300);
+    const on0 = await p.evaluate(() => document.getElementById('xNavHide').checked);
+    await p.locator('#xNavHide').scrollIntoViewIfNeeded();
+    await p.tap('#xNavHide'); await p.waitForTimeout(200);
+    const st = await p.evaluate(() => ({key: NS + ':navAutoHide', v: localStorage.getItem(NS + ':navAutoHide'), checked: document.getElementById('xNavHide').checked}));
+    check(on0 && !st.checked && st.v === '0', 'Settings: the tab bar setting starts on, and a tap turns it off and stores "0"', JSON.stringify(st));
+    await p.reload(); await p.waitForTimeout(900);
+    await p.tap('#nav button[data-v="settings"]'); await p.waitForTimeout(300);
+    const after = await p.evaluate(() => ({v: localStorage.getItem(NS + ':navAutoHide'), checked: document.getElementById('xNavHide').checked}));
+    check(after.v === '0' && !after.checked, 'after a reload the checkbox is still off', JSON.stringify(after));
+    await p.tap('#nav button[data-v="guide"]'); await p.waitForTimeout(300);
+    await p.mouse.move(195, 620);
+    await p.evaluate(() => window.scrollTo(0, 600));
+    await p.waitForTimeout(4500);
+    const s = await p.evaluate(() => { const nv = document.getElementById('nav'); return {hidden: nv.classList.contains('xhid'), pinned: nv.classList.contains('xpinned'), y: Math.round(scrollY)}; });
+    check(!s.hidden && s.pinned && s.y > 300, 'after a reload with the setting off, a tap on a tab and a scroll down: the strip is still shown 4.5 s later', JSON.stringify(s));
+    // turned on again, it is kept on and the strip hides
+    await p.tap('#nav button[data-v="settings"]'); await p.waitForTimeout(300);
+    await p.locator('#xNavHide').scrollIntoViewIfNeeded();
+    await p.tap('#xNavHide'); await p.waitForTimeout(200);
+    await p.reload(); await p.waitForTimeout(900);
+    await p.tap('#nav button[data-v="guide"]'); await p.waitForTimeout(300);
+    await p.mouse.move(195, 620);
+    await p.evaluate(() => window.scrollTo(0, 600));
+    const gone = await p.waitForFunction(() => document.getElementById('nav').classList.contains('xhid'), null, {timeout: 4500}).then(() => true, () => false);
+    const v2 = await p.evaluate(() => localStorage.getItem(NS + ':navAutoHide'));
+    check(gone && v2 === '1', 'turned on again and reloaded: "1" is stored and the strip hides within 4.5 s', JSON.stringify({gone, v2}));
+    check(!errs.length, 'no page errors around the tab bar setting', errs.join(' | '));
+    await ctx.close();
   }
   await b.close();
   console.log((fail ? 'FAIL' : 'PASS') + `: wide_test.js: ${fail ? fail + ' of ' : ''}${n} checks${fail ? ' failed' : ' passed'}`);
