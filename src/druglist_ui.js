@@ -58,7 +58,7 @@
        or stated it shouldn't be material that pops up").
      - Recall: after Check, Forgot / Partly / Knew with their criteria; only a
        click counts. A summary of this visit's ratings and Quiz me answers,
-       and "Practise what I forgot / partly knew", a frozen set that asks
+       and "Practice what I forgot / partly knew", a frozen set that asks
        each such fact again after other drugs of its class, in the other form
        (multiple choice after recall, recall after multiple choice). Page
        memory only.
@@ -67,7 +67,7 @@
      - Browse: each card's status from this profile's saved bank answers
        (read-only: the core's DB.answers and DB.concepts of the profile on
        screen, through the question-to-fact map in drugfacts.js), with
-       Practise buttons that start those bank questions (drillList), and a
+       Practice buttons that start those bank questions (drillList), and a
        whole-chart line counting Exam 1 facts only; scope tags on every card.
 
    Data: druglist_data.js (DRUGLIST), drugfacts.js (DRUGFACTS). Targets and mechanisms are read from the
@@ -443,7 +443,7 @@ const DRUGLIST_UI = (() => {
     return `<b>This visit (not saved):</b> Knew ${c.knew} · Partly ${c.partly} · Forgot ${c.forgot}` +
       ` (${Object.entries(byF).map(([f, o]) => `${esc(SFIELD[f] || f)}: ${['knew', 'partly', 'forgot'].filter(r => o[r]).map(r => RATE_NAME[r] + ' ' + o[r]).join(', ')}`).join('; ')}).` +
       ` A right Quiz me answer counts as Knew, a wrong one as Forgot.
-      <span class="dlchips"><button type="button" class="btn sm" data-dl="practise"${w ? '' : ' disabled'}>Practise what I forgot / partly knew (${w})</button></span>`;
+      <span class="dlchips"><button type="button" class="btn sm" data-dl="practise"${w ? '' : ' disabled'}>Practice what I forgot / partly knew (${w})</button></span>`;
   }
   const refreshSession = () => { const el = pane && pane.querySelector('#dlsess'); if (el) el.innerHTML = sessionLine(); };
 
@@ -472,7 +472,7 @@ const DRUGLIST_UI = (() => {
       title: `Retrying ${pl(missed, 'missed question')}${open ? ` and ${open} not yet answered` : ''} from your last set`,
       note: 'The same questions and answer options, in a new order. The filters and Ask about below do not change this set; they apply when you press Back to the filtered list.', sig: qsig()}};
   }
-  /* Practise what I forgot / partly knew: each such fact again, after up to two questions on other
+  /* Practice what I forgot / partly knew: each such fact again, after up to two questions on other
      drugs (its class first), in the other form: multiple choice after recall, recall after
      multiple choice (the same form again where the field has no other one, said on the item). */
   function practiseSet(){
@@ -494,7 +494,7 @@ const DRUGLIST_UI = (() => {
     }
     const kept = list.filter(q => q && q.id);
     quiz = {sig: qsig(), list: kept, ans: {}, skipped: {}, frozen: {kind: 'practise',
-      title: `Practising ${weak.length} fact${weak.length === 1 ? '' : 's'} you forgot or partly knew`,
+      title: `Practicing ${weak.length} fact${weak.length === 1 ? '' : 's'} you forgot or partly knew`,
       note: 'Each one comes back after questions on other drugs (its class first), in the other form. Ratings and answers here count for this visit only (not saved).', sig: qsig()}};
   }
   const score = () => {
@@ -763,7 +763,7 @@ const DRUGLIST_UI = (() => {
       return qids.some(id => { const q = qById(id), c = q && DB.concepts[q.concept]; return !!(c && c.seen > 0 && isDue(c)); });
     } catch (e) { return false; }
   }
-  const SCLS = {'Not practised': 'none', Forgot: 'forgot', 'Right, but unsure': 'unsure', Remembered: 'rem', 'Kept on a later day': 'kept'};
+  const SCLS = {'Not practiced': 'none', Forgot: 'forgot', 'Right, but unsure': 'unsure', Remembered: 'rem', 'Kept on a later day': 'kept'};
   let FCACHE = {};
   function factsOf(d){
     if (!DF || !DF.BY[d.id]) return [];
@@ -785,13 +785,13 @@ const DRUGLIST_UI = (() => {
     const pr = F.filter(x => x.s.n).length, wk = F.filter(x => x.weak);
     const chips = F.map(x => `<li class="s-${SCLS[x.s.label]}${x.due ? ' s-due' : ''}"><b>${esc(x.label)}</b>: ${esc(x.s.label)}${x.due ? ' · Due for review' : ''}${x.s.n ? ` (${x.s.right}/${x.s.n})` : ''}</li>`).join('');
     const rows = F.map(x => `<tr><th scope="row">${esc(x.label)}</th><td>${esc(x.s.label)}${x.due ? '; due for review' : ''}<br>${x.s.n ? `${x.s.n} answer${x.s.n === 1 ? '' : 's'}, ${x.s.right} right · recognition (multiple choice) · last ${when(x.s.last)}` : 'no answer yet'}</td>
-      <td><button type="button" class="chip" data-dl="pq" data-id="${esc(d.id)}" data-f="${esc(x.f)}">Practise (${x.qids.length})</button></td></tr>`).join('');
+      <td><button type="button" class="chip" data-dl="pq" data-id="${esc(d.id)}" data-f="${esc(x.f)}">Practice (${x.qids.length})</button></td></tr>`).join('');
     const cw = classWeak(d.cls);
-    return `<div class="dlprog"><p class="dlprogh">Your bank answers (${esc(profileName() || 'no profile')}, saved, read-only): ${pr} of ${F.length} facts practised${wk.length ? ` · ${wk.length} to review` : ''}</p>
+    return `<div class="dlprog"><p class="dlprogh">Your bank answers (${esc(profileName() || 'no profile')}, saved, read-only): ${pr} of ${F.length} facts practiced${wk.length ? ` · ${wk.length} to review` : ''}</p>
       <ul class="dlpchips">${chips}</ul>
       <details><summary>Details and practice</summary><p class="dlnotgt">Scope: ${esc(DL.SCOPES[DL.scopeOf(d)])}. Each count is this profile's saved answers to the bank questions mapped to the fact.</p>
         <table class="dlptab"><tbody>${rows}</tbody></table>
-        <div class="dlchips">${wk.length ? `<button type="button" class="btn sm ghost" data-dl="pweak" data-id="${esc(d.id)}">Practise this drug's weak facts (${uniq(wk.flatMap(x => x.qids)).length})</button>` : ''}
+        <div class="dlchips">${wk.length ? `<button type="button" class="btn sm ghost" data-dl="pweak" data-id="${esc(d.id)}">Practice this drug's weak facts (${uniq(wk.flatMap(x => x.qids)).length})</button>` : ''}
         ${cw.length ? `<button type="button" class="btn sm ghost" data-dl="pclass" data-cls="${esc(d.cls)}">Weak facts in this class (${cw.length} questions)</button>` : ''}</div></details>${visit}</div>`;
   }
   const uniq = a => [...new Set(a)];
@@ -806,10 +806,10 @@ const DRUGLIST_UI = (() => {
     const all = chartFacts(), ex = all.filter(x => x.exam), pr = ex.filter(x => x.s.n), wk = ex.filter(x => x.weak);
     const opt = all.length - ex.length, drugs = uniq(ex.map(x => x.d.id)).length;
     const byF = {}; for (const x of wk) (byF[x.f] = byF[x.f] || []).push(...x.qids);
-    return `<section class="dlsum" aria-labelledby="dlsumh"><p id="dlsumh"><b>Your bank answers (${esc(profileName() || 'no profile')}):</b> ${pr.length} of ${ex.length} Exam 1 facts practised (on ${drugs} drugs) · ${wk.length} need review (forgot, unsure or due)` +
+    return `<section class="dlsum" aria-labelledby="dlsumh"><p id="dlsumh"><b>Your bank answers (${esc(profileName() || 'no profile')}):</b> ${pr.length} of ${ex.length} Exam 1 facts practiced (on ${drugs} drugs) · ${wk.length} need review (forgot, unsure or due)` +
       `${opt ? ` · ${opt} optional fact${opt === 1 ? '' : 's'} not counted` : ''} · chart p. 7 excluded (not on Exam 1).</p>
-      <p class="dlnotgt">A fact is one field of one drug that has bank questions; read-only from your saved answers (recognition). Not practised is never counted as weak.</p>
-      ${wk.length ? `<div class="dlchips"><button type="button" class="btn sm" data-dl="pall">Practise my weak facts (${uniq(wk.flatMap(x => x.qids)).length} questions)</button>
+      <p class="dlnotgt">A fact is one field of one drug that has bank questions; read-only from your saved answers (recognition). Not practiced is never counted as weak.</p>
+      ${wk.length ? `<div class="dlchips"><button type="button" class="btn sm" data-dl="pall">Practice my weak facts (${uniq(wk.flatMap(x => x.qids)).length} questions)</button>
         ${Object.entries(byF).map(([f, q]) => `<button type="button" class="btn sm ghost" data-dl="pfield" data-f="${esc(f)}">${esc(DF.FIELDS[f])} (${uniq(q).length})</button>`).join('')}</div>` : ''}</section>`;
   }
   function startBank(qids, label){

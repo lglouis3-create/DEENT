@@ -767,7 +767,7 @@ QUESTIONS.push(
   {t:'Pustular psoriasis', correct:false, why:'Oral acitretin (slide 20).'},
   {t:'Warts and corns', correct:false, why:'High-strength salicylic acid (slide 40).'}],
  teach:'Topical calcineurin inhibitors are approved for AD in adults and children older than 2. Their use in psoriasis came later (slide 27; T 358–377).',
- note:'Whether psoriasis is now a labelled use is held out: slide 27 and the drug chart say off label; she said "it may now be on label" (T 375).',
+ note:'Whether psoriasis is now a labeled use is held out: slide 27 and the drug chart say off label; she said "it may now be on label" (T 375).',
  cite:D2+' slide 27; T 357–377'},
 
 {id:'L2-064', skill:'mech', prof:'Smith', tier:'new', topic:'l2-cni', sub:'top', concept:'topical-cni-itch',

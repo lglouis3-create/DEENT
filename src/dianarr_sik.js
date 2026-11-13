@@ -88,7 +88,7 @@ DIA_NARR['cb-crisaborole'] = {steps: [
 DIA_NARR['cb-mtx'] = {steps: [
   {text: 'Folic acid is the substrate. The enzyme dihydrofolate reductase, D H F R, reduces it to tetrahydrofolic acid, which the cell needs for D N A synthesis. Methotrexate blocks this reaction.',
    src: 'DPAW 30; 11/04 T@8900–@9100'},
-  {text: 'Methotrexate has the same three parts as folic acid, coloured as the slide colours them: an aromatic pteridine ring, para-aminobenzoic acid, and glutamic acid. It differs at two places: an amino group where folic acid has a hydroxyl on the pteridine, and a methyl on the nitrogen where folic acid has a hydrogen.',
+  {text: 'Methotrexate has the same three parts as folic acid, colored as the slide colors them: an aromatic pteridine ring, para-aminobenzoic acid, and glutamic acid. It differs at two places: an amino group where folic acid has a hydroxyl on the pteridine, and a methyl on the nitrogen where folic acid has a hydrogen.',
    src: 'DPAW 31'},
   {text: 'Methotrexate sits in the same enzyme cavity and competitively inhibits the binding of folic acid, because it has the higher affinity for D H F R. Folic acid cannot be processed, no tetrahydrofolic acid is made, and D N A synthesis falls.',
    src: 'DPAW 30; 11/04 T@9000–@9230'}]};
@@ -157,7 +157,7 @@ DIA_NARR['fig-steroid'] = {steps: [
    src: 'DPAW 20 (SAR); 11/03 T 1019–1072'},
   {text: 'In the glucocorticoid receptor, six hydrogen bonds hold the steroid: two to the ketone on carbon three, and one each to the eleven beta hydroxyl, the seventeen alpha hydroxyl, the ketone on carbon twenty, and the hydroxyl on carbon twenty-one. Each bond is to a receptor residue printed on the slide.',
    src: 'DPAW 23 (printed 22); 11/03 T 1126–1139'},
-  {text: 'Self-test. Only carbons one, eleven and seventeen are labelled now. Doctor Sikazwe said that if you know where these three are, you can number the rest. Try numbering every carbon, then step back to check.',
+  {text: 'Self-test. Only carbons one, eleven and seventeen are labeled now. Doctor Sikazwe said that if you know where these three are, you can number the rest. Try numbering every carbon, then step back to check.',
    src: 'DPAW 20–21; 11/03 T 1097–1099'}]};
 
 /* ---------- Vitamin D reading (diagrams_rd.js) ---------- */

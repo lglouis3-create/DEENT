@@ -953,7 +953,7 @@ const ATLAS = (() => {
        "exam": "Exam 1",
        "psrc": "p.45; T@23305-@23880",
        "vnote": "Atlas = PubChem CID 6590 = ChEMBL CHEMBL108778 (full InChIKey).",
-       "note": "Name supplied for the unlabelled poll drawing.",
+       "note": "Name supplied for the unlabeled poll drawing.",
        "assigned": true
       }
      },
@@ -1045,7 +1045,7 @@ const ATLAS = (() => {
      {
       "plain": "benzoyl radical",
       "n": "Benzoyl radical",
-      "t": "The other product of the peroxide bond breaking, an oxygen-centred radical that kills bacteria and accounts for the anti-inflammatory claim (slide 47; T@26270).",
+      "t": "The other product of the peroxide bond breaking, an oxygen-centered radical that kills bacteria and accounts for the anti-inflammatory claim (slide 47; T@26270).",
       "e": "",
       "slide": 47,
       "meta": {
@@ -1253,7 +1253,7 @@ const ATLAS = (() => {
      {
       "plain": "tazarotenic acid",
       "n": "Tazarotenic acid",
-      "t": "The active form of tazarotene: the same skeleton with the ester hydrolysed to a free carboxylic acid (slide 51; T@30269).",
+      "t": "The active form of tazarotene: the same skeleton with the ester hydrolyzed to a free carboxylic acid (slide 51; T@30269).",
       "e": "",
       "slide": 51,
       "meta": {
@@ -1731,7 +1731,7 @@ const ATLAS = (() => {
      {
       "plain": "homosalate",
       "n": "Homosalate",
-      "t": "A salicylate ester (3,3,5-trimethylcyclohexyl); esters hydrolyse in skin to salicylic acid, which provides analgesia (slide 64; T@42551).",
+      "t": "A salicylate ester (3,3,5-trimethylcyclohexyl); esters hydrolyze in skin to salicylic acid, which provides analgesia (slide 64; T@42551).",
       "e": "",
       "slide": 64,
       "meta": {
@@ -1824,7 +1824,7 @@ const ATLAS = (() => {
       "plain": "octocrylene",
       "n": "Octocrylene",
       "t": "A cinnamate-type ester: a diphenyl-substituted C=C carrying a nitrile and a 2-ethylhexyl ester; lipophilic, the most photostable (t1/2 about 90 h), and added to stabilize others such as oxybenzone (slide 65; T@44090).",
-      "e": "He struck \"Hydrophilic\" from the slide 65 ADMET line: these esters are lipophilic and hydrolyse to inactive acids eliminated in urine (T@44969).",
+      "e": "He struck \"Hydrophilic\" from the slide 65 ADMET line: these esters are lipophilic and hydrolyze to inactive acids eliminated in urine (T@44969).",
       "slide": 65,
       "meta": {
        "priority": "core",
@@ -1896,7 +1896,7 @@ const ATLAS = (() => {
      {
       "plain": "benzoquinone",
       "n": "Benzoquinone",
-      "t": "The oxidation product of hydroquinone: both OH groups become C=O and the ring is no longer aromatic; coloured and inactive (slide 67; T@46104).",
+      "t": "The oxidation product of hydroquinone: both OH groups become C=O and the ring is no longer aromatic; colored and inactive (slide 67; T@46104).",
       "e": "",
       "slide": 67,
       "meta": {

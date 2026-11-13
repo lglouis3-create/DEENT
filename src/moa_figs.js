@@ -210,7 +210,7 @@
   /* ---------- 5. Abatacept: inhibitor of co-stimulation (PC 63; PC 25) ----------
      After the slide 63 figure (Katzung Fig 55-7), redrawn with only what she
      taught for it (T1103 269-357): no LFA-3/CD2, CD40/CD40L, ICAM-1/LFA-1,
-     alefacept, ipilimumab or efalizumab. Signal 1 is labelled "MHC + antigen":
+     alefacept, ipilimumab or efalizumab. Signal 1 is labeled "MHC + antigen":
      its class is held (reviews/OPEN_QUESTIONS.md, Lecture 3 Smith, item 1). */
   const COSTIM = (() => {
     const cells = `<rect class="shape" data-k="apc" x="4" y="24" width="96" height="176" rx="40"/>` +

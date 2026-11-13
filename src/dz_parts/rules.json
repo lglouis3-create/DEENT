@@ -1,5 +1,40 @@
 [
- {"title":"Refer after 7 days without improvement","items":["Atopic dermatitis (the first lecture where she gave it)","Plant dermatitis","Insect bites and stings","Topical antibiotics: contact the prescriber if no improvement after 7 days","Sunburn","Wounds"],"src":"\"What other lecture did we talk about 7 days referral? Quite a few of them\" (11/12 lecture); Patel Outdoor slides 13, 16, 31"},
- {"title":"No topical hydrocortisone under 2 years old","items":["Applies to its uses on her topical OTC chart: insect bites and stings, plant dermatitis, atopic dermatitis, very mild psoriasis","Under 2 years, a skin protectant such as petrolatum or calamine can be used for insect bites"],"src":"Patel Outdoor slides 12, 25"},
- {"title":"Tube size from fingertip units","rows":[["Formula","Fingertip units × {{0.5 g}} × applications a day × days, then round up to the tube size"],["Her 11/12 case","Both feet = 4 units × 0.5 g × 2 a day × 3 days = {{12 g}} → {{15 g}} tube"],["Chart","Adult chart only"]],"src":"\"It's come back 3 times now, so make sure you practice calculations\" (11/12 lecture); Patel Outdoor slide 5"}
+ {
+  "title": "Refer after 7 days without improvement",
+  "items": [
+   "Atopic dermatitis (the first lecture where she gave it)",
+   "Plant dermatitis",
+   "Insect bites and stings",
+   "Topical antibiotics: contact the prescriber if no improvement after 7 days",
+   "Sunburn",
+   "Wounds"
+  ],
+  "src": "\"What other lecture did we talk about 7 days referral? Quite a few of them\" (11/12 lecture); Patel Outdoor slides 13, 16, 31"
+ },
+ {
+  "title": "No topical hydrocortisone under 2 years old",
+  "items": [
+   "Applies to its uses on her topical OTC chart: insect bites and stings, plant dermatitis, atopic dermatitis, very mild psoriasis",
+   "Under 2 years, a skin protectant such as petrolatum or calamine can be used for insect bites"
+  ],
+  "src": "Patel Outdoor slides 12, 25"
+ },
+ {
+  "title": "Tube size from fingertip units",
+  "rows": [
+   [
+    "Formula",
+    "Fingertip units × {{0.5 g}} × applications a day × days, then round up to the tube size"
+   ],
+   [
+    "Her 11/12 case",
+    "Both feet = 4 units × 0.5 g × 2 a day × 3 days = {{12 g}} → {{15 g}} tube"
+   ],
+   [
+    "Chart",
+    "Adult chart only"
+   ]
+  ],
+  "src": "\"It's come back 3 times now, so make sure you practice calculations\" (11/12 lecture); Patel Outdoor slide 5"
+ }
 ]

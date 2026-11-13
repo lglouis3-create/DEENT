@@ -2,7 +2,7 @@
    NODE_PATH=$(npm root -g) node dz_test.js            (reads ../preview/index.html; DRILL_PAGE overrides)
    - every card opens at 390 px and 1280 px with no page error and no sideways scroll;
    - a drug panel opens and closes; a practice patient can be answered; search finds a drug;
-   - Practise starts the card's questions and Back returns to the Diseases tab in one press;
+   - Practice starts the card's questions and Back returns to the Diseases tab in one press;
    - "Watch how it works" puts ONE entry on the Back stack, and Back returns straight to the
      Diseases tab (Louis, 2026-11-13: it went to Guides first);
    - the tab's colours are the same in the device's dark mode (the page has no dark theme). */
@@ -77,14 +77,14 @@ const check = (ok, label, detail) => { n++; if (!ok) fail++; console.log((ok ? '
     }
     check(!multi.length, `${w} px: every "Watch how it works" button on every card puts one entry on the Back stack`, multi.join('; '));
 
-    // Practise: Back returns to Diseases in one press
+    // Practice: Back returns to Diseases in one press
     await p.click('#nav button[data-v="dz"]'); await p.click('#v-dz .dzpicker button[data-card="lice"]');
     const pr = await p.$('#v-dz [data-dz="practise"]');
-    check(!!pr, `${w} px: the lice card has a Practise button`);
+    check(!!pr, `${w} px: the lice card has a Practice button`);
     if (pr) {
       await pr.scrollIntoViewIfNeeded(); await pr.click(); await p.waitForTimeout(300);
       const s = await p.evaluate(() => ({view: VIEW, ret: RET.length}));
-      check(s.view === 'quiz' && s.ret === 1, `${w} px: Practise starts the questions with one Back entry`, JSON.stringify(s));
+      check(s.view === 'quiz' && s.ret === 1, `${w} px: Practice starts the questions with one Back entry`, JSON.stringify(s));
       await p.click('#backbtn'); await p.waitForTimeout(300);
       check(await p.evaluate(() => VIEW) === 'dz', `${w} px: Back returns from the questions to the Diseases tab`);
     }

@@ -311,7 +311,7 @@ QUESTIONS.push(
   {t:'Steps 2 and 3', correct:false, why:'Step 2 is the oxidation to the carboxylic acid (two dehydrogenases), not a conjugation (slide 9; T 767–769). The keyed pair is 3 and 4, the steps on the route to the glucuronide-bearing products in the scheme (T 774–777).'},
   {t:'Steps 3 and 4', correct:true, why:'His answer: "3 and 4 steps involve gluchroidation" (T 776–777); in the scheme on slide 9, step 4 adds the glucuronide (UGT) and the "3,4" arrow gives the product with sulfate and glucuronide.'}],
  teach:'Slide 9 scheme: 1, hydrolytic deboronation; 2, oxidation to the carboxylic acid (two dehydrogenases); 3, sulfation by sulfotransferases; 4, glucuronidation by UGT; "3,4", both conjugates on one product. "Remember these things, folks" (T 774).',
- note:'At T 774 the transcript reads "a combination of what? UGT and 3F4". In the slide 9 scheme the arrow labelled "3,4" combines steps 3 and 4, so this is read as "3 and 4", not CYP3A4. The key does not depend on it.',
+ note:'At T 774 the transcript reads "a combination of what? UGT and 3F4". In the slide 9 scheme the arrow labeled "3,4" combines steps 3 and 4, so this is read as "3 and 4", not CYP3A4. The key does not depend on it.',
  quote:'Polleve, 11/03, slide 9',
  cite:S3+' slide 9; T 758–777'},
 
@@ -478,11 +478,11 @@ QUESTIONS.push(
  tags:['recall'], source:'slide',
  stem:'Which harm is linked mainly to UVA rather than UVB?',
  options:[
-  {t:'Premature ageing and wrinkling', correct:true, why:'Slide 12: UVA, "premature ageing, wrinkling of the skin, implicated in skin cancer".'},
+  {t:'Premature aging and wrinkling', correct:true, why:'Slide 12: UVA, "premature aging, wrinkling of the skin, implicated in skin cancer".'},
   {t:'Sunburn of exposed skin surfaces', correct:false, why:'Slide 12 lists sunburn under UVB.'},
   {t:'Cataracts of the eye', correct:false, why:'Slide 12 lists cataracts under UVB.'},
   {t:'Ozone-layer damage', correct:false, why:'Ozone blocks UV (slide 12); it is not a UV harm to skin.'}],
- teach:'Slide 12 boxes: UVC, extremely dangerous and blocked by the ozone layer; UVB, skin cancer, cataracts and sunburn; UVA, premature ageing, wrinkling and a role in skin cancer. UVA penetrates deepest (T 838–839).',
+ teach:'Slide 12 boxes: UVC, extremely dangerous and blocked by the ozone layer; UVB, skin cancer, cataracts and sunburn; UVA, premature aging, wrinkling and a role in skin cancer. UVA penetrates deepest (T 838–839).',
  cite:S3+' slide 12; T 836–839'},
 
 {id:'S3-037', skill:'class', prof:'Sikazwe', tier:'new', topic:'s3-uv', sub:'terms', concept:'puva',

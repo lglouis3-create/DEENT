@@ -2519,7 +2519,7 @@ const DZ = {
      ]
     },
     {
-     "title": "Recognise it",
+     "title": "Recognize it",
      "profs": [
       "pa"
      ],
@@ -2861,7 +2861,7 @@ const DZ = {
      ]
     },
     {
-     "title": "Recognise it, and grade it",
+     "title": "Recognize it, and grade it",
      "profs": [
       "pa"
      ],
@@ -3240,7 +3240,7 @@ const DZ = {
      ]
     },
     {
-     "title": "Recognise it",
+     "title": "Recognize it",
      "profs": [
       "pa"
      ],
@@ -3620,7 +3620,7 @@ const DZ = {
      ]
     },
     {
-     "title": "Recognise it",
+     "title": "Recognize it",
      "profs": [
       "pa"
      ],
@@ -3889,7 +3889,7 @@ const DZ = {
      ]
     },
     {
-     "title": "Recognise it",
+     "title": "Recognize it",
      "profs": [
       "pa"
      ],
@@ -4252,7 +4252,7 @@ const DZ = {
      ]
     },
     {
-     "title": "Recognise it",
+     "title": "Recognize it",
      "profs": [
       "pa"
      ],
@@ -4556,7 +4556,7 @@ const DZ = {
      ]
     },
     {
-     "title": "Recognise it",
+     "title": "Recognize it",
      "profs": [
       "pa"
      ],
@@ -4877,7 +4877,7 @@ const DZ = {
      ]
     },
     {
-     "title": "Recognise it",
+     "title": "Recognize it",
      "profs": [
       "pa"
      ],
@@ -5160,7 +5160,7 @@ const DZ = {
      ]
     },
     {
-     "title": "Recognise it",
+     "title": "Recognize it",
      "profs": [
       "pa"
      ],
@@ -5530,7 +5530,7 @@ const DZ = {
      ]
     },
     {
-     "title": "Recognise it",
+     "title": "Recognize it",
      "profs": [
       "pa"
      ],
@@ -5780,7 +5780,7 @@ const DZ = {
      ]
     },
     {
-     "title": "Recognise it",
+     "title": "Recognize it",
      "profs": [
       "pa"
      ],
@@ -6029,7 +6029,7 @@ const DZ = {
      ]
     },
     {
-     "title": "Recognise it: how severe?",
+     "title": "Recognize it: how severe?",
      "profs": [
       "pa"
      ],
@@ -6824,7 +6824,7 @@ const DZ = {
         ],
         [
          "Reapply",
-         "★ Every {{40–80 minutes}} (as labelled); after moisture or {{towel drying}}"
+         "★ Every {{40–80 minutes}} (as labeled); after moisture or {{towel drying}}"
         ],
         [
          "More often",
@@ -6986,7 +6986,7 @@ const DZ = {
       "Every 4 hours, and after swimming"
      ],
      "a": 0,
-     "w": "Dr. Patel's slides 21 and 36: every 40–80 minutes as labelled, and after moisture or towel drying.",
+     "w": "Dr. Patel's slides 21 and 36: every 40–80 minutes as labeled, and after moisture or towel drying.",
      "x": {
       "Every 90–120 minutes, and after towel drying": "90–120 minutes is Dr. Smith's Exam 1 number, not Dr. Patel's.",
       "Once at midday, because it is water resistant": "A water resistant product is still reapplied at least every 40–80 minutes.",
@@ -7594,7 +7594,7 @@ const DZ = {
        "rows": [
         [
          "Hydroquinone",
-         "Lowers melanin biosynthesis (tyrosinase); degrades to coloured, inactive benzoquinone, so amber bottle, away from light and oxygen (DPAW page 67)"
+         "Lowers melanin biosynthesis (tyrosinase); degrades to colored, inactive benzoquinone, so amber bottle, away from light and oxygen (DPAW page 67)"
         ],
         [
          "AHAs",
@@ -7754,7 +7754,7 @@ const DZ = {
      }
     },
     {
-     "t": "A 58-year-old man points to a mole on his shoulder. It is two colours, has a notched edge, is about 8 mm across and has grown over the past two months.",
+     "t": "A 58-year-old man points to a mole on his shoulder. It is two colors, has a notched edge, is about 8 mm across and has grown over the past two months.",
      "q": "What do you recommend?",
      "o": [
       "Hydroquinone 4% for three months",
@@ -8650,7 +8650,7 @@ const DZ = {
      ]
     },
     {
-     "title": "Recognise it, and which types are self-treatable",
+     "title": "Recognize it, and which types are self-treatable",
      "profs": [
       "pa"
      ],
@@ -9052,7 +9052,7 @@ const DZ = {
      ]
     },
     {
-     "title": "Recognise it: corn or callus",
+     "title": "Recognize it: corn or callus",
      "profs": [
       "pa"
      ],
@@ -11583,7 +11583,7 @@ const DZ = {
    "counsel": [
     "Choose broad spectrum, SPF 15 or higher (30+ preferred), water resistant for swimming or sweating.",
     "Adult: about 1 ounce over all exposed skin, 15 minutes before going out.",
-    "Reapply every 40–80 minutes as labelled, and after towel drying.",
+    "Reapply every 40–80 minutes as labeled, and after towel drying.",
     "Keep it away from the eyes and mucus membranes.",
     "Check the expiration date and keep the product out of direct sunlight.",
     "Stop a product that causes redness, itching, rash or an exaggerated sunburn."
@@ -11669,7 +11669,7 @@ const DZ = {
    ],
    "counsel": [
     "Apply to intact skin only.",
-    "Choose a product labelled pure aloe vera juice or gel.",
+    "Choose a product labeled pure aloe vera juice or gel.",
     "Do not take it by mouth."
    ],
    "counselSrc": "Patel Sun slide 32; 11/12 lecture T@64175",
@@ -11682,7 +11682,7 @@ const DZ = {
    "name": "Hydroquinone 4%",
    "brand": "",
    "sk": {
-    "text": "Lowers melanin biosynthesis (tyrosinase). Degrades to benzoquinone, which is coloured and inactive: amber bottle, protected from light and oxygen.",
+    "text": "Lowers melanin biosynthesis (tyrosinase). Degrades to benzoquinone, which is colored and inactive: amber bottle, protected from light and oxygen.",
     "src": "DPAW page 67"
    },
    "pa": [
@@ -12133,7 +12133,7 @@ const DZ = {
   ],
   "broad": [
    "Broad spectrum",
-   "A sunscreen that covers both UVA and UVB. Dr. Smith: a critical wavelength of 370 nm or more may be labelled broad spectrum.",
+   "A sunscreen that covers both UVA and UVB. Dr. Smith: a critical wavelength of 370 nm or more may be labeled broad spectrum.",
    "Patel Sun slides 14–15; Smith Sun slide 14"
   ],
   "grase": [
@@ -12491,7 +12491,7 @@ const DZ = {
       "{{Yellow, oily}} scales on red skin",
       "{{Silvery-white}} scales on red plaques with sharp borders; bleeding points"
      ],
-     "Scale colour separates seborrheic dermatitis (yellow, oily) from psoriasis (silvery)."
+     "Scale color separates seborrheic dermatitis (yellow, oily) from psoriasis (silvery)."
     ],
     [
      "Inflammation and epidermal hyperplasia",
@@ -13822,7 +13822,7 @@ const DZ = {
   {
    "id": "dd-severity",
    "file": "dd-severity.jpg",
-   "alt": "Five photographs of the diaper area labelled A to E, from slight redness in the crease (A) to redness covering both buttocks (E).",
+   "alt": "Five photographs of the diaper area labeled A to E, from slight redness in the crease (A) to redness covering both buttocks (E).",
    "src": "Patel Dermatitis slide 58"
   },
   {

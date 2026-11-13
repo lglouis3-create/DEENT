@@ -9,11 +9,12 @@ characters.
 Every update adds its bullets here in the same commit that makes the change.
 
 ## 2026-11-13 (Diseases tab fixes)
+- American spelling across the site: Practice, Recognize, color, labeled, signaling.
 - Diseases: after "Watch how it works", one press of Back returns to the Diseases tab.
-- Diseases: colours no longer change when the device is in dark mode (answers were hard to read).
+- Diseases: colors no longer change when the device is in dark mode (answers were hard to read).
 
 ## 2026-11-13 (Diseases tab)
-- New Diseases tab: 23 conditions, each from cause to counseling, in short labelled rows.
+- New Diseases tab: 23 conditions, each from cause to counseling, in short labeled rows.
 - Treatment lines show which drug fits which patient; practice patients explain each wrong choice.
 - Tap a drug for each professor's point, what to tell the patient, and who should not get it.
 - Tell apart, Drugs that get confused, Rules that repeat, photos from her slides, and search.
@@ -136,11 +137,11 @@ Every update adds its bullets here in the same commit that makes the change.
 - During a retry, changed filters wait for "Back to the filtered list"; a line says so, nothing is mixed in.
 - Drugs with no single receptor or enzyme target now read "How it acts" instead of "Target", with the reason.
 - Recall: after Check, rate Forgot, Partly or Knew (criteria shown); only that click counts, for this visit.
-- "Practise what I forgot / partly knew": each fact comes back after other drugs of its class, in the other form.
+- "Practice what I forgot / partly knew": each fact comes back after other drugs of its class, in the other form.
 - New Ask about kinds: adverse effect → drug, boxed warning and photosensitizing (off by default).
 - Recall adds Why it helps and Adverse effects.
-- Browse: each card shows your saved bank answers per fact (Not practised to Kept on a later day), with Practise.
-- Browse: a line counts the Exam 1 facts you have practised and those to review, with "Practise my weak facts".
+- Browse: each card shows your saved bank answers per fact (Not practiced to Kept on a later day), with Practice.
+- Browse: a line counts the Exam 1 facts you have practiced and those to review, with "Practice my weak facts".
 - Every card shows its scope: Exam 1 · taught, Exam 1 · chart only (sunburn anesthetics) or Optional.
 - Adapalene is no longer flagged photosensitizing: it is "sun stable" (PCol 18), as the questions key it.
 - Chart: every cell of a drug's line is outlined, merged cells and page-break parts included.
@@ -155,7 +156,7 @@ Every update adds its bullets here in the same commit that makes the change.
 
 ## 2026-11-08 (Reference and Tell apart tables)
 - Reference and Tell apart: on a phone, each wide table row is now a card with its column names; no sideways scrolling.
-- Long cells are split into short labelled lines; metabolic schemes show one step per line with "→".
+- Long cells are split into short labeled lines; metabolic schemes show one step per line with "→".
 - Abbreviations such as t1/2, ADH, SULT, UGT and CBDA are spelled out at first use in each table.
 - "Name not to be recalled" for the JAK inhibitor classes is now a small note under the class name.
 
@@ -213,7 +214,7 @@ Every update adds its bullets here in the same commit that makes the change.
 
 ## 2026-11-08 (Topics folders)
 - Topics: each slide deck is a folder that opens and closes; folders start closed and stay as you left them.
-- Topics: the exam's date, coverage, format and bank are a short card of labelled rows; more facts fold below it.
+- Topics: the exam's date, coverage, format and bank are a short card of labeled rows; more facts fold below it.
 
 ## 2026-11-08 (Engine update)
 - Topics opens with a "Start here" block: learn a topic, start practice, review weak concepts or take a paper.
@@ -255,7 +256,7 @@ Every update adds its bullets here in the same commit that makes the change.
 - Filter the Drug list by disease, class, chart page, Exam 1 taught or optional, boxed warning, photosensitizing.
 - Recall mode: write a drug's target first, then Reveal to compare; your typing is not graded or saved.
 - Each Drug list line names its source: Dr. Smith's slide, Dr. Sikazwe's page or the drug chart.
-- From a drug card: practise exactly its questions, open its Reference row, reading section or Atlas tile.
+- From a drug card: practice exactly its questions, open its Reference row, reading section or Atlas tile.
 - Flashcards: step through the filtered drugs one card at a time; no score, nothing saved.
 - Spironolactone: Dr. Smith's class and Dr. Sikazwe's biosynthesis mechanism are shown as separate statements.
 - Sunscreen family matching item now credits the drug chart for the pairings; it stays off practice papers.
@@ -303,7 +304,7 @@ Every update adds its bullets here in the same commit that makes the change.
 - Each Atlas structure is marked Core, Reference only or Needs verification.
 - Reference-only structures are hidden by default; one button shows them.
 - Compare structures: where a slide draws a molecule differently, see both side by side.
-- Hide or reveal the shaded key features to practise spotting them.
+- Hide or reveal the shaded key features to practice spotting them.
 - Clearer explanations on the sun-exposure questions.
 
 ## 2026-11-06 (Atlas and sun exposure)

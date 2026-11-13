@@ -96,7 +96,7 @@ const DZ_UI = (() => {
         <div class="dzrate"><button type="button" data-rate="g" data-i="${i}" class="${st.rate[c.id + i] === 'g' ? 'on' : ''}">I had it</button><button type="button" data-rate="m" data-i="${i}" class="${st.rate[c.id + i] === 'm' ? 'on' : ''}">I missed some</button></div></div></li>`).join('')}</ol>
       ${patients(c)}
       ${(c.numbers || []).length ? `<section class="dzbox"><h3>Numbers to know</h3><dl class="dzfacts nums">${c.numbers.map(r => `<div><dt>${mk('{{' + r[0] + '}}')}</dt><dd>${mk(r[1])} <span class="dzsrc">${esc(r[2] || '')}</span></dd></div>`).join('')}</dl></section>` : ''}
-      ${n ? `<button type="button" class="btn dzpractise" data-dz="practise">Practise ${esc(c.name.toLowerCase())}: ${n} questions</button>` : ''}
+      ${n ? `<button type="button" class="btn dzpractise" data-dz="practise">Practice ${esc(c.name.toLowerCase())}: ${n} questions</button>` : ''}
     </article>`;
   }
   const GROUPS = [['algorithm', 'Treatment by line'], ['selfcare', 'Self-care or refer, then treat by symptom']];
