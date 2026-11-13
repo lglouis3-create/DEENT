@@ -409,10 +409,6 @@ const SLIDE_UI = (() => {
       if (t) { const a = t.getAttribute('data-slv'); if (a === 'close') close(); else if (a === 'prev') go(-1); else if (a === 'next') go(1); else if (a === 'again') draw(true); return; }
       if (e.target === d) close();                                   // a tap on the dimmed page around the box
     });
-    d.addEventListener('keydown', e => {
-      if (e.key === 'ArrowLeft') { e.preventDefault(); go(-1); }
-      else if (e.key === 'ArrowRight') { e.preventDefault(); go(1); }
-    });
     // Escape and Tab are the viewer's while it is open, wherever focus is, and the page's own key handlers never
     // see them (an enlarged figure behind the viewer took Tab for its own buttons and closed on the first
     // Escape): Escape closes the viewer, Tab goes round inside it. The keys that scroll move nothing when the
@@ -423,6 +419,8 @@ const SLIDE_UI = (() => {
     window.addEventListener('keydown', e => {
       sane();
       if (!d.open) return;
+      // the left and right arrows page, also when focus is on nothing in the box (after a click on its text)
+      if ((e.key === 'ArrowLeft' || e.key === 'ArrowRight') && (V.modal || d.contains(e.target))) { e.preventDefault(); go(e.key === 'ArrowLeft' ? -1 : 1); return; }
       if (V.modal && SCROLLS.indexOf(e.key) >= 0 && d.scrollHeight <= d.clientHeight + 1 && !((e.key === ' ' || e.key === 'Spacebar') && e.target && e.target.tagName === 'BUTTON')) { e.preventDefault(); return; }
       if (e.key !== 'Escape' && e.key !== 'Tab') return;
       if (e.key === 'Escape') { e.stopPropagation(); e.preventDefault(); close(); return; }
@@ -508,8 +506,15 @@ const SLIDE_UI = (() => {
     q('.slv-a').href = src; q('.slv-full').href = src;
     if (img.getAttribute('src') === src && img.complete && img.naturalWidth > 0) state('');
     else { state('wait', 'Loading ' + low + ' ' + cited + '…'); img.src = src; }
-    q('[data-slv=prev]').disabled = !step(-1);
-    q('[data-slv=next]').disabled = !step(1);
+    const pv = q('[data-slv=prev]'), nx = q('[data-slv=next]'), act = document.activeElement;
+    pv.disabled = !step(-1);
+    nx.disabled = !step(1);
+    // Previous or Next goes off at an end of the deck while focus is on it: focus goes to the other one (to
+    // Close when both are off), so that it stays in the viewer
+    if (d.open && (act === pv || act === nx) && act.disabled) {
+      const to = act === pv ? nx : pv;
+      try { (to.disabled ? q('.slv-x') : to).focus({preventScroll: true}); } catch (e) {}
+    }
   }
   function go(dir){
     const s = step(dir); if (!s) return;
@@ -523,11 +528,11 @@ const SLIDE_UI = (() => {
   const put = (x, y) => { try { window.scrollTo({left: x, top: y, behavior: 'instant'}); } catch (e) { window.scrollTo(x, y); } };
   function lock(x, y){
     if (V.lock) unlock(false);
-    const r = document.documentElement, k = V.lock = {x, y, w: window.innerWidth, o: r.style.overflow, hid: false, snap: null};
+    const r = document.documentElement, k = V.lock = {x, y, w: window.innerWidth, h: window.innerHeight, o: r.style.overflow, hid: false, snap: null, turned: false};
     if (window.innerWidth - r.clientWidth > 0) {
       k.snap = () => {
         if (V.lock !== k || !V.dlg || !V.dlg.open) { window.removeEventListener('scroll', k.snap); return; }
-        if (window.innerWidth !== k.w) { k.w = window.innerWidth; k.x = window.scrollX; k.y = window.scrollY; return; }   // a resized window: where the browser put the page
+        if (window.innerWidth !== k.w) { k.turned = true; k.w = window.innerWidth; k.x = window.scrollX; k.y = window.scrollY; return; }   // a resized window: where the browser put the page
         if (window.scrollX !== k.x || window.scrollY !== k.y) put(k.x, k.y);
       };
       window.addEventListener('scroll', k.snap);
@@ -567,8 +572,19 @@ const SLIDE_UI = (() => {
     d.querySelector('.slv-img').removeAttribute('src');
     // the citation that was tapped is still on the page: focus goes back to it and the page to its place
     const there = !!o && o.isConnected && o.getClientRects().length > 0;
+    const k = V.lock, turned = !!k && (k.turned || window.innerWidth !== k.w || window.innerHeight !== k.h);
     try { if (there && typeof o.focus === 'function') { try { o.focus({preventScroll: true}); } catch (e) { o.focus(); } } }
     finally { unlock(there || !o); }
+    // the window was resized or turned while the viewer was open: the page is not put back at its old place
+    // (unlock), so the citation is brought on screen when it is not there
+    if (there && turned) {
+      try {
+        const b = o.getBoundingClientRect();
+        if (b.top < 0 || b.left < 0 || b.bottom > window.innerHeight || b.right > window.innerWidth) {
+          try { o.scrollIntoView({block: 'center', inline: 'nearest', behavior: 'instant'}); } catch (e) { o.scrollIntoView(); }
+        }
+      } catch (e) {}
+    }
   }
   function close(){
     const d = V.dlg; if (!d) return;
