@@ -456,6 +456,17 @@ check(read('SE 2 applications', []) === '' && read('AT 2 tablets; DT 3 puffs; OE
   'a deck name and a number are not a citation when a count word or a letter follows the number ("SE 2 applications", "PP 2B")');
 check(read('see slide 12 (Dr. Patel)', {decks: ['sun']}) === '' && read('see slide 12 (Dr. Smith)', {decks: ['sun']}) === 'slide 12>sun 12' && read('see slide 12 (Patel)', {decks: ['sun', 'p8s']}) === 'slide 12>p8s 12' && read('see slide 62 (Dr. Sikazwe)', {decks: ['sun']}) === 'slide 62>mc 62',
   'a professor named in brackets right after a bare number decides its deck, and another professor\'s number is not linked into the place\'s deck');
+check(read('The chart agrees with DPAW; see p. 5', ['mc']) === 'p. 5>mc 5' && read('The drug chart and PCol agree; see p. 5', ['mc']) === 'p. 5>mc 5' && read('The drug chart and the PCOL agree; see p. 5', ['mc']) === '' &&
+  read('The chart agrees; see p. 5', ['mc']) === '',
+  'a deck named without a number after the chart takes the page back ("the chart agrees with DPAW; see p. 5")');
+check(read('Patel Acne slides 3, 9–11 x', []) === 'Patel Acne slides 3>p6 3' && read('slides 12, 14–16 days apart', ['pc']) === 'slides 12>pc 12' && read('slides 12, 14 - 16 mg', ['pc']) === 'slides 12>pc 12' &&
+  read('slides 12, 14–16 and 20', ['pc']) === 'slides 12>pc 12|14–16>pc 14-16|20>pc 20' && read('slides 3, 9–11: x', ['pc']) === 'slides 3>pc 3|9–11>pc 9-11',
+  'a range in a list is not cut to its first number when a unit follows it ("slides 3, 9–11 x" links 3 alone)');
+const PAST = 'PCol slide 44: photosensitivity (11/03 T 42–44); slide 45: doxycycline more so.';
+check(read(PAST, {decks: ['sun']}) === 'PCol slide 44>pc 44|slide 45>pc 45' && read('PCol slide 44: x; slide 12: y', {decks: ['sun']}) === 'PCol slide 44>pc 44|slide 12>sun 12' &&
+  read('PCol slide 44: x. Slide 45: y', {decks: ['sun']}) === 'PCol slide 44>pc 44' && read('Slide 45: y', {decks: ['sun']}) === '' && read('PCol slide 44: x; slides 20, 45: y', {decks: ['sun']}) === 'PCol slide 44>pc 44|slides 20>sun 20' &&
+  read('PCol slide 44: x; slide 95: y', {decks: ['sun']}) === 'PCol slide 44>pc 44' && read('DPAW p. 44: x; p. 45: y', {decks: ['sun']}) === 'DPAW p. 44>mc 44',
+  'a bare number past the end of the place\'s deck is a number of the deck named earlier in the same sentence, and only then');
 const BAR = ['Objective (PP 3)', 'Describe the basic structures and functions of the skin', 'PP 4–6'];
 check(read(BAR.join(''), ['pp']) === 'PP 3>pp 3' && read(BAR.join(''), {decks: ['pp'], breaks: [BAR[0].length, BAR[0].length + BAR[1].length]}) === 'PP 3>pp 3|PP 4–6>pp 4-6' &&
   read('applications. 3', {decks: ['pc'], breaks: [3]}) === '' && read('the skinslide 4', ['pp']) === '' && read('the skinslide 4', {decks: ['pp'], breaks: [8]}) === 'slide 4>pp 4',
