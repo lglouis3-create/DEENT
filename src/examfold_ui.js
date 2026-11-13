@@ -79,6 +79,10 @@
    A Tell apart row that opens a comparison in the Diseases tab sets that
    tab's sub-view and clears its search; the Back button puts both back as
    they were, when the reader has changed neither in between.
+   The core keeps every table's scroll box in a set (views.js TABLE_BOXES) and
+   drops one that has left the page only at a window resize; a kept box keeps
+   the folder it was in. After each drawing of the three tabs the boxes that
+   have left the page are dropped here.
    If the folders cannot be drawn, the tab is drawn again as the core and the
    other files draw it, flat, and one console line says so. */
 const EXAMFOLD_UI = (function examFoldUi(){
@@ -328,15 +332,25 @@ const EXAMFOLD_UI = (function examFoldUi(){
       });
     }
   }
+  // The core keeps every table's scroll box in TABLE_BOXES (views.js boxTables) so a window resize can measure it
+  // again, and drops a box that has left the page only then (sideCue). A drawing replaces the tab's boxes; each one
+  // still in the set keeps what it was drawn in, here a whole folder. They are dropped after each drawing.
+  function dropGone(){
+    try {
+      if (typeof TABLE_BOXES === 'undefined' || !TABLE_BOXES || typeof TABLE_BOXES.forEach !== 'function' || typeof TABLE_BOXES.delete !== 'function') return;
+      TABLE_BOXES.forEach(b => { if (b && b.isConnected === false) TABLE_BOXES.delete(b); });
+    } catch (e) { /* a core without the set: nothing to drop */ }
+  }
   const after = (og, view) => function(){
     const r = og.apply(this, arguments);          // a throw from the tab's own drawing passes through as before
-    if (BROKEN[view]) return r;
+    if (BROKEN[view]) { dropGone(); return r; }
     try { fold(view); }
     catch (e) {
       BROKEN[view] = true;
       console.error('The exam folders could not be drawn; the tab is shown without them.', e);
       try { og.apply(this, arguments); } catch (e2) { /* as drawn */ }   // drawn again, flat
     }
+    dropGone();
     return r;
   };
   if (typeof renderGuide === 'function') renderGuide = after(renderGuide, 'guide');

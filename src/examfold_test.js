@@ -28,7 +28,10 @@
    - K: closing a folder by its header pauses the walkthrough or the narrated figure that is being read aloud inside
      it; the folder then stays closed when the tab is drawn again, until the walkthrough index opens it;
    - L: a Tell apart row that opens the Diseases tab, then Back: the Diseases tab has the sub-view and the search it
-     had before; a sub-view or a search the reader chose there after the row is kept. */
+     had before; a sub-view or a search the reader chose there after the row is kept.
+   Once:
+   - N: the core's set of table boxes holds only boxes that are on the page after 42 redraws, and the count of DOM
+     nodes after a forced garbage collection (Chromium's DevTools protocol) does not grow with them; */
 const path = require('path'), fs = require('fs');
 const NAME = 'examfold_test.js';
 let chromium;
@@ -574,17 +577,24 @@ async function nsOf(browser) {
         const real = Element.prototype.appendChild; let thrown = 0;
         Element.prototype.appendChild = function(c){ if (this.classList && this.classList.contains('rfbody')) { thrown++; throw new Error('test: a section could not be moved'); } return real.apply(this, arguments); };
         const out = {};
-        for (const v of ['guide', 'ref']) { show(v); const el = document.getElementById('v-' + v);
+        for (const v of ['guide', 'ref', 'tell']) { show(v); const el = document.getElementById('v-' + v);
           out[v] = {folds: el.querySelectorAll('.rfold').length, top: el.querySelectorAll(':scope > h3, :scope > h2.gdeck').length, bars: el.querySelectorAll('.wkbar').length, index: !!el.querySelector('.wkindex'), nav: el.querySelectorAll('.refnav a').length,
-            first: document.getElementById(v === 'guide' ? 'gobj-l1-1' : 'ref-l1-classes').getClientRects().length > 0}; }
+            dz: el.querySelectorAll('.rfdz').length, first: document.getElementById({guide: 'gobj-l1-1', ref: 'ref-l1-classes', tell: 'tell-l1-diseases'}[v]).getClientRects().length > 0}; }
         Element.prototype.appendChild = real; out.thrown = thrown;
         jump('ref', 'ref-p5-ftu'); const t = document.getElementById('ref-p5-ftu'); out.jump = {vis: t.getClientRects().length > 0, top: Math.round(t.getBoundingClientRect().top)};
+        // the tab stays flat for the rest of the visit, and the table boxes of the drawings that were replaced are dropped
+        RET.length = 0; backBtn(); show('topics'); show('ref');
+        out.again = {folds: document.querySelectorAll('#v-ref .rfold').length, top: document.querySelectorAll('#v-ref > h3').length};
+        try { out.boxes = [TABLE_BOXES.size, [...TABLE_BOXES].filter(b => b.isConnected).length]; } catch (e) { out.boxes = null; }
         return out; });
-      check(r.thrown >= 2 && r.guide.folds === 0 && r.guide.top > 5 && r.guide.bars > 0 && r.guide.index && r.guide.first && r.ref.folds === 0 && r.ref.top > 20 && r.ref.nav === r.ref.top && r.ref.first,
+      check(r.thrown >= 3 && r.guide.folds === 0 && r.guide.top > 5 && r.guide.bars > 0 && r.guide.index && r.guide.first && r.ref.folds === 0 && r.ref.top > 20 && r.ref.nav === r.ref.top && r.ref.first,
         `${w} px: when moving a section fails, the tab is drawn flat with everything else in place (walkthrough bars, index, jump list)`, r);
+      check(r.tell.folds === 0 && r.tell.top === 8 && r.tell.nav === r.tell.top && r.tell.first && r.tell.dz === 0, `${w} px: Tell apart too, with its ${r.tell.top} sections and without the list of Diseases comparisons`, r.tell);
       check(r.jump.vis && r.jump.top >= 0 && r.jump.top < 300, `${w} px: and a jump still lands on its section`, r.jump);
+      check(r.again.folds === 0 && r.again.top === r.ref.top, `${w} px: the tab is flat again the next time it is drawn`, r.again);
+      check(r.boxes && r.boxes[0] > 0 && r.boxes[0] === r.boxes[1], `${w} px: the table boxes of the drawings that were replaced are dropped from the core's set (${r.boxes && r.boxes[0]} in it, ${r.boxes && r.boxes[1]} of them on the page)`, r.boxes);
       const lines = errs.filter(e => /exam folders could not be drawn/.test(e));
-      check(lines.length === 2 && errs.length === 2, `${w} px: one console line per tab says so, and nothing else is logged`, errs.slice(0, 4));
+      check(lines.length === 3 && errs.length === 3, `${w} px: one console line per tab says so, and nothing else is logged`, errs.slice(0, 5));
       await ctx.close();
     }
   }
@@ -721,6 +731,29 @@ async function nsOf(browser) {
     check(d.VIEW === 'tell' && d.view === 'tell' && d.q === 'acne', `${w}x${h}: a search the reader typed there after the row is kept by Back`, d);
     check(await stored(p) === null && await over(p) <= 0, `${w}x${h}: nothing stored, no sideways scroll`, [await stored(p), await over(p)]);
     check(!errs.length, `${w}x${h}: no page error`, errs.slice(0, 4));
+    await ctx.close();
+  }
+
+  /* ---------- N. what a redraw leaves behind ---------- */
+  if (run('N')) {
+    console.log('\n=== 1376x1032: 42 redraws ===');
+    const {ctx, p, errs} = await open(browser, 1376, {height: 1032});
+    const cdp = await ctx.newCDPSession(p);
+    await cdp.send('HeapProfiler.enable');
+    const count = async () => { await cdp.send('HeapProfiler.collectGarbage'); await p.waitForTimeout(200); await cdp.send('HeapProfiler.collectGarbage');
+      const c = await cdp.send('Memory.getDOMCounters'), b = await p.evaluate(() => { try { return [TABLE_BOXES.size, [...TABLE_BOXES].filter(x => x.isConnected).length]; } catch (e) { return null; } });
+      return {nodes: c.nodes, listeners: c.jsEventListeners, boxes: b && b[0], onPage: b && b[1]}; };
+    const tabs = ['ref', 'tell', 'guide', 'atlas', 'drugs', 'dz', 'diagrams'];
+    for (const v of tabs) { await p.evaluate(v => show(v), v); await p.waitForTimeout(400); }
+    await p.waitForTimeout(500);
+    const c0 = await count();
+    for (let i = 0; i < 6; i++) for (const v of tabs) { await p.evaluate(v => show(v), v); await p.waitForTimeout(140); }
+    await p.waitForTimeout(600);
+    const c1 = await count();
+    note(`every tab drawn once: ${JSON.stringify(c0)}; after 42 more redraws: ${JSON.stringify(c1)}`);
+    check(c0.boxes > 0 && c1.boxes === c1.onPage && c1.boxes === c0.boxes, `after 42 redraws the core's set of table boxes holds the ${c0.boxes} boxes on the page and no box of a drawing that was replaced`, {c0, c1});
+    check(c1.nodes <= c0.nodes * 1.05 && c1.listeners <= c0.listeners * 1.05, `DOM nodes after a forced garbage collection: ${c0.nodes} with every tab drawn once, ${c1.nodes} after 42 more redraws (event listeners ${c0.listeners}, ${c1.listeners}): no more than 5% above`, {c0, c1});
+    check(!errs.length, 'no page error during the redraws', errs.slice(0, 3));
     await ctx.close();
   }
 
