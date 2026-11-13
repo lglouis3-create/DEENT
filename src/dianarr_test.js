@@ -167,7 +167,11 @@ function fakeVoice() {
         const over = await page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth);
         L.check(over <= 0, `${v}: no horizontal scroll`, `${over}px`);
       }
-      const keyb = await page.evaluate(() => { const b = document.querySelector('#v-guide [data-dnplay]'); b.focus(); return document.activeElement === b && !!b.getAttribute('aria-label'); });
+      // the first figure of the Guides is in the Exam 1 folder (examfold_ui.js), closed by default: a button inside a
+      // closed <details> cannot take focus, so the folds around it are opened first, as a reader would
+      const keyb = await page.evaluate(() => { const b = document.querySelector('#v-guide [data-dnplay]');
+        for (let d = b.closest('details'); d; d = d.parentElement && d.parentElement.closest('details')) d.open = true;
+        b.focus(); return document.activeElement === b && !!b.getAttribute('aria-label'); });
       L.check(keyb, 'Listen takes keyboard focus and has a label');
       L.check(!errors.length, 'no page or console error', errors.slice(0, 5).join(' | '));
       await ctx.close();

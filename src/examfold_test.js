@@ -316,6 +316,11 @@ async function nsOf(browser) {
       rd = await p.evaluate(async () => { const b = document.querySelector('#startHere button[data-start="learn"]'); if (!b) return {none: true}; b.click(); await new Promise(r => setTimeout(r, 150));
         const x = document.querySelector('.wkpanel'), f = x && x.closest('.rfold'); return {view: VIEW, vis: !!(x && x.getClientRects().length), open: f ? f.open : null}; });
       check(rd.none || (rd.view === 'guide' && rd.vis && rd.open), `${w} px: Start here, "Learn a topic" opens a walkthrough player on screen in an open folder`, rd);
+      // a control inside a closed folder that code clicks (a reader cannot reach it) brings its folder open, so what it does is seen
+      rd = await p.evaluate(async () => { WALK_UI.stop(); document.querySelectorAll('.wkpanel').forEach(x => WALK_UI.close(x.dataset.wkp)); RET.length = 0; backBtn(); show('topics'); show('guide');
+        const f = document.getElementById('rfold-guide-1'), before = f.open, b = f.querySelector('.wkbar [data-wkopen]'); b.click(); await new Promise(r => setTimeout(r, 80));
+        const x = f.querySelector('.wkpanel'); return {before, open: f.open, panel: !!x, seen: !!x && x.checkVisibility()}; });
+      check(!rd.before && rd.open && rd.panel && rd.seen, `${w} px: a walkthrough bar clicked by code inside the closed Exam 1 folder opens the folder with its player`, rd);
       check(await stored(p) === null, `${w} px: the walkthroughs store nothing under the folders' key`, await stored(p));
       await p.evaluate(() => { WALK_UI.stop(); document.querySelectorAll('.wkpanel').forEach(x => WALK_UI.close(x.dataset.wkp)); RET.length = 0; backBtn(); });
 
