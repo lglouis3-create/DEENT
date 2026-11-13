@@ -24,7 +24,8 @@
    - B-F10: a glossary entry marked cs:true (RARE) is glossed only where the
      explanation has it in capitals, over the whole bank and in a drawn answer;
      every other gloss is as the core alone gives it (glossary.js, gloss_ui.js);
-   - A-F1: every Topics "Listen" button, 3.5 s after a tap at 390x844 and a
+   - A-F1: every Topics "Listen" button (each one, where a walkthrough is
+     listed under two or three topic cards), 3.5 s after a tap at 390x844 and a
      click at 1376x1032 with the page left alone, has the walkthrough's bar and
      Play button inside the window; "Read guide" and "Explain more" still end
      with the section heading at the top (walk_ui.js go(), jump_ui.js).
@@ -427,45 +428,50 @@ function fakeVoice() {
       const SIZES = [{name: '390x844, a tap', viewport: {width: 390, height: 844}, extra: {hasTouch: true, isMobile: true}, tap: true},
                      {name: '1376x1032, a click', viewport: {width: 1376, height: 1032}, extra: {}, tap: false}];
       // one case: a fresh page, the folds around the button opened as a reader would, one real tap or click
-      const visit = async (size, id, how) => {
+      // k: which of the walkthrough's buttons (a walkthrough listed under two or three topic cards has one on each)
+      const visit = async (size, id, how, k = 0) => {
         const {ctx, page, errors} = await fresh(size.viewport, size.extra, 60000, wavLong);
         try {
           const sel = how === 'open' ? `#v-guide [data-lrn="open"][data-wid="${id}"]` : `#v-topics [data-lrn="${how}"][data-wid="${id}"]`;
           if (how === 'open') { await page.evaluate(() => show('guide')); await page.waitForTimeout(400); }
-          const press = async s => { const l = page.locator(s).first(); await l.scrollIntoViewIfNeeded(); if (size.tap) await l.tap(); else await l.click(); };
+          const press = async (s, nth = 0) => { const l = page.locator(s).nth(nth); await l.scrollIntoViewIfNeeded(); if (size.tap) await l.tap(); else await l.click(); };
           // the folders around the button, outermost first: the Topics exam and deck folders (a header button), a topic card or the list (a summary)
-          const folds = await page.evaluate(sel => { const b = document.querySelector(sel), out = [];
+          const folds = await page.evaluate(([sel, k]) => { const b = document.querySelectorAll(sel)[k], out = [];
             for (let e = b && b.parentElement; e; e = e.parentElement) {
               if (e.hidden && e.id) out.unshift(`button[aria-controls="${e.id}"][aria-expanded="false"]`);
               else if (e.tagName === 'DETAILS' && !e.open) { e.dataset.wtfold = String(out.length); out.unshift(`details[data-wtfold="${out.length}"] > summary`); }
             }
-            return b ? out : null; }, sel);
-          if (!folds) return {id, err: 'no such button: ' + sel, errors};
+            return b ? out : null; }, [sel, k]);
+          if (!folds) return {id, k, err: 'no such button: ' + sel + ' #' + k, errors};
           for (const f of folds) await press(f);
-          await press(sel);
+          await press(sel, k);
           await page.waitForTimeout(3500);
           const at35 = await page.evaluate(reading, id);
           await page.waitForTimeout(2500);
           const at6 = await page.evaluate(reading, id);
-          return {id, at35, at6, errors};
-        } catch (e) { return {id, err: String(e.message).split('\n')[0], errors}; }
+          return {id, k, at35, at6, errors};
+        } catch (e) { return {id, k, err: String(e.message).split('\n')[0], errors}; }
         finally { await ctx.close(); }
       };
-      const show1 = r => r.err ? `${r.id}: ${r.err}` : `${r.id}: bar ${r.at35.bar} Play ${r.at35.play} at 3.5 s, bar ${r.at6.bar} Play ${r.at6.play} at 6 s (window ${r.at35.vh})`;
+      const show1 = r => r.err ? `${r.id}#${r.k}: ${r.err}` : `${r.id}#${r.k}: bar ${r.at35.bar} Play ${r.at35.play} at 3.5 s, bar ${r.at6.bar} Play ${r.at6.play} at 6 s (window ${r.at35.vh})`;
       const {ctx: c0, page: p0} = await fresh({width: 390, height: 844});
-      const lst = await p0.evaluate(() => ({btn: [...new Set([...document.querySelectorAll('#v-topics [data-lrn="listen"]')].map(b => b.dataset.wid))],
-        all: WALK_UI.SECS.filter(w => w.guide && Array.isArray(w.topics) && w.topics.length).map(w => w.id)}));
+      // every button, in page order: {id, k} is the k-th Listen button of walkthrough id (12 walkthroughs sit under a
+      // second topic card and two of those under a third, each with its own starting scroll position and folders)
+      const lst = await p0.evaluate(() => { const seen = {}, each = [...document.querySelectorAll('#v-topics [data-lrn="listen"]')].map(b => { const id = b.dataset.wid; seen[id] = (seen[id] || 0) + 1; return {id, k: seen[id] - 1}; });
+        return {each, btn: Object.keys(seen),
+        all: WALK_UI.SECS.filter(w => w.guide && Array.isArray(w.topics) && w.topics.length).map(w => w.id)}; });
       await c0.close();
       console.log('\n=== Topics "Listen": the page ends on the walkthrough\'s player ===');
       L.check(lst.btn.length >= 40 && lst.btn.length === lst.all.length, `Topics has a Listen button for each walkthrough that names a topic (${lst.btn.length} of ${lst.all.length})`);
+      L.check(lst.each.length >= lst.btn.length && lst.each.filter(e => e.k === 0).length === lst.btn.length, `each of the ${lst.each.length} Listen buttons is pressed, the second and third buttons of a walkthrough included (${lst.each.length - lst.btn.length} of them)`);
       for (const size of SIZES) {
-        const res = await pool(lst.btn, 5, id => visit(size, id, 'listen'));
+        const res = await pool(lst.each, 5, e => visit(size, e.id, 'listen', e.k));
         const ok = r => !r.err && r.at35.playing && playerIn(r.at35) && playerIn(r.at6);
         const bad = res.filter(r => !ok(r));
         L.check(!bad.length, `${size.name} on Listen: 3.5 s and 6 s later the playing walkthrough's bar and Play button are inside the window (${res.length - bad.length} of ${res.length})`,
           `${bad.length} not: ${bad.slice(0, 4).map(show1).join(' | ')}`);
         const hl = res.filter(r => !r.err && !(r.at6.hit && r.at6.focusPlay));
-        L.check(!hl.length, `${size.name}: the guide section keeps its highlight and keyboard focus is on Play (${res.length - hl.length} of ${res.length})`, hl.slice(0, 4).map(r => r.id).join(', '));
+        L.check(!hl.length, `${size.name}: the guide section keeps its highlight and keyboard focus is on Play (${res.length - hl.length} of ${res.length})`, hl.slice(0, 4).map(r => r.id + '#' + r.k).join(', '));
         const errs = res.flatMap(r => r.errors || []);
         L.check(!errs.length, `${size.name}: no script error in the ${res.length} visits`, errs.slice(0, 3).join(' | '));
       }
