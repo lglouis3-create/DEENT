@@ -25,13 +25,17 @@
    At 390x844 and 1376x1032 (a phone, and an iPad Pro 13 window):
    - I: a reload with the Exam 1 header itself as the first line on screen (Reference and Tell apart; Exam 1 closed
      as first drawn, closed by the reader, opened by the reader) leaves the folders and the page height as they were;
+   - J: real taps into a closed folder: "Explain more" on a question, a "Read" chip of the Weak spots review plan,
+     "Read guide" and "Listen" on a Topics card; the folder is closed again when the tab is opened from the strip;
    - K: closing a folder by its header pauses the walkthrough or the narrated figure that is being read aloud inside
      it; the folder then stays closed when the tab is drawn again, until the walkthrough index opens it;
    - L: a Tell apart row that opens the Diseases tab, then Back: the Diseases tab has the sub-view and the search it
      had before; a sub-view or a search the reader chose there after the row is kept.
    Once:
    - N: the core's set of table boxes holds only boxes that are on the page after 42 redraws, and the count of DOM
-     nodes after a forced garbage collection (Chromium's DevTools protocol) does not grow with them; */
+     nodes after a forced garbage collection (Chromium's DevTools protocol) does not grow with them;
+   - O: a section with no entry in the assignment goes with the section before it and is reported; without the
+     Diseases tab, Tell apart has one folder (Exam 1), open, and no list of comparisons. */
 const path = require('path'), fs = require('fs');
 const NAME = 'examfold_test.js';
 let chromium;
@@ -42,7 +46,7 @@ if (!fs.existsSync(FILE)) { console.log(`NOT RUN: ${NAME}: no built page at ${FI
 if (!/const EXAMFOLD_UI = /.test(fs.readFileSync(FILE, 'utf8'))) { console.log(`NOT RUN: ${NAME}: the built page has no examfold_ui.js (rebuild after adding it to course.js \`files\`)`); process.exit(2); }
 const PAGE = 'file://' + FILE;
 
-// EXAMFOLD_ONLY=AD runs only the lettered parts named (A to H, M for the motion check); the last line then says so and is not a pass
+// EXAMFOLD_ONLY=AD runs only the lettered parts named (A to L, M for the motion check, N, O); the last line then says so and is not a pass
 const ONLY = String(process.env.EXAMFOLD_ONLY || '').toUpperCase();
 const run = k => !ONLY || ONLY.includes(k);
 let fail = 0, n = 0;
@@ -626,6 +630,99 @@ async function nsOf(browser) {
     }
   }
 
+  /* ---------- J. real taps into a closed folder ---------- */
+  if (run('J')) for (const [w, h] of SIZES2) {
+    console.log(`\n=== ${w}x${h}: taps into a closed folder ===`);
+    const {ctx, p, errs} = await open(browser, w, {height: h});
+    const strip = v => tabTap(p, v);
+    const hit = v => p.evaluate(v => !!document.querySelector(`#v-${v} .jhit, #v-${v} .jreg`), v);
+    // J1. "Explain more" on a question of an Exam 1 lecture: Reference has not been drawn yet, its Exam 1 folder starts closed
+    const q = await p.evaluate(() => {
+      const q = QUESTIONS.find(x => !x.type && (x.options || []).filter(o => o.correct).length === 1 && lecOf(x) && lecOf(x).exam === 1 && !x.lowYield && linksFor(x).some(l => l[0] === 'ref' && l[1]));
+      startQuiz(q.topic, q.sub); Object.assign(Q, {current: q, order: q.options.map((o, i) => i), picked: null, revealed: false, rights: null, startedAt: Date.now()}); renderQuiz();
+      return {id: q.id, wrong: q.options.findIndex(o => !o.correct)};
+    });
+    await p.locator('#v-quiz .opt').nth(q.wrong).click();
+    const chip = p.locator('#v-quiz [data-jump^="ref:"]').first();
+    await chip.scrollIntoViewIfNeeded();
+    const tgt = (await chip.getAttribute('data-jump')).split(':')[1], y1 = await p.evaluate(() => Math.round(scrollY));
+    await chip.click();
+    let wq = await where(p, tgt);
+    check(wq.view === 'ref' && landed(wq) && wq.fold === 'rfold-ref-1' && await st(p, 'ref') === '1:true 2:true' && await hit('ref'),
+      `${w}x${h}: "Explain more" on ${q.id} opens the Exam 1 folder of Reference and lands on ${tgt}, highlighted`, {wq, st: await st(p, 'ref')});
+    check(await over(p) <= 0 && await stored(p) === null, `${w}x${h}: no sideways scroll there, and the folder is not stored as the reader's choice`, [await over(p), await stored(p)]);
+    await p.click('#backbtn');
+    let bk = await p.evaluate(() => ({view: VIEW, y: Math.round(scrollY)}));
+    check(bk.view === 'quiz' && Math.abs(bk.y - y1) <= 2, `${w}x${h}: Back returns to the question at the same scroll position`, {bk, y1});
+    await strip('ref');
+    check(await st(p, 'ref') === '1:false 2:true', `${w}x${h}: Reference opened from the tab strip has Exam 1 closed again`, await st(p, 'ref'));
+
+    // J2. a "Read" chip of the Weak spots review plan whose section is in a folder that is closed as drawn
+    await p.evaluate(() => { ['guide', 'tell', 'ref'].forEach(v => show(v)); });
+    await strip('gaps');
+    const rc = await p.evaluate(() => { for (const c of document.querySelectorAll('#v-gaps [data-jump]')) { const [v, a] = c.dataset.jump.split(':'), t = a && document.getElementById(a), f = t && t.closest('.rfold');
+      if (f && !f.open && document.getElementById('v-' + v).contains(t)) return {jump: c.dataset.jump, fold: f.id, text: c.textContent.trim().slice(0, 60)}; } return null; });
+    if (check(!!rc, `${w}x${h}: the Weak spots review plan has a "Read" chip into a closed folder after the wrong answer`, rc)) {
+      const [pv, pa] = rc.jump.split(':'), rchip = p.locator(`#v-gaps [data-jump="${rc.jump}"]`).first();
+      await rchip.scrollIntoViewIfNeeded();
+      const y2 = await p.evaluate(() => Math.round(scrollY));
+      await rchip.click();
+      wq = await where(p, pa);
+      check(wq.view === pv && landed(wq) && wq.fold === rc.fold && await hit(pv), `${w}x${h}: the chip "${rc.text}" opens that folder (${rc.fold}) and lands on ${rc.jump}, highlighted`, wq);
+      check(await over(p) <= 0 && await stored(p) === null, `${w}x${h}: no sideways scroll there, nothing stored`, [await over(p), await stored(p)]);
+      await p.click('#backbtn');
+      bk = await p.evaluate(() => ({view: VIEW, y: Math.round(scrollY)}));
+      check(bk.view === 'gaps' && Math.abs(bk.y - y2) <= 2, `${w}x${h}: Back returns to Weak spots at the same scroll position`, {bk, y2});
+      await strip(pv);
+      check(await st(p, pv) === '1:false 2:true', `${w}x${h}: ${NAMES[pv]} opened from the tab strip has that folder closed again`, await st(p, pv));
+    }
+
+    // J3. Topics: "Read guide" and "Listen" on the card of an Exam 1 topic, reached by taps on the exam folder, the deck and the card
+    await strip('topics');
+    const wid = await p.evaluate(() => { const b = [...document.querySelectorAll('#v-topics [data-lrn="read"]')].find(b => { const t = document.getElementById(WALK_UI.BY[b.dataset.wid].guide), f = t && t.closest('.rfold'); return !!f && f.id === 'rfold-guide-1' && !f.open; });
+      return b ? b.dataset.wid : null; });
+    // open what is around a Topics button, outermost first, by a tap on each header
+    const reach = async sel => {
+      for (let i = 0; i < 6; i++) {
+        const need = await p.evaluate(sel => { const b = document.querySelector(sel); if (!b) return 'none';
+          const up = []; for (let e = b.parentElement; e && e.id !== 'v-topics'; e = e.parentElement) up.unshift(e);
+          for (const e of up) { let c = null;
+            if (e.hidden && e.id) c = document.querySelector(`[aria-controls="${e.id}"]`); else if (e.tagName === 'DETAILS' && !e.open) c = e.querySelector(':scope > summary');
+            if (c) { document.querySelectorAll('[data-testtap]').forEach(x => x.removeAttribute('data-testtap')); c.setAttribute('data-testtap', '1'); return 'tap'; } }
+          return 'ok'; }, sel);
+        if (need !== 'tap') return need === 'ok';
+        await p.locator('[data-testtap]').click();
+      }
+      return false;
+    };
+    const guideOf = await p.evaluate(id => WALK_UI.BY[id].guide, wid);
+    const readBtn = `#v-topics [data-lrn="read"][data-wid="${wid}"]`, listenBtn = `#v-topics [data-lrn="listen"][data-wid="${wid}"]`;
+    if (check(!!wid && await reach(readBtn), `${w}x${h}: the Topics card of an Exam 1 walkthrough (${wid}) is reached by taps on its exam folder, deck and card`)) {
+      await p.locator(readBtn).click();
+      await p.waitForTimeout(150);
+      wq = await where(p, guideOf);
+      check(wq.view === 'guide' && wq.vis && wq.fold === 'rfold-guide-1' && wq.open && wq.top >= wq.pin - 1 && wq.top < 300 && await st(p, 'guide') === '1:true 2:true',
+        `${w}x${h}: "Read guide" opens the Exam 1 folder of Guides with the section (${guideOf}) below the pinned strip`, {wq, st: await st(p, 'guide')});
+      check(await p.evaluate(() => /topics/.test((document.getElementById('backbtn') || {}).textContent || '')) && await over(p) <= 0 && await stored(p) === null, `${w}x${h}: Back to the topics is offered, no sideways scroll, nothing stored`);
+      await p.click('#backbtn');
+      check(await p.evaluate(() => VIEW) === 'topics' && await reach(listenBtn), `${w}x${h}: Back returns to the Topics, the card still reachable`);
+      await p.locator(listenBtn).click();
+      await p.waitForTimeout(300);
+      const ls = await p.evaluate(id => { const x = WALK_UI.panel(id), f = x && x.closest('.rfold'), b = x && x.querySelector('[data-wkplay]'), r = b && b.getBoundingClientRect(), s = WALK_UI.state();
+        return {view: VIEW, panel: !!x, seen: !!x && x.checkVisibility() && x.getClientRects().length > 0, fold: f ? f.id : null, open: f ? f.open : null, playTop: r ? Math.round(r.top) : null, vh: innerHeight,
+          playing: !!s && s.id === id && s.playing, focus: !!b && document.activeElement === b}; }, wid);
+      check(ls.view === 'guide' && ls.panel && ls.seen && ls.fold === 'rfold-guide-1' && ls.open && ls.playing && ls.focus && ls.playTop > 0 && ls.playTop < ls.vh,
+        `${w}x${h}: "Listen" opens the Exam 1 folder of Guides with the player on screen and playing, focus on its Pause button`, ls);
+      check(await over(p) <= 0 && await stored(p) === null, `${w}x${h}: no sideways scroll there, nothing stored`, [await over(p), await stored(p)]);
+      await p.evaluate(() => { WALK_UI.stop(); document.querySelectorAll('.wkpanel').forEach(x => WALK_UI.close(x.dataset.wkp)); });
+      await p.click('#backbtn');
+      await strip('guide');
+      check(await st(p, 'guide') === '1:false 2:true', `${w}x${h}: with the player closed, Guides opened from the tab strip has Exam 1 closed again`, await st(p, 'guide'));
+    }
+    check(!errs.length, `${w}x${h}: no page error during the taps`, errs.slice(0, 4));
+    await ctx.close();
+  }
+
   /* ---------- K. the reader closes a folder that holds what is being read aloud ---------- */
   if (run('K')) for (const [w, h] of SIZES2) {
     console.log(`\n=== ${w}x${h}: closing a folder while something inside it is read aloud ===`);
@@ -754,6 +851,44 @@ async function nsOf(browser) {
     check(c0.boxes > 0 && c1.boxes === c1.onPage && c1.boxes === c0.boxes, `after 42 redraws the core's set of table boxes holds the ${c0.boxes} boxes on the page and no box of a drawing that was replaced`, {c0, c1});
     check(c1.nodes <= c0.nodes * 1.05 && c1.listeners <= c0.listeners * 1.05, `DOM nodes after a forced garbage collection: ${c0.nodes} with every tab drawn once, ${c1.nodes} after 42 more redraws (event listeners ${c0.listeners}, ${c1.listeners}): no more than 5% above`, {c0, c1});
     check(!errs.length, 'no page error during the redraws', errs.slice(0, 3));
+    await ctx.close();
+  }
+
+  /* ---------- O. a section with no entry; a page without the Diseases tab ---------- */
+  if (run('O')) {
+    console.log('\n=== 390 px: a section with no entry, and no Diseases tab ===');
+    const {ctx, p, errs} = await open(browser, 390);
+    const r = await p.evaluate(() => {
+      // the top-level sections of Reference in the order they are written; the first, and the first one written after a section of another exam
+      const flat = document.createElement('div'); flat.innerHTML = REFERENCE_HTML;
+      const ids = [...flat.children].filter(k => k.matches('h3[id]')).map(k => k.id), M = EXAMFOLD_UI.map.ref;
+      const i = ids.findIndex((id, k) => k > 0 && M[id] !== M[ids[k - 1]]), first = ids[0], cross = ids[i], prev = ids[i - 1], keep = {[first]: M[first], [cross]: M[cross]};
+      const at = id => { const t = document.getElementById(id), f = t && t.closest('.rfold'); return f ? +f.dataset.exam : null; };
+      const total = () => document.querySelectorAll('#v-ref .rfbody > h3[id]').length;
+      show('ref'); const n0 = total();
+      delete M[first]; delete M[cross];
+      show('topics'); show('ref');
+      const out = {first, cross, prev, n0, n1: total(), firstAt: at(first), nextExam: M[ids[1]], crossAt: at(cross), prevExam: M[prev], crossWas: keep[cross], unassigned: EXAMFOLD_UI.unassigned().ref,
+        outside: document.querySelectorAll('#v-ref > h3').length, folds: document.querySelectorAll('#v-ref > .rfold').length};
+      Object.assign(M, keep);
+      show('topics'); show('ref');
+      out.back = {unassigned: EXAMFOLD_UI.unassigned().ref, crossAt: at(cross)};
+      return out; });
+    check(r.cross && r.prevExam !== r.crossWas && r.crossAt === r.prevExam && r.firstAt === r.nextExam && r.n1 === r.n0 && r.outside === 0 && r.folds === 2,
+      `390 px: a Reference section with no entry (${r.cross}) is drawn in the folder of the section written before it (${r.prev}, Exam ${r.prevExam}); the first section (${r.first}) with the next one; none is left outside`, r);
+    check(JSON.stringify(r.unassigned) === JSON.stringify([r.first, r.cross]) && !r.back.unassigned.length && r.back.crossAt === r.crossWas, `390 px: both are reported as unassigned (part A fails on that), and with their entries back they are in their own folders`, r);
+    const z = await p.evaluate(() => {
+      const b = document.querySelector('#nav button[data-v="dz"]'), par = b.parentNode, nx = b.nextSibling; b.remove();
+      show('topics'); show('tell');
+      const fs = () => [...document.querySelectorAll('#v-tell > .rfold')].map(f => f.dataset.exam + ':' + f.open).join(' ');
+      const out = {without: fs(), list: document.querySelectorAll('#v-tell .rfdz').length, active: COURSE.activeExam, sections: document.querySelectorAll('#v-tell .rfbody > h3[id]').length, seen: document.getElementById('tell-l1-diseases').checkVisibility()};
+      par.insertBefore(b, nx); show('topics'); show('tell');
+      out.withIt = fs(); out.listBack = document.querySelectorAll('#v-tell .rfdz').length;
+      return out; });
+    check(z.without === '1:true' && z.list === 0 && z.sections === 8 && z.seen && z.active === 'exam2',
+      `390 px: without the Diseases tab, Tell apart has the Exam 1 folder only, with its ${z.sections} sections and no list of comparisons; it is open (the active exam, ${z.active}, has no folder there)`, z);
+    check(z.withIt === '1:false 2:true' && z.listBack === 1 && await stored(p) === null, `390 px: with the tab back, both folders and the list are drawn as usual; nothing was stored`, [z, await stored(p)]);
+    check(!errs.length, '390 px: no page error', errs.slice(0, 3));
     await ctx.close();
   }
 
