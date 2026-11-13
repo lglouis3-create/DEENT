@@ -24,6 +24,12 @@ slides (Warts, Corns and Calluses 17, 370 words; DPAW 26, the vitamin D scheme):
   JPEG 1600 q72   about 58 MB; clear
   WebP 1600 q72   about 32 MB; as clear as the JPEG at 1600   <- used
   WebP 1920 q60   about 35 MB; no gain at the sizes the viewer shows
+
+Contact details are covered before a page is saved: every text line that holds an email
+address or the words "office hours" (and the lines that continue it) is painted over in the
+color of the slide beside it (cover_rects below; the pages are listed as they are rendered). These are a professor's own
+details on title, "Communication" and closing slides, not course content, and the site is
+public. A telephone number is left as it is (the Poison Control number is slide content).
 """
 import json, os, re, subprocess, sys, tempfile
 from concurrent.futures import ProcessPoolExecutor
@@ -39,10 +45,48 @@ def slides():
     return json.loads(src[src.index('{', src.index('const SLIDES')):src.rindex('}') + 1])
 
 
+COVER_EMAIL = re.compile(r'[\w.+-]+@[\w-]+\.[\w.-]+')
+COVER_BLOCK = re.compile(r'office\s+hours?', re.I)
+
+
+def cover_rects(pdf, p):
+    """The rectangles to paint over on page p (1-based), as fractions of the page: every text
+    line that holds an email address or the words "office hours", and the lines that continue
+    such a line directly below it."""
+    import pymupdf
+    doc = pymupdf.open(pdf)
+    page = doc[p - 1]
+    W, H = page.rect.width, page.rect.height
+    lines = []
+    for blk in page.get_text('dict')['blocks']:
+        for ln in blk.get('lines', []):
+            lines.append((tuple(ln['bbox']), ''.join(sp['text'] for sp in ln['spans'])))
+    doc.close()
+    hit = [bb for bb, t in lines if COVER_EMAIL.search(t) or COVER_BLOCK.search(t)]
+    grew = True
+    while grew:                       # a wrapped line under a covered one, overlapping it sideways
+        grew = False
+        for bb, t in lines:
+            if bb in hit or not t.strip():
+                continue
+            if any(abs(bb[1] - h[3]) < 3 and bb[0] < h[2] and h[0] < bb[2] for h in hit):
+                hit.append(bb)
+                grew = True
+    return [(x0 / W, y0 / H, x1 / W, y1 / H) for x0, y0, x1, y1 in hit]
+
+
 def encode(job):
-    png, dest = job
-    from PIL import Image
+    png, dest, cover = job
+    from PIL import Image, ImageDraw
     im = Image.open(png).convert('RGB')
+    if cover:
+        dr = ImageDraw.Draw(im)
+        for x0, y0, x1, y1 in cover:
+            xa, xb = max(0, int(x0 * im.width - 8)), min(im.width - 1, int(x1 * im.width + 8))
+            ya, yb = max(0, int(y0 * im.height - 2)), min(im.height - 1, int(y1 * im.height + 2))
+            sx = max(0, xa - 6)
+            for y in range(ya, yb + 1):   # each row in the color of the slide just left of the text
+                dr.line([(xa, y), (xb, y)], fill=im.getpixel((sx, y)))
     im.save(dest, 'WEBP', quality=QUALITY, method=6)
     os.unlink(png)
     return dest, im.size, os.path.getsize(dest)
@@ -83,7 +127,7 @@ def main():
     clean = os.environ.get('CLEAN_DIR') or next((d for d in DEFAULT_CLEAN if os.path.isdir(d)), DEFAULT_CLEAN[0])
     annotated = {f for d in S['decks'].values() for f in d['files']}
     out_root = os.path.join(ROOT, S['dir'])
-    total, count = 0, 0
+    total, count, covered = 0, 0, []
     with ProcessPoolExecutor() as pool:
         for did, d in S['decks'].items():
             pages = [int(x.split('-')[1]) for x in (only or []) if x.startswith(did + '-')]
@@ -105,7 +149,10 @@ def main():
                     base = os.path.join(t, f'p{p}')
                     subprocess.run(['pdftoppm', '-png', '-scale-to-x', str(WIDTH), '-scale-to-y', '-1', '-f', str(p), '-l', str(p),
                                     '-singlefile', pdf, base], check=True, stderr=subprocess.DEVNULL)
-                    jobs.append((base + '.png', os.path.join(dest, f'{p:02d}.{S["ext"]}')))
+                    cov = cover_rects(pdf, p)
+                    if cov:
+                        covered.append(f'{did} {p}')
+                    jobs.append((base + '.png', os.path.join(dest, f'{p:02d}.{S["ext"]}'), cov))
                 done = list(pool.map(encode, jobs))
             sizes = {sz for _, sz, _ in done}
             b = sum(x for _, _, x in done)
@@ -117,6 +164,7 @@ def main():
                 sheet(did, [(p, os.path.join(dest, f'{p:02d}.{S["ext"]}')) for p in range(1, n + 1)
                             if os.path.isfile(os.path.join(dest, f'{p:02d}.{S["ext"]}'))], sheets)
     print(f'{count} images, {total / 1e6:.1f} MB written under {S["dir"]}/')
+    print(f'contact details covered on {len(covered)} page(s): ' + ', '.join(covered))
 
 
 if __name__ == '__main__':
