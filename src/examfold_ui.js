@@ -41,7 +41,7 @@
    Open/Close chevron); its styles are this file's own, under .rfold.
 
    Open and closed: the active exam's folder starts open and the others closed
-   (a tab with no folder for the active exam starts with its folders open).
+   (a tab with no folder for the active exam opens the latest exam before it).
    The reader's own tap or key on a header is kept on this device under
    `<NS>:readExamOpen` ({tab: {exam number: true|false}}), never in progress
    or history. Nothing else is stored: a folder opened by a jump, a
@@ -120,10 +120,15 @@ const EXAMFOLD_UI = (function examFoldUi(){
     } catch (e) { /* this device only; the folder still opens and closes */ }
   };
   const activeN = () => { const m = String((typeof COURSE !== 'undefined' && COURSE.activeExam) || '').match(/(\d+)$/); return m ? +m[1] : null; };
-  // a folder's usual state: the reader's own choice, else open for the active exam (or when this tab has no folder for it)
+  // a folder's usual state: the reader's own choice, else open for the active exam; a tab with no folder for the
+  // active exam opens the latest exam before it (its last folder when there is none before)
   const usual = (view, n, nums) => {
     const s = readSt()[view];
-    return s && typeof s === 'object' && n in s ? !!s[n] : (n === activeN() || !nums.includes(activeN()));
+    if (s && typeof s === 'object' && n in s) return !!s[n];
+    const a = activeN();
+    if (a == null || nums.includes(a)) return n === a || (a == null && n === nums[nums.length - 1]);
+    const before = nums.filter(x => x < a);
+    return n === (before.length ? before[before.length - 1] : nums[nums.length - 1]);
   };
 
   const CSS = `
@@ -145,14 +150,17 @@ const EXAMFOLD_UI = (function examFoldUi(){
 .rfold[open]>summary .rfbtn{border-color:var(--accent);background:var(--accent-bg)}
 .rfold .rfbody{padding:2px 0 0;min-width:0}
 @media (min-width:701px){.rfold .rfbody{padding-left:6px}}
-.rfnavx{font-size:12.5px;font-weight:700;color:var(--text-dim)}
-.refnav .rfnavx{flex-basis:100%;margin:6px 0 0}
+.rfold .rfbody>h2:first-child{margin-top:16px}
+.rfnavx{display:block;font-size:12.5px;line-height:1.3}
+.rfnavx b{display:inline-block;font-weight:700;color:var(--text);background:var(--accent-bg);border-radius:6px;padding:3px 8px}
+.refnav .rfnavx{flex:0 0 100%;margin:8px 0 0}
 .refnav .rfnavx:first-child{margin-top:0}
-.wkindex p.rfnavx{margin:12px 0 -4px;max-width:none}
-.rfdz{margin:12px 0 20px}
+.wkindex p.rfnavx{margin:12px 0 -2px;max-width:none}
+.rfdz{margin:12px 0 20px;max-width:46rem}
 .rfdz .rfdzlab{font-size:13px;font-weight:600;color:var(--text-dim);margin:0 0 6px}
 .rfdz ul{list-style:none;margin:0;padding:0;border:1px solid var(--line);border-radius:var(--r,10px);background:var(--paper);overflow:hidden}
-.rfdz li{margin:0;max-width:none}
+.rfold .rfdz li{margin:0}
+#v-tell .rfdz li{max-width:none}
 .rfdz li+li{border-top:1px solid var(--line-soft,var(--line))}
 .rfdz button{display:flex;align-items:center;gap:10px;width:100%;min-height:44px;box-sizing:border-box;padding:10px 14px;
   background:none;border:0;color:var(--accent);font:inherit;font-size:14.5px;text-align:left;cursor:pointer}
@@ -248,7 +256,8 @@ const EXAMFOLD_UI = (function examFoldUi(){
   }
   // the "Jump to a section" list and the walkthrough index: the exam's name in front of its first entry
   function labelLists(pane){
-    const label = (tag, f) => { const s = document.createElement(tag); s.className = 'rfnavx'; s.textContent = f.dataset.title; return s; };
+    // a tag with its own background: the core draws the jump list on the tab strip's dark color and the index on paper
+    const label = (tag, f) => { const s = document.createElement(tag), b = document.createElement('b'); s.className = 'rfnavx'; b.textContent = f.dataset.title; s.appendChild(b); return s; };
     const nav = pane.querySelector('.refnav');
     if (nav) {
       let last = null;
