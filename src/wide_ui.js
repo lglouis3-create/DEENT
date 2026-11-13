@@ -106,7 +106,16 @@ body.xnavhid .atbar{top:0}
   const head = () => document.querySelector('header');
   const past = () => { const h = head(); return !!h && window.scrollY > (h.offsetHeight || 0) + 1; };
   const dialogOpen = () => !!(document.querySelector('[aria-modal="true"]') || (document.body && document.body.classList.contains('figbig')));
-  const holds = n => hovering || (n.contains && n.contains(document.activeElement));
+  // Keyboard focus inside the strip keeps it. The focus a tap or a click leaves on a tab button does not: in
+  // Chromium the button stays the active element after a pointer press, so the strip stayed over the page, with
+  // the timer set again every 3 s, until something else was tapped. :focus-visible tells the two apart (true for
+  // focus reached with the keyboard); a browser that does not know the selector keeps the strip, as before.
+  const keyFocus = n => {
+    const a = document.activeElement;
+    if (!a || !n.contains || !n.contains(a)) return false;
+    try { return a.matches(':focus-visible'); } catch (e) { return true; }
+  };
+  const holds = n => hovering || keyFocus(n);
   function setHidden(h){
     const n = nav(); if (!n || !n.classList) return;
     n.classList.toggle('xhid', h);

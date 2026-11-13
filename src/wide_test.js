@@ -5,7 +5,9 @@
      and the content column takes at least 90% of the window up to 1,728 px (at least 60% at 2,560 px);
    - a window widened after the page has loaded is filled the same way; a phone-width window is unchanged;
    - Settings has "Refit the page to the window": it leaves the viewport meta as it was, causes no error, and by
-     itself the refit never runs on a desktop browser. */
+     itself the refit never runs on a desktop browser;
+   - the pinned tab strip hides while reading after a real tap (390x844) or click (1366x1024) on a tab, and stays
+     for a mouse resting on it and for focus reached with the Tab key (review finding E-F2, 2026-11-13). */
 const path = require('path');
 const {chromium} = require('playwright');
 const PAGE = 'file://' + path.resolve(__dirname, process.env.DRILL_PAGE || '../preview/index.html');
@@ -102,6 +104,71 @@ const measure = p => p.evaluate(() => { const r = e => e ? e.getBoundingClientRe
     check(writes === 0, 'resizing a desktop window never rewrites the viewport meta by itself', writes + ' writes');
     check(!errs.length, 'no page errors around Refit', errs.join(' | '));
     await p.close();
+  }
+  /* The pinned tab strip hides while reading (review finding E-F2, 2026-11-13). In Chromium a tap or a click leaves
+     the tab button as the active element; wide_ui.js counted any focus inside the strip as a reason to keep it, so
+     after a real press on a tab the strip stayed over the page (and its timer was set again every 3 s). Focus now
+     keeps the strip only when it was reached with the keyboard (:focus-visible). The strip hides 3 s after the
+     last scroll; each case waits up to 4.5 s. */
+  {
+    const strip = p => p.evaluate(() => { const nv = document.getElementById('nav'), a = document.activeElement; let fv = null;
+      try { fv = !!a && a.matches(':focus-visible'); } catch (e) {}
+      return {hidden: nv.classList.contains('xhid'), pinned: nv.classList.contains('xpinned'), focusIn: nv.contains(a), focusVisible: fv, y: Math.round(scrollY)}; });
+    const hides = p => p.waitForFunction(() => document.getElementById('nav').classList.contains('xhid'), null, {timeout: 4500}).then(() => true, () => false);
+    // a real tap on a phone
+    {
+      const errs = [];
+      const p = await b.newPage({viewport: {width: 390, height: 844}, hasTouch: true, isMobile: true});
+      p.on('pageerror', e => errs.push(e.message));
+      await p.goto(PAGE); await p.waitForTimeout(900);
+      await p.tap('#nav button[data-v="guide"]'); await p.waitForTimeout(300);
+      const s0 = await strip(p);
+      // The desktop Chromium this test runs in has a mouse besides the emulated finger: after a tap it reports that
+      // mouse at the window's corner (0,0), which is on the pinned strip, and a resting mouse keeps the strip by
+      // design. A phone has no mouse, so the test's mouse is put on the text first.
+      await p.mouse.move(195, 620);
+      await p.evaluate(() => window.scrollTo(0, 600));
+      const gone = await hides(p), s1 = await strip(p);
+      if (!s0.focusIn) console.log('  (this browser does not leave focus on a tapped tab; the case then holds without the fix too)');
+      check(gone && s1.y > 300, '390x844, a real tap on a tab, then a scroll down: the pinned strip hides within 4.5 s', JSON.stringify({afterTap: s0, later: s1}));
+      // the next scroll brings it back, as before
+      await p.evaluate(() => window.scrollBy(0, 80)); await p.waitForTimeout(250);
+      const s2 = await strip(p);
+      check(gone && !s2.hidden && s2.pinned, '390x844: the next scroll brings the strip back', JSON.stringify(s2));
+      check(!errs.length, '390x844: no page errors around the strip', errs.join(' | '));
+      await p.close();
+    }
+    // a real mouse click, the mouse then moved onto the text
+    {
+      const p = await b.newPage({viewport: {width: 1366, height: 1024}});
+      await p.goto(PAGE); await p.waitForTimeout(900);
+      await p.click('#nav button[data-v="guide"]'); await p.waitForTimeout(300);
+      const s0 = await strip(p);
+      await p.mouse.move(683, 620);
+      await p.mouse.wheel(0, 700);
+      const gone = await hides(p), s1 = await strip(p);
+      check(gone && s1.y > 300, '1366x1024, a real click on a tab, the mouse moved onto the text, then the wheel: the strip hides within 4.5 s', JSON.stringify({afterClick: s0, later: s1}));
+      // a mouse resting on the strip still keeps it
+      await p.mouse.move(683, 10); await p.waitForTimeout(300);
+      await p.mouse.move(683, 24);
+      await p.evaluate(() => window.scrollBy(0, 40));
+      await p.waitForTimeout(4500);
+      const s2 = await strip(p);
+      check(!s2.hidden, '1366x1024: with the mouse resting on the strip it stays', JSON.stringify(s2));
+      await p.close();
+    }
+    // keyboard focus on the strip keeps it
+    {
+      const p = await b.newPage({viewport: {width: 1366, height: 1024}});
+      await p.goto(PAGE); await p.waitForTimeout(900);
+      let inNav = false;
+      for (let k = 0; k < 40 && !inNav; k++) { await p.keyboard.press('Tab'); inNav = await p.evaluate(() => document.getElementById('nav').contains(document.activeElement)); }
+      await p.evaluate(() => window.scrollTo(0, 600));
+      await p.waitForTimeout(4500);
+      const s = await strip(p);
+      check(inNav && s.focusIn && s.focusVisible === true && !s.hidden && s.pinned && s.y > 300, '1366x1024, focus moved onto the strip with the Tab key, then a scroll down: the strip is still shown 4.5 s later', JSON.stringify(s));
+      await p.close();
+    }
   }
   await b.close();
   console.log((fail ? 'FAIL' : 'PASS') + `: wide_test.js: ${fail ? fail + ' of ' : ''}${n} checks${fail ? ' failed' : ' passed'}`);
