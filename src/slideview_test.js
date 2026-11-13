@@ -19,6 +19,9 @@
  *   - Previous / Next follow the cited deck's numbering (Dr. Smith's Sun 4 -> Sun 5 and back; the
  *     ends are the cited deck's ends); the lines under the heading say what was cited only while
  *     that is the slide on screen (DPAW page 22, a cited range); the number printed on DPAW page 60;
+ *   - when Previous or Next goes off under the focus (an end of the deck), focus goes to the other
+ *     one and the arrow keys still page, also after a click on the viewer's text;
+ *   - the window turned while the viewer is open: after closing, the citation is on screen;
  *   - closing and opening again at once leaves the picture in place;
  *   - the page behind does not scroll (wheel, finger, keys) while the viewer is open, is at the
  *     same place after it closes, does not move sideways, and scrolls again afterwards;
@@ -383,6 +386,27 @@ const pairPointFn = ([id, k]) => {
       v = await openV('pc', 1);
       check(v.prevOff && !v.nextOff, T('Skin Pharmacology 1: Previous is off'));
 
+      /* ---- Previous or Next goes off under the focus: focus stays in the viewer and the arrows still page ---- */
+      {
+        const last = D.pp.cited, PP = D.pp.unit;
+        const centerOf = w => page.evaluate(w => { const b = document.querySelector('dialog.slv [data-slv=' + w + ']').getBoundingClientRect(); return [b.left + b.width / 2, b.top + b.height / 2]; }, w);
+        v = await openV('pp', last - 1);
+        let c = await centerOf('next'); await page.mouse.click(c[0], c[1]); await settle(150); v = await loaded();
+        check(v.pos === PP + ' ' + last + ' of ' + last && v.nextOff && v.inside && v.active === 'prev', T('a click on Next that reaches the last slide: Next is off and focus is on Previous, inside the viewer'), [v.pos, v.nextOff, v.active, v.inside]);
+        await page.keyboard.press('ArrowLeft'); await settle(150); v = await loaded();
+        check(v.pos === PP + ' ' + (last - 1) + ' of ' + last, T('and the left arrow goes back one slide'), v.pos);
+        v = await openV('pp', 2);
+        await page.evaluate(() => document.querySelector('dialog.slv [data-slv=prev]').focus()); await page.keyboard.press('Enter'); await settle(150); v = await loaded();
+        check(v.pos === PP + ' 1 of ' + last && v.prevOff && v.inside && v.active === 'next', T('Enter on Previous that reaches the first slide: focus is on Next, inside the viewer'), [v.pos, v.prevOff, v.active, v.inside]);
+        await page.keyboard.press('ArrowRight'); await settle(150); v = await loaded();
+        check(v.pos === PP + ' 2 of ' + last, T('and the right arrow goes on one slide'), v.pos);
+        c = await page.evaluate(() => { const b = document.querySelector('dialog.slv .slv-deck').getBoundingClientRect(); return [b.left + 6, b.top + b.height / 2]; });
+        await page.mouse.click(c[0], c[1]); await settle(100);
+        await page.keyboard.press('ArrowRight'); await settle(150); v = await loaded();
+        check(v.open && v.pos === PP + ' 3 of ' + last, T('after a click on the heading text the right arrow still pages'), [v.pos, v.active]);
+        await closeV();
+      }
+
       /* ---- what the lines say (D-F6) and the printed number (C-F3) ---- */
       v = await openV('mc', 22);
       check(v.src === '../deck/mc/21.webp' && v.pos === 'Page 21 of 71' && v.note === 'Cited as page 22. Page 22 of the lecture copy is the same slide as page 21.', T('DPAW page 22 opens page 21 and says why'), [v.src, v.pos, v.note]);
@@ -621,6 +645,33 @@ const pairPointFn = ([id, k]) => {
         const bad = Object.keys(dark).filter(k => !dark[k].n || dark[k].min < 4.5);
         check(!bad.length, T(`with the dark color scheme asked for, the same: at least 4.5:1 in every tab (${Object.keys(dark).reduce((s, k) => s + dark[k].n, 0)} links)`), bad.map(k => k + ': ' + dark[k].low.join(' | ')).join('; '));
         await page.emulateMedia({colorScheme: 'light'});
+      }
+
+      /* ---- the window turned (or resized) while the viewer is open: the citation is on screen after closing ---- */
+      {
+        await closeV(); await show('ref');
+        const turn = await page.evaluate(() => {
+          const l = [...document.querySelectorAll('#v-ref td .slk')].find(b => b.getClientRects().length && b.getBoundingClientRect().top + scrollY > innerHeight * 3); if (!l) return null;
+          l.setAttribute('data-turn', '1'); l.scrollIntoView({block: 'center', inline: 'center'});
+          const b = l.getClientRects()[0]; return {x: b.left + b.width / 2, y: b.top + b.height / 2, text: l.textContent};
+        });
+        if (check(!!turn, T('Reference has a slide link far down the page'))) {
+          await settle(200); await tap(turn.x, turn.y); let tv = await loaded();
+          await page.setViewportSize({width: size.h, height: size.w}); await settle(500);
+          await page.keyboard.press('Escape'); await settle(300);
+          const where = () => page.evaluate(() => { const l = document.querySelector('[data-turn]'), b = l.getBoundingClientRect();
+            return {focus: document.activeElement === l, open: !!document.querySelector('dialog.slv[open]'), vis: b.top >= 0 && b.left >= 0 && b.bottom <= innerHeight && b.right <= innerWidth, top: Math.round(b.top), vh: innerHeight, o: document.documentElement.style.overflow}; });
+          const t1 = await where();
+          check(!!tv && tv.open && !t1.open && t1.focus && t1.vis && t1.o === '', T(`"${turn.text}" opened, the window turned to ${size.h}x${size.w}, Escape: the citation has focus and is on screen`), t1);
+          await page.setViewportSize({width: size.w, height: size.h}); await settle(400);
+          // not turned: the page goes back to its exact place, as before
+          await page.evaluate(() => document.querySelector('[data-turn]').scrollIntoView({block: 'center', inline: 'center'})); await settle(150);
+          const y0 = await page.evaluate(() => scrollY), b2 = await page.evaluate(() => { const b = document.querySelector('[data-turn]').getClientRects()[0]; return {x: b.left + b.width / 2, y: b.top + b.height / 2}; });
+          await tap(b2.x, b2.y); tv = await loaded(); await page.keyboard.press('Escape'); await settle(200);
+          const t2 = await where(), y1 = await page.evaluate(() => scrollY);
+          check(!!tv && tv.open && !t2.open && t2.focus && y1 === y0, T('with the window left as it was the page is at its exact place after closing'), {y0, y1});
+          await page.evaluate(() => document.querySelector('[data-turn]').removeAttribute('data-turn'));
+        }
       }
 
       /* ---- a browser without <dialog>: the page lock is released there too ---- */
