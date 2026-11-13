@@ -39,7 +39,8 @@ let fail = 0, n = 0;
 const check = (ok, label, detail) => { n++; if (!ok) fail++; console.log((ok ? '  ok    ' : '  FAIL  ') + label + (ok || detail === undefined ? '' : '  — ' + (typeof detail === 'string' ? detail : JSON.stringify(detail)).slice(0, 600))); return !!ok; };
 const note = s => console.log('        ' + s);
 
-/* a short silent WAV for any recorded clip, and a stand-in for the device voice (each sentence takes a few ms) */
+/* a short silent WAV for any recorded clip, and a stand-in for the device voice (each sentence takes 0.4 s, so a
+   narration is still going when it is checked) */
 const wav = (() => {
   const k = 2400, b = Buffer.alloc(44 + k * 2);
   b.write('RIFF', 0); b.writeUInt32LE(36 + k * 2, 4); b.write('WAVE', 8); b.write('fmt ', 12); b.writeUInt32LE(16, 16);

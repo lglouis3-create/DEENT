@@ -19,8 +19,9 @@
    left outside a folder; examfold_test.js fails until it has an entry. A
    section goes with the exam whose lectures it was written from. Two sections
    serve both exams: ref-targets (Dr. Smith's drug chart, Exam 1 material that
-   Exam 2 tests again) is with Exam 1; ref-p8-smithpatel (where her Exam 1 sun
-   lecture and Dr. Patel's differ) is with Exam 2, the exam that tests both.
+   Exam 2 tests again) is with Exam 1; ref-p8-smithpatel (where Dr. Smith's
+   Exam 1 sun lecture and Dr. Patel's differ) is with Exam 2, the exam that
+   tests both.
 
    Tell apart has no Exam 2 table of its own. Its Exam 2 folder lists the
    comparisons of the Diseases tab (DZ.tell, DZ.pairs), each a button that
@@ -37,6 +38,12 @@
      - a `toggle` event fires however a folder opens, which is where its
        tables are measured (the core's sideCue skips a table that is not on
        screen); keyboard and screen-reader behavior are the browser's.
+   One thing follows from the first point. A browser that searches a closed
+   <details> keeps its content laid out though not shown, and reports
+   positions for it (Chromium 153: the lines of the closed Exam 1 folder lie
+   over those of the open Exam 2 folder; checkVisibility() is false for
+   them). The core's place-keeping takes the first line whose top edge is on
+   screen, so its placeAnchor is wrapped here to leave closed folders out.
    The header looks like the Topics exam folders (same title, date, counts and
    Open/Close chevron); its styles are this file's own, under .rfold.
 
@@ -51,7 +58,10 @@
      - scrollToEl() (the core's jump(), the "Jump to a section" links,
        walk_ui.js, druglist_ui.js) opens the target's folder first;
      - jump(view, anchor) draws the tab with the target's folder open, so the
-       landing and jump_ui.js's highlight measure the final layout;
+       landing and jump_ui.js's highlight measure the final layout (the
+       "Listen" rows of narrated figures, dianarr_ui.js, are added while the
+       tab is drawn for the same reason); a jump inside one tab keeps the
+       folders that were open;
      - the Back button draws the tab it returns to with the folders as they
        were when the reader left it, so the kept scroll position is right;
      - the place kept across a reload: a record written before the folders
