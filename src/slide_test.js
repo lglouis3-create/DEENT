@@ -6,7 +6,8 @@
  * What it checks at each width:
  *   - a question shows no slide button and no source line before it is answered; after the
  *     answer its source line and explanation have them; a running exam paper has none, its
- *     review has them;
+ *     review has them; a slide link's name is its own text and its slide its description; a
+ *     key held down on it opens the slide once;
  *   - a Reference table, a Tell apart table, a guide section, a Drug list card, an Atlas tile,
  *     a Diseases card and a Diseases drug panel each have a link that opens its slide;
  *   - the viewer shows the picture slide_data.js says (the <img> address, loaded), names the
@@ -20,9 +21,19 @@
  *     control and drawing, and is not a transcript reference;
  *   - a picture that does not load gives the message and Try again; nothing is stored; the page
  *     does not scroll sideways; no page error; the linkifier is idle when nothing changes;
+ *   - once, at 1280 px: the page against slide_check.js's model (node slide_check.js --model),
+ *     place by place: the lines under the pairs of every matching question, the structure
+ *     strip of every question that has one (quiz and exam review; Dr. Sikazwe's deck whatever
+ *     the question's), every objective bar of the guides (and its slide list read on its own),
+ *     the steps of every Diseases card (the cards with more than one professor among them),
+ *     the three other Diseases views, the "Who should not get it" lists of the drug panels;
+ *     and the cases of the 2026-11-13 review: a citation before a colon, the assigned-pages
+ *     note in printed numbers, the chart page that stays text, a heading read as written, no
+ *     pass while the practice-exam clock ticks, a citation next to a highlighted word, the
+ *     missed list's source line and the review plan;
  *   - once: the time the page takes to start, with slide_ui.js and with it switched off.
  */
-const fs = require('fs'), path = require('path'), vm = require('vm');
+const fs = require('fs'), path = require('path'), vm = require('vm'), os = require('os'), child = require('child_process');
 const L = require('./check_lib');
 const NAME = 'slide_test.js';
 const {check} = L;
@@ -111,8 +122,10 @@ const onDisk = (deck, n, printed) => { const r = P.resolve(deck, n, printed); re
       });
       check(post.inCite >= 1 && post.inWhy > post.inCite && !post.inOpt, `after the answer: the source line has ${post.inCite} slide button(s), the explanation ${post.inWhy - post.inCite} more, the options none`, post);
       check(/; T \d/.test(post.cite) && !post.tr && !post.texts.some(t => /^T\b/.test(t)), 'the transcript lines in that source line stay text', post.cite);
-      const role = await page.evaluate(() => { const b = document.querySelector('#v-quiz .cite .slk'); return {role: b.getAttribute('role'), tab: b.tabIndex, label: b.getAttribute('aria-label'), text: b.textContent}; });
-      check(role.role === 'button' && role.tab === 0 && role.label.indexOf(role.text) === 0 && /: open Dr\. Smith, Skin Pharmacology, slide \d+$/.test(role.label), 'a slide link is a button to the keyboard and a screen reader, named by its own text and its slide', role);
+      const role = await page.evaluate(() => { const b = document.querySelector('#v-quiz .cite .slk'); return {role: b.getAttribute('role'), tab: b.tabIndex, label: b.getAttribute('aria-label'), title: b.getAttribute('title'), desc: b.getAttribute('aria-description'), text: b.textContent,
+        labelled: document.querySelectorAll('.slk[aria-label], .slk[aria-labelledby]').length}; });
+      check(role.role === 'button' && role.tab === 0 && role.label === null && !role.labelled && /^Open Dr\. Smith, Skin Pharmacology, slide \d+$/.test(role.title || '') && role.desc === role.title,
+        'a slide link is a button to the keyboard and a screen reader: its name is its own text (no aria-label), its slide is its description and its title', role);
       const one = await opens('question source line', pickIn('#v-quiz .cite .slk'), 'key');
       if (one) {
         await page.keyboard.press('Escape'); await settle(150);
@@ -127,6 +140,34 @@ const onDisk = (deck, n, printed) => { const r = P.resolve(deck, n, printed); re
         check(v.left >= 0 && v.right <= v.vw + 0.5 && v.bottom <= v.vh + 0.5 && (await sideways()) <= 1, `the viewer fits the ${width} px window (${Math.round(v.right - v.left)} px wide)`);
         const r = await escape('question source line');
         check(r.view === 'quiz' && (await page.evaluate(() => Q.revealed === true)), 'the question is still on screen, answered');
+        // a key held down opens the slide once: its repeats are not new presses (and a repeated Space does not scroll the page)
+        await page.evaluate(() => {
+          window.__opens = 0;
+          const d = HTMLDialogElement.prototype, o = d.showModal;
+          if (!d.__counted) { d.__counted = true; d.showModal = function(){ if (this.classList.contains('slv')) window.__opens++; return o.apply(this, arguments); }; }
+          document.querySelector('#v-quiz .cite .slk').focus();
+        });
+        for (let k = 0; k < 7; k++) await page.keyboard.down('Enter');
+        await page.keyboard.up('Enter'); await settle(250);
+        // the press that opened the viewer does not also press Close, on which the focus stands: not its repeats, not its release
+        const isOpen = () => page.evaluate(() => { const d = document.querySelector('dialog.slv'); return !!d && d.open; });
+        const stay = {opens: await page.evaluate(() => window.__opens), enter: await isOpen(), onClose: await page.evaluate(() => !!document.activeElement && document.activeElement.classList.contains('slv-x'))};
+        await page.keyboard.press('Enter'); await settle(150);
+        stay.newPressCloses = !(await isOpen());
+        await page.evaluate(() => document.querySelector('#v-quiz .cite .slk').focus());
+        await page.keyboard.down(' '); await page.keyboard.down(' '); await page.keyboard.down(' '); await page.keyboard.up(' '); await settle(250);
+        stay.space = await isOpen();
+        await page.keyboard.press(' '); await settle(150);
+        stay.spaceCloses = !(await isOpen());
+        check(stay.enter && stay.onClose && stay.newPressCloses && stay.space && stay.spaceCloses, 'the slide stays open when Enter or Space is held on its link and let go; a new press of the key on Close closes it', stay);
+        const held = await page.evaluate(() => {
+          SLIDE_UI.close();
+          const b = document.querySelector('#v-quiz .cite .slk'), ev = new KeyboardEvent('keydown', {key: ' ', repeat: true, bubbles: true, cancelable: true});
+          const went = b.dispatchEvent(ev), d = document.querySelector('dialog.slv');
+          return {opens: window.__opens, repeatPrevented: !went, openAfterRepeat: !!d && d.open};
+        });
+        check(stay.opens === 1 && held.repeatPrevented && !held.openAfterRepeat, `Enter held down on a slide link (7 key-down events) opens the slide once (${stay.opens}); a repeated Space on it does nothing`, held);
+        await page.evaluate(() => SLIDE_UI.close());
       }
 
       /* ---- the two sun decks, the psoralen slides, DPAW ---- */
@@ -290,6 +331,232 @@ const onDisk = (deck, n, printed) => { const r = P.resolve(deck, n, printed); re
       check(!keys1.some(k => /slide|slv|slk|deck:/i.test(k)) && !/localStorage|sessionStorage|indexedDB|document\.cookie|caches\./.test(fs.readFileSync(path.join(__dirname, 'slide_ui.js'), 'utf8').replace(/\/\*[\s\S]*?\*\//g, '')),
         'slide_ui.js stores nothing (no storage call in the file; no key of its own)', added.join(', '));
       check(!errors.length, 'no page error', errors.slice(0, 4).join(' | '));
+      await ctx.close();
+    }
+
+    /* ---- the page against slide_check.js's model, place by place, and the cases of the 2026-11-13 review ---- */
+    console.log('\n=== The page against slide_check.js\'s model (1280 px) ===');
+    {
+      const tmp = path.join(os.tmpdir(), `slide-model-${process.pid}.json`);
+      const run = child.spawnSync(process.execPath, [path.join(__dirname, 'slide_check.js'), '--model', tmp], {encoding: 'utf8', maxBuffer: 1 << 27});
+      let model = null;
+      try { model = JSON.parse(fs.readFileSync(tmp, 'utf8')); fs.unlinkSync(tmp); } catch (e) {}
+      const {ctx, page, errors} = await L.openPage(browser, PREVIEW, {viewport: {width: 1280, height: 900}});
+      page.on('console', m => { if (m.type() === 'error' && !/Failed to load resource/.test(m.text())) errors.push('console: ' + m.text()); });
+      const settle = ms => page.waitForTimeout(ms || 350);
+      await settle(600);
+      const same = (a, b) => JSON.stringify((a || []).slice().sort()) === JSON.stringify((b || []).slice().sort());
+      const sum = m => Object.values(m).reduce((n, a) => n + a.length, 0);
+      const diff = (rows, m) => rows.filter(x => !same(x.got, m[x.id])).slice(0, 4).map(x => `${x.id}: page [${x.got.join(', ')}] model [${(m[x.id] || []).join(', ')}]`).join(' | ');
+      await page.evaluate(() => {
+        // a link as slide_check.js writes it: "deck number[-to][ printed]"
+        window.__sig = b => b.getAttribute('data-deck') + ' ' + b.getAttribute('data-n') + (b.getAttribute('data-to') ? '-' + b.getAttribute('data-to') : '') + (b.hasAttribute('data-printed') ? ' printed' : '');
+        window.__sigs = sel => [...document.querySelectorAll(sel)].map(window.__sig);
+        // a question on screen, answered right (the state the core's own answer handlers leave), and linked
+        window.__answered = id => {
+          const q = QUESTIONS.find(x => x.id === id), kind = q.type || 'mc';
+          const st = {pool: [q], label: 'test', sweep: [q.id], i: 1, current: q, answered: 0, lastId: null, examMode: false, revealed: true, guessedLogged: true, lastRight: true};
+          if (kind === 'mc') { st.order = q.options.map((o, k) => k); st.picked = isMulti(q) ? correctSet(q) : q.options.findIndex(o => o.correct); }
+          else if (kind === 'match') { st.picked = q.pairs.map((x, k) => k); st.rights = q.pairs.map((x, k) => k); }
+          else if (kind === 'blank') st.picked = (q.accept || [''])[0];
+          else st.picked = String(q.answer);
+          if (VIEW !== 'quiz') show('quiz');
+          Q = st; renderQuiz(); SLIDE_UI.relink();
+        };
+        // every place where a "slide N:" stands outside a link in the answered card
+        window.__colonLeft = () => { const out = [], w = document.createTreeWalker(document.querySelector('#v-quiz .qbody'), 4); let n;
+          while ((n = w.nextNode())) if (!n.parentElement.closest('.slk, button, select') && /\b(?:[Ss]lides?|PCol|PP|DPAW)\s\d+(?:\s?[–-]\s?\d+)?(?:,\s?\d+)*:(?!\d)/.test(n.data)) out.push(n.data.slice(0, 60));
+          return out; };
+      });
+      if (check(!!model && !!model.pair && !!model.gbar && !!model.dzstep && !!model.strip, 'slide_check.js --model writes what it expects the page to link, place by place', (run.stderr || run.stdout || '').slice(-300))) {
+        /* matching questions: the line under each pair */
+        const pairIds = Object.keys(model.pair);
+        await L.quizOn(page, pairIds[0]); await settle(300);
+        const pre = await page.evaluate(() => ({rows: document.querySelectorAll('#v-quiz .matchtab tr').length, slk: document.querySelectorAll('#v-quiz .slk').length}));
+        const pairs = await page.evaluate(ids => ids.map(id => { __answered(id); return {id, lines: document.querySelectorAll('#v-quiz .matchtab .stepwhy').length, got: __sigs('#v-quiz .matchtab .stepwhy .slk'), left: __colonLeft().length}; }), pairIds);
+        check(pre.rows > 1 && !pre.slk && pairs.length >= 12 && pairs.every(x => x.lines > 0 && x.got.length > 0 && same(x.got, model.pair[x.id]) && !x.left),
+          `matching questions (${pairs.length}): no link before the answer; after it the lines under the pairs hold the ${sum(model.pair)} links the model expects`, diff(pairs, model.pair) || pairs.filter(x => x.left).map(x => x.id + ' left').join(', '));
+
+        /* the structure strip of an answered question, in the quiz and on the exam review page */
+        const stripIds = Object.keys(model.strip);
+        const strips = await page.evaluate(ids => ids.map(id => { __answered(id); const bs = [...document.querySelectorAll('#v-quiz .cmpcell figcaption .slk')]; return {id, prof: QUESTIONS.find(q => q.id === id).prof, cells: document.querySelectorAll('#v-quiz .cmpcell').length, got: bs.map(__sig)}; }), stripIds);
+        const stripN = strips.reduce((n, x) => n + x.got.length, 0), other = strips.filter(x => x.prof !== 'Sikazwe');
+        check(strips.length > 20 && strips.every(x => x.cells > 1 && same(x.got, model.strip[x.id])) && stripN === sum(model.strip),
+          `structure strips (${strips.length} questions): the notes under the structures hold the ${sum(model.strip)} links the model expects`, diff(strips, model.strip));
+        check(other.length >= 5 && strips.every(x => x.got.every(g => /^mc /.test(g))) && other.reduce((n, x) => n + x.got.length, 0) >= 20,
+          `every strip link opens Dr. Sikazwe's deck, also in the ${other.length} questions of another professor (${other.map(x => x.id).join(', ')})`, strips.filter(x => x.got.some(g => !/^mc /.test(g))).map(x => x.id + ': ' + x.got.join(', ')).join(' | '));
+        const look = await page.evaluate(() => { __answered('L2-017');
+          const cs = b => { const c = getComputedStyle(b); return {display: c.display, color: c.color, size: c.fontSize}; };
+          const bs = [...document.querySelectorAll('#v-quiz .cmpcell figcaption .slk')], ref = document.querySelector('#v-quiz .why .cite .slk');
+          return {n: bs.length, strip: bs.map(cs), ref: ref ? cs(ref) : null, cap: bs.length ? getComputedStyle(bs[0].parentElement).fontSize : '', sameLine: bs.every(b => { const r = b.getBoundingClientRect(), p = b.previousSibling; if (!p || p.nodeType !== 3 || !p.data.trim()) return true;
+            const g = document.createRange(); g.setStart(p, Math.max(0, p.data.length - 1)); g.setEnd(p, p.data.length); const q = g.getBoundingClientRect(); return Math.abs(q.top - r.top) < 4 || r.left < q.left; })}; });
+        check(look.n > 0 && !!look.ref && look.strip.every(c => c.display === 'inline' && c.color === look.ref.color && c.size === look.cap) && look.sameLine,
+          `a citation under a structure stays in its line and has the color of the other slide links (${look.n} in L2-017)`, {strip: look.strip[0], ref: look.ref, cap: look.cap, sameLine: look.sameLine});
+        const l3c = strips.find(x => x.id === 'L3C-062'), l3cPages = l3c ? l3c.got.map(g => +g.split(' ')[1]).sort((a, b) => a - b).map(n => { const r = P.resolve('mc', n); return n + '>' + r.page + ' ' + D.mc.titles[r.page - 1]; }) : [];
+        check(!!l3c && l3c.got.length === 5 && l3cPages.every(t => /^(61>60 Sunblocks|62>61 Sunscreens-1|63>62 Sunscreens-2|65>64 Sunscreens-4)/.test(t)),
+          'L3C-062 (Dr. Smith, Sun): the notes under zinc oxide, titanium dioxide, avobenzone, PABA and oxybenzone open DPAW pages 61, 61, 62, 63, 65 (Sunblocks, Sunscreens-1, -2, -4)', l3cPages.join(' | '));
+        await page.evaluate(() => { __answered('L2-017'); const c = [...document.querySelectorAll('#v-quiz .cmpcell')].filter(c => /Adapalene/.test(c.textContent))[0], b = c && c.querySelector('figcaption .slk'); if (b) { b.scrollIntoView({block: 'center'}); b.click(); } });
+        let v = null;
+        for (let t = 0; t < 60; t++) { v = await page.evaluate(() => { const d = document.querySelector('dialog.slv'), i = d && d.querySelector('.slv-img'); return d && d.open ? {open: true, deck: d.querySelector('.slv-deck').textContent, src: i.getAttribute('src'), ok: i.complete && i.naturalWidth > 0} : null; }); if ((v && v.ok) || (!v && t > 5)) break; await settle(100); }
+        check(!!v && v.open && v.ok && v.src === '../' + P.file('mc', 50) && v.deck === D.mc.label, 'L2-017 (Dr. Smith): "slide 51" under Adapalene opens Dr. Sikazwe\'s page 51 (clean page 50, Retinoids-3), not her Skin Pharmacology slide 51', v);
+        await page.evaluate(() => SLIDE_UI.close());
+        const review = await page.evaluate(async ids => {
+          const qs = ids.map(id => QUESTIONS.find(q => q.id === id)).filter(Boolean);
+          show('exam');
+          EX = {qs, i: 0, picks: qs.map(q => isMulti(q) ? [] : null), running: true, done: false, ends: Date.now() + 60 * 60000, orders: qs.map(q => shuffle(q.options.map((o, k) => k)))};
+          renderExamQ(); await new Promise(r => setTimeout(r, 200));
+          finishExam(true); await new Promise(r => setTimeout(r, 900));
+          const out = {cards: document.querySelectorAll('#v-exam .qcard').length, got: __sigs('#v-exam .cmpcell figcaption .slk')};
+          EX = null; show('topics');
+          return out;
+        }, ['L2-017', 'P7-052', 'L3C-062', 'S4-081']);
+        const want = ['L2-017', 'P7-052', 'L3C-062', 'S4-081'].reduce((a, id) => a.concat(model.strip[id] || []), []);
+        check(review.cards === 4 && review.got.length > 10 && same(review.got, want) && review.got.every(g => /^mc /.test(g)), `the exam review page ("Every question, with the reasoning") draws the same strips with the same ${want.length} links to Dr. Sikazwe's deck`, review.got.join(', '));
+
+        /* a citation that ends at a colon */
+        const colon = await page.evaluate(() => ['L1-045', 'L2-115', 'P6H-002', 'P7-063', 'L3C-044'].map(id => { __answered(id);
+          return {id, left: __colonLeft(), slk: [...document.querySelectorAll('#v-quiz .why .wrow .slk, #v-quiz .why .teach .slk')].map(b => b.textContent + '>' + __sig(b))}; }));
+        const cOf = id => (colon.find(x => x.id === id) || {slk: [], left: ['?']});
+        check(cOf('L1-045').slk.filter(t => t === 'Slide 34>pp 34').length === 5 && !cOf('L1-045').left.length, 'L1-045: the five explanations that open "Slide 34: …" are links to Skin Pathophysiology slide 34', cOf('L1-045'));
+        check(cOf('L2-115').slk.includes('Slides 32–33>pc 32-33') && cOf('P6H-002').slk.includes('Slides 20>p6 20') && cOf('P6H-002').slk.includes('40>p6 40') && cOf('P7-063').slk.includes('42–43>p7 42-43') &&
+          !cOf('L2-115').left.length && !cOf('P6H-002').left.length && !cOf('P7-063').left.length,
+          'a range or a list before a colon is linked whole ("Slides 32–33: …" as one link to 32–33; "Slides 20, 40: …" as two links)', colon.filter(x => x.id !== 'L1-045').map(x => x.id + ': ' + x.left.join(' / ')).join(' | '));
+
+        check(cOf('L3C-044').slk.includes('PCol slide 44>pc 44') && cOf('L3C-044').slk.includes('slide 45>pc 45') && !cOf('L3C-044').left.length,
+          'L3C-044 (a Sun question): "PCol slide 44: …; slide 45: …" links slide 45 to Skin Pharmacology, the deck named in that sentence (the Sun deck has 26 slides)', cOf('L3C-044'));
+
+        /* the assigned-pages note of the 23 questions outside Dr. Sikazwe's list; the chart page of S3-061 */
+        const notes = await page.evaluate(() => QUESTIONS.filter(q => /list of 11\/06: /.test(q.note || '')).map(q => { __answered(q.id);
+          const p = [...document.querySelectorAll('#v-quiz .why p.prose')].filter(x => /assigned pages for Exam 1 \(list of 11\/06/.test(x.textContent))[0];
+          return {id: q.id, got: p ? [...p.querySelectorAll('.slk')].filter(b => !/^Slide 14$/.test(b.textContent)).map(b => b.textContent + '>' + __sig(b)) : null}; }));
+        const NOTE_LINKS = ['slides 7–9>mc 7-9 printed', '12>mc 12 printed', '15–22>mc 15-22 printed', '24–33>mc 24-33 printed', '42–54>mc 42-54 printed', '60–65>mc 60-65 printed', 'slide 22>mc 22 printed'];
+        const noteBad = notes.filter(x => JSON.stringify(x.got) !== JSON.stringify(NOTE_LINKS));
+        const notePages = [7, 12, 15, 24, 42, 60, 22].map(n => P.resolve('mc', n, true).page);
+        check(notes.length === 23 && !noteBad.length && notePages.join() === '7,12,15,24,42,60,22',
+          'the assigned-pages note (23 questions): each of its six list links carries the printed flag and opens clean page 7, 12, 15, 24, 42, 60; "printed slide 22" opens clean page 22', noteBad.slice(0, 3).map(x => x.id + ': ' + JSON.stringify(x.got)).join(' | '));
+        await page.evaluate(() => { __answered('S4-112'); const b = [...document.querySelectorAll('#v-quiz .why p.prose .slk')].filter(x => x.textContent === '24–33')[0]; if (b) { b.scrollIntoView({block: 'center'}); b.click(); } });
+        for (let t = 0; t < 60; t++) { v = await page.evaluate(() => { const d = document.querySelector('dialog.slv'), i = d && d.querySelector('.slv-img'); return d && d.open ? {open: true, src: i.getAttribute('src'), pos: d.querySelector('.slv-pos').textContent, ok: i.complete && i.naturalWidth > 0} : {open: false, pos: ''}; }); if (v.ok || (!v.open && t > 5)) break; await settle(100); }
+        check(v.open && v.ok && v.src === '../' + P.file('mc', 24), 'S4-112: "24–33" in the note opens the slide that prints 24 (clean page 24), the first slide of that range of his list', v);
+        const pn = await page.evaluate(() => { const d = document.querySelector('dialog.slv'), n = d.querySelector('.slv-note'), out = {printed: n.hidden ? '' : n.textContent, pos: d.querySelector('.slv-pos').textContent};
+          SLIDE_UI.close(); __answered('S4-112');
+          const b = [...document.querySelectorAll('#v-quiz .slk[data-to]:not([data-printed])')].filter(x => x.getAttribute('data-deck') === 'mc')[0];
+          if (b) { b.click(); out.plainText = b.textContent; out.plain = n.hidden ? '' : n.textContent; out.want = 'Cited: pages ' + b.getAttribute('data-n') + '–' + b.getAttribute('data-to') + '.'; }
+          SLIDE_UI.close(); return out; });
+        check(!/Cited: pages/.test(pn.printed) && /^Page 25 of 71 · slide number printed on it: 24$/.test(pn.pos) && (pn.plain === undefined || pn.plain.indexOf(pn.want) === 0),
+          'a range of printed slide numbers opens without a "Cited: pages 24–33" line (the viewer says "Page 25 of 71 · slide number printed on it: 24"); a range cited by page keeps its line', pn);
+        await page.evaluate(() => SLIDE_UI.close());
+        const chart = await page.evaluate(() => { __answered('S3-061'); const p = [...document.querySelectorAll('#v-quiz .why p.prose')].filter(x => /drug chart lists a different class/.test(x.textContent))[0];
+          return p ? {text: /on its p\.5 because/.test(p.textContent), links: [...p.querySelectorAll('.slk')].map(b => b.textContent)} : null; });
+        check(!!chart && chart.text && !chart.links.some(t => /^p\.?\s?5$/.test(t)), 'S3-061: "p.5" of the drug chart in the note stays text', chart);
+
+        /* the guides' objective bars */
+        await page.evaluate(() => show('guide')); await settle(1300);
+        const bars = await page.evaluate(() => [...document.querySelectorAll('#v-guide .gbar')].map(g => { const sec = g.closest('section.gobj'), i = g.querySelector('i');
+          return {id: sec ? sec.id : '', list: i ? i.textContent : '', inList: i ? [...i.querySelectorAll('.slk')].map(__sig) : [], got: [...g.querySelectorAll('.slk')].map(__sig)}; }));
+        check(bars.length === 69 && Object.keys(model.gbar).length === 69 && bars.every(x => same(x.got, model.gbar[x.id])), `guide objective bars (${bars.length}): each holds the links the model expects (${sum(model.gbar)} in all)`, diff(bars, model.gbar));
+        // the slide list on the right of a bar, read here on its own: "PCol 8–76; Sun 3; PP 17, 28, 37" (a part that is not a deck's list has no link)
+        const ABB = {PP: 'pp', PCol: 'pc', Sun: 'sun', DPAW: 'mc', DT: 'p5', AT: 'p6', SD: 'p7', OE: 'p8o', SE: 'p8s', WC: 'p8w', WCC: 'p8c'};
+        const listOf = t => t.split(';').reduce((out, part) => { const m = /^(PP|PCol|Sun|DPAW|DT|AT|SD|OE|SE|WCC|WC)(?: slides?)? (\d[\d, –-]*)$/.exec(part.trim());
+          return m ? out.concat(m[2].split(',').map(x => { const r = /^(\d+)(?:[–-](\d+))?$/.exec(x.trim()); return ABB[m[1]] + ' ' + r[1] + (r[2] ? '-' + r[2] : ''); })) : out; }, []);
+        const barBad = bars.filter(x => !x.inList.length || !same(x.inList, listOf(x.list)));
+        check(!barBad.length, 'every one of the 69 bars has its whole slide list linked, each number to the deck its abbreviation names', barBad.slice(0, 4).map(x => `${x.id}: "${x.list}" has [${x.inList.join(', ')}]`).join(' | '));
+
+        /* Diseases: the steps of every card (the cards with more than one professor among them), the three other views, the drug panels */
+        await page.evaluate(() => show('dz')); await settle(500);
+        const cardIds = Object.keys(model.dzProfs), multi = cardIds.filter(id => model.dzProfs[id] > 1);
+        const cards = [];
+        for (const id of cardIds) {
+          await page.evaluate(id => { const c = DZ.cards.find(x => x.id === id); DZ_UI.state.view = 'cards'; DZ_UI.state.card = id; DZ_UI.state.filter = ''; c.steps.forEach((s, i) => { DZ_UI.state.open[id + ':' + i] = true; }); DZ_UI.render(); SLIDE_UI.relink(); }, id);
+          cards.push({id, got: await page.evaluate(() => __sigs('#v-dz ol.dzsteps .slk')), grp: await page.evaluate(() => document.querySelectorAll('#v-dz ol.dzsteps .dzgrp').length)});
+        }
+        const multiCards = cards.filter(x => multi.includes(x.id));
+        check(multi.length >= 2 && multiCards.every(x => x.grp > 0 && same(x.got, model.dzstep[x.id])), `Diseases cards with more than one professor (${multi.length}: ${multi.join(', ')}): the steps hold the links the model expects (${multiCards.reduce((n, x) => n + x.got.length, 0)})`, diff(multiCards, model.dzstep));
+        check(cards.length === 23 && cards.every(x => same(x.got, model.dzstep[x.id])), `Diseases, all ${cards.length} cards: the steps hold the links the model expects (${sum(model.dzstep)})`, diff(cards, model.dzstep));
+        const sunp = await page.evaluate(() => { const c = DZ.cards.find(x => x.id === 'sun-protection'); DZ_UI.state.card = c.id; c.steps.forEach((s, i) => { DZ_UI.state.open[c.id + ':' + i] = true; }); DZ_UI.render(); SLIDE_UI.relink();
+          const inGrp = k => [...document.querySelectorAll('#v-dz ol.dzsteps .dzgrp.' + k + ' .slk')].map(b => b.textContent + '>' + __sig(b));
+          return {sm: inGrp('sm'), pa: inGrp('pa'), sk: inGrp('sk')}; });
+        check(sunp.sm.includes('Sun slide 8>sun 8') && sunp.sm.length >= 9 && sunp.sm.every(t => /> ?(sun|pc) /.test(t)) && sunp.pa.every(t => />p8s /.test(t)) && sunp.pa.some(t => /^slides? \d+>p8s /.test(t)) && sunp.sk.every(t => />mc /.test(t)),
+          'Sun protection card: in Dr. Smith\'s groups "Sun slide N" opens her Sun deck, in Dr. Patel\'s groups a bare "slide N" opens hers, in Dr. Sikazwe\'s his', sunp);
+        const views = {};
+        for (const k of ['tell', 'pairs', 'rules']) views[k] = await page.evaluate(k => { DZ_UI.state.view = k; DZ_UI.render(); SLIDE_UI.relink(); return __sigs('#v-dz .dzbody .slk'); }, k);
+        check(['tell', 'pairs', 'rules'].every(k => same(views[k], model.dzview[k])), `Diseases, Tell apart, Drugs that get confused and Rules that repeat: the links the model expects (${views.tell.length}, ${views.pairs.length}, ${views.rules.length})`,
+          ['tell', 'pairs', 'rules'].filter(k => !same(views[k], model.dzview[k])).map(k => `${k}: page ${views[k].length}, model ${model.dzview[k].length}`).join('; '));
+        await page.evaluate(() => { DZ_UI.state.view = 'cards'; DZ_UI.render(); });
+        const avoid = [];
+        for (const k of Object.keys(model.dzavoid)) {
+          await page.evaluate(k => { const b = document.createElement('button'); b.setAttribute('data-drug', k); b.style.display = 'none'; document.querySelector('#v-dz .dzbody').appendChild(b); b.click(); b.remove(); SLIDE_UI.relink(); }, k);
+          avoid.push({id: k, got: await page.evaluate(() => __sigs('#v-dz .dzdlg .dzavoid .slk')), text: await page.evaluate(() => [...document.querySelectorAll('#v-dz .dzdlg .dzavoid li')].map(li => li.textContent + ' => ' + [...li.querySelectorAll('.slk')].map(b => b.textContent + '>' + __sig(b)).join(','))) });
+        }
+        await page.evaluate(() => { const d = document.querySelector('#v-dz .dzdlg'); if (d && d.open) d.close(); });
+        const ster = (avoid.find(x => x.id === 'steroid') || {text: []}).text;
+        check(avoid.length > 5 && avoid.every(x => same(x.got, model.dzavoid[x.id])), `drug panels, "Who should not get it" (${avoid.length} panels with such a list): the links the model expects (${sum(model.dzavoid)})`, diff(avoid, model.dzavoid));
+        check(ster.some(t => /not for longer than 4 weeks in psoriasis \(slide 36\) => slide 36>p7 36$/.test(t)) && ster.some(t => /Infants with cradle cap: .*\(slide 18\) => $/.test(t)),
+          'topical corticosteroids panel: a line labelled with its conditions ("Psoriasis / Seborrheic dermatitis: … (slide 36)") opens the deck the panel\'s rows for them name; a line with no such label ("Infants with cradle cap: … (slide 18)") stays text', ster);
+      }
+
+      /* ---- headings read as they are written ---- */
+      await page.evaluate(() => show('ref')); await settle(1000);
+      const heads = await page.evaluate(() => [...document.querySelectorAll('#v-ref h3, #v-tell h3, #v-guide h3, #v-guide h5')].filter(h => h.querySelector('.slk')).length);
+      const h3 = page.locator('#v-ref h3:has(.slk):visible').first();          // a heading of the open exam folder
+      const snap = await h3.ariaSnapshot(), h3text = (await h3.textContent()).replace(/\s+/g, ' ').trim();
+      check(heads > 20 && snap.indexOf(h3text) >= 0 && !/open dr\./i.test(snap) && /- button "(?:[Ss]lides? )?\d+(?:[–-]\d+)?"/.test(snap), `a heading that holds slide links is named by its own text (${heads} such headings in the reading tabs); each link in it is a button named by its text`, snap.slice(0, 400));
+
+      /* ---- the practice-exam clock starts no pass ---- */
+      const tick = await page.evaluate(async () => {
+        for (const v of ['ref', 'tell', 'guide', 'atlas', 'drugs', 'diagrams', 'dz', 'gaps', 'settings', 'topics']) { show(v); await new Promise(r => setTimeout(r, 250)); }
+        show('exam'); beginExam(); await new Promise(r => setTimeout(r, 1200));
+        const c = document.getElementById('exClock'), t0 = c ? c.textContent : '', a = SLIDE_UI.stats.runs;
+        await new Promise(r => setTimeout(r, 6000));
+        const out = {runs: SLIDE_UI.stats.runs - a, clock: !!c, moved: !!c && c.textContent !== t0, drawn: document.querySelectorAll('main > section').length, inSkip: !!c && !!c.closest('.clock')};
+        show('ref'); await new Promise(r => setTimeout(r, 400)); const b = SLIDE_UI.stats.runs;
+        await new Promise(r => setTimeout(r, 3000));
+        out.away = SLIDE_UI.stats.runs - b;
+        EX = null; show('topics');
+        return out;
+      });
+      check(tick.clock && tick.moved && tick.runs === 0 && tick.away === 0, `with every tab drawn and a practice paper running, the clock ticks and the linkifier does not run (${tick.runs} passes in 6 s on the paper, ${tick.away} in 3 s on another tab)`, tick);
+
+      /* ---- a citation next to a highlighted word, after "Explain more" ---- */
+      const hl = await page.evaluate(async () => {
+        const count = () => [...document.querySelectorAll('#v-ref .slk')].length;
+        show('ref'); await new Promise(r => setTimeout(r, 900)); const plain = count();
+        RET.length = 0; show('topics');
+        const c = document.createElement('div'); c.className = 'tlcard'; c.dataset.tlq = 'P8C-008'; c.innerHTML = '<button type="button" data-jump="ref:ref-p8-wcc">x</button>'; document.body.appendChild(c); c.querySelector('button').click(); c.remove();
+        await new Promise(r => setTimeout(r, 700));
+        const marks = [...document.querySelectorAll('#v-ref mark.jmark')];
+        const wart = marks.filter(m => m.textContent === 'Warts' && m.nextSibling && /^\s*\($/.test(m.nextSibling.textContent || ''))[0];
+        const next = wart && wart.nextSibling && wart.nextSibling.nextSibling;
+        const out = {plain, during: count(), marks: marks.length, after: wart ? {tag: next && next.className, text: next && next.textContent, deck: next && next.getAttribute && next.getAttribute('data-deck'), n: next && next.getAttribute && next.getAttribute('data-n')} : null};
+        if (window.JUMP_UI && JUMP_UI.clear) JUMP_UI.clear();
+        await new Promise(r => setTimeout(r, 400));
+        out.cleared = count(); out.marksLeft = document.querySelectorAll('#v-ref mark.jmark').length;
+        return out;
+      });
+      check(hl.marks > 0 && !!hl.after && hl.after.tag === 'slk' && hl.after.text === 'slide 4' && hl.after.deck === 'p8c' && hl.after.n === '4' && hl.during === hl.plain && hl.cleared === hl.plain && !hl.marksLeft,
+        `after "Explain more" from P8C-008, "Warts (slide 4)" with Warts highlighted has its link (slide 4, Dr. Patel's Warts deck); Reference has ${hl.plain} links with the highlight on and after it is cleared`, hl);
+
+      /* ---- Weak spots: the missed list's source line and the review plan take the question's own deck ---- */
+      const gaps = await page.evaluate(async () => {
+        const keep = DB.answers.slice();
+        const mc = q => !q.type && !q.multi && q.options && q.options.length > 1;
+        // a question whose wrong option cites a bare "slide N" in its explanation, and one whose source line says "Sun N–M"
+        const q1 = QUESTIONS.find(q => mc(q) && /Patel_Acne/.test(q.cite) && q.options.some(o => !o.correct && /\(slide \d+\)/.test(o.why || '')) && QUESTIONS.filter(x => x.stem === q.stem).length === 1 && q.stem.length <= 160);
+        const q2 = QUESTIONS.find(q => q.id === 'L3C-067');
+        const wrong = q1.options.findIndex(o => !o.correct && /\(slide \d+\)/.test(o.why || ''));
+        DB.answers.push({qid: q1.id, result: 'wrong', picked: wrong, t: Date.now(), at: Date.now(), concept: q1.concept});
+        DB.answers.push({qid: q2.id, result: 'wrong', picked: q2.pairs.map((x, k) => (k + 1) % q2.pairs.length), t: Date.now(), at: Date.now(), concept: q2.concept});
+        show('gaps'); renderGaps(); SLIDE_UI.relink();
+        const miss = [...document.querySelectorAll('#v-gaps .missq')].map(m => { const ms = m.querySelectorAll('.mmeta'), c = ms[ms.length - 1]; return {cite: c.textContent, links: [...c.querySelectorAll('.slk')].map(b => b.textContent + '>' + __sig(b)), other: [...m.querySelectorAll('.mmeta')].slice(0, -1).reduce((n, e) => n + e.querySelectorAll('.slk').length, 0)}; });
+        const pc = [...document.querySelectorAll('#v-gaps .plan .pconcept')].filter(p => (p.querySelector('.pq') || {}).textContent === q1.stem)[0];
+        const plan = pc ? {why: [...pc.querySelectorAll('.pw .meta .slk')].map(b => b.textContent + '>' + __sig(b)), whyText: (pc.querySelector('.pw .meta') || {}).textContent || '', idea: [...pc.querySelectorAll('.pi .slk')].map(__sig), chose: [...pc.querySelectorAll('.pw > b ~ .slk')].length} : null;
+        DB.answers.length = 0; keep.forEach(a => DB.answers.push(a)); renderGaps(); show('topics');
+        return {q1: q1.id, miss, plan};
+      });
+      const sunLine = gaps.miss.filter(m => /Sun 20–24/.test(m.cite))[0];
+      check(!!sunLine && sunLine.links.includes('Sun 20–24>sun 20-24') && gaps.miss.every(m => m.links.length > 0),
+        'the missed list: the source line of L3C-067 has "Sun 20–24" linked to Dr. Smith\'s Sun deck, as after the answer; every entry\'s source line has its links', gaps.miss.map(m => m.cite.slice(0, 60) + ' => ' + m.links.join(',')).join(' | '));
+      check(!!gaps.plan && gaps.plan.why.length > 0 && gaps.plan.why.every(t => />p6 \d/.test(t)), `Weak spots, "What to review next" (${gaps.q1}): the bare "slide N" in "Why it is not the answer" opens the question's own deck (Dr. Patel, Acne)`, gaps.plan);
+      check(!errors.length, 'no page error in these checks', errors.slice(0, 4).join(' | '));
       await ctx.close();
     }
 

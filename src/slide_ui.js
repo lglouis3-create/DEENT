@@ -8,7 +8,10 @@
    (an inline span with the role of a button, so the line wraps as it did)
    that opens that slide from the clean copy of the deck (deck/<deck>/<NN>.webp,
    render_deck.py; the page map and the tables are slide_data.js, written by
-   slide_map.py from the decks and slide_tables.json).
+   slide_map.py from the decks and slide_tables.json). The control's name is
+   its own text; what it opens ("Open Dr. Smith, Skin Pharmacology, slide 24")
+   is its title and its description, so a heading that holds citations is
+   read as it is written.
 
    1. THE PARSER (no DOM; slide_check.js runs this same code over the source
       files). In one line of text it finds, in this order of priority:
@@ -16,29 +19,54 @@
          Students-2026.pdf) slides 24-26") or a name from SLIDES.names
          ("PCol 55", "DPAW p. 43", "Patel Scaly slide 12", "PP 8"). "Sun" is
          the name of two decks: it goes to the deck of the professor named
-         with it, else to the sun deck its place declares, else nowhere;
+         with it, else to the sun deck its place declares, else nowhere. A
+         name with a number alone is not a citation when a count word follows
+         the number ("SE 2 applications") or a letter does ("PP 2B");
       b. a bare "slide N", "slides N-M", "p. N" (Dr. Sikazwe's deck only: it is
          the one cited by page), or a number in a column headed Slide: it
          takes the deck its place declares (2), or the deck named earlier in
-         the same sentence when the place declares none. A professor's name
-         before it ("Dr. Patel's slide 45") must be that deck's professor;
+         the same sentence when the place declares none, or when the number
+         is past the end of the place's deck and that deck has it ("PCol slide
+         44: ...; slide 45: ..." in a place of the Sun deck). A professor's name
+         before it ("Dr. Patel's slide 45") or in brackets right after it
+         ("slide 12 (Dr. Patel)") must be that deck's professor. "printed
+         slides 24-33" (Dr. Sikazwe's deck) are the numbers printed on the
+         slides, not the pages of the file;
       c. anything else stays text: transcript lines (T 573-577, T@12345),
-         recording times, dates, chart, syllabus and textbook pages, a number
-         outside the deck.
+         recording times, dates, chart, syllabus and textbook pages (also "the
+         drug chart ... on its p.5": the chart is named earlier in the
+         sentence and no deck after it, with a number or without: "the chart
+         agrees with DPAW; see p. 5" is his page), a number outside the deck.
+         A later item of a list is left whole when a unit follows it ("slides
+         3, 9-11 days": 3 alone is linked, never "9").
+      A number ends a citation before a colon ("Slide 12: ...", "Slides
+      24-26: ...") unless a digit follows the colon (a time 12:30, a ratio).
+      The text of a line is joined from its text nodes with nothing between
+      them; where the text of another element starts, a word starts ("...of
+      the skin" + "PP 4-6" in a guide's objective bar).
    2. THE PLACE (declared, never read out of prose): after a question is
       answered, the deck its own source line names first (the deck the engine
       files the question under); in Reference, Tell apart and Guides, the
       section's deck from SLIDES.sections (a section that draws on several
       decks has none), or the one deck a table column's heading names; a
-      figure caption, the one deck it names; an Atlas board, Dr. Sikazwe's
-      deck; a Drug list line, the deck its source chip names; in Diseases, the
-      deck(s) the nearest source line names, within a professor's block that
-      professor's, and for the practice patients the card's deck.
+      figure caption, the one deck it names; an Atlas board, and the notes
+      under the structures an explanation sets side by side (they are the
+      Atlas notes), Dr. Sikazwe's deck; a Drug list line, the deck its source
+      chip names; in Diseases, the deck(s) the nearest source line names,
+      within a professor's block or group that professor's, for the practice
+      patients the card's deck, and for a drug panel's "Who should not get
+      it" line that starts with its conditions the one deck the panel's rows
+      for those conditions name. In Weak spots a missed question's own source
+      line gives the place, as after an answer; a card of "What to review
+      next" takes the place of the question whose stem it shows.
    3. WHERE: only in what the page shows after an answer (the explanation and
-      its source line, the exam review, the missed list) and in the reading
-      tabs (Reference, Tell apart, Guides, Atlas, Drug list, Diseases, figure
+      its source line, the line under each pair of a matching question, the
+      exam review, the missed list, the review plan) and in the reading tabs
+      (Reference, Tell apart, Guides, Atlas, Drug list, Diseases, figure
       captions). Never inside a button, link, summary, label or form field,
-      never in an answer option, never in a drawn figure.
+      never in an answer option, never in a drawn figure, never in the
+      practice-exam clock. A citation is linked only inside one text node
+      (from its slide word on, when its deck name is under a jump highlight).
    4. THE VIEWER: one <dialog> with the deck, "Slide N of M" (Dr. Sikazwe's
       deck: "Page N", the page of the file the citations count by), the
       picture, Previous, Next, "Open full size" and Close. A picture is
@@ -62,11 +90,13 @@ const SLIDE_UI = (() => {
     const alt = keys => keys.slice().sort((a, b) => b.length - a.length).map(k => rx(k).replace(/'/g, "['’]")).join('|');
     const SP = '[\\s\\xa0]';
     const DASH = '[\\u2013\\u2014\\u2011-]';
-    const NUM = '\\d{1,3}(?![\\d/:%@]|\\.\\d)';
+    // a colon ends a number only when a digit follows it (a clock time 12:30, a ratio 1:1); "Slide 12: text" is a citation
+    const NUM = '\\d{1,3}(?![\\d/%@]|:\\d|\\.\\d)';
     const RNG = NUM + '(?:\\s?' + DASH + '\\s?' + NUM + ')?';
     // a later number of a list is not one when a unit or a count follows it ("slide 12, 3 times daily")
-    const UNIT = '(?:%|mg|mcg|g|mL|ml|kg|cm|mm|nm|hours?|hrs?|h|days?|weeks?|wks?|months?|years?|yrs?|minutes?|min|times|\\xd7|x|FTU|fingertip|others?|of|to|or more|more|grams?|drops?|doses?|tubes?|patients?|questions?|points?|marks?|items?)';
-    const LIST = RNG + '(?:(?:,\\s?|,?\\s(?:and|or|&)\\s)' + RNG + '(?!\\s?' + UNIT + '\\b))*';
+    const UNIT = '(?:%|mg|mcg|g|mL|ml|kg|cm|mm|nm|hours?|hrs?|h|days?|weeks?|wks?|months?|years?|yrs?|minutes?|min|times|\\xd7|x|FTU|fingertip|others?|of|to|or more|more|grams?|drops?|doses?|tubes?|patients?|questions?|points?|marks?|items?|applications?|tablets?|capsules?|units?|puffs?|sprays?)';
+    // (nor is the first number of a range whose last number has one: "slides 3, 9–11 days" stops after 3, it never links "9" alone)
+    const LIST = RNG + '(?:(?:,\\s?|,?\\s(?:and|or|&)\\s)' + RNG + '(?!\\s?' + UNIT + '\\b|\\s?' + DASH + '\\s?\\d))*';
     const WORD = '(?:[Ss]lides?|SLIDES?|pp?\\.|[Pp]ages?)';
     const RE_FILE = new RegExp('(' + alt(Object.keys(FILE)) + ')(?:\\)?[,:;]?' + SP + '+(?:(' + WORD + ')' + SP + '*)?(' + LIST + '))?', 'g');
     const RE_NAME = new RegExp('(' + alt(Object.keys(NAME)) + ')(?:' + SP + '+deck)?(?:' + SP + '+|' + SP + '*\\(' + SP + '*)(?:(' + WORD + ')' + SP + '*)?(' + LIST + ')', 'g');
@@ -80,8 +110,12 @@ const SLIDE_UI = (() => {
     const PROF_AFTER = /^[\s\xa0]*\((?:Dr\.\s*)?(Smith|Patel|Sikazwe)\)/;
     // before "p. N" / "page N": a page of something that is not a slide deck
     const NOT_DECK = /(?:\b[Cc]hart|\b[Ss]yllabus|\b[Rr]eading|\b[Hh]andout|\b[Tt]extbook|\b[Bb]ook|\b[Aa]ssignment|\b(?:Foye|Katzung|Golan|DiPiro|Goodman|Endotext|Bikle)\b[^;]*|Chapt?\.\s?\d+,?|\bJ Med Chem[^;]*)[\s\xa0,(]*$/;
+    // the same sources named anywhere earlier in the sentence ("The drug chart lists ... on its p.5")
+    const NOT_DECK_WORD = /\b(?:[Cc]harts?|[Ss]yllabus|[Rr]eadings?|[Hh]andouts?|[Tt]extbooks?|[Bb]ooks?|[Aa]ssignments?|Foye|Katzung|Golan|DiPiro|Goodman|Endotext|Bikle|J Med Chem)\b/g;
+    const RE_DECKNAME = new RegExp('(?:^|[^A-Za-z0-9’\'-])(?:' + alt(Object.keys(NAME).filter(k => NAME[k].bare)) + ')(?![A-Za-z0-9’\'-])');   // "DPAW", "PCol" without a number
     const PRINTED = /\bprinted[\s\xa0(]*$/;
     const SENT = /[.!?]["'”’)\]]?\s+(?=[A-Z(“])/g;
+    const ABBR = /(?:\b(?:Dr|vs|Chapt?|No|Fig|al)|\be\.g|\bi\.e)$/;      // a period after one of these does not end a sentence
     const isWordCh = c => !!c && /[A-Za-z0-9’'-]/.test(c);
     const SUN = {Smith: 'sun', Patel: 'p8s'};
     const decksOfProf = p => IDS.filter(id => D[id].prof === p);
@@ -135,41 +169,47 @@ const SLIDE_UI = (() => {
             sun     'sun' | 'p8s': the deck "Sun" means here
             column  true: the text is a cell of a column headed Slide or Page
             chart   true: "p. N" here is a page of the drug chart (the Drug list)
-       links:   [{s, e, deck, n, to, printed, form}]: text[s..e) becomes a button that opens cited
-                number n of `deck` (the citation runs to `to`)
+            breaks  [offset, ...]: where a new element's text starts in a text joined from several
+                    elements ("…of the skin" + "PP 4–6" in a guide bar); such a start is a word start
+       links:   [{s, e, alt, deck, n, to, printed, form}]: text[s..e) becomes a button that opens cited
+                number n of `deck` (the citation runs to `to`); alt: where its slide word or its
+                number starts, after a deck name
        refused: [{s, e, raw, why}]: a citation left as text, with the reason
        decks:   the decks the line names itself, in order */
     function scan(text, ctx){
       ctx = ctx || {};
-      const cand = [], links = [], refused = [], named = [], ctxDecks = ctx.decks || [];
+      const cand = [], links = [], refused = [], named = [], ctxDecks = ctx.decks || [], files = [];
+      const brk = ctx.breaks || [], cut = i => brk.indexOf(i) >= 0;      // a new element's text starts here: a word start
       let m;
       RE_FILE.lastIndex = 0;
       while ((m = RE_FILE.exec(text))) {
         const deck = FILE[m[1]];
         if (named.indexOf(deck) < 0) named.push(deck);
+        files.push(m.index);
         if (m[3] !== undefined) {
           const ls = m.index + m[0].length - m[3].length, ws = m[2] ? text.lastIndexOf(m[2], ls) : ls;
-          cand.push({pri: 0, s: m.index, e: m.index + m[0].length, from: ws, ls, list: m[3], deck, form: 'file name'});
+          cand.push({pri: 0, s: m.index, e: m.index + m[0].length, from: ws, alt: ws, ls, list: m[3], deck, form: 'file name'});
         }
       }
       RE_NAME.lastIndex = 0;
       while ((m = RE_NAME.exec(text))) {
-        if (isWordCh(text[m.index - 1])) continue;
+        if (isWordCh(text[m.index - 1]) && !cut(m.index)) continue;
         const nm = NAME[m[1].replace(/’/g, "'")]; if (!nm) continue;
         const e = m.index + m[0].length, ls = e - m[3].length;
         if (!m[2] && !nm.bare) continue;                                  // "Wound 12" is not a citation; "Wound Care slide 12" is
         if (!m[2] && AFTER_UNIT.test(text.slice(items(m[3], ls)[0].e))) continue;   // "SD 4 weeks"
-        cand.push({pri: 1, s: m.index, e, from: m.index, ls, list: m[3], deck: nm.deck, form: m[2] ? 'deck name + ' + (/^p/i.test(m[2]) ? 'page' : 'slide') : 'deck name + number'});
+        if (!m[2] && /[A-Za-z]/.test(text[e] || '') && !cut(e)) continue;   // "PP 2B" is a name of something else
+        cand.push({pri: 1, s: m.index, e, from: m.index, alt: m[2] ? text.lastIndexOf(m[2], ls) : ls, ls, list: m[3], deck: nm.deck, form: m[2] ? 'deck name + ' + (/^p/i.test(m[2]) ? 'page' : 'slide') : 'deck name + number'});
       }
       RE_BARE.lastIndex = 0;
       while ((m = RE_BARE.exec(text))) {
-        if (/[A-Za-z]/.test(text[m.index - 1] || '')) continue;           // "app. 3"
+        if (/[A-Za-z]/.test(text[m.index - 1] || '') && !cut(m.index)) continue;   // "app. 3"
         const e = m.index + m[0].length, page = /^p/i.test(m[1]);
-        cand.push({pri: 2, s: m.index, e, from: m.index, ls: e - m[2].length, list: m[2], deck: null, page, form: page ? 'bare page' : 'bare slide'});
+        cand.push({pri: 2, s: m.index, e, from: m.index, alt: m.index, ls: e - m[2].length, list: m[2], deck: null, page, form: page ? 'bare page' : 'bare slide'});
       }
       if (ctx.column && (m = RE_COL.exec(text))) {
         const ls = m[0].length - m[1].length;
-        cand.push({pri: 3, s: ls, e: m[0].length, from: ls, ls, list: m[1], deck: null, form: 'Slide column'});
+        cand.push({pri: 3, s: ls, e: m[0].length, from: ls, alt: ls, ls, list: m[1], deck: null, form: 'Slide column'});
       }
       // a deck-naming citation wins over a bare one it overlaps ("PCol slide 12" holds a bare "slide 12")
       cand.sort((a, b) => a.pri - b.pri || a.s - b.s);
@@ -177,6 +217,18 @@ const SLIDE_UI = (() => {
       cand.forEach(c => { if (!kept.some(k => c.s < k.e && k.s < c.e)) kept.push(c); });
       kept.sort((a, b) => a.s - b.s);
       const explicit = [];
+      /* "The drug chart lists a different class on its p.5": a chart, the syllabus, a reading or a
+         textbook is named earlier in the sentence and no deck is named after it, so the page is its page */
+      const otherSource = at => {
+        let from = 0, last = -1, x;
+        SENT.lastIndex = 0;
+        while ((x = SENT.exec(text)) && x.index + x[0].length <= at) if (!ABBR.test(text.slice(0, x.index))) from = x.index + x[0].length;
+        const seg = text.slice(from, at);
+        NOT_DECK_WORD.lastIndex = 0;
+        while ((x = NOT_DECK_WORD.exec(seg))) last = from + x.index;
+        // a deck named after it, with a number or without ("the chart agrees with DPAW; see p. 5"), takes the page back
+        return last >= 0 && !files.some(i => i > last && i < at) && !kept.some(k => k.pri <= 1 && k.s > last && k.s < at) && !RE_DECKNAME.test(text.slice(last, at));
+      };
       kept.forEach(c => {
         const raw = text.slice(c.s, c.e), before = text.slice(Math.max(0, c.s - 60), c.s);
         let deck = c.deck, printed = false, why = '';
@@ -185,12 +237,14 @@ const SLIDE_UI = (() => {
           if (!deck) why = 'two decks are called Sun (Dr. Smith, Dr. Patel) and nothing here says which';
         } else if (deck === null) {
           printed = PRINTED.test(before);
-          if (c.page && !printed && (ctx.chart || NOT_DECK.test(before))) why = 'a page of the chart, the syllabus, a reading or a textbook, not of a slide deck';
+          // a professor named right before it, or "his" / "her" after one professor was named, or a
+          // professor in brackets right after it ("slide 12 (Dr. Patel)")
+          let prof = (PROF_TAIL.exec(before) || [])[1] || null;
+          if (!prof && PRONOUN_TAIL.test(before)) { const ps = profsIn(text.slice(0, c.s)); prof = ps.length ? ps[ps.length - 1] : null; }
+          if (!prof) prof = (PROF_AFTER.exec(text.slice(c.e)) || [])[1] || null;
+          const adjacent = !!prof;
+          if (c.page && !printed && (ctx.chart || NOT_DECK.test(before) || (!adjacent && otherSource(c.s)))) why = 'a page of the chart, the syllabus, a reading or a textbook, not of a slide deck';
           else {
-            // a professor named right before it, or "his" / "her" after one professor was named
-            let prof = (PROF_TAIL.exec(before) || [])[1] || null;
-            if (!prof && PRONOUN_TAIL.test(before)) { const ps = profsIn(text.slice(0, c.s)); prof = ps.length ? ps[ps.length - 1] : null; }
-            const adjacent = !!prof;
             // where the place declares several decks: the one professor named in this sentence, else the block's own
             if (!prof && ctxDecks.length > 1) {
               const ps = profsIn(text.slice(sentenceStart(text, c.s), c.s)).filter((p, i, all) => all.indexOf(p) === i);
@@ -202,6 +256,12 @@ const SLIDE_UI = (() => {
             const carry = last && sentenceStart(text, c.s) <= last.s && fits(last.deck) ? last.deck : null;
             // the place decides; the deck named earlier in the sentence only where the place does not
             deck = place || (carry && (!here.length || here.indexOf(carry) >= 0) ? carry : null);
+            // "PCol slide 44: …; slide 45: …" in a place of the Sun deck (26 slides): a number past the end of the
+            // place's deck is a number of the deck named earlier in the same sentence, when that deck has every one
+            if (deck && deck === place && carry && carry !== deck && !printed && !c.page) {
+              const its = items(c.list, c.ls), has = d => its.every(it => it.a >= 1 && Math.max(it.a, it.b) <= D[d].cited && resolve(d, it.a));
+              if (its.length && its.every(it => Math.min(it.a, it.b) > D[deck].cited) && has(carry)) deck = carry;
+            }
             if (!deck && !why && adjacent && decksOfProf(prof).length === 1) deck = decksOfProf(prof)[0];   // "Dr. Sikazwe's slide 62": he has one deck
             if (!deck && !why) why = !ctxDecks.length ? 'a bare number where no deck is declared'
               : here.length > 1 ? 'a bare number where more than one deck is declared (' + here.join(', ') + ')'
@@ -219,7 +279,7 @@ const SLIDE_UI = (() => {
           const top = printed ? D[deck].pages : D[deck].cited;
           const out = it.a < 1 || Math.max(it.a, it.b) > top;
           if (!n || out) { refused.push({s: it.s, e: it.e, raw: text.slice(it.s, it.e), deck, outside: out, why: out ? 'outside the deck (' + D[deck].label + ' has ' + top + ')' : 'no clean page for this number'}); return; }
-          links.push({s: i === 0 ? c.from : it.s, e: it.e, deck, n, to: it.b > it.a ? it.b : 0, printed, form: c.form});
+          links.push({s: i === 0 ? c.from : it.s, e: it.e, alt: i === 0 ? c.alt : it.s, deck, n, to: it.b > it.a ? it.b : 0, printed, form: c.form});
         });
       });
       return {links, refused, decks: named};
@@ -249,7 +309,7 @@ const SLIDE_UI = (() => {
 
   /* ------------------------------------------------------------- linkifier */
   const D = SLIDES.decks;
-  const SKIP = 'button,a,summary,label,input,select,textarea,option,svg,script,style,code,.slk,.dzcz,.opt,nav,[contenteditable]';
+  const SKIP = 'button,a,summary,label,input,select,textarea,option,svg,script,style,code,.slk,.dzcz,.opt,.clock,nav,[contenteditable]';
   const UNIT_SEL = 'p,li,td,th,dd,dt,figcaption,h2,h3,h4,h5,h6,small,div,section,article,span.ln,span.dlsrc,span.dzsrc,span.wtxt,span.atpg,span.stepwhy';
   const DZPROF = {sm: 'Smith', sk: 'Sikazwe', pa: 'Patel'};
   const SLIDE_HEAD = /^\s*(?:slides?|pages?)\s*(?:;.*)?$/i;
@@ -276,7 +336,27 @@ const SLIDE_UI = (() => {
   /* Diseases: the deck(s) the source line(s) of the nearest block name; inside a professor's
      block, that professor; for the practice patients, the card's deck (SLIDES.sections "dzcases-") */
   function dzCtx(el, view){
-    const blk = el.closest('.dzprof'), prof = blk ? DZPROF[['sm', 'sk', 'pa'].filter(k => blk.classList.contains(k))[0]] || null : null;
+    // a professor's block: .dzprof, or on a card with more than one professor the group .dzgrp.sm|sk|pa (dz_ui.js stepBody)
+    const blk = el.closest('.dzprof,.dzgrp'), prof = blk ? DZPROF[['sm', 'sk', 'pa'].filter(k => blk.classList.contains(k))[0]] || null : null;
+    // a drug panel's "Who should not get it" list has no source line. A line that starts with its conditions
+    // ("Psoriasis / Seborrheic dermatitis: …", written by dz_build.py from the rows of the part that gave the line)
+    // takes the deck the panel's own rows for exactly those conditions name, when they name one deck
+    const av = el.closest('.dzavoid');
+    if (av) {
+      const li = el.closest('li') || el, m = /^([^:]{3,200}): /.exec(txt(li)), want = m ? m[1].split(' / ').map(x => x.trim()) : [];
+      const rows = av.parentElement ? av.parentElement.querySelectorAll('.dzprof.pa .use') : [], src = [];
+      let all = want.length > 0;
+      want.forEach(name => {
+        let hit = false;
+        for (let i = 0; i < rows.length; i++) {
+          const go = rows[i].querySelector('.dzgo');
+          if (go && txt(go).replace(/\s*\(.*?\)/g, '').trim() === name) { hit = true; rows[i].querySelectorAll('.dzsrc').forEach(x => src.push(txt(x))); }
+        }
+        if (!hit) all = false;
+      });
+      const decks = all && src.length ? P.decksNamed(src.join('; ')) : [];
+      return {decks: decks.length === 1 ? decks : [], prof: null};
+    }
     for (let a = el; a && a !== view; a = a.parentElement) {
       const src = [];
       for (let c = a.firstElementChild; c; c = c.nextElementSibling) if (c.classList && c.classList.contains('dzsrc')) src.push(txt(c));
@@ -305,35 +385,74 @@ const SLIDE_UI = (() => {
     else if (id === 'v-diagrams') view.querySelectorAll('figcaption').forEach(f => out.push([f, () => ({decks: []})]));
     else {
       // after an answer: the explanation block and its source line; the exam review; the missed list
-      view.querySelectorAll('.why').forEach(w => { const c = w.querySelector('.cite'); const x = P.questionCtx(c ? txt(c) : ''); out.push([w, () => x]); });
+      view.querySelectorAll('.why').forEach(w => {
+        const c = w.querySelector('.cite'); const x = P.questionCtx(c ? txt(c) : ''); out.push([w, () => x]);
+        // a matching question: the line under each pair stands in the table before the explanation block
+        if (w.parentElement) w.parentElement.querySelectorAll(':scope > table.matchtab .stepwhy').forEach(e => out.push([e, () => x]));
+      });
       view.querySelectorAll('.qbody').forEach(b => {
         if (b.querySelector('.why')) return;
         const c = b.querySelector(':scope > .cite'); if (!c) return;       // a question not yet answered has no source line
         const x = P.questionCtx(txt(c));
         b.querySelectorAll(':scope > .wrow, :scope > .teach, :scope > .cite, :scope > .prose').forEach(e => out.push([e, () => x]));
       });
-      view.querySelectorAll('.missq .mmeta').forEach(e => out.push([e, () => ({decks: []})]));
+      // the missed list: the last line of an entry is the question's own source line, so it gives the place as it
+      // does after an answer; the Answer and You picked lines declare nothing
+      view.querySelectorAll('.missq').forEach(mq => {
+        const ms = mq.querySelectorAll(':scope > .mmeta'), cite = ms[ms.length - 1];
+        ms.forEach(e => { const x = e === cite ? P.questionCtx(txt(e)) : {decks: []}; out.push([e, () => x]); });
+      });
+      // Weak spots, "What to review next": a card shows one question (its stem, why the option picked is not the
+      // answer, the idea). The place is that question's, when the stem shown is the stem of questions of one deck
+      view.querySelectorAll('.plan .pconcept').forEach(pc => {
+        const pq = pc.querySelector(':scope > .pq'), bank = typeof QUESTIONS !== 'undefined' && Array.isArray(QUESTIONS) ? QUESTIONS : [];
+        if (!pq || !bank.length) return;
+        const t = txt(pq), isStem = q => !!q && typeof q.stem === 'string';
+        let qs = bank.filter(q => isStem(q) && q.stem === t);
+        if (!qs.length && t.slice(-1) === '…') qs = bank.filter(q => isStem(q) && q.stem.length > 160 && q.stem.slice(0, 160) === t.slice(0, -1));
+        const xs = qs.map(q => P.questionCtx(q.cite || ''));
+        if (!xs.length || !xs[0].decks.length || xs.some(x => x.decks[0] !== xs[0].decks[0])) return;
+        pc.querySelectorAll(':scope > .pw > .meta, :scope > .pi').forEach(e => out.push([e, () => xs[0]]));
+      });
     }
     return out;
   }
   const headOf = cell => {
     try { const t = cell.closest('table'); return t ? txt(t.querySelectorAll('thead th')[cell.cellIndex]) : ''; } catch (e) { return ''; }
   };
+  /* two text nodes one after the other that read as one run of text: side by side in one element, or parted
+     only by the edge of a slide link this file made or of a jump highlight (neither changes how the text reads) */
+  const SOFT = el => !!el && el.nodeType === 1 && (el.classList.contains('slk') || (el.tagName === 'MARK' && el.classList.contains('jmark')));
+  function sameRun(a, b){
+    let x = a, y = b;
+    while (!x.nextSibling && SOFT(x.parentNode)) x = x.parentNode;
+    while (!y.previousSibling && SOFT(y.parentNode)) y = y.parentNode;
+    return x.nextSibling === y;
+  }
   function linkUnit(unit, ctxOf){
     // the unit's text, with the place of every text node in it
-    const nodes = [], w = document.createTreeWalker(unit, 4 /* text */);
-    let text = '', n;
+    const nodes = [], breaks = [], w = document.createTreeWalker(unit, 4 /* text */);
+    let text = '', n, prev = null;
     while ((n = w.nextNode())) {
       const p = n.parentElement;
       if (!p || p.closest('svg,script,style')) continue;
+      // the text is joined with nothing in between, so that every offset is an offset in a text node; where the
+      // next text node belongs to another element ("…of the skin" | "PP 4–6" in a guide bar) its start is
+      // recorded: there a deck name starts a word although a letter stands before it in the joined text
+      if (prev && !sameRun(prev, n)) breaks.push(text.length);
       nodes.push({n, at: text.length, skip: !!p.closest(SKIP)});
-      text += n.data;
+      text += n.data; prev = n;
     }
     nodes.forEach(x => mark(x.n));
     if (!/\d/.test(text)) return 0;
     const ctx = Object.assign({decks: []}, ctxOf(unit) || {});
+    if (breaks.length) ctx.breaks = breaks;
+    // a structure strip in an explanation ("The structures side by side"): its captions are the Atlas notes, which
+    // cite Dr. Sikazwe's deck whatever deck the question is filed under (the row "at-", as on the Atlas tab)
+    const strip = !!unit.closest('.cmpcell');
+    if (strip) { const at = P.sectionDeck('at-') || {decks: []}; ctx.decks = at.decks; ctx.sun = at.sun || null; ctx.prof = null; }
     // a figure caption: the one deck it names; a table cell: the one deck its column heading names
-    const cap = unit.closest('figcaption');
+    const cap = strip ? null : unit.closest('figcaption');
     if (cap) { const d = P.decksNamed(txt(cap)); if (d.length === 1) ctx.decks = d; }
     const cell = unit.tagName === 'TD' ? unit : unit.closest('td');
     if (cell) {
@@ -345,10 +464,18 @@ const SLIDE_UI = (() => {
     let made = 0;
     // from the end, so the offsets of earlier links stay true
     res.links.slice().sort((a, b) => b.s - a.s).forEach(l => {
-      const x = nodes.filter(k => k.at <= l.s && l.e <= k.at + k.n.data.length)[0];
+      let s = l.s, x = nodes.filter(k => k.at <= s && l.e <= k.at + k.n.data.length)[0];
+      if (!x && l.alt > l.s) {
+        // the deck name is under a highlight (jump_ui.js wraps the words it found in <mark class="jmark">, so
+        // "Warts (slide 4" is two text nodes): the citation is linked from its slide word or its number on, when
+        // that part is in one text node and nothing but highlights splits the citation
+        const over = nodes.filter(k => k.at < l.e && l.s < k.at + k.n.data.length), last = over[over.length - 1];
+        const hl = k => !!k.n.parentElement.closest('mark.jmark');
+        if (last && last.at <= l.alt && over.every((k, i) => !i || hl(k) || hl(over[i - 1]))) { s = l.alt; x = last; }
+      }
       if (!x || x.skip || !x.n.parentNode) return;               // split over two nodes, or inside a control: left as text
       const r = P.resolve(l.deck, l.n, l.printed); if (!r) return;
-      const mid = x.n.splitText(l.s - x.at); mid.splitText(l.e - l.s);
+      const mid = x.n.splitText(s - x.at); mid.splitText(l.e - s);
       // a span with the role of a button: it wraps inside a line as the text did (a <button> is one
       // unbreakable box, which re-wrapped lines and changed the height of the page after it was drawn)
       const b = document.createElement('span');
@@ -357,7 +484,9 @@ const SLIDE_UI = (() => {
       if (l.to) b.setAttribute('data-to', l.to);
       if (l.printed) b.setAttribute('data-printed', '1');
       b.setAttribute('aria-haspopup', 'dialog');
-      b.setAttribute('aria-label', mid.data + ': open ' + D[r.deck].label + ', ' + D[r.deck].unit.toLowerCase() + ' ' + P.citedOf(r.deck, r.page));
+      // its name is its own text (a heading that holds links is then read as it is written); where it leads is the description
+      const dest = 'Open ' + D[r.deck].label + ', ' + D[r.deck].unit.toLowerCase() + ' ' + P.citedOf(r.deck, r.page);
+      b.setAttribute('title', dest); b.setAttribute('aria-description', dest);
       mid.parentNode.insertBefore(b, mid); b.appendChild(mid);
       mark(mid); if (b.previousSibling && b.previousSibling.nodeType === 3) mark(b.previousSibling); if (b.nextSibling && b.nextSibling.nodeType === 3) mark(b.nextSibling);
       made++;
@@ -516,18 +645,37 @@ dialog.slv::backdrop{background:rgba(0,0,0,.55)}
   const soon = () => { if (!timer) timer = setTimeout(run, 80); };
   try {
     main = document.querySelector('main');
-    const style = document.createElement('style'); style.textContent = CSS; document.head.appendChild(style);
+    // under a structure of an explanation the core draws every span of the caption as a block of small dim text
+    // (".cmpcell figcaption span"); a citation there stays in its line and looks like the other slide links
+    const STRIP_CSS = '.cmpcell figcaption span.slk{display:inline;margin:0;font-size:inherit;color:var(--accent,#2F5FA8)}\n@media print{.cmpcell figcaption span.slk{color:inherit}}\n';
+    const style = document.createElement('style'); style.textContent = CSS + STRIP_CSS; document.head.appendChild(style);
+    let heldKey = null;                                           // the key whose press opened the viewer, until it is let go
     // first in line: a slide link does nothing but open its slide
     const act = e => {
       const b = e.target && e.target.closest ? e.target.closest('.slk') : null;
       if (!b || (e.type === 'keydown' && e.key !== 'Enter' && e.key !== ' ')) return;
       e.preventDefault(); e.stopPropagation();
-      try { open(b.getAttribute('data-deck'), +b.getAttribute('data-n'), +b.getAttribute('data-to') || 0, b.hasAttribute('data-printed'), b); }
+      if (e.type === 'keydown' && e.repeat) return;               // a key held down opens the slide once
+      // a range of printed slide numbers ("printed slides 24–33") opens without the viewer's "Cited: pages N–M" line:
+      // that line counts by the pages of the file, which from printed slide 22 on run one higher
+      const printed = b.hasAttribute('data-printed');
+      try { if (open(b.getAttribute('data-deck'), +b.getAttribute('data-n'), printed ? 0 : +b.getAttribute('data-to') || 0, printed, b) && e.type === 'keydown') heldKey = e.key; }
       catch (err) { console.error('The slide could not be opened.', err); }
     };
+    // the key press that opened the viewer is over when the key is let go: until then its repeats (Enter held down)
+    // and its release (Space) do not press Close, on which the focus now stands
+    const heldGuard = e => {
+      if (heldKey === null || e.key !== heldKey) { if (e.type === 'keydown' && !e.repeat) heldKey = null; return; }
+      const inViewer = !!V.dlg && !!e.target && V.dlg.contains(e.target);
+      if (e.type === 'keyup') { heldKey = null; if (inViewer) e.preventDefault(); }
+      else if (e.repeat) { if (inViewer) e.preventDefault(); }
+      else heldKey = null;                                        // a new press of the same key
+    };
     document.addEventListener('click', act, true);
+    document.addEventListener('keydown', heldGuard, true);      // before act: a new press ends the one that opened the viewer
+    document.addEventListener('keyup', heldGuard, true);
     document.addEventListener('keydown', act, true);            // Enter and Space, as on a button
-    // a change inside a control is never a citation (dianarr_ui.js rewrites its Listen buttons every frame)
+    // a change inside a control, or the tick of the practice-exam clock, is never a citation (SKIP): it starts no pass
     mo = new MutationObserver(recs => {
       for (let i = 0; i < recs.length; i++) {
         const t = recs[i].target, el = t && (t.nodeType === 1 ? t : t.parentElement);
