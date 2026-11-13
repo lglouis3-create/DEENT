@@ -1,0 +1,3957 @@
+{
+ "cards": [
+  {
+   "id": "sun-protection",
+   "name": "Sun protection and sunscreen",
+   "group": "selfcare",
+   "lectures": "Smith sun recording (Exam 1) · Sikazwe 11/04 · Patel 11/12",
+   "topics": [
+    "p8s-prot",
+    "p8s-risk",
+    "l3c-spf",
+    "l3c-prod"
+   ],
+   "short": [
+    "Everyone wears sunscreen; highest risk is Fitzpatrick I and II or a photosensitizing drug.",
+    "Dr. Patel's answer: broad spectrum, SPF ≥ 15 (prefer 30+), water resistant for swimming or sweating.",
+    "Under 6 months: no sunscreen; clothing, hat and shade.",
+    "1 ounce, 15 minutes before; reapply every 40–80 minutes and after towel drying.",
+    "Dr. Smith's numbers differ: reapply every 90–120 minutes; SPF by patient group."
+   ],
+   "steps": [
+    {
+     "title": "Who is at risk",
+     "profs": [
+      "pa",
+      "sm"
+     ],
+     "q": "Which skin types are at highest risk, and which photosensitizing drugs did she name?",
+     "src": "Patel Sun slides 8–11, 13; 11/12 lecture T@49012–50187",
+     "blocks": [
+      {
+       "k": "facts",
+       "rows": [
+        [
+         "Who wears it",
+         "{{Everyone}} should wear sunscreen"
+        ],
+        [
+         "UV radiation causes",
+         [
+          "Premature skin aging",
+          "Skin cancers"
+         ]
+        ],
+        [
+         "Highest risk",
+         [
+          "Fair skin: [[fitz|Fitzpatrick]] {{I and II}}",
+          "Blonde, red or light brown hair; freckles",
+          "One or more serious or {{blistering sunburns}}",
+          "{{Tanning beds}}",
+          "A family member with {{melanoma}}",
+          "{{Photosensitizing}} or immunosuppressive medications",
+          "A UV-induced skin disorder; an autoimmune disease"
+         ]
+        ]
+       ]
+      },
+      {
+       "k": "grades",
+       "rows": [
+        [
+         "I",
+         "Very fair: {{always burns, cannot tan}}"
+        ],
+        [
+         "II",
+         "Fair: {{usually burns}}, sometimes tans"
+        ],
+        [
+         "III",
+         "Medium: sometimes burns, usually tans"
+        ],
+        [
+         "IV",
+         "Olive: rarely burns, always tans"
+        ],
+        [
+         "V",
+         "Brown: rarely burns, tans easily"
+        ],
+        [
+         "VI",
+         "Dark brown: {{never burns}}, always tans"
+        ]
+       ]
+      },
+      {
+       "k": "sub",
+       "text": "Photosensitizing drugs she named"
+      },
+      {
+       "k": "pts",
+       "items": [
+        "★ {{Doxycycline}} and the tetracyclines: \"the most common photosensitizing antibiotic\"",
+        "{{Ibuprofen}} (NSAIDs)",
+        "{{Combined oral contraceptives}} (her case patient takes Yazmin)",
+        "{{Retinoids}}: acitretin, isotretinoin",
+        "★ \"Highlight the ones that we've talked about to treat our derm conditions\"; the rest of slide 10 is a long list she did not read"
+       ]
+      },
+      {
+       "k": "prof",
+       "p": "sm",
+       "rows": [
+        [
+         "Her photosensitizers",
+         "Doxycycline, tazarotene, coal tar, methoxsalen (her pharmacology slides)"
+        ],
+        [
+         "Which UV",
+         "UVA causes most drug phototoxic reactions (Sun slide 8)"
+        ]
+       ]
+      },
+      {
+       "k": "fig",
+       "label": "Dr. Smith's guide section: drugs that cause photosensitivity",
+       "jump": "guide:gobj-sun-photo"
+      }
+     ]
+    },
+    {
+     "title": "Choose the sunscreen",
+     "profs": [
+      "pa",
+      "sm",
+      "sk"
+     ],
+     "q": "What three things does Dr. Patel's sunscreen answer contain, and which two ingredients does she prefer?",
+     "src": "Patel Sun slides 14–20; 11/12 lecture T@53069–56238; Smith Sun slides 15–17, 20–25; Sikazwe DPAW pages 61–66",
+     "blocks": [
+      {
+       "k": "facts",
+       "rows": [
+        [
+         "Spectrum",
+         "★ [[broad|Broad spectrum]]: {{UVA and UVB}}"
+        ],
+        [
+         "[[spf|SPF]]",
+         "★ {{≥ 15}} \"for exam purposes\"; prefer {{30+}}"
+        ],
+        [
+         "SPF measures",
+         "{{UVB}} protection only"
+        ],
+        [
+         "UVB blocked",
+         "SPF 15: {{93%}} · SPF 30: {{97%}} · SPF 50: {{98%}} · SPF 100: {{99%}}"
+        ],
+        [
+         "Activity",
+         "{{Water resistant}} for swimming or sweating"
+        ],
+        [
+         "Preferred",
+         "★ <<zinc-oxide|Zinc oxide>>, <<titanium-dioxide|titanium dioxide>>: physical, [[grase|GRASE]]"
+        ],
+        [
+         "Not GRASE",
+         "{{Aminobenzoic acid (PABA)}}, trolamine salicylate"
+        ]
+       ]
+      },
+      {
+       "k": "line",
+       "label": "Sensitive skin or past reaction",
+       "title": "A physical sunscreen",
+       "drugs": [
+        "zinc-oxide",
+        "titanium-dioxide"
+       ],
+       "pts": [
+        "Avoid {{PABA}}",
+        "Chemical ingredients \"tend to irritate the skin\""
+       ]
+      },
+      {
+       "k": "line",
+       "label": "Photosensitizing drug or sun-induced disorder",
+       "title": "Broad spectrum, and as little sun as possible",
+       "drugs": [
+        "sunscreen-chemical",
+        "titanium-dioxide"
+       ],
+       "pts": [
+        "A product that mixes chemical and physical ingredients: avobenzone with padimate O or octocrylene, meradimate, titanium dioxide, benzophenones",
+        "Sunscreen and protective clothing {{every day}}"
+       ]
+      },
+      {
+       "k": "line",
+       "label": "Swimming or sweating",
+       "title": "Water resistant, broad spectrum",
+       "drugs": [
+        "sunscreen-chemical",
+        "zinc-oxide"
+       ],
+       "pts": [
+        "★ Her poll answer: water resistant, broad spectrum, SPF 50",
+        "Reapply more often"
+       ]
+      },
+      {
+       "k": "prof",
+       "p": "sm",
+       "rows": [
+        [
+         "SPF by group",
+         "Types I–II: > 30 · lupus: > 40 · photosensitizing drugs: > 45 · types III–V: 15 to 24 (Sun slide 17)"
+        ],
+        [
+         "Higher SPF",
+         "SPF 15 is acceptable; a higher SPF adds little UVB blocking (Sun slide 15)"
+        ],
+        [
+         "Most reactions",
+         "PABA, avobenzone, oxybenzone (Sun slide 25)"
+        ]
+       ]
+      },
+      {
+       "k": "prof",
+       "p": "sk",
+       "rows": [
+        [
+         "UVA filters",
+         "Avobenzone (dibenzoylmethane), meradimate (anthranilate) (DPAW page 62)"
+        ],
+        [
+         "UVB filters",
+         "Octinoxate (cinnamate); PABA and padimate O; homosalate and octisalate (salicylates); ensulizole (DPAW pages 63–64)"
+        ],
+        [
+         "UVB and UVA",
+         "Zinc oxide and titanium dioxide (metal oxides, reflect and scatter); benzophenones such as oxybenzone; octocrylene; bemotrizinol (DPAW pages 61, 65–66)"
+        ],
+        [
+         "Link to broad spectrum",
+         "Dr. Patel's conclusion: \"sunscreen ingredients are UV length specific\" (slide 55). Dr. Smith: anthranilates are used only in combination products, for broad UV coverage (Sun slide 24)"
+        ]
+       ]
+      },
+      {
+       "k": "fig",
+       "label": "Figure: sunblocks reflect, sunscreens absorb (Dr. Smith and Dr. Sikazwe)",
+       "jump": "guide:fig-block-vs-screen"
+      },
+      {
+       "k": "fig",
+       "label": "Dr. Smith's guide section: MED, SPF, broad spectrum and substantivity",
+       "jump": "guide:gobj-sun-4"
+      }
+     ]
+    },
+    {
+     "title": "Who does not get sunscreen",
+     "profs": [
+      "pa"
+     ],
+     "q": "Which two groups are excluded from sunscreen, and what does an infant get instead?",
+     "src": "Patel Sun slides 13, 19; 11/12 lecture T@51824, T@66129–66269",
+     "blocks": [
+      {
+       "k": "facts",
+       "rows": [
+        [
+         "Age",
+         "★ Under {{6 months}}"
+        ],
+        [
+         "Instead",
+         "{{Protective clothing}}, a hat, shade; restrict sunlight"
+        ],
+        [
+         "Allergy",
+         "Allergy to all sunscreen ingredients (slide); she said \"any of the sunscreen ingredients\""
+        ],
+        [
+         "Stop the product",
+         "Redness, itching, rash or exaggerated sunburn"
+        ]
+       ]
+      },
+      {
+       "k": "pts",
+       "items": [
+        "★ Her poll: a four-month-old does not get the mother's sunscreen",
+        "★ \"Remember, 6 months of age, OK, so not 7, not 8\"",
+        "Exactly 6 months is not settled: slide 13 excludes \"< 6 months\"; slide 19 reads \"children > 6 months\""
+       ]
+      },
+      {
+       "k": "prof",
+       "p": "sm",
+       "rows": [
+        [
+         "Reaction to a sunscreen",
+         "Rash, vesicles, hives or exaggerated sunburn: refer (Sun slide 25)"
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Apply it and counsel",
+     "profs": [
+      "pa",
+      "sm",
+      "sk"
+     ],
+     "q": "How much sunscreen, how long before the sun, and how often is it reapplied (Dr. Patel's numbers, then Dr. Smith's)?",
+     "src": "Patel Sun slides 12, 21, 23, 36–37; 11/12 lecture T@66751; Smith Sun slides 17, 19, 21; Sikazwe DPAW pages 62, 64",
+     "blocks": [
+      {
+       "k": "facts",
+       "rows": [
+        [
+         "Amount",
+         "★ Adult: about {{1 ounce}} over all exposed skin"
+        ],
+        [
+         "Timing",
+         "★ {{15 minutes}} before UV exposure"
+        ],
+        [
+         "Reapply",
+         "★ Every {{40–80 minutes}} (as labelled); after moisture or {{towel drying}}"
+        ],
+        [
+         "More often",
+         "Swimming, sweating, or a product that is not water resistant"
+        ],
+        [
+         "Keep away from",
+         "Eyes and mucus membranes"
+        ],
+        [
+         "Why people burn",
+         "Not applying enough, often enough, evenly"
+        ],
+        [
+         "Product care",
+         "Check the expiration date; keep it out of direct sunlight"
+        ]
+       ]
+      },
+      {
+       "k": "map",
+       "title": "Same point, each professor's number",
+       "rows": [
+        [
+         "Reapply",
+         "Patel: every 40–80 minutes (slides 21, 36). Smith: every 90–120 minutes (Sun slide 17; \"usually\" in her recording). Smith also: a physical sunblock protects less after 2 hours of direct sun (Sun slide 21). Sikazwe: avobenzone photodegrades with a half-life of about 2 hours, reapply every 2 hours (DPAW page 62)"
+        ],
+        [
+         "SPF",
+         "Patel: ≥ 15 for everyone, prefer 30+ (slide 15). Smith: by group, > 30, > 40, > 45 or 15–24 (Sun slide 17)"
+        ],
+        [
+         "Amount and timing",
+         "Patel: 1 ounce, 15 minutes before. Smith: \"correct amount at correct time\", no figure"
+        ],
+        [
+         "UVB range",
+         "Patel's figure: 280–320 nm (slide 7). Smith: 290–320 nm. Sikazwe: 280–315 nm"
+        ],
+        [
+         "After swimming",
+         "Patel: reapply after moisture or towel drying. Sikazwe: ensulizole is water soluble, reapply after swimming (DPAW page 64)"
+        ]
+       ],
+       "src": "Reference: where Dr. Smith's and Dr. Patel's lectures differ"
+      },
+      {
+       "k": "fig",
+       "label": "Reference table: Dr. Smith against Dr. Patel on sun exposure",
+       "jump": "ref:ref-p8-smithpatel"
+      },
+      {
+       "k": "sub",
+       "text": "Sun safety without a product"
+      },
+      {
+       "k": "pts",
+       "items": [
+        "Limit sun between {{10 am and 4 pm}} (both professors)",
+        "A cloudy or overcast day is {{not protective}}; check the UV index",
+        "Hat with a wide brim ({{4 inches}})",
+        "Tight-weave or high-SPF clothing; sunglasses with UV protection and side panels",
+        "Shade or an umbrella; no tanning beds",
+        "Snow and sand reflect UV radiation"
+       ]
+      },
+      {
+       "k": "facts",
+       "rows": [
+        [
+         "Vitamin D",
+         "Daily broad-spectrum sunscreen does {{not}} compromise vitamin D status in healthy people"
+        ],
+        [
+         "Suspicious lesion",
+         "Have a health care provider look at it"
+        ]
+       ]
+      }
+     ]
+    }
+   ],
+   "patients": [
+    {
+     "t": "A 21-year-old college student with Fitzpatrick type II skin takes Yazmin and spends weekends at the beach. She asks what to use every day to prevent skin cancer.",
+     "q": "What do you recommend?",
+     "o": [
+      "Water resistant, broad spectrum sunscreen, SPF 10",
+      "Water resistant sunscreen, SPF 30, not broad spectrum",
+      "Water resistant, broad spectrum sunscreen, SPF 50",
+      "Clothing and a hat only, with no sunscreen"
+     ],
+     "a": 2,
+     "w": "Her poll retold: the answer has all three parts, broad spectrum, SPF of at least 15 and water resistance for the beach.",
+     "x": {
+      "Water resistant, broad spectrum sunscreen, SPF 10": "SPF 10 is below her minimum of SPF 15.",
+      "Water resistant sunscreen, SPF 30, not broad spectrum": "Without broad spectrum the product has no stated UVA coverage.",
+      "Clothing and a hat only, with no sunscreen": "Everyone should wear sunscreen; she is 21 and has no allergy, so she is not excluded."
+     }
+    },
+    {
+     "t": "The same woman asks whether she can put her sunscreen on her four-month-old son before a walk.",
+     "q": "What do you tell her?",
+     "o": [
+      "Apply it twice daily before sun exposure",
+      "Protective clothing and restricted sunlight",
+      "Wait until he is older than 7 months",
+      "Use half the adult amount on exposed skin"
+     ],
+     "a": 1,
+     "w": "Her poll retold: under 6 months of age is excluded from sunscreen, so the infant is protected with clothing, a hat and shade.",
+     "x": {
+      "Apply it twice daily before sun exposure": "He is under 6 months, so sunscreen is not used.",
+      "Wait until he is older than 7 months": "The age on her slide is 6 months: \"not 7, not 8\".",
+      "Use half the adult amount on exposed skin": "No amount is recommended under 6 months."
+     }
+    },
+    {
+     "t": "A 30-year-old man had a rash from a sunscreen last summer and has sensitive skin. He will be gardening this weekend.",
+     "q": "Which product fits him?",
+     "o": [
+      "A broad spectrum sunscreen with oxybenzone",
+      "A broad spectrum sunscreen with PABA",
+      "A broad spectrum sunscreen with zinc oxide",
+      "A broad spectrum sunscreen with avobenzone"
+     ],
+     "a": 2,
+     "w": "With sensitive skin or a previous allergic reaction she avoids PABA and considers a GRASE physical sunscreen: zinc oxide or titanium dioxide.",
+     "x": {
+      "A broad spectrum sunscreen with oxybenzone": "Oxybenzone is a chemical ingredient; chemical ingredients \"tend to irritate the skin\".",
+      "A broad spectrum sunscreen with PABA": "PABA is the ingredient her slide tells sensitive skin to avoid, and it is not GRASE.",
+      "A broad spectrum sunscreen with avobenzone": "Avobenzone is a chemical ingredient; the physical ingredients are preferred for him."
+     }
+    },
+    {
+     "t": "A 17-year-old started doxycycline for acne last week. The family leaves for a lake trip tomorrow, and he will swim most of the day.",
+     "q": "What do you counsel?",
+     "o": [
+      "Sunscreen is not needed while he is in the water, only on shore",
+      "Sunscreen and protective clothing every day; reapply after towel drying",
+      "Sunscreen once each morning, 15 minutes before the sun; no reapplication",
+      "Stop doxycycline for the days at the lake, then restart at home"
+     ],
+     "a": 1,
+     "w": "Doxycycline is the photosensitizing antibiotic she named. Her slide: on a photosensitizing drug, sunscreen and protective clothing every day, reapplied as instructed.",
+     "x": {
+      "Sunscreen is not needed while he is in the water, only on shore": "Water does not protect; a water resistant product is reapplied more often when swimming.",
+      "Sunscreen once each morning, 15 minutes before the sun; no reapplication": "The timing is right, but one application does not last: every 40–80 minutes and after towel drying.",
+      "Stop doxycycline for the days at the lake, then restart at home": "Her slide counsels sun protection for a photosensitizing drug; it does not stop the drug."
+     }
+    },
+    {
+     "t": "A 40-year-old woman applies a water resistant, broad spectrum SPF 30 sunscreen at 9:45 am for a 10 am pool party.",
+     "q": "By Dr. Patel's slides, how often is it reapplied?",
+     "o": [
+      "Every 40–80 minutes, and after towel drying",
+      "Every 90–120 minutes, and after towel drying",
+      "Once at midday, because it is water resistant",
+      "Every 4 hours, and after swimming"
+     ],
+     "a": 0,
+     "w": "Dr. Patel's slides 21 and 36: every 40–80 minutes as labelled, and after moisture or towel drying.",
+     "x": {
+      "Every 90–120 minutes, and after towel drying": "90–120 minutes is Dr. Smith's Exam 1 number, not Dr. Patel's.",
+      "Once at midday, because it is water resistant": "A water resistant product is still reapplied at least every 40–80 minutes.",
+      "Every 4 hours, and after swimming": "No source gives 4 hours."
+     }
+    }
+   ],
+   "numbers": [
+    [
+     "SPF ≥ 15",
+     "Dr. Patel's minimum \"for exam purposes\"; prefer 30+",
+     "Patel Sun slide 15; T@53466"
+    ],
+    [
+     "93% / 97% / 98% / 99%",
+     "UVB blocked by SPF 15 / 30 / 50 / 100",
+     "Patel Sun slide 15"
+    ],
+    [
+     "< 6 months",
+     "no sunscreen",
+     "Patel Sun slide 13"
+    ],
+    [
+     "1 ounce",
+     "adult amount over exposed skin",
+     "Patel Sun slides 21, 36"
+    ],
+    [
+     "15 minutes",
+     "before UV exposure",
+     "Patel Sun slide 21"
+    ],
+    [
+     "40–80 minutes",
+     "Dr. Patel's reapplication interval",
+     "Patel Sun slides 21, 36"
+    ],
+    [
+     "90–120 minutes",
+     "Dr. Smith's reapplication interval",
+     "Smith Sun slide 17"
+    ],
+    [
+     "> 30 / > 40 / > 45 / 15–24",
+     "Dr. Smith's SPF: types I–II / lupus / photosensitizing drugs / types III–V",
+     "Smith Sun slide 17"
+    ],
+    [
+     "10 am to 4 pm",
+     "high-risk hours (both professors)",
+     "Patel Sun slides 12, 36; Smith Sun slide 8"
+    ],
+    [
+     "4 inches",
+     "hat brim",
+     "Patel Sun slide 12"
+    ],
+    [
+     "0.5 ng/mL",
+     "FDA plasma threshold for absorbed sunscreen ingredients; oxybenzone highest",
+     "Patel Sun slide 20; Smith Sun slide 25"
+    ]
+   ]
+  },
+  {
+   "id": "sunburn",
+   "name": "Sunburn",
+   "group": "selfcare",
+   "lectures": "Patel 11/12 · Smith sun recording (Exam 1)",
+   "topics": [
+    "p8s-burn"
+   ],
+   "short": [
+    "Symptoms start about 4 hours after exposure; redness peaks at about 24 hours; up to 5 days.",
+    "Refer: large areas of blistering, fever, extreme pain, confusion, vision changes, infection.",
+    "Pain: a systemic analgesic for the first 1–2 days.",
+    "Dryness: a skin protectant, started after 24 hours. Aloe vera on intact skin.",
+    "Not recommended: first-aid antiseptics and topical anesthetics."
+   ],
+   "steps": [
+    {
+     "title": "Cause and timing",
+     "profs": [
+      "pa",
+      "sm"
+     ],
+     "q": "When do sunburn symptoms start, when does the redness peak, and how long can it last?",
+     "src": "Patel Sun slide 24; 11/12 lecture T@58911–59161; Smith Sun slide 11",
+     "blocks": [
+      {
+       "k": "facts",
+       "rows": [
+        [
+         "Cause",
+         "UV light: peripheral vasodilation in the epidermis and an inflammatory reaction"
+        ],
+        [
+         "Symptoms start",
+         "About {{4 hours}} after exposure"
+        ],
+        [
+         "[[erythema|Erythema]] peaks",
+         "At around {{24 hours}}"
+        ],
+        [
+         "Lasts",
+         "Up to {{5 days}}"
+        ]
+       ]
+      },
+      {
+       "k": "prof",
+       "p": "sm",
+       "rows": [
+        [
+         "Reddening peaks",
+         "At 12 to 24 hours (Sun slide 11)"
+        ],
+        [
+         "Severe sunburn",
+         "A second-degree burn with blisters; fever, chills, weakness, shock (Sun slide 11)"
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Self-care, or refer?",
+     "profs": [
+      "pa"
+     ],
+     "q": "Name the exclusions for self-treatment of a sunburn.",
+     "src": "Patel Sun slides 30, 34; 11/12 lecture T@64695",
+     "blocks": [
+      {
+       "k": "pts",
+       "items": [
+        "{{Large areas of blistering}}",
+        "{{Fever}}",
+        "{{Extreme pain}}",
+        "Headache or {{confusion}}",
+        "Lightheadedness or {{vision changes}}",
+        "Severe swelling",
+        "Signs of infection: red areas or streaking that move away from open blisters; {{pus}} from open blisters"
+       ]
+      },
+      {
+       "k": "facts",
+       "rows": [
+        [
+         "Worse",
+         "Refer if the burn has progressed or worsened after {{24–48 hours}}"
+        ],
+        [
+         "Not healed",
+         "Refer if not healed in {{7 days}}"
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Treat it: match the product to the symptom",
+     "profs": [
+      "pa"
+     ],
+     "q": "What is given for pain, what for dryness and when does it start, and which two product classes are not recommended?",
+     "src": "Patel Sun slides 29, 31–33; 11/12 lecture T@61876–65406",
+     "blocks": [
+      {
+       "k": "facts",
+       "rows": [
+        [
+         "Goals",
+         [
+          "Hydration",
+          "Relieve pain",
+          "Physical protection",
+          "Less chance of infection or scarring"
+         ]
+        ]
+       ]
+      },
+      {
+       "k": "line",
+       "label": "First",
+       "title": "Non-drug: cool water",
+       "drugs": [],
+       "pts": [
+        "Burn within the past {{20 minutes}}: immerse in cool water or use cool wet cloths",
+        "Then any combination of the products below, by symptom and patient preference"
+       ]
+      },
+      {
+       "k": "line",
+       "label": "Pain, redness, swelling",
+       "title": "Systemic analgesic",
+       "drugs": [
+        "systemic-analgesics"
+       ],
+       "pts": [
+        "★ Her poll answer for \"pain and tenderness\": {{oral ibuprofen}}",
+        "Decreases pain, erythema and edema",
+        "Acts longer than a topical anesthetic",
+        "Use for the first {{1–2 days}}",
+        "Slide: \"prefer one with anti-inflammatory properties (NSAIDs, APAP)\"; she said \"it could be Tylenol, it could be ibuprofen\""
+       ]
+      },
+      {
+       "k": "line",
+       "label": "Dryness, irritation",
+       "title": "Skin protectant",
+       "drugs": [
+        "skin-protectants"
+       ],
+       "pts": [
+        "Cocoa butter, petrolatum",
+        "As often as needed",
+        "Start {{after 24 hours}}"
+       ]
+      },
+      {
+       "k": "line",
+       "label": "Alternative",
+       "title": "Aloe vera",
+       "drugs": [
+        "aloe-vera"
+       ],
+       "pts": [
+        "Topically, on {{intact}} skin",
+        "May decrease pain by inhibiting {{bradykinin}}",
+        "{{Not}} FDA-approved for burn treatment",
+        "No internal use"
+       ]
+      },
+      {
+       "k": "line",
+       "label": "Not recommended",
+       "title": "First-aid antiseptics and topical anesthetics",
+       "drugs": [
+        "antiseptics",
+        "topical-anesthetics"
+       ],
+       "pts": [
+        "★ \"Be careful that you're not recommending these products\"",
+        "If a topical anesthetic is used anyway: {{1–2% BSA}} of intact skin, no more than {{3 to 4}} times a day"
+       ],
+       "warn": "Topical anesthetics may cause a hypersensitivity reaction and systemic symptoms."
+      },
+      {
+       "k": "facts",
+       "rows": [
+        [
+         "Next time",
+         "Broad spectrum sunscreen, SPF ≥ 15, water resistant for water activities"
+        ]
+       ]
+      }
+     ]
+    }
+   ],
+   "patients": [
+    {
+     "t": "A 21-year-old woman was at the beach all weekend without sunscreen. Pain and redness on the face, shoulders and upper chest have increased for one day. No vesicles, no peeling; cold showers helped. She takes Yazmin.",
+     "q": "What do you recommend for the pain and tenderness?",
+     "o": [
+      "Oral ibuprofen",
+      "Topical bacitracin",
+      "Topical hydrocortisone",
+      "Topical benzocaine"
+     ],
+     "a": 0,
+     "w": "Her poll: a systemic analgesic treats the pain and tenderness, for the first 1–2 days (\"key terms, pain and tenderness\").",
+     "x": {
+      "Topical bacitracin": "An antibiotic does not treat pain, and her skin is intact.",
+      "Topical hydrocortisone": "Hydrocortisone is not on her sunburn treatment slides.",
+      "Topical benzocaine": "Topical anesthetics are not recommended for sunburn."
+     }
+    },
+    {
+     "t": "A 35-year-old man was sunburned two days ago. The pain has settled, and the skin on his shoulders is now dry and irritated. The skin is intact.",
+     "q": "What do you recommend?",
+     "o": [
+      "Petrolatum, as often as needed",
+      "A first-aid antiseptic spray",
+      "Lidocaine spray over both shoulders",
+      "Aloe vera juice by mouth"
+     ],
+     "a": 0,
+     "w": "Dryness and irritation are treated with a skin protectant (cocoa butter, petrolatum), started after 24 hours and used as often as needed.",
+     "x": {
+      "A first-aid antiseptic spray": "First-aid antiseptics are not recommended for sunburn.",
+      "Lidocaine spray over both shoulders": "Topical anesthetics are not recommended for sunburn; if used, only on small areas (1–2% BSA).",
+      "Aloe vera juice by mouth": "Aloe vera is used topically; internal use is avoided."
+     }
+    },
+    {
+     "t": "A 26-year-old woman fell asleep by the pool yesterday. Her back has large areas of blistering, she has a temperature of 101 °F, and she feels lightheaded.",
+     "q": "What do you recommend?",
+     "o": [
+      "Oral ibuprofen for 1–2 days",
+      "Cool wet cloths, then petrolatum",
+      "Aloe vera gel on the blisters",
+      "Referral to a physician"
+     ],
+     "a": 3,
+     "w": "Large areas of blistering, fever and lightheadedness are each exclusions for self-treatment.",
+     "x": {
+      "Oral ibuprofen for 1–2 days": "An analgesic fits a sunburn without exclusions; she has three.",
+      "Cool wet cloths, then petrolatum": "Cool water is for a burn in the past 20 minutes, and self-care is excluded here.",
+      "Aloe vera gel on the blisters": "Aloe vera is for intact skin, and she is not a self-care candidate."
+     }
+    },
+    {
+     "t": "A 50-year-old man has treated a sunburn on his forearms with ibuprofen and petrolatum. It is day 8 and the skin has not healed.",
+     "q": "What is the next step?",
+     "o": [
+      "Continue ibuprofen for another week",
+      "Add a topical anesthetic",
+      "Switch to aloe vera gel",
+      "Referral to a physician"
+     ],
+     "a": 3,
+     "w": "Not healed in 7 days is her follow-up limit for referral (\"7-day policy applies here as well\").",
+     "x": {
+      "Continue ibuprofen for another week": "The analgesic is for the first 1–2 days.",
+      "Add a topical anesthetic": "Topical anesthetics are not recommended for sunburn.",
+      "Switch to aloe vera gel": "After 7 days without healing the patient is referred, not switched."
+     }
+    },
+    {
+     "t": "A 19-year-old man was sunburned 10 minutes ago at an outdoor event; the skin on his arms is red and hot, with no blisters.",
+     "q": "What is the first step?",
+     "o": [
+      "A skin protectant now",
+      "Cool water or cool wet cloths",
+      "A first-aid antiseptic",
+      "A topical anesthetic spray"
+     ],
+     "a": 1,
+     "w": "Initial treatment is non-drug: within the past 20 minutes, immerse in cool water or use cool wet cloths.",
+     "x": {
+      "A skin protectant now": "Skin protectants start after 24 hours.",
+      "A first-aid antiseptic": "Antiseptics are not recommended for sunburn.",
+      "A topical anesthetic spray": "Topical anesthetics are not recommended for sunburn."
+     }
+    }
+   ],
+   "numbers": [
+    [
+     "4 hours",
+     "symptoms start",
+     "Patel Sun slide 24"
+    ],
+    [
+     "24 hours",
+     "erythema peaks",
+     "Patel Sun slide 24"
+    ],
+    [
+     "5 days",
+     "how long it may last",
+     "Patel Sun slide 24"
+    ],
+    [
+     "12–24 hours",
+     "Dr. Smith: reddening peaks",
+     "Smith Sun slide 11"
+    ],
+    [
+     "20 minutes",
+     "burn this recent: cool water or cool wet cloths",
+     "Patel Sun slide 29"
+    ],
+    [
+     "1–2 days",
+     "systemic analgesic",
+     "Patel Sun slide 31"
+    ],
+    [
+     "After 24 hours",
+     "start a skin protectant",
+     "Patel Sun slide 31"
+    ],
+    [
+     "1–2% BSA",
+     "topical anesthetic, if used; intact skin",
+     "Patel Sun slide 33"
+    ],
+    [
+     "3 to 4 times a day",
+     "topical anesthetic, if used",
+     "Patel Sun slide 33"
+    ],
+    [
+     "24–48 hours",
+     "worse by then: refer",
+     "Patel Sun slide 34"
+    ],
+    [
+     "7 days",
+     "not healed: refer",
+     "Patel Sun slide 34"
+    ]
+   ]
+  },
+  {
+   "id": "photoaging",
+   "name": "Photoaging and skin-cancer signs",
+   "group": "selfcare",
+   "lectures": "Patel 11/12 · Sikazwe 11/04 (hydroquinone, AHAs, retinoids)",
+   "topics": [
+    "p8s-age",
+    "p8s-skin"
+   ],
+   "short": [
+    "Photoaging comes from cumulative sun exposure: coarse wrinkles, leathery skin, lentigines.",
+    "Four types by age: I 20–30, II 30–40, III 50 or older, IV 60 or older.",
+    "Hyperpigmentation: hydroquinone 4%, three months at most, with sunscreen; not FDA-approved for OTC sale.",
+    "Wrinkles: a retinoid once at bedtime, SPF 30+ moisturizer by day. Peels are not self-applied.",
+    "A mole that meets the ABCDE rule goes to a health care provider."
+   ],
+   "steps": [
+    {
+     "title": "Cause, and photoaging against chronologic aging",
+     "profs": [
+      "pa"
+     ],
+     "q": "Which skin findings belong to photoaging and which to chronologic aging?",
+     "src": "Patel Sun slides 39–40, 42; 11/12 lecture",
+     "blocks": [
+      {
+       "k": "facts",
+       "rows": [
+        [
+         "Cause",
+         "{{Cumulative}} sun exposure and other environmental influences (air pollution, smoking)"
+        ],
+        [
+         "By age 50",
+         "Fair North Americans show photodamaged skin"
+        ]
+       ]
+      },
+      {
+       "k": "facts",
+       "rows": [
+        [
+         "[[photoaging|Photoaging]]",
+         [
+          "Atrophic skin",
+          "{{Coarse}} wrinkles",
+          "{{Leathery}} skin",
+          "[[lentigines|Lentigines]] (liver spots, freckles)",
+          "Bronzed or yellow cobblestone appearance",
+          "Telangiectasis, bruising"
+         ]
+        ],
+        [
+         "Chronologic aging",
+         [
+          "Thin skin",
+          "{{Fine}} wrinkles",
+          "Xerosis (dry skin)",
+          "Laxity",
+          "Seborrheic keratoses, senile angiomas"
+         ]
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Grade it: her four types",
+     "profs": [
+      "pa"
+     ],
+     "q": "Give the age range and wrinkle finding for each of the four types.",
+     "src": "Patel Sun slide 39; 11/12 lecture T@68961",
+     "blocks": [
+      {
+       "k": "grades",
+       "rows": [
+        [
+         "Type I, mild",
+         "{{20–30}} years",
+         "{{No wrinkles}}"
+        ],
+        [
+         "Type II, moderate",
+         "{{30–40}} years",
+         "Wrinkles {{in motion}}; keratoses palpable"
+        ],
+        [
+         "Type III, advanced",
+         "{{50}} or older",
+         "Wrinkles {{at rest}}; obvious dyschromia"
+        ],
+        [
+         "Type IV, severe",
+         "{{60}} or older",
+         "{{Only wrinkles}}; yellow-gray skin"
+        ]
+       ]
+      },
+      {
+       "k": "pts",
+       "items": [
+        "★ \"Know that type 1 mild photoaging is 20 to 30 years of age\""
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Treat it: match the product to the goal",
+     "profs": [
+      "pa",
+      "sk"
+     ],
+     "q": "What treats hyperpigmentation and what are its limits? What treats wrinkles? Which treatment is not self-applied?",
+     "src": "Patel Sun slides 42–49; 11/12 lecture T@72287–76364; Sikazwe DPAW pages 67–70",
+     "blocks": [
+      {
+       "k": "line",
+       "label": "Every patient",
+       "title": "Prevention",
+       "drugs": [
+        "sunscreen-chemical",
+        "zinc-oxide"
+       ],
+       "pts": [
+        "Sunscreen, protective clothing, sunglasses, hat",
+        "Less air pollution exposure; stop smoking"
+       ]
+      },
+      {
+       "k": "line",
+       "label": "Hyperpigmentation",
+       "title": "Hydroquinone 4%",
+       "drugs": [
+        "hydroquinone"
+       ],
+       "pts": [
+        "★ Her poll answer for hyperpigmentation (\"keyword here, hyperpigmentation\")",
+        "For [[melasma|melasma]] and lentigines",
+        "Limit use to {{three months}}",
+        "Wear {{sunscreen}}",
+        "{{Not}} FDA-approved for OTC sale"
+       ],
+       "warn": "Ochronosis that may be permanent; rashes; facial swelling."
+      },
+      {
+       "k": "line",
+       "label": "Wrinkles, texture",
+       "title": "Retinoids",
+       "drugs": [
+        "tretinoin"
+       ],
+       "pts": [
+        "OTC: retinol, retinyl palmitate; the skin must convert them to retinoic acid, which limits efficacy",
+        "Rx: tretinoin, tazarotene",
+        "More keratinocyte division; new collagen and elastic fibers; less melanin",
+        "Benefit comes with long-term daily use"
+       ]
+      },
+      {
+       "k": "line",
+       "label": "Exfoliation, tone",
+       "title": "Alpha hydroxy acids",
+       "drugs": [
+        "aha"
+       ],
+       "pts": [
+        "Lactic, glycolic, citric, malic acid",
+        "Thicker dermis, more exfoliation, less hyperpigmentation"
+       ]
+      },
+      {
+       "k": "line",
+       "label": "Protection",
+       "title": "Topical antioxidants",
+       "drugs": [
+        "antioxidants"
+       ],
+       "pts": [
+        "Niacinamide (B3), ascorbic acid (C), vitamin E, coenzyme Q-10, alpha-lipoic acid",
+        "Some evidence of protection from sun and pollutant damage",
+        "Hard to deliver to the skin; no proven formula"
+       ]
+      },
+      {
+       "k": "line",
+       "label": "Chemical peels",
+       "title": "Not self-applied",
+       "drugs": [],
+       "pts": [
+        "Not recommended as self-applied OTC products",
+        "Deep peels: professional use only"
+       ]
+      },
+      {
+       "k": "prof",
+       "p": "sk",
+       "rows": [
+        [
+         "Hydroquinone",
+         "Lowers melanin biosynthesis (tyrosinase); degrades to coloured, inactive benzoquinone, so amber bottle, away from light and oxygen (DPAW page 67)"
+        ],
+        [
+         "AHAs",
+         "Remove dead cells and raise collagen (DPAW page 68)"
+        ],
+        [
+         "Topical retinoids",
+         "Raise skin collagen (DPAW page 70); retinoids as a class are teratogenic (DPAW page 48)"
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Counsel",
+     "profs": [
+      "pa"
+     ],
+     "q": "When is a retinoid applied and what goes on by day? When is a hydroxy acid applied? How long until results?",
+     "src": "Patel Sun slides 44, 53–54; 11/12 lecture T@74891, T@76707–76959",
+     "blocks": [
+      {
+       "k": "facts",
+       "rows": [
+        [
+         "Retinoid",
+         "★ Once daily at {{bedtime}}, to {{dry}} skin after cleansing"
+        ],
+        [
+         "By day",
+         "Moisturizer or foundation with {{SPF 30+}}"
+        ],
+        [
+         "Retinoid effects",
+         "Scaling, redness, burning, dermatitis; dryness, phototoxicity"
+        ],
+        [
+         "Hydroxy acid",
+         "To dry skin within {{15 minutes}} of cleansing"
+        ],
+        [
+         "Hydroxy acid effects",
+         "Stinging, burning, itching, skin lightening, dryness"
+        ],
+        [
+         "Results",
+         "At least {{four weeks}}"
+        ],
+        [
+         "Daily",
+         "Broad spectrum sunscreen SPF ≥ 15, reapplied often"
+        ],
+        [
+         "Skin care",
+         "Mild cleanser twice daily; moisturizer; not near eyes or mucus membranes"
+        ]
+       ]
+      },
+      {
+       "k": "pts",
+       "items": [
+        "Photoaging is {{preventable}} and {{cumulative}}"
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Skin-cancer signs: the ABCDE rule",
+     "profs": [
+      "pa"
+     ],
+     "q": "What does each letter of ABCDE stand for, and what is the diameter?",
+     "src": "Patel Sun slides 28, 37; 11/12 lecture T@60867, T@77076",
+     "blocks": [
+      {
+       "k": "facts",
+       "rows": [
+        [
+         "A",
+         "{{Asymmetry}}: one half does not match the other"
+        ],
+        [
+         "B",
+         "{{Border}} irregular: ragged, notched or blurred"
+        ],
+        [
+         "C",
+         "{{Color}} uneven: black, brown, tan; white, gray, red, pink or blue"
+        ],
+        [
+         "D",
+         "{{Diameter}}: most are larger than {{6 millimeters}} (about 1/4 inch)"
+        ],
+        [
+         "E",
+         "{{Evolving}}: changed over the past few weeks or months"
+        ]
+       ]
+      },
+      {
+       "k": "warn",
+       "text": "A suspicious lesion is not self-care: a health care provider looks at it."
+      }
+     ]
+    }
+   ],
+   "patients": [
+    {
+     "t": "A 65-year-old woman with years of outdoor activity has yellowish facial skin, deeper wrinkles, and small brown spots on the face, hands and forearms. She asks what would improve the dark spots.",
+     "q": "Which option helps hyperpigmentation?",
+     "o": [
+      "Benzoyl peroxide",
+      "Sodium hyaluronate",
+      "Hydroquinone",
+      "Niacinamide"
+     ],
+     "a": 2,
+     "w": "Her poll: hydroquinone reduces hyperpigmentation from sun exposure (melasma, lentigines).",
+     "x": {
+      "Benzoyl peroxide": "Benzoyl peroxide is an acne product; it is not on her photoaging slides.",
+      "Sodium hyaluronate": "It is a moisturizing ingredient on her cosmeceutical label slide, not a depigmenting agent.",
+      "Niacinamide": "An antioxidant with some evidence of protection; her agent for hyperpigmentation is hydroquinone."
+     }
+    },
+    {
+     "t": "The same woman has used a hydroquinone 4% combination product every day for four months and asks for more.",
+     "q": "What do you tell her?",
+     "o": [
+      "Continue; add sunscreen",
+      "Stop; the limit is three months",
+      "Double the applications",
+      "Switch to a deep chemical peel at home"
+     ],
+     "a": 1,
+     "w": "Slide 47: limit use to three months; slide 48: ochronosis that may be permanent.",
+     "x": {
+      "Continue; add sunscreen": "Sunscreen is needed, but four months already exceeds the three-month limit.",
+      "Double the applications": "More exposure raises the risk of ochronosis.",
+      "Switch to a deep chemical peel at home": "Deep peels are for professional use only."
+     }
+    },
+    {
+     "t": "A 45-year-old woman starts an OTC retinol cream for wrinkles and asks how to use it.",
+     "q": "What do you counsel?",
+     "o": [
+      "Every morning to damp skin; SPF 30+ at night",
+      "Once at bedtime to dry skin; SPF 30+ moisturizer by day",
+      "Twice daily within 15 minutes of cleansing",
+      "Once at bedtime to dry skin; no sunscreen needed"
+     ],
+     "a": 1,
+     "w": "Slide 54: retinoids once at bedtime to dry skin after cleansing, with an SPF 30+ moisturizer or foundation during the day.",
+     "x": {
+      "Every morning to damp skin; SPF 30+ at night": "The times are reversed, and the skin should be dry.",
+      "Twice daily within 15 minutes of cleansing": "Within 15 minutes of cleansing is the hydroxy acid direction.",
+      "Once at bedtime to dry skin; no sunscreen needed": "Retinoids cause phototoxicity; SPF 30+ by day is part of the direction."
+     }
+    },
+    {
+     "t": "A 58-year-old man points to a mole on his shoulder. It is two colours, has a notched edge, is about 8 mm across and has grown over the past two months.",
+     "q": "What do you recommend?",
+     "o": [
+      "Hydroquinone 4% for three months",
+      "An alpha hydroxy acid nightly",
+      "Referral to a health care provider",
+      "Sunscreen and a recheck in four weeks"
+     ],
+     "a": 2,
+     "w": "Uneven color, irregular border, diameter over 6 mm and evolving meet the ABCDE rule; a suspicious lesion is looked at by a provider.",
+     "x": {
+      "Hydroquinone 4% for three months": "Hydroquinone treats melasma and lentigines, not a changing mole.",
+      "An alpha hydroxy acid nightly": "An exfoliant does not address a suspicious lesion.",
+      "Sunscreen and a recheck in four weeks": "Sunscreen is right for everyone, but this lesion is referred now."
+     }
+    },
+    {
+     "t": "A 34-year-old woman has wrinkles only when she smiles or frowns, and a few rough spots that can be felt.",
+     "q": "Which type of photoaging is this?",
+     "o": [
+      "Type I, mild",
+      "Type II, moderate",
+      "Type III, advanced",
+      "Type IV, severe"
+     ],
+     "a": 1,
+     "w": "Type II: 30–40 years, wrinkles in motion, keratoses palpable.",
+     "x": {
+      "Type I, mild": "Type I is 20–30 years with no wrinkles.",
+      "Type III, advanced": "Type III is 50 or older with wrinkles at rest.",
+      "Type IV, severe": "Type IV is 60 or older with only wrinkles."
+     }
+    }
+   ],
+   "numbers": [
+    [
+     "20–30 / 30–40 / ≥ 50 / ≥ 60",
+     "ages of types I / II / III / IV",
+     "Patel Sun slide 39"
+    ],
+    [
+     "4%",
+     "hydroquinone in combination products",
+     "Patel Sun slide 47"
+    ],
+    [
+     "Three months",
+     "hydroquinone limit",
+     "Patel Sun slide 47"
+    ],
+    [
+     "Bedtime, once daily",
+     "retinoid",
+     "Patel Sun slide 54"
+    ],
+    [
+     "SPF 30+",
+     "moisturizer or foundation by day with a retinoid",
+     "Patel Sun slides 44, 54"
+    ],
+    [
+     "15 minutes",
+     "hydroxy acid: to dry skin within this time of cleansing",
+     "Patel Sun slide 54"
+    ],
+    [
+     "At least four weeks",
+     "time to results",
+     "Patel Sun slide 53"
+    ],
+    [
+     "6–12 months",
+     "effect of prescription retinoids (slide only)",
+     "Patel Sun slide 43"
+    ],
+    [
+     "6 millimeters",
+     "ABCDE diameter (about 1/4 inch)",
+     "Patel Sun slide 28"
+    ],
+    [
+     "Age 50",
+     "fair North Americans show photodamage",
+     "Patel Sun slide 39"
+    ]
+   ]
+  },
+  {
+   "id": "wounds",
+   "name": "Wounds (cuts, scrapes, punctures)",
+   "group": "selfcare",
+   "lectures": "Patel 11/12",
+   "topics": [
+    "p8w-stage",
+    "p8w-self",
+    "p8w-otc",
+    "p8w-dress",
+    "p8w-heal"
+   ],
+   "short": [
+    "Four stages by depth; the higher the stage, the longer the healing.",
+    "Three healing phases: inflammatory, proliferative, remodeling.",
+    "Refer: face, hands, feet, joints, genitals; larger than 3 inches; bites; infection; diabetes; not healed in 7 days.",
+    "First step: cleanse with clean water or saline.",
+    "Antibiotic after cleansing and before the bandage; anesthetics and antiseptics only when indicated."
+   ],
+   "steps": [
+    {
+     "title": "Types and the four stages",
+     "profs": [
+      "pa"
+     ],
+     "q": "What does each of the four wound stages involve, and what are the three healing phases?",
+     "src": "Patel Wound slides 4–6, 27; 11/12 lecture T@78420, T@79102, T@87265–87332",
+     "blocks": [
+      {
+       "k": "facts",
+       "rows": [
+        [
+         "Acute wounds",
+         [
+          "Abrasions",
+          "Punctures (bites, sharp objects)",
+          "Lacerations",
+          "Burns"
+         ]
+        ],
+        [
+         "Staged by",
+         "★ {{Depth}} of the wound"
+        ]
+       ]
+      },
+      {
+       "k": "grades",
+       "rows": [
+        [
+         "Stage 1",
+         "{{No loss}} of skin layers",
+         "Reddened, non-blanching, unbroken skin"
+        ],
+        [
+         "Stage 2",
+         "{{Blister}} or partial-thickness loss",
+         "All the epidermis and {{part of the dermis}}"
+        ],
+        [
+         "Stage 3",
+         "{{Full-thickness}} skin loss",
+         "Entire epidermis, dermis and dermal appendages; may involve subcutaneous tissue"
+        ],
+        [
+         "Stage 4",
+         "Deeper still",
+         "Subcutaneous tissue, underlying {{muscle, tendon and bone}}"
+        ]
+       ]
+      },
+      {
+       "k": "photo",
+       "id": "wound-stages"
+      },
+      {
+       "k": "pts",
+       "items": [
+        "★ \"There's 4 stages of a wound, so know each stage\"",
+        "★ The higher the stage, the {{longer}} the healing",
+        "★ Three healing phases: {{inflammatory}}, {{proliferative}}, {{remodeling}}"
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Self-care, or refer?",
+     "profs": [
+      "pa"
+     ],
+     "q": "Name the exclusions for self-treatment of a minor wound or burn (\"I need you to know them\").",
+     "src": "Patel Wound slide 7; 11/12 lecture T@79459–80007",
+     "blocks": [
+      {
+       "k": "pts",
+       "items": [
+        "★ {{Face, hands, feet, major joints, genitals}} or perineum",
+        "★ Larger than {{3 inches}} in diameter",
+        "★ Worse or not healed in {{24–48 hours}} and/or {{7 days}}",
+        "Chemical, electrical or inhalation burn; [[circumferential|circumferential]] burn",
+        "Animal or human {{bite}}",
+        "Deep partial-thickness, full-thickness or subdermal injury",
+        "Suspected non-accidental injury",
+        "Signs of {{infection}}",
+        "A preexisting disorder that complicates management, such as {{diabetes}}",
+        "Foreign matter left after irrigation",
+        "Chronic wound"
+       ]
+      },
+      {
+       "k": "warn",
+       "text": "\"This complete list, you would not recommend a patient to treat themselves.\""
+      }
+     ]
+    },
+    {
+     "title": "Treat it: clean, cover, and add a product only when indicated",
+     "profs": [
+      "pa"
+     ],
+     "q": "What is the first step, when is the antibiotic applied, and where may an antiseptic go?",
+     "src": "Patel Wound slides 3, 8–15, 19–20, 27; 11/12 lecture T@80276–87786",
+     "blocks": [
+      {
+       "k": "facts",
+       "rows": [
+        [
+         "Goals",
+         [
+          "Facilitate healing",
+          "Reduce scarring",
+          "Prevent secondary bacterial infection",
+          "Refer if necessary"
+         ]
+        ]
+       ]
+      },
+      {
+       "k": "line",
+       "label": "First step",
+       "title": "Cleanse with clean water or saline",
+       "drugs": [],
+       "pts": [
+        "★ \"First step in treating a wound, cleaning the area, cleansing it with water or saline\"",
+        "She also said \"first aid antiseptics, of course, cleaning the skin, first step\"; slide 27 and her conclusion give water or saline"
+       ]
+      },
+      {
+       "k": "line",
+       "label": "Cover",
+       "title": "A dressing that fits the wound",
+       "drugs": [
+        "dressings"
+       ],
+       "pts": [
+        "Keep a {{moist}} healing environment",
+        "★ \"Know the advantages, know the disadvantages\""
+       ],
+       "pick": [
+        [
+         "Heavy exudate, low cost",
+         "Gauze: highly absorbent, but no moist environment, needs a secondary dressing and frequent changes"
+        ],
+        [
+         "Long wear, moist, waterproof",
+         "[[hydrocolloid|Hydrocolloid]]: uninfected wounds only; hard to see the wound"
+        ],
+        [
+         "Need to see the wound",
+         "Transparent adhesive film: semi-occlusive, not absorptive; uninfected wounds only"
+        ],
+        [
+         "Many shapes and sizes",
+         "Adhesive bandage: cost effective, less adherent than plain gauze; many give no moist environment"
+        ]
+       ]
+      },
+      {
+       "k": "line",
+       "label": "Prevent infection",
+       "title": "First-aid antibiotic",
+       "drugs": [
+        "topical-antibiotics"
+       ],
+       "pts": [
+        "Bacitracin, neomycin, polymyxin B sulfate",
+        "Preventative; limited evidence",
+        "★ Apply {{after cleansing}} and {{before bandaging}}",
+        "{{1 to 3}} times a day",
+        "No improvement within {{7 days}}: primary care provider"
+       ],
+       "warn": "Toxicity risk rises with large areas of application. Short time, small area."
+      },
+      {
+       "k": "line",
+       "label": "Pain",
+       "title": "Topical anesthetic",
+       "drugs": [
+        "topical-anesthetics"
+       ],
+       "pts": [
+        "Benzocaine, lidocaine, pramoxine",
+        "Temporary relief: {{15 to 45 minutes}}",
+        "Up to {{4 times}} daily",
+        "Small quantities, low concentrations on broken skin"
+       ],
+       "warn": "★ \"Understand the systemic toxicity of overuse.\" Benzocaine absorbed systemically: methemoglobinemia."
+      },
+      {
+       "k": "line",
+       "label": "Antiseptic",
+       "title": "Only at the wound edges",
+       "drugs": [
+        "antiseptics"
+       ],
+       "pts": [
+        "Chlorhexidine, hydrogen peroxide, povidone-iodine",
+        "On {{intact}} skin at the wound edges, after debris is removed",
+        "May cause [[cytotoxic|cytotoxicity]] that {{reduces healing}} within the wound"
+       ]
+      },
+      {
+       "k": "facts",
+       "rows": [
+        [
+         "Less scarring",
+         [
+          "Avoid UV exposure to the wound",
+          "Silicone sheets or gels",
+          "Laser therapy",
+          "Consistent wound care"
+         ]
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "title": "What slows healing",
+     "profs": [
+      "pa"
+     ],
+     "q": "Which two drug classes slow healing, and what does smoking 1 and 2 packs per day do?",
+     "src": "Patel Wound slides 21–25; 11/12 lecture T@85499–86431",
+     "blocks": [
+      {
+       "k": "facts",
+       "rows": [
+        [
+         "Local",
+         [
+          "Tissue perfusion",
+          "Bacterial contamination",
+          "Foreign bodies",
+          "Necrotic tissue"
+         ]
+        ],
+        [
+         "Rx drugs",
+         [
+          "{{Chemotherapy}}: delays proliferation",
+          "{{Corticosteroids}}: impair the inflammatory response"
+         ]
+        ],
+        [
+         "Conditions",
+         [
+          "Obesity",
+          "{{Diabetes}}",
+          "Severe anemia",
+          "Peripheral vascular disease",
+          "Congestive heart failure"
+         ]
+        ],
+        [
+         "Smoking",
+         "★ \"Notice the pack per day\": 1 pack per day = {{3 times}} the flap necrosis; 2 packs per day = {{6 times}} (slide); she said 2 packs \"doubles the frequency\""
+        ]
+       ]
+      }
+     ]
+    }
+   ],
+   "patients": [
+    {
+     "t": "A 28-year-old man scraped his forearm on gravel an hour ago. The abrasion is about 1 inch across, with no debris after rinsing. He has no medical conditions.",
+     "q": "What is the first step?",
+     "o": [
+      "Hydrogen peroxide poured into the wound",
+      "Cleanse with clean water or saline",
+      "Bacitracin, then a bandage",
+      "Benzocaine spray"
+     ],
+     "a": 1,
+     "w": "Her conclusion slide and words: the first step is cleansing with clean water or saline. The antibiotic comes after cleansing and before the bandage.",
+     "x": {
+      "Hydrogen peroxide poured into the wound": "Antiseptics go on intact skin at the wound edges; inside the wound they reduce healing.",
+      "Bacitracin, then a bandage": "The antibiotic is applied after the wound is cleansed.",
+      "Benzocaine spray": "An anesthetic treats pain; it is not the first step."
+     }
+    },
+    {
+     "t": "A 45-year-old woman cut her palm on a kitchen knife. The cut is 1 inch long and clean.",
+     "q": "What do you recommend?",
+     "o": [
+      "Self-care: cleanse, antibiotic, bandage",
+      "Self-care: hydrocolloid dressing for 7 days",
+      "Referral to a provider",
+      "Self-care: antiseptic, then gauze"
+     ],
+     "a": 2,
+     "w": "A wound on the hands is on her exclusion list (face, hands, feet, major joints, genitals or perineum).",
+     "x": {
+      "Self-care: cleanse, antibiotic, bandage": "This is the routine for a minor wound, but the hand is an excluded site.",
+      "Self-care: hydrocolloid dressing for 7 days": "The site excludes self-care, whatever the dressing.",
+      "Self-care: antiseptic, then gauze": "The site excludes self-care."
+     }
+    },
+    {
+     "t": "A 60-year-old man with type 2 diabetes has a 2-inch scrape on his shin from yesterday. It looks clean.",
+     "q": "What do you recommend?",
+     "o": [
+      "Triple antibiotic ointment 1 to 3 times a day",
+      "A transparent film dressing",
+      "Lidocaine cream up to 4 times daily",
+      "Referral to a provider"
+     ],
+     "a": 3,
+     "w": "A preexisting disorder that could complicate management, such as diabetes, excludes self-treatment.",
+     "x": {
+      "Triple antibiotic ointment 1 to 3 times a day": "The frequency is right for a minor wound, but diabetes excludes self-care.",
+      "A transparent film dressing": "Diabetes excludes self-care.",
+      "Lidocaine cream up to 4 times daily": "Diabetes excludes self-care."
+     }
+    },
+    {
+     "t": "A 30-year-old woman has used a triple antibiotic ointment on a small cut on her calf 3 times a day for 8 days. It has not improved.",
+     "q": "What is the next step?",
+     "o": [
+      "Continue for another 7 days",
+      "Apply it to a larger area",
+      "See a primary care provider",
+      "Add hydrogen peroxide inside the cut"
+     ],
+     "a": 2,
+     "w": "No improvement within 7 days: see a primary care provider (slide 20); not healed in 7 days is also on the exclusion list.",
+     "x": {
+      "Continue for another 7 days": "7 days is the limit.",
+      "Apply it to a larger area": "Toxicity risk rises with large areas of application.",
+      "Add hydrogen peroxide inside the cut": "Antiseptics reduce healing within the wound."
+     }
+    },
+    {
+     "t": "A 22-year-old man has a painful 2-inch abrasion on his thigh. He has been spraying benzocaine on it every hour because the relief wears off.",
+     "q": "What do you counsel?",
+     "o": [
+      "Hourly use is fine on a small wound",
+      "Up to 4 times daily, in small amounts",
+      "Switch to a higher concentration",
+      "Cover the sprayed area with plastic wrap"
+     ],
+     "a": 1,
+     "w": "Relief lasts 15 to 45 minutes and continuous pain control cannot be achieved; up to 4 times daily, small quantities and low concentrations on broken skin. She stressed the systemic toxicity of overuse.",
+     "x": {
+      "Hourly use is fine on a small wound": "Overuse leads to systemic absorption; benzocaine can cause methemoglobinemia.",
+      "Switch to a higher concentration": "Low concentrations are used on broken skin.",
+      "Cover the sprayed area with plastic wrap": "Her OTC chart: topical anesthetics are not used under an occlusive dressing."
+     }
+    }
+   ],
+   "numbers": [
+    [
+     "4",
+     "wound stages, by depth",
+     "Patel Wound slide 5"
+    ],
+    [
+     "3",
+     "healing phases: inflammatory, proliferative, remodeling",
+     "Patel Wound slides 6, 27"
+    ],
+    [
+     "3 inches",
+     "larger than this in diameter: refer",
+     "Patel Wound slide 7"
+    ],
+    [
+     "24–48 hours and/or 7 days",
+     "worse or not healed: refer",
+     "Patel Wound slide 7"
+    ],
+    [
+     "1 to 3 times a day",
+     "topical antibiotic",
+     "Patel Wound slide 20"
+    ],
+    [
+     "7 days",
+     "no improvement on a topical antibiotic: provider",
+     "Patel Wound slide 20"
+    ],
+    [
+     "Up to 4 times daily",
+     "topical anesthetic",
+     "Patel Wound slide 20"
+    ],
+    [
+     "15 to 45 minutes",
+     "how long anesthetic relief lasts",
+     "Patel Wound slide 20"
+    ],
+    [
+     "3 times / 6 times",
+     "flap necrosis at 1 / 2 packs per day",
+     "Patel Wound slide 25"
+    ]
+   ]
+  },
+  {
+   "id": "burns",
+   "name": "Burns",
+   "group": "selfcare",
+   "lectures": "Patel 11/12",
+   "topics": [
+    "p8w-burn",
+    "p8w-self",
+    "p8w-otc"
+   ],
+   "short": [
+    "Grade by body surface area: minor is under 15% in an adult, under 10% in a child.",
+    "Only a minor burn is self-care; moderate and major are referred.",
+    "Refer: eyes, ears, face, hands, feet, perineum; chemical, electrical, inhalation; advanced age; diabetes; immunocompromised.",
+    "Minor burn: cool water; acetaminophen or an NSAID; skin protectant.",
+    "Topical antibiotic 1 to 3 times a day; topical anesthetic up to 4 times daily in small amounts."
+   ],
+   "steps": [
+    {
+     "title": "Cause, and grade it by BSA",
+     "profs": [
+      "pa"
+     ],
+     "q": "Give the BSA limits of a minor, moderate and major burn in an adult and in a child.",
+     "src": "Patel Wound slides 4, 16; 11/12 lecture T@83577–83938",
+     "blocks": [
+      {
+       "k": "facts",
+       "rows": [
+        [
+         "Causes",
+         "Thermal, electrical, chemical, UV radiation"
+        ],
+        [
+         "Graded by",
+         "[[bsa|BSA]] (\"I want you to know\")"
+        ]
+       ]
+      },
+      {
+       "k": "grades",
+       "rows": [
+        [
+         "Minor: self-care",
+         "★ Adult {{< 15%}} · child {{< 10%}}",
+         "Superficial burn"
+        ],
+        [
+         "Moderate: refer",
+         "Adult {{15–25%}} · child {{10–20%}}",
+         "Superficial partial-thickness burn"
+        ],
+        [
+         "Major: refer",
+         "Adult {{> 25%}} · child {{> 20%}}",
+         "Superficial partial-thickness burn"
+        ]
+       ]
+      },
+      {
+       "k": "facts",
+       "rows": [
+        [
+         "Deep partial or full thickness",
+         "Moderate at {{2–10%}} BSA; major above {{10%}} BSA"
+        ],
+        [
+         "Always major",
+         [
+          "Eyes, ears, face or genitalia",
+          "Inhalation injury; electrical burn",
+          "Burn with fractures or major trauma",
+          "Poor-risk patient: diabetes, cancer, other chronic illness"
+         ]
+        ]
+       ]
+      },
+      {
+       "k": "warn",
+       "text": "Not settled: a deep partial-thickness or full-thickness burn under 2% BSA. Slide 16 lists it under \"Minor - Self-Care\" (not eyes, ears, face or genitalia). Slide 7 excludes deep partial-thickness and full-thickness injuries from self-treatment. Her comment in class did not decide it."
+      }
+     ]
+    },
+    {
+     "title": "Self-care, or refer?",
+     "profs": [
+      "pa"
+     ],
+     "q": "Name the burn exclusions for self-treatment.",
+     "src": "Patel Wound slides 7, 17; 11/12 lecture T@84155–84806",
+     "blocks": [
+      {
+       "k": "pts",
+       "items": [
+        "Moderate to severe burn of {{2% BSA or more}}",
+        "{{Eyes, ears, face, hands, feet}} or perineum",
+        "{{Chemical}} burn: first aid, then refer",
+        "{{Electrical}} or {{inhalation}} burn",
+        "Advanced age",
+        "{{Diabetes}} or multiple medical disorders",
+        "{{Immunocompromised}}",
+        "Circumferential burn (wound list, slide 7)"
+       ]
+      },
+      {
+       "k": "warn",
+       "text": "★ \"Anything besides minor would be straight referral.\""
+      }
+     ]
+    },
+    {
+     "title": "Treat a minor burn: match the product to the need",
+     "profs": [
+      "pa"
+     ],
+     "q": "What is used for a minor burn: non-drug, for pain, for the skin, and how often may an antibiotic and an anesthetic be applied?",
+     "src": "Patel Wound slides 18–20; 11/12 lecture T@84501–85399",
+     "blocks": [
+      {
+       "k": "line",
+       "label": "First",
+       "title": "Cool water",
+       "drugs": [],
+       "pts": [
+        "Reduces the burning sensation; decreases morbidity",
+        "Honey: evidence of faster healing of superficial and partial-thickness burns",
+        "Aloe vera: traditional"
+       ]
+      },
+      {
+       "k": "line",
+       "label": "Pain",
+       "title": "Acetaminophen or an NSAID",
+       "drugs": [
+        "systemic-analgesics"
+       ],
+       "pts": [
+        "OTC systemic analgesics; minor burns only"
+       ]
+      },
+      {
+       "k": "line",
+       "label": "Dry, healing skin",
+       "title": "Skin protectant",
+       "drugs": [
+        "skin-protectants"
+       ],
+       "pts": [
+        "Allantoin, cocoa butter, petrolatum, Aquaphor"
+       ]
+      },
+      {
+       "k": "line",
+       "label": "Prevent infection",
+       "title": "Topical antibiotic",
+       "drugs": [
+        "topical-antibiotics"
+       ],
+       "pts": [
+        "{{1 to 3}} times a day",
+        "No improvement within {{7 days}}: primary care provider",
+        "Neomycin: systemic toxicity; polymyxin B: hypersensitivity"
+       ]
+      },
+      {
+       "k": "line",
+       "label": "Pain on the skin",
+       "title": "Topical anesthetic",
+       "drugs": [
+        "topical-anesthetics"
+       ],
+       "pts": [
+        "Up to {{4 times}} daily",
+        "Relief lasts {{15 to 45 minutes}}; continuous pain control cannot be achieved",
+        "Small quantities, low concentrations on broken skin"
+       ],
+       "warn": "★ Systemic toxicity with overuse (lidocaine); benzocaine: methemoglobinemia."
+      },
+      {
+       "k": "line",
+       "label": "Antiseptic",
+       "title": "Wound edges only",
+       "drugs": [
+        "antiseptics"
+       ],
+       "pts": [
+        "Intact skin, after debris is removed",
+        "Reduces healing within the wound"
+       ]
+      }
+     ]
+    }
+   ],
+   "patients": [
+    {
+     "t": "A 35-year-old woman has a superficial burn from hot water over her thigh, about 5% BSA: red, painful, no blisters. No medical conditions.",
+     "q": "What do you recommend?",
+     "o": [
+      "Referral: moderate burn",
+      "Cool water, an oral analgesic, a skin protectant",
+      "An antiseptic over the whole burn",
+      "Lidocaine cream over the whole burn, every hour"
+     ],
+     "a": 1,
+     "w": "A superficial burn under 15% BSA in an adult is minor and self-care: cool water, acetaminophen or an NSAID, a skin protectant.",
+     "x": {
+      "Referral: moderate burn": "Moderate starts at 15% BSA in an adult.",
+      "An antiseptic over the whole burn": "Antiseptics are for intact skin at the edges and reduce healing within the wound.",
+      "Lidocaine cream over the whole burn, every hour": "Anesthetics: small amounts, up to 4 times daily; overuse causes systemic toxicity."
+     }
+    },
+    {
+     "t": "A 6-year-old has a superficial partial-thickness burn (blisters) over about 12% BSA on the back after a kettle spill.",
+     "q": "How is this burn graded, and what is done?",
+     "o": [
+      "Minor; self-care",
+      "Moderate; referral",
+      "Major; referral",
+      "Minor; topical antibiotic"
+     ],
+     "a": 1,
+     "w": "In a child, 10–20% BSA is moderate, and anything besides minor is referred.",
+     "x": {
+      "Minor; self-care": "Minor in a child is under 10% BSA.",
+      "Major; referral": "Major in a child is over 20% BSA.",
+      "Minor; topical antibiotic": "12% in a child is above the minor limit."
+     }
+    },
+    {
+     "t": "A 40-year-old man splashed drain cleaner on his forearm 5 minutes ago. The area is small and red.",
+     "q": "What do you recommend?",
+     "o": [
+      "Cool water, then self-care at home",
+      "First aid, then referral",
+      "A skin protectant and a bandage",
+      "Bacitracin 1 to 3 times a day"
+     ],
+     "a": 1,
+     "w": "Chemical burns: first aid, then refer (slide 17), whatever the size.",
+     "x": {
+      "Cool water, then self-care at home": "A chemical burn is excluded from self-treatment.",
+      "A skin protectant and a bandage": "A chemical burn is referred after first aid.",
+      "Bacitracin 1 to 3 times a day": "A chemical burn is referred after first aid."
+     }
+    },
+    {
+     "t": "A 25-year-old woman has a superficial burn the size of a coin on the back of her hand from a curling iron.",
+     "q": "What do you recommend?",
+     "o": [
+      "Self-care: it is far under 15% BSA",
+      "Self-care with a hydrocolloid dressing",
+      "Referral: the hand is an excluded site",
+      "Self-care with aloe vera"
+     ],
+     "a": 2,
+     "w": "Burns involving the eyes, ears, face, hands, feet or perineum are excluded from self-treatment (slide 17).",
+     "x": {
+      "Self-care: it is far under 15% BSA": "Size is one test; the site is another, and the hand is excluded.",
+      "Self-care with a hydrocolloid dressing": "The site excludes self-care.",
+      "Self-care with aloe vera": "The site excludes self-care."
+     }
+    },
+    {
+     "t": "A 52-year-old man has a superficial partial-thickness burn over about 30% BSA from a grease fire.",
+     "q": "How is this burn graded?",
+     "o": [
+      "Minor",
+      "Moderate",
+      "Major",
+      "It cannot be graded by BSA"
+     ],
+     "a": 2,
+     "w": "Over 25% BSA in an adult is major and needs referral.",
+     "x": {
+      "Minor": "Minor in an adult is under 15% BSA.",
+      "Moderate": "Moderate in an adult is 15–25% BSA.",
+      "It cannot be graded by BSA": "Her slide grades burn severity by BSA."
+     }
+    }
+   ],
+   "numbers": [
+    [
+     "< 15% / < 10%",
+     "minor burn: adult / child",
+     "Patel Wound slide 16"
+    ],
+    [
+     "15–25% / 10–20%",
+     "moderate burn: adult / child",
+     "Patel Wound slide 16"
+    ],
+    [
+     "> 25% / > 20%",
+     "major burn: adult / child",
+     "Patel Wound slide 16"
+    ],
+    [
+     "2–10% / > 10%",
+     "deep partial or full thickness: moderate / major",
+     "Patel Wound slide 16"
+    ],
+    [
+     "2% or more",
+     "moderate to severe burn: excluded from self-treatment",
+     "Patel Wound slide 17"
+    ],
+    [
+     "1 to 3 times a day",
+     "topical antibiotic",
+     "Patel Wound slide 20"
+    ],
+    [
+     "Up to 4 times daily",
+     "topical anesthetic",
+     "Patel Wound slide 20"
+    ],
+    [
+     "15 to 45 minutes",
+     "anesthetic relief",
+     "Patel Wound slide 20"
+    ],
+    [
+     "7 days",
+     "no improvement: primary care provider",
+     "Patel Wound slide 20"
+    ]
+   ]
+  },
+  {
+   "id": "warts",
+   "name": "Warts",
+   "group": "selfcare",
+   "lectures": "Patel 11/12 · Smith 10/30 (salicylic acid)",
+   "topics": [
+    "p8c-wart",
+    "p8c-wartsa",
+    "p8c-cryo",
+    "p8c-tell"
+   ],
+   "short": [
+    "Cause: HPV, limited to the epidermis; feet are HPV-1.",
+    "Self-treatable: common warts (hands) and plantar warts (feet) only.",
+    "Salicylic acid 40% pad: off after 48 hours, repeat every 48 hours. 17% liquid: 1–2 times a day. Both up to 12 weeks.",
+    "Cryotherapy: about 20 seconds (common) or 40 seconds (plantar); repeat after 2 weeks; up to 3 treatments.",
+    "Refer: face, genital or mucous membrane warts; flat, mosaic, periungual, filiform."
+   ],
+   "steps": [
+    {
+     "title": "Cause and timing",
+     "profs": [
+      "pa"
+     ],
+     "q": "Which virus causes warts, which skin layer is involved, and which subtype is on the feet?",
+     "src": "Patel Warts slides 4–5; 11/12 lecture T@88454",
+     "blocks": [
+      {
+       "k": "facts",
+       "rows": [
+        [
+         "Cause",
+         "[[hpv|HPV]] ({{human papillomavirus}})"
+        ],
+        [
+         "Depth",
+         "Limited to the {{epidermis}}"
+        ],
+        [
+         "Spread",
+         "Other people, [[autoinoc|auto-inoculation]], fomites"
+        ],
+        [
+         "Hands",
+         "HPV-2, -4, -27, -57"
+        ],
+        [
+         "Feet",
+         "★ {{HPV-1}}"
+        ],
+        [
+         "Incubation",
+         "May be several months"
+        ],
+        [
+         "Course",
+         "May resolve without treatment"
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Recognise it, and which types are self-treatable",
+     "profs": [
+      "pa"
+     ],
+     "q": "Which two wart types are self-treatable, and which four are not?",
+     "src": "Patel Warts slides 5–6; 11/12 lecture T@90202",
+     "blocks": [
+      {
+       "k": "facts",
+       "rows": [
+        [
+         "Look",
+         "Rough, {{cauliflower-like}}; [[plantar|plantar]] warts {{disrupt}} the normal skin ridges"
+        ],
+        [
+         "Pain",
+         "Usually not painful, unless under constant pressure (soles)"
+        ],
+        [
+         "Size",
+         "May grow to about {{1 inch}}"
+        ]
+       ]
+      },
+      {
+       "k": "photo",
+       "id": "wart-common"
+      },
+      {
+       "k": "grades",
+       "rows": [
+        [
+         "Common (hands)",
+         "{{Self-treatable}}",
+         "Skin-colored or brown, dome-shaped, rough; children and adolescents"
+        ],
+        [
+         "Plantar (feet)",
+         "{{Self-treatable}}",
+         "Flat, callus-like, disrupts skin markings; adolescents and young adults"
+        ],
+        [
+         "Flat (face)",
+         "{{Not}} self-treatable",
+         "Smooth, flat-topped, yellow-brown; children"
+        ],
+        [
+         "Mosaic (feet)",
+         "{{Not}} self-treatable",
+         "Multiple, closely grouped plantar warts"
+        ],
+        [
+         "Periungual (nails)",
+         "{{Not}} self-treatable",
+         "Thickened, fissured skin around the nail plate; nail biters"
+        ],
+        [
+         "Filiform (face)",
+         "{{Not}} self-treatable",
+         "Flesh-colored, fast-growing, threadlike projections"
+        ]
+       ]
+      },
+      {
+       "k": "pts",
+       "items": [
+        "★ \"Know what is self-treatable and know what is not self-treatable\""
+       ]
+      },
+      {
+       "k": "photo",
+       "id": "wart-plantar"
+      }
+     ]
+    },
+    {
+     "title": "Self-care, or refer?",
+     "profs": [
+      "pa"
+     ],
+     "q": "Which warts are referred?",
+     "src": "Patel Warts slides 4, 6, 10–11, 16",
+     "blocks": [
+      {
+       "k": "pts",
+       "items": [
+        "A type that is not self-treatable: flat, mosaic, periungual, filiform",
+        "Warts on the {{face}}, {{genital}} warts, warts on {{mucous membranes}}",
+        "Warts with hair growing from them",
+        "Irritated, infected or reddened skin; moles or birthmarks",
+        "{{Diabetes}} or poor blood circulation (salicylic acid products)",
+        "Product limits: salicylic acid may be used for up to {{12 weeks}}; cryotherapy for up to {{3}} treatments (slides 10–11)",
+        "Slide 4: \"Recurrent or recalcitrant warts should be referred\""
+       ]
+      },
+      {
+       "k": "warn",
+       "text": "Not settled: a wart that comes back. Slide 4 refers recurrent warts; she said \"if you see reoccurrence of the wart, that's when we need treatment\"."
+      }
+     ]
+    },
+    {
+     "title": "Treat it: non-drug, salicylic acid or cryotherapy",
+     "profs": [
+      "pa",
+      "sm"
+     ],
+     "q": "Give the directions and the maximum duration for salicylic acid 40%, salicylic acid 17% and cryotherapy.",
+     "src": "Patel Warts slides 7–12; 11/12 lecture T@90398–92731; Smith PCol slides 39–40",
+     "blocks": [
+      {
+       "k": "facts",
+       "rows": [
+        [
+         "Goals",
+         [
+          "Remove the lesion without scarring",
+          "Prevent recurrence",
+          "Prevent spread of HPV"
+         ]
+        ]
+       ]
+      },
+      {
+       "k": "line",
+       "label": "Every patient",
+       "title": "Stop the spread",
+       "drugs": [],
+       "pts": [
+        "No cutting, shaving or picking",
+        "Wash hands before and after touching or treating the wart",
+        "Own towel; no sharing of towels, razors, socks or shoes",
+        "Keep the wart {{covered}}",
+        "Foot coverings in bathrooms and public spaces",
+        "Plantar wart: padding over pressure points"
+       ]
+      },
+      {
+       "k": "line",
+       "label": "Before any product",
+       "title": "Prepare the skin",
+       "drugs": [],
+       "pts": [
+        "Wash hands",
+        "Soak in warm water for {{5 minutes}}",
+        "Wash and dry thoroughly"
+       ]
+      },
+      {
+       "k": "line",
+       "label": "Pad, strip or plaster",
+       "title": "Salicylic acid 40%",
+       "drugs": [
+        "salicylic-acid"
+       ],
+       "pts": [
+        "Trim to fit the wart; keep it off healthy tissue; cover with occlusive tape",
+        "★ Remove after {{48 hours}}",
+        "★ Repeat every {{48 hours}} until the wart resolves",
+        "★ Up to {{12 weeks}}"
+       ]
+      },
+      {
+       "k": "line",
+       "label": "Liquid, gel or stick",
+       "title": "Salicylic acid 17%",
+       "drugs": [
+        "salicylic-acid"
+       ],
+       "pts": [
+        "{{1 drop}} at a time to cover the wart; protect healthy skin",
+        "Let it dry completely",
+        "Cover with a self-adhesive disc or occlusive tape",
+        "★ {{1–2 times}} a day",
+        "★ Up to {{12 weeks}}"
+       ]
+      },
+      {
+       "k": "line",
+       "label": "Freezing",
+       "title": "Cryotherapy",
+       "drugs": [
+        "cryotherapy"
+       ],
+       "pts": [
+        "[[cryotherapy|Cryotherapy]] products: dimethyl ether and propane, or nitrous oxide",
+        "Plantar wart: the surface may be lightly abraded with a file or pumice stone first",
+        "Apply until a halo appears: about {{20 seconds}} for a common wart, about {{40 seconds}} for a plantar wart",
+        "Discard single-use applicators",
+        "★ Repeat after {{2 weeks}} if needed",
+        "★ Up to {{3 treatments}}"
+       ],
+       "warn": "Flammable: not near heat sources. Keep the canister away from the face, body and clothing."
+      },
+      {
+       "k": "pts",
+       "items": [
+        "\"The salicylic acid is the most effective to treat the warts\""
+       ]
+      },
+      {
+       "k": "prof",
+       "p": "sm",
+       "rows": [
+        [
+         "Salicylic acid",
+         "[[keratolytic|Keratolytic]]: solubilizes the cell surface proteins that keep the stratum corneum intact (PCol slide 39)"
+        ],
+        [
+         "Strength",
+         "Up to 40% for warts and corns; caution in diabetes and peripheral vascular disease (PCol slides 39–40)"
+        ]
+       ]
+      }
+     ]
+    }
+   ],
+   "patients": [
+    {
+     "t": "A 14-year-old has a rough, dome-shaped, skin-colored wart on the back of one finger. No medical conditions.",
+     "q": "What do you recommend?",
+     "o": [
+      "Referral: warts on the hands are not self-treatable",
+      "Salicylic acid 40% pad, changed every 48 hours",
+      "Salicylic acid 17% liquid, 4 times a day",
+      "Cryotherapy, repeated every 2 days"
+     ],
+     "a": 1,
+     "w": "A common wart on the hand is self-treatable. The 40% pad comes off after 48 hours and is repeated every 48 hours, up to 12 weeks.",
+     "x": {
+      "Referral: warts on the hands are not self-treatable": "Common warts (hands) and plantar warts (feet) are the two self-treatable types.",
+      "Salicylic acid 17% liquid, 4 times a day": "The 17% liquid is used 1–2 times a day.",
+      "Cryotherapy, repeated every 2 days": "Cryotherapy is repeated after 2 weeks if needed."
+     }
+    },
+    {
+     "t": "A 20-year-old has a flat, callus-like lesion on the sole that interrupts the skin lines. He chooses an OTC cryotherapy product.",
+     "q": "How long is it applied?",
+     "o": [
+      "About 10 seconds",
+      "About 20 seconds",
+      "About 40 seconds",
+      "About 60 seconds"
+     ],
+     "a": 2,
+     "w": "This is a plantar wart: about 40 seconds. A common wart takes about 20 seconds.",
+     "x": {
+      "About 10 seconds": "Not a time on her slide.",
+      "About 20 seconds": "20 seconds is for a common wart.",
+      "About 60 seconds": "Not a time on her slide."
+     }
+    },
+    {
+     "t": "The same patient has now used cryotherapy 3 times, 2 weeks apart. The plantar wart is still there.",
+     "q": "What is the next step?",
+     "o": [
+      "A fourth treatment in 2 weeks",
+      "Treat weekly from now on",
+      "Referral to a provider",
+      "Hold the device on for 80 seconds"
+     ],
+     "a": 2,
+     "w": "The product may be used for up to 3 treatments (slide 11); a recalcitrant wart should be referred (slide 4).",
+     "x": {
+      "A fourth treatment in 2 weeks": "3 treatments is the maximum.",
+      "Treat weekly from now on": "The interval is 2 weeks and the maximum is 3.",
+      "Hold the device on for 80 seconds": "About 40 seconds is the time for a plantar wart."
+     }
+    },
+    {
+     "t": "A 9-year-old has several smooth, flat-topped, yellow-brown papules on the cheek. The parent asks for a wart remover.",
+     "q": "What do you recommend?",
+     "o": [
+      "Salicylic acid 17% liquid, 1–2 times a day",
+      "Salicylic acid 40% pad every 48 hours",
+      "Cryotherapy for about 20 seconds",
+      "Referral to a provider"
+     ],
+     "a": 3,
+     "w": "Flat warts are not self-treatable, and salicylic acid products are not used on warts on the face.",
+     "x": {
+      "Salicylic acid 17% liquid, 1–2 times a day": "Correct directions for a common wart; this is a flat wart on the face.",
+      "Salicylic acid 40% pad every 48 hours": "Correct directions for a common wart; this is a flat wart on the face.",
+      "Cryotherapy for about 20 seconds": "The time for a common wart; a flat wart is not self-treatable."
+     }
+    },
+    {
+     "t": "A 16-year-old swimmer is treating a plantar wart with a salicylic acid pad and asks how to keep her family from getting it.",
+     "q": "Which advice fits her slide?",
+     "o": [
+      "Shave the wart down each week before the pad",
+      "Leave the wart uncovered so that it dries out",
+      "Use her own towel and keep the wart covered",
+      "Share shower shoes with teammates at the pool"
+     ],
+     "a": 2,
+     "w": "Slide 8: a designated towel, the wart kept covered, foot coverings in public spaces, hands washed before and after.",
+     "x": {
+      "Shave the wart down each week before the pad": "No cutting, shaving or picking.",
+      "Leave the wart uncovered so that it dries out": "The wart is kept covered.",
+      "Share shower shoes with teammates at the pool": "Shoes, socks, towels and razors are not shared."
+     }
+    }
+   ],
+   "numbers": [
+    [
+     "HPV-1",
+     "feet; hands are HPV-2, -4, -27, -57",
+     "Patel Warts slide 4"
+    ],
+    [
+     "5 minutes",
+     "warm-water soak before treatment",
+     "Patel Warts slides 10–11"
+    ],
+    [
+     "48 hours",
+     "40% pad: remove, then repeat",
+     "Patel Warts slide 10"
+    ],
+    [
+     "1–2 times a day",
+     "17% liquid, gel or stick",
+     "Patel Warts slide 10"
+    ],
+    [
+     "12 weeks",
+     "maximum for salicylic acid on a wart",
+     "Patel Warts slide 10"
+    ],
+    [
+     "20 seconds / 40 seconds",
+     "cryotherapy: common / plantar wart",
+     "Patel Warts slide 11"
+    ],
+    [
+     "2 weeks",
+     "repeat cryotherapy after",
+     "Patel Warts slide 11"
+    ],
+    [
+     "3 treatments",
+     "cryotherapy maximum",
+     "Patel Warts slide 11"
+    ],
+    [
+     "1 inch",
+     "size a wart may reach",
+     "Patel Warts slide 5"
+    ]
+   ]
+  },
+  {
+   "id": "corns-calluses",
+   "name": "Corns and calluses",
+   "group": "selfcare",
+   "lectures": "Patel 11/12 · Smith 10/30 (salicylic acid)",
+   "topics": [
+    "p8c-corn",
+    "p8c-cornsa",
+    "p8c-tell"
+   ],
+   "short": [
+    "Corn: small, sharp-edged, central core, painful, over a bony prominence.",
+    "Callus: broad, yellowish, diffuse borders, usually not painful, on weight-bearing areas.",
+    "Cause: friction and pressure; footwear is the most common cause.",
+    "Salicylic acid for no longer than 14 days: 40% pad every 48 hours (7 applications) or 17% no more than twice daily.",
+    "No salicylic acid with diabetes or poor circulation; refer if not gone after 14 days."
+   ],
+   "steps": [
+    {
+     "title": "Cause",
+     "profs": [
+      "pa"
+     ],
+     "q": "What causes a corn, and what causes a callus?",
+     "src": "Patel Warts slides 5, 13; 11/12 lecture T@93710",
+     "blocks": [
+      {
+       "k": "facts",
+       "rows": [
+        [
+         "Corn",
+         "{{Pressure}} from underlying bony prominences or joints; friction"
+        ],
+        [
+         "Callus",
+         "Friction, walking barefoot, structural foot problems"
+        ],
+        [
+         "Most common cause",
+         "★ {{Footwear}}"
+        ],
+        [
+         "Onset",
+         "Variable; may progressively enlarge"
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Recognise it: corn or callus",
+     "profs": [
+      "pa"
+     ],
+     "q": "How do a corn and a callus differ in borders, core, pain, size and site?",
+     "src": "Patel Warts slides 5, 13; 11/12 lecture T@89136–89254",
+     "blocks": [
+      {
+       "k": "facts",
+       "rows": [
+        [
+         "Corn ([[clavus|clavus]])",
+         [
+          "Small, raised, {{sharply demarcated}}",
+          "{{Central core}}",
+          "{{Painful}}",
+          "A few millimeters to {{1 cm}}",
+          "Over {{bony prominences}} of the feet"
+         ]
+        ],
+        [
+         "Callus",
+         [
+          "{{Broad base}}, {{diffuse}} borders",
+          "Raised, yellowish thickening",
+          "Normal pattern of skin ridges",
+          "Usually {{not painful}}; may hurt under significant pressure",
+          "A few millimeters to {{several centimeters}}",
+          "Heel, ball of the foot, toes, sides of the foot"
+         ]
+        ]
+       ]
+      },
+      {
+       "k": "photo",
+       "id": "corn-callus-foot"
+      },
+      {
+       "k": "pts",
+       "items": [
+        "She said: \"corns, painful regardless, but callus, when a weight is applied\""
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Self-care, or refer?",
+     "profs": [
+      "pa",
+      "sm"
+     ],
+     "q": "Who should not use a salicylic acid corn or callus remover, and when is the patient referred?",
+     "src": "Patel Warts slides 16–17; 11/12 lecture T@94074, T@94630; Smith PCol slides 39–40",
+     "blocks": [
+      {
+       "k": "sub",
+       "text": "Do not use salicylic acid"
+      },
+      {
+       "k": "pts",
+       "items": [
+        "★ {{Diabetes}}",
+        "{{Poor blood circulation}}",
+        "Irritated, infected or reddened skin",
+        "Moles or birthmarks"
+       ]
+      },
+      {
+       "k": "sub",
+       "text": "Refer"
+      },
+      {
+       "k": "pts",
+       "items": [
+        "Redness or irritation of the skin during treatment",
+        "★ Not removed after {{14 days}} of treatment"
+       ]
+      },
+      {
+       "k": "prof",
+       "p": "sm",
+       "rows": [
+        [
+         "Salicylic acid",
+         "Caution in diabetes and peripheral vascular disease (PCol slides 39–40)"
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Treat it: remove the cause, then salicylic acid",
+     "profs": [
+      "pa"
+     ],
+     "q": "Give the directions for salicylic acid 17% and 40% on a corn or callus, and the maximum number of days and applications.",
+     "src": "Patel Warts slides 14–17; 11/12 lecture T@93238–95016",
+     "blocks": [
+      {
+       "k": "facts",
+       "rows": [
+        [
+         "Goals",
+         [
+          "Symptomatic relief",
+          "Remove the corn or callus",
+          "Prevent recurrence by correcting the cause"
+         ]
+        ]
+       ]
+      },
+      {
+       "k": "line",
+       "label": "Every patient",
+       "title": "Non-drug",
+       "drugs": [],
+       "pts": [
+        "Soak {{5 minutes}} in warm water daily",
+        "Remove dead tissue gently",
+        "Circular foam or gel cushioning pads",
+        "{{Well-fitting}}, non-binding footwear",
+        "Orthotics"
+       ]
+      },
+      {
+       "k": "line",
+       "label": "Before the product",
+       "title": "Prepare the skin",
+       "drugs": [],
+       "pts": [
+        "Wash and dry the area",
+        "Soak in warm water for {{5 minutes}}",
+        "Rub off the soft white skin with a rough towel, pumice stone or callus file",
+        "Do not debride healthy skin"
+       ]
+      },
+      {
+       "k": "line",
+       "label": "Plaster or pad",
+       "title": "Salicylic acid 40%",
+       "drugs": [
+        "salicylic-acid"
+       ],
+       "pts": [
+        "Trim to the shape of the corn or callus; cover with occlusive tape",
+        "Remove within {{48 hours}}",
+        "Reapply every {{48 hours}} as needed",
+        "★ No longer than {{14 days}} = no more than {{7 applications}}"
+       ]
+      },
+      {
+       "k": "line",
+       "label": "Liquid",
+       "title": "Salicylic acid 17% (collodion-like vehicle)",
+       "drugs": [
+        "salicylic-acid"
+       ],
+       "pts": [
+        "No more than {{twice daily}}",
+        "Up to {{14 days}}",
+        "{{1 drop}} at a time until covered; let it dry and harden",
+        "Petroleum jelly on the surrounding healthy skin",
+        "On healthy skin: wash off at once with soap and water",
+        "Cap tightly after use: evaporation raises the concentration"
+       ]
+      },
+      {
+       "k": "facts",
+       "rows": [
+        [
+         "How long to resolve",
+         "Several days to months"
+        ]
+       ]
+      },
+      {
+       "k": "pts",
+       "items": [
+        "★ \"Pay attention to how many days you're using the products for. How many times can we repeat it ... When do we refer the patient?\""
+       ]
+      }
+     ]
+    }
+   ],
+   "patients": [
+    {
+     "t": "A 38-year-old teacher has a small, raised, sharp-edged lesion with a central core over the fifth toe joint. It hurts in her narrow dress shoes. No medical conditions.",
+     "q": "What do you recommend?",
+     "o": [
+      "Salicylic acid 40% pad every 48 hours for up to 12 weeks",
+      "Salicylic acid 40% pad every 48 hours for up to 14 days",
+      "Cryotherapy for about 40 seconds",
+      "Salicylic acid 17% liquid 4 times a day for 14 days"
+     ],
+     "a": 1,
+     "w": "This is a corn. The 40% pad is reapplied every 48 hours for no longer than 14 days (7 applications). The cause is also corrected: well-fitting, non-binding footwear.",
+     "x": {
+      "Salicylic acid 40% pad every 48 hours for up to 12 weeks": "12 weeks is the limit for a wart; a corn or callus is 14 days.",
+      "Cryotherapy for about 40 seconds": "Cryotherapy is a wart treatment.",
+      "Salicylic acid 17% liquid 4 times a day for 14 days": "The 17% liquid is used no more than twice daily."
+     }
+    },
+    {
+     "t": "A 62-year-old man with type 2 diabetes has a thick yellowish callus on the ball of his foot and asks for a callus remover pad.",
+     "q": "What do you recommend?",
+     "o": [
+      "Salicylic acid 40% pad for 14 days",
+      "Salicylic acid 17% liquid twice daily",
+      "Referral; no salicylic acid product",
+      "Salicylic acid 40% pad for 7 days only"
+     ],
+     "a": 2,
+     "w": "Slide 16: do not use if you are diabetic or have poor blood circulation (\"if a patient is diabetic, that is also not the time to use these agents\").",
+     "x": {
+      "Salicylic acid 40% pad for 14 days": "The duration is right for a callus, but diabetes rules the product out.",
+      "Salicylic acid 17% liquid twice daily": "The frequency is right, but diabetes rules the product out.",
+      "Salicylic acid 40% pad for 7 days only": "A shorter course does not remove the exclusion."
+     }
+    },
+    {
+     "t": "A 29-year-old runner has applied a 40% salicylic acid pad to a callus every 48 hours. She has just removed the seventh pad and the callus remains.",
+     "q": "What is the next step?",
+     "o": [
+      "An eighth pad",
+      "Switch to the 17% liquid for 14 more days",
+      "Referral to a provider",
+      "Leave each pad on for 4 days"
+     ],
+     "a": 2,
+     "w": "Seven applications are 14 days. Not removed after 14 days of treatment: seek medical attention.",
+     "x": {
+      "An eighth pad": "7 applications is the maximum.",
+      "Switch to the 17% liquid for 14 more days": "The 14-day limit applies to treatment, not to each product.",
+      "Leave each pad on for 4 days": "Pads come off within 48 hours."
+     }
+    },
+    {
+     "t": "A 50-year-old woman uses the 17% salicylic acid liquid on a corn. Some of it ran onto the healthy skin next to the corn.",
+     "q": "What do you counsel?",
+     "o": [
+      "Leave it; it will dry and harden",
+      "Wash it off at once with soap and water",
+      "Cover it with occlusive tape for 48 hours",
+      "Apply a second drop over the same spot"
+     ],
+     "a": 1,
+     "w": "Slide 17: if the product touches healthy skin, wash it off immediately with soap and water; petroleum jelly on the surrounding skin protects it next time.",
+     "x": {
+      "Leave it; it will dry and harden": "The acid acts on healthy skin as well.",
+      "Cover it with occlusive tape for 48 hours": "Tape would hold the acid on healthy skin.",
+      "Apply a second drop over the same spot": "The product is applied only to the corn, 1 drop at a time."
+     }
+    }
+   ],
+   "numbers": [
+    [
+     "14 days",
+     "maximum salicylic acid treatment of a corn or callus",
+     "Patel Warts slide 17"
+    ],
+    [
+     "7 applications",
+     "40% pad every 48 hours for 14 days",
+     "Patel Warts slide 17"
+    ],
+    [
+     "48 hours",
+     "40% pad: remove within, reapply every",
+     "Patel Warts slide 17"
+    ],
+    [
+     "Twice daily",
+     "17% liquid: no more than",
+     "Patel Warts slide 17"
+    ],
+    [
+     "5 minutes",
+     "warm-water soak",
+     "Patel Warts slides 15, 17"
+    ],
+    [
+     "1 cm",
+     "largest corn; a callus reaches several centimeters",
+     "Patel Warts slide 5"
+    ],
+    [
+     "12 weeks",
+     "the wart limit, for contrast",
+     "Patel Warts slide 10"
+    ]
+   ]
+  }
+ ],
+ "drugs": {
+  "sunscreen-chemical": {
+   "name": "Chemical (organic) sunscreens",
+   "brand": "",
+   "sm": {
+    "text": "Organic compounds absorb UVB and/or UVA and convert it to heat. Families: benzophenones, anthranilates, dibenzoylmethanes, aminobenzoates, cinnamates, salicylates. Most have been linked to skin reactions; risk is higher with PABA, avobenzone and oxybenzone.",
+    "src": "Smith Sun slides 22, 24–25"
+   },
+   "sk": {
+    "text": "Each is a chromophore. UVA: avobenzone (photodegrades, half-life about 2 hours, reapply every 2 hours), meradimate. UVB: octinoxate, PABA and padimate O (PABA allergy), homosalate and octisalate, ensulizole (water soluble, reapply after swimming). UVB and UVA: oxybenzone and the benzophenones (log P about 4, highly absorbed), octocrylene, bemotrizinol.",
+    "src": "DPAW pages 62–66"
+   },
+   "pa": [
+    {
+     "dz": "sun-protection",
+     "role": "Absorb UV radiation and block its transmission to the epidermis. Padimate O, meradimate, dioxybenzone, oxybenzone, cinoxate, octinoxate, octocrylene, avobenzone, ecamsule, ensulizole",
+     "how": "Broad spectrum, SPF ≥ 15 (prefer 30+); 1 ounce, 15 minutes before; reapply every 40–80 minutes",
+     "src": "Patel Sun slides 15–17, 21"
+    },
+    {
+     "dz": "photoaging",
+     "role": "Daily prevention and with hydroquinone or a retinoid",
+     "how": "Broad spectrum SPF ≥ 15 daily, reapplied often",
+     "src": "Patel Sun slides 42, 53"
+    }
+   ],
+   "counsel": [
+    "Choose broad spectrum, SPF 15 or higher (30+ preferred), water resistant for swimming or sweating.",
+    "Adult: about 1 ounce over all exposed skin, 15 minutes before going out.",
+    "Reapply every 40–80 minutes as labelled, and after towel drying.",
+    "Keep it away from the eyes and mucus membranes.",
+    "Check the expiration date and keep the product out of direct sunlight.",
+    "Stop a product that causes redness, itching, rash or an exaggerated sunburn."
+   ],
+   "counselSrc": "Patel Sun slides 21, 36–37",
+   "avoid": [
+    "Under 6 months of age: no sunscreen",
+    "Allergy to sunscreen ingredients",
+    "Sensitive skin or a previous reaction: avoid PABA; use zinc oxide or titanium dioxide",
+    "PABA and trolamine salicylate are not GRASE",
+    "Oxybenzone had the highest blood level in FDA testing (threshold 0.5 ng/mL)"
+   ]
+  },
+  "zinc-oxide": {
+   "name": "Zinc oxide (physical sunscreen)",
+   "brand": "",
+   "sm": {
+    "text": "A sunblock: inorganic particles scatter or reflect visible, UV and infrared radiation (UVA and UVB). Used on prominent areas such as the nose and ears. May occlude pores; less likely to irritate. Protection falls after 2 hours of direct sun.",
+    "src": "Smith Sun slides 20–21"
+   },
+   "sk": {
+    "text": "A metal oxide: reflects and scatters UVA and UVB; inert; larger particles work better.",
+    "src": "DPAW page 61"
+   },
+   "pa": [
+    {
+     "dz": "sun-protection",
+     "role": "Physical sunscreen: opaque, reflects and scatters UV radiation. GRASE and preferred; the choice for sensitive skin or a previous allergic reaction",
+     "how": "Applied and reapplied like any sunscreen",
+     "src": "Patel Sun slides 16–18; T@55166"
+    }
+   ],
+   "counsel": [
+    "Same directions as any sunscreen: 1 ounce, 15 minutes before, reapply every 40–80 minutes and after towel drying."
+   ],
+   "counselSrc": "Patel Sun slides 21, 36",
+   "avoid": [
+    "Under 6 months of age: no sunscreen"
+   ]
+  },
+  "titanium-dioxide": {
+   "name": "Titanium dioxide (physical sunscreen)",
+   "brand": "",
+   "sm": {
+    "text": "A sunblock: inorganic particles scatter or reflect visible, UV and infrared radiation.",
+    "src": "Smith Sun slide 20"
+   },
+   "sk": {
+    "text": "A metal oxide: reflects and scatters UVA and UVB; inert; larger particles work better.",
+    "src": "DPAW page 61"
+   },
+   "pa": [
+    {
+     "dz": "sun-protection",
+     "role": "Physical sunscreen, GRASE and preferred; with zinc oxide, the two ingredients she called most effective. Also in the broad-spectrum mixture for patients on photosensitizing drugs",
+     "how": "Applied and reapplied like any sunscreen",
+     "src": "Patel Sun slides 16–18; T@55166"
+    }
+   ],
+   "counsel": [
+    "Same directions as any sunscreen: 1 ounce, 15 minutes before, reapply every 40–80 minutes and after towel drying."
+   ],
+   "counselSrc": "Patel Sun slides 21, 36",
+   "avoid": [
+    "Under 6 months of age: no sunscreen"
+   ]
+  },
+  "systemic-analgesics": {
+   "name": "Systemic analgesics: ibuprofen (NSAIDs), acetaminophen",
+   "brand": "",
+   "pa": [
+    {
+     "dz": "sunburn",
+     "role": "Recommended: decrease pain, erythema and edema; act longer than topical anesthetics. Her poll answer for pain and tenderness: oral ibuprofen",
+     "how": "Use for the first 1–2 days. Slide 31: \"prefer one with anti-inflammatory properties (NSAIDs, APAP)\"; she said \"it could be Tylenol, it could be ibuprofen\"",
+     "src": "Patel Sun slide 31; T@65246"
+    },
+    {
+     "dz": "burns",
+     "role": "Acetaminophen or an NSAID for the pain of a minor burn",
+     "how": "Minor burns only",
+     "src": "Patel Wound slide 19"
+    }
+   ],
+   "counsel": [
+    "For sunburn pain, take it for the first 1–2 days.",
+    "Come back if the burn is worse after 24–48 hours or not healed in 7 days."
+   ],
+   "counselSrc": "Patel Sun slides 31, 34",
+   "avoid": [
+    "Ibuprofen and the other NSAIDs are on her list of medications that increase sun sensitivity"
+   ]
+  },
+  "aloe-vera": {
+   "name": "Aloe vera",
+   "brand": "",
+   "pa": [
+    {
+     "dz": "sunburn",
+     "role": "Alternative treatment; may decrease pain by inhibiting bradykinin and the inflammatory process",
+     "how": "Topically, on intact skin; look for pure aloe vera juice or gel on the label",
+     "src": "Patel Sun slide 32; T@64175"
+    },
+    {
+     "dz": "burns",
+     "role": "Traditional non-drug treatment of a minor burn",
+     "how": "",
+     "src": "Patel Wound slide 18"
+    }
+   ],
+   "counsel": [
+    "Apply to intact skin only.",
+    "Choose a product labelled pure aloe vera juice or gel.",
+    "Do not take it by mouth."
+   ],
+   "counselSrc": "Patel Sun slide 32; 11/12 lecture T@64175",
+   "avoid": [
+    "Not FDA-approved for burn treatment",
+    "Internal use: multiple drug interactions and adverse effects"
+   ]
+  },
+  "skin-protectants": {
+   "name": "Skin protectants and emollients (petrolatum, cocoa butter, allantoin, Aquaphor)",
+   "brand": "",
+   "sk": {
+    "text": "Petrolatum: linear hydrocarbons of more than 25 carbons; the most effective emollient; fills the gaps between scales and prevents water loss.",
+    "src": "DPAW page 15"
+   },
+   "pa": [
+    {
+     "dz": "sunburn",
+     "role": "Rehydration and skin irritation: cocoa butter, petrolatum",
+     "how": "As often as needed; start after 24 hours",
+     "src": "Patel Sun slide 31"
+    },
+    {
+     "dz": "burns",
+     "role": "Minor burn: allantoin, cocoa butter, petrolatum, Aquaphor",
+     "how": "",
+     "src": "Patel Wound slide 19"
+    },
+    {
+     "dz": "corns-calluses",
+     "role": "Petroleum jelly on the healthy skin around a corn or callus protects it from the 17% salicylic acid liquid",
+     "how": "Before the liquid is applied",
+     "src": "Patel Warts slide 17"
+    }
+   ],
+   "counsel": [
+    "On a sunburn, wait 24 hours, then apply as often as needed."
+   ],
+   "counselSrc": "Patel Sun slide 31",
+   "avoid": [
+    "Sunburn: not in the first 24 hours"
+   ]
+  },
+  "hydroquinone": {
+   "name": "Hydroquinone 4%",
+   "brand": "",
+   "sk": {
+    "text": "Lowers melanin biosynthesis (tyrosinase). Degrades to benzoquinone, which is coloured and inactive: amber bottle, protected from light and oxygen.",
+    "src": "DPAW page 67"
+   },
+   "pa": [
+    {
+     "dz": "photoaging",
+     "role": "Depigmentation: reduces hyperpigmentation from sun exposure (melasma, lentigines). Her poll answer for hyperpigmentation",
+     "how": "Combination products with hydroquinone 4%; limit use to three months; wear sunscreen",
+     "src": "Patel Sun slides 47–48; T@76234"
+    }
+   ],
+   "counsel": [
+    "Use for no longer than three months.",
+    "Wear sunscreen every day while using it.",
+    "Use it when prescribed by a licensed health care provider.",
+    "Check the product label of a nonprescription skin-lightening product for hydroquinone."
+   ],
+   "counselSrc": "Patel Sun slides 47–48",
+   "avoid": [
+    "Not FDA-approved for over-the-counter sale",
+    "Ochronosis that may be permanent; rashes; facial swelling"
+   ]
+  },
+  "tretinoin": {
+   "name": "Topical retinoids (OTC retinol, retinyl palmitate; Rx tretinoin, tazarotene)",
+   "brand": "",
+   "sm": {
+    "text": "Tretinoin acts on the retinoic acid receptors RAR and RXR (nuclear receptors).",
+    "src": "Smith PCol slides 14, 17–18"
+   },
+   "sk": {
+    "text": "Tretinoin is all-trans retinoic acid, a first-generation retinoid. Retinoids are RAR and RXR agonists and teratogenic. Topical retinoids stimulate the skin's collagen production.",
+    "src": "DPAW pages 48–49, 70"
+   },
+   "pa": [
+    {
+     "dz": "photoaging",
+     "role": "More keratinocyte division, new collagen and elastic fibers, less melanin: improves wrinkles, pigment mottling and texture. OTC forms must be converted to retinoic acid by the skin, which limits efficacy",
+     "how": "Once daily at bedtime to dry skin after cleansing; moisturizer or foundation with SPF 30+ by day; prescription effect over 6–12 months",
+     "src": "Patel Sun slides 43–44, 54"
+    }
+   ],
+   "counsel": [
+    "Apply once a day at bedtime, to dry skin, after cleansing.",
+    "By day, use a moisturizer or foundation with SPF 30 or higher.",
+    "Expect dryness, scaling, redness or burning; the product can be used on alternate days to reduce this.",
+    "The benefit comes with long-term daily use and may take months.",
+    "Keep it away from the eyes and mucus membranes."
+   ],
+   "counselSrc": "Patel Sun slides 44, 53–54",
+   "avoid": [
+    "Phototoxicity: sun protection every day",
+    "Retinoids are on her list of medications that increase sun sensitivity",
+    "Dr. Sikazwe: teratogenic"
+   ]
+  },
+  "aha": {
+   "name": "Alpha hydroxy acids (lactic, glycolic, citric, malic)",
+   "brand": "",
+   "sk": {
+    "text": "Hydroxy acids: remove dead cells and raise collagen. Sources: glycolic from cane or beet, lactic from milk.",
+    "src": "DPAW page 68"
+   },
+   "pa": [
+    {
+     "dz": "photoaging",
+     "role": "Keratolytic: thicker dermis, better collagen and elastic fibers, less hyperpigmentation, more exfoliation",
+     "how": "To dry skin within 15 minutes of cleansing",
+     "src": "Patel Sun slides 45, 54"
+    }
+   ],
+   "counsel": [
+    "Apply to dry skin within 15 minutes of cleansing.",
+    "Expect stinging, burning, itching, skin lightening or dryness.",
+    "Use sunscreen daily.",
+    "Results take at least four weeks."
+   ],
+   "counselSrc": "Patel Sun slides 53–54",
+   "avoid": [
+    "Alpha hydroxy acids in cosmetics are on her list of products that increase sun sensitivity",
+    "Chemical peels are not self-applied OTC products; deep peels are for professionals"
+   ]
+  },
+  "antioxidants": {
+   "name": "Topical antioxidants (vitamin C, niacinamide, vitamin E, coenzyme Q-10, alpha-lipoic acid)",
+   "brand": "",
+   "pa": [
+    {
+     "dz": "photoaging",
+     "role": "Some evidence of protection from skin damage caused by sun and pollutants",
+     "how": "Difficult to deliver to the skin; no proven formula",
+     "src": "Patel Sun slide 49"
+    }
+   ],
+   "counsel": [
+    "Results take at least four weeks.",
+    "Keep using sunscreen every day."
+   ],
+   "counselSrc": "Patel Sun slide 53",
+   "avoid": [
+    "No proven formula"
+   ]
+  },
+  "topical-antibiotics": {
+   "name": "First-aid (topical) antibiotics: bacitracin, neomycin, polymyxin B sulfate",
+   "brand": "",
+   "pa": [
+    {
+     "dz": "wounds",
+     "role": "Preventative; limited evidence of efficacy",
+     "how": "After cleansing and before bandaging; 1 to 3 times a day",
+     "src": "Patel Wound slides 11, 20; T@81569"
+    },
+    {
+     "dz": "burns",
+     "role": "Minor burns only: prevent infection",
+     "how": "1 to 3 times a day",
+     "src": "Patel Wound slides 19–20"
+    },
+    {
+     "dz": "sunburn",
+     "role": "Not a pain treatment: a wrong option in her sunburn poll (topical bacitracin)",
+     "how": "",
+     "src": "PollEv 11/12; T@65246"
+    }
+   ],
+   "counsel": [
+    "Cleanse the wound first, apply the antibiotic, then the bandage.",
+    "Apply 1 to 3 times a day.",
+    "Use it for a short time on a small area.",
+    "See a primary care provider if there is no improvement within 7 days."
+   ],
+   "counselSrc": "Patel Wound slides 11, 20; 11/12 lecture T@81569, T@82489",
+   "avoid": [
+    "Toxicity risk rises with large areas of application",
+    "Neomycin: systemic toxicity",
+    "Polymyxin B: hypersensitivity"
+   ]
+  },
+  "topical-anesthetics": {
+   "name": "Topical anesthetics: benzocaine, lidocaine, pramoxine",
+   "brand": "",
+   "sm": {
+    "text": "Drug chart class: sodium channel blockers (topical anesthetics for sunburn relief); not on her sun slides.",
+    "src": "Drug chart page 1"
+   },
+   "pa": [
+    {
+     "dz": "wounds",
+     "role": "Temporary relief of pain; limited evidence of efficacy or safety",
+     "how": "Up to 4 times daily; small quantities and low concentrations on broken skin; relief lasts 15 to 45 minutes",
+     "src": "Patel Wound slides 14, 20"
+    },
+    {
+     "dz": "burns",
+     "role": "Minor burn pain",
+     "how": "Up to 4 times daily; continuous pain control cannot be achieved",
+     "src": "Patel Wound slide 20"
+    },
+    {
+     "dz": "sunburn",
+     "role": "NOT recommended for routine use",
+     "how": "If used: small areas (1–2% BSA) of intact skin, no more than 3 to 4 times a day",
+     "src": "Patel Sun slide 33; T@64451"
+    }
+   ],
+   "counsel": [
+    "Use small amounts, up to 4 times a day.",
+    "Relief lasts 15 to 45 minutes; the pain will return between doses, and more frequent use is not safe.",
+    "Do not cover large areas."
+   ],
+   "counselSrc": "Patel Wound slide 20; 11/12 lecture T@85399",
+   "avoid": [
+    "★ Overuse: systemic toxicity (lidocaine)",
+    "Benzocaine absorbed systemically: methemoglobinemia (cyanosis, dyspnea, syncope, seizures, coma)",
+    "Sunburn: not recommended; hypersensitivity reaction and systemic symptoms",
+    "Her OTC chart: not under an occlusive dressing or on broken skin"
+   ]
+  },
+  "antiseptics": {
+   "name": "First-aid antiseptics: hydrogen peroxide, chlorhexidine, povidone-iodine",
+   "brand": "",
+   "pa": [
+    {
+     "dz": "wounds",
+     "role": "Only when indicated; may cause cytotoxicity that reduces wound healing",
+     "how": "On intact skin at the wound edges, after debris is removed",
+     "src": "Patel Wound slides 15, 19, 27; T@83362"
+    },
+    {
+     "dz": "burns",
+     "role": "Minor burn: wound edges on intact skin",
+     "how": "",
+     "src": "Patel Wound slide 19"
+    },
+    {
+     "dz": "sunburn",
+     "role": "NOT recommended",
+     "how": "",
+     "src": "Patel Sun slide 33"
+    }
+   ],
+   "counsel": [
+    "Clean the wound itself with clean water or saline.",
+    "If an antiseptic is used, keep it on the intact skin at the edges of the wound."
+   ],
+   "counselSrc": "Patel Wound slides 19, 27",
+   "avoid": [
+    "Inside the wound: reduces healing",
+    "Sunburn"
+   ]
+  },
+  "dressings": {
+   "name": "Wound dressings",
+   "brand": "",
+   "pa": [
+    {
+     "dz": "wounds",
+     "role": "Keep a moist healing environment with a dressing that fits the wound. \"Know the advantages, know the disadvantages\"",
+     "how": "Gauze: cost effective, highly absorbent, nonocclusive; no moist environment alone, needs a secondary dressing and frequent changes, removal may bleed or hurt. Nonadherent gauze: less adherent. Adhesive bandage: cost effective, many shapes. Hydrocolloid: moist, long wear, occlusive, impermeable to fluids and bacteria, reduces pain; uninfected wounds only, hard to assess the wound, less cost effective. Transparent film: moist, semi-occlusive, gas-permeable, easy inspection; not absorptive, uninfected wounds only",
+     "src": "Patel Wound slides 8–9; T@80276"
+    }
+   ],
+   "counsel": [
+    "Cleanse first; apply an antibiotic only if indicated; then the dressing.",
+    "Hydrocolloid and transparent film dressings are for uninfected wounds only."
+   ],
+   "counselSrc": "Patel Wound slides 8–9, 27; 11/12 lecture T@82489",
+   "avoid": [
+    "Hydrocolloid or film on an infected wound",
+    "Film on a wound with a large amount of exudate (maceration)"
+   ]
+  },
+  "salicylic-acid": {
+   "name": "Salicylic acid 17% and 40%",
+   "brand": "17%: Dr. Scholl's Corn/Callus Remover Liquid. 40%: Dr. Scholl's Duragel, Curad Mediplast",
+   "sm": {
+    "text": "Keratolytic: solubilizes the cell surface proteins that keep the stratum corneum intact. Up to 40% for warts and corns; caution in diabetes and peripheral vascular disease.",
+    "src": "Smith PCol slides 39–40"
+   },
+   "sk": {
+    "text": "A beta-hydroxy acid; keratolytic.",
+    "src": "DPAW page 43"
+   },
+   "pa": [
+    {
+     "dz": "warts",
+     "role": "40% pad, strip or plaster",
+     "how": "Remove after 48 hours; repeat every 48 hours; up to 12 weeks",
+     "src": "Patel Warts slide 10"
+    },
+    {
+     "dz": "warts",
+     "role": "17% liquid, gel or stick",
+     "how": "1 drop at a time, let dry, cover; 1–2 times a day; up to 12 weeks",
+     "src": "Patel Warts slide 10"
+    },
+    {
+     "dz": "corns-calluses",
+     "role": "40% plaster or pad",
+     "how": "Remove within 48 hours; reapply every 48 hours; no longer than 14 days (7 applications)",
+     "src": "Patel Warts slide 17"
+    },
+    {
+     "dz": "corns-calluses",
+     "role": "17% liquid in a collodion-like vehicle",
+     "how": "No more than twice daily; up to 14 days",
+     "src": "Patel Warts slide 17"
+    }
+   ],
+   "counsel": [
+    "Before each application: soak the area in warm water for 5 minutes; wash and dry it thoroughly.",
+    "Pad or plaster: trim it to the lesion so that it does not touch healthy skin; cover with occlusive tape.",
+    "Liquid: 1 drop at a time until the lesion is covered; let it dry; if it touches healthy skin, wash it off at once with soap and water.",
+    "Cap the liquid tightly after use and store it away from sunlight and heat.",
+    "Wart: may be used for up to 12 weeks. Corn or callus: no longer than 14 days (7 pads).",
+    "Corn or callus: seek medical attention if the skin becomes red or irritated, or if it is not removed after 14 days."
+   ],
+   "counselSrc": "Patel Warts slides 10, 17; 11/12 lecture T@94581–95016",
+   "avoid": [
+    "Diabetes",
+    "Poor blood circulation",
+    "Irritated, infected or reddened skin",
+    "Moles, birthmarks, warts with hair growing from them",
+    "Warts on the face, genital warts, warts on mucous membranes"
+   ]
+  },
+  "cryotherapy": {
+   "name": "OTC cryotherapy (dimethyl ether and propane; nitrous oxide)",
+   "brand": "",
+   "pa": [
+    {
+     "dz": "warts",
+     "role": "Freezes common and plantar warts",
+     "how": "Until a halo appears: about 20 seconds (common), about 40 seconds (plantar); repeat after 2 weeks if needed; up to 3 treatments",
+     "src": "Patel Warts slides 9, 11"
+    }
+   ],
+   "counsel": [
+    "Wash hands before and after; soak the area in warm water for 5 minutes, then wash and dry.",
+    "A plantar wart may be lightly abraded with a file or pumice stone first.",
+    "Hold it on for about 20 seconds on a common wart, about 40 seconds on a plantar wart.",
+    "Throw away single-use applicators after one use.",
+    "Repeat after 2 weeks if needed; no more than 3 treatments."
+   ],
+   "counselSrc": "Patel Warts slide 11",
+   "avoid": [
+    "Flammable: not near heat sources",
+    "Keep the canister away from the face, body and clothing",
+    "Wart types that are not self-treatable: flat, mosaic, periungual, filiform"
+   ]
+  }
+ },
+ "terms": {
+  "spf": [
+   "SPF (sun protection factor)",
+   "A number that indicates UVB protection only. Dr. Smith: the ratio of the sunlight dose that burns with the sunscreen to the dose that burns without it.",
+   "Patel Sun slide 15; Smith Sun slide 13"
+  ],
+  "broad": [
+   "Broad spectrum",
+   "A sunscreen that covers both UVA and UVB. Dr. Smith: a critical wavelength of 370 nm or more may be labelled broad spectrum.",
+   "Patel Sun slides 14–15; Smith Sun slide 14"
+  ],
+  "grase": [
+   "GRASE",
+   "Generally Recognized as Safe and Effective. Zinc oxide and titanium dioxide are GRASE.",
+   "Patel Sun slides 17–18"
+  ],
+  "fitz": [
+   "Fitzpatrick scale",
+   "Six skin types, I (very fair, always burns, cannot tan) to VI (dark brown, never burns, always tans).",
+   "Patel Sun slide 8"
+  ],
+  "photoaging": [
+   "Photoaging",
+   "Skin aging from cumulative sun exposure and other environmental influences.",
+   "Patel Sun slide 39"
+  ],
+  "lentigines": [
+   "Lentigines",
+   "Liver spots, freckles.",
+   "Patel Sun slide 40"
+  ],
+  "melasma": [
+   "Melasma",
+   "A skin change from sun exposure on her slide 26; hydroquinone reduces this hyperpigmentation.",
+   "Patel Sun slides 26, 47"
+  ],
+  "erythema": [
+   "Erythema",
+   "Redness of the skin.",
+   "plain meaning, not from the slides"
+  ],
+  "bsa": [
+   "Body surface area (BSA)",
+   "The share of the skin that is affected, as a percentage.",
+   "Patel Wound slide 16"
+  ],
+  "hydrocolloid": [
+   "Hydrocolloid dressing",
+   "An occlusive, self-adherent dressing that keeps the wound moist and manages exudate by particle swelling; uninfected wounds only.",
+   "Patel Wound slide 9"
+  ],
+  "cytotoxic": [
+   "Cytotoxicity",
+   "Damage to cells; antiseptics may cause it and so reduce wound healing.",
+   "Patel Wound slide 15"
+  ],
+  "circumferential": [
+   "Circumferential burn",
+   "A burn that goes all the way around a limb or body part.",
+   "plain meaning, not from the slides"
+  ],
+  "hpv": [
+   "HPV",
+   "Human papillomavirus, the cause of warts.",
+   "Patel Warts slide 4"
+  ],
+  "autoinoc": [
+   "Auto-inoculation",
+   "Spread of the virus from one site to another on the same person.",
+   "plain meaning, not from the slides"
+  ],
+  "plantar": [
+   "Plantar",
+   "On the sole of the foot.",
+   "plain meaning, not from the slides"
+  ],
+  "clavus": [
+   "Clavus",
+   "The name on her slide for a corn.",
+   "Patel Warts slide 13"
+  ],
+  "keratolytic": [
+   "Keratolytic",
+   "An agent that breaks down the outer horny layer of the skin; salicylic acid and the alpha hydroxy acids are named keratolytics.",
+   "Smith PCol slide 39; Patel Sun slide 45"
+  ],
+  "cryotherapy": [
+   "Cryotherapy",
+   "Freezing a wart with an OTC device (dimethyl ether and propane, or nitrous oxide).",
+   "Patel Warts slides 9, 11"
+  ]
+ },
+ "tell": [
+  {
+   "id": "wart-corn-callus",
+   "title": "Wart, corn or callus",
+   "cols": [
+    "Wart",
+    "Corn",
+    "Callus"
+   ],
+   "path": [
+    {
+     "q": "Are the normal skin ridges disrupted, with a rough cauliflower-like surface?",
+     "a": [
+      "Yes → **wart** (HPV)",
+      "No → next question"
+     ]
+    },
+    {
+     "q": "Is there a central core with sharp borders, over a bony prominence?",
+     "a": [
+      "Yes → **corn**",
+      "No, broad with diffuse borders on a weight-bearing area → **callus**"
+     ]
+    },
+    {
+     "q": "Does it hurt without pressure on it?",
+     "a": [
+      "Yes → **corn**",
+      "Only under pressure → wart or callus"
+     ]
+    }
+   ],
+   "rows": [
+    [
+     "Location",
+     [
+      "Any skin the virus can infect",
+      "Over {{bony prominences}} of the feet",
+      "{{Weight-bearing}} areas of the feet"
+     ]
+    ],
+    [
+     "Look",
+     [
+      "Rough, {{cauliflower-like}}; plantar warts disrupt skin ridges",
+      "Raised, {{sharply demarcated}}, {{central core}}",
+      "Raised, yellowish; broad base, {{diffuse borders}}; normal skin ridges"
+     ],
+     "Skin ridges: disrupted by a plantar wart, kept by a callus."
+    ],
+    [
+     "Pain",
+     [
+      "Usually not painful; may hurt under constant pressure",
+      "{{Painful}}",
+      "Usually not painful; may hurt under significant pressure"
+     ],
+     "The corn is the painful one."
+    ],
+    [
+     "Size",
+     [
+      "Up to about {{1 inch}}",
+      "A few millimeters to {{1 cm}}",
+      "A few millimeters to {{several centimeters}}"
+     ]
+    ],
+    [
+     "Cause",
+     [
+      "{{HPV}} infection of the epidermis",
+      "Friction (pressure over a bony prominence)",
+      "Friction, walking barefoot, structural foot problems"
+     ]
+    ],
+    [
+     "Treatment",
+     [
+      "Prevent spread; salicylic acid or {{cryotherapy}}",
+      "Remove the cause; salicylic acid",
+      "Remove the cause; salicylic acid"
+     ],
+     "Cryotherapy is for warts only."
+    ],
+    [
+     "Salicylic acid limit",
+     [
+      "{{12 weeks}}",
+      "{{14 days}}",
+      "{{14 days}}"
+     ]
+    ]
+   ],
+   "photo": "corn-callus-foot",
+   "src": "Patel Warts slides 5, 10, 13, 17; 11/12 lecture T@88664–90006"
+  },
+  {
+   "id": "burn-grades",
+   "title": "Minor, moderate or major burn",
+   "cols": [
+    "Minor",
+    "Moderate",
+    "Major"
+   ],
+   "path": [
+    {
+     "q": "Is it the eyes, ears, face or genitalia, an inhalation or electrical burn, or a poor-risk patient (diabetes)?",
+     "a": [
+      "Yes → **major**, refer",
+      "No → next question"
+     ]
+    },
+    {
+     "q": "Adult or child, and what percentage of BSA?",
+     "a": [
+      "Adult < 15% or child < 10%, superficial → **minor**",
+      "Adult 15–25% or child 10–20% → **moderate**",
+      "Adult > 25% or child > 20% → **major**"
+     ]
+    }
+   ],
+   "rows": [
+    [
+     "Adult",
+     [
+      "{{< 15%}} BSA",
+      "{{15–25%}} BSA",
+      "{{> 25%}} BSA"
+     ]
+    ],
+    [
+     "Child",
+     [
+      "{{< 10%}} BSA",
+      "{{10–20%}} BSA",
+      "{{> 20%}} BSA"
+     ],
+     "Each child limit is 5 points lower than the adult limit."
+    ],
+    [
+     "Depth named on the slide",
+     [
+      "Superficial burn",
+      "Superficial partial-thickness burn",
+      "Superficial partial-thickness burn"
+     ]
+    ],
+    [
+     "Deep partial or full thickness",
+     [
+      "< 2% BSA on slide 16; slide 7 excludes these from self-care (not settled)",
+      "{{2–10%}} BSA",
+      "{{> 10%}} BSA"
+     ]
+    ],
+    [
+     "Action",
+     [
+      "{{Self-care}}",
+      "{{Referral}}",
+      "{{Referral}}"
+     ],
+     "\"Anything besides minor would be straight referral.\""
+    ]
+   ],
+   "src": "Patel Wound slides 7, 16–17; 11/12 lecture T@83577–84806"
+  },
+  {
+   "id": "wound-stages",
+   "title": "The four wound stages",
+   "cols": [
+    "Stage 1",
+    "Stage 2",
+    "Stage 3",
+    "Stage 4"
+   ],
+   "path": [
+    {
+     "q": "Is the skin broken?",
+     "a": [
+      "No, red and non-blanching → **stage 1**",
+      "Yes → next question"
+     ]
+    },
+    {
+     "q": "Is the full thickness of the skin lost?",
+     "a": [
+      "No, a blister or part of the dermis → **stage 2**",
+      "Yes → next question"
+     ]
+    },
+    {
+     "q": "Are muscle, tendon or bone involved?",
+     "a": [
+      "No → **stage 3**",
+      "Yes → **stage 4**"
+     ]
+    }
+   ],
+   "rows": [
+    [
+     "Skin loss",
+     [
+      "{{None}}",
+      "{{Partial}} thickness, or a blister",
+      "{{Full}} thickness",
+      "Full thickness and deeper"
+     ]
+    ],
+    [
+     "Layers",
+     [
+      "Unbroken skin: reddened, non-blanching",
+      "All the epidermis and {{part of the dermis}}",
+      "Entire epidermis, dermis and dermal appendages; may involve subcutaneous tissue",
+      "Subcutaneous tissue, {{muscle, tendon and bone}}"
+     ]
+    ],
+    [
+     "Healing",
+     [
+      "Shortest",
+      "Longer",
+      "Longer",
+      "Longest"
+     ],
+     "The higher the stage, the longer the healing."
+    ]
+   ],
+   "photo": "wound-stages",
+   "src": "Patel Wound slide 5; 11/12 lecture T@78420, T@79102"
+  },
+  {
+   "id": "sa-17-40",
+   "title": "Salicylic acid: 17% or 40%, wart or corn/callus",
+   "cols": [
+    "40% on a wart",
+    "17% on a wart",
+    "40% on a corn or callus",
+    "17% on a corn or callus"
+   ],
+   "path": [
+    {
+     "q": "Wart, or corn/callus?",
+     "a": [
+      "Wart → the limit is **12 weeks**",
+      "Corn or callus → the limit is **14 days**"
+     ]
+    },
+    {
+     "q": "Pad or liquid?",
+     "a": [
+      "40% pad, strip or plaster → changed every **48 hours**",
+      "17% liquid or gel → applied **daily** (wart 1–2 times; corn or callus no more than twice)"
+     ]
+    }
+   ],
+   "rows": [
+    [
+     "Form",
+     [
+      "Pad, strip, plaster",
+      "Liquid, gel, stick",
+      "Plaster or pad",
+      "Liquid in a collodion-like vehicle"
+     ]
+    ],
+    [
+     "How often",
+     [
+      "Remove after {{48 hours}}; repeat every 48 hours",
+      "{{1–2 times}} a day",
+      "Remove within {{48 hours}}; reapply every 48 hours",
+      "No more than {{twice daily}}"
+     ]
+    ],
+    [
+     "Maximum",
+     [
+      "{{12 weeks}}",
+      "{{12 weeks}}",
+      "{{14 days}} = {{7 applications}}",
+      "{{14 days}}"
+     ],
+     "The lesion sets the limit, not the strength."
+    ],
+    [
+     "Applying",
+     [
+      "Trim to fit; off healthy tissue; occlusive tape",
+      "1 drop at a time; let dry; cover",
+      "Trim to the lesion; occlusive tape",
+      "1 drop at a time; let dry and harden; petroleum jelly on healthy skin"
+     ]
+    ],
+    [
+     "Before",
+     [
+      "Soak 5 minutes in warm water",
+      "Soak 5 minutes in warm water",
+      "Soak 5 minutes; rub off soft white skin",
+      "Soak 5 minutes; rub off soft white skin"
+     ]
+    ]
+   ],
+   "src": "Patel Warts slides 10, 17; 11/12 lecture T@91458–91887, T@94581"
+  },
+  {
+   "id": "chem-phys-sunscreen",
+   "title": "Chemical or physical sunscreen",
+   "cols": [
+    "Chemical (organic)",
+    "Physical (sunblock)"
+   ],
+   "path": [
+    {
+     "q": "Does it absorb UV, or reflect and scatter it?",
+     "a": [
+      "Absorbs → **chemical**",
+      "Reflects and scatters → **physical**"
+     ]
+    },
+    {
+     "q": "Is the ingredient zinc oxide or titanium dioxide?",
+     "a": [
+      "Yes → **physical**, GRASE",
+      "No → **chemical**"
+     ]
+    }
+   ],
+   "rows": [
+    [
+     "How it works",
+     [
+      "{{Absorbs}} UV radiation and blocks its transmission to the epidermis (Smith: converts it to heat)",
+      "Opaque; {{reflects and scatters}} UV radiation"
+     ]
+    ],
+    [
+     "Ingredients",
+     [
+      "Avobenzone, oxybenzone, padimate O, octinoxate, octocrylene, meradimate, ecamsule, ensulizole",
+      "{{Zinc oxide}}, {{titanium dioxide}}"
+     ]
+    ],
+    [
+     "GRASE",
+     [
+      "Not PABA or trolamine salicylate",
+      "{{Yes}}; preferred"
+     ]
+    ],
+    [
+     "Sensitive skin",
+     [
+      "\"Tend to irritate the skin\"; avoid {{PABA}}. Smith: most reactions with PABA, avobenzone, oxybenzone",
+      "The choice"
+     ],
+     "A past reaction to sunscreen points to the physical products."
+    ],
+    [
+     "Coverage (Sikazwe)",
+     [
+      "Avobenzone UVA; octinoxate, padimate O UVB; benzophenones UVB and UVA",
+      "UVA and UVB"
+     ]
+    ],
+    [
+     "Other (Smith)",
+     [
+      "Substantivity varies by family",
+      "May occlude pores; protection falls after 2 hours of direct sun"
+     ]
+    ]
+   ],
+   "src": "Patel Sun slides 16–18; T@53859, T@55166; Smith Sun slides 20–25; Sikazwe DPAW pages 61–65"
+  }
+ ],
+ "pairs": [
+  {
+   "title": "Sunburn: recommended, or not recommended?",
+   "a": [
+    "Systemic analgesic, skin protectant, aloe vera",
+    "recommended: analgesic first 1–2 days; protectant after 24 hours; aloe on intact skin"
+   ],
+   "b": [
+    "First-aid antiseptics, topical anesthetics",
+    "NOT recommended; an anesthetic, if used, only 1–2% BSA of intact skin, 3 to 4 times a day"
+   ],
+   "same": "All are OTC products a patient may ask for after a sunburn.",
+   "profs": [
+    [
+     "pa",
+     "Slides 31–33; her poll answer for pain was oral ibuprofen, with topical benzocaine and topical bacitracin as wrong options."
+    ],
+    [
+     "sm",
+     "Her drug chart lists the topical anesthetics as sodium channel blockers for sunburn relief (chart page 1); she did not cover sunburn treatment."
+    ]
+   ]
+  },
+  {
+   "title": "Salicylic acid: 12 weeks or 14 days?",
+   "a": [
+    "Wart",
+    "up to 12 weeks"
+   ],
+   "b": [
+    "Corn or callus",
+    "no longer than 14 days (7 applications of the 40% pad)"
+   ],
+   "same": "The same 17% liquid and 40% pad, the same 5-minute warm soak, and the 40% pad is changed every 48 hours for both.",
+   "profs": [
+    [
+     "pa",
+     "Warts slide 10 against slide 17. \"Pay attention to how many days you're using the products for\" (T@94913)."
+    ],
+    [
+     "sm",
+     "Up to 40% for warts and corns; caution in diabetes and peripheral vascular disease (PCol slides 39–40)."
+    ]
+   ]
+  },
+  {
+   "title": "Cryotherapy: 20 or 40 seconds?",
+   "a": [
+    "Common wart (hands)",
+    "about 20 seconds"
+   ],
+   "b": [
+    "Plantar wart (feet)",
+    "about 40 seconds"
+   ],
+   "same": "Applied until a halo appears; repeated after 2 weeks if needed; up to 3 treatments. These are the two self-treatable wart types.",
+   "profs": [
+    [
+     "pa",
+     "Warts slide 11; T@92344–92487."
+    ]
+   ]
+  },
+  {
+   "title": "Minor burn: adult or child?",
+   "a": [
+    "Adult",
+    "minor < 15% BSA; moderate 15–25%; major > 25%"
+   ],
+   "b": [
+    "Child",
+    "minor < 10% BSA; moderate 10–20%; major > 20%"
+   ],
+   "same": "Only a minor burn is self-care; moderate and major are referred.",
+   "profs": [
+    [
+     "pa",
+     "Wound slide 16. \"A minor BSA in an adult is less than 15%, in a child is less than 10%\" (T@83577)."
+    ]
+   ]
+  },
+  {
+   "title": "Reapply sunscreen: whose number?",
+   "a": [
+    "Dr. Patel",
+    "every 40–80 minutes, and after towel drying"
+   ],
+   "b": [
+    "Dr. Smith",
+    "every 90–120 minutes (\"usually\" in her recording)"
+   ],
+   "same": "Both professors: sunscreen must be reapplied.",
+   "profs": [
+    [
+     "pa",
+     "Sun slides 21, 36. \"For her questions, pay attention to what she's focused on. For my questions, recommendation in terms of treatment\" (T@56238)."
+    ],
+    [
+     "sm",
+     "Sun slide 17."
+    ],
+    [
+     "sk",
+     "Avobenzone photodegrades with a half-life of about 2 hours: reapply every 2 hours (DPAW page 62)."
+    ]
+   ]
+  }
+ ],
+ "photos": [
+  {
+   "id": "wound-stages",
+   "file": "wound-stages.jpg",
+   "alt": "Four cross-sections of skin, A to D, each with a deeper wound, printed beside the four stages",
+   "src": "Patel Wound slide 5"
+  },
+  {
+   "id": "corn-callus-foot",
+   "file": "corn-callus-foot.jpg",
+   "alt": "Drawing of a foot: soft corn between the toes, hard corn on a toe, callus under the ball of the foot, plantar warts under the heel",
+   "src": "Patel Warts slide 13"
+  },
+  {
+   "id": "wart-common",
+   "file": "wart-common.jpg",
+   "alt": "Common warts on the fingers",
+   "src": "Patel Warts slide 4"
+  },
+  {
+   "id": "wart-plantar",
+   "file": "wart-plantar.jpg",
+   "alt": "A plantar wart",
+   "src": "Patel Warts slide 4"
+  }
+ ]
+}
