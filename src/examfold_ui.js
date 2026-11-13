@@ -240,6 +240,9 @@ const EXAMFOLD_UI = (function examFoldUi(){
       // however else it opens (find-in-page, the core's place-keeping, jump_ui.js), its tables are measured
       f.addEventListener('toggle', () => { if (f.open) measure(f); });
     });
+    // the "Listen" row of a narrated figure (dianarr_ui.js) is added now instead of at the next frame, so a landing or
+    // the Back button's scroll position that follows this drawing is not moved by the rows above it
+    try { if (typeof DIA_NARR_UI !== 'undefined' && DIA_NARR_UI && typeof DIA_NARR_UI.arm === 'function') DIA_NARR_UI.arm(pane); } catch (e) { /* it adds them itself a frame later */ }
     foldsOf(view).forEach(f => { if (f.open) measure(f); });
     try { labelLists(pane); } catch (e) { /* the lists stay as they were drawn */ }
   }
@@ -318,6 +321,19 @@ const EXAMFOLD_UI = (function examFoldUi(){
     fs.forEach(f => { if (f.open) measure(f); });
   }
   try { const ps = placeScroll; placeScroll = function(pl){ try { placeFolders(pl); } catch (e) {} return ps.apply(this, arguments); }; } catch (e) { /* an older core without it */ }
+  //    The line the core saves (views.js placeAnchor: the first element whose top edge is on screen) must be one the
+  //    reader can see. A browser that can search a closed <details> keeps its content laid out but not shown, and
+  //    reports positions for it (measured in Chromium 153: the lines of the closed Exam 1 folder lie over those of
+  //    the open Exam 2 folder). So while the core looks, the closed folders' boxes are taken out of the layout.
+  try {
+    const pa = placeAnchor;
+    placeAnchor = function(pane){
+      let shut = [];
+      try { shut = pane && pane.querySelectorAll ? [...pane.querySelectorAll(':scope > details.rfold:not([open]) > .rfbody')] : []; shut.forEach(b => { b.style.display = 'none'; }); } catch (e) { shut = []; }
+      try { return pa.apply(this, arguments); }
+      finally { shut.forEach(b => { try { b.style.display = ''; } catch (e) {} }); }
+    };
+  } catch (e) { /* an older core without it */ }
   document.addEventListener('click', e => {
     try {
       const t = e.target; if (!t || !t.closest) return;
