@@ -230,14 +230,14 @@ if (DL) {
     else if (v && typeof v === 'object') {
       const has = typeof v.by === 'string' && typeof v.cite === 'string';
       const d = has ? P.decksNamed(chip(v)) : [];
-      if (has) add('Drug list', w + ' source chip', chip(v), []);
-      for (const [k, x] of Object.entries(v)) if (k !== 'cite' && typeof x !== 'function') (typeof x === 'string' ? add('Drug list', w, x, has && k === 't' && d.length === 1 ? d : []) : walk(x, w));
+      if (has) add('Drug list', w + ' source chip', chip(v), {decks: [], chart: true});
+      for (const [k, x] of Object.entries(v)) if (k !== 'cite' && typeof x !== 'function') (typeof x === 'string' ? add('Drug list', w, x, {decks: has && k === 't' && d.length === 1 ? d : [], chart: true}) : walk(x, w));
     }
   };
   (DL.D || []).forEach(d => walk(d, d.id));
   walk(DL.CHART_NOTES, 'notes');
   // the targets it reads from Reference "Drug targets": their chips carry the row's cite
-  try { const T = DL.parseTargets(g('REFERENCE_HTML')); Object.entries(T).forEach(([id, t]) => (t.parts || []).forEach(p => add('Drug list', id + ' source chip', chip(p), []))); } catch (e) {}
+  try { const T = DL.parseTargets(g('REFERENCE_HTML')); Object.entries(T).forEach(([id, t]) => (t.parts || []).forEach(p => add('Drug list', id + ' source chip', chip(p), {decks: [], chart: true}))); } catch (e) {}
 }
 /* Atlas: every board is Dr. Sikazwe's deck (the row "at-"); the page builds the tile lines from
    these fields, so this pass reads the fields and slide_test.js reads the tiles themselves */
@@ -346,10 +346,20 @@ else {
     if (good) { ok++; perDeck[dk].ok++; }
     else miss.push({q, pages, keyW, kh, eh, expl});
   }
+  // the page maps, tried one page off: the map in use should carry the answers' words more often than its neighbours
+  const rate = shift => { const out = {}; for (const q of sampleQ) { const ls = links.filter(l => l.u.q === q); const dk = ls[0].deck; let t = '';
+      for (const l of ls) for (let n = l.n; n <= (l.to || l.n); n++) { const r = P.resolve(l.deck, n, l.printed); if (r) t += '\n' + (pageText[r.deck][r.page - 1 + shift] || ''); }
+      const pw = new Set(words(t)), keyW = [...new Set(words(q.options.filter(o => o.correct).map(o => o.t).join(' ')))], expl = [...new Set(words(q.options.filter(o => o.correct).map(o => o.why).join(' ') + ' ' + (q.teach || '')))];
+      const kh = keyW.filter(w => pw.has(w)).length, eh = expl.filter(w => pw.has(w)).length;
+      out[dk] = out[dk] || [0, 0]; out[dk][1]++; if ((keyW.length && kh / keyW.length >= 0.5) || eh >= 5 || (expl.length && eh / expl.length >= 0.3)) out[dk][0]++; }
+    return out; };
+  const r0 = rate(0), rm = rate(-1), rp = rate(1);
   const compared = sampleQ.length - thin;
   console.log(`  ${sampleQ.length} question source lines sampled (every multiple-choice question whose source line gets a link); ${thin} point to slides with almost no text (pictures, structures) and cannot be compared`);
   console.log(`  ${ok} of ${compared} (${(100 * ok / compared).toFixed(1)}%): the linked slide(s) carry at least half of the right answer's distinctive words, or five (or 30%) of the explanation's`);
   tab(ids.filter(k => perDeck[k]).map(k => [k, perDeck[k].n, perDeck[k].thin, perDeck[k].ok, perDeck[k].n - perDeck[k].thin - perDeck[k].ok]), ['deck', 'questions', 'picture slides', 'match', 'to look at']);
+  console.log('\n  The same count with every linked page moved by one (the map in use should be the highest in each row):');
+  tab(ids.filter(k => r0[k]).map(k => [k, r0[k][1], rm[k][0], r0[k][0], rp[k][0], r0[k][0] > rm[k][0] && r0[k][0] > rp[k][0] ? 'yes' : 'NO: look at this deck\'s map']), ['deck', 'questions', 'one page lower', 'the map in use', 'one page higher', 'map in use is best']);
   console.log(`\n  To look at (${miss.length}): the words of the answer and explanation are not on the linked slide. The usual reasons: the fact was said in lecture (the source line also gives a transcript place), the slide shows it as a picture or a structure, or the question combines slides.`);
   (ALL ? miss : miss.slice(0, 40)).forEach(x => console.log(`    ${x.q.id}  ${[...new Set(x.pages.map(r => r.deck + ' ' + r.page))].join(', ')}  answer words on the slide ${x.kh.length}/${x.keyW.length}, explanation words ${x.eh.length}/${x.expl.length}  | ${x.q.cite}`));
   if (!ALL && miss.length > 40) console.log(`    … ${miss.length - 40} more with --all`);

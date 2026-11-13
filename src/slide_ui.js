@@ -133,6 +133,7 @@ const SLIDE_UI = (() => {
             prof    'Smith' | 'Patel' | 'Sikazwe': the professor whose block this is
             sun     'sun' | 'p8s': the deck "Sun" means here
             column  true: the text is a cell of a column headed Slide or Page
+            chart   true: "p. N" here is a page of the drug chart (the Drug list)
        links:   [{s, e, deck, n, to, printed, form}]: text[s..e) becomes a button that opens cited
                 number n of `deck` (the citation runs to `to`)
        refused: [{s, e, raw, why}]: a citation left as text, with the reason
@@ -183,7 +184,7 @@ const SLIDE_UI = (() => {
           if (!deck) why = 'two decks are called Sun (Dr. Smith, Dr. Patel) and nothing here says which';
         } else if (deck === null) {
           printed = PRINTED.test(before);
-          if (c.page && !printed && NOT_DECK.test(before)) why = 'a page of the chart, the syllabus, a reading or a textbook, not of a slide deck';
+          if (c.page && !printed && (ctx.chart || NOT_DECK.test(before))) why = 'a page of the chart, the syllabus, a reading or a textbook, not of a slide deck';
           else {
             // a professor named right before it, or "his" / "her" after one professor was named
             let prof = (PROF_TAIL.exec(before) || [])[1] || null;
@@ -291,7 +292,7 @@ const SLIDE_UI = (() => {
   function drugCtx(el){
     const li = el.closest('li'), chips = li ? li.querySelectorAll('.dlsrc') : [];
     const decks = chips.length ? P.decksNamed(Array.prototype.map.call(chips, txt).join('; ')) : [];
-    return {decks: decks.length === 1 ? decks : []};
+    return {decks: decks.length === 1 ? decks : [], chart: true};
   }
   /* the places of a view: [root element, unit -> what its place declares] */
   function places(view){
@@ -521,7 +522,13 @@ dialog.slv::backdrop{background:rgba(0,0,0,.55)}
       try { open(b.getAttribute('data-deck'), +b.getAttribute('data-n'), +b.getAttribute('data-to') || 0, b.hasAttribute('data-printed'), b); }
       catch (err) { console.error('The slide could not be opened.', err); }
     }, true);
-    mo = new MutationObserver(soon);
+    // a change inside a control is never a citation (dianarr_ui.js rewrites its Listen buttons every frame)
+    mo = new MutationObserver(recs => {
+      for (let i = 0; i < recs.length; i++) {
+        const t = recs[i].target, el = t && (t.nodeType === 1 ? t : t.parentElement);
+        if (el && !el.closest(SKIP) && (recs[i].type !== 'childList' || recs[i].addedNodes.length)) { soon(); return; }
+      }
+    });
     mo.observe(main, OBS);
     soon();
   } catch (e) { console.error('Slide links could not be added; the citations stay as text.', e); }
