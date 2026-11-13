@@ -24,7 +24,9 @@
    - no page error, no sideways scroll.
    At 390x844 and 1376x1032 (a phone, and an iPad Pro 13 window):
    - I: a reload with the Exam 1 header itself as the first line on screen (Reference and Tell apart; Exam 1 closed
-     as first drawn, closed by the reader, opened by the reader) leaves the folders and the page height as they were; */
+     as first drawn, closed by the reader, opened by the reader) leaves the folders and the page height as they were;
+   - K: closing a folder by its header pauses the walkthrough or the narrated figure that is being read aloud inside
+     it; the folder then stays closed when the tab is drawn again, until the walkthrough index opens it; */
 const path = require('path'), fs = require('fs');
 const NAME = 'examfold_test.js';
 let chromium;
@@ -43,13 +45,15 @@ const check = (ok, label, detail) => { n++; if (!ok) fail++; console.log((ok ? '
 const note = s => console.log('        ' + s);
 
 /* a short silent WAV for any recorded clip, and a stand-in for the device voice (each sentence takes 0.4 s, so a
-   narration is still going when it is checked) */
-const wav = (() => {
-  const k = 2400, b = Buffer.alloc(44 + k * 2);
+   narration is still going when it is checked). Part K uses a 20 s clip: a part or a step is still being read when
+   its folder is closed, and no next one starts meanwhile. */
+const wavOf = k => {                               // k samples at 8,000 a second
+  const b = Buffer.alloc(44 + k * 2);
   b.write('RIFF', 0); b.writeUInt32LE(36 + k * 2, 4); b.write('WAVE', 8); b.write('fmt ', 12); b.writeUInt32LE(16, 16);
   b.writeUInt16LE(1, 20); b.writeUInt16LE(1, 22); b.writeUInt32LE(8000, 24); b.writeUInt32LE(16000, 28); b.writeUInt16LE(2, 32);
   b.writeUInt16LE(16, 34); b.write('data', 36); b.writeUInt32LE(k * 2, 40); return b;
-})();
+};
+const wav = wavOf(2400), longWav = wavOf(160000);
 function fakeVoice() {
   const q = []; let busy = false, timer = null;
   const S = {get speaking() { return busy; }, get pending() { return q.length > 0; }, paused: false, getVoices: () => [], addEventListener() {}, removeEventListener() {},
@@ -58,7 +62,7 @@ function fakeVoice() {
   Object.defineProperty(window, 'speechSynthesis', {value: S, configurable: true});
 }
 
-async function open(browser, width, {height = 844, init = [], motion = 'reduce'} = {}) {
+async function open(browser, width, {height = 844, init = [], motion = 'reduce', clip = wav} = {}) {
   const ctx = await browser.newContext({viewport: {width, height}, reducedMotion: motion, serviceWorkers: 'block'});
   await ctx.addInitScript(fakeVoice);
   await ctx.addInitScript(() => { window.prompt = () => 'TestUser'; });
@@ -68,7 +72,7 @@ async function open(browser, width, {height = 844, init = [], motion = 'reduce'}
   p.on('pageerror', e => errs.push('pageerror: ' + e.message));
   p.on('console', m => { if (m.type() === 'error') errs.push('console: ' + m.text()); });
   p.on('dialog', d => d.accept());
-  await p.route('**/audio/*.mp3', r => r.fulfill({status: 200, contentType: 'audio/wav', body: wav}));
+  await p.route('**/audio/*.mp3', r => r.fulfill({status: 200, contentType: 'audio/wav', body: clip}));
   await p.goto(PAGE);
   await ready(p);
   return {ctx, p, errs};
@@ -79,6 +83,9 @@ const NAMES = {guide: 'Guides', tell: 'Tell apart', ref: 'Reference'};
 // "1:false 2:true": the folders of a tab and whether each is open
 const st = (p, v) => p.evaluate(v => [...document.querySelectorAll(`#v-${v} > .rfold`)].map(f => f.dataset.exam + ':' + f.open).join(' '), v);
 const stored = p => p.evaluate(() => localStorage.getItem(EXAMFOLD_UI.key()));
+// a tap on a tab of the strip. wide_ui.js slides the strip away while the page rests scrolled down; at the top of the
+// page it is always shown, so the page goes there first (opening a tab does the same).
+const tabTap = async (p, v) => { await p.evaluate(() => window.scrollTo(0, 0)); await p.click(`#nav button[data-v="${v}"]`); };
 const over = p => p.evaluate(() => document.documentElement.scrollWidth - innerWidth);
 // where an element is: on screen, in an open folder, how far below the pinned strip
 // (an element inside a closed <details> still reports its boxes in Chromium, so "on screen" is checkVisibility())
@@ -605,6 +612,74 @@ async function nsOf(browser) {
       check(!o.errs.length, `${w}x${h}, ${NAMES[v]}, Exam 1 ${how}: no page error across the reload`, o.errs.slice(0, 3));
       await o.ctx.close();
     }
+  }
+
+  /* ---------- K. the reader closes a folder that holds what is being read aloud ---------- */
+  if (run('K')) for (const [w, h] of SIZES2) {
+    console.log(`\n=== ${w}x${h}: closing a folder while something inside it is read aloud ===`);
+    const {ctx, p, errs} = await open(browser, w, {height: h, clip: longWav});
+    const strip = v => tabTap(p, v);
+    const head = async n => { await p.evaluate(() => window.scrollTo(0, 0)); await p.click(`#rfold-guide-${n} > summary`); };
+    const mine = () => p.evaluate(() => { try { return (JSON.parse(localStorage.getItem(EXAMFOLD_UI.key())) || {}).guide || null; } catch (e) { return 'unreadable'; } });
+    const walk = () => p.evaluate(() => { const s = WALK_UI.state(), c = NARR.current(), x = s && WALK_UI.panel(s.id), b = x && x.querySelector('[data-wkplay]');
+      return {id: s && s.id, playing: !!(s && s.playing), handle: c ? {owner: c.owner, paused: c.paused, done: c.done} : null, panel: !!x, seen: !!x && x.checkVisibility(), button: b ? b.textContent.trim() : null}; });
+    await strip('guide');
+    await head(1);
+    const bar = p.locator('#rfold-guide-1 .wkbar [data-wkopen]').first();
+    await bar.scrollIntoViewIfNeeded();
+    const id = await bar.getAttribute('data-wkopen');
+    await bar.click();
+    await p.waitForTimeout(250);
+    let s = await walk();
+    check(s.id === id && s.playing && s.seen && s.handle && !s.handle.paused && await st(p, 'guide') === '1:true 2:true', `${w}x${h}: a walkthrough (${id}) plays in the Exam 1 folder of Guides, which the reader opened`, s);
+    // another folder closed and opened: the walkthrough is not in it and plays on
+    await head(2); await head(2);
+    s = await walk();
+    check(s.playing && s.handle && !s.handle.paused && await st(p, 'guide') === '1:true 2:true', `${w}x${h}: closing and opening the Exam 2 header leaves it playing`, s);
+    await head(1);
+    await p.waitForTimeout(100);
+    s = await walk();
+    check(await st(p, 'guide') === '1:false 2:true' && s.id === id && !s.playing && s.handle && s.handle.paused && !s.handle.done && s.button === '▶ Play' && (await mine() || {})['1'] === false,
+      `${w}x${h}: a tap on the Exam 1 header closes the folder and pauses the walkthrough inside it (its button reads Play); the reader's choice is stored`, {s, st: await st(p, 'guide'), stored: await mine()});
+    await strip('ref'); await strip('guide');
+    s = await walk();
+    check(await st(p, 'guide') === '1:false 2:true' && !s.playing && s.panel && !s.seen && (await mine() || {})['1'] === false,
+      `${w}x${h}: Guides drawn again keeps the folder the reader closed, the walkthrough still paused inside it`, {s, st: await st(p, 'guide'), stored: await mine()});
+    // the walkthrough index goes to it: the folder opens for the visit, the stored choice stays
+    await p.evaluate(() => window.scrollTo(0, 0));
+    await p.click('#wkindex > summary');
+    await p.locator(`#wkindex button[data-wid="${id}"]`).click();
+    await p.waitForTimeout(150);
+    s = await walk();
+    check(await st(p, 'guide') === '1:true 2:true' && s.panel && s.seen && s.id === id && (await mine() || {})['1'] === false,
+      `${w}x${h}: its entry in the walkthrough index opens the folder again with the player on screen; the stored choice is as it was`, {s, st: await st(p, 'guide'), stored: await mine()});
+    await p.click('#backbtn');
+    await strip('ref'); await strip('guide');
+    s = await walk();
+    check(await st(p, 'guide') === '1:true 2:true' && s.panel && s.seen, `${w}x${h}: after that, a player that is open keeps its folder open when Guides is drawn again`, {s, st: await st(p, 'guide')});
+    await p.evaluate(() => { WALK_UI.stop(); document.querySelectorAll('.wkpanel').forEach(x => WALK_UI.close(x.dataset.wkp)); });
+
+    // a narrated figure
+    const fig = () => p.evaluate(() => { const d = DIA_NARR_UI.playing(), c = NARR.current(), b = document.querySelector('#rfold-guide-1 [data-dnplay="fig-ribosome"]');
+      return {playing: d, handle: c ? {owner: c.owner, paused: c.paused, done: c.done} : null, label: b ? b.textContent.trim() : null, pressed: b ? b.getAttribute('aria-pressed') : null}; });
+    const lis = p.locator('#rfold-guide-1 [data-dnplay="fig-ribosome"]').first();
+    await lis.scrollIntoViewIfNeeded(); await lis.click();
+    await p.waitForTimeout(200);
+    let d = await fig();
+    check(d.playing && d.playing.key === 'fig-ribosome' && !d.playing.paused && d.pressed === 'true', `${w}x${h}: "Listen" on the narrated figure fig-ribosome plays in the open Exam 1 folder`, d);
+    await head(1);
+    await p.waitForTimeout(100);
+    d = await fig();
+    check(await st(p, 'guide') === '1:false 2:true' && d.playing && d.playing.key === 'fig-ribosome' && d.playing.paused && d.handle && d.handle.owner === 'dianarr' && d.handle.paused && d.label === '▶ Resume',
+      `${w}x${h}: a tap on the Exam 1 header closes the folder and pauses the figure's narration (its button reads Resume)`, {d, st: await st(p, 'guide')});
+    await head(1);
+    await lis.scrollIntoViewIfNeeded(); await lis.click();
+    await p.waitForTimeout(150);
+    d = await fig();
+    check(d.playing && !d.playing.paused && d.pressed === 'true', `${w}x${h}: with the folder open again, Resume goes on reading`, d);
+    await p.evaluate(() => DIA_NARR_UI.stop());
+    check(!errs.length, `${w}x${h}: no page error`, errs.slice(0, 4));
+    await ctx.close();
   }
 
   /* ---------- a jump with motion on (the page scrolls smoothly), once ---------- */

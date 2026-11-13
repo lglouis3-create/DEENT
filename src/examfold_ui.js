@@ -69,8 +69,13 @@
        the folder around the saved line is opened (a line inside a folder's
        body; when the saved line is a closed folder's own header, the folder
        stays closed);
-     - a walkthrough player that is open keeps its folder open;
+     - a walkthrough player that is open keeps its folder open, unless the
+       reader has closed that folder by its header since;
      - printing opens every folder for the print and closes them after.
+   When the reader closes a folder by its header, a walkthrough or a narrated
+   figure that is being read aloud inside it is paused (its Pause button has
+   just left the screen). That folder then stays closed when the tab is drawn
+   again, until the reader, a jump or "Listen" opens it.
    If the folders cannot be drawn, the tab is drawn again as the core and the
    other files draw it, flat, and one console line says so. */
 const EXAMFOLD_UI = (function examFoldUi(){
@@ -193,10 +198,35 @@ const EXAMFOLD_UI = (function examFoldUi(){
   function measure(f){
     try { if (typeof sideCue === 'function') bodyOf(f).querySelectorAll('.tscroll').forEach(sideCue); } catch (e) { /* the tables still scroll */ }
   }
+  // a folder the reader closed by its header and nothing has opened since (page memory, never stored): a walkthrough
+  // player inside it does not bring it open again when the tab is next drawn
+  const SHUT = {};
+  const shutKey = f => f.dataset.view + ':' + f.dataset.exam;
   function setOpen(f, on, keep){
     if (f.open !== on) f.open = on;
-    if (on) measure(f);          // now, not at the toggle event: a landing that follows measures the final layout
+    if (on) { delete SHUT[shutKey(f)]; measure(f); }   // measured now, not at the toggle event: a landing that follows measures the final layout
     if (keep) saveSt(f.dataset.view, f.dataset.exam, on);
+  }
+  // the reader closes a folder: a walkthrough or a narrated figure that is being read aloud inside it is paused
+  // (its Pause button leaves the screen with the folder, and the voice would go on with nothing in view to stop it)
+  function hush(f){
+    const body = bodyOf(f); if (!body) return;
+    try {
+      const s = typeof WALK_UI !== 'undefined' && WALK_UI && typeof WALK_UI.state === 'function' ? WALK_UI.state() : null;
+      const p = s && s.playing && typeof WALK_UI.panel === 'function' ? WALK_UI.panel(s.id) : null;
+      if (p && body.contains(p) && typeof WALK_UI.pause === 'function') WALK_UI.pause();
+    } catch (e) { /* it plays on, as before */ }
+    try {
+      // dianarr_ui.js marks the Listen button of the figure it is reading aria-pressed="true"; its narration is the one
+      // NARR (walk_ui.js) holds with owner 'dianarr', paused through the handle that figure's own Pause button uses.
+      // Between two steps there is no handle to pause: the narration is stopped, the figure stays on its step.
+      const d = typeof DIA_NARR_UI !== 'undefined' && DIA_NARR_UI && typeof DIA_NARR_UI.playing === 'function' ? DIA_NARR_UI.playing() : null;
+      if (d && !d.paused && body.querySelector('[data-dnplay][aria-pressed="true"]')) {
+        const h = typeof NARR !== 'undefined' && NARR && typeof NARR.current === 'function' ? NARR.current() : null;
+        if (h && h.owner === 'dianarr' && !h.done && typeof h.pause === 'function') h.pause();
+        else if (typeof DIA_NARR_UI.stop === 'function') DIA_NARR_UI.stop();
+      }
+    } catch (e) { /* it plays on, as before */ }
   }
   // open the closed folder around an element (a jump target, a walkthrough, a line kept across a reload); never stored
   function reveal(el){
@@ -252,13 +282,20 @@ const EXAMFOLD_UI = (function examFoldUi(){
       mine.forEach(r => r.els.forEach(el => body.appendChild(el)));
       f.querySelector('.rfmeta').textContent = (exm.date ? exm.date + ' · ' : '') + T.count(body);
       let open = was ? !!was[n] : usual(view, n, nums);
-      // a jump's target, or a walkthrough player that is open, is never left in a closed folder
-      if (!open && ((want && body.contains(want)) || body.querySelector('.wkpanel'))) open = true;
+      // a jump's target is never left in a closed folder; nor is a walkthrough player that is open, unless the reader
+      // has closed this folder by its header since (the walkthrough was paused then; a jump or "Listen" opens it again)
+      if (!open && ((want && body.contains(want)) || (body.querySelector('.wkpanel') && !SHUT[view + ':' + n]))) open = true;
       f.open = open;
-      // only the reader's own tap or key on the header is remembered
-      f.querySelector('summary').addEventListener('click', ev => { ev.preventDefault(); setOpen(f, !f.open, true); });
+      if (open) delete SHUT[view + ':' + n];
+      // only the reader's own tap or key on the header is remembered; closing pauses what is read aloud inside
+      f.querySelector('summary').addEventListener('click', ev => {
+        ev.preventDefault();
+        const on = !f.open;
+        if (!on) { hush(f); SHUT[shutKey(f)] = true; }
+        setOpen(f, on, true);
+      });
       // however else it opens (find-in-page, the core's place-keeping, jump_ui.js), its tables are measured
-      f.addEventListener('toggle', () => { if (f.open) measure(f); });
+      f.addEventListener('toggle', () => { if (f.open) { delete SHUT[shutKey(f)]; measure(f); } });
     });
     // the "Listen" row of a narrated figure (dianarr_ui.js) is added now instead of at the next frame, so a landing or
     // the Back button's scroll position that follows this drawing is not moved by the rows above it
