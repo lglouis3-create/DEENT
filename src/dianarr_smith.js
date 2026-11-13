@@ -31,10 +31,24 @@ DIA_NARR['acne-cascade'] = {steps: [
 ]};
 
 DIA_NARR['nr-action'] = {steps: [
-  {text: 'This figure shows how nuclear receptor binders act, such as corticosteroids, retinoids and the vitamin D analog. The drug crosses the cell membrane and reaches its receptor, a protein inside the cell that acts on genes in the nucleus.', src: 'PC 5-6; 10/29 T 639-700'},
-  {text: 'The drug binds the receptor, and the two form a drug-receptor complex. The complex is what acts on the genes, by one of two routes, direct or indirect.', src: 'PC 5-6; 10/29 T 639-700'},
+  {text: 'This figure shows how corticosteroids act, through the glucocorticoid receptor. The drug crosses the cell membrane and reaches its receptor, a protein inside the cell that acts on genes in the nucleus.', src: 'PC 5-6, 10; 10/29 T 639-700'},
+  {text: 'The corticosteroid binds the glucocorticoid receptor, and the two form a drug-receptor complex. The complex is what acts on the genes, by one of two routes, direct or indirect.', src: 'PC 5-6, 10; 10/29 T 639-700'},
   {text: 'In the direct route, two drug-receptor complexes bind a response element, a stretch of D N A that controls a family of genes. For a glucocorticoid it is the glucocorticoid response element. Binding raises the expression of anti-inflammatory genes or lowers the expression of inflammatory ones.', src: 'PC 5; 10/29 T 660-720'},
   {text: 'In the indirect route, one complex is enough. It binds a transcription factor, such as N F kappa B or activator protein one, called A P one. The bound factor is kept off the D N A, so it cannot drive the inflammatory genes. Doctor Smith said there are some data that glucocorticoids also work this way.', src: 'PC 6; 10/29 T 720-746'},
+]};
+
+DIA_NARR['nr-rar'] = {steps: [
+  {text: 'This figure shows how retinoids act. Retinoids have vitamin A-like activity. They bind two families of receptors inside the cell, the retinoic acid receptors, called R A R and R X R.', src: 'PC 7, 14'},
+  {text: 'When a retinoid binds them, an R A R and an R X R form a heterodimer, a pair of two different receptor proteins, called R A R R X R.', src: 'PC 14'},
+  {text: 'The heterodimer moves into the nucleus and binds D N A at the retinoic acid response element, called the R A R E. This binding changes gene transcription.', src: 'PC 7, 14'},
+  {text: 'Which receptor the retinoid targets decides the effect. Retinoids that target R A Rs mainly affect cell differentiation and proliferation, so they treat acne, psoriasis and photoaging. Retinoids that target R X Rs mainly induce apoptosis, which is cell death, and are used in cancers such as Kaposi sarcoma.', src: 'PC 14'},
+]};
+
+DIA_NARR['nr-vdr'] = {steps: [
+  {text: 'This figure shows how the vitamin D analog calcipotriene acts. Calcipotriene is used for psoriasis. It exerts its effects through the vitamin D receptor, called V D R.', src: 'PC 21'},
+  {text: 'The V D R drug complex forms a heterodimer with R X R alpha, a second receptor protein.', src: 'PC 21'},
+  {text: 'This V D R R X R complex binds vitamin D response elements on D N A.', src: 'PC 21'},
+  {text: 'Binding increases the expression of genes that modulate epidermal differentiation and inflammation. The drug inhibits keratinocyte proliferation, promotes keratinocyte differentiation and decreases the release of inflammatory cytokines, which improves psoriatic plaques.', src: 'PC 21'},
 ]};
 
 DIA_NARR['fig-cni-nfat'] = {steps: [

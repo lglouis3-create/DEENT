@@ -9,6 +9,7 @@
 #v-ref .refnav-wrap+h3,#v-guide .refnav-wrap+h3,#v-tell .refnav-wrap+h3,
 #v-ref .rfbody>h3:first-child,#v-guide .rfbody>h3:first-child,#v-tell .rfbody>h3:first-child{margin-top:18px}
 #v-ref h3+*,#v-guide h3+*,#v-tell h3+*{margin-top:0}
+#v-ref h4{margin:30px 0 6px;padding-left:10px;border-left:4px solid var(--accent,#2F5FA8);font-size:16px}
 #v-ref figure,#v-ref .dn,#v-ref .stepper,#v-guide figure,#v-tell figure{margin-top:28px}
 #v-ref table+p,#v-ref .tbox+p,#v-guide table+p,#v-tell table+p{margin-top:22px}`;
   try {
