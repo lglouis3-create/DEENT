@@ -464,11 +464,38 @@ const SLIDE_UI = (() => {
     else { d.removeAttribute('open'); d.dispatchEvent(new Event('close')); }
   }
 
+  /* A slide link's touch area reaches 6 px past its text (the style sheet below), also into the lines above and
+     below it. Where that margin lies over another control (a button, a link, a cover on the line above), a tap
+     there is that control's; where it lies over the text of another slide link, that link's. Only for a tap
+     or click at a point (a key press and a click made by a script carry none) */
+  const CTL = 'button,a[href],summary,input,select,textarea,label,[role=button],[role=checkbox],[tabindex]:not([tabindex="-1"])';
+  const within = (rects, x, y) => Array.prototype.some.call(rects, r => x >= r.left && x <= r.right && y >= r.top && y <= r.bottom);
+  const textOf = l => { const r = document.createRange(); r.selectNodeContents(l); return r.getClientRects(); };
+  try {
+    document.addEventListener('click', e => {
+      try {
+        const l = e.target && e.target.closest ? e.target.closest('.slk') : null, x = e.clientX, y = e.clientY;
+        if (!l || !e.detail || !within(l.getClientRects(), x, y) || within(textOf(l), x, y)) return;
+        const was = l.style.pointerEvents;
+        l.style.pointerEvents = 'none';
+        const under = document.elementFromPoint(x, y);
+        l.style.pointerEvents = was;
+        const c = under && under.closest ? under.closest(CTL) : null;
+        if (!c || c.contains(l) || (c.classList.contains('slk') && !within(textOf(c), x, y))) return;
+        e.preventDefault(); e.stopImmediatePropagation();
+        c.click();
+      } catch (err) {}
+    }, true);
+  } catch (e) {}
+
   const CSS = `
 .slk{color:var(--accent,#2F5FA8);border-radius:3px;cursor:pointer;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:2px;
-  -webkit-tap-highlight-color:rgba(47,95,168,.18)}
-.slk:hover{background:var(--accent-bg,rgba(47,95,168,.1))}
-.slk:focus-visible{outline:2px solid var(--accent,#2F5FA8);outline-offset:1px}
+  padding:6px;margin:0 -6px;background-clip:content-box;-webkit-tap-highlight-color:rgba(47,95,168,.18)}
+.slk:hover{background-color:var(--accent-bg,rgba(47,95,168,.1))}
+.slk:focus-visible{outline:2px solid var(--accent,#2F5FA8);outline-offset:-5px}
+.gbar .slk{color:inherit;font-size:inherit;letter-spacing:inherit;text-transform:inherit;opacity:1}
+.gbar .slk:hover{background-color:rgba(0,0,0,.22)}
+.gbar .slk:focus-visible{outline-color:#fff}
 dialog.slv{border:0;border-radius:14px;padding:0;width:min(1120px,calc(100vw - 16px));max-width:none;max-height:calc(100vh - 16px);max-height:calc(100dvh - 16px);
   background:var(--paper,#fff);color:var(--text,#1d2733);overflow:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;box-sizing:border-box}
 dialog.slv:not([open]){display:none}
