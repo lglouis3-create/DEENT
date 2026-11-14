@@ -219,6 +219,13 @@ const READ_LINKS = (() => {
           'azelaic-diacid clinda-topical tet-chelation octinoxate paba-allergy salicylate-hydrolysis photostability-rank uva-uvb-coverage ' +
           'hq-moa hq-storage aha-wrinkle aha-sources ha-film ha-structure topical-ret-collagen sunblock-products', 'rs4'),
 
+      // Exam 1 style items (2026-11-14)
+      row('x-alkyne-picture x-geometric-isomer-picture x-aha-select-picture x-tetracycline-picture x-steroid-or-not-picture x-limus-conclude ' +
+          'x-csa-azole-conclude x-avobenzone-conclude x-flutamide-receptor x-apremilast-dealkyl-picture x-apremilast-azole-assume', 'ts4', 'rs4'),
+      row('x-nrb-select x-nrb-indirect-conclude', 't1r', 'g4'),
+      row('x-rare-site', 'rNR'),
+      row('x-pso-classes-select x-acne-classes-select x-ad-classes-select', 'rClass'),
+
       /* ---- Lecture 5, Patel 11/06 (Dermatitis Therapeutics; Exam 2) ------ */
       row('p5-ftu-grams p5-ftu-face-neck p5-ftu-arm-leg p5-ftu-trunk p5-tube-round-up p5-tube-face-tid p5-tube-trunk-bid ' +
           'p5-tube-scalp-week p5-tube-arm p5-tube-two-areas p5-tube-days-last p5-tube-leg-daily p5-tube-sizes p5-tube-face-bid', 'rPftu', 'gP6'),

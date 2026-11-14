@@ -278,6 +278,8 @@ const COURSE = {
           'q10_blank.js',
           // exam-style items, Dr. Smith and Dr. Sikazwe (2026-11-12: one detail swapped per wrong option)
           'q11_new_smith_sik.js',
+          // Exam 1 style items from the recalled exam questions: drawings, conclude/assume stems, select-all (Louis, 2026-11-14)
+          'q19_exam1_style.js',
           // the step-throughs of moa_figs.js in the explanations of the matching Smith questions
           'moa_links.js',
           // Drug list tab (temporary course-level presentation, to be replaced by the kit's
@@ -335,6 +337,8 @@ const COURSE = {
           'examfold_ui.js',
           // Space and a rule between the sections of Reference, Guides and Tell apart (Louis 2026-11-13)
           'refsep_ui.js',
+          // Search box in the header (Louis, 2026-11-14): last of the content files, it reads their globals
+          'search_ui.js',
           // Browser-tab icon on the live page (brand.py wrote it into the <head> until 2026-11-09)
           'icon_ui.js'],
   // (figph_ui.js, the course-level Enlarge placeholder fix, left the list on 2026-11-09: kit

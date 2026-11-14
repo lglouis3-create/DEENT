@@ -18,6 +18,10 @@ Every update adds its bullets here in the same commit that makes the change.
 - Nuclear receptors: a section and diagram each for corticosteroids, retinoids and vitamin D.
 - Each drawn diagram now opens with a sentence on what it shows and what it is for.
 
+## 2026-11-14 (search, new questions)
+- Search: a button in the header, or the / key, finds drugs, diseases, terms, sections, diagrams, structures and questions.
+- 22 new practice questions in the style of the Exam 1 questions: unnamed structures, "conclude" stems, select-all.
+
 ## 2026-11-14 (drug list, iPad window)
 - Drug list, Browse: five category folders, a heading per class, one line per drug.
 - Drug list, Chart: a table with column names under each page; page 5 gets each drug's chemical class and indication.

@@ -22,11 +22,11 @@ def smiles(name_start):
     assert hits[0].get('priority') == 'core', (name_start, hits[0].get('priority'))
     return hits[0]['smiles']
 
-def panel(names, cols, cell=(330, 270), notes=None):
+def panel(names, cols, cell=(420, 300), notes=None):
     """numbered 1..n, no names. notes: {index: [(atom_idx, label)]} drawn as small atom notes."""
     rows = (len(names) + cols - 1) // cols
     d = rdMolDraw2D.MolDraw2DCairo(cell[0] * cols, cell[1] * rows, cell[0], cell[1])
-    o = d.drawOptions(); o.legendFontSize = 30; o.padding = 0.12; o.addAtomIndices = False; o.bondLineWidth = 2
+    o = d.drawOptions(); o.legendFontSize = 36; o.padding = 0.06; o.addAtomIndices = False; o.bondLineWidth = 2
     mols = [Chem.MolFromSmiles(smiles(n)) for n in names]
     d.DrawMolecules(mols, legends=[str(i + 1) for i in range(len(mols))])
     d.FinishDrawing()
@@ -56,9 +56,9 @@ def apremilast_groups():
 
 JOBS = {
   # key: (names in panel order, columns)
-  'x-retinoids5': (['Tretinoin', 'Adapalene', 'Acitretin', 'Tazarotene (', 'Isotretinoin'], 3),
-  'x-hydroxy5': (['Glycolic acid', 'Salicylic acid', 'Lactic acid', 'Azelaic acid', 'PABA'], 3),
-  'x-steroid-or-not5': (['Tetracycline', 'Hydrocortisone', 'Spironolactone', 'Ketoconazole', 'Minocycline'], 3),
+  'x-retinoids5': (['Tretinoin', 'Adapalene', 'Acitretin', 'Tazarotene (', 'Isotretinoin'], 2),
+  'x-hydroxy5': (['Glycolic acid', 'Salicylic acid', 'Lactic acid', 'Azelaic acid', 'PABA'], 2),
+  'x-steroid-or-not5': (['Tetracycline', 'Hydrocortisone', 'Spironolactone', 'Ketoconazole', 'Minocycline'], 2),
   'x-tetra4': (['Spironolactone', 'Doxycycline', 'Hydrocortisone', 'Azelaic acid'], 2),
 }
 if __name__ == '__main__':

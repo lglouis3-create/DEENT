@@ -1180,5 +1180,13 @@ const DRUGLIST_UI = (() => {
       }
     };
   } catch (e) { console.error('The Drug list tab could not be added; the rest of the page is unaffected.', e); }
-  return {render, state: st, events, statusOf: d => factsOf(d)};
+  /* the search box (search_ui.js) opens a drug in Browse: its folder and its line open, the filters cleared */
+  function openDrug(id){
+    const d = DL.D.find(x => x.id === id); if (!d || !pane) return false;
+    Object.assign(st, NOFILTER, {mode: 'browse', q: d.name, cfrom: null});
+    st.ropen[d.id] = true; st.gopen[catOf(d)] = true;
+    rerender(); window.scrollTo(0, 0);
+    return true;
+  }
+  return {render, state: st, events, statusOf: d => factsOf(d), openDrug};
 })();
