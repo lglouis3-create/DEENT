@@ -190,6 +190,8 @@ const DRUGLIST_UI = (() => {
   #v-drugs .dlrowd>summary span[data-l]:not(.dln):not(.dlrx){grid-column:1 / -1}
   #v-drugs .dlrowd>summary span[data-l]:not(.dln):not(.dlrx)::before{content:attr(data-l) ': ';color:var(--text-dim);font-size:12px}
 }
+/* a slide button inside a source tag adds no width, so a tag never wraps differently with the link (the tag itself is the touch target) */
+#v-drugs .dlsrc .slk{padding-left:0;padding-right:0;margin-left:0;margin-right:0}
 #v-drugs .dlctab{margin:14px 0 0}
 #v-drugs .dlctab h4{margin:0 0 4px;font-size:15px}
 #v-drugs table.dltab{width:100%;border-collapse:collapse;font-size:13.5px}
