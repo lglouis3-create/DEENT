@@ -324,7 +324,7 @@ QUESTIONS.push(
   {t:'CYP3A4 major; CYP2C9 and CYP2D6 minor', correct:false, why:'2C9 and 2D6 are the second isoforms of ruxolitinib and upadacitinib (slide 8).'},
   {t:'CYP1A2 major; CYP3A4 and CYP2A6 minor', correct:false, why:'Slide 34: 3A4 is the major isoform.'},
   {t:'CYP2A6 major; CYP3A4 minor', correct:false, why:'Slide 34: 3A4 is the major isoform.'}],
- teach:'Slide 34: apremilast, an isoindoline PDE4 inhibitor (raises cAMP) for psoriatic arthritis and moderate to severe plaque psoriasis, is O-demethylated (3A4 major; 1A2 and 2A6 minor) and the product is glucuronidated by UGTs. Avoid 3A4 inhibitors and inducers (T@14076–14385).',
+ teach:'Slide 34: apremilast, an isoindoline PDE4 inhibitor (raises cAMP) for psoriatic arthritis and moderate to severe plaque psoriasis, is O-demethylated (3A4 major; 1A2 and 2A6 minor) and the product is glucuronidated by UGTs. Avoid 3A4 inhibitors and inducers (T@14076–14385). Apremilast has an ethoxy and a methoxy group: removing the methyl is O-demethylation, the arrow on slide 34, and removing the ethyl is O-deethylation; Exam 1 asked for the metabolite made by removing the ethyl (O-deethylated).',
  cite:HQ_S4+' slides 8, 34; T@13698–14385'},
 
 {id:'S4H-015', skill:'chem', prof:'Sikazwe', tier:'new', topic:'s4-sys', sub:'apr', concept:'h-apr-cris-same-class',

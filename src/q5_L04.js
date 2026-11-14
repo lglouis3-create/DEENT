@@ -619,7 +619,7 @@ QUESTIONS.push(
   {t:'Ester hydrolysis by CE, then glycine conjugation', correct:false, why:'CE hydrolysis is tazarotene and etretinate (slides 29, 50); glycine conjugation is salicylic acid (slide 43).'},
   {t:'Alcohol then aldehyde dehydrogenase to a diacid', correct:false, why:'That two-enzyme route is glycolic acid (slide 43; T@20934–21110).'},
   {t:'25-hydroxylation, then 1-alpha-hydroxylation', correct:false, why:'That is the vitamin D3 pathway (slide 27).'}],
- teach:'Phase 1: CYP3A4 (major; 1A2 and 2A6 minor) removes the methyl from an aryl methyl ether, giving an -OH metabolite. Phase 2: UGTs glucuronidate that -OH (slide 34; T@14076–14300).',
+ teach:'Phase 1: CYP3A4 (major; 1A2 and 2A6 minor) removes the methyl from an aryl methyl ether, giving an -OH metabolite. Phase 2: UGTs glucuronidate that -OH (slide 34; T@14076–14300). Apremilast has an ethoxy and a methoxy group: removing the methyl is O-demethylation, the arrow on slide 34, and removing the ethyl is O-deethylation; Exam 1 asked for the metabolite made by removing the ethyl (O-deethylated).',
  cite:S4+' slide 34; T@14076–14300'},
 
 {id:'S4-047', skill:'pk', prof:'Sikazwe', tier:'new', topic:'s4-sys', sub:'apr', concept:'apremilast-3a4',

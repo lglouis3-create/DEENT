@@ -92,7 +92,7 @@ const DRUGLIST_UI = (() => {
   const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g, c => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'}[c]));
   const NOFILTER = {q: '', dz: '', cls: '', page: '', status: '', boxed: false, photo: false, hasq: false};
   const st = Object.assign({mode: 'browse', kinds: Object.assign(...Object.keys(DRUGLIST.KINDS).map(k => ({[k]: k === 'target' || k === 'cls'}))), rfield: 'target',
-    cpage: 1, chit: null, cq: '', zoom: null, cfrom: null}, NOFILTER);
+    cpage: 1, chit: null, cq: '', zoom: null, cfrom: null, gopen: {}, ropen: {}}, NOFILTER);
   // memory only, never stored
   const typed = {}, checked = new Set();
   // {sig, list: [question or recall item], ans: {qid: option index | rating}, skipped: {kind: n},
@@ -160,6 +160,50 @@ const DRUGLIST_UI = (() => {
 #v-drugs .dlcard.dlopt{border-style:dashed}
 #v-drugs .dlcard h3{margin:0;font-size:17px}
 #v-drugs .dlbrand{font-size:12.5px;color:var(--text-dim);margin:-4px 0 0}
+/* Browse by category (Louis, 2026-11-14: too many buttons, group them): a folder per chart category, a band per class,
+   one line per drug that opens to the full card */
+#v-drugs .dlgrp{border:1px solid var(--line);border-radius:10px;background:var(--paper);margin:0 0 12px}
+#v-drugs .dlgrp>summary{cursor:pointer;list-style:none;display:flex;gap:10px;align-items:center;justify-content:space-between;min-height:48px;padding:8px 14px;font-weight:700;font-size:17px}
+#v-drugs .dlgrp>summary::-webkit-details-marker{display:none}
+#v-drugs .dlgrp>summary .n{font-weight:400;font-size:13px;color:var(--text-dim);margin-right:auto}
+#v-drugs .dlgrp>summary::after{content:'Open';font-size:13px;font-weight:500;color:var(--accent)}
+#v-drugs .dlgrp[open]>summary::after{content:'Close'}
+#v-drugs .dlgrp[open]>summary{border-bottom:1px solid var(--line)}
+#v-drugs .dlgbody{padding:4px 10px 10px}
+#v-drugs .dlsub{margin:14px 0 4px;font-size:13px;letter-spacing:.05em;text-transform:uppercase;color:var(--text-dim);border-bottom:1px solid var(--line);padding-bottom:3px}
+#v-drugs .dlrowd{border:1px solid var(--line);border-radius:8px;margin:6px 0;background:var(--bg,#fff)}
+#v-drugs .dlrowd>summary{cursor:pointer;list-style:none;display:grid;grid-template-columns:minmax(150px,1.3fr) 44px minmax(120px,1fr) minmax(120px,1fr) minmax(140px,1.4fr);gap:4px 12px;align-items:start;padding:8px 12px;min-height:44px}
+#v-drugs .dlrowd>summary::-webkit-details-marker{display:none}
+#v-drugs .dlrowd>summary .dln b{font-size:15.5px}
+#v-drugs .dlrowd>summary .dln i{font-style:normal;color:var(--text-dim);font-size:13px}
+#v-drugs .dlrowd>summary span[data-l]{font-size:13.5px;line-height:1.35}
+#v-drugs .dlrowd>summary span[data-l]:empty::after{content:'–';color:var(--text-dim)}
+#v-drugs .dlrowd[open]>summary{border-bottom:1px solid var(--line);background:var(--accent-bg,rgba(47,95,168,.08))}
+#v-drugs .dlrowd>.dlcard{border:0;border-radius:0 0 8px 8px}
+#v-drugs .dlrowd>.dlcard>h3{display:none}
+#v-drugs .dlcols{display:grid;grid-template-columns:minmax(150px,1.3fr) 44px minmax(120px,1fr) minmax(120px,1fr) minmax(140px,1.4fr);gap:4px 12px;padding:0 12px;font-size:11.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--text-dim)}
+@media (max-width:760px){
+  #v-drugs .dlcols{display:none}
+  #v-drugs .dlgbody{padding:4px 4px 8px}
+  #v-drugs .dlrowd>.dlcard{padding:10px 8px}
+  #v-drugs .dlrowd>summary{grid-template-columns:1fr auto}
+  #v-drugs .dlrowd>summary .dln{grid-column:1}
+  #v-drugs .dlrowd>summary .dlrx{grid-column:2;grid-row:1}
+  #v-drugs .dlrowd>summary span[data-l]:not(.dln):not(.dlrx){grid-column:1 / -1}
+  #v-drugs .dlrowd>summary span[data-l]:not(.dln):not(.dlrx)::before{content:attr(data-l) ': ';color:var(--text-dim);font-size:12px}
+}
+#v-drugs .dlctab{margin:14px 0 0}
+#v-drugs .dlctab h4{margin:0 0 4px;font-size:15px}
+#v-drugs table.dltab{width:100%;border-collapse:collapse;font-size:13.5px}
+#v-drugs table.dltab th,#v-drugs table.dltab td{border-bottom:1px solid var(--line);padding:6px 8px;text-align:left;vertical-align:top}
+#v-drugs table.dltab thead th{font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:var(--text-dim)}
+#v-drugs table.dltab tr.band th{background:var(--accent-bg,rgba(47,95,168,.1));font-size:14px;letter-spacing:0;text-transform:none;color:var(--text)}
+@media (max-width:760px){
+  #v-drugs table.dltab thead{display:none}
+  #v-drugs table.dltab tr{display:block;border-bottom:1px solid var(--line);padding:6px 0}
+  #v-drugs table.dltab td,#v-drugs table.dltab th{display:block;border:0;padding:2px 8px}
+  #v-drugs table.dltab td[data-l]::before{content:attr(data-l) ': ';color:var(--text-dim);font-size:12px}
+}
 #v-drugs .dlmeta{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:0}
 #v-drugs .dlbadge{display:inline-block;font-size:10.5px;letter-spacing:.04em;text-transform:uppercase;border-radius:4px;padding:1px 6px;border:1px solid var(--line);color:var(--text-dim)}
 #v-drugs .dlbadge.taught{border-color:var(--accent);color:var(--accent)}
@@ -360,6 +404,73 @@ const DRUGLIST_UI = (() => {
       <div class="dlrow">${chartBtn(d)}</div>${answer(d)}</article>`;
   }
 
+  /* ---------- Browse by category: folder per chart category, band per class, one line per drug ---------- */
+  const CATS = [{id: 'sun', t: 'Sun protection and sunburn relief', pages: [1]}, {id: 'ad', t: 'Atopic dermatitis', pages: [2]},
+    {id: 'acne', t: 'Acne', pages: [3]}, {id: 'pso', t: 'Psoriasis', pages: [4, 5]}, {id: 'ster', t: 'Topical steroids', pages: [6]}];
+  const catOf = d => (CATS.find(c => c.pages.includes(d.page)) || CATS[CATS.length - 1]).id;
+  const classText = d => d.chartClass || DL.CLASSES[d.cls] || '';
+  /* the chemical class as the chart has it where it is aligned, the slide's word where the chart's cell is off */
+  function chemText(d){
+    const c = DL.CHEM[d.id]; if (!c) return '';
+    if (!c.no) return c.t || (c.src && c.src[0] && c.src[0].t) || '';
+    // a cell one row off on chart p. 5: the lecture slide's word where the slide gives a chemical class, else the value printed one row down
+    if (c.no === 'offset') {
+      const sl = (c.shown || []).find(x => x.by !== 'chart' && !/^Listed under/.test(x.t));
+      if (sl) return sl.t.replace(/^[^:]+: /, '').replace(/^"|"$/g, '');
+      const ch = (c.shown || []).find(x => x.by === 'chart'), m = ch && ch.t.match(/one row down: "([^"]+)"/);
+      return m ? m[1] + ' (chart, one row down)' : '';
+    }
+    return '';
+  }
+  /* chart p. 5, indication column: printed one row up from petrolatum down, so each of these three drugs gets the cell printed on the next row */
+  const INDIC_ALIGNED = {petrolatum: 'Topical - Skin protectant', zincoxide: 'Topical - Diaper rash, minor skin irritations', ketoconazole: 'Seborrhea, dandruff'};
+  /* the indication: a slide's line first (it is sourced to the lecture), else the chart's cell (aligned where the chart is off) */
+  function useText(d){
+    const u = (d.use || [])[0];
+    if (u) return u.t;
+    return d.chartUse || (INDIC_ALIGNED[d.id] ? INDIC_ALIGNED[d.id] + ' (chart, one row down)' : '');
+  }
+  const brandText = d => (d.brands || []).length ? ' (' + d.brands.join(', ') + ')' : '';
+  function rowHead(d){
+    return `<summary><span class="dln" data-l="Drug"><b>${esc(d.name)}</b><i>${esc(brandText(d))}</i></span><span class="dlrx" data-l="Rx/OTC">${esc(d.rx)}</span>` +
+      `<span data-l="Class">${esc(classText(d))}</span><span data-l="Chemical class">${esc(chemText(d))}</span><span data-l="Indication">${esc(useText(d))}</span></summary>`;
+  }
+  function browseGroups(list){
+    const many = list.length > 12 && !activeFilters();
+    let h = '';
+    for (const cat of CATS) {
+      const ds = list.filter(d => catOf(d) === cat.id);
+      if (!ds.length) continue;
+      const open = st.gopen[cat.id] !== undefined ? st.gopen[cat.id] : !many;
+      let body = '', last = null;
+      for (const d of ds) {
+        const cls = DL.CLASSES[d.cls] || '';
+        if (cls !== last) { body += `<h4 class="dlsub">${esc(cls)}</h4>`; last = cls; }
+        const ro = st.ropen[d.id] !== undefined ? st.ropen[d.id] : list.length <= 3;
+        body += `<details class="dlrowd" data-id="${esc(d.id)}"${ro ? ' open' : ''}>${rowHead(d)}${card(d)}</details>`;
+      }
+      h += `<details class="dlgrp" data-g="${cat.id}"${open ? ' open' : ''}><summary><span>${esc(cat.t)}</span><span class="n">${ds.length} drug${ds.length === 1 ? '' : 's'}</span></summary>` +
+        `<div class="dlgbody"><div class="dlcols" aria-hidden="true"><span>Drug (brand)</span><span>Rx/OTC</span><span>Class</span><span>Chemical class</span><span>Indication</span></div>${body}</div></details>`;
+    }
+    return `<div class="dlbrowse"><p class="dlrow"><button type="button" class="btn sm ghost" data-dl="gall" data-o="1">Open all categories</button>` +
+      `<button type="button" class="btn sm ghost" data-dl="gall" data-o="0">Close all</button></p>${h}</div>`;
+  }
+  /* a chart page as a table with its column names: the pages after the first have no header row on the chart */
+  function pageTable(p){
+    const rows = DL.CHART_ROWS.map((r, i) => ({page: r[0], label: r[1], id: r[2], i})).filter(r => r.page === p && r.id);
+    if (!rows.length) return '';
+    let last = null, body = '';
+    for (const r of rows) {
+      const d = DL.D.find(x => x.id === r.id); if (!d) continue;
+      const cls = classText(d);
+      if (cls !== last) { body += `<tr class="band"><th colspan="5">${esc(cls)}</th></tr>`; last = cls; }
+      body += `<tr><td data-l="Drug">${esc(r.label)}</td><td data-l="Rx/OTC">${esc(d.rx)}</td><td data-l="Class">${esc(classText(d))}</td>` +
+        `<td data-l="Chemical class">${esc(chemText(d)) || '–'}</td><td data-l="Indication">${esc(useText(d)) || '–'}</td></tr>`;
+    }
+    const note = p === 5 ? 'On the chart this page has no title or header row, and its chemical-class and indication cells run one row off from methoxsalen and petrolatum down. Here each drug has its own value: the chart\'s where it is aligned, otherwise the lecture slide\'s (shown on the drug\'s card with its source).' : '';
+    return `<div class="dlctab"><h4>Page ${p} as a table</h4>${note ? `<p class="meta">${esc(note)}</p>` : ''}<div style="overflow-x:auto"><table class="dltab"><thead><tr><th>Drug (brand)</th><th>Rx/OTC</th><th>Class</th><th>Chemical class</th><th>Indication</th></tr></thead><tbody>${body}</tbody></table></div></div>`;
+  }
+
   /* ---------- Recall: name, box, Check ---------- */
   const RLABEL = {target: 'its target', mech: 'its mechanism', why: 'why it helps (Dr. Smith)', cls: 'its class', use: 'what it is used for',
     ae: 'its key adverse effects and cautions', chem: 'its chemical class (chart)',
@@ -544,7 +655,7 @@ const DRUGLIST_UI = (() => {
 
   /* ---------- Chart: the original pages, find and highlight ---------- */
   const CB = typeof CHART_BOXES !== 'undefined' ? CHART_BOXES : null;
-  const CPAGES = Object.assign({}, DL.PAGES, {7: 'Lice and scabies'});
+  const CPAGES = Object.assign({}, DL.PAGES, {5: 'Psoriasis, continued from page 4', 7: 'Lice and scabies'});
   const ZOOMS = [1, 1.5, 2, 3];
   const chartBase = () => { try { return BUILD.preview ? '../' : ''; } catch (e) { return ''; } };
   const chartSrc = p => chartBase() + 'chart/' + CB.pages[p].file;
@@ -635,7 +746,7 @@ const DRUGLIST_UI = (() => {
           alt="Drug chart page ${p}: ${esc(CPAGES[p])}${hl.length ? '; highlighted ' + esc(rowsText(hl.map(b => b.row))) + ', ' + esc(hitName(st.chit)) : hc.length ? '; highlighted ' + esc(hitName(st.chit)) + '\'s cells across the page break' : ''}">
         ${hc.map(c => `<div class="dlhl${c.col === 'Drug' ? ' dlhlrow' : ''}" aria-hidden="true" style="left:${c.x0 * 100}%;top:${c.y0 * 100}%;width:${(c.x1 - c.x0) * 100}%;height:${(c.y1 - c.y0) * 100}%"></div>`).join('')}
       </div></div>
-      ${chartNotes(p)}`;
+      ${chartNotes(p)}${p === 7 ? '' : pageTable(p)}`;
   }
   function chartResults(){
     const m = chartMatches(st.cq);
@@ -850,7 +961,7 @@ const DRUGLIST_UI = (() => {
       out.innerHTML = rl.length ? `<div class="dlgrid">${rl.map(rcard).join('')}</div>` : '<p class="dlempty">No drug in this list has a stated target. Widen the filters.</p>';
     } else {
       cnt.textContent = drugs;
-      out.innerHTML = `<div class="dlgrid">${list.map(card).join('')}</div>`;
+      out.innerHTML = browseGroups(list);
     }
   }
   function render(p){
@@ -905,6 +1016,12 @@ const DRUGLIST_UI = (() => {
       rs[j].click();
     });
     p.addEventListener('click', onClick);
+    // the folders and the drug lines remember how the reader left them while the page is open
+    p.addEventListener('toggle', e => {
+      const t = e.target; if (!t || !t.classList) return;
+      if (t.classList.contains('dlgrp')) st.gopen[t.dataset.g] = t.open;
+      else if (t.classList.contains('dlrowd')) st.ropen[t.dataset.id] = t.open;
+    }, true);
   }
   function rerender(focusSel){
     const y = window.scrollY; render(pane); window.scrollTo(0, y);
@@ -913,6 +1030,7 @@ const DRUGLIST_UI = (() => {
   function onClick(e){
     const b = e.target.closest('[data-dl]'); if (!b || b.tagName === 'INPUT' || b.disabled) return;
     const a = b.dataset.dl, id = b.dataset.id, d = id && DL.D.find(x => x.id === id);
+    if (a === 'gall') { const o = b.dataset.o === '1'; CATS.forEach(c => { st.gopen[c.id] = o; }); pane.querySelectorAll('details.dlgrp').forEach(x => { x.open = o; }); return; }
     if (a === 'mode') { if (st.mode !== b.dataset.k) { st.mode = b.dataset.k; st.cfrom = null; rerender(`[data-dl="mode"][data-k="${st.mode}"]`); } }
     else if (a === 'rfield') { if (st.rfield !== b.dataset.k) { st.rfield = b.dataset.k; rerender(`[data-dl="rfield"][data-k="${st.rfield}"]`); } }
     else if (a === 'kind') { st.kinds[b.dataset.k] = !st.kinds[b.dataset.k]; if (!(quiz && quiz.frozen)) quiz = null; rerender(`[data-dl="kind"][data-k="${b.dataset.k}"]`); }
@@ -1004,7 +1122,7 @@ const DRUGLIST_UI = (() => {
       const f = st.cfrom; st.cfrom = null; st.mode = f.mode;
       render(pane);
       const c = pane.querySelector(`.dlcard[data-id="${CSS.escape(f.id)}"], .dlq[data-qid^="${CSS.escape(f.id)}:"]`);
-      if (c) { c.scrollIntoView({block: 'start'}); const fb = c.querySelector('[data-dl="chart"]') || c.querySelector('button'); if (fb) fb.focus({preventScroll: true}); }
+      if (c) { for (let x = c.closest && c.closest('details'); x; x = x.parentElement && x.parentElement.closest('details')) x.open = true; c.scrollIntoView({block: 'start'}); const fb = c.querySelector('[data-dl="chart"]') || c.querySelector('button'); if (fb) fb.focus({preventScroll: true}); }
     }
     else if (a === 'atlas') {
       RET.push({view: ID, y: window.scrollY});

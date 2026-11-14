@@ -89,7 +89,7 @@ QUESTIONS.push(
   {t:'b, on the methoxy oxygen', correct:false, why:'Removing this methyl is O-demethylation, the step named on slide 34 ("O-demethylation → –OH metabolite → O-Gluc").'},
   {t:'c, on the sulfone sulfur', correct:false, why:'This methyl is on sulfur, not on an ether oxygen, so no O-dealkylation can remove it.'},
   {t:'d, on the amide carbonyl', correct:false, why:'This methyl is on a carbonyl carbon of an amide, not on an ether oxygen.'}],
- teach:'O-dealkylation takes the alkyl group off an ether oxygen and leaves an OH: methyl off, "O-demethylation"; ethyl off, "O-deethylation". Slide 33: apremilast is extensively metabolized, 3A4 major (1A2 and 2A6 minor), then O-glucuronidation of the OH metabolite. In the 11/04 lecture he named O-demethylation ("the methyl group is here"); Exam 1 keyed an O-deethylated metabolite as the one "indicated" (see note).',
+ teach:'O-dealkylation takes the alkyl group off an ether oxygen and leaves an OH: methyl off, "O-demethylation"; ethyl off, "O-deethylation". Slide 33: apremilast is extensively metabolized, 3A4 major (1A2 and 2A6 minor), then O-glucuronidation of the OH metabolite. In the 11/04 lecture he named O-demethylation ("the methyl group is here"); Exam 1 indicated the ethyl group (Louis, 2026-11-14), an O-deethylated metabolite.',
  note:'Slide 33 and the 11/04 lecture name O-demethylation; the Exam 1 item (Louis, 2026-11-13) keyed "O-deethylated" for the metabolite indicated. We have not seen the exam picture, so which alkyl group it showed removed is open. This draft teaches both reactions by structure. S4-046 and S4H-014 in the bank say O-demethylation, as slide 34 does: ask Louis which alkyl group the exam scheme showed before changing them.',
  cite:XS+' slide 34; 11/04 transcript'},
 
@@ -193,6 +193,7 @@ QUESTIONS.push(
   {t:'Calcineurin inhibitors', correct:true, why:'Listed on the psoriasis medication slide (Pathophys slide 28).'},
   {t:'Nuclear receptor binders', correct:true, why:'Listed on the psoriasis medication slide (Pathophys slide 28).'},
   {t:'TNF-α inhibitors', correct:true, why:'Listed on the psoriasis medication slide (Pathophys slide 28).'},
+  {t:'PDE-4 inhibitors', correct:true, why:'Apremilast, a PDE-4 inhibitor, is used for plaque psoriasis (Dr. Sikazwe, slide 34); Exam 1 counted this class as right in its psoriasis list. It is not printed on Pathophys slide 28.'},
   {t:'Antibiotics', correct:false, why:'On the acne list (Pathophys slide 37), not on the psoriasis list.'},
   {t:'Antiandrogens', correct:false, why:'On the acne list (Pathophys slide 37), not on the psoriasis list.'}],
  teach:'Pathophys slide 28, psoriasis: corticosteroids, DNA synthesis inhibitors, the DHFR inhibitor, T-cell inhibitors, TNF-α inhibitors, JAK inhibitors, "IL-12 & IL-13 inhibitors" (as printed), IL-23 inhibitor, IL-17A inhibitor, nuclear receptor binders, psoralens, calcineurin inhibitors, cytotoxic agents. Slide 37, acne: keratolytics, antibiotics, nuclear receptor binders, antiandrogens.',

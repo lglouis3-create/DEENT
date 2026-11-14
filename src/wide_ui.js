@@ -148,9 +148,11 @@ body.xnavhid .atbar{top:0}
     const n = nav(); if (!n || !n.addEventListener) return;
     window.addEventListener('scroll', reveal, {passive: true});
     window.addEventListener('resize', reveal, {passive: true});
-    ['resize', 'orientationchange', 'pageshow', 'focus'].forEach(ev => window.addEventListener(ev, () => setTimeout(maybeRefit, 350), {passive: true}));
-    document.addEventListener('visibilitychange', () => { if (!document.hidden) setTimeout(maybeRefit, 350); });
-    try { if (window.visualViewport) visualViewport.addEventListener('resize', () => setTimeout(maybeRefit, 350)); } catch (e) {}
+    ['resize', 'orientationchange', 'pageshow', 'focus'].forEach(ev => window.addEventListener(ev, () => setTimeout(() => maybeRefit(true), 350), {passive: true}));
+    document.addEventListener('visibilitychange', () => { if (!document.hidden) setTimeout(() => maybeRefit(true), 350); });
+    try { if (window.visualViewport) visualViewport.addEventListener('resize', () => setTimeout(() => maybeRefit(true), 350)); } catch (e) {}
+    // a touch device only: the browser may not send an event for the resize, so the widths are read every 3 s (no writes unless they disagree)
+    try { if ((navigator.maxTouchPoints || 0) > 1) setInterval(() => { if (!document.hidden) maybeRefit(false); }, 3000); } catch (e) {}
     n.addEventListener('scroll', reveal, {passive: true});          // its own row scrolled sideways (the chevrons)
     n.addEventListener('focusin', reveal);
     // a mouse resting on the strip keeps it (a touch has no hover, so it never holds it)
@@ -158,7 +160,7 @@ body.xnavhid .atbar{top:0}
     n.addEventListener('pointerleave', ev => { if (hovering) { hovering = false; reveal(); } });
     // a touch or a pointer near the top edge brings it back
     const EDGE = 36;
-    document.addEventListener('pointerdown', ev => { if (ev.clientY <= EDGE) reveal(); maybeRefit(); }, {passive: true});
+    document.addEventListener('pointerdown', ev => { if (ev.clientY <= EDGE) reveal(); maybeRefit(false); }, {passive: true});
     document.addEventListener('pointermove', ev => { if (ev.pointerType === 'mouse' && ev.clientY <= EDGE && n.classList.contains('xhid')) reveal(); }, {passive: true});
     document.addEventListener('touchstart', ev => { const t = ev.touches && ev.touches[0]; if (t && t.clientY <= EDGE) reveal(); }, {passive: true});
     reveal();
@@ -205,15 +207,17 @@ body.xnavhid .atbar{top:0}
      page background. Nothing in the page sets a width: the header and the tab strip are plain blocks, so they are as
      wide as the layout width the browser reports. Chromium never does this. What the page can do is ask the browser
      to work the viewport out again, by writing the viewport meta once with an equivalent value and putting it back.
-     That is done from the Settings button, and by itself only on a touch device whose window is reported wider than
-     the page is laid out (at most 3 times per visit, 2 seconds apart). On a desktop browser it never runs by itself:
-     there a docked side panel legitimately makes the window wider than the page. Untested on the device. */
+     That is done from the Settings button, and by itself only on a touch device whose window (the widest of the
+     inner width, the outer width and the visible viewport) is reported at least 60 px wider than the page is laid out:
+     two refits after each resize, checked again every 3 seconds, and when they do not bring the layout back a bar
+     with a Reload button (2026-11-14). On a desktop browser it never runs by itself: there a docked side panel
+     legitimately makes the window wider than the page. Emulated in wide_test.js; untested on the device. */
   const laidOut = () => (document.documentElement && document.documentElement.clientWidth) || 0;
   const fitText = () => {
     let vv = ''; try { if (window.visualViewport) vv = '; visible ' + Math.round(visualViewport.width) + ' px at scale ' + (Math.round(visualViewport.scale * 100) / 100); } catch (e) {}
     return 'Now: page laid out for ' + laidOut() + ' px; window ' + (window.innerWidth || 0) + ' px inside, ' + (window.outerWidth || 0) + ' px outside' + vv + '; screen ' + ((window.screen && screen.width) || 0) + ' px.';
   };
-  let fits = 0, lastFit = 0;
+  let fits = 0, lastFit = 0, notice = null;
   function refit(){
     try {
       const m = document.querySelector('meta[name="viewport"]'); if (!m) return false;
@@ -224,14 +228,46 @@ body.xnavhid .atbar{top:0}
       return true;
     } catch (e) { return false; }
   }
-  function maybeRefit(){
+  /* The widest width the browser reports for the window: whichever of the inner width, the outer width and the
+     visible viewport is largest. The layout width (clientWidth) should equal it; on the affected iPads it stays
+     behind after the window is resized (Louis, 2026-11-14: "the blank is still present when screen changes sizes"). */
+  const windowWidth = () => {
+    let vv = 0; try { if (window.visualViewport) vv = visualViewport.width || 0; } catch (e) {}
+    return Math.max(window.innerWidth || 0, window.outerWidth || 0, vv);
+  };
+  const behind = () => {
     try {
-      const touch = (navigator.maxTouchPoints || 0) > 1, t = Date.now();
-      if (!touch || fits >= 3 || t - lastFit < 2000) return;
-      const out = window.outerWidth || 0, lay = laidOut();
+      if ((navigator.maxTouchPoints || 0) < 2) return false;
       let scale = 1; try { if (window.visualViewport) scale = visualViewport.scale; } catch (e) {}
-      if (!out || !lay || Math.abs(scale - 1) > 0.02 || out - lay < 60) return;
-      fits++; lastFit = t; refit();
+      const lay = laidOut(); return !!lay && Math.abs(scale - 1) <= 0.02 && windowWidth() - lay >= 60;
+    } catch (e) { return false; }
+  };
+  /* A small bar with a Reload button when a refit did not bring the layout back. A reload measures the window
+     afresh and keeps the progress (it is stored in this browser). */
+  function showNotice(){
+    try {
+      if (notice || !document.body) return;
+      const d = document.createElement('div'); d.id = 'xFitNotice'; d.setAttribute('role', 'status');
+      d.style.cssText = 'position:fixed;left:8px;right:8px;bottom:calc(8px + env(safe-area-inset-bottom,0px));z-index:60;display:flex;gap:8px;align-items:center;flex-wrap:wrap;background:var(--paper,#fff);color:var(--text,#1d2330);border:1px solid var(--line,#d3dae3);border-radius:10px;padding:8px 12px;box-shadow:0 2px 10px rgba(0,0,0,.2);font-size:14px';
+      const t = document.createElement('span'); t.style.flex = '1 1 200px'; t.textContent = 'The window changed size and the page layout did not follow.';
+      const r = document.createElement('button'); r.type = 'button'; r.className = 'btn sm'; r.textContent = 'Reload'; r.style.minHeight = '44px';
+      r.addEventListener('click', () => { try { location.reload(); } catch (e) {} });
+      const x = document.createElement('button'); x.type = 'button'; x.className = 'btn ghost sm'; x.textContent = 'Dismiss'; x.style.minHeight = '44px';
+      x.addEventListener('click', () => { hideNotice(); dismissed = true; });
+      d.append(t, r, x); document.body.appendChild(d); notice = d;
+    } catch (e) { /* the page is unaffected */ }
+  }
+  let dismissed = false;
+  function hideNotice(){ try { if (notice && notice.parentNode) notice.parentNode.removeChild(notice); } catch (e) {} notice = null; }
+  // each new resize starts a new episode with its own two refits; a refit that did not help is followed by the bar
+  function maybeRefit(fresh){
+    try {
+      const t = Date.now();
+      if (fresh) { fits = 0; dismissed = false; }
+      if (!behind()) { hideNotice(); return; }
+      if (t - lastFit < 1200) return;
+      if (fits < 2) { fits++; lastFit = t; refit(); setTimeout(() => { if (behind() && !dismissed) showNotice(); }, 1500); }
+      else if (!dismissed) showNotice();
     } catch (e) { /* the page is unaffected */ }
   }
 

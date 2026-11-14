@@ -266,3 +266,7 @@
 - Louis's 25 recalled Exam 1 questions compared with the bank (STYLE.md): fill-in 16% versus 8.0%, select-all 20% versus 10.3%, picture or scheme 24% versus 3.0%, "conclude" stems 3 versus 0; 22 drafts written (`src/drafts/`), fact-checked by an independent agent (apremilast is slide 34, two attributions moved from the slide to the lecture, one defensible distractor replaced, two stems that gave away their key).
 - Blank accept lists follow the exam keys; "PDE 4" was added and removed again because it normalizes to "PDE4" (test.js rejects duplicate accepts: run_checks showed 4 FAIL until removed; then 38 PASS, 0 FAIL, 1 REPORT).
 - Not done: an independent review of the merged result as a whole; the iPad blank-area answer from Louis; publishing (waits for "publish").
+
+## 2026-11-14: release b7fb866 (Louis: "publish")
+- Tree of `595a4f2` on `main` as one release commit `b7fb8669cb965d9771f28f3eb8efa09f6a803731` (parent b466b02): exam folders, slide links with the clean slides, three nuclear receptor diagrams, a purpose line on 42 figures, review fixes, fill-in answer lists, the Reference note on class lists. The Exam 1 style drafts stay out of the drill (`src/drafts/`).
+- Pages run 43550543254 (pages build and deployment): success. Live check at 390x844 and 1,376x1,032: 1,372 questions, Reference has the two exam folders, 478 slide links, 4 figures each with its purpose line, the viewer opens `deck/pp/17.webp` loaded, no page errors, no horizontal scroll.
