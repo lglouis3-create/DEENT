@@ -280,6 +280,8 @@ const COURSE = {
           'q11_new_smith_sik.js',
           // Exam 1 style items from the recalled exam questions: drawings, conclude/assume stems, select-all (Louis, 2026-11-14)
           'q19_exam1_style.js',
+          // the two ABCDE mnemonics asked as cases (Louis, 2026-11-14)
+          'q20_abcde.js',
           // the step-throughs of moa_figs.js in the explanations of the matching Smith questions
           'moa_links.js',
           // Drug list tab (temporary course-level presentation, to be replaced by the kit's

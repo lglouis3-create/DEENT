@@ -19,6 +19,8 @@ Every update adds its bullets here in the same commit that makes the change.
 - Each drawn diagram now opens with a sentence on what it shows and what it is for.
 
 ## 2026-11-14 (search, new questions)
+- Eight new ABCDE questions: lesion cases, diaper-care cases and one that mixes the two mnemonics.
+- Tell apart, Exam 2: the two ABCDE mnemonics side by side, with both slides.
 - FTU tab: type fingertip-unit and gram answers on a body diagram that shows what you miss.
 - Search: a header button or the / key finds drugs, diseases, sections and questions.
 - 22 new practice questions in the style of the Exam 1 questions: unnamed structures, "conclude" stems, select-all.
