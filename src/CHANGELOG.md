@@ -19,9 +19,9 @@ Every update adds its bullets here in the same commit that makes the change.
 - Each drawn diagram now opens with a sentence on what it shows and what it is for.
 
 ## 2026-11-14 (drug list, iPad window)
-- Drug list, Browse: five folders (Sun protection, Atopic dermatitis, Acne, Psoriasis, Topical steroids), a heading per class, one line per drug; tap a line for the full card.
-- Drug list, Chart: each page has a table below it with column names, and page 5 shows each drug's class, chemical class and indication.
-- iPad: after a window resize the page is measured again, and a Reload bar appears if the layout did not follow.
+- Drug list, Browse: five category folders, a heading per class, one line per drug.
+- Drug list, Chart: a table with column names under each page; page 5 gets each drug's chemical class and indication.
+- iPad: after a window resize the page is measured again, with a Reload bar if it did not follow.
 
 ## 2026-11-13 (wide windows)
 - On a Mac or iPad the page now grows with the window (up to 1,680 px wide) and no longer leaves wide margins.
