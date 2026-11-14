@@ -165,7 +165,7 @@ const DRUGLIST_UI = (() => {
 #v-drugs .dlgrp{border:1px solid var(--line);border-radius:10px;background:var(--paper);margin:0 0 12px}
 #v-drugs .dlgrp>summary{cursor:pointer;list-style:none;display:flex;gap:10px;align-items:center;justify-content:space-between;min-height:48px;padding:8px 14px;font-weight:700;font-size:17px}
 #v-drugs .dlgrp>summary::-webkit-details-marker{display:none}
-#v-drugs .dlgrp>summary .n{font-weight:400;font-size:13px;color:var(--text-dim)}
+#v-drugs .dlgrp>summary .n{font-weight:400;font-size:13px;color:var(--text-dim);margin-right:auto}
 #v-drugs .dlgrp>summary::after{content:'Open';font-size:13px;font-weight:500;color:var(--accent)}
 #v-drugs .dlgrp[open]>summary::after{content:'Close'}
 #v-drugs .dlgrp[open]>summary{border-bottom:1px solid var(--line)}
@@ -411,13 +411,22 @@ const DRUGLIST_UI = (() => {
   function chemText(d){
     const c = DL.CHEM[d.id]; if (!c) return '';
     if (!c.no) return c.t || (c.src && c.src[0] && c.src[0].t) || '';
-    const sl = (c.shown || []).find(x => x.by !== 'chart');
-    return sl ? sl.t.replace(/^[^:]+: /, '').replace(/^"|"$/g, '') : '';
+    // a cell one row off on chart p. 5: the lecture slide's word where the slide gives a chemical class, else the value printed one row down
+    if (c.no === 'offset') {
+      const sl = (c.shown || []).find(x => x.by !== 'chart' && !/^Listed under/.test(x.t));
+      if (sl) return sl.t.replace(/^[^:]+: /, '').replace(/^"|"$/g, '');
+      const ch = (c.shown || []).find(x => x.by === 'chart'), m = ch && ch.t.match(/one row down: "([^"]+)"/);
+      return m ? m[1] + ' (chart, one row down)' : '';
+    }
+    return '';
   }
-  /* the indication: a slide's line first (it is sourced to the lecture), else the chart's cell */
+  /* chart p. 5, indication column: printed one row up from petrolatum down, so each of these three drugs gets the cell printed on the next row */
+  const INDIC_ALIGNED = {petrolatum: 'Topical - Skin protectant', zincoxide: 'Topical - Diaper rash, minor skin irritations', ketoconazole: 'Seborrhea, dandruff'};
+  /* the indication: a slide's line first (it is sourced to the lecture), else the chart's cell (aligned where the chart is off) */
   function useText(d){
     const u = (d.use || [])[0];
-    return u ? u.t : (d.chartUse || '');
+    if (u) return u.t;
+    return d.chartUse || (INDIC_ALIGNED[d.id] ? INDIC_ALIGNED[d.id] + ' (chart, one row down)' : '');
   }
   const brandText = d => (d.brands || []).length ? ' (' + d.brands.join(', ') + ')' : '';
   function rowHead(d){
@@ -644,7 +653,7 @@ const DRUGLIST_UI = (() => {
 
   /* ---------- Chart: the original pages, find and highlight ---------- */
   const CB = typeof CHART_BOXES !== 'undefined' ? CHART_BOXES : null;
-  const CPAGES = Object.assign({}, DL.PAGES, {7: 'Lice and scabies'});
+  const CPAGES = Object.assign({}, DL.PAGES, {5: 'Psoriasis, continued from page 4', 7: 'Lice and scabies'});
   const ZOOMS = [1, 1.5, 2, 3];
   const chartBase = () => { try { return BUILD.preview ? '../' : ''; } catch (e) { return ''; } };
   const chartSrc = p => chartBase() + 'chart/' + CB.pages[p].file;
