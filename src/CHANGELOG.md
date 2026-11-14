@@ -19,7 +19,7 @@ Every update adds its bullets here in the same commit that makes the change.
 - Each drawn diagram now opens with a sentence on what it shows and what it is for.
 
 ## 2026-11-14 (search, new questions)
-- Search: a button in the header, or the / key, finds drugs, diseases, terms, sections, diagrams, structures and questions.
+- Search: a header button or the / key finds drugs, diseases, sections and questions.
 - 22 new practice questions in the style of the Exam 1 questions: unnamed structures, "conclude" stems, select-all.
 
 ## 2026-11-14 (drug list, iPad window)

@@ -19,28 +19,28 @@ QUESTIONS.push(
 /* ================= Dr. Sikazwe: drawings, schemes and conclusions ================= */
 {id:'XS-001', skill:'chem', prof:'Sikazwe', tier:'new', topic:'s4-psret', sub:'taz', concept:'x-alkyne-picture',
  tags:['exam-style','structure'], source:'both', img:'x-retinoids5',
- stem:'Only one of the five retinoids drawn contains a carbon–carbon triple bond. Which numbered structure is it?',
+ stem:'Only one of the five retinoids drawn contains an alkyne functional group. Which numbered structure is it?',
  options:[
-  {t:'Structure 4', correct:true, why:'Tazarotene: slide 29 calls it "an acetylenic retinoid"; the triple bond joins the two ring systems, and the ethyl ester at the end makes it a prodrug (slide 51; "ester hydrolysis by CE enzymes").'},
-  {t:'Structure 1', correct:false, why:'Tretinoin, all-trans retinoic acid (slide 49): a chain of double bonds, no triple bond.'},
-  {t:'Structure 2', correct:false, why:'Adapalene (slide 51): a naphthoic acid with an adamantyl group; no triple bond.'},
-  {t:'Structure 3', correct:false, why:'Acitretin (slide 50, 2nd generation, mono-aromatic): a chain of double bonds; no triple bond.'},
-  {t:'Structure 5', correct:false, why:'Isotretinoin, 13-cis retinoic acid (slide 49): double bonds only.'}],
- teach:'"So we can say acetylenic is our kind. Retinoid. And it\'s also an ester prodrug" (11/04). Alkyne and acetylenic name the same carbon–carbon triple bond. Of the retinoids on slides 49–51, tazarotene is the only one drawn with it.',
+  {t:'Structure 4', correct:true, why:'Tazarotene: slide 29 calls it "an acetylenic retinoid"; the alkyne joins the two ring systems, and the ethyl ester at the end makes it a prodrug (slide 51; "ester hydrolysis by CE enzymes").'},
+  {t:'Structure 1', correct:false, why:'Tretinoin, all-trans retinoic acid (slide 49): a chain of alkenes (C=C), no alkyne.'},
+  {t:'Structure 2', correct:false, why:'Adapalene (slide 51): a naphthoic acid with an adamantyl group; no alkyne.'},
+  {t:'Structure 3', correct:false, why:'Acitretin (slide 50, 2nd generation, mono-aromatic): a chain of alkenes (C=C); no alkyne.'},
+  {t:'Structure 5', correct:false, why:'Isotretinoin, 13-cis retinoic acid (slide 49): alkenes (C=C) only, no alkyne.'}],
+ teach:'"So we can say acetylenic is our kind. Retinoid. And it\'s also an ester prodrug" (11/04). Alkyne and acetylenic name the same functional group. Of the retinoids on slides 49–51, tazarotene is the only one drawn with it.',
  cite:XS+' slides 29, 49–51; 11/04 transcript'},
 
-{id:'XS-002', skill:'chem', prof:'Sikazwe', tier:'new', topic:'s4-ret', sub:'iso', concept:'x-geometric-isomer-picture',
+{id:'XS-002', skill:'chem', prof:'Sikazwe', tier:'new', topic:'s4-ret', sub:'gen', concept:'x-geometric-isomer-picture',
  tags:['exam-style','structure'], source:'both', img:'x-retinoids5',
  stem:'Structure 1 is tretinoin (all-trans retinoic acid). Which numbered structure is its geometric isomer, 13-cis retinoic acid?',
  options:[
-  {t:'Structure 5', correct:true, why:'Isotretinoin: the same atoms and the same chain as tretinoin, with the double bond at carbon 13 cis instead of trans (slide 49; "13 carbon cis. And that\'s the only difference").'},
+  {t:'Structure 5', correct:true, why:'Isotretinoin: the same atoms and the same chain as tretinoin, with the alkene (C=C) at carbon 13 cis instead of trans (slide 49; "13 carbon cis. And that\'s the only difference").'},
   {t:'Structure 3', correct:false, why:'Acitretin has an aromatic ring in place of the cyclohexene ring and a methoxy group (slide 50, mono-aromatics), so it is a different molecule, not an isomer.'},
   {t:'Structure 2', correct:false, why:'Adapalene is a polyaromatic retinoid with an adamantyl group (slide 51).'},
-  {t:'Structure 4', correct:false, why:'Tazarotene is a polyaromatic ethyl ester with a triple bond (slides 29, 51).'}],
+  {t:'Structure 4', correct:false, why:'Tazarotene is a polyaromatic ethyl ester with an alkyne (slides 29, 51).'}],
  teach:'"These are called geometric isomers... they are all trans up to here, but here, cis. So this is a cis retinoic acid, 13 in particular" (11/04). Tretinoin is used topically and isotretinoin orally, and both are active (11/04; slide 29 lists isotretinoin as an oral agent).',
  cite:XS+' slide 49; 11/04 transcript'},
 
-{id:'XS-003', skill:'chem', prof:'Sikazwe', tier:'new', topic:'s4-kera', sub:'ha', concept:'x-aha-select-picture',
+{id:'XS-003', skill:'chem', prof:'Sikazwe', tier:'new', topic:'s4-kera', sub:'ha', concept:'x-aha-select-picture', multi:true,
  tags:['exam-style','structure','select-all'], source:'both', img:'x-hydroxy5',
  stem:'Select all that apply. No partial credit will be given. Which of the numbered molecules are alpha-hydroxy acids?',
  options:[
@@ -63,7 +63,7 @@ QUESTIONS.push(
  teach:'"Tetracyclines, be able to identify them... that\'s a linear tetracyclic molecule; in steroids, they\'re stacked." Doxycycline and minocycline share the tetracycline core, so cross-allergy is expected ("structural similarity").',
  cite:XS+' slides 53–55; 11/04 transcript'},
 
-{id:'XS-005', skill:'chem', prof:'Sikazwe', tier:'new', topic:'s4-horm', sub:'aa', concept:'x-steroid-or-not-picture',
+{id:'XS-005', skill:'chem', prof:'Sikazwe', tier:'new', topic:'s4-horm', sub:'aa', concept:'x-steroid-or-not-picture', multi:true,
  tags:['exam-style','structure','select-all'], source:'both', img:'x-steroid-or-not5',
  stem:'Select all that apply. No partial credit will be given. Which of the numbered molecules are steroids?',
  options:[
@@ -109,7 +109,7 @@ QUESTIONS.push(
  teach:'Two facts combine: cyclosporine\'s low oral bioavailability is first-pass metabolism by 3A4 (slide 33), and azole antifungals are strong 3A4 inhibitors (11/04). Inhibiting the enzyme that causes the first-pass loss raises blood levels.',
  cite:XS+' slide 33; 11/04 transcript'},
 
-{id:'XS-009', skill:'pk', prof:'Sikazwe', tier:'new', topic:'s4-vitd', sub:'path', concept:'x-vitd-organs-select',
+{id:'XS-009', skill:'pk', prof:'Sikazwe', tier:'new', topic:'s4-vitd', sub:'path', concept:'x-vitd-organs-select', multi:true,
  tags:['exam-style','select-all','take-home'], source:'both',
  stem:'Select all that apply. No partial credit will be given. After UV light opens the B ring of 7-dehydrocholesterol in the skin, which statements describe the later steps to calcitriol?',
  options:[
@@ -154,7 +154,7 @@ QUESTIONS.push(
  cite:XS+' slides 34, 53; 11/04 transcript'},
 
 /* ================= Dr. Smith: what each drug binds, and which class ================= */
-{id:'XM-001', skill:'mech', prof:'Smith', tier:'new', topic:'nrb', sub:'drugs', concept:'x-nrb-select',
+{id:'XM-001', skill:'mech', prof:'Smith', tier:'new', topic:'nrb', sub:'mech', concept:'x-nrb-select', multi:true,
  tags:['exam-style','select-all'], source:'both',
  stem:'Select all that apply. No partial credit will be given. Which of these medications change gene expression by binding a nuclear receptor?',
  options:[
@@ -167,7 +167,7 @@ QUESTIONS.push(
  teach:'Nuclear receptor binders on PCol slide 7: the glucocorticoid receptor (GRE), the retinoic acid receptors RAR/RXR (RARE) and the vitamin D receptor. The other classes act on enzymes, cytokines or cell-surface receptors.',
  cite:XC+' slides 7, 11, 14, 21, 32–33, 59, 66'},
 
-{id:'XM-002', skill:'mech', prof:'Smith', tier:'new', topic:'l2-tcell', sub:'drugs', concept:'x-cni-select',
+{id:'XM-002', skill:'mech', prof:'Smith', tier:'new', topic:'l2-tcell', sub:'mech', concept:'x-cni-select', multi:true,
  tags:['exam-style','select-all'], source:'both',
  stem:'Select all that apply. No partial credit will be given. Which medications inhibit calcineurin?',
  options:[
@@ -180,7 +180,7 @@ QUESTIONS.push(
  teach:'Calcineurin inhibitors: cyclosporine (binds cyclophilin), tacrolimus (binds FKBP) and pimecrolimus. Less IL-2 is made, so fewer T cells proliferate (PCol slides 25–26).',
  cite:XC2+' slides 25–27, 63; '+XC3+' slides 71, 75–76'},
 
-{id:'XM-003', skill:'class', prof:'Smith', tier:'new', topic:'pso', sub:'drugs', concept:'x-pso-classes-select',
+{id:'XM-003', skill:'class', prof:'Smith', tier:'new', topic:'pso', sub:'tx', concept:'x-pso-classes-select', multi:true,
  tags:['exam-style','select-all','list'], source:'slide',
  stem:'Select all that apply. No partial credit will be given. Which classes of medications are used to treat psoriasis?',
  options:[
@@ -194,7 +194,7 @@ QUESTIONS.push(
  note:'Exam 1 item 45 (class list for psoriasis) keyed retinoids, calcineurin inhibitors and PDE-4 inhibitors correct and keratolytics and antibiotics wrong. Slide 28 does not list PDE-4 inhibitors (apremilast is on Sikazwe slide 33 for psoriasis), and PCol slide 40 says salicylic acid 3 to 6% treats acne, dandruff and psoriasis, so keratolytics are a class-list answer that conflicts with a product-slide fact. For "which classes" questions the class-list slides decide; this draft stays on slide 28 and 37 only.',
  cite:XP+' slides 28, 37'},
 
-{id:'XM-004', skill:'class', prof:'Smith', tier:'new', topic:'acne', sub:'drugs', concept:'x-acne-classes-select',
+{id:'XM-004', skill:'class', prof:'Smith', tier:'new', topic:'acne', sub:'drugs', concept:'x-acne-classes-select', multi:true,
  tags:['exam-style','select-all','list'], source:'slide',
  stem:'Select all that apply. No partial credit will be given. Which classes of medications are used to treat acne?',
  options:[
@@ -207,7 +207,7 @@ QUESTIONS.push(
  teach:'Pathophys slide 37, acne: keratolytics, antibiotics, nuclear receptor binders, antiandrogens.',
  cite:XP+' slides 17, 28, 37'},
 
-{id:'XM-005', skill:'class', prof:'Smith', tier:'new', topic:'ad', sub:'drugs', concept:'x-ad-classes-select',
+{id:'XM-005', skill:'class', prof:'Smith', tier:'new', topic:'ad', sub:'drugs', concept:'x-ad-classes-select', multi:true,
  tags:['exam-style','select-all','list'], source:'slide',
  stem:'Select all that apply. No partial credit will be given. Which classes of medications are used to treat atopic dermatitis?',
  options:[

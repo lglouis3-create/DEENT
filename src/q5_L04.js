@@ -344,7 +344,7 @@ QUESTIONS.push(
   {t:'A non-aromatic 13-cis retinoid', correct:false, why:'That describes isotretinoin, a 1st-generation retinoid (slide 49).'},
   {t:'A mono-aromatic ethyl ester', correct:false, why:'That describes etretinate, 2nd generation (slide 50).'},
   {t:'A steroid with four fused rings', correct:false, why:'Retinoids derive from vitamin A (retinol), not the steroid nucleus (slide 48).'}],
- teach:'Tazarotene carries a carbon–carbon triple bond (alkyne, "acetylenic") linking its ring systems, and an ethyl ester at the end. It is applied topically and also counted with the 3rd-generation, poly-aromatic retinoids (slides 29, 51).',
+ teach:'Tazarotene carries an alkyne ("acetylenic") linking its ring systems, and an ethyl ester at the end. It is applied topically and also counted with the 3rd-generation, poly-aromatic retinoids (slides 29, 51).',
  cite:S4+' slide 29; T@6800–6942'},
 
 {id:'S4-023', skill:'pk', prof:'Sikazwe', tier:'new', topic:'s4-psret', sub:'taz', concept:'tazarotene-prodrug',
