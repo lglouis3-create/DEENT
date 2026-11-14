@@ -341,6 +341,10 @@ const COURSE = {
           'examfold_ui.js',
           // Space and a rule between the sections of Reference, Guides and Tell apart (Louis 2026-11-13)
           'refsep_ui.js',
+          // Guides: the reading components of the objective sections (numbered blocks, tables, formula
+          // line, step-care bands, number tiles with a label that says what the number measures,
+          // tap-to-check polls). Styles only, under ".gobj .g2-" (Louis 2026-11-14)
+          'guide2_css.js',
           // Search box in the header (Louis, 2026-11-14): last of the content files, it reads their globals
           'search_ui.js',
           // Browser-tab icon on the live page (brand.py wrote it into the <head> until 2026-11-09)

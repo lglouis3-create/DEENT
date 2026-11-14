@@ -398,74 +398,511 @@ const GUIDE_HTML = `
 <section class="gobj" id="gobj-p5-1">
 <h3>Dermatitis Therapeutics · Objective 1: the self-care interview and the patient care process</h3>
 <div class="gbar"><span>Objective (DT 7)</span><b>Perform the components of the SCHOLAR-MAC/QuEST and the Pharmacist&rsquo;s Patient Care Process in the self-care interview for dermatologic conditions</b><i>DT 26, 28, 49, 69</i></div>
-<div class="gpt"><ul><li>Patient care process (DT 28): collect, assess, plan, implement, follow-up (monitor and evaluate), around patient-centered care (T@27992).</li><li>Her cases are written as CC (chief complaint, the patient&rsquo;s own words), HPI (history of present illness), PMH (past medical history), current meds, other (OTC products), physical assessment (DT 26, 69; T@24148&ndash;24910).</li></ul></div>
+<div class="gpt g2-block"><h5><span class="g2-num">1.</span> Patient care process <span class="g2-src">(DT 28; T@27992)</span></h5>
+<table class="g2-table">
+<thead><tr><th scope="col" class="g2-n">Step</th><th scope="col">Patient care process</th></tr></thead>
+<tbody>
+<tr><td class="g2-n"><span class="g2-num">1</span></td><td>Collect</td></tr>
+<tr><td class="g2-n"><span class="g2-num">2</span></td><td>Assess</td></tr>
+<tr><td class="g2-n"><span class="g2-num">3</span></td><td>Plan</td></tr>
+<tr><td class="g2-n"><span class="g2-num">4</span></td><td>Implement</td></tr>
+<tr><td class="g2-n"><span class="g2-num">5</span></td><td>Follow-up (monitor and evaluate)</td></tr>
+</tbody>
+</table>
+<p class="g2-p">Around patient-centered care.</p>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">2.</span> Her cases are written as <span class="g2-src">(DT 26, 69; T@24148&ndash;24910)</span></h5>
+<table class="g2-table g2-kv">
+<tbody>
+<tr><th scope="row">CC</th><td>Chief complaint, the patient&rsquo;s own words</td></tr>
+<tr><th scope="row">HPI</th><td>History of present illness</td></tr>
+<tr><th scope="row">PMH</th><td>Past medical history</td></tr>
+<tr><th scope="row">Current meds</th><td></td></tr>
+<tr><th scope="row">Other</th><td>OTC products</td></tr>
+<tr><th scope="row">Physical assessment</th><td></td></tr>
+</tbody>
+</table>
+</div>
 </section>
 
 <section class="gobj" id="gobj-p5-2">
 <h3>Dermatitis Therapeutics · Objective 2: name the condition from signs, symptoms and history</h3>
 <div class="gbar"><span>Objective (DT 7)</span><b>Determine the dermatologic condition based on the patient&rsquo;s signs and symptoms and history</b><i>DT 15&ndash;25, 56&ndash;60</i></div>
-<div class="gpt"><h5>Atopic dermatitis (DT 17&ndash;22)</h5><ul><li>Also known as eczema; very common chronic or relapsing inflammatory skin disorder; often develops in childhood; hallmark symptom pruritus; no cure; not contagious (DT 17).</li><li>Initiation: disrupted barrier (FLG mutation or dryness) &rarr; allergen and irritant influx &rarr; inflammatory T-cell responses. Prevention: emollient therapy improves the barrier and blocks the inflammatory cascade (DT 18).</li><li>Risk factors: personal or family history of atopic disorders (atopic triad: allergic rhinitis, asthma, AD; atopic march adds food allergies); loss-of-function FLG mutation; urban environment; smaller family size; higher parental education (DT 19).</li><li>Triggers (DT 20): irritants (tobacco smoke, air pollution, cosmetics, fragrances, astringents, soaps, scrubs, detergents, dyes, preservatives); allergens (foods; wool and polyester clothing; dust mites, pollens, pet dander, molds); environment (extreme temperatures, low humidity); personal (stress, excessive washing and sanitizing).</li></ul></div>
-<table class="reftab"><thead><tr><th style="width:18%">Age (DT 21)</th><th>Quality</th><th>Region</th><th>Timing</th></tr></thead><tbody>
-<tr><td><b>Infancy (0&ndash;2 y)</b></td><td>Erythematous papular rash that tends to ooze</td><td>Face, scalp, trunk, arms, legs</td><td>Most common onset 3&ndash;6 months; majority by age one</td></tr>
-<tr><td><b>Childhood (2&ndash;puberty)</b></td><td>Dry, flaky, rough, cracked skin, crusting, lichenification</td><td>Face, creases of the neck, elbows, wrists, knees, ankles</td><td>Up to 90% by age 5</td></tr>
-<tr><td><b>Adulthood</b></td><td>More diffuse, underlying erythema, dry scaly skin, lichenification</td><td>Less on the face; more on hands, neck, inner elbows, back of knees, ankles</td><td>May resolve by adulthood (70&ndash;90%)</td></tr>
-</tbody></table>
-<div class="gpt"><ul><li>Earlier onset, longer persistence (DT 22; T@20296).</li></ul></div>
-<table class="reftab"><thead><tr><th style="width:18%">Severity (DT 23)</th><th>SCORAD</th><th>Description</th></tr></thead><tbody>
-<tr><td><b>Mild</b></td><td>&lt; 25</td><td>Areas of dry skin, infrequent itching (with or without small areas of redness); little impact on activities, sleep and psychosocial wellbeing</td></tr>
-<tr><td><b>Moderate</b></td><td>25&ndash;50</td><td>Mild characteristics with frequent itching; moderate impact on everyday activities and sleep</td></tr>
-<tr><td><b>Severe</b></td><td>&gt; 50</td><td>Widespread dry skin, incessant itching, redness, thickening, bleeding, oozing, severe limitation to activities, nightly loss of sleep</td></tr>
-</tbody></table>
+<div class="gpt g2-block"><h5><span class="g2-num">1.</span> Atopic dermatitis <span class="g2-src">(DT 17&ndash;22)</span></h5>
+<div class="g2-two">
+<div>
+<table class="g2-table g2-kv">
+<caption>The condition <span class="g2-src">(DT 17)</span></caption>
+<tbody>
+<tr><th scope="row">Other name</th><td>Also known as <b>eczema</b></td></tr>
+<tr><th scope="row">Type</th><td>Very common chronic or relapsing inflammatory skin disorder</td></tr>
+<tr><th scope="row">Start</th><td>Often develops in childhood</td></tr>
+<tr><th scope="row">Hallmark symptom</th><td><b>Pruritus</b></td></tr>
+<tr><th scope="row">Cure</th><td>No cure</td></tr>
+<tr><th scope="row">Spread</th><td>Not contagious</td></tr>
+</tbody>
+</table>
+<table class="g2-table g2-kv">
+<caption>Initiation and prevention <span class="g2-src">(DT 18)</span></caption>
+<tbody>
+<tr><th scope="row">Initiation</th><td>Disrupted barrier (FLG mutation or dryness) &rarr; allergen and irritant influx &rarr; inflammatory T-cell responses</td></tr>
+<tr><th scope="row">Prevention</th><td>Emollient therapy improves the barrier and blocks the inflammatory cascade</td></tr>
+</tbody>
+</table>
+</div>
+<div>
+<p class="g2-sub">Risk factors <span class="g2-src">(DT 19)</span></p>
+<ul>
+<li>Personal or family history of atopic disorders (atopic triad: allergic rhinitis, asthma, AD; atopic march adds food allergies)</li>
+<li>Loss-of-function FLG mutation</li>
+<li>Urban environment</li>
+<li>Smaller family size</li>
+<li>Higher parental education</li>
+</ul>
+<table class="g2-table g2-kv">
+<caption>Triggers <span class="g2-src">(DT 20)</span></caption>
+<tbody>
+<tr><th scope="row">Irritants</th><td>Tobacco smoke, air pollution, cosmetics, fragrances, astringents, soaps, scrubs, detergents, dyes, preservatives</td></tr>
+<tr><th scope="row">Allergens</th><td>Foods; wool and polyester clothing; dust mites, pollens, pet dander, molds</td></tr>
+<tr><th scope="row">Environment</th><td>Extreme temperatures, low humidity</td></tr>
+<tr><th scope="row">Personal</th><td>Stress, excessive washing and sanitizing</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+<table class="g2-table g2-stack">
+<caption>By age <span class="g2-src">(DT 21)</span></caption>
+<thead><tr><th scope="col">Age</th><th scope="col">Quality</th><th scope="col">Region</th><th scope="col">Timing</th></tr></thead>
+<tbody>
+<tr><th scope="row">Infancy (0&ndash;2 y)</th><td><span class="g2-lab">Quality</span>Erythematous papular rash that tends to ooze</td><td><span class="g2-lab">Region</span>Face, scalp, trunk, arms, legs</td><td><span class="g2-lab">Timing</span>Most common onset <b>3&ndash;6 months</b>; majority by age one</td></tr>
+<tr><th scope="row">Childhood (2&ndash;puberty)</th><td><span class="g2-lab">Quality</span>Dry, flaky, rough, cracked skin, crusting, lichenification</td><td><span class="g2-lab">Region</span>Face, creases of the neck, elbows, wrists, knees, ankles</td><td><span class="g2-lab">Timing</span>Up to <b>90%</b> by age 5</td></tr>
+<tr><th scope="row">Adulthood</th><td><span class="g2-lab">Quality</span>More diffuse, underlying erythema, dry scaly skin, lichenification</td><td><span class="g2-lab">Region</span>Less on the face; more on hands, neck, inner elbows, back of knees, ankles</td><td><span class="g2-lab">Timing</span>May resolve by adulthood (<b>70&ndash;90%</b>)</td></tr>
+</tbody>
+</table>
+<p class="g2-p">Earlier onset, longer persistence <span class="g2-src">(DT 22; T@20296)</span>.</p>
+<table class="g2-table g2-stack">
+<caption>By severity <span class="g2-src">(DT 23)</span></caption>
+<thead><tr><th scope="col">Severity</th><th scope="col">SCORAD</th><th scope="col">Description</th></tr></thead>
+<tbody>
+<tr><th scope="row">Mild</th><td><span class="g2-lab">SCORAD</span><b>&lt; 25</b></td><td>Areas of dry skin, infrequent itching (with or without small areas of redness); little impact on activities, sleep and psychosocial wellbeing</td></tr>
+<tr><th scope="row">Moderate</th><td><span class="g2-lab">SCORAD</span><b>25&ndash;50</b></td><td>Mild characteristics with frequent itching; moderate impact on everyday activities and sleep</td></tr>
+<tr><th scope="row">Severe</th><td><span class="g2-lab">SCORAD</span><b>&gt; 50</b></td><td>Widespread dry skin, incessant itching, redness, thickening, bleeding, oozing, severe limitation to activities, nightly loss of sleep</td></tr>
+</tbody>
+</table>
 <div class="gtell"><b>Status (DT 24; T@22171&ndash;22904, T@26757)</b><ul><li>Acute: acutely inflamed papules, vesicles, exudate and crusts; no dryness.</li><li>Subacute: <b>dry</b>, inflamed papules, patches or plaques.</li><li>Chronic: <b>lichenified</b> papules or plaques (she calls lichenification the silvery, scaly plaque, T@18613).</li></ul></div>
-<div class="gpt"><ul><li>Complications (DT 25): sleep disturbances; depression; quality of life of patient and family; skin infections (S. aureus; prone to herpes simplex virus).</li></ul></div>
-<div class="gpt"><h5>Diaper and incontinence-associated dermatitis (DT 56&ndash;60)</h5><ul><li>Causes: occlusion, moisture, microbes, GI proteolytic enzymes and bile salts, mechanical chafing and friction, alkaline skin pH (DT 56).</li><li>Signs: erythema in patches (buttocks, upper thighs, abdomen, genital region); red to bright red, shiny, wet-looking patches; graded A slight to E severe (DT 58). No lichenification (T@72543).</li><li>Adults (GLOBIAD, DT 60): category 1 persistent redness, category 2 skin loss; A without, B with clinical signs of infection.</li></ul></div>
-<div class="gpoll"><b>Her polls</b><ul><li>Another name for atopic dermatitis: eczema (T@24148).</li><li>The 21-year-old (dry, inflamed, no infection, no lichenified plaques, SCORAD 40): moderate, subacute (T@25991&ndash;26757).</li></ul></div>
+<p class="g2-sub">Complications <span class="g2-src">(DT 25)</span></p>
+<ul>
+<li>Sleep disturbances</li>
+<li>Depression</li>
+<li>Quality of life of patient and family</li>
+<li>Skin infections (S. aureus; prone to herpes simplex virus)</li>
+</ul>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">2.</span> Diaper and incontinence-associated dermatitis <span class="g2-src">(DT 56&ndash;60)</span></h5>
+<table class="g2-table g2-kv">
+<tbody>
+<tr><th scope="row">Causes</th><td>Occlusion, moisture, microbes, GI proteolytic enzymes and bile salts, mechanical chafing and friction, alkaline skin pH <span class="g2-src">(DT 56)</span></td></tr>
+<tr><th scope="row">Signs</th><td>Erythema in patches (buttocks, upper thighs, abdomen, genital region); red to bright red, shiny, wet-looking patches; graded A slight to E severe <span class="g2-src">(DT 58)</span></td></tr>
+<tr><th scope="row">Not a sign</th><td><p class="g2-said"><span class="g2-k">Said in class</span>No lichenification <span class="g2-src">(T@72543)</span></p></td></tr>
+<tr><th scope="row">Adults</th><td>Category 1 persistent redness, category 2 skin loss; A without, B with clinical signs of infection <span class="g2-src">(GLOBIAD, DT 60)</span></td></tr>
+</tbody>
+</table>
+</div>
+<div class="gpoll"><b>Her polls</b>
+<details class="g2-self"><summary>Another name for atopic dermatitis <span class="g2-tap">Show answer</span></summary><p>Eczema <span class="g2-src">(T@24148)</span></p></details>
+<details class="g2-self"><summary>The 21-year-old (dry, inflamed, no infection, no lichenified plaques, SCORAD 40) <span class="g2-tap">Show answer</span></summary><p>Moderate, subacute <span class="g2-src">(T@25991&ndash;26757)</span></p></details>
+</div>
 </section>
 
 <section class="gobj" id="gobj-p5-3">
 <h3>Dermatitis Therapeutics · Objective 3: is the patient a self-care candidate?</h3>
 <div class="gbar"><span>Objective (DT 7)</span><b>Determine if the patient is an appropriate self-care candidate</b><i>DT 33, 36, 65&ndash;68</i></div>
-<div class="gpt"><ul><li>AD on OTC self-care (DT 33): not improved or worse after 2&ndash;3 days of self-treatment: refer. On a topical steroid, the follow-up figure is 7 days (DT 36, 52; her poll); the two figures are recorded in OPEN_QUESTIONS (Lecture 5, item 2).</li><li>AD on OTC self-care (DT 33): atrophy of the skin or infection while using the topical steroid: discontinue and refer. OTC hydrocortisone 1% not resolved in 7 days: seek assistance; never past 2 weeks (DT 36).</li><li>Diaper dermatitis, do not use as self-care products: topical antifungals (miconazole), topical antibacterials, topical anesthetics (benzocaine, lidocaine), hydrocortisone or other topical corticosteroid. The diaper area is a large share of a baby&rsquo;s body surface area, and topical products can cause systemic side effects (DT 65).</li><li>Exclusions for self-treatment of diaper dermatitis (DT 68, &ldquo;please know this list&rdquo;, T@80993): lesions &gt; 7 days; no improvement in 7 days despite care; secondary infection (viral, bacterial, fungal); lesions part of or caused by another disease; rash outside the diaper region; possible urinary tract infection; broken skin (ulceration, blistering, peeling); onion-skin appearance or bullae; oozing, blood, vesicles or pus; chronic or frequently recurrent lesions; constitutional symptoms (fever, diarrhea, nausea, vomiting, swollen inguinal lymph nodes, rapid pulse, rash elsewhere); behavioral changes (lethargy, incessant crying); comorbid conditions (HIV, organ transplant, immunosuppressive therapy, hepatitis with skin manifestations).</li></ul></div>
+<div class="gpt g2-block"><h5><span class="g2-num">1.</span> AD on OTC self-care <span class="g2-src">(DT 33)</span></h5>
+<div class="g2-tiles g2-wide">
+<div class="g2-tile"><span class="g2-tile-label">AD self-treatment not improved or worse: refer after</span><span class="g2-tile-num">2&ndash;3 days</span><span class="g2-src">(DT 33)</span></div>
+<div class="g2-tile"><span class="g2-tile-label">On a topical steroid: the follow-up figure is</span><span class="g2-tile-num">7 days</span><span class="g2-src">(DT 36, 52; her poll)</span></div>
+</div>
+<p class="g2-p">The two figures are recorded in OPEN_QUESTIONS (Lecture 5, item 2).</p>
+<div class="g2-tiles g2-wide">
+<div class="g2-tile"><span class="g2-tile-label">OTC hydrocortisone 1% not resolved: seek assistance at</span><span class="g2-tile-num">7 days</span><span class="g2-src">(DT 36)</span></div>
+<div class="g2-tile"><span class="g2-tile-label">OTC hydrocortisone 1%: never past</span><span class="g2-tile-num">2 weeks</span><span class="g2-src">(DT 36)</span></div>
+</div>
+<p class="g2-p">Atrophy of the skin or infection while using the topical steroid: <b>discontinue and refer</b>.</p>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">2.</span> Diaper dermatitis, do not use as self-care products <span class="g2-src">(DT 65)</span></h5>
+<ul>
+<li>Topical antifungals (miconazole)</li>
+<li>Topical antibacterials</li>
+<li>Topical anesthetics (benzocaine, lidocaine)</li>
+<li>Hydrocortisone or other topical corticosteroid</li>
+</ul>
+<p class="g2-p">The diaper area is a large share of a baby&rsquo;s body surface area, and topical products can cause systemic side effects.</p>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">3.</span> Exclusions for self-treatment of diaper dermatitis <span class="g2-src">(DT 68, &ldquo;please know this list&rdquo;, T@80993)</span></h5>
+<div class="g2-two">
+<ul>
+<li>Lesions <b>&gt; 7 days</b></li>
+<li>No improvement in <b>7 days</b> despite care</li>
+<li>Secondary infection (viral, bacterial, fungal)</li>
+<li>Lesions part of or caused by another disease</li>
+<li>Rash outside the diaper region</li>
+<li>Possible urinary tract infection</li>
+<li>Broken skin (ulceration, blistering, peeling)</li>
+</ul>
+<ul>
+<li>Onion-skin appearance or bullae</li>
+<li>Oozing, blood, vesicles or pus</li>
+<li>Chronic or frequently recurrent lesions</li>
+<li>Constitutional symptoms (fever, diarrhea, nausea, vomiting, swollen inguinal lymph nodes, rapid pulse, rash elsewhere)</li>
+<li>Behavioral changes (lethargy, incessant crying)</li>
+<li>Comorbid conditions (HIV, organ transplant, immunosuppressive therapy, hepatitis with skin manifestations)</li>
+</ul>
+</div>
+</div>
 </section>
 
 <section class="gobj" id="gobj-p5-4">
 <h3>Dermatitis Therapeutics · Objective 4: treatment goals</h3>
 <div class="gbar"><span>Objective (DT 7)</span><b>List appropriate treatment goals</b><i>DT 27, 61</i></div>
-<table class="reftab"><thead><tr><th style="width:24%">Condition</th><th>Goals on her slide</th></tr></thead><tbody>
-<tr><td><b>Atopic dermatitis</b> (DT 27)</td><td>Eliminate triggers; reduce symptoms (pruritus, dermatitis); prevent future flare-ups; prevent secondary infections; minimize adverse drug reactions (do not use oral antibiotics or topical antibiotics over large areas of skin); reduce trans-epidermal water loss (TEWL)</td></tr>
-<tr><td><b>Diaper / incontinence dermatitis</b> (DT 61)</td><td>Relieve the symptoms; get rid of the dermatitis; prevent secondary infection; prevent recurrences</td></tr>
-</tbody></table>
+<div class="gpt g2-block"><h5><span class="g2-num">1.</span> Goals on her slide, by condition</h5>
+<div class="g2-two">
+<div>
+<p class="g2-sub">Atopic dermatitis <span class="g2-src">(DT 27)</span></p>
+<ul>
+<li>Eliminate triggers</li>
+<li>Reduce symptoms (pruritus, dermatitis)</li>
+<li>Prevent future flare-ups</li>
+<li>Prevent secondary infections</li>
+<li>Minimize adverse drug reactions (do not use oral antibiotics or topical antibiotics over large areas of skin)</li>
+<li>Reduce trans-epidermal water loss (TEWL)</li>
+</ul>
+</div>
+<div>
+<p class="g2-sub">Diaper / incontinence dermatitis <span class="g2-src">(DT 61)</span></p>
+<ul>
+<li>Relieve the symptoms</li>
+<li>Get rid of the dermatitis</li>
+<li>Prevent secondary infection</li>
+<li>Prevent recurrences</li>
+</ul>
+</div>
+</div>
+</div>
 </section>
 
 <section class="gobj" id="gobj-p5-5">
 <h3>Dermatitis Therapeutics · Objective 5: non-drug therapy</h3>
 <div class="gbar"><span>Objective (DT 7)</span><b>Recommend appropriate non-drug therapy</b><i>DT 29&ndash;32, 51, 57, 59, 62</i></div>
-<div class="gpt"><h5>Atopic dermatitis</h5><ul><li>Fix the skin barrier (DT 29): don&rsquo;t strip the weakened epidermis (gentle cleansers, limit bathing time); help re-establish it (thick emollients, hydration); reduce inflammation (topical medications).</li><li>Non-drug treatments (DT 30): bathing practices, gentle cleansers, wet wraps (short-term, not with TCIs), soft cotton clothing, avoid known triggers, decrease stress.</li><li>Bathing (DT 31): 10-minute lukewarm bath, gentle cleansers, pat dry; oatmeal or baking soda may be added daily; bleach 0.005% sodium hypochlorite (&frac12; cup per full tub) twice a week for moderate&ndash;severe AD to prevent recurrent bacterial infection (can irritate; her last-line advice, T@32279); occlusive moisturizer right after the bath.</li><li>Counseling (DT 51): avoid triggers; no tight clothing; moderate temperature; short tepid showers or baths with a non-soap cleanser; sponge baths in place of full-body bathing; pat dry; cool tap-water compresses 5&ndash;20 min, 4&ndash;6 times daily for weeping lesions (not with TCIs); short clean nails, cotton gloves or socks at night.</li></ul></div>
-<table class="reftab"><thead><tr><th style="width:18%">OTC moisturizer (DT 32)</th><th>Examples</th><th>Comments</th></tr></thead><tbody>
-<tr><td><b>Petroleum-containing</b></td><td>Aquaphor (petrolatum); Eucerin (petrolatum, mineral oil); Lubriderm (mineral oil, lanolin, petrolatum)</td><td>Occlusive; can be greasy, uncomfortable; the most effective, thickest and longest-lasting (T@34639)</td></tr>
-<tr><td><b>Ceramide-containing</b></td><td>CeraVe (glycerin, petroleum, ceramides, hyaluronic acid); Aveeno eczema therapy (oatmeal, ceramides)</td><td>Creams; provide a barrier</td></tr>
-<tr><td><b>Urea-containing</b></td><td>Carmol 10%, 20%; Lac-Hydrin 5%</td><td>Humectant; burning, stinging, irritation on broken skin</td></tr>
-<tr><td><b>Emollient lotions</b></td><td>Cetaphil lotion, Keri Original, Neutrogena lotion</td><td>Less effective; apply 3 times a day or more, after bathing or washing</td></tr>
-</tbody></table>
-<div class="gpt"><h5>Diaper and incontinence dermatitis</h5><ul><li>Infants (DT 57): change newborns every 2 hours, infants every 3&ndash;4 hours; disposable diapers mean fewer rashes; clean at every change (no difference between cloth, water, mild soap or alcohol-free wipe); dry before barrier cream; breastfeeding means fewer rashes (pH).</li><li>Adults (DT 59): bath oil or pH-neutral cleansing foam, patting with a soft cloth; skin hydration; barrier cream; pressure sore prevention; good nutrition (protein, vitamins).</li><li>ABCDE (DT 62): <b>A</b>ir (air dry, diaper-free time); <b>B</b>arrier (protectant liberally at each change); <b>C</b>leansing (soft cloth and warm water, or a baby wipe when stool is present); <b>D</b>iaper (change every 2 hours and as soon as soiled; disposable if affordable); <b>E</b>ducation of parents and caregivers.</li></ul></div>
+<div class="gpt g2-block"><h5><span class="g2-num">1.</span> Atopic dermatitis</h5>
+<div class="g2-two">
+<div>
+<table class="g2-table g2-kv">
+<caption>Fix the skin barrier <span class="g2-src">(DT 29)</span></caption>
+<tbody>
+<tr><th scope="row">Don&rsquo;t strip the weakened epidermis</th><td>Gentle cleansers, limit bathing time</td></tr>
+<tr><th scope="row">Help re-establish it</th><td>Thick emollients, hydration</td></tr>
+<tr><th scope="row">Reduce inflammation</th><td>Topical medications</td></tr>
+</tbody>
+</table>
+<p class="g2-sub">Non-drug treatments <span class="g2-src">(DT 30)</span></p>
+<ul>
+<li>Bathing practices</li>
+<li>Gentle cleansers</li>
+<li>Wet wraps (short-term, not with TCIs)</li>
+<li>Soft cotton clothing</li>
+<li>Avoid known triggers</li>
+<li>Decrease stress</li>
+</ul>
+<table class="g2-table g2-kv">
+<caption>Bathing <span class="g2-src">(DT 31)</span></caption>
+<tbody>
+<tr><th scope="row">Bath</th><td><b>10-minute</b> lukewarm bath, gentle cleansers, pat dry</td></tr>
+<tr><th scope="row">Added daily</th><td>Oatmeal or baking soda may be added daily</td></tr>
+<tr><th scope="row">Bleach</th><td>Bleach <b>0.005%</b> sodium hypochlorite (&frac12; cup per full tub) <b>twice a week</b> for moderate&ndash;severe AD to prevent recurrent bacterial infection (can irritate; her last-line advice, T@32279)</td></tr>
+<tr><th scope="row">After the bath</th><td>Occlusive moisturizer right after the bath</td></tr>
+</tbody>
+</table>
+</div>
+<div>
+<p class="g2-sub">Counseling <span class="g2-src">(DT 51)</span></p>
+<ul>
+<li>Avoid triggers</li>
+<li>No tight clothing</li>
+<li>Moderate temperature</li>
+<li>Short tepid showers or baths with a non-soap cleanser</li>
+<li>Sponge baths in place of full-body bathing</li>
+<li>Pat dry</li>
+<li>Cool tap-water compresses <b>5&ndash;20 min, 4&ndash;6 times daily</b> for weeping lesions (not with TCIs)</li>
+<li>Short clean nails, cotton gloves or socks at night</li>
+</ul>
+</div>
+</div>
+<table class="g2-table g2-stack">
+<caption>OTC moisturizer <span class="g2-src">(DT 32)</span></caption>
+<thead><tr><th scope="col">Type</th><th scope="col">Examples</th><th scope="col">Comments</th></tr></thead>
+<tbody>
+<tr><th scope="row">Petroleum-containing</th><td><span class="g2-lab">Examples</span>Aquaphor (petrolatum); Eucerin (petrolatum, mineral oil); Lubriderm (mineral oil, lanolin, petrolatum)</td><td><span class="g2-lab">Comments</span>Occlusive; can be greasy, uncomfortable; the most effective, thickest and longest-lasting (T@34639)</td></tr>
+<tr><th scope="row">Ceramide-containing</th><td><span class="g2-lab">Examples</span>CeraVe (glycerin, petroleum, ceramides, hyaluronic acid); Aveeno eczema therapy (oatmeal, ceramides)</td><td><span class="g2-lab">Comments</span>Creams; provide a barrier</td></tr>
+<tr><th scope="row">Urea-containing</th><td><span class="g2-lab">Examples</span>Carmol 10%, 20%; Lac-Hydrin 5%</td><td><span class="g2-lab">Comments</span>Humectant; burning, stinging, irritation on broken skin</td></tr>
+<tr><th scope="row">Emollient lotions</th><td><span class="g2-lab">Examples</span>Cetaphil lotion, Keri Original, Neutrogena lotion</td><td><span class="g2-lab">Comments</span>Less effective; apply <b>3 times a day or more</b>, after bathing or washing</td></tr>
+</tbody>
+</table>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">2.</span> Diaper and incontinence dermatitis</h5>
+<div class="g2-two">
+<div>
+<p class="g2-sub">Infants <span class="g2-src">(DT 57)</span></p>
+<div class="g2-tiles">
+<div class="g2-tile"><span class="g2-tile-label">Newborns: change the diaper every</span><span class="g2-tile-num">2 hours</span></div>
+<div class="g2-tile"><span class="g2-tile-label">Infants: change the diaper every</span><span class="g2-tile-num">3&ndash;4 hours</span></div>
+</div>
+<ul>
+<li>Disposable diapers mean fewer rashes</li>
+<li>Clean at every change (no difference between cloth, water, mild soap or alcohol-free wipe)</li>
+<li>Dry before barrier cream</li>
+<li>Breastfeeding means fewer rashes (pH)</li>
+</ul>
+<p class="g2-sub">Adults <span class="g2-src">(DT 59)</span></p>
+<ul>
+<li>Bath oil or pH-neutral cleansing foam, patting with a soft cloth</li>
+<li>Skin hydration</li>
+<li>Barrier cream</li>
+<li>Pressure sore prevention</li>
+<li>Good nutrition (protein, vitamins)</li>
+</ul>
+</div>
+<div>
+<table class="g2-table g2-kv">
+<caption>ABCDE <span class="g2-src">(DT 62)</span></caption>
+<tbody>
+<tr><th scope="row"><b>A</b>ir</th><td>Air dry, diaper-free time</td></tr>
+<tr><th scope="row"><b>B</b>arrier</th><td>Protectant liberally at each change</td></tr>
+<tr><th scope="row"><b>C</b>leansing</th><td>Soft cloth and warm water, or a baby wipe when stool is present</td></tr>
+<tr><th scope="row"><b>D</b>iaper</th><td>Change every <b>2 hours</b> and as soon as soiled; disposable if affordable</td></tr>
+<tr><th scope="row"><b>E</b>ducation</th><td>Education of parents and caregivers</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
 </section>
 
 <section class="gobj" id="gobj-p5-6">
 <h3>Dermatitis Therapeutics · Objective 6: recommend the best treatment</h3>
 <div class="gbar"><span>Objective (DT 8)</span><b>Dosing frequency and maximum days; onset; length of treatment; amount to dispense and tube size; adverse effects; contraindications and interactions</b><i>DT 10&ndash;13, 34&ndash;48, 52, 63&ndash;64</i></div>
-<div class="gpt"><h5>Quantity: fingertip units (DT 10&ndash;13)</h5><ul><li>Adult FTU = 0.5 g. Tubes 15, 30, 45, 60, 80, 100 g; always round up to an available size (DT 10; T@7221).</li><li>Adult FTU per area (DT 11): scalp 3; face and neck 2.5; one hand (front and back, with fingers) 1; one arm with the hand 4; elbows 1; both soles 1.5; one foot with toes 2; one leg with the foot 8; buttocks 4; knees 1; trunk both sides 14 (7 each side).</li><li>Grams = FTU &times; 0.5 g &times; applications a day &times; days. Face and neck BID 2 weeks: 1.25 g &times; 2 &times; 14 = 35 g &rarr; 45 g. One side of trunk BID 2 weeks: 3.5 g &times; 28 = 98 g &rarr; 100 g (DT 13). Her poll, face and neck TID 14 days: 1.25 &times; 3 &times; 14 = 52.5 g &rarr; 60 g (T@11444&ndash;11799).</li></ul></div>
-<div class="gpt"><h5>Drugs for atopic dermatitis (DT 34&ndash;46)</h5><ul><li>Order (DT 48; T@57389): topical corticosteroid first line, TCI second (DT 38), crisaborole third (DT 41); dupilumab or tralokinumab for moderate&ndash;severe AD after topicals (DT 43, 45); JAK inhibitors last, refractory (DT 46). Mechanisms: see the pharmacology and medicinal chemistry guides above (DT 35, 38, 41, 43).</li><li>Onset (DT 52, 38): topical steroid 24&ndash;48 h; TCI 1&ndash;8 weeks. Length: OTC hydrocortisone 1% BID max 3&ndash;7 days, seek help at 7 days, never past 2 weeks (DT 36); TCI reassess at 6 weeks (DT 40).</li><li>Potency and vehicle: see Reference, &ldquo;Dr. Patel: topical corticosteroid potency&rdquo;. Ointment &gt; cream &gt; lotion &gt; solution &gt; gel &gt; spray (DT 37). Hydrocortisone 1% is the one steroid for the face (DT 36; T@37425). For AD, single-ingredient products only (T@41713).</li><li>Topical steroid absorption varies with age, skin integrity, skin thickness and anatomic location (DT 35).</li><li>Counseling (DT 35, 52): wash hands before and after; apply to a clean, dry area; emollient within 3 minutes after bathing while the skin is still damp; a thin layer rubbed in gently until it vanishes; 1&ndash;2 times daily; store cool, dry, room temperature (not the bathroom, T@37049); do not wrap, which raises absorption, and let it air dry 3&ndash;5 minutes before clothing (T@40748); lesions can worsen in winter and summer.</li></ul></div>
-<div class="gpt"><h5>Step-care algorithm (DT 47&ndash;48)</h5><ul><li>Everyone: basic management (skin care, moisturizer, warm baths or showers with non-soap cleansers, trigger avoidance).</li><li>Non-lesional and mild, acute: low-to-medium potency TCS twice daily for 3&ndash;7 days beyond clearance (consider TCI, crisaborole); start low (T@56572).</li><li>Moderate, maintenance: low-potency TCS 1&ndash;2 times daily (including face); medium potency 1&ndash;2 times weekly (except face); OR TCI 1&ndash;2 times daily or 2&ndash;3 times weekly; OR crisaborole 2% twice daily.</li><li>Severe, maintenance: referral to an AD specialist; phototherapy; dupilumab; systemic immunosuppressants (cyclosporine A, methotrexate, mycophenolate mofetil, azathioprine, not FDA-approved for AD; corticosteroids, not for long-term maintenance); acute: wet wraps, short-term hospitalization.</li><li>Moderate and severe, acute: medium-to-high potency TCS twice daily for 3&ndash;7 days beyond clearance; not resolved in 7 days: consider nonadherence, infection, misdiagnosis, contact allergy to medications, referral.</li></ul></div>
-<div class="gpt"><h5>Diaper dermatitis products (DT 63&ndash;64)</h5><ul><li>Skin protectants (17 FDA-approved ingredients): liberally at every change, old product removed gently, red areas fully covered, continued after healing (DT 63). Zinc oxide 1&ndash;40%, the active ingredient (common, excellent, thick and tacky); petrolatum 30&ndash;100%, the ointment base. A &amp; D Ointment has lanolin and petrolatum, no zinc oxide (DT 64).</li></ul></div>
-<div class="gpoll"><b>Her polls (the 21-year-old)</b><ul><li>First-line maintenance: basic management + topical corticosteroid (T@58910&ndash;59410).</li><li>Prescription details: hydrocortisone 1%, thin layer BID for 3&ndash;7 days; start low, as he is not on a steroid now (T@59799&ndash;60609).</li></ul></div>
-<div style="display:flex;flex-wrap:wrap;gap:7px;margin:8px 0"><button type="button" class="chip" data-jump="ref:ref-p5-ftu">Reference: fingertip units</button><button type="button" class="chip" data-jump="ref:ref-p5-tcs">Reference: steroid potency</button><button type="button" class="chip" data-jump="ref:ref-p5-drugs">Reference: AD drugs by line</button></div>
+<div class="gpt g2-block"><h5><span class="g2-num">1.</span> Quantity: fingertip units <span class="g2-src">(DT 10&ndash;13)</span></h5>
+<div class="g2-two">
+<div>
+<table class="g2-table g2-kv">
+<caption>Adult fingertip unit (FTU) and tube sizes <span class="g2-src">(DT 10; T@7221)</span></caption>
+<tbody>
+<tr><th scope="row">Adult FTU</th><td><b>= 0.5 g</b></td></tr>
+<tr><th scope="row">Tubes</th><td>15, 30, 45, 60, 80, 100 g</td></tr>
+<tr><th scope="row">Rounding</th><td>Always round up to an available size</td></tr>
+</tbody>
+</table>
+<p class="g2-sub">Formula and worked amounts <span class="g2-src">(DT 13)</span></p>
+<p class="g2-formula"><span class="g2-k">Formula</span>Grams = FTU &times; 0.5 g &times; applications a day &times; days</p>
+<table class="g2-table g2-work g2-stack">
+<thead><tr><th scope="col">Case</th><th scope="col">Arithmetic</th><th scope="col">Grams</th><th scope="col">Tube</th></tr></thead>
+<tbody>
+<tr><th scope="row">Face and neck BID 2 weeks</th><td>1.25 g &times; 2 &times; 14</td><td>= 35 g</td><td class="g2-ans">&rarr; 45 g</td></tr>
+<tr><th scope="row">One side of trunk BID 2 weeks</th><td>3.5 g &times; 28</td><td>= 98 g</td><td class="g2-ans">&rarr; 100 g</td></tr>
+</tbody>
+</table>
+<details class="g2-self"><summary>Her poll, face and neck TID 14 days <span class="g2-tap">Show answer</span></summary><p>1.25 &times; 3 &times; 14 = 52.5 g &rarr; <b>60 g</b> <span class="g2-src">(T@11444&ndash;11799)</span></p></details>
+</div>
+<div>
+<table class="g2-table">
+<caption>Adult FTU per area <span class="g2-src">(DT 11)</span></caption>
+<thead><tr><th scope="col">Area</th><th scope="col" class="g2-n">FTU</th></tr></thead>
+<tbody>
+<tr><td>Scalp</td><td class="g2-n">3</td></tr>
+<tr><td>Face and neck</td><td class="g2-n">2.5</td></tr>
+<tr><td>One hand (front and back, with fingers)</td><td class="g2-n">1</td></tr>
+<tr><td>One arm with the hand</td><td class="g2-n">4</td></tr>
+<tr><td>Elbows</td><td class="g2-n">1</td></tr>
+<tr><td>Both soles</td><td class="g2-n">1.5</td></tr>
+<tr><td>One foot with toes</td><td class="g2-n">2</td></tr>
+<tr><td>One leg with the foot</td><td class="g2-n">8</td></tr>
+<tr><td>Buttocks</td><td class="g2-n">4</td></tr>
+<tr><td>Knees</td><td class="g2-n">1</td></tr>
+<tr><td>Trunk both sides (7 each side)</td><td class="g2-n">14</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="g2-btns"><button type="button" class="g2-primary" onclick="show('ftu')">Practice fingertip-unit calculations</button><button type="button" class="chip" data-jump="ref:ref-p5-ftu">Reference: fingertip units</button></div>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">2.</span> Step-care algorithm <span class="g2-src">(DT 47&ndash;48)</span></h5>
+<div class="g2-ladder">
+<div class="g2-rung"><div class="g2-sev">Everyone</div><div class="g2-cells">
+<div class="g2-cell"><span class="g2-k">Basic management</span><p>Skin care, moisturizer, warm baths or showers with non-soap cleansers, trigger avoidance.</p></div>
+</div></div>
+<div class="g2-rung g2-s1"><div class="g2-sev">Non-lesional and mild</div><div class="g2-cells">
+<div class="g2-cell"><span class="g2-k g2-acute">Acute</span><p><b>Low-to-medium potency TCS</b> twice daily for <b>3&ndash;7 days beyond clearance</b> (consider TCI, crisaborole).</p><p class="g2-said"><span class="g2-k">Said in class</span>Start low <span class="g2-src">(T@56572)</span></p></div>
+</div></div>
+<div class="g2-rung g2-s2"><div class="g2-sev">Moderate</div><div class="g2-cells">
+<div class="g2-cell"><span class="g2-k g2-acute">Acute (moderate and severe)</span><p><b>Medium-to-high potency TCS</b> twice daily for <b>3&ndash;7 days beyond clearance</b>.</p></div>
+<div class="g2-cell"><span class="g2-k g2-maint">Maintenance</span><ul>
+<li><b>Low-potency TCS</b> 1&ndash;2 times daily (including face); <b>medium potency</b> 1&ndash;2 times weekly (except face)</li>
+<li><span class="g2-or">OR</span> <b>TCI</b> 1&ndash;2 times daily or 2&ndash;3 times weekly</li>
+<li><span class="g2-or">OR</span> <b>crisaborole 2%</b> twice daily</li>
+</ul></div>
+</div></div>
+<div class="g2-rung g2-s3"><div class="g2-sev">Severe</div><div class="g2-cells">
+<div class="g2-cell"><span class="g2-k g2-acute">Acute</span><ul>
+<li><b>Medium-to-high potency TCS</b> twice daily for <b>3&ndash;7 days beyond clearance</b> (moderate and severe)</li>
+<li>Wet wraps</li>
+<li>Short-term hospitalization</li>
+</ul></div>
+<div class="g2-cell"><span class="g2-k g2-maint">Maintenance</span><ul>
+<li>Referral to an AD specialist</li>
+<li>Phototherapy</li>
+<li>Dupilumab</li>
+<li>Systemic immunosuppressants (cyclosporine A, methotrexate, mycophenolate mofetil, azathioprine, not FDA-approved for AD; corticosteroids, not for long-term maintenance)</li>
+</ul></div>
+</div></div>
+</div>
+<div class="g2-note"><span class="g2-k">Moderate and severe, acute: not resolved in 7 days</span><p>Consider nonadherence, infection, misdiagnosis, contact allergy to medications, referral.</p></div>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">3.</span> Drugs for atopic dermatitis <span class="g2-src">(DT 34&ndash;46)</span></h5>
+<div class="g2-two">
+<div>
+<table class="g2-table">
+<caption>Order <span class="g2-src">(DT 48; T@57389)</span></caption>
+<thead><tr><th scope="col">Line</th><th scope="col">Drug</th></tr></thead>
+<tbody>
+<tr><th scope="row">First line</th><td>Topical corticosteroid</td></tr>
+<tr><th scope="row">Second</th><td>TCI <span class="g2-src">(DT 38)</span></td></tr>
+<tr><th scope="row">Third</th><td>Crisaborole <span class="g2-src">(DT 41)</span></td></tr>
+<tr><th scope="row">Moderate&ndash;severe AD after topicals</th><td>Dupilumab or tralokinumab <span class="g2-src">(DT 43, 45)</span></td></tr>
+<tr><th scope="row">Last, refractory</th><td>JAK inhibitors <span class="g2-src">(DT 46)</span></td></tr>
+</tbody>
+</table>
+<p class="g2-p">Mechanisms: see the pharmacology and medicinal chemistry guides above <span class="g2-src">(DT 35, 38, 41, 43)</span>.</p>
+</div>
+<div>
+<p class="g2-sub">Onset <span class="g2-src">(DT 52, 38)</span></p>
+<div class="g2-tiles">
+<div class="g2-tile"><span class="g2-tile-label">Topical steroid onset: starts working in</span><span class="g2-tile-num">24&ndash;48 h</span></div>
+<div class="g2-tile"><span class="g2-tile-label">TCI onset: starts working in</span><span class="g2-tile-num">1&ndash;8 weeks</span></div>
+</div>
+<p class="g2-sub">Length of treatment</p>
+<div class="g2-tiles">
+<div class="g2-tile"><span class="g2-tile-label">OTC hydrocortisone 1% BID: maximum length of treatment</span><span class="g2-tile-num">3&ndash;7 days</span><span class="g2-src">(DT 36)</span></div>
+<div class="g2-tile"><span class="g2-tile-label">OTC hydrocortisone 1% BID: seek help at</span><span class="g2-tile-num">7 days</span><span class="g2-src">(DT 36)</span></div>
+<div class="g2-tile"><span class="g2-tile-label">OTC hydrocortisone 1% BID: never past</span><span class="g2-tile-num">2 weeks</span><span class="g2-src">(DT 36)</span></div>
+<div class="g2-tile"><span class="g2-tile-label">TCI: reassess at</span><span class="g2-tile-num">6 weeks</span><span class="g2-src">(DT 40)</span></div>
+</div>
+</div>
+</div>
+<table class="g2-table g2-kv">
+<caption>Potency and vehicle</caption>
+<tbody>
+<tr><th scope="row">Potency</th><td>See Reference, &ldquo;Dr. Patel: topical corticosteroid potency&rdquo;.</td></tr>
+<tr><th scope="row">Vehicle</th><td>Ointment &gt; cream &gt; lotion &gt; solution &gt; gel &gt; spray <span class="g2-src">(DT 37)</span></td></tr>
+<tr><th scope="row">Face</th><td>Hydrocortisone 1% is the one steroid for the face <span class="g2-src">(DT 36; T@37425)</span></td></tr>
+<tr><th scope="row">Products</th><td><p class="g2-said"><span class="g2-k">Said in class</span>For AD, single-ingredient products only <span class="g2-src">(T@41713)</span></p></td></tr>
+<tr><th scope="row">Absorption</th><td>Topical steroid absorption varies with age, skin integrity, skin thickness and anatomic location <span class="g2-src">(DT 35)</span></td></tr>
+</tbody>
+</table>
+<div class="g2-btns"><button type="button" class="chip" data-jump="ref:ref-p5-tcs">Reference: steroid potency</button><button type="button" class="chip" data-jump="ref:ref-p5-drugs">Reference: AD drugs by line</button></div>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">4.</span> Counseling for a topical steroid <span class="g2-src">(DT 35, 52)</span></h5>
+<table class="g2-table g2-kv">
+<tbody>
+<tr><th scope="row">Hands</th><td>Wash hands before and after</td></tr>
+<tr><th scope="row">Where</th><td>Apply to a clean, dry area</td></tr>
+<tr><th scope="row">Emollient</th><td>Emollient within <b>3 minutes</b> after bathing while the skin is still damp</td></tr>
+<tr><th scope="row">How much</th><td>A thin layer rubbed in gently until it vanishes</td></tr>
+<tr><th scope="row">How often</th><td><b>1&ndash;2 times daily</b></td></tr>
+<tr><th scope="row">Storage</th><td>Store cool, dry, room temperature (not the bathroom, T@37049)</td></tr>
+<tr><th scope="row">After applying</th><td>Do not wrap, which raises absorption, and let it air dry <b>3&ndash;5 minutes</b> before clothing <span class="g2-src">(T@40748)</span></td></tr>
+<tr><th scope="row">Seasons</th><td>Lesions can worsen in winter and summer</td></tr>
+</tbody>
+</table>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">5.</span> Diaper dermatitis products <span class="g2-src">(DT 63&ndash;64)</span></h5>
+<div class="g2-two">
+<table class="g2-table g2-kv">
+<caption>Skin protectants (17 FDA-approved ingredients) <span class="g2-src">(DT 63)</span></caption>
+<tbody>
+<tr><th scope="row">Amount</th><td>Liberally at every change</td></tr>
+<tr><th scope="row">Old product</th><td>Old product removed gently</td></tr>
+<tr><th scope="row">Coverage</th><td>Red areas fully covered</td></tr>
+<tr><th scope="row">Duration</th><td>Continued after healing</td></tr>
+</tbody>
+</table>
+<table class="g2-table g2-stack">
+<caption>Ingredients <span class="g2-src">(DT 64)</span></caption>
+<thead><tr><th scope="col">Product</th><th scope="col">Strength</th><th scope="col">What it is</th></tr></thead>
+<tbody>
+<tr><th scope="row">Zinc oxide</th><td><span class="g2-lab">Strength</span><b>1&ndash;40%</b></td><td>The active ingredient (common, excellent, thick and tacky)</td></tr>
+<tr><th scope="row">Petrolatum</th><td><span class="g2-lab">Strength</span><b>30&ndash;100%</b></td><td>The ointment base</td></tr>
+<tr><th scope="row">A &amp; D Ointment</th><td></td><td>Has lanolin and petrolatum, no zinc oxide</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="gpoll"><b>Her polls (the 21-year-old)</b>
+<details class="g2-self"><summary>First-line maintenance <span class="g2-tap">Show answer</span></summary><p>Basic management + topical corticosteroid <span class="g2-src">(T@58910&ndash;59410)</span></p></details>
+<details class="g2-self"><summary>Prescription details <span class="g2-tap">Show answer</span></summary><p>Hydrocortisone 1%, thin layer BID for 3&ndash;7 days; start low, as he is not on a steroid now <span class="g2-src">(T@59799&ndash;60609)</span></p></details>
+</div>
 </section>
 
 <section class="gobj" id="gobj-p5-7">
 <h3>Dermatitis Therapeutics · Objective 7: follow-up</h3>
 <div class="gbar"><span>Objective (DT 8)</span><b>Provide follow-up recommendations</b><i>DT 33, 36, 48, 52, 66</i></div>
-<div class="gpt"><ul><li>Topical steroid for AD: improvement in 24&ndash;48 hours; refer if not better after 7 days; never past 2 weeks (DT 36, 52). Her poll answer: 7 days (T@68450).</li><li>Atrophy or infection on a topical steroid: discontinue and refer (DT 33).</li><li>Diaper dermatitis at 7 days: improved but not healed, continue until healed; not healed, not improved or worse, refer (DT 66). Her poll answer: 7 days (T@82496).</li><li>JAK inhibitors: specialty follow-up every 2 weeks (T@55363).</li></ul></div>
-<div class="gpt"><h5>Pharmacist role and access (DT 50, 53)</h5><ul><li>Improve adherence through education; therapy optimization and monitoring; recommend moisturizers and OTC products; patient-friendly education on the plan; accessible support (DT 50). The SCORAD score is the physician&rsquo;s to calculate (T@21052).</li><li>Barriers: high out-of-pocket costs, limited formularies, prior authorization and step therapy. A denied prior authorization goes to appeal and a peer-to-peer conversation; the PCP writes the statement (T@66410). Manufacturer patient assistance programs and grant foundations help patients with limited or no coverage (DT 53).</li></ul></div>
+<div class="gpt g2-block"><h5><span class="g2-num">1.</span> Follow-up</h5>
+<div class="g2-two">
+<div>
+<p class="g2-sub">Topical steroid for AD <span class="g2-src">(DT 36, 52)</span></p>
+<div class="g2-tiles">
+<div class="g2-tile"><span class="g2-tile-label">Topical steroid for AD: improvement in</span><span class="g2-tile-num">24&ndash;48 hours</span></div>
+<div class="g2-tile"><span class="g2-tile-label">Topical steroid for AD: refer if not better after</span><span class="g2-tile-num">7 days</span></div>
+<div class="g2-tile"><span class="g2-tile-label">Topical steroid for AD: never past</span><span class="g2-tile-num">2 weeks</span></div>
+</div>
+<p class="g2-said"><span class="g2-k">Said in class</span>Her poll answer: 7 days <span class="g2-src">(T@68450)</span></p>
+<p class="g2-p">Atrophy or infection on a topical steroid: <b>discontinue and refer</b> <span class="g2-src">(DT 33)</span>.</p>
+</div>
+<div>
+<table class="g2-table g2-kv">
+<caption>Diaper dermatitis at 7 days <span class="g2-src">(DT 66)</span></caption>
+<tbody>
+<tr><th scope="row">Improved but not healed</th><td>Continue until healed</td></tr>
+<tr><th scope="row">Not healed, not improved or worse</th><td><b>Refer</b></td></tr>
+</tbody>
+</table>
+<p class="g2-said"><span class="g2-k">Said in class</span>Her poll answer: 7 days <span class="g2-src">(T@82496)</span></p>
+<p class="g2-sub">JAK inhibitors</p>
+<p class="g2-said"><span class="g2-k">Said in class</span>Specialty follow-up every <b>2 weeks</b> <span class="g2-src">(T@55363)</span></p>
+</div>
+</div>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">2.</span> Pharmacist role and access <span class="g2-src">(DT 50, 53)</span></h5>
+<div class="g2-two">
+<div>
+<p class="g2-sub">Pharmacist role <span class="g2-src">(DT 50)</span></p>
+<ul>
+<li>Improve adherence through education</li>
+<li>Therapy optimization and monitoring</li>
+<li>Recommend moisturizers and OTC products</li>
+<li>Patient-friendly education on the plan</li>
+<li>Accessible support</li>
+</ul>
+<p class="g2-said"><span class="g2-k">Said in class</span>The SCORAD score is the physician&rsquo;s to calculate <span class="g2-src">(T@21052)</span></p>
+</div>
+<div>
+<p class="g2-sub">Access <span class="g2-src">(DT 53)</span></p>
+<ul>
+<li>Barriers: high out-of-pocket costs, limited formularies, prior authorization and step therapy</li>
+<li>Manufacturer patient assistance programs and grant foundations help patients with limited or no coverage</li>
+</ul>
+<p class="g2-said"><span class="g2-k">Said in class</span>A denied prior authorization goes to appeal and a peer-to-peer conversation; the PCP writes the statement <span class="g2-src">(T@66410)</span></p>
+</div>
+</div>
+</div>
 </section>
 
 <h2 class="gdeck" id="gdeck-p6">Acne Therapeutics (Dr. Patel, 11/10; Exam 2)</h2>
@@ -475,73 +912,309 @@ const GUIDE_HTML = `
 <section class="gobj" id="gobj-p6-1">
 <h3>Acne Therapeutics · Objective 1: classify the stage and severity of acne</h3>
 <div class="gbar"><span>Objective (AT 2)</span><b>Classify stages of acne</b><i>AT 5&ndash;8</i></div>
-<div class="gpt"><ul><li>Non-inflammatory: open comedone (blackhead), closed comedone (whitehead). Inflammatory: papule (raised, red, no pus), pustule (visible white pus), nodule or cyst (large, under the skin; worst stage) (AT 5&ndash;6; T@6156&ndash;7508).</li></ul></div>
-<table class="reftab"><thead><tr><th style="width:18%">Grade (AT 7&ndash;8)</th><th>Non-inflammatory</th><th>Inflammatory</th><th>Nodules; scarring</th></tr></thead><tbody>
-<tr><td><b>Mildly clear</b></td><td>Rare; no more than 1 small lesion</td><td>&mdash;</td><td>&mdash;</td></tr>
-<tr><td><b>Mild</b></td><td>Some</td><td>No more than a few papules and pustules</td><td>No nodules; minimal scarring</td></tr>
-<tr><td><b>Moderate</b></td><td>Many</td><td>Some</td><td>No more than one nodule; mild scarring possible</td></tr>
-<tr><td><b>Severe</b></td><td>Many</td><td>Many</td><td>A few nodules; moderate to extensive scarring</td></tr>
-</tbody></table>
-<div class="gpoll"><b>Her polls</b><ul><li>Case 1 (16-year-old, some open and closed comedones, no inflammation): mild acne (T@12560&ndash;14612).</li><li>Case 2 (cysts on cheek, back and shoulders): severe; &ldquo;is it no more than one cystic lesion or is it more than one?&rdquo; (T@68494&ndash;69094).</li></ul></div>
+<div class="gpt g2-block"><h5><span class="g2-num">1.</span> Stages: the lesions <span class="g2-src">(AT 5&ndash;6; T@6156&ndash;7508)</span></h5>
+<table class="g2-table g2-stack">
+<thead><tr><th scope="col">Lesion</th><th scope="col">Group</th><th scope="col">Description</th></tr></thead>
+<tbody>
+<tr><th scope="row">Open comedone</th><td>Non-inflammatory</td><td>Blackhead</td></tr>
+<tr><th scope="row">Closed comedone</th><td>Non-inflammatory</td><td>Whitehead</td></tr>
+<tr><th scope="row">Papule</th><td>Inflammatory</td><td>Raised, red, no pus</td></tr>
+<tr><th scope="row">Pustule</th><td>Inflammatory</td><td>Visible white pus</td></tr>
+<tr><th scope="row">Nodule or cyst</th><td>Inflammatory</td><td>Large, under the skin; worst stage</td></tr>
+</tbody>
+</table>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">2.</span> Severity: the grades <span class="g2-src">(AT 7&ndash;8)</span></h5>
+<table class="g2-table g2-stack">
+<thead><tr><th scope="col">Grade</th><th scope="col">Non-inflammatory</th><th scope="col">Inflammatory</th><th scope="col">Nodules; scarring</th></tr></thead>
+<tbody>
+<tr><th scope="row">Mildly clear</th><td><span class="g2-lab">Non-inflammatory</span>Rare; no more than 1 small lesion</td><td></td><td></td></tr>
+<tr><th scope="row">Mild</th><td><span class="g2-lab">Non-inflammatory</span>Some</td><td><span class="g2-lab">Inflammatory</span>No more than a few papules and pustules</td><td><span class="g2-lab">Nodules; scarring</span>No nodules; minimal scarring</td></tr>
+<tr><th scope="row">Moderate</th><td><span class="g2-lab">Non-inflammatory</span>Many</td><td><span class="g2-lab">Inflammatory</span>Some</td><td><span class="g2-lab">Nodules; scarring</span>No more than one nodule; mild scarring possible</td></tr>
+<tr><th scope="row">Severe</th><td><span class="g2-lab">Non-inflammatory</span>Many</td><td><span class="g2-lab">Inflammatory</span>Many</td><td><span class="g2-lab">Nodules; scarring</span>A few nodules; moderate to extensive scarring</td></tr>
+</tbody>
+</table>
+</div>
+<div class="gpoll"><b>Her polls</b>
+<details class="g2-self"><summary>Case 1 (16-year-old, some open and closed comedones, no inflammation) <span class="g2-tap">Show answer</span></summary><p>Mild acne <span class="g2-src">(T@12560&ndash;14612)</span></p></details>
+<details class="g2-self"><summary>Case 2 (cysts on cheek, back and shoulders) <span class="g2-tap">Show answer</span></summary><p>Severe; &ldquo;is it no more than one cystic lesion or is it more than one?&rdquo; <span class="g2-src">(T@68494&ndash;69094)</span></p></details>
+</div>
 </section>
 
 <section class="gobj" id="gobj-p6-2">
 <h3>Acne Therapeutics · Objective 2: is the patient a self-care candidate?</h3>
 <div class="gbar"><span>Objective (AT 2)</span><b>Determine if the patient is an appropriate self-care candidate</b><i>AT 9&ndash;11, 17&ndash;18</i></div>
-<div class="gpt"><ul><li>Exclusions for self-care (AT 18): severe acne, possible rosacea, exacerbating factors, comedogenic drugs: a straight referral to dermatology (T@19247&ndash;19941).</li><li>Drugs that cause or worsen acne (AT 10): corticosteroids, androgens, progesterone contraceptives; TCAs, lithium, antiepileptics, aripiprazole, SSRIs; vitamins B1, B6, B12; dactinomycin, cyclosporine, sirolimus; isoniazid, rifampin, ethionamide; iodine, bromine, chlorine.</li><li>Complications (AT 11): anxiety, depression, scarring; scarring the most common (T@11250).</li><li>No routine endocrine or microbiologic testing; exception: high suspicion of PCOS or another hormonal disorder (AT 17).</li></ul></div>
+<div class="gpt g2-block"><h5><span class="g2-num">1.</span> Exclusions for self-care <span class="g2-src">(AT 18)</span></h5>
+<ul>
+<li>Severe acne</li>
+<li>Possible rosacea</li>
+<li>Exacerbating factors</li>
+<li>Comedogenic drugs</li>
+</ul>
+<p class="g2-p">A straight referral to dermatology <span class="g2-src">(T@19247&ndash;19941)</span></p>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">2.</span> Drugs that cause or worsen acne <span class="g2-src">(AT 10)</span></h5>
+<ul>
+<li>Corticosteroids, androgens, progesterone contraceptives</li>
+<li>TCAs, lithium, antiepileptics, aripiprazole, SSRIs</li>
+<li>Vitamins B1, B6, B12</li>
+<li>Dactinomycin, cyclosporine, sirolimus</li>
+<li>Isoniazid, rifampin, ethionamide</li>
+<li>Iodine, bromine, chlorine</li>
+</ul>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">3.</span> Complications <span class="g2-src">(AT 11)</span></h5>
+<p class="g2-p">Anxiety, depression, scarring.</p>
+<p class="g2-said"><span class="g2-k">Said in class</span>Scarring the most common <span class="g2-src">(T@11250)</span></p>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">4.</span> Testing <span class="g2-src">(AT 17)</span></h5>
+<table class="g2-table g2-kv">
+<tbody>
+<tr><th scope="row">Routine</th><td>No routine endocrine or microbiologic testing</td></tr>
+<tr><th scope="row">Exception</th><td>High suspicion of PCOS or another hormonal disorder</td></tr>
+</tbody>
+</table>
+</div>
 </section>
 
 <section class="gobj" id="gobj-p6-3">
 <h3>Acne Therapeutics · Objective 3: treatment goals and the overall approach</h3>
 <div class="gbar"><span>Objective (AT 2)</span><b>Recommend appropriate non-pharmacologic and pharmacologic therapy</b><i>AT 3, 13, 47</i></div>
-<div class="gpt"><ul><li>Goals (AT 13): alleviate symptoms; reduce the number and severity of lesions; improve appearance; slow progression; limit duration and recurrence; prevent long-term scarring and hyperpigmentation. No cure (AT 3; T@11895).</li><li>Plan (AT 47): the smallest number of agents at the lowest possible dosages; topical before oral; taper over time, never stop abruptly (T@71629).</li></ul></div>
+<div class="gpt g2-block"><h5><span class="g2-num">1.</span> Goals <span class="g2-src">(AT 13)</span></h5>
+<ul>
+<li>Alleviate symptoms</li>
+<li>Reduce the number and severity of lesions</li>
+<li>Improve appearance</li>
+<li>Slow progression</li>
+<li>Limit duration and recurrence</li>
+<li>Prevent long-term scarring and hyperpigmentation</li>
+</ul>
+<p class="g2-p">No cure <span class="g2-src">(AT 3; T@11895)</span></p>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">2.</span> Plan <span class="g2-src">(AT 47; T@71629)</span></h5>
+<ul>
+<li>The smallest number of agents at the lowest possible dosages</li>
+<li>Topical before oral</li>
+<li>Taper over time, never stop abruptly</li>
+</ul>
+</div>
 </section>
 
 <section class="gobj" id="gobj-p6-4">
 <h3>Acne Therapeutics · Objective 4: non-drug counseling</h3>
 <div class="gbar"><span>Objective (AT 2)</span><b>Counsel patients on non-pharmacologic strategies</b><i>AT 19, 24, 43</i></div>
-<div class="gpt"><ul><li>Cleanse twice a day with a mild soap or non-soap cleanser; no abrasive products, devices or excessive cleansing; remove dirt and makeup with an oil-based cleanser before a water-based one (AT 19; T@20370, T@28136).</li><li>Vehicle by skin type (AT 24): oily to normal, gels, solutions, lotions; normal to dry, lotions and creams; ointments and bars not usually recommended.</li><li>Shaving (AT 43): electric or safety razor; soften the beard; shave lightly and infrequently with a sharp blade, in the direction of hair growth, each area once.</li></ul></div>
+<div class="gpt g2-block"><h5><span class="g2-num">1.</span> Cleansing <span class="g2-src">(AT 19; T@20370, T@28136)</span></h5>
+<table class="g2-table g2-kv">
+<tbody>
+<tr><th scope="row">How often</th><td>Cleanse twice a day with a mild soap or non-soap cleanser</td></tr>
+<tr><th scope="row">Avoid</th><td>No abrasive products, devices or excessive cleansing</td></tr>
+<tr><th scope="row">Order</th><td>Remove dirt and makeup with an oil-based cleanser before a water-based one</td></tr>
+</tbody>
+</table>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">2.</span> Vehicle by skin type <span class="g2-src">(AT 24)</span></h5>
+<table class="g2-table">
+<thead><tr><th scope="col">Skin type</th><th scope="col">Vehicle</th></tr></thead>
+<tbody>
+<tr><th scope="row">Oily to normal</th><td>Gels, solutions, lotions</td></tr>
+<tr><th scope="row">Normal to dry</th><td>Lotions and creams</td></tr>
+</tbody>
+</table>
+<p class="g2-p">Ointments and bars not usually recommended.</p>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">3.</span> Shaving <span class="g2-src">(AT 43)</span></h5>
+<table class="g2-table g2-kv">
+<tbody>
+<tr><th scope="row">Razor</th><td>Electric or safety razor</td></tr>
+<tr><th scope="row">Beard</th><td>Soften the beard</td></tr>
+<tr><th scope="row">How</th><td>Shave lightly and infrequently with a sharp blade, in the direction of hair growth, each area once</td></tr>
+</tbody>
+</table>
+</div>
 </section>
 
 <section class="gobj" id="gobj-p6-5">
 <h3>Acne Therapeutics · Objective 5: OTC and prescription-only products</h3>
 <div class="gbar"><span>Objective (AT 2)</span><b>Recognize non-prescription and prescription-only products</b><i>AT 22&ndash;33</i></div>
-<table class="reftab"><thead><tr><th style="width:24%">OTC agent (AT 23)</th><th>Bactericidal</th><th>Keratolytic</th><th>Comedolytic</th></tr></thead><tbody>
-<tr><td><b>Benzoyl peroxide</b></td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
-<tr><td><b>Topical retinoid</b></td><td>No</td><td>Yes</td><td>Yes</td></tr>
-<tr><td><b>Alpha and beta hydroxy acids</b></td><td>No</td><td>Yes</td><td>Yes</td></tr>
-<tr><td><b>Sulfur</b></td><td>No</td><td>Yes</td><td>Yes</td></tr>
-<tr><td><b>Resorcinol</b></td><td>Yes (and antifungal)</td><td>Yes</td><td>No</td></tr>
-</tbody></table>
-<div class="gpt"><ul><li>&ldquo;Benzoyl peroxide targets all three ... So that means that benzoyl peroxide will be our first-line agent&rdquo; (T@24800). See Reference, &ldquo;Dr. Patel: acne agents&rdquo;.</li></ul></div>
+<div class="gpt g2-block"><h5><span class="g2-num">1.</span> OTC agents <span class="g2-src">(AT 23)</span></h5>
+<table class="g2-table g2-stack">
+<thead><tr><th scope="col">OTC agent</th><th scope="col">Bactericidal</th><th scope="col">Keratolytic</th><th scope="col">Comedolytic</th></tr></thead>
+<tbody>
+<tr><th scope="row">Benzoyl peroxide</th><td><span class="g2-lab">Bactericidal</span>Yes</td><td><span class="g2-lab">Keratolytic</span>Yes</td><td><span class="g2-lab">Comedolytic</span>Yes</td></tr>
+<tr><th scope="row">Topical retinoid</th><td><span class="g2-lab">Bactericidal</span>No</td><td><span class="g2-lab">Keratolytic</span>Yes</td><td><span class="g2-lab">Comedolytic</span>Yes</td></tr>
+<tr><th scope="row">Alpha and beta hydroxy acids</th><td><span class="g2-lab">Bactericidal</span>No</td><td><span class="g2-lab">Keratolytic</span>Yes</td><td><span class="g2-lab">Comedolytic</span>Yes</td></tr>
+<tr><th scope="row">Sulfur</th><td><span class="g2-lab">Bactericidal</span>No</td><td><span class="g2-lab">Keratolytic</span>Yes</td><td><span class="g2-lab">Comedolytic</span>Yes</td></tr>
+<tr><th scope="row">Resorcinol</th><td><span class="g2-lab">Bactericidal</span>Yes (and antifungal)</td><td><span class="g2-lab">Keratolytic</span>Yes</td><td><span class="g2-lab">Comedolytic</span>No</td></tr>
+</tbody>
+</table>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">2.</span> First-line agent</h5>
+<p class="g2-said"><span class="g2-k">Said in class</span>&ldquo;Benzoyl peroxide targets all three ... So that means that benzoyl peroxide will be our first-line agent&rdquo; <span class="g2-src">(T@24800)</span></p>
+<p class="g2-p">See Reference, &ldquo;Dr. Patel: acne agents&rdquo;.</p>
+</div>
 </section>
 
 <section class="gobj" id="gobj-p6-6">
 <h3>Acne Therapeutics · Objective 6: guidelines, algorithm and first-line agents</h3>
 <div class="gbar"><span>Objective (AT 2)</span><b>Apply guidelines and algorithms; recognize first-line agents</b><i>AT 20, 25, 40</i></div>
-<div class="gpt"><ul><li>Step by step: one agent, then the other, then combinations of two, then three; topical before oral; an oral antibiotic after the topical combinations; isotretinoin absolute last line (T@54687, T@57819, T@59132).</li><li>Topical antibiotics are not used alone: always with BP, to reduce resistance (AT 25, 31; T@28783, T@36940).</li></ul></div>
-<div class="gpoll"><b>Her polls</b><ul><li>Case 1 first line: benzoyl peroxide BID to affected areas; &ldquo;keyword in this question? First line&rdquo; (T@66568).</li><li>Case 2 next line after 8 months of doxycycline + retinoid + BP, irregular periods: combined oral contraceptive over spironolactone (T@69094&ndash;69647).</li></ul></div>
-<div style="display:flex;flex-wrap:wrap;gap:7px;margin:8px 0"><button type="button" class="chip" data-jump="ref:ref-p6-alg">Reference: acne algorithm by severity</button></div>
+<div class="gpt g2-block"><h5><span class="g2-num">1.</span> Step by step <span class="g2-src">(T@54687, T@57819, T@59132)</span></h5>
+<div class="g2-ladder">
+<div class="g2-rung"><div class="g2-sev">First</div><div class="g2-cells">
+<div class="g2-cell"><span class="g2-k">In this order</span><ul>
+<li>One agent</li>
+<li>Then the other</li>
+<li>Then combinations of two</li>
+<li>Then three</li>
+</ul></div>
+</div></div>
+<div class="g2-rung g2-s2"><div class="g2-sev">After the topical combinations</div><div class="g2-cells">
+<div class="g2-cell"><span class="g2-k">Next</span><p>An oral antibiotic</p></div>
+</div></div>
+<div class="g2-rung g2-s3"><div class="g2-sev">Absolute last line</div><div class="g2-cells">
+<div class="g2-cell"><span class="g2-k">Last</span><p>Isotretinoin</p></div>
+</div></div>
+</div>
+<div class="g2-note"><span class="g2-k">Order</span><p>Topical before oral.</p></div>
+<div class="g2-btns"><button type="button" class="chip" data-jump="ref:ref-p6-alg">Reference: acne algorithm by severity</button></div>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">2.</span> Topical antibiotics <span class="g2-src">(AT 25, 31; T@28783, T@36940)</span></h5>
+<p class="g2-p">Topical antibiotics are not used alone: always with BP, to reduce resistance.</p>
+</div>
+<div class="gpoll"><b>Her polls</b>
+<details class="g2-self"><summary>Case 1 first line <span class="g2-tap">Show answer</span></summary><p>Benzoyl peroxide BID to affected areas; &ldquo;keyword in this question? First line&rdquo; <span class="g2-src">(T@66568)</span></p></details>
+<details class="g2-self"><summary>Case 2 next line after 8 months of doxycycline + retinoid + BP, irregular periods <span class="g2-tap">Show answer</span></summary><p>Combined oral contraceptive over spironolactone <span class="g2-src">(T@69094&ndash;69647)</span></p></details>
+</div>
 </section>
 
 <section class="gobj" id="gobj-p6-7">
 <h3>Acne Therapeutics · Objective 7: topical product by symptoms</h3>
 <div class="gbar"><span>Objective (AT 2)</span><b>Recommend appropriate topical products based on patient symptoms</b><i>AT 23&ndash;31</i></div>
-<div class="gpt"><ul><li>Benzoyl peroxide 2.5&ndash;10% OTC, 1&ndash;2 times daily; irritation settles in 1&ndash;2 weeks; drying, photosensitivity, bleaches hair and clothing (AT 23, 26).</li><li>Adapalene (Differin) 0.1% OTC: at night; BP in the morning; not with sulfur, resorcinol, salicylic acid or vitamin C; moisturizer and sunscreen; over 12 years (AT 27; T@30492&ndash;31851).</li><li>Salicylic acid: once or twice daily as a cleanser or gel; maximum effect 4&ndash;6 weeks; limited efficacy data (AT 29). AHAs: trial form; 2&ndash;4 weeks between peels; sunscreen (AT 28). Tea tree oil in a lotion or gel vehicle (AT 30).</li><li>Prescription (AT 31): topical antibiotics (wait 30 minutes to shave or apply cosmetics); azelaic acid for post-inflammatory dyspigmentation; dapsone (G6PD; CBC, reticulocytes).</li></ul></div>
+<div class="gpt g2-block"><h5><span class="g2-num">1.</span> Benzoyl peroxide <span class="g2-src">(AT 23, 26)</span></h5>
+<table class="g2-table g2-kv">
+<tbody>
+<tr><th scope="row">Strength</th><td><b>2.5&ndash;10%</b> OTC</td></tr>
+<tr><th scope="row">How often</th><td><b>1&ndash;2 times daily</b></td></tr>
+<tr><th scope="row">Irritation</th><td>Irritation settles in <b>1&ndash;2 weeks</b></td></tr>
+<tr><th scope="row">Adverse effects</th><td>Drying, photosensitivity, bleaches hair and clothing</td></tr>
+</tbody>
+</table>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">2.</span> Adapalene (Differin) 0.1% OTC <span class="g2-src">(AT 27; T@30492&ndash;31851)</span></h5>
+<table class="g2-table g2-kv">
+<tbody>
+<tr><th scope="row">When</th><td>At night; BP in the morning</td></tr>
+<tr><th scope="row">Not with</th><td>Not with sulfur, resorcinol, salicylic acid or vitamin C</td></tr>
+<tr><th scope="row">Also use</th><td>Moisturizer and sunscreen</td></tr>
+<tr><th scope="row">Age</th><td>Over <b>12 years</b></td></tr>
+</tbody>
+</table>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">3.</span> Salicylic acid, AHAs, tea tree oil</h5>
+<table class="g2-table g2-kv">
+<tbody>
+<tr><th scope="row">Salicylic acid</th><td>Once or twice daily as a cleanser or gel; maximum effect <b>4&ndash;6 weeks</b>; limited efficacy data <span class="g2-src">(AT 29)</span></td></tr>
+<tr><th scope="row">AHAs</th><td>Trial form; <b>2&ndash;4 weeks</b> between peels; sunscreen <span class="g2-src">(AT 28)</span></td></tr>
+<tr><th scope="row">Tea tree oil</th><td>In a lotion or gel vehicle <span class="g2-src">(AT 30)</span></td></tr>
+</tbody>
+</table>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">4.</span> Prescription <span class="g2-src">(AT 31)</span></h5>
+<table class="g2-table g2-kv">
+<tbody>
+<tr><th scope="row">Topical antibiotics</th><td>Wait <b>30 minutes</b> to shave or apply cosmetics</td></tr>
+<tr><th scope="row">Azelaic acid</th><td>For post-inflammatory dyspigmentation</td></tr>
+<tr><th scope="row">Dapsone</th><td>G6PD; CBC, reticulocytes</td></tr>
+</tbody>
+</table>
+</div>
 </section>
 
 <section class="gobj" id="gobj-p6-8">
 <h3>Acne Therapeutics · Objective 8: counseling on drug and non-drug therapy</h3>
 <div class="gbar"><span>Objective (AT 2)</span><b>Counseling points for non-drug and drug therapies</b><i>AT 33&ndash;38, 41&ndash;43</i></div>
-<div class="gpt"><ul><li>Topicals (AT 42): wash, pat dry, wait 20&ndash;30 minutes; a thin layer in the evening, avoiding eyes, ears, nostrils, mouth; if irritation, decrease frequency.</li><li>Orals (AT 42): swallow whole with a full glass of water; may take after eating; caution driving at night; sunscreen.</li><li>Tetracyclines over 12 years only (tooth discoloration), photosensitivity, avoid in pregnancy; re-evaluate at 3&ndash;4 months (AT 33; T@39928). TMP/SMX only with macrolide and tetracycline allergy, not in sulfur allergy.</li><li>COC: female wanting contraception; over 14 or 2 years past menarche; non-smoker under 35; VTE risk (AT 34&ndash;36).</li><li>Isotretinoin and iPledge: see Reference, &ldquo;Dr. Patel: isotretinoin and iPledge&rdquo;.</li></ul></div>
-<div class="gpoll"><b>Her polls</b><ul><li>Best COC candidate: the 22-year-old who does not want to be pregnant (not DVT, not a 35-year-old smoker, not 12) (T@45257&ndash;46636).</li><li>NOT an isotretinoin counseling point: dairy (T@69647&ndash;70327).</li></ul></div>
-<div style="display:flex;flex-wrap:wrap;gap:7px;margin:8px 0"><button type="button" class="chip" data-jump="ref:ref-p6-ipledge">Reference: isotretinoin and iPledge</button></div>
+<div class="gpt g2-block"><h5><span class="g2-num">1.</span> Topicals <span class="g2-src">(AT 42)</span></h5>
+<table class="g2-table g2-kv">
+<tbody>
+<tr><th scope="row">Before</th><td>Wash, pat dry, wait <b>20&ndash;30 minutes</b></td></tr>
+<tr><th scope="row">Apply</th><td>A thin layer in the evening, avoiding eyes, ears, nostrils, mouth</td></tr>
+<tr><th scope="row">If irritation</th><td>Decrease frequency</td></tr>
+</tbody>
+</table>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">2.</span> Orals <span class="g2-src">(AT 42)</span></h5>
+<ul>
+<li>Swallow whole with a full glass of water</li>
+<li>May take after eating</li>
+<li>Caution driving at night</li>
+<li>Sunscreen</li>
+</ul>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">3.</span> Tetracyclines and TMP/SMX</h5>
+<table class="g2-table g2-kv">
+<caption>Tetracyclines <span class="g2-src">(AT 33; T@39928)</span></caption>
+<tbody>
+<tr><th scope="row">Age</th><td>Over <b>12 years</b> only (tooth discoloration)</td></tr>
+<tr><th scope="row">Adverse effect</th><td>Photosensitivity</td></tr>
+<tr><th scope="row">Pregnancy</th><td>Avoid in pregnancy</td></tr>
+<tr><th scope="row">Re-evaluate</th><td>Re-evaluate at <b>3&ndash;4 months</b></td></tr>
+</tbody>
+</table>
+<p class="g2-p">TMP/SMX only with macrolide and tetracycline allergy, not in sulfur allergy.</p>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">4.</span> COC <span class="g2-src">(AT 34&ndash;36)</span></h5>
+<ul>
+<li>Female wanting contraception</li>
+<li>Over 14 or 2 years past menarche</li>
+<li>Non-smoker under 35</li>
+<li>VTE risk</li>
+</ul>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">5.</span> Isotretinoin and iPledge</h5>
+<p class="g2-p">See Reference, &ldquo;Dr. Patel: isotretinoin and iPledge&rdquo;.</p>
+<div class="g2-btns"><button type="button" class="chip" data-jump="ref:ref-p6-ipledge">Reference: isotretinoin and iPledge</button></div>
+</div>
+<div class="gpoll"><b>Her polls</b>
+<details class="g2-self"><summary>Best COC candidate <span class="g2-tap">Show answer</span></summary><p>The 22-year-old who does not want to be pregnant (not DVT, not a 35-year-old smoker, not 12) <span class="g2-src">(T@45257&ndash;46636)</span></p></details>
+<details class="g2-self"><summary>NOT an isotretinoin counseling point <span class="g2-tap">Show answer</span></summary><p>Dairy <span class="g2-src">(T@69647&ndash;70327)</span></p></details>
+</div>
 </section>
 
 <section class="gobj" id="gobj-p6-9">
 <h3>Acne Therapeutics · Objective 9: side effects, expectations, monitoring</h3>
 <div class="gbar"><span>Objective (AT 2)</span><b>Side effects, expectations of treatment, education</b><i>AT 37&ndash;38, 41, 44, 48</i></div>
-<div class="gpt"><ul><li>8 weeks or more to see visible benefits (AT 41). Lesion count down 10&ndash;25% within 4&ndash;8 weeks, &gt;50% within 2&ndash;4 months; comedones resolve by 3&ndash;4 months; patient monitors daily, pharmacist every 4&ndash;8 weeks (AT 44).</li><li>No response (AT 48): check adherence and use; change the vehicle to suit the skin type; avoid overuse of cleansers.</li></ul></div>
+<div class="gpt g2-block"><h5><span class="g2-num">1.</span> Expectations and monitoring</h5>
+<div class="g2-tiles">
+<div class="g2-tile"><span class="g2-tile-label">Time to see visible benefits</span><span class="g2-tile-num">8 weeks or more</span><span class="g2-src">(AT 41)</span></div>
+</div>
+<p class="g2-sub">Response and monitoring <span class="g2-src">(AT 44)</span></p>
+<div class="g2-two">
+<div>
+<table class="g2-table">
+<thead><tr><th scope="col">Expectation</th><th scope="col">When</th></tr></thead>
+<tbody>
+<tr><td>Lesion count down <b>10&ndash;25%</b></td><td>Within 4&ndash;8 weeks</td></tr>
+<tr><td>Lesion count down <b>&gt;50%</b></td><td>Within 2&ndash;4 months</td></tr>
+<tr><td>Comedones resolve</td><td>By 3&ndash;4 months</td></tr>
+</tbody>
+</table>
+</div>
+<div>
+<table class="g2-table g2-kv">
+<tbody>
+<tr><th scope="row">Patient</th><td>Patient monitors daily</td></tr>
+<tr><th scope="row">Pharmacist</th><td>Pharmacist every <b>4&ndash;8 weeks</b></td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">2.</span> No response <span class="g2-src">(AT 48)</span></h5>
+<ul>
+<li>Check adherence and use</li>
+<li>Change the vehicle to suit the skin type</li>
+<li>Avoid overuse of cleansers</li>
+</ul>
+</div>
 </section>
 
 <h2 class="gdeck" id="gdeck-p7">Scaly Dermatoses Therapeutics (Dr. Patel, 11/10&ndash;11/11; Exam 2)</h2>
@@ -551,53 +1224,255 @@ const GUIDE_HTML = `
 <section class="gobj" id="gobj-p7-1">
 <h3>Scaly Dermatoses · Objective 1: the patient interview and care process</h3>
 <div class="gbar"><span>Objective (SD 2)</span><b>Perform the components of the Patient-Centered Care / STEPS process in the patient interview for dermatologic conditions</b><i>SD 29&ndash;30, 48</i></div>
-<div class="gpt"><ul><li>Collect, assess, plan, implement, follow-up (monitor and evaluate) around patient-centered care (SD 29).</li><li>Factors in choosing psoriasis therapy (SD 30): age and sex, socioeconomic status, severity, location of lesions, past and current treatment, comorbidities. &ldquo;Age is huge&rdquo; (T@9650 11/11).</li></ul></div>
+<div class="gpt g2-block"><h5><span class="g2-num">1.</span> The care process <span class="g2-src">(SD 29)</span></h5>
+<p class="g2-p">Collect, assess, plan, implement, follow-up (monitor and evaluate) around patient-centered care.</p>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">2.</span> Factors in choosing psoriasis therapy <span class="g2-src">(SD 30)</span></h5>
+<ul>
+<li>Age and sex</li>
+<li>Socioeconomic status</li>
+<li>Severity</li>
+<li>Location of lesions</li>
+<li>Past and current treatment</li>
+<li>Comorbidities</li>
+</ul>
+<p class="g2-said"><span class="g2-k">Said in class</span>&ldquo;Age is huge&rdquo; <span class="g2-src">(T@9650 11/11)</span></p>
+</div>
 </section>
 
 <section class="gobj" id="gobj-p7-2">
 <h3>Scaly Dermatoses · Objective 2: dandruff, seborrheic dermatitis or psoriasis?</h3>
 <div class="gbar"><span>Objective (SD 2)</span><b>Determine if the patient has rosacea, psoriasis, psoriatic arthritis, seborrhea or dandruff by typical signs and symptoms and patient history</b><i>SD 6, 8, 11&ndash;13, 21&ndash;27, 31</i></div>
-<table class="reftab"><thead><tr><th style="width:18%">SD 6</th><th>Dandruff</th><th>Seborrheic dermatitis</th><th>Psoriasis</th></tr></thead><tbody>
-<tr><td><b>Location</b></td><td>Scalp</td><td>Scalp, face, trunk</td><td>Scalp, elbows, knees, trunk, lower extremities</td></tr>
-<tr><td><b>Exacerbating factors</b></td><td>Generally stable; dry climate, cold, stress</td><td>Immunosuppression, neurologic conditions, environment, stress</td><td>Environment, infection, medications, stress, alcohol, tobacco</td></tr>
-<tr><td><b>Appearance</b></td><td>Thin, white or grey flakes</td><td>Macules, patches, thin plaques of yellow, oily scales on red skin</td><td>Discrete symmetrical red plaques, sharp borders; silvery white scales, bleeding points</td></tr>
-<tr><td><b>Inflammation; hyperplasia</b></td><td>Absent; absent</td><td>Present; present</td><td>Present; present</td></tr>
-<tr><td><b>Turnover</b></td><td>Slowest</td><td>Second fastest</td><td>Fastest</td></tr>
-</tbody></table>
-<div class="gpt"><ul><li>Dandruff: Malassezia; non-inflammatory, the mild inflammation is secondary to scratching; puberty onset (SD 8; T@84375 11/10). Seborrheic dermatitis: Malassezia; infants (cradle cap, scalp only, up to 30 months) and adults (yellow greasy scales on head, ears, face; men &gt; women) (SD 11&ndash;12).</li><li>Psoriasis (SD 21, 26): 3% of the US; peaks at 20&ndash;30 and 50&ndash;60 years; no gender preference; plaque type &gt;80%; plaques red-violet, at least 0.5 cm, well demarcated, silver flaking scales; pruritus in &gt;50%.</li><li>Severity by BSA (SD 31): mild &le; 5%; moderate &ge; 8%; severe &ge; 10% (&ldquo;corrected to 10% ... follow this slide&rdquo;, T@10484 11/11).</li></ul></div>
-<div class="gpoll"><b>Her polls</b><ul><li>Dandruff case: Malassezia; mild presentation; non-medicated shampoo (T@81752, T@82442 11/10).</li><li>Adult and infant cases: seborrheic dermatitis (T@94640, T@95306 11/10).</li><li>Psoriasis case, BSA 7%: mild to moderate psoriasis; &ldquo;like a 9%&rdquo; would be moderate to severe (T@34825&ndash;35074 11/11).</li></ul></div>
+<div class="gpt g2-block"><h5><span class="g2-num">1.</span> The three conditions compared <span class="g2-src">(SD 6)</span></h5>
+<table class="g2-table g2-stack">
+<thead><tr><th scope="col">Feature</th><th scope="col">Dandruff</th><th scope="col">Seborrheic dermatitis</th><th scope="col">Psoriasis</th></tr></thead>
+<tbody>
+<tr><th scope="row">Location</th><td><span class="g2-lab">Dandruff</span>Scalp</td><td><span class="g2-lab">Seborrheic dermatitis</span>Scalp, face, trunk</td><td><span class="g2-lab">Psoriasis</span>Scalp, elbows, knees, trunk, lower extremities</td></tr>
+<tr><th scope="row">Exacerbating factors</th><td><span class="g2-lab">Dandruff</span>Generally stable; dry climate, cold, stress</td><td><span class="g2-lab">Seborrheic dermatitis</span>Immunosuppression, neurologic conditions, environment, stress</td><td><span class="g2-lab">Psoriasis</span>Environment, infection, medications, stress, alcohol, tobacco</td></tr>
+<tr><th scope="row">Appearance</th><td><span class="g2-lab">Dandruff</span>Thin, white or grey flakes</td><td><span class="g2-lab">Seborrheic dermatitis</span>Macules, patches, thin plaques of yellow, oily scales on red skin</td><td><span class="g2-lab">Psoriasis</span>Discrete symmetrical red plaques, sharp borders; silvery white scales, bleeding points</td></tr>
+<tr><th scope="row">Inflammation; hyperplasia</th><td><span class="g2-lab">Dandruff</span>Absent; absent</td><td><span class="g2-lab">Seborrheic dermatitis</span>Present; present</td><td><span class="g2-lab">Psoriasis</span>Present; present</td></tr>
+<tr><th scope="row">Turnover</th><td><span class="g2-lab">Dandruff</span>Slowest</td><td><span class="g2-lab">Seborrheic dermatitis</span>Second fastest</td><td><span class="g2-lab">Psoriasis</span>Fastest</td></tr>
+</tbody>
+</table>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">2.</span> Dandruff and seborrheic dermatitis: cause and who gets it</h5>
+<div class="g2-two">
+<div>
+<table class="g2-table g2-kv">
+<caption>Dandruff <span class="g2-src">(SD 8; T@84375 11/10)</span></caption>
+<tbody>
+<tr><th scope="row">Cause</th><td>Malassezia</td></tr>
+<tr><th scope="row">Inflammation</th><td>Non-inflammatory, the mild inflammation is secondary to scratching</td></tr>
+<tr><th scope="row">Onset</th><td>Puberty onset</td></tr>
+</tbody>
+</table>
+</div>
+<div>
+<table class="g2-table g2-kv">
+<caption>Seborrheic dermatitis <span class="g2-src">(SD 11&ndash;12)</span></caption>
+<tbody>
+<tr><th scope="row">Cause</th><td>Malassezia</td></tr>
+<tr><th scope="row">Infants</th><td>Cradle cap, scalp only, up to <b>30 months</b></td></tr>
+<tr><th scope="row">Adults</th><td>Yellow greasy scales on head, ears, face; men &gt; women</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">3.</span> Psoriasis <span class="g2-src">(SD 21, 26)</span></h5>
+<table class="g2-table g2-kv">
+<tbody>
+<tr><th scope="row">How common</th><td><b>3%</b> of the US</td></tr>
+<tr><th scope="row">Age</th><td>Peaks at <b>20&ndash;30</b> and <b>50&ndash;60 years</b></td></tr>
+<tr><th scope="row">Sex</th><td>No gender preference</td></tr>
+<tr><th scope="row">Type</th><td>Plaque type <b>&gt;80%</b></td></tr>
+<tr><th scope="row">Plaques</th><td>Plaques red-violet, at least <b>0.5 cm</b>, well demarcated, silver flaking scales</td></tr>
+<tr><th scope="row">Itch</th><td>Pruritus in <b>&gt;50%</b></td></tr>
+</tbody>
+</table>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">4.</span> Severity by BSA <span class="g2-src">(SD 31)</span></h5>
+<table class="g2-table">
+<thead><tr><th scope="col">Severity</th><th scope="col">BSA</th></tr></thead>
+<tbody>
+<tr><th scope="row">Mild</th><td><b>&le; 5%</b></td></tr>
+<tr><th scope="row">Moderate</th><td><b>&ge; 8%</b></td></tr>
+<tr><th scope="row">Severe</th><td><b>&ge; 10%</b> (&ldquo;corrected to 10% ... follow this slide&rdquo;, T@10484 11/11)</td></tr>
+</tbody>
+</table>
+</div>
+<div class="gpoll"><b>Her polls</b>
+<details class="g2-self"><summary>Dandruff case <span class="g2-tap">Show answer</span></summary><p>Malassezia; mild presentation; non-medicated shampoo <span class="g2-src">(T@81752, T@82442 11/10)</span></p></details>
+<details class="g2-self"><summary>Adult and infant cases <span class="g2-tap">Show answer</span></summary><p>Seborrheic dermatitis <span class="g2-src">(T@94640, T@95306 11/10)</span></p></details>
+<details class="g2-self"><summary>Psoriasis case, BSA 7% <span class="g2-tap">Show answer</span></summary><p>Mild to moderate psoriasis; &ldquo;like a 9%&rdquo; would be moderate to severe <span class="g2-src">(T@34825&ndash;35074 11/11)</span></p></details>
+</div>
 </section>
 
 <section class="gobj" id="gobj-p7-3">
 <h3>Scaly Dermatoses · Objective 3: is the patient a self-care candidate?</h3>
 <div class="gbar"><span>Objective (SD 2)</span><b>Determine if the patient is an appropriate self-care candidate</b><i>SD 9, 16, 18, 51</i></div>
-<div class="gpt"><ul><li>Dandruff and adult seborrheic dermatitis: OTC shampoos; seborrheic dermatitis that worsens or lasts longer than 7 days: consult a health care provider (SD 16; T@89612 11/10).</li><li>Infants: no ketoconazole, no corticosteroids (SD 18; T@95994 11/10).</li><li>Mild to moderate scaly dermatoses can often be managed with topical non-prescription products (SD 51). Systemic and biologic psoriasis therapy is prescribed and often specialty (SD 40, 47).</li></ul></div>
+<div class="gpt g2-block"><h5><span class="g2-num">1.</span> Dandruff and adult seborrheic dermatitis <span class="g2-src">(SD 16; T@89612 11/10)</span></h5>
+<table class="g2-table g2-kv">
+<tbody>
+<tr><th scope="row">Self-care</th><td>OTC shampoos</td></tr>
+<tr><th scope="row">Refer</th><td>Seborrheic dermatitis that worsens or lasts longer than <b>7 days</b>: consult a health care provider</td></tr>
+</tbody>
+</table>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">2.</span> Infants <span class="g2-src">(SD 18; T@95994 11/10)</span></h5>
+<ul>
+<li>No ketoconazole</li>
+<li>No corticosteroids</li>
+</ul>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">3.</span> Non-prescription or prescribed</h5>
+<table class="g2-table g2-kv">
+<tbody>
+<tr><th scope="row">Non-prescription</th><td>Mild to moderate scaly dermatoses can often be managed with topical non-prescription products <span class="g2-src">(SD 51)</span></td></tr>
+<tr><th scope="row">Prescribed</th><td>Systemic and biologic psoriasis therapy is prescribed and often specialty <span class="g2-src">(SD 40, 47)</span></td></tr>
+</tbody>
+</table>
+</div>
 </section>
 
 <section class="gobj" id="gobj-p7-4">
 <h3>Scaly Dermatoses · Objective 4: treatment goals</h3>
 <div class="gbar"><span>Objective (SD 2)</span><b>List treatment goals</b><i>SD 9, 14, 28</i></div>
-<div class="gpt"><ul><li>Dandruff (SD 9): reduce epidermal turnover and Malassezia; minimize visible scaling and itching.</li><li>Psoriasis (SD 28): minimize plaques and scales; alleviate pruritus; reduce flare-ups; treat associated conditions (hypertension, dyslipidemia, diabetes, depression); screen lifestyle factors (stress, smoking, obesity); counsel; cost-effective therapy; avoid adverse effects; quality of life.</li></ul></div>
+<div class="gpt g2-block"><h5><span class="g2-num">1.</span> Dandruff <span class="g2-src">(SD 9)</span></h5>
+<ul>
+<li>Reduce epidermal turnover and Malassezia</li>
+<li>Minimize visible scaling and itching</li>
+</ul>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">2.</span> Psoriasis <span class="g2-src">(SD 28)</span></h5>
+<ul>
+<li>Minimize plaques and scales</li>
+<li>Alleviate pruritus</li>
+<li>Reduce flare-ups</li>
+<li>Treat associated conditions (hypertension, dyslipidemia, diabetes, depression)</li>
+<li>Screen lifestyle factors (stress, smoking, obesity)</li>
+<li>Counsel</li>
+<li>Cost-effective therapy</li>
+<li>Avoid adverse effects</li>
+<li>Quality of life</li>
+</ul>
+</div>
 </section>
 
 <section class="gobj" id="gobj-p7-5">
 <h3>Scaly Dermatoses · Objective 5: non-drug therapy</h3>
 <div class="gbar"><span>Objective (SD 2)</span><b>Recommend appropriate non-drug therapy</b><i>SD 15, 18, 33&ndash;34</i></div>
-<div class="gpt"><ul><li>Seborrheic dermatitis scale softening: mineral or olive oil, or a cream with salicylic acid or sulfur; dishwashing liquid for tough scale (SD 15). Infants: massage with baby or vegetable oil, non-medicated shampoo, soft bristle brush; face, mild soap and emollient (SD 18).</li><li>Psoriasis, every patient (SD 33&ndash;34): reduce stress, regular exercise, weight management (BMI 18.5&ndash;24.9), moderate alcohol, stop smoking; moisturizers, oatmeal baths, sunscreen SPF 30+ with UVA protection (T@11707&ndash;12577 11/11).</li></ul></div>
+<div class="gpt g2-block"><h5><span class="g2-num">1.</span> Seborrheic dermatitis scale softening <span class="g2-src">(SD 15)</span></h5>
+<ul>
+<li>Mineral or olive oil, or a cream with salicylic acid or sulfur</li>
+<li>Dishwashing liquid for tough scale</li>
+</ul>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">2.</span> Infants <span class="g2-src">(SD 18)</span></h5>
+<ul>
+<li>Massage with baby or vegetable oil, non-medicated shampoo, soft bristle brush</li>
+<li>Face: mild soap and emollient</li>
+</ul>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">3.</span> Psoriasis, every patient <span class="g2-src">(SD 33&ndash;34; T@11707&ndash;12577 11/11)</span></h5>
+<table class="g2-table g2-kv">
+<tbody>
+<tr><th scope="row">Lifestyle</th><td>Reduce stress, regular exercise, weight management (BMI <b>18.5&ndash;24.9</b>), moderate alcohol, stop smoking</td></tr>
+<tr><th scope="row">Skin care</th><td>Moisturizers, oatmeal baths, sunscreen <b>SPF 30+</b> with UVA protection</td></tr>
+</tbody>
+</table>
+</div>
 </section>
 
 <section class="gobj" id="gobj-p7-6">
 <h3>Scaly Dermatoses · Objective 6: recommend the best treatment</h3>
 <div class="gbar"><span>Objective (SD 3)</span><b>Dosing frequency and maximum days; topical vs oral; onset; length of treatment; adverse effects; contraindications and interactions</b><i>SD 4, 7, 9, 16&ndash;18, 35&ndash;45</i></div>
-<div class="gpt"><ul><li>OTC chart (SD 7): hydrocortisone 1% not for dandruff; sulfur not for psoriasis.</li><li>Shampoo schedules: see Reference, &ldquo;Dr. Patel: dandruff and seborrheic dermatitis&rdquo;.</li><li>Psoriasis, mild to moderate (SD 35): topical agents first; systemic agent last line; non-drug care for all. Moderate to severe (SD 37): systemic agent (most likely methotrexate) &plusmn; topical; then a more potent systemic or a biologic; biologics last line (T@14941&ndash;15451 11/11).</li><li>Topicals (SD 36): corticosteroids the most effective, 2&ndash;4 times daily, &le; 4 weeks; calcipotriene; tazarotene, adapalene at bedtime; anthralin &le; 2 hours on thick plaques; coal tar overnight; salicylic acid shampoo for the scalp; pimecrolimus for intertriginous areas.</li></ul></div>
-<div class="gpoll"><b>Her polls</b><ul><li>Adult seborrheic dermatitis, first line: ketoconazole shampoo (T@94640 11/10). Infant scalp: massage with baby oil (T@95994 11/10).</li><li>Psoriasis case, OTC agent: topical corticosteroids (T@35288 11/11).</li></ul></div>
-<div style="display:flex;flex-wrap:wrap;gap:7px;margin:8px 0"><button type="button" class="chip" data-jump="ref:ref-p7-shampoo">Reference: shampoo schedules</button><button type="button" class="chip" data-jump="ref:ref-p7-pso">Reference: psoriasis severity and topicals</button><button type="button" class="chip" data-jump="ref:ref-p7-sys">Reference: psoriasis systemic agents</button><button type="button" class="chip" data-jump="ref:ref-p7-bio">Reference: biologics</button></div>
+<div class="gpt g2-block"><h5><span class="g2-num">1.</span> OTC chart <span class="g2-src">(SD 7)</span></h5>
+<ul>
+<li>Hydrocortisone 1% <b>not for dandruff</b></li>
+<li>Sulfur <b>not for psoriasis</b></li>
+</ul>
+<p class="g2-p">Shampoo schedules: see Reference, &ldquo;Dr. Patel: dandruff and seborrheic dermatitis&rdquo;.</p>
+<div class="g2-btns"><button type="button" class="chip" data-jump="ref:ref-p7-shampoo">Reference: shampoo schedules</button></div>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">2.</span> Psoriasis: therapy by severity</h5>
+<div class="g2-ladder">
+<div class="g2-rung g2-s1"><div class="g2-sev">Mild to moderate</div><div class="g2-cells">
+<div class="g2-cell"><span class="g2-k">Order of therapy</span><ul>
+<li><b>Topical agents first</b></li>
+<li>Systemic agent <b>last line</b></li>
+<li>Non-drug care for all</li>
+</ul><p><span class="g2-src">(SD 35)</span></p></div>
+</div></div>
+<div class="g2-rung g2-s3"><div class="g2-sev">Moderate to severe</div><div class="g2-cells">
+<div class="g2-cell"><span class="g2-k">Order of therapy</span><ul>
+<li><b>Systemic agent</b> (most likely methotrexate) &plusmn; topical</li>
+<li>Then a more potent systemic or a biologic</li>
+<li>Biologics <b>last line</b></li>
+</ul><p><span class="g2-src">(SD 37; T@14941&ndash;15451 11/11)</span></p></div>
+</div></div>
+</div>
+<div class="g2-btns"><button type="button" class="chip" data-jump="ref:ref-p7-sys">Reference: psoriasis systemic agents</button><button type="button" class="chip" data-jump="ref:ref-p7-bio">Reference: biologics</button></div>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">3.</span> Topicals <span class="g2-src">(SD 36)</span></h5>
+<table class="g2-table">
+<thead><tr><th scope="col">Agent</th><th scope="col">Use</th></tr></thead>
+<tbody>
+<tr><th scope="row">Corticosteroids</th><td>The most effective, <b>2&ndash;4 times daily</b>, <b>&le; 4 weeks</b></td></tr>
+<tr><th scope="row">Calcipotriene</th><td></td></tr>
+<tr><th scope="row">Tazarotene, adapalene</th><td>At bedtime</td></tr>
+<tr><th scope="row">Anthralin</th><td><b>&le; 2 hours</b> on thick plaques</td></tr>
+<tr><th scope="row">Coal tar</th><td>Overnight</td></tr>
+<tr><th scope="row">Salicylic acid shampoo</th><td>For the scalp</td></tr>
+<tr><th scope="row">Pimecrolimus</th><td>For intertriginous areas</td></tr>
+</tbody>
+</table>
+<div class="g2-btns"><button type="button" class="chip" data-jump="ref:ref-p7-pso">Reference: psoriasis severity and topicals</button></div>
+</div>
+<div class="gpoll"><b>Her polls</b>
+<details class="g2-self"><summary>Adult seborrheic dermatitis, first line <span class="g2-tap">Show answer</span></summary><p>Ketoconazole shampoo <span class="g2-src">(T@94640 11/10)</span></p></details>
+<details class="g2-self"><summary>Infant scalp <span class="g2-tap">Show answer</span></summary><p>Massage with baby oil <span class="g2-src">(T@95994 11/10)</span></p></details>
+<details class="g2-self"><summary>Psoriasis case, OTC agent <span class="g2-tap">Show answer</span></summary><p>Topical corticosteroids <span class="g2-src">(T@35288 11/11)</span></p></details>
+</div>
 </section>
 
 <section class="gobj" id="gobj-p7-7">
 <h3>Scaly Dermatoses · Objective 7: follow-up</h3>
 <div class="gbar"><span>Objective (SD 3)</span><b>Provide follow-up recommendations</b><i>SD 16, 38&ndash;39, 48, 51</i></div>
-<div class="gpt"><ul><li>Seborrheic dermatitis: worse or lasting longer than 7 days, refer (SD 16).</li><li>Psoriasis: contact the patient in 1&ndash;2 weeks (SD 48; T@31466, T@36225 11/11); SD 51 reads &ldquo;a week after self-treatment begins&rdquo;. Expected response: methotrexate 3&ndash;6 weeks, apremilast by week 4, acitretin maximum at 3&ndash;6 months (SD 38&ndash;39).</li><li>Biologics: TB screening before and during, PPD every year; CBC and LFTs for TNF-&alpha; inhibitors (SD 40&ndash;41).</li></ul></div>
+<div class="gpt g2-block"><h5><span class="g2-num">1.</span> Seborrheic dermatitis</h5>
+<div class="g2-tiles">
+<div class="g2-tile"><span class="g2-tile-label">Seborrheic dermatitis: refer when worse or lasting longer than</span><span class="g2-tile-num">7 days</span><span class="g2-src">(SD 16)</span></div>
+</div>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">2.</span> Psoriasis</h5>
+<div class="g2-two">
+<div>
+<div class="g2-tiles">
+<div class="g2-tile"><span class="g2-tile-label">Psoriasis: contact the patient in</span><span class="g2-tile-num">1&ndash;2 weeks</span><span class="g2-src">(SD 48; T@31466, T@36225 11/11)</span></div>
+</div>
+<p class="g2-p">SD 51 reads &ldquo;a week after self-treatment begins&rdquo;.</p>
+</div>
+<div>
+<table class="g2-table">
+<caption>Expected response <span class="g2-src">(SD 38&ndash;39)</span></caption>
+<thead><tr><th scope="col">Drug</th><th scope="col">Response</th></tr></thead>
+<tbody>
+<tr><th scope="row">Methotrexate</th><td><b>3&ndash;6 weeks</b></td></tr>
+<tr><th scope="row">Apremilast</th><td>By <b>week 4</b></td></tr>
+<tr><th scope="row">Acitretin</th><td>Maximum at <b>3&ndash;6 months</b></td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">3.</span> Biologics <span class="g2-src">(SD 40&ndash;41)</span></h5>
+<table class="g2-table g2-kv">
+<tbody>
+<tr><th scope="row">TB</th><td>TB screening before and during, PPD every year</td></tr>
+<tr><th scope="row">Labs</th><td>CBC and LFTs for TNF-&alpha; inhibitors</td></tr>
+</tbody>
+</table>
+</div>
 </section>
 
 <h2 class="gdeck" id="gdeck-p8o">Outdoor Exposure Therapeutics (Dr. Patel, 11/12; Exam 2)</h2>
@@ -607,63 +1482,352 @@ const GUIDE_HTML = `
 <section class="gobj" id="gobj-p8o-1">
 <h3>Outdoor Exposures · Objective 1: which exposure is it?</h3>
 <div class="gbar"><span>Objective (OE 3)</span><b>Determine if the patient has an insect bite, sting, plant dermatitis, lice, scabies, envenomated snake bite or rabies exposure by typical signs and symptoms and patient history</b><i>OE 8, 10, 20, 27&ndash;28, 42, 50, 52, 58, 62</i></div>
-<table class="reftab"><thead><tr><th style="width:22%">Exposure</th><th>Signs and history</th><th style="width:10%">Slide</th></tr></thead><tbody>
-<tr><td><b>Plant dermatitis</b></td><td>Itching, then erythema, then vesicles and papules; small blisters in a line; rash 2&ndash;48 hours after contact with poison ivy, oak or sumac, lasting 1&ndash;3 weeks</td><td>OE 8, 10</td></tr>
-<tr><td><b>Insect bite</b></td><td>Mosquitoes, fleas, bedbugs, ticks, chiggers; nonvenomous; mild pruritus, erythema, papules</td><td>OE 20</td></tr>
-<tr><td><b>Insect sting</b></td><td>Bees, wasps, yellow jackets, hornets, fire ants; venomous; pain, pruritus, irritation</td><td>OE 20</td></tr>
-<tr><td><b>Vector-borne disease</b></td><td>Fever, headache, myalgias, rash 2&ndash;14 days after a tick bite; murine typhus: rash from the trunk to the arms and legs 5&ndash;6 days after the first symptoms</td><td>OE 27&ndash;28</td></tr>
-<tr><td><b>Head lice</b></td><td>Itching, scratch marks, live moving lice, nits within 4 mm of the scalp; shared personal items</td><td>OE 42, 48</td></tr>
-<tr><td><b>Scabies</b></td><td>Inflammation and itching on fingers, wrists, buttocks, armpits, skin folds; prolonged physical contact</td><td>OE 50</td></tr>
-<tr><td><b>Spider</b></td><td>Brown recluse: fever, blood in urine, rash, joint pain within 48 hours, necrosis. Black widow: abdominal pain like appendicitis, muscle pain, sweating, swollen eyelids</td><td>OE 52</td></tr>
-<tr><td><b>Pit viper</b></td><td>Graded minimal, moderate or severe by local, systemic and coagulation signs</td><td>OE 58</td></tr>
-<tr><td><b>Rabies exposure</b></td><td>A bite (raccoons, bats, foxes, skunks, cats, dogs), or saliva on a scratch, open wound or mucous membrane</td><td>OE 62</td></tr>
-</tbody></table>
-<div class="gpt"><ul><li>&ldquo;Pay attention to what insects fall under the bites versus the stings&rdquo; (T@10123 11/12).</li><li>Pit viper grades: &ldquo;local, systemic and coagulation, minimum, moderate, and severe&rdquo; (T@41933 11/12).</li></ul></div>
-<div style="display:flex;flex-wrap:wrap;gap:7px;margin:8px 0"><button type="button" class="chip" data-jump="ref:ref-p8-bites">Reference: bites and stings</button><button type="button" class="chip" data-jump="ref:ref-p8-venom">Reference: spiders, snakes, rabies</button></div>
+<div class="gpt g2-block"><h5><span class="g2-num">1.</span> Signs and history by exposure</h5>
+<table class="g2-table g2-stack">
+<thead><tr><th scope="col">Exposure</th><th scope="col">Signs and history</th></tr></thead>
+<tbody>
+<tr><th scope="row">Plant dermatitis</th><td>Itching, then erythema, then vesicles and papules; small blisters in a line; rash <b>2&ndash;48 hours</b> after contact with poison ivy, oak or sumac, lasting <b>1&ndash;3 weeks</b> <span class="g2-src">(OE 8, 10)</span></td></tr>
+<tr><th scope="row">Insect bite</th><td>Mosquitoes, fleas, bedbugs, ticks, chiggers; <b>nonvenomous</b>; mild pruritus, erythema, papules <span class="g2-src">(OE 20)</span></td></tr>
+<tr><th scope="row">Insect sting</th><td>Bees, wasps, yellow jackets, hornets, fire ants; <b>venomous</b>; pain, pruritus, irritation <span class="g2-src">(OE 20)</span></td></tr>
+<tr><th scope="row">Vector-borne disease</th><td>Fever, headache, myalgias, rash <b>2&ndash;14 days</b> after a tick bite; murine typhus: rash from the trunk to the arms and legs <b>5&ndash;6 days</b> after the first symptoms <span class="g2-src">(OE 27&ndash;28)</span></td></tr>
+<tr><th scope="row">Head lice</th><td>Itching, scratch marks, live moving lice, nits within <b>4 mm</b> of the scalp; shared personal items <span class="g2-src">(OE 42, 48)</span></td></tr>
+<tr><th scope="row">Scabies</th><td>Inflammation and itching on fingers, wrists, buttocks, armpits, skin folds; prolonged physical contact <span class="g2-src">(OE 50)</span></td></tr>
+<tr><th scope="row">Spider</th><td><b>Brown recluse:</b> fever, blood in urine, rash, joint pain within <b>48 hours</b>, necrosis. <b>Black widow:</b> abdominal pain like appendicitis, muscle pain, sweating, swollen eyelids <span class="g2-src">(OE 52)</span></td></tr>
+<tr><th scope="row">Pit viper</th><td>Graded minimal, moderate or severe by local, systemic and coagulation signs <span class="g2-src">(OE 58)</span></td></tr>
+<tr><th scope="row">Rabies exposure</th><td>A bite (raccoons, bats, foxes, skunks, cats, dogs), or saliva on a scratch, open wound or mucous membrane <span class="g2-src">(OE 62)</span></td></tr>
+</tbody>
+</table>
+<p class="g2-said"><span class="g2-k">Said in class</span>&ldquo;Pay attention to what insects fall under the bites versus the stings&rdquo; <span class="g2-src">(T@10123 11/12)</span></p>
+<p class="g2-said"><span class="g2-k">Said in class</span>Pit viper grades: &ldquo;local, systemic and coagulation, minimum, moderate, and severe&rdquo; <span class="g2-src">(T@41933 11/12)</span></p>
+<div class="g2-btns"><button type="button" class="chip" data-jump="ref:ref-p8-bites">Reference: bites and stings</button><button type="button" class="chip" data-jump="ref:ref-p8-venom">Reference: spiders, snakes, rabies</button></div>
+</div>
 </section>
 
 <section class="gobj" id="gobj-p8o-2">
 <h3>Outdoor Exposures · Objective 2: is the patient a self-care candidate?</h3>
 <div class="gbar"><span>Objective (OE 3)</span><b>Determine if the patient is an appropriate self-care candidate</b><i>OE 12, 16, 31, 36, 40, 44, 53, 56, 62</i></div>
-<div class="gpt"><ul><li>Plant dermatitis, refer (OE 16): no improvement after 7 days; worse; a large area of the face or swollen eyelids; genitalia; secondary infection.</li><li>Bites, refer (OE 31, 40): symptoms after 7 days of treatment or worse during it; fever, joint pain, lymph node enlargement, neurologic symptoms; a suspected vector-borne disease.</li><li>Stings, emergency care (OE 36): a severe reaction history; hives, dizziness, nausea or vomiting, difficulty breathing at any time after the sting.</li><li>Under 2 years: no hydrocortisone, local anesthetic or counterirritant (OE 12, 25, 39).</li><li>Lice, not self-care (OE 44): no live lice seen; allergy to chrysanthemums, ragweed or an ingredient; secondary skin infection; under 2 years for pyrethrins, under 2 months for permethrin; eyelids or eyebrows; pregnancy or breast-feeding; active tumors.</li><li>Never self-care: venomous spider bite, snake bite (emergency room), rabies exposure (referral for prophylaxis) (OE 53, 56, 62).</li></ul></div>
-<div class="gpoll"><b>Her polls</b><ul><li>A hunter with symptoms after a tick exposure: immediate medical referral (not a cold and flu product, not watching for 3&ndash;5 days) (T@21518 11/12).</li><li>Wasp or bee sting with hives and swelling: immediate referral to the emergency room (T@23898 11/12).</li><li>When is OTC lice treatment not appropriate: &ldquo;pay attention to the age category&rdquo; (T@33447 11/12).</li></ul></div>
-<div style="display:flex;flex-wrap:wrap;gap:7px;margin:8px 0"><button type="button" class="chip" data-jump="ref:ref-p8-bites">Reference: bites and stings</button><button type="button" class="chip" data-jump="ref:ref-p8-lice">Reference: lice and scabies</button></div>
+<div class="gpt g2-block"><h5><span class="g2-num">1.</span> Plant dermatitis, refer <span class="g2-src">(OE 16)</span></h5>
+<ul>
+<li>No improvement after <b>7 days</b></li>
+<li>Worse</li>
+<li>A large area of the face or swollen eyelids</li>
+<li>Genitalia</li>
+<li>Secondary infection</li>
+</ul>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">2.</span> Bites, refer <span class="g2-src">(OE 31, 40)</span></h5>
+<ul>
+<li>Symptoms after <b>7 days</b> of treatment or worse during it</li>
+<li>Fever, joint pain, lymph node enlargement, neurologic symptoms</li>
+<li>A suspected vector-borne disease</li>
+</ul>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">3.</span> Stings, emergency care <span class="g2-src">(OE 36)</span></h5>
+<ul>
+<li>A severe reaction history</li>
+<li>Hives, dizziness, nausea or vomiting, difficulty breathing at any time after the sting</li>
+</ul>
+<div class="g2-btns"><button type="button" class="chip" data-jump="ref:ref-p8-bites">Reference: bites and stings</button></div>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">4.</span> Under 2 years <span class="g2-src">(OE 12, 25, 39)</span></h5>
+<p class="g2-p">No hydrocortisone, local anesthetic or counterirritant.</p>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">5.</span> Lice, not self-care <span class="g2-src">(OE 44)</span></h5>
+<div class="g2-two">
+<div>
+<ul>
+<li>No live lice seen</li>
+<li>Allergy to chrysanthemums, ragweed or an ingredient</li>
+<li>Secondary skin infection</li>
+<li>Eyelids or eyebrows</li>
+<li>Pregnancy or breast-feeding</li>
+<li>Active tumors</li>
+</ul>
+</div>
+<div>
+<p class="g2-sub">Age</p>
+<div class="g2-tiles">
+<div class="g2-tile"><span class="g2-tile-label">Pyrethrins: not self-care under</span><span class="g2-tile-num">2 years</span></div>
+<div class="g2-tile"><span class="g2-tile-label">Permethrin: not self-care under</span><span class="g2-tile-num">2 months</span></div>
+</div>
+</div>
+</div>
+<div class="g2-btns"><button type="button" class="chip" data-jump="ref:ref-p8-lice">Reference: lice and scabies</button></div>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">6.</span> Never self-care <span class="g2-src">(OE 53, 56, 62)</span></h5>
+<ul>
+<li>Venomous spider bite</li>
+<li>Snake bite (emergency room)</li>
+<li>Rabies exposure (referral for prophylaxis)</li>
+</ul>
+</div>
+<div class="gpoll"><b>Her polls</b>
+<details class="g2-self"><summary>A hunter with symptoms after a tick exposure <span class="g2-tap">Show answer</span></summary><p>Immediate medical referral (not a cold and flu product, not watching for 3&ndash;5 days) <span class="g2-src">(T@21518 11/12)</span></p></details>
+<details class="g2-self"><summary>Wasp or bee sting with hives and swelling <span class="g2-tap">Show answer</span></summary><p>Immediate referral to the emergency room <span class="g2-src">(T@23898 11/12)</span></p></details>
+<details class="g2-self"><summary>When is OTC lice treatment not appropriate <span class="g2-tap">Show answer</span></summary><p>&ldquo;Pay attention to the age category&rdquo; <span class="g2-src">(T@33447 11/12)</span></p></details>
+</div>
 </section>
 
 <section class="gobj" id="gobj-p8o-3">
 <h3>Outdoor Exposures · Objective 3: treatment goals</h3>
 <div class="gbar"><span>Objective (OE 3)</span><b>Apply treatment goals to recommendations</b><i>OE 11, 23, 35, 42, 51</i></div>
-<div class="gpt"><ul><li>Plant dermatitis (OE 11): treat the inflammation; relieve itching and excessive scratching; relieve the debris from oozing, crusting and scaling; minimize medication adverse effects.</li><li>Insect bites (OE 23): relieve symptoms; prevent secondary bacterial infections; minimize medication adverse effects; identify and eradicate transmissible diseases.</li><li>Stings (OE 35): relieve itching and pain; minimize medication adverse effects.</li><li>Lice (OE 42): kill adult and nymph lice; remove eggs and nits.</li><li>Scabies (OE 51): kill the mites and eggs; reduce symptoms; minimize medication adverse effects.</li></ul></div>
+<div class="gpt g2-block"><h5><span class="g2-num">1.</span> Plant dermatitis <span class="g2-src">(OE 11)</span></h5>
+<ul>
+<li>Treat the inflammation</li>
+<li>Relieve itching and excessive scratching</li>
+<li>Relieve the debris from oozing, crusting and scaling</li>
+<li>Minimize medication adverse effects</li>
+</ul>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">2.</span> Insect bites <span class="g2-src">(OE 23)</span></h5>
+<ul>
+<li>Relieve symptoms</li>
+<li>Prevent secondary bacterial infections</li>
+<li>Minimize medication adverse effects</li>
+<li>Identify and eradicate transmissible diseases</li>
+</ul>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">3.</span> Stings <span class="g2-src">(OE 35)</span></h5>
+<ul>
+<li>Relieve itching and pain</li>
+<li>Minimize medication adverse effects</li>
+</ul>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">4.</span> Lice <span class="g2-src">(OE 42)</span></h5>
+<ul>
+<li>Kill adult and nymph lice</li>
+<li>Remove eggs and nits</li>
+</ul>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">5.</span> Scabies <span class="g2-src">(OE 51)</span></h5>
+<ul>
+<li>Kill the mites and eggs</li>
+<li>Reduce symptoms</li>
+<li>Minimize medication adverse effects</li>
+</ul>
+</div>
 </section>
 
 <section class="gobj" id="gobj-p8o-4">
 <h3>Outdoor Exposures · Objective 4: non-drug therapy</h3>
 <div class="gbar"><span>Objective (OE 3)</span><b>Recommend appropriate non-drug therapy</b><i>OE 9, 14, 21, 24, 35, 38, 43</i></div>
-<div class="gpt"><ul><li>Plant: protective clothing and gloves; after exposure remove urushiol as soon as possible, large volumes of water, then soap and water including under the nails; cool soaks; colloidal oatmeal bath 15&ndash;20 minutes twice daily (OE 9, 11, 14). Urushiol enters the skin within 10 minutes (OE 8).</li><li>Bites: ice pack promptly; no scratching, nails trimmed; no rough clothing over the bite. Tick: tweezers at the head, pull gently, clean with rubbing alcohol, keep the tick in a plastic bag (OE 24). Prevention: repellent, covered skin, pant legs cuffed into socks, no standing water (OE 21).</li><li>Stings: remove the stinger and venom sac without squeezing; soap and water; ice or a cold pack (OE 35, 38).</li><li>Lice: FDA-approved nit comb; no shared combs, brushes, towels, hats; clothing, bedding, brushes and combs washed in hot water (OE 43).</li></ul></div>
-<div style="display:flex;flex-wrap:wrap;gap:7px;margin:8px 0"><button type="button" class="chip" data-jump="ref:ref-p8-plant">Reference: plant dermatitis</button></div>
+<div class="gpt g2-block"><h5><span class="g2-num">1.</span> Plant <span class="g2-src">(OE 9, 11, 14)</span></h5>
+<div class="g2-two">
+<div>
+<ul>
+<li>Protective clothing and gloves</li>
+<li>After exposure remove urushiol as soon as possible, large volumes of water, then soap and water including under the nails</li>
+<li>Cool soaks</li>
+<li>Colloidal oatmeal bath <b>15&ndash;20 minutes twice daily</b></li>
+</ul>
+</div>
+<div>
+<div class="g2-tiles">
+<div class="g2-tile"><span class="g2-tile-label">Urushiol enters the skin within</span><span class="g2-tile-num">10 minutes</span><span class="g2-src">(OE 8)</span></div>
+</div>
+</div>
+</div>
+<div class="g2-btns"><button type="button" class="chip" data-jump="ref:ref-p8-plant">Reference: plant dermatitis</button></div>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">2.</span> Bites</h5>
+<div class="g2-two">
+<div>
+<p class="g2-sub">Bites and tick <span class="g2-src">(OE 24)</span></p>
+<ul>
+<li>Ice pack promptly</li>
+<li>No scratching, nails trimmed</li>
+<li>No rough clothing over the bite</li>
+<li><b>Tick:</b> tweezers at the head, pull gently, clean with rubbing alcohol, keep the tick in a plastic bag</li>
+</ul>
+</div>
+<div>
+<p class="g2-sub">Prevention <span class="g2-src">(OE 21)</span></p>
+<ul>
+<li>Repellent</li>
+<li>Covered skin</li>
+<li>Pant legs cuffed into socks</li>
+<li>No standing water</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">3.</span> Stings <span class="g2-src">(OE 35, 38)</span></h5>
+<ul>
+<li>Remove the stinger and venom sac without squeezing</li>
+<li>Soap and water</li>
+<li>Ice or a cold pack</li>
+</ul>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">4.</span> Lice <span class="g2-src">(OE 43)</span></h5>
+<ul>
+<li>FDA-approved nit comb</li>
+<li>No shared combs, brushes, towels, hats</li>
+<li>Clothing, bedding, brushes and combs washed in hot water</li>
+</ul>
+</div>
 </section>
 
 <section class="gobj" id="gobj-p8o-5">
 <h3>Outdoor Exposures · Objective 5: recommend the best treatment</h3>
 <div class="gbar"><span>Objective (OE 3)</span><b>Dosing frequency and max days of use; length of treatment; onset; adverse effects; contraindications and interactions</b><i>OE 5, 12&ndash;15, 25, 27&ndash;30, 39, 45, 51</i></div>
-<div class="gpt"><ul><li>Topical OTC chart (OE 12&ndash;13): the class, the condition and the comment for each (T@6763 11/12). Diphenhydramine cream: not on plant dermatitis, sunburn, chicken pox or broken skin. The &ldquo;caines&rdquo;: not under occlusion or on broken skin; methemoglobinemia.</li><li>Plant dermatitis (OE 12&ndash;15): itch, an oral antihistamine; dry lesions, hydrocortisone, an anesthetic or a counterirritant; weeping lesions, an astringent (aluminum acetate); no topical antihistamine or topical antibiotic.</li><li>Bites and stings (OE 25, 39): protectant, hydrocortisone, anesthetic, counterirritant or oral antihistamine; anesthetics and counterirritants 3&ndash;4 times daily, not longer than 7 days.</li><li>Antibiotic by disease (OE 27&ndash;30): murine typhus, doxycycline; Lyme prophylaxis within 72 hours of detaching the tick, doxycycline 200 mg once; erythema migrans, doxycycline 10 days, amoxicillin 14, cefuroxime axetil 14, azithromycin 7 (second line); rickettsial fevers, doxycycline; STARI, no antibiotic.</li><li>Lice (OE 45): pyrethrins and malathion over 2 years; permethrin and dimethicone over 2 months; ivermectin, benzyl alcohol, spinosad over 6 months. Scabies (OE 51): a list of options with no first, second or third line (T@35653 11/12).</li><li>Quantity (OE 5): grams = fingertip units &times; 0.5 g &times; applications a day &times; days, rounded up to the tube size.</li></ul></div>
-<div class="gpoll"><b>Her polls</b><ul><li>Hydrocortisone 1% to both feet twice daily for 3 days: 15 grams (T@1904 11/12).</li><li>Poison ivy itch: diphenhydramine by mouth (&ldquo;any oral antihistamine&rdquo;, T@9933 11/12); not the aluminum acetate compress, not diphenhydramine 2% cream. To reduce weeping: aluminum acetate (T@9484 11/12).</li><li>Bedbug itch, neomycin allergy: oral diphenhydramine; not witch hazel, not Neosporin (T@19887 11/12).</li><li>Head lice, 10 years old: permethrin; not malathion, not lindane (T@33250 11/12).</li></ul></div>
-<div style="display:flex;flex-wrap:wrap;gap:7px;margin:8px 0"><button type="button" class="chip" data-jump="ref:ref-p8-otc">Reference: topical OTC chart</button><button type="button" class="chip" data-jump="ref:ref-p8-plant">Reference: plant dermatitis</button><button type="button" class="chip" data-jump="ref:ref-p8-vector">Reference: antibiotic by disease</button><button type="button" class="chip" data-jump="ref:ref-p8-lice">Reference: lice and scabies</button><button type="button" class="chip" data-jump="ref:ref-p5-ftu">Reference: fingertip units</button></div>
+<div class="gpt g2-block"><h5><span class="g2-num">1.</span> Topical OTC chart <span class="g2-src">(OE 12&ndash;13)</span></h5>
+<p class="g2-p">The class, the condition and the comment for each <span class="g2-src">(T@6763 11/12)</span>.</p>
+<table class="g2-table g2-kv">
+<tbody>
+<tr><th scope="row">Diphenhydramine cream</th><td>Not on plant dermatitis, sunburn, chicken pox or broken skin</td></tr>
+<tr><th scope="row">The &ldquo;caines&rdquo;</th><td>Not under occlusion or on broken skin; methemoglobinemia</td></tr>
+</tbody>
+</table>
+<div class="g2-btns"><button type="button" class="chip" data-jump="ref:ref-p8-otc">Reference: topical OTC chart</button></div>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">2.</span> Plant dermatitis <span class="g2-src">(OE 12&ndash;15)</span></h5>
+<table class="g2-table">
+<thead><tr><th scope="col">Presentation</th><th scope="col">Treatment</th></tr></thead>
+<tbody>
+<tr><th scope="row">Itch</th><td>An oral antihistamine</td></tr>
+<tr><th scope="row">Dry lesions</th><td>Hydrocortisone, an anesthetic or a counterirritant</td></tr>
+<tr><th scope="row">Weeping lesions</th><td>An astringent (aluminum acetate)</td></tr>
+</tbody>
+</table>
+<p class="g2-p"><b>No</b> topical antihistamine or topical antibiotic.</p>
+<div class="g2-btns"><button type="button" class="chip" data-jump="ref:ref-p8-plant">Reference: plant dermatitis</button></div>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">3.</span> Bites and stings <span class="g2-src">(OE 25, 39)</span></h5>
+<p class="g2-p">Protectant, hydrocortisone, anesthetic, counterirritant or oral antihistamine.</p>
+<div class="g2-tiles">
+<div class="g2-tile"><span class="g2-tile-label">Anesthetics and counterirritants: how often</span><span class="g2-tile-num">3&ndash;4 times daily</span></div>
+<div class="g2-tile"><span class="g2-tile-label">Anesthetics and counterirritants: not longer than</span><span class="g2-tile-num">7 days</span></div>
+</div>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">4.</span> Antibiotic by disease <span class="g2-src">(OE 27&ndash;30)</span></h5>
+<div class="g2-two">
+<table class="g2-table">
+<thead><tr><th scope="col">Disease</th><th scope="col">Antibiotic</th></tr></thead>
+<tbody>
+<tr><th scope="row">Murine typhus</th><td>Doxycycline</td></tr>
+<tr><th scope="row">Lyme prophylaxis within <b>72 hours</b> of detaching the tick</th><td>Doxycycline <b>200 mg once</b></td></tr>
+<tr><th scope="row">Rickettsial fevers</th><td>Doxycycline</td></tr>
+<tr><th scope="row">STARI</th><td>No antibiotic</td></tr>
+</tbody>
+</table>
+<table class="g2-table">
+<caption>Erythema migrans</caption>
+<thead><tr><th scope="col">Antibiotic</th><th scope="col" class="g2-n">Days</th></tr></thead>
+<tbody>
+<tr><td>Doxycycline</td><td class="g2-n">10</td></tr>
+<tr><td>Amoxicillin</td><td class="g2-n">14</td></tr>
+<tr><td>Cefuroxime axetil</td><td class="g2-n">14</td></tr>
+<tr><td>Azithromycin (second line)</td><td class="g2-n">7</td></tr>
+</tbody>
+</table>
+</div>
+<div class="g2-btns"><button type="button" class="chip" data-jump="ref:ref-p8-vector">Reference: antibiotic by disease</button></div>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">5.</span> Lice <span class="g2-src">(OE 45)</span></h5>
+<table class="g2-table">
+<thead><tr><th scope="col">Product</th><th scope="col" class="g2-n">Age</th></tr></thead>
+<tbody>
+<tr><td>Pyrethrins and malathion</td><td class="g2-n">over 2 years</td></tr>
+<tr><td>Permethrin and dimethicone</td><td class="g2-n">over 2 months</td></tr>
+<tr><td>Ivermectin, benzyl alcohol, spinosad</td><td class="g2-n">over 6 months</td></tr>
+</tbody>
+</table>
+<div class="g2-btns"><button type="button" class="chip" data-jump="ref:ref-p8-lice">Reference: lice and scabies</button></div>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">6.</span> Scabies <span class="g2-src">(OE 51)</span></h5>
+<p class="g2-p">A list of options with no first, second or third line <span class="g2-src">(T@35653 11/12)</span>.</p>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">7.</span> Quantity <span class="g2-src">(OE 5)</span></h5>
+<p class="g2-formula"><span class="g2-k">Formula</span>Grams = fingertip units &times; 0.5 g &times; applications a day &times; days</p>
+<p class="g2-p">Rounded up to the tube size.</p>
+<details class="g2-self"><summary>Her poll, hydrocortisone 1% to both feet twice daily for 3 days <span class="g2-tap">Show answer</span></summary><p><b>15 grams</b> <span class="g2-src">(T@1904 11/12)</span></p></details>
+<div class="g2-btns"><button type="button" class="g2-primary" onclick="show('ftu')">Practice fingertip-unit calculations</button><button type="button" class="chip" data-jump="ref:ref-p5-ftu">Reference: fingertip units</button></div>
+</div>
+<div class="gpoll"><b>Her polls</b>
+<details class="g2-self"><summary>Poison ivy itch <span class="g2-tap">Show answer</span></summary><p>Diphenhydramine by mouth (&ldquo;any oral antihistamine&rdquo;, T@9933 11/12); not the aluminum acetate compress, not diphenhydramine 2% cream.</p></details>
+<details class="g2-self"><summary>Poison ivy, to reduce weeping <span class="g2-tap">Show answer</span></summary><p>Aluminum acetate <span class="g2-src">(T@9484 11/12)</span></p></details>
+<details class="g2-self"><summary>Bedbug itch, neomycin allergy <span class="g2-tap">Show answer</span></summary><p>Oral diphenhydramine; not witch hazel, not Neosporin <span class="g2-src">(T@19887 11/12)</span></p></details>
+<details class="g2-self"><summary>Head lice, 10 years old <span class="g2-tap">Show answer</span></summary><p>Permethrin; not malathion, not lindane <span class="g2-src">(T@33250 11/12)</span></p></details>
+</div>
 </section>
 
 <section class="gobj" id="gobj-p8o-6">
 <h3>Outdoor Exposures · Objective 6: monitoring and follow-up</h3>
 <div class="gbar"><span>Objective (OE 3)</span><b>Provide monitoring and follow-up recommendations</b><i>OE 13, 16, 31, 36, 39, 47, 51</i></div>
-<div class="gpt"><ul><li>Seven days is the self-care limit for plant dermatitis, bites, stings and topical antibiotics (OE 13, 16, 31, 36, 39).</li><li>Lice (OE 47): repeat in 7 to 10 days if lice or nits are seen; follow up with the caregiver in a week; live lice after 2 rounds one week apart, refer for a prescription product. OE 42 prints &ldquo;in 7 days&rdquo;; see Reference.</li><li>Scabies (OE 51): itch can last 4 weeks after treatment; an oral antihistamine (T@36103 11/12).</li></ul></div>
-<div class="gpoll"><b>Her polls</b><ul><li>Maximum treatment duration for self-care: seven days (not three, ten or fourteen) (T@20142 11/12).</li></ul></div>
+<div class="gpt g2-block"><h5><span class="g2-num">1.</span> Self-care limit <span class="g2-src">(OE 13, 16, 31, 36, 39)</span></h5>
+<div class="g2-tiles">
+<div class="g2-tile"><span class="g2-tile-label">The self-care limit for plant dermatitis, bites, stings and topical antibiotics is</span><span class="g2-tile-num">Seven days</span></div>
+</div>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">2.</span> Lice <span class="g2-src">(OE 47)</span></h5>
+<table class="g2-table g2-kv">
+<tbody>
+<tr><th scope="row">Repeat</th><td>Repeat in <b>7 to 10 days</b> if lice or nits are seen</td></tr>
+<tr><th scope="row">Follow up</th><td>Follow up with the caregiver in <b>a week</b></td></tr>
+<tr><th scope="row">Refer</th><td>Live lice after <b>2 rounds one week apart</b>, refer for a prescription product</td></tr>
+</tbody>
+</table>
+<p class="g2-p">OE 42 prints &ldquo;in 7 days&rdquo;; see Reference.</p>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">3.</span> Scabies <span class="g2-src">(OE 51)</span></h5>
+<p class="g2-p">Itch can last <b>4 weeks</b> after treatment; an oral antihistamine <span class="g2-src">(T@36103 11/12)</span>.</p>
+</div>
+<div class="gpoll"><b>Her polls</b>
+<details class="g2-self"><summary>Maximum treatment duration for self-care <span class="g2-tap">Show answer</span></summary><p>Seven days (not three, ten or fourteen) <span class="g2-src">(T@20142 11/12)</span></p></details>
+</div>
 </section>
 
 <section class="gobj" id="gobj-p8o-7">
 <h3>Outdoor Exposures · Objective 7: actions after an outdoor exposure</h3>
 <div class="gbar"><span>Objective (OE 3)</span><b>Counsel a patient on the actions needed after an &ldquo;outdoor exposure&rdquo;</b><i>OE 9, 24, 35, 47, 53, 56, 62&ndash;63, 65</i></div>
-<div class="gpt"><ul><li>Lice product (OE 45, 47): no conditioner first; enough to wet the dry hair and scalp; a full 10 minutes; rinse; nit comb in sections; no re-washing for 1&ndash;2 days.</li><li>Spider bite (OE 53): soap and water, cold pack, elevate the limb, acetaminophen, emergency room.</li><li>Snake bite (OE 56): calm and still; a photo, no capture; remove jewelry and tight clothing; soap and water; immobilize, even with or slightly lower than the heart; call poison control, 1-800-222-1222, and transport. &ldquo;Biggest thing to remember, immobilize&rdquo; (T@39310 11/12).</li><li>Rabies (OE 62&ndash;63): wash with soap and water at once; prophylaxis as soon as possible, &ldquo;urgency, not emergency&rdquo; (T@44130 11/12). Not previously vaccinated: immune globulin plus vaccine on days 0, 3, 7, 14. Previously vaccinated: no immune globulin; vaccine on days 0 and 3.</li></ul></div>
-<div class="gpoll"><b>Her polls</b><ul><li>Counseling points for the lice patient and his mother (open response); her answer: dry hair, 10 minutes, rinse, nit comb, repeat in 7 to 10 days (T@33250&ndash;34351 11/12).</li></ul></div>
-<div style="display:flex;flex-wrap:wrap;gap:7px;margin:8px 0"><button type="button" class="chip" data-jump="ref:ref-p8-lice">Reference: lice and scabies</button><button type="button" class="chip" data-jump="ref:ref-p8-venom">Reference: spiders, snakes, rabies</button></div>
+<div class="gpt g2-block"><h5><span class="g2-num">1.</span> Lice product <span class="g2-src">(OE 45, 47)</span></h5>
+<table class="g2-table">
+<thead><tr><th scope="col" class="g2-n">Step</th><th scope="col">Lice product</th></tr></thead>
+<tbody>
+<tr><td class="g2-n"><span class="g2-num">1</span></td><td>No conditioner first</td></tr>
+<tr><td class="g2-n"><span class="g2-num">2</span></td><td>Enough to wet the dry hair and scalp</td></tr>
+<tr><td class="g2-n"><span class="g2-num">3</span></td><td>A full <b>10 minutes</b></td></tr>
+<tr><td class="g2-n"><span class="g2-num">4</span></td><td>Rinse</td></tr>
+<tr><td class="g2-n"><span class="g2-num">5</span></td><td>Nit comb in sections</td></tr>
+<tr><td class="g2-n"><span class="g2-num">6</span></td><td>No re-washing for <b>1&ndash;2 days</b></td></tr>
+</tbody>
+</table>
+<div class="g2-btns"><button type="button" class="chip" data-jump="ref:ref-p8-lice">Reference: lice and scabies</button></div>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">2.</span> Spider bite <span class="g2-src">(OE 53)</span></h5>
+<ul>
+<li>Soap and water</li>
+<li>Cold pack</li>
+<li>Elevate the limb</li>
+<li>Acetaminophen</li>
+<li>Emergency room</li>
+</ul>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">3.</span> Snake bite <span class="g2-src">(OE 56)</span></h5>
+<ul>
+<li>Calm and still</li>
+<li>A photo, no capture</li>
+<li>Remove jewelry and tight clothing</li>
+<li>Soap and water</li>
+<li><b>Immobilize</b>, even with or slightly lower than the heart</li>
+<li>Call poison control, <b>1-800-222-1222</b>, and transport</li>
+</ul>
+<p class="g2-said"><span class="g2-k">Said in class</span>&ldquo;Biggest thing to remember, immobilize&rdquo; <span class="g2-src">(T@39310 11/12)</span></p>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">4.</span> Rabies <span class="g2-src">(OE 62&ndash;63)</span></h5>
+<p class="g2-p">Wash with soap and water at once; prophylaxis as soon as possible, &ldquo;urgency, not emergency&rdquo; <span class="g2-src">(T@44130 11/12)</span>.</p>
+<table class="g2-table g2-stack">
+<thead><tr><th scope="col">Patient</th><th scope="col">Prophylaxis</th><th scope="col">Vaccine days</th></tr></thead>
+<tbody>
+<tr><th scope="row">Not previously vaccinated</th><td>Immune globulin plus vaccine</td><td><span class="g2-lab">Vaccine</span>on days <b>0, 3, 7, 14</b></td></tr>
+<tr><th scope="row">Previously vaccinated</th><td>No immune globulin; vaccine</td><td><span class="g2-lab">Vaccine</span>on days <b>0 and 3</b></td></tr>
+</tbody>
+</table>
+<div class="g2-btns"><button type="button" class="chip" data-jump="ref:ref-p8-venom">Reference: spiders, snakes, rabies</button></div>
+</div>
+<div class="gpoll"><b>Her polls</b>
+<details class="g2-self"><summary>Counseling points for the lice patient and his mother (open response) <span class="g2-tap">Show answer</span></summary><p>Her answer: dry hair, 10 minutes, rinse, nit comb, repeat in 7 to 10 days <span class="g2-src">(T@33250&ndash;34351 11/12)</span></p></details>
+</div>
 </section>
 
 <h2 class="gdeck" id="gdeck-p8s">Sun Exposure Therapeutics (Dr. Patel, 11/12; Exam 2)</h2>
@@ -673,46 +1837,263 @@ const GUIDE_HTML = `
 <section class="gobj" id="gobj-p8s-1">
 <h3>Sun Exposure · Objective 1: the self-care interview</h3>
 <div class="gbar"><span>Objective (SE 3)</span><b>Perform the components of the SCHOLAR-MAC/QuEST and the Pharmacist&rsquo;s Patient Care Process in the self-care interview for dermatologic conditions</b><i>SE 8&ndash;11, 19</i></div>
-<div class="gpt"><ul><li>History for sun protection (SE 19): allergies; skin sensitivities or disorders; current medications and complementary products; excluded from sunscreens; photosensitizing agents; a previous adverse reaction to a sunscreen; exposure and use pattern.</li><li>Photosensitizing drugs she named (SE 10; T@49890&ndash;50187 11/12): doxycycline and the tetracyclines, ibuprofen, combined oral contraceptives, retinoids. &ldquo;Highlight the ones that we&rsquo;ve talked about to treat our derm conditions&rdquo; (T@50187 11/12).</li><li>Highest risk (SE 8&ndash;9): Fitzpatrick types I and II; blonde, red or light brown hair; a blistering sunburn; tanning beds; a family member with melanoma; immunosuppressive medications.</li></ul></div>
+<div class="gpt g2-block"><h5><span class="g2-num">1.</span> History for sun protection <span class="g2-src">(SE 19)</span></h5>
+<ul>
+<li>Allergies</li>
+<li>Skin sensitivities or disorders</li>
+<li>Current medications and complementary products</li>
+<li>Excluded from sunscreens</li>
+<li>Photosensitizing agents</li>
+<li>A previous adverse reaction to a sunscreen</li>
+<li>Exposure and use pattern</li>
+</ul>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">2.</span> Photosensitizing drugs she named <span class="g2-src">(SE 10; T@49890&ndash;50187 11/12)</span></h5>
+<ul>
+<li>Doxycycline and the tetracyclines</li>
+<li>Ibuprofen</li>
+<li>Combined oral contraceptives</li>
+<li>Retinoids</li>
+</ul>
+<p class="g2-said"><span class="g2-k">Said in class</span>&ldquo;Highlight the ones that we&rsquo;ve talked about to treat our derm conditions&rdquo; <span class="g2-src">(T@50187 11/12)</span></p>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">3.</span> Highest risk <span class="g2-src">(SE 8&ndash;9)</span></h5>
+<ul>
+<li>Fitzpatrick types I and II</li>
+<li>Blonde, red or light brown hair</li>
+<li>A blistering sunburn</li>
+<li>Tanning beds</li>
+<li>A family member with melanoma</li>
+<li>Immunosuppressive medications</li>
+</ul>
+</div>
 </section>
 
 <section class="gobj" id="gobj-p8s-2">
 <h3>Sun Exposure · Objective 2: name the condition</h3>
 <div class="gbar"><span>Objective (SE 3)</span><b>Determine the dermatologic condition based on the patient&rsquo;s signs and symptoms and history</b><i>SE 24, 28, 39&ndash;40</i></div>
-<div class="gpt"><ul><li>Sunburn (SE 24): symptoms start about 4 hours after exposure; erythema peaks at around 24 hours; may last up to 5 days.</li><li>Suspicious lesion, ABCDE (SE 28): Asymmetry; Border irregular; Color uneven; Diameter, most larger than 6 millimeters; Evolving over weeks or months.</li><li>Photoaging (SE 40): coarse wrinkles, leathery skin, lentigines, yellow cobblestone appearance, telangiectasis. Chronologic aging: thin skin, fine wrinkles, xerosis, laxity.</li><li>Glogau types (SE 39): I mild, no wrinkles, 20&ndash;30 years (T@68961 11/12); II wrinkles in motion, 30&ndash;40; III wrinkles at rest, 50 or older; IV only wrinkles, 60 or older.</li></ul></div>
+<div class="gpt g2-block"><h5><span class="g2-num">1.</span> Sunburn <span class="g2-src">(SE 24)</span></h5>
+<div class="g2-tiles g2-wide">
+<div class="g2-tile"><span class="g2-tile-label">After exposure, sunburn symptoms start at about</span><span class="g2-tile-num">4 hours</span></div>
+<div class="g2-tile"><span class="g2-tile-label">Sunburn erythema peaks at around</span><span class="g2-tile-num">24 hours</span></div>
+<div class="g2-tile"><span class="g2-tile-label">Sunburn may last up to</span><span class="g2-tile-num">5 days</span></div>
+</div>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">2.</span> Suspicious lesion, ABCDE <span class="g2-src">(SE 28)</span></h5>
+<table class="g2-table g2-kv">
+<tbody>
+<tr><th scope="row">A</th><td>Asymmetry</td></tr>
+<tr><th scope="row">B</th><td>Border irregular</td></tr>
+<tr><th scope="row">C</th><td>Color uneven</td></tr>
+<tr><th scope="row">D</th><td>Diameter, most larger than <b>6 millimeters</b></td></tr>
+<tr><th scope="row">E</th><td>Evolving over weeks or months</td></tr>
+</tbody>
+</table>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">3.</span> Photoaging and chronologic aging <span class="g2-src">(SE 40)</span></h5>
+<div class="g2-two">
+<div>
+<p class="g2-sub">Photoaging</p>
+<ul>
+<li>Coarse wrinkles</li>
+<li>Leathery skin</li>
+<li>Lentigines</li>
+<li>Yellow cobblestone appearance</li>
+<li>Telangiectasis</li>
+</ul>
+</div>
+<div>
+<p class="g2-sub">Chronologic aging</p>
+<ul>
+<li>Thin skin</li>
+<li>Fine wrinkles</li>
+<li>Xerosis</li>
+<li>Laxity</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">4.</span> Glogau types <span class="g2-src">(SE 39)</span></h5>
+<table class="g2-table g2-stack">
+<thead><tr><th scope="col">Type</th><th scope="col">Wrinkles</th><th scope="col">Age</th></tr></thead>
+<tbody>
+<tr><th scope="row">I</th><td>Mild, no wrinkles</td><td><span class="g2-lab">Age</span><b>20&ndash;30 years</b> <span class="g2-src">(T@68961 11/12)</span></td></tr>
+<tr><th scope="row">II</th><td>Wrinkles in motion</td><td><span class="g2-lab">Age</span><b>30&ndash;40</b></td></tr>
+<tr><th scope="row">III</th><td>Wrinkles at rest</td><td><span class="g2-lab">Age</span><b>50 or older</b></td></tr>
+<tr><th scope="row">IV</th><td>Only wrinkles</td><td><span class="g2-lab">Age</span><b>60 or older</b></td></tr>
+</tbody>
+</table>
+</div>
 </section>
 
 <section class="gobj" id="gobj-p8s-3">
 <h3>Sun Exposure · Objective 3: is the patient a self-care candidate?</h3>
 <div class="gbar"><span>Objective (SE 3)</span><b>Determine if the patient is an appropriate self-care candidate</b><i>SE 13, 30, 37, 46, 48</i></div>
-<div class="gpt"><ul><li>Sunburn, not self-care (SE 30): large areas of blistering; fever; extreme pain; headache or confusion; lightheadedness or vision changes; severe swelling; signs of infection.</li><li>Excluded from sunscreen (SE 13): under 6 months of age; allergy to all sunscreen ingredients.</li><li>A lesion that meets the ABCDE rule is seen by a health care provider (SE 37).</li><li>Hydroquinone: when prescribed by a licensed provider (SE 48). Chemical peels: not self-applied OTC (T@72287 11/12).</li></ul></div>
-<div class="gpoll"><b>Her polls</b><ul><li>Can she use the product on her four-month-old: the infant wears protective clothing and sunlight is restricted (not applying it twice daily before exposure; not waiting until over 7 or over 8 months of age) (T@66129&ndash;66269 11/12).</li></ul></div>
+<div class="gpt g2-block"><h5><span class="g2-num">1.</span> Sunburn, not self-care <span class="g2-src">(SE 30)</span></h5>
+<ul>
+<li>Large areas of blistering</li>
+<li>Fever</li>
+<li>Extreme pain</li>
+<li>Headache or confusion</li>
+<li>Lightheadedness or vision changes</li>
+<li>Severe swelling</li>
+<li>Signs of infection</li>
+</ul>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">2.</span> Excluded from sunscreen <span class="g2-src">(SE 13)</span></h5>
+<ul>
+<li>Under <b>6 months</b> of age</li>
+<li>Allergy to all sunscreen ingredients</li>
+</ul>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">3.</span> ABCDE rule <span class="g2-src">(SE 37)</span></h5>
+<p class="g2-p">A lesion that meets the ABCDE rule is seen by a health care provider.</p>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">4.</span> Hydroquinone and chemical peels</h5>
+<table class="g2-table g2-kv">
+<tbody>
+<tr><th scope="row">Hydroquinone</th><td>When prescribed by a licensed provider <span class="g2-src">(SE 48)</span></td></tr>
+<tr><th scope="row">Chemical peels</th><td><p class="g2-said"><span class="g2-k">Said in class</span>Not self-applied OTC <span class="g2-src">(T@72287 11/12)</span></p></td></tr>
+</tbody>
+</table>
+</div>
+<div class="gpoll"><b>Her polls</b>
+<details class="g2-self"><summary>Can she use the product on her four-month-old <span class="g2-tap">Show answer</span></summary><p>The infant wears protective clothing and sunlight is restricted (not applying it twice daily before exposure; not waiting until over 7 or over 8 months of age) <span class="g2-src">(T@66129&ndash;66269 11/12)</span></p></details>
+</div>
 </section>
 
 <section class="gobj" id="gobj-p8s-4">
 <h3>Sun Exposure · Objective 4: treatment goals</h3>
 <div class="gbar"><span>Objective (SE 3)</span><b>List treatment goals</b><i>SE 13, 29, 42</i></div>
-<div class="gpt"><ul><li>Sunburn (SE 29): hydration; relieve pain; provide physical protection; reduce the chances of infection or scarring; minimize medication adverse effects.</li><li>Sun protection (SE 13): everyone should wear sunscreen; UV radiation causes premature skin aging and skin cancers.</li><li>Photoaging: no goals slide; prevention (SE 42, 53): photoaging is preventable and cumulative; sunscreen, protective clothing, less exposure to air pollution and smoking.</li></ul></div>
+<div class="gpt g2-block"><h5><span class="g2-num">1.</span> Sunburn <span class="g2-src">(SE 29)</span></h5>
+<ul>
+<li>Hydration</li>
+<li>Relieve pain</li>
+<li>Provide physical protection</li>
+<li>Reduce the chances of infection or scarring</li>
+<li>Minimize medication adverse effects</li>
+</ul>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">2.</span> Sun protection <span class="g2-src">(SE 13)</span></h5>
+<ul>
+<li>Everyone should wear sunscreen</li>
+<li>UV radiation causes premature skin aging and skin cancers</li>
+</ul>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">3.</span> Photoaging: no goals slide; prevention <span class="g2-src">(SE 42, 53)</span></h5>
+<ul>
+<li>Photoaging is preventable and cumulative</li>
+<li>Sunscreen, protective clothing, less exposure to air pollution and smoking</li>
+</ul>
+</div>
 </section>
 
 <section class="gobj" id="gobj-p8s-5">
 <h3>Sun Exposure · Objective 5: non-drug therapy</h3>
 <div class="gbar"><span>Objective (SE 3)</span><b>Recommend appropriate non-drug therapy</b><i>SE 12, 29, 37, 53</i></div>
-<div class="gpt"><ul><li>Sun safety (SE 12, 37): limit sun from 10 am to 4 pm; check the UV index, a cloudy day is not protective; wide-brimmed hat (4 inches); tight-weave clothing; sunglasses with UV protection; shade; no tanning beds; snow and sand reflect UV radiation.</li><li>Sunburn (SE 29): the first treatment is non-drug; within the past 20 minutes, cool water or cool wet cloths.</li><li>Photoaging (SE 53): face cleaned twice daily with a mild cleanser; moisturizer twice daily or more often, lips included.</li></ul></div>
+<div class="gpt g2-block"><h5><span class="g2-num">1.</span> Sun safety <span class="g2-src">(SE 12, 37)</span></h5>
+<ul>
+<li>Limit sun from <b>10 am to 4 pm</b></li>
+<li>Check the UV index, a cloudy day is not protective</li>
+<li>Wide-brimmed hat (<b>4 inches</b>)</li>
+<li>Tight-weave clothing</li>
+<li>Sunglasses with UV protection</li>
+<li>Shade</li>
+<li>No tanning beds</li>
+<li>Snow and sand reflect UV radiation</li>
+</ul>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">2.</span> Sunburn <span class="g2-src">(SE 29)</span></h5>
+<ul>
+<li>The first treatment is non-drug</li>
+<li>Within the past <b>20 minutes</b>, cool water or cool wet cloths</li>
+</ul>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">3.</span> Photoaging <span class="g2-src">(SE 53)</span></h5>
+<ul>
+<li>Face cleaned <b>twice daily</b> with a mild cleanser</li>
+<li>Moisturizer <b>twice daily or more often</b>, lips included</li>
+</ul>
+</div>
 </section>
 
 <section class="gobj" id="gobj-p8s-6">
 <h3>Sun Exposure · Objective 6: recommend the best treatment</h3>
 <div class="gbar"><span>Objective (SE 4)</span><b>Dosing frequency and max days of use; onset; length of treatment; common and rare but serious adverse effects; contraindications and interactions</b><i>SE 14&ndash;18, 21, 31&ndash;33, 43&ndash;49, 54</i></div>
-<div class="gpt"><ul><li>Sunscreen (SE 14&ndash;15): broad spectrum, SPF &ge; 15, prefer 30+; water resistant for swimming or sweating. About 1 ounce, 15 minutes before; reapply every 40&ndash;80 minutes and after towel drying (SE 21).</li><li>Sensitive skin or a previous reaction (SE 17): zinc oxide or titanium dioxide; avoid PABA. &ldquo;What two ingredients are most effective, OK? Zinc oxide, titanium dioxide&rdquo; (T@55166 11/12).</li><li>Sunburn (SE 31&ndash;33): systemic analgesic for the first 1&ndash;2 days; skin protectant after 24 hours; aloe vera on intact skin as an alternative; first-aid antiseptics and topical anesthetics not recommended.</li><li>Photoaging (SE 43&ndash;49, 54): retinoid once at bedtime to dry skin, SPF 30+ by day; alpha hydroxy acid to dry skin within 15 minutes of cleansing; hydroquinone 4% for hyperpigmentation, three months at most, with sunscreen, not FDA-approved for OTC sale, ochronosis.</li></ul></div>
-<div class="gpoll"><b>Her polls</b><ul><li>Sunburn pain and tenderness: oral ibuprofen (not topical bacitracin, hydrocortisone or benzocaine) (T@65246 11/12).</li><li>Daily use to prevent skin cancer: water-resistant broad-spectrum sunscreen, SPF 50 (not SPF 10; not SPF 30 without broad spectrum; not clothing and hats alone) (T@65588&ndash;65673 11/12).</li><li>Hyperpigmentation: hydroquinone (not benzoyl peroxide, sodium hyaluronate or lactic acid) (T@76234 11/12).</li></ul></div>
-<div style="display:flex;flex-wrap:wrap;gap:7px;margin:8px 0"><button type="button" class="chip" data-jump="ref:ref-p8-sun">Reference: sunscreen, sunburn, photoaging</button><button type="button" class="chip" data-jump="ref:ref-p8-smithpatel">Reference: Dr. Smith and Dr. Patel compared</button></div>
+<div class="gpt g2-block"><h5><span class="g2-num">1.</span> Sunscreen <span class="g2-src">(SE 14&ndash;15)</span></h5>
+<div class="g2-two">
+<table class="g2-table g2-kv">
+<caption>Which product</caption>
+<tbody>
+<tr><th scope="row">Spectrum</th><td>Broad spectrum</td></tr>
+<tr><th scope="row">SPF</th><td>SPF <b>&ge; 15</b>, prefer <b>30+</b></td></tr>
+<tr><th scope="row">Water</th><td>Water resistant for swimming or sweating</td></tr>
+</tbody>
+</table>
+<table class="g2-table g2-kv">
+<caption>Applying it <span class="g2-src">(SE 21)</span></caption>
+<tbody>
+<tr><th scope="row">Amount</th><td>About <b>1 ounce</b></td></tr>
+<tr><th scope="row">When</th><td><b>15 minutes</b> before</td></tr>
+<tr><th scope="row">Reapply</th><td>Reapply every <b>40&ndash;80 minutes</b> and after towel drying</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">2.</span> Sensitive skin or a previous reaction <span class="g2-src">(SE 17)</span></h5>
+<p class="g2-p"><b>Zinc oxide or titanium dioxide</b>; avoid PABA.</p>
+<p class="g2-said"><span class="g2-k">Said in class</span>&ldquo;What two ingredients are most effective, OK? Zinc oxide, titanium dioxide&rdquo; <span class="g2-src">(T@55166 11/12)</span></p>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">3.</span> Sunburn <span class="g2-src">(SE 31&ndash;33)</span></h5>
+<table class="g2-table">
+<thead><tr><th scope="col">Product</th><th scope="col">Use</th></tr></thead>
+<tbody>
+<tr><th scope="row">Systemic analgesic</th><td>For the first <b>1&ndash;2 days</b></td></tr>
+<tr><th scope="row">Skin protectant</th><td>After <b>24 hours</b></td></tr>
+<tr><th scope="row">Aloe vera</th><td>On intact skin as an alternative</td></tr>
+<tr><th scope="row">First-aid antiseptics and topical anesthetics</th><td><b>Not recommended</b></td></tr>
+</tbody>
+</table>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">4.</span> Photoaging <span class="g2-src">(SE 43&ndash;49, 54)</span></h5>
+<table class="g2-table">
+<thead><tr><th scope="col">Product</th><th scope="col">Use</th></tr></thead>
+<tbody>
+<tr><th scope="row">Retinoid</th><td>Once at bedtime to dry skin, SPF 30+ by day</td></tr>
+<tr><th scope="row">Alpha hydroxy acid</th><td>To dry skin within <b>15 minutes</b> of cleansing</td></tr>
+<tr><th scope="row">Hydroquinone 4%</th><td>For hyperpigmentation, <b>three months at most</b>, with sunscreen, not FDA-approved for OTC sale, ochronosis</td></tr>
+</tbody>
+</table>
+<div class="g2-btns"><button type="button" class="chip" data-jump="ref:ref-p8-sun">Reference: sunscreen, sunburn, photoaging</button><button type="button" class="chip" data-jump="ref:ref-p8-smithpatel">Reference: Dr. Smith and Dr. Patel compared</button></div>
+</div>
+<div class="gpoll"><b>Her polls</b>
+<details class="g2-self"><summary>Sunburn pain and tenderness <span class="g2-tap">Show answer</span></summary><p>Oral ibuprofen (not topical bacitracin, hydrocortisone or benzocaine) <span class="g2-src">(T@65246 11/12)</span></p></details>
+<details class="g2-self"><summary>Daily use to prevent skin cancer <span class="g2-tap">Show answer</span></summary><p>Water-resistant broad-spectrum sunscreen, SPF 50 (not SPF 10; not SPF 30 without broad spectrum; not clothing and hats alone) <span class="g2-src">(T@65588&ndash;65673 11/12)</span></p></details>
+<details class="g2-self"><summary>Hyperpigmentation <span class="g2-tap">Show answer</span></summary><p>Hydroquinone (not benzoyl peroxide, sodium hyaluronate or lactic acid) <span class="g2-src">(T@76234 11/12)</span></p></details>
+</div>
 </section>
 
 <section class="gobj" id="gobj-p8s-7">
 <h3>Sun Exposure · Objective 7: follow-up</h3>
 <div class="gbar"><span>Objective (SE 4)</span><b>Provide follow-up recommendations</b><i>SE 34, 37, 53</i></div>
-<div class="gpt"><ul><li>Sunburn (SE 34): progressed or worse after 24&ndash;48 hours, or not healed in 7 days: refer. &ldquo;7-day policy applies here as well&rdquo; (T@64695 11/12).</li><li>Sunscreen (SE 37): stop any product that causes redness, itching, rash or exaggerated sunburn; on a photosensitizing drug, sunscreen and protective clothing every day.</li><li>Photoaging (SE 53): results take at least four weeks.</li></ul></div>
+<div class="gpt g2-block"><h5><span class="g2-num">1.</span> Sunburn <span class="g2-src">(SE 34)</span></h5>
+<div class="g2-tiles">
+<div class="g2-tile"><span class="g2-tile-label">Sunburn: refer if progressed or worse after</span><span class="g2-tile-num">24&ndash;48 hours</span></div>
+<div class="g2-tile"><span class="g2-tile-label">Sunburn: refer if not healed in</span><span class="g2-tile-num">7 days</span></div>
+</div>
+<p class="g2-said"><span class="g2-k">Said in class</span>&ldquo;7-day policy applies here as well&rdquo; <span class="g2-src">(T@64695 11/12)</span></p>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">2.</span> Sunscreen <span class="g2-src">(SE 37)</span></h5>
+<ul>
+<li>Stop any product that causes redness, itching, rash or exaggerated sunburn</li>
+<li>On a photosensitizing drug, sunscreen and protective clothing every day</li>
+</ul>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">3.</span> Photoaging <span class="g2-src">(SE 53)</span></h5>
+<div class="g2-tiles">
+<div class="g2-tile"><span class="g2-tile-label">Photoaging: results take at least</span><span class="g2-tile-num">four weeks</span></div>
+</div>
+</div>
 </section>
 
 <h2 class="gdeck" id="gdeck-p8w">Wound Care Therapeutics (Dr. Patel, 11/12; Exam 2)</h2>
@@ -722,21 +2103,159 @@ const GUIDE_HTML = `
 <section class="gobj" id="gobj-p8w-1">
 <h3>Wound Care · Objective 1: wound type and severity</h3>
 <div class="gbar"><span>Objective (WC 2)</span><b>Identify wound type and severity</b><i>WC 4&ndash;6, 16</i></div>
-<div class="gpt"><ul><li>Types (WC 4): abrasions; punctures (bites, sharp objects); lacerations; burns (thermal, electrical, chemical, UV radiation).</li><li>Stages by depth (WC 5): 1, unbroken, reddened, non-blanching skin; 2, blister or partial-thickness loss (epidermis and part of the dermis); 3, full-thickness loss; 4, into subcutaneous tissue, muscle, tendon and bone. The higher the stage, the longer the healing (T@79102 11/12).</li><li>Healing phases (WC 6, 27): inflammatory, proliferative, remodeling.</li><li>Burns (WC 16): minor, under 15% BSA superficial in an adult, under 10% in a child; moderate, 15%&ndash;25% adult, 10&ndash;20% child; major, over 25% adult, over 20% child, or eyes, ears, face, genitalia, inhalation or electrical burns, poor-risk patients.</li></ul></div>
-<div style="display:flex;flex-wrap:wrap;gap:7px;margin:8px 0"><button type="button" class="chip" data-jump="ref:ref-p8-wound">Reference: wound stages and burn categories</button></div>
+<div class="gpt g2-block"><h5><span class="g2-num">1.</span> Types <span class="g2-src">(WC 4)</span></h5>
+<ul>
+<li>Abrasions</li>
+<li>Punctures (bites, sharp objects)</li>
+<li>Lacerations</li>
+<li>Burns (thermal, electrical, chemical, UV radiation)</li>
+</ul>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">2.</span> Stages by depth <span class="g2-src">(WC 5)</span></h5>
+<table class="g2-table">
+<thead><tr><th scope="col" class="g2-n">Stage</th><th scope="col">Depth</th></tr></thead>
+<tbody>
+<tr><td class="g2-n">1</td><td>Unbroken, reddened, non-blanching skin</td></tr>
+<tr><td class="g2-n">2</td><td>Blister or partial-thickness loss (epidermis and part of the dermis)</td></tr>
+<tr><td class="g2-n">3</td><td>Full-thickness loss</td></tr>
+<tr><td class="g2-n">4</td><td>Into subcutaneous tissue, muscle, tendon and bone</td></tr>
+</tbody>
+</table>
+<p class="g2-said"><span class="g2-k">Said in class</span>The higher the stage, the longer the healing <span class="g2-src">(T@79102 11/12)</span></p>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">3.</span> Healing phases <span class="g2-src">(WC 6, 27)</span></h5>
+<ul>
+<li>Inflammatory</li>
+<li>Proliferative</li>
+<li>Remodeling</li>
+</ul>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">4.</span> Burns <span class="g2-src">(WC 16)</span></h5>
+<table class="g2-table g2-stack">
+<thead><tr><th scope="col">Category</th><th scope="col">Adult</th><th scope="col">Child</th><th scope="col">Or</th></tr></thead>
+<tbody>
+<tr><th scope="row">Minor</th><td><span class="g2-lab">Adult</span><b>Under 15%</b> BSA superficial in an adult</td><td><span class="g2-lab">Child</span><b>Under 10%</b> in a child</td><td></td></tr>
+<tr><th scope="row">Moderate</th><td><span class="g2-lab">Adult</span><b>15%&ndash;25%</b> adult</td><td><span class="g2-lab">Child</span><b>10&ndash;20%</b> child</td><td></td></tr>
+<tr><th scope="row">Major</th><td><span class="g2-lab">Adult</span><b>Over 25%</b> adult</td><td><span class="g2-lab">Child</span><b>Over 20%</b> child</td><td>Or eyes, ears, face, genitalia, inhalation or electrical burns, poor-risk patients</td></tr>
+</tbody>
+</table>
+<div class="g2-btns"><button type="button" class="chip" data-jump="ref:ref-p8-wound">Reference: wound stages and burn categories</button></div>
+</div>
 </section>
 
 <section class="gobj" id="gobj-p8w-2">
 <h3>Wound Care · Objective 2: assess and recommend treatment</h3>
 <div class="gbar"><span>Objective (WC 2)</span><b>Assess and recommend treatment for wounds</b><i>WC 3, 8&ndash;11, 14&ndash;15, 18&ndash;20, 25, 27</i></div>
-<div class="gpt"><ul><li>Goals (WC 3): facilitate healing; reduce scarring; prevent secondary bacterial skin infection; refer if necessary.</li><li>Order (WC 27; T@82489, T@87422 11/12): cleanse with clean water or saline; an antibiotic only when indicated; then a dressing suited to the wound; a moist healing environment.</li><li>First-aid antibiotics (WC 11, 20): bacitracin, neomycin, polymyxin B; after cleansing and before bandaging; 1 to 3 times a day; neomycin systemic toxicity with large areas.</li><li>Topical anesthetics (WC 14, 20): up to 4 times daily; relief for 15 to 45 minutes; small amounts on broken skin; benzocaine, methemoglobinemia. &ldquo;Understand the systemic toxicity of overuse&rdquo; (T@85399 11/12).</li><li>Antiseptics (WC 15, 19): intact skin at the wound edges; inside the wound they reduce healing.</li><li>Dressings (WC 8&ndash;9): gauze absorbs but gives no moist environment and needs frequent changes; hydrocolloid and transparent film give a moist environment, for uninfected wounds only; film is not absorptive.</li><li>Minor burn (WC 18&ndash;20): cool water; acetaminophen or an NSAID; skin protectant; antibiotic or anesthetic as above.</li><li>Smoking (WC 25): 1 pack per day, 3 times the flap necrosis; 2 packs, 6 times.</li></ul></div>
-<div style="display:flex;flex-wrap:wrap;gap:7px;margin:8px 0"><button type="button" class="chip" data-jump="ref:ref-p8-wound">Reference: wound products and burns</button></div>
+<div class="gpt g2-block"><h5><span class="g2-num">1.</span> Goals <span class="g2-src">(WC 3)</span></h5>
+<ul>
+<li>Facilitate healing</li>
+<li>Reduce scarring</li>
+<li>Prevent secondary bacterial skin infection</li>
+<li>Refer if necessary</li>
+</ul>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">2.</span> Order <span class="g2-src">(WC 27; T@82489, T@87422 11/12)</span></h5>
+<ol>
+<li>Cleanse with clean water or saline</li>
+<li>An antibiotic only when indicated</li>
+<li>Then a dressing suited to the wound</li>
+<li>A moist healing environment</li>
+</ol>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">3.</span> First-aid antibiotics <span class="g2-src">(WC 11, 20)</span></h5>
+<table class="g2-table g2-kv">
+<tbody>
+<tr><th scope="row">Drugs</th><td>Bacitracin, neomycin, polymyxin B</td></tr>
+<tr><th scope="row">When</th><td>After cleansing and before bandaging</td></tr>
+<tr><th scope="row">How often</th><td><b>1 to 3 times a day</b></td></tr>
+<tr><th scope="row">Toxicity</th><td>Neomycin systemic toxicity with large areas</td></tr>
+</tbody>
+</table>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">4.</span> Topical anesthetics <span class="g2-src">(WC 14, 20)</span></h5>
+<table class="g2-table g2-kv">
+<tbody>
+<tr><th scope="row">How often</th><td><b>Up to 4 times daily</b></td></tr>
+<tr><th scope="row">Relief</th><td>Relief for <b>15 to 45 minutes</b></td></tr>
+<tr><th scope="row">Broken skin</th><td>Small amounts on broken skin</td></tr>
+<tr><th scope="row">Benzocaine</th><td>Methemoglobinemia</td></tr>
+</tbody>
+</table>
+<p class="g2-said"><span class="g2-k">Said in class</span>&ldquo;Understand the systemic toxicity of overuse&rdquo; <span class="g2-src">(T@85399 11/12)</span></p>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">5.</span> Antiseptics <span class="g2-src">(WC 15, 19)</span></h5>
+<table class="g2-table g2-kv">
+<tbody>
+<tr><th scope="row">Where</th><td>Intact skin at the wound edges</td></tr>
+<tr><th scope="row">Inside the wound</th><td>Inside the wound they reduce healing</td></tr>
+</tbody>
+</table>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">6.</span> Dressings <span class="g2-src">(WC 8&ndash;9)</span></h5>
+<table class="g2-table g2-stack">
+<thead><tr><th scope="col">Dressing</th><th scope="col">Absorption</th><th scope="col">Moist environment</th><th scope="col">Notes</th></tr></thead>
+<tbody>
+<tr><th scope="row">Gauze</th><td><span class="g2-lab">Absorption</span>Absorbs</td><td><span class="g2-lab">Moist environment</span>Gives no moist environment</td><td><span class="g2-lab">Notes</span>Needs frequent changes</td></tr>
+<tr><th scope="row">Hydrocolloid</th><td></td><td><span class="g2-lab">Moist environment</span>Gives a moist environment</td><td><span class="g2-lab">Notes</span>For uninfected wounds only</td></tr>
+<tr><th scope="row">Transparent film</th><td><span class="g2-lab">Absorption</span>Film is not absorptive</td><td><span class="g2-lab">Moist environment</span>Gives a moist environment</td><td><span class="g2-lab">Notes</span>For uninfected wounds only</td></tr>
+</tbody>
+</table>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">7.</span> Minor burn <span class="g2-src">(WC 18&ndash;20)</span></h5>
+<ul>
+<li>Cool water</li>
+<li>Acetaminophen or an NSAID</li>
+<li>Skin protectant</li>
+<li>Antibiotic or anesthetic as above</li>
+</ul>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">8.</span> Smoking <span class="g2-src">(WC 25)</span></h5>
+<table class="g2-table">
+<thead><tr><th scope="col">Smoking</th><th scope="col">Flap necrosis</th></tr></thead>
+<tbody>
+<tr><td>1 pack per day</td><td><b>3 times</b> the flap necrosis</td></tr>
+<tr><td>2 packs</td><td><b>6 times</b></td></tr>
+</tbody>
+</table>
+<div class="g2-btns"><button type="button" class="chip" data-jump="ref:ref-p8-wound">Reference: wound products and burns</button></div>
+</div>
 </section>
 
 <section class="gobj" id="gobj-p8w-3">
 <h3>Wound Care · Objective 3: referral and follow-up</h3>
 <div class="gbar"><span>Objective (WC 2)</span><b>Provide appropriate referral and/or follow-up for wound care</b><i>WC 7, 16&ndash;17, 20</i></div>
-<div class="gpt"><ul><li>Refer a wound (WC 7): face, hands, feet, major joints, genitals or perineum; larger than 3 inches; animal or human bite; chemical, electrical, inhalation or circumferential burn; deep partial thickness or deeper; signs of infection; diabetes or another disorder that complicates management; foreign matter after irrigation; chronic wound.</li><li>Follow-up (WC 7; T@79459 11/12): worse or not healed in 24&ndash;48 hours and/or 7 days. Topical antibiotic with no improvement within 7 days: primary care provider (WC 20).</li><li>Refer a burn (WC 16&ndash;17): moderate or major; 2% BSA or more of a moderate to severe burn; eyes, ears, face, hands, feet or perineum; chemical (after first aid), electrical or inhalation; advanced age; diabetes or multiple medical disorders; immunocompromised.</li></ul></div>
+<div class="gpt g2-block"><h5><span class="g2-num">1.</span> Refer a wound <span class="g2-src">(WC 7)</span></h5>
+<ul>
+<li>Face, hands, feet, major joints, genitals or perineum</li>
+<li>Larger than <b>3 inches</b></li>
+<li>Animal or human bite</li>
+<li>Chemical, electrical, inhalation or circumferential burn</li>
+<li>Deep partial thickness or deeper</li>
+<li>Signs of infection</li>
+<li>Diabetes or another disorder that complicates management</li>
+<li>Foreign matter after irrigation</li>
+<li>Chronic wound</li>
+</ul>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">2.</span> Follow-up <span class="g2-src">(WC 7; T@79459 11/12)</span></h5>
+<table class="g2-table g2-kv">
+<tbody>
+<tr><th scope="row">Wound</th><td>Worse or not healed in <b>24&ndash;48 hours</b> and/or <b>7 days</b></td></tr>
+<tr><th scope="row">Topical antibiotic</th><td>Topical antibiotic with no improvement within <b>7 days</b>: primary care provider <span class="g2-src">(WC 20)</span></td></tr>
+</tbody>
+</table>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">3.</span> Refer a burn <span class="g2-src">(WC 16&ndash;17)</span></h5>
+<ul>
+<li>Moderate or major</li>
+<li><b>2% BSA</b> or more of a moderate to severe burn</li>
+<li>Eyes, ears, face, hands, feet or perineum</li>
+<li>Chemical (after first aid), electrical or inhalation</li>
+<li>Advanced age</li>
+<li>Diabetes or multiple medical disorders</li>
+<li>Immunocompromised</li>
+</ul>
+</div>
 </section>
 
 <h2 class="gdeck" id="gdeck-p8c">Warts, Corns and Calluses Therapeutics (Dr. Patel, 11/12; Exam 2)</h2>
@@ -746,45 +2265,188 @@ const GUIDE_HTML = `
 <section class="gobj" id="gobj-p8c-1">
 <h3>Warts, Corns and Calluses · Objective 1: the self-care interview</h3>
 <div class="gbar"><span>Objective (WCC 2)</span><b>Perform the components of the SCHOLAR-MAC/QuEST and the Pharmacist&rsquo;s Patient Care Process in the self-care interview for dermatologic conditions</b><i>WCC 5&ndash;6, 16</i></div>
-<div class="gpt"><ul><li>Answers that change the plan: where the lesion is and what it looks like (WCC 5&ndash;6); diabetes or poor blood circulation; irritated, infected or reddened skin; a mole or birthmark (WCC 16).</li><li>Footwear &ldquo;tends to be the most common cause&rdquo; of corns and calluses (T@93710 11/12).</li></ul></div>
+<div class="gpt g2-block"><h5><span class="g2-num">1.</span> Answers that change the plan</h5>
+<ul>
+<li>Where the lesion is and what it looks like <span class="g2-src">(WCC 5&ndash;6)</span></li>
+<li>Diabetes or poor blood circulation; irritated, infected or reddened skin; a mole or birthmark <span class="g2-src">(WCC 16)</span></li>
+</ul>
+<p class="g2-said"><span class="g2-k">Said in class</span>Footwear &ldquo;tends to be the most common cause&rdquo; of corns and calluses <span class="g2-src">(T@93710 11/12)</span></p>
+</div>
 </section>
 
 <section class="gobj" id="gobj-p8c-2">
 <h3>Warts, Corns and Calluses · Objective 2: wart, corn or callus?</h3>
 <div class="gbar"><span>Objective (WCC 2)</span><b>Determine the dermatologic condition based on the patient&rsquo;s signs and symptoms and history</b><i>WCC 4&ndash;6, 13</i></div>
-<div class="gpt"><ul><li>Wart (WCC 4&ndash;5): HPV, limited to the epidermis; rough, cauliflower-like; a plantar wart disrupts the skin ridges; hands HPV-2, -4, -27, -57, feet HPV-1.</li><li>Corn (WCC 5, 13): over a bony prominence of the foot; small, raised, sharply demarcated, with a central core; painful; a few millimeters to 1 cm.</li><li>Callus (WCC 5, 13): weight-bearing areas; broad base, diffuse borders, yellowish, normal skin ridges; usually not painful; a few millimeters to several centimeters.</li></ul></div>
-<div style="display:flex;flex-wrap:wrap;gap:7px;margin:8px 0"><button type="button" class="chip" data-jump="ref:ref-p8-wcc">Reference: wart, corn or callus</button></div>
+<div class="gpt g2-block"><h5><span class="g2-num">1.</span> Wart, corn or callus</h5>
+<table class="g2-table g2-stack">
+<thead><tr><th scope="col">Lesion</th><th scope="col">Cause or site</th><th scope="col">Appearance</th><th scope="col">Skin ridges</th><th scope="col">Pain</th><th scope="col">Size</th></tr></thead>
+<tbody>
+<tr><th scope="row">Wart <span class="g2-src">(WCC 4&ndash;5)</span></th><td><span class="g2-lab">Cause or site</span>HPV, limited to the epidermis; hands HPV-2, -4, -27, -57, feet HPV-1</td><td><span class="g2-lab">Appearance</span>Rough, cauliflower-like</td><td><span class="g2-lab">Skin ridges</span>A plantar wart disrupts the skin ridges</td><td></td><td></td></tr>
+<tr><th scope="row">Corn <span class="g2-src">(WCC 5, 13)</span></th><td><span class="g2-lab">Cause or site</span>Over a bony prominence of the foot</td><td><span class="g2-lab">Appearance</span>Small, raised, sharply demarcated, with a central core</td><td></td><td><span class="g2-lab">Pain</span>Painful</td><td><span class="g2-lab">Size</span>A few millimeters to <b>1 cm</b></td></tr>
+<tr><th scope="row">Callus <span class="g2-src">(WCC 5, 13)</span></th><td><span class="g2-lab">Cause or site</span>Weight-bearing areas</td><td><span class="g2-lab">Appearance</span>Broad base, diffuse borders, yellowish</td><td><span class="g2-lab">Skin ridges</span>Normal skin ridges</td><td><span class="g2-lab">Pain</span>Usually not painful</td><td><span class="g2-lab">Size</span>A few millimeters to several centimeters</td></tr>
+</tbody>
+</table>
+<div class="g2-btns"><button type="button" class="chip" data-jump="ref:ref-p8-wcc">Reference: wart, corn or callus</button></div>
+</div>
 </section>
 
 <section class="gobj" id="gobj-p8c-3">
 <h3>Warts, Corns and Calluses · Objective 3: is the patient a self-care candidate?</h3>
 <div class="gbar"><span>Objective (WCC 2)</span><b>Determine if the patient is an appropriate self-care candidate</b><i>WCC 6, 16</i></div>
-<div class="gpt"><ul><li>Self-treatable warts (WCC 6): common warts (hands) and plantar warts (feet). Not self-treatable: flat (face), mosaic (grouped plantar), periungual (around the nail), filiform (face).</li><li>No salicylic acid (WCC 16): diabetes; poor blood circulation; irritated, infected or reddened skin; moles or birthmarks; face, genital or mucous membrane warts.</li></ul></div>
+<div class="gpt g2-block"><h5><span class="g2-num">1.</span> Self-treatable warts <span class="g2-src">(WCC 6)</span></h5>
+<div class="g2-two">
+<div>
+<table class="g2-table">
+<caption>Self-treatable</caption>
+<thead><tr><th scope="col">Wart</th><th scope="col">Site</th></tr></thead>
+<tbody>
+<tr><th scope="row">Common warts</th><td>Hands</td></tr>
+<tr><th scope="row">Plantar warts</th><td>Feet</td></tr>
+</tbody>
+</table>
+</div>
+<div>
+<table class="g2-table">
+<caption>Not self-treatable</caption>
+<thead><tr><th scope="col">Wart</th><th scope="col">Site or form</th></tr></thead>
+<tbody>
+<tr><th scope="row">Flat</th><td>Face</td></tr>
+<tr><th scope="row">Mosaic</th><td>Grouped plantar</td></tr>
+<tr><th scope="row">Periungual</th><td>Around the nail</td></tr>
+<tr><th scope="row">Filiform</th><td>Face</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">2.</span> No salicylic acid <span class="g2-src">(WCC 16)</span></h5>
+<ul>
+<li>Diabetes</li>
+<li>Poor blood circulation</li>
+<li>Irritated, infected or reddened skin</li>
+<li>Moles or birthmarks</li>
+<li>Face, genital or mucous membrane warts</li>
+</ul>
+</div>
 </section>
 
 <section class="gobj" id="gobj-p8c-4">
 <h3>Warts, Corns and Calluses · Objective 4: treatment goals</h3>
 <div class="gbar"><span>Objective (WCC 2)</span><b>List treatment goals</b><i>WCC 7, 14</i></div>
-<div class="gpt"><ul><li>Warts (WCC 7): eliminate signs and symptoms; remove the lesion without scarring; prevent recurrence; prevent the spread of HPV.</li><li>Corns and calluses (WCC 14): symptomatic relief; remove the corn or callus; prevent recurrence by correcting the cause.</li></ul></div>
+<div class="gpt g2-block"><h5><span class="g2-num">1.</span> Warts <span class="g2-src">(WCC 7)</span></h5>
+<ul>
+<li>Eliminate signs and symptoms</li>
+<li>Remove the lesion without scarring</li>
+<li>Prevent recurrence</li>
+<li>Prevent the spread of HPV</li>
+</ul>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">2.</span> Corns and calluses <span class="g2-src">(WCC 14)</span></h5>
+<ul>
+<li>Symptomatic relief</li>
+<li>Remove the corn or callus</li>
+<li>Prevent recurrence by correcting the cause</li>
+</ul>
+</div>
 </section>
 
 <section class="gobj" id="gobj-p8c-5">
 <h3>Warts, Corns and Calluses · Objective 5: non-drug therapy</h3>
 <div class="gbar"><span>Objective (WCC 2)</span><b>Recommend appropriate non-drug therapy</b><i>WCC 8, 15</i></div>
-<div class="gpt"><ul><li>Warts (WCC 8): no cutting, shaving or picking; hands washed before and after touching the wart; a designated towel; no shared towels, razors, socks or shoes; the wart kept covered; foot coverings in bathrooms and public spaces; padding over a plantar wart.</li><li>Corns and calluses (WCC 15): soak 5 minutes in warm water daily; remove dead tissue gently; circular foam or gel cushioning pads; well-fitting, non-binding footwear; orthotics.</li></ul></div>
+<div class="gpt g2-block"><h5><span class="g2-num">1.</span> Warts <span class="g2-src">(WCC 8)</span></h5>
+<ul>
+<li>No cutting, shaving or picking</li>
+<li>Hands washed before and after touching the wart</li>
+<li>A designated towel</li>
+<li>No shared towels, razors, socks or shoes</li>
+<li>The wart kept covered</li>
+<li>Foot coverings in bathrooms and public spaces</li>
+<li>Padding over a plantar wart</li>
+</ul>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">2.</span> Corns and calluses <span class="g2-src">(WCC 15)</span></h5>
+<ul>
+<li>Soak <b>5 minutes</b> in warm water daily</li>
+<li>Remove dead tissue gently</li>
+<li>Circular foam or gel cushioning pads</li>
+<li>Well-fitting, non-binding footwear</li>
+<li>Orthotics</li>
+</ul>
+</div>
 </section>
 
 <section class="gobj" id="gobj-p8c-6">
 <h3>Warts, Corns and Calluses · Objective 6: recommend the best treatment</h3>
 <div class="gbar"><span>Objective (WCC 3)</span><b>Dosing frequency and max days of use; onset; length of treatment; amount of topical product and tube size; adverse effects; contraindications and interactions</b><i>WCC 9&ndash;12, 16&ndash;17</i></div>
-<div class="gpt"><ul><li>Wart, salicylic acid (WCC 10): 40% pad removed after 48 hours and repeated every 48 hours; 17% liquid 1&ndash;2 times a day; either for up to 12 weeks. Salicylic acid &ldquo;is the most effective&rdquo; (T@92731 11/12).</li><li>Wart, cryotherapy (WCC 11): about 20 seconds for a common wart, about 40 seconds for a plantar wart; repeated after 2 weeks if needed; up to 3 treatments. Warts only.</li><li>Corn or callus, salicylic acid (WCC 17): 17% no more than twice daily for up to 14 days; 40% plaster removed within 48 hours, reapplied every 48 hours, no longer than 14 days (7 applications).</li><li>Before each (WCC 10, 17): wash, soak 5 minutes in warm water, dry; keep the product off healthy skin.</li><li>Objective 6.4 names the amount and tube size of a topical product; this deck has no worked calculation. The adult fingertip-unit chart is in Reference.</li></ul></div>
-<div style="display:flex;flex-wrap:wrap;gap:7px;margin:8px 0"><button type="button" class="chip" data-jump="ref:ref-p8-wcc">Reference: salicylic acid and cryotherapy directions</button><button type="button" class="chip" data-jump="ref:ref-p5-ftu">Reference: fingertip units</button></div>
+<div class="gpt g2-block"><h5><span class="g2-num">1.</span> Wart, salicylic acid <span class="g2-src">(WCC 10)</span></h5>
+<div class="g2-two">
+<div>
+<table class="g2-table">
+<thead><tr><th scope="col">Product</th><th scope="col">Directions</th></tr></thead>
+<tbody>
+<tr><th scope="row">40% pad</th><td>Removed after <b>48 hours</b> and repeated every <b>48 hours</b></td></tr>
+<tr><th scope="row">17% liquid</th><td><b>1&ndash;2 times a day</b></td></tr>
+</tbody>
+</table>
+</div>
+<div>
+<div class="g2-tiles">
+<div class="g2-tile"><span class="g2-tile-label">Wart, salicylic acid, either the pad or the liquid: for up to</span><span class="g2-tile-num">12 weeks</span></div>
+</div>
+<p class="g2-said"><span class="g2-k">Said in class</span>Salicylic acid &ldquo;is the most effective&rdquo; <span class="g2-src">(T@92731 11/12)</span></p>
+</div>
+</div>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">2.</span> Wart, cryotherapy <span class="g2-src">(WCC 11)</span></h5>
+<table class="g2-table g2-kv">
+<tbody>
+<tr><th scope="row">Common wart</th><td><b>About 20 seconds</b> for a common wart</td></tr>
+<tr><th scope="row">Plantar wart</th><td><b>About 40 seconds</b> for a plantar wart</td></tr>
+<tr><th scope="row">Repeat</th><td>Repeated after <b>2 weeks</b> if needed</td></tr>
+<tr><th scope="row">Maximum</th><td>Up to <b>3 treatments</b></td></tr>
+<tr><th scope="row">Use</th><td>Warts only</td></tr>
+</tbody>
+</table>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">3.</span> Corn or callus, salicylic acid <span class="g2-src">(WCC 17)</span></h5>
+<table class="g2-table g2-stack">
+<thead><tr><th scope="col">Product</th><th scope="col">Directions</th><th scope="col">Length of use</th></tr></thead>
+<tbody>
+<tr><th scope="row">17%</th><td><span class="g2-lab">Directions</span>No more than <b>twice daily</b></td><td><span class="g2-lab">Length of use</span>For up to <b>14 days</b></td></tr>
+<tr><th scope="row">40% plaster</th><td><span class="g2-lab">Directions</span>Removed within <b>48 hours</b>, reapplied every <b>48 hours</b></td><td><span class="g2-lab">Length of use</span>No longer than <b>14 days</b> (7 applications)</td></tr>
+</tbody>
+</table>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">4.</span> Before each <span class="g2-src">(WCC 10, 17)</span></h5>
+<ul>
+<li>Wash, soak <b>5 minutes</b> in warm water, dry</li>
+<li>Keep the product off healthy skin</li>
+</ul>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">5.</span> Amount and tube size</h5>
+<p class="g2-p">Objective 6.4 names the amount and tube size of a topical product; this deck has no worked calculation. The adult fingertip-unit chart is in Reference.</p>
+<div class="g2-btns"><button type="button" class="chip" data-jump="ref:ref-p8-wcc">Reference: salicylic acid and cryotherapy directions</button><button type="button" class="chip" data-jump="ref:ref-p5-ftu">Reference: fingertip units</button></div>
+</div>
 </section>
 
 <section class="gobj" id="gobj-p8c-7">
 <h3>Warts, Corns and Calluses · Objective 7: follow-up</h3>
 <div class="gbar"><span>Objective (WCC 3)</span><b>Provide follow-up recommendations</b><i>WCC 4, 10&ndash;11, 17</i></div>
-<div class="gpt"><ul><li>Corn or callus (WCC 17; T@94630 11/12): medical attention if redness or irritation occurs, or if it is not removed after 14 days of treatment. It may take several days to months to resolve.</li><li>Wart (WCC 10&ndash;11): the product limits are 12 weeks of salicylic acid and 3 cryotherapy treatments. WCC 4 prints &ldquo;Recurrent or recalcitrant warts should be referred&rdquo;; she said &ldquo;if you see reoccurrence of the wart, that&rsquo;s when we need treatment&rdquo; (T@88519 11/12); see Reference.</li></ul></div>
+<div class="gpt g2-block"><h5><span class="g2-num">1.</span> Corn or callus <span class="g2-src">(WCC 17; T@94630 11/12)</span></h5>
+<table class="g2-table g2-kv">
+<tbody>
+<tr><th scope="row">Medical attention</th><td>Medical attention if redness or irritation occurs, or if it is not removed after <b>14 days</b> of treatment</td></tr>
+<tr><th scope="row">Time to resolve</th><td>It may take several days to months to resolve</td></tr>
+</tbody>
+</table>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">2.</span> Wart <span class="g2-src">(WCC 10&ndash;11)</span></h5>
+<div class="g2-tiles">
+<div class="g2-tile"><span class="g2-tile-label">Wart: the product limit of salicylic acid is</span><span class="g2-tile-num">12 weeks</span></div>
+<div class="g2-tile"><span class="g2-tile-label">Wart: the product limit of cryotherapy is</span><span class="g2-tile-num">3 treatments</span></div>
+</div>
+<p class="g2-p">WCC 4 prints &ldquo;Recurrent or recalcitrant warts should be referred&rdquo;; she said &ldquo;if you see reoccurrence of the wart, that&rsquo;s when we need treatment&rdquo; (T@88519 11/12); see Reference.</p>
+</div>
 </section>
 `;
 
