@@ -237,7 +237,7 @@ QUESTIONS.push(
 
 {id:'P8S-014', skill:'patho', prof:'Patel', tier:'new', topic:'p8s-burn', sub:'path', concept:'p8s-burn-time-course',
  tags:['numbers','two-facts'], source:'both',
- stem:'A patient noticed redness a few hours after a morning at the beach. In Dr. Patel’s therapeutics lecture, when does the erythema of a sunburn peak, and how long may the burn last?',
+ stem:'A patient noticed redness a few hours after a morning at the beach. When does the erythema of a sunburn peak, and how long may the burn last?',
  options:[
   {t:'Around 24 hours; up to 5 days', correct:true, why:'Slide 24: symptoms start about 4 hours after exposure; erythema peaks at around 24 hours; may last for up to 5 days (T@58911–59161 11/12).'},
   {t:'About 4 hours; up to 24 hours', correct:false, why:'4 hours is when symptoms start; 24 hours is the peak (slide 24).'},
@@ -259,7 +259,7 @@ QUESTIONS.push(
 
 {id:'P8S-016', skill:'counsel', prof:'Patel', tier:'new', topic:'p8s-burn', sub:'tx', concept:'p8s-aloe-facts',
  tags:['two-facts'], source:'both',
- stem:'Which statement about aloe vera for sunburn is accurate?',
+ stem:'A woman with a sunburn asks whether she can use aloe vera on it. What should the pharmacist tell her?',
  options:[
   {t:'Topical or oral use; FDA-approved for burn treatment', correct:false, why:'Slide 32: avoid internal use; not approved by the FDA for burn treatment.'},
   {t:'Topical, on intact skin; not FDA-approved for burns', correct:true, why:'Slide 32: "Use topically on intact skin ... Not been approved by the FDA for burn treatment". "It has shown data to be very effective" (T@64222 11/12).'},
@@ -349,7 +349,7 @@ QUESTIONS.push(
 
 {id:'P8S-024', skill:'counsel', prof:'Patel', tier:'new', topic:'p8s-prot', sub:'sel', concept:'p8s-spf-minimum-preferred',
  tags:['numbers'], source:'both',
- stem:'In Dr. Patel’s therapeutics lecture, which sunscreen is advised at a minimum, and what is preferred?',
+ stem:'A patient asks what to look for when buying a sunscreen. Which sunscreen is advised at a minimum, and what is preferred?',
  options:[
   {t:'Broad-spectrum SPF ≥ 30; SPF 50+ preferred', correct:false, why:'Slide 15: at least SPF ≥ 15; prefer SPF 30+.'},
   {t:'A UVB sunscreen SPF ≥ 15; broad spectrum preferred', correct:false, why:'Broad spectrum is part of the minimum (slides 15, 36).'},
@@ -415,7 +415,7 @@ QUESTIONS.push(
 
 {id:'P8S-030', skill:'counsel', prof:'Patel', tier:'new', topic:'p8s-prot', sub:'apply', concept:'p8s-reapply-interval',
  tags:['numbers'], source:'both',
- stem:'In Dr. Patel’s therapeutics lecture, how often is sunscreen reapplied?',
+ stem:'A family will spend the afternoon at an outdoor pool. How often should they be told to reapply sunscreen?',
  options:[
   {t:'Every 15 minutes', correct:false, why:'15 minutes is the lead time before exposure (slide 21).'},
   {t:'Every 40–80 minutes', correct:true, why:'Slide 21: "Reapply every 40-80 min increments"; slide 36: "at least every 40 - 80 minutes (as labeled)" (T@57714 11/12). "How frequent are we applying it?" (T@66751 11/12).'},
@@ -461,7 +461,7 @@ QUESTIONS.push(
 
 {id:'P8S-034', skill:'counsel', prof:'Patel', tier:'new', topic:'p8s-prot', sub:'couns', concept:'p8s-vitamin-d',
  tags:['counseling'], source:'both',
- stem:'A healthy 40-year-old says she skips sunscreen to keep her vitamin D up. What is accurate?',
+ stem:'A healthy 40-year-old says she skips sunscreen to keep her vitamin D up. What should the pharmacist tell her?',
  options:[
   {t:'Daily sunscreen lowers vitamin D in healthy people', correct:false, why:'Slide 23: it will not compromise vitamin D status in healthy people.'},
   {t:'A physical sunscreen is needed to keep vitamin D', correct:false, why:'Slide 23 speaks of daily broad-spectrum sunscreens with high UVA protection, not physical products alone.'},
@@ -610,7 +610,7 @@ QUESTIONS.push(
 
 {id:'P8S-047', skill:'case', prof:'Patel', tier:'new', topic:'p8s-age', sub:'hq', concept:'p8s-hydroquinone-fda',
  tags:['case'], source:'both',
- stem:'A patient brings a nonprescription skin-lightening cream to the counter; hydroquinone is on the label. What is accurate?',
+ stem:'A patient brings a nonprescription skin-lightening cream to the counter; hydroquinone is on the label. What is the regulatory status of hydroquinone in this product?',
  options:[
   {t:'Hydroquinone is not FDA-approved for OTC sale', correct:true, why:'Slide 48: "Skin lightening products with hydroquinone are NOT FDA-approved for over-the-counter sale in the U.S."; use when prescribed by a licensed health care provider. "It is not FDA approved for OTC sale in the US" (T@73089 11/12).'},
   {t:'Hydroquinone 4% is FDA-approved for OTC sale', correct:false, why:'Slide 48: not FDA-approved for OTC sale; 4% is the strength in combination products (slide 47).'},
@@ -632,7 +632,7 @@ QUESTIONS.push(
 
 {id:'P8S-049', skill:'counsel', prof:'Patel', tier:'new', topic:'p8s-age', sub:'oth', concept:'p8s-peel-self-applied',
  tags:['case'], source:'both',
- stem:'A patient asks about buying a chemical peel kit to use on her own face at home for photoaging. Which response matches Dr. Patel’s advice?',
+ stem:'A patient asks about buying a chemical peel kit to use on her own face at home for photoaging. What should the pharmacist tell her?',
  options:[
   {t:'Not recommended as a self-applied OTC product', correct:true, why:'"I would not recommend chemical peels that are over the counter and something that you can do to your own skin ... because of the side effects and the risk factors" (T@72287 11/12); usually done by medical spas and aestheticians. Slide 46 lists the side effects by depth.'},
   {t:'Not recommended as a deep peel; superficial kits suit home use', correct:false, why:'She did not recommend any self-applied OTC peel (T@72287 11/12); superficial peels still carry pigmentary change, erythema and burning (slide 46).'},

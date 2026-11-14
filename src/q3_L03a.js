@@ -1212,7 +1212,7 @@ QUESTIONS.push(
 
 {id:'L3-103', skill:'class', prof:'Smith', tier:'new', topic:'l3-jak', sub:'drugs', concept:'jak-small',
  tags:['tell'], source:'both',
- stem:'How do tofacitinib, ruxolitinib and upadacitinib differ from the monoclonal antibodies in this lecture?',
+ stem:'How do the JAK inhibitors tofacitinib, ruxolitinib and upadacitinib differ from monoclonal antibodies?',
  options:[
   {t:'They are small molecules that enter cells', correct:true, why:'T 570–573: "Monoclonals are too big to get in the cell".'},
   {t:'They are fusion proteins with an Fc chain', correct:false, why:'Fusion proteins are abatacept and etanercept (slides 63, 71).'},

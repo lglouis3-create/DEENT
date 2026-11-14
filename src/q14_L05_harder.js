@@ -91,7 +91,7 @@ QUESTIONS.push(
 
 {id:'P5H-006', skill:'case', prof:'Patel', tier:'new', topic:'p5-alg', sub:'step', concept:'h5-algo-moderate-next-tci',
  tags:['hard','case','reasoning'], source:'both',
- stem:'A 26-year-old man with moderate atopic dermatitis has followed basic management for 3 months. On that, he has used hydrocortisone 1% daily, including the face, and a medium-potency steroid twice weekly on the trunk. His skin is still not controlled, and he has used no other prescription product. On her step-care algorithm, which maintenance option comes next?',
+ stem:'A 26-year-old man with moderate atopic dermatitis has followed basic management for 3 months. On that, he has used hydrocortisone 1% daily, including the face, and a medium-potency steroid twice weekly on the trunk. His skin is still not controlled, and he has used no other prescription product. Which maintenance option comes next?',
  options:[
   {t:'A topical calcineurin inhibitor twice daily to affected skin', correct:true, why:'In moderate AD the TCI is the second-line option after topical steroids (slide 38; slide 48 maintenance TCI); "basic management and topical 1st line, 2nd line, 3rd line" (T@57570).'},
   {t:'A topical PDE-4 inhibitor ointment twice daily to affected skin', correct:false, why:'Crisaborole (the PDE-4 inhibitor) is the third-line option, after a TCI (slide 41); he has not tried a TCI yet.'},
@@ -146,7 +146,7 @@ QUESTIONS.push(
 
 {id:'P5H-012', skill:'counsel', prof:'Patel', tier:'new', topic:'p5-sys', sub:'dup', concept:'h5-dupilumab-live-vaccine-case',
  tags:['hard','case','interaction'], source:'both',
- stem:'A 29-year-old woman with severe atopic dermatitis is starting dupilumab. She uses triamcinolone 0.1% cream for flares and is due for a live vaccine next month. Which counseling point is correct?',
+ stem:'A 29-year-old woman with severe atopic dermatitis is starting dupilumab. She uses triamcinolone 0.1% cream for flares and is due for a live vaccine next month. Which counseling point should she receive?',
  options:[
   {t:'Avoid the live vaccine while she is using dupilumab', correct:true, why:'Slides 43–44: do not use with live vaccines; "I may include it on a case and then you know to not recommend it" (T@48108).'},
   {t:'Stop the triamcinolone cream once dupilumab is started', correct:false, why:'Slide 44: dupilumab may be used concomitantly with topical corticosteroids or TCIs (T@51208).'},
@@ -157,7 +157,7 @@ QUESTIONS.push(
 
 {id:'P5H-013', skill:'case', prof:'Patel', tier:'new', topic:'p5-alg', sub:'step', concept:'h5-severe-after-topicals',
  tags:['hard','case','reasoning'], source:'both',
- stem:'A 34-year-old man with severe atopic dermatitis (SCORAD 68, nightly loss of sleep) has not responded to basic management, low-, medium- and high-potency topical steroids, and tacrolimus ointment. He takes no other medicines and has no infections. Which is the most appropriate next step on her algorithm?',
+ stem:'A 34-year-old man with severe atopic dermatitis (SCORAD 68, nightly loss of sleep) has not responded to basic management, low-, medium- and high-potency topical steroids, and tacrolimus ointment. He takes no other medicines and has no infections. Which is the most appropriate next step?',
  options:[
   {t:'Dupilumab 600 mg SC once, then 300 mg every other week', correct:true, why:'Severe AD after the topicals have failed: "this is when you look into Dupixent" (T@57774; slide 48); adult dosing 600 mg once (2 × 300 mg), then 300 mg every other week (slide 44).'},
   {t:'Abrocitinib 100 mg by mouth once daily, up to 200 mg later', correct:false, why:'JAK inhibitors are the refractory option after other systemic and biologic therapy (slide 46): "absolute last-line refractory option" (T@54970).'},
@@ -168,7 +168,7 @@ QUESTIONS.push(
 
 {id:'P5H-014', skill:'counsel', prof:'Patel', tier:'new', topic:'p5-care', sub:'couns', concept:'h5-shower-sequence',
  tags:['hard','counsel','list'], source:'both',
- stem:'A patient with atopic dermatitis showers each evening, then uses a moisturizer and triamcinolone 0.1% cream on the lesions. Which order of steps matches her counseling?',
+ stem:'A patient with atopic dermatitis showers each evening, then uses a moisturizer and triamcinolone 0.1% cream on the lesions. In which order should she do these steps after the shower?',
  options:[
   {t:'Wash hands; emollient within 3 min on damp skin; wait a few min; thin layer on lesions', correct:true, why:'Slide 52: wash hands before and after; emollient within 3 minutes after bathing while skin is still damp; thin layer; "you can wait a few minutes between the emollient and then the medication" (T@63718–63910).'},
   {t:'Wash hands; thin layer on lesions on damp skin; emollient on top; cover with plastic wrap', correct:false, why:'The emollient goes on first (slide 52), and "we don\'t want to wrap the medication cause that\'ll increase the absorption" (T@40748).'},
@@ -245,7 +245,7 @@ QUESTIONS.push(
 
 {id:'P5N-004', skill:'patho', prof:'Patel', tier:'new', topic:'p5-ad', sub:'def', concept:'h5-eczema-not-contagious',
  tags:['hard','case'], source:'both',
- stem:'A 19-year-old college student says her doctor called the itchy, dry patches behind her knees "eczema." Her roommate asks whether she can catch it. What is the correct answer?',
+ stem:'A 19-year-old college student says her doctor called the itchy, dry patches behind her knees "eczema." Her roommate asks whether she can catch it. What should the roommate be told?',
  options:[
   {t:'No; eczema is atopic dermatitis, which is not contagious', correct:true, why:'Slide 17: atopic dermatitis, also known as eczema; no cure; not contagious ("there is no cure sadly, as well as it is not contagious", T@13300).'},
   {t:'Yes; eczema is a fungal skin infection spread by contact', correct:false, why:'Eczema is atopic dermatitis, a chronic or relapsing inflammatory skin disorder, not an infection (slide 17).'},
@@ -267,7 +267,7 @@ QUESTIONS.push(
 
 {id:'P5N-006', skill:'counsel', prof:'Patel', tier:'new', topic:'p5-care', sub:'bath', concept:'h5-weeping-on-pimecrolimus',
  tags:['hard','case','interaction'], source:'both',
- stem:'A mother says her 8-year-old, who applies pimecrolimus 1% cream twice daily, has weeping, oozing patches on his arms at night. She asks how to dry them. Which advice fits Dr. Patel\'s counseling?',
+ stem:'A mother says her 8-year-old, who applies pimecrolimus 1% cream twice daily, has weeping, oozing patches on his arms at night. She asks how to dry them. What should the pharmacist tell her?',
  options:[
   {t:'No cool wet wrap or compress over the pimecrolimus, since neither is used with a TCI', correct:true, why:'Slide 30: wet wrap short-term and not with TCIs; slide 51: cool compresses for weeping lesions, "but not to TCI\'s"; "what medication are we not applying that with? ... TCIs" (T@62700).'},
   {t:'A cool wet wrap over the pimecrolimus each night until the oozing stops', correct:false, why:'Wet wraps are not applied with TCIs (slide 30; T@62700).'},
@@ -355,7 +355,7 @@ QUESTIONS.push(
 
 {id:'P5N-014', skill:'counsel', prof:'Patel', tier:'new', topic:'p5-dd', sub:'cause', concept:'h5-iad-nonpharm',
  tags:['hard','case'], source:'both',
- stem:'The daughter of an 81-year-old bedridden man with urinary incontinence asks how to prevent his incontinence-associated dermatitis from coming back. Which set of measures matches Dr. Patel\'s prevention advice for adults?',
+ stem:'The daughter of an 81-year-old bedridden man with urinary incontinence asks how to prevent his incontinence-associated dermatitis from coming back. Which set of measures should the pharmacist recommend?',
  options:[
   {t:'pH-neutral cleansing foam, pat with a soft cloth, barrier cream, protein and vitamins', correct:true, why:'Slide 59 (adults): cleansing routine (bath oil or pH-neutral cleansing foam, patting motion with a soft cloth), skin hydration, barrier cream application, pressure sore prevention, good nutrition (protein, vitamin status) (T@72900).'},
   {t:'Alkaline soap, rub dry with a towel, barrier cream, protein and vitamins', correct:false, why:'Alkaline skin pH is one of the causes on slide 56, and slide 59 uses a patting motion, not rubbing.'},

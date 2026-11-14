@@ -152,7 +152,7 @@ QUESTIONS.push(
 /* ---- Ribosomal antibiotics (slides 42–47) -------------------------------- */
 {id:'SX-011', skill:'mech', prof:'Smith', tier:'new', topic:'l3-abx', sub:'tet', concept:'x-doxy-30s-static',
  tags:['exam-style'], source:'both', dupOf:'L3-002',
- stem:'A patient asks how doxycycline helps acne if it does not kill the bacteria. Which answer fits?',
+ stem:'Doxycycline helps acne without killing the bacteria. How does it act?',
  options:[
   {t:'It binds the 50S subunit and stops bacterial growth', correct:false, why:'Bacteriostatic is right, but 50S is the subunit of clindamycin and the macrolides (slides 46–47); tetracyclines bind 30S (slide 43).'},
   {t:'It binds the 30S subunit of human ribosomes in follicles', correct:false, why:'30S is right, but it binds the bacterial ribosome (slide 43).'},
@@ -332,7 +332,7 @@ QUESTIONS.push(
 
 {id:'SX-027', skill:'tell', prof:'Smith', tier:'new', topic:'l3-cytok', sub:'il23', concept:'x-risan-origin-target',
  tags:['exam-style'], source:'both', dupOf:'L3-114',
- stem:'Dr. Smith asks two things about each biologic: is it human or humanized, and what does it bind? Which answer fits risankizumab?',
+ stem:'Is risankizumab human or humanized, and what does it bind?',
  options:[
   {t:'Human; it binds p40 of IL-12 and IL-23', correct:false, why:'A true description of ustekinumab, the other IL-23 drug: "fully human IgG monoclonal antibody to the p40 protein" (slide 67); wrong for risankizumab in origin and target.'},
   {t:'Human; it binds p19 of IL-23', correct:false, why:'p19 is right, but human is guselkumab (slide 68).'},
@@ -399,7 +399,7 @@ QUESTIONS.push(
 
 {id:'SX-033', skill:'tell', prof:'Smith', tier:'new', topic:'l3c-prod', sub:'org', concept:'x-padimate-uvb-stain',
  tags:['exam-style'], source:'slide', dupOf:'L3CH-011',
- stem:'Padimate O is an aminobenzoate sunscreen. Which pairing of action and drawback fits?',
+ stem:'Padimate O is an aminobenzoate sunscreen. How does it act, and what drawback does it carry?',
  options:[
   {t:'Scatters UVB like zinc oxide; may stain clothing', correct:false, why:'Staining is right (sunblocks may stain clothing too, slide 21), but it is an organic sunscreen that absorbs (slide 22).'},
   {t:'Converts UVB to heat; poor substantivity', correct:false, why:'The mechanism is right, but poor substantivity belongs to the benzophenones (slide 24).'},
@@ -557,14 +557,14 @@ QUESTIONS.push(
 
 {id:'KX-012', skill:'chem', prof:'Sikazwe', tier:'new', topic:'s4-sys', sub:'apr', concept:'x-apr-isoindoline-only',
  tags:['exam-style'], source:'both', dupOf:'SX-002',
- stem:'Apremilast and crisaborole share a drug target. Which statement is true of apremilast only?',
+ stem:'Crisaborole is a benzoxaborole. Apremilast acts on the same target, PDE4, but belongs to which chemical class?',
  options:[
-  {t:'Its boron binds Zn²⁺ and Mg²⁺', correct:false, why:'The PDE4 binding basis taught for crisaborole, but the boron is crisaborole\'s, not apremilast\'s (Lecture 3, slide 7; 11/03 T 712–719).'},
-  {t:'It leads to higher cAMP', correct:false, why:'The true result of PDE4 inhibition, but both drugs raise cAMP (Lecture 3, slide 7, "higher cAMP"; slide 34, "Leads to ↑ cAMP").'},
-  {t:'It is an isoindoline', correct:true, why:'Slide 34: apremilast is "An Isoindoline"; the two share a target but not a chemical class (T@13698–13800; 11/03 T 732–733).'},
-  {t:'It is cleared without CYP enzymes', correct:false, why:'Crisaborole is oxidized by "not sips, 2 enzymes" (11/03 T 708–709); apremilast relies on CYP3A4 for its metabolism (slide 34; T@13600–14100).'}],
+  {t:'A pteridine', correct:false, why:'A real chemical class in these lectures, but the pteridine is methotrexate (slide 30).'},
+  {t:'A furanocoumarin', correct:false, why:'A real chemical class in these lectures, but the furanocoumarin is 8-methoxypsoralen (Lecture 3, slide 18).'},
+  {t:'An isoindoline', correct:true, why:'Slide 34: apremilast is "An Isoindoline"; the two share a target but not a chemical class (T@13698–13800; 11/03 T 732–733).'},
+  {t:'A secosteroid', correct:false, why:'A real chemical class in these lectures, but the secosteroids are calcitriol and calcipotriene (slide 27).'}],
  teach:'Same target, different chemistry: apremilast (oral, an isoindoline, CYP3A4 metabolism) and crisaborole (topical, boron-containing, non-CYP metabolism) both inhibit PDE4 and raise cAMP (slides 7, 34).',
- cite:XQ_S4+' slides 7, 34; T@13600–14100; 11/03 T 708–719, 732–733'},
+ cite:XQ_S4+' slides 7, 18, 27, 30, 34; T@13600–14100; 11/03 T 708–719, 732–733'},
 
 /* ---- Retinoids, antiandrogens (pp. 29, 49–53) ---------------------------- */
 {id:'KX-013', skill:'chem', prof:'Sikazwe', tier:'new', topic:'s4-ret', sub:'g3', concept:'x-taz-ester-why',
@@ -603,14 +603,14 @@ QUESTIONS.push(
 /* ---- Sunscreens (pp. 61–66) ---------------------------------------------- */
 {id:'KX-016', skill:'chem', prof:'Sikazwe', tier:'new', topic:'s4-sun', sub:'org', concept:'x-avobenzone-photodeg',
  tags:['exam-style'], source:'both', dupOf:'S4H-027',
- stem:'Avobenzone is a dibenzoylmethane. Which description fits it?',
+ stem:'Avobenzone is a dibenzoylmethane sunscreen. What happens to it in sunlight?',
  options:[
-  {t:'Stays photostable for about 12 hours', correct:false, why:'Photostability is a real sunscreen property in this lecture, but about 12 hours is ensulizole (T@42930); avobenzone is rapidly degraded by UVA (slide 62).'},
-  {t:'Absorbs UVA, then UVA degrades it', correct:true, why:'Slide 62: avobenzone "Absorbs the full spectrum of UVA ... Rapidly degraded by UVA"; "photodegradation, that means the same light they\'re absorbing is also degrading them" (T@40800–41000).'},
-  {t:'Is highly absorbed through the skin', correct:false, why:'Skin absorption is a real sunscreen concern, but high skin absorption (log P about 4) belongs to the benzophenones; avobenzone has low skin absorption (slide 65; T@40400–40600, T@43600).'},
-  {t:'Mainly absorbs UVB, as octinoxate does', correct:false, why:'Octinoxate is a real organic absorber listed under UVB (slide 63), but avobenzone absorbs the full spectrum of UVA (slide 62).'}],
+  {t:'It stays photostable for about 12 hours', correct:false, why:'Photostability is a real sunscreen property in this lecture, but about 12 hours is ensulizole (T@42930); avobenzone is rapidly degraded by UVA (slide 62).'},
+  {t:'It absorbs UVA, then UVA degrades it', correct:true, why:'Slide 62: avobenzone "Absorbs the full spectrum of UVA ... Rapidly degraded by UVA"; "photodegradation, that means the same light they\'re absorbing is also degrading them" (T@40800–41000).'},
+  {t:'It reflects and scatters UVA, as zinc oxide does', correct:false, why:'Reflecting or scattering light is how the metal oxide sunblocks work (slide 61); avobenzone is an organic sunscreen that absorbs UVA (slide 62).'},
+  {t:'It mainly absorbs UVB, as octinoxate does', correct:false, why:'Octinoxate is a real organic absorber listed under UVB (slide 63), but avobenzone absorbs the full spectrum of UVA (slide 62).'}],
  teach:'Avobenzone, a dibenzoylmethane, absorbs the full UVA spectrum but is rapidly degraded by the same UVA it absorbs, so it must be reapplied (slide 62).',
- cite:XQ_S4+' slides 62–65; T@40400–43600'},
+ cite:XQ_S4+' slides 61–65; T@40400–43600'},
 
 {id:'KX-017', skill:'chem', prof:'Sikazwe', tier:'new', topic:'s4-sun', sub:'org', concept:'x-ensulizole-water',
  tags:['exam-style'], source:'both', dupOf:'S4-106',

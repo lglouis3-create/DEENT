@@ -240,7 +240,7 @@ QUESTIONS.push(
 
 {id:'P8W-016', skill:'counsel', prof:'Patel', tier:'new', topic:'p8w-otc', sub:'abx', concept:'p8w-abx-directions',
  tags:['case','numbers','refer'], source:'slide',
- stem:'A 28-year-old with a minor burn on the forearm asks how to use an ointment of polymyxin B, neomycin and bacitracin. Which directions are correct?',
+ stem:'A 28-year-old with a minor burn on the forearm asks how to use an ointment of polymyxin B, neomycin and bacitracin. Which directions should the pharmacist give?',
  options:[
   {t:'Up to 4 times daily; relief lasts 15 to 45 minutes', correct:false, why:'These are the topical anesthetic facts (slide 20).'},
   {t:'1 to 3 times a day; see a provider if no better in 7 days', correct:true, why:'Slide 20: "when used 1 to 3 times a day ... If improvement is not seen within 7 days, the patient should see a primary care provider."'},
@@ -262,7 +262,7 @@ QUESTIONS.push(
 
 {id:'P8W-018', skill:'counsel', prof:'Patel', tier:'new', topic:'p8w-otc', sub:'anes', concept:'p8w-anesthetic-directions',
  tags:['case','know-this','numbers'], source:'both',
- stem:'A 30-year-old with a minor burn that has broken skin asks how to use an OTC lidocaine product for the pain. Which directions are correct?',
+ stem:'A 30-year-old with a minor burn that has broken skin asks how to use an OTC lidocaine product for the pain. Which directions should the pharmacist give?',
  options:[
   {t:'Apply liberally; up to 4 times daily', correct:false, why:'Slide 20: small quantities and low concentrations on broken skin, to prevent systemic absorption.'},
   {t:'Apply a small amount; repeat every 15 to 45 minutes', correct:false, why:'15 to 45 minutes is how long the relief lasts; the maximum is 4 times daily (slide 20).'},
@@ -398,12 +398,12 @@ QUESTIONS.push(
 /* ---- Smoking (slide 25) --------------------------------------------------- */
 {id:'P8W-030', skill:'patho', prof:'Patel', tier:'new', topic:'p8w-heal', sub:'smoke', concept:'p8w-smoking-necrosis',
  tags:['numbers','two-facts'], source:'both',
- stem:'A patient with a healing wound smokes 2 packs per day. Which statement about smoking and wound healing is correct?',
+ stem:'A patient with a healing wound smokes 2 packs per day. How does this change the frequency of flap necrosis, and what does nicotine do to the blood vessels?',
  options:[
   {t:'3 times the frequency of flap necrosis; nicotine causes vasoconstriction', correct:false, why:'3 times is the figure for 1 pack per day (slide 25).'},
   {t:'6 times the frequency of flap necrosis; nicotine causes vasodilation', correct:false, why:'Slide 25: nicotine acts via the sympathetic system; vasoconstriction and limited distal perfusion.'},
   {t:'6 times the frequency of flap necrosis; nicotine causes vasoconstriction', correct:true, why:'Slide 25: "2ppd = 6x frequency of flap necrosis"; nicotine: "Vasoconstriction and limit distal perfusion; 1 cigarette = vasoconstriction > 90 min". "Notice the pack per day" (T@86371 11/12).'},
-  {t:'3 times the frequency of flap necrosis; carbon monoxide raises oxygen delivery', correct:false, why:'Slide 25: carbon monoxide shifts the oxygen-hemoglobin curve to the left and decreases tissue oxygen delivery; 2 packs per day is 6 times.'}],
+  {t:'3 times the frequency of flap necrosis; nicotine causes vasodilation', correct:false, why:'Slide 25: 3 times is the figure for 1 pack per day; 2 packs per day is 6 times, and nicotine causes vasoconstriction, not vasodilation.'}],
  teach:'Slide 25: 1 ppd = 3x, 2 ppd = 6x. She said "3 times frequency of necrosis ... 2 packs per day doubles the frequency" (T@86371, T@86431 11/12): double the 3x, which is the slide’s 6x.',
  cite:P8WQ+' slide 25; T@86298–86735 11/12'}
 );

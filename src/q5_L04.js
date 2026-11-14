@@ -325,14 +325,14 @@ QUESTIONS.push(
 
 {id:'S4-021', skill:'chem', prof:'Sikazwe', tier:'new', topic:'s4-limus', sub:'class', concept:'lactone-vs-lactam',
  tags:['structure'], source:'both',
- stem:'Which pairing of drug and ring functional group is correct?',
+ stem:'Pimecrolimus and tacrolimus are lactones; cyclosporine is a lactam. Which functional group in its ring makes cyclosporine a lactam?',
  options:[
-  {t:'Cyclosporine, cyclic amide (lactam)', correct:true, why:'Cyclosporine is an 11 amino acid cyclic peptide; "the cyclic peptide ... can be described then as a what? And a lactam" (slide 33; T@12150–12254).'},
-  {t:'Tacrolimus, 11 amino acid cyclic peptide', correct:false, why:'Tacrolimus is a macrolide lactone (slides 28, 32); the 11 amino acid cyclic peptide is cyclosporine (slide 33).'},
-  {t:'Pimecrolimus, cyclic peroxide bond', correct:false, why:'Pimecrolimus is a lactone, a cyclic ester (slide 32); the peroxide is benzoyl peroxide (slide 47).'},
-  {t:'Cyclosporine, cyclic ester (lactone)', correct:false, why:'Its ring is built from amide (peptide) bonds, so it is a lactam (T@12100–12254).'}],
+  {t:'A cyclic amide', correct:true, why:'Cyclosporine is an 11 amino acid cyclic peptide; "the cyclic peptide ... can be described then as a what? And a lactam" (slide 33; T@12150–12254).'},
+  {t:'A cyclic ester', correct:false, why:'Its ring is built from amide (peptide) bonds, so it is a lactam (T@12100–12254).'},
+  {t:'A cyclic peroxide', correct:false, why:'The peroxide is benzoyl peroxide (slide 47); a lactam ring is closed through an amide bond (T@12150–12254).'},
+  {t:'A cyclic disulfide', correct:false, why:'Disulfide bonds are the keratin bonds that sulfur breaks (slide 46); a lactam is a cyclic amide (T@12150–12254).'}],
  teach:'Peptide bonds are amide bonds; closing a chain of them into a ring makes a cyclic amide, a lactam (cyclosporine, slide 33). Closing a ring through an ester makes a lactone (pimecrolimus, tacrolimus; slides 28, 32).',
- cite:S4+' slides 32–33; T@11453–11720, T@12100–12254'},
+ cite:S4+' slides 32–33, 46–47; T@11453–11720, T@12100–12254'},
 
 /* ---- Retinoids for psoriasis (slide 29) ---------------------------------- */
 {id:'S4-022', skill:'chem', prof:'Sikazwe', tier:'new', topic:'s4-psret', sub:'taz', concept:'tazarotene-alkyne',
@@ -647,14 +647,14 @@ QUESTIONS.push(
 
 {id:'S4-049', skill:'pk', prof:'Sikazwe', tier:'new', topic:'sk-beyond', sub:'tof', concept:'tofacitinib-3a4', lowYield:true, unassigned:true, note:'Outside Dr. Sikazwe\'s assigned pages for Exam 1 (list of 11/06: printed slides 7–9, 12, 15–22, 24–33, 42–54, 60–65). The list uses the numbers printed on the slides; from printed slide 22 on, the slide numbers cited here run one higher.',
  tags:['metabolism','numbers'], source:'both',
- stem:'Which statement about tofacitinib metabolism is correct?',
+ stem:'Which enzyme carries out the major pathway (about 70%) of tofacitinib metabolism?',
  options:[
-  {t:'About 70% is metabolized by CYP3A4', correct:true, why:'Slide 35: "70% Metabolized by 3A4 (maj pathway)"; "extensively metabolized by 3F4 [3A4] and other CP enzymes" (T@14947–15050).'},
-  {t:'It is activated by carboxylesterases', correct:false, why:'No activation step was taught; 3A4 deactivates it (T@14850–14950).'},
-  {t:'It is excreted unchanged in feces', correct:false, why:'Not taught for tofacitinib; it is extensively metabolized (slide 35).'},
-  {t:'It is cleared by glycine conjugation', correct:false, why:'Glycine conjugation was taught for salicylic acid (slide 43).'}],
+  {t:'CYP3A4', correct:true, why:'Slide 35: "70% Metabolized by 3A4 (maj pathway)"; "extensively metabolized by 3F4 [3A4] and other CP enzymes" (T@14947–15050).'},
+  {t:'CYP2D6', correct:false, why:'CYP2D6 is the second isoform for upadacitinib (slide 8); for tofacitinib the major pathway is 3A4 (slide 35).'},
+  {t:'CYP2C9', correct:false, why:'CYP2C9 is the second isoform for ruxolitinib (slide 8); for tofacitinib the major pathway is 3A4 (slide 35).'},
+  {t:'Carboxylesterase', correct:false, why:'Carboxylesterases activate the ester prodrug tazarotene (slide 29); tofacitinib depends on 3A4 for deactivation (T@14850–14950).'}],
  teach:'Tofacitinib is "not well profiled" for PK, but depends on 3A4 for deactivation, and 13 metabolites are known (slide 35; T@14700–15000). "So again, the concern here is that you caution against inhibitors ... and induces [inducers]. Of 3 or 4 [3A4]" (T@15050–15130).',
- cite:S4+' slide 35; T@14700–15130'},
+ cite:S4+' slides 8, 29, 35; T@14700–15130'},
 
 /* ---- Acne: terms, components, drug groups (slides 40–42) ------------------ */
 {id:'S4-050', skill:'patho', prof:'Sikazwe', tier:'new', topic:'sk-beyond', sub:'acne', concept:'acne-components', lowYield:true, unassigned:true, note:'Outside Dr. Sikazwe\'s assigned pages for Exam 1 (list of 11/06: printed slides 7–9, 12, 15–22, 24–33, 42–54, 60–65). The list uses the numbers printed on the slides; from printed slide 22 on, the slide numbers cited here run one higher.', multi:true,
@@ -912,14 +912,14 @@ QUESTIONS.push(
 
 {id:'S4-071', skill:'chem', prof:'Sikazwe', tier:'new', topic:'s4-kera', sub:'bpo', concept:'bpo-class',
  tags:['classification','numbers'], source:'both',
- stem:'Which description of benzoyl peroxide is correct?',
+ stem:'Benzoyl peroxide belongs to the peroxide chemical class and has a log P of 3.5. What follows from that log P?',
  options:[
-  {t:'A peroxide, log P 3.5, penetrates skin well', correct:true, why:'Slide 47 "peroxide chemical class" and "(log P = 3.5)"; "it has a little piece of lipophilic. It penetrates skin well" (T@25991).'},
-  {t:'A lactone, log P 6.0, stays bound to skin', correct:false, why:'cLogP 6.0 and skin binding describe pimecrolimus (slide 28).'},
-  {t:'A hydroxy acid, log P 1, acts on the surface', correct:false, why:'That describes glycolic acid (slide 43).'},
-  {t:'A sulfonic acid, log P 1, washes off in water', correct:false, why:'That describes ensulizole (slide 64).'}],
+  {t:'It penetrates skin well', correct:true, why:'Slide 47 "(log P = 3.5)"; "it has a little piece of lipophilic. It penetrates skin well" (T@25991).'},
+  {t:'It stays bound to skin proteins', correct:false, why:'cLogP 6.0 and skin binding describe pimecrolimus (slide 28).'},
+  {t:'It acts at the skin surface', correct:false, why:'That describes glycolic acid (slide 43).'},
+  {t:'It washes off in water', correct:false, why:'That describes ensulizole (slide 64).'}],
  teach:'Benzoyl peroxide is absorbed by skin and forms benzoic acid, which is excreted in urine (slide 47).',
- cite:S4+' slide 47; T@25608–26000'},
+ cite:S4+' slides 28, 43, 47, 64; T@25608–26000'},
 
 /* ---- Retinoids by generation (slides 48–51) ------------------------------- */
 {id:'S4-072', skill:'adverse', prof:'Sikazwe', tier:'new', topic:'s4-ret', sub:'gen', concept:'retinoid-teratogen',

@@ -282,12 +282,12 @@ QUESTIONS.push(
 
 {id:'L2-021', skill:'tell', prof:'Smith', tier:'new', topic:'l2-tret', sub:'prod', concept:'tazarotene-vs-adapalene', dupOf:'L2-017',
  tags:['tell'], source:'both',
- stem:'Which statement separates tazarotene from adapalene?',
+ stem:'Which property of tazarotene separates it from adapalene?',
  options:[
-  {t:'Tazarotene causes photosensitivity', correct:true, why:'Slide 18: tazarotene causes photosensitivity; adapalene is photochemically stable (T 71–72, 77–78).'},
-  {t:'Tazarotene is given orally', correct:false, why:'Both are topical retinoids (slide 18).'},
-  {t:'Tazarotene is less irritating', correct:false, why:'Slide 18 gives "less irritating than tretinoin" for adapalene.'},
-  {t:'Tazarotene binds the vitamin D receptor', correct:false, why:'Calcipotriene binds the VDR (slide 21); tazarotene is a retinoid.'}],
+  {t:'It causes photosensitivity', correct:true, why:'Slide 18: tazarotene causes photosensitivity; adapalene is photochemically stable (T 71–72, 77–78).'},
+  {t:'It is given orally', correct:false, why:'Both are topical retinoids (slide 18).'},
+  {t:'It is less irritating', correct:false, why:'Slide 18 gives "less irritating than tretinoin" for adapalene.'},
+  {t:'It binds the vitamin D receptor', correct:false, why:'Calcipotriene binds the VDR (slide 21); tazarotene is a retinoid.'}],
  teach:'Adapalene: sun stable, combinable with benzoyl peroxide, mild to moderate acne. Tazarotene: photosensitivity, psoriasis, acne and wrinkles, possibly more absorption, contraceptive counseling (slide 18; T 68–81).',
  cite:D2+' slide 18; T 68–81'},
 
@@ -737,7 +737,7 @@ QUESTIONS.push(
 
 {id:'L2-061', skill:'tell', prof:'Smith', tier:'new', topic:'l2-tcell', sub:'mech', concept:'immunophilin-pair', dupOf:'L2-059',
  tags:['tell'], source:'both',
- stem:'Which pairing of calcineurin inhibitor and binding protein is correct?',
+ stem:'Which proteins do cyclosporine and tacrolimus bind before they inhibit calcineurin?',
  options:[
   {t:'Cyclosporine–cyclophilin; tacrolimus–FKBP', correct:true, why:'Slide 26; (T 351–355): tacrolimus binds FKBP, cyclosporine binds cyclophilin, and each complex inactivates calcineurin.'},
   {t:'Cyclosporine–FKBP; tacrolimus–cyclophilin', correct:false, why:'Swaps the partners (T 353–355).'},
