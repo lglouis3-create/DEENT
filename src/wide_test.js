@@ -4,8 +4,13 @@
    - at iPad and Mac window sizes, on every tab: no sideways scroll, the header and the tab strip span the window,
      and the content column takes at least 90% of the window up to 1,728 px (at least 60% at 2,560 px);
    - a window widened after the page has loaded is filled the same way; a phone-width window is unchanged;
-   - Settings has "Refit the page to the window": it leaves the viewport meta as it was, causes no error, and by
-     itself the refit never runs on a desktop browser;
+   - Settings has "Refit the page to the window": on a desktop browser it leaves the viewport meta as it was and
+     causes no error, and by itself nothing rewrites the meta there;
+   - the silent fit for a page the browser left at an old, narrower width (iPad, Chrome; emulated in Chromium by
+     overriding the widths the page reads): no bar or popup ever exists; the numeric viewport width is written and
+     put back when the layout does not follow, and kept when it does; the root width is set and later removed;
+     nothing happens on a desktop, on a touch device that is not Apple's, when zoomed, hidden, typing, or when the
+     widths agree; the limits per visit hold;
    - the pinned tab strip hides while reading after a real tap (390x844) or click (1366x1024) on a tab, and stays
      for a mouse resting on it and for focus reached with the Tab key (review finding E-F2, 2026-11-13);
    - "Hide the tab bar while reading" turned off in Settings is still off after a reload (the preview page keeps
@@ -107,48 +112,156 @@ const measure = p => p.evaluate(() => { const r = e => e ? e.getBoundingClientRe
     check(!errs.length, 'no page errors around Refit', errs.join(' | '));
     await p.close();
   }
-  /* Louis, 2026-11-14: on the iPad the blank area is still there when the window changes size. A touch device whose
-     window is reported wider than the page is laid out now gets a refit after every resize (two tries each), and, when
-     that does not bring the layout back, a bar with Reload. Emulated here: touch, with the outer width reported as
-     1,376 px while the page is laid out for 746 px. */
+  /* The silent fit (wide_ui.js, "a page the browser left at an old, narrower width"). Louis, 2026-11-14: on the
+     iPad the blank area is still there when the window changes size, and the Reload bar "is annoying omit it, also
+     doesn't work". Chromium does not have the fault, so the stale state is emulated: an iPad's user agent and touch
+     points, and the widths the page reads (innerWidth, visualViewport.width and scale, the root's clientWidth)
+     overridden through window.__emu. A desktop Chromium ignores the viewport meta, so a numeric width written there
+     does not change the layout: that is the "layer 1 did not help" case; `follow` makes clientWidth report the
+     meta's number, the "layer 1 helped" case. None of this shows what the device does. */
   {
-    const errs = [];
-    const ctx = await b.newContext({viewport: {width: 746, height: 1000}, hasTouch: true});
-    await ctx.addInitScript(() => {
-      Object.defineProperty(navigator, 'maxTouchPoints', {get: () => 5});
-      window.__outer = 1376;
-      Object.defineProperty(window, 'outerWidth', {get: () => window.__outer, configurable: true});
-    });
-    const p = await ctx.newPage();
-    p.on('pageerror', e => errs.push(e.message));
-    let writes = 0;
-    await p.exposeFunction('__vpWrite', () => { writes++; });
-    await p.goto(PAGE); await p.waitForTimeout(900);
-    await p.evaluate(() => { const m = document.querySelector('meta[name="viewport"]'); new MutationObserver(() => window.__vpWrite()).observe(m, {attributes: true}); });
-    await p.setViewportSize({width: 748, height: 1000}); await p.waitForTimeout(3200);       // a resize event, then the refit
-    check(writes >= 2, 'a touch window reported wider than the page is refitted after a resize', writes + ' writes');
-    check(!!(await p.$('#xFitNotice')), 'and a bar with Reload follows when the layout does not come back');
-    const meta = await p.$eval('meta[name="viewport"]', m => m.getAttribute('content'));
-    check(!/minimum-scale/.test(meta), 'the viewport meta is back as it was', meta);
-    await p.click('#xFitNotice button:nth-of-type(2)'); await p.waitForTimeout(200);
-    check(!(await p.$('#xFitNotice')), 'Dismiss closes the bar');
-    await p.evaluate(() => { window.__outer = 748; }); await p.waitForTimeout(3500);
-    check(!(await p.$('#xFitNotice')), 'when the widths agree again there is no bar');
-    // another resize that is wrong again starts a new episode: the bar can come back
-    await p.evaluate(() => { window.__outer = 1500; }); await p.setViewportSize({width: 750, height: 1000}); await p.waitForTimeout(3600);
-    check(!!(await p.$('#xFitNotice')), 'a later resize that leaves the page behind brings the bar again');
-    check(!errs.length, 'no page errors in the emulated iPad case', errs.join(' | '));
-    await ctx.close();
-    // a touch window whose widths agree is left alone
-    const ctx2 = await b.newContext({viewport: {width: 1376, height: 1032}, hasTouch: true});
-    await ctx2.addInitScript(() => { Object.defineProperty(navigator, 'maxTouchPoints', {get: () => 5}); });
-    const q = await ctx2.newPage(); let w2 = 0;
-    await q.exposeFunction('__vpWrite', () => { w2++; });
-    await q.goto(PAGE); await q.waitForTimeout(900);
-    await q.evaluate(() => { const m = document.querySelector('meta[name="viewport"]'); new MutationObserver(() => window.__vpWrite()).observe(m, {attributes: true}); });
-    await q.setViewportSize({width: 1100, height: 900}); await q.waitForTimeout(3800);
-    check(w2 === 0 && !(await q.$('#xFitNotice')), 'a touch window whose widths agree is left alone', w2 + ' writes');
-    await ctx2.close();
+    const IPAD_UA = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) CriOS/142.0.0.0 Mobile/15E148 Safari/604.1';
+    const EMU = touch => {
+      window.__emu = {touch, w: 0, vvw: 0, scale: 0, follow: false};
+      window.__notice = false;
+      new MutationObserver(() => { if (document.getElementById('xFitNotice')) window.__notice = true; }).observe(document, {childList: true, subtree: true});
+      Object.defineProperty(navigator, 'maxTouchPoints', {get: () => window.__emu.touch});
+      const own = (o, k) => { while (o) { const d = Object.getOwnPropertyDescriptor(o, k); if (d) return d; o = Object.getPrototypeOf(o); } };
+      const iw = own(window, 'innerWidth');
+      Object.defineProperty(window, 'innerWidth', {get(){ return window.__emu.w || iw.get.call(window); }, configurable: true});
+      const VP = VisualViewport.prototype, vw = own(VP, 'width'), vs = own(VP, 'scale');
+      Object.defineProperty(VP, 'width', {get(){ const e = window.__emu; return e.vvw || (e.w ? e.w / (e.scale || 1) : vw.get.call(this)); }, configurable: true});
+      Object.defineProperty(VP, 'scale', {get(){ return window.__emu.scale || vs.get.call(this); }, configurable: true});
+      const cw = own(Element.prototype, 'clientWidth');
+      Object.defineProperty(Element.prototype, 'clientWidth', {get(){
+        if (this === document.documentElement && window.__emu.follow) {
+          const m = document.querySelector('meta[name="viewport"]'), x = m && /(?:^|[\s,])width=(\d+)/.exec(m.getAttribute('content') || '');
+          if (x) return +x[1];
+        }
+        return cw.get.call(this);
+      }, configurable: true});
+    };
+    const open = async (touch, ua, vp) => {
+      const ctx = await b.newContext({viewport: vp || {width: 746, height: 1000}, hasTouch: touch > 0, userAgent: ua});
+      await ctx.addInitScript(EMU, touch);
+      const p = await ctx.newPage(); const errs = [];
+      p.on('pageerror', e => errs.push(e.message));
+      await p.goto(PAGE); await p.waitForTimeout(900);
+      // every value the viewport meta is given from here on
+      const orig = await p.evaluate(() => { window.__log = []; const m = document.querySelector('meta[name="viewport"]');
+        new MutationObserver(() => window.__log.push(m.getAttribute('content'))).observe(m, {attributes: true}); return m.getAttribute('content'); });
+      return {ctx, p, errs, orig};
+    };
+    const state = p => p.evaluate(() => { const c = document.getElementById('xfitcss'), m = document.querySelector('meta[name="viewport"]'), r = e => e ? Math.round(e.getBoundingClientRect().width) : 0;
+      return {css: c ? c.textContent : null, meta: m.getAttribute('content'), log: window.__log.slice(), notice: window.__notice || !!document.getElementById('xFitNotice'),
+        html: r(document.documentElement), header: r(document.querySelector('header')), nav: r(document.getElementById('nav'))}; });
+    const set = (p, o, resize) => p.evaluate(([o, resize]) => { Object.assign(window.__emu, o); if (resize) window.dispatchEvent(new Event('resize')); }, [o, resize !== false]);
+    const rootIs = (p, w, ms) => p.waitForFunction(w => { const c = document.getElementById('xfitcss'); return w ? !!c && c.textContent.includes('width:' + w + 'px') : !c; }, w, {timeout: ms || 5000}).then(() => true, () => false);
+    const NUM = /(?:^|[\s,])width=\d/;
+    const numeric = log => log.filter(v => NUM.test(v));
+
+    // 1. the stale state, and the numeric viewport width does not change the layout
+    {
+      const {ctx, p, errs, orig} = await open(5, IPAD_UA);
+      let s = await state(p);
+      check(!s.log.length && s.css === null, 'emulated iPad, widths agree after loading: nothing is written', JSON.stringify(s));
+      await set(p, {w: 984});
+      const on = await rootIs(p, 984); await p.waitForTimeout(500); s = await state(p);
+      check(s.log.some(v => /interactive-widget=resizes-content/.test(v)), 'stale by 238 px: the interactive-widget value is written first (layer 0)', s.log.join(' | '));
+      check(s.log.some(v => /(?:^|[\s,])width=984(?:,|$)/.test(v) && /initial-scale=1(?:,|$)/.test(v) && /viewport-fit=cover/.test(v)), 'then the numeric width of the window with initial-scale=1, the other values kept (layer 1)', s.log.join(' | '));
+      check(!NUM.test(s.meta) && /width=device-width/.test(s.meta) && !/interactive-widget/.test(s.meta), 'the layout did not follow: the numeric width is taken back', s.meta);
+      check(on && s.html === 984 && s.header === 984 && s.nav === 984, 'and the root is given the window width: the header and the tab strip span 984 px (layer 2)', JSON.stringify({on, html: s.html, header: s.header, nav: s.nav, css: s.css}));
+      check(/^@media screen\{/.test(s.css || ''), 'the root width is a screen-only rule', s.css);
+      await p.click('#nav button[data-v="settings"]'); await p.click('details.xfit summary');
+      const line = await p.$eval('#xFitNow', e => e.textContent);
+      check(/page width set to 984 px/.test(line), 'the Settings line says the page width is set', line);
+      await p.click('#nav button[data-v="topics"]');
+      // the widths agree again: everything is removed
+      await set(p, {w: 0});
+      const off = await rootIs(p, 0); s = await state(p);
+      check(off && s.meta === orig && s.html === 746, 'when the widths agree again the root width is removed and the meta is as it was', JSON.stringify({off, meta: s.meta, html: s.html}));
+      // no event at all: the 3-second check finds it
+      await set(p, {w: 1100}, false);
+      check(await rootIs(p, 1100), 'with no resize event, the 3-second check finds the stale width'); await p.waitForTimeout(500);
+      // the window narrows while the width is set: it follows
+      await set(p, {w: 900});
+      const narrowed = await rootIs(p, 900); await p.waitForTimeout(500); s = await state(p);
+      check(narrowed && s.html === 900, 'the window narrows while the root width is set: the width follows it', JSON.stringify({narrowed, html: s.html, css: s.css}));
+      check(numeric(s.log).length === 2 && !s.log.some(v => /width=900/.test(v)), 'the numeric viewport width is tried twice a visit, not a third time', numeric(s.log).join(' | '));
+      check(s.log.filter(v => /interactive-widget/.test(v)).length === 3, 'the interactive-widget value is written three times a visit at most', s.log.filter(v => /interactive-widget/.test(v)).length + ' writes');
+      // a focused text field: nothing changes until it loses the focus
+      await p.evaluate(() => { const i = document.createElement('input'); i.type = 'text'; i.id = 'xEmuField'; document.body.appendChild(i); i.focus({preventScroll: true}); });
+      await set(p, {w: 1000}); await p.waitForTimeout(3600); s = await state(p);
+      check(/width:900px/.test(s.css || ''), 'while a text field has the focus nothing is changed', s.css);
+      await p.evaluate(() => { const i = document.getElementById('xEmuField'); i.blur(); i.remove(); window.dispatchEvent(new Event('resize')); });
+      check(await rootIs(p, 1000), 'after the field loses the focus the width follows'); await p.waitForTimeout(500);
+      // a hidden page: the same
+      await p.evaluate(() => Object.defineProperty(document, 'hidden', {get: () => true, configurable: true}));
+      await set(p, {w: 1050}); await p.waitForTimeout(3600); s = await state(p);
+      check(/width:1000px/.test(s.css || ''), 'while the page is hidden nothing is changed', s.css);
+      await p.evaluate(() => { delete document.hidden; window.dispatchEvent(new Event('resize')); });
+      check(await rootIs(p, 1050), 'shown again, the width follows'); await p.waitForTimeout(500);
+      // 12 attempts a visit (984, 1100, 900, 1000, 1050 so far), then nothing more
+      let ok = true;
+      for (const w of [1060, 1070, 1080, 1090, 1110, 1120, 1130]) { await set(p, {w}); ok = (await rootIs(p, w)) && ok; await p.waitForTimeout(500); }
+      check(ok, 'attempts 6 to 12 of the visit are made');
+      const before = (await state(p)).log.length;
+      await set(p, {w: 1200}); await p.waitForTimeout(4500); s = await state(p);
+      check(s.css === null && s.meta === orig && s.html === 746, 'after 12 attempts the old width is removed and no 13th is made', JSON.stringify({css: s.css, meta: s.meta, html: s.html}));
+      await set(p, {w: 1300}); await p.waitForTimeout(4500); s = await state(p);
+      check(s.css === null && s.meta === orig && s.log.length <= before + 1, 'and nothing more is written for the rest of the visit', JSON.stringify({css: s.css, meta: s.meta, writes: s.log.length - before}));
+      // the Settings button starts the limits again
+      await p.click('#nav button[data-v="settings"]'); await p.evaluate(() => { document.querySelector('details.xfit').open = true; }); await p.click('#xRefit');
+      check(await rootIs(p, 1300), 'the Settings button tries once more');
+      s = await state(p);
+      check(!s.notice, 'no bar #xFitNotice ever existed (stale layout, 13 width changes)');
+      check(!errs.length, 'no page errors in the emulated stale layout', errs.join(' | '));
+      await ctx.close();
+    }
+    // 2. the layout follows the numeric viewport width: it is kept, and no root width is set
+    {
+      const {ctx, p, errs, orig} = await open(5, IPAD_UA);
+      await set(p, {w: 984, follow: true}); await p.waitForTimeout(1800);
+      let s = await state(p);
+      check(/(?:^|[\s,])width=984(?:,|$)/.test(s.meta) && /initial-scale=1(?:,|$)/.test(s.meta) && s.css === null, 'the layout follows the numeric viewport width: it is kept and the root is left alone', JSON.stringify({meta: s.meta, css: s.css}));
+      await p.waitForTimeout(3600); s = await state(p);
+      check(numeric(s.log).length === 1 && /width=984/.test(s.meta), 'kept, it is not written again while the window stays', s.log.join(' | '));
+      await set(p, {w: 0}); await p.waitForTimeout(1500); s = await state(p);
+      check(s.meta === orig && s.css === null, 'the window changes: the meta is as it was again', s.meta);
+      check(!s.notice && !errs.length, 'no bar and no page errors in that case', errs.join(' | '));
+      await ctx.close();
+    }
+    // 3. weak evidence (the inner width and the visible viewport disagree): the numeric width twice, never the root
+    {
+      const {ctx, p, errs, orig} = await open(5, IPAD_UA);
+      await set(p, {w: 984, vvw: 746}); await p.waitForTimeout(10500);
+      const s = await state(p);
+      check(numeric(s.log).length === 2 && s.css === null && s.meta === orig && !s.notice, 'only the inner width is larger: the numeric width is tried twice and taken back, the root is never touched', JSON.stringify({numeric: numeric(s.log).length, css: s.css, meta: s.meta}));
+      check(!errs.length, 'no page errors on weak evidence', errs.join(' | '));
+      await ctx.close();
+    }
+    // 4. nothing happens: zoomed, widths agreeing, a desktop, a touch device that is not Apple's
+    {
+      const {ctx, p, errs, orig} = await open(5, IPAD_UA, {width: 1376, height: 1032});
+      await set(p, {w: 1700, scale: 2}); await p.waitForTimeout(3800);
+      let s = await state(p);
+      check(!s.log.length && s.css === null, 'pinch-zoomed (scale 2): nothing is written', JSON.stringify(s.log));
+      await set(p, {w: 0, scale: 0});
+      await p.setViewportSize({width: 1100, height: 900}); await p.waitForTimeout(3800); s = await state(p);
+      check(!s.log.length && s.css === null && !s.notice, 'a touch window whose widths agree is left alone', JSON.stringify(s.log));
+      await set(p, {w: 1400}); const live = await rootIs(p, 1400);
+      check(live, '(the same page does act once the widths disagree, so the two cases above were live)');
+      check(!errs.length, 'no page errors in the zoomed and agreeing cases', errs.join(' | '));
+      await ctx.close();
+      for (const [label, touch, ua] of [['a desktop Mac (no touch points)', 0, IPAD_UA.replace(/CriOS\S+ Mobile\S+ /, 'Chrome/142.0.0.0 ')], ['a touch device that is not Apple\'s', 5, undefined]]) {
+        const d = await open(touch, ua);
+        await set(d.p, {w: 984}); await d.p.waitForTimeout(3800);
+        await d.p.click('#nav button[data-v="settings"]'); await d.p.click('details.xfit summary'); await d.p.click('#xRefit'); await d.p.waitForTimeout(1500);
+        s = await state(d.p);
+        check(!s.log.length && s.css === null && s.meta === d.orig && !s.notice && !d.errs.length, label + ' with the same widths: nothing is written, by itself or from the Settings button', JSON.stringify({log: s.log, css: s.css, errs: d.errs}));
+        await d.ctx.close();
+      }
+    }
   }
   /* The pinned tab strip hides while reading (review finding E-F2, 2026-11-13). In Chromium a tap or a click leaves
      the tab button as the active element; wide_ui.js counted any focus inside the strip as a reason to keep it, so

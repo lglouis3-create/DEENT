@@ -19,6 +19,9 @@ Every update adds its bullets here in the same commit that makes the change.
 - Each drawn diagram now opens with a sentence on what it shows and what it is for.
 
 ## 2026-11-14 (search, new questions)
+- iPad: the Reload bar is gone; the page now tries by itself to fill a resized window.
+- FTU: fractions and answers written with an equals sign are read; one limb is outlined for one-limb areas.
+- Search: every structure result now opens its Atlas tile.
 - Eight new ABCDE questions: lesion cases, diaper-care cases and one that mixes the two mnemonics.
 - Tell apart, Exam 2: the two ABCDE mnemonics side by side, with both slides.
 - FTU tab: type fingertip-unit and gram answers on a body diagram that shows what you miss.

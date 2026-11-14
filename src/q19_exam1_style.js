@@ -73,23 +73,25 @@ QUESTIONS.push(
   {t:'Structure 5', correct:false, why:'Minocycline: a tetracycline, with the linear four-ring core (slide 55).'},
   {t:'Structure 4', correct:false, why:'Ketoconazole: an azole antifungal, "this is not a steroid" (slide 53); it is a strong CYP3A4 inhibitor.'}],
  teach:'Steroids have the A, B, C, D ring skeleton (11/04; slide 20 shows it with the numbering). On slide 53 the steroidal antiandrogen is spironolactone; ketoconazole and flutamide are not steroids.',
- cite:XS+' slides 20, 53, 55; 11/04 transcript'},
+ cite:'Lecture 3 (f26-DEENT-DPAW-mc.pdf) slide 20; '+XS+' slides 53, 55; 11/04 transcript'},
 
+/* Maintainers: Louis, 2026-11-14: the Exam 1 apremilast picture indicated the ethyl group. S4-046 and S4H-014 give both
+   reactions as well. The options are bare letters so the drawing (x-apremilast-groups) has to be read. */
 {id:'XS-006', skill:'chem', prof:'Sikazwe', tier:'new', topic:'s4-sys', sub:'apr', concept:'x-apremilast-dealkyl-picture',
  tags:['exam-style','structure','scheme'], source:'both', img:'x-apremilast-groups',
  stem:'Which lettered group of apremilast is lost when CYP3A4 O-deethylates it?',
  options:[
-  {t:'a, on the ethoxy oxygen', correct:true, why:'De-ethylation removes an ethyl group from the ether oxygen: the ethoxy (O–CH2CH3, group a) becomes an OH.'},
-  {t:'b, on the methoxy oxygen', correct:false, why:'Removing this methyl is O-demethylation, the step named on slide 34 ("O-demethylation → –OH metabolite → O-Gluc").'},
-  {t:'c, on the sulfone sulfur', correct:false, why:'This methyl is on sulfur, not on an ether oxygen, so no O-dealkylation can remove it.'},
-  {t:'d, on the amide carbonyl', correct:false, why:'This methyl is on a carbonyl carbon of an amide, not on an ether oxygen.'}],
- teach:'O-dealkylation takes the alkyl group off an ether oxygen and leaves an OH: methyl off, "O-demethylation"; ethyl off, "O-deethylation". Slide 33: apremilast is extensively metabolized, 3A4 major (1A2 and 2A6 minor), then O-glucuronidation of the OH metabolite. In the 11/04 lecture he named O-demethylation ("the methyl group is here"); Exam 1 indicated the ethyl group (Louis, 2026-11-14), an O-deethylated metabolite.',
- note:'Slide 34 and the 11/04 lecture name O-demethylation; the Exam 1 item (Louis, 2026-11-13) keyed "O-deethylated" for the metabolite indicated. We have not seen the exam picture, so which alkyl group it showed removed is open. This draft teaches both reactions by structure. S4-046 and S4H-014 in the bank say O-demethylation, as slide 34 does: ask Louis which alkyl group the exam scheme showed before changing them.',
+  {t:'Group a', correct:true, why:'De-ethylation removes an ethyl group from the ether oxygen: the ethoxy (O–CH2CH3, group a) becomes an OH.'},
+  {t:'Group b', correct:false, why:'Group b is the methyl on the methoxy oxygen; removing it is O-demethylation, the step named on slide 34 ("O-demethylation → –OH metabolite → O-Gluc").'},
+  {t:'Group c', correct:false, why:'Group c is a methyl on the sulfone sulfur, not on an ether oxygen, so no O-dealkylation can remove it.'},
+  {t:'Group d', correct:false, why:'Group d is the methyl on the amide carbonyl carbon, not on an ether oxygen.'}],
+ teach:'O-dealkylation takes the alkyl group off an ether oxygen and leaves an OH: methyl off, "O-demethylation"; ethyl off, "O-deethylation". Slide 34: apremilast is extensively metabolized, 3A4 major (1A2 and 2A6 minor), then O-glucuronidation of the OH metabolite. In the 11/04 lecture he named O-demethylation ("the methyl group is here"); Exam 1 indicated the ethyl group and keyed the O-deethylated metabolite.',
+ note:'Slide 34 and the 11/04 lecture name O-demethylation; Exam 1 indicated the ethyl group and keyed the O-deethylated metabolite.',
  cite:XS+' slide 34; 11/04 transcript'},
 
 {id:'XS-007', skill:'pk', prof:'Sikazwe', tier:'new', topic:'s4-limus', sub:'pk', concept:'x-limus-conclude',
  tags:['exam-style','conclude','pk'], source:'both',
- stem:'Pimecrolimus and tacrolimus are similar in lipophilicity, structure and mechanism, but pimecrolimus has higher non-specific skin protein binding. It is correct to conclude that, compared with tacrolimus, topical pimecrolimus is:',
+ stem:'Pimecrolimus has higher non-specific skin protein binding than tacrolimus. It is correct to conclude that, compared with tacrolimus, topical pimecrolimus is:',
  options:[
   {t:'Less likely to reach the circulation', correct:true, why:'Slide 28: pimecrolimus, higher non-specific skin protein binding (low systemic ADRs); tacrolimus, low skin protein binding. "So it binds to the skin... so that it doesn\'t get into systemic circulation" (11/04).'},
   {t:'A different kind of immunosuppressant', correct:false, why:'Slide 28: similar in lipophilicity, structure and mechanism; both are calcineurin inhibitors.'},
@@ -165,7 +167,7 @@ QUESTIONS.push(
   {t:'Methotrexate', correct:false, why:'A folic acid analog that inhibits dihydrofolate reductase (PCol slide 59).'},
   {t:'Secukinumab', correct:false, why:'A monoclonal antibody that binds the cytokine IL-17A (PCol slide 66).'}],
  teach:'Nuclear receptor binders on PCol slide 7: the glucocorticoid receptor (GRE), the retinoic acid receptors RAR/RXR (RARE) and the vitamin D receptor. The other classes act on enzymes, cytokines or cell-surface receptors.',
- cite:XC+' slides 7, 11, 14, 21, 32–33, 59, 66'},
+ cite:XC+' slides 7, 11, 14; '+XC2+' slides 21, 32–33; '+XC3+' slides 59, 66'},
 
 {id:'XM-002', skill:'mech', prof:'Smith', tier:'new', topic:'l2-tcell', sub:'mech', concept:'x-cni-select', multi:true,
  tags:['exam-style','select-all'], source:'both',
@@ -178,8 +180,11 @@ QUESTIONS.push(
   {t:'Ruxolitinib', correct:false, why:'A JAK inhibitor (PCol slides 75–76).'},
   {t:'Etanercept', correct:false, why:'A fusion protein that binds TNF-α (PCol slide 71).'}],
  teach:'Calcineurin inhibitors: cyclosporine (binds cyclophilin), tacrolimus (binds FKBP) and pimecrolimus. Less IL-2 is made, so fewer T cells proliferate (PCol slides 25–26).',
- cite:XC2+' slides 25–27, 63; '+XC3+' slides 71, 75–76'},
+ cite:XC2+' slides 25–27; '+XC3+' slides 63, 71, 75–76'},
 
+/* Maintainers: Exam 1 item 45 (psoriasis class list) keyed retinoids, calcineurin inhibitors and PDE-4 inhibitors right and
+   keratolytics and antibiotics wrong. PDE-4 inhibitors stay keyed right here (Claude's default until Louis says otherwise).
+   No keratolytic option is offered: PCol slide 40 gives salicylic acid for psoriasis, which the exam's class list did not count. */
 {id:'XM-003', skill:'class', prof:'Smith', tier:'new', topic:'pso', sub:'tx', concept:'x-pso-classes-select', multi:true,
  tags:['exam-style','select-all','list'], source:'slide',
  stem:'Select all that apply. No partial credit will be given. Which classes of medications are used to treat psoriasis?',
@@ -190,9 +195,9 @@ QUESTIONS.push(
   {t:'PDE-4 inhibitors', correct:true, why:'Apremilast, a PDE-4 inhibitor, is used for plaque psoriasis (Dr. Sikazwe, slide 34); Exam 1 counted this class as right in its psoriasis list. It is not printed on Pathophys slide 28.'},
   {t:'Antibiotics', correct:false, why:'On the acne list (Pathophys slide 37), not on the psoriasis list.'},
   {t:'Antiandrogens', correct:false, why:'On the acne list (Pathophys slide 37), not on the psoriasis list.'}],
- teach:'Pathophys slide 28, psoriasis: corticosteroids, DNA synthesis inhibitors, the DHFR inhibitor, T-cell inhibitors, TNF-α inhibitors, JAK inhibitors, "IL-12 & IL-13 inhibitors" (as printed), IL-23 inhibitor, IL-17A inhibitor, nuclear receptor binders, psoralens, calcineurin inhibitors, cytotoxic agents. Slide 37, acne: keratolytics, antibiotics, nuclear receptor binders, antiandrogens.',
- note:'Exam 1 item 45 (class list for psoriasis) keyed retinoids, calcineurin inhibitors and PDE-4 inhibitors correct and keratolytics and antibiotics wrong. Slide 28 does not list PDE-4 inhibitors (apremilast is on Sikazwe slide 33 for psoriasis), and PCol slide 40 says salicylic acid 3 to 6% treats acne, dandruff and psoriasis, so keratolytics are a class-list answer that conflicts with a product-slide fact. For "which classes" questions the class-list slides decide; this draft stays on slide 28 and 37 only.',
- cite:XP+' slides 28, 37'},
+ teach:'Pathophys slide 28, psoriasis: corticosteroids, DNA synthesis inhibitors, the DHFR inhibitor, T-cell inhibitors, TNF-α inhibitors, JAK inhibitors, "IL-12 & IL-13 inhibitors" (as printed), IL-23 inhibitor, IL-17A inhibitor, nuclear receptor binders, psoralens, calcineurin inhibitors, cytotoxic agents. Slide 37, acne: keratolytics, antibiotics, nuclear receptor binders, antiandrogens. PDE-4 inhibitors are not printed on slide 28; Exam 1 counted them right for psoriasis (apremilast, Dr. Sikazwe slide 34).',
+ note:'Pathophys slide 28 does not print PDE-4 inhibitors in its psoriasis list. Exam 1 counted them right in its psoriasis class list: apremilast, a PDE-4 inhibitor, treats plaque psoriasis (Dr. Sikazwe, slide 34). Exam 1 counted antibiotics wrong in that list.',
+ cite:XP+' slides 28, 37; '+XS+' slide 34'},
 
 {id:'XM-004', skill:'class', prof:'Smith', tier:'new', topic:'acne', sub:'drugs', concept:'x-acne-classes-select', multi:true,
  tags:['exam-style','select-all','list'], source:'slide',
@@ -233,12 +238,12 @@ QUESTIONS.push(
 
 {id:'XM-007', skill:'mech', prof:'Smith', tier:'new', topic:'nrb', sub:'recs', concept:'x-rare-site',
  tags:['exam-style','tell'], source:'both',
- stem:'A retinoid-bound RAR–RXR heterodimer binds DNA at which of these?',
+ stem:'A retinoid-bound receptor heterodimer binds DNA at which of these?',
  options:[
   {t:'RARE', correct:true, why:'The retinoic acid response element, the DNA binding site of the retinoic acid receptors (PCol slides 7, 14).'},
   {t:'GRE', correct:false, why:'The glucocorticoid response element, the DNA site of the glucocorticoid receptor (PCol slide 7).'},
   {t:'RXR', correct:false, why:'A receptor, half of the heterodimer, not a DNA site (PCol slide 14).'},
-  {t:'NF-kB', correct:false, why:'A transcription factor that works with the nuclear receptors (PCol slide 7), not the retinoid DNA site.'}],
+  {t:'TRE', correct:false, why:'The transcription factor response element (PCol slide 7), not the retinoid receptors\' site.'}],
  teach:'Receptor versus site: RAR and RXR are receptors; the RARE is the DNA site they bind (slide 14); the GRE is the glucocorticoid receptor\'s site (slide 7).',
  cite:XC+' slides 7, 14'},
 

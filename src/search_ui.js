@@ -30,7 +30,9 @@ const SEARCH_UI = (() => {
   const ALIAS = {'vit d': 'vitamin d', 'vitd': 'vitamin d', 'pde4': 'pde 4', 'cni': 'calcineurin inhibitor', 'cnis': 'calcineurin inhibitors',
     'mtx': 'methotrexate', 'tcs': 'topical corticosteroid', 'sa': 'salicylic acid', 'ga': 'glycolic acid', 'bpo': 'benzoyl peroxide',
     'aha': 'alpha hydroxy acid', 'bha': 'beta hydroxy acid', 'ftu': 'fingertip unit', 'ra': 'retinoic acid', 'gc': 'glucocorticoid',
-    'steroid': 'corticosteroid', 'steroids': 'corticosteroids', 'sunblock': 'sunblock', 'rx': 'rx', 'acitretin': 'acitretin'};
+    'sunblock': 'sunblock', 'rx': 'rx', 'acitretin': 'acitretin'};
+  /* "steroid" has no short form here: the typed word already finds corticosteroid (any part of a word counts), and a
+     replacement would hide the entries that say only steroid (the steroid nucleus and its carbon numbering) */
   const expand = q => { let t = norm(q); if (ALIAS[t]) return ALIAS[t]; return t.split(' ').map(w => ALIAS[w] || w).join(' '); };
 
   /* ---------- the index ---------- */
@@ -146,6 +148,9 @@ const SEARCH_UI = (() => {
       const q = tk.join(' '), res = [];
       IDX.forEach(e => {
         if (!tk.every(t => has(e, t))) return;
+        // a topic or subtopic with no question to ask is left out, as on the Topics list; read at each search because the
+        // Topics filters (professor, tier, tag) change the pool
+        if (e.type === 'topic' && typeof poolFor === 'function') { try { if (!poolFor(e.id, e.sid).length) return; } catch (err) {} }
         let s = e.boost || 0;
         if (e.nt === q) s += 100;
         else if (e.nt.indexOf(q) === 0) s += 70;
@@ -196,10 +201,14 @@ dialog.srch::backdrop{background:rgba(10,14,22,.55)}
 
   let dlg = null, input = null, body = null, opener = null, last = null;
   const open = {};   // group name -> expanded (memory only)
+  let drawnFor = null;   // the query text the expanded groups belong to: another query starts with every group short again
+  /* the typed words marked in a title or line: one pass over the plain text, each piece escaped by itself, so a word can
+     never match inside a <mark> tag or inside &amp; */
   const hit = (txt, toks) => {
-    let h = esc(txt);
-    toks.slice().sort((a, b) => b.length - a.length).forEach(t => { if (t.length < 2) return; try { h = h.replace(new RegExp('(' + t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')', 'ig'), '<mark>$1</mark>'); } catch (e) {} });
-    return h;
+    const ts = (toks || []).filter(t => t.length >= 2).sort((a, b) => b.length - a.length).map(t => t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'));
+    if (!ts.length) return esc(txt);
+    let re; try { re = new RegExp('(' + ts.join('|') + ')', 'ig'); } catch (e) { return esc(txt); }
+    return String(txt == null ? '' : txt).split(re).map((p, i) => i % 2 ? '<mark>' + esc(p) + '</mark>' : esc(p)).join('');
   };
   const snip = (e, toks) => {
     const s = e.sub || e.text || ''; if (!s) return '';
@@ -212,6 +221,7 @@ dialog.srch::backdrop{background:rgba(10,14,22,.55)}
 
   function draw(){
     const raw = input.value; last = null;
+    if (raw !== drawnFor) { for (const k in open) delete open[k]; drawnFor = raw; }
     if (!raw.trim()) {
       const eg = ['tacrolimus', 'vitamin D', 'atopic dermatitis', 'sunscreen', 'fingertip unit', 'PDE4', 'acne', 'warts'];
       body.innerHTML = `<p class="snote">Type a drug, a disease, a term or a question topic. The closest matches come first.</p><div class="schips">${eg.map(x => `<button type="button" class="btn sm ghost" data-eg="${esc(x)}">${esc(x)}</button>`).join('')}</div>`;
@@ -260,16 +270,32 @@ dialog.srch::backdrop{background:rgba(10,14,22,.55)}
         else if (e.type === 'dz') { show('dz'); DZ_UI.state.view = 'cards'; DZ_UI.state.card = e.id; DZ_UI.state.filter = ''; DZ_UI.render(); window.scrollTo(0, 0); }
         else if (e.type === 'sec') jump(e.view, e.anchor);
         else if (e.type === 'dia') jump('diagrams', 'dg-' + e.id);
-        else if (e.type === 'atlas') { show('atlas'); const q = document.querySelector('#atq'); if (q) { q.value = e.title; q.dispatchEvent(new Event('input', {bubbles: true})); } window.scrollTo(0, 0); }
+        // the Atlas filter reads each tile's plain name and text, not its display title: the plain name always finds the tile
+        else if (e.type === 'atlas') { show('atlas'); const q = document.querySelector('#atq'); if (q) { q.value = e.id; q.dispatchEvent(new Event('input', {bubbles: true})); } window.scrollTo(0, 0); }
         else if (e.type === 'topic') startQuiz(e.id, e.sid);
         else if (e.type === 'term') { openDialog(opener); const row = body.querySelector('[data-i="' + IDX.indexOf(e) + '"] .s'); if (row) row.textContent = e.text; }
       } catch (err) { console.error('The search could not open that result.', err); }
     }, 0);
   }
+  /* The questions found start as a set, with the page's Back button, as the practice buttons of the Diseases tab and the
+     Drug list do. drillList() replaces the set that was open on the Quiz tab, so the Back entry also carries that set
+     (srq) and Back puts it on the Quiz tab again, at the question it was on: a drill in progress is not lost. */
   function practise(qs, label){
     close();
-    setTimeout(() => { try { if (typeof drillList === 'function') { RET.push({view: VIEW, y: window.scrollY}); drillList(qs, label); backBtn(); } } catch (err) { console.error(err); } }, 0);
+    setTimeout(() => { try { if (typeof drillList === 'function') {
+      let was = null; try { was = Q || null; } catch (e) {}
+      const r = {view: VIEW, y: window.scrollY, srq: was}; RET.push(r); drillList(qs, label); r.mine = Q; backBtn();
+    } } catch (err) { console.error(err); } }, 0);
   }
+  /* before the core's own Back handler (on the button) draws the tab it returns to. Only while the set on the Quiz tab is
+     still the one the search started (or its "not yet shown" continuation): a set begun since then, or another profile's,
+     is left as it is */
+  document.addEventListener('click', ev => {
+    try {
+      const t = ev.target; if (!t || !t.closest || !t.closest('#backbtn')) return;
+      const r = RET[RET.length - 1]; if (r && r.srq && r.mine && Q && (Q === r.mine || (Q.label && r.mine.label && String(Q.label).indexOf(r.mine.label) === 0))) Q = r.srq;
+    } catch (e) { /* an older core without RET or Q */ }
+  }, true);
 
   function ensure(){
     if (dlg) return;
@@ -281,11 +307,19 @@ dialog.srch::backdrop{background:rgba(10,14,22,.55)}
     input.addEventListener('input', () => { clearTimeout(tm); tm = setTimeout(draw, 120); });
     dlg.querySelector('#srchx').addEventListener('click', close);
     dlg.addEventListener('close', () => { const o = opener; opener = null; if (o && o.focus && document.contains(o)) { try { o.focus({preventScroll: true}); } catch (e) {} } });
-    dlg.addEventListener('click', ev => { if (ev.target === dlg) close(); });
+    // a tap outside the box closes it; a press that began inside (a selection dragged out of the field) does not
+    let downOnDlg = false;
+    dlg.addEventListener('mousedown', ev => { downOnDlg = ev.target === dlg; });
+    dlg.addEventListener('click', ev => { if (ev.target === dlg && downOnDlg) close(); downOnDlg = false; });
     body.addEventListener('click', ev => {
       const b = ev.target.closest('button'); if (!b) return;
       if (b.dataset.eg) { input.value = b.dataset.eg; draw(); input.focus(); return; }
-      if (b.dataset.more) { open[b.dataset.more] = !open[b.dataset.more]; const y = body.scrollTop; draw(); body.scrollTop = y; return; }
+      if (b.dataset.more) {
+        // the redraw removes the button that was pressed: the new one takes the focus, so the arrow keys keep working
+        const k = b.dataset.more; open[k] = !open[k]; const y = body.scrollTop; draw();
+        const nb = body.querySelector('button[data-more="' + k + '"]'); if (nb) { try { nb.focus({preventScroll: true}); } catch (e) {} }
+        body.scrollTop = y; return;
+      }
       if (b.dataset.i != null) { const e = IDX[+b.dataset.i]; if (e) go(e); return; }
       if (b.dataset.q) { const q = QUESTIONS.find(x => x.id === b.dataset.q); if (q) practise([q], 'Search: ' + input.value.trim()); return; }
       if (b.dataset.qall && last) practise(last.qs.slice(0, 60), 'Search: ' + input.value.trim());
@@ -321,5 +355,5 @@ dialog.srch::backdrop{background:rgba(10,14,22,.55)}
   addCss();
   try { wire(); } catch (e) { console.error('The search button could not be added.', e); }
 
-  return {open: openDialog, close, search: q => { try { return search(q); } catch (e) { return null; } }, size: () => { if (!IDX) build(); return IDX.length; }, expand};
+  return {open: openDialog, close, search: q => { try { return search(q); } catch (e) { return null; } }, size: () => { if (!IDX) build(); return IDX.length; }, expand, hit};
 })();
