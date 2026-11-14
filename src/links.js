@@ -219,6 +219,13 @@ const READ_LINKS = (() => {
           'azelaic-diacid clinda-topical tet-chelation octinoxate paba-allergy salicylate-hydrolysis photostability-rank uva-uvb-coverage ' +
           'hq-moa hq-storage aha-wrinkle aha-sources ha-film ha-structure topical-ret-collagen sunblock-products', 'rs4'),
 
+      // Exam 1 style items (2026-11-14)
+      row('x-alkyne-picture x-geometric-isomer-picture x-aha-select-picture x-tetracycline-picture x-steroid-or-not-picture x-limus-conclude ' +
+          'x-csa-azole-conclude x-avobenzone-conclude x-flutamide-receptor x-apremilast-dealkyl-picture x-apremilast-azole-assume', 'ts4', 'rs4'),
+      row('x-nrb-select x-nrb-indirect-conclude', 't1r', 'g4'),
+      row('x-rare-site', 'rNR'),
+      row('x-pso-classes-select x-acne-classes-select x-ad-classes-select', 'rClass'),
+
       /* ---- Lecture 5, Patel 11/06 (Dermatitis Therapeutics; Exam 2) ------ */
       row('p5-ftu-grams p5-ftu-face-neck p5-ftu-arm-leg p5-ftu-trunk p5-tube-round-up p5-tube-face-tid p5-tube-trunk-bid ' +
           'p5-tube-scalp-week p5-tube-arm p5-tube-two-areas p5-tube-days-last p5-tube-leg-daily p5-tube-sizes p5-tube-face-bid', 'rPftu', 'gP6'),
@@ -233,7 +240,7 @@ const READ_LINKS = (() => {
       row('p5-dupilumab-indications', 'rPdrug'),
       row('p5-fix-barrier-steps p5-bleach-bath p5-bleach-amount p5-bath-practice p5-wet-wrap-tci p5-compress-weeping p5-nonpharm-counsel ' +
           'p5-moist-most-effective p5-moist-urea p5-moist-aquaphor p5-lotion-frequency p5-dd-prevention-infant p5-iad-prevention-adult ' +
-          'p5-abcde p5-dd-case-nonpharm', 'gP5'),
+          'p5-abcde p5-dd-case-nonpharm p5-abcde-case-diaper p5-abcde-case-air', 'gP5'),
       row('p5-otc-followup-steroid-atrophy p5-dd-do-not-use p5-dd-exclusions p5-dd-exclusion-comorbid', 'gP3'),
       row('p5-case-return-7d p5-dd-followup-7d p5-dd-case-followup', 'gP7'),
       row('p5-vehicle-order p5-mometasone-vehicle p5-clobetasol-very-high p5-triamcinolone-medium p5-high-potency-arrowed p5-hc-lowest-class ' +
@@ -303,6 +310,7 @@ const READ_LINKS = (() => {
       row('p8s-burn-goals p8s-everyone-sunscreen', 'g8s4'),
       row('p8s-burn-exclusion-case p8s-burn-exclusion-list p8s-burn-infection-signs p8s-case-4-month-old p8s-infant-5-months p8s-infant-8-months p8s-sunscreen-exclusion', 'r8sun', 'g8s3'),
       row('p8s-burn-time-course p8s-abcde-diameter p8s-abcde-refer p8s-glogau-type-ii', 'r8sun', 'g8s2'),
+      row('p8s-abcde-case-asymmetry p8s-abcde-case-border p8s-abcde-case-color p8s-abcde-case-diameter p8s-abcde-case-evolving p8s-abcde-two-mnemonics', 'r8sun', 'g8s2'),
       row('p8s-photoaging-vs-chronologic', 'g8s2'),
       row('p8s-burn-followup p8s-photoaging-results-time', 'r8sun', 'g8s7'),
       row('p8s-case-daily-sunscreen p8s-spf-label-uvb p8s-spf-minimum-preferred p8s-activity-sweating p8s-sensitive-skin-choice p8s-grase-two p8s-combination-product p8s-apply-amount-timing p8s-reapply-towel p8s-sunburn-factors', 'r8sun', 'g8s6'),

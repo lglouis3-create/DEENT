@@ -278,6 +278,10 @@ const COURSE = {
           'q10_blank.js',
           // exam-style items, Dr. Smith and Dr. Sikazwe (2026-11-12: one detail swapped per wrong option)
           'q11_new_smith_sik.js',
+          // Exam 1 style items from the recalled exam questions: drawings, conclude/assume stems, select-all (Louis, 2026-11-14)
+          'q19_exam1_style.js',
+          // the two ABCDE mnemonics asked as cases (Louis, 2026-11-14)
+          'q20_abcde.js',
           // the step-throughs of moa_figs.js in the explanations of the matching Smith questions
           'moa_links.js',
           // Drug list tab (temporary course-level presentation, to be replaced by the kit's
@@ -287,6 +291,8 @@ const COURSE = {
           'chart_boxes.js', 'druglist_data.js', 'drugfacts.js', 'druglist_ui.js',
           // the Diseases tab (Louis, 2026-11-13): cards per condition, drug panels, tell-apart sets (dz_build.py, dz_check.js)
           'dz_data.js', 'dz_ui.js',
+          // the FTU tab (Louis, 2026-11-14): typed fingertip-unit practice with a body diagram and a record (ftu_test.js)
+          'ftu_ui.js',
           // Slide links (Louis, 2026-11-13): a slide citation opens that slide from the clean decks in deck/
           // (slide_data.js: the page map and tables, written by slide_map.py; slide_check.js, slide_test.js)
           'slide_data.js', 'slide_ui.js',
@@ -335,6 +341,8 @@ const COURSE = {
           'examfold_ui.js',
           // Space and a rule between the sections of Reference, Guides and Tell apart (Louis 2026-11-13)
           'refsep_ui.js',
+          // Search box in the header (Louis, 2026-11-14): last of the content files, it reads their globals
+          'search_ui.js',
           // Browser-tab icon on the live page (brand.py wrote it into the <head> until 2026-11-09)
           'icon_ui.js'],
   // (figph_ui.js, the course-level Enlarge placeholder fix, left the list on 2026-11-09: kit

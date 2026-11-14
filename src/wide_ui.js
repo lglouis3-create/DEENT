@@ -148,11 +148,11 @@ body.xnavhid .atbar{top:0}
     const n = nav(); if (!n || !n.addEventListener) return;
     window.addEventListener('scroll', reveal, {passive: true});
     window.addEventListener('resize', reveal, {passive: true});
-    ['resize', 'orientationchange', 'pageshow', 'focus'].forEach(ev => window.addEventListener(ev, () => setTimeout(() => maybeRefit(true), 350), {passive: true}));
-    document.addEventListener('visibilitychange', () => { if (!document.hidden) setTimeout(() => maybeRefit(true), 350); });
-    try { if (window.visualViewport) visualViewport.addEventListener('resize', () => setTimeout(() => maybeRefit(true), 350)); } catch (e) {}
+    ['resize', 'orientationchange', 'pageshow', 'focus'].forEach(ev => window.addEventListener(ev, () => setTimeout(() => fitCheck(), 350), {passive: true}));
+    document.addEventListener('visibilitychange', () => { if (!document.hidden) setTimeout(() => fitCheck(), 350); });
+    try { if (window.visualViewport) visualViewport.addEventListener('resize', () => setTimeout(() => fitCheck(), 350)); } catch (e) {}
     // a touch device only: the browser may not send an event for the resize, so the widths are read every 3 s (no writes unless they disagree)
-    try { if ((navigator.maxTouchPoints || 0) > 1) setInterval(() => { if (!document.hidden) maybeRefit(false); }, 3000); } catch (e) {}
+    try { if ((navigator.maxTouchPoints || 0) > 1) setInterval(() => fitCheck(), 3000); } catch (e) {}
     n.addEventListener('scroll', reveal, {passive: true});          // its own row scrolled sideways (the chevrons)
     n.addEventListener('focusin', reveal);
     // a mouse resting on the strip keeps it (a touch has no hover, so it never holds it)
@@ -160,7 +160,7 @@ body.xnavhid .atbar{top:0}
     n.addEventListener('pointerleave', ev => { if (hovering) { hovering = false; reveal(); } });
     // a touch or a pointer near the top edge brings it back
     const EDGE = 36;
-    document.addEventListener('pointerdown', ev => { if (ev.clientY <= EDGE) reveal(); maybeRefit(false); }, {passive: true});
+    document.addEventListener('pointerdown', ev => { if (ev.clientY <= EDGE) reveal(); }, {passive: true});
     document.addEventListener('pointermove', ev => { if (ev.pointerType === 'mouse' && ev.clientY <= EDGE && n.classList.contains('xhid')) reveal(); }, {passive: true});
     document.addEventListener('touchstart', ev => { const t = ev.touches && ev.touches[0]; if (t && t.clientY <= EDGE) reveal(); }, {passive: true});
     reveal();
@@ -181,7 +181,7 @@ body.xnavhid .atbar{top:0}
       Kept on this device only.</p></div>
       <details class="xfit" style="margin:10px 0 0"><summary style="cursor:pointer;min-height:44px;display:flex;align-items:center;font-size:14px">If the page does not fill the window</summary>
         <p style="font-size:13.5px;color:var(--text-dim);margin:4px 0 8px">On an iPad, after a window is made wider, the browser can keep the page at its old width and leave the rest of the window blank.
-        Refit asks the browser to measure the window again. If the blank area stays, reload the page.</p>
+        The page then tries to match the window by itself. This button tries once more; it may not help. If the blank area stays, reload the page.</p>
         <button type="button" class="btn sm" id="xRefit" style="min-height:44px">Refit the page to the window</button>
         <p id="xFitNow" style="font-size:13px;color:var(--text-dim);margin:8px 0 0"></p></details>`;
     const exp = [...el.querySelectorAll('h3')].find(h => /^\s*Export\s*$/.test(h.textContent));
@@ -196,80 +196,170 @@ body.xnavhid .atbar{top:0}
     });
     const rf = el.querySelector('#xRefit'), now = el.querySelector('#xFitNow');
     const say = () => { if (now) now.textContent = fitText(); };
-    if (rf) rf.addEventListener('click', () => { refit(); setTimeout(say, 300); });
+    if (rf) rf.addEventListener('click', () => { refit(); setTimeout(say, 300); setTimeout(say, 1400); });
     const dt = el.querySelector('details.xfit'); if (dt) dt.addEventListener('toggle', say);
     say();
   }
 
   /* ---------- a page the browser left at an old, narrower width ----------
-     Louis's iPad (iPadOS 26, Chrome, a resizable window), 2026-11-12: after the window was widened the page stayed
-     laid out for the old width (746 px in a 1,376 px window), pinned to the left, the rest of the window showing the
-     page background. Nothing in the page sets a width: the header and the tab strip are plain blocks, so they are as
-     wide as the layout width the browser reports. Chromium never does this. What the page can do is ask the browser
-     to work the viewport out again, by writing the viewport meta once with an equivalent value and putting it back.
-     That is done from the Settings button, and by itself only on a touch device whose window (the widest of the
-     inner width, the outer width and the visible viewport) is reported at least 60 px wider than the page is laid out:
-     two refits after each resize, checked again every 3 seconds, and when they do not bring the layout back a bar
-     with a Reload button (2026-11-14). On a desktop browser it never runs by itself: there a docked side panel
-     legitimately makes the window wider than the page. Emulated in wide_test.js; untested on the device. */
+     Louis's iPad (iPadOS 26, Chrome, a resizable window), 2026-11-12 and 2026-11-14: after the window was widened the
+     page stayed laid out for the old width (746 px in a 1,376 px window), pinned to the left, the rest of the window
+     showing the page background, until a reload. Nothing in the page sets a width. Chromium on a desktop never does
+     this. What is known (read 2026-11-14; none of it names a cause, a fixed version or a page-side remedy for this
+     exact case):
+       - WebKit bug 170595 (open since 2017): in a WKWebView app, not in Safari, the layout viewport and innerWidth
+         can be wrong after a resize, because the new size has not reached the web process.
+         https://bugs.webkit.org/show_bug.cgi?id=170595
+       - the same picture in other WKWebView apps on iPadOS 26: Obsidian
+         https://forum.obsidian.md/t/usable-space-reduced-with-ipados-26/104120 , Firefox
+         https://github.com/mozilla-mobile/firefox-ios/issues/34646 (closed without a fix), Chrome's start page
+         https://support.google.com/chrome/thread/424168586 ; late re-layout during a window resize, reported to
+         Apple: https://developer.apple.com/forums/thread/802660 ; Chrome on iOS giving a page a wrong innerWidth:
+         https://issues.chromium.org/issues/40944868 and https://issues.chromium.org/40746784
+       - WebKit source (ViewportConfiguration.cpp, WKWebViewIOS.mm, main branch): with width=device-width the layout
+         width is the view size the app last sent to the web process, so writing the meta again with an equivalent
+         value (the refit used until 2026-11-14, with minimum-scale=1) recomputes the same stale width.
+     The bar with Reload and Dismiss that followed a failed refit is gone (Louis, 2026-11-14: "this reload pop up
+     when the tab changes sizes is annoying omit it, also doesn't work"). Nothing here shows a bar, a popup or a
+     dialog, and nothing reloads the page. What runs instead, silently, and only on Apple touch WebKit (an iPad or
+     iPhone user agent, or a Macintosh one with more than one touch point, which is how an iPad presents itself),
+     never while the page is pinch-zoomed, hidden, or a text field has the focus:
+       evidence  strong: the inner width and the visible viewport agree within 2 px and are at least 60 px wider
+                 than the page is laid out. Weak: only one of the two is. The outer width is shown in the Settings
+                 line but is never the basis for a width (it can be the screen's).
+       layer 0   the viewport meta gets ", interactive-widget=resizes-content" for 80 ms and is put back. In the
+                 WebKit source a change of that value is the one thing a page can do that makes the app send the
+                 view size again. It changes nothing else while no keyboard is up. At most 3 times a visit.
+       layer 1   the meta's width=device-width becomes width=<window px> (with minimum-scale=1). After 300 ms it is
+                 kept only if the layout width, the inner width and the visible viewport all equal that number at
+                 scale 1 with no sideways overflow; otherwise the meta is put back. At most 2 failures a visit
+                 (2 tries on weak evidence).
+       layer 2   strong evidence only, when layer 1 did not hold: a screen-only rule html{width:<window px>} (with
+                 shrink-to-fit=no in the meta, so WebKit does not scale the wider content down), kept only if the
+                 root is that wide at scale 1. In-flow content, the tab strip included, then spans the window;
+                 media queries, vw units and fixed elements still follow the stale width. At most 2 failures a visit.
+       undoing   every resize event and the 3-second check compare again. A fix is removed when the window width no
+                 longer equals the fixed width (wider or narrower), when the scale drops below 1, or, for layer 2,
+                 when the browser's own layout width has caught up; the page is then judged once more.
+       bounds    one attempt a second, 12 a visit, then off for the visit; timers only, no loops.
+     Settings > Display keeps "Refit the page to the window" (it runs the same routine once more, with the visit's
+     limits started again) and the numbers line, which is the way to learn what the device reports. Emulated in
+     wide_test.js; untested on the device. */
   const laidOut = () => (document.documentElement && document.documentElement.clientWidth) || 0;
+  const FIT_GAP = 60, FIT_TOL = 2, FIT_MAX = 12, FIT_WAIT = 300, FIT_EVERY = 1000;
+  let fitMode = 0, fitTarget = 0, fitOrig = null, fitBusy = false, fitOff = false;
+  let fitCount = 0, fitLast = 0, metaFails = 0, weakTries = 0, rootFails = 0, nudges = 0;
   const fitText = () => {
     let vv = ''; try { if (window.visualViewport) vv = '; visible ' + Math.round(visualViewport.width) + ' px at scale ' + (Math.round(visualViewport.scale * 100) / 100); } catch (e) {}
-    return 'Now: page laid out for ' + laidOut() + ' px; window ' + (window.innerWidth || 0) + ' px inside, ' + (window.outerWidth || 0) + ' px outside' + vv + '; screen ' + ((window.screen && screen.width) || 0) + ' px.';
+    return 'Now: page laid out for ' + laidOut() + ' px; window ' + (window.innerWidth || 0) + ' px inside, ' + (window.outerWidth || 0) + ' px outside' + vv + '; screen ' + ((window.screen && screen.width) || 0) + ' px; ' +
+      (fitMode === 1 ? 'viewport width set to ' + fitTarget + ' px' : fitMode === 2 ? 'page width set to ' + fitTarget + ' px' : 'no width set') + '.';
   };
-  let fits = 0, lastFit = 0, notice = null;
-  function refit(){
-    try {
-      const m = document.querySelector('meta[name="viewport"]'); if (!m) return false;
-      const orig = m.getAttribute('content') || 'width=device-width, initial-scale=1';
-      m.setAttribute('content', orig + ', minimum-scale=1');
-      const back = () => { try { m.setAttribute('content', orig); window.dispatchEvent(new Event('resize')); } catch (e) {} };
-      if (typeof requestAnimationFrame === 'function') requestAnimationFrame(() => requestAnimationFrame(back)); else setTimeout(back, 50);
-      return true;
-    } catch (e) { return false; }
+  const appleTouch = () => {
+    try { return (navigator.maxTouchPoints || 0) > 1 && /iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent || ''); } catch (e) { return false; }
+  };
+  const measure = () => {
+    let vw = 0, scale = 1;
+    try { if (window.visualViewport) { scale = visualViewport.scale || 1; vw = (visualViewport.width || 0) * scale; } } catch (e) {}
+    return {lay: laidOut(), iw: window.innerWidth || 0, vw, scale};
+  };
+  // the width to trust: the inner width and the visible viewport must agree
+  const trusted = m => m.vw && m.iw && Math.abs(m.iw - m.vw) <= FIT_TOL ? Math.round(Math.min(m.iw, m.vw)) : 0;
+  const unzoomed = m => Math.abs(m.scale - 1) <= 0.02;
+  const typing = () => {
+    const a = document.activeElement; if (!a) return false;
+    if (a.isContentEditable === true || /^(TEXTAREA|SELECT)$/.test(a.tagName || '')) return true;
+    return a.tagName === 'INPUT' && !/^(checkbox|radio|button|submit|reset|range|file|color|image)$/i.test(a.type || '');
+  };
+  const vpMeta = () => document.querySelector('meta[name="viewport"]');
+  const DEVW = /width\s*=\s*device-width/i;
+  const metaSet = v => { const m = vpMeta(); if (m && m.getAttribute('content') !== v) m.setAttribute('content', v); };
+  const metaOrig = () => {
+    if (fitOrig === null) { const m = vpMeta(); if (!m) return null; fitOrig = m.getAttribute('content') || ''; }
+    return fitOrig;
+  };
+  const metaOff = () => { if (fitOrig !== null) metaSet(fitOrig); };
+  function metaOn(w){
+    const o = metaOrig(); if (o === null || !DEVW.test(o)) return false;
+    metaSet(o.replace(DEVW, 'width=' + w) + (/minimum-scale/i.test(o) ? '' : ', minimum-scale=1')); return true;
   }
-  /* The widest width the browser reports for the window: whichever of the inner width, the outer width and the
-     visible viewport is largest. The layout width (clientWidth) should equal it; on the affected iPads it stays
-     behind after the window is resized (Louis, 2026-11-14: "the blank is still present when screen changes sizes"). */
-  const windowWidth = () => {
-    let vv = 0; try { if (window.visualViewport) vv = visualViewport.width || 0; } catch (e) {}
-    return Math.max(window.innerWidth || 0, window.outerWidth || 0, vv);
-  };
-  const behind = () => {
+  function rootOn(w){
+    const o = metaOrig(); if (o && !/shrink-to-fit/i.test(o)) metaSet(o + ', shrink-to-fit=no');
+    let s = document.getElementById('xfitcss');
+    if (!s) { s = document.createElement('style'); s.id = 'xfitcss'; document.head.appendChild(s); }
+    s.textContent = '@media screen{html{width:' + w + 'px!important;min-width:' + w + 'px!important;max-width:none!important}}';
+  }
+  function rootOff(){ const s = document.getElementById('xfitcss'); if (s && s.parentNode) s.parentNode.removeChild(s); }
+  function fitUndo(){ try { metaOff(); rootOff(); } catch (e) {} fitMode = 0; fitTarget = 0; }
+  const noOverflow = w => { const se = document.scrollingElement || document.documentElement; return !se || se.scrollWidth <= w + FIT_TOL; };
+  const told = () => { try { window.dispatchEvent(new Event('resize')); } catch (e) {} };
+  // one step later; no other check runs in between, and the flag is always cleared
+  const later = (fn, ms) => { fitBusy = true; setTimeout(() => { fitBusy = false; try { fn(); } catch (e) { fitUndo(); } }, ms || FIT_WAIT); };
+  // layer 0
+  function nudge(then){
+    const o = metaOrig();
+    if (!o || /interactive-widget/i.test(o)) { then(); return; }
+    nudges++;
+    metaSet(o + ', interactive-widget=resizes-content');
+    later(() => { metaOff(); later(then); }, 80);
+  }
+  // layer 2
+  function rootApply(target){
+    if (rootFails >= 2) return;
+    rootOn(target); fitMode = 2; fitTarget = target;
+    later(() => {
+      const a = measure(), w = document.documentElement.getBoundingClientRect().width;
+      if (Math.abs(w - target) <= FIT_TOL && trusted(a) === target && unzoomed(a) && noOverflow(target)) told();
+      else { rootFails++; fitUndo(); }
+    });
+  }
+  // layer 1, then layer 2 on strong evidence
+  function fitApply(target, strong){
+    const m = measure();
+    if (document.hidden || typing() || !unzoomed(m) || target - m.lay < FIT_GAP) return;      // layer 0 was enough, or the moment has passed
+    if (strong && trusted(m) !== target) return;
+    if (!(metaFails < 2 && metaOn(target))) { if (strong) rootApply(target); return; }
+    if (!strong) weakTries++;
+    later(() => {
+      const a = measure();
+      const ok = Math.abs(a.lay - target) <= FIT_TOL && unzoomed(a) && Math.abs(a.iw - target) <= FIT_TOL &&
+        (!a.vw || Math.abs(a.vw - target) <= FIT_TOL) && noOverflow(target);
+      if (ok) { fitMode = 1; fitTarget = target; told(); return; }
+      metaFails++; metaOff();
+      if (strong) rootApply(target);
+    });
+  }
+  function fitCheck(manual){
     try {
-      if ((navigator.maxTouchPoints || 0) < 2) return false;
-      let scale = 1; try { if (window.visualViewport) scale = visualViewport.scale; } catch (e) {}
-      const lay = laidOut(); return !!lay && Math.abs(scale - 1) <= 0.02 && windowWidth() - lay >= 60;
-    } catch (e) { return false; }
-  };
-  /* A small bar with a Reload button when a refit did not bring the layout back. A reload measures the window
-     afresh and keeps the progress (it is stored in this browser). */
-  function showNotice(){
-    try {
-      if (notice || !document.body) return;
-      const d = document.createElement('div'); d.id = 'xFitNotice'; d.setAttribute('role', 'status');
-      d.style.cssText = 'position:fixed;left:8px;right:8px;bottom:calc(8px + env(safe-area-inset-bottom,0px));z-index:60;display:flex;gap:8px;align-items:center;flex-wrap:wrap;background:var(--paper,#fff);color:var(--text,#1d2330);border:1px solid var(--line,#d3dae3);border-radius:10px;padding:8px 12px;box-shadow:0 2px 10px rgba(0,0,0,.2);font-size:14px';
-      const t = document.createElement('span'); t.style.flex = '1 1 200px'; t.textContent = 'The window changed size and the page layout did not follow.';
-      const r = document.createElement('button'); r.type = 'button'; r.className = 'btn sm'; r.textContent = 'Reload'; r.style.minHeight = '44px';
-      r.addEventListener('click', () => { try { location.reload(); } catch (e) {} });
-      const x = document.createElement('button'); x.type = 'button'; x.className = 'btn ghost sm'; x.textContent = 'Dismiss'; x.style.minHeight = '44px';
-      x.addEventListener('click', () => { hideNotice(); dismissed = true; });
-      d.append(t, r, x); document.body.appendChild(d); notice = d;
+      if (fitBusy || (fitOff && !manual) || document.hidden || !appleTouch() || typing()) return;
+      const m = measure(); if (!m.lay) return;
+      if (m.scale > 1.02) return;                                   // pinched in: nothing is touched
+      const real = trusted(m);
+      if (fitMode) {                                                // a fix is on: is it still right?
+        const moved = m.scale < 0.98 || !real || Math.abs(real - fitTarget) > FIT_TOL;
+        const caught = fitMode === 2 && Math.abs(m.lay - fitTarget) <= FIT_TOL;
+        if (!moved && !caught) return;
+        fitUndo();
+        if (moved) later(() => fitCheck());                         // judged once more with the page's own meta
+        return;
+      }
+      if (m.scale < 0.98) return;
+      const strong = real && real - m.lay >= FIT_GAP ? real : 0;
+      let weak = 0;
+      if (!real && weakTries < 2) { const w = Math.round(Math.max(m.iw, m.vw)); if (w - m.lay >= FIT_GAP) weak = w; }
+      const target = strong || weak;
+      if (!target) { if (manual) nudge(() => {}); return; }
+      const now = Date.now();
+      if (!manual) {
+        if (now - fitLast < FIT_EVERY) return;
+        if (fitCount >= FIT_MAX) { fitOff = true; return; }
+      }
+      fitCount++; fitLast = now;
+      const go = () => fitApply(target, !!strong);
+      if (manual || nudges < 3) nudge(go); else go();
     } catch (e) { /* the page is unaffected */ }
   }
-  let dismissed = false;
-  function hideNotice(){ try { if (notice && notice.parentNode) notice.parentNode.removeChild(notice); } catch (e) {} notice = null; }
-  // each new resize starts a new episode with its own two refits; a refit that did not help is followed by the bar
-  function maybeRefit(fresh){
-    try {
-      const t = Date.now();
-      if (fresh) { fits = 0; dismissed = false; }
-      if (!behind()) { hideNotice(); return; }
-      if (t - lastFit < 1200) return;
-      if (fits < 2) { fits++; lastFit = t; refit(); setTimeout(() => { if (behind() && !dismissed) showNotice(); }, 1500); }
-      else if (!dismissed) showNotice();
-    } catch (e) { /* the page is unaffected */ }
-  }
+  // the Settings button: one more try, with the visit's limits started again
+  const refit = () => { fitOff = false; fitCount = 0; metaFails = 0; weakTries = 0; rootFails = 0; fitCheck(true); return true; };
 
   const wrap = (name, after) => {
     try {

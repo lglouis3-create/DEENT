@@ -14579,6 +14579,70 @@ const DZ = {
     ]
    ],
    "src": "Patel Sun slides 16–18; T@53859, T@55166; Smith Sun slides 20–25; Sikazwe DPAW pages 61–65"
+  },
+  {
+   "id": "abcde-two",
+   "title": "The two ABCDE mnemonics: skin cancer or diaper dermatitis",
+   "cols": [
+    "Skin cancer identifiers",
+    "Diaper dermatitis treatment"
+   ],
+   "path": [
+    {
+     "q": "Is the question about what a mole or lesion looks like, or about caring for skin under a diaper?",
+     "a": [
+      "A lesion's look → **skin cancer identifiers**: Asymmetry, Border, Color, Diameter, Evolving",
+      "Diaper care → **treatment steps**: Air, Barrier, Cleansing, Diaper, Education"
+     ]
+    }
+   ],
+   "rows": [
+    [
+     "Used for",
+     [
+      "Telling a suspicious lesion from a mole; a suspicious lesion goes to a health care provider (slide 37)",
+      "Preventing and treating diaper or incontinence dermatitis without a drug, and with skin protectants (slides 62–63)"
+     ],
+     "One mnemonic describes a lesion; the other lists what the caregiver does."
+    ],
+    [
+     "A",
+     [
+      "{{Asymmetry}}: the shape of one half does not match the other half",
+      "{{Air}}: let the diaper area air dry frequently; allow diaper-free time"
+     ]
+    ],
+    [
+     "B",
+     [
+      "{{Border}} that is irregular: edges ragged, notched or blurred; pigment may spread into the surrounding skin",
+      "{{Barrier}}: apply a barrier skin protectant liberally with each diaper change"
+     ]
+    ],
+    [
+     "C",
+     [
+      "{{Color}} that is uneven: shades of black, brown and tan; white, gray, red, pink or blue may also be seen",
+      "{{Cleansing}}: gently, with a soft cloth and warm water, or a baby wipe when stool is present"
+     ]
+    ],
+    [
+     "D",
+     [
+      "{{Diameter}}: a change in size, usually an increase; most are larger than {{6 millimeters}} (about 1/4 inch)",
+      "{{Diaper}}: change frequently, every {{2 hours}} and as soon as it is soiled; absorbent disposable diapers if affordable"
+     ]
+    ],
+    [
+     "E",
+     [
+      "{{Evolving}}: the mole has changed over the past few weeks or months",
+      "{{Education}} of parents and caregivers, verifying understanding to ensure adherence"
+     ]
+    ]
+   ],
+   "photo": "abcde-two",
+   "src": "Patel Sun Exposure slide 28; Patel Dermatitis slide 62; 11/12 lecture: \"A B C D E rule applies here again, but a little different than diaper dermatitis\""
   }
  ],
  "pairs": [
@@ -15199,6 +15263,12 @@ const DZ = {
    "file": "wart-plantar.jpg",
    "alt": "A plantar wart",
    "src": "Patel Warts slide 4"
+  },
+  {
+   "id": "abcde-two",
+   "file": "abcde-two.jpg",
+   "alt": "Her two ABCDE slides side by side: skin cancer identifiers on the left, the diaper dermatitis treatment table on the right",
+   "src": "Patel Sun Exposure slide 28; Patel Dermatitis slide 62"
   }
  ],
  "rules": [
