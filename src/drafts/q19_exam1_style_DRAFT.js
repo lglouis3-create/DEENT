@@ -193,6 +193,7 @@ QUESTIONS.push(
   {t:'Calcineurin inhibitors', correct:true, why:'Listed on the psoriasis medication slide (Pathophys slide 28).'},
   {t:'Nuclear receptor binders', correct:true, why:'Listed on the psoriasis medication slide (Pathophys slide 28).'},
   {t:'TNF-α inhibitors', correct:true, why:'Listed on the psoriasis medication slide (Pathophys slide 28).'},
+  {t:'PDE-4 inhibitors', correct:true, why:'Apremilast, a PDE-4 inhibitor, is used for plaque psoriasis (Dr. Sikazwe, slide 34); Exam 1 counted this class as right in its psoriasis list. It is not printed on Pathophys slide 28.'},
   {t:'Antibiotics', correct:false, why:'On the acne list (Pathophys slide 37), not on the psoriasis list.'},
   {t:'Antiandrogens', correct:false, why:'On the acne list (Pathophys slide 37), not on the psoriasis list.'}],
  teach:'Pathophys slide 28, psoriasis: corticosteroids, DNA synthesis inhibitors, the DHFR inhibitor, T-cell inhibitors, TNF-α inhibitors, JAK inhibitors, "IL-12 & IL-13 inhibitors" (as printed), IL-23 inhibitor, IL-17A inhibitor, nuclear receptor binders, psoralens, calcineurin inhibitors, cytotoxic agents. Slide 37, acne: keratolytics, antibiotics, nuclear receptor binders, antiandrogens.',
