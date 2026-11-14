@@ -288,3 +288,9 @@
 - New check `src/stem_check.js`: no stem or option names a slide, deck, lecture or professor, and no stem is "Which statement/pairing/description ... is correct". 1,402 questions pass.
 - Spoken whys L1-032 and L1-041 rewritten for the new answer choices and re-recorded (voice jNB0TWZK9LKlBbU54wMW, eleven_v4; 509 and 478 characters); narration_hash --check: 508 current.
 - Not verified by the rewrite checkers: transcript line numbers copied into new whys for Dr. Smith and Dr. Sikazwe (their transcripts were not in the worktrees); slide facts were checked.
+
+## 2026-11-14 Release 329bcd3 (128 stems reworded)
+- Louis: "Publish". Release commit 329bcd3 on main (tree of branch 22b81b8); Pages build and deployment: completed, success. Live page read with Playwright: 1,402 questions; P5-111 shows the new case stem; 0 stems contain "her slide" or "matches her"; no page errors.
+- Checks on the released tree: run_checks 38 PASS, 0 FAIL, 1 REPORT; stem_check, ftu_test 121, search_test 114, slide_check, slide_test 235, examfold_test 347, dz_test 59, walk_test 92, topic_list_test 75, dianarr_test 67, blank_check, links_check, atlas_check, druglist_check, likely_check: all PASS. wide_test and slideview_test were not rerun for this release (no file they read changed since their pass on 4903bb6's tree).
+- Guides: Louis chose "your recommendation of A + B" for the objective pages and asked that number tiles say what the number means (his image: onset and length tiles of design B).
+
