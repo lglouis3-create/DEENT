@@ -107,6 +107,49 @@ const measure = p => p.evaluate(() => { const r = e => e ? e.getBoundingClientRe
     check(!errs.length, 'no page errors around Refit', errs.join(' | '));
     await p.close();
   }
+  /* Louis, 2026-11-14: on the iPad the blank area is still there when the window changes size. A touch device whose
+     window is reported wider than the page is laid out now gets a refit after every resize (two tries each), and, when
+     that does not bring the layout back, a bar with Reload. Emulated here: touch, with the outer width reported as
+     1,376 px while the page is laid out for 746 px. */
+  {
+    const errs = [];
+    const ctx = await b.newContext({viewport: {width: 746, height: 1000}, hasTouch: true});
+    await ctx.addInitScript(() => {
+      Object.defineProperty(navigator, 'maxTouchPoints', {get: () => 5});
+      window.__outer = 1376;
+      Object.defineProperty(window, 'outerWidth', {get: () => window.__outer, configurable: true});
+    });
+    const p = await ctx.newPage();
+    p.on('pageerror', e => errs.push(e.message));
+    let writes = 0;
+    await p.exposeFunction('__vpWrite', () => { writes++; });
+    await p.goto(PAGE); await p.waitForTimeout(900);
+    await p.evaluate(() => { const m = document.querySelector('meta[name="viewport"]'); new MutationObserver(() => window.__vpWrite()).observe(m, {attributes: true}); });
+    await p.setViewportSize({width: 748, height: 1000}); await p.waitForTimeout(3200);       // a resize event, then the refit
+    check(writes >= 2, 'a touch window reported wider than the page is refitted after a resize', writes + ' writes');
+    check(!!(await p.$('#xFitNotice')), 'and a bar with Reload follows when the layout does not come back');
+    const meta = await p.$eval('meta[name="viewport"]', m => m.getAttribute('content'));
+    check(!/minimum-scale/.test(meta), 'the viewport meta is back as it was', meta);
+    await p.click('#xFitNotice button:nth-of-type(2)'); await p.waitForTimeout(200);
+    check(!(await p.$('#xFitNotice')), 'Dismiss closes the bar');
+    await p.evaluate(() => { window.__outer = 748; }); await p.waitForTimeout(3500);
+    check(!(await p.$('#xFitNotice')), 'when the widths agree again there is no bar');
+    // another resize that is wrong again starts a new episode: the bar can come back
+    await p.evaluate(() => { window.__outer = 1500; }); await p.setViewportSize({width: 750, height: 1000}); await p.waitForTimeout(3600);
+    check(!!(await p.$('#xFitNotice')), 'a later resize that leaves the page behind brings the bar again');
+    check(!errs.length, 'no page errors in the emulated iPad case', errs.join(' | '));
+    await ctx.close();
+    // a touch window whose widths agree is left alone
+    const ctx2 = await b.newContext({viewport: {width: 1376, height: 1032}, hasTouch: true});
+    await ctx2.addInitScript(() => { Object.defineProperty(navigator, 'maxTouchPoints', {get: () => 5}); });
+    const q = await ctx2.newPage(); let w2 = 0;
+    await q.exposeFunction('__vpWrite', () => { w2++; });
+    await q.goto(PAGE); await q.waitForTimeout(900);
+    await q.evaluate(() => { const m = document.querySelector('meta[name="viewport"]'); new MutationObserver(() => window.__vpWrite()).observe(m, {attributes: true}); });
+    await q.setViewportSize({width: 1100, height: 900}); await q.waitForTimeout(3800);
+    check(w2 === 0 && !(await q.$('#xFitNotice')), 'a touch window whose widths agree is left alone', w2 + ' writes');
+    await ctx2.close();
+  }
   /* The pinned tab strip hides while reading (review finding E-F2, 2026-11-13). In Chromium a tap or a click leaves
      the tab button as the active element; wide_ui.js counted any focus inside the strip as a reason to keep it, so
      after a real press on a tab the strip stayed over the page (and its timer was set again every 3 s). Focus now
