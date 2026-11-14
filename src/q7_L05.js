@@ -259,7 +259,7 @@ QUESTIONS.push(
 
 {id:'P5-017', skill:'patho', prof:'Patel', tier:'new', topic:'p5-ad', sub:'def', concept:'p5-ad-features', multi:true,
  tags:['list'], source:'both',
- stem:'Which statements describe atopic dermatitis? Select all that apply.',
+ stem:'Which are features of atopic dermatitis? Select all that apply.',
  options:[
   {t:'Chronic or relapsing inflammatory skin disorder', correct:true, why:'Slide 17: very common chronic or relapsing inflammatory skin disorder with typical morphology and age-specific patterns.'},
   {t:'Hallmark symptom is pruritus', correct:true, why:'Slide 17: hallmark symptom is pruritis (itching); T@13017–13378.'},
@@ -293,7 +293,7 @@ QUESTIONS.push(
 
 {id:'P5-020', skill:'epi', prof:'Patel', tier:'new', topic:'p5-ad', sub:'def', concept:'p5-atopic-triad-vs-march',
  tags:['two-facts'], source:'both',
- stem:'Which condition is part of the atopic march on her slide but not part of the atopic triad?',
+ stem:'Which condition belongs to the atopic march but not to the atopic triad?',
  options:[
   {t:'Food allergies', correct:true, why:'Slide 19: atopic triad = allergic rhinitis, asthma, atopic dermatitis; atopic march = allergic rhinitis, asthma, atopic dermatitis and food allergies.'},
   {t:'Asthma', correct:false, why:'Asthma is in both the triad and the march (slide 19).'},
@@ -328,12 +328,12 @@ QUESTIONS.push(
 
 {id:'P5-023', skill:'patho', prof:'Patel', tier:'new', topic:'p5-ad', sub:'trig', concept:'p5-ad-trigger-personal',
  tags:['fine-detail','two-facts'], source:'both',
- stem:'Which pair are both personal-factor triggers of atopic dermatitis?',
+ stem:'A nurse with atopic dermatitis flares during a stressful month in which she washes and sanitizes her hands many times each shift. Under which category of atopic dermatitis triggers do these two fall?',
  options:[
-  {t:'Stress; excessive skin washing and sanitizing', correct:true, why:'Slide 20, Personal Factors: stress; excessive skin washing and sanitizing ("because you\'re drying out the barrier of the skin", T@17405).'},
-  {t:'Stress; low humidity', correct:false, why:'Low humidity is an Environment trigger on slide 20.'},
-  {t:'Excessive washing; dyes and preservatives', correct:false, why:'Dyes and preservatives are Irritants on slide 20.'},
-  {t:'Extreme temperatures; stress', correct:false, why:'Extreme temperatures are an Environment trigger on slide 20.'}],
+  {t:'Personal factors', correct:true, why:'Slide 20, Personal Factors: stress; excessive skin washing and sanitizing ("because you\'re drying out the barrier of the skin", T@17405).'},
+  {t:'Irritants', correct:false, why:'Irritants on slide 20: airborne tobacco smoke and air pollution, cosmetics, fragrances, astringents, irritating soaps, scrubs and detergents, dyes and preservatives. Stress and excessive washing are listed under Personal Factors.'},
+  {t:'Allergens', correct:false, why:'Allergens on slide 20: foods, clothing (wool, polyester) and aeroallergens (house dust mites, pollens, pet dander, molds).'},
+  {t:'Environment', correct:false, why:'Environment on slide 20: extreme temperatures and low humidity.'}],
  teach:'"So think about Tide ... laundry detergent. Includes a dye in it" (T@16602): dyes are irritants, as are fragrances in lotions and body washes.',
  cite:P5+' slide 20; T@16145–17405'},
 
@@ -405,7 +405,7 @@ QUESTIONS.push(
 
 {id:'P5-030', skill:'case', prof:'Patel', tier:'new', topic:'p5-ad', sub:'sev', concept:'p5-severity-moderate-desc',
  tags:['fine-detail'], source:'both',
- stem:'Which description separates moderate from mild atopic dermatitis?',
+ stem:'A patient with atopic dermatitis has areas of dry skin. Which finding makes the severity moderate rather than mild?',
  options:[
   {t:'Frequent itching with a moderate impact on activities and sleep', correct:true, why:'Slide 23, Moderate: mild characteristics with frequent itching, moderate impact on everyday activities, sleep (T@21419).'},
   {t:'Infrequent itching with little impact on activities and sleep', correct:false, why:'That is mild on slide 23 (areas of dry skin, infrequent itching, little impact on everyday activities, sleep).'},
@@ -487,7 +487,7 @@ QUESTIONS.push(
 
 {id:'P5-037', skill:'counsel', prof:'Patel', tier:'new', topic:'p5-care', sub:'goals', concept:'p5-fix-barrier-steps',
  tags:['two-facts'], source:'both',
- stem:'To "fix the skin barrier", which step goes with "Don\'t strip off the weakened epidermis"?',
+ stem:'A patient with atopic dermatitis asks how to keep from stripping off the weakened epidermis. What should the pharmacist recommend?',
  options:[
   {t:'Use gentle cleansers and limit bathing time', correct:true, why:'Slide 29: don\'t strip off the weakened epidermis, use gentle cleansers, limit bathing time (T@28865–29258).'},
   {t:'Moisturize with thick emollients and maintain hydration', correct:false, why:'That goes with "help re-establish the epidermis" (slide 29).'},
@@ -520,7 +520,7 @@ QUESTIONS.push(
 
 {id:'P5-040', skill:'counsel', prof:'Patel', tier:'new', topic:'p5-care', sub:'bath', concept:'p5-bath-practice',
  tags:['two-facts'], source:'both',
- stem:'Which bathing instruction fits her slide for atopic dermatitis?',
+ stem:'A mother asks how to bathe her 5-year-old, who has atopic dermatitis. What should the pharmacist recommend?',
  options:[
   {t:'10-minute lukewarm bath, gentle cleanser, pat dry', correct:true, why:'Slide 31: suggest 10-minute lukewarm bath, use gentle cleansers, gentle towel dry pat (T@30763–31131).'},
   {t:'20-minute warm bath, gentle cleanser, rub dry', correct:false, why:'Slide 31: 10 minutes; pat, do not rub: "We\'re patting it down. We\'re not scrubbing it" (T@31131).'},
@@ -531,7 +531,7 @@ QUESTIONS.push(
 
 {id:'P5-041', skill:'counsel', prof:'Patel', tier:'new', topic:'p5-care', sub:'bath', concept:'p5-wet-wrap-tci',
  tags:['two-facts','interaction'], source:'both',
- stem:'A patient using tacrolimus ointment asks about wet wraps for weeping lesions. Which advice fits her slides?',
+ stem:'A patient using tacrolimus ointment asks whether she can put wet wraps on her weeping lesions. What should the pharmacist tell her?',
  options:[
   {t:'Wet wraps are short-term and not used with a topical calcineurin inhibitor', correct:true, why:'Slide 30: wet wrap, short-term and not with topical calcineurin inhibitors (TCIs); slide 51: cool compresses "but not to TCI\'s"; "what medication are we not applying that with? ... TCIs" (T@62649).'},
   {t:'Wet wraps over tacrolimus increase its effect and are preferred at night', correct:false, why:'She ruled out wet wraps with TCIs (slide 30; T@30366, T@62649).'},
@@ -632,7 +632,7 @@ QUESTIONS.push(
 
 {id:'P5-050', skill:'counsel', prof:'Patel', tier:'new', topic:'p5-care', sub:'couns', concept:'p5-counsel-thin-layer', multi:true,
  tags:['list','poll'], source:'both',
- stem:'A patient starts a topical corticosteroid for atopic dermatitis. Which counseling points fit her slides? Select all that apply.',
+ stem:'A patient starts a topical corticosteroid for atopic dermatitis. What would you educate the patient on to optimize the use of the medication appropriately? Select all that apply.',
  options:[
   {t:'Wash hands before and after applying', correct:true, why:'Slide 52; part of the class answers to her PollEv (T@67682).'},
   {t:'Apply a thin layer and rub in until it vanishes', correct:true, why:'Slides 35, 52; "remember to kinda mention thin layer ... continue to rub the medication in until it disappears" (T@67283).'},
@@ -667,7 +667,7 @@ QUESTIONS.push(
 
 {id:'P5-053', skill:'counsel', prof:'Patel', tier:'new', topic:'p5-care', sub:'access', concept:'p5-pa-denied',
  tags:['reasoning'], source:'both',
- stem:'Prior authorization for dupilumab is denied. What is the next step on her slide?',
+ stem:'Dupilumab is prescribed for a patient with severe atopic dermatitis, and the insurer denies the prior authorization. What is the next step to obtain coverage?',
  options:[
   {t:'Appeal, with a peer-to-peer conversation', correct:true, why:'Slide 53: if prior authorizations are denied, appeals and peer-to-peer conversations can be completed as a next step to obtain coverage; "We\'re not accepting a denial" (T@65928).'},
   {t:'Switch to a JAK inhibitor without prior authorization', correct:false, why:'JAK inhibitors are specialty, last-line agents (slide 46); slide 53 gives an appeal as the next step.'},
@@ -736,14 +736,14 @@ QUESTIONS.push(
 
 {id:'P5-059', skill:'counsel', prof:'Patel', tier:'new', topic:'p5-tcs', sub:'prof', concept:'p5-tcs-storage-duration',
  tags:['two-facts'], source:'both',
- stem:'Which pair of topical corticosteroid counseling points is on her slide?',
+ stem:'A patient picks up triamcinolone acetonide 0.1% cream for atopic dermatitis and asks where to keep it and how long she may apply it. What should the pharmacist tell her?',
  options:[
   {t:'Store cool, dry, room temperature; do not apply longer than 2 weeks', correct:true, why:'Slide 35 counseling: store in a cool, dry, room temperature location; do not apply for longer than 2 weeks (T@37049).'},
   {t:'Store in the refrigerator; do not apply longer than 2 weeks', correct:false, why:'Refrigeration is for dupilumab (slide 43); topical steroids are stored in a cool, dry, room temperature place (slide 35).'},
   {t:'Store cool, dry, room temperature; do not apply longer than 6 weeks', correct:false, why:'6 weeks is the TCI reassessment point (slide 40); topical steroids stop at 2 weeks (slide 35).'},
   {t:'Store in the refrigerator; do not apply longer than 6 weeks', correct:false, why:'Both are other drugs\' points: refrigeration is dupilumab (slide 43), 6 weeks the TCI reassessment (slide 40).'}],
  teach:'Slide 35 counseling: apply to a clean, dry area; a thin layer, rubbed in gently until the medication vanishes; store cool, dry, room temperature; not longer than 2 weeks.',
- cite:P5+' slide 35; T@36649–37049'},
+ cite:P5+' slides 35, 37; T@36649–37049'},
 
 {id:'P5-060', skill:'tell', prof:'Patel', tier:'new', topic:'p5-tcs', sub:'pot', concept:'p5-vehicle-order',
  tags:['fine-detail'], source:'both',
@@ -780,7 +780,7 @@ QUESTIONS.push(
 
 {id:'P5-063', skill:'tell', prof:'Patel', tier:'new', topic:'p5-tcs', sub:'pot', concept:'p5-triamcinolone-medium',
  tags:['fine-detail'], source:'both',
- stem:'Which arrowed topical corticosteroid is medium potency and comes as a cream or an ointment?',
+ stem:'A prescriber asks for a medium-potency topical corticosteroid that comes as a cream or an ointment. Which product fits?',
  options:[
   {t:'Triamcinolone acetonide 0.1%', correct:true, why:'Slide 37, class III–IV medium potency: triamcinolone acetonide 0.1%, cream, ointment (T@39277: "most commonly prescribed, mometasone and triamcinolone, 0.1% ... the triamcinolone comes in the ointment formulation").'},
   {t:'Fluocinonide 0.05%', correct:false, why:'High potency (class II) on slide 37.'},
@@ -791,7 +791,7 @@ QUESTIONS.push(
 
 {id:'P5-064', skill:'tell', prof:'Patel', tier:'new', topic:'p5-tcs', sub:'pot', concept:'p5-high-potency-arrowed', multi:true,
  tags:['list','fine-detail'], source:'slide',
- stem:'Which arrowed products are high potency (class II)? Select all that apply.',
+ stem:'Which topical corticosteroid products are high potency (class II)? Select all that apply.',
  options:[
   {t:'Betamethasone dipropionate 0.05%', correct:true, why:'Slide 37, class II high potency (cream, foam, ointment, solution).'},
   {t:'Fluocinonide 0.05%', correct:true, why:'Slide 37, class II high potency (cream, gel, ointment, solution).'},
@@ -826,7 +826,7 @@ QUESTIONS.push(
 
 {id:'P5-067', skill:'counsel', prof:'Patel', tier:'new', topic:'p5-tcs', sub:'prof', concept:'p5-tcs-air-dry',
  tags:['numbers'], source:'transcript',
- stem:'A patient will dress over an area just treated with a topical steroid. What did she advise?',
+ stem:'A patient applies a topical steroid to his trunk each morning and then gets dressed. What should the pharmacist advise?',
  options:[
   {t:'Rub in until it vanishes, then let it air dry 3–5 minutes before clothing', correct:true, why:'"If it is going to be on a body part, that clothing will be on it, then we usually recommend at least 3 to 5 minutes of letting it air dry" (T@40748).'},
   {t:'Rub in until it vanishes, then cover it with plastic wrap before clothing', correct:false, why:'"We don\'t want to wrap the medication cause that\'ll increase the absorption" (T@40748).'},
@@ -849,12 +849,12 @@ QUESTIONS.push(
 
 {id:'P5-069', skill:'tell', prof:'Patel', tier:'new', topic:'p5-tci', sub:'tci', concept:'p5-pime-vs-tacro',
  tags:['two-facts','fine-detail'], source:'both',
- stem:'Which statement separates pimecrolimus from tacrolimus?',
+ stem:'A 9-year-old with mild-to-moderate atopic dermatitis has not responded to hydrocortisone 1%. The prescriber wants the topical calcineurin inhibitor that is used for this severity. Which product is it?',
  options:[
-  {t:'Pimecrolimus 1% cream, mild–moderate; tacrolimus ointment, moderate–severe', correct:true, why:'Slide 39: pimecrolimus (Elidel), mild-to-moderate eczema, cream 1%; tacrolimus (Protopic), moderate-to-severe eczema, ointment 0.1% or 0.03% (T@43342–43718).'},
-  {t:'Pimecrolimus ointment, moderate–severe; tacrolimus 1% cream, mild–moderate', correct:false, why:'Reversed: pimecrolimus is the cream for mild–moderate (slide 39).'},
-  {t:'Pimecrolimus once daily; tacrolimus twice daily', correct:false, why:'Both are applied twice daily to affected skin (slide 39).'},
-  {t:'Pimecrolimus from 3 months; tacrolimus from 2 years', correct:false, why:'Both are for children over 2 years and adults (slide 39); 3 months is crisaborole (slide 41).'}],
+  {t:'Tacrolimus 0.03% ointment', correct:false, why:'Tacrolimus (Protopic) ointment is the one for moderate-to-severe eczema; 0.03% is its strength from over 2 years to 15 years of age (slide 39).'},
+  {t:'Pimecrolimus 1% cream', correct:true, why:'Slide 39: pimecrolimus (Elidel), mild-to-moderate eczema, cream 1%; tacrolimus (Protopic), moderate-to-severe eczema, ointment 0.1% or 0.03% (T@43342–43718).'},
+  {t:'Tacrolimus 0.1% ointment', correct:false, why:'Tacrolimus ointment is for moderate-to-severe eczema, and 0.1% is the adult strength (over 16 years) (slide 39).'},
+  {t:'Pimecrolimus 0.1% ointment', correct:false, why:'Pimecrolimus is a 1% cream; the ointment and the 0.1% strength belong to tacrolimus (slide 39).'}],
  teach:'"The bolded areas, the age, what percentage of the medication, what dosage form ... our biggest things to understand with our TCIs" (T@43718). Both reduce the incidence of flares.',
  cite:P5+' slide 39; T@43342–44161'},
 
@@ -871,7 +871,7 @@ QUESTIONS.push(
 
 {id:'P5-071', skill:'counsel', prof:'Patel', tier:'new', topic:'p5-tci', sub:'tci', concept:'p5-tci-counsel-bathe',
  tags:['fine-detail'], source:'both',
- stem:'Which counseling point is on her TCI slide but not on her topical corticosteroid slide?',
+ stem:'A patient is switched from a topical corticosteroid to pimecrolimus cream. Which counseling point is new with the topical calcineurin inhibitor?',
  options:[
   {t:'Do not bathe, shower or swim right after applying', correct:true, why:'Slide 38 (TCIs): do not bathe, shower, or swim right after application, "cause we want the medication to absorb" (T@42526); slide 35 (steroids) does not list it.'},
   {t:'Apply a thin layer and rub in until it vanishes', correct:false, why:'On both slides 35 and 38.'},
@@ -906,7 +906,7 @@ QUESTIONS.push(
 
 {id:'P5-074', skill:'adverse', prof:'Patel', tier:'new', topic:'p5-tci', sub:'tci', concept:'p5-tci-adr',
  tags:['two-facts'], source:'slide',
- stem:'Which adverse effects are on the TCI slide but not on the topical corticosteroid slide?',
+ stem:'A patient is switched from a topical corticosteroid to tacrolimus ointment and asks which side effects are new. Which adverse effects belong to topical calcineurin inhibitors but not to topical corticosteroids?',
  options:[
   {t:'Coughing and flu-like signs and symptoms', correct:true, why:'Slide 38 (TCIs): skin burning, tingling, cracking, pruritus, coughing, flu-like s/sxs. Slide 35 (steroids) has the first four but not these two.'},
   {t:'Skin burning and tingling', correct:false, why:'On both lists (slides 35 and 38): "Side effects very similar to topical corticosteroids" (T@42092).'},
@@ -962,7 +962,7 @@ QUESTIONS.push(
 /* ---- Dupilumab, tralokinumab, JAK inhibitors (slides 43-46) -------------- */
 {id:'P5-079', skill:'class', prof:'Patel', tier:'new', topic:'p5-sys', sub:'dup', concept:'p5-dupilumab-indications', multi:true,
  tags:['list'], source:'both',
- stem:'Besides moderate–severe atopic dermatitis, which are indications of dupilumab on her slide? Select all that apply.',
+ stem:'Besides moderate-to-severe atopic dermatitis, for which conditions is dupilumab indicated? Select all that apply.',
  options:[
   {t:'Asthma', correct:true, why:'Slide 43 lists asthma among the indications (T@46851).'},
   {t:'Eosinophilic esophagitis', correct:true, why:'Slide 43 lists eosinophilic esophagitis (T@46851).'},
@@ -975,7 +975,7 @@ QUESTIONS.push(
 
 {id:'P5-080', skill:'adverse', prof:'Patel', tier:'new', topic:'p5-sys', sub:'dup', concept:'p5-dupilumab-cyp-live',
  tags:['interaction','two-facts'], source:'both',
- stem:'A patient on warfarin is starting dupilumab. Which two cautions on her slide apply to dupilumab?',
+ stem:'A 45-year-old man who takes warfarin is starting dupilumab for severe atopic dermatitis. Which two cautions apply to dupilumab?',
  options:[
   {t:'May interact with CYP-450 enzymes; do not use with live vaccines', correct:true, why:'Slide 43: may interact with CYP-450 enzymes (may need to adjust warfarin or cyclosporine doses); do not use with live vaccines and < 6 months of age (T@47593–48048).'},
   {t:'May raise the risk of thrombosis; do not use with live vaccines', correct:false, why:'No live vaccines is right; thrombosis (DVT, PE, arterial thrombosis) is a JAK inhibitor boxed warning (slide 46).'},
@@ -1052,14 +1052,14 @@ QUESTIONS.push(
 
 {id:'P5-087', skill:'tell', prof:'Patel', tier:'new', topic:'p5-sys', sub:'tral', concept:'p5-tralokinumab-target',
  tags:['two-facts','target'], source:'slide',
- stem:'Which statement separates tralokinumab from dupilumab?',
+ stem:'Tralokinumab is prescribed as an alternative to dupilumab for an adult with moderate-to-severe atopic dermatitis. What does tralokinumab inhibit?',
  options:[
-  {t:'Tralokinumab inhibits the IL-13 cytokine; dupilumab is an IL-4 antagonist', correct:true, why:'Slide 45: tralokinumab, mechanism of action, IL-13 cytokine inhibitor; slide 43: monoclonal antibody IL-4 antagonist, dupilumab.'},
-  {t:'Tralokinumab is an IL-4 antagonist; dupilumab inhibits IL-13', correct:false, why:'Reversed (slides 43, 45).'},
-  {t:'Tralokinumab is oral; dupilumab is injected', correct:false, why:'Both are subcutaneous injections (slides 43–45).'},
-  {t:'Tralokinumab is a JAK inhibitor; dupilumab is a monoclonal antibody', correct:false, why:'JAK inhibitors are abrocitinib, upadacitinib and ruxolitinib (slide 46); tralokinumab inhibits IL-13.'}],
+  {t:'IL-4', correct:false, why:'Dupilumab is the monoclonal antibody IL-4 antagonist (slide 43); tralokinumab inhibits the IL-13 cytokine (slide 45).'},
+  {t:'JAK', correct:false, why:'JAK inhibitors are abrocitinib, upadacitinib and ruxolitinib (slide 46); tralokinumab inhibits IL-13.'},
+  {t:'IL-13', correct:true, why:'Slide 45: tralokinumab, mechanism of action, IL-13 cytokine inhibitor; slide 43: monoclonal antibody IL-4 antagonist, dupilumab.'},
+  {t:'PDE-4', correct:false, why:'The phosphodiesterase-4 (PDE-4) inhibitor is crisaborole 2% topical ointment (slide 41); tralokinumab inhibits IL-13.'}],
  teach:'Tralokinumab is an alternative option to dupilumab, for moderate to severe AD not controlled with, or unable to use, topical therapy (slide 45; T@52628).',
- cite:P5+' slides 43, 45; T@52628'},
+ cite:P5+' slides 41, 43, 45–46; T@52628'},
 
 {id:'P5-088', skill:'dose', prof:'Patel', tier:'new', topic:'p5-sys', sub:'tral', concept:'p5-tralokinumab-dose',
  tags:['numbers','two-facts'], source:'both',
@@ -1086,7 +1086,7 @@ QUESTIONS.push(
 
 {id:'P5-090', skill:'adverse', prof:'Patel', tier:'new', topic:'p5-sys', sub:'tral', concept:'p5-tralokinumab-ae',
  tags:['fine-detail'], source:'slide',
- stem:'Which set of common adverse events belongs to tralokinumab?',
+ stem:'A patient starting tralokinumab asks which common adverse events to expect. Which should the pharmacist name?',
  options:[
   {t:'Ocular events, upper respiratory tract infections, injection-site reactions', correct:true, why:'Slide 45: common adverse events, ocular adverse events, upper respiratory tract infections, injection-site reactions.'},
   {t:'Urticaria, angioedema, skin rash, erythema, injection-site reactions', correct:false, why:'That is the dupilumab ADR list (slide 43).'},
@@ -1108,14 +1108,14 @@ QUESTIONS.push(
 
 {id:'P5-092', skill:'dose', prof:'Patel', tier:'new', topic:'p5-sys', sub:'jak', concept:'p5-jak-doses',
  tags:['numbers','two-facts'], source:'slide',
- stem:'Which JAK inhibitor regimen matches her slide?',
+ stem:'A 25-year-old whose moderate-to-severe atopic dermatitis is not controlled with other systemic and biologic therapies is started on abrocitinib. Which regimen is appropriate?',
  options:[
-  {t:'Abrocitinib 100 mg orally once daily, may increase to 200 mg after 12 weeks', correct:true, why:'Slide 46: abrocitinib (Cibinqo) 100 mg by mouth once daily, may increase to 200 mg once daily after 12 weeks.'},
-  {t:'Upadacitinib 100 mg orally once daily, may increase to 200 mg after 12 weeks', correct:false, why:'Those are abrocitinib\'s doses; slide 46: upadacitinib (Rinvoq) 15 mg once daily, may increase to 30 mg.'},
-  {t:'Abrocitinib 15 mg orally once daily, may increase to 30 mg after 12 weeks', correct:false, why:'15 to 30 mg is upadacitinib (slide 46); abrocitinib is 100 mg, may increase to 200 mg after 12 weeks.'},
-  {t:'Ruxolitinib 15 mg orally once daily, may increase to 30 mg after 12 weeks', correct:false, why:'Ruxolitinib (Opzelura) is topical: apply 60 g per week or 100 g per two weeks (slide 46).'}],
+  {t:'15 mg by mouth once daily, may increase to 30 mg', correct:false, why:'15 to 30 mg is upadacitinib (slide 46); abrocitinib is 100 mg, may increase to 200 mg after 12 weeks.'},
+  {t:'100 mg by mouth once daily, may increase to 200 mg after 16 weeks', correct:false, why:'16 weeks is the tralokinumab point for spacing doses to every 4 weeks (slide 45); abrocitinib may increase to 200 mg once daily after 12 weeks (slide 46).'},
+  {t:'100 mg by mouth once daily, may increase to 200 mg after 12 weeks', correct:true, why:'Slide 46: abrocitinib (Cibinqo) 100 mg by mouth once daily, may increase to 200 mg once daily after 12 weeks.'},
+  {t:'60 g applied per week, or 100 g per two weeks', correct:false, why:'Ruxolitinib (Opzelura) is topical: apply 60 g per week or 100 g per two weeks (slide 46).'}],
  teach:'Upadacitinib (Rinvoq) is the most commonly prescribed JAK inhibitor (T@53841).',
- cite:P5+' slide 46; T@53841'},
+ cite:P5+' slides 45–46; T@53841'},
 
 {id:'P5-093', skill:'dose', prof:'Patel', tier:'new', topic:'p5-sys', sub:'jak', concept:'p5-ruxolitinib-topical',
  tags:['numbers','two-facts'], source:'slide',
@@ -1189,7 +1189,7 @@ QUESTIONS.push(
 
 {id:'P5-099', skill:'case', prof:'Patel', tier:'new', topic:'p5-alg', sub:'step', concept:'p5-algo-not-resolved',
  tags:['list','reasoning'], source:'both',
- stem:'A moderate AD flare is not resolved after 7 days of medium-to-high potency topical steroid. Which cause does her algorithm say to consider?',
+ stem:'A moderate atopic dermatitis flare is not resolved after 7 days of a medium-to-high potency topical steroid. Which possible cause should be considered?',
  options:[
   {t:'Misdiagnosis', correct:true, why:'Slide 48: if not resolved in 7 days, consider nonadherence, infection, misdiagnosis, contact allergy to medications, referral.'},
   {t:'Steroid tachyphylaxis', correct:false, why:'Not on the slide 48 list (nonadherence, infection, misdiagnosis, contact allergy to medications, referral).'},
@@ -1233,7 +1233,7 @@ QUESTIONS.push(
 
 {id:'P5-103', skill:'case', prof:'Patel', tier:'new', topic:'p5-alg', sub:'step', concept:'p5-algo-moderate-acute',
  tags:['case','two-facts'], source:'both',
- stem:'A patient with moderate AD on daily hydrocortisone 1% maintenance has an acute flare on the trunk. Which acute treatment fits the algorithm?',
+ stem:'A patient with moderate AD on daily hydrocortisone 1% maintenance has an acute flare on the trunk. Which acute treatment is appropriate?',
  options:[
   {t:'Medium-to-high potency TCS twice daily for 3–7 days beyond clearance', correct:true, why:'Slide 48, moderate and severe, acute: medium-to-high potency TCS 2x daily for 3–7 days beyond clearance; "they probably have tried a low potency steroid. We\'re going up" (T@58143).'},
   {t:'Low-potency TCS twice daily for 3–7 days beyond clearance', correct:false, why:'Low potency is her maintenance already; slide 48 steps up to medium-to-high potency for an acute flare in moderate AD ("We\'re going up", T@58143).'},
@@ -1258,12 +1258,12 @@ QUESTIONS.push(
 
 {id:'P5-105', skill:'counsel', prof:'Patel', tier:'new', topic:'p5-dd', sub:'cause', concept:'p5-dd-prevention-infant',
  tags:['two-facts'], source:'both',
- stem:'Which statement about preventing diaper rash in infants fits her slide?',
+ stem:'A new mother asks what lowers the chance of diaper rash in her infant. Which is linked to fewer episodes of rash?',
  options:[
-  {t:'Disposable diapers and breastfeeding are linked to fewer episodes of rash', correct:true, why:'Slide 57: disposable diapers, less episodes of rash; breastfeeding, less episodes of rash due to pH maintenance (T@69757, T@71459).'},
-  {t:'Cloth diapers and formula feeding are linked to fewer episodes of rash', correct:false, why:'Slide 57 favors disposable diapers and breastfeeding; cloth diapers carry more risk (T@69757).'},
-  {t:'Alcohol-containing wipes clean better than water', correct:false, why:'Slide 57: no difference between cloth, water, mild soap, or alcohol-free wet wipe.'},
-  {t:'Apply barrier cream to damp skin right after cleaning', correct:false, why:'Slide 57: dry before application of barrier cream.'}],
+  {t:'Disposable diapers and breastfeeding', correct:true, why:'Slide 57: disposable diapers, less episodes of rash; breastfeeding, less episodes of rash due to pH maintenance (T@69757, T@71459).'},
+  {t:'Cloth diapers and formula feeding', correct:false, why:'Slide 57 favors disposable diapers and breastfeeding; cloth diapers carry more risk (T@69757).'},
+  {t:'Alcohol-containing wipes in place of water', correct:false, why:'Slide 57: no difference between cloth, water, mild soap, or alcohol-free wet wipe.'},
+  {t:'Barrier cream on skin that is still damp', correct:false, why:'Slide 57: dry before application of barrier cream.'}],
  teach:'Slide 57: change newborns every 2 hours and infants every 3 to 4 hours; clean with every change; dry before applying barrier cream.',
  cite:P5+' slide 57; T@69757–71811'},
 
@@ -1325,19 +1325,19 @@ QUESTIONS.push(
 
 {id:'P5-111', skill:'tell', prof:'Patel', tier:'new', topic:'p5-dd', sub:'tx', concept:'p5-zinc-oxide-range',
  tags:['numbers','two-facts'], source:'both',
- stem:'Which statement about the skin protectants zinc oxide and petrolatum matches her slide?',
+ stem:'A father asks about a diaper rash paste for his 6-month-old. Its label lists zinc oxide as the active ingredient. In which strength range is zinc oxide used as a skin protectant?',
  options:[
-  {t:'Zinc oxide 1–40%, the active ingredient; petrolatum 30–100%, the ointment base', correct:true, why:'Slide 64: zinc oxide 1–40%, common and excellent protectant, usually thick and tacky; petrolatum 30–100%, ointment base (T@76969–77778).'},
-  {t:'Zinc oxide 30–100%, the active ingredient; petrolatum 1–40%, the ointment base', correct:false, why:'The ranges are reversed: zinc oxide 1–40%, petrolatum 30–100% (slide 64).'},
-  {t:'Zinc oxide 1–10%, the active ingredient; petrolatum 30–100%, the ointment base', correct:false, why:'Slide 64 gives up to 40% zinc oxide: "40% being the highest dose" (T@76969).'},
-  {t:'Zinc oxide 1–40%, the ointment base; petrolatum 30–100%, the active ingredient', correct:false, why:'The roles are reversed: "Zinc oxide, active ingredient, petrolatin is the base for the most effective diaper cream" (T@77778).'}],
+  {t:'0.25–1%', correct:false, why:'0.25% to 1% are the OTC hydrocortisone strengths (slide 37), and hydrocortisone is not a self-care product for diaper dermatitis (slide 65); zinc oxide is 1–40% (slide 64).'},
+  {t:'1–10%', correct:false, why:'Slide 64 gives up to 40% zinc oxide: "40% being the highest dose" (T@76969).'},
+  {t:'1–40%', correct:true, why:'Slide 64: zinc oxide 1–40%, common and excellent protectant, usually thick and tacky; petrolatum 30–100%, ointment base (T@76969–77778).'},
+  {t:'30–100%', correct:false, why:'30–100% is petrolatum, the ointment base; zinc oxide, the active ingredient, is 1–40% (slide 64): "Zinc oxide, active ingredient, petrolatin is the base for the most effective diaper cream" (T@77778).'}],
  teach:'FDA approved 17 ingredients as skin protectants for infant diaper dermatitis (slide 63); zinc oxide is "the most recommended and effective ingredient" (T@76969).',
  note:'She first said "Zinc oxide 1%" and corrected herself to "1 to 40%" (T@76969); the slide says 1–40%.',
- cite:P5+' slides 63–64; T@76171–77778'},
+ cite:P5+' slides 37, 63–65; T@76171–77778'},
 
 {id:'P5-112', skill:'tell', prof:'Patel', tier:'new', topic:'p5-dd', sub:'tx', concept:'p5-protectant-no-zinc',
  tags:['fine-detail'], source:'slide',
- stem:'Which diaper product on her slide contains no zinc oxide?',
+ stem:'A caregiver asks for a diaper rash skin protectant that contains no zinc oxide. Which product should the pharmacist point to?',
  options:[
   {t:'A & D Ointment', correct:true, why:'Slide 64: A & D Ointment (lanolin and petrolatum).'},
   {t:'Desitin', correct:false, why:'Slide 64: Desitin (zinc oxide, petrolatum, mineral oil).'},
@@ -1439,7 +1439,7 @@ QUESTIONS.push(
 
 {id:'P5-121', skill:'counsel', prof:'Patel', tier:'new', topic:'p5-dd', sub:'tx', concept:'p5-dd-goals',
  tags:['list'], source:'both',
- stem:'Which set lists the therapy goals for diaper and incontinence dermatitis?',
+ stem:'What are the goals of therapy for diaper and incontinence dermatitis?',
  options:[
   {t:'Relieve symptoms, get rid of the dermatitis, prevent secondary infection, prevent recurrences', correct:true, why:'Slide 61: 1. relieve the symptoms; 2. get rid of the dermatitis; 3. prevent secondary infection; 4. prevent recurrences (T@74169–74574).'},
   {t:'Eliminate triggers, reduce trans-epidermal water loss, prevent flares, minimize ADRs', correct:false, why:'Those are atopic dermatitis goals (slide 27).'},

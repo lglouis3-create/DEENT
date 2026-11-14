@@ -223,7 +223,7 @@ QUESTIONS.push(
 
 {id:'P8O-012', skill:'patho', prof:'Patel', tier:'new', topic:'p8o-plant', sub:'path', concept:'p8o-ivy-rash-timing',
  tags:['two-facts'], source:'both',
- stem:'A camper asks when a poison ivy rash appears after exposure and how long it continues. Which answer is correct?',
+ stem:'A camper asks when a poison ivy rash appears after exposure and how long it continues. What should the pharmacist say?',
  options:[
   {t:'Within 10 minutes; continues 1–3 weeks', correct:false, why:'10 minutes is how fast urushiol enters the skin (slide 8), not when the rash appears.'},
   {t:'2–48 hours; continues up to 7 days', correct:false, why:'Referral follows 7 days without improvement (slide 16); the rash continues 1–3 weeks.'},
@@ -292,7 +292,7 @@ QUESTIONS.push(
 
 {id:'P8O-018', skill:'counsel', prof:'Patel', tier:'new', topic:'p8o-bite', sub:'np', concept:'p8o-tick-removal',
  tags:['counsel','next-step'], source:'both',
- stem:'A man finds a tick attached to his calf and asks how to remove it. Which instruction is correct?',
+ stem:'A man finds a tick attached to his calf and asks how to remove it. What should the pharmacist tell him?',
  options:[
   {t:'Grasp the head with tweezers and pull gently; keep the tick', correct:true, why:'Slide 24: remove ticks with tweezers by grasping the tick’s head and gently pulling; remove the head; clean with rubbing alcohol; keep tick in plastic bag (T@12403 11/12).'},
   {t:'Scrape it off with a card edge; discard the tick', correct:false, why:'Slide 24 says tweezers and to keep the tick in a plastic bag, "so that way we can address if it is a certain tick" (T@12403).'},
@@ -611,7 +611,7 @@ QUESTIONS.push(
 
 {id:'P8O-046', skill:'counsel', prof:'Patel', tier:'new', topic:'p8o-lice', sub:'use', concept:'p8o-lice-application-steps',
  tags:['counsel'], source:'both',
- stem:'A mother has bought a pyrethrin/piperonyl butoxide shampoo for her 8-year-old. Which instruction is correct?',
+ stem:'A mother has bought a pyrethrin/piperonyl butoxide shampoo for her 8-year-old, who has head lice. How should she use it?',
  options:[
   {t:'Apply to dry hair; leave on 8–12 hours; rinse', correct:false, why:'8–12 hours is malathion lotion (slide 45).'},
   {t:'Apply after conditioner; leave on 10 minutes; rinse', correct:false, why:'Slide 45 warning: no conditioner or combination shampoo/conditioner before the lice medicine.'},
@@ -724,7 +724,7 @@ QUESTIONS.push(
 
 {id:'P8O-056', skill:'counsel', prof:'Patel', tier:'new', topic:'p8o-venom', sub:'snake', concept:'p8o-poison-control-number',
  tags:['counsel'], source:'both',
- stem:'Which statement about the poison control hotline is correct?',
+ stem:'A man calls the pharmacy because his friend was just bitten by a snake on a hiking trail. Which poison control line should the pharmacist give him?',
  options:[
   {t:'1-800-222-1222; 24/7; envenomations and overdoses', correct:true, why:'Slides 56, 65: 1-800-222-1222; 24/7 hotline; envenomations to regular overdose support. "Remember this phone number" (T@45793 11/12); nationwide (T@39823).'},
   {t:'1-800-222-1222; Texas callers; snake bites', correct:false, why:'"This is a nationwide number, so it’s not state-specific ... not a number just for snake bites" (T@39823 11/12).'},
@@ -735,7 +735,7 @@ QUESTIONS.push(
 
 {id:'P8O-057', skill:'tell', prof:'Patel', tier:'new', topic:'p8o-venom', sub:'snake', concept:'p8o-coral-no-antivenin',
  tags:['tell'], source:'slide',
- stem:'In Dr. Patel’s snake bite medical care, how is antivenin handled for a coral snake bite compared with a pit viper bite?',
+ stem:'In the medical care of a snake bite, how is antivenin handled for a coral snake bite compared with a pit viper bite?',
  options:[
   {t:'Coral: antivenin if available. Pit viper: no antivenin, supportive care.', correct:false, why:'Reversed: the coral snake bite gets no antivenin; the pit viper bite is scored (slide 57).'},
   {t:'Coral: scored to decide. Pit viper: no antivenin, supportive care.', correct:false, why:'Slide 57: the pit viper bite is the one scored, and severe envenomation gets antivenin if available; the coral snake bite gets no antivenin.'},

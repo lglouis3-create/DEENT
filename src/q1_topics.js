@@ -361,15 +361,15 @@ const QUESTIONS = [
 
 {id:'L1-032', skill:'epi', prof:'Smith', tier:'new', topic:'pso', sub:'clin', concept:'pso-epi',
  tags:['numbers'], source:'slide',
- stem:'Which statement about psoriasis epidemiology is correct?',
+ stem:'About what share of patients with psoriasis have a first-degree relative with psoriasis?',
  options:[
-  {t:'About 30% of patients have a first-degree relative with psoriasis', correct:true, why:'Slide 20.'},
-  {t:'It affects about 15–30% of children in developed countries', correct:false, why:'That is the AD figure (slide 10); psoriasis affects about 3% of the US population (slide 20).'},
-  {t:'It affects women far more often than men', correct:false, why:'Slide 20: males and females equally.'},
-  {t:'It is rare among immune-mediated inflammatory diseases', correct:false, why:'Slide 20: the most common immune-mediated inflammatory disease worldwide.'}],
+  {t:'About 3%', correct:false, why:'About 3% is the share of the US population with psoriasis (slide 20).'},
+  {t:'About 30%', correct:true, why:'Slide 20.'},
+  {t:'About 81%', correct:false, why:'81% is the likelihood of acne when both parents had acne (slide 35).'},
+  {t:'About 90%', correct:false, why:'A lifetime prevalence approaching 90% is the acne figure (slide 31).'}],
  teach:'Slide 20: a genetic basis that probably needs environmental triggers; about 3% of the US population; prevalence varies with climate, sun exposure and ethnicity; males and females equally; about 30% have a first-degree relative with psoriasis.',
  note:'Onset age is not asked: slide 20 says "most patients have onset before 40" and she said most patients start "about age 40" (T 308–309).',
- cite:PP+' slides 10, 20'},
+ cite:PP+' slides 10, 20, 31, 35'},
 
 {id:'L1-033', skill:'patho', prof:'Smith', tier:'new', topic:'pso', sub:'path', concept:'pso-cytokines', multi:true,
  tags:['cytokines'], source:'both',
@@ -463,14 +463,14 @@ const QUESTIONS = [
 
 {id:'L1-041', skill:'epi', prof:'Smith', tier:'new', topic:'acne', sub:'clin', concept:'acne-epi',
  tags:['numbers'], source:'slide',
- stem:'Which statement about acne epidemiology is correct?',
+ stem:'The lifetime prevalence of acne approaches what figure?',
  options:[
-  {t:'Lifetime prevalence approaches 90%', correct:true, why:'Slide 31.'},
-  {t:'It usually begins in the mid-twenties', correct:false, why:'Slide 31: usual onset is at puberty; most patients have symptoms into their mid-twenties.'},
-  {t:'Boys have milder acne than girls during puberty', correct:false, why:'Slide 31: in puberty acne is often more severe in boys.'},
-  {t:'It is uncommon in dermatology practice', correct:false, why:'Slide 31: the most common disease treated by dermatologists.'}],
+  {t:'About 3%', correct:false, why:'3% is the share of males aged 25–58 with acne (slide 31).'},
+  {t:'About 12%', correct:false, why:'12% is the share of women aged 25–58 with acne (slide 31).'},
+  {t:'About 81%', correct:false, why:'81% is the likelihood of acne when both parents had acne (slide 35).'},
+  {t:'About 90%', correct:true, why:'Slide 31.'}],
  teach:'Slide 31: acne is triggered with the start of androgen production, usually at puberty, with the highest incidence in adolescents. Women often have more severe forms than men in adulthood.',
- cite:PP+' slide 31'},
+ cite:PP+' slides 31, 35'},
 
 {id:'L1-042', skill:'patho', prof:'Smith', tier:'new', topic:'acne', sub:'path', concept:'acne-four-factors', multi:true,
  tags:['list'], source:'both',
@@ -675,7 +675,7 @@ const QUESTIONS = [
 
 {id:'L1-075', skill:'mech', prof:'Smith', tier:'new', topic:'nrb', sub:'recs', concept:'nrb-tfs',
  tags:['recall'], source:'slide',
- stem:'Which transcription factors work with the DEENT nuclear receptors?',
+ stem:'Which transcription factors work with the nuclear receptors that dermatology drugs bind?',
  options:[
   {t:'NF-kB and AP-1', correct:true, why:'PC slides 6–7.'},
   {t:'Glucocorticoid and vitamin D receptors', correct:false, why:'These are receptors, not transcription factors (PC slide 7).'},
@@ -778,9 +778,9 @@ const QUESTIONS = [
 
 {id:'L1-088', skill:'adverse', prof:'Smith', tier:'new', topic:'cs', sub:'ae', concept:'cs-low-potency-systemic',
  tags:['statement'], source:'both',
- stem:'Which statement about systemic adverse effects of topical corticosteroids is correct?',
+ stem:'A patient uses a low-potency topical corticosteroid for long-term maintenance. What applies to the risk of systemic adverse effects?',
  options:[
-  {t:'They can occur with low-potency products', correct:true, why:'PC slide 12; (T 861–865) "don\'t think that just because it\'s low potency, you couldn\'t end up with systemic effects", since low potency is used long-term.'},
+  {t:'They can still occur', correct:true, why:'PC slide 12; (T 861–865) "don\'t think that just because it\'s low potency, you couldn\'t end up with systemic effects", since low potency is used long-term.'},
   {t:'They are limited to high-potency products', correct:false, why:'She warned about low-potency products as well (T 861–865).'},
   {t:'They do not depend on body surface area covered', correct:false, why:'PC slide 12: risk relates to the percentage of body surface area covered.'},
   {t:'They do not depend on the duration of use', correct:false, why:'PC slide 12: risk relates to duration of use.'}],
@@ -881,12 +881,12 @@ const QUESTIONS = [
 
 {id:'L1-097', skill:'epi', prof:'Smith', tier:'new', topic:'ad', sub:'clin', concept:'ad-trend-sex',
  tags:['recall'], source:'both',
- stem:'Which statement about the epidemiology of atopic dermatitis is correct?',
+ stem:'How has the prevalence of atopic dermatitis changed during the last decades?',
  options:[
-  {t:'Its prevalence has risen over recent decades', correct:true, why:'Slide 10: prevalence has increased in developed and developing countries during the last decades (T 105–106).'},
-  {t:'It affects males far more often than females', correct:false, why:'Slide 10: it affects males and females similarly (T 121).'},
-  {t:'It is more common in rural than in urban areas', correct:false, why:'Slide 10 gives the reverse: a lower prevalence in rural areas, explained by the hygiene hypothesis.'},
-  {t:'It is more common in adults than in children', correct:false, why:'Slide 10: 15–30% of children against 2–10% of adults in developed countries.'}],
+  {t:'Risen in developed and developing countries', correct:true, why:'Slide 10: prevalence has increased in developed and developing countries during the last decades (T 105–106).'},
+  {t:'Risen in developed countries, fallen in developing ones', correct:false, why:'Slide 10: the increase is in developed and developing countries alike.'},
+  {t:'Fallen in developed and developing countries', correct:false, why:'Slide 10 gives an increase during the last decades.'},
+  {t:'Held level at about 20%', correct:false, why:'About 20% is where she expects the figure to level out as these children grow up (T 108–109); up to now it has risen (slide 10).'}],
  teach:'Slide 10: 15–30% of children and 2–10% of adults in developed countries; prevalence rising; males and females alike; lower in rural areas (hygiene hypothesis). She added that the figure is expected to level out at about 20% as these children grow up (T 108–109).',
  cite:PP+' slide 10; T 102–121'},
 

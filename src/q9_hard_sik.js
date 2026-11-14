@@ -27,7 +27,7 @@ QUESTIONS.push(
 /* ---- Crisaborole and the JAK inhibitors (pp. 7–9) ------------------------ */
 {id:'S3H-001', skill:'pk', prof:'Sikazwe', tier:'new', topic:'s3-cris', sub:'adme', concept:'h-cris-logp-t12',
  tags:['hard','numbers','tell'], source:'both',
- stem:'Which pairing of log P and half-life belongs to crisaborole?',
+ stem:'What are the log P and the half-life of crisaborole?',
  options:[
   {t:'Log P about 3; half-life 12 h', correct:true, why:'Slide 7: LogP = 3 (dermis accumulation); t1/2 = 12 h (T 690, 696–698).'},
   {t:'Log P about 2; half-life about 3 h', correct:false, why:'Ruxolitinib: log P about 2 and t1/2 3 h (slide 8; T 737).'},
@@ -71,24 +71,24 @@ QUESTIONS.push(
 
 {id:'S3H-005', skill:'pk', prof:'Sikazwe', tier:'new', topic:'s3-jak', sub:'adme', concept:'h-jak-adme-pair',
  tags:['hard','tell','numbers'], source:'both', dupOf:'S3-028',
- stem:'Which description of ruxolitinib\'s ADMET is correct?',
+ stem:'Ruxolitinib and upadacitinib are both CYP3A4 substrates. What are the half-life and the metabolite activity of ruxolitinib?',
  options:[
-  {t:'Half-life about 3 h; CYP3A4 substrate; active OH metabolites', correct:true, why:'Slide 8: ruxolitinib t1/2 3 h, 3A4/2C9 substrate, OH metabolites are active; (T 745–757).'},
-  {t:'Half-life 8–16 h; CYP3A4 substrate; no active metabolites', correct:false, why:'That is upadacitinib (slide 8).'},
-  {t:'Half-life about 3 h; CYP3A4 substrate; no active metabolites', correct:false, why:'Ruxolitinib is the one with active metabolites; upadacitinib has none (T 757).'},
-  {t:'Half-life about 12 h; deboronated in the skin; inactive products', correct:false, why:'That is crisaborole (slide 7).'}],
+  {t:'About 3 h; active OH metabolites', correct:true, why:'Slide 8: ruxolitinib t1/2 3 h, 3A4/2C9 substrate, OH metabolites are active; (T 745–757).'},
+  {t:'8–16 h; no active metabolites', correct:false, why:'That is upadacitinib (slide 8).'},
+  {t:'About 3 h; no active metabolites', correct:false, why:'Ruxolitinib is the one with active metabolites; upadacitinib has none (T 757).'},
+  {t:'8–16 h; active OH metabolites', correct:false, why:'8–16 h is the half-life of upadacitinib; the active OH metabolites are ruxolitinib\'s (slide 8).'}],
  teach:'Slide 8: ruxolitinib (t1/2 3 h, 3A4/2C9, active OH metabolites) and upadacitinib (t1/2 8–16 h, 3A4/2D6, no active metabolites) are both CYP3A4 substrates, so 3A4 inhibitors and inducers change their exposure; both have log P about 2 and are formulated to stay in the skin.',
  cite:HQ_S3+' slides 7–8; T 737–757'},
 
 /* ---- Emollients, tars, anthralin, psoralens (pp. 15–19) ------------------ */
 {id:'S3H-006', skill:'chem', prof:'Sikazwe', tier:'new', topic:'s3-emol', sub:'emol', concept:'h-emollient-pairs',
  tags:['hard','tell'], source:'both', dupOf:'S3-044',
- stem:'Which pairing of emollient and description is correct?',
+ stem:'Which emollient is made of hydrocarbons of more than 25 carbons and is the most effective?',
  options:[
-  {t:'Petrolatum: hydrocarbons of more than 25 carbons; the most effective', correct:true, why:'Slide 15: petrolatum (most effective, >25 carbons), hydrocarbons; (T 871–872).'},
-  {t:'Lanolin: linear hydrocarbons of more than 25 carbons; the most effective', correct:false, why:'Lanolin is wool grease made of fatty acid esters (slide 15).'},
-  {t:'Petrolatum: fatty acid esters from wool grease', correct:false, why:'That is lanolin (slide 15).'},
-  {t:'Dimethicone: an odorous wool grease', correct:false, why:'Dimethicone is a silicone, hypoallergenic and non-comedogenic (slide 15).'}],
+  {t:'Petrolatum', correct:true, why:'Slide 15: petrolatum (most effective, >25 carbons), hydrocarbons; (T 871–872).'},
+  {t:'Lanolin', correct:false, why:'Lanolin is wool grease made of fatty acid esters (slide 15).'},
+  {t:'Dimethicone', correct:false, why:'Dimethicone is a silicone, hypoallergenic and non-comedogenic (slide 15).'},
+  {t:'Cyclomethicone', correct:false, why:'Cyclomethicone is a silicone-based emollient, hypoallergenic and non-comedogenic (slide 15).'}],
  teach:'Slide 15: emollients are mostly water emulsions that prevent water loss. Petrolatum, hydrocarbons over 25 carbons, the most effective; lanolin, fatty acid esters from wool grease, odorous; silicone-based (dimethicone, cyclomethicone), hypoallergenic and non-comedogenic.',
  cite:HQ_S3+' slide 15; T 866–885'},
 
@@ -105,25 +105,25 @@ QUESTIONS.push(
 
 {id:'S3H-008', skill:'chem', prof:'Sikazwe', tier:'new', topic:'s3-anth', sub:'cbda', concept:'h-anth-class-cbda',
  tags:['hard','tell'], source:'both',
- stem:'Which pairing of drug, chemical class and chemical basis of action is correct?',
+ stem:'Anthralin is a hydroxyanthrone. What is its chemical basis of drug action?',
  options:[
-  {t:'Anthralin: hydroxyanthrone; radicals formed by autoxidation', correct:true, why:'Slide 17: a hydroxyanthrone; antiproliferative via cytotoxic radicals (anthranyl and superoxide anion) from spontaneous autoxidation (T 920–937).'},
-  {t:'Anthralin: furanocoumarin; DNA crosslinks after UVA', correct:false, why:'The furanocoumarin that crosslinks DNA with UVA is 8-methoxypsoralen (slide 18).'},
-  {t:'Methoxsalen: hydroxyanthrone; radicals formed by autoxidation', correct:false, why:'Methoxsalen is a furanocoumarin that binds DNA (slide 18); autoxidation is anthralin\'s (Polleve-2, slide 19).'},
-  {t:'Anthralin: hydroxyanthrone; DNA crosslinks after UVA', correct:false, why:'Anthralin acts through radicals that disrupt keratinocyte mitochondria (slide 17; T 928–937).'}],
+  {t:'Radicals formed by autoxidation', correct:true, why:'Slide 17: a hydroxyanthrone; antiproliferative via cytotoxic radicals (anthranyl and superoxide anion) from spontaneous autoxidation (T 920–937).'},
+  {t:'DNA crosslinks after UVA', correct:false, why:'The furanocoumarin that crosslinks DNA with UVA is 8-methoxypsoralen (slide 18).'},
+  {t:'Boron coordination to Zn²⁺ and Mg²⁺', correct:false, why:'Coordination to Zn²⁺ and Mg²⁺ in PDE4 is the chemical basis of action of crisaborole (slide 7; T 712–719).'},
+  {t:'Hydrogen bonds to its receptor', correct:false, why:'Hydrogen bonding is the chemical basis of action of the glucocorticoids at their receptor (slide 23; T 1133–1134).'}],
  teach:'Two topical psoriasis agents, two chemical classes and two bases of action: anthralin (hydroxyanthrone; autoxidizes to anthranyl and superoxide radicals that damage keratinocyte mitochondria; stains brown) and 8-MOP (furanocoumarin; with UVA it intercalates and crosslinks DNA; partially inhibits CYP3A4).',
- cite:HQ_S3+' slides 17–19; T 918–980'},
+ cite:HQ_S3+' slides 7, 17–19, 23; T 712–719, 918–980, 1133–1134'},
 
 {id:'S3H-009', skill:'chem', prof:'Sikazwe', tier:'new', topic:'s3-psor', sub:'cbda', concept:'h-8mop-pyrimidines-3a4',
  tags:['hard'], source:'both', dupOf:'S3-064',
- stem:'Which statement about 8-methoxypsoralen (8-MOP) is correct?',
+ stem:'8-Methoxypsoralen (8-MOP) partially inhibits CYP3A4. With UVA, to what does it bind covalently?',
  options:[
-  {t:'With UVA it covalently binds DNA pyrimidine bases; it partially inhibits CYP3A4', correct:true, why:'Slide 18: CBDA, covalently binds DNA pyrimidine bases and lowers DNA synthesis; ADMET, several CYPs and it partially inhibits 3A4 (T 962–967).'},
-  {t:'With UVA it covalently binds DNA pyrimidine bases; it strongly induces CYP3A4', correct:false, why:'Slide 18: it partially inhibits 3A4 ("That\'s something to take home", T 962–963).'},
-  {t:'With UVB it covalently binds DNA pyrimidine bases; it partially inhibits CYP3A4', correct:false, why:'PUVA is psoralen plus UVA (slides 12, 18).'},
-  {t:'It autoxidizes to radicals without light; it partially inhibits CYP3A4', correct:false, why:'Autoxidation is anthralin\'s basis of action, not 8-MOP\'s (Polleve-2; T 977–980).'}],
+  {t:'DNA pyrimidine bases', correct:true, why:'Slide 18: CBDA, covalently binds DNA pyrimidine bases and lowers DNA synthesis; ADMET, several CYPs and it partially inhibits 3A4 (T 962–967).'},
+  {t:'DNA purine bases', correct:false, why:'Slide 18: it covalently binds the pyrimidine bases of DNA.'},
+  {t:'Keratinocyte mitochondria', correct:false, why:'Keratinocyte mitochondria are disrupted by the anthralin radicals (slide 17; T 928–937); 8-MOP binds DNA (slide 18).'},
+  {t:'Zn²⁺ and Mg²⁺ in PDE4', correct:false, why:'Coordination to Zn²⁺ and Mg²⁺ in PDE4 is the boron of crisaborole (slide 7; T 712–719); 8-MOP binds DNA (slide 18).'}],
  teach:'Slide 18: 8-MOP is a furanocoumarin; psoralen plus UVA (PUVA) activates its double bonds so it inserts between DNA base pairs and crosslinks them (intercalation), lowering DNA synthesis. It is handled by several CYPs and partially inhibits 3A4, so it can raise exposure to 3A4 substrates (T 954–971).',
- cite:HQ_S3+' slides 12, 18–19; T 954–980'},
+ cite:HQ_S3+' slides 7, 12, 17–19; T 712–719, 928–937, 954–980'},
 
 /* ---- Glucocorticoids (pp. 20–23, 25–26) ---------------------------------- */
 {id:'S3H-010', skill:'chem', prof:'Sikazwe', tier:'new', topic:'s3-gc', sub:'sar', concept:'h-gc-sar-pair',
@@ -161,12 +161,12 @@ QUESTIONS.push(
 
 {id:'S3H-013', skill:'pk', prof:'Sikazwe', tier:'new', topic:'s3-hc', sub:'adme', concept:'h-hc-t12-doa-reasons',
  tags:['hard','reasoning'], source:'both', dupOf:'S3-098',
- stem:'Hydrocortisone has a half-life of 1–2 h but a duration of action of 8–12 h. Which pairing of reasons is correct?',
+ stem:'Hydrocortisone has a half-life of 1–2 h but a duration of action of 8–12 h. What accounts for each?',
  options:[
-  {t:'Short half-life from metabolism; long duration from high protein binding', correct:true, why:'Slide 26; (T 1187–1189): "its duration of action is due to high protein binding".'},
-  {t:'Short half-life from protein binding; long duration from metabolism', correct:false, why:'The two halves are reversed (slide 26).'},
-  {t:'Short half-life from poor skin penetration; long duration from active metabolites', correct:false, why:'Poor penetration sets its skin bioavailability (<15%), not its half-life; cortisone is inactive (slide 26).'},
-  {t:'Short half-life from metabolism; long duration from a dendrimer formulation', correct:false, why:'Dendrimer formulations are made for anthralin (slide 17).'}],
+  {t:'Half-life: metabolism; duration: high protein binding', correct:true, why:'Slide 26; (T 1187–1189): "its duration of action is due to high protein binding".'},
+  {t:'Half-life: protein binding; duration: metabolism', correct:false, why:'The two halves are reversed (slide 26).'},
+  {t:'Half-life: poor skin penetration; duration: active metabolites', correct:false, why:'Poor penetration sets its skin bioavailability (<15%), not its half-life; cortisone is inactive (slide 26).'},
+  {t:'Half-life: metabolism; duration: a dendrimer formulation', correct:false, why:'Dendrimer formulations are made for anthralin (slide 17).'}],
  teach:'Slide 26: hydrocortisone, log P about 1.5, under 15% bioavailable through normal skin versus 95% orally; t1/2 1–2 h because of metabolism; duration of action 8–12 h because of high protein binding; 11β-HSD converts it to cortisone; cortisone and urocortisol appear in the urine.',
  cite:HQ_S3+' slides 17, 26; T 1179–1196'},
 
@@ -195,19 +195,19 @@ QUESTIONS.push(
 
 {id:'S4H-003', skill:'chem', prof:'Sikazwe', tier:'new', topic:'s4-vitd', sub:'analog', concept:'h-calcipotriene-class-limit',
  tags:['hard','tell'], source:'both', dupOf:'S4-005',
- stem:'Which pairing of calcipotriene\'s chemical class and its limiting factor in psoriasis is correct?',
+ stem:'Calcipotriene is a secosteroid used topically for psoriasis. Which adverse effect becomes its limiting factor?',
  options:[
-  {t:'Secosteroid; hypercalcemia', correct:true, why:'Slide 27: calcitriol and calcipotriene are secosteroids (T@2989–3200); hypercalcemia becomes the limiting factor (T@1580–2000).'},
-  {t:'Secosteroid; teratogenicity', correct:false, why:'Teratogenicity is the major limitation of the retinoids (slide 48).'},
-  {t:'Steroid with an intact B ring; hypercalcemia', correct:false, why:'In a secosteroid the B ring is opened (slide 27; T@2989–3430).'},
-  {t:'Pteridine; hypercalcemia', correct:false, why:'Methotrexate is the pteridine (slide 30).'}],
+  {t:'Hypercalcemia', correct:true, why:'Slide 27: calcitriol and calcipotriene are secosteroids (T@2989–3200); hypercalcemia becomes the limiting factor (T@1580–2000).'},
+  {t:'Teratogenicity', correct:false, why:'Teratogenicity is the major limitation of the retinoids (slide 48).'},
+  {t:'Skin staining', correct:false, why:'Staining ("anthralin brown") belongs to anthralin (slide 17).'},
+  {t:'Photosensitization', correct:false, why:'Coal tar is the photosensitizing topical agent (slide 16).'}],
  teach:'Slide 27: vitamin D analogs serve bone health and act as antiproliferatives. The aim was a drug without the calcium effect; calcipotriene still has both properties, so hypercalcemia limits its use (T@1580–2758). Dr. Smith gives the 100 g/week limit (PCol slide 22).',
- cite:HQ_S4+' slides 27, 30, 48; T@1505–3430'},
+ cite:HQ_S4+' slides 16–17, 27, 30, 48; T@1505–3430'},
 
 /* ---- Limus drugs, retinoids, methotrexate, cyclosporine, apremilast ------- */
 {id:'S4H-004', skill:'tell', prof:'Sikazwe', tier:'new', topic:'s4-limus', sub:'pk', concept:'h-limus-same-diff',
  tags:['hard','tell'], source:'both', dupOf:'S4-015',
- stem:'Pimecrolimus and tacrolimus are alike in some properties and differ in one. Which pairing is correct?',
+ stem:'In which properties are pimecrolimus and tacrolimus alike, and in which do they differ?',
  options:[
   {t:'Alike in lipophilicity and mechanism; differ in skin permeation', correct:true, why:'Slide 28: "similar in lipophilicity, structure, mechanism, but differ in skin permeation" (T@5890–6070).'},
   {t:'Alike in skin permeation and structure; differ in mechanism', correct:false, why:'Both are calcineurin inhibitors; permeation is the difference (slide 28).'},
@@ -218,12 +218,12 @@ QUESTIONS.push(
 
 {id:'S4H-005', skill:'chem', prof:'Sikazwe', tier:'new', topic:'s4-psret', sub:'taz', concept:'h-tazarotene-profile',
  tags:['hard','tell'], source:'both', dupOf:'S4-023',
- stem:'Which description of tazarotene is correct?',
+ stem:'Which retinoid is an alkyne-containing ester prodrug that is used topically?',
  options:[
-  {t:'An alkyne-containing ester prodrug, used topically', correct:true, why:'Slide 29: an acetylenic retinoid (alkyne) and a prodrug, the topical agent; carboxylesterases activate it (T@6800–7125).'},
-  {t:'An alkyne-containing, directly active acid, used orally', correct:false, why:'Tazarotene is the topical retinoid and needs ester hydrolysis to become active (slides 29, 51).'},
-  {t:'A 13-cis retinoic acid, used topically', correct:false, why:'13-cis retinoic acid is isotretinoin, an oral agent (slide 49).'},
-  {t:'A mono-aromatic ester prodrug, used orally', correct:false, why:'That describes etretinate, the 2nd-generation prodrug of acitretin (slide 50).'}],
+  {t:'Tazarotene', correct:true, why:'Slide 29: an acetylenic retinoid (alkyne) and a prodrug, the topical agent; carboxylesterases activate it (T@6800–7125).'},
+  {t:'Adapalene', correct:false, why:'Adapalene is a 3rd-generation retinoid that is directly active through its exposed carboxylic acid; tazarotene is the one that needs ester hydrolysis (slides 29, 51).'},
+  {t:'Isotretinoin', correct:false, why:'13-cis retinoic acid is isotretinoin, an oral agent (slide 49).'},
+  {t:'Etretinate', correct:false, why:'Etretinate is an ester prodrug, but a mono-aromatic 2nd-generation retinoid, the prodrug of acitretin (slide 50).'}],
  teach:'Slide 29: retinoids normalize keratinization and proliferation. Topical: tazarotene, an acetylenic retinoid and ester prodrug (activated by carboxylesterases). Oral: acitretin and isotretinoin. Slide 51 places tazarotene in the 3rd (poly-aromatic) generation.',
  cite:HQ_S4+' slides 29, 49–51; T@6640–7550'},
 
@@ -251,12 +251,12 @@ QUESTIONS.push(
 
 {id:'S4H-008', skill:'chem', prof:'Sikazwe', tier:'new', topic:'s4-ret', sub:'g1', concept:'h-tret-iso-route-isomer',
  tags:['hard','tell'], source:'both', dupOf:'S4-077',
- stem:'Which pairing of isomer and route is correct for tretinoin and isotretinoin?',
+ stem:'Tretinoin is all-trans retinoic acid, used topically. Which isomer is isotretinoin, and by which route is it used?',
  options:[
-  {t:'Tretinoin: all-trans, topical; isotretinoin: 13-cis, oral', correct:true, why:'Slide 49 (T@27705–28600).'},
-  {t:'Tretinoin: 13-cis, topical; isotretinoin: all-trans, oral', correct:false, why:'The isomers are swapped (slide 49).'},
-  {t:'Tretinoin: all-trans, oral; isotretinoin: 13-cis, topical', correct:false, why:'The routes are swapped (slide 49).'},
-  {t:'Tretinoin: all-trans, topical; isotretinoin: 9-cis, oral', correct:false, why:'Isotretinoin is cis at carbon 13 (slide 49; T@28420–28470).'}],
+  {t:'13-cis; oral', correct:true, why:'Slide 49 (T@27705–28600).'},
+  {t:'13-cis; topical', correct:false, why:'Isotretinoin is taken orally; the topical one is tretinoin (slide 49).'},
+  {t:'9-cis; oral', correct:false, why:'Isotretinoin is cis at carbon 13 (slide 49; T@28420–28470).'},
+  {t:'All-trans; oral', correct:false, why:'All-trans retinoic acid is tretinoin; isotretinoin is its 13-cis isomer (slide 49).'}],
  teach:'Slide 49: tretinoin, all-trans retinoic acid, topical, the first retinoid for acne; isotretinoin, 13-cis retinoic acid, a geometric isomer of tretinoin, taken orally.',
  cite:HQ_S4+' slide 49; T@27705–28720'},
 
@@ -285,25 +285,25 @@ QUESTIONS.push(
 
 {id:'S4H-011', skill:'chem', prof:'Sikazwe', tier:'new', topic:'s4-mtx', sub:'mech', concept:'h-mtx-class-competitive',
  tags:['hard','tell'], source:'both', dupOf:'S4-028',
- stem:'Which pairing of methotrexate\'s chemical class and its action at DHFR is correct?',
+ stem:'Methotrexate is a pteridine. How does it inhibit dihydrofolate reductase (DHFR)?',
  options:[
-  {t:'A pteridine; it competitively inhibits DHFR', correct:true, why:'Slide 30: a pteridine that competitively inhibits dihydrofolate reductase; it sits in the same enzyme cavity as folic acid (T@8238–9500).'},
-  {t:'A pteridine; it binds an allosteric site on DHFR', correct:false, why:'Slide 30: the inhibition is competitive, in the same cavity.'},
-  {t:'An isoindoline; it competitively inhibits DHFR', correct:false, why:'Apremilast is the isoindoline (slide 34).'},
-  {t:'A benzoxaborole; it competitively inhibits DHFR', correct:false, why:'Crisaborole is the benzoxaborole (slide 7).'}],
+  {t:'Competitively, in the folic acid cavity', correct:true, why:'Slide 30: a pteridine that competitively inhibits dihydrofolate reductase; it sits in the same enzyme cavity as folic acid (T@8238–9500).'},
+  {t:'Allosterically, at a separate site', correct:false, why:'Slide 30: the inhibition is competitive, in the same cavity.'},
+  {t:'Through a complex with cyclophilin', correct:false, why:'Complexing with cyclophilin activates cyclosporine, which then inhibits calcineurin (slide 33).'},
+  {t:'By coordinating Zn²⁺ and Mg²⁺', correct:false, why:'Coordination to Zn²⁺ and Mg²⁺ is how the boron of crisaborole binds PDE4 (slide 7).'}],
  teach:'Slide 30: methotrexate is a pteridine and an antimetabolite (slide 12: a substrate mimic that inhibits cellular metabolism). It competes with folic acid for DHFR, with higher affinity (T@9220), blocking DNA and RNA synthesis; it is also immunosuppressant and anti-inflammatory.',
- cite:HQ_S4+' slides 8, 12, 30, 34; T@8238–9500'},
+ cite:HQ_S4+' slides 7–8, 12, 30, 33–34; T@8238–9500'},
 
 {id:'S4H-012', skill:'pk', prof:'Sikazwe', tier:'new', topic:'s4-sys', sub:'csa', concept:'h-csa-peptide-cyclophilin',
  tags:['hard'], source:'both', dupOf:'S4-038',
- stem:'Which description of cyclosporine is correct?',
+ stem:'Cyclosporine is an 11 amino acid cyclic peptide. With which protein must it complex to become active?',
  options:[
-  {t:'An 11 amino acid cyclic peptide, activated by complexing with cyclophilin', correct:true, why:'Slide 33 (T@12014–12700).'},
-  {t:'An 11 amino acid cyclic peptide, activated by complexing with FKBP', correct:false, why:'FKBP is the binding protein of tacrolimus (PCol slide 26); cyclosporine pairs with cyclophilin (slide 33).'},
-  {t:'An 11 amino acid linear peptide, activated by complexing with cyclophilin', correct:false, why:'Slide 33: a cyclic peptide, a lactam (T@12150–12254).'},
-  {t:'A macrolide lactone, activated by complexing with cyclophilin', correct:false, why:'The macrolide lactones are pimecrolimus and tacrolimus (slides 28, 32).'}],
+  {t:'Cyclophilin', correct:true, why:'Slide 33 (T@12014–12700).'},
+  {t:'FKBP', correct:false, why:'FKBP is the binding protein of tacrolimus (PCol slide 26); cyclosporine pairs with cyclophilin (slide 33).'},
+  {t:'Calcineurin', correct:false, why:'Calcineurin phosphatase is what cyclosporine inhibits once it is activated by cyclophilin (slide 33).'},
+  {t:'Carboxylesterase', correct:false, why:'Carboxylesterases activate the ester prodrug tazarotene (slide 29).'}],
  teach:'Slide 33: cyclosporine is an 11 amino acid cyclic peptide (a lactam), activated by complexing with cyclophilin; it then inhibits calcineurin phosphatase and T-cell signaling. Oral bioavailability is very poor from CYP3A4 first-pass metabolism; grapefruit juice raises its blood levels.',
- cite:HQ_S4+' slides 28, 32–33; T@12014–13690'},
+ cite:HQ_S4+' slides 28–29, 32–33; T@12014–13690'},
 
 {id:'S4H-013', skill:'pk', prof:'Sikazwe', tier:'new', topic:'s4-sys', sub:'csa', concept:'h-csa-grapefruit-why',
  tags:['hard','reasoning'], source:'both', dupOf:'S4-043',
@@ -341,7 +341,7 @@ QUESTIONS.push(
 /* ---- Keratolytics (pp. 43–47) --------------------------------------------- */
 {id:'S4H-016', skill:'tell', prof:'Sikazwe', tier:'new', topic:'s4-kera', sub:'ha', concept:'h-ga-sa-type-lipo',
  tags:['hard','tell'], source:'both', dupOf:'S4-057',
- stem:'Which pairing describes glycolic acid and salicylic acid?',
+ stem:'How do glycolic acid and salicylic acid compare in hydroxy acid type and lipophilicity?',
  options:[
   {t:'Glycolic: alpha, hydrophilic; salicylic: beta, lipophilic', correct:true, why:'Slide 43: glycolic acid is an α-hydroxy acid and hydrophilic; salicylic acid is more lipophilic than glycolic acid; "this is a beta hydroxy acid" (T@22090–22200).'},
   {t:'Glycolic: beta, lipophilic; salicylic: alpha, hydrophilic', correct:false, why:'Both labels are reversed (slide 43).'},
@@ -352,7 +352,7 @@ QUESTIONS.push(
 
 {id:'S4H-017', skill:'pk', prof:'Sikazwe', tier:'new', topic:'s4-kera', sub:'ha', concept:'h-ga-sa-metab',
  tags:['hard','tell'], source:'both', dupOf:'S4-060',
- stem:'Which pairing of hydroxy acid and its metabolism once absorbed is correct?',
+ stem:'Once absorbed, how are glycolic acid and salicylic acid each metabolized?',
  options:[
   {t:'Glycolic acid: alcohol and aldehyde dehydrogenase; salicylic acid: glycine conjugation', correct:true, why:'Slide 43: two enzymes for glycolic acid, alcohol and aldehyde dehydrogenase (T@20780–21110); salicylic acid mostly as the glycine conjugate (T@22380–22600).'},
   {t:'Glycolic acid: glycine conjugation; salicylic acid: alcohol and aldehyde dehydrogenase', correct:false, why:'The two halves are swapped (slide 43).'},
@@ -374,14 +374,14 @@ QUESTIONS.push(
 
 {id:'S4H-019', skill:'mech', prof:'Sikazwe', tier:'new', topic:'s4-kera', sub:'s', concept:'h-sulfur-thiolysis-size',
  tags:['hard'], source:'both', dupOf:'S4-067',
- stem:'Which pairing describes sulfur\'s chemical action as a keratolytic and the particle size that works?',
+ stem:'Sulfur must be small-particle sulfur to work as a keratolytic. What is its chemical basis of drug action?',
  options:[
-  {t:'Thiolysis of cysteine disulfide bonds; small particles', correct:true, why:'Slide 46: sulfur reduces or breaks the disulfide bonds in keratin (cysteine, T@25488–25550); it needs to be small particle sulfur (T@24600–24760).'},
-  {t:'Thiolysis of cysteine disulfide bonds; large particles', correct:false, why:'"Large particle sulfur, less effective" (T@24600–24760); large particles are better for zinc oxide (slide 61).'},
-  {t:'Free radicals from a peroxide bond; small particles', correct:false, why:'Free radicals are the benzoyl peroxide action (slide 47).'},
-  {t:'Lowering skin pH as a hydroxy acid; small particles', correct:false, why:'pH lowering belongs to the hydroxy acids and benzoyl peroxide (slides 43, 47).'}],
+  {t:'Thiolysis of keratin disulfide bonds', correct:true, why:'Slide 46: sulfur reduces or breaks the disulfide bonds in keratin (cysteine, T@25488–25550); it needs to be small particle sulfur (T@24600–24760).'},
+  {t:'Free radicals from a peroxide bond', correct:false, why:'Free radicals are the benzoyl peroxide action (slide 47).'},
+  {t:'Lowering skin pH as a hydroxy acid', correct:false, why:'pH lowering belongs to the hydroxy acids and benzoyl peroxide (slides 43, 47).'},
+  {t:'Autoxidation to cytotoxic radicals', correct:false, why:'Spontaneous autoxidation to cytotoxic radicals is the basis of action of anthralin (slide 17).'}],
  teach:'Slide 46: sulfur, alone or mixed (with sodium sulfacetamide or zinc oxide), acts by thiolysis, breaking the cysteine disulfide bonds of keratin; it must be small-particle sulfur. Its drawbacks are allergies and smell (T@24170–24285).',
- cite:HQ_S4+' slides 43, 46–47, 61; T@24170–25550'},
+ cite:HQ_S4+' slides 17, 43, 46–47, 61; T@24170–25550'},
 
 {id:'S4H-020', skill:'tell', prof:'Sikazwe', tier:'new', topic:'s4-kera', sub:'s', concept:'h-particle-size-pair',
  tags:['hard','tell'], source:'both',
@@ -396,14 +396,14 @@ QUESTIONS.push(
 
 {id:'S4H-021', skill:'chem', prof:'Sikazwe', tier:'new', topic:'s4-kera', sub:'bpo', concept:'h-bpo-radical-urine',
  tags:['hard'], source:'both', dupOf:'S4-070',
- stem:'Which pairing of benzoyl peroxide product and its fate or role is correct?',
+ stem:'The benzoyl radical from benzoyl peroxide kills bacteria. Which product of benzoyl peroxide is excreted in urine?',
  options:[
-  {t:'The benzoyl radical kills bacteria; benzoic acid is excreted in urine', correct:true, why:'Slide 47: free radicals from the broken peroxide bond act on bacteria (T@26000–26600); the absorbed drug forms benzoic acid, which is excreted in urine.'},
-  {t:'Benzoic acid kills bacteria; the benzoyl radical is excreted in urine', correct:false, why:'The two halves are swapped (slide 47).'},
-  {t:'The benzoyl radical kills bacteria; salicylic acid is excreted in urine', correct:false, why:'Salicylic acid comes from the salicylate sunscreen esters (slide 64), not from benzoyl peroxide.'},
-  {t:'Hydrogen sulfide kills bacteria; benzoic acid is excreted in urine', correct:false, why:'Hydrogen sulfide is sulfur\'s product in Dr. Smith\'s lecture (PCol slide 38).'}],
+  {t:'Benzoic acid', correct:true, why:'Slide 47: free radicals from the broken peroxide bond act on bacteria (T@26000–26600); the absorbed drug forms benzoic acid, which is excreted in urine.'},
+  {t:'The benzoyl radical', correct:false, why:'The benzoyl radical acts on bacteria in the skin (T@26000–26600); benzoic acid is the product excreted in urine (slide 47).'},
+  {t:'Salicylic acid', correct:false, why:'Salicylic acid comes from the salicylate sunscreen esters (slide 64), not from benzoyl peroxide.'},
+  {t:'A benzyl alcohol', correct:false, why:'A benzyl alcohol is the deboronated product of crisaborole (slide 7), not a product of benzoyl peroxide.'}],
  teach:'Slide 47: benzoyl peroxide belongs to the peroxide chemical class; its chemical basis of action is pH lowering and free radicals. It is absorbed by the skin and forms benzoic acid, which is excreted in urine.',
- cite:HQ_S4+' slides 47, 64; T@25608–26600'},
+ cite:HQ_S4+' slides 7, 47, 64; T@25608–26600'},
 
 /* ---- Hormones and antibiotics (pp. 52–55) --------------------------------- */
 {id:'S4H-022', skill:'chem', prof:'Sikazwe', tier:'new', topic:'s4-horm', sub:'oc', concept:'h-acne-steroids-set', multi:true,
@@ -457,23 +457,23 @@ QUESTIONS.push(
 /* ---- Sunblocks and sunscreens (pp. 61–66) --------------------------------- */
 {id:'S4H-026', skill:'mech', prof:'Sikazwe', tier:'new', topic:'s4-sun', sub:'inorg', concept:'h-zno-two-props',
  tags:['hard'], source:'both', dupOf:'S4-097',
- stem:'Which description of zinc oxide and titanium dioxide as sunblocks is correct?',
+ stem:'Zinc oxide and titanium dioxide are inert and do not irritate the skin. How do they protect, and against which UV bands?',
  options:[
-  {t:'They reflect or scatter UVA and UVB and do not irritate the skin', correct:true, why:'Slide 61: metal oxides that physically reflect or scatter light, broad spectrum (UVA/B), inert, do not irritate (T@38519–38748).'},
-  {t:'They absorb UVA and UVB and release it as heat; they do not irritate', correct:false, why:'Absorbing UV and releasing heat is what the organic sunscreens do (slide 62).'},
-  {t:'They reflect UVB only and irritate the skin', correct:false, why:'Slide 61: broad spectrum and inert.'},
-  {t:'They reflect UVB only and do not irritate the skin', correct:false, why:'Slide 61: they are broad spectrum (UVA/B).'}],
+  {t:'Reflect or scatter; UVA and UVB', correct:true, why:'Slide 61: metal oxides that physically reflect or scatter light, broad spectrum (UVA/B), inert, do not irritate (T@38519–38748).'},
+  {t:'Absorb and release heat; UVA and UVB', correct:false, why:'Absorbing UV and releasing heat is what the organic sunscreens do (slide 62).'},
+  {t:'Reflect or scatter; UVB only', correct:false, why:'Slide 61: they are broad spectrum (UVA/B).'},
+  {t:'Absorb and release heat; UVB only', correct:false, why:'Absorbing UV and releasing heat is the organic sunscreens\' action (slide 62), and the metal oxides are broad spectrum (slide 61).'}],
  teach:'Slide 61: zinc oxide and titanium dioxide are inorganic metal oxides that physically reflect or scatter light, cover UVA and UVB, are inert and do not irritate the skin, and come in micronized forms; larger particles are more effective.',
  cite:HQ_S4+' slides 61–62; T@38519–39200'},
 
 {id:'S4H-027', skill:'chem', prof:'Sikazwe', tier:'new', topic:'s4-sun', sub:'org', concept:'h-avobenzone-class-band',
  tags:['hard','tell'], source:'both',
- stem:'Which pairing of avobenzone\'s chemical family and its UV coverage is correct?',
+ stem:'Avobenzone is a dibenzoylmethane. Which UV coverage does it have?',
  options:[
-  {t:'Dibenzoylmethane; the full UVA spectrum and some UVB', correct:true, why:'Slide 62: dibenzoylmethanes, avobenzone products, absorb the full spectrum of UVA and some UVB (T@40499–40950).'},
-  {t:'Anthranilate; it absorbs the full UVA spectrum and some UVB', correct:false, why:'Meradimate is the anthranilate (slide 62).'},
-  {t:'Dibenzoylmethane; UVB only', correct:false, why:'Slide 62: avobenzone is a UVA absorber.'},
-  {t:'Benzophenone; full UVB and considerable UVA', correct:false, why:'That describes oxybenzone and the benzophenones (slide 65).'}],
+  {t:'Full UVA and some UVB', correct:true, why:'Slide 62: dibenzoylmethanes, avobenzone products, absorb the full spectrum of UVA and some UVB (T@40499–40950).'},
+  {t:'UVA only', correct:false, why:'Slide 62 gives plain "Absorb UVA" for the anthranilates; avobenzone also absorbs some UVB.'},
+  {t:'UVB only', correct:false, why:'Slide 62: avobenzone is a UVA absorber.'},
+  {t:'Full UVB and considerable UVA', correct:false, why:'That describes oxybenzone and the benzophenones (slide 65).'}],
  teach:'Slide 62: UVA filters. Avobenzone (dibenzoylmethane) absorbs all of UVA and some UVB, has low skin absorption and is rapidly degraded by UVA (photodegradation half-life about 2 h, so reapply about every 2 h). Meradimate (anthranilate) absorbs UVA and degrades even faster.',
  cite:HQ_S4+' slides 62, 65; T@39895–41549'},
 
@@ -512,23 +512,23 @@ QUESTIONS.push(
 
 {id:'S4H-031', skill:'chem', prof:'Sikazwe', tier:'new', topic:'s4-sun', sub:'org', concept:'h-bemt-class-reason',
  tags:['hard','tell'], source:'both', dupOf:'S4-110',
- stem:'Which description of bemotrizinol is correct?',
+ stem:'Which sunscreen is a photostable triazine whose high molecular weight limits its skin absorption?',
  options:[
-  {t:'A triazine absorbing UVB and UVA; high molecular weight limits skin absorption', correct:true, why:'Slide 66: methoxybenzene and triazines absorb UVB and UVA; photostable, lipophilic, little skin absorption because of the high MW (627.81); (T@45151–45500).'},
-  {t:'A benzophenone absorbing UVB and UVA; high log P limits skin absorption', correct:false, why:'The benzophenones are highly absorbed (log P about 4; slide 65).'},
-  {t:'A triazine absorbing UVB only; high molecular weight limits skin absorption', correct:false, why:'Slide 66: it absorbs UVB and UVA.'},
-  {t:'A triazine absorbing UVB and UVA; rapid photodegradation limits skin absorption', correct:false, why:'Slide 66: it is photostable (about 4–8 h; T@45151–45300).'}],
+  {t:'Bemotrizinol', correct:true, why:'Slide 66: methoxybenzene and triazines absorb UVB and UVA; photostable, lipophilic, little skin absorption because of the high MW (627.81); (T@45151–45500).'},
+  {t:'Oxybenzone', correct:false, why:'The benzophenones are highly absorbed (log P about 4; slide 65).'},
+  {t:'Avobenzone', correct:false, why:'Avobenzone is a dibenzoylmethane that UVA rapidly degrades (slide 62).'},
+  {t:'Ensulizole', correct:false, why:'Ensulizole is a water-soluble benzimidazole (slide 64).'}],
  teach:'Slide 66: bemotrizinol (BEMT), a methoxybenzene triazine from Europe, absorbs UVB and UVA and is photostable and lipophilic; its high molecular weight (627.81) keeps skin absorption low.',
- cite:HQ_S4+' slides 65–66; T@45151–45700'},
+ cite:HQ_S4+' slides 62, 64–66; T@45151–45700'},
 
 {id:'S4H-032', skill:'class', prof:'Sikazwe', tier:'new', topic:'s4-sun', sub:'org', concept:'h-uvb-filter-class-pairs',
  tags:['hard','tell'], source:'both',
- stem:'Which pairing of UVB filter family and example is correct?',
+ stem:'Ensulizole belongs to which family of UVB filters?',
  options:[
-  {t:'Benzimidazole: ensulizole', correct:true, why:'Slide 64: benzimidazoles, ensulizole, water soluble (T@42720–43400).'},
-  {t:'Benzimidazole: octisalate', correct:false, why:'Octisalate is a salicylate (slide 64).'},
-  {t:'Salicylate: padimate O', correct:false, why:'Padimate O is a PABA derivative (slide 63).'},
-  {t:'Cinnamate: homosalate', correct:false, why:'Homosalate is a salicylate (slide 64).'}],
+  {t:'Benzimidazoles', correct:true, why:'Slide 64: benzimidazoles, ensulizole, water soluble (T@42720–43400).'},
+  {t:'Salicylates', correct:false, why:'The salicylates are homosalate and octisalate (slide 64).'},
+  {t:'Cinnamates', correct:false, why:'The UVB cinnamates are octinoxate and cinoxate (slide 63).'},
+  {t:'PABAs', correct:false, why:'The PABAs are PABA and padimate O (slide 63).'}],
  teach:'UVB filters by family: cinnamates (octinoxate, cinoxate; slide 63), PABAs (PABA, padimate O; slide 63; rarely used because some people are allergic to PABA), salicylates (homosalate, octisalate; slide 64), benzimidazoles (ensulizole; water soluble, so reapply after swimming; slide 64).',
  cite:HQ_S4+' slides 63–64; T@41549–43400'}
 );

@@ -834,7 +834,7 @@ QUESTIONS.push(
 
 {id:'S3-067', skill:'tell', prof:'Sikazwe', tier:'new', topic:'s3-psor', sub:'poll', concept:'autox-anthralin-vs-psoralen',
  tags:['poll'], source:'both',
- stem:'True or false: the chemical basis of drug action for both anthralin and 8-methoxypsoralen involves autoxidation. Which assessment is correct?',
+ stem:'True or false: the chemical basis of drug action for both anthralin and 8-methoxypsoralen involves autoxidation.',
  options:[
   {t:'False; anthralin autoxidizes, 8-MOP does not', correct:true, why:'His answer (T 979–980): false; "which one has auto oxidation? [Anthralin]". 8-MOP crosslinks DNA with UVA (slide 18).'},
   {t:'False; 8-MOP autoxidizes, anthralin does not', correct:false, why:'Reversed: anthralin autoxidizes spontaneously (slide 17; T 938–942).'},
@@ -859,12 +859,12 @@ QUESTIONS.push(
 
 {id:'S3-069', skill:'chem', prof:'Sikazwe', tier:'new', topic:'s3-gc', sub:'struct', concept:'steroid-skeleton',
  tags:['chem'], source:'both',
- stem:'Which description fits the steroid skeleton of a glucocorticoid?',
+ stem:'The steroid skeleton of a glucocorticoid has four fused rings. What are the ring sizes?',
  options:[
-  {t:'Three six-membered rings and one five-membered ring', correct:true, why:'(T 990–994) "4 rings fused together ... 6 ... 6 ... 6-membered ring, then the last membered ring is 5"; slide 20 "tetracyclic structure".'},
-  {t:'Four six-membered rings fused together in a straight row', correct:false, why:'Ring D is five-membered (slide 20; T 993).'},
-  {t:'Two six-membered rings and two five-membered rings', correct:false, why:'Three rings are six-membered and one is five-membered (T 992–993).'},
-  {t:'A furan ring fused to a coumarin ring system', correct:false, why:'That is a furanocoumarin, the psoralens (slide 18).'}],
+  {t:'Three six-membered, one five-membered', correct:true, why:'(T 990–994) "4 rings fused together ... 6 ... 6 ... 6-membered ring, then the last membered ring is 5"; slide 20 "tetracyclic structure".'},
+  {t:'Four six-membered', correct:false, why:'Ring D is five-membered (slide 20; T 993).'},
+  {t:'Two six-membered, two five-membered', correct:false, why:'Three rings are six-membered and one is five-membered (T 992–993).'},
+  {t:'One six-membered, three five-membered', correct:false, why:'Rings A, B and C are six-membered; only ring D is five-membered (T 992–993).'}],
  teach:'A glucocorticoid is tetracyclic: rings A, B and C are six-membered and ring D is five-membered, fused in a set arrangement. "Whenever you see something like that ... it has a steroid skeleton" (slide 20; T 990–995). He asked the class to know what steroids look like (T 628–630).',
  cite:S3+' slides 18, 20; T 628–630, 987–996'},
 

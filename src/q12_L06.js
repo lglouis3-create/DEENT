@@ -296,7 +296,7 @@ QUESTIONS.push(
  tags:['two-facts'], source:'both',
  stem:'Why is benzoyl peroxide the first-line OTC agent for acne?',
  options:[
-  {t:'It is the most strongly keratolytic agent on the chart', correct:false, why:'Slide 23 rates keratolytic yes or no; it does not rank BP as most keratolytic.'},
+  {t:'It is the most strongly keratolytic OTC acne agent', correct:false, why:'Slide 23 rates keratolytic yes or no; it does not rank BP as most keratolytic.'},
   {t:'It is bactericidal, keratolytic, and comedolytic', correct:true, why:'Slide 23: BP is yes in all three rows. "Benzoyl peroxide targets all three ... So that means that benzoyl peroxide will be our first-line agent" (T@24800 11/10).'},
   {t:'It causes no photosensitivity', correct:false, why:'Slide 23 lists photosensitivity among BP adverse effects.'},
   {t:'It was added to the OTC category by the FDA in 2016', correct:false, why:'That was the topical retinoid (slide 27).'}],
@@ -372,7 +372,7 @@ QUESTIONS.push(
 
 {id:'P6-025', skill:'tell', prof:'Patel', tier:'new', topic:'p6-otc', sub:'bha', concept:'p6-salicylic-vs-bp',
  tags:['two-facts'], source:'both',
- stem:'A parent says salicylic acid is the best acne ingredient. Which reply is accurate?',
+ stem:'A parent asks whether salicylic acid is the best OTC acne ingredient for her teenager. What should the pharmacist tell her?',
  options:[
   {t:'Salicylic acid is bactericidal, while benzoyl peroxide is not bactericidal', correct:false, why:'Slide 23: hydroxy acids are not bactericidal; BP is.'},
   {t:'Its efficacy data are limited; benzoyl peroxide proved more effective', correct:true, why:'Slide 29: "Limited efficacy data"; "salicylic acid was actually first line ... benzoyl peroxide ... much more effective" (T@34403 11/10).'},
@@ -506,7 +506,7 @@ QUESTIONS.push(
 
 {id:'P6-038', skill:'class', prof:'Patel', tier:'new', topic:'p6-oral', sub:'abx', concept:'p6-oral-abx-facts', multi:true,
  tags:['list'], source:'both',
- stem:'Which statements about oral antibiotics for acne are accurate? Select all that apply.',
+ stem:'A 16-year-old with moderate acne is to start an oral antibiotic. Which apply to oral antibiotics for acne? Select all that apply.',
  options:[
   {t:'Doxycycline and minocycline are the most commonly prescribed', correct:true, why:'Slide 32 (T@38197 11/10).'},
   {t:'Photosensitivity is common with the tetracyclines', correct:true, why:'Slide 33.'},
@@ -802,7 +802,7 @@ QUESTIONS.push(
 
 {id:'P6-064', skill:'counsel', prof:'Patel', tier:'new', topic:'p6-couns', sub:'oral', concept:'p6-oral-counsel',
  tags:['counseling'], source:'both',
- stem:'Which counseling point applies to oral acne medicines?',
+ stem:'A patient picks up an oral acne medicine. How should she be told to take it?',
  options:[
   {t:'Open the capsule and sprinkle it on food', correct:false, why:'Slide 42: swallow whole.'},
   {t:'Swallow whole with a full glass of water; may take after eating', correct:true, why:'Slide 42, oral: swallow whole, full glass of water, option to take after eating; caution driving at night; sunscreen (T@62393 11/10).'},
@@ -846,7 +846,7 @@ QUESTIONS.push(
 
 {id:'P6-068', skill:'counsel', prof:'Patel', tier:'new', topic:'p6-couns', sub:'plan', concept:'p6-plan-principles',
  tags:['two-facts'], source:'both',
- stem:'Which principle guides building an acne treatment plan?',
+ stem:'When an acne treatment plan is built, how are the agents chosen and ordered?',
  options:[
   {t:'Start three agents at full strength, then remove one at a time', correct:false, why:'Step by step, one agent first (T@54687 11/10).'},
   {t:'Fewest agents at the lowest doses; topical before oral', correct:true, why:'Slide 47: "Combine the smallest number of agents at the lowest possible dosages"; "Topical before Oral"; taper over time (T@71021–71629 11/10).'},
@@ -924,7 +924,7 @@ QUESTIONS.push(
 
 {id:'P6H-007', skill:'counsel', prof:'Patel', tier:'new', topic:'p6-iso', sub:'inter', concept:'p6h-progestin-only',
  tags:['hard','case'], source:'both',
- stem:'A 19-year-old woman will start isotretinoin next month. For contraception she takes a progestin-only pill, and her partner uses condoms. Which statement about her plan is correct?',
+ stem:'A 19-year-old woman will start isotretinoin next month. For contraception she takes a progestin-only pill, and her partner uses condoms. What should the pharmacist tell her about this plan?',
  options:[
   {t:'Her pill is on the do-not-use list with isotretinoin; she needs another method', correct:true, why:'Slide 38: "Do not use with vitamin A supplements, tetracyclines, steroids, progestin-only ..."; two forms of birth control are needed (T@50755 11/10).'},
   {t:'Her plan works: the pill and condoms are two forms, begun on the first dose day', correct:false, why:'The pill is on the do-not-use list, and the two forms start 1 month before treatment (slide 38).'},

@@ -185,7 +185,7 @@ QUESTIONS.push(
 /* ---- Warts: salicylic acid (slides 9-10, 12) ------------------------------ */
 {id:'P8C-011', skill:'counsel', prof:'Patel', tier:'new', topic:'p8c-wartsa', sub:'use', concept:'p8c-wart-sa40-directions',
  tags:['case','know-this','numbers'], source:'both',
- stem:'A 22-year-old with no medical conditions has a common wart on a finger and chooses salicylic acid 40% pads. Which directions are correct?',
+ stem:'A 22-year-old with no medical conditions has a common wart on a finger and chooses salicylic acid 40% pads. Which directions should the pharmacist give?',
  options:[
   {t:'Remove after 48 hours; repeat every 48 hours; up to 14 days', correct:false, why:'14 days (7 applications) is the corn and callus limit (slide 17); for a wart it is up to 12 weeks (slide 10).'},
   {t:'Apply a new pad 1–2 times a day; up to 12 weeks', correct:false, why:'1–2 times a day is the 17% liquid, gel or stick schedule (slide 10).'},
@@ -196,7 +196,7 @@ QUESTIONS.push(
 
 {id:'P8C-012', skill:'counsel', prof:'Patel', tier:'new', topic:'p8c-wartsa', sub:'use', concept:'p8c-wart-sa17-directions',
  tags:['case','know-this','numbers'], source:'both',
- stem:'A 16-year-old with no medical conditions has a plantar wart and chooses salicylic acid 17% liquid. Which directions are correct?',
+ stem:'A 16-year-old with no medical conditions has a plantar wart and chooses salicylic acid 17% liquid. Which directions should the pharmacist give?',
  options:[
   {t:'One drop at a time; up to twice daily; up to 14 days', correct:false, why:'That is the 17% schedule for a corn or callus (slide 17).'},
   {t:'One drop at a time; 1–2 times a day; up to 12 weeks', correct:true, why:'Slide 10: "Apply 1 drop at a time to cover the wart ... Repeat procedure 1–2 times a day until the wart resolves. This product may be used for up to 12 weeks" (T@91612–91887 11/12).'},
@@ -276,7 +276,7 @@ QUESTIONS.push(
 
 {id:'P8C-019', skill:'counsel', prof:'Patel', tier:'new', topic:'p8c-cryo', sub:'use', concept:'p8c-cryo-counseling', multi:true,
  tags:['list','counsel'], source:'both',
- stem:'Which counseling points are correct for an OTC cryotherapy wart product? Select all that apply.',
+ stem:'A patient buys an OTC cryotherapy wart product. Which counseling points apply? Select all that apply.',
  options:[
   {t:'Soak the area in warm water for 5 minutes first', correct:true, why:'Slide 11.'},
   {t:'Keep it away from heat sources; it is flammable', correct:true, why:'Slide 11: "These products are flammable. Do not use near heat sources."'},
@@ -323,7 +323,7 @@ QUESTIONS.push(
 
 {id:'P8C-023', skill:'counsel', prof:'Patel', tier:'new', topic:'p8c-cornsa', sub:'use', concept:'p8c-corn-sa40-directions',
  tags:['case','know-this','numbers'], source:'both',
- stem:'A 34-year-old with no medical conditions has a corn on the fifth toe and chooses a salicylic acid 40% plaster. Which directions are correct?',
+ stem:'A 34-year-old with no medical conditions has a corn on the fifth toe and chooses a salicylic acid 40% plaster. Which directions should the pharmacist give?',
  options:[
   {t:'Remove within 48 hours; reapply every 48 hours; up to 12 weeks', correct:false, why:'12 weeks is the limit for a wart (slide 10); for a corn or callus it is 14 days (slide 17).'},
   {t:'Remove within 48 hours; reapply every 48 hours; up to 14 days', correct:true, why:'Slide 17: "Remove the plaster/pad and occlusive tape within 48 hours ... reapply the plaster every 48 hours as needed ... do not treat for longer than 14 days—that is, use no more than 7 applications" (T@94465, T@94581 11/12).'},
@@ -334,7 +334,7 @@ QUESTIONS.push(
 
 {id:'P8C-024', skill:'counsel', prof:'Patel', tier:'new', topic:'p8c-cornsa', sub:'use', concept:'p8c-corn-sa17-directions',
  tags:['case','numbers','two-facts'], source:'slide',
- stem:'A 29-year-old with no medical conditions has a callus on the heel and chooses salicylic acid 17% liquid in a collodion-like vehicle. Which directions are correct?',
+ stem:'A 29-year-old with no medical conditions has a callus on the heel and chooses salicylic acid 17% liquid in a collodion-like vehicle. Which directions should the pharmacist give?',
  options:[
   {t:'1–2 times a day for up to 12 weeks', correct:false, why:'That is the 17% schedule for a wart (slide 10).'},
   {t:'Every 48 hours for up to 14 days', correct:false, why:'Every 48 hours is the 40% plaster schedule (slide 17).'},

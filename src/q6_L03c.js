@@ -128,7 +128,7 @@ QUESTIONS.push(
 
 {id:'L3C-012', skill:'tell', prof:'Smith', tier:'new', topic:'l3c-uv', sub:'uvab', concept:'uvb-range',
  tags:['numbers','tell'], source:'both',
- stem:'In Dr. Smith\'s lecture, which wavelength ranges are given for UVB and UVA?',
+ stem:'Which wavelength ranges define UVB and UVA?',
  options:[
   {t:'UVB 290–320 nm; UVA 320–400 nm', correct:true, why:'Slide 8 and her recording (audio 04:37) give UVB as 290 to 320 nm and UVA as 320 to 400 nm; UVB is the shorter wavelength band.'},
   {t:'UVB 320–400 nm; UVA 290–320 nm', correct:false, why:'Swaps the two ranges on slide 8.'},
@@ -140,7 +140,7 @@ QUESTIONS.push(
 
 {id:'L3C-013', skill:'tell', prof:'Smith', tier:'new', topic:'l3c-uv', sub:'uvab', concept:'uvb-vs-uva-glass',
  tags:['tell'], source:'both',
- stem:'Which statement separates UVB from UVA?',
+ stem:'How does UVB differ from UVA?',
  options:[
   {t:'UVB is mostly filtered by ozone and glass', correct:true, why:'Slide 8: UVB about 90% filtered by the ozone layer, does not penetrate glass; UVA is minimally filtered and penetrates glass (audio 04:37–05:00).'},
   {t:'UVB passes through glass; UVA is mostly filtered by ozone', correct:false, why:'Reverses slide 8.'},
@@ -195,12 +195,12 @@ QUESTIONS.push(
 
 {id:'L3C-018', skill:'patho', prof:'Smith', tier:'new', topic:'l3c-uv', sub:'tan', concept:'tanning-timing',
  tags:['tell','numbers'], source:'slide',
- stem:'Which statement about delayed pigmentation after UVA exposure is correct?',
+ stem:'After UVA exposure, how long does delayed pigmentation take to develop?',
  options:[
-  {t:'Develops in 48–72 h; lasts weeks', correct:true, why:'Slide 10: takes about 48 to 72 hours to develop, peaks at 7 to 10 days and lasts weeks to months.'},
-  {t:'It starts 5–10 minutes after exposure', correct:false, why:'That is immediate pigmentation (slide 10).'},
-  {t:'It lasts only 24–48 hours', correct:false, why:'That is immediate pigmentation (slide 10).'},
-  {t:'It peaks within 12 hours', correct:false, why:'Slide 10: it peaks at 7 to 10 days.'}],
+  {t:'5–10 minutes', correct:false, why:'That is immediate pigmentation (slide 10).'},
+  {t:'24–48 hours', correct:false, why:'That is how long immediate pigmentation lasts (slide 10).'},
+  {t:'48–72 hours', correct:true, why:'Slide 10: takes about 48 to 72 hours to develop, peaks at 7 to 10 days and lasts weeks to months.'},
+  {t:'7–10 days', correct:false, why:'Slide 10: it peaks at 7 to 10 days.'}],
  teach:'Slide 10: immediate pigmentation starts 5–10 minutes after exposure and lasts 24–48 hours; delayed pigmentation takes 48–72 hours, peaks at 7–10 days and lasts weeks to months.',
  cite:SUN+' slide 10; audio 07:30–07:55'},
 
@@ -329,7 +329,7 @@ QUESTIONS.push(
 
 {id:'L3C-037', skill:'counsel', prof:'Smith', tier:'new', topic:'l3c-spf', sub:'sel', concept:'skin-type-i',
  tags:['counseling'], source:'slide',
- stem:'Which description fits skin type I?',
+ stem:'How does skin type I respond to sun exposure?',
  options:[
   {t:'Always burns easily, never tans', correct:true, why:'Slide 16: type I always burns easily and never tans; type II also burns easily but tans minimally.'},
   {t:'Always burns easily, tans minimally', correct:false, why:'That is skin type II (slide 16).'},
@@ -362,7 +362,7 @@ QUESTIONS.push(
 
 {id:'L3C-040', skill:'counsel', prof:'Smith', tier:'new', topic:'l3c-spf', sub:'sel', concept:'start-high',
  tags:['counseling','cue'], source:'both',
- stem:'Why does Dr. Smith advise "start high and go low" with SPF?',
+ stem:'Why should a patient "start high and go low" with SPF?',
  options:[
   {t:'A higher SPF added after 1 MED helps little', correct:true, why:'Slide 17: adding higher SPF after 1 MED will not help much; (audio 16:32–16:54) once you have burned, a higher SPF does little.'},
   {t:'High SPF products lose activity after one hour', correct:false, why:'Not a reason given on slide 17.'},

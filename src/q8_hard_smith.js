@@ -103,12 +103,12 @@ QUESTIONS.push(
 
 {id:'L1H-007', skill:'epi', prof:'Smith', tier:'new', topic:'cmp', sub:'diff', concept:'h-epi-figures-pso-acne',
  tags:['hard','numbers','tell'], source:'both',
- stem:'Which pairing of disease and epidemiologic figure is correct?',
+ stem:'About what share of the US population has psoriasis, and what is the lifetime prevalence of acne?',
  options:[
-  {t:'Psoriasis: about 3% of the US; acne: lifetime prevalence near 90%', correct:true, why:'Pathophys slide 20 (about 3% of the US population) and slide 31 (lifetime prevalence approaches 90%); (T 412–413).'},
-  {t:'Psoriasis: about 30% of the US; acne: lifetime prevalence near 90%', correct:false, why:'30% is the share of psoriasis patients with a first-degree relative who has it (slide 20; T 310).'},
-  {t:'Psoriasis: about 3% of the US; acne: lifetime prevalence near 81%', correct:false, why:'81% is the likelihood of acne when both parents had acne (slide 35; T 488–489).'},
-  {t:'Psoriasis: 2–10% of adults; acne: about 12% of women aged 25–58', correct:false, why:'2–10% of adults is the AD figure (slide 10); 12% is acne in women aged 25–58 (slide 31).'}],
+  {t:'About 3%; near 90%', correct:true, why:'Pathophys slide 20 (about 3% of the US population) and slide 31 (lifetime prevalence approaches 90%); (T 412–413).'},
+  {t:'About 30%; near 90%', correct:false, why:'30% is the share of psoriasis patients with a first-degree relative who has it (slide 20; T 310).'},
+  {t:'About 3%; near 81%', correct:false, why:'81% is the likelihood of acne when both parents had acne (slide 35; T 488–489).'},
+  {t:'2–10%; about 12%', correct:false, why:'2–10% of adults is the AD figure (slide 10); 12% is acne in women aged 25–58 (slide 31).'}],
  teach:'Figures that look alike: AD 15–30% of children and 2–10% of adults (slide 10); psoriasis about 3% of the US, with 30% of patients having an affected first-degree relative (slide 20); acne lifetime prevalence near 90%, 12% of women and 3% of men aged 25–58, and 81% if both parents had acne (slides 31, 35).',
  cite:HQ_PP+' slides 10, 20, 31, 35; T 304–310, 412–419, 488–489'},
 
@@ -196,7 +196,7 @@ QUESTIONS.push(
 
 {id:'L1H-015', skill:'tell', prof:'Smith', tier:'new', topic:'cmp', sub:'diff', concept:'h-ad-vs-pso-cytokines',
  tags:['hard','tell'], source:'slide',
- stem:'Which pairing of disease and the cytokines that drive it is correct?',
+ stem:'Which cytokines drive atopic dermatitis, and which drive psoriasis?',
  options:[
   {t:'Atopic dermatitis: IL-4 and IL-13; psoriasis: IL-23 and IL-17', correct:true, why:'Pathophys slide 16 (TH2 cytokines including IL-4 and IL-13 in AD) and slides 21–22 (TNF-alpha, IL-23 and IL-17 in psoriasis).'},
   {t:'Atopic dermatitis: IL-23 and IL-17; psoriasis: IL-4 and IL-13', correct:false, why:'Reversed (slides 16, 21–22).'},
@@ -232,7 +232,7 @@ QUESTIONS.push(
 
 {id:'L1H-018', skill:'counsel', prof:'Smith', tier:'new', topic:'cs', sub:'top', concept:'h-cs-examples-site',
  tags:['hard','counseling'], source:'both', dupOf:'L1-084',
- stem:'Which pairing of topical corticosteroid example and site of use is correct?',
+ stem:'Which topical corticosteroid suits the face, and which suits the body?',
  options:[
   {t:'Hydrocortisone 1% on the face; betamethasone valerate 0.1% on the body', correct:true, why:'PCol slide 11: low potency (hydrocortisone 1%) for the face, medium potency (betamethasone valerate 0.1%) for the body; (T 818–821).'},
   {t:'Betamethasone valerate 0.1% on the face; hydrocortisone 1% on the body', correct:false, why:'Reversed: nothing more potent than low potency goes on the face (T 818–819).'},
@@ -302,12 +302,12 @@ QUESTIONS.push(
 
 {id:'L1H-024', skill:'tell', prof:'Smith', tier:'new', topic:'ret', sub:'rec', concept:'h-rxr-kaposi',
  tags:['hard','tell'], source:'both', dupOf:'L1-091',
- stem:'Which pairing of retinoid receptor target, main effect and use is correct?',
+ stem:'Retinoids that target RXRs predominantly have which effect, and for which condition are they used?',
  options:[
-  {t:'RXR: apoptosis; cancers such as Kaposi sarcoma', correct:true, why:'Slide 14: retinoids that target RXRs predominantly induce apoptosis and are used in cancers like Kaposi sarcoma; (T 893–900).'},
-  {t:'RAR: apoptosis; cancers such as Kaposi sarcoma', correct:false, why:'RAR-targeting retinoids act on differentiation and proliferation (slide 14).'},
-  {t:'RXR: differentiation; acne and photoaging', correct:false, why:'Acne and photoaging go with RAR targeting (slide 14).'},
-  {t:'RAR: apoptosis; acne and psoriasis', correct:false, why:'Acne and psoriasis are treated through RAR effects on differentiation and proliferation (slide 14).'}],
+  {t:'Apoptosis; cancers such as Kaposi sarcoma', correct:true, why:'Slide 14: retinoids that target RXRs predominantly induce apoptosis and are used in cancers like Kaposi sarcoma; (T 893–900).'},
+  {t:'Differentiation and proliferation; cancers such as Kaposi sarcoma', correct:false, why:'Differentiation and proliferation are the RAR effects; RXR-targeting retinoids induce apoptosis (slide 14).'},
+  {t:'Differentiation; acne and photoaging', correct:false, why:'Acne and photoaging go with RAR targeting (slide 14).'},
+  {t:'Apoptosis; acne and psoriasis', correct:false, why:'Acne and psoriasis are treated through RAR effects on differentiation and proliferation (slide 14).'}],
  teach:'Slide 14: RAR-targeting retinoids mainly affect differentiation and proliferation and treat acne, psoriasis and photoaging; RXR-targeting retinoids mainly induce apoptosis and are used in cancers such as Kaposi sarcoma.',
  cite:HQ_PC1+' slide 14; T 880–904'},
 
@@ -325,23 +325,23 @@ QUESTIONS.push(
 
 {id:'L2H-002', skill:'tell', prof:'Smith', tier:'new', topic:'l2-tret', sub:'prod', concept:'h-tretinoin-identity',
  tags:['hard','tell'], source:'both',
- stem:'Which description fits topical tretinoin?',
+ stem:'What is tretinoin chemically, and about how much of a topical dose reaches the circulation?',
  options:[
-  {t:'All-trans retinoic acid; under 10% absorbed systemically', correct:true, why:'Slide 17: the acid form of vitamin A, all-trans retinoic acid (ATRA), with less than 10% absorption; (T 61).'},
-  {t:'13-cis retinoic acid; under 10% absorbed systemically', correct:false, why:'13-cis retinoic acid is isotretinoin (DPAW slide 49), the oral retinoid.'},
-  {t:'All-trans retinoic acid; about half absorbed systemically', correct:false, why:'Slide 17: less than 10% is absorbed.'},
-  {t:'Sun stable; may be combined with benzoyl peroxide', correct:false, why:'That describes adapalene (slide 18).'}],
+  {t:'All-trans retinoic acid; under 10%', correct:true, why:'Slide 17: the acid form of vitamin A, all-trans retinoic acid (ATRA), with less than 10% absorption; (T 61).'},
+  {t:'13-cis retinoic acid; under 10%', correct:false, why:'13-cis retinoic acid is isotretinoin (DPAW slide 49), the oral retinoid.'},
+  {t:'All-trans retinoic acid; about half', correct:false, why:'Slide 17: less than 10% is absorbed.'},
+  {t:'A naphthoic acid derivative; under 10%', correct:false, why:'A derivative of naphthoic acid is adapalene (slide 18).'}],
  teach:'Slide 17: tretinoin is ATRA, under 10% absorbed, with the same 4–6 week flare and 8–12 week optimum; Retin-A Micro is a timed-release microsphere form that may be less irritating. Slide 18: adapalene is sun stable and can be combined with benzoyl peroxide.',
  cite:HQ_PC2+' slides 17–18; T 58–64'},
 
 {id:'L2H-003', skill:'counsel', prof:'Smith', tier:'new', topic:'l2-oret', sub:'aci', concept:'h-retinoid-pregnancy-rules',
- tags:['hard','tell','counseling'], source:'both',
- stem:'Which pairing of retinoid and its pregnancy precaution is correct?',
+ tags:['hard','tell','counseling'], source:'both', dupOf:'L2-022',
+ stem:'Which pregnancy precaution applies to topical tazarotene?',
  options:[
-  {t:'Tazarotene: contraceptive counseling first; not used in pregnancy', correct:true, why:'Slide 18: women of childbearing age use it only after contraceptive counseling, and pregnant women should not use it; (T 78–81).'},
-  {t:'Tazarotene: iPLEDGE registration and follow-up before the first dose', correct:false, why:'iPLEDGE is the program for isotretinoin (slide 19).'},
-  {t:'Isotretinoin: avoid pregnancy for 3 years after stopping', correct:false, why:'The 3-year wait is for acitretin (slide 20); isotretinoin uses iPLEDGE (slide 19).'},
-  {t:'Acitretin: avoid pregnancy for 2 months after stopping', correct:false, why:'Two months is the ethanol rule; pregnancy is avoided for at least 3 years (slide 20).'}],
+  {t:'Contraceptive counseling first; not used in pregnancy', correct:true, why:'Slide 18: women of childbearing age use it only after contraceptive counseling, and pregnant women should not use it; (T 78–81).'},
+  {t:'iPLEDGE registration and follow-up before the first dose', correct:false, why:'iPLEDGE is the program for isotretinoin (slide 19).'},
+  {t:'No pregnancy for 3 years after the last dose', correct:false, why:'The 3-year wait is for acitretin (slide 20); isotretinoin uses iPLEDGE (slide 19).'},
+  {t:'No pregnancy for 2 months after the last dose', correct:false, why:'Two months is the acitretin ethanol rule; pregnancy is avoided for at least 3 years after acitretin (slide 20).'}],
  teach:'Slides 18–20: tazarotene, contraceptive counseling first and not in pregnancy; isotretinoin, iPLEDGE registration and follow-up (men too, T 130–132); acitretin, no pregnancy during treatment or for at least 3 years after, the Do Your P.A.R.T. program, no ethanol for 2 months and no blood donation for 3 years after.',
  cite:HQ_PC2+' slides 18–20; T 78–81, 98–116'},
 
@@ -380,23 +380,23 @@ QUESTIONS.push(
 
 {id:'L2H-007', skill:'adverse', prof:'Smith', tier:'new', topic:'l2-vitd', sub:'ae', concept:'h-calcipotriene-150g',
  tags:['hard','numbers'], source:'both', dupOf:'L2-046',
- stem:'A patient has applied 150 g of calcipotriene a week for a month and now has a high serum calcium. Which statement applies?',
+ stem:'A patient has applied 150 g of calcipotriene a week for a month and now has a high serum calcium. What is the recommended weekly limit, and what happens to the calcium once the drug is stopped?',
  options:[
-  {t:'The 100 g/week limit was exceeded; it resolves within days of stopping', correct:true, why:'Slide 22: hypercalcemia and hypercalciuria may develop above the 100 g/week limit and resolve within days of discontinuation; (T 191–196).'},
-  {t:'The 100 g/week limit was exceeded; it persists for about 3 years', correct:false, why:'Three years is the acitretin wait (slide 20); calcipotriene hypercalcemia resolves within days.'},
-  {t:'The 50 g/week limit was exceeded; it resolves within a few days of stopping', correct:false, why:'Slide 22 gives 100 g a week.'},
-  {t:'The dose is within limits; the calcium rise is from another cause', correct:false, why:'150 g a week exceeds the 100 g/week limit (slide 22).'}],
+  {t:'100 g; it resolves within days', correct:true, why:'Slide 22: hypercalcemia and hypercalciuria may develop above the 100 g/week limit and resolve within days of discontinuation; (T 191–196).'},
+  {t:'100 g; it persists for about 3 years', correct:false, why:'Three years is the acitretin wait (slide 20); calcipotriene hypercalcemia resolves within days.'},
+  {t:'50 g; it resolves within days', correct:false, why:'Slide 22 gives 100 g a week.'},
+  {t:'200 g; it persists for about 3 years', correct:false, why:'Slide 22 gives a 100 g/week limit, which 150 g a week exceeds, and the hypercalcemia resolves within days of stopping.'}],
  teach:'Slide 22: hypercalcemia and hypercalciuria develop when the cumulative weekly dose of calcipotriene exceeds the recommended 100 g/week, and resolve within days of stopping. She explained the rise as the drug acting like vitamin D on genes for calcium transport (T 169–191).',
  cite:HQ_PC2+' slide 22; T 167–196'},
 
 {id:'L2H-008', skill:'mech', prof:'Smith', tier:'new', topic:'l2-tcell', sub:'sig', concept:'h-signal-tcell-molecules',
  tags:['hard','tell','target'], source:'both',
- stem:'Which pairing of T-cell activation signal and the T-cell molecule that receives it is correct?',
+ stem:'In T-cell activation, which T-cell molecule receives signal 2, and which receives signal 3?',
  options:[
-  {t:'Signal 2: CD28; signal 3: CD25', correct:true, why:'Slide 25: signal 2 is CD80/86 on the APC binding T-cell CD28; signal 3 is IL-2 binding T-cell CD25, the IL-2 receptor (T 233–269).'},
-  {t:'Signal 2: CD25; signal 3: CD28', correct:false, why:'The two halves are reversed (slide 25).'},
-  {t:'Signal 1: CD28; signal 3: CD25', correct:false, why:'Signal 1 is antigen on MHC II binding the T-cell receptor (slide 25).'},
-  {t:'Signal 2: CD80/86; signal 3: CD25', correct:false, why:'CD80/86 sits on the antigen-presenting cell; the T-cell molecule for signal 2 is CD28 (slide 25).'}],
+  {t:'CD28; CD25', correct:true, why:'Slide 25: signal 2 is CD80/86 on the APC binding T-cell CD28; signal 3 is IL-2 binding T-cell CD25, the IL-2 receptor (T 233–269).'},
+  {t:'CD25; CD28', correct:false, why:'The two halves are reversed (slide 25).'},
+  {t:'T-cell receptor; CD25', correct:false, why:'Signal 1 is antigen on MHC II binding the T-cell receptor (slide 25).'},
+  {t:'CD80/86; CD25', correct:false, why:'CD80/86 sits on the antigen-presenting cell; the T-cell molecule for signal 2 is CD28 (slide 25).'}],
  teach:'Slide 25: signal 1, antigen on MHC II binds the T-cell receptor; signal 2, CD80/86 on the APC binds CD28 (co-signal), which starts activation and IL-2 transcription; signal 3, IL-2 binds CD25 and starts T-cell proliferation. Calcineurin inhibitors act in the cascade after signals 1 and 2.',
  cite:HQ_PC2+' slide 25; T 220–269'},
 
@@ -424,12 +424,12 @@ QUESTIONS.push(
 
 {id:'L2H-011', skill:'tell', prof:'Smith', tier:'new', topic:'l2-cni', sub:'top', concept:'h-tci-age-itch',
  tags:['hard','numbers'], source:'both',
- stem:'Which statement fits both topical pimecrolimus and topical tacrolimus in atopic dermatitis?',
+ stem:'For topical pimecrolimus and tacrolimus in atopic dermatitis, from what age are they approved, and how soon do they relieve itch?',
  options:[
-  {t:'Approved over age 2; itch relief within days', correct:true, why:'Slide 27: both relieve pruritus after the first few days and are approved for AD in adults and children older than 2 years (T 366, 374).'},
-  {t:'Approved over age 2; itch relief after 8–12 weeks', correct:false, why:'8–12 weeks is the retinoid timeline (slide 16); these relieve itch within days (slide 27).'},
-  {t:'Approved from birth; itch relief within days', correct:false, why:'Use under 2 years is not FDA approved (slide 27).'},
-  {t:'Approved over age 12; itch relief within hours', correct:false, why:'The approval is for children older than 2 (slide 27).'}],
+  {t:'Over age 2; within days', correct:true, why:'Slide 27: both relieve pruritus after the first few days and are approved for AD in adults and children older than 2 years (T 366, 374).'},
+  {t:'Over age 2; after 8–12 weeks', correct:false, why:'8–12 weeks is the retinoid timeline (slide 16); these relieve itch within days (slide 27).'},
+  {t:'From birth; within days', correct:false, why:'Use under 2 years is not FDA approved (slide 27).'},
+  {t:'Over age 12; within hours', correct:false, why:'The approval is for children older than 2 (slide 27).'}],
  teach:'Slide 27: topical pimecrolimus and tacrolimus inhibit T-cell and mast cell activation; both relieve pruritus within the first few days and are approved in adults and children older than 2. Pimecrolimus may stay in the skin more than in the circulation. Crisaborole has the same age cutoff: 2 years and older (slide 33).',
  cite:HQ_PC2+' slides 16, 27, 33; T 362–377'},
 
@@ -468,7 +468,7 @@ QUESTIONS.push(
 
 {id:'L2H-015', skill:'tell', prof:'Smith', tier:'new', topic:'l2-pde', sub:'apr', concept:'h-pde4-pair-route',
  tags:['hard','tell'], source:'both', dupOf:'L2-086',
- stem:'Which pairing of PDE-4 inhibitor, form and condition is correct?',
+ stem:'Apremilast and crisaborole are both PDE-4 inhibitors. How is each given, and for which condition?',
  options:[
   {t:'Apremilast: oral, psoriasis; crisaborole: 2% ointment, AD from age 2', correct:true, why:'Slides 33–34: crisaborole 2% ointment for mild-to-moderate AD in patients 2 years and older; apremilast oral for psoriasis (T 448–467).'},
   {t:'Apremilast: oral, AD; crisaborole: 2% ointment, psoriasis', correct:false, why:'The conditions are swapped (slides 33–34).'},
@@ -490,7 +490,7 @@ QUESTIONS.push(
 
 {id:'L2H-017', skill:'mech', prof:'Smith', tier:'new', topic:'l2-ker', sub:'bpo', concept:'h-bpo-metab-bleach',
  tags:['hard'], source:'both',
- stem:'Which pairing describes benzoyl peroxide\'s probable active metabolite and the reason it bleaches fabrics?',
+ stem:'What is benzoyl peroxide\'s probable active metabolite, and why does it bleach fabrics?',
  options:[
   {t:'Benzoic acid; it is an oxidant', correct:true, why:'Slide 36: it is metabolized to benzoic acid, probably the active form (T 499); slide 37: an oxidant, so it can bleach hair and fabrics (T 510–511).'},
   {t:'Benzoic acid; it is a strong acid', correct:false, why:'Slide 37 gives the oxidant property as the reason for bleaching.'},
@@ -501,7 +501,7 @@ QUESTIONS.push(
 
 {id:'L2H-018', skill:'mech', prof:'Smith', tier:'new', topic:'l2-ker', sub:'sul', concept:'h-sulfur-two-actions',
  tags:['hard'], source:'both', dupOf:'L2-097',
- stem:'Which pairing describes sulfur\'s antibacterial effect and how it promotes peeling in acne?',
+ stem:'How does sulfur act on bacteria, and how does it promote peeling in acne?',
  options:[
   {t:'Bacteriostatic; hydrogen sulfide formed in keratinocytes inflames them', correct:true, why:'Slide 38: bacteriostatic properties; sulfur is reduced to hydrogen sulfide inside keratinocytes, causing inflammation that promotes peeling (T 517–522).'},
   {t:'Bactericidal; hydrogen sulfide formed in keratinocytes inflames them', correct:false, why:'Sulfur does not kill the bacteria but prevents their growth (T 517–518).'},
@@ -512,12 +512,12 @@ QUESTIONS.push(
 
 {id:'L2H-019', skill:'counsel', prof:'Smith', tier:'new', topic:'l2-ker', sub:'sal', concept:'h-sa-conc-uses',
  tags:['hard','numbers','counseling'], source:'both', dupOf:'L2-103',
- stem:'Which pairing of salicylic acid concentration and use is correct?',
+ stem:'Which salicylic acid concentration treats acne and dandruff, and which removes warts and corns?',
  options:[
-  {t:'3–6% for acne and dandruff; up to 40% for warts and corns', correct:true, why:'Both concentrations (slide 40; T 545–549).'},
-  {t:'3–6% for warts and corns; up to 40% for acne', correct:false, why:'Swapped: the 40% products go only on the wart or corn (T 549–552).'},
-  {t:'0.5–2% for acne and dandruff; up to 20% for warts', correct:false, why:'Slide 40 gives 3–6% and up to 40%.'},
-  {t:'3–6% for acne and dandruff; up to 60% for warts and corns', correct:false, why:'Slide 40 gives up to 40%.'}],
+  {t:'3–6%; up to 40%', correct:true, why:'Both concentrations (slide 40; T 545–549).'},
+  {t:'Up to 40%; 3–6%', correct:false, why:'Swapped: the 40% products go only on the wart or corn (T 549–552).'},
+  {t:'0.5–2%; up to 20%', correct:false, why:'Slide 40 gives 3–6% and up to 40%.'},
+  {t:'3–6%; up to 60%', correct:false, why:'Slide 40 gives up to 40%.'}],
  teach:'Slide 40: 3 to 6% treats dandruff, acne and psoriasis; above 6% may damage the skin by peeling too deeply; up to 40% is for wart and corn removal, applied only to the wart or corn and not to the healthy skin beside it (T 545–552).',
  cite:HQ_PC2+' slide 40; T 545–552'},
 
@@ -536,19 +536,19 @@ QUESTIONS.push(
 
 {id:'L2H-021', skill:'mech', prof:'Smith', tier:'new', topic:'l2-abx', sub:'ribo', concept:'h-ribo-70s-steps',
  tags:['hard'], source:'slide', dupOf:'L2-111',
- stem:'On the 70S bacterial ribosome, which pairing of antibiotic, subunit and blocked step is correct?',
+ stem:'On the 70S bacterial ribosome, which subunit do tetracyclines bind, and which step do they block?',
  options:[
-  {t:'Tetracyclines: 30S; binding of the incoming charged tRNA', correct:true, why:'Slide 42 caption: tetracyclines bind the 30S subunit and prevent binding of the incoming charged tRNA (step 1).'},
-  {t:'Tetracyclines: 50S; peptide bond formation', correct:false, why:'Chloramphenicol binds 50S and blocks peptide bond formation (slide 42).'},
-  {t:'Chloramphenicol: 30S; binding of the incoming charged tRNA', correct:false, why:'Chloramphenicol binds the 50S subunit (slide 42).'},
-  {t:'Tetracyclines: 30S; release of the uncharged tRNA', correct:false, why:'Slide 42: they block step 1, the binding of the charged tRNA at the acceptor site.'}],
+  {t:'30S; binding of the incoming charged tRNA', correct:true, why:'Slide 42 caption: tetracyclines bind the 30S subunit and prevent binding of the incoming charged tRNA (step 1).'},
+  {t:'50S; peptide bond formation', correct:false, why:'Chloramphenicol binds 50S and blocks peptide bond formation (slide 42).'},
+  {t:'50S; binding of the incoming charged tRNA', correct:false, why:'Tetracyclines bind the 30S subunit; chloramphenicol binds 50S (slide 42).'},
+  {t:'30S; release of the uncharged tRNA', correct:false, why:'Slide 42: they block step 1, the binding of the charged tRNA at the acceptor site.'}],
  teach:'Slide 42: the 70S ribosome has 50S and 30S subunits. Step 1, the charged tRNA binds the acceptor site (blocked by tetracyclines on 30S); step 2, peptide bond formation (blocked by chloramphenicol on 50S); step 3, release of the uncharged tRNA; step 4, translocation.',
  cite:HQ_PC2+' slide 42; T 586–607'},
 
 /* ================== Pharmacology deck slides 43-76 (11/03) ================ */
 {id:'L3H-001', skill:'mech', prof:'Smith', tier:'new', topic:'l3-abx', sub:'tet', concept:'h-tet-irreversible-static',
  tags:['hard'], source:'both', dupOf:'L3-002',
- stem:'Which description of the tetracycline mechanism and effect is correct?',
+ stem:'How do tetracyclines bind the bacterial ribosome, and what is their effect on bacteria?',
  options:[
   {t:'Irreversible binding to 30S; bacteriostatic', correct:true, why:'Slide 43: irreversible binding to the 30S subunit, blocking aminoacyl-tRNA binding; broad-spectrum bacteriostatic (T 29–36).'},
   {t:'Reversible binding to 30S; bactericidal', correct:false, why:'Slide 43: the binding is irreversible and the effect bacteriostatic.'},
@@ -628,7 +628,7 @@ QUESTIONS.push(
 
 {id:'L3H-008', skill:'mech', prof:'Smith', tier:'new', topic:'l3-fol', sub:'dap', concept:'h-dapsone-two-uses',
  tags:['hard','tell'], source:'slide', dupOf:'L3-023',
- stem:'Which pairing describes how dapsone works in leprosy and in acne?',
+ stem:'How does dapsone work in leprosy, and how does it work in acne?',
  options:[
   {t:'Leprosy: PABA antagonist; acne: anti-inflammatory, possibly via neutrophils', correct:true, why:'Slide 50: in leprosy it competitively antagonizes PABA like the sulfonamides; its anti-inflammatory activity helps acne, with neutrophils a possible site of action.'},
   {t:'Leprosy: a DHFR inhibitor; acne: anti-inflammatory, possibly via neutrophils', correct:false, why:'Slide 50 likens its leprosy mechanism to the sulfonamides (PABA antagonism), not to trimethoprim.'},
@@ -700,7 +700,7 @@ QUESTIONS.push(
 
 {id:'L3H-014', skill:'class', prof:'Smith', tier:'new', topic:'l3-abat', sub:'drug', concept:'h-abatacept-struct-target',
  tags:['hard','target'], source:'both', dupOf:'L3-058',
- stem:'Which pairing of abatacept\'s structure and what it binds is correct?',
+ stem:'What is abatacept made of, and what does it bind?',
  options:[
   {t:'CTLA-4 extracellular domain fused to IgG Fc; binds CD80/86', correct:true, why:'Slide 63: a fusion protein of the CTLA-4 extracellular domain and human IgG Fc that binds CD80/CD86 on APCs (T 316–323).'},
   {t:'CD28 extracellular domain fused to IgG Fc; binds CD80/86', correct:false, why:'The drug was made to look like CTLA-4, which likely binds CD80/86 more tightly than CD28 (T 322–323).'},
@@ -793,7 +793,7 @@ QUESTIONS.push(
 
 {id:'L3H-022', skill:'tell', prof:'Smith', tier:'new', topic:'l3-cytok', sub:'il23', concept:'h-p19-human-humanized',
  tags:['hard','tell'], source:'slide', dupOf:'L3-085',
- stem:'Guselkumab and risankizumab both bind the p19 subunit of IL-23. Which pairing of origin is correct?',
+ stem:'Guselkumab and risankizumab both bind the p19 subunit of IL-23. What type of antibody is each?',
  options:[
   {t:'Guselkumab: human; risankizumab: humanized', correct:true, why:'Slide 68 (guselkumab, a human monoclonal IgG1 lambda antibody) and slide 69 (risankizumab, a humanized IgG1 antibody).'},
   {t:'Guselkumab: humanized; risankizumab: human', correct:false, why:'The two halves are swapped (slides 68–69).'},
@@ -837,12 +837,12 @@ QUESTIONS.push(
 
 {id:'L3H-026', skill:'tell', prof:'Smith', tier:'new', topic:'l3-tnf', sub:'drugs', concept:'h-tnf-route-pairs',
  tags:['hard','tell'], source:'slide',
- stem:'Which pairing of TNF-α inhibitor and how it is given is correct?',
+ stem:'How are infliximab and certolizumab pegol given?',
  options:[
   {t:'Infliximab by IV infusion; certolizumab pegol SQ every other week', correct:true, why:'Slide 72 (IV infusion) and slide 74 (subcutaneously every other week).'},
   {t:'Infliximab SQ every other week; certolizumab pegol by IV infusion', correct:false, why:'The two halves are swapped (slides 72, 74).'},
-  {t:'Etanercept by IV infusion; adalimumab SQ', correct:false, why:'Etanercept is given by subcutaneous injection (slide 71).'},
-  {t:'Infliximab by IV infusion; adalimumab by IV infusion', correct:false, why:'Adalimumab is subcutaneous (slide 73).'}],
+  {t:'Both by IV infusion', correct:false, why:'Certolizumab pegol is given subcutaneously every other week (slide 74).'},
+  {t:'Both SQ every other week', correct:false, why:'Infliximab is given by IV infusion (slide 72).'}],
  teach:'Slides 71–74: etanercept SQ; infliximab IV infusion; adalimumab SQ; certolizumab pegol SQ every other week, extendable to every 4 weeks after three doses. Of the IL-23 inhibitors, risankizumab is given SQ and IV (slide 69).',
  cite:HQ_PC3+' slides 69, 71–74'},
 
@@ -972,12 +972,12 @@ QUESTIONS.push(
 
 {id:'L3CH-012', skill:'counsel', prof:'Smith', tier:'new', topic:'l3c-prod', sub:'blk', concept:'h-sunblock-water-heat',
  tags:['hard','counseling'], source:'both',
- stem:'Which statement about physical sunblocks such as zinc oxide is correct?',
+ stem:'How do physical sunblocks such as zinc oxide hold up in water and in hot sun?',
  options:[
   {t:'Not easily removed by water, but they melt in hot sun', correct:true, why:'Slide 21; protection decreases after 2 hours of direct sun, so reapply in about 2 hours (audio 20:39–21:04).'},
   {t:'Easily removed by water, but stable in the hot sun', correct:false, why:'Slide 21: not easily removed with water, but they melt in hot sun.'},
-  {t:'They absorb UV and convert it to heat', correct:false, why:'That is the action of organic sunscreens (slide 22); sunblocks scatter or reflect (slide 20).'},
-  {t:'Their nanosize forms are more opaque than the large ones', correct:false, why:'Slide 20: microsize and nanosize forms are less opaque and more cosmetically appealing.'}],
+  {t:'Not easily removed by water, and stable in the hot sun', correct:false, why:'Slide 21: they melt in hot sun.'},
+  {t:'Easily removed by water, and they melt in hot sun', correct:false, why:'Slide 21: they are not easily removed with water.'}],
  teach:'Slides 20–21: sunblocks are inorganic particulates (zinc oxide, titanium dioxide) that scatter or reflect visible, UV and infrared radiation; used on exposed areas such as the nose and ears. They may occlude pores (miliaria, folliculitis, acne) and stain clothing; they are not easily removed with water but melt in hot sun; protection falls after 2 hours of direct sun.',
  cite:HQ_SUN+' slides 20–22; audio 20:39–21:04'},
 

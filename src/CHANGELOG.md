@@ -18,6 +18,10 @@ Every update adds its bullets here in the same commit that makes the change.
 - Nuclear receptors: a section and diagram each for corticosteroids, retinoids and vitamin D.
 - Each drawn diagram now opens with a sentence on what it shows and what it is for.
 
+## 2026-11-14 (questions reworded)
+- 128 questions reworded: patient cases and direct questions replace "which statement is correct".
+- No question or answer choice refers to a slide or the lecture any more.
+
 ## 2026-11-14 (search, new questions)
 - iPad: the Reload bar is gone; the page now tries by itself to fill a resized window.
 - FTU: fractions and answers written with an equals sign are read; one limb is outlined for one-limb areas.

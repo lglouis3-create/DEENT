@@ -218,7 +218,7 @@ QUESTIONS.push(
 
 {id:'P7-011', skill:'tell', prof:'Patel', tier:'new', topic:'p7-cmp', sub:'cmp', concept:'p7-cmp-sd-location',
  tags:['tell'], source:'both',
- stem:'Which location pattern fits seborrheic dermatitis?',
+ stem:'Where on the body does seborrheic dermatitis typically appear?',
  options:[
   {t:'Scalp', correct:false, why:'Scalp alone is dandruff (slide 6).'},
   {t:'Scalp, face, and trunk', correct:true, why:'Slide 6: seborrheic dermatitis, scalp, face and trunk (T@76480 11/10).'},
@@ -309,14 +309,14 @@ QUESTIONS.push(
 
 {id:'P7-019', skill:'epi', prof:'Patel', tier:'new', topic:'p7-sd', sub:'epi', concept:'p7-sd-epi',
  tags:['fine-detail'], source:'both',
- stem:'Which statement about who gets seborrheic dermatitis is accurate?',
+ stem:'Among adolescents and adults, how common is seborrheic dermatitis, and which sex is affected more often?',
  options:[
-  {t:'It can persist in infants up to 30 months; in adults, men > women', correct:true, why:'Slide 11: "Affects infants, may persist up to 30 months of age"; adolescents and adults 1–3%; men > women (T@85719 11/10).'},
-  {t:'It affects about 10% of adults, and women more often than men', correct:false, why:'Slide 11: 1–3%, men > women.'},
-  {t:'It is contagious in infants up to 30 months, so keep the infant home', correct:false, why:'Slide 11: neither harmful nor contagious.'},
-  {t:'It has no link to Malassezia and is caused by bacteria', correct:false, why:'Slide 11: involves Malassezia species.'}],
+  {t:'1–3%; no gender preference', correct:false, why:'That is dandruff (slide 8): 1–3% of the population, no gender preference.'},
+  {t:'1–3%; men more than women', correct:true, why:'Slide 11: "Affects infants, may persist up to 30 months of age"; adolescents and adults 1–3%; men > women (T@85719 11/10).'},
+  {t:'3%; no gender preference', correct:false, why:'That is psoriasis (slide 21): 3% of the US population, no gender preference.'},
+  {t:'1–3%; women more than men', correct:false, why:'Slide 11: 1–3%, men > women.'}],
  teach:'Chronic, no specific cure, not contagious (slide 11).',
- cite:P7Q+' slide 11; T@85719 11/10'},
+ cite:P7Q+' slides 8, 11, 21; T@85719 11/10'},
 
 {id:'P7-020', skill:'counsel', prof:'Patel', tier:'new', topic:'p7-sd', sub:'tx', concept:'p7-sd-schedule',
  tags:['counseling','two-facts'], source:'both',
@@ -477,14 +477,14 @@ QUESTIONS.push(
 
 {id:'P7H-007', skill:'patho', prof:'Patel', tier:'new', topic:'p7-cmp', sub:'cmp', concept:'p7h-organisms',
  tags:['hard','tell'], source:'both',
- stem:'Which pairing of a condition with its associated organism is correct?',
+ stem:'A 35-year-old man has yellow, greasy scales on red, inflamed skin of his scalp, ears and face. Which organism is associated with this condition?',
  options:[
-  {t:'Seborrheic dermatitis: Malassezia', correct:true, why:'Slides 11, 13: Malassezia species (T@81752 11/10).'},
-  {t:'Acne vulgaris: Candida albicans', correct:false, why:'Acne goes with P. acnes (Lecture 6); Candida albicans is a diaper dermatitis complication (Lecture 5).'},
-  {t:'Dandruff: Staphylococcus aureus', correct:false, why:'Dandruff goes with Malassezia (slide 8); S. aureus with atopic dermatitis infections (Lecture 5).'},
-  {t:'Atopic dermatitis: Propionibacterium acnes', correct:false, why:'P. acnes goes with acne (Lecture 6).'}],
+  {t:'Malassezia species', correct:true, why:'Slides 11, 13: Malassezia species (T@81752 11/10).'},
+  {t:'Candida albicans', correct:false, why:'Candida albicans is a diaper dermatitis complication (Lecture 5).'},
+  {t:'Staphylococcus aureus', correct:false, why:'S. aureus goes with atopic dermatitis infections (Lecture 5); seborrheic dermatitis, like dandruff (slide 8), involves Malassezia.'},
+  {t:'Propionibacterium acnes', correct:false, why:'P. acnes goes with acne (Lecture 6).'}],
  teach:'"When did we talk about a staph? What lecture? Dermatitis ... P acnes, bacteria?" (T@81752 11/10).',
- cite:P7Q+' slides 8, 11, 13; T@81752 11/10'},
+ cite:P7Q+' slides 8, 11–13; T@81752 11/10'},
 
 /* ---- Psoriasis: her PollEv case (slide 50, 11/11) ------------------------- */
 {id:'P7-028', skill:'case', prof:'Patel', tier:'new', topic:'p7-psotx', sub:'case', concept:'p7-pso-case-severity',
@@ -536,12 +536,12 @@ QUESTIONS.push(
 /* ---- Psoriasis: who, triggers, comorbidities, signs (slides 21-27) -------- */
 {id:'P7-030', skill:'epi', prof:'Patel', tier:'new', topic:'p7-pso', sub:'epi', concept:'p7-pso-epi',
  tags:['fine-detail'], source:'both',
- stem:'Which statement about who gets psoriasis is accurate?',
+ stem:'A patient newly diagnosed with psoriasis asks at what ages it usually starts. At which ages does the onset of psoriasis peak?',
  options:[
-  {t:'Peak onset at 20–30 and at 50–60 years; plaque type in more than 80%', correct:true, why:'Slide 21: affects 3% of the US population; peak onset 20–30 and 50–60 years; children infrequent (< 0.2%); no gender preference; plaque type > 80% (T@3146–4077 11/11).'},
-  {t:'Peak onset in infancy; it persists up to 30 months of age', correct:false, why:'That is seborrheic dermatitis in infants (slide 11). Children are infrequent in psoriasis (slide 21).'},
-  {t:'Single peak onset at 20–30 years; women affected more often than men', correct:false, why:'Slide 21: no gender preference, and a second peak at 50–60.'},
-  {t:'Puberty onset with a peak in adulthood; 1–3% of people', correct:false, why:'That is dandruff (slide 8).'}],
+  {t:'20–30 and 50–60 years', correct:true, why:'Slide 21: affects 3% of the US population; peak onset 20–30 and 50–60 years; children infrequent (< 0.2%); no gender preference; plaque type > 80% (T@3146–4077 11/11).'},
+  {t:'Infancy, up to 30 months of age', correct:false, why:'That is seborrheic dermatitis in infants (slide 11). Children are infrequent in psoriasis (slide 21).'},
+  {t:'20–30 years only', correct:false, why:'Slide 21 gives a second peak at 50–60 years.'},
+  {t:'Puberty, with a peak in adulthood', correct:false, why:'That is dandruff (slide 8).'}],
  teach:'Two peaks of onset; plaque type is the most common (slide 21).',
  cite:P7Q+' slides 8, 11, 21; T@3146–4077 11/11'},
 
@@ -571,7 +571,7 @@ QUESTIONS.push(
 
 {id:'P7-033', skill:'patho', prof:'Patel', tier:'new', topic:'p7-pso', sub:'pres', concept:'p7-pso-plaque-signs',
  tags:['recall'], source:'both',
- stem:'Which description fits the lesions of plaque psoriasis?',
+ stem:'How do the lesions of plaque psoriasis typically look?',
  options:[
   {t:'Red-violet, well demarcated, at least 0.5 cm, with silver flaking scale', correct:true, why:'Slide 26: erythematous; red-violet; at least 0.5 cm in diameter; well demarcated; typically covered by silver, flaking scales (T@6626 11/11).'},
   {t:'Yellow, greasy scales in patches with exudates and crusting on red skin', correct:false, why:'Adult seborrheic dermatitis (slide 12).'},
@@ -833,12 +833,12 @@ QUESTIONS.push(
 
 {id:'P7-055', skill:'class', prof:'Patel', tier:'new', topic:'p7-psosys', sub:'apr', concept:'p7-apremilast-class-dose',
  tags:['two-facts','numbers'], source:'both',
- stem:'Which describes apremilast (Otezla) for psoriasis?',
+ stem:'A patient starts apremilast (Otezla) for psoriasis. What is its class, and how is the dose built up?',
  options:[
   {t:'PDE-4 blocker; titrated to 30 mg twice daily over the first week', correct:true, why:'Slide 38: apremilast (Otezla), PDE-4 blocker; dose titration to max 30 mg BID over first week; renal impairment once daily (T@15679 11/11).'},
-  {t:'JAK inhibitor; used after methotrexate fails in psoriatic arthritis', correct:false, why:'That is tofacitinib (Xeljanz), slide 38.'},
-  {t:'Oral retinoid; maximum response in 3 to 6 months', correct:false, why:'That is acitretin (slide 38).'},
-  {t:'Blocks T-cell activation; given as a subQ injection', correct:false, why:'That is abatacept (Orencia), slide 39.'}],
+  {t:'JAK inhibitor; titrated to 30 mg twice daily over the first week', correct:false, why:'The titration is right; the Janus kinase (JAK) inhibitor is tofacitinib (Xeljanz), slide 38.'},
+  {t:'PDE-4 blocker; titrated to 30 mg twice daily over 3 to 6 months', correct:false, why:'The class is right; apremilast is titrated over the first week. 3 to 6 months is the time to maximum response with acitretin (slide 38).'},
+  {t:'JAK inhibitor; titrated to 30 mg twice daily over 3 to 6 months', correct:false, why:'The Janus kinase (JAK) inhibitor is tofacitinib (Xeljanz), and 3 to 6 months is the time to maximum response with acitretin, the oral retinoid (slide 38); apremilast is a PDE-4 blocker titrated over the first week.'}],
  teach:'Response should be seen by week 4 (slide 38).',
  cite:P7Q+' slides 38–39; T@15679–15754 11/11'},
 
@@ -866,19 +866,19 @@ QUESTIONS.push(
 
 {id:'P7-058', skill:'class', prof:'Patel', tier:'new', topic:'p7-psosys', sub:'oth', concept:'p7-tofacitinib',
  tags:['fine-detail'], source:'both',
- stem:'Which describes tofacitinib (Xeljanz) in psoriatic disease?',
+ stem:'Tofacitinib (Xeljanz) is a Janus kinase (JAK) inhibitor. When is it used in psoriatic disease?',
  options:[
-  {t:'JAK inhibitor for psoriatic arthritis after failure on methotrexate', correct:true, why:'Slide 38: tofacitinib (Xeljanz), Janus kinase inhibitor; psoriatic arthritis after fail on methotrexate; no live vaccines; boxed warning (serious cardiac events, cancer, blood clots, death) (T@16004 11/11).'},
-  {t:'PDE-4 blocker for plaque psoriasis, used before methotrexate is tried', correct:false, why:'PDE-4 blocker is apremilast (slide 38).'},
-  {t:'IL-17A inhibitor for plaque psoriasis that requires a REMS program', correct:false, why:'That is brodalumab (Siliq), slide 42.'},
-  {t:'Oral retinoid for psoriasis that is not immunosuppressive', correct:false, why:'That is acitretin (slide 38).'}],
+  {t:'Plaque psoriasis, before methotrexate is tried', correct:false, why:'Slide 38 places tofacitinib in psoriatic arthritis, after failure on methotrexate.'},
+  {t:'Psoriatic arthritis, as the first systemic agent', correct:false, why:'Slide 38: after failure on methotrexate, not first.'},
+  {t:'Psoriatic arthritis, after failure on methotrexate', correct:true, why:'Slide 38: tofacitinib (Xeljanz), Janus kinase inhibitor; psoriatic arthritis after fail on methotrexate; no live vaccines; boxed warning (serious cardiac events, cancer, blood clots, death) (T@16004 11/11).'},
+  {t:'Psoriatic arthritis, together with a biologic DMARD', correct:false, why:'Slide 38: do not use with biologic DMARDs or with potent immunosuppressants.'}],
  teach:'Tofacitinib: immunosuppressive; serious infections; monitor lymphocytes, neutrophils, hemoglobin, liver enzymes, lipids (slide 38).',
  cite:P7Q+' slide 38; T@15912–16004 11/11'},
 
 /* ---- PUVA (slides 44-45) -------------------------------------------------- */
 {id:'P7-059', skill:'case', prof:'Patel', tier:'new', topic:'p7-psosys', sub:'puva', concept:'p7-puva-place',
  tags:['two-facts'], source:'both',
- stem:'Which describes PUVA photochemotherapy for psoriasis?',
+ stem:'A patient asks where PUVA photochemotherapy fits in the treatment of psoriasis. What should the pharmacist tell him?',
  options:[
   {t:'Absolute last line for severe refractory disease; about 90% respond', correct:true, why:'Slides 44–45: efficacy 90% with oral psoralens + UVA; reserved for severe, refractory psoriasis. "It is absolute last line ... 90% do respond well" (T@28274–28462 11/11).'},
   {t:'First line for mild disease of the elbows; about 50% respond', correct:false, why:'Topical agents are first for mild disease (slide 35).'},
