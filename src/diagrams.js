@@ -99,7 +99,9 @@ const ACNE_CASCADE = (() => {
   ], 262, 'After Skin-Pathophys-Students-2026.pdf slide 34 (DiPiro, Pharmacotherapy 12e); lecture 10/29, T 452–471 (pustule opening, T 464–466).');
 })();
 
-/* ---------- Nuclear receptor: direct and indirect action (Skin-PCol slides 5–6) --
+/* ---------- Glucocorticoid receptor: direct and indirect action (Skin-PCol slides 5–6, 10) --
+   (Louis, 2026-11-13: one figure per receptor. Slide 6 draws GRE, NF-kB and AP-1, so this
+   figure is the glucocorticoid one; the retinoid and vitamin D figures follow it.)
    Each drug–receptor complex is a receptor box with the drug drawn on top of
    it, so the drug stays visible once it is bound. The first complex keeps its
    data-k ('drug', 'r1') from step 1 to step 4, so it glides from the cytoplasm
@@ -111,8 +113,8 @@ const NR_ACTION = (() => {
   const dot = (x, y, k) => `<circle class="mark" data-k="${k}" cx="${x}" cy="${y}" r="7"/>`;
   // a complex: the receptor box, then the drug on its left end
   const cx = (x, y, n) => box(x - 20, y - 8, 40, 16, 'r' + n) + dot(x - 11, y, n === 1 ? 'drug' : 'drug' + n);
-  const s1 = nucleus + dot(60, 42, 'drug') + lbl(60, 62, 'drug', 'dl', 'lbl xs') +
-    box(158, 52, 64, 20, 'r1') + lbl(190, 66, 'receptor', 'rl', 'lbl xs');
+  const s1 = nucleus + dot(60, 42, 'drug') + lbl(60, 62, 'glucocorticoid', 'dl', 'lbl xs') +
+    box(138, 52, 104, 20, 'r1') + lbl(190, 66, 'glucocorticoid receptor', 'rl', 'lbl xs');
   const s2 = nucleus + box(158, 52, 64, 20, 'r1') + lbl(196, 66, 'receptor', 'rl', 'lbl xs') + dot(168, 62, 'drug') +
     lbl(190, 88, 'drug–receptor complex', 'cxl', 'lbl xs');
   const gre = box(45, 150, 110, 22, 'gre') + lbl(100, 165, 'GRE', 'grel');
@@ -120,22 +122,71 @@ const NR_ACTION = (() => {
     lbl(100, 186, 'two complexes on the GRE:', 'dt1', 'lbl xs') + lbl(100, 197, 'genes up or down', 'dt2', 'lbl xs');
   const ind = dir + box(205, 150, 120, 22, 'tf') + lbl(265, 165, 'NF-kB / AP-1', 'tfl') + cx(265, 140, 3) +
     lbl(265, 186, 'one complex on the factor:', 'it1', 'lbl xs') + lbl(265, 197, 'factor kept off the DNA', 'it2', 'lbl xs');
-  return stepper('nr-action', 'Nuclear receptor binders: direct and indirect', [
-    ['The drug reaches its receptor inside the cell.', s1],
+  return stepper('nr-action', 'Glucocorticoid receptor (corticosteroids): direct and indirect', [
+    ['The corticosteroid reaches its receptor inside the cell: the glucocorticoid receptor.', s1],
     ['Drug and receptor form a drug–receptor complex.', s2],
-    ['Direct: two complexes bind a response element (glucocorticoid: GRE) and raise anti-inflammatory or lower inflammatory gene expression.', dir],
+    ['Direct: two complexes bind the glucocorticoid response element (GRE) and raise anti-inflammatory or lower inflammatory gene expression.', dir],
     ['Indirect: one complex binds a transcription factor (NF-kB, AP-1), which then cannot drive inflammatory genes.', ind],
-  ], 250, 'After Skin-PCol-Students-2026.pdf slides 5–6; lecture 10/29, T 639–746.');
+  ], 250, 'After Skin-PCol-Students-2026.pdf slides 5–6 and 10; lecture 10/29, T 639–746.');
+})();
+
+/* ---------- Retinoid receptors RAR and RXR (Skin-PCol slides 7, 14) ----------------
+   The retinoid and the two receptor boxes keep their data-k from step 1 to step 4. */
+const NR_RAR = (() => {
+  const box = (x, y, w, h, k) => `<rect class="box" data-k="${k}" x="${x}" y="${y}" width="${w}" height="${h}" rx="6"/>`;
+  const lbl = (x, y, t, k, c = 'lbl sm', a = 'middle') => `<text class="${c}" data-k="${k}" x="${x}" y="${y}" text-anchor="${a}">${t}</text>`;
+  const nucleus = box(10, 104, 340, 100, 'nuc') + lbl(18, 117, 'Nucleus (DNA)', 'nucl', 'lbl xs', 'start');
+  const dot = (x, y, k) => `<circle class="mark" data-k="${k}" cx="${x}" cy="${y}" r="7"/>`;
+  const s1 = nucleus + dot(50, 42, 'drug') + lbl(50, 62, 'retinoid', 'dl', 'lbl xs') +
+    box(120, 52, 54, 20, 'ra') + lbl(147, 66, 'RAR', 'ral', 'lbl xs') + box(192, 52, 54, 20, 'rx') + lbl(219, 66, 'RXR', 'rxl', 'lbl xs');
+  const s2 = nucleus + box(145, 52, 54, 20, 'ra') + lbl(172, 66, 'RAR', 'ral', 'lbl xs') + box(199, 52, 54, 20, 'rx') + lbl(226, 66, 'RXR', 'rxl', 'lbl xs') +
+    dot(153, 62, 'drug') + lbl(199, 88, 'RAR–RXR heterodimer', 'cxl', 'lbl xs');
+  const rare = box(95, 154, 170, 22, 'rare') + lbl(180, 169, 'RARE', 'rarel');
+  const s3 = nucleus + rare + box(125, 134, 54, 16, 'ra') + lbl(152, 146, 'RAR', 'ral', 'lbl xs') + box(179, 134, 54, 16, 'rx') + lbl(206, 146, 'RXR', 'rxl', 'lbl xs') +
+    dot(133, 142, 'drug') + lbl(180, 188, 'heterodimer on the retinoic acid response element', 'dt1', 'lbl xs');
+  const s4 = s3 + lbl(180, 199, 'RAR: differentiation, proliferation · RXR: apoptosis', 'dt2', 'lbl xs');
+  return stepper('nr-rar', 'Retinoid receptors (RAR and RXR): the retinoids', [
+    ['The retinoid reaches its receptors inside the cell: RARs and RXRs.', s1],
+    ['Bound by a retinoid, RAR and RXR form a heterodimer (RAR–RXR).', s2],
+    ['The heterodimer moves into the nucleus and binds DNA at the retinoic acid response element (RARE).', s3],
+    ['Gene transcription changes: RAR-targeting retinoids affect differentiation and proliferation (acne, psoriasis, photoaging); RXR-targeting ones induce apoptosis.', s4],
+  ], 250, 'After Skin-PCol-Students-2026.pdf slides 7 and 14.');
+})();
+
+/* ---------- Vitamin D receptor and calcipotriene (Skin-PCol slides 7, 21) ----------
+   Slide 21 names the response elements "vitamin D response elements"; slide 7 lists "TRE" for the
+   vitamin D receptor (see the note in Reference), so the figure uses slide 21's words. */
+const NR_VDR = (() => {
+  const box = (x, y, w, h, k) => `<rect class="box" data-k="${k}" x="${x}" y="${y}" width="${w}" height="${h}" rx="6"/>`;
+  const lbl = (x, y, t, k, c = 'lbl sm', a = 'middle') => `<text class="${c}" data-k="${k}" x="${x}" y="${y}" text-anchor="${a}">${t}</text>`;
+  const nucleus = box(10, 104, 340, 100, 'nuc') + lbl(18, 117, 'Nucleus (DNA)', 'nucl', 'lbl xs', 'start');
+  const dot = (x, y, k) => `<circle class="mark" data-k="${k}" cx="${x}" cy="${y}" r="7"/>`;
+  const s1 = nucleus + dot(50, 42, 'drug') + lbl(50, 62, 'calcipotriene', 'dl', 'lbl xs') +
+    box(150, 52, 110, 20, 'vdr') + lbl(205, 66, 'vitamin D receptor', 'vdrl', 'lbl xs');
+  const s2 = nucleus + box(120, 52, 62, 20, 'vdr') + lbl(151, 66, 'VDR', 'vdrl', 'lbl xs') + box(182, 52, 62, 20, 'rxr') + lbl(213, 66, 'RXR-α', 'rxl', 'lbl xs') +
+    dot(130, 62, 'drug') + lbl(182, 88, 'VDR–RXR-α heterodimer', 'cxl', 'lbl xs');
+  const vre = box(80, 154, 200, 22, 'vre') + lbl(180, 169, 'vitamin D response elements', 'vrel', 'lbl xs');
+  const s3 = nucleus + vre + box(120, 134, 62, 16, 'vdr') + lbl(151, 146, 'VDR', 'vdrl', 'lbl xs') + box(182, 134, 62, 16, 'rxr') + lbl(213, 146, 'RXR-α', 'rxl', 'lbl xs') +
+    dot(130, 142, 'drug') + lbl(180, 188, 'heterodimer on the response elements', 'dt1', 'lbl xs');
+  const s4 = s3 + lbl(180, 199, 'more expression of genes for differentiation and inflammation', 'dt2', 'lbl xs');
+  return stepper('nr-vdr', 'Vitamin D receptor (VDR): calcipotriene', [
+    ['Calcipotriene (psoriasis) acts through the vitamin D receptor, VDR.', s1],
+    ['The VDR–drug complex heterodimerizes with RXR-α.', s2],
+    ['The complex binds vitamin D response elements on DNA.', s3],
+    ['Expression rises for genes that modulate epidermal differentiation and inflammation; proliferation falls and keratinocytes differentiate.', s4],
+  ], 250, 'After Skin-PCol-Students-2026.pdf slides 7 and 21.');
 })();
 
 const DIA = {
   'acne-cascade': ACNE_CASCADE,
   'nr-action': NR_ACTION,
+  'nr-rar': NR_RAR,
+  'nr-vdr': NR_VDR,
 };
 
 const DIAGRAMS = [
   ['Skin Pathophysiology (Dr. Smith)', ['acne-cascade']],
-  ['Skin Pharmacology (Dr. Smith)', ['nr-action']],
+  ['Skin Pharmacology (Dr. Smith)', ['nr-action', 'nr-rar', 'nr-vdr']],
 ];
 
 const DIA_NAMES = {};

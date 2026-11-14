@@ -630,6 +630,9 @@ const WALK_UI = (() => {
     // the section heading stays in view when the bar is near it, else the bar is the top
     const target = sec && bar && bar.getBoundingClientRect().top - sec.getBoundingClientRect().top < window.innerHeight * 0.45 ? sec : bar;
     if (target) settle(target, bar);
+    // jump_ui.js lands its own target, the section heading, again for some seconds after a jump. When the bar is
+    // the landing that would leave the player one to two screens below the window on a phone, so it is told to stop.
+    if (target && target === bar && window.JUMP_UI && typeof JUMP_UI.handOff === 'function') JUMP_UI.handOff();
     focusEl(p && p.querySelector('[data-wkplay]'));
   }
   // images above the target can still be loading and push it down: the page is

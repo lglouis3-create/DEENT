@@ -8,6 +8,16 @@ characters.
 
 Every update adds its bullets here in the same commit that makes the change.
 
+## 2026-11-13 (exam folders, slide links)
+- Guides, Tell apart and Reference are grouped in an Exam 1 and an Exam 2 folder; the current exam opens first.
+- Tell apart, Exam 2: one button for each comparison of the Diseases tab; Back returns to the list.
+- A slide citation (for example "PCol slide 24") is now a link: tap it to see that slide of the deck.
+- The slide viewer has Previous, Next and Open full size; it shows the clean copy of all 11 decks.
+- Slide links appear after an answer and in Reference, Tell apart, Guides, Atlas, Drug list and Diseases.
+- Reference, Guides and Tell apart: a rule and more space now separate each section.
+- Nuclear receptors: a section and diagram each for corticosteroids, retinoids and vitamin D.
+- Each drawn diagram now opens with a sentence on what it shows and what it is for.
+
 ## 2026-11-13 (wide windows)
 - On a Mac or iPad the page now grows with the window (up to 1,680 px wide) and no longer leaves wide margins.
 - Diseases on a wide screen: practice patients sit beside the steps; comparisons run side by side.

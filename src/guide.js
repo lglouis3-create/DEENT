@@ -26,7 +26,7 @@ const GUIDE_HTML = `
 <h2 class="gdeck" id="gdeck-pp">Skin Pathophysiology (Dr. Smith, 10/29)</h2>
 
 <section class="gobj" id="gobj-l1-1">
-<h3>Skin Pathophysiology &middot; Objective 1: basic structures and functions of the skin</h3>
+<h3>Skin Pathophysiology · Objective 1: basic structures and functions of the skin</h3>
 <div class="gbar"><span>Objective (PP 3)</span><b>Describe the basic structures and functions of the skin</b><i>PP 4&ndash;6</i></div>
 <div class="gpt"><h5>Layers and keratinocytes (PP 5)</h5><ul><li>Epidermis (outer), dermis (middle; vessels and nerves), hypodermis (inner; vessels, adipose, some nerve endings) (T 32&ndash;37).</li><li>Keratinocytes start cuboidal in the stratum basale, move up, flatten, make keratin and lose the nucleus by the stratum corneum (T 39&ndash;48). The flat cells of the stratum corneum lie in overlapping layers that keep bacteria out and fluid in (T 48&ndash;54).</li></ul></div>
 <div class="gpt"><h5>Sebum (PP 6)</h5><ul><li>Made by the sebaceous gland: glycerides, wax esters and cholesterol; retards water loss; most on face, scalp, back and neck.</li><li>(T) &ldquo;the most important thing to remember here is we have [sebum] produced by the sebaceous gland, and these cuboidal keratinocytes, they do move on up&rdquo; (T 78&ndash;80).</li></ul></div>
@@ -34,7 +34,7 @@ const GUIDE_HTML = `
 </section>
 
 <section class="gobj" id="gobj-l1-2">
-<h3>Skin Pathophysiology &middot; Objective 2: epidemiology of the three diseases</h3>
+<h3>Skin Pathophysiology · Objective 2: epidemiology of the three diseases</h3>
 <div class="gbar"><span>Objective (PP 3)</span><b>Differentiate between the epidemiologic aspects of the three diseases</b><i>PP 10, 20, 31, 35</i></div>
 <table class="reftab"><thead><tr><th style="width:18%">Disease</th><th>Incidence or prevalence, as each slide words it</th><th>Sex and age</th><th>Family and setting</th></tr></thead><tbody>
 <tr><td><b>Atopic dermatitis</b> (PP 10)</td><td>Incidence in developed countries: 15&ndash;30% of children, 2&ndash;10% of adults; prevalence has increased over recent decades</td><td>Males and females alike</td><td>Lower in rural areas (hygiene hypothesis); goes with asthma and rhinitis (atopic conditions); two- to threefold risk with one atopic parent, three- to fivefold with two</td></tr>
@@ -45,7 +45,7 @@ const GUIDE_HTML = `
 </section>
 
 <section class="gobj" id="gobj-l1-3">
-<h3>Skin Pathophysiology &middot; Objective 3: etiologies and pathologies</h3>
+<h3>Skin Pathophysiology · Objective 3: etiologies and pathologies</h3>
 <div class="gbar"><span>Objective (PP 3)</span><b>Describe the etiologies and pathologies for each of these three conditions</b><i>PP 8&ndash;16, 19&ndash;26, 30&ndash;35</i></div>
 <div class="gpt"><h5>Atopic dermatitis (PP 8&ndash;16)</h5><ul>
 <li>Definition: a chronic, pruritic inflammatory skin disease, often called eczema; pruritus is the primary symptom (PP 8).</li>
@@ -72,7 +72,7 @@ const GUIDE_HTML = `
 </section>
 
 <section class="gobj" id="gobj-pp-4">
-<h3>Skin Pathophysiology &middot; Objective 4: classes of medications for each condition</h3>
+<h3>Skin Pathophysiology · Objective 4: classes of medications for each condition</h3>
 <div class="gbar"><span>Objective (PP 3)</span><b>List the classes of medications used to treat each of these conditions</b><i>PP 17, 28, 37</i></div>
 <table class="reftab"><thead><tr><th style="width:18%">Disease</th><th>Classes on her slide</th></tr></thead><tbody>
 <tr><td><b>Atopic dermatitis</b> (PP 17)</td><td>Corticosteroids; calcineurin inhibitors; PDE-4 inhibitor; IL-4 receptor alpha/IL-13 receptor antagonists; JAK inhibitor</td></tr>
@@ -84,7 +84,7 @@ const GUIDE_HTML = `
 </section>
 
 <section class="gobj" id="gobj-pp-5">
-<h3>Skin Pathophysiology &middot; Objective 5: general mechanisms of the drug classes</h3>
+<h3>Skin Pathophysiology · Objective 5: general mechanisms of the drug classes</h3>
 <div class="gbar"><span>Objective (PP 3)</span><b>Describe the general mechanisms of actions of the drug classes used to treat these three conditions</b><i>PP 16, 27, 36</i></div>
 <div class="gpt"><h5>Each pathology and the classes aimed at it</h5><ul>
 <li>AD: TH2 cytokines drive IgE; &ldquo;some of our therapies antagonize these cytokines&rdquo; (PP 16): dupilumab blocks IL-4R&alpha;, shared by the IL-4 and IL-13 receptors (PCol 64). Corticosteroids and calcineurin inhibitors suppress the immune response (PCol 11, 27).</li>
@@ -98,7 +98,7 @@ const GUIDE_HTML = `
 <div class="gask"><b>Her Exam 1 hints (pasted by Louis, 2026-11-07)</b><ul><li>&ldquo;The drugs in each pharmacological class (know the drug table); The general mechanism of action for each drug class. This includes being able to explain why that MOA is good for treating the skin conditions it is indicated for.; The details of the MOAs differentiate the drugs within the class; ... Know Black Box warning adverse drug reactions&rdquo;.</li><li>&ldquo;Know what the drugs target.&rdquo; Fill-in-the-blanks focus on drug mechanisms. She asks with generic names only (10/29, T 618&ndash;621).</li></ul></div>
 
 <section class="gobj" id="gobj-pc-1">
-<h3>Skin Pharmacology &middot; Objective 1: which medications treat AD, psoriasis and acne</h3>
+<h3>Skin Pharmacology · Objective 1: which medications treat AD, psoriasis and acne</h3>
 <div class="gbar"><span>Objective (PCol 3)</span><b>List which medications are used for treating atopic dermatitis, psoriasis, and acne</b><i>PCol 8&ndash;76; Sun 3; PP 17, 28, 37</i></div>
 <table class="reftab"><thead><tr><th style="width:14%">Disease</th><th>Her slide names the disease for the drug</th><th style="width:34%">Her class list names the class; the drug's use is not on her slide</th></tr></thead><tbody>
 <tr><td><b>Atopic dermatitis</b></td><td>Topical corticosteroids (PCol 11); pimecrolimus, tacrolimus topical, adults and children over 2 (PCol 27); crisaborole topical (PCol 33); dupilumab, moderate-to-severe AD in adults (PCol 64)</td><td>JAK inhibitor (PP 17): ruxolitinib and upadacitinib are on the drug chart's AD page (p. 2) and on Dr. Sikazwe's eczema page (DPAW 8); her PCol 76 gives their mechanisms only</td></tr>
@@ -110,38 +110,40 @@ const GUIDE_HTML = `
 </section>
 
 <section class="gobj" id="gobj-l1-4">
-<h3>Skin Pharmacology &middot; Objective 2: general mechanism of each class, and why it helps</h3>
+<h3>Skin Pharmacology · Objective 2: general mechanism of each class, and why it helps</h3>
 <div class="gbar"><span>Objective (PCol 3)</span><b>Explain the general mechanisms of action of each pharmacological drug class</b><i>PCol 5&ndash;76; Sun 3</i></div>
 <div class="gpt"><h5>Nuclear receptor binders (PCol 5&ndash;7): corticosteroids, retinoids, vitamin D analog</h5><ul><li>The drug binds a receptor inside the cell; the complex acts directly at a response element or indirectly by binding NF-kB or AP-1, to promote or inhibit transcription.</li><li>(T) &ldquo;either enhance the expression of anti-inflammatory proteins, or decrease the expression of inflammatory proteins&rdquo; (T 680&ndash;683).</li></ul></div>
+<div class="gpt"><h5><b>Corticosteroids</b> · PCol 8&ndash;11</h5><ul><li><b>Target, mechanism:</b> Glucocorticoid receptor; CBG carries the steroid in blood; Hsp90 leaves the receptor when the steroid binds; the complex binds the GRE</li><li><b>Why it helps:</b> Immunosuppressive, so used for psoriasis and AD (PCol 11; T 873&ndash;875). Low potency (hydrocortisone 1%) for the face and for long-term maintenance; medium potency (betamethasone valerate 0.1%) for the body; mid-strength to high potency for short-term exacerbations; avoid occluded or abraded skin</li></ul></div>
 <!--DIA:nr-action-->
-<div class="gpt"><h5><b>Corticosteroids</b> &middot; PCol 8&ndash;11</h5><ul><li><b>Target, mechanism:</b> Glucocorticoid receptor; CBG carries the steroid in blood; Hsp90 leaves the receptor when the steroid binds; the complex binds the GRE</li><li><b>Why it helps:</b> Immunosuppressive, so used for psoriasis and AD (PCol 11; T 873&ndash;875). Low potency (hydrocortisone 1%) for the face and for long-term maintenance; medium potency (betamethasone valerate 0.1%) for the body; mid-strength to high potency for short-term exacerbations; avoid occluded or abraded skin</li></ul></div>
-<div class="gpt"><h5><b>Retinoids</b> (tretinoin, adapalene, tazarotene, isotretinoin, acitretin) &middot; PCol 14&ndash;15, 19</h5><ul><li><b>Target, mechanism:</b> RAR: differentiation and proliferation (acne, psoriasis, photoaging); RXR: apoptosis (Kaposi sarcoma)</li><li><b>Why it helps:</b> Acne: less cohesion between epidermal cells, faster turnover; open comedones expelled, closed ones opened. Psoriasis: precise mechanism unknown, may be anti-inflammatory and antiproliferative. Aging: more collagen, new vessels, thicker epidermis. Isotretinoin: appears to inhibit sebaceous gland size and function (PCol 19)</li></ul></div>
-<div class="gpt"><h5><b>Vitamin D analog</b> (calcipotriene) &middot; PCol 21</h5><ul><li><b>Target, mechanism:</b> Vitamin D receptor, which pairs with RXR-&alpha;</li><li><b>Why it helps:</b> Inhibits proliferation, promotes keratinocyte differentiation, decreases inflammatory cytokine release (psoriasis)</li></ul></div>
-<div class="gpt"><h5><b>Calcineurin inhibitors</b> (pimecrolimus, tacrolimus, cyclosporine) &middot; PCol 24&ndash;27</h5><ul><li><b>Target, mechanism:</b> Cyclosporine binds cyclophilin, tacrolimus binds FKBP; the complex inhibits calcineurin, so less IL-2 is made for T-cell proliferation (in the cascade after signals 1 and 2)</li><li><b>Why it helps:</b> Inhibits activation of T cells and mast cells, blocking proinflammatory cytokines and mediators; topical CNIs relieve pruritus after the first few days of treatment (PCol 27)</li><li><b>Uses of the class:</b> &ldquo;used to treat atopic dermatitis, psoriasis&rdquo; (Dr. Smith, PCol 24). The slide gives this for the class; the drug chart lists each drug&rsquo;s own indication.</li></ul></div>
+<div class="gpt"><h5><b>Retinoids</b> (tretinoin, adapalene, tazarotene, isotretinoin, acitretin) · PCol 14&ndash;15, 19</h5><ul><li><b>Target, mechanism:</b> RAR: differentiation and proliferation (acne, psoriasis, photoaging); RXR: apoptosis (Kaposi sarcoma)</li><li><b>Why it helps:</b> Acne: less cohesion between epidermal cells, faster turnover; open comedones expelled, closed ones opened. Psoriasis: precise mechanism unknown, may be anti-inflammatory and antiproliferative. Aging: more collagen, new vessels, thicker epidermis. Isotretinoin: appears to inhibit sebaceous gland size and function (PCol 19)</li></ul></div>
+<!--DIA:nr-rar-->
+<div class="gpt"><h5><b>Vitamin D analog</b> (calcipotriene) · PCol 21</h5><ul><li><b>Target, mechanism:</b> Vitamin D receptor, which pairs with RXR-&alpha;</li><li><b>Why it helps:</b> Inhibits proliferation, promotes keratinocyte differentiation, decreases inflammatory cytokine release (psoriasis)</li></ul></div>
+<!--DIA:nr-vdr-->
+<div class="gpt"><h5><b>Calcineurin inhibitors</b> (pimecrolimus, tacrolimus, cyclosporine) · PCol 24&ndash;27</h5><ul><li><b>Target, mechanism:</b> Cyclosporine binds cyclophilin, tacrolimus binds FKBP; the complex inhibits calcineurin, so less IL-2 is made for T-cell proliferation (in the cascade after signals 1 and 2)</li><li><b>Why it helps:</b> Inhibits activation of T cells and mast cells, blocking proinflammatory cytokines and mediators; topical CNIs relieve pruritus after the first few days of treatment (PCol 27)</li><li><b>Uses of the class:</b> &ldquo;used to treat atopic dermatitis, psoriasis&rdquo; (Dr. Smith, PCol 24). The slide gives this for the class; the drug chart lists each drug&rsquo;s own indication.</li></ul></div>
 <div class="f2fig" id="fig-cni-nfat"><!--DIA:fig-cni-nfat--></div>
-<div class="gpt"><h5><b>PDE-4 inhibitors</b> (crisaborole, apremilast) &middot; PCol 32&ndash;34</h5><ul><li><b>Target, mechanism:</b> PDE-4, the main PDE isoform in inflammatory cells; cAMP is not broken down</li><li><b>Why it helps:</b> More cAMP inhibits mast cells, eosinophils, neutrophils and T cells (AD: crisaborole; psoriasis: apremilast)</li></ul></div>
+<div class="gpt"><h5><b>PDE-4 inhibitors</b> (crisaborole, apremilast) · PCol 32&ndash;34</h5><ul><li><b>Target, mechanism:</b> PDE-4, the main PDE isoform in inflammatory cells; cAMP is not broken down</li><li><b>Why it helps:</b> More cAMP inhibits mast cells, eosinophils, neutrophils and T cells (AD: crisaborole; psoriasis: apremilast)</li></ul></div>
 <div id="g-fig-pde4-camp"><!--DIA:fig-pde4-camp--></div>
-<div class="gpt"><h5><b>Keratolytics</b> (benzoyl peroxide, sulfur, salicylic acid) &middot; PCol 35&ndash;39</h5><ul><li><b>Target, mechanism:</b> BPO: antimicrobial against P. acnes plus peeling and comedolytic (benzoic acid probable active form). Sulfur: reduced to hydrogen sulfide in keratinocytes; bacteriostatic. Salicylic acid: solubilizes the cell surface proteins that hold the stratum corneum together</li><li><b>Why it helps:</b> Break down keratin so cells slough, follicles stay open, plugs clear (acne)</li></ul></div>
-<div class="gpt"><h5><b>Antibiotics/antimicrobials</b> &middot; PCol 42&ndash;50</h5><ul><li><b>Target, mechanism:</b> Tetracyclines: 30S, block aminoacyl-tRNA at the acceptor site. Clindamycin, macrolides: 50S, prevent translocation. All bacteriostatic. Sulfamethoxazole competes with PABA; trimethoprim inhibits bacterial DHFR. Dapsone (acne): anti-inflammatory, neutrophils a possible site</li><li><b>Why it helps:</b> A bacterium (P. acnes) contributes to acne (10/30 T 574&ndash;576); tetracycline efficacy in acne may depend more on anti-inflammatory activity (PCol 45)</li></ul></div>
+<div class="gpt"><h5><b>Keratolytics</b> (benzoyl peroxide, sulfur, salicylic acid) · PCol 35&ndash;39</h5><ul><li><b>Target, mechanism:</b> BPO: antimicrobial against P. acnes plus peeling and comedolytic (benzoic acid probable active form). Sulfur: reduced to hydrogen sulfide in keratinocytes; bacteriostatic. Salicylic acid: solubilizes the cell surface proteins that hold the stratum corneum together</li><li><b>Why it helps:</b> Break down keratin so cells slough, follicles stay open, plugs clear (acne)</li></ul></div>
+<div class="gpt"><h5><b>Antibiotics/antimicrobials</b> · PCol 42&ndash;50</h5><ul><li><b>Target, mechanism:</b> Tetracyclines: 30S, block aminoacyl-tRNA at the acceptor site. Clindamycin, macrolides: 50S, prevent translocation. All bacteriostatic. Sulfamethoxazole competes with PABA; trimethoprim inhibits bacterial DHFR. Dapsone (acne): anti-inflammatory, neutrophils a possible site</li><li><b>Why it helps:</b> A bacterium (P. acnes) contributes to acne (10/30 T 574&ndash;576); tetracycline efficacy in acne may depend more on anti-inflammatory activity (PCol 45)</li></ul></div>
 <div id="g-fig-ribosome"><!--DIA:fig-ribosome--></div>
 <div id="g-fig-folate-path"><!--DIA:fig-folate-path--></div>
-<div class="gpt"><h5><b>Cytotoxic agents</b> (coal tar, anthralin, shale tar, selenium sulfide, zinc pyrithione) &middot; PCol 53&ndash;57</h5><ul><li><b>Target, mechanism:</b> Coal tar: antiproliferative, anti-inflammatory, crosslinks DNA. Anthralin: may act on keratinocyte mitochondria; prevents T-lymphocyte activation. Shale tar: unknown. Selenium sulfide, zinc pyrithione: cytostatic and antifungal</li><li><b>Why it helps:</b> Decrease the rate of epidermal cell turnover (psoriasis)</li></ul></div>
-<div class="gpt"><h5><b>DHFR inhibitor</b> (methotrexate) &middot; PCol 59</h5><ul><li><b>Target, mechanism:</b> Folic acid analog; inhibits DHFR, so less THF and fewer purines; cell death; may be directly anti-inflammatory</li><li><b>Why it helps:</b> Reduces keratinocyte hyperproliferation and the number of T cells (psoriasis)</li></ul></div>
+<div class="gpt"><h5><b>Cytotoxic agents</b> (coal tar, anthralin, shale tar, selenium sulfide, zinc pyrithione) · PCol 53&ndash;57</h5><ul><li><b>Target, mechanism:</b> Coal tar: antiproliferative, anti-inflammatory, crosslinks DNA. Anthralin: may act on keratinocyte mitochondria; prevents T-lymphocyte activation. Shale tar: unknown. Selenium sulfide, zinc pyrithione: cytostatic and antifungal</li><li><b>Why it helps:</b> Decrease the rate of epidermal cell turnover (psoriasis)</li></ul></div>
+<div class="gpt"><h5><b>DHFR inhibitor</b> (methotrexate) · PCol 59</h5><ul><li><b>Target, mechanism:</b> Folic acid analog; inhibits DHFR, so less THF and fewer purines; cell death; may be directly anti-inflammatory</li><li><b>Why it helps:</b> Reduces keratinocyte hyperproliferation and the number of T cells (psoriasis)</li></ul></div>
 <div id="g-fig-folate-cycle"><!--DIA:fig-folate-cycle--></div>
-<div class="gpt"><h5><b>Co-stimulation inhibitor</b> (abatacept) &middot; PCol 63</h5><ul><li><b>Target, mechanism:</b> Fusion protein (CTLA-4 domain + IgG Fc) binds CD80/86 on APCs, so CD28 cannot bind</li><li><b>Why it helps:</b> Blocks the positive second signal needed for T-cell activation</li></ul></div>
+<div class="gpt"><h5><b>Co-stimulation inhibitor</b> (abatacept) · PCol 63</h5><ul><li><b>Target, mechanism:</b> Fusion protein (CTLA-4 domain + IgG Fc) binds CD80/86 on APCs, so CD28 cannot bind</li><li><b>Why it helps:</b> Blocks the positive second signal needed for T-cell activation</li></ul></div>
 <div id="g-fig-costim"><!--DIA:fig-costim--></div>
-<div class="gpt"><h5><b>IL-4R&alpha; antagonist</b> (dupilumab) &middot; PCol 64</h5><ul><li><b>Target, mechanism:</b> IL-4 receptor alpha subunit, shared by the IL-4 and IL-13 receptors</li><li><b>Why it helps:</b> IL-4 and IL-13 promote IgE synthesis; blocking lowers proinflammatory cytokines, chemokines and IgE (AD)</li></ul></div>
-<div class="gpt"><h5><b>IL-17 inhibitors</b> (secukinumab, ixekizumab, brodalumab) &middot; PCol 65&ndash;66</h5><ul><li><b>Target, mechanism:</b> Secukinumab, ixekizumab: IL-17A cytokine. Brodalumab: IL-17 receptor A</li><li><b>Why it helps:</b> Keratinocytes are the main IL-17 target in psoriasis (hyperproliferation, barrier dysfunction); blocking reduces number and size of plaques</li></ul></div>
-<div class="gpt"><h5><b>IL-12/23 and IL-23 inhibitors</b> (ustekinumab; guselkumab, tildrakizumab-asmn, risankizumab) &middot; PCol 67&ndash;69</h5><ul><li><b>Target, mechanism:</b> Ustekinumab: p40, shared by IL-12 and IL-23. The others: p19 of IL-23</li><li><b>Why it helps:</b> Suppress proinflammatory Th1 and Th17 cells; less release of proinflammatory cytokines and chemokines</li></ul></div>
+<div class="gpt"><h5><b>IL-4R&alpha; antagonist</b> (dupilumab) · PCol 64</h5><ul><li><b>Target, mechanism:</b> IL-4 receptor alpha subunit, shared by the IL-4 and IL-13 receptors</li><li><b>Why it helps:</b> IL-4 and IL-13 promote IgE synthesis; blocking lowers proinflammatory cytokines, chemokines and IgE (AD)</li></ul></div>
+<div class="gpt"><h5><b>IL-17 inhibitors</b> (secukinumab, ixekizumab, brodalumab) · PCol 65&ndash;66</h5><ul><li><b>Target, mechanism:</b> Secukinumab, ixekizumab: IL-17A cytokine. Brodalumab: IL-17 receptor A</li><li><b>Why it helps:</b> Keratinocytes are the main IL-17 target in psoriasis (hyperproliferation, barrier dysfunction); blocking reduces number and size of plaques</li></ul></div>
+<div class="gpt"><h5><b>IL-12/23 and IL-23 inhibitors</b> (ustekinumab; guselkumab, tildrakizumab-asmn, risankizumab) · PCol 67&ndash;69</h5><ul><li><b>Target, mechanism:</b> Ustekinumab: p40, shared by IL-12 and IL-23. The others: p19 of IL-23</li><li><b>Why it helps:</b> Suppress proinflammatory Th1 and Th17 cells; less release of proinflammatory cytokines and chemokines</li></ul></div>
 <div class="f2fig" id="fig-il-axis"><!--DIA:fig-il-axis--></div>
-<div class="gpt"><h5><b>TNF-&alpha; inhibitors</b> (etanercept, infliximab, adalimumab, golimumab, certolizumab pegol) &middot; PCol 70&ndash;74</h5><ul><li><b>Target, mechanism:</b> Bind TNF-&alpha;, keeping it from its receptors on inflammatory cells</li><li><b>Why it helps:</b> TNF-&alpha; is an inflammatory cytokine; blocking it reduces the number and size of plaques</li></ul></div>
-<div class="gpt"><h5><b>JAK inhibitors</b> (tofacitinib, ruxolitinib, upadacitinib) &middot; PCol 75&ndash;76</h5><ul><li><b>Target, mechanism:</b> Inhibit Janus kinase; small molecules that get inside the cell (T 570&ndash;573)</li><li><b>Why it helps:</b> Inhibit the production of inflammatory cytokines</li></ul></div>
-<div class="gpt"><h5><b>Psoralens</b> (methoxsalen + UVA) &middot; Sun 3; PCol 78</h5><ul><li><b>Target, mechanism:</b> With UV light of 320&ndash;340 nm, psoralens intercalate into DNA</li><li><b>Why it helps:</b> Antiproliferative, immunosuppressive, anti-inflammatory: normalizes keratinocytes, reorganizes blood vessels, cytotoxic to T cells; increases melanin</li></ul></div>
+<div class="gpt"><h5><b>TNF-&alpha; inhibitors</b> (etanercept, infliximab, adalimumab, golimumab, certolizumab pegol) · PCol 70&ndash;74</h5><ul><li><b>Target, mechanism:</b> Bind TNF-&alpha;, keeping it from its receptors on inflammatory cells</li><li><b>Why it helps:</b> TNF-&alpha; is an inflammatory cytokine; blocking it reduces the number and size of plaques</li></ul></div>
+<div class="gpt"><h5><b>JAK inhibitors</b> (tofacitinib, ruxolitinib, upadacitinib) · PCol 75&ndash;76</h5><ul><li><b>Target, mechanism:</b> Inhibit Janus kinase; small molecules that get inside the cell (T 570&ndash;573)</li><li><b>Why it helps:</b> Inhibit the production of inflammatory cytokines</li></ul></div>
+<div class="gpt"><h5><b>Psoralens</b> (methoxsalen + UVA) · Sun 3; PCol 78</h5><ul><li><b>Target, mechanism:</b> With UV light of 320&ndash;340 nm, psoralens intercalate into DNA</li><li><b>Why it helps:</b> Antiproliferative, immunosuppressive, anti-inflammatory: normalizes keratinocytes, reorganizes blood vessels, cytotoxic to T cells; increases melanin</li></ul></div>
 <div style="display:flex;flex-wrap:wrap;gap:7px;margin:8px 0"><button type="button" class="chip" data-jump="ref:ref-targets">Reference: drug targets, write it first</button><button type="button" class="chip" data-jump="tell:tell-l1-drugs">Tell apart: nuclear receptor binders</button></div>
 </section>
 
 <section class="gobj" id="gobj-pc-3">
-<h3>Skin Pharmacology &middot; Objective 3: differences between drugs in the same class</h3>
+<h3>Skin Pharmacology · Objective 3: differences between drugs in the same class</h3>
 <div class="gbar"><span>Objective (PCol 3)</span><b>Explain the differences between the drugs within the same class</b><i>PCol 16&ndash;76</i></div>
 <table class="reftab"><thead><tr><th style="width:17%">Class</th><th>What separates the drugs</th><th style="width:10%">Slide</th></tr></thead><tbody>
 <tr><td><b>Topical retinoids</b></td><td>Tretinoin: &lt;10% absorbed; microsphere form less irritating. Adapalene: photochemically stable, can be combined with benzoyl peroxide, less irritating, mild to moderate acne. Tazarotene: photosensitivity, psoriasis, acne and wrinkles, not in pregnancy</td><td>PCol 17&ndash;18</td></tr>
@@ -159,7 +161,7 @@ const GUIDE_HTML = `
 </section>
 
 <section class="gobj" id="gobj-pc-4">
-<h3>Skin Pharmacology &middot; Objective 4: drug interactions discussed in class</h3>
+<h3>Skin Pharmacology · Objective 4: drug interactions discussed in class</h3>
 <div class="gbar"><span>Objective (PCol 3)</span><b>List the drug interactions discussed in class</b><i>PCol 18, 20, 22, 30, 34, 40, 47, 67; 10/30 T 470&ndash;472, 557&ndash;563</i></div>
 <table class="reftab"><thead><tr><th style="width:22%">Drug</th><th>Interaction</th><th style="width:12%">Slide</th></tr></thead><tbody>
 <tr><td><b>Cyclosporine, tacrolimus</b> (oral)</td><td>Multiple drug interactions because they are metabolized by CYP3A4</td><td>PCol 30</td></tr>
@@ -176,7 +178,7 @@ const GUIDE_HTML = `
 </section>
 
 <section class="gobj" id="gobj-pc-5">
-<h3>Skin Pharmacology &middot; Objective 5: side effects, contraindications and boxed warnings</h3>
+<h3>Skin Pharmacology · Objective 5: side effects, contraindications and boxed warnings</h3>
 <div class="gbar"><span>Objective (PCol 3)</span><b>List the side effects and contraindications discussed in class</b><i>PCol 12&ndash;76; Sun 4</i></div>
 <h4>Boxed (black box) warnings on her slides</h4>
 <table class="reftab"><thead><tr><th style="width:22%">Drug or class</th><th>Boxed warning</th><th style="width:12%">Slide</th></tr></thead><tbody>
@@ -218,7 +220,7 @@ const GUIDE_HTML = `
 <p class="prose">Objectives on Sun 6: describe the types of ultraviolet radiation; categorize sunscreens and sunblocks into pharmacological or therapeutic classes; differentiate the mechanisms of action of products for protection from sunburn; define MED, SPF and substantivity; differentiate sunblocks and sunscreens. The psoralen slides (Sun 2&ndash;4) repeat PCol 77&ndash;79.</p>
 
 <section class="gobj" id="gobj-sun-pso">
-<h3>Sun Exposure &middot; Psoralen chromophores (Sun 2&ndash;4)</h3>
+<h3>Sun Exposure · Psoralen chromophores (Sun 2&ndash;4)</h3>
 <div class="gbar"><span>Slides</span><b>Methoxsalen: mechanism, effects and side effects</b><i>Sun 3&ndash;4; PCol 78&ndash;79</i></div>
 <div class="gpt"><ul>
 <li>PUVA combines UVA light with a psoralen; with UV light of 320&ndash;340 nm the psoralen intercalates into DNA, so cells can no longer divide (Sun 3; audio 00:29&ndash;01:20).</li>
@@ -227,7 +229,7 @@ const GUIDE_HTML = `
 </section>
 
 <section class="gobj" id="gobj-sun-1">
-<h3>Sun Exposure &middot; Objective 1: types of ultraviolet radiation</h3>
+<h3>Sun Exposure · Objective 1: types of ultraviolet radiation</h3>
 <div class="gbar"><span>Objective (Sun 6)</span><b>Describe the types of ultraviolet radiation</b><i>Sun 7&ndash;11</i></div>
 <table class="reftab"><thead><tr><th style="width:20%"></th><th>UVB</th><th>UVA</th></tr></thead><tbody>
 <tr><td><b>Wavelength</b></td><td>290&ndash;320 nm; more energetic</td><td>320&ndash;400 nm; less energetic</td></tr>
@@ -245,7 +247,7 @@ const GUIDE_HTML = `
 </section>
 
 <section class="gobj" id="gobj-sun-4">
-<h3>Sun Exposure &middot; Objective 4: MED, SPF, broad spectrum and substantivity</h3>
+<h3>Sun Exposure · Objective 4: MED, SPF, broad spectrum and substantivity</h3>
 <div class="gbar"><span>Objective (Sun 6)</span><b>Define MED, SPF and substantivity</b><i>Sun 12&ndash;17, 19</i></div>
 <div class="gpt"><ul>
 <li><b>MED</b>: the minimum single dose of UV radiation that produces clearly marginated erythema in the irradiated site (Sun 12).</li>
@@ -259,7 +261,7 @@ const GUIDE_HTML = `
 </section>
 
 <section class="gobj" id="gobj-sun-2">
-<h3>Sun Exposure &middot; Objectives 2, 3 and 5: sunblocks vs sunscreens, classes and mechanisms</h3>
+<h3>Sun Exposure · Objectives 2, 3 and 5: sunblocks vs sunscreens, classes and mechanisms</h3>
 <div class="gbar"><span>Objectives (Sun 6)</span><b>Categorize sunscreens and sunblocks; differentiate their mechanisms; differentiate sunblocks and sunscreens</b><i>Sun 20&ndash;25</i></div>
 <table class="reftab"><thead><tr><th style="width:20%"></th><th>Sunblocks (physical sunscreens)</th><th>Organic sunscreens</th></tr></thead><tbody>
 <tr><td><b>Ingredients</b></td><td>Zinc oxide, titanium dioxide (UVA and UVB)</td><td>Families: benzophenones, anthranilates, dibenzoylmethanes, aminobenzoates, cinnamates, salicylates; products may combine them</td></tr>
@@ -280,7 +282,7 @@ const GUIDE_HTML = `
 </section>
 
 <section class="gobj" id="gobj-sun-photo">
-<h3>Sun Exposure &middot; Drugs that cause photosensitivity</h3>
+<h3>Sun Exposure · Drugs that cause photosensitivity</h3>
 <div class="gbar"><span>Slides</span><b>Photosensitizing drugs and sun protection</b><i>Sun 8, 17&ndash;18</i></div>
 <div class="gpt"><ul>
 <li>Sun 18 shows an APhA table of drug categories linked to photosensitivity; patients on such drugs need sun protection counseling (audio 17:27&ndash;17:48) and SPF &gt; 45 (Sun 17). UVA causes most drug phototoxic reactions (Sun 8).</li>
@@ -291,7 +293,7 @@ const GUIDE_HTML = `
 <h2 class="gdeck" id="gdeck-mc">Dermatology Medicinal Chemistry (Dr. Sikazwe, DPAW, 11/03&ndash;11/04)</h2>
 
 <section class="gobj" id="gobj-mc-0">
-<h3>Medicinal Chemistry &middot; His objectives and the assigned pages</h3>
+<h3>Medicinal Chemistry · His objectives and the assigned pages</h3>
 <div class="gbar"><span>Objectives (DPAW slide 3)</span><b>ASSESS: targets, drug classes. PLAN: CBDA, ADMET, functional groups and SAR, drug interactions</b><i>DPAW slide 3</i></div>
 <div class="gpt"><ul>
 <li>ASSESS: identify the therapeutic targets; identify, and pharmacologically and chemically classify, the drug classes and drugs (DPAW slide 3).</li>
@@ -300,7 +302,7 @@ const GUIDE_HTML = `
 </section>
 
 <section class="gobj" id="gobj-mc-ecz">
-<h3>Medicinal Chemistry &middot; Eczema pharmacotherapy (DPAW slides 7&ndash;9)</h3>
+<h3>Medicinal Chemistry · Eczema pharmacotherapy (DPAW slides 7&ndash;9)</h3>
 <div class="gbar"><span>Pages</span><b>Crisaborole; ruxolitinib and upadacitinib</b><i>DPAW slides 7&ndash;9</i></div>
 <div class="gpt"><ul>
 <li>Crisaborole: a benzoxaborole (boron-based) soft drug, designed for predictable metabolism to inactive, harmless products; log P 3, accumulates in the dermis; t&frac12; 12 h. Spontaneous hydrolytic deboronation (no enzyme) &rarr; benzyl alcohol &rarr; ADH, then ALDH (two enzymes, no CYPs) &rarr; benzoic acid &rarr; SULT and UGT conjugates (Polleve-1, slide 9). CBDA: the boron coordinates Zn<sup>2+</sup> and Mg<sup>2+</sup> in the PDE4 active site (slide 7).</li>
@@ -311,7 +313,7 @@ const GUIDE_HTML = `
 </section>
 
 <section class="gobj" id="gobj-mc-psotop">
-<h3>Medicinal Chemistry &middot; Psoriasis: UV and topical agents (DPAW slides 12, 15&ndash;23, 25&ndash;29)</h3>
+<h3>Medicinal Chemistry · Psoriasis: UV and topical agents (DPAW slides 12, 15&ndash;23, 25&ndash;29)</h3>
 <div class="gbar"><span>Pages</span><b>UV; emollients and tars; anthralin; 8-MOP; glucocorticoids; vitamin D; limus drugs; retinoids</b><i>DPAW slides 12&ndash;29</i></div>
 <div class="gpt"><h5>UV radiation (slides 12, 18, 62&ndash;63)</h5><ul><li>UVC 100&ndash;280 nm, blocked by ozone; UVB 280&ndash;315 nm, about 90% blocked by ozone, used with coal tar; UVA 315&ndash;400 nm (&ldquo;315 or 320&rdquo; depending on the source, 11/03 T 817&ndash;818), deepest, used in PUVA (slide 18: UVA 315&ndash;400 nm). Slides 62&ndash;63 print UVA 315&ndash;400 and UVB 280&ndash;315 nm.</li><li>Dr. Smith&rsquo;s numbers differ (Sun 8: UVB 290&ndash;320, UVA 320&ndash;400; PUVA 320&ndash;340, Sun 3). Each professor&rsquo;s numbers are the ones keyed in that professor&rsquo;s questions.</li></ul></div>
 <div class="gpt"><h5>Emollients and tars (slides 15&ndash;16)</h5><ul><li>Petrolatum: linear hydrocarbons over 25 carbons, the most effective emollient; lanolin: fatty acid esters from wool grease, odor; dimethicone (linear Si&ndash;O) and cyclomethicone (cyclic Si&ndash;O): hypoallergenic, non-comedogenic. Emollients fill gaps between scales and prevent water loss.</li><li>Coal tar: phenols, PAHs, heterocycles; photosensitizing; used with UVB. Shale tar (ichthammol, from sedimentary rock) and wood tars (pine, birch, juniper): not photosensitizing.</li></ul></div>
@@ -329,7 +331,7 @@ const GUIDE_HTML = `
 </section>
 
 <section class="gobj" id="gobj-mc-psosys">
-<h3>Medicinal Chemistry &middot; Psoriasis: systemic agents (DPAW slides 30&ndash;34)</h3>
+<h3>Medicinal Chemistry · Psoriasis: systemic agents (DPAW slides 30&ndash;34)</h3>
 <div class="gbar"><span>Pages</span><b>Methotrexate; lactone vs lactam; cyclosporine; apremilast</b><i>DPAW slides 30&ndash;34</i></div>
 <div class="gpt"><ul>
 <li>Methotrexate: a pteridine; competitive DHFR inhibitor, also immunosuppressant and anti-inflammatory. Against folic acid it has NH<sub>2</sub> (folic acid OH) on the pteridine and N&ndash;CH<sub>3</sub> (folic acid N&ndash;H), and binds DHFR with higher affinity. SAR: pteridine (aromatic), p-aminobenzoic acid and glutamic acid parts; no alkylation of the aromatic N; the N&ndash;CH<sub>3</sub> is essential (slides 30&ndash;31).</li>
@@ -344,7 +346,7 @@ const GUIDE_HTML = `
 </section>
 
 <section class="gobj" id="gobj-mc-acne">
-<h3>Medicinal Chemistry &middot; Acne (DPAW slides 43&ndash;55)</h3>
+<h3>Medicinal Chemistry · Acne (DPAW slides 43&ndash;55)</h3>
 <div class="gbar"><span>Pages</span><b>Keratolytics; retinoids by generation; hormones; antibiotics</b><i>DPAW slides 43&ndash;55</i></div>
 <div class="gpt"><h5>Keratolytics (slides 43&ndash;47)</h5><ul><li>Glycolic acid: alpha-hydroxy acid, hydrophilic, log P about 1, acts at the surface; ADH then ALDH to the diacid. Salicylic acid: beta-hydroxy acid with an aromatic ring, log P about 1&ndash;2, deeper; 75% glycine conjugate. Both pKa about 3 (itching).</li><li>Alpha vs beta: the OH on the carbon next to the COOH (alpha) or two carbons away (beta) (slide 44).</li><li>Sulfur: thiolysis of keratin disulfide (cysteine) bonds; small particles work better. Benzoyl peroxide: a peroxide; benzoic acid lowers skin pH (keratolytic) and the benzoyl radical kills bacteria; log P 3.5 (slides 46&ndash;47).</li></ul></div>
 <div class="rxfig" id="rx-hydroxyacids"><!--DIA:rx-hydroxyacids--></div>
@@ -362,7 +364,7 @@ const GUIDE_HTML = `
 </section>
 
 <section class="gobj" id="gobj-mc-sun">
-<h3>Medicinal Chemistry &middot; Sunblocks and sunscreens (DPAW slides 61&ndash;66)</h3>
+<h3>Medicinal Chemistry · Sunblocks and sunscreens (DPAW slides 61&ndash;66)</h3>
 <div class="gbar"><span>Pages</span><b>Inorganic sunblocks and organic sunscreens by UV band</b><i>DPAW slides 61&ndash;66</i></div>
 <table class="reftab"><thead><tr><th style="width:18%">Band</th><th>Agents and the point he made</th><th style="width:10%">Slide</th></tr></thead><tbody>
 <tr><td><b>Sunblocks</b></td><td>Zinc oxide, titanium dioxide: reflect and scatter UVA and UVB; inert; large particles work better (nano forms are transparent and reflect less)</td><td>61</td></tr>
@@ -376,7 +378,7 @@ const GUIDE_HTML = `
 </section>
 
 <section class="gobj" id="gobj-mc-ddi">
-<h3>Medicinal Chemistry &middot; Drug interactions he named</h3>
+<h3>Medicinal Chemistry · Drug interactions he named</h3>
 <div class="gbar"><span>Objective (DPAW slide 3)</span><b>Explain drug interactions that may influence the therapeutic plan</b><i>DPAW slides 7&ndash;55</i></div>
 <table class="reftab"><thead><tr><th style="width:22%">Drug</th><th>Interaction or enzyme</th><th style="width:10%">Slide</th></tr></thead><tbody>
 <tr><td><b>Crisaborole</b></td><td>No CYPs: ADH and ALDH, then SULT and UGT</td><td>7, 9</td></tr>
@@ -394,13 +396,13 @@ const GUIDE_HTML = `
 <div class="gask"><b>How she asks (11/06)</b><ul><li>&ldquo;Poll everywhere will always be utilized in my lectures. This is how ... you guys learn a little bit more about my exam questions&rdquo; (T@1918&ndash;2297). Her polls were case-based: a tube size to dispense, severity and status, first-line maintenance, prescription details, counseling, when to follow up.</li><li>&ldquo;There will be a calculation on the exam&rdquo; (T@11799). &ldquo;I will always tell you what&rsquo;s available in the exam question. So remember to always round up&rdquo; (T@9636).</li><li>Not asked: pediatric fingertip units (FYI, T@8797), infant dupilumab dosing (T@50408), newborn and infant age definitions (T@71019).</li></ul></div>
 
 <section class="gobj" id="gobj-p5-1">
-<h3>Dermatitis Therapeutics &middot; Objective 1: the self-care interview and the patient care process</h3>
+<h3>Dermatitis Therapeutics · Objective 1: the self-care interview and the patient care process</h3>
 <div class="gbar"><span>Objective (DT 7)</span><b>Perform the components of the SCHOLAR-MAC/QuEST and the Pharmacist&rsquo;s Patient Care Process in the self-care interview for dermatologic conditions</b><i>DT 26, 28, 49, 69</i></div>
 <div class="gpt"><ul><li>Patient care process (DT 28): collect, assess, plan, implement, follow-up (monitor and evaluate), around patient-centered care (T@27992).</li><li>Her cases are written as CC (chief complaint, the patient&rsquo;s own words), HPI (history of present illness), PMH (past medical history), current meds, other (OTC products), physical assessment (DT 26, 69; T@24148&ndash;24910).</li></ul></div>
 </section>
 
 <section class="gobj" id="gobj-p5-2">
-<h3>Dermatitis Therapeutics &middot; Objective 2: name the condition from signs, symptoms and history</h3>
+<h3>Dermatitis Therapeutics · Objective 2: name the condition from signs, symptoms and history</h3>
 <div class="gbar"><span>Objective (DT 7)</span><b>Determine the dermatologic condition based on the patient&rsquo;s signs and symptoms and history</b><i>DT 15&ndash;25, 56&ndash;60</i></div>
 <div class="gpt"><h5>Atopic dermatitis (DT 17&ndash;22)</h5><ul><li>Also known as eczema; very common chronic or relapsing inflammatory skin disorder; often develops in childhood; hallmark symptom pruritus; no cure; not contagious (DT 17).</li><li>Initiation: disrupted barrier (FLG mutation or dryness) &rarr; allergen and irritant influx &rarr; inflammatory T-cell responses. Prevention: emollient therapy improves the barrier and blocks the inflammatory cascade (DT 18).</li><li>Risk factors: personal or family history of atopic disorders (atopic triad: allergic rhinitis, asthma, AD; atopic march adds food allergies); loss-of-function FLG mutation; urban environment; smaller family size; higher parental education (DT 19).</li><li>Triggers (DT 20): irritants (tobacco smoke, air pollution, cosmetics, fragrances, astringents, soaps, scrubs, detergents, dyes, preservatives); allergens (foods; wool and polyester clothing; dust mites, pollens, pet dander, molds); environment (extreme temperatures, low humidity); personal (stress, excessive washing and sanitizing).</li></ul></div>
 <table class="reftab"><thead><tr><th style="width:18%">Age (DT 21)</th><th>Quality</th><th>Region</th><th>Timing</th></tr></thead><tbody>
@@ -421,13 +423,13 @@ const GUIDE_HTML = `
 </section>
 
 <section class="gobj" id="gobj-p5-3">
-<h3>Dermatitis Therapeutics &middot; Objective 3: is the patient a self-care candidate?</h3>
+<h3>Dermatitis Therapeutics · Objective 3: is the patient a self-care candidate?</h3>
 <div class="gbar"><span>Objective (DT 7)</span><b>Determine if the patient is an appropriate self-care candidate</b><i>DT 33, 36, 65&ndash;68</i></div>
 <div class="gpt"><ul><li>AD on OTC self-care (DT 33): not improved or worse after 2&ndash;3 days of self-treatment: refer. On a topical steroid, the follow-up figure is 7 days (DT 36, 52; her poll); the two figures are recorded in OPEN_QUESTIONS (Lecture 5, item 2).</li><li>AD on OTC self-care (DT 33): atrophy of the skin or infection while using the topical steroid: discontinue and refer. OTC hydrocortisone 1% not resolved in 7 days: seek assistance; never past 2 weeks (DT 36).</li><li>Diaper dermatitis, do not use as self-care products: topical antifungals (miconazole), topical antibacterials, topical anesthetics (benzocaine, lidocaine), hydrocortisone or other topical corticosteroid. The diaper area is a large share of a baby&rsquo;s body surface area, and topical products can cause systemic side effects (DT 65).</li><li>Exclusions for self-treatment of diaper dermatitis (DT 68, &ldquo;please know this list&rdquo;, T@80993): lesions &gt; 7 days; no improvement in 7 days despite care; secondary infection (viral, bacterial, fungal); lesions part of or caused by another disease; rash outside the diaper region; possible urinary tract infection; broken skin (ulceration, blistering, peeling); onion-skin appearance or bullae; oozing, blood, vesicles or pus; chronic or frequently recurrent lesions; constitutional symptoms (fever, diarrhea, nausea, vomiting, swollen inguinal lymph nodes, rapid pulse, rash elsewhere); behavioral changes (lethargy, incessant crying); comorbid conditions (HIV, organ transplant, immunosuppressive therapy, hepatitis with skin manifestations).</li></ul></div>
 </section>
 
 <section class="gobj" id="gobj-p5-4">
-<h3>Dermatitis Therapeutics &middot; Objective 4: treatment goals</h3>
+<h3>Dermatitis Therapeutics · Objective 4: treatment goals</h3>
 <div class="gbar"><span>Objective (DT 7)</span><b>List appropriate treatment goals</b><i>DT 27, 61</i></div>
 <table class="reftab"><thead><tr><th style="width:24%">Condition</th><th>Goals on her slide</th></tr></thead><tbody>
 <tr><td><b>Atopic dermatitis</b> (DT 27)</td><td>Eliminate triggers; reduce symptoms (pruritus, dermatitis); prevent future flare-ups; prevent secondary infections; minimize adverse drug reactions (do not use oral antibiotics or topical antibiotics over large areas of skin); reduce trans-epidermal water loss (TEWL)</td></tr>
@@ -436,7 +438,7 @@ const GUIDE_HTML = `
 </section>
 
 <section class="gobj" id="gobj-p5-5">
-<h3>Dermatitis Therapeutics &middot; Objective 5: non-drug therapy</h3>
+<h3>Dermatitis Therapeutics · Objective 5: non-drug therapy</h3>
 <div class="gbar"><span>Objective (DT 7)</span><b>Recommend appropriate non-drug therapy</b><i>DT 29&ndash;32, 51, 57, 59, 62</i></div>
 <div class="gpt"><h5>Atopic dermatitis</h5><ul><li>Fix the skin barrier (DT 29): don&rsquo;t strip the weakened epidermis (gentle cleansers, limit bathing time); help re-establish it (thick emollients, hydration); reduce inflammation (topical medications).</li><li>Non-drug treatments (DT 30): bathing practices, gentle cleansers, wet wraps (short-term, not with TCIs), soft cotton clothing, avoid known triggers, decrease stress.</li><li>Bathing (DT 31): 10-minute lukewarm bath, gentle cleansers, pat dry; oatmeal or baking soda may be added daily; bleach 0.005% sodium hypochlorite (&frac12; cup per full tub) twice a week for moderate&ndash;severe AD to prevent recurrent bacterial infection (can irritate; her last-line advice, T@32279); occlusive moisturizer right after the bath.</li><li>Counseling (DT 51): avoid triggers; no tight clothing; moderate temperature; short tepid showers or baths with a non-soap cleanser; sponge baths in place of full-body bathing; pat dry; cool tap-water compresses 5&ndash;20 min, 4&ndash;6 times daily for weeping lesions (not with TCIs); short clean nails, cotton gloves or socks at night.</li></ul></div>
 <table class="reftab"><thead><tr><th style="width:18%">OTC moisturizer (DT 32)</th><th>Examples</th><th>Comments</th></tr></thead><tbody>
@@ -449,7 +451,7 @@ const GUIDE_HTML = `
 </section>
 
 <section class="gobj" id="gobj-p5-6">
-<h3>Dermatitis Therapeutics &middot; Objective 6: recommend the best treatment</h3>
+<h3>Dermatitis Therapeutics · Objective 6: recommend the best treatment</h3>
 <div class="gbar"><span>Objective (DT 8)</span><b>Dosing frequency and maximum days; onset; length of treatment; amount to dispense and tube size; adverse effects; contraindications and interactions</b><i>DT 10&ndash;13, 34&ndash;48, 52, 63&ndash;64</i></div>
 <div class="gpt"><h5>Quantity: fingertip units (DT 10&ndash;13)</h5><ul><li>Adult FTU = 0.5 g. Tubes 15, 30, 45, 60, 80, 100 g; always round up to an available size (DT 10; T@7221).</li><li>Adult FTU per area (DT 11): scalp 3; face and neck 2.5; one hand (front and back, with fingers) 1; one arm with the hand 4; elbows 1; both soles 1.5; one foot with toes 2; one leg with the foot 8; buttocks 4; knees 1; trunk both sides 14 (7 each side).</li><li>Grams = FTU &times; 0.5 g &times; applications a day &times; days. Face and neck BID 2 weeks: 1.25 g &times; 2 &times; 14 = 35 g &rarr; 45 g. One side of trunk BID 2 weeks: 3.5 g &times; 28 = 98 g &rarr; 100 g (DT 13). Her poll, face and neck TID 14 days: 1.25 &times; 3 &times; 14 = 52.5 g &rarr; 60 g (T@11444&ndash;11799).</li></ul></div>
 <div class="gpt"><h5>Drugs for atopic dermatitis (DT 34&ndash;46)</h5><ul><li>Order (DT 48; T@57389): topical corticosteroid first line, TCI second (DT 38), crisaborole third (DT 41); dupilumab or tralokinumab for moderate&ndash;severe AD after topicals (DT 43, 45); JAK inhibitors last, refractory (DT 46). Mechanisms: see the pharmacology and medicinal chemistry guides above (DT 35, 38, 41, 43).</li><li>Onset (DT 52, 38): topical steroid 24&ndash;48 h; TCI 1&ndash;8 weeks. Length: OTC hydrocortisone 1% BID max 3&ndash;7 days, seek help at 7 days, never past 2 weeks (DT 36); TCI reassess at 6 weeks (DT 40).</li><li>Potency and vehicle: see Reference, &ldquo;Dr. Patel: topical corticosteroid potency&rdquo;. Ointment &gt; cream &gt; lotion &gt; solution &gt; gel &gt; spray (DT 37). Hydrocortisone 1% is the one steroid for the face (DT 36; T@37425). For AD, single-ingredient products only (T@41713).</li><li>Topical steroid absorption varies with age, skin integrity, skin thickness and anatomic location (DT 35).</li><li>Counseling (DT 35, 52): wash hands before and after; apply to a clean, dry area; emollient within 3 minutes after bathing while the skin is still damp; a thin layer rubbed in gently until it vanishes; 1&ndash;2 times daily; store cool, dry, room temperature (not the bathroom, T@37049); do not wrap, which raises absorption, and let it air dry 3&ndash;5 minutes before clothing (T@40748); lesions can worsen in winter and summer.</li></ul></div>
@@ -460,7 +462,7 @@ const GUIDE_HTML = `
 </section>
 
 <section class="gobj" id="gobj-p5-7">
-<h3>Dermatitis Therapeutics &middot; Objective 7: follow-up</h3>
+<h3>Dermatitis Therapeutics · Objective 7: follow-up</h3>
 <div class="gbar"><span>Objective (DT 8)</span><b>Provide follow-up recommendations</b><i>DT 33, 36, 48, 52, 66</i></div>
 <div class="gpt"><ul><li>Topical steroid for AD: improvement in 24&ndash;48 hours; refer if not better after 7 days; never past 2 weeks (DT 36, 52). Her poll answer: 7 days (T@68450).</li><li>Atrophy or infection on a topical steroid: discontinue and refer (DT 33).</li><li>Diaper dermatitis at 7 days: improved but not healed, continue until healed; not healed, not improved or worse, refer (DT 66). Her poll answer: 7 days (T@82496).</li><li>JAK inhibitors: specialty follow-up every 2 weeks (T@55363).</li></ul></div>
 <div class="gpt"><h5>Pharmacist role and access (DT 50, 53)</h5><ul><li>Improve adherence through education; therapy optimization and monitoring; recommend moisturizers and OTC products; patient-friendly education on the plan; accessible support (DT 50). The SCORAD score is the physician&rsquo;s to calculate (T@21052).</li><li>Barriers: high out-of-pocket costs, limited formularies, prior authorization and step therapy. A denied prior authorization goes to appeal and a peer-to-peer conversation; the PCP writes the statement (T@66410). Manufacturer patient assistance programs and grant foundations help patients with limited or no coverage (DT 53).</li></ul></div>
@@ -471,7 +473,7 @@ const GUIDE_HTML = `
 <div class="gask"><b>How she asks (11/10)</b><ul><li>&ldquo;All questions are fair game in terms of multiple choice, select all possible, fill in the blank ... calculations ... matching&rdquo;; &ldquo;I do create questions based on the objectives that I start off with&rdquo; (T@2398).</li><li>Severity words: one, some, many. &ldquo;Those are the terms that I will also use on my cases on the exam ... I&rsquo;m not gonna tell you like 10&rdquo; (T@13918).</li><li>Cases: &ldquo;what is first line for that severity? ... know exactly what has the patient tried and what is left to try&rdquo; (T@60314). Pregnancy tests: &ldquo;I said it twice because hint, it&rsquo;s a question&rdquo; (T@49632).</li></ul></div>
 
 <section class="gobj" id="gobj-p6-1">
-<h3>Acne Therapeutics &middot; Objective 1: classify the stage and severity of acne</h3>
+<h3>Acne Therapeutics · Objective 1: classify the stage and severity of acne</h3>
 <div class="gbar"><span>Objective (AT 2)</span><b>Classify stages of acne</b><i>AT 5&ndash;8</i></div>
 <div class="gpt"><ul><li>Non-inflammatory: open comedone (blackhead), closed comedone (whitehead). Inflammatory: papule (raised, red, no pus), pustule (visible white pus), nodule or cyst (large, under the skin; worst stage) (AT 5&ndash;6; T@6156&ndash;7508).</li></ul></div>
 <table class="reftab"><thead><tr><th style="width:18%">Grade (AT 7&ndash;8)</th><th>Non-inflammatory</th><th>Inflammatory</th><th>Nodules; scarring</th></tr></thead><tbody>
@@ -484,25 +486,25 @@ const GUIDE_HTML = `
 </section>
 
 <section class="gobj" id="gobj-p6-2">
-<h3>Acne Therapeutics &middot; Objective 2: is the patient a self-care candidate?</h3>
+<h3>Acne Therapeutics · Objective 2: is the patient a self-care candidate?</h3>
 <div class="gbar"><span>Objective (AT 2)</span><b>Determine if the patient is an appropriate self-care candidate</b><i>AT 9&ndash;11, 17&ndash;18</i></div>
 <div class="gpt"><ul><li>Exclusions for self-care (AT 18): severe acne, possible rosacea, exacerbating factors, comedogenic drugs: a straight referral to dermatology (T@19247&ndash;19941).</li><li>Drugs that cause or worsen acne (AT 10): corticosteroids, androgens, progesterone contraceptives; TCAs, lithium, antiepileptics, aripiprazole, SSRIs; vitamins B1, B6, B12; dactinomycin, cyclosporine, sirolimus; isoniazid, rifampin, ethionamide; iodine, bromine, chlorine.</li><li>Complications (AT 11): anxiety, depression, scarring; scarring the most common (T@11250).</li><li>No routine endocrine or microbiologic testing; exception: high suspicion of PCOS or another hormonal disorder (AT 17).</li></ul></div>
 </section>
 
 <section class="gobj" id="gobj-p6-3">
-<h3>Acne Therapeutics &middot; Objective 3: treatment goals and the overall approach</h3>
+<h3>Acne Therapeutics · Objective 3: treatment goals and the overall approach</h3>
 <div class="gbar"><span>Objective (AT 2)</span><b>Recommend appropriate non-pharmacologic and pharmacologic therapy</b><i>AT 3, 13, 47</i></div>
 <div class="gpt"><ul><li>Goals (AT 13): alleviate symptoms; reduce the number and severity of lesions; improve appearance; slow progression; limit duration and recurrence; prevent long-term scarring and hyperpigmentation. No cure (AT 3; T@11895).</li><li>Plan (AT 47): the smallest number of agents at the lowest possible dosages; topical before oral; taper over time, never stop abruptly (T@71629).</li></ul></div>
 </section>
 
 <section class="gobj" id="gobj-p6-4">
-<h3>Acne Therapeutics &middot; Objective 4: non-drug counseling</h3>
+<h3>Acne Therapeutics · Objective 4: non-drug counseling</h3>
 <div class="gbar"><span>Objective (AT 2)</span><b>Counsel patients on non-pharmacologic strategies</b><i>AT 19, 24, 43</i></div>
 <div class="gpt"><ul><li>Cleanse twice a day with a mild soap or non-soap cleanser; no abrasive products, devices or excessive cleansing; remove dirt and makeup with an oil-based cleanser before a water-based one (AT 19; T@20370, T@28136).</li><li>Vehicle by skin type (AT 24): oily to normal, gels, solutions, lotions; normal to dry, lotions and creams; ointments and bars not usually recommended.</li><li>Shaving (AT 43): electric or safety razor; soften the beard; shave lightly and infrequently with a sharp blade, in the direction of hair growth, each area once.</li></ul></div>
 </section>
 
 <section class="gobj" id="gobj-p6-5">
-<h3>Acne Therapeutics &middot; Objective 5: OTC and prescription-only products</h3>
+<h3>Acne Therapeutics · Objective 5: OTC and prescription-only products</h3>
 <div class="gbar"><span>Objective (AT 2)</span><b>Recognize non-prescription and prescription-only products</b><i>AT 22&ndash;33</i></div>
 <table class="reftab"><thead><tr><th style="width:24%">OTC agent (AT 23)</th><th>Bactericidal</th><th>Keratolytic</th><th>Comedolytic</th></tr></thead><tbody>
 <tr><td><b>Benzoyl peroxide</b></td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
@@ -515,7 +517,7 @@ const GUIDE_HTML = `
 </section>
 
 <section class="gobj" id="gobj-p6-6">
-<h3>Acne Therapeutics &middot; Objective 6: guidelines, algorithm and first-line agents</h3>
+<h3>Acne Therapeutics · Objective 6: guidelines, algorithm and first-line agents</h3>
 <div class="gbar"><span>Objective (AT 2)</span><b>Apply guidelines and algorithms; recognize first-line agents</b><i>AT 20, 25, 40</i></div>
 <div class="gpt"><ul><li>Step by step: one agent, then the other, then combinations of two, then three; topical before oral; an oral antibiotic after the topical combinations; isotretinoin absolute last line (T@54687, T@57819, T@59132).</li><li>Topical antibiotics are not used alone: always with BP, to reduce resistance (AT 25, 31; T@28783, T@36940).</li></ul></div>
 <div class="gpoll"><b>Her polls</b><ul><li>Case 1 first line: benzoyl peroxide BID to affected areas; &ldquo;keyword in this question? First line&rdquo; (T@66568).</li><li>Case 2 next line after 8 months of doxycycline + retinoid + BP, irregular periods: combined oral contraceptive over spironolactone (T@69094&ndash;69647).</li></ul></div>
@@ -523,13 +525,13 @@ const GUIDE_HTML = `
 </section>
 
 <section class="gobj" id="gobj-p6-7">
-<h3>Acne Therapeutics &middot; Objective 7: topical product by symptoms</h3>
+<h3>Acne Therapeutics · Objective 7: topical product by symptoms</h3>
 <div class="gbar"><span>Objective (AT 2)</span><b>Recommend appropriate topical products based on patient symptoms</b><i>AT 23&ndash;31</i></div>
 <div class="gpt"><ul><li>Benzoyl peroxide 2.5&ndash;10% OTC, 1&ndash;2 times daily; irritation settles in 1&ndash;2 weeks; drying, photosensitivity, bleaches hair and clothing (AT 23, 26).</li><li>Adapalene (Differin) 0.1% OTC: at night; BP in the morning; not with sulfur, resorcinol, salicylic acid or vitamin C; moisturizer and sunscreen; over 12 years (AT 27; T@30492&ndash;31851).</li><li>Salicylic acid: once or twice daily as a cleanser or gel; maximum effect 4&ndash;6 weeks; limited efficacy data (AT 29). AHAs: trial form; 2&ndash;4 weeks between peels; sunscreen (AT 28). Tea tree oil in a lotion or gel vehicle (AT 30).</li><li>Prescription (AT 31): topical antibiotics (wait 30 minutes to shave or apply cosmetics); azelaic acid for post-inflammatory dyspigmentation; dapsone (G6PD; CBC, reticulocytes).</li></ul></div>
 </section>
 
 <section class="gobj" id="gobj-p6-8">
-<h3>Acne Therapeutics &middot; Objective 8: counseling on drug and non-drug therapy</h3>
+<h3>Acne Therapeutics · Objective 8: counseling on drug and non-drug therapy</h3>
 <div class="gbar"><span>Objective (AT 2)</span><b>Counseling points for non-drug and drug therapies</b><i>AT 33&ndash;38, 41&ndash;43</i></div>
 <div class="gpt"><ul><li>Topicals (AT 42): wash, pat dry, wait 20&ndash;30 minutes; a thin layer in the evening, avoiding eyes, ears, nostrils, mouth; if irritation, decrease frequency.</li><li>Orals (AT 42): swallow whole with a full glass of water; may take after eating; caution driving at night; sunscreen.</li><li>Tetracyclines over 12 years only (tooth discoloration), photosensitivity, avoid in pregnancy; re-evaluate at 3&ndash;4 months (AT 33; T@39928). TMP/SMX only with macrolide and tetracycline allergy, not in sulfur allergy.</li><li>COC: female wanting contraception; over 14 or 2 years past menarche; non-smoker under 35; VTE risk (AT 34&ndash;36).</li><li>Isotretinoin and iPledge: see Reference, &ldquo;Dr. Patel: isotretinoin and iPledge&rdquo;.</li></ul></div>
 <div class="gpoll"><b>Her polls</b><ul><li>Best COC candidate: the 22-year-old who does not want to be pregnant (not DVT, not a 35-year-old smoker, not 12) (T@45257&ndash;46636).</li><li>NOT an isotretinoin counseling point: dairy (T@69647&ndash;70327).</li></ul></div>
@@ -537,7 +539,7 @@ const GUIDE_HTML = `
 </section>
 
 <section class="gobj" id="gobj-p6-9">
-<h3>Acne Therapeutics &middot; Objective 9: side effects, expectations, monitoring</h3>
+<h3>Acne Therapeutics · Objective 9: side effects, expectations, monitoring</h3>
 <div class="gbar"><span>Objective (AT 2)</span><b>Side effects, expectations of treatment, education</b><i>AT 37&ndash;38, 41, 44, 48</i></div>
 <div class="gpt"><ul><li>8 weeks or more to see visible benefits (AT 41). Lesion count down 10&ndash;25% within 4&ndash;8 weeks, &gt;50% within 2&ndash;4 months; comedones resolve by 3&ndash;4 months; patient monitors daily, pharmacist every 4&ndash;8 weeks (AT 44).</li><li>No response (AT 48): check adherence and use; change the vehicle to suit the skin type; avoid overuse of cleansers.</li></ul></div>
 </section>
@@ -547,13 +549,13 @@ const GUIDE_HTML = `
 <div class="gask"><b>How she asks (11/10&ndash;11/11)</b><ul><li>Adult fingertip units again: &ldquo;hint, please know this chart, OK? So adult only&rdquo; (SD 4; T@76480 11/10).</li><li>Biologics: &ldquo;know the generic names, know the brand names, understand what class to follow through, and exactly what&rsquo;s bolded on the slide&rdquo; (T@22212 11/11); TNF-&alpha; in heart failure: &ldquo;I&rsquo;m saying this twice for a reason&rdquo; (T@22212 11/11).</li><li>&ldquo;Know exactly what we would trial with a mild to moderate patient or a moderate to severe patient first&rdquo; (T@33701 11/11). Not asked: cyclosporine dosing (T@17897 11/11), the exact turnover multiples (T@83726 11/10), severity tools other than BSA (T@10671 11/11).</li></ul></div>
 
 <section class="gobj" id="gobj-p7-1">
-<h3>Scaly Dermatoses &middot; Objective 1: the patient interview and care process</h3>
+<h3>Scaly Dermatoses · Objective 1: the patient interview and care process</h3>
 <div class="gbar"><span>Objective (SD 2)</span><b>Perform the components of the Patient-Centered Care / STEPS process in the patient interview for dermatologic conditions</b><i>SD 29&ndash;30, 48</i></div>
 <div class="gpt"><ul><li>Collect, assess, plan, implement, follow-up (monitor and evaluate) around patient-centered care (SD 29).</li><li>Factors in choosing psoriasis therapy (SD 30): age and sex, socioeconomic status, severity, location of lesions, past and current treatment, comorbidities. &ldquo;Age is huge&rdquo; (T@9650 11/11).</li></ul></div>
 </section>
 
 <section class="gobj" id="gobj-p7-2">
-<h3>Scaly Dermatoses &middot; Objective 2: dandruff, seborrheic dermatitis or psoriasis?</h3>
+<h3>Scaly Dermatoses · Objective 2: dandruff, seborrheic dermatitis or psoriasis?</h3>
 <div class="gbar"><span>Objective (SD 2)</span><b>Determine if the patient has rosacea, psoriasis, psoriatic arthritis, seborrhea or dandruff by typical signs and symptoms and patient history</b><i>SD 6, 8, 11&ndash;13, 21&ndash;27, 31</i></div>
 <table class="reftab"><thead><tr><th style="width:18%">SD 6</th><th>Dandruff</th><th>Seborrheic dermatitis</th><th>Psoriasis</th></tr></thead><tbody>
 <tr><td><b>Location</b></td><td>Scalp</td><td>Scalp, face, trunk</td><td>Scalp, elbows, knees, trunk, lower extremities</td></tr>
@@ -567,25 +569,25 @@ const GUIDE_HTML = `
 </section>
 
 <section class="gobj" id="gobj-p7-3">
-<h3>Scaly Dermatoses &middot; Objective 3: is the patient a self-care candidate?</h3>
+<h3>Scaly Dermatoses · Objective 3: is the patient a self-care candidate?</h3>
 <div class="gbar"><span>Objective (SD 2)</span><b>Determine if the patient is an appropriate self-care candidate</b><i>SD 9, 16, 18, 51</i></div>
 <div class="gpt"><ul><li>Dandruff and adult seborrheic dermatitis: OTC shampoos; seborrheic dermatitis that worsens or lasts longer than 7 days: consult a health care provider (SD 16; T@89612 11/10).</li><li>Infants: no ketoconazole, no corticosteroids (SD 18; T@95994 11/10).</li><li>Mild to moderate scaly dermatoses can often be managed with topical non-prescription products (SD 51). Systemic and biologic psoriasis therapy is prescribed and often specialty (SD 40, 47).</li></ul></div>
 </section>
 
 <section class="gobj" id="gobj-p7-4">
-<h3>Scaly Dermatoses &middot; Objective 4: treatment goals</h3>
+<h3>Scaly Dermatoses · Objective 4: treatment goals</h3>
 <div class="gbar"><span>Objective (SD 2)</span><b>List treatment goals</b><i>SD 9, 14, 28</i></div>
 <div class="gpt"><ul><li>Dandruff (SD 9): reduce epidermal turnover and Malassezia; minimize visible scaling and itching.</li><li>Psoriasis (SD 28): minimize plaques and scales; alleviate pruritus; reduce flare-ups; treat associated conditions (hypertension, dyslipidemia, diabetes, depression); screen lifestyle factors (stress, smoking, obesity); counsel; cost-effective therapy; avoid adverse effects; quality of life.</li></ul></div>
 </section>
 
 <section class="gobj" id="gobj-p7-5">
-<h3>Scaly Dermatoses &middot; Objective 5: non-drug therapy</h3>
+<h3>Scaly Dermatoses · Objective 5: non-drug therapy</h3>
 <div class="gbar"><span>Objective (SD 2)</span><b>Recommend appropriate non-drug therapy</b><i>SD 15, 18, 33&ndash;34</i></div>
 <div class="gpt"><ul><li>Seborrheic dermatitis scale softening: mineral or olive oil, or a cream with salicylic acid or sulfur; dishwashing liquid for tough scale (SD 15). Infants: massage with baby or vegetable oil, non-medicated shampoo, soft bristle brush; face, mild soap and emollient (SD 18).</li><li>Psoriasis, every patient (SD 33&ndash;34): reduce stress, regular exercise, weight management (BMI 18.5&ndash;24.9), moderate alcohol, stop smoking; moisturizers, oatmeal baths, sunscreen SPF 30+ with UVA protection (T@11707&ndash;12577 11/11).</li></ul></div>
 </section>
 
 <section class="gobj" id="gobj-p7-6">
-<h3>Scaly Dermatoses &middot; Objective 6: recommend the best treatment</h3>
+<h3>Scaly Dermatoses · Objective 6: recommend the best treatment</h3>
 <div class="gbar"><span>Objective (SD 3)</span><b>Dosing frequency and maximum days; topical vs oral; onset; length of treatment; adverse effects; contraindications and interactions</b><i>SD 4, 7, 9, 16&ndash;18, 35&ndash;45</i></div>
 <div class="gpt"><ul><li>OTC chart (SD 7): hydrocortisone 1% not for dandruff; sulfur not for psoriasis.</li><li>Shampoo schedules: see Reference, &ldquo;Dr. Patel: dandruff and seborrheic dermatitis&rdquo;.</li><li>Psoriasis, mild to moderate (SD 35): topical agents first; systemic agent last line; non-drug care for all. Moderate to severe (SD 37): systemic agent (most likely methotrexate) &plusmn; topical; then a more potent systemic or a biologic; biologics last line (T@14941&ndash;15451 11/11).</li><li>Topicals (SD 36): corticosteroids the most effective, 2&ndash;4 times daily, &le; 4 weeks; calcipotriene; tazarotene, adapalene at bedtime; anthralin &le; 2 hours on thick plaques; coal tar overnight; salicylic acid shampoo for the scalp; pimecrolimus for intertriginous areas.</li></ul></div>
 <div class="gpoll"><b>Her polls</b><ul><li>Adult seborrheic dermatitis, first line: ketoconazole shampoo (T@94640 11/10). Infant scalp: massage with baby oil (T@95994 11/10).</li><li>Psoriasis case, OTC agent: topical corticosteroids (T@35288 11/11).</li></ul></div>
@@ -593,7 +595,7 @@ const GUIDE_HTML = `
 </section>
 
 <section class="gobj" id="gobj-p7-7">
-<h3>Scaly Dermatoses &middot; Objective 7: follow-up</h3>
+<h3>Scaly Dermatoses · Objective 7: follow-up</h3>
 <div class="gbar"><span>Objective (SD 3)</span><b>Provide follow-up recommendations</b><i>SD 16, 38&ndash;39, 48, 51</i></div>
 <div class="gpt"><ul><li>Seborrheic dermatitis: worse or lasting longer than 7 days, refer (SD 16).</li><li>Psoriasis: contact the patient in 1&ndash;2 weeks (SD 48; T@31466, T@36225 11/11); SD 51 reads &ldquo;a week after self-treatment begins&rdquo;. Expected response: methotrexate 3&ndash;6 weeks, apremilast by week 4, acitretin maximum at 3&ndash;6 months (SD 38&ndash;39).</li><li>Biologics: TB screening before and during, PPD every year; CBC and LFTs for TNF-&alpha; inhibitors (SD 40&ndash;41).</li></ul></div>
 </section>
@@ -603,7 +605,7 @@ const GUIDE_HTML = `
 <div class="gask"><b>How she asks (11/12)</b><ul><li>&ldquo;4 to 5 questions per lecture hour is how we calculate it out&rdquo; (T@1239 11/12). &ldquo;Multiple choice, select all and then fill in the blank for my portion. Fill in the blank is calculations&rdquo; (T@96227 11/12).</li><li>Adult fingertip units: &ldquo;It&rsquo;s come back 3 times now, so make sure you practice calculations with this only adult conversion chart&rdquo; (OE 5; T@1737 11/12).</li><li>&ldquo;Pay attention to the age of the patient. Pay attention to certain key facts like we practice [in] Poll Everywhere&rdquo; (T@45397 11/12); &ldquo;make note of the certain duration of time&rdquo; (T@20438 11/12).</li><li>Not asked: repellent ingredients (T@11557 11/12); types of mosquito (T@13776 11/12); doses for the flea-borne diseases (T@15070 11/12); the antivenin protocol on OE 59 (T@42049 11/12).</li></ul></div>
 
 <section class="gobj" id="gobj-p8o-1">
-<h3>Outdoor Exposures &middot; Objective 1: which exposure is it?</h3>
+<h3>Outdoor Exposures · Objective 1: which exposure is it?</h3>
 <div class="gbar"><span>Objective (OE 3)</span><b>Determine if the patient has an insect bite, sting, plant dermatitis, lice, scabies, envenomated snake bite or rabies exposure by typical signs and symptoms and patient history</b><i>OE 8, 10, 20, 27&ndash;28, 42, 50, 52, 58, 62</i></div>
 <table class="reftab"><thead><tr><th style="width:22%">Exposure</th><th>Signs and history</th><th style="width:10%">Slide</th></tr></thead><tbody>
 <tr><td><b>Plant dermatitis</b></td><td>Itching, then erythema, then vesicles and papules; small blisters in a line; rash 2&ndash;48 hours after contact with poison ivy, oak or sumac, lasting 1&ndash;3 weeks</td><td>OE 8, 10</td></tr>
@@ -621,7 +623,7 @@ const GUIDE_HTML = `
 </section>
 
 <section class="gobj" id="gobj-p8o-2">
-<h3>Outdoor Exposures &middot; Objective 2: is the patient a self-care candidate?</h3>
+<h3>Outdoor Exposures · Objective 2: is the patient a self-care candidate?</h3>
 <div class="gbar"><span>Objective (OE 3)</span><b>Determine if the patient is an appropriate self-care candidate</b><i>OE 12, 16, 31, 36, 40, 44, 53, 56, 62</i></div>
 <div class="gpt"><ul><li>Plant dermatitis, refer (OE 16): no improvement after 7 days; worse; a large area of the face or swollen eyelids; genitalia; secondary infection.</li><li>Bites, refer (OE 31, 40): symptoms after 7 days of treatment or worse during it; fever, joint pain, lymph node enlargement, neurologic symptoms; a suspected vector-borne disease.</li><li>Stings, emergency care (OE 36): a severe reaction history; hives, dizziness, nausea or vomiting, difficulty breathing at any time after the sting.</li><li>Under 2 years: no hydrocortisone, local anesthetic or counterirritant (OE 12, 25, 39).</li><li>Lice, not self-care (OE 44): no live lice seen; allergy to chrysanthemums, ragweed or an ingredient; secondary skin infection; under 2 years for pyrethrins, under 2 months for permethrin; eyelids or eyebrows; pregnancy or breast-feeding; active tumors.</li><li>Never self-care: venomous spider bite, snake bite (emergency room), rabies exposure (referral for prophylaxis) (OE 53, 56, 62).</li></ul></div>
 <div class="gpoll"><b>Her polls</b><ul><li>A hunter with symptoms after a tick exposure: immediate medical referral (not a cold and flu product, not watching for 3&ndash;5 days) (T@21518 11/12).</li><li>Wasp or bee sting with hives and swelling: immediate referral to the emergency room (T@23898 11/12).</li><li>When is OTC lice treatment not appropriate: &ldquo;pay attention to the age category&rdquo; (T@33447 11/12).</li></ul></div>
@@ -629,20 +631,20 @@ const GUIDE_HTML = `
 </section>
 
 <section class="gobj" id="gobj-p8o-3">
-<h3>Outdoor Exposures &middot; Objective 3: treatment goals</h3>
+<h3>Outdoor Exposures · Objective 3: treatment goals</h3>
 <div class="gbar"><span>Objective (OE 3)</span><b>Apply treatment goals to recommendations</b><i>OE 11, 23, 35, 42, 51</i></div>
 <div class="gpt"><ul><li>Plant dermatitis (OE 11): treat the inflammation; relieve itching and excessive scratching; relieve the debris from oozing, crusting and scaling; minimize medication adverse effects.</li><li>Insect bites (OE 23): relieve symptoms; prevent secondary bacterial infections; minimize medication adverse effects; identify and eradicate transmissible diseases.</li><li>Stings (OE 35): relieve itching and pain; minimize medication adverse effects.</li><li>Lice (OE 42): kill adult and nymph lice; remove eggs and nits.</li><li>Scabies (OE 51): kill the mites and eggs; reduce symptoms; minimize medication adverse effects.</li></ul></div>
 </section>
 
 <section class="gobj" id="gobj-p8o-4">
-<h3>Outdoor Exposures &middot; Objective 4: non-drug therapy</h3>
+<h3>Outdoor Exposures · Objective 4: non-drug therapy</h3>
 <div class="gbar"><span>Objective (OE 3)</span><b>Recommend appropriate non-drug therapy</b><i>OE 9, 14, 21, 24, 35, 38, 43</i></div>
 <div class="gpt"><ul><li>Plant: protective clothing and gloves; after exposure remove urushiol as soon as possible, large volumes of water, then soap and water including under the nails; cool soaks; colloidal oatmeal bath 15&ndash;20 minutes twice daily (OE 9, 11, 14). Urushiol enters the skin within 10 minutes (OE 8).</li><li>Bites: ice pack promptly; no scratching, nails trimmed; no rough clothing over the bite. Tick: tweezers at the head, pull gently, clean with rubbing alcohol, keep the tick in a plastic bag (OE 24). Prevention: repellent, covered skin, pant legs cuffed into socks, no standing water (OE 21).</li><li>Stings: remove the stinger and venom sac without squeezing; soap and water; ice or a cold pack (OE 35, 38).</li><li>Lice: FDA-approved nit comb; no shared combs, brushes, towels, hats; clothing, bedding, brushes and combs washed in hot water (OE 43).</li></ul></div>
 <div style="display:flex;flex-wrap:wrap;gap:7px;margin:8px 0"><button type="button" class="chip" data-jump="ref:ref-p8-plant">Reference: plant dermatitis</button></div>
 </section>
 
 <section class="gobj" id="gobj-p8o-5">
-<h3>Outdoor Exposures &middot; Objective 5: recommend the best treatment</h3>
+<h3>Outdoor Exposures · Objective 5: recommend the best treatment</h3>
 <div class="gbar"><span>Objective (OE 3)</span><b>Dosing frequency and max days of use; length of treatment; onset; adverse effects; contraindications and interactions</b><i>OE 5, 12&ndash;15, 25, 27&ndash;30, 39, 45, 51</i></div>
 <div class="gpt"><ul><li>Topical OTC chart (OE 12&ndash;13): the class, the condition and the comment for each (T@6763 11/12). Diphenhydramine cream: not on plant dermatitis, sunburn, chicken pox or broken skin. The &ldquo;caines&rdquo;: not under occlusion or on broken skin; methemoglobinemia.</li><li>Plant dermatitis (OE 12&ndash;15): itch, an oral antihistamine; dry lesions, hydrocortisone, an anesthetic or a counterirritant; weeping lesions, an astringent (aluminum acetate); no topical antihistamine or topical antibiotic.</li><li>Bites and stings (OE 25, 39): protectant, hydrocortisone, anesthetic, counterirritant or oral antihistamine; anesthetics and counterirritants 3&ndash;4 times daily, not longer than 7 days.</li><li>Antibiotic by disease (OE 27&ndash;30): murine typhus, doxycycline; Lyme prophylaxis within 72 hours of detaching the tick, doxycycline 200 mg once; erythema migrans, doxycycline 10 days, amoxicillin 14, cefuroxime axetil 14, azithromycin 7 (second line); rickettsial fevers, doxycycline; STARI, no antibiotic.</li><li>Lice (OE 45): pyrethrins and malathion over 2 years; permethrin and dimethicone over 2 months; ivermectin, benzyl alcohol, spinosad over 6 months. Scabies (OE 51): a list of options with no first, second or third line (T@35653 11/12).</li><li>Quantity (OE 5): grams = fingertip units &times; 0.5 g &times; applications a day &times; days, rounded up to the tube size.</li></ul></div>
 <div class="gpoll"><b>Her polls</b><ul><li>Hydrocortisone 1% to both feet twice daily for 3 days: 15 grams (T@1904 11/12).</li><li>Poison ivy itch: diphenhydramine by mouth (&ldquo;any oral antihistamine&rdquo;, T@9933 11/12); not the aluminum acetate compress, not diphenhydramine 2% cream. To reduce weeping: aluminum acetate (T@9484 11/12).</li><li>Bedbug itch, neomycin allergy: oral diphenhydramine; not witch hazel, not Neosporin (T@19887 11/12).</li><li>Head lice, 10 years old: permethrin; not malathion, not lindane (T@33250 11/12).</li></ul></div>
@@ -650,14 +652,14 @@ const GUIDE_HTML = `
 </section>
 
 <section class="gobj" id="gobj-p8o-6">
-<h3>Outdoor Exposures &middot; Objective 6: monitoring and follow-up</h3>
+<h3>Outdoor Exposures · Objective 6: monitoring and follow-up</h3>
 <div class="gbar"><span>Objective (OE 3)</span><b>Provide monitoring and follow-up recommendations</b><i>OE 13, 16, 31, 36, 39, 47, 51</i></div>
 <div class="gpt"><ul><li>Seven days is the self-care limit for plant dermatitis, bites, stings and topical antibiotics (OE 13, 16, 31, 36, 39).</li><li>Lice (OE 47): repeat in 7 to 10 days if lice or nits are seen; follow up with the caregiver in a week; live lice after 2 rounds one week apart, refer for a prescription product. OE 42 prints &ldquo;in 7 days&rdquo;; see Reference.</li><li>Scabies (OE 51): itch can last 4 weeks after treatment; an oral antihistamine (T@36103 11/12).</li></ul></div>
 <div class="gpoll"><b>Her polls</b><ul><li>Maximum treatment duration for self-care: seven days (not three, ten or fourteen) (T@20142 11/12).</li></ul></div>
 </section>
 
 <section class="gobj" id="gobj-p8o-7">
-<h3>Outdoor Exposures &middot; Objective 7: actions after an outdoor exposure</h3>
+<h3>Outdoor Exposures · Objective 7: actions after an outdoor exposure</h3>
 <div class="gbar"><span>Objective (OE 3)</span><b>Counsel a patient on the actions needed after an &ldquo;outdoor exposure&rdquo;</b><i>OE 9, 24, 35, 47, 53, 56, 62&ndash;63, 65</i></div>
 <div class="gpt"><ul><li>Lice product (OE 45, 47): no conditioner first; enough to wet the dry hair and scalp; a full 10 minutes; rinse; nit comb in sections; no re-washing for 1&ndash;2 days.</li><li>Spider bite (OE 53): soap and water, cold pack, elevate the limb, acetaminophen, emergency room.</li><li>Snake bite (OE 56): calm and still; a photo, no capture; remove jewelry and tight clothing; soap and water; immobilize, even with or slightly lower than the heart; call poison control, 1-800-222-1222, and transport. &ldquo;Biggest thing to remember, immobilize&rdquo; (T@39310 11/12).</li><li>Rabies (OE 62&ndash;63): wash with soap and water at once; prophylaxis as soon as possible, &ldquo;urgency, not emergency&rdquo; (T@44130 11/12). Not previously vaccinated: immune globulin plus vaccine on days 0, 3, 7, 14. Previously vaccinated: no immune globulin; vaccine on days 0 and 3.</li></ul></div>
 <div class="gpoll"><b>Her polls</b><ul><li>Counseling points for the lice patient and his mother (open response); her answer: dry hair, 10 minutes, rinse, nit comb, repeat in 7 to 10 days (T@33250&ndash;34351 11/12).</li></ul></div>
@@ -669,38 +671,38 @@ const GUIDE_HTML = `
 <div class="gask"><b>How she asks (11/12)</b><ul><li>&ldquo;Learning objectives very similar to all my lecture slides, so please review it. This is how I create my questions&rdquo; (T@46619 11/12).</li><li>&ldquo;For exam purposes, broad spectrum SPF greater than or equal to 15&rdquo; (T@53466 11/12); &ldquo;So hint, broad-spectrum SPF greater than or equal to 15 ... Know how much to apply. Know how often to apply&rdquo; (T@66751 11/12).</li><li>&ldquo;For her questions, pay attention to what she&rsquo;s focused on. For my questions, recommendation in terms of treatment ... if I ask you a question that&rsquo;s specific to an age, like I&rsquo;ll make it obvious&rdquo; (T@56238&ndash;56572 11/12).</li><li>Reference only: UVA against UVB detail, left to Dr. Smith&rsquo;s and Dr. Sikazwe&rsquo;s slides (T@47346 11/12); the anti-aging approaches table on SE 41 (T@70385 11/12); plant extracts on SE 51 (T@75069 11/12).</li></ul></div>
 
 <section class="gobj" id="gobj-p8s-1">
-<h3>Sun Exposure &middot; Objective 1: the self-care interview</h3>
+<h3>Sun Exposure · Objective 1: the self-care interview</h3>
 <div class="gbar"><span>Objective (SE 3)</span><b>Perform the components of the SCHOLAR-MAC/QuEST and the Pharmacist&rsquo;s Patient Care Process in the self-care interview for dermatologic conditions</b><i>SE 8&ndash;11, 19</i></div>
 <div class="gpt"><ul><li>History for sun protection (SE 19): allergies; skin sensitivities or disorders; current medications and complementary products; excluded from sunscreens; photosensitizing agents; a previous adverse reaction to a sunscreen; exposure and use pattern.</li><li>Photosensitizing drugs she named (SE 10; T@49890&ndash;50187 11/12): doxycycline and the tetracyclines, ibuprofen, combined oral contraceptives, retinoids. &ldquo;Highlight the ones that we&rsquo;ve talked about to treat our derm conditions&rdquo; (T@50187 11/12).</li><li>Highest risk (SE 8&ndash;9): Fitzpatrick types I and II; blonde, red or light brown hair; a blistering sunburn; tanning beds; a family member with melanoma; immunosuppressive medications.</li></ul></div>
 </section>
 
 <section class="gobj" id="gobj-p8s-2">
-<h3>Sun Exposure &middot; Objective 2: name the condition</h3>
+<h3>Sun Exposure · Objective 2: name the condition</h3>
 <div class="gbar"><span>Objective (SE 3)</span><b>Determine the dermatologic condition based on the patient&rsquo;s signs and symptoms and history</b><i>SE 24, 28, 39&ndash;40</i></div>
 <div class="gpt"><ul><li>Sunburn (SE 24): symptoms start about 4 hours after exposure; erythema peaks at around 24 hours; may last up to 5 days.</li><li>Suspicious lesion, ABCDE (SE 28): Asymmetry; Border irregular; Color uneven; Diameter, most larger than 6 millimeters; Evolving over weeks or months.</li><li>Photoaging (SE 40): coarse wrinkles, leathery skin, lentigines, yellow cobblestone appearance, telangiectasis. Chronologic aging: thin skin, fine wrinkles, xerosis, laxity.</li><li>Glogau types (SE 39): I mild, no wrinkles, 20&ndash;30 years (T@68961 11/12); II wrinkles in motion, 30&ndash;40; III wrinkles at rest, 50 or older; IV only wrinkles, 60 or older.</li></ul></div>
 </section>
 
 <section class="gobj" id="gobj-p8s-3">
-<h3>Sun Exposure &middot; Objective 3: is the patient a self-care candidate?</h3>
+<h3>Sun Exposure · Objective 3: is the patient a self-care candidate?</h3>
 <div class="gbar"><span>Objective (SE 3)</span><b>Determine if the patient is an appropriate self-care candidate</b><i>SE 13, 30, 37, 46, 48</i></div>
 <div class="gpt"><ul><li>Sunburn, not self-care (SE 30): large areas of blistering; fever; extreme pain; headache or confusion; lightheadedness or vision changes; severe swelling; signs of infection.</li><li>Excluded from sunscreen (SE 13): under 6 months of age; allergy to all sunscreen ingredients.</li><li>A lesion that meets the ABCDE rule is seen by a health care provider (SE 37).</li><li>Hydroquinone: when prescribed by a licensed provider (SE 48). Chemical peels: not self-applied OTC (T@72287 11/12).</li></ul></div>
 <div class="gpoll"><b>Her polls</b><ul><li>Can she use the product on her four-month-old: the infant wears protective clothing and sunlight is restricted (not applying it twice daily before exposure; not waiting until over 7 or over 8 months of age) (T@66129&ndash;66269 11/12).</li></ul></div>
 </section>
 
 <section class="gobj" id="gobj-p8s-4">
-<h3>Sun Exposure &middot; Objective 4: treatment goals</h3>
+<h3>Sun Exposure · Objective 4: treatment goals</h3>
 <div class="gbar"><span>Objective (SE 3)</span><b>List treatment goals</b><i>SE 13, 29, 42</i></div>
 <div class="gpt"><ul><li>Sunburn (SE 29): hydration; relieve pain; provide physical protection; reduce the chances of infection or scarring; minimize medication adverse effects.</li><li>Sun protection (SE 13): everyone should wear sunscreen; UV radiation causes premature skin aging and skin cancers.</li><li>Photoaging: no goals slide; prevention (SE 42, 53): photoaging is preventable and cumulative; sunscreen, protective clothing, less exposure to air pollution and smoking.</li></ul></div>
 </section>
 
 <section class="gobj" id="gobj-p8s-5">
-<h3>Sun Exposure &middot; Objective 5: non-drug therapy</h3>
+<h3>Sun Exposure · Objective 5: non-drug therapy</h3>
 <div class="gbar"><span>Objective (SE 3)</span><b>Recommend appropriate non-drug therapy</b><i>SE 12, 29, 37, 53</i></div>
 <div class="gpt"><ul><li>Sun safety (SE 12, 37): limit sun from 10 am to 4 pm; check the UV index, a cloudy day is not protective; wide-brimmed hat (4 inches); tight-weave clothing; sunglasses with UV protection; shade; no tanning beds; snow and sand reflect UV radiation.</li><li>Sunburn (SE 29): the first treatment is non-drug; within the past 20 minutes, cool water or cool wet cloths.</li><li>Photoaging (SE 53): face cleaned twice daily with a mild cleanser; moisturizer twice daily or more often, lips included.</li></ul></div>
 </section>
 
 <section class="gobj" id="gobj-p8s-6">
-<h3>Sun Exposure &middot; Objective 6: recommend the best treatment</h3>
+<h3>Sun Exposure · Objective 6: recommend the best treatment</h3>
 <div class="gbar"><span>Objective (SE 4)</span><b>Dosing frequency and max days of use; onset; length of treatment; common and rare but serious adverse effects; contraindications and interactions</b><i>SE 14&ndash;18, 21, 31&ndash;33, 43&ndash;49, 54</i></div>
 <div class="gpt"><ul><li>Sunscreen (SE 14&ndash;15): broad spectrum, SPF &ge; 15, prefer 30+; water resistant for swimming or sweating. About 1 ounce, 15 minutes before; reapply every 40&ndash;80 minutes and after towel drying (SE 21).</li><li>Sensitive skin or a previous reaction (SE 17): zinc oxide or titanium dioxide; avoid PABA. &ldquo;What two ingredients are most effective, OK? Zinc oxide, titanium dioxide&rdquo; (T@55166 11/12).</li><li>Sunburn (SE 31&ndash;33): systemic analgesic for the first 1&ndash;2 days; skin protectant after 24 hours; aloe vera on intact skin as an alternative; first-aid antiseptics and topical anesthetics not recommended.</li><li>Photoaging (SE 43&ndash;49, 54): retinoid once at bedtime to dry skin, SPF 30+ by day; alpha hydroxy acid to dry skin within 15 minutes of cleansing; hydroquinone 4% for hyperpigmentation, three months at most, with sunscreen, not FDA-approved for OTC sale, ochronosis.</li></ul></div>
 <div class="gpoll"><b>Her polls</b><ul><li>Sunburn pain and tenderness: oral ibuprofen (not topical bacitracin, hydrocortisone or benzocaine) (T@65246 11/12).</li><li>Daily use to prevent skin cancer: water-resistant broad-spectrum sunscreen, SPF 50 (not SPF 10; not SPF 30 without broad spectrum; not clothing and hats alone) (T@65588&ndash;65673 11/12).</li><li>Hyperpigmentation: hydroquinone (not benzoyl peroxide, sodium hyaluronate or lactic acid) (T@76234 11/12).</li></ul></div>
@@ -708,7 +710,7 @@ const GUIDE_HTML = `
 </section>
 
 <section class="gobj" id="gobj-p8s-7">
-<h3>Sun Exposure &middot; Objective 7: follow-up</h3>
+<h3>Sun Exposure · Objective 7: follow-up</h3>
 <div class="gbar"><span>Objective (SE 4)</span><b>Provide follow-up recommendations</b><i>SE 34, 37, 53</i></div>
 <div class="gpt"><ul><li>Sunburn (SE 34): progressed or worse after 24&ndash;48 hours, or not healed in 7 days: refer. &ldquo;7-day policy applies here as well&rdquo; (T@64695 11/12).</li><li>Sunscreen (SE 37): stop any product that causes redness, itching, rash or exaggerated sunburn; on a photosensitizing drug, sunscreen and protective clothing every day.</li><li>Photoaging (SE 53): results take at least four weeks.</li></ul></div>
 </section>
@@ -718,21 +720,21 @@ const GUIDE_HTML = `
 <div class="gask"><b>How she asks (11/12)</b><ul><li>&ldquo;I&rsquo;m gonna tell you guys exactly what I want you guys to know. There&rsquo;s more information in these slides for your reference&rdquo; (T@77775 11/12); &ldquo;All that I mentioned, key terms, key points is what I want you to know&rdquo; (T@87898 11/12).</li><li>Self-care exclusions: &ldquo;I need you to know them&rdquo; (WC 7; T@79663 11/12). Dressings: &ldquo;Know the advantages, know the disadvantages&rdquo; (WC 8&ndash;9; T@80276 11/12). Burn categories: &ldquo;I want you to know&rdquo; (WC 16; T@83577 11/12).</li></ul></div>
 
 <section class="gobj" id="gobj-p8w-1">
-<h3>Wound Care &middot; Objective 1: wound type and severity</h3>
+<h3>Wound Care · Objective 1: wound type and severity</h3>
 <div class="gbar"><span>Objective (WC 2)</span><b>Identify wound type and severity</b><i>WC 4&ndash;6, 16</i></div>
 <div class="gpt"><ul><li>Types (WC 4): abrasions; punctures (bites, sharp objects); lacerations; burns (thermal, electrical, chemical, UV radiation).</li><li>Stages by depth (WC 5): 1, unbroken, reddened, non-blanching skin; 2, blister or partial-thickness loss (epidermis and part of the dermis); 3, full-thickness loss; 4, into subcutaneous tissue, muscle, tendon and bone. The higher the stage, the longer the healing (T@79102 11/12).</li><li>Healing phases (WC 6, 27): inflammatory, proliferative, remodeling.</li><li>Burns (WC 16): minor, under 15% BSA superficial in an adult, under 10% in a child; moderate, 15%&ndash;25% adult, 10&ndash;20% child; major, over 25% adult, over 20% child, or eyes, ears, face, genitalia, inhalation or electrical burns, poor-risk patients.</li></ul></div>
 <div style="display:flex;flex-wrap:wrap;gap:7px;margin:8px 0"><button type="button" class="chip" data-jump="ref:ref-p8-wound">Reference: wound stages and burn categories</button></div>
 </section>
 
 <section class="gobj" id="gobj-p8w-2">
-<h3>Wound Care &middot; Objective 2: assess and recommend treatment</h3>
+<h3>Wound Care · Objective 2: assess and recommend treatment</h3>
 <div class="gbar"><span>Objective (WC 2)</span><b>Assess and recommend treatment for wounds</b><i>WC 3, 8&ndash;11, 14&ndash;15, 18&ndash;20, 25, 27</i></div>
 <div class="gpt"><ul><li>Goals (WC 3): facilitate healing; reduce scarring; prevent secondary bacterial skin infection; refer if necessary.</li><li>Order (WC 27; T@82489, T@87422 11/12): cleanse with clean water or saline; an antibiotic only when indicated; then a dressing suited to the wound; a moist healing environment.</li><li>First-aid antibiotics (WC 11, 20): bacitracin, neomycin, polymyxin B; after cleansing and before bandaging; 1 to 3 times a day; neomycin systemic toxicity with large areas.</li><li>Topical anesthetics (WC 14, 20): up to 4 times daily; relief for 15 to 45 minutes; small amounts on broken skin; benzocaine, methemoglobinemia. &ldquo;Understand the systemic toxicity of overuse&rdquo; (T@85399 11/12).</li><li>Antiseptics (WC 15, 19): intact skin at the wound edges; inside the wound they reduce healing.</li><li>Dressings (WC 8&ndash;9): gauze absorbs but gives no moist environment and needs frequent changes; hydrocolloid and transparent film give a moist environment, for uninfected wounds only; film is not absorptive.</li><li>Minor burn (WC 18&ndash;20): cool water; acetaminophen or an NSAID; skin protectant; antibiotic or anesthetic as above.</li><li>Smoking (WC 25): 1 pack per day, 3 times the flap necrosis; 2 packs, 6 times.</li></ul></div>
 <div style="display:flex;flex-wrap:wrap;gap:7px;margin:8px 0"><button type="button" class="chip" data-jump="ref:ref-p8-wound">Reference: wound products and burns</button></div>
 </section>
 
 <section class="gobj" id="gobj-p8w-3">
-<h3>Wound Care &middot; Objective 3: referral and follow-up</h3>
+<h3>Wound Care · Objective 3: referral and follow-up</h3>
 <div class="gbar"><span>Objective (WC 2)</span><b>Provide appropriate referral and/or follow-up for wound care</b><i>WC 7, 16&ndash;17, 20</i></div>
 <div class="gpt"><ul><li>Refer a wound (WC 7): face, hands, feet, major joints, genitals or perineum; larger than 3 inches; animal or human bite; chemical, electrical, inhalation or circumferential burn; deep partial thickness or deeper; signs of infection; diabetes or another disorder that complicates management; foreign matter after irrigation; chronic wound.</li><li>Follow-up (WC 7; T@79459 11/12): worse or not healed in 24&ndash;48 hours and/or 7 days. Topical antibiotic with no improvement within 7 days: primary care provider (WC 20).</li><li>Refer a burn (WC 16&ndash;17): moderate or major; 2% BSA or more of a moderate to severe burn; eyes, ears, face, hands, feet or perineum; chemical (after first aid), electrical or inhalation; advanced age; diabetes or multiple medical disorders; immunocompromised.</li></ul></div>
 </section>
@@ -742,45 +744,45 @@ const GUIDE_HTML = `
 <div class="gask"><b>How she asks (11/12)</b><ul><li>&ldquo;Pay attention to how many days you&rsquo;re using the products for. How many times can we repeat it for, OK? When do we refer the patient? Those are big things with this PowerPoint&rdquo; (T@94913 11/12).</li><li>Wart types: &ldquo;Know what is self-treatable&rdquo; (WCC 6; T@90202 11/12).</li></ul></div>
 
 <section class="gobj" id="gobj-p8c-1">
-<h3>Warts, Corns and Calluses &middot; Objective 1: the self-care interview</h3>
+<h3>Warts, Corns and Calluses · Objective 1: the self-care interview</h3>
 <div class="gbar"><span>Objective (WCC 2)</span><b>Perform the components of the SCHOLAR-MAC/QuEST and the Pharmacist&rsquo;s Patient Care Process in the self-care interview for dermatologic conditions</b><i>WCC 5&ndash;6, 16</i></div>
 <div class="gpt"><ul><li>Answers that change the plan: where the lesion is and what it looks like (WCC 5&ndash;6); diabetes or poor blood circulation; irritated, infected or reddened skin; a mole or birthmark (WCC 16).</li><li>Footwear &ldquo;tends to be the most common cause&rdquo; of corns and calluses (T@93710 11/12).</li></ul></div>
 </section>
 
 <section class="gobj" id="gobj-p8c-2">
-<h3>Warts, Corns and Calluses &middot; Objective 2: wart, corn or callus?</h3>
+<h3>Warts, Corns and Calluses · Objective 2: wart, corn or callus?</h3>
 <div class="gbar"><span>Objective (WCC 2)</span><b>Determine the dermatologic condition based on the patient&rsquo;s signs and symptoms and history</b><i>WCC 4&ndash;6, 13</i></div>
 <div class="gpt"><ul><li>Wart (WCC 4&ndash;5): HPV, limited to the epidermis; rough, cauliflower-like; a plantar wart disrupts the skin ridges; hands HPV-2, -4, -27, -57, feet HPV-1.</li><li>Corn (WCC 5, 13): over a bony prominence of the foot; small, raised, sharply demarcated, with a central core; painful; a few millimeters to 1 cm.</li><li>Callus (WCC 5, 13): weight-bearing areas; broad base, diffuse borders, yellowish, normal skin ridges; usually not painful; a few millimeters to several centimeters.</li></ul></div>
 <div style="display:flex;flex-wrap:wrap;gap:7px;margin:8px 0"><button type="button" class="chip" data-jump="ref:ref-p8-wcc">Reference: wart, corn or callus</button></div>
 </section>
 
 <section class="gobj" id="gobj-p8c-3">
-<h3>Warts, Corns and Calluses &middot; Objective 3: is the patient a self-care candidate?</h3>
+<h3>Warts, Corns and Calluses · Objective 3: is the patient a self-care candidate?</h3>
 <div class="gbar"><span>Objective (WCC 2)</span><b>Determine if the patient is an appropriate self-care candidate</b><i>WCC 6, 16</i></div>
 <div class="gpt"><ul><li>Self-treatable warts (WCC 6): common warts (hands) and plantar warts (feet). Not self-treatable: flat (face), mosaic (grouped plantar), periungual (around the nail), filiform (face).</li><li>No salicylic acid (WCC 16): diabetes; poor blood circulation; irritated, infected or reddened skin; moles or birthmarks; face, genital or mucous membrane warts.</li></ul></div>
 </section>
 
 <section class="gobj" id="gobj-p8c-4">
-<h3>Warts, Corns and Calluses &middot; Objective 4: treatment goals</h3>
+<h3>Warts, Corns and Calluses · Objective 4: treatment goals</h3>
 <div class="gbar"><span>Objective (WCC 2)</span><b>List treatment goals</b><i>WCC 7, 14</i></div>
 <div class="gpt"><ul><li>Warts (WCC 7): eliminate signs and symptoms; remove the lesion without scarring; prevent recurrence; prevent the spread of HPV.</li><li>Corns and calluses (WCC 14): symptomatic relief; remove the corn or callus; prevent recurrence by correcting the cause.</li></ul></div>
 </section>
 
 <section class="gobj" id="gobj-p8c-5">
-<h3>Warts, Corns and Calluses &middot; Objective 5: non-drug therapy</h3>
+<h3>Warts, Corns and Calluses · Objective 5: non-drug therapy</h3>
 <div class="gbar"><span>Objective (WCC 2)</span><b>Recommend appropriate non-drug therapy</b><i>WCC 8, 15</i></div>
 <div class="gpt"><ul><li>Warts (WCC 8): no cutting, shaving or picking; hands washed before and after touching the wart; a designated towel; no shared towels, razors, socks or shoes; the wart kept covered; foot coverings in bathrooms and public spaces; padding over a plantar wart.</li><li>Corns and calluses (WCC 15): soak 5 minutes in warm water daily; remove dead tissue gently; circular foam or gel cushioning pads; well-fitting, non-binding footwear; orthotics.</li></ul></div>
 </section>
 
 <section class="gobj" id="gobj-p8c-6">
-<h3>Warts, Corns and Calluses &middot; Objective 6: recommend the best treatment</h3>
+<h3>Warts, Corns and Calluses · Objective 6: recommend the best treatment</h3>
 <div class="gbar"><span>Objective (WCC 3)</span><b>Dosing frequency and max days of use; onset; length of treatment; amount of topical product and tube size; adverse effects; contraindications and interactions</b><i>WCC 9&ndash;12, 16&ndash;17</i></div>
 <div class="gpt"><ul><li>Wart, salicylic acid (WCC 10): 40% pad removed after 48 hours and repeated every 48 hours; 17% liquid 1&ndash;2 times a day; either for up to 12 weeks. Salicylic acid &ldquo;is the most effective&rdquo; (T@92731 11/12).</li><li>Wart, cryotherapy (WCC 11): about 20 seconds for a common wart, about 40 seconds for a plantar wart; repeated after 2 weeks if needed; up to 3 treatments. Warts only.</li><li>Corn or callus, salicylic acid (WCC 17): 17% no more than twice daily for up to 14 days; 40% plaster removed within 48 hours, reapplied every 48 hours, no longer than 14 days (7 applications).</li><li>Before each (WCC 10, 17): wash, soak 5 minutes in warm water, dry; keep the product off healthy skin.</li><li>Objective 6.4 names the amount and tube size of a topical product; this deck has no worked calculation. The adult fingertip-unit chart is in Reference.</li></ul></div>
 <div style="display:flex;flex-wrap:wrap;gap:7px;margin:8px 0"><button type="button" class="chip" data-jump="ref:ref-p8-wcc">Reference: salicylic acid and cryotherapy directions</button><button type="button" class="chip" data-jump="ref:ref-p5-ftu">Reference: fingertip units</button></div>
 </section>
 
 <section class="gobj" id="gobj-p8c-7">
-<h3>Warts, Corns and Calluses &middot; Objective 7: follow-up</h3>
+<h3>Warts, Corns and Calluses · Objective 7: follow-up</h3>
 <div class="gbar"><span>Objective (WCC 3)</span><b>Provide follow-up recommendations</b><i>WCC 4, 10&ndash;11, 17</i></div>
 <div class="gpt"><ul><li>Corn or callus (WCC 17; T@94630 11/12): medical attention if redness or irritation occurs, or if it is not removed after 14 days of treatment. It may take several days to months to resolve.</li><li>Wart (WCC 10&ndash;11): the product limits are 12 weeks of salicylic acid and 3 cryotherapy treatments. WCC 4 prints &ldquo;Recurrent or recalcitrant warts should be referred&rdquo;; she said &ldquo;if you see reoccurrence of the wart, that&rsquo;s when we need treatment&rdquo; (T@88519 11/12); see Reference.</li></ul></div>
 </section>

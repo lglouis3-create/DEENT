@@ -117,6 +117,8 @@ const W = {
  'BP5-048': ['3', '14', '2'],
  'BSX-001': ['6', '10', '400'],
  'BSX-002': ['40', '5', '3'],
+ 'BSX-003': ['10', '40', '12'],
+ 'BL1-003': ['vitamin D', 'glucocorticoid', 'NFAT'],
  'BKX-001': ['steroid', 'sterol', 'secosterod'],
  'BKX-002': ['25-hydroxylase', 'CYP2R1', '1-beta-hydroxylase'],
  'BP6-001': ['30', '14', '3'],

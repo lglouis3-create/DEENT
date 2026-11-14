@@ -9,6 +9,7 @@ const REFERENCE_HTML = `
 <tr><td><b>Acne</b></td><td>Keratolytics; antibiotics; nuclear receptor binders; antiandrogens</td><td>Pathophys 37</td></tr>
 </tbody></table>
 <p class="prose">Note: slide 28 prints "IL-12 &amp; IL-13 inhibitors"; slide 21 names IL-23, not IL-13, among the psoriasis cytokines, and the drug chart lists ustekinumab as an IL-12 &amp; IL-23 inhibitor. No question keys on this line until it is settled.</p>
+<p class="prose">Class lists and product slides differ on keratolytics. Slide 28 lists no keratolytics and no PDE-4 inhibitors for psoriasis, and slide 37 lists keratolytics for acne; PCol slide 40 gives salicylic acid at 3 to 6% for acne, dandruff and psoriasis, and Dr. Sikazwe's slide 33 gives apremilast, a PDE-4 inhibitor, for plaque psoriasis. In the class lists, keratolytics appear under acne (slide 37) and not under psoriasis (slide 28), and PDE-4 inhibitors appear under atopic dermatitis (slide 17) and not under psoriasis (slide 28).</p>
 
 <h3 id="ref-l1-acnemap">Skin Pathophysiology (Dr. Smith): acne pathology and the drugs aimed at it, slide 36</h3>
 <table class="reftab"><thead><tr><th style="width:28%">Component</th><th>Drugs in the figure</th></tr></thead><tbody>
@@ -21,14 +22,24 @@ const REFERENCE_HTML = `
 <!--DIA:acne-cascade-->
 
 <h3 id="ref-l1-nr">Skin Pharmacology (Dr. Smith): nuclear receptors for DEENT, slide 7</h3>
-<table class="reftab"><thead><tr><th style="width:34%">Receptor</th><th>DNA binding site on the slide</th></tr></thead><tbody>
-<tr><td><b>Glucocorticoid receptor</b></td><td>GRE, glucocorticoid response element</td></tr>
-<tr><td><b>Retinoic acid receptors RAR/RXR</b></td><td>RARE, retinoic acid response element</td></tr>
-<tr><td><b>Vitamin D receptor</b></td><td>Slide 7 lists TRE, transcription factor response element; see note</td></tr>
+<table class="reftab"><thead><tr><th style="width:26%">Receptor</th><th style="width:30%">Drugs on the slides</th><th>DNA binding site on the slide</th></tr></thead><tbody>
+<tr><td><b>Glucocorticoid receptor</b></td><td>Corticosteroids (slide 11: hydrocortisone, betamethasone valerate)</td><td>GRE, glucocorticoid response element</td></tr>
+<tr><td><b>Retinoic acid receptors RAR/RXR</b></td><td>Retinoids (tretinoin, adapalene, tazarotene, isotretinoin, acitretin; PCol 14&ndash;15, 19)</td><td>RARE, retinoic acid response element</td></tr>
+<tr><td><b>Vitamin D receptor</b></td><td>Calcipotriene (slide 21)</td><td>Slide 7 lists TRE, transcription factor response element; slide 21 says vitamin D response elements; see note</td></tr>
 </tbody></table>
-<p class="prose">Transcription factors that work with them: NF-kB and AP-1 (slide 7). Note: slide 21 of the same deck (taught 10/30) says the vitamin D receptor–RXR dimer binds vitamin D response elements; no question keys the vitamin D binding site until this is settled.</p>
+<p class="prose">Transcription factors that work with them: NF-kB and AP-1 (slide 7). Note: slide 21 of the same deck (taught 10/30) says the vitamin D receptor&ndash;RXR dimer binds vitamin D response elements; no question keys the vitamin D binding site until this is settled.</p>
 
+<h4>Glucocorticoid receptor: corticosteroids</h4>
+<p class="prose">The drug binds the glucocorticoid receptor. Direct route: two drug&ndash;receptor complexes bind the GRE. Indirect route: one complex binds a transcription factor (NF-kB or AP-1), which then cannot bind DNA (slides 5&ndash;6).</p>
 <!--DIA:nr-action-->
+
+<h4>Retinoic acid receptors RAR and RXR: retinoids</h4>
+<p class="prose">A retinoid binds RARs and RXRs, which form a RAR&ndash;RXR heterodimer. The heterodimer moves into the nucleus and binds the RARE (slide 14). Retinoids that target RARs mainly affect differentiation and proliferation (acne, psoriasis, photoaging); retinoids that target RXRs mainly induce apoptosis (Kaposi sarcoma).</p>
+<!--DIA:nr-rar-->
+
+<h4>Vitamin D receptor: calcipotriene</h4>
+<p class="prose">Calcipotriene acts through the vitamin D receptor. The VDR&ndash;drug complex heterodimerizes with RXR-&alpha; and binds vitamin D response elements on DNA, which increases expression of genes that modulate epidermal differentiation and inflammation (slide 21). Effect: inhibits proliferation, promotes keratinocyte differentiation and decreases inflammatory cytokine release.</p>
+<!--DIA:nr-vdr-->
 
 <h3 id="ref-l1-steroids">Skin Pharmacology (Dr. Smith): topical corticosteroids, slide 11</h3>
 <table class="reftab"><thead><tr><th style="width:30%">Situation</th><th>Potency on the slide</th></tr></thead><tbody>

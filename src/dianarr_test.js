@@ -11,7 +11,11 @@
    - Pause holds the step, Resume goes on; Next stops the narration and leaves
      the figure on the step chosen; Listen and Stop do not move the figure;
    - Listen in the Enlarge view; a static figure's Listen;
-   - no horizontal scroll, no page or console error.
+   - no horizontal scroll, no page or console error;
+   - an idle page stays idle (review finding E-F0, 2026-11-13): at 390x844, each
+     of Diagrams, Guides and Reference on a fresh load, no change under <main> in
+     1.5 s; the labels still follow Listen, Pause, Resume and Stop, by script and
+     by a real click, and the page is idle again after Stop.
 
      node dianarr_test.js        (after build.py)
    ========================================================================== */
@@ -23,12 +27,14 @@ const ROOT = path.join(__dirname, '..');
 if (!fs.existsSync(path.join(ROOT, 'index.html'))) L.notRun(NAME, 'no built index.html at the repository root (run build.py first)');
 if (!/const DIA_NARR_UI = /.test(fs.readFileSync(path.join(ROOT, 'index.html'), 'utf8'))) L.notRun(NAME, 'the built page has no dianarr_ui.js');
 
-const wav = (() => {   // 0.15 s of silence
-  const n = 1200, b = Buffer.alloc(44 + n * 2);
+const silence = n => {   // n samples of silence at 8,000 a second
+  const b = Buffer.alloc(44 + n * 2);
   b.write('RIFF', 0); b.writeUInt32LE(36 + n * 2, 4); b.write('WAVE', 8); b.write('fmt ', 12); b.writeUInt32LE(16, 16);
   b.writeUInt16LE(1, 20); b.writeUInt16LE(1, 22); b.writeUInt32LE(8000, 24); b.writeUInt32LE(16000, 28); b.writeUInt16LE(2, 32);
   b.writeUInt16LE(16, 34); b.write('data', 36); b.writeUInt32LE(n * 2, 40); return b;
-})();
+};
+const wav = silence(1200);        // 0.15 s
+const wavLong = silence(32000);   // 4 s: a step that is still playing when the idle part reads the buttons
 function fakeVoice() {
   const q = []; let busy = false, timer = null;
   const S = {
@@ -167,9 +173,78 @@ function fakeVoice() {
         const over = await page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth);
         L.check(over <= 0, `${v}: no horizontal scroll`, `${over}px`);
       }
-      const keyb = await page.evaluate(() => { const b = document.querySelector('#v-guide [data-dnplay]'); b.focus(); return document.activeElement === b && !!b.getAttribute('aria-label'); });
+      // the first figure of the Guides is in the Exam 1 folder (examfold_ui.js), closed by default: a button inside a
+      // closed <details> cannot take focus, so the folds around it are opened first, as a reader would
+      const keyb = await page.evaluate(() => { const b = document.querySelector('#v-guide [data-dnplay]');
+        for (let d = b.closest('details'); d; d = d.parentElement && d.parentElement.closest('details')) d.open = true;
+        b.focus(); return document.activeElement === b && !!b.getAttribute('aria-label'); });
       L.check(keyb, 'Listen takes keyboard focus and has a label');
       L.check(!errors.length, 'no page or console error', errors.slice(0, 5).join(' | '));
+      await ctx.close();
+    }
+
+    /* An idle page stays idle (E-F0). ui() used to write every Listen button's label, aria-pressed and the Stop
+       button's hidden state on every call; the label write replaced the button's text node, which the file's own
+       observer saw as a change to the page, so it drew again on the next frame, for as long as one Listen button
+       was in the document (10,530 records in 1.5 s on Diagrams, 8,910 on Guides, 546 on Reference). */
+    console.log('\n=== 390x844, idle: the Listen buttons are written only when they change ===');
+    const records = (page, ms) => page.evaluate(ms => new Promise(res => {
+      const what = {}; let n = 0;
+      const take = l => l.forEach(r => { n++; const k = r.type + ' ' + r.target.nodeName.toLowerCase() + (r.attributeName ? '[' + r.attributeName + ']' : ''); what[k] = (what[k] || 0) + 1; });
+      const mo = new MutationObserver(take);
+      mo.observe(document.querySelector('main'), {childList: true, subtree: true, characterData: true, attributes: true});
+      setTimeout(() => { take(mo.takeRecords()); mo.disconnect(); res({n, what: JSON.stringify(what)}); }, ms);
+    }), ms);
+    for (const [v, name] of [['diagrams', 'Diagrams'], ['guide', 'Guides'], ['ref', 'Reference']]) {
+      const ctx = await browser.newContext({viewport: {width: 390, height: 844}, serviceWorkers: 'block'});
+      await ctx.addInitScript(fakeVoice);
+      await ctx.addInitScript(() => { window.prompt = () => 'TestUser'; window.__sayMs = 4000; });
+      const page = await ctx.newPage();
+      const errors = [];
+      page.on('pageerror', e => errors.push('pageerror: ' + e.message));
+      page.on('dialog', d => d.accept());
+      await page.route('**/audio/*.mp3', r => r.fulfill({status: 200, contentType: 'audio/wav', body: wavLong}));
+      await page.goto(site.url + 'index.html');
+      await page.waitForFunction(() => typeof NS === 'string' && document.querySelectorAll('#nav button').length > 3, null, {timeout: 20000});
+      await page.evaluate(v => show(v), v);
+      await page.waitForTimeout(1500);   // the tab's own drawing (folders, slide links, table boxes) has finished
+      const nb = await page.evaluate(v => document.querySelectorAll(`#v-${v} [data-dnplay]`).length, v);
+      const r = await records(page, 1500);
+      L.check(nb > 0, `${name}, fresh load: the tab has Listen buttons (${nb})`);
+      L.check(r.n === 0, `${name}, fresh load: nothing under <main> changes in 1.5 s with the page left alone`, `${r.n} records: ${r.what}`);
+      if (v === 'diagrams') {
+        // the labels by script, read straight after each press
+        const s = await page.evaluate(() => {
+          const fig = document.querySelector('#v-diagrams [data-anim="fig-costim"]').closest('figure');
+          const b = fig.querySelector('[data-dnplay]'), sb = fig.querySelector('[data-dnstop]');
+          const st = () => `${b.textContent.trim()}|${b.getAttribute('aria-pressed')}|${sb.hidden ? 'stop hidden' : 'stop shown'}`;
+          const out = [st()];
+          b.click(); out.push(st()); b.click(); out.push(st()); b.click(); out.push(st()); sb.click(); out.push(st());
+          return out;
+        });
+        L.check(s[0] === '♪ Listen|false|stop hidden', 'before Listen: the button reads Listen, not pressed, Stop hidden', s[0]);
+        L.check(s[1] === '❚❚ Pause|true|stop shown', 'Listen: the button reads Pause, pressed, Stop shown', s[1]);
+        L.check(s[2] === '▶ Resume|false|stop shown', 'Pause: the button reads Resume, not pressed, Stop still shown', s[2]);
+        L.check(s[3] === '❚❚ Pause|true|stop shown', 'Resume: the button reads Pause again, pressed', s[3]);
+        L.check(s[4] === '♪ Listen|false|stop hidden', 'Stop: the button reads Listen again, not pressed, Stop hidden', s[4]);
+        // a real click, and the page while a narration is paused and after it is stopped
+        const fig = page.locator('#v-diagrams figure.fig', {has: page.locator('[data-anim="fig-ribosome"]')});
+        const listen = fig.locator('[data-dnplay]'), stopB = fig.locator('[data-dnstop]');
+        await listen.scrollIntoViewIfNeeded();
+        await listen.click();
+        const c1 = await page.evaluate(() => { const p = DIA_NARR_UI.playing(); return !!p && p.key === 'fig-ribosome' && !p.paused; });
+        L.check(c1 && (await listen.textContent()).includes('Pause') && await stopB.isVisible(), 'a real click on Listen starts the narration: Pause and Stop are shown');
+        await listen.click();
+        L.check((await listen.textContent()).includes('Resume') && await listen.getAttribute('aria-pressed') === 'false', 'a real click on Pause: the button reads Resume');
+        const rp = await records(page, 1500);
+        L.check(rp.n <= 20, 'while the narration is paused the buttons are not rewritten (at most 20 records in 1.5 s)', `${rp.n} records: ${rp.what}`);
+        await stopB.click();
+        L.check((await listen.textContent()).includes('Listen') && !(await stopB.isVisible()) && !(await page.evaluate(() => DIA_NARR_UI.playing())), 'a real click on Stop: Listen again, Stop hidden, nothing playing');
+        await page.waitForTimeout(300);
+        const ra = await records(page, 1500);
+        L.check(ra.n === 0, 'after Stop nothing under <main> changes in 1.5 s', `${ra.n} records: ${ra.what}`);
+      }
+      L.check(!errors.length, `${name}: no page error`, errors.slice(0, 5).join(' | '));
       await ctx.close();
     }
   } finally { await browser.close(); site.close(); }
