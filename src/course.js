@@ -289,6 +289,8 @@ const COURSE = {
           'chart_boxes.js', 'druglist_data.js', 'drugfacts.js', 'druglist_ui.js',
           // the Diseases tab (Louis, 2026-11-13): cards per condition, drug panels, tell-apart sets (dz_build.py, dz_check.js)
           'dz_data.js', 'dz_ui.js',
+          // the FTU tab (Louis, 2026-11-14): typed fingertip-unit practice with a body diagram and a record (ftu_test.js)
+          'ftu_ui.js',
           // Slide links (Louis, 2026-11-13): a slide citation opens that slide from the clean decks in deck/
           // (slide_data.js: the page map and tables, written by slide_map.py; slide_check.js, slide_test.js)
           'slide_data.js', 'slide_ui.js',
