@@ -1213,7 +1213,7 @@ const GUIDE_HTML = `
 <tbody>
 <tr><th scope="row">Infancy (0&ndash;2 y)</th><td><span class="g2-lab">Quality</span>Erythematous papular rash that tends to ooze</td><td><span class="g2-lab">Region</span>Face, scalp, trunk, arms, legs</td><td><span class="g2-lab">Timing</span>Most common onset <b>3&ndash;6 months</b>; majority by age one</td></tr>
 <tr><th scope="row">Childhood (2&ndash;puberty)</th><td><span class="g2-lab">Quality</span>Dry, flaky, rough, cracked skin, crusting, lichenification</td><td><span class="g2-lab">Region</span>Face, creases of the neck, elbows, wrists, knees, ankles</td><td><span class="g2-lab">Timing</span>Up to <b>90%</b> by age 5</td></tr>
-<tr><th scope="row">Adulthood</th><td><span class="g2-lab">Quality</span>More diffuse, underlying erythema, dry scaly skin, lichenification</td><td><span class="g2-lab">Region</span>Less on the face; more on hands, neck, inner elbows, back of knees, ankles</td><td><span class="g2-lab">Timing</span>May have resolution by adulthood (<b>70&ndash;90%</b>, slide; her spoken reading differs, T@19746)</td></tr>
+<tr><th scope="row">Adulthood</th><td><span class="g2-lab">Quality</span>More diffuse, underlying erythema, dry scaly skin, lichenification</td><td><span class="g2-lab">Region</span>Less on the face; more on hands, neck, inner elbows, back of knees, ankles</td><td><span class="g2-lab">Timing</span>May have resolution by adulthood (<b>70&ndash;90%</b>, slide; she gave the same figure in class, T@19746)</td></tr>
 </tbody>
 </table>
 <p class="g2-p">Earlier onset, longer persistence <span class="g2-src">(DT 22; T@20296)</span>.</p>
@@ -1415,7 +1415,7 @@ const GUIDE_HTML = `
 <tr><th scope="row"><b>A</b>ir</th><td>Air dry, diaper-free time</td></tr>
 <tr><th scope="row"><b>B</b>arrier</th><td>Protectant liberally at each change</td></tr>
 <tr><th scope="row"><b>C</b>leansing</th><td>Soft cloth and warm water, or a baby wipe when stool is present</td></tr>
-<tr><th scope="row"><b>D</b>iaper</th><td>Change frequently (every <b>2 hours</b>) and as soon as soiled, if possible (slide 57: infants every 3&ndash;4 hours); absorbent disposable diapers if affordable</td></tr>
+<tr><th scope="row"><b>D</b>iaper</th><td>Change frequently (newborns every <b>2 hours</b>; infants every 3&ndash;4 hours, slide 57) and as soon as soiled, if possible; absorbent disposable diapers if affordable</td></tr>
 <tr><th scope="row"><b>E</b>ducation</th><td>Educate parents and caregivers about nonpharmacologic diaper hygiene practices and pharmacotherapy, verifying understanding to ensure adherence</td></tr>
 </tbody>
 </table>
@@ -2269,7 +2269,7 @@ const GUIDE_HTML = `
 </div>
 <div class="gpt g2-block"><h5><span class="g2-num">3.</span> Complications <span class="g2-src">(AT 11)</span></h5>
 <p class="g2-p">Anxiety, depression, scarring.</p>
-<p class="g2-said"><span class="g2-k">Said in class</span>Scarring the most common, and can be lifelong (slide 11; in class: unless treated with something abrasive, T@11913) <span class="g2-src">(T@11709)</span></p>
+<p class="g2-said"><span class="g2-k">Said in class</span>Scarring the most common complication, and can be lifelong (slide 11; in class: unless treated with something abrasive, T@11913 11/10) <span class="g2-src">(T@11709 11/10)</span></p>
 </div>
 <div class="gpt g2-block"><h5><span class="g2-num">4.</span> Testing <span class="g2-src">(AT 17)</span></h5>
 <table class="g2-table g2-kv">
@@ -2346,7 +2346,7 @@ const GUIDE_HTML = `
 <tbody>
 <tr><th scope="row">Benzoyl peroxide</th><td><span class="g2-lab">Bactericidal</span>Yes</td><td><span class="g2-lab">Keratolytic</span>Yes</td><td><span class="g2-lab">Comedolytic</span>Yes</td></tr>
 <tr><th scope="row">Topical retinoid</th><td><span class="g2-lab">Bactericidal</span>No</td><td><span class="g2-lab">Keratolytic</span>Yes</td><td><span class="g2-lab">Comedolytic</span>Yes</td></tr>
-<tr><th scope="row">Alpha and beta hydroxy acids (comedolytic only for the beta-hydroxy acids)</th><td><span class="g2-lab">Bactericidal</span>No</td><td><span class="g2-lab">Keratolytic</span>Yes</td><td><span class="g2-lab">Comedolytic</span>Yes</td></tr>
+<tr><th scope="row">Alpha and beta hydroxy acids</th><td><span class="g2-lab">Bactericidal</span>No</td><td><span class="g2-lab">Keratolytic</span>Yes</td><td><span class="g2-lab">Comedolytic</span>Yes (&beta;-hydroxy acids)</td></tr>
 <tr><th scope="row">Sulfur</th><td><span class="g2-lab">Bactericidal</span>No</td><td><span class="g2-lab">Keratolytic</span>Yes</td><td><span class="g2-lab">Comedolytic</span>Yes</td></tr>
 <tr><th scope="row">Resorcinol</th><td><span class="g2-lab">Bactericidal</span>Yes (and antifungal)</td><td><span class="g2-lab">Keratolytic</span>Yes</td><td><span class="g2-lab">Comedolytic</span>No</td></tr>
 </tbody>
@@ -2364,14 +2364,14 @@ const GUIDE_HTML = `
 <div class="gpt g2-block"><h5><span class="g2-num">1.</span> Step by step <span class="g2-src">(T@54687, T@57819, T@59132)</span></h5>
 <div class="g2-ladder">
 <div class="g2-rung"><div class="g2-sev">First</div><div class="g2-cells">
-<div class="g2-cell"><span class="g2-k">Mild acne, in this order (moderate: a topical combination; severe: oral antibiotic + topical combination first)</span><ul>
+<div class="g2-cell"><span class="g2-k">Mild acne, in this order</span><ul>
 <li>One agent</li>
 <li>Then the other</li>
 <li>Then combinations of two</li>
 <li>Then three</li>
 </ul></div>
 </div></div>
-<div class="g2-rung g2-s2"><div class="g2-sev">Moderate: after the topical combinations have been tried (severe: oral antibiotic is part of the first line)</div><div class="g2-cells">
+<div class="g2-rung g2-s2"><div class="g2-sev">Moderate: after the topical combinations have been tried. Severe acne starts with an oral antibiotic plus a topical combination</div><div class="g2-cells">
 <div class="g2-cell"><span class="g2-k">Next</span><p>An oral antibiotic</p></div>
 </div></div>
 <div class="g2-rung g2-s3"><div class="g2-sev">Absolute last line (she said so for moderate; slide 40 also prints it in the severe first-line box)</div><div class="g2-cells">
@@ -2407,7 +2407,7 @@ const GUIDE_HTML = `
 <table class="g2-table g2-kv">
 <tbody>
 <tr><th scope="row">When</th><td>Apply at night after washing; separate from BP (am vs pm; she put BP as the morning wash)</td></tr>
-<tr><th scope="row">Not with</th><td>Slide: do not use with sulfur, resorcinol, salicylic acid or vitamin C; in class, asked by a student: &ldquo;You may, but separate it&rdquo; (T@32038)</td></tr>
+<tr><th scope="row">Not with</th><td>Slide: do not use with sulfur, resorcinol, salicylic acid or vitamin C; in class, asked by a student: &ldquo;You may, but separate it&rdquo; (T@32038 11/10)</td></tr>
 <tr><th scope="row">Also use</th><td>Moisturizer and sunscreen</td></tr>
 <tr><th scope="row">Age</th><td>Over <b>12 years</b></td></tr>
 </tbody>
@@ -2982,7 +2982,7 @@ const GUIDE_HTML = `
 <tbody>
 <tr><th scope="row">Mild</th><td><b>&le; 5%</b></td></tr>
 <tr><th scope="row">Moderate</th><td><b>&ge; 8%</b></td></tr>
-<tr><th scope="row">Severe</th><td><b>BSA &ge; 10%</b>, PASI &ge; 10, <i>or</i> DLQI &ge; 10 on the slide (she first said 20%, then &ldquo;corrected to 10% ... follow this slide&rdquo;, T@10484 11/11; &ldquo;I only want you to know the BSA&rdquo;)</td></tr>
+<tr><th scope="row">Severe</th><td><b>BSA &ge; 10%</b>, PASI &ge; 10, <i>or</i> DLQI &ge; 10 on the slide (she said 10%, noting that older guidelines said 20% and &ldquo;it has been corrected to 10%&rdquo;: follow the slide, T@10484 11/11; &ldquo;I only want you to know the BSA&rdquo;)</td></tr>
 </tbody>
 </table>
 </div>
@@ -3103,7 +3103,7 @@ const GUIDE_HTML = `
 <table class="g2-table">
 <thead><tr><th scope="col">Agent</th><th scope="col">Use</th></tr></thead>
 <tbody>
-<tr><th scope="row">Corticosteroids</th><td><b>2&ndash;4 times daily</b> (cream or lotion by day, ointment at night); low potency for face and skin folds; limit duration (<b>&le; 4 weeks</b>) and surface area. Said in class: the most effective (T@13906 11/11)</td></tr>
+<tr><th scope="row">Corticosteroids</th><td><b>2&ndash;4 times daily</b> (cream or lotion by day, ointment at night); low potency for face and skin folds; limit duration (<b>&le; 4 weeks</b>) and surface area. Said in class: in general shown to be the most effective, though she said no topical is &ldquo;better than the other&rdquo; for choosing (T@13906 11/11)</td></tr>
 <tr><th scope="row">Calcipotriene</th><td>Once or twice daily (ointment); twice daily (cream or foam)</td></tr>
 <tr><th scope="row">Tazarotene, adapalene</th><td>At bedtime</td></tr>
 <tr><th scope="row">Anthralin</th><td>Thick plaques only, <b>&le; 2 hours</b>, then wiped off; zinc oxide around the edges</td></tr>
@@ -3853,7 +3853,7 @@ const GUIDE_HTML = `
 <tbody>
 <tr><th scope="row">Itch</th><td>An oral antihistamine</td></tr>
 <tr><th scope="row">Dry lesions</th><td>An anesthetic or a counterirritant (dry only); hydrocortisone (wet or dry)</td></tr>
-<tr><th scope="row">Weeping lesions</th><td>An astringent (aluminum acetate); hydrocortisone is also listed for wet or dry</td></tr>
+<tr><th scope="row">Weeping lesions</th><td>An astringent (aluminum acetate); hydrocortisone (wet or dry, as above)</td></tr>
 <tr><th scope="row">Severe</th><td>Oral corticosteroids; topical corticosteroids suit any presentation</td></tr>
 </tbody>
 </table>

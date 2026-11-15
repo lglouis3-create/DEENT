@@ -351,7 +351,7 @@ const REFERENCE_HTML = `
 <tr><td><b>Between 5% and 8%</b> (her poll, 7%)</td><td>Mild to moderate</td><td>As above; her poll: topical corticosteroids (T@35288 11/11)</td></tr>
 <tr><td><b>&ge; 8%</b></td><td>Moderate</td><td>Either algorithm: moderate after the topicals have been tried moves to systemic (T@14644 11/11)</td></tr>
 <tr><td><b>Between 8% and 10%</b> (&ldquo;like a 9%&rdquo;)</td><td>Moderate to severe</td><td>Moderate-to-severe algorithm (slide 37): systemic agent (eg, MTX) &plusmn; topical or phototherapy; biologic considered early with comorbidities such as psoriatic arthritis; then a more potent systemic or a biologic; then a biologic</td></tr>
-<tr><td><b>&ge; 10%</b></td><td>Severe</td><td>Severe is BSA, PASI or DLQI &ge; 10 on the slide (she said to know only BSA). As above. She first said 20%, then &ldquo;it has been corrected to 10% ... follow this slide&rdquo; (T@10484 11/11)</td></tr>
+<tr><td><b>&ge; 10%</b></td><td>Severe</td><td>Severe is BSA, PASI or DLQI &ge; 10 on the slide (she said to know only BSA). As above. She said 10%, noting older guidelines said 20% (&ldquo;it has been corrected to 10%&rdquo;): follow this slide (T@10484 11/11)</td></tr>
 </tbody></table>
 <table class="reftab"><thead><tr><th style="width:24%">Topical (slide 36)</th><th>Regimen</th></tr></thead><tbody>
 <tr><td><b>Corticosteroids</b> (most effective, T@13916 11/11)</td><td>2&ndash;4 times daily: cream or lotion in the day, ointment at night; low potency for face and skin folds; limit duration (&le; 4 weeks) and surface area</td></tr>
