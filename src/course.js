@@ -345,6 +345,8 @@ const COURSE = {
           // line, step-care bands, number tiles with a label that says what the number measures,
           // tap-to-check polls). Styles only, under ".gobj .g2-" (Louis 2026-11-14)
           'guide2_css.js',
+          // Glossary tab, "Words in this question" under an answered question, My words (Louis, 2026-11-14)
+          'glossary_data.js', 'glossary_ui.js',
           // Search box in the header (Louis, 2026-11-14): last of the content files, it reads their globals
           'search_ui.js',
           // Browser-tab icon on the live page (brand.py wrote it into the <head> until 2026-11-09)

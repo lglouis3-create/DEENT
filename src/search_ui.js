@@ -76,6 +76,8 @@ const SEARCH_UI = (() => {
         sub: (c.short || [])[0] || '', boost: 4}));
       Object.keys(DZ.terms || {}).forEach(k => { const t = DZ.terms[k]; add(list, {type: 'term', label: 'Terms', id: k, title: t[0], text: t[1], sub: t[1], boost: 2}); });
     } catch (e) { /* no Diseases tab */ }
+    // the glossary (glossary_data.js): a result opens the Glossary tab at that term
+    try { GLOSSARY_UI.terms().forEach(t => add(list, {type: 'gterm', label: 'Glossary', id: t.id, title: t.term, kw: (t.also || []).join(' '), text: t.def, sub: t.def, boost: 1})); } catch (e) { /* no glossary */ }
     // Reference, Guides, Tell apart
     try { sectionEntries(typeof REFERENCE_HTML !== 'undefined' ? REFERENCE_HTML : '', 'ref', 'Reference', 'ref', list); } catch (e) {}
     try { sectionEntries(typeof GUIDE_HTML !== 'undefined' ? GUIDE_HTML : '', 'guide', 'Guides', 'guide', list); } catch (e) {}
@@ -165,7 +167,7 @@ const SEARCH_UI = (() => {
       const c = correct(toks);
       if (c.changed) { const r2 = run(c.toks), q2 = questionsFor(c.toks); if (r2.length || q2.length) { res = r2; qs = q2; toks = c.toks; note = 'Showing results for “' + c.toks.join(' ') + '”.'; } }
     }
-    const ORDER = ['drug', 'dz', 'sec', 'dia', 'atlas', 'term', 'topic'], NAMES = {drug: 'Drugs', dz: 'Diseases', sec: 'Sections', dia: 'Diagrams', atlas: 'Structures', term: 'Terms', topic: 'Topics'};
+    const ORDER = ['drug', 'dz', 'sec', 'dia', 'atlas', 'term', 'gterm', 'topic'], NAMES = {drug: 'Drugs', dz: 'Diseases', sec: 'Sections', dia: 'Diagrams', atlas: 'Structures', term: 'Terms', gterm: 'Glossary', topic: 'Topics'};
     const groups = ORDER.map((t, i) => { const rs = res.filter(r => r.e.type === t); return {type: t, name: NAMES[t], items: rs.map(r => r.e), best: rs.length ? rs[0].s : -1, i}; })
       .filter(g => g.items.length).sort((a, b) => b.best - a.best || a.i - b.i);
     return {toks, groups, qs, note};
@@ -217,7 +219,7 @@ dialog.srch::backdrop{background:rgba(10,14,22,.55)}
     const from = at > 60 ? at - 40 : 0, cut = s.slice(from, from + 170);
     return (from ? '… ' : '') + cut + (s.length > from + 170 ? ' …' : '');
   };
-  const KIND = {drug: e => 'Drug list', dz: e => 'Disease', sec: e => e.label, dia: e => 'Diagram', atlas: e => 'Structure', term: e => 'Term', topic: e => 'Topic'};
+  const KIND = {drug: e => 'Drug list', dz: e => 'Disease', sec: e => e.label, dia: e => 'Diagram', atlas: e => 'Structure', term: e => 'Term', gterm: e => 'Glossary', topic: e => 'Topic'};
 
   function draw(){
     const raw = input.value; last = null;
@@ -273,6 +275,7 @@ dialog.srch::backdrop{background:rgba(10,14,22,.55)}
         // the Atlas filter reads each tile's plain name and text, not its display title: the plain name always finds the tile
         else if (e.type === 'atlas') { show('atlas'); const q = document.querySelector('#atq'); if (q) { q.value = e.id; q.dispatchEvent(new Event('input', {bubbles: true})); } window.scrollTo(0, 0); }
         else if (e.type === 'topic') startQuiz(e.id, e.sid);
+        else if (e.type === 'gterm') GLOSSARY_UI.open(e.id);
         else if (e.type === 'term') { openDialog(opener); const row = body.querySelector('[data-i="' + IDX.indexOf(e) + '"] .s'); if (row) row.textContent = e.text; }
       } catch (err) { console.error('The search could not open that result.', err); }
     }, 0);
