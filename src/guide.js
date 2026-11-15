@@ -57,7 +57,7 @@ const GUIDE_HTML = `
 <li>TH1 cytokines (interferon-gamma, IL-12) suppress IgE; TH2 cytokines (IL-5, IL-13) increase it. AD has more TH2 activity: IL-3, IL-4, IL-5, IL-10, IL-13, blood eosinophilia, high total IgE, more mast cells. &ldquo;Some of our therapies antagonize these cytokines&rdquo; (PP 16).</li></ul></div>
 <div class="gpt"><h5>Psoriasis (PP 19&ndash;26)</h5><ul>
 <li>Definition: recurrent exacerbations and remissions of thickened, erythematous, scaly plaques; keratinocyte hyperproliferation and incomplete differentiation; a T-cell-mediated systemic inflammatory disease (PP 19).</li>
-<li>Probably starts with some trauma (bug bite, skin infection) that triggers an abnormal immune response: T cells in skin are stimulated by antigen (as yet undefined) presented by APCs, and the cells release TNF-alpha, interferon-gamma, IL-23 and IL-17 &rarr; keratinocyte hyperproliferation and chronic systemic inflammation; comorbidities follow from the chronic inflammation (PP 21&ndash;22).</li>
+<li>Probably starts with some trauma (bug bite, skin infection) that triggers an abnormal immune response: T cells in skin are stimulated by antigen (not yet identified) presented by APCs, and the cells release TNF-alpha, interferon-gamma, IL-23 and IL-17 &rarr; keratinocyte hyperproliferation and chronic systemic inflammation; comorbidities follow from the chronic inflammation (PP 21&ndash;22).</li>
 <li>Keratinocytes: 1.5 days to divide and 4 to shed, against 13 and 26 normally (PP 23).</li>
 <li>Contributing factors: climate, stress, infections, trauma (Koebner response: lesions at previously clear sites after friction, venipuncture, bites, surgery or pressure), medications, most commonly lithium and beta blockers (PP 24).</li>
 <li>Nail psoriasis: pitting, ridging, discoloration, onycholysis. Psoriatic arthritis: asymmetric (hands, feet, knees), skin lesions usually first, no rheumatoid factor elevation (PP 26).</li></ul></div>
@@ -1645,7 +1645,7 @@ const GUIDE_HTML = `
 <details class="gdetails" id="gpl-p5">
 <summary>Dr. Patel: Dermatitis slide by slide, what the lecture adds (64 slides)</summary>
 <section class="gobj" id="gobj-pl-d1-1">
-<h3>Dr. Patel, slide by slide &middot; Dermatitis Therapeutics &middot; slides 7&ndash;10</h3>
+<h3>Dr. Patel, slide by slide · Dermatitis Therapeutics · slides 7&ndash;10</h3>
 <div class="gbar"><span>What the lecture adds (Dermatitis 7&ndash;10)</span><b>The objectives define what a recommendation must contain, and the first topic taught is how much topical product to dispense</b><i>Patel Dermatitis slide 7, 8, 9, 10</i></div>
 <div class="gpt g2-block"><h5>Learning objectives: the patient care process (Patel Dermatitis slide 7)</h5>
 <p class="g2-status"><b>Status B, E</b> (objectives read in lecture; exam cue on 11/10)</p>
@@ -1677,7 +1677,7 @@ const GUIDE_HTML = `
 </section>
 
 <section class="gobj" id="gobj-pl-d1-2">
-<h3>Dr. Patel, slide by slide &middot; Dermatitis Therapeutics &middot; slides 11&ndash;13</h3>
+<h3>Dr. Patel, slide by slide · Dermatitis Therapeutics · slides 11&ndash;13</h3>
 <div class="gbar"><span>What the lecture adds (Dermatitis 11&ndash;13)</span><b>Convert body area to grams with the adult fingertip unit chart, multiply by doses and days, then round up to an available tube size</b><i>Patel Dermatitis slide 11, 12, 13</i></div>
 <div class="gpt g2-block"><h5>Adult fingertip units by body area (Patel Dermatitis slide 11)</h5>
 <p class="g2-status"><b>Status B, E</b> (how the areas are bounded; exam cue and repeat cue on 11/10)</p>
@@ -1707,7 +1707,7 @@ const GUIDE_HTML = `
 </section>
 
 <section class="gobj" id="gobj-pl-d1-3">
-<h3>Dr. Patel, slide by slide &middot; Dermatitis Therapeutics &middot; slides 15&ndash;19</h3>
+<h3>Dr. Patel, slide by slide · Dermatitis Therapeutics · slides 15&ndash;19</h3>
 <div class="gbar"><span>What the lecture adds (Dermatitis 15&ndash;19)</span><b>Recognize atopic dermatitis in an adult and a child and know what it is, how the skin barrier breaks down, and who is at risk</b><i>Patel Dermatitis slide 15, 16, 17, 18, 19</i></div>
 <div class="gpt g2-block"><h5>Atopic dermatitis in an adult: example presentation (Patel Dermatitis slide 15)</h5>
 <p class="g2-status"><b>Status C</b> (lecture reads the example and says it is the typical eczema presentation)</p>
@@ -1744,7 +1744,7 @@ const GUIDE_HTML = `
 </section>
 
 <section class="gobj" id="gobj-pl-d1-4">
-<h3>Dr. Patel, slide by slide &middot; Dermatitis Therapeutics &middot; slides 20&ndash;24</h3>
+<h3>Dr. Patel, slide by slide · Dermatitis Therapeutics · slides 20&ndash;24</h3>
 <div class="gbar"><span>What the lecture adds (Dermatitis 20&ndash;24)</span><b>Know what triggers flares, how the disease looks at each age, and how to classify a patient by severity and by lesion status</b><i>Patel Dermatitis slide 20, 21, 22, 23, 24</i></div>
 <div class="gpt g2-block"><h5>Triggers: irritants, allergens, environment, personal factors (Patel Dermatitis slide 20)</h5>
 <p class="g2-status"><b>Status B, C</b> (why each trigger matters; everyday examples from the lecture)</p>
@@ -1785,7 +1785,7 @@ const GUIDE_HTML = `
 </section>
 
 <section class="gobj" id="gobj-pl-d1-5">
-<h3>Dr. Patel, slide by slide &middot; Dermatitis Therapeutics &middot; slides 25&ndash;29</h3>
+<h3>Dr. Patel, slide by slide · Dermatitis Therapeutics · slides 25&ndash;29</h3>
 <div class="gbar"><span>What the lecture adds (Dermatitis 25&ndash;29)</span><b>Know the complications, apply severity and status to a case, state the treatment goals, and begin treatment by protecting the skin barrier</b><i>Patel Dermatitis slide 25, 26, 27, 28, 29</i></div>
 <div class="gpt g2-block"><h5>Complications (Patel Dermatitis slide 25)</h5>
 <p class="g2-status"><b>Status B, C</b> (how itching leads to infection; family impact)</p>
@@ -1826,7 +1826,7 @@ const GUIDE_HTML = `
 </section>
 
 <section class="gobj" id="gobj-pl-d1-6">
-<h3>Dr. Patel, slide by slide &middot; Dermatitis Therapeutics &middot; slides 30&ndash;33</h3>
+<h3>Dr. Patel, slide by slide · Dermatitis Therapeutics · slides 30&ndash;33</h3>
 <div class="gbar"><span>What the lecture adds (Dermatitis 30&ndash;33)</span><b>Treat atopic dermatitis first with non-drug care: bathing, moisturizers chosen by thickness, and clear points for referral</b><i>Patel Dermatitis slide 30, 31, 32, 33</i></div>
 <div class="gpt g2-block"><h5>Non-drug treatments (Patel Dermatitis slide 30)</h5>
 <p class="g2-status"><b>Status B</b> (wet wrap limits; the reason for the TCI exclusion is not in the materials)</p>
@@ -1864,7 +1864,7 @@ const GUIDE_HTML = `
 </section>
 
 <section class="gobj" id="gobj-pl-d1-7">
-<h3>Dr. Patel, slide by slide &middot; Dermatitis Therapeutics &middot; slides 34&ndash;36</h3>
+<h3>Dr. Patel, slide by slide · Dermatitis Therapeutics · slides 34&ndash;36</h3>
 <div class="gbar"><span>What the lecture adds (Dermatitis 34&ndash;36)</span><b>Name the drug classes for atopic dermatitis, and state topical corticosteroid counseling and the OTC hydrocortisone 1% limits</b><i>Patel Dermatitis slide 34, 35, 36</i></div>
 <div class="gpt g2-block"><h5>Pharmacologic treatments: the five classes (Patel Dermatitis slide 34)</h5>
 <p class="g2-status"><b>Status C</b> (the slide is a list; the lecture ties it to the earlier lectures and to how often steroids return)</p>
@@ -1893,7 +1893,7 @@ const GUIDE_HTML = `
 </section>
 
 <section class="gobj" id="gobj-pl-d2-1">
-<h3>Dr. Patel, slide by slide &middot; Atopic dermatitis therapeutics &middot; slides 37&ndash;40</h3>
+<h3>Dr. Patel, slide by slide · Atopic dermatitis therapeutics · slides 37&ndash;40</h3>
 <div class="gbar"><span>What the lecture adds (Patel Dermatitis 37&ndash;40)</span><b>Know how vehicle and potency set the steroid choice, and why pimecrolimus and tacrolimus are second line with a boxed warning</b><i>Patel Dermatitis slide 37, 38, 39, 40</i></div>
 <div class="gpt g2-block"><h5>Topical steroid potency and vehicle (Patel Dermatitis slide 37)</h5>
 <p class="g2-status"><b>Status B, C, E</b> reasoning behind the vehicle order, practical limits added, arrows she marked</p>
@@ -1937,7 +1937,7 @@ const GUIDE_HTML = `
 </section>
 
 <section class="gobj" id="gobj-pl-d2-2">
-<h3>Dr. Patel, slide by slide &middot; Atopic dermatitis therapeutics &middot; slides 41&ndash;44</h3>
+<h3>Dr. Patel, slide by slide · Atopic dermatitis therapeutics · slides 41&ndash;44</h3>
 <div class="gbar"><span>What the lecture adds (Patel Dermatitis 41&ndash;44)</span><b>Know where crisaborole and dupilumab fall in the order of treatment, and the age, vaccine, interaction and dosing details</b><i>Patel Dermatitis slide 41, 42, 43, 44</i></div>
 <div class="gpt g2-block"><h5>Crisaborole, the third-line topical (Patel Dermatitis slide 41)</h5>
 <p class="g2-status"><b>Status B</b> where it falls in the order of use</p>
@@ -1978,7 +1978,7 @@ const GUIDE_HTML = `
 </section>
 
 <section class="gobj" id="gobj-pl-d2-3">
-<h3>Dr. Patel, slide by slide &middot; Atopic dermatitis therapeutics &middot; slides 45&ndash;48</h3>
+<h3>Dr. Patel, slide by slide · Atopic dermatitis therapeutics · slides 45&ndash;48</h3>
 <div class="gbar"><span>What the lecture adds (Patel Dermatitis 45&ndash;48)</span><b>Know the later-line injectable and oral options and read the step-care algorithm by severity</b><i>Patel Dermatitis slide 45, 46, 47, 48</i></div>
 <div class="gpt g2-block"><h5>Tralokinumab, the alternative to dupilumab (Patel Dermatitis slide 45)</h5>
 <p class="g2-status"><b>Status B</b> why several injections, how it is positioned</p>
@@ -2019,7 +2019,7 @@ const GUIDE_HTML = `
 </section>
 
 <section class="gobj" id="gobj-pl-d2-4">
-<h3>Dr. Patel, slide by slide &middot; Atopic dermatitis therapeutics &middot; slides 49&ndash;54</h3>
+<h3>Dr. Patel, slide by slide · Atopic dermatitis therapeutics · slides 49&ndash;54</h3>
 <div class="gbar"><span>What the lecture adds (Patel Dermatitis 49&ndash;54)</span><b>Apply the algorithm to a patient, then counsel on the pharmacist role, daily care, how to apply medication, when to seek help and access to treatment</b><i>Patel Dermatitis slide 49, 50, 51, 52, 53, 54</i></div>
 <div class="gpt g2-block"><h5>Case: adult atopic dermatitis, first-line maintenance (Patel Dermatitis slide 49)</h5>
 <p class="g2-status"><b>Status B, C</b> worked answer applying the algorithm</p>
@@ -2075,7 +2075,7 @@ const GUIDE_HTML = `
 </section>
 
 <section class="gobj" id="gobj-pl-d2-5">
-<h3>Dr. Patel, slide by slide &middot; Diaper dermatitis and incontinence-associated dermatitis &middot; slides 55&ndash;59</h3>
+<h3>Dr. Patel, slide by slide · Diaper dermatitis and incontinence-associated dermatitis · slides 55&ndash;59</h3>
 <div class="gbar"><span>What the lecture adds (Patel Dermatitis 55&ndash;59)</span><b>Know what causes diaper dermatitis and how prevention differs for infants and for adults who wear diapers</b><i>Patel Dermatitis slide 55, 56, 57, 58, 59</i></div>
 <div class="gpt g2-block"><h5>Diaper dermatitis, section title (Patel Dermatitis slide 55)</h5>
 <p class="g2-status"><b>Status A</b> On the slide and complete; nothing added in lecture</p>
@@ -2115,7 +2115,7 @@ const GUIDE_HTML = `
 </section>
 
 <section class="gobj" id="gobj-pl-d2-6">
-<h3>Dr. Patel, slide by slide &middot; Diaper dermatitis and incontinence-associated dermatitis &middot; slides 60&ndash;64</h3>
+<h3>Dr. Patel, slide by slide · Diaper dermatitis and incontinence-associated dermatitis · slides 60&ndash;64</h3>
 <div class="gbar"><span>What the lecture adds (Patel Dermatitis 60&ndash;64)</span><b>Know how to classify incontinence-associated dermatitis, apply ABCDE, and choose a zinc oxide skin protectant</b><i>Patel Dermatitis slide 60, 61, 62, 63, 64</i></div>
 <div class="gpt g2-block"><h5>Categories of incontinence-associated dermatitis (Patel Dermatitis slide 60)</h5>
 <p class="g2-status"><b>Status B, C</b> how infection changes the appearance</p>
@@ -2157,7 +2157,7 @@ const GUIDE_HTML = `
 </section>
 
 <section class="gobj" id="gobj-pl-d2-7">
-<h3>Dr. Patel, slide by slide &middot; Diaper dermatitis and incontinence-associated dermatitis &middot; slides 65&ndash;68</h3>
+<h3>Dr. Patel, slide by slide · Diaper dermatitis and incontinence-associated dermatitis · slides 65&ndash;68</h3>
 <div class="gbar"><span>What the lecture adds (Patel Dermatitis 65&ndash;68)</span><b>Know which products are not used for diaper dermatitis, the 7-day follow-up, the complications and the referral list</b><i>Patel Dermatitis slide 65, 66, 67, 68</i></div>
 <div class="gpt g2-block"><h5>Cautions: products not used for diaper dermatitis (Patel Dermatitis slide 65)</h5>
 <p class="g2-status"><b>Status B, E</b> why the list differs from atopic dermatitis</p>
@@ -2191,7 +2191,7 @@ const GUIDE_HTML = `
 </section>
 
 <section class="gobj" id="gobj-pl-d2-8">
-<h3>Dr. Patel, slide by slide &middot; Diaper dermatitis and incontinence-associated dermatitis &middot; slides 69&ndash;71</h3>
+<h3>Dr. Patel, slide by slide · Diaper dermatitis and incontinence-associated dermatitis · slides 69&ndash;71</h3>
 <div class="gbar"><span>What the lecture adds (Patel Dermatitis 69&ndash;71)</span><b>Apply the diaper dermatitis answers to the 5-month-old case</b><i>Patel Dermatitis slide 69, 70, 71</i></div>
 <div class="gpt g2-block"><h5>Case: diaper dermatitis in a 5-month-old (Patel Dermatitis slide 69)</h5>
 <p class="g2-status"><b>Status C, E</b> first-line product, follow-up time and non-drug care</p>
@@ -2524,7 +2524,7 @@ const GUIDE_HTML = `
 <details class="gdetails" id="gpl-p6">
 <summary>Dr. Patel: Acne slide by slide, what the lecture adds (51 slides)</summary>
 <section class="gobj" id="gobj-pl-a-1">
-<h3>Dr. Patel, slide by slide &middot; Acne therapeutics &middot; slides 1&ndash;4</h3>
+<h3>Dr. Patel, slide by slide · Acne therapeutics · slides 1&ndash;4</h3>
 <div class="gbar"><span>What the lecture adds (Acne 1&ndash;4)</span><b>The lecture explains the acne cycle that each treatment is built to interrupt, and says her questions follow the objectives</b><i>Patel Acne slide 1, 2, 3, 4</i></div>
 <div class="gpt g2-block"><h5>Title slide (Patel Acne slide 1)</h5>
 <p class="g2-status"><b>Status A</b> On the slide and complete; nothing added in lecture</p>
@@ -2550,7 +2550,7 @@ const GUIDE_HTML = `
 </section>
 
 <section class="gobj" id="gobj-pl-a-2">
-<h3>Dr. Patel, slide by slide &middot; Acne therapeutics &middot; slides 5&ndash;8</h3>
+<h3>Dr. Patel, slide by slide · Acne therapeutics · slides 5&ndash;8</h3>
 <div class="gbar"><span>What the lecture adds (Acne 5&ndash;8)</span><b>Her lesion and severity words (some, many, no more than one) are the terms her case questions use, so these slides teach how to classify a patient</b><i>Patel Acne slide 5, 6, 7, 8</i></div>
 <div class="gpt g2-block"><h5>Lesion stages: non-inflammatory and inflammatory (Patel Acne slide 5)</h5>
 <p class="g2-status"><b>Status B, C</b> Fact on slide; lecture defines each lesion and adds a cue</p><p>Non-inflammatory lesions are the normal follicle, the blackhead (open comedo) and the whitehead (closed comedo). Inflammatory lesions are the papule, pustule, and nodule or cyst. The lecture gives the working description of each: an open comedo is a completely clogged pore; a whitehead is closed under the skin; a papule is raised and red with inflammation; a pustule is raised with pus; a nodule or cyst is the worst stage, larger and deeper. Telling the two groups apart is how a case is classified on slides 7 and 8.</p><div class='g2-said'><span class='g2-k'>She said</span>
@@ -2578,7 +2578,7 @@ const GUIDE_HTML = `
 </section>
 
 <section class="gobj" id="gobj-pl-a-3">
-<h3>Dr. Patel, slide by slide &middot; Acne therapeutics &middot; slides 9&ndash;12</h3>
+<h3>Dr. Patel, slide by slide · Acne therapeutics · slides 9&ndash;12</h3>
 <div class="gbar"><span>What the lecture adds (Acne 9&ndash;12)</span><b>Risk factors, medicines that cause acne and complications are applied to a patient case, ending with a severity answer</b><i>Patel Acne slide 9, 10, 11, 12</i></div>
 <div class="gpt g2-block"><h5>Risk factors: what each one means in practice (Patel Acne slide 9)</h5>
 <p class="g2-status"><b>Status C</b> Lecture adds examples</p><p>The slide lists age 12 to 20 years, oil-based cosmetics, a first-degree relative with acne, humidity and sweating, local friction, and medications (slide 10). She added concrete examples: skin products that are not washed off and build up, irritation from a cleanser or moisturizer, and fabric that rubs the face, such as a rough sleeve.</p><div class='g2-said'><span class='g2-k'>She said</span>
@@ -2607,7 +2607,7 @@ const GUIDE_HTML = `
 </section>
 
 <section class="gobj" id="gobj-pl-a-4">
-<h3>Dr. Patel, slide by slide &middot; Acne therapeutics &middot; slides 13&ndash;17</h3>
+<h3>Dr. Patel, slide by slide · Acne therapeutics · slides 13&ndash;17</h3>
 <div class="gbar"><span>What the lecture adds (Acne 13&ndash;17)</span><b>Treatment goals and the patient-specific facts she asks you to collect before choosing therapy</b><i>Patel Acne slide 13, 14, 15, 16, 17</i></div>
 <div class="gpt g2-block"><h5>Treatment goals (Patel Acne slide 13)</h5>
 <p class="g2-status"><b>Status B</b> Fact on slide; lecture explains slowing progression and hyperpigmentation</p><p>The goals are to relieve symptoms and psychologic distress, reduce lesion number and severity, improve appearance, slow progression, limit duration and recurrence, and prevent long-term scarring and hyperpigmentation. She explained slowing progression as preventing a relapse later in puberty or into the twenties. Hyperpigmentation was explained as a scar left darker than the surrounding skin.</p><div class='g2-said'><span class='g2-k'>She said</span>
@@ -2642,7 +2642,7 @@ const GUIDE_HTML = `
 </section>
 
 <section class="gobj" id="gobj-pl-a-5">
-<h3>Dr. Patel, slide by slide &middot; Acne therapeutics &middot; slides 18&ndash;21</h3>
+<h3>Dr. Patel, slide by slide · Acne therapeutics · slides 18&ndash;21</h3>
 <div class="gbar"><span>What the lecture adds (Acne 18&ndash;21)</span><b>Self-care limits, non-drug care for everyone, and how each drug class is matched to a step of acne pathogenesis</b><i>Patel Acne slide 18, 19, 20, 21</i></div>
 <div class="gpt g2-block"><h5>Exclusions from self-treatment (Patel Acne slide 18)</h5>
 <p class="g2-status"><b>Status B</b> List on slide; lecture explains what happens to excluded patients</p><p>Severe acne, possible rosacea, and exacerbating factors such as comedogenic drugs rule out self-treatment. She illustrated the third item with a patient who is treated for another condition with a drug that worsens acne: the drug is needed, so over-the-counter acne products are not the answer and the patient is referred. For these patients the route is straight to dermatology, not a product recommendation.</p><div class='g2-said'><span class='g2-k'>She said</span>
@@ -2671,7 +2671,7 @@ const GUIDE_HTML = `
 </section>
 
 <section class="gobj" id="gobj-pl-a-6">
-<h3>Dr. Patel, slide by slide &middot; Acne therapeutics &middot; slides 22&ndash;25</h3>
+<h3>Dr. Patel, slide by slide · Acne therapeutics · slides 22&ndash;25</h3>
 <div class="gbar"><span>What the lecture adds (Acne 22&ndash;25)</span><b>What each non-prescription ingredient does, which skin type tolerates which vehicle, and what the guideline says about topical agents</b><i>Patel Acne slide 22, 23, 24, 25</i></div>
 <div class="gpt g2-block"><h5>Definitions: bactericidal, keratolytic, comedolytic (Patel Acne slide 22)</h5>
 <p class="g2-status"><b>Status B</b> Definitions on slide; lecture says why keratolytic matters</p><p>Bactericidal means the drug destroys bacteria. Keratolytic means it thins and sheds the top layer of the epidermis and softens keratin. Comedolytic means it breaks up comedones (blackheads and whiteheads) and prevents new ones. She explained the keratolytic point as access: papules, pustules, nodules and cysts form below the epidermis, so a drug that loosens the top layer lets the medication reach the dermis. These three words are the rows of the product table on slide 23.</p><div class='g2-said'><span class='g2-k'>She said</span>
@@ -2704,7 +2704,7 @@ const GUIDE_HTML = `
 </section>
 
 <section class="gobj" id="gobj-pl-a-7">
-<h3>Dr. Patel, slide by slide &middot; Acne therapeutics &middot; slides 26&ndash;29</h3>
+<h3>Dr. Patel, slide by slide · Acne therapeutics · slides 26&ndash;29</h3>
 <div class="gbar"><span>What the lecture adds (Acne 26&ndash;29)</span><b>Benzoyl peroxide, retinoid and hydroxy acid counseling: timing, separation and cautions</b><i>Patel Acne slide 26, 27, 28, 29</i></div>
 <div class="gpt g2-block"><h5>Benzoyl peroxide: use, strength, monitoring (Patel Acne slide 26)</h5>
 <p class="g2-status"><b>Status B, D</b> Slide facts; lecture adds sun advice; "alone" line differs from the algorithm</p><p>Benzoyl peroxide is the most common OTC acne product, recognized by FDA as safe and effective, 2.5 to 10% OTC and up to 20% by prescription. Efficacy can show as soon as 5 days; the common side effect is irritation, worse at higher strengths, and it stabilizes within 1 to 2 weeks. Sun exposure on benzoyl peroxide raises the chance of burning, scarring and hyperpigmentation, so she added sunscreen after the skincare routine. With antibiotics it prevents P. acnes resistance, which is why it is paired with topical antibiotics.</p><div class="g2-note"><span class="g2-k">"Used alone (mild to moderate)" versus the algorithm</span><p>The slide, and her reading of it, say benzoyl peroxide may be used alone for mild to moderate acne and in combination for moderate to severe. She pointed to the treatment algorithm as the place this is applied. On slide 40, benzoyl peroxide alone is a first-line single agent only for mild acne; moderate acne starts with a topical combination that contains benzoyl peroxide. An exam case would key the algorithm.</p></div><div class='g2-said'><span class='g2-k'>She said</span>
@@ -2737,7 +2737,7 @@ const GUIDE_HTML = `
 </section>
 
 <section class="gobj" id="gobj-pl-a-8">
-<h3>Dr. Patel, slide by slide &middot; Acne therapeutics &middot; slides 30&ndash;33</h3>
+<h3>Dr. Patel, slide by slide · Acne therapeutics · slides 30&ndash;33</h3>
 <div class="gbar"><span>What the lecture adds (Acne 30&ndash;33)</span><b>Natural products and the prescription topical and oral antibiotic agents, with ages and durations</b><i>Patel Acne slide 30, 31, 32, 33</i></div>
 <div class="gpt g2-block"><h5>Complementary therapy: tea tree and frankincense oil (Patel Acne slide 30)</h5>
 <p class="g2-status"><b>Status C</b> Lecture adds the use rule</p><p>The slide names tea tree oil (irritating if applied directly; add to a moisturizing lotion or gel) and frankincense oil (anti-inflammatory benefit). She said natural products are not as effective as medications, may suit patients with sensitive skin, and that essential oil is never applied straight to a lesion but is mixed into a moisturizer or gel base. The transcript captions render frankincense as "Frankenstein's oil"; the slide spelling is frankincense.</p><div class='g2-said'><span class='g2-k'>She said</span>
@@ -2770,7 +2770,7 @@ const GUIDE_HTML = `
 </section>
 
 <section class="gobj" id="gobj-pl-a-9">
-<h3>Dr. Patel, slide by slide &middot; Acne therapeutics &middot; slides 34&ndash;36</h3>
+<h3>Dr. Patel, slide by slide · Acne therapeutics · slides 34&ndash;36</h3>
 <div class="gbar"><span>What the lecture adds (Acne 34&ndash;36)</span><b>Who is a candidate for a combined oral contraceptive, which ones are approved, and why smoking and clots exclude patients</b><i>Patel Acne slide 34, 35, 36</i></div>
 <div class="gpt g2-block"><h5>Hormonal agents: combined oral contraceptives and anti-androgens (Patel Acne slide 34)</h5>
 <p class="g2-status"><b>Status B, C, D, E</b> Slide facts; lecture adds the candidate rules, a case, and a conflict on the approved list</p><p>Combined oral contraceptives (COCs) are for women who also want contraception, and the slide sets the patient: older than 14 years or more than 2 years since menarche, a non-smoker, and under 35. She worked a candidate question: a 22-year-old who does not want to be pregnant was the best candidate, a patient with a past DVT is excluded because COCs raise clot risk, a 35-year-old smoker is excluded for the same reason, and a 12-year-old is too young <span class="g2-tonly" title="Transcript only: not on the slide">Transcript-only, verify against slide</span>. COC also fits a patient with irregular menses. Spironolactone and flutamide are the other anti-androgen options; the slide lists 25-50 mg/day in 1 to 2 divided doses, maximum 200 mg/day, and the adverse effects gynecomastia and hyperkalemia without saying which of the two drugs they belong to. She read the dose after flutamide and said not to go to the maximum.</p><div class="g2-note"><span class="g2-k">Which COCs are FDA approved for acne: slide has four, she named three</span><p>Slide 34 lists four ethinyl estradiol combinations: norgestimate, norethindrone acetate, drospirenone, and drospirenone/levomefolate. A student pointed out the difference; she said she had probably updated her slide without updating theirs, to follow her list, and that three are FDA approved: estradiol with norgestimate, with norethindrone, and with drospirenone. An exam written from her lecture would key three, ending at drospirenone (the captions garble the drug names) <span class="g2-tonly" title="Transcript only: not on the slide">Transcript-only, verify against slide</span>.</p></div><div class='g2-said'><span class='g2-k'>She said</span>
@@ -2794,7 +2794,7 @@ const GUIDE_HTML = `
 </section>
 
 <section class="gobj" id="gobj-pl-a-10">
-<h3>Dr. Patel, slide by slide &middot; Acne therapeutics &middot; slides 37&ndash;39</h3>
+<h3>Dr. Patel, slide by slide · Acne therapeutics · slides 37&ndash;39</h3>
 <div class="gbar"><span>What the lecture adds (Acne 37&ndash;39)</span><b>Isotretinoin as last line, the iPledge rules she flagged as a question, and what the outcome figure shows</b><i>Patel Acne slide 37, 38, 39</i></div>
 <div class="gpt g2-block"><h5>Isotretinoin: use, risks, program (Patel Acne slide 37)</h5>
 <p class="g2-status"><b>Status B, C, E</b> Facts on slide; lecture adds why it is last line and why no refills</p><p>Isotretinoin (Accutane, Absorica) is for severe refractory nodular acne and acne with significant scarring, 0.5 to 1 mg/kg/day in 2 divided doses, 15 to 20 weeks, a 30-day supply with no refills. She called it the absolute last-line agent because of the conditions it can cause and the limits on filling it, so the benefit is weighed against risk with the patient. The boxed warning is birth defects: it must not be used by women who are pregnant or may become pregnant. No refills is so that the patient can be rechecked for pregnancy each time it is dispensed. Lab monitoring on the slide is triglycerides, cholesterol, LFTs and CBC; she added LDL and HDL <span class="g2-tonly" title="Transcript only: not on the slide">Transcript-only, verify against slide</span>, and said she starts at 0.5 and increases if needed <span class="g2-tonly" title="Transcript only: not on the slide">Transcript-only, verify against slide</span>.</p><div class='g2-said'><span class='g2-k'>She said</span>
@@ -2822,7 +2822,7 @@ const GUIDE_HTML = `
 </section>
 
 <section class="gobj" id="gobj-pl-a-11">
-<h3>Dr. Patel, slide by slide &middot; Acne therapeutics &middot; slides 40&ndash;42</h3>
+<h3>Dr. Patel, slide by slide · Acne therapeutics · slides 40&ndash;42</h3>
 <div class="gbar"><span>What the lecture adds (Acne 40&ndash;42)</span><b>The treatment algorithm by severity, first and second line, and the counseling every patient gets</b><i>Patel Acne slide 40, 41, 42</i></div>
 <div class="gpt g2-block"><h5>Acne treatment algorithm: severity, first line, second line (Patel Acne slide 40)</h5>
 <p class="g2-status"><b>Status B, D, E</b> Figure on slide; lecture supplies the stepwise rule and the questions to ask; severe-box order differs</p><p>Key: BP is benzoyl peroxide, Top is topical, Abx is antibiotic, Tx is treatment. Every patient uses non-drug therapy, then the box is chosen by severity. Her rule is to move step by step, never straight to the three-product combination: try one agent (benzoyl peroxide preferred), then a retinoid, then two products, then three. For a case, find the severity, then find what the patient has tried and what is left, and check age and sex before a contraceptive or spironolactone.</p><div class="g2-ladder"><div class="g2-rung"><div class="g2-sev">Mildly clear (Type 1, comedones)</div><div class="g2-cells"><div class="g2-cell"><span class="g2-k">First line</span><p>All use non-pharmacologic therapy, plus or minus benzoyl peroxide alone <span class="g2-or">OR</span> essential oils. The slide shows no second-line box.</p></div></div></div><div class="g2-rung g2-s1"><div class="g2-sev">Mild (comedones / papulopustular)</div><div class="g2-cells"><div class="g2-cell"><span class="g2-k">First line, in steps</span><ul><li><b>Single topical:</b> benzoyl peroxide <span class="g2-or">OR</span> topical retinoid</li><li><span class="g2-or">OR</span> <b>topical combination:</b> BP + topical antibiotic; <span class="g2-or">OR</span> BP + topical retinoid; <span class="g2-or">OR</span> BP + topical retinoid + topical antibiotic</li></ul></div><div class="g2-cell"><span class="g2-k">Second line</span><ul><li>May add (if not on) topical retinoid or BP</li><li><span class="g2-or">OR</span> consider alternate retinoid</li><li><span class="g2-or">OR</span> consider topical dapsone</li></ul></div></div></div><div class="g2-rung g2-s2"><div class="g2-sev">Moderate (papulopustular / comedones)</div><div class="g2-cells"><div class="g2-cell"><span class="g2-k">First line</span><ul><li><b>Topical combination:</b> BP + topical retinoid; <span class="g2-or">OR</span> BP + topical antibiotic; <span class="g2-or">OR</span> BP + topical retinoid + topical antibiotic</li><li><span class="g2-or">OR</span> <b>with an oral antibiotic:</b> oral Abx + topical retinoid + BP; <span class="g2-or">OR</span> oral Abx + topical retinoid + BP + topical Abx</li></ul></div><div class="g2-cell"><span class="g2-k">Second line</span><ul><li>Consider alternate combination therapy</li><li><span class="g2-or">OR</span> change in oral antibiotic</li><li><span class="g2-or">OR</span> add combined oral contraceptive <span class="g2-or">OR</span> oral spironolactone (females only)</li><li><span class="g2-or">OR</span> consider oral isotretinoin</li></ul></div></div></div><div class="g2-rung g2-s3"><div class="g2-sev">Severe (papulopustular / nodular)</div><div class="g2-cells"><div class="g2-cell"><span class="g2-k">First line</span><ul><li><b>Oral antibiotic + topical combination:</b> oral Abx + (BP + topical retinoid); <span class="g2-or">OR</span> oral Abx + (BP + topical Abx); <span class="g2-or">OR</span> (BP + topical retinoid + topical Abx)</li><li><span class="g2-or">OR</span> oral isotretinoin</li></ul></div><div class="g2-cell"><span class="g2-k">Second line</span><ul><li>Consider change in oral antibiotic</li><li><span class="g2-or">OR</span> add combined oral contraceptive <span class="g2-or">OR</span> spironolactone (females only)</li><li><span class="g2-or">OR</span> consider oral isotretinoin</li></ul></div></div></div></div><p class="g2-sub">How she walked each band</p><p><b>Mild:</b> after a single agent fails, combine; "never" jump to three. If all topicals were tried, switch to one not yet used, an alternate retinoid, or dapsone, which she called absolute last line for this band. <b>Moderate:</b> topical combination before any oral antibiotic; benzoyl peroxide is in every combination; add the oral antibiotic only after the topicals were tried. If lesions stay the same or the topicals irritate, ask what has not been tried: change the oral antibiotic, a contraceptive for a female with a compelling reason such as irregular periods, spironolactone, and isotretinoin as absolute last line. <b>Severe:</b> oral antibiotic with the topical combination first, then isotretinoin if that fails, then change antibiotic, contraceptive or spironolactone, if not yet used.</p><div class="g2-note"><span class="g2-k">Severe first line: isotretinoin on the slide, after antibiotics in her walk</span><p>The slide places "Oral Isotretinoin" inside the severe first-line box and again in the second-line box. Her spoken order was oral antibiotic plus topical combination first, then isotretinoin when that did not work. She called isotretinoin last line in several places. An exam written from her lecture would key oral antibiotic plus topical combination as the first choice and isotretinoin after it has been tried. The slide's third severe combination, BP + topical retinoid + topical Abx, also has no oral antibiotic written in; she described the severe combinations as all including the oral antibiotic.</p></div><div class='g2-said'><span class='g2-k'>She said</span>
@@ -2848,7 +2848,7 @@ const GUIDE_HTML = `
 </section>
 
 <section class="gobj" id="gobj-pl-a-12">
-<h3>Dr. Patel, slide by slide &middot; Acne therapeutics &middot; slides 43&ndash;46</h3>
+<h3>Dr. Patel, slide by slide · Acne therapeutics · slides 43&ndash;46</h3>
 <div class="gbar"><span>What the lecture adds (Acne 43&ndash;46)</span><b>Shaving advice, how response is monitored, and the two worked cases with her reasoning</b><i>Patel Acne slide 43, 44, 45, 46</i></div>
 <div class="gpt g2-block"><h5>Shaving counseling for acne (Patel Acne slide 43)</h5>
 <p class="g2-status"><b>Status B, C</b> Slide points; lecture gives reasons for blade and direction</p><p>Men with acne should use an electric or safety razor. For a safety razor: soften the beard with soap and warm water or shaving gel, shave lightly and infrequently with a sharp, clean blade, avoid nicking lesions, and shave in the direction of hair growth. She said old and rusty blades carry bacteria and cut skin, so a new blade lowers infection risk, and frequent shaving over lesions irritates them and can spread infection. Shaving against the grain increases pore blockage. The slide also says to shave each area only once, which reduces folliculitis; she did not mention this.</p><div class='g2-said'><span class='g2-k'>She said</span>
@@ -2878,7 +2878,7 @@ const GUIDE_HTML = `
 </section>
 
 <section class="gobj" id="gobj-pl-a-13">
-<h3>Dr. Patel, slide by slide &middot; Acne therapeutics &middot; slides 47&ndash;51</h3>
+<h3>Dr. Patel, slide by slide · Acne therapeutics · slides 47&ndash;51</h3>
 <div class="gbar"><span>What the lecture adds (Acne 47&ndash;51)</span><b>The plan-building rules, what to check when therapy fails, and the closing slides</b><i>Patel Acne slide 47, 48, 49, 50, 51</i></div>
 <div class="gpt g2-block"><h5>Summary points: building the plan (Patel Acne slide 47)</h5>
 <p class="g2-status"><b>Status B</b> Points on slide; lecture adds tapering and the drug-check habit</p><p>Set the goals and outcomes first. Combine the smallest number of agents at the lowest doses that give efficacy, safety, avoidance of resistance and adherence; always include non-drug methods; add the lowest strength first; use topical before oral; monitor for 8 weeks or more; taper treatment over time and adjust to response; and check interactions, side effects and sunscreen and moisturizer. She added the reason for tapering: stopping abruptly can cause rebound acne and skin irritation. She tied the sequence to the algorithm.</p><div class='g2-said'><span class='g2-k'>She said</span>
@@ -3163,7 +3163,7 @@ const GUIDE_HTML = `
 <details class="gdetails" id="gpl-p7">
 <summary>Dr. Patel: Scaly dermatoses slide by slide, what the lecture adds (52 slides)</summary>
 <section class="gobj" id="gobj-pl-s-1">
-<h3>Dr. Patel, slide by slide &middot; Scaly dermatoses &middot; slides 1-4</h3>
+<h3>Dr. Patel, slide by slide · Scaly dermatoses · slides 1-4</h3>
 <div class="gbar"><span>What the lecture adds (Patel Scaly 1-4)</span><b>The objectives she read aloud and the fingertip-unit chart she said to know; the lecture opens with how the three conditions differ by presentation</b><i>Patel Scaly slide 1, 2, 3, 4</i></div>
 <div class="gpt g2-block"><h5>Title slide (Patel Scaly slide 1)</h5>
 <p class="g2-status"><b>Status A</b> (title or divider slide)</p>
@@ -3196,7 +3196,7 @@ const GUIDE_HTML = `
 </section>
 
 <section class="gobj" id="gobj-pl-s-2">
-<h3>Dr. Patel, slide by slide &middot; Scaly dermatoses &middot; slides 5-7</h3>
+<h3>Dr. Patel, slide by slide · Scaly dermatoses · slides 5-7</h3>
 <div class="gbar"><span>What the lecture adds (Patel Scaly 5-7)</span><b>How the three conditions differ and which OTC ingredients are approved for each; she said the presentation separates them while the treatments overlap</b><i>Patel Scaly slide 5, 6, 7</i></div>
 <div class="gpt g2-block"><h5>Scaly dermatoses overview (dandruff, seborrheic dermatitis, psoriasis) (Patel Scaly slide 5)</h5>
 <p class="g2-status"><b>Status A</b> (title or divider slide)</p>
@@ -3224,7 +3224,7 @@ const GUIDE_HTML = `
 </section>
 
 <section class="gobj" id="gobj-pl-s-3">
-<h3>Dr. Patel, slide by slide &middot; Dandruff &middot; slides 8-10</h3>
+<h3>Dr. Patel, slide by slide · Dandruff · slides 8-10</h3>
 <div class="gbar"><span>What the lecture adds (Patel Scaly 8-10)</span><b>Dandruff as a fungus-driven, mostly non-inflammatory scalp condition, and treating it by severity: non-medicated shampoo for mild, medicated shampoo for moderate to severe</b><i>Patel Scaly slide 8, 9, 10</i></div>
 <div class="gpt g2-block"><h5>What dandruff is and who gets it (Patel Scaly slide 8)</h5>
 <p class="g2-status"><b>Status B, C</b></p>
@@ -3254,7 +3254,7 @@ const GUIDE_HTML = `
 </section>
 
 <section class="gobj" id="gobj-pl-s-4">
-<h3>Dr. Patel, slide by slide &middot; Seborrheic dermatitis &middot; slides 11-14</h3>
+<h3>Dr. Patel, slide by slide · Seborrheic dermatitis · slides 11-14</h3>
 <div class="gbar"><span>What the lecture adds (Patel Scaly 11-14)</span><b>What seborrheic dermatitis is, how infants and adults present differently, what triggers it, and the goals of treatment</b><i>Patel Scaly slide 11, 12, 13, 14</i></div>
 <div class="gpt g2-block"><h5>Seborrheic dermatitis: overview (Patel Scaly slide 11)</h5>
 <p class="g2-status"><b>Status B</b></p>
@@ -3287,7 +3287,7 @@ const GUIDE_HTML = `
 </section>
 
 <section class="gobj" id="gobj-pl-s-5">
-<h3>Dr. Patel, slide by slide &middot; Seborrheic dermatitis treatment &middot; slides 15-18</h3>
+<h3>Dr. Patel, slide by slide · Seborrheic dermatitis treatment · slides 15-18</h3>
 <div class="gbar"><span>What the lecture adds (Patel Scaly 15-18)</span><b>Removing scale, treating the yeast, calming redness and itch, and the separate infant plan, where ketoconazole and corticosteroids are not used</b><i>Patel Scaly slide 15, 16, 17, 18</i></div>
 <div class="gpt g2-block"><h5>Removing scales and crust (Patel Scaly slide 15)</h5>
 <p class="g2-status"><b>Status B, C, D</b></p>
@@ -3326,7 +3326,7 @@ const GUIDE_HTML = `
 </section>
 
 <section class="gobj" id="gobj-pl-s-6">
-<h3>Dr. Patel, slide by slide &middot; Seborrheic dermatitis cases &middot; slides 19-20</h3>
+<h3>Dr. Patel, slide by slide · Seborrheic dermatitis cases · slides 19-20</h3>
 <div class="gbar"><span>What the lecture adds (Patel Scaly 19-20)</span><b>Two worked cases that separate adult seborrheic dermatitis from dandruff and set the infant plan apart</b><i>Patel Scaly slide 19, 20</i></div>
 <div class="gpt g2-block"><h5>Case 2: 35-year-old man, scalp, eyebrows and ear canal (Patel Scaly slide 19)</h5>
 <p class="g2-status"><b>Status C</b></p>
@@ -3345,7 +3345,7 @@ const GUIDE_HTML = `
 </section>
 
 <section class="gobj" id="gobj-pl-s-7">
-<h3>Dr. Patel, slide by slide &middot; Psoriasis background &middot; slides 21-24</h3>
+<h3>Dr. Patel, slide by slide · Psoriasis background · slides 21-24</h3>
 <div class="gbar"><span>What the lecture adds (Patel Scaly 21-24)</span><b>Who gets psoriasis, why it forms, and what makes it flare; she stressed that the condition involves immune activity and that plaque type is the most common</b><i>Patel Scaly slide 21, 22, 23, 24</i></div>
 <div class="gpt g2-block"><h5>Psoriasis: how common, who, and which type (Patel Scaly slide 21)</h5>
 <p class="g2-status"><b>Status B, C</b></p>
@@ -3380,7 +3380,7 @@ const GUIDE_HTML = `
 </section>
 
 <section class="gobj" id="gobj-pl-s-8">
-<h3>Dr. Patel, slide by slide &middot; Psoriasis presentation &middot; slides 25-27</h3>
+<h3>Dr. Patel, slide by slide · Psoriasis presentation · slides 25-27</h3>
 <div class="gbar"><span>What the lecture adds (Patel Scaly 25-27)</span><b>What psoriasis looks like and how it affects the patient, including diseases that travel with it</b><i>Patel Scaly slide 25, 26, 27</i></div>
 <div class="gpt g2-block"><h5>Possible comorbidities (Patel Scaly slide 25)</h5>
 <p class="g2-status"><b>Status B</b></p>
@@ -3409,7 +3409,7 @@ const GUIDE_HTML = `
 </section>
 
 <section class="gobj" id="gobj-pl-s-9">
-<h3>Dr. Patel, slide by slide &middot; Psoriasis assessment &middot; slides 28-31</h3>
+<h3>Dr. Patel, slide by slide · Psoriasis assessment · slides 28-31</h3>
 <div class="gbar"><span>What the lecture adds (Patel Scaly 28-31)</span><b>Goals of therapy, the patient-care process, the factors that decide a plan, and how severity is set; she said age, past treatment, current medicines and severity guide the choice</b><i>Patel Scaly slide 28, 29, 30, 31</i></div>
 <div class="gpt g2-block"><h5>Goals of treatment (Patel Scaly slide 28)</h5>
 <p class="g2-status"><b>Status B</b></p>
@@ -3446,7 +3446,7 @@ const GUIDE_HTML = `
 </section>
 
 <section class="gobj" id="gobj-pl-s-10">
-<h3>Dr. Patel, slide by slide &middot; Body surface area and non-drug care &middot; slides 32-34</h3>
+<h3>Dr. Patel, slide by slide · Body surface area and non-drug care · slides 32-34</h3>
 <div class="gbar"><span>What the lecture adds (Patel Scaly 32-34)</span><b>How BSA is estimated and the lifestyle and non-drug measures given to every psoriasis patient; she said non-drug care makes a large difference in outcome</b><i>Patel Scaly slide 32, 33, 34</i></div>
 <div class="gpt g2-block"><h5>Body surface area (BSA) figure (Patel Scaly slide 32)</h5>
 <p class="g2-status"><b>Status B</b></p>
@@ -3473,7 +3473,7 @@ const GUIDE_HTML = `
 </section>
 
 <section class="gobj" id="gobj-pl-s-11">
-<h3>Dr. Patel, slide by slide &middot; Psoriasis treatment algorithms &middot; slides 35-37</h3>
+<h3>Dr. Patel, slide by slide · Psoriasis treatment algorithms · slides 35-37</h3>
 <div class="gbar"><span>What the lecture adds (Patel Scaly 35-37)</span><b>The two treatment algorithms and the topical options; she said topical agents come first, systemic last, and non-drug therapy is given to every patient</b><i>Patel Scaly slide 35, 36, 37</i></div>
 <div class="gpt g2-block"><h5>Algorithm for mild-to-moderate psoriasis (Patel Scaly slide 35)</h5>
 <p class="g2-status"><b>Status B, D, E</b></p>
@@ -3504,7 +3504,7 @@ const GUIDE_HTML = `
 </section>
 
 <section class="gobj" id="gobj-pl-s-12">
-<h3>Dr. Patel, slide by slide &middot; Systemic agents &middot; slides 38-39</h3>
+<h3>Dr. Patel, slide by slide · Systemic agents · slides 38-39</h3>
 <div class="gbar"><span>What the lecture adds (Patel Scaly 38-39)</span><b>The oral and systemic drug options and what decides between them; she said these are options chosen by the patient, not first, second and third line</b><i>Patel Scaly slide 38, 39</i></div>
 <div class="gpt g2-block"><h5>Systemic options: apremilast, tofacitinib, acitretin (Patel Scaly slide 38)</h5>
 <p class="g2-status"><b>Status B, C, D, E</b></p>
@@ -3530,7 +3530,7 @@ const GUIDE_HTML = `
 </section>
 
 <section class="gobj" id="gobj-pl-s-13">
-<h3>Dr. Patel, slide by slide &middot; Biologic agents &middot; slides 40-43</h3>
+<h3>Dr. Patel, slide by slide · Biologic agents · slides 40-43</h3>
 <div class="gbar"><span>What the lecture adds (Patel Scaly 40-43)</span><b>Biologic classes, names and safety; she said to know generic names, brand names, class and the bolded items, and to monitor for infection</b><i>Patel Scaly slide 40, 41, 42, 43</i></div>
 <div class="gpt g2-block"><h5>Biologics key points (Patel Scaly slide 40)</h5>
 <p class="g2-status"><b>Status B, C</b></p>
@@ -3569,7 +3569,7 @@ const GUIDE_HTML = `
 </section>
 
 <section class="gobj" id="gobj-pl-s-14">
-<h3>Dr. Patel, slide by slide &middot; Photochemotherapy, alternatives and cost &middot; slides 44-47</h3>
+<h3>Dr. Patel, slide by slide · Photochemotherapy, alternatives and cost · slides 44-47</h3>
 <div class="gbar"><span>What the lecture adds (Patel Scaly 44-47)</span><b>The last-line light therapy, complementary options, and cost; she said photochemotherapy is the absolute last line for severe refractory psoriasis</b><i>Patel Scaly slide 44, 45, 46, 47</i></div>
 <div class="gpt g2-block"><h5>Photochemotherapy (PUVA): side effects and efficacy (Patel Scaly slide 44)</h5>
 <p class="g2-status"><b>Status B</b></p>
@@ -3604,7 +3604,7 @@ const GUIDE_HTML = `
 </section>
 
 <section class="gobj" id="gobj-pl-s-15">
-<h3>Dr. Patel, slide by slide &middot; Monitoring, education and case &middot; slides 48-52</h3>
+<h3>Dr. Patel, slide by slide · Monitoring, education and case · slides 48-52</h3>
 <div class="gbar"><span>What the lecture adds (Patel Scaly 48-52)</span><b>Follow-up, patient education, a worked psoriasis case, and the closing points; she said follow-up is 1 to 2 weeks and that history and prior response guide the choice</b><i>Patel Scaly slide 48, 49, 50, 51, 52</i></div>
 <div class="gpt g2-block"><h5>Monitor and evaluate (Patel Scaly slide 48)</h5>
 <p class="g2-status"><b>Status B, C</b></p>
@@ -4001,7 +4001,7 @@ const GUIDE_HTML = `
 <details class="gdetails" id="gpl-p8o">
 <summary>Dr. Patel: Outdoor exposure slide by slide, what the lecture adds (67 slides)</summary>
 <section class="gobj" id="gobj-pl-o-1">
-<h3>Dr. Patel, slide by slide &middot; Outdoor exposures &middot; slides 1&ndash;5</h3>
+<h3>Dr. Patel, slide by slide · Outdoor exposures · slides 1&ndash;5</h3>
 <div class="gbar"><span>What the lecture adds (Outdoor 1&ndash;5)</span><b>Frame for the Outdoor Exposure lecture: her objectives, how she says she builds exam questions, and the fingertip-unit calculation she said has now returned three times</b><i>Patel Outdoor slide 1, 2, 3, 4, 5</i></div>
 <div class="gpt g2-block"><h5>Title slide: Outdoor Exposure Therapeutics (Patel Outdoor slide 1)</h5>
 <p class="g2-status"><b>Status A</b> On the slide and complete; nothing added in lecture.</p>
@@ -4034,7 +4034,7 @@ const GUIDE_HTML = `
 </section>
 
 <section class="gobj" id="gobj-pl-o-2">
-<h3>Dr. Patel, slide by slide &middot; Outdoor exposures &middot; slides 6&ndash;11</h3>
+<h3>Dr. Patel, slide by slide · Outdoor exposures · slides 6&ndash;11</h3>
 <div class="gbar"><span>What the lecture adds (Outdoor 6&ndash;11)</span><b>Plant contact dermatitis: what causes the reaction, how it is prevented, how it looks, and what the treatment goals are (objectives 1, 3, 4 and 5)</b><i>Patel Outdoor slide 6, 7, 8, 9, 10, 11</i></div>
 <div class="gpt g2-block"><h5>Divider: Plant contact dermatitis (Patel Outdoor slide 6)</h5>
 <p class="g2-status"><b>Status A</b> On the slide and complete; nothing added in lecture.</p>
@@ -4087,7 +4087,7 @@ const GUIDE_HTML = `
 </section>
 
 <section class="gobj" id="gobj-pl-o-3">
-<h3>Dr. Patel, slide by slide &middot; Outdoor exposures &middot; slides 12&ndash;16</h3>
+<h3>Dr. Patel, slide by slide · Outdoor exposures · slides 12&ndash;16</h3>
 <div class="gbar"><span>What the lecture adds (Outdoor 12&ndash;16)</span><b>Choosing the topical or oral product by condition, age and skin state, and when to refer (objectives 5 and 6)</b><i>Patel Outdoor slide 12, 13, 14, 15, 16</i></div>
 <div class="gpt g2-block"><h5>Topical hydrocortisone, anesthetics and antihistamines by condition (Patel Outdoor slide 12)</h5>
 <p class="g2-status"><b>Status B, E</b> matching product, condition and comment</p>
@@ -4138,7 +4138,7 @@ const GUIDE_HTML = `
 </section>
 
 <section class="gobj" id="gobj-pl-o-4">
-<h3>Dr. Patel, slide by slide &middot; Outdoor exposures &middot; slides 17&ndash;18</h3>
+<h3>Dr. Patel, slide by slide · Outdoor exposures · slides 17&ndash;18</h3>
 <div class="gbar"><span>What the lecture adds (Outdoor 17&ndash;18)</span><b>The patient-care process applied to a poison ivy case: decide what the patient needs treated before choosing a product</b><i>Patel Outdoor slide 17, 18</i></div>
 <div class="gpt g2-block"><h5>Patient-centered care process wheel (Patel Outdoor slide 17)</h5>
 <p class="g2-status"><b>Status A</b> On the slide and complete; nothing added in lecture.</p>
@@ -4156,7 +4156,7 @@ const GUIDE_HTML = `
 </section>
 
 <section class="gobj" id="gobj-pl-o-5">
-<h3>Dr. Patel, slide by slide &middot; Outdoor exposures &middot; slides 19&ndash;23</h3>
+<h3>Dr. Patel, slide by slide · Outdoor exposures · slides 19&ndash;23</h3>
 <div class="gbar"><span>What the lecture adds (Outdoor 19&ndash;23)</span><b>Insect bites versus stings, prevention and the four treatment goals (objectives 1, 3 and 4)</b><i>Patel Outdoor slide 19, 20, 21, 22, 23</i></div>
 <div class="gpt g2-block"><h5>Divider: Insect bites (Patel Outdoor slide 19)</h5>
 <p class="g2-status"><b>Status A</b> On the slide and complete; nothing added in lecture.</p>
@@ -4199,7 +4199,7 @@ const GUIDE_HTML = `
 </section>
 
 <section class="gobj" id="gobj-pl-o-6">
-<h3>Dr. Patel, slide by slide &middot; Outdoor exposures &middot; slides 24&ndash;28</h3>
+<h3>Dr. Patel, slide by slide · Outdoor exposures · slides 24&ndash;28</h3>
 <div class="gbar"><span>What the lecture adds (Outdoor 24&ndash;28)</span><b>Bite first aid and treatment, and the vector-borne diseases she tied to mosquitoes, fleas and ticks (objectives 4, 5 and 6)</b><i>Patel Outdoor slide 24, 25, 26, 27, 28</i></div>
 <div class="gpt g2-block"><h5>Non-drug measures for insect bites (Patel Outdoor slide 24)</h5>
 <p class="g2-status"><b>Status B</b> reasons for saving the tick and cleaning afterward</p>
@@ -4247,7 +4247,7 @@ const GUIDE_HTML = `
 </section>
 
 <section class="gobj" id="gobj-pl-o-7">
-<h3>Dr. Patel, slide by slide &middot; Outdoor exposures &middot; slides 29&ndash;31</h3>
+<h3>Dr. Patel, slide by slide · Outdoor exposures · slides 29&ndash;31</h3>
 <div class="gbar"><span>What the lecture adds (Outdoor 29&ndash;31)</span><b>Lyme disease and other tick-borne treatment, and when a bite is referred (objectives 5 and 6)</b><i>Patel Outdoor slide 29, 30, 31</i></div>
 <div class="gpt g2-block"><h5>Lyme disease: prophylaxis and treatment by stage (Patel Outdoor slide 29)</h5>
 <p class="g2-status"><b>Status B, E</b> timing, drug choice by allergy and the durations she compared</p>
@@ -4281,7 +4281,7 @@ const GUIDE_HTML = `
 </section>
 
 <section class="gobj" id="gobj-pl-o-8">
-<h3>Dr. Patel, slide by slide &middot; Outdoor exposures &middot; slides 32&ndash;37</h3>
+<h3>Dr. Patel, slide by slide · Outdoor exposures · slides 32&ndash;37</h3>
 <div class="gbar"><span>What the lecture adds (Outdoor 32&ndash;37)</span><b>Two bite cases, the move to stings, bee sting first aid and referral, and the sting case (objectives 1, 2 and 6)</b><i>Patel Outdoor slide 32, 33, 34, 35, 36, 37</i></div>
 <div class="gpt g2-block"><h5>Bedbug case and the maximum self-care duration (Patel Outdoor slide 32)</h5>
 <p class="g2-status"><b>Status B, E</b> why witch hazel and the neomycin product are not the answer, and the repeat 7-day cue</p>
@@ -4334,7 +4334,7 @@ const GUIDE_HTML = `
 </section>
 
 <section class="gobj" id="gobj-pl-o-9">
-<h3>Dr. Patel, slide by slide &middot; Outdoor exposures &middot; slides 38&ndash;40</h3>
+<h3>Dr. Patel, slide by slide · Outdoor exposures · slides 38&ndash;40</h3>
 <div class="gbar"><span>What the lecture adds (Outdoor 38&ndash;40)</span><b>Sting non-drug measures and the OTC counseling points for bites and stings (objectives 4, 5 and 7)</b><i>Patel Outdoor slide 38, 39, 40</i></div>
 <div class="gpt g2-block"><h5>Non-drug measures for insect stings (Patel Outdoor slide 38)</h5>
 <p class="g2-status"><b>Status C</b> extra step after a sting</p>
@@ -4362,7 +4362,7 @@ const GUIDE_HTML = `
 </section>
 
 <section class="gobj" id="gobj-pl-o-10">
-<h3>Dr. Patel, slide by slide &middot; Outdoor exposures &middot; slides 41&ndash;45</h3>
+<h3>Dr. Patel, slide by slide · Outdoor exposures · slides 41&ndash;45</h3>
 <div class="gbar"><span>What the lecture adds (Outdoor 41&ndash;45)</span><b>Lice: types, non-drug care, who should not self-treat, and the pediculicide options with their age limits (objectives 2 and 5)</b><i>Patel Outdoor slide 41, 42, 43, 44, 45</i></div>
 <div class="gpt g2-block"><h5>Divider: Pediculosis (Patel Outdoor slide 41)</h5>
 <p class="g2-status"><b>Status A</b> On the slide and complete; nothing added in lecture.</p>
@@ -4402,7 +4402,7 @@ const GUIDE_HTML = `
 </section>
 
 <section class="gobj" id="gobj-pl-o-11">
-<h3>Dr. Patel, slide by slide &middot; Outdoor exposures &middot; slides 46&ndash;49</h3>
+<h3>Dr. Patel, slide by slide · Outdoor exposures · slides 46&ndash;49</h3>
 <div class="gbar"><span>What the lecture adds (Outdoor 46&ndash;49)</span><b>Lice wetting agents, counseling and follow-up, and the lice case (objectives 5, 6 and 7)</b><i>Patel Outdoor slide 46, 47, 48, 49</i></div>
 <div class="gpt g2-block"><h5>Lice wetting and occlusive agents (Patel Outdoor slide 46)</h5>
 <p class="g2-status"><b>Status B</b> how these products work</p>
@@ -4441,7 +4441,7 @@ const GUIDE_HTML = `
 </section>
 
 <section class="gobj" id="gobj-pl-o-12">
-<h3>Dr. Patel, slide by slide &middot; Outdoor exposures &middot; slides 50&ndash;54</h3>
+<h3>Dr. Patel, slide by slide · Outdoor exposures · slides 50&ndash;54</h3>
 <div class="gbar"><span>What the lecture adds (Outdoor 50&ndash;54)</span><b>Scabies, venomous spiders and venomous snakes: signs, first aid and prevention (objectives 1, 4 and 7)</b><i>Patel Outdoor slide 50, 51, 52, 53, 54</i></div>
 <div class="gpt g2-block"><h5>Scabies: cause, spread and who is at risk (Patel Outdoor slide 50)</h5>
 <p class="g2-status"><b>Status A</b> On the slide and complete; she read the same points and added nothing new</p>
@@ -4489,7 +4489,7 @@ const GUIDE_HTML = `
 </section>
 
 <section class="gobj" id="gobj-pl-o-13">
-<h3>Dr. Patel, slide by slide &middot; Outdoor exposures &middot; slides 55&ndash;59</h3>
+<h3>Dr. Patel, slide by slide · Outdoor exposures · slides 55&ndash;59</h3>
 <div class="gbar"><span>What the lecture adds (Outdoor 55&ndash;59)</span><b>Pit viper effects, snake bite first aid and medical care, severity grading and the inpatient protocol (objectives 1, 4 and 7)</b><i>Patel Outdoor slide 55, 56, 57, 58, 59</i></div>
 <div class="gpt g2-block"><h5>Adverse effects of pit viper bites (table) (Patel Outdoor slide 55)</h5>
 <p class="g2-status"><b>Status B, C</b> what the table is for</p>
@@ -4541,7 +4541,7 @@ const GUIDE_HTML = `
 </section>
 
 <section class="gobj" id="gobj-pl-o-14">
-<h3>Dr. Patel, slide by slide &middot; Outdoor exposures &middot; slides 60&ndash;63</h3>
+<h3>Dr. Patel, slide by slide · Outdoor exposures · slides 60&ndash;63</h3>
 <div class="gbar"><span>What the lecture adds (Outdoor 60&ndash;63)</span><b>Rabies: exposure, referral as an urgency, clinical stages and post-exposure prophylaxis (objectives 1, 5 and 7)</b><i>Patel Outdoor slide 60, 61, 62, 63</i></div>
 <div class="gpt g2-block"><h5>Rabies map of Texas, 2022 (Patel Outdoor slide 60)</h5>
 <p class="g2-status"><b>Status A</b> On the slide; she said only that rabies is common in Texas</p>
@@ -4579,7 +4579,7 @@ const GUIDE_HTML = `
 </section>
 
 <section class="gobj" id="gobj-pl-o-15">
-<h3>Dr. Patel, slide by slide &middot; Outdoor exposures &middot; slides 64&ndash;67</h3>
+<h3>Dr. Patel, slide by slide · Outdoor exposures · slides 64&ndash;67</h3>
 <div class="gbar"><span>What the lecture adds (Outdoor 64&ndash;67)</span><b>Closing points: how to approach any outdoor exposure, the poison control number, references</b><i>Patel Outdoor slide 64, 65, 66, 67</i></div>
 <div class="gpt g2-block"><h5>Conclusions: how to approach an outdoor exposure (Patel Outdoor slide 64)</h5>
 <p class="g2-status"><b>Status E</b> her closing instructions</p>
@@ -4886,7 +4886,7 @@ const GUIDE_HTML = `
 <details class="gdetails" id="gpl-p8s">
 <summary>Dr. Patel: Sun exposure slide by slide, what the lecture adds (56 slides)</summary>
 <section class="gobj" id="gobj-pl-u-1">
-<h3>Dr. Patel, slide by slide &middot; Sun exposure &middot; slides 1&ndash;5</h3>
+<h3>Dr. Patel, slide by slide · Sun exposure · slides 1&ndash;5</h3>
 <div class="gbar"><span>What the lecture adds (Sun Exposure 1&ndash;5)</span><b>Her objectives slides are where she says her questions come from, so the lecture is read against them</b><i>Patel Sun Exposure slide 1, 3, 4, 5</i></div>
 <div class="gpt g2-block"><h5>Title slide (Patel Sun Exposure slide 1)</h5>
 <p class="g2-status"><b>Status A</b> On the slide and complete; nothing added in lecture</p>
@@ -4912,7 +4912,7 @@ const GUIDE_HTML = `
 </section>
 
 <section class="gobj" id="gobj-pl-u-2">
-<h3>Dr. Patel, slide by slide &middot; Sun exposure &middot; slides 6&ndash;8</h3>
+<h3>Dr. Patel, slide by slide · Sun exposure · slides 6&ndash;8</h3>
 <div class="gbar"><span>What the lecture adds (Sun Exposure 6&ndash;8)</span><b>Which UV rays reach which layer of skin, and the skin-tone scale that guides each recommendation</b><i>Patel Sun Exposure slide 6, 7, 8</i></div>
 <div class="gpt g2-block"><h5>UV light has two types of radiation reaching the skin (Patel Sun Exposure slide 6)</h5>
 <p class="g2-status"><b>Status B</b> fact on slide; lecture adds where each type reaches and whom to follow for details</p>
@@ -4942,7 +4942,7 @@ const GUIDE_HTML = `
 </section>
 
 <section class="gobj" id="gobj-pl-u-3">
-<h3>Dr. Patel, slide by slide &middot; Sun exposure &middot; slides 9&ndash;11</h3>
+<h3>Dr. Patel, slide by slide · Sun exposure · slides 9&ndash;11</h3>
 <div class="gbar"><span>What the lecture adds (Sun Exposure 9&ndash;11)</span><b>Who is at highest risk from UV radiation, and which drugs add to that risk</b><i>Patel Sun Exposure slide 9, 10, 11</i></div>
 <div class="gpt g2-block"><h5>Patients at highest risk of UV-induced problems (Patel Sun Exposure slide 9)</h5>
 <p class="g2-status"><b>Status B, C</b> slide lists the risks; lecture adds the drug link and what each risk means</p>
@@ -4971,7 +4971,7 @@ const GUIDE_HTML = `
 </section>
 
 <section class="gobj" id="gobj-pl-u-4">
-<h3>Dr. Patel, slide by slide &middot; Sun exposure &middot; slides 12&ndash;15</h3>
+<h3>Dr. Patel, slide by slide · Sun exposure · slides 12&ndash;15</h3>
 <div class="gbar"><span>What the lecture adds (Sun Exposure 12&ndash;15)</span><b>Who should use sunscreen, how to choose it, and the SPF number she keys for the exam</b><i>Patel Sun Exposure slide 12, 13, 14, 15</i></div>
 <div class="gpt g2-block"><h5>Sun safety measures (Patel Sun Exposure slide 12)</h5>
 <p class="g2-status"><b>Status B, C</b> slide lists measures; lecture adds the timing and the UV index tool</p>
@@ -5014,7 +5014,7 @@ const GUIDE_HTML = `
 </section>
 
 <section class="gobj" id="gobj-pl-u-5">
-<h3>Dr. Patel, slide by slide &middot; Sun exposure &middot; slides 16&ndash;18</h3>
+<h3>Dr. Patel, slide by slide · Sun exposure · slides 16&ndash;18</h3>
 <div class="gbar"><span>What the lecture adds (Sun Exposure 16&ndash;18)</span><b>Physical and chemical sunscreen ingredients and which ones she wants named as most effective</b><i>Patel Sun Exposure slide 16, 17, 18</i></div>
 <div class="gpt g2-block"><h5>Sunscreen ingredients: physical and chemical (Patel Sun Exposure slide 16)</h5>
 <p class="g2-status"><b>Status B</b> fact on slide; lecture adds how each type works and the irritation difference</p>
@@ -5045,7 +5045,7 @@ const GUIDE_HTML = `
 </section>
 
 <section class="gobj" id="gobj-pl-u-6">
-<h3>Dr. Patel, slide by slide &middot; Sun exposure &middot; slides 19&ndash;23</h3>
+<h3>Dr. Patel, slide by slide · Sun exposure · slides 19&ndash;23</h3>
 <div class="gbar"><span>What the lecture adds (Sun Exposure 19&ndash;23)</span><b>The sun-protection interview, why chemical absorption matters, how much and how often to apply, and vitamin D</b><i>Patel Sun Exposure slide 19, 20, 21, 22, 23</i></div>
 <div class="gpt g2-block"><h5>Medical history questions for sun protection (Patel Sun Exposure slide 19)</h5>
 <p class="g2-status"><b>Status B</b> fact on slide; lecture adds how the answers decide the product</p>
@@ -5092,7 +5092,7 @@ const GUIDE_HTML = `
 </section>
 
 <section class="gobj" id="gobj-pl-u-7">
-<h3>Dr. Patel, slide by slide &middot; Sun exposure &middot; slides 24&ndash;28</h3>
+<h3>Dr. Patel, slide by slide · Sun exposure · slides 24&ndash;28</h3>
 <div class="gbar"><span>What the lecture adds (Sun Exposure 24&ndash;28)</span><b>The timeline of sunburn, the scale of skin cancer, the lasting skin and eye changes, and the ABCDE rule</b><i>Patel Sun Exposure slide 24, 25, 26, 27, 28</i></div>
 <div class="gpt g2-block"><h5>Sunburn: what happens and when (Patel Sun Exposure slide 24)</h5>
 <p class="g2-status"><b>Status B</b> fact on slide; lecture adds what the timeline looks like to the patient</p>
@@ -5141,7 +5141,7 @@ const GUIDE_HTML = `
 </section>
 
 <section class="gobj" id="gobj-pl-u-8">
-<h3>Dr. Patel, slide by slide &middot; Sun exposure &middot; slides 29&ndash;32</h3>
+<h3>Dr. Patel, slide by slide · Sun exposure · slides 29&ndash;32</h3>
 <div class="gbar"><span>What the lecture adds (Sun Exposure 29&ndash;32)</span><b>How sunburn is treated: goals, who is not a self-care patient, recommended products, and aloe</b><i>Patel Sun Exposure slide 29, 30, 31, 32</i></div>
 <div class="gpt g2-block"><h5>Sunburn: treatment goals and plan (Patel Sun Exposure slide 29)</h5>
 <p class="g2-status"><b>Status B</b> fact on slide; lecture adds the infection signs and how products are chosen</p>
@@ -5177,7 +5177,7 @@ const GUIDE_HTML = `
 </section>
 
 <section class="gobj" id="gobj-pl-u-9">
-<h3>Dr. Patel, slide by slide &middot; Sun exposure &middot; slides 33&ndash;35</h3>
+<h3>Dr. Patel, slide by slide · Sun exposure · slides 33&ndash;35</h3>
 <div class="gbar"><span>What the lecture adds (Sun Exposure 33&ndash;35)</span><b>Products not to recommend for sunburn, follow-up timing, and the case answers she gave</b><i>Patel Sun Exposure slide 33, 34, 35</i></div>
 <div class="gpt g2-block"><h5>Sunburn treatment: not recommended (Patel Sun Exposure slide 33)</h5>
 <p class="g2-status"><b>Status B</b> fact on slide; lecture adds the reason</p>
@@ -5204,7 +5204,7 @@ const GUIDE_HTML = `
 </section>
 
 <section class="gobj" id="gobj-pl-u-10">
-<h3>Dr. Patel, slide by slide &middot; Sun exposure &middot; slides 36&ndash;37</h3>
+<h3>Dr. Patel, slide by slide · Sun exposure · slides 36&ndash;37</h3>
 <div class="gbar"><span>What the lecture adds (Sun Exposure 36&ndash;37)</span><b>The sun exposure counseling points she flagged as hints</b><i>Patel Sun Exposure slide 36, 37</i></div>
 <div class="gpt g2-block"><h5>Sun exposure counseling points for patients (Patel Sun Exposure slide 36)</h5>
 <p class="g2-status"><b>Status E, B</b> exam cue: she called the first point a hint and listed what to know</p>
@@ -5230,7 +5230,7 @@ const GUIDE_HTML = `
 </section>
 
 <section class="gobj" id="gobj-pl-u-11">
-<h3>Dr. Patel, slide by slide &middot; Sun exposure &middot; slides 38&ndash;42</h3>
+<h3>Dr. Patel, slide by slide · Sun exposure · slides 38&ndash;42</h3>
 <div class="gbar"><span>What the lecture adds (Sun Exposure 38&ndash;42)</span><b>What photoaging is, how it differs from chronologic aging, and how it is prevented</b><i>Patel Sun Exposure slide 38, 39, 40, 41, 42</i></div>
 <div class="gpt g2-block"><h5>Photoaging section divider (Patel Sun Exposure slide 38)</h5>
 <p class="g2-status"><b>Status A</b> On the slide and complete; nothing added in lecture</p>
@@ -5265,7 +5265,7 @@ const GUIDE_HTML = `
 </section>
 
 <section class="gobj" id="gobj-pl-u-12">
-<h3>Dr. Patel, slide by slide &middot; Sun exposure &middot; slides 43&ndash;46</h3>
+<h3>Dr. Patel, slide by slide · Sun exposure · slides 43&ndash;46</h3>
 <div class="gbar"><span>What the lecture adds (Sun Exposure 43&ndash;46)</span><b>The photoaging drug classes she named, how retinoids and hydroxy acids are used, and why peels are not an OTC option</b><i>Patel Sun Exposure slide 43, 44, 45, 46</i></div>
 <div class="gpt g2-block"><h5>Photoaging: pharmacologic treatments (Patel Sun Exposure slide 43)</h5>
 <p class="g2-status"><b>Status B</b> table on slide; lecture names which classes matter and for what</p>
@@ -5302,7 +5302,7 @@ const GUIDE_HTML = `
 </section>
 
 <section class="gobj" id="gobj-pl-u-13">
-<h3>Dr. Patel, slide by slide &middot; Sun exposure &middot; slides 47&ndash;51</h3>
+<h3>Dr. Patel, slide by slide · Sun exposure · slides 47&ndash;51</h3>
 <div class="gbar"><span>What the lecture adds (Sun Exposure 47&ndash;51)</span><b>Hydroquinone limits, the FDA position, antioxidants, product labels and plant extracts</b><i>Patel Sun Exposure slide 47, 48, 49, 50, 51</i></div>
 <div class="gpt g2-block"><h5>Depigmentation: hydroquinone (Patel Sun Exposure slide 47)</h5>
 <p class="g2-status"><b>Status B, C</b> fact on slide; lecture adds the safe-use counseling and the regulatory status</p>
@@ -5350,7 +5350,7 @@ const GUIDE_HTML = `
 </section>
 
 <section class="gobj" id="gobj-pl-u-14">
-<h3>Dr. Patel, slide by slide &middot; Sun exposure &middot; slides 52&ndash;57</h3>
+<h3>Dr. Patel, slide by slide · Sun exposure · slides 52&ndash;57</h3>
 <div class="gbar"><span>What the lecture adds (Sun Exposure 52&ndash;57)</span><b>The photoaging case answer, photoaging counseling, retinoid and hydroxy acid use, and her closing list</b><i>Patel Sun Exposure slide 52, 53, 54, 55, 56, 57</i></div>
 <div class="gpt g2-block"><h5>Practice case: photoaging in a 65-year-old woman (Patel Sun Exposure slide 52)</h5>
 <p class="g2-status"><b>Status C, E</b> lecture gives the answer and the key term; options are not on the slide</p>
@@ -5559,7 +5559,7 @@ const GUIDE_HTML = `
 <details class="gdetails" id="gpl-p8w">
 <summary>Dr. Patel: Wound care slide by slide, what the lecture adds (29 slides)</summary>
 <section class="gobj" id="gobj-pl-w-1">
-<h3>Dr. Patel, slide by slide &middot; Wound care &middot; slides 1&ndash;5</h3>
+<h3>Dr. Patel, slide by slide · Wound care · slides 1&ndash;5</h3>
 <div class="gbar"><span>What the lecture adds (Wound 1&ndash;5)</span><b>Identify the wound type and severity, then assess, recommend treatment and refer; the stage of a wound is set by its depth</b><i>Patel Wound slide 1, 2, 3, 4, 5</i></div>
 <div class="gpt g2-block"><h5>Title slide (Patel Wound slide 1)</h5>
 <p class="g2-status"><b>Status A</b> On the slide and complete; nothing added in lecture</p>
@@ -5583,7 +5583,7 @@ const GUIDE_HTML = `
 </section>
 
 <section class="gobj" id="gobj-pl-w-2">
-<h3>Dr. Patel, slide by slide &middot; Wound care &middot; slides 6&ndash;9</h3>
+<h3>Dr. Patel, slide by slide · Wound care · slides 6&ndash;9</h3>
 <div class="gbar"><span>What the lecture adds (Wound 6&ndash;9)</span><b>Know the healing phases, the list of wounds that are not self-treated, and the advantages and disadvantages of each dressing</b><i>Patel Wound slide 6, 7, 8, 9</i></div>
 <div class="gpt g2-block"><h5>Healing phases and why deeper wounds take longer (Patel Wound slide 6)</h5>
 <p class="g2-status"><b>Status B, E</b> Fact on slide; lecture adds the reasoning about duration and an exam cue</p>
@@ -5608,7 +5608,7 @@ const GUIDE_HTML = `
 </section>
 
 <section class="gobj" id="gobj-pl-w-3">
-<h3>Dr. Patel, slide by slide &middot; Wound care &middot; slides 10&ndash;15</h3>
+<h3>Dr. Patel, slide by slide · Wound care · slides 10&ndash;15</h3>
 <div class="gbar"><span>What the lecture adds (Wound 10&ndash;15)</span><b>Reduce scarring, and use OTC antibiotics, anesthetics and antiseptics only when indicated, because each has limits and risks</b><i>Patel Wound slide 10, 11, 12, 13, 14, 15</i></div>
 <div class="gpt g2-block"><h5>Minimizing scarring (Patel Wound slide 10)</h5>
 <p class="g2-status"><b>Status B</b> Fact on slide; lecture adds the consequence of leaving the steps out</p>
@@ -5645,7 +5645,7 @@ const GUIDE_HTML = `
 </section>
 
 <section class="gobj" id="gobj-pl-w-4">
-<h3>Dr. Patel, slide by slide &middot; Wound care &middot; slides 16&ndash;20</h3>
+<h3>Dr. Patel, slide by slide · Wound care · slides 16&ndash;20</h3>
 <div class="gbar"><span>What the lecture adds (Wound 16&ndash;20)</span><b>Sort a burn by BSA and depth into minor, moderate or major, decide who is excluded from self-care, and counsel on cooling and OTC products</b><i>Patel Wound slide 16, 17, 18, 19, 20</i></div>
 <div class="gpt g2-block"><h5>Burn severity: minor, moderate and major (Patel Wound slide 16)</h5>
 <p class="g2-status"><b>Status C, D, E</b> Table on slide; lecture adds the link to BSA, an exam cue, and a point that differs from slide 7</p>
@@ -5676,7 +5676,7 @@ const GUIDE_HTML = `
 </section>
 
 <section class="gobj" id="gobj-pl-w-5">
-<h3>Dr. Patel, slide by slide &middot; Wound care &middot; slides 21&ndash;26</h3>
+<h3>Dr. Patel, slide by slide · Wound care · slides 21&ndash;26</h3>
 <div class="gbar"><span>What the lecture adds (Wound 21&ndash;26)</span><b>Know what slows wound healing, from local and systemic factors to drugs, comorbidities and smoking, and how chronic wounds are managed</b><i>Patel Wound slide 21, 22, 23, 24, 25, 26</i></div>
 <div class="gpt g2-block"><h5>Local factors that impair wound healing (Patel Wound slide 21)</h5>
 <p class="g2-status"><b>Status A</b> On the slide and complete; nothing added in lecture</p>
@@ -5705,7 +5705,7 @@ const GUIDE_HTML = `
 </section>
 
 <section class="gobj" id="gobj-pl-w-6">
-<h3>Dr. Patel, slide by slide &middot; Wound care &middot; slides 27&ndash;29</h3>
+<h3>Dr. Patel, slide by slide · Wound care · slides 27&ndash;29</h3>
 <div class="gbar"><span>What the lecture adds (Wound 27&ndash;29)</span><b>Her closing points on wound care: four stages, three phases, clean first, moist healing, appropriate dressings, and antiseptics and antibiotics only when indicated</b><i>Patel Wound slide 27, 28, 29</i></div>
 <div class="gpt g2-block"><h5>Conclusions: what she said to know (Patel Wound slide 27)</h5>
 <p class="g2-status"><b>Status E, C</b> Summary on slide; lecture adds emphasis and the first-step statement</p>
@@ -5915,7 +5915,7 @@ const GUIDE_HTML = `
 <details class="gdetails" id="gpl-p8c">
 <summary>Dr. Patel: Warts, corns and calluses slide by slide, what the lecture adds (20 slides)</summary>
 <section class="gobj" id="gobj-pl-c-1">
-<h3>Dr. Patel, slide by slide &middot; Warts, corns and calluses &middot; slides 1&ndash;5</h3>
+<h3>Dr. Patel, slide by slide · Warts, corns and calluses · slides 1&ndash;5</h3>
 <div class="gbar"><span>What the lecture adds (Warts 1&ndash;5)</span><b>Know what causes warts, how a wart differs from a corn and a callus, and the objectives she builds exam questions from</b><i>Patel Warts slide 1, 2, 3, 4, 5</i></div>
 <div class="gpt g2-block"><h5>Title slide (Patel Warts slide 1)</h5>
 <p class="g2-status"><b>Status C</b> Slide title is wrong; she corrected it</p>
@@ -5946,7 +5946,7 @@ const GUIDE_HTML = `
 </section>
 
 <section class="gobj" id="gobj-pl-c-2">
-<h3>Dr. Patel, slide by slide &middot; Warts, corns and calluses &middot; slides 6&ndash;9</h3>
+<h3>Dr. Patel, slide by slide · Warts, corns and calluses · slides 6&ndash;9</h3>
 <div class="gbar"><span>What the lecture adds (Warts 6&ndash;9)</span><b>Know which warts are self-treatable, the goals and non-drug steps for warts, and the OTC products used</b><i>Patel Warts slide 6, 7, 8, 9</i></div>
 <div class="gpt g2-block"><h5>Types of non-genital warts: which are self-treatable (Patel Warts slide 6)</h5>
 <p class="g2-status"><b>Status E</b> Table on slide; lecture adds the exam cue</p>
@@ -5967,7 +5967,7 @@ const GUIDE_HTML = `
 </section>
 
 <section class="gobj" id="gobj-pl-c-3">
-<h3>Dr. Patel, slide by slide &middot; Warts, corns and calluses &middot; slides 10&ndash;12</h3>
+<h3>Dr. Patel, slide by slide · Warts, corns and calluses · slides 10&ndash;12</h3>
 <div class="gbar"><span>What the lecture adds (Warts 10&ndash;12)</span><b>Know how each OTC wart product is applied, for how long and how often, and how salicylic acid ranks against the complementary options</b><i>Patel Warts slide 10, 11, 12</i></div>
 <div class="gpt g2-block"><h5>Salicylic acid counseling: 40% plaster and 17% liquid or gel (Patel Warts slide 10)</h5>
 <p class="g2-status"><b>Status B, E</b> Steps on slide; lecture adds the reason for the tape and an exam cue on days of use</p>
@@ -5987,7 +5987,7 @@ const GUIDE_HTML = `
 </section>
 
 <section class="gobj" id="gobj-pl-c-4">
-<h3>Dr. Patel, slide by slide &middot; Warts, corns and calluses &middot; slides 13&ndash;17</h3>
+<h3>Dr. Patel, slide by slide · Warts, corns and calluses · slides 13&ndash;17</h3>
 <div class="gbar"><span>What the lecture adds (Warts 13&ndash;17)</span><b>Tell a corn from a callus, and know the non-drug care, cautions and counseling limits for salicylic acid on corns and calluses</b><i>Patel Warts slide 13, 14, 15, 16, 17</i></div>
 <div class="gpt g2-block"><h5>Corn versus callus (Patel Warts slide 13)</h5>
 <p class="g2-status"><b>Status B</b> Definitions on slide; lecture adds the contrast</p>
@@ -6016,7 +6016,7 @@ const GUIDE_HTML = `
 </section>
 
 <section class="gobj" id="gobj-pl-c-5">
-<h3>Dr. Patel, slide by slide &middot; Warts, corns and calluses &middot; slides 18&ndash;20</h3>
+<h3>Dr. Patel, slide by slide · Warts, corns and calluses · slides 18&ndash;20</h3>
 <div class="gbar"><span>What the lecture adds (Warts 18&ndash;20)</span><b>Her closing points on this lecture: the objectives, counseling, days of use, number of repeats and when to refer</b><i>Patel Warts slide 18, 19, 20</i></div>
 <div class="gpt g2-block"><h5>Summary: what she called the big things (Patel Warts slide 18)</h5>
 <p class="g2-status"><b>Status E</b> Slide lists the focus; lecture names the exam-relevant points</p>
