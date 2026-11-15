@@ -19,6 +19,7 @@ Every update adds its bullets here in the same commit that makes the change.
 - Each drawn diagram now opens with a sentence on what it shows and what it is for.
 
 ## 2026-11-15 (glossary)
+- Fingertip-unit blanks now ask for the tube size to dispense, rounded up (60 g, 100 g, 60 g).
 - Glossary tab: 763 course terms with search, Exam 1 / Exam 2 filters and where each is on the slides.
 - After you answer, a closed "Words in this question" row lists the terms in it; tap one to see it.
 - "I didn't know this" saves a term to My words, with a short review.
