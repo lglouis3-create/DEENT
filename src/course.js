@@ -341,6 +341,12 @@ const COURSE = {
           'examfold_ui.js',
           // Space and a rule between the sections of Reference, Guides and Tell apart (Louis 2026-11-13)
           'refsep_ui.js',
+          // Guides: the reading components of the objective sections (numbered blocks, tables, formula
+          // line, step-care bands, number tiles with a label that says what the number measures,
+          // tap-to-check polls). Styles only, under ".gobj .g2-" (Louis 2026-11-14)
+          'guide2_css.js',
+          // Glossary tab, "Words in this question" under an answered question, My words (Louis, 2026-11-14)
+          'glossary_data.js', 'glossary_ui.js',
           // Search box in the header (Louis, 2026-11-14): last of the content files, it reads their globals
           'search_ui.js',
           // Browser-tab icon on the live page (brand.py wrote it into the <head> until 2026-11-09)
@@ -360,8 +366,8 @@ const COURSE = {
 
   // Link preview of a shared address and the Home Screen name (kit #88; these replace
   // release step 1b, src/brand.py, from 2026-11-09). Values as brand.py wrote them.
-  share: {title: 'DEENT Exam Review',
-          description: 'PHAR 4346 Exam 1 practice: questions, structures and drug targets for Dr. Smith\'s and Dr. Sikazwe\'s lectures.',
+  share: {title: 'DEENT Study Guide / Review',
+          description: 'PHAR 4346 study guide and review: practice questions, guides, structures, diseases and drug targets.',
           url: 'https://lglouis3-create.github.io/DEENT/',
           image: 'og-image.png'},
   manifest: {short_name: 'DEENT Review'},

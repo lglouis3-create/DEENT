@@ -18,6 +18,19 @@ Every update adds its bullets here in the same commit that makes the change.
 - Nuclear receptors: a section and diagram each for corticosteroids, retinoids and vitamin D.
 - Each drawn diagram now opens with a sentence on what it shows and what it is for.
 
+## 2026-11-15 (glossary)
+- Glossary tab: 763 course terms with search, Exam 1 / Exam 2 filters and where each is on the slides.
+- After you answer, a closed "Words in this question" row lists the terms in it; tap one to see it.
+- "I didn't know this" saves a term to My words, with a short review.
+
+## 2026-11-15 (slide window)
+- On an iPad or computer a slide opens in a window you can drag, resize, or dock right or bottom.
+- The question stays readable and tappable behind the slide; the window remembers its place.
+
+## 2026-11-14 (guides)
+- Guides, Exam 2: every objective page now uses tables, numbered blocks and a step ladder for algorithms.
+- Number tiles say what each number measures; her polls open as self-tests.
+
 ## 2026-11-14 (questions reworded)
 - 128 questions reworded: patient cases and direct questions replace "which statement is correct".
 - No question or answer choice refers to a slide or the lecture any more.

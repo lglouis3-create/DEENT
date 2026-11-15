@@ -144,7 +144,7 @@ const onDisk = (deck, n, printed) => { const r = P.resolve(deck, n, printed); re
         await page.evaluate(() => {
           window.__opens = 0;
           const d = HTMLDialogElement.prototype, o = d.showModal;
-          if (!d.__counted) { d.__counted = true; d.showModal = function(){ if (this.classList.contains('slv')) window.__opens++; return o.apply(this, arguments); }; }
+          if (!d.__counted) { d.__counted = true; d.showModal = function(){ if (this.classList.contains('slv')) window.__opens++; return o.apply(this, arguments); }; const o2 = d.show; d.show = function(){ if (this.classList.contains('slv')) window.__opens++; return o2.apply(this, arguments); }; }
           document.querySelector('#v-quiz .cite .slk').focus();
         });
         for (let k = 0; k < 7; k++) await page.keyboard.down('Enter');
@@ -328,8 +328,8 @@ const onDisk = (deck, n, printed) => { const r = P.resolve(deck, n, printed); re
       console.log(`  linkifier: ${st.runs} passes, ${st.links} buttons made, ${st.ms} ms in all`);
       const keys1 = await page.evaluate(() => Object.keys(localStorage).concat(Object.keys(sessionStorage)).sort());
       const added = keys1.filter(k => !keys0.includes(k));
-      check(!keys1.some(k => /slide|slv|slk|deck:/i.test(k)) && !/localStorage|sessionStorage|indexedDB|document\.cookie|caches\./.test(fs.readFileSync(path.join(__dirname, 'slide_ui.js'), 'utf8').replace(/\/\*[\s\S]*?\*\//g, '')),
-        'slide_ui.js stores nothing (no storage call in the file; no key of its own)', added.join(', '));
+      check(!keys1.some(k => /slide|slv|slk|deck:/i.test(k) && !/^[^:]+:slidewin:v1$/.test(k)) && !/sessionStorage|indexedDB|document\.cookie|caches\./.test(fs.readFileSync(path.join(__dirname, 'slide_ui.js'), 'utf8').replace(/\/\*[\s\S]*?\*\//g, '')),
+        'slide_ui.js stores nothing but the place of its window (one localStorage key, <NS>:slidewin:v1)', added.join(', '));
       check(!errors.length, 'no page error', errors.slice(0, 4).join(' | '));
       await ctx.close();
     }

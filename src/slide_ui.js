@@ -521,7 +521,150 @@ const SLIDE_UI = (() => {
   /* deck, page: the picture on screen. cdeck, n: the cited number it stands for, in the deck the citation
      named; Previous and Next follow that deck's numbering (Dr. Smith's Sun slides 1-4 are pictures of her Skin
      Pharmacology deck, and Next from Sun 4 is Sun 5). from: the citation that opened the viewer */
-  const V = {dlg: null, deck: null, page: 0, cdeck: null, n: 0, from: null, opener: null, modal: false, lock: null, refocus: false};
+  const V = {dlg: null, deck: null, page: 0, cdeck: null, n: 0, from: null, opener: null, modal: false, lock: null, refocus: false,
+             mode: '', win: null, rect: null, drag: null, pinch: null, away: false, whole: false};
+
+  /* ---- the window (Louis, 2026-11-14: "move around the opening slide or make it small or bigger to be able
+     to see the question"). In a browser window at least 760 px wide and 480 px high the viewer is a window
+     over the page, not a modal box: the page behind is read, scrolled and pressed as before. V.mode:
+       'win'    the window: moved by its title bar, resized by its corner or by two fingers on the slide,
+                or set to the right half or the bottom half of the browser window (V.win.dock);
+       'full'   the covering box with the dimmed page behind it (the Full button), a modal dialog;
+       'phone'  the same covering box without the window buttons: narrower or shorter windows, and over
+                an enlarged figure or another modal dialog (a window would lie under those).
+     V.win is {dock, x, y, w, h, has}: the place and size asked for, kept in localStorage under
+     <NS>:slidewin:v1 for this device (not per profile); V.rect is the rectangle on screen */
+  const WIN = {wide: 760, tall: 480, minW: 280, minH: 320, step: 24, bar: 56};
+  const DOCKS = ['right', 'bottom', 'full'];
+  const winKey = () => { let ns; try { ns = NS; } catch (e) { try { ns = COURSE.ns; } catch (e2) { ns = 'drill'; } } return ns + ':slidewin:v1'; };
+  const fin = v => typeof v === 'number' && isFinite(v);
+  function loadWin(){
+    const s = {dock: '', x: 0, y: 0, w: 0, h: 0, has: false};
+    try {
+      const o = JSON.parse(localStorage.getItem(winKey()) || 'null');
+      if (o && typeof o === 'object') {
+        if (DOCKS.indexOf(o.dock) >= 0) s.dock = o.dock;
+        if (fin(o.x) && fin(o.y) && fin(o.w) && fin(o.h) && o.w > 0 && o.h > 0) { s.x = o.x; s.y = o.y; s.w = o.w; s.h = o.h; s.has = true; }
+      }
+    } catch (e) {}
+    return s;
+  }
+  function saveWin(){
+    const s = V.win; if (!s) return;
+    try { localStorage.setItem(winKey(), JSON.stringify(s.has ? {dock: s.dock, x: Math.round(s.x), y: Math.round(s.y), w: Math.round(s.w), h: Math.round(s.h)} : {dock: s.dock})); } catch (e) {}
+  }
+  const vp = () => ({w: document.documentElement.clientWidth || window.innerWidth, h: window.innerHeight});
+  const roomy = () => window.innerWidth >= WIN.wide && window.innerHeight >= WIN.tall;
+  /* an enlarged figure, or a modal dialog of the page (a drug panel of the Diseases tab), is open */
+  function blocked(){
+    try { if (document.querySelector('.fig.big')) return true; } catch (e) {}
+    try { return Array.prototype.some.call(document.querySelectorAll('dialog[open]'), x => x !== V.dlg && x.matches(':modal')); } catch (e) { return false; }
+  }
+  const modeWanted = () => !roomy() || blocked() ? 'phone' : V.win && V.win.dock === 'full' ? 'full' : 'win';
+  /* the lower edge of the page's heading and tab strip, where they are in sight at the top of the window */
+  function topEdge(){
+    let t = 0;
+    try {
+      ['header', '#nav'].forEach(sel => {
+        const el = document.querySelector(sel); if (!el) return;
+        const b = el.getBoundingClientRect();
+        if (b.height > 0 && b.bottom > t && b.top < window.innerHeight / 3) t = b.bottom;
+      });
+    } catch (e) {}
+    return Math.max(0, Math.min(Math.round(t), Math.round(window.innerHeight / 3)));
+  }
+  /* a rectangle inside the window: not smaller than the least size, not larger than the window, not past its
+     left, right or upper edge, and with its title bar (and so Close) above the lower edge. whole: all of it
+     above the lower edge (when the viewer opens and after the browser window was resized or turned, until
+     the window is moved by hand: a place kept from a larger browser window does not leave the slide out of sight) */
+  function clampWin(r, whole){
+    const v = vp(), w = Math.min(Math.max(r.w, WIN.minW), v.w), h = Math.min(Math.max(r.h, WIN.minH), v.h);
+    // the title bar as high as it is now (in a narrow window its buttons stand under the heading)
+    let bar = WIN.bar;
+    try { const hd = V.dlg && V.mode === 'win' && V.dlg.open ? V.dlg.querySelector('.slv-head').getBoundingClientRect().height : 0; if (hd > 0) bar = Math.max(bar, Math.ceil(hd) + 8); } catch (e) {}
+    return {x: Math.min(Math.max(r.x, 0), v.w - w), y: Math.min(Math.max(r.y, 0), Math.max(0, v.h - (whole ? h : bar))), w, h};
+  }
+  function rectNow(){
+    const v = vp(), s = V.win;
+    if (s.dock === 'right') { const t = topEdge(), x = Math.round(v.w / 2); return {x, y: t, w: v.w - x, h: v.h - t}; }
+    if (s.dock === 'bottom') { const y = Math.round(v.h / 2); return {x: 0, y, w: v.w, h: v.h - y}; }
+    if (!s.has) {
+      // the first time: at the upper right, under the tab strip, as high as the slide's shape asks
+      const t = topEdge(), k = D[V.deck] || {}, w = Math.min(560, Math.round(v.w * 0.46));
+      s.w = w; s.h = Math.min(v.h - t - 24, Math.round(w / (k.ar || 1.3333)) + 128); s.x = v.w - w - 12; s.y = t + 12; s.has = true;
+    }
+    return clampWin(s, V.whole);
+  }
+  /* the window is put where V.win says; the buttons say which half it fills */
+  function place(){
+    const d = V.dlg; if (!d) return;
+    if (V.mode === 'win') {
+      let r = V.rect = rectNow();
+      const set = () => { d.style.left = r.x + 'px'; d.style.top = r.y + 'px'; d.style.width = r.w + 'px'; d.style.height = r.h + 'px'; d.classList.toggle('slv-lab', r.w >= 620); };
+      set();
+      // at its new width the title bar may be higher: once more, so that all of it is above the lower edge
+      if (!V.win.dock) { const r2 = clampWin(r, V.whole); if (r2.y !== r.y) { r = V.rect = r2; set(); } }
+    } else {
+      V.rect = null;
+      ['left', 'top', 'width', 'height'].forEach(p => d.style.removeProperty(p));
+      d.classList.add('slv-lab');
+    }
+    const dock = V.mode === 'full' ? 'full' : V.mode === 'win' ? V.win.dock : '';
+    d.setAttribute('data-dock', dock);
+    DOCKS.forEach(k => { const b = d.querySelector('[data-slv=' + k + ']'); if (b) b.setAttribute('aria-pressed', String(dock === k)); });
+  }
+  /* the viewer is put on screen as a window or as the covering box; when it is on screen already it changes
+     from the one to the other where it stands (the picture stays) */
+  function showAs(mode){
+    const d = V.dlg, was = d.open, x = window.scrollX, y = window.scrollY;
+    if (was) { if (typeof d.close === 'function') d.close(); else d.removeAttribute('open'); unlock(false); }
+    V.mode = mode; V.drag = null; V.pinch = null; d.classList.remove('slv-drag');
+    d.classList.toggle('slv-win', mode === 'win'); d.classList.toggle('slv-desk', mode !== 'phone'); d.classList.remove('slv-fb');
+    const t = d.querySelector('.slv-t');
+    if (mode === 'win') {
+      V.modal = false;
+      d.setAttribute('aria-modal', 'false'); t.setAttribute('tabindex', '0');
+      place();
+      if (typeof d.show === 'function') d.show(); else d.setAttribute('open', '');
+    } else {
+      d.removeAttribute('aria-modal'); t.removeAttribute('tabindex');
+      place();
+      V.modal = typeof d.showModal === 'function';
+      if (V.modal) d.showModal(); else { d.classList.add('slv-fb'); d.setAttribute('open', ''); }   // a browser without <dialog>
+      try { lock(x, y); } catch (e) {}
+    }
+    if (was && (window.scrollX !== x || window.scrollY !== y)) put(x, y);
+  }
+  /* a button of the title bar: the half (or the whole) it names; pressed again, back to the free window */
+  function dock(name){
+    const d = V.dlg, s = V.win; if (!d || !s || V.mode === 'phone') return;
+    s.dock = s.dock === name ? '' : name; saveWin();
+    const want = s.dock === 'full' ? 'full' : 'win';
+    if (want !== V.mode) showAs(want); else place();
+    const b = d.querySelector('[data-slv=' + name + ']'); if (b) { try { b.focus({preventScroll: true}); } catch (e) {} }
+  }
+  /* moved or resized by hand: the window leaves the half it filled and keeps the rectangle it has */
+  function setRect(r, save){
+    const s = V.win, c = clampWin(r);
+    s.dock = ''; s.x = c.x; s.y = c.y; s.w = c.w; s.h = c.h; s.has = true; V.whole = false;
+    place(); if (V.rect) s.y = V.rect.y;
+    if (save) saveWin();
+  }
+  function nudge(kind, dx, dy){
+    const r = V.rect || rectNow(), v = vp();
+    if (kind === 'move') setRect({x: r.x + dx, y: r.y + dy, w: r.w, h: r.h}, true);
+    else setRect({x: r.x, y: r.y, w: Math.min(r.w + dx, Math.max(r.w, v.w - r.x)), h: Math.min(r.h + dy, Math.max(r.h, v.h - r.y))}, true);
+  }
+  /* the browser window was resized or turned: the window is put inside it again; in a window now too small
+     for it the viewer becomes the covering box */
+  function refit(){
+    const d = V.dlg; if (!d || !d.open || V.mode !== 'win') return;
+    if (!roomy()) {
+      const inside = d.contains(document.activeElement);
+      showAs('phone');
+      if (inside) { try { d.querySelector('.slv-x').focus({preventScroll: true}); } catch (e) {} }
+    } else place();
+  }
   /* the number printed on a clean page of a deck cited by page: the page's own place in the file, except the
      rows of SLIDES.printed (pdftotext of the clean deck) */
   const printedOn = (deck, page) => { let n = page; (SLIDES.printed || []).forEach(r => { if (r[0] === deck && r[1] === page) n = r[2]; }); return n; };
@@ -530,18 +673,21 @@ const SLIDE_UI = (() => {
     d.className = 'slv'; d.setAttribute('aria-labelledby', 'slv-deck');
     d.innerHTML = `<div class="slv-in">
       <div class="slv-head"><div class="slv-t"><p id="slv-deck" class="slv-deck"></p><p class="slv-pos" aria-live="polite"></p></div>
+        <div class="slv-dock"><button type="button" class="slv-dk" data-slv="right" aria-pressed="false" aria-label="Right half" title="Right half"><span class="slv-ic" aria-hidden="true"></span><span class="slv-dl" aria-hidden="true">Right half</span></button><button type="button" class="slv-dk" data-slv="bottom" aria-pressed="false" aria-label="Bottom half" title="Bottom half"><span class="slv-ic" aria-hidden="true"></span><span class="slv-dl" aria-hidden="true">Bottom half</span></button><button type="button" class="slv-dk" data-slv="full" aria-pressed="false" aria-label="Full" title="Full"><span class="slv-ic" aria-hidden="true"></span><span class="slv-dl" aria-hidden="true">Full</span></button></div>
         <button type="button" class="slv-x" data-slv="close">Close</button></div>
       <p class="slv-note" hidden></p>
       <div class="slv-pic"><a class="slv-a" target="_blank" rel="noopener"><img class="slv-img" alt="" decoding="async"></a>
         <p class="slv-wait" hidden></p>
         <p class="slv-err" role="alert" hidden>The picture of this slide did not load. Check the connection, then press Try again. <button type="button" class="btn sm" data-slv="again">Try again</button></p></div>
       <div class="slv-bar"><button type="button" class="btn ghost" data-slv="prev">◂ Previous</button><button type="button" class="btn ghost" data-slv="next">Next ▸</button>
-        <span class="slv-sp"></span><a class="slv-full" target="_blank" rel="noopener">Open full size</a></div></div>`;
+        <span class="slv-sp"></span><a class="slv-full" target="_blank" rel="noopener">Open full size</a></div></div>
+      <button type="button" class="slv-rs" aria-label="Resize window. Arrow keys change the size." title="Resize window"></button>`;
+    d.querySelector('.slv-t').setAttribute('aria-description', 'Drag to move the window. With focus here, the arrow keys move it.');
     document.body.appendChild(d);
     d.addEventListener('click', e => {
       const t = e.target.closest ? e.target.closest('[data-slv]') : null;
-      if (t) { const a = t.getAttribute('data-slv'); if (a === 'close') close(); else if (a === 'prev') go(-1); else if (a === 'next') go(1); else if (a === 'again') draw(true); return; }
-      if (e.target === d) close();                                   // a tap on the dimmed page around the box
+      if (t) { const a = t.getAttribute('data-slv'); if (a === 'close') close(); else if (a === 'prev') go(-1); else if (a === 'next') go(1); else if (a === 'again') draw(true); else if (DOCKS.indexOf(a) >= 0) dock(a); return; }
+      if (e.target === d && V.mode !== 'win') close();                                   // a tap on the dimmed page around the box
     });
     // Escape and Tab are the viewer's while it is open, wherever focus is, and the page's own key handlers never
     // see them (an enlarged figure behind the viewer took Tab for its own buttons and closed on the first
@@ -553,11 +699,27 @@ const SLIDE_UI = (() => {
     window.addEventListener('keydown', e => {
       sane();
       if (!d.open) return;
+      // the window: with focus on its title the arrow keys move it, with focus on its corner they resize it
+      if (V.mode === 'win' && /^Arrow/.test(e.key) && !e.altKey && !e.ctrlKey && !e.metaKey) {
+        const onT = e.target === d.querySelector('.slv-t'), onR = e.target === d.querySelector('.slv-rs');
+        if (onT || onR) {
+          e.preventDefault(); e.stopPropagation();
+          const k = e.key, dx = k === 'ArrowLeft' ? -WIN.step : k === 'ArrowRight' ? WIN.step : 0, dy = k === 'ArrowUp' ? -WIN.step : k === 'ArrowDown' ? WIN.step : 0;
+          nudge(onT ? 'move' : 'size', dx, dy); return;
+        }
+      }
       // the left and right arrows page, also when focus is on nothing in the box (after a click on its text)
       if ((e.key === 'ArrowLeft' || e.key === 'ArrowRight') && (V.modal || d.contains(e.target))) { e.preventDefault(); go(e.key === 'ArrowLeft' ? -1 : 1); return; }
       if (V.modal && SCROLLS.indexOf(e.key) >= 0 && d.scrollHeight <= d.clientHeight + 1 && !((e.key === ' ' || e.key === 'Spacebar') && e.target && e.target.tagName === 'BUTTON')) { e.preventDefault(); return; }
       if (e.key !== 'Escape' && e.key !== 'Tab') return;
-      if (e.key === 'Escape') { e.stopPropagation(); e.preventDefault(); close(); return; }
+      if (e.key === 'Escape') {
+        // the window: Escape is the page's own while focus is in a field of the page or in another open box
+        if (V.mode === 'win' && !d.contains(e.target)) {
+          const t = e.target && e.target.closest ? e.target : null;
+          if (blocked() || (t && (t.closest('input,textarea,select,[contenteditable]') || t.closest('dialog[open]')))) return;
+        }
+        e.stopPropagation(); e.preventDefault(); close(); return;
+      }
       if (!V.modal) return;                                          // without <dialog> the page around the box is still in use
       e.stopPropagation();
       const f = Array.prototype.filter.call(d.querySelectorAll('button,a[href]'), x => !x.disabled && x.getClientRects().length && getComputedStyle(x).visibility !== 'hidden');
@@ -568,10 +730,67 @@ const SLIDE_UI = (() => {
     // moves nothing; two fingers, a zoomed page and Ctrl with the wheel (zoom) are left to the browser
     const still = e => { if (e.cancelable && (e.target === d || d.scrollHeight <= d.clientHeight + 1)) e.preventDefault(); };
     d.addEventListener('touchmove', e => {
+      if (V.mode === 'win') return;                                  // the window: a finger on it scrolls the page as anywhere else
       const vv = window.visualViewport;
       if (!(e.touches && e.touches.length > 1) && !(vv && vv.scale > 1.01)) still(e);
     }, {passive: false});
-    d.addEventListener('wheel', e => { if (!e.ctrlKey) still(e); }, {passive: false});
+    d.addEventListener('wheel', e => { if (!e.ctrlKey && V.mode !== 'win') still(e); }, {passive: false});
+    /* the window is moved by its title bar and resized by its corner: one pointer (mouse, finger or pen), held
+       by the bar or the corner until it is let go. A press that does not move is a press, not a move */
+    const head = d.querySelector('.slv-head'), rs = d.querySelector('.slv-rs'), pic = d.querySelector('.slv-pic');
+    const grab = (el, kind) => {
+      el.addEventListener('pointerdown', e => {
+        if (V.mode !== 'win' || V.drag || (e.pointerType === 'mouse' && e.button !== 0)) return;
+        if (kind === 'move' && e.target.closest && e.target.closest('button,a')) return;
+        V.drag = {id: e.pointerId, kind, x: e.clientX, y: e.clientY, r: Object.assign({}, V.rect || rectNow()), moved: false};
+        try { el.setPointerCapture(e.pointerId); } catch (err) {}
+        if (e.pointerType === 'mouse') e.preventDefault();          // no text is selected by the drag
+      });
+      el.addEventListener('pointermove', e => {
+        const g = V.drag; if (!g || g.id !== e.pointerId || g.kind !== kind) return;
+        const dx = e.clientX - g.x, dy = e.clientY - g.y, v = vp();
+        if (!g.moved && Math.abs(dx) < 4 && Math.abs(dy) < 4) return;
+        g.moved = true; d.classList.add('slv-drag');
+        if (kind === 'move') setRect({x: g.r.x + dx, y: g.r.y + dy, w: g.r.w, h: g.r.h}, false);
+        else setRect({x: g.r.x, y: g.r.y, w: Math.min(g.r.w + dx, Math.max(g.r.w, v.w - g.r.x)), h: Math.min(g.r.h + dy, Math.max(g.r.h, v.h - g.r.y))}, false);
+      });
+      const end = e => {
+        const g = V.drag; if (!g || g.id !== e.pointerId || g.kind !== kind) return;
+        V.drag = null; d.classList.remove('slv-drag');
+        try { el.releasePointerCapture(e.pointerId); } catch (err) {}
+        if (g.moved) saveWin();
+      };
+      el.addEventListener('pointerup', end); el.addEventListener('pointercancel', end);
+    };
+    grab(head, 'move'); grab(rs, 'size');
+    /* two fingers on the slide resize the window about its middle (the browser's own zoom is not taken
+       anywhere else on the page; one finger on the slide scrolls the page) */
+    const two = e => { const t = e.touches; return t && t.length === 2 && pic.contains(t[0].target) && pic.contains(t[1].target); };
+    const span = e => { const a = e.touches[0], b = e.touches[1]; return Math.hypot(a.clientX - b.clientX, a.clientY - b.clientY) || 1; };
+    pic.addEventListener('touchstart', e => {
+      V.pinch = V.mode === 'win' && two(e) ? {d: span(e), r: Object.assign({}, V.rect || rectNow()), moved: false} : null;
+    }, {passive: true});
+    pic.addEventListener('touchmove', e => {
+      const p = V.pinch; if (!p || V.mode !== 'win' || !two(e)) return;
+      if (e.cancelable) e.preventDefault();
+      const v = vp(), lo = Math.max(WIN.minW / p.r.w, WIN.minH / p.r.h), hi = Math.min(v.w / p.r.w, v.h / p.r.h);
+      const k = Math.max(Math.min(span(e) / p.d, hi), Math.min(lo, hi)), w = p.r.w * k, h = p.r.h * k;
+      p.moved = true;
+      setRect({x: p.r.x + (p.r.w - w) / 2, y: p.r.y + (p.r.h - h) / 2, w, h}, false);
+    }, {passive: false});
+    const unpinch = () => { const p = V.pinch; V.pinch = null; if (p && p.moved) saveWin(); };
+    pic.addEventListener('touchend', unpinch); pic.addEventListener('touchcancel', unpinch);
+    // the browser window resized or turned; the tab strip shown or hidden as the page scrolls (the right half stands under it)
+    let fitT = 0, fitR = 0;
+    const fit = () => { if (fitR) return; fitR = (window.requestAnimationFrame || setTimeout)(() => { fitR = 0; try { refit(); } catch (e) {} }, 16); };
+    // (a change of width: turned, or the browser window resized; a browser bar that hides as the page scrolls changes the height only)
+    let fitW = window.innerWidth;
+    const fitAll = () => { if (window.innerWidth !== fitW) { fitW = window.innerWidth; V.whole = true; } fit(); };
+    window.addEventListener('resize', fitAll); window.addEventListener('orientationchange', fitAll);
+    window.addEventListener('scroll', () => {
+      if (!d.open || V.mode !== 'win' || !V.win || V.win.dock !== 'right') return;
+      fit(); clearTimeout(fitT); fitT = setTimeout(fit, 320);
+    }, {passive: true});
     d.addEventListener('close', closed);                             // Escape; and close(), which has done it already
     const img = d.querySelector('.slv-img');
     // an answer for a picture that is no longer the one asked for (Next pressed again, the viewer closed) is ignored
@@ -688,12 +907,10 @@ const SLIDE_UI = (() => {
     V.deck = r.deck; V.page = r.page; V.cdeck = deck; V.n = printed ? P.citedOf(r.deck, r.page) : n;
     V.from = {deck, n, to: to || 0, printed: !!printed, rdeck: r.deck, page: r.page};
     if (opener || !d.open) V.opener = opener || document.activeElement;
-    if (!d.open) {
-      const x = window.scrollX, y = window.scrollY;
-      V.modal = typeof d.showModal === 'function';
-      if (V.modal) d.showModal(); else { d.classList.add('slv-fb'); d.setAttribute('open', ''); }   // a browser without <dialog>
-      try { lock(x, y); } catch (e) {}
-    }
+    // a slide opened while the window is on screen takes the place of the one in it; the window stays where it is.
+    // (A window under a box of the page that has opened since becomes the covering box, on top of it.)
+    if (!d.open) { V.win = loadWin(); V.away = false; V.whole = true; showAs(modeWanted()); }
+    else if (V.mode === 'win' && modeWanted() === 'phone') showAs('phone');
     draw();                         // once the box is on screen: the picture is asked for by a box that is laid out
     const x = d.querySelector('.slv-x'); if (x) { try { x.focus({preventScroll: true}); } catch (e) {} }
     return true;
@@ -702,12 +919,12 @@ const SLIDE_UI = (() => {
      of an earlier closing that arrives when the viewer is open again finds it open and does nothing */
   function closed(){
     const d = V.dlg; if (!d || d.open) return;
-    const o = V.opener; V.opener = null; V.refocus = false;
+    const o = V.opener, away = V.away; V.opener = null; V.refocus = false; V.away = false; V.mode = ''; V.drag = null; V.pinch = null; d.classList.remove('slv-drag');
     d.querySelector('.slv-img').removeAttribute('src');
     // the citation that was tapped is still on the page: focus goes back to it and the page to its place
     const there = !!o && o.isConnected && o.getClientRects().length > 0;
     const k = V.lock, turned = !!k && (k.turned || window.innerWidth !== k.w || window.innerHeight !== k.h);
-    try { if (there && typeof o.focus === 'function') { try { o.focus({preventScroll: true}); } catch (e) { o.focus(); } } }
+    try { if (there && !away && typeof o.focus === 'function') { try { o.focus({preventScroll: true}); } catch (e) { o.focus(); } } }
     finally { unlock(there || !o); }
     // the window was resized or turned while the viewer was open: the page is not put back at its old place
     // (unlock), so the citation is brought on screen when it is not there
@@ -722,6 +939,9 @@ const SLIDE_UI = (() => {
   }
   function close(){
     const d = V.dlg; if (!d) return;
+    // the window closed while the reader is at work elsewhere on the page (focus on a control there): focus stays there
+    const a = document.activeElement;
+    V.away = d.open && V.mode === 'win' && !!a && a !== document.body && a !== document.documentElement && !d.contains(a);
     if (d.open && typeof d.close === 'function') d.close(); else d.removeAttribute('open');
     closed();
   }
@@ -795,6 +1015,40 @@ dialog.slv::backdrop{background:rgba(0,0,0,.55)}
   .slv-sp{display:none}
   .slv-full{flex-basis:100%;justify-content:center}
 }
+.slv-dock,.slv-rs{display:none}
+.slv-dk{font:inherit;font-size:14px;min-width:44px;min-height:44px;display:inline-flex;align-items:center;justify-content:center;gap:6px;border:1px solid var(--line,#d5dbe3);border-radius:8px;background:var(--paper,#fff);color:var(--accent,#2F5FA8);padding:0 9px;cursor:pointer;white-space:nowrap}
+.slv-dk[aria-pressed=true]{background:var(--accent,#2F5FA8);border-color:var(--accent,#2F5FA8);color:#fff}
+.slv-ic{position:relative;flex:none;width:22px;height:17px;border:1.5px solid currentColor;border-radius:2px;box-sizing:border-box}
+.slv-ic::after{content:"";position:absolute;background:currentColor}
+[data-slv=right] .slv-ic::after{top:0;bottom:0;right:0;width:50%}
+[data-slv=bottom] .slv-ic::after{left:0;right:0;bottom:0;height:50%}
+[data-slv=full] .slv-ic::after{inset:0}
+.slv-dl{display:none}
+.slv-lab .slv-dl{display:inline}
+@media (min-width:760px) and (min-height:480px){
+  .slv-desk .slv-dock{display:flex;gap:4px}
+  .slv-desk .slv-head{align-items:center}
+}
+dialog.slv.slv-win{position:fixed;inset:auto;margin:0;max-width:none;max-height:none;min-width:0;overflow:hidden;overscroll-behavior:auto;z-index:55;border:1px solid var(--line,#d5dbe3);border-radius:10px;box-shadow:0 6px 28px rgba(0,0,0,.3)}
+dialog.slv.slv-win[open]{display:block}
+dialog.slv.slv-win[data-dock=right],dialog.slv.slv-win[data-dock=bottom]{border-radius:0}
+.slv-win .slv-in{height:100%;box-sizing:border-box;display:flex;flex-direction:column;padding:6px 8px 8px 10px}
+.slv-win .slv-head{flex:none;flex-wrap:wrap;gap:4px 8px;touch-action:none;cursor:move;-webkit-user-select:none;user-select:none}
+.slv-win .slv-head button{cursor:pointer}
+.slv-win .slv-t{flex:1 1 150px;border-radius:6px}
+.slv-win .slv-t:focus-visible{outline:2px solid var(--accent,#2F5FA8);outline-offset:1px}
+.slv-win .slv-dock{margin-left:auto}
+.slv-win .slv-note{flex:none;max-height:4.4em;overflow:auto}
+.slv-win .slv-pic{flex:1 1 0;min-height:0;margin:6px 0;touch-action:pan-x pan-y;container-type:size}
+.slv-win .slv-a{width:100%;height:100%;aspect-ratio:auto}
+@supports (width:1cqw){.slv-win .slv-a{width:min(100cqw,calc(100cqh*var(--slv-ar,1.3333)));height:auto;aspect-ratio:var(--slv-ar,1.3333)}}
+.slv-win .slv-bar{flex:none;padding-right:40px}
+.slv-win .slv-rs{display:block;position:absolute;right:0;bottom:0;width:44px;height:44px;margin:0;padding:0;border:0;border-radius:8px 0 9px 0;background:transparent;cursor:nwse-resize;touch-action:none}
+.slv-win .slv-rs::before{content:"";position:absolute;right:7px;bottom:7px;width:18px;height:18px;
+  background:linear-gradient(135deg,transparent 0 36%,var(--text-dim,#5b6877) 36% 44%,transparent 44% 58%,var(--text-dim,#5b6877) 58% 66%,transparent 66% 80%,var(--text-dim,#5b6877) 80% 88%,transparent 88%)}
+.slv-win .slv-rs:focus-visible{outline:2px solid var(--accent,#2F5FA8);outline-offset:-3px}
+.slv-win.slv-drag{-webkit-user-select:none;user-select:none}
+.slv-win.slv-drag .slv-pic{pointer-events:none}
 @media print{.slk{color:inherit;text-decoration:none}dialog.slv{display:none}}
 `;
 
@@ -810,6 +1064,8 @@ dialog.slv::backdrop{background:rgba(0,0,0,.55)}
       for (let v = main.firstElementChild; v; v = v.nextElementSibling)
         if (v.tagName === 'SECTION') made += linkView(v);
       stats.runs++; stats.links += made;
+      // a practice exam under way (its clock is on screen): no slide stays in a window beside its questions
+      if (V.dlg && V.dlg.open && V.mode === 'win') { const c = main.querySelector('.examhead .clock'); if (c && c.getClientRects().length) close(); }
     } catch (e) { console.error('Slide links: this pass was skipped; the citations stay as text.', e); }
     finally {
       if (mo) { try { mo.observe(main, OBS); } catch (e) {} }
