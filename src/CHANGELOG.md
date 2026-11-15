@@ -19,6 +19,8 @@ Every update adds its bullets here in the same commit that makes the change.
 - Each drawn diagram now opens with a sentence on what it shows and what it is for.
 
 ## 2026-11-15 (exam paper, stars, questions)
+- Stars mark what the professors stressed in the reading tabs, with the reason; "Starred only" shows just those.
+- Guides, Exam 1: a walkthrough of the slides Dr. Sikazwe assigned, slide by slide, with what he said to know.
 - Exam sim, Exam 2: the paper draws 5 Dr. Smith, 5 Dr. Sikazwe and 40 Dr. Patel questions.
 - 40 more "Likely on the exam" stars for Lecture 8 (Outdoor, Sun, Wound care, Warts).
 - 9 new Lecture 8 questions: inpatient Lyme, scorpion stings, sunscreen counseling, Fitzpatrick type, scar care.

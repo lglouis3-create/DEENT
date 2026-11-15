@@ -80,6 +80,7 @@ const SLIDES = {
   ["gobj-pc-", "pc", "Guide: Skin Pharmacology", "sun"],
   ["gobj-sun-", "sun", "Guide: Dr. Smith's Sun Exposure", "sun"],
   ["gobj-mc-", "mc", "Guide: DPAW", "sun"],
+  ["gobj-sk-", "mc", "Guide: Dr. Sikazwe, assigned slides", "sun"],
   ["gobj-p5-", "p5", "Guide: Dr. Patel, Dermatitis", "p8s"],
   ["gobj-p6-", "p6", "Guide: Dr. Patel, Acne", "p8s"],
   ["gobj-p7-", "p7", "Guide: Dr. Patel, Scaly Dermatoses", "p8s"],

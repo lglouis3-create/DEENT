@@ -301,6 +301,743 @@ const GUIDE_HTML = `
 <li>Assigned for Exam 1 (his list of 11/06): printed slides 7&ndash;9, 12, 15&ndash;22, 24&ndash;33, 42&ndash;54, 60&ndash;65, which are PDF pages 7&ndash;9, 12, 15&ndash;23, 25&ndash;34, 43&ndash;55, 61&ndash;66. Here, as in the questions, slides are numbered by PDF page, so the assigned slides are 7&ndash;9, 12, 15&ndash;23, 25&ndash;34, 43&ndash;55 and 61&ndash;66; the sections below follow them.</li></ul></div>
 </section>
 
+<section class="gobj" id="gobj-sk-1">
+<h3>Dr. Sikazwe, assigned slides · crisaborole, the JAK inhibitors and Polleve-1</h3>
+<div class="gbar"><span>Objective (DPAW 7, 8, 9)</span><b>For crisaborole he says &ldquo;maybe emphasize ADM and chemical basis of drug action&rdquo; (the slide says ADMET) and mechanisms of action are not asked; for the two JAK inhibitors he stresses local action from formulation, the half-lives, the shared CYP 3A4 and the active metabolites; slide 9 is a practice set</b><i>DPAW slide 7, 8, 9</i></div>
+<div class="gpt g2-block"><h5>Crisaborole: a soft drug that loses its boron (DPAW slide 7) <span class="g2-star" title="Likely on the exam">&#9733;</span></h5>
+<p class="g2-p"><b>On the slide.</b> Crisaborole is a benzoxaborole: a benzene ring fused to a five-membered ring that contains boron carrying an OH (B-OH), joined through an oxygen to a second benzene ring that carries a nitrile (NC). A soft drug is built to undergo predictable metabolism, so it is inactivated and leaves harmless; a hard drug does not undergo metabolism.</p>
+<p class="g2-p"><b>Mechanism and ADMET.</b> PDE4 inhibition raises cAMP and lowers inflammatory cytokines. Log P = 3 (dermis accumulation); half-life 12 h; he adds that once-a-day application is possible <span class="g2-src">(11/03 T 697)</span>. The slide leaves a blank after &ldquo;Hydrolytic deboronation limits systemic exposure to&rdquo;; the recording does not fill it in.</p>
+<p class="g2-p"><b>The drawing, step by step.</b> Crisaborole accumulates in skin <span class="g2-src">(11/03 T 699)</span>. The first arrow (?) is loss of the boron by hydrolysis with water in the skin, no enzyme, which gives the benzyl alcohol drawn next (a CH2OH group and a ring OH where the boron ring was). The second arrow (??) converts that alcohol to the benzoic acid, a carboxylic acid, in two enzyme steps. Phase 2 conjugates such as glucuronides can follow <span class="g2-src">(11/03 T 710)</span>.</p>
+<p class="g2-p"><b>Chemical basis of drug action (CBDA).</b> In the PDE4 active site the boron coordinates two cations, zinc and magnesium. The slide labels His 238, His 274, Asp 275 and Asp 392 around them (J Med Chem 2021, 64(24)).</p>
+<div class="g2-said"><span class="g2-k">He said</span><ul>
+<li>&ldquo;So that now if I were to ask you what is a hard drug, a hard drug doesn't go what? Metabolism.&rdquo; <span class="g2-src">(11/03 T 668-669)</span></li>
+<li>&ldquo;crishabo is designed to be a soft drug. What does soft drug mean? It means it has to be, uh, it has to, it's a drug that is designed to undergo predictable metabolism.&rdquo; <span class="g2-src">(11/03 T 664-666)</span> [he said 'crishabo': crisaborole]</li>
+<li>&ldquo;That step is not enzymatic. Spontaneous, just in the presence of water in skin, it breaks up&rdquo; <span class="g2-src">(11/03 T 701-702)</span></li>
+<li>&ldquo;How many enzymes are involved here? To give you carboxylic acid. How many enzymes? 2.&rdquo; <span class="g2-src">(11/03 T 706-707)</span></li>
+<li>&ldquo;So alcohol dehydrogenase, and then what? How they hide dehydrogenase, two enzymes. Not 3, not 4, not sips, 2 enzymes.&rdquo; <span class="g2-src">(11/03 T 708-709)</span> [he said 'How they hide dehydrogenase': aldehyde dehydrogenase]</li>
+<li>&ldquo;It sits in there by having this boron group coordinate to two. Cations, right? Magnesium, and what? Zinc. That is the basis.&rdquo; <span class="g2-src">(11/03 T 713-714)</span></li>
+<li>&ldquo;Non-enzymatic is spontaneous. No, phosphodiesterase 4 is the target.&rdquo; <span class="g2-src">(11/03 T 727)</span> [answering a student&rsquo;s question: PDE4 is the target enzyme; the deboronation needs no enzyme]</li>
+</ul></div>
+<p class="g2-p"><span class="g2-k">Not needed</span> &ldquo;Now, am I going to be asking you about mechanisms of action? No.&rdquo; <span class="g2-src">(11/03 T 680-681)</span></p>
+<p class="g2-sub">Practice</p>
+<div class="g2-btns"><button type="button" class="chip g2-primary" data-qids="BS3-001 BS3-002 KX-001 KX-002 KX-005 KX-012 S3-008 S3-009 S3-010 S3-011 S3-012 S3-013 S3-014 S3-015 S3-016 S3-017 S3-018 S3-019 S3-020 S3-024 S3-025 S3-029 S3-048 S3-053 S3-054 S3-056 S3-058 S3-059 S3-061 S3-063 S3-064 S3-065 S3-066 S3-082 S3-083 S3-087 S3-088 S3-095 S3-103 S3H-001 S3H-002 S3H-003 S3H-004 S3H-005 S3H-008 S3H-009 S3H-011 S4H-011 S4H-015 S4H-017 S4H-021" data-qlabel="DPAW slide 7">Practice these (51)</button></div>
+</div>
+<div class="gpt g2-block"><h5>Ruxolitinib and upadacitinib: two topical JAK inhibitors (DPAW slide 8) <span class="g2-star" title="Likely on the exam">&#9733;</span></h5>
+<p class="g2-p"><b>On the slide.</b> Ruxolitinib and upadacitinib are the two Janus kinase (JAK) inhibitors available topically for eczema. Both act by JAK inhibition, which ends in less cytokine signaling and less inflammation <span class="g2-src">(11/03 T 734-736)</span>. Their chemical classes differ: ruxolitinib is a pyrrolopyrimidine (blue ring system, with a pyrazole, a cyclopentyl group and a nitrile side chain); upadacitinib is an imidazopyrrolopyridine (magenta ring system, with a CF3 side chain). He gave log P as about 2 for both <span class="g2-src">(11/03 T 737)</span>, which would predict passage through skin, but the formulations keep them in the skin.</p>
+<table class="g2-table g2-stack">
+<caption>ADMET on the slide <span class="g2-src">(DPAW slide 8)</span></caption>
+<thead><tr><th scope="col">Drug</th><th scope="col">Half-life</th><th scope="col">Enzymes</th><th scope="col">Note</th></tr></thead>
+<tbody>
+<tr><th scope="row">Ruxolitinib</th><td><span class="g2-lab">Half-life</span><b>3 h</b></td><td><span class="g2-lab">Enzymes</span>3A4/2C9 substrate</td><td>Some active metabolites</td></tr>
+<tr><th scope="row">Upadacitinib</th><td><span class="g2-lab">Half-life</span><b>8&ndash;16 h</b></td><td><span class="g2-lab">Enzymes</span>3A4/2D6 substrate</td><td></td></tr>
+</tbody>
+</table>
+<p class="g2-p"><b>Conflict to read carefully.</b> He said one drug is shorter-lived (multiple applications) and the other longer-lived (fewer applications), and that one has active hydroxylated metabolites and the other has none, without naming which is which <span class="g2-src">(11/03 T 742-744, 752-754)</span>. The slide names them: ruxolitinib 3 h with some active metabolites, upadacitinib 8&ndash;16 h with no metabolite note. An exam written from his lecture would key the slide&rsquo;s pairing.</p>
+<div class="g2-said"><span class="g2-k">He said</span><ul>
+<li>&ldquo;So if the question was, are these chemicals, are these similar chemical, no, they are not, they are different because they are structurally different&rdquo; <span class="g2-src">(11/03 T 732-733)</span></li>
+<li>&ldquo;Pay attention to the fact that these are both R3A4 as the major enzyme isoform for them, right? They are substrates of that.&rdquo; <span class="g2-src">(11/03 T 745-747)</span> [he said 'R3A4': 3A4]</li>
+<li>&ldquo;Let me say caution I can't spell caution. Inhibitors And indus of what? Of 3F4. OK? Because those can, can have a say on what? The half-life of the drug.&rdquo; <span class="g2-src">(11/03 T 747-749)</span> [he said 'caution', 'indus' and '3F4': inhibitors and inducers of 3A4]</li>
+<li>&ldquo;This one has no active metabolites. This one has at least the hydroxylated metabolites that form the hydroxy group. Some of these hydroxylated metabolites. are active.&rdquo; <span class="g2-src">(11/03 T 752-754)</span></li>
+<li>&ldquo;these are formulated. OK, that is a different formulated to. Be sequestered. They sequestered. In the skin.&rdquo; <span class="g2-src">(11/03 T 738-739)</span></li>
+<li>&ldquo;And there's some uh aspect to their half-lives. One is shorter lives, the, the other one is longer-lived, OK? So, shorter-lived, multiple applications, right? Longer lives, fewer applications.&rdquo; <span class="g2-src">(11/03 T 742-744)</span></li>
+</ul></div>
+<p class="g2-p"><span class="g2-k">Not needed</span> &ldquo;I am not going to bother you with trying to remember this, but this is just to distinguish that, yes, this is different from that functional group.&rdquo; <span class="g2-src">(11/03 T 730-732)</span> [he is speaking of the chemical class names of the two drugs]</p>
+<p class="g2-sub">Practice</p>
+<div class="g2-btns"><button type="button" class="chip g2-primary" data-qids="KX-003 KX-004 KX-005 S3-003 S3-008 S3-013 S3-016 S3-024 S3-025 S3-026 S3-027 S3-028 S3-029 S3-030 S3-061 S3-063 S3-098 S3H-001 S3H-002 S3H-005 S4-049 S4H-011 S4H-014" data-qlabel="DPAW slide 8">Practice these (23)</button></div>
+</div>
+<div class="gpt g2-block"><h5>Polleve-1: which crisaborole steps are glucuronidation (DPAW slide 9) <span class="g2-star" title="Likely on the exam">&#9733;</span></h5>
+<p class="g2-p"><b>On the slide.</b> A PollEv poll: &ldquo;Crisaborole&rsquo;s metabolic scheme indicates that steps ........... involve glucuronidation?&rdquo; with options (A) Steps 1 and 2, (B) Steps 2 and 3, (C) Steps 3 and 4. The scheme has four numbered arrows from crisaborole. Arrow 1 is the hydrolytic deboronation to the benzyl alcohol. Arrow 2 is the alcohol to the carboxylic acid. Arrow 3 attaches a sulfate (SO3) to the benzyl alcohol, a phase 2 step by sulfotransferases. Arrow 4 attaches a glucuronide (Gluc) to it, by UGT, also phase 2. The arrow marked 3,4 leads to a product carrying both SO3 and Gluc.</p>
+<p class="g2-p"><b>Two readings.</b> Strictly, on the drawing only arrow 4 and the combined 3,4 arrow add a glucuronide; arrow 3 alone adds the sulfate. He keyed &ldquo;3 and 4&rdquo; <span class="g2-src">(11/03 T 776-777)</span>. Both readings select option C, the only option that contains step 4, so an exam written from the lecture keys Steps 3 and 4.</p>
+<div class="g2-said"><span class="g2-k">He said</span><ul>
+<li>&ldquo;So this step would be the hydrolytic deboronination, right? This one, right? And then you get step two.&rdquo; <span class="g2-src">(11/03 T 767-768)</span></li>
+<li>&ldquo;So, what enzyme would be that phase two enzyme? Selhorans is, right?&rdquo; <span class="g2-src">(11/03 T 772)</span> [he said 'Selhorans': sulfotransferases (SULT)]</li>
+<li>&ldquo;when we say these can also form what? Gluronides. So, what enzyme is that? UGT. Remember these things, folks.&rdquo; <span class="g2-src">(11/03 T 773-774)</span></li>
+<li>&ldquo;So, if the question was, what steps involve glucuronidation, then you would choose which one.&rdquo; <span class="g2-src">(11/03 T 774-775)</span></li>
+<li>&ldquo;3 and 4 steps involve gluchroidation because I've, I've shown you this, right?&rdquo; <span class="g2-src">(11/03 T 776-777)</span> [he said 'gluchroidation': glucuronidation]</li>
+</ul></div>
+<div class="gpoll"><b>His poll</b>
+<details class="g2-self"><summary>Which steps involve glucuronidation? (A) Steps 1 and 2 (B) Steps 2 and 3 (C) Steps 3 and 4 <span class="g2-tap">Show answer</span></summary><p>(C) Steps 3 and 4 <span class="g2-src">(11/03 T 774-777)</span></p></details>
+</div>
+<p class="g2-sub">Practice</p>
+<div class="g2-btns"><button type="button" class="chip g2-primary" data-qids="KX-001 S3-014 S3-016 S3-020 S3-021 S3-022 S3-023 S3-028 S3-102 S3-103 S3H-002 S3H-003" data-qlabel="DPAW slide 9">Practice these (12)</button></div>
+</div>
+</section>
+
+<section class="gobj" id="gobj-sk-2">
+<h3>Dr. Sikazwe, assigned slides · UV terminology and emollients</h3>
+<div class="gbar"><span>Objective (DPAW 12, 15)</span><b>He asks you to know what is in UVR (&ldquo;know those limits&rdquo;), and for emollients to see that they are &ldquo;just palliative, what? Care&rdquo; (palliative care, not treatment of the disease)</b><i>DPAW slide 12, 15</i></div>
+<div class="gpt g2-block"><h5>Terminology: UV bands, ozone, PUVA, antimetabolite, keratinocytes (DPAW slide 12) <span class="g2-star" title="Likely on the exam">&#9733;</span></h5>
+<p class="g2-p"><b>On the slide.</b> UVR is ultraviolet radiation. The spectrum bar runs from ultraviolet (UVC, UVB, UVA) through visible to infrared, with wavelength marks at 100, 280, 315, 400 and 700 nm. Each band has a box under it. A skin cross-section beside it shows how far each band travels: UVA goes deepest.</p>
+<table class="g2-table g2-stack">
+<caption>The three ultraviolet bands <span class="g2-src">(DPAW slide 12; 11/03 T 813-819)</span></caption>
+<thead><tr><th scope="col">Band</th><th scope="col">Range on the slide (nm)</th><th scope="col">Range he said (nm)</th><th scope="col">Slide box</th></tr></thead>
+<tbody>
+<tr><th scope="row">UVC</th><td><span class="g2-lab">Range on the slide (nm)</span>100&ndash;280</td><td><span class="g2-lab">Range he said (nm)</span>100 to 280</td><td>Extremely dangerous; blocked by the ozone layer</td></tr>
+<tr><th scope="row">UVB</th><td><span class="g2-lab">Range on the slide (nm)</span>280&ndash;315</td><td><span class="g2-lab">Range he said (nm)</span>280 to 315 or 320</td><td>Skin cancer, cataracts, sunburn</td></tr>
+<tr><th scope="row">UVA</th><td><span class="g2-lab">Range on the slide (nm)</span>315&ndash;400</td><td><span class="g2-lab">Range he said (nm)</span>315 or 320 to 400</td><td>Premature aging, wrinkling of the skin, implicated in skin cancer</td></tr>
+</tbody>
+</table>
+<p class="g2-p"><b>Terms on the slide.</b> Ozone blocks 100% of UVC and 90% of UVB, so about 10% of UVB reaches the skin <span class="g2-src">(11/03 T 820-823)</span>. PUVA is psoralen plus ultraviolet A light. An antimetabolite is an enzyme-substrate mimic that inhibits cellular metabolism; he said such molecules mimic natural metabolites and disrupt making DNA and RNA <span class="g2-src">(11/03 T 831-834)</span>. Keratinocytes are epidermal skin cells; in psoriasis they proliferate excessively <span class="g2-src">(11/03 T 843-845)</span>.</p>
+<p class="g2-p"><b>Two readings of the limits.</b> He accepts 315 or 320 nm for the UVA start and the UVB end, &ldquo;depending on the literature you pick&rdquo;; the slide&rsquo;s axis marks 315, and slide 16 writes UVB as 280&ndash;320 nm. For visible light the slide&rsquo;s axis ends at 700 nm while he said 400 to 800. An exam from his lecture would key the band order, the 280 and 400 nm limits and the slide&rsquo;s 315; visible light has no single key.</p>
+<div class="g2-said"><span class="g2-k">He said</span><ul>
+<li>&ldquo;there are limits on the wavelengths that describe what? What is UVC, what is UVA, what is UVB. OK. So, know those limits.&rdquo; <span class="g2-src">(11/03 T 813-814)</span></li>
+<li>&ldquo;So, UVA is going to go up to 400, right? So, but it starts at either, depending on the literature you pick, it will be 315 or 320 nanometers to 400 nanometers.&rdquo; <span class="g2-src">(11/03 T 817-818)</span></li>
+<li>&ldquo;And then UVB then becomes what? 280 to either 315 or what? 320 nanometers.&rdquo; <span class="g2-src">(11/03 T 819)</span></li>
+<li>&ldquo;The ozone layer, if we don't damage it, right? We're good. It blocks most of that. And it also blocks like 90% of UVB.&rdquo; <span class="g2-src">(11/03 T 820-822)</span></li>
+<li>&ldquo;this is UV what? A. This can never be UVB. This can never be UVC because it's where UVA and it's given that range.&rdquo; <span class="g2-src">(11/03 T 828-830)</span></li>
+<li>&ldquo;These are simply molecules that mimic. Natural Molecules&rdquo; <span class="g2-src">(11/03 T 832)</span></li>
+<li>&ldquo;These are simply skin cells, right? Made out of what? Keratin.&rdquo; <span class="g2-src">(11/03 T 835)</span></li>
+<li>&ldquo;And then here, what goes in the furthest. UVA, the deepest, right?&rdquo; <span class="g2-src">(11/03 T 838-839)</span></li>
+<li>&ldquo;A question could simply be. Given the UV radiation, when we talked about UV radiation, which one is more skin penetrating? Which one? A.&rdquo; <span class="g2-src">(11/04 T@37498-37634)</span></li>
+</ul></div>
+<p class="g2-sub">Practice</p>
+<div class="g2-btns"><button type="button" class="chip g2-primary" data-qids="S3-031 S3-032 S3-033 S3-034 S3-035 S3-036 S3-037 S3-038 S3-042 S3-051 S3H-009 S4H-011" data-qlabel="DPAW slide 12">Practice these (12)</button></div>
+</div>
+<div class="gpt g2-block"><h5>Topical agents: emollients (DPAW slide 15) <span class="g2-star" title="Likely on the exam">&#9733;</span></h5>
+<p class="g2-p"><b>On the slide.</b> Emollients are listed as mostly water emulsions that prevent skin water loss; he also said they can contain oil and water, and some are 100% petrolatum with no water <span class="g2-src">(11/03 T 869, 873)</span>. They fill the gaps between scales and soften them, which reduces dryness and itching, so they do not treat the disease.</p>
+<ul>
+<li><b>Petrolatum</b> (Vaseline): the most effective emollient on the slide; a linear hydrocarbon chain of more than 25 carbons. The slide shows the yellow jelly.</li>
+<li><b>Lanolin</b>: odorous wool grease; a mixture of fatty acid esters. The slide shows sheep because it comes from sheep wool. He said the odor keeps some people from using it <span class="g2-src">(11/03 T 877-879)</span>.</li>
+<li><b>Silicone-based</b>: hypoallergenic and non-comedogenic (no comedone formation: no blackheads or whiteheads). Two are drawn.</li>
+</ul>
+<table class="g2-table g2-stack">
+<caption>The two silicones <span class="g2-src">(DPAW slide 15; 11/03 T 885-887)</span></caption>
+<thead><tr><th scope="col">Name</th><th scope="col">Structure on the slide</th></tr></thead>
+<tbody>
+<tr><th scope="row">Dimethicone</th><td>Linear chain of alternating silicon and oxygen, repeated n times, with two plain lines drawn on each silicon (the methyl groups the name dimethicone names)</td></tr>
+<tr><th scope="row">Cyclomethicone</th><td>Ring of five Si(CH3)2 units joined through oxygen, labeled a pentamer</td></tr>
+</tbody>
+</table>
+<div class="g2-said"><span class="g2-k">He said</span><ul>
+<li>&ldquo;the key thing is that they prevent the loss of water and soften the scaling.&rdquo; <span class="g2-src">(11/03 T 870)</span></li>
+<li>&ldquo;just hydrocarbons, right? About 25, a chain of hydrocarbons, uh, preferably greater than 25 carbons, linear, right?&rdquo; <span class="g2-src">(11/03 T 872-873)</span></li>
+<li>&ldquo;And you see them, they look like that, but they are obtained from sheep wool.&rdquo; <span class="g2-src">(11/03 T 881)</span></li>
+<li>&ldquo;these come with the advantage that is that they are hypoallergenic. And they don't promote Coon. Formation. So blackhead, whiteheads, right?&rdquo; <span class="g2-src">(11/03 T 882-883)</span> [he said 'Coon. Formation': comedone formation]</li>
+<li>&ldquo;you have dimethicone. These are linear. So this is linear silicon. And oxygen chains, silicon and oxygen chains, linear. Then you you can have some that are cyclic. This is where you see cyclomethicone.&rdquo; <span class="g2-src">(11/03 T 885-887)</span></li>
+<li>&ldquo;Again, are we treating the disease here? We, we just palliative, what? Care.&rdquo; <span class="g2-src">(11/03 T 889-890)</span></li>
+</ul></div>
+<p class="g2-sub">Practice</p>
+<div class="g2-btns"><button type="button" class="chip g2-primary" data-qids="S3-009 S3-043 S3-044 S3-045 S3-046 S3-047 S3-049 S3-052 S3H-006" data-qlabel="DPAW slide 15">Practice these (9)</button></div>
+</div>
+</section>
+
+<section class="gobj" id="gobj-sk-3">
+<h3>Dr. Sikazwe, assigned slides · tars and anthralin</h3>
+<div class="gbar"><span>Objective (DPAW 16, 17)</span><b>Tars: he says &ldquo;it&#39;s for you to decipher what is going on&rdquo; (the old-school uses); anthralin: it is lipophilic by its log P, so &ldquo;do not apply too much of that. Because it will go systemic.&rdquo;</b><i>DPAW slide 16, 17</i></div>
+<div class="gpt g2-block"><h5>Topical agents: coal, shale and wood tars (DPAW slide 16) <span class="g2-star" title="Likely on the exam">&#9733;</span></h5>
+<p class="g2-p"><b>On the slide.</b> Tars: the mechanism of action is unknown, but they may have antiproliferative activity. The slide separates three tars by whether they sensitize the skin to light (photosensitizing). The only drawing is a photograph of a coal tar solution bottle.</p>
+<table class="g2-table g2-stack">
+<caption>Three kinds of tar <span class="g2-src">(DPAW slide 16)</span></caption>
+<thead><tr><th scope="col">Tar</th><th scope="col">Photosensitizing?</th><th scope="col">On the slide</th></tr></thead>
+<tbody>
+<tr><th scope="row">Coal tar (refined coal tar)</th><td><span class="g2-lab">Photosensitizing?</span><b>Yes</b></td><td>Mixture of phenols, PAHs and heterocyclic compounds; may be used with UVB (280&ndash;320 nm)</td></tr>
+<tr><th scope="row">Shale tars (ichthammol)</th><td><span class="g2-lab">Photosensitizing?</span><b>No</b></td><td>Non-photosensitizer; he said they come from distilling sedimentary rock <span class="g2-src">(11/03 T 903)</span></td></tr>
+<tr><th scope="row">Wood tars</th><td><span class="g2-lab">Photosensitizing?</span><b>No</b></td><td>Non-photosensitizing; he said they come from pine, birch and juniper trees <span class="g2-src">(11/03 T 908-909)</span></td></tr>
+</tbody>
+</table>
+<p class="g2-p">PAHs are polycyclic aromatic hydrocarbons. With coal tar the patient applies it and is then exposed to UVB light, and the photosensitizing effect is the downside. He called some of these old treatments that are no longer there, though old-school physicians may still choose them <span class="g2-src">(11/03 T 898-900)</span>. Slide 16 writes UVB as 280&ndash;320 nm while the axis of slide 12 marks 315; he accepted either end (see DPAW slide 12).</p>
+<div class="g2-said"><span class="g2-k">He said</span><ul>
+<li>&ldquo;TAs work through an unclear mechanism. And Some people swear that these have what anti-proliferative activities as well.&rdquo; <span class="g2-src">(11/03 T 890-891)</span> [he said 'TAs': tars]</li>
+<li>&ldquo;You have phenols, polycyclic aromatic hydrocarbons, and other heterocyclic compounds in there.&rdquo; <span class="g2-src">(11/03 T 895-896)</span></li>
+<li>&ldquo;this also can be used in phototherapy. The patient lathers on this, then they're exposed to light, and here they are saying UVB.&rdquo; <span class="g2-src">(11/03 T 897-898)</span></li>
+<li>&ldquo;The downside is that these are, this is the quotas are photosynthesizing. They sensitize the skin to the sun or to light, OK?&rdquo; <span class="g2-src">(11/03 T 901-902)</span> [he said 'the quotas' and 'photosynthesizing': coal tar, photosensitizing]</li>
+<li>&ldquo;So, this also is a useful advantage non- photosensitizer.&rdquo; <span class="g2-src">(11/03 T 907-908)</span> [shale tars]</li>
+<li>&ldquo;And also advantage, non-photosensitizing.&rdquo; <span class="g2-src">(11/03 T 910)</span> [wood tars]</li>
+<li>&ldquo;So given the choice you have that that that. You want to choose which one is going to benefit the patient most. The one that gives them less headache, right?&rdquo; <span class="g2-src">(11/03 T 910-912)</span></li>
+</ul></div>
+<p class="g2-sub">Practice</p>
+<div class="g2-btns"><button type="button" class="chip g2-primary" data-qids="KX-006 S3-033 S3-037 S3-041 S3-044 S3-045 S3-046 S3-048 S3-049 S3-050 S3-051 S3-052 S3-060 S3H-007 S4H-003" data-qlabel="DPAW slide 16">Practice these (15)</button></div>
+</div>
+<div class="gpt g2-block"><h5>Topical agents: anthralin (dithranol) (DPAW slide 17) <span class="g2-star" title="Likely on the exam">&#9733;</span></h5>
+<p class="g2-p"><b>On the slide.</b> Anthralin (dithranol) is a hydroxyanthrone from 1915 <span class="g2-src">(11/03 T 918-920)</span>: a tricyclic ring system with a ketone on the middle ring and an OH on each outer ring, log P = 4. Lassar&rsquo;s paste combines anthralin, ZnO, paraffin and salicylic acid; he said it is probably no longer used but may return <span class="g2-src">(11/03 T 921-922)</span>. Dendrimer formulations (nano-sized anthralin) improve pharmacokinetic properties and duration of action or half-life, because of itching and stability problems <span class="g2-src">(11/03 T 923-926)</span>.</p>
+<p class="g2-sub">CBDA: how the radicals form and what they do <span class="g2-src">(DPAW slide 17)</span></p>
+<ol>
+<li>Anthralin is lipophilic (log P 4), so too much applied goes systemic.</li>
+<li>Anthralin auto-oxidizes with no enzyme <span class="g2-src">(11/03 T 939-941)</span>. On the drawing, the arrow marked e leads to the anthranyl radical (red dot on the middle ring) together with the superoxide anion, O2 with a dot and minus sign.</li>
+<li>These two radicals disrupt keratinocyte mitochondria, which stops cell respiration and kills cells, so the keratinocyte proliferation is normalized <span class="g2-src">(11/03 T 929-933)</span>.</li>
+</ol>
+<p class="g2-p"><b>The stain is not the treatment.</b> The slide note says anthralin autoxidizes to radicals, ROS and inactive compounds and stains fabrics permanently. The radicals polymerize into anthralin brown and then carbon black, the large polycyclic structure drawn.</p>
+<div class="g2-said"><span class="g2-k">He said</span><ul>
+<li>&ldquo;the key thing is that this is going to be a lipophilic molecule based on its what? Log p value. So watch out, do not apply too much of that. Because it will go systemic.&rdquo; <span class="g2-src">(11/03 T 927-928)</span></li>
+<li>&ldquo;it will go and Disrupt Uh, kerato keratinocyte. Mitochondria.&rdquo; <span class="g2-src">(11/03 T 929-930)</span> [he said 'kerato keratinocyte': keratinocyte]</li>
+<li>&ldquo;So you have two answers in this, right? Mechanism CBDA, chemical basis of drug action. It generates two radicals. One is superoxide anion&rdquo; <span class="g2-src">(11/03 T 934-936)</span> [he said 'CBDA': chemical basis of drug action]</li>
+<li>&ldquo;So we can say anthralin undergoes spontaneous. Oxidation or auto-oxidation to generate what? These cytotoxic radicals. Does that involve enzymes? No.&rdquo; <span class="g2-src">(11/03 T 939-941)</span></li>
+<li>&ldquo;So, Anthralin brown and carbon black. They are not part of the treatment.&rdquo; <span class="g2-src">(11/03 T 949)</span></li>
+<li>&ldquo;Are those part of the treatment? No, that's part of the stain. Nothing to do with treatment.&rdquo; <span class="g2-src">(11/03 T 951-952)</span></li>
+</ul></div>
+<p class="g2-sub">Practice</p>
+<div class="g2-btns"><button type="button" class="chip g2-primary" data-qids="KX-006 S3-006 S3-008 S3-041 S3-043 S3-045 S3-048 S3-053 S3-054 S3-055 S3-056 S3-057 S3-058 S3-059 S3-060 S3-061 S3-064 S3-065 S3-066 S3-067 S3-082 S3-095 S3-097 S3-098 S3-103 S3H-008 S3H-009 S3H-013 S4H-003 S4H-019" data-qlabel="DPAW slide 17">Practice these (30)</button></div>
+</div>
+</section>
+
+<section class="gobj" id="gobj-sk-4">
+<h3>Dr. Sikazwe, assigned slides · Psoralens and the autoxidation check</h3>
+<div class="gbar"><span>Objective (DPAW 18, 19)</span><b>Psoralen is the one molecule he mentions whose chemical basis of drug action includes DNA intercalation; the slide 19 poll checks it against anthralin's autoxidation</b><i>DPAW slide 18, 19</i></div>
+<div class="gpt g2-block"><h5>Psoralens: a furanocoumarin that crosslinks DNA under UVA light (DPAW slide 18) <span class="g2-star" title="Likely on the exam" aria-label="Likely on the exam">&#9733;</span></h5>
+<p><b>On the slide.</b> The example is 8-methoxypsoralen (8-MOP, logP = 2), a furanocoumarin: a furan ring fused to a coumarin ring. Psoralen plus UVA light (315&ndash;400 nm) is PUVA. Metabolism (ADMET on the slide): several CYPs handle it, and it partially inhibits CYP3A4. Chemical basis of drug action (CBDA): antiproliferative; it binds covalently to DNA pyrimidine bases and lowers DNA synthesis.</p>
+<p>The drawing reads left to right. 8-MOP sits beside two thymine (pyrimidine) bases on DNA strands, with its pyrone ring toward one and its furan ring toward the other. The arrow labeled hv is UVA light. In the product, a cyclobutane ring joins the pyrone side to one thymine and another cyclobutane ring joins the furan side to the other thymine, so the drug links the two strands. The boxed 3D picture is labeled "Intercalated DNA = Disrupted DNA synthesis": the drug lies between the base pairs.</p>
+<p>The order he taught: the drug is taken by mouth or applied, it inserts between DNA base pairs (intercalation), light is then given, and the light promotes the crosslinking. The crosslinked DNA is distorted and can no longer be normal DNA, so new cell production falls.</p>
+<div class="g2-said"><span class='g2-k'>He said</span>
+<p>&ldquo;So, chemically, this can be grouped as a furanocoumarin, because this has a furan ring and a coumarin ring.&rdquo; <span class='g2-src'>(11/03 T 958-960)</span></p>
+<p>&ldquo;in terms of uh uh what you should know in terms of metabolism, that it partially inhibits 3F4. That's something to take home, right? It partially inhibits 3 or 4.&rdquo; [he said '3F4' and '3 or 4': CYP3A4] <span class='g2-src'>(11/03 T 961-963)</span></p>
+<p>&ldquo;it coherently binds DNA. It goes and inserts in between DNA base pairs. And crosslinks or bridges those DNA based pairs. That process is also called intercalation.&rdquo; [he said 'coherently': covalently] <span class='g2-src'>(11/03 T 963-965)</span></p>
+<p>&ldquo;Exposure to that light promotes the what? The cross-linking.&rdquo; <span class='g2-src'>(11/03 T 969-970)</span></p>
+<p>&ldquo;So I would have a check question like this. I know this is not working right, but a true or false? The chemical basis of drug action, both anthralin and soarin involves autooxidation. True or false?&rdquo; [he said 'soarin': psoralen] <span class='g2-src'>(11/03 T 977-979)</span></p></div>
+<p class="g2-sub">Practice</p>
+<div class="g2-btns"><button type="button" class="chip g2-primary" data-qids="BS3-003 KX-006 KX-012 S3-003 S3-006 S3-008 S3-031 S3-032 S3-037 S3-043 S3-048 S3-049 S3-051 S3-053 S3-054 S3-056 S3-058 S3-059 S3-060 S3-061 S3-062 S3-063 S3-064 S3-065 S3-066 S3-067 S3-068 S3-069 S3-082 S3-087 S3-088 S3H-004 S3H-008 S3H-009 S3H-011" data-qlabel="DPAW slide 18">Practice these (35)</button></div>
+</div>
+<div class="gpt g2-block"><h5>Poll: does autoxidation explain both anthralin and 8-MOP? (DPAW slide 19) <span class="g2-star" title="Likely on the exam" aria-label="Likely on the exam">&#9733;</span></h5>
+<p><b>On the slide.</b> A poll slide with no teaching text: "TRUE/FALSE: The chemical basis of drug action for both Anthralin and 8-methoxypsoralen involves autooxidation." Both answer bars (True, False) are empty.</p>
+<p>Autoxidation is oxidation that happens on its own, with no enzyme: anthralin is an unstable molecule that, once applied, spontaneously generates cytotoxic radicals (11/03 T 938-941). Psoralen works differently: its chemical basis of drug action is intercalation and crosslinking of DNA, with UVA light (DPAW slide 18). The slides therefore tie autoxidation to anthralin only.</p>
+<details class="g2-self"><summary>Check question: both anthralin and 8-MOP act by autoxidation, true or false? <span class="g2-tap">Show answer</span></summary><p><b>False</b> if keyed from the lecture content: autoxidation belongs to anthralin (11/03 T 938-941), and 8-MOP intercalates and crosslinks DNA (DPAW slide 18).</p></details>
+<div class="g2-note"><span class="g2-k">Unresolved</span><p>His full answer is not in the recording. After asking "which one has auto oxidation?" the transcript shows only "An ing." and then cuts to the next heading ("Glucocorticoid medicinal chemistry") (11/03 T 979-982). "An ing." is probably the start of "anthralin", which matches the answer above; that answer is reasoned from slides 17 and 18 and his lecture, not quoted from him.</p></div>
+<div class="g2-said"><span class='g2-k'>He said</span>
+<p>&ldquo;So I would have a check question like this. I know this is not working right, but a true or false? The chemical basis of drug action, both anthralin and soarin involves autooxidation. True or false?&rdquo; [he said 'soarin': psoralen] <span class='g2-src'>(11/03 T 977-979)</span></p></div>
+<p class="g2-sub">Practice</p>
+<div class="g2-btns"><button type="button" class="chip g2-primary" data-qids="KX-006 S3-064 S3-067 S3H-008 S3H-009" data-qlabel="DPAW slide 19">Practice these (5)</button></div>
+</div>
+</section>
+
+<section class="gobj" id="gobj-sk-5">
+<h3>Dr. Sikazwe, assigned slides · Glucocorticoid structure, numbering and receptor binding</h3>
+<div class="gbar"><span>Objective (DPAW 20&ndash;23)</span><b>Know what a steroid looks like, how its carbons are numbered and which way each group faces, so the SAR can be described; the glucocorticoid is held in its receptor by hydrogen bonding</b><i>DPAW slide 20, 21, 22, 23</i></div>
+<div class="gpt g2-block"><h5>Steroid skeleton, alpha and beta, and the four SAR requirements (DPAW slide 20) <span class="g2-star" title="Likely on the exam" aria-label="Likely on the exam">&#9733;</span></h5>
+<p><b>On the slide.</b> Glucocorticoids are corticosteroids, which he shortens to steroids. He names three things he wants known here: structure, stereochemistry and numbering <span class="g2-src">(11/03 T 987-990)</span>. The structure is tetracyclic: four fused rings labeled A, B, C and D. Rings A, B and C are six-membered and ring D is five-membered. He said a skeleton stacked this way is probably a steroid <span class="g2-src">(11/03 T 992-994)</span>.</p>
+<p>Stereochemistry on a steroid: a hashed bond points away from the viewer and is alpha; a bold wedge points toward the viewer and is beta. The slide also shows the skeleton numbered 1 to 27 (ring atoms 1&ndash;17, methyls 18 and 19, side chain 20&ndash;27); numbering and orientation are separate ideas.</p>
+<table class="g2-table">
+<caption>SAR: anti-inflammatory activity is increased by these four features <span class="g2-src">(DPAW slide 20)</span></caption>
+<thead><tr><th scope="col">Position</th><th scope="col">Required group</th><th scope="col">Orientation</th></tr></thead>
+<tbody>
+<tr><th scope="row">C1&ndash;C2</th><td>Alkene (the slide writes "C1-C2 db")</td><td>Not stated on the slide</td></tr>
+<tr><th scope="row">C6</th><td>Halogen, X</td><td>Alpha (hashed)</td></tr>
+<tr><th scope="row">C9</th><td>Halogen, X</td><td>Alpha (hashed)</td></tr>
+<tr><th scope="row">C11</th><td>Hydroxyl, OH</td><td>Beta (wedge)</td></tr>
+</tbody>
+</table>
+<p>These four are the minimal stereochemistry and substituents for anti-inflammatory activity. He asked the class to know exactly these four.</p>
+<div class="g2-said"><span class='g2-k'>He said</span>
+<p>&ldquo;I would like for you to know the, what steroids look like, right? And you'll see it's a four-membered ring, you know, rings are attached, are stacked a certain way. I want you to know that because that's important.&rdquo; [he said 'four-membered ring': a four-ring (tetracyclic) system, which he states correctly at T 990-993] <span class='g2-src'>(11/03 T 628-630)</span></p>
+<p>&ldquo;So, in terms of structure, these are tetracyclic. OK? These are tetracyclic structures. 4 rings fused together, but the stacking of these rings is in a certain way.&rdquo; <span class='g2-src'>(11/03 T 990-991)</span></p>
+<p>&ldquo;bonds that you see that are hushed, that are pointing away from you, they are called alpha-facing, alpha- face. Bonds&rdquo; [he said 'hushed': hashed] <span class='g2-src'>(11/03 T 997-999)</span></p>
+<p>&ldquo;The SAR of uh serial of uh glu corticoid is a little bit complex, but I'm limiting you to 4 things. I want you to know 12341234 items.&rdquo; [he said 'serial': the transcription is unclear; he is counting 1, 2, 3, 4] <span class='g2-src'>(11/03 T 1020-1021)</span></p>
+<p>&ldquo;If I give you that structure, what are the quintessential elements that need to be there for this glucocorticoid to be active?&rdquo; <span class='g2-src'>(11/03 T 1021-1022)</span></p>
+<p>&ldquo;we need to know that there is a, a double bond present between carbon one. And 2&rdquo; <span class='g2-src'>(11/03 T 1023-1024)</span></p>
+<p>&ldquo;OK, so, so that this 6th, uh, atom needs to have a halogen on it, and the orientation of that halogen needs to be what? Alpha.&rdquo; <span class='g2-src'>(11/03 T 1067-1069)</span></p>
+<p>&ldquo;And then the 9th position is this, this 9 atom. Needs to also have a halogen. The orientation of that halogen needs to be what? alpha as well.&rdquo; <span class='g2-src'>(11/03 T 1069-1070)</span></p>
+<p>&ldquo;And then the 11th carbon. Needs to have a hydroxy group on it. And this orientation needs to be what? Better.&rdquo; [he said 'Better': beta] <span class='g2-src'>(11/03 T 1070-1072)</span></p>
+<p>&ldquo;The two are not related. Orientation is different from numbering.&rdquo; <span class='g2-src'>(11/03 T 1054)</span></p></div>
+<p class="g2-sub">Practice</p>
+<div class="g2-btns"><button type="button" class="chip g2-primary" data-qids="KX-007 S3-009 S3-024 S3-053 S3-068 S3-069 S3-070 S3-071 S3-072 S3-073 S3-074 S3-075 S3-076 S3-077 S3-078 S3-079 S3-080 S3-083 S3-084 S3-090 S3-100 S3-101 S3H-010 S3H-011" data-qlabel="DPAW slide 20">Practice these (24)</button></div>
+</div>
+<div class="gpt g2-block"><h5>Numbering the steroid carbons, and describing a substituent (DPAW slide 21) <span class="g2-star" title="Likely on the exam" aria-label="Likely on the exam">&#9733;</span></h5>
+<p><b>On the slide.</b> "Remember steroid C- atom numbering": a steroid skeleton with the four rings, two angular methyl groups and a branched side chain at C17, and no numbers on it. The numbered version of the same skeleton is on slide 20.</p>
+<p>Numbering is positional: carbon 1 is carbon 1 whatever its orientation. Start at C1 in ring A and loop through rings A and B to C10, the ring A/B junction carbon. C11 is the starting point of a second path through rings C and D that ends at C17. The two angular methyls are then 18 (on C13) and 19 (on C10), and the side chain continues from C17 as 20, 21 and onward.</p>
+<p>To describe a substituent, give its carbon number and its orientation, for example "C-15, alpha-Cl" for a chlorine on that carbon drawn hashed. He framed the question as: with a chlorine placed on the skeleton, describe it.</p>
+<div class="g2-said"><span class='g2-k'>He said</span>
+<p>&ldquo;Always this is going to be one. So if you know where your 1 is, you know where your 11 is, and your 17, you're good to go. OK, but practice that.&rdquo; <span class='g2-src'>(11/03 T 1098-1099)</span></p>
+<p>&ldquo;and I put chlorine here and I say, describe that. You need to tell me that is what?&rdquo; <span class='g2-src'>(11/03 T 1076-1077)</span></p></div>
+<div class="g2-note"><span class="g2-k">Unresolved: C-15 or C-16</span><p>Reading 1: counting back from C17 ("This is 17. 16, so this is 15"), he calls his example chlorine "a C-15. Alpha CL" (11/03 T 1077). Reading 2: after he says that putting the group the other way makes it beta, a student asks "Why is it?" and he answers "Carbon, carbon 16" (11/03 T 1075-1084), which leaves open whether his example sat on C-15 or C-16. An exam written from his lecture would key the stated answer, C-15 with alpha for a hashed chlorine; the sources do not settle the carbon number, so no question in the bank asks about the chlorine position.</p></div>
+<p class="g2-sub">Practice</p>
+<div class="g2-btns"><button type="button" class="chip g2-primary" data-qids="S3-072 S3-073 S3-074 S3-075" data-qlabel="DPAW slide 21">Practice these (4)</button></div>
+</div>
+<div class="gpt g2-block"><h5>Second build of the numbering slide: the loops and the methyls (DPAW slide 22)</h5>
+<p><b>On the slide.</b> Slide 22 repeats the title and number of slide 21 (printed 21): the same "Remember steroid C- atom numbering" skeleton shown a second time. The teaching he gave with it follows the path of the numbers.</p>
+<p>From C1, the path covers rings A and B and stops at C10. C11 is a new starting point, and its path snakes up to C17. The methyl nearest C17 is 18 and the next is 19, which he describes as skipping from one methyl to the other. The side chain then gives 20 and 21, then 22, 23 and onward. Orientation (alpha or beta) is separate: any ring carbon can face either way.</p>
+<p>Steroid numbering is not identical across courses. He said the endocrine instructor may number steroids slightly differently (11/03 T 1126-1128); for his material this numbering is the one used.</p>
+<div class="g2-said"><span class='g2-k'>He said</span>
+<p>&ldquo;For my material now, this is the numbering that we're going to go with, OK?&rdquo; <span class='g2-src'>(11/03 T 1128-1129)</span></p>
+<p>&ldquo;What I'm saying is for now, let's contend with this numbering.&rdquo; <span class='g2-src'>(11/03 T 1125-1126)</span></p>
+<p>&ldquo;This snakes, the numbering snakes all the way up to what? 17. Right?&rdquo; <span class='g2-src'>(11/03 T 1087-1088)</span></p>
+<p>&ldquo;Think of stereochemistry. Any of those atoms could have stereo chemistry, either this way or facing you. OK. The numbering is, is positional.&rdquo; <span class='g2-src'>(11/03 T 1039-1041)</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Glucocorticoid chemical basis of drug action: hydrogen bonding (DPAW slide 23) <span class="g2-star" title="Likely on the exam" aria-label="Likely on the exam">&#9733;</span></h5>
+<p><b>On the slide.</b> The title line reads "Glucocorticoid: CBDA: .......- bonding" (the blank is hydrogen), with the reference Foye Chapter 28, pages 1112&ndash;13. The drawing shows a glucocorticoid sitting in the glucocorticoid receptor, captioned "Key glucocorticoid receptor-ligand binding residues." Six dashed lines join the drug's oxygen-bearing groups to amino acids lining the pocket: Asn 564, Arg 611, Gln 570, Gln 642 and Thr 739.</p>
+<p>Reading the picture: the C3 ketone takes two hydrogen bonds (Arg 611 and Gln 570); the 11-hydroxyl and the C21 hydroxyl each bond to Asn 564; the C20 ketone bonds to Thr 739; the 17-hydroxyl bonds to Gln 642. Every dashed line is a hydrogen bond, so the answer to "what type of interaction" is hydrogen bonding and the count is six.</p>
+<div class="g2-said"><span class='g2-k'>He said</span>
+<p>&ldquo;So, their chemical basis of drug action. is going to be due to hydrogen bonding interactions. How many of them? 1234566 hydrogen bonding. Interactions.&rdquo; [he is counting to six] <span class='g2-src'>(11/03 T 1133-1135)</span></p>
+<p>&ldquo;So, the question might be just counting the number of hydrogen bonds, or do you see any uh non-hydrogen bonds involved here? These are all hydrogen bonds.&rdquo; <span class='g2-src'>(11/03 T 1137-1139)</span></p></div>
+<p class="g2-sub">Practice</p>
+<div class="g2-btns"><button type="button" class="chip g2-primary" data-qids="BS3-004 S3-056 S3-064 S3-066 S3-074 S3-082 S3-083 S3-084 S3-100 S3-101 S3H-008 S3H-011" data-qlabel="DPAW slide 23">Practice these (12)</button></div>
+</div>
+</section>
+
+<section class="gobj" id="gobj-sk-6">
+<h3>Dr. Sikazwe, assigned slides · Glucocorticoid potency rankings</h3>
+<div class="gbar"><span>Objective (DPAW 25)</span><b>Potency rankings of topical glucocorticoids are driven by structure, the delivery vehicle and the concentration</b><i>DPAW slide 25</i></div>
+<div class="gpt g2-block"><h5>Potency classes and what drives them (DPAW slide 25) <span class="g2-star" title="Likely on the exam" aria-label="Likely on the exam">&#9733;</span></h5>
+<p><b>On the slide.</b> "Glucocorticoid potency rankings for topical agents is based on: 1) Structure; 2) Delivery vehicle; 3) Concentration (% in formulation)." Four classes come with one example each.</p>
+<table class="g2-table">
+<caption>Potency class and slide example <span class="g2-src">(DPAW slide 25)</span></caption>
+<thead><tr><th scope="col">Class</th><th scope="col">Example on the slide</th></tr></thead>
+<tbody>
+<tr><th scope="row">Super-potent</th><td>Clobetasol propionate 0.05% cream and ointment (the slide spells it "Clobesterol Proprionate")</td></tr>
+<tr><th scope="row">Potent</th><td>Betamethasone dipropionate 0.05% cream and ointment</td></tr>
+<tr><th scope="row">Medium potency</th><td>Betamethasone valerate 0.1% cream</td></tr>
+<tr><th scope="row">Low potency</th><td>Hydrocortisone acetate 0.5% and 1% creams and ointments</td></tr>
+</tbody>
+</table>
+<p>The drawing shows hydrocortisone, a dashed arrow, and clobetasol propionate, with the changes in color. Compared with hydrocortisone, clobetasol propionate has a C1=C2 alkene, a 9alpha-fluorine, a 16-methyl and a 17-propionate ester. Hydrocortisone is the natural product and the reference molecule for glucocorticoid activity; the others are derivatives of it <span class="g2-src">(11/03 T 1140-1145)</span>. He said structural changes can raise or lower lipophilicity (fat preference) or change how the molecule binds in the receptor, and so change potency <span class="g2-src">(11/03 T 1145-1148)</span>. The drawing is a structural change, not metabolism.</p>
+<p>Delivery vehicle: many of these agents are formulated in propylene glycol, which he said lets the molecule penetrate the skin and reach the receptor site <span class="g2-src">(11/03 T 1160-1163)</span>. Concentration is the third basis; he called it the easiest to determine because creams carry the numbers <span class="g2-src">(11/03 T 1163-1164)</span>.</p>
+<div class="g2-said"><span class='g2-k'>He said</span>
+<p>&ldquo;So lipophilicity can be manipulated, for instance, lipohilicity. Can be manipulated structurally.&rdquo; <span class='g2-src'>(11/03 T 1157-1158)</span></p>
+<p>&ldquo;A lot of these agents you see them co-formulated or delivered in a vehicle called propylene. Glycol. OK? So, that also can enhance the potency of these molecules&rdquo; <span class='g2-src'>(11/03 T 1160-1162)</span></p>
+<p>&ldquo;So, just know that these potency rankings are going to be driven by the structure. The delivery vehicle, as well as what? The amount, the percentage that is there in the molecule.&rdquo; <span class='g2-src'>(11/03 T 1173-1175)</span></p>
+<p>&ldquo;So this is not metabolism, it's just an example of a structural manipulation that then changes the potency of the drug.&rdquo; <span class='g2-src'>(11/03 T 1177-1179)</span></p></div>
+<div class="g2-note"><span class="g2-k">Not needed</span><p>The structures of the hydrocortisone derivatives (betamethasone, desonide, clobetasol, fluticasone, triamcinolone, shown on the unassigned slide 24): &ldquo;It's now for you to memorize this. No, it's just know that parent drug is that, then you can have derivatives of that.&rdquo; <span class="g2-src">(11/03 T 1152-1154)</span></p></div>
+<div class="g2-note"><span class="g2-k">Unresolved: does a smaller percentage mean more potent?</span><p>Reading 1 (his words): "The tinier the percentage, right, means the more potent it is, right?" (11/03 T 1165). He then said that a cream labeled 0.05 means &ldquo;it's highly potent&rdquo; (11/03 T 1168-1170). Reading 2 (the slide): concentration is one of three bases, and the examples do not follow percentage alone: clobetasol propionate and betamethasone dipropionate are both 0.05% but in different classes (structure), and the slide does not say what happens when one drug's percentage changes. An exam written from his lecture would key his spoken rule when comparing the percentages of the slide examples (0.05% above 0.1% above 0.5% and 1%), and would not key a rule from percentage alone when the structures differ.</p></div>
+<div class="g2-said"><span class='g2-k'>He said</span>
+<p>&ldquo;The tinier the percentage, right, means the more potent it is, right?&rdquo; <span class='g2-src'>(11/03 T 1165)</span></p></div>
+<p class="g2-sub">Practice</p>
+<div class="g2-btns"><button type="button" class="chip g2-primary" data-qids="KX-007 S3-007 S3-080 S3-085 S3-088 S3-089 S3-090 S3-091 S3-092 S3-093 S3-094 S3H-012" data-qlabel="DPAW slide 25">Practice these (12)</button></div>
+</div>
+</section>
+
+<section class="gobj" id="gobj-sk-7">
+<h3>Dr. Sikazwe, assigned slides · hydrocortisone ADME and vitamin D analogs</h3>
+<div class="gbar"><span>Objective (DPAW 26, 27)</span><b>Hydrocortisone, &ldquo;if you don't understand anything else that is going on&rdquo;: it goes back and forth between cortisone and hydrocortisone. Vitamin D analogs: a take-home reading, worth 2 points</b><i>DPAW slide 26, 27</i></div>
+<div class="gpt"><h5>Hydrocortisone ADME (DPAW slide 26) <span class="g2-star" title="Likely on the exam">&starf;</span></h5>
+<p><b>On the slide.</b> Hydrocortisone is a glucocorticoid applied to the skin. The slide gives its ADME (absorption, distribution, metabolism, excretion) in four lines. Less than 15% is absorbed through normal skin, compared with 95% by mouth (oral bioavailability is the fraction of a dose that reaches the blood). The half-life is 1&ndash;2 h and the slide blanks the reason, which is metabolism. The duration of action is 8&ndash;12 h and the blank is protein binding. Cortisone and urocortisol are the forms found in urine.</p>
+<p>He explained that hydrocortisone has a log P of about 1.5, so it is not very lipophilic and does not penetrate skin well. He said it lingers in the skin because it is bound there (protein binding), which he gave as the reason for the long duration of action, while metabolism gives the short half-life.</p>
+<p>The drawing shows three conversions. Hydrocortisone and cortisone are joined by a double-headed arrow, with the enzyme 11beta-hydroxysteroid dehydrogenase (11beta-HSD). Hydrocortisone also goes to 5beta-dihydrocortisol (5beta-reductase), and that goes to urocortisol (3alpha-HSD). Cortisone, 5beta-dihydrocortisol and urocortisol are marked inactive. The 11 in 11beta is carbon 11 of the steroid ring system.</p>
+<p><b>Two readings, stated both ways.</b> (1) His words and the double arrow: the drug &ldquo;ping pongs&rdquo;, so hydrocortisone is inactivated to cortisone and cortisone can come back to active hydrocortisone. (2) The slide also calls cortisone the inactive metabolite found in urine, and he said he would not separate the two isozymes (types 1 and 2), only &ldquo;this family&rdquo;. The recording stops mid-sentence at 11/03 T 1196, before he says why the back-conversion matters. An exam written from his lecture would key the enzyme (11beta-HSD) and the interconversion in both directions; which isozyme does which direction was not taught, so the question bank keeps that detail out of scored practice.</p>
+<div class="g2-said"><span class='g2-k'>He said</span>
+<ul>
+<li>&ldquo;So, you have about, when you apply, about Less than 15% skin bioavailable. Versus if you take it orally, you see oralbi will be very high.&rdquo; <span class='g2-src'>(11/03 T 1185-1187)</span></li>
+<li>&ldquo;It has a, a short half-life due to, please write this, metabolism. All right, and then its duration of action is due to high. Protein binding.&rdquo; <span class='g2-src'>(11/03 T 1187-1188)</span></li>
+<li>&ldquo;this is the major metabolite of uh hydrocortisone, and the enzyme involved in that is this 1, 11 beta hydrosteroid dehydrogenase, 11 beta HSD.&rdquo; <span class='g2-src'>(11/03 T 1191-1193)</span></li>
+<li>&ldquo;And this is the enzyme I mentioned that you need to pay attention to. OK. So what does 11, the number 11, stand for? The carbon, right? So this also can be written as C11 better, right?&rdquo; [he said 'better': beta] <span class='g2-src'>(11/04 T@737-922)</span></li>
+</ul></div>
+<p>Also on record: &ldquo;And this is important because When you apply this, it goes inactive. And guess what? comes back activated.&rdquo; <span class="g2-src">(11/03 T 1195-1196)</span></p>
+<p><b>Practice.</b> <button type="button" class="chip g2-primary" data-qids="BS3-005 KX-007 S3-013 S3-016 S3-078 S3-085 S3-086 S3-094 S3-095 S3-096 S3-097 S3-098 S3-099 S3-100 S3-101 S3-102 S3-103 S3H-001 S3H-013" data-qlabel="DPAW slide 26">Practice these (19)</button></p>
+</div>
+<div class="gpt"><h5>Vitamin D analogs (DPAW slide 27) <span class="g2-star" title="Likely on the exam">&starf;</span></h5>
+<p><b>On the slide.</b> Vitamin D analogs have two uses: bone health, and antiproliferative action (slowing cell multiplication), which is why they treat psoriasis. Calcitriol (Rocaltrol) and calcipotriene (Dovonex) are secosteroids, steroid-like molecules with one ring opened. Calcitriol raises calcium absorption from the gut into the blood. In hypercalcemia (too much calcium in the blood) these drugs are not wanted, so hypercalcemia is the limiting factor for their use. Calcipotriene was an attempt to lower the calcium effect while keeping the antiproliferative one. He said that attempt did not work: both drugs still enhance calcium absorption and both are limited by hypercalcemia.</p>
+<p>The drawing is a pathway from 7-dehydrocholesterol to cholecalciferol (vitamin D3), then 25-OH-cholecalciferol (the inactive circulating form), then calcitriol by 1-alpha-hydroxylase. The reactions, organs and enzymes are blanks to fill from the take-home reading (Bikle, Endotext, the link on slide 2); that reading places the steps in skin, liver and kidney (Bikle, Endotext 2025, as used in the practice items).</p>
+<p><b>Points.</b> The reading is worth 2 points. The question asks for one of three things: the reaction, the organ or the enzyme.</p>
+<div class="g2-said"><span class='g2-k'>He said</span>
+<ul>
+<li>&ldquo;I have assigned this as a reading assignment that you can do, and out of that you get 2 points.&rdquo; <span class='g2-src'>(11/04 T@1264-1359)</span></li>
+<li>&ldquo;That they can affect bone health. What that means is that vitamin D increases the absorption of calcium into the bloodstream.&rdquo; <span class='g2-src'>(11/04 T@1645-1770)</span></li>
+<li>&ldquo;Why is that there is a condition called hyper. Casemia. If you already the bloodstream already has too much calcium in it, then you probably don't want to use these molecules.&rdquo; [he said 'Casemia': calcemia, in hypercalcemia] <span class='g2-src'>(11/04 T@1909-2084)</span></li>
+<li>&ldquo;so this becomes the limiting. Factor. For their use.&rdquo; <span class='g2-src'>(11/04 T@2112-2164)</span></li>
+<li>&ldquo;One, the reaction. 2 The organs where these reactions occur, and 3. The enzymes. Involved OK.&rdquo; <span class='g2-src'>(11/04 T@3533-3626)</span></li>
+<li>&ldquo;The question will be very simple and straightforward. Uh, asking you to determine one of these things, all right?&rdquo; <span class='g2-src'>(11/04 T@4082-4195)</span></li>
+</ul></div>
+<p><b>Practice.</b> <button type="button" class="chip g2-primary" data-qids="BKX-001 BKX-002 KX-008 KX-012 S4-001 S4-002 S4-003 S4-004 S4-005 S4-006 S4-007 S4-008 S4-009 S4-010 S4-011 S4-012 S4-013 S4-014 S4H-001 S4H-002 S4H-003 S4H-009 XS-009" data-qlabel="DPAW slide 27">Practice these (23)</button></p>
+</div>
+</section>
+
+<section class="gobj" id="gobj-sk-8">
+<h3>Dr. Sikazwe, assigned slides · pimecrolimus, tacrolimus and cyclosporine</h3>
+<div class="gbar"><span>Objective (DPAW 28, 32, 33)</span><b>The two topical &ldquo;limus&rdquo; drugs are alike in lipophilicity, structure and mechanism but differ in skin absorption; classify a cyclic molecule from the group circled; cyclosporine with grapefruit juice</b><i>DPAW slide 28, 32, 33</i></div>
+<div class="gpt"><h5>Pimecrolimus and tacrolimus (DPAW slide 28) <span class="g2-star" title="Likely on the exam">&starf;</span></h5>
+<p><b>On the slide.</b> Both drugs are macrolide (large-ring) or lactone (cyclic ester) immunosuppressants and both are calcineurin inhibitors. The slide gives the mechanism as calcineurin inhibition, which decreases the release of inflammatory cytokines; he said he was not so worried about the mechanism here. The slide says the two are similar in lipophilicity, structure and mechanism but differ in skin permeation.</p>
+<p>Pimecrolimus has higher non-specific skin protein binding, so it does not get into the systemic circulation and systemic adverse effects are low. Tacrolimus has low skin protein binding, so it can go in and enter the systemic circulation. His point is that the difference between the two is this pharmacokinetic property, absorption through the skin.</p>
+<p>The drawing places them side by side: cLogP 6.0 for pimecrolimus and 5.8 for tacrolimus, so both are very lipophilic (he said the log P values are similar). Both drawings show the same large ring, a six-membered ring containing a nitrogen, and a cyclohexyl ring at the top. The differences are colored: a chlorine on the cyclohexyl ring of pimecrolimus where tacrolimus has a hydroxyl, and a short ethyl group where tacrolimus has an allyl group.</p>
+<div class="g2-said"><span class='g2-k'>He said</span>
+<ul>
+<li>&ldquo;Structure is similar. The only points of difference are that chlorine and that methyl group, and here you have that ylic group and hydroxy.&rdquo; [on the slide the pairs are chlorine versus hydroxyl, and ethyl versus allyl] <span class='g2-src'>(11/04 T@4610-4749)</span></li>
+<li>&ldquo;they, they do not, uh, penetrate the skin highly, especially Pimecrolimus. It does not penetrate the skin highly. Why? Because Of high non-specific protein binding.&rdquo; <span class='g2-src'>(11/04 T@4927-5091)</span></li>
+<li>&ldquo;But tacrolimus. On the other hand, has low skin. Binding. So that means it can do the opposite, can go in, OK?&rdquo; <span class='g2-src'>(11/04 T@5366-5476)</span></li>
+<li>&ldquo;And because they are cyclic molecules, right? OK? So they have this. Group there We can call them, we can classify them chemically. Differently.&rdquo; <span class='g2-src'>(11/04 T@6097-6241)</span></li>
+<li>&ldquo;So let's uh look at that question. It will come up.&rdquo; <span class='g2-src'>(11/04 T@6276-6327)</span></li>
+</ul></div>
+<p><b>Practice.</b> <button type="button" class="chip g2-primary" data-qids="BS4-003 KX-018 KX-019 S4-015 S4-016 S4-017 S4-018 S4-019 S4-020 S4-071 S4H-004 S4H-012 XS-007" data-qlabel="DPAW slide 28">Practice these (13)</button></p>
+</div>
+<div class="gpt"><h5>Polleve-3: classify the limus drug by the circled group (DPAW slide 32) <span class="g2-star" title="Likely on the exam">&starf;</span></h5>
+<p><b>On the slide.</b> This is his PollEv (live poll) question: &ldquo;Due to the selected functionality, this Limus drug molecule may be chemically classified as a ........&rdquo; The options are (A) lactam, (B) lactone, (C) steroid, (D) pteridine. The drawing is the pimecrolimus macrocycle (it carries the chlorine) with a red circle around the ester group in the ring, next to the six-membered ring that contains the nitrogen.</p>
+<p>The reasoning has two steps. The circled group is an ester. An ester that is part of a ring is a cyclic ester, and cyclic esters are lactones. A lactam is the cyclic amide, which is a different group. A steroid is a four-ring skeleton and a pteridine is the ring system of methotrexate, so neither fits a macrocycle with an ester in it. The key is B, lactone, which agrees with the heading of slide 28, &ldquo;Macrolide or lactone immunosuppressants&rdquo;.</p>
+<p><b>Unresolved points.</b> The transcript is garbled where he moves from lactones toward amides (around 11/04 T@11500-11600), and the poll results are not spoken. He ends on lactones and rejects steroids, so an exam written from his lecture keys lactone.</p>
+<div class="g2-said"><span class='g2-k'>He said</span>
+<ul>
+<li>&ldquo;I hinted on a question. If you had a molecule like this, and I circle a functional group, and I say, based on this circled feature, Uh, how can we chemically classify this?&rdquo; <span class='g2-src'>(11/04 T@11267-11439)</span></li>
+<li>&ldquo;Are they called lactones? Yes. Are they called steroids? Careful now. So, no, no, no. OK. All right.&rdquo; <span class='g2-src'>(11/04 T@11649-11749)</span></li>
+<li>&ldquo;So, it could be a question just that simple, just for you to understand the chemical structures you're dealing with.&rdquo; <span class='g2-src'>(11/04 T@11750-11866)</span></li>
+</ul></div>
+<p><b>Practice.</b> <button type="button" class="chip g2-primary" data-qids="S4-020 S4-021 S4H-012" data-qlabel="DPAW slide 32">Practice these (3)</button></p>
+</div>
+<div class="gpt"><h5>Cyclosporine (DPAW slide 33) <span class="g2-star" title="Likely on the exam">&starf;</span></h5>
+<p><b>On the slide.</b> Cyclosporine is an immunosuppressant, an 11 amino acid cyclic peptide. Peptide means the units are joined by amide links, so a cyclic peptide is also a cyclic amide, a lactam. The slide calls it a prodrug, activated by complexation with the cyclophilin receptor; he said it is activated simply by binding its receptor and not by metabolism. The complex inhibits calcineurin phosphatase and T-cell signaling. The ribbon diagram shows cyclophilin A with cyclosporin bound.</p>
+<p>ADMET (absorption, distribution, metabolism, excretion, toxicity) from the slide: oral bioavailability 30% because of the first-pass effect, logP 4, half-life 19 h, extensively metabolized by 3A4. He did not read the logP and half-life aloud.</p>
+<p>He asked: what happens when cyclosporine is given with grapefruit juice? He said the blood levels go up because the first-pass metabolism is blocked, and the enzyme that carries out that metabolism is 3A4. He asked this question aloud; it is not printed on the slide.</p>
+<div class="g2-said"><span class='g2-k'>He said</span>
+<ul>
+<li>&ldquo;It is also described as an 11 amino acid cyclic peptide. When we say peptides, we are simply talking about these amide bonds&rdquo; <span class='g2-src'>(11/04 T@11974-12098)</span></li>
+<li>&ldquo;So, here, the cyclic peptide, this can be described then as a what? And a lactam, right? cyclic lactam too.&rdquo; <span class='g2-src'>(11/04 T@12152-12259)</span></li>
+<li>&ldquo;this is described as a prodrug, and how it's bioactivated is not metabolic. It's simply by its binding to its receptor. When it binds and forms that complex with the receptor, it gets activated.&rdquo; <span class='g2-src'>(11/04 T@12268-12462)</span></li>
+<li>&ldquo;The or bioavailability is uh. Very poor for this molecule, right? 30%. This is ascribed to first pass metabolism&rdquo; <span class='g2-src'>(11/04 T@12781-12893)</span></li>
+<li>&ldquo;that first pass metabolism and ultimate metabolism of this molecule is carried out by 3F4.&rdquo; [he said '3F4': CYP3A4] <span class='g2-src'>(11/04 T@12955-13045)</span></li>
+<li>&ldquo;Of Cylo Plus Grapefruit juice, G F G JF. What would be the effect? Of co-administering these two. What would you expect?&rdquo; [he said 'Cylo': cyclosporine] <span class='g2-src'>(11/04 T@13256-13376)</span></li>
+</ul></div>
+<p><b>Practice.</b> <button type="button" class="chip g2-primary" data-qids="BS4-002 KX-009 KX-010 KX-019 S4-021 S4-038 S4-039 S4-040 S4-041 S4-042 S4-043 S4H-011 S4H-012 S4H-013 XS-008" data-qlabel="DPAW slide 33">Practice these (15)</button></p>
+</div>
+</section>
+
+<section class="gobj" id="gobj-sk-9">
+<h3>Dr. Sikazwe, assigned slides · retinoids, methotrexate and apremilast in psoriasis</h3>
+<div class="gbar"><span>Objective (DPAW 29, 30, 31, 34)</span><b>The retinoids used in psoriasis; methotrexate as a multi-target drug and the structure features it needs; apremilast&rsquo;s reliance on 3A4 for metabolism</b><i>DPAW slide 29, 30, 31, 34</i></div>
+<div class="gpt"><h5>Retinoids in psoriasis: tazarotene (DPAW slide 29) <span class="g2-star" title="Likely on the exam">&starf;</span></h5>
+<p><b>On the slide.</b> Retinoids are derived from vitamin A and normalize keratinization (skin cell maturation) and proliferation. The topical agent is tazarotene (Tazorac), described as an acetylenic retinoid, meaning it contains an alkyne. The oral agents are acitretin (Soriatane) and isotretinoin (Accutane). The slide says &ldquo;slides 46-49&rdquo; for the fuller description of retinoids; in class he said to correct this to 47 through 50, which are DPAW slides 48 to 51 (11/04 T@6327-6380 and T@7600-7650).</p>
+<p>The drawing shows tazarotene as an ethyl ester with an arrow to its active metabolite, the free carboxylic acid. An ester prodrug is inactive until a carboxylesterase (CE enzyme) removes the ethyl group by hydrolysis in the skin. Acitretin has an aromatic ring and a chain of carbon-carbon alkenes ending in a carboxylic acid; isotretinoin has a trimethylcyclohexene ring and a similar chain with one cis alkene marked in red, also ending in a carboxylic acid. Retinoids act on nuclear receptors (RAR and RXR), and the carboxylic acid at the end is their common feature.</p>
+<div class="g2-said"><span class='g2-k'>He said</span>
+<ul>
+<li>&ldquo;Retinoids bind to what? These are non-receptors, RXR and so on, receptors, right? Nuclear receptors&rdquo; [he said 'non-receptors': nuclear receptors] <span class='g2-src'>(11/04 T@6457-6556)</span></li>
+<li>&ldquo;And it's also what? And Esther. Pro-drug. So that when you give it, when you apply it to the skin, it needs ester hydrolysis by. CE enzymes, right, for activation.&rdquo; [he said 'Esther': ester] <span class='g2-src'>(11/04 T@6905-7068)</span></li>
+<li>&ldquo;What are CE enzymes? Mhm. Carboxyl estraes.&rdquo; [carboxylesterases] <span class='g2-src'>(11/04 T@7069-7112)</span></li>
+<li>&ldquo;And what you start seeing with all these retinoids is that they have this common functional group at the end, this carboxylic acid. So that's an important common feature that they need to have.&rdquo; <span class='g2-src'>(11/04 T@7135-7328)</span></li>
+</ul></div>
+<p><b>Practice.</b> <button type="button" class="chip g2-primary" data-qids="BS4-004 KX-009 KX-013 KX-014 S4-022 S4-023 S4-024 S4-025 S4-026 S4-027 S4-049 S4H-005 S4H-012 S4H-013 XS-001" data-qlabel="DPAW slide 29">Practice these (15)</button></p>
+</div>
+<div class="gpt"><h5>Methotrexate (DPAW slide 30) <span class="g2-star" title="Likely on the exam">&starf;</span></h5>
+<p><b>On the slide.</b> Methotrexate (MTX; Folex, Mexate) is classified chemically as a pteridine, a two-ring nitrogen system. It is antiproliferative: it competitively inhibits dihydrofolate reductase (DHFR), the enzyme that makes tetrahydrofolic acid, which the slide calls an essential co-factor for DNA synthesis. It also has immunosuppressant and anti-inflammatory activities. He called it multi-target, since it is used in cancer, in arthritic conditions and here in psoriasis.</p>
+<p>The box on the slide shows folic acid being reduced by DHFR to tetrahydrofolic acid. Methotrexate is an antimetabolite, an analog of folic acid (vitamin B9). He said the only points of difference are &ldquo;this methyl group and that amine&rdquo;. On the drawing these are the N-CH3 (folic acid has N-H there) and the NH2 on the pteridine ring (folic acid has OH there). It sits in the same enzyme cavity and has higher affinity than folic acid, so it blocks folic acid. Without tetrahydrofolic acid there is no DNA synthesis, and the cells cannot multiply.</p>
+<p><b>Wording.</b> In this passage he does not say &ldquo;dihydrofolate reductase&rdquo; aloud. He says the enzyme that processes folic acid into the required tetrahydrofolic acid, so DHFR comes from the slide.</p>
+<div class="g2-said"><span class='g2-k'>He said</span>
+<ul>
+<li>&ldquo;So, chemically we classify it as a pteridine based on this group here. That's the pteridine feature.&rdquo; <span class='g2-src'>(11/04 T@8221-8321)</span></li>
+<li>&ldquo;Methotrexate goes in there and sits in the same enzyme cavity and competitively inhibits the binding of what? Folic acid.&rdquo; <span class='g2-src'>(11/04 T@8972-9093)</span></li>
+</ul></div>
+<p><b>Practice.</b> <button type="button" class="chip g2-primary" data-qids="BS4-001 KX-012 S4-028 S4-029 S4-030 S4-031 S4-032 S4-037 S4H-003 S4H-011 S4H-015" data-qlabel="DPAW slide 30">Practice these (11)</button></p>
+</div>
+<div class="gpt"><h5>Methotrexate structure-activity relationship (DPAW slide 31) <span class="g2-star" title="Likely on the exam">&starf;</span></h5>
+<p><b>On the slide.</b> The structure-activity relationship (SAR) lists what a molecule needs to behave like methotrexate: a pteridine ring, p-aminobenzoic acid and glutamic acid. The pteridine ring should remain aromatic. Aromatic N-alkylation decreases activity. The N-CH3 is essential for activity.</p>
+<p>In the drawing the pteridine is brown, the p-aminobenzoyl ring is red, and glutamic acid is green; the N-CH3 and the NH2 on the pteridine are blue. Folic acid sits beside it for comparison, with an OH on the pteridine and N-H in place of N-CH3 (both blue). Reading the SAR as a design rule: keep all three parts, keep the pteridine aromatic, do not alkylate the aromatic amines, and keep the N-methyl.</p>
+<div class="g2-said"><span class='g2-k'>He said</span>
+<ul>
+<li>&ldquo;These molecules that were going to behave like uh methotrexate had to have the following features. One, the teridine ring, which is this. 2, the paraaminobenzoic acid, the ACE group. And you, it also needed glutamic acid.&rdquo; [he said 'teridine': pteridine; 'the ACE group': the p-aminobenzoic acid group] <span class='g2-src'>(11/04 T@9997-10218)</span></li>
+<li>&ldquo;the requirement was that when you have a pteridine ring, it should remain aromatic. So, if you change the double bonds within that pteridine ring, you're messing up the activity of that molecule.&rdquo; <span class='g2-src'>(11/04 T@10332-10527)</span></li>
+<li>&ldquo;These are aromatic amines, right? If you alkylate any one of those, you also drop the activity.&rdquo; <span class='g2-src'>(11/04 T@10617-10712)</span></li>
+<li>&ldquo;And they also noticed that this amethylation here is also essential for activity. So this is the SAR that came with this.&rdquo; [he said 'amethylation': the N-methyl group] <span class='g2-src'>(11/04 T@10806-10927)</span></li>
+</ul></div>
+<p><b>Practice.</b> <button type="button" class="chip g2-primary" data-qids="BS4-001 KX-011 S4-028 S4-032 S4-033 S4-034 S4-035 S4-036 S4H-010" data-qlabel="DPAW slide 31">Practice these (9)</button></p>
+</div>
+<div class="gpt"><h5>Apremilast (Otezla) (DPAW slide 34) <span class="g2-star" title="Likely on the exam">&starf;</span></h5>
+<p><b>On the slide.</b> Apremilast (Otezla) treats psoriatic arthritis and moderate to severe plaque psoriasis. It is an isoindoline (the pink ring system with two carbonyls) and a phosphodiesterase-4 (PDE4) inhibitor; blocking PDE4 raises cAMP and lowers pro-inflammatory molecules. It is extensively metabolized, 3A4 major and 1A2 and 2A6 minor, via two steps. The text line leaves both names blank (&ldquo;via O-&hellip; and O-&hellip;&rdquo;); the drawing labels the first arrow O-demethylation and ends in a box marked O-Gluc (the glucuronide). Glucuronidation of the -OH metabolite is done by UGTs. His take-home point is the reliance on 3A4, so avoid 3A4 inhibitors and 3A4 inducers.</p>
+<p><b>Conflict, stated both ways.</b> The slide arrow and the 11/04 lecture both say O-demethylation: removing a methyl group from the methoxy on the phenyl ring, leaving the -OH metabolite. The drawing also carries an ethoxy group. The Exam 1 question showed a picture that indicated the ethyl group, which would be O-deethylation. Both are removal of an alkyl group from an aryl ether. An exam written from his lecture keys O-demethylation, but an item that circles the ethyl group asks for O-deethylation, so read which group is marked.</p>
+<div class="g2-said"><span class='g2-k'>He said</span>
+<ul>
+<li>&ldquo;what I wanted to take from here is just simply the reliance of this molecule on 3A4 for its metabolism, and you see some of the metabolism that you see are going to be Odimethylation,&rdquo; [he said 'Odimethylation': O-demethylation] <span class='g2-src'>(11/04 T@13895-14078)</span></li>
+<li>&ldquo;So all demethylation. And once that occurs, then you get this O metabolite, right, hydroxymetabolite, which then can be glucuronidated or glue. These are UGTs.&rdquo; <span class='g2-src'>(11/04 T@14108-14267)</span></li>
+<li>&ldquo;So, whatever you do, here, again, avoid what? 384 Inhibitors 304 Inducers&rdquo; [he said '384' and '304': 3A4] <span class='g2-src'>(11/04 T@14272-14345)</span></li>
+</ul></div>
+<p><b>Practice.</b> <button type="button" class="chip g2-primary" data-qids="KX-012 S4-044 S4-045 S4-046 S4-047 S4H-011 S4H-014 S4H-015 XS-006 XS-012" data-qlabel="DPAW slide 34">Practice these (10)</button></p>
+</div>
+</section>
+
+<section class="gobj" id="gobj-sk-10">
+<h3>Dr. Sikazwe, assigned slides · Hydroxy acid keratolytics</h3>
+<div class="gbar"><span>Objective (DPAW slides 43, 44, 45)</span><b>Know what makes a hydroxy acid an alpha-hydroxy acid, how glycolic acid and salicylic acid differ, and apply the definition to a set of structures</b><i>DPAW slide 43, 44, 45</i></div>
+<div class="gpt g2-block"><h5><span class="g2-num">1.</span> Glycolic acid and salicylic acid (DPAW slide 43) <span class="g2-star" title="Likely on the exam">&#9733;</span></h5>
+<p class="g2-p"><b>On the slide.</b> Hydroxy acids are keratolytics. Under salicylic acid the slide says increased hydration, and that a low pH causes the lower skin layers to swell, soften and desquamate (shed). <b>Glycolic acid (GA)</b>, HO-CH2-COOH, is an alpha-hydroxy acid: the OH sits on the carbon next to the carboxylic acid. It is hydrophilic, and higher concentrations give deeper skin peels. He gave a pKa of about 3 (an acid, so a low pKa) and a log P of about 1: water soluble, small, so it acts mostly on the surface. The arrow marked DMEs (drug-metabolizing enzymes) leads to a product with two carboxylic acids; he said two enzymes do this, alcohol dehydrogenase and aldehyde dehydrogenase.</p>
+<p class="g2-p"><b>Salicylic acid (SA)</b> is drawn as a benzene ring with a carboxylic acid and an OH on the next ring carbon. The slide calls it more lipophilic than glycolic acid; he gave a log P of 1 to 2 because of the aromatic ring. Because it is an acid, some people complain of itching. The ring carbon next to the acid is the alpha carbon and carries no OH; the OH is on the next one, so he called it a beta-hydroxy acid (&ldquo;2 carbon removed from the carboxylic acid&rdquo;). Of what reaches the systemic circulation, 75% is conjugated with an amino acid to a glycine conjugate; the slide shows this product only as a question mark.</p>
+<div class="g2-said"><span class="g2-k">He said</span><ul>
+<li>&ldquo;And because this is also an acid, it's going to be water soluble, so it's a hydrophilic. So log p value is around 1. So it's going to act mostly on the surface when you give it.&rdquo; <span class="g2-src">11/04 T@20585-20762</span></li>
+<li>&ldquo;So, minimal. Metabolism. Leads you to this. Diaccid So I would ask you, how many enzymes are involved in this place. Two enzymes, right? OK. Remember that tandem of enzymes, alcohol dehydrogenase and aldehyde dehydrogenase.&rdquo; [he said 'Diaccid': diacid] <span class="g2-src">11/04 T@20877-21100</span></li>
+<li>&ldquo;So this is a beta hydroxy acid. OK. 2 carbon removed from the carboxylic acid.&rdquo; <span class="g2-src">11/04 T@22163-22241</span></li>
+<li>&ldquo;This undergoes metabolism, 75%. Whatever gets in systemic circulation, 75% amino acid conjugation to a glycine conjugate.&rdquo; <span class="g2-src">11/04 T@22359-22480</span></li>
+</ul></div>
+<p class="g2-sub">Practice</p>
+<div class="g2-btns"><button type="button" class="chip g2-primary" data-qids="S4-055 S4-056 S4-057 S4-058 S4-059 S4-060 S4-061 S4-062 S4-071 S4H-016 S4H-017 S4H-018 S4H-019 XS-003" data-qlabel="DPAW slide 43">Practice these (14)</button></div>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">2.</span> Hydroxy acid structure-activity relationship (DPAW slide 44) <span class="g2-star" title="Likely on the exam">&#9733;</span></h5>
+<p class="g2-p"><b>On the slide.</b> The drawing is a generic alpha-hydroxy acid, HO2C-C(alpha)(OH)-R, with the alpha carbon in red and R in blue. The structure-activity relationship (SAR) has three parts: a COOH group (or groups); an OH on the alpha carbon, the carbon next to the CO2H, on most of them; and R, mostly alkyl. He added that R can also be an aromatic group, and that alkyl groups are the usual choice on that same alpha carbon, and the molecules still work. These are small acids, and this is the keratolytic class.</p>
+<p class="g2-p">A hydroxy acid is named for its OH. The position of that OH, alpha or beta, is what separates glycolic acid (alpha) from salicylic acid (beta) on slide 43.</p>
+<div class="g2-said"><span class="g2-k">He said</span><ul>
+<li>&ldquo;So this hydroxy group needs to be on the alpha atom, 2, the carboxylic acid, and you can do some things.&rdquo; <span class="g2-src">11/04 T@22949-23053</span></li>
+<li>&ldquo;You can decorate this with, you know, aromatic groups, archal groups, but mostly archal groups can be put on that same alpha alpha atom. And you still have molecules that work, OK?&rdquo; [he said 'archal': alkyl] <span class="g2-src">11/04 T@23054-23234</span></li>
+<li>&ldquo;So, just an exercise, can you determine or group which ones are alpha hydroxy aids? How many alpha hydroxy acids do we have?&rdquo; <span class="g2-src">11/04 T@23288-23412</span></li>
+</ul></div>
+<p class="g2-sub">Practice</p>
+<div class="g2-btns"><button type="button" class="chip g2-primary" data-qids="S4-055 S4-063 S4-064 S4-120 S4H-018 XS-003" data-qlabel="DPAW slide 44">Practice these (6)</button></div>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">3.</span> Poll: how many alpha-hydroxy acids are in the figure? (DPAW slide 45)</h5>
+<p class="g2-p"><b>On the slide.</b> His PollEv question is &ldquo;How many alpha-hydroxy acids are in the figure below?&rdquo; with the options One, Two, Three, Four. The figure holds five small carboxylic acids. To test each one, find the carboxylic acid, step to the carbon next to it (the alpha carbon) and look for an OH on that carbon.</p>
+<ul>
+<li>Top center, HOOC-CH(OH)-CH(OH)-COOH: each OH is on a carbon next to a carboxylic acid. Yes.</li>
+<li>Top right, glycolic acid: yes.</li>
+<li>Left, (CH3)2CH-COOH: no OH other than the one in the carboxylic acid itself. No.</li>
+<li>Bottom, with a cyclopropane ring: the CH(OH) carbon is next to the right-hand carboxylic acid. Yes.</li>
+<li>Right, with a cyclohexane ring: the carboxylic acid is on ring carbon 1 and the OH on ring carbon 2, one carbon farther than alpha. No.</li>
+</ul>
+<div class="g2-said"><span class="g2-k">He said</span><ul>
+<li>&ldquo;How do we define alpha hydroxy? Hydroxy group needs to be next to the what? on the carbon that is next to the carboxylic acid.&rdquo; <span class="g2-src">11/04 T@23505-23631</span></li>
+<li>&ldquo;What about this one? No? What about this one? Yes, look at that, that next to the carboxylic acid, yes. What about this one? No. So how many? OK.&rdquo; <span class="g2-src">11/04 T@23723-23868</span></li>
+</ul></div>
+<div class="g2-note"><span class="g2-k">Conflict: the count was never said aloud</span><p>He did not say the count. He ended with &ldquo;So how many? OK.&rdquo; and moved on to sulfur, and the answers from the room are cut from the recording. Applying his definition to the five structures gives three (the top-center, top-right and bottom structures). An exam written from his lecture would key Three, as the practice question does; his own count is not on record.</p></div>
+<p class="g2-sub">Practice</p>
+<div class="g2-btns"><button type="button" class="chip g2-primary" data-qids="S4-120" data-qlabel="DPAW slide 45">&#9733; Practice these (1)</button></div>
+</div>
+</section>
+
+<section class="gobj" id="gobj-sk-11">
+<h3>Dr. Sikazwe, assigned slides · Sulfur and benzoyl peroxide</h3>
+<div class="gbar"><span>Objective (DPAW slides 46, 47)</span><b>Know the drawbacks of sulfur and how it is thought to work, and the two things benzoyl peroxide does on the skin</b><i>DPAW slide 46, 47</i></div>
+<div class="gpt g2-block"><h5><span class="g2-num">1.</span> Sulfur (DPAW slide 46) <span class="g2-star" title="Likely on the exam">&#9733;</span></h5>
+<p class="g2-p"><b>On the slide.</b> Sulfur is used alone or in mixtures: sulfur with sodium sulfacetamide (Plexion, Avar) or sulfur with zinc oxide. The mechanism line is under CBDA (chemical basis of drug action): <b>thiolysis</b>. Sulfur reduces or breaks the disulfide bonds in keratin. The drawing shows a keratin helix held by S-S bridges, a thiolysis arrow, and the same helix with free SH groups.</p>
+<p class="g2-p">Keratin is a protein, and its disulfide bonds are between cysteine residues, the amino acid he named. He called the evidence anecdotal and the mechanism less clear. Two drawbacks he named: allergy and smell. Particle size matters: it must be small, and large-particle sulfur is less effective.</p>
+<div class="g2-said"><span class="g2-k">He said</span><ul>
+<li>&ldquo;Uh, what are some of the drawbacks to using sulfur? Cause of allergies. And some people just uh detest sulfur for what? Smell.&rdquo; <span class="g2-src">11/04 T@24147-24273</span></li>
+<li>&ldquo;this needs to be very what small particle. So. Large particle sulfur, less effective.&rdquo; <span class="g2-src">11/04 T@24663-24748</span></li>
+<li>&ldquo;there's some, uh, anecdotal evidence that this molecule works by thiolysis. That sulfur goes and breaks these. Disulfide bonds present in keratin.&rdquo; <span class="g2-src">11/04 T@25122-25268</span></li>
+<li>&ldquo;Where do you find the sulfide bonds in amino acid? Cysteine, right?&rdquo; [he said 'sulfide bonds': disulfide bonds] <span class="g2-src">11/04 T@25475-25542</span></li>
+</ul></div>
+<p class="g2-sub">Practice</p>
+<div class="g2-btns"><button type="button" class="chip g2-primary" data-qids="BS4-005 S4-021 S4-065 S4-066 S4-067 S4-068 S4H-019 S4H-020" data-qlabel="DPAW slide 46">Practice these (8)</button></div>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">2.</span> Benzoyl peroxide (DPAW slide 47) <span class="g2-star" title="Likely on the exam">&#9733;</span></h5>
+<p class="g2-p"><b>On the slide.</b> Benzoyl peroxide (BPO) is in Oxy-10, Clearasil and ProActiv products, and the slide names its chemical class, peroxide. It does two things: lowers pH and forms free radicals. The note on the slide says it is absorbed by the skin and forms benzoic acid, which is excreted in urine. The drawing has BPO (log P = 3.5) breaking into benzoic acid and a benzoyl radical (a radical, marked with a red dot on an oxygen).</p>
+<p class="g2-p">Because it has a lipophilic part, it penetrates the skin well. Then the peroxide bond (O-O) breaks, giving two products with two different jobs: benzoic acid lowers the skin pH, which supports the keratolytic activity; the benzoyl radical kills bacteria.</p>
+<div class="g2-said"><span class="g2-k">He said</span><ul>
+<li>&ldquo;It does two things. It lowers the pH, skin pH, and it also produces free radicals.&rdquo; <span class="g2-src">11/04 T@25789-25871</span></li>
+<li>&ldquo;so benzoic acid brings to the fore lowering of what? Skin pH. So you can promote even this keratolytic activity from that.&rdquo; <span class="g2-src">11/04 T@26093-26215</span></li>
+<li>&ldquo;Then this one here. The benzo a radical. Go to kill some of the Bacteria.&rdquo; [he said 'benzo a radical': benzoyl radical] <span class="g2-src">11/04 T@26216-26289</span></li>
+<li>&ldquo;So, keratolytic coming from here, and benzoyl peroxide, killing off bacteria. Anti-inflammatory&rdquo; <span class="g2-src">11/04 T@26496-26591</span></li>
+</ul></div>
+<p class="g2-sub">Practice</p>
+<div class="g2-btns"><button type="button" class="chip g2-primary" data-qids="S4-021 S4-069 S4-070 S4-071 S4H-019 S4H-021" data-qlabel="DPAW slide 47">Practice these (6)</button></div>
+</div>
+</section>
+
+<section class="gobj" id="gobj-sk-12">
+<h3>Dr. Sikazwe, assigned slides · Retinoids by generation</h3>
+<div class="gbar"><span>Objective (DPAW slides 48, 49, 50, 51)</span><b>Know that retinoids are vitamin A derivatives with anti-inflammatory, anti-proliferative and sebum-lowering effects, that teratogenicity limits them, and how the three generations differ</b><i>DPAW slide 48, 49, 50, 51</i></div>
+<div class="gpt g2-block"><h5><span class="g2-num">1.</span> Retinoids: what they are (DPAW slide 48) <span class="g2-star" title="Likely on the exam">&#9733;</span></h5>
+<p class="g2-p"><b>On the slide.</b> Tretinoin, isotretinoin, acitretin, adapalene, tazarotene and trifarotene are derivatives of vitamin A1 (retinol). The drawing is retinol: a trimethylcyclohexene ring, a chain of alternating alkenes (a polyene) and a terminal CH2-OH, with an arrow to a box labeled RETINOIDS. The slide lists them as retinoic receptor (RAR and RXR) agonists with four effects: anti-inflammatory, anti-proliferative, decreased sebum production and teratogenic effects. In class he read out the first three and then the teratogenic caution; the RAR and RXR line was not read out on this slide.</p>
+<p class="g2-p">Teratogenic means able to cause birth defects, so not everyone can use a retinoid. He called this the major limitation of these potent molecules, said part of it depends on the concentration, and told students to carry the caution with them.</p>
+<div class="g2-said"><span class="g2-k">He said</span><ul>
+<li>&ldquo;So they have several properties anti-inflammatory, anti-prohiferative, even they suppress sebum oil production.&rdquo; [he said 'prohiferative': proliferative] <span class="g2-src">11/04 T@27032-27143</span></li>
+<li>&ldquo;So if they are teratogenic, can everybody use them? If they are teratogenic, can everyone use them? No.&rdquo; <span class="g2-src">11/04 T@27255-27358</span></li>
+<li>&ldquo;So, this is a caution that you all need to make sure you carry that with you.&rdquo; <span class="g2-src">11/04 T@27363-27440</span></li>
+<li>&ldquo;Maybe the less concentrated ones can be used, but there's always that caveat.&rdquo; <span class="g2-src">11/04 T@27552-27629</span></li>
+</ul></div>
+<p class="g2-sub">Practice</p>
+<div class="g2-btns"><button type="button" class="chip g2-primary" data-qids="S4-027 S4-072 S4-073 S4H-003 S4H-009" data-qlabel="DPAW slide 48">Practice these (5)</button></div>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">2.</span> First generation, non-aromatic: tretinoin and isotretinoin (DPAW slide 49) <span class="g2-star" title="Likely on the exam">&#9733;</span></h5>
+<p class="g2-p"><b>On the slide.</b> Retinol sits in a box as the parent compound. <b>Tretinoin</b> (Retin-A products) was the first retinoid for acne and is all-trans retinoic acid: every alkene in the chain is trans, and the chain ends in a carboxylic acid. He said he thinks tretinoin is topical. <b>Isotretinoin</b> (Accutane, for example) is 13-cis retinoic acid, and he said it is used orally: the alkene at carbon 13 is cis, highlighted in pink. The two are geometric isomers of each other, with the same atoms and only the orientation at that one alkene different. Neither has an aromatic ring.</p>
+<div class="g2-said"><span class="g2-k">He said</span><ul>
+<li>&ldquo;You have what are called the first gen retinoids. They are non-aromatic. There is no aromatic group in them. This is where we find tretinoin and isotretinoin.&rdquo; <span class="g2-src">11/04 T@27663-27821</span></li>
+<li>&ldquo;So tretinoin is used, I think this is topical. And this one is used. Uh, orally.&rdquo; [the slide does not state the routes; it lists Retin-A products for tretinoin and Accutane for isotretinoin] <span class="g2-src">11/04 T@27822-27902</span></li>
+<li>&ldquo;So, this is a cis retinoic acid, 13 in particular, 13 carbon cis. And that's the only difference.&rdquo; <span class="g2-src">11/04 T@28384-28481</span></li>
+<li>&ldquo;So this relationship, C strands is called geometric isomerism. these are geometric. Isomers. C strands relationship.&rdquo; [he said 'C strands': cis-trans] <span class="g2-src">11/04 T@28609-28725</span></li>
+</ul></div>
+<p class="g2-sub">Practice</p>
+<div class="g2-btns"><button type="button" class="chip g2-primary" data-qids="KX-013 KX-014 S4-074 S4-075 S4-076 S4-077 S4H-005 S4H-006 S4H-007 S4H-008 XS-001 XS-002" data-qlabel="DPAW slide 49">Practice these (12)</button></div>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">3.</span> Second generation, mono-aromatic: etretinate and acitretin (DPAW slide 50) <span class="g2-star" title="Likely on the exam">&#9733;</span></h5>
+<p class="g2-p"><b>On the slide.</b> <b>Etretinate</b> is an ethyl ester prodrug with one aromatic ring (carrying an OMe and three methyls) and a polyene chain. The slide notes: t1/2 120 days, highly lipophilic, narrow therapeutic index (TI), teratogenic, removed from the US market in 1998. An arrow leads to <b>acitretin</b> (Soriatane), the active form of etretinate, which is the free carboxylic acid. He did not say the 120 days or the 1998 date. He said the ester needs bioactivation by CEs (carboxylesterases), that acitretin keeps some teratogenicity but not to the extent of etretinate, and that acitretin is now used directly.</p>
+<div class="g2-said"><span class="g2-k">He said</span><ul>
+<li>&ldquo;The second class is monoaromatic.&rdquo; <span class="g2-src">11/04 T@28865-28898</span></li>
+<li>&ldquo;it came with things like this narrow therapeutic index, quite teratogenic, so they removed it from the market.&rdquo; <span class="g2-src">11/04 T@28978-29088</span></li>
+<li>&ldquo;Luckily somebody was observant enough that. This requires bioactivation to this. CEs are involved to get you to here.&rdquo; <span class="g2-src">11/04 T@29089-29206</span></li>
+<li>&ldquo;Yes, there's some retention of teratogenicity, but not to the extent of the treatment.&rdquo; [he said 'treatment': etretinate] <span class="g2-src">11/04 T@29296-29382</span></li>
+<li>&ldquo;So 2nd gen monoaromatics, that's where you find aci acid retin.&rdquo; [he said 'aci acid retin': acitretin] <span class="g2-src">11/04 T@29679-29742</span></li>
+</ul></div>
+<p class="g2-sub">Practice</p>
+<div class="g2-btns"><button type="button" class="chip g2-primary" data-qids="KX-014 S4-074 S4-078 S4-079 S4H-005 S4H-006 S4H-007 XS-001" data-qlabel="DPAW slide 50">Practice these (8)</button></div>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">4.</span> Third generation, poly-aromatic: adapalene, tazarotene, trifarotene (DPAW slide 51) <span class="g2-star" title="Likely on the exam">&#9733;</span></h5>
+<p class="g2-p"><b>On the slide.</b> <b>Adapalene</b> (Differin) is the first synthetic retinoid, <b>trifarotene</b> (Aklief) is also on the list, and <b>tazarotene</b> (Tazorac) is a prodrug. The drawing shows tazarotene, an ethyl ester, with an arrow marked ?? to tazarotenic acid, the active form. Adapalene and trifarotene are directly active because they carry an exposed carboxylic acid; the ester is what makes tazarotene a prodrug, and he said a carboxylesterase bioactivates it. General ADMET (absorption, distribution, metabolism, excretion, toxicity): all are lipophilic and have low systemic absorption, which means fewer systemic adverse effects. He said they are retained in the skin, and that the explanation is not clear.</p>
+<div class="g2-said"><span class="g2-k">He said</span><ul>
+<li>&ldquo;So now you have 3rd generation, we may be on 4th generation retinoids, uh, but the 3rd generation has all these polyaromatic, poly several aromatic features.&rdquo; <span class="g2-src">11/04 T@29902-30059</span></li>
+<li>&ldquo;That's where you find adapalin, triperrotin, tazerrotin.&rdquo; [he said 'adapalin, triperrotin, tazerrotin': adapalene, trifarotene, tazarotene] <span class="g2-src">11/04 T@30105-30161</span></li>
+<li>&ldquo;these two. Directly active because they have this exposed carboxylic acid, right? But. Is a prodrug carboxyestrase is. To get it bioactivated&rdquo; [the unnamed prodrug is tazarotene, per the slide] <span class="g2-src">11/04 T@30169-30310</span></li>
+<li>&ldquo;if we were to look at log p values, they're quite lipophilic. OK, but somehow they get retained in the skin, and the explanation is not that clear.&rdquo; <span class="g2-src">11/04 T@30325-30472</span></li>
+</ul></div>
+<p class="g2-sub">Practice</p>
+<div class="g2-btns"><button type="button" class="chip g2-primary" data-qids="KX-013 KX-014 S4-023 S4-025 S4-074 S4-080 S4-081 S4-082 S4H-005 S4H-006 S4H-007 XS-001" data-qlabel="DPAW slide 51">Practice these (12)</button></div>
+</div>
+</section>
+
+<section class="gobj" id="gobj-sk-13">
+<h3>Dr. Sikazwe, assigned slides · Hormonal acne therapy</h3>
+<div class="gbar"><span>Objective (DPAW slides 52, 53)</span><b>Know that the hormonal agents lower sebum production, that estrogens are steroids, and how the steroidal and non-steroidal antiandrogens differ in how they work</b><i>DPAW slide 52, 53</i></div>
+<div class="gpt g2-block"><h5><span class="g2-num">1.</span> Estrogens in oral contraceptives (DPAW slide 52) <span class="g2-star" title="Likely on the exam">&#9733;</span></h5>
+<p class="g2-p"><b>On the slide.</b> The title line is &ldquo;OCs act against hormonal triggers of acne&rdquo;. OCs are oral contraceptives, used here as hormonal adjunct therapy in females: ethinyl estradiol with norgestimate (Ortho Tri-Cyclen Lo), and ethinyl estradiol with drospirenone (Yasmin, Yaz). The reason noted on the slide is sebum oil production. The drawing shows all three structures. In the annotated copy the rings are lettered A to D on norgestimate, and he said &ldquo;A, B, C, D&rdquo; as he described the steroid nucleus:</p>
+<ul>
+<li>ethinyl estradiol: aromatic A ring, 3-OH, 17-ethynyl (an alkyne), 17-OH</li>
+<li>norgestimate: oxime at C3, 17-acetate, 17-ethynyl, 13-ethyl</li>
+<li>drospirenone: cyclopropane rings, a spiro lactone at C17, 3-keto-4-ene</li>
+</ul>
+<p class="g2-p">All three share the four-ring steroid nucleus, so structurally they are steroids; mechanistically they suppress sebum oil production by normalizing the hormones.</p>
+<div class="g2-said"><span class="g2-k">He said</span><ul>
+<li>&ldquo;So all these, let me just say, these are, these are all going to be what? Steroids, right? Because you know the structure of steroids A, B, C, D&rdquo; <span class="g2-src">11/04 T@31021-31165</span></li>
+<li>&ldquo;Essentially, what they do is they suppress Bomb production. That's the C bomb oil production.&rdquo; [he said 'Bomb' and 'C bomb': sebum] <span class="g2-src">11/04 T@31372-31465</span></li>
+<li>&ldquo;So structurally, they're steroids, right? They're mechanistically, they're suppressing sebum oil production.&rdquo; <span class="g2-src">11/04 T@31579-31687</span></li>
+<li>&ldquo;So here you find ethno estradiol, ethno estradiol, co-formulated with these agents also.&rdquo; [he said 'ethno estradiol': ethinyl estradiol] <span class="g2-src">11/04 T@31233-31321</span></li>
+</ul></div>
+<p class="g2-sub">Practice</p>
+<div class="g2-btns"><button type="button" class="chip g2-primary" data-qids="KX-015 S4-083 S4-084 S4H-022 S4H-023 XS-011" data-qlabel="DPAW slide 52">Practice these (6)</button></div>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">2.</span> Antiandrogens (DPAW slide 53) <span class="g2-star" title="Likely on the exam">&#9733;</span></h5>
+<table class="g2-table g2-stack">
+<caption>Antiandrogens (AAs) on the slide</caption>
+<thead><tr><th scope="col">Type</th><th scope="col">Drug</th><th scope="col">What the drawing shows</th></tr></thead>
+<tbody>
+<tr><th scope="row">Steroidal AA</th><td><span class="g2-lab">Drug</span>Spironolactone (Aldactone)</td><td><span class="g2-lab">Drawing</span>A steroid with a spiro-lactone and a 7alpha-thioacetyl group</td></tr>
+<tr><th scope="row">Non-steroidal AA</th><td><span class="g2-lab">Drug</span>Flutamide (Eulexin)</td><td><span class="g2-lab">Drawing</span>An anilide with CF3 and NO2</td></tr>
+<tr><th scope="row">Non-steroidal AA</th><td><span class="g2-lab">Drug</span>Ketoconazole</td><td><span class="g2-lab">Drawing</span>Imidazole, dioxolane, dichlorophenyl and acetylpiperazine</td></tr>
+</tbody>
+</table>
+<p class="g2-p"><b>What each approach does.</b> Some of these diminish testosterone biosynthesis (the slide's note on spironolactone and ketoconazole); flutamide prevents testosterone from binding to its receptor, so testosterone cannot activate its pathways. For ketoconazole he stressed that azoles are strong CYP3A4 inhibitors. Both the estrogenic agents on slide 52 and the antiandrogens lead to less sebum.</p>
+<div class="g2-said"><span class="g2-k">He said</span><ul>
+<li>&ldquo;Azores are strong inhibitors of what? C enzymes. So 384. Strong 3F4 inhibitor.&rdquo; [he said 'Azores': azoles; 'C enzymes': CYP enzymes; '384' and '3F4': CYP3A4] <span class="g2-src">11/04 T@32466-32544</span></li>
+<li>&ldquo;Always when you see Ezo antifugo's. Have that enzyme inhibition. At the front of your mind.&rdquo; [he said 'Ezo antifugo's': azole antifungals] <span class="g2-src">11/04 T@32545-32636</span></li>
+<li>&ldquo;It blocks testosterone from binding to its receptor, so testosterone cannot activate. It's pathways, OK?&rdquo; <span class="g2-src">11/04 T@32865-32969</span></li>
+<li>&ldquo;So you have a steroidal approach, a non-steroidal approach, and you just differentiate them by how they work. This is the take-home message from this slide.&rdquo; <span class="g2-src">11/04 T@32970-33126</span></li>
+<li>&ldquo;So you have less sebum production being being produced in both cases when you use anti-androgens as well as estrogenic compounds.&rdquo; <span class="g2-src">11/04 T@33442-33571</span></li>
+</ul></div>
+<div class="g2-note"><span class="g2-k">Conflict: which drugs lower testosterone biosynthesis</span><p>In the transcript he says &ldquo;Which one is the steroid? This one, right? OK, so this guy, spironolactone and ketoconazole. These Uh, Diminish Testosterone Testosterone. Biosynthesis. Decrease testosterone biosynthesis, that's the mechanism of action, so it's a steroid. This is not a steroid.&rdquo; (11/04 T@32062-32300). Reading 1 (the slide): spironolactone is the one steroid; ketoconazole and flutamide are non-steroidal. Reading 2 (the speech as transcribed): the sentence names spironolactone and ketoconazole together as lowering testosterone biosynthesis, says &ldquo;so it&rsquo;s a steroid&rdquo; (spironolactone), then &ldquo;This is not a steroid&rdquo; and goes on about the azole (ketoconazole). The handwriting on the slide brackets both drawings with &ldquo;these diminish testosterone biosynthesis&rdquo;. The two agree once the speech is read as: spironolactone and ketoconazole lower biosynthesis, flutamide blocks the receptor, and only spironolactone is a steroid. An exam written from his lecture would key the slide's classification.</p></div>
+<p class="g2-sub">Practice</p>
+<div class="g2-btns"><button type="button" class="chip g2-primary" data-qids="KX-010 KX-015 S4-085 S4-086 S4-087 S4-088 S4-091 S4H-022 S4H-023 XS-004 XS-005 XS-011 XS-012" data-qlabel="DPAW slide 53">Practice these (13)</button></div>
+</div>
+</section>
+
+<section class="gobj" id="gobj-sk-14">
+<h3>Dr. Sikazwe, assigned slides · Antibiotics for acne</h3>
+<div class="gbar"><span>Objective (DPAW slides 54, 55)</span><b>Recognize the antibiotic structures, from small linear azelaic acid to cyclic erythromycin, and identify tetracyclines and tell them apart from steroids</b><i>DPAW slide 54, 55</i></div>
+<div class="gpt g2-block"><h5><span class="g2-num">1.</span> Azelaic acid, clindamycin, erythromycin (DPAW slide 54) <span class="g2-star" title="Likely on the exam">&#9733;</span></h5>
+<p class="g2-p"><b>On the slide.</b> The target organism is P. acnes, a gram-positive bacterium. Three agents, in the order he gave them:</p>
+<ul>
+<li><b>Azelaic acid</b> (Azelex): a C9 bi-carboxylic acid (a diacid) and an anti-inflammatory agent. The drawing is a linear nine-carbon diacid.</li>
+<li><b>Clindamycin</b>: a lincomycin (the slide says a sulfur antibiotic from S. lincolnensis), used topically because of GI (gastrointestinal) toxicity.</li>
+<li><b>Erythromycin</b>: a macrolide with poor PO (oral) absorption, unstable at pH 4 or lower; structural modifications (acid salts and esters) increase water and lipid solubilities. The drawing is a large ring with two sugars attached.</li>
+</ul>
+<p class="g2-p">He placed them as options in turn: azelaic acid first, then clindamycin if that does not work, then erythromycin. What he asked students to do with the drawings is sort them by shape: small linear molecules (azelaic acid), through clindamycin, up to the large cyclic macrolide.</p>
+<div class="g2-said"><span class="g2-k">He said</span><ul>
+<li>&ldquo;Azylic acid, very unusual, but very common in a lot of over these over the counter antibiotics for skin conditions, right? It's a very unusual molecule. It's a dyacid.&rdquo; [he said 'Azylic acid' and 'dyacid': azelaic acid and diacid] <span class="g2-src">11/04 T@34038-34205</span></li>
+<li>&ldquo;If that doesn't work, you have options of using clindamycin. If that doesn't work, you can use erythromycin.&rdquo; <span class="g2-src">11/04 T@34274-34382</span></li>
+<li>&ldquo;Now, here, you should be able to uh distinguish, right? Just the cyclic, some of the cyclic, some non-cyclic. And then the other ones are linear.&rdquo; <span class="g2-src">11/04 T@34747-34892</span></li>
+<li>&ldquo;You can run from small linear molecules to large cyclic molecules as antibiotics.&rdquo; <span class="g2-src">11/04 T@34938-35019</span></li>
+</ul></div>
+<div class="g2-said"><span class="g2-k">Not needed</span>The antibiotic detail belongs to a later course. He said: &ldquo;Now, A lot of the antibiotic stock is going to be covered in. What course is coming up for you? ID, right? So, here, I'm not going to belabor the point.&rdquo; <span class="g2-src">11/04 T@34387-34539</span> He did not read out the clindamycin and erythromycin lines of the slide (lincomycin class, S. lincolnensis, GI toxicity, pH 4, acid salts and esters).</div>
+<p class="g2-sub">Practice</p>
+<div class="g2-btns"><button type="button" class="chip g2-primary" data-qids="S4-054 S4-089 S4-090 XS-003 XS-004" data-qlabel="DPAW slide 54">Practice these (5)</button></div>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">2.</span> Tetracyclines (DPAW slide 55) <span class="g2-star" title="Likely on the exam">&#9733;</span></h5>
+<p class="g2-p"><b>On the slide.</b> Tetracycline is broad spectrum. It chelates the metal ions Al3+, Ca2+, Mg2+, Fe3+, Zn (printed Zn3+ on the slide) and Bi3+, forming insoluble salts; a photo shows stained teeth. Its absorption is affected by food (for example dairy), and T1/2 is 8.5 h. <b>Doxycycline and minocycline</b>: food does not affect absorption; both are lipophilic and longer acting (doxycycline t1/2 = 11 to 13 h; minocycline 14 to 22 h). The note: cross reactivities due to structure similarity. The drawings are tetracycline (a linear, fused four-ring core with a 6-OH, 4-dimethylamino, 2-carboxamide and many OH and C=O groups), doxycycline, and minocycline (7-dimethylamino).</p>
+<p class="g2-p">He did not read out the half-lives or the metal list. He explained the bone and tooth problem this way: bone and enamel hold a lot of calcium, the drug chelates it, and the insoluble salts stay and weaken the bone or enamel structure and stain. Doxycycline and minocycline were made to overcome the food-absorption problem. A patient allergic to tetracycline is likely to react to these two as well, because of the structural similarity.</p>
+<div class="g2-said"><span class="g2-k">He said</span><ul>
+<li>&ldquo;Tetracyclines, be able to identify them 1234.&rdquo; [the transcript text &lsquo;1234&rsquo; is unclear; he goes on to say tetracyclines are linear four-ring molecules] <span class="g2-src">11/04 T@35192-35237</span></li>
+<li>&ldquo;steroids, they're stacked, right? You see they're stacking, 4 rings stuck. This one is just one planet, one linear molecule.&rdquo; <span class="g2-src">11/04 T@35302-35426</span></li>
+<li>&ldquo;one thing that they worry about with the use of tetracycline is the fact that this molecule can accumulate in bone. OK, and even enamel and start standing.&rdquo; [he said 'standing': staining] <span class="g2-src">11/04 T@35525-35680</span></li>
+<li>&ldquo;in bone, you have a lot of what? Calcium. OK. And then when they kill it they form these insoluble sals that then remain there. And weaken the bone structure or enamel structure.&rdquo; [he said 'kill it': chelate it] <span class="g2-src">11/04 T@35916-36094</span></li>
+<li>&ldquo;this main thing, absorption, being affected by food. So two versions of tetracycline were then That made to overcome this food absorption issue. OK? So, you have doxycycline and minocycline coming out of that.&rdquo; <span class="g2-src">11/04 T@36180-36389</span></li>
+<li>&ldquo;Are they going to be allergic to it as well? OK. If you give them minocycline, are they going to be allergic to it? Why? Uh-huh, structural similarity.&rdquo; <span class="g2-src">11/04 T@36630-36781</span></li>
+<li>&ldquo;All right, so visually, can you identify tetracyclines and distinguish them from steroids? That is something you can visually do, right?&rdquo; <span class="g2-src">11/04 T@36805-36941</span></li>
+</ul></div>
+<p class="g2-sub">Practice</p>
+<div class="g2-btns"><button type="button" class="chip g2-primary" data-qids="BS4-006 S4-091 S4-092 S4-093 S4-094 S4H-013 S4H-024 S4H-025 XS-004 XS-005" data-qlabel="DPAW slide 55">Practice these (10)</button></div>
+</div>
+</section>
+
+<section class="gobj" id="gobj-sk-15">
+<h3>Dr. Sikazwe, assigned slides · Sunblocks and the first organic sunscreens</h3>
+<div class="gbar"><span>Objective (DPAW slides 61, 62)</span><b>Know the two metal oxide sunblockers, zinc oxide and titanium dioxide, that reflect light, and know that the organic sunscreens carry chromophores (functional groups that absorb light) and turn that energy into heat</b><i>DPAW slide 61, 62</i></div>
+<div class="gpt"><h5>Sunblocks: zinc oxide and titanium dioxide (DPAW slide 61) <span class="g2-star" title="Likely on the exam">&#9733;</span></h5>
+<p><b>On the slide.</b> The inorganic chemical sunblocks are zinc oxide (ZnO) and titanium dioxide (TiO2). They are metal oxides that physically reflect or scatter light, whereas the organic sunscreens on the next slides absorb it. They are broad spectrum: they cover both UVA and UVB. The slide also states that they are inert, do not irritate the skin, and come in micronized formulations.</p>
+<p>The handwritten note says size matters, and the photograph shows why. On one half of the face the zinc oxide particles are large and the film looks white. On the other half the particles are nanosized and the film looks transparent. The rule he gave: the larger the particle, the better the reflection, so the transparent nano form gives up some of its reflective power. This holds for both zinc oxide and titanium oxide. He also said some products combine a metal oxide with an organic sunscreen, and that the metal oxides are the two physical reflectors while the other agents are organic molecules.</p>
+<div class="g2-said"><span class="g2-k">He said</span>
+<p>&ldquo;we have two metal oxides, zinc oxide and titanium oxide that we can put on our, on our skin. Very useful. These are broad spectra inactivity. OK, they block both UVA UVB.&rdquo; [he said &lsquo;broad spectra inactivity&rsquo;: broad-spectrum activity] <span class="g2-src">11/04 T@38555-38725</span></p>
+<p>&ldquo;Now, Size Matters here. It's important. Larger size Roger particle size. Is More effective.&rdquo; [he said &lsquo;Roger particle size&rsquo;: larger particle size] <span class="g2-src">11/04 T@38730-38821</span></p>
+<p>&ldquo;Large size is more effective. So for both zinc oxide as well as titanium oxide.&rdquo; <span class="g2-src">11/04 T@39280-39359</span></p>
+<p>&ldquo;This same zinc oxide, it moved from being white to transparent, nano size. That's start losing some of its reflective properties.&rdquo; <span class="g2-src">11/04 T@39024-39153</span></p>
+</div>
+<p class="g2-p"><b>Practice</b></p>
+<div class="g2-btns"><button type="button" class="chip g2-primary" data-qids="KX-016 S4-097 S4-098 S4H-019 S4H-020 S4H-026 XS-010" data-qlabel="DPAW slide 61">Practice these (7)</button></div>
+</div>
+<div class="gpt"><h5>Organic sunscreens, part 1: dibenzoylmethanes and anthranilates (DPAW slide 62) <span class="g2-star" title="Likely on the exam">&#9733;</span></h5>
+<p><b>On the slide.</b> Organic chemical sunscreens contain chromophores, functional groups that absorb UVA and UVB and convert it into harmless heat. This slide covers the two classes that absorb UVA (315-400 nm).</p>
+<ul>
+<li><b>Dibenzoylmethanes:</b> the product is avobenzone, a 1,3-diketone with a methoxyphenyl ring and a tert-butylphenyl ring. It absorbs the full spectrum of UVA and some UVB. It is rapidly degraded by UVA. The handwritten notes read low skin absorption and a photodegradation half-life (t1/2) of about 2 hours. He explained why low skin absorption matters: he does not want these molecules to seep into the systemic circulation (the blood).</li>
+<li><b>Anthranilates:</b> meradimate (a menthyl ester of anthranilic acid) absorbs UVA. The note reads even more rapidly degraded than avobenzone.</li>
+</ul>
+<p>Photodegradation means the same light the molecule absorbs also breaks it down. With a half-life of about 2 hours, the person has to reapply about every 2 hours. Meradimate lasts less than that, which is the point of distinction between the two classes.</p>
+<div class="g2-said"><span class="g2-k">He said</span>
+<p>&ldquo;the organic uh molecules contain what are called chromophores. These are functional groups that can absorb what? Light.&rdquo; <span class="g2-src">11/04 T@39833-39952</span></p>
+<p>&ldquo;once they absorb light, they convert that photon energy, light energy into harmless heat energy.&rdquo; <span class="g2-src">11/04 T@40000-40096</span></p>
+<p>&ldquo;What you need to know about this one, it has a a law. Skin absorption.&rdquo; [he said &lsquo;a law&rsquo;: a low skin absorption] <span class="g2-src">11/04 T@40552-40622</span></p>
+<p>&ldquo;Why is this important? We don't want that worry. That these things are going to seep into what? Systemic circulation, OK?&rdquo; <span class="g2-src">11/04 T@40623-40744</span></p>
+<p>&ldquo;Then they have a photo. Degradation. Catch my spelling on that degradation, half-life. Of about what? 2 hours. So that means after every 2 hours, the person has to come up and do it, reapply.&rdquo; <span class="g2-src">11/04 T@40745-40936</span></p>
+<p>&ldquo;Whereas this might be 2 hours you apply, you probably don't have 2 hours essentially with Meradime. OK. So, that gives you a point of distinction.&rdquo; [he said &lsquo;Meradime&rsquo;: meradimate] <span class="g2-src">11/04 T@41334-41480</span></p>
+</div>
+<p class="g2-p"><b>Practice</b></p>
+<div class="g2-btns"><button type="button" class="chip g2-primary" data-qids="KX-016 S4-099 S4-100 S4-101 S4-102 S4-109 S4-111 S4H-026 S4H-027 S4H-031 XS-010" data-qlabel="DPAW slide 62">Practice these (11)</button></div>
+</div>
+</section>
+
+<section class="gobj" id="gobj-sk-16">
+<h3>Dr. Sikazwe, assigned slides · UVB sunscreens: cinnamates, PABAs, salicylates, benzimidazoles</h3>
+<div class="gbar"><span>Objective (DPAW slides 63, 64)</span><b>Choose among the UVB-absorbing sunscreen classes by their drawbacks: skin absorption, photodegradation half-life, allergy and water solubility</b><i>DPAW slide 63, 64</i></div>
+<div class="gpt"><h5>Organic sunscreens, part 2: cinnamates and PABAs (DPAW slide 63)</h5>
+<p><b>On the slide.</b> Both classes absorb UVB (280-315 nm).</p>
+<ul>
+<li><b>Cinnamates:</b> octinoxate and cinoxate. Octinoxate is the only one drawn: a 4-methoxycinnamate 2-ethylhexyl ester. The handwritten notes beside it say absorbed through skin and photodegradation half-life (t1/2) 1-2 hours.</li>
+<li><b>PABAs (p-aminobenzoic acids):</b> PABA (&ldquo;rarely used&rdquo; on the slide) and padimate O. The drawing shows PABA and, beside it, its 2-ethylhexyl ester. The handwritten notes read &ldquo;rarely used&rdquo; and &ldquo;some ppl have allergies&rdquo;.</li>
+</ul>
+<p>Two drawbacks decide the choice here. Octinoxate passes into the skin, and it breaks down within 1-2 hours of light exposure. PABA and padimate O are UVB absorbers that are rarely used because of PABA allergy; he added photosensitivity but said he would give just PABA allergy as the reason. He did not name cinoxate in the lecture; it appears only as a bullet on the slide.</p>
+<div class="g2-said"><span class="g2-k">He said</span>
+<p>&ldquo;So octocinome. Uh, Problem Absorbed Through Skin Limitation. OK. The photo degradation. 1 to 2 hours.&rdquo; [he said &lsquo;octocinome&rsquo;: octinoxate] <span class="g2-src">11/04 T@41651-41752</span></p>
+<p>&ldquo;these are even rarely used. OK. Why? Because some, some people are allergic to paba. Paba. Paraaminobenzoic acid. Allergies.&rdquo; <span class="g2-src">11/04 T@41911-42035</span></p>
+<p>&ldquo;these two are going to be rarely used. Because of that OK, so these are UVB absorbers.&rdquo; [&lsquo;these two&rsquo;: padimate (he said &lsquo;pardiment&rsquo;) and PABA] <span class="g2-src">11/04 T@42147-42233</span></p>
+</div>
+<p class="g2-p"><b>Practice</b></p>
+<div class="g2-btns"><button type="button" class="chip g2-primary" data-qids="KX-016 KX-017 S4-103 S4-104 S4-111 S4H-028 S4H-032 XS-003" data-qlabel="DPAW slide 63">Practice these (8)</button></div>
+</div>
+<div class="gpt"><h5>Organic sunscreens, part 3: salicylates and benzimidazoles (DPAW slide 64) <span class="g2-star" title="Likely on the exam">&#9733;</span></h5>
+<p><b>On the slide.</b> Both classes absorb UVB (280-315 nm).</p>
+<ul>
+<li><b>Salicylates</b> absorb UVB and, the slide says, provide analgesia (pain relief): homosalate and octisalate. Both are drawn as esters of salicylic acid. The handwritten notes say they are supposed to be photostable (suggestion) and that they give you salicylic acid.</li>
+<li><b>Benzimidazoles:</b> ensulizole, drawn as 2-phenylbenzimidazole-5-sulfonic acid. The handwritten notes read more photostable, t1/2 = 12 hrs, log P = 1, water soluble.</li>
+</ul>
+<p>Salicylates are esters, so they can be hydrolyzed to salicylic acid. His caution about their photostability was a question mark: a suggestion, not a settled fact. The &ldquo;more photostable&rdquo; note belongs to ensulizole, which he called more photostable than anything seen so far. For ensulizole, the sulfonic acid makes it water soluble, so the product has to be reapplied after the person comes out of water. The 12 h figure is its photodegradation half-life.</p>
+<div class="g2-said"><span class="g2-k">He said</span>
+<p>&ldquo;And the other advantage was that they were supposed, they provide analgesia&rdquo; <span class="g2-src">11/04 T@42327-42402</span></p>
+<p>&ldquo;They are esters, right, so they can undergo hydrolysis to give you salicylic acid.&rdquo; <span class="g2-src">11/04 T@42538-42620</span></p>
+<p>&ldquo;So I said there is this suggestion that they are photo stable. But again, even that is what. Question mark.&rdquo; <span class="g2-src">11/04 T@42621-42728</span></p>
+<p>&ldquo;This benzimidazole and Sulizo. It has a log P Of one It is water soluble. Photo degradation. Tea Half-Life? It's about 12 hours.&rdquo; [he said &lsquo;Sulizo&rsquo;: ensulizole] <span class="g2-src">11/04 T@42798-42926</span></p>
+<p>&ldquo;So this is photo stable, right? More for the stable. Than anything that we've seen so far.&rdquo; <span class="g2-src">11/04 T@42927-43017</span></p>
+<p>&ldquo;So, water soluble coming from that sulfonic acid. They need to reapply.&rdquo; <span class="g2-src">11/04 T@43273-43344</span></p>
+</div>
+<p class="g2-p"><b>Practice</b></p>
+<div class="g2-btns"><button type="button" class="chip g2-primary" data-qids="KX-016 KX-017 KX-018 S4-071 S4-105 S4-106 S4-109 S4-111 S4H-021 S4H-030 S4H-031 S4H-032" data-qlabel="DPAW slide 64">Practice these (12)</button></div>
+</div>
+</section>
+
+<section class="gobj" id="gobj-sk-17">
+<h3>Dr. Sikazwe, assigned slides · Broad-coverage sunscreens: benzophenones, octocrylene, bemotrizinol</h3>
+<div class="gbar"><span>Objective (DPAW slides 65, 66)</span><b>Know why octocrylene is co-formulated as an additive, why benzophenones are a worry for skin absorption, and why bemotrizinol shows low skin absorption (high molecular weight)</b><i>DPAW slide 65, 66</i></div>
+<div class="gpt"><h5>Organic sunscreens, part 4: benzophenones and octocrylene (DPAW slide 65) <span class="g2-star" title="Likely on the exam">&#9733;</span></h5>
+<p><b>On the slide.</b> These agents cover UVB and UVA.</p>
+<ul>
+<li><b>Benzophenones</b> absorb full UVB and considerable UVA: oxybenzone (benzophenone-3), sulisobenzone (benzophenone-4), dioxybenzone (benzophenone-8). Oxybenzone is drawn as 2-hydroxy-4-methoxybenzophenone.</li>
+<li><b>Cinnamates</b> that absorb full UVB + UVA: octocrylene, a 2-ethylhexyl ester that carries a cyano group and two phenyl rings.</li>
+</ul>
+<p>The handwritten notes beside the oxybenzone drawing read log P = 4 and highly absorbed through skin. He said the same of the benzophenones: log P about 4, highly absorbed through the skin, which is the worry, because what the molecules do after that is not known. Octocrylene is the best performer for photostability (handwritten: very high photostability, t1/2 = 90 hrs) and is lipophilic and oily, so it stays on the skin after swimming. The note beside it says it is used as an additive sunscreen: it is co-formulated with other sunscreens, such as oxybenzone, to give them photostability.</p>
+<p>The ADMET line on the slide reads: lipophilic, with &ldquo;hydrophilic&rdquo; struck through; esters hydrolyze to inactive acids that are eliminated in urine. He said to remove &ldquo;hydrophilic&rdquo; because it was misleading, so the line reads just lipophilic. He said octocrylene is an ester: some of it may get into the systemic circulation, but it is hydrolyzed.</p>
+<div class="g2-said"><span class="g2-k">He said</span>
+<p>&ldquo;So we find benzophenones. Yeah Log P About 4. Hi absorbed. Through skin. That's a worry, right? Highly absorbed through the skin.&rdquo; <span class="g2-src">11/04 T@43565-43694</span></p>
+<p>&ldquo;So, okrele. has come on the market. This is the best performing in terms of photo stability, very high. Photo Stability Tea have about. 90 hours.&rdquo; [he said &lsquo;okrele&rsquo;: octocrylene] <span class="g2-src">11/04 T@43941-44086</span></p>
+<p>&ldquo;Aside from it doing its own thing, it's also providing photo stability to the other components in there.&rdquo; <span class="g2-src">11/04 T@44752-44856</span></p>
+<p>&ldquo;So, this is used. Or co-formulated with us as An additive. Sunscreen. Very important.&rdquo; <span class="g2-src">11/04 T@44526-44611</span></p>
+<p>&ldquo;So this, this one is a nester. Some of it may get into systemic circulation, but you get hydrolyzed.&rdquo; [he said &lsquo;nester&rsquo;: an ester] <span class="g2-src">11/04 T@44989-45089</span></p>
+</div>
+<p class="g2-p"><b>Practice</b></p>
+<div class="g2-btns"><button type="button" class="chip g2-primary" data-qids="KX-016 S4-107 S4-108 S4-109 S4-111 S4H-027 S4H-028 S4H-029 S4H-030 S4H-031" data-qlabel="DPAW slide 65">Practice these (10)</button></div>
+</div>
+<div class="gpt"><h5>Organic sunscreens, part 5: bemotrizinol (DPAW slide 66) <span class="g2-star" title="Likely on the exam">&#9733;</span></h5>
+<p><b>On the slide.</b> Methoxybenzene and triazines absorb UVB and UVA. The example is bemotrizinol (BEMT), drawn as a 1,3,5-triazine core carrying two 2-hydroxyphenyl rings with 2-ethylhexyloxy chains and a 4-methoxyphenyl. The notes read: photostable, t1/2 = 4-8 hrs, low skin absorption, a molecule that came from Europe. The typed ADMET line: photostable, lipophilic but no skin absorption due to high MW (molecular weight, 627.81).</p>
+<p>The reason for the low absorption is size: a molecule this large (627.81) does not pass into the skin well, even though it is lipophilic. That is a property to weigh before recommending a product, which is how he said to read these agents.</p>
+<p><b>Conflict, &ldquo;no&rdquo; versus &ldquo;low&rdquo; skin absorption.</b> The typed slide line says no skin absorption. The handwriting and his words say low skin absorption (he corrected himself aloud). An exam written from his lecture keys low skin absorption because of the high molecular weight; the existing items do not ask the difference between no and low.</p>
+<div class="g2-said"><span class="g2-k">He said</span>
+<p>&ldquo;Now, there's a molecule that came from Europe. This one. Very useful molecule. It's photo stable. And he have. About 4 to 8 hours. All right? And, sorry, law. Skin Absorption.&rdquo; [he said &lsquo;law&rsquo;: low] <span class="g2-src">11/04 T@45123-45298</span></p>
+<p>&ldquo;So, they say this low skin absorption for this one is because it's, this is a high molecular weight molecule.&rdquo; <span class="g2-src">11/04 T@45549-45658</span></p>
+</div>
+<p class="g2-p"><b>Practice</b></p>
+<div class="g2-btns"><button type="button" class="chip g2-primary" data-qids="KX-018 S4-110 S4-111 S4H-029 S4H-030 S4H-031" data-qlabel="DPAW slide 66">Practice these (6)</button></div>
+</div>
+</section>
+
 <section class="gobj" id="gobj-mc-ecz">
 <h3>Medicinal Chemistry · Eczema pharmacotherapy (DPAW slides 7&ndash;9)</h3>
 <div class="gbar"><span>Pages</span><b>Crisaborole; ruxolitinib and upadacitinib</b><i>DPAW slides 7&ndash;9</i></div>

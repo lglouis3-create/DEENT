@@ -159,7 +159,7 @@ async function nsOf(browser) {
         check(!f1.open && f2.open && r.active === 'exam2', `${w} px, ${NAMES[v]}: Exam 1 starts closed and Exam 2 (the active exam) open`, {exam1: f1.open, exam2: f2.open, active: r.active});
         check(/^Exam 1 · /.test(f1.name) && /^Exam 2 · /.test(f2.name) && f1.meta.indexOf(r.dates[0]) === 0 && f2.meta.indexOf(r.dates[1]) === 0,
           `${w} px, ${NAMES[v]}: the headers read "${f1.name}" and "${f2.name}", each with its exam date`, [f1.meta, f2.meta]);
-        const allowed = ['h2', 'p.sub', 'details.wkindex', 'details.refnav-wrap', 'details.rfold'];
+        const allowed = ['h2', 'p.sub', 'div.lkbar', 'details.wkindex', 'details.refnav-wrap', 'details.rfold'];   // div.lkbar: the stars' legend and "Starred only" (likely_marks_ui.js)
         check(r.top.every(t => allowed.includes(t)) && r.top.filter(t => t === 'details.rfold').length === 2,
           `${w} px, ${NAMES[v]}: nothing but the title, the intro, the lists and the two folders at the top level`, r.top.filter(t => !allowed.includes(t)));
         const off = Object.entries(r.counts).filter(([, [a, b]]) => a !== b);
