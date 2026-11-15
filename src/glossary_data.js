@@ -361,7 +361,7 @@ const GLOSSARY_TERMS = [
 "also": [
 "acetylenic"
 ],
-"def": "Dr. Smith: The slide's chemical description of tazarotene, the topical retinoid used for psoriasis, mild to moderately severe facial acne and wrinkles. Dr. Sikazwe: Slide 29's class for tazarotene: a retinoid whose structure contains an alkyne (acetylenes are hydrocarbons with one or more carbon-carbon triple bonds, per IUPAC).",
+"def": "Dr. Smith: The slide's chemical description of tazarotene, the topical retinoid used for psoriasis, mild to moderately severe facial acne and wrinkles. Dr. Sikazwe: Slide 29's class for tazarotene: a retinoid whose structure contains an alkyne (the functional group of the acetylenes, per IUPAC).",
 "cite": "PCol slide 18; DPAW slide 29; general: IUPAC Glossary of Class Names of Organic Compounds (1995), https://iupac.qmul.ac.uk/class/hydro.html",
 "src": "slide",
 "deck": "pc",
@@ -478,7 +478,8 @@ const GLOSSARY_TERMS = [
 "deck": "pp",
 "prof": "Smith/Sikazwe",
 "exam": 1,
-"kind": "disease"
+"kind": "disease",
+"common": true
 },
 {
 "id": "smA-acute",
@@ -503,7 +504,8 @@ const GLOSSARY_TERMS = [
 "prof": "Smith",
 "exam": 1,
 "kind": "abbreviation",
-"cs": true
+"cs": true,
+"common": true
 },
 {
 "id": "pA-adherence",
@@ -681,7 +683,7 @@ const GLOSSARY_TERMS = [
 "also": [
 "alkenes"
 ],
-"def": "Acyclic hydrocarbons with one carbon-carbon double bond (IUPAC); with more than one they are alkadienes and so on. Slide 49 draws tretinoin's chain as a series of alkenes.",
+"def": "Acyclic hydrocarbons with one C=C (IUPAC); with more than one they are alkadienes and so on. Slide 49 draws tretinoin's chain as a series of alkenes.",
 "cite": "DPAW slide 49; general: IUPAC Glossary of Class Names of Organic Compounds (1995), https://iupac.qmul.ac.uk/class/hydro.html",
 "src": "general",
 "deck": "mc",
@@ -1026,7 +1028,8 @@ const GLOSSARY_TERMS = [
 "deck": "pp",
 "prof": "Smith",
 "exam": 1,
-"kind": "class"
+"kind": "class",
+"common": true
 },
 {
 "id": "smB-antifungal",
@@ -1292,7 +1295,8 @@ const GLOSSARY_TERMS = [
 "deck": "pp",
 "prof": "Smith",
 "exam": 1,
-"kind": "disease"
+"kind": "disease",
+"common": true
 },
 {
 "id": "pA-atopic-march",
@@ -1833,7 +1837,8 @@ const GLOSSARY_TERMS = [
 "deck": "pc",
 "prof": "Smith/Sikazwe",
 "exam": 1,
-"kind": "class"
+"kind": "class",
+"common": true
 },
 {
 "id": "pB-callus",
@@ -2889,7 +2894,8 @@ const GLOSSARY_TERMS = [
 "deck": "pp",
 "prof": "Smith/Sikazwe",
 "exam": 1,
-"kind": "immunology"
+"kind": "immunology",
+"common": true
 },
 {
 "id": "smB-cytokine-storm",
@@ -3468,7 +3474,8 @@ const GLOSSARY_TERMS = [
 "deck": "mc",
 "prof": "Sikazwe",
 "exam": 1,
-"kind": "chemistry"
+"kind": "chemistry",
+"common": true
 },
 {
 "id": "smA-eosinophil",
@@ -4108,7 +4115,7 @@ const GLOSSARY_TERMS = [
 "cis/trans",
 "geometric isomerism"
 ],
-"def": "Slide 49's relation between isotretinoin (13-cis) and tretinoin (all-trans): the same structure except that the highlighted double bond at carbon 13 is cis instead of trans.",
+"def": "Slide 49's relation between isotretinoin (13-cis) and tretinoin (all-trans): the same structure except that the highlighted alkene at carbon 13 is cis instead of trans.",
 "cite": "DPAW slide 49",
 "src": "slide",
 "deck": "mc",
@@ -5278,7 +5285,8 @@ const GLOSSARY_TERMS = [
 "deck": "pp",
 "prof": "Smith/Sikazwe",
 "exam": 1,
-"kind": "immunology"
+"kind": "immunology",
+"common": true
 },
 {
 "id": "smB-ibd",
@@ -5619,7 +5627,8 @@ const GLOSSARY_TERMS = [
 "deck": "pc",
 "prof": "Smith",
 "exam": 1,
-"kind": "abbreviation"
+"kind": "abbreviation",
+"common": true
 },
 {
 "id": "smA-jak-inhibitor",
@@ -5676,7 +5685,8 @@ const GLOSSARY_TERMS = [
 "deck": "pp",
 "prof": "Smith/Sikazwe",
 "exam": 1,
-"kind": "anatomy"
+"kind": "anatomy",
+"common": true
 },
 {
 "id": "smA-keratinocyte-hyperproliferation",
@@ -5849,7 +5859,8 @@ const GLOSSARY_TERMS = [
 "deck": "pp",
 "prof": "Smith",
 "exam": 1,
-"kind": "sign"
+"kind": "sign",
+"common": true
 },
 {
 "id": "pA-lft",
@@ -6327,7 +6338,7 @@ const GLOSSARY_TERMS = [
 "id": "dz-methemoglobinemia",
 "term": "Methemoglobinemia",
 "also": [],
-"def": "A condition in which the blood holds methemoglobin, a form of hemoglobin that carries oxygen poorly. Her slides list it as the adverse effect of the \"caine\" topical anesthetics; with benzocaine that is absorbed systemically: risk of cyanosis, dyspnea, syncope, seizures, coma.",
+"def": "A condition in which the blood holds methemoglobin, a form of hemoglobin that carries oxygen poorly. Her slides list it as an adverse effect of the \"caine\" topical anesthetics, with benzocaine absorbed systemically.",
 "cite": "Patel Outdoor slide 12; Wound slide 14; the first sentence is the plain meaning",
 "src": "slide",
 "deck": "dz",
@@ -7162,7 +7173,8 @@ const GLOSSARY_TERMS = [
 "prof": "Patel",
 "exam": 2,
 "kind": "abbreviation",
-"cs": true
+"cs": true,
+"common": true
 },
 {
 "id": "pB-medicated-shampoo",
@@ -7422,7 +7434,8 @@ const GLOSSARY_TERMS = [
 "deck": "pc",
 "prof": "Smith",
 "exam": 1,
-"kind": "class"
+"kind": "class",
+"common": true
 },
 {
 "id": "smB-pde4",
@@ -7562,7 +7575,8 @@ const GLOSSARY_TERMS = [
 "deck": "mc",
 "prof": "Sikazwe",
 "exam": 1,
-"kind": "chemistry"
+"kind": "chemistry",
+"common": true
 },
 {
 "id": "sk-petrolatum",
@@ -8276,7 +8290,8 @@ const GLOSSARY_TERMS = [
 "deck": "pp",
 "prof": "Smith/Sikazwe",
 "exam": 1,
-"kind": "disease"
+"kind": "disease",
+"common": true
 },
 {
 "id": "pB-pasi",
@@ -8575,7 +8590,8 @@ const GLOSSARY_TERMS = [
 "deck": "mc",
 "prof": "Sikazwe",
 "exam": 1,
-"kind": "pharmacology"
+"kind": "pharmacology",
+"common": true
 },
 {
 "id": "pA-refractory",
@@ -8687,7 +8703,8 @@ const GLOSSARY_TERMS = [
 "deck": "pc",
 "prof": "Smith/Sikazwe",
 "exam": 1,
-"kind": "class"
+"kind": "class",
+"common": true
 },
 {
 "id": "pC-retinoids-photoaging",
@@ -9481,7 +9498,8 @@ const GLOSSARY_TERMS = [
 "deck": "mc",
 "prof": "Sikazwe",
 "exam": 1,
-"kind": "chemistry"
+"kind": "chemistry",
+"common": true
 },
 {
 "id": "sk-steroid-numbering",
@@ -9838,7 +9856,8 @@ const GLOSSARY_TERMS = [
 "deck": "mc",
 "prof": "Sikazwe",
 "exam": 1,
-"kind": "class"
+"kind": "class",
+"common": true
 },
 {
 "id": "sk-superoxide",
@@ -9870,7 +9889,8 @@ const GLOSSARY_TERMS = [
 "deck": "pp",
 "prof": "Smith/Sikazwe",
 "exam": 1,
-"kind": "other"
+"kind": "other",
+"common": true
 },
 {
 "id": "smA-systemic-absorption",
@@ -9930,7 +9950,8 @@ const GLOSSARY_TERMS = [
 "deck": "pp",
 "prof": "Smith",
 "exam": 1,
-"kind": "immunology"
+"kind": "immunology",
+"common": true
 },
 {
 "id": "smA-t-cell-inhibitors",
@@ -10089,7 +10110,8 @@ const GLOSSARY_TERMS = [
 "deck": "pc",
 "prof": "Smith/Sikazwe",
 "exam": 1,
-"kind": "class"
+"kind": "class",
+"common": true
 },
 {
 "id": "sk-thf",
@@ -10349,7 +10371,8 @@ const GLOSSARY_TERMS = [
 "deck": "pp",
 "prof": "Smith",
 "exam": 1,
-"kind": "pharmacology"
+"kind": "pharmacology",
+"common": true
 },
 {
 "id": "sk-topical",
@@ -10635,7 +10658,8 @@ const GLOSSARY_TERMS = [
 "deck": "sun",
 "prof": "Smith/Sikazwe",
 "exam": 1,
-"kind": "abbreviation"
+"kind": "abbreviation",
+"common": true
 },
 {
 "id": "smA-uvb",
@@ -10650,7 +10674,8 @@ const GLOSSARY_TERMS = [
 "deck": "sun",
 "prof": "Smith/Sikazwe",
 "exam": 1,
-"kind": "abbreviation"
+"kind": "abbreviation",
+"common": true
 },
 {
 "id": "sk-uvc",

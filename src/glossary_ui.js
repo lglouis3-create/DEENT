@@ -196,7 +196,9 @@ const GLOSSARY_UI = (() => {
   function rowFor(q){
     let ids = termsFor(q); if (!ids.length) return null;
     const mine = sync().w;
-    ids = ids.filter(id => mine[id]).concat(ids.filter(id => !mine[id])).slice(0, MAXROW);
+    const com = id => { const t = BY[id]; return !!(t && t.common); };
+    // the words the reader has marked first, then the other words, and the very frequent course words (topical, inflammation, receptor ...) last
+    ids = ids.filter(id => mine[id]).concat(ids.filter(id => !mine[id] && !com(id)), ids.filter(id => !mine[id] && com(id))).slice(0, MAXROW);
     const d = document.createElement('details'); d.className = 'gw'; d.dataset.gwq = q.id;
     const did = 'gwdef' + (++uid);
     d.innerHTML = `<summary>Words in this question (${ids.length})</summary>` +
@@ -280,11 +282,12 @@ const GLOSSARY_UI = (() => {
   /* ---------- 3. the tab ---------- */
   let SORTED = null;
   const norm = s => words(s).low.join(' ');
-  const letterOf = t => { const m = /\p{L}/u.exec(t.term.normalize('NFD')); const c = m ? m[0].toUpperCase() : '#'; return /^[A-Z]$/.test(c) ? c : '#'; };
+  const letterOf = t => { const m = /[\p{L}\p{N}]/u.exec(t.term.normalize('NFD')); const c = m ? m[0].toUpperCase() : '#'; return /^[A-Z]$/.test(c) ? c : '#'; };
   function sorted(){
     if (SORTED) return SORTED;
     let cmp; try { const co = new Intl.Collator('en', {sensitivity: 'base', numeric: true}); cmp = (a, b) => co.compare(a.term, b.term); } catch (e) { cmp = (a, b) => a.term < b.term ? -1 : a.term > b.term ? 1 : 0; }
-    SORTED = TERMS.slice().sort(cmp);
+    const byHead = (a, b) => { const x = letterOf(a) === '#', y = letterOf(b) === '#'; return x === y ? cmp(a, b) : x ? -1 : 1; };   // terms that start with a digit or a Greek letter come first, under one # heading
+    SORTED = TERMS.slice().sort(byHead);
     SORTED.forEach(t => { t._n = norm(t.term + ' ' + alsoOf(t).join(' ') + ' ' + t.def); t._L = letterOf(t); });
     return SORTED;
   }
