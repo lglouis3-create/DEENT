@@ -2,7 +2,7 @@
    763 entries from the slides of the eleven decks (Dr. Smith's Pathophysiology, PCol and Sun Exposure; Dr. Sikazwe's DPAW; Dr. Patel's
    Dermatitis, Acne, Scaly Dermatoses, Outdoor Exposures, Sun Exposure, Wound Care and Warts) and the Diseases tab's terms, each checked
    against its cited slide, or against the public source named in its cite when src is 'general' (a word the slides use without defining).
-   Where the same term is taught by more than one professor the entry gives each definition under the professor's name.
+   Where the same term is taught by more than one professor the entry gives each definition under the professor's name, and parts lists them: [{prof, def, cite, src}], each with that professor's own cite; def and cite stay the joined text.
    Fields: id; term (the name shown); also (other spellings and abbreviations the detector matches); cs:true (matched only in the case
    written, for an abbreviation that is also an ordinary word); def; cite (plain text, turned into slide links by slide_ui.js);
    src 'slide' | 'lecture' | 'general'; deck; prof; exam 1 | 2 | [1, 2]; kind. Written by the glossary build of 2026-11-15; edit the
@@ -367,7 +367,21 @@ const GLOSSARY_TERMS = [
 "deck": "pc",
 "prof": "Smith/Sikazwe",
 "exam": 1,
-"kind": "chemistry"
+"kind": "chemistry",
+"parts": [
+{
+"prof": "Smith",
+"def": "The slide's chemical description of tazarotene, the topical retinoid used for psoriasis, mild to moderately severe facial acne and wrinkles.",
+"cite": "PCol slide 18",
+"src": "slide"
+},
+{
+"prof": "Sikazwe",
+"def": "Slide 29's class for tazarotene: a retinoid whose structure contains an alkyne (the functional group of the acetylenes, per IUPAC).",
+"cite": "DPAW slide 29; general: IUPAC Glossary of Class Names of Organic Compounds (1995), https://iupac.qmul.ac.uk/class/hydro.html",
+"src": "general"
+}
+]
 },
 {
 "id": "sk-acid-salts",
@@ -479,7 +493,21 @@ const GLOSSARY_TERMS = [
 "prof": "Smith/Sikazwe",
 "exam": 1,
 "kind": "disease",
-"common": true
+"common": true,
+"parts": [
+{
+"prof": "Smith",
+"def": "A common, self-limiting disease of the pilosebaceous units of the skin, typically located on the face, upper back and chest.",
+"cite": "Pathophys slide 30",
+"src": "slide"
+},
+{
+"prof": "Sikazwe",
+"def": "Common acne: a condition due to changes in pilosebaceous units (slide 40). Slide 41's components: more sebum, excess follicular keratinization, P. acnes growth and inflammation.",
+"cite": "DPAW slide 40; DPAW slide 41",
+"src": "slide"
+}
+]
 },
 {
 "id": "smA-acute",
@@ -922,7 +950,21 @@ const GLOSSARY_TERMS = [
 "deck": "pp",
 "prof": "Smith/Sikazwe",
 "exam": 1,
-"kind": "pharmacology"
+"kind": "pharmacology",
+"parts": [
+{
+"prof": "Smith",
+"def": "A type of hormone that promotes the development and maintenance of male sex characteristics. Increased androgen production triggers acne.",
+"cite": "Pathophys slide 31; Pathophys slide 32; general: NCI Dictionary of Cancer Terms, https://www.cancer.gov/publications/dictionaries/cancer-terms/def/androgen",
+"src": "general"
+},
+{
+"prof": "Sikazwe",
+"def": "A type of hormone that promotes the development and maintenance of male sex characteristics. Slide 53: regulating androgen levels prevents excess sebum production.",
+"cite": "DPAW slide 53; general: NCI Thesaurus C2298, https://api-evsrest.nci.nih.gov/api/v1/concept/ncit/C2298?include=definitions",
+"src": "general"
+}
+]
 },
 {
 "id": "sk-antagonist",
@@ -952,7 +994,21 @@ const GLOSSARY_TERMS = [
 "deck": "sun",
 "prof": "Smith/Sikazwe",
 "exam": 1,
-"kind": "class"
+"kind": "class",
+"parts": [
+{
+"prof": "Smith",
+"def": "An organic sunscreen family used only in combination products to give broad UV coverage; the slide spells it anthralates.",
+"cite": "Smith Sun Exposure slide 24",
+"src": "slide"
+},
+{
+"prof": "Sikazwe",
+"def": "UVA (315-400 nm) sunscreen class on slide 62; they absorb UVA. The structure drawn is meradimate.",
+"cite": "DPAW slide 62",
+"src": "slide"
+}
+]
 },
 {
 "id": "sk-anthranyl",
@@ -1014,7 +1070,21 @@ const GLOSSARY_TERMS = [
 "deck": "pp",
 "prof": "Smith/Sikazwe",
 "exam": 1,
-"kind": "class"
+"kind": "class",
+"parts": [
+{
+"prof": "Smith",
+"def": "A substance that keeps androgens from binding to androgen receptors, blocking their effects. Listed for acne, acting on abnormal sebum.",
+"cite": "Pathophys slide 36; Pathophys slide 37; general: NCI Dictionary of Cancer Terms, https://www.cancer.gov/publications/dictionaries/cancer-terms/def/antiandrogen",
+"src": "general"
+},
+{
+"prof": "Sikazwe",
+"def": "A substance that prevents cells from making or using androgens. Slide 53: steroidal (spironolactone) and non-steroidal (flutamide, ketoconazole).",
+"cite": "DPAW slide 53; general: NCI Thesaurus C242, https://api-evsrest.nci.nih.gov/api/v1/concept/ncit/C242?include=definitions",
+"src": "general"
+}
+]
 },
 {
 "id": "smA-antibiotics",
@@ -1132,7 +1202,21 @@ const GLOSSARY_TERMS = [
 "deck": "sun",
 "prof": "Smith/Sikazwe",
 "exam": 1,
-"kind": "pharmacology"
+"kind": "pharmacology",
+"parts": [
+{
+"prof": "Smith",
+"def": "One of the effects induced by the phototoxic reactions of psoralens with UVA, listed with immunosuppressive and anti-inflammatory effects. The slide also lists normalizing the number and arrangement of keratinocytes.",
+"cite": "Smith Sun Exposure slide 3",
+"src": "slide"
+},
+{
+"prof": "Sikazwe",
+"def": "Acting against cell proliferation. The slides use it for tars (possibly), anthralin, psoralens, vitamin D analogs, methotrexate and retinoids.",
+"cite": "DPAW slide 16; DPAW slide 17; DPAW slide 18; DPAW slide 27; DPAW slide 30; DPAW slide 48",
+"src": "slide"
+}
+]
 },
 {
 "id": "smB-antipruritic",
@@ -1527,7 +1611,21 @@ const GLOSSARY_TERMS = [
 "deck": "sun",
 "prof": "Smith/Sikazwe",
 "exam": 1,
-"kind": "class"
+"kind": "class",
+"parts": [
+{
+"prof": "Smith",
+"def": "An organic sunscreen family with poor substantivity that can cause sensitization.",
+"cite": "Smith Sun Exposure slide 24",
+"src": "slide"
+},
+{
+"prof": "Sikazwe",
+"def": "UVB/UVA sunscreen class that absorbs full UVB and considerable UVA: oxybenzone (benzophenone-3), sulisobenzone (benzophenone-4), dioxybenzone (benzophenone-8) (slide 65).",
+"cite": "DPAW slide 65",
+"src": "slide"
+}
+]
 },
 {
 "id": "sk-benzoxaborole",
@@ -1589,7 +1687,21 @@ const GLOSSARY_TERMS = [
 "deck": "pc",
 "prof": "Smith/Sikazwe",
 "exam": 1,
-"kind": "pharmacology"
+"kind": "pharmacology",
+"parts": [
+{
+"prof": "Smith",
+"def": "The ability of a drug or other substance to be absorbed and used by the body. Neoral has increased bioavailability compared with Sandimmune.",
+"cite": "PCol slide 29; general: NCI Dictionary of Cancer Terms, https://www.cancer.gov/publications/dictionaries/cancer-terms/def/bioavailable",
+"src": "general"
+},
+{
+"prof": "Sikazwe",
+"def": "The rate and extent to which a drug is absorbed or is otherwise available to the treatment site in the body.",
+"cite": "DPAW slide 26; DPAW slide 33; DPAW slide 37; general: NCI Thesaurus C70913, https://api-evsrest.nci.nih.gov/api/v1/concept/ncit/C70913?include=definitions",
+"src": "general"
+}
+]
 },
 {
 "id": "smB-bioequivalent",
@@ -1750,7 +1862,21 @@ const GLOSSARY_TERMS = [
 "deck": "sun",
 "prof": "Smith/Sikazwe",
 "exam": 1,
-"kind": "counseling"
+"kind": "counseling",
+"parts": [
+{
+"prof": "Smith",
+"def": "A label allowed for sunscreen products with a critical wavelength of 370 nm or greater, which shows UVA protection.",
+"cite": "Smith Sun Exposure slide 14",
+"src": "slide"
+},
+{
+"prof": "Sikazwe",
+"def": "Slide 61 uses it for sunblocks that cover both UVA and UVB. Slide 55 also calls tetracycline broad spectrum, an antibiotic term the slide does not define.",
+"cite": "DPAW slide 55; DPAW slide 61",
+"src": "slide"
+}
+]
 },
 {
 "id": "pC-brown-recluse",
@@ -1838,7 +1964,27 @@ const GLOSSARY_TERMS = [
 "prof": "Smith/Sikazwe",
 "exam": 1,
 "kind": "class",
-"common": true
+"common": true,
+"parts": [
+{
+"prof": "Smith",
+"def": "Immunosuppressants that inhibit normal calcineurin activity, which blocks production of the IL-2 needed for T-cell proliferation. Used for atopic dermatitis and psoriasis.",
+"cite": "PCol slide 24; PCol slide 26",
+"src": "slide"
+},
+{
+"prof": "Smith",
+"def": "A drug class on Dr. Smith's lists of medications for atopic dermatitis and for psoriasis.",
+"cite": "Pathophys slide 17; Pathophys slide 28",
+"src": "slide"
+},
+{
+"prof": "Sikazwe",
+"def": "A drug that inhibits calcineurin, a protein phosphatase. The slides give the result as less release of inflammatory cytokines and blocked T-cell signaling: pimecrolimus, tacrolimus, cyclosporin.",
+"cite": "DPAW slide 28; DPAW slide 33; general: NCI Thesaurus C17275, https://api-evsrest.nci.nih.gov/api/v1/concept/ncit/C17275?include=definitions",
+"src": "general"
+}
+]
 },
 {
 "id": "pB-callus",
@@ -1878,7 +2024,21 @@ const GLOSSARY_TERMS = [
 "deck": "pc",
 "prof": "Smith/Sikazwe",
 "exam": 1,
-"kind": "pharmacology"
+"kind": "pharmacology",
+"parts": [
+{
+"prof": "Smith",
+"def": "The second messenger that phosphodiesterases hydrolyze. When cellular cAMP is increased there is relaxation of smooth muscle and inhibition of inflammatory cells.",
+"cite": "PCol slide 32",
+"src": "slide"
+},
+{
+"prof": "Sikazwe",
+"def": "Cyclic AMP, a second messenger molecule synthesized from ATP by the enzyme adenylate cyclase. On slides 7 and 34, PDE4 inhibition raises it.",
+"cite": "DPAW slide 7; DPAW slide 34; general: NCI Thesaurus C208, https://api-evsrest.nci.nih.gov/api/v1/concept/ncit/C208?include=definitions",
+"src": "general"
+}
+]
 },
 {
 "id": "pA-candida",
@@ -2132,7 +2292,21 @@ const GLOSSARY_TERMS = [
 "deck": "p6",
 "prof": "Patel",
 "exam": 2,
-"kind": "counseling"
+"kind": "counseling",
+"parts": [
+{
+"prof": "Patel",
+"def": "High-concentration alpha hydroxy acid used to reduce acne scarring; not OTC. Glycolic acid is first applied as a trial for sensitivity; wait 2 to 4 weeks between peels.",
+"cite": "Patel Acne slide 28",
+"src": "slide"
+},
+{
+"prof": "Patel",
+"def": "A keratolytic treatment classed by depth of tissue injury as superficial, medium or deep; examples are glycolic acid, salicylic acid, TCA and the Baker-Gordon phenol peel.",
+"cite": "Patel Sun Exposure slide 46",
+"src": "slide"
+}
+]
 },
 {
 "id": "pC-chemical-sunscreen",
@@ -2271,7 +2445,21 @@ const GLOSSARY_TERMS = [
 "deck": "sun",
 "prof": "Smith/Sikazwe",
 "exam": 1,
-"kind": "class"
+"kind": "class",
+"parts": [
+{
+"prof": "Smith",
+"def": "An organic sunscreen family that does not adhere to skin well and depends on the vehicle for substantivity.",
+"cite": "Smith Sun Exposure slide 24",
+"src": "slide"
+},
+{
+"prof": "Sikazwe",
+"def": "Sunscreen class. Slide 63 (UVB, 280-315 nm): octinoxate and cinoxate. Slide 65 (UVB/UVA): octocrylene, which absorbs full UVB plus UVA.",
+"cite": "DPAW slide 63; DPAW slide 65",
+"src": "slide"
+}
+]
 },
 {
 "id": "smA-closed-comedone",
@@ -2347,7 +2535,21 @@ const GLOSSARY_TERMS = [
 "deck": "pc",
 "prof": "Smith/Sikazwe",
 "exam": 1,
-"kind": "anatomy"
+"kind": "anatomy",
+"parts": [
+{
+"prof": "Smith",
+"def": "A structural protein that makes up the bulk of the dermis; it is produced by fibroblasts. Prolonged retinoid use promotes dermal collagen synthesis.",
+"cite": "PCol slide 15; general: DermNet, Terminology in dermatology, https://dermnetnz.org/topics/terminology",
+"src": "general"
+},
+{
+"prof": "Sikazwe",
+"def": "A family of large fibrous proteins that are the main components of connective tissue. AHAs (slide 68) and topical retinoids (slide 70) stimulate its production.",
+"cite": "DPAW slide 68; DPAW slide 70; general: NCI Thesaurus C16447, https://api-evsrest.nci.nih.gov/api/v1/concept/ncit/C16447?include=definitions",
+"src": "general"
+}
+]
 },
 {
 "id": "pB-collodion",
@@ -2632,7 +2834,21 @@ const GLOSSARY_TERMS = [
 "deck": "pc",
 "prof": "Smith",
 "exam": 1,
-"kind": "class"
+"kind": "class",
+"parts": [
+{
+"prof": "Smith",
+"def": "Endogenous corticosteroids are made by the adrenal cortex in two types, glucocorticoids and mineralocorticoids, and have many physiological effects; they are also given as drugs for many therapeutic purposes.",
+"cite": "PCol slide 8; PCol slide 9",
+"src": "slide"
+},
+{
+"prof": "Smith",
+"def": "Steroid hormones made in the adrenal cortex or in the laboratory; used to suppress the immune system. Listed for atopic dermatitis and psoriasis.",
+"cite": "Pathophys slide 17; Pathophys slide 28; general: NCI Dictionary of Cancer Terms, https://www.cancer.gov/publications/dictionaries/cancer-terms/def/corticosteroid",
+"src": "general"
+}
+]
 },
 {
 "id": "smB-costimulation",
@@ -2824,7 +3040,21 @@ const GLOSSARY_TERMS = [
 "deck": "pc",
 "prof": "Smith/Sikazwe",
 "exam": 1,
-"kind": "immunology"
+"kind": "immunology",
+"parts": [
+{
+"prof": "Smith",
+"def": "The T-cell protein that cyclosporine binds. The cyclosporine-cyclophilin complex binds calcineurin and holds it inactive.",
+"cite": "PCol slide 26",
+"src": "slide"
+},
+{
+"prof": "Sikazwe",
+"def": "The receptor protein cyclosporin complexes with; slide 33 says this complexation activates cyclosporin, which then inhibits calcineurin phosphatase and T-cell signaling.",
+"cite": "DPAW slide 33",
+"src": "slide"
+}
+]
 },
 {
 "id": "smB-cyp3a4",
@@ -2895,7 +3125,21 @@ const GLOSSARY_TERMS = [
 "prof": "Smith/Sikazwe",
 "exam": 1,
 "kind": "immunology",
-"common": true
+"common": true,
+"parts": [
+{
+"prof": "Smith",
+"def": "A type of protein made by certain immune and non-immune cells that has an effect on the immune system. Interleukins and interferons are cytokines.",
+"cite": "Pathophys slide 13; Pathophys slide 16; Pathophys slide 21; general: NCI Dictionary of Cancer Terms, https://www.cancer.gov/publications/dictionaries/cancer-terms/def/cytokine",
+"src": "general"
+},
+{
+"prof": "Sikazwe",
+"def": "A type of protein made by certain immune and non-immune cells that has an effect on the immune system; some cytokines stimulate it and others slow it down.",
+"cite": "DPAW slide 7; DPAW slide 28; general: NCI Dictionary of Cancer Terms, https://www.cancer.gov/publications/dictionaries/cancer-terms/def/cytokine",
+"src": "general"
+}
+]
 },
 {
 "id": "smB-cytokine-storm",
@@ -2937,7 +3181,21 @@ const GLOSSARY_TERMS = [
 "deck": "pc",
 "prof": "Smith",
 "exam": 1,
-"kind": "class"
+"kind": "class",
+"parts": [
+{
+"prof": "Smith",
+"def": "Dr. Smith's antipsoriatic class that works by decreasing the rate of epidermal cell turnover: coal tar, anthralin, shale tar (ichthammol), selenium sulfide and zinc pyrithione.",
+"cite": "PCol slide 52; PCol slide 53; PCol slide 55; PCol slide 57",
+"src": "slide"
+},
+{
+"prof": "Smith",
+"def": "Substances that kill cells. A class on Dr. Smith's psoriasis medication list; psoralens with UVA are cytotoxic to T cells.",
+"cite": "Pathophys slide 28; Smith Sun Exposure slide 3; general: NCI Dictionary of Cancer Terms, https://www.cancer.gov/publications/dictionaries/cancer-terms/def/cytotoxic-agent",
+"src": "general"
+}
+]
 },
 {
 "id": "dz-cytotoxic",
@@ -3114,7 +3372,21 @@ const GLOSSARY_TERMS = [
 "deck": "pc",
 "prof": "Smith",
 "exam": 1,
-"kind": "sign"
+"kind": "sign",
+"parts": [
+{
+"prof": "Smith",
+"def": "Peeling. Salicylic acid causes desquamation of keratotic debris by solubilizing cell surface proteins that keep the stratum corneum intact.",
+"cite": "PCol slide 39",
+"src": "slide"
+},
+{
+"prof": "Smith",
+"def": "Skin coming off in scales.",
+"cite": "Pathophys slide 25; general: DermNet, Terminology in dermatology, https://dermnetnz.org/topics/terminology",
+"src": "general"
+}
+]
 },
 {
 "id": "smB-dhfr",
@@ -3128,7 +3400,21 @@ const GLOSSARY_TERMS = [
 "deck": "pc",
 "prof": "Smith/Sikazwe",
 "exam": 1,
-"kind": "abbreviation"
+"kind": "abbreviation",
+"parts": [
+{
+"prof": "Smith",
+"def": "Dihydrofolate reductase, the enzyme that makes tetrahydrofolic acid from dihydrofolic acid. Trimethoprim reversibly inhibits the bacterial enzyme; methotrexate inhibits DHFR to treat psoriasis.",
+"cite": "PCol slide 48; PCol slide 59",
+"src": "slide"
+},
+{
+"prof": "Sikazwe",
+"def": "Dihydrofolate reductase, the enzyme that on slide 30 reduces folic acid to tetrahydrofolic acid; methotrexate inhibits it competitively.",
+"cite": "DPAW slide 30",
+"src": "slide"
+}
+]
 },
 {
 "id": "pA-diaper-dermatitis",
@@ -3156,7 +3442,21 @@ const GLOSSARY_TERMS = [
 "deck": "sun",
 "prof": "Smith/Sikazwe",
 "exam": 1,
-"kind": "class"
+"kind": "class",
+"parts": [
+{
+"prof": "Smith",
+"def": "An organic sunscreen family whose activity starts to decrease after 15 minutes of use.",
+"cite": "Smith Sun Exposure slide 24",
+"src": "slide"
+},
+{
+"prof": "Sikazwe",
+"def": "UVA (315-400 nm) sunscreen class of avobenzone: absorbs the full spectrum of UVA and some UVB, and is rapidly degraded by UVA (slide 62).",
+"cite": "DPAW slide 62",
+"src": "slide"
+}
+]
 },
 {
 "id": "smA-differentiation",
@@ -3390,7 +3690,21 @@ const GLOSSARY_TERMS = [
 "deck": "pp",
 "prof": "Smith/Sikazwe",
 "exam": 1,
-"kind": "disease"
+"kind": "disease",
+"parts": [
+{
+"prof": "Smith",
+"def": "A general term for several types of skin inflammation; the slides use it interchangeably with dermatitis, and atopic dermatitis is often called eczema.",
+"cite": "Pathophys slide 8; Pathophys slide 9",
+"src": "slide"
+},
+{
+"prof": "Sikazwe",
+"def": "A form of dermatitis characterized by red, itchy, scaly or crusty patches that can be chronic or intermittent. Slide 4's treatment goals: suppress the immune response and inflammation.",
+"cite": "DPAW slide 4; DPAW slide 5; general: NCI Thesaurus C3001, https://api-evsrest.nci.nih.gov/api/v1/concept/ncit/C3001?include=definitions",
+"src": "general"
+}
+]
 },
 {
 "id": "smA-edema",
@@ -3433,7 +3747,21 @@ const GLOSSARY_TERMS = [
 1,
 2
 ],
-"kind": "pharmacology"
+"kind": "pharmacology",
+"parts": [
+{
+"prof": "Patel",
+"def": "Moisturizer used to help re-establish the weakened epidermis (slide 29: thick emollients). Slide 32 labels the lotion group (Cetaphil, Keri, Neutrogena) emollients: less effective, apply 3 or more times a day.",
+"cite": "Patel Dermatitis slide 29; Patel Dermatitis slide 32",
+"src": "slide"
+},
+{
+"prof": "Sikazwe",
+"def": "Slide 15: mostly water emulsions that prevent skin water loss. Types: petrolatum, lanolin and silicone based (dimethicone, cyclomethicone).",
+"cite": "DPAW slide 14; DPAW slide 15",
+"src": "slide"
+}
+]
 },
 {
 "id": "pC-rabies-encephalitic",
@@ -3959,7 +4287,21 @@ const GLOSSARY_TERMS = [
 "deck": "pc",
 "prof": "Smith/Sikazwe",
 "exam": 1,
-"kind": "chemistry"
+"kind": "chemistry",
+"parts": [
+{
+"prof": "Smith",
+"def": "A B-complex vitamin (folate) the body needs in small amounts; it helps make red blood cells. Methotrexate is a folic acid analog.",
+"cite": "PCol slide 59; PCol slide 48; PCol slide 50; general: NCI Dictionary of Cancer Terms, https://www.cancer.gov/publications/dictionaries/cancer-terms/def/folate",
+"src": "general"
+},
+{
+"prof": "Sikazwe",
+"def": "DHFR's substrate on slide 30; methotrexate is its analog and differs on slide 31 by NH2 in place of OH and an N-CH3 in place of N-H.",
+"cite": "DPAW slide 30; DPAW slide 31",
+"src": "slide"
+}
+]
 },
 {
 "id": "smB-folic-acid-analog",
@@ -4173,7 +4515,21 @@ const GLOSSARY_TERMS = [
 "deck": "pc",
 "prof": "Smith/Sikazwe",
 "exam": 1,
-"kind": "class"
+"kind": "class",
+"parts": [
+{
+"prof": "Smith",
+"def": "A compound in the corticosteroid family that affects metabolism and has anti-inflammatory and immunosuppressive effects; it may be a natural hormone or a synthetic drug.",
+"cite": "PCol slide 8; PCol slide 7; general: NCI Dictionary of Cancer Terms, https://www.cancer.gov/publications/dictionaries/cancer-terms/def/glucocorticoid",
+"src": "general"
+},
+{
+"prof": "Sikazwe",
+"def": "Slide 20: glucocorticoids are corticosteroids or steroids. They affect metabolism and have anti-inflammatory and immunosuppressive effects.",
+"cite": "DPAW slide 20; DPAW slide 24; general: NCI Thesaurus C2323, https://api-evsrest.nci.nih.gov/api/v1/concept/ncit/C2323?include=definitions",
+"src": "general"
+}
+]
 },
 {
 "id": "smB-glucocorticoid-receptor",
@@ -4775,7 +5131,21 @@ const GLOSSARY_TERMS = [
 "deck": "pc",
 "prof": "Smith/Sikazwe",
 "exam": 1,
-"kind": "sign"
+"kind": "sign",
+"parts": [
+{
+"prof": "Smith",
+"def": "Higher than normal levels of calcium in the blood. With calcipotriene it may develop when the cumulative weekly dose exceeds 100 g/week.",
+"cite": "PCol slide 22; general: NCI Dictionary of Cancer Terms, https://www.cancer.gov/publications/dictionaries/cancer-terms/def/hypercalcemia",
+"src": "general"
+},
+{
+"prof": "Sikazwe",
+"def": "Higher than normal levels of calcium in the blood.",
+"cite": "DPAW slide 27 (annotation on the student copy; lecture T@1580–2000); general: NCI Thesaurus C3112, https://api-evsrest.nci.nih.gov/api/v1/concept/ncit/C3112?include=definitions",
+"src": "general"
+}
+]
 },
 {
 "id": "smB-hyperglycemia",
@@ -5060,7 +5430,21 @@ const GLOSSARY_TERMS = [
 "deck": "pc",
 "prof": "Smith",
 "exam": 1,
-"kind": "class"
+"kind": "class",
+"parts": [
+{
+"prof": "Smith",
+"def": "Monoclonal antibodies (guselkumab, tildrakizumab, risankizumab) that bind the p19 subunit of IL-23 and inhibit release of proinflammatory cytokines and chemokines.",
+"cite": "PCol slide 68; PCol slide 69",
+"src": "slide"
+},
+{
+"prof": "Smith",
+"def": "A drug class on Dr. Smith's list of medications for treating psoriasis; IL-23 is one of the proinflammatory cytokines released in psoriasis.",
+"cite": "Pathophys slide 28; Pathophys slide 21",
+"src": "slide"
+}
+]
 },
 {
 "id": "sk-il23",
@@ -5286,7 +5670,21 @@ const GLOSSARY_TERMS = [
 "prof": "Smith/Sikazwe",
 "exam": 1,
 "kind": "immunology",
-"common": true
+"common": true,
+"parts": [
+{
+"prof": "Smith",
+"def": "The body's response to injury or infection, in which released chemicals trigger an immune response. Chronic inflammation does not end when it should.",
+"cite": "Pathophys slide 8; general: NCI Dictionary of Cancer Terms, https://www.cancer.gov/publications/dictionaries/cancer-terms/def/inflammation",
+"src": "general"
+},
+{
+"prof": "Sikazwe",
+"def": "Redness, swelling, pain and/or a feeling of heat in an area of the body; a protective reaction to injury, disease or irritation of the tissues.",
+"cite": "DPAW slide 4; DPAW slide 13; DPAW slide 41; general: NCI Thesaurus C3137, https://api-evsrest.nci.nih.gov/api/v1/concept/ncit/C3137?include=definitions",
+"src": "general"
+}
+]
 },
 {
 "id": "smB-ibd",
@@ -5645,7 +6043,21 @@ const GLOSSARY_TERMS = [
 "deck": "pp",
 "prof": "Smith/Sikazwe",
 "exam": 1,
-"kind": "class"
+"kind": "class",
+"parts": [
+{
+"prof": "Smith",
+"def": "Janus kinase inhibitor: a drug class on Dr. Smith's lists of medications for atopic dermatitis and for psoriasis.",
+"cite": "Pathophys slide 17; Pathophys slide 28",
+"src": "slide"
+},
+{
+"prof": "Sikazwe",
+"def": "A drug that inhibits Janus kinases, intracellular enzymes that pass on signals from certain cytokine receptors. On the slides: ruxolitinib, upadacitinib and tofacitinib.",
+"cite": "DPAW slide 8; DPAW slide 10; DPAW slide 35; general: NCI Thesaurus C129387, https://api-evsrest.nci.nih.gov/api/v1/concept/ncit/C129387?include=definitions",
+"src": "general"
+}
+]
 },
 {
 "id": "smB-kaposi-sarcoma",
@@ -5671,7 +6083,21 @@ const GLOSSARY_TERMS = [
 "deck": "pp",
 "prof": "Smith/Sikazwe",
 "exam": 1,
-"kind": "anatomy"
+"kind": "anatomy",
+"parts": [
+{
+"prof": "Smith",
+"def": "A type of protein found on epithelial cells; keratins help form the tissues of the hair, nails and the outer layer of the skin.",
+"cite": "Pathophys slide 32; general: NCI Dictionary of Cancer Terms, https://www.cancer.gov/publications/dictionaries/cancer-terms/def/keratin",
+"src": "general"
+},
+{
+"prof": "Sikazwe",
+"def": "A family of cysteine-rich fibrous structural proteins that form tough filaments; the main component of intermediate filaments in the epidermis, hair and nails.",
+"cite": "DPAW slide 46; general: NCI Thesaurus C20693, https://api-evsrest.nci.nih.gov/api/v1/concept/ncit/C20693?include=definitions",
+"src": "general"
+}
+]
 },
 {
 "id": "smA-keratinocyte",
@@ -5686,7 +6112,21 @@ const GLOSSARY_TERMS = [
 "prof": "Smith/Sikazwe",
 "exam": 1,
 "kind": "anatomy",
-"common": true
+"common": true,
+"parts": [
+{
+"prof": "Smith",
+"def": "The cells that make up the epidermis and produce the protein keratin. Normally they take 13 days to divide and 26 days to mature, migrate to the stratum corneum and shed.",
+"cite": "Pathophys slide 13; Pathophys slide 23; general: DermNet, Terminology in dermatology, https://dermnetnz.org/topics/terminology",
+"src": "general"
+},
+{
+"prof": "Sikazwe",
+"def": "Epidermal skin cells (slide 12).",
+"cite": "DPAW slide 12; DPAW slide 13",
+"src": "slide"
+}
+]
 },
 {
 "id": "smA-keratinocyte-hyperproliferation",
@@ -5703,7 +6143,21 @@ const GLOSSARY_TERMS = [
 "deck": "pp",
 "prof": "Smith/Sikazwe",
 "exam": 1,
-"kind": "disease"
+"kind": "disease",
+"parts": [
+{
+"prof": "Smith",
+"def": "A defining feature of psoriasis: keratinocytes take 1.5 days to divide and 4 days to mature and shed, a 7-fold increase over the normal 13 and 26 days.",
+"cite": "Pathophys slide 19; Pathophys slide 21; Pathophys slide 23",
+"src": "slide"
+},
+{
+"prof": "Sikazwe",
+"def": "Excess multiplication of keratinocytes, a major component of psoriasis on slide 13; the matching treatment goal is to normalize cell proliferation.",
+"cite": "DPAW slide 13",
+"src": "slide"
+}
+]
 },
 {
 "id": "smB-keratolytics",
@@ -5718,7 +6172,27 @@ const GLOSSARY_TERMS = [
 "deck": "pc",
 "prof": "Smith/Sikazwe",
 "exam": 1,
-"kind": "class"
+"kind": "class",
+"parts": [
+{
+"prof": "Smith",
+"def": "Dr. Smith's class for benzoyl peroxide, sulfur and salicylic acid: agents that loosen keratinocytes and cause peeling of the stratum corneum.",
+"cite": "PCol slide 35; PCol slide 36; PCol slide 38; PCol slide 39",
+"src": "slide"
+},
+{
+"prof": "Smith",
+"def": "A drug class on Dr. Smith's list of medications for treating acne.",
+"cite": "Pathophys slide 37",
+"src": "slide"
+},
+{
+"prof": "Sikazwe",
+"def": "Agents that promote skin shedding (slide 42): glycolic acid (AHA), salicylic acid, sulfur and benzoyl peroxide.",
+"cite": "DPAW slide 42",
+"src": "slide"
+}
+]
 },
 {
 "id": "smB-keratotic",
@@ -6112,7 +6586,21 @@ const GLOSSARY_TERMS = [
 "deck": "p5",
 "prof": "Patel",
 "exam": 2,
-"kind": "sign"
+"kind": "sign",
+"parts": [
+{
+"prof": "Patel",
+"def": "Softening and breaking down of skin from prolonged moisture exposure; it becomes soft, wrinkly and whitish. Slide 60 lists it among the additional criteria of incontinence-associated dermatitis.",
+"cite": "Patel Dermatitis slide 60; general: NCBI MedGen, http://www.ncbi.nlm.nih.gov/medgen/108234",
+"src": "general"
+},
+{
+"prof": "Patel",
+"def": "The soft white skin of a corn or callus after soaking the foot in warm water for 5 minutes; it is removed by gentle scrubbing.",
+"cite": "Patel Warts slide 17; Patel Wound slide 9",
+"src": "slide"
+}
+]
 },
 {
 "id": "smB-macrolides",
@@ -6129,7 +6617,21 @@ const GLOSSARY_TERMS = [
 "deck": "pc",
 "prof": "Smith/Sikazwe",
 "exam": 1,
-"kind": "class"
+"kind": "class",
+"parts": [
+{
+"prof": "Smith",
+"def": "The antibiotic class of erythromycin and azithromycin. They attach to the 50S ribosomal unit, prevent translocation and are bacteriostatic.",
+"cite": "PCol slide 47; PCol slide 42",
+"src": "slide"
+},
+{
+"prof": "Sikazwe",
+"def": "Macrocyclic lactones with a ring of twelve or more members. On the slides: pimecrolimus and tacrolimus (28) and erythromycin (54).",
+"cite": "DPAW slide 28; DPAW slide 54; general: IUPAC Glossary of Class Names of Organic Compounds (1995), https://iupac.qmul.ac.uk/class/carba.html",
+"src": "general"
+}
+]
 },
 {
 "id": "smB-macrophage",
@@ -6248,7 +6750,21 @@ const GLOSSARY_TERMS = [
 "deck": "sun",
 "prof": "Smith/Sikazwe",
 "exam": 1,
-"kind": "anatomy"
+"kind": "anatomy",
+"parts": [
+{
+"prof": "Smith",
+"def": "The skin pigment produced by melanocytes. The amount in a person's skin is a risk factor for sun damage, and psoralens increase melanin pigmentation.",
+"cite": "Smith Sun Exposure slide 3; Smith Sun Exposure slide 7; general: DermNet, Terminology in dermatology, https://dermnetnz.org/topics/terminology",
+"src": "general"
+},
+{
+"prof": "Sikazwe",
+"def": "A pigment that gives color to skin and eyes and helps protect it from damage by ultraviolet light. Hydroquinone inhibits its biosynthesis (slide 67).",
+"cite": "DPAW slide 67; general: NCI Thesaurus C631, https://api-evsrest.nci.nih.gov/api/v1/concept/ncit/C631?include=definitions",
+"src": "general"
+}
+]
 },
 {
 "id": "smA-melanocytes",
@@ -6318,7 +6834,21 @@ const GLOSSARY_TERMS = [
 "deck": "pc",
 "prof": "Smith/Sikazwe",
 "exam": 1,
-"kind": "pharmacology"
+"kind": "pharmacology",
+"parts": [
+{
+"prof": "Smith",
+"def": "A substance made or used when the body breaks down food, drugs or chemicals. Acitretin is a metabolite of etretinate; benzoyl peroxide is metabolized to benzoic acid.",
+"cite": "PCol slide 20; PCol slide 36; PCol slide 30; general: NCI Dictionary of Cancer Terms, https://www.cancer.gov/publications/dictionaries/cancer-terms/def/metabolite",
+"src": "general"
+},
+{
+"prof": "Sikazwe",
+"def": "Any intermediate or product resulting from metabolism. Slide 8: ruxolitinib has some active metabolites; slide 34: apremilast gives an -OH metabolite.",
+"cite": "DPAW slide 8; DPAW slide 34; general: IUPAC Glossary of Terms Used in Medicinal Chemistry (1998), https://iupac.qmul.ac.uk/medchem/ix.html",
+"src": "general"
+}
+]
 },
 {
 "id": "sk-metal-oxide",
@@ -6966,7 +7496,21 @@ const GLOSSARY_TERMS = [
 "deck": "pc",
 "prof": "Smith",
 "exam": 1,
-"kind": "class"
+"kind": "class",
+"parts": [
+{
+"prof": "Smith",
+"def": "Dr. Smith's heading for the drugs that act through nuclear receptors: the corticosteroids, the retinoids and the vitamin D analog calcipotriene.",
+"cite": "PCol slide 2; PCol slide 4; PCol slide 8; PCol slide 14; PCol slide 21",
+"src": "slide"
+},
+{
+"prof": "Smith",
+"def": "A drug class on Dr. Smith's lists of medications for treating psoriasis and for treating acne.",
+"cite": "Pathophys slide 28; Pathophys slide 37",
+"src": "slide"
+}
+]
 },
 {
 "id": "smA-nummular-eczema",
@@ -7287,7 +7831,21 @@ const GLOSSARY_TERMS = [
 "deck": "pc",
 "prof": "Smith/Sikazwe",
 "exam": 1,
-"kind": "abbreviation"
+"kind": "abbreviation",
+"parts": [
+{
+"prof": "Smith",
+"def": "Paraaminobenzoic acid, which bacteria use to synthesize folic acid. Sulfamethoxazole and dapsone compete with it.",
+"cite": "PCol slide 48; PCol slide 50",
+"src": "slide"
+},
+{
+"prof": "Sikazwe",
+"def": "p-Aminobenzoic acids, a UVB (280-315 nm) sunscreen class: PABA (rarely used) and padimate O (slide 63).",
+"cite": "DPAW slide 63",
+"src": "slide"
+}
+]
 },
 {
 "id": "smB-pancytopenia",
@@ -7435,7 +7993,21 @@ const GLOSSARY_TERMS = [
 "prof": "Smith",
 "exam": 1,
 "kind": "class",
-"common": true
+"common": true,
+"parts": [
+{
+"prof": "Smith",
+"def": "Nonsteroidal anti-inflammatory drugs that inhibit phosphodiesterase 4. Cellular cAMP rises, which inhibits inflammatory cells. Crisaborole (topical) and apremilast (oral) are the products.",
+"cite": "PCol slide 32; PCol slide 33; PCol slide 34",
+"src": "slide"
+},
+{
+"prof": "Smith",
+"def": "Phosphodiesterase 4 inhibitor: a drug class on Dr. Smith's list of medications for atopic dermatitis.",
+"cite": "Pathophys slide 17",
+"src": "slide"
+}
+]
 },
 {
 "id": "smB-pde4",
@@ -7691,7 +8263,21 @@ const GLOSSARY_TERMS = [
 "deck": "sun",
 "prof": "Smith/Sikazwe",
 "exam": 1,
-"kind": "disease"
+"kind": "disease",
+"parts": [
+{
+"prof": "Smith",
+"def": "Skin aging caused by the sun; the slide lists it, with immunosuppression and skin cancers, as something both UVB and UVA may cause.",
+"cite": "Smith Sun Exposure slide 8; Smith Sun Exposure slide 14",
+"src": "slide"
+},
+{
+"prof": "Sikazwe",
+"def": "Skin aging due to exposure to sunlight (slide 40).",
+"cite": "DPAW slide 40",
+"src": "slide"
+}
+]
 },
 {
 "id": "pC-photoaging-features",
@@ -7769,7 +8355,21 @@ const GLOSSARY_TERMS = [
 "deck": "sun",
 "prof": "Smith/Sikazwe",
 "exam": 1,
-"kind": "pharmacology"
+"kind": "pharmacology",
+"parts": [
+{
+"prof": "Smith",
+"def": "Describes compounds such as psoralens, which are activated by light, and drugs that cause photosensitivity. Patients on photosensitizing drugs should use an SPF above 45.",
+"cite": "Smith Sun Exposure slide 3; Smith Sun Exposure slide 17; general: NCI Dictionary of Cancer Terms, https://www.cancer.gov/publications/dictionaries/cancer-terms/def/psoralen",
+"src": "general"
+},
+{
+"prof": "Sikazwe",
+"def": "Increased sensitivity of the skin to light exposure. On slide 16 coal tar is photosensitizing; shale tars and wood tars are not.",
+"cite": "DPAW slide 16; general: NCI Thesaurus C38004, https://api-evsrest.nci.nih.gov/api/v1/concept/ncit/C38004?include=definitions",
+"src": "general"
+}
+]
 },
 {
 "id": "dz-photosens",
@@ -7870,7 +8470,21 @@ const GLOSSARY_TERMS = [
 "deck": "pp",
 "prof": "Smith/Sikazwe",
 "exam": 1,
-"kind": "anatomy"
+"kind": "anatomy",
+"parts": [
+{
+"prof": "Smith",
+"def": "The skin structure containing a hair and its sebaceous gland. Acne vulgaris is a disease of the pilosebaceous units.",
+"cite": "Pathophys slide 30; general: DermNet, Terminology in dermatology, https://dermnetnz.org/topics/terminology",
+"src": "general"
+},
+{
+"prof": "Sikazwe",
+"def": "A small hair follicle plus its sebaceous gland (slide 40).",
+"cite": "DPAW slide 40",
+"src": "slide"
+}
+]
 },
 {
 "id": "pC-pit-viper",
@@ -8187,7 +8801,21 @@ const GLOSSARY_TERMS = [
 "deck": "pp",
 "prof": "Smith/Sikazwe",
 "exam": 1,
-"kind": "other"
+"kind": "other",
+"parts": [
+{
+"prof": "Smith",
+"def": "The bacterium that colonizes the follicular duct in acne. It produces lipase, which breaks sebum glyceride into free fatty acids, and has an antigenic effect.",
+"cite": "Pathophys slide 32; Pathophys slide 33",
+"src": "slide"
+},
+{
+"prof": "Sikazwe",
+"def": "The principal acne bacteria (slide 40).",
+"cite": "DPAW slide 40; DPAW slide 41",
+"src": "slide"
+}
+]
 },
 {
 "id": "smA-prostaglandins",
@@ -8276,7 +8904,27 @@ const GLOSSARY_TERMS = [
 "deck": "pc",
 "prof": "Smith/Sikazwe",
 "exam": 1,
-"kind": "class"
+"kind": "class",
+"parts": [
+{
+"prof": "Smith",
+"def": "Photosensitizing compounds (methoxsalen) combined with UVA light in PUVA. With UV light of 320 to 340 nm they intercalate into the DNA strand.",
+"cite": "PCol slide 78; PCol slide 77",
+"src": "slide"
+},
+{
+"prof": "Smith",
+"def": "Photosensitizing compounds that, with UV light of 320 to 340 nm, intercalate into the DNA strand; combined with UVA light in PUVA. Methoxsalen is the example.",
+"cite": "Smith Sun Exposure slide 3; Pathophys slide 28",
+"src": "slide"
+},
+{
+"prof": "Sikazwe",
+"def": "Furanocoumarins used with UVA light (PUVA), for example 8-methoxypsoralen (8-MOP). Slide 18: antiproliferative, bind covalently to DNA pyrimidine bases and lower DNA synthesis.",
+"cite": "DPAW slide 18",
+"src": "slide"
+}
+]
 },
 {
 "id": "smA-psoriasis",
@@ -8291,7 +8939,21 @@ const GLOSSARY_TERMS = [
 "prof": "Smith/Sikazwe",
 "exam": 1,
 "kind": "disease",
-"common": true
+"common": true,
+"parts": [
+{
+"prof": "Smith",
+"def": "A chronic, T-cell-mediated systemic inflammatory disease with recurrent exacerbations and remissions of thickened, erythematous, scaly plaques; keratinocytes hyperproliferate and differentiate incompletely.",
+"cite": "Pathophys slide 19",
+"src": "slide"
+},
+{
+"prof": "Sikazwe",
+"def": "A chronic disease of the skin marked by red patches covered with white scales. Slide 13's components: keratinocyte hyperproliferation, inflammation and an autoimmune response.",
+"cite": "DPAW slide 11; DPAW slide 13; DPAW slide 34; general: NCI Thesaurus C3346, https://api-evsrest.nci.nih.gov/api/v1/concept/ncit/C3346?include=definitions",
+"src": "general"
+}
+]
 },
 {
 "id": "pB-pasi",
@@ -8360,7 +9022,21 @@ const GLOSSARY_TERMS = [
 "deck": "pp",
 "prof": "Smith/Sikazwe",
 "exam": 1,
-"kind": "disease"
+"kind": "disease",
+"parts": [
+{
+"prof": "Smith",
+"def": "Asymmetric joint involvement in the hands, feet and knees; skin lesions usually come first, and it lacks the rheumatoid factors and autoantibodies seen in rheumatoid arthritis.",
+"cite": "Pathophys slide 26",
+"src": "slide"
+},
+{
+"prof": "Sikazwe",
+"def": "Joint inflammation associated with psoriasis. Slide 34 lists it with moderate to severe plaque psoriasis as uses of apremilast.",
+"cite": "DPAW slide 34; general: NCI Thesaurus C61277, https://api-evsrest.nci.nih.gov/api/v1/concept/ncit/C61277?include=definitions",
+"src": "general"
+}
+]
 },
 {
 "id": "sk-pteridine",
@@ -8470,7 +9146,27 @@ const GLOSSARY_TERMS = [
 "deck": "pc",
 "prof": "Smith/Sikazwe",
 "exam": 1,
-"kind": "abbreviation"
+"kind": "abbreviation",
+"parts": [
+{
+"prof": "Smith",
+"def": "Treatment that combines UVA light with psoralens. The phototoxic reactions stimulate melanocytes and induce antiproliferative, immunosuppressive and anti-inflammatory effects.",
+"cite": "PCol slide 78",
+"src": "slide"
+},
+{
+"prof": "Smith",
+"def": "Treatment that combines UVA light with photosensitizing compounds called psoralens.",
+"cite": "Smith Sun Exposure slide 3",
+"src": "slide"
+},
+{
+"prof": "Sikazwe",
+"def": "Psoralen plus ultraviolet A light (315-400 nm).",
+"cite": "DPAW slide 12; DPAW slide 18",
+"src": "slide"
+}
+]
 },
 {
 "id": "sk-pyrimidine",
@@ -8704,7 +9400,27 @@ const GLOSSARY_TERMS = [
 "prof": "Smith/Sikazwe",
 "exam": 1,
 "kind": "class",
-"common": true
+"common": true,
+"parts": [
+{
+"prof": "Smith",
+"def": "Drugs with vitamin A-like biological activity. They affect gene expression by binding two families of receptors, RARs and RXRs; used for acne, psoriasis and wrinkles.",
+"cite": "PCol slide 14; PCol slide 15",
+"src": "slide"
+},
+{
+"prof": "Smith",
+"def": "Vitamin A or vitamin A-like compounds. Dr. Smith lists them as the psoriasis medications that affect cell turnover.",
+"cite": "Pathophys slide 27; general: NCI Dictionary of Cancer Terms, https://www.cancer.gov/publications/dictionaries/cancer-terms/def/retinoid",
+"src": "general"
+},
+{
+"prof": "Sikazwe",
+"def": "Vitamin A analogs (slide 40), derivatives of vitamin A1, retinol (slide 48); RAR and RXR agonists that normalize keratinization and proliferation.",
+"cite": "DPAW slide 29; DPAW slide 40; DPAW slide 48",
+"src": "slide"
+}
+]
 },
 {
 "id": "pC-retinoids-photoaging",
@@ -8814,7 +9530,21 @@ const GLOSSARY_TERMS = [
 "deck": "sun",
 "prof": "Smith/Sikazwe",
 "exam": 1,
-"kind": "class"
+"kind": "class",
+"parts": [
+{
+"prof": "Smith",
+"def": "An organic sunscreen family that does not adhere to the skin well and is easily removed by water or perspiration.",
+"cite": "Smith Sun Exposure slide 24",
+"src": "slide"
+},
+{
+"prof": "Sikazwe",
+"def": "UVB (280-315 nm) sunscreen class: homosalate and octisalate. Slide 64: the salicylic acid functional group absorbs UVB and provides analgesia.",
+"cite": "DPAW slide 64",
+"src": "slide"
+}
+]
 },
 {
 "id": "sk-sar-abbr",
@@ -8944,7 +9674,21 @@ const GLOSSARY_TERMS = [
 "deck": "pp",
 "prof": "Smith/Sikazwe",
 "exam": 1,
-"kind": "anatomy"
+"kind": "anatomy",
+"parts": [
+{
+"prof": "Smith",
+"def": "The gland attached to the hair follicle in the slide's skin cross-section. Sebaceous glands secrete sebum.",
+"cite": "Pathophys slide 6; general: DermNet, Terminology in dermatology, https://dermnetnz.org/topics/terminology",
+"src": "general"
+},
+{
+"prof": "Sikazwe",
+"def": "The gland of the pilosebaceous unit that produces sebum (slide 40); decreasing its activity is an acne treatment goal (slide 41).",
+"cite": "DPAW slide 40; DPAW slide 41",
+"src": "slide"
+}
+]
 },
 {
 "id": "pB-seborrheic-dermatitis",
@@ -8999,7 +9743,21 @@ const GLOSSARY_TERMS = [
 "deck": "pp",
 "prof": "Smith/Sikazwe",
 "exam": 1,
-"kind": "anatomy"
+"kind": "anatomy",
+"parts": [
+{
+"prof": "Smith",
+"def": "A mixture of glycerides, wax esters and cholesterol that retards water loss from the skin; it is found on the face, scalp, back and neck.",
+"cite": "Pathophys slide 6",
+"src": "slide"
+},
+{
+"prof": "Sikazwe",
+"def": "The oily secretion produced by the sebaceous glands (slide 40).",
+"cite": "DPAW slide 40; DPAW slide 41",
+"src": "slide"
+}
+]
 },
 {
 "id": "smA-second-degree-burn",
@@ -9890,7 +10648,21 @@ const GLOSSARY_TERMS = [
 "prof": "Smith/Sikazwe",
 "exam": 1,
 "kind": "other",
-"common": true
+"common": true,
+"parts": [
+{
+"prof": "Smith",
+"def": "Affecting the entire body. Psoriasis is a systemic inflammatory disease.",
+"cite": "Pathophys slide 19; general: NCI Dictionary of Cancer Terms, https://www.cancer.gov/publications/dictionaries/cancer-terms/def/systemic",
+"src": "general"
+},
+{
+"prof": "Sikazwe",
+"def": "Relating to or affecting the whole body. Slide 14 separates systemic agents from topical agents; slides 7 and 51 describe drugs with limited systemic exposure or absorption.",
+"cite": "DPAW slide 7; DPAW slide 14; DPAW slide 51; general: IUPAC Glossary of Terms Used in Medicinal Chemistry (1998), https://iupac.qmul.ac.uk/medchem/ix.html",
+"src": "general"
+}
+]
 },
 {
 "id": "smA-systemic-absorption",
@@ -10111,7 +10883,21 @@ const GLOSSARY_TERMS = [
 "prof": "Smith/Sikazwe",
 "exam": 1,
 "kind": "class",
-"common": true
+"common": true,
+"parts": [
+{
+"prof": "Smith",
+"def": "The antibiotic class of sarecycline, minocycline and doxycycline: broad-spectrum bacteriostatic antibiotics that bind the 30S ribosomal subunit. Their efficacy in acne may depend more on anti-inflammatory activity.",
+"cite": "PCol slide 43; PCol slide 45",
+"src": "slide"
+},
+{
+"prof": "Sikazwe",
+"def": "Slide 55's antibiotic class: tetracycline (absorption affected by food), and the lipophilic, longer acting doxycycline and minocycline (food does not affect absorption).",
+"cite": "DPAW slide 55",
+"src": "slide"
+}
+]
 },
 {
 "id": "sk-thf",
@@ -10659,7 +11445,21 @@ const GLOSSARY_TERMS = [
 "prof": "Smith/Sikazwe",
 "exam": 1,
 "kind": "abbreviation",
-"common": true
+"common": true,
+"parts": [
+{
+"prof": "Smith",
+"def": "UV light of 320 to 400 nm: minimally filtered by ozone, penetrates glass and further into the dermis than UVB, less energetic, and responsible for most phototoxic drug reactions.",
+"cite": "Smith Sun Exposure slide 8",
+"src": "slide"
+},
+{
+"prof": "Sikazwe",
+"def": "The 315-400 nm band of ultraviolet radiation. Slide 12 links it to premature ageing, wrinkling of the skin and skin cancer; it reaches below the skin surface.",
+"cite": "DPAW slide 12; DPAW slide 62",
+"src": "slide"
+}
+]
 },
 {
 "id": "smA-uvb",
@@ -10675,7 +11475,21 @@ const GLOSSARY_TERMS = [
 "prof": "Smith/Sikazwe",
 "exam": 1,
 "kind": "abbreviation",
-"common": true
+"common": true,
+"parts": [
+{
+"prof": "Smith",
+"def": "UV light of 290 to 320 nm: about 90% filtered by the ozone layer, does not pass through glass, can cause sunburn and produces vitamin D3 in the skin.",
+"cite": "Smith Sun Exposure slide 8",
+"src": "slide"
+},
+{
+"prof": "Sikazwe",
+"def": "The 280-315 nm band of ultraviolet radiation. Slide 12 links it to skin cancer, cataracts and sunburn; ozone blocks 90% of it.",
+"cite": "DPAW slide 12; DPAW slide 63",
+"src": "slide"
+}
+]
 },
 {
 "id": "sk-uvc",
@@ -10776,7 +11590,21 @@ const GLOSSARY_TERMS = [
 "deck": "pc",
 "prof": "Smith/Sikazwe",
 "exam": 1,
-"kind": "class"
+"kind": "class",
+"parts": [
+{
+"prof": "Smith",
+"def": "Dr. Smith's class name for calcipotriene, used topically for psoriasis. It acts through the vitamin D receptor, inhibiting keratinocyte proliferation, promoting differentiation and decreasing inflammatory cytokine release.",
+"cite": "PCol slide 21; PCol slide 22",
+"src": "slide"
+},
+{
+"prof": "Sikazwe",
+"def": "Slide 27: calcitriol and calcipotriene, secosteroids with two roles, bone health and antiproliferative action.",
+"cite": "DPAW slide 14; DPAW slide 27",
+"src": "slide"
+}
+]
 },
 {
 "id": "smB-vdre",
@@ -10995,6 +11823,20 @@ const GLOSSARY_TERMS = [
 "deck": "mc",
 "prof": "Sikazwe",
 "exam": 1,
-"kind": "chemistry"
+"kind": "chemistry",
+"parts": [
+{
+"prof": "Sikazwe",
+"def": "A carboxylic acid with an OH on the alpha carbon, such as glycolic acid (slides 43-44). Slide 68: AHAs promote dead skin cell removal and stimulate collagen production.",
+"cite": "DPAW slide 43; DPAW slide 44; DPAW slide 68",
+"src": "slide"
+},
+{
+"prof": "Sikazwe",
+"def": "Slide 43's heading for glycolic acid and salicylic acid. Slide 44's SAR: COOH group(s), most with OH on the alpha carbon, R mostly alkyl.",
+"cite": "DPAW slide 43; DPAW slide 44",
+"src": "slide"
+}
+]
 }
 ];

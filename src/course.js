@@ -212,16 +212,20 @@ const COURSE = {
     // of the above") and "there will be a calculation on the exam" (11/06 transcript, T@11799).
     {id:'exam2', name:'Exam 2', date:'Mon 11/16, 9:00–10:30 AM', when:'2026-11-16T09:00',
      questions:50, minutes:90, sata:null,
-     blurb:'Covers Lectures 1–8, the full Exam 2 material. Lectures 1–4 (Smith, Sikazwe) 30%; Lectures 5–8 (Patel) 70%. Dr. Patel (11/12): multiple choice, select-all, and fill-in-the-blank calculations; "Focus on treatment algorithms, understand patient specifics matter." The syllabus lists multiple-choice, select-all, short-answer, true/false and matching as possible formats and gives no count of each. These practice papers draw single-answer questions only; the select-all and matching questions are in the topic drills',
+     blurb:'Covers Lectures 1–8, the full Exam 2 material. Lectures 1–4: 10 questions, 5 Dr. Smith and 5 Dr. Sikazwe (Dr. Patel, 11/12); Lectures 5–8 (Dr. Patel): the other 40 of the 50. Dr. Patel (11/12): multiple choice, select-all, and fill-in-the-blank calculations; "Focus on treatment algorithms, understand patient specifics matter." The syllabus lists multiple-choice, select-all, short-answer, true/false and matching as possible formats and gives no count of each. These practice papers draw single-answer questions only; the select-all and matching questions are in the topic drills',
      facts:[['Covers', 'Covers Lectures 1–8, the full Exam 2 material.'],
-            ['Weighting', 'Lectures 1–4 (Smith, Sikazwe) 30%; Lectures 5–8 (Patel) 70%.'],
+            ['Weighting', 'Lectures 1–4: 10 questions, 5 Dr. Smith and 5 Dr. Sikazwe (Dr. Patel, 11/12); Lectures 5–8 (Dr. Patel): the other 40 of the 50.'],
             ['Dr. Patel\'s format', 'Dr. Patel (11/12): multiple choice, select-all, and fill-in-the-blank calculations; "Focus on treatment algorithms, understand patient specifics matter."'],
             ['Syllabus formats', 'The syllabus lists multiple-choice, select-all, short-answer, true/false and matching as possible formats and gives no count of each.'],
             ['Practice papers', 'These practice papers draw single-answer questions only; the select-all and matching questions are in the topic drills.']],
      factsMain:['Covers', 'Weighting'],
      pools:[
-       {key:'l14', name:'Lectures 1–4 (Smith, Sikazwe): 30%', marks:15, filter:{exam:1, unassigned:undefined}},
-       {key:'l58', name:'Lectures 5–8 (Patel): 70%', marks:35, filter:{exam:2}},
+       // Dr. Patel, 11/12 (transcript, end of the lecture): "Exam one material, derm related. 10 questions. 5 Sikazwe, 5 Smith."
+       // Louis, 2026-11-15: 5 Smith, 5 Sikazwe, the rest Dr. Patel's. The exam total is not announced (the syllabus lists 50),
+       // so the paper keeps 50: 5 + 5 + 40.
+       {key:'smith',   name:'Lectures 1–4, Dr. Smith: 5 questions', marks:5, filter:{exam:1, prof:'Smith', unassigned:undefined}},
+       {key:'sikazwe', name:'Lectures 1–4, Dr. Sikazwe: 5 questions', marks:5, filter:{exam:1, prof:'Sikazwe', unassigned:undefined}},
+       {key:'l58', name:'Lectures 5–8 (Dr. Patel): the other 40', marks:40, filter:{exam:2}},
      ]},
   ],
   // Exam 1 was on Mon 11/09; the Exam view, the weighted pass and Weak spots follow Exam 2 from
