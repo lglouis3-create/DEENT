@@ -2374,8 +2374,8 @@ const GUIDE_HTML = `
 <div class="g2-rung g2-s2"><div class="g2-sev">Moderate: after the topical combinations have been tried. Severe acne starts with an oral antibiotic plus a topical combination</div><div class="g2-cells">
 <div class="g2-cell"><span class="g2-k">Next</span><p>An oral antibiotic</p></div>
 </div></div>
-<div class="g2-rung g2-s3"><div class="g2-sev">Absolute last line (she said so for moderate; slide 40 also prints it in the severe first-line box)</div><div class="g2-cells">
-<div class="g2-cell"><span class="g2-k">Last</span><p>Isotretinoin</p></div>
+<div class="g2-rung g2-s3"><div class="g2-sev">Absolute last line (she said so for moderate acne)</div><div class="g2-cells">
+<div class="g2-cell"><span class="g2-k">Last</span><p>Isotretinoin (slide 40 also prints it in the severe first-line box)</p></div>
 </div></div>
 </div>
 <div class="g2-note"><span class="g2-k">Order</span><p>Topical before oral.</p></div>
