@@ -101,13 +101,13 @@ def og():
     img.paste(t, (lx, ly), t)
     tx = lx + side + 2 * 70
     room = W - tx - 2 * 80
-    f1 = fit_font(BOLD, 'DEENT Exam Review', room, 2 * 92)
-    f2 = fit_font(SEMI, 'PHAR 4346 · Exam 1 practice', room, 2 * 44)
+    f1 = fit_font(BOLD, 'DEENT Study Guide / Review', room, 2 * 92)
+    f2 = fit_font(SEMI, 'PHAR 4346', room, 2 * 44)
     f3 = ImageFont.truetype(SEMI, 2 * 30)
     y = H / 2 - 2 * 110
-    d.text((tx, y), 'DEENT Exam Review', font=f1, fill=INK)
-    d.text((tx, y + 2 * 125), 'PHAR 4346 · Exam 1 practice', font=f2, fill=ACCENT)
-    d.text((tx, y + 2 * 195), 'Questions, structures and drug targets', font=f3, fill=DIM)
+    d.text((tx, y), 'DEENT Study Guide / Review', font=f1, fill=INK)
+    d.text((tx, y + 2 * 125), 'PHAR 4346', font=f2, fill=ACCENT)
+    d.text((tx, y + 2 * 195), 'Questions, guides, structures and drug targets', font=f3, fill=DIM)
     return img.resize((1200, 630), Image.LANCZOS)
 
 

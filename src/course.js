@@ -364,8 +364,8 @@ const COURSE = {
 
   // Link preview of a shared address and the Home Screen name (kit #88; these replace
   // release step 1b, src/brand.py, from 2026-11-09). Values as brand.py wrote them.
-  share: {title: 'DEENT Exam Review',
-          description: 'PHAR 4346 Exam 1 practice: questions, structures and drug targets for Dr. Smith\'s and Dr. Sikazwe\'s lectures.',
+  share: {title: 'DEENT Study Guide / Review',
+          description: 'PHAR 4346 study guide and review: practice questions, guides, structures, diseases and drug targets.',
           url: 'https://lglouis3-create.github.io/DEENT/',
           image: 'og-image.png'},
   manifest: {short_name: 'DEENT Review'},
