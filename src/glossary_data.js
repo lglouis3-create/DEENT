@@ -6411,7 +6411,7 @@ const GLOSSARY_TERMS = [
 "2nd line",
 "1st line"
 ],
-"def": "The order of choice. Slide 38: topical calcineurin inhibitors are second line when steroids fail in mild-to-moderate AD; slide 41: crisaborole is third line if all other options fail.",
+"def": "The order of choice. Patel Dermatitis slide 38: topical calcineurin inhibitors are second line when steroids fail in mild-to-moderate AD; Patel Dermatitis slide 41: crisaborole is third line if all other options fail.",
 "cite": "Patel Dermatitis slide 38; Patel Dermatitis slide 41; Patel Acne slide 20",
 "src": "slide",
 "deck": "p5",
@@ -9295,7 +9295,7 @@ const GLOSSARY_TERMS = [
 "also": [
 "refractory option"
 ],
-"def": "Not adequately controlled with other treatment. Slide 46 calls JAK inhibitors the option for people whose disease is not adequately controlled with other systemic or biologic therapy.",
+"def": "Not adequately controlled with other treatment. Patel Dermatitis slide 46 calls JAK inhibitors the option for people whose disease is not adequately controlled with other systemic or biologic therapy.",
 "cite": "Patel Dermatitis slide 46; Patel Acne slide 37",
 "src": "slide",
 "deck": "p5",

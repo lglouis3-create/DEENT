@@ -245,11 +245,28 @@ const GLOSSARY_UI = (() => {
     if (c.gen) parts.push(`<span class="gsp gsgen">General definition · ${c.gen.url ? `<a href="${esc(c.gen.url)}" target="_blank" rel="noopener">${esc(c.gen.name)}</a>` : esc(c.gen.name)}</span>`);
     return parts.length ? `<p class="gsrc">${parts.join('')}</p>` : '';
   };
+  // A slide named inside a definition ("slide 12") is read by the page's citation parser against the decks of the page it
+  // sits on (a question's reading), so in a question about Dr. Smith's Sun Exposure lecture Dr. Sikazwe's "slide 12" opened
+  // Dr. Smith's slide 12. Each definition's own source says which deck its slides are in: the bare mention gets that deck's
+  // name in front of it ("DPAW slide 12"); a source with several decks is left as written (glossary_test.js lists them).
+  const PNAME = {pp: 'PP', pc: 'PCol', sun: 'Sun', mc: 'DPAW', p5: 'Patel Dermatitis', p6: 'Patel Acne', p7: 'Patel Scaly',
+                 p8o: 'Patel Outdoor', p8s: 'Patel Sun Exposure', p8w: 'Patel Wound', p8c: 'Patel Warts'};
+  const qualify = (def, cite) => {
+    try {
+      const api = slideApi(); if (!api || !cite) return def;
+      const decks = [...new Set(parseCite(cite).chips.map(c => c.deck))];
+      if (decks.length !== 1 || !PNAME[decks[0]]) return def;
+      return String(def).replace(/(^|[^A-Za-z0-9])([Ss]lides?) (\d)/g, (m, pre, w, d, off, str) => {
+        const before = str.slice(Math.max(0, off - 24), off + pre.length);
+        return /(PP|PCol|DPAW|Sun|Dermatitis|Acne|Scaly|Outdoor|Exposure|Wound|Warts|Pathophys|deck|lecture)\s*$/i.test(before) ? m : pre + PNAME[decks[0]] + ' ' + w.toLowerCase() + ' ' + d;
+      });
+    } catch (e) { return def; }
+  };
   // one paragraph for a single source; for a term several professors teach, one labelled paragraph each with its own slides
   const defBody = t => {
     const ps = Array.isArray(t.parts) && t.parts.length > 1 ? t.parts : null;
-    if (ps) return `<div class="gparts">${ps.map(p => `<div class="gpart"><p class="gpl">${esc(p.prof)}</p><p class="gdd">${esc(p.def)}</p>${srcLine(p.cite)}</div>`).join('')}</div>`;
-    return `<div class="gpart"><p class="gdd">${esc(t.def)}</p>${srcLine(t.cite)}</div>`;
+    if (ps) return `<div class="gparts">${ps.map(p => `<div class="gpart"><p class="gpl">${esc(p.prof)}</p><p class="gdd">${esc(qualify(p.def, p.cite))}</p>${srcLine(p.cite)}</div>`).join('')}</div>`;
+    return `<div class="gpart"><p class="gdd">${esc(qualify(t.def, t.cite))}</p>${srcLine(t.cite)}</div>`;
   };
   const BOOK = '<svg class="gbk" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6.5 3.5h11v17L12 16.6l-5.5 3.9z"/></svg>';
   // the toggle: a bookmark; "My words" shows next to it only while it is on
