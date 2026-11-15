@@ -56,6 +56,15 @@ const check = (ok, label, detail) => { n++; if (!ok) fail++; console.log((ok ? '
     const ids = {MAIN, SECOND, URU, SPF, RARE, MACE, TCI, OPENC, PUSTULE, MICRO, FTU, COMEDONE, PDEI, PDE4, TNFB, TNFA};
     check(Object.values(ids).every(x => typeof x === 'string'), `${tag}: the real entries the checks use are found by term text, each once`, ids);
 
+    // a slide named inside a definition opens the deck of that definition's own source, not the deck of the question
+    // (L3C-002 is about Dr. Smith's Sun Exposure lecture; Dr. Sikazwe's UVB definition says "slide 12", his DPAW slide 12)
+    await ask('L3C-002'); await p.waitForTimeout(300); await answer();
+    await p.evaluate(() => { const d = document.querySelector('#v-quiz details.gw'); if (d) d.open = true; });
+    await p.click('#v-quiz details.gw .gwt[data-gwt]:has-text("UVB")').catch(() => {}); await p.waitForTimeout(300);
+    const inl = await p.evaluate(() => [...document.querySelectorAll('#v-quiz .gpart')].map(x => ({prof: (x.querySelector('.gpl') || {}).textContent, links: [...x.querySelectorAll('.gdd .slk')].map(a => a.getAttribute('data-deck') + ':' + a.getAttribute('data-n'))})));
+    check(inl.some(x => x.prof === 'Sikazwe' && x.links.includes('mc:12')) && !inl.some(x => x.prof === 'Sikazwe' && x.links.some(l => l.startsWith('sun:'))),
+      `${tag}: Dr. Sikazwe's "slide 12" in the UVB definition opens his DPAW deck, not Dr. Smith's Sun Exposure deck`, JSON.stringify(inl));
+
     /* ---- the full data ---- */
     const fd = await p.evaluate(() => {
       const G = GLOSSARY_TERMS, wc = t => t.def.trim().split(/\s+/).length, labels = t => (t.def.match(/(?:Dr\. )?(?:Smith|Sikazwe|Patel)\s*:/g) || []).length;

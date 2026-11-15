@@ -19,6 +19,7 @@ Every update adds its bullets here in the same commit that makes the change.
 - Each drawn diagram now opens with a sentence on what it shows and what it is for.
 
 ## 2026-11-15 (exam paper, stars, questions)
+- Glossary: a slide named in a definition now opens the deck of that definition's own source.
 - FTU tab: the chart's elbow and knee rows are 1 FTU for one elbow or one knee, and the diagram outlines one.
 - Guides, Diseases and Reference: shortened rows regained qualifiers, such as the cause of dryness in atopic dermatitis.
 - Guides, Exam 2: slide-by-slide pages for Dr. Patel's decks showing what her lecture adds to each slide.
