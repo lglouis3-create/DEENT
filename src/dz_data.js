@@ -5686,7 +5686,7 @@ const DZ = {
     "Sarcoptes scabiei, an arachnid mite; spread by prolonged physical contact.",
     "Inflammation and itching on the fingers, wrists, buttocks, armpits and skin folds.",
     "Five treatment options; she gives no first, second or third line.",
-    "Itching can last 4 weeks after treatment: oral antihistamine (topical steroids are also on the slide)..",
+    "Itching can last 4 weeks after treatment: oral antihistamine (topical steroids are also on the slide).",
     "Hydrocortisone is not used on scabies."
    ],
    "steps": [
@@ -11330,7 +11330,7 @@ const DZ = {
     "src": "PCol slide 34"
    },
    "sk": {
-    "text": "An isoindoline PDE4 inhibitor that raises cAMP; An isoindoline PDE4 inhibitor that raises cAMP; metabolized mainly by CYP3A4 (1A2 and 2A6 minor), so 3A4 inhibitors and inducers are avoided..",
+    "text": "An isoindoline PDE4 inhibitor that raises cAMP; metabolized mainly by CYP3A4 (1A2 and 2A6 minor), so 3A4 inhibitors and inducers are avoided.",
     "src": "DPAW page 34"
    },
    "pa": [
