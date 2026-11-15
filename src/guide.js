@@ -1642,6 +1642,573 @@ const GUIDE_HTML = `
 </div>
 </section>
 
+<details class="gdetails" id="gpl-p5">
+<summary>Dr. Patel: Dermatitis slide by slide, what the lecture adds (64 slides)</summary>
+<section class="gobj" id="gobj-pl-d1-1">
+<h3>Dr. Patel, slide by slide &middot; Dermatitis Therapeutics &middot; slides 7&ndash;10</h3>
+<div class="gbar"><span>What the lecture adds (Dermatitis 7&ndash;10)</span><b>The objectives define what a recommendation must contain, and the first topic taught is how much topical product to dispense</b><i>Patel Dermatitis slide 7, 8, 9, 10</i></div>
+<div class="gpt g2-block"><h5>Learning objectives: the patient care process (Patel Dermatitis slide 7)</h5>
+<p class="g2-status"><b>Status B, E</b> (objectives read in lecture; exam cue on 11/10)</p>
+<p>Objectives 1 to 5 are the steps of a patient interview and decision: interview the patient, find the condition from signs, symptoms and history, decide whether the patient is a self-care candidate, set treatment goals, and recommend non-drug therapy. She explained that the objectives follow the pharmacist-patient care process, so each one is a step in applying knowledge to a real patient safely. On 11/10 she said that the objectives at the start of her lectures are the ones she follows when she creates questions.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;apply the knowledge that we're learning to a patient appropriately and safely&rdquo; <span class='g2-src'>11/06 T@5048</span></p>
+<p>&ldquo;I do create questions based on the objectives that I start off with&rdquo; <span class='g2-src'>11/10 T@2768</span></p></div></div>
+<div class="gpt g2-block"><h5>Learning objective 6: the parts of a treatment recommendation (Patel Dermatitis slide 8)</h5>
+<p class="g2-status"><b>Status B, E</b> (lecture lists what each sub-objective asks for; exam cue)</p>
+<p>Objective 6 has six parts: dosing frequency and maximum days of use, time of onset, length of treatment, the amount of product and tube size, adverse effects, and contraindications and interactions. In lecture she tied these to what a pharmacist must state for a patient: the medication name, the dose, the education given and the length of therapy. Because most products here are topical creams and ointments, she said the amount to prescribe must be calculated. She stressed the interaction question as the case where a patient keeps current medications while a new one starts. Objective 7 adds follow-up after the recommendation.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;we also need to calculate the amount that we need to prescribe the patient&rdquo; <span class='g2-src'>11/06 T@5679</span></p>
+<p>&ldquo;How do we identify and manage contraindications and drug interactions&rdquo; <span class='g2-src'>11/06 T@5854</span></p>
+<p>&ldquo;how do we follow up on those recommendations&rdquo; <span class='g2-src'>11/06 T@6158</span></p></div></div>
+<div class="gpt g2-block"><h5>Layers of the skin (Patel Dermatitis slide 9)</h5>
+<p class="g2-status"><b>Status B, E</b> (naming the layers is on the lecture; depth limit is her cue)</p>
+<p>The slide is a labeled drawing of skin structures with no text of its own. In lecture she named three layers: the epidermis (the first four layers of the skin), the dermis in the middle, and the subcutis at the bottom. She uses these names later to say where a process happens, for example that the barrier break in atopic dermatitis is in the epidermis while allergens and irritants then reach the deeper layers. She told the class that knowledge of the skin beyond these three layers is not needed.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;So the 1st 4 layers of your skin is called the epidermis&rdquo; <span class='g2-src'>11/06 T@6295</span></p>
+<p>&ldquo;and the last layer is called the subcutis&rdquo; <span class='g2-src'>11/06 T@6392</span></p>
+<p>&ldquo;I don't need you to need to know anything&rdquo; <span class='g2-src'>11/06 T@6598</span></p></div></div>
+<div class="gpt g2-block"><h5>Topical product quantity, tube sizes and the fingertip unit (Patel Dermatitis slide 10)</h5>
+<p class="g2-status"><b>Status B, E</b> (why rounding up; how a fingertip unit is measured; exam cue)</p>
+<p>The slide lists the standard tube sizes, 15, 30, 45, 60, 80 and 100 g, and says prescribed amounts are rounded up to an available size. She explained the reason: a calculated amount that falls between sizes is dispensed in the next larger size because the smaller one would leave the patient short. A fingertip unit is the amount of product squeezed from the start of the index finger to the first line on that finger, and it equals 0.5 g. Knowing the grams per unit lets the pharmacist convert the body area treated into grams.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;And we will always dispense it rounding up&rdquo; <span class='g2-src'>11/06 T@7218</span></p>
+<p>&ldquo;We're not rounding down cause we would be shortening them with the amount&rdquo; <span class='g2-src'>11/06 T@7362</span></p>
+<p>&ldquo;is called a fingertip unit&rdquo; <span class='g2-src'>11/06 T@7581</span></p></div></div>
+</section>
+
+<section class="gobj" id="gobj-pl-d1-2">
+<h3>Dr. Patel, slide by slide &middot; Dermatitis Therapeutics &middot; slides 11&ndash;13</h3>
+<div class="gbar"><span>What the lecture adds (Dermatitis 11&ndash;13)</span><b>Convert body area to grams with the adult fingertip unit chart, multiply by doses and days, then round up to an available tube size</b><i>Patel Dermatitis slide 11, 12, 13</i></div>
+<div class="gpt g2-block"><h5>Adult fingertip units by body area (Patel Dermatitis slide 11)</h5>
+<p class="g2-status"><b>Status B, E</b> (how the areas are bounded; exam cue and repeat cue on 11/10)</p>
+<p>The chart gives adult fingertip units: scalp 3, face and neck 2.5, one hand 1, one arm including the hand 4, elbows 1, both soles 1.5, one foot 2, one leg 8, buttocks 4, knees 1, and trunk 14. The lecture adds how each area is bounded: the arm runs from shoulder to fingertips, the leg from hip to toes, and the trunk from shoulder to hips. Trunk 14 is two sides of 7 units each, front and back. The lecture also reads the buttocks and knees rows as both buttocks and both knees. The chart is for adults only. She cued it on 11/06 and repeated it on 11/10 when she returned to fingertip units.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;So you will need to know this chart&rdquo; <span class='g2-src'>11/06 T@7844</span></p>
+<p>&ldquo;So only for an adult&rdquo; <span class='g2-src'>11/06 T@8001</span></p>
+<p>&ldquo;So 7 fingertip units is one side and the back is another 7&rdquo; <span class='g2-src'>11/06 T@8794</span></p>
+<p>&ldquo;it would be 4 if it is both buttocks&rdquo; <span class='g2-src'>11/06 T@8538</span></p>
+<p>&ldquo;hint, please know this chart&rdquo; <span class='g2-src'>11/10 T@76469</span></p></div></div>
+<div class="gpt g2-block"><h5>Pediatric fingertip units (Patel Dermatitis slide 12)</h5>
+<p class="g2-status"><b>Status B, E</b> (why children differ; scope limit)</p>
+<p>The slide states that the adult fingertip unit is 0.5 g and gives pediatric values for reference. In lecture she said the child amounts are smaller because they are based on the surface area of the body. She placed the pediatric chart outside what the student must know, so the adult chart is the one she asked the class to know.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;I don't necessarily want you guys to memorize the pediatric fingertip units&rdquo; <span class='g2-src'>11/06 T@9029</span></p>
+<p>&ldquo;because it is based on the surface area of the body&rdquo; <span class='g2-src'>11/06 T@9203</span></p></div></div>
+<div class="gpt g2-block"><h5>Prescription amounts: worked examples (Patel Dermatitis slide 13)</h5>
+<p class="g2-status"><b>Status B, E</b> (the arithmetic steps; the calculation cue; rounding rule)</p>
+<p>Each example has three steps. First convert fingertip units to grams for one application: face and neck is 2.5 units times 0.5 g, which is 1.25 g; one side of the trunk is 7 units times 0.5 g, which is 3.5 g. Second multiply by applications per day and days of treatment: twice daily for 2 weeks gives 35 g for the face and neck and 98 g for one side of the trunk. Third round up to an available tube size: 45 g and 100 g for an adult. For a younger child or infant the slide lists 30 g and 80 g. The in-class poll applied the same steps to an 18-year-old using hydrocortisone ointment on the face and neck 3 times a day for 14 days: 1.25 g times 3 times 14 days is 52.5 g <span class="g2-tonly" title="Transcript only: not on the slide">Transcript-only, verify against slide</span>, so the 60 g tube. She said the available sizes will be given in the exam question and that a calculation will be on the exam.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;1.25 g per application&rdquo; <span class='g2-src'>11/06 T@11625</span></p>
+<p>&ldquo;multiply it by 2, multiply it by 14, and you should get 98 g&rdquo; <span class='g2-src'>11/06 T@10489</span></p>
+<p>&ldquo;So remember to always round up.&rdquo; <span class='g2-src'>11/06 T@9889</span></p>
+<p>&ldquo;I will always tell you what's available in the exam question&rdquo; <span class='g2-src'>11/06 T@9827</span></p>
+<p>&ldquo;there will be a calculation on the exam&rdquo; <span class='g2-src'>11/06 T@12047</span></p>
+<p>&ldquo;I don't want you to worry about pediatrics&rdquo; <span class='g2-src'>11/06 T@10023</span></p></div></div>
+</section>
+
+<section class="gobj" id="gobj-pl-d1-3">
+<h3>Dr. Patel, slide by slide &middot; Dermatitis Therapeutics &middot; slides 15&ndash;19</h3>
+<div class="gbar"><span>What the lecture adds (Dermatitis 15&ndash;19)</span><b>Recognize atopic dermatitis in an adult and a child and know what it is, how the skin barrier breaks down, and who is at risk</b><i>Patel Dermatitis slide 15, 16, 17, 18, 19</i></div>
+<div class="gpt g2-block"><h5>Atopic dermatitis in an adult: example presentation (Patel Dermatitis slide 15)</h5>
+<p class="g2-status"><b>Status C</b> (lecture reads the example and says it is the typical eczema presentation)</p>
+<p>The slide shows a 21-year-old male college student with persistent itching, dryness and irritation behind the knees and inside the elbows. The lecture adds that this picture, with the back of the knees and inside of the elbows involved, is how eczema usually presents, and that "eczema" is the other name for atopic dermatitis. The same patient is used in the case on slide 26.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;is how eczema presents itself&rdquo; <span class='g2-src'>11/06 T@12702</span></p></div></div>
+<div class="gpt g2-block"><h5>Atopic dermatitis in a child: example presentation (Patel Dermatitis slide 16)</h5>
+<p class="g2-status"><b>Status C</b> (lecture states that the child presentation differs)</p>
+<p>The slide shows a six-month-old boy with dry, red, scaly skin on the face, head, chest, back and ankles. In lecture she pointed out that the location and look differ from the adult example but the condition is the same. She said it is a different presentation but still atopic dermatitis.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;So a little different presentation, but still atopic dermatitis&rdquo; <span class='g2-src'>11/06 T@12873</span></p></div></div>
+<div class="gpt g2-block"><h5>Definition: chronic, relapsing, no cure, not contagious (Patel Dermatitis slide 17)</h5>
+<p class="g2-status"><b>Status B, E</b> (why chronic and relapsing matter; she calls it very important)</p>
+<p>The slide defines atopic dermatitis (eczema) as a very common chronic or relapsing inflammatory skin disorder that often starts in childhood, with itching (pruritus) as the hallmark symptom, no cure and no contagion. She asked the class what pruritus means and answered itching. She stressed that there is no cure, so the disease can be chronic and can relapse. She also said it is not contagious.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;So it could be chronic and it could relapse&rdquo; <span class='g2-src'>11/06 T@13159</span></p>
+<p>&ldquo;Hallmark symptom is pruritus.&rdquo; <span class='g2-src'>11/06 T@13311</span></p>
+<p>&ldquo;So that's very important for you guys to understand&rdquo; <span class='g2-src'>11/06 T@13074</span></p></div></div>
+<div class="gpt g2-block"><h5>Pathophysiology: broken barrier and the inflammatory cascade (Patel Dermatitis slide 18)</h5>
+<p class="g2-status"><b>Status B, C</b> (the slide is a figure; the lecture gives the order of events and the prevention link)</p>
+<p>The figure has three steps for initiation: a disrupted barrier (from a FLG mutation or from dryness caused by cleansing or the environment), allergen and irritant influx, and inflammatory T cell responses. In lecture she explained that the barrier break lets allergens and irritants enter the skin, including the dermis and subcutis, and that the immune response is what produces the redness, itching and plaques. That is why prevention is aimed at the barrier: the figure shows emollient therapy improving the skin barrier and blocking the inflammatory cascade, and she named Aquaphor as an example emollient. She called her pathophysiology explanation very brief.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;there is a barrier that is broken on the epidermis of the skin&rdquo; <span class='g2-src'>11/06 T@13603</span></p>
+<p>&ldquo;that is what's causing the inflammatory T cell response&rdquo; <span class='g2-src'>11/06 T@13998</span></p>
+<p>&ldquo;Improves the skin barrier and blocks the inflammatory cascade&rdquo; <span class='g2-src'>11/06 T@14553</span></p></div></div>
+<div class="gpt g2-block"><h5>Risk factors, atopic triad and atopic march (Patel Dermatitis slide 19)</h5>
+<p class="g2-status"><b>Status B, C</b> (lecture gives the order of the march; says some factors have no explanation)</p>
+<p>The slide lists personal or family history of atopic disorders, the atopic triad, the atopic march, a loss-of-function mutation in the FLG gene, urban living, smaller family size and higher parental education. The triad is the three diagnoses allergic rhinitis, asthma and atopic dermatitis in one patient. The lecture gives the march as a sequence from the diagram: dry skin at birth, then eczema within the first weeks or months, then food allergies, then rhinitis (nasal allergies), and last asthma. For smaller family size and higher parental education she said the data show an association and no reason was provided.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;that is called the atopic triad&rdquo; <span class='g2-src'>11/06 T@14863</span></p>
+<p>&ldquo;Atopic march refers to natural history or that progression of the allergic disease state&rdquo; <span class='g2-src'>11/06 T@14896</span></p>
+<p>&ldquo;it's the FLG gene&rdquo; <span class='g2-src'>11/06 T@15428</span></p>
+<p>&ldquo;There wasn't any reasoning provided in terms of that&rdquo; <span class='g2-src'>11/06 T@16040</span></p></div></div>
+</section>
+
+<section class="gobj" id="gobj-pl-d1-4">
+<h3>Dr. Patel, slide by slide &middot; Dermatitis Therapeutics &middot; slides 20&ndash;24</h3>
+<div class="gbar"><span>What the lecture adds (Dermatitis 20&ndash;24)</span><b>Know what triggers flares, how the disease looks at each age, and how to classify a patient by severity and by lesion status</b><i>Patel Dermatitis slide 20, 21, 22, 23, 24</i></div>
+<div class="gpt g2-block"><h5>Triggers: irritants, allergens, environment, personal factors (Patel Dermatitis slide 20)</h5>
+<p class="g2-status"><b>Status B, C</b> (why each trigger matters; everyday examples from the lecture)</p>
+<p>The slide groups triggers into irritants (tobacco smoke, air pollution, cosmetics, fragrances, astringents, irritating soaps, scrubs and detergents, dyes and preservatives), allergens (foods, wool and polyester clothing, aeroallergens such as dust mites, pollens, pet dander and molds), environment (extreme temperatures, low humidity) and personal factors (stress, excessive skin washing and sanitizing). The lecture explains the common thread: because the disease is a continuing inflammatory condition with a weak barrier, anything that irritates or dries the skin can start a flare. Examples she gave are a dyed or scented laundry detergent (she named Tide), lotion or body wash with color or scent, and either extreme cold or extreme heat. She said food triggers are personal to each patient. Low humidity and over-washing both dry the barrier, which is why moisture protects it.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;So remember, this is an ongoing chronic inflammatory condition&rdquo; <span class='g2-src'>11/06 T@16201</span></p>
+<p>&ldquo;So as simple as a dyed laundry detergent&rdquo; <span class='g2-src'>11/06 T@16722</span></p>
+<p>&ldquo;the more moisture we provide the skin barrier, the more helpful it is&rdquo; <span class='g2-src'>11/06 T@17465</span></p>
+<p>&ldquo;excessive skin washing and sanitizing because you're drying out the barrier of the skin&rdquo; <span class='g2-src'>11/06 T@17748</span></p></div></div>
+<div class="gpt g2-block"><h5>Clinical presentation by age (Patel Dermatitis slide 21)</h5>
+<p class="g2-status"><b>Status B, E</b> (what changes with age; she will give these terms on the exam)</p>
+<p>The slide compares three age groups on appearance, region and timing. Infancy (0 to 2 years): red papular rash that tends to ooze on the face, scalp, trunk, arms and legs, with onset most commonly at 3 to 6 months and the majority by age one. Childhood (2 to puberty): dry, flaky, rough, cracked skin with crusting and lichenification, with up to 90% diagnosed by age 5. Adulthood: more diffuse redness, dry scaly skin and lichenification, less on the face and more on the hands, neck, inner elbows, back of the knees and ankles. In lecture she said lichenification is the silvery scaly plaque and that she will put these descriptive terms in exam cases so the student can tell whether lichenification is present. The lecture sentence on adult resolution (70 to 90% on the slide) is garbled in the captions, so the slide governs.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;by the time they turn 1, you most likely will see a diagnosis&rdquo; <span class='g2-src'>11/06 T@18317</span></p>
+<p>&ldquo;that's the terms and details that I'll also provide on the exam&rdquo; <span class='g2-src'>11/06 T@18774</span></p></div></div>
+<div class="gpt g2-block"><h5>Age of onset predicts persistence (Patel Dermatitis slide 22)</h5>
+<p class="g2-status"><b>Status B</b> (the slide is a graph of persistence by age at onset; the lecture states the rule)</p>
+<p>The slide is a graph of the proportion of surveys reporting persistent disease by age, with separate early-onset, mid-onset and late-onset curves. Its single idea is that the earlier the disease starts, the longer it lasts. In lecture she walked through ages: onset as an infant carries the highest chance of persistent disease into adulthood, onset at about 5 years old is slightly lower, and onset at about 10 years is lower still. She gave no percentages for this slide.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;the earlier the onset of the patient&rdquo; <span class='g2-src'>11/06 T@20474</span></p>
+<p>&ldquo;the longer the persistence of the disease state&rdquo; <span class='g2-src'>11/06 T@20512</span></p></div></div>
+<div class="gpt g2-block"><h5>Severity: mild, moderate, severe and the SCORAD ranges (Patel Dermatitis slide 23)</h5>
+<p class="g2-status"><b>Status B, E</b> (who calculates the score; the features she highlighted; the key feature of severe)</p>
+<p>SCORAD ranges on the slide are mild under 25, moderate 25 to 50 and severe over 50, and the slide describes each level by itching, effect on activities and effect on sleep. The lecture adds who uses the score: the physician calculates it, and the pharmacist does not calculate it but must recognize mild, moderate or severe and know what to do for each. Mild has infrequent itching with sleep still possible. Moderate has frequent itching and moderate effect on activities and sleep. Severe adds worse itching, redness, thickening, and oozing, with severe limitation of activities; she called nightly loss of sleep the biggest key. She said patient cases will define the level through these characteristics.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;this is our main AAD recommendation that we follow&rdquo; <span class='g2-src'>11/06 T@20704</span></p>
+<p>&ldquo;that is on the physician to do so&rdquo; <span class='g2-src'>11/06 T@21125</span></p>
+<p>&ldquo;But we do need to understand if it's mild, moderate, and severe&rdquo; <span class='g2-src'>11/06 T@21160</span></p>
+<p>&ldquo;biggest key here is nightly loss of sleep&rdquo; <span class='g2-src'>11/06 T@21892</span></p>
+<p>&ldquo;I've highlighted and underlined the certain characteristics that I want you to understand&rdquo; <span class='g2-src'>11/06 T@21942</span></p></div></div>
+<div class="gpt g2-block"><h5>Lesion status: acute, subacute, chronic (Patel Dermatitis slide 24)</h5>
+<p class="g2-status"><b>Status B, E</b> (the slide is a photo table; the lecture gives the distinguishing feature of each step)</p>
+<p>Severity and status are two separate questions. The slide shows photos of acute lesions (acutely inflamed papules, vesicles, exudate and crusts), subacute lesions (dry, inflamed papules, patches or plaques) and chronic lesions (lichenified papules or plaques, fine scale, changes in pigment). The lecture gives the rule for telling them apart: acute is inflammation and redness without dryness, subacute adds dryness to continuing inflammation, and chronic is lichenification. She said she wants both the severity and the status defined for a patient.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;the difference between subacute and acute is that drying factor of the skin&rdquo; <span class='g2-src'>11/06 T@22818</span></p>
+<p>&ldquo;that is the difference between chronic and subacute&rdquo; <span class='g2-src'>11/06 T@22757</span></p>
+<p>&ldquo;we also need to define if it's acute, sub-acute or chronic&rdquo; <span class='g2-src'>11/06 T@22962</span></p></div></div>
+</section>
+
+<section class="gobj" id="gobj-pl-d1-5">
+<h3>Dr. Patel, slide by slide &middot; Dermatitis Therapeutics &middot; slides 25&ndash;29</h3>
+<div class="gbar"><span>What the lecture adds (Dermatitis 25&ndash;29)</span><b>Know the complications, apply severity and status to a case, state the treatment goals, and begin treatment by protecting the skin barrier</b><i>Patel Dermatitis slide 25, 26, 27, 28, 29</i></div>
+<div class="gpt g2-block"><h5>Complications (Patel Dermatitis slide 25)</h5>
+<p class="g2-status"><b>Status B, C</b> (how itching leads to infection; family impact)</p>
+<p>The slide lists sleep disturbance, depression, effects on quality of life and skin infections (S. aureus, and a tendency toward herpes simplex virus infection). In lecture she explained the path to infection: itching leads to scratching with nails, scratching causes bleeding and oozing, and open skin is at risk for infection. She also said that quality of life can be affected for the family when the patient is young enough to need care, and that the effect on mental health can be severe. The organisms named on the slide were not discussed in lecture.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;that may cause possible oozing that is at a risk for an infection&rdquo; <span class='g2-src'>11/06 T@23555</span></p>
+<p>&ldquo;as well as the family's quality of life&rdquo; <span class='g2-src'>11/06 T@23262</span></p></div></div>
+<div class="gpt g2-block"><h5>Case: adult atopic dermatitis, severity and status (Patel Dermatitis slide 26)</h5>
+<p class="g2-status"><b>Status B, C, E</b> (how she solved it: score first, then dryness and lichenification)</p>
+<p>The case gives a 21-year-old man with persistent itching of the knees and elbows for 2 to 3 months, atopic dermatitis since age 10, loratadine 10 mg daily for allergic rhinitis, Jergens lotion, dry and inflamed skin with no infection or lichenified plaques, and a SCORAD of 40. The chief complaint on the slide is that the itching will not stop and he does not sleep well. She answered in two steps. Severity comes from the score: 40 falls in the moderate range of 25 to 50. Status comes from the exam findings: dryness without lichenification is subacute, and lichenification would make it chronic. The key was moderate subacute; most students chose it, followed by moderate acute. Before the poll she told the class to pay attention to the terms and key points that separate the levels.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;So remember the terms and the biggest key points&rdquo; <span class='g2-src'>11/06 T@25317</span></p>
+<p>&ldquo;40 falls between 25 and 50&rdquo; <span class='g2-src'>11/06 T@26141</span></p>
+<p>&ldquo;What would we take out of this sentence? The dry part, right?&rdquo; <span class='g2-src'>11/06 T@26624</span></p>
+<p>&ldquo;So lichenification, chronic, dryness, subacute&rdquo; <span class='g2-src'>11/06 T@26804</span></p>
+<p>&ldquo;the answer is moderate subacute&rdquo; <span class='g2-src'>11/06 T@27007</span></p></div></div>
+<div class="gpt g2-block"><h5>Treatment goals (Patel Dermatitis slide 27)</h5>
+<p class="g2-status"><b>Status B, C</b> (what the antibiotic and water-loss goals mean)</p>
+<p>The goals on the slide are to eliminate triggers, reduce symptoms (pruritus and dermatitis), prevent flares, prevent secondary infections, minimize adverse drug reactions and reduce transepidermal water loss (TEWL). The slide says not to use oral antibiotics or topical antibiotics over large areas of skin; in lecture she placed that under minimizing side effects. Reducing water loss ties back to the skin barrier: the goal is to strengthen the barrier so allergens and irritants cannot pass into the deeper layers, using emollients and moisturizing.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;we're not using oral antibiotics or topical antibiotics over large areas of skin&rdquo; <span class='g2-src'>11/06 T@27565</span></p>
+<p>&ldquo;We also need to reduce the transepidermal water loss&rdquo; <span class='g2-src'>11/06 T@27651</span></p></div></div>
+<div class="gpt g2-block"><h5>Patient care process (Patel Dermatitis slide 28)</h5>
+<p class="g2-status"><b>Status C</b> (the slide is a title; the lecture lists the steps)</p>
+<p>The slide is only a section title. When she introduced it she said the pharmacist-patient care process applies to every treatment decision in these lectures and listed its steps: collect information from the patient, assess it, create a plan, implement the plan, and follow up, monitor and evaluate. Earlier she said the objectives on slides 7 and 8 follow this process.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;our patient care process will always apply&rdquo; <span class='g2-src'>11/06 T@28019</span></p>
+<p>&ldquo;collecting the information from the patient&rdquo; <span class='g2-src'>11/06 T@28197</span></p></div></div>
+<div class="gpt g2-block"><h5>Fix the skin barrier (Patel Dermatitis slide 29)</h5>
+<p class="g2-status"><b>Status B, C</b> (the first step is not stripping the skin; the scrub question)</p>
+<p>The slide has three aims: do not strip off the weakened epidermis (gentle cleansers, limited bathing time), help re-establish the epidermis (thick emollients, maintained hydration) and reduce inflammation (topical medications to reduce inflammation and decrease scratching). She called not stripping the epidermis the first step, because the barrier is what is already broken. That also means gentle body washes with limited dyes and fragrances. A student asked about bathing tools such as a brush: abrasion on plaques is avoided, other body areas on an adult can be exfoliated only very gently, and she does not recommend a sugar-type scrub because the epidermis is already broken.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;So don't strip off the weakened epidermis&rdquo; <span class='g2-src'>11/06 T@29178</span></p>
+<p>&ldquo;limiting any dyes and fragrances to those body washes&rdquo; <span class='g2-src'>11/06 T@29300</span></p>
+<p>&ldquo;Very limited in terms of the abrasion to the skin would be key&rdquo; <span class='g2-src'>11/06 T@29876</span></p>
+<p>&ldquo;I'm not recommending a body scrub per se&rdquo; <span class='g2-src'>11/06 T@30193</span></p>
+<p>&ldquo;reducing inflammation comes from the topical medications that we'll prescribe&rdquo; <span class='g2-src'>11/06 T@29591</span></p></div></div>
+</section>
+
+<section class="gobj" id="gobj-pl-d1-6">
+<h3>Dr. Patel, slide by slide &middot; Dermatitis Therapeutics &middot; slides 30&ndash;33</h3>
+<div class="gbar"><span>What the lecture adds (Dermatitis 30&ndash;33)</span><b>Treat atopic dermatitis first with non-drug care: bathing, moisturizers chosen by thickness, and clear points for referral</b><i>Patel Dermatitis slide 30, 31, 32, 33</i></div>
+<div class="gpt g2-block"><h5>Non-drug treatments (Patel Dermatitis slide 30)</h5>
+<p class="g2-status"><b>Status B</b> (wet wrap limits; the reason for the TCI exclusion is not in the materials)</p>
+<p>The slide lists bathing practices, gentle cleansers, a wet wrap, soft cotton clothing, avoiding known triggers and decreasing stress. Slide 20 lists wool and polyester as clothing triggers. Two limits on the wet wrap are on the slide and were said aloud: it is short-term, and it is not used together with topical calcineurin inhibitors (TCIs). She did not explain the reason for the TCI exclusion in lecture.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;a wet wrap is very helpful, but short-term&rdquo; <span class='g2-src'>11/06 T@30597</span></p>
+<p>&ldquo;we're not gonna use this with our TCIs&rdquo; <span class='g2-src'>11/06 T@30645</span></p></div></div>
+<div class="gpt g2-block"><h5>Bathing practices, bleach baths and occlusive moisturizer (Patel Dermatitis slide 31)</h5>
+<p class="g2-status"><b>Status B, C, D, E</b> (the order of recommendations; how cautious she is about bleach; oatmeal frequency conflicts with the slide)</p>
+<p>Bath: she explained the 10-minute lukewarm bath as water neither hot nor cold, dye-free and fragrance-free cleansers, and patting and not scrubbing because the epidermis is already broken. Moisturizer: apply an occlusive moisturizer right after the bath so the water is trapped on the skin and the barrier is strengthened. Bleach: the slide gives 0.005% sodium hypochlorite, a half cup in a full tub, twice a week, to prevent recurrent bacterial skin infections in moderate to severe disease. She taught it because the guidelines state it, but called it last line because it can irritate the skin.</p>
+<div class="g2-note"><span class="g2-k">Conflict: how often to add oatmeal or baking soda</span><p>Slide: "May add oatmeal or baking soda to bath water daily." Lecture: oatmeal or baking soda baths are used, but she limited how often. An exam written from her lecture would key the limited use: she did not repeat "daily" and said to limit how often, and no number of baths is stated anywhere in the materials. Her words: &ldquo;very limited in terms of how often to do this&rdquo; <span class='g2-src'>11/06 T@31306</span>.</p></div>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;So lukewarm water, so not hot, not cold&rdquo; <span class='g2-src'>11/06 T@30950</span></p>
+<p>&ldquo;We're patting it down. We're not scrubbing it.&rdquo; <span class='g2-src'>11/06 T@31092</span></p>
+<p>&ldquo;you wanna go ahead and apply that moisturization right away&rdquo; <span class='g2-src'>11/06 T@32505</span></p>
+<p>&ldquo;this is only for patients moderate to severe&rdquo; <span class='g2-src'>11/06 T@31792</span></p>
+<p>&ldquo;my recommendation is, this is very much so last line recommendation&rdquo; <span class='g2-src'>11/06 T@32244</span></p>
+<p>&ldquo;But keep in mind, it can also irritate it even more&rdquo; <span class='g2-src'>11/06 T@32092</span></p></div></div>
+<div class="gpt g2-block"><h5>Over-the-counter moisturizers (Patel Dermatitis slide 32)</h5>
+<p class="g2-status"><b>Status B</b> (why petrolatum is the most effective; why lotions need repeat application; humectant limit)</p>
+<p>Slide categories: petroleum-containing (Aquaphor, Eucerin, Lubriderm), ceramide-containing (CeraVe, Aveeno eczema therapy), urea-containing (Carmol 10% and 20%, Lac-Hydrin 5%) and emollients (Cetaphil lotion, Keri Original, Neutrogena lotion). The lecture supplies the ranking and the reason for it. Petrolatum products are the most effective because they are the thickest and last longest, though they can be greasy and uncomfortable; Aquaphor is petrolatum alone and Eucerin and Lubriderm add mineral oil. Ceramides are already in the skin barrier, so a ceramide cream supplies ceramides the barrier already contains. Urea products are humectants and give less moisturizing. Lotions contain more water and absorb quickly, so they are less effective and need repeat use, which the slide gives as 3 or more times a day after bathing.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;Aquaphor is the only petrolatum&rdquo; <span class='g2-src'>11/06 T@33325</span></p>
+<p>&ldquo;The most effective on this chart is the petrolatum-containing moisturizers&rdquo; <span class='g2-src'>11/06 T@34600</span></p>
+<p>&ldquo;it's the thickest and it'll last the longest&rdquo; <span class='g2-src'>11/06 T@34681</span></p>
+<p>&ldquo;we have natural ceramides in our skin barrier&rdquo; <span class='g2-src'>11/06 T@33433</span></p>
+<p>&ldquo;lotions have a lot more water containing properties in them&rdquo; <span class='g2-src'>11/06 T@34331</span></p>
+<p>&ldquo;You would have to apply a lotion multiple times in a day&rdquo; <span class='g2-src'>11/06 T@34415</span></p></div></div>
+<div class="gpt g2-block"><h5>Over-the-counter self-care follow-up (Patel Dermatitis slide 33)</h5>
+<p class="g2-status"><b>Status B, C</b> (the referral triggers said aloud; the slide adds skin atrophy)</p>
+<p>The slide gives two referral points: no improvement or worsening after 2 to 3 days of self-treatment, and skin atrophy or infection while using a topical steroid, in which case the steroid is stopped and the patient is referred to a physician. In lecture she called the first a straight referral, and she described signs of infection as oozing and bleeding, and applied the second to a patient who is using non-drug care and a medication ointment. Skin atrophy was not discussed in lecture. This is the follow-up objective (objective 7) applied to atopic dermatitis.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;that would be a straight referral to the provider&rdquo; <span class='g2-src'>11/06 T@34872</span></p>
+<p>&ldquo;If the skin shows any sort of infection, oozing, bleeding&rdquo; <span class='g2-src'>11/06 T@34927</span></p></div></div>
+</section>
+
+<section class="gobj" id="gobj-pl-d1-7">
+<h3>Dr. Patel, slide by slide &middot; Dermatitis Therapeutics &middot; slides 34&ndash;36</h3>
+<div class="gbar"><span>What the lecture adds (Dermatitis 34&ndash;36)</span><b>Name the drug classes for atopic dermatitis, and state topical corticosteroid counseling and the OTC hydrocortisone 1% limits</b><i>Patel Dermatitis slide 34, 35, 36</i></div>
+<div class="gpt g2-block"><h5>Pharmacologic treatments: the five classes (Patel Dermatitis slide 34)</h5>
+<p class="g2-status"><b>Status C</b> (the slide is a list; the lecture ties it to the earlier lectures and to how often steroids return)</p>
+<p>The slide names five treatment groups: topical corticosteroids, topical calcineurin inhibitor, topical phosphodiesterase-4 inhibitor, a monoclonal antibody (IL-4) antagonist injection, and systemic immunosuppressants. In lecture she told the class to apply what they learned in the medicinal chemistry and pharmacology lectures to these classes, and noted that topical corticosteroids will keep appearing across the therapeutics series. The detail of each class follows on the next slides.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;you will continuously see these medications throughout the therapeutics series&rdquo; <span class='g2-src'>11/06 T@35752</span></p></div></div>
+<div class="gpt g2-block"><h5>Topical corticosteroids: monograph (Patel Dermatitis slide 35)</h5>
+<p class="g2-status"><b>Status B, C</b> (why use a drug with these adverse effects; what absorption depends on; counseling details; combination products)</p>
+<p>The slide lists indications, adverse reactions (burning, tingling, cracking, itching, acne, skin atrophy, delayed wound healing), contraindications (including diaper dermatitis), absorption, and counseling points (clean, dry area, thin layer rubbed in, store cool and dry, not longer than 2 weeks). The mechanism is referred to the medicinal chemistry and pharmacology slides. She answered the obvious objection to the adverse effects: the drug is used for a very short time, and its anti-inflammatory action is the reason for using it. Counseling additions: do not store it in the bathroom or kitchen; do not wrap the medication because wrapping increases absorption; and if it goes on a body part that clothing will cover, let it air dry 3 to 5 minutes <span class="g2-tonly" title="Transcript only: not on the slide">Transcript-only, verify against slide</span>. Absorption depends on the age of the patient, skin integrity, skin thickness and the site. Combination steroid products are not recommended for atopic dermatitis, and if one contains clobetasol, its very high potency is the one followed.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;I want you to refer back to Medchem&rdquo; <span class='g2-src'>11/06 T@35591</span></p>
+<p>&ldquo;we're utilizing them for a very short period of time&rdquo; <span class='g2-src'>11/06 T@36243</span></p>
+<p>&ldquo;our main property and our main reason to utilizing this is decreasing the inflammation&rdquo; <span class='g2-src'>11/06 T@36411</span></p>
+<p>&ldquo;the absorption really depends on the age of the patient, the skin integrity&rdquo; <span class='g2-src'>11/06 T@36650</span></p>
+<p>&ldquo;this is not gonna be in the bathroom&rdquo; <span class='g2-src'>11/06 T@37076</span></p>
+<p>&ldquo;we don't want to wrap the medication cause that'll increase the absorption as well&rdquo; <span class='g2-src'>11/06 T@40702</span></p>
+<p>&ldquo;in the case of atopic dermatitis, only single medication agents will be recommended&rdquo; <span class='g2-src'>11/06 T@41802</span></p></div></div>
+<div class="gpt g2-block"><h5>OTC topical corticosteroid: hydrocortisone 1% (Patel Dermatitis slide 36)</h5>
+<p class="g2-status"><b>Status B, E</b> (the face rule; how the 7-day and 2-week limits fit together; her hint)</p>
+<p>The slide gives hydrocortisone 1% as the low-to-medium potency product commonly used, usable on the body and always for the face, applied twice daily for a maximum of 3 to 7 days or until the flare clears. If it is not resolved in 7 days the patient should seek assistance, and it is not applied for longer than 2 weeks. She explained the two limits: 7 days is when the patient is sent for help, and 14 days is the outer limit even for a patient who goes past 7 days anyway. She also said hydrocortisone 1% is the only strength usable on the face, and she marked that with the word hint.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;Hint, this is the only dose and strength&rdquo; <span class='g2-src'>11/06 T@37506</span></p>
+<p>&ldquo;you may use hydrocortisone 1% on your face&rdquo; <span class='g2-src'>11/06 T@37462</span></p>
+<p>&ldquo;that is straight referral&rdquo; <span class='g2-src'>11/06 T@37946</span></p>
+<p>&ldquo;we're also recommending that the patient not use it past 14 days&rdquo; <span class='g2-src'>11/06 T@37977</span></p></div></div>
+</section>
+
+<section class="gobj" id="gobj-pl-d2-1">
+<h3>Dr. Patel, slide by slide &middot; Atopic dermatitis therapeutics &middot; slides 37&ndash;40</h3>
+<div class="gbar"><span>What the lecture adds (Patel Dermatitis 37&ndash;40)</span><b>Know how vehicle and potency set the steroid choice, and why pimecrolimus and tacrolimus are second line with a boxed warning</b><i>Patel Dermatitis slide 37, 38, 39, 40</i></div>
+<div class="gpt g2-block"><h5>Topical steroid potency and vehicle (Patel Dermatitis slide 37)</h5>
+<p class="g2-status"><b>Status B, C, E</b> reasoning behind the vehicle order, practical limits added, arrows she marked</p>
+<p>The slide gives a potency table and the order of vehicles, strongest to weakest: ointment, cream, lotion, solution, gel, spray. The lecture supplies the reason. The vehicle is the thickness of the base, so a thicker base stays on the skin longer. That is why the same drug changes class with its form: mometasone 0.1% is high potency as an ointment (the red arrow) and medium potency as a cream. She asked the class to concentrate on the drugs with black arrows, the most commonly prescribed.</p>
+<p>The only OTC row is hydrocortisone 0.25%, 0.5% and 1%, lowest potency; on slide 36 she said 1% is the only strength that goes on the face. Asked about wrapping the area, she said no, because wrapping raises absorption. For a site that clothing will cover, she advised 3 to 5 minutes of air drying <span class="g2-tonly" title="Transcript only: not on the slide">Transcript-only, verify against slide</span>. For atopic dermatitis only single-ingredient products are recommended, so combination steroid creams are not advised.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;this is the only dose and strength that you can utilize on your face&rdquo; <span class='g2-src'>11/06 T@37512</span></p>
+<p>&ldquo;we don't want to wrap the medication cause that'll increase the absorption&rdquo; <span class='g2-src'>11/06 T@40702</span></p>
+<p>&ldquo;in the case of atopic dermatitis, only single medication agents will be recommended&rdquo; <span class='g2-src'>11/06 T@41802</span></p>
+</div>
+</div>
+<div class="gpt g2-block"><h5>Topical calcineurin inhibitors: why second line (Patel Dermatitis slide 38)</h5>
+<p class="g2-status"><b>Status B, C</b> why second line, why slower, why no bathing after use</p>
+<p>The slide places these drugs second line for mild-to-moderate atopic dermatitis when topical steroids give no response, and it points to a boxed warning on the next slide. The lecture ties the two together: the boxed warnings are the reason the class is held for a short period and used intermittently. Side effects (burning, tingling, cracking, itching) match the topical steroids.</p>
+<p>Two counseling points get a reason. The patient does not bathe, shower or swim right after applying so the medication is absorbed. Response also takes longer than with a steroid. The slide gives 1 to 8 weeks and she said the patient keeps applying during that time; slide 52 gives 24 to 48 hours for topical steroid improvement. She added that the class is not recommended under 2 years of age.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;it's a second-line agent used for a very short period of time&rdquo; <span class='g2-src'>11/06 T@42369</span></p>
+<p>&ldquo;we do have to continue to apply this medication a little bit longer&rdquo; <span class='g2-src'>11/06 T@43033</span></p>
+<p>&ldquo;we want the medication to absorb&rdquo; <span class='g2-src'>11/06 T@42791</span></p>
+</div>
+</div>
+<div class="gpt g2-block"><h5>Pimecrolimus and tacrolimus side by side (Patel Dermatitis slide 39)</h5>
+<p class="g2-status"><b>Status B, E</b> which drug fits which severity; her cue on what to compare</p>
+<p>The slide lists pimecrolimus (Elidel) cream 1% for mild-to-moderate eczema and tacrolimus (Protopic) ointment for moderate-to-severe eczema. Both are for children 2 years and older and adults, both are applied twice daily, and both reduce the incidence of flares. Tacrolimus comes in two strengths: 0.1% for adults older than 16 years and 0.03% from 2 years to 15 years of age.</p>
+<p>Slide 38 describes the class as a whole as mild-to-moderate; this slide narrows it by drug, and she taught it by drug. She said the bolded items (age, percentage, dosage form) are what to take from the slide. She also asked whether a calcineurin inhibitor is first or second line; the answer given in the room was second line. No one under 2 years of age is given either drug.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;mild to moderate, tacrolimus, moderate to severe&rdquo; <span class='g2-src'>11/06 T@43374</span></p>
+<p>&ldquo;our biggest things to understand with our TCIs&rdquo; <span class='g2-src'>11/06 T@44062</span></p>
+</div>
+</div>
+<div class="gpt g2-block"><h5>Boxed warning of calcineurin inhibitors (Patel Dermatitis slide 40)</h5>
+<p class="g2-status"><b>Status B, E</b> why each restriction exists; she called these the points that matter</p>
+<p>The slide lists lymphoma and skin malignancy, avoiding use on malignant or premalignant skin conditions such as cutaneous T-cell lymphoma, reassessing after 6 weeks, minimum amount on involved areas only, no established safety of intermittent use beyond 1 year, no use under 2 years, and sun protection. She stressed that the cases are rare but that the patient is still counseled, and that the class is avoided in anyone who already has a history of these conditions.</p>
+<p>The reason for reassessing at 6 weeks and for intermittent use is the safety profile: the long-term record is limited, so the smallest amount for the shortest time is used. Sun protection is part of the same warning, and she said she would teach more about sunscreen or sunblock the following week.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;We reassess treatment after 6 weeks because of the safety profile&rdquo; <span class='g2-src'>11/06 T@44614</span></p>
+<p>&ldquo;avoid it in our patients that already have a medical history of these conditions&rdquo; <span class='g2-src'>11/06 T@44528</span></p>
+<p>&ldquo;important things to kind of remember in terms of black box warnings for TCIs&rdquo; <span class='g2-src'>11/06 T@45193</span></p>
+</div>
+</div>
+</section>
+
+<section class="gobj" id="gobj-pl-d2-2">
+<h3>Dr. Patel, slide by slide &middot; Atopic dermatitis therapeutics &middot; slides 41&ndash;44</h3>
+<div class="gbar"><span>What the lecture adds (Patel Dermatitis 41&ndash;44)</span><b>Know where crisaborole and dupilumab fall in the order of treatment, and the age, vaccine, interaction and dosing details</b><i>Patel Dermatitis slide 41, 42, 43, 44</i></div>
+<div class="gpt g2-block"><h5>Crisaborole, the third-line topical (Patel Dermatitis slide 41)</h5>
+<p class="g2-status"><b>Status B</b> where it falls in the order of use</p>
+<p>The slide gives crisaborole (Eucrisa) 2% ointment, a PDE-4 inhibitor, for mild-to-moderate atopic dermatitis as the third-line option if all other options fail. Side effects are skin burning and stinging, and it is not used under 3 months of age. The lecture states the order plainly: it comes after the steroid and calcineurin inhibitor have both been tried and more help is still needed. The counseling points are the same as for the other topical classes (clean, dry area; thin layer rubbed in gently until it vanishes; no bathing, showering or swimming right after; cool, dry storage at room temperature).</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;This is a third-line option after the other two have been trialed&rdquo; <span class='g2-src'>11/06 T@45384</span></p>
+</div>
+</div>
+<div class="gpt g2-block"><h5>Crisaborole use: treat flares only (Patel Dermatitis slide 42)</h5>
+<p class="g2-status"><b>Status B, C</b> flare-only use, and what is done every day instead</p>
+<p>The slide says to apply a thin layer twice daily for mild-to-moderate eczema, to treat flares, in adults and in infants and children older than 3 months, and only when a steroid is not appropriate or as an adjunct. The lecture explains the flare idea. Atopic dermatitis is chronic, but the patient does not flare every day of the year, so the steroid, the calcineurin inhibitor and crisaborole are all used to treat flares and are not applied every day for years.</p>
+<p>What continues daily is the non-drug care (moisturizing, bathing practice, trigger avoidance).</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;we're always applying non-pharm therapy every day&rdquo; <span class='g2-src'>11/06 T@46492</span></p>
+<p>&ldquo;we're treating our flares with our medication therapy&rdquo; <span class='g2-src'>11/06 T@46547</span></p>
+</div>
+</div>
+<div class="gpt g2-block"><h5>Dupilumab (Dupixent): who, which cautions, how to inject (Patel Dermatitis slide 43)</h5>
+<p class="g2-status"><b>Status B, C, D, E</b> specialty status, drug interaction wording, live vaccine cue, injection technique</p>
+<p>The slide covers an IL-4 antagonist injection for moderate-to-severe atopic dermatitis (also asthma and other conditions), with injection site reactions, a CYP-450 caution (warfarin, cyclosporine), and no use with live vaccines or under 6 months. The lecture adds that it is a specialty medication: close monitoring by a clinical pharmacist and prior authorization are required, so it is reached through extra steps after topicals fail. She said she may put a live vaccine on a case, where the answer is not to recommend it.</p>
+<p>Counseling: the lower abdomen hurts least and the upper arm is a little uncomfortable; after refrigeration the product is left to come to room temperature for 30 to 45 minutes, which she said tends to sting less.</p>
+<div class="g2-note"><span class="g2-k">Conflict: how the CYP-450 caution is worded</span><p>Slide: the drug &ldquo;may interact with CYP-450 enzymes (may need to adjust warfarin or cyclosporine doses)&rdquo;. Lecture (captions read &ldquo;SIP 450&rdquo;): she said that with warfarin or cyclosporine it would be an interaction, and that it &ldquo;completely contraindicates&rdquo; with other CYP-450 medications, so other options are considered. An exam written from her lecture would key the slide wording (an interaction that can require a dose adjustment), since her first statement was &ldquo;that would be an interaction.&rdquo;</p></div>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;I give you guys tips of my exam questions, so write it down&rdquo; <span class='g2-src'>11/06 T@48351</span></p>
+<p>&ldquo;I may include it on a case&rdquo; <span class='g2-src'>11/06 T@48259</span></p>
+</div>
+</div>
+<div class="gpt g2-block"><h5>Dupilumab dosing by age and weight (Patel Dermatitis slide 44)</h5>
+<p class="g2-status"><b>Status B, C, D, E</b> which doses she asked for, weight conversion, one verbal slip</p>
+<p>The slide gives adult dosing (600 mg once as 2 x 300 mg, then 300 mg every other week) and weight bands for ages 6 to 17: over 60 kg uses adult dosing; 30 to 60 kg is 400 mg once (2 x 200 mg) then 200 mg every other week; 15 to 30 kg is 600 mg once (2 x 300 mg) then 300 mg every 4 weeks. Infant dosing is also on the slide; she said it is weight-based and shown for reference.</p>
+<p>Children are dosed by weight, and she said she will provide the patient&rsquo;s weight; converting pounds to kilograms is division by 2.2 <span class="g2-tonly" title="Transcript only: not on the slide">Transcript-only, verify against slide</span>. It may be combined with topical steroids or calcineurin inhibitors, and specialty pharmacies dispense it only on order because of its cost.</p>
+<div class="g2-note"><span class="g2-k">Conflict: a verbal slip about frequency</span><p>For the 15 to 30 kg band she said the dose &ldquo;does increase slightly, but remember, the frequency is also increased&rdquo; and then &ldquo;just once a month.&rdquo; The slide shows 600 mg then 300 mg every 4 weeks, which is less frequent than every other week. An exam written from her lecture would follow the slide: every 4 weeks.</p></div>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;I will provide you the weight of the patient&rdquo; <span class='g2-src'>11/06 T@49886</span></p>
+<p>&ldquo;I want you to only know the adult and children dosing&rdquo; <span class='g2-src'>11/06 T@50601</span></p>
+</div>
+</div>
+</section>
+
+<section class="gobj" id="gobj-pl-d2-3">
+<h3>Dr. Patel, slide by slide &middot; Atopic dermatitis therapeutics &middot; slides 45&ndash;48</h3>
+<div class="gbar"><span>What the lecture adds (Patel Dermatitis 45&ndash;48)</span><b>Know the later-line injectable and oral options and read the step-care algorithm by severity</b><i>Patel Dermatitis slide 45, 46, 47, 48</i></div>
+<div class="gpt g2-block"><h5>Tralokinumab, the alternative to dupilumab (Patel Dermatitis slide 45)</h5>
+<p class="g2-status"><b>Status B</b> why several injections, how it is positioned</p>
+<p>The slide lists an IL-13 inhibitor for moderate-to-severe atopic dermatitis in adults not controlled with, or unable to use, topical therapy; the slide also gives an age of over 12 years, calls it an alternative to dupilumab, and lists ocular events, upper respiratory tract infections and injection site reactions. Dosing is 600 mg as four 150 mg injections first, then 300 mg as two 150 mg injections every other week; in patients under 100 kg who have clear skin after 16 weeks, the interval can lengthen to every 4 weeks.</p>
+<p>The lecture explains why the count of injections is high: the product comes only in a 150 mg form, so each dose is built from several injections. She named upper respiratory tract infections and injection site reactions as the main side effects to know; the ocular events are on the slide only. She called the initial four injections very uncomfortable and described the drug as not an ideal option, kept for when it is needed. She also said specialty drugs for skin disease change every year, and what she teaches is what the guidelines support.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;only comes in that 150 mg dosage form&rdquo; <span class='g2-src'>11/06 T@53095</span></p>
+<p>&ldquo;what has been shown to be effective is what I'm teaching you&rdquo; <span class='g2-src'>11/06 T@52430</span></p>
+</div>
+</div>
+<div class="gpt g2-block"><h5>JAK inhibitors: last-line and heavily monitored (Patel Dermatitis slide 46)</h5>
+<p class="g2-status"><b>Status B, C</b> what refractory means, why monitoring is intense, terms defined</p>
+<p>The slide gives the mechanism (inhibition of the JAK enzyme lowers the downstream inflammatory response), the indication (moderate-to-severe atopic dermatitis at 12 years or older), three drugs with dosing, and a boxed warning table. Abrocitinib (Cibinqo) is 100 mg by mouth daily, rising to 200 mg after 12 weeks; upadacitinib (Rinvoq) is 15 mg, rising to 30 mg; ruxolitinib (Opzelura) is the topical, 60 g per week or 100 g per two weeks.</p>
+<p>The lecture defines refractory: disease not controlled with topicals or with the other systemic agents. Because the boxed warnings are serious (infections including TB, mortality, malignancy, MACE meaning CV death, MI and stroke, and DVT, PE and arterial thrombosis), the drug is the last line, kept as a specialty medication watched by specialty clinical pharmacists, with follow-up every 2 weeks <span class="g2-tonly" title="Transcript only: not on the slide">Transcript-only, verify against slide</span>. She called Rinvoq the most commonly prescribed <span class="g2-tonly" title="Transcript only: not on the slide">Transcript-only, verify against slide</span>.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;absolute last-line refractory option if we have nothing else to rely on&rdquo; <span class='g2-src'>11/06 T@55081</span></p>
+<p>&ldquo;specialty clinical pharmacists monitor the medication&rdquo; <span class='g2-src'>11/06 T@55245</span></p>
+</div>
+</div>
+<div class="gpt g2-block"><h5>Step-care algorithm: non-lesional and mild (Patel Dermatitis slide 47)</h5>
+<p class="g2-status"><b>Status B, C, E</b> how the algorithm is used, what each column means, her stated focus</p>
+<p>The slide shows the algorithm for the non-lesional and mild columns. Everyone receives basic management: liberal, frequent moisturizer (petrolatum-based in the non-lesional column; choice per patient preference in both), warm baths or showers with a non-soap cleanser once daily followed by moisturizer, trigger avoidance and attention to comorbidities. The mild column adds antiseptic measures (antibiotics if needed). For a flare, apply a low-to-medium potency topical steroid twice daily for 3 to 7 days beyond clearance, considering a calcineurin inhibitor or crisaborole.</p>
+<p>The lecture adds how to choose: severity comes from the SCORAD score, a non-lesional patient shows no plaques, rash or signs of eczema, and the steroid always starts low and moves up as it is tolerated. The ceiling is 14 days <span class="g2-tonly" title="Transcript only: not on the slide">Transcript-only, verify against slide</span>, stated as a student answer to her question. On 11/12 she told the class to focus on treatment algorithms and to understand that patient specifics matter.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;you can always increase up once they are tolerating it&rdquo; <span class='g2-src'>11/06 T@56563</span></p>
+<p>&ldquo;Focus on treatment algorithms, understand patient specifics matter&rdquo; <span class='g2-src'>11/12 T@95722</span></p>
+</div>
+</div>
+<div class="gpt g2-block"><h5>Step-care algorithm: moderate and severe (Patel Dermatitis slide 48)</h5>
+<p class="g2-status"><b>Status B, C</b> the order of lines, face versus body, when to refer</p>
+<p>The slide gives moderate: basic management plus a topical anti-inflammatory on previous or potential symptom areas. Maintenance steroid is low potency 1 to 2 times daily including the face, or medium potency 1 to 2 times weekly except the face; or a maintenance calcineurin inhibitor (pimecrolimus, tacrolimus) 1 to 2 times daily or 2 to 3 times weekly; or crisaborole 2% twice daily. Acute: medium-to-high potency steroid twice daily for 3 to 7 days beyond clearance; if not resolved in 7 days, consider nonadherence, infection, misdiagnosis, contact allergy to medications, or referral. Severe: basic management plus referral to an AD specialist (phototherapy, dupilumab, systemic immunosuppressants).</p>
+<p>The lecture orders the topical choices: steroid first line, calcineurin inhibitor second, crisaborole third. The low-potency steroid that may be used on the face is hydrocortisone 1%, so a patient can hold two different steroids, one for the face and one for the body. The acute step moves up in potency, and a patient not resolved at 7 days is referred.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;basic management and topical 1st line, 2nd line, 3rd line&rdquo; <span class='g2-src'>11/06 T@57555</span></p>
+<p>&ldquo;Severe patient, usually referral to an AD specialist&rdquo; <span class='g2-src'>11/06 T@57618</span></p>
+</div>
+</div>
+</section>
+
+<section class="gobj" id="gobj-pl-d2-4">
+<h3>Dr. Patel, slide by slide &middot; Atopic dermatitis therapeutics &middot; slides 49&ndash;54</h3>
+<div class="gbar"><span>What the lecture adds (Patel Dermatitis 49&ndash;54)</span><b>Apply the algorithm to a patient, then counsel on the pharmacist role, daily care, how to apply medication, when to seek help and access to treatment</b><i>Patel Dermatitis slide 49, 50, 51, 52, 53, 54</i></div>
+<div class="gpt g2-block"><h5>Case: adult atopic dermatitis, first-line maintenance (Patel Dermatitis slide 49)</h5>
+<p class="g2-status"><b>Status B, C</b> worked answer applying the algorithm</p>
+<p>The slide is the adult case: a 21-year-old man with itching on the knees and elbows for 2 to 3 months, atopic dermatitis since age 10 with corticosteroids helping in the past, loratadine 10 mg daily, dry and inflamed skin with no infection and no lichenified plaques, and a SCORAD total of 40. In lecture she brought the patient back with the severity and status already decided, moderate subacute (the reasoning is on slide 26). She asked for the first-line maintenance therapy, and the key word was first-line: basic management applies to all patients and a topical corticosteroid is the first-line topical.</p>
+<p>For the prescription details she asked for the potency. The patient is not currently using a steroid, so the plan starts again at low potency, hydrocortisone 1%, twice a day for 3 to 7 days. A student asked about the past steroid use; her answer was that history of benefit does not skip the low-potency start.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;it would be important that we start at a low potency corticosteroid&rdquo; <span class='g2-src'>11/06 T@59853</span></p>
+<p>&ldquo;basic management we know is applied to all patients&rdquo; <span class='g2-src'>11/06 T@59188</span></p>
+<p>&ldquo;we're starting again from low potency&rdquo; <span class='g2-src'>11/06 T@60841</span></p>
+</div>
+</div>
+<div class="gpt g2-block"><h5>Pharmacist role in atopic dermatitis (Patel Dermatitis slide 50)</h5>
+<p class="g2-status"><b>Status B</b> what each role means in practice</p>
+<p>The slide lists five roles: improve adherence through education, optimize and monitor therapy, recommend appropriate moisturizers and OTC products, give patient-friendly education on therapy plans, and provide accessible support. The lecture turns each into a task. Adherence means the patient knows how to use each medication, how often and why it matters. Monitoring means checking how the patient applies the medication and how the skin responds, so use is safe and effective. Accessible support means giving the patient contact information so the patient understands what to do.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;always provide some sort of contact information&rdquo; <span class='g2-src'>11/06 T@62040</span></p>
+</div>
+</div>
+<div class="gpt g2-block"><h5>Non-drug counseling for atopic dermatitis (Patel Dermatitis slide 51)</h5>
+<p class="g2-status"><b>Status B, C</b> wet wrap rule, protection from scratching</p>
+<p>The slide gives six points: avoid triggers (tight clothing; moderate temperature and low humidity), short showers or baths in tepid water with a non-soap cleanser, sponge baths in place of full baths, pat dry, cool tap water compresses for 5 to 20 minutes 4 to 6 times daily on weeping lesions, and short, smooth, clean fingernails with cotton gloves or socks at night.</p>
+<p>The lecture adds the rule that the cool, wet wrap is not used together with the topical calcineurin inhibitors, and that it is for open, oozing or bleeding lesions. She also said sponge baths can be used but how often matters. For young children the cotton covering over the lesions keeps them out of sight, and gloves may be needed so the child does not scratch.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;we're not applying it with our TCIs&rdquo; <span class='g2-src'>11/06 T@63011</span></p>
+<p>&ldquo;out of sight, out of mind&rdquo; <span class='g2-src'>11/06 T@63226</span></p>
+</div>
+</div>
+<div class="gpt g2-block"><h5>Counseling for topical medication (Patel Dermatitis slide 52)</h5>
+<p class="g2-status"><b>Status B, D, E</b> sequence of application, the 7-day number</p>
+<p>The slide gives: wash hands before and after; emollient within 3 minutes after bathing while the skin is damp; a thin layer of medication on the affected areas; topical steroid 1 to 2 times daily, not longer than 7 days; improvement in 24 to 48 hours; lesions could get worse, especially in winter and summer.</p>
+<p>The lecture adds that the patient can wait a few minutes between the emollient and the medication, that the 24 to 48 hour improvement is quick compared with the calcineurin inhibitors (1 to 8 weeks), and that worsening with weather means the patient should keep up the skin care and not expect a quick solution.</p>
+<div class="g2-note"><span class="g2-k">Conflict: 7 days or 2 weeks</span><p>Slide 52 says not longer than 7 days. Slide 36 and her lecture also say not longer than 2 weeks. She gave 7 days as the point to seek help and 2 weeks as the limit never exceeded. An exam written from her lecture would key 7 days for when to see a provider and 2 weeks as the maximum use.</p></div>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;that 7-day is the important number to remember&rdquo; <span class='g2-src'>11/06 T@64101</span></p>
+</div>
+</div>
+<div class="gpt g2-block"><h5>Medication access and cost (Patel Dermatitis slide 53)</h5>
+<p class="g2-status"><b>Status C</b> what the pharmacist does about cost and denial</p>
+<p>The slide lists high out-of-pocket costs, prior authorization and step therapy as barriers, appeals and peer-to-peer conversations after a denial, and manufacturer assistance programs. The lecture adds that some insurers treat dermatology conditions as specialty or not chronic, which raises patient cost. Before prescribing, the pharmacist can run the numbers and discuss cost with the patient. If a prior authorization is denied, she sends an appeal and does not accept the denial. Because pharmacists are not signed providers in Texas at this point, the primary care provider writes the statement of need. These steps apply to the calcineurin inhibitors, dupilumab and the other specialty drugs, not to topical steroids.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;we're not accepting a denial&rdquo; <span class='g2-src'>11/06 T@66065</span></p>
+<p>&ldquo;We're sending an appeal&rdquo; <span class='g2-src'>11/06 T@66099</span></p>
+</div>
+</div>
+<div class="gpt g2-block"><h5>Same case: counseling answers (Patel Dermatitis slide 54)</h5>
+<p class="g2-status"><b>Status C, E</b> what the answers had to include</p>
+<p>The slide repeats the adult case. The lecture asks what to tell this patient to use the medication appropriately. The answers she accepted: apply a thin layer to the affected areas, rub it in until it disappears, let it air dry, wash hands before and after, and seek help at 7 days. She then widened the question: the steps from beginning to end, how long to watch the symptoms before returning to the provider, how long the medication is not to be used, plus the daily non-drug care.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;What are the steps from beginning to end&rdquo; <span class='g2-src'>11/06 T@67781</span></p>
+<p>&ldquo;don't forget about those counseling points as well&rdquo; <span class='g2-src'>11/06 T@68226</span></p>
+</div>
+</div>
+</section>
+
+<section class="gobj" id="gobj-pl-d2-5">
+<h3>Dr. Patel, slide by slide &middot; Diaper dermatitis and incontinence-associated dermatitis &middot; slides 55&ndash;59</h3>
+<div class="gbar"><span>What the lecture adds (Patel Dermatitis 55&ndash;59)</span><b>Know what causes diaper dermatitis and how prevention differs for infants and for adults who wear diapers</b><i>Patel Dermatitis slide 55, 56, 57, 58, 59</i></div>
+<div class="gpt g2-block"><h5>Diaper dermatitis, section title (Patel Dermatitis slide 55)</h5>
+<p class="g2-status"><b>Status A</b> On the slide and complete; nothing added in lecture</p>
+</div>
+<div class="gpt g2-block"><h5>Causes of diaper dermatitis (Patel Dermatitis slide 56)</h5>
+<p class="g2-status"><b>Status B</b> what each cause does to the skin</p>
+<p>The slide names six causes: occlusion from the diaper, moisture, microbes, GI tract proteolytic enzymes and bile salts, mechanical chafing and friction, and alkaline skin pH. The lecture explains how they combine. The diaper closes the area off and increases moisture on the skin, and an active infection can be present. Enzymes and bile salts from the GI tract are a further cause, and so is friction of the diaper on the skin. When the skin pH becomes more alkaline, the skin reacts with dermatitis, which is why pH comes up again with breastfeeding on the next slide.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;the skin pH is more alkaline, then that can also cause a dermatitis reaction&rdquo; <span class='g2-src'>11/06 T@69557</span></p>
+</div>
+</div>
+<div class="gpt g2-block"><h5>Preventing diaper rash in infants (Patel Dermatitis slide 57)</h5>
+<p class="g2-status"><b>Status B, D, E</b> practical detail, who counts as an infant, what she will not test</p>
+<p>The slide gives changing frequency (newborns every 2 hours, infants every 3 to 4 hours), disposable diapers with fewer rashes, cleaning at every change with no difference between cloth, water, mild soap or alcohol-free wet wipe, drying before barrier cream, barrier cream, and breastfeeding with fewer rashes from pH maintenance. The lecture adds that disposable diapers are the best choice because cloth diapers carry more infection risk, and that the area is dried before the cream and the new diaper.</p>
+<p>A pull-up, training diaper or swim diaper counts as a diaper, and she put the diaper-wearing age at under about 2 years. She called a newborn up to about 3 months and an infant 6 months and older <span class="g2-tonly" title="Transcript only: not on the slide">Transcript-only, verify against slide</span>, then said she will not test those labels. Breast milk lowers rash episodes, which she linked to skin pH.</p>
+<div class="g2-note"><span class="g2-k">Conflict: how often to change the diaper</span><p>Slide 57: newborns every 2 hours and infants every 3 to 4 hours. Slide 62 (the ABCDE table) says every 2 hours, and in the 5-month-old case the answer she accepted was ABCDE, every 2 hours. An exam written from her lecture would key every 2 hours for ABCDE, since she said the newborn and infant labels are not tested.</p></div>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;I'm not gonna test you on this. So don't worry&rdquo; <span class='g2-src'>11/06 T@71062</span></p>
+</div>
+</div>
+<div class="gpt g2-block"><h5>Signs, symptoms and severity of diaper dermatitis (Patel Dermatitis slide 58)</h5>
+<p class="g2-status"><b>Status B</b> how the severity pictures are read, what it is not</p>
+<p>The slide lists erythema in patches (buttocks, upper thighs, abdomen, genital region), red to bright red, shiny, wet-looking patches, and five severity pictures A (slight) to E (severe). The lecture says how the pictures differ by how far the redness goes past the skin crease: slight stays at the crease, mild spreads a little past it, moderate covers more, moderate to severe reaches a wider area on the cheeks, and severe covers both cheeks. Worse cases can include dryness, bleeding and oozing.</p>
+<p>She separated it from atopic dermatitis: this is a rash without lichenification, so the signs from the atopic dermatitis lecture are not expected.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;you're not gonna see symptoms of atopic dermatitis here&rdquo; <span class='g2-src'>11/06 T@72706</span></p>
+</div>
+</div>
+<div class="gpt g2-block"><h5>Incontinence-associated dermatitis in adults (Patel Dermatitis slide 59)</h5>
+<p class="g2-status"><b>Status B, C</b> why each prevention item applies to adults</p>
+<p>The slide lists cleansing routine (bath oil or pH neutral foam, patting with a soft cloth), skin hydration, barrier cream, pressure sore prevention, and good nutrition (protein, vitamin status). The lecture says adults are also prone to diaper dermatitis, based on infrequent diaper changes, so the cleansing routine, hydration and barrier cream apply here too.</p>
+<p>Adults who wear diapers are most likely bedridden, so constant pressure on the area can cause a sore, and the pressure sore is prevented as part of care. She linked good nutrition to the gut and the enzymes the GI tract makes. She did not discuss the protein or vitamin items on the slide.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;adults that wear diapers, they're most likely bedridden&rdquo; <span class='g2-src'>11/06 T@73254</span></p>
+</div>
+</div>
+</section>
+
+<section class="gobj" id="gobj-pl-d2-6">
+<h3>Dr. Patel, slide by slide &middot; Diaper dermatitis and incontinence-associated dermatitis &middot; slides 60&ndash;64</h3>
+<div class="gbar"><span>What the lecture adds (Patel Dermatitis 60&ndash;64)</span><b>Know how to classify incontinence-associated dermatitis, apply ABCDE, and choose a zinc oxide skin protectant</b><i>Patel Dermatitis slide 60, 61, 62, 63, 64</i></div>
+<div class="gpt g2-block"><h5>Categories of incontinence-associated dermatitis (Patel Dermatitis slide 60)</h5>
+<p class="g2-status"><b>Status B, C</b> how infection changes the appearance</p>
+<p>The slide is a categorization chart: category 1 is persistent redness (1A without clinical signs of infection, 1B with them) and category 2 is skin loss (2A without, 2B with). The lecture explains the infection signs. In category 1 the redness is persistent, and infection may be present if there is oozing or bleeding; the skin looks paler than normal. White scales can be a clinical sign of infection. Category 2 means skin loss, which can bleed; with infection the skin is paler and less bright red, and there can be peeling and bleeding.</p>
+<p>In practice, an infected-looking area (oozing, bleeding, paler skin, white scales) moves the patient away from self-care, which links to the exclusions list on slide 68.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;Category 2, 2A and 2B is skin loss&rdquo; <span class='g2-src'>11/06 T@74052</span></p>
+<p>&ldquo;the white scales, that could also be a clinical sign of an infection&rdquo; <span class='g2-src'>11/06 T@73982</span></p>
+</div>
+</div>
+<div class="gpt g2-block"><h5>Therapy goals (Patel Dermatitis slide 61)</h5>
+<p class="g2-status"><b>Status A</b> On the slide and complete; nothing added in lecture</p>
+</div>
+<div class="gpt g2-block"><h5>ABCDE for diaper dermatitis (Patel Dermatitis slide 62)</h5>
+<p class="g2-status"><b>Status B, C, E</b> what each letter means in care</p>
+<p>The slide table gives A = Air (allow diaper-free time), B = Barrier (apply a barrier skin protectant liberally with each diaper change), C = Cleansing (gently cleanse with soft cloth and warm water, or a baby wipe when stool is present), D = Diaper (change every 2 hours and as soon as soiled; absorbent disposable diapers), E = Education (parents and caregivers, verifying understanding to ensure adherence).</p>
+<p>The lecture adds that air time comes after the soiled diaper is removed and the area is cleaned, that adults may need to bathe the area more because it is larger, and that modern diapers have a wetness indicator line a caregiver can watch. Education includes the caregivers and nurses, with the non-drug care and the reason it matters. In the 5-month-old case the father was asked what to change now, and she accepted ABCDE with a change every 2 hours.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;I want you guys to remember A B C D E&rdquo; <span class='g2-src'>11/06 T@74781</span></p>
+<p>&ldquo;allow time for the skin to dry&rdquo; <span class='g2-src'>11/06 T@74971</span></p>
+</div>
+</div>
+<div class="gpt g2-block"><h5>OTC treatment with skin protectants (Patel Dermatitis slide 63)</h5>
+<p class="g2-status"><b>Status B, E</b> what a protectant is for, which ones she will teach</p>
+<p>The slide says to follow ABCDE and apply skin protectants, which give a physical barrier and lubrication. The FDA approved 17 ingredients for infant diaper dermatitis; apply liberally in the diaper or perineal area at every diaper change or incontinence care, remove the old product gently, completely cover the red areas with the new product, and keep using it after the rash heals to prevent a recurrence.</p>
+<p>The lecture adds that the old product is removed by wiping with a diaper wipe or by washing the area, and that use continues after healing to prevent future dermatitis. She said she would teach the top ingredients from the list of 17 and not the whole list.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;the top ones that I want you guys to know&rdquo; <span class='g2-src'>11/06 T@76758</span></p>
+</div>
+</div>
+<div class="gpt g2-block"><h5>Zinc oxide and petrolatum products (Patel Dermatitis slide 64)</h5>
+<p class="g2-status"><b>Status B, E</b> which ingredient is the active one</p>
+<p>The slide gives zinc oxide 1 to 40% as a common and excellent protectant that is usually thick and tacky, petrolatum 30 to 100% as the ointment base, and combination products (Desitin; A &amp; D Ointment; Boudreaux&rsquo;s Butt Paste; Dr. Smith&rsquo;s ointment; Burt&rsquo;s Bees Baby Diaper Rash Ointment). The lecture ranks zinc oxide as the most commonly used ingredient in diaper creams and the most recommended and effective, thick and sticky to the touch.</p>
+<p>The pairing is the point: zinc oxide is the active ingredient and petrolatum is the base, so the most effective products combine the two. A petrolatum product by itself (she used Aquaphor in the case) moisturizes but does not treat the rash.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;zinc oxide, active ingredient, petrolatin is the base for the most effective diaper cream&rdquo; <span class='g2-src'>11/06 T@77837</span></p>
+</div>
+</div>
+</section>
+
+<section class="gobj" id="gobj-pl-d2-7">
+<h3>Dr. Patel, slide by slide &middot; Diaper dermatitis and incontinence-associated dermatitis &middot; slides 65&ndash;68</h3>
+<div class="gbar"><span>What the lecture adds (Patel Dermatitis 65&ndash;68)</span><b>Know which products are not used for diaper dermatitis, the 7-day follow-up, the complications and the referral list</b><i>Patel Dermatitis slide 65, 66, 67, 68</i></div>
+<div class="gpt g2-block"><h5>Cautions: products not used for diaper dermatitis (Patel Dermatitis slide 65)</h5>
+<p class="g2-status"><b>Status B, E</b> why the list differs from atopic dermatitis</p>
+<p>The slide says the diaper area is a significant portion of the baby&rsquo;s total body surface area and many topical products can lead to systemic side effects. Four products are not used as self-care: topical antifungals (such as miconazole), topical antibacterials, topical anesthetics (such as benzocaine and lidocaine), and hydrocortisone or another topical corticosteroid. The lecture adds that when the diaper area is a significant share of the baby&rsquo;s body surface, the patient may have to be treated past an OTC product.</p>
+<p>She named this as the biggest difference from atopic dermatitis. The steroids and other medications taught earlier are not used here, and the treatment is the barrier protectant. In the case, hydrocortisone was the wrong choice.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;we're not using antifungals, antibacterials, anesthetics, hydrocortisone, or topical corticosteroids&rdquo; <span class='g2-src'>11/06 T@78359</span></p>
+<p>&ldquo;So that is the biggest difference here between atopic dermatitis&rdquo; <span class='g2-src'>11/06 T@78488</span></p>
+</div>
+</div>
+<div class="gpt g2-block"><h5>Follow-up at 7 days (Patel Dermatitis slide 66)</h5>
+<p class="g2-status"><b>Status B</b> same number applies to improved and not improved</p>
+<p>The slide splits two outcomes at 7 days. If the rash is improved but not healed, continue treatment until healed. If it is not healed, not improved or worse after 7 days, refer to a physician. In the case the father was asked when to follow up and the answer was 7 days. She stressed that the number is the same whether or not the rash improves; what changes is the action, continue or refer.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;But regardless, 7 days&rdquo; <span class='g2-src'>11/06 T@82415</span></p>
+</div>
+</div>
+<div class="gpt g2-block"><h5>Complications of diaper dermatitis (Patel Dermatitis slide 67)</h5>
+<p class="g2-status"><b>Status B</b> which organisms and why a rash worsens</p>
+<p>The slide names fungal and bacterial infections as the most common complication, shows Candida albicans and Staphylococcus aureus, and says cutaneous infections are secondary to an untreated or improperly treated rash. The lecture adds that staph is the bacterial form most often on skin, and that a patient who already has an infection when the rash starts will have a worse rash because of it.</p>
+</div>
+<div class="gpt g2-block"><h5>Exclusions for self-treatment (Patel Dermatitis slide 68)</h5>
+<p class="g2-status"><b>Status B, E</b> the full list means referral, not OTC advice</p>
+<p>The slide lists the exclusions: lesions present longer than 7 days; no improvement in 7 days despite appropriate care; therapy complicated by secondary infection (viral, bacterial, fungal); lesions part of or caused by another disease state; diaper dermatitis outside the diaper region; possible association with a urinary tract infection (painful urination) or disfigurement of the penis or vulva; broken skin (ulceration, blistering, peeling); onion-skin-like appearance or bulla formation; oozing, blood, vesicles or pus; chronic or frequently recurrent lesions; constitutional symptoms (fever, diarrhea, nausea, vomiting, swollen inguinal lymph nodes, rapid pulse, rash elsewhere on the body); significant behavior changes (lethargy, incessant crying); and comorbid conditions (HIV infection, organ transplantation, immunosuppressive therapy, a history of hepatitis with skin manifestations).</p>
+<p>She said that when any of these apply, nothing is recommended: the patient goes to the provider or urgent care, especially with oozing, bleeding or signs of infection. A dull rather than bright red rash is one of the infection signs she gave.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;please know this list&rdquo; <span class='g2-src'>11/06 T@80919</span></p>
+<p>&ldquo;complete referral to the provider&rdquo; <span class='g2-src'>11/06 T@80877</span></p>
+</div>
+</div>
+</section>
+
+<section class="gobj" id="gobj-pl-d2-8">
+<h3>Dr. Patel, slide by slide &middot; Diaper dermatitis and incontinence-associated dermatitis &middot; slides 69&ndash;71</h3>
+<div class="gbar"><span>What the lecture adds (Patel Dermatitis 69&ndash;71)</span><b>Apply the diaper dermatitis answers to the 5-month-old case</b><i>Patel Dermatitis slide 69, 70, 71</i></div>
+<div class="gpt g2-block"><h5>Case: diaper dermatitis in a 5-month-old (Patel Dermatitis slide 69)</h5>
+<p class="g2-status"><b>Status C, E</b> first-line product, follow-up time and non-drug care</p>
+<p>The slide is the case: a father of a 5-month-old reports a fussy baby with an extremely red, irritated diaper area, red wet lesions worsening over the past week, nothing used besides body cream, no past history, no medications, and Baby Aveeno lotion for irritated skin. The lecture gives three answers. First-line treatment is a skin protectant containing zinc oxide. Hydrocortisone is not used, and Aquaphor is only a petrolatum moisturizer, so it moisturizes without treating the skin. Follow-up is at 7 days. Non-drug care is ABCDE with a diaper change every 2 hours, and the lecture had the class give what each letter stands for.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;Skin protectant containing zinc oxide&rdquo; <span class='g2-src'>11/06 T@81911</span></p>
+<p>&ldquo;Aquaphor is just a petrolatum moisturizer&rdquo; <span class='g2-src'>11/06 T@82004</span></p>
+</div>
+</div>
+<div class="gpt g2-block"><h5>References (Patel Dermatitis slide 70)</h5>
+<p class="g2-status"><b>Status A</b> On the slide and complete; nothing added in lecture</p>
+</div>
+<div class="gpt g2-block"><h5>Questions slide (Patel Dermatitis slide 71)</h5>
+<p class="g2-status"><b>Status A</b> On the slide and complete; nothing added in lecture</p>
+</div>
+</section>
+</details>
 <h2 class="gdeck" id="gdeck-p6">Acne Therapeutics (Dr. Patel, 11/10; Exam 2)</h2>
 <p class="sub">AT = Patel_Acne-Therapeutics-Student.pdf, slide = PDF page; T@ = place in the 11/10 lecture transcript; PollEv = her in-class polls of 11/10. Her nine objectives (AT 2), one section each.</p>
 <div class="gask"><b>How she asks (11/10)</b><ul><li>&ldquo;All questions are fair game in terms of multiple choice, select all possible, fill in the blank ... calculations ... matching&rdquo;; &ldquo;I do create questions based on the objectives that I start off with&rdquo; (T@2398).</li><li>Severity words: one, some, many. &ldquo;Those are the terms that I will also use on my cases on the exam ... I&rsquo;m not gonna tell you like 10&rdquo; (T@13918).</li><li>Cases: &ldquo;what is first line for that severity? ... know exactly what has the patient tried and what is left to try&rdquo; (T@60314). Pregnancy tests: &ldquo;I said it twice because hint, it&rsquo;s a question&rdquo; (T@49632).</li></ul></div>
@@ -1954,6 +2521,387 @@ const GUIDE_HTML = `
 </div>
 </section>
 
+<details class="gdetails" id="gpl-p6">
+<summary>Dr. Patel: Acne slide by slide, what the lecture adds (51 slides)</summary>
+<section class="gobj" id="gobj-pl-a-1">
+<h3>Dr. Patel, slide by slide &middot; Acne therapeutics &middot; slides 1&ndash;4</h3>
+<div class="gbar"><span>What the lecture adds (Acne 1&ndash;4)</span><b>The lecture explains the acne cycle that each treatment is built to interrupt, and says her questions follow the objectives</b><i>Patel Acne slide 1, 2, 3, 4</i></div>
+<div class="gpt g2-block"><h5>Title slide (Patel Acne slide 1)</h5>
+<p class="g2-status"><b>Status A</b> On the slide and complete; nothing added in lecture</p>
+</div>
+<div class="gpt g2-block"><h5>Learning objectives: what her questions are written from (Patel Acne slide 2)</h5>
+<p class="g2-status"><b>Status E</b> Exam cue, with guideline context</p><p>The nine objectives are the list her questions follow: classify acne stages, decide self-care candidacy, recommend non-drug and drug therapy, counsel on both, tell OTC from prescription products, apply guidelines and algorithms, choose topical products from symptoms, give counseling points, and cover side effects and expectations. She said her questions are built from the objectives at the start of each lecture. She added that every one of her lectures cites guidelines (here the AAD guideline), so the treatment algorithm (slides 20 and 40, which cite the AAD guideline) is a guideline-based answer. "Expectations" means how soon a patient can expect results and whether side effects are likely.</p><div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;So I do create questions based on the objectives that I start off with.&rdquo; <span class='g2-src'>11/10 T@2765</span></p>
+<p>&ldquo;based on AAD recommendations&rdquo; <span class='g2-src'>11/10 T@4148</span></p>
+<p>&ldquo;how soon can a patient expect results?&rdquo; <span class='g2-src'>11/10 T@4293</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Acne in general: chronic, multifactorial, not curable (Patel Acne slide 3)</h5>
+<p class="g2-status"><b>Status B, D</b> Reasoning added; spoken percentages conflict with the slide wording</p><p>Acne is a chronic, multifactorial disease with no cure and no contagion. Multifactorial means several causes act together: she named hormones, diet, environment, genetics and race. She said puberty is when it usually begins and that females see it somewhat more often than males.</p><div class="g2-note"><span class="g2-k">Percentages: slide versus spoken version</span><p>Slide 3 prints "12% age 25-58 vs 3% in males" for girls versus boys. The captions of her spoken version read "boys about 12% between that 25 to 28 years old, but that 3% in males", which does not match the slide. An exam written from the slide would key the slide: acne in females is more frequent than in males; the spoken ages and percentages are not reliable. Puberty onset of 12 to 14 years was said in lecture <span class="g2-tonly" title="Transcript only: not on the slide">Transcript-only, verify against slide</span>.</p></div><div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;there is no cure, and it is not contagious&rdquo; <span class='g2-src'>11/10 T@5402</span></p>
+<p>&ldquo;our females are gonna see acne a little bit more often than males&rdquo; <span class='g2-src'>11/10 T@5024</span></p>
+<p>&ldquo;it is a multifactorial disease&rdquo; <span class='g2-src'>11/10 T@5161</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Pathophysiology: the cycle the treatments are built on (Patel Acne slide 4)</h5>
+<p class="g2-status"><b>Status B</b> Fact on slide, reasoning missing (lecture explains the cycle)</p><p>The cycle on the slide runs: more sebum, then P. acnes colonizing the follicle, then release of inflammatory mediators, then more follicular keratinization, and back to more sebum. She described sebum as the skin oil made by the sebaceous gland, with the epidermis at the top and the subcutis the last layer. Androgen secretion is the hormone element that restarts the cycle. This matters because each treatment later in the lecture is matched to one step of this cycle (slides 17, 21).</p><div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;that's what really starts that cycle over again&rdquo; <span class='g2-src'>11/10 T@6230</span></p>
+<p>&ldquo;That increases the follicular keratinization of the skin.&rdquo; <span class='g2-src'>11/10 T@5960</span></p>
+<p>&ldquo;there is a defect in the most top layer of the skin&rdquo; <span class='g2-src'>11/10 T@6045</span></p></div>
+</div>
+</section>
+
+<section class="gobj" id="gobj-pl-a-2">
+<h3>Dr. Patel, slide by slide &middot; Acne therapeutics &middot; slides 5&ndash;8</h3>
+<div class="gbar"><span>What the lecture adds (Acne 5&ndash;8)</span><b>Her lesion and severity words (some, many, no more than one) are the terms her case questions use, so these slides teach how to classify a patient</b><i>Patel Acne slide 5, 6, 7, 8</i></div>
+<div class="gpt g2-block"><h5>Lesion stages: non-inflammatory and inflammatory (Patel Acne slide 5)</h5>
+<p class="g2-status"><b>Status B, C</b> Fact on slide; lecture defines each lesion and adds a cue</p><p>Non-inflammatory lesions are the normal follicle, the blackhead (open comedo) and the whitehead (closed comedo). Inflammatory lesions are the papule, pustule, and nodule or cyst. The lecture gives the working description of each: an open comedo is a completely clogged pore; a whitehead is closed under the skin; a papule is raised and red with inflammation; a pustule is raised with pus; a nodule or cyst is the worst stage, larger and deeper. Telling the two groups apart is how a case is classified on slides 7 and 8.</p><div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;So understand the difference between when it's non-inflammatory as well as inflammatory.&rdquo; <span class='g2-src'>11/10 T@8021</span></p>
+<p>&ldquo;you should know exactly what stage of acne it is&rdquo; <span class='g2-src'>11/10 T@8162</span></p>
+<p>&ldquo;The worst stage of acne is called a nodule or a cyst.&rdquo; <span class='g2-src'>11/10 T@7498</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Lesion stages: the same labels with photographs (Patel Acne slide 6)</h5>
+<p class="g2-status"><b>Status B</b> Same stages as slide 5, shown on skin</p><p>Slide 6 repeats the labels of slide 5 with photographs of each lesion. Her point on this slide was that the inflammation is very limited in the non-inflammatory group and increases from the papule through the pustule, nodule and cyst. A case stem describes lesions in words, so the photographs are the picture of what the description means.</p><div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;Notice the inflammation's very limited&rdquo; <span class='g2-src'>11/10 T@7878</span></p>
+<p>&ldquo;the inflammation increases down below here&rdquo; <span class='g2-src'>11/10 T@7922</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Classification, Types 1 and 2: mildly clear and mild (Patel Acne slide 7)</h5>
+<p class="g2-status"><b>Status B, E</b> Words on slide; lecture says which words the exam uses</p><table class="g2-table"><caption>Slide 7</caption><thead><tr><th scope="col">Type</th><th scope="col">Non-inflammatory lesions</th><th scope="col">Inflammatory lesions</th><th scope="col">Scarring</th></tr></thead><tbody><tr><th scope="row">1: mildly clear</th><td>Rare; no more than 1 small lesion</td><td></td><td></td></tr><tr><th scope="row">2: mild</th><td>Some</td><td>No more than a few; papules and pustules only, no nodules</td><td>Minimal</td></tr></tbody></table><p>The types differ by amount, not by lesion kind: mildly clear is one or none, mild is "some" non-inflammatory lesions with at most a few papules or pustules. She said the guideline uses words such as some and many because lesions on a face cannot be counted reliably, and her cases use the same words with no counts.</p><div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;because you can't necessarily count the different lesions on your face&rdquo; <span class='g2-src'>11/10 T@14277</span></p>
+<p>&ldquo;I'm not gonna tell you like 10&rdquo; <span class='g2-src'>11/10 T@14523</span></p>
+<p>&ldquo;the terms that I will also use on my cases on the exam&rdquo; <span class='g2-src'>11/10 T@14460</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Classification, Types 3 and 4: moderate and severe (Patel Acne slide 8)</h5>
+<p class="g2-status"><b>Status B, E</b> Words on slide; lecture gives the deciding term and the case use</p><table class="g2-table"><caption>Slide 8</caption><thead><tr><th scope="col">Type</th><th scope="col">Non-inflammatory</th><th scope="col">Inflammatory</th><th scope="col">Nodules</th><th scope="col">Scarring</th></tr></thead><tbody><tr><th scope="row">3: moderate</th><td>Many</td><td>Some</td><td>No more than one</td><td>Mild possible</td></tr><tr><th scope="row">4: severe</th><td>Many</td><td>Many</td><td>No more than a few</td><td>Moderate to extensive</td></tr></tbody></table><p>The deciding terms between moderate and severe are many, some and no more than one. In her second case, lesions on the cheek plus cystic lesions on the upper back and shoulders meant more than one cystic lesion, so the patient was severe (slide 46). Slide 8 says "no more than a few nodular lesions" for severe; she described severe as "few nodules and cysts" with many lesions of both kinds.</p><div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;many, some, no more than one&rdquo; <span class='g2-src'>11/10 T@9513</span></p>
+<p>&ldquo;That is how you're gonna define the difference between moderate and severe.&rdquo; <span class='g2-src'>11/10 T@9543</span></p>
+<p>&ldquo;the scarring, it will be moderate to excessive&rdquo; [she said "excessive"; the slide says "extensive"] <span class='g2-src'>11/10 T@9333</span></p></div>
+</div>
+</section>
+
+<section class="gobj" id="gobj-pl-a-3">
+<h3>Dr. Patel, slide by slide &middot; Acne therapeutics &middot; slides 9&ndash;12</h3>
+<div class="gbar"><span>What the lecture adds (Acne 9&ndash;12)</span><b>Risk factors, medicines that cause acne and complications are applied to a patient case, ending with a severity answer</b><i>Patel Acne slide 9, 10, 11, 12</i></div>
+<div class="gpt g2-block"><h5>Risk factors: what each one means in practice (Patel Acne slide 9)</h5>
+<p class="g2-status"><b>Status C</b> Lecture adds examples</p><p>The slide lists age 12 to 20 years, oil-based cosmetics, a first-degree relative with acne, humidity and sweating, local friction, and medications (slide 10). She added concrete examples: skin products that are not washed off and build up, irritation from a cleanser or moisturizer, and fabric that rubs the face, such as a rough sleeve.</p><div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;continuously building the cosmetics on the face can also lead to our acne&rdquo; <span class='g2-src'>11/10 T@9937</span></p>
+<p>&ldquo;certain fabrics that are touching the skin&rdquo; <span class='g2-src'>11/10 T@10331</span></p>
+<p>&ldquo;first-degree family relative has also experienced acne&rdquo; <span class='g2-src'>11/10 T@10036</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Medicines that can cause acne (Patel Acne slide 10)</h5>
+<p class="g2-status"><b>Status B</b> List on slide; lecture says how much of it to carry</p><p>The slide groups drugs by class: hormones (corticosteroids, androgens, progesterone contraceptives), neuropsychotherapeutic drugs (TCAs, lithium, antiepileptics, aripiprazole, SSRIs), vitamins B1, B6 and B12, dactinomycin, cyclosporine and sirolimus, isoniazid, rifampin and ethionamide, and iodine, bromine and chlorine. She said a multivitamin is fine but excessive B vitamins have been linked to acne, and she called the other drugs on the list (cytostatic, immunomodulating and TB drugs) "specialty" ones to keep in mind only if the patient takes them. A patient on one of these has an exacerbating factor, which also affects self-care eligibility (slide 18).</p><div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;excessive amount of B1, B6, B12&rdquo; <span class='g2-src'>11/10 T@10895</span></p>
+<p>&ldquo;but if they are, kind of keep this in mind&rdquo; <span class='g2-src'>11/10 T@11161</span></p>
+<p>&ldquo;So very specialized.&rdquo; <span class='g2-src'>11/10 T@11304</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Complications: anxiety, depression, scarring (Patel Acne slide 11)</h5>
+<p class="g2-status"><b>Status C</b> Lecture adds the patient-care point</p><p>Scarring is the most common complication, and the scars can last for life. She said scars may be treated with abrasive procedures such as those at medical spas, but few patients do this. She tied anxiety and depression to appearance, the same point she made for atopic dermatitis, and noted that patients are young during puberty and may struggle with it. This is why mental health appears again as a monitoring item (slide 44).</p><div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;the scarring is the most common complication&rdquo; <span class='g2-src'>11/10 T@11709</span></p>
+<p>&ldquo;could also be lifelong unless it's been treated with something abrasive&rdquo; <span class='g2-src'>11/10 T@11913</span></p>
+<p>&ldquo;it may cause anxiety&rdquo; <span class='g2-src'>11/10 T@11647</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Case 1: a 16-year-old before a school dance (Patel Acne slide 12)</h5>
+<p class="g2-status"><b>Status C</b> Case stem; lecture gives the answer and what to look for</p><p>The stem: a 16-year-old on only occasional ibuprofen (Motrin), acne on the face only, no inflammation, open and closed comedones on the cheeks and chin, heavy makeup. Her class answer was mild acne. Reasons she accepted: no inflammation, and only "some" comedones, which separates mild from moderate (many non-inflammatory lesions as well as inflammatory ones) and from mildly clear (no more than one small lesion). The chief complaint says she wants it cured before a dance; she said there is no cure and the aim is to do the best possible.</p><div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;I heard no inflammation noted. Good.&rdquo; <span class='g2-src'>11/10 T@13213</span></p>
+<p>&ldquo;the answer is mild acne&rdquo; <span class='g2-src'>11/10 T@14677</span></p>
+<p>&ldquo;Can we cure it?&rdquo; <span class='g2-src'>11/10 T@12400</span></p></div>
+</div>
+</section>
+
+<section class="gobj" id="gobj-pl-a-4">
+<h3>Dr. Patel, slide by slide &middot; Acne therapeutics &middot; slides 13&ndash;17</h3>
+<div class="gbar"><span>What the lecture adds (Acne 13&ndash;17)</span><b>Treatment goals and the patient-specific facts she asks you to collect before choosing therapy</b><i>Patel Acne slide 13, 14, 15, 16, 17</i></div>
+<div class="gpt g2-block"><h5>Treatment goals (Patel Acne slide 13)</h5>
+<p class="g2-status"><b>Status B</b> Fact on slide; lecture explains slowing progression and hyperpigmentation</p><p>The goals are to relieve symptoms and psychologic distress, reduce lesion number and severity, improve appearance, slow progression, limit duration and recurrence, and prevent long-term scarring and hyperpigmentation. She explained slowing progression as preventing a relapse later in puberty or into the twenties. Hyperpigmentation was explained as a scar left darker than the surrounding skin.</p><div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;So that way, in the future, if a patient continues to go through puberty&rdquo; <span class='g2-src'>11/10 T@15080</span></p>
+<p>&ldquo;when the scar has been discolored on the skin, causing a darker pigmentation&rdquo; <span class='g2-src'>11/10 T@15450</span></p>
+<p>&ldquo;Limit the duration as well as the reoccurrence&rdquo; <span class='g2-src'>11/10 T@15229</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Patient care process (Patel Acne slide 14)</h5>
+<p class="g2-status"><b>Status B</b> Title only on slide; lecture applies the process to acne</p><p>The slide is a title. She said the patient care process applies to acne: collect information on the patient, assess it, make a plan that is appropriate and safe, then implement the plan, follow up, monitor and evaluate. The slides that follow (15 and 16 for collecting, 40 for the plan, 44 for monitoring) fall into these steps.</p><div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;So, again, our patient care process is applied here.&rdquo; <span class='g2-src'>11/10 T@15532</span></p>
+<p>&ldquo;we're going to assess that information, create a plan that is appropriate and safe&rdquo; <span class='g2-src'>11/10 T@15633</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Considerations: why the same acne is treated differently (Patel Acne slide 15)</h5>
+<p class="g2-status"><b>Status B, E</b> Boxes on slide; lecture states the patient-specific point</p><p>The boxes name what changes the choice: severity and lesion type, scarring, age, family history of persistent acne, adherence, treatment preferences, skin type or ethnic group, cost, response to previous therapy, and the psychologic effects of treating or not treating. She said classification is patient specific and the first step is severity. Adherence and preference limit how many products to add: a patient who struggles to wash daily needs a simpler routine, starting with cleansing. Response to previous therapy is one of the patient-specific points she listed.</p><div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;Understand the severity before we choose their treatment.&rdquo; <span class='g2-src'>11/10 T@15984</span></p>
+<p>&ldquo;adherence is a big thing here&rdquo; <span class='g2-src'>11/10 T@16198</span></p>
+<p>&ldquo;What all have they tried?&rdquo; <span class='g2-src'>11/10 T@16964</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Clinical evaluation (Patel Acne slide 16)</h5>
+<p class="g2-status"><b>Status C</b> Lecture adds how to ask and what matters most</p><p>The slide lists medical history, medication and supplement use, social history, menstrual history, and prior or current acne treatments. She said to ask open-ended questions and called prior and current treatments "huge", because what a patient used before and uses now helps decide the treatment plan. She said menstrual history (age, regularity, history of infertility) can also affect acne.</p><div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;Prior or current acne treatments, that's huge.&rdquo; <span class='g2-src'>11/10 T@17782</span></p>
+<p>&ldquo;what are they currently using will help us determine their treatment plan&rdquo; <span class='g2-src'>11/10 T@17868</span></p>
+<p>&ldquo;trying to ask them open-ended questions&rdquo; <span class='g2-src'>11/10 T@17305</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Approach to acne treatment (Patel Acne slide 17)</h5>
+<p class="g2-status"><b>Status B, E</b> Reasoning supplied; one table she excluded</p><p>Acne is treated as a chronic disease with no cure. Treatment aims at the opposite of each pathophysiology step: less sebum, less P. acnes, less inflammation, less hyperkeratinization. No routine endocrine or microbiologic testing is recommended; the exception on the slide is a high suspicion of PCOS or another hormonal disorder, which she tied to irregular cycles and difficulty losing weight. Antibiotics are used with attention to resistance. She told the class the exacerbating-factors table (OTC handbook Table 38-1) is for their own reference; what she covered on slide 10 is all she needs them to know.</p><div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;it is approached as a chronic disease state&rdquo; <span class='g2-src'>11/10 T@17946</span></p>
+<p>&ldquo;the complete opposite of the pathophysiology&rdquo; <span class='g2-src'>11/10 T@19645</span></p>
+<p>&ldquo;that is all I'm gonna need you to know for, for this time&rdquo; <span class='g2-src'>11/10 T@18430</span></p>
+<p>&ldquo;that is when we'll take a look at other conditions such as PCOS&rdquo; <span class='g2-src'>11/10 T@19107</span></p></div>
+</div>
+</section>
+
+<section class="gobj" id="gobj-pl-a-5">
+<h3>Dr. Patel, slide by slide &middot; Acne therapeutics &middot; slides 18&ndash;21</h3>
+<div class="gbar"><span>What the lecture adds (Acne 18&ndash;21)</span><b>Self-care limits, non-drug care for everyone, and how each drug class is matched to a step of acne pathogenesis</b><i>Patel Acne slide 18, 19, 20, 21</i></div>
+<div class="gpt g2-block"><h5>Exclusions from self-treatment (Patel Acne slide 18)</h5>
+<p class="g2-status"><b>Status B</b> List on slide; lecture explains what happens to excluded patients</p><p>Severe acne, possible rosacea, and exacerbating factors such as comedogenic drugs rule out self-treatment. She illustrated the third item with a patient who is treated for another condition with a drug that worsens acne: the drug is needed, so over-the-counter acne products are not the answer and the patient is referred. For these patients the route is straight to dermatology, not a product recommendation.</p><div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;it would be a straight referral to dermatology&rdquo; <span class='g2-src'>11/10 T@20133</span></p>
+<p>&ldquo;So in that case, we wouldn't necessarily recommend over the counter products.&rdquo; <span class='g2-src'>11/10 T@20040</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Non-pharmacologic therapy for all patients (Patel Acne slide 19)</h5>
+<p class="g2-status"><b>Status B, C</b> Items on slide; lecture adds reasons and counseling</p><p>The first step for everyone is cleansing with mild soap or a non-soap cleanser twice a day, without abrasive products or over-cleansing. For a patient who wears makeup, an oil-based cleanser goes on first and a water-based cleanser follows, which removes makeup without stripping the epidermis. She said not to pop, squeeze or pick lesions because that causes infection, worse lesions and scarring. Light and laser masks are sold in stores, and she urged caution because patients do not know how often to use them. Diet: low-glycemic foods, limit dairy, fish oil and a Mediterranean pattern (all on the slide); she added vegetables and lean protein.</p><div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;an oil-based cleanser, prior to a water-based cleanser&rdquo; <span class='g2-src'>11/10 T@20462</span></p>
+<p>&ldquo;That is exactly what causes infections and worsening of the lesion&rdquo; <span class='g2-src'>11/10 T@20875</span></p>
+<p>&ldquo;being careful with when you recommend this is important&rdquo; <span class='g2-src'>11/10 T@21057</span></p>
+<p>&ldquo;4 to 8 glasses of water a day is where we start off&rdquo; <span class='g2-src'>11/10 T@22017</span></p> <span class="g2-tonly" title="Transcript only: not on the slide">Transcript-only, verify against slide</span></div>
+</div>
+<div class="gpt g2-block"><h5>Treatment algorithm, first appearance (same figure as slide 40) (Patel Acne slide 20)</h5>
+<p class="g2-status"><b>Status B</b> Same figure as slide 40; lecture previews it and returns to it later</p><p>Slide 20 is the algorithm shown in full on slide 40. At this point she told the class that every patient starts with non-drug therapy, and that drug therapy is then chosen by the patient's severity. She said she would come back to the chart and go through it step by step, which she did after the isotretinoin material; see the full explanation under slide 40.</p><div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;So all patients use non-pharm therapy, OK?&rdquo; <span class='g2-src'>11/10 T@22338</span></p>
+<p>&ldquo;that is how you select the medication therapy&rdquo; <span class='g2-src'>11/10 T@22499</span></p>
+<p>&ldquo;this treatment chart, we're gonna come back to it&rdquo; <span class='g2-src'>11/10 T@22174</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Pathogenesis and drug mechanisms (Patel Acne slide 21)</h5>
+<p class="g2-status"><b>Status B, D</b> Figure on slide; lecture matches each drug to a step; one list differs</p><table class="g2-table g2-stack"><caption>Slide 21 figure: process and the drugs aimed at it</caption><thead><tr><th scope="col">Process</th><th scope="col">Drugs on the slide</th></tr></thead><tbody><tr><th scope="row">P. acnes proliferation</th><td>Benzoyl peroxide, topical or oral antibiotics, isotretinoin</td></tr><tr><th scope="row">Abnormal keratinization of follicle</th><td>Salicylic acid, benzoyl peroxide, topical retinoids, isotretinoin</td></tr><tr><th scope="row">Abnormal sebum</th><td>Antiandrogens, isotretinoin, topical or oral antibiotics, corticosteroids, estrogens</td></tr><tr><th scope="row">Inflammatory response</th><td>Intralesional corticosteroids, oral corticosteroids, topical or oral antibiotics</td></tr></tbody></table><p>She said therapy must reduce every part of the pathophysiology, and she went through the drugs aimed at each step. The slide itself says therapy "must address one of the four mechanisms"; she said every part must be reduced. Her spoken list for inflammation was "corticosteroids, both oral and topical", while the slide lists intralesional and oral. An exam question written from the figure would use the slide wording.</p><div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;we need to reduce every single part of the pathophysiology of acne&rdquo; <span class='g2-src'>11/10 T@22625</span></p>
+<p>&ldquo;targeting the bacteria itself, benzoyl peroxide, topical or oral antibiotics&rdquo; <span class='g2-src'>11/10 T@22739</span></p>
+<p>&ldquo;we have our corticosteroids, both oral and topical&rdquo; <span class='g2-src'>11/10 T@23434</span></p></div>
+</div>
+</section>
+
+<section class="gobj" id="gobj-pl-a-6">
+<h3>Dr. Patel, slide by slide &middot; Acne therapeutics &middot; slides 22&ndash;25</h3>
+<div class="gbar"><span>What the lecture adds (Acne 22&ndash;25)</span><b>What each non-prescription ingredient does, which skin type tolerates which vehicle, and what the guideline says about topical agents</b><i>Patel Acne slide 22, 23, 24, 25</i></div>
+<div class="gpt g2-block"><h5>Definitions: bactericidal, keratolytic, comedolytic (Patel Acne slide 22)</h5>
+<p class="g2-status"><b>Status B</b> Definitions on slide; lecture says why keratolytic matters</p><p>Bactericidal means the drug destroys bacteria. Keratolytic means it thins and sheds the top layer of the epidermis and softens keratin. Comedolytic means it breaks up comedones (blackheads and whiteheads) and prevents new ones. She explained the keratolytic point as access: papules, pustules, nodules and cysts form below the epidermis, so a drug that loosens the top layer lets the medication reach the dermis. These three words are the rows of the product table on slide 23.</p><div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;means that we are destroying that bacteria&rdquo; <span class='g2-src'>11/10 T@23678</span></p>
+<p>&ldquo;we can target beyond the epidermis&rdquo; <span class='g2-src'>11/10 T@23920</span></p>
+<p>&ldquo;preventing the formation of new commodomes&rdquo; <span class='g2-src'>11/10 T@24522</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Non-prescription topical products compared (Patel Acne slide 23)</h5>
+<p class="g2-status"><b>Status B</b> Table on slide; lecture says what the pattern means</p><table class="g2-table g2-stack"><caption>Slide 23: properties of each OTC ingredient</caption><thead><tr><th scope="col">Ingredient</th><th scope="col">Bactericidal</th><th scope="col">Keratolytic</th><th scope="col">Comedolytic</th><th scope="col">Strength</th></tr></thead><tbody><tr><th scope="row">Benzoyl peroxide</th><td>Yes</td><td>Yes</td><td>Yes</td><td>2.5-10%, 1-2 times daily</td></tr><tr><th scope="row">Retinoid</th><td>No</td><td>Yes</td><td>Yes</td><td>0.1% gel</td></tr><tr><th scope="row">Hydroxy acids (alpha, beta)</th><td>No</td><td>Yes</td><td>Yes (beta-hydroxy acids)</td><td>0.5-2%</td></tr><tr><th scope="row">Sulfur</th><td>No</td><td>Yes</td><td>Yes</td><td>3-10%</td></tr><tr><th scope="row">Resorcinol</th><td>Yes, plus antifungal</td><td>Yes</td><td>No</td><td>3-8%, combined with sulfur</td></tr></tbody></table><p>Benzoyl peroxide is the only product that is bactericidal, keratolytic and comedolytic, and that is her reason it is the first-line OTC agent. Side effects follow the action: benzoyl peroxide dries and peels skin and increases photosensitivity, so sunscreen is part of the advice. Resorcinol (with sulfur) causes the most irritation and skin color changes. The slide also lists bleaching of hair and clothing and contact allergy for benzoyl peroxide; she did not mention them.</p><div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;notice that benzoyl peroxide targets all three&rdquo; <span class='g2-src'>11/10 T@24875</span></p>
+<p>&ldquo;So that means that benzoyl peroxide will be our first-line agent.&rdquo; <span class='g2-src'>11/10 T@25250</span></p>
+<p>&ldquo;we will not be targeting the comodones&rdquo; <span class='g2-src'>11/10 T@25159</span></p>
+<p>&ldquo;this causes the most skin irritation&rdquo; <span class='g2-src'>11/10 T@26674</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Topical formulation selection by skin type (Patel Acne slide 24)</h5>
+<p class="g2-status"><b>Status B, C</b> Table on slide; lecture gives the oil reasoning and bars point</p><table class="g2-table"><caption>Slide 24</caption><thead><tr><th scope="col">Skin type</th><th scope="col">Formulations tolerated</th></tr></thead><tbody><tr><th scope="row">Oily to normal</th><td>Gels, solutions, lotions</td></tr><tr><th scope="row">Normal</th><td>Gels, solutions, lotions, creams</td></tr><tr><th scope="row">Normal to dry; "sensitive"</th><td>Lotions and creams</td></tr></tbody></table><p>Ointments and bars are not usually recommended for any skin type. Her reason for oily skin: acne already means extra sebum, so the product should contain the least oil, and gels, solutions and lotions do. An ointment is the thickest vehicle with the most oil. A bar of soap sits open by the sink or in the shower and is not sanitary on the face. In a question she kept the oil-based cleanser for makeup removal even in oily skin, because oil lifts the makeup and the water-based cleanser follows.</p><div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;They contain the least amount of that oil-based formulation.&rdquo; <span class='g2-src'>11/10 T@27089</span></p>
+<p>&ldquo;ointment is the thickest vehicle&rdquo; <span class='g2-src'>11/10 T@27793</span></p>
+<p>&ldquo;it's not sanitary to use that on your face&rdquo; <span class='g2-src'>11/10 T@27997</span></p>
+<p>&ldquo;oil-based will also attract the makeup&rdquo; <span class='g2-src'>11/10 T@28190</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Topical treatments for acne: guideline statements (Patel Acne slide 25)</h5>
+<p class="g2-status"><b>Status B, D, E</b> Slide statements; lecture adds reasons; dapsone differs</p><p>Benzoyl peroxide is the preferred initial OTC topical agent. Combinations that hit different parts of pathogenesis are used in most patients, topical retinoids with benzoyl peroxide or a topical antimicrobial are safe and effective, and topical antibiotics are never used as monotherapy. She repeated that acne is never treated with topical antibiotics alone. Azelaic acid is for post-inflammatory dyspigmentation: she said its benefit is mainly brightening and hyperpigmentation, and its acne benefit is limited. Sulfur, nicotinamide, resorcinol, sodium sulfacetamide, aluminum chloride and zinc have limited evidence, though many marketed products contain them.</p><div class="g2-note"><span class="g2-k">Dapsone: slide versus a later answer</span><p>Slide: topical dapsone 5% gel is recommended for inflammatory acne (females). She first said "for females", and later answered a student that it can be used in both genders but has low efficacy. She also called dapsone the last line on the mild path. An exam written from her lecture would key the slide wording (females) for a recommendation question; use in both genders was only her answer to a student.</p></div><div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;Topical antibiotics are never recommended by itself.&rdquo; <span class='g2-src'>11/10 T@29245</span></p>
+<p>&ldquo;So you will never treat acne only with topical antibiotics.&rdquo; <span class='g2-src'>11/10 T@29298</span></p>
+<p>&ldquo;Azeleic acid is very limited in terms of benefits.&rdquo; <span class='g2-src'>11/10 T@32430</span></p>
+<p>&ldquo;Topical Dapsone 5% gel for inflammatory lesions, but I wanna highlight for females&rdquo; <span class='g2-src'>11/10 T@29157</span></p>
+<p>&ldquo;you can utilize it in both genders&rdquo; <span class='g2-src'>11/10 T@55730</span></p></div>
+</div>
+</section>
+
+<section class="gobj" id="gobj-pl-a-7">
+<h3>Dr. Patel, slide by slide &middot; Acne therapeutics &middot; slides 26&ndash;29</h3>
+<div class="gbar"><span>What the lecture adds (Acne 26&ndash;29)</span><b>Benzoyl peroxide, retinoid and hydroxy acid counseling: timing, separation and cautions</b><i>Patel Acne slide 26, 27, 28, 29</i></div>
+<div class="gpt g2-block"><h5>Benzoyl peroxide: use, strength, monitoring (Patel Acne slide 26)</h5>
+<p class="g2-status"><b>Status B, D</b> Slide facts; lecture adds sun advice; "alone" line differs from the algorithm</p><p>Benzoyl peroxide is the most common OTC acne product, recognized by FDA as safe and effective, 2.5 to 10% OTC and up to 20% by prescription. Efficacy can show as soon as 5 days; the common side effect is irritation, worse at higher strengths, and it stabilizes within 1 to 2 weeks. Sun exposure on benzoyl peroxide raises the chance of burning, scarring and hyperpigmentation, so she added sunscreen after the skincare routine. With antibiotics it prevents P. acnes resistance, which is why it is paired with topical antibiotics.</p><div class="g2-note"><span class="g2-k">"Used alone (mild to moderate)" versus the algorithm</span><p>The slide, and her reading of it, say benzoyl peroxide may be used alone for mild to moderate acne and in combination for moderate to severe. She pointed to the treatment algorithm as the place this is applied. On slide 40, benzoyl peroxide alone is a first-line single agent only for mild acne; moderate acne starts with a topical combination that contains benzoyl peroxide. An exam case would key the algorithm.</p></div><div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;it may be used alone for mild to moderate acne&rdquo; <span class='g2-src'>11/10 T@29990</span></p>
+<p>&ldquo;that is our treatment algorithm that we'll be reviewing here shortly&rdquo; <span class='g2-src'>11/10 T@30115</span></p>
+<p>&ldquo;very important to utilize sunscreen or sunblock&rdquo; <span class='g2-src'>11/10 T@26044</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Retinoids, over the counter (Patel Acne slide 27)</h5>
+<p class="g2-status"><b>Status B, C, D</b> Slide facts; lecture adds timing and reasons; two statements differ from the slide</p><p>OTC retinoids are Differin gel 0.1% and Effaclar gel 0.1% (Differin is adapalene, slide 31), added to OTC by FDA in 2016. Counseling: apply at night after washing, a thin layer, and separate from benzoyl peroxide (benzoyl peroxide as the morning wash, not the evening wash). The reason for night is photosensitivity; for separation, skin irritation. Peeling worsens the longer it is used, so she described short use, almost as a spot treatment. Moisturizer and sunscreen are needed, and the slide says FDA limits use to persons over 12 years of age; she said "12 years of age and over" is appropriate and that anything younger gets no retinoid (a small difference at exactly 12).</p><div class="g2-note"><span class="g2-k">Two points where her words differ from the slide</span><p>(1) Slide: do not use with sulfur, resorcinol, salicylic acid or vitamin C. She read this, then told a student they may be used if separated. An exam item that follows her allowance keys separated use (P6-023: adapalene at night, benzoyl peroxide in the morning, vitamin C apart); the slide's list is the wording for the products named. (2) Slide: a lower-risk topical retinoid with no labeling to caution pregnant users. She said patients who may be pregnant, or who are breastfeeding, should stop all retinoid products. An exam written from her lecture would key her statement for counseling.</p></div><div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;efficacy is pretty quick with retinoids&rdquo; <span class='g2-src'>11/10 T@30372</span></p>
+<p>&ldquo;It is applied at night&rdquo; <span class='g2-src'>11/10 T@30727</span></p>
+<p>&ldquo;it's not going to be your wash in the evening&rdquo; <span class='g2-src'>11/10 T@31000</span></p>
+<p>&ldquo;We're not gonna use sulfur, resorsinol, salicylic acid, or vitamin C products&rdquo; <span class='g2-src'>11/10 T@31282</span></p>
+<p>&ldquo;You may, but separate it.&rdquo; <span class='g2-src'>11/10 T@32038</span></p>
+<p>&ldquo;need to be educated to completely stop all retinoid products&rdquo; <span class='g2-src'>11/10 T@31731</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Alpha hydroxy acids (AHA) (Patel Acne slide 28)</h5>
+<p class="g2-status"><b>Status B, C</b> Fact on slide; lecture adds the role and the peel caution</p><p>AHAs are glycolic, lactic and citric acid; when "AHA" appears on a bottle, this is the group. They exfoliate non-inflammatory lesions. High concentrations are chemical peels, not OTC, and she cautioned that peels can cause pigmentation changes and scarring, so a peel is not recommended for every patient. Patients should test a small area first, wait 2 to 4 weeks between peels, and use sunscreen because photosensitivity increases.</p><div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;this is an exfoliant for non-inflammatory lesions&rdquo; <span class='g2-src'>11/10 T@33208</span></p>
+<p>&ldquo;trial it in a small area of your skin&rdquo; <span class='g2-src'>11/10 T@33537</span></p>
+<p>&ldquo;Wait about 2 to 4 weeks between peels.&rdquo; <span class='g2-src'>11/10 T@33622</span></p>
+<p>&ldquo;not always are we gonna recommend a chemical peel to all patients&rdquo; <span class='g2-src'>11/10 T@33720</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Beta hydroxy acid: salicylic acid (Patel Acne slide 29)</h5>
+<p class="g2-status"><b>Status B, C</b> Fact on slide; lecture adds the history and the preference</p><p>Salicylic acid has limited efficacy data. The slide gives side effects (drying, photosensitivity), once or twice daily use as a cleanser or gel, gel only on the affected area, and 4 to 6 weeks as the maximum effective duration; she did not discuss the 4 to 6 weeks. She explained why older people may call it the best acne ingredient: before benzoyl peroxide was studied it was first line, and later data showed benzoyl peroxide to be more effective. So benzoyl peroxide is preferred, and salicylic acid is still available with sunscreen.</p><div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;salicylic acid was actually first line&rdquo; <span class='g2-src'>11/10 T@34661</span></p>
+<p>&ldquo;it was actually much more effective than salicylic acid&rdquo; <span class='g2-src'>11/10 T@34796</span></p>
+<p>&ldquo;there is limited efficacy with acne&rdquo; <span class='g2-src'>11/10 T@34173</span></p></div>
+</div>
+</section>
+
+<section class="gobj" id="gobj-pl-a-8">
+<h3>Dr. Patel, slide by slide &middot; Acne therapeutics &middot; slides 30&ndash;33</h3>
+<div class="gbar"><span>What the lecture adds (Acne 30&ndash;33)</span><b>Natural products and the prescription topical and oral antibiotic agents, with ages and durations</b><i>Patel Acne slide 30, 31, 32, 33</i></div>
+<div class="gpt g2-block"><h5>Complementary therapy: tea tree and frankincense oil (Patel Acne slide 30)</h5>
+<p class="g2-status"><b>Status C</b> Lecture adds the use rule</p><p>The slide names tea tree oil (irritating if applied directly; add to a moisturizing lotion or gel) and frankincense oil (anti-inflammatory benefit). She said natural products are not as effective as medications, may suit patients with sensitive skin, and that essential oil is never applied straight to a lesion but is mixed into a moisturizer or gel base. The transcript captions render frankincense as "Frankenstein's oil"; the slide spelling is frankincense.</p><div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;not as effective as our medications&rdquo; <span class='g2-src'>11/10 T@35106</span></p>
+<p>&ldquo;especially of those with sensitive skin&rdquo; <span class='g2-src'>11/10 T@35289</span></p>
+<p>&ldquo;you're never gonna use this directly straight on your skin&rdquo; <span class='g2-src'>11/10 T@35506</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Prescription topical agents (Patel Acne slide 31)</h5>
+<p class="g2-status"><b>Status B, C, D</b> Table on slide; lecture adds reasons; adapalene strength said both ways</p><table class="g2-table g2-stack"><caption>Slide 31</caption><thead><tr><th scope="col">Class</th><th scope="col">Products</th><th scope="col">Comment on slide</th></tr></thead><tbody><tr><th scope="row">Topical retinoids</th><td>Tretinoin 0.25-0.1% (Retin-A, Altreno); adapalene 0.3% (Differin); tazarotene 0.05-0.1% (Tazorac, Fabior foam); trifarotene 0.005% (Aklief)</td><td>Apply to clean, dry skin; avoid eyes, mucous membranes, abrasions</td></tr><tr><th scope="row">Topical antibiotics</th><td>Clindamycin 1%, erythromycin 2%, minocycline foam 4%</td><td>Not monotherapy; add to benzoyl peroxide to reduce resistance; wait 30 minutes to shave or apply cosmetics</td></tr><tr><th scope="row">Topical anti-inflammatory</th><td>Azelaic acid 15-20% (Azelex, Finacea); dapsone 5-7.5% (Aczone)</td><td>Wait until dry to apply cosmetics; dapsone: G6PD concern, monitor CBC and reticulocyte counts</td></tr></tbody></table><p>The slide lists the effects: retinoids reduce inflammation and normalize keratinocyte differentiation, antibiotics reduce inflammation and decrease bacterial growth. She said the antibiotics reduce inflammation and bacterial growth, and that azelaic acid and dapsone can cause hypersensitivity and lightening of the skin (hypopigmentation). Tretinoin brands are the most commonly prescribed. She did not discuss G6PD or the blood counts for dapsone.</p><div class="g2-note"><span class="g2-k">Adapalene: higher or lower</span><p>She first said the prescription strength of Differin is "a little bit higher", then said it "is lower". The slides settle it: OTC adapalene is 0.1% (slide 27) and prescription adapalene is 0.3% (this slide), so prescription is higher.</p></div><div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;are the most commonly prescribed brand names&rdquo; <span class='g2-src'>11/10 T@36458</span></p>
+<p>&ldquo;notice the prescription strength is a little bit higher&rdquo; <span class='g2-src'>11/10 T@36526</span></p>
+<p>&ldquo;we're not using this as monotherapy&rdquo; <span class='g2-src'>11/10 T@37332</span></p>
+<p>&ldquo;it could cause hypopigmentation&rdquo; <span class='g2-src'>11/10 T@37859</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Prescription oral agents (Patel Acne slide 32)</h5>
+<p class="g2-status"><b>Status B</b> List on slide; lecture explains why there are many options</p><p>The slide groups oral agents as antibiotics (doxycycline, minocycline, sarecycline, clindamycin, erythromycin, azithromycin, trimethoprim/sulfamethoxazole with limited use), hormonal agents (combined oral contraceptives and spironolactone for females, flutamide as an androgen receptor blocker) and the oral retinoid isotretinoin. Doxycycline is most commonly prescribed, then minocycline. She asked why so many antibiotics exist: for side effects, allergies and resistance, so another option is available when a patient cannot take the first choices. Hormonal agents depend on the patient, such as irregular menses or PCOS.</p><div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;doxycycline most commonly prescribed&rdquo; <span class='g2-src'>11/10 T@38382</span></p>
+<p>&ldquo;there are other options available just in case a patient cannot take those options&rdquo; <span class='g2-src'>11/10 T@38792</span></p>
+<p>&ldquo;Oral hormonal agents, again, keep in mind, very patient-specific&rdquo; <span class='g2-src'>11/10 T@38880</span></p>
+<p>&ldquo;Flutamide is an androgen receptor blocker.&rdquo; <span class='g2-src'>11/10 T@39337</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Oral antibiotics: classes, ages, duration (Patel Acne slide 33)</h5>
+<p class="g2-status"><b>Status B, C</b> Slide facts; lecture adds the age boundary, duration reason, allergy rule</p><table class="g2-table g2-stack"><caption>Slide 33</caption><thead><tr><th scope="col">Drug</th><th scope="col">Class</th><th scope="col">On the slide</th></tr></thead><tbody><tr><th scope="row">Minocycline, doxycycline</th><td>Tetracycline</td><td>More effective to eradicate P. acnes; over 12 years, dosed by weight; 50-100 mg BID or 100 mg daily; photosensitivity, fetal harm, tooth discoloration if under 12</td></tr><tr><th scope="row">Sarecycline</th><td>Tetracycline derivative</td><td>Moderate to severe; 60 (33-54 kg), 100 (55-84 kg), 150 mg (85-136 kg) daily</td></tr><tr><th scope="row">Clindamycin</th><td>Lincosamide</td><td>Additional agent; topical or oral</td></tr><tr><th scope="row">Sulfamethoxazole/trimethoprim</th><td>Sulfonamide</td><td>Limit to allergies to macrolides and tetracyclines; do not use if allergic to sulfur</td></tr><tr><th scope="row">Erythromycin, azithromycin</th><td>Macrolide</td><td>Less commonly used due to resistance</td></tr></tbody></table><p>The age rule is "over 12", not "12 and over", and she tied it to tooth discoloration. Use is for the shortest possible time, with re-evaluation at 3 to 4 months, because acne antibiotics are short-term, not chronic. Trimethoprim/sulfamethoxazole has limited use, for patients with allergies to macrolides and tetracyclines; she said it is a sulfur-containing drug, so a sulfur allergy rules it out.</p><div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;So notice that there is no 12 years and equal to&rdquo; <span class='g2-src'>11/10 T@40268</span></p>
+<p>&ldquo;completely avoiding in pregnancy&rdquo; <span class='g2-src'>11/10 T@40050</span></p>
+<p>&ldquo;we're reevaluating it in about 3 to 4 months&rdquo; <span class='g2-src'>11/10 T@41532</span></p>
+<p>&ldquo;it's not a chronic treatment&rdquo; <span class='g2-src'>11/10 T@41622</span></p>
+<p>&ldquo;we're not gonna use it in patients that are allergic to sulfur&rdquo; <span class='g2-src'>11/10 T@40810</span></p></div>
+</div>
+</section>
+
+<section class="gobj" id="gobj-pl-a-9">
+<h3>Dr. Patel, slide by slide &middot; Acne therapeutics &middot; slides 34&ndash;36</h3>
+<div class="gbar"><span>What the lecture adds (Acne 34&ndash;36)</span><b>Who is a candidate for a combined oral contraceptive, which ones are approved, and why smoking and clots exclude patients</b><i>Patel Acne slide 34, 35, 36</i></div>
+<div class="gpt g2-block"><h5>Hormonal agents: combined oral contraceptives and anti-androgens (Patel Acne slide 34)</h5>
+<p class="g2-status"><b>Status B, C, D, E</b> Slide facts; lecture adds the candidate rules, a case, and a conflict on the approved list</p><p>Combined oral contraceptives (COCs) are for women who also want contraception, and the slide sets the patient: older than 14 years or more than 2 years since menarche, a non-smoker, and under 35. She worked a candidate question: a 22-year-old who does not want to be pregnant was the best candidate, a patient with a past DVT is excluded because COCs raise clot risk, a 35-year-old smoker is excluded for the same reason, and a 12-year-old is too young <span class="g2-tonly" title="Transcript only: not on the slide">Transcript-only, verify against slide</span>. COC also fits a patient with irregular menses. Spironolactone and flutamide are the other anti-androgen options; the slide lists 25-50 mg/day in 1 to 2 divided doses, maximum 200 mg/day, and the adverse effects gynecomastia and hyperkalemia without saying which of the two drugs they belong to. She read the dose after flutamide and said not to go to the maximum.</p><div class="g2-note"><span class="g2-k">Which COCs are FDA approved for acne: slide has four, she named three</span><p>Slide 34 lists four ethinyl estradiol combinations: norgestimate, norethindrone acetate, drospirenone, and drospirenone/levomefolate. A student pointed out the difference; she said she had probably updated her slide without updating theirs, to follow her list, and that three are FDA approved: estradiol with norgestimate, with norethindrone, and with drospirenone. An exam written from her lecture would key three, ending at drospirenone (the captions garble the drug names) <span class="g2-tonly" title="Transcript only: not on the slide">Transcript-only, verify against slide</span>.</p></div><div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;Of course, this is only for females.&rdquo; <span class='g2-src'>11/10 T@39196</span></p>
+<p>&ldquo;a patient who is also a smoker is only increasing the risk even more&rdquo; <span class='g2-src'>11/10 T@45450</span></p>
+<p>&ldquo;Follow my slides here, OK?&rdquo; <span class='g2-src'>11/10 T@44855</span></p>
+<p>&ldquo;these are the three that are FDA approved&rdquo; <span class='g2-src'>11/10 T@44957</span></p>
+<p>&ldquo;25 to 50 mg a day in two divided doses&rdquo; <span class='g2-src'>11/10 T@43478</span></p>
+<p>&ldquo;I would not recommend hitting that maximum dose.&rdquo; <span class='g2-src'>11/10 T@43682</span></p>
+<p>&ldquo;What is hyperkalemia? High potassium.&rdquo; <span class='g2-src'>11/10 T@43947</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Combined oral contraceptives: benefits (Patel Acne slide 35)</h5>
+<p class="g2-status"><b>Status A</b> On the slide and complete; nothing added in lecture</p>
+</div>
+<div class="gpt g2-block"><h5>Combined oral contraceptives: increased risks (Patel Acne slide 36)</h5>
+<p class="g2-status"><b>Status B</b> List on slide; lecture links smoking and clots to candidate selection</p><p>The slide lists venous thrombotic events, myocardial infarction, breast or cervical cancer, and osteoporosis or decreased bone mass. She connected the first item to who is a poor candidate: smoking already raises the chance of a clot, and adding a COC raises it further, so a smoker and a patient with a past DVT are excluded. This is why the candidate rules on slide 34 include non-smoker and under 35.</p><div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;venous thrombotic events, myocardial infarction, breast or cervical cancer&rdquo; <span class='g2-src'>11/10 T@45074</span></p>
+<p>&ldquo;Increases the risk of thrombus events, right?&rdquo; <span class='g2-src'>11/10 T@45325</span></p>
+<p>&ldquo;past medical history of DVT&rdquo; <span class='g2-src'>11/10 T@45938</span></p></div>
+</div>
+</section>
+
+<section class="gobj" id="gobj-pl-a-10">
+<h3>Dr. Patel, slide by slide &middot; Acne therapeutics &middot; slides 37&ndash;39</h3>
+<div class="gbar"><span>What the lecture adds (Acne 37&ndash;39)</span><b>Isotretinoin as last line, the iPledge rules she flagged as a question, and what the outcome figure shows</b><i>Patel Acne slide 37, 38, 39</i></div>
+<div class="gpt g2-block"><h5>Isotretinoin: use, risks, program (Patel Acne slide 37)</h5>
+<p class="g2-status"><b>Status B, C, E</b> Facts on slide; lecture adds why it is last line and why no refills</p><p>Isotretinoin (Accutane, Absorica) is for severe refractory nodular acne and acne with significant scarring, 0.5 to 1 mg/kg/day in 2 divided doses, 15 to 20 weeks, a 30-day supply with no refills. She called it the absolute last-line agent because of the conditions it can cause and the limits on filling it, so the benefit is weighed against risk with the patient. The boxed warning is birth defects: it must not be used by women who are pregnant or may become pregnant. No refills is so that the patient can be rechecked for pregnancy each time it is dispensed. Lab monitoring on the slide is triglycerides, cholesterol, LFTs and CBC; she added LDL and HDL <span class="g2-tonly" title="Transcript only: not on the slide">Transcript-only, verify against slide</span>, and said she starts at 0.5 and increases if needed <span class="g2-tonly" title="Transcript only: not on the slide">Transcript-only, verify against slide</span>.</p><div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;absolute last line&rdquo; <span class='g2-src'>11/10 T@46645</span></p>
+<p>&ldquo;Biggest thing here, black box warning of birth defects&rdquo; <span class='g2-src'>11/10 T@47589</span></p>
+<p>&ldquo;the pharmacy needs to, as well as the pharmacist&rdquo; <span class='g2-src'>11/10 T@48222</span></p>
+<p>&ldquo;we need to double-check that the patient has no risk of being pregnant&rdquo; <span class='g2-src'>11/10 T@48763</span></p>
+<p>&ldquo;we're gonna start with 0.5&rdquo; <span class='g2-src'>11/10 T@48945</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>iPledge program (REMS) (Patel Acne slide 38)</h5>
+<p class="g2-status"><b>Status B, C, E</b> Slide facts; lecture gives exam cue and Q&A points</p><table class="g2-table g2-stack"><caption>Slide 38</caption><thead><tr><th scope="col">Group</th><th scope="col">Requirements</th></tr></thead><tbody><tr><th scope="row">All patients</th><td>Register; understand birth-defect risk and be reliable; sign consent; no blood donation during use and for 1 month after</td></tr><tr><th scope="row">Female patients of reproductive potential</th><td>Pregnancy test initially x 2 and monthly; not pregnant 1 month before and 1 month after; 2 forms of birth control 1 month before, during and after; 7-day window to fill</td></tr><tr><th scope="row">Male patients and females who cannot get pregnant</th><td>30-day window to fill</td></tr><tr><th scope="row">All</th><td>No vitamin A supplements, tetracyclines, steroids, progestin-only contraceptives or St. John's wort; swallow capsule whole</td></tr></tbody></table><p>Her hint was the double pregnancy test at the start, then monthly. In Q&A: no required time between the two initial tests; the second contraception form adds protection; for male patients she said the question is being studied and that as of now the birth defect is not passed on through sperm. A capsule must be swallowed whole, not opened into food. The pharmacy and pharmacist must be registered too, with registration and license rather than outside training. An expired 7-day window voids the prescription.</p><div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;I said it twice because hint, it's a question&rdquo; <span class='g2-src'>11/10 T@50121</span></p>
+<p>&ldquo;There is only a 7 day window to fill this prescription.&rdquo; <span class='g2-src'>11/10 T@50394</span></p>
+<p>&ldquo;no time frame between that negative pregnancy test&rdquo; <span class='g2-src'>11/10 T@51468</span></p>
+<p>&ldquo;just to prevent the pregnancy even more&rdquo; <span class='g2-src'>11/10 T@53226</span></p>
+<p>&ldquo;it cannot be traveled through the sperm&rdquo; <span class='g2-src'>11/10 T@51896</span></p>
+<p>&ldquo;You do have to swallow the capsule whole.&rdquo; <span class='g2-src'>11/10 T@51159</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>iPledge outcomes: pregnancies reported to FDA, 1997-2017 (Patel Acne slide 39)</h5>
+<p class="g2-status"><b>Status B, D</b> Figure on slide; lecture states the trend; the figure is not a steady fall</p><p>The figure shows reported pregnancies and pregnancy-related outcomes among isotretinoin patients by year, with 2006 shaded as the year iPledge was implemented. Reports peak at 768 in 2006 and are 250 in 2017. She used it to say that more control by pharmacists, providers and patients reduces fetal defects, and that every patient needs the education, because some patients have never been told the risks by the prescriber.</p><div class="g2-note"><span class="g2-k">"Every year a decrease" versus the figure</span><p>She said that every year after 2006 shows a decrease. The figure falls overall but is not steady: 525 in 2007, 719 in 2008, 388 in 2009, 471 in 2010. What the figure supports is that 2006 was the implementation year and the highest year, with a lower level afterward.</p></div><div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;the year of 2006, is when the implementation of iPledge occurred&rdquo; <span class='g2-src'>11/10 T@52288</span></p>
+<p>&ldquo;every year following that, as you notice, there has been a decrease&rdquo; <span class='g2-src'>11/10 T@52359</span></p>
+<p>&ldquo;Never assume that they've had the education provided.&rdquo; <span class='g2-src'>11/10 T@52826</span></p></div>
+</div>
+</section>
+
+<section class="gobj" id="gobj-pl-a-11">
+<h3>Dr. Patel, slide by slide &middot; Acne therapeutics &middot; slides 40&ndash;42</h3>
+<div class="gbar"><span>What the lecture adds (Acne 40&ndash;42)</span><b>The treatment algorithm by severity, first and second line, and the counseling every patient gets</b><i>Patel Acne slide 40, 41, 42</i></div>
+<div class="gpt g2-block"><h5>Acne treatment algorithm: severity, first line, second line (Patel Acne slide 40)</h5>
+<p class="g2-status"><b>Status B, D, E</b> Figure on slide; lecture supplies the stepwise rule and the questions to ask; severe-box order differs</p><p>Key: BP is benzoyl peroxide, Top is topical, Abx is antibiotic, Tx is treatment. Every patient uses non-drug therapy, then the box is chosen by severity. Her rule is to move step by step, never straight to the three-product combination: try one agent (benzoyl peroxide preferred), then a retinoid, then two products, then three. For a case, find the severity, then find what the patient has tried and what is left, and check age and sex before a contraceptive or spironolactone.</p><div class="g2-ladder"><div class="g2-rung"><div class="g2-sev">Mildly clear (Type 1, comedones)</div><div class="g2-cells"><div class="g2-cell"><span class="g2-k">First line</span><p>All use non-pharmacologic therapy, plus or minus benzoyl peroxide alone <span class="g2-or">OR</span> essential oils. The slide shows no second-line box.</p></div></div></div><div class="g2-rung g2-s1"><div class="g2-sev">Mild (comedones / papulopustular)</div><div class="g2-cells"><div class="g2-cell"><span class="g2-k">First line, in steps</span><ul><li><b>Single topical:</b> benzoyl peroxide <span class="g2-or">OR</span> topical retinoid</li><li><span class="g2-or">OR</span> <b>topical combination:</b> BP + topical antibiotic; <span class="g2-or">OR</span> BP + topical retinoid; <span class="g2-or">OR</span> BP + topical retinoid + topical antibiotic</li></ul></div><div class="g2-cell"><span class="g2-k">Second line</span><ul><li>May add (if not on) topical retinoid or BP</li><li><span class="g2-or">OR</span> consider alternate retinoid</li><li><span class="g2-or">OR</span> consider topical dapsone</li></ul></div></div></div><div class="g2-rung g2-s2"><div class="g2-sev">Moderate (papulopustular / comedones)</div><div class="g2-cells"><div class="g2-cell"><span class="g2-k">First line</span><ul><li><b>Topical combination:</b> BP + topical retinoid; <span class="g2-or">OR</span> BP + topical antibiotic; <span class="g2-or">OR</span> BP + topical retinoid + topical antibiotic</li><li><span class="g2-or">OR</span> <b>with an oral antibiotic:</b> oral Abx + topical retinoid + BP; <span class="g2-or">OR</span> oral Abx + topical retinoid + BP + topical Abx</li></ul></div><div class="g2-cell"><span class="g2-k">Second line</span><ul><li>Consider alternate combination therapy</li><li><span class="g2-or">OR</span> change in oral antibiotic</li><li><span class="g2-or">OR</span> add combined oral contraceptive <span class="g2-or">OR</span> oral spironolactone (females only)</li><li><span class="g2-or">OR</span> consider oral isotretinoin</li></ul></div></div></div><div class="g2-rung g2-s3"><div class="g2-sev">Severe (papulopustular / nodular)</div><div class="g2-cells"><div class="g2-cell"><span class="g2-k">First line</span><ul><li><b>Oral antibiotic + topical combination:</b> oral Abx + (BP + topical retinoid); <span class="g2-or">OR</span> oral Abx + (BP + topical Abx); <span class="g2-or">OR</span> (BP + topical retinoid + topical Abx)</li><li><span class="g2-or">OR</span> oral isotretinoin</li></ul></div><div class="g2-cell"><span class="g2-k">Second line</span><ul><li>Consider change in oral antibiotic</li><li><span class="g2-or">OR</span> add combined oral contraceptive <span class="g2-or">OR</span> spironolactone (females only)</li><li><span class="g2-or">OR</span> consider oral isotretinoin</li></ul></div></div></div></div><p class="g2-sub">How she walked each band</p><p><b>Mild:</b> after a single agent fails, combine; "never" jump to three. If all topicals were tried, switch to one not yet used, an alternate retinoid, or dapsone, which she called absolute last line for this band. <b>Moderate:</b> topical combination before any oral antibiotic; benzoyl peroxide is in every combination; add the oral antibiotic only after the topicals were tried. If lesions stay the same or the topicals irritate, ask what has not been tried: change the oral antibiotic, a contraceptive for a female with a compelling reason such as irregular periods, spironolactone, and isotretinoin as absolute last line. <b>Severe:</b> oral antibiotic with the topical combination first, then isotretinoin if that fails, then change antibiotic, contraceptive or spironolactone, if not yet used.</p><div class="g2-note"><span class="g2-k">Severe first line: isotretinoin on the slide, after antibiotics in her walk</span><p>The slide places "Oral Isotretinoin" inside the severe first-line box and again in the second-line box. Her spoken order was oral antibiotic plus topical combination first, then isotretinoin when that did not work. She called isotretinoin last line in several places. An exam written from her lecture would key oral antibiotic plus topical combination as the first choice and isotretinoin after it has been tried. The slide's third severe combination, BP + topical retinoid + topical Abx, also has no oral antibiotic written in; she described the severe combinations as all including the oral antibiotic.</p></div><div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;it's a step by step process&rdquo; <span class='g2-src'>11/10 T@54994</span></p>
+<p>&ldquo;Notice that we're never going to just jump to the combination of three&rdquo; <span class='g2-src'>11/10 T@54915</span></p>
+<p>&ldquo;benzoyl peroxide is applied to all of the combinations&rdquo; <span class='g2-src'>11/10 T@56733</span></p>
+<p>&ldquo;know exactly what has the patient tried and what is left to try&rdquo; <span class='g2-src'>11/10 T@60607</span></p>
+<p>&ldquo;when you receive a case on the exam&rdquo; <span class='g2-src'>11/10 T@61001</span></p>
+<p>&ldquo;Last line, isotretinoin.&rdquo; <span class='g2-src'>11/10 T@59388</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Patient counseling: chronic disease, patience, consistency (Patel Acne slide 41)</h5>
+<p class="g2-status"><b>Status B</b> Points on slide; lecture links them to the 8-week timeline</p><p>Acne is treated as a chronic disease and the slide asks for patience, at least 8 weeks to see visible benefit, and consistency in both non-drug and drug treatment. She said that the patient should expect at least 8 weeks of continuous therapy before judging results, which is why response is monitored over 8 weeks or more (slides 44, 47).</p><div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;consistency is key&rdquo; <span class='g2-src'>11/10 T@61307</span></p>
+<p>&ldquo;at least 8 weeks of continuous therapy treatment&rdquo; <span class='g2-src'>11/10 T@61388</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Counseling: topical and oral medicines (Patel Acne slide 42)</h5>
+<p class="g2-status"><b>Status B, C</b> Points on slide; lecture adds first-dose and irritation steps</p><p>Topical: wash with mild soap, pat dry and wait 20 to 30 minutes (the wait is on the slide, not in her talk), then a thin layer in the evening or before bed, avoiding eyes, ears, nostrils and mouth. If stinging or irritation develops, stop temporarily or reduce frequency, and tell the provider, who may lower the strength or frequency. Wash hands after applying, and avoid alcohol, astringents and spices. Oral: swallow whole with a full glass of water, with food to avoid GI upset. The first dose should be taken at home at night so the patient is not driving or starting the day while learning how the drug affects them. Sunscreen applies to both routes.</p><div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;avoiding the eyes, ears, nostrils, and mouth&rdquo; <span class='g2-src'>11/10 T@61849</span></p>
+<p>&ldquo;temporarily discontinue it&rdquo; <span class='g2-src'>11/10 T@61971</span></p>
+<p>&ldquo;take it at night when they are already at home&rdquo; <span class='g2-src'>11/10 T@62755</span></p>
+<p>&ldquo;making sure that it's at night, after dinner&rdquo; <span class='g2-src'>11/10 T@62932</span></p></div>
+</div>
+</section>
+
+<section class="gobj" id="gobj-pl-a-12">
+<h3>Dr. Patel, slide by slide &middot; Acne therapeutics &middot; slides 43&ndash;46</h3>
+<div class="gbar"><span>What the lecture adds (Acne 43&ndash;46)</span><b>Shaving advice, how response is monitored, and the two worked cases with her reasoning</b><i>Patel Acne slide 43, 44, 45, 46</i></div>
+<div class="gpt g2-block"><h5>Shaving counseling for acne (Patel Acne slide 43)</h5>
+<p class="g2-status"><b>Status B, C</b> Slide points; lecture gives reasons for blade and direction</p><p>Men with acne should use an electric or safety razor. For a safety razor: soften the beard with soap and warm water or shaving gel, shave lightly and infrequently with a sharp, clean blade, avoid nicking lesions, and shave in the direction of hair growth. She said old and rusty blades carry bacteria and cut skin, so a new blade lowers infection risk, and frequent shaving over lesions irritates them and can spread infection. Shaving against the grain increases pore blockage. The slide also says to shave each area only once, which reduces folliculitis; she did not mention this.</p><div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;light and infrequent shaving is what's recommended&rdquo; <span class='g2-src'>11/10 T@63939</span></p>
+<p>&ldquo;going to increase blockage of that pore&rdquo; <span class='g2-src'>11/10 T@64325</span></p>
+<p>&ldquo;in the direction of your hair growth&rdquo; <span class='g2-src'>11/10 T@64241</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Efficacy monitoring (Patel Acne slide 44)</h5>
+<p class="g2-status"><b>Status B</b> Table on slide; lecture explains who monitors what and when</p><table class="g2-table g2-stack"><caption>Slide 44</caption><thead><tr><th scope="col">Parameter</th><th scope="col">Time or degree of change</th><th scope="col">Action</th></tr></thead><tbody><tr><th scope="row">Lesion count (short term)</th><td>Decrease 10-25% within 4-8 weeks; over 50% within 2-4 months</td><td>Refer for escalation or de-escalation of therapy</td></tr><tr><th scope="row">Comedones</th><td>Resolve by 3-4 months</td><td></td></tr><tr><th scope="row">Inflammatory lesions</th><td>Resolve within a few weeks</td><td></td></tr><tr><th scope="row">Anxiety/depression</th><td>Control or improvement within 2-4 months</td><td></td></tr><tr><th scope="row">Severity (long term)</th><td>No progression</td><td>Refer for escalation or de-escalation</td></tr><tr><th scope="row">Recurrence</th><td>Longer acne-free periods</td><td></td></tr><tr><th scope="row">Scarring or pigmentation</th><td>No further</td><td></td></tr><tr><th scope="row">Safety: dermatitis, dryness, GI upset, photosensitivity</th><td>No adverse effects</td><td>Alternate therapy, dose reduction, stop, or treat the reaction</td></tr></tbody></table><p>The patient checks daily and the pharmacist every 4 to 8 weeks. She covered what is watched (lesion count, mood, severity down from severe toward moderate or mild, recurrence, scarring, dryness and photosensitivity) but did not state the percentages or month ranges in the table.</p><div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;every 4 to 8 weeks is when we're monitoring our patients&rdquo; <span class='g2-src'>11/10 T@64639</span></p>
+<p>&ldquo;are we also improving the overall mental health of the patient?&rdquo; <span class='g2-src'>11/10 T@65186</span></p>
+<p>&ldquo;have we eventually gone down to moderate?&rdquo; <span class='g2-src'>11/10 T@65548</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Case 1 revisited: mild acne, first-line agent (Patel Acne slide 45)</h5>
+<p class="g2-status"><b>Status B, C, E</b> Case stem; lecture gives answers and a distinction between lesion terms</p><p>For the 16-year-old with no inflammation, only some comedones, and ibuprofen as her only drug, the class answer to "most appropriate first-line agent" was benzoyl peroxide twice a day to the affected areas <span class="g2-tonly" title="Transcript only: not on the slide">Transcript-only, verify against slide</span>, and she said to follow the mild band of the algorithm. She then asked for the non-drug counseling: how to use benzoyl peroxide, diet and how to clean the skin (slide 19). This slide says "microcomedones and comedones", while slide 12 said "open and closed comedones". She explained that a microcomedone is a small bump with no whitehead or blackhead, and for classifying acne she said to attend to open or closed comedones.</p><div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;So benzoyl peroxide, first-line agent, right? Follow the mild algorithm.&rdquo; <span class='g2-src'>11/10 T@66744</span></p>
+<p>&ldquo;Microchromodomes are not blackheads or whiteheads.&rdquo; <span class='g2-src'>11/10 T@67181</span></p>
+<p>&ldquo;pay attention to open or closed comodone&rdquo; <span class='g2-src'>11/10 T@67466</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Case 2: severe acne, next-line therapy, isotretinoin counseling (Patel Acne slide 46)</h5>
+<p class="g2-status"><b>Status B, C, E</b> Case stem; lecture gives the reasoning for each of three questions</p><p>The patient is 16, on doxycycline 50 mg daily, an OTC topical retinoid and OTC benzoyl peroxide for 8 months, with irregular periods, comedones on the forehead, nose and chin, papules and cysts on the cheek, and cystic lesions on the upper back and shoulders. Classification: severe, because more than one cystic lesion is present. Next line: she is already on an oral antibiotic with a topical retinoid and benzoyl peroxide (a severe first-line combination on slide 40), so the class chose a combined oral contraceptive over spironolactone, and she gave the reason as the irregular periods. If acne does not improve at 6 months <span class="g2-tonly" title="Transcript only: not on the slide">Transcript-only, verify against slide</span> and she wants isotretinoin, the counseling points she required were the risks, the side effects, and enrolling in iPledge. The option she marked as not important is not given in the transcript (not in materials).</p><div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;is it no more than one cystic lesion&rdquo; <span class='g2-src'>11/10 T@69015</span></p>
+<p>&ldquo;severe would best classify this patient's acne&rdquo; <span class='g2-src'>11/10 T@69179</span></p>
+<p>&ldquo;that could be a reason to why COC over spironolactone&rdquo; <span class='g2-src'>11/10 T@69648</span></p>
+<p>&ldquo;You also have to educate about the patient enrolling in iPledge.&rdquo; <span class='g2-src'>11/10 T@70579</span></p></div>
+</div>
+</section>
+
+<section class="gobj" id="gobj-pl-a-13">
+<h3>Dr. Patel, slide by slide &middot; Acne therapeutics &middot; slides 47&ndash;51</h3>
+<div class="gbar"><span>What the lecture adds (Acne 47&ndash;51)</span><b>The plan-building rules, what to check when therapy fails, and the closing slides</b><i>Patel Acne slide 47, 48, 49, 50, 51</i></div>
+<div class="gpt g2-block"><h5>Summary points: building the plan (Patel Acne slide 47)</h5>
+<p class="g2-status"><b>Status B</b> Points on slide; lecture adds tapering and the drug-check habit</p><p>Set the goals and outcomes first. Combine the smallest number of agents at the lowest doses that give efficacy, safety, avoidance of resistance and adherence; always include non-drug methods; add the lowest strength first; use topical before oral; monitor for 8 weeks or more; taper treatment over time and adjust to response; and check interactions, side effects and sunscreen and moisturizer. She added the reason for tapering: stopping abruptly can cause rebound acne and skin irritation. She tied the sequence to the algorithm.</p><div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;we are never going to abruptly stop a medication&rdquo; <span class='g2-src'>11/10 T@71763</span></p>
+<p>&ldquo;to prevent any rebound acne as well as irritation to the skin&rdquo; <span class='g2-src'>11/10 T@71864</span></p>
+<p>&ldquo;Topical before oral following that treatment algorithm.&rdquo; <span class='g2-src'>11/10 T@71464</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>If there is no response to current therapy (Patel Acne slide 48)</h5>
+<p class="g2-status"><b>Status B, E</b> Table on slide; lecture says to use it with every case</p><table class="g2-table g2-stack"><caption>Slide 48</caption><thead><tr><th scope="col">Reason</th><th scope="col">Action</th></tr></thead><tbody><tr><th scope="row">Non-drug related</th><td>Check exposure to acne-provoking agents; stress and diet; cosmetic comedogenicity; endocrine profile</td></tr><tr><th scope="row">Drug related</th><td>Change vehicle to fit skin type; check type and dose of oral antibiotic; check P. acnes resistance; check topical application; in women, check contraceptive type</td></tr><tr><th scope="row">Poor adherence</th><td>Check frequency of application or oral dosing; check patient understanding</td></tr><tr><th scope="row">Adverse events</th><td>Change class or decrease dose; change formulation; avoid overuse or change type of cleanser; consider contact dermatitis and photosensitivity</td></tr></tbody></table><p>She said to think about these components when picking a treatment option for a case: ask about stress, diet and cosmetics, whether the cream was put on correctly and consistently, and whether the oral antibiotic is taken as directed, using open-ended questions to learn the patient's understanding.</p><div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;as you receive a case on the exam&rdquo; <span class='g2-src'>11/10 T@74057</span></p>
+<p>&ldquo;we're open, so we're asking open-ended questions&rdquo; <span class='g2-src'>11/10 T@73528</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Conclusion (Patel Acne slide 49)</h5>
+<p class="g2-status"><b>Status A</b> On the slide and complete; nothing added in lecture</p>
+</div>
+<div class="gpt g2-block"><h5>References (Patel Acne slide 50)</h5>
+<p class="g2-status"><b>Status A</b> On the slide and complete; nothing added in lecture</p>
+</div>
+<div class="gpt g2-block"><h5>Questions slide (Patel Acne slide 51)</h5>
+<p class="g2-status"><b>Status A</b> On the slide and complete; nothing added in lecture</p>
+</div>
+</section>
+</details>
 <h2 class="gdeck" id="gdeck-p7">Scaly Dermatoses Therapeutics (Dr. Patel, 11/10&ndash;11/11; Exam 2)</h2>
 <p class="sub">SD = Patel_Scaly-Dermatoses-Therapeutics-Student.pdf (11/11 version), slide = PDF page; T@ = place in the 11/10 or 11/11 transcript, dated; PollEv = her polls of 11/10 and 11/11. Her seven objectives (SD 2&ndash;3), one section each.</p>
 <div class="gask"><b>How she asks (11/10&ndash;11/11)</b><ul><li>Adult fingertip units again: &ldquo;hint, please know this chart, OK? So adult only&rdquo; (SD 4; T@76480 11/10).</li><li>Biologics: &ldquo;know the generic names, know the brand names, understand what class to follow through, and exactly what&rsquo;s bolded on the slide&rdquo; (T@22212 11/11); TNF-&alpha; in heart failure: &ldquo;I&rsquo;m saying this twice for a reason&rdquo; (T@22212 11/11).</li><li>&ldquo;Know exactly what we would trial with a mild to moderate patient or a moderate to severe patient first&rdquo; (T@33701 11/11). Not asked: cyclosporine dosing (T@17897 11/11), the exact turnover multiples (T@83726 11/10), severity tools other than BSA (T@10671 11/11).</li></ul></div>
@@ -2212,6 +3160,488 @@ const GUIDE_HTML = `
 </div>
 </section>
 
+<details class="gdetails" id="gpl-p7">
+<summary>Dr. Patel: Scaly dermatoses slide by slide, what the lecture adds (52 slides)</summary>
+<section class="gobj" id="gobj-pl-s-1">
+<h3>Dr. Patel, slide by slide &middot; Scaly dermatoses &middot; slides 1-4</h3>
+<div class="gbar"><span>What the lecture adds (Patel Scaly 1-4)</span><b>The objectives she read aloud and the fingertip-unit chart she said to know; the lecture opens with how the three conditions differ by presentation</b><i>Patel Scaly slide 1, 2, 3, 4</i></div>
+<div class="gpt g2-block"><h5>Title slide (Patel Scaly slide 1)</h5>
+<p class="g2-status"><b>Status A</b> (title or divider slide)</p>
+<p>On the slide and complete; nothing added in lecture.</p>
+</div>
+<div class="gpt g2-block"><h5>Learning objectives 1 to 5 (Patel Scaly slide 2)</h5>
+<p class="g2-status"><b>Status B</b></p>
+<p><b>Reasoning added.</b> The slide lists what a student should be able to do for dandruff, seborrheic dermatitis and psoriasis, from the patient interview through non-drug therapy. In lecture she added the reason the conditions are taught side by side: the treatments overlap, so how each one looks on the patient is what decides the plan. Objective 2 names rosacea, but no slide in this deck covers rosacea; she named dandruff, seborrheic dermatitis and psoriasis as the conditions in the lecture (rosacea teaching: not in materials).</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;what's gonna help you determine your treatment plan&rdquo; <span class='g2-src'>11/10 T@75337</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Learning objectives 6 and 7 (Patel Scaly slide 3)</h5>
+<p class="g2-status"><b>Status B</b></p>
+<p><b>Reasoning added.</b> Objective 6 asks for the best treatment based on six things. She spelled out what that means for a medication: the drug name, dose, frequency and duration, then how it differs from the other options, how to counsel, what education to give, how long to treat, side effects, contraindications and interactions. For objective 7 she framed follow-up as the step after the recommendation is made: what happens once treatment has started.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;what drug name, the dose, the frequency, the duration&rdquo; <span class='g2-src'>11/10 T@75904</span></p>
+<p>&ldquo;differentiate between the treatment options, how to counsel the patient&rdquo; <span class='g2-src'>11/10 T@75959</span></p>
+<p>&ldquo;So we made a recommendation to our patient, but what happens after their treatment?&rdquo; <span class='g2-src'>11/10 T@76274</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Fingertip units for topical creams, adults (Patel Scaly slide 4)</h5>
+<p class="g2-status"><b>Status B, E</b></p>
+<p><b>Cue and meaning.</b> The table gives the number of fingertip units (FTU) for each adult body area, and one FTU is about 0.5 g. Multiplying the FTU for an area by 0.5 g gives the amount to dispense. Worked from the slide: both soles at 1.5 FTU is about 0.75 g, and one leg including the foot at 8 FTU is about 4 g. She said this chart was introduced in the dermatitis lecture and that it comes back, so it is to be known. The adult chart is the one she asked for; the pediatric chart is a reference.</p>
+<p>Slide values: scalp 3, face and neck 2.5, one hand (front and back) including fingers 1, one arm including entire hand 4, elbows 1, both soles 1.5, one foot including toes 2, one leg including foot 8, buttocks 4, knees 1, trunk both sides 14 (7 FTU each side).</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;hint, please know this chart&rdquo; <span class='g2-src'>11/10 T@76469</span></p>
+<p>&ldquo;adult only pediatrics is a reference&rdquo; <span class='g2-src'>11/10 T@76506</span></p>
+<p>&ldquo;One fingertip unit is equal to approximately 0.5 g&rdquo; <span class='g2-src'>11/10 T@76544</span></p>
+<p>&ldquo;that's how we calculate the dosage form and the amount that we dispense&rdquo; <span class='g2-src'>11/10 T@76667</span></p></div>
+</div>
+</section>
+
+<section class="gobj" id="gobj-pl-s-2">
+<h3>Dr. Patel, slide by slide &middot; Scaly dermatoses &middot; slides 5-7</h3>
+<div class="gbar"><span>What the lecture adds (Patel Scaly 5-7)</span><b>How the three conditions differ and which OTC ingredients are approved for each; she said the presentation separates them while the treatments overlap</b><i>Patel Scaly slide 5, 6, 7</i></div>
+<div class="gpt g2-block"><h5>Scaly dermatoses overview (dandruff, seborrheic dermatitis, psoriasis) (Patel Scaly slide 5)</h5>
+<p class="g2-status"><b>Status A</b> (title or divider slide)</p>
+<p>On the slide and complete; nothing added in lecture.</p>
+</div>
+<div class="gpt g2-block"><h5>Dandruff, seborrheic dermatitis and psoriasis compared (Patel Scaly slide 6)</h5>
+<p class="g2-status"><b>Status B, D, E</b></p>
+<p><b>Reasoning added.</b> She said appearance is what mostly separates the three. Inflammation and epidermal hyperplasia (thickening of the epidermis) are absent in dandruff and present in the other two. Dandruff is called non-inflammatory because inflammation is not part of the disease from the start: itching the scalp inflames it afterward, so it is secondary. In seborrheic dermatitis and psoriasis the inflammation is there from the beginning, whether or not the skin is irritated.</p>
+<p>On turnover she placed dandruff slowest and psoriasis fastest, with seborrheic dermatitis in between.</p>
+<div class="g2-note"><span class="g2-k">Slide and lecture differ</span><p>Slide: turnover 2 times faster than normal (dandruff), 3 times (seborrheic dermatitis), 8 times (psoriasis). Lecture: she said 2, 3 and 5 <span class="g2-tonly" title="Transcript only: not on the slide">Transcript-only, verify against slide</span>; a student noted the slide says 8, and she said she would look into it. An exam written from her lecture would key only the ranking, because she said she would not ask whether it is 8 or 5.</p></div>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;it's mostly the appearance that differentiates them&rdquo; <span class='g2-src'>11/10 T@76900</span></p>
+<p>&ldquo;when the patient itches their scalp, it inflames it&rdquo; <span class='g2-src'>11/10 T@84632</span></p>
+<p>&ldquo;I'm not gonna be asking you, is it 8 or 5&rdquo; <span class='g2-src'>11/10 T@83918</span></p>
+<p>&ldquo;psoriasis is the fastest in terms of epidermal kinetics and dandruff is the slowest&rdquo; <span class='g2-src'>11/10 T@84106</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>FDA-approved OTC ingredients for the three conditions (Patel Scaly slide 7)</h5>
+<p class="g2-status"><b>Status B</b></p>
+<p><b>Reasoning added.</b> The chart lists the percentages and forms available over the counter for each condition. Two gaps matter: hydrocortisone 1% is not used for dandruff (0.5 to 1 for seborrheic dermatitis and psoriasis), and sulfur is not used for psoriasis (2 to 5 for dandruff and seborrheic dermatitis). Pyrithione zinc comes as a rinse-off product or as a residual product that stays on the skin. In answer to a student she explained that the chart shows FDA-approved efficacy: sulfur is still sold and some patients use it, but it is not effective in psoriasis.</p>
+<p>She added that the drug charts are only a guide, and that the therapeutic lecture is the reference for the medications.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;that's why I say that the drug charts are a guide you guys&rdquo; <span class='g2-src'>11/10 T@83491</span></p>
+<p>&ldquo;hydrocortisone 1%, not effective in dandruff, sulfur, not effective in psoriasis&rdquo; <span class='g2-src'>11/10 T@83401</span></p></div>
+</div>
+</section>
+
+<section class="gobj" id="gobj-pl-s-3">
+<h3>Dr. Patel, slide by slide &middot; Dandruff &middot; slides 8-10</h3>
+<div class="gbar"><span>What the lecture adds (Patel Scaly 8-10)</span><b>Dandruff as a fungus-driven, mostly non-inflammatory scalp condition, and treating it by severity: non-medicated shampoo for mild, medicated shampoo for moderate to severe</b><i>Patel Scaly slide 8, 9, 10</i></div>
+<div class="gpt g2-block"><h5>What dandruff is and who gets it (Patel Scaly slide 8)</h5>
+<p class="g2-status"><b>Status B, C</b></p>
+<p><b>Reasoning added.</b> The slide says dandruff is non-inflammatory yet causes mild inflammation. She resolved this: the fungus drives the shedding, flaking and itching, and the inflammation comes afterward from scratching, not from the start of the condition. Malassezia fungi on the scalp are the cause. Slide numbers: 1 to 3% of the population, puberty onset, peak in adulthood, no gender preference.</p>
+<p>In a student question she added that dandruff can reach the face, but it starts on the scalp.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;inflammation's caused by the itching&rdquo; <span class='g2-src'>11/10 T@84589</span></p>
+<p>&ldquo;melasia fungi is what's present on the scalp that causes the shedding&rdquo; [she said "melasia": Malassezia] <span class='g2-src'>11/10 T@79924</span></p>
+<p>&ldquo;It can go down to the face, but it's formed from the scalp&rdquo; <span class='g2-src'>11/10 T@84288</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Dandruff treatment goals and approach by severity (Patel Scaly slide 9)</h5>
+<p class="g2-status"><b>Status B, E</b></p>
+<p><b>Exam cue and reasoning.</b> Severity decides the product. Mild means intermittent dandruff with mild inflammation: a non-medicated shampoo daily or every other day. Moderate to severe means daily dandruff with moderate to severe inflammation: an OTC medicated shampoo (pyrithione zinc, selenium sulfide or coal tar). Leave it on 3 to 5 minutes, rinse well, use daily for 1 week, then 2 to 3 times weekly for 2 to 3 weeks, then once weekly for control. She said pyrithione zinc is most often the main ingredient in OTC products. The goals are lowering skin turnover and the number of Malassezia fungi, less visible scaling and less itching.</p>
+<p>After the dandruff case she said she would make it clear on the exam which answer is right, and while working the case she told the class to pay attention to the keywords.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;I'll make it clear on the exam&rdquo; <span class='g2-src'>11/10 T@82872</span></p>
+<p>&ldquo;pay attention to those keywords&rdquo; <span class='g2-src'>11/10 T@82425</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Case 1: young man with intermittent white flakes (Patel Scaly slide 10)</h5>
+<p class="g2-status"><b>Status C</b></p>
+<p><b>Clinical example.</b> A young man has intermittent white flakes on his clothing, no itch, no oily skin or hair and a scalp that does not look inflamed. She had the class name the organism (Malassezia fungi), then the severity, then the shampoo. Intermittent flakes and no daily symptoms make this mild, so the answer is a non-medicated shampoo. A medicated shampoo with one of the listed ingredients would be chosen only for moderate to severe dandruff.</p>
+<p>She tied the organism question to earlier lectures: staph was covered in the dermatitis lecture, and she asked where P. acnes had been covered, so each condition goes with its own microbe.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;Intermittent white flakes, right? Not daily&rdquo; <span class='g2-src'>11/10 T@82492</span></p>
+<p>&ldquo;because it's mild, non-medicated shampoo&rdquo; <span class='g2-src'>11/10 T@82685</span></p></div>
+</div>
+</section>
+
+<section class="gobj" id="gobj-pl-s-4">
+<h3>Dr. Patel, slide by slide &middot; Seborrheic dermatitis &middot; slides 11-14</h3>
+<div class="gbar"><span>What the lecture adds (Patel Scaly 11-14)</span><b>What seborrheic dermatitis is, how infants and adults present differently, what triggers it, and the goals of treatment</b><i>Patel Scaly slide 11, 12, 13, 14</i></div>
+<div class="gpt g2-block"><h5>Seborrheic dermatitis: overview (Patel Scaly slide 11)</h5>
+<p class="g2-status"><b>Status B</b></p>
+<p><b>Reasoning added.</b> It is an inflammatory disorder in areas of sebaceous (oil) gland activity, mainly scalp, face and chest. Like dandruff it involves the fungus, but with faster skin turnover; she called it the second fastest of the three. It has no specific cure and is neither harmful nor contagious. It affects infants (it can persist up to 30 months of age) and adults (1 to 3%), men more than women. She asked the class to link infant seborrheic dermatitis to cradle cap.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;think of the cradle cap when you think of seborrheic dermatitis&rdquo; <span class='g2-src'>11/10 T@85604</span></p>
+<p>&ldquo;This is the 2nd fastest in comparison to the other two&rdquo; <span class='g2-src'>11/10 T@85387</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Seborrheic dermatitis presentation: infants versus adults (Patel Scaly slide 12)</h5>
+<p class="g2-status"><b>Status B, C</b></p>
+<p><b>Reasoning added.</b> The difference between age groups is the main point she pressed. Infants have greasy or dry scaling confined to the scalp (cradle cap). Adults have yellow, greasy scale in patches or plaques on red skin and can have it on the head (ears, face, sometimes forehead), chest, mid-upper trunk, gluteal crease and skin folds, often with itching and stinging. The yellow tint separates the adult presentation from the infant one. In darker pigmentation it can show as hypopigmentation.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;that yellow tint is going to be shown in an adult versus the infant&rdquo; <span class='g2-src'>11/10 T@86601</span></p>
+<p>&ldquo;But infants, it's only on the scalp&rdquo; <span class='g2-src'>11/10 T@90696</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Increased risk and triggers for seborrhea (Patel Scaly slide 13)</h5>
+<p class="g2-status"><b>Status B</b></p>
+<p><b>Reasoning added.</b> Malassezia is a yeast that grows in the sebum (skin oil); slide 11 places the condition where oil glands are active. The slide lists physical stress, fatigue and travel, zinc deficiency, change of season (worse in cold weather), HIV infection or AIDS, and Parkinson disease. She read the list and added only that the yeast grows in the sebum; she gave no extra risk factors.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;it's a yeast, OK? It grows in the sebum of the skin&rdquo; <span class='g2-src'>11/10 T@86705</span></p>
+<p>&ldquo;can definitely worsen in colder weather&rdquo; <span class='g2-src'>11/10 T@86895</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Seborrheic dermatitis goals and general approach (Patel Scaly slide 14)</h5>
+<p class="g2-status"><b>Status B</b></p>
+<p><b>Reasoning added.</b> The goals are less inflammation and slower skin turnover, less visible redness and scaling, loosening scale and crust, stopping yeast colonization, less redness and itch, and controlling secondary infection. For the skin-care advice (avoid perfumes, aftershave, ointments and soaps) she said it matches what was taught in atopic dermatitis, so the same irritant-avoidance logic applies here.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;Avoid anything that impacts the skin&rdquo; <span class='g2-src'>11/10 T@87510</span></p>
+<p>&ldquo;very similar to the recommendations we talked about in atopic dermatitis&rdquo; <span class='g2-src'>11/10 T@87607</span></p></div>
+</div>
+</section>
+
+<section class="gobj" id="gobj-pl-s-5">
+<h3>Dr. Patel, slide by slide &middot; Seborrheic dermatitis treatment &middot; slides 15-18</h3>
+<div class="gbar"><span>What the lecture adds (Patel Scaly 15-18)</span><b>Removing scale, treating the yeast, calming redness and itch, and the separate infant plan, where ketoconazole and corticosteroids are not used</b><i>Patel Scaly slide 15, 16, 17, 18</i></div>
+<div class="gpt g2-block"><h5>Removing scales and crust (Patel Scaly slide 15)</h5>
+<p class="g2-status"><b>Status B, C, D</b></p>
+<p><b>Reasoning added.</b> Scale is softened with mineral oil or olive oil, a cream with salicylic acid or sulfur, and, for infants, mostly the oils. She contrasted the washing advice with other conditions: skin is not dried out in atopic dermatitis or acne, but here it should be washed often. She said she has personal opinions about the dishwashing-liquid tip, but it comes from the guidelines, and the reason is that a thick plaque can need a harsher soap.</p>
+<div class="g2-note"><span class="g2-k">Slide and lecture differ</span><p>Slide: seborrheic skin should be washed more often than twice daily. Lecture: she said it should be washed often and then said to exfoliate the skin twice a day (captions: "more often, than not"). An exam written from her lecture would most safely key the slide wording, because she tied the tip to the guidelines and the slide is the only exact statement of the frequency.</p></div>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;in this condition, we do want to wash it often&rdquo; <span class='g2-src'>11/10 T@88383</span></p>
+<p>&ldquo;they have seen a harsher soap be beneficial for these patients&rdquo; <span class='g2-src'>11/10 T@88679</span></p>
+<p>&ldquo;the guidelines state it, so I'm gonna teach it to you all&rdquo; <span class='g2-src'>11/10 T@88552</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Decreasing fungal growth: antifungal shampoo (Patel Scaly slide 16)</h5>
+<p class="g2-status"><b>Status B, C, E</b></p>
+<p><b>Exam cue and reasoning.</b> Ketoconazole shampoo is first line; selenium sulfide, pyrithione zinc, ciclopirox or coal tar shampoo are second line. Leave it on 3 to 5 minutes, rinse, repeat: daily for 1 to 2 weeks, then 2 to 3 times a week for 4 weeks. Frequency is lowered only if there is improvement after 4 weeks. If the condition worsens or persists beyond 7 days a health care provider is consulted. For face and body she said antifungal creams are used, and UV light therapy lowers fungus the way it lowers bacteria in acne. She named first line as the key term in the case, with an adult patient.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;Adult patient, seborrheic dermatitis, ketoconazole shampoo&rdquo; <span class='g2-src'>11/10 T@95158</span></p>
+<p>&ldquo;that's when you can decrease the frequency over time&rdquo; <span class='g2-src'>11/10 T@89615</span></p>
+<p>&ldquo;any signs worsen after 7 days of persistent treatment&rdquo; <span class='g2-src'>11/10 T@89687</span></p>
+<p>&ldquo;to also decrease the fungus growth in general&rdquo; <span class='g2-src'>11/10 T@90217</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Reducing redness and itching (Patel Scaly slide 17)</h5>
+<p class="g2-status"><b>Status B, C</b></p>
+<p><b>Reasoning added.</b> The slide pairs a corticosteroid lotion for the scalp and corticosteroid creams for other body parts (mild to potent) with moisturizing emollients after washing; ketoconazole shampoo and corticosteroid lotion are combined in therapy-resistant cases. She added three points: the product follows the location of the lesions; the age limits taught for corticosteroids in atopic dermatitis apply here; and emollients after washing apply to both infants and adults.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;the presentation of the location of the lesions is how we're recommending&rdquo; <span class='g2-src'>11/10 T@92129</span></p>
+<p>&ldquo;remember the age parameters that we talked about in atopic dermatitis&rdquo; <span class='g2-src'>11/10 T@91631</span></p>
+<p>&ldquo;that applies to both age groups&rdquo; <span class='g2-src'>11/10 T@91950</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Seborrheic dermatitis treatment in infants (Patel Scaly slide 18)</h5>
+<p class="g2-status"><b>Status B, C, E</b></p>
+<p><b>Exam cue and reasoning.</b> For an infant: massage the scalp with baby oil or another oil, then use a non-medicated shampoo and a soft bristle brush. For severe cases only, salicylic acid 3 to 5% in olive oil or a water-soluble base. On the face, a mild soap or cleanser and a facial emollient. Do not suggest corticosteroids. Asked why salicylic acid is kept for severe cases, she gave the reason: an infant scalp has a thin layer of skin that is not fully developed, so absorption is higher and irritation more likely. Ketoconazole shampoo is also not recommended in infants. In the infant case she ruled out hydrocortisone and also nystatin ointment <span class="g2-tonly" title="Transcript only: not on the slide">Transcript-only, verify against slide</span>.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;The skin's not developed completely. The absorption rate is higher&rdquo; <span class='g2-src'>11/10 T@94424</span></p>
+<p>&ldquo;Ketoconazole shampoo is not recommended in infants&rdquo; <span class='g2-src'>11/10 T@95936</span></p>
+<p>&ldquo;Hydrocortisone, absolutely not&rdquo; <span class='g2-src'>11/10 T@96026</span></p></div>
+</div>
+</section>
+
+<section class="gobj" id="gobj-pl-s-6">
+<h3>Dr. Patel, slide by slide &middot; Seborrheic dermatitis cases &middot; slides 19-20</h3>
+<div class="gbar"><span>What the lecture adds (Patel Scaly 19-20)</span><b>Two worked cases that separate adult seborrheic dermatitis from dandruff and set the infant plan apart</b><i>Patel Scaly slide 19, 20</i></div>
+<div class="gpt g2-block"><h5>Case 2: 35-year-old man, scalp, eyebrows and ear canal (Patel Scaly slide 19)</h5>
+<p class="g2-status"><b>Status C</b></p>
+<p><b>Clinical example.</b> The man has itching, redness and scaling on the scalp, eyebrows and external auditory canal, only temporary relief from OTC dandruff shampoos, greasy scalp scaling and yellowish scales in the nasolabial creases. She pointed to the key terms: greasy scaling, yellowish scales, and involvement beyond the scalp. Those make this seborrheic dermatitis, not dandruff. The first-line medicated shampoo for an adult is ketoconazole.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;Key terms there, greasy, scaling, yellowish scales&rdquo; <span class='g2-src'>11/10 T@94797</span></p>
+<p>&ldquo;it wasn't just his scalp, it was a few other areas of his body&rdquo; <span class='g2-src'>11/10 T@94888</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Case discussion: infant with scaly scalp (Patel Scaly slide 20)</h5>
+<p class="g2-status"><b>Status C</b></p>
+<p><b>Clinical example.</b> A mother brings an infant a couple of weeks old with scaly scalp. The picture is cradle cap, which looks different from dandruff, so the condition is seborrheic dermatitis. Treatment is non-drug: massage with baby oil or another oil. Ketoconazole shampoo is not recommended in infants; salicylic acid shampoo is for severe cases; hydrocortisone is not used.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;The image is showing very different from dandruff, right?&rdquo; <span class='g2-src'>11/10 T@95604</span></p>
+<p>&ldquo;massage scalp with baby oil or some sort of oil&rdquo; <span class='g2-src'>11/10 T@95883</span></p></div>
+</div>
+</section>
+
+<section class="gobj" id="gobj-pl-s-7">
+<h3>Dr. Patel, slide by slide &middot; Psoriasis background &middot; slides 21-24</h3>
+<div class="gbar"><span>What the lecture adds (Patel Scaly 21-24)</span><b>Who gets psoriasis, why it forms, and what makes it flare; she stressed that the condition involves immune activity and that plaque type is the most common</b><i>Patel Scaly slide 21, 22, 23, 24</i></div>
+<div class="gpt g2-block"><h5>Psoriasis: how common, who, and which type (Patel Scaly slide 21)</h5>
+<p class="g2-status"><b>Status B, C</b></p>
+<p><b>Reasoning added.</b> Psoriasis affects 3% of the US population. The slide line "Plaque type &gt; 80% of psoriasis" is a share of people who have psoriasis, not of the general population: more than 80% of all patients with psoriasis have the plaque type, which is why it is the most common. It involves adaptive and innate immunity, with T-lymphocyte-mediated inflammation, similar to atopic dermatitis but with more inflammation and a stronger immune response. Onset peaks at 20 to 30 and at 50 to 60 years. Children are infrequent (under 0.2% on the slide); she said children are mostly seen with atopic and seborrheic dermatitis. No gender preference.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;So greater than 80% with that type of psoriasis&rdquo; <span class='g2-src'>11/11 T@4113</span></p>
+<p>&ldquo;so 20 to 30 year olds&rdquo; <span class='g2-src'>11/11 T@3716</span></p>
+<p>&ldquo;So 50 to 60-year-olds of age as well&rdquo; <span class='g2-src'>11/11 T@3778</span></p>
+<p>&ldquo;We're mostly seeing children with atopic dermatitis, as well as seborrheic dermatitis&rdquo; <span class='g2-src'>11/11 T@3846</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Clinical presentation figure (Patel Scaly slide 22)</h5>
+<p class="g2-status"><b>Status C</b></p>
+<p><b>Clinical example.</b> The figure shows psoriasis on the legs, arm, back and hands, with fingernail involvement in a patient with psoriatic arthritis (panel D). She skipped through the pictures but described the range: psoriasis can be mild, moderate or severe, and the severe example covers head to toe with large plaque-type lesions. The lesions can look white or silvery, matching the earlier presentation slide.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;psoriasis can be very mild, moderate, and pretty severe&rdquo; <span class='g2-src'>11/11 T@4295</span></p>
+<p>&ldquo;It can be very severe if not taken care of&rdquo; <span class='g2-src'>11/11 T@4166</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Psoriasis pathophysiology figure (Patel Scaly slide 23)</h5>
+<p class="g2-status"><b>Status B, E</b></p>
+<p><b>Reasoning added.</b> The figure shows immune cell activation: T cells and dendritic cells release chemokines and proinflammatory cytokines, keratinocytes multiply (hyperproliferation), and silvery scale forms. She sent the detailed mechanism to the Smith and Sikazwe lectures and asked only that students understand that immune cell activation, including T cells, is occurring in the dermis. That cycle causes the silvery scale, the inflammation and the keratinocyte overgrowth. She repeated that psoriasis has the fastest turnover of the three conditions.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;refer to Doctor Smith and Doctor Causeway's side&rdquo; [she means Dr. Sikazwe; captions spell the name differently] <span class='g2-src'>11/11 T@4644</span></p>
+<p>&ldquo;that is what is causing the silvery scales as well as the inflammation&rdquo; <span class='g2-src'>11/11 T@4858</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Predisposing and precipitating factors (Patel Scaly slide 24)</h5>
+<p class="g2-status"><b>Status B, C</b></p>
+<p><b>Reasoning added.</b> The slide lists genetics, skin injury (horsefly bite), viral or streptococcal skin infection, alcohol, smoking, obesity or metabolic syndrome, stress, and the drugs lithium, NSAIDs, antimalarials such as chloroquine, beta-adrenergic blockers, fluoxetine, and withdrawal of corticosteroids. She said alcohol and smoking can worsen the condition, and that obesity, diet, lifestyle and stress are factors. She did not read out the drugs; she said the list is very similar to the one in the dermatitis lecture.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;there are a few medications that also may worsen psoriasis&rdquo; <span class='g2-src'>11/11 T@5463</span></p>
+<p>&ldquo;the list in terms of our dermatitis lecture, very similar&rdquo; <span class='g2-src'>11/11 T@5581</span></p></div>
+</div>
+</section>
+
+<section class="gobj" id="gobj-pl-s-8">
+<h3>Dr. Patel, slide by slide &middot; Psoriasis presentation &middot; slides 25-27</h3>
+<div class="gbar"><span>What the lecture adds (Patel Scaly 25-27)</span><b>What psoriasis looks like and how it affects the patient, including diseases that travel with it</b><i>Patel Scaly slide 25, 26, 27</i></div>
+<div class="gpt g2-block"><h5>Possible comorbidities (Patel Scaly slide 25)</h5>
+<p class="g2-status"><b>Status B</b></p>
+<p><b>Reasoning added.</b> Psoriasis can extend beyond the skin. Psoriatic arthritis is a common condition that may occur over time. Cardiovascular disease (myocardial infarction, stroke, peripheral vascular disease), metabolic syndrome, malignancy (T-cell lymphoma), inflammatory bowel disease (Crohn disease and ulcerative colitis), anxiety, depression and renal disease are also on the slide. She gave two reasons: the activated T-cell immune system raises lymphoma risk, and inflammatory bowel disease reflects the inflammation the body is producing.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;psoriatic arthritis is a common condition that may occur over time&rdquo; <span class='g2-src'>11/11 T@5777</span></p>
+<p>&ldquo;Malignancy because of that T cell autoimmune system that's being activated&rdquo; <span class='g2-src'>11/11 T@6145</span></p>
+<p>&ldquo;Think about the inflammation that's being caused by the body&rdquo; <span class='g2-src'>11/11 T@6258</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Signs and symptoms of plaque psoriasis: lesions and skin involvement (Patel Scaly slide 26)</h5>
+<p class="g2-status"><b>Status B, D</b></p>
+<p><b>Reasoning added.</b> Plaques are red-violet, well demarcated and covered by silver, flaking scale, at least 0.5 cm across. She said patients usually have several, and plaques close together look larger. They can be single lesions at predisposed places such as knees and elbows or spread widely, and the spread is measured as body surface area (BSA). Slide severity: mild at 5% BSA or less; moderate at BSA or PASI of 8 or more; severe by the rule of tens (PASI 10, DLQI 10 or BSA 10% or more).</p>
+<div class="g2-note"><span class="g2-k">Slide and lecture differ</span><p>Slide: severe is the rule of tens (PASI 10 or more, DLQI 10 or more or BSA 10% or more); a parenthetical line adds that some phototherapy trials used BSA of 20% or more as the lower limit. Lecture, first pass: she said severe is 20% or more. Later in the same lecture she corrected it to 10%, said earlier guidelines had said 20%, and told the class to follow the slide. An exam written from her lecture would key 10%, because she said so directly. Details on slide 31.</p></div>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;You tend to have multiple of these 0.5 plaques on the body&rdquo; <span class='g2-src'>11/11 T@6797</span></p>
+<p>&ldquo;that's calculated by BSA&rdquo; <span class='g2-src'>11/11 T@7120</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Itch and quality of life (Patel Scaly slide 27)</h5>
+<p class="g2-status"><b>Status B, C</b></p>
+<p><b>Reasoning added.</b> More than 50% of patients have pruritus (itching), which can be severe. She added that the skin around the plaque can also itch, not only the plaque. Psoriasis can be physically debilitating and socially isolating and lowers quality of life. She ranked it: among the skin conditions in the course, psoriasis has the biggest impact on mental, physical and social health.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;more than 50% of our patients experience pruritus with psoriasis&rdquo; <span class='g2-src'>11/11 T@7698</span></p>
+<p>&ldquo;the skin around the plaque may also cause irritation&rdquo; <span class='g2-src'>11/11 T@7873</span></p>
+<p>&ldquo;psoriasis tends to be the worst in terms of impact on mental health&rdquo; <span class='g2-src'>11/11 T@8140</span></p></div>
+</div>
+</section>
+
+<section class="gobj" id="gobj-pl-s-9">
+<h3>Dr. Patel, slide by slide &middot; Psoriasis assessment &middot; slides 28-31</h3>
+<div class="gbar"><span>What the lecture adds (Patel Scaly 28-31)</span><b>Goals of therapy, the patient-care process, the factors that decide a plan, and how severity is set; she said age, past treatment, current medicines and severity guide the choice</b><i>Patel Scaly slide 28, 29, 30, 31</i></div>
+<div class="gpt g2-block"><h5>Goals of treatment (Patel Scaly slide 28)</h5>
+<p class="g2-status"><b>Status B</b></p>
+<p><b>Reasoning added.</b> Goals: clear plaques and scale, relieve itch, fewer flare-ups, treat associated conditions, screen for lifestyle factors, counsel (stress reduction, smoking cessation), cost-effective therapy, avoid side effects, and maintain quality of life. She added why flare-ups are a goal: psoriasis is chronic and returns depending on the triggers. She said chronic-disease management of hypertension, dyslipidemia, diabetes and inflammatory conditions is part of the plan, and that quality of life is the most important item.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;oftentimes it will come back depending on the factors&rdquo; <span class='g2-src'>11/11 T@8571</span></p>
+<p>&ldquo;the quality of life is most important&rdquo; <span class='g2-src'>11/11 T@9355</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Patient care process for psoriasis (Patel Scaly slide 29)</h5>
+<p class="g2-status"><b>Status B</b></p>
+<p><b>Reasoning added.</b> The wheel has five steps: collect, assess, plan, implement, and follow-up (monitor and evaluate), around patient-centered care with collaborate, communicate and document. She read the steps in order as the way to approach a psoriasis patient. Objective 1 on slide 2 refers to the same patient-centered care process. In the lecture this slide follows the goals of therapy, and she used it to move into the factors that shape the plan.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;collect information, assess the information, create a plan, implement&rdquo; <span class='g2-src'>11/11 T@9458</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Factors to consider before choosing treatment (Patel Scaly slide 30)</h5>
+<p class="g2-status"><b>Status B, E</b></p>
+<p><b>Exam cue and reasoning.</b> The slide lists age and sex, socioeconomic factors, severity, location of lesions, comorbidities and past or current treatment. She said age is a large factor, cost matters because these medicines cost more than the options taught so far, and the plan depends on what the patient has already tried and is on now. Location matters, for example whether lesions are on the face. Severity is mild, moderate or severe. She did not speak about sex.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;Age is huge, right?&rdquo; <span class='g2-src'>11/11 T@9640</span></p>
+<p>&ldquo;cost of these medications are more expensive than the other treatment options&rdquo; <span class='g2-src'>11/11 T@9694</span></p>
+<p>&ldquo;what have they tried in the past, what are they currently on&rdquo; <span class='g2-src'>11/11 T@9974</span></p>
+<p>&ldquo;big things to kind of keep in mind&rdquo; <span class='g2-src'>11/11 T@14378</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Patient assessment: type and severity (Patel Scaly slide 31)</h5>
+<p class="g2-status"><b>Status B, D, E</b></p>
+<p><b>Exam cue and reasoning.</b> Plaque is the most common type. Severity is set mainly by BSA: mild is 5% or less, moderate is 8% or more, severe is 10% or more (PASI or DLQI of 10 also count). Mild ends at 5 and moderate starts at 8, so a value in between falls between the two: in her case 7% was "mild to moderate", and 9% would be between moderate and severe <span class="g2-tonly" title="Transcript only: not on the slide">Transcript-only, verify against slide</span>. Only BSA is to be known; PASI, PGA, PSI, itch scales and DLQI are other tools.</p>
+<p>She gave the reason for knowing BSA: it is the most common measure to calculate.</p>
+<div class="g2-note"><span class="g2-k">Slide and lecture differ</span><p>Slide 26 prints moderate as "BSA or PASI 8% or more"; slide 31 prints "BSA &gt; 8%" with the sign underlined (at least 8%), and she said "greater than or equal to 8". For severe she first said 20% (see slide 26), then said it had been corrected to 10%. An exam written from her lecture would key mild 5% or less, moderate 8% or more, severe 10% or more.</p></div>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;it has been corrected to 10%&rdquo; <span class='g2-src'>11/11 T@10474</span></p>
+<p>&ldquo;but I want you to follow this slide&rdquo; <span class='g2-src'>11/11 T@10564</span></p>
+<p>&ldquo;I only want you to know the BSA&rdquo; <span class='g2-src'>11/11 T@10661</span></p></div>
+</div>
+</section>
+
+<section class="gobj" id="gobj-pl-s-10">
+<h3>Dr. Patel, slide by slide &middot; Body surface area and non-drug care &middot; slides 32-34</h3>
+<div class="gbar"><span>What the lecture adds (Patel Scaly 32-34)</span><b>How BSA is estimated and the lifestyle and non-drug measures given to every psoriasis patient; she said non-drug care makes a large difference in outcome</b><i>Patel Scaly slide 32, 33, 34</i></div>
+<div class="gpt g2-block"><h5>Body surface area (BSA) figure (Patel Scaly slide 32)</h5>
+<p class="g2-status"><b>Status B</b></p>
+<p><b>Reasoning added.</b> The figure gives percent of body surface by area. Adult: head 9% (front and back), back 18%, chest 18%, each arm 9%, perineum 1%, each leg 18%. Child: head 18%, back 18%, chest 18%, each arm 9%, perineum 1%, each leg 13.5%. She explained the method: the provider takes the area covered by psoriasis and compares it as a proportion of the whole body; the larger the area covered, the higher the BSA. The same applies to children, and the result is what places the patient in mild, moderate or severe.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;they calculate a proportion to the entire body&rdquo; <span class='g2-src'>11/11 T@11082</span></p>
+<p>&ldquo;the larger the area that's covered by plaque, the higher the BSA&rdquo; <span class='g2-src'>11/11 T@11457</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Healthy lifestyle recommendations for all psoriasis patients (Patel Scaly slide 33)</h5>
+<p class="g2-status"><b>Status B, E</b></p>
+<p><b>Exam cue and reasoning.</b> The slide lists reducing stress, regular exercise, weight management (BMI 18.5 to 24.9, slide only), moderate alcohol and stopping smoking. Her reason: drugs alone do not give much improvement without these changes, so smoking patients should be started on a cessation plan. She said she could not stress this enough.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;I can't stress this enough&rdquo; <span class='g2-src'>11/11 T@12014</span></p>
+<p>&ldquo;you may be on the right medications&rdquo; <span class='g2-src'>11/11 T@12106</span></p>
+<p>&ldquo;patients do not necessarily see much of an improvement&rdquo; <span class='g2-src'>11/11 T@12198</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Non-pharmacologic treatments (Patel Scaly slide 34)</h5>
+<p class="g2-status"><b>Status B</b></p>
+<p><b>Reasoning added.</b> The slide lists oatmeal baths, moisturizers and emollients, and sunscreen (SPF 30+ with UVA protection). She said moisturizers and emollients and oatmeal baths work as they do in atopic dermatitis, and that skin should be protected from the sun. Her last phrase, about burning of the plaque and hyperpigmentation, is unclear in the captions and is not used here.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;our moisturizers, or emollients come back in play&rdquo; <span class='g2-src'>11/11 T@12345</span></p>
+<p>&ldquo;Oatmeal baths, very similar to atopic dermatitis lecture&rdquo; <span class='g2-src'>11/11 T@12456</span></p></div>
+</div>
+</section>
+
+<section class="gobj" id="gobj-pl-s-11">
+<h3>Dr. Patel, slide by slide &middot; Psoriasis treatment algorithms &middot; slides 35-37</h3>
+<div class="gbar"><span>What the lecture adds (Patel Scaly 35-37)</span><b>The two treatment algorithms and the topical options; she said topical agents come first, systemic last, and non-drug therapy is given to every patient</b><i>Patel Scaly slide 35, 36, 37</i></div>
+<div class="gpt g2-block"><h5>Algorithm for mild-to-moderate psoriasis (Patel Scaly slide 35)</h5>
+<p class="g2-status"><b>Status B, D, E</b></p>
+<p><b>Exam cue and reasoning.</b> The slide shows topical agents first; if inadequate, topical agents plus phototherapy; if inadequate, topical agents plus a systemic agent. A box on the right adds moisturizers as needed and says to continue if controlled and step down to the lowest dose or potency that keeps control. She said mild to moderate is the same group for treatment (mild BSA and moderate BSA), and that non-drug therapy is always given. Her emphasis was topical first and systemic last.</p>
+<div class="g2-note"><span class="g2-k">Slide and lecture differ</span><p>Slide: the second step of the mild-to-moderate algorithm is topical agents plus phototherapy. Lecture: she did not mention that step; she described only topical first and systemic last, and called photochemotherapy (psoralen with UVA) the absolute last line. An exam written from her lecture would key topical first and systemic last, since that is what she said repeatedly.</p></div>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;topical agents will always be utilized first&rdquo; <span class='g2-src'>11/11 T@13231</span></p>
+<p>&ldquo;Systemic will be last line&rdquo; <span class='g2-src'>11/11 T@13277</span></p>
+<p>&ldquo;mild to moderate psoriasis patients, topical agents first&rdquo; <span class='g2-src'>11/11 T@35286</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Topical therapy options for psoriasis (Patel Scaly slide 36)</h5>
+<p class="g2-status"><b>Status B, C, E</b></p>
+<p><b>Exam cue and reasoning.</b> Choice depends on what the patient has tried and is on now. She said no topical is better than another, but corticosteroids have been shown to be the most effective. Slide regimens: corticosteroids 2 to 4 times daily (cream or lotion by day, ointment at night; low potency for face and skin folds; limit to 4 weeks or less); calcipotriene once or twice daily (ointment) or twice daily (cream or foam); tazarotene or adapalene once daily at bedtime; anthralin on thick plaques only, 2 hours or less, with zinc oxide to protect normal skin; coal tar evening to morning; salicylic acid shampoo for scalp; pimecrolimus for intertriginous areas. She said to move on to other options if low potency was tried, potency was raised and a month or so has passed <span class="g2-tonly" title="Transcript only: not on the slide">Transcript-only, verify against slide</span>.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;corticosteroids has been shown to be the most effective&rdquo; <span class='g2-src'>11/11 T@13906</span></p>
+<p>&ldquo;what they've tried in the past and what they're currently on&rdquo; <span class='g2-src'>11/11 T@13712</span></p>
+<p>&ldquo;they've increased the potency over time, they've waited about a month or so&rdquo; <span class='g2-src'>11/11 T@14034</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Algorithm for moderate-to-severe psoriasis (Patel Scaly slide 37)</h5>
+<p class="g2-status"><b>Status B, D, E</b></p>
+<p><b>Exam cue and reasoning.</b> A moderate patient who has tried all topical agents, or a severe patient, moves to a systemic agent, most likely methotrexate. If a systemic agent has been used for a while, the dose can be raised or another option tried. If inadequate, the next box is a more potent systemic agent or a biologic (or, less commonly, two or more systemic agents in rotation); if that is inadequate, a biologic (if not already used) with or without other agents. The first box also says to consider a biologic early if comorbidities exist (for example psoriatic arthritis). Moisturizers are always added.</p>
+<div class="g2-note"><span class="g2-k">Slide and lecture differ</span><p>Slide: the topical agent (with phototherapy in the first box) is marked "+/-" (optional) in the first two boxes. Lecture: she read the plus or minus as always applying the topical agent, so the topical continues when a systemic is added. An exam written from her lecture would key that the topical is continued, because she said so explicitly.</p></div>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;Most likely methotrexate, but there are some other options available&rdquo; <span class='g2-src'>11/11 T@14931</span></p>
+<p>&ldquo;last line for these patients is a biologic agent&rdquo; <span class='g2-src'>11/11 T@15441</span></p>
+<p>&ldquo;you're always going to apply that topical agent&rdquo; <span class='g2-src'>11/11 T@15185</span></p></div>
+</div>
+</section>
+
+<section class="gobj" id="gobj-pl-s-12">
+<h3>Dr. Patel, slide by slide &middot; Systemic agents &middot; slides 38-39</h3>
+<div class="gbar"><span>What the lecture adds (Patel Scaly 38-39)</span><b>The oral and systemic drug options and what decides between them; she said these are options chosen by the patient, not first, second and third line</b><i>Patel Scaly slide 38, 39</i></div>
+<div class="gpt g2-block"><h5>Systemic options: apremilast, tofacitinib, acitretin (Patel Scaly slide 38)</h5>
+<p class="g2-status"><b>Status B, C, D, E</b></p>
+<p><b>Exam cue and reasoning.</b> Apremilast (Otezla), a PDE-4 blocker: 30 mg twice a day reached in the first week, response by week 4, side effects nausea, vomiting, diarrhea, depression and weight loss; once daily dosing with renal impairment (slide only). Tofacitinib (Xeljanz), a JAK inhibitor: an option after methotrexate failure; immunosuppressive with a black box warning, so the safety profile matters. Acitretin, an oral retinoid: maximum response 3 to 6 months; not for women who are pregnant or planning pregnancy; the slide adds not to drink alcohol and to avoid pregnancy for 3 years after stopping (slide only). She said to refer back to the dermatitis slides for the classes.</p>
+<p>She said the choice depends on age, safety profile and immune status.</p>
+<div class="g2-note"><span class="g2-k">Slide and lecture differ</span><p>Slide: "Dose titration to max 30 mg BID over first week". Lecture: she said 30 mg twice a day for the first week. Both reach 30 mg twice daily; a question on the target dose is keyed 30 mg BID.</p></div>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;These are options for patients based on what is most appropriate&rdquo; <span class='g2-src'>11/11 T@16696</span></p>
+<p>&ldquo;pregnant or planning to be pregnant, not an option&rdquo; <span class='g2-src'>11/11 T@16405</span></p>
+<p>&ldquo;refer back to my dermatitis slides&rdquo; <span class='g2-src'>11/11 T@16947</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Methotrexate, cyclosporine and abatacept (Patel Scaly slide 39)</h5>
+<p class="g2-status"><b>Status B, C, D, E</b></p>
+<p><b>Exam cue and reasoning.</b> Methotrexate: response in 3 to 6 weeks, must be given with folic acid, monitor CBC and LFTs, hepatotoxicity is the most common problem, worse with alcohol; it works for psoriasis and psoriatic arthritis. Cyclosporine: under 4 months because of nephrotoxicity; many interactions; contraindicated in untreated hypertension, systemic malignancy or infection; higher risk in elderly (hypertension). Abatacept (Orencia): subcutaneous, screen for TB, interactions with live vaccines (the slide also lists COPD). Cyclosporine is dosed on actual body weight, but she said she does not want the dosing known, only that it is an option. For picking one, she said to use the patient safety profile and age, for example choosing a drug that does not worsen liver disease in a patient with cirrhosis.</p>
+<div class="g2-note"><span class="g2-k">Slide and lecture differ</span><p>Methotrexate: she said it "tends to be first line, most affordable", and also that systemic options are not first, second or third line. Slide 37 names methotrexate (eg, MTX) in the first box. An exam written from her lecture would key methotrexate as the usual first systemic agent, and ask for the patient factor that changes the choice.</p></div>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;it is very important that we administer folic acid with methotrexate&rdquo; <span class='g2-src'>11/11 T@17204</span></p>
+<p>&ldquo;hepatoxicity tends to be the most common with this medication class&rdquo; <span class='g2-src'>11/11 T@17398</span></p>
+<p>&ldquo;less than 4 months is what's recommended&rdquo; <span class='g2-src'>11/11 T@17734</span></p>
+<p>&ldquo;I don't want you to know dosing&rdquo; <span class='g2-src'>11/11 T@17887</span></p>
+<p>&ldquo;we would look for a medication that doesn't necessarily worsen that&rdquo; <span class='g2-src'>11/11 T@18986</span></p></div>
+</div>
+</section>
+
+<section class="gobj" id="gobj-pl-s-13">
+<h3>Dr. Patel, slide by slide &middot; Biologic agents &middot; slides 40-43</h3>
+<div class="gbar"><span>What the lecture adds (Patel Scaly 40-43)</span><b>Biologic classes, names and safety; she said to know generic names, brand names, class and the bolded items, and to monitor for infection</b><i>Patel Scaly slide 40, 41, 42, 43</i></div>
+<div class="gpt g2-block"><h5>Biologics key points (Patel Scaly slide 40)</h5>
+<p class="g2-status"><b>Status B, C</b></p>
+<p><b>Reasoning and example.</b> Biologics are specialty medicines that need special monitoring by clinical pharmacists and providers, very often, at least every 4 weeks <span class="g2-tonly" title="Transcript only: not on the slide">Transcript-only, verify against slide</span>. A PPD is the TB test: it is injected into the epidermis, and if the patient reacts, the response is read as positive or negative. No live vaccines; screen for TB before and during therapy and do a PPD annually; stop for an active infection, including flu, cold and COVID. Common effects: injection-site reaction, headache, rhinitis, upper respiratory infection. Serious: infections, hypersensitivity, lymphoma and other malignancy, and new or worse heart failure with TNF-alpha inhibitors. Her reason for the infection risk: the drug lowers the inflammatory and immune response the body normally has, so infection risk rises, which is why live vaccines are avoided and active infection stops the drug.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;no live vaccines are recommended with these medications&rdquo; <span class='g2-src'>11/11 T@19621</span></p>
+<p>&ldquo;increasing the risk of infections is going to occur&rdquo; <span class='g2-src'>11/11 T@20793</span></p>
+<p>&ldquo;So that's including flu, cold, COVID&rdquo; <span class='g2-src'>11/11 T@20108</span></p>
+<p>&ldquo;very often, at least every 4 weeks&rdquo; <span class='g2-src'>11/11 T@19564</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>TNF-alpha inhibitors (Patel Scaly slide 41)</h5>
+<p class="g2-status"><b>Status B, C, E</b></p>
+<p><b>Exam cue and reasoning.</b> Adalimumab (Humira), etanercept (Enbrel), infliximab (Remicade), golimumab (Simponi), certolizumab (Cimzia). Do PPD yearly, screen for hepatitis B, monitor CBC and LFTs. Do not use with live vaccines, a personal or first-degree family history of demyelinating disease or multiple sclerosis, or congestive heart failure. She said congestive heart failure is a complete contraindication for TNF-alpha drugs and repeated it on purpose. Humira, Enbrel and Remicade are the most commonly prescribed <span class="g2-tonly" title="Transcript only: not on the slide">Transcript-only, verify against slide</span>.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;recognize the generic names, recognize the brand names&rdquo; <span class='g2-src'>11/11 T@21649</span></p>
+<p>&ldquo;congestive heart failure patients completely contraindicated in TNF alpha&rdquo; <span class='g2-src'>11/11 T@22238</span></p>
+<p>&ldquo;exactly what's bolded on the slide, very important for you to know&rdquo; <span class='g2-src'>11/11 T@22407</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Interleukin inhibitors (Patel Scaly slide 42)</h5>
+<p class="g2-status"><b>Status B, C, D, E</b></p>
+<p><b>Exam cue and reasoning.</b> Ustekinumab (Stelara), IL-12 and IL-23: avoid in active TB, no live vaccines, monitor PPD, CBC, signs of infection and Crohn disease symptoms; it interacts with cyclosporine and warfarin (levels are monitored). Tildrakizumab (Ilumya) and risankizumab (Skyriza), IL-23; guselkumab (Tremfya), IL-23. Secukinumab (Cosentyx), ixekizumab (Taltz) and brodalumab (Siliq), IL-17A: Cosentyx is avoided in Crohn disease; Siliq has a black box warning for suicide risk and a REMS program. Doses are on the slide only. She said different drugs in one class have slightly different cautions, and that interleukin drugs act on inflammation, which is why inflammatory bowel disease occurs more often in this class. Skyriza is the most commonly prescribed IL-23 drug <span class="g2-tonly" title="Transcript only: not on the slide">Transcript-only, verify against slide</span>; the captions garble Siliq.</p>
+<div class="g2-note"><span class="g2-k">Slide and lecture differ</span><p>Slide: Cosentyx - avoid in Crohn disease; the black box warning is listed under brodalumab (Siliq). Lecture: in answer to a student she called the Crohn disease caution for Cosentyx a black box warning. An exam written from her lecture would key the slide: Siliq has the boxed suicide warning, and Cosentyx is avoided in Crohn disease.</p></div>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;they're gonna have slightly different cautions&rdquo; <span class='g2-src'>11/11 T@27008</span></p>
+<p>&ldquo;know the generic name, know the brand name&rdquo; <span class='g2-src'>11/11 T@23689</span></p>
+<p>&ldquo;Anything that's bolded&rdquo; <span class='g2-src'>11/11 T@23923</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Safety considerations for biologics (Patel Scaly slide 43)</h5>
+<p class="g2-status"><b>Status B, E</b></p>
+<p><b>Exam cue and reasoning.</b> All biologics: serious infections including TB, malignancy and lymphoma, anaphylaxis. Anti-TNFs: heart failure worsening, demyelinating disease, hepatitis B reactivation, cytopenias, lupus-like syndrome. Anti-ILs: inflammatory bowel disease and worsening depression. Screen for latent TB, avoid live vaccines, test for hepatitis B before starting; liver function and lipids at the clinician's discretion. She said patients can be vaccinated while on a biologic, just not with a live vaccine, and that the main labs are LFTs, CBC and TB monitoring.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;They can be vaccinated, but just not a live vaccine&rdquo; <span class='g2-src'>11/11 T@25379</span></p>
+<p>&ldquo;the main ones tend to be LFTs, CBCs, monitoring for TB&rdquo; <span class='g2-src'>11/11 T@25766</span></p>
+<p>&ldquo;the biggest things to remember, to screen for and monitor appropriately&rdquo; <span class='g2-src'>11/11 T@25062</span></p></div>
+</div>
+</section>
+
+<section class="gobj" id="gobj-pl-s-14">
+<h3>Dr. Patel, slide by slide &middot; Photochemotherapy, alternatives and cost &middot; slides 44-47</h3>
+<div class="gbar"><span>What the lecture adds (Patel Scaly 44-47)</span><b>The last-line light therapy, complementary options, and cost; she said photochemotherapy is the absolute last line for severe refractory psoriasis</b><i>Patel Scaly slide 44, 45, 46, 47</i></div>
+<div class="gpt g2-block"><h5>Photochemotherapy (PUVA): side effects and efficacy (Patel Scaly slide 44)</h5>
+<p class="g2-status"><b>Status B</b></p>
+<p><b>Reasoning added.</b> PUVA is oral psoralens plus UVA light, with about 90% efficacy on the slide. Side effects: serious burns, blistering, peeling, itching, nausea, possible increase in some cancers (basal cell and melanoma) and photoaging. She called it the absolute last line, partly because of the UV radiation, and explained that the effect reaches below the epidermis into the dermis, where psoriasis forms, which is why the side effects are severe. The slide also says a skin biopsy is needed to confirm the diagnosis (slide only).</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;it is absolute last line, partly because of the UV radiation&rdquo; <span class='g2-src'>11/11 T@28240</span></p>
+<p>&ldquo;90% do respond well, but it is UVA light&rdquo; <span class='g2-src'>11/11 T@28434</span></p>
+<p>&ldquo;goes beyond the epidermis, and that is why the side effects are quite severe&rdquo; <span class='g2-src'>11/11 T@29080</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Photochemotherapy: mechanism and use (Patel Scaly slide 45)</h5>
+<p class="g2-status"><b>Status B</b></p>
+<p><b>Reasoning added.</b> Psoralen cross-links with DNA in the presence of UVA light, which changes the immune response in the skin and lymphocytes. She said the treatment targets the dermis, where the whole process of psoriasis happens, so it is reserved for severe, refractory psoriasis. The captions render psoralen as "porcelain".</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;what we're targeting is that dermis&rdquo; <span class='g2-src'>11/11 T@28966</span></p>
+<p>&ldquo;This is only for our severe refractory psoriasis patients&rdquo; <span class='g2-src'>11/11 T@29158</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Integrative and alternative medicine (Patel Scaly slide 46)</h5>
+<p class="g2-status"><b>Status B</b></p>
+<p><b>Reasoning added.</b> The slide lists traditional Chinese medicine, herbal therapies (aloe vera, St. John's wort topical cream, which is photosensitizing, and Mahonia aquafolium 10%), fish oil and curcumin as adjuvants, a gluten-free diet for some, and stress reduction and hypnosis. She grouped them as options used along with drug therapy and returned to stress as a factor and to the non-drug measures; she did not read the herbal items.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;other options that patients can utilize along with their medication therapies&rdquo; <span class='g2-src'>11/11 T@29746</span></p>
+<p>&ldquo;stress was a huge factor&rdquo; <span class='g2-src'>11/11 T@29541</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Pharmacoeconomics of psoriasis treatment (Patel Scaly slide 47)</h5>
+<p class="g2-status"><b>Status B, C</b></p>
+<p><b>Reasoning added.</b> Cost items are the drug, administration, monitoring, adverse effects, failed treatment and days off work; the slide says cost can be significant ($1000s), even with insurance. She added that topicals are usually more affordable, and that moderate to severe disease (systemic and biologic) is what drives the cost. Insurance coverage is limited, so specialty pharmacies and dermatology clinical pharmacists help with prior authorizations, manufacturer coupons and assistance programs.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;Topical agents usually tends to be a little bit more affordable&rdquo; <span class='g2-src'>11/11 T@30435</span></p>
+<p>&ldquo;Insurance again is very limited in covering these medications&rdquo; <span class='g2-src'>11/11 T@30131</span></p>
+<p>&ldquo;the only way that we're able to get the medication approved&rdquo; <span class='g2-src'>11/11 T@31309</span></p></div>
+</div>
+</section>
+
+<section class="gobj" id="gobj-pl-s-15">
+<h3>Dr. Patel, slide by slide &middot; Monitoring, education and case &middot; slides 48-52</h3>
+<div class="gbar"><span>What the lecture adds (Patel Scaly 48-52)</span><b>Follow-up, patient education, a worked psoriasis case, and the closing points; she said follow-up is 1 to 2 weeks and that history and prior response guide the choice</b><i>Patel Scaly slide 48, 49, 50, 51, 52</i></div>
+<div class="gpt g2-block"><h5>Monitor and evaluate (Patel Scaly slide 48)</h5>
+<p class="g2-status"><b>Status B, C</b></p>
+<p><b>Reasoning added.</b> Follow up with the patient or caregiver in 1 to 2 weeks, check that monitoring for effects and side effects is in place (for example lab tests), reinforce preventive measures including continued maintenance therapy, connect the patient to other resources (for example a psychologist for stress reduction) and collaborate with the care team. She added that when a patient starts a new medicine they need to be taught how to give it, the side effects, the comorbidities and how often to see the provider.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;within 1 to 2 weeks, the patient can definitely contact the provider&rdquo; <span class='g2-src'>11/11 T@31438</span></p>
+<p>&ldquo;we need to educate them in terms of how to administer the medication&rdquo; <span class='g2-src'>11/11 T@32700</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Patient education: psoriasis (Patel Scaly slide 49)</h5>
+<p class="g2-status"><b>Status C, E</b></p>
+<p><b>Cue and example.</b> The slide tells students to fully inform patients and caregivers of the benefits and risks of the options and lists aad.org and psoriasis.org. She said many resources exist because there is no cure and many treatments exist, and told the class to know what would be tried first for mild to moderate and for moderate to severe patients, plus the biologic cautions and contraindications.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;partly because we haven't found a cure for it&rdquo; <span class='g2-src'>11/11 T@33427</span></p>
+<p>&ldquo;Know exactly what we would trial with a mild to moderate patient&rdquo; <span class='g2-src'>11/11 T@33667</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Case: 52-year-old woman with elbow plaques (Patel Scaly slide 50)</h5>
+<p class="g2-status"><b>Status C</b></p>
+<p><b>Clinical example.</b> The patient has two plaques of about 2 cm on the ulnar surface of each elbow with silvery scales, new over a week; takes enalapril/HCTZ; coal tar and steroid creams a couple of months with good results 15 years ago; no known drug allergies; BSA 7%. The class chose mild to moderate: 7% lies between the mild and moderate BSA values; 9% would sit between moderate and severe <span class="g2-tonly" title="Transcript only: not on the slide">Transcript-only, verify against slide</span>. The most appropriate OTC product is a topical corticosteroid, in line with topical first and systemic after. She did not say the old good response decided it; her conclusion slide lists prior response to treatment as a basis for choosing a product. Whether enalapril/HCTZ matters was not discussed (not in materials).</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;7% is in between that mild BSA score&rdquo; <span class='g2-src'>11/11 T@34899</span></p>
+<p>&ldquo;like a 9%, right? So in between that moderate as well as severe&rdquo; <span class='g2-src'>11/11 T@35034</span></p>
+<p>&ldquo;Good. Topical corticosteroids&rdquo; <span class='g2-src'>11/11 T@35242</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Conclusions (Patel Scaly slide 51)</h5>
+<p class="g2-status"><b>Status B, D, E</b></p>
+<p><b>Exam cue and reasoning.</b> Mild to moderate scaly dermatoses are often managed with non-prescription topical products. Choice is based on prior response and risks versus benefits; education covers topical and oral use. She summarized the topical products as first line, always considering the patient history, and said the reason to teach cautions and contraindications is that patients have a right to understand what is recommended.</p>
+<div class="g2-note"><span class="g2-k">Slide and lecture differ</span><p>Slide: follow-up should be a week after self-treatment begins. Lecture: she said 1 to 2 weeks after self-treatment begins, and slide 48 also says 1 to 2 weeks. An exam written from her lecture would key 1 to 2 weeks for psoriasis follow-up.</p></div>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;mostly managed by topical non-prescription products&rdquo; <span class='g2-src'>11/11 T@35528</span></p>
+<p>&ldquo;that 1 to 2 weeks after that self-treatment begins&rdquo; <span class='g2-src'>11/11 T@36180</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Questions slide (Patel Scaly slide 52)</h5>
+<p class="g2-status"><b>Status A</b> (title or divider slide)</p>
+<p>On the slide and complete; nothing added in lecture.</p>
+</div>
+</section>
+</details>
 <h2 class="gdeck" id="gdeck-p8o">Outdoor Exposure Therapeutics (Dr. Patel, 11/12; Exam 2)</h2>
 <p class="sub">OE = Patel_Outdoor-Exposures-Student.pdf, slide = PDF page; T@ = place in the 11/12 transcript; PollEv = her polls of 11/12. Her seven objectives (OE 3), one section each.</p>
 <div class="gask"><b>How she asks (11/12)</b><ul><li>&ldquo;4 to 5 questions per lecture hour is how we calculate it out&rdquo; (T@1239 11/12). &ldquo;Multiple choice, select all and then fill in the blank for my portion. Fill in the blank is calculations&rdquo; (T@96227 11/12).</li><li>Adult fingertip units: &ldquo;It&rsquo;s come back 3 times now, so make sure you practice calculations with this only adult conversion chart&rdquo; (OE 5; T@1737 11/12).</li><li>&ldquo;Pay attention to the age of the patient. Pay attention to certain key facts like we practice [in] Poll Everywhere&rdquo; (T@45397 11/12); &ldquo;make note of the certain duration of time&rdquo; (T@20438 11/12).</li><li>Not asked: repellent ingredients (T@11557 11/12); types of mosquito (T@13776 11/12); doses for the flea-borne diseases (T@15070 11/12); the antivenin protocol on OE 59 (T@42049 11/12).</li></ul></div>
@@ -2567,6 +3997,616 @@ const GUIDE_HTML = `
 </div>
 </section>
 
+<details class="gdetails" id="gpl-p8o">
+<summary>Dr. Patel: Outdoor exposure slide by slide, what the lecture adds (67 slides)</summary>
+<section class="gobj" id="gobj-pl-o-1">
+<h3>Dr. Patel, slide by slide &middot; Outdoor exposures &middot; slides 1&ndash;5</h3>
+<div class="gbar"><span>What the lecture adds (Outdoor 1&ndash;5)</span><b>Frame for the Outdoor Exposure lecture: her objectives, how she says she builds exam questions, and the fingertip-unit calculation she said has now returned three times</b><i>Patel Outdoor slide 1, 2, 3, 4, 5</i></div>
+<div class="gpt g2-block"><h5>Title slide: Outdoor Exposure Therapeutics (Patel Outdoor slide 1)</h5>
+<p class="g2-status"><b>Status A</b> On the slide and complete; nothing added in lecture.</p>
+</div>
+<div class="gpt g2-block"><h5>Poll Everywhere sign-in (Patel Outdoor slide 2)</h5>
+<p class="g2-status"><b>Status A</b> On the slide and complete; nothing added in lecture.</p>
+</div>
+<div class="gpt g2-block"><h5>Learning objectives: what each question can ask (Patel Outdoor slide 3)</h5>
+<p class="g2-status"><b>Status E</b> exam cue about how she builds questions</p>
+<p class="g2-p">The objectives list the kinds of decisions a question can test: decide from signs, symptoms and history whether the patient has an insect bite, sting, plant dermatitis, lice, scabies, snake bite or rabies exposure; decide if the patient is a self-care candidate; apply treatment goals; recommend non-drug therapy; recommend the best treatment (dosing frequency and maximum days of use, length of treatment, expected onset or relief, common adverse effects, contraindications and interactions); give monitoring and follow-up; and counsel on actions needed after an outdoor exposure.</p>
+<p class="g2-p">She tied these to her exam writing, and gave the count of questions per lecture hour. The 70% share and the five questions each from Dr. Sikazwe and Dr. Smith are spoken only <span class="g2-tonly" title="Transcript only: not on the slide">Transcript-only, verify against slide</span>.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;This is how I create my exam questions as well&rdquo; <span class='g2-src'>11/12 T@962</span></p>
+<p>&ldquo;this is what I want you to know&rdquo; <span class='g2-src'>11/12 T@1183</span></p>
+<p>&ldquo;4 to 5 questions per lecture hour is how we calculate it out&rdquo; <span class='g2-src'>11/12 T@1239</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Lecture outline: OTC topical medications, then conditions (Patel Outdoor slide 4)</h5>
+<p class="g2-status"><b>Status A</b> On the slide and complete; nothing added in lecture.</p>
+</div>
+<div class="gpt g2-block"><h5>Fingertip units: quantity of cream needed (Patel Outdoor slide 5)</h5>
+<p class="g2-status"><b>Status B, E</b> reasoning for the calculation, and her repeat cue</p>
+<p class="g2-p">On the slide, one fingertip unit (FTU) is about 0.5 g, and each body area has an FTU count: scalp 3, face and neck 2.5, one hand 1, one arm 4, elbows 1, both soles 1.5, one foot including toes 2, one leg including foot 8, buttocks 4, knees 1, trunk both sides 14 (7 each side). The lecture shows how the chart becomes a dispensing decision: find the area, multiply FTU by 0.5 g for one application, then multiply by applications per day and by days.</p>
+<p class="g2-p">Her worked case was hydrocortisone 1% cream twice a day for 3 days on both feet <span class="g2-tonly" title="Transcript only: not on the slide">Transcript-only, verify against slide</span>. Two feet with toes is 4 FTU, which is 2 g per application, so 12 g in total, and she rounded up to a 15 g tube <span class="g2-tonly" title="Transcript only: not on the slide">Transcript-only, verify against slide</span>. The tube sizes in her poll (15, 30, 60, 90 g) come from her PollEV page, not the slide <span class="g2-tonly" title="Transcript only: not on the slide">Transcript-only, verify against slide</span>. She also limited the chart to adults.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;It's come back 3 times now&rdquo; <span class='g2-src'>11/12 T@1732</span></p>
+<p>&ldquo;this only adult conversion chart&rdquo; <span class='g2-src'>11/12 T@1804</span></p>
+<p>&ldquo;So you get a total of 12 g&rdquo; <span class='g2-src'>11/12 T@2408</span></p>
+<p>&ldquo;Round it up to 15 g&rdquo; <span class='g2-src'>11/12 T@2436</span></p></div>
+</div>
+</section>
+
+<section class="gobj" id="gobj-pl-o-2">
+<h3>Dr. Patel, slide by slide &middot; Outdoor exposures &middot; slides 6&ndash;11</h3>
+<div class="gbar"><span>What the lecture adds (Outdoor 6&ndash;11)</span><b>Plant contact dermatitis: what causes the reaction, how it is prevented, how it looks, and what the treatment goals are (objectives 1, 3, 4 and 5)</b><i>Patel Outdoor slide 6, 7, 8, 9, 10, 11</i></div>
+<div class="gpt g2-block"><h5>Divider: Plant contact dermatitis (Patel Outdoor slide 6)</h5>
+<p class="g2-status"><b>Status A</b> On the slide and complete; nothing added in lecture.</p>
+</div>
+<div class="gpt g2-block"><h5>Urushiol sensitivity runs in families (Patel Outdoor slide 7)</h5>
+<p class="g2-status"><b>Status B</b> who reacts, and why severity differs</p>
+<p class="g2-p">The slide says 50 to 70% of people are sensitive to urushiol, that sensitivity tends to run in families, and that once a person is sensitized, later exposure produces contact dermatitis. In lecture she separated two ideas: whether a person reacts can have a genetic basis, but how severe the reaction is varies from patient to patient.</p>
+<p class="g2-p">This matters at the counter because the same plant exposure can produce a mild rash in one customer and a severe one in another, so the recommendation follows the individual's own signs. She said the plant liquid is what causes the reaction (the transcript spells it as 'urchile' and 'Urischi', and calls it a serum; the slide names it urushiol, an oily liquid).</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;50 to 70% tend to be in contact&rdquo; <span class='g2-src'>11/12 T@2534</span></p>
+<p>&ldquo;in terms of how severe it is, it is patient-specific&rdquo; <span class='g2-src'>11/12 T@2805</span></p></div>
+<div class="g2-note"><span class="g2-k">Wording differs, slide governs</span><p>The slide says 50 to 70% of people are sensitive to urushiol. She said 50 to 70% 'tend to be in contact' with plant contact dermatitis. Both give the same range; a question written from the slide would say sensitive.</p></div>
+</div>
+<div class="gpt g2-block"><h5>Urushiol: how fast it acts, when the rash appears, how long it lasts (Patel Outdoor slide 8)</h5>
+<p class="g2-status"><b>Status B</b> timing, with the patient-to-patient variation</p>
+<p class="g2-p">The slide gives the sequence: urushiol enters the skin within 10 minutes, binds epidermal proteins to form an antigen (sensitization), and with continued or later exposure a hypersensitivity reaction occurs (elicitation). The rash may appear 2 to 48 hours after exposure and continues 1 to 3 weeks.</p>
+<p class="g2-p">The lecture adds that the 2-to-48-hour onset depends on the patient, and that healing takes a little bit longer than other rashes. The sensitivity develops within 10 minutes of contact, yet the rash itself appears hours to 2 days later and lasts weeks, so a patient may arrive with a rash after contact that happened days earlier. She did not explain the sensitization and elicitation phases; that explanation is not in materials.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;That is what causes the sensitivity within 10 minutes, so pretty quick&rdquo; <span class='g2-src'>11/12 T@3013</span></p>
+<p>&ldquo;the rash may appear within 2 to 48 hours depending on the patient&rdquo; <span class='g2-src'>11/12 T@3101</span></p>
+<p>&ldquo;it does take about 1 to 3 weeks to heal&rdquo; <span class='g2-src'>11/12 T@3172</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Preventing plant contact dermatitis, and removing urushiol (Patel Outdoor slide 9)</h5>
+<p class="g2-status"><b>Status C</b> clothing, dead plants, pets and rinsing</p>
+<p class="g2-p">The slide lists transfer routes (plant, hands, objects), that urushiol stays active for years in dead dried plants and contaminated objects, that pets transfer it, protective clothing and gloves, and removal by rinsing, washing with soap and water (including under nails), or Tecnu, Zanfel or Dial Ultra.</p>
+<p class="g2-p">In lecture she made clothing the main prevention step for anyone hiking or gardening: cover with socks, pants, sleeves and gloves. She added that dead plants stay active, so gloves apply there too, and that after contact the patient should rinse and wash the skin right away to remove the oil, with moisturizer afterward. She did not read the product names on the slide.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;main thing is prevention with clothing&rdquo; <span class='g2-src'>11/12 T@3279</span></p>
+<p>&ldquo;in terms of dead dried plants, it also is active&rdquo; <span class='g2-src'>11/12 T@3591</span></p>
+<p>&ldquo;Pets are often the cause that causes the transfer to humans&rdquo; <span class='g2-src'>11/12 T@3673</span></p>
+<p>&ldquo;you remove and rinse the skin immediately as soon as you can&rdquo; <span class='g2-src'>11/12 T@3811</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Signs and symptoms of plant contact dermatitis (Patel Outdoor slide 10)</h5>
+<p class="g2-status"><b>Status B, C</b> pattern of lesions and rare severe reactions</p>
+<p class="g2-p">Early lesions are small blisters (vesicles) in a line where the skin brushed the plant. The general order is itching, erythema, then vesicles and papules. The slide also lists severe respiratory symptoms, which may follow inhalation of burning poison ivy, oak or sumac plants.</p>
+<p class="g2-p">The lecture explains the line: the early lesions mark where the skin touched the plant. She said some patients may be extremely allergic and have an anaphylactic reaction, but most patients have the three main symptoms. Burning-plant inhalation and the slide's footnote that the vesicles do not contain antigenic material were not discussed in lecture.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;wherever the skin came in contact with the plant&rdquo; <span class='g2-src'>11/12 T@4271</span></p>
+<p>&ldquo;it could be an anaphylaxis reaction&rdquo; <span class='g2-src'>11/12 T@4537</span></p>
+<p>&ldquo;most likely, it's going to be the three main symptoms&rdquo; <span class='g2-src'>11/12 T@4578</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Treatment goals for plant contact dermatitis (Patel Outdoor slide 11)</h5>
+<p class="g2-status"><b>Status B</b> what the goals mean and the length of the course</p>
+<p class="g2-p">The slide gives the goals: treat inflammation, relieve itching and scratching, clear debris from oozing, crusting and scaling, and minimize medication adverse effects. Options include calamine, emollients and anesthetics, cool soaks or baths, oral antihistamines, topical corticosteroids (any presentation) and oral corticosteroids (severe). It resolves in 1 to 3 weeks with or without treatment.</p>
+<p class="g2-p">After the 1-to-3-week figure she said consistency is key in treating plant dermatitis, so the treatment is kept up through the course of the rash. She described oral corticosteroids as the worst-case option, reserved for severe presentations.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;but in severe cases, we may utilize oral corticosteroids&rdquo; <span class='g2-src'>11/12 T@5036</span></p>
+<p>&ldquo;So consistency is key with treating plant dermatitis.&rdquo; <span class='g2-src'>11/12 T@5341</span></p></div>
+</div>
+</section>
+
+<section class="gobj" id="gobj-pl-o-3">
+<h3>Dr. Patel, slide by slide &middot; Outdoor exposures &middot; slides 12&ndash;16</h3>
+<div class="gbar"><span>What the lecture adds (Outdoor 12&ndash;16)</span><b>Choosing the topical or oral product by condition, age and skin state, and when to refer (objectives 5 and 6)</b><i>Patel Outdoor slide 12, 13, 14, 15, 16</i></div>
+<div class="gpt g2-block"><h5>Topical hydrocortisone, anesthetics and antihistamines by condition (Patel Outdoor slide 12)</h5>
+<p class="g2-status"><b>Status B, E</b> matching product, condition and comment</p>
+<p class="g2-p">The table pairs each product with its conditions and cautions. Hydrocortisone: insect bites and stings, plant dermatitis (wet or dry), atopic dermatitis, very mild psoriasis; not for a child under 2 years. Topical anesthetics (pramoxine, benzocaine, dibucaine, lidocaine): bites and stings, dry plant dermatitis, sunburn; not under occlusive dressing or on broken skin; methemoglobinemia is the adverse effect of the 'caines'. Topical diphenhydramine 0.5 to 2%: bites and stings only; avoid in chickenpox, plant dermatitis, sunburn and broken, oozing skin.</p>
+<p class="g2-p">Her instruction was to choose by reading three columns together: the product category, the condition, and the comment, with age included. She spoke the broken-skin and antihistamine cautions; the methemoglobinemia comment was not discussed in lecture.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;we're not gonna use the topical anesthetic under broken or occlusive skin&rdquo; <span class='g2-src'>11/12 T@5684</span></p>
+<p>&ldquo;We're avoiding topical antihistamines in patients in terms of chickenpox&rdquo; <span class='g2-src'>11/12 T@5763</span></p>
+<p>&ldquo;pay attention to what type of medication falls under what category&rdquo; <span class='g2-src'>11/12 T@6746</span></p>
+<p>&ldquo;that's how you would know which one to choose&rdquo; <span class='g2-src'>11/12 T@6899</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Counterirritants, astringents and topical antibiotics (Patel Outdoor slide 13)</h5>
+<p class="g2-status"><b>Status B, D</b> which type for which skin</p>
+<p class="g2-p">Antipruritics or counterirritants (phenol, camphor, menthol, benzyl alcohol, calamine) are for bites, stings and dry plant dermatitis, not broken skin. Astringents (aluminum acetate, witch hazel) are for wet or weeping plant or atopic dermatitis: they reduce inflammation by vasoconstriction and cool and dry the skin by evaporation. Topical antibiotics (bacitracin, neomycin, polymyxin B, mupirocin) are for minor burns and cuts; contact the provider if there is no improvement after 7 days.</p>
+<p class="g2-p">The lecture ties each type to the skin it fits: dry lesions get the counterirritant group, wet weeping lesions an astringent, and antibiotics prevent infection in minor wounds. She called the counterirritant group 'antipyretics', a slip for the slide's antipruritic heading.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;So this is called our antipyretics&rdquo; <span class='g2-src'>11/12 T@6112</span></p>
+<p>&ldquo;this is for our wet weeping plant dermatitis&rdquo; <span class='g2-src'>11/12 T@6406</span></p>
+<p>&ldquo;contact provider after 7 days if no improvement is found&rdquo; <span class='g2-src'>11/12 T@6625</span></p></div>
+<div class="g2-note"><span class="g2-k">Slide 13 versus slides 25 and 39: calamine</span><p>Slide 13 lists calamine as a counterirritant; slides 25 and 39 list it as a skin protectant, and she said it may be used under age 2 and in bacterial infection. For a child under 2 or a bite question, key a skin protectant (her words on those slides); a question asking only the class on this table follows slide 13.</p></div>
+</div>
+<div class="gpt g2-block"><h5>Reducing itch in plant contact dermatitis (Patel Outdoor slide 14)</h5>
+<p class="g2-status"><b>Status B</b> why oral, why not topical</p>
+<p class="g2-p">Two options reduce itch: a colloidal oatmeal bath (sprinkle a cup into fast-running bath water, soak 15 to 20 minutes twice a day, pat dry rather than wipe, and note the tub is very slippery) or an oral antihistamine. The slide states plainly not to use topical antihistamines or topical antibiotics.</p>
+<p class="g2-p">She tied the oatmeal bath to the dermatitis lecture and did not go through the bath steps. The reason for choosing an oral antihistamine over a topical one is given at slide 18: plant dermatitis can affect more than the spot that was touched, so a systemic product treats the whole body. The topical exclusion repeats the caution on slide 12.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;very similar to how we talked about it in dermatitis lecture&rdquo; <span class='g2-src'>11/12 T@7085</span></p>
+<p>&ldquo;We are not using topical antihistamines or topical antibiotics to treat itching&rdquo; <span class='g2-src'>11/12 T@7173</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Astringents: aluminum sulfate and calcium acetate soaks (Patel Outdoor slide 15)</h5>
+<p class="g2-status"><b>Status B</b> what it treats and how the patient uses it</p>
+<p class="g2-p">The slide says aluminum sulfate/calcium acetate reduces weeping and decreases itch, used as a soak or wet dressing. In lecture, weeping meant the oozing seen in the line of lesions on the earlier picture, which is why astringents belong to wet plant dermatitis.</p>
+<p class="g2-p">She added that the patient does the work: soaking and making a wet wrap at home, so the counseling is the technique, not just the product name. In her poll the astringent answer was written as aluminum acetate (slide 13 uses that name), while this slide names aluminum sulfate/calcium acetate; the lecture treats them as the same use.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;they're reducing the weeping&rdquo; <span class='g2-src'>11/12 T@7408</span></p>
+<p>&ldquo;the weeping is the lesion that we just saw in that line&rdquo; <span class='g2-src'>11/12 T@7441</span></p>
+<p>&ldquo;Patients do have to soak and create a wet wrap for themselves&rdquo; <span class='g2-src'>11/12 T@7525</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Plant dermatitis follow-up: when to refer (Patel Outdoor slide 16)</h5>
+<p class="g2-status"><b>Status B, C</b> referral triggers and what counts as infection</p>
+<p class="g2-p">The slide says refer to a physician if there is no improvement after 7 days, symptoms become worse, the rash covers a large area of the face or eyelids swell, the rash involves the genitalia, or there is a secondary infection. It also says symptoms can last up to 3 weeks.</p>
+<p class="g2-p">In lecture she added what secondary infection looks like at the counter: oozing and fever. She also separated the two time facts: the rash lasting up to 3 weeks is expected and is not by itself a reason to refer, while no improvement at 7 days is. She called each of these findings a straight referral.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;if we don't see any benefit after that 7 days, we're referring them&rdquo; <span class='g2-src'>11/12 T@7630</span></p>
+<p>&ldquo;these are all symptoms of a possible infection, straight referral&rdquo; <span class='g2-src'>11/12 T@8031</span></p>
+<p>&ldquo;if any of these areas do hit, we will straight refer the patient&rdquo; <span class='g2-src'>11/12 T@8185</span></p></div>
+</div>
+</section>
+
+<section class="gobj" id="gobj-pl-o-4">
+<h3>Dr. Patel, slide by slide &middot; Outdoor exposures &middot; slides 17&ndash;18</h3>
+<div class="gbar"><span>What the lecture adds (Outdoor 17&ndash;18)</span><b>The patient-care process applied to a poison ivy case: decide what the patient needs treated before choosing a product</b><i>Patel Outdoor slide 17, 18</i></div>
+<div class="gpt g2-block"><h5>Patient-centered care process wheel (Patel Outdoor slide 17)</h5>
+<p class="g2-status"><b>Status A</b> On the slide and complete; nothing added in lecture.</p>
+</div>
+<div class="gpt g2-block"><h5>Poison ivy case: itching without weeping (Patel Outdoor slide 18)</h5>
+<p class="g2-status"><b>Status B, C</b> reasoning behind the poll answers</p>
+<p class="g2-p">The patient hiked 2 days ago and has vesicles and papules on red skin of the legs and ankles; the vesicles are not open and there is no weeping; she has hypertension and takes lisinopril 10 mg at bedtime. Her question is what the patient needs treated. The problem is itching, so the answer is an oral antihistamine. A weeping-lesion product would be wrong because the exam notes no weeping, and a topical antihistamine is not used in plant dermatitis.</p>
+<p class="g2-p">The second poll asked for the best product to reduce weeping from poison ivy, and the answer is aluminum acetate. When a student asked why oral rather than topical, she answered that an oral antihistamine is systemic and treats the whole body, which matters because the rash can worsen beyond the touched area. She also said any oral antihistamine is appropriate; the one named was only an example.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;what are we treating with this patient? Itching, right?&rdquo; <span class='g2-src'>11/12 T@8896</span></p>
+<p>&ldquo;B would treat weeping&rdquo; <span class='g2-src'>11/12 T@9159</span></p>
+<p>&ldquo;it could cause worsening symptoms for the entire body&rdquo; <span class='g2-src'>11/12 T@9831</span></p>
+<p>&ldquo;Any oral antihistamine. That was just one example.&rdquo; <span class='g2-src'>11/12 T@9933</span></p></div>
+</div>
+</section>
+
+<section class="gobj" id="gobj-pl-o-5">
+<h3>Dr. Patel, slide by slide &middot; Outdoor exposures &middot; slides 19&ndash;23</h3>
+<div class="gbar"><span>What the lecture adds (Outdoor 19&ndash;23)</span><b>Insect bites versus stings, prevention and the four treatment goals (objectives 1, 3 and 4)</b><i>Patel Outdoor slide 19, 20, 21, 22, 23</i></div>
+<div class="gpt g2-block"><h5>Divider: Insect bites (Patel Outdoor slide 19)</h5>
+<p class="g2-status"><b>Status A</b> On the slide and complete; nothing added in lecture.</p>
+</div>
+<div class="gpt g2-block"><h5>Bites versus stings (Patel Outdoor slide 20)</h5>
+<p class="g2-status"><b>Status B, E</b> how to sort insects, and what the symptoms are</p>
+<p class="g2-p">Bites are nonvenomous (mosquitoes, fleas, bedbugs, ticks, chiggers, most spiders) and produce local mild itching, erythema and papules. Stings are venomous and contain allergenic proteins (bees, wasps, yellow jackets, hornets, fire ants) and produce pain, itching and irritation. Mosquitoes, fleas and ticks are marked as disease vectors.</p>
+<p class="g2-p">Her first instruction was to learn which insects belong in which group. She added that Texas has all of them, so the cases come up often at the counter. The vector marks were not discussed here; the vector diseases are taught on the slides after this.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;Pay attention to what insects fall under the bites versus the stings&rdquo; <span class='g2-src'>11/12 T@10123</span></p>
+<p>&ldquo;Bites tend to be non-venomous versus stings are venomous&rdquo; <span class='g2-src'>11/12 T@10193</span></p>
+<p>&ldquo;in terms of Texas, we have all of the above&rdquo; <span class='g2-src'>11/12 T@10260</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Preventing insect bites (Patel Outdoor slide 21)</h5>
+<p class="g2-status"><b>Status B, E</b> non-chemical prevention, and a stated exclusion</p>
+<p class="g2-p">The slide lists repellents (DEET, picaridin, IR3535, oil of lemon eucalyptus, PMD, permethrin) and contact avoidance (cover skin, cuff pant legs into socks, avoid habitat areas, keep pets free of pests, remove standing water and wood piles).</p>
+<p class="g2-p">In lecture she stressed prevention as the main tool and named examples: covering skin, avoiding habitat areas, keeping pets free of pests and treated, avoiding standing water such as ponds (she said it increases contact with insects) and wood piles. She said repellents contain many different ingredients, and she excluded the ingredient list from questions.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;prevention is key&rdquo; <span class='g2-src'>11/12 T@10556</span></p>
+<p>&ldquo;keeping pets free of pests, getting treatment done for your pets as well&rdquo; <span class='g2-src'>11/12 T@10748</span></p>
+<p>&ldquo;Avoiding any areas that have that standing water&rdquo; <span class='g2-src'>11/12 T@10822</span></p>
+<p>&ldquo;I'm not going to ask you certain ingredients that are in repellents&rdquo; <span class='g2-src'>11/12 T@11557</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Insect repellents table (Medical Letter) (Patel Outdoor slide 22)</h5>
+<p class="g2-status"><b>Status E</b> reference table she excluded from questions</p>
+<p class="g2-p">The slide is a table from The Medical Letter listing repellents with formulation, duration of protection and comments (for example, DEET products and picaridin, with notes on pregnancy and children). She did not teach it line by line.</p>
+<p class="g2-p">She said patients just need to know the list holds many FDA-approved ingredients and said she will not ask for specific ingredients.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;I'm not going to ask you certain ingredients that are in repellents&rdquo; <span class='g2-src'>11/12 T@11557</span></p>
+<p>&ldquo;just know that there are many ingredients that are FDA approved&rdquo; <span class='g2-src'>11/12 T@11630</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Insect bite treatment goals (Patel Outdoor slide 23)</h5>
+<p class="g2-status"><b>Status B</b> why identifying the insect matters</p>
+<p class="g2-p">The four goals are to relieve symptoms, prevent secondary bacterial infection, minimize medication adverse effects, and identify and eradicate transmissible diseases. The slide shows only the four labels.</p>
+<p class="g2-p">The lecture explains the fourth goal in practice: knowing which type of bite or sting it was is what lets the patient be treated correctly. The tick handling on the next slide applies this.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;what type of bite it was or what type of sting it was&rdquo; <span class='g2-src'>11/12 T@11908</span></p>
+<p>&ldquo;then that is most helpful to treat the patient&rdquo; <span class='g2-src'>11/12 T@11963</span></p></div>
+</div>
+</section>
+
+<section class="gobj" id="gobj-pl-o-6">
+<h3>Dr. Patel, slide by slide &middot; Outdoor exposures &middot; slides 24&ndash;28</h3>
+<div class="gbar"><span>What the lecture adds (Outdoor 24&ndash;28)</span><b>Bite first aid and treatment, and the vector-borne diseases she tied to mosquitoes, fleas and ticks (objectives 4, 5 and 6)</b><i>Patel Outdoor slide 24, 25, 26, 27, 28</i></div>
+<div class="gpt g2-block"><h5>Non-drug measures for insect bites (Patel Outdoor slide 24)</h5>
+<p class="g2-status"><b>Status B</b> reasons for saving the tick and cleaning afterward</p>
+<p class="g2-p">The slide lists: apply an ice pack promptly to reduce swelling, itching and pain; avoid scratching and keep nails trimmed; do not wear rough, irritating clothing over the bite; and remove ticks with tweezers by gently pulling (the slide says to remove the head), clean the area with rubbing alcohol and keep the tick in a plastic bag.</p>
+<p class="g2-p">She explained the purpose of saving the tick: knowing which tick it was lets the provider treat the patient accordingly. She said to clean the skin with rubbing alcohol after removal. The plastic bag detail was not spoken in lecture.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;Avoid scratching, especially with nails&rdquo; <span class='g2-src'>11/12 T@12121</span></p>
+<p>&ldquo;save the tick so that way we can address&rdquo; <span class='g2-src'>11/12 T@12449</span></p>
+<p>&ldquo;treat the affected area once the tick is removed with alcohol&rdquo; <span class='g2-src'>11/12 T@12580</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Insect bite treatment choices (Patel Outdoor slide 25)</h5>
+<p class="g2-status"><b>Status B</b> why skin protectants are the option under age 2</p>
+<p class="g2-p">The slide says any one or a combination of: skin protectants (petrolatum, calamine; can be used in children under 2 years), hydrocortisone, topical anesthetics (pramoxine, benzocaine), topical counterirritants (camphor, menthol) and oral antihistamines.</p>
+<p class="g2-p">The lecture gives the reason behind the age note: corticosteroids are not recommended under 2 years, so a skin protectant is the option for that age group. Hydrocortisone remains an option for older patients. So for a child under 2 with a bite, the skin protectant is the listed choice.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;calamine may be used in children less than 2 years of age&rdquo; <span class='g2-src'>11/12 T@12821</span></p>
+<p>&ldquo;Cause we're not gonna recommend corticosteroids in that age group&rdquo; <span class='g2-src'>11/12 T@12917</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Mosquito-borne diseases (Patel Outdoor slide 26)</h5>
+<p class="g2-status"><b>Status B, E</b> prevention emphasis and an exclusion</p>
+<p class="g2-p">The slide gives prevention (DEET or other repellent, protective clothing, removing standing water), malaria worldwide, and a list of U.S. neuro-invasive and febrile viral diseases (West Nile, dengue, chikungunya, Zika, St. Louis encephalitis, La Crosse encephalitis, Eastern equine encephalitis, yellow fever).</p>
+<p class="g2-p">She explained the travel link: malaria risk is for patients traveling to certain parts of the world, and those patients are treated for prevention. She said West Nile is the most common in the U.S. <span class="g2-tonly" title="Transcript only: not on the slide">Transcript-only, verify against slide</span> and said she does not necessarily need students to know which types of mosquitoes occur in the U.S.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;prevention is key once again&rdquo; <span class='g2-src'>11/12 T@13188</span></p>
+<p>&ldquo;Worldwide malaria may be found&rdquo; <span class='g2-src'>11/12 T@13287</span></p>
+<p>&ldquo;I don't necessarily need you to know what type of mosquitoes&rdquo; <span class='g2-src'>11/12 T@13776</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Flea-borne diseases: murine typhus and plague (Patel Outdoor slide 27)</h5>
+<p class="g2-status"><b>Status B, E</b> which antibiotic for which disease</p>
+<p class="g2-p">Murine typhus (Rickettsia typhi) in Texas: carried by cats, rodents and opossums; incubation 6 to 14 days; headache, fever, nausea and body aches; a rash starts on the trunk 5 to 6 days after the first symptoms and spreads to arms and legs; treated with doxycycline; untreated it may last months. Bubonic plague (Yersinia pestis), Southwest U.S., carried by rodents, cats and dogs: streptomycin, ciprofloxacin, levofloxacin, moxifloxacin, doxycycline, aminoglycosides.</p>
+<p class="g2-p">Her point was matching disease to antibiotic, not doses; the slide bolds the antibiotic lines (doxycycline for murine typhus, the list for plague). She said the flu-like symptoms occur around the same time as the rash. She named streptomycin, ciprofloxacin, levofloxacin, doxycycline and aminoglycosides for plague and did not name moxifloxacin.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;this can last for several months&rdquo; <span class='g2-src'>11/12 T@14740</span></p>
+<p>&ldquo;I don't need you to know dosing&rdquo; <span class='g2-src'>11/12 T@15070</span></p>
+<p>&ldquo;just understand which antibiotic would treat which flea-borne disease&rdquo; <span class='g2-src'>11/12 T@15107</span></p>
+<p>&ldquo;it's bolded for a reason&rdquo; <span class='g2-src'>11/12 T@15185</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Tick-borne diseases (Patel Outdoor slide 28)</h5>
+<p class="g2-status"><b>Status B</b> what to do with the tick</p>
+<p class="g2-p">The slide lists Lyme disease, rickettsial spotted fevers, tularemia and ehrlichiosis, with symptoms 2 to 14 days after the bite: fever, headache, myalgias and rash.</p>
+<p class="g2-p">In lecture, Lyme disease and the rickettsial infections were named the most common. She tied this to counseling: the patient removes the tick, applies alcohol and keeps the tick so the clinicians know exactly what is being treated. She described the early symptoms as cold-like or flu-like, with a rash.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;Keep the ticks so that way we understand exactly what we're treating here&rdquo; <span class='g2-src'>11/12 T@15510</span></p></div>
+</div>
+</section>
+
+<section class="gobj" id="gobj-pl-o-7">
+<h3>Dr. Patel, slide by slide &middot; Outdoor exposures &middot; slides 29&ndash;31</h3>
+<div class="gbar"><span>What the lecture adds (Outdoor 29&ndash;31)</span><b>Lyme disease and other tick-borne treatment, and when a bite is referred (objectives 5 and 6)</b><i>Patel Outdoor slide 29, 30, 31</i></div>
+<div class="gpt g2-block"><h5>Lyme disease: prophylaxis and treatment by stage (Patel Outdoor slide 29)</h5>
+<p class="g2-status"><b>Status B, E</b> timing, drug choice by allergy and the durations she compared</p>
+<p class="g2-p">The slide gives high risk as an Ixodes (black-legged) tick, a high-endemic area and attachment over 36 hours. Prophylaxis within 72 hours of detaching the tick: doxycycline 200 mg once in adults (children 4.4 mg/kg up to 200 mg). Erythema migrans: doxycycline 100 mg twice a day for 10 days; amoxicillin 500 mg three times a day for 14 days; cefuroxime axetil 500 mg twice a day for 14 days; second-line azithromycin 500 mg daily for 7 days (children are weight-based: 4.4, 50, 30 and 10 mg/kg daily). Neurologic or cardiac manifestations: 14 to 21 days; arthritic: oral antibiotics for 28 days.</p>
+<p class="g2-p">She said a patient with the erythema migrans rash may be past 72 hours and is still treated. She compared durations (azithromycin shortest) and said the several first choices exist because of allergy, with azithromycin for when none of the three fits because of allergy or resistance. She did not discuss the 36-hour criterion or the 28-day course.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;pay attention to the hour, right?&rdquo; <span class='g2-src'>11/12 T@16022</span></p>
+<p>&ldquo;So 72 hours within detaching the tick, that is prophylaxis treatment.&rdquo; <span class='g2-src'>11/12 T@16056</span></p>
+<p>&ldquo;It could have been a little bit longer than 72 hours&rdquo; <span class='g2-src'>11/12 T@16222</span></p>
+<p>&ldquo;it depends on their allergy&rdquo; <span class='g2-src'>11/12 T@16376</span></p>
+<p>&ldquo;azithromycin is the shortest time frame, 7 days&rdquo; <span class='g2-src'>11/12 T@17265</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Southern tick-associated rash illness and rickettsial spotted fevers (Patel Outdoor slide 30)</h5>
+<p class="g2-status"><b>Status B, D</b> which tick, which drug, and a duration conflict</p>
+<p class="g2-p">The slide says STARI (Lone Star tick) has no IDSA antibiotic recommendation. Rickettsial spotted fevers: doxycycline 100 mg twice a day for 7 days (children 2.2 mg/kg daily, max 100 mg/dose), recommended for all suspected rickettsial infections (Rocky Mountain, Gulf Coast, Pacific Coast, rickettsial pox), continued at least 3 days after the fever subsides with clinical improvement.</p>
+<p class="g2-p">In lecture she said no antibiotic is recommended for the Lone Star tick illness and that doxycycline is the recommended spotted fever treatment. The transcript spells the disease 'ricket spotted fever'.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;there are no antibiotic recommendations for this tick-borne disease&rdquo; <span class='g2-src'>11/12 T@17832</span></p>
+<p>&ldquo;just remember doxycycline is our recommended treatment&rdquo; <span class='g2-src'>11/12 T@18108</span></p>
+<p>&ldquo;should be treated with doxycycline at least 3 days after&rdquo; <span class='g2-src'>11/12 T@18453</span></p></div>
+<div class="g2-note"><span class="g2-k">Slide and lecture differ on the 3 days</span><p>Slide: treat a suspected infection until at least 3 days after the fever subsides. Lecture: a traveler should mention the trip to the provider, who may prescribe doxycycline for at least 3 days after, in case of contact. A question from the slide keys 3 days after fever resolution; her remark is a precautionary prescription.</p></div>
+</div>
+<div class="gpt g2-block"><h5>Insect bite follow-up: when to refer (Patel Outdoor slide 31)</h5>
+<p class="g2-status"><b>Status B</b> what counts as a secondary infection</p>
+<p class="g2-p">The slide says refer to a physician if symptoms persist after 7 days of treatment, symptoms worsen during treatment, or the patient develops a secondary infection (fever, joint pain, lymph node enlargement, neurologic symptoms).</p>
+<p class="g2-p">She added that this 7-day supply and 7-day check applies to bites as it did to plant dermatitis, and that any other symptom that has worsened over time is also a referral. She called any of these findings straight referral.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;symptoms worsen during treatment&rdquo; <span class='g2-src'>11/12 T@18901</span></p>
+<p>&ldquo;that is straight referral&rdquo; <span class='g2-src'>11/12 T@19119</span></p></div>
+</div>
+</section>
+
+<section class="gobj" id="gobj-pl-o-8">
+<h3>Dr. Patel, slide by slide &middot; Outdoor exposures &middot; slides 32&ndash;37</h3>
+<div class="gbar"><span>What the lecture adds (Outdoor 32&ndash;37)</span><b>Two bite cases, the move to stings, bee sting first aid and referral, and the sting case (objectives 1, 2 and 6)</b><i>Patel Outdoor slide 32, 33, 34, 35, 36, 37</i></div>
+<div class="gpt g2-block"><h5>Bedbug case and the maximum self-care duration (Patel Outdoor slide 32)</h5>
+<p class="g2-status"><b>Status B, E</b> why witch hazel and the neomycin product are not the answer, and the repeat 7-day cue</p>
+<p class="g2-p">The patient is a 23-year-old man with very itchy bedbug bites on the lower legs and torso, no medical history and no medications, and a neomycin allergy that worsened a rash. The goal is itch relief. Her poll options were oral diphenhydramine, witch hazel, Neosporin and referral <span class="g2-tonly" title="Transcript only: not on the slide">Transcript-only, verify against slide</span> (the options are on her PollEV page, not the slide). She tied the neomycin allergy to Neosporin (she called its ingredient very similar) and said witch hazel is more for inflammation. Of those options, the one that treats itch is oral diphenhydramine, the same oral antihistamine logic as the poison ivy case; she did not state the choice aloud.</p>
+<p class="g2-p">The next poll asked for the maximum treatment duration for self-care, with options of 3, 7, 10 and 14 days <span class="g2-tonly" title="Transcript only: not on the slide">Transcript-only, verify against slide</span>. She said seven days, linked it to atopic dermatitis and said it comes up again with bites.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;So in this case, very similar.&rdquo; <span class='g2-src'>11/12 T@19852</span></p>
+<p>&ldquo;he's already allergic to neomycin&rdquo; <span class='g2-src'>11/12 T@19900</span></p>
+<p>&ldquo;It's more so for that inflammation.&rdquo; <span class='g2-src'>11/12 T@20087</span></p>
+<p>&ldquo;What other lecture did we talk about 7 days referral?&rdquo; <span class='g2-src'>11/12 T@20213</span></p>
+<p>&ldquo;So make note of the certain duration of time&rdquo; <span class='g2-src'>11/12 T@20435</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Hunting trip case: flu-like illness with a rash (Patel Outdoor slide 33)</h5>
+<p class="g2-status"><b>Status B, E</b> key words that make this a referral</p>
+<p class="g2-p">A 24-year-old man has had flu-like symptoms and muscle aches for a couple of days. He has a rash on his leg that started several days after he returned from a hunting trip to Minnesota; that trip was about 10 days ago. He has taken 2 days off work to rest and drink fluids and symptoms persist. The answer she gave is immediate medical referral.</p>
+<p class="g2-p">She asked what words stood out: the duration, feeling ill, and muscle aches after about 10 days. She tied the referral to the time frame and the symptoms: 7 days as well as the symptoms he has. She did not name a disease for this case.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;what were some key terms that stood out? That duration, right?&rdquo; <span class='g2-src'>11/12 T@21107</span></p>
+<p>&ldquo;so immediate medical referral&rdquo; <span class='g2-src'>11/12 T@21515</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Divider: Insect stings (Patel Outdoor slide 34)</h5>
+<p class="g2-status"><b>Status A</b> On the slide and complete; nothing added in lecture.</p>
+</div>
+<div class="gpt g2-block"><h5>Bee sting first aid (Patel Outdoor slide 35)</h5>
+<p class="g2-status"><b>Status B</b> what comes first and when oral pain relief is added</p>
+<p class="g2-p">The goals are to relieve itching and pain and to minimize medication adverse effects. The steps are: remove the stinger, wash with soap and water, apply ice or a cold pack (the slide says it slows absorption and reduces pain and swelling), and use the same drugs as for insect bites. If topical products do not relieve pain, consider an oral analgesic.</p>
+<p class="g2-p">She said stinger removal comes first if possible, that treatment of the sting is the same as for insect bites, and that the analgesic step means an oral product. She sent students back to the chart at the start of the presentation for examples. She did not explain the ice reasoning in lecture.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;the removal of the bee, that would be first if possible&rdquo; <span class='g2-src'>11/12 T@21776</span></p>
+<p>&ldquo;it would be the same as insect bites&rdquo; <span class='g2-src'>11/12 T@21994</span></p>
+<p>&ldquo;So analgesic being oral&rdquo; <span class='g2-src'>11/12 T@22150</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Bee, wasp and scorpion stings: referral and follow-up (Patel Outdoor slide 36)</h5>
+<p class="g2-status"><b>Status B, C</b> why emergency care is immediate</p>
+<p class="g2-p">The slide says emergency care immediately for a history of a severe reaction, or at any time after the sting hives, dizziness, nausea or vomiting, or difficulty breathing; the picture adds loss of consciousness, swelling of the tongue and inability to swallow, and rapid swelling of the throat tissues. Triage to a provider if symptoms worsen or do not improve after 7 days of topical treatment.</p>
+<p class="g2-p">The lecture gives the reason: a patient may be having anaphylaxis, which can come on very quickly, and some patients do not know they are severely allergic. So a severe reaction at any time means 911 <span class="g2-tonly" title="Transcript only: not on the slide">Transcript-only, verify against slide</span>. The 7-day rule applies to bee, wasp and scorpion stings.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;Some patients don't even know that they're severely allergic to bees&rdquo; <span class='g2-src'>11/12 T@22408</span></p>
+<p>&ldquo;if there is a severe reaction at any time, 911&rdquo; <span class='g2-src'>11/12 T@22481</span></p>
+<p>&ldquo;7-day referral policy applies here as well&rdquo; <span class='g2-src'>11/12 T@22911</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Wasp sting case in a 7-year-old (Patel Outdoor slide 37)</h5>
+<p class="g2-status"><b>Status B, E</b> the key words in the stem</p>
+<p class="g2-p">A 7-year-old was stung on the right thigh near a creek by a yellow and black insect. The thigh hurts, itches and is swollen and bright red. His mother scraped off the stinger with a credit card and used ice, which helped at first, but the swelling is increasing. He has hives away from the sting site, asthma and seasonal allergic rhinitis, an amoxicillin rash allergy, and takes loratadine 10 mg and montelukast 5 mg daily.</p>
+<p class="g2-p">The answer is immediate referral to the emergency room. She pointed to hives and swelling as the keywords. The referral slide lists hives as an emergency symptom, and the hives here are away from the sting site, so a local anesthetic, a topical antihistamine or an Epsom salt soak (the other poll options <span class="g2-tonly" title="Transcript only: not on the slide">Transcript-only, verify against slide</span>) does not address them.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;Keyword here, hives and swelling, right?&rdquo; <span class='g2-src'>11/12 T@23898</span></p>
+<p>&ldquo;remember the symptoms of emergency cases that would include immediate referral&rdquo; <span class='g2-src'>11/12 T@23982</span></p></div>
+</div>
+</section>
+
+<section class="gobj" id="gobj-pl-o-9">
+<h3>Dr. Patel, slide by slide &middot; Outdoor exposures &middot; slides 38&ndash;40</h3>
+<div class="gbar"><span>What the lecture adds (Outdoor 38&ndash;40)</span><b>Sting non-drug measures and the OTC counseling points for bites and stings (objectives 4, 5 and 7)</b><i>Patel Outdoor slide 38, 39, 40</i></div>
+<div class="gpt g2-block"><h5>Non-drug measures for insect stings (Patel Outdoor slide 38)</h5>
+<p class="g2-status"><b>Status C</b> extra step after a sting</p>
+<p class="g2-p">The slide repeats the bite measures (ice, no scratching, no rough clothing) and adds honeybee stinger removal by grasping the stinger before all the venom is injected, then cleaning the area with rubbing alcohol.</p>
+<p class="g2-p">In lecture she treated this as the same approach as bites: prevent, then ice, remove the insect, and limit scratching. She added a monitoring step that is not on the slide: after the sting, check that the patient is not showing emergency symptoms, which connects to slide 36.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;we would remove the bee at that point&rdquo; <span class='g2-src'>11/12 T@24473</span></p>
+<p>&ldquo;ensure that the patient's not experiencing any emergency care symptoms&rdquo; <span class='g2-src'>11/12 T@24559</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>OTC counseling for bites and stings (Patel Outdoor slide 39)</h5>
+<p class="g2-status"><b>Status B, C, D</b> dosing limits and which product class</p>
+<p class="g2-p">The slide gives local anesthetics or counterirritants: apply to the bite area 3 to 4 times daily, not in children under 2, not longer than 7 days. Local anesthetics (pramoxine or benzyl alcohol) are less likely to cause sensitization or adverse effects; counterirritants are menthol or camphor. Skin protectants (zinc oxide or calamine) reduce irritation or inflammation, may be used in bacterial infection, are applied up to 4 times daily and may be used under age 2.</p>
+<p class="g2-p">She repeated the limits and added counseling that is not on the slide: clean the area, apply, and wait until dry for the counterirritants.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;applying it to the bite or the sting 3 to 4 times a day&rdquo; <span class='g2-src'>11/12 T@24801</span></p>
+<p>&ldquo;local anesthetics such as benzoyl alcohol&rdquo; <span class='g2-src'>11/12 T@24974</span></p>
+<p>&ldquo;less likely to cause sensitation or side effects&rdquo; <span class='g2-src'>11/12 T@25017</span></p>
+<p>&ldquo;wait until dry&rdquo; <span class='g2-src'>11/12 T@25234</span></p>
+<p>&ldquo;Protectants can also be applied in children younger than 2 years of age&rdquo; <span class='g2-src'>11/12 T@25472</span></p></div>
+<div class="g2-note"><span class="g2-k">Benzyl alcohol: two classes</span><p>Slide 13 lists benzyl alcohol with the counterirritants; this slide lists it with local anesthetics. In lecture she grouped it with local anesthetics here (the transcript spells it 'benzoyl alcohol', a captioning error for the slide's benzyl alcohol). A counseling question about bites and stings keys it as a local anesthetic.</p></div>
+</div>
+<div class="gpt g2-block"><h5>Hydrocortisone cautions: scabies, bacterial and fungal infections (Patel Outdoor slide 40)</h5>
+<p class="g2-status"><b>Status A</b> On the slide and complete; nothing added in lecture.</p>
+</div>
+</section>
+
+<section class="gobj" id="gobj-pl-o-10">
+<h3>Dr. Patel, slide by slide &middot; Outdoor exposures &middot; slides 41&ndash;45</h3>
+<div class="gbar"><span>What the lecture adds (Outdoor 41&ndash;45)</span><b>Lice: types, non-drug care, who should not self-treat, and the pediculicide options with their age limits (objectives 2 and 5)</b><i>Patel Outdoor slide 41, 42, 43, 44, 45</i></div>
+<div class="gpt g2-block"><h5>Divider: Pediculosis (Patel Outdoor slide 41)</h5>
+<p class="g2-status"><b>Status A</b> On the slide and complete; nothing added in lecture.</p>
+</div>
+<div class="gpt g2-block"><h5>Pediculosis: the three lice and treatment goals (Patel Outdoor slide 42)</h5>
+<p class="g2-status"><b>Status B</b> why repeat treatment is expected</p>
+<p class="g2-p">Head lice (Pediculus humanus capitis) are the most common infestation, spread by head-to-head contact or shared personal items, found within 4 mm (0.16 inches) of the scalp, and most common in school children. Body lice (P. humanus corporis) live in clothing seams and can transmit infection (typhus, trench fever). The pubic louse (Phthirus pubis) is spread by sexual contact, shared bedding or clothing; the slide labels it body lice. Goals: kill adult and nymph lice and remove eggs and nits; treatment may need repeating in 7 days.</p>
+<p class="g2-p">She stressed there are three different lice and that each is found in a different place. On repeating, she gave the reason: the first round may not cure it, so repeating in 7 days is expected. The counseling slide later says 7 to 10 days (see slide 47).</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;in terms of head lice, that is the most common lice infestation&rdquo; <span class='g2-src'>11/12 T@26279</span></p>
+<p>&ldquo;found within 4 millimeters deep of the scalp&rdquo; <span class='g2-src'>11/12 T@26504</span></p>
+<p>&ldquo;the highest population is children in school&rdquo; <span class='g2-src'>11/12 T@26579</span></p>
+<p>&ldquo;it may not be cured within that first round of treatment&rdquo; <span class='g2-src'>11/12 T@27208</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Non-drug treatment and prevention of lice (Patel Outdoor slide 43)</h5>
+<p class="g2-status"><b>Status C</b> school, household and sharing</p>
+<p class="g2-p">The slide lists careful inspection with an FDA-approved nit comb; the AirAllé device, which applies heat to dehydrate; avoiding contact with an infested person; not sharing combs, brushes, towels, caps and hats; cleaning sports equipment before and after use; washing clothing, bedding, brushes and combs in hot water; and cleaning the home regularly.</p>
+<p class="g2-p">She added counseling examples: a child with lice should stay home from school the next day, and the contact warning extends to family members. Cleaning means the whole home, not only the patient's space. She said the heat device dehydrates the eggs and the lice. The device name is spoken as 'air ale' in the transcript <span class="g2-tonly" title="Transcript only: not on the slide">Transcript-only, verify against slide</span>.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;completely dehydrates the eggs and the lice&rdquo; <span class='g2-src'>11/12 T@27948</span></p>
+<p>&ldquo;it is best recommended that they don't go to school the next day&rdquo; <span class='g2-src'>11/12 T@28137</span></p>
+<p>&ldquo;cleaning the home completely&rdquo; <span class='g2-src'>11/12 T@28642</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Who should not self-treat lice (Patel Outdoor slide 44)</h5>
+<p class="g2-status"><b>Status A</b> On the slide and complete; nothing added in lecture.</p>
+</div>
+<div class="gpt g2-block"><h5>Head lice pediculicides: products, time on hair, cost and age limits (Patel Outdoor slide 45)</h5>
+<p class="g2-status"><b>Status B, D, E</b> which products are common and why, with a boundary conflict</p>
+<p class="g2-p">The slide lists, with product, trade names and age limit: pyrethrins plus piperonyl butoxide (RID, A-20 as printed on the slide, Pronto; OTC; older than 2 years; chrysanthemum allergy) and permethrin (Nix; OTC; older than 2 months) and dimethicone 100% (LiceMD; OTC; older than 2 months), each 10 minutes; ivermectin 0.5% (Sklice; OTC/Rx), benzyl alcohol 5% (Ulesfia; Rx) and spinosad 0.9% (Natroba; Rx), each older than 6 months; malathion 0.5% (Ovide; Rx; 8 to 12 hours; older than 2 years). Do not use conditioner first, do not rewash for 1 to 2 days, and do not use one product more than 2 to 3 times if ineffective.</p>
+<p class="g2-p">She said the first three are the ones found over the counter in pharmacies, and that price makes the others less common.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;notice the price of these products as well&rdquo; <span class='g2-src'>11/12 T@30082</span></p>
+<p>&ldquo;the 1st 3 are most common&rdquo; <span class='g2-src'>11/12 T@30227</span></p>
+<p>&ldquo;highlight the age restriction for each of these products&rdquo; <span class='g2-src'>11/12 T@30350</span></p></div>
+<div class="g2-note"><span class="g2-k">Slide 44 versus slide 45: age boundaries</span><p>Slide 44 excludes under 2 years (pyrethrin) and under 2 months (permethrin); this table says older than 2 years and 2 months. Neither covers exactly 2, and she read 'greater than'. Key the greater-than ages; exactly 2 is not in materials. The slide's 2 to 3 uses of one product also differs from slide 47, which refers after 2 rounds.</p></div>
+</div>
+</section>
+
+<section class="gobj" id="gobj-pl-o-11">
+<h3>Dr. Patel, slide by slide &middot; Outdoor exposures &middot; slides 46&ndash;49</h3>
+<div class="gbar"><span>What the lecture adds (Outdoor 46&ndash;49)</span><b>Lice wetting agents, counseling and follow-up, and the lice case (objectives 5, 6 and 7)</b><i>Patel Outdoor slide 46, 47, 48, 49</i></div>
+<div class="gpt g2-block"><h5>Lice wetting and occlusive agents (Patel Outdoor slide 46)</h5>
+<p class="g2-status"><b>Status B</b> how these products work</p>
+<p class="g2-p">The slide lists Cetaphil cleanser with a hair dryer (the Nuvo method), dimethicone lotion (Nix Ultra, LiceMD), Lycelle, and the homeopathic Natrum muriaticum (Vamousse, Licefree).</p>
+<p class="g2-p">The lecture supplies the mechanism: these products dehydrate the lice and the eggs on the scalp, which kills them, and the products are then removed. For Cetaphil she described applying it to the head and drying it with a hair dryer, calling it the Nouveau method <span class="g2-tonly" title="Transcript only: not on the slide">Transcript-only, verify against slide</span>, where the slide says Nuvo. She read Lycelle's brand as 'Lysol Mission'.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;helping dehydrate the lice and the eggs found on the scalp&rdquo; <span class='g2-src'>11/12 T@30800</span></p>
+<p>&ldquo;this is called the Nouveau method&rdquo; <span class='g2-src'>11/12 T@30863</span></p>
+<p>&ldquo;completely dehydrating them and killing them&rdquo; <span class='g2-src'>11/12 T@31061</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Lice counseling and follow-up (Patel Outdoor slide 47)</h5>
+<p class="g2-status"><b>Status B, C, D, E</b> steps, eye protection and when to refer</p>
+<p class="g2-p">The slide's counseling: use pyrethrin/piperonyl butoxide shampoo or ivermectin lotion, wet the dry hair and scalp, leave on a full 10 minutes, rinse, nit comb in sections, repeat in 7 to 10 days if lice or nits are seen; significant irritation or eye exposure needs medical attention. Follow-up: live lice after 2 treatment rounds one week apart means referral to the PCP for a prescription product.</p>
+<p class="g2-p">She added a visor cover for a child's face to keep the product from the forehead and eyes, and said one round probably will not cure it. In the counseling poll she listed what an answer covers: how it is applied, how long it stays, how the eggs and lice are removed, and how many days to repeat. The transcript reads 'wet, dry hair'; the slide says 'wet the dry hair'.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;if it's a child, apply some sort of a visor cover&rdquo; <span class='g2-src'>11/12 T@31883</span></p>
+<p>&ldquo;if lice has found after 2 treatment rounds&rdquo; <span class='g2-src'>11/12 T@32262</span></p>
+<p>&ldquo;to go ahead and get a stronger prescription product&rdquo; <span class='g2-src'>11/12 T@32386</span></p>
+<p>&ldquo;counseling them on these steps would be most important&rdquo; <span class='g2-src'>11/12 T@34163</span></p>
+<p>&ldquo;We're leaving it on for a full 10 minutes&rdquo; <span class='g2-src'>11/12 T@34308</span></p>
+<p>&ldquo;Repeat the process, 7 to 10 days.&rdquo; <span class='g2-src'>11/12 T@34463</span></p></div>
+<div class="g2-note"><span class="g2-k">Repeat in 7 days or 7 to 10 days</span><p>Slide 42 and her lecture on goals say repeat in 7 days; slide 47 and her counseling answer say 7 to 10 days. For counseling, key 7 to 10 days, the interval in her poll answer.</p></div>
+</div>
+<div class="gpt g2-block"><h5>Lice case: a child who shared a helmet (Patel Outdoor slide 48)</h5>
+<p class="g2-status"><b>Status B, E</b> first-line choice and what to counsel</p>
+<p class="g2-p">A mother brings in her son, Bobby, whose scalp itches with scratch marks and no signs of infection. He shared a helmet at T-ball, the mother saw moving gray-white bugs, and there is no reported resistance to pyrethrins or permethrin. In the poll, he is 10 years old <span class="g2-tonly" title="Transcript only: not on the slide">Transcript-only, verify against slide</span>.</p>
+<p class="g2-p">The question asked for the first-line agent. Her poll listed permethrin, malathion, lindane and referral to the PCP <span class="g2-tonly" title="Transcript only: not on the slide">Transcript-only, verify against slide</span>; she said option A is right because it is a first-line agent that fits his age (A is permethrin on her PollEV page), and then asked when the same product would not fit, which is the age category: the slide 45 limits. Her follow-up poll asked what to counsel the mother, and she moved from non-drug points to the steps for using the product.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;it's a first-line agent, right? Age-wise, appropriate to utilize, right?&rdquo; <span class='g2-src'>11/12 T@33290</span></p>
+<p>&ldquo;pay attention to the age category&rdquo; <span class='g2-src'>11/12 T@33447</span></p>
+<p>&ldquo;counsel them on how to utilize what you just recommended&rdquo; <span class='g2-src'>11/12 T@33686</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Divider: Fatal bites and parasites (Patel Outdoor slide 49)</h5>
+<p class="g2-status"><b>Status A</b> On the slide and complete; nothing added in lecture.</p>
+</div>
+</section>
+
+<section class="gobj" id="gobj-pl-o-12">
+<h3>Dr. Patel, slide by slide &middot; Outdoor exposures &middot; slides 50&ndash;54</h3>
+<div class="gbar"><span>What the lecture adds (Outdoor 50&ndash;54)</span><b>Scabies, venomous spiders and venomous snakes: signs, first aid and prevention (objectives 1, 4 and 7)</b><i>Patel Outdoor slide 50, 51, 52, 53, 54</i></div>
+<div class="gpt g2-block"><h5>Scabies: cause, spread and who is at risk (Patel Outdoor slide 50)</h5>
+<p class="g2-status"><b>Status A</b> On the slide and complete; she read the same points and added nothing new</p>
+</div>
+<div class="gpt g2-block"><h5>Scabies treatment and the itch afterward (Patel Outdoor slide 51)</h5>
+<p class="g2-status"><b>Status B, D</b> no ranking among treatments, and why itching persists</p>
+<p class="g2-p">The slide gives goals: kill mites and eggs (permethrin 5% cream, crotamiton 10%, sulfur 5 to 10% ointment, lindane 1% lotion, oral ivermectin 200 mcg/kg per dose, two doses one week apart) and reduce symptoms. Itching can last 4 weeks after treatment because of hypersensitivity; options are oral antihistamines and topical steroids.</p>
+<p class="g2-p">She said none is first, second or third line: the choice depends on the patient and severity. The lingering itch comes from a hypersensitivity reaction after the mites are killed, and she leaned on oral antihistamines for it. She called the sulfur product a cream where the slide says ointment.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;there isn't first line, second line, or third line&rdquo; <span class='g2-src'>11/12 T@35653</span></p>
+<p>&ldquo;It just depends on what would be the most appropriate for the patient&rdquo; <span class='g2-src'>11/12 T@35705</span></p>
+<p>&ldquo;because of the hypersensitivity reaction that has occurred&rdquo; <span class='g2-src'>11/12 T@35919</span></p>
+<p>&ldquo;most likely we're leaning on that oral antihistamine&rdquo; <span class='g2-src'>11/12 T@36085</span></p></div>
+<div class="g2-note"><span class="g2-k">Slide 40 versus slide 51: steroids with scabies</span><p>Slide 40: no hydrocortisone on scabies, since steroids can mask or worsen it. Slide 51: topical steroids are an option for itch after treatment; she said they can be used but leaned on the oral antihistamine. Key an oral antihistamine for post-treatment itch; she did not reconcile the two slides.</p></div>
+</div>
+<div class="gpt g2-block"><h5>Venomous spiders found in Texas (Patel Outdoor slide 52)</h5>
+<p class="g2-status"><b>Status B, E</b> symptom pictures she said to know</p>
+<p class="g2-p">Brown recluse bite: fever, blood in urine, rash and joint pain within 48 hours; tissue necrosis; may need surgical intervention. Black widow bite: abdominal pain that feels like appendicitis, pain in muscles or the soles of the feet, alternating salivation and dry mouth, paralysis of the diaphragm, seizures, profuse sweating and swollen eyelids.</p>
+<p class="g2-p">Her instruction was to learn the symptoms and what each spider looks like. She said surgery is the worst case if the venom stays in the body for the brown recluse, and that the black widow is worse. For the diaphragm she described muscle pain and tension, where the slide says paralysis; the transcript is unclear there. She did not say tissue necrosis.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;what each type of spider looks like is pretty important to understand&rdquo; <span class='g2-src'>11/12 T@36481</span></p>
+<p>&ldquo;worst-case scenario if that venom is still in the body&rdquo; <span class='g2-src'>11/12 T@36679</span></p>
+<p>&ldquo;Abdomen pain feels like you're having some sort of a flare with your appendix&rdquo; <span class='g2-src'>11/12 T@36764</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Venomous spider bite first aid (Patel Outdoor slide 53)</h5>
+<p class="g2-status"><b>Status C, D</b> what to give for pain and how to identify the spider</p>
+<p class="g2-p">The slide lists: clean with soap and water, apply a cold pack, elevate the limb, acetaminophen may be given for pain, kill or capture the spider in a sealed container if possible, bring the spider and the victim to the emergency room, and antivenom (Latrodectus mactans, equine) for severe black widow bites.</p>
+<p class="g2-p">She said to treat it like the bug bites. The slide only says acetaminophen may be given; her addition was to recommend Tylenol over ibuprofen, and the reason for that preference is not in the lecture. She said to take a picture if possible, because we need to understand exactly whether the spider was venomous so the patient can be treated appropriately. She also said emergency visits for these bites are common in Texas.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;Elevate the limb.&rdquo; <span class='g2-src'>11/12 T@37396</span></p>
+<p>&ldquo;Tylenol over ibuprofen&rdquo; <span class='g2-src'>11/12 T@37545</span></p>
+<p>&ldquo;If possible, if you can take a picture of a spider&rdquo; <span class='g2-src'>11/12 T@37573</span></p>
+<p>&ldquo;we do need to understand exactly if the spider was venomous or not&rdquo; <span class='g2-src'>11/12 T@37725</span></p></div>
+<div class="g2-note"><span class="g2-k">Capture or photograph the spider</span><p>Slide: kill or capture the spider in a sealed container. Lecture: take a picture if you can, and it is fine if you cannot. A question that lists a photograph keys the photograph, following her words; a question that offers only capture in a sealed container follows the slide.</p></div>
+</div>
+<div class="gpt g2-block"><h5>Venomous snakes in Texas and prevention (Patel Outdoor slide 54)</h5>
+<p class="g2-status"><b>Status B</b> what she stressed from the slide</p>
+<p class="g2-p">The slide lists pit vipers (copperheads and water moccasins, Agkistrodon; rattlesnakes, Crotalus), whose venom has about 50 toxic compounds and up to 30% of bites are dry bites, and the Texas coral snake (Elapidae), with about 60% dry bites and fang marks often hard to find. There are an average of 2 to 3 deaths a year from snakebites (0.2%). Prevention: eliminate rock, brush and wood piles and tall grass near homes, wear thick work gloves and boots, control insect and rodent populations.</p>
+<p class="g2-p">She said the types are on the slide and that prevention is the key. Her examples were for hiking: avoid going through rocks and dead plants, wear thick gloves when working outside, and wear boots or socks that cover the legs and ankles. She did not discuss the dry-bite percentages or the death rate.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;Just know that in terms of prevention, prevention is key&rdquo; <span class='g2-src'>11/12 T@38138</span></p>
+<p>&ldquo;wear thick gloves if working outside&rdquo; <span class='g2-src'>11/12 T@38321</span></p>
+<p>&ldquo;Boots is very important as well&rdquo; <span class='g2-src'>11/12 T@38359</span></p></div>
+</div>
+</section>
+
+<section class="gobj" id="gobj-pl-o-13">
+<h3>Dr. Patel, slide by slide &middot; Outdoor exposures &middot; slides 55&ndash;59</h3>
+<div class="gbar"><span>What the lecture adds (Outdoor 55&ndash;59)</span><b>Pit viper effects, snake bite first aid and medical care, severity grading and the inpatient protocol (objectives 1, 4 and 7)</b><i>Patel Outdoor slide 55, 56, 57, 58, 59</i></div>
+<div class="gpt g2-block"><h5>Adverse effects of pit viper bites (table) (Patel Outdoor slide 55)</h5>
+<p class="g2-status"><b>Status B, C</b> what the table is for</p>
+<p class="g2-p">The slide is a table of systemic effects after native pit viper bites in a snakebite registry: for rattlesnakes (n = 256), copperheads (130), cottonmouths (15) and unspecified pit vipers (41), it lists vomiting, diarrhea, hypotension, tachycardia, angioedema, neurotoxicity, rhabdomyolysis, bleeding and respiratory failure with counts and percentages.</p>
+<p class="g2-p">She gave only the general idea: effects can be severe and are not limited to swelling and itching. She listed vomiting, nausea, diarrhea, hypotension, tachycardia and, worst case, neurotoxicity. The percentages and the group sizes were not discussed in lecture.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;So we're not just saying swelling and itching.&rdquo; <span class='g2-src'>11/12 T@38725</span></p>
+<p>&ldquo;This is quite dangerous in terms of how severe the symptoms can get&rdquo; <span class='g2-src'>11/12 T@38772</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Snake bite first aid (Patel Outdoor slide 56)</h5>
+<p class="g2-status"><b>Status B, C, D, E</b> reasons for staying still and the poison control step</p>
+<p class="g2-p">The slide gives: keep the patient calm and still; identify the snake (photo, do not capture); remove constrictions; wash the bite; immobilize the area level with or slightly lower than the heart; check for envenomation; mark the leading edge of swelling and tenderness; treat pain; obtain initial labs (PT, Hgb, platelets, fibrinogen); call poison control, 1-800-222-1222, and transport.</p>
+<p class="g2-p">Her main point was a calm, still patient with no walking on the limb. Later, after the severity table, she gave the reason: the limb is not moved because the effects can reach the heart and bloodstream very quickly. She said to keep the limb lower than the heart, then that elevating the leg is fine if the patient is seated. She said poison control would be the next step as well as 911 <span class="g2-tonly" title="Transcript only: not on the slide">Transcript-only, verify against slide</span> (911 is not on the slide). The number serves any poison control situation nationwide.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;keep the patient calm and still, that is the biggest thing&rdquo; <span class='g2-src'>11/12 T@38894</span></p>
+<p>&ldquo;We are not ambulating any body part&rdquo; <span class='g2-src'>11/12 T@38954</span></p>
+<p>&ldquo;Biggest thing to remember, immobilize.&rdquo; <span class='g2-src'>11/12 T@39310</span></p>
+<p>&ldquo;This is a nationwide number, so it's not state-specific.&rdquo; <span class='g2-src'>11/12 T@39843</span></p>
+<p>&ldquo;what number are we calling, OK?&rdquo; <span class='g2-src'>11/12 T@40792</span></p>
+<p>&ldquo;they can reach the heart bloodstream very quickly&rdquo; <span class='g2-src'>11/12 T@42598</span></p></div>
+<div class="g2-note"><span class="g2-k">Position of the bitten limb</span><p>Slide: level with or slightly lower than the heart. Lecture: lower than the heart, then 'elevating the leg is just fine' if seated. Key the slide's wording. Elevation is the instruction for spider bites (slide 53).</p></div>
+</div>
+<div class="gpt g2-block"><h5>Snake bite medical care (Patel Outdoor slide 57)</h5>
+<p class="g2-status"><b>Status B</b> what 'based on symptoms' means</p>
+<p class="g2-p">The slide lists a tetanus injection and considering antibiotics to cover gram-negative organisms from a snake's mouth. A coral snake bite gets no antivenin, only supportive care. A pit viper bite is scored to assess need for antivenin: many bites are dry, and symptoms evolve over several hours. Mild or moderate envenomation gets supportive therapy; severe gets antivenin if available, supportive therapy, and watching for compartment syndrome (call surgery).</p>
+<p class="g2-p">She said the treatment depends on symptom severity, how severe the bite was and how long the snake held on, and that supportive therapy is the key. She named tetanus and gram-negative coverage. She did not discuss the coral snake rule or compartment syndrome, so those are on the slide only.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;usually, we will give the patient a tetanus injection&rdquo; <span class='g2-src'>11/12 T@40146</span></p>
+<p>&ldquo;especially gram-negative coverage&rdquo; <span class='g2-src'>11/12 T@40222</span></p>
+<p>&ldquo;But supportive therapy is the biggest key.&rdquo; <span class='g2-src'>11/12 T@40824</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Pit viper severity grading (Patel Outdoor slide 58)</h5>
+<p class="g2-status"><b>Status B</b> how the three rows rise together</p>
+<p class="g2-p">The table grades local signs, systemic signs and coagulation as minimal, moderate or severe. Minimal: swelling, erythema or ecchymosis confined to the bite site; no systemic signs; no coagulation abnormality. Moderate: swelling beyond the bite site; non-life-threatening systemic signs (nausea, vomiting, mild hypotension, perioral paresthesias, myokymia); mild abnormal coagulation without significant bleeding. Severe: rapid swelling involving the whole body part; systolic pressure below 80 mm Hg, altered sensorium, tachycardia, tachypnea, respiratory distress; abnormal coagulation with bleeding (INR, aPTT, fibrinogen, platelet count below 20,000/µL).</p>
+<p class="g2-p">She walked down each row. For coagulation she said moderate means mild abnormal signs with no significant bleeding but a possible risk of clots <span class="g2-tonly" title="Transcript only: not on the slide">Transcript-only, verify against slide</span>, and severe shows up on lab work with INR and aPTT changes.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;that's when you could experience the nausea, vomiting, hypotension&rdquo; <span class='g2-src'>11/12 T@41314</span></p>
+<p>&ldquo;Moderate, there can be mild abnormal coagulation signs&rdquo; <span class='g2-src'>11/12 T@41556</span></p>
+<p>&ldquo;Severe is complete abnormal coagulation profile&rdquo; <span class='g2-src'>11/12 T@41682</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Snakebite treatment protocol (CroFab algorithm) (Patel Outdoor slide 59)</h5>
+<p class="g2-status"><b>Status E</b> she presented it as reference only</p>
+<p class="g2-p">The flowchart starts with the snakebite severity score: if antivenin is not warranted, monitor; if it is, give 4 to 6 vials of CroFab (adults and children get the same loading dose), assess the score hourly, repeat the loading dose if it increases, and if stable or decreased, begin maintenance of 2 vials every 6 hours for 3 doses.</p>
+<p class="g2-p">She presented the protocol as one that providers follow in inpatient stays, with clinical pharmacists helping and administering the medications. The numbers were not discussed in lecture.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;just for reference&rdquo; <span class='g2-src'>11/12 T@42049</span></p>
+<p>&ldquo;providers follow protocols inpatient&rdquo; <span class='g2-src'>11/12 T@42261</span></p></div>
+</div>
+</section>
+
+<section class="gobj" id="gobj-pl-o-14">
+<h3>Dr. Patel, slide by slide &middot; Outdoor exposures &middot; slides 60&ndash;63</h3>
+<div class="gbar"><span>What the lecture adds (Outdoor 60&ndash;63)</span><b>Rabies: exposure, referral as an urgency, clinical stages and post-exposure prophylaxis (objectives 1, 5 and 7)</b><i>Patel Outdoor slide 60, 61, 62, 63</i></div>
+<div class="gpt g2-block"><h5>Rabies map of Texas, 2022 (Patel Outdoor slide 60)</h5>
+<p class="g2-status"><b>Status A</b> On the slide; she said only that rabies is common in Texas</p>
+</div>
+<div class="gpt g2-block"><h5>Clinical stages of human rabies (Patel Outdoor slide 61)</h5>
+<p class="g2-status"><b>Status B, D</b> how the stages progress</p>
+<p class="g2-p">The table gives: incubation period 20 to 90 days, no symptoms; prodrome 2 to 10 days with fever, malaise, anorexia, nausea, vomiting and paresthesias, pain or itching at the wound site; acute neurologic disease, encephalitic (80%) 2 to 7 days with anxiety, agitation, hyperactivity, bizarre behavior, hallucinations, autonomic dysfunction and hydrophobia, or paralytic (20%) 2 to 10 days with flaccid paralysis; coma and death 0 to 14 days, and recovery is rare.</p>
+<p class="g2-p">She said the incubation period varies and described the stages worsening with the number of days: no symptoms, then fever and nausea, worsening to dehydration, and finally severe, bizarre behavior and hallucinations.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;in terms of rabies incubation period, it differs&rdquo; <span class='g2-src'>11/12 T@42719</span></p>
+<p>&ldquo;So 2 days, you're starting off with possibly no symptoms&rdquo; <span class='g2-src'>11/12 T@42903</span></p>
+<p>&ldquo;Severe, bizarre behaviors, hallucinations, worst-case scenario&rdquo; <span class='g2-src'>11/12 T@43073</span></p></div>
+<div class="g2-note"><span class="g2-k">Her day counts and the table</span><p>Slide: incubation 20 to 90 days; prodrome 2 to 10 days. Lecture: 'So 2 days, you're starting off with possibly no symptoms' in a loose description of staging. A question with durations keys the table; she did not state the table's numbers in lecture.</p></div>
+</div>
+<div class="gpt g2-block"><h5>Rabies: exposure, first steps and urgency (Patel Outdoor slide 62)</h5>
+<p class="g2-status"><b>Status B, C, E</b> why referral is urgent but not an emergency</p>
+<p class="g2-p">The slide says rabies comes from exposure to a carrier, usually through saliva; a bite is most common (raccoons, bats, foxes, skunks, cats, dogs) and non-bite exposure (scratches, abrasions, open wounds, mucous membranes) is rare. First wash the wound with soap and water, or povidone-iodine if available. Refer as soon as possible for post-exposure prophylaxis (PEP): a medical urgency, not an emergency. Rabies vaccine and HRIG are never given at the same site or in the same syringe, and HRIG is not given in previously immunized patients. Untreated rabies is fatal.</p>
+<p class="g2-p">She stressed the urgency and the fatal outcome as the reason to send the patient quickly. She described iodine as an ointment, where the slide says povidone-iodine, and said the injection is not given at the bite site.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;a bite is most common&rdquo; <span class='g2-src'>11/12 T@43322</span></p>
+<p>&ldquo;A non-bite is pretty rare&rdquo; <span class='g2-src'>11/12 T@43423</span></p>
+<p>&ldquo;So this is a medical urgency, not necessarily emergency&rdquo; <span class='g2-src'>11/12 T@43815</span></p>
+<p>&ldquo;giving the injection at the same site where that bite has occurred&rdquo; <span class='g2-src'>11/12 T@44011</span></p>
+<p>&ldquo;untreated rabies is fatal&rdquo; <span class='g2-src'>11/12 T@44130</span></p>
+<p>&ldquo;it's urgency, not emergency&rdquo; <span class='g2-src'>11/12 T@44271</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Rabies post-exposure prophylaxis table (Patel Outdoor slide 63)</h5>
+<p class="g2-status"><b>Status B, E</b> what changes with prior vaccination</p>
+<p class="g2-p">Not previously vaccinated: cleanse wounds with soap and water (irrigate with povidone-iodine if available); human rabies immune globulin 20 IU/kg, infiltrating around and into the wounds if possible and giving any remainder IM away from the vaccine site; vaccine (HDCV or PCECV) 1 mL IM in an unaffected deltoid on days 0, 3, 7 and 14, with a fifth dose on day 28 for immunosuppressed patients. Previously vaccinated: cleanse the wound, no HRIG, vaccine 1 mL in the deltoid on days 0 and 3.</p>
+<p class="g2-p">She gave the structure without the numbers: wound care, immune globulin and vaccine for patients not vaccinated; wound care and vaccine, with no immune globulin, for those vaccinated before; and the duration differs between the two. The reason prior vaccination removes the immune globulin is not in the lecture.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;we're not going to go ahead and provide the immunoglobulin treatment&rdquo; <span class='g2-src'>11/12 T@44746</span></p>
+<p>&ldquo;notice in terms of duration, differs between the patient&rdquo; <span class='g2-src'>11/12 T@44900</span></p></div>
+</div>
+</section>
+
+<section class="gobj" id="gobj-pl-o-15">
+<h3>Dr. Patel, slide by slide &middot; Outdoor exposures &middot; slides 64&ndash;67</h3>
+<div class="gbar"><span>What the lecture adds (Outdoor 64&ndash;67)</span><b>Closing points: how to approach any outdoor exposure, the poison control number, references</b><i>Patel Outdoor slide 64, 65, 66, 67</i></div>
+<div class="gpt g2-block"><h5>Conclusions: how to approach an outdoor exposure (Patel Outdoor slide 64)</h5>
+<p class="g2-status"><b>Status E</b> her closing instructions</p>
+<p class="g2-p">The slide says to identify the primary problem from the patient history and signs and symptoms, use the appropriate assessment and plan, and counsel the patient and family on prevention and the treatment plan.</p>
+<p class="g2-p">She named the sources for identifying the cause: the history, the subjective information and the objective information, and said to use the pharmacist patient care plan. She tied the age of the patient and the key facts in the polls to the decision, and ended on prevention: all of these conditions can be prevented, so counseling on prevention is as important as the treatment plan.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;Use the pharmacist patient care plan to best provide recommendation&rdquo; <span class='g2-src'>11/12 T@45324</span></p>
+<p>&ldquo;Pay attention to the age of the patient.&rdquo; <span class='g2-src'>11/12 T@45397</span></p>
+<p>&ldquo;Pay attention to certain key facts like we practice&rdquo; <span class='g2-src'>11/12 T@45438</span></p>
+<p>&ldquo;remember, all of this can be prevented&rdquo; <span class='g2-src'>11/12 T@45585</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Poison control hotline (Patel Outdoor slide 65)</h5>
+<p class="g2-status"><b>Status E</b> the number she asked students to retain</p>
+<p class="g2-p">The slide gives the poison control center as a 24/7 hotline for supportive care, for envenomations as well as regular overdose support, with treatment suggestions and monitoring support: 1-800-222-1222.</p>
+<p class="g2-p">She asked the class about the number and gave examples of its range: a child who got into bleach, bleach in the eyes, a snake bite. It is nationwide and open at all hours.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;Remember this phone number?&rdquo; <span class='g2-src'>11/12 T@45749</span></p>
+<p>&ldquo;It's a 24/7 hotline.&rdquo; <span class='g2-src'>11/12 T@45793</span></p>
+<p>&ldquo;my child came in contact with bleach&rdquo; <span class='g2-src'>11/12 T@45911</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>References (Patel Outdoor slide 66)</h5>
+<p class="g2-status"><b>Status A</b> On the slide and complete; nothing added in lecture.</p>
+</div>
+<div class="gpt g2-block"><h5>Questions slide (Patel Outdoor slide 67)</h5>
+<p class="g2-status"><b>Status A</b> On the slide and complete; nothing added in lecture.</p>
+</div>
+</section>
+</details>
 <h2 class="gdeck" id="gdeck-p8s">Sun Exposure Therapeutics (Dr. Patel, 11/12; Exam 2)</h2>
 <p class="sub">SE = Patel_Sun-Exposure-Student.pdf, slide = PDF page; T@ = place in the 11/12 transcript; PollEv = her polls of 11/12. Her seven objectives (SE 3&ndash;4), one section each. Dr. Smith&rsquo;s Exam 1 sun lecture is a separate deck with its own guide above.</p>
 <div class="gask"><b>How she asks (11/12)</b><ul><li>&ldquo;Learning objectives very similar to all my lecture slides, so please review it. This is how I create my questions&rdquo; (T@46619 11/12).</li><li>&ldquo;For exam purposes, broad spectrum SPF greater than or equal to 15&rdquo; (T@53466 11/12); &ldquo;So hint, broad-spectrum SPF greater than or equal to 15 ... Know how much to apply. Know how often to apply&rdquo; (T@66751 11/12).</li><li>&ldquo;For her questions, pay attention to what she&rsquo;s focused on. For my questions, recommendation in terms of treatment ... if I ask you a question that&rsquo;s specific to an age, like I&rsquo;ll make it obvious&rdquo; (T@56238&ndash;56572 11/12).</li><li>Reference only: UVA against UVB detail, left to Dr. Smith&rsquo;s and Dr. Sikazwe&rsquo;s slides (T@47346 11/12); the anti-aging approaches table on SE 41 (T@70385 11/12); plant extracts on SE 51 (T@75069 11/12).</li></ul></div>
@@ -2833,6 +4873,516 @@ const GUIDE_HTML = `
 </div>
 </section>
 
+<details class="gdetails" id="gpl-p8s">
+<summary>Dr. Patel: Sun exposure slide by slide, what the lecture adds (56 slides)</summary>
+<section class="gobj" id="gobj-pl-u-1">
+<h3>Dr. Patel, slide by slide &middot; Sun exposure &middot; slides 1&ndash;5</h3>
+<div class="gbar"><span>What the lecture adds (Sun Exposure 1&ndash;5)</span><b>Her objectives slides are where she says her questions come from, so the lecture is read against them</b><i>Patel Sun Exposure slide 1, 3, 4, 5</i></div>
+<div class="gpt g2-block"><h5>Title slide (Patel Sun Exposure slide 1)</h5>
+<p class="g2-status"><b>Status A</b> On the slide and complete; nothing added in lecture</p>
+</div>
+<div class="gpt g2-block"><h5>Learning objectives 1 to 5 (Patel Sun Exposure slide 3)</h5>
+<p class="g2-status"><b>Status E</b> exam cue: the objectives are the source of her questions</p>
+<p>Objectives 1 to 5 are the self-care interview, deciding the condition from signs, symptoms and history, deciding whether the patient is an appropriate self-care candidate, listing treatment goals, and recommending non-drug therapy. Her cue covers the whole objectives list: it tells the class where her questions come from, so the later slides are read against it.</p>
+<p>In this lecture the self-care candidate decision has concrete answers: infants under 6 months and patients allergic to every sunscreen ingredient are excluded, and a sunburn with blistering, fever or signs of infection is not self-treated.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;Learning objectives very similar to all my lecture slides, so please review it.&rdquo; <span class='g2-src'>11/12 T@46539</span></p>
+<p>&ldquo;This is how I create my questions.&rdquo; <span class='g2-src'>11/12 T@46619</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Learning objectives 6 and 7 (Patel Sun Exposure slide 4)</h5>
+<p class="g2-status"><b>Status E</b> exam cue plus the numbers the lecture gives for objective 6</p>
+<p>Objective 6 asks for dosing frequency and maximum days of use for the ingredients highlighted in lecture, onset, length of treatment, adverse effects, contraindications, interactions, and follow-up. The numbers in this lecture that fit it are the 40 to 80 minute reapplication interval, the 1 to 2 day limit for systemic analgesics in sunburn, the 7-day follow-up, and the 3-month limit for hydroquinone.</p>
+<p>At the start of the day she said that anytime she gives hints, those are what she wants the class to know; the later blocks mark each point she flagged.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;this is what I want you to know. Make note of that.&rdquo; <span class='g2-src'>11/12 T@1183</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Poll Everywhere slide (Patel Sun Exposure slide 5)</h5>
+<p class="g2-status"><b>Status A</b> On the slide and complete; nothing added in lecture</p>
+</div>
+</section>
+
+<section class="gobj" id="gobj-pl-u-2">
+<h3>Dr. Patel, slide by slide &middot; Sun exposure &middot; slides 6&ndash;8</h3>
+<div class="gbar"><span>What the lecture adds (Sun Exposure 6&ndash;8)</span><b>Which UV rays reach which layer of skin, and the skin-tone scale that guides each recommendation</b><i>Patel Sun Exposure slide 6, 7, 8</i></div>
+<div class="gpt g2-block"><h5>UV light has two types of radiation reaching the skin (Patel Sun Exposure slide 6)</h5>
+<p class="g2-status"><b>Status B</b> fact on slide; lecture adds where each type reaches and whom to follow for details</p>
+<p>The picture shows UV-A and UV-B entering the skin layers. UVA reaches deeper, the dermis, and UVB stays in the epidermis. She sent the class to Dr. Smith and Dr. Sikazwe for the difference between the two, and she uses the terms UVA and UVB in her own slides.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;refer to Doctor Smith and Doctor Sicasway's slides&rdquo; <span class='g2-src'>11/12 T@47346</span></p>
+<p>&ldquo;UVA penetrates a bit deeper to the dermis&rdquo; <span class='g2-src'>11/12 T@47663</span></p>
+<p>&ldquo;UVB penetrates a little bit less, stays at the epidermis layer.&rdquo; <span class='g2-src'>11/12 T@47710</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>UV radiation: all UV is potentially hazardous (Patel Sun Exposure slide 7)</h5>
+<p class="g2-status"><b>Status B</b> fact on slide; lecture adds the practical result for sunscreen choice</p>
+<p>The slide lists UVC, UVB and UVA with wavelengths in nanometers. For recommendations, the two points she stressed are that the atmosphere absorbs much of the UVB and most sunscreens block it, while UVA is the largest part of sunlight, goes deeper, and is blocked by broad-spectrum sunscreens. That is why broad spectrum, not SPF alone, is the key term in the later slides.</p>
+<p>The slide also says UVB is the region most responsible for sunburn and produces more DNA lesions; she did not discuss these points.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;the atmosphere absorbs the UVB quite often&rdquo; <span class='g2-src'>11/12 T@48005</span></p>
+<p>&ldquo;UVA is the largest contributor to sunlight&rdquo; <span class='g2-src'>11/12 T@48174</span></p>
+<p>&ldquo;It is blocked by broad spectrum sunscreens. That is the biggest key term there.&rdquo; <span class='g2-src'>11/12 T@48262</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Fitzpatrick scale of skin tone (Patel Sun Exposure slide 8)</h5>
+<p class="g2-status"><b>Status B</b> fact on slide; lecture adds how the scale is used</p>
+<p>The scale runs from I, very fair, always burns and cannot tan, to VI, dark brown, never burns and always tans. She uses it to tailor advice, together with the patient's genetics, and she names Fitzpatrick I and II as the patients with the worst outcomes from UV radiation. Type IV is olive, rarely burns and always tans, and the patient case on slide 52 is a type IV patient.</p>
+<p>The captions print 'Fitzpatrick 11' for type II.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;based on their skin tone as well as their genetics&rdquo; <span class='g2-src'>11/12 T@48434</span></p>
+<p>&ldquo;oftentimes we're seeing our patients, Fitzpatrick 1 and 11, have the worst-case scenarios&rdquo; <span class='g2-src'>11/12 T@48974</span></p></div>
+</div>
+</section>
+
+<section class="gobj" id="gobj-pl-u-3">
+<h3>Dr. Patel, slide by slide &middot; Sun exposure &middot; slides 9&ndash;11</h3>
+<div class="gbar"><span>What the lecture adds (Sun Exposure 9&ndash;11)</span><b>Who is at highest risk from UV radiation, and which drugs add to that risk</b><i>Patel Sun Exposure slide 9, 10, 11</i></div>
+<div class="gpt g2-block"><h5>Patients at highest risk of UV-induced problems (Patel Sun Exposure slide 9)</h5>
+<p class="g2-status"><b>Status B, C</b> slide lists the risks; lecture adds the drug link and what each risk means</p>
+<p>Highest risk: Fitzpatrick I and II, light hair, freckles, a history of blistering sunburns, a prior UV-caused growth, a UV-induced skin disorder such as skin cancer or DNA repair deficiency, a family member with melanoma, tanning beds, photosensitizing or immunosuppressive drugs, and autoimmune disease. The lecture ties this to drugs the class has already seen: tetracyclines are the drug class, and doxycycline is the most common photosensitizing antibiotic. A patient taking doxycycline falls under the photosensitizing-drug item on the slide.</p>
+<p>She described tanning beds as extra ray exposure beyond sunlight.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;Tetracyclines in general is the medication class.&rdquo; <span class='g2-src'>11/12 T@49936</span></p>
+<p>&ldquo;that is the most common photosensitizing antibiotic&rdquo; <span class='g2-src'>11/12 T@50043</span></p>
+<p>&ldquo;if you are increasing your ray exposure, so such as tanning beds&rdquo; <span class='g2-src'>11/12 T@49624</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Medications associated with increased sun sensitivity (Patel Sun Exposure slide 10)</h5>
+<p class="g2-status"><b>Status C, E</b> slide lists many drugs; lecture says which to focus on</p>
+<p>The slide covers antibiotics, antifungals, antihistamines, statins, diuretics, NSAIDs, combined oral contraceptives and estrogens, phenothiazines, psoralens, retinoids, sulfonamides, sulfonylureas for type 2 diabetes, and alpha-hydroxy acids in cosmetics. Her instruction is to mark the ones used for the skin conditions covered in her course: the doxycyclines and other antibiotics, ibuprofen, combined oral contraceptives ("to a certain extent"), retinoids, and sulfonylureas. She gave the reason that this way the student knows how to educate the patient.</p>
+<p>The antibiotic names on the slide include ciprofloxacin, doxycycline, levofloxacin, ofloxacin, tetracycline and trimethoprim.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;The list of medications that increase sun sensitivity is endless.&rdquo; <span class='g2-src'>11/12 T@50187</span></p>
+<p>&ldquo;So highlight the ones that we've talked about to treat our derm conditions.&rdquo; <span class='g2-src'>11/12 T@50562</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Medications that may contribute to photosensitivity (Patel Sun Exposure slide 11)</h5>
+<p class="g2-status"><b>Status B</b> fact on slide; lecture explains how the two lists differ</p>
+<p>Slide 10 holds drugs associated with increased sun sensitivity. Slide 11 holds drug groups that may contribute: anticonvulsants, antidepressants and antipsychotics, antihypertensives and diuretics, NSAIDs, oral contraceptives, and retinoids. She said the second list is possible, not definite, and that a few drugs appear on both; by the two slides these are diuretics, NSAIDs, oral contraceptives and retinoids.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;it's not definite in terms of if they can or cannot&rdquo; <span class='g2-src'>11/12 T@50764</span></p>
+<p>&ldquo;notice that there's a few that are on both lists&rdquo; <span class='g2-src'>11/12 T@50930</span></p></div>
+</div>
+</section>
+
+<section class="gobj" id="gobj-pl-u-4">
+<h3>Dr. Patel, slide by slide &middot; Sun exposure &middot; slides 12&ndash;15</h3>
+<div class="gbar"><span>What the lecture adds (Sun Exposure 12&ndash;15)</span><b>Who should use sunscreen, how to choose it, and the SPF number she keys for the exam</b><i>Patel Sun Exposure slide 12, 13, 14, 15</i></div>
+<div class="gpt g2-block"><h5>Sun safety measures (Patel Sun Exposure slide 12)</h5>
+<p class="g2-status"><b>Status B, C</b> slide lists measures; lecture adds the timing and the UV index tool</p>
+<p>The measures are avoiding the high-risk window, checking the UV index, sunscreen, sunglasses, a hat, clothing, shade, and no tanning devices. The rays are strongest between 10 a.m. and 4 p.m., and she tells pharmacists to point patients to the UV index in a phone weather app. The slide adds that a cloudy or overcast day is not protective, a hat brim of 4 inches, and tight-weave or high-SPF clothing; she did not discuss these.</p>
+<p>Her framing for the whole slide is prevention.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;between that 10:00 to 4 p.m. is when the rays are the highest&rdquo; <span class='g2-src'>11/12 T@51127</span></p>
+<p>&ldquo;within our weather apps, you can educate our patients to check the UV index&rdquo; <span class='g2-src'>11/12 T@51217</span></p>
+<p>&ldquo;prevention is key&rdquo; <span class='g2-src'>11/12 T@51024</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Who should use sunscreen and who is excluded (Patel Sun Exposure slide 13)</h5>
+<p class="g2-status"><b>Status B, D</b> fact on slide; lecture adds the reasons and what replaces sunscreen; "all" versus "any" allergy</p>
+<p>Everyone should wear sunscreen, because UV radiation causes premature aging and skin cancer. She stressed that patients who think they do not burn or tan still need it, so Fitzpatrick type does not remove the recommendation. The exclusions are age under 6 months and allergy to all sunscreen ingredients; for an infant she recommends clothing, hats and shade instead. The slide says skin cancers raise the risk of other cancers; she spoke only of melanoma risk.</p>
+<p>Her caption wording 'non-farm' means non-pharmacologic.</p>
+<div class="g2-note"><span class="g2-k">Both versions</span><p>Slide 13 lists the exclusion as allergy to all sunscreen ingredients. She said a patient allergic to any of the sunscreen ingredients is self-excluded. An exam written from her slides would key the slide wording, all ingredients; the existing practice questions do not test the difference.</p></div>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;everybody, even anybody that thinks that they're not gonna burn or tan&rdquo; <span class='g2-src'>11/12 T@51459</span></p>
+<p>&ldquo;we would not recommend to wear sunscreen&rdquo; <span class='g2-src'>11/12 T@51867</span></p>
+<p>&ldquo;if a patient's allergic to any of the sunscreen ingredients&rdquo; <span class='g2-src'>11/12 T@52014</span></p>
+<p>&ldquo;Instead, we're protecting their skin with all the other non-farm measures, clothing, hats, shade.&rdquo; <span class='g2-src'>11/12 T@51909</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Sunscreen selection: four questions (Patel Sun Exposure slide 14)</h5>
+<p class="g2-status"><b>Status B</b> fact on slide; lecture adds the ranking and the matching to the patient</p>
+<p>The slide gives four steps: compare spectrum coverage, choose among active and inert ingredients, match to the patient's history and Fitzpatrick score, and match to the planned activity. She called broad spectrum the main point to pay attention to. Activity changes the product: for swimming or heavy sweating she recommends a sunscreen for that activity. She said "waterproof"; slides 36 and 55 and her case answer use the label term water resistant.</p>
+<p>She mentioned fragrance-free and hypoallergenic products as other choices.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;The biggest thing to pay attention to is broad spectrum&rdquo; <span class='g2-src'>11/12 T@52237</span></p>
+<p>&ldquo;that best fits the patient's medical history as well as the Fitzpatrick scale&rdquo; <span class='g2-src'>11/12 T@52539</span></p>
+<p>&ldquo;So if they're gonna be in the water, there's waterproof sunscreen.&rdquo; <span class='g2-src'>11/12 T@52695</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Sunscreen selection continued: SPF (Patel Sun Exposure slide 15)</h5>
+<p class="g2-status"><b>Status B, E</b> fact on slide; lecture adds why SPF is not enough and which number is keyed</p>
+<p>SPF indicates only UVB protection, which is why the product must also be broad spectrum to cover UVA. The slide's ladder is SPF 15 blocks 93% of UVB, SPF 30 blocks 97%, SPF 50 blocks 98%, and SPF 100 blocks 99%. For exam purposes the number is SPF 15 or higher with broad spectrum; the slide prefers SPF 30+, and for a patient she said the higher the SPF the better.</p>
+<p>She gave the exam answer and the higher-SPF advice separately.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;SPF is only indicated to cover UVB.&rdquo; <span class='g2-src'>11/12 T@52976</span></p>
+<p>&ldquo;for exam purposes, broad spectrum SPF greater than or equal to 15&rdquo; <span class='g2-src'>11/12 T@53466</span></p>
+<p>&ldquo;Education purposes, patient-specific, personal purposes, the higher the SPF the better&rdquo; <span class='g2-src'>11/12 T@53533</span></p></div>
+</div>
+</section>
+
+<section class="gobj" id="gobj-pl-u-5">
+<h3>Dr. Patel, slide by slide &middot; Sun exposure &middot; slides 16&ndash;18</h3>
+<div class="gbar"><span>What the lecture adds (Sun Exposure 16&ndash;18)</span><b>Physical and chemical sunscreen ingredients and which ones she wants named as most effective</b><i>Patel Sun Exposure slide 16, 17, 18</i></div>
+<div class="gpt g2-block"><h5>Sunscreen ingredients: physical and chemical (Patel Sun Exposure slide 16)</h5>
+<p class="g2-status"><b>Status B</b> fact on slide; lecture adds how each type works and the irritation difference</p>
+<p>Physical sunscreens, zinc oxide and titanium dioxide, are opaque and reflect and scatter UV rays. Chemical sunscreens absorb the rays and then block them. Because chemical ingredients absorb the radiation, they can irritate the skin and even cause burning, which is the reverse of what the patient wants; physical ingredients reflect the rays, and slide 17 points sensitive skin to the physical pair. The slide lists many chemical ingredients, including padimate O, meradimate, oxybenzone, avobenzone, octinoxate and ecamsule, and shows an overlap for combination products.</p>
+<p>She did not go through the chemical ingredient list by name.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;Physical, zinc oxide, titanium dioxide. This reflects the UV rays&rdquo; <span class='g2-src'>11/12 T@53716</span></p>
+<p>&ldquo;Chemical ingredients also tend to irritate the skin&rdquo; <span class='g2-src'>11/12 T@53859</span></p>
+<p>&ldquo;it's absorbing the rays, then it's blocking it&rdquo; <span class='g2-src'>11/12 T@54117</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Sunscreen ingredient choice for sensitive skin and photosensitive patients (Patel Sun Exposure slide 17)</h5>
+<p class="g2-status"><b>Status B, C</b> fact on slide; lecture adds what is on the market and the preferred ingredients</p>
+<p>For sensitive skin or earlier allergic reactions the slide says avoid ortho-aminobenzoic acid (PABA) and consider a GRASE sunscreen, zinc oxide or titanium dioxide. For a patient with a sun-induced disorder or on photosensitizing drugs, it says to reduce sun exposure and use a broad-spectrum product such as avobenzone with padimate O or octocrylene, meradimate, titanium dioxide or benzophenones. She added that few products on the market are free of chemical ingredients, and that a product with the first ingredient she names plus titanium dioxide is a mixture of chemical and physical. The first ingredient is probably octocrylene from slide 17. Her last statement for patient advice is the physical pair as most preferred.</p>
+<p>Her spoken name for that ingredient is garbled in the captions: 'octorolin' <span class="g2-tonly" title="Transcript only: not on the slide">Transcript-only, verify against slide</span>.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;not a lot of sunscreens on the market that don't have chemical ingredients&rdquo; <span class='g2-src'>11/12 T@54711</span></p>
+<p>&ldquo;Just understand that it's a mixture of chemical and physical&rdquo; <span class='g2-src'>11/12 T@54945</span></p>
+<p>&ldquo;Physical ingredients, zinc oxide, titanium dioxide is most preferred.&rdquo; <span class='g2-src'>11/12 T@55941</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Proposed GRASE status of sunscreen ingredients (Patel Sun Exposure slide 18)</h5>
+<p class="g2-status"><b>Status B, E</b> fact on slide; lecture states which two she wants known</p>
+<p>The FDA table puts zinc oxide and titanium dioxide in the GRASE (generally recognized as safe and effective) column, aminobenzoic acid (PABA) and trolamine salicylate in the not-GRASE column for safety concerns, and cinoxate, dioxybenzone, ensulizole, homosalate, meradimate, octinoxate, octisalate, octocrylene, padimate O, sulisobenzone, oxybenzone and avobenzone in the column that needs more data. Her emphasis was a single point: know the two ingredients that are GRASE and most effective.</p>
+<p>The captions print GRASE as 'graze' and 'gray'.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;zinc oxide and titanium dioxide were listed as a graze ingredient&rdquo; <span class='g2-src'>11/12 T@55070</span></p>
+<p>&ldquo;I want you to understand what two ingredients are most effective&rdquo; <span class='g2-src'>11/12 T@55141</span></p></div>
+</div>
+</section>
+
+<section class="gobj" id="gobj-pl-u-6">
+<h3>Dr. Patel, slide by slide &middot; Sun exposure &middot; slides 19&ndash;23</h3>
+<div class="gbar"><span>What the lecture adds (Sun Exposure 19&ndash;23)</span><b>The sun-protection interview, why chemical absorption matters, how much and how often to apply, and vitamin D</b><i>Patel Sun Exposure slide 19, 20, 21, 22, 23</i></div>
+<div class="gpt g2-block"><h5>Medical history questions for sun protection (Patel Sun Exposure slide 19)</h5>
+<p class="g2-status"><b>Status B</b> fact on slide; lecture adds how the answers decide the product</p>
+<p>The slide asks about allergies, skin sensitivities, current medications and CAM, exclusion from sunscreen, photosensitizing drugs, earlier reactions, and exposure pattern. She explained that the answers decide the recommendation, and that when nothing excludes the patient the default is a broad-spectrum product of SPF 15 or higher. The exclusions are age under 6 months and allergy; when neither applies, that is the default.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;that is how we're gonna go ahead and recommend the sunscreen&rdquo; <span class='g2-src'>11/12 T@55683</span></p>
+<p>&ldquo;We're gonna recommend a sunscreen that's broad-spectrum, greater than or equal to SPF 15.&rdquo; <span class='g2-src'>11/12 T@55824</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Sunscreen ingredient absorption into the blood (Patel Sun Exposure slide 20)</h5>
+<p class="g2-status"><b>Status B, C</b> fact on slide; lecture adds the threshold meaning and the pharmacist role</p>
+<p>The chart shows the average maximum blood level of avobenzone, homosalate, octisalate, octocrylene, octinoxate and oxybenzone from FDA testing. The red line is the FDA threshold of 0.5 ng/mL on the slide, which she said means chemical ingredients could cause harm. Every bar on the chart is above the line, and oxybenzone is by far the highest. Some products still use that ingredient and some have dropped it, so the pharmacist's job is to read the ingredient list and recommend accordingly.</p>
+<p>The chart scale is on the slide; she gave no numbers for it.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;this red line right here is the FDA threshold&rdquo; <span class='g2-src'>11/12 T@56775</span></p>
+<p>&ldquo;oxybenzone being the highest average absorption in the blood level&rdquo; <span class='g2-src'>11/12 T@56885</span></p>
+<p>&ldquo;it is our job as pharmacists to educate and provide the best recommendation&rdquo; <span class='g2-src'>11/12 T@57110</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>How to apply sunscreen (Patel Sun Exposure slide 21)</h5>
+<p class="g2-status"><b>Status B, C</b> fact on slide; lecture adds why patients still burn</p>
+<p>Adults apply about 1 ounce to all exposed skin, 15 minutes before UV exposure, and reapply after moisture or towel drying and every 40 to 80 minutes. The biggest causes of sunburn are not enough product, not often enough, and not evenly. When a patient says sunscreen failed, the first check is how it was applied.</p>
+<p>The captions print 'evenly' as 'vastly' in the first mention.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;they'll say I use sunscreen, but I still burnt&rdquo; <span class='g2-src'>11/12 T@57379</span></p>
+<p>&ldquo;1 ounce throughout the areas that are exposed&rdquo; <span class='g2-src'>11/12 T@57500</span></p>
+<p>&ldquo;reapply 40 to 80 minutes in increments of such&rdquo; <span class='g2-src'>11/12 T@57714</span></p>
+<p>&ldquo;not applying enough&rdquo; <span class='g2-src'>11/12 T@57808</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Sunscreen application study: uncovered skin (Patel Sun Exposure slide 22)</h5>
+<p class="g2-status"><b>Status B</b> figure and one result on slide; lecture explains what the red areas show</p>
+<p>The images from a coverage study use red to mark skin the sunscreen did not cover. Her reading is that red areas are where the patient did not apply evenly, and the back and the feet were the most common misses. The slide's result, females 13.57% uncovered against males 21.94% (P=0.0045), was not read in the lecture. The counseling use is to apply evenly, often and regularly.</p>
+<p>The study figure shows a well-covered person on the left and a woman with missed areas on the right.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;an example of how a patient did not apply the sunscreen evenly&rdquo; <span class='g2-src'>11/12 T@57945</span></p>
+<p>&ldquo;the feet tend to be the most common&rdquo; <span class='g2-src'>11/12 T@58161</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Vitamin D while wearing sunscreen (Patel Sun Exposure slide 23)</h5>
+<p class="g2-status"><b>Status B</b> fact on slide; lecture adds the patient-question context</p>
+<p>Daily broad-spectrum sunscreen with high UVA protection does not compromise vitamin D status in healthy people. Patients often say they skip sunscreen or going outside because of vitamin D, and this is the answer to them. The slide adds that vitamin D screening and supplementation are recommended in photosensitivity disorders and other high-risk groups (elderly, Fitzpatrick IV to VI); she did not mention that part.</p>
+<p>Her statement applies to broad-spectrum products.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;It will not compromise your vitamin D absorption&rdquo; <span class='g2-src'>11/12 T@58428</span></p>
+<p>&ldquo;So in general, it will not compromise vitamin D levels.&rdquo; <span class='g2-src'>11/12 T@58738</span></p></div>
+</div>
+</section>
+
+<section class="gobj" id="gobj-pl-u-7">
+<h3>Dr. Patel, slide by slide &middot; Sun exposure &middot; slides 24&ndash;28</h3>
+<div class="gbar"><span>What the lecture adds (Sun Exposure 24&ndash;28)</span><b>The timeline of sunburn, the scale of skin cancer, the lasting skin and eye changes, and the ABCDE rule</b><i>Patel Sun Exposure slide 24, 25, 26, 27, 28</i></div>
+<div class="gpt g2-block"><h5>Sunburn: what happens and when (Patel Sun Exposure slide 24)</h5>
+<p class="g2-status"><b>Status B</b> fact on slide; lecture adds what the timeline looks like to the patient</p>
+<p>Symptoms start about 4 hours after exposure, erythema peaks at around 24 hours, and the burn may last up to 5 days. A patient therefore feels fine outdoors and notices the burn after coming inside, which explains why a patient who had no pain during the activity can still be burned. The slide also names peripheral vasodilation in the epidermis and an inflammatory reaction with lymphocyte infiltrates; she did not discuss the mechanism.</p>
+<p>The captions print the duration as 'within 10, 5 days' <span class="g2-tonly" title="Transcript only: not on the slide">Transcript-only, verify against slide</span>; the slide says up to 5 days.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;symptoms start about 4 hours after exposure&rdquo; <span class='g2-src'>11/12 T@58911</span></p>
+<p>&ldquo;that peak of symptoms occur within 24 hours&rdquo; <span class='g2-src'>11/12 T@59109</span></p>
+<p>&ldquo;they come inside and then they notice that they're burnt&rdquo; <span class='g2-src'>11/12 T@59006</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Skin cancer statistics and the base tan message (Patel Sun Exposure slide 25)</h5>
+<p class="g2-status"><b>Status D</b> lecture figure differs slightly from the slide</p>
+<p>The CDC graphic says nearly 5 million people are treated for skin cancers each year at a cost of more than $8 billion, and about 76,000 new melanoma cases and 9,000 deaths; it also says most skin cancers can be prevented, and a poster reads a base tan is not a safe tan.</p>
+<div class="g2-note"><span class="g2-k">Both versions</span><p>Slide 25 reads 'Nearly 5 million people are treated'. The lecture says 'over 5 million'. An exam written from her slides would key the slide wording, because she says her questions come from the slides and objectives; neither figure is an objective. The 76,000 and 9,000 figures are on the slide only.</p></div>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;So over 5 million people are treated for skin cancer.&rdquo; <span class='g2-src'>11/12 T@59450</span></p>
+<p>&ldquo;And this can all be prevented.&rdquo; <span class='g2-src'>11/12 T@59585</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Skin and eye changes from sun exposure (Patel Sun Exposure slide 26)</h5>
+<p class="g2-status"><b>Status B</b> fact on slide; lecture adds the cause and the preventive action</p>
+<p>The slide shows cataract, pterygium, age spots, wrinkles and melasma as the skin and eye changes from sun exposure. She tied them to protection: sunglasses protect the eyes, a hat protects the face, and shade and sunscreen protect the skin. The captions print pterygium as 'phyrogen' <span class="g2-tonly" title="Transcript only: not on the slide">Transcript-only, verify against slide</span>; the slide label is the spelling to use.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;Cataracts. Age spots, wrinkles, melasma.&rdquo; <span class='g2-src'>11/12 T@59687</span></p>
+<p>&ldquo;not wearing sunglasses, not protecting your face with a hat&rdquo; <span class='g2-src'>11/12 T@59855</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Long-term risks of UV: three skin cancers and premature aging (Patel Sun Exposure slide 27)</h5>
+<p class="g2-status"><b>Status B, C</b> slide gives locations; lecture adds how each cancer looks</p>
+<p>The slide lists squamous cell carcinoma and basal cell carcinoma, both common on sun-exposed face, head and neck (basal cell also on the trunk), and melanoma, which can occur anywhere and is more common on skin with intermittent intense exposure, torso and legs. The lecture gives the appearance that separates cancer from a mole: an irregular border as the sign of cancer rather than a mole, squamous cell lighter in color, basal cell a little larger and a little darker pink, and melanoma the darkest. Premature aging means wrinkling and hyperpigmentation.</p>
+<p>Her wording makes melanoma the worst case.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;that irregularity of the border is there&rdquo; <span class='g2-src'>11/12 T@60223</span></p>
+<p>&ldquo;squamous cell carcinoma tends to be lighter in skin color&rdquo; <span class='g2-src'>11/12 T@60160</span></p>
+<p>&ldquo;Basal cell carcinoma is a little bit larger&rdquo; <span class='g2-src'>11/12 T@60265</span></p>
+<p>&ldquo;Melanoma, worst case scenario is the darkest and often found on the body.&rdquo; <span class='g2-src'>11/12 T@60354</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>ABCDE rule for skin cancer (Patel Sun Exposure slide 28)</h5>
+<p class="g2-status"><b>Status D</b> diameter wording differs between slide and lecture</p>
+<p>The rule is asymmetry, irregular border, uneven color, diameter, and evolving. Diameter on the slide means a change in size, usually an increase. Color can be black, brown and tan; the slide adds gray, red, pink, blue and white areas, while she named white, pink and red. Evolving means the mole changed over weeks or months; she described one mole progressing to the next.</p>
+<div class="g2-note"><span class="g2-k">Both versions</span><p>Slide 28: 'most are larger than 6 millimeters wide (about 1/4 inch wide)'. Lecture: 'about 6 millimeters ... like a quarter inch wide'. Both use 6 mm and a quarter inch, but the slide says most melanomas are larger than that, while she said about 6 mm and added that this is 'like the largest'. An exam written from her slides would key the slide: 'larger than 6 mm (about 1/4 inch)', and the existing question P8S-039 keys 6 millimeters on that basis.</p></div>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;A B C D E rule applies here again&rdquo; <span class='g2-src'>11/12 T@60584</span></p>
+<p>&ldquo;The diameter tends to be about 6 millimeters&rdquo; <span class='g2-src'>11/12 T@60842</span></p>
+<p>&ldquo;that's like the largest&rdquo; <span class='g2-src'>11/12 T@60927</span></p>
+<p>&ldquo;it's evolving&rdquo; <span class='g2-src'>11/12 T@60956</span></p></div>
+</div>
+</section>
+
+<section class="gobj" id="gobj-pl-u-8">
+<h3>Dr. Patel, slide by slide &middot; Sun exposure &middot; slides 29&ndash;32</h3>
+<div class="gbar"><span>What the lecture adds (Sun Exposure 29&ndash;32)</span><b>How sunburn is treated: goals, who is not a self-care patient, recommended products, and aloe</b><i>Patel Sun Exposure slide 29, 30, 31, 32</i></div>
+<div class="gpt g2-block"><h5>Sunburn: treatment goals and plan (Patel Sun Exposure slide 29)</h5>
+<p class="g2-status"><b>Status B</b> fact on slide; lecture adds the infection signs and how products are chosen</p>
+<p>Goals are hydration, pain relief, physical protection, lower chance of infection or scarring, and few drug adverse effects. Initial treatment is non-drug: if the burn happened in the past 20 minutes, immerse in cool water or use cool wet cloths. After that, any combination of indicated OTC products is acceptable, and the choice depends on patient preference, allergies and what has worked before. She tied the infection and scarring goal to peeling, oozing and blistering skin.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;if the burn has occurred within 20 minutes, immerse yourself in cool water&rdquo; <span class='g2-src'>11/12 T@61282</span></p>
+<p>&ldquo;what they may be allergic to, what has worked in the past&rdquo; <span class='g2-src'>11/12 T@61542</span></p>
+<p>&ldquo;especially if your skin is peeling, oozing, blistering&rdquo; <span class='g2-src'>11/12 T@61170</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Sunburn: exclusions for self-treatment (Patel Sun Exposure slide 30)</h5>
+<p class="g2-status"><b>Status A</b> On the slide and complete; nothing added in lecture</p>
+</div>
+<div class="gpt g2-block"><h5>Sunburn treatment: recommended products (Patel Sun Exposure slide 31)</h5>
+<p class="g2-status"><b>Status B, C</b> fact on slide; lecture adds the choice of analgesic and the timing of protectants</p>
+<p>Systemic analgesics are listed first: an anti-inflammatory drug, an NSAID or acetaminophen, to reduce pain, erythema and edema, used for the first 1 to 2 days. Skin protectants, such as cocoa butter or petrolatum, help rehydration and irritation, are applied as often as needed, and are started only after 24 hours, because the skin is very sensitive early. She told the class to avoid products with alcohol or witch hazel. The captions name the example analgesics as Tylenol and ibuprofen <span class="g2-tonly" title="Transcript only: not on the slide">Transcript-only, verify against slide</span>.</p>
+<p>The slide adds that systemic analgesics last longer than topical anesthetics; she did not say this.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;the chart that I reviewed earlier comes into play here&rdquo; <span class='g2-src'>11/12 T@61900</span></p>
+<p>&ldquo;you can go ahead and use it for up to 1 to 2 days&rdquo; <span class='g2-src'>11/12 T@62128</span></p>
+<p>&ldquo;any products that have alcohol in them, witch hazel&rdquo; <span class='g2-src'>11/12 T@62310</span></p>
+<p>&ldquo;because remember, the skin is very sensitive right when it does occur&rdquo; <span class='g2-src'>11/12 T@62551</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Sunburn: aloe vera as alternative treatment (Patel Sun Exposure slide 32)</h5>
+<p class="g2-status"><b>Status C</b> fact on slide; lecture adds how to tell real aloe on the shelf</p>
+<p>The slide says aloe vera is used topically on intact skin, may lower pain by inhibiting bradykinin and the inflammatory process, is not FDA approved for burns, and should not be taken internally because of drug interactions and adverse effects. The lecture adds the counseling point for products: read the ingredient list, because a bottle that lists aloe juice mixed with glycerin and other ingredients contains only about 5% aloe <span class="g2-tonly" title="Transcript only: not on the slide">Transcript-only, verify against slide</span>. She said the lack of FDA approval is partly because aloe is a natural ingredient, like supplements and vitamins, and that it has still shown data to be very effective.</p>
+<p>Her check for the patient is the label wording below.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;look at the back of the bottle, look at the ingredients&rdquo; <span class='g2-src'>11/12 T@62806</span></p>
+<p>&ldquo;make sure that it says pure aloe vera juice or pure aloe vera gel&rdquo; <span class='g2-src'>11/12 T@64152</span></p>
+<p>&ldquo;It hasn't been approved by the FDA partly because it is a natural ingredient&rdquo; <span class='g2-src'>11/12 T@64219</span></p>
+<p>&ldquo;it has shown data to be very effective&rdquo; <span class='g2-src'>11/12 T@64373</span></p></div>
+</div>
+</section>
+
+<section class="gobj" id="gobj-pl-u-9">
+<h3>Dr. Patel, slide by slide &middot; Sun exposure &middot; slides 33&ndash;35</h3>
+<div class="gbar"><span>What the lecture adds (Sun Exposure 33&ndash;35)</span><b>Products not to recommend for sunburn, follow-up timing, and the case answers she gave</b><i>Patel Sun Exposure slide 33, 34, 35</i></div>
+<div class="gpt g2-block"><h5>Sunburn treatment: not recommended (Patel Sun Exposure slide 33)</h5>
+<p class="g2-status"><b>Status B</b> fact on slide; lecture adds the reason</p>
+<p>First aid antiseptics and topical anesthetics are not recommended for routine use. She said antiseptics can irritate and burn the skin even more. The slide's limit if they are used anyway is small areas (1 to 2% body surface area) of intact skin, no more than 3 to 4 times a day, with a risk of hypersensitivity and systemic symptoms; she did not repeat these limits.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;first aid antiseptics cause it can irritate and burn the skin even more&rdquo; <span class='g2-src'>11/12 T@64451</span></p>
+<p>&ldquo;only recommend the products that we just covered&rdquo; <span class='g2-src'>11/12 T@64645</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Sunburn follow-up (Patel Sun Exposure slide 34)</h5>
+<p class="g2-status"><b>Status B</b> fact on slide; lecture ties it to the 7-day rule</p>
+<p>Refer to a physician if the burn has progressed or worsened after 24 to 48 hours, or has not healed in 7 days. She stated that the 7-day policy used earlier in the course applies here as well. The caption prints 'worsened' as 'wears' <span class="g2-tonly" title="Transcript only: not on the slide">Transcript-only, verify against slide</span>.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;If it doesn't heal within 7 days, 7-day policy applies here as well&rdquo; <span class='g2-src'>11/12 T@64740</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Practice case: sun exposure in a 21-year-old woman (Patel Sun Exposure slide 35)</h5>
+<p class="g2-status"><b>Status C, E</b> lecture gives the answers and reasoning; options are not on the slide</p>
+<p>The case is a Fitzpatrick 2 woman with a one-day painful sunburn after a weekend with no sunscreen, no vesicles or peeling, cold showers helping, taking Yazmin. Three questions were asked and answered aloud; the option text is in the poll, not on the slide, so the letters are <span class="g2-tonly" title="Transcript only: not on the slide">Transcript-only, verify against slide</span>. Pain and tenderness: option A, oral ibuprofen (the poll option text), which fits the systemic analgesic on slide 31. Daily skin cancer prevention: option D, a water-resistant broad-spectrum sunscreen with SPF 50, because she said the other options had an inappropriate SPF or lacked broad spectrum or water resistance. A 4-month-old: option A, protective clothing and restricting sun exposure, because sunscreen is excluded under 6 months.</p>
+<p>Each answer applies a rule from slides 13, 15 and 31.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;Remember key terms, pain and tenderness?&rdquo; <span class='g2-src'>11/12 T@65352</span></p>
+<p>&ldquo;not appropriate SPF, right? Or wasn't broad-spectrum or wasn't water resistant&rdquo; <span class='g2-src'>11/12 T@65773</span></p>
+<p>&ldquo;Remember, 6 months of age, OK, so not 7, not 8.&rdquo; <span class='g2-src'>11/12 T@66259</span></p></div>
+</div>
+</section>
+
+<section class="gobj" id="gobj-pl-u-10">
+<h3>Dr. Patel, slide by slide &middot; Sun exposure &middot; slides 36&ndash;37</h3>
+<div class="gbar"><span>What the lecture adds (Sun Exposure 36&ndash;37)</span><b>The sun exposure counseling points she flagged as hints</b><i>Patel Sun Exposure slide 36, 37</i></div>
+<div class="gpt g2-block"><h5>Sun exposure counseling points for patients (Patel Sun Exposure slide 36)</h5>
+<p class="g2-status"><b>Status E, B</b> exam cue: she called the first point a hint and listed what to know</p>
+<p>The slide's points are broad-spectrum SPF 15 or higher, 1 ounce over exposed areas, avoiding eyes and mucous membranes, application 15 minutes before exposure, the most substantive sunscreen available, limiting time in the sun from 10 a.m. to 4 p.m., reapplying at least every 40 to 80 minutes, more often with swimming or sweating or a product that is not water resistant, and checking expiration dates. She flagged three of them: the SPF and spectrum, how much to apply, and how often. Expired product is discarded because it is no longer effective, and water activity calls for a water-resistant broad-spectrum product.</p>
+<p>The 1 ounce, 15 minutes and 40 to 80 minute figures are on the slide.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;So hint, broad-spectrum SPF greater than or equal to 15.&rdquo; <span class='g2-src'>11/12 T@66751</span></p>
+<p>&ldquo;Know how much to apply. Know how often to apply.&rdquo; <span class='g2-src'>11/12 T@66812</span></p>
+<p>&ldquo;water resistant, broad-spectrum sunscreen is what we're recommending&rdquo; <span class='g2-src'>11/12 T@67066</span></p>
+<p>&ldquo;throw them out cause they're not effective anymore&rdquo; <span class='g2-src'>11/12 T@67211</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Sun exposure counseling points continued (Patel Sun Exposure slide 37)</h5>
+<p class="g2-status"><b>Status B, C</b> fact on slide; lecture adds winter use, stopping a product, and early referral</p>
+<p>The slide covers hats, sunglasses and clothing; snow and sand reflecting UV; daily sunscreen and clothing with photosensitizing drugs; stopping a product that causes redness, itching, rash or exaggerated sunburn; and referring a suspicious lesion. She added that a cold winter day does not remove the need, though less is needed than in summer, because snow still reflects sunlight. For a lesion the goal is early detection, since it may need only removal. In response to a student's comment on face sunscreens, she recommended a face product with SPF 15 or higher. The sunglass blocking percentages on the slide were not read.</p>
+<p>The stop-the-product point was stated as a rule.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;snow and sand reflect UV rays&rdquo; <span class='g2-src'>11/12 T@67386</span></p>
+<p>&ldquo;You still do, but not to the same extent&rdquo; <span class='g2-src'>11/12 T@67516</span></p>
+<p>&ldquo;If the product causes redness, itching, rash, you're stopping the product.&rdquo; <span class='g2-src'>11/12 T@68005</span></p>
+<p>&ldquo;catch it early. That is the biggest key.&rdquo; <span class='g2-src'>11/12 T@68231</span></p>
+<p>&ldquo;SPF for the face that is also SPF greater than or equal to 15&rdquo; <span class='g2-src'>11/12 T@68535</span></p></div>
+</div>
+</section>
+
+<section class="gobj" id="gobj-pl-u-11">
+<h3>Dr. Patel, slide by slide &middot; Sun exposure &middot; slides 38&ndash;42</h3>
+<div class="gbar"><span>What the lecture adds (Sun Exposure 38&ndash;42)</span><b>What photoaging is, how it differs from chronologic aging, and how it is prevented</b><i>Patel Sun Exposure slide 38, 39, 40, 41, 42</i></div>
+<div class="gpt g2-block"><h5>Photoaging section divider (Patel Sun Exposure slide 38)</h5>
+<p class="g2-status"><b>Status A</b> On the slide and complete; nothing added in lecture</p>
+</div>
+<div class="gpt g2-block"><h5>Photoaging and its classification by age (Patel Sun Exposure slide 39)</h5>
+<p class="g2-status"><b>Status B</b> fact on slide; lecture reads the table and explains what it grades</p>
+<p>The classification grades photoaging as mild, moderate, advanced or severe by the patient's age and by the wrinkles. Type I is mild, no wrinkles, 20 to 30 years of age; type II is moderate, wrinkles in motion, 30 to 40; type III is advanced, wrinkles at rest, 50 or older; type IV is severe, only wrinkles with a yellow-gray color, 60 or older. The table is a Glogau classification on the slide. The statement that fair North Americans show photodamage by age 50 was not discussed.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;depends on the age of the patient as well as how severe the wrinkles&rdquo; <span class='g2-src'>11/12 T@68874</span></p>
+<p>&ldquo;Type 3, advanced, greater than or equal to 50 years of age&rdquo; <span class='g2-src'>11/12 T@69272</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Chronologic aging compared with photoaging (Patel Sun Exposure slide 40)</h5>
+<p class="g2-status"><b>Status B</b> fact on slide; lecture adds the key relationship</p>
+<p>Chronologic aging brings thin skin, fine wrinkles, xerosis, laxity, seborrheic keratoses and senile angiomas. Photoaging brings atrophic skin, coarse wrinkles, leathery skin, lentigines, a bronzed or yellow cobblestone appearance, telangiectasis, bruising and sun-induced dermatitis. Her relationship is the exam-relevant one: aging happens regardless, and sun exposure makes the same processes worse, adding hyperpigmentation and sunspots. She named collagen loss and loss of elasticity for ordinary aging.</p>
+<p>Individual items on the slide were not read in the lecture.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;photoaging advances the process of aging of the skin&rdquo; <span class='g2-src'>11/12 T@69627</span></p>
+<p>&ldquo;collagen decreases, thins the skin&rdquo; <span class='g2-src'>11/12 T@69721</span></p>
+<p>&ldquo;that decrease in that elasticity of the skin&rdquo; <span class='g2-src'>11/12 T@69793</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Skin anti-aging approaches (Patel Sun Exposure slide 41)</h5>
+<p class="g2-status"><b>Status C</b> reference slide; lecture adds the most common option and the sunscreen emphasis</p>
+<p>The slide groups approaches as cosmetic care, topical medications, invasive procedures, systemic agents and prevention. She called it a reference slide of options for the patient, said cosmetic care is the most common option, and returned to prevention, including a sunscreen on the face in any weather or season. The slide lists the procedures and systemic agents without detail, and she did not teach them.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;This is just a reference slide&rdquo; <span class='g2-src'>11/12 T@70385</span></p>
+<p>&ldquo;Cosmetic care being the most common.&rdquo; <span class='g2-src'>11/12 T@70141</span></p>
+<p>&ldquo;Wear that sunscreen on your face, no matter what weather it is&rdquo; <span class='g2-src'>11/12 T@70517</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Photoaging prevention (Patel Sun Exposure slide 42)</h5>
+<p class="g2-status"><b>Status A</b> On the slide and complete; nothing added in lecture</p>
+</div>
+</section>
+
+<section class="gobj" id="gobj-pl-u-12">
+<h3>Dr. Patel, slide by slide &middot; Sun exposure &middot; slides 43&ndash;46</h3>
+<div class="gbar"><span>What the lecture adds (Sun Exposure 43&ndash;46)</span><b>The photoaging drug classes she named, how retinoids and hydroxy acids are used, and why peels are not an OTC option</b><i>Patel Sun Exposure slide 43, 44, 45, 46</i></div>
+<div class="gpt g2-block"><h5>Photoaging: pharmacologic treatments (Patel Sun Exposure slide 43)</h5>
+<p class="g2-status"><b>Status B</b> table on slide; lecture names which classes matter and for what</p>
+<p>The table lists topical retinoids (OTC retinol and retinyl palmitate, which the skin must convert to retinoic acid, a limit on efficacy; Rx tretinoin and tazarotene, which can reduce wrinkles and repair collagen over 6 to 12 months), keratolytics, antioxidant vitamins, and depigmenting agents (hydroquinone, monobenzone). She went through them by purpose: retinoids, keratolytics, vitamins E, C and coenzyme Q10, and hydroquinone as the most commonly used brightening agent. She said the ingredients in products marketed for brightening or aging are most likely among these. The table's keratolytic start, every other night for 1 week, was not read.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;We have our keratolytic as well as our vitamin E, C, and CoQ10s.&rdquo; <span class='g2-src'>11/12 T@70812</span></p>
+<p>&ldquo;brightening of skin is hydroquinone, and that is most commonly used&rdquo; <span class='g2-src'>11/12 T@70896</span></p>
+<p>&ldquo;Most likely the ingredients are one of these.&rdquo; <span class='g2-src'>11/12 T@71142</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Vitamin A derivatives: retinoids (Patel Sun Exposure slide 44)</h5>
+<p class="g2-status"><b>Status B, C</b> fact on slide; lecture adds why they appear in aging products and the sun precaution</p>
+<p>Retinoids increase keratinocyte cell division, build collagen and elastic fibers, reduce melanin production, and improve wrinkles, mottled pigment and texture. Benefit requires long-term daily use and may take months. They are the same drugs used for acne, so many anti-aging products contain them. The side effects are dryness, scaling and phototoxicity, so a moisturizer is mixed in and the sunscreen goes on after the skincare routine. The slide's way to reduce them is a cream-based moisturizer with SPF 30+ in the daytime and the retinoid product at night or on alternate days.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;a lot of our aging-related type of products has retinoids in them&rdquo; <span class='g2-src'>11/12 T@71401</span></p>
+<p>&ldquo;long-term usage has to be continued in order to see benefit&rdquo; <span class='g2-src'>11/12 T@71622</span></p>
+<p>&ldquo;we're always applying that sunscreen after the skincare routine is completed&rdquo; <span class='g2-src'>11/12 T@71941</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Keratolytics: alpha hydroxy acids (Patel Sun Exposure slide 45)</h5>
+<p class="g2-status"><b>Status B</b> fact on slide; lecture adds the course link</p>
+<p>The slide names lactic, glycolic, citric and malic acids, which increase dermal thickness, improve collagen and elastic fibers, reduce hyperpigmentation and increase exfoliation. In lecture she tied them back to the acne lecture and stated two effects: less hyperpigmentation and more collagen. The slide 10 list also includes alpha-hydroxy acids in cosmetics as a sun-sensitizing ingredient.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;AHAs play a role too, so we talked about this in acne.&rdquo; <span class='g2-src'>11/12 T@72023</span></p>
+<p>&ldquo;Reducing hyperpigmentation, increasing collagen.&rdquo; <span class='g2-src'>11/12 T@72078</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Keratolytic chemical peels (Patel Sun Exposure slide 46)</h5>
+<p class="g2-status"><b>Status C</b> table on slide; lecture adds who performs them and her recommendation</p>
+<p>The table classifies peels by depth: superficial, medium and deep, with the agents, depth of penetration and side effects. She said peels are usually done by medical spas and aestheticians, and she would not recommend an over-the-counter peel for use on one's own skin because of the side effects and risks. Deep peels are professional medical use only. The table lists deep-peel risks including cardiotoxicity and arrhythmia, hepatotoxicity and nephrotoxicity, which she did not read.</p>
+<p>Her examples by depth: superficial AHA and BHA, medium salicylic acid, glycolic acid and TCA, deep TCA with other ingredients.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;I would not recommend chemical peels that are over the counter&rdquo; <span class='g2-src'>11/12 T@72287</span></p>
+<p>&ldquo;partly because of the side effects and the risk factors that can occur&rdquo; <span class='g2-src'>11/12 T@72402</span></p>
+<p>&ldquo;that is only professional medical use&rdquo; <span class='g2-src'>11/12 T@72649</span></p></div>
+</div>
+</section>
+
+<section class="gobj" id="gobj-pl-u-13">
+<h3>Dr. Patel, slide by slide &middot; Sun exposure &middot; slides 47&ndash;51</h3>
+<div class="gbar"><span>What the lecture adds (Sun Exposure 47&ndash;51)</span><b>Hydroquinone limits, the FDA position, antioxidants, product labels and plant extracts</b><i>Patel Sun Exposure slide 47, 48, 49, 50, 51</i></div>
+<div class="gpt g2-block"><h5>Depigmentation: hydroquinone (Patel Sun Exposure slide 47)</h5>
+<p class="g2-status"><b>Status B, C</b> fact on slide; lecture adds the safe-use counseling and the regulatory status</p>
+<p>Hydroquinone reduces sun-associated hyperpigmentation, melasma and lentigines. Use is limited to 3 months and sunscreen is worn after it. The slide lists combination products with hydroquinone 4% (slide-only figure). She added that it is not FDA approved for OTC sale in the US, yet products with it are still sold and are not FDA regulated, so the pharmacist educates on strength and safe use; a patient who chooses it starts low and increases slowly, and licensed aestheticians are best placed to apply it.</p>
+<p>The practice case answer for hyperpigmentation is hydroquinone.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;we're limiting use to 3 months&rdquo; <span class='g2-src'>11/12 T@72872</span></p>
+<p>&ldquo;we're also wearing sunscreen always after the product is applied&rdquo; <span class='g2-src'>11/12 T@72908</span></p>
+<p>&ldquo;it is not FDA approved for OTC sale in the US&rdquo; <span class='g2-src'>11/12 T@73083</span></p>
+<p>&ldquo;we're starting low, increasing it slowly&rdquo; <span class='g2-src'>11/12 T@73645</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>FDA skin product safety: hydroquinone (Patel Sun Exposure slide 48)</h5>
+<p class="g2-status"><b>Status D</b> slide says use only when prescribed; lecture describes counseling for OTC users</p>
+<p>The FDA sheet says skin lightening products with hydroquinone are not FDA approved for OTC sale, are used to correct uneven tone and remove dark spots, can cause permanent discoloration (ochronosis), rashes and facial swelling, and should be used only when prescribed by a licensed health care provider.</p>
+<div class="g2-note"><span class="g2-k">Both versions</span><p>Slide 48: use hydroquinone products only when prescribed by a licensed health care provider. Lecture: products are still available over the counter, and the pharmacist educates the patient who chooses one. An exam written from her slides would key the FDA statements (not approved for OTC sale; prescribed use); her counseling points (3 months, sunscreen, start low) are the lecture's answer for a patient who already uses it. The side effects on the slide were not read.</p></div>
+<div class="g2-note"><span class="g2-k">General source, not from the course</span><p>The slide is an FDA sheet. FDA's own statement (April 2022) says OTC skin lightening products containing hydroquinone are unapproved drugs, not generally recognized as safe and effective, and have not been legally marketable in the U.S. since September 23, 2020; Tri-Luma, a prescription product, is the only FDA-approved drug containing hydroquinone. So the products she described as still sold over the counter are sold against that rule, and &ldquo;not FDA regulated&rdquo; is her loose wording for &ldquo;not FDA approved&rdquo;. Source: FDA, https://www.fda.gov/drugs/drug-safety-communications/fda-works-protect-consumers-potentially-harmful-otc-skin-lightening-products</p></div>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;there are still products available over the counter that have it&rdquo; <span class='g2-src'>11/12 T@73173</span></p>
+<p>&ldquo;this is when pharmacists educate patients on the strength, how to apply it&rdquo; <span class='g2-src'>11/12 T@73278</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Topical antioxidants (Patel Sun Exposure slide 49)</h5>
+<p class="g2-status"><b>Status B, C</b> fact on slide; lecture adds which are common and how long to wait</p>
+<p>The slide lists niacinamide (vitamin B3), ascorbic acid (vitamin C), D-alpha-tocopherol (vitamin E), coenzyme Q-10 and alpha-lipoic acid, with some evidence of protection but no proven formula for delivery to the skin. She named niacinamide and vitamin C as the most common in skincare products and described vitamin C as brightening. Asked how long to use a product before switching, she answered as for acne: consistent daily use for at least a month, in line with the at-least-four-weeks point on slide 53.</p>
+<p>The no-proven-formula point was not read in lecture.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;especially niacinamide and vitamin C&rdquo; <span class='g2-src'>11/12 T@74029</span></p>
+<p>&ldquo;at least more than a month to really see some efficacy&rdquo; <span class='g2-src'>11/12 T@74891</span></p>
+<p>&ldquo;consistent use as in we're using it daily&rdquo; <span class='g2-src'>11/12 T@74986</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Cosmeceutical product ingredient labels (Patel Sun Exposure slide 50)</h5>
+<p class="g2-status"><b>Status C</b> label image on slide; lecture says what to look for</p>
+<p>The slide shows ingredient lists from cosmeceutical skincare products with several ingredients highlighted. She told the class to notice the highlighted ingredients and said they will see a lot of ascorbic acid, niacinamide, a retinoid and hyaluronic acid. The full lists were not read.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;you're gonna see a lot of ascorbic acid, niacinamide, retinoid, hyaluronic acid&rdquo; <span class='g2-src'>11/12 T@74527</span></p>
+<p>&ldquo;notice the highlighted ingredients&rdquo; <span class='g2-src'>11/12 T@74491</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Plant extracts in skincare (Patel Sun Exposure slide 51)</h5>
+<p class="g2-status"><b>Status B</b> table on slide; lecture treats it as reference</p>
+<p>The table pairs plant extracts with actions: green tea epicatechins (reduce UV erythema and cyclobutene pyrimidine dimers, antioxidant), soy isoflavones, grape seed polyphenols, coffee berry, ginkgo biloba (stimulates fibroblast and collagen production) and ginseng. She gave it as reference and said natural ingredients are marketed because patients do not want irritating ingredients; the effects she named are collagen, reduced melanin and UV protection.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;Plant extracts. Also here for your reference&rdquo; <span class='g2-src'>11/12 T@75069</span></p>
+<p>&ldquo;patients just don't want ingredients that irritate their skin&rdquo; <span class='g2-src'>11/12 T@75278</span></p>
+<p>&ldquo;reduce melanin and protect from UV rays&rdquo; <span class='g2-src'>11/12 T@75581</span></p></div>
+</div>
+</section>
+
+<section class="gobj" id="gobj-pl-u-14">
+<h3>Dr. Patel, slide by slide &middot; Sun exposure &middot; slides 52&ndash;57</h3>
+<div class="gbar"><span>What the lecture adds (Sun Exposure 52&ndash;57)</span><b>The photoaging case answer, photoaging counseling, retinoid and hydroxy acid use, and her closing list</b><i>Patel Sun Exposure slide 52, 53, 54, 55, 56, 57</i></div>
+<div class="gpt g2-block"><h5>Practice case: photoaging in a 65-year-old woman (Patel Sun Exposure slide 52)</h5>
+<p class="g2-status"><b>Status C, E</b> lecture gives the answer and the key term; options are not on the slide</p>
+<p>The case is a 65-year-old Fitzpatrick IV woman with wrinkles and brown spotting on the face, hands and forearms, a yellowish facial color, fine wrinkles deepening at the eyes and mouth, a smoking history (quit 15 years ago), a multivitamin, and calcium 600 mg with vitamin D 400 IU. The question asked which option improves hyperpigmentation. Her cue was the keyword hyperpigmentation, and the answer is hydroquinone, option C <span class="g2-tonly" title="Transcript only: not on the slide">Transcript-only, verify against slide</span>, the depigmenting agent from slide 47.</p>
+<p>The other findings in the case describe photoaging and do not change the answer.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;Which of the following treatment options would help improve hyperpigmentation of the skin?&rdquo; <span class='g2-src'>11/12 T@76182</span></p>
+<p>&ldquo;So keyword here, hyperpigmentation.&rdquo; <span class='g2-src'>11/12 T@76273</span></p>
+<p>&ldquo;So that should be answer C, hydroquinone.&rdquo; <span class='g2-src'>11/12 T@76346</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Photoaging counseling points (Patel Sun Exposure slide 53)</h5>
+<p class="g2-status"><b>Status B</b> fact on slide; lecture links it to sunscreen counseling</p>
+<p>The slide says photoaging is preventable and cumulative, protect skin from further damage, use broad-spectrum SPF 15 or higher daily and reapply often, clean the face twice daily with a mild cleanser, use products in the order suggested, avoid eyes and mucous membranes, use moisturizers, adopt a healthy lifestyle and stop smoking, and expect results in at least four weeks. She summarized with two themes and pointed back to the sunscreen counseling points of slide 36 as applying here too.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;Biggest things, prevention is key. Consistency is key.&rdquo; <span class='g2-src'>11/12 T@76403</span></p>
+<p>&ldquo;Very similar to the counseling points we talked about with the sunscreen&rdquo; <span class='g2-src'>11/12 T@76458</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Photoaging counseling: hydroxy acid and retinoid products (Patel Sun Exposure slide 54)</h5>
+<p class="g2-status"><b>Status E, B</b> she told the class to review this slide; lecture adds the sun precaution</p>
+<p>For hydroxy acid products apply to dry skin within 15 minutes of cleansing; adverse events are stinging, burning, itching, skin lightening and dryness. For retinoids, apply once at bedtime to dry skin after cleansing, add a moisturizer or foundation with SPF 30 or higher during the day, and expect scaling, redness, burning and dermatitis. She skipped through it for time and said to review it thoroughly, so the slide wording is the source. Her added point: the SPF is needed the day after a night retinoid.</p>
+<p>The hydroxy acid and retinoid adverse event lists were not read aloud.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;Please do review the slide thoroughly.&rdquo; <span class='g2-src'>11/12 T@76557</span></p>
+<p>&ldquo;apply to dry skin 15 minutes of cleansing&rdquo; <span class='g2-src'>11/12 T@76707</span></p>
+<p>&ldquo;should be at night, should be after cleansing&rdquo; <span class='g2-src'>11/12 T@76826</span></p>
+<p>&ldquo;don't skip out on that SPF the next day&rdquo; <span class='g2-src'>11/12 T@76959</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Conclusions (Patel Sun Exposure slide 55)</h5>
+<p class="g2-status"><b>Status E, B</b> closing list she read; pointers to the mnemonic and patient factors</p>
+<p>The slide says sunscreen ingredients are UV-length specific, products are labeled UVA, UVB, broad-spectrum or water resistant because of their ingredients, and the risks of sun exposure are real and preventable. In her wrap-up she listed what to know: the specific SPF amount, the patient's age, how to prevent exposure, and how a suspected skin cancer lesion looks, and told the class to remember the mnemonic, which in context is the ABCDE rule on slide 28. The captions print mnemonic as 'pneumonic'.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;Specific SPF amount, so pay attention to that, age of the patient&rdquo; <span class='g2-src'>11/12 T@77144</span></p>
+<p>&ldquo;What does that lesion look like? So remember the pneumonic.&rdquo; <span class='g2-src'>11/12 T@77300</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>References (Patel Sun Exposure slide 56)</h5>
+<p class="g2-status"><b>Status A</b> On the slide and complete; nothing added in lecture</p>
+</div>
+<div class="gpt g2-block"><h5>Questions slide (Patel Sun Exposure slide 57)</h5>
+<p class="g2-status"><b>Status A</b> On the slide and complete; nothing added in lecture</p>
+</div>
+</section>
+</details>
 <h2 class="gdeck" id="gdeck-p8w">Wound Care Therapeutics (Dr. Patel, 11/12; Exam 2)</h2>
 <p class="sub">WC = Patel_Wound-Care.pdf, slide = PDF page; T@ = place in the 11/12 transcript. Her three objectives (WC 2), one section each. No PollEv questions were asked in this lecture.</p>
 <div class="gask"><b>How she asks (11/12)</b><ul><li>&ldquo;I&rsquo;m gonna tell you guys exactly what I want you guys to know. There&rsquo;s more information in these slides for your reference&rdquo; (T@77775 11/12); &ldquo;All that I mentioned, key terms, key points is what I want you to know&rdquo; (T@87898 11/12).</li><li>Self-care exclusions: &ldquo;I need you to know them&rdquo; (WC 7; T@79663 11/12). Dressings: &ldquo;Know the advantages, know the disadvantages&rdquo; (WC 8&ndash;9; T@80276 11/12). Burn categories: &ldquo;I want you to know&rdquo; (WC 16; T@83577 11/12).</li></ul></div>
@@ -2995,6 +5545,170 @@ const GUIDE_HTML = `
 </div>
 </section>
 
+<details class="gdetails" id="gpl-p8w">
+<summary>Dr. Patel: Wound care slide by slide, what the lecture adds (29 slides)</summary>
+<section class="gobj" id="gobj-pl-w-1">
+<h3>Dr. Patel, slide by slide &middot; Wound care &middot; slides 1&ndash;5</h3>
+<div class="gbar"><span>What the lecture adds (Wound 1&ndash;5)</span><b>Identify the wound type and severity, then assess, recommend treatment and refer; the stage of a wound is set by its depth</b><i>Patel Wound slide 1, 2, 3, 4, 5</i></div>
+<div class="gpt g2-block"><h5>Title slide (Patel Wound slide 1)</h5>
+<p class="g2-status"><b>Status A</b> On the slide and complete; nothing added in lecture</p>
+</div>
+<div class="gpt g2-block"><h5>Learning objectives: identify, assess and recommend, refer (Patel Wound slide 2)</h5>
+<p class="g2-status"><b>Status A, E</b> On the slide; lecture adds her cue about how exam questions are built</p>
+<p>The slide gives three objectives: identify the wound type and severity, assess and recommend treatment, and provide referral or follow-up. She restated them in the same order at the start of the lecture, ending with "appropriate referral". Her cue about objectives was said at the start of the day, before the outdoor exposure lecture, about learning objectives in general. It ties the three objectives here (what kind of wound and how severe, what to recommend, and when the patient goes to a provider) to the way she writes questions.</p>
+<div class='g2-said'><span class='g2-k'>She said</span><p>&ldquo;First, identifying the wound, the severity&rdquo; <span class='g2-src'>(11/12 T@77978)</span></p><p>&ldquo;This is how I create my exam questions as well&rdquo; <span class='g2-src'>(11/12 T@962)</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Wound treatment goals (Patel Wound slide 3)</h5>
+<p class="g2-status"><b>Status A</b> On the slide and complete; nothing added in lecture</p>
+</div>
+<div class="gpt g2-block"><h5>Types of acute wounds and burns (Patel Wound slide 4)</h5>
+<p class="g2-status"><b>Status A</b> On the slide and complete; nothing added in lecture</p>
+</div>
+<div class="gpt g2-block"><h5>Wound stages 1 to 4 are set by depth (Patel Wound slide 5)</h5>
+<p class="g2-status"><b>Status B, C, E</b> Fact on slide; lecture gives the basis for the staging and an exam cue</p>
+<p>The slide lists four stages: stage 1 has no loss of skin layers (reddened, non-blanching, unbroken skin); stage 2 is a blister or partial-thickness loss; stage 3 is full-thickness loss that may involve the subcutaneous tissue; stage 4 reaches subcutaneous tissue, muscle, tendon and bone. The reason the stages are ordered this way is depth: the slide heading says the classification is "based on depth of the wound", and she repeated that. She applied the stage to dressing choice: a stage 4 wound is not managed with an adhesive bandage, while a stage 1 wound possibly could be (Patel Wound slide 8).</p>
+<div class='g2-said'><span class='g2-k'>She said</span><p>&ldquo;that is based on the depth of the wound&rdquo; <span class='g2-src'>(11/12 T@78446)</span></p><p>&ldquo;there's 4 stages of a wound, so know each stage&rdquo; <span class='g2-src'>(11/12 T@87283)</span></p><p>&ldquo;we're not just putting a band-aid on it&rdquo; <span class='g2-src'>(11/12 T@80486)</span></p></div>
+</div>
+</section>
+
+<section class="gobj" id="gobj-pl-w-2">
+<h3>Dr. Patel, slide by slide &middot; Wound care &middot; slides 6&ndash;9</h3>
+<div class="gbar"><span>What the lecture adds (Wound 6&ndash;9)</span><b>Know the healing phases, the list of wounds that are not self-treated, and the advantages and disadvantages of each dressing</b><i>Patel Wound slide 6, 7, 8, 9</i></div>
+<div class="gpt g2-block"><h5>Healing phases and why deeper wounds take longer (Patel Wound slide 6)</h5>
+<p class="g2-status"><b>Status B, E</b> Fact on slide; lecture adds the reasoning about duration and an exam cue</p>
+<p>The timeline slide shows three overlapping phases: inflammation, proliferation and remodeling, on a scale from minutes to months. She named the three phases in her conclusion and said to understand them (Patel Wound slide 27). She did not read the cells and mediators listed in each phase. Her added point is about stage and duration: the higher the stage, the longer the healing, because the stage reflects depth. Her statement that stage 1 takes weeks is not on the slide. <span class="g2-tonly" title="Transcript only: not on the slide">Transcript-only, verify against slide</span> Slide 5 uses "stage" for wound depth, and slide 27 uses "phases" for the healing sequence (inflammatory, proliferative, remodeling); these are separate ideas.</p>
+<div class='g2-said'><span class='g2-k'>She said</span><p>&ldquo;the higher the stage, the longer the duration of healing&rdquo; <span class='g2-src'>(11/12 T@79102)</span></p><p>&ldquo;Wound healing timeline really depends on if there's inflammation&rdquo; <span class='g2-src'>(11/12 T@78858)</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Wounds and burns excluded from self-treatment (Patel Wound slide 7)</h5>
+<p class="g2-status"><b>Status B, C, E</b> List on slide; lecture adds what the items mean and an exam cue to know the full list</p>
+<p>The slide gives twelve exclusions, from body location and size (face, hands, feet, major joints, genitals or perineum; larger than 3 inches) to chemical, electrical or inhalation burns, bites, signs of infection, diabetes and a chronic wound. She called these patients completely self-excluded and tied the timing item to the 7-day policy. She defined chronic in plain terms: the wound is not healing and keeps getting larger over time. Deep partial-thickness and full-thickness injuries are on this list, which bears on the burn categories on slide 16.</p>
+<div class='g2-said'><span class='g2-k'>She said</span><p>&ldquo;The list that's listed here for you, I need you to know them&rdquo; <span class='g2-src'>(11/12 T@79663)</span></p><p>&ldquo;This complete list, you would not recommend a patient to treat themselves&rdquo; <span class='g2-src'>(11/12 T@80089)</span></p><p>&ldquo;7-day policy applies here&rdquo; <span class='g2-src'>(11/12 T@79466)</span></p><p>&ldquo;it's not healing, it's continuing to increase over time&rdquo; <span class='g2-src'>(11/12 T@80032)</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Gauze, nonadherent and adhesive dressings (Patel Wound slide 8)</h5>
+<p class="g2-status"><b>Status C, E</b> Table on slide; lecture adds the link between depth and dressing and an exam cue</p>
+<p>The table gives, for each dressing type, brand names, advantages and disadvantages. Her cue was to know the advantages and disadvantages of each. Her added point is that the dressing follows the depth of the wound. On the slide, gauze, nonadherent dressings and adhesive bandages each list a disadvantage about moist healing: gauze does not provide a moist healing environment unless used with another product, and many nonadherent dressings and adhesive bandages do not provide one either. Slide 27 states that wound treatment includes a moist healing environment.</p>
+<div class='g2-said'><span class='g2-k'>She said</span><p>&ldquo;Know the advantages, know the disadvantages of each of them&rdquo; <span class='g2-src'>(11/12 T@80276)</span></p><p>&ldquo;there's different ways of healing a wound by different types of gauze dressings&rdquo; <span class='g2-src'>(11/12 T@80576)</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Hydrocolloids and transparent adhesive films (Patel Wound slide 9)</h5>
+<p class="g2-status"><b>Status C</b> Table on slide; lecture adds everyday examples to recognize each type</p>
+<p>The slide describes hydrocolloids as wafer dressings of hydrophilic particles in an adhesive, covered by a water-resistant film or foam, and transparent adhesive films as thin semi-occlusive polyurethane or co-polyester films. Both provide a moist healing environment and both are for uninfected wounds only. She tied each type to an example a patient would know: a waterproof adhesive bandage is a hydrocolloid film, and the film put over an IV is a transparent adhesive film. She named a brand, Nexederm. <span class="g2-tonly" title="Transcript only: not on the slide">Transcript-only, verify against slide</span> The slide lists Exuderm, DuoDERM and Band-Aid Advanced Healing Strips under hydrocolloids.</p>
+<div class='g2-said'><span class='g2-k'>She said</span><p>&ldquo;whenever you see a band-aid that says waterproof&rdquo; <span class='g2-src'>(11/12 T@80742)</span></p><p>&ldquo;what's put over an IV, that's an example of that&rdquo; <span class='g2-src'>(11/12 T@80969)</span></p></div>
+</div>
+</section>
+
+<section class="gobj" id="gobj-pl-w-3">
+<h3>Dr. Patel, slide by slide &middot; Wound care &middot; slides 10&ndash;15</h3>
+<div class="gbar"><span>What the lecture adds (Wound 10&ndash;15)</span><b>Reduce scarring, and use OTC antibiotics, anesthetics and antiseptics only when indicated, because each has limits and risks</b><i>Patel Wound slide 10, 11, 12, 13, 14, 15</i></div>
+<div class="gpt g2-block"><h5>Minimizing scarring (Patel Wound slide 10)</h5>
+<p class="g2-status"><b>Status B</b> Fact on slide; lecture adds the consequence of leaving the steps out</p>
+<p>The slide lists avoiding UV exposure to the wound, silicone sheets or gels, laser therapy, and appropriate and consistent wound care. She stated limiting UV exposure to the wound first, and said consistent wound care is what makes the wound heal. The reasoning she added is the reverse case: when these steps are not applied, scarring can occur. This ties to the treatment goal on slide 3 of reducing scarring.</p>
+<div class='g2-said'><span class='g2-k'>She said</span><p>&ldquo;if we're not applying any of these steps, that's when scarring can also occur&rdquo; <span class='g2-src'>(11/12 T@81314)</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>First aid antibiotics: timing and area (Patel Wound slide 11)</h5>
+<p class="g2-status"><b>Status B</b> Facts on slide; lecture stresses the order of application and the area limit</p>
+<p>The slide lists the OTC ingredients (bacitracin, neomycin, polymyxin B sulfate), says the use is preventive with limited evidence of efficacy, and says to apply after cleansing and before bandaging. It also says toxicity risk increases with large areas. She emphasized the order twice, after cleansing and before the bandage, and repeated the area limit as a caution. She gave no mechanism for either point, so the materials support the rule but not a reason for it.</p>
+<div class='g2-said'><span class='g2-k'>She said</span><p>&ldquo;Apply it right after cleansing the wound area, and then before bandaging&rdquo; <span class='g2-src'>(11/12 T@81569)</span></p><p>&ldquo;Toxicity risk does increase if we're utilizing it in large areas&rdquo; <span class='g2-src'>(11/12 T@81702)</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Topical antimicrobials: pros and cons (Patel Wound slide 12)</h5>
+<p class="g2-status"><b>Status B</b> Table on slide; lecture connects the toxicity risk to short use on a small area</p>
+<p>The slide lists pros (concentrated delivery to the site, less systemic toxicity, regular visual inspection of the wound) and cons (limited evidence of efficacy, local allergic reactions, minimal penetration depth, bacterial resistance from unnecessary use, product contamination, and others). She named delivery, fewer systemic effects, inspection, limited evidence, allergy and resistance. Her added reasoning links the risk to how the product is used: short duration and a small wound area. She did not read the remaining cons on the slide.</p>
+<div class='g2-said'><span class='g2-k'>She said</span><p>&ldquo;we're using it for a short period of time&rdquo; <span class='g2-src'>(11/12 T@82492)</span></p><p>&ldquo;we're using it on a smaller area of a wound&rdquo; <span class='g2-src'>(11/12 T@82539)</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Antibiotic ointment versus Aquaphor in the trial (Patel Wound slide 13)</h5>
+<p class="g2-status"><b>Status D</b> Slide and lecture word one point differently</p>
+<p>The slide says antibiotic-containing ointments reduced healing in a clean surgical wound model, that Aquaphor ointment was superior in that trial, that antibiotic ointment is used for infection prophylaxis in acute, minor, uncomplicated wounds, and that it can cause sensitivity reactions. The lecture gave no reason why the antibiotic ointments healed worse; the materials do not say.</p>
+<div class="g2-note"><span class="g2-k">Slide and lecture differ</span><p>Slide: Aquaphor was the comparison ointment that did better than the antibiotic-containing ointments, and slide 19 lists Aquaphor among skin protectants.</p><p>Lecture: she said that among antibiotic-containing ointments, Aquaphor has one for wound healing, which classes it as an antibiotic ointment.</p><p>An exam written from her lecture would key what both versions share: Aquaphor was superior in the trial and is an option for the wound. A question on its class would follow the slides (skin protectant), because the trial summary and slide 19 do not describe Aquaphor as containing an antibiotic.</p></div>
+<div class='g2-said'><span class='g2-k'>She said</span><p>&ldquo;Aquaphor has one for wound healing&rdquo; <span class='g2-src'>(11/12 T@82655)</span></p><p>&ldquo;this was superior in a trial that was conducted&rdquo; <span class='g2-src'>(11/12 T@82695)</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Topical anesthetics: stinging first, numbing after (Patel Wound slide 14)</h5>
+<p class="g2-status"><b>Status C</b> Facts on slide; lecture adds a counseling point about the open wound</p>
+<p>The slide gives the purpose (temporary pain relief), limited evidence of efficacy or safety, the ingredients lidocaine, pramoxine and benzocaine, and the risk with benzocaine absorbed systemically: methemoglobinemia, cyanosis, dyspnea, syncope, seizures and coma. She named lidocaine and benzocaine only. Her counseling point is that the product can sting on an open wound at first, and that the pain relief comes afterward because the skin is numbed. She did not read the systemic effects.</p>
+<div class='g2-said'><span class='g2-k'>She said</span><p>&ldquo;it can sting, right? If you have an open wound&rdquo; <span class='g2-src'>(11/12 T@83052)</span></p><p>&ldquo;We're numbing the skin completely&rdquo; <span class='g2-src'>(11/12 T@83243)</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Antiseptics: cytotoxicity and what comes first (Patel Wound slide 15)</h5>
+<p class="g2-status"><b>Status B, D</b> Reason on slide is brief; lecture adds a first-step statement that differs from slide 27</p>
+<p>The slide lists chlorhexidine, hydrogen peroxide and povidone-iodine, and says they may cause cytotoxicity that reduces wound healing. She named hydrogen peroxide and gave the same reason: it could be toxic to the wound itself. Slide 19 limits antiseptics to intact skin and the wound edges and says they reduce healing if used within the wound, which matches the cytotoxicity reason.</p>
+<div class="g2-note"><span class="g2-k">Slide and lecture differ</span><p>Slide 15 lecture passage: she called antiseptics "cleaning the skin, first step".</p><p>Slide 27 and her conclusion: the first step is to cleanse the wound with clean water or saline.</p><p>An exam written from her lecture would key water or saline as the first step, because she gave that as the first step in her conclusion and it is the first-step line on slide 27. The antiseptic remark was said in passing, before the burn section.</p></div>
+<div class='g2-said'><span class='g2-k'>She said</span><p>&ldquo;it could cause cytotoxicity to the wound itself&rdquo; <span class='g2-src'>(11/12 T@83399)</span></p><p>&ldquo;First aid antiseptics, of course, cleaning the skin, first step&rdquo; <span class='g2-src'>(11/12 T@83282)</span></p><p>&ldquo;cleansing it with water or saline&rdquo; <span class='g2-src'>(11/12 T@87473)</span></p></div>
+</div>
+</section>
+
+<section class="gobj" id="gobj-pl-w-4">
+<h3>Dr. Patel, slide by slide &middot; Wound care &middot; slides 16&ndash;20</h3>
+<div class="gbar"><span>What the lecture adds (Wound 16&ndash;20)</span><b>Sort a burn by BSA and depth into minor, moderate or major, decide who is excluded from self-care, and counsel on cooling and OTC products</b><i>Patel Wound slide 16, 17, 18, 19, 20</i></div>
+<div class="gpt g2-block"><h5>Burn severity: minor, moderate and major (Patel Wound slide 16)</h5>
+<p class="g2-status"><b>Status C, D, E</b> Table on slide; lecture adds the link to BSA, an exam cue, and a point that differs from slide 7</p>
+<p>Slide 16 sorts burns by BSA and depth. Minor (self-care): under 15% BSA superficial in an adult, under 10% in a child, or under 2% BSA deep or full thickness without the eyes, ears, face or genitalia. Moderate (referral): 15% to 25% superficial partial-thickness in an adult, 10% to 20% in a child, or 2% to 10% deep or full thickness without those areas. Major (referral): over 25% in an adult, over 20% in a child, deep or full thickness over 10%, or any burn of the eyes, ears, face or genitalia, inhalation, electrical or poor-risk patient. She linked BSA to the psoriasis lecture and read the minor and moderate cutoffs aloud. Her words "deep thickness" are shorthand for the slide wording.</p>
+<div class="g2-note"><span class="g2-k">Slide and lecture differ</span><p>Slide 16: a deep partial-thickness or full-thickness burn under 2% BSA not involving eyes, ears, face or genitalia is minor, self-care.</p><p>Slide 7: deep partial-thickness, full-thickness or subdermal injuries are excluded from self-treatment, and she said of that list that you would not recommend a patient to treat themselves.</p><p>The materials do not settle this. A question that gives a burn size and depth would follow slide 16, the table she read the cutoffs from when she said to know them. A question on the general exclusion list would follow slide 7.</p></div>
+<div class='g2-said'><span class='g2-k'>She said</span><p>&ldquo;I want you to know that a minor BSA in an adult&rdquo; <span class='g2-src'>(11/12 T@83580)</span></p><p>&ldquo;in a child is less than 10%&rdquo; <span class='g2-src'>(11/12 T@83646)</span></p><p>&ldquo;remember how we talked about BSA and psoriasis? Comes back again&rdquo; <span class='g2-src'>(11/12 T@83511)</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Exclusions for self-treatment of burns (Patel Wound slide 17)</h5>
+<p class="g2-status"><b>Status B</b> List on slide; lecture adds the reason for excluding immunocompromised patients</p>
+<p>The slide excludes a moderate to severe burn of 2% BSA or more, burns of the eyes, ears, face, hands, feet or perineum, chemical burns (first aid, then refer), electrical or inhalation burns, advanced age, diabetes or multiple medical disorders, and immunocompromised patients. She gave the reason for one group: immunocompromised patients are excluded because of the risk of infection. She grouped advanced age with chronic disease or immune disorders. She did not mention the first-aid step for chemical burns that is on the slide.</p>
+<div class='g2-said'><span class='g2-k'>She said</span><p>&ldquo;Immunocompromised patients also are self-excluded because of that risk of infection&rdquo; <span class='g2-src'>(11/12 T@84416)</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Non-drug care for a minor burn (Patel Wound slide 18)</h5>
+<p class="g2-status"><b>Status C</b> Facts on slide; lecture adds the link to sunburn care</p>
+<p>The slide lists cool water, which reduces the burning sensation and decreases morbidity; honey, with evidence for accelerated healing of superficial and partial-thickness burns; and aloe vera, labeled traditional. She said to put cool water straight on the burn, said honey has data showing benefit for healing, and connected aloe vera to what was covered earlier for sunburn.</p>
+<div class='g2-said'><span class='g2-k'>She said</span><p>&ldquo;Cool water straight on that burn&rdquo; <span class='g2-src'>(11/12 T@84538)</span></p><p>&ldquo;just like how we talked about when it came to a sunburn&rdquo; <span class='g2-src'>(11/12 T@84673)</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>OTC products for minor burns: analgesics, protectants, antiseptics (Patel Wound slide 19)</h5>
+<p class="g2-status"><b>Status C</b> Facts on slide; lecture adds the limit to minor burns</p>
+<p>The slide lists OTC analgesics (acetaminophen, NSAIDs), skin protectants (allantoin, cocoa butter, petrolatum, Aquaphor) and topical antiseptics, with the rules that antiseptics go only on intact skin after debris is removed, are applied to the edges of the wound, and reduce healing if used within the wound. She added that all of this applies only to minor burns, with anything larger going straight to referral, and she named Tylenol for pain. <span class="g2-tonly" title="Transcript only: not on the slide">Transcript-only, verify against slide</span> The slide lists Aquaphor as a skin protectant.</p>
+<div class='g2-said'><span class='g2-k'>She said</span><p>&ldquo;anything besides minor would be straight referral&rdquo; <span class='g2-src'>(11/12 T@84849)</span></p><p>&ldquo;treating the pain, Tylenol, NSAIDs, skin protectants&rdquo; <span class='g2-src'>(11/12 T@84916)</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>OTC antibiotics and anesthetics for burns: toxicity (Patel Wound slide 20)</h5>
+<p class="g2-status"><b>Status E</b> Facts on slide; lecture adds an emphasis cue on systemic toxicity</p>
+<p>The slide gives the antibiotics (polymyxin B, neomycin, bacitracin) for 1 to 3 times a day, with systemic toxicity possible with neomycin, hypersensitivity with polymyxin B, and a primary care visit if there is no improvement in 7 days. For anesthetics it gives a maximum of 4 times daily, small quantities and low concentrations on broken skin to prevent systemic absorption, systemic toxicity with lidocaine, hypersensitivity with benzocaine and lidocaine, and relief of only 15 to 45 minutes. The slide notes that continuous pain control cannot be achieved. She gave none of the numbers aloud; her added point is to understand the systemic toxicity that comes from overuse of the anesthetic.</p>
+<div class='g2-said'><span class='g2-k'>She said</span><p>&ldquo;I want you guys to understand the systemic toxicity of overuse of this product&rdquo; <span class='g2-src'>(11/12 T@85399)</span></p><p>&ldquo;This is numbing the skin, mostly for pain&rdquo; <span class='g2-src'>(11/12 T@85332)</span></p></div>
+</div>
+</section>
+
+<section class="gobj" id="gobj-pl-w-5">
+<h3>Dr. Patel, slide by slide &middot; Wound care &middot; slides 21&ndash;26</h3>
+<div class="gbar"><span>What the lecture adds (Wound 21&ndash;26)</span><b>Know what slows wound healing, from local and systemic factors to drugs, comorbidities and smoking, and how chronic wounds are managed</b><i>Patel Wound slide 21, 22, 23, 24, 25, 26</i></div>
+<div class="gpt g2-block"><h5>Local factors that impair wound healing (Patel Wound slide 21)</h5>
+<p class="g2-status"><b>Status A</b> On the slide and complete; nothing added in lecture</p>
+</div>
+<div class="gpt g2-block"><h5>Systemic factors that impair wound healing (Patel Wound slide 22)</h5>
+<p class="g2-status"><b>Status B</b> List on slide; lecture defines one term</p>
+<p>The slide lists poor vascularization, bacterial infection, inadequate nutrition, coexisting medical conditions and medications. She defined poor vascularization as blood flow to the wound. The smoking slide describes reduced blood supply as well (slide 25). The other four items were named without added detail.</p>
+<div class='g2-said'><span class='g2-k'>She said</span><p>&ldquo;poor vascularization, so blood flow to that wound&rdquo; <span class='g2-src'>(11/12 T@85809)</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Prescription medications that impede wound healing (Patel Wound slide 23)</h5>
+<p class="g2-status"><b>Status A</b> On the slide and complete; nothing added in lecture</p>
+</div>
+<div class="gpt g2-block"><h5>Comorbidities that impair wound healing (Patel Wound slide 24)</h5>
+<p class="g2-status"><b>Status A</b> On the slide and complete; nothing added in lecture</p>
+</div>
+<div class="gpt g2-block"><h5>Smoking and wound healing (Patel Wound slide 25)</h5>
+<p class="g2-status"><b>Status B</b> Numbers and mechanism on slide; lecture adds how the pieces connect</p>
+<p>The slide gives one pack per day as 3 times the frequency of flap necrosis and two packs per day as 6 times. She said two packs doubles the frequency, which is the step from 3 times to 6 times; the slide figure for two packs is 6 times. The mechanism on the slide is nicotine acting through the sympathetic system to cause vasoconstriction and limit distal perfusion, and carbon monoxide shifting the oxygen-hemoglobin curve to the left so tissue oxygen delivery falls. She stated both in terms of blood supply and oxygen supply, and added that necrosis can occur much sooner in patients who keep smoking during wound healing. The slide figure that one cigarette causes vasoconstriction for more than 90 minutes was not mentioned.</p>
+<div class='g2-said'><span class='g2-k'>She said</span><p>&ldquo;Notice the pack per day, 3 times frequency of necrosis&rdquo; <span class='g2-src'>(11/12 T@86371)</span></p><p>&ldquo;we're restricting that blood supply, that blood flow to the body already&rdquo; <span class='g2-src'>(11/12 T@86485)</span></p><p>&ldquo;Carbon monoxide, same thing again, lack of oxygen supply to the body&rdquo; <span class='g2-src'>(11/12 T@86735)</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Chronic wounds: conservative care first (Patel Wound slide 26)</h5>
+<p class="g2-status"><b>Status C</b> List on slide; lecture adds a counseling step and stresses infection control</p>
+<p>The slide starts with the same conservative treatment as acute wounds (cleaning, dressings), then pressure relief or compression, nutrition status, infection control and debridement (sharp, mechanical or enzymatic, surgical), with biopsy to guide antibiotics and reconstructive options. She kept the order: clean and dress, relieve pressure, assess nutrition and educate, and control infection. She called infection control very important. The transcript reads "debris" where the slide says debridement. Debridement types were named only as sharp, mechanical and surgical, and chosen by stage.</p>
+<div class='g2-said'><span class='g2-k'>She said</span><p>&ldquo;control the infection, that's very important&rdquo; <span class='g2-src'>(11/12 T@87019)</span></p><p>&ldquo;Understand the nutrition status of the patient, educate accordingly&rdquo; <span class='g2-src'>(11/12 T@86950)</span></p></div>
+</div>
+</section>
+
+<section class="gobj" id="gobj-pl-w-6">
+<h3>Dr. Patel, slide by slide &middot; Wound care &middot; slides 27&ndash;29</h3>
+<div class="gbar"><span>What the lecture adds (Wound 27&ndash;29)</span><b>Her closing points on wound care: four stages, three phases, clean first, moist healing, appropriate dressings, and antiseptics and antibiotics only when indicated</b><i>Patel Wound slide 27, 28, 29</i></div>
+<div class="gpt g2-block"><h5>Conclusions: what she said to know (Patel Wound slide 27)</h5>
+<p class="g2-status"><b>Status E, C</b> Summary on slide; lecture adds emphasis and the first-step statement</p>
+<p>The slide gives six conclusions: four stages, three healing phases (inflammatory, proliferative, remodeling), clean water or saline as the first step, a moist healing environment, dressings appropriate to the wound, and antiseptics, antibiotics and anesthetics only when indicated. She added that prevention of infection is the most important point, together with what is safe and effective for the patient with no pain. This slide settles the first-step question raised on slide 15: cleansing with water or saline.</p>
+<div class='g2-said'><span class='g2-k'>She said</span><p>&ldquo;most importantly, Uh, prevention of infection&rdquo; <span class='g2-src'>(11/12 T@87615)</span></p><p>&ldquo;key terms, key points is what I want you to know&rdquo; <span class='g2-src'>(11/12 T@87920)</span></p><p>&ldquo;cleansing it with water or saline&rdquo; <span class='g2-src'>(11/12 T@87473)</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>References (Patel Wound slide 28)</h5>
+<p class="g2-status"><b>Status A</b> On the slide and complete; nothing added in lecture</p>
+</div>
+<div class="gpt g2-block"><h5>Questions slide (Patel Wound slide 29)</h5>
+<p class="g2-status"><b>Status A</b> On the slide and complete; nothing added in lecture</p>
+</div>
+</section>
+</details>
 <h2 class="gdeck" id="gdeck-p8c">Warts, Corns and Calluses Therapeutics (Dr. Patel, 11/12; Exam 2)</h2>
 <p class="sub">WCC = Patel_Warts-Corns-Calluses.pdf, slide = PDF page; T@ = place in the 11/12 transcript. Her seven objectives (WCC 2&ndash;3), one section each. No PollEv questions were asked in this lecture.</p>
 <div class="gask"><b>How she asks (11/12)</b><ul><li>&ldquo;Pay attention to how many days you&rsquo;re using the products for. How many times can we repeat it for, OK? When do we refer the patient? Those are big things with this PowerPoint&rdquo; (T@94913 11/12).</li><li>Wart types: &ldquo;Know what is self-treatable&rdquo; (WCC 6; T@90202 11/12).</li></ul></div>
@@ -3185,6 +5899,126 @@ const GUIDE_HTML = `
 <p class="g2-p">WCC 4 prints &ldquo;Recurrent or recalcitrant warts should be referred&rdquo;; she said &ldquo;if you see reoccurrence of the wart, that&rsquo;s when we need treatment&rdquo; (T@88519 11/12); see Reference.</p>
 </div>
 </section>
+
+<details class="gdetails" id="gpl-p8c">
+<summary>Dr. Patel: Warts, corns and calluses slide by slide, what the lecture adds (20 slides)</summary>
+<section class="gobj" id="gobj-pl-c-1">
+<h3>Dr. Patel, slide by slide &middot; Warts, corns and calluses &middot; slides 1&ndash;5</h3>
+<div class="gbar"><span>What the lecture adds (Warts 1&ndash;5)</span><b>Know what causes warts, how a wart differs from a corn and a callus, and the objectives she builds exam questions from</b><i>Patel Warts slide 1, 2, 3, 4, 5</i></div>
+<div class="gpt g2-block"><h5>Title slide (Patel Warts slide 1)</h5>
+<p class="g2-status"><b>Status C</b> Slide title is wrong; she corrected it</p>
+<p>The title slide reads "WCC: Wounds, Corns, and Calluses". She announced the lecture the same way and then corrected herself: the lecture is on warts, corns and calluses. The slides that follow cover warts on slides 4 to 12 and corns and calluses on slides 13 to 17, which matches the corrected title.</p>
+<div class='g2-said'><span class='g2-k'>She said</span><p>&ldquo;That should say warts. I'm sorry.&rdquo; <span class='g2-src'>(11/12 T@88031)</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Learning objectives 1 to 5 (Patel Warts slide 2)</h5>
+<p class="g2-status"><b>Status A, E</b> On the slide; lecture adds her cues about objectives</p>
+<p>The slide lists five objectives: perform the SCHOLAR-MAC/QuEST and Pharmacist's Patient Care Process interview, determine the condition from signs, symptoms and history, determine whether the patient is a self-care candidate, list treatment goals, and recommend non-drug therapy. She did not go through the interview components in this lecture. She said the objectives repeat the pattern of her earlier lectures and, at the start of the day, that this is how she creates exam questions.</p>
+<div class='g2-said'><span class='g2-k'>She said</span><p>&ldquo;Objectives very similar to my previous lectures&rdquo; <span class='g2-src'>(11/12 T@88102)</span></p><p>&ldquo;This is how I create my exam questions as well&rdquo; <span class='g2-src'>(11/12 T@962)</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Learning objectives 6 and 7: dosing, length, follow-up (Patel Warts slide 3)</h5>
+<p class="g2-status"><b>Status E</b> On the slide; lecture adds what she asked students to focus on</p>
+<p>Objective 6 asks for the dosing frequency and maximum days of use of the active ingredients highlighted in lecture, the expected onset, a recommended length of treatment, the amount of topical product and tube size, adverse effects, and contraindications and interactions; objective 7 is follow-up. In her summary she named the parts she wants attention on: counseling on how to use the ingredients, the number of days of use, how many times a treatment can be repeated, and when to refer. She did not teach a product-amount or tube-size calculation, onset, adverse effects or interactions for the wart, corn and callus products. Not in materials.</p>
+<div class='g2-said'><span class='g2-k'>She said</span><p>&ldquo;make sure you understand how to counsel and educate the patient&rdquo; <span class='g2-src'>(11/12 T@94815)</span></p><p>&ldquo;Pay attention to how many days you're using the products for&rdquo; <span class='g2-src'>(11/12 T@94913)</span></p><p>&ldquo;How many times can we repeat it for&rdquo; <span class='g2-src'>(11/12 T@94975)</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Warts: cause, HPV types, spread, recurrence (Patel Warts slide 4)</h5>
+<p class="g2-status"><b>Status D, E</b> Facts on slide; lecture stresses the HPV-by-site point, and the refer wording differs</p>
+<p>The slide says warts are caused by human papillomavirus, spread from other people, by auto-inoculation or on fomites, are limited to the epidermis, and may resolve without treatment. Hand warts are HPV-2, HPV-4, HPV-27 and HPV-57; foot warts are HPV-1. She said to know that feet are HPV 1 and that the other types are on the hands. She stated the epidermis limit without giving a reason.</p>
+<div class="g2-note"><span class="g2-k">Slide and lecture differ</span><p>Slide: recurrent or recalcitrant warts should be referred.</p><p>Lecture: warts may resolve alone, but when a wart comes back, that is when treatment is needed.</p><p>An exam written from her lecture would key referral for a recurrent wart, because the slide says so and her summary named "when do we refer the patient" as one of the big things in this deck.</p></div>
+<div class='g2-said'><span class='g2-k'>She said</span><p>&ldquo;know that feet is HPV 1 and the other types are on the hands&rdquo; <span class='g2-src'>(11/12 T@88457)</span></p><p>&ldquo;When do we refer the patient? Those are big things&rdquo; <span class='g2-src'>(11/12 T@95016)</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>How a wart, a corn and a callus differ (Patel Warts slide 5)</h5>
+<p class="g2-status"><b>Status B, C</b> Table on slide; lecture adds plain-language distinctions</p>
+<p>The table compares location, appearance, pain, size, timing, cause and modifying factors. Warts occur on any skin the virus can infect and have a rough cauliflower look; plantar warts disrupt the normal skin ridges. Corns sit over bony prominences of the foot, are raised, sharply demarcated and have a central core. Calluses are on weight-bearing areas, are yellowish, broad-based, and keep the normal skin-ridge pattern. She added that corns are painful regardless, while a callus hurts when weight is put on the foot, and that salicylic acid is the usual treatment for all three. The slide lists salicylic acid or cryotherapy for warts, and salicylic acid alone for corns and calluses.</p>
+<div class='g2-said'><span class='g2-k'>She said</span><p>&ldquo;So corns, painful regardless&rdquo; <span class='g2-src'>(11/12 T@89254)</span></p><p>&ldquo;when a weight is applied on the foot, that can cause pain&rdquo; <span class='g2-src'>(11/12 T@89297)</span></p><p>&ldquo;oftentimes is with salicylic acid for all three&rdquo; <span class='g2-src'>(11/12 T@90006)</span></p></div>
+</div>
+</section>
+
+<section class="gobj" id="gobj-pl-c-2">
+<h3>Dr. Patel, slide by slide &middot; Warts, corns and calluses &middot; slides 6&ndash;9</h3>
+<div class="gbar"><span>What the lecture adds (Warts 6&ndash;9)</span><b>Know which warts are self-treatable, the goals and non-drug steps for warts, and the OTC products used</b><i>Patel Warts slide 6, 7, 8, 9</i></div>
+<div class="gpt g2-block"><h5>Types of non-genital warts: which are self-treatable (Patel Warts slide 6)</h5>
+<p class="g2-status"><b>Status E</b> Table on slide; lecture adds the exam cue</p>
+<p>The table gives six types. Self-treatable: common wart (hands; children and adolescents; dome-shaped, rough papules) and plantar wart (feet; adolescents and young adults; flat, callus-like with disrupted skin markings). Not self-treatable: flat wart (face; children), mosaic wart (feet; multiple closely grouped plantar warts), periungual wart (around the nail; people who bite their nails) and filiform wart (face; threadlike projections). Neither the slide nor the lecture gives a reason for each sorting. The one related statement is on slide 16, which lists warts on the face among places not to use the corn and callus product.</p>
+<div class='g2-said'><span class='g2-k'>She said</span><p>&ldquo;Know what is self-treatable and know what is not self-treatable&rdquo; <span class='g2-src'>(11/12 T@90202)</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Wart treatment goals (Patel Warts slide 7)</h5>
+<p class="g2-status"><b>Status A</b> On the slide and complete; nothing added in lecture</p>
+</div>
+<div class="gpt g2-block"><h5>Non-drug care for warts (Patel Warts slide 8)</h5>
+<p class="g2-status"><b>Status A</b> On the slide and complete; nothing added in lecture</p>
+</div>
+<div class="gpt g2-block"><h5>OTC wart removers: salicylic acid and cryotherapy (Patel Warts slide 9)</h5>
+<p class="g2-status"><b>Status B</b> Products on slide; lecture adds what cryotherapy does</p>
+<p>The slide shows four products: salicylic acid 40% (pads, strips, patches), salicylic acid 17% (gel, liquid, stick), cryotherapy with dimethyl ether and propane, and cryotherapy with nitrous oxide. She gave the strength and form pairs and described cryotherapy as burning off or freezing off the wart. She did not name the cryotherapy gases. Both cryotherapy and salicylic acid are available over the counter.</p>
+<div class='g2-said'><span class='g2-k'>She said</span><p>&ldquo;Cryotherapy is where we basically burn off and freeze off the wart&rdquo; <span class='g2-src'>(11/12 T@90995)</span></p></div>
+</div>
+</section>
+
+<section class="gobj" id="gobj-pl-c-3">
+<h3>Dr. Patel, slide by slide &middot; Warts, corns and calluses &middot; slides 10&ndash;12</h3>
+<div class="gbar"><span>What the lecture adds (Warts 10&ndash;12)</span><b>Know how each OTC wart product is applied, for how long and how often, and how salicylic acid ranks against the complementary options</b><i>Patel Warts slide 10, 11, 12</i></div>
+<div class="gpt g2-block"><h5>Salicylic acid counseling: 40% plaster and 17% liquid or gel (Patel Warts slide 10)</h5>
+<p class="g2-status"><b>Status B, E</b> Steps on slide; lecture adds the reason for the tape and an exam cue on days of use</p>
+<p>The slide gives the shared steps (wash hands, soak the area in warm water for 5 minutes, wash and dry). For the 40% plaster, pad or strip: apply, cover with occlusive tape, remove after 48 hours, repeat every 48 hours up to 12 weeks. For the 17% liquid, gel or stick: apply 1 drop at a time, protect healthy skin, let it dry, cover, repeat 1 to 2 times a day up to 12 weeks. She gave the reason for the tape, to keep the plaster on, and restated the 48 hours as 2 days on the wart. The reason for the soak is not in the materials. Both products share the 12-week maximum; the frequencies differ.</p>
+<div class='g2-said'><span class='g2-k'>She said</span><p>&ldquo;using the occlusive tape to keep it on&rdquo; <span class='g2-src'>(11/12 T@91362)</span></p><p>&ldquo;remove it after 48 hours, so it does stay on for 2 days&rdquo; <span class='g2-src'>(11/12 T@91477)</span></p><p>&ldquo;Pay attention to how many days you're using the products for&rdquo; <span class='g2-src'>(11/12 T@94913)</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Cryotherapy counseling: halo, seconds, repeats (Patel Warts slide 11)</h5>
+<p class="g2-status"><b>Status C</b> Steps on slide; lecture adds a description of the device</p>
+<p>The slide gives approximately 20 seconds for common warts and 40 seconds for plantar warts, discarding the single-use applicator, repeating after 2 weeks if needed, and a maximum of 3 treatments. Its other steps include not holding the canister near the face, body or clothing, flammability, and lightly abrading plantar warts with a file or pumice stone. She described the applicator as a stick, said the application produces a halo like a bubble around the wart, and said the wart is gone "within" 20 seconds for common warts and 40 seconds for plantar warts, where the slide says approximately. She did not mention flammability or the file or pumice stone. The slide wording for the time is "apply ... until a halo appears", approximately 20 or 40 seconds.</p>
+<div class='g2-said'><span class='g2-k'>She said</span><p>&ldquo;it creates this halo around the wart like a bubble&rdquo; <span class='g2-src'>(11/12 T@92292)</span></p><p>&ldquo;it's a single-use device discarded after one use&rdquo; <span class='g2-src'>(11/12 T@92437)</span></p><p>&ldquo;repeat it after 2 weeks if needed&rdquo; <span class='g2-src'>(11/12 T@92495)</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Complementary options and the ranking of salicylic acid (Patel Warts slide 12)</h5>
+<p class="g2-status"><b>Status C</b> List on slide; lecture adds a ranking</p>
+<p>The slide lists topical vitamin A (case report only), dietary zinc at 10 mg/kg/day (small study), topical garlic chloroform extract (small study) and duct tape applied for 6 days and repeated up to 2 months. She named vitamin A, zinc, garlic and duct tape without doses or timing, called them interesting but available, and said salicylic acid is the most effective. The slide labels vitamin A as case report only and zinc and garlic as small studies.</p>
+<div class='g2-said'><span class='g2-k'>She said</span><p>&ldquo;Quite interesting, but it is available to use&rdquo; <span class='g2-src'>(11/12 T@92664)</span></p><p>&ldquo;the salicylic acid is the most effective to treat the warts&rdquo; <span class='g2-src'>(11/12 T@92731)</span></p></div>
+</div>
+</section>
+
+<section class="gobj" id="gobj-pl-c-4">
+<h3>Dr. Patel, slide by slide &middot; Warts, corns and calluses &middot; slides 13&ndash;17</h3>
+<div class="gbar"><span>What the lecture adds (Warts 13&ndash;17)</span><b>Tell a corn from a callus, and know the non-drug care, cautions and counseling limits for salicylic acid on corns and calluses</b><i>Patel Warts slide 13, 14, 15, 16, 17</i></div>
+<div class="gpt g2-block"><h5>Corn versus callus (Patel Warts slide 13)</h5>
+<p class="g2-status"><b>Status B</b> Definitions on slide; lecture adds the contrast</p>
+<p>The slide defines a corn (clavus) as small, raised, sharply demarcated and hyperkeratotic with a central core, caused by pressure from underlying bony prominences or joints. A callus has a broad base with relatively even thickening, usually on the bottom of the foot: heel, ball, toes and sides. She contrasted them by location and look: a corn sits on the bony area of the foot, small and raised; a callus is thick skin on the sole where weight is borne, yellowish in color.</p>
+<div class='g2-said'><span class='g2-k'>She said</span><p>&ldquo;we're talking about the bony area of the feet&rdquo; <span class='g2-src'>(11/12 T@92852)</span></p><p>&ldquo;we're talking about the sole part of the feet where weight is based&rdquo; <span class='g2-src'>(11/12 T@92908)</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Corn and callus treatment goals (Patel Warts slide 14)</h5>
+<p class="g2-status"><b>Status A</b> On the slide and complete; nothing added in lecture</p>
+</div>
+<div class="gpt g2-block"><h5>Non-drug care for corns and calluses: footwear first (Patel Warts slide 15)</h5>
+<p class="g2-status"><b>Status B, C</b> List on slide; lecture adds practical detail and the common cause</p>
+<p>The slide lists daily 5-minute soaks in warm water, gentle removal of dead tissue, circular foam or gel pads, well-fitting non-binding footwear and orthotics. She said footwear is most often the cause, using athletes and weight training as an example of shoes that are too tight at the sides or do not support the foot. She added Epsom salt or an exfoliator for removing dead tissue, and described orthotics as prescription-based footwear. <span class="g2-tonly" title="Transcript only: not on the slide">Transcript-only, verify against slide</span> The slide does not name Epsom salt.</p>
+<div class='g2-said'><span class='g2-k'>She said</span><p>&ldquo;footwear tends to be the most common cause&rdquo; <span class='g2-src'>(11/12 T@93724)</span></p><p>&ldquo;you can use Epsom salt or an exfoliator as well&rdquo; <span class='g2-src'>(11/12 T@93344)</span></p><p>&ldquo;orthotics being it is a prescription-based footwear&rdquo; <span class='g2-src'>(11/12 T@93804)</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Cautions for corn and callus products (Patel Warts slide 16)</h5>
+<p class="g2-status"><b>Status B, C, D</b> List on slide; lecture gives a shorter, differently worded version</p>
+<p>The slide says not to use the product on irritated skin, infected or reddened areas, moles, birthmarks, warts with hair growing from them, genital warts, warts on the face, or warts on the mucous membranes (mouth, nose, anus, genitals, lips), and not to use it if diabetic or with poor blood circulation. It shows trade names with 17% or 40% salicylic acid, which she did not read. She named irritated skin, moles and diabetic patients, and said salicylic acid at 17% or 40% is the main treatment. No reason for the diabetes exclusion is given in the materials.</p>
+<div class="g2-note"><span class="g2-k">Slide and lecture differ</span><p>Slide: the product is not used on warts with hair, genital warts, face warts or mucous-membrane warts.</p><p>Lecture: she said not to apply it to irritated skin or if there are moles or warts to the skin, which read literally would rule out wart treatment.</p><p>An exam written from her lecture would key the slide list, because the same lecture teaches salicylic acid on common and plantar warts (slides 9 and 10).</p></div>
+<div class='g2-said'><span class='g2-k'>She said</span><p>&ldquo;we're not applying it to irritated skin or if there's moles&rdquo; <span class='g2-src'>(11/12 T@93973)</span></p><p>&ldquo;that is also not the time to use these agents&rdquo; <span class='g2-src'>(11/12 T@94100)</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Counseling on 17% and 40% products for corns and calluses (Patel Warts slide 17)</h5>
+<p class="g2-status"><b>Status B, E</b> Steps on slide; lecture adds the link between 7 applications and referral</p>
+<p>For the 17% product the slide says to apply no more than twice daily for up to 14 days, one drop at a time, let it dry, cap the container tightly to prevent evaporation (which would raise the concentration), and store it away from light and heat. For the 40% plaster or pad: remove within 48 hours, reapply every 48 hours, never longer than 14 days, which is no more than 7 applications, and seek medical attention for redness or irritation or if the corn or callus is not gone after 14 days. She gave the 40% limits of 14 days and 7 applications and said failure after that goes to the provider. She did not give the twice daily or 14 day limit for the 17% product, and the 40% limit here (14 days) differs from the 40% wart limit (12 weeks, slide 10).</p>
+<div class='g2-said'><span class='g2-k'>She said</span><p>&ldquo;You're not gonna use it longer than 14 days&rdquo; <span class='g2-src'>(11/12 T@94581)</span></p><p>&ldquo;then that's when you would go ahead and refer over to the provider&rdquo; <span class='g2-src'>(11/12 T@94703)</span></p><p>&ldquo;Pay attention to how many days you're using the products for&rdquo; <span class='g2-src'>(11/12 T@94913)</span></p></div>
+</div>
+</section>
+
+<section class="gobj" id="gobj-pl-c-5">
+<h3>Dr. Patel, slide by slide &middot; Warts, corns and calluses &middot; slides 18&ndash;20</h3>
+<div class="gbar"><span>What the lecture adds (Warts 18&ndash;20)</span><b>Her closing points on this lecture: the objectives, counseling, days of use, number of repeats and when to refer</b><i>Patel Warts slide 18, 19, 20</i></div>
+<div class="gpt g2-block"><h5>Summary: what she called the big things (Patel Warts slide 18)</h5>
+<p class="g2-status"><b>Status E</b> Slide lists the focus; lecture names the exam-relevant points</p>
+<p>The slide says to answer the learning objectives and to focus on medication selection and counseling, covering bathing and non-pharm techniques, OTC topicals, prescription topicals and referral to a dermatologist. Her version names the working points: understand how to counsel and educate on each ingredient, the number of days of use, how many times a treatment can be repeated, and when to refer. The lecture contained no prescription topical or dermatologist content for warts, corns or calluses.</p>
+<div class='g2-said'><span class='g2-k'>She said</span><p>&ldquo;look at the objectives&rdquo; <span class='g2-src'>(11/12 T@94791)</span></p><p>&ldquo;Pay attention to how many days you're using the products for&rdquo; <span class='g2-src'>(11/12 T@94913)</span></p><p>&ldquo;Those are big things with this PowerPoint&rdquo; <span class='g2-src'>(11/12 T@95046)</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>References (Patel Warts slide 19)</h5>
+<p class="g2-status"><b>Status A</b> On the slide and complete; nothing added in lecture</p>
+</div>
+<div class="gpt g2-block"><h5>Questions slide (Patel Warts slide 20)</h5>
+<p class="g2-status"><b>Status A</b> On the slide and complete; nothing added in lecture</p>
+</div>
+</section>
+</details>
 `;
 
 /* ==========================================================================
