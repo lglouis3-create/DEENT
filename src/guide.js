@@ -5474,7 +5474,7 @@ const GUIDE_HTML = `
 <tbody>
 <tr><th scope="row">How often</th><td><b>Up to 4 times daily</b></td></tr>
 <tr><th scope="row">Relief</th><td>Relief for <b>15 to 45 minutes</b></td></tr>
-<tr><th scope="row">Broken skin</th><td>Small amounts on broken skin</td></tr>
+<tr><th scope="row">Broken skin</th><td>Small quantities and low concentrations on broken skin</td></tr>
 <tr><th scope="row">Benzocaine</th><td>If absorbed systemically: methemoglobinemia (cyanosis, dyspnea, syncope, seizures, coma)</td></tr>
 </tbody>
 </table>
