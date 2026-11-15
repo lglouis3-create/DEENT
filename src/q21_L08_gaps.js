@@ -30,7 +30,7 @@ QUESTIONS.push(
 
 {id:'P8O-071', skill:'case', prof:'Patel', tier:'new', topic:'p8o-vector', sub:'lyme', concept:'p8o-lyme-cardiac-oral',
  tags:['case','numbers','gap'], source:'both',
- stem:'A woman with Lyme disease has cardiac manifestations. She is not hospitalized. Which treatment and duration is listed for her?',
+ stem:'A woman with Lyme disease has cardiac manifestations. She is not hospitalized. Which treatment and duration is recommended for her?',
  options:[
   {t:'Oral cefuroxime axetil for 14 to 21 days', correct:true, why:'Slide 29: cardiac manifestations, non-hospitalized: oral doxycycline, amoxicillin, cefuroxime axetil or azithromycin for 14 to 21 days.'},
   {t:'Oral doxycycline for 10 days', correct:false, why:'Slide 29: 10 days is the early skin lesion course; cardiac manifestations are 14 to 21 days.'},
