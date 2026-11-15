@@ -34,6 +34,23 @@
  *     summary, field or link, and a tap midway between two links that sit close together opens
  *     one of the two;
  *   - no page error, no sideways scroll.
+ *
+ * In a window at least 760 px wide and 480 px high the viewer is a window over the page (Louis,
+ * 2026-11-14). The cases above run there with the viewer set to Full (the covering box, as before);
+ * windowCases() checks the window itself at 1180x820, 1376x1032 (touch) and 820x1180 (touch):
+ *   - it is a dialog that is not modal (aria-modal false), named by its heading; the page behind is
+ *     not dimmed or locked, scrolls (wheel, keys, a finger, also a finger on the slide) and is
+ *     pressed (Next question, an option); Tab leaves it; Escape and Close close it and focus goes
+ *     back to the citation; a second citation replaces the slide and the window does not move;
+ *   - moved by its title bar (mouse, finger, arrow keys by 24 px), kept inside the browser window
+ *     with the title bar and Close in sight; resized by its corner (mouse, arrow keys) and by two
+ *     fingers on the slide, between 280x320 and the browser window, the slide whole and in its shape;
+ *   - Right half, Bottom half and Full (aria-pressed), each with Previous, Next, Open full size and
+ *     Close working; a drag, a resize or a key move leaves the half;
+ *   - the place, size and half are kept in one localStorage key and used after the page is loaded
+ *     again; a stored rectangle outside the window, nonsense in the key and refused storage;
+ *   - the browser window resized; under 760 px (390x844, 844x390, 759x900) the viewer is as before.
+ *     SLIDEVIEW_ONLY=window runs windowCases() alone.
  */
 const fs = require('fs'), path = require('path'), vm = require('vm'), http = require('http'), child = require('child_process');
 const L = require('./check_lib');
@@ -212,12 +229,380 @@ const pairPointFn = ([id, k]) => {
   return {x: (ra.right + rb.left) / 2, y: (ra.top + ra.bottom) / 2, gap: rb.left - ra.right, a: at(a), b: at(b)};
 };
 
+/* ---- the window: the viewer in a browser window at least 760 px wide and 480 px high ---- */
+const winFn = () => {
+  const d = document.querySelector('dialog.slv'); if (!d) return null;
+  const q = s => d.querySelector(s), r = el => { const k = el.getBoundingClientRect(); return {l: k.left, t: k.top, r: k.right, b: k.bottom, w: k.width, h: k.height}; };
+  const shown = el => !!el && el.getClientRects().length > 0 && getComputedStyle(el).visibility !== 'hidden';
+  const b = d.getBoundingClientRect(), i = q('.slv-img'), a = document.activeElement, lab = document.getElementById(d.getAttribute('aria-labelledby') || '');
+  // the lower edge of the page's heading and tab strip, where they are in sight at the top of the window
+  let navB = 0; ['header', '#nav'].forEach(s => { const e = document.querySelector(s), k = e && e.getBoundingClientRect(); if (k && k.height > 0 && k.bottom > navB && k.top < innerHeight / 3) navB = k.bottom; }); navB = Math.round(navB);
+  return {open: d.open, modal: d.open && d.matches(':modal'), win: d.classList.contains('slv-win'), tag: d.tagName, ariaModal: d.getAttribute('aria-modal'), dock: d.getAttribute('data-dock') || '',
+    label: lab ? lab.textContent : '', x: b.left, y: b.top, w: b.width, h: b.height, pos: q('.slv-pos').textContent, src: i.getAttribute('src') || '',
+    loaded: !!i.getAttribute('src') && i.complete && i.naturalWidth > 0, img: r(i), pic: r(q('.slv-pic')), title: r(q('.slv-t')), close: r(q('.slv-x')), rs: r(q('.slv-rs')),
+    prev: r(q('[data-slv=prev]')), next: r(q('[data-slv=next]')), full: r(q('.slv-full')),
+    docks: ['right', 'bottom', 'full'].map(k => { const e = q('[data-slv=' + k + ']'); return {k, shown: shown(e), pressed: e.getAttribute('aria-pressed'), box: r(e), name: e.getAttribute('aria-label')}; }),
+    rsShown: shown(q('.slv-rs')), rsName: q('.slv-rs').getAttribute('aria-label'), titleTab: q('.slv-t').getAttribute('tabindex'),
+    inside: !!a && d.contains(a), active: a ? (a.getAttribute('data-slv') || a.className || a.tagName) : '',
+    href: q('.slv-full').getAttribute('href'), target: q('.slv-full').getAttribute('target'),
+    vw: document.documentElement.clientWidth, vh: innerHeight, sy: scrollY, side: document.documentElement.scrollWidth - document.documentElement.clientWidth,
+    lock: document.documentElement.style.overflow, scale: window.visualViewport ? visualViewport.scale : 1, navB,
+    stored: (() => { try { return localStorage.getItem(NS + ':slidewin:v1'); } catch (e) { return 'threw'; } })()};
+};
+const WSIZES = [
+  {name: '1180x820', w: 1180, h: 820},
+  {name: '1376x1032 touch', w: 1376, h: 1032, touch: true},
+  {name: '820x1180 touch', w: 820, h: 1180, touch: true},
+];
+async function windowCases(browser, site){
+  const chromium = browser.browserType().name() === 'chromium';
+  for (const size of WSIZES) {
+    console.log(`\n=== The window, ${size.name} ===`);
+    const T = s => `window ${size.name}: ${s}`;
+    const ctx = await browser.newContext({viewport: {width: size.w, height: size.h}, deviceScaleFactor: 1, hasTouch: !!size.touch, serviceWorkers: 'block'});
+    await ctx.addInitScript(() => { window.prompt = () => 'TestUser'; });
+    const page = await ctx.newPage(), errors = [];
+    page.on('pageerror', e => errors.push(e.message));
+    page.on('console', m => { if (m.type() === 'error' && !/Failed to load resource/.test(m.text())) errors.push('console: ' + m.text()); });
+    page.on('dialog', d => d.accept().catch(() => {}));
+    site.delay = 0; site.fail = false;
+    const settle = ms => page.waitForTimeout(ms || 200);
+    const boot = async () => { await page.goto(site.url + 'preview/index.html'); await page.waitForFunction(() => document.querySelectorAll('#nav button').length > 3, null, {timeout: 20000}); await settle(500); };
+    await boot();
+    const win = async () => { let v = null; for (let t = 0; t < 60; t++) { v = await page.evaluate(winFn); if (!v || !v.open || v.loaded) return v; await settle(60); } return v; };
+    const near = (a, b, tol) => Math.abs(a - b) <= (tol === undefined ? 1 : tol);
+    const rectIs = (v, x, y, w, h) => !!v && near(v.x, x) && near(v.y, y) && near(v.w, w) && near(v.h, h);
+    const mid = b => [b.l + b.w / 2, b.t + b.h / 2];
+    const mdrag = async (x0, y0, x1, y1) => { await page.mouse.move(x0, y0); await page.mouse.down(); for (let k = 1; k <= 8; k++) await page.mouse.move(x0 + (x1 - x0) * k / 8, y0 + (y1 - y0) * k / 8); await page.mouse.up(); await settle(150); };
+    const cdp = chromium ? await ctx.newCDPSession(page) : null;
+    const touch = async (from, to) => {   // one finger, or two (arrays of two points)
+      const pts = (p, k) => p.map((a, i) => ({x: a[0] + (to[i][0] - a[0]) * k, y: a[1] + (to[i][1] - a[1]) * k, id: i}));
+      await cdp.send('Input.dispatchTouchEvent', {type: 'touchStart', touchPoints: pts(from, 0)});
+      for (let k = 1; k <= 10; k++) { await cdp.send('Input.dispatchTouchEvent', {type: 'touchMove', touchPoints: pts(from, k / 10)}); await settle(16); }
+      await cdp.send('Input.dispatchTouchEvent', {type: 'touchEnd', touchPoints: []}); await settle(300);
+    };
+    const setWin = o => page.evaluate(o => { SLIDE_UI.close(); if (o === null) localStorage.removeItem(NS + ':slidewin:v1'); else localStorage.setItem(NS + ':slidewin:v1', typeof o === 'string' ? o : JSON.stringify(o)); }, o);
+    const linkPt = sel => page.evaluate(sel => { const l = document.querySelector(sel); if (!l) return null; l.scrollIntoView({block: 'center', inline: 'center'}); const b = l.getClientRects()[0]; return {x: b.left + b.width / 2, y: b.top + b.height / 2, deck: l.getAttribute('data-deck'), n: +l.getAttribute('data-n'), text: l.textContent}; }, sel);
+    const openAt = async sel => { const p = await linkPt(sel); await settle(120); const p2 = await linkPt(sel); if (size.touch) await page.touchscreen.tap(p2.x, p2.y); else await page.mouse.click(p2.x, p2.y); await settle(150); return win(); };
+    const pressed = v => v.docks.filter(k => k.pressed === 'true').map(k => k.k).join();
+
+    /* ---- 1. a window, not a modal box; the page behind is scrolled and pressed ---- */
+    const refUp = async () => { await page.evaluate(() => show('ref')); await settle(800); await page.evaluate(() => { document.querySelectorAll('details').forEach(d => { if (d.querySelector('.slk')) d.open = true; });
+      if (document.querySelector('[data-w1]')) return;
+      const l = [...document.querySelectorAll('#v-ref td .slk')].find(b => b.getClientRects().length && b.getAttribute('data-deck') === 'pc' && !b.hasAttribute('data-to') && +b.getAttribute('data-n') >= 5 && +b.getAttribute('data-n') <= 60 && b.getBoundingClientRect().top + scrollY > innerHeight * 2);
+      l.setAttribute('data-w1', '1'); }); await settle(150); };
+    await refUp();
+    let v = await openAt('[data-w1]');
+    const cited = await page.evaluate(() => { const l = document.querySelector('[data-w1]'); return [l.getAttribute('data-deck'), +l.getAttribute('data-n')]; });
+    check(!!v && v.open && v.win && !v.modal && v.tag === 'DIALOG' && v.ariaModal === 'false' && v.label.length > 3, T(`a tap on a citation opens the viewer as a window: a dialog named "${v && v.label}", not modal (aria-modal false)`), v && {open: v.open, win: v.win, modal: v.modal, aria: v.ariaModal});
+    check(v.inside && v.active === 'close', T('focus is in the window, on Close'), v.active);
+    check(v.x >= 0 && v.y >= v.navB && v.x + v.w <= v.vw + 0.5 && v.y + v.h <= v.vh + 0.5 && v.w >= 280 && v.w < v.vw * 0.6, T(`it stands inside the browser window, under the tab strip, and leaves the page in sight (${Math.round(v.w)}x${Math.round(v.h)} at ${Math.round(v.x)},${Math.round(v.y)})`), v);
+    check(v.loaded && near(v.img.w / v.img.h, D[P.resolve(cited[0], cited[1]).deck].ar, 0.02) && v.img.l >= v.pic.l - 0.5 && v.img.r <= v.pic.r + 0.5 && v.img.t >= v.pic.t - 0.5 && v.img.b <= v.pic.b + 0.5, T('the slide is shown whole, in its own shape'), v.img);
+    check(v.docks.every(k => k.shown && k.box.w >= 43.5 && k.box.h >= 43.5 && k.pressed === 'false') && v.docks.map(k => k.name).join('|') === 'Right half|Bottom half|Full' && v.rsShown && v.rs.w >= 43.5 && v.rs.h >= 43.5 && near(v.rs.r, v.x + v.w, 2) && near(v.rs.b, v.y + v.h, 2),
+      T('the title bar has Right half, Bottom half and Full, each 44 px and not pressed; the resize corner is 44 px at the lower right'), {docks: v.docks, rs: v.rs});
+    check(v.lock === '' && v.side <= 1, T('the page is not locked and has no sideways scroll'), {lock: v.lock, side: v.side});
+    const under = await page.evaluate(() => { const e = document.elementFromPoint(30, innerHeight - 40); return !!e && !e.closest('dialog.slv'); });
+    check(under, T('nothing covers the page outside the window (no dimmed layer)'));
+    await page.mouse.move(40, size.h - 60); await page.mouse.wheel(0, 300); await settle(250);
+    let w = await win();
+    check(w.sy > v.sy && w.open && rectIs(w, v.x, v.y, v.w, v.h), T(`the wheel on the page scrolls the page (${v.sy} to ${w.sy} px); the window stays where it is`), {before: v.sy, after: w.sy});
+    const sy1 = w.sy;
+    await page.mouse.move(w.pic.l + w.pic.w / 2, w.pic.t + w.pic.h / 2); await page.mouse.wheel(0, 200); await settle(250);
+    w = await win();
+    check(w.sy > sy1, T('the wheel over the window scrolls the page too'), {before: sy1, after: w.sy});
+    await page.keyboard.press('PageDown'); await settle(250);
+    const sy2 = (await win()).sy;
+    check(sy2 > w.sy, T('Page Down scrolls the page'), {before: w.sy, after: sy2});
+    if (size.touch && cdp) {
+      await touch([[40, size.h * 0.7]], [[40, size.h * 0.35]]);
+      const t1 = await win();
+      check(t1.sy > sy2 && t1.open, T('a finger dragged on the page scrolls it'), {before: sy2, after: t1.sy});
+      await touch([[t1.pic.l + t1.pic.w / 2, t1.pic.t + t1.pic.h * 0.75]], [[t1.pic.l + t1.pic.w / 2, t1.pic.t + t1.pic.h * 0.75 - 160]]);
+      const t2 = await win();
+      check(t2.sy > t1.sy && rectIs(t2, v.x, v.y, v.w, v.h), T('one finger dragged on the slide scrolls the page; the window does not move'), {before: t1.sy, after: t2.sy});
+    } else if (size.touch) L.skip(T('finger drags'), 'dispatched through the Chromium DevTools protocol only');
+    // Tab leaves the window (no focus trap); Escape closes it and focus is back on the citation
+    await page.evaluate(() => document.querySelector('dialog.slv .slv-rs').focus()); await page.keyboard.press('Tab'); await settle(80);
+    w = await win();
+    check(w.open && !w.inside, T('Tab from the last control of the window goes on to the page (no focus trap)'), w.active);
+    const hold = await page.evaluate(async () => {
+      const i = document.createElement('input'); i.id = 'w-field'; document.querySelector('main').prepend(i); i.focus({preventScroll: true});
+      i.dispatchEvent(new KeyboardEvent('keydown', {key: 'Escape', bubbles: true, cancelable: true}));
+      const open = document.querySelector('dialog.slv').open; i.remove(); return open;
+    });
+    check(hold, T('Escape pressed in a field of the page leaves the window open'));
+    await page.evaluate(() => { if (document.activeElement) document.activeElement.blur(); }); await page.keyboard.press('Escape'); await settle(250);
+    w = await page.evaluate(() => ({open: document.querySelector('dialog.slv').open, back: document.activeElement && document.activeElement.hasAttribute('data-w1'), sy: scrollY}));
+    check(!w.open && w.back, T('Escape closes the window and focus is back on the citation'), w);
+
+    /* ---- 2. a quiz question behind the window: Next question and an option are pressed; a second citation replaces the slide ---- */
+    const ids = await page.evaluate(() => QUESTIONS.filter(q => { if (q.type || q.multi || !q.options || q.options.length < 2) return false; const m = /Skin-PCol[^)]*\) slides? (\d+)/.exec(q.cite || ''); return !!m && q.options.some(o => { const k = /slide (\d+)/.exec(o.why || ''); return k && k[1] !== m[1]; }); }).slice(0, 2).map(q => q.id));
+    if (check(ids.length === 2, T('two questions with slide citations in their explanations'), ids)) {
+      await L.quizOn(page, ids); await settle(300);
+      await page.evaluate(() => document.querySelector('#v-quiz button.opt[data-o]').click()); await settle(500);
+      const two = await page.evaluate(() => { const ls = [...document.querySelectorAll('#v-quiz .slk')].filter(l => l.getClientRects().length), a = ls[0], b = ls.find(l => l.getAttribute('data-n') !== a.getAttribute('data-n') || l.getAttribute('data-deck') !== a.getAttribute('data-deck'));
+        a.setAttribute('data-wa', '1'); if (b) b.setAttribute('data-wb', '1'); return !!b; });
+      await setWin({dock: '', x: size.w - 380, y: size.h - 420, w: 360, h: 400});
+      v = await openAt('[data-wa]');
+      check(v.open && v.win && rectIs(v, size.w - 380, size.h - 420, 360, 400), T('over a question the window opens at the stored place (lower right)'), v && [v.x, v.y, v.w, v.h]);
+      if (check(two, T('the explanation cites a second slide'))) {
+        const pb = await linkPt('[data-wb]'); await settle(120); const pb2 = await linkPt('[data-wb]');
+        const free = await page.evaluate(p => { const e = document.elementFromPoint(p.x, p.y); return !!e && !!e.closest('.slk'); }, pb2);
+        if (free) { if (size.touch) await page.touchscreen.tap(pb2.x, pb2.y); else await page.mouse.click(pb2.x, pb2.y); } else await page.evaluate(() => document.querySelector('[data-wb]').click());
+        await settle(200); const v2 = await win();
+        check(v2.open && v2.win && v2.src !== v.src && v2.src === fileOf(pb.deck, pb.n) && rectIs(v2, v.x, v.y, v.w, v.h) && v2.inside, T(`a second citation ("${pb.text}") replaces the slide in the window, which does not move`), {src: v2.src, was: v.src, rect: [v2.x, v2.y, v2.w, v2.h]});
+      }
+      const nb = await page.evaluate(() => { const b = document.getElementById('btnNext'); b.scrollIntoView({block: 'center'}); const r = b.getBoundingClientRect(), x = r.left + 20, y = r.top + r.height / 2, e = document.elementFromPoint(x, y); return {x, y, free: e === b || b.contains(e), id: Q.current.id}; });
+      if (nb.free) await page.mouse.click(nb.x, nb.y); else await page.evaluate(() => document.getElementById('btnNext').click());
+      await settle(500);
+      const q2 = await page.evaluate(() => { const o = document.querySelector('#v-quiz button.opt[data-o]'); o.scrollIntoView({block: 'center'}); const r = o.getBoundingClientRect(), x = r.left + 24, y = r.top + r.height / 2, e = document.elementFromPoint(x, y);
+        return {id: Q.current.id, x, y, free: !!e && (e === o || o.contains(e)), open: document.querySelector('dialog.slv').open, answered: !!document.querySelector('#v-quiz .why')}; });
+      check(nb.free && q2.id !== nb.id && q2.open && !q2.answered, T('with the window open, a click on Next question draws the next question; the window stays'), {nb, q2});
+      if (check(q2.free, T('an option of the question is in reach beside the window'), q2)) {
+        await page.mouse.click(q2.x, q2.y); await settle(500);
+        const a2 = await page.evaluate(() => ({answered: !!document.querySelector('#v-quiz .why'), open: document.querySelector('dialog.slv').open, modal: document.querySelector('dialog.slv').matches(':modal')}));
+        check(a2.answered && a2.open && !a2.modal, T('a click on an option answers the question while the window is open'), a2);
+      }
+      v = await win();
+      check(v.open && v.loaded && v.side <= 1, T('the window still shows its slide; no sideways scroll'), {open: v.open, side: v.side});
+      // a practice exam under way: the window closes
+      await page.evaluate(() => { const h = document.createElement('div'); h.className = 'examhead'; h.id = 'w-exam'; h.innerHTML = '<span class="clock">59:59</span>'; document.querySelector('#v-quiz').prepend(h); }); await settle(400);
+      check(!(await page.evaluate(() => document.querySelector('dialog.slv').open)), T('when a practice-exam clock comes on screen the window closes'));
+      await page.evaluate(() => document.getElementById('w-exam').remove());
+    }
+
+    /* ---- 3. moved by the title bar: mouse, finger, keys; kept inside the browser window ---- */
+    await refUp();
+    await setWin({dock: '', x: 300, y: 200, w: 420, h: 400});
+    v = await openAt('[data-w1]');
+    check(rectIs(v, 300, 200, 420, 400), T('opened at 300,200 with 420x400 (stored)'), [v.x, v.y, v.w, v.h]);
+    let g = [v.title.l + 30, v.title.t + v.title.h / 2];
+    await mdrag(g[0], g[1], g[0] - 150, g[1] + 90); w = await win();
+    check(rectIs(w, 150, 290, 420, 400) && w.dock === '' && JSON.parse(w.stored).x === 150 && JSON.parse(w.stored).y === 290, T('dragged by its title bar with the mouse: 150 px left and 90 px down, the same size, and stored'), {rect: [w.x, w.y, w.w, w.h], stored: w.stored});
+    g = [w.title.l + 30, w.title.t + w.title.h / 2];
+    await mdrag(g[0], g[1], 3, 3); w = await win();
+    check(rectIs(w, 0, 0, 420, 400), T('dragged past the upper left corner: it stops at the corner'), [w.x, w.y]);
+    g = [w.title.l + 30, w.title.t + w.title.h / 2];
+    await mdrag(g[0], g[1], size.w - 3, size.h - 3); w = await win();
+    check(near(w.x + w.w, w.vw) && w.y > w.vh - 170 && w.y + w.h > w.vh + 100 && w.close.r <= w.vw + 0.5 && w.close.b <= w.vh + 0.5 && w.close.t >= 0 && w.title.b <= w.vh + 0.5, T(`dragged past the lower right corner: its right edge stops at the window's, and the title bar with Close stays in sight (top at ${Math.round(w.y)} of ${w.vh})`), {rect: [w.x, w.y, w.w, w.h], close: w.close});
+    check(w.side <= 1 && w.lock === '', T('no sideways scroll with the window at the edge'), w.side);
+    g = [w.title.l + 30, w.title.t + w.title.h / 2];
+    await mdrag(g[0], g[1], g[0] - 200, g[1] - 300); w = await win();
+    const m0 = w;
+    const closeMid = mid(w.close);
+    await mdrag(closeMid[0], closeMid[1], closeMid[0] - 80, closeMid[1] + 40); w = await win();
+    check(!!w && w.open && rectIs(w, m0.x, m0.y, m0.w, m0.h), T('a drag that starts on Close moves nothing'), w && [w.open, w.x, w.y]);
+    if (size.touch && cdp) {
+      g = [w.title.l + 30, w.title.t + w.title.h / 2];
+      const syT = w.sy;
+      await touch([[g[0], g[1]]], [[g[0] - 120, g[1] - 60]]); const t = await win();
+      check(rectIs(t, w.x - 120, w.y - 60, w.w, w.h) && t.sy === syT && JSON.parse(t.stored).x === Math.round(w.x - 120), T('dragged by its title bar with a finger: 120 px left and 60 px up; the page does not scroll'), {rect: [t.x, t.y], was: [w.x, w.y], sy: [syT, t.sy]});
+    }
+    await setWin({dock: '', x: 300, y: 200, w: 420, h: 400}); v = await openAt('[data-w1]');
+    await page.evaluate(() => document.querySelector('dialog.slv .slv-t').focus());
+    await page.keyboard.press('ArrowLeft'); await page.keyboard.press('ArrowDown'); w = await win();
+    check(v.titleTab === '0' && w.active.indexOf('slv-t') >= 0 && rectIs(w, 276, 224, 420, 400) && w.pos === v.pos, T('with focus on the title bar, Left and Down move the window 24 px each way; the slide does not change'), {rect: [w.x, w.y], pos: w.pos, active: w.active});
+    await page.keyboard.press('ArrowRight'); await page.keyboard.press('ArrowUp'); w = await win();
+    check(rectIs(w, 300, 200, 420, 400) && JSON.parse(w.stored).x === 300, T('Right and Up move it back, and the place is stored'), [w.x, w.y, w.stored]);
+    for (let k = 0; k < 30; k++) await page.keyboard.press('ArrowUp');
+    w = await win();
+    check(near(w.y, 0) && near(w.x, 300), T('the keys do not move it past the upper edge'), [w.x, w.y]);
+
+    /* ---- 4. resized by its corner: mouse, keys, two fingers; the slide keeps its shape ---- */
+    await setWin({dock: '', x: 200, y: 120, w: 420, h: 400}); v = await openAt('[data-w1]');
+    const ar = D[P.resolve(cited[0], cited[1]).deck].ar;
+    const whole = x => x.loaded && near(x.img.w / x.img.h, ar, 0.02) && x.img.l >= x.pic.l - 0.5 && x.img.r <= x.pic.r + 0.5 && x.img.t >= x.pic.t - 0.5 && x.img.b <= x.pic.b + 0.5 && x.pic.r <= x.x + x.w && x.pic.b <= x.y + x.h;
+    g = mid(v.rs);
+    await mdrag(g[0], g[1], g[0] + 100, g[1] + 70); w = await win();
+    check(rectIs(w, 200, 120, 520, 470) && whole(w) && w.img.w > v.img.w + 40, T(`the corner dragged 100 px right and 70 px down: 520x470, the slide larger (${Math.round(v.img.w)} to ${Math.round(w.img.w)} px wide) and in its shape`), {rect: [w.x, w.y, w.w, w.h], img: w.img});
+    check(JSON.parse(w.stored).w === 520 && JSON.parse(w.stored).h === 470, T('the size is stored'), w.stored);
+    g = mid(w.rs);
+    await mdrag(g[0], g[1], 205, 125); w = await win();
+    check(rectIs(w, 200, 120, 280, 320) && whole(w) && [w.close, w.prev, w.next, w.full].every(c => c.l >= w.x - 0.5 && c.r <= w.x + w.w + 0.5 && c.t >= w.y - 0.5 && c.b <= w.y + w.h + 0.5 && c.h >= 43.5) && w.docks.every(k => k.box.l >= w.x - 0.5 && k.box.r <= w.x + w.w + 0.5 && k.box.w >= 43.5 && k.box.h >= 43.5),
+      T(`the corner dragged to the window's own upper left: it stops at 280x320, with the slide (${Math.round(w.img.w)}x${Math.round(w.img.h)}) and every button inside it`), {rect: [w.x, w.y, w.w, w.h], img: w.img, close: w.close, full: w.full});
+    g = mid(w.rs);
+    await mdrag(g[0], g[1], size.w - 2, size.h - 2); w = await win();
+    check(near(w.x + w.w, w.vw, 1.5) && near(w.y + w.h, w.vh, 1.5) && w.x === 200 && w.y === 120 && whole(w), T('the corner dragged to the lower right corner of the browser window: the window ends there'), [w.x, w.y, w.w, w.h]);
+    await setWin({dock: '', x: 200, y: 120, w: 420, h: 400}); v = await openAt('[data-w1]');
+    await page.evaluate(() => document.querySelector('dialog.slv .slv-rs').focus());
+    await page.keyboard.press('ArrowRight'); await page.keyboard.press('ArrowDown'); w = await win();
+    check(/Resize/.test(v.rsName) && rectIs(w, 200, 120, 444, 424) && w.pos === v.pos && whole(w), T('with focus on the corner, Right and Down make the window 24 px wider and higher'), [w.w, w.h, w.pos]);
+    await page.keyboard.press('ArrowLeft'); await page.keyboard.press('ArrowUp'); w = await win();
+    check(rectIs(w, 200, 120, 420, 400) && JSON.parse(w.stored).w === 420, T('Left and Up make it smaller again, and the size is stored'), [w.w, w.h]);
+    await page.evaluate(() => document.querySelector('dialog.slv .slv-x').focus());
+    await page.keyboard.press('ArrowRight'); await settle(150); w = await win();
+    check(w.pos !== v.pos && rectIs(w, 200, 120, 420, 400), T('with focus on Close the right arrow still pages'), [v.pos, w.pos]);
+    await page.keyboard.press('ArrowLeft'); await settle(150);
+    if (size.touch && cdp) {
+      w = await win();
+      const c = mid(w.pic);
+      await touch([[c[0] - 40, c[1]], [c[0] + 40, c[1]]], [[c[0] - 60, c[1]], [c[0] + 60, c[1]]]); const p1 = await win();
+      check(near(p1.w, 630, 2) && near(p1.h, 600, 2) && near(p1.x + p1.w / 2, 410, 2) && near(p1.y + p1.h / 2, 320, 2) && p1.scale === 1 && whole(p1) && JSON.parse(p1.stored).w === Math.round(p1.w),
+        T('two fingers spread on the slide from 80 to 120 px apart: the window is 1.5 times as large about its middle, the page is not zoomed'), {rect: [p1.x, p1.y, p1.w, p1.h], scale: p1.scale});
+      const c2 = mid(p1.pic);
+      await touch([[c2[0] - 100, c2[1]], [c2[0] + 100, c2[1]]], [[c2[0] - 10, c2[1]], [c2[0] + 10, c2[1]]]); const p2 = await win();
+      check(p2.w >= 280 && p2.h >= 320 && (near(p2.w, 280, 2) || near(p2.h, 320, 2)) && p2.w < p1.w && whole(p2), T(`two fingers brought together: it shrinks, not under 280x320 (${Math.round(p2.w)}x${Math.round(p2.h)})`), [p2.w, p2.h]);
+    }
+
+    /* ---- 5. the half and whole buttons; Previous, Next, Open full size and Close in each state ---- */
+    await setWin({dock: '', x: 200, y: 120, w: 420, h: 400}); v = await openAt('[data-w1]');
+    const works = async (what) => {
+      const a = await win(), nx = mid(a.next);
+      await page.mouse.click(nx[0], nx[1]); await settle(150); const b = await win();
+      const pv = mid(b.prev); await page.mouse.click(pv[0], pv[1]); await settle(150); const c = await win();
+      check(b.pos !== a.pos && c.pos === a.pos && c.loaded && /\.webp$/.test(c.href) && c.href === c.src && c.target === '_blank' && rectIs(c, a.x, a.y, a.w, a.h) && c.side <= 1,
+        T(`${what}: Next and Previous page, Open full size leads to the picture in a new tab, nothing moves, no sideways scroll`), {a: a.pos, b: b.pos, c: c.pos, href: c.href, side: c.side});
+    };
+    await works('free window');
+    const clickDock = async k => { const a = await win(), b = a.docks.find(x => x.k === k).box; await page.mouse.click(b.l + b.w / 2, b.t + b.h / 2); await settle(250); return win(); };
+    w = await clickDock('right');
+    const hx = Math.round(w.vw / 2);
+    check(w.win && !w.modal && rectIs(w, hx, w.navB, w.vw - hx, w.vh - w.navB) && pressed(w) === 'right' && w.dock === 'right' && w.active === 'right' && whole(w), T(`Right half: the window fills the right half under the tab strip (${Math.round(w.w)}x${Math.round(w.h)} at ${Math.round(w.x)},${Math.round(w.y)}), the button is pressed and has focus`), {rect: [w.x, w.y, w.w, w.h], navB: w.navB, pressed: pressed(w)});
+    await works('right half');
+    await page.evaluate(() => window.scrollTo(0, 0)); await settle(700); w = await win();
+    check(w.navB > 0 && rectIs(w, hx, w.navB, w.vw - hx, w.vh - w.navB), T(`with the page at its top the right half starts under the heading and the tab strip (${w.navB} px)`), {rect: [w.x, w.y, w.w, w.h], navB: w.navB});
+    await page.evaluate(() => document.querySelector('[data-w1]').scrollIntoView({block: 'center'})); await settle(700); w = await win();
+    check(rectIs(w, hx, w.navB, w.vw - hx, w.vh - w.navB), T(`and follows the tab strip when the page is scrolled (${w.navB} px)`), {rect: [w.x, w.y, w.w, w.h], navB: w.navB});
+    const pageFree = await page.evaluate(() => { const e = document.elementFromPoint(60, innerHeight / 2); return !!e && !e.closest('dialog.slv'); });
+    check(pageFree, T('the left half of the page is not covered'));
+    w = await clickDock('bottom');
+    const hy = Math.round(w.vh / 2);
+    check(w.win && !w.modal && rectIs(w, 0, hy, w.vw, w.vh - hy) && pressed(w) === 'bottom' && w.dock === 'bottom' && whole(w), T('Bottom half: the window fills the lower half, the button is pressed and Right half is not'), {rect: [w.x, w.y, w.w, w.h], pressed: pressed(w)});
+    await works('bottom half');
+    w = await clickDock('full');
+    check(!w.win && w.modal && pressed(w) === 'full' && w.lock === 'hidden' && w.w > w.vw * 0.6 && near(w.x + w.w / 2, w.vw / 2, 2) && w.active === 'full' && w.docks.every(k => k.shown) && !w.rsShown, T('Full: the covering box in the middle with the dimmed, locked page behind it (modal); the three buttons stay, the corner is gone'), {modal: w.modal, lock: w.lock, rect: [w.x, w.y, w.w, w.h], pressed: pressed(w)});
+    const syF = w.sy; await page.mouse.move(3, size.h / 2); await page.mouse.wheel(0, 300); await settle(200);
+    check((await win()).sy === syF, T('Full: the page behind does not scroll'));
+    await works('full');
+    w = await clickDock('full');
+    check(w.win && !w.modal && rectIs(w, 200, 120, 420, 400) && pressed(w) === '' && w.lock === '' && w.loaded, T('Full pressed again: the free window, where and as large as it was; the page is released'), {rect: [w.x, w.y, w.w, w.h], lock: w.lock});
+    w = await clickDock('right');
+    g = [w.title.l + 30, w.title.t + w.title.h / 2];
+    await mdrag(g[0], g[1], g[0] - 100, g[1] + 50); const u = await win();
+    check(u.dock === '' && pressed(u) === '' && rectIs(u, w.x - 100, w.y + 50, w.w, w.h) && JSON.parse(u.stored).dock === '', T('dragged while it fills the right half: it leaves the half (no button pressed) and moves'), {rect: [u.x, u.y, u.w, u.h], pressed: pressed(u)});
+    w = await clickDock('bottom');
+    g = mid(w.rs); await mdrag(g[0], g[1], g[0] - 200, g[1] - 60); const u2 = await win();
+    check(u2.dock === '' && pressed(u2) === '' && near(u2.w, w.w - 200) && near(u2.h, w.h - 60), T('resized while it fills the lower half: it leaves the half'), {rect: [u2.x, u2.y, u2.w, u2.h]});
+    w = await clickDock('bottom');
+    await page.evaluate(() => document.querySelector('dialog.slv .slv-t').focus()); await page.keyboard.press('ArrowUp'); const u3 = await win();
+    check(u3.dock === '' && pressed(u3) === '' && near(u3.y, w.y - 24), T('moved with the keys while it fills the lower half: it leaves the half'), [u3.y, w.y]);
+    // Close in a half: closed, focus on the citation; the half is remembered, also after the page is loaded again
+    w = await clickDock('right');
+    const cx = mid(w.close); await page.mouse.click(cx[0], cx[1]); await settle(250);
+    const cl = await page.evaluate(() => ({open: document.querySelector('dialog.slv').open, back: document.activeElement && document.activeElement.hasAttribute('data-w1'), lock: document.documentElement.style.overflow}));
+    check(!cl.open && cl.back && cl.lock === '', T('Close in the right half closes the window; focus is back on the citation'), cl);
+    v = await openAt('[data-w1]');
+    check(v.win && v.dock === 'right' && pressed(v) === 'right' && near(v.x, hx), T('opened again: the right half, as it was left'), [v.dock, v.x]);
+
+    /* ---- 6. remembered on this device, checked against the window in use ---- */
+    const again = async () => {
+      await boot(); await refUp();
+      return openAt('[data-w1]');
+    };
+    v = await again();
+    check(v.win && v.dock === 'right' && pressed(v) === 'right' && rectIs(v, hx, v.navB, v.vw - hx, v.vh - v.navB), T('the page loaded again: the viewer opens in the right half'), {dock: v.dock, rect: [v.x, v.y, v.w, v.h]});
+    await setWin({dock: '', x: 111, y: 222, w: 333, h: 444});
+    v = await again();
+    check(v.win && v.dock === '' && rectIs(v, 111, 222, 333, 444), T('a stored rectangle (333x444 at 111,222) is used after the page is loaded again'), [v.x, v.y, v.w, v.h]);
+    const key = await page.evaluate(() => { const ks = []; for (let i = 0; i < localStorage.length; i++) if (/slidewin/.test(localStorage.key(i))) ks.push(localStorage.key(i)); return {ks, ns: NS}; });
+    check(key.ks.length === 1 && key.ks[0] === key.ns + ':slidewin:v1', T(`it is kept in one localStorage key, ${key.ns}:slidewin:v1`), key.ks);
+    await setWin({dock: 'full'}); v = await openAt('[data-w1]');
+    check(v.modal && !v.win && pressed(v) === 'full', T('stored Full: it opens as the covering box'), [v.modal, pressed(v)]);
+    await setWin({dock: '', x: 99999, y: 99999, w: 99999, h: 10}); v = await openAt('[data-w1]');
+    check(v.win && v.x >= 0 && near(v.w, v.vw) && near(v.h, 320) && v.y >= 0 && v.y + v.h <= v.vh + 0.5 && v.title.b <= v.vh + 0.5 && v.close.r <= v.vw + 0.5 && v.close.b <= v.vh + 0.5 && v.side <= 1, T('a stored rectangle far outside the browser window is brought inside it, all of it, Close in reach'), [v.x, v.y, v.w, v.h]);
+    await setWin({dock: '', x: -500, y: -500, w: 50, h: 50}); v = await openAt('[data-w1]');
+    check(v.win && rectIs(v, 0, 0, 280, 320), T('a stored rectangle too small and off the upper left: 280x320 at the corner'), [v.x, v.y, v.w, v.h]);
+    // a place kept from a larger browser window (the tablet turned since): the whole window is in sight when it opens;
+    // moved by hand it may reach past the lower edge, and a resize by the keys then changes only what was asked
+    await setWin({dock: '', x: size.w - 400, y: size.h + 300, w: 380, h: 420}); v = await openAt('[data-w1]');
+    check(v.win && rectIs(v, size.w - 400, size.h - 420, 380, 420) && v.rs.b <= v.vh + 0.5 && v.next.b <= v.vh + 0.5, T('a stored place below the browser window: the viewer opens with all of the window in sight'), [v.x, v.y, v.w, v.h]);
+    g = [v.title.l + 30, v.title.t + v.title.h / 2]; await mdrag(g[0], g[1], g[0], g[1] + 250); w = await win();
+    check(w.y + w.h > w.vh + 100 && w.title.b <= w.vh + 0.5 && w.close.b <= w.vh + 0.5, T('dragged down by hand it reaches past the lower edge, the title bar and Close in sight'), [w.x, w.y, w.w, w.h]);
+    await page.evaluate(() => document.querySelector('dialog.slv .slv-rs').focus()); await page.keyboard.press('ArrowLeft'); await settle(80);
+    let w2 = await win();
+    check(near(w2.w, w.w - 24) && near(w2.h, w.h) && near(w2.y, w.y), T('there, the left arrow on the resize corner makes it 24 px narrower and no lower or higher'), {before: [w.w, w.h], after: [w2.w, w2.h]});
+    // a drag cut short by Escape leaves nothing behind: the slide of the next window can be pressed
+    g = [w2.title.l + 30, w2.title.t + w2.title.h / 2]; await page.mouse.move(g[0], g[1]); await page.mouse.down(); await page.mouse.move(g[0] - 40, g[1] - 40); await page.mouse.move(g[0] - 80, g[1] - 80);
+    const midDrag = await page.evaluate(() => document.querySelector('dialog.slv').classList.contains('slv-drag'));
+    await page.keyboard.press('Escape'); await page.mouse.up(); await settle(150);
+    v = await openAt('[data-w1]');
+    const after = await page.evaluate(() => { const d = document.querySelector('dialog.slv'); return {drag: d.classList.contains('slv-drag'), pe: getComputedStyle(d.querySelector('.slv-pic')).pointerEvents}; });
+    check(midDrag && v.open && v.win && !after.drag && after.pe !== 'none', T('Escape during a drag closes the window; opened again, it is not left in the dragging state'), {midDrag, after});
+    for (const bad of ['{not json', '"text"', '[1,2]', JSON.stringify({dock: 'left', x: 'a', y: null, w: -4, h: 1e999}), JSON.stringify({dock: 'right', x: NaN})]) {
+      await setWin(bad); v = await openAt('[data-w1]');
+      const dflt = bad.indexOf('"right"') > 0 ? v.dock === 'right' : v.dock === '' && near(v.x + v.w, v.vw - 12) && v.y >= v.navB;
+      check(!!v && v.open && v.win && dflt && v.x >= 0 && v.y >= 0 && v.x + v.w <= v.vw + 0.5 && v.y + v.h <= v.vh + 0.5, T(`stored ${bad.slice(0, 30)}: the viewer opens ${bad.indexOf('"right"') > 0 ? 'in the right half' : 'at its first place'}`), v && [v.dock, v.x, v.y, v.w, v.h]);
+    }
+    // without storage
+    await setWin(null);
+    await page.evaluate(() => { const g = Storage.prototype.getItem, s = Storage.prototype.setItem; window.__st = [g, s];
+      Storage.prototype.getItem = function(k){ if (/slidewin/.test(k)) throw new Error('no storage'); return g.apply(this, arguments); };
+      Storage.prototype.setItem = function(k){ if (/slidewin/.test(k)) throw new Error('no storage'); return s.apply(this, arguments); }; });
+    v = await openAt('[data-w1]');
+    g = [v.title.l + 30, v.title.t + v.title.h / 2]; await mdrag(g[0], g[1], g[0] - 90, g[1] + 40); w = await win();
+    const wr = await clickDock('right'); const wb = await clickDock('right');
+    check(v.win && rectIs(w, v.x - 90, v.y + 40, v.w, v.h) && wr.dock === 'right' && wb.dock === '' && w.stored === 'threw', T('with storage refused the viewer opens, moves and fills a half as before'), {v: [v.x, v.y], w: [w.x, w.y], stored: w.stored});
+    await page.evaluate(() => { Storage.prototype.getItem = window.__st[0]; Storage.prototype.setItem = window.__st[1]; });
+
+    /* ---- 7. the browser window resized or turned ---- */
+    await setWin({dock: '', x: size.w - 440, y: size.h - 420, w: 420, h: 400}); v = await openAt('[data-w1]');
+    await page.setViewportSize({width: 800, height: 620}); await settle(400); w = await win();
+    check(w.win && near(w.x + w.w, w.vw) && w.x >= 0 && w.y + w.h <= w.vh + 0.5 && w.title.b <= w.vh + 0.5 && w.close.b <= w.vh + 0.5 && w.close.r <= w.vw + 0.5 && w.side <= 1, T('the browser window made 800x620: the window is brought inside it'), [w.x, w.y, w.w, w.h]);
+    await clickDock('right'); await page.setViewportSize({width: 1000, height: 700}); await settle(400); w = await win();
+    check(w.dock === 'right' && rectIs(w, 500, w.navB, 500, 700 - w.navB), T('in the right half, the browser window made 1000x700: it fills the new right half'), [w.x, w.y, w.w, w.h]);
+    await page.setViewportSize({width: 600, height: 800}); await settle(400); w = await win();
+    check(w.open && !w.win && w.modal && w.loaded && !w.docks.some(k => k.shown) && !w.rsShown && w.lock === 'hidden' && w.x >= 0 && w.x + w.w <= w.vw + 0.5 && w.side <= 1, T('the browser window made 600 px wide: the viewer becomes the covering box, without the window buttons'), {win: w.win, modal: w.modal, docks: w.docks.map(k => k.shown)});
+    await page.keyboard.press('Escape'); await settle(250);
+    check(await page.evaluate(() => !document.querySelector('dialog.slv').open && document.documentElement.style.overflow === ''), T('Escape closes it and the page is released'));
+    await page.setViewportSize({width: size.w, height: size.h}); await settle(300);
+
+    /* ---- over an enlarged figure the viewer is the covering box (a window would lie under the figure) ---- */
+    await setWin({dock: ''});
+    await page.evaluate(() => show('diagrams')); await settle(800);
+    const fig = await page.evaluate(() => { const f = [...document.querySelectorAll('#v-diagrams figure')].find(f => f.querySelector('[data-go="big"]') && f.querySelector('figcaption .slk')); if (!f) return false; f.querySelector('[data-go="big"]').click(); f.querySelector('figcaption .slk').focus(); return f.classList.contains('big'); });
+    if (check(fig, T('a figure with a citation in its caption is enlarged'))) {
+      await page.keyboard.press('Enter'); await settle(200); v = await win();
+      check(v.open && v.modal && !v.win && !v.docks.some(k => k.shown), T('its citation opens the covering box, on top of the figure'), {modal: v.modal, win: v.win});
+      await page.keyboard.press('Escape'); await settle(200); await page.keyboard.press('Escape'); await settle(200);
+    }
+    check(!errors.length, T('no page error'), errors.slice(0, 4).join(' | '));
+    await ctx.close();
+  }
+
+  /* ---- phones: as before (a stored window state changes nothing there) ---- */
+  for (const size of [{name: '390x844 touch', w: 390, h: 844}, {name: '844x390 touch', w: 844, h: 390}, {name: '759x900', w: 759, h: 900}]) {
+    console.log(`\n=== No window, ${size.name} ===`);
+    const T = s => `${size.name}: ${s}`;
+    const ctx = await browser.newContext({viewport: {width: size.w, height: size.h}, deviceScaleFactor: 1, hasTouch: true, isMobile: size.w !== 759, serviceWorkers: 'block'});
+    await ctx.addInitScript(() => { window.prompt = () => 'TestUser'; });
+    const page = await ctx.newPage(), errors = [];
+    page.on('pageerror', e => errors.push(e.message));
+    await page.goto(site.url + 'preview/index.html');
+    await page.waitForFunction(() => document.querySelectorAll('#nav button').length > 3, null, {timeout: 20000});
+    await page.waitForTimeout(500);
+    await page.evaluate(() => { localStorage.setItem(NS + ':slidewin:v1', JSON.stringify({dock: 'right', x: 10, y: 10, w: 300, h: 330})); show('ref'); }); await page.waitForTimeout(800);
+    const p = await page.evaluate(() => { document.querySelectorAll('details').forEach(d => { if (d.querySelector('.slk')) d.open = true; }); const l = [...document.querySelectorAll('#v-ref td .slk')].find(b => b.getClientRects().length && b.getBoundingClientRect().top + scrollY > innerHeight * 2); l.setAttribute('data-w1', '1'); l.scrollIntoView({block: 'center', inline: 'center'}); const b = l.getClientRects()[0]; return {x: b.left + b.width / 2, y: b.top + b.height / 2, sy: scrollY}; });
+    await page.touchscreen.tap(p.x, p.y); await page.waitForTimeout(600);
+    const v = await page.evaluate(winFn);
+    const kids = await page.evaluate(() => [...document.querySelectorAll('dialog.slv .slv-head > *')].filter(e => e.getClientRects().length).map(e => e.className).join());
+    check(!!v && v.open && v.modal && !v.win && v.ariaModal === null && v.dock === '' && !v.docks.some(k => k.shown) && !v.rsShown && v.titleTab === null && kids === 'slv-t,slv-x' && v.lock === 'hidden' && v.active === 'close',
+      T('the viewer is the modal box as before: no window, no half buttons, no resize corner, the page locked, focus on Close'), v && {modal: v.modal, win: v.win, kids, lock: v.lock, docks: v.docks.map(k => k.shown)});
+    check(v.x >= -0.5 && v.x + v.w <= v.vw + 0.5 && v.y >= -0.5 && v.y + v.h <= v.vh + 0.5 && v.side <= 1 && v.stored === JSON.stringify({dock: 'right', x: 10, y: 10, w: 300, h: 330}), T('it fits the window, there is no sideways scroll, and the stored window state is left as it was'), {rect: [v.x, v.y, v.w, v.h], side: v.side, stored: v.stored});
+    await page.mouse.move(3, size.h / 2); await page.mouse.wheel(0, 300); await page.waitForTimeout(200);
+    await page.keyboard.press('Escape'); await page.waitForTimeout(250);
+    const c = await page.evaluate(() => ({open: document.querySelector('dialog.slv').open, sy: scrollY, back: document.activeElement.hasAttribute('data-w1'), lock: document.documentElement.style.overflow}));
+    check(!c.open && c.sy === p.sy && c.back && c.lock === '', T('the page behind did not scroll; Escape closes, focus is back on the citation'), c);
+    check(!errors.length, T('no page error'), errors.slice(0, 4).join(' | '));
+    await ctx.close();
+  }
+}
+
 (async () => {
   const {browser} = await L.launch(NAME);
   const site = await serveSite(ROOT);
   try {
     let dzDeep = 0;
-    for (const size of SIZES) {
+    if (process.env.SLIDEVIEW_ONLY !== 'window') for (const size of SIZES) {
       console.log(`\n=== ${size.name} ===`);
       const T = s => `${size.name}: ${s}`;
       const ctx = await browser.newContext({viewport: {width: size.w, height: size.h}, deviceScaleFactor: 1, hasTouch: !!size.touch, isMobile: !!size.touch, serviceWorkers: 'block'});
@@ -232,6 +617,10 @@ const pairPointFn = ([id, k]) => {
       const settle = ms => page.waitForTimeout(ms || 300);
       await settle(500);
       if (!check(await page.evaluate(() => typeof SLIDE_UI === 'object' && !!SLIDE_UI && typeof SLIDE_UI.open === 'function' && BUILD.preview === true), T('slide_ui.js is running in the preview build'))) { await ctx.close(); continue; }
+      // a window this large shows the viewer as a window over the page (windowCases); here it is set to Full,
+      // the covering box, which is checked as on the smaller windows
+      const roomy = size.w >= 760 && size.h >= 480;
+      if (roomy) await page.evaluate(() => localStorage.setItem(NS + ':slidewin:v1', JSON.stringify({dock: 'full'})));
       const viewer = () => page.evaluate(viewerFn);
       const loaded = async () => { for (let t = 0; t < 80; t++) { const v = await viewer(); if (v && v.open && (v.shown || v.err)) return v; await settle(75); } return viewer(); };
       const openV = async (deck, n, to, printed) => { await page.evaluate(([deck, n, to, printed]) => { SLIDE_UI.close(); return new Promise(r => setTimeout(() => r(SLIDE_UI.open(deck, n, to || 0, !!printed, null)), 30)); }, [deck, n, to, printed]); return loaded(); };
@@ -690,14 +1079,17 @@ const pairPointFn = ([id, k]) => {
           T('without <dialog> the viewer opens, locks the page, and Close releases it at the same place with focus on the citation'), fb);
       }
 
+      if (roomy) check((await page.evaluate(() => localStorage.getItem(NS + ':slidewin:v1'))) === JSON.stringify({dock: 'full'}), T('the stored window state is still Full after all of this'));
       check(!errors.length, T('no page error'), errors.slice(0, 4).join(' | '));
       await ctx.close();
     }
 
+    await windowCases(browser, site);
+
     /* ---- a window whose scrollbar takes room: the page is locked with the scrollbar left in place (D-F7) ---- */
     console.log('\n=== A scrollbar that takes room (1376x1032) ===');
     const wide = await L.browserType(NAME).launch({ignoreDefaultArgs: ['--hide-scrollbars']});
-    try {
+    if (process.env.SLIDEVIEW_ONLY !== 'window') try {
       const ctx = await wide.newContext({viewport: {width: 1376, height: 1032}, deviceScaleFactor: 1, serviceWorkers: 'block'});
       await ctx.addInitScript(() => { window.prompt = () => 'TestUser'; });
       const page = await ctx.newPage(), errors = [];
@@ -705,7 +1097,7 @@ const pairPointFn = ([id, k]) => {
       site.delay = 0; site.fail = false;
       await page.goto(site.url + 'preview/index.html');
       await page.waitForFunction(() => document.querySelectorAll('#nav button').length > 3, null, {timeout: 20000});
-      await page.evaluate(() => show('ref')); await page.waitForTimeout(900);
+      await page.evaluate(() => { localStorage.setItem(NS + ':slidewin:v1', JSON.stringify({dock: 'full'})); show('ref'); }); await page.waitForTimeout(900);   // Full: the covering box
       await page.evaluate(() => document.querySelectorAll('details').forEach(d => { if (d.querySelector('.slk')) d.open = true; })); await page.waitForTimeout(200);
       const at = await page.evaluate(() => { const l = [...document.querySelectorAll('#v-ref td .slk')].find(b => b.getClientRects().length && b.getBoundingClientRect().top + scrollY > innerHeight * 2);
         l.setAttribute('data-svt', '1'); l.scrollIntoView({block: 'center', inline: 'center'}); const b = l.getClientRects()[0]; return {x: b.left + b.width / 2, y: b.top + b.height / 2}; });
@@ -738,7 +1130,7 @@ const pairPointFn = ([id, k]) => {
       }
       check(!errors.length, 'no page error', errors.slice(0, 4).join(' | '));
       await ctx.close();
-    } finally { await wide.close(); }
+    } finally { await wide.close(); } else await wide.close();
 
     /* ---- the printed numbers, against the clean deck where it is on this machine ---- */
     console.log('\n=== Printed slide numbers (Dr. Sikazwe\'s clean deck) ===');

@@ -18,6 +18,10 @@ Every update adds its bullets here in the same commit that makes the change.
 - Nuclear receptors: a section and diagram each for corticosteroids, retinoids and vitamin D.
 - Each drawn diagram now opens with a sentence on what it shows and what it is for.
 
+## 2026-11-15 (slide window)
+- On an iPad or computer a slide opens in a window you can drag, resize, or dock right or bottom.
+- The question stays readable and tappable behind the slide; the window remembers its place.
+
 ## 2026-11-14 (guides)
 - Guides, Exam 2: every objective page now uses tables, numbered blocks and a step ladder for algorithms.
 - Number tiles say what each number measures; her polls open as self-tests.
