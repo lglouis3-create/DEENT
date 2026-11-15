@@ -55,6 +55,8 @@ const LIKELY_MARKS_UI = (() => {
 .lkcount{flex:1 1 12rem;margin:0;color:var(--text-dim);font-size:13px}
 #v-gloss .lkbar{margin:6px 0}
 #v-gloss .glf .lkonly{font-size:14px}
+.lkgrp{display:flex;align-items:center;margin:0 0 2px}
+.lkgrp .lklab{color:var(--text-dim);font-size:13px}
 .lkpick{color:var(--accent);margin-right:4px}
 #v-dz .dzpicker button[aria-pressed=true] .lkpick{color:#fff}
 .lkgsr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
@@ -165,7 +167,14 @@ const LIKELY_MARKS_UI = (() => {
         const bm = MAP.guideBlock[sec.id + '#' + (i + 1)];
         if (bm) {
           const h5 = g.querySelector(':scope > h5');
-          if (h5) addMark(h5, bm); else addMark(g, bm);
+          if (h5) addMark(h5, bm);
+          else if (!g.querySelector(':scope > .lkgrp')) {
+            // a block with no heading: the star gets a short label of its own so it does not stand alone
+            const grp = document.createElement('div'); grp.className = 'lkgrp';
+            g.insertBefore(grp, g.firstChild);
+            addMark(grp, bm, {place: w => grp.insertAdjacentElement('afterend', w)});
+            const lab = document.createElement('span'); lab.className = 'lklab'; lab.textContent = 'Likely on the exam'; grp.appendChild(lab);
+          }
           g.dataset.lkstar = '1'; anyBlock = true; blkStar++;
         } else delete g.dataset.lkstar;
       });

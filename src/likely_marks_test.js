@@ -41,10 +41,10 @@ const noScroll = p => p.evaluate(() => document.documentElement.scrollWidth <= i
     await go('guide');
     check(/Stars mark what the professor stressed in lecture; tap a star for the reason\./.test(await text('#v-guide .lkleg')), `${tag}: Guides has the one-line legend`);
     check(await count('guide', 'section.gobj > h3 > .lkstar') === N('guide'), `${tag}: Guides: ${N('guide')} section stars`, await count('guide', 'section.gobj > h3 > .lkstar'));
-    check(await count('guide', '.gpt > h5 > .lkstar, .gpt > .lkstar') === N('guideBlock'), `${tag}: Guides: ${N('guideBlock')} block stars`, await count('guide', '.gpt > h5 > .lkstar, .gpt > .lkstar'));
+    check(await count('guide', '.gpt > h5 > .lkstar, .gpt > .lkgrp > .lkstar') === N('guideBlock'), `${tag}: Guides: ${N('guideBlock')} block stars`, await count('guide', '.gpt > h5 > .lkstar, .gpt > .lkgrp > .lkstar'));
     // each block star sits on the h5 the analysis recorded
     const blk = await p.evaluate(() => { const out = {}; document.querySelectorAll('#v-guide section.gobj').forEach(s => s.querySelectorAll('.gpt').forEach((g, i) => {
-      if (g.querySelector(':scope > h5 > .lkstar, :scope > .lkstar')) { const h = g.querySelector(':scope > h5'); out[s.id + '#' + (i + 1)] = h ? h.textContent.replace(/★/g, '').replace(/\s+/g, ' ').trim() : ''; } })); return out; });
+      if (g.querySelector(':scope > h5 > .lkstar, :scope > .lkgrp > .lkstar')) { const h = g.querySelector(':scope > h5'); out[s.id + '#' + (i + 1)] = h ? h.textContent.replace(/★/g, '').replace(/\s+/g, ' ').trim() : ''; } })); return out; });
     const strip = s => String(s || '').toLowerCase().replace(/[^a-z0-9]+/g, '');
     const wrong = Object.entries(SRC.tabs.guideBlock).filter(([id, e]) => strip(blk[id]) !== strip(e.h5)).map(([id]) => id);
     check(wrong.length === 0, `${tag}: each block star is on the block the analysis starred (h5 title matches)`, wrong.join(', '));
