@@ -53,7 +53,7 @@ const DZ = {
          [
           "Most common onset at {{3–6 months}} of age",
           "Majority by age {{one}}; up to {{90%}} by age 5",
-          "{{70–90%}} may have resolution by adulthood (slide; her spoken reading differs, T@19746)",
+          "{{70–90%}} may have resolution by adulthood (slide; she gave the same figure in class, T@19746)",
           "Earlier onset = longer persistence"
          ]
         ],
@@ -2510,7 +2510,7 @@ const DZ = {
     ],
     [
      "≥ 10%",
-     "severe psoriasis (BSA); she first said 20%, then corrected it",
+     "severe psoriasis (BSA); she said 10%, noting older guidelines said 20%",
      "Patel Scaly slide 31; 11/11 lecture"
     ],
     [
