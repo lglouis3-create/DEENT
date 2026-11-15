@@ -453,13 +453,13 @@ const onDisk = (deck, n, printed) => { const r = P.resolve(deck, n, printed); re
         await page.evaluate(() => show('guide')); await settle(1300);
         const bars = await page.evaluate(() => [...document.querySelectorAll('#v-guide .gbar')].map(g => { const sec = g.closest('section.gobj'), i = g.querySelector('i');
           return {id: sec ? sec.id : '', list: i ? i.textContent : '', inList: i ? [...i.querySelectorAll('.slk')].map(__sig) : [], got: [...g.querySelectorAll('.slk')].map(__sig)}; }));
-        check(bars.length === 69 && Object.keys(model.gbar).length === 69 && bars.every(x => same(x.got, model.gbar[x.id])), `guide objective bars (${bars.length}): each holds the links the model expects (${sum(model.gbar)} in all)`, diff(bars, model.gbar));
+        check(bars.length === 169 && Object.keys(model.gbar).length === 169 && bars.every(x => same(x.got, model.gbar[x.id])), `guide objective bars (${bars.length}): each holds the links the model expects (${sum(model.gbar)} in all)`, diff(bars, model.gbar));
         // the slide list on the right of a bar, read here on its own: "PCol 8–76; Sun 3; PP 17, 28, 37" (a part that is not a deck's list has no link)
-        const ABB = {PP: 'pp', PCol: 'pc', Sun: 'sun', DPAW: 'mc', DT: 'p5', AT: 'p6', SD: 'p7', OE: 'p8o', SE: 'p8s', WC: 'p8w', WCC: 'p8c'};
-        const listOf = t => t.split(';').reduce((out, part) => { const m = /^(PP|PCol|Sun|DPAW|DT|AT|SD|OE|SE|WCC|WC)(?: slides?)? (\d[\d, –-]*)$/.exec(part.trim());
+        const ABB = {PP: 'pp', PCol: 'pc', Sun: 'sun', DPAW: 'mc', DT: 'p5', AT: 'p6', SD: 'p7', OE: 'p8o', SE: 'p8s', WC: 'p8w', WCC: 'p8c', 'Patel Dermatitis': 'p5', 'Patel Acne': 'p6', 'Patel Scaly': 'p7', 'Patel Outdoor': 'p8o', 'Patel Sun Exposure': 'p8s', 'Patel Wound': 'p8w', 'Patel Warts': 'p8c'};
+        const listOf = t => t.split(';').reduce((out, part) => { const m = /^(PP|PCol|Sun|DPAW|DT|AT|SD|OE|SE|WCC|WC|Patel Dermatitis|Patel Acne|Patel Scaly|Patel Outdoor|Patel Sun Exposure|Patel Wound|Patel Warts)(?: slides?)? (\d[\d, –-]*)$/.exec(part.trim());
           return m ? out.concat(m[2].split(',').map(x => { const r = /^(\d+)(?:[–-](\d+))?$/.exec(x.trim()); return ABB[m[1]] + ' ' + r[1] + (r[2] ? '-' + r[2] : ''); })) : out; }, []);
         const barBad = bars.filter(x => !x.inList.length || !same(x.inList, listOf(x.list)));
-        check(!barBad.length, 'every one of the 69 bars has its whole slide list linked, each number to the deck its abbreviation names', barBad.slice(0, 4).map(x => `${x.id}: "${x.list}" has [${x.inList.join(', ')}]`).join(' | '));
+        check(!barBad.length, 'every one of the 169 bars has its whole slide list linked, each number to the deck its abbreviation names', barBad.slice(0, 4).map(x => `${x.id}: "${x.list}" has [${x.inList.join(', ')}]`).join(' | '));
 
         /* Diseases: the steps of every card (the cards with more than one professor among them), the three other views, the drug panels */
         await page.evaluate(() => show('dz')); await settle(500);

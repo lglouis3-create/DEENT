@@ -94,7 +94,7 @@ QUESTIONS.push(
   {t:'3', correct:false, why:'3 FTU is the scalp (slide 11).'},
   {t:'2', correct:false, why:'2 FTU is one foot including toes (slide 11).'},
   {t:'1.25', correct:false, why:'1.25 is the grams for face and neck (2.5 FTU × 0.5 g), not the number of fingertip units (slide 13).'}],
- teach:'Adult chart (slide 11): scalp 3; face and neck 2.5; one hand front and back 1; one arm with the hand 4; elbows 1; both soles 1.5; one foot 2; one leg with the foot 8; buttocks 4; knees 1; trunk both sides 14 (7 each side). "You will need to know this chart" (T@7616).',
+ teach:'Adult chart (slide 11): scalp 3; face and neck 2.5; one hand front and back 1; one arm with the hand 4; elbows 1 for each elbow; both soles 1.5; one foot 2; one leg with the foot 8; buttocks 4; knees 1 for each knee; trunk both sides 14 (7 each side). "You will need to know this chart" (T@7616).',
  cite:P5+' slide 11; T@8004'},
 
 {id:'P5-003', skill:'dose', prof:'Patel', tier:'new', topic:'p5-qty', sub:'ftu', concept:'p5-ftu-arm-leg',
@@ -129,7 +129,7 @@ QUESTIONS.push(
   {l:'One foot including toes', r:'2', why:'Slide 11.'},
   {l:'One leg including foot', r:'8', why:'Slide 11.'},
   {l:'Trunk, both sides', r:'14', why:'Slide 11: 7 FTU each side.'}],
- teach:'The 1-FTU areas on slide 11: one hand (front and back, with fingers), elbows, knees. The 4-FTU areas: one arm with the hand, the buttocks.',
+ teach:'The 1-FTU areas on slide 11: one hand (front and back, with fingers), one elbow, one knee. The 4-FTU areas: one arm with the hand, the buttocks.',
  cite:P5+' slide 11'},
 
 {id:'P5-006', skill:'dose', prof:'Patel', tier:'new', topic:'p5-qty', sub:'calc', concept:'p5-tube-round-up',

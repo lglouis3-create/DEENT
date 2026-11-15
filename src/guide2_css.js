@@ -12,6 +12,7 @@
 .gobj .g2-block{margin:26px 0 0}
 .gobj .g2-block>h5{margin:0 0 12px;padding:0 0 6px;font-size:16.5px;line-height:1.3;color:var(--text);border-bottom:2px solid var(--accent,#2F5FA8)}
 .gobj .g2-num{color:var(--accent,#2F5FA8);margin-right:2px}
+.gobj .g2-star{color:var(--accent,#2F5FA8);font-size:.85em;font-weight:400;margin-left:4px;white-space:nowrap}
 .gobj .g2-src{font-size:12px;font-weight:400;font-style:normal;color:var(--text-dim,#5A6878);letter-spacing:0;text-transform:none}
 .gobj h5 .g2-src,.gobj .g2-sub .g2-src,.gobj caption .g2-src{margin-left:5px}
 .gobj .g2-sub{margin:16px 0 6px;font-size:14px;font-weight:700;line-height:1.35;color:var(--text);max-width:none}

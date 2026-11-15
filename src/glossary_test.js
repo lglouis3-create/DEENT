@@ -134,14 +134,14 @@ const check = (ok, label, detail) => { n++; if (!ok) fail++; console.log((ok ? '
     check(await p.evaluate(() => document.querySelector('#v-quiz details.gw').open && document.querySelector('#v-quiz .gwdef').hidden), `${tag}: opened, the row shows the terms and no definition yet`);
     await p.click(`#v-quiz .gwt[data-gwt="${MAIN}"]`); await p.waitForTimeout(80);
     let d = await p.evaluate(id => { const x = document.querySelector('#v-quiz .gwdef'), bt = document.querySelector('#v-quiz .gwt[data-gwt="' + id + '"]'), mk = x.querySelector('[data-gwmark]');
-      return {hidden: x.hidden, text: x.textContent, exp: bt.getAttribute('aria-expanded'), ctl: bt.getAttribute('aria-controls') === x.id, pressed: mk && mk.getAttribute('aria-pressed'), label: mk && mk.textContent,
+      return {hidden: x.hidden, text: x.textContent, exp: bt.getAttribute('aria-expanded'), ctl: bt.getAttribute('aria-controls') === x.id, pressed: mk && mk.getAttribute('aria-pressed'), label: mk && mk.querySelector('.gsr').textContent, more: mk && getComputedStyle(mk.querySelector('.gstl')).display,
         focus: document.activeElement === bt, others: [...document.querySelectorAll('#v-quiz .gwt[aria-expanded="true"]')].length}; }, MAIN);
     const comDef = await p.evaluate(id => { const t = GLOSSARY_UI.terms().find(x => x.id === id); return {def: t.def, cite: t.cite, term: t.term}; }, MAIN);
-    check(!d.hidden && d.text.includes(comDef.def) && d.text.includes(comDef.cite), `${tag}: a term shows its definition and citation under the row`, d.text);
+    check(!d.hidden && d.text.includes(comDef.def) && /Slide \d+/.test(d.text), `${tag}: a term shows its definition and its slide chips under the row`, d.text);
     check(d.exp === 'true' && d.ctl && d.others === 1 && d.focus, `${tag}: aria-expanded on the term, focus stays on it`, d);
-    check(d.pressed === 'false' && /didn.t know this/.test(d.label), `${tag}: the toggle reads "I didn't know this", not pressed`, d);
+    check(d.pressed === 'false' && d.label === 'I didn’t know this: ' + comDef.term && d.more === 'none', `${tag}: the toggle is named "I didn't know this: <term>", not pressed, "My words" not shown`, d);
     await p.waitForTimeout(500);
-    check(await p.evaluate(() => !!document.querySelector('#v-quiz .gwdef .gcite .slk')), `${tag}: the citation becomes a slide link`);
+    check(await p.evaluate(() => !!document.querySelector('#v-quiz .gwdef .gsrc .gslc') && !document.querySelector('#v-quiz .gwdef .gsrc .slk')), `${tag}: the citation is shown as slide chips`);
     await p.evaluate(() => document.querySelector('#v-quiz details.gw').scrollIntoView({block: 'center'}));
     await shot('2-row-open-definition');
     check((await small('#v-quiz details.gw button, #v-quiz details.gw > summary')).length === 0, `${tag}: the row's buttons are at least 44 px high`, await small('#v-quiz details.gw button, #v-quiz details.gw > summary'));
@@ -153,8 +153,8 @@ const check = (ok, label, detail) => { n++; if (!ok) fail++; console.log((ok ? '
     let s = await stored();
     check(JSON.stringify(await keys()) === JSON.stringify([await p.evaluate(() => NS + ':words:v1:' + PROFILE)]), `${tag}: a mark writes the one key <NS>:words:v1:<profile>`, await keys());
     check(JSON.stringify(s) === JSON.stringify({v: 1, w: {[MAIN]: {n: 1, q: ['P6-008']}}}), `${tag}: the record is {v:1, w:{<id>:{n:1, q:[P6-008]}}}`, s);
-    d = await p.evaluate(id => { const mk = document.querySelector('#v-quiz [data-gwmark]'); return {pressed: mk.getAttribute('aria-pressed'), label: mk.textContent, focus: document.activeElement === mk, mine: document.querySelector('#v-quiz .gwt[data-gwt="' + id + '"]').classList.contains('mine'), cnt: document.querySelector('#v-quiz .gcnt').textContent}; }, MAIN);
-    check(d.pressed === 'true' && d.label === 'Marked: in My words' && d.focus && d.mine && d.cnt === 'Missed once', `${tag}: the toggle reads "Marked: in My words", pressed; the term carries a mark`, d);
+    d = await p.evaluate(id => { const mk = document.querySelector('#v-quiz [data-gwmark]'); return {pressed: mk.getAttribute('aria-pressed'), label: mk.querySelector('.gsr').textContent, more: getComputedStyle(mk.querySelector('.gstl')).display, focus: document.activeElement === mk, mine: document.querySelector('#v-quiz .gwt[data-gwt="' + id + '"]').classList.contains('mine'), cnt: document.querySelector('#v-quiz .gcnt').textContent}; }, MAIN);
+    check(d.pressed === 'true' && /^I didn’t know this: /.test(d.label) && d.more !== 'none' && d.focus && d.mine && d.cnt === 'Missed once', `${tag}: the toggle is pressed and shows "My words"; the term carries a mark`, d);
     // the same question drawn again keeps the row open at the term; marking twice on the same question still 1
     await p.evaluate(() => renderQuiz()); await p.waitForTimeout(60);
     check(await p.evaluate(id => { const x = document.querySelector('#v-quiz details.gw'); return x.open && x.dataset.gwopen === id && document.querySelector('#v-quiz [data-gwmark]').getAttribute('aria-pressed') === 'true'; }, MAIN), `${tag}: the same answered question drawn again keeps the open row`);
@@ -196,7 +196,7 @@ const check = (ok, label, detail) => { n++; if (!ok) fail++; console.log((ok ? '
     const hashHead = x => { const m = /[\p{L}\p{N}]/u.exec(x.normalize('NFD')); return !(m && /^[A-Z]$/.test(m[0].toUpperCase())); };
     let tab = await p.evaluate(() => ({n: document.querySelectorAll('#v-gloss .gle').length, heads: [...document.querySelectorAll('#v-gloss .gll')].map(x => x.textContent).join(''), count: document.getElementById('glcount').textContent,
       myn: document.getElementById('glmyn').textContent, pressed: [...document.querySelectorAll('#v-gloss [data-glf][aria-pressed="true"]')].map(x => x.dataset.glf).join(),
-      names: [...document.querySelectorAll('#v-gloss .gle .gdt b')].map(x => x.textContent), marked: [...document.querySelectorAll('#v-gloss [data-glmark][aria-pressed="true"]')].length}));
+      names: [...document.querySelectorAll('#v-gloss .gle .glt')].map(x => x.textContent), marked: [...document.querySelectorAll('#v-gloss [data-glmark][aria-pressed="true"]')].length}));
     check(tab.n === nTerms && tab.count.replace(/,/g, '') === nTerms + ' terms' && tab.pressed === 'all', `${tag}: All lists every term`, tab);
     check(tab.heads === [...tab.heads].sort().join('') && tab.heads.length > 5 && JSON.stringify(tab.names) === JSON.stringify(tab.names.slice().sort((a, c) => (hashHead(a) === hashHead(c) ? a.localeCompare(c, 'en', {sensitivity: 'base', numeric: true}) : hashHead(a) ? -1 : 1))), `${tag}: the list is A to Z under letter headings`, tab.heads);
     check(tab.myn === '2' && tab.marked === 2, `${tag}: My words (2); the two marked terms show pressed in the list`, tab);
@@ -219,14 +219,62 @@ const check = (ok, label, detail) => { n++; if (!ok) fail++; console.log((ok ? '
     check((await list()).sort().join() === exams.e1 && exams.e1.length > 0, `${tag}: Exam 1 lists the Exam 1 terms`);
     await p.click('#v-gloss [data-glf="e2"]'); await p.waitForTimeout(80);
     check((await list()).sort().join() === exams.e2 && exams.e2.length > 0, `${tag}: Exam 2 lists the Exam 2 terms`);
-    const gen = await p.evaluate(() => { const t = GLOSSARY_UI.terms().find(x => x.src === 'general' && (Array.isArray(x.exam) ? x.exam.includes(2) : x.exam === 2)); if (!t) return null; const e = document.querySelector(`#v-gloss .gle[data-gle="${t.id}"] .gcite`); return e ? e.textContent : ''; });
-    check(gen === null || /^General definition/.test(gen), `${tag}: a general definition says "General definition"`, gen);
+    const gen = await p.evaluate(() => { const t = GLOSSARY_UI.terms().find(x => x.src === 'general' && /general:/.test(x.cite) && (Array.isArray(x.exam) ? x.exam.includes(2) : x.exam === 2)); if (!t) return null; const e = document.querySelector(`#v-gloss .gle[data-gle="${t.id}"] .gsgen`); return e ? {text: e.textContent, href: (e.querySelector('a') || {}).href || '', target: (e.querySelector('a') || {}).target || '', rel: (e.querySelector('a') || {}).rel || ''} : ''; });
+    check(gen === null || (gen && /^General definition · \S/.test(gen.text) && /^https?:/.test(gen.href) && gen.target === '_blank' && /noopener/.test(gen.rel)), `${tag}: a general definition says "General definition · <source>" and links the source`, gen);
     // mark and unmark in the list
     await p.click('#v-gloss [data-glf="all"]'); await p.waitForTimeout(80);
     await p.click(`#v-gloss [data-glmark="${URU}"]`); await p.waitForTimeout(50);
     check((await stored()).w[URU].n === 1 && await p.evaluate(id => document.getElementById('glmyn').textContent === '3' && document.querySelector(`[data-glmark="${id}"]`).getAttribute('aria-pressed') === 'true', URU), `${tag}: "I didn't know this" in the list adds the term with 1`);
     await p.click(`#v-gloss [data-glmark="${URU}"]`); await p.waitForTimeout(50);
     check(!(await stored()).w[URU] && await p.evaluate(() => document.getElementById('glmyn').textContent === '2'), `${tag}: pressing it again takes the term out`);
+
+
+    /* ---- the 2026-11-15 layout: quiet also-forms, one labelled paragraph per professor, slide chips ---- */
+    await p.fill('#glq', ''); await p.waitForFunction(() => !GLOSSARY_UI.state.pending, null, {timeout: 20000}); await p.waitForTimeout(100);
+    const GEN1 = await T('1st generation retinoids'), GEN3 = await T('3rd generation retinoids'), ACET = await T('acetylenic retinoid');
+    const al = await p.evaluate(id => { const t = GLOSSARY_UI.terms().find(x => x.id === id), li = document.querySelector(`#v-gloss .gle[data-gle="${id}"]`), e = li.querySelector('.galso'), m = li.querySelector('.gmore');
+      return {forms: t.also.length, shown: e.textContent, more: m ? m.textContent : '', name: m ? m.getAttribute('aria-label') : '', h: m ? Math.round(m.getBoundingClientRect().height) : 0, w: m ? Math.round(m.getBoundingClientRect().width) : 0, tag: li.querySelector('h3.glt') && li.querySelector('h3.glt').tagName, li: li.tagName}; }, GEN1);
+    const al0 = await p.evaluate(id => GLOSSARY_UI.terms().find(x => x.id === id).also, GEN1);
+    check(al.forms > 3 && al.shown === 'Also: ' + al0.slice(0, 3).join(', ') + ' +' + (al0.length - 3) + ' more' && al.more === '+' + (al0.length - 3) + ' more', `${tag}: the list shows the first three also-forms and "+N more"`, al);
+    check(al.h >= 44 && al.w >= 44 && /Show \d+ more forms of /.test(al.name), `${tag}: "+N more" is a 44 px control with a name`, al);
+    check(al.tag === 'H3' && al.li === 'LI', `${tag}: each term is an h3 inside a list item`, al);
+    check(await p.evaluate(() => [...document.querySelectorAll('#v-gloss .gle .galso')].every(e => !e.querySelector('.gmore') || e.textContent.replace(/^Also: /, '').replace(/ \+\d+ more$/, '').split(', ').length === 3)), `${tag}: no entry shows more than three also-forms until it is opened`);
+    await p.click(`#v-gloss .gle[data-gle="${GEN1}"] .gmore`); await p.waitForTimeout(50);
+    check(await p.evaluate(([id, f]) => { const e = document.querySelector(`#v-gloss .gle[data-gle="${id}"] .galso`); return e.textContent === 'Also: ' + f.join(', ') && !e.querySelector('.gmore'); }, [GEN1, al0]), `${tag}: "+N more" opens the rest of the forms`);
+    await p.fill('#glq', 'polyaromatic'); await p.waitForTimeout(150);
+    check(await p.evaluate(id => { const e = document.querySelector(`#v-gloss .gle[data-gle="${id}"] .galso`); return !!e && /polyaromatic/.test(e.textContent) && !e.querySelector('.gmore'); }, GEN3), `${tag}: a search that matches a form behind "+N more" shows it`);
+    await p.fill('#glq', ''); await p.waitForFunction(() => !GLOSSARY_UI.state.pending, null, {timeout: 20000});
+    const data = await p.evaluate(() => { const T = GLOSSARY_UI.terms(), pr = T.filter(t => Array.isArray(t.parts)), dr = T.filter(t => /^Dr\. (Smith|Sikazwe|Patel): /.test(t.def));
+      return {n: pr.length, dr: dr.length, drNoParts: dr.filter(t => !Array.isArray(t.parts) || t.parts.length < 2).map(t => t.id), bad: pr.filter(t => t.parts.length < 2 || t.parts.map(x => 'Dr. ' + x.prof + ': ' + x.def).join(' ') !== t.def || !t.parts.every(x => x.def && x.cite && ['Smith', 'Sikazwe', 'Patel'].includes(x.prof)) ||
+        new Set(t.parts.flatMap(x => x.cite.split('; '))).size !== new Set(t.cite.split('; ')).size).map(t => t.id), single: T.filter(t => !t.parts && /^Dr\. (Smith|Sikazwe|Patel): /.test(t.def)).length}; });
+    check(data.n >= 50 && data.bad.length === 0 && data.drNoParts.length === 0, `${tag}: every entry whose text names professors has parts: the joined text and the joined cites are unchanged`, data);
+    const mg = await p.evaluate(id => { const li = document.querySelector(`#v-gloss .gle[data-gle="${id}"]`), ps = [...li.querySelectorAll('.gpart')];
+      return {n: ps.length, labels: ps.map(x => x.querySelector('.gpl').textContent), w: ps.map(x => +getComputedStyle(x.querySelector('.gpl')).fontWeight), decks: ps.map(x => [...x.querySelectorAll('.gslc')].map(c => c.dataset.gsl)), defs: ps.map(x => x.querySelector('.gdd').textContent.slice(0, 20))}; }, ACET);
+    check(mg.n === 2 && mg.labels.join() === 'Smith,Sikazwe' && mg.w.every(x => x >= 600) && mg.decks[0].join() === 'pc' && mg.decks[1].join() === 'mc', `${tag}: a term two professors teach has one labelled paragraph each, with its own slides`, mg);
+    const open1 = async (deck) => {
+      const sel = `#v-gloss .gslc[data-gsl="${deck}"]`, c = p.locator(sel).first();
+      await c.scrollIntoViewIfNeeded(); const want = await c.evaluate(e => ({n: +e.dataset.n, name: e.getAttribute('aria-label'), chip: e.textContent})); await c.click(); await p.waitForTimeout(200);
+      const got = await p.evaluate(([d, n]) => { const dl = document.querySelector('dialog.slv'), r = SLIDE_UI.parser.resolve(d, n), pad = r.page < 10 ? '0' + r.page : '' + r.page;
+        return {open: !!dl && dl.open, deck: (document.querySelector('#slv-deck') || {}).textContent, label: SLIDES.decks[d].label, src: (dl.querySelector('.slv-img') || {}).src || '', file: 'deck/' + r.deck + '/' + pad + '.', pos: (dl.querySelector('.slv-pos') || {}).textContent}; }, [deck, want.n]);
+      await p.evaluate(() => SLIDE_UI.close());
+      return Object.assign(got, want);
+    };
+    for (const deck of ['pp', 'pc', 'mc', 'p5', 'p8w']) {
+      const r = await open1(deck);
+      check(r.chip === 'Slide ' + r.n && r.open && r.deck === r.label && r.src.indexOf(r.file) !== -1 && new RegExp('\\b' + r.n + '\\b').test(r.pos || ''), `${tag}: a ${deck} slide chip opens the viewer on that deck and page`, r);
+    }
+    const chipText = await p.evaluate(() => [...document.querySelectorAll('#v-gloss .gslc')].every(c => /^Slides? \d+(–\d+)?$/.test(c.textContent) && /^Open .*slides? \d+/.test(c.getAttribute('aria-label'))));
+    check(chipText, `${tag}: every chip reads "Slide N" (or "Slides N–M") and is named "Open <deck>, slide N"`);
+    check((await small('#v-gloss .gslc, #v-gloss .gstar, #v-gloss .gmore')).length === 0, `${tag}: chips, toggles and "+N more" are at least 44 px high`);
+    const tg = await p.evaluate(id => { const b = document.querySelector(`#v-gloss [data-glmark="${id}"]`), t = GLOSSARY_UI.terms().find(x => x.id === id); return {name: b.querySelector('.gsr').textContent, want: 'I didn’t know this: ' + t.term, pressed: b.getAttribute('aria-pressed'), w: Math.round(b.getBoundingClientRect().width), h: Math.round(b.getBoundingClientRect().height), lab: getComputedStyle(b.querySelector('.gstl')).display}; }, URU);
+    check(tg.name === tg.want && tg.pressed === 'false' && tg.lab === 'none' && tg.w >= 44 && tg.h >= 44, `${tag}: the list toggle is named "I didn't know this: <term>", 44 px, "My words" hidden while off`, tg);
+    await p.click(`#v-gloss [data-glmark="${URU}"]`); await p.waitForTimeout(50);
+    check(await p.evaluate(id => { const b = document.querySelector(`#v-gloss [data-glmark="${id}"]`); return b.getAttribute('aria-pressed') === 'true' && getComputedStyle(b.querySelector('.gstl')).display !== 'none' && b.textContent.indexOf('My words') !== -1; }, URU), `${tag}: the list toggle shows "My words" while on`);
+    await p.click(`#v-gloss [data-glmark="${URU}"]`); await p.waitForTimeout(50);
+    const kt = await p.evaluate(() => { const t = document.querySelector('#v-gloss .gtag'); return t ? getComputedStyle(t).display : null; });
+    check((kt !== 'none') === (w >= 900), `${tag}: the kind tag shows on a wide screen only (${kt})`);
+    check(await noScroll(), `${tag}: no sideways scroll in the full list`);
+    await shot('6-list');
 
     /* ---- My words ---- */
     await p.click('#v-gloss [data-glf="mine"]'); await p.waitForTimeout(100);
@@ -317,6 +365,8 @@ const check = (ok, label, detail) => { n++; if (!ok) fail++; console.log((ok ? '
       const picked = await p.evaluate(() => { const o = document.querySelector('#v-exam button.opt, #v-exam .opt'); if (o) o.click(); return !!o; });
       await p.waitForTimeout(100);
       check(await p.evaluate(() => !!(EX && EX.running) && document.querySelectorAll('details.gw').length === 0), `${tag}: an exam paper in progress shows no row (an option picked: ${picked})`);
+      const exg = await p.evaluate(() => { show('gloss'); const r = {chips: document.querySelectorAll('#v-gloss .gslc').length, src: document.querySelectorAll('#v-gloss .gsrc').length, running: !!(EX && EX.running)}; show('exam'); return r; });
+      check(exg.running && exg.chips === 0 && exg.src > 0, `${tag}: while a paper is in progress the glossary shows no slide chips`, exg);
       await p.evaluate(() => finishExam(true)); await p.waitForTimeout(400);
       const ex = await p.evaluate(() => ({done: !!(EX && EX.done), cards: document.querySelectorAll('#v-exam > .qcard').length, rows: document.querySelectorAll('#v-exam > .qcard details.gw').length, open: document.querySelectorAll('#v-exam details.gw[open]').length,
         want: EX.qs.filter(q => GLOSSARY_UI.termsFor(q).length).length, two: [...document.querySelectorAll('#v-exam > .qcard')].filter(c => c.querySelectorAll('details.gw').length > 1).length}));

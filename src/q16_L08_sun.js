@@ -477,7 +477,7 @@ QUESTIONS.push(
  options:[
   {t:'Sunscreen on tournament days when the UV index is high', correct:false, why:'Slide 37: every day while on a photosensitizing drug.'},
   {t:'Sunscreen and protective clothing every day', correct:true, why:'Slide 37: "If taking a photosensitizing drug – use sunscreen and protective clothing every day and reapply as instructed". Doxycycline "is the most common photosensitizing antibiotic" (T@49890 11/12); slide 17: reduce sun exposure as much as possible.'},
-  {t:'Sunscreen can be skipped on cloudy days', correct:false, why:'Slide 12: a cloudy or overcast day is not protective.'},
+  {t:'Sunscreen is not needed on cloudy days', correct:false, why:'Slide 12: a cloudy or overcast day is not protective.'},
   {t:'An SPF 10 product reapplied every 40–80 minutes', correct:false, why:'Below SPF 15 (slide 15); slide 19 gives broad-spectrum SPF 30+ with a photosensitizing agent.'}],
  teach:'"What are they currently on?" (T@95722 11/12): check the medication list for a photosensitizer.',
  cite:P8SQ+' slides 10, 12, 15, 17, 19, 37; T@49890, T@95722 11/12'},

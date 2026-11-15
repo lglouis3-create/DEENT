@@ -29,12 +29,12 @@ const FTU_UI = (() => {
     {id: 'face',   name: 'Face and neck', s: 'the face and neck', ftu: 2.5},
     {id: 'hand',   name: 'One hand (front and back) including fingers', short: 'One hand', s: 'one hand, front and back, including the fingers', ftu: 1},
     {id: 'arm',    name: 'One arm including entire hand', short: 'One arm incl. hand', s: 'one arm including the entire hand', ftu: 4},
-    {id: 'elbows', name: 'Elbows', s: 'the elbows (the chart row "Elbows")', ftu: 1},
+    {id: 'elbows', name: 'One elbow', s: 'one elbow (the chart row "Elbows": 1 FTU for each elbow)', ftu: 1},
     {id: 'soles',  name: 'Both soles', s: 'both soles', ftu: 1.5},
     {id: 'foot',   name: 'One foot including toes', short: 'One foot', s: 'one foot including the toes', ftu: 2},
     {id: 'leg',    name: 'One leg including foot', short: 'One leg incl. foot', s: 'one leg including the foot', ftu: 8},
     {id: 'butt',   name: 'Buttocks', s: 'the buttocks', ftu: 4},
-    {id: 'knees',  name: 'Knees', s: 'the knees (the chart row "Knees")', ftu: 1},
+    {id: 'knees',  name: 'One knee', s: 'one knee (the chart row "Knees": 1 FTU for each knee)', ftu: 1},
     {id: 'trunk',  name: 'Trunk both sides', s: 'both sides of the trunk', ftu: 14, note: '7 FTU each side'},
     // slide 13's wording; on the slide 11 chart it is half of "Trunk both sides 14 (7 FTU each side)"
     {id: 'trunk1', name: 'One side of the trunk (chest and abdomen, or thoracic and lumbar back)', short: 'One side of the trunk',
@@ -202,7 +202,7 @@ const FTU_UI = (() => {
     ['b', 'foot leg', 'M62 260 L84 260 L86 274 L62 274Z M96 260 L118 260 L118 274 L94 274Z', 'One foot'],
     ['s', 'soles', 'M342 200 a14 24 0 1 0 28 0 a14 24 0 1 0 -28 0z M376 200 a14 24 0 1 0 28 0 a14 24 0 1 0 -28 0z', 'Both soles']
   ];
-  const ONE = ['hand', 'arm', 'foot', 'leg'];            // chart rows that name one limb
+  const ONE = ['hand', 'arm', 'foot', 'leg', 'elbows', 'knees'];            // chart rows that name one limb
 
   function diagram(hi){
     const sb = st.stats.reg;
@@ -269,7 +269,7 @@ const FTU_UI = (() => {
       <p class="ftuintro">Dr. Patel, 11/12: the fingertip-unit calculations have come back three times, so practice them (adult chart only). One adult FTU = 0.5 g; amounts are rounded up to a tube of 15, 30, 45, 60, 80 or 100 g (Patel Dermatitis slides 10–13). Slide 12 gives the pediatric amounts for reference only; Dr. Patel, 11/06: the amount for a child is smaller, and the pediatric numbers are not to be memorized (T).</p>
       <div class="ftumodes" role="group" aria-label="What to practice">${modes.map(m => `<button type="button" data-mode="${m[0]}" aria-pressed="${st.mode === m[0]}">${esc(m[1])}</button>`).join('')}</div>
       <div class="ftugrid">
-        <div class="ftufig">${diagram(q ? q.hi : [])}<p class="ftunote">The area in question has a thick outline; for a row that names one limb, one limb is outlined. Fill and edge: green with a plain edge is solid, amber with a dashed edge shaky, red with a dotted edge missing, grey not tried. After you answer, tap any area to see its chart number.</p><div id="ftutip" class="ftutip" aria-live="polite"></div></div>
+        <div class="ftufig">${diagram(q ? q.hi : [])}<p class="ftunote">The area in question has a thick outline; for a row that names one limb, one elbow or one knee, one is outlined. Fill and edge: green with a plain edge is solid, amber with a dashed edge shaky, red with a dotted edge missing, grey not tried. After you answer, tap any area to see its chart number.</p><div id="ftutip" class="ftutip" aria-live="polite"></div></div>
         ${form}
       </div>
       ${statusTable()}

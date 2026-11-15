@@ -52,7 +52,7 @@
          [
           "Most common onset at {{3–6 months}} of age",
           "Majority by age {{one}}; up to {{90%}} by age 5",
-          "{{70–90%}} may resolve by adulthood",
+          "{{70–90%}} may have resolution by adulthood (slide; she gave the same figure in class, T@19746)",
           "Earlier onset = longer persistence"
          ]
         ],
@@ -61,7 +61,7 @@
          [
           "Personal or family history of atopic disorders",
           "[[atopic-triad|Atopic triad]]: {{allergic rhinitis, asthma, atopic dermatitis}}",
-          "[[atopic-march|Atopic march]]: the triad plus {{food allergies}}",
+          "[[atopic-march|Atopic march]]: the typical progression of allergic diseases that often begin early in life: dry skin, eczema, {{food allergies}}, rhinitis, asthma",
           "Loss-of-function mutation in the {{FLG}} gene",
           "Urban environment; smaller family size; higher parental education"
          ]
@@ -69,9 +69,9 @@
         [
          "Triggers",
          [
-          "Irritants: tobacco smoke, air pollution, cosmetics, fragrances, soaps, detergents, dyes",
+          "Irritants: airborne (tobacco smoke, air pollution); cosmetics, fragrances, astringents; irritating soaps, scrubs, detergents; dyes, preservatives",
           "Allergens: foods (eggs, milk, peanut, soy, wheat, nuts, tomato); wool and polyester; dust mites, pollens, pet dander, molds",
-          "Environment: extreme temperatures",
+          "Environment: extreme temperatures, low humidity",
           "Personal: stress; excessive skin washing and sanitizing"
          ]
         ]
@@ -126,7 +126,7 @@
        "rows": [
         [
          "First trigger",
-         "Unknown; scratching, irritation or neuropeptides may release proinflammatory cytokines from keratinocytes"
+         "First trigger: Unknown. Neuropeptides, irritation or scratching may release proinflammatory cytokines from keratinocytes. Allergens embedded in the skin or eaten as food may cause T-cell mediated reactions that are IgE-independent (the first T-cell activation is not IgE-mediated)."
         ],
         [
          "Three features",
@@ -144,7 +144,7 @@
          "Barrier gene",
          [
           "{{FLG}} → profilaggrin → [[flg|filaggrins]] → skin barrier",
-          "A variant lets allergens penetrate the skin",
+          "A variant gives reduced function or no profilaggrin, so allergens penetrate the skin",
           "About {{40%}} of people lacking FLG do not develop it"
          ]
         ],
@@ -211,7 +211,7 @@
        "rows": [
         [
          "Dr. Patel's sequence",
-         "Disrupted barrier (FLG mutation or dryness) → allergens and irritants enter → inflammatory T-cell response"
+         "Disrupted barrier (FLG mutation, or dryness from cleansing or the environment) → allergens and irritants enter → inflammatory T-cell responses, initiated by keratinocytes (e.g. TSLP) and dendritic cells"
         ],
         [
          "So treatment aims to",
@@ -311,7 +311,7 @@
         [
          "Severe",
          "SCORAD {{> 50}}",
-         "Widespread dry skin, {{incessant}} itching, thickening, bleeding, oozing; sleep lost nightly"
+         "Widespread dry skin, {{incessant}} itching, redness, thickening, bleeding, oozing; severe limitation of activities; sleep lost nightly"
         ]
        ],
        "p": "pa"
@@ -336,7 +336,7 @@
         ],
         [
          "Chronic",
-         "{{Lichenified}} papules or plaques",
+         "{{Lichenified}} papules or plaques, fine scale, hypo- or hyperpigmentation",
          "[[lichenification|Lichenification]]: she calls it the silvery, scaly plaque"
         ]
        ],
@@ -428,7 +428,7 @@
         ],
         [
          "Mild or non-lesional, flare",
-         "Low-to-medium potency twice daily, 3–7 days"
+         "Low-to-medium potency twice daily, 3–7 days beyond clearance"
         ],
         [
          "Moderate, maintenance",
@@ -436,7 +436,7 @@
         ],
         [
          "Moderate or severe, flare",
-         "Medium-to-high potency twice daily, 3–7 days"
+         "Medium-to-high potency twice daily, 3–7 days beyond clearance"
         ],
         [
          "Needs more strength from the same drug",
@@ -536,7 +536,7 @@
       {
        "k": "line",
        "label": "Then",
-       "title": "Injectable [[biologic|biologic]] (moderate to severe, after topicals)",
+       "title": "Injectable [[biologic|biologic]] (moderate to severe, not controlled with or unable to use topicals)",
        "drugs": [
         "dupilumab",
         "tralokinumab"
@@ -545,7 +545,7 @@
         "Specialty drugs; prior authorization",
         "Dupilumab adult: {{600 mg}} once (2 × 300 mg), then {{300 mg every other week}}",
         "May be combined with a topical corticosteroid or calcineurin inhibitor",
-        "Tralokinumab: the alternative to dupilumab"
+        "Tralokinumab: the alternative to dupilumab, for moderate-to-severe disease in adults not controlled with or unable to use topical therapy (slide also prints over 12 y/o)"
        ],
        "warn": "★ Dupilumab: no live vaccines (\"I may include it on a case\").",
        "pick": [
@@ -623,7 +623,7 @@
         ],
         [
          "Flare not resolved in 7 days",
-         "Consider nonadherence, infection, misdiagnosis, contact allergy to the medication; refer"
+         "If not resolved in 7 days, consider nonadherence, infection, misdiagnosis, contact allergy to the medication, or referral"
         ]
        ],
        "p": "pa"
@@ -728,7 +728,7 @@
           "One leg with the foot {{8}}",
           "One foot {{2}}; both soles 1.5",
           "Trunk {{7}} each side (14 both)",
-          "Buttocks 4; elbows 1; knees 1"
+          "Buttocks 4; 1 for each elbow; 1 for each knee"
          ]
         ],
         [
@@ -1071,8 +1071,8 @@
         "★ Lesions for more than {{7 days}}, or no improvement in 7 days despite care",
         "{{Secondary infection}} (viral, bacterial, fungal)",
         "Rash {{outside the diaper region}}",
-        "Possible {{urinary tract infection}}",
-        "Broken skin: ulceration, blistering, peeling",
+        "Diaper dermatitis possibly associated with a {{urinary tract infection}} (painful urination) or disfigurement of the penis or vulva",
+        "Broken skin: ulceration, blistering, peeling, due to disease progression or patient action (e.g., scratching)",
         "Oozing, blood, [[vesicle|vesicles]] or pus; [[bullae|bullae]]; onion-skin appearance",
         "Chronic or frequently recurring lesions",
         "Constitutional symptoms: {{fever}}, diarrhea, nausea, vomiting, swollen inguinal lymph nodes, rapid pulse, rash elsewhere",
@@ -1165,7 +1165,7 @@
         "Topical {{anesthetics}} (benzocaine, lidocaine)",
         "{{Hydrocortisone}} or any topical corticosteroid"
        ],
-       "warn": "★ \"The biggest difference\" from atopic dermatitis: no topical corticosteroid. The diaper area is a large share of a baby's body surface, so topical products can cause systemic effects.",
+       "warn": "★ \"The biggest difference\" from atopic dermatitis: no topical corticosteroid. The diaper area is a significant portion of a baby's total body surface area, and many topical products can lead to systemic side effects.",
        "p": "pa"
       },
       {
@@ -1250,7 +1250,7 @@
       "Keep every 4 hours and apply the protectant twice daily"
      ],
      "a": 0,
-     "w": "D: change every 2 hours and as soon as soiled. B: protectant liberally at each change (slide 62; her poll answer \"ABCDE, every 2 hours\").",
+     "w": "D: change every 2 hours and as soon as soiled (slide 62; her poll answer 'ABCDE, every 2 hours', T@82496); slide 57 gives infants every 3 to 4 hours. B: protectant liberally at each change (slide 62; her poll answer \"ABCDE, every 2 hours\").",
      "x": {
       "Keep every 4 hours and add miconazole cream": "Antifungals are not self-care products, and 4 hours is longer than her 2-hour answer.",
       "Change every 2 hours and stop the barrier product": "Barrier is applied liberally at each change.",
@@ -1331,7 +1331,7 @@
        "rows": [
         [
          "What it is",
-         "A common, self-limiting disease of the {{pilosebaceous units}}; face, upper back, chest"
+         "A common, self-limiting disease of the {{pilosebaceous units}}; typically on the face, upper back and chest"
         ],
         [
          "How common",
@@ -1343,7 +1343,7 @@
         ],
         [
          "Sex",
-         "More severe in boys in puberty; in women in adulthood"
+         "Often more severe in boys in puberty; women often have more severe forms in adulthood"
         ],
         [
          "Family",
@@ -1637,7 +1637,7 @@
         [
          "★ Her order",
          [
-          "{{One}} agent, then two, then three",
+          "{{One}} topical agent (benzoyl peroxide preferred), then a retinoid, then two products, then three: never straight to three",
           "{{Topical before oral}}",
           "Smallest number of agents at the lowest doses",
           "\"Know exactly what has the patient tried and what is left to try\""
@@ -1816,7 +1816,7 @@
         ],
         [
          "Not usually recommended",
-         "Ointments and bars"
+         "Ointments and bars (any skin type)"
         ]
        ],
        "p": "pa"
@@ -2614,7 +2614,7 @@
    "name": "Benzoyl peroxide",
    "brand": "",
    "sm": {
-    "text": "Antimicrobial against P. acnes, with peeling and comedolytic effects; benzoic acid is the probable active form. An oxidant: bleaches hair and fabric; a potent contact sensitizer.",
+    "text": "Postulated mechanism: antimicrobial against P. acnes, with peeling and comedolytic effects; benzoic acid is the probable active form. An oxidant: bleaches hair and fabric; a potent contact sensitizer.",
     "src": "PCol slides 36–37"
    },
    "sk": {
@@ -2800,7 +2800,7 @@
    "name": "Salicylic acid",
    "brand": "",
    "sm": {
-    "text": "Solubilizes the cell surface proteins that keep the stratum corneum intact (keratolytic).",
+    "text": "May solubilize the cell surface proteins that keep the stratum corneum intact (keratolytic).",
     "src": "PCol slide 39"
    },
    "sk": {
@@ -2885,7 +2885,7 @@
    "name": "Azelaic acid 15–20%",
    "brand": "Azelex, Finacea",
    "sk": {
-    "text": "A C9 dicarboxylic acid; antibacterial and anti-inflammatory.",
+    "text": "A C9 dicarboxylic acid; an anti-inflammatory agent.",
     "src": "DPAW page 54"
    },
    "pa": [

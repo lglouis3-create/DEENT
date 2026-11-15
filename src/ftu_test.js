@@ -168,15 +168,15 @@ const BLANK = JSON.stringify({v: 1, skill: {}, reg: {}});
     check(side[0].every(x => x === side[0][0]) && side[1].every(x => x === side[1][0]) && side[0][0] !== side[1][0], `${tag}: the outlined arm is on one side of each figure, mirrored in the back view`, JSON.stringify(side));
     const col = await p.evaluate(() => { const c = sel => [...document.querySelectorAll('.ftusvg ' + sel)].map(x => x.getAttribute('class').replace(/ftush | on/g, '')).join(',');
       return [c('.ftush[data-r="arm"][data-k="0"]'), c('.ftush[data-r="arm"][data-k="1"]'), c('.ftush[data-r="scalp"]'), c('.ftush[data-r="knees leg"]')]; });
-    check(col[0] === 'r,n other' && col[1] === 'n other,r' && col[2] === 'g,g' && col[3] === 'g,g,g,g', `${tag}: the missed arm is red on one limb only, the other limb neutral; the scalp and both knees are green`, JSON.stringify(col));
+    check(col[0] === 'r,n other' && col[1] === 'n other,r' && col[2] === 'g,g' && col[3] === 'g,n other,n other,g', `${tag}: the missed arm is red on one limb only, the other limb neutral; the scalp is green and one knee is green with the other neutral`, JSON.stringify(col));
     const dash = await p.evaluate(() => [getComputedStyle(document.querySelector('.ftush.r')).strokeDasharray, getComputedStyle(document.querySelector('.ftush.g')).strokeDasharray, getComputedStyle(document.querySelector('.ftush.n')).strokeDasharray]);
     check(dash[0] !== 'none' && dash[1] === 'none' && dash[2] === 'none', `${tag}: a missing area also has a dotted edge (a cue that is not colour)`, JSON.stringify(dash));
     const outl = {};
     for (const id of ['leg', 'hand', 'foot', 'elbows', 'knees', 'soles', 'trunk1', 'trunk', 'face']) { await ask('region', id); outl[id] = await on(); }
     check(JSON.stringify(outl.leg) === JSON.stringify(['foot0,knees0,leg0', 'foot1,knees1,leg1', '']) && JSON.stringify(outl.hand) === JSON.stringify(['hand0', 'hand1', '']) && JSON.stringify(outl.foot) === JSON.stringify(['foot0', 'foot1', '']),
       `${tag}: "One leg", "One hand" and "One foot" outline one limb`, JSON.stringify([outl.leg, outl.hand, outl.foot]));
-    check(JSON.stringify(outl.elbows) === JSON.stringify(['elbows0,elbows1', 'elbows0,elbows1', '']) && JSON.stringify(outl.knees) === JSON.stringify(['knees0,knees1', 'knees0,knees1', '']) && JSON.stringify(outl.soles) === JSON.stringify(['', '', 'soles0,soles1']),
-      `${tag}: Elbows, Knees and Both soles outline both`, JSON.stringify([outl.elbows, outl.knees, outl.soles]));
+    check(JSON.stringify(outl.elbows) === JSON.stringify(['elbows0', 'elbows1', '']) && JSON.stringify(outl.knees) === JSON.stringify(['knees0', 'knees1', '']) && JSON.stringify(outl.soles) === JSON.stringify(['', '', 'soles0,soles1']),
+      `${tag}: "One elbow" and "One knee" (1 FTU each, Louis 2026-11-15) outline one; Both soles outline both`, JSON.stringify([outl.elbows, outl.knees, outl.soles]));
     check(JSON.stringify(outl.trunk1) === JSON.stringify(['trunk10', '', '']) && JSON.stringify(outl.trunk) === JSON.stringify(['trunk10', 'trunk10', '']) && JSON.stringify(outl.face) === JSON.stringify(['face0,face1', 'face0', '']),
       `${tag}: one side of the trunk outlines the front only, the trunk both sides, face and neck both shapes`, JSON.stringify([outl.trunk1, outl.trunk, outl.face]));
 
@@ -198,7 +198,7 @@ const BLANK = JSON.stringify({v: 1, skill: {}, reg: {}});
     const kn = await p.evaluate(() => { const k = document.querySelector('.ftusvg .ftush[data-r="knees leg"][data-k="0"]'); k.scrollIntoView({block: 'center'}); const r = k.getBoundingClientRect();
       const x = r.left - 3, y = r.top + r.height / 2, e = document.elementFromPoint(x, y); return {x, y, cls: e && e.getAttribute('class'), under: document.elementsFromPoint(x, y).map(z => z.dataset && z.dataset.r).filter(Boolean)}; });
     await p.mouse.click(kn.x, kn.y);
-    check(kn.cls === 'ftuhit' && kn.under.includes('leg') && await p.evaluate(() => /^Knees: 1 FTU = 0\.5 g/.test(document.getElementById('ftutip').textContent)), `${tag}: a tap 3 px outside a knee, on the leg, still reads Knees`, JSON.stringify(kn) + ' ' + await p.evaluate(() => document.getElementById('ftutip').textContent));
+    check(kn.cls === 'ftuhit' && kn.under.includes('leg') && await p.evaluate(() => /^One knee: 1 FTU = 0\.5 g/.test(document.getElementById('ftutip').textContent)), `${tag}: a tap 3 px outside a knee, on the leg, still reads One knee`, JSON.stringify(kn) + ' ' + await p.evaluate(() => document.getElementById('ftutip').textContent));
     await ask('region', 'scalp'); await p.focus('.ftusvg [data-r="arm"][data-k="0"]'); await p.keyboard.press('Enter');
     check(await p.evaluate(() => /^Answer the question first/.test(document.getElementById('ftutip').textContent)), `${tag}: before the answer a shape does not give its number away`);
 

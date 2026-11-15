@@ -298,7 +298,7 @@ function fakeVoice() {
         const r = await page.evaluate(v => {
           const pane = document.getElementById('v-' + v), norm = s => String(s || '').replace(/\s+/g, ' ').trim();
           const rows = [...pane.querySelectorAll('.refnav a')].map(a => { const t = pane.querySelector(a.getAttribute('href'));
-            return {label: norm(a.textContent), head: t ? norm(t.textContent) : null}; });
+            return {label: norm(a.textContent), head: t ? norm(t.textContent).replace(/^\u2605\s*/, '') : null}; });
           return {n: rows.length, entity: rows.filter(x => /&#?[a-z0-9]+;/i.test(x.label)).map(x => x.label),
             differ: rows.filter(x => x.label !== x.head).map(x => `"${x.label}" for "${x.head}"`),
             dot: rows.filter(x => x.label.includes('·')).length, headDot: rows.filter(x => x.head && x.head.includes('·')).length};

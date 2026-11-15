@@ -410,7 +410,7 @@ const EXAMFOLD_UI = (function examFoldUi(){
     const pa = placeAnchor;
     placeAnchor = function(pane){
       let shut = [];
-      try { shut = pane && pane.querySelectorAll ? [...pane.querySelectorAll(':scope > details.rfold:not([open]) > .rfbody')] : []; shut.forEach(b => { b.style.display = 'none'; }); } catch (e) { shut = []; }
+      try { shut = pane && pane.querySelectorAll ? [...pane.querySelectorAll(':scope > details.rfold:not([open]) > .rfbody, details.gdetails:not([open]) > section')] : []; shut.forEach(b => { b.style.display = 'none'; }); } catch (e) { shut = []; }
       try { return pa.apply(this, arguments); }
       finally { shut.forEach(b => { try { b.style.display = ''; } catch (e) {} }); }
     };

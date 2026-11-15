@@ -18,6 +18,17 @@ Every update adds its bullets here in the same commit that makes the change.
 - Nuclear receptors: a section and diagram each for corticosteroids, retinoids and vitamin D.
 - Each drawn diagram now opens with a sentence on what it shows and what it is for.
 
+## 2026-11-15 (exam paper, stars, questions)
+- FTU tab: the chart's elbow and knee rows are 1 FTU for one elbow or one knee, and the diagram outlines one.
+- Guides, Diseases and Reference: shortened rows regained qualifiers, such as the cause of dryness in atopic dermatitis.
+- Guides, Exam 2: slide-by-slide pages for Dr. Patel's decks showing what her lecture adds to each slide.
+- Stars mark what the professors stressed in the reading tabs, with the reason; "Starred only" shows just those.
+- Guides, Exam 1: a walkthrough of the slides Dr. Sikazwe assigned, slide by slide, with what he said to know.
+- Exam sim, Exam 2: the paper draws 5 Dr. Smith, 5 Dr. Sikazwe and 40 Dr. Patel questions.
+- 40 more "Likely on the exam" stars for Lecture 8 (Outdoor, Sun, Wound care, Warts).
+- 9 new Lecture 8 questions: inpatient Lyme, scorpion stings, sunscreen counseling, Fitzpatrick type, scar care.
+- Glossary: one paragraph per professor, slide chips that open the slide, and less clutter.
+
 ## 2026-11-15 (glossary)
 - Fingertip-unit blanks now ask for the tube size to dispense, rounded up (60 g, 100 g, 60 g).
 - Glossary tab: 763 course terms with search, Exam 1 / Exam 2 filters and where each is on the slides.
