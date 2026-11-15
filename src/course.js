@@ -286,6 +286,8 @@ const COURSE = {
           'q19_exam1_style.js',
           // the two ABCDE mnemonics asked as cases (Louis, 2026-11-14)
           'q20_abcde.js',
+          // Lecture 8 points she stressed that had no question: Lyme neurologic/cardiac, scorpion stings, sunscreen expiration, snow and sand, stopping a reacting product, Fitzpatrick type, silicone for scars
+          'q21_L08_gaps.js',
           // the step-throughs of moa_figs.js in the explanations of the matching Smith questions
           'moa_links.js',
           // Drug list tab (temporary course-level presentation, to be replaced by the kit's
