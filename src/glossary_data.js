@@ -1180,7 +1180,7 @@ const GLOSSARY_TERMS = [
 "also": [
 "antimitotic action"
 ],
-"def": "Inhibiting cell division. Coal tar cross-links with DNA to inhibit cell division, which the slide calls antimitotic action.",
+"def": "Inhibiting cell division. Coal tar cross-links with DNA to inhibit cell division, which the slide calls antimitotic action; its mechanism is not fully known.",
 "cite": "PCol slide 53",
 "src": "slide",
 "deck": "pc",
@@ -3366,7 +3366,7 @@ const GLOSSARY_TERMS = [
 "id": "smB-desquamation",
 "term": "desquamation",
 "also": [],
-"def": "Dr. Smith: Peeling. Salicylic acid causes desquamation of keratotic debris by solubilizing cell surface proteins that keep the stratum corneum intact. Dr. Smith: Skin coming off in scales.",
+"def": "Dr. Smith: Peeling. Salicylic acid causes desquamation of keratotic debris; it may act by solubilizing cell surface proteins that keep the stratum corneum intact. Dr. Smith: Skin coming off in scales.",
 "cite": "PCol slide 39; Pathophys slide 25; general: DermNet, Terminology in dermatology, https://dermnetnz.org/topics/terminology",
 "src": "slide",
 "deck": "pc",
@@ -3376,7 +3376,7 @@ const GLOSSARY_TERMS = [
 "parts": [
 {
 "prof": "Smith",
-"def": "Peeling. Salicylic acid causes desquamation of keratotic debris by solubilizing cell surface proteins that keep the stratum corneum intact.",
+"def": "Peeling. Salicylic acid causes desquamation of keratotic debris; it may act by solubilizing cell surface proteins that keep the stratum corneum intact.",
 "cite": "PCol slide 39",
 "src": "slide"
 },
@@ -6899,7 +6899,7 @@ const GLOSSARY_TERMS = [
 "triazines",
 "methoxybenzene"
 ],
-"def": "UVB/UVA sunscreen class of bemotrizinol (BEMT): photostable and lipophilic, but with no skin absorption because of its high molecular weight, 627.81 (slide 66).",
+"def": "UVB/UVA sunscreen class of bemotrizinol (BEMT): photostable and lipophilic, but with low skin absorption because of its high molecular weight, 627.81 (typed on slide 66 as \"no\"; he corrected it to \"low\") (slide 66).",
 "cite": "DPAW slide 66",
 "src": "slide",
 "deck": "mc",

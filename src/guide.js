@@ -37,9 +37,9 @@ const GUIDE_HTML = `
 <h3>Skin Pathophysiology · Objective 2: epidemiology of the three diseases</h3>
 <div class="gbar"><span>Objective (PP 3)</span><b>Differentiate between the epidemiologic aspects of the three diseases</b><i>PP 10, 20, 31, 35</i></div>
 <table class="reftab"><thead><tr><th style="width:18%">Disease</th><th>Incidence or prevalence, as each slide words it</th><th>Sex and age</th><th>Family and setting</th></tr></thead><tbody>
-<tr><td><b>Atopic dermatitis</b> (PP 10)</td><td>Incidence in developed countries: 15&ndash;30% of children, 2&ndash;10% of adults; prevalence has increased over recent decades</td><td>Males and females alike</td><td>Lower in rural areas (hygiene hypothesis); goes with asthma and rhinitis (atopic conditions); two- to threefold risk with one atopic parent, three- to fivefold with two</td></tr>
-<tr><td><b>Psoriasis</b> (PP 20)</td><td>About 3% of the US population; the most common immune-mediated inflammatory disease worldwide; varies with climate, sun exposure and ethnicity</td><td>Males and females equally; any age, but most patients have onset before 40</td><td>A genetic basis that probably needs environmental triggers; about 30% have a first-degree relative with it</td></tr>
-<tr><td><b>Acne</b> (PP 31, 35)</td><td>Lifetime prevalence approaches 90%; the most common disease treated by dermatologists</td><td>Onset at puberty with androgens; ages 25&ndash;58: 12% of women, 3% of men; more severe in boys in puberty, in women in adulthood</td><td>81% likelihood if both parents had acne (PP 35)</td></tr>
+<tr><td><b>Atopic dermatitis</b> (PP 10)</td><td>Incidence in developed countries: 15&ndash;30% of children, 2&ndash;10% of adults; prevalence has increased in developed and developing countries over recent decades</td><td>Males and females alike</td><td>Lower in rural areas (hygiene hypothesis); goes with asthma and rhinitis (atopic conditions); two- to threefold risk with one atopic parent, three- to fivefold with two</td></tr>
+<tr><td><b>Psoriasis</b> (PP 20)</td><td>About 3% of the US population; the most common immune-mediated inflammatory disease worldwide; About 3% of the US population (other countries vary); climate, sun exposure and ethnicity are thought to affect prevalence</td><td>Males and females equally; any age, but most patients have onset before 40</td><td>A genetic basis that probably needs environmental triggers; about 30% have a first-degree relative with it</td></tr>
+<tr><td><b>Acne</b> (PP 31, 35)</td><td>Lifetime prevalence approaches 90%; the most common disease treated by dermatologists</td><td>Onset at puberty with androgens; ages 25&ndash;58: 12% of women, 3% of men; often more severe in boys in puberty; women often have more severe forms in adulthood</td><td>81% likelihood if both parents had acne (PP 35)</td></tr>
 </tbody></table>
 <div class="gtell"><b>Tell apart</b><ul><li>3% is psoriasis; 15&ndash;30% of children is AD; about 90% lifetime is acne.</li><li>Family numbers: AD two- to threefold (one parent) and three- to fivefold (two); psoriasis about 30% first-degree relative; acne 81% with both parents.</li></ul></div>
 </section>
@@ -49,15 +49,15 @@ const GUIDE_HTML = `
 <div class="gbar"><span>Objective (PP 3)</span><b>Describe the etiologies and pathologies for each of these three conditions</b><i>PP 8&ndash;16, 19&ndash;26, 30&ndash;35</i></div>
 <div class="gpt"><h5>Atopic dermatitis (PP 8&ndash;16)</h5><ul>
 <li>Definition: a chronic, pruritic inflammatory skin disease, often called eczema; pruritus is the primary symptom (PP 8).</li>
-<li>Signs: red to brownish-gray patches, itch worst at night, small vesicles that leak and crust, thickened or scaly skin; hands and feet in adults, face and scalp in children; secondary bacterial infection common (PP 11).</li>
+<li>Signs: red to brownish-gray patches, itch that may be severe, especially at night, small vesicles that may leak and crust when scratched, thickened or scaly skin; often hands and feet in adults, often face and scalp in children; secondary bacterial infection common (PP 11).</li>
 <li>Exacerbating factors: allergens (foods, soaps, detergents, fragrances), long hot baths, dry skin, stress, sweating, rapid temperature change or low humidity, wool or man-made fabrics (PP 12).</li>
 <li>The first trigger is unknown: neuropeptides, irritation or scratching may release proinflammatory cytokines from keratinocytes; allergens may cause T-cell mediated, IgE-independent reactions (PP 13; T 163&ndash;169).</li>
 <li>Features: skin barrier dysfunction; deviation toward TH2; then increased IgE; complicated by colonization with pathologic organisms (PP 13).</li>
-<li>Genes: epidermal structural proteins and immune-system genes (PP 14). FLG &rarr; profilaggrin &rarr; filaggrins &rarr; barrier; variants let allergens in. About 40% of people lacking FLG do not develop AD (PP 15).</li>
+<li>Genes: epidermal structural proteins and immune-system genes (PP 14). FLG &rarr; profilaggrin &rarr; filaggrins &rarr; barrier; a variant gives reduced function or no profilaggrin, so allergens get in; patients with variants have more persistent disease and a greater risk of multiple allergies. About 40% of people lacking FLG do not develop AD, and many AD patients have no FLG variant (PP 15).</li>
 <li>TH1 cytokines (interferon-gamma, IL-12) suppress IgE; TH2 cytokines (IL-5, IL-13) increase it. AD has more TH2 activity: IL-3, IL-4, IL-5, IL-10, IL-13, blood eosinophilia, high total IgE, more mast cells. &ldquo;Some of our therapies antagonize these cytokines&rdquo; (PP 16).</li></ul></div>
 <div class="gpt"><h5>Psoriasis (PP 19&ndash;26)</h5><ul>
 <li>Definition: recurrent exacerbations and remissions of thickened, erythematous, scaly plaques; keratinocyte hyperproliferation and incomplete differentiation; a T-cell-mediated systemic inflammatory disease (PP 19).</li>
-<li>Trauma (bug bite, skin infection) &rarr; APCs present antigen to T cells &rarr; TNF-alpha, interferon-gamma, IL-23, IL-17 &rarr; keratinocyte hyperproliferation and chronic systemic inflammation; comorbidities follow from the chronic inflammation (PP 21&ndash;22).</li>
+<li>Probably starts with some trauma (bug bite, skin infection) that triggers an abnormal immune response: T cells in skin are stimulated by antigen (as yet undefined) presented by APCs, and the cells release TNF-alpha, interferon-gamma, IL-23 and IL-17 ... &rarr; APCs present antigen to T cells &rarr; TNF-alpha, interferon-gamma, IL-23, IL-17 &rarr; keratinocyte hyperproliferation and chronic systemic inflammation; comorbidities follow from the chronic inflammation (PP 21&ndash;22).</li>
 <li>Keratinocytes: 1.5 days to divide and 4 to shed, against 13 and 26 normally (PP 23).</li>
 <li>Contributing factors: climate, stress, infections, trauma (Koebner response: lesions at previously clear sites after friction, venipuncture, bites, surgery or pressure), medications, most commonly lithium and beta blockers (PP 24).</li>
 <li>Nail psoriasis: pitting, ridging, discoloration, onycholysis. Psoriatic arthritis: asymmetric (hands, feet, knees), skin lesions usually first, no rheumatoid factor elevation (PP 26).</li></ul></div>
@@ -89,7 +89,7 @@ const GUIDE_HTML = `
 <div class="gpt"><h5>Each pathology and the classes aimed at it</h5><ul>
 <li>AD: TH2 cytokines drive IgE; &ldquo;some of our therapies antagonize these cytokines&rdquo; (PP 16): dupilumab blocks IL-4R&alpha;, shared by the IL-4 and IL-13 receptors (PCol 64). Corticosteroids and calcineurin inhibitors suppress the immune response (PCol 11, 27).</li>
 <li>Psoriasis treatment rationale (PP 27): agents that modulate the abnormal immune response (topical corticosteroids, biologic response modifiers) and medications that affect cell turnover (retinoids); manage comorbidities; patient-specific; quality of life.</li>
-<li>Acne (PP 36): P. acnes proliferation &rarr; benzoyl peroxide, antibiotics, isotretinoin; abnormal keratinization &rarr; salicylic acid, benzoyl peroxide, topical retinoids, isotretinoin; inflammation &rarr; corticosteroids, antibiotics; abnormal sebum &rarr; antiandrogens, isotretinoin.</li></ul></div>
+<li>Acne (PP 36): P. acnes proliferation &rarr; benzoyl peroxide, antibiotics, isotretinoin; abnormal keratinization &rarr; salicylic acid, benzoyl peroxide, topical retinoids, isotretinoin; inflammation &rarr; corticosteroids, antibiotics; abnormal sebum -> antiandrogens, isotretinoin, topical/oral antibiotics, corticosteroids, estrogens; inflammation -> intralesional or oral corticosteroids, topical/oral antibiotics; P. acnes proliferation -> benzoyl peroxide, topical/oral antibiotics, isotretinoin..</li></ul></div>
 <div class="gask"><b>Mechanism of each class</b><ul><li>The class-by-class mechanisms are in Skin Pharmacology, Objective 2, below.</li></ul></div>
 <div style="display:flex;flex-wrap:wrap;gap:7px;margin:8px 0"><button type="button" class="chip" data-jump="guide:gobj-l1-4">Guide: general mechanism of each class</button><button type="button" class="chip" data-jump="ref:ref-l1-acnemap">Reference: acne pathology and drugs</button></div>
 </section>
@@ -101,9 +101,9 @@ const GUIDE_HTML = `
 <h3>Skin Pharmacology · Objective 1: which medications treat AD, psoriasis and acne</h3>
 <div class="gbar"><span>Objective (PCol 3)</span><b>List which medications are used for treating atopic dermatitis, psoriasis, and acne</b><i>PCol 8&ndash;76; Sun 3; PP 17, 28, 37</i></div>
 <table class="reftab"><thead><tr><th style="width:14%">Disease</th><th>Her slide names the disease for the drug</th><th style="width:34%">Her class list names the class; the drug's use is not on her slide</th></tr></thead><tbody>
-<tr><td><b>Atopic dermatitis</b></td><td>Topical corticosteroids (PCol 11); pimecrolimus, tacrolimus topical, adults and children over 2 (PCol 27); crisaborole topical (PCol 33); dupilumab, moderate-to-severe AD in adults (PCol 64)</td><td>JAK inhibitor (PP 17): ruxolitinib and upadacitinib are on the drug chart's AD page (p. 2) and on Dr. Sikazwe's eczema page (DPAW 8); her PCol 76 gives their mechanisms only</td></tr>
+<tr><td><b>Atopic dermatitis</b></td><td>Topical corticosteroids (PCol 11); pimecrolimus, tacrolimus topical, adults and children over 2 (PCol 27); crisaborole topical (PCol 33); dupilumab, adults with moderate-to-severe AD not adequately controlled with topical therapies (PCol 64) (PCol 64)</td><td>JAK inhibitor (PP 17): ruxolitinib and upadacitinib are on the drug chart's AD page (p. 2) and on Dr. Sikazwe's eczema page (DPAW 8); her PCol 76 gives their mechanisms only</td></tr>
 <tr><td><b>Psoriasis</b></td><td>Corticosteroids (PCol 11); tazarotene (PCol 18); acitretin (PCol 20); calcipotriene (PCol 21); cyclosporine oral (PCol 29); apremilast oral (PCol 34); antipsoriatic cytotoxic agents: coal tar, anthralin, shale tar, selenium sulfide, zinc pyrithione (PCol 52&ndash;57); methotrexate (PCol 59); IL-17 inhibitors secukinumab, ixekizumab, brodalumab (PCol 65&ndash;66); risankizumab, moderate to severe plaque psoriasis (PCol 69); methoxsalen with UVA (Sun 3; audio 00:29&ndash;01:20)</td><td>Plaques named, disease not: ustekinumab (PCol 67) and the TNF-&alpha; inhibitors etanercept, infliximab, adalimumab, golimumab, certolizumab pegol (PCol 70) reduce the number and size of plaques. Class on PP 28, drug on the chart's psoriasis pages (pp. 4&ndash;5): guselkumab, tildrakizumab-asmn (IL-23 inhibitor), tofacitinib (JAK inhibitors). Abatacept: co-stimulation mechanism on PCol 63, listed on the chart's psoriasis pages</td></tr>
-<tr><td><b>Acne</b></td><td>Tretinoin, adapalene, tazarotene topical (PCol 16&ndash;18); isotretinoin oral, severe cystic acne (PCol 19); benzoyl peroxide, sulfur, salicylic acid (PCol 36&ndash;39); sarecycline, minocycline, doxycycline (PCol 43&ndash;45); clindamycin (PCol 46); erythromycin, azithromycin (PCol 47); dapsone topical gel (PCol 50)</td><td>Antiandrogen (PP 37): spironolactone is on the chart's acne page (p. 3). Trimethoprim/sulfamethoxazole: mechanism only on PCol 48&ndash;49; chart p. 3</td></tr>
+<tr><td><b>Acne</b></td><td>Tretinoin, adapalene, tazarotene topical (PCol 16&ndash;18); isotretinoin oral, severe cystic acne recalcitrant to standard therapies (PCol 19); benzoyl peroxide, sulfur, salicylic acid (PCol 36&ndash;39); sarecycline, minocycline, doxycycline (PCol 43&ndash;45); clindamycin (PCol 46); erythromycin, azithromycin (PCol 47); dapsone topical gel (PCol 50)</td><td>Antiandrogen (PP 37): spironolactone is on the chart's acne page (p. 3). Trimethoprim/sulfamethoxazole: mechanism only on PCol 48&ndash;49; chart p. 3</td></tr>
 <tr><td><b>Other uses on her slides</b></td><td>Metronidazole: rosacea (PCol 51). Shale tar: also eczema, rosacea, acute otitis (PCol 57). Tazarotene: also wrinkles (PCol 18)</td><td>&mdash;</td></tr>
 </tbody></table>
 <div style="display:flex;flex-wrap:wrap;gap:7px;margin:8px 0"><button type="button" class="chip" data-jump="drugs:">Drug list: every chart drug as a card</button><button type="button" class="chip" data-jump="ref:ref-targets">Reference: drug targets, write it first</button></div>
@@ -115,7 +115,7 @@ const GUIDE_HTML = `
 <div class="gpt"><h5>Nuclear receptor binders (PCol 5&ndash;7): corticosteroids, retinoids, vitamin D analog</h5><ul><li>The drug binds a receptor inside the cell; the complex acts directly at a response element or indirectly by binding NF-kB or AP-1, to promote or inhibit transcription.</li><li>(T) &ldquo;either enhance the expression of anti-inflammatory proteins, or decrease the expression of inflammatory proteins&rdquo; (T 680&ndash;683).</li></ul></div>
 <div class="gpt"><h5><b>Corticosteroids</b> · PCol 8&ndash;11</h5><ul><li><b>Target, mechanism:</b> Glucocorticoid receptor; CBG carries the steroid in blood; Hsp90 leaves the receptor when the steroid binds; the complex binds the GRE</li><li><b>Why it helps:</b> Immunosuppressive, so used for psoriasis and AD (PCol 11; T 873&ndash;875). Low potency (hydrocortisone 1%) for the face and for long-term maintenance; medium potency (betamethasone valerate 0.1%) for the body; mid-strength to high potency for short-term exacerbations; avoid occluded or abraded skin</li></ul></div>
 <!--DIA:nr-action-->
-<div class="gpt"><h5><b>Retinoids</b> (tretinoin, adapalene, tazarotene, isotretinoin, acitretin) · PCol 14&ndash;15, 19</h5><ul><li><b>Target, mechanism:</b> RAR: differentiation and proliferation (acne, psoriasis, photoaging); RXR: apoptosis (Kaposi sarcoma)</li><li><b>Why it helps:</b> Acne: less cohesion between epidermal cells, faster turnover; open comedones expelled, closed ones opened. Psoriasis: precise mechanism unknown, may be anti-inflammatory and antiproliferative. Aging: more collagen, new vessels, thicker epidermis. Isotretinoin: appears to inhibit sebaceous gland size and function (PCol 19)</li></ul></div>
+<div class="gpt"><h5><b>Retinoids</b> (tretinoin, adapalene, tazarotene, isotretinoin, acitretin) · PCol 14&ndash;15, 19</h5><ul><li><b>Target, mechanism:</b> RAR: predominantly differentiation and proliferation (acne, psoriasis, photoaging); RXR: predominantly apoptosis (Kaposi sarcoma) (acne, psoriasis, photoaging); RXR: apoptosis (Kaposi sarcoma)</li><li><b>Why it helps:</b> Acne: less cohesion between epidermal cells, faster turnover; open comedones expelled, closed ones opened. Psoriasis: precise mechanism unknown, may be anti-inflammatory and antiproliferative. Aging: more collagen, new vessels, thicker epidermis. Isotretinoin: appears to inhibit sebaceous gland size and function (PCol 19)</li></ul></div>
 <!--DIA:nr-rar-->
 <div class="gpt"><h5><b>Vitamin D analog</b> (calcipotriene) · PCol 21</h5><ul><li><b>Target, mechanism:</b> Vitamin D receptor, which pairs with RXR-&alpha;</li><li><b>Why it helps:</b> Inhibits proliferation, promotes keratinocyte differentiation, decreases inflammatory cytokine release (psoriasis)</li></ul></div>
 <!--DIA:nr-vdr-->
@@ -123,22 +123,22 @@ const GUIDE_HTML = `
 <div class="f2fig" id="fig-cni-nfat"><!--DIA:fig-cni-nfat--></div>
 <div class="gpt"><h5><b>PDE-4 inhibitors</b> (crisaborole, apremilast) · PCol 32&ndash;34</h5><ul><li><b>Target, mechanism:</b> PDE-4, the main PDE isoform in inflammatory cells; cAMP is not broken down</li><li><b>Why it helps:</b> More cAMP inhibits mast cells, eosinophils, neutrophils and T cells (AD: crisaborole; psoriasis: apremilast)</li></ul></div>
 <div id="g-fig-pde4-camp"><!--DIA:fig-pde4-camp--></div>
-<div class="gpt"><h5><b>Keratolytics</b> (benzoyl peroxide, sulfur, salicylic acid) · PCol 35&ndash;39</h5><ul><li><b>Target, mechanism:</b> BPO: antimicrobial against P. acnes plus peeling and comedolytic (benzoic acid probable active form). Sulfur: reduced to hydrogen sulfide in keratinocytes; bacteriostatic. Salicylic acid: solubilizes the cell surface proteins that hold the stratum corneum together</li><li><b>Why it helps:</b> Break down keratin so cells slough, follicles stay open, plugs clear (acne)</li></ul></div>
+<div class="gpt"><h5><b>Keratolytics</b> (benzoyl peroxide, sulfur, salicylic acid) · PCol 35&ndash;39</h5><ul><li><b>Target, mechanism:</b> BPO: postulated mechanism: antimicrobial against P. acnes plus peeling and comedolytic effects (benzoic acid probable active form). Sulfur: reduced to hydrogen sulfide in keratinocytes; bacteriostatic. Salicylic acid: may solubilize the cell surface proteins that hold the stratum corneum together</li><li><b>Why it helps:</b> Break down keratin so cells slough, follicles stay open, plugs clear (acne)</li></ul></div>
 <div class="gpt"><h5><b>Antibiotics/antimicrobials</b> · PCol 42&ndash;50</h5><ul><li><b>Target, mechanism:</b> Tetracyclines: 30S, block aminoacyl-tRNA at the acceptor site. Clindamycin, macrolides: 50S, prevent translocation. All bacteriostatic. Sulfamethoxazole competes with PABA; trimethoprim inhibits bacterial DHFR. Dapsone (acne): anti-inflammatory, neutrophils a possible site</li><li><b>Why it helps:</b> A bacterium (P. acnes) contributes to acne (10/30 T 574&ndash;576); tetracycline efficacy in acne may depend more on anti-inflammatory activity (PCol 45)</li></ul></div>
 <div id="g-fig-ribosome"><!--DIA:fig-ribosome--></div>
 <div id="g-fig-folate-path"><!--DIA:fig-folate-path--></div>
-<div class="gpt"><h5><b>Cytotoxic agents</b> (coal tar, anthralin, shale tar, selenium sulfide, zinc pyrithione) · PCol 53&ndash;57</h5><ul><li><b>Target, mechanism:</b> Coal tar: antiproliferative, anti-inflammatory, crosslinks DNA. Anthralin: may act on keratinocyte mitochondria; prevents T-lymphocyte activation. Shale tar: unknown. Selenium sulfide, zinc pyrithione: cytostatic and antifungal</li><li><b>Why it helps:</b> Decrease the rate of epidermal cell turnover (psoriasis)</li></ul></div>
+<div class="gpt"><h5><b>Cytotoxic agents</b> (coal tar, anthralin, shale tar, selenium sulfide, zinc pyrithione) · PCol 53&ndash;57</h5><ul><li><b>Target, mechanism:</b> Coal tar: antiproliferative, anti-inflammatory, crosslinks DNA to inhibit cell division (mechanism not fully known). Anthralin: may act on keratinocyte mitochondria; prevents T-lymphocyte activation. Shale tar: unknown. Selenium sulfide, zinc pyrithione: cytostatic and antifungal</li><li><b>Why it helps:</b> Decrease the rate of epidermal cell turnover (psoriasis)</li></ul></div>
 <div class="gpt"><h5><b>DHFR inhibitor</b> (methotrexate) · PCol 59</h5><ul><li><b>Target, mechanism:</b> Folic acid analog; inhibits DHFR, so less THF and fewer purines; cell death; may be directly anti-inflammatory</li><li><b>Why it helps:</b> Reduces keratinocyte hyperproliferation and the number of T cells (psoriasis)</li></ul></div>
 <div id="g-fig-folate-cycle"><!--DIA:fig-folate-cycle--></div>
 <div class="gpt"><h5><b>Co-stimulation inhibitor</b> (abatacept) · PCol 63</h5><ul><li><b>Target, mechanism:</b> Fusion protein (CTLA-4 domain + IgG Fc) binds CD80/86 on APCs, so CD28 cannot bind</li><li><b>Why it helps:</b> Blocks the positive second signal needed for T-cell activation</li></ul></div>
 <div id="g-fig-costim"><!--DIA:fig-costim--></div>
 <div class="gpt"><h5><b>IL-4R&alpha; antagonist</b> (dupilumab) · PCol 64</h5><ul><li><b>Target, mechanism:</b> IL-4 receptor alpha subunit, shared by the IL-4 and IL-13 receptors</li><li><b>Why it helps:</b> IL-4 and IL-13 promote IgE synthesis; blocking lowers proinflammatory cytokines, chemokines and IgE (AD)</li></ul></div>
 <div class="gpt"><h5><b>IL-17 inhibitors</b> (secukinumab, ixekizumab, brodalumab) · PCol 65&ndash;66</h5><ul><li><b>Target, mechanism:</b> Secukinumab, ixekizumab: IL-17A cytokine. Brodalumab: IL-17 receptor A</li><li><b>Why it helps:</b> Keratinocytes are the main IL-17 target in psoriasis (hyperproliferation, barrier dysfunction); blocking reduces number and size of plaques</li></ul></div>
-<div class="gpt"><h5><b>IL-12/23 and IL-23 inhibitors</b> (ustekinumab; guselkumab, tildrakizumab-asmn, risankizumab) · PCol 67&ndash;69</h5><ul><li><b>Target, mechanism:</b> Ustekinumab: p40, shared by IL-12 and IL-23. The others: p19 of IL-23</li><li><b>Why it helps:</b> Suppress proinflammatory Th1 and Th17 cells; less release of proinflammatory cytokines and chemokines</li></ul></div>
+<div class="gpt"><h5><b>IL-12/23 and IL-23 inhibitors</b> (ustekinumab; guselkumab, tildrakizumab-asmn, risankizumab) · PCol 67&ndash;69</h5><ul><li><b>Target, mechanism:</b> Ustekinumab: p40, shared by IL-12 and IL-23. The others: p19 of IL-23</li><li><b>Why it helps:</b> Ustekinumab: suppresses formation of proinflammatory Th1 and Th17 cells. Guselkumab, tildrakizumab-asmn, risankizumab: inhibit the release of proinflammatory cytokines and chemokines; less release of proinflammatory cytokines and chemokines</li></ul></div>
 <div class="f2fig" id="fig-il-axis"><!--DIA:fig-il-axis--></div>
 <div class="gpt"><h5><b>TNF-&alpha; inhibitors</b> (etanercept, infliximab, adalimumab, golimumab, certolizumab pegol) · PCol 70&ndash;74</h5><ul><li><b>Target, mechanism:</b> Bind TNF-&alpha;, keeping it from its receptors on inflammatory cells</li><li><b>Why it helps:</b> TNF-&alpha; is an inflammatory cytokine; blocking it reduces the number and size of plaques</li></ul></div>
 <div class="gpt"><h5><b>JAK inhibitors</b> (tofacitinib, ruxolitinib, upadacitinib) · PCol 75&ndash;76</h5><ul><li><b>Target, mechanism:</b> Inhibit Janus kinase; small molecules that get inside the cell (T 570&ndash;573)</li><li><b>Why it helps:</b> Inhibit the production of inflammatory cytokines</li></ul></div>
-<div class="gpt"><h5><b>Psoralens</b> (methoxsalen + UVA) · Sun 3; PCol 78</h5><ul><li><b>Target, mechanism:</b> With UV light of 320&ndash;340 nm, psoralens intercalate into DNA</li><li><b>Why it helps:</b> Antiproliferative, immunosuppressive, anti-inflammatory: normalizes keratinocytes, reorganizes blood vessels, cytotoxic to T cells; increases melanin</li></ul></div>
+<div class="gpt"><h5><b>Psoralens</b> (methoxsalen + UVA) · Sun 3; PCol 78</h5><ul><li><b>Target, mechanism:</b> With UV light of 320&ndash;340 nm, psoralens intercalate into DNA</li><li><b>Why it helps:</b> Through incompletely understood mechanisms the phototoxic reactions are antiproliferative, immunosuppressive and anti-inflammatory (normalizes keratinocytes, reorganizes blood vessels, cytotoxic to T cells) and stimulate melanocytes (increases melanin)</li></ul></div>
 <div style="display:flex;flex-wrap:wrap;gap:7px;margin:8px 0"><button type="button" class="chip" data-jump="ref:ref-targets">Reference: drug targets, write it first</button><button type="button" class="chip" data-jump="tell:tell-l1-drugs">Tell apart: nuclear receptor binders</button></div>
 </section>
 
@@ -146,11 +146,11 @@ const GUIDE_HTML = `
 <h3>Skin Pharmacology · Objective 3: differences between drugs in the same class</h3>
 <div class="gbar"><span>Objective (PCol 3)</span><b>Explain the differences between the drugs within the same class</b><i>PCol 16&ndash;76</i></div>
 <table class="reftab"><thead><tr><th style="width:17%">Class</th><th>What separates the drugs</th><th style="width:10%">Slide</th></tr></thead><tbody>
-<tr><td><b>Topical retinoids</b></td><td>Tretinoin: &lt;10% absorbed; microsphere form less irritating. Adapalene: photochemically stable, can be combined with benzoyl peroxide, less irritating, mild to moderate acne. Tazarotene: photosensitivity, psoriasis, acne and wrinkles, not in pregnancy</td><td>PCol 17&ndash;18</td></tr>
-<tr><td><b>Oral retinoids</b></td><td>Isotretinoin: severe cystic acne, lipid changes, skeletal hyperostosis in children, iPLEDGE (men too). Acitretin: psoriasis (pustular), hepatotoxicity, half-life of months, no ethanol for 2 months, no blood donation or pregnancy for 3 years</td><td>PCol 19&ndash;20</td></tr>
-<tr><td><b>Calcineurin inhibitors</b></td><td>Pimecrolimus stays in the skin better than topical tacrolimus. Cyclosporine binds cyclophilin, tacrolimus FKBP. Cyclosporine only: gingival hyperplasia; tacrolimus only: neuropathies. Cyclosporine's Neoral (microemulsion) and Sandimmune are not bioequivalent and not interchangeable</td><td>PCol 26&ndash;30</td></tr>
+<tr><td><b>Topical retinoids</b></td><td>Tretinoin: &lt;10% absorbed; microsphere form may be less irritating for sensitive patients. Adapalene: photochemically stable, can be combined with benzoyl peroxide, less irritating, mild to moderate acne. Tazarotene: psoriasis, mild to moderately severe facial acne and wrinkles; photosensitivity; not in pregnancy</td><td>PCol 17&ndash;18</td></tr>
+<tr><td><b>Oral retinoids</b></td><td>Isotretinoin: severe cystic acne recalcitrant to standard therapies, lipid changes, skeletal hyperostosis in children, iPLEDGE (men too). Acitretin: psoriasis, especially pustular forms, hepatotoxicity, half-life of months, no ethanol for 2 months, no blood donation or pregnancy for 3 years</td><td>PCol 19&ndash;20</td></tr>
+<tr><td><b>Calcineurin inhibitors</b></td><td>Pimecrolimus may preferentially distribute to the skin rather than the systemic circulation (PCol 27); Dr. Sikazwe adds higher skin protein binding than tacrolimus (DPAW 28). Cyclosporine binds cyclophilin, tacrolimus FKBP. Cyclosporine only: gingival hyperplasia; tacrolimus only: neuropathies. Cyclosporine's Neoral (microemulsion) and Sandimmune are not bioequivalent and not interchangeable</td><td>PCol 26&ndash;30</td></tr>
 <tr><td><b>PDE-4 inhibitors</b></td><td>Crisaborole: topical 2% ointment, mild to moderate AD, 2 years and older. Apremilast: oral, psoriasis, GI effects, headache, weight loss, caution in depression</td><td>PCol 33&ndash;34</td></tr>
-<tr><td><b>Keratolytics</b></td><td>BPO: antimicrobial and comedolytic, sensitizer, bleaches. Sulfur: bacteriostatic, hydrogen sulfide, comedogenic, odor. Salicylic acid: 3&ndash;6% for acne, &gt;6% damages tissue, up to 40% for warts and corns</td><td>PCol 36&ndash;40</td></tr>
+<tr><td><b>Keratolytics</b></td><td>BPO: antimicrobial and comedolytic, sensitizer, bleaches. Sulfur: bacteriostatic, hydrogen sulfide, comedogenic, odor. Salicylic acid: 3&ndash;6% for dandruff, acne and psoriasis, 6% may cause skin damage, up to 40% for warts and corns</td><td>PCol 36&ndash;40</td></tr>
 <tr><td><b>Antibiotics</b></td><td>Tetracyclines 30S; clindamycin and macrolides 50S. Doxycycline and minocycline more lipid soluble; minocycline and sarecycline may be less photosensitizing; sarecycline narrower spectrum; minocycline ototoxicity. Clindamycin: water-based gel or lotion better tolerated; metronidazole: gel more drying, cream or lotion better tolerated</td><td>PCol 43&ndash;51</td></tr>
 <tr><td><b>Cytotoxic agents</b></td><td>Coal tar photosensitizing and carcinogenic; shale tar not photosensitizing and less irritating; anthralin stains and has no systemic effects; selenium sulfide and zinc pyrithione cytostatic and antifungal</td><td>PCol 53&ndash;57</td></tr>
 <tr><td><b>IL-17, IL-12/23, IL-23</b></td><td>Secukinumab (human) and ixekizumab (humanized) bind IL-17A; brodalumab binds the receptor. Ustekinumab binds p40 (IL-12 and IL-23); guselkumab (human), tildrakizumab-asmn and risankizumab (humanized) bind p19</td><td>PCol 66&ndash;69</td></tr>
@@ -192,15 +192,15 @@ const GUIDE_HTML = `
 <li><b>Topical retinoids</b> (PCol 16, 18): Erythema and dryness early; photosensitivity; comedones may flare in weeks 4&ndash;6; may raise the tumorigenic potential of UV. <i>Cautions:</i> Apply to dry skin; avoid corners of nose, eyes, mouth and mucous membranes; sun protection. Tazarotene: not in pregnancy, contraceptive counseling.</li>
 <li><b>Isotretinoin</b> (PCol 19): Common: dryness and itching of skin and mucous membranes, lipid abnormalities. Less common, reversible when the drug is stopped: headache, corneal opacities, pseudotumor cerebri, inflammatory bowel disease, anorexia, alopecia, muscle and joint pain. Skeletal hyperostosis possible in children. <i>Cautions:</i> Teratogen; iPLEDGE, men enrolled too (T 130&ndash;132).</li>
 <li><b>Acitretin</b> (PCol 20): Hepatotoxicity, with fatal hepatitis. <i>Cautions:</i> Teratogenic: no pregnancy during treatment or for 3 years after; no blood donation for 3 years; no ethanol for 2 months.</li>
-<li><b>Calcipotriene</b> (PCol 22): Burning, itching, atrophy, hyperpigmentation, folliculitis, mild photosensitivity; hypercalcemia and hypercalciuria above 100 g a week, resolving in days.</li>
+<li><b>Calcipotriene</b> (PCol 22): Burning, itching, atrophy, hyperpigmentation, folliculitis, mild photosensitivity; hypercalcemia and hypercalciuria may develop when the cumulative weekly dose exceeds the 100 g/week limit; resolves within days of stopping, resolving in days.</li>
 <li><b>Topical pimecrolimus, tacrolimus</b> (PCol 27&ndash;28): Burning at the site; potential local skin carcinogenesis; infection if blood levels get high. <i>Cautions:</i> Over 2 years of age; sun protection.</li>
 <li><b>Oral cyclosporine, tacrolimus</b> (PCol 29&ndash;30): Nephrotoxicity, hypertension, upper respiratory infections (most common), cough, headache; cyclosporine gingival hyperplasia; tacrolimus neuropathies. <i>Cautions:</i> Boxed warning (above); blood levels to prevent toxicity.</li>
 <li><b>Crisaborole</b> (PCol 33): Application-site pain 4%; hypersensitivity &lt;1%. <i>Cautions:</i> Stop at once for hypersensitivity; 2 years and older.</li>
 <li><b>Apremilast</b> (PCol 34): Diarrhea, nausea, headache, weight loss. <i>Cautions:</i> Use cautiously in depression.</li>
 <li><b>Benzoyl peroxide</b> (PCol 36&ndash;37): Irritation; potent contact sensitizer; bleaches hair and fabric. <i>Cautions:</i> Avoid eyes and mucous membranes.</li>
 <li><b>Sulfur</b> (PCol 38): Irritation, comedogenic, odor.</li>
-<li><b>Salicylic acid</b> (PCol 39&ndash;40): Irritation and inflammation of normal skin; ulceration at high concentrations; allergic urticaria, anaphylaxis, erythema; salicylism, a salicylate overdose, to which other topical salicylates add (10/30 T 557&ndash;563); tissue damage above 6%. <i>Cautions:</i> Caution on extremities in diabetes or peripheral vascular disease.</li>
-<li><b>Tetracyclines</b> (PCol 44&ndash;45): N/V/D, pseudomembranous colitis (stop if blood in stool), discolored teeth and bones in the young, photosensitivity, superinfection; minocycline ototoxicity. <i>Cautions:</i> Not in pregnancy or under 8 years.</li>
+<li><b>Salicylic acid</b> (PCol 39&ndash;40): Irritation and inflammation of normal skin; ulceration at high concentrations; allergic urticaria, anaphylaxis, erythema; salicylism, a salicylate overdose, to which other topical salicylates add (10/30 T 557&ndash;563); 6% may cause skin damage. <i>Cautions:</i> Caution on extremities in diabetes or peripheral vascular disease.</li>
+<li><b>Tetracyclines</b> (PCol 44&ndash;45): N/V/D, pseudomembranous colitis (stop if blood in stool), discolored teeth and bones in the young, photosensitivity in fair-skinned people, superinfection; minocycline ototoxicity. <i>Cautions:</i> Not in pregnancy or under 8 years.</li>
 <li><b>Clindamycin</b> (PCol 46): Pseudomembranous colitis, impaired liver function; about 10% absorbed topically; resistance.</li>
 <li><b>Macrolides</b> (PCol 47): Oral N/V/D, epigastric pain; topical burning and drying; resistance.</li>
 <li><b>Coal tar</b> (PCol 54): Photosensitizing, carcinogenic. <i>Cautions:</i> Avoid even low concentrations in acute dermatitis with vesiculation or oozing; use in pregnancy not studied.</li>
@@ -236,7 +236,7 @@ const GUIDE_HTML = `
 <tr><td><b>Dr. Sikazwe&rsquo;s numbers</b></td><td>280&ndash;315 nm (DPAW 12, 63)</td><td>315 (or 320)&ndash;400 nm (DPAW 12, 18, 62; 11/03 T 817&ndash;818). Each professor&rsquo;s numbers are keyed in his or her own questions</td></tr>
 <tr><td><b>Ozone and glass</b></td><td>About 90% filtered by ozone; does not pass glass</td><td>Minimally filtered; passes glass</td></tr>
 <tr><td><b>Depth</b></td><td>&mdash;</td><td>Penetrates further into the dermis</td></tr>
-<tr><td><b>Damage</b></td><td>Sunburn; photoaging, immunosuppression, skin cancers; greatest intensity 10:00 am to 4:00 pm</td><td>Most phototoxic reactions with drugs and chemicals; photoaging, immunosuppression, skin cancers</td></tr>
+<tr><td><b>Damage</b></td><td>Damage: sunburn; may cause photoaging, immunosuppression, skin cancers (both bands); greatest intensity 10:00 am to 4:00 pm</td><td>Most phototoxic reactions with drugs and chemicals; photoaging, immunosuppression, skin cancers</td></tr>
 <tr><td><b>Other</b></td><td>Produces vitamin D3 in the skin</td><td>Tanning: immediate pigmentation 5&ndash;10 minutes after exposure, lasts 24&ndash;48 h; delayed pigmentation after 48&ndash;72 h, peaks at 7&ndash;10 days (Sun 10)</td></tr>
 </tbody></table>
 <div class="gpt"><ul>
@@ -1095,7 +1095,7 @@ const GUIDE_HTML = `
 <div class="rxfig" id="cb-retinoids"><!--DIA:cb-retinoids--></div>
 <div class="gpt"><h5>Hormones (slides 52&ndash;53)</h5><ul><li>Oral contraceptives (ethinyl estradiol with norgestimate or drospirenone) lower sebum in females. Spironolactone (steroidal) and ketoconazole (non-steroidal azole, strong CYP3A4 inhibitor) lower testosterone biosynthesis; flutamide (non-steroidal) blocks testosterone at its receptor.</li></ul></div>
 <div class="rxfig" id="cb-antiandrogens"><!--DIA:cb-antiandrogens--></div>
-<div class="gpt"><h5>Antibiotics (slides 54&ndash;55)</h5><ul><li>Azelaic acid: a C9 dicarboxylic acid, antibacterial and anti-inflammatory. Clindamycin: topical because of GI toxicity. Erythromycin: poor oral absorption, unstable at pH 4 or below.</li><li>Tetracycline: four rings fused in a line (a steroid's rings are angular); chelates Al<sup>3+</sup>, Ca<sup>2+</sup>, Mg<sup>2+</sup>, Fe<sup>3+</sup>, Zn<sup>3+</sup> (printed so on slide 55; zinc&rsquo;s ion is Zn<sup>2+</sup>), Bi<sup>3+</sup>, forming insoluble salts that can build up in bone and enamel; food (dairy) cuts absorption; t&frac12; 8.5 h. Doxycycline and minocycline: food has no effect, lipophilic, t&frac12; 11&ndash;13 h and 14&ndash;22 h; cross-allergy from structural similarity.</li></ul></div>
+<div class="gpt"><h5>Antibiotics (slides 54&ndash;55)</h5><ul><li>Azelaic acid: a C9 dicarboxylic acid; an anti-inflammatory agent (DPAW 54 notes P. acnes is a gram-positive bacterium). Clindamycin: topical because of GI toxicity. Erythromycin: poor oral absorption, unstable at pH 4 or below.</li><li>Tetracycline: four rings fused in a line (a steroid's rings are angular); chelates Al<sup>3+</sup>, Ca<sup>2+</sup>, Mg<sup>2+</sup>, Fe<sup>3+</sup>, Zn<sup>3+</sup> (printed so on slide 55; zinc&rsquo;s ion is Zn<sup>2+</sup>), Bi<sup>3+</sup>, forming insoluble salts that can build up in bone and enamel; food (dairy) cuts absorption; t&frac12; 8.5 h. Doxycycline and minocycline: food has no effect, lipophilic, t&frac12; 11&ndash;13 h and 14&ndash;22 h; cross-allergy from structural similarity.</li></ul></div>
 <div class="rxfig" id="cb-tetracycline"><!--DIA:cb-tetracycline--></div>
 <div style="display:flex;flex-wrap:wrap;gap:7px;margin:8px 0"><button type="button" class="chip" data-jump="atlas:at-b-acne-keratolytics">Atlas: keratolytics</button><button type="button" class="chip" data-jump="atlas:at-b-retinoids">Atlas: retinoids</button><button type="button" class="chip" data-jump="atlas:at-b-hormones">Atlas: hormones</button><button type="button" class="chip" data-jump="atlas:at-b-antibiotics">Atlas: antibiotics</button><button type="button" class="chip" data-jump="tell:tell-s4">Tell apart: Sikazwe 11/04</button></div>
 </section>
@@ -1182,7 +1182,7 @@ const GUIDE_HTML = `
 <table class="g2-table g2-kv">
 <caption>Initiation and prevention <span class="g2-src">(DT 18)</span></caption>
 <tbody>
-<tr><th scope="row">Initiation</th><td>Disrupted barrier (FLG mutation or dryness) &rarr; allergen and irritant influx &rarr; inflammatory T-cell responses</td></tr>
+<tr><th scope="row">Initiation</th><td>Disrupted barrier (FLG mutation, or dryness from cleansing or the environment) &rarr; allergen and irritant influx &rarr; inflammatory T-cell responses initiated by keratinocytes (e.g. TSLP) and dendritic cells</td></tr>
 <tr><th scope="row">Prevention</th><td>Emollient therapy improves the barrier and blocks the inflammatory cascade</td></tr>
 </tbody>
 </table>
@@ -1190,7 +1190,7 @@ const GUIDE_HTML = `
 <div>
 <p class="g2-sub">Risk factors <span class="g2-src">(DT 19)</span></p>
 <ul>
-<li>Personal or family history of atopic disorders (atopic triad: allergic rhinitis, asthma, AD; atopic march adds food allergies)</li>
+<li>Personal or family history of atopic disorders (atopic triad: allergic rhinitis, asthma, AD; atopic march is the typical progression of allergic diseases that often begin early in life: dry skin, eczema, food allergies, rhinitis, asthma)</li>
 <li>Loss-of-function FLG mutation</li>
 <li>Urban environment</li>
 <li>Smaller family size</li>
@@ -1199,8 +1199,8 @@ const GUIDE_HTML = `
 <table class="g2-table g2-kv">
 <caption>Triggers <span class="g2-src">(DT 20)</span></caption>
 <tbody>
-<tr><th scope="row">Irritants</th><td>Tobacco smoke, air pollution, cosmetics, fragrances, astringents, soaps, scrubs, detergents, dyes, preservatives</td></tr>
-<tr><th scope="row">Allergens</th><td>Foods; wool and polyester clothing; dust mites, pollens, pet dander, molds</td></tr>
+<tr><th scope="row">Irritants</th><td>Airborne (tobacco smoke, air pollution); cosmetics, fragrances, astringents; irritating soaps, scrubs, detergents; dyes, preservatives</td></tr>
+<tr><th scope="row">Allergens</th><td>Foods (eggs, milk, peanut, soy, wheat, nuts, tomato); clothing (wool, polyester); aeroallergens (house dust mites, pollens, pet dander, molds)</td></tr>
 <tr><th scope="row">Environment</th><td>Extreme temperatures, low humidity</td></tr>
 <tr><th scope="row">Personal</th><td>Stress, excessive washing and sanitizing</td></tr>
 </tbody>
@@ -1213,7 +1213,7 @@ const GUIDE_HTML = `
 <tbody>
 <tr><th scope="row">Infancy (0&ndash;2 y)</th><td><span class="g2-lab">Quality</span>Erythematous papular rash that tends to ooze</td><td><span class="g2-lab">Region</span>Face, scalp, trunk, arms, legs</td><td><span class="g2-lab">Timing</span>Most common onset <b>3&ndash;6 months</b>; majority by age one</td></tr>
 <tr><th scope="row">Childhood (2&ndash;puberty)</th><td><span class="g2-lab">Quality</span>Dry, flaky, rough, cracked skin, crusting, lichenification</td><td><span class="g2-lab">Region</span>Face, creases of the neck, elbows, wrists, knees, ankles</td><td><span class="g2-lab">Timing</span>Up to <b>90%</b> by age 5</td></tr>
-<tr><th scope="row">Adulthood</th><td><span class="g2-lab">Quality</span>More diffuse, underlying erythema, dry scaly skin, lichenification</td><td><span class="g2-lab">Region</span>Less on the face; more on hands, neck, inner elbows, back of knees, ankles</td><td><span class="g2-lab">Timing</span>May resolve by adulthood (<b>70&ndash;90%</b>)</td></tr>
+<tr><th scope="row">Adulthood</th><td><span class="g2-lab">Quality</span>More diffuse, underlying erythema, dry scaly skin, lichenification</td><td><span class="g2-lab">Region</span>Less on the face; more on hands, neck, inner elbows, back of knees, ankles</td><td><span class="g2-lab">Timing</span>May have resolution by adulthood (<b>70&ndash;90%</b>, slide; her spoken reading differs, T@19746)</td></tr>
 </tbody>
 </table>
 <p class="g2-p">Earlier onset, longer persistence <span class="g2-src">(DT 22; T@20296)</span>.</p>
@@ -1226,7 +1226,7 @@ const GUIDE_HTML = `
 <tr><th scope="row">Severe</th><td><span class="g2-lab">SCORAD</span><b>&gt; 50</b></td><td>Widespread dry skin, incessant itching, redness, thickening, bleeding, oozing, severe limitation to activities, nightly loss of sleep</td></tr>
 </tbody>
 </table>
-<div class="gtell"><b>Status (DT 24; T@22171&ndash;22904, T@26757)</b><ul><li>Acute: acutely inflamed papules, vesicles, exudate and crusts; no dryness.</li><li>Subacute: <b>dry</b>, inflamed papules, patches or plaques.</li><li>Chronic: <b>lichenified</b> papules or plaques (she calls lichenification the silvery, scaly plaque, T@18613).</li></ul></div>
+<div class="gtell"><b>Status (DT 24; T@22171&ndash;22904, T@26757)</b><ul><li>Acute: acutely inflamed papules, vesicles, exudate and crusts; no dryness.</li><li>Subacute: <b>dry</b>, inflamed papules, patches or plaques.</li><li>Chronic: <b>lichenified</b> papules or plaques, fine scale, hypo- or hyperpigmentation (she calls lichenification the silvery, scaly plaque, T@18613).</li></ul></div>
 <p class="g2-sub">Complications <span class="g2-src">(DT 25)</span></p>
 <ul>
 <li>Sleep disturbances</li>
@@ -1273,7 +1273,7 @@ const GUIDE_HTML = `
 <li>Topical anesthetics (benzocaine, lidocaine)</li>
 <li>Hydrocortisone or other topical corticosteroid</li>
 </ul>
-<p class="g2-p">The diaper area is a large share of a baby&rsquo;s body surface area, and topical products can cause systemic side effects.</p>
+<p class="g2-p">The diaper area is a significant portion of a baby&rsquo;s total body surface area, and many topical products can lead to systemic side effects.</p>
 </div>
 <div class="gpt g2-block"><h5><span class="g2-num">3.</span> Exclusions for self-treatment of diaper dermatitis <span class="g2-src">(DT 68, &ldquo;please know this list&rdquo;, T@80993)</span></h5>
 <div class="g2-two">
@@ -1283,8 +1283,8 @@ const GUIDE_HTML = `
 <li>Secondary infection (viral, bacterial, fungal)</li>
 <li>Lesions part of or caused by another disease</li>
 <li>Rash outside the diaper region</li>
-<li>Possible urinary tract infection</li>
-<li>Broken skin (ulceration, blistering, peeling)</li>
+<li>Diaper dermatitis possibly associated with a urinary tract infection (painful urination) or disfigurement of the penis or vulva</li>
+<li>Broken skin (ulceration, blistering, peeling) due to disease progression or patient action (e.g., scratching)</li>
 </ul>
 <ul>
 <li>Onion-skin appearance or bullae</li>
@@ -1354,7 +1354,7 @@ const GUIDE_HTML = `
 <caption>Bathing <span class="g2-src">(DT 31)</span></caption>
 <tbody>
 <tr><th scope="row">Bath</th><td><b>10-minute</b> lukewarm bath, gentle cleansers, pat dry</td></tr>
-<tr><th scope="row">Added daily</th><td>Oatmeal or baking soda may be added daily</td></tr>
+<tr><th scope="row">Added daily</th><td>Oatmeal or baking soda may be added daily (slide); she said &ldquo;very limited in terms of how often&rdquo; (T@31306)</td></tr>
 <tr><th scope="row">Bleach</th><td>Bleach <b>0.005%</b> sodium hypochlorite (&frac12; cup per full tub) <b>twice a week</b> for moderate&ndash;severe AD to prevent recurrent bacterial infection (can irritate; her last-line advice, T@32279)</td></tr>
 <tr><th scope="row">After the bath</th><td>Occlusive moisturizer right after the bath</td></tr>
 </tbody>
@@ -1365,7 +1365,7 @@ const GUIDE_HTML = `
 <ul>
 <li>Avoid triggers</li>
 <li>No tight clothing</li>
-<li>Moderate temperature</li>
+<li>Moderate temperature and low humidity</li>
 <li>Short tepid showers or baths with a non-soap cleanser</li>
 <li>Sponge baths in place of full-body bathing</li>
 <li>Pat dry</li>
@@ -1415,8 +1415,8 @@ const GUIDE_HTML = `
 <tr><th scope="row"><b>A</b>ir</th><td>Air dry, diaper-free time</td></tr>
 <tr><th scope="row"><b>B</b>arrier</th><td>Protectant liberally at each change</td></tr>
 <tr><th scope="row"><b>C</b>leansing</th><td>Soft cloth and warm water, or a baby wipe when stool is present</td></tr>
-<tr><th scope="row"><b>D</b>iaper</th><td>Change every <b>2 hours</b> and as soon as soiled; disposable if affordable</td></tr>
-<tr><th scope="row"><b>E</b>ducation</th><td>Education of parents and caregivers</td></tr>
+<tr><th scope="row"><b>D</b>iaper</th><td>Change frequently (every <b>2 hours</b>) and as soon as soiled, if possible (slide 57: infants every 3&ndash;4 hours); absorbent disposable diapers if affordable</td></tr>
+<tr><th scope="row"><b>E</b>ducation</th><td>Educate parents and caregivers about nonpharmacologic diaper hygiene practices and pharmacotherapy, verifying understanding to ensure adherence</td></tr>
 </tbody>
 </table>
 </div>
@@ -1474,13 +1474,13 @@ const GUIDE_HTML = `
 <div class="gpt g2-block"><h5><span class="g2-num">2.</span> Step-care algorithm <span class="g2-src">(DT 47&ndash;48)</span></h5>
 <div class="g2-ladder">
 <div class="g2-rung"><div class="g2-sev">Everyone</div><div class="g2-cells">
-<div class="g2-cell"><span class="g2-k">Basic management</span><p>Skin care, moisturizer, warm baths or showers with non-soap cleansers, trigger avoidance.</p></div>
+<div class="g2-cell"><span class="g2-k">Basic management</span><p>Skin care: liberal, frequent moisturizer (petrolatum-based for non-lesional; choice per patient preference); warm baths or showers with non-soap cleansers, usually once daily and followed by moisturizer, even on clear areas; trigger avoidance (proven allergens, common irritants such as soaps, wool, temperature extremes); consider comorbidities. Mild also: antiseptic measures (antibiotics, if needed).</p></div>
 </div></div>
 <div class="g2-rung g2-s1"><div class="g2-sev">Non-lesional and mild</div><div class="g2-cells">
 <div class="g2-cell"><span class="g2-k g2-acute">Acute</span><p><b>Low-to-medium potency TCS</b> twice daily for <b>3&ndash;7 days beyond clearance</b> (consider TCI, crisaborole).</p><p class="g2-said"><span class="g2-k">Said in class</span>Start low <span class="g2-src">(T@56572)</span></p></div>
 </div></div>
 <div class="g2-rung g2-s2"><div class="g2-sev">Moderate</div><div class="g2-cells">
-<div class="g2-cell"><span class="g2-k g2-acute">Acute (moderate and severe)</span><p><b>Medium-to-high potency TCS</b> twice daily for <b>3&ndash;7 days beyond clearance</b>.</p></div>
+<div class="g2-cell"><span class="g2-k g2-acute">Acute (moderate and severe)</span><p><b>Medium-to-high potency TCS</b> twice daily for <b>3&ndash;7 days beyond clearance</b> (consider TCI, crisaborole).</p></div>
 <div class="g2-cell"><span class="g2-k g2-maint">Maintenance</span><ul>
 <li><b>Low-potency TCS</b> 1&ndash;2 times daily (including face); <b>medium potency</b> 1&ndash;2 times weekly (except face)</li>
 <li><span class="g2-or">OR</span> <b>TCI</b> 1&ndash;2 times daily or 2&ndash;3 times weekly</li>
@@ -1490,8 +1490,8 @@ const GUIDE_HTML = `
 <div class="g2-rung g2-s3"><div class="g2-sev">Severe</div><div class="g2-cells">
 <div class="g2-cell"><span class="g2-k g2-acute">Acute</span><ul>
 <li><b>Medium-to-high potency TCS</b> twice daily for <b>3&ndash;7 days beyond clearance</b> (moderate and severe)</li>
-<li>Wet wraps</li>
-<li>Short-term hospitalization</li>
+<li>Consider for some patients, to help gain control: wet wraps</li>
+<li>Consider for some patients: short-term hospitalization</li>
 </ul></div>
 <div class="g2-cell"><span class="g2-k g2-maint">Maintenance</span><ul>
 <li>Referral to an AD specialist</li>
@@ -1513,7 +1513,7 @@ const GUIDE_HTML = `
 <tr><th scope="row">First line</th><td>Topical corticosteroid</td></tr>
 <tr><th scope="row">Second</th><td>TCI <span class="g2-src">(DT 38)</span></td></tr>
 <tr><th scope="row">Third</th><td>Crisaborole <span class="g2-src">(DT 41)</span></td></tr>
-<tr><th scope="row">Moderate&ndash;severe AD after topicals</th><td>Dupilumab or tralokinumab <span class="g2-src">(DT 43, 45)</span></td></tr>
+<tr><th scope="row">Moderate&ndash;severe AD not controlled with, or unable to use, topical therapy</th><td>Dupilumab or tralokinumab <span class="g2-src">(DT 43, 45)</span></td></tr>
 <tr><th scope="row">Last, refractory</th><td>JAK inhibitors <span class="g2-src">(DT 46)</span></td></tr>
 </tbody>
 </table>
@@ -1527,7 +1527,7 @@ const GUIDE_HTML = `
 </div>
 <p class="g2-sub">Length of treatment</p>
 <div class="g2-tiles">
-<div class="g2-tile"><span class="g2-tile-label">OTC hydrocortisone 1% BID: maximum length of treatment</span><span class="g2-tile-num">3&ndash;7 days</span><span class="g2-src">(DT 36)</span></div>
+<div class="g2-tile"><span class="g2-tile-label">OTC hydrocortisone 1% BID: maximum length of treatment (or until the flare-up clears)</span><span class="g2-tile-num">3&ndash;7 days</span><span class="g2-src">(DT 36)</span></div>
 <div class="g2-tile"><span class="g2-tile-label">OTC hydrocortisone 1% BID: seek help at</span><span class="g2-tile-num">7 days</span><span class="g2-src">(DT 36)</span></div>
 <div class="g2-tile"><span class="g2-tile-label">OTC hydrocortisone 1% BID: never past</span><span class="g2-tile-num">2 weeks</span><span class="g2-src">(DT 36)</span></div>
 <div class="g2-tile"><span class="g2-tile-label">TCI: reassess at</span><span class="g2-tile-num">6 weeks</span><span class="g2-src">(DT 40)</span></div>
@@ -1728,7 +1728,7 @@ const GUIDE_HTML = `
 <p>&ldquo;So that's very important for you guys to understand&rdquo; <span class='g2-src'>11/06 T@13074</span></p></div></div>
 <div class="gpt g2-block"><h5>Pathophysiology: broken barrier and the inflammatory cascade (Patel Dermatitis slide 18)</h5>
 <p class="g2-status"><b>Status B, C</b> (the slide is a figure; the lecture gives the order of events and the prevention link)</p>
-<p>The figure has three steps for initiation: a disrupted barrier (from a FLG mutation or from dryness caused by cleansing or the environment), allergen and irritant influx, and inflammatory T cell responses. In lecture she explained that the barrier break lets allergens and irritants enter the skin, including the dermis and subcutis, and that the immune response is what produces the redness, itching and plaques. That is why prevention is aimed at the barrier: the figure shows emollient therapy improving the skin barrier and blocking the inflammatory cascade, and she named Aquaphor as an example emollient. She called her pathophysiology explanation very brief.</p>
+<p>The figure has three steps for initiation: a disrupted barrier (from a FLG mutation or from dryness caused by cleansing or the environment), allergen and irritant influx, and inflammatory T cell responses initiated by keratinocytes (e.g. TSLP) and dendritic cells. In lecture</p>
 <div class='g2-said'><span class='g2-k'>She said</span>
 <p>&ldquo;there is a barrier that is broken on the epidermis of the skin&rdquo; <span class='g2-src'>11/06 T@13603</span></p>
 <p>&ldquo;that is what's causing the inflammatory T cell response&rdquo; <span class='g2-src'>11/06 T@13998</span></p>
@@ -1991,7 +1991,7 @@ const GUIDE_HTML = `
 </div>
 <div class="gpt g2-block"><h5>JAK inhibitors: last-line and heavily monitored (Patel Dermatitis slide 46)</h5>
 <p class="g2-status"><b>Status B, C</b> what refractory means, why monitoring is intense, terms defined</p>
-<p>The slide gives the mechanism (inhibition of the JAK enzyme lowers the downstream inflammatory response), the indication (moderate-to-severe atopic dermatitis at 12 years or older), three drugs with dosing, and a boxed warning table. Abrocitinib (Cibinqo) is 100 mg by mouth daily, rising to 200 mg after 12 weeks; upadacitinib (Rinvoq) is 15 mg, rising to 30 mg; ruxolitinib (Opzelura) is the topical, 60 g per week or 100 g per two weeks.</p>
+<p>The slide gives the mechanism (inhibition of the JAK enzyme lowers the downstream inflammatory response), the indication (moderate-to-severe atopic dermatitis at 12 years or older), three drugs with dosing, and a boxed warning table. Abrocitinib (Cibinqo) is 100 mg by mouth once daily, may increase to 200 mg once daily after 12 weeks; upadacitinib (Rinvoq) is 15 mg by mouth once daily, may increase to 30 mg; ruxolitinib (Opzelura) is the topical, 60 g per week or 100 g per two weeks.</p>
 <p>The lecture defines refractory: disease not controlled with topicals or with the other systemic agents. Because the boxed warnings are serious (infections including TB, mortality, malignancy, MACE meaning CV death, MI and stroke, and DVT, PE and arterial thrombosis), the drug is the last line, kept as a specialty medication watched by specialty clinical pharmacists, with follow-up every 2 weeks <span class="g2-tonly" title="Transcript only: not on the slide">Transcript-only, verify against slide</span>. She called Rinvoq the most commonly prescribed <span class="g2-tonly" title="Transcript only: not on the slide">Transcript-only, verify against slide</span>.</p>
 <div class='g2-said'><span class='g2-k'>She said</span>
 <p>&ldquo;absolute last-line refractory option if we have nothing else to rely on&rdquo; <span class='g2-src'>11/06 T@55081</span></p>
@@ -2235,7 +2235,7 @@ const GUIDE_HTML = `
 <tr><th scope="row">Mildly clear</th><td><span class="g2-lab">Non-inflammatory</span>Rare; no more than 1 small lesion</td><td></td><td></td></tr>
 <tr><th scope="row">Mild</th><td><span class="g2-lab">Non-inflammatory</span>Some</td><td><span class="g2-lab">Inflammatory</span>No more than a few papules and pustules</td><td><span class="g2-lab">Nodules; scarring</span>No nodules; minimal scarring</td></tr>
 <tr><th scope="row">Moderate</th><td><span class="g2-lab">Non-inflammatory</span>Many</td><td><span class="g2-lab">Inflammatory</span>Some</td><td><span class="g2-lab">Nodules; scarring</span>No more than one nodule; mild scarring possible</td></tr>
-<tr><th scope="row">Severe</th><td><span class="g2-lab">Non-inflammatory</span>Many</td><td><span class="g2-lab">Inflammatory</span>Many</td><td><span class="g2-lab">Nodules; scarring</span>A few nodules; moderate to extensive scarring</td></tr>
+<tr><th scope="row">Severe</th><td><span class="g2-lab">Non-inflammatory</span>Many</td><td><span class="g2-lab">Inflammatory</span>Many</td><td><span class="g2-lab">Nodules; scarring</span>No more than a few nodules; moderate to extensive scarring</td></tr>
 </tbody>
 </table>
 </div>
@@ -2269,7 +2269,7 @@ const GUIDE_HTML = `
 </div>
 <div class="gpt g2-block"><h5><span class="g2-num">3.</span> Complications <span class="g2-src">(AT 11)</span></h5>
 <p class="g2-p">Anxiety, depression, scarring.</p>
-<p class="g2-said"><span class="g2-k">Said in class</span>Scarring the most common <span class="g2-src">(T@11250)</span></p>
+<p class="g2-said"><span class="g2-k">Said in class</span>Scarring the most common, and can be lifelong (slide 11; in class: unless treated with something abrasive, T@11913) <span class="g2-src">(T@11709)</span></p>
 </div>
 <div class="gpt g2-block"><h5><span class="g2-num">4.</span> Testing <span class="g2-src">(AT 17)</span></h5>
 <table class="g2-table g2-kv">
@@ -2286,7 +2286,7 @@ const GUIDE_HTML = `
 <div class="gbar"><span>Objective (AT 2)</span><b>Recommend appropriate non-pharmacologic and pharmacologic therapy</b><i>AT 3, 13, 47</i></div>
 <div class="gpt g2-block"><h5><span class="g2-num">1.</span> Goals <span class="g2-src">(AT 13)</span></h5>
 <ul>
-<li>Alleviate symptoms</li>
+<li>Alleviate symptoms and psychologic suffering</li>
 <li>Reduce the number and severity of lesions</li>
 <li>Improve appearance</li>
 <li>Slow progression</li>
@@ -2324,7 +2324,7 @@ const GUIDE_HTML = `
 <tr><th scope="row">Normal to dry</th><td>Lotions and creams</td></tr>
 </tbody>
 </table>
-<p class="g2-p">Ointments and bars not usually recommended.</p>
+<p class="g2-p">Ointments and bars are not usually recommended for any skin type. (Normal skin: gels, solutions, lotions and creams.)</p>
 </div>
 <div class="gpt g2-block"><h5><span class="g2-num">3.</span> Shaving <span class="g2-src">(AT 43)</span></h5>
 <table class="g2-table g2-kv">
@@ -2346,7 +2346,7 @@ const GUIDE_HTML = `
 <tbody>
 <tr><th scope="row">Benzoyl peroxide</th><td><span class="g2-lab">Bactericidal</span>Yes</td><td><span class="g2-lab">Keratolytic</span>Yes</td><td><span class="g2-lab">Comedolytic</span>Yes</td></tr>
 <tr><th scope="row">Topical retinoid</th><td><span class="g2-lab">Bactericidal</span>No</td><td><span class="g2-lab">Keratolytic</span>Yes</td><td><span class="g2-lab">Comedolytic</span>Yes</td></tr>
-<tr><th scope="row">Alpha and beta hydroxy acids</th><td><span class="g2-lab">Bactericidal</span>No</td><td><span class="g2-lab">Keratolytic</span>Yes</td><td><span class="g2-lab">Comedolytic</span>Yes</td></tr>
+<tr><th scope="row">Alpha and beta hydroxy acids (comedolytic only for the beta-hydroxy acids)</th><td><span class="g2-lab">Bactericidal</span>No</td><td><span class="g2-lab">Keratolytic</span>Yes</td><td><span class="g2-lab">Comedolytic</span>Yes</td></tr>
 <tr><th scope="row">Sulfur</th><td><span class="g2-lab">Bactericidal</span>No</td><td><span class="g2-lab">Keratolytic</span>Yes</td><td><span class="g2-lab">Comedolytic</span>Yes</td></tr>
 <tr><th scope="row">Resorcinol</th><td><span class="g2-lab">Bactericidal</span>Yes (and antifungal)</td><td><span class="g2-lab">Keratolytic</span>Yes</td><td><span class="g2-lab">Comedolytic</span>No</td></tr>
 </tbody>
@@ -2364,17 +2364,17 @@ const GUIDE_HTML = `
 <div class="gpt g2-block"><h5><span class="g2-num">1.</span> Step by step <span class="g2-src">(T@54687, T@57819, T@59132)</span></h5>
 <div class="g2-ladder">
 <div class="g2-rung"><div class="g2-sev">First</div><div class="g2-cells">
-<div class="g2-cell"><span class="g2-k">In this order</span><ul>
+<div class="g2-cell"><span class="g2-k">Mild acne, in this order (moderate: a topical combination; severe: oral antibiotic + topical combination first)</span><ul>
 <li>One agent</li>
 <li>Then the other</li>
 <li>Then combinations of two</li>
 <li>Then three</li>
 </ul></div>
 </div></div>
-<div class="g2-rung g2-s2"><div class="g2-sev">After the topical combinations</div><div class="g2-cells">
+<div class="g2-rung g2-s2"><div class="g2-sev">Moderate: after the topical combinations have been tried (severe: oral antibiotic is part of the first line)</div><div class="g2-cells">
 <div class="g2-cell"><span class="g2-k">Next</span><p>An oral antibiotic</p></div>
 </div></div>
-<div class="g2-rung g2-s3"><div class="g2-sev">Absolute last line</div><div class="g2-cells">
+<div class="g2-rung g2-s3"><div class="g2-sev">Absolute last line (she said so for moderate; slide 40 also prints it in the severe first-line box)<div class="g2-cells">
 <div class="g2-cell"><span class="g2-k">Last</span><p>Isotretinoin</p></div>
 </div></div>
 </div>
@@ -2406,8 +2406,8 @@ const GUIDE_HTML = `
 <div class="gpt g2-block"><h5><span class="g2-num">2.</span> Adapalene (Differin) 0.1% OTC <span class="g2-src">(AT 27; T@30492&ndash;31851)</span></h5>
 <table class="g2-table g2-kv">
 <tbody>
-<tr><th scope="row">When</th><td>At night; BP in the morning</td></tr>
-<tr><th scope="row">Not with</th><td>Not with sulfur, resorcinol, salicylic acid or vitamin C</td></tr>
+<tr><th scope="row">When</th><td>Apply at night after washing; separate from BP (am vs pm; she put BP as the morning wash)</td></tr>
+<tr><th scope="row">Not with</th><td>Slide: do not use with sulfur, resorcinol, salicylic acid or vitamin C; in class, asked by a student: &ldquo;You may, but separate it&rdquo; (T@32038)</td></tr>
 <tr><th scope="row">Also use</th><td>Moisturizer and sunscreen</td></tr>
 <tr><th scope="row">Age</th><td>Over <b>12 years</b></td></tr>
 </tbody>
@@ -2416,9 +2416,9 @@ const GUIDE_HTML = `
 <div class="gpt g2-block"><h5><span class="g2-num">3.</span> Salicylic acid, AHAs, tea tree oil</h5>
 <table class="g2-table g2-kv">
 <tbody>
-<tr><th scope="row">Salicylic acid</th><td>Once or twice daily as a cleanser or gel; maximum effect <b>4&ndash;6 weeks</b>; limited efficacy data <span class="g2-src">(AT 29)</span></td></tr>
+<tr><th scope="row">Salicylic acid</th><td>Once or twice daily as a cleanser or gel; maximum effectiveness and duration of use <b>4&ndash;6 weeks</b>; limited efficacy data <span class="g2-src">(AT 29)</span></td></tr>
 <tr><th scope="row">AHAs</th><td>Trial form; <b>2&ndash;4 weeks</b> between peels; sunscreen <span class="g2-src">(AT 28)</span></td></tr>
-<tr><th scope="row">Tea tree oil</th><td>In a lotion or gel vehicle <span class="g2-src">(AT 30)</span></td></tr>
+<tr><th scope="row">Tea tree oil</th><td>May be irritating if applied directly: add to a moisturizing lotion or gel vehicle <span class="g2-src">(AT 30)</span></td></tr>
 </tbody>
 </table>
 </div>
@@ -2426,8 +2426,8 @@ const GUIDE_HTML = `
 <table class="g2-table g2-kv">
 <tbody>
 <tr><th scope="row">Topical antibiotics</th><td>Wait <b>30 minutes</b> to shave or apply cosmetics</td></tr>
-<tr><th scope="row">Azelaic acid</th><td>For post-inflammatory dyspigmentation</td></tr>
-<tr><th scope="row">Dapsone</th><td>G6PD; CBC, reticulocytes</td></tr>
+<tr><th scope="row">Azelaic acid</th><td>Adjunctive treatment of post-inflammatory dyspigmentation</td></tr>
+<tr><th scope="row">Dapsone</th><td>5% gel for inflammatory acne (females on the slide; in class also both genders, low efficacy); G6PD concern; monitor CBC and reticulocyte counts</td></tr>
 </tbody>
 </table>
 </div>
@@ -2441,7 +2441,7 @@ const GUIDE_HTML = `
 <tbody>
 <tr><th scope="row">Before</th><td>Wash, pat dry, wait <b>20&ndash;30 minutes</b></td></tr>
 <tr><th scope="row">Apply</th><td>A thin layer in the evening, avoiding eyes, ears, nostrils, mouth</td></tr>
-<tr><th scope="row">If irritation</th><td>Decrease frequency</td></tr>
+<tr><th scope="row">If irritation</th><td>Temporarily discontinue or decrease frequency</td></tr>
 </tbody>
 </table>
 </div>
@@ -2460,7 +2460,7 @@ const GUIDE_HTML = `
 <tr><th scope="row">Age</th><td>Over <b>12 years</b> only (tooth discoloration)</td></tr>
 <tr><th scope="row">Adverse effect</th><td>Photosensitivity</td></tr>
 <tr><th scope="row">Pregnancy</th><td>Avoid in pregnancy</td></tr>
-<tr><th scope="row">Re-evaluate</th><td>Re-evaluate at <b>3&ndash;4 months</b></td></tr>
+<tr><th scope="row">Re-evaluate</th><td>Oral antibiotics: shortest possible duration (resistance); re-evaluate at <b>3&ndash;4 months</b></td></tr>
 </tbody>
 </table>
 <p class="g2-p">TMP/SMX only with macrolide and tetracycline allergy, not in sulfur allergy.</p>
@@ -2470,7 +2470,7 @@ const GUIDE_HTML = `
 <li>Female wanting contraception</li>
 <li>Over 14 or 2 years past menarche</li>
 <li>Non-smoker under 35</li>
-<li>VTE risk</li>
+<li>Not for a past DVT or a smoker: COCs increase the risk of venous thrombotic events (also MI, breast or cervical cancer, decreased bone mass; slide 36)</li>
 </ul>
 </div>
 <div class="gpt g2-block"><h5><span class="g2-num">5.</span> Isotretinoin and iPledge</h5>
@@ -2933,7 +2933,7 @@ const GUIDE_HTML = `
 <thead><tr><th scope="col">Feature</th><th scope="col">Dandruff</th><th scope="col">Seborrheic dermatitis</th><th scope="col">Psoriasis</th></tr></thead>
 <tbody>
 <tr><th scope="row">Location</th><td><span class="g2-lab">Dandruff</span>Scalp</td><td><span class="g2-lab">Seborrheic dermatitis</span>Scalp, face, trunk</td><td><span class="g2-lab">Psoriasis</span>Scalp, elbows, knees, trunk, lower extremities</td></tr>
-<tr><th scope="row">Exacerbating factors</th><td><span class="g2-lab">Dandruff</span>Generally stable; dry climate, cold, stress</td><td><span class="g2-lab">Seborrheic dermatitis</span>Immunosuppression, neurologic conditions, environment, stress</td><td><span class="g2-lab">Psoriasis</span>Environment, infection, medications, stress, alcohol, tobacco</td></tr>
+<tr><th scope="row">Exacerbating factors</th><td><span class="g2-lab">Dandruff</span>Generally stable; increases in dry climate, cold temperature, or stress</td><td><span class="g2-lab">Seborrheic dermatitis</span>Immunosuppression, neurologic conditions, environment, stress</td><td><span class="g2-lab">Psoriasis</span>Environment, infection, medications, stress, alcohol, tobacco</td></tr>
 <tr><th scope="row">Appearance</th><td><span class="g2-lab">Dandruff</span>Thin, white or grey flakes</td><td><span class="g2-lab">Seborrheic dermatitis</span>Macules, patches, thin plaques of yellow, oily scales on red skin</td><td><span class="g2-lab">Psoriasis</span>Discrete symmetrical red plaques, sharp borders; silvery white scales, bleeding points</td></tr>
 <tr><th scope="row">Inflammation; hyperplasia</th><td><span class="g2-lab">Dandruff</span>Absent; absent</td><td><span class="g2-lab">Seborrheic dermatitis</span>Present; present</td><td><span class="g2-lab">Psoriasis</span>Present; present</td></tr>
 <tr><th scope="row">Turnover</th><td><span class="g2-lab">Dandruff</span>Slowest</td><td><span class="g2-lab">Seborrheic dermatitis</span>Second fastest</td><td><span class="g2-lab">Psoriasis</span>Fastest</td></tr>
@@ -2947,7 +2947,7 @@ const GUIDE_HTML = `
 <caption>Dandruff <span class="g2-src">(SD 8; T@84375 11/10)</span></caption>
 <tbody>
 <tr><th scope="row">Cause</th><td>Malassezia</td></tr>
-<tr><th scope="row">Inflammation</th><td>Non-inflammatory, the mild inflammation is secondary to scratching</td></tr>
+<tr><th scope="row">Inflammation</th><td>Non-inflammatory on the slide, which also says Malassezia causes mild inflammation, flaking and itching; in class she said the inflammation is secondary to scratching, not there from the start (T@84589 11/10)</td></tr>
 <tr><th scope="row">Onset</th><td>Puberty onset</td></tr>
 </tbody>
 </table>
@@ -2957,8 +2957,8 @@ const GUIDE_HTML = `
 <caption>Seborrheic dermatitis <span class="g2-src">(SD 11&ndash;12)</span></caption>
 <tbody>
 <tr><th scope="row">Cause</th><td>Malassezia</td></tr>
-<tr><th scope="row">Infants</th><td>Cradle cap, scalp only, up to <b>30 months</b></td></tr>
-<tr><th scope="row">Adults</th><td>Yellow greasy scales on head, ears, face; men &gt; women</td></tr>
+<tr><th scope="row">Infants</th><td>Cradle cap (&ldquo;infants, it&rsquo;s only on the scalp&rdquo;, T@90696; slide 18 still gives face care); <b>may</b> persist up to <b>30 months</b></td></tr>
+<tr><th scope="row">Adults</th><td>Yellow greasy scales (exudate, crusting) on red skin: head, ears, face (itching, stinging), chest, mid-upper trunk, gluteal crease, skin folds; men &gt; women</td></tr>
 </tbody>
 </table>
 </div>
@@ -2982,7 +2982,7 @@ const GUIDE_HTML = `
 <tbody>
 <tr><th scope="row">Mild</th><td><b>&le; 5%</b></td></tr>
 <tr><th scope="row">Moderate</th><td><b>&ge; 8%</b></td></tr>
-<tr><th scope="row">Severe</th><td><b>&ge; 10%</b> (&ldquo;corrected to 10% ... follow this slide&rdquo;, T@10484 11/11)</td></tr>
+<tr><th scope="row">Severe</th><td><b>BSA &ge; 10%</b>, PASI &ge; 10, <i>or</i> DLQI &ge; 10 on the slide (she first said 20%, then &ldquo;corrected to 10% ... follow this slide&rdquo;, T@10484 11/11; &ldquo;I only want you to know the BSA&rdquo;)</td></tr>
 </tbody>
 </table>
 </div>
@@ -3036,7 +3036,7 @@ const GUIDE_HTML = `
 <li>Reduce flare-ups</li>
 <li>Treat associated conditions (hypertension, dyslipidemia, diabetes, depression)</li>
 <li>Screen lifestyle factors (stress, smoking, obesity)</li>
-<li>Counsel</li>
+<li>Counsel (stress reduction, smoking cessation)</li>
 <li>Cost-effective therapy</li>
 <li>Avoid adverse effects</li>
 <li>Quality of life</li>
@@ -3050,7 +3050,7 @@ const GUIDE_HTML = `
 <div class="gpt g2-block"><h5><span class="g2-num">1.</span> Seborrheic dermatitis scale softening <span class="g2-src">(SD 15)</span></h5>
 <ul>
 <li>Mineral or olive oil, or a cream with salicylic acid or sulfur</li>
-<li>Dishwashing liquid for tough scale</li>
+<li>Wash seborrheic skin more often than twice daily (slide 15; she said &ldquo;wash it often&rdquo;); dishwashing liquid <i>may</i> be used on tough scale</li>
 </ul>
 </div>
 <div class="gpt g2-block"><h5><span class="g2-num">2.</span> Infants <span class="g2-src">(SD 18)</span></h5>
@@ -3084,14 +3084,14 @@ const GUIDE_HTML = `
 <div class="g2-ladder">
 <div class="g2-rung g2-s1"><div class="g2-sev">Mild to moderate</div><div class="g2-cells">
 <div class="g2-cell"><span class="g2-k">Order of therapy</span><ul>
-<li><b>Topical agents first</b></li>
+<li><b>Topical agents first</b>; then topical + phototherapy (on slide 35, not spoken in class); then topical + a systemic agent</li>
 <li>Systemic agent <b>last line</b></li>
 <li>Non-drug care for all</li>
 </ul><p><span class="g2-src">(SD 35)</span></p></div>
 </div></div>
 <div class="g2-rung g2-s3"><div class="g2-sev">Moderate to severe</div><div class="g2-cells">
 <div class="g2-cell"><span class="g2-k">Order of therapy</span><ul>
-<li><b>Systemic agent</b> (most likely methotrexate) &plusmn; topical</li>
+<li><b>Systemic agent</b> (eg MTX; &ldquo;most likely methotrexate&rdquo;) &plusmn; topical agent or phototherapy; consider a biologic early if comorbidities exist (eg psoriatic arthritis); she said the topical is always continued</li>
 <li>Then a more potent systemic or a biologic</li>
 <li>Biologics <b>last line</b></li>
 </ul><p><span class="g2-src">(SD 37; T@14941&ndash;15451 11/11)</span></p></div>
@@ -3103,11 +3103,11 @@ const GUIDE_HTML = `
 <table class="g2-table">
 <thead><tr><th scope="col">Agent</th><th scope="col">Use</th></tr></thead>
 <tbody>
-<tr><th scope="row">Corticosteroids</th><td>The most effective, <b>2&ndash;4 times daily</b>, <b>&le; 4 weeks</b></td></tr>
-<tr><th scope="row">Calcipotriene</th><td></td></tr>
+<tr><th scope="row">Corticosteroids</th><td><b>2&ndash;4 times daily</b> (cream or lotion by day, ointment at night); low potency for face and skin folds; limit duration (<b>&le; 4 weeks</b>) and surface area. Said in class: the most effective (T@13906 11/11)</td></tr>
+<tr><th scope="row">Calcipotriene</th><td>Once or twice daily (ointment); twice daily (cream or foam)</td></tr>
 <tr><th scope="row">Tazarotene, adapalene</th><td>At bedtime</td></tr>
-<tr><th scope="row">Anthralin</th><td><b>&le; 2 hours</b> on thick plaques</td></tr>
-<tr><th scope="row">Coal tar</th><td>Overnight</td></tr>
+<tr><th scope="row">Anthralin</th><td>Thick plaques only, <b>&le; 2 hours</b>, then wiped off; zinc oxide around the edges</td></tr>
+<tr><th scope="row">Coal tar</th><td>Apply in the evening, wash off in the morning</td></tr>
 <tr><th scope="row">Salicylic acid shampoo</th><td>For the scalp</td></tr>
 <tr><th scope="row">Pimecrolimus</th><td>For intertriginous areas</td></tr>
 </tbody>
@@ -3653,15 +3653,15 @@ const GUIDE_HTML = `
 <table class="g2-table g2-stack">
 <thead><tr><th scope="col">Exposure</th><th scope="col">Signs and history</th></tr></thead>
 <tbody>
-<tr><th scope="row">Plant dermatitis</th><td>Itching, then erythema, then vesicles and papules; small blisters in a line; rash <b>2&ndash;48 hours</b> after contact with poison ivy, oak or sumac, lasting <b>1&ndash;3 weeks</b> <span class="g2-src">(OE 8, 10)</span></td></tr>
+<tr><th scope="row">Plant dermatitis</th><td>Itching, then erythema, then vesicles and papules; small blisters in a line; rash may appear <b>2&ndash;48 hours</b> after contact with poison ivy, oak or sumac, lasting <b>1&ndash;3 weeks</b>; blisters in a line where the skin brushed the plant<b>1&ndash;3 weeks</b> <span class="g2-src">(OE 8, 10)</span></td></tr>
 <tr><th scope="row">Insect bite</th><td>Mosquitoes, fleas, bedbugs, ticks, chiggers; <b>nonvenomous</b>; mild pruritus, erythema, papules <span class="g2-src">(OE 20)</span></td></tr>
 <tr><th scope="row">Insect sting</th><td>Bees, wasps, yellow jackets, hornets, fire ants; <b>venomous</b>; pain, pruritus, irritation <span class="g2-src">(OE 20)</span></td></tr>
-<tr><th scope="row">Vector-borne disease</th><td>Fever, headache, myalgias, rash <b>2&ndash;14 days</b> after a tick bite; murine typhus: rash from the trunk to the arms and legs <b>5&ndash;6 days</b> after the first symptoms <span class="g2-src">(OE 27&ndash;28)</span></td></tr>
+<tr><th scope="row">Vector-borne disease</th><td>Symptoms <b>2&ndash;14 days</b> after a tick bite: fever, headache, myalgias, rash<b>2&ndash;14 days</b> after a tick bite; murine typhus: rash from the trunk to the arms and legs <b>5&ndash;6 days</b> after the first symptoms <span class="g2-src">(OE 27&ndash;28)</span></td></tr>
 <tr><th scope="row">Head lice</th><td>Itching, scratch marks, live moving lice, nits within <b>4 mm</b> of the scalp; shared personal items <span class="g2-src">(OE 42, 48)</span></td></tr>
-<tr><th scope="row">Scabies</th><td>Inflammation and itching on fingers, wrists, buttocks, armpits, skin folds; prolonged physical contact <span class="g2-src">(OE 50)</span></td></tr>
+<tr><th scope="row">Scabies</th><td>Inflammation and itching, often on fingers, wrists, buttocks, armpits, skin folds; needs prolonged physical contact<span class="g2-src">(OE 50)</span></td></tr>
 <tr><th scope="row">Spider</th><td><b>Brown recluse:</b> fever, blood in urine, rash, joint pain within <b>48 hours</b>, necrosis. <b>Black widow:</b> abdominal pain like appendicitis, muscle pain, sweating, swollen eyelids <span class="g2-src">(OE 52)</span></td></tr>
 <tr><th scope="row">Pit viper</th><td>Graded minimal, moderate or severe by local, systemic and coagulation signs <span class="g2-src">(OE 58)</span></td></tr>
-<tr><th scope="row">Rabies exposure</th><td>A bite (raccoons, bats, foxes, skunks, cats, dogs), or saliva on a scratch, open wound or mucous membrane <span class="g2-src">(OE 62)</span></td></tr>
+<tr><th scope="row">Rabies exposure</th><td>Most often a bite (raccoons, bats, foxes, skunks, cats, dogs); rarely a scratch, abrasion, open wound or mucous membrane contaminated with saliva or other infectious material (such as brain tissue) from a rabid animal, bats, foxes, skunks, cats, dogs), or saliva on a scratch, open wound or mucous membrane <span class="g2-src">(OE 62)</span></td></tr>
 </tbody>
 </table>
 <p class="g2-said"><span class="g2-k">Said in class</span>&ldquo;Pay attention to what insects fall under the bites versus the stings&rdquo; <span class="g2-src">(T@10123 11/12)</span></p>
@@ -3685,7 +3685,7 @@ const GUIDE_HTML = `
 <div class="gpt g2-block"><h5><span class="g2-num">2.</span> Bites, refer <span class="g2-src">(OE 31, 40)</span></h5>
 <ul>
 <li>Symptoms after <b>7 days</b> of treatment or worse during it</li>
-<li>Fever, joint pain, lymph node enlargement, neurologic symptoms</li>
+<li>A secondary infection: fever, joint pain, lymph node enlargement, neurologic symptoms</li></li>
 <li>A suspected vector-borne disease</li>
 </ul>
 </div>
@@ -3724,7 +3724,7 @@ const GUIDE_HTML = `
 <div class="gpt g2-block"><h5><span class="g2-num">6.</span> Never self-care <span class="g2-src">(OE 53, 56, 62)</span></h5>
 <ul>
 <li>Venomous spider bite</li>
-<li>Snake bite (emergency room)</li>
+<li>Snake bite (poison control, transport to a medical facility)</li>
 <li>Rabies exposure (referral for prophylaxis)</li>
 </ul>
 </div>
@@ -3852,7 +3852,9 @@ const GUIDE_HTML = `
 <thead><tr><th scope="col">Presentation</th><th scope="col">Treatment</th></tr></thead>
 <tbody>
 <tr><th scope="row">Itch</th><td>An oral antihistamine</td></tr>
-<tr><th scope="row">Dry lesions</th><td>Hydrocortisone, an anesthetic or a counterirritant</td></tr>
+<tr><th scope="row">Dry lesions</th><td>An anesthetic or a counterirritant (dry only); hydrocortisone (wet or dry)</td></tr>
+<tr><th scope="row">Weeping lesions</th><td>An astringent (aluminum acetate); hydrocortisone is also listed for wet or dry</td></tr>
+(and add: Severe = oral corticosteroids; topical corticosteroids suit any presentation)</td></tr>
 <tr><th scope="row">Weeping lesions</th><td>An astringent (aluminum acetate)</td></tr>
 </tbody>
 </table>
@@ -3860,7 +3862,7 @@ const GUIDE_HTML = `
 <div class="g2-btns"><button type="button" class="chip" data-jump="ref:ref-p8-plant">Reference: plant dermatitis</button></div>
 </div>
 <div class="gpt g2-block"><h5><span class="g2-num">3.</span> Bites and stings <span class="g2-src">(OE 25, 39)</span></h5>
-<p class="g2-p">Protectant, hydrocortisone, anesthetic, counterirritant or oral antihistamine.</p>
+<p class="g2-p">Any one or a combination of: protectant (can be used under 2 years), hydrocortisone, anesthetic, counterirritant, oral antihistamine.</p></p>
 <div class="g2-tiles">
 <div class="g2-tile"><span class="g2-tile-label">Anesthetics and counterirritants: how often</span><span class="g2-tile-num">3&ndash;4 times daily</span></div>
 <div class="g2-tile"><span class="g2-tile-label">Anesthetics and counterirritants: not longer than</span><span class="g2-tile-num">7 days</span></div>
@@ -3872,9 +3874,9 @@ const GUIDE_HTML = `
 <thead><tr><th scope="col">Disease</th><th scope="col">Antibiotic</th></tr></thead>
 <tbody>
 <tr><th scope="row">Murine typhus</th><td>Doxycycline</td></tr>
-<tr><th scope="row">Lyme prophylaxis within <b>72 hours</b> of detaching the tick</th><td>Doxycycline <b>200 mg once</b></td></tr>
+<tr><th scope="row">Lyme prophylaxis for a high-risk bite (Ixodes tick, high endemic area, attached over <b>36 hours</b>), within <b>72 hours</b> of detaching the tick | Doxycycline <b>200 mg once</b> (adult; child 4.4 mg/kg up to 200 mg)</th><td>Doxycycline <b>200 mg once</b></td></tr>
 <tr><th scope="row">Rickettsial fevers</th><td>Doxycycline</td></tr>
-<tr><th scope="row">STARI</th><td>No antibiotic</td></tr>
+<tr><th scope="row">STARI</th><td>IDSA: no antibiotic recommendation</td></tr>
 </tbody>
 </table>
 <table class="g2-table">
@@ -3937,7 +3939,7 @@ const GUIDE_HTML = `
 <p class="g2-p">OE 42 prints &ldquo;in 7 days&rdquo;; see Reference.</p>
 </div>
 <div class="gpt g2-block"><h5><span class="g2-num">3.</span> Scabies <span class="g2-src">(OE 51)</span></h5>
-<p class="g2-p">Itch can last <b>4 weeks</b> after treatment; an oral antihistamine <span class="g2-src">(T@36103 11/12)</span>.</p>
+<p class="g2-p">Itch can last <b>4 weeks</b> after treatment (hypersensitivity): oral antihistamines or topical steroids on the slide; she said &ldquo;most likely we&rsquo;re leaning on that oral antihistamine&rdquo;<span class="g2-src">(T@36103 11/12)</span>.</p>
 </div>
 <div class="gpoll"><b>Her polls</b>
 <details class="g2-self"><summary>Maximum treatment duration for self-care <span class="g2-tap">Show answer</span></summary><p>Seven days (not three, ten or fourteen) <span class="g2-src">(T@20142 11/12)</span></p></details>
@@ -4627,8 +4629,11 @@ const GUIDE_HTML = `
 </div>
 <div class="gpt g2-block"><h5><span class="g2-num">2.</span> Photosensitizing drugs she named <span class="g2-src">(SE 10; T@49890&ndash;50187 11/12)</span></h5>
 <ul>
-<li>Doxycycline and the tetracyclines</li>
+<li>Doxycycline and the tetracyclines (and other antibiotics)</li>
 <li>Ibuprofen</li>
+<li>Combined oral contraceptives (&ldquo;to a certain extent&rdquo;)</li>
+<li>Retinoids</li>
+<li>Sulfonylureas</li>>
 <li>Combined oral contraceptives</li>
 <li>Retinoids</li>
 </ul>
@@ -4641,7 +4646,8 @@ const GUIDE_HTML = `
 <li>A blistering sunburn</li>
 <li>Tanning beds</li>
 <li>A family member with melanoma</li>
-<li>Immunosuppressive medications</li>
+<li>Photosensitizing or immunosuppressive medications</li>
+(and add before it: Freckles; a previous growth on skin or lips from UV exposure; a previous or current UV-induced skin disorder (skin cancer, DNA repair deficiency, photodermatitis, vitiligo); a history of autoimmune disease)
 </ul>
 </div>
 </section>
@@ -4672,9 +4678,7 @@ const GUIDE_HTML = `
 <div>
 <p class="g2-sub">Photoaging</p>
 <ul>
-<li>Coarse wrinkles</li>
-<li>Leathery skin</li>
-<li>Lentigines</li>
+Photoaging: atrophic skin, coarse wrinkles, leathery skin, lentigines, bronzed appearance, yellow cobblestone appearance, telangiectasis, bruising, sun-induced dermatitis. Chronologic aging: thin skin, fine wrinkles, xerosis, laxity, seborrheic keratoses, senile angiomas</li>
 <li>Yellow cobblestone appearance</li>
 <li>Telangiectasis</li>
 </ul>
@@ -4724,7 +4728,7 @@ const GUIDE_HTML = `
 </ul>
 </div>
 <div class="gpt g2-block"><h5><span class="g2-num">3.</span> ABCDE rule <span class="g2-src">(SE 37)</span></h5>
-<p class="g2-p">A lesion that meets the ABCDE rule is seen by a health care provider.</p>
+<p class="g2-p">A suspicious skin lesion is looked at by a health care provider, to decide whether it is skin cancer or another lesion that needs treatment.</p>
 </div>
 <div class="gpt g2-block"><h5><span class="g2-num">4.</span> Hydroquinone and chemical peels</h5>
 <table class="g2-table g2-kv">
@@ -4810,15 +4814,15 @@ const GUIDE_HTML = `
 <table class="g2-table g2-kv">
 <caption>Applying it <span class="g2-src">(SE 21)</span></caption>
 <tbody>
-<tr><th scope="row">Amount</th><td>About <b>1 ounce</b></td></tr>
+<tr><th scope="row">Amount</th><td>Adult: about <b>1 ounce</b> over all exposed skin</td></tr>
 <tr><th scope="row">When</th><td><b>15 minutes</b> before</td></tr>
-<tr><th scope="row">Reapply</th><td>Reapply every <b>40&ndash;80 minutes</b> and after towel drying</td></tr>
+<tr><th scope="row">Reapply</th><td>Every <b>40&ndash;80 minutes</b> (as labeled), and after moisture or towel drying; more often if swimming, sweating or not water resistant</td></tr>
 </tbody>
 </table>
 </div>
 </div>
 <div class="gpt g2-block"><h5><span class="g2-num">2.</span> Sensitive skin or a previous reaction <span class="g2-src">(SE 17)</span></h5>
-<p class="g2-p"><b>Zinc oxide or titanium dioxide</b>; avoid PABA.</p>
+<p class="g2-p">Avoid <b>PABA</b>; consider a GRASE sunscreen: <b>zinc oxide or titanium dioxide</b>.</p> PABA.</p>
 <p class="g2-said"><span class="g2-k">Said in class</span>&ldquo;What two ingredients are most effective, OK? Zinc oxide, titanium dioxide&rdquo; <span class="g2-src">(T@55166 11/12)</span></p>
 </div>
 <div class="gpt g2-block"><h5><span class="g2-num">3.</span> Sunburn <span class="g2-src">(SE 31&ndash;33)</span></h5>
@@ -4828,7 +4832,7 @@ const GUIDE_HTML = `
 <tr><th scope="row">Systemic analgesic</th><td>For the first <b>1&ndash;2 days</b></td></tr>
 <tr><th scope="row">Skin protectant</th><td>After <b>24 hours</b></td></tr>
 <tr><th scope="row">Aloe vera</th><td>On intact skin as an alternative</td></tr>
-<tr><th scope="row">First-aid antiseptics and topical anesthetics</th><td><b>Not recommended</b></td></tr>
+<tr><th scope="row">First-aid antiseptics and topical anesthetics</th><td><b>Not recommended for routine use</b>; if used, only 1&ndash;2% BSA of intact skin, no more than 3&ndash;4 times a day</td></tr></th><td><b>Not recommended</b></td></tr>
 </tbody>
 </table>
 </div>
@@ -5421,7 +5425,7 @@ const GUIDE_HTML = `
 <table class="g2-table g2-stack">
 <thead><tr><th scope="col">Category</th><th scope="col">Adult</th><th scope="col">Child</th><th scope="col">Or</th></tr></thead>
 <tbody>
-<tr><th scope="row">Minor</th><td><span class="g2-lab">Adult</span><b>Under 15%</b> BSA superficial in an adult</td><td><span class="g2-lab">Child</span><b>Under 10%</b> in a child</td><td></td></tr>
+<tr><th scope="row">Minor</th><td><span class="g2-lab">Adult</span>Rows: Minor | Under 15% BSA superficial burn | Under 10% superficial burn | Or under 2% BSA deep partial or full thickness, not eyes, ears, face or genitalia (slide 7 excludes deep injuries: see Reference). Moderate | 15%-25% superficial partial thickness | 10-20% superficial partial thickness | Or 2%-10% BSA deep partial or full thickness, not eyes, ears, face or genitalia. Major | Over 25% superficial partial thickness | Over 20% superficial partial thickness | Or deep partial or full thickness over 10% BSA; eyes, ears, face, genitalia; inhalation or electrical burns; fractures or major trauma; poor-risk patients</td><td><span class="g2-lab">Child</span><b>Under 10%</b> in a child</td><td></td></tr>
 <tr><th scope="row">Moderate</th><td><span class="g2-lab">Adult</span><b>15%&ndash;25%</b> adult</td><td><span class="g2-lab">Child</span><b>10&ndash;20%</b> child</td><td></td></tr>
 <tr><th scope="row">Major</th><td><span class="g2-lab">Adult</span><b>Over 25%</b> adult</td><td><span class="g2-lab">Child</span><b>Over 20%</b> child</td><td>Or eyes, ears, face, genitalia, inhalation or electrical burns, poor-risk patients</td></tr>
 </tbody>
@@ -5444,7 +5448,7 @@ const GUIDE_HTML = `
 <div class="gpt g2-block"><h5><span class="g2-num">2.</span> Order <span class="g2-src">(WC 27; T@82489, T@87422 11/12)</span></h5>
 <ol>
 <li>Cleanse with clean water or saline</li>
-<li>An antibiotic only when indicated</li>
+<li>Use topical antiseptics, antibiotics and anesthetics only when indicated</li>
 <li>Then a dressing suited to the wound</li>
 <li>A moist healing environment</li>
 </ol>
@@ -5455,7 +5459,7 @@ const GUIDE_HTML = `
 <tr><th scope="row">Drugs</th><td>Bacitracin, neomycin, polymyxin B</td></tr>
 <tr><th scope="row">When</th><td>After cleansing and before bandaging</td></tr>
 <tr><th scope="row">How often</th><td><b>1 to 3 times a day</b></td></tr>
-<tr><th scope="row">Toxicity</th><td>Neomycin systemic toxicity with large areas</td></tr>
+<tr><th scope="row">Toxicity</th><td>Risk rises with large areas of application (all three); neomycin: systemic toxicity; polymyxin B: hypersensitivity</td></tr></td></tr>
 </tbody>
 </table>
 </div>
@@ -5465,7 +5469,7 @@ const GUIDE_HTML = `
 <tr><th scope="row">How often</th><td><b>Up to 4 times daily</b></td></tr>
 <tr><th scope="row">Relief</th><td>Relief for <b>15 to 45 minutes</b></td></tr>
 <tr><th scope="row">Broken skin</th><td>Small amounts on broken skin</td></tr>
-<tr><th scope="row">Benzocaine</th><td>Methemoglobinemia</td></tr>
+<tr><th scope="row">Benzocaine</th><td>If absorbed systemically: methemoglobinemia (cyanosis, dyspnea, syncope, seizures, coma)</td></tr>  and Broken skin: small quantities, low concentrations></tr>
 </tbody>
 </table>
 <p class="g2-said"><span class="g2-k">Said in class</span>&ldquo;Understand the systemic toxicity of overuse&rdquo; <span class="g2-src">(T@85399 11/12)</span></p>
@@ -5482,7 +5486,7 @@ const GUIDE_HTML = `
 <table class="g2-table g2-stack">
 <thead><tr><th scope="col">Dressing</th><th scope="col">Absorption</th><th scope="col">Moist environment</th><th scope="col">Notes</th></tr></thead>
 <tbody>
-<tr><th scope="row">Gauze</th><td><span class="g2-lab">Absorption</span>Absorbs</td><td><span class="g2-lab">Moist environment</span>Gives no moist environment</td><td><span class="g2-lab">Notes</span>Needs frequent changes</td></tr>
+<tr><th scope="row">Gauze</th><td><span class="g2-lab">Absorption</span>Absorbs</td><td><span class="g2-lab">Moist environment</span>None by itself; only with another product (e.g., a skin protectant)</td><td><span class="g2-lab">Notes</span>Needs frequent changes</td></tr>
 <tr><th scope="row">Hydrocolloid</th><td></td><td><span class="g2-lab">Moist environment</span>Gives a moist environment</td><td><span class="g2-lab">Notes</span>For uninfected wounds only</td></tr>
 <tr><th scope="row">Transparent film</th><td><span class="g2-lab">Absorption</span>Film is not absorptive</td><td><span class="g2-lab">Moist environment</span>Gives a moist environment</td><td><span class="g2-lab">Notes</span>For uninfected wounds only</td></tr>
 </tbody>
@@ -5518,6 +5522,7 @@ const GUIDE_HTML = `
 <li>Animal or human bite</li>
 <li>Chemical, electrical, inhalation or circumferential burn</li>
 <li>Deep partial thickness or deeper</li>
+<li>Suspected non-accidental injury</li>
 <li>Signs of infection</li>
 <li>Diabetes or another disorder that complicates management</li>
 <li>Foreign matter after irrigation</li>
@@ -5734,7 +5739,7 @@ const GUIDE_HTML = `
 <tbody>
 <tr><th scope="row">Wart <span class="g2-src">(WCC 4&ndash;5)</span></th><td><span class="g2-lab">Cause or site</span>HPV, limited to the epidermis; hands HPV-2, -4, -27, -57, feet HPV-1</td><td><span class="g2-lab">Appearance</span>Rough, cauliflower-like</td><td><span class="g2-lab">Skin ridges</span>A plantar wart disrupts the skin ridges</td><td></td><td></td></tr>
 <tr><th scope="row">Corn <span class="g2-src">(WCC 5, 13)</span></th><td><span class="g2-lab">Cause or site</span>Over a bony prominence of the foot</td><td><span class="g2-lab">Appearance</span>Small, raised, sharply demarcated, with a central core</td><td></td><td><span class="g2-lab">Pain</span>Painful</td><td><span class="g2-lab">Size</span>A few millimeters to <b>1 cm</b></td></tr>
-<tr><th scope="row">Callus <span class="g2-src">(WCC 5, 13)</span></th><td><span class="g2-lab">Cause or site</span>Weight-bearing areas</td><td><span class="g2-lab">Appearance</span>Broad base, diffuse borders, yellowish</td><td><span class="g2-lab">Skin ridges</span>Normal skin ridges</td><td><span class="g2-lab">Pain</span>Usually not painful</td><td><span class="g2-lab">Size</span>A few millimeters to several centimeters</td></tr>
+<tr><th scope="row">Callus <span class="g2-src">(WCC 5, 13)</span></th><td><span class="g2-lab">Cause or site</span>Weight-bearing areas</td><td><span class="g2-lab">Appearance</span>Broad base, diffuse borders, yellowish</td><td><span class="g2-lab">Skin ridges</span>Normal skin ridges</td><td><span class="g2-lab">Pain</span>Usually not painful, but may hurt where pressure is significant (e.g., soles)</td><td><span class="g2-lab">Size</span>A few millimeters to several centimeters<span class="g2-lab">Size</span>A few millimeters to several centimeters</td></tr>
 </tbody>
 </table>
 <div class="g2-btns"><button type="button" class="chip" data-jump="ref:ref-p8-wcc">Reference: wart, corn or callus</button></div>
@@ -5776,7 +5781,8 @@ const GUIDE_HTML = `
 <li>Poor blood circulation</li>
 <li>Irritated, infected or reddened skin</li>
 <li>Moles or birthmarks</li>
-<li>Face, genital or mucous membrane warts</li>
+<li>Warts with hair growing from them</li>
+<li>Face, genital or mucous membrane warts (inside the mouth, nose, anus, genitals, lips)</li>
 </ul>
 </div>
 </section>
@@ -5812,7 +5818,7 @@ const GUIDE_HTML = `
 <li>No shared towels, razors, socks or shoes</li>
 <li>The wart kept covered</li>
 <li>Foot coverings in bathrooms and public spaces</li>
-<li>Padding over a plantar wart</li>
+<li>Plantar wart: may suggest padding (lamb&rsquo;s wool or moleskin) over pressure points to relieve discomfort</li>
 </ul>
 </div>
 <div class="gpt g2-block"><h5><span class="g2-num">2.</span> Corns and calluses <span class="g2-src">(WCC 15)</span></h5>

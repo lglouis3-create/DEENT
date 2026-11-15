@@ -12,7 +12,7 @@
    "short": [
     "Urushiol, an oily liquid from the plant, enters the skin within 10 minutes.",
     "Blisters in a line where the plant brushed the skin; rash 2–48 hours later, lasting 1–3 weeks.",
-    "Refer at 7 days without improvement, or with the face, eyelids or genitalia involved.",
+    "Refer at 7 days without improvement, if worse, with a large area of the face or swollen eyelids, with the genitalia involved, or with a secondary infection.",
     "Itching: oral antihistamine. Weeping: aluminum acetate.",
     "Not used: topical antihistamines and topical antibiotics."
    ],
@@ -42,7 +42,7 @@
         ],
         [
          "Rash appears",
-         "{{2–48 hours}} after exposure"
+         "{{2–48 hours}} after exposure (may appear within this window)"
         ],
         [
          "Rash lasts",
@@ -710,7 +710,7 @@
     "Fleas: murine typhus (Texas) and bubonic plague (Southwest U.S.). Ticks: Lyme disease, rickettsial spotted fevers.",
     "Flu-like symptoms and a rash days after exposure: not self-care; immediate medical referral.",
     "Murine typhus and rickettsial fevers: doxycycline.",
-    "Lyme prophylaxis: one dose of doxycycline within 72 hours of detaching the tick.",
+    "Lyme prophylaxis, for a high-risk bite (Ixodes tick, high endemic area, attached over 36 hours): one dose of doxycycline within 72 hours of detaching the tick.",
     "Erythema migrans: doxycycline 10 days, amoxicillin 14, cefuroxime axetil 14, azithromycin 7 (second line)."
    ],
    "steps": [
@@ -838,7 +838,7 @@
         ],
         [
          "Rickettsial spotted fevers",
-         "Doxycycline, 7 days; recommended for all suspected rickettsial infections"
+         "Doxycycline, 7 days, and at least 3 days after the fever subsides with clinical improvement; recommended for all suspected rickettsial infections"
         ],
         [
          "[[stari|STARI]] (Lone Star tick)",
@@ -856,7 +856,7 @@
         "doxycycline"
        ],
        "pts": [
-        "★ Prophylaxis is given within {{72 hours}} of detaching the tick (\"pay attention to the hour\")",
+        "★ For a high-risk bite (Ixodes tick, high endemic area, attached over {{36 hours}}), prophylaxis is given within {{72 hours}} of detaching the tick (\"pay attention to the hour\")",
         "Doxycycline 200 mg by mouth {{once}}; children 4.4 mg/kg up to 200 mg once"
        ],
        "p": "pa"
@@ -1718,7 +1718,7 @@
     "Sarcoptes scabiei, an arachnid mite; spread by prolonged physical contact.",
     "Inflammation and itching on the fingers, wrists, buttocks, armpits and skin folds.",
     "Five treatment options; she gives no first, second or third line.",
-    "Itching can last 4 weeks after treatment: oral antihistamine.",
+    "Itching can last 4 weeks after treatment: oral antihistamine (topical steroids are also on the slide)..",
     "Hydrocortisone is not used on scabies."
    ],
    "steps": [
@@ -2874,7 +2874,7 @@
    ],
    "how": {
     "p": "pa",
-    "text": "Relieve pain and itching by numbing the skin; relief lasts 15 to 45 minutes.",
+    "text": "Relieve pain and itching by numbing the skin (Wound Care slide 20, minor burns: relief lasts 15 to 45 minutes; continuous pain control cannot be achieved).",
     "src": "Patel Outdoor slide 12; Wound slides 14, 20; 11/12 lecture T@83300"
    },
    "figs": []
@@ -3306,7 +3306,7 @@
    "name": "Doxycycline",
    "brand": "",
    "sm": {
-    "text": "Tetracycline; target the 30S ribosomal subunit: blocks aminoacyl-tRNA binding at the acceptor site; bacteriostatic. Adverse effects include photosensitivity; not in pregnancy or under 8 years.",
+    "text": "Tetracycline; target the 30S ribosomal subunit: blocks aminoacyl-tRNA binding at the acceptor site; bacteriostatic. Adverse effects include photosensitivity in fair-skinned people; not in pregnancy or under 8 years.",
     "src": "PCol slides 43–45 (Reference)"
    },
    "sk": {

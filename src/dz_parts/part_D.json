@@ -97,7 +97,8 @@
        "items": [
         "★ {{Doxycycline}} and the tetracyclines: \"the most common photosensitizing antibiotic\"",
         "{{Ibuprofen}} (NSAIDs)",
-        "{{Combined oral contraceptives}} (her case patient takes Yazmin)",
+        "{{Combined oral contraceptives}} (\"to a certain extent\"; her case patient takes Yazmin)",
+        "{{Sulfonylureas}} (slide 10: type 2 diabetes; she named them too)",
         "{{Retinoids}}: acitretin, isotretinoin",
         "★ \"Highlight the ones that we've talked about to treat our derm conditions\"; the rest of slide 10 is a long list she did not read"
        ],
@@ -221,10 +222,10 @@
         ],
         [
          "Higher SPF",
-         "SPF 15 is acceptable; a higher SPF adds little UVB blocking (Sun slide 15)"
+         "Higher SPF: SPF 15 blocks about 93% of UVB, 30 about 97%, 50 about 98% (slide 15), so a higher SPF adds little; choose by group: types I-II > 30, lupus > 40, photosensitizing drugs > 45, types III-V 15-24 (slide 17) (Sun slide 15)"
         ],
         [
-         "Most reactions",
+         "Risk is higher with: PABA, avobenzone, oxybenzone (most chemical sunscreen ingredients have been linked to dermatologic reactions)",
          "PABA, avobenzone, oxybenzone (Sun slide 25)"
         ],
         [
@@ -645,7 +646,7 @@
     "Refer: large areas of blistering, fever, extreme pain, confusion, vision changes, infection.",
     "Pain: a systemic analgesic for the first 1–2 days.",
     "Dryness: a skin protectant, started after 24 hours. Aloe vera on intact skin.",
-    "Not recommended: first-aid antiseptics and topical anesthetics."
+    "Not recommended for routine use: first-aid antiseptics and topical anesthetics."
    ],
    "steps": [
     {
@@ -998,7 +999,7 @@
     "Four types by age: I 20–30, II 30–40, III 50 or older, IV 60 or older.",
     "Hyperpigmentation: hydroquinone 4%, three months at most, with sunscreen; not FDA-approved for OTC sale.",
     "Wrinkles: a retinoid once at bedtime, SPF 30+ moisturizer by day. Peels are not self-applied.",
-    "A mole that meets the ABCDE rule goes to a health care provider."
+    "A suspicious mole or lesion goes to a health care provider, who decides whether it is skin cancer or another lesion that needs treatment."
    ],
    "steps": [
     {
@@ -2297,7 +2298,7 @@
         ],
         [
          "Pain",
-         "Usually not painful, unless under constant pressure (soles)"
+         "Usually not painful, but pain may occur in areas under constant pressure (soles)"
         ],
         [
          "Size",
@@ -2685,8 +2686,8 @@
          "Friction, walking barefoot, structural foot problems"
         ],
         [
-         "Most common cause",
-         "★ {{Footwear}}"
+         "Most common cause (her words: footwear \"tends to be\")",
+         "★ {{Footwear}}, oftentimes: tight on the sides or not supporting the foot"
         ],
         [
          "Onset",
@@ -3566,7 +3567,7 @@
    "name": "Salicylic acid 17% and 40%",
    "brand": "17%: Dr. Scholl's Corn/Callus Remover Liquid. 40%: Dr. Scholl's Duragel, Curad Mediplast",
    "sm": {
-    "text": "Keratolytic: solubilizes the cell surface proteins that keep the stratum corneum intact. Up to 40% for warts and corns; caution in diabetes and peripheral vascular disease.",
+    "text": "Keratolytic: may solubilize the cell surface proteins that keep the stratum corneum intact. Up to 40% for warts and corns; caution in diabetes and peripheral vascular disease.",
     "src": "Smith PCol slides 39–40"
    },
    "sk": {

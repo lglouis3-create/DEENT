@@ -53,7 +53,7 @@ const DZ = {
          [
           "Most common onset at {{3–6 months}} of age",
           "Majority by age {{one}}; up to {{90%}} by age 5",
-          "{{70–90%}} may resolve by adulthood",
+          "{{70–90%}} may have resolution by adulthood (slide; her spoken reading differs, T@19746)",
           "Earlier onset = longer persistence"
          ]
         ],
@@ -62,7 +62,7 @@ const DZ = {
          [
           "Personal or family history of atopic disorders",
           "[[atopic-triad|Atopic triad]]: {{allergic rhinitis, asthma, atopic dermatitis}}",
-          "[[atopic-march|Atopic march]]: the triad plus {{food allergies}}",
+          "[[atopic-march|Atopic march]]: the typical progression of allergic diseases that often begin early in life: dry skin, eczema, {{food allergies}}, rhinitis, asthma",
           "Loss-of-function mutation in the {{FLG}} gene",
           "Urban environment; smaller family size; higher parental education"
          ]
@@ -70,9 +70,9 @@ const DZ = {
         [
          "Triggers",
          [
-          "Irritants: tobacco smoke, air pollution, cosmetics, fragrances, soaps, detergents, dyes",
+          "Irritants: airborne (tobacco smoke, air pollution); cosmetics, fragrances, astringents; irritating soaps, scrubs, detergents; dyes, preservatives",
           "Allergens: foods (eggs, milk, peanut, soy, wheat, nuts, tomato); wool and polyester; dust mites, pollens, pet dander, molds",
-          "Environment: extreme temperatures",
+          "Environment: extreme temperatures, low humidity",
           "Personal: stress; excessive skin washing and sanitizing"
          ]
         ]
@@ -127,7 +127,7 @@ const DZ = {
        "rows": [
         [
          "First trigger",
-         "Unknown; scratching, irritation or neuropeptides may release proinflammatory cytokines from keratinocytes"
+         "First trigger: Unknown. Neuropeptides, irritation or scratching may release proinflammatory cytokines from keratinocytes. Allergens embedded in the skin or eaten as food may cause T-cell mediated reactions that are IgE-independent (the first T-cell activation is not IgE-mediated)."
         ],
         [
          "Three features",
@@ -145,7 +145,7 @@ const DZ = {
          "Barrier gene",
          [
           "{{FLG}} → profilaggrin → [[flg|filaggrins]] → skin barrier",
-          "A variant lets allergens penetrate the skin",
+          "A variant gives reduced function or no profilaggrin, so allergens penetrate the skin",
           "About {{40%}} of people lacking FLG do not develop it"
          ]
         ],
@@ -212,7 +212,7 @@ const DZ = {
        "rows": [
         [
          "Dr. Patel's sequence",
-         "Disrupted barrier (FLG mutation or dryness) → allergens and irritants enter → inflammatory T-cell response"
+         "Disrupted barrier (FLG mutation, or dryness from cleansing or the environment) → allergens and irritants enter → inflammatory T-cell responses, initiated by keratinocytes (e.g. TSLP) and dendritic cells"
         ],
         [
          "So treatment aims to",
@@ -312,7 +312,7 @@ const DZ = {
         [
          "Severe",
          "SCORAD {{> 50}}",
-         "Widespread dry skin, {{incessant}} itching, thickening, bleeding, oozing; sleep lost nightly"
+         "Widespread dry skin, {{incessant}} itching, redness, thickening, bleeding, oozing; severe limitation of activities; sleep lost nightly"
         ]
        ],
        "p": "pa"
@@ -337,7 +337,7 @@ const DZ = {
         ],
         [
          "Chronic",
-         "{{Lichenified}} papules or plaques",
+         "{{Lichenified}} papules or plaques, fine scale, hypo- or hyperpigmentation",
          "[[lichenification|Lichenification]]: she calls it the silvery, scaly plaque"
         ]
        ],
@@ -429,7 +429,7 @@ const DZ = {
         ],
         [
          "Mild or non-lesional, flare",
-         "Low-to-medium potency twice daily, 3–7 days"
+         "Low-to-medium potency twice daily, 3–7 days beyond clearance"
         ],
         [
          "Moderate, maintenance",
@@ -437,7 +437,7 @@ const DZ = {
         ],
         [
          "Moderate or severe, flare",
-         "Medium-to-high potency twice daily, 3–7 days"
+         "Medium-to-high potency twice daily, 3–7 days beyond clearance"
         ],
         [
          "Needs more strength from the same drug",
@@ -537,7 +537,7 @@ const DZ = {
       {
        "k": "line",
        "label": "Then",
-       "title": "Injectable [[biologic|biologic]] (moderate to severe, after topicals)",
+       "title": "Injectable [[biologic|biologic]] (moderate to severe, not controlled with or unable to use topicals)",
        "drugs": [
         "dupilumab",
         "tralokinumab"
@@ -546,7 +546,7 @@ const DZ = {
         "Specialty drugs; prior authorization",
         "Dupilumab adult: {{600 mg}} once (2 × 300 mg), then {{300 mg every other week}}",
         "May be combined with a topical corticosteroid or calcineurin inhibitor",
-        "Tralokinumab: the alternative to dupilumab"
+        "Tralokinumab: the alternative to dupilumab, for moderate-to-severe disease in adults not controlled with or unable to use topical therapy (slide also prints over 12 y/o)"
        ],
        "warn": "★ Dupilumab: no live vaccines (\"I may include it on a case\").",
        "pick": [
@@ -624,7 +624,7 @@ const DZ = {
         ],
         [
          "Flare not resolved in 7 days",
-         "Consider nonadherence, infection, misdiagnosis, contact allergy to the medication; refer"
+         "If not resolved in 7 days, consider nonadherence, infection, misdiagnosis, contact allergy to the medication, or referral"
         ]
        ],
        "p": "pa"
@@ -986,7 +986,7 @@ const DZ = {
        "rows": [
         [
          "What it is",
-         "A common, self-limiting disease of the {{pilosebaceous units}}; face, upper back, chest"
+         "A common, self-limiting disease of the {{pilosebaceous units}}; typically on the face, upper back and chest"
         ],
         [
          "How common",
@@ -998,7 +998,7 @@ const DZ = {
         ],
         [
          "Sex",
-         "More severe in boys in puberty; in women in adulthood"
+         "Often more severe in boys in puberty; women often have more severe forms in adulthood"
         ],
         [
          "Family",
@@ -1292,7 +1292,7 @@ const DZ = {
         [
          "★ Her order",
          [
-          "{{One}} agent, then two, then three",
+          "{{One}} topical agent (benzoyl peroxide preferred), then a retinoid, then two products, then three: never straight to three",
           "{{Topical before oral}}",
           "Smallest number of agents at the lowest doses",
           "\"Know exactly what has the patient tried and what is left to try\""
@@ -1471,7 +1471,7 @@ const DZ = {
         ],
         [
          "Not usually recommended",
-         "Ointments and bars"
+         "Ointments and bars (any skin type)"
         ]
        ],
        "p": "pa"
@@ -2686,8 +2686,8 @@ const DZ = {
         "★ Lesions for more than {{7 days}}, or no improvement in 7 days despite care",
         "{{Secondary infection}} (viral, bacterial, fungal)",
         "Rash {{outside the diaper region}}",
-        "Possible {{urinary tract infection}}",
-        "Broken skin: ulceration, blistering, peeling",
+        "Diaper dermatitis possibly associated with a {{urinary tract infection}} (painful urination) or disfigurement of the penis or vulva",
+        "Broken skin: ulceration, blistering, peeling, due to disease progression or patient action (e.g., scratching)",
         "Oozing, blood, [[vesicle|vesicles]] or pus; [[bullae|bullae]]; onion-skin appearance",
         "Chronic or frequently recurring lesions",
         "Constitutional symptoms: {{fever}}, diarrhea, nausea, vomiting, swollen inguinal lymph nodes, rapid pulse, rash elsewhere",
@@ -2780,7 +2780,7 @@ const DZ = {
         "Topical {{anesthetics}} (benzocaine, lidocaine)",
         "{{Hydrocortisone}} or any topical corticosteroid"
        ],
-       "warn": "★ \"The biggest difference\" from atopic dermatitis: no topical corticosteroid. The diaper area is a large share of a baby's body surface, so topical products can cause systemic effects.",
+       "warn": "★ \"The biggest difference\" from atopic dermatitis: no topical corticosteroid. The diaper area is a significant portion of a baby's total body surface area, and many topical products can lead to systemic side effects.",
        "p": "pa"
       },
       {
@@ -2865,7 +2865,7 @@ const DZ = {
       "Keep every 4 hours and apply the protectant twice daily"
      ],
      "a": 0,
-     "w": "D: change every 2 hours and as soon as soiled. B: protectant liberally at each change (slide 62; her poll answer \"ABCDE, every 2 hours\").",
+     "w": "D: change every 2 hours and as soon as soiled (slide 62; her poll answer 'ABCDE, every 2 hours', T@82496); slide 57 gives infants every 3 to 4 hours. B: protectant liberally at each change (slide 62; her poll answer \"ABCDE, every 2 hours\").",
      "x": {
       "Keep every 4 hours and add miconazole cream": "Antifungals are not self-care products, and 4 hours is longer than her 2-hour answer.",
       "Change every 2 hours and stop the barrier product": "Barrier is applied liberally at each change.",
@@ -2918,7 +2918,7 @@ const DZ = {
    ],
    "short": [
     "Malassezia fungi on the scalp; non-inflammatory; starts at puberty.",
-    "Thin white or grey flakes on the scalp only.",
+    "Thin white or grey flakes on the scalp (it can reach the face, but it starts on the scalp).",
     "Mild (intermittent): non-medicated shampoo daily or every other day.",
     "Moderate to severe (daily): medicated shampoo, left on 3–5 minutes.",
     "Daily for 1 week, then 2–3 times weekly for 2–3 weeks, then once weekly."
@@ -2992,7 +2992,7 @@ const DZ = {
         ],
         [
          "Where",
-         "{{Scalp}} only"
+         "{{Scalp}} (it can reach the face, but it forms on the scalp)"
         ],
         [
          "Inflammation",
@@ -3151,7 +3151,7 @@ const DZ = {
         ],
         [
          "Coal tar",
-         "Antiproliferative and anti-inflammatory; crosslinks DNA"
+         "Antiproliferative and anti-inflammatory; crosslinks DNA (mechanism not fully known)"
         ]
        ]
       }
@@ -3714,7 +3714,7 @@ const DZ = {
    ],
    "short": [
     "Seborrheic dermatitis of an infant’s scalp; neither harmful nor contagious.",
-    "Greasy or dry scaling, on the scalp only.",
+    "Greasy or dry scaling of the scalp (she said it is only on the scalp; face care is still on slide 18).",
     "Daily: oil massage, non-medicated shampoo, soft bristle brush.",
     "No corticosteroids and no ketoconazole in infants.",
     "Severe cases only: salicylic acid 3–5% in olive oil or a water-soluble base."
@@ -3980,7 +3980,7 @@ const DZ = {
    "short": [
     "Urushiol, an oily liquid from the plant, enters the skin within 10 minutes.",
     "Blisters in a line where the plant brushed the skin; rash 2–48 hours later, lasting 1–3 weeks.",
-    "Refer at 7 days without improvement, or with the face, eyelids or genitalia involved.",
+    "Refer at 7 days without improvement, if worse, with a large area of the face or swollen eyelids, with the genitalia involved, or with a secondary infection.",
     "Itching: oral antihistamine. Weeping: aluminum acetate.",
     "Not used: topical antihistamines and topical antibiotics."
    ],
@@ -4010,7 +4010,7 @@ const DZ = {
         ],
         [
          "Rash appears",
-         "{{2–48 hours}} after exposure"
+         "{{2–48 hours}} after exposure (may appear within this window)"
         ],
         [
          "Rash lasts",
@@ -4678,7 +4678,7 @@ const DZ = {
     "Fleas: murine typhus (Texas) and bubonic plague (Southwest U.S.). Ticks: Lyme disease, rickettsial spotted fevers.",
     "Flu-like symptoms and a rash days after exposure: not self-care; immediate medical referral.",
     "Murine typhus and rickettsial fevers: doxycycline.",
-    "Lyme prophylaxis: one dose of doxycycline within 72 hours of detaching the tick.",
+    "Lyme prophylaxis, for a high-risk bite (Ixodes tick, high endemic area, attached over 36 hours): one dose of doxycycline within 72 hours of detaching the tick.",
     "Erythema migrans: doxycycline 10 days, amoxicillin 14, cefuroxime axetil 14, azithromycin 7 (second line)."
    ],
    "steps": [
@@ -4806,7 +4806,7 @@ const DZ = {
         ],
         [
          "Rickettsial spotted fevers",
-         "Doxycycline, 7 days; recommended for all suspected rickettsial infections"
+         "Doxycycline, 7 days, and at least 3 days after the fever subsides with clinical improvement; recommended for all suspected rickettsial infections"
         ],
         [
          "[[stari|STARI]] (Lone Star tick)",
@@ -4824,7 +4824,7 @@ const DZ = {
         "doxycycline"
        ],
        "pts": [
-        "★ Prophylaxis is given within {{72 hours}} of detaching the tick (\"pay attention to the hour\")",
+        "★ For a high-risk bite (Ixodes tick, high endemic area, attached over {{36 hours}}), prophylaxis is given within {{72 hours}} of detaching the tick (\"pay attention to the hour\")",
         "Doxycycline 200 mg by mouth {{once}}; children 4.4 mg/kg up to 200 mg once"
        ],
        "p": "pa"
@@ -5686,7 +5686,7 @@ const DZ = {
     "Sarcoptes scabiei, an arachnid mite; spread by prolonged physical contact.",
     "Inflammation and itching on the fingers, wrists, buttocks, armpits and skin folds.",
     "Five treatment options; she gives no first, second or third line.",
-    "Itching can last 4 weeks after treatment: oral antihistamine.",
+    "Itching can last 4 weeks after treatment: oral antihistamine (topical steroids are also on the slide)..",
     "Hydrocortisone is not used on scabies."
    ],
    "steps": [
@@ -6827,7 +6827,8 @@ const DZ = {
        "items": [
         "★ {{Doxycycline}} and the tetracyclines: \"the most common photosensitizing antibiotic\"",
         "{{Ibuprofen}} (NSAIDs)",
-        "{{Combined oral contraceptives}} (her case patient takes Yazmin)",
+        "{{Combined oral contraceptives}} (\"to a certain extent\"; her case patient takes Yazmin)",
+        "{{Sulfonylureas}} (slide 10: type 2 diabetes; she named them too)",
         "{{Retinoids}}: acitretin, isotretinoin",
         "★ \"Highlight the ones that we've talked about to treat our derm conditions\"; the rest of slide 10 is a long list she did not read"
        ],
@@ -6951,10 +6952,10 @@ const DZ = {
         ],
         [
          "Higher SPF",
-         "SPF 15 is acceptable; a higher SPF adds little UVB blocking (Sun slide 15)"
+         "Higher SPF: SPF 15 blocks about 93% of UVB, 30 about 97%, 50 about 98% (slide 15), so a higher SPF adds little; choose by group: types I-II > 30, lupus > 40, photosensitizing drugs > 45, types III-V 15-24 (slide 17) (Sun slide 15)"
         ],
         [
-         "Most reactions",
+         "Risk is higher with: PABA, avobenzone, oxybenzone (most chemical sunscreen ingredients have been linked to dermatologic reactions)",
          "PABA, avobenzone, oxybenzone (Sun slide 25)"
         ],
         [
@@ -7375,7 +7376,7 @@ const DZ = {
     "Refer: large areas of blistering, fever, extreme pain, confusion, vision changes, infection.",
     "Pain: a systemic analgesic for the first 1–2 days.",
     "Dryness: a skin protectant, started after 24 hours. Aloe vera on intact skin.",
-    "Not recommended: first-aid antiseptics and topical anesthetics."
+    "Not recommended for routine use: first-aid antiseptics and topical anesthetics."
    ],
    "steps": [
     {
@@ -7728,7 +7729,7 @@ const DZ = {
     "Four types by age: I 20–30, II 30–40, III 50 or older, IV 60 or older.",
     "Hyperpigmentation: hydroquinone 4%, three months at most, with sunscreen; not FDA-approved for OTC sale.",
     "Wrinkles: a retinoid once at bedtime, SPF 30+ moisturizer by day. Peels are not self-applied.",
-    "A mole that meets the ABCDE rule goes to a health care provider."
+    "A suspicious mole or lesion goes to a health care provider, who decides whether it is skin cancer or another lesion that needs treatment."
    ],
    "steps": [
     {
@@ -9027,7 +9028,7 @@ const DZ = {
         ],
         [
          "Pain",
-         "Usually not painful, unless under constant pressure (soles)"
+         "Usually not painful, but pain may occur in areas under constant pressure (soles)"
         ],
         [
          "Size",
@@ -9415,8 +9416,8 @@ const DZ = {
          "Friction, walking barefoot, structural foot problems"
         ],
         [
-         "Most common cause",
-         "★ {{Footwear}}"
+         "Most common cause (her words: footwear \"tends to be\")",
+         "★ {{Footwear}}, oftentimes: tight on the sides or not supporting the foot"
         ],
         [
          "Onset",
@@ -10283,7 +10284,7 @@ const DZ = {
    "name": "Benzoyl peroxide",
    "brand": "",
    "sm": {
-    "text": "Antimicrobial against P. acnes, with peeling and comedolytic effects; benzoic acid is the probable active form. An oxidant: bleaches hair and fabric; a potent contact sensitizer.",
+    "text": "Postulated mechanism: antimicrobial against P. acnes, with peeling and comedolytic effects; benzoic acid is the probable active form. An oxidant: bleaches hair and fabric; a potent contact sensitizer.",
     "src": "PCol slides 36–37"
    },
    "sk": {
@@ -10492,7 +10493,7 @@ const DZ = {
    "name": "Salicylic acid",
    "brand": "17%: Dr. Scholl's Corn/Callus Remover Liquid. 40%: Dr. Scholl's Duragel, Curad Mediplast",
    "sm": {
-    "text": "Solubilizes the cell surface proteins that keep the stratum corneum intact (keratolytic).",
+    "text": "May solubilize the cell surface proteins that keep the stratum corneum intact (keratolytic).",
     "src": "PCol slide 39"
    },
    "sk": {
@@ -10652,7 +10653,7 @@ const DZ = {
    "name": "Azelaic acid 15–20%",
    "brand": "Azelex, Finacea",
    "sk": {
-    "text": "A C9 dicarboxylic acid; antibacterial and anti-inflammatory.",
+    "text": "A C9 dicarboxylic acid; an anti-inflammatory agent.",
     "src": "DPAW page 54"
    },
    "pa": [
@@ -11329,7 +11330,7 @@ const DZ = {
     "src": "PCol slide 34"
    },
    "sk": {
-    "text": "An isoindoline PDE4 inhibitor that raises cAMP; metabolized mainly by CYP3A4, so 3A4 inducers are avoided.",
+    "text": "An isoindoline PDE4 inhibitor that raises cAMP; An isoindoline PDE4 inhibitor that raises cAMP; metabolized mainly by CYP3A4 (1A2 and 2A6 minor), so 3A4 inhibitors and inducers are avoided..",
     "src": "DPAW page 34"
    },
    "pa": [
@@ -11497,7 +11498,7 @@ const DZ = {
    "name": "PUVA (oral psoralen + UVA)",
    "brand": "",
    "sm": {
-    "text": "Methoxsalen: with UV light of 320–340 nm, psoralens intercalate into DNA. Antiproliferative, immunosuppressive, anti-inflammatory.",
+    "text": "Methoxsalen: with UV light of 320–340 nm, psoralens intercalate into DNA. Through incompletely understood mechanisms: antiproliferative, immunosuppressive, anti-inflammatory; stimulates melanocytes.",
     "src": "PCol slide 78; Sun slide 3"
    },
    "sk": {
@@ -12068,7 +12069,7 @@ const DZ = {
    ],
    "how": {
     "p": "pa",
-    "text": "Relieve pain and itching by numbing the skin; relief lasts 15 to 45 minutes.",
+    "text": "Relieve pain and itching by numbing the skin (Wound Care slide 20, minor burns: relief lasts 15 to 45 minutes; continuous pain control cannot be achieved).",
     "src": "Patel Outdoor slide 12; Wound slides 14, 20; 11/12 lecture T@83300"
    },
    "figs": []

@@ -759,7 +759,7 @@
    ],
    "short": [
     "Malassezia fungi on the scalp; non-inflammatory; starts at puberty.",
-    "Thin white or grey flakes on the scalp only.",
+    "Thin white or grey flakes on the scalp (it can reach the face, but it starts on the scalp).",
     "Mild (intermittent): non-medicated shampoo daily or every other day.",
     "Moderate to severe (daily): medicated shampoo, left on 3–5 minutes.",
     "Daily for 1 week, then 2–3 times weekly for 2–3 weeks, then once weekly."
@@ -833,7 +833,7 @@
         ],
         [
          "Where",
-         "{{Scalp}} only"
+         "{{Scalp}} (it can reach the face, but it forms on the scalp)"
         ],
         [
          "Inflammation",
@@ -992,7 +992,7 @@
         ],
         [
          "Coal tar",
-         "Antiproliferative and anti-inflammatory; crosslinks DNA"
+         "Antiproliferative and anti-inflammatory; crosslinks DNA (mechanism not fully known)"
         ]
        ]
       }
@@ -1555,7 +1555,7 @@
    ],
    "short": [
     "Seborrheic dermatitis of an infant’s scalp; neither harmful nor contagious.",
-    "Greasy or dry scaling, on the scalp only.",
+    "Greasy or dry scaling of the scalp (she said it is only on the scalp; face care is still on slide 18).",
     "Daily: oil massage, non-medicated shampoo, soft bristle brush.",
     "No corticosteroids and no ketoconazole in infants.",
     "Severe cases only: salicylic acid 3–5% in olive oil or a water-soluble base."
@@ -1989,7 +1989,7 @@
    "name": "Tazarotene",
    "brand": "",
    "sm": {
-    "text": "Target: retinoic acid receptors RAR and RXR. Topical retinoid for psoriasis, acne and wrinkles. Photosensitivity; contraceptive counseling; not in pregnancy.",
+    "text": "Target: retinoic acid receptors RAR and RXR. Topical retinoid for psoriasis, mild to moderately severe facial acne and wrinkles. Photosensitivity; contraceptive counseling; not in pregnancy.",
     "src": "PCol slides 14, 18"
    },
    "sk": {
@@ -2134,7 +2134,7 @@
    "name": "Salicylic acid",
    "brand": "",
    "sm": {
-    "text": "Keratolytic: solubilizes the cell surface proteins that keep the stratum corneum intact.",
+    "text": "Keratolytic: may solubilize the cell surface proteins that keep the stratum corneum intact.",
     "src": "PCol slide 39"
    },
    "sk": {
@@ -2338,7 +2338,7 @@
     "src": "PCol slide 34"
    },
    "sk": {
-    "text": "An isoindoline PDE4 inhibitor that raises cAMP; metabolized mainly by CYP3A4, so 3A4 inducers are avoided.",
+    "text": "An isoindoline PDE4 inhibitor that raises cAMP; An isoindoline PDE4 inhibitor that raises cAMP; metabolized mainly by CYP3A4 (1A2 and 2A6 minor), so 3A4 inhibitors and inducers are avoided..",
     "src": "DPAW page 34"
    },
    "pa": [
@@ -2506,7 +2506,7 @@
    "name": "PUVA (oral psoralen + UVA)",
    "brand": "",
    "sm": {
-    "text": "Methoxsalen: with UV light of 320–340 nm, psoralens intercalate into DNA. Antiproliferative, immunosuppressive, anti-inflammatory.",
+    "text": "Methoxsalen: with UV light of 320–340 nm, psoralens intercalate into DNA. Through incompletely understood mechanisms: antiproliferative, immunosuppressive, anti-inflammatory; stimulates melanocytes.",
     "src": "PCol slide 78; Sun slide 3"
    },
    "sk": {
