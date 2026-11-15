@@ -19,6 +19,8 @@ Every update adds its bullets here in the same commit that makes the change.
 - Each drawn diagram now opens with a sentence on what it shows and what it is for.
 
 ## 2026-11-15 (exam paper, stars, questions)
+- FTU tab: the chart's elbow and knee rows are 1 FTU for one elbow or one knee, and the diagram outlines one.
+- Guides, Diseases and Reference: shortened rows regained qualifiers, such as the cause of dryness in atopic dermatitis.
 - Guides, Exam 2: slide-by-slide pages for Dr. Patel's decks showing what her lecture adds to each slide.
 - Stars mark what the professors stressed in the reading tabs, with the reason; "Starred only" shows just those.
 - Guides, Exam 1: a walkthrough of the slides Dr. Sikazwe assigned, slide by slide, with what he said to know.

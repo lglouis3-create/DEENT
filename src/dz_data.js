@@ -729,7 +729,7 @@ const DZ = {
           "One leg with the foot {{8}}",
           "One foot {{2}}; both soles 1.5",
           "Trunk {{7}} each side (14 both)",
-          "Buttocks 4; elbows 1; knees 1"
+          "Buttocks 4; 1 for each elbow; 1 for each knee"
          ]
         ],
         [
