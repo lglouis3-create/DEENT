@@ -351,9 +351,9 @@ QUESTIONS.push(
 
 {id:'BP5-008', type:'blank', skill:'dose', prof:'Patel', tier:'new', topic:'p5-qty', sub:'calc', concept:'b-calc-face-tid',
  tags:['blank'], source:'both', dupOf:'P5-007',
- stem:"Face and neck, three times daily for 14 days: ___ g of ointment.",
- accept:["52.5", "52.5 g"],
- why:"2.5 FTU × 0.5 g = 1.25 g per application (slides 10–11, 13); × 3 a day × 14 days = 52.5 g. In class: \"So that would be 52.5 g\", then round up to the tube size offered (60 g in her poll) (T@11799).",
+ stem:"An adult applies an ointment to the face and neck three times daily for 14 days. Tubes come in 15, 30, 45, 60, 80 and 100 g. Tube size to dispense: ___ g.",
+ accept:["60", "60 g"],
+ why:"2.5 FTU × 0.5 g = 1.25 g per application (slides 10–11, 13); × 3 a day × 14 days = 52.5 g needed. Prescribed amounts are rounded up to an available tube size (slide 10), so 60 g is dispensed. In class: \"So that would be 52.5 g\", then \"what was the closest size tube that you would round up to? 60\" (T@11799).",
  cite:BQ_P5+" slides 10–11, 13; T@11799"},
 
 {id:'BP5-009', type:'blank', skill:'dose', prof:'Patel', tier:'new', topic:'p5-qty', sub:'calc', concept:'b-calc-face-bid-tube',
@@ -365,16 +365,16 @@ QUESTIONS.push(
 
 {id:'BP5-010', type:'blank', skill:'dose', prof:'Patel', tier:'new', topic:'p5-qty', sub:'calc', concept:'b-calc-trunk-bid',
  tags:['blank'], source:'both', dupOf:'P5-008',
- stem:"One side of the trunk, twice daily for 2 weeks: ___ g of ointment.",
- accept:["98", "98 g"],
+ stem:"An adult applies an ointment to one side of the trunk twice daily for 2 weeks. Tubes come in 15, 30, 45, 60, 80 and 100 g. Tube size to dispense: ___ g.",
+ accept:["100", "100 g"],
  why:"7 FTU = 3.5 g per application (slide 13); × 2 a day × 14 days = 98 g, dispensed as 100 g. In class: \"you should get 98 g ... round it up as well to 100 g\" (T@10376).",
  cite:BQ_P5+" slides 11, 13; T@10376"},
 
 {id:'BP5-011', type:'blank', skill:'dose', prof:'Patel', tier:'new', topic:'p5-qty', sub:'calc', concept:'b-calc-arm-bid',
  tags:['blank'], source:'slide', dupOf:'P5-010',
- stem:"One arm including the hand, twice daily for 14 days: ___ g of ointment.",
- accept:["56", "56 g"],
- why:"Slide 11: one arm including entire hand, 4 FTU; slide 10: 1 FTU = 0.5 g. 4 × 0.5 g = 2 g per application; × 2 a day × 14 days = 56 g.",
+ stem:"An adult applies an ointment to one arm including the hand twice daily for 14 days. Tubes come in 15, 30, 45, 60, 80 and 100 g. Tube size to dispense: ___ g.",
+ accept:["60", "60 g"],
+ why:"Slide 11: one arm including entire hand, 4 FTU; slide 10: 1 FTU = 0.5 g. 4 × 0.5 g = 2 g per application; × 2 a day × 14 days = 56 g needed. Prescribed amounts are rounded up to an available tube size (slide 10): 60 g.",
  cite:BQ_P5+" slides 10–11"},
 
 {id:'BP5-012', type:'blank', skill:'case', prof:'Patel', tier:'new', topic:'p5-ad', sub:'sev', concept:'b-scorad-moderate',
