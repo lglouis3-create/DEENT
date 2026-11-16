@@ -327,6 +327,7 @@ const COURSE = {
           // Wide screens (iPad Pro 13, MacBook) and the pinned tab strip that hides while reading
           // (course-level, Louis 2026-11-08; temporary until the kit has these)
           'place_keep.js',
+          'exam_all_ui.js',
           'wide_ui.js',
           // Reference and Tell apart tables: short lines inside cells and one card per row on
           // phones (course-level presentation, 2026-11-08)
