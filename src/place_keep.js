@@ -31,7 +31,12 @@
     }
     let last = '';
     const copy = () => {
-      try { const v = sessionStorage.getItem(KEY); if (v && v !== last) { last = v; localStorage.setItem(KEEP, v); } } catch (e) { /* refused: nothing kept */ }
+      // only a place with a quiz in it is kept: that is what a fresh draw of questions would lose. A place with none (Topics,
+      // a reading tab) removes the copy, so a quiz left long ago is not brought back over a page the reader moved to.
+      try {
+        const v = sessionStorage.getItem(KEY); if (v === last) return; last = v;
+        if (v && /"quiz":\{/.test(v)) localStorage.setItem(KEEP, v); else if (localStorage.getItem(KEEP) !== null) localStorage.removeItem(KEEP);
+      } catch (e) { /* refused: nothing kept */ }
     };
     // the core saves its record on the same events; saving it first here puts the newest one in the copy
     const now = () => { try { if (typeof placeSave === 'function') placeSave(); } catch (e) { /* the core's own record stands */ } copy(); };

@@ -22,7 +22,8 @@ const check = (ok, label, detail) => { n++; if (!ok) fail++; console.log((ok ? '
     const c = await p1.$('#btnCheck'); if (c) { await c.click(); await p1.waitForTimeout(250); }
     const a = await info(p1);
     await p1.evaluate(() => PLACE_KEEP.now());
-    const kept = await p1.evaluate(k => !!localStorage.getItem(k), a.key);
+    const rec = await p1.evaluate(k => localStorage.getItem(k), a.key);
+    const kept = !!rec;
     check(kept, `${tag}: the place is copied once there is one`);
     const p2 = await open();          // a new session of the same browser: no sessionStorage
     const b2 = await info(p2);
@@ -31,13 +32,13 @@ const check = (ok, label, detail) => { n++; if (!ok) fail++; console.log((ok ? '
     // a quiz of another profile is not brought back (the core's own check)
     const p3 = await ctx.newPage(); p3.on('pageerror', e => errs.push(e.message));
     await p3.goto(PAGE); await p3.waitForTimeout(300);
-    await p3.evaluate(k => { const o = JSON.parse(localStorage.getItem(k)); o.p = 'someone-else'; localStorage.setItem(k, JSON.stringify(o)); sessionStorage.clear(); window.placeSave = () => {}; }, a.key);   // the page being left must not write its own place over the edited copy
+    await p3.evaluate(([k, r]) => { const o = JSON.parse(r); o.p = 'someone-else'; localStorage.setItem(k, JSON.stringify(o)); sessionStorage.clear(); window.placeSave = () => {}; }, [a.key, rec]);   // the page being left must not write its own place over the edited copy
     await p3.reload(); await p3.waitForTimeout(1400);
     check(await p3.evaluate(() => VIEW !== 'quiz' || !(Q && Q.current)), `${tag}: a place saved under another profile does not bring its quiz back`);
     // an old copy is not used
     const p4 = await ctx.newPage(); p4.on('pageerror', e => errs.push(e.message));
     await p4.goto(PAGE); await p4.waitForTimeout(300);
-    await p4.evaluate(k => { const o = JSON.parse(localStorage.getItem(k)); o.at = Date.now() - 13 * 3600000; o.p = undefined; localStorage.setItem(k, JSON.stringify(o)); sessionStorage.clear(); window.placeSave = () => {}; }, a.key);
+    await p4.evaluate(([k, r]) => { const o = JSON.parse(r); o.at = Date.now() - 13 * 3600000; o.p = undefined; localStorage.setItem(k, JSON.stringify(o)); sessionStorage.clear(); window.placeSave = () => {}; }, [a.key, rec]);
     await p4.reload(); await p4.waitForTimeout(1400);
     check(await p4.evaluate(() => VIEW === 'topics' && !(Q && Q.current)), `${tag}: a copy older than 12 hours is not used`);
     check(!errs.length, `${tag}: no page errors`, errs.join(' | '));
