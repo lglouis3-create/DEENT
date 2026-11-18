@@ -58,7 +58,7 @@ QUESTIONS.push(
  tags:['mechanism'], source:'both',
  stem:"What is known about how ophthalmic antihistamines stabilize mast cells?",
  options:[
-  {t:"The mechanism is unclear, with H1 receptor dependent and independent parts", correct:true, why:"Slide 51: both H1 receptor dependent and independent mechanisms; \"still unclear\". \"We don't really know how these medications help those mast cells\" (T@45806, T@46013 11/17)."},
+  {t:"It is unclear, with H1 dependent and independent components", correct:true, why:"Slide 51: both H1 receptor dependent and independent mechanisms; \"still unclear\". \"We don't really know how these medications help those mast cells\" (T@45806, T@46013 11/17)."},
   {t:"It occurs through H1 receptor inverse agonism on the mast cell alone", correct:false, why:"Slide 51 says the mechanism has H1 dependent and independent parts, so H1 inverse agonism alone does not account for it."},
   {t:"It occurs through H4 receptor antagonism on the mast cell", correct:false, why:"H4 receptors are on eosinophils (T@49053 11/17), and H4 antagonism is described only for alcaftadine (slide 53)."},
   {t:"It occurs through calcineurin inhibition in the mast cell", correct:false, why:"Calcineurin inhibition is the mechanism of cyclosporine in dry eye (slide 64), not an explanation given for mast cell stabilization."}],
@@ -67,7 +67,7 @@ QUESTIONS.push(
 
 {id:"EL-006", skill:"case", prof:'Smith', tier:'new', topic:"ey-ac", sub:"h1", concept:"ey-ac-prophylaxis-drug",
  tags:['case', 'two-facts'], source:'both',
- stem:"A patient has itchy eyes every January when cedar pollen arrives. It is mid-December. Which ophthalmic drug should she start now so that histamine release is prevented?",
+ stem:"A patient has itchy eyes every January when cedar pollen arrives. It is mid-December. Which ophthalmic drug should the patient start now so that histamine release is prevented?",
  options:[
   {t:"Cetirizine", correct:false, why:"Slide 53: cetirizine is an H1 inverse agonist without mast cell stabilization, so it is the one not suggested for prophylactic use (T@51813 11/17)."},
   {t:"Olopatadine", correct:true, why:"Slide 54: olopatadine is an H1 inverse agonist with mast cell stabilization. Drugs with mast cell stabilization are suggested before cedar season so that release is prevented (T@46757 11/17)."},
@@ -126,10 +126,10 @@ QUESTIONS.push(
  options:[
   {t:"Minimal anticholinergic effects, with drowsiness still possible", correct:false, why:"That profile is cetirizine's (slide 53): minimal anticholinergic effects and negligible CNS penetration, yet it still causes drowsiness."},
   {t:"Some anticholinergic activity and penetration into the CNS", correct:false, why:"That profile is azelastine's (T@49943 11/17), an older antihistamine."},
-  {t:"Very little anticholinergic activity and little CNS penetration", correct:true, why:"Slide 53: alcaftadine has very little anticholinergic activity, little penetration into the CNS and a low incidence of side effects (T@49053 11/17)."},
+  {t:"Very little anticholinergic activity and little CNS penetration", correct:true, why:"Slide 53: alcaftadine has very little anticholinergic activity, little penetration into the CNS and a low incidence of side effects (T@49300 11/17)."},
   {t:"Strong anticholinergic activity offset by H4 antagonism", correct:false, why:"Slide 53 gives alcaftadine very little anticholinergic activity; H4 antagonism is a separate feature."}],
  teach:"Slide 53 and T@49053 11/17: alcaftadine blocks H4 as well as H1, has very little anticholinergic activity and little CNS penetration, and so has few side effects. Azelastine has some of each; cetirizine causes drowsiness in sensitive patients.",
- cite:"Lectures 9–10 (Smith_Eye_Glaucoma_AllergicConj_DryEye.pdf) slide 53; T@49053, T@49943 11/17"},
+ cite:"Lectures 9–10 (Smith_Eye_Glaucoma_AllergicConj_DryEye.pdf) slide 53; T@49300, T@49943 11/17"},
 
 {id:"EL-014", skill:"tell", prof:'Smith', tier:"new", topic:"ey-ac", sub:"h1", concept:"ey-ac-azelastine",
  tags:['tell-apart'], source:'both',
@@ -158,7 +158,7 @@ QUESTIONS.push(
  stem:"H1 activation in the CNS increases wakefulness. Which adverse effect is expected when an H1 inverse agonist reaches the CNS?",
  options:[
   {t:"Insomnia", correct:false, why:"Insomnia would follow more H1 activity; an inverse agonist lowers it (slide 49)."},
-  {t:"Drowsiness", correct:true, why:"Slide 49: H1 activation in the CNS increases wakefulness, so inverse agonism there reduces wakefulness. The lecture ties this to the side effects of systemic antihistamines (T@42602 11/17); cetirizine drowsiness (slide 53)."},
+  {t:"Drowsiness", correct:true, why:"Slide 49: H1 activation in the CNS increases wakefulness, so inverse agonism there reduces wakefulness. This is a derived prediction, not a stated fact about ophthalmic drugs: the stem gives the premise (slide 49) and the conclusion follows. It matches the lecture's remark that CNS H1 activation leads to side effects of systemic antihistamines (T@42602 11/17) and the drowsiness described for cetirizine (slide 53; T@50609)."},
   {t:"Bronchoconstriction", correct:false, why:"Slide 49: bronchoconstriction is an effect of H1 activation in the bronchi, which an inverse agonist reduces."},
   {t:"Dry mouth", correct:false, why:"Dry mouth is an anticholinergic effect; the ophthalmic antihistamines have little or minimal anticholinergic activity (slide 53)."}],
  teach:"Slide 49 and T@42602 11/17: H1 activation in the CNS inhibits appetite and increases wakefulness; this connects to the side effects when antihistamines are used systemically (taught in the later lecture on systemic allergies).",
@@ -168,10 +168,10 @@ QUESTIONS.push(
  tags:['mechanism'], source:'both',
  stem:"How do ophthalmic alpha 2 agonists reduce the redness of allergic conjunctivitis?",
  options:[
-  {t:"They inversely agonize H1 receptors on conjunctival vessels", correct:false, why:"H1 inverse agonism is the mechanism of the antihistamines (slide 51), which reduce itch and watery eyes (slide 52)."},
+  {t:"They inversely agonize H1 receptors on the conjunctival vessels", correct:false, why:"H1 inverse agonism is the mechanism of the antihistamines (slide 51), which reduce itch and watery eyes (slide 52)."},
   {t:"They stabilize mast cells so less histamine reaches the vessels", correct:false, why:"Mast cell stabilization is a property of the antihistamines (slide 51), not of alpha 2 agonists."},
   {t:"They agonize adrenergic receptors, constricting conjunctival vessels", correct:true, why:"Slide 56: adrenergic receptor agonists used as vasoconstrictors for local application to the eye; they reduce redness (T@52690 11/17)."},
-  {t:"They block H4 receptors so eosinophils are not activated", correct:false, why:"H4 antagonism is described for alcaftadine (slide 53), an antihistamine."}],
+  {t:"They block H4 receptors so eosinophils are not activated in the eye", correct:false, why:"H4 antagonism is described for alcaftadine (slide 53), an antihistamine."}],
  teach:"Slide 56 and T@52180 11/17: alpha 2 agonists agonize adrenergic receptors in the eye and nose and cause vasoconstriction, which reduces the redness (and some leaking and edema).",
  cite:"Lectures 9–10 (Smith_Eye_Glaucoma_AllergicConj_DryEye.pdf) slide 56; T@52180, T@52690 11/17"},
 
@@ -224,8 +224,8 @@ QUESTIONS.push(
  tags:['tell-apart'], source:'both',
  stem:"Which action is expected from an ophthalmic alpha 2 agonist but not from an ophthalmic H1 inverse agonist?",
  options:[
-  {t:"Reduction of itching", correct:false, why:"Slide 52: H1 inverse agonists reduce itch, so this is expected from the antihistamine."},
-  {t:"Reduction of watery eyes", correct:false, why:"Slide 52: H1 inverse agonists reduce watery eyes."},
+  {t:"Reduction of itching of the eyes", correct:false, why:"Slide 52: H1 inverse agonists reduce itch, so this is expected from the antihistamine."},
+  {t:"Reduction of watery eyes and edema", correct:false, why:"Slide 52: H1 inverse agonists reduce watery eyes."},
   {t:"Less cytokine secretion by mast cells", correct:false, why:"Slide 51: mast cell stabilization reduces cytokine secretion, an antihistamine property."},
   {t:"Vasoconstriction that reduces redness", correct:true, why:"Slide 56: alpha 2 agonists are vasoconstrictors that reduce redness (T@52690 11/17)."}],
  teach:"Slide 52: antihistamines reduce edema, itch, inflammation and watery eyes. Slide 56: alpha 2 agonists reduce redness by vasoconstriction.",
@@ -235,7 +235,7 @@ QUESTIONS.push(
  tags:['two-facts', 'mechanism'], source:'transcript',
  stem:"A mast cell stabilizing antihistamine is started before the season rather than after symptoms begin. What does the earlier start allow?",
  options:[
-  {t:"Release is prevented, and H1 inverse agonism covers any histamine that escapes", correct:true, why:"T@46757 11/17: prevent the release of histamine through mast cell stabilization; \"if histamine does get released, you have the H1 inverse agonism present as well\". It is harder to stop itching once histamine has been released."},
+  {t:"Histamine release is prevented, and inverse agonism covers any that escapes", correct:true, why:"T@46757 11/17: prevent the release of histamine through mast cell stabilization; \"if histamine does get released, you have the H1 inverse agonism present as well\". It is harder to stop itching once histamine has been released."},
   {t:"Conjunctival vessels are already constricted when the histamine arrives", correct:false, why:"Vasoconstriction is the effect of alpha 2 agonists (slide 56), not of antihistamines."},
   {t:"Histamine that was already released is cleared from the H1 receptors", correct:false, why:"Stabilization prevents release; it does not remove histamine that has already been released (T@46757 11/17)."},
   {t:"IgE is removed from the mast cell surface before the pollen arrives", correct:false, why:"Slide 51 does not describe any action on IgE; stabilization reduces the release of mediators."}],
@@ -246,7 +246,7 @@ QUESTIONS.push(
  tags:['tell-apart'], source:'slide',
  stem:"Which two ophthalmic antihistamines are also nasal sprays for allergic rhinitis?",
  options:[
-  {t:"Ketotifen and epinastine", correct:false, why:"Slides 54: neither lists a nasal spray; epinastine adds H2 antagonism."},
+  {t:"Ketotifen and epinastine", correct:false, why:"Slide 54: neither lists a nasal spray; epinastine adds H2 antagonism."},
   {t:"Azelastine and olopatadine", correct:true, why:"Slide 53 (azelastine) and slide 54 (olopatadine) both list a nasal spray for allergic rhinitis (T@49943, T@51408 11/17)."},
   {t:"Cetirizine and bepotastine", correct:false, why:"Slide 53: neither lists a nasal spray."},
   {t:"Alcaftadine and ketotifen", correct:false, why:"Slides 53-54: neither lists a nasal spray."}],
@@ -349,7 +349,7 @@ QUESTIONS.push(
   {t:"Antihistamines", correct:true, why:"Slide 62: medications that may be causative include antihistamines (T@57090 11/17)."},
   {t:"Decongestants", correct:true, why:"Slide 62 lists decongestants as a cause of dry eye."},
   {t:"Hormone replacement therapy", correct:true, why:"Slide 62 lists hormone replacement therapy as a cause of dry eye."},
-  {t:"Corticosteroids", correct:false, why:"Slide 69: loteprednol, a corticosteroid, is used to treat dry eye."},
+  {t:"Corticosteroids", correct:false, why:"Not on the list of drugs that may cause dry eye (slide 62); loteprednol, a corticosteroid, is used to treat dry eye (slide 69)."},
   {t:"Calcineurin inhibitors", correct:false, why:"Slides 64-67: cyclosporine, a calcineurin inhibitor, is used to treat dry eye."}],
  teach:"Slide 62: antihistamines, decongestants, antidepressants and hormone replacement therapy may cause dry eye (T@57090 11/17).",
  cite:"Lectures 9–10 (Smith_Eye_Glaucoma_AllergicConj_DryEye.pdf) slide 62; T@57090 11/17"},
@@ -381,7 +381,7 @@ QUESTIONS.push(
  stem:"How does cyclosporine increase tear production in dry eye?",
  options:[
   {t:"It blocks CD80/86 on the antigen presenting cell from binding CD28 on the T cell", correct:false, why:"That is signal 2 (slide 65); calcineurin inhibitors act in the signal cascade (T@59195 11/17)."},
-  {t:"It inhibits calcineurin, lowering IL-2 production and ocular inflammation", correct:true, why:"Slides 64-67: a calcineurin inhibitor that inhibits production of IL-2, causing immunosuppression and reducing inflammation (T@58677 11/17)."},
+  {t:"It inhibits calcineurin, lowering IL-2 and ocular inflammation", correct:true, why:"Slides 64 and 67: a calcineurin inhibitor class immunosuppressant; inhibiting IL-2 production reduces inflammation, which helps tear production (T@58455, T@58677 11/17)."},
   {t:"It blocks IL-2 binding to CD25 on the T cell, stopping proliferation", correct:false, why:"That is signal 3 (slide 65); cyclosporine lowers IL-2 production instead."},
   {t:"It activates the trigeminal parasympathetic pathway through nasal receptors", correct:false, why:"That is the mechanism of intranasal varenicline (slide 73)."}],
  teach:"Slides 64-67: cyclosporine is a topical calcineurin inhibitor. By inhibiting IL-2 production it reduces ocular inflammation, which increases tear production.",
@@ -393,7 +393,7 @@ QUESTIONS.push(
  options:[
   {t:"FKBP", correct:false, why:"Slide 66: FKBP is the protein that tacrolimus (FK506) binds (T@60981 11/17)."},
   {t:"NFAT", correct:false, why:"NFAT is the transcription factor that calcineurin dephosphorylates to allow IL-2 expression (slide 66); it is not the drug-binding protein."},
-  {t:"Cyclophilin", correct:true, why:"Slide 66: cyclosporine binds cyclophilin, and that complex inhibits calcineurin (T@60561 11/17)."},
+  {t:"Cyclophilin", correct:true, why:"T@60536 11/17: cyclosporin binds cyclophilin, and that complex is what inhibits calcineurin; tacrolimus binds FKBP instead (slide 66 figure)."},
   {t:"Calmodulin", correct:false, why:"Calmodulin, with calcium, activates calcineurin (slide 66); it is not the drug-binding protein."}],
  teach:"Slide 66 and T@60561 11/17: cyclosporine binds cyclophilin and tacrolimus binds FKBP; either complex inhibits calcineurin. She said these will return in oncology.",
  cite:"Lectures 9–10 (Smith_Eye_Glaucoma_AllergicConj_DryEye.pdf) slide 66; T@60561, T@60981 11/17"},
@@ -402,7 +402,7 @@ QUESTIONS.push(
  tags:['mechanism', 'recall'], source:'both',
  stem:"Which calcineurin inhibitor forms its inhibitory complex with FKBP?",
  options:[
-  {t:"Cyclosporine", correct:false, why:"Slide 66: cyclosporine binds cyclophilin."},
+  {t:"Cyclosporine", correct:false, why:"T@60536 11/17: cyclosporin binds cyclophilin; tacrolimus is the one that binds FKBP (slide 66)."},
   {t:"Loteprednol", correct:false, why:"Loteprednol is a corticosteroid (slide 69), not a calcineurin inhibitor."},
   {t:"Lifitegrast", correct:false, why:"Lifitegrast is an LFA-1 antagonist (slide 71), not a calcineurin inhibitor."},
   {t:"Tacrolimus", correct:true, why:"Slide 66: tacrolimus (FK506) binds FKBP, and that complex inhibits calcineurin (T@60981 11/17)."}],
@@ -436,8 +436,8 @@ QUESTIONS.push(
  stem:"When the cyclosporine and cyclophilin complex inhibits calcineurin, what happens to NFAT?",
  options:[
   {t:"It is dephosphorylated but cannot enter the nucleus", correct:false, why:"Slide 66: dephosphorylation is what calcineurin does, and it is blocked here."},
-  {t:"It binds cyclophilin and is degraded", correct:false, why:"Slide 66: cyclophilin binds the drug, and that complex binds calcineurin, not NFAT."},
-  {t:"It stays phosphorylated and inactive, so IL-2 is not transcribed", correct:true, why:"Slide 66: with calcineurin blocked, NFAT is not converted from its inactive, phosphorylated form to active NFAT, so IL-2 mRNA is not made (T@60171 11/17)."},
+  {t:"It binds cyclophilin and is then degraded by the cell", correct:false, why:"Slide 66: cyclophilin binds the drug, and that complex binds calcineurin, not NFAT."},
+  {t:"It stays phosphorylated and inactive, so IL-2 is not made", correct:true, why:"Slide 66: with calcineurin blocked, NFAT is not converted from its inactive, phosphorylated form to active NFAT, so IL-2 mRNA is not made (T@60171 11/17)."},
   {t:"It stays phosphorylated but still transcribes IL-2 slowly", correct:false, why:"Slide 66: only active NFAT drives the IL-2 gene."}],
  teach:"Slides 66-67: inhibiting calcineurin leaves NFAT inactive, so IL-2 production falls, which reduces T-cell proliferation and ocular inflammation.",
  cite:"Lectures 9–10 (Smith_Eye_Glaucoma_AllergicConj_DryEye.pdf) slide 66; T@60171, T@60536 11/17"},
@@ -449,9 +449,9 @@ QUESTIONS.push(
   {t:"Acquired night blindness and retinal vascular disorder", correct:false, why:"Slide 73: these are rare effects of intranasal varenicline."},
   {t:"Discoloration of the contact lens and reduced visual acuity", correct:false, why:"Slide 71: these are effects of lifitegrast."},
   {t:"Subcapsular cataract and transient blindness", correct:false, why:"Slide 73: these are rare effects of intranasal varenicline."},
-  {t:"Significant immunosuppression, including opportunistic infections", correct:true, why:"T@62722 11/17: oral cyclosporine is a significant immunosuppressant that opens the patient to opportunistic infections, so it is used topically for dry eye. Slide 67 marks it as a significant immunosuppressant."}],
+  {t:"Significant immunosuppression with opportunistic infections", correct:true, why:"T@62722 11/17: oral cyclosporine is a significant immunosuppressant that opens the patient to opportunistic infections, so it is used topically for dry eye. Slides 64 and 67: cyclosporine is an immunosuppressant; inhibiting IL-2 production causes immunosuppression."}],
  teach:"T@62323 and T@62722 11/17: oral calcineurin inhibitors are not used for dry eye alone; they are significant immunosuppressants. Topical cyclosporine is used instead.",
- cite:"Lectures 9–10 (Smith_Eye_Glaucoma_AllergicConj_DryEye.pdf) slide 67; T@62323, T@62722 11/17"},
+ cite:"Lectures 9–10 (Smith_Eye_Glaucoma_AllergicConj_DryEye.pdf) slides 64, 67; T@62323, T@62722 11/17"},
 
 {id:"ED-015", skill:"adverse", prof:'Smith', tier:"new", topic:"ey-de", sub:"cni", concept:"ey-de-cyclosporine-se",
  tags:['case', 'side-effect'], source:'both',
@@ -468,9 +468,9 @@ QUESTIONS.push(
  tags:['tell-apart'], source:'both',
  stem:"Which corticosteroid is used as a topical formulation for dry eye?",
  options:[
-  {t:"Hydrocortisone", correct:false, why:"A skin corticosteroid; slide 69 names loteprednol for dry eye."},
+  {t:"Hydrocortisone", correct:false, why:"A corticosteroid from the skin lectures, but not the one used for dry eye: \"we don't use every corticosteroid\", the one for dry eye is loteprednol (T@63199, T@63574 11/17; slide 69)."},
   {t:"Loteprednol", correct:true, why:"Slide 69: loteprednol is used for its anti-inflammatory properties to treat dry eye (T@63574 11/17)."},
-  {t:"Clobetasol", correct:false, why:"A skin corticosteroid; slide 69 names loteprednol for dry eye."},
+  {t:"Clobetasol", correct:false, why:"A corticosteroid from the skin lectures, but not the one used for dry eye: \"we don't use every corticosteroid\", the one for dry eye is loteprednol (T@63199, T@63574 11/17; slide 69)."},
   {t:"Cyclosporine", correct:false, why:"Cyclosporine is a calcineurin inhibitor, not a corticosteroid (slide 64)."}],
  teach:"Slide 69 and T@63574 11/17: of the corticosteroids learned for the skin, loteprednol is the one used for dry eye, in a topical formulation.",
  cite:"Lectures 9–10 (Smith_Eye_Glaucoma_AllergicConj_DryEye.pdf) slide 69; T@63199, T@63574 11/17"},
@@ -501,7 +501,7 @@ QUESTIONS.push(
  tags:['two-facts', 'mechanism'], source:'both',
  stem:"Why does an LFA-1 antagonist lower cytokine secretion in dry eye?",
  options:[
-  {t:"Leukocytes cannot adhere or move to the site, so they secrete fewer cytokines", correct:true, why:"Slide 71: it may inhibit T-cell adhesion to ICAM-1 and secretion of inflammatory cytokines. T@64546 11/17: leukocytes do not move or adhere, so cytokine secretion falls, an indirect route to less inflammation."},
+  {t:"Leukocytes cannot adhere or move there, so cytokine secretion falls", correct:true, why:"Slide 71: it may inhibit T-cell adhesion to ICAM-1 and secretion of inflammatory cytokines. T@64546 11/17: leukocytes do not move or adhere, so cytokine secretion falls, an indirect route to less inflammation."},
   {t:"NFAT stays phosphorylated, so the T cells make less IL-2 at the site", correct:false, why:"That is the calcineurin inhibitor mechanism (slide 66)."},
   {t:"Mast cells stop releasing histamine and cytokines into the conjunctiva", correct:false, why:"That is mast cell stabilization (slide 51), a property of the antihistamines."},
   {t:"Nerve activation raises basal tear film, which dilutes the cytokines present", correct:false, why:"Slide 73 gives nerve activation as the way varenicline raises tears; it is not an LFA-1 effect."}],
@@ -526,7 +526,7 @@ QUESTIONS.push(
   {t:"Keep the lenses in and instill the drop over them", correct:false, why:"Slide 71: lenses are removed before the drop."},
   {t:"Remove the lenses before the drop and reinsert them 12 hours later", correct:false, why:"Slide 71 gives 15 minutes; 12 hours is the dosing interval."},
   {t:"Remove the lenses before the drop and reinsert them 15 minutes after", correct:true, why:"Slide 71: remove contact lenses prior to use and reinsert 15 minutes after instillation (T@65648 11/17)."},
-  {t:"Remove the lenses before the drop and reinsert them immediately", correct:false, why:"Slide 71: reinsert 15 minutes after instillation so the drug is absorbed (T@66117 11/17)."}],
+  {t:"Remove the lenses before the drop and reinsert them immediately", correct:false, why:"Slide 71: reinsert 15 minutes after instillation; the wait lets the drug be absorbed (T@65648 11/17)."}],
  teach:"Slide 71 and T@65648 11/17: lifitegrast can discolor contact lenses. Lenses are removed before use and reinserted after a wait of about 15 minutes while the drug is absorbed.",
  cite:"Lectures 9–10 (Smith_Eye_Glaucoma_AllergicConj_DryEye.pdf) slide 71; T@65648, T@66117 11/17"},
 
@@ -537,7 +537,7 @@ QUESTIONS.push(
   {t:"Acquired night blindness", correct:false, why:"Slide 73: a rare effect of intranasal varenicline."},
   {t:"Subcapsular cataract", correct:false, why:"Slide 73: a rare effect of intranasal varenicline."},
   {t:"Retinal vascular disorder", correct:false, why:"Slide 73: a rare effect of intranasal varenicline."},
-  {t:"Contact lens discoloration", correct:true, why:"Slide 71: the contact lens counseling point; \"this medication will cause some discoloration of the contacts\" (T@66117 11/17)."}],
+  {t:"Contact lens discoloration", correct:true, why:"\"This medication will cause some discoloration of the contacts\" (T@65648 11/17), which is why the lenses stay out for a while; \"this one in particular causes discoloration\" (T@66117). Slide 71 gives the removal and 15-minute instruction."}],
  teach:"T@66117 11/17: lifitegrast in particular discolors contact lenses, although most patients should remove lenses to instill any drop so it reaches the eye.",
  cite:"Lectures 9–10 (Smith_Eye_Glaucoma_AllergicConj_DryEye.pdf) slide 71; T@66117 11/17"},
 
@@ -579,8 +579,8 @@ QUESTIONS.push(
  stem:"Which regimen is used for varenicline in dry eye?",
  options:[
   {t:"One drop in each eye twice daily, about 12 hours apart", correct:false, why:"That is the regimen of lifitegrast (slide 71)."},
-  {t:"One spray in each nostril once daily", correct:false, why:"Slide 73 gives twice daily dosing."},
-  {t:"One spray in one nostril four times daily", correct:false, why:"Slide 73 gives one spray in each nostril twice daily."},
+  {t:"One spray in each nostril once daily in the morning", correct:false, why:"Slide 73 gives twice daily dosing."},
+  {t:"One spray in one nostril four times daily, 6 hours apart", correct:false, why:"Slide 73 gives one spray in each nostril twice daily."},
   {t:"One spray in each nostril twice daily, about 12 hours apart", correct:true, why:"Slide 73: spray once in each nostril twice daily, approximately 12 hours apart (T@67416, T@67475 11/17)."}],
  teach:"Slide 73: a 0.03-mg intranasal spray, once in each nostril twice daily, about 12 hours apart.",
  cite:"Lectures 9–10 (Smith_Eye_Glaucoma_AllergicConj_DryEye.pdf) slide 73; T@67416, T@67475 11/17"},
@@ -622,12 +622,12 @@ QUESTIONS.push(
  tags:['case'], source:'transcript',
  stem:"A patient with dry eye has tried no product so far. Which type is tried before a prescription anti-inflammatory drug?",
  options:[
-  {t:"Topical cyclosporine to lower IL-2 production", correct:false, why:"Slide 64: a prescription calcineurin inhibitor, used when lubricating products are not enough (T@57548 11/17)."},
-  {t:"Intranasal varenicline to raise basal tear film", correct:false, why:"Slide 73: a prescription nasal spray, not a first-line approach."},
-  {t:"Topical loteprednol to lower inflammatory genes", correct:false, why:"Slide 69: a prescription corticosteroid, not a first-line approach."},
+  {t:"Topical cyclosporine to lower IL-2 production", correct:false, why:"Cyclosporine is one of the prescription drugs used after OTC lubricating products such as artificial tears (T@57257, T@57548 11/17)."},
+  {t:"Intranasal varenicline to raise basal tear film", correct:false, why:"A prescription nasal spray; the prescription drugs are usually not first-line approaches (T@55623 11/17)."},
+  {t:"Topical loteprednol to lower inflammatory genes", correct:false, why:"A prescription corticosteroid; the prescription drugs are usually not first-line approaches (T@55623 11/17)."},
   {t:"OTC lubricating drops, such as artificial tears", correct:true, why:"T@55623 11/17: patients first use lubricating drops, which are physical lubricants; the prescription drugs are usually not first-line approaches (T@55892)."}],
  teach:"T@55623 and T@57548 11/17: the drugs on these slides come after OTC lubricating products such as artificial tears.",
- cite:"Lectures 9–10 (Smith_Eye_Glaucoma_AllergicConj_DryEye.pdf) slide 62; T@55623, T@55892, T@57548 11/17"},
+ cite:"Lectures 9–10 (Smith_Eye_Glaucoma_AllergicConj_DryEye.pdf); T@55623, T@55892, T@57257, T@57548 11/17"},
 
 {id:"ED-034", skill:"mech", prof:'Smith', tier:'new', topic:"ey-de", sub:"lfa", concept:"ey-de-cyclo-vs-lifi",
  tags:['two-facts', 'mechanism'], source:'both',
@@ -656,9 +656,9 @@ QUESTIONS.push(
  tags:['two-facts', 'cumulative'], source:'both',
  stem:"Tacrolimus (taught for dermatitis) and cyclosporine are both calcineurin inhibitors. What do they share mechanistically?",
  options:[
-  {t:"Both bind FKBP, and that complex inhibits calcineurin", correct:false, why:"Slide 66: only tacrolimus binds FKBP."},
-  {t:"Both bind cyclophilin, and that complex inhibits calcineurin", correct:false, why:"Slide 66: only cyclosporine binds cyclophilin."},
-  {t:"Each binds its own protein, and that complex inhibits calcineurin", correct:true, why:"Slide 66: cyclosporine binds cyclophilin and tacrolimus binds FKBP; either complex inhibits calcineurin (T@60536 11/17)."},
+  {t:"Both bind FKBP, and that complex inhibits calcineurin", correct:false, why:"Slide 66 and T@60536 11/17: only tacrolimus binds FKBP."},
+  {t:"Both bind cyclophilin, and that complex inhibits calcineurin", correct:false, why:"T@60536 11/17: only cyclosporine binds cyclophilin; tacrolimus binds FKBP (slide 66)."},
+  {t:"Each binds its own protein, and that complex inhibits calcineurin", correct:true, why:"T@60536, T@60981 11/17: cyclosporine binds cyclophilin and tacrolimus binds FKBP (FKBP is printed on slide 66); either complex inhibits calcineurin."},
   {t:"Both block CD80/86 binding to CD28 and so reduce IL-2", correct:false, why:"That is signal 2 (slide 65); calcineurin inhibitors act in the signal cascade."}],
  teach:"Slide 66 and T@60536 11/17: the two calcineurin inhibitors use different immunophilins but the same final step. This is cumulative Exam 3 material from the skin lectures.",
  cite:"Lectures 9–10 (Smith_Eye_Glaucoma_AllergicConj_DryEye.pdf) slide 66; T@58455, T@60536 11/17"},

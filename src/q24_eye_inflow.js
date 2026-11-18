@@ -17,7 +17,7 @@
        it is not on slide 19 and no item asks about it.
    (5) Slide 20 note and T@48238 say to use a more selective drug for a cardiac adverse event; beta 1 selectivity does not remove cardiac beta
        blockade, so no item asks which drug to choose for a cardiac patient. The selectivity items ask about asthma (beta 2, T@47078).
-   (6) The transcript says the "NHE3" and "NBC1" names need not be learned (11/17 T@9848); the items describe the exchange without the names.
+   (6) The transcript says the "NHE3" and "NBC1" names need not be learned (11/17 T@9848); the items describe the exchange without the names. EI-045 and EI-047 (transporter location, apical carbonic anhydrase IV) were removed in review: she said not to learn the transporters and not to focus on carbonic anhydrase IV (T@9848, T@17994 11/17).
    Black box warnings: none of the inflow classes carries one in the deck or the transcript, so no item asks for one. */
 (() => {
 const D = 'Lectures 9–10 (Smith_Eye_Glaucoma_AllergicConj_DryEye.pdf)';
@@ -40,7 +40,7 @@ QUESTIONS.push(
 // ---------- beta receptor antagonists ----------
 mk('EI-001','mech','new','bb','ey-bb-mech',['inflow'],'both',
  'At which site and with what effect do timolol and the other beta receptor antagonists lower intraocular pressure?', 1, [
- ['They block beta receptors on the ciliary body epithelium and decrease aqueous humor production','Slide 18: "Blocks the beta-adrenergic receptor on the ciliary body ... Reduce aqueous production by the ciliary body". The lecture adds that the mechanism is not fully understood (T@43883 11/13).'],
+ ['They block beta receptors on the ciliary epithelium and lower aqueous humor production','Slide 18: "Blocks the beta-adrenergic receptor on the ciliary body ... Reduce aqueous production by the ciliary body". The lecture adds that the mechanism is not fully understood (T@43883 11/13).'],
  ['They block beta receptors on the ciliary body epithelium and increase uveoscleral outflow','Slide 18: "Not much effect on outflow". Increased uveoscleral outflow is the extra effect of brimonidine (slide 22).'],
  ['They block beta receptors in the trabecular meshwork and widen the outflow channel','Slide 18 puts the receptor on the ciliary body and says there is not much effect on outflow; the meshwork route is the target of the outflow drugs.'],
  ['They stimulate beta receptors on the ciliary body and decrease aqueous humor production','Stimulating these receptors gave more aqueous humor in the studies she described; blocking them lowered production (T@43883 11/13).']],
@@ -86,7 +86,7 @@ mk('EI-005','mech','new','bb','ey-bb-levo-cataract',['case'],'transcript',
 
 mk('EI-006','counsel','new','bb','ey-bb-compression',['counsel','case'],'transcript',
  'A glaucoma patient with heart disease instills a topical beta receptor antagonist. Pressing on the inner corner of the eye after the drop reduces the risk of bradycardia because it', 2, [
- ['limits drainage of the drop into the nose and so absorption into the bloodstream','The lecture: compression against the nose stops the drop from draining into the nose and then into the bloodstream, which lowers systemic effects (T@48325 11/13; repeated 11/17).'],
+ ['limits drainage into the nose and so absorption into the blood','The lecture: compression against the nose stops the drop from draining into the nose and then into the bloodstream, which lowers systemic effects (T@48325 11/13).'],
  ['keeps more drug in the posterior chamber so a smaller dose can be used','The point of the compression is to limit systemic absorption, not to change the dose reaching the ciliary body (T@48325 11/13).'],
  ['blocks beta receptors in the nasal mucosa that signal the heart','The lecture describes drainage and absorption into the blood; it does not describe nasal receptors.'],
  ['slows aqueous humor outflow so the drug stays in the eye longer','Outflow is not the mechanism given; the step limits flow of drug to the nose and the bloodstream (T@48325 11/13).']],
@@ -168,7 +168,7 @@ mk('EI-014','mech','new','a2','ey-a2-two-extras',['mechanism','outflow'],'both',
 
 mk('EI-015','tell','new','a2','ey-a2-long-term-choice',['tell','two-facts','case'],'both',
  'A patient needs an alpha 2 agonist for long-term glaucoma therapy. Which drug and reason are the best fit?', 1, [
- ['Brimonidine, because it lacks apraclonidine\'s allergic response and adds uveoscleral outflow','Slide 23: brimonidine is the better long-term choice; the transcript says it does not have the allergic response profile of apraclonidine and has two bonus mechanisms (T@51660 11/13).'],
+ ['Brimonidine, because it avoids the allergic response and adds uveoscleral outflow','Slide 23: brimonidine is the better long-term choice; the transcript says it does not have the allergic response profile of apraclonidine and has two bonus mechanisms (T@51660 11/13).'],
  ['Apraclonidine, because it adds uveoscleral outflow and neuroprotection','Slide 22 attributes uveoscleral outflow and neuroprotection to brimonidine, and the lecture does not use apraclonidine long term because of its allergic response (T@51227 11/13).'],
  ['Apraclonidine, because it prevents pressure rises after surgery and so suits chronic use','Preventing pressure rises after eye surgery is the short-term use of apraclonidine (slide 23); its allergic response limits chronic use (T@51227 11/13).'],
  ['Brimonidine, because it has fewer systemic effects, with no hypotension or dry mouth','Slide 24 lists oral dryness, dizziness, fatigue, somnolence and reduced blood pressure and pulse for brimonidine.']],
@@ -249,7 +249,7 @@ mk('EI-023','adverse','new','a2','ey-a2-allergy-case',['case','reverse'],'both',
 
 mk('EI-024','tell','new','a2','ey-a2-asthma-alternative',['case','two-facts'],'both',
  'A patient with glaucoma and asthma cannot use a beta receptor antagonist. Why is an alpha 2 agonist a reasonable way to lower inflow?', 2, [
- ['It decreases aqueous humor production through alpha 2 receptors, and bronchospasm is not a listed effect','Slide 22: alpha 2 agonists decrease aqueous humor production; slide 24 lists no bronchospasm, which belongs to the beta receptor antagonists (slide 20).'],
+ ['It acts on alpha 2 receptors, so beta 2 receptors are not blocked','Slide 22: alpha 2 agonists decrease aqueous humor production through alpha 2 receptors; slide 24 lists no bronchospasm, which belongs to the beta receptor antagonists (slide 20; T@47078 11/13).'],
  ['It blocks beta 2 receptors selectively, so the airways are spared','Alpha 2 agonists act on alpha 2 receptors (slide 22), not on beta receptors.'],
  ['It increases trabecular meshwork outflow instead of changing production','Slide 22 gives alpha 2 agonists a decrease in aqueous humor production as the main effect, with only some added uveoscleral outflow for brimonidine.'],
  ['It inhibits carbonic anhydrase, so the airways are spared','Alpha 2 agonists act on alpha 2 receptors (slide 22); carbonic anhydrase is the target of another class (slide 26).']],
@@ -259,7 +259,7 @@ mk('EI-024','tell','new','a2','ey-a2-asthma-alternative',['case','two-facts'],'b
 // ---------- carbonic anhydrase inhibitors ----------
 mk('EI-025','mech','new','cai','ey-cai-mech',['mechanism','inflow'],'both',
  'How do carbonic anhydrase inhibitors decrease aqueous humor production?', 3, [
- ['Less carbonic acid is formed in the ciliary body cells, so less bicarbonate is extruded and less water follows','Slide 26: inhibition prevents the conversion of CO2 and water to carbonic acid and reduces availability of sodium and bicarbonate for secretion; water follows the solutes (T@54759, T@55258 11/13; T@5923 11/17).'],
+ ['Less carbonic acid forms, so less bicarbonate is extruded and water does not follow','Slide 26: inhibition prevents the conversion of CO2 and water to carbonic acid and reduces availability of sodium and bicarbonate for secretion; water follows the solutes (T@54759, T@55258 11/13; T@5923 11/17).'],
  ['Carbonic acid is formed but cannot dissociate, so bicarbonate is not extruded','The drug blocks the enzyme that forms carbonic acid (slide 26); the acid then dissociates on its own (T@5420 11/17).'],
  ['Carbon dioxide and water cannot enter the ciliary body cells, so no carbonic acid is made','The drug inhibits the enzyme that converts carbon dioxide and water to carbonic acid (slide 26); it does not block their entry.'],
  ['Sodium is blocked from leaving the ciliary body cells, so water does not follow','The drug acts at the enzyme step; the loss of sodium and bicarbonate for secretion follows from less carbonic acid (slide 26).']],
@@ -286,7 +286,7 @@ mk('EI-027','mech','new','cai','ey-cai-solutes',['mechanism'],'slide',
 
 mk('EI-028','mech','new','acid','ey-cai-low-bicarb',['case','mechanism'],'both',
  'A patient taking oral acetazolamide has a low serum bicarbonate and a falling blood pH. Which process explains this?', 3, [
- ['Carbonic acid is not formed in proximal tubule cells, so bicarbonate is not sent into the blood','Slide 27 and the lecture: without carbonic acid, bicarbonate is not formed and not reabsorbed into the blood, so blood pH falls (T@17156 11/17).'],
+ ['Carbonic acid is not formed in tubule cells, so bicarbonate is not sent to the blood','Slide 27 and the lecture: without carbonic acid, bicarbonate is not formed and not reabsorbed into the blood, so blood pH falls (T@17156 11/17).'],
  ['Carbonic acid is not formed in the ciliary body, so bicarbonate is lost into the aqueous humor','In the ciliary body the drug reduces bicarbonate secretion (slide 26); the blood pH change comes from the kidney (T@6865 11/17).'],
  ['Acetazolamide blocks the sodium and bicarbonate cotransporter, so bicarbonate stays in the cell','The drug inhibits carbonic anhydrase; the lecture explains the fall in bicarbonate by the lack of carbonic acid (T@17156 11/17).'],
  ['More hydrogen ion is exchanged for sodium, so more acid enters the blood','With the enzyme inhibited, less hydrogen ion is available for the exchange for sodium (T@16149 11/17).']],
@@ -322,7 +322,7 @@ mk('EI-031','dose','new','acid','ey-cai-monitor',['case','adverse'],'both',
 
 mk('EI-032','counsel','new','cai','ey-cai-when-oral',['case'],'transcript',
  'When is an oral carbonic anhydrase inhibitor added for a patient with glaucoma?', 1, [
- ['When pressure is not controlled by ophthalmic therapy and combination products','11/13: ophthalmic products first; if the patient is refractory to other therapies and combinations, an oral carbonic anhydrase inhibitor can be added later (T@59102 11/13).'],
+ ['When pressure is not controlled by ophthalmic drops and combinations','11/13: ophthalmic products first; if the patient is refractory to other therapies and combinations, an oral carbonic anhydrase inhibitor can be added later (T@59102 11/13).'],
  ['At diagnosis, because oral dosing reaches the ciliary body better than drops','The transcript says to treat topically when possible and not to use an oral drug if topical therapy works (T@59102 11/13).'],
  ['After cataract surgery, to prevent a rise in intraocular pressure','The lecture names apraclonidine for pressure rises after eye surgery (slide 23).'],
  ['When a patient develops an allergic reaction to an alpha 2 agonist','The lecture\'s trigger for an oral carbonic anhydrase inhibitor is pressure not controlled on other therapy (T@59102 11/13).']],
@@ -367,8 +367,8 @@ mk('EI-036','adverse','new','cai','ey-cai-oral-se-select',['list'],'slide',
 
 mk('EI-037','adverse','new','acid','ey-cai-monitor-patient',['case','two-facts'],'both',
  'Which glaucoma patient needs the closest monitoring of blood pH?', 3, [
- ['A patient taking methazolamide tablets for refractory glaucoma','11/17: metabolic acidosis is a significant side effect of these drugs given orally (T@16780, T@17682). Slide 29 lists systemic acidosis under the oral drugs; the lecture adds that it can occur to a much lesser extent with the topical ones (T@6785 11/17).'],
- ['A patient using dorzolamide drops with timolol','Topical use carries a much smaller risk (T@6785 11/17); the oral drugs are the main concern (slide 29).'],
+ ['A patient taking oral methazolamide daily','11/17: metabolic acidosis is a significant side effect of these drugs given orally (T@16780, T@17682). Slide 29 lists systemic acidosis under the oral drugs; the lecture adds that it can occur to a much lesser extent with the topical ones (T@6785 11/17).'],
+ ['A patient using dorzolamide drops and timolol','Topical use carries a much smaller risk (T@6785 11/17); the oral drugs are the main concern (slide 29).'],
  ['A patient using timolol gel once a day','Timolol is a beta receptor antagonist; acidosis is the effect of carbonic anhydrase inhibition (slide 27).'],
  ['A patient using brimonidine drops after surgery','Slide 24 lists hypotension and dryness for the alpha 2 agonists; acidosis is the effect of carbonic anhydrase inhibition (slide 27).']],
  'Acidosis follows from carbonic anhydrase inhibition in the kidney. The risk is mainly with the oral drugs (slide 29; T@16780) and occurs to a much lesser extent with topical ones (T@6785).',
@@ -388,14 +388,14 @@ mk('EI-039','class','new','cai','ey-class-inflow-select',['classification','list
  ['Beta receptor antagonists','Slide 18: reduce aqueous humor production.',true],
  ['Alpha 2 agonists','Slide 22: decrease the rate of aqueous humor production.',true],
  ['Carbonic anhydrase inhibitors','Slide 26: decrease ciliary body aqueous humor secretion.',true],
- ['M3 agonists','11/17: they increase outflow by contracting the ciliary and meshwork muscle, with no effect on inflow (T@23157, T@26432 11/17).']],
+ ['M3 agonists','11/17: they increase outflow by contracting the ciliary and meshwork muscle, with no effect on inflow (T@24207, T@31950 11/17).']],
  'Three classes decrease inflow (production of aqueous humor): beta receptor antagonists, alpha 2 agonists and carbonic anhydrase inhibitors (T@39278 11/13). The parasympathomimetics and prostaglandin agonists increase outflow.',
  'slides 18, 22, 26; T@39278 11/13', true),
 
 mk('EI-040','class','new','cai','ey-class-inflow-pair',['classification','inflow'],'both',
  'Which pair of drugs both lower intraocular pressure by decreasing inflow?', 2, [
  ['Timolol and dorzolamide','Slides 18 and 26: a beta receptor antagonist and a carbonic anhydrase inhibitor both decrease aqueous humor production.'],
- ['Brimonidine and latanoprost','Brimonidine decreases inflow (slide 22), but latanoprost is a prostaglandin agonist that increases uveoscleral outflow without affecting inflow (T@30920 11/17).'],
+ ['Brimonidine and latanoprost','Brimonidine decreases inflow (slide 22), but latanoprost is a prostaglandin agonist that increases uveoscleral outflow without affecting inflow (T@31950 11/17).'],
  ['Dorzolamide and pilocarpine','Dorzolamide decreases inflow (slide 26); pilocarpine is an M3 agonist that increases outflow (T@23579 11/17).'],
  ['Betaxolol and carbachol','Betaxolol decreases inflow (slide 18); carbachol is an M3 agonist that increases outflow (T@23579 11/17).']],
  'Inflow drugs: beta receptor antagonists, alpha 2 agonists, carbonic anhydrase inhibitors. Outflow drugs: parasympathomimetics (M3 agonists, acetylcholinesterase inhibitor), prostaglandin agonists and the Rho kinase inhibitor.',
@@ -405,19 +405,19 @@ mk('EI-041','class','new','cai','ey-class-no-outflow-drug',['classification','tw
  'Which drug lowers intraocular pressure by decreasing aqueous humor production and has no effect on outflow?', 1, [
  ['Dorzolamide','Slide 26: a carbonic anhydrase inhibitor decreases ciliary body secretion; no outflow effect is listed.'],
  ['Brimonidine','Slide 22: some increase in uveoscleral outflow (brimonidine) in addition to decreased production.'],
- ['Latanoprost','A prostaglandin agonist; the transcript says it does not affect inflow and increases uveoscleral outflow (T@30920 11/17).'],
- ['Pilocarpine','An M3 agonist that increases outflow by contracting the meshwork (T@23157 11/17).']],
+ ['Latanoprost','A prostaglandin agonist; the transcript says it does not affect inflow and increases uveoscleral outflow (T@30920, T@31950 11/17).'],
+ ['Pilocarpine','An M3 agonist that increases outflow by contracting the meshwork (T@24207 11/17).']],
  'Beta receptor antagonists and carbonic anhydrase inhibitors act on production alone; brimonidine adds uveoscleral outflow; the parasympathomimetics and prostaglandin agonists act on outflow.',
- 'slides 22, 26; T@30920 11/17'),
+ 'slides 22, 26; T@31950 11/17'),
 
 mk('EI-042','tell','new','cai','ey-class-prostaglandin-reverse',['classification','reverse'],'transcript',
  'A glaucoma drug has no effect on inflow and increases uveoscleral outflow. Which class is it?', 3, [
- ['Prostaglandin agonists','11/17: they do not affect inflow and help with uveoscleral outflow (T@30920 11/17).'],
+ ['Prostaglandin agonists','11/17: they do not affect inflow and help with uveoscleral outflow (T@30920, T@31950 11/17).'],
  ['Alpha 2 agonists','Alpha 2 agonists decrease inflow as their main effect (slide 22); the uveoscleral effect is a bonus of brimonidine.'],
  ['Beta receptor antagonists','Slide 18: they reduce production and have not much effect on outflow.'],
  ['Carbonic anhydrase inhibitors','Slide 26: they decrease aqueous humor secretion; no outflow effect is listed.']],
- 'The prostaglandin agonists relax the ciliary muscle and increase uveoscleral outflow without affecting inflow (T@30920). Brimonidine has both a main inflow effect and a minor uveoscleral effect.',
- 'slide 22; T@30920 11/17'),
+ 'The prostaglandin agonists relax the ciliary muscle and increase uveoscleral outflow without affecting inflow (T@30920, T@31950). Brimonidine has both a main inflow effect and a minor uveoscleral effect.',
+ 'slide 22; T@30920, T@31950 11/17'),
 
 mk('EI-043','mech','new','bb','ey-bb-vs-cai-targets',['tell','mechanism'],'both',
  'Timolol and dorzolamide both decrease inflow. Which target does each act on?', 2, [
@@ -430,21 +430,12 @@ mk('EI-043','mech','new','bb','ey-bb-vs-cai-targets',['tell','mechanism'],'both'
 
 mk('EI-044','mech','new','bb','ey-bb-agonist-evidence',['mechanism'],'transcript',
  'What did studies of aqueous humor production find about beta receptors that pointed to a drug class for glaucoma?', 3, [
- ['Agonizing the receptors increased aqueous humor and antagonizing them decreased production','The lecture: when the receptors were agonized there was more aqueous humor; when they were antagonized, production decreased (T@43883 11/13).'],
+ ['Agonizing the receptors increased aqueous humor; antagonizing them decreased production','The lecture: when the receptors were agonized there was more aqueous humor; when they were antagonized, production decreased (T@43883 11/13).'],
  ['Agonizing the receptors decreased aqueous humor and antagonizing them increased production','The transcript states the reverse: agonizing gave more aqueous humor (T@43883 11/13).'],
  ['Antagonizing the receptors increased uveoscleral outflow without changing production','Slide 18 says antagonists reduce production and have not much effect on outflow.'],
  ['Agonizing the receptors decreased trabecular outflow while production was unchanged','The lecture found an effect on production, not on trabecular outflow (T@43883 11/13).']],
  'Beta receptor antagonists work by decreasing production of aqueous humor; the exact mechanism is not fully understood (slide 18; T@43883).',
  'slide 18; T@43883 11/13'),
-
-mk('EI-045','mech','new','acid','ey-acid-bicarb-exit',['mechanism','two-facts'],'both',
- 'In a proximal tubule cell, across which membrane does bicarbonate leave toward the blood, and with which ion?', 0, [
- ['The basolateral membrane, with sodium','Slide 27 and 11/17: the sodium and bicarbonate cotransporter on the basolateral (blood) side moves sodium and bicarbonate out of the cell (T@9831 11/17).'],
- ['The apical membrane, with sodium','The apical membrane faces the lumen; bicarbonate leaves to the blood across the basolateral membrane (T@7672, T@9831 11/17).'],
- ['The basolateral membrane, in exchange for hydrogen ion','Hydrogen ion leaves across the apical membrane in exchange for sodium (T@9483 11/17); bicarbonate leaves with sodium on the basolateral side.'],
- ['The apical membrane, in exchange for hydrogen ion','Hydrogen ion is exchanged for sodium at the apical membrane (T@9483 11/17); bicarbonate goes to the blood on the basolateral side.']],
- 'Slide 27: the basolateral membrane is the blood side. Bicarbonate leaves with sodium on that side; hydrogen ion leaves across the apical membrane in exchange for sodium. The names of the transporters are not required (T@9848 11/17).',
- 'slide 27; T@9831 11/17'),
 
 mk('EI-046','mech','new','acid','ey-acid-hplus-exchange',['mechanism'],'both',
  'Normally, hydrogen ion leaves a proximal tubule cell across the apical membrane in exchange for which ion entering the cell?', 1, [
@@ -455,21 +446,12 @@ mk('EI-046','mech','new','acid','ey-acid-hplus-exchange',['mechanism'],'both',
  'Hydrogen ion leaves the cell for sodium entering; a carbonic anhydrase inhibitor removes the hydrogen ion supply, so sodium and water stay in the lumen (T@9483, T@16149).',
  'slide 27; T@9483 11/17'),
 
-mk('EI-047','mech','new','acid','ey-acid-co2-reabsorb',['mechanism','two-facts'],'both',
- 'In the proximal tubule, how does bicarbonate filtered into the lumen re-enter the cell?', 2, [
- ['As carbon dioxide and water, after carbonic anhydrase on the apical membrane splits carbonic acid','Slide 27 and 11/17: hydrogen ion and bicarbonate form carbonic acid in the lumen, the enzyme on the apical membrane converts it to CO2 and water, and these are passively reabsorbed into the cells (T@8659 11/17).'],
- ['As bicarbonate carried in by the basolateral sodium and bicarbonate cotransporter','That cotransporter moves bicarbonate out toward the blood (T@9831 11/17).'],
- ['As bicarbonate exchanged for hydrogen ion on the apical membrane','Hydrogen ion exchanges for sodium on the apical membrane (T@9483 11/17).'],
- ['As carbonic acid, after carbonic anhydrase in the cytosol makes it','The cytosolic enzyme forms carbonic acid inside the cell; the lumen is handled by the apical membrane enzyme (T@8659, T@8997 11/17).']],
- 'Slide 27: lumen hydrogen ion and bicarbonate give carbonic acid; the apical enzyme converts it to CO2 and water, passively reabsorbed; the cytosolic enzyme (II) remakes carbonic acid. Acetazolamide inhibits both isoforms (T@17994).',
- 'slide 27; T@8659 11/17'),
-
 mk('EI-048','mech','new','acid','ey-cai-common-step',['mechanism','two-facts'],'both',
  'Carbonic anhydrase inhibition lowers aqueous humor production in the eye and lowers blood pH through the kidney. Which step is common to both effects?', 3, [
- ['Less carbonic acid is formed, so less bicarbonate is available to leave the cells','Slides 26 and 27: in the ciliary body less bicarbonate is secreted so water does not follow (T@19450 11/17); in the kidney less bicarbonate goes to the blood (T@17156 11/17).'],
+ ['Less carbonic acid forms, so less bicarbonate leaves the cells','Slides 26 and 27: in the ciliary body less bicarbonate is secreted so water does not follow (T@19450 11/17); in the kidney less bicarbonate goes to the blood (T@17156 11/17).'],
  ['Less sodium enters the cell, so less water is secreted in both organs','The loss of hydrogen ion exchange for sodium explains diuresis in the kidney (T@16149 11/17); the common step is the lack of carbonic acid and bicarbonate.'],
  ['More carbonic acid accumulates, so the cells swell in both organs','The enzyme is inhibited, so carbonic acid is not formed (slide 26).'],
- ['Less hydrogen ion is secreted into the lumen of the eye and the kidney','Hydrogen ion exchange is part of the kidney explanation (T@9483 11/17); the ciliary body explanation concerns bicarbonate and sodium secretion (slide 26).']],
+ ['More hydrogen ion accumulates in the lumen of the eye and the kidney','The enzyme is inhibited, so less hydrogen ion is produced in the kidney (T@16149 11/17); hydrogen ion exchange plays no part in the ciliary body explanation, which concerns bicarbonate and sodium secretion (slide 26).']],
  'The same enzyme step explains both: no carbonic acid means less bicarbonate, so less water follows in the ciliary body (T@19450) and less buffer reaches the blood in the kidney (T@17156).',
  'slides 26, 27; T@19450 11/17'),
 
@@ -484,7 +466,7 @@ mk('EI-049','mech','new','acid','ey-bicarb-both-organs',['mechanism','two-facts'
 
 mk('EI-050','adverse','new','cai','ey-cai-thirst-why',['case','mechanism'],'both',
  'A patient taking oral acetazolamide has dry mouth and excessive thirst. Which mechanism is the likely explanation?', 1, [
- ['Diuresis, because sodium and water stay in the proximal tubule lumen','11/17: dry mouth and thirst may mean the patient is being over-diuresed (T@22348); the diuretic mechanism is sodium and water staying in the lumen (T@16149).'],
+ ['Diuresis, because sodium and water stay in the lumen','11/17: dry mouth and thirst may mean the patient is being over-diuresed (T@22348); the diuretic mechanism is sodium and water staying in the lumen (T@16149).'],
  ['Decreased aqueous humor production in the ciliary body','That is the therapeutic effect on the eye (slide 26) and does not explain dry mouth and thirst.'],
  ['Alpha 2 receptor stimulation, as with brimonidine','Slide 24 lists oral dryness for the alpha 2 agonists; acetazolamide is a carbonic anhydrase inhibitor (slide 28).'],
  ['Metabolic acidosis directly drying the mouth','Metabolic acidosis is a separate effect (slide 29); the lecture ties dry mouth and thirst to over-diuresis (T@22348 11/17).']],
@@ -492,11 +474,11 @@ mk('EI-050','adverse','new','cai','ey-cai-thirst-why',['case','mechanism'],'both
  'slides 27, 29; T@22348 11/17'),
 
 mk('EI-051','mech','new','cai','ey-cai-best-understood',['mechanism'],'transcript',
- 'For which inflow class is the way the target takes part in making aqueous humor fairly well described?', 2, [
+ 'For which class of glaucoma drugs is the way the target takes part in making aqueous humor fairly well understood?', 2, [
  ['Carbonic anhydrase inhibitors','11/13: "We\'ve got a pretty good idea of how the enzyme carbonic anhydrase is involved in making aqueous humor" (T@36863 11/13; T@54759 11/13).'],
  ['Beta receptor antagonists','The transcript says the mechanism by which beta receptor antagonists reduce production is not fully understood (T@43883 11/13).'],
  ['Alpha 2 agonists','The transcript says they work and the mechanism of decreased production is not known (T@48704 11/13).'],
- ['Parasympathomimetics','They increase outflow by contracting the meshwork; they are not an inflow class (T@23157 11/17).']],
+ ['Parasympathomimetics','They increase outflow by contracting the meshwork, and their targets are not described as part of making aqueous humor (T@24207 11/17).']],
  'The receptor mechanisms are not fully understood but the drugs work; the enzyme step of carbonic anhydrase, with sodium and bicarbonate secretion and water following, is described in detail (slide 26).',
  'slides 18, 22, 26; T@54759 11/13'),
 
@@ -520,7 +502,7 @@ mk('EI-053','tell','new','bb','ey-combo-timolol-dorzolamide',['combination','inf
 
 mk('EI-054','mech','new','bb','ey-bb-relatively-selective',['mechanism','case'],'both',
  'A patient with asthma takes betaxolol and still has mild wheezing. What explains this?', 1, [
- ['Betaxolol is relatively beta 1 selective, not fully selective, so some beta 2 blockade remains','Slide 19: "Relatively beta 1-selective agent"; bronchospasm comes from beta 2 antagonism (T@47078 11/13), and relative selectivity does not remove it.'],
+ ['Betaxolol is relatively beta 1 selective, so some beta 2 blockade remains','Slide 19: "Relatively beta 1-selective agent"; bronchospasm comes from beta 2 antagonism (T@47078 11/13), and relative selectivity does not remove it.'],
  ['Betaxolol has intrinsic sympathomimetic activity that constricts the airway','Slide 19 gives intrinsic sympathomimetic activity to carteolol, and the lecture does not link it to airway constriction.'],
  ['Betaxolol is not absorbed, so a second drug in the regimen is the cause','The transcript says topical beta receptor antagonists are absorbed and can cause systemic effects (T@47078 11/13).'],
  ['Betaxolol possesses some alpha adrenergic effects that constrict the bronchi','Slide 19 gives some alpha adrenergic effects to levobunolol, not to betaxolol.']],
@@ -538,10 +520,10 @@ mk('EI-055','class','new','a2','ey-class-receptor-classes',['tell','classificati
 
 mk('EI-056','adverse','new','bb','ey-bb-brady-brimonidine-tell',['tell','adverse'],'slide',
  'Which systemic effect belongs to beta receptor antagonists but not to brimonidine?', 0, [
- ['Bronchospasm in asthmatics','Slide 20 lists bronchospasm in asthmatics; slide 24 does not list it for brimonidine.'],
+ ['Bronchospasm','Slide 20 lists bronchospasm in asthmatics; slide 24 does not list it for brimonidine.'],
  ['Hypotension','Slide 20 lists hypotension for beta receptor antagonists and slide 24 lists reduction in blood pressure for brimonidine.'],
  ['Reduction in pulse','Slide 20 lists bradycardia for beta receptor antagonists and slide 24 lists a reduction in pulse for brimonidine.'],
- ['Depression','Slide 20 lists depression for beta receptor antagonists; slide 24 lists dizziness, fatigue and somnolence for brimonidine, and depression is not on the brimonidine list.']],
+ ['Oral dryness','Slide 24 lists oral dryness for brimonidine; slide 20 does not list it for beta receptor antagonists.']],
  'Slide 20 respiratory effect: bronchospasm in asthmatics; cardiac: bradycardia and hypotension. Slide 24 brimonidine: reduction in blood pressure and pulse, fatigue, somnolence.',
  'slides 20, 24; T@47078 11/13')
 );

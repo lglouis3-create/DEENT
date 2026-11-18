@@ -26,7 +26,7 @@ QUESTIONS.push(
  stem:'How does pilocarpine lower intraocular pressure?',
  options:[
   {t:'It stimulates M3 receptors, contracting the trabecular meshwork to widen its openings', correct:true, why:'Slide 32: agonist at M3 receptors; contraction of the meshwork increases outflow. T@24390: "If you contract it, you\'re opening up the spaces in the meshwork." Slide 32 also names the sphincter muscle; the lecture speaks of the ciliary body smooth muscle and the meshwork, and both give the meshwork.'},
-  {t:'It stimulates M3 receptors on the ciliary epithelium to reduce aqueous humor secretion', correct:false, why:'Slide 32 and T@24390: M3 stimulation acts on the muscle and meshwork to increase outflow; secretion by the ciliary body is reduced by beta receptor antagonists, alpha 2 agonists and carbonic anhydrase inhibitors (slides 18, 21, 26).'},
+  {t:'It stimulates M3 receptors on the ciliary epithelium to reduce aqueous humor secretion', correct:false, why:'Slide 32 and T@24390: M3 stimulation acts on the muscle and meshwork to increase outflow; secretion by the ciliary body is reduced by beta receptor antagonists, alpha 2 agonists and carbonic anhydrase inhibitors (slides 18, 22, 26).'},
   {t:'It blocks M3 receptors, relaxing the ciliary muscle so uveoscleral outflow rises', correct:false, why:'Slide 32: pilocarpine is an agonist, not a blocker. Relaxation of the ciliary muscle is the effect of prostaglandin agonists (slide 37).'},
   {t:'It inhibits acetylcholinesterase, so acetylcholine builds up at M3 receptors', correct:false, why:'Slide 34: this is the mechanism of echothiophate. Pilocarpine acts as acetylcholine at the receptor (T@23726).'}],
  teach:'Slides 30–32: carbachol and pilocarpine are direct M3 agonists. Contraction of the muscle and trabecular meshwork opens the spaces, so aqueous humor drains more easily (the construction-netting comparison, T@24723).',
@@ -102,7 +102,7 @@ QUESTIONS.push(
  tags:['two-facts','side-effect'], source:'transcript',
  stem:'Why is echothiophate chosen less often than the M3 agonists in a patient who already has glaucoma?',
  options:[
-  {t:'It causes metabolic acidosis through renal bicarbonate loss', correct:false, why:'Slide 27: metabolic acidosis is the side effect of carbonic anhydrase inhibitors.'},
+  {t:'It causes metabolic acidosis through renal bicarbonate loss', correct:false, why:'Slide 29: systemic acidosis is the side effect of carbonic anhydrase inhibitors.'},
   {t:'It darkens the iris, which makes later pressure readings less reliable', correct:false, why:'Slide 39: iris darkening is a prostaglandin agonist effect, and no source ties it to pressure readings.'},
   {t:'It reverses only partly, so its effect fades within hours', correct:false, why:'Slide 34: echothiophate is an irreversible inhibitor; no source describes a short effect.'},
   {t:'It can cause cataracts and is more irritating to the eye than pilocarpine', correct:true, why:'T@29697: "you don\'t want to be causing cataracts in your patients that already have glaucoma"; T@29919: the allergic-type reaction with burning and stinging is greater than with pilocarpine.'}],
@@ -191,7 +191,7 @@ QUESTIONS.push(
  stem:'At which receptor do the prostaglandin agonists act?',
  options:[
   {t:'The M3 receptor on the trabecular meshwork', correct:false, why:'Slide 32: M3 receptors are the target of carbachol and pilocarpine.'},
-  {t:'The alpha 2 receptor on the ciliary body', correct:false, why:'Slide 21: alpha 2 receptors are the target of brimonidine and apraclonidine.'},
+  {t:'The alpha 2 receptor on the ciliary body', correct:false, why:'Slide 22: alpha 2 receptors are the target of brimonidine and apraclonidine.'},
   {t:'The beta receptor on the ciliary epithelium', correct:false, why:'Slide 18: the beta receptor is the target of timolol and the other beta receptor antagonists.'},
   {t:'The PGF2 alpha receptor on the ciliary muscle', correct:true, why:'Slide 37 and T@31096: "agonize a specific kind of receptor that\'s in the ciliary body. It\'s called the PGF2 alpha receptor."'}],
  teach:'Slide 37: agonist at the PGF2 alpha receptor, causing relaxation of the ciliary muscle.',
@@ -224,7 +224,7 @@ QUESTIONS.push(
  stem:'Which drug class lowers intraocular pressure without changing aqueous humor production?',
  options:[
   {t:'Carbonic anhydrase inhibitors', correct:false, why:'Slide 26: they decrease ciliary body aqueous humor secretion.'},
-  {t:'Alpha 2 agonists', correct:false, why:'Slide 21: they decrease the rate of aqueous humor production.'},
+  {t:'Alpha 2 agonists', correct:false, why:'Slide 22: they decrease the rate of aqueous humor production.'},
   {t:'Beta receptor antagonists', correct:false, why:'Slide 18: they reduce aqueous production by the ciliary body.'},
   {t:'Prostaglandin agonists', correct:true, why:'Slide 37: "Does not affect aqueous humor production." T@31991: "they don\'t affect inflow ... they\'re helping with outflow."'}],
  teach:'Slide 37: prostaglandin agonists act on outflow and do not touch production; the three inflow classes lower production.',
@@ -237,7 +237,7 @@ QUESTIONS.push(
   {t:'Rho kinase inhibitors', correct:false, why:'Slide 43: netarsudil causes conjunctival hyperemia, corneal verticillata, pain and hemorrhage, not pigmentation.'},
   {t:'Parasympathomimetics', correct:false, why:'Slides 33 and 35: ciliary spasm, headache, cataracts and systemic effects, not pigmentation.'},
   {t:'Prostaglandin agonists', correct:true, why:'Slide 39: increased brown pigmentation of the iris and eyelids. T@33811: "it makes your brown eyes browner, but it also will darken your eyelids."'},
-  {t:'Alpha 2 agonists', correct:false, why:'Slide 22: ocular effects are foreign body sensation and pruritus (apraclonidine adds burning and blurred vision); no pigmentation.'}],
+  {t:'Alpha 2 agonists', correct:false, why:'Slide 24: ocular effects are foreign body sensation and pruritus (apraclonidine adds burning and blurred vision); no pigmentation.'}],
  teach:'Slide 39: brown pigmentation of the iris and eyelids; hypertrichosis and hyperpigmentation of lashes; hair growth in other areas.',
  cite:CITE('39','33811')},
 
@@ -268,7 +268,7 @@ QUESTIONS.push(
  stem:'A product sold as Latisse is used to thicken eyelashes. Which drug class does it belong to, and which effect is used?',
  options:[
   {t:'Rho kinase inhibitors; vasodilation of the lid margin', correct:false, why:'Slide 43: conjunctival hyperemia is the Rho kinase inhibitor effect; lash growth is not listed for it.'},
-  {t:'Alpha 2 agonists; vasoconstriction of the lid margin', correct:false, why:'Slide 55 lists alpha 2 agonists as ocular vasoconstrictors for allergic conjunctivitis, not for lashes.'},
+  {t:'Alpha 2 agonists; vasoconstriction of the lid margin', correct:false, why:'Slide 56 lists alpha 2 agonists as ocular vasoconstrictors for allergic conjunctivitis, not for lashes.'},
   {t:'Prostaglandin agonists; hypertrichosis and hyperpigmentation of lashes', correct:true, why:'Slide 39: "Hypertrichosis and hyperpigmentation of lashes (Latisse)". T@34104: sold as Latisse to help with eyelash thickening.'},
   {t:'Parasympathomimetics; twitching and growth of the eyelid margin', correct:false, why:'Slide 35: eyelid twitching occurs with echothiophate; it is not lash growth.'}],
  teach:'A side effect of the prostaglandin agonists is marketed as a cosmetic use. Hair growth in other areas is also listed (slide 39).',
@@ -304,17 +304,17 @@ QUESTIONS.push(
   {t:'Echothiophate: uveoscleral route; netarsudil: trabecular meshwork', correct:false, why:'Slide 34: echothiophate contracts the meshwork, so its route is trabecular.'},
   {t:'Pilocarpine: trabecular meshwork; latanoprost: uveoscleral route', correct:true, why:'Slide 32 and T@24390 (meshwork) and slide 37 and T@31289 (uveoscleral).'},
   {t:'Netarsudil: uveoscleral route; latanoprost: uveoscleral route', correct:false, why:'Slide 41: netarsudil lowers trabecular outflow resistance and acts on Schlemm\'s canal permeability.'}],
- teach:'Meshwork route: M3 agonists, echothiophate, netarsudil. Uveoscleral route: prostaglandin agonists (and some effect of brimonidine, slide 21).',
+ teach:'Meshwork route: M3 agonists, echothiophate, netarsudil. Uveoscleral route: prostaglandin agonists (and some effect of brimonidine, slide 22).',
  cite:CITE('37','31289')},
 
 {id:'EO-027', skill:'tell', prof:'Smith', tier:'new', topic:'ey-out', sub:'pg', concept:'ey-brimonidine-vs-pg',
  tags:['two-classes','inflow','outflow','tell-apart'], source:'both',
  stem:'Brimonidine and latanoprost both increase uveoscleral outflow to some degree. What separates their effects on aqueous humor production?',
  options:[
-  {t:'Neither changes production', correct:false, why:'Slide 21: brimonidine decreases the rate of aqueous humor production.'},
+  {t:'Neither changes production', correct:false, why:'Slide 22: brimonidine decreases the rate of aqueous humor production.'},
   {t:'Latanoprost decreases production; brimonidine does not', correct:false, why:'Slide 37: latanoprost does not affect aqueous humor production.'},
-  {t:'Brimonidine decreases production; latanoprost does not', correct:true, why:'Slide 21: alpha 2 agonists decrease aqueous production with some increase in uveoscleral outflow (brimonidine); slide 37: prostaglandin agonists do not affect production.'},
-  {t:'Both decrease production through the same receptor', correct:false, why:'Slide 37: latanoprost acts at the PGF2 alpha receptor and does not change production; slide 21: brimonidine acts at alpha 2 receptors.'}],
+  {t:'Brimonidine decreases production; latanoprost does not', correct:true, why:'Slide 22: alpha 2 agonists decrease aqueous production with some increase in uveoscleral outflow (brimonidine); slide 37: prostaglandin agonists do not affect production.'},
+  {t:'Both decrease production through the same receptor', correct:false, why:'Slide 37: latanoprost acts at the PGF2 alpha receptor and does not change production; slide 22: brimonidine acts at alpha 2 receptors.'}],
  teach:'Brimonidine is an inflow drug with a secondary outflow effect; prostaglandin agonists are outflow drugs only.',
  cite:CITE('37','31991')},
 
@@ -379,7 +379,7 @@ QUESTIONS.push(
  options:[
   {t:'Netarsudil', correct:true, why:'Slide 43 lists conjunctival hemorrhage among the other side effects (about 20%). T@37156: conjunctival hemorrhage is "always a little scary when you look in the mirror".'},
   {t:'Echothiophate', correct:false, why:'Slide 35: its effects are irritation, brow-ache, eyelid twitching and cataracts.'},
-  {t:'Brinzolamide', correct:false, why:'Slide 27 and 28: brinzolamide is a carbonic anhydrase inhibitor; its notable effect is metabolic acidosis.'},
+  {t:'Brinzolamide', correct:false, why:'Slides 28 and 29: brinzolamide is a carbonic anhydrase inhibitor; its notable effect is metabolic acidosis.'},
   {t:'Latanoprost', correct:false, why:'Slide 39: its effects are pigmentation, lash changes, hyperemia and few systemic effects, not conjunctival hemorrhage.'}],
  teach:'Slide 43, other side effects of netarsudil (about 20%): corneal verticillata, instillation site pain, conjunctival hemorrhage.',
  cite:CITE('43','37156')},
@@ -389,7 +389,7 @@ QUESTIONS.push(
  stem:'Corneal verticillata that did not change vision and resolved in most cases after the drug was stopped is seen with which class?',
  options:[
   {t:'Prostaglandin agonists', correct:false, why:'Slide 39: iris and eyelid pigmentation, lash changes and hyperemia; corneal verticillata is not listed.'},
-  {t:'Alpha 2 agonists', correct:false, why:'Slide 22: foreign body sensation and pruritus; corneal verticillata is not listed.'},
+  {t:'Alpha 2 agonists', correct:false, why:'Slide 24: foreign body sensation and pruritus; corneal verticillata is not listed.'},
   {t:'Rho kinase inhibitors', correct:true, why:'Slide 43: corneal verticillata; did not change vision; in most cases resolved upon drug discontinuation.'},
   {t:'Parasympathomimetics', correct:false, why:'Slides 33 and 35: ciliary spasm, blurred vision and, with echothiophate, cataracts; corneal verticillata is not listed.'}],
  teach:'Slide 43.',
@@ -399,7 +399,7 @@ QUESTIONS.push(
  tags:['class','outflow'], source:'both',
  stem:'A drug inhibits a GTP-binding protein that regulates cell shape, motility, proliferation and apoptosis, thereby lowering outflow resistance. Which drug is it?',
  options:[
-  {t:'Brimonidine', correct:false, why:'Slide 21: an alpha 2 agonist that decreases aqueous humor production.'},
+  {t:'Brimonidine', correct:false, why:'Slide 22: an alpha 2 agonist that decreases aqueous humor production.'},
   {t:'Tafluprost', correct:false, why:'Slide 37: a prostaglandin agonist acting at the PGF2 alpha receptor.'},
   {t:'Carbachol', correct:false, why:'Slide 31: a direct-acting M3 agonist.'},
   {t:'Netarsudil', correct:true, why:'Slides 41–42: RhoA is a GTP-binding protein that regulates cell shape, motility, proliferation and apoptosis; netarsudil is the Rho kinase inhibitor. T@36700: "Our only real kinase inhibitor on our drug list."'}],
@@ -421,8 +421,8 @@ QUESTIONS.push(
  tags:['two-facts','combination','outflow'], source:'slide',
  stem:'Which combination product contains two drugs that both increase aqueous humor outflow?',
  options:[
-  {t:'Timolol and brimonidine', correct:false, why:'Slides 18 and 21: timolol reduces production; brimonidine mainly decreases production with some uveoscleral outflow.'},
-  {t:'Brinzolamide and brimonidine', correct:false, why:'Slides 26 and 21: brinzolamide decreases ciliary body secretion; brimonidine mainly decreases production.'},
+  {t:'Timolol and brimonidine', correct:false, why:'Slides 18 and 22: timolol reduces production; brimonidine mainly decreases production with some uveoscleral outflow.'},
+  {t:'Brinzolamide and brimonidine', correct:false, why:'Slides 26 and 22: brinzolamide decreases ciliary body secretion; brimonidine mainly decreases production.'},
   {t:'Latanoprost and netarsudil', correct:true, why:'Slides 37 and 41: latanoprost increases uveoscleral outflow and netarsudil lowers trabecular outflow resistance. Slide 45 lists the product.'},
   {t:'Timolol and dorzolamide', correct:false, why:'Slides 18 and 26: both decrease aqueous humor production.'}],
  teach:'Slide 45 lists timolol/dorzolamide, timolol/brimonidine, brinzolamide/brimonidine and latanoprost/netarsudil.',
@@ -477,8 +477,8 @@ QUESTIONS.push(
  stem:'Which pair of adverse effects is expected from the combination of latanoprost and netarsudil?',
  options:[
   {t:'Salivation and painful ciliary spasm', correct:false, why:'Slide 33: effects of the M3 agonists.'},
-  {t:'Metabolic acidosis and brow ache', correct:false, why:'Slide 27 (acidosis: carbonic anhydrase inhibitors) and slide 35 (brow-ache: echothiophate).'},
-  {t:'Oral dryness and fatigue', correct:false, why:'Slide 22: systemic effects of brimonidine.'},
+  {t:'Metabolic acidosis and brow ache', correct:false, why:'Slide 29 (acidosis: carbonic anhydrase inhibitors) and slide 35 (brow-ache: echothiophate).'},
+  {t:'Oral dryness and fatigue', correct:false, why:'Slide 24: systemic effects of brimonidine.'},
   {t:'Brown pigmentation of the iris and conjunctival hyperemia', correct:true, why:'Slide 39 (latanoprost: increased brown pigmentation of iris and eyelids) and slide 43 (netarsudil: conjunctival hyperemia 53%).'}],
  teach:'A combination carries the adverse effects of each component.',
  cite:CITE('45','36856')},
@@ -490,7 +490,7 @@ QUESTIONS.push(
   {t:'Contraction of the trabecular meshwork', correct:false, why:'Slide 32: contraction of the meshwork is the M3 agonist effect.'},
   {t:'Relaxation of the ciliary muscle', correct:false, why:'Slide 37: relaxation of the ciliary muscle is the prostaglandin agonist effect.'},
   {t:'Reduced fibrosis-related proteins in the meshwork', correct:false, why:'Slide 41: netarsudil.'},
-  {t:'Decreased aqueous humor production by the ciliary body', correct:true, why:'Slide 26 (brinzolamide, a carbonic anhydrase inhibitor: decreased secretion) and slide 21 (brimonidine: decreased production, plus some uveoscleral outflow).'}],
+  {t:'Decreased aqueous humor production by the ciliary body', correct:true, why:'Slide 26 (brinzolamide, a carbonic anhydrase inhibitor: decreased secretion) and slide 22 (brimonidine: decreased production, plus some uveoscleral outflow).'}],
  teach:'Slide 45 lists brinzolamide/brimonidine; both components lower production.',
  cite:CITE('45','37847')},
 
@@ -498,7 +498,7 @@ QUESTIONS.push(
  tags:['combination','class'], source:'slide',
  stem:'Which combination product pairs a beta receptor antagonist with an alpha 2 agonist?',
  options:[
-  {t:'Timolol and brimonidine', correct:true, why:'Slide 45; timolol is a beta receptor antagonist (slide 19) and brimonidine an alpha 2 agonist (slide 21).'},
+  {t:'Timolol and brimonidine', correct:true, why:'Slide 45; timolol is a beta receptor antagonist (slide 19) and brimonidine an alpha 2 agonist (slide 23).'},
   {t:'Timolol and dorzolamide', correct:false, why:'Slide 45: timolol with a carbonic anhydrase inhibitor.'},
   {t:'Brinzolamide and brimonidine', correct:false, why:'Slide 45: a carbonic anhydrase inhibitor with an alpha 2 agonist.'},
   {t:'Latanoprost and netarsudil', correct:false, why:'Slide 45: a prostaglandin agonist with a Rho kinase inhibitor.'}],
@@ -523,7 +523,7 @@ QUESTIONS.push(
   {t:'Pilocarpine, netarsudil and tafluprost', correct:true, why:'Slides 32, 41 and 37: M3 agonist, Rho kinase inhibitor and prostaglandin agonist; all three increase outflow (T@23579 begins "drugs that increase outflow").'},
   {t:'Carbachol, timolol and bimatoprost', correct:false, why:'Slide 18: timolol reduces aqueous production.'},
   {t:'Echothiophate, travoprost and dorzolamide', correct:false, why:'Slide 26: dorzolamide decreases ciliary body secretion.'},
-  {t:'Netarsudil, latanoprost and apraclonidine', correct:false, why:'Slide 21: apraclonidine, an alpha 2 agonist, decreases aqueous production.'}],
+  {t:'Netarsudil, latanoprost and apraclonidine', correct:false, why:'Slide 22: apraclonidine, an alpha 2 agonist, decreases aqueous production.'}],
  teach:'Increase outflow: parasympathomimetics, prostaglandin agonists, Rho kinase inhibitor. Decrease inflow: beta receptor antagonists, alpha 2 agonists, carbonic anhydrase inhibitors.',
  cite:CITE('30','23579')},
 
@@ -577,7 +577,7 @@ QUESTIONS.push(
  options:[
   {t:'Prostaglandin agonists', correct:false, why:'Slide 39: few systemic side effects; diarrhea and salivation are not listed.'},
   {t:'Parasympathomimetics', correct:true, why:'Slides 33 and 35: burning and stinging plus diarrhea, salivation, sweating and rhinorrhea; T@28697.'},
-  {t:'Alpha 2 agonists', correct:false, why:'Slide 22: oral dryness, not drooling, is the systemic effect.'},
+  {t:'Alpha 2 agonists', correct:false, why:'Slide 24: oral dryness, not drooling, is the systemic effect.'},
   {t:'Rho kinase inhibitors', correct:false, why:'Slide 43: hyperemia, verticillata, pain and hemorrhage; no diarrhea or salivation.'}],
  teach:'Parasympathomimetics mimic acetylcholine, so their systemic absorption gives cholinergic effects.',
  cite:CITE('33','28697')},
