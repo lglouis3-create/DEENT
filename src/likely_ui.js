@@ -32,6 +32,10 @@ const LIKELY_UI = (() => {
   const NOTE = "Claude's prediction from the professors' stated emphasis, not an official list.";
 
   const css = `
+.lkchips{display:flex;flex-wrap:wrap;gap:8px;margin:4px 0 10px}.lklab{font-size:13px;color:var(--muted,#5b6475);margin-top:6px}
+.lkchip{border:1px solid var(--line,#d9deea);border-radius:999px;padding:5px 13px;background:transparent;color:inherit;font:inherit;cursor:pointer;min-height:36px}
+.lkchip.on{background:var(--ink,#1c2230);color:var(--bg,#fff);border-color:var(--ink,#1c2230)}.lkchip:disabled{opacity:.45}
+
 .lkbadge{display:inline-block;font-size:12px;font-weight:600;line-height:1.3;color:var(--accent);border:1px solid var(--accent);border-radius:999px;padding:1px 8px;white-space:nowrap;background:var(--accent-bg)}
 `;
   const addCss = () => {
@@ -56,36 +60,59 @@ const LIKELY_UI = (() => {
     b.className = 'lkbadge';
     b.setAttribute('title', NOTE);
     b.textContent = '★ Likely on the exam';
+    const ex = examOf(Q.current);
+    if (ex) { const x = document.createElement('span'); x.className = 'lkbadge lkexam'; x.textContent = 'Exam ' + ex; b.dataset.exam = ex; head.insertBefore(x, head.querySelector('.spacer') || null); }
     const sp = head.querySelector('.spacer');
     if (sp) head.insertBefore(b, sp); else head.appendChild(b);
   }
 
-  /* ---------- the card on Topics ---------- */
+  /* ---------- the card on Topics: two rows of chips (exam, professor), one Start ----------
+     Louis, 2026-11-18, option C. A star belongs to the exam of its lecture. The Exam 2 chip also
+     takes the Exam 1 stars, because that paper draws on Exam 1 material, and each question then
+     shows an "Exam 1" label. Opens on the active exam. Chip choices are page memory only. */
+  const EXAM_OF = {}; (COURSE.lectures || []).forEach(l => { EXAM_OF[l.id] = l.exam; });
+  const examOf = q => EXAM_OF[q._lec && q._lec.id ? q._lec.id : q._lec];
+  const PROFS = [['all', 'All'], ['smith', 'Smith'], ['sikazwe', 'Sikazwe'], ['patel', 'Patel']];
+  const profOf = q => ((q.prof || '').toLowerCase().match(/smith|sikazwe|patel/) || [''])[0];
+  const select = (exam, prof) => {
+    let r = pool().filter(q => {
+      const e = examOf(q);
+      return (exam === 'all' || e === +exam || (+exam === 2 && e === 1)) && (prof === 'all' || profOf(q) === prof);
+    });
+    if (exam === '3') r = r.sort((a, b) => RANK[a.id] - RANK[b.id]);   // the eye stars: most likely first
+    return r;
+  };
+
   function decorateTopics(){
     const v = document.getElementById('v-topics'); if (!v || v.querySelector('.lkcard')) return;
-    const all = pool(), sm = pool('smith'), sk = pool('sikazwe'), pa = pool('patel'), ey = pool('eye');
-    if (!all.length) return;
+    const all = pool(); if (!all.length) return;
+    const exams = [...new Set(all.map(examOf))].filter(Boolean).sort((a, b) => b - a);
+    const act = String((COURSE.exams || []).findIndex(x => x.id === COURSE.activeExam) + 1);
+    const st = {exam: exams.map(String).includes(act) ? act : 'all', prof: 'all'};
     const d = document.createElement('div');
     d.className = 'topic lkcard';
-    d.innerHTML = `<div class="subs">
-      <div class="subrow"><span class="sname"><b>★ Starred: likely on the exam (${all.length})</b>
-        <small>${esc(NOTE)}</small></span>
-        <button type="button" data-lk="all">Start</button></div>
-      <div class="subrow"><span class="sname">Dr. Smith's starred questions<small>${sm.length} questions</small></span>
-        <button type="button" class="ghost" data-lk="smith">Start</button></div>
-      <div class="subrow"><span class="sname">Dr. Sikazwe's starred questions<small>${sk.length} questions, on his assigned pages</small></span>
-        <button type="button" class="ghost" data-lk="sikazwe">Start</button></div>${pa.length ? `
-      <div class="subrow"><span class="sname">Dr. Patel's starred questions<small>${pa.length} questions, Exam 2</small></span>
-        <button type="button" class="ghost" data-lk="patel">Start</button></div>` : ''}${ey.length ? `
-      <div class="subrow"><span class="sname">Dr. Smith's eye questions<small>${ey.length} questions, Exam 3, most likely first</small></span>
-        <button type="button" class="ghost" data-lk="eye">Start</button></div>` : ''}
-    </div>`;
+    const chip = (grp, val, label, n, on, off) => `<button type="button" class="lkchip${on ? ' on' : ''}" data-grp="${grp}" data-val="${val}"${off ? ' disabled' : ''} aria-pressed="${on}">${label}${n == null ? '' : ' · ' + n}</button>`;
+    const draw = () => {
+      const sel = select(st.exam, st.prof);
+      const examChips = chip('exam', 'all', 'All', all.length, st.exam === 'all') + exams.map(e =>
+        chip('exam', e, 'Exam ' + e, select(String(e), 'all').length, st.exam === String(e))).join('');
+      const profChips = PROFS.map(([k, lab]) => chip('prof', k, lab, k === 'all' ? null : select(st.exam, k).length, st.prof === k)).join('');
+      const what = (st.exam === 'all' ? 'All exams' : 'Exam ' + st.exam) + (st.prof === 'all' ? ', all professors' : ', Dr. ' + PROFS.find(x => x[0] === st.prof)[1]);
+      const carry = +st.exam === 2 ? sel.filter(q => examOf(q) === 1).length : 0;
+      d.innerHTML = `<div class="subs">
+        <div class="subrow"><span class="sname"><b>★ Starred: likely on the exam</b><small>${esc(NOTE)}</small></span></div>
+        <div class="lklab">Exam</div><div class="lkchips">${examChips}</div>
+        <div class="lklab">Professor</div><div class="lkchips">${profChips}</div>
+        <div class="subrow"><span class="sname">${esc(what)}<small>${sel.length ? sel.length + ' questions' + (st.exam === '3' ? ', most likely first' : '') + (carry ? '; ' + carry + ' of them are Exam 1 material, labelled on the question' : '') : 'No questions starred for this choice yet'}</small></span>
+          <button type="button" data-lk="go"${sel.length ? '' : ' disabled'}>Start${sel.length ? ' (' + sel.length + ')' : ''}</button></div>
+      </div>`;
+      d.querySelectorAll('button.lkchip').forEach(b => b.onclick = () => { st[b.dataset.grp] = b.dataset.val; draw(); });
+      const go = d.querySelector('button[data-lk="go"]');
+      if (go) go.onclick = () => drillList(sel, '★ Likely: ' + what);
+    };
+    draw();
     const sweep = v.querySelector('.sweepcard');
     if (sweep) sweep.insertAdjacentElement('afterend', d); else v.appendChild(d);
-    d.querySelectorAll('button[data-lk]').forEach(b => b.onclick = () => {
-      const k = b.dataset.lk, list = k === 'all' ? all : pool(k);
-      drillList(list, k === 'all' ? '★ Likely on the exam' : k === 'smith' ? "★ Likely: Dr. Smith" : k === 'patel' ? '★ Likely: Dr. Patel' : k === 'eye' ? '★ Likely: eye (Exam 3)' : '★ Likely: Dr. Sikazwe');
-    });
   }
 
   try {
