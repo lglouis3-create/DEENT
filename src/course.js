@@ -239,16 +239,17 @@ const COURSE = {
      ]},
     {id:'exam3', name:'Exam 3', date:'Mon 11/23, 9:00–10:30 AM', when:'2026-11-23T09:00',
      questions:50, minutes:90, sata:null,
-     blurb:'Covers Lectures 9–13 (syllabus). Practice coverage so far: Dr. Smith\'s eye lectures (11/13, 11/17) and her cumulative Exam 1 material; Dr. Sikazwe and Dr. Lam join as their lectures are added. No split by professor is announced.',
+     blurb:'Covers Lectures 9–13 (syllabus). Practice coverage so far: Dr. Smith\'s eye lectures (11/13, 11/17) and her cumulative Exam 1 material; Dr. Sikazwe and Dr. Lam join as their lectures are added. Five of the 50 questions are Dr. Smith\'s cumulative ones; no split by professor is announced for the rest.',
      facts:[['Covers', 'Covers Lectures 9–13 (syllabus).'],
             ['Practice coverage', 'So far Dr. Smith\'s eye lectures (11/13, 11/17) and her cumulative Exam 1 material; Dr. Sikazwe and Dr. Lam join as their lectures are added.'],
             ['Dr. Smith (11/13)', '"I\'ve got 5 questions and they\'re cumulative, so everything that was on the first exam is fair game. So focus on pathophys and then focus on mechanisms." She likes scary side effects such as black box warnings.'],
             ['Syllabus formats', 'The syllabus lists multiple-choice, select-all, short-answer, true/false and matching as possible formats and gives no count of each.']],
      factsMain:['Covers', 'Practice coverage'],
      pools:[
-       // No split by professor or lecture is announced: unweighted, as Exam 1 was.
-       {key:'eye', name:'Lectures 9–13 so far', marks:null, filter:{exam:3}},
-       {key:'cum', name:'Dr. Smith, cumulative Exam 1 material', marks:null, filter:{exam:1, prof:'Smith', unassigned:undefined}},
+       // Dr. Smith, 11/13: "I've got 5 questions and they're cumulative" (Exam 1 material); the paper has 50
+       // questions (syllabus), so the other 45 come from Exam 3 lectures. No split by professor within them is announced.
+       {key:'eye', name:'Lectures 9–13 so far', marks:45, filter:{exam:3}},
+       {key:'cum', name:'Dr. Smith, cumulative Exam 1 material', marks:5, filter:{exam:1, prof:'Smith', unassigned:undefined}},
      ]},
   ],
   // Exam 1 was on Mon 11/09; the Exam view, the weighted pass and Weak spots follow Exam 2 from

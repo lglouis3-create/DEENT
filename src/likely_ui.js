@@ -69,7 +69,7 @@ const LIKELY_UI = (() => {
      takes the Exam 1 stars, because that paper draws on Exam 1 material, and each question's header
      already names its exam. Opens on the active exam. Chip choices are page memory only. */
   const EXAM_OF = {}; (COURSE.lectures || []).forEach(l => { EXAM_OF[l.id] = l.exam; });
-  const examOf = q => EXAM_OF[q._lec && q._lec.id ? q._lec.id : q._lec];
+  const examOf = q => { const l = (typeof lecOf === 'function' ? lecOf(q) : null) || q._lec; return EXAM_OF[l && l.id ? l.id : l]; };
   const PROFS = [['all', 'All'], ['smith', 'Smith'], ['sikazwe', 'Sikazwe'], ['patel', 'Patel']];
   const profOf = q => ((q.prof || '').toLowerCase().match(/smith|sikazwe|patel/) || [''])[0];
   const select = (exam, prof) => {
@@ -77,7 +77,6 @@ const LIKELY_UI = (() => {
       const e = examOf(q);
       return (exam === 'all' || e === +exam || (+exam === 2 && e === 1)) && (prof === 'all' || profOf(q) === prof);
     });
-    if (exam === '3') r = r.sort((a, b) => RANK[a.id] - RANK[b.id]);   // the eye stars: most likely first
     return r;
   };
 
@@ -101,7 +100,7 @@ const LIKELY_UI = (() => {
         <div class="subrow"><span class="sname"><b>★ Starred: likely on the exam</b><small>${esc(NOTE)}</small></span></div>
         <div class="lklab">Exam</div><div class="lkchips">${examChips}</div>
         <div class="lklab">Professor</div><div class="lkchips">${profChips}</div>
-        <div class="subrow"><span class="sname">${esc(what)}<small>${sel.length ? sel.length + ' questions' + (st.exam === '3' ? ', most likely first' : '') + (carry ? '; ' + carry + ' of them are Exam 1 material, labelled on the question' : '') : 'No questions starred for this choice yet'}</small></span>
+        <div class="subrow"><span class="sname">${esc(what)}<small>${sel.length ? sel.length + ' questions' + '' + (carry ? '; ' + carry + ' of them are Exam 1 material, labelled on the question' : '') : 'No questions starred for this choice yet'}</small></span>
           <button type="button" data-lk="go"${sel.length ? '' : ' disabled'}>Start${sel.length ? ' (' + sel.length + ')' : ''}</button></div>
       </div>`;
       d.querySelectorAll('button.lkchip').forEach(b => b.onclick = () => { st[b.dataset.grp] = b.dataset.val; draw(); });

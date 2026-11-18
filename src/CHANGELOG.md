@@ -14,7 +14,7 @@ Every update adds its bullets here in the same commit that makes the change.
 - Drug list: switch to the Eye list (42 drugs from the Ophthalmics chart) with quiz, recall and the chart pages.
 - Glossary: 246 new Exam 3 terms and an Exam 3 filter; eye questions starred by how likely Dr. Smith is to ask them.
 - Starred questions: pick an exam and a professor with two rows of buttons; Exam 2 includes its Exam 1 stars.
-- Exam 3 practice paper: 50 questions, plus Dr. Smith's 5 cumulative questions drawn from Exam 1.
+- Exam 3 practice paper: 50 questions, 5 of them Dr. Smith's cumulative Exam 1 questions.
 
 ## 2026-11-13 (exam folders, slide links)
 - Guides, Tell apart and Reference are grouped in an Exam 1 and an Exam 2 folder; the current exam opens first.
