@@ -74,12 +74,12 @@ QUESTIONS.push(
 
 {id:"OA-007", skill:"pk", prof:'Sikazwe', tier:'new', topic:"oo-de", sub:"drugs", concept:"oo-de-logp-vs-targets",
  tags:["hard", "two-facts"], source:"slide",
- stem:"How do cyclosporine and lifitegrast compare?",
+ stem:"Cyclosporine and lifitegrast are compared on log P and on molecular target. Which pair of conclusions holds?",
  options:[
-  {t:"Same log P (4); calcineurin versus the ICAM-1 to LFA-1 interaction", correct:true, why:"Slides 50 and 51 both print log P = 4, and give different targets."},
-  {t:"Same log P (4); both block the ICAM-1 to LFA-1 interaction", correct:false, why:"Slide 50: cyclosporine inhibits calcineurin."},
-  {t:"Different log P; both inhibit calcineurin", correct:false, why:"Both are log P 4 on the slides, and lifitegrast acts on LFA-1."},
-  {t:"Different log P; both act through the GR complex", correct:false, why:"Slide 58: the GR complex is the glucocorticoid mechanism, and both log P values are 4."}],
+  {t:"Equal log P; different targets", correct:true, why:"Slides 50 and 51 both print log P = 4; cyclosporine inhibits calcineurin and lifitegrast blocks ICAM-1 binding to integrin LFA-1."},
+  {t:"Equal log P; the same target", correct:false, why:"Slides 50-51: calcineurin and integrin LFA-1 are different targets."},
+  {t:"Different log P; the same target", correct:false, why:"Both are log P 4, and the targets differ (calcineurin versus integrin LFA-1)."},
+  {t:"Different log P; different targets", correct:false, why:"The targets differ, but both log P values are 4 on slides 50 and 51."}],
  teach:"Slides 50–51: cyclosporine and lifitegrast both have log P 4. Cyclosporine inhibits calcineurin; lifitegrast blocks ICAM-1 binding to integrin LFA-1.",
  cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slides 50–51"},
 
@@ -90,7 +90,7 @@ QUESTIONS.push(
   {t:"CYP N-deethylation to active metabolites", correct:false, why:"Slide 37: this is the pathway of brinzolamide and dorzolamide."},
   {t:"Esterase hydrolysis of a prodrug", correct:false, why:"Slides 46–48: this activates ester prodrugs such as omidenepag isopropyl and netarsudil."},
   {t:"Glucuronidation of a phenol", correct:false, why:"Lifitegrast has no phenol and slide 51 states elimination mostly unchanged."},
-  {t:"Unchanged, without metabolism", correct:true, why:"Slide 51: \"Eliminated mostly unchanged\"."}],
+  {t:"Mostly unchanged", correct:true, why:"Slide 51: \"Eliminated mostly unchanged\"."}],
  teach:"Slide 51: lifitegrast is eliminated mostly unchanged.",
  cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slide 51"},
 
@@ -167,7 +167,7 @@ QUESTIONS.push(
   {t:"Imidazole", correct:false, why:"The ring on slide 55 is the saturated imidazoline, not the aromatic imidazole."},
   {t:"Piperazine", correct:false, why:"Piperazine is the ring of cetirizine (slide 54)."},
   {t:"Imidazoline", correct:true, why:"Slide 55 heads these \"Imidazoline Decongestants\" and draws the ring in red."},
-  {t:"Biguanide", correct:false, why:"Imidazoline is the group shared by all four drawn structures."}],
+  {t:"Biguanide", correct:false, why:"A biguanide is an open-chain group; the red ring drawn on slide 55 is cyclic."}],
  teach:"Slide 55: the four are aryl imidazolines (Afrin, Clear Eyes, Visine and Otrivin products as printed there).",
  cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slide 55"},
 
@@ -186,16 +186,16 @@ QUESTIONS.push(
  tags:["hard", "reasoning"], source:"both",
  stem:"An aryl imidazoline has a CH2 linker between the aromatic ring and the imidazoline. Which receptor activity does the linker atom predict?",
  options:[
-  {t:"Alpha 1 agonism", correct:true, why:"T@49994 11/18 and slide 32: X = CH2 gives alpha 1 agonists."},
+  {t:"Alpha 1 agonism", correct:true, why:"T@49994 11/18 and slide 32: X = CH2 gives alpha 1 agonists (slide 55 prints the CH2-linked decongestants as alpha 1/alpha 2 agonists)."},
   {t:"Alpha 2 agonism", correct:false, why:"Slide 32: the amine linker gives alpha 2 agonists."},
   {t:"Beta 1 antagonism", correct:false, why:"Slide 34: beta antagonism belongs to the aryloxypropanolamines."},
   {t:"Muscarinic agonism", correct:false, why:"Slide 40: muscarinic agonists are the carbamates and esters."}],
- teach:"Slide 32 and T@49994 11/18: for an aryl imidazoline the linker atom is CH2 for alpha 1 agonists and an amine for alpha 2 agonists. The decongestants on slide 55 all have a CH2 linker, and slide 55 prints their mechanism as alpha 1 and alpha 2 agonism.",
+ teach:"Slide 32 and T@49994 11/18: for an aryl imidazoline the linker atom is CH2 for alpha 1 agonists and an amine for alpha 2 agonists. The decongestants on slide 55 all have a CH2 linker, and slide 55 prints their mechanism as alpha 1 and alpha 2 agonism; slide 32 prints the linker as X = CH2 (alpha 1) and X = NH2 (alpha 2).",
  cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slides 32, 55; T@49994 11/18"},
 
 {id:"OA-018", skill:"chem", prof:'Sikazwe', tier:'new', topic:"oo-ac", sub:"dec", concept:"oo-ac-dec-new-nh",
  tags:["hard", "reasoning"], source:"both",
- stem:"A new compound has an aromatic ring joined to an imidazoline through an amine (NH) linker. Which receptor activity does its structure predict?",
+ stem:"A new compound has an aromatic ring joined to an imidazoline through an amine linker. Which receptor activity does its structure predict?",
  options:[
   {t:"Alpha 1 agonism", correct:false, why:"Slide 32: alpha 1 agonists have the CH2 linker."},
   {t:"Alpha 2 agonism", correct:true, why:"T@49994 11/18 and slide 32: an amine linker gives alpha 2 selective agents, as in clonidine, apraclonidine and brimonidine."},
@@ -231,10 +231,10 @@ QUESTIONS.push(
  stem:"Tetrahydrometazoline differs from naphazoline in which structural way?",
  options:[
   {t:"It lacks the imidazoline ring", correct:false, why:"Slide 55: both are imidazoline decongestants."},
-  {t:"One ring of its bicyclic aryl group is saturated", correct:true, why:"Slide 55: tetrahydro marks the saturated ring; both have the CH2 linker and the imidazoline."},
+  {t:"One ring of its bicyclic system is saturated", correct:true, why:"Slide 55: tetrahydro marks the saturated ring; both have the CH2 linker and the imidazoline."},
   {t:"It has an NH linker instead of CH2", correct:false, why:"Slide 55: both have a CH2 linker."},
   {t:"It carries a phenolic OH", correct:false, why:"Slide 55: only oxymetazoline has a phenolic OH."}],
- teach:"Slide 55: both have an imidazoline joined through CH2 to a bicyclic aryl group; in tetrahydrometazoline one ring is saturated.",
+ teach:"Slide 55: both have an imidazoline joined through CH2 to a bicyclic ring system; in tetrahydrometazoline one ring is saturated.",
  cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slide 55"},
 
 {id:"OA-022", skill:"tell", prof:'Sikazwe', tier:'new', topic:"oo-ac", sub:"dec", concept:"oo-ac-dec-oxy-xylo",
@@ -285,10 +285,10 @@ QUESTIONS.push(
  tags:["hard", "reasoning"], source:"slide",
  stem:"Cromolyn consists of two chromone units joined through which kind of linker?",
  options:[
-  {t:"A direct carbon bond with no linker", correct:false, why:"Slide 56 shows a chain between the rings."},
+  {t:"A direct bond between the rings", correct:false, why:"Slide 56 shows a chain between the rings."},
   {t:"A chain containing an amide", correct:false, why:"The cromolyn linker is ether oxygen and carbon with an OH, no amide (the amides are in lodoxamide)."},
   {t:"A piperazine ring", correct:false, why:"Piperazine is the ring in cetirizine (slide 54)."},
-  {t:"A three-carbon ether chain bearing a hydroxyl", correct:true, why:"Slide 56: the two chromones are joined by O–CH2–CH(OH)–CH2–O."}],
+  {t:"A hydroxypropyl diether chain", correct:true, why:"Slide 56: the two chromones are joined by O–CH2–CH(OH)–CH2–O."}],
  teach:"Slide 56: cromolyn sodium = two chromone-2-carboxylates linked through a hydroxypropane diether.",
  cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slides 54, 56"},
 
@@ -336,22 +336,11 @@ QUESTIONS.push(
  teach:"Slide 57: SAR not clearly stated, but the dual-acting agents are multi-cyclic with ionizable N and COOH functional groups.",
  cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slides 36, 42, 55, 57"},
 
-{id:"OA-031", skill:"chem", prof:'Sikazwe', tier:'new', topic:"oo-ac", sub:"dual", concept:"oo-ac-dual-structure",
- tags:["hard", "two-facts"], source:"slide",
- stem:"Which description fits the shared structure of the dual-acting agents?",
- options:[
-  {t:"Single ring with an SO2NH2 group", correct:false, why:"Slide 38: that describes the carbonic anhydrase inhibitors."},
-  {t:"Steroid nucleus with an 11β-OH", correct:false, why:"Slide 60: that describes the glucocorticoids."},
-  {t:"Multi-cyclic, with aromatic rings and ionizable N and COOH groups", correct:true, why:"Slide 57 prints multi-cyclic with ionizable N and COOH."},
-  {t:"Aryl imidazoline with a CH2 linker", correct:false, why:"Slide 55: that describes the decongestants."}],
- teach:"Slide 57: SAR is not clearly stated, but the dual-acting agents are multi-cyclic with ionizable (N and COOH) groups.",
- cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slides 38, 55, 57, 60"},
-
 {id:"OA-032", skill:"tell", prof:'Sikazwe', tier:'new', topic:"oo-ac", sub:"dual", concept:"oo-ac-dual-cooh-multi", multi:true,
  tags:["hard", "tell"], source:"slide",
  stem:"Which of these dual-acting agents carry a carboxylic acid? Select all that apply.",
  options:[
-  {t:"Olopatidine", correct:true, why:"Slide 57: the COOH sits on the CH2 of the benzoxepine ring."},
+  {t:"Olopatidine", correct:true, why:"Slide 57: the COOH sits on a CH2 attached to the benzene ring of the benzoxepine."},
   {t:"Bepotastine", correct:true, why:"Slide 57: COOH at the end of the butyl chain on the piperidine nitrogen."},
   {t:"Ketotifen", correct:false, why:"Slide 57: a thiophene ketone with N-methylpiperidine; no COOH."},
   {t:"Epinastine", correct:false, why:"Slide 57: it has an NH2 group on its heterocycle, not COOH."}],
@@ -406,10 +395,10 @@ QUESTIONS.push(
  tags:["hard", "tell"], source:"slide",
  stem:"What is the mechanism of action of the glucocorticoid steroids?",
  options:[
-  {t:"Block H1 receptors on conjunctival cells", correct:false, why:"Slide 54: the antihistamine mechanism."},
+  {t:"Block H1 receptors so that histamine cannot act on conjunctival cells", correct:false, why:"Slide 54: the antihistamine mechanism."},
   {t:"Activate the GR complex to produce proteins that suppress pro-inflammatory proteins", correct:true, why:"Slide 58 prints this mechanism for the glucocorticoids."},
-  {t:"Inhibit granule histamine release from mast cells", correct:false, why:"Slide 56: the mast cell stabilizer mechanism."},
-  {t:"Activate alpha 1 and alpha 2 receptors", correct:false, why:"Slide 55: the decongestant mechanism."}],
+  {t:"Inhibit the release of histamine from the granules of mast cells", correct:false, why:"Slide 56: the mast cell stabilizer mechanism."},
+  {t:"Activate alpha 1 and alpha 2 receptors on conjunctival vessels", correct:false, why:"Slide 55: the decongestant mechanism."}],
  teach:"Slide 58: glucocorticoids activate the GR complex, producing proteins that suppress pro-inflammatory proteins.",
  cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slides 54–56, 58"},
 
@@ -448,7 +437,7 @@ QUESTIONS.push(
 
 {id:"OA-041", skill:"chem", prof:'Sikazwe', tier:'new', topic:"oo-ac", sub:"gc", concept:"oo-ac-highest-number",
  tags:["hard", "reasoning"], source:"slide",
- stem:"A steroid template has a branched eight-carbon side chain on C17, numbered from C20. What is the highest carbon number in the template?",
+ stem:"The numbered steroid template labels its four rings, two angular methyls and the side chain on C17. What is the highest carbon number in the template?",
  options:[
   {t:"27", correct:true, why:"Slide 58: the numbering runs to C27 (C20 to C27 is eight carbons)."},
   {t:"21", correct:false, why:"Slide 58: C21 is the methyl on C20."},
@@ -569,20 +558,20 @@ QUESTIONS.push(
 
 {id:"OA-052", skill:"class", prof:'Sikazwe', tier:'new', topic:"oo-ac", sub:"self", concept:"oo-ac-cyclopentane-pg",
  tags:["hard", "reasoning"], source:"slide",
- stem:"A drug has a five-membered all-carbon ring carrying two side chains. Which class of eye drugs is built on this ring?",
+ stem:"A cyclopentane ring carrying two adjacent side chains is the core of which class of eye drugs?",
  options:[
   {t:"Beta antagonists", correct:false, why:"Slide 33: the beta antagonists are aryloxypropanolamines."},
   {t:"Carbonic anhydrase inhibitors", correct:false, why:"Slide 36: the carbonic anhydrase inhibitors are sulfonamides."},
   {t:"Prostaglandin analogs", correct:true, why:"Slides 44–46: the prostaglandin skeleton is a cyclopentane with two chains."},
   {t:"Direct-acting cholinergics", correct:false, why:"Slide 40: carbamates and esters."}],
- teach:"Slides 44–46: PGF2α, latanoprost, bimatoprost, travoprost and tafluprost share the cyclopentane ring with an α chain and an ω chain.",
+ teach:"Slides 44–46 (slide 67 leaves its answer blank): PGF2α, latanoprost, bimatoprost, travoprost and tafluprost share the cyclopentane ring with an α chain and an ω chain.",
  cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slides 33, 36, 40, 44–46, 67"},
 
 {id:"OA-053", skill:"chem", prof:'Sikazwe', tier:'new', topic:"oo-ac", sub:"self", concept:"oo-ac-irrev-fg",
  tags:["hard", "tell"], source:"slide",
  stem:"In cholinergic drugs, which functional group exhibits irreversible acetylcholinesterase inhibition?",
  options:[
-  {t:"Carbamate", correct:false, why:"Slide 42: intermediate duration of AChE inhibition."},
+  {t:"Carbamate", correct:false, why:"Slide 43: the carbamate is the group with intermediate duration of AChE inhibition."},
   {t:"Ester", correct:false, why:"Slide 42: the least inhibition."},
   {t:"Amide", correct:false, why:"Slide 42: an amide is not one of the three groups ranked."},
   {t:"Phosphoryl (organophosphate)", correct:true, why:"Slide 42: extent of AChE inhibition phosphoryl > carbamate > ester."}],
