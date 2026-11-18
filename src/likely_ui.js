@@ -60,16 +60,14 @@ const LIKELY_UI = (() => {
     b.className = 'lkbadge';
     b.setAttribute('title', NOTE);
     b.textContent = '★ Likely on the exam';
-    const ex = examOf(Q.current);
-    if (ex) { const x = document.createElement('span'); x.className = 'lkbadge lkexam'; x.textContent = 'Exam ' + ex; b.dataset.exam = ex; head.insertBefore(x, head.querySelector('.spacer') || null); }
     const sp = head.querySelector('.spacer');
     if (sp) head.insertBefore(b, sp); else head.appendChild(b);
   }
 
   /* ---------- the card on Topics: two rows of chips (exam, professor), one Start ----------
      Louis, 2026-11-18, option C. A star belongs to the exam of its lecture. The Exam 2 chip also
-     takes the Exam 1 stars, because that paper draws on Exam 1 material, and each question then
-     shows an "Exam 1" label. Opens on the active exam. Chip choices are page memory only. */
+     takes the Exam 1 stars, because that paper draws on Exam 1 material, and each question's header
+     already names its exam. Opens on the active exam. Chip choices are page memory only. */
   const EXAM_OF = {}; (COURSE.lectures || []).forEach(l => { EXAM_OF[l.id] = l.exam; });
   const examOf = q => EXAM_OF[q._lec && q._lec.id ? q._lec.id : q._lec];
   const PROFS = [['all', 'All'], ['smith', 'Smith'], ['sikazwe', 'Sikazwe'], ['patel', 'Patel']];
