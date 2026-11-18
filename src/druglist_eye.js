@@ -99,7 +99,7 @@ const DRUGLIST_EYE = (() => {
   add(Object.assign({id: 'carteolol', name: 'Carteolol', brands: ['Ocupress'], line: 'Carteolol (Ocupress)', q: 'carteolol|ocupress'}, BETA));
   add(Object.assign({id: 'levobunolol', name: 'Levobunolol', brands: ['Betagan'], line: 'Levobunolol (Betagan)', q: 'levobunolol|betagan'}, BETA));
   add(Object.assign({id: 'betaxolol', name: 'Betaxolol', brands: ['Betoptic-S'], line: 'Betaxolol (Betoptic-S)', q: 'betaxolol|betoptic'}, BETA));
-  add({id: 'brimonidine', name: 'Brimonidine (Alphagan P)', alt: ['Brimonidine'], brands: ['Alphagan P'], page: 1, cls: 'a2', dz: 'gl', rx: 'Rx', use: 'Elevated IOP', chem: 'imid',
+  add({id: 'brimonidine', name: 'Brimonidine (glaucoma, p. 1)', alt: ['Brimonidine'], brands: ['Alphagan P'], page: 1, cls: 'a2', dz: 'gl', rx: 'Rx', use: 'Elevated IOP', chem: 'imid',
     tgt: 'ey-brim', line: 'Brimonidine (Alphagan P)', q: 'brimonidine|alphagan', sub: 'glaucoma line, p. 1',
     notes: [{t: 'Brimonidine is on the chart twice: this p. 1 line (Rx, glaucoma) and the p. 3 line (Lumify, OTC, allergic conjunctivitis). Each is its own card.', by: 'remark'}]});
   add({id: 'apraclonidine', name: 'Apraclonidine', brands: ['Iopidine'], page: 1, cls: 'a2', dz: 'gl', rx: 'Rx', use: 'Elevated IOP', chem: 'imid', tgt: 'ey-apra',
@@ -151,7 +151,7 @@ const DRUGLIST_EYE = (() => {
   add(Object.assign({id: 'bepotastine', name: 'Bepotastine', brands: ['Bepreve'], rx: 'Rx', line: 'Bepotastine (Bepreve)', q: 'bepotastine|bepreve'}, H1));
   add(Object.assign({id: 'ketotifen', name: 'Ketotifen', brands: ['Alaway', 'Zaditor'], rx: 'OTC', line: 'Ketotifen (Alaway & Zaditor)', q: 'ketotifen|alaway|zaditor'}, H1));
   const A2 = {cls: 'a2', dz: 'ac', rx: 'OTC', use: 'Allergic Conjunctivitis', chem: 'blank', tgt: 'ey-a2-otc', page: 3};
-  add(Object.assign({id: 'brimonidine-otc', name: 'Brimonidine (Lumify)', alt: ['Brimonidine'], brands: ['Lumify'], line: 'Brimonidine (Lumify)', q: 'brimonidine|lumify', sub: 'allergic conjunctivitis line, p. 3',
+  add(Object.assign({id: 'brimonidine-otc', name: 'Brimonidine (allergic conjunctivitis, p. 3)', alt: ['Brimonidine'], brands: ['Lumify'], line: 'Brimonidine (Lumify)', q: 'brimonidine|lumify', sub: 'allergic conjunctivitis line, p. 3',
     notes: [{t: 'Brimonidine is on the chart twice: this p. 3 line (Lumify, OTC, allergic conjunctivitis) and the p. 1 line (Alphagan P, Rx, glaucoma). Each is its own card.', by: 'remark'}]}, A2));
   add(Object.assign({id: 'naphazoline', name: 'Naphazoline', brands: ['Clear Eyes'], line: 'Naphazoline (Clear Eyes)', q: 'naphazoline(?!.{0,3}pheniramine)|clear eyes'}, A2));
   add(Object.assign({id: 'oxymetazoline', name: 'Oxymetazoline', brands: ['Ocuclear'], line: 'Oxymetazoline (Ocuclear)', q: 'oxymetazoline|ocuclear'}, A2));

@@ -97,7 +97,8 @@ const DRUGLIST_UI = (() => {
   const ID = 'drugs';
   const DERM = {key: 'derm', DL: DRUGLIST, CB: typeof CHART_BOXES !== 'undefined' ? CHART_BOXES : null};
   const EYE = typeof DRUGLIST_EYE !== 'undefined' ? {key: 'eye', DL: DRUGLIST_EYE, CB: typeof CHART_BOXES_EYE !== 'undefined' ? CHART_BOXES_EYE : null} : null;
-  const LKEY = () => { let ns; try { ns = NS; } catch (e) { ns = (typeof COURSE !== 'undefined' && COURSE.ns) || 'drill'; } return ns + ':drugList'; };
+  // the core's NS (COURSE.ns, plus '-preview' in /preview/); NS itself is not defined yet when this file loads
+  const LKEY = () => { let ns = (typeof COURSE !== 'undefined' && COURSE.ns) || 'drill'; try { if (BUILD.preview) ns += '-preview'; } catch (e) { /* not a preview */ } return ns + ':drugList'; };
   const chosenList = () => {
     let v = null;
     try { v = localStorage.getItem(LKEY()); } catch (e) { /* this visit only */ }

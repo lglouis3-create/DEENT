@@ -358,17 +358,6 @@ QUESTIONS.push(
  teach:"Brimonidine is about 1,000-fold more potent than apraclonidine and clonidine (T@48263).",
  cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slide 31; T@48263 11/18"},
 
-{id:"OP-033", skill:"pk", prof:'Sikazwe', tier:'new', topic:"oo-a2", sub:"class", concept:"oo-a2-halflife",
- tags:["pk", "two-facts"], source:"transcript",
- stem:"Compared with apraclonidine, how often must brimonidine be instilled, and why?",
- options:[
-  {t:"Less often, because it has the longer half-life, about 8 hours", correct:false, why:"About 8 hours is the half-life of apraclonidine (T@47695); brimonidine is about 3 to 4 hours (T@48822)."},
-  {t:"More often, because it has the lower potency", correct:false, why:"Brimonidine is the most potent (T@48263)."},
-  {t:"At the same frequency, because both have a half-life of about 3 to 4 hours", correct:false, why:"Apraclonidine is about 8 hours (T@47695)."},
-  {t:"More often, because it has the shorter half-life, about 3 to 4 hours", correct:true, why:"T@47695: apraclonidine about 8 hours; T@48822: brimonidine about 3 to 4 hours, so more frequent instillation."}],
- teach:"Apraclonidine: half-life about 8 hours. Brimonidine: about 3 to 4 hours, so more frequent instillation (T@48822).",
- cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slide 31; T@47695 11/18"},
-
 {id:"OP-034", skill:"class", prof:'Sikazwe', tier:'new', topic:"oo-a2", sub:"class", concept:"oo-a2-brands",
  tags:["class", "names"], source:"slide",
  stem:"Which printed brand name belongs to brimonidine tartrate?",

@@ -124,8 +124,8 @@ QUESTIONS.push(
   {t:'The sulfonamide group', correct:false, why:'The SO2NH2 group binds Zn and Thr199 (slide 38); the metabolites remain active (slide 37), so it is not the part removed.'},
   {t:'The methyl or methoxypropyl chain on the other ring carbon', correct:false, why:'These chains differ between the two drugs (slide 36), while the step named on slide 37 is common to both and is an N-deethylation.'},
   {t:'The sulfone oxygens on the ring', correct:false, why:'The step is an N-deethylation (slide 37), so the sulfone is not the part removed.'},
-  {t:'The ethyl group on the ring amine', correct:true, why:'N-deethylation removes the ethyl group from the nitrogen (slide 37); both drugs carry an NH-ethyl on the ring (slide 36).'}],
- teach:'Slide 37: both drugs undergo CYP N-deethylation. The N-ethyl group sits on the ring amine of each (slide 36); the products are active.',
+  {t:'The ethyl group on the secondary amine', correct:true, why:'N-deethylation removes the ethyl group from the nitrogen (slide 37); both drugs are drawn with an NH-ethyl (slide 36).'}],
+ teach:'Slide 37: both drugs undergo CYP N-deethylation. The N-ethyl group sits on the secondary amine of each (slide 36); the products are active.',
  cite:'Lectures 11–12 (Sikazwe_OOO_mc.pdf) slides 36, 37'},
 
 {id:'OC-012', skill:'class', prof:'Sikazwe', tier:'new', topic:'oo-cai', sub:'sulf', concept:'oo-cai-brand-cai',
@@ -174,12 +174,12 @@ QUESTIONS.push(
 
 {id:'OC-016', skill:'chem', prof:'Sikazwe', tier:'new', topic:'oo-chol', sub:'dir', concept:'oo-chol-carbachol-carbamate',
  tags:[], source:'slide',
- stem:'Which functional group joins the carbonyl to the oxygen and to NH2 in carbachol, in place of the ester of acetylcholine?',
+ stem:'In carbachol, a carbonyl is bonded to both an oxygen and an NH2, where acetylcholine has an ester. What functional group is this?',
  options:[
   {t:'Amide', correct:false, why:'The carbonyl of carbachol is bonded to both O and NH2, which is a carbamate (slide 40), not an amide.'},
   {t:'Phosphoryl', correct:false, why:'The phosphoryl group is the organophosphate group of slide 42.'},
   {t:'Carbonate', correct:false, why:'Slide 40 lists carbamates and esters for the direct-acting cholinergics.'},
-  {t:'Carbamate', correct:true, why:'Slide 40: carbachol Cl is listed among the carbamates; acetylcholine carries an ester.'}],
+  {t:'Carbamate', correct:true, why:'Slide 40: carbachol Cl is drawn with C(=O) bonded to O and NH2, a carbamate (compare slide 42); acetylcholine carries an ester.'}],
  teach:'Slide 40: direct-acting cholinergics are carbamates and esters. Acetylcholine has an ester (acyloxy) group; carbachol Cl has a carbamate.',
  cite:'Lectures 11–12 (Sikazwe_OOO_mc.pdf) slide 40'},
 
@@ -196,7 +196,7 @@ QUESTIONS.push(
 
 {id:'OC-018', skill:'mech', prof:'Sikazwe', tier:'new', topic:'oo-chol', sub:'dir', concept:'oo-chol-carbachol-weak-indirect',
  tags:['two-facts'], source:'slide',
- stem:'Carbachol Cl is a direct-acting cholinergic. What additional action is printed for it?',
+ stem:'Carbachol Cl is a direct-acting cholinergic. What additional action does it have?',
  options:[
   {t:'Weak inhibition of carbonic anhydrase', correct:false, why:'Slide 40 prints weak indirect effects; CA inhibition belongs to the sulfonamides (slide 36).'},
   {t:'Weak activation of the FP receptor', correct:false, why:'FP receptor activation is the prostaglandin mechanism (slide 44).'},
@@ -214,7 +214,7 @@ QUESTIONS.push(
   {t:'Spacing between the oxygen and the nitrogen', correct:false, why:'Slide 40: the spacer is the 2-carbon chain between O and N.'},
   {t:'Binding to zinc in the CA active site', correct:false, why:'Zinc binding is the SO2NH2 group of the CAIs (slide 38).'}],
  teach:'Slide 40 SAR: acyloxy group for H-bonding to nicotinic/muscarinic receptors; ionizable amine (N) group; N-methyl groups; 2-carbon spacer between O and N.',
- cite:'Lectures 11–12 (Sikazwe_OOO_mc.pdf) slides 40,38'},
+ cite:'Lectures 11–12 (Sikazwe_OOO_mc.pdf) slide 40'},
 
 {id:'OC-020', skill:'chem', prof:'Sikazwe', tier:'new', topic:'oo-chol', sub:'dir', concept:'oo-chol-spacer-length',
  tags:[], source:'slide',
@@ -333,7 +333,7 @@ QUESTIONS.push(
   {t:'Carbachol Cl', correct:true, why:'Slide 40: carbachol Cl is the carbamate with the N-methyl ammonium and 2-carbon spacer.'},
   {t:'Acetylcholine', correct:false, why:'Acetylcholine has the same ammonium and spacer but an ester (slide 40).'},
   {t:'Echothiophate iodide', correct:false, why:'Echothiophate has a trimethylammonium and a two-carbon chain but a phosphoryl group (slide 42).'},
-  {t:'Pilocarpine HCl', correct:false, why:'Pilocarpine (slide 40) has an imidazole and a ring ester; it has no trimethylammonium.'}],
+  {t:'Pilocarpine HCl', correct:false, why:'Pilocarpine (slide 40) is drawn with an N-methylimidazole and no trimethylammonium.'}],
  teach:'Slides 40 and 42: carbachol (carbamate), acetylcholine (ester) and echothiophate (phosphoryl) share an ammonium-based side chain; the key difference is the functional group.',
  cite:'Lectures 11–12 (Sikazwe_OOO_mc.pdf) slides 40, 42'},
 
@@ -429,7 +429,7 @@ QUESTIONS.push(
  tags:['two-facts'], source:'slide',
  stem:'Which FP agonist has halogens at the C-15 position in place of the hydroxyl?',
  options:[
-  {t:'Tafluprost', correct:true, why:'Slides 44 and 46: tafluprost has two fluorines at C-15; the SAR allows OH or halogens at C-15.'},
+  {t:'Tafluprost', correct:true, why:'Slide 44: tafluprost is drawn with two F on the C-15 carbon, where the others carry OH; slide 46: C-15 = OH or halogens.'},
   {t:'Latanoprost', correct:false, why:'Slide 44: latanoprost keeps the C-15 hydroxyl.'},
   {t:'Bimatoprost', correct:false, why:'Slide 44: bimatoprost keeps the C-15 hydroxyl.'},
   {t:'Travoprost', correct:false, why:'Slide 44: travoprost keeps the C-15 hydroxyl.'}],

@@ -18,7 +18,7 @@ const SRC = JSON.parse(fs.readFileSync(path.join(__dirname, 'likely_map_source.j
 const N = t => Object.keys(SRC.tabs[t]).length;
 let fail = 0, n = 0;
 const check = (ok, label, detail) => { n++; if (!ok) fail++; console.log((ok ? '  ok    ' : '  FAIL  ') + label + (ok || !detail ? '' : '  — ' + String(detail).slice(0, 500))); };
-const ls = p => p.evaluate(() => JSON.stringify(Object.keys(localStorage).sort().map(k => [k, localStorage.getItem(k).length])));
+const ls = p => p.evaluate(() => JSON.stringify(Object.keys(localStorage).filter(k => !/:drugList$/.test(k)).sort().map(k => [k, localStorage.getItem(k).length])));   // :drugList is the Drug list's own remembered list (Dermatology or Eye), written when this test switches lists
 const noScroll = p => p.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1);
 
 (async () => {
