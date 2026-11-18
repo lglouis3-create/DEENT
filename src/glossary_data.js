@@ -14794,7 +14794,7 @@ const GLOSSARY_TERMS = [
 "id": "oo-clonidine",
 "term": "clonidine",
 "also": [],
-"def": "The prototype imidazoline α2 agonist (ClogP = 1.5, slide 31). Dr. Sikazwe: lipophilic enough to reach the brain, causing CNS effects including hypotension, so analogs were made.",
+"def": "The prototype imidazoline α2 agonist (ClogP = 1.5, slide 31). Dr. Sikazwe: lipophilic enough to reach the brain, causing CNS effects on blood pressure (he names hypertension), so analogs were made.",
 "cite": "OOO slide 31, T@46246 11/18",
 "src": "slide",
 "deck": "oo",
