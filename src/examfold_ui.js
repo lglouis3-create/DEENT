@@ -97,7 +97,7 @@ const EXAMFOLD_UI = (function examFoldUi(){
   const SECTION_EXAM = {
     tell: {'tell-l1-diseases': 1, 'tell-l1-drugs': 1, 'tell-l2': 1, 'tell-l3': 1, 'tell-smith-safety': 1, 'tell-sun': 1,
            'tell-s3': 1, 'tell-s4': 1,
-           'tell-ey-glaucoma': 3, 'tell-ey-inflow': 3, 'tell-ey-outflow': 3, 'tell-ey-allergy': 3, 'tell-ey-dry': 3},
+           'tell-ey-glaucoma': 3, 'tell-ey-inflow': 3, 'tell-ey-outflow': 3, 'tell-ey-allergy': 3, 'tell-ey-dry': 3, 'tell-oo-chem': 3},
     ref: {'ref-l1-classes': 1, 'ref-l1-acnemap': 1, 'ref-l1-nr': 1, 'ref-l1-steroids': 1, 'ref-l2': 1, 'ref-l3': 1,
           'ref-targets': 1, 'ref-sun': 1, 'ref-s3': 1, 'ref-s4': 1,
           'ref-p5-ftu': 2, 'ref-p5-tcs': 2, 'ref-p5-drugs': 2, 'ref-p5-diaper': 2,
@@ -105,7 +105,7 @@ const EXAMFOLD_UI = (function examFoldUi(){
           'ref-p7-shampoo': 2, 'ref-p7-pso': 2, 'ref-p7-sys': 2, 'ref-p7-bio': 2,
           'ref-p8-otc': 2, 'ref-p8-plant': 2, 'ref-p8-bites': 2, 'ref-p8-vector': 2, 'ref-p8-lice': 2, 'ref-p8-venom': 2,
           'ref-p8-sun': 2, 'ref-p8-smithpatel': 2, 'ref-p8-wound': 2, 'ref-p8-wcc': 2,
-          'ref-ey-tears': 3, 'ref-ey-flow': 3, 'ref-ey-gl': 3, 'ref-ey-ac': 3, 'ref-ey-de': 3},
+          'ref-ey-tears': 3, 'ref-ey-flow': 3, 'ref-ey-gl': 3, 'ref-ey-ac': 3, 'ref-ey-de': 3, 'ref-oo-otic-oral': 3, 'ref-oo-oral': 3, 'ref-oo-classes': 3, 'ref-oo-glaucoma': 3, 'ref-oo-glaucoma-values': 3, 'ref-oo-eye-route': 3, 'ref-oo-dry-allergy': 3, 'ref-oo-steroid': 3},
   };
   const esc = s => String(s == null ? '' : s).replace(/[&<>"]/g, c => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;'})[c]);
   const plural = (n, w) => `${n} ${w}${n === 1 ? '' : 's'}`;

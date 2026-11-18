@@ -1063,7 +1063,7 @@ const DRUGLIST_UI = (() => {
   }
   /* the switch: each list keeps its own filters, quiz and this visit's ratings (page memory) while the other is shown */
   const stash = {}, STKEYS = ['q', 'dz', 'cls', 'page', 'status', 'boxed', 'photo', 'hasq', 'kinds', 'rfield', 'cpage', 'chit', 'cq', 'cfrom', 'gopen', 'ropen', 'zoom'];
-  function setList(key){
+  function setList(key, keep){
     const nl = key === 'eye' && EYE ? EYE : DERM;
     if (nl === LIST) return;
     const o = {quiz, events: events.slice(), rated: Object.assign({}, rated), checked: [...checked], typed: Object.assign({}, typed)};
@@ -1082,7 +1082,7 @@ const DRUGLIST_UI = (() => {
       quiz = null;
     }
     if (isEye() && !RF_EYE.includes(st.rfield)) st.rfield = 'target';
-    try { localStorage.setItem(LKEY(), nl.key); } catch (e) { /* kept for this visit */ }
+    if (!keep) try { localStorage.setItem(LKEY(), nl.key); } catch (e) { /* kept for this visit */ }
   }
   function rerender(focusSel){
     const y = window.scrollY; render(pane); window.scrollTo(0, y);
@@ -1244,7 +1244,7 @@ const DRUGLIST_UI = (() => {
   } catch (e) { console.error('The Drug list tab could not be added; the rest of the page is unaffected.', e); }
   /* the search box (search_ui.js) opens a drug in Browse: its folder and its line open, the filters cleared */
   function openDrug(id){
-    if (!DL.D.find(x => x.id === id)) { const other = isEye() ? DERM : EYE; if (other && other.DL.D.find(x => x.id === id)) setList(other.key); }
+    if (!DL.D.find(x => x.id === id)) { const other = isEye() ? DERM : EYE; if (other && other.DL.D.find(x => x.id === id)) setList(other.key, true); }
     const d = DL.D.find(x => x.id === id); if (!d || !pane) return false;
     Object.assign(st, NOFILTER, {mode: 'browse', q: d.name, cfrom: null});
     st.ropen[d.id] = true; st.gopen[catOf(d)] = true;

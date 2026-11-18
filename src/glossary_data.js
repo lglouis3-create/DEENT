@@ -1,5 +1,5 @@
 /* glossary_data.js: the course glossary read by glossary_ui.js (2026-11-15).
-   893 entries from the slides of the eleven decks (Dr. Smith's Pathophysiology, PCol and Sun Exposure; Dr. Sikazwe's DPAW; Dr. Patel's
+   1009 entries from the slides of the eleven decks (Dr. Smith's Pathophysiology, PCol and Sun Exposure; Dr. Sikazwe's DPAW; Dr. Patel's
    Dermatitis, Acne, Scaly Dermatoses, Outdoor Exposures, Sun Exposure, Wound Care and Warts) and the Diseases tab's terms, each checked
    against its cited slide, or against the public source named in its cite when src is 'general' (a word the slides use without defining).
    Where the same term is taught by more than one professor the entry gives each definition under the professor's name, and parts lists them: [{prof, def, cite, src}], each with that professor's own cite; def and cite stay the joined text.
@@ -13669,5 +13669,1624 @@ const GLOSSARY_TERMS = [
 "prof": "Smith",
 "exam": 3,
 "kind": "sign"
+},
+{
+"id": "oo-cerumen",
+"term": "cerumen",
+"also": [
+"earwax",
+"ear wax"
+],
+"def": "Ear wax. Skin cells build up in the ear canal, which protects the canal skin from drying out, but too much becomes impacted or excessive wax, the first otic disorder on slide 5.",
+"cite": "OOO slide 5, T@3122 11/18",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "anatomy"
+},
+{
+"id": "oo-cerumenolytic",
+"term": "cerumenolytic",
+"also": [
+"cerumenolytics"
+],
+"def": "A drug that treats impacted ear wax by softening, liquefying, hydrating or disintegrating it; the canal is then irrigated. Slide 6 groups them as water based, oil based, or nonwater, nonoil based.",
+"cite": "OOO slide 5, OOO slide 6, T@4028 11/18",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "class"
+},
+{
+"id": "oo-water-based-cerumenolytic",
+"term": "water-based cerumenolytic preparations",
+"also": [
+"water based preparations"
+],
+"def": "Slide 6 water-based preparations: acetic acid, Colace (docusate sodium), hydrogen peroxide, sodium bicarbonate and sterile saline solution. Colace and hydrogen peroxide carry the red mark of agents in current use.",
+"cite": "OOO slide 6",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "class"
+},
+{
+"id": "oo-oil-based-cerumenolytic",
+"term": "oil-based cerumenolytic preparations",
+"also": [
+"oil based preparations"
+],
+"def": "Slide 6 oil-based preparations: almond oil, arachis oil, Earex, olive oil and mineral oil/liquid petrolatum. Olive oil carries the red mark of an agent in current use.",
+"cite": "OOO slide 6",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "class"
+},
+{
+"id": "oo-nonwater-nonoil-cerumenolytic",
+"term": "nonwater, nonoil based cerumenolytic preparations",
+"also": [
+"non-water non-oil based"
+],
+"def": "Slide 6 lists Audax (choline salicylate, glycerine) and Debrox (carbamide peroxide, urea-hydrogen peroxide). Dr. Sikazwe says these are mostly dissolved in glycerol or propylene glycol and emphasizes Debrox.",
+"cite": "OOO slide 6, T@4715 11/18",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "class"
+},
+{
+"id": "oo-docusate-na",
+"term": "docusate sodium",
+"also": [
+"docusate Na",
+"Colace"
+],
+"def": "Colace, also a stool softener; slide 7 calls it a -SO3H anionic surfactant. CBDA: it lowers surface tension between water and cerumen by dissolving in both. Being ionic, it is poorly absorbed systemically.",
+"cite": "OOO slide 7, T@7228 11/18",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "oo-surfactant",
+"term": "surfactant",
+"also": [
+"anionic surfactant",
+"surface-acting"
+],
+"def": "A surface-acting molecule with a lipophilic tail and a hydrophilic head. Docusate Na is an anionic surfactant (slide 7): the tail inserts into cerumen and the head faces water, so water enters.",
+"cite": "OOO slide 7, T@5648 11/18",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "chemistry"
+},
+{
+"id": "oo-surface-tension",
+"term": "surface tension",
+"also": [],
+"def": "The tension at the boundary between oil and water. Slide 7: docusate lowers it between water and cerumen, so water can seep into the wax.",
+"cite": "OOO slide 7, T@6035 11/18",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "chemistry"
+},
+{
+"id": "oo-emulsify",
+"term": "emulsify",
+"also": [
+"emulsion",
+"emulsification"
+],
+"def": "To mix wax and water into an emulsion. Slide 7: docusate increases water entry to emulsify cerumen, so the wax can be irrigated out.",
+"cite": "OOO slide 7, T@5762 11/18",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "other"
+},
+{
+"id": "oo-carbamide-peroxide",
+"term": "carbamide peroxide",
+"also": [
+"Debrox",
+"urea hydrogen peroxide",
+"Urea.H2O2"
+],
+"def": "Debrox, a 1:1 urea·H2O2 complex. CBDA (slide 8): it dissociates to release H2O2, which catalase converts to effervescing O2; the bubbling breaks up ear wax.",
+"cite": "OOO slide 8, T@7804 11/18",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "oo-hydrogen-peroxide",
+"term": "hydrogen peroxide",
+"also": [
+"H2O2"
+],
+"def": "The active agent released from carbamide peroxide (slide 8). It oxidizes stains in teeth whiteners (slide 24); Dr. Sikazwe calls it an oxidizing, antibacterial and bleaching agent.",
+"cite": "OOO slide 8, OOO slide 24, T@25310 11/18",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "oo-urea-in-complex",
+"term": "urea",
+"also": [],
+"def": "The partner of H2O2 in carbamide peroxide and a product of its dissociation (slide 8). Dr. Sikazwe says it stabilizes hydrogen peroxide so that H2O2 is released slowly.",
+"cite": "OOO slide 8, T@9219 11/18",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "chemistry"
+},
+{
+"id": "oo-catalase",
+"term": "catalase",
+"also": [],
+"def": "The enzyme labeled on slide 8 that converts H2O2 to O2. Dr. Sikazwe says it is an antioxidant enzyme also present in cerumen, so the reaction is rapid.",
+"cite": "OOO slide 8, T@8311 11/18",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "oo-effervescence",
+"term": "effervescence",
+"also": [
+"effervescing"
+],
+"def": "Fizzing from released oxygen. Slide 8: Debrox's H2O2 generates effervescing O2, and the effervescence breaks up ear wax, a chemical release with a mechanical effect.",
+"cite": "OOO slide 8, T@8776 11/18",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "other"
+},
+{
+"id": "oo-glycerol-propylene-glycol",
+"term": "glycerol and propylene glycol",
+"also": [
+"glycerine"
+],
+"def": "The solvents in which the nonwater, nonoil based cerumenolytics are mostly dissolved, as Dr. Sikazwe describes the slide 6 group; carbamide peroxide solution is in one of them.",
+"cite": "OOO slide 6, T@4735 11/18",
+"src": "lecture",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "other"
+},
+{
+"id": "oo-otitis",
+"term": "otitis",
+"also": [
+"otitis externa",
+"otitis media"
+],
+"def": "FYI: ear infection. Slide 10 lists topical and systemic antibiotics, analgesics, anti-inflammatories and antifungals. Dr. Sikazwe says it will not be on the exam.",
+"cite": "OOO slide 10, T@10354 11/18",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "disease"
+},
+{
+"id": "oo-tinnitus",
+"term": "tinnitus",
+"also": [],
+"def": "FYI: ringing, buzzing, hissing, grinding or roaring sounds in the ear. Slides 12-13: alcohol, caffeine and some NSAIDs worsen it, and no FDA-approved drugs exist. Dr. Sikazwe says no exam question.",
+"cite": "OOO slide 12, OOO slide 13, T@13889 11/18",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "disease"
+},
+{
+"id": "oo-caries",
+"term": "caries",
+"also": [
+"tooth decay",
+"cavities"
+],
+"def": "Tooth decay. Slide 16: bacteria turn sugars into acids that erode enamel and lead to cavities; slide 20 lists preventing caries as a goal of fluoride rinses.",
+"cite": "OOO slide 16, OOO slide 20",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "disease"
+},
+{
+"id": "oo-enamel",
+"term": "enamel",
+"also": [],
+"def": "The outer tooth surface. Slide 17: its hydroxyapatite is vulnerable to acid erosion, and fluoride converts that to fluorapatite. Slide 16 lists acid drinks and bacterial acids as causes of erosion.",
+"cite": "OOO slide 16, OOO slide 17, T@16731 11/18",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "anatomy"
+},
+{
+"id": "oo-remineralization",
+"term": "remineralization",
+"also": [
+"remineralize",
+"remineralizer",
+"remineralizers"
+],
+"def": "Restoring lost mineral to enamel, mostly calcium and phosphate. Slide 15 lists it as a goal; fluoride, nHA, CSPS and ACP act as remineralizers (slides 18-19).",
+"cite": "OOO slide 15, OOO slide 18, OOO slide 19, T@14779 11/18",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "oo-mineralization",
+"term": "mineralization",
+"also": [
+"mineral deposition"
+],
+"def": "Slide 18: fluoride ions enhance mineral deposition by recruiting calcium and phosphate ions from saliva onto enamel, in addition to forming fluorapatite.",
+"cite": "OOO slide 18, T@20843 11/18",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "oo-gingivitis",
+"term": "gingivitis",
+"also": [],
+"def": "Gum swelling. Slides 15 and 21 list it with tooth decay; Dr. Sikazwe says plaque forming on teeth and gums leads to it.",
+"cite": "OOO slide 15, OOO slide 21, T@16266 11/18",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "disease"
+},
+{
+"id": "oo-fluoride",
+"term": "fluoride ion",
+"also": [
+"fluoride",
+"fluoride toothpaste",
+"fluoride toothpastes"
+],
+"def": "The active ion of fluoride toothpastes, gels and rinses (slides 17-18, 20). It converts hydroxyapatite to fluorapatite, enhances mineralization, and in excess (>2 mg/L) causes enamel fluorosis.",
+"cite": "OOO slide 17, OOO slide 18, OOO slide 20, T@21065 11/18",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "oo-na2po3f",
+"term": "Na2PO3F",
+"also": [
+"sodium fluorophosphate"
+],
+"def": "A fluoride source in toothpastes and gels, listed on slide 17 with SnF2 and NaF; Dr. Sikazwe reads it as sodium fluorophosphate.",
+"cite": "OOO slide 17, T@18489 11/18",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "pharmacology",
+"cs": true
+},
+{
+"id": "oo-snf2",
+"term": "SnF2",
+"also": [
+"tin fluoride"
+],
+"def": "A fluoride source listed on slide 17 with Na2PO3F and NaF; Dr. Sikazwe reads it as tin fluoride.",
+"cite": "OOO slide 17, T@18654 11/18",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "pharmacology",
+"cs": true
+},
+{
+"id": "oo-naf",
+"term": "NaF",
+"also": [
+"sodium fluoride"
+],
+"def": "A fluoride source in toothpastes and gels, listed on slide 17 (and in its CBDA line) with Na2PO3F and SnF2; Dr. Sikazwe reads it as sodium fluoride.",
+"cite": "OOO slide 17, T@18671 11/18",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "pharmacology",
+"cs": true
+},
+{
+"id": "oo-hydroxyapatite",
+"term": "hydroxyapatite",
+"also": [
+"Ca10(PO4)6(OH)2"
+],
+"def": "Ca10(PO4)6(OH)2, the compound enamel is made of (slide 17). It is vulnerable to acid erosion; fluoride converts it into fluorapatite.",
+"cite": "OOO slide 17, T@18881 11/18",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "chemistry"
+},
+{
+"id": "oo-fluorapatite",
+"term": "fluorapatite",
+"also": [
+"fluoroapatite",
+"Ca10(PO4)6F2"
+],
+"def": "Ca10(PO4)6F2, formed when fluoride replaces hydroxyl in hydroxyapatite (slide 17). It resists acid erosion better, which is why fluoride is used continuously.",
+"cite": "OOO slide 17, T@19912 11/18",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "chemistry"
+},
+{
+"id": "oo-fluorosis",
+"term": "fluorosis",
+"also": [
+"enamel fluorosis"
+],
+"def": "Enamel damage from too much fluoride (>2 mg/L on slide 18). Dr. Sikazwe: it starts as white spots, especially in children, and can brown as stains are incorporated.",
+"cite": "OOO slide 18, T@21980 11/18",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "disease"
+},
+{
+"id": "oo-sodium-bicarbonate",
+"term": "sodium bicarbonate",
+"also": [
+"NaHCO3"
+],
+"def": "NaHCO3: an abrasive and pH-elevating agent in non-fluoride toothpastes (slide 19) and a rinse that raises saliva pH and slows acidic bacteria (slide 20).",
+"cite": "OOO slide 19, OOO slide 20, T@22932 11/18",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "oo-nha",
+"term": "nanohydroxyapatite",
+"also": [
+"nHA",
+"nano hydroxyapatite"
+],
+"def": "Non-fluoride toothpaste ingredient (10% nHA, slide 19): 50-1000 nm crystals that bond to hydroxyapatite in enamel.",
+"cite": "OOO slide 19, T@23217 11/18",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "oo-csps",
+"term": "calcium sodium phosphosilicate",
+"also": [
+"CSPS"
+],
+"def": "CSPS: a bioactive glass that reacts with oral fluids to deposit crystalline hydroxycarbonate apatite (HCA) on enamel (slide 19).",
+"cite": "OOO slide 19, T@23660 11/18",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "oo-hca",
+"term": "hydroxycarbonate apatite",
+"also": [
+"HCA"
+],
+"def": "The crystalline apatite that CSPS deposits after reacting with oral fluids (slide 19); Dr. Sikazwe says it mimics hydroxyapatite on the enamel.",
+"cite": "OOO slide 19, T@23807 11/18",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "chemistry"
+},
+{
+"id": "oo-acp",
+"term": "amorphous calcium phosphate",
+"also": [
+"ACP"
+],
+"def": "A reactive salt mixture that releases Ca2+ and PO4 ions on contact with saliva to remineralize enamel (slide 19).",
+"cite": "OOO slide 19, T@23945 11/18",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "oo-abrasive",
+"term": "abrasive",
+"also": [
+"abrasives"
+],
+"def": "A gritty agent. Sodium bicarbonate is an abrasive in toothpaste (slide 19); abrasives are also one whitening mechanism (slide 24).",
+"cite": "OOO slide 19, OOO slide 24, T@22769 11/18",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "other"
+},
+{
+"id": "oo-canker-sores",
+"term": "canker sores",
+"also": [],
+"def": "Mouth sores. Slide 20 lists a 10% carbamide peroxide mouth rinse for them.",
+"cite": "OOO slide 20, T@25416 11/18",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "disease"
+},
+{
+"id": "oo-listerine",
+"term": "Listerine",
+"also": [],
+"def": "Mouth rinse whose slide 20 ingredients are thymol, eucalyptol, methyl salicylate and menthol; Dr. Sikazwe calls it a mixture of antiseptic and anti-inflammatory agents.",
+"cite": "OOO slide 20, T@25675 11/18",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "oo-benzocaine",
+"term": "benzocaine",
+"also": [],
+"def": "An anesthetic in mouth gels and combination agents (slide 20). Cyps convert it to benzocaine hydroxyamine, tied to methemoglobinemia: rare but a concern, so Dr. Sikazwe cautions against frequent use.",
+"cite": "OOO slide 20, T@26576 11/18",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "oo-benzocaine-hydroxyamine",
+"term": "benzocaine hydroxyamine",
+"also": [],
+"def": "The metabolite formed from benzocaine by Cyps (slide 20) and labeled methemoglobinemia there; Dr. Sikazwe says it has been implicated in methemoglobinemia.",
+"cite": "OOO slide 20, T@26703 11/18",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "chemistry"
+},
+{
+"id": "oo-chlorhexidine",
+"term": "chlorhexidine gluconate",
+"also": [
+"chlorhexidine"
+],
+"def": "A biguanide salt mouth rinse, cationic at physiological pH (slide 21). CBDA: it binds bacterial cell walls electrostatically and its lipophilic tails disrupt them.",
+"cite": "OOO slide 21, T@27405 11/18",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "oo-cetylpyridinium",
+"term": "cetylpyridinium chloride",
+"also": [
+"cetylpyridinium"
+],
+"def": "A pyridinium salt mouth rinse, cationic (slide 21). Same CBDA as chlorhexidine: electrostatic binding to the bacterial cell wall, then lipophilic tail insertion.",
+"cite": "OOO slide 21",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "oo-biguanide",
+"term": "biguanide",
+"also": [
+"biguanides"
+],
+"def": "The chemical class of chlorhexidine (slide 21). Its guanide groups are highly basic and ionize at physiological pH, so the molecule is cationic.",
+"cite": "OOO slide 21, T@28314 11/18",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "class"
+},
+{
+"id": "oo-pyridinium",
+"term": "pyridinium",
+"also": [],
+"def": "Pyridine carrying a positive charge; cetylpyridinium chloride is a pyridinium salt (slide 21). Dr. Sikazwe: four groups on the nitrogen make it quaternary and cationic.",
+"cite": "OOO slide 21, T@28811 11/18",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "class"
+},
+{
+"id": "oo-quaternary-nitrogen",
+"term": "quaternary nitrogen",
+"also": [
+"quaternary ammonium",
+"quaternary"
+],
+"def": "A nitrogen bonded to four groups and positively charged. Dr. Sikazwe uses it for pyridinium; acetylcholine and carbachol are drawn with N+ (slides 40-41).",
+"cite": "OOO slide 21, OOO slide 40, OOO slide 41, T@28752 11/18",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "chemistry"
+},
+{
+"id": "oo-cationic",
+"term": "cationic",
+"also": [
+"catioionic"
+],
+"def": "Positively charged. Chlorhexidine and cetylpyridinium are cationic (slide 21); Dr. Sikazwe says their permanent charge keeps them from entering systemic circulation much.",
+"cite": "OOO slide 21, T@31388 11/18",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "chemistry"
+},
+{
+"id": "oo-lipophilic-tail",
+"term": "lipophilic tail",
+"also": [
+"lipophilic tails"
+],
+"def": "The nonpolar tail of chlorhexidine and cetylpyridinium. Slide 21: it inserts into the bacterial cell wall and disrupts its integrity, while the charged head stays at the surface.",
+"cite": "OOO slide 21, T@29626 11/18",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "chemistry"
+},
+{
+"id": "oo-electrostatic-binding",
+"term": "electrostatic binding",
+"also": [
+"electrostatically",
+"electrostatic interaction"
+],
+"def": "The CBDA step of the slide 21 rinses: the positive charge binds the negative phospholipids of the bacterial cell wall.",
+"cite": "OOO slide 21, T@29364 11/18",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "oo-amalgam",
+"term": "amalgam",
+"also": [
+"metal amalgam",
+"metal amalgams",
+"amalgams"
+],
+"def": "A metal filling. Slide 22: now less common because of environmental and toxicity concerns; Dr. Sikazwe notes its high mercury content.",
+"cite": "OOO slide 22, T@33258 11/18",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "other"
+},
+{
+"id": "oo-restorative-treatment",
+"term": "restorative treatment",
+"also": [
+"restoration",
+"fillings",
+"tooth fillings"
+],
+"def": "A physical, non-pharmacotherapy repair that replaces lost tooth (slide 15 fillings; slides 22-23). Fillings are metal amalgams or resins.",
+"cite": "OOO slide 15, OOO slide 22, OOO slide 23, T@15408 11/18",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "counseling"
+},
+{
+"id": "oo-resin",
+"term": "dental resin",
+"also": [
+"resin",
+"resins"
+],
+"def": "The filling material on slide 23; the most common resin is Bis-GMA. Light is shone on it to cause rapid polymerization into a hardened polymer on enamel.",
+"cite": "OOO slide 23, T@34069 11/18",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "other"
+},
+{
+"id": "oo-bis-gma",
+"term": "Bis-GMA",
+"also": [
+"bisphenol A-glycidyl methacrylate",
+"BisGMA"
+],
+"def": "Bisphenol A-Glycidyl methacrylate, the most common dental resin: a polymer of BPA + GMA formed with light (hv) (slide 23).",
+"cite": "OOO slide 23",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "chemistry"
+},
+{
+"id": "oo-bpa",
+"term": "BPA",
+"also": [
+"bisphenol A"
+],
+"def": "Bisphenol A, one of the two building blocks of Bis-GMA (with GMA) on slide 23.",
+"cite": "OOO slide 23",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "chemistry",
+"cs": true
+},
+{
+"id": "oo-gma",
+"term": "GMA",
+"also": [
+"glycidyl methacrylate"
+],
+"def": "Glycidyl methacrylate, the other building block of Bis-GMA (with BPA) on slide 23.",
+"cite": "OOO slide 23",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "chemistry",
+"cs": true
+},
+{
+"id": "oo-bis-hppp",
+"term": "Bis-HPPP",
+"also": [],
+"def": "The product drawn on slide 23 when Bis-GMA is metabolized in the mouth; Dr. Sikazwe says this metabolism gradually costs the filling its effectiveness.",
+"cite": "OOO slide 23, T@34616 11/18",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "chemistry"
+},
+{
+"id": "oo-whitener",
+"term": "teeth whitener",
+"also": [
+"whiteners",
+"teeth whitening"
+],
+"def": "Slide 24: whiteners remove stains by several mechanisms, from H2O2 (oxidizes stains) to abrasives to surfactants.",
+"cite": "OOO slide 24, T@35729 11/18",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "oo-lactic-acid",
+"term": "lactic acid",
+"also": [
+"propionic acid"
+],
+"def": "With propionic acid, the acids Dr. Sikazwe names that mouth bacteria make from sugar; they lower saliva pH and erode enamel (slide 16).",
+"cite": "OOO slide 16, T@16815 11/18",
+"src": "lecture",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "chemistry"
+},
+{
+"id": "oo-imidazoline",
+"term": "imidazoline",
+"also": [
+"imidazolines"
+],
+"def": "A drug FG and class (slides 27, 31): the α2 agonists clonidine, apraclonidine and brimonidine (slide 31) and the decongestants on slide 55 contain it.",
+"cite": "OOO slide 27, OOO slide 31, OOO slide 55, T@37526 11/18",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "class"
+},
+{
+"id": "oo-sulfone",
+"term": "sulfone",
+"also": [
+"sulfones"
+],
+"def": "The sulfur with two oxygens between two carbons, one of the Drug FGs on slide 27. Dr. Sikazwe says to call it a sulfone.",
+"cite": "OOO slide 27, T@37682 11/18",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "class"
+},
+{
+"id": "oo-sulfoxide",
+"term": "sulfoxide",
+"also": [],
+"def": "Not the name for the slide 27 sulfur-with-two-oxygens group: Dr. Sikazwe says saying sulfoxide there is wrong; it is a sulfone.",
+"cite": "OOO slide 27, T@37682 11/18",
+"src": "lecture",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "class"
+},
+{
+"id": "oo-so2nh2",
+"term": "SO2NH2",
+"also": [
+"sulfonamide group"
+],
+"def": "The sulfonamide FG of the CAIs. CBDA (slide 38): it docks in carbonic anhydrase's active site and forms ionic and H-bond interactions with Zn and Thr199.",
+"cite": "OOO slide 27, OOO slide 36, OOO slide 38, T@37792 11/18",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "chemistry",
+"cs": true
+},
+{
+"id": "oo-carbamate",
+"term": "carbamate",
+"also": [
+"carbamates"
+],
+"def": "A Drug FG on slide 27 (H2N-C(=O)-O-). Slide 40 lists carbamates and esters as direct-acting cholinergics; on slide 42 carbamates rank second in AChE inhibition.",
+"cite": "OOO slide 27, OOO slide 40, OOO slide 42",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "class"
+},
+{
+"id": "oo-aryloxypropanolamine",
+"term": "aryloxypropanolamine",
+"also": [
+"aryloxypropanolamines"
+],
+"def": "The class of the β-antagonists timolol, betaxolol, levobunolol and carteolol (slide 33). Dr. Sikazwe: aromatic ring, oxygen beside it, then propanolamine (three carbons, alcohol and amine).",
+"cite": "OOO slide 27, OOO slide 33, T@38806 11/18",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "class"
+},
+{
+"id": "oo-arylethanolamine",
+"term": "arylethanolamine",
+"also": [
+"arylethanolamines"
+],
+"def": "Slide 34 SAR: aryloxypropanolamines are more potent than arylethanolamines, which lack the oxygen between the aryl ring and the chain.",
+"cite": "OOO slide 34",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "class"
+},
+{
+"id": "oo-s-oh-isomer",
+"term": "S-OH isomer",
+"also": [],
+"def": "Slide 34 SAR for β-antagonists: the S configuration at the carbon bearing the OH is the preferred isomer.",
+"cite": "OOO slide 34",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "chemistry"
+},
+{
+"id": "oo-beta1-antagonist",
+"term": "β1-antagonist",
+"also": [
+"β1 antagonist"
+],
+"def": "Slide 34: most β-antagonists have mixed β1 + β2 activity, but most p-aryloxypropanolamines, such as betaxolol, are β1-antagonists.",
+"cite": "OOO slide 34",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "oo-fp-receptor",
+"term": "FP receptor",
+"also": [
+"PGF receptor",
+"PGF or FP receptor"
+],
+"def": "Slide 44: every glaucoma prostaglandin increases fluid outflow through PGF or FP receptor activation.",
+"cite": "OOO slide 44",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "oo-ep2-receptor",
+"term": "EP2 receptor",
+"also": [
+"PGE2 receptor",
+"selective PGE2 or EP2 receptor agonist"
+],
+"def": "Slide 47: the target of omidenepag isopropyl, a selective PGE2 or EP2 receptor agonist that increases fluid outflow.",
+"cite": "OOO slide 47",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "oo-prostaglandin-sar",
+"term": "prostaglandin SAR",
+"also": [
+"PG SAR"
+],
+"def": "Slide 46: acids (-COOH) and amides (-CONH-) are the active drugs; esters are prodrugs. Esters or amides attach at C-1; alkyl or phenyl ends the chain.",
+"cite": "OOO slide 46",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "chemistry"
+},
+{
+"id": "oo-c15-oh",
+"term": "C-15 OH",
+"also": [
+"15-OH",
+"C-15"
+],
+"def": "Slide 46 SAR: C-15 carries OH or halogens; halogens prevent 15-OH oxidation.",
+"cite": "OOO slide 46",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "chemistry"
+},
+{
+"id": "oo-latanoprost-acid",
+"term": "latanoprost acid",
+"also": [],
+"def": "The active acid made from the isopropyl ester prodrug latanoprost by esterase (slide 45).",
+"cite": "OOO slide 45",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "oo-esterase",
+"term": "esterase",
+"also": [
+"esterases"
+],
+"def": "The enzyme that hydrolyzes ester prodrugs to their active acids: latanoprost to latanoprost acid (slide 45), omidenepag isopropyl (slide 47), netarsudil (slide 48).",
+"cite": "OOO slide 45, OOO slide 47, OOO slide 48, T@44257 11/18",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "oo-omidenepag",
+"term": "omidenepag isopropyl",
+"also": [
+"OMDI",
+"omidenepag",
+"OMD"
+],
+"def": "A pyridine sulfonamide EP2 agonist (ClogP=3) that increases fluid outflow; an ester prodrug that esterase hydrolysis converts to the active metabolite omidenepag (OMD) (slide 47).",
+"cite": "OOO slide 47",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "oo-pyridine-sulfonamide",
+"term": "pyridine sulfonamide",
+"also": [
+"pyridine sulfonamides"
+],
+"def": "The chemical class of omidenepag isopropyl, the EP2 receptor agonist on slide 47.",
+"cite": "OOO slide 47",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "class"
+},
+{
+"id": "oo-isoquinoline",
+"term": "isoquinoline",
+"also": [
+"isoquinolines"
+],
+"def": "The chemical class of netarsudil, the Rho kinase (ROCK) inhibitor on slide 48.",
+"cite": "OOO slide 48",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "class"
+},
+{
+"id": "oo-netarsudil-m1",
+"term": "netarsudil-M1",
+"also": [],
+"def": "The active metabolite of netarsudil (slide 48), formed from the ester prodrug (ClogP=5) by esterase hydrolysis.",
+"cite": "OOO slide 48",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "oo-adrenergic-agents",
+"term": "adrenergic agents",
+"also": [],
+"def": "Slide 28 glaucoma treatment group: α2-agonists and β-antagonists. Dr. Sikazwe says they target adrenergic receptors such as α2 and β.",
+"cite": "OOO slide 28, T@41618 11/18",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "class"
+},
+{
+"id": "oo-cannabinoids",
+"term": "cannabinoids",
+"also": [],
+"def": "Listed with an asterisk among the glaucoma treatments on slide 28.",
+"cite": "OOO slide 28",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "class"
+},
+{
+"id": "oo-lipid-water-lipid",
+"term": "lipid/water/lipid sandwich",
+"also": [
+"lipid water lipid"
+],
+"def": "The cornea's structure (slide 29): a drug passes tightly packed cells, dissolves in the lipid layer, then water, then lipid again, so less drug enters.",
+"cite": "OOO slide 29, T@43103 11/18",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "anatomy"
+},
+{
+"id": "oo-transporters-eye",
+"term": "influx and efflux transporters",
+"also": [
+"influx transporters",
+"efflux transporters"
+],
+"def": "Slide 29: the conjunctiva has influx and efflux transporters and esterase/CYP enzymes; this is why prodrugs can be activated there.",
+"cite": "OOO slide 29, T@44209 11/18",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "oo-ocular-routes",
+"term": "ocular absorption routes",
+"also": [
+"corneal route",
+"conjunctival route"
+],
+"def": "Slide 30: lipophilic drugs enter through the cornea, hydrophilic drugs through the conjunctiva. Dr. Sikazwe: the conjunctiva admits more drug, and the cornea suits small lipophilic drugs.",
+"cite": "OOO slide 29, OOO slide 30, T@45074 11/18",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "oo-clonidine",
+"term": "clonidine",
+"also": [],
+"def": "The prototype imidazoline α2 agonist (ClogP = 1.5, slide 31). Dr. Sikazwe: lipophilic enough to reach the brain, causing CNS effects including hypotension, so analogs were made.",
+"cite": "OOO slide 31, T@46246 11/18",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "oo-aryl-imidazoline-core",
+"term": "aryl imidazoline core",
+"also": [
+"aryl imidazoline"
+],
+"def": "The minimum structure of slide 32 for activity: an aromatic ring connected to an imidazoline. Dr. Sikazwe says a true imidazoline must be present.",
+"cite": "OOO slide 32, T@49941 11/18",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "chemistry"
+},
+{
+"id": "oo-linker-atom",
+"term": "linker",
+"also": [
+"linker atom"
+],
+"def": "The atom X joining the aryl ring and imidazoline (slide 32): X=CH2 gives α1 agonists; X=NH2 gives α2 agonists. Dr. Sikazwe: carbon, α1 selective; amine, α2 selective.",
+"cite": "OOO slide 32, T@50070 11/18",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "chemistry"
+},
+{
+"id": "oo-zn-metalloenzyme",
+"term": "zinc metalloenzyme",
+"also": [
+"Zn-metalloenzyme",
+"Zn metalloenzyme"
+],
+"def": "Slide 35: carbonic anhydrase is a Zn-metalloenzyme that modulates aqueous humor production through pH changes.",
+"cite": "OOO slide 35",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "oo-carbonic-acid",
+"term": "carbonic acid",
+"also": [
+"H2CO3",
+"bicarbonate ion"
+],
+"def": "On slide 35, carbonic anhydrase converts CO2 + H2O to H2CO3, which gives bicarbonate ion and H+; that pH change modulates aqueous humor production.",
+"cite": "OOO slide 35",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "chemistry"
+},
+{
+"id": "oo-zolamides",
+"term": "zolamides",
+"also": [
+"Sulfonamides (Zolamides)"
+],
+"def": "Slide 36 sulfonamide CAIs: acetazolamide, methazolamide, brinzolamide and dorzolamide HCl. They competitively inhibit CAs and decrease intraocular fluid production.",
+"cite": "OOO slide 36",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "class"
+},
+{
+"id": "oo-n-deethylation",
+"term": "N-deethylation",
+"also": [
+"N-deethylations",
+"N-deethylated"
+],
+"def": "Slide 37: CYPs N-deethylate both brinzolamide and dorzolamide, and the N-deethylated metabolites are active.",
+"cite": "OOO slide 37",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "oo-thr199",
+"term": "Thr199",
+"also": [],
+"def": "The amino acid in carbonic anhydrase's active site that, with Zn, forms ionic and H-bond interactions with the CAI's SO2NH2 group (slide 38).",
+"cite": "OOO slide 38",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "chemistry"
+},
+{
+"id": "oo-direct-cholinergic",
+"term": "direct-acting cholinergics",
+"also": [
+"direct-acting cholinergic",
+"direct cholinergics"
+],
+"def": "Slide 40: carbamates and esters (carbachol Cl, pilocarpine HCl) that increase fluid outflow. SAR: acyloxy group, ionizable amine N, N-methyl groups, 2-carbon spacer between O and N.",
+"cite": "OOO slide 40",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "class"
+},
+{
+"id": "oo-indirect-cholinergic",
+"term": "indirect-acting cholinergics",
+"also": [
+"indirect-acting cholinergic",
+"indirect cholinergics"
+],
+"def": "Slide 41: they inhibit acetylcholinesterase, which inactivates ACh, so ACh levels rise and fluid outflow increases.",
+"cite": "OOO slide 41",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "class"
+},
+{
+"id": "oo-acetylcholine",
+"term": "acetylcholine",
+"also": [
+"ACh"
+],
+"def": "The reference molecule of slides 40-41. AChE hydrolyzes it to acetic acid and choline (slide 41); slide 40's SAR lists the features of direct cholinergics.",
+"cite": "OOO slide 40, OOO slide 41",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "chemistry"
+},
+{
+"id": "oo-acyloxy",
+"term": "acyloxy group",
+"also": [
+"acyloxy"
+],
+"def": "Slide 40 SAR for direct-acting cholinergics: the acyloxy group is needed for H-bonding to nicotinic/muscarinic receptors.",
+"cite": "OOO slide 40",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "chemistry"
+},
+{
+"id": "oo-two-carbon-spacer",
+"term": "2-carbon spacer",
+"also": [
+"two-carbon spacer"
+],
+"def": "Slide 40 SAR for direct-acting cholinergics: two carbons between the O and the N.",
+"cite": "OOO slide 40",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "chemistry"
+},
+{
+"id": "oo-organophosphate",
+"term": "organophosphate",
+"also": [
+"phosphoryl",
+"organophosphates",
+"phosphoryl group"
+],
+"def": "Indirect cholinergic FG (slide 42). Extent of AChE inhibition depends on the FG: phosphoryl > carbamate > ester. Slide 68 asks which FG gives irreversible inhibition.",
+"cite": "OOO slide 42, OOO slide 68",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "class"
+},
+{
+"id": "oo-integrin-lfa1",
+"term": "integrin LFA-1",
+"also": [],
+"def": "The receptor lifitegrast blocks ICAM-1 from binding (slide 51), which decreases T-cell activation; it is a DED target on slide 49.",
+"cite": "OOO slide 49, OOO slide 51",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "immunology"
+},
+{
+"id": "oo-phenylalanine",
+"term": "phenylalanine",
+"also": [],
+"def": "Lifitegrast is described on slide 51 as a phenylalanine; its phenylalanine part is circled in the structure.",
+"cite": "OOO slide 51",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "chemistry"
+},
+{
+"id": "oo-levocabastine",
+"term": "levocabastine HCl",
+"also": [
+"levocabastine",
+"Livostin"
+],
+"def": "A 2nd generation antihistamine for allergic conjunctivitis (Livostin, slide 53; structure on slide 54). Slide 54 sends the SAR to the allergy lecture.",
+"cite": "OOO slide 53, OOO slide 54",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "oo-imidazoline-decongestant",
+"term": "imidazoline decongestants",
+"also": [
+"imidazoline decongestant"
+],
+"def": "Slide 55: oxymetazoline HCl (Afrin), xylometazoline HCl (Clear eyes), tetrahydrometazoline HCl (Visine) and naphazoline HCl (Otrivin); MoA is α1/α2 agonism.",
+"cite": "OOO slide 55",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "class"
+},
+{
+"id": "oo-xylometazoline",
+"term": "xylometazoline HCl",
+"also": [
+"xylometazoline"
+],
+"def": "Imidazoline decongestant with a printed brand of Clear eyes products; MoA α1/α2 agonist (slide 55).",
+"cite": "OOO slide 55",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "oo-tetrahydrometazoline",
+"term": "tetrahydrometazoline HCl",
+"also": [
+"tetrahydrometazoline"
+],
+"def": "Imidazoline decongestant, spelled this way on slide 55, with a printed brand of Visine products; MoA α1/α2 agonist.",
+"cite": "OOO slide 55",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "oo-chromone",
+"term": "chromone",
+"also": [
+"chromones"
+],
+"def": "Slide 56 mast cell stabilizer class that inhibits granule histamine release: cromolyn Na (Opticrom) and nedocromil Na (Alocril).",
+"cite": "OOO slide 56",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "class"
+},
+{
+"id": "oo-oxamic-acid",
+"term": "oxamic acid",
+"also": [
+"oxamic acids"
+],
+"def": "Slide 56 mast cell stabilizer class, shown in red on lodoxamide tromethamine (Alomide), which has two oxamic acid groups.",
+"cite": "OOO slide 56",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "class"
+},
+{
+"id": "oo-cromolyn",
+"term": "cromolyn Na",
+"also": [
+"cromolyn",
+"Opticrom"
+],
+"def": "Chromone mast cell stabilizer (Opticrom, slide 56): two chromone rings joined through a hydroxy-propane linker; it inhibits granule histamine release.",
+"cite": "OOO slide 56",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "oo-nedocromil",
+"term": "nedocromil Na",
+"also": [
+"nedocromil",
+"Alocril"
+],
+"def": "Chromone mast cell stabilizer (Alocril, slide 56) that inhibits granule histamine release from mast cells.",
+"cite": "OOO slide 56",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "oo-lodoxamide",
+"term": "lodoxamide tromethamine",
+"also": [
+"lodoxamide",
+"Alomide"
+],
+"def": "Oxamic acid mast cell stabilizer (Alomide, slide 56) that inhibits histamine release from mast cells.",
+"cite": "OOO slide 56",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "oo-pemirolast",
+"term": "pemirolast K",
+"also": [
+"pemirolast",
+"Alamast"
+],
+"def": "Mast cell stabilizer printed on slide 56 as Pemirolast K (Alamast), beside lodoxamide; slide 56 says its SAR is not clearly established.",
+"cite": "OOO slide 56",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "oo-dual-acting",
+"term": "dual-acting agents",
+"also": [
+"dual acting agents",
+"dual-acting"
+],
+"def": "Slide 57 multi-cyclic drugs that are antihistamines plus mast cell stabilizers: azelastine, ketotifen, epinastine, olopatadine, bepotastine, alcaftadine.",
+"cite": "OOO slide 57",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "class"
+},
+{
+"id": "oo-multicyclic",
+"term": "multi-cyclic",
+"also": [
+"multicyclic"
+],
+"def": "Slide 57 SAR for dual-acting agents: they are multi-cyclic with ionizable N and COOH groups; slide 64 asks for the three commonest SAR groups.",
+"cite": "OOO slide 57, OOO slide 64",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "chemistry"
+},
+{
+"id": "oo-ionizable-fg",
+"term": "ionizable group",
+"also": [
+"ionizable FGs"
+],
+"def": "A group that can be charged: the N and COOH on dual-acting agents (slide 57), and the ionizable amine N in direct-acting cholinergics (slide 40).",
+"cite": "OOO slide 40, OOO slide 57",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "chemistry"
+},
+{
+"id": "oo-gr-complex",
+"term": "GR complex",
+"also": [
+"glucocorticoid receptor complex"
+],
+"def": "Slide 58: glucocorticoids activate the GR complex to produce proteins that in turn suppress pro-inflammatory proteins.",
+"cite": "OOO slide 58",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "oo-steroid-stereochemistry",
+"term": "steroid stereochemistry",
+"also": [
+"stereochemistry"
+],
+"def": "Slide 58 shows steroid templates, numbering and stereochemistry; slide 59 says glucocorticoid students must know the C-atom numbering, stereochemistry and anti-inflammatory SAR.",
+"cite": "OOO slide 58, OOO slide 59",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "chemistry"
+},
+{
+"id": "oo-hydrocortisone",
+"term": "hydrocortisone",
+"also": [],
+"def": "Glucocorticoid steroid listed on slide 60 with its structure for the SAR.",
+"cite": "OOO slide 60",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "oo-dexamethasone",
+"term": "dexamethasone",
+"also": [],
+"def": "Glucocorticoid steroid listed on slide 60; its structure is used for the anti-inflammatory SAR.",
+"cite": "OOO slide 60",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "oo-prednisolone",
+"term": "prednisolone",
+"also": [],
+"def": "Glucocorticoid steroid listed on slide 60; its structure is used for the anti-inflammatory SAR.",
+"cite": "OOO slide 60",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "oo-fluorometholone",
+"term": "fluorometholone",
+"also": [],
+"def": "Glucocorticoid steroid listed on slide 60; its structure is used for the anti-inflammatory SAR.",
+"cite": "OOO slide 60",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "oo-rimexolone",
+"term": "rimexolone",
+"also": [],
+"def": "Glucocorticoid steroid listed on slide 60; its structure is used for the anti-inflammatory SAR.",
+"cite": "OOO slide 60",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "pharmacology"
 }
 ];

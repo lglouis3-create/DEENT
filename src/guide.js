@@ -6695,6 +6695,556 @@ const GUIDE_HTML = `
 </div>
 </section>
 </details>
+
+<h2 class="gdeck" id="gdeck-ooo">Otic, Oral and Ophthalmic Medicinal Chemistry (Dr. Sikazwe, 11/18 and 11/19; Exam 3)</h2>
+<details class="gdetails" id="goo">
+<summary>Dr. Sikazwe: the otic, oral and ophthalmic deck slide by slide, what the lecture adds (68 slides)</summary>
+<section class="gobj" id="gobj-oo-1">
+<h3>Dr. Sikazwe, slide by slide &middot; Course frame and objectives &middot; slides 1&ndash;3</h3>
+<div class="gbar"><span>What the lecture adds (OOO 1&ndash;3)</span><b>Sets which parts of the otic, oral and ophthalmic material the questions come from: chemical classification, chemical basis of drug action, ADME and a few SAR slides.</b><i>OOO slide 1, 2, 3</i></div>
+<div class="gpt g2-block"><h5>Title: Otic, Oral, Ophthalmic (OOO slide 1)</h5>
+<p class="g2-status"><b>Status A</b> On the slide and complete; nothing added in lecture</p>
+</div>
+<div class="gpt g2-block"><h5>Objectives: assess and plan, and what he emphasizes (OOO slide 2)</h5>
+<p class="g2-status"><b>Status B, E</b> Objectives on the slide; the lecture says which ones carry the questions and how the amount of material maps to question count</p>
+<p>The slide lists what a pharmacist does with these drugs: identify the therapeutic target and the drug class (assess), then describe the chemical and pharmacological basis of drug action, the pharmacokinetic properties, the functional groups and SAR, and drug interactions (plan). In the lecture he named the parts he will emphasize for these three disease states: chemical classifications, chemical basis of drug action and ADME properties, with a few SAR slides.</p>
+<p>He also said the amount of material on a topic predicts the number of questions on it, and that the ophthalmic part has the most material.</p>
+<div class='g2-said'><span class='g2-k'>He said</span>
+<p>&ldquo;for my material, it's just what I assigned you&rdquo; <span class='g2-src'>11/18 T@544</span></p>
+<p>&ldquo;we are going to emphasize the chemical classifications, the chemical basis of drug action&rdquo; <span class='g2-src'>11/18 T@1869</span></p>
+<p>&ldquo;there are some slides with SAR&rdquo; <span class='g2-src'>11/18 T@2003</span></p>
+<p>&ldquo;where there's more information, know that there will be more questions&rdquo; <span class='g2-src'>11/18 T@1341</span></p>
+<p>&ldquo;there's perhaps more information on the, uh, um, ophthalmic part&rdquo; <span class='g2-src'>11/18 T@1120</span></p>
+</div>
+</div>
+<div class="gpt g2-block"><h5>Readings: lecture slides, with Foye as support (OOO slide 3)</h5>
+<p class="g2-status"><b>Status C</b> The lecture adds guidance on how much to rely on each reading</p>
+<p>The slide lists the lecture slides, peer-reviewed literature on these topics and Foye (9th edition), Chapter 30, Drugs Used to Treat Ocular and Nasal Disorders. In the lecture he said the readings are the lecture slides and that the textbook does not present these three disease states well, although its ocular and nasal chapter has some information. He also said he would not cover some ear disorders in detail because the OTC handbook does not cover them either, and that some will return in infectious disease.</p>
+<div class='g2-said'><span class='g2-k'>He said</span>
+<p>&ldquo;the readings are just going to be lecture slides&rdquo; <span class='g2-src'>11/18 T@2065</span></p>
+<p>&ldquo;doesn't do a good presentation of these three disease states&rdquo; [he said "FOI": Foye] <span class='g2-src'>11/18 T@2187</span></p>
+<p>&ldquo;because the OTC handbook doesn't even go there&rdquo; <span class='g2-src'>11/18 T@2617</span></p>
+</div>
+</div>
+</section>
+
+<section class="gobj" id="gobj-oo-2">
+<h3>Dr. Sikazwe, slide by slide &middot; Otic disorders: earwax and its agents &middot; slides 4&ndash;6</h3>
+<div class="gbar"><span>What the lecture adds (OOO 4&ndash;6)</span><b>Introduces earwax (cerumen) and the cerumenolytic agents, grouped by preparation, with the four marked agents (Colace, hydrogen peroxide, olive oil, Debrox) as the ones in current use.</b><i>OOO slide 4, 5, 6</i></div>
+<div class="gpt g2-block"><h5>Divider: Otic Disorders (OOO slide 4)</h5>
+<p class="g2-status"><b>Status A</b> On the slide and complete; nothing added in lecture</p>
+</div>
+<div class="gpt g2-block"><h5>Earwax: what it is and what a cerumenolytic has to do (OOO slide 5)</h5>
+<p class="g2-status"><b>Status B</b> Fact on slide, reasoning missing (lecture explains where cerumen comes from and why it is treated)</p>
+<p>Cerumen is earwax. Dead epithelial skin cells build up in the ear canal, and the buildup protects the skin of the canal from drying out; it becomes a problem only when there is too much. Cerumenolytics are the agents used for impacted or excessive wax. The slide names four mechanisms: soften, liquify, hydrate or disintegrate the cerumen. He added the purpose: once the wax is softened, loosened or broken apart, the canal can be irrigated and the wax washed out.</p>
+<div class='g2-said'><span class='g2-k'>He said</span>
+<p>&ldquo;the skin cells, right, are building up&rdquo; <span class='g2-src'>11/18 T@3118</span></p>
+<p>&ldquo;to prevent the skin inside the canal from drying out&rdquo; <span class='g2-src'>11/18 T@3319</span></p>
+<p>&ldquo;too much of it becomes a problem&rdquo; <span class='g2-src'>11/18 T@3417</span></p>
+<p>&ldquo;then the ear can be, the ear canal can be irrigated&rdquo; <span class='g2-src'>11/18 T@4007</span></p>
+</div>
+</div>
+<div class="gpt g2-block"><h5>Cerumenolytic preparations: water based, oil based, nonwater and nonoil based (OOO slide 6)</h5>
+<p class="g2-status"><b>Status B, E</b> Table on slide; the lecture says which agents are current and which he emphasizes</p>
+<p>The table groups preparations by what carries the agent. Water based: acetic acid, Colace (docusate sodium), hydrogen peroxide solution, sodium bicarbonate, sterile saline. Oil based: almond oil, arachis oil, Earex, olive oil, mineral oil/liquid petrolatum. Nonwater, nonoil based: Audax (choline salicylate, glycerine) and Debrox (carbamide peroxide, urea-hydrogen peroxide). The red bird marks the agents in current use: Colace, hydrogen peroxide, olive oil and Debrox; he called the others historical.</p>
+<p>He said the nonwater, nonoil agents are mostly dissolved in glycerol or propylene glycol <span class="g2-tonly" title="Transcript only: not on the slide">Transcript-only, verify against slide</span>, and that in this group he emphasizes Debrox. The slide gives no emphasis; this comes from the lecture.</p>
+<div class='g2-said'><span class='g2-k'>He said</span>
+<p>&ldquo;these are the agents that are currently available&rdquo; <span class='g2-src'>11/18 T@4412</span></p>
+<p>&ldquo;dissolved in either glycerol&rdquo; <span class='g2-src'>11/18 T@4722</span></p>
+<p>&ldquo;we are going to emphasize deep rocks&rdquo; [he said 'deep rocks': Debrox] <span class='g2-src'>11/18 T@5128</span></p>
+</div>
+</div>
+</section>
+
+<section class="gobj" id="gobj-oo-3">
+<h3>Dr. Sikazwe, slide by slide &middot; Otic disorders: docusate and carbamide peroxide &middot; slides 7&ndash;9</h3>
+<div class="gbar"><span>What the lecture adds (OOO 7&ndash;9)</span><b>The two agents he teaches in depth: docusate sodium as a surfactant that lets water into wax, and carbamide peroxide as a source of hydrogen peroxide that fizzes the wax apart.</b><i>OOO slide 7, 8, 9</i></div>
+<div class="gpt g2-block"><h5>Docusate sodium (Colace): an anionic surfactant that lets water into wax (OOO slide 7)</h5>
+<p class="g2-status"><b>Status B, E</b> Fact on slide, reasoning missing (lecture explains how it works and why it is not a systemic concern)</p>
+<p>The slide calls docusate Na an anionic surfactant with a -SO<sub>3</sub>H group that increases water entry to emulsify cerumen; its CBDA is lowering the surface tension between water and cerumen by dissolving in both media through lipophilic and hydrophilic functional groups. The drawn structure is the sodium salt of the sulfonate, with two ester groups and two branched hydrocarbon tails.</p>
+<p>Why it works: oil and water do not mix. The lipophilic tails sit in the cerumen and the hydrophilic head points toward the water, which breaks up the interface; water then seeps into the cracks and the loosened wax can be irrigated out. Why it is not a systemic concern: it is applied topically and is ionic, so it is not absorbed well through lipid membranes. He gave the mechanism and this reason as the points to take from the molecule.</p>
+<div class='g2-said'><span class='g2-k'>He said</span>
+<p>&ldquo;it lowers the surface tension&rdquo; <span class='g2-src'>11/18 T@5919</span></p>
+<p>&ldquo;the tail points to the uh to the cerumen&rdquo; <span class='g2-src'>11/18 T@6467</span></p>
+<p>&ldquo;it won't be absorbed well in the lipid membranes&rdquo; <span class='g2-src'>11/18 T@7228</span></p>
+<p>&ldquo;If you don't remember anything, it's an ionic molecule&rdquo; <span class='g2-src'>11/18 T@7360</span></p>
+<p>&ldquo;are some of the takeaways from this molecule&rdquo; <span class='g2-src'>11/18 T@7636</span></p>
+</div>
+</div>
+<div class="gpt g2-block"><h5>Carbamide peroxide (Debrox): a urea and hydrogen peroxide complex (OOO slide 8)</h5>
+<p class="g2-status"><b>Status B</b> Fact on slide, reasoning missing (lecture explains the three steps and the role of urea)</p>
+<p>The slide shows carbamide peroxide, a 1:1 urea&middot;H<sub>2</sub>O<sub>2</sub> complex, dissociating into urea and H<sub>2</sub>O<sub>2</sub>, then catalase acting to give O<sub>2</sub>; its CBDA is that Debrox dissociates to release H<sub>2</sub>O<sub>2</sub>. The lecture fills in the sequence. The complex releases hydrogen peroxide slowly. Catalase, an enzyme that is also present in earwax, breaks the hydrogen peroxide down to oxygen and two molecules of water. The oxygen bubbles, and the bubbling physically breaks up the wax, so a chemical release turns into a mechanical effect.</p>
+<p>Urea is there to stabilize the hydrogen peroxide. Without the complex, hydrogen peroxide would start to fizz at once; stabilized, it is released slowly. The active ingredient is the hydrogen peroxide, and carbamide peroxide is its source.</p>
+<div class='g2-said'><span class='g2-k'>He said</span>
+<p>&ldquo;It's a chemical complex&rdquo; <span class='g2-src'>11/18 T@7852</span></p>
+<p>&ldquo;that catalyst then facilitate the degradation of hydrogen peroxide into oxygen&rdquo; [he said 'catalyst': catalase] <span class='g2-src'>11/18 T@8525</span></p>
+<p>&ldquo;this is a mechanical effect from chemical to a mechanical effect&rdquo; <span class='g2-src'>11/18 T@9060</span></p>
+<p>&ldquo;this urea is just to stabilize what? Hydrogen peroxide&rdquo; <span class='g2-src'>11/18 T@9219</span></p>
+<p>&ldquo;is a source of hydrogen peroxide&rdquo; <span class='g2-src'>11/18 T@9647</span></p>
+</div>
+</div>
+<div class="gpt g2-block"><h5>Question: group the cerumenolytics by preparation (OOO slide 9)</h5>
+<p class="g2-status"><b>Status E</b> He turned the slide question into three things to be able to do</p>
+<p>The slide asks the class to group the cerumenolytic agents by preparation: water, oil, or nonwater and nonoil. In the lecture he gave the follow-up: group the agents by preparation (slide 6), go back over the three points he made about docusate (what class it is, how it works, why it is not a systemic concern), and for carbamide peroxide know what it releases and how it works. The answers are on slides 6 to 8.</p>
+<div class='g2-said'><span class='g2-k'>He said</span>
+<p>&ldquo;organize a little information&rdquo; <span class='g2-src'>11/18 T@9769</span></p>
+<p>&ldquo;Group these, uh, ceremonolytics by preparation&rdquo; <span class='g2-src'>11/18 T@9820</span></p>
+<p>&ldquo;Those 3 things I mentioned about dococet&rdquo; [he said 'dococet': docusate] <span class='g2-src'>11/18 T@9903</span></p>
+<p>&ldquo;what does it release and ultimately, how does it work&rdquo; <span class='g2-src'>11/18 T@9986</span></p>
+</div>
+</div>
+</section>
+
+<section class="gobj" id="gobj-oo-4">
+<h3>Dr. Sikazwe, slide by slide &middot; Otic disorders: FYI slides &middot; slides 10&ndash;13</h3>
+<div class="gbar"><span>What the lecture adds (OOO 10&ndash;13)</span><b>Otitis, ototoxicity and tinnitus are for information only; he said they will not be on the exam.</b><i>OOO slide 10, 11, 12, 13</i></div>
+<div class="gpt g2-block"><h5>Otitis: types of ear infection (OOO slide 10)</h5>
+<p class="g2-status"><b>Status A</b> FYI slides: he said they will not be on the exam</p>
+</div>
+<div class="gpt g2-block"><h5>Ototoxicity: hearing loss from drugs (OOO slide 11)</h5>
+<p class="g2-status"><b>Status A</b> FYI slides: he said they will not be on the exam</p>
+</div>
+<div class="gpt g2-block"><h5>Tinnitus: sounds and causes (OOO slide 12)</h5>
+<p class="g2-status"><b>Status A</b> FYI slides: he said they will not be on the exam</p>
+</div>
+<div class="gpt g2-block"><h5>Tinnitus: treatment (OOO slide 13)</h5>
+<p class="g2-status"><b>Status A</b> FYI slides: he said they will not be on the exam</p>
+</div>
+</section>
+
+<section class="gobj" id="gobj-oo-5">
+<h3>Dr. Sikazwe, slide by slide &middot; Oral disorders: tooth decay goals and causes &middot; slides 14&ndash;16</h3>
+<div class="gbar"><span>What the lecture adds (OOO 14&ndash;16)</span><b>Defines the goals of tooth decay therapy (remineralize, suppress bacteria, neutralize acid, numb pain, restore) and the causes each goal answers.</b><i>OOO slide 14, 15, 16</i></div>
+<div class="gpt g2-block"><h5>Divider: Oral Disorders (OOO slide 14)</h5>
+<p class="g2-status"><b>Status A</b> On the slide and complete; nothing added in lecture</p>
+</div>
+<div class="gpt g2-block"><h5>Tooth decay, gingivitis and pain: what each goal is for (OOO slide 15)</h5>
+<p class="g2-status"><b>Status B, C</b> Goals on the slide; the lecture says what is being replaced and why fillings are not drug therapy</p>
+<p>The slide lists the goals: remineralize enamel, suppress bacteria, neutralize acid, numb pain, plus restorative fillings. The lecture ties each goal to a cause. Enamel loses calcium and phosphate, so a remineralizing product restores them. Bacteria make some of the acid that removes those minerals, so they are a target, and neutralizing acid is a separate goal. A numbing agent covers pain. When the loss cannot be slowed, a filling physically replaces what is gone; he said this is restorative treatment, not pharmacotherapy.</p>
+<p>He also placed this at the counter: toothpastes and rinses are among the most bought items in a pharmacy, and patients may need help choosing.</p>
+<div class='g2-said'><span class='g2-k'>He said</span>
+<p>&ldquo;perhaps one of the most bought items in the pharmacy&rdquo; <span class='g2-src'>11/18 T@14138</span></p>
+<p>&ldquo;What minerals are we mostly concerned when it comes to enamel, calcium, and phosphate&rdquo; <span class='g2-src'>11/18 T@14814</span></p>
+<p>&ldquo;We may have a physical way of just replacing what is lost&rdquo; <span class='g2-src'>11/18 T@15394</span></p>
+<p>&ldquo;that is called restorative uh treatment&rdquo; <span class='g2-src'>11/18 T@15457</span></p>
+</div>
+</div>
+<div class="gpt g2-block"><h5>Causes of tooth decay: plaque bacteria, acid and habits (OOO slide 16)</h5>
+<p class="g2-status"><b>Status B, C</b> Causes on the slide; the lecture explains how each one ends in enamel loss</p>
+<p>The slide lists plaque bacteria, bacterial conversion of sugars to acids that erode enamel, acid drinks, smoking and substance use (meth, crack cocaine). The lecture adds the chain: bacteria in plaque act on sugars in the mouth and convert them into acids, which lowers the pH of saliva and promotes enamel erosion. The acids he named were lactic acid and propionic acid <span class="g2-tonly" title="Transcript only: not on the slide">Transcript-only, verify against slide</span>; he tied lactic acid to the alpha hydroxy acid class from an earlier discussion. Acid drinks lower the pH of saliva in the same way.</p>
+<p>Smoking alters saliva pH and encourages bacterial growth. With substance use, patients cannot keep up oral hygiene, so bacteria accumulate and enamel is lost. His summary of the response: go after the bacteria, go after the acids by raising pH, and address habits.</p>
+<div class='g2-said'><span class='g2-k'>He said</span>
+<p>&ldquo;it starts acting on these sugars to convert them into acids&rdquo; <span class='g2-src'>11/18 T@16558</span></p>
+<p>&ldquo;There's lactic acid. And there's also propionic acid&rdquo; <span class='g2-src'>11/18 T@16807</span></p>
+<p>&ldquo;Alpha hydroxy acid. So don't forget&rdquo; <span class='g2-src'>11/18 T@17004</span></p>
+<p>&ldquo;It alters saliva pH and also encourages what? bacterial growth&rdquo; <span class='g2-src'>11/18 T@17775</span></p>
+<p>&ldquo;We can go after. Bacteria, we can go after acids&rdquo; <span class='g2-src'>11/18 T@18172</span></p>
+</div>
+</div>
+</section>
+
+<section class="gobj" id="gobj-oo-6">
+<h3>Dr. Sikazwe, slide by slide &middot; Oral disorders: fluoride and non-fluoride toothpastes &middot; slides 17&ndash;19</h3>
+<div class="gbar"><span>What the lecture adds (OOO 17&ndash;19)</span><b>Explains how fluoride converts hydroxyapatite to fluorapatite, what else fluoride does and when too much harms, and which non-fluoride toothpastes remineralize or neutralize acid.</b><i>OOO slide 17, 18, 19</i></div>
+<div class="gpt g2-block"><h5>Fluoride toothpastes: hydroxyapatite becomes fluorapatite (OOO slide 17)</h5>
+<p class="g2-status"><b>Status B, E</b> Reaction on slide; the lecture explains the replacement and ends with questions he wants answerable</p>
+<p>The slide names fluoride sources (Na<sub>2</sub>PO<sub>3</sub>F, SnF<sub>2</sub>, NaF), says enamel hydroxyapatite is vulnerable to acid erosion, and shows Ca<sub>10</sub>(PO<sub>4</sub>)<sub>6</sub>(OH)<sub>2</sub> becoming Ca<sub>10</sub>(PO<sub>4</sub>)<sub>6</sub>F<sub>2</sub>. The lecture explains the change: fluoride takes the place of the hydroxyl group of hydroxyapatite, giving fluorapatite, which resists acid erosion better. The erosion comes from chronic acid exposure, so he stressed continuous, daily use rather than a single treatment. He named the sources as sodium fluorophosphate, tin fluoride and sodium fluoride <span class="g2-tonly" title="Transcript only: not on the slide">Transcript-only, verify against slide</span>.</p>
+<p>He closed this part with three questions: what enamel is made of, what forms with fluoride, and what the advantage is.</p>
+<div class='g2-said'><span class='g2-k'>He said</span>
+<p>&ldquo;our enamel is made up of this compound called hydroxy apatite&rdquo; <span class='g2-src'>11/18 T@18810</span></p>
+<p>&ldquo;So this floral apatite is more resistant to acid eros&rdquo; [he said 'floral apatite': fluorapatite] <span class='g2-src'>11/18 T@19447</span></p>
+<p>&ldquo;this needs to be a, a daily habit&rdquo; <span class='g2-src'>11/18 T@19652</span></p>
+<p>&ldquo;What is the advantage of fluoro appetite? It's more resistant to what? Acid erosion&rdquo; [he said 'fluoro appetite': fluorapatite] <span class='g2-src'>11/18 T@19865</span></p>
+<p>&ldquo;Key takeaways&rdquo; <span class='g2-src'>11/18 T@19950</span></p>
+</div>
+</div>
+<div class="gpt g2-block"><h5>Fluoride has three effects, and too much causes fluorosis (OOO slide 18)</h5>
+<p class="g2-status"><b>Status B, C</b> Three points on the slide; the lecture explains mineral deposition and what fluorosis looks like</p>
+<p>The slide lists three points: fluoride forms fluorapatite from hydroxyapatite, enhances mineral deposition (mineralization), and too much fluoride (above 2 mg/L) can cause enamel fluorosis. The lecture adds how deposition works: fluoride ions recruit calcium and phosphate ions from saliva onto the enamel, which is remineralization, separate from forming fluorapatite.</p>
+<p>On fluorosis he said it is mainly a problem in children because enamel is not fully developed. It starts as spotty white spots and can turn brown as stains get incorporated. He called the 2 mg/L figure a number from old literature and said CDC guidelines give how much toothpaste to put on a child's brush, where less is better.</p>
+<div class='g2-said'><span class='g2-k'>He said</span>
+<p>&ldquo;the fluoride ions themselves In the toothpaste, right? They start recruiting. Calcium. And phosphate&rdquo; <span class='g2-src'>11/18 T@20648</span></p>
+<p>&ldquo;too much of that can also lead to fluorosis&rdquo; <span class='g2-src'>11/18 T@21566</span></p>
+<p>&ldquo;fluorosis is just this spotty white spots&rdquo; <span class='g2-src'>11/18 T@21615</span></p>
+<p>&ldquo;This is a number from old literature&rdquo; <span class='g2-src'>11/18 T@21523</span></p>
+<p>&ldquo;the less, the better&rdquo; <span class='g2-src'>11/18 T@22356</span></p>
+</div>
+</div>
+<div class="gpt g2-block"><h5>Non-fluoride toothpastes: four options (OOO slide 19)</h5>
+<p class="g2-status"><b>Status B, C</b> Four agents on the slide; the lecture explains how each acts and why a patient might use one</p>
+<p>The slide lists sodium bicarbonate (an abrasive and pH-raising agent), nanohydroxyapatite (10% nHA, crystals of 50 to 1000 nm that bond to hydroxyapatite), calcium sodium phosphosilicate (CSPS, a bioactive glass that reacts with oral fluids to deposit crystalline hydroxycarbonate apatite, HCA) and amorphous calcium phosphate (ACP, a reactive salt mixture that releases Ca<sup>2+</sup> and PO<sub>4</sub> ions on contact with saliva).</p>
+<p>The lecture adds the reasoning. Sodium bicarbonate is gritty, so it removes plaque, and it neutralizes acid and raises pH, which prevents erosion. The other three are reactive remineralizers: nanohydroxyapatite bonds directly to hydroxyapatite, CSPS reacts with saliva to deposit a material that mimics hydroxyapatite, and ACP releases calcium and phosphate ions that remineralize enamel. He gave the reason to choose them: a patient who worries about fluorosis or reacts to fluoride.</p>
+<div class='g2-said'><span class='g2-k'>He said</span>
+<p>&ldquo;Most of these are abrasive in that they, they're gritty&rdquo; <span class='g2-src'>11/18 T@22728</span></p>
+<p>&ldquo;sodium bicarbonate can elevate or neutralize the acid&rdquo; <span class='g2-src'>11/18 T@22932</span></p>
+<p>&ldquo;think of this as a reactive uh remineralizer&rdquo; <span class='g2-src'>11/18 T@24025</span></p>
+<p>&ldquo;somebody reacts to fluoride, then. You have these non-fluoride options&rdquo; <span class='g2-src'>11/18 T@24561</span></p>
+</div>
+</div>
+</section>
+
+<section class="gobj" id="gobj-oo-7">
+<h3>Dr. Sikazwe, slide by slide &middot; Oral disorders: mouth rinses, antibacterial agents and fillings &middot; slides 20&ndash;22</h3>
+<div class="gbar"><span>What the lecture adds (OOO 20&ndash;22)</span><b>Shows how each rinse acts (pH, oxidation, antisepsis, anesthesia, cationic membrane disruption) and the one safety point to counsel on, benzocaine and methemoglobinemia.</b><i>OOO slide 20, 21, 22</i></div>
+<div class="gpt g2-block"><h5>Mouth rinses and benzocaine: what each rinse does, and the caution (OOO slide 20)</h5>
+<p class="g2-status"><b>Status B, C, E</b> List on slide; the lecture explains each action and adds a counseling caution for benzocaine</p>
+<p>The slide lists fluoride (remineralization, prevents caries), NaHCO<sub>3</sub> (raises saliva pH and lowers growth of acidic bacteria), carbamide peroxide 10% for canker sores, the thymol, eucalyptol, methyl salicylate and menthol in Listerine, and benzocaine, an anesthetic, with methemoglobinemia "rare BUT a concern". It also shows Cyps converting benzocaine to a hydroxyamine (an N-OH on the aromatic amine).</p>
+<p>The lecture adds why. Carbamide peroxide is a source of hydrogen peroxide, an oxidizing agent with antiseptic effect. Listerine is a mixture of antiseptic and anti-inflammatory ingredients, and he linked methyl salicylate to the anti-inflammatory action. Benzocaine numbs, but its hydroxyamine metabolite has been implicated in methemoglobinemia, which impairs the oxygen carrying capacity of blood. He said the literature advises against frequent use of these products, that a gel such as Anbesol (pictured on the slide) cannot be used every day, and that pharmacists must point this out.</p>
+<div class='g2-said'><span class='g2-k'>He said</span>
+<p>&ldquo;a source of what? Hydrogen peroxide&rdquo; <span class='g2-src'>11/18 T@25185</span></p>
+<p>&ldquo;a mixture of antiseptic and anti-inflammatory agents&rdquo; <span class='g2-src'>11/18 T@25785</span></p>
+<p>&ldquo;perhaps don't use these agents as often&rdquo; <span class='g2-src'>11/18 T@26576</span></p>
+<p>&ldquo;Carrying capacity of what? Blood&rdquo; <span class='g2-src'>11/18 T@26865</span></p>
+<p>&ldquo;Make sure you know that term&rdquo; <span class='g2-src'>11/18 T@26907</span></p>
+<p>&ldquo;It's up to you pharmacists to point this out&rdquo; <span class='g2-src'>11/18 T@27037</span></p>
+</div>
+</div>
+<div class="gpt g2-block"><h5>Chlorhexidine and cetylpyridinium: cations that open bacterial cell walls (OOO slide 21)</h5>
+<p class="g2-status"><b>Status B, E</b> Mechanism on slide; the lecture explains the charge, the binding and the tail</p>
+<p>The slide names chlorhexidine gluconate (a biguanide salt, cationic at physiological pH) and cetylpyridinium chloride (a pyridinium salt, cationic). Their shared CBDA is that they bind electrostatically to the bacterial cell wall and lipophilic tails insert into it and disrupt its integrity. The lecture explains each part. Chlorhexidine has two biguanide groups on each side of a six-carbon link; biguanides are highly basic and ionize at physiological pH, which makes the molecule cationic. In cetylpyridinium, the positively charged pyridine nitrogen is the pyridinium.</p>
+<p>The cell wall phospholipids are negatively charged, so the positive charge draws the molecule to the bacterial surface. The charged head stays on the surface and the lipophilic tail inserts, making holes so the contents leak and the bacteria die; at high concentration this is lysis. If some is swallowed, it stays ionic down the GI tract and is not absorbed much, so systemic toxicity is not the main concern.</p>
+<div class='g2-said'><span class='g2-k'>He said</span>
+<p>&ldquo;these guanides. are highly basic and at physiological pH they ionize&rdquo; [he said 'guanides': biguanides] <span class='g2-src'>11/18 T@28294</span></p>
+<p>&ldquo;Bacteria cell is made up, made up of phospholipids which are negatively charged&rdquo; <span class='g2-src'>11/18 T@29226</span></p>
+<p>&ldquo;Those lipophilic tails embed into what? The bacterial cell wall&rdquo; <span class='g2-src'>11/18 T@29620</span></p>
+<p>&ldquo;You can tell me which is the hydrophilic tail&rdquo; <span class='g2-src'>11/18 T@30623</span></p>
+<p>&ldquo;why? Because they are ionic&rdquo; <span class='g2-src'>11/18 T@31615</span></p>
+</div>
+</div>
+<div class="gpt g2-block"><h5>Metal amalgam fillings: why they declined (OOO slide 22)</h5>
+<p class="g2-status"><b>Status B</b> Fact on slide, reasoning missing (lecture gives the environmental and toxicity reasons)</p>
+<p>The slide says metal amalgams are now less common because of environmental and toxicity concerns. The lecture gives the reasons: amalgams contain a high degree of mercury, along with other metals <span class="g2-tonly" title="Transcript only: not on the slide">Transcript-only, verify against slide</span>. Metal toxicity is one concern. The other is disposal, because removed or collected dental material can leach into the water supply. Dental scientists therefore had to change course, and he said amalgams may still be available where they are still practiced. The move away from them led to the resin fillings on slide 23, which he described as coming from the evolution of polymer chemistry.</p>
+<div class='g2-said'><span class='g2-k'>He said</span>
+<p>&ldquo;a high degree of mercury in there&rdquo; <span class='g2-src'>11/18 T@33256</span></p>
+<p>&ldquo;worry also due to metal toxicity&rdquo; <span class='g2-src'>11/18 T@32777</span></p>
+<p>&ldquo;get into water supply&rdquo; <span class='g2-src'>11/18 T@32893</span></p>
+<p>&ldquo;the evolution of polymer chemistry&rdquo; <span class='g2-src'>11/18 T@33684</span></p>
+</div>
+</div>
+</section>
+
+<section class="gobj" id="gobj-oo-8">
+<h3>Dr. Sikazwe, slide by slide &middot; Oral disorders: resin fillings, whitening and a poll &middot; slides 23&ndash;25</h3>
+<div class="gbar"><span>What the lecture adds (OOO 23&ndash;25)</span><b>Explains how resin fillings form and break down (a polymer and an ester that is metabolized), what whiteners do, and the poll answer sodium bicarbonate.</b><i>OOO slide 23, 24, 25</i></div>
+<div class="gpt g2-block"><h5>Bis-GMA resin fillings: how they harden and why they wear out (OOO slide 23)</h5>
+<p class="g2-status"><b>Status B</b> Reaction and metabolism drawn on slide; the lecture explains the steps and which group is attacked</p>
+<p>The slide says the most common filling resin is Bis-GMA, a polymer of bisphenol A (BPA) and glycidyl methacrylate (GMA), formed with light (hv), and shows metabolism to Bis-HPPP. The lecture explains the steps. The dentist places the mixture on the tooth and shines a light, which causes rapid polymerization; the result is a hardened polymer that binds to enamel.</p>
+<p>The filling has a lifespan because it is gradually lost to metabolism in the mouth. He asked which functional group is attacked, and in the drawing Bis-GMA has two ester groups where Bis-HPPP has hydroxyl groups, so the metabolism is cleavage of the ester. His spoken answer was garbled in the caption ("Caboxyesteres"): read as ester. As the resin loses its effectiveness, the patient has to return for a touch-up.</p>
+<div class='g2-said'><span class='g2-k'>He said</span>
+<p>&ldquo;they shine what? To cause rapid polymerization&rdquo; <span class='g2-src'>11/18 T@34064</span></p>
+<p>&ldquo;a polymer, hardened polymer that binds to enamel&rdquo; <span class='g2-src'>11/18 T@34149</span></p>
+<p>&ldquo;that has a lifespan&rdquo; <span class='g2-src'>11/18 T@34488</span></p>
+<p>&ldquo;look at the functional groups now&rdquo; <span class='g2-src'>11/18 T@34912</span></p>
+<p>&ldquo;Caboxyesteres&rdquo; [garbled caption: ester] <span class='g2-src'>11/18 T@35128</span></p>
+</div>
+</div>
+<div class="gpt g2-block"><h5>Teeth whitening: several mechanisms, and carbamide peroxide as the example (OOO slide 24)</h5>
+<p class="g2-status"><b>Status B, E</b> Table on slide; the lecture explains the peroxide case and says what he will focus on</p>
+<p>The slide says whiteners remove stains by several mechanisms, from H<sub>2</sub>O<sub>2</sub> (oxidizes stains) to abrasives to surfactants, and shows carbamide peroxide (10% solution) releasing about 3% H<sub>2</sub>O<sub>2</sub>. Its table pairs each whitener with a mechanism, for example abrasives (mechanical removal of extrinsic stains), peroxides (oxidation of organic chromophores), enzymes/proteases (degradation of proteins by hydrolysis of peptide bonds) and surfactants (removal of hydrophobic compounds from the tooth surface).</p>
+<p>The lecture adds the reasoning for the peroxide case: carbamide peroxide is a source of hydrogen peroxide, which is a bleaching and oxidizing agent that bleaches out stains. He said he will not ask all of the table and will probably focus on the example he had just given, and that the point of the list is knowing there are multiple options.</p>
+<div class='g2-said'><span class='g2-k'>He said</span>
+<p>&ldquo;Carbonide peroxide is a source of what active ingredient&rdquo; [he said 'Carbonide': carbamide] <span class='g2-src'>11/18 T@35581</span></p>
+<p>&ldquo;So it will use that oxidizing agent to bleach out the stains&rdquo; <span class='g2-src'>11/18 T@35778</span></p>
+<p>&ldquo;I'll probably focus on this example&rdquo; <span class='g2-src'>11/18 T@36238</span></p>
+<p>&ldquo;you have multiple options&rdquo; <span class='g2-src'>11/18 T@36338</span></p>
+</div>
+</div>
+<div class="gpt g2-block"><h5>Poll: the active ingredient of alkaline toothpastes (OOO slide 25)</h5>
+<p class="g2-status"><b>Status E</b> Poll on slide; the lecture gives the answer</p>
+<p>The poll asks: "Alkaline or basic toothpastes contain what major active chemical ingredient?", with the choices carbamide peroxide, sodium fluoride, sodium bicarbonate and none of the above. He took the answer as sodium bicarbonate. The reasoning comes from slides 19 and 20: sodium bicarbonate raises saliva pH and neutralizes acid, which is why a basic toothpaste is sodium bicarbonate and not fluoride or carbamide peroxide.</p>
+<div class='g2-said'><span class='g2-k'>He said</span>
+<p>&ldquo;the question is, alkaline or basic toothpastes contain what major active chemical ingredient&rdquo; <span class='g2-src'>11/18 T@36534</span></p>
+<p>&ldquo;Sodium bicarbonate, right?&rdquo; <span class='g2-src'>11/18 T@36805</span></p>
+</div>
+</div>
+</section>
+
+<section class="gobj" id="gobj-oo-9">
+<h3>Dr. Sikazwe, slide by slide &middot; Ophthalmic disorders: functional groups and glaucoma basics &middot; slides 26&ndash;28</h3>
+<div class="gbar"><span>What the lecture adds (OOO 26&ndash;28)</span><b>Opens the eye material: the drug functional groups to recognize on sight, and what glaucoma is, why the pressure rises and which drug classes act on it.</b><i>OOO slide 26, 27, 28</i></div>
+<div class="gpt g2-block"><h5>Divider: Ophthalmic Disorders (glaucoma, dry eye, allergic conjunctivitis) (OOO slide 26)</h5>
+<p class="g2-status"><b>Status A</b> On the slide and complete; nothing added in lecture</p>
+</div>
+<div class="gpt g2-block"><h5>Drug functional groups: recognize the chemical class from the structure (OOO slide 27)</h5>
+<p class="g2-status"><b>Status B, E</b> Unlabeled structures on slide; the lecture names them and says the question is the class</p>
+<p>The slide shows eight structures under "Drug FGs" with no names. The lecture names the classes: imidazoline (a five-membered ring with two nitrogens), sulfone (sulfur with two oxygens bonded to two carbons; the caption garbles it as "cell phone"), sulfonamide, ester, carbamate (the caption garbles it as "Car Verm"; the drawing is an amide-like nitrogen on a carbonyl bonded to an oxygen), steroid, prostaglandin (the cyclopentane with two chains) and aryloxypropanolamine (a benzene ring, an oxygen next to it, and a three-carbon chain with an alcohol and an amine).</p>
+<p>He compared sulfonamide to the ester and carboxylic acid in how common it is in drug molecules. He said the question could be which chemical class a drug belongs to.</p>
+<div class='g2-said'><span class='g2-k'>He said</span>
+<p>&ldquo;There are a whole bunch of chemical classes that you need to contend with&rdquo; <span class='g2-src'>11/18 T@37361</span></p>
+<p>&ldquo;Please remember these things, OK, sulfonamide&rdquo; <span class='g2-src'>11/18 T@37758</span></p>
+<p>&ldquo;you need to know what they look like&rdquo; <span class='g2-src'>11/18 T@37947</span></p>
+<p>&ldquo;the question could be simply what chemical class does this drug belong to&rdquo; <span class='g2-src'>11/18 T@38953</span></p>
+</div>
+</div>
+<div class="gpt g2-block"><h5>Glaucoma: high eye pressure, the aqueous humor balance and the drug classes (OOO slide 28)</h5>
+<p class="g2-status"><b>Status B, C</b> Problem, goal and class list on slide; the lecture explains the pressure and adds a clinical number</p>
+<p>The slide says the problem is raised IOP (intraocular pressure), the goal is less aqueous humor production, more outflow, or both, and lists the classes: adrenergic agents (alpha 2 agonists, beta antagonists), carbonic anhydrase inhibitors (CAIs), cholinergic agents, prostaglandin receptor agonists, Rho kinase inhibitors, and cannabinoids (asterisked). The lecture explains the reasoning. The eye continuously produces aqueous humor, so a blockade or resistance to outflow raises the pressure, which damages the optic nerve. Glaucoma is progressive and becomes irreversible, so the goal is to manage and contain it.</p>
+<p>Each class fits the goal. The adrenergic agents act at alpha 2 and beta receptors; carbonic anhydrase is an enzyme involved in generating aqueous humor; prostaglandin receptor agents are in fashion as first line; Rho kinase inhibitors are new. He gave the pressure as above about 21 mm Hg <span class="g2-tonly" title="Transcript only: not on the slide">Transcript-only, verify against slide</span> as the worry point, but said not to expect questions on it.</p>
+<div class='g2-said'><span class='g2-k'>He said</span>
+<p>&ldquo;it's a progressive disease that becomes irreversible&rdquo; <span class='g2-src'>11/18 T@39158</span></p>
+<p>&ldquo;The eye is continuously producing what aqueous humor&rdquo; <span class='g2-src'>11/18 T@40729</span></p>
+<p>&ldquo;anything above 21, we are worried&rdquo; <span class='g2-src'>11/18 T@40188</span></p>
+<p>&ldquo;I'm not going to ask you questions on that&rdquo; <span class='g2-src'>11/18 T@40071</span></p>
+<p>&ldquo;what is in fashion right now, first line agents&rdquo; <span class='g2-src'>11/18 T@42155</span></p>
+</div>
+</div>
+</section>
+
+<section class="gobj" id="gobj-oo-10">
+<h3>Dr. Sikazwe, slide by slide &middot; Eye drug absorption: cornea and conjunctiva &middot; slides 29&ndash;30</h3>
+<div class="gbar"><span>What the lecture adds (OOO 29&ndash;30)</span><b>Explains the two routes into the eye and which drugs use which: small lipophilic drugs through the cornea, large hydrophilic drugs through the conjunctiva.</b><i>OOO slide 29, 30</i></div>
+<div class="gpt g2-block"><h5>Cornea and conjunctiva: why the cornea lets in less (OOO slide 29)</h5>
+<p class="g2-status"><b>Status B, C</b> Facts on slide; the lecture explains the barrier and the enzymes, and mentions prodrugs</p>
+<p>The slide says the cornea is a lipid/water/lipid sandwich with less drug entry, and the conjunctiva has influx and efflux transporters and esterase/CYP enzymes and gives more drug entry. The lecture explains why. A drug crossing the cornea must pass through tightly packed cells, dissolve in the lipid layer, move into the water layer, and then dissolve in a lipid layer again, so a lot of drugs will not get in that way. The conjunctiva is the white of the eye with a film that folds into the eyelid, which gives a larger surface, so the majority of drugs enter there.</p>
+<p>Because the conjunctiva has its own transporters and enzymes, some drugs are given as prodrugs that the conjunctiva metabolizes to the active drug.</p>
+<div class='g2-said'><span class='g2-k'>He said</span>
+<p>&ldquo;A lipid water lipid type of sandwich&rdquo; <span class='g2-src'>11/18 T@43101</span></p>
+<p>&ldquo;a larger surface now where drug molecules can actually get into the eye&rdquo; <span class='g2-src'>11/18 T@43953</span></p>
+<p>&ldquo;So the majority of the drugs will enter the I that way&rdquo; [he said 'I': eye] <span class='g2-src'>11/18 T@44026</span></p>
+<p>&ldquo;pro-drugs being instilled in the eye&rdquo; <span class='g2-src'>11/18 T@44311</span></p>
+<p>&ldquo;Which one is going to have more drug entry? Conjunctiva&rdquo; <span class='g2-src'>11/18 T@44571</span></p>
+</div>
+</div>
+<div class="gpt g2-block"><h5>Eye drug ADME: which drugs use which route (OOO slide 30)</h5>
+<p class="g2-status"><b>Status B, E</b> Routes on slide; the lecture states the take-home point</p>
+<p>The slide says lipophilic drugs enter via the cornea and hydrophilic drugs via the conjunctiva, and its flow chart gives ocular absorption as under 10% of the dose, the corneal route as primary for small lipophilic drugs, the conjunctival and scleral route for large hydrophilic drugs, and systemic absorption as over 50% of the dose, mainly through the conjunctiva of the eye and the nose. The lecture adds that absorption into the eye is very small, especially by the corneal route.</p>
+<p>He gave the take-home point: the cornea is the primary route for small lipophilic drugs and the conjunctiva the major route for large hydrophilic drugs, and both kinds of drug can be gotten into the eye. This does not conflict with slide 29: the conjunctiva takes in more drug overall, while each drug type has its preferred route.</p>
+<div class='g2-said'><span class='g2-k'>He said</span>
+<p>&ldquo;The absorption of the eye. Is going to be very small&rdquo; <span class='g2-src'>11/18 T@44802</span></p>
+<p>&ldquo;Cornea primary route for small lipophillic drugs&rdquo; <span class='g2-src'>11/18 T@45116</span></p>
+<p>&ldquo;The conjunctiva becomes the primary route for large hydrophilic drugs&rdquo; <span class='g2-src'>11/18 T@45166</span></p>
+<p>&ldquo;We can get both things into the eye&rdquo; <span class='g2-src'>11/18 T@45385</span></p>
+<p>&ldquo;That's the takeaway for this&rdquo; <span class='g2-src'>11/18 T@45603</span></p>
+</div>
+</div>
+</section>
+
+<section class="gobj" id="gobj-oo-11">
+<h3>Dr. Sikazwe, slide by slide &middot; Glaucoma: alpha 2 agonists (imidazolines) and their SAR &middot; slides 31&ndash;32</h3>
+<div class="gbar"><span>What the lecture adds (OOO 31&ndash;32)</span><b>Shows clonidine as the prototype imidazoline, how apraclonidine and brimonidine were designed to avoid its CNS effects, and the SAR that sets alpha 1 versus alpha 2.</b><i>OOO slide 31, 32</i></div>
+<div class="gpt g2-block"><h5>Clonidine, apraclonidine and brimonidine: lowering CNS entry and raising potency (OOO slide 31)</h5>
+<p class="g2-status"><b>Status B, C</b> Structures and ClogP on slide; the lecture explains the design logic and adds half-life and potency</p>
+<p>The slide shows three imidazolines that lower intraocular fluid production and raise outflow as alpha 2 agonists: clonidine (ClogP 1.5), apraclonidine HCl (Iopidine, ClogP 0.87) and brimonidine tartrate (Alphagan products, ClogP 1.2). Clonidine is the prototype, and the others were inspired by it, but it is lipophilic enough to enter the brain and cause CNS effects, which makes it less desirable for glaucoma.</p>
+<p>Apraclonidine is the amine analog of clonidine (an NH<sub>2</sub> on the ring); its lower logP means it does not enter the brain well. Brimonidine, with an added nitrogen-containing ring and a bromine, is the most potent and highly selective for alpha 2, about 1000-fold more potent than apraclonidine and clonidine <span class="g2-tonly" title="Transcript only: not on the slide">Transcript-only, verify against slide</span>, so a tiny drop is enough. Half-lives of about 8 hours and 3 to 4 hours <span class="g2-tonly" title="Transcript only: not on the slide">Transcript-only, verify against slide</span> mean more frequent instillation for the shorter one.</p>
+<div class="g2-note"><span class="g2-k">Wording in the lecture</span><p>He first listed hypotension among clonidine's CNS effects, then said "We don't want to give the patient what? Hypertension" and continued about hypertension being regulated by the brain. The slide does not mention either effect, so the sources do not settle which word he meant.</p></div>
+<div class='g2-said'><span class='g2-k'>He said</span>
+<p>&ldquo;They are all inspired by clonidine&rdquo; <span class='g2-src'>11/18 T@46182</span></p>
+<p>&ldquo;lipophilic enough to actually get into the brain&rdquo; <span class='g2-src'>11/18 T@46577</span></p>
+<p>&ldquo;the Amin. Analog&rdquo; [he said 'roclonidine': apraclonidine] <span class='g2-src'>11/18 T@47117</span></p>
+<p>&ldquo;This is the most potent of the series&rdquo; <span class='g2-src'>11/18 T@48067</span></p>
+<p>&ldquo;I can put a tiny drop in the eye&rdquo; <span class='g2-src'>11/18 T@48454</span></p>
+<p>&ldquo;In terms of frequent installation, more than this&rdquo; <span class='g2-src'>11/18 T@48885</span></p>
+</div>
+</div>
+<div class="gpt g2-block"><h5>SAR of the alpha 2 agonists: the aryl imidazoline core and its linker (OOO slide 32)</h5>
+<p class="g2-status"><b>Status B</b> SAR on slide; the lecture calls it the minimum structure and states the rule</p>
+<p>The slide shows an aryl imidazoline core: a benzene ring joined through a one-atom link, X, to an imidazoline ring. If X is CH<sub>2</sub> the agents are alpha 1 receptor agonists; if X is NH (the slide writes NH<sub>2</sub>) they are alpha 2 receptor agonists. The lecture says this is the minimum structure with activity: the aromatic ring joined to the imidazoline must be present, and the link atom decides the receptor, with carbon giving alpha 1 selectivity and an amine giving alpha 2 selectivity. In the three drugs on slide 31 the ring is joined to the imidazoline through an NH, matching the alpha 2 rule.</p>
+<div class='g2-said'><span class='g2-k'>He said</span>
+<p>&ldquo;That's the minimum structure um with activity&rdquo; <span class='g2-src'>11/18 T@49759</span></p>
+<p>&ldquo;If the linker atom is carbon&rdquo; <span class='g2-src'>11/18 T@50063</span></p>
+<p>&ldquo;If carbon, then these are alpha 1&rdquo; <span class='g2-src'>11/18 T@50384</span></p>
+<p>&ldquo;If amine, then these are alpha 2, selective&rdquo; <span class='g2-src'>11/18 T@50419</span></p>
+</div>
+</div>
+</section>
+
+<section class="gobj" id="gobj-oo-12">
+<h3>Dr. Sikazwe, slide by slide &middot; Glaucoma: beta antagonists (aryloxypropanolamines) &middot; slides 33&ndash;34</h3>
+<div class="gbar"><span>What the lecture adds (OOO 33&ndash;34)</span><b>Introduces the aryloxypropanolamine beta blockers and their SAR; the 11/19 lecture is not in the materials yet, so these two slides are read from the slide alone.</b><i>OOO slide 33, 34</i></div>
+<div class="gpt g2-block"><h5>Beta antagonists: timolol, betaxolol, levobunolol and carteolol (OOO slide 33)</h5>
+<p class="g2-status"><b>Status B</b> Slide only (11/19 lecture not in the materials); the 11/18 lecture explained the class name</p>
+<p>The slide names the class, aryloxypropanolamines, and says the beta antagonists lower aqueous humor production. It shows timolol maleate (Timoptic products, LogP 1.4), betaxolol HCl (Betoptic, LogP 2.5), levobunolol HCl (Betagan, LogP 2.2) and carteolol HCl (Ocupress, LogP 1.4). Each drawing has the same chain: an aromatic or heteroaromatic ring bonded to an oxygen, then a three-carbon chain carrying an alcohol and a secondary amine with a branched alkyl group on the nitrogen. The rings differ: timolol has a thiadiazole ring carrying a morpholine ring, betaxolol a benzene ring with an ether chain ending in a cyclopropyl group, levobunolol a ring system with a ketone, and carteolol a ring system with a cyclic amide.</p>
+<p>On 11/18 he explained the class name from slide 27: the aromatic group is the aryl, the oxygen right next to it is the oxy, and the three-carbon chain with an alcohol and an amine is the propanolamine.</p>
+<div class='g2-said'><span class='g2-k'>He said</span>
+<p>&ldquo;This is oxygen, right?&rdquo; <span class='g2-src'>11/18 T@38595</span></p>
+<p>&ldquo;Propanolamine because it's 123, carbon, alcohol&rdquo; <span class='g2-src'>11/18 T@38806</span></p>
+</div>
+</div>
+<div class="gpt g2-block"><h5>Beta antagonist SAR: aryloxypropanolamines versus arylethanolamines (OOO slide 34)</h5>
+<p class="g2-status"><b>Status B</b> Slide only (11/19 lecture not in the materials)</p>
+<p>The slide gives four SAR points. Aryloxypropanolamines are more potent than arylethanolamines. Most have mixed beta-1 and beta-2 activity. The S isomer of the OH group is preferred. Most para-aryloxypropanolamines, for example betaxolol, are beta-1 antagonists. The left drawings contrast the two types: Ar-O-CH<sub>2</sub>-CH(OH)-CH<sub>2</sub>-NH-R for an aryloxypropanolamine and Ar-CH(OH)-CH<sub>2</sub>-NH-R for an arylethanolamine, so the first has an extra oxygen and carbon between the ring and the alcohol. Betaxolol is drawn with ring positions 1 and 4 numbered, which are the two substituents on the benzene ring: the oxygen of the chain and the ether chain (para to each other). "Molecule X" is drawn as an arylethanolamine; the slide gives no name for it.</p>
+</div>
+</section>
+
+<section class="gobj" id="gobj-oo-21">
+<h3>Dr. Sikazwe, slide by slide &middot; Carbonic anhydrase inhibitors &middot; slides 35&ndash;39</h3>
+<div class="gbar"><span>What the lecture adds (OOO 35&ndash;39)</span><b>Carbonic anhydrase inhibitors (CAIs) lower intraocular fluid production by competitively blocking an enzyme that makes bicarbonate and H+, and the SO2NH2 group is the part that docks in the enzyme. The 11/19 lecture is not in the materials yet, so each block below is explained from the slide alone.</b><i>OOO slide 35, 36, 37, 38, 39</i></div>
+<div class="gpt g2-block"><h5>Carbonic anhydrase and its reaction (OOO slide 35)</h5>
+<p class="g2-status"><b>Status B</b> Fact on slide, reasoning not on the slide (explained from the deck; lecture not available)</p>
+<p>Carbonic anhydrase (CA) is the enzyme the CAIs act on, so the reaction on this slide is the starting point for slides 36 to 39. The slide writes CO2 + H2O to carbonic acid (H2CO3) to bicarbonate ion (HCO3-) + H+, with CA labeled over the first step, and calls CA a Zn-metalloenzyme that modulates aqueous humor production through pH changes. The slide does not spell out how the pH change leads to fluid production; the poll on OOO slide 39 asks which substance&rsquo;s gradient the CAIs slow, and the reaction here makes bicarbonate a product. The right-hand drawing labels the structures the aqueous humor passes through: posterior chamber, anterior chamber, ciliary body, angle and drainage canal.</p>
+</div>
+<div class="gpt g2-block"><h5>Zolamides: four sulfonamide CAIs (OOO slide 36)</h5>
+<p class="g2-status"><b>Status B</b> Fact on slide, reasoning not on the slide (explained from the deck; lecture not available)</p>
+<p>The four drugs on this slide are acetazolamide (Diamox, ClogP = -0.3), methazolamide (Neptazane, ClogP = 0.13), brinzolamide (Azopt, ClogP = 7) and dorzolamide HCl (Trusopt, ClogP = 2). The slide states that sulfonamides (zolamides) competitively inhibit CAs, which lowers intraocular fluid production. All four drawings carry an SO2NH2 group. Acetazolamide and methazolamide share a thiadiazole ring with an acyl group, and brinzolamide and dorzolamide share a fused two-ring system with a ring sulfone and an ethylamino group; a vertical line separates the first pair from the second. Brinzolamide has a methoxypropyl chain (blue) where dorzolamide has a methyl. The slide does not link the ClogP values to the entry routes on OOO slide 30 (lipophilic drugs through the cornea, hydrophilic drugs through the conjunctiva).</p>
+</div>
+<div class="gpt g2-block"><h5>Representative ADMET: N-deethylation of brinzolamide and dorzolamide (OOO slide 37)</h5>
+<p class="g2-status"><b>Status B</b> Fact on slide, reasoning not on the slide (explained from the deck; lecture not available)</p>
+<p>Brinzolamide and dorzolamide both undergo CYP N-deethylation, and the N-deethylated metabolites are active; the M of ADMET is highlighted on the slide because this is the metabolism step. N-deethylation removes the ethyl group from the nitrogen of the ethylamino (HN-ethyl) side group that both drawings carry. Because the metabolites are active, losing that ethyl group does not end CA inhibition; the slide gives no potency comparison. Both parents keep the SO2NH2 group that OOO slide 38 shows binding the enzyme.</p>
+</div>
+<div class="gpt g2-block"><h5>Chemical basis of drug action: SO2NH2 with Zn and Thr199 (OOO slide 38)</h5>
+<p class="g2-status"><b>Status B</b> Fact on slide, reasoning not on the slide (explained from the deck; lecture not available)</p>
+<p>The slide&rsquo;s chemical basis of drug action (CBDA) is that CAIs dock in the active site of CA (panel A) and the SO2NH2 group forms ionic and H-bond interactions (panel B) with Zn and Thr199. Panel A draws the catalytic site: Zn2+ held by His94, His96 and His119, with Thr199, Gln92, Asn244 and Glu117 nearby. Panel B draws a molecule with the dorzolamide pattern (methyl and ethylammonium on the ring system) in that site, with the SO2NH2 beside Zn2+ and hydrogen bonds to Thr199, and a dashed line from Gln92 to a ring sulfone oxygen. The slide text names only Zn and Thr199 as partners of the SO2NH2 group; the self-assessment question on OOO slide 65 asks for the functional group.</p>
+</div>
+<div class="gpt g2-block"><h5>Polleve-2: which gradient do CAIs slow? (OOO slide 39)</h5>
+<p class="g2-status"><b>Status B</b> Fact on slide, reasoning not on the slide (explained from the deck; lecture not available)</p>
+<p>The poll reads: CAIs influence aqueous humor movement by slowing the chemical gradient involving ______ production? The options are carbon dioxide, bicarbonate, proteins and oxygen (O2), and the slide shows the empty chart with no answer marked. The reaction on OOO slide 35 is CO2 + H2O to H2CO3 to HCO3- + H+ catalyzed by CA, so bicarbonate is the product of the enzyme the CAIs block, and that slide states that CA modulates aqueous humor production through pH changes. The answer is therefore read from OOO slide 35; the deck does not say how bicarbonate production drives fluid movement.</p>
+</div>
+</section>
+
+<section class="gobj" id="gobj-oo-22">
+<h3>Dr. Sikazwe, slide by slide &middot; Cholinergic agents &middot; slides 40&ndash;43</h3>
+<div class="gbar"><span>What the lecture adds (OOO 40&ndash;43)</span><b>Cholinergic agents raise fluid outflow, either by acting like acetylcholine (direct) or by inhibiting the enzyme that inactivates it (indirect), and the functional group sets the extent of that inhibition. The 11/19 lecture is not in the materials yet, so each block below is explained from the slide alone.</b><i>OOO slide 40, 41, 42, 43</i></div>
+<div class="gpt g2-block"><h5>Direct-acting cholinergics: carbamates, esters and their SAR (OOO slide 40)</h5>
+<p class="g2-status"><b>Status B</b> Fact on slide, reasoning not on the slide (explained from the deck; lecture not available)</p>
+<p>Direct-acting cholinergics increase fluid outflow. The slide shows acetylcholine (ACh, an ester), carbachol Cl (IsoptoCarbachol, a carbamate, noted as having weak indirect effects) and pilocarpine HCl (IsoptoCarpine). The SAR has four features: an acyloxy group for H-bonding to nicotinic and muscarinic receptors, an ionizable amine (N), N-methyl groups, and a 2-carbon spacer between O and N. In the drawings ACh and carbachol both show the O-C(=O) group, three methyls on the positive nitrogen and two carbons between O and N; carbachol has NH2 on the carbonyl where ACh has CH3. Pilocarpine is drawn with a ring ester and an N-methyl imidazole ring. The slide gives no mechanism for carbachol&rsquo;s indirect effect.</p>
+</div>
+<div class="gpt g2-block"><h5>Indirect-acting cholinergics: block acetylcholinesterase (OOO slide 41)</h5>
+<p class="g2-status"><b>Status A</b> On the slide and complete; nothing added in lecture</p>
+</div>
+<div class="gpt g2-block"><h5>Organophosphates and the extent of AChE inhibition (OOO slide 42)</h5>
+<p class="g2-status"><b>Status B</b> Fact on slide, reasoning not on the slide (explained from the deck; lecture not available)</p>
+<p>The slide ranks the functional groups by extent of acetylcholinesterase (AChE) inhibition as phosphoryl &gt; carbamate &gt; ester. Echothiophate iodide (Phospholine Iodide) is the organophosphate example, labeled an irreversible AChE inhibitor. The picture on the right shows the enzyme with a diethyl phosphate attached (inactive), then &ldquo;Aging&rdquo; with H2O and loss of C2H5-OH, ending as &ldquo;irreversibly inactive.&rdquo; OOO slide 68 asks which functional group gives irreversible inhibition; the extent ranking and the echothiophate label point to the phosphoryl (organophosphate) group. The slide gives the ranking and the aging picture but not the chemical steps behind them.</p>
+</div>
+<div class="gpt g2-block"><h5>Question-2: which functionality gives an intermediate duration? (OOO slide 43)</h5>
+<p class="g2-status"><b>Status B</b> Fact on slide, reasoning not on the slide (explained from the deck; lecture not available)</p>
+<p>The question asks, for cholinergics, what functionality provides an intermediate duration of AChE inhibition. No answer is printed on the slide. OOO slide 42 ranks the groups by extent of inhibition as phosphoryl &gt; carbamate &gt; ester, so the carbamate is the middle group, and the organophosphate is the one labeled irreversible. Reading &ldquo;intermediate duration&rdquo; as the middle of that ranking is an inference: the slide ranks extent, and the word duration appears only in this question.</p>
+</div>
+</section>
+
+<section class="gobj" id="gobj-oo-23">
+<h3>Dr. Sikazwe, slide by slide &middot; Prostaglandin (FP) agonists &middot; slides 44&ndash;46</h3>
+<div class="gbar"><span>What the lecture adds (OOO 44&ndash;46)</span><b>Prostaglandin analogs raise fluid outflow through the FP receptor; most are esters that are converted to the free acid, and the SAR marks the acid, chain, double-bond and C-15 positions. The 11/19 lecture is not in the materials yet, so each block below is explained from the slide alone.</b><i>OOO slide 44, 45, 46</i></div>
+<div class="gpt g2-block"><h5>Five prostaglandin drugs and the PGF2&alpha; parent (OOO slide 44)</h5>
+<p class="g2-status"><b>Status B</b> Fact on slide, reasoning not on the slide (explained from the deck; lecture not available)</p>
+<p>All the drugs here raise fluid outflow by activating the PGF (FP) receptor. The parent PGF2&alpha; is drawn with a COOH end and carbons 5, 6, 13 and 14 numbered. Bimatoprost (Lumigan) ends in an N-ethyl amide. Travoprost (Travatan Z), latanoprost (Xalatan) and tafluprost (Zioptan) end in isopropyl esters, and latanoprostene bunod (Vyzulta) ends in an ester with a nitrooxy (ONO2) butyl group. By the SAR on OOO slide 46, amides are active drugs and esters are pro-drugs. Tafluprost shows two fluorines where the others show the 15-OH. The end groups vary: CF3-phenoxy in travoprost, phenoxy in tafluprost and phenyl in the others.</p>
+</div>
+<div class="gpt g2-block"><h5>Prodrug activation: latanoprost to latanoprost acid (OOO slide 45)</h5>
+<p class="g2-status"><b>Status B</b> Fact on slide, reasoning not on the slide (explained from the deck; lecture not available)</p>
+<p>Latanoprost (prodrug) is converted by an esterase to latanoprost acid (active). In the drawing the isopropyl ester at the chain end becomes a carboxylic acid (COOH) and the rest of the molecule is drawn unchanged. This is the slide&rsquo;s worked example of the rule on OOO slide 46 that esters are pro-drugs and acids are active. The slide shows only latanoprost; it does not draw the same conversion for the other esters on OOO slide 44, and it does not say where in the eye the esterase acts.</p>
+</div>
+<div class="gpt g2-block"><h5>SAR of the prostaglandin analogs (OOO slide 46)</h5>
+<p class="g2-status"><b>Status B</b> Fact on slide, reasoning not on the slide (explained from the deck; lecture not available)</p>
+<p>The four numbers on the PGF2&alpha; drawing mark the four places the SAR addresses: 1, the acid end, where esters or amides are allowed; 2, the far chain, alkyl or phenyl; 3, the single or double bonds in the chain next to the ring; and 4, the C-15 OH. The printed rules are: acids (-COOH) and amides (-CONH-) are active drugs; esters are pro-drugs; and C-15 is OH or a halogen, where the slide gives the reason as preventing 15-OH oxidation. Tafluprost on OOO slide 44 is the halogen case. The slide gives no further reasoning.</p>
+</div>
+</section>
+
+<section class="gobj" id="gobj-oo-24">
+<h3>Dr. Sikazwe, slide by slide &middot; EP2 agonist and Rho kinase inhibitor &middot; slides 47&ndash;48</h3>
+<div class="gbar"><span>What the lecture adds (OOO 47&ndash;48)</span><b>Omidenepag isopropyl and netarsudil raise fluid outflow by two newer mechanisms, a selective EP2 receptor agonist and a Rho kinase inhibitor, and both are ester prodrugs that need esterase hydrolysis. The 11/19 lecture is not in the materials yet, so each block below is explained from the slide alone.</b><i>OOO slide 47, 48</i></div>
+<div class="gpt g2-block"><h5>Omidenepag isopropyl: a pyridine sulfonamide EP2 agonist prodrug (OOO slide 47)</h5>
+<p class="g2-status"><b>Status B</b> Fact on slide, reasoning not on the slide (explained from the deck; lecture not available)</p>
+<p>The title calls this a selective PGE2 or EP2 receptor agonist, a different receptor from the FP receptor of OOO slide 44. Omidenepag isopropyl (OMDI, ClogP = 3) increases fluid outflow and is an ester prodrug that requires esterase hydrolysis for activation. The drawing shows the isopropyl ester becoming a carboxylic acid in omidenepag (OMD), the active metabolite. The arrow is labeled CE, which the slide does not spell out, while the text says esterase hydrolysis. The sulfonamide here joins a pyridine ring to a substituted nitrogen (S(=O)2-N), unlike the SO2NH2 group of the CAIs on OOO slide 38.</p>
+</div>
+<div class="gpt g2-block"><h5>Netarsudil: an isoquinoline Rho kinase (ROCK) inhibitor prodrug (OOO slide 48)</h5>
+<p class="g2-status"><b>Status B</b> Fact on slide, reasoning not on the slide (explained from the deck; lecture not available)</p>
+<p>Netarsudil (ClogP = 5) increases fluid outflow and is an ester prodrug that requires esterase hydrolysis for activation. In the drawing the aryl ester on the left, a dimethyl-substituted benzoate, is removed to leave a CH2-OH on the benzene ring in netarsudil-M1, the active metabolite; the amide, the primary amine (H2N) and the isoquinoline stay. The arrow is labeled &ldquo;DMEs?&rdquo; with a question mark, which the slide does not define. The slide names the target class as Rho kinase (ROCK) inhibitors and gives no further reasoning.</p>
+</div>
+</section>
+
+<section class="gobj" id="gobj-oo-25">
+<h3>Dr. Sikazwe, slide by slide &middot; Dry eye disease &middot; slides 49&ndash;51</h3>
+<div class="gbar"><span>What the lecture adds (OOO 49&ndash;51)</span><b>Dry eye disease is treated by lowering T-cell activation, through calcineurin inhibition (cyclosporine) or by blocking ICAM-1 binding to integrin LFA-1 (lifitegrast), with topical corticosteroids for the inflammation. The 11/19 lecture is not in the materials yet, so each block below is explained from the slide alone.</b><i>OOO slide 49, 50, 51</i></div>
+<div class="gpt g2-block"><h5>Dry eye disease: multifactorial, three approaches (OOO slide 49)</h5>
+<p class="g2-status"><b>Status A</b> On the slide and complete; nothing added in lecture</p>
+</div>
+<div class="gpt g2-block"><h5>Cyclosporin (Restasis): calcineurin inhibitor with two blanks (OOO slide 50)</h5>
+<p class="g2-status"><b>Status B</b> Fact on slide, reasoning not on the slide (explained from the deck; lecture not available)</p>
+<p>Cyclosporin (Restasis) is shown as a cyclic peptide prodrug and a calcineurin inhibitor, which lowers T-cell activation; its LogP is 4. Two lines end in blanks: &ldquo;No metabolism in eye =&rdquo; and &ldquo;Low systemic exposure =&rdquo;. They use the same cause = consequence form as the calcineurin line, so each blank asks for a result of the property on its left, but the deck prints no answer and the lecture is not available, so the answers are not in the materials. The slide labels cyclosporin a prodrug yet shows no activation step. The drawing shows a ring of amide (peptide) bonds carrying N-methyl groups and side chains.</p>
+</div>
+<div class="gpt g2-block"><h5>Lifitegrast (Xiidra): a phenylalanine that blocks ICAM-1 binding to LFA-1 (OOO slide 51)</h5>
+<p class="g2-status"><b>Status B</b> Fact on slide, reasoning not on the slide (explained from the deck; lecture not available)</p>
+<p>Lifitegrast is a phenylalanine derivative (circled on the slide) that blocks intercellular adhesion molecule-1 (ICAM-1) from binding integrin LFA-1, which lowers T-cell activation. Its LogP is 4, the same as cyclosporin on OOO slide 50, and it is eliminated mostly unchanged, so the slide describes little metabolism. The circled part carries a COOH and a methylsulfonyl group (O=S=O with CH3), and it is joined through an amide to a chlorinated bicyclic ring with a nitrogen and a benzofuran. The summary on OOO slide 61 groups both dry eye drugs as indirect T-cell inhibitors.</p>
+</div>
+</section>
+
+<section class="gobj" id="gobj-oo-26">
+<h3>Dr. Sikazwe, slide by slide &middot; Allergic conjunctivitis: histamine and H1-antihistamines &middot; slides 52&ndash;54</h3>
+<div class="gbar"><span>What the lecture adds (OOO 52&ndash;54)</span><b>Allergic conjunctivitis is a histamine problem treated with five drug classes, and the first class, the H1-antihistamines, is shown here with its SAR deferred to the allergy lecture. The 11/19 lecture is not in the materials yet, so each block below is explained from the slide alone.</b><i>OOO slide 52, 53, 54</i></div>
+<div class="gpt g2-block"><h5>Allergic conjunctivitis: histamine and five drug classes (OOO slide 52)</h5>
+<p class="g2-status"><b>Status A</b> On the slide and complete; nothing added in lecture</p>
+</div>
+<div class="gpt g2-block"><h5>H1-antihistamines: first and second generation (OOO slide 53)</h5>
+<p class="g2-status"><b>Status A</b> On the slide and complete; nothing added in lecture</p>
+</div>
+<div class="gpt g2-block"><h5>Pheniramine, cetirizine and levocabastine structures (OOO slide 54)</h5>
+<p class="g2-status"><b>Status B</b> Fact on slide, reasoning not on the slide (explained from the deck; lecture not available)</p>
+<p>The SAR line reads &ldquo;Refer to the next lecture on Allergies,&rdquo; so the antihistamine SAR is not on this slide and is not in the materials provided. Pheniramine (first generation, in Opcon-A per OOO slide 53), cetirizine (Zerviate) and levocabastine (Livostin) are drawn with part of each structure in red, which the slide does not explain; in each the red part contains the basic nitrogen (the dimethylamino end of a three-carbon chain in pheniramine, a piperazine ring in cetirizine, a piperidine ring in levocabastine). Cetirizine ends in a carboxylic acid (O-CH2-COOH), and levocabastine carries a COOH and a CN group. The ionizable N and COOH are the groups OOO slide 57 names for the dual-acting agents.</p>
+</div>
+</section>
+
+<section class="gobj" id="gobj-oo-27">
+<h3>Dr. Sikazwe, slide by slide &middot; Decongestants, mast cell stabilizers and dual-acting agents &middot; slides 55&ndash;57</h3>
+<div class="gbar"><span>What the lecture adds (OOO 55&ndash;57)</span><b>Imidazoline decongestants act as alpha-1 and alpha-2 agonists, mast cell stabilizers inhibit histamine release from granules, and dual-acting agents combine both; only the first two have SAR statements, and they are brief. The 11/19 lecture is not in the materials yet, so each block below is explained from the slide alone.</b><i>OOO slide 55, 56, 57</i></div>
+<div class="gpt g2-block"><h5>Imidazoline decongestants: alpha-1 and alpha-2 agonists (OOO slide 55)</h5>
+<p class="g2-status"><b>Status B</b> Fact on slide, reasoning not on the slide (explained from the deck; lecture not available)</p>
+<p>The slide lists oxymetazoline HCl (Afrin products), xylometazoline HCl (Clear eyes products), tetrahydrometazoline HCl (Visine products) and naphazoline HCl (Otrivin products), as the slide spells them, with the mechanism of action as alpha-1/alpha-2 agonists. Each drawing has an aromatic ring joined by a CH2 to the red imidazoline ring. For the SAR, the slide says to refer to slide 33, but the aryl imidazoline core is on OOO slide 32, which gives X = CH2 as alpha-1 agonists and X = NH2 as alpha-2 agonists (printed NH2; the clonidine-type structures on slide 31 show NH), and slide 33 is the beta antagonists. The CH2 linker here matches the alpha-1 case, while the slide lists both alpha-1 and alpha-2.</p><div class="g2-note"><span class="g2-k">Brand pairings: slide versus drug chart</span><p>Slide 55 pairs xylometazoline with Clear eyes and naphazoline with Otrivin. The ophthalmic drug chart in the course files lists naphazoline (Clear Eyes) and tetrahydrozoline (Visine). The lecture that could settle this is not in the materials.</p></div>
+</div>
+<div class="gpt g2-block"><h5>Chromone and oxamic acid mast cell stabilizers (OOO slide 56)</h5>
+<p class="g2-status"><b>Status B</b> Fact on slide, reasoning not on the slide (explained from the deck; lecture not available)</p>
+<p>The mechanism on the slide is that these drugs inhibit granule histamine release from mast cells. Cromolyn Na (Opticrom) and nedocromil Na (Alocril) are the chromones, drawn as sodium salts of two fused carbonyl-bearing ring systems with carboxylates. Lodoxamide tromethamine (Alomide), with two oxamic acid groups on a benzene ring, and pemirolast K (Alamast), a potassium salt with a tetrazole, sit in a shaded box followed by &ldquo;??&rdquo;, which the slide does not explain. The SAR line reads &ldquo;Not clearly established,&rdquo; so no structural rule is given for this class.</p>
+</div>
+<div class="gpt g2-block"><h5>Dual-acting agents: antihistamine plus mast cell stabilizing (OOO slide 57)</h5>
+<p class="g2-status"><b>Status B</b> Fact on slide, reasoning not on the slide (explained from the deck; lecture not available)</p>
+<p>Six multi-cyclic drugs are shown: azelastine HCl (Astelin), ketotifen fumarate (Zaditor), epinastine (Elestat), olopatidine HCl (Patanol), bepotastine (Bepreve) and alcaftadine (Lastacaft), spelled as the slide spells them. The SAR is not clearly stated, but the slide says they are multi-cyclic agents with ionizable (N and COOH) functional groups. In the drawings every drug has a nitrogen, while only olopatidine and bepotastine show a COOH; alcaftadine shows an aldehyde, so the slide&rsquo;s N and COOH are the ionizable groups as a set, not a group that all six carry. The self-assessment question on OOO slide 64 asks for the commonest SAR groups of this class.</p>
+</div>
+</section>
+
+<section class="gobj" id="gobj-oo-28">
+<h3>Dr. Sikazwe, slide by slide &middot; Glucocorticoids and summary &middot; slides 58&ndash;61</h3>
+<div class="gbar"><span>What the lecture adds (OOO 58&ndash;61)</span><b>Glucocorticoid steroids act through the GR complex, and the slides give the steroid numbering and alpha/beta convention, six drugs and three SAR features that raise anti-inflammatory activity. The 11/19 lecture is not in the materials yet, so each block below is explained from the slide alone.</b><i>OOO slide 58, 59, 60, 61</i></div>
+<div class="gpt g2-block"><h5>Glucocorticoid MoA, steroid numbering and stereochemistry (OOO slide 58)</h5>
+<p class="g2-status"><b>Status B</b> Fact on slide, reasoning not on the slide (explained from the deck; lecture not available)</p>
+<p>The mechanism on the slide is that glucocorticoids activate the GR complex to produce proteins that in turn suppress pro-inflammatory proteins. The numbered skeleton is the template that the questions on OOO slides 59 and 63 use. Carbon 1 is in ring A; carbon 10 is the A/B junction carbon with methyl 19; carbon 13 carries methyl 18; carbon 17 carries the side chain, numbered 20 to 27, with 21 a branch on 20 and 26 and 27 the two ends at 25. The rings are lettered A, B, C and D, and the slide draws alpha with a hashed bond and beta with a wedge at the A/B junction. Numbering and orientation are two separate ideas.</p>
+</div>
+<div class="gpt g2-block"><h5>Slide states what to know: C-atom numbering, stereochemistry, anti-inflammatory SAR (OOO slide 59)</h5>
+<p class="g2-status"><b>Status A</b> On the slide and complete; nothing added in lecture</p>
+</div>
+<div class="gpt g2-block"><h5>Six glucocorticoids and the three SAR features (OOO slide 60)</h5>
+<p class="g2-status"><b>Status B</b> Fact on slide, reasoning not on the slide (explained from the deck; lecture not available)</p>
+<p>Anti-inflammatory activity is increased by a C1-C2 double bond, a 6&alpha;- or 9&alpha;-halogen (X), and an 11&beta;-OH; the small drawing shows them with 1, 9, 11 and 6 numbered, the HO on C11, and X at C9 and C6. The slide shows hydrocortisone, dexamethasone, fluorometholone, prednisolone, loteprednol and rimexolone. In the drawings all six carry the 11-HO, hydrocortisone shows a single double bond in ring A while the other five show two, and dexamethasone and fluorometholone carry a fluorine at C9; loteprednol carries a Cl on its side chain, not on the ring.</p>
+</div>
+<div class="gpt g2-block"><h5>Summary of otic, oral, glaucoma, dry eye and allergic conjunctivitis drug classes (OOO slide 61)</h5>
+<p class="g2-status"><b>Status A</b> On the slide and complete; nothing added in lecture</p>
+</div>
+</section>
+
+<section class="gobj" id="gobj-oo-29">
+<h3>Dr. Sikazwe, slide by slide &middot; Self-assessment questions 1-3 &middot; slides 62&ndash;65</h3>
+<div class="gbar"><span>What the lecture adds (OOO 62&ndash;65)</span><b>Self-assessment questions 1 to 3 ask for the steroid numbering, the commonest SAR groups of the dual-acting agents and the CAI functional group. The 11/19 lecture is not in the materials yet, so each block below is explained from the slide alone.</b><i>OOO slide 62, 63, 64, 65</i></div>
+<div class="gpt g2-block"><h5>Self-assessment divider (OOO slide 62)</h5>
+<p class="g2-status"><b>Status A</b> On the slide and complete; nothing added in lecture</p>
+</div>
+<div class="gpt g2-block"><h5>Question 1: identify and number the carbons (OOO slide 63)</h5>
+<p class="g2-status"><b>Status B</b> Fact on slide, reasoning not on the slide (explained from the deck; lecture not available)</p>
+<p>The drawing is the unnumbered steroid skeleton that OOO slide 58 shows numbered: four fused rings, a methyl on the A/B junction carbon and one on the C/D junction carbon, and an eight-carbon branched side chain on the five-membered ring. Using the numbering on slide 58, the ring carbons run 1 to 17, the methyl on C10 is 19, the methyl on C13 is 18, and the side chain is 20 to 27 (21 the branch on 20, 26 and 27 the two ends at 25). Counting gives 27 carbons in all. No answer is printed on the slide; the numbers above are read from slide 58.</p>
+</div>
+<div class="gpt g2-block"><h5>Question 2: commonest SAR groups of dual-acting agents (OOO slide 64)</h5>
+<p class="g2-status"><b>Status B</b> Fact on slide, reasoning not on the slide (explained from the deck; lecture not available)</p>
+<p>The slide gives &ldquo;1) Ar groups; 2) ........ ; 3) ........&rdquo; as the answer line and prints no answer for the blanks. OOO slide 57 states the SAR as multi-cyclic agents with ionizable (N and COOH) functional groups, so the blanks are filled from it by the ionizable nitrogen and the COOH group. The aromatic rings in all six drawings are the Ar groups, and the slide&rsquo;s multi-cyclic statement is the ring system itself. Not every drug on slide 57 has a COOH, so the three groups describe the class as a whole.</p>
+</div>
+<div class="gpt g2-block"><h5>Question 3: the CAI key functional group (OOO slide 65)</h5>
+<p class="g2-status"><b>Status B</b> Fact on slide, reasoning not on the slide (explained from the deck; lecture not available)</p>
+<p>The slide asks for the functional group at the center of the CAI chemical basis of drug action, with a blank answer line. OOO slide 38 states that the SO2NH2 group forms ionic and H-bond interactions with Zn and Thr199 in the active site of CA, so the group is the sulfonamide, SO2NH2. All four CAIs on OOO slide 36 carry it.</p>
+</div>
+</section>
+
+<section class="gobj" id="gobj-oo-30">
+<h3>Dr. Sikazwe, slide by slide &middot; Self-assessment questions 4 and 5 &middot; slides 66&ndash;68</h3>
+<div class="gbar"><span>What the lecture adds (OOO 66&ndash;68)</span><b>Self-assessment questions 4 and 5 ask the student to name a drawn functional group, say which drugs contain it, and name the group that gives irreversible AChE inhibition. The 11/19 lecture is not in the materials yet, so each block below is explained from the slide alone.</b><i>OOO slide 66, 67, 68</i></div>
+<div class="gpt g2-block"><h5>Question 4: name the drawn functionality (OOO slide 66)</h5>
+<p class="g2-status"><b>Status B</b> Fact on slide, reasoning not on the slide (explained from the deck; lecture not available)</p>
+<p>The drawing is a five-membered ring with two nitrogens, one NH, one C=N and two saturated carbons, which is the imidazoline ring that also appears first in the &ldquo;Drug FGs&rdquo; drawings of OOO slide 27. Part (ii) is left blank. The deck places the imidazoline in clonidine, apraclonidine and brimonidine (OOO slide 31) and in the four decongestants on OOO slide 55. The slide prints no answer; these are read from slides 31 and 55. The ring is not the aromatic imidazole, because two of its carbons are saturated.</p>
+</div>
+<div class="gpt g2-block"><h5>Question 5: identity of the indicated functionality (OOO slide 67)</h5>
+<p class="g2-status"><b>Status B</b> Fact on slide, reasoning not on the slide (explained from the deck; lecture not available)</p>
+<p>The drawing is a five-membered carbon ring with two long straight chains attached. No functionality is marked on the slide. The same drawing is among the &ldquo;Drug FGs&rdquo; on OOO slide 27, and the ring with two chains is the pattern of the prostaglandin drugs on OOO slide 44, so the identity is a cyclopentane ring with two chains and the drugs are the prostaglandins. No answer is printed on the slide. The deck does not name the group on slide 27 in words.</p>
+</div>
+<div class="gpt g2-block"><h5>Question 5 (second): the group with irreversible AChE inhibition (OOO slide 68)</h5>
+<p class="g2-status"><b>Status B</b> Fact on slide, reasoning not on the slide (explained from the deck; lecture not available)</p>
+<p>The slide asks which functional group in cholinergic drugs exhibits irreversible acetylcholinesterase inhibition, and it is numbered Question 5 a second time. OOO slide 42 labels echothiophate iodide, an organophosphate, as an irreversible AChE inhibitor, shows the phosphoryl-enzyme &ldquo;aging&rdquo; to an irreversibly inactive form, and ranks phosphoryl above carbamate above ester by extent of inhibition. The functional group is therefore the phosphoryl (organophosphate) group. No answer is printed on slide 68; it is read from slide 42.</p>
+</div>
+</section>
+</details>
 `;
 
 /* ==========================================================================

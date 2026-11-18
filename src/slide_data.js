@@ -72,6 +72,7 @@ const SLIDES = {
   ["gdeck-sun", "sun", "Guide heading: Dr. Smith's Sun Exposure", "sun"],
   ["gdeck-mc", "mc", "Guide heading: DPAW", "sun"],
   ["gdeck-eye", "ey", "Guide heading: Dr. Smith, Eye", "sun"],
+  ["gdeck-ooo", "oo", "Guide heading: Dr. Sikazwe, Otic/Oral/Ophthalmic", "sun"],
   ["gdeck-p5", "p5", "Guide heading: Dr. Patel, Dermatitis", "p8s"],
   ["gdeck-p6", "p6", "Guide heading: Dr. Patel, Acne", "p8s"],
   ["gdeck-p7", "p7", "Guide heading: Dr. Patel, Scaly Dermatoses", "p8s"],
