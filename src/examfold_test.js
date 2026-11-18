@@ -90,7 +90,7 @@ async function open(browser, width, {height = 844, init = [], motion = 'reduce',
 const ready = p => p.waitForFunction(() => typeof show === 'function' && typeof VIEW === 'string' && document.querySelectorAll('#nav button').length > 3 && typeof EXAMFOLD_UI !== 'undefined', null, {timeout: 30000});
 const TABS = ['guide', 'tell', 'ref'];
 const NAMES = {guide: 'Guides', tell: 'Tell apart', ref: 'Reference'};
-// "1:false 2:true": the folders of a tab and whether each is open
+// "1:false 2:false 3:true": the folders of a tab and whether each is open
 const st = (p, v) => p.evaluate(v => [...document.querySelectorAll(`#v-${v} > .rfold`)].map(f => f.dataset.exam + ':' + f.open).join(' '), v);
 const stored = p => p.evaluate(() => localStorage.getItem(EXAMFOLD_UI.key()));
 // a tap on a tab of the strip. wide_ui.js slides the strip away while the page rests scrolled down; at the top of the
@@ -280,23 +280,23 @@ async function nsOf(browser) {
       await g1.scrollIntoViewIfNeeded();
       const [v4, a4] = (await g1.getAttribute('data-jump')).split(':');
       const y4 = await p.evaluate(() => Math.round(scrollY));
-      check(await st(p, 'guide') === '1:true 2:true' && await stored(p) === null, `${w} px: a jump into Exam 1 of Guides opens it without storing it`, [await st(p, 'guide'), await stored(p)]);
+      check(await st(p, 'guide') === '1:true 2:false 3:true' && await stored(p) === null, `${w} px: a jump into Exam 1 of Guides opens it without storing it`, [await st(p, 'guide'), await stored(p)]);
       await g1.click();
       wq = await where(p, a4);
       check(wq.view === v4 && landed(wq), `${w} px: a chip inside that Exam 1 guide lands on ${v4}:${a4}`, wq);
       await p.click('#backbtn');
       bk = await p.evaluate(() => ({view: VIEW, y: Math.round(scrollY)}));
-      check(bk.view === 'guide' && await st(p, 'guide') === '1:true 2:true' && Math.abs(bk.y - y4) <= 2, `${w} px: Back returns to the guide with Exam 1 open again, at the same scroll position`, {bk, y4, st: await st(p, 'guide')});
+      check(bk.view === 'guide' && await st(p, 'guide') === '1:true 2:false 3:true' && Math.abs(bk.y - y4) <= 2, `${w} px: Back returns to the guide with Exam 1 open again, at the same scroll position`, {bk, y4, st: await st(p, 'guide')});
       check(await stored(p) === null, `${w} px: and still nothing is stored`, await stored(p));
       await p.evaluate(() => { show('topics'); show('guide'); });
-      check(await st(p, 'guide') === '1:false 2:true', `${w} px: Guides opened from the tab strip is back at its usual folders`, await st(p, 'guide'));
+      check(await st(p, 'guide') === '1:false 2:false 3:true', `${w} px: Guides opened from the tab strip is back at its usual folders`, await st(p, 'guide'));
 
       // C5. a jump inside one tab keeps the folder the reader is in
       await p.evaluate(() => { RET.length = 0; backBtn(); show('topics'); jump('ref', 'ref-l2'); RET.length = 0; backBtn(); });
       const y5 = await p.evaluate(() => Math.round(scrollY));
       await p.evaluate(() => jump('ref', 'ref-p5-ftu'));
       wq = await where(p, 'ref-p5-ftu');
-      check(landed(wq) && await st(p, 'ref') === '1:true 2:true', `${w} px: a jump from Exam 1 of Reference to an Exam 2 section keeps Exam 1 open`, {wq, st: await st(p, 'ref')});
+      check(landed(wq) && await st(p, 'ref') === '1:true 2:false 3:true', `${w} px: a jump from Exam 1 of Reference to an Exam 2 section keeps Exam 1 open`, {wq, st: await st(p, 'ref')});
       await p.click('#backbtn');
       bk = await p.evaluate(() => ({view: VIEW, y: Math.round(scrollY)}));
       check(bk.view === 'ref' && Math.abs(bk.y - y5) <= 2, `${w} px: Back returns to the first section's scroll position`, {bk, y5});
@@ -309,7 +309,7 @@ async function nsOf(browser) {
       await p.click('#v-ref .refnav-wrap > summary');
       await p.click('#v-ref .refnav a[href="#ref-l2"]');
       wq = await where(p, 'ref-l2');
-      check(landed(wq) && wq.fold === 'rfold-ref-1' && await st(p, 'ref') === '1:true 2:true', `${w} px: a link of the list into the closed Exam 1 folder opens it and lands on the section`, wq);
+      check(landed(wq) && wq.fold === 'rfold-ref-1' && await st(p, 'ref') === '1:true 2:false 3:true', `${w} px: a link of the list into the closed Exam 1 folder opens it and lands on the section`, wq);
       check(await p.evaluate(() => !document.querySelector('#v-ref .refnav-wrap').open) && await stored(p) === null, `${w} px: the list closes after the jump and nothing is stored`);
       await side(p, w, 'jump list');
 
@@ -362,7 +362,7 @@ async function nsOf(browser) {
       await side(p, w, 'Diseases comparison');
       await p.click('#backbtn');
       bk = await p.evaluate(() => ({view: VIEW, y: Math.round(scrollY)}));
-      check(bk.view === 'tell' && Math.abs(bk.y - y8) <= 2 && await st(p, 'tell') === '1:false 2:true', `${w} px: Back returns to Tell apart at the same scroll position`, {bk, y8, st: await st(p, 'tell')});
+      check(bk.view === 'tell' && Math.abs(bk.y - y8) <= 2 && await st(p, 'tell') === '1:false 2:false 3:true', `${w} px: Back returns to Tell apart at the same scroll position`, {bk, y8, st: await st(p, 'tell')});
       await p.click('#rfold-tell-2 [data-rfdz="pairs"]');
       const d9 = await p.evaluate(() => ({view: VIEW, dzview: DZ_UI.state.view, tab: (document.querySelector('#v-dz .dzviews [aria-selected="true"]') || {}).textContent}));
       check(d9.view === 'dz' && d9.dzview === 'pairs' && d9.tab === 'Drugs that get confused', `${w} px: "Drugs that get confused" opens that view of the Diseases tab`, d9);
@@ -391,28 +391,28 @@ async function nsOf(browser) {
       const {ctx, p, errs} = await open(browser, w);
       await p.evaluate(() => show('ref'));
       await p.click('#rfold-ref-1 > summary');
-      check(await st(p, 'ref') === '1:true 2:true', `${w} px: a tap on the Exam 1 header of Reference opens it`, await st(p, 'ref'));
+      check(await st(p, 'ref') === '1:true 2:false 3:true', `${w} px: a tap on the Exam 1 header of Reference opens it`, await st(p, 'ref'));
       const key = await p.evaluate(() => EXAMFOLD_UI.key());
       check(/:readExamOpen$/.test(key) && await stored(p) === '{"ref":{"1":true}}', `${w} px: the tap is stored under ${key}`, await stored(p));
       await p.evaluate(() => show('guide'));
-      check(await st(p, 'guide') === '1:false 2:true', `${w} px: Guides keeps its own state (Exam 1 still closed there)`, await st(p, 'guide'));
+      check(await st(p, 'guide') === '1:false 2:false 3:true', `${w} px: Guides keeps its own state (Exam 1 still closed there)`, await st(p, 'guide'));
       await p.evaluate(() => { show('topics'); show('ref'); });
-      check(await st(p, 'ref') === '1:true 2:true', `${w} px: Reference drawn again keeps Exam 1 open`, await st(p, 'ref'));
+      check(await st(p, 'ref') === '1:true 2:false 3:true', `${w} px: Reference drawn again keeps Exam 1 open`, await st(p, 'ref'));
       await p.focus('#rfold-ref-2 > summary'); await p.keyboard.press('Enter');
       check(await st(p, 'ref') === '1:true 2:false' && await stored(p) === '{"ref":{"1":true,"2":false}}', `${w} px: Enter on the focused Exam 2 header closes it, and that is stored`, [await st(p, 'ref'), await stored(p)]);
       check(await p.evaluate(() => localStorage.getItem(NS + ':examOpen') === null && localStorage.getItem(NS + ':deckOpen') === null), `${w} px: the Topics folders' keys (examOpen, deckOpen) are not written`);
       // a jump into the folder the reader closed opens it for the visit only
       await p.evaluate(() => { show('topics'); jump('ref', 'ref-p5-ftu'); });
-      check(await st(p, 'ref') === '1:true 2:true' && await stored(p) === '{"ref":{"1":true,"2":false}}', `${w} px: a jump into the folder the reader closed opens it and leaves the stored choice as it was`, [await st(p, 'ref'), await stored(p)]);
+      check(await st(p, 'ref') === '1:true 2:false 3:true' && await stored(p) === '{"ref":{"1":true,"2":false}}', `${w} px: a jump into the folder the reader closed opens it and leaves the stored choice as it was`, [await st(p, 'ref'), await stored(p)]);
       await p.evaluate(() => { RET.length = 0; backBtn(); show('topics'); show('ref'); });
       await p.waitForTimeout(600);                      // the core writes the place 400 ms after the last move
       await p.reload(); await ready(p); await p.waitForTimeout(300);
       check(await p.evaluate(() => VIEW) === 'ref' && await st(p, 'ref') === '1:true 2:false', `${w} px: after a reload Reference comes back with the reader's folders`, [await p.evaluate(() => VIEW), await st(p, 'ref')]);
       await p.evaluate(() => show('tell'));
-      check(await st(p, 'tell') === '1:false 2:true', `${w} px: Tell apart is still at its usual folders`, await st(p, 'tell'));
+      check(await st(p, 'tell') === '1:false 2:false 3:true', `${w} px: Tell apart is still at its usual folders`, await st(p, 'tell'));
       // a stored value that is not what this file wrote is read as nothing
       await p.evaluate(() => { localStorage.setItem(EXAMFOLD_UI.key(), '[1,2'); show('topics'); show('ref'); });
-      check(await st(p, 'ref') === '1:false 2:true', `${w} px: a damaged stored value is read as no choice`, await st(p, 'ref'));
+      check(await st(p, 'ref') === '1:false 2:false 3:true', `${w} px: a damaged stored value is read as no choice`, await st(p, 'ref'));
       await p.click('#rfold-ref-1 > summary');
       check(await stored(p) === '{"ref":{"1":true}}', `${w} px: and the next tap writes a good one`, await stored(p));
       await side(p, w, 'toggles');
@@ -436,7 +436,7 @@ async function nsOf(browser) {
       const before = await p.evaluate(TOP);
       await p.reload(); await ready(p); await p.waitForTimeout(1500);
       const after = await p.evaluate(AT, before);
-      check(await p.evaluate(() => VIEW) === 'ref' && after !== null && Math.abs(after - before.top) <= 4 && await st(p, 'ref') === '1:true 2:true',
+      check(await p.evaluate(() => VIEW) === 'ref' && after !== null && Math.abs(after - before.top) <= 4 && await st(p, 'ref') === '1:true 2:false 3:true',
         `${w} px: a reload inside a folder that a jump opened comes back to the same line at the same height, the folder open`, {before, after, st: await st(p, 'ref')});
       check(await stored(p) === null, `${w} px: and the folder is still not stored as the reader's choice`, await stored(p));
       check(!errs.length, `${w} px: no page error across the reload`, errs.slice(0, 4));
@@ -455,16 +455,16 @@ async function nsOf(browser) {
         const before = await o.p.evaluate(TOP);
         await o.p.reload(); await ready(o.p); await o.p.waitForTimeout(1500);
         const after = await o.p.evaluate(AT, before);
-        check(await o.p.evaluate(() => VIEW) === v && after !== null && Math.abs(after - before.top) <= 4 && await st(o.p, v) === '1:false 2:true',
+        check(await o.p.evaluate(() => VIEW) === v && after !== null && Math.abs(after - before.top) <= 4 && await st(o.p, v) === '1:false 2:false 3:true',
           `${w} px: a reload while reading Exam 2 of ${NAMES[v]} comes back to the same line at the same height, Exam 1 still closed`, {before, after, st: await st(o.p, v)});
         check(!o.errs.length, `${w} px: no page error across that reload`, o.errs.slice(0, 3));
         await o.ctx.close();
       }
       // records written before the folders existed (a reader who reloads into this version)
       for (const [label, rec, want] of [
-        ['a line inside what is now Exam 1 of Reference', {v: 'ref', y: 900, a: {id: 'ref-l2', off: 120}, open: []}, {st: '1:true 2:true', id: 'ref-l2', top: 120}],
-        ['a line inside what is now Exam 2 of Guides', {v: 'guide', y: 5000, a: {id: 'gobj-p6-1', off: 200}, open: []}, {st: '1:false 2:true', id: 'gobj-p6-1', top: 200}],
-        ['the top of Tell apart', {v: 'tell', y: 0, a: null, open: []}, {st: '1:false 2:true'}]]) {
+        ['a line inside what is now Exam 1 of Reference', {v: 'ref', y: 900, a: {id: 'ref-l2', off: 120}, open: []}, {st: '1:true 2:false 3:true', id: 'ref-l2', top: 120}],
+        ['a line inside what is now Exam 2 of Guides', {v: 'guide', y: 5000, a: {id: 'gobj-p6-1', off: 200}, open: []}, {st: '1:false 2:false 3:true', id: 'gobj-p6-1', top: 200}],
+        ['the top of Tell apart', {v: 'tell', y: 0, a: null, open: []}, {st: '1:false 2:false 3:true'}]]) {
         const seed = `try{ if(!sessionStorage.getItem('__seeded')){ var ns = ${JSON.stringify(await nsOf(browser))}; sessionStorage.setItem(ns + ':place', JSON.stringify(Object.assign(${JSON.stringify(rec)}, {at: Date.now()}))); sessionStorage.setItem('__seeded','1'); } }catch(e){}`;
         const o = await open(browser, w, {init: [seed]});
         await o.p.waitForTimeout(1500);
@@ -611,7 +611,7 @@ async function nsOf(browser) {
   if (run('I')) for (const [w, h] of SIZES2) {
     console.log(`\n=== ${w}x${h}: a reload with the closed Exam 1 header as the first line ===`);
     // Exam 1 closed as first drawn, closed by the reader (two taps on its header), and, for the other direction, opened by the reader
-    for (const v of ['ref', 'tell']) for (const [how, taps, want, key] of [['as first drawn', 0, '1:false 2:true', null], ['closed by the reader', 2, '1:false 2:true', `{"${v}":{"1":false}}`], ['opened by the reader', 1, '1:true 2:true', `{"${v}":{"1":true}}`]]) {
+    for (const v of ['ref', 'tell']) for (const [how, taps, want, key] of [['as first drawn', 0, '1:false 2:false 3:true', null], ['closed by the reader', 2, '1:false 2:false 3:true', `{"${v}":{"1":false}}`], ['opened by the reader', 1, '1:true 2:false 3:true', `{"${v}":{"1":true}}`]]) {
       const o = await open(browser, w, {height: h});
       await o.p.evaluate(v => show(v), v);
       for (let i = 0; i < taps; i++) await o.p.click(`#rfold-${v}-1 > summary`);
@@ -621,7 +621,7 @@ async function nsOf(browser) {
       const snap = () => o.p.evaluate(v => { const f = document.getElementById(`rfold-${v}-1`), pl = JSON.parse(sessionStorage.getItem(NS + ':place') || 'null');
         return {view: VIEW, st: [...document.querySelectorAll(`#v-${v} > .rfold`)].map(x => x.dataset.exam + ':' + x.open).join(' '), page: document.documentElement.scrollHeight,
           head: Math.round(f.getBoundingClientRect().top), rec: pl && pl.a ? pl.a.id || pl.a.tag : null, stored: localStorage.getItem(EXAMFOLD_UI.key())}; }, v);
-      const before = await snap(), state = want === '1:false 2:true' ? 'closed' : 'open';
+      const before = await snap(), state = want === '1:false 2:false 3:true' ? 'closed' : 'open';
       check(before.rec === `rfold-${v}-1` && before.st === want && before.head >= 0 && before.head < h && before.stored === key,
         `${w}x${h}, ${NAMES[v]}, Exam 1 ${how}: with the ${state} Exam 1 header as the first line, the line the core saves is the folder itself`, before);
       await o.p.reload(); await ready(o.p); await o.p.waitForTimeout(1500);
@@ -651,14 +651,14 @@ async function nsOf(browser) {
     const tgt = (await chip.getAttribute('data-jump')).split(':')[1], y1 = await p.evaluate(() => Math.round(scrollY));
     await chip.click();
     let wq = await where(p, tgt);
-    check(wq.view === 'ref' && landed(wq) && wq.fold === 'rfold-ref-1' && await st(p, 'ref') === '1:true 2:true' && await hit('ref'),
+    check(wq.view === 'ref' && landed(wq) && wq.fold === 'rfold-ref-1' && await st(p, 'ref') === '1:true 2:false 3:true' && await hit('ref'),
       `${w}x${h}: "Explain more" on ${q.id} opens the Exam 1 folder of Reference and lands on ${tgt}, highlighted`, {wq, st: await st(p, 'ref')});
     check(await over(p) <= 0 && await stored(p) === null, `${w}x${h}: no sideways scroll there, and the folder is not stored as the reader's choice`, [await over(p), await stored(p)]);
     await p.click('#backbtn');
     let bk = await p.evaluate(() => ({view: VIEW, y: Math.round(scrollY)}));
     check(bk.view === 'quiz' && Math.abs(bk.y - y1) <= 2, `${w}x${h}: Back returns to the question at the same scroll position`, {bk, y1});
     await strip('ref');
-    check(await st(p, 'ref') === '1:false 2:true', `${w}x${h}: Reference opened from the tab strip has Exam 1 closed again`, await st(p, 'ref'));
+    check(await st(p, 'ref') === '1:false 2:false 3:true', `${w}x${h}: Reference opened from the tab strip has Exam 1 closed again`, await st(p, 'ref'));
 
     // J2. a "Read" chip of the Weak spots review plan whose section is in a folder that is closed as drawn
     await p.evaluate(() => { ['guide', 'tell', 'ref'].forEach(v => show(v)); });
@@ -677,7 +677,7 @@ async function nsOf(browser) {
       bk = await p.evaluate(() => ({view: VIEW, y: Math.round(scrollY)}));
       check(bk.view === 'gaps' && Math.abs(bk.y - y2) <= 2, `${w}x${h}: Back returns to Weak spots at the same scroll position`, {bk, y2});
       await strip(pv);
-      check(await st(p, pv) === '1:false 2:true', `${w}x${h}: ${NAMES[pv]} opened from the tab strip has that folder closed again`, await st(p, pv));
+      check(await st(p, pv) === '1:false 2:false 3:true', `${w}x${h}: ${NAMES[pv]} opened from the tab strip has that folder closed again`, await st(p, pv));
     }
 
     // J3. Topics: "Read guide" and "Listen" on the card of an Exam 1 topic, reached by taps on the exam folder, the deck and the card
@@ -704,7 +704,7 @@ async function nsOf(browser) {
       await p.locator(readBtn).click();
       await p.waitForTimeout(150);
       wq = await where(p, guideOf);
-      check(wq.view === 'guide' && wq.vis && wq.fold === 'rfold-guide-1' && wq.open && wq.top >= wq.pin - 1 && wq.top < 300 && await st(p, 'guide') === '1:true 2:true',
+      check(wq.view === 'guide' && wq.vis && wq.fold === 'rfold-guide-1' && wq.open && wq.top >= wq.pin - 1 && wq.top < 300 && await st(p, 'guide') === '1:true 2:false 3:true',
         `${w}x${h}: "Read guide" opens the Exam 1 folder of Guides with the section (${guideOf}) below the pinned strip`, {wq, st: await st(p, 'guide')});
       check(await p.evaluate(() => /topics/.test((document.getElementById('backbtn') || {}).textContent || '')) && await over(p) <= 0 && await stored(p) === null, `${w}x${h}: Back to the topics is offered, no sideways scroll, nothing stored`);
       await p.click('#backbtn');
@@ -720,7 +720,7 @@ async function nsOf(browser) {
       await p.evaluate(() => { WALK_UI.stop(); document.querySelectorAll('.wkpanel').forEach(x => WALK_UI.close(x.dataset.wkp)); });
       await p.click('#backbtn');
       await strip('guide');
-      check(await st(p, 'guide') === '1:false 2:true', `${w}x${h}: with the player closed, Guides opened from the tab strip has Exam 1 closed again`, await st(p, 'guide'));
+      check(await st(p, 'guide') === '1:false 2:false 3:true', `${w}x${h}: with the player closed, Guides opened from the tab strip has Exam 1 closed again`, await st(p, 'guide'));
     }
     check(!errs.length, `${w}x${h}: no page error during the taps`, errs.slice(0, 4));
     await ctx.close();
@@ -743,26 +743,26 @@ async function nsOf(browser) {
     await bar.click();
     await p.waitForTimeout(250);
     let s = await walk();
-    check(s.id === id && s.playing && s.seen && s.handle && !s.handle.paused && await st(p, 'guide') === '1:true 2:true', `${w}x${h}: a walkthrough (${id}) plays in the Exam 1 folder of Guides, which the reader opened`, s);
+    check(s.id === id && s.playing && s.seen && s.handle && !s.handle.paused && await st(p, 'guide') === '1:true 2:false 3:true', `${w}x${h}: a walkthrough (${id}) plays in the Exam 1 folder of Guides, which the reader opened`, s);
     // another folder closed and opened: the walkthrough is not in it and plays on
     await head(2); await head(2);
     s = await walk();
-    check(s.playing && s.handle && !s.handle.paused && await st(p, 'guide') === '1:true 2:true', `${w}x${h}: closing and opening the Exam 2 header leaves it playing`, s);
+    check(s.playing && s.handle && !s.handle.paused && await st(p, 'guide') === '1:true 2:false 3:true', `${w}x${h}: closing and opening the Exam 2 header leaves it playing`, s);
     await head(1);
     await p.waitForTimeout(100);
     s = await walk();
-    check(await st(p, 'guide') === '1:false 2:true' && s.id === id && !s.playing && s.handle && s.handle.paused && !s.handle.done && s.button === '▶ Play' && (await mine() || {})['1'] === false,
+    check(await st(p, 'guide') === '1:false 2:false 3:true' && s.id === id && !s.playing && s.handle && s.handle.paused && !s.handle.done && s.button === '▶ Play' && (await mine() || {})['1'] === false,
       `${w}x${h}: a tap on the Exam 1 header closes the folder and pauses the walkthrough inside it (its button reads Play); the reader's choice is stored`, {s, st: await st(p, 'guide'), stored: await mine()});
     await strip('ref'); await strip('guide');
     s = await walk();
-    check(await st(p, 'guide') === '1:false 2:true' && !s.playing && s.panel && !s.seen && (await mine() || {})['1'] === false,
+    check(await st(p, 'guide') === '1:false 2:false 3:true' && !s.playing && s.panel && !s.seen && (await mine() || {})['1'] === false,
       `${w}x${h}: Guides drawn again keeps the folder the reader closed, the walkthrough still paused inside it`, {s, st: await st(p, 'guide'), stored: await mine()});
     // printing opens every folder for the print and closes this one again: it is still the folder the reader closed
     const pr = await p.evaluate(async () => { const g = () => [...document.querySelectorAll('#v-guide > .rfold')].map(f => f.dataset.exam + ':' + f.open).join(' ');
       const a = g(); window.dispatchEvent(new Event('beforeprint')); const b = g(); await new Promise(r => setTimeout(r, 60)); window.dispatchEvent(new Event('afterprint')); await new Promise(r => setTimeout(r, 60)); return [a, b, g()]; });
     await strip('ref'); await strip('guide');
     s = await walk();
-    check(pr.join('|') === '1:false 2:true|1:true 2:true|1:false 2:true' && await st(p, 'guide') === '1:false 2:true' && !s.playing && s.panel && !s.seen && (await mine() || {})['1'] === false,
+    check(pr.join('|') === '1:false 2:false 3:true|1:true 2:false 3:true|1:false 2:false 3:true' && await st(p, 'guide') === '1:false 2:false 3:true' && !s.playing && s.panel && !s.seen && (await mine() || {})['1'] === false,
       `${w}x${h}: after a print (every folder open for it, then as before), Guides drawn again still keeps the folder the reader closed`, {pr, s, st: await st(p, 'guide'), stored: await mine()});
     // the walkthrough index goes to it: the folder opens for the visit, the stored choice stays
     await p.evaluate(() => window.scrollTo(0, 0));
@@ -770,12 +770,12 @@ async function nsOf(browser) {
     await p.locator(`#wkindex button[data-wid="${id}"]`).click();
     await p.waitForTimeout(150);
     s = await walk();
-    check(await st(p, 'guide') === '1:true 2:true' && s.panel && s.seen && s.id === id && (await mine() || {})['1'] === false,
+    check(await st(p, 'guide') === '1:true 2:false 3:true' && s.panel && s.seen && s.id === id && (await mine() || {})['1'] === false,
       `${w}x${h}: its entry in the walkthrough index opens the folder again with the player on screen; the stored choice is as it was`, {s, st: await st(p, 'guide'), stored: await mine()});
     await p.click('#backbtn');
     await strip('ref'); await strip('guide');
     s = await walk();
-    check(await st(p, 'guide') === '1:true 2:true' && s.panel && s.seen, `${w}x${h}: after that, a player that is open keeps its folder open when Guides is drawn again`, {s, st: await st(p, 'guide')});
+    check(await st(p, 'guide') === '1:true 2:false 3:true' && s.panel && s.seen, `${w}x${h}: after that, a player that is open keeps its folder open when Guides is drawn again`, {s, st: await st(p, 'guide')});
     await p.evaluate(() => { WALK_UI.stop(); document.querySelectorAll('.wkpanel').forEach(x => WALK_UI.close(x.dataset.wkp)); });
 
     // a narrated figure
@@ -789,7 +789,7 @@ async function nsOf(browser) {
     await head(1);
     await p.waitForTimeout(100);
     d = await fig();
-    check(await st(p, 'guide') === '1:false 2:true' && d.playing && d.playing.key === 'fig-ribosome' && d.playing.paused && d.handle && d.handle.owner === 'dianarr' && d.handle.paused && d.label === '▶ Resume',
+    check(await st(p, 'guide') === '1:false 2:false 3:true' && d.playing && d.playing.key === 'fig-ribosome' && d.playing.paused && d.handle && d.handle.owner === 'dianarr' && d.handle.paused && d.label === '▶ Resume',
       `${w}x${h}: a tap on the Exam 1 header closes the folder and pauses the figure's narration (its button reads Resume)`, {d, st: await st(p, 'guide')});
     await head(1);
     await lis.scrollIntoViewIfNeeded(); await lis.click();
@@ -842,7 +842,7 @@ async function nsOf(browser) {
     await p.click('#backbtn');
     d = await dzs();
     const bk = await p.evaluate(() => Math.round(scrollY));
-    check(d.VIEW === 'tell' && Math.abs(bk - y1) <= 2 && await st(p, 'tell') === '1:false 2:true' && d.view === 'cards' && d.q === 'permethrin' && d.card === d0.card,
+    check(d.VIEW === 'tell' && Math.abs(bk - y1) <= 2 && await st(p, 'tell') === '1:false 2:false 3:true' && d.view === 'cards' && d.q === 'permethrin' && d.card === d0.card,
       `${w}x${h}: Back returns to Tell apart at the same scroll position, and the Diseases tab has its sub-view and search back`, {d, bk, y1});
     await strip('dz');
     const shown = await p.evaluate(() => ({input: (document.getElementById('dzq') || {}).value, tab: (document.querySelector('#v-dz .dzviews [aria-selected="true"]') || {}).textContent, results: document.querySelectorAll('#v-dz .dzres button').length}));
@@ -920,7 +920,7 @@ async function nsOf(browser) {
       return out; });
     check(z.without === '1:true' && z.list === 0 && z.sections === 8 && z.seen && z.active === 'exam2',
       `390 px: without the Diseases tab, Tell apart has the Exam 1 folder only, with its ${z.sections} sections and no list of comparisons; it is open (the active exam, ${z.active}, has no folder there)`, z);
-    check(z.withIt === '1:false 2:true' && z.listBack === 1 && await stored(p) === null, `390 px: with the tab back, both folders and the list are drawn as usual; nothing was stored`, [z, await stored(p)]);
+    check(z.withIt === '1:false 2:false 3:true' && z.listBack === 1 && await stored(p) === null, `390 px: with the tab back, both folders and the list are drawn as usual; nothing was stored`, [z, await stored(p)]);
     check(!errs.length, '390 px: no page error', errs.slice(0, 3));
     await ctx.close();
   }
