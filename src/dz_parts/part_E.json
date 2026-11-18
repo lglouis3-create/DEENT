@@ -1,0 +1,2159 @@
+{
+ "cards": [
+  {
+   "id": "glaucoma",
+   "name": "Glaucoma",
+   "group": "algorithm",
+   "lectures": "Smith 11/13, 11/17 (Exam 3)",
+   "topics": [
+    "ey-glpath",
+    "ey-in",
+    "ey-out",
+    "ey-anat"
+   ],
+   "short": [
+    "A progressive eye disease: the eye pressure rises and the optic nerve is damaged; the goal is to decrease the pressure.",
+    "Open angle: the aqueous humor does not drain well, and there are no symptoms at first. Angle closure: tied to the shape of the eye, painful, an emergency.",
+    "Inflow is the making of aqueous humor by the ciliary body; outflow is its drainage (trabecular meshwork and Schlemm’s canal, or uveoscleral).",
+    "Decrease inflow: beta receptor antagonists, alpha 2 agonists, carbonic anhydrase inhibitors. Increase outflow: M3 agonists, the acetylcholinesterase inhibitor, prostaglandin agonists, the Rho kinase inhibitor.",
+    "After an eye drop, press the inner corner of the eyelid so less drug is absorbed into the body."
+   ],
+   "steps": [
+    {
+     "title": "What it is, and the two types",
+     "profs": [
+      "sm"
+     ],
+     "q": "What separates primary open-angle from primary angle-closure glaucoma, and what is the goal of treatment?",
+     "src": "Eye slides 11, 13; T@19603, T@23370 11/13",
+     "blocks": [
+      {
+       "rows": [
+        [
+         "What it is",
+         "A progressive eye disease. The pressure inside the eye, the [[iop|intraocular pressure (IOP)]], rises, and the {{optic nerve}} is damaged; vision is lost"
+        ],
+        [
+         "Goal of treatment",
+         "{{Decrease the IOP}}, which delays or prevents disease progression"
+        ],
+        [
+         "Two major types",
+         [
+          "{{Primary open-angle glaucoma}} (POAG)",
+          "{{Primary angle-closure glaucoma}} (PACG)"
+         ]
+        ]
+       ],
+       "k": "facts",
+       "p": "sm"
+      },
+      {
+       "text": "Primary open-angle glaucoma (POAG)",
+       "k": "sub",
+       "p": "sm"
+      },
+      {
+       "rows": [
+        [
+         "Linked to",
+         "The drainage systems not working effectively: the aqueous humor cannot drain out as it should"
+        ],
+        [
+         "How common",
+         "{{Common}} in the United States"
+        ],
+        [
+         "Onset",
+         "Usually {{gradual and asymptomatic}} until visual field loss occurs"
+        ],
+        [
+         "How it is found",
+         "The eye doctor measures the IOP; a pressure that climbs from the person’s baseline is rechecked sooner"
+        ]
+       ],
+       "k": "facts",
+       "p": "sm"
+      },
+      {
+       "text": "Primary angle-closure glaucoma (PACG)",
+       "k": "sub",
+       "p": "sm"
+      },
+      {
+       "rows": [
+        [
+         "Linked to",
+         "The {{shape of the eye}} and how it sits in the eye socket (slide 13)"
+        ],
+        [
+         "Urgency",
+         "A {{medical emergency}}: the IOP must be decreased quickly"
+        ],
+        [
+         "Signs",
+         "{{Significant pain}}"
+        ],
+        [
+         "Slide and lecture",
+         "The slide ties it to the shape of the eye. In lecture the closed angle was also described as the outflow area closing after a blow to the eye with swelling, or a chemical exposure; the pressure rises very quickly and can damage the nerve"
+        ]
+       ],
+       "k": "facts",
+       "p": "sm"
+      },
+      {
+       "items": [
+        "★ The objectives of this lecture include classifying drugs as production inhibitors or outflow enhancers (slide 11)"
+       ],
+       "k": "pts",
+       "p": "sm"
+      }
+     ]
+    },
+    {
+     "title": "Aqueous humor: inflow and outflow",
+     "profs": [
+      "sm"
+     ],
+     "q": "Where is aqueous humor made, by which two routes does it leave, and which receptors and enzyme sit in the ciliary body?",
+     "src": "Eye slides 14–16; T@8949, T@25726, T@28180, T@32669 11/13",
+     "blocks": [
+      {
+       "rows": [
+        [
+         "Made by",
+         "The [[ciliary-body|ciliary body]] (a ring behind the iris, with smooth muscle) makes [[aqueous-humor|aqueous humor]] all the time"
+        ],
+        [
+         "Path",
+         [
+          "Ciliary body → {{posterior chamber}} (between the lens and the iris)",
+          "Through the pupil → {{anterior chamber}}",
+          "Out of the anterior chamber through the {{angle}}"
+         ]
+        ],
+        [
+         "★ Inflow",
+         "The {{production}} of aqueous humor"
+        ],
+        [
+         "★ Outflow",
+         "The {{drainage}} of aqueous humor out of the eye"
+        ],
+        [
+         "Main route",
+         [
+          "Through the [[trabecular-meshwork|trabecular meshwork]], a spongy tissue",
+          "Into {{Schlemm’s canal}}, then the veins",
+          "Most of the aqueous humor leaves this way"
+         ]
+        ],
+        [
+         "Second route",
+         [
+          "[[uveoscleral|Uveoscleral]] outflow: between the uvea and the sclera",
+          "{{A little}} of the flow"
+         ]
+        ],
+        [
+         "Why pressure rises",
+         "If the aqueous humor does not drain, the pressure builds in the anterior chamber and is transferred toward the optic nerve, damaging it"
+        ]
+       ],
+       "k": "facts",
+       "p": "sm"
+      },
+      {
+       "text": "Receptors and enzymes in the ciliary body and meshwork (slide 16)",
+       "k": "sub",
+       "p": "sm"
+      },
+      {
+       "rows": [
+        [
+         "Epithelium of the ciliary body",
+         [
+          "{{Beta 1 and beta 2}} receptors",
+          "{{Alpha 2}} receptors",
+          "The enzyme {{carbonic anhydrase}}"
+         ]
+        ],
+        [
+         "Blood vessels of the ciliary body",
+         "{{Alpha 1}} receptors"
+        ],
+        [
+         "Trabecular meshwork area",
+         "{{M3}} (muscarinic) receptors, and maybe some beta 2 receptors"
+        ]
+       ],
+       "k": "facts",
+       "p": "sm"
+      },
+      {
+       "items": [
+        "How the receptors lead to aqueous humor is not fully known. The role of carbonic anhydrase is understood better.",
+        "Agonizing the beta receptors gave more aqueous humor; antagonizing them gave less. That led to the beta receptor antagonists.",
+        "Beta antagonists, alpha 2 agonists and carbonic anhydrase inhibitors decrease the production of aqueous humor."
+       ],
+       "k": "pts",
+       "p": "sm"
+      }
+     ]
+    },
+    {
+     "title": "Treat it: does the drug decrease inflow or increase outflow?",
+     "profs": [
+      "sm"
+     ],
+     "q": "For each class, is it a production inhibitor or an outflow enhancer, and what does it act on?",
+     "src": "Eye slides 11, 17–45; T@39765, T@43081 11/13; T@23579, T@38097 11/17",
+     "blocks": [
+      {
+       "title": "Inflow or outflow",
+       "rows": [
+        [
+         "Beta receptor antagonists",
+         "Decrease inflow"
+        ],
+        [
+         "Alpha 2 agonists",
+         "Decrease inflow (brimonidine also increases uveoscleral outflow)"
+        ],
+        [
+         "Carbonic anhydrase inhibitors",
+         "Decrease inflow"
+        ],
+        [
+         "M3 agonists",
+         "Increase outflow (trabecular meshwork)"
+        ],
+        [
+         "Acetylcholinesterase inhibitor",
+         "Increase outflow (trabecular meshwork)"
+        ],
+        [
+         "Prostaglandin agonists",
+         "Increase outflow, mainly uveoscleral; no effect on inflow"
+        ],
+        [
+         "Rho kinase inhibitor",
+         "Increase outflow through the trabecular meshwork"
+        ]
+       ],
+       "src": "Eye slides 11, 18, 22, 26, 32, 34, 37, 41",
+       "k": "map",
+       "p": "sm"
+      },
+      {
+       "label": "Decrease inflow",
+       "title": "Beta receptor antagonists",
+       "drugs": [
+        "beta-blockers"
+       ],
+       "k": "line",
+       "p": "sm",
+       "pts": [
+        "Block the beta-adrenergic receptor on the ciliary body: {{less aqueous humor is made}}",
+        "{{Not much effect on outflow}}; the mechanism is not fully understood",
+        "Timolol, levobunolol, betaxolol, carteolol"
+       ]
+      },
+      {
+       "label": "Decrease inflow",
+       "title": "Alpha 2 agonists",
+       "drugs": [
+        "brimonidine",
+        "apraclonidine"
+       ],
+       "k": "line",
+       "p": "sm",
+       "pts": [
+        "Bind alpha 2 receptors on the ciliary body: {{decrease the rate of aqueous humor production}}",
+        "Brimonidine has two extra effects: it {{increases uveoscleral outflow}} and is {{neuroprotective}} (seen in animals)"
+       ],
+       "pick": [
+        [
+         "Long-term treatment of glaucoma",
+         "Brimonidine"
+        ],
+        [
+         "Preventing a rise in IOP after eye surgery such as cataract surgery",
+         "Apraclonidine"
+        ]
+       ]
+      },
+      {
+       "label": "Decrease inflow",
+       "title": "Carbonic anhydrase inhibitors",
+       "drugs": [
+        "cai"
+       ],
+       "k": "line",
+       "p": "sm",
+       "pts": [
+        "Inhibit carbonic anhydrase: less carbonic acid, so less sodium and bicarbonate to secrete and {{less aqueous humor}}",
+        "Oral: acetazolamide, methazolamide. Ophthalmic: dorzolamide, brinzolamide"
+       ],
+       "pick": [
+        [
+         "Treatment is started",
+         "An ophthalmic product"
+        ],
+        [
+         "The patient is refractory to other therapies",
+         "An oral carbonic anhydrase inhibitor is added"
+        ]
+       ]
+      },
+      {
+       "label": "Increase outflow",
+       "title": "M3 agonists",
+       "drugs": [
+        "m3-agonists"
+       ],
+       "k": "line",
+       "p": "sm",
+       "pts": [
+        "Agonize the M3 receptor on the sphincter muscle and the trabecular meshwork: they contract and {{outflow increases}}",
+        "Carbachol, pilocarpine"
+       ],
+       "pick": [
+        [
+         "Longer duration, less allergic reaction in the eye",
+         "Carbachol (used more often)"
+        ],
+        [
+         "More potential for an allergic reaction in the eye",
+         "Pilocarpine"
+        ]
+       ]
+      },
+      {
+       "label": "Increase outflow",
+       "title": "Acetylcholinesterase inhibitor",
+       "drugs": [
+        "echothiophate"
+       ],
+       "k": "line",
+       "p": "sm",
+       "pts": [
+        "{{Irreversible}} inhibitor of acetylcholinesterase: more acetylcholine, the same contraction and increase in outflow",
+        "Used when a patient is refractory to other glaucoma medicines"
+       ]
+      },
+      {
+       "label": "Increase outflow",
+       "title": "Prostaglandin agonists",
+       "drugs": [
+        "pg-agonists"
+       ],
+       "k": "line",
+       "p": "sm",
+       "pts": [
+        "Agonize the {{PGF2α receptor}}: the ciliary muscle relaxes",
+        "Increase uveoscleral outflow and, to a lesser extent, trabecular outflow; they do {{not affect production}}",
+        "May be more effective in hazel or brown eyes than in blue or green eyes"
+       ]
+      },
+      {
+       "label": "Increase outflow",
+       "title": "Rho kinase inhibitor",
+       "drugs": [
+        "netarsudil"
+       ],
+       "k": "line",
+       "p": "sm",
+       "pts": [
+        "Inhibits {{RhoA kinase}}: the trabecular meshwork relaxes (less stiff, fewer fibrosis-related proteins), so outflow increases"
+       ]
+      },
+      {
+       "label": "Two mechanisms",
+       "title": "Combination products",
+       "drugs": [
+        "glaucoma-combos"
+       ],
+       "k": "line",
+       "p": "sm",
+       "pts": [
+        "Timolol/dorzolamide, timolol/brimonidine, brinzolamide/brimonidine, latanoprost/netarsudil",
+        "Treatment often starts with one drug and moves to a combination as the disease progresses; one product replaces two"
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Side effects, and what to tell the patient",
+     "profs": [
+      "sm"
+     ],
+     "q": "Which side effect goes with each class, why does a carbonic anhydrase inhibitor cause metabolic acidosis, and what lowers systemic absorption?",
+     "src": "Eye slides 20, 24, 27, 29, 33, 35, 39, 43; T@16025, T@47241 11/13; T@17682, T@30444 11/17",
+     "blocks": [
+      {
+       "title": "Side effect to know for each class",
+       "rows": [
+        [
+         "Beta receptor antagonists",
+         "Systemic: bradycardia, hypotension; bronchospasm in asthmatics (beta 2 blocked). Ocular: stinging, burning, decreased night vision"
+        ],
+        [
+         "Apraclonidine",
+         "Allergic reaction in the eye; systemic hypotension"
+        ],
+        [
+         "Brimonidine",
+         "Foreign body sensation and itching of the eyes; oral dryness, dizziness, fatigue, somnolence, lower blood pressure and pulse"
+        ],
+        [
+         "Carbonic anhydrase inhibitors",
+         "Oral: {{metabolic acidosis}}, increased urination, dry mouth, thirst, altered taste and smell, depression. Ocular drops: burning, stinging, bitter taste"
+        ],
+        [
+         "M3 agonists",
+         "Painful ciliary muscle spasm (headache), blurred vision, myopia; diarrhea, salivation, sweating, rhinorrhea"
+        ],
+        [
+         "Acetylcholinesterase inhibitor",
+         "Brow ache, twitching of the eyelids, allergic type reaction, {{cataracts}}; the same systemic effects"
+        ],
+        [
+         "Prostaglandin agonists",
+         "Increased brown pigmentation of the iris and eyelids; longer, thicker lashes; hair growth in other areas"
+        ],
+        [
+         "Rho kinase inhibitor",
+         "Conjunctival hyperemia (53%); corneal verticillata, instillation site pain, conjunctival hemorrhage (about 20%)"
+        ]
+       ],
+       "src": "Eye slides 20, 24, 29, 33, 35, 39, 43",
+       "k": "map",
+       "p": "sm"
+      },
+      {
+       "text": "★ Why a carbonic anhydrase inhibitor causes metabolic acidosis (kidney, proximal tubule)",
+       "k": "sub",
+       "p": "sm"
+      },
+      {
+       "rows": [
+        [
+         "Normal: in the cell",
+         "Carbonic anhydrase makes carbonic acid, which splits into {{hydrogen ion}} and {{bicarbonate}}"
+        ],
+        [
+         "Normal: hydrogen ion",
+         "Leaves the cell in exchange for sodium coming in"
+        ],
+        [
+         "Normal: bicarbonate",
+         "Leaves with sodium into the blood and {{buffers the blood pH}}"
+        ],
+        [
+         "With the inhibitor",
+         "No carbonic acid, so no hydrogen ion to exchange for sodium: sodium and water stay in the lumen (more urine). No bicarbonate reaches the blood"
+        ],
+        [
+         "Result",
+         "The blood pH falls: {{metabolic acidosis}}, most important with the oral drugs"
+        ],
+        [
+         "In the eye",
+         "No bicarbonate is made in the ciliary body cells, so it is not secreted, water does not follow, and aqueous humor decreases"
+        ]
+       ],
+       "k": "facts",
+       "p": "sm"
+      },
+      {
+       "text": "Systemic absorption of eye drops",
+       "k": "sub",
+       "p": "sm"
+      },
+      {
+       "items": [
+        "★ After the drop, gently press the inner corner of the eyelid: the drug then does not drain through the tear duct into the nose, whose lining is highly vascularized, and is not absorbed into the bloodstream",
+        "Some glaucoma drops have cardiovascular effects, and older patients with glaucoma may already have heart conditions",
+        "For a cardiac patient on a beta receptor antagonist: a more selective drug, or the eyelid compression"
+       ],
+       "k": "pts",
+       "p": "sm"
+      }
+     ]
+    }
+   ],
+   "patients": [
+    {
+     "t": "A man with asthma and open-angle glaucoma is started on a drop that blocks beta receptors on the ciliary body.",
+     "q": "Which problem is most likely if the drug is absorbed into the body?",
+     "o": [
+      "Darkened iris, because PGF2α receptors are stimulated",
+      "Bronchospasm, since airway beta 2 receptors are blocked",
+      "Metabolic acidosis, because carbonic acid is no longer made",
+      "Diarrhea and salivation, because M3 receptors are stimulated"
+     ],
+     "a": 1,
+     "w": "Beta receptor antagonists that block beta 2 receptors can cause bronchospasm in asthmatics (slide 20).",
+     "x": {
+      "Metabolic acidosis, because carbonic acid is no longer made": "That is the carbonic anhydrase inhibitor effect.",
+      "Diarrhea and salivation, because M3 receptors are stimulated": "Those are M3 agonist and acetylcholinesterase inhibitor effects.",
+      "Darkened iris, because PGF2α receptors are stimulated": "That is a prostaglandin agonist effect."
+     }
+    },
+    {
+     "t": "A woman with heart disease uses timolol drops. She asks what she can do to keep less of the drug from entering her body.",
+     "q": "What do you tell her?",
+     "o": [
+      "Blink several times right after each drop",
+      "Take the drop at night instead of in the morning",
+      "Close the eye tightly for a minute and then open it",
+      "Press the inner corner of the eye after each drop"
+     ],
+     "a": 3,
+     "w": "Compressing the inner corner stops the drug draining through the tear duct into the nose, where it would be absorbed (11/13, 11/17).",
+     "x": {
+      "Blink several times right after each drop": "Blinking pushes tears into the puncta and down the tear duct, which carries the drug toward the nose.",
+      "Take the drop at night instead of in the morning": "The lecture’s point is to stop the drainage through the duct; the time of day does not do that.",
+      "Close the eye tightly for a minute and then open it": "Closing the eye does not block the duct at the inner corner; compression does."
+     }
+    },
+    {
+     "t": "A patient with refractory glaucoma is started on oral acetazolamide.",
+     "q": "Which effect needs monitoring, and why does it happen?",
+     "o": [
+      "Metabolic acidosis: less bicarbonate reaches the blood",
+      "Bronchospasm: beta 2 receptors in the airways are blocked",
+      "Cataracts: acetylcholinesterase is irreversibly inhibited",
+      "Conjunctival hyperemia: vascular smooth muscle relaxes"
+     ],
+     "a": 0,
+     "w": "Without carbonic anhydrase in the proximal tubule cells, bicarbonate is not formed and not sent to the blood, so the blood pH falls (11/17).",
+     "x": {
+      "Bronchospasm: beta 2 receptors in the airways are blocked": "That is a beta receptor antagonist effect.",
+      "Cataracts: acetylcholinesterase is irreversibly inhibited": "That is the echothiophate effect.",
+      "Conjunctival hyperemia: vascular smooth muscle relaxes": "That is the netarsudil effect."
+     }
+    },
+    {
+     "t": "After some weeks on a glaucoma drop, a woman has darker brown eyelids, a darker iris and longer lashes.",
+     "q": "Which class is she using?",
+     "o": [
+      "Rho kinase inhibitor",
+      "Alpha 2 agonist",
+      "Prostaglandin agonist",
+      "Carbonic anhydrase inhibitor"
+     ],
+     "a": 2,
+     "w": "Prostaglandin agonists increase the brown pigmentation of the iris and eyelids and the lashes (slide 39).",
+     "x": {
+      "Rho kinase inhibitor": "Netarsudil causes conjunctival hyperemia, not pigmentation.",
+      "Alpha 2 agonist": "Alpha 2 agonists cause foreign body sensation, itching and dryness of the mouth, not pigmentation.",
+      "Carbonic anhydrase inhibitor": "Ophthalmic carbonic anhydrase inhibitors cause burning, stinging and a bitter taste."
+     }
+    },
+    {
+     "t": "A man with chronic open-angle glaucoma needs an alpha 2 agonist for long-term use.",
+     "q": "Which one is the better choice?",
+     "o": [
+      "Brimonidine",
+      "Echothiophate",
+      "Apraclonidine",
+      "Carbachol"
+     ],
+     "a": 0,
+     "w": "Brimonidine is the better long-term choice; apraclonidine tends to cause an allergic type response and is used to prevent a rise in IOP after eye surgery (11/13, slide 23).",
+     "x": {
+      "Apraclonidine": "It is used after eye surgery such as cataract surgery; its allergic response limits long-term use.",
+      "Carbachol": "It is an M3 agonist, not an alpha 2 agonist.",
+      "Echothiophate": "It is an acetylcholinesterase inhibitor, not an alpha 2 agonist."
+     }
+    },
+    {
+     "t": "A man has stabbing pain in a swollen eye after a blow to it. The doctor suspects that the area where aqueous humor drains has closed.",
+     "q": "What does this describe?",
+     "o": [
+      "Open-angle glaucoma: gradual onset, no symptoms at first",
+      "Angle-closure glaucoma: a medical emergency, with pain",
+      "Open-angle glaucoma: found at an eye exam as a slow rise in pressure",
+      "Angle-closure glaucoma: gradual onset, no symptoms at first"
+     ],
+     "a": 1,
+     "w": "Angle closure is a medical emergency with significant pain, and the IOP must be decreased quickly (slide 13; 11/13).",
+     "x": {
+      "Open-angle glaucoma: gradual onset, no symptoms at first": "Open-angle glaucoma is gradual and asymptomatic until visual field loss.",
+      "Open-angle glaucoma: found at an eye exam as a slow rise in pressure": "Open-angle glaucoma is the one with gradual onset; this patient has pain from a closed angle.",
+      "Angle-closure glaucoma: gradual onset, no symptoms at first": "Angle closure is painful and an emergency."
+     }
+    }
+   ],
+   "numbers": [
+    [
+     "2 types",
+     "POAG and PACG",
+     "Eye slide 13"
+    ],
+    [
+     "2 routes",
+     "of outflow: trabecular meshwork to Schlemm’s canal (most), uveoscleral (a little)",
+     "T@32669 11/13"
+    ],
+    [
+     "2 extra effects",
+     "of brimonidine: increases uveoscleral outflow; neuroprotective",
+     "Eye slide 22; T@49059 11/13"
+    ],
+    [
+     "53%",
+     "netarsudil: conjunctival hyperemia",
+     "Eye slide 43"
+    ],
+    [
+     "about 20%",
+     "netarsudil: corneal verticillata, instillation site pain, conjunctival hemorrhage",
+     "Eye slide 43"
+    ],
+    [
+     "Once a day",
+     "timolol in its gel form (the other drops are given several times a day)",
+     "T@46338 11/13"
+    ],
+    [
+     "3 or 4 times a day",
+     "her example of dosing for a glaucoma drop; a combination product replaces two",
+     "T@38604 11/17"
+    ],
+    [
+     "5 questions",
+     "on her part of Exam 3; cumulative with Exam 1",
+     "T@61020 11/13"
+    ]
+   ]
+  },
+  {
+   "id": "allergic-conjunctivitis",
+   "name": "Allergic conjunctivitis",
+   "group": "algorithm",
+   "lectures": "Smith 11/13, 11/17 (Exam 3)",
+   "topics": [
+    "ey-ac"
+   ],
+   "short": [
+    "Antigen binds IgE on a [[mast-cell|mast cell]]; histamine is released and causes itching, swelling and redness.",
+    "Ophthalmic antihistamines are H1 inverse agonists; most also stabilize mast cells.",
+    "Mast cell stabilization prevents the release, so those drugs can be started before exposure; cetirizine does not have it.",
+    "Alpha 2 agonists are vasoconstrictors: they reduce redness and edema.",
+    "The combination product is naphazoline with pheniramine."
+   ],
+   "steps": [
+    {
+     "title": "What happens: histamine from mast cells",
+     "profs": [
+      "sm"
+     ],
+     "q": "How does an allergen lead to itchy, red, swollen eyes?",
+     "src": "Eye slides 47–49; T@41030 11/17",
+     "blocks": [
+      {
+       "rows": [
+        [
+         "Storage",
+         "Histamine is stored in {{granules}} in mast cells"
+        ],
+        [
+         "Release",
+         [
+          "Antigen interacts with {{IgE}} on the mast cell surface",
+          "The mast cell degranulates: {{histamine}} and other inflammatory cytokines are released"
+         ]
+        ],
+        [
+         "Role",
+         "Histamine has a central role in immediate hypersensitivity and allergic responses"
+        ],
+        [
+         "Effects (slide 49)",
+         [
+          "{{Itching}} and secretion from the nasal mucosa",
+          "Relaxes small blood vessels; formation of {{edema}}",
+          "Contracts the bronchi and gut through {{H1 receptors}}",
+          "Stimulates gastric acid secretion",
+          "In the CNS, H1 activation inhibits appetite and increases wakefulness"
+         ]
+        ],
+        [
+         "Symptoms treated in the eye",
+         "Edema, itch, inflammation and watery eyes (slide 52); redness (slide 56)"
+        ],
+        [
+         "Not covered",
+         "Bacterial and viral conjunctivitis; this lecture covers allergic conjunctivitis only (T@39661 11/17)"
+        ]
+       ],
+       "k": "facts",
+       "p": "sm"
+      },
+      {
+       "items": [
+        "The objectives: list the symptoms; explain the mechanism of each class; know which class treats which symptom; list the side effects (slide 47)"
+       ],
+       "k": "pts",
+       "p": "sm"
+      }
+     ]
+    },
+    {
+     "title": "Ophthalmic H1 inverse agonists (antihistamines)",
+     "profs": [
+      "sm"
+     ],
+     "q": "What are the two mechanisms of these drugs, why does the second one matter, and which drug lacks it?",
+     "src": "Eye slides 51–54; T@44898, T@46866, T@51757 11/17",
+     "blocks": [
+      {
+       "rows": [
+        [
+         "Mechanism 1",
+         "{{H1 inverse agonist}}: [[inverse-agonist|reduces the constitutive activity]] of the receptor and competes with histamine for it"
+        ],
+        [
+         "Mechanism 2",
+         [
+          "[[mcs|Mast cell stabilization]]: {{reduces the release}} of mast cell mediators during an allergic response",
+          "Anti-inflammatory: less cytokine secretion, less adhesion molecule expression, inhibition of eosinophil infiltration",
+          "H1 receptor dependent and independent mechanisms; how it works is still unclear"
+         ]
+        ],
+        [
+         "Effect",
+         "Reduces {{edema, itch, inflammation and watery eyes}}"
+        ],
+        [
+         "Why it matters",
+         "Drugs with mast cell stabilization may be {{more effective topically}}"
+        ]
+       ],
+       "k": "facts",
+       "p": "sm"
+      },
+      {
+       "label": "Prevention",
+       "title": "Start before exposure",
+       "drugs": [
+        "ophthalmic-h1"
+       ],
+       "k": "line",
+       "p": "sm",
+       "pts": [
+        "Histamine is harder to stop once it has been released; a mast cell stabilizer started before the allergen season stops the release",
+        "If histamine is released anyway, the H1 inverse agonism is also present",
+        "★ {{Cetirizine}} has no mast cell stabilization, so it is not the one suggested for prophylactic use"
+       ]
+      },
+      {
+       "text": "How the drugs differ (slides 53–54)",
+       "k": "sub",
+       "p": "sm"
+      },
+      {
+       "rows": [
+        [
+         "Alcaftadine",
+         [
+          "H1 inverse agonist and mast cell stabilization",
+          "{{H4 receptor}} antagonism (on eosinophils; may explain its superiority)",
+          "Very little anticholinergic activity; little CNS penetration; low incidence of side effects"
+         ]
+        ],
+        [
+         "Azelastine",
+         [
+          "H1 inverse agonist and mast cell stabilization",
+          "Also a nasal spray for allergic rhinitis",
+          "A little anticholinergic activity and it penetrates the CNS (11/17)"
+         ]
+        ],
+        [
+         "Bepotastine",
+         "H1 inverse agonist and mast cell stabilizer"
+        ],
+        [
+         "Cetirizine",
+         [
+          "H1 inverse agonist only",
+          "Minimal anticholinergic effects; negligible CNS penetration, but still causes {{drowsiness}}"
+         ]
+        ],
+        [
+         "Epinastine",
+         [
+          "H1 inverse agonist and mast cell stabilization",
+          "Also an {{H2 antagonist}}, which may reduce eyelid edema"
+         ]
+        ],
+        [
+         "Ketotifen",
+         "H1 inverse agonist and mast cell stabilizer"
+        ],
+        [
+         "Olopatadine",
+         [
+          "H1 inverse agonist and mast cell stabilization",
+          "Also a nasal spray for allergic rhinitis"
+         ]
+        ]
+       ],
+       "k": "facts",
+       "p": "sm"
+      }
+     ]
+    },
+    {
+     "title": "Alpha 2 agonists, the combination, and which class for which symptom",
+     "profs": [
+      "sm"
+     ],
+     "q": "What do the alpha 2 agonists do in the eye, and which class treats which symptom?",
+     "src": "Eye slides 52, 56–59; T@52180, T@52690, T@53936 11/17",
+     "blocks": [
+      {
+       "rows": [
+        [
+         "Mechanism",
+         "Adrenergic receptor agonists: {{vasoconstrictors}} for local application to the nasal mucous membrane or the eye"
+        ],
+        [
+         "Effect",
+         [
+          "{{Reduces redness}}",
+          "Less leaking from the capillaries, so less edema"
+         ]
+        ],
+        [
+         "Examples",
+         "Naphazoline, oxymetazoline, tetrahydrozoline, brimonidine tartrate, phenylephrine"
+        ],
+        [
+         "Differences",
+         "Little difference between them for allergic conjunctivitis when used topically"
+        ],
+        [
+         "Combination",
+         [
+          "{{Naphazoline/pheniramine}}: an alpha 2 agonist with an antihistamine",
+          "One drop covers vessel constriction, antihistamine action and mast cell stabilization rather than two separate drops"
+         ]
+        ]
+       ],
+       "k": "facts",
+       "p": "sm"
+      },
+      {
+       "title": "Which class for which symptom",
+       "rows": [
+        [
+         "Itch, watery eyes, inflammation",
+         "Ophthalmic antihistamines (H1 inverse agonists)"
+        ],
+        [
+         "Edema",
+         "Antihistamines; alpha 2 agonists also reduce the leaking"
+        ],
+        [
+         "Redness",
+         "Alpha 2 agonists (vasoconstriction)"
+        ],
+        [
+         "Itch and redness together",
+         "The combination: naphazoline/pheniramine"
+        ]
+       ],
+       "src": "Eye slides 52, 56, 59; T@52690 11/17",
+       "k": "map",
+       "p": "sm"
+      },
+      {
+       "label": "Alpha 2 agonist",
+       "title": "Brimonidine for the eye",
+       "drugs": [
+        "brimonidine"
+       ],
+       "k": "line",
+       "p": "sm",
+       "pts": [
+        "The same drug that decreases inflow in glaucoma; here it is a vasoconstrictor that reduces redness"
+       ]
+      }
+     ]
+    }
+   ],
+   "patients": [
+    {
+     "t": "A woman has itchy, watery eyes every spring and wants a drop she can start before the pollen season to prevent the itch.",
+     "q": "Which property of an ophthalmic antihistamine fits this?",
+     "o": [
+      "H2 antagonism, which may reduce eyelid swelling in allergy",
+      "H4 antagonism, which acts on eosinophils in the response",
+      "Mast cell stabilization, which stops histamine release",
+      "Alpha 2 agonism, which constricts the eye vessels"
+     ],
+     "a": 2,
+     "w": "Mast cell stabilizers can be started before exposure so the mast cells do not release histamine (11/17).",
+     "x": {
+      "Alpha 2 agonism, which constricts the eye vessels": "It reduces redness; it does not stop histamine release.",
+      "H2 antagonism, which may reduce eyelid swelling in allergy": "Epinastine’s H2 antagonism may help eyelid edema; it does not prevent the release.",
+      "H4 antagonism, which acts on eosinophils in the response": "Alcaftadine’s H4 antagonism acts on eosinophils in the response; it does not stop mast cells releasing histamine."
+     }
+    },
+    {
+     "t": "A pharmacist chooses a drop for prophylactic use before allergy season.",
+     "q": "Which ophthalmic antihistamine has no mast cell stabilization?",
+     "o": [
+      "Cetirizine",
+      "Bepotastine",
+      "Olopatadine",
+      "Ketotifen"
+     ],
+     "a": 0,
+     "w": "Cetirizine is an H1 inverse agonist without mast cell stabilization (slide 53; 11/17).",
+     "x": {
+      "Ketotifen": "A mast cell stabilizer as well as an H1 inverse agonist.",
+      "Bepotastine": "Both an H1 inverse agonist and a mast cell stabilizer.",
+      "Olopatadine": "H1 inverse agonist with mast cell stabilization."
+     }
+    },
+    {
+     "t": "A man with allergic conjunctivitis says swollen eyelids bother him most.",
+     "q": "Which ophthalmic antihistamine also blocks H2 receptors, which may reduce eyelid edema?",
+     "o": [
+      "Alcaftadine",
+      "Azelastine",
+      "Cetirizine",
+      "Epinastine"
+     ],
+     "a": 3,
+     "w": "Epinastine is also an H2 antagonist, which may reduce eyelid edema (slide 54).",
+     "x": {
+      "Alcaftadine": "Its extra action is H4 receptor antagonism.",
+      "Azelastine": "It is also used as a nasal spray for allergic rhinitis.",
+      "Cetirizine": "An H1 inverse agonist that can still cause drowsiness."
+     }
+    },
+    {
+     "t": "A woman has itchy eyes and very red eyes, and would like one drop that both constricts the vessels and acts as an antihistamine.",
+     "q": "Which product fits?",
+     "o": [
+      "Tetrahydrozoline alone",
+      "Naphazoline/pheniramine",
+      "Oxymetazoline alone",
+      "Ketotifen alone"
+     ],
+     "a": 1,
+     "w": "The combination of an alpha 2 agonist with an antihistamine is naphazoline/pheniramine (slide 59).",
+     "x": {
+      "Oxymetazoline alone": "An alpha 2 agonist only: it reduces redness but has no antihistamine action.",
+      "Ketotifen alone": "An H1 inverse agonist and mast cell stabilizer without a vasoconstrictor.",
+      "Tetrahydrozoline alone": "An alpha 2 agonist only."
+     }
+    },
+    {
+     "t": "A student is worried about side effects from an ophthalmic antihistamine and asks which one has little CNS penetration and a low incidence of side effects.",
+     "q": "Which fits best?",
+     "o": [
+      "Cetirizine",
+      "Epinastine",
+      "Alcaftadine",
+      "Azelastine"
+     ],
+     "a": 2,
+     "w": "Alcaftadine has very little anticholinergic activity, little CNS penetration and a low incidence of side effects (slide 53).",
+     "x": {
+      "Azelastine": "It has a little anticholinergic activity and penetrates the CNS (11/17).",
+      "Cetirizine": "Its CNS penetration is negligible, but it still causes drowsiness.",
+      "Epinastine": "Its feature is the H2 antagonism that may reduce eyelid edema."
+     }
+    }
+   ],
+   "numbers": [
+    [
+     "7",
+     "ophthalmic antihistamines on the slides: alcaftadine, azelastine, bepotastine, cetirizine, epinastine, ketotifen, olopatadine",
+     "Eye slides 53–54"
+    ],
+    [
+     "1 of 7",
+     "cetirizine has no mast cell stabilization",
+     "Eye slide 53; T@51757 11/17"
+    ],
+    [
+     "H1 and H4",
+     "receptors alcaftadine acts on",
+     "Eye slide 53"
+    ],
+    [
+     "H1 and H2",
+     "receptors epinastine acts on",
+     "Eye slide 54"
+    ],
+    [
+     "5",
+     "alpha 2 agonists listed for the eye: naphazoline, oxymetazoline, tetrahydrozoline, brimonidine tartrate, phenylephrine",
+     "Eye slide 57"
+    ],
+    [
+     "1",
+     "combination product: naphazoline/pheniramine",
+     "Eye slide 59"
+    ]
+   ]
+  },
+  {
+   "id": "dry-eye",
+   "name": "Dry eye",
+   "group": "algorithm",
+   "lectures": "Smith 11/13, 11/17 (Exam 3)",
+   "topics": [
+    "ey-de",
+    "ey-anat"
+   ],
+   "short": [
+    "[[ksc|Keratoconjunctivitis sicca]]: inflammation reduces tear production; common, with age and female gender as risk factors.",
+    "The prescription drugs are not first line; they act on the inflammation.",
+    "Cyclosporine: a calcineurin inhibitor; blocks IL-2 production. Loteprednol: a corticosteroid.",
+    "Lifitegrast: blocks LFA-1 binding to ICAM-1. Contact lenses out before the drop, back in after 15 minutes.",
+    "Intranasal varenicline: a nicotinic receptor agonist that increases tear production through the trigeminal nerve."
+   ],
+   "steps": [
+    {
+     "title": "What it is, who gets it, and the tear film",
+     "profs": [
+      "sm"
+     ],
+     "q": "What is the pathology of dry eye, who gets it, and what are the three layers of tears?",
+     "src": "Eye slides 6, 62; T@12551 11/13; T@56078, T@57864 11/17",
+     "blocks": [
+      {
+       "rows": [
+        [
+         "Name",
+         "Also called keratoconjunctivitis sicca"
+        ],
+        [
+         "What goes wrong",
+         [
+          "{{Inflammation}} along the lacrimal system",
+          "Tear production is reduced"
+         ]
+        ],
+        [
+         "How common",
+         "One of the most common eye complaints; prevalence {{7% to 33%}}"
+        ],
+        [
+         "Risk factors",
+         "{{Increasing age}} and {{female gender}}"
+        ],
+        [
+         "Onset",
+         "Often unpredictable; may correlate with the environment"
+        ],
+        [
+         "Medicines that may cause it",
+         "Antihistamines, decongestants, antidepressants, hormone replacement therapy"
+        ],
+        [
+         "Redness",
+         "May present {{with or without}} redness of the eyes"
+        ],
+        [
+         "First step",
+         "Lubricating drops come first; the prescription drugs below are not first line"
+        ]
+       ],
+       "k": "facts",
+       "p": "sm"
+      },
+      {
+       "text": "Three layers of tears (slide 6)",
+       "k": "sub",
+       "p": "sm"
+      },
+      {
+       "rows": [
+        [
+         "Anterior",
+         "Lipids, from the {{meibomian glands}} at the eyelid margin"
+        ],
+        [
+         "Middle",
+         "Aqueous, from the main and accessory lacrimal glands; about {{98%}} of the tear film"
+        ],
+        [
+         "Posterior",
+         "Mucins, from the {{goblet cells}} in the conjunctiva"
+        ],
+        [
+         "Tears also contain",
+         "Nutrients, enzymes and immunoglobulins that support and protect the cornea"
+        ]
+       ],
+       "k": "facts",
+       "p": "sm"
+      }
+     ]
+    },
+    {
+     "title": "Treat it: four mechanisms",
+     "profs": [
+      "sm"
+     ],
+     "q": "What does each prescription drug act on?",
+     "src": "Eye slides 64–73; T@58455, T@63213, T@64326, T@67641 11/17",
+     "blocks": [
+      {
+       "title": "What each drug acts on",
+       "rows": [
+        [
+         "Cyclosporine",
+         "Calcineurin: less IL-2 made, so less T-cell proliferation and less inflammation"
+        ],
+        [
+         "Loteprednol",
+         "Corticosteroid: gene expression changes, fewer inflammatory genes and more anti-inflammatory genes"
+        ],
+        [
+         "Lifitegrast",
+         "LFA-1 on leukocytes: blocks its interaction with ICAM-1, so less adhesion and cytokine secretion"
+        ],
+        [
+         "Intranasal varenicline",
+         "Nicotinic receptor agonist: activates the trigeminal parasympathetic pathway; more basal tear film"
+        ]
+       ],
+       "src": "Eye slides 64–67, 69, 71, 73",
+       "k": "map",
+       "p": "sm"
+      },
+      {
+       "label": "Calcineurin inhibitor",
+       "title": "Cyclosporine, topical",
+       "drugs": [
+        "cyclosporine"
+       ],
+       "k": "line",
+       "p": "sm",
+       "pts": [
+        "Increases tear production in patients whose tear production is suppressed by ocular inflammation from keratoconjunctivitis sicca",
+        "Binds [[cyclophilin|cyclophilin]]; that complex inhibits calcineurin, so IL-2 is not made. Tacrolimus binds [[fkbp|FKBP]] instead",
+        "Acts in the signal cascade, not at signal 1 or signal 2",
+        "Used topically: {{oral cyclosporine}} is a significant immunosuppressant (risk of opportunistic infections)"
+       ]
+      },
+      {
+       "label": "Corticosteroid",
+       "title": "Loteprednol, topical",
+       "drugs": [
+        "loteprednol"
+       ],
+       "k": "line",
+       "p": "sm",
+       "pts": [
+        "Used for its anti-inflammatory properties to treat dry eye",
+        "The corticosteroid for dry eye; not every skin steroid is used"
+       ]
+      },
+      {
+       "label": "LFA-1 antagonist",
+       "title": "Lifitegrast",
+       "drugs": [
+        "lifitegrast"
+       ],
+       "k": "line",
+       "p": "sm",
+       "pts": [
+        "A [[lfa-1|lymphocyte function-associated antigen 1 (LFA-1)]] antagonist: blocks LFA-1 binding to {{ICAM-1}}",
+        "{{1 drop}} in each eye {{twice daily}}, about every 12 hours"
+       ]
+      },
+      {
+       "label": "Nicotinic agonist",
+       "title": "Intranasal varenicline",
+       "drugs": [
+        "varenicline"
+       ],
+       "k": "line",
+       "p": "sm",
+       "pts": [
+        "A nicotinic acetylcholine receptor agonist; a {{nasal spray}}",
+        "{{One spray in each nostril}} twice daily, about 12 hours apart"
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Side effects, and what to tell the patient",
+     "profs": [
+      "sm"
+     ],
+     "q": "Which side effect and which counseling point goes with each drug?",
+     "src": "Eye slides 67, 71, 73; T@61900, T@65285, T@65648, T@68262 11/17",
+     "blocks": [
+      {
+       "title": "Side effects",
+       "rows": [
+        [
+         "Cyclosporine",
+         "Ocular burning, instillation site pain, conjunctival hyperemia, discharge, epiphora, eye pain, foreign body sensation, pruritus, stinging, visual disturbances"
+        ],
+        [
+         "Lifitegrast",
+         "Application site irritation (5% to 25%); reduced visual acuity (5% to 25%)"
+        ],
+        [
+         "Intranasal varenicline",
+         "Acquired night blindness (rare), blurred vision (infrequent), retinal vascular disorder (rare), subcapsular cataract (rare), transient blindness (rare), visual disturbance (infrequent)"
+        ]
+       ],
+       "src": "Eye slides 67, 71, 73",
+       "k": "map",
+       "p": "sm"
+      },
+      {
+       "items": [
+        "★ Lifitegrast: remove contact lenses before the drop and reinsert them {{15 minutes}} after; it can discolor contact lenses",
+        "Intranasal varenicline: originally a smoking cessation drug; FDA licensed the 0.03-mg nasal spray for dry eye in the second half of 2021",
+        "Acquired night blindness with the spray is rare; she said it is a reason for the patient to stop using it"
+       ],
+       "k": "pts",
+       "p": "sm"
+      }
+     ]
+    }
+   ],
+   "patients": [
+    {
+     "t": "A woman who wears contact lenses has dry eye and is prescribed lifitegrast.",
+     "q": "What do you tell her about her lenses?",
+     "o": [
+      "Leave them in, but use only one drop a day",
+      "Take them out first and put them back after 15 minutes",
+      "Leave them in and blink after the drop",
+      "Take them out before the drop and put them back after 5 minutes"
+     ],
+     "a": 1,
+     "w": "Remove the lenses before the drop and reinsert 15 minutes after instillation; it can discolor the lenses (slide 71; 11/17).",
+     "x": {
+      "Leave them in and blink after the drop": "The slide says to remove the lenses first.",
+      "Take them out before the drop and put them back after 5 minutes": "The wait is 15 minutes.",
+      "Leave them in, but use only one drop a day": "The dose is 1 drop in each eye twice daily, and the lenses come out first."
+     }
+    },
+    {
+     "t": "A man has dry eye and cannot reliably use eye drops. His pharmacist suggests a nasal spray.",
+     "q": "Which drug is it?",
+     "o": [
+      "Varenicline",
+      "Cyclosporine",
+      "Lifitegrast",
+      "Loteprednol"
+     ],
+     "a": 0,
+     "w": "Intranasal varenicline activates the trigeminal parasympathetic pathway and increases basal tear film (slide 73).",
+     "x": {
+      "Cyclosporine": "Used as a topical eye product.",
+      "Lifitegrast": "An eye drop, 1 drop in each eye twice daily.",
+      "Loteprednol": "A topical corticosteroid for the eye."
+     }
+    },
+    {
+     "t": "A patient asks why her dry eye is treated with cyclosporine eye drops and not tablets.",
+     "q": "What is the reason?",
+     "o": [
+      "Oral cyclosporine causes metabolic acidosis in the kidney",
+      "Oral cyclosporine blocks LFA-1 and ICAM-1 on leukocytes",
+      "Oral cyclosporine does not inhibit calcineurin in T cells",
+      "Oral cyclosporine is a significant immunosuppressant"
+     ],
+     "a": 3,
+     "w": "Oral cyclosporine is a significant immunosuppressant; for dry eye alone it is used topically (11/17).",
+     "x": {
+      "Oral cyclosporine does not inhibit calcineurin in T cells": "It inhibits calcineurin by binding cyclophilin; the concern is the immunosuppression.",
+      "Oral cyclosporine causes metabolic acidosis in the kidney": "That is the carbonic anhydrase inhibitor effect.",
+      "Oral cyclosporine blocks LFA-1 and ICAM-1 on leukocytes": "LFA-1 is the target of lifitegrast."
+     }
+    },
+    {
+     "t": "A doctor wants a corticosteroid for dry eye.",
+     "q": "Which corticosteroid is used?",
+     "o": [
+      "Clobetasol",
+      "Betamethasone valerate",
+      "Loteprednol",
+      "Hydrocortisone"
+     ],
+     "a": 2,
+     "w": "Loteprednol is the corticosteroid for dry eye, in a topical formulation (slide 69; 11/17).",
+     "x": {
+      "Clobetasol": "A skin steroid; not the one for dry eye.",
+      "Betamethasone valerate": "A skin steroid; not the one for dry eye.",
+      "Hydrocortisone": "A skin steroid; not the one for dry eye."
+     }
+    },
+    {
+     "t": "A patient’s eye exam notes that the goblet cells of the conjunctiva are not working.",
+     "q": "Which layer of the tear film is affected?",
+     "o": [
+      "The mucin layer, which is the posterior layer",
+      "The immunoglobulin layer on the cornea",
+      "The aqueous layer, which is about 98% of the tears",
+      "The lipid layer from the meibomian glands"
+     ],
+     "a": 0,
+     "w": "The posterior layer is a mixture of mucins produced by goblet cells in the conjunctiva (slide 6).",
+     "x": {
+      "The aqueous layer, which is about 98% of the tears": "The aqueous layer comes from the main and accessory lacrimal glands.",
+      "The lipid layer from the meibomian glands": "The anterior lipid layer comes from the meibomian glands at the eyelid margin.",
+      "The immunoglobulin layer on the cornea": "Immunoglobulins are contents of the tears, not a layer."
+     }
+    }
+   ],
+   "numbers": [
+    [
+     "7% to 33%",
+     "prevalence of dry eye",
+     "Eye slide 62"
+    ],
+    [
+     "98%",
+     "of the tear film is the middle aqueous layer",
+     "Eye slide 6"
+    ],
+    [
+     "1 drop, twice daily",
+     "lifitegrast, each eye, about every 12 hours",
+     "Eye slide 71"
+    ],
+    [
+     "5% to 25%",
+     "lifitegrast: application site irritation; reduced visual acuity",
+     "Eye slide 71"
+    ],
+    [
+     "15 minutes",
+     "wait before reinserting contact lenses after lifitegrast",
+     "Eye slide 71"
+    ],
+    [
+     "0.03 mg",
+     "intranasal varenicline spray for dry eye",
+     "Eye slide 73"
+    ],
+    [
+     "1 spray per nostril, twice daily",
+     "intranasal varenicline, about 12 hours apart",
+     "Eye slide 73"
+    ],
+    [
+     "2021",
+     "FDA licensed the nasal spray for dry eye (final half of the year)",
+     "Eye slide 73"
+    ]
+   ]
+  }
+ ],
+ "drugs": {
+  "beta-blockers": {
+   "name": "Beta receptor antagonists (timolol, levobunolol, betaxolol, carteolol)",
+   "brand": "",
+   "sm": {
+    "text": "Block the beta-adrenergic receptor on the ciliary body, so less aqueous humor is made (inflow falls); not much effect on outflow; the mechanism is not fully understood. Timolol and levobunolol: nonspecific beta blockers (levobunolol has some alpha-adrenergic effects). Betaxolol: relatively beta 1 selective. Carteolol: nonspecific with intrinsic sympathomimetic activity. Side effects: ocular stinging and burning, decreased corneal sensitivity, diplopia, blurred or cloudy vision, decreased night vision, ptosis; systemic bradycardia and hypotension, bronchospasm in asthmatics, headache, insomnia, taste perversion, depression, impotence.",
+    "src": "Eye slides 18–20; T@43883, T@45583 11/13"
+   },
+   "how": {
+    "p": "sm",
+    "text": "Block the beta-adrenergic receptor on the ciliary body, so less aqueous humor is made (inflow falls); not much effect on outflow; the mechanism is not fully understood. Timolol and levobunolol: nonspecific beta blockers (levobunolol has some alpha-adrenergic effects). Betaxolol: relatively beta 1 selective. Carteolol: nonspecific with intrinsic sympathomimetic activity. Side effects: ocular stinging and burning, decreased corneal sensitivity, diplopia, blurred or cloudy vision, decreased night vision, ptosis; systemic bradycardia and hypotension, bronchospasm in asthmatics, headache, insomnia, taste perversion, depression, impotence.",
+    "src": "Eye slides 18–20; T@43883, T@45583 11/13"
+   },
+   "figs": [],
+   "counsel": [
+    "After the drop, gently press the inner corner of the eyelid (by the nose) so the drug does not drain through the tear duct and is absorbed into the body.",
+    "Timolol comes as a gel that is given once a day; the other drops are given several times a day.",
+    "Effectiveness is similar across the group; the choice can rest on side effects or insurance coverage."
+   ],
+   "counselSrc": "Eye slide 20; T@16025, T@46338 11/13; T@30444 11/17",
+   "avoid": [
+    "Asthma: beta 2 blockade can cause bronchospasm (slide 20)",
+    "Cardiac patients: bradycardia and hypotension (slide 20); a more selective drug, or the eyelid compression (11/13)",
+    "Levobunolol may be more effective than timolol and betaxolol after cataract surgery (11/13)"
+   ]
+  },
+  "apraclonidine": {
+   "name": "Apraclonidine",
+   "brand": "",
+   "sm": {
+    "text": "An alpha 2 agonist: binds alpha 2 receptors on the ciliary body and decreases aqueous humor production (inflow). Used to prevent a rise in IOP after eye surgery such as cataract surgery; not used long term because of an allergic type response. Side effects: ocular burning and stinging, blurred vision, foreign body sensation, ocular pruritus; systemic hypotension, oral dryness, allergic reaction.",
+    "src": "Eye slides 22–24; T@52072, T@53050 11/13"
+   },
+   "how": {
+    "p": "sm",
+    "text": "An alpha 2 agonist: binds alpha 2 receptors on the ciliary body and decreases aqueous humor production (inflow). Used to prevent a rise in IOP after eye surgery such as cataract surgery; not used long term because of an allergic type response. Side effects: ocular burning and stinging, blurred vision, foreign body sensation, ocular pruritus; systemic hypotension, oral dryness, allergic reaction.",
+    "src": "Eye slides 22–24; T@52072, T@53050 11/13"
+   },
+   "figs": [],
+   "counsel": [
+    "After the drop, gently press the inner corner of the eyelid (by the nose) so the drug does not drain through the tear duct and is absorbed into the body."
+   ],
+   "counselSrc": "T@16025 11/13; T@30444 11/17",
+   "avoid": [
+    "Allergic reaction in the eye (slide 24; 11/13)",
+    "Systemic hypotension (slide 24)"
+   ]
+  },
+  "brimonidine": {
+   "name": "Brimonidine",
+   "brand": "",
+   "sm": {
+    "text": "An alpha 2 agonist: binds alpha 2 receptors on the ciliary body and decreases aqueous humor production (inflow). Two extra effects: it increases uveoscleral outflow and is neuroprotective (seen in animals, assumed in humans). The better choice for long-term glaucoma treatment. Side effects: foreign body sensation and itching of the eyes (a hallmark); systemic oral dryness, dizziness, fatigue, somnolence, lower blood pressure and pulse. For allergic conjunctivitis: an alpha 2 agonist vasoconstrictor that reduces redness (brimonidine tartrate).",
+    "src": "Eye slides 22–24, 57; T@49059, T@51660, T@53354 11/13"
+   },
+   "how": {
+    "p": "sm",
+    "text": "An alpha 2 agonist: binds alpha 2 receptors on the ciliary body and decreases aqueous humor production (inflow). Two extra effects: it increases uveoscleral outflow and is neuroprotective (seen in animals, assumed in humans). The better choice for long-term glaucoma treatment. Side effects: foreign body sensation and itching of the eyes (a hallmark); systemic oral dryness, dizziness, fatigue, somnolence, lower blood pressure and pulse. For allergic conjunctivitis: an alpha 2 agonist vasoconstrictor that reduces redness (brimonidine tartrate).",
+    "src": "Eye slides 22–24, 57; T@49059, T@51660, T@53354 11/13"
+   },
+   "figs": [],
+   "pa": [
+    {
+     "dz": "glaucoma",
+     "role": "Glaucoma (Dr. Smith, Exam 3): decreases aqueous humor production; also increases uveoscleral outflow; neuroprotective",
+     "how": "The better long-term alpha 2 agonist than apraclonidine.",
+     "src": "Eye slides 22–24; T@51660 11/13"
+    },
+    {
+     "dz": "allergic-conjunctivitis",
+     "role": "Allergic conjunctivitis (Dr. Smith, Exam 3): alpha 2 agonist vasoconstrictor; reduces redness",
+     "how": "Brimonidine tartrate is on the list with naphazoline, oxymetazoline, tetrahydrozoline and phenylephrine.",
+     "src": "Eye slides 56–57; T@52690 11/17"
+    }
+   ],
+   "counsel": [
+    "Glaucoma: After the drop, gently press the inner corner of the eyelid (by the nose) so the drug does not drain through the tear duct and is absorbed into the body.",
+    "Allergic conjunctivitis: it constricts the blood vessels in the eye, which reduces redness."
+   ],
+   "counselSrc": "Eye slides 56–57; T@16025 11/13; T@52690 11/17",
+   "avoid": [
+    "Foreign body sensation and itching of the eyes are the notable ocular effects (11/13)"
+   ]
+  },
+  "cai": {
+   "name": "Carbonic anhydrase inhibitors (acetazolamide, methazolamide, dorzolamide, brinzolamide)",
+   "brand": "",
+   "sm": {
+    "text": "Inhibit carbonic anhydrase, which prevents the conversion of CO2 and water to carbonic acid; less sodium and bicarbonate are available for secretion, so the ciliary body makes less aqueous humor (inflow falls). Acetazolamide and methazolamide are oral; dorzolamide and brinzolamide are ophthalmic. Side effects of the drops: burning or stinging, hypersensitivity, headache, bitter, sour or unusual taste, dry eye, foreign body sensation, blurred vision. Oral: altered taste and smell, dry mouth, excessive thirst, increased urination, systemic acidosis, depression.",
+    "src": "Eye slides 26–29; T@54759, T@58590 11/13; T@5923, T@17682, T@22924 11/17"
+   },
+   "how": {
+    "p": "sm",
+    "text": "Inhibit carbonic anhydrase, which prevents the conversion of CO2 and water to carbonic acid; less sodium and bicarbonate are available for secretion, so the ciliary body makes less aqueous humor (inflow falls). Acetazolamide and methazolamide are oral; dorzolamide and brinzolamide are ophthalmic. Side effects of the drops: burning or stinging, hypersensitivity, headache, bitter, sour or unusual taste, dry eye, foreign body sensation, blurred vision. Oral: altered taste and smell, dry mouth, excessive thirst, increased urination, systemic acidosis, depression.",
+    "src": "Eye slides 26–29; T@54759, T@58590 11/13; T@5923, T@17682, T@22924 11/17"
+   },
+   "figs": [],
+   "counsel": [
+    "After the drop, gently press the inner corner of the eyelid (by the nose) so the drug does not drain through the tear duct and is absorbed into the body.",
+    "The ophthalmic product comes first; an oral drug is added if the patient is refractory to other therapies."
+   ],
+   "counselSrc": "T@59086 11/13; T@30444 11/17",
+   "avoid": [
+    "Oral use: metabolic acidosis, a side effect to remember for sure; the blood pH must be watched (11/17)",
+    "Oral use: over-diuresis can show as dry mouth and thirst (11/17)"
+   ]
+  },
+  "m3-agonists": {
+   "name": "M3 agonists (carbachol, pilocarpine)",
+   "brand": "",
+   "sm": {
+    "text": "Direct-acting parasympathomimetics: agonists at the M3 receptor on the sphincter muscle and the trabecular meshwork; contraction increases outflow. Carbachol is very potent and longer acting, and is used more often; pilocarpine has more potential for an allergic reaction in the eye. Side effects: burning and stinging; painful ciliary muscle spasm causing headache; blurred vision, myopia, poor vision in dim light, floaters, lacrimation; systemic diarrhea, salivation, sweating, rhinorrhea.",
+    "src": "Eye slides 31–33; T@23579, T@26432, T@28294 11/17"
+   },
+   "how": {
+    "p": "sm",
+    "text": "Direct-acting parasympathomimetics: agonists at the M3 receptor on the sphincter muscle and the trabecular meshwork; contraction increases outflow. Carbachol is very potent and longer acting, and is used more often; pilocarpine has more potential for an allergic reaction in the eye. Side effects: burning and stinging; painful ciliary muscle spasm causing headache; blurred vision, myopia, poor vision in dim light, floaters, lacrimation; systemic diarrhea, salivation, sweating, rhinorrhea.",
+    "src": "Eye slides 31–33; T@23579, T@26432, T@28294 11/17"
+   },
+   "figs": [],
+   "counsel": [
+    "After the drop, gently press the inner corner of the eyelid (by the nose) so the drug does not drain through the tear duct and is absorbed into the body.",
+    "Systemic cholinergic effects (diarrhea, salivation, sweating, rhinorrhea) come from drug absorbed through the nose; the compression lowers this."
+   ],
+   "counselSrc": "T@28776, T@30444 11/17"
+  },
+  "echothiophate": {
+   "name": "Echothiophate",
+   "brand": "",
+   "sm": {
+    "text": "An irreversible acetylcholinesterase inhibitor: more acetylcholine agonizes the M3 receptors, the sphincter muscle and trabecular meshwork contract, and outflow increases. Used when a patient is refractory to other medicines. Side effects: burning and stinging, blurred vision, eye pain, lacrimation, headache, brow ache, twitching of the eyelids, an allergic type reaction (more than pilocarpine), cataracts; systemic diarrhea, salivation, sweating, rhinorrhea.",
+    "src": "Eye slides 31, 34–35; T@26915, T@29170, T@29681 11/17"
+   },
+   "how": {
+    "p": "sm",
+    "text": "An irreversible acetylcholinesterase inhibitor: more acetylcholine agonizes the M3 receptors, the sphincter muscle and trabecular meshwork contract, and outflow increases. Used when a patient is refractory to other medicines. Side effects: burning and stinging, blurred vision, eye pain, lacrimation, headache, brow ache, twitching of the eyelids, an allergic type reaction (more than pilocarpine), cataracts; systemic diarrhea, salivation, sweating, rhinorrhea.",
+    "src": "Eye slides 31, 34–35; T@26915, T@29170, T@29681 11/17"
+   },
+   "figs": [],
+   "counsel": [
+    "After the drop, gently press the inner corner of the eyelid (by the nose) so the drug does not drain through the tear duct and is absorbed into the body."
+   ],
+   "counselSrc": "T@16025 11/13; T@30444 11/17",
+   "avoid": [
+    "Can cause cataracts, a reason its use is limited in patients who already have glaucoma (11/17)",
+    "More allergenic than pilocarpine (11/17)"
+   ]
+  },
+  "pg-agonists": {
+   "name": "Prostaglandin agonists (bimatoprost, latanoprost, latanoprostene bunod, travoprost, tafluprost)",
+   "brand": "",
+   "sm": {
+    "text": "Agonists at the PGF2α receptor, which relaxes the ciliary muscle; IOP falls by increasing uveoscleral outflow and, to a lesser extent, trabecular outflow. They do not affect aqueous humor production. May be more effective in hazel or brown eyes than in blue or green eyes. Latanoprostene bunod is also a nitric oxide donor (vasodilation adds to its effect). Side effects: blurred vision, burning and stinging, eye pain, lid edema, ocular hyperemia; increased brown pigmentation of the iris and eyelids; hypertrichosis and hyperpigmentation of the lashes (Latisse); hair growth in other areas; few systemic effects.",
+    "src": "Eye slides 37–39; T@31096, T@32283, T@32596, T@33811 11/17"
+   },
+   "how": {
+    "p": "sm",
+    "text": "Agonists at the PGF2α receptor, which relaxes the ciliary muscle; IOP falls by increasing uveoscleral outflow and, to a lesser extent, trabecular outflow. They do not affect aqueous humor production. May be more effective in hazel or brown eyes than in blue or green eyes. Latanoprostene bunod is also a nitric oxide donor (vasodilation adds to its effect). Side effects: blurred vision, burning and stinging, eye pain, lid edema, ocular hyperemia; increased brown pigmentation of the iris and eyelids; hypertrichosis and hyperpigmentation of the lashes (Latisse); hair growth in other areas; few systemic effects.",
+    "src": "Eye slides 37–39; T@31096, T@32283, T@32596, T@33811 11/17"
+   },
+   "figs": [],
+   "counsel": [
+    "Expect darker pigmentation of the iris and eyelids and longer, thicker lashes.",
+    "After the drop, gently press the inner corner of the eyelid (by the nose) so the drug does not drain through the tear duct and is absorbed into the body."
+   ],
+   "counselSrc": "Eye slide 39; T@33811, T@30444 11/17"
+  },
+  "netarsudil": {
+   "name": "Netarsudil",
+   "brand": "",
+   "sm": {
+    "text": "Inhibits RhoA kinase. RhoA is a GTP-binding protein that regulates cell shape, motility, proliferation and apoptosis; in glaucoma it may increase contractile tone and trabecular meshwork stiffness. Inhibiting it lowers outflow resistance: it relaxes the tone, decreases fibrosis-related protein deposits in the meshwork and changes the permeability of the cells lining Schlemm’s canal. The only Rho kinase inhibitor on the drug list. Side effects: conjunctival hyperemia (53%), from vasodilation; about 20%: corneal verticillata (vision unchanged, resolved on stopping in most cases), instillation site pain, conjunctival hemorrhage.",
+    "src": "Eye slides 41–43; T@34730, T@35809, T@36856 11/17"
+   },
+   "how": {
+    "p": "sm",
+    "text": "Inhibits RhoA kinase. RhoA is a GTP-binding protein that regulates cell shape, motility, proliferation and apoptosis; in glaucoma it may increase contractile tone and trabecular meshwork stiffness. Inhibiting it lowers outflow resistance: it relaxes the tone, decreases fibrosis-related protein deposits in the meshwork and changes the permeability of the cells lining Schlemm’s canal. The only Rho kinase inhibitor on the drug list. Side effects: conjunctival hyperemia (53%), from vasodilation; about 20%: corneal verticillata (vision unchanged, resolved on stopping in most cases), instillation site pain, conjunctival hemorrhage.",
+    "src": "Eye slides 41–43; T@34730, T@35809, T@36856 11/17"
+   },
+   "figs": [],
+   "counsel": [
+    "Red eyes (conjunctival hyperemia) are common; the cause is relaxation of vascular smooth muscle.",
+    "After the drop, gently press the inner corner of the eyelid (by the nose) so the drug does not drain through the tear duct and is absorbed into the body."
+   ],
+   "counselSrc": "Eye slide 43; T@36856 11/17"
+  },
+  "glaucoma-combos": {
+   "name": "Glaucoma combination products",
+   "brand": "",
+   "sm": {
+    "text": "Timolol and dorzolamide; timolol and brimonidine; brinzolamide and brimonidine; latanoprost and netarsudil. Treatment often starts with one drug and moves to a combination as the disease progresses. One product with both mechanisms replaces two bottles.",
+    "src": "Eye slide 45; T@37948, T@38097 11/17"
+   },
+   "how": {
+    "p": "sm",
+    "text": "Each product joins two of the mechanisms above: a beta receptor antagonist, a carbonic anhydrase inhibitor, an alpha 2 agonist, a prostaglandin agonist or the Rho kinase inhibitor.",
+    "src": "Eye slide 45; T@37948, T@38097 11/17"
+   },
+   "figs": [],
+   "counsel": [
+    "A drop that has to be used 3 or 4 times a day is easier to follow as one combination product than as two separate drops.",
+    "After the drop, gently press the inner corner of the eyelid (by the nose) so the drug does not drain through the tear duct and is absorbed into the body."
+   ],
+   "counselSrc": "T@38097 11/17; T@16025 11/13"
+  },
+  "ophthalmic-h1": {
+   "name": "Ophthalmic H1 inverse agonists (antihistamines)",
+   "brand": "",
+   "sm": {
+    "text": "H1 inverse agonists: reduce the constitutive activity of the receptor and compete with histamine for it. Most also stabilize mast cells, which reduces the release of mast cell mediators and is anti-inflammatory (less cytokine secretion, less adhesion molecule expression, inhibition of eosinophil infiltration). Mast cell stabilization may make them more effective topically. They reduce edema, itch, inflammation and watery eyes. Examples: alcaftadine, azelastine, bepotastine, cetirizine, epinastine, ketotifen, olopatadine; cetirizine has no mast cell stabilization.",
+    "src": "Eye slides 51–54; T@44898, T@46395, T@51757 11/17"
+   },
+   "how": {
+    "p": "sm",
+    "text": "H1 inverse agonists: reduce the constitutive activity of the receptor and compete with histamine for it. Most also stabilize mast cells, which reduces the release of mast cell mediators and is anti-inflammatory (less cytokine secretion, less adhesion molecule expression, inhibition of eosinophil infiltration). Mast cell stabilization may make them more effective topically. They reduce edema, itch, inflammation and watery eyes. Examples: alcaftadine, azelastine, bepotastine, cetirizine, epinastine, ketotifen, olopatadine; cetirizine has no mast cell stabilization.",
+    "src": "Eye slides 51–54; T@44898, T@46395, T@51757 11/17"
+   },
+   "figs": [],
+   "counsel": [
+    "A drug with mast cell stabilization can be started before the allergen season to prevent the release of histamine.",
+    "Cetirizine is not the one to suggest for prophylactic use: it has no mast cell stabilization, and it can still cause drowsiness."
+   ],
+   "counselSrc": "Eye slide 53; T@46866, T@51757 11/17"
+  },
+  "alcaftadine": {
+   "name": "Alcaftadine",
+   "brand": "",
+   "sm": {
+    "text": "H1 inverse agonist with mast cell stabilization, and H4 receptor antagonism (H4 is on eosinophils; this may explain its superiority in allergic conjunctivitis). Very little anticholinergic activity, little CNS penetration, low incidence of side effects.",
+    "src": "Eye slide 53; T@49053 11/17"
+   },
+   "how": {
+    "p": "sm",
+    "text": "H1 inverse agonist with mast cell stabilization, and H4 receptor antagonism (H4 is on eosinophils; this may explain its superiority in allergic conjunctivitis). Very little anticholinergic activity, little CNS penetration, low incidence of side effects.",
+    "src": "Eye slide 53; T@49053 11/17"
+   },
+   "figs": []
+  },
+  "epinastine": {
+   "name": "Epinastine",
+   "brand": "",
+   "sm": {
+    "text": "H1 inverse agonist with mast cell stabilization. Also an H2 antagonist, which may reduce eyelid edema.",
+    "src": "Eye slide 54; T@51012 11/17"
+   },
+   "how": {
+    "p": "sm",
+    "text": "H1 inverse agonist with mast cell stabilization. Also an H2 antagonist, which may reduce eyelid edema.",
+    "src": "Eye slide 54; T@51012 11/17"
+   },
+   "figs": []
+  },
+  "cetirizine-eye": {
+   "name": "Cetirizine (ophthalmic)",
+   "brand": "",
+   "sm": {
+    "text": "H1 inverse agonist without mast cell stabilization. Minimal anticholinergic effects and negligible CNS penetration, but it still causes drowsiness.",
+    "src": "Eye slide 53; T@50365, T@51757 11/17"
+   },
+   "how": {
+    "p": "sm",
+    "text": "H1 inverse agonist without mast cell stabilization. Minimal anticholinergic effects and negligible CNS penetration, but it still causes drowsiness.",
+    "src": "Eye slide 53; T@50365, T@51757 11/17"
+   },
+   "figs": [],
+   "counsel": [
+    "It is the ophthalmic antihistamine not suggested for prophylactic use, because it has no mast cell stabilization."
+   ],
+   "counselSrc": "T@51757 11/17"
+  },
+  "naph-pheniramine": {
+   "name": "Naphazoline/pheniramine",
+   "brand": "",
+   "sm": {
+    "text": "An alpha 2 agonist (vasoconstrictor, reduces redness) combined with an H1 antihistamine; one drop instead of two covers both approaches.",
+    "src": "Eye slide 59; T@53936, T@54340 11/17"
+   },
+   "how": {
+    "p": "sm",
+    "text": "An alpha 2 agonist (vasoconstrictor, reduces redness) combined with an H1 antihistamine; one drop instead of two covers both approaches.",
+    "src": "Eye slide 59; T@53936, T@54340 11/17"
+   },
+   "figs": []
+  },
+  "alpha2-eye": {
+   "name": "Alpha 2 agonist vasoconstrictors (naphazoline, oxymetazoline, tetrahydrozoline, brimonidine tartrate, phenylephrine)",
+   "brand": "",
+   "sm": {
+    "text": "Adrenergic receptor agonists: vasoconstrictors for local application to the nasal mucous membrane or the eye. They reduce redness, and less leaking from the capillaries reduces edema. Little difference between them for allergic conjunctivitis.",
+    "src": "Eye slides 56–57; T@52180, T@52690, T@53209 11/17"
+   },
+   "how": {
+    "p": "sm",
+    "text": "Adrenergic receptor agonists: vasoconstrictors for local application to the nasal mucous membrane or the eye. They reduce redness, and less leaking from the capillaries reduces edema. Little difference between them for allergic conjunctivitis.",
+    "src": "Eye slides 56–57; T@52180, T@52690, T@53209 11/17"
+   },
+   "figs": []
+  },
+  "cyclosporine": {
+   "name": "Cyclosporine",
+   "brand": "",
+   "sm": {
+    "text": "Binds cyclophilin; the complex inhibits calcineurin, so IL-2 is not made for T-cell proliferation. Topical cyclosporine increases tear production where it is suppressed by ocular inflammation from keratoconjunctivitis sicca. Side effects: ocular burning, instillation site pain, conjunctival hyperemia, discharge, epiphora, eye pain, foreign body sensation, pruritus, stinging, visual disturbances.",
+    "src": "Eye slides 64–67; T@60561, T@61900, T@62774 11/17"
+   },
+   "how": {
+    "p": "sm",
+    "text": "Binds cyclophilin; the complex inhibits calcineurin, so IL-2 is not made for T-cell proliferation. Topical cyclosporine increases tear production where it is suppressed by ocular inflammation from keratoconjunctivitis sicca. Side effects: ocular burning, instillation site pain, conjunctival hyperemia, discharge, epiphora, eye pain, foreign body sensation, pruritus, stinging, visual disturbances.",
+    "src": "Eye slides 64–67; T@60561, T@61900, T@62774 11/17"
+   },
+   "figs": [],
+   "pa": [
+    {
+     "dz": "dry-eye",
+     "role": "Dry eye (Dr. Smith, Exam 3): topical calcineurin inhibitor that increases tear production",
+     "how": "Used topically; oral cyclosporine is a significant immunosuppressant (opportunistic infections).",
+     "src": "Eye slides 64, 67; T@62774 11/17"
+    }
+   ],
+   "counsel": [
+    "Ocular burning, eye pain, a foreign body sensation and itching can be significant; they are the reasons patients struggle with the drops.",
+    "It is used as a drop, not a tablet, for dry eye alone."
+   ],
+   "counselSrc": "Eye slide 67; T@61900, T@62774 11/17",
+   "avoid": [
+    "Oral use for dry eye alone: a significant immunosuppressant, with a risk of opportunistic infections (11/17)"
+   ]
+  },
+  "loteprednol": {
+   "name": "Loteprednol",
+   "brand": "",
+   "sm": {
+    "text": "A topical corticosteroid used for its anti-inflammatory properties to treat dry eye. Corticosteroids change gene expression: fewer inflammatory genes and more anti-inflammatory genes are expressed, so the immune response decreases.",
+    "src": "Eye slide 69; T@63213, T@63574 11/17"
+   },
+   "how": {
+    "p": "sm",
+    "text": "A topical corticosteroid used for its anti-inflammatory properties to treat dry eye. Corticosteroids change gene expression: fewer inflammatory genes and more anti-inflammatory genes are expressed, so the immune response decreases.",
+    "src": "Eye slide 69; T@63213, T@63574 11/17"
+   },
+   "figs": []
+  },
+  "lifitegrast": {
+   "name": "Lifitegrast",
+   "brand": "",
+   "sm": {
+    "text": "A lymphocyte function-associated antigen 1 (LFA-1) antagonist. LFA-1 is a cell surface protein on leukocytes; lifitegrast binds it and blocks its interaction with intercellular adhesion molecule-1 (ICAM-1), which may inhibit T-cell adhesion to ICAM-1 and the secretion of inflammatory cytokines. 1 drop in each eye twice daily, about every 12 hours. Side effects: application site irritation (5% to 25%), reduced visual acuity (5% to 25%).",
+    "src": "Eye slide 71; T@64326, T@65117, T@65285 11/17"
+   },
+   "how": {
+    "p": "sm",
+    "text": "A lymphocyte function-associated antigen 1 (LFA-1) antagonist. LFA-1 is a cell surface protein on leukocytes; lifitegrast binds it and blocks its interaction with intercellular adhesion molecule-1 (ICAM-1), which may inhibit T-cell adhesion to ICAM-1 and the secretion of inflammatory cytokines. 1 drop in each eye twice daily, about every 12 hours. Side effects: application site irritation (5% to 25%), reduced visual acuity (5% to 25%).",
+    "src": "Eye slide 71; T@64326, T@65117, T@65285 11/17"
+   },
+   "figs": [],
+   "counsel": [
+    "Remove contact lenses before the drop and reinsert them 15 minutes after.",
+    "It can discolor contact lenses.",
+    "Irritation of the eye and reduced visual acuity are the common effects; some patients may not like the effect on their vision."
+   ],
+   "counselSrc": "Eye slide 71; T@65285, T@65648 11/17"
+  },
+  "varenicline": {
+   "name": "Intranasal varenicline",
+   "brand": "",
+   "sm": {
+    "text": "A nicotinic acetylcholine receptor agonist. In dry eye its effect is thought to come from agonist activity at nicotinic receptors that activates the trigeminal parasympathetic pathway, so basal tear film increases. Originally a smoking cessation drug; the 0.03-mg intranasal spray was licensed for dry eye in the final half of 2021. One spray in each nostril twice daily, about 12 hours apart. Side effects: acquired night blindness (rare), blurred vision (infrequent), retinal vascular disorder (rare), subcapsular cataract (rare), transient blindness (rare), visual disturbance (infrequent).",
+    "src": "Eye slide 73; T@66872, T@67438, T@67641, T@68262 11/17"
+   },
+   "how": {
+    "p": "sm",
+    "text": "A nicotinic acetylcholine receptor agonist. In dry eye its effect is thought to come from agonist activity at nicotinic receptors that activates the trigeminal parasympathetic pathway, so basal tear film increases. Originally a smoking cessation drug; the 0.03-mg intranasal spray was licensed for dry eye in the final half of 2021. One spray in each nostril twice daily, about 12 hours apart. Side effects: acquired night blindness (rare), blurred vision (infrequent), retinal vascular disorder (rare), subcapsular cataract (rare), transient blindness (rare), visual disturbance (infrequent).",
+    "src": "Eye slide 73; T@66872, T@67438, T@67641, T@68262 11/17"
+   },
+   "figs": [],
+   "counsel": [
+    "One spray in each nostril twice daily, about 12 hours apart.",
+    "Acquired night blindness is rare; she said it is a reason for the patient to stop using it."
+   ],
+   "counselSrc": "Eye slide 73; T@67438, T@68380 11/17"
+  }
+ },
+ "terms": {
+  "iop": [
+   "Intraocular pressure (IOP)",
+   "The pressure inside the eyeball. In glaucoma it increases, and over time it can damage the optic nerve.",
+   "Eye slide 13; T@19603 11/13"
+  ],
+  "aqueous-humor": [
+   "Aqueous humor",
+   "The liquid the ciliary body makes all the time. It fills the anterior chamber and drains out of the eye through the angle.",
+   "T@26683 11/13"
+  ],
+  "ciliary-body": [
+   "Ciliary body",
+   "A ring behind the iris, with smooth muscle and blood vessels. It holds the lens by ligaments and makes the aqueous humor.",
+   "T@8949, T@24649 11/13"
+  ],
+  "trabecular-meshwork": [
+   "Trabecular meshwork",
+   "A spongy, porous tissue around the opening of Schlemm’s canal. Most aqueous humor leaves through it into the canal, and then the veins.",
+   "T@32669 11/13"
+  ],
+  "uveoscleral": [
+   "Uveoscleral outflow",
+   "The smaller outflow route: aqueous humor squeezes between the uvea (ciliary body, its ligaments and the iris) and the sclera.",
+   "T@30729 11/13"
+  ],
+  "mast-cell": [
+   "Mast cell",
+   "A cell that stores histamine in granules. Antigen interacting with IgE on its surface releases the histamine.",
+   "Eye slide 48; T@41030 11/17"
+  ],
+  "inverse-agonist": [
+   "Constitutive activity",
+   "The activity a receptor has on its own. An inverse agonist reduces it, and also competes with the natural ligand (histamine at H1).",
+   "Eye slide 51"
+  ],
+  "mcs": [
+   "Mast cell stabilization",
+   "Reduces the release of mast cell mediators during an allergic response and is anti-inflammatory. How it works is still unclear.",
+   "Eye slide 51; T@44898 11/17"
+  ],
+  "ksc": [
+   "Keratoconjunctivitis sicca",
+   "The name for dry eye: inflammation with reduced tear production.",
+   "Eye slide 62; T@56078 11/17"
+  ],
+  "cyclophilin": [
+   "Cyclophilin",
+   "The protein cyclosporine binds; the cyclosporine–cyclophilin complex inhibits calcineurin.",
+   "Eye slide 66; T@60561 11/17"
+  ],
+  "lfa-1": [
+   "LFA-1",
+   "Lymphocyte function-associated antigen 1: a cell surface protein on leukocytes that interacts with ICAM-1.",
+   "Eye slide 71"
+  ]
+ },
+ "tell": [
+  {
+   "id": "eye-glaucoma-types",
+   "title": "Open-angle or angle-closure glaucoma",
+   "cols": [
+    "Primary open-angle (POAG)",
+    "Primary angle-closure (PACG)"
+   ],
+   "path": [
+    {
+     "q": "Is there significant pain, with a rapid rise in pressure?",
+     "a": [
+      "Yes → **angle closure**, a medical emergency",
+      "No, and the onset is gradual → next question"
+     ]
+    },
+    {
+     "q": "Is it tied to drainage that does not work well, or to the shape of the eye?",
+     "a": [
+      "The drainage does not work well → **open angle**",
+      "The shape of the eye and how it sits in the socket → **angle closure**"
+     ]
+    }
+   ],
+   "rows": [
+    [
+     "Linked to",
+     [
+      "The drainage systems not working effectively",
+      "The shape of the eye and how it sits in the eye socket"
+     ]
+    ],
+    [
+     "Onset",
+     [
+      "{{Gradual}} and asymptomatic until visual field loss",
+      "Rapid rise in pressure"
+     ]
+    ],
+    [
+     "Signs",
+     [
+      "None at first",
+      "{{Significant pain}}"
+     ]
+    ],
+    [
+     "Urgency",
+     [
+      "Found by measuring the IOP at eye exams",
+      "{{Medical emergency}}: decrease the IOP quickly"
+     ],
+     "Both: the goal is to decrease the IOP to delay or prevent progression."
+    ]
+   ],
+   "src": "Eye slide 13; T@20737, T@23370 11/13"
+  },
+  {
+   "id": "eye-inflow-outflow",
+   "title": "Glaucoma drugs: decrease inflow or increase outflow",
+   "cols": [
+    "Decrease inflow",
+    "Increase outflow"
+   ],
+   "path": [
+    {
+     "q": "Does the drug change how much aqueous humor the ciliary body makes?",
+     "a": [
+      "Yes → **inflow**: beta receptor antagonists, alpha 2 agonists, carbonic anhydrase inhibitors",
+      "No → next question"
+     ]
+    },
+    {
+     "q": "Does it act on the trabecular meshwork or the ciliary muscle?",
+     "a": [
+      "Yes → **outflow**: M3 agonists, acetylcholinesterase inhibitor, prostaglandin agonists, Rho kinase inhibitor"
+     ]
+    }
+   ],
+   "rows": [
+    [
+     "Classes",
+     [
+      "Beta receptor antagonists; alpha 2 agonists; carbonic anhydrase inhibitors",
+      "M3 agonists; acetylcholinesterase inhibitor; prostaglandin agonists; Rho kinase inhibitor"
+     ]
+    ],
+    [
+     "What changes",
+     [
+      "{{Less aqueous humor made}}",
+      "{{More aqueous humor drains}}"
+     ]
+    ],
+    [
+     "Targets",
+     [
+      "Beta receptors, alpha 2 receptors, carbonic anhydrase in the ciliary body epithelium",
+      "M3 receptors and acetylcholinesterase (trabecular meshwork), PGF2α receptor (ciliary muscle), RhoA kinase"
+     ]
+    ],
+    [
+     "Exceptions",
+     [
+      "Brimonidine also increases uveoscleral outflow",
+      "Prostaglandin agonists: mainly uveoscleral outflow; they do not affect production"
+     ],
+     "Beta receptor antagonists have not much effect on outflow."
+    ]
+   ],
+   "src": "Eye slides 11, 18, 22, 26, 32, 34, 37, 41; T@43081, T@44430 11/13"
+  },
+  {
+   "id": "eye-allergy-classes",
+   "title": "Antihistamine or alpha 2 agonist for the eye",
+   "cols": [
+    "Ophthalmic H1 inverse agonists",
+    "Alpha 2 agonists"
+   ],
+   "path": [
+    {
+     "q": "Is the main complaint itch and watery eyes, or redness?",
+     "a": [
+      "Itch, watery eyes → **antihistamine**",
+      "Redness → **alpha 2 agonist**"
+     ]
+    },
+    {
+     "q": "Does the patient want both in one drop?",
+     "a": [
+      "Yes → **naphazoline/pheniramine**"
+     ]
+    }
+   ],
+   "rows": [
+    [
+     "Mechanism",
+     [
+      "H1 inverse agonism, and in most a {{mast cell stabilization}}",
+      "Adrenergic receptor agonist: {{vasoconstriction}}"
+     ]
+    ],
+    [
+     "Symptoms",
+     [
+      "Edema, itch, inflammation, watery eyes",
+      "Redness; less leaking, so less edema"
+     ]
+    ],
+    [
+     "Examples",
+     [
+      "Alcaftadine, azelastine, bepotastine, cetirizine, epinastine, ketotifen, olopatadine",
+      "Naphazoline, oxymetazoline, tetrahydrozoline, brimonidine tartrate, phenylephrine"
+     ]
+    ]
+   ],
+   "src": "Eye slides 51–57, 59; T@46866, T@52690 11/17"
+  },
+  {
+   "id": "eye-dry-drugs",
+   "title": "The four prescription drugs for dry eye",
+   "cols": [
+    "Cyclosporine",
+    "Loteprednol",
+    "Lifitegrast",
+    "Intranasal varenicline"
+   ],
+   "path": [
+    {
+     "q": "Is it a nasal spray?",
+     "a": [
+      "Yes → **varenicline**",
+      "No → next question"
+     ]
+    },
+    {
+     "q": "Does it block adhesion of leukocytes, or change gene expression, or block IL-2 production?",
+     "a": [
+      "Adhesion (LFA-1 and ICAM-1) → **lifitegrast**",
+      "Gene expression → **loteprednol**",
+      "IL-2 production (calcineurin) → **cyclosporine**"
+     ]
+    }
+   ],
+   "rows": [
+    [
+     "Class",
+     [
+      "Calcineurin inhibitor",
+      "Corticosteroid",
+      "LFA-1 antagonist",
+      "Nicotinic acetylcholine receptor agonist"
+     ]
+    ],
+    [
+     "What it does",
+     [
+      "Inhibits production of IL-2",
+      "Anti-inflammatory; changes gene expression",
+      "Blocks LFA-1 binding to ICAM-1",
+      "Activates the trigeminal parasympathetic pathway; more basal tear film"
+     ]
+    ],
+    [
+     "Form",
+     [
+      "Topical",
+      "Topical",
+      "1 drop in each eye twice daily",
+      "Nasal spray, one in each nostril twice daily"
+     ]
+    ],
+    [
+     "Counseling or caution",
+     [
+      "Oral cyclosporine is a significant immunosuppressant",
+      "Immunosuppressant corticosteroid",
+      "Contacts out; back in after 15 minutes",
+      "Acquired night blindness (rare)"
+     ]
+    ]
+   ],
+   "src": "Eye slides 64–73; T@58455, T@63574, T@65117, T@67438 11/17"
+  }
+ ],
+ "pairs": [
+  {
+   "title": "Brimonidine or apraclonidine?",
+   "a": [
+    "Brimonidine",
+    "long-term choice; also increases uveoscleral outflow; neuroprotective; foreign body sensation and itching"
+   ],
+   "b": [
+    "Apraclonidine",
+    "prevents a rise in IOP after eye surgery; allergic type response limits long-term use"
+   ],
+   "same": "Both are alpha 2 agonists that decrease aqueous humor production.",
+   "profs": [
+    [
+     "sm",
+     "Brimonidine is the better long-term choice (slide 23; T@51660 11/13)."
+    ]
+   ]
+  },
+  {
+   "title": "Carbachol or pilocarpine?",
+   "a": [
+    "Carbachol",
+    "very potent; longer duration; less allergenic; used more"
+   ],
+   "b": [
+    "Pilocarpine",
+    "more potential for an allergic reaction in the eye"
+   ],
+   "same": "Both are direct-acting M3 agonists that increase outflow.",
+   "profs": [
+    [
+     "sm",
+     "Slide 31 lists both; the differences are from lecture (T@26432, T@26752 11/17)."
+    ]
+   ]
+  },
+  {
+   "title": "M3 agonist or acetylcholinesterase inhibitor?",
+   "a": [
+    "Carbachol, pilocarpine",
+    "act like acetylcholine at the M3 receptor"
+   ],
+   "b": [
+    "Echothiophate",
+    "irreversible acetylcholinesterase inhibitor: more acetylcholine; refractory cases; cataracts"
+   ],
+   "same": "Both parasympathomimetics contract the sphincter muscle and trabecular meshwork and increase outflow; both can cause diarrhea, salivation, sweating and rhinorrhea.",
+   "profs": [
+    [
+     "sm",
+     "Slides 31–35; T@23579, T@29170, T@29681 11/17."
+    ]
+   ]
+  },
+  {
+   "title": "Timolol or betaxolol?",
+   "a": [
+    "Timolol",
+    "nonspecific beta blocker; gel form once a day"
+   ],
+   "b": [
+    "Betaxolol",
+    "relatively beta 1 selective"
+   ],
+   "same": "Both block the beta receptor on the ciliary body and decrease inflow; efficacy is similar across the group.",
+   "profs": [
+    [
+     "sm",
+     "Slide 19; T@45583, T@46338 11/13. Levobunolol has some alpha-adrenergic effects; carteolol has intrinsic sympathomimetic activity."
+    ]
+   ]
+  },
+  {
+   "title": "Cyclosporine or tacrolimus: which protein does it bind?",
+   "a": [
+    "Cyclosporine",
+    "binds cyclophilin"
+   ],
+   "b": [
+    "Tacrolimus",
+    "binds FKBP"
+   ],
+   "same": "Each complex inhibits calcineurin, so IL-2 is not expressed; both act in the signal cascade.",
+   "profs": [
+    [
+     "sm",
+     "Slide 66; T@60561 11/17. She said she asked this on purpose because the proteins return in oncology."
+    ]
+   ]
+  },
+  {
+   "title": "Cetirizine or the other ophthalmic antihistamines?",
+   "a": [
+    "Cetirizine",
+    "H1 inverse agonist only; drowsiness; not suggested for prophylaxis"
+   ],
+   "b": [
+    "Alcaftadine, azelastine, bepotastine, epinastine, ketotifen, olopatadine",
+    "H1 inverse agonist plus mast cell stabilization"
+   ],
+   "same": "All are ophthalmic H1 inverse agonists that reduce itch, edema, inflammation and watery eyes.",
+   "profs": [
+    [
+     "sm",
+     "Slides 53–54; T@51757 11/17."
+    ]
+   ]
+  },
+  {
+   "title": "Oral or ophthalmic carbonic anhydrase inhibitor?",
+   "a": [
+    "Acetazolamide, methazolamide",
+    "oral; metabolic acidosis and diuresis effects"
+   ],
+   "b": [
+    "Dorzolamide, brinzolamide",
+    "ophthalmic; used first; burning, stinging, bitter taste"
+   ],
+   "same": "Both inhibit carbonic anhydrase and decrease aqueous humor production.",
+   "profs": [
+    [
+     "sm",
+     "Slides 28–29; T@58590, T@59086 11/13; T@22924 11/17."
+    ]
+   ]
+  }
+ ],
+ "photos": []
+}

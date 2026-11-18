@@ -467,6 +467,12 @@
    "sun"
   ],
   [
+   "gdeck-eye",
+   "ey",
+   "Guide heading: Dr. Smith, Eye",
+   "sun"
+  ],
+  [
    "gdeck-p5",
    "p5",
    "Guide heading: Dr. Patel, Dermatitis",
@@ -644,6 +650,24 @@
    "dzcases-dandruff",
    "p7",
    "Diseases: the practice patients of this card are Dr. Patel's cases from this deck",
+   "p8s"
+  ],
+  [
+   "dzcases-glaucoma",
+   "ey",
+   "Diseases: the practice patients of this card come from Dr. Smith's eye lectures (this deck)",
+   "p8s"
+  ],
+  [
+   "dzcases-allergic-conjunctivitis",
+   "ey",
+   "Diseases: the practice patients of this card come from Dr. Smith's eye lectures (this deck)",
+   "p8s"
+  ],
+  [
+   "dzcases-dry-eye",
+   "ey",
+   "Diseases: the practice patients of this card come from Dr. Smith's eye lectures (this deck)",
    "p8s"
   ],
   [
