@@ -47,6 +47,7 @@ Every update adds its bullets here in the same commit that makes the change.
 - Number tiles say what each number measures; her polls open as self-tests.
 
 ## 2026-11-14 (questions reworded)
+- Fingertip-unit blanks now ask for the tube size to dispense, rounded up (60 g, 100 g, 60 g).
 - 128 questions reworded: patient cases and direct questions replace "which statement is correct".
 - No question or answer choice refers to a slide or the lecture any more.
 
