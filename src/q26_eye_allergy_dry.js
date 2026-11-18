@@ -32,7 +32,7 @@ QUESTIONS.push(
  teach:"Slide 49: itching and secretion from the nasal mucosa; contraction of bronchial and gut smooth muscle but relaxation of small blood vessels; gastric acid secretion; edema and stimulation of sensory nerve endings; in the CNS H1 activation inhibits appetite and increases wakefulness (T@42105 11/17).",
  cite:"Lectures 9–10 (Smith_Eye_Glaucoma_AllergicConj_DryEye.pdf) slide 49; T@42105, T@42817 11/17"},
 
-{id:"EL-003", skill:"mech", prof:'Smith', tier:"hard", topic:"ey-ac", sub:"h1", concept:"ey-ac-inverse-agonism",
+{id:"EL-003", skill:"mech", prof:'Smith', tier:'new', topic:"ey-ac", sub:"h1", concept:"ey-ac-inverse-agonism",
  tags:['two-facts', 'mechanism'], source:'both',
  stem:"What are the two actions of an ophthalmic H1 inverse agonist at the H1 receptor?",
  options:[
@@ -65,7 +65,7 @@ QUESTIONS.push(
  teach:"Slide 51: mast cell stabilization is anti-inflammatory (less cytokine secretion, fewer adhesion molecules, less eosinophil infiltration), acts through H1 dependent and independent mechanisms that are still unclear, and may be more effective in topical treatment.",
  cite:"Lectures 9–10 (Smith_Eye_Glaucoma_AllergicConj_DryEye.pdf) slide 51; T@45806, T@46013 11/17"},
 
-{id:"EL-006", skill:"case", prof:'Smith', tier:"hard", topic:"ey-ac", sub:"h1", concept:"ey-ac-prophylaxis-drug",
+{id:"EL-006", skill:"case", prof:'Smith', tier:'new', topic:"ey-ac", sub:"h1", concept:"ey-ac-prophylaxis-drug",
  tags:['case', 'two-facts'], source:'both',
  stem:"A patient has itchy eyes every January when cedar pollen arrives. It is mid-December. Which ophthalmic drug should she start now so that histamine release is prevented?",
  options:[
@@ -76,7 +76,7 @@ QUESTIONS.push(
  teach:"Patients with predictable seasonal allergic conjunctivitis may start a drug with mast cell stabilization before the allergen season (cedar blows in January in San Antonio), so histamine release is prevented and H1 inverse agonism is present if some is still released (T@46586, T@46757 11/17).",
  cite:"Lectures 9–10 (Smith_Eye_Glaucoma_AllergicConj_DryEye.pdf) slides 51, 54; T@46586, T@46757 11/17"},
 
-{id:"EL-007", skill:"mech", prof:'Smith', tier:"hard", topic:"ey-ac", sub:"h1", concept:"ey-ac-two-mechanisms",
+{id:"EL-007", skill:"mech", prof:'Smith', tier:'new', topic:"ey-ac", sub:"h1", concept:"ey-ac-two-mechanisms",
  tags:['two-facts', 'mechanism'], source:'both',
  stem:"Why are ophthalmic antihistamines with mast cell stabilization more effective topically than those without it?",
  options:[
@@ -98,7 +98,7 @@ QUESTIONS.push(
  teach:"Slides 53-54: alcaftadine, azelastine, bepotastine, epinastine, ketotifen and olopatadine have mast cell stabilization; cetirizine does not and is not the one suggested for prophylaxis (T@51757 11/17).",
  cite:"Lectures 9–10 (Smith_Eye_Glaucoma_AllergicConj_DryEye.pdf) slides 53, 54; T@51757, T@51813 11/17"},
 
-{id:"EL-010", skill:"case", prof:'Smith', tier:"hard", topic:"ey-ac", sub:"h1", concept:"ey-ac-epinastine-eyelid",
+{id:"EL-010", skill:"case", prof:'Smith', tier:'new', topic:"ey-ac", sub:"h1", concept:"ey-ac-epinastine-eyelid",
  tags:['case', 'two-facts'], source:'both',
  stem:"A patient with allergic conjunctivitis is most bothered by swollen eyelids. Which drug has an added receptor activity that may reduce eyelid edema?",
  options:[
@@ -142,7 +142,7 @@ QUESTIONS.push(
  teach:"Slides 53-54: azelastine and olopatadine are the two ophthalmic antihistamines that are also nasal sprays for allergic rhinitis; azelastine is the one with some anticholinergic activity and CNS penetration (T@49943 11/17).",
  cite:"Lectures 9–10 (Smith_Eye_Glaucoma_AllergicConj_DryEye.pdf) slide 53; T@49943 11/17"},
 
-{id:"EL-015", skill:"adverse", prof:'Smith', tier:"hard", topic:"ey-ac", sub:"h1", concept:"ey-ac-cetirizine-drowsy",
+{id:"EL-015", skill:"adverse", prof:'Smith', tier:'new', topic:"ey-ac", sub:"h1", concept:"ey-ac-cetirizine-drowsy",
  tags:['two-facts', 'case'], source:'both',
  stem:"A patient using an ophthalmic antihistamine with minimal anticholinergic effects and negligible CNS penetration still becomes drowsy. Which drug is it?",
  options:[
@@ -153,7 +153,7 @@ QUESTIONS.push(
  teach:"Slide 53 and T@50609 11/17: cetirizine is a second-generation antihistamine, usually thought of as non-drowsy, but it can make sensitive patients drowsy even with negligible CNS penetration.",
  cite:"Lectures 9–10 (Smith_Eye_Glaucoma_AllergicConj_DryEye.pdf) slide 53; T@50356, T@50609 11/17"},
 
-{id:"EL-016", skill:"adverse", prof:'Smith', tier:"hard", topic:"ey-ac", sub:"hist", concept:"ey-ac-h1-cns",
+{id:"EL-016", skill:"adverse", prof:'Smith', tier:'new', topic:"ey-ac", sub:"hist", concept:"ey-ac-h1-cns",
  tags:['two-facts', 'mechanism'], source:'both',
  stem:"H1 activation in the CNS increases wakefulness. Which adverse effect is expected when an H1 inverse agonist reaches the CNS?",
  options:[
@@ -175,7 +175,7 @@ QUESTIONS.push(
  teach:"Slide 56 and T@52180 11/17: alpha 2 agonists agonize adrenergic receptors in the eye and nose and cause vasoconstriction, which reduces the redness (and some leaking and edema).",
  cite:"Lectures 9–10 (Smith_Eye_Glaucoma_AllergicConj_DryEye.pdf) slide 56; T@52180, T@52690 11/17"},
 
-{id:"EL-019", skill:"mech", prof:'Smith', tier:"hard", topic:"ey-ac", sub:"a2", concept:"ey-ac-a2-edema",
+{id:"EL-019", skill:"mech", prof:'Smith', tier:'new', topic:"ey-ac", sub:"a2", concept:"ey-ac-a2-edema",
  tags:['two-facts', 'mechanism'], source:'transcript',
  stem:"Alpha 2 agonist drops do not block histamine receptors. Why do they still reduce the swelling of allergic conjunctivitis?",
  options:[
@@ -198,7 +198,7 @@ QUESTIONS.push(
  teach:"Slide 57 lists naphazoline, oxymetazoline, tetrahydrozoline, brimonidine tartrate and phenylephrine as alpha 2 agonists (T@52180 11/17). They differ little from one another as topical drops for itchy eyes (T@53217 11/17).",
  cite:"Lectures 9–10 (Smith_Eye_Glaucoma_AllergicConj_DryEye.pdf) slide 57; T@52180, T@53217 11/17"},
 
-{id:"EL-021", skill:"mech", prof:'Smith', tier:"hard", topic:"ey-ac", sub:"a2", concept:"ey-ac-brimonidine-two-uses",
+{id:"EL-021", skill:"mech", prof:'Smith', tier:'new', topic:"ey-ac", sub:"a2", concept:"ey-ac-brimonidine-two-uses",
  tags:['two-facts', 'inflow'], source:'both',
  stem:"Brimonidine is an alpha 2 agonist used in both glaucoma and allergic conjunctivitis. How does its effect differ between the two?",
  options:[
@@ -209,7 +209,7 @@ QUESTIONS.push(
  teach:"The same alpha 2 receptor agonism gives different benefits by tissue: in the ciliary body it lowers aqueous humor inflow (slide 22), in the conjunctival and nasal vessels it causes vasoconstriction (slides 56-57).",
  cite:"Lectures 9–10 (Smith_Eye_Glaucoma_AllergicConj_DryEye.pdf) slides 22, 57; T@52180 11/17"},
 
-{id:"EL-022", skill:"case", prof:'Smith', tier:"hard", topic:"ey-ac", sub:"a2", concept:"ey-ac-combo",
+{id:"EL-022", skill:"case", prof:'Smith', tier:'new', topic:"ey-ac", sub:"a2", concept:"ey-ac-combo",
  tags:['case', 'two-facts'], source:'both',
  stem:"A patient with itchy, red eyes wants one bottle instead of two. What does each component of naphazoline/pheniramine contribute?",
  options:[
@@ -231,7 +231,7 @@ QUESTIONS.push(
  teach:"Slide 52: antihistamines reduce edema, itch, inflammation and watery eyes. Slide 56: alpha 2 agonists reduce redness by vasoconstriction.",
  cite:"Lectures 9–10 (Smith_Eye_Glaucoma_AllergicConj_DryEye.pdf) slides 52, 56; T@47759, T@52690 11/17"},
 
-{id:"EL-024", skill:"mech", prof:'Smith', tier:"hard", topic:"ey-ac", sub:"h1", concept:"ey-ac-timing",
+{id:"EL-024", skill:"mech", prof:'Smith', tier:'new', topic:"ey-ac", sub:"h1", concept:"ey-ac-timing",
  tags:['two-facts', 'mechanism'], source:'transcript',
  stem:"A mast cell stabilizing antihistamine is started before the season rather than after symptoms begin. What does the earlier start allow?",
  options:[
@@ -253,7 +253,7 @@ QUESTIONS.push(
  teach:"Slides 53-54: azelastine and olopatadine are also nasal sprays for allergic rhinitis. Azelastine helps a stuffy nose (T@49943 11/17).",
  cite:"Lectures 9–10 (Smith_Eye_Glaucoma_AllergicConj_DryEye.pdf) slides 53, 54; T@49943 11/17"},
 
-{id:"EL-028", skill:"mech", prof:'Smith', tier:"hard", topic:"ey-ac", sub:"h1", concept:"ey-ac-anti-inflam",
+{id:"EL-028", skill:"mech", prof:'Smith', tier:'new', topic:"ey-ac", sub:"h1", concept:"ey-ac-anti-inflam",
  tags:['two-facts', 'mechanism'], source:'slide',
  stem:"Which effects contribute to the anti-inflammatory properties of mast cell stabilization?",
  options:[
@@ -264,7 +264,7 @@ QUESTIONS.push(
  teach:"Slide 51: mast cell stabilization lowers cytokine secretion, adhesion molecule expression and eosinophil infiltration, which is why it is anti-inflammatory.",
  cite:"Lectures 9–10 (Smith_Eye_Glaucoma_AllergicConj_DryEye.pdf) slide 51; T@45389 11/17"},
 
-{id:"EL-031", skill:"case", prof:'Smith', tier:"hard", topic:"ey-ac", sub:"a2", concept:"ey-ac-a2-no-itch",
+{id:"EL-031", skill:"case", prof:'Smith', tier:'new', topic:"ey-ac", sub:"a2", concept:"ey-ac-a2-no-itch",
  tags:['case', 'two-facts'], source:'both',
  stem:"A patient with allergic conjunctivitis uses naphazoline drops. The redness improves but the itching continues. Which explanation fits?",
  options:[
@@ -275,7 +275,7 @@ QUESTIONS.push(
  teach:"Slide 52: antihistamines relieve edema, itch, inflammation and watery eyes. Slide 56: alpha 2 agonists relieve redness. This is why a combination product exists (slide 59).",
  cite:"Lectures 9–10 (Smith_Eye_Glaucoma_AllergicConj_DryEye.pdf) slides 52, 56, 57; T@52690 11/17"},
 
-{id:"EL-033", skill:"case", prof:'Smith', tier:"hard", topic:"ey-ac", sub:"h1", concept:"ey-ac-cetirizine-prophylaxis",
+{id:"EL-033", skill:"case", prof:'Smith', tier:'new', topic:"ey-ac", sub:"h1", concept:"ey-ac-cetirizine-prophylaxis",
  tags:['case', 'two-facts'], source:'both',
  stem:"Why is cetirizine a poor choice for a patient who wants to prevent seasonal symptoms before the pollen arrives?",
  options:[
@@ -286,7 +286,7 @@ QUESTIONS.push(
  teach:"T@46757 and T@51813 11/17: drugs with mast cell stabilization are used prophylactically; cetirizine has none, so it is not suggested for that purpose.",
  cite:"Lectures 9–10 (Smith_Eye_Glaucoma_AllergicConj_DryEye.pdf) slide 53; T@46757, T@51813 11/17"},
 
-{id:"EL-037", skill:"mech", prof:'Smith', tier:"hard", topic:"ey-ac", sub:"a2", concept:"ey-ac-oppose-histamine-vessels",
+{id:"EL-037", skill:"mech", prof:'Smith', tier:'new', topic:"ey-ac", sub:"a2", concept:"ey-ac-oppose-histamine-vessels",
  tags:['two-facts', 'mechanism'], source:'both',
  stem:"Histamine relaxes small blood vessels and promotes edema in the conjunctiva. Which drug action opposes these effects directly?",
  options:[
@@ -354,7 +354,7 @@ QUESTIONS.push(
  teach:"Slide 62: antihistamines, decongestants, antidepressants and hormone replacement therapy may cause dry eye (T@57090 11/17).",
  cite:"Lectures 9–10 (Smith_Eye_Glaucoma_AllergicConj_DryEye.pdf) slide 62; T@57090 11/17"},
 
-{id:"ED-004", skill:"case", prof:'Smith', tier:"hard", topic:"ey-de", sub:"what", concept:"ey-de-med-induced",
+{id:"ED-004", skill:"case", prof:'Smith', tier:'new', topic:"ey-de", sub:"what", concept:"ey-de-med-induced",
  tags:['case', 'two-facts'], source:'both',
  stem:"A patient who takes an antihistamine and a decongestant has dry, uncomfortable eyes that are not red. Which explanation fits?",
  options:[
@@ -409,7 +409,7 @@ QUESTIONS.push(
  teach:"Slide 66 and T@60981 11/17: tacrolimus binds FKBP, cyclosporine binds cyclophilin. A form of tacrolimus (pimecrolimus) was taught for dermatitis.",
  cite:"Lectures 9–10 (Smith_Eye_Glaucoma_AllergicConj_DryEye.pdf) slide 66; T@60561, T@60981 11/17"},
 
-{id:"ED-010", skill:"mech", prof:'Smith', tier:"hard", topic:"ey-de", sub:"cni", concept:"ey-de-signal-cascade",
+{id:"ED-010", skill:"mech", prof:'Smith', tier:'new', topic:"ey-de", sub:"cni", concept:"ey-de-signal-cascade",
  tags:['two-facts', 'mechanism'], source:'both',
  stem:"Cyclosporine lowers IL-2 production without blocking antigen presentation or the co-signal. Where in T-cell signaling does it act?",
  options:[
@@ -420,7 +420,7 @@ QUESTIONS.push(
  teach:"Slide 65 and T@58946 11/17: calcineurin inhibitors act in the signal cascade, after signals 1 and 2 and before the IL-2 exits the cell for signal 3.",
  cite:"Lectures 9–10 (Smith_Eye_Glaucoma_AllergicConj_DryEye.pdf) slide 65; T@58946, T@59195 11/17"},
 
-{id:"ED-011", skill:"mech", prof:'Smith', tier:"hard", topic:"ey-de", sub:"cni", concept:"ey-de-nfat-step",
+{id:"ED-011", skill:"mech", prof:'Smith', tier:'new', topic:"ey-de", sub:"cni", concept:"ey-de-nfat-step",
  tags:['mechanism', 'two-facts'], source:'both',
  stem:"Once activated by calcium and calmodulin, what does calcineurin do?",
  options:[
@@ -431,7 +431,7 @@ QUESTIONS.push(
  teach:"Slide 66 and T@60171 11/17: calcium and calmodulin activate calcineurin, which dephosphorylates NFAT; NFAT then expresses IL-2. The drug complexes block calcineurin.",
  cite:"Lectures 9–10 (Smith_Eye_Glaucoma_AllergicConj_DryEye.pdf) slide 66; T@60171 11/17"},
 
-{id:"ED-012", skill:"mech", prof:'Smith', tier:"hard", topic:"ey-de", sub:"cni", concept:"ey-de-nfat-blocked",
+{id:"ED-012", skill:"mech", prof:'Smith', tier:'new', topic:"ey-de", sub:"cni", concept:"ey-de-nfat-blocked",
  tags:['two-facts', 'mechanism'], source:'both',
  stem:"When the cyclosporine and cyclophilin complex inhibits calcineurin, what happens to NFAT?",
  options:[
@@ -442,7 +442,7 @@ QUESTIONS.push(
  teach:"Slides 66-67: inhibiting calcineurin leaves NFAT inactive, so IL-2 production falls, which reduces T-cell proliferation and ocular inflammation.",
  cite:"Lectures 9–10 (Smith_Eye_Glaucoma_AllergicConj_DryEye.pdf) slide 66; T@60171, T@60536 11/17"},
 
-{id:"ED-013", skill:"adverse", prof:'Smith', tier:"hard", topic:"ey-de", sub:"cni", concept:"ey-de-oral-risk",
+{id:"ED-013", skill:"adverse", prof:'Smith', tier:'new', topic:"ey-de", sub:"cni", concept:"ey-de-oral-risk",
  tags:['two-facts', 'case'], source:'transcript',
  stem:"Which risk of oral cyclosporine limits its use for dry eye?",
  options:[
@@ -497,7 +497,7 @@ QUESTIONS.push(
  teach:"Slide 71 and T@64164 11/17: lifitegrast is a lymphocyte function-associated antigen 1 (LFA-1) antagonist. LFA-1 is on leukocytes; the drug blocks its interaction with ICAM-1.",
  cite:"Lectures 9–10 (Smith_Eye_Glaucoma_AllergicConj_DryEye.pdf) slide 71; T@64164 11/17"},
 
-{id:"ED-019", skill:"mech", prof:'Smith', tier:"hard", topic:"ey-de", sub:"lfa", concept:"ey-de-lfa-cytokines",
+{id:"ED-019", skill:"mech", prof:'Smith', tier:'new', topic:"ey-de", sub:"lfa", concept:"ey-de-lfa-cytokines",
  tags:['two-facts', 'mechanism'], source:'both',
  stem:"Why does an LFA-1 antagonist lower cytokine secretion in dry eye?",
  options:[
@@ -519,7 +519,7 @@ QUESTIONS.push(
  teach:"Slide 71: lifitegrast is one drop in each eye twice daily, about every 12 hours. Intranasal varenicline is also twice daily, 12 hours apart, but as a nasal spray (slide 73).",
  cite:"Lectures 9–10 (Smith_Eye_Glaucoma_AllergicConj_DryEye.pdf) slide 71; T@65106 11/17"},
 
-{id:"ED-021", skill:"counsel", prof:'Smith', tier:"hard", topic:"ey-de", sub:"lfa", concept:"ey-de-contacts",
+{id:"ED-021", skill:"counsel", prof:'Smith', tier:'new', topic:"ey-de", sub:"lfa", concept:"ey-de-contacts",
  tags:['case', 'counsel'], source:'both',
  stem:"A contact lens wearer is starting lifitegrast. What should the pharmacist advise?",
  options:[
@@ -530,7 +530,7 @@ QUESTIONS.push(
  teach:"Slide 71 and T@65648 11/17: lifitegrast can discolor contact lenses. Lenses are removed before use and reinserted after a wait of about 15 minutes while the drug is absorbed.",
  cite:"Lectures 9–10 (Smith_Eye_Glaucoma_AllergicConj_DryEye.pdf) slide 71; T@65648, T@66117 11/17"},
 
-{id:"ED-022", skill:"counsel", prof:'Smith', tier:"hard", topic:"ey-de", sub:"lfa", concept:"ey-de-discolor",
+{id:"ED-022", skill:"counsel", prof:'Smith', tier:'new', topic:"ey-de", sub:"lfa", concept:"ey-de-discolor",
  tags:['two-facts', 'counsel'], source:'both',
  stem:"Which adverse effect of lifitegrast do the instructions to remove contacts and wait 15 minutes help prevent?",
  options:[
@@ -563,7 +563,7 @@ QUESTIONS.push(
  teach:"Slide 73 and T@67641 11/17: varenicline binds nicotinic receptors in the nasal cavity, activates the trigeminal nerve and its parasympathetic pathway, and increases production of the basal tear film.",
  cite:"Lectures 9–10 (Smith_Eye_Glaucoma_AllergicConj_DryEye.pdf) slide 73; T@67553, T@67641 11/17"},
 
-{id:"ED-025", skill:"mech", prof:'Smith', tier:"hard", topic:"ey-de", sub:"var", concept:"ey-de-varenicline-route",
+{id:"ED-025", skill:"mech", prof:'Smith', tier:'new', topic:"ey-de", sub:"var", concept:"ey-de-varenicline-route",
  tags:['two-facts', 'mechanism'], source:'transcript',
  stem:"Why is varenicline sprayed into the nose to treat dry eye?",
  options:[
@@ -598,7 +598,7 @@ QUESTIONS.push(
 
 {id:"ED-028", skill:"adverse", prof:'Smith', tier:"new", topic:"ey-de", sub:"var", concept:"ey-de-varenicline-rare",
  tags:['side-effect'], source:'both',
- stem:"Which adverse effect of intranasal varenicline is listed as rare rather than infrequent?",
+ stem:"Which adverse effect of intranasal varenicline is rare rather than infrequent?",
  options:[
   {t:"Blurred vision", correct:false, why:"Slide 73: blurred vision is infrequent."},
   {t:"Acquired night blindness", correct:true, why:"Slide 73: acquired night blindness (rare). A side effect for which the patient should stop the drug (T@68262 11/17)."},
@@ -629,7 +629,7 @@ QUESTIONS.push(
  teach:"T@55623 and T@57548 11/17: the drugs on these slides come after OTC lubricating products such as artificial tears.",
  cite:"Lectures 9–10 (Smith_Eye_Glaucoma_AllergicConj_DryEye.pdf) slide 62; T@55623, T@55892, T@57548 11/17"},
 
-{id:"ED-034", skill:"mech", prof:'Smith', tier:"hard", topic:"ey-de", sub:"lfa", concept:"ey-de-cyclo-vs-lifi",
+{id:"ED-034", skill:"mech", prof:'Smith', tier:'new', topic:"ey-de", sub:"lfa", concept:"ey-de-cyclo-vs-lifi",
  tags:['two-facts', 'mechanism'], source:'both',
  stem:"Cyclosporine and lifitegrast both reduce inflammation in dry eye. How do their targets differ?",
  options:[
@@ -652,7 +652,7 @@ QUESTIONS.push(
  teach:"Slide 62: also called keratoconjunctivitis sicca; prevalence 7% to 33%; risk factors increasing age and female gender; onset often unpredictable and may correlate with environment; medications may be causative.",
  cite:"Lectures 9–10 (Smith_Eye_Glaucoma_AllergicConj_DryEye.pdf) slide 62; T@56358, T@56713, T@57257 11/17"},
 
-{id:"ED-041", skill:"mech", prof:'Smith', tier:"hard", topic:"ey-de", sub:"cni", concept:"ey-de-cni-shared",
+{id:"ED-041", skill:"mech", prof:'Smith', tier:'new', topic:"ey-de", sub:"cni", concept:"ey-de-cni-shared",
  tags:['two-facts', 'cumulative'], source:'both',
  stem:"Tacrolimus (taught for dermatitis) and cyclosporine are both calcineurin inhibitors. What do they share mechanistically?",
  options:[
