@@ -13,9 +13,11 @@
        ask for the lesser route.
    (3) Slide 41 says RhoA inhibition relaxes trabecular meshwork tone; the lecture (T@35676) says "not a muscular relaxation": the
        meshwork is less stiff because fibrosis-related proteins form less. Items use the shared wording (less stiff, lower resistance).
-   (4) Slide 33 says "supraoptic headache"; the transcript says supraorbital pain around the eye (T@28186). Items say pain around the eye.
+   (4) Slide 33 says "temporal or supraoptic headache"; the transcript says "supra. Uh, optic headache, so around their eyes gets painful" (T@28186). Items say pain around the eyes and explain it as ciliary muscle spasm.
    (5) Slide 35 (AChE inhibitor) lists no floaters; slide 33 (M3 agonists) does. No item keys floaters for the AChE inhibitor.
-   (6) Slide 38 prints "Travaprost"; the drug chart prints travoprost, used here.
+   (6) Slide 38 and the lecture print "Travaprost"; the drug chart prints travoprost, used here (EO-025 notes the slide spelling).
+   (7) Counseling on compressing the eyelid corner is handwriting on slide 5, not typed slide text; EO-011 cites the transcript (T@30444 11/17, T@48290 and T@16035 11/13).
+   (8) The nitric oxide donor remark for latanoprostene bunod is handwriting on slide 38; EO-022 cites T@33164 only.
    Left out: which prostaglandin agonist is Latisse (neither slide nor lecture names the drug; T@34104 says the class is sold as
    Latisse); why dim-light vision is poor with M3 agonists (no source gives a reason). */
 (() => {
@@ -81,7 +83,7 @@ QUESTIONS.push(
  stem:'What is the mechanism by which echothiophate increases aqueous humor outflow?',
  options:[
   {t:'It reversibly inhibits acetylcholinesterase, so the trabecular meshwork relaxes', correct:false, why:'Slide 34: the inhibition is irreversible, and the result is contraction, not relaxation, of the meshwork.'},
-  {t:'It irreversibly inhibits acetylcholinesterase, so acetylcholine acts on M3 and the meshwork contracts', correct:true, why:'Slide 34 and T@29179: "irreversible inhibitors of the enzyme ... more acetylcholine agonizing the M3 receptors, causing the contraction of that trabecular meshwork increasing outflow".'},
+  {t:'It irreversibly inhibits acetylcholinesterase, so the meshwork contracts', correct:true, why:'Slide 34 and T@29179: "irreversible inhibitors of the enzyme ... more acetylcholine agonizing the M3 receptors, causing the contraction of that trabecular meshwork increasing outflow".'},
   {t:'It irreversibly inhibits RhoA kinase, so the meshwork is less stiff', correct:false, why:'Slide 41: RhoA kinase is the target of netarsudil.'},
   {t:'It stimulates PGF2 alpha receptors, so the ciliary muscle relaxes', correct:false, why:'Slide 37: PGF2 alpha receptors are the target of prostaglandin agonists.'}],
  teach:'Slide 34: irreversible acetylcholinesterase inhibitor; more acetylcholine; contraction of the muscle and trabecular meshwork; more outflow.',
@@ -102,11 +104,11 @@ QUESTIONS.push(
  tags:['two-facts','side-effect'], source:'transcript',
  stem:'Why is echothiophate chosen less often than the M3 agonists in a patient who already has glaucoma?',
  options:[
-  {t:'It causes metabolic acidosis through renal bicarbonate loss', correct:false, why:'Slide 29: systemic acidosis is the side effect of carbonic anhydrase inhibitors.'},
+  {t:'It causes metabolic acidosis through renal bicarbonate loss', correct:false, why:'Slide 29 (systemic acidosis) and T@22964 ("systemic metabolic acidosis"): the side effect of carbonic anhydrase inhibitors.'},
   {t:'It darkens the iris, which makes later pressure readings less reliable', correct:false, why:'Slide 39: iris darkening is a prostaglandin agonist effect, and no source ties it to pressure readings.'},
   {t:'It reverses partly, so its effect fades within a few hours', correct:false, why:'Slide 34: echothiophate is an irreversible inhibitor; no source describes a short effect.'},
-  {t:'It can cause cataracts and is more irritating to the eye than pilocarpine', correct:true, why:'T@29697: "you don\'t want to be causing cataracts in your patients that already have glaucoma"; T@29779: the allergic-type reaction with burning and stinging can be greater than with pilocarpine (T@26954 adds the potential for a lot of eye irritation).'}],
- teach:'Echothiophate is the last-line parasympathomimetic because of cataracts and a stronger allergic-type reaction (T@29697 and T@29779).',
+  {t:'It can cause cataracts and is more irritating to the eye than pilocarpine', correct:true, why:'T@29697: "you don\'t want to be causing cataracts in your patients that already have glaucoma"; T@29900: the allergic-type reaction with burning and stinging can be greater than with pilocarpine (T@26954 adds the potential for a lot of eye irritation).'}],
+ teach:'Echothiophate is the last-line parasympathomimetic because of cataracts and a stronger allergic-type reaction (T@29697 and T@29900).',
  cite:CITE('35','29697')},
 
 {id:'EO-009', skill:'patho', prof:'Smith', tier:'new', topic:'ey-out', sub:'m3', concept:'ey-m3-ciliary-spasm',
@@ -117,7 +119,7 @@ QUESTIONS.push(
   {t:'Stimulated M3 receptors contract the brow muscles above the eye', correct:false, why:'T@28186: "It\'s not that you\'re contracting muscles up here, it\'s the contraction of the muscles in the eye."'},
   {t:'Blocked beta receptors constrict the blood vessels of the ciliary body', correct:false, why:'Carbachol is an M3 agonist, not a beta receptor antagonist; beta receptor antagonists reduce aqueous production (slide 18).'},
   {t:'Relaxation of the ciliary muscle pulls it away from the sclera', correct:false, why:'T@31289: relaxation of the ciliary muscle is the action of prostaglandin agonists and is not given as a cause of pain.'}],
- teach:'Contraction is the desired action of M3 agonists and the source of their painful ciliary spasm and headache around the eyes (slide 33; the slide says supraoptic, T@28186 describes pain around the eyes), blurred vision and floaters.',
+ teach:'Contraction is the desired action of M3 agonists and the source of their painful ciliary spasm and headache around the eyes (slide 33 prints supraoptic headache; T@28186 describes pain around the eyes), blurred vision and floaters.',
  cite:CITE('33','28186')},
 
 {id:'EO-010', skill:'patho', prof:'Smith', tier:'new', topic:'ey-out', sub:'m3', concept:'ey-m3-systemic-why',
@@ -333,10 +335,10 @@ QUESTIONS.push(
  tags:['pathophysiology','two-facts'], source:'both',
  stem:'In glaucoma, what is the proposed role of RhoA kinase activity in the trabecular meshwork?',
  options:[
-  {t:'It increases contractile tone and fibrosis-related proteins, making the meshwork stiffer', correct:true, why:'Slide 41: RhoA may increase contractile tone, causing trabecular meshwork stiffness, and fibrosis-related protein deposits. T@35380: its kinasing is "making that meshwork stiffer".'},
+  {t:'It raises contractile tone and fibrosis-related proteins, stiffening the meshwork', correct:true, why:'Slide 41: RhoA may increase contractile tone, causing trabecular meshwork stiffness, and fibrosis-related protein deposits. T@35380: its kinasing is "making that meshwork stiffer".'},
   {t:'It relaxes the meshwork, which closes the openings and slows drainage', correct:false, why:'Slide 41: RhoA activity increases tone and stiffness; relaxation of the meshwork is what its inhibition produces.'},
   {t:'It increases production of aqueous humor by the ciliary epithelium', correct:false, why:'Slide 41 concerns the outflow resistance of the meshwork, not production.'},
-  {t:'It lowers permeability of the cornea to aqueous humor', correct:false, why:'Slide 41 mentions the permeability of the cells lining Schlemm\'s canal, not the cornea.'}],
+  {t:'It lowers the permeability of the corneal endothelium to aqueous humor', correct:false, why:'Slide 41 mentions the permeability of the cells lining Schlemm\'s canal, not the cornea.'}],
  teach:'RhoA activity raises meshwork stiffness; inhibiting it lowers outflow resistance.',
  cite:CITE('41','35380')},
 
@@ -344,7 +346,7 @@ QUESTIONS.push(
  tags:['mechanism','outflow'], source:'both',
  stem:'How does inhibiting RhoA kinase lower intraocular pressure?',
  options:[
-  {t:'It lowers trabecular outflow resistance by relaxing tone and reducing fibrosis-related protein deposits', correct:true, why:'Slide 41: lower trabecular outflow resistance by relaxing tone, decreasing fibrosis-related protein deposits and changing the permeability of cells lining Schlemm\'s canal. T@35676.'},
+  {t:'It relaxes meshwork tone and reduces fibrosis-related protein deposits', correct:true, why:'Slide 41: lower trabecular outflow resistance by relaxing tone, decreasing fibrosis-related protein deposits and changing the permeability of cells lining Schlemm\'s canal. T@35676.'},
   {t:'It raises trabecular outflow resistance so the ciliary muscle must relax', correct:false, why:'Slide 41: outflow resistance is lowered, not raised.'},
   {t:'It reduces production of sodium and bicarbonate in the ciliary body', correct:false, why:'Slide 26: this is the effect of carbonic anhydrase inhibitors.'},
   {t:'It relaxes the ciliary muscle so uveoscleral outflow increases', correct:false, why:'Slide 37: this is the prostaglandin agonist effect; netarsudil acts on the meshwork and Schlemm\'s canal (slide 41).'}],
@@ -368,7 +370,7 @@ QUESTIONS.push(
  options:[
   {t:'Relaxation of vascular smooth muscle, causing vasodilation', correct:true, why:'Slide 43: conjunctival hyperemia (53%), "an extension of the pharmacologic action, which causes vasodilation by relaxing vascular smooth muscle". T@36856.'},
   {t:'Contraction of vascular smooth muscle causes ischemia of the conjunctiva', correct:false, why:'Slide 43: the cause given is relaxation and vasodilation.'},
-  {t:'An allergic-type reaction from the drug acting as an acetylcholinesterase inhibitor', correct:false, why:'Slide 41: netarsudil inhibits RhoA kinase; the allergic-type reaction belongs to echothiophate (T@29779).'},
+  {t:'An allergic-type reaction from the drug acting as an acetylcholinesterase inhibitor', correct:false, why:'Slide 41: netarsudil inhibits RhoA kinase; the allergic-type reaction belongs to echothiophate (T@29900).'},
   {t:'Increased nitric oxide release from a metabolite of the drug in the conjunctiva', correct:false, why:'T@33164: the nitric oxide donor is latanoprostene bunod, not netarsudil.'}],
  teach:'The most common effect of netarsudil is conjunctival hyperemia (53%).',
  cite:CITE('43','36856')},

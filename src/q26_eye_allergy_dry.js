@@ -618,17 +618,6 @@ QUESTIONS.push(
  teach:"Cyclosporine, loteprednol and lifitegrast reduce the inflammation that suppresses tear production; varenicline raises tear production through the trigeminal parasympathetic pathway (slides 64-73).",
  cite:"Lectures 9–10 (Smith_Eye_Glaucoma_AllergicConj_DryEye.pdf) slide 73; T@67641 11/17"},
 
-{id:"ED-033", skill:"case", prof:'Smith', tier:"new", topic:"ey-de", sub:"what", concept:"ey-de-first-line",
- tags:['case'], source:'transcript',
- stem:"A patient with dry eye has tried no product so far. Which type is tried before a prescription anti-inflammatory drug?",
- options:[
-  {t:"Topical cyclosporine to lower IL-2 production", correct:false, why:"Cyclosporine is one of the prescription drugs used after OTC lubricating products such as artificial tears (T@57257, T@57548 11/17)."},
-  {t:"Intranasal varenicline to raise basal tear film", correct:false, why:"A prescription nasal spray; the prescription drugs are usually not first-line approaches (T@55623 11/17)."},
-  {t:"Topical loteprednol to lower inflammatory genes", correct:false, why:"A prescription corticosteroid; the prescription drugs are usually not first-line approaches (T@55623 11/17)."},
-  {t:"OTC lubricating drops, such as artificial tears", correct:true, why:"T@55623 11/17: patients first use lubricating drops, which are physical lubricants; the prescription drugs are usually not first-line approaches (T@55892)."}],
- teach:"T@55623 and T@57548 11/17: the drugs on these slides come after OTC lubricating products such as artificial tears.",
- cite:"Lectures 9–10 (Smith_Eye_Glaucoma_AllergicConj_DryEye.pdf); T@55623, T@55892, T@57257, T@57548 11/17"},
-
 {id:"ED-034", skill:"mech", prof:'Smith', tier:'new', topic:"ey-de", sub:"lfa", concept:"ey-de-cyclo-vs-lifi",
  tags:['two-facts', 'mechanism'], source:'both',
  stem:"Cyclosporine and lifitegrast both reduce inflammation in dry eye. How do their targets differ?",
