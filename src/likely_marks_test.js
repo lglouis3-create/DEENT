@@ -33,7 +33,9 @@ const noScroll = p => p.evaluate(() => document.documentElement.scrollWidth <= i
     const count = (v, sel) => p.evaluate(([v, sel]) => document.querySelectorAll('#v-' + v + ' ' + sel).length, [v, sel]);
     const vis = (v, sel) => p.evaluate(([v, sel]) => [...document.querySelectorAll('#v-' + v + ' ' + sel)].filter(e => !e.closest('[data-lkh]')).length, [v, sel]);
     const text = sel => p.evaluate(s => { const e = document.querySelector(s); return e ? e.textContent.trim() : ''; }, sel);
-    const mark = sel => p.evaluate(sel => { document.querySelectorAll('[data-tfirst]').forEach(e => e.removeAttribute('data-tfirst')); const e = [...document.querySelectorAll(sel)].find(x => x.checkVisibility ? x.checkVisibility() : x.getClientRects().length); if (e) e.setAttribute('data-tfirst', ''); return !!e; }, sel);
+    const mark = sel => p.evaluate(sel => { document.querySelectorAll('[data-tfirst]').forEach(e => e.removeAttribute('data-tfirst')); const all = [...document.querySelectorAll(sel)], vis = x => x.checkVisibility ? x.checkVisibility() : x.getClientRects().length; let e = all.find(vis);
+      if (!e && all[0]) { for (let d = all[0].parentElement; d; d = d.parentElement) if (d.tagName === 'DETAILS') d.open = true; e = all.find(vis) || all[0]; }   /* when every star sits in a folded group (Exam 3 is the open folder and its Guides group is folded), unfold the first one's groups */
+      if (e) e.setAttribute('data-tfirst', ''); return !!e; }, sel);
     const click1 = async sel => { await mark(sel); await p.evaluate(() => document.querySelector('[data-tfirst]').scrollIntoView({block: 'center'})); await p.click('[data-tfirst]'); };
     const only = async v => { await p.evaluate(v => document.querySelector('#v-' + v + ' .lkonly').click(), v); await p.waitForTimeout(600); };
 
@@ -140,7 +142,7 @@ const noScroll = p => p.evaluate(() => document.documentElement.scrollWidth <= i
     await only('dz'); await p.waitForTimeout(400);
     const pk = await p.evaluate(() => ({shown: [...document.querySelectorAll('#v-dz .dzpicker button[data-card]')].filter(x => !x.hasAttribute('data-lkh')).length, card: (document.querySelector('#v-dz .dzcard') || {dataset: {}}).dataset.card, starred: !!document.querySelector('#v-dz .dzcard .dzhead h2 > .lkstar')}));
     check(pk.shown === N('dzCard') && pk.starred, `${tag}: Diseases, starred only: ${N('dzCard')} conditions in the picker; the open card is a starred one`, JSON.stringify(pk));
-    check(new RegExp('^Showing ' + N('dzCard') + ' of 23 conditions\\.$').test(await text('#v-dz .lkcount')), `${tag}: Diseases: the count says "Showing ${N('dzCard')} of 23 conditions."`, await text('#v-dz .lkcount'));
+    check(new RegExp('^Showing ' + N('dzCard') + ' of ' + SRC.meta.total.dzCard + ' conditions\\.$').test(await text('#v-dz .lkcount')), `${tag}: Diseases: the count says "Showing ${N('dzCard')} of ${SRC.meta.total.dzCard} conditions."`, await text('#v-dz .lkcount'));
     // tell-apart sets and pairs
     await p.evaluate(() => document.querySelector('#v-dz .dzviews button[data-view="tell"]').click()); await p.waitForTimeout(400);
     check(await count('dz', 'section.dztell > h2 > .lkstar') === N('dzTell') && await vis('dz', 'section.dztell') === N('dzTell'), `${tag}: Diseases, Tell apart view: ${N('dzTell')} sets starred and shown`, `${await count('dz', 'section.dztell > h2 > .lkstar')}/${await vis('dz', 'section.dztell')}`);

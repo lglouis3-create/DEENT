@@ -363,8 +363,8 @@ async function nsOf(browser) {
       check(await stored(p) === null, `${w} px: the walkthroughs store nothing under the folders' key`, await stored(p));
       await p.evaluate(() => { WALK_UI.stop(); document.querySelectorAll('.wkpanel').forEach(x => WALK_UI.close(x.dataset.wkp)); RET.length = 0; backBtn(); });
 
-      // C8. Tell apart, Exam 2: the comparisons of the Diseases tab
-      await p.evaluate(() => { show('topics'); show('tell'); });
+      // C8. Tell apart, Exam 2: the comparisons of the Diseases tab (the Exam 2 folder is closed as drawn: opened for the visit, not stored)
+      await p.evaluate(() => { show('topics'); show('tell'); EXAMFOLD_UI.reveal(document.getElementById('tell-x2-dz')); });
       const dz = await p.evaluate(() => ({n: document.querySelectorAll('#rfold-tell-2 [data-rfdz="tell"]').length, want: DZ.tell.length, pairs: document.querySelectorAll('#rfold-tell-2 [data-rfdz="pairs"]').length,
         titles: [...document.querySelectorAll('#rfold-tell-2 [data-rfdz="tell"]')].every((b, i) => b.textContent === DZ.tell[i].title), small: [...document.querySelectorAll('#rfold-tell-2 .rfdz button')].filter(b => b.getBoundingClientRect().height < 44).length}));
       check(dz.n === dz.want && dz.n > 0 && dz.titles && dz.pairs === 1 && !dz.small, `${w} px: Tell apart, Exam 2 lists the ${dz.want} comparisons of the Diseases tab by their titles, each at least 44 px tall`, dz);
@@ -379,7 +379,7 @@ async function nsOf(browser) {
       await side(p, w, 'Diseases comparison');
       await p.click('#backbtn');
       bk = await p.evaluate(() => ({view: VIEW, y: Math.round(scrollY)}));
-      check(bk.view === 'tell' && Math.abs(bk.y - y8) <= 2 && await st(p, 'tell') === '1:false 2:false 3:true', `${w} px: Back returns to Tell apart at the same scroll position`, {bk, y8, st: await st(p, 'tell')});
+      check(bk.view === 'tell' && Math.abs(bk.y - y8) <= 2 && await st(p, 'tell') === '1:false 2:true 3:true', `${w} px: Back returns to Tell apart at the same scroll position`, {bk, y8, st: await st(p, 'tell')});
       await p.click('#rfold-tell-2 [data-rfdz="pairs"]');
       const d9 = await p.evaluate(() => ({view: VIEW, dzview: DZ_UI.state.view, tab: (document.querySelector('#v-dz .dzviews [aria-selected="true"]') || {}).textContent}));
       check(d9.view === 'dz' && d9.dzview === 'pairs' && d9.tab === 'Drugs that get confused', `${w} px: "Drugs that get confused" opens that view of the Diseases tab`, d9);
@@ -854,19 +854,21 @@ async function nsOf(browser) {
     const d0 = await dzs();
     check(d0.view === 'cards' && d0.q === 'permethrin', `${w}x${h}: the Diseases tab is on "By disease" with "permethrin" typed in its search`, d0);
     await strip('tell');
+    await p.evaluate(() => EXAMFOLD_UI.reveal(document.getElementById('tell-x2-dz')));
     const y1 = await row('#rfold-tell-2 [data-rfdz="tell"] >> nth=-1');
     let d = await dzs();
     check(d.VIEW === 'dz' && d.view === 'tell' && d.q === '', `${w}x${h}: a row of the Tell apart Exam 2 list opens the Diseases tab on its Tell apart view, the search cleared`, d);
     await p.click('#backbtn');
     d = await dzs();
     const bk = await p.evaluate(() => Math.round(scrollY));
-    check(d.VIEW === 'tell' && Math.abs(bk - y1) <= 2 && await st(p, 'tell') === '1:false 2:false 3:true' && d.view === 'cards' && d.q === 'permethrin' && d.card === d0.card,
+    check(d.VIEW === 'tell' && Math.abs(bk - y1) <= 2 && await st(p, 'tell') === '1:false 2:true 3:true' && d.view === 'cards' && d.q === 'permethrin' && d.card === d0.card,
       `${w}x${h}: Back returns to Tell apart at the same scroll position, and the Diseases tab has its sub-view and search back`, {d, bk, y1});
     await strip('dz');
     const shown = await p.evaluate(() => ({input: (document.getElementById('dzq') || {}).value, tab: (document.querySelector('#v-dz .dzviews [aria-selected="true"]') || {}).textContent, results: document.querySelectorAll('#v-dz .dzres button').length}));
     check(shown.input === 'permethrin' && shown.tab === 'By disease' && shown.results > 0, `${w}x${h}: the Diseases tab opened from the strip shows "By disease" with the search and its ${shown.results} results as before`, shown);
     // what the reader chooses in the Diseases tab after the row is kept
     await strip('tell');
+    await p.evaluate(() => EXAMFOLD_UI.reveal(document.getElementById('tell-x2-dz')));
     await row('#rfold-tell-2 [data-rfdz="pairs"]');
     await p.click('#v-dz .dzviews [data-view="rules"]');
     await p.click('#backbtn');

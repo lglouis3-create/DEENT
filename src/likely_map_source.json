@@ -767,8 +767,8 @@
      "EI-025:smith-obj-eye"
     ],
     "quotes": [
-     "M1117@18418: \"So you have some context for it, right? Remember we use it. We'll talk about it more in our renal module, the uses of it, but today, I need you guys to understand how does this potential for metabolic acidosis occur in these patients, because sometimes you will need to use this drug orally in patients with glaucoma. Not very often, but sometimes, and this is definitely a side effect we have to watch out for, OK.\"",
-     "M1113@60115: \"And then a side effect of using these, Um, orally, is they can cause some acidosis. So, that's a significant side effect that these medications can cause orally if you take them orally, and, um, needs to be, um, carefully monitored in your patient, OK? So, side effects for using them with uh eye drops, and then side effects for if we're administering it orally.\""
+     "M1117@18418: \"I need you guys to understand how does this potential for metabolic acidosis occur in these patients, because sometimes you will need to use this drug orally in patients with glaucoma.\"",
+     "M1113@60052: \"And then a side effect of using these, Um, orally, is they can cause some acidosis. So, that's a significant side effect that these medications can cause orally if you take them orally, and, um, needs to be, um, carefully monitored in your patient, OK?\""
     ],
     "title": "Dr. Smith, slide by slide Carbonic anhydrase inhibitors slides 25-29",
     "kw": [
@@ -798,9 +798,8 @@
      "EO-046:smith-obj-eye"
     ],
     "quotes": [
-     "M1113@19464: \"I'll give you the the information about what that means in just a minute, but. Uh, as you study your drugs, be sure you can categorize them of ones that affect inflow or outflow, OK? All right. So, pathophys of glaucoma. So, what is glaucoma? OK. It is a progressive eye disease that can lead to vision loss due to optic nerve damage.\"",
-     "M1113@60888: \"All right. I don't think these drugs are really complicated at all to learn. It's again, memorizing, do they affect inflow, do they affect outflow, and then the pharmacological categories that they affect. Yes. Yeah. Uh, I've got 5 questions and they're cumulative, so everything that was on the first exam is fair game. So focus on pathophys and then focus on mechanisms.\"",
-     "M1113@61016: \"Yes. Yeah. Uh, I've got 5 questions and they're cumulative, so everything that was on the first exam is fair game. So focus on pathophys and then focus on mechanisms. Yeah, OK, so, and I always like scary side effects like black box warnings. OK, so, but I've just got 5 questions.\""
+     "M1113@19435: \"Uh, as you study your drugs, be sure you can categorize them of ones that affect inflow or outflow, OK? All right. So, pathophys of glaucoma. So, what is glaucoma? OK.\"",
+     "M1113@60876: \"It's again, memorizing, do they affect inflow, do they affect outflow, and then the pharmacological categories that they affect. Yes. Yeah.\""
     ],
     "title": "Dr. Smith, slide by slide Glaucoma: outline and objectives slides 9-11",
     "kw": [
@@ -829,8 +828,7 @@
      "EL-006:smith-eye-cue"
     ],
     "quotes": [
-     "M1117@48580: \"Pay special attention to which ones have mast cell stabilizing properties. Some of them are used for other indications, like azelastine is indicated for allergic rhinitis. Some of them get into the CNS more than others.\"",
-     "M1117@44825: \"And this is what's called mast mast cell stabilization. Many of our antihistamines, they have this other quality. They prevent the mast cells from releasing histamine, OK? So that's very different than being an H1 inverse agonist, OK? If you're using medication for its H1 inverse agonism properties.\""
+     "M1117@48555: \"Pay special attention to which ones have mast cell stabilizing properties. Some of them are used for other indications, like azelastine is indicated for allergic rhinitis. Some of them get into the CNS more than others.\""
     ],
     "title": "Dr. Smith, slide by slide Ophthalmic H1 inverse agonists (antihistamines) slides 50-52",
     "kw": [
@@ -861,9 +859,8 @@
      "EA-034:smith-ex3"
     ],
     "quotes": [
-     "M1113@23479: \"Closed angle means that the part of the eye where the aqueous humor flows out actually gets closed. That's a medical emergency. People will often feel pain with that pretty significant pain, OK?\"",
-     "M1113@21116: \"It's onset is usually gradual and asymptomatic until somebody goes into the eye doctor and has had vision loss. So, you don't usually feel anything with open-angle glaucoma. So this is the reason why all of us should be going to the eye doctor on an annual basis, at least, OK? Who goes to the eye doctor every year?\"",
-     "M1113@42333: \"I don't think there's any. Good way for pharmacy students to just memorize drugs if you don't know the pathology, right? We need to know what's causing the disease, because then we know what drugs we have and why they work. And then if you want to think a little bit beyond that, if you know what's causing the disease, maybe you could develop other drugs, right?\""
+     "M1113@61120: \"So focus on pathophys and then focus on mechanisms. \"",
+     "M1113@42351: \"We need to know what's causing the disease, because then we know what drugs we have and why they work.\""
     ],
     "title": "Dr. Smith, slide by slide What glaucoma is: open-angle and angle-closure slides 12-14",
     "kw": [
@@ -877,7 +874,11 @@
      "optic",
      "nerve",
      "intrao",
-     "draina"
+     "draina",
+     "pathop",
+     "pathol",
+     "mechan",
+     "diseas"
     ]
    },
    "gobj-ey-13": {
@@ -889,10 +890,7 @@
      "EO-020:smith-eye-cue",
      "EO-017:smith-ex3"
     ],
-    "quotes": [
-     "M1117@32283: \"All right, this is an interesting little factoid. We see clinically that these prostaglandin agonists are a bit more effective in darker colored eyes than in lighter colored eyes. I don't know why. It's just something we see clinically, so hazel or brown eyes um might respond a bit better to this category of glaucoma meds compared to blue or green eyes. I think that's very interesting, OK. All right.\"",
-     "M1117@34104: \"Um, it also will help with pigmentation of the lashes, so you will see these medica uh, prostaglandin agonists on the market as Latisse to help with eyelash thickening, OK. It'll cause hair growth in other areas, and besides that, you don't have many other systemic side effects with this class of medications, OK?\""
-    ],
+    "quotes": [],
     "title": "Dr. Smith, slide by slide Prostaglandin agonists: mechanism slides 36-37",
     "kw": [
      "prosta",
@@ -920,7 +918,7 @@
      "ED-007:smith-obj-eye"
     ],
     "quotes": [
-     "M1117@60798: \"And this complex is what inhibits calcineurin. FKBP uh oh. Did you guys see that question before? I know that I was picky on that question. But I did that on purpose, because we'll talk about these drugs again, including FKBP and oncology. I'm trying to help you out like a whole year from now, OK? So, tac binds to FKBP, cyclosporin binds to cyclophyllin. Either of those inhibit calcineurin, right?\""
+     "M1117@60741: \"Did you guys see that question before? I know that I was picky on that question. But I did that on purpose, because we'll talk about these drugs again, including FKBP and oncology.\""
     ],
     "title": "Dr. Smith, slide by slide Dry eye: calcineurin inhibitor (cyclosporine) slides 63-67",
     "kw": [
@@ -2532,7 +2530,7 @@
      "EI-028:smith-eye-cue"
     ],
     "quotes": [
-     "M1117@18418: \"So you have some context for it, right? Remember we use it. We'll talk about it more in our renal module, the uses of it, but today, I need you guys to understand how does this potential for metabolic acidosis occur in these patients, because sometimes you will need to use this drug orally in patients with glaucoma. Not very often, but sometimes, and this is definitely a side effect we have to watch out for, OK.\""
+     "M1117@18418: \"I need you guys to understand how does this potential for metabolic acidosis occur in these patients, because sometimes you will need to use this drug orally in patients with glaucoma.\""
     ],
     "h5": "The proximal tubule figure: why these drugs cause metabolic acidosis (Eye slide 27)",
     "kw": [
@@ -2562,8 +2560,8 @@
      "EO-046:smith-obj-eye"
     ],
     "quotes": [
-     "M1113@19464: \"I'll give you the the information about what that means in just a minute, but. Uh, as you study your drugs, be sure you can categorize them of ones that affect inflow or outflow, OK? All right. So, pathophys of glaucoma. So, what is glaucoma? OK. It is a progressive eye disease that can lead to vision loss due to optic nerve damage.\"",
-     "M1113@60888: \"All right. I don't think these drugs are really complicated at all to learn. It's again, memorizing, do they affect inflow, do they affect outflow, and then the pharmacological categories that they affect. Yes. Yeah. Uh, I've got 5 questions and they're cumulative, so everything that was on the first exam is fair game. So focus on pathophys and then focus on mechanisms.\""
+     "M1113@19435: \"Uh, as you study your drugs, be sure you can categorize them of ones that affect inflow or outflow, OK? All right. So, pathophys of glaucoma. So, what is glaucoma? OK.\"",
+     "M1113@60876: \"It's again, memorizing, do they affect inflow, do they affect outflow, and then the pharmacological categories that they affect. Yes. Yeah.\""
     ],
     "h5": "Glaucoma learning objectives: inflow and outflow, and what she tests (Eye slide 11)",
     "kw": [
@@ -2591,8 +2589,7 @@
      "EA-029:smith-ex3"
     ],
     "quotes": [
-     "M1113@23479: \"Closed angle means that the part of the eye where the aqueous humor flows out actually gets closed. That's a medical emergency. People will often feel pain with that pretty significant pain, OK?\"",
-     "M1113@21116: \"It's onset is usually gradual and asymptomatic until somebody goes into the eye doctor and has had vision loss. So, you don't usually feel anything with open-angle glaucoma. So this is the reason why all of us should be going to the eye doctor on an annual basis, at least, OK? Who goes to the eye doctor every year?\""
+     "M1113@61120: \"So focus on pathophys and then focus on mechanisms. \""
     ],
     "h5": "What is glaucoma? Open-angle versus angle-closure (Eye slide 13)",
     "kw": [
@@ -2606,7 +2603,11 @@
      "optic",
      "nerve",
      "intrao",
-     "draina"
+     "draina",
+     "pathop",
+     "pathol",
+     "mechan",
+     "diseas"
     ]
    },
    "gobj-ey-22#2": {
@@ -2618,8 +2619,7 @@
      "EL-042:smith-eye-cue"
     ],
     "quotes": [
-     "M1117@44825: \"And this is what's called mast mast cell stabilization. Many of our antihistamines, they have this other quality. They prevent the mast cells from releasing histamine, OK? So that's very different than being an H1 inverse agonist, OK? If you're using medication for its H1 inverse agonism properties.\"",
-     "M1117@48580: \"Pay special attention to which ones have mast cell stabilizing properties. Some of them are used for other indications, like azelastine is indicated for allergic rhinitis. Some of them get into the CNS more than others.\""
+     "M1117@48555: \"Pay special attention to which ones have mast cell stabilizing properties. Some of them are used for other indications, like azelastine is indicated for allergic rhinitis. Some of them get into the CNS more than others.\""
     ],
     "h5": "Two mechanisms: H1 inverse agonism and mast cell stabilization (Eye slide 51)",
     "kw": [
@@ -2648,8 +2648,7 @@
      "EL-042:smith-eye-cue"
     ],
     "quotes": [
-     "M1117@48580: \"Pay special attention to which ones have mast cell stabilizing properties. Some of them are used for other indications, like azelastine is indicated for allergic rhinitis. Some of them get into the CNS more than others.\"",
-     "M1117@50365: \"And then cetirizine, again, has minimal anticholinergic effects, so you don't get the dry mouth and other anticholinergic symptoms that you would expect. But, um, even though it doesn't penetrate the CNS very well, it can still sometimes cause patients some drowsiness. OK.\""
+     "M1117@48555: \"Pay special attention to which ones have mast cell stabilizing properties. Some of them are used for other indications, like azelastine is indicated for allergic rhinitis. Some of them get into the CNS more than others.\""
     ],
     "h5": "Alcaftadine, azelastine, bepotastine, cetirizine (Eye slide 53)",
     "kw": [
@@ -2677,8 +2676,7 @@
      "EA-009:smith-eye-cue"
     ],
     "quotes": [
-     "M1113@16550: \"But for me, when I get my eyes dilated, I for some reason, get a lot of systemic absorption, and I have to be sure that I'm compressing my eyelid corners. There's a word for that. I can't remember exactly what it is, but you compress this part of your eye, you stop some of that absorption, um, because I remember as a little kid.\"",
-     "M1113@48440: \"The compression on the inside of the, right against the nose there to try to stop that systemic absorption. OK? Really important counseling point. All right, um, the next category of drugs, these drugs are really easy. For this lecture, I'll say that I think talking about the pathophysiology is the most complex part of this, and then the medications are not, they're not hard. OK.\""
+     "M1113@16540: \"I have to be sure that I'm compressing my eyelid corners. There's a word for that. I can't remember exactly what it is, but you compress this part of your eye, you stop s\""
     ],
     "h5": "Anatomy of the lacrimal system: drainage and the counseling point (Eye slide 5)",
     "kw": [
@@ -2701,7 +2699,7 @@
      "EI-031:smith-eye-cue"
     ],
     "quotes": [
-     "M1113@60115: \"And then a side effect of using these, Um, orally, is they can cause some acidosis. So, that's a significant side effect that these medications can cause orally if you take them orally, and, um, needs to be, um, carefully monitored in your patient, OK? So, side effects for using them with uh eye drops, and then side effects for if we're administering it orally.\""
+     "M1113@60052: \"And then a side effect of using these, Um, orally, is they can cause some acidosis. So, that's a significant side effect that these medications can cause orally if you take them orally, and, um, needs to be, um, carefully monitored in your patient, OK?\""
     ],
     "h5": "Carbonic anhydrase inhibitor side effects: ocular, oral and acidosis (Eye slide 29)",
     "kw": [
@@ -2728,9 +2726,7 @@
     "ev": [
      "EI-014:smith-eye-cue"
     ],
-    "quotes": [
-     "M1113@49731: \"They don't really know, but we do see an increase in the uveouscleral outflow, OK. Another feature of that medication is that it is neuroprotective. This medication seems to protect somehow the health of the optic nerve. So, we've seen that a lot in animal studies, and we are assuming it's happening in humans as well. Yes. SPEAKER 2 Question. Right No, no.\""
-    ],
+    "quotes": [],
     "h5": "Alpha-2 agonists: mechanism and brimonidine's two added effects (Eye slide 22)",
     "kw": [
      "brimon",
@@ -2755,8 +2751,7 @@
      "EA-031:smith-ex3"
     ],
     "quotes": [
-     "M1113@32692: \"And so with that in mind, that's a really great question. Thank you. With that in mind, the most important outflow route is through that trabecular meshwork and Schlem's canal. Most of the liquid can get through that canal because it's like made, you know, it's like a canal, OK. The uveosclelero outflow, there's not so much outflow that goes through that.\"",
-     "M1113@33575: \"OK. The technical term for the drainage is outflow. And there's two kinds of outflow. The most important kinds of outflow is the liquid percolates through that trabecular mesh and then goes into the schlem's canal, OK.\""
+     "M1113@32669: \"With that in mind, the most important outflow route is through that trabecular meshwork and Schlem's canal. Most of the liquid can get through that canal because it's like made, you know, it's like a canal, OK.\""
     ],
     "h5": "Aqueous humor flow: the two drainage routes (Eye slide 15)",
     "kw": [
@@ -2783,9 +2778,7 @@
      "EO-018:smith-eye-cue",
      "EO-020:smith-eye-cue"
     ],
-    "quotes": [
-     "M1117@32283: \"All right, this is an interesting little factoid. We see clinically that these prostaglandin agonists are a bit more effective in darker colored eyes than in lighter colored eyes. I don't know why. It's just something we see clinically, so hazel or brown eyes um might respond a bit better to this category of glaucoma meds compared to blue or green eyes. I think that's very interesting, OK. All right.\""
-    ],
+    "quotes": [],
     "h5": "Prostaglandin agonists: PGF2 alpha receptor, uveoscleral outflow, eye color (Eye slide 37)",
     "kw": [
      "prosta",
@@ -2812,7 +2805,7 @@
      "ED-009:smith-eye-room"
     ],
     "quotes": [
-     "M1117@60798: \"And this complex is what inhibits calcineurin. FKBP uh oh. Did you guys see that question before? I know that I was picky on that question. But I did that on purpose, because we'll talk about these drugs again, including FKBP and oncology. I'm trying to help you out like a whole year from now, OK? So, tac binds to FKBP, cyclosporin binds to cyclophyllin. Either of those inhibit calcineurin, right?\""
+     "M1117@60741: \"Did you guys see that question before? I know that I was picky on that question. But I did that on purpose, because we'll talk about these drugs again, including FKBP and oncology.\""
     ],
     "h5": "Mechanism of action: cyclophilin, FKBP, calcineurin and NFAT (Eye slide 66)",
     "kw": [
@@ -2836,9 +2829,7 @@
     "ev": [
      "EO-020:smith-eye-cue"
     ],
-    "quotes": [
-     "M1117@34104: \"Um, it also will help with pigmentation of the lashes, so you will see these medica uh, prostaglandin agonists on the market as Latisse to help with eyelash thickening, OK. It'll cause hair growth in other areas, and besides that, you don't have many other systemic side effects with this class of medications, OK?\""
-    ],
+    "quotes": [],
     "h5": "Prostaglandin agonists: side effects (Eye slide 39)",
     "kw": [
      "prosta",
@@ -2865,7 +2856,7 @@
      "ED-018:smith-obj-eye"
     ],
     "quotes": [
-     "M1117@65544: \"Some people might not like the fact that they just aren't able to see as well, even though it's helping with their dry eye. So, an important counseling point about this medication is, uh, if people are using contacts, um, they need to remove their contacts before they administer the drug, and then they have to wait a good 15 minutes before they put their contacts back in.\""
+     "M1117@65537: \"So, an important counseling point about this medication is, uh, if people are using contacts, um, they need to remove their contacts before they administer the drug, and then they have to wait a good 15 minutes before they put the\""
     ],
     "h5": "Lifitegrast: LFA-1 antagonist, dose, side effects and contact lenses (Eye slide 71)",
     "kw": [
@@ -2888,7 +2879,7 @@
      "EO-033:smith-ex3"
     ],
     "quotes": [
-     "M1117@37371: \"Maybe at Halloween time, it's OK, right? But, um, conjunctival hemorrhage is always a little scary when you look in the mirror. So, uh, the rokinase inhibitors, uh, I think they're quite effective.\""
+     "M1117@37328: \"But, um, conjunctival hemorrhage is always a little scary when you look in the mirror. So, uh, the rokinase inhibitors, uh, I think they're quite effective.\""
     ],
     "h5": "Rho kinase inhibitor: side effects (Eye slide 43)",
     "kw": [
@@ -2909,9 +2900,7 @@
      "ED-028:smith-ex3",
      "ED-024:smith-obj-eye"
     ],
-    "quotes": [
-     "M1117@68262: \"All right, so some of the side effects for this medication, again, it's very new, just on the market in 2021, uh, acquired night blindness, it's rare, but it can happen. So that might be a side effect, uh, for which patients should stop using it. Other blurred vision, uh, retinal vascular disorders. Again, this is rare, but not a good condition.\""
-    ],
+    "quotes": [],
     "h5": "Intranasal varenicline: mechanism, dose and rare visual side effects (Eye slide 73)",
     "kw": [
      "vareni",
@@ -2933,7 +2922,7 @@
      "EI-023:smith-eye-cue"
     ],
     "quotes": [
-     "M1113@53050: \"These drugs work. OK. All right. Um, So more about the side effects, um. Uh, importantly, for apriclonidine, you can get the systemic hypotension, and then that allergic reaction is a significant problem. Uh, for brimonidine, this is a drug that is pretty good at causing what we call a foreign body sensation. So you feel like you got something in your eye.\""
+     "M1113@53046: \"Uh, importantly, for apriclonidine, you can get the systemic hypotension, and then that allergic reaction is a significant problem.\""
     ],
     "h5": "Alpha-2 agonist side effects (Eye slide 24)",
     "kw": [
@@ -3332,9 +3321,9 @@
      "EI-014:smith-eye-cue"
     ],
     "quotes": [
-     "M1113@19464: \"I'll give you the the information about what that means in just a minute, but. Uh, as you study your drugs, be sure you can categorize them of ones that affect inflow or outflow, OK? All right. So, pathophys of glaucoma. So, what is glaucoma? OK. It is a progressive eye disease that can lead to vision loss due to optic nerve damage.\"",
-     "M1113@60888: \"All right. I don't think these drugs are really complicated at all to learn. It's again, memorizing, do they affect inflow, do they affect outflow, and then the pharmacological categories that they affect. Yes. Yeah. Uh, I've got 5 questions and they're cumulative, so everything that was on the first exam is fair game. So focus on pathophys and then focus on mechanisms.\"",
-     "M1117@18418: \"So you have some context for it, right? Remember we use it. We'll talk about it more in our renal module, the uses of it, but today, I need you guys to understand how does this potential for metabolic acidosis occur in these patients, because sometimes you will need to use this drug orally in patients with glaucoma. Not very often, but sometimes, and this is definitely a side effect we have to watch out for, OK.\""
+     "M1113@19435: \"Uh, as you study your drugs, be sure you can categorize them of ones that affect inflow or outflow, OK? All right. So, pathophys of glaucoma. So, what is glaucoma? OK.\"",
+     "M1113@60876: \"It's again, memorizing, do they affect inflow, do they affect outflow, and then the pharmacological categories that they affect. Yes. Yeah.\"",
+     "M1117@18418: \"I need you guys to understand how does this potential for metabolic acidosis occur in these patients, because sometimes you will need to use this drug orally in patients with glaucoma.\""
     ],
     "title": "Glaucoma drugs by inflow and outflow, slides 17-45",
     "kw": [
@@ -3368,9 +3357,8 @@
      "EL-018:smith-obj-eye"
     ],
     "quotes": [
-     "M1117@48580: \"Pay special attention to which ones have mast cell stabilizing properties. Some of them are used for other indications, like azelastine is indicated for allergic rhinitis. Some of them get into the CNS more than others.\"",
-     "M1117@44825: \"And this is what's called mast mast cell stabilization. Many of our antihistamines, they have this other quality. They prevent the mast cells from releasing histamine, OK? So that's very different than being an H1 inverse agonist, OK? If you're using medication for its H1 inverse agonism properties.\"",
-     "M1117@54657: \"And then our medications, they're not rocket science here. So be sure that you learn all the drugs on the drug list and differentiate between them when I give you those details for the antihistamines. And um know that we use antihistamines and your alpha 2 agonists and have a few combo products um you guys upset that we don't go into more detail?\""
+     "M1117@48555: \"Pay special attention to which ones have mast cell stabilizing properties. Some of them are used for other indications, like azelastine is indicated for allergic rhinitis. Some of them get into the CNS more than others.\"",
+     "M1117@54654: \"So be sure that you learn all the drugs on the drug list and differentiate between them when I give you those details for the antihistamines.\""
     ],
     "title": "Allergic conjunctivitis drugs, slides 48-59",
     "kw": [
@@ -4152,8 +4140,7 @@
      "EA-029:smith-ex3"
     ],
     "quotes": [
-     "M1113@23479: \"Closed angle means that the part of the eye where the aqueous humor flows out actually gets closed. That's a medical emergency. People will often feel pain with that pretty significant pain, OK?\"",
-     "M1113@21116: \"It's onset is usually gradual and asymptomatic until somebody goes into the eye doctor and has had vision loss. So, you don't usually feel anything with open-angle glaucoma. So this is the reason why all of us should be going to the eye doctor on an annual basis, at least, OK? Who goes to the eye doctor every year?\""
+     "M1113@61120: \"So focus on pathophys and then focus on mechanisms. \""
     ],
     "label": "Primary open-angle glaucoma (POAG) vs primary angle-closure glaucoma (PACG)",
     "kw": [
@@ -4167,7 +4154,11 @@
      "optic",
      "nerve",
      "intrao",
-     "draina"
+     "draina",
+     "pathop",
+     "pathol",
+     "mechan",
+     "diseas"
     ]
    },
    "tell-ey-glaucoma#r3": {
@@ -4178,8 +4169,8 @@
      "EA-035:smith-obj-eye"
     ],
     "quotes": [
-     "M1113@19464: \"I'll give you the the information about what that means in just a minute, but. Uh, as you study your drugs, be sure you can categorize them of ones that affect inflow or outflow, OK? All right. So, pathophys of glaucoma. So, what is glaucoma? OK. It is a progressive eye disease that can lead to vision loss due to optic nerve damage.\"",
-     "M1113@60888: \"All right. I don't think these drugs are really complicated at all to learn. It's again, memorizing, do they affect inflow, do they affect outflow, and then the pharmacological categories that they affect. Yes. Yeah. Uh, I've got 5 questions and they're cumulative, so everything that was on the first exam is fair game. So focus on pathophys and then focus on mechanisms.\""
+     "M1113@19435: \"Uh, as you study your drugs, be sure you can categorize them of ones that affect inflow or outflow, OK? All right. So, pathophys of glaucoma. So, what is glaucoma? OK.\"",
+     "M1113@60876: \"It's again, memorizing, do they affect inflow, do they affect outflow, and then the pharmacological categories that they affect. Yes. Yeah.\""
     ],
     "label": "Inflow vs outflow",
     "kw": [
@@ -4207,8 +4198,8 @@
      "EI-031:smith-eye-cue"
     ],
     "quotes": [
-     "M1117@18418: \"So you have some context for it, right? Remember we use it. We'll talk about it more in our renal module, the uses of it, but today, I need you guys to understand how does this potential for metabolic acidosis occur in these patients, because sometimes you will need to use this drug orally in patients with glaucoma. Not very often, but sometimes, and this is definitely a side effect we have to watch out for, OK.\"",
-     "M1113@60115: \"And then a side effect of using these, Um, orally, is they can cause some acidosis. So, that's a significant side effect that these medications can cause orally if you take them orally, and, um, needs to be, um, carefully monitored in your patient, OK? So, side effects for using them with uh eye drops, and then side effects for if we're administering it orally.\""
+     "M1117@18418: \"I need you guys to understand how does this potential for metabolic acidosis occur in these patients, because sometimes you will need to use this drug orally in patients with glaucoma.\"",
+     "M1113@60052: \"And then a side effect of using these, Um, orally, is they can cause some acidosis. So, that's a significant side effect that these medications can cause orally if you take them orally, and, um, needs to be, um, carefully monitored in your patient, OK?\""
     ],
     "label": "Carbonic anhydrase inhibitor in the eye vs in the kidney",
     "kw": [
@@ -4237,8 +4228,7 @@
      "EI-023:smith-eye-cue"
     ],
     "quotes": [
-     "M1113@49731: \"They don't really know, but we do see an increase in the uveouscleral outflow, OK. Another feature of that medication is that it is neuroprotective. This medication seems to protect somehow the health of the optic nerve. So, we've seen that a lot in animal studies, and we are assuming it's happening in humans as well. Yes. SPEAKER 2 Question. Right No, no.\"",
-     "M1113@53050: \"These drugs work. OK. All right. Um, So more about the side effects, um. Uh, importantly, for apriclonidine, you can get the systemic hypotension, and then that allergic reaction is a significant problem. Uh, for brimonidine, this is a drug that is pretty good at causing what we call a foreign body sensation. So you feel like you got something in your eye.\""
+     "M1113@53046: \"Uh, importantly, for apriclonidine, you can get the systemic hypotension, and then that allergic reaction is a significant problem.\""
     ],
     "label": "Apraclonidine vs brimonidine",
     "kw": [
@@ -4261,10 +4251,7 @@
     "ev": [
      "EO-020:smith-eye-cue"
     ],
-    "quotes": [
-     "M1117@32283: \"All right, this is an interesting little factoid. We see clinically that these prostaglandin agonists are a bit more effective in darker colored eyes than in lighter colored eyes. I don't know why. It's just something we see clinically, so hazel or brown eyes um might respond a bit better to this category of glaucoma meds compared to blue or green eyes. I think that's very interesting, OK. All right.\"",
-     "M1117@34104: \"Um, it also will help with pigmentation of the lashes, so you will see these medica uh, prostaglandin agonists on the market as Latisse to help with eyelash thickening, OK. It'll cause hair growth in other areas, and besides that, you don't have many other systemic side effects with this class of medications, OK?\""
-    ],
+    "quotes": [],
     "label": "Prostaglandin agonists vs Rho kinase inhibitor : side effects",
     "kw": [
      "prosta",
@@ -4292,8 +4279,7 @@
      "EL-042:smith-eye-cue"
     ],
     "quotes": [
-     "M1117@48580: \"Pay special attention to which ones have mast cell stabilizing properties. Some of them are used for other indications, like azelastine is indicated for allergic rhinitis. Some of them get into the CNS more than others.\"",
-     "M1117@44825: \"And this is what's called mast mast cell stabilization. Many of our antihistamines, they have this other quality. They prevent the mast cells from releasing histamine, OK? So that's very different than being an H1 inverse agonist, OK? If you're using medication for its H1 inverse agonism properties.\""
+     "M1117@48555: \"Pay special attention to which ones have mast cell stabilizing properties. Some of them are used for other indications, like azelastine is indicated for allergic rhinitis. Some of them get into the CNS more than others.\""
     ],
     "label": "Mast cell stabilization: yes or no",
     "kw": [
@@ -4321,8 +4307,7 @@
      "EL-008:smith-eye-cue"
     ],
     "quotes": [
-     "M1117@50365: \"And then cetirizine, again, has minimal anticholinergic effects, so you don't get the dry mouth and other anticholinergic symptoms that you would expect. But, um, even though it doesn't penetrate the CNS very well, it can still sometimes cause patients some drowsiness. OK.\"",
-     "M1117@48580: \"Pay special attention to which ones have mast cell stabilizing properties. Some of them are used for other indications, like azelastine is indicated for allergic rhinitis. Some of them get into the CNS more than others.\""
+     "M1117@48555: \"Pay special attention to which ones have mast cell stabilizing properties. Some of them are used for other indications, like azelastine is indicated for allergic rhinitis. Some of them get into the CNS more than others.\""
     ],
     "label": "Epinastine vs cetirizine",
     "kw": [
@@ -4352,7 +4337,7 @@
      "ED-007:smith-obj-eye"
     ],
     "quotes": [
-     "M1117@60798: \"And this complex is what inhibits calcineurin. FKBP uh oh. Did you guys see that question before? I know that I was picky on that question. But I did that on purpose, because we'll talk about these drugs again, including FKBP and oncology. I'm trying to help you out like a whole year from now, OK? So, tac binds to FKBP, cyclosporin binds to cyclophyllin. Either of those inhibit calcineurin, right?\""
+     "M1117@60741: \"Did you guys see that question before? I know that I was picky on that question. But I did that on purpose, because we'll talk about these drugs again, including FKBP and oncology.\""
     ],
     "label": "Cyclosporine vs tacrolimus",
     "kw": [
@@ -4552,9 +4537,9 @@
      "EO-018:smith-eye-cue"
     ],
     "quotes": [
-     "M1113@19464: \"I'll give you the the information about what that means in just a minute, but. Uh, as you study your drugs, be sure you can categorize them of ones that affect inflow or outflow, OK? All right. So, pathophys of glaucoma. So, what is glaucoma? OK. It is a progressive eye disease that can lead to vision loss due to optic nerve damage.\"",
-     "M1113@60888: \"All right. I don't think these drugs are really complicated at all to learn. It's again, memorizing, do they affect inflow, do they affect outflow, and then the pharmacological categories that they affect. Yes. Yeah. Uh, I've got 5 questions and they're cumulative, so everything that was on the first exam is fair game. So focus on pathophys and then focus on mechanisms.\"",
-     "M1117@18418: \"So you have some context for it, right? Remember we use it. We'll talk about it more in our renal module, the uses of it, but today, I need you guys to understand how does this potential for metabolic acidosis occur in these patients, because sometimes you will need to use this drug orally in patients with glaucoma. Not very often, but sometimes, and this is definitely a side effect we have to watch out for, OK.\""
+     "M1113@19435: \"Uh, as you study your drugs, be sure you can categorize them of ones that affect inflow or outflow, OK? All right. So, pathophys of glaucoma. So, what is glaucoma? OK.\"",
+     "M1113@60876: \"It's again, memorizing, do they affect inflow, do they affect outflow, and then the pharmacological categories that they affect. Yes. Yeah.\"",
+     "M1117@18418: \"I need you guys to understand how does this potential for metabolic acidosis occur in these patients, because sometimes you will need to use this drug orally in patients with glaucoma.\""
     ],
     "kw": [
      "inflow",
@@ -4586,8 +4571,8 @@
      "EL-018:smith-obj-eye"
     ],
     "quotes": [
-     "M1117@48580: \"Pay special attention to which ones have mast cell stabilizing properties. Some of them are used for other indications, like azelastine is indicated for allergic rhinitis. Some of them get into the CNS more than others.\"",
-     "M1117@54657: \"And then our medications, they're not rocket science here. So be sure that you learn all the drugs on the drug list and differentiate between them when I give you those details for the antihistamines. And um know that we use antihistamines and your alpha 2 agonists and have a few combo products um you guys upset that we don't go into more detail?\""
+     "M1117@48555: \"Pay special attention to which ones have mast cell stabilizing properties. Some of them are used for other indications, like azelastine is indicated for allergic rhinitis. Some of them get into the CNS more than others.\"",
+     "M1117@54654: \"So be sure that you learn all the drugs on the drug list and differentiate between them when I give you those details for the antihistamines.\""
     ],
     "kw": [
      "mast",
@@ -4721,8 +4706,8 @@
      "EO-046:smith-obj-eye"
     ],
     "quotes": [
-     "M1113@19464: \"I'll give you the the information about what that means in just a minute, but. Uh, as you study your drugs, be sure you can categorize them of ones that affect inflow or outflow, OK? All right. So, pathophys of glaucoma. So, what is glaucoma? OK. It is a progressive eye disease that can lead to vision loss due to optic nerve damage.\"",
-     "M1113@60888: \"All right. I don't think these drugs are really complicated at all to learn. It's again, memorizing, do they affect inflow, do they affect outflow, and then the pharmacological categories that they affect. Yes. Yeah. Uh, I've got 5 questions and they're cumulative, so everything that was on the first exam is fair game. So focus on pathophys and then focus on mechanisms.\""
+     "M1113@19435: \"Uh, as you study your drugs, be sure you can categorize them of ones that affect inflow or outflow, OK? All right. So, pathophys of glaucoma. So, what is glaucoma? OK.\"",
+     "M1113@60876: \"It's again, memorizing, do they affect inflow, do they affect outflow, and then the pharmacological categories that they affect. Yes. Yeah.\""
     ],
     "kw": [
      "inflow",
@@ -4749,8 +4734,7 @@
      "EL-042:smith-eye-cue"
     ],
     "quotes": [
-     "M1117@48580: \"Pay special attention to which ones have mast cell stabilizing properties. Some of them are used for other indications, like azelastine is indicated for allergic rhinitis. Some of them get into the CNS more than others.\"",
-     "M1117@44825: \"And this is what's called mast mast cell stabilization. Many of our antihistamines, they have this other quality. They prevent the mast cells from releasing histamine, OK? So that's very different than being an H1 inverse agonist, OK? If you're using medication for its H1 inverse agonism properties.\""
+     "M1117@48555: \"Pay special attention to which ones have mast cell stabilizing properties. Some of them are used for other indications, like azelastine is indicated for allergic rhinitis. Some of them get into the CNS more than others.\""
     ],
     "kw": [
      "mast",
@@ -4944,8 +4928,8 @@
      "EI-028:smith-eye-cue"
     ],
     "quotes": [
-     "M1117@18418: \"So you have some context for it, right? Remember we use it. We'll talk about it more in our renal module, the uses of it, but today, I need you guys to understand how does this potential for metabolic acidosis occur in these patients, because sometimes you will need to use this drug orally in patients with glaucoma. Not very often, but sometimes, and this is definitely a side effect we have to watch out for, OK.\"",
-     "M1113@60115: \"And then a side effect of using these, Um, orally, is they can cause some acidosis. So, that's a significant side effect that these medications can cause orally if you take them orally, and, um, needs to be, um, carefully monitored in your patient, OK? So, side effects for using them with uh eye drops, and then side effects for if we're administering it orally.\""
+     "M1117@18418: \"I need you guys to understand how does this potential for metabolic acidosis occur in these patients, because sometimes you will need to use this drug orally in patients with glaucoma.\"",
+     "M1113@60052: \"And then a side effect of using these, Um, orally, is they can cause some acidosis. So, that's a significant side effect that these medications can cause orally if you take them orally, and, um, needs to be, um, carefully monitored in your patient, OK?\""
     ],
     "kw": [
      "carbon",
@@ -4972,8 +4956,7 @@
      "EL-008:smith-eye-cue"
     ],
     "quotes": [
-     "M1117@50365: \"And then cetirizine, again, has minimal anticholinergic effects, so you don't get the dry mouth and other anticholinergic symptoms that you would expect. But, um, even though it doesn't penetrate the CNS very well, it can still sometimes cause patients some drowsiness. OK.\"",
-     "M1117@48580: \"Pay special attention to which ones have mast cell stabilizing properties. Some of them are used for other indications, like azelastine is indicated for allergic rhinitis. Some of them get into the CNS more than others.\""
+     "M1117@48555: \"Pay special attention to which ones have mast cell stabilizing properties. Some of them are used for other indications, like azelastine is indicated for allergic rhinitis. Some of them get into the CNS more than others.\""
     ],
     "kw": [
      "mast",
@@ -5001,7 +4984,7 @@
      "ED-009:smith-eye-room"
     ],
     "quotes": [
-     "M1117@60798: \"And this complex is what inhibits calcineurin. FKBP uh oh. Did you guys see that question before? I know that I was picky on that question. But I did that on purpose, because we'll talk about these drugs again, including FKBP and oncology. I'm trying to help you out like a whole year from now, OK? So, tac binds to FKBP, cyclosporin binds to cyclophyllin. Either of those inhibit calcineurin, right?\""
+     "M1117@60741: \"Did you guys see that question before? I know that I was picky on that question. But I did that on purpose, because we'll talk about these drugs again, including FKBP and oncology.\""
     ],
     "kw": [
      "cyclos",
@@ -5481,8 +5464,8 @@
      "EI-025:smith-obj-eye"
     ],
     "quotes": [
-     "M1117@18418: \"So you have some context for it, right? Remember we use it. We'll talk about it more in our renal module, the uses of it, but today, I need you guys to understand how does this potential for metabolic acidosis occur in these patients, because sometimes you will need to use this drug orally in patients with glaucoma. Not very often, but sometimes, and this is definitely a side effect we have to watch out for, OK.\"",
-     "M1113@60115: \"And then a side effect of using these, Um, orally, is they can cause some acidosis. So, that's a significant side effect that these medications can cause orally if you take them orally, and, um, needs to be, um, carefully monitored in your patient, OK? So, side effects for using them with uh eye drops, and then side effects for if we're administering it orally.\""
+     "M1117@18418: \"I need you guys to understand how does this potential for metabolic acidosis occur in these patients, because sometimes you will need to use this drug orally in patients with glaucoma.\"",
+     "M1113@60052: \"And then a side effect of using these, Um, orally, is they can cause some acidosis. So, that's a significant side effect that these medications can cause orally if you take them orally, and, um, needs to be, um, carefully monitored in your patient, OK?\""
     ],
     "name": "cai",
     "kw": [
@@ -5512,8 +5495,7 @@
      "EL-042:smith-eye-cue"
     ],
     "quotes": [
-     "M1117@48580: \"Pay special attention to which ones have mast cell stabilizing properties. Some of them are used for other indications, like azelastine is indicated for allergic rhinitis. Some of them get into the CNS more than others.\"",
-     "M1117@44825: \"And this is what's called mast mast cell stabilization. Many of our antihistamines, they have this other quality. They prevent the mast cells from releasing histamine, OK? So that's very different than being an H1 inverse agonist, OK? If you're using medication for its H1 inverse agonism properties.\""
+     "M1117@48555: \"Pay special attention to which ones have mast cell stabilizing properties. Some of them are used for other indications, like azelastine is indicated for allergic rhinitis. Some of them get into the CNS more than others.\""
     ],
     "name": "ophthalmic-h1",
     "kw": [
@@ -5542,10 +5524,7 @@
      "EO-020:smith-eye-cue",
      "EO-017:smith-ex3"
     ],
-    "quotes": [
-     "M1117@32283: \"All right, this is an interesting little factoid. We see clinically that these prostaglandin agonists are a bit more effective in darker colored eyes than in lighter colored eyes. I don't know why. It's just something we see clinically, so hazel or brown eyes um might respond a bit better to this category of glaucoma meds compared to blue or green eyes. I think that's very interesting, OK. All right.\"",
-     "M1117@34104: \"Um, it also will help with pigmentation of the lashes, so you will see these medica uh, prostaglandin agonists on the market as Latisse to help with eyelash thickening, OK. It'll cause hair growth in other areas, and besides that, you don't have many other systemic side effects with this class of medications, OK?\""
-    ],
+    "quotes": [],
     "name": "pg-agonists",
     "kw": [
      "prosta",
@@ -5572,8 +5551,7 @@
      "EI-023:smith-eye-cue"
     ],
     "quotes": [
-     "M1113@49731: \"They don't really know, but we do see an increase in the uveouscleral outflow, OK. Another feature of that medication is that it is neuroprotective. This medication seems to protect somehow the health of the optic nerve. So, we've seen that a lot in animal studies, and we are assuming it's happening in humans as well. Yes. SPEAKER 2 Question. Right No, no.\"",
-     "M1113@53050: \"These drugs work. OK. All right. Um, So more about the side effects, um. Uh, importantly, for apriclonidine, you can get the systemic hypotension, and then that allergic reaction is a significant problem. Uh, for brimonidine, this is a drug that is pretty good at causing what we call a foreign body sensation. So you feel like you got something in your eye.\""
+     "M1113@53046: \"Uh, importantly, for apriclonidine, you can get the systemic hypotension, and then that allergic reaction is a significant problem.\""
     ],
     "name": "brimonidine",
     "kw": [
@@ -5597,8 +5575,7 @@
      "EL-008:smith-eye-cue"
     ],
     "quotes": [
-     "M1117@50365: \"And then cetirizine, again, has minimal anticholinergic effects, so you don't get the dry mouth and other anticholinergic symptoms that you would expect. But, um, even though it doesn't penetrate the CNS very well, it can still sometimes cause patients some drowsiness. OK.\"",
-     "M1117@48580: \"Pay special attention to which ones have mast cell stabilizing properties. Some of them are used for other indications, like azelastine is indicated for allergic rhinitis. Some of them get into the CNS more than others.\""
+     "M1117@48555: \"Pay special attention to which ones have mast cell stabilizing properties. Some of them are used for other indications, like azelastine is indicated for allergic rhinitis. Some of them get into the CNS more than others.\""
     ],
     "name": "cetirizine-eye",
     "kw": [
@@ -7949,8 +7926,8 @@
      "EI-039:smith-obj-eye"
     ],
     "quotes": [
-     "M1113@19464: \"I'll give you the the information about what that means in just a minute, but. Uh, as you study your drugs, be sure you can categorize them of ones that affect inflow or outflow, OK? All right. So, pathophys of glaucoma. So, what is glaucoma? OK. It is a progressive eye disease that can lead to vision loss due to optic nerve damage.\"",
-     "M1113@60888: \"All right. I don't think these drugs are really complicated at all to learn. It's again, memorizing, do they affect inflow, do they affect outflow, and then the pharmacological categories that they affect. Yes. Yeah. Uh, I've got 5 questions and they're cumulative, so everything that was on the first exam is fair game. So focus on pathophys and then focus on mechanisms.\""
+     "M1113@19435: \"Uh, as you study your drugs, be sure you can categorize them of ones that affect inflow or outflow, OK? All right. So, pathophys of glaucoma. So, what is glaucoma? OK.\"",
+     "M1113@60876: \"It's again, memorizing, do they affect inflow, do they affect outflow, and then the pharmacological categories that they affect. Yes. Yeah.\""
     ],
     "term": "inflow",
     "kw": [
@@ -7977,8 +7954,8 @@
      "EO-046:smith-obj-eye"
     ],
     "quotes": [
-     "M1113@19464: \"I'll give you the the information about what that means in just a minute, but. Uh, as you study your drugs, be sure you can categorize them of ones that affect inflow or outflow, OK? All right. So, pathophys of glaucoma. So, what is glaucoma? OK. It is a progressive eye disease that can lead to vision loss due to optic nerve damage.\"",
-     "M1113@60888: \"All right. I don't think these drugs are really complicated at all to learn. It's again, memorizing, do they affect inflow, do they affect outflow, and then the pharmacological categories that they affect. Yes. Yeah. Uh, I've got 5 questions and they're cumulative, so everything that was on the first exam is fair game. So focus on pathophys and then focus on mechanisms.\""
+     "M1113@19435: \"Uh, as you study your drugs, be sure you can categorize them of ones that affect inflow or outflow, OK? All right. So, pathophys of glaucoma. So, what is glaucoma? OK.\"",
+     "M1113@60876: \"It's again, memorizing, do they affect inflow, do they affect outflow, and then the pharmacological categories that they affect. Yes. Yeah.\""
     ],
     "term": "outflow",
     "kw": [
@@ -8004,8 +7981,8 @@
      "EI-039:smith-obj-eye"
     ],
     "quotes": [
-     "M1113@19464: \"I'll give you the the information about what that means in just a minute, but. Uh, as you study your drugs, be sure you can categorize them of ones that affect inflow or outflow, OK? All right. So, pathophys of glaucoma. So, what is glaucoma? OK. It is a progressive eye disease that can lead to vision loss due to optic nerve damage.\"",
-     "M1113@60888: \"All right. I don't think these drugs are really complicated at all to learn. It's again, memorizing, do they affect inflow, do they affect outflow, and then the pharmacological categories that they affect. Yes. Yeah. Uh, I've got 5 questions and they're cumulative, so everything that was on the first exam is fair game. So focus on pathophys and then focus on mechanisms.\""
+     "M1113@19435: \"Uh, as you study your drugs, be sure you can categorize them of ones that affect inflow or outflow, OK? All right. So, pathophys of glaucoma. So, what is glaucoma? OK.\"",
+     "M1113@60876: \"It's again, memorizing, do they affect inflow, do they affect outflow, and then the pharmacological categories that they affect. Yes. Yeah.\""
     ],
     "term": "production inhibitors",
     "kw": [
@@ -8031,8 +8008,8 @@
      "EO-046:smith-obj-eye"
     ],
     "quotes": [
-     "M1113@19464: \"I'll give you the the information about what that means in just a minute, but. Uh, as you study your drugs, be sure you can categorize them of ones that affect inflow or outflow, OK? All right. So, pathophys of glaucoma. So, what is glaucoma? OK. It is a progressive eye disease that can lead to vision loss due to optic nerve damage.\"",
-     "M1113@60888: \"All right. I don't think these drugs are really complicated at all to learn. It's again, memorizing, do they affect inflow, do they affect outflow, and then the pharmacological categories that they affect. Yes. Yeah. Uh, I've got 5 questions and they're cumulative, so everything that was on the first exam is fair game. So focus on pathophys and then focus on mechanisms.\""
+     "M1113@19435: \"Uh, as you study your drugs, be sure you can categorize them of ones that affect inflow or outflow, OK? All right. So, pathophys of glaucoma. So, what is glaucoma? OK.\"",
+     "M1113@60876: \"It's again, memorizing, do they affect inflow, do they affect outflow, and then the pharmacological categories that they affect. Yes. Yeah.\""
     ],
     "term": "outflow enhancers",
     "kw": [
@@ -8059,7 +8036,7 @@
      "EA-022:smith-ex3"
     ],
     "quotes": [
-     "M1113@23479: \"Closed angle means that the part of the eye where the aqueous humor flows out actually gets closed. That's a medical emergency. People will often feel pain with that pretty significant pain, OK?\""
+     "M1113@61120: \"So focus on pathophys and then focus on mechanisms. \""
     ],
     "term": "angle",
     "kw": [
@@ -8073,7 +8050,11 @@
      "optic",
      "nerve",
      "intrao",
-     "draina"
+     "draina",
+     "pathop",
+     "pathol",
+     "mechan",
+     "diseas"
     ]
    },
    "ey-poag": {
@@ -8083,9 +8064,7 @@
     "ev": [
      "EA-022:smith-ex3"
     ],
-    "quotes": [
-     "M1113@21116: \"It's onset is usually gradual and asymptomatic until somebody goes into the eye doctor and has had vision loss. So, you don't usually feel anything with open-angle glaucoma. So this is the reason why all of us should be going to the eye doctor on an annual basis, at least, OK? Who goes to the eye doctor every year?\""
-    ],
+    "quotes": [],
     "term": "primary open-angle glaucoma",
     "kw": [
      "primar",
@@ -8099,7 +8078,11 @@
      "optic",
      "nerve",
      "intrao",
-     "draina"
+     "draina",
+     "pathop",
+     "pathol",
+     "mechan",
+     "diseas"
     ]
    },
    "ey-pacg": {
@@ -8111,7 +8094,7 @@
      "EA-029:smith-ex3"
     ],
     "quotes": [
-     "M1113@23479: \"Closed angle means that the part of the eye where the aqueous humor flows out actually gets closed. That's a medical emergency. People will often feel pain with that pretty significant pain, OK?\""
+     "M1113@61120: \"So focus on pathophys and then focus on mechanisms. \""
     ],
     "term": "primary angle-closure glaucoma",
     "kw": [
@@ -8126,7 +8109,11 @@
      "optic",
      "nerve",
      "intrao",
-     "draina"
+     "draina",
+     "pathop",
+     "pathol",
+     "mechan",
+     "diseas"
     ]
    },
    "ey-trabecular-meshwork": {
@@ -8138,7 +8125,7 @@
      "EO-001:smith-ex3"
     ],
     "quotes": [
-     "M1113@32692: \"And so with that in mind, that's a really great question. Thank you. With that in mind, the most important outflow route is through that trabecular meshwork and Schlem's canal. Most of the liquid can get through that canal because it's like made, you know, it's like a canal, OK. The uveosclelero outflow, there's not so much outflow that goes through that.\""
+     "M1113@32669: \"With that in mind, the most important outflow route is through that trabecular meshwork and Schlem's canal. Most of the liquid can get through that canal because it's like made, you know, it's like a canal, OK.\""
     ],
     "term": "trabecular meshwork",
     "kw": [
@@ -8166,7 +8153,7 @@
      "EO-018:smith-eye-cue"
     ],
     "quotes": [
-     "M1113@33575: \"OK. The technical term for the drainage is outflow. And there's two kinds of outflow. The most important kinds of outflow is the liquid percolates through that trabecular mesh and then goes into the schlem's canal, OK.\""
+     "M1113@32669: \"With that in mind, the most important outflow route is through that trabecular meshwork and Schlem's canal. Most of the liquid can get through that canal because it's like made, you know, it's like a canal, OK.\""
     ],
     "term": "uveoscleral outflow",
     "kw": [
@@ -8194,7 +8181,7 @@
      "EA-034:smith-ex3"
     ],
     "quotes": [
-     "M1113@32692: \"And so with that in mind, that's a really great question. Thank you. With that in mind, the most important outflow route is through that trabecular meshwork and Schlem's canal. Most of the liquid can get through that canal because it's like made, you know, it's like a canal, OK. The uveosclelero outflow, there's not so much outflow that goes through that.\""
+     "M1113@32669: \"With that in mind, the most important outflow route is through that trabecular meshwork and Schlem's canal. Most of the liquid can get through that canal because it's like made, you know, it's like a canal, OK.\""
     ],
     "term": "aqueous humor",
     "kw": [
@@ -8220,9 +8207,7 @@
     "ev": [
      "EA-034:smith-ex3"
     ],
-    "quotes": [
-     "M1113@21116: \"It's onset is usually gradual and asymptomatic until somebody goes into the eye doctor and has had vision loss. So, you don't usually feel anything with open-angle glaucoma. So this is the reason why all of us should be going to the eye doctor on an annual basis, at least, OK? Who goes to the eye doctor every year?\""
-    ],
+    "quotes": [],
     "term": "intraocular pressure",
     "kw": [
      "intrao",
@@ -8235,7 +8220,11 @@
      "pain",
      "optic",
      "nerve",
-     "draina"
+     "draina",
+     "pathop",
+     "pathol",
+     "mechan",
+     "diseas"
     ]
    },
    "ey-carbonic-anhydrase": {
@@ -8247,7 +8236,7 @@
      "EA-045:smith-obj-eye"
     ],
     "quotes": [
-     "M1117@18418: \"So you have some context for it, right? Remember we use it. We'll talk about it more in our renal module, the uses of it, but today, I need you guys to understand how does this potential for metabolic acidosis occur in these patients, because sometimes you will need to use this drug orally in patients with glaucoma. Not very often, but sometimes, and this is definitely a side effect we have to watch out for, OK.\""
+     "M1117@18418: \"I need you guys to understand how does this potential for metabolic acidosis occur in these patients, because sometimes you will need to use this drug orally in patients with glaucoma.\""
     ],
     "term": "carbonic anhydrase",
     "kw": [
@@ -8277,8 +8266,8 @@
      "EI-031:smith-eye-cue"
     ],
     "quotes": [
-     "M1117@18418: \"So you have some context for it, right? Remember we use it. We'll talk about it more in our renal module, the uses of it, but today, I need you guys to understand how does this potential for metabolic acidosis occur in these patients, because sometimes you will need to use this drug orally in patients with glaucoma. Not very often, but sometimes, and this is definitely a side effect we have to watch out for, OK.\"",
-     "M1113@60115: \"And then a side effect of using these, Um, orally, is they can cause some acidosis. So, that's a significant side effect that these medications can cause orally if you take them orally, and, um, needs to be, um, carefully monitored in your patient, OK? So, side effects for using them with uh eye drops, and then side effects for if we're administering it orally.\""
+     "M1117@18418: \"I need you guys to understand how does this potential for metabolic acidosis occur in these patients, because sometimes you will need to use this drug orally in patients with glaucoma.\"",
+     "M1113@60052: \"And then a side effect of using these, Um, orally, is they can cause some acidosis. So, that's a significant side effect that these medications can cause orally if you take them orally, and, um, needs to be, um, carefully monitored in your patient, OK?\""
     ],
     "term": "metabolic acidosis",
     "kw": [
@@ -8306,7 +8295,7 @@
      "EI-029:smith-eye-cue"
     ],
     "quotes": [
-     "M1117@18418: \"So you have some context for it, right? Remember we use it. We'll talk about it more in our renal module, the uses of it, but today, I need you guys to understand how does this potential for metabolic acidosis occur in these patients, because sometimes you will need to use this drug orally in patients with glaucoma. Not very often, but sometimes, and this is definitely a side effect we have to watch out for, OK.\""
+     "M1117@18418: \"I need you guys to understand how does this potential for metabolic acidosis occur in these patients, because sometimes you will need to use this drug orally in patients with glaucoma.\""
     ],
     "term": "proximal convoluted tubule",
     "kw": [
@@ -8336,7 +8325,7 @@
      "EI-025:smith-obj-eye"
     ],
     "quotes": [
-     "M1117@18418: \"So you have some context for it, right? Remember we use it. We'll talk about it more in our renal module, the uses of it, but today, I need you guys to understand how does this potential for metabolic acidosis occur in these patients, because sometimes you will need to use this drug orally in patients with glaucoma. Not very often, but sometimes, and this is definitely a side effect we have to watch out for, OK.\""
+     "M1117@18418: \"I need you guys to understand how does this potential for metabolic acidosis occur in these patients, because sometimes you will need to use this drug orally in patients with glaucoma.\""
     ],
     "term": "carbonic anhydrase inhibitors",
     "kw": [
@@ -8365,8 +8354,7 @@
      "EL-042:smith-eye-cue"
     ],
     "quotes": [
-     "M1117@48580: \"Pay special attention to which ones have mast cell stabilizing properties. Some of them are used for other indications, like azelastine is indicated for allergic rhinitis. Some of them get into the CNS more than others.\"",
-     "M1117@44825: \"And this is what's called mast mast cell stabilization. Many of our antihistamines, they have this other quality. They prevent the mast cells from releasing histamine, OK? So that's very different than being an H1 inverse agonist, OK? If you're using medication for its H1 inverse agonism properties.\""
+     "M1117@48555: \"Pay special attention to which ones have mast cell stabilizing properties. Some of them are used for other indications, like azelastine is indicated for allergic rhinitis. Some of them get into the CNS more than others.\""
     ],
     "term": "mast cell stabilization",
     "kw": [
@@ -8394,7 +8382,7 @@
      "EL-004:smith-eye-cue"
     ],
     "quotes": [
-     "M1117@44825: \"And this is what's called mast mast cell stabilization. Many of our antihistamines, they have this other quality. They prevent the mast cells from releasing histamine, OK? So that's very different than being an H1 inverse agonist, OK? If you're using medication for its H1 inverse agonism properties.\""
+     "M1117@48555: \"Pay special attention to which ones have mast cell stabilizing properties. Some of them are used for other indications, like azelastine is indicated for allergic rhinitis. Some of them get into the CNS more than others.\""
     ],
     "term": "inverse agonist",
     "kw": [
@@ -8422,8 +8410,7 @@
      "EL-008:smith-eye-cue"
     ],
     "quotes": [
-     "M1117@50365: \"And then cetirizine, again, has minimal anticholinergic effects, so you don't get the dry mouth and other anticholinergic symptoms that you would expect. But, um, even though it doesn't penetrate the CNS very well, it can still sometimes cause patients some drowsiness. OK.\"",
-     "M1117@48580: \"Pay special attention to which ones have mast cell stabilizing properties. Some of them are used for other indications, like azelastine is indicated for allergic rhinitis. Some of them get into the CNS more than others.\""
+     "M1117@48555: \"Pay special attention to which ones have mast cell stabilizing properties. Some of them are used for other indications, like azelastine is indicated for allergic rhinitis. Some of them get into the CNS more than others.\""
     ],
     "term": "cetirizine",
     "kw": [
@@ -8452,7 +8439,7 @@
      "EL-008:smith-eye-cue"
     ],
     "quotes": [
-     "M1117@48580: \"Pay special attention to which ones have mast cell stabilizing properties. Some of them are used for other indications, like azelastine is indicated for allergic rhinitis. Some of them get into the CNS more than others.\""
+     "M1117@48555: \"Pay special attention to which ones have mast cell stabilizing properties. Some of them are used for other indications, like azelastine is indicated for allergic rhinitis. Some of them get into the CNS more than others.\""
     ],
     "term": "H1 inverse agonists",
     "kw": [
@@ -8480,9 +8467,7 @@
     "ev": [
      "EO-020:smith-eye-cue"
     ],
-    "quotes": [
-     "M1117@32283: \"All right, this is an interesting little factoid. We see clinically that these prostaglandin agonists are a bit more effective in darker colored eyes than in lighter colored eyes. I don't know why. It's just something we see clinically, so hazel or brown eyes um might respond a bit better to this category of glaucoma meds compared to blue or green eyes. I think that's very interesting, OK. All right.\""
-    ],
+    "quotes": [],
     "term": "increased brown pigmentation of the iris",
     "kw": [
      "increa",
@@ -8514,10 +8499,7 @@
      "EO-020:smith-eye-cue",
      "EO-017:smith-ex3"
     ],
-    "quotes": [
-     "M1117@32283: \"All right, this is an interesting little factoid. We see clinically that these prostaglandin agonists are a bit more effective in darker colored eyes than in lighter colored eyes. I don't know why. It's just something we see clinically, so hazel or brown eyes um might respond a bit better to this category of glaucoma meds compared to blue or green eyes. I think that's very interesting, OK. All right.\"",
-     "M1117@34104: \"Um, it also will help with pigmentation of the lashes, so you will see these medica uh, prostaglandin agonists on the market as Latisse to help with eyelash thickening, OK. It'll cause hair growth in other areas, and besides that, you don't have many other systemic side effects with this class of medications, OK?\""
-    ],
+    "quotes": [],
     "term": "prostaglandin agonists",
     "kw": [
      "prosta",
@@ -8542,9 +8524,7 @@
     "ev": [
      "EO-018:smith-eye-cue"
     ],
-    "quotes": [
-     "M1117@32283: \"All right, this is an interesting little factoid. We see clinically that these prostaglandin agonists are a bit more effective in darker colored eyes than in lighter colored eyes. I don't know why. It's just something we see clinically, so hazel or brown eyes um might respond a bit better to this category of glaucoma meds compared to blue or green eyes. I think that's very interesting, OK. All right.\""
-    ],
+    "quotes": [],
     "term": "PGF2α receptor",
     "kw": [
      "pgf2",
@@ -8574,7 +8554,7 @@
      "ED-009:smith-eye-room"
     ],
     "quotes": [
-     "M1117@60798: \"And this complex is what inhibits calcineurin. FKBP uh oh. Did you guys see that question before? I know that I was picky on that question. But I did that on purpose, because we'll talk about these drugs again, including FKBP and oncology. I'm trying to help you out like a whole year from now, OK? So, tac binds to FKBP, cyclosporin binds to cyclophyllin. Either of those inhibit calcineurin, right?\""
+     "M1117@60741: \"Did you guys see that question before? I know that I was picky on that question. But I did that on purpose, because we'll talk about these drugs again, including FKBP and oncology.\""
     ],
     "term": "cyclosporine",
     "kw": [
@@ -8598,9 +8578,7 @@
     "ev": [
      "EI-014:smith-eye-cue"
     ],
-    "quotes": [
-     "M1113@49731: \"They don't really know, but we do see an increase in the uveouscleral outflow, OK. Another feature of that medication is that it is neuroprotective. This medication seems to protect somehow the health of the optic nerve. So, we've seen that a lot in animal studies, and we are assuming it's happening in humans as well. Yes. SPEAKER 2 Question. Right No, no.\""
-    ],
+    "quotes": [],
     "term": "neuroprotective",
     "kw": [
      "neurop",
@@ -8622,9 +8600,7 @@
     "ev": [
      "EI-014:smith-eye-cue"
     ],
-    "quotes": [
-     "M1113@49731: \"They don't really know, but we do see an increase in the uveouscleral outflow, OK. Another feature of that medication is that it is neuroprotective. This medication seems to protect somehow the health of the optic nerve. So, we've seen that a lot in animal studies, and we are assuming it's happening in humans as well. Yes. SPEAKER 2 Question. Right No, no.\""
-    ],
+    "quotes": [],
     "term": "brimonidine",
     "kw": [
      "brimon",
@@ -8647,7 +8623,7 @@
      "EO-033:smith-ex3"
     ],
     "quotes": [
-     "M1117@37371: \"Maybe at Halloween time, it's OK, right? But, um, conjunctival hemorrhage is always a little scary when you look in the mirror. So, uh, the rokinase inhibitors, uh, I think they're quite effective.\""
+     "M1117@37328: \"But, um, conjunctival hemorrhage is always a little scary when you look in the mirror. So, uh, the rokinase inhibitors, uh, I think they're quite effective.\""
     ],
     "term": "conjunctival hemorrhage",
     "kw": [

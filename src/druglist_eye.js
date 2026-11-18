@@ -366,6 +366,7 @@ const DRUGLIST_EYE = (() => {
   function whyNone(d, T, kind){
     if (kind === 'target') return hasTarget(d) ? 'fewer than three safe wrong options' : 'the Reference line names no molecular target (a lubricant, or a corticosteroid that changes gene expression)';
     if (kind === 'chem') { const c = CHEM[d.id]; return c && c.no ? c.why : 'fewer than three safe wrong options'; }
+    if (kind === 'cls' || kind === 'clsRev') return d.cls === 'comb' ? 'a combination product shares its components\' classes, so no other class is safely false' : 'fewer than three safe wrong options';
     return 'fewer than three safe wrong options';
   }
   function coverage(T){

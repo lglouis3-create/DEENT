@@ -50,9 +50,9 @@ const sb = {console, window: {}};
 vm.createContext(sb);
 let src = here('course.js') + '\n';
 for (const f of files) src += here(f) + '\n';
-src += here('reference.js') + '\nthis.X = {QUESTIONS, DRUGLIST, REFERENCE_HTML, ATLAS: typeof ATLAS !== "undefined" ? ATLAS : null, DRUGFACTS: typeof DRUGFACTS !== "undefined" ? DRUGFACTS : null};';
+src += here('reference.js') + '\nthis.X = {QUESTIONS, DRUGLIST, DRUGLIST_EYE, CHART_BOXES_EYE, REFERENCE_HTML, ATLAS: typeof ATLAS !== "undefined" ? ATLAS : null, DRUGFACTS: typeof DRUGFACTS !== "undefined" ? DRUGFACTS : null};';
 vm.runInContext(src, sb);
-const {QUESTIONS, DRUGLIST: DL, REFERENCE_HTML, ATLAS} = sb.X;
+const {QUESTIONS, DRUGLIST: DL, REFERENCE_HTML, ATLAS, DRUGLIST_EYE: EY, CHART_BOXES_EYE: EYB} = sb.X;
 const ids = new Set(DL.D.map(d => d.id));
 const qids = new Set(QUESTIONS.map(q => q.id));
 
@@ -665,10 +665,145 @@ console.log('=== The original chart pages (chart/, chart_boxes.js) ===');
   }
 }
 
+
+console.log('=== Eye list (druglist_eye.js, Ophthalmics chart, Exam 3) ===');
+{
+  const ED = EY.D, ET = EY.parseTargets(REFERENCE_HTML);
+  const chartTxt = require('child_process').spawnSync('python3', ['-I', '-c', `import pymupdf,sys,json
+d=pymupdf.open(sys.argv[1]); print(json.dumps([p.get_text() for p in d]))`, path.join(__dirname, 'decks', 'DrugChart_Ophthalmics.pdf')], {encoding: 'utf8'});
+  const chartPages = chartTxt.status === 0 ? JSON.parse(chartTxt.stdout) : null;
+  check(ED.length === 42, `the eye list has 42 cards, one per chart line (${ED.length})`);
+  const byPage = {}; ED.forEach(d => { byPage[d.page] = (byPage[d.page] || 0) + 1; });
+  check(JSON.stringify(byPage) === '{"1":9,"2":14,"3":12,"4":7}', 'cards per chart page: p. 1 9, p. 2 14, p. 3 12, p. 4 7 (' + JSON.stringify(byPage) + ')');
+  check(new Set(ED.map(d => d.id)).size === ED.length && ED.every(d => d.id.startsWith('ey-')), 'eye card ids are unique and prefixed ey-');
+  check(!ED.some(d => ids.has(d.id)), 'no eye id equals a dermatology id (the drug facts map is dermatology only)');
+  const rowsE = EY.CHART_ROWS;
+  check(rowsE.length === 42 && rowsE.every(([p, , id]) => id && ED.some(d => d.id === id)), 'every eye chart line goes to a card');
+  const miss = ED.filter(d => !d.name || !d.rx || !d.chartClass || !d.chartUse || !d.cls || !d.dz.length || !d.line || !EY.CHEM[d.id] || !d.brands.length);
+  check(!miss.length, 'every card has name, Rx/OTC, pharmacological class, indication, chemical-class record, brand(s) and its chart line', miss.map(d => d.id).join(', '));
+  check(ED.every(d => d.rx === 'Rx' || d.rx === 'OTC'), 'Rx/OTC is Rx or OTC on every card');
+  check(ED.every(d => EY.CLASSES[d.cls] && d.chartClass === EY.CLASSES[d.cls]), 'every class is a key of CLASSES and the card shows the chart wording');
+  // brand names exactly as in the chart text
+  if (chartPages) {
+    const flat = t => t.replace(/\s+/g, '').toLowerCase();
+    const pg = chartPages.map(flat);
+    const badB = [];
+    for (const d of ED) for (const b of d.brands) if (!pg[d.page - 1].includes(flat(b))) badB.push(d.id + ':' + b);
+    check(!badB.length, 'every brand name is in the chart text of its page, as printed', badB.join(', '));
+    const badL = ED.filter(d => !pg[d.page - 1].includes(flat(d.line.replace(/ – /g, '–').replace(/–/g, '')).replace(/–/g, '')) && !pg[d.page - 1].includes(flat(d.line)));
+    const badL2 = ED.filter(d => { const g = flat(d.line.split('(')[0]).replace(/–.*/, ''); return !pg[d.page - 1].includes(g); });
+    check(!badL2.length, 'every card\'s chart line (generic or first words) is in the chart text of its page', badL2.map(d => d.id).join(', '));
+    const bad = [];
+    for (const d of ED) { if (!pg[d.page - 1].includes(flat(d.chartUse.slice(0, 24)))) bad.push(d.id + ' use'); }
+    check(!bad.length, 'every indication is in the chart text of its page', bad.join(', '));
+    const badC = ED.filter(d => { const c = EY.CHEM[d.id]; return c && !c.no && !pg[d.page - 1].includes(flat(c.t.replace(/,.*/, ''))); });
+    check(!badC.length, 'every keyed chemical class is in the chart text of its page', badC.map(d => d.id).join(', '));
+  } else console.log('  NOT RUN: chart text checks (pymupdf not available)');
+  // targets read from the Reference eye tables
+  const bs = Object.keys(EY.TARGET_SPEC).filter(k => !ET[k]);
+  check(!bs.length, `every target spec finds its Reference row (${Object.keys(EY.TARGET_SPEC).length})`, bs.join(', '));
+  const bt = [];
+  for (const [k, sp] of Object.entries(EY.TARGET_SPEC)) {
+    const r = ET[k]; if (!r) continue;
+    const cell = r.cells[sp.mech];
+    if (sp.verbatim && !(sp.same ? ET[sp.same].cells[ET[sp.same] ? EY.TARGET_SPEC[sp.same].mech : 0] : cell).toLowerCase().includes(sp.tg.toLowerCase())) bt.push(k + ': target is not a quotation of the cell');
+    if (sp.must && !sp.must.test(r.cells[0] + ' ' + r.cells[sp.mech]) && !sp.must.test(r.head.join(' ') + ' ' + r.cells.join(' '))) bt.push(k + ': pattern not met');
+    if (!r.parts.every(p => p.by === 'smith' && /^Reference ref-ey-(gl|ac|de)/.test(p.cite))) bt.push(k + ': part without Dr. Smith / Reference cite');
+  }
+  check(!bt.length, 'each target is a quotation of its Reference cell or meets its stated pattern; every part cites Reference and its slides', bt.join('; '));
+  const noT = ED.filter(d => d.tgt && !ET[d.tgt] || d.tgt2 && !ET[d.tgt2]);
+  check(!noT.length, 'every card\'s target keys exist', noT.map(d => d.id).join(', '));
+  const withTg = ED.filter(d => EY.hasTarget(d));
+  check(withTg.every(d => EY.quizFacts(d, ET, 'target').length >= 1) && ED.filter(d => !EY.hasTarget(d)).map(d => d.id).sort().join() === 'ey-cmc,ey-hpc,ey-loteprednol,ey-tears',
+    `38 cards have a stated target; carboxymethylcellulose, hydroxypropyl cellulose, artificial tears and loteprednol have none (${withTg.length})`);
+  // every drug of the Reference eye tables has a card or is listed as not on the chart
+  const refDrugs = [];
+  const sec = id => { const i = REFERENCE_HTML.indexOf('<h3 id="' + id + '"'); const j = REFERENCE_HTML.indexOf('<h3', i + 10); return REFERENCE_HTML.slice(i, j < 0 ? undefined : j); };
+  const firstCells = h => [...h.matchAll(/<tr>\s*<td>([\s\S]*?)<\/td>/g)].map(m => m[1]);
+  const names = h => [...h.matchAll(/<b>([^<]+)<\/b>/g)].map(m => EY.strip(m[1]));
+  const gl = sec('ref-ey-gl'); const glTab = gl.slice(0, gl.indexOf('</table>'));
+  [...glTab.matchAll(/<tr>([\s\S]*?)<\/tr>/g)].forEach(r => { const tds = [...r[1].matchAll(/<td[^>]*>([\s\S]*?)<\/td>/g)].map(x => x[1]); if (tds[1]) refDrugs.push(...names(tds[1])); });
+  const ac = sec('ref-ey-ac'); const acT = ac.split('</table>');
+  [...acT[0].matchAll(/<tr><td><b>([^<]+)<\/b>/g)].forEach(m => refDrugs.push(EY.strip(m[1])));
+  [...(acT[2] || '').matchAll(/<tr>\s*<td>([\s\S]*?)<\/td>/g)].forEach(m => refDrugs.push(...names(m[1])));
+  const de = sec('ref-ey-de'); [...de.split('</table>')[0].matchAll(/<tr><td><b>([^<]+)<\/b>/g)].forEach(m => refDrugs.push(EY.strip(m[1])));
+  [...(de.split('</table>')[1] || '').matchAll(/<tr><td><b>([^<]+)<\/b>/g)].forEach(m => refDrugs.push(EY.strip(m[1])));
+  const gen = n => n.toLowerCase().replace(/\(.*\)/, '').replace(/travaprost/, 'travoprost').trim();
+  const cardText = ED.map(d => (d.name + ' ' + d.alt.join(' ')).toLowerCase()).join(' | ');
+  const notOn = Object.keys(EY.NOT_ON_CHART);
+  const unmatched = [...new Set(refDrugs)].filter(n => !/^combination/i.test(n)).filter(n => { const g = gen(n); return !notOn.some(x => g.includes(x)) && !cardText.includes(g.split(' ')[0]); });
+  check(refDrugs.length >= 30 && !unmatched.length, `every drug of the Reference eye tables has a card or is listed as not on the chart (${new Set(refDrugs).size} names; not on the chart: ${notOn.join(', ')})`, unmatched.join(', '));
+  check(notOn.every(x => !cardText.includes(x)) && notOn.length === 2, 'cetirizine and tacrolimus are listed as not on the chart and have no card');
+  const tr = ED.find(d => d.id === 'ey-travoprost');
+  check(tr.name === 'Travoprost' && tr.notes.some(n => /Travaprost/.test(n.t) && /slide 38|Eye 38/.test(n.t + n.cite)), 'travoprost: the chart\'s spelling is the name and the card says the slides\' "Travaprost" (slide 38)');
+  // every statement names its source
+  const stm = [];
+  for (const d of ED) for (const n of d.notes) if (n.by !== 'remark' && !(n.cite && n.by)) stm.push(d.id);
+  check(!stm.length, 'every sourced note on an eye card names its source', stm.join(', '));
+  // questions
+  const rng0 = seed => { let s = seed; return () => { s = (s * 16807) % 2147483647; return s / 2147483647; }; };
+  let nq = 0; const bq = [];
+  for (const d of ED) for (const k of Object.keys(EY.KINDS)) for (let i = 1; i <= 40; i++) {
+    const q = EY.makeQuestion(d, ET, k, rng0(i * 97 + 3));
+    if (!q) continue;
+    nq++;
+    const right = q.options.filter(o => o.correct);
+    if (right.length !== 1) bq.push(`${q.id}: ${right.length} correct`);
+    if (new Set(q.options.map(o => EY.norm(o.t))).size !== q.options.length) bq.push(`${q.id}: duplicate options`);
+    if (!(q.src || []).length || !q.src.every(x => x.by && x.cite)) bq.push(`${q.id}: no source`);
+    const wrong = q.options.filter(o => !o.correct).map(o => o.t);
+    if (k === 'target') { const tv = [d.tgt, d.tgt2].filter(Boolean).flatMap(id => ET[id].parts).filter(p => p.kind === 'tg').map(p => EY.family(p.t)); if (wrong.some(w => tv.includes(EY.family(w)))) bq.push(`${q.id}: a wrong target is true`); }
+    if (k === 'brand' && q.dir === 'fwd') { const own = d.brands.map(EY.norm); if (wrong.some(w => own.includes(EY.norm(w)))) bq.push(`${q.id}: own brand offered as wrong`); }
+    if (k === 'chem') { const c = EY.CHEM[d.id]; if (c.no) bq.push(`${q.id}: asked from a blank cell`); }
+    if (k === 'use' && q.options.length !== 3) bq.push(`${q.id}: indication question not 3 options`);
+    if (k === 'rx' && q.options.length !== 2) bq.push(`${q.id}: rx options`);
+    if (q.options.length !== (k === 'rx' ? 2 : k === 'use' ? 3 : 4)) bq.push(`${q.id}: ${q.options.length} options`);
+  }
+  check(nq > 1000 && !bq.length, `eye questions (${nq} generated over 8 kinds x 42 drugs x 40 draws): one correct answer, no duplicates, a source, no wrong option true for the drug`, bq.slice(0, 5).join('; '));
+  const cov = EY.coverage(ET);
+  console.log('  coverage: ' + Object.entries(cov).map(([k, o]) => `${k} ${o.n}`).join(', '));
+  check(cov.target.n === 38 && cov.use.n === 42 && cov.rx.n === 42 && cov.brand.n === 42 && cov.chem.n === 29 && cov.useRev.n === 42, 'eye coverage: target 38, indication 42, Rx/OTC 42, brand 42, chemical class 29, indication → drug 42');
+  const pq = ED.filter(d => { try { new RegExp(d.q, 'i'); return false; } catch (e) { return true; } });
+  check(!pq.length, 'every eye question pattern compiles', pq.map(d => d.id).join(', '));
+  const withQ = ED.filter(d => EY.questionsFor(d, QUESTIONS).length);
+  console.log(`  ${withQ.length} of ${ED.length} eye cards have bank questions that name them`);
+  // chart images and boxes
+  check(!!EYB, 'chart_boxes_eye.js is in course.js files and defines CHART_BOXES_EYE');
+  if (EYB) {
+    const root = path.join(__dirname, '..', 'chart');
+    const sizes = Object.entries(EYB.pages).map(([p, g]) => fs.existsSync(path.join(root, g.file)) && g.file === `eye-${p}.webp`);
+    check(Object.keys(EYB.pages).length === 4 && sizes.every(Boolean), 'the four eye chart pages exist as chart/eye-N.webp');
+    const missB = ED.filter(d => !(EYB.drugs[d.id] || []).some(b => b.page === d.page));
+    check(!missB.length, 'every eye card has a box on its own chart page', missB.map(d => d.id).join(', '));
+    const outB = Object.values(EYB.drugs).flat().filter(b => b.x0 < 0 || b.y0 < 0 || b.x1 > 1 || b.y1 > 1 || b.x1 <= b.x0 || b.y1 <= b.y0);
+    check(!outB.length && EYB.other.length === 0, 'every box lies inside its page image; no eye line is without a card');
+    const rowShare = {};
+    Object.entries(EYB.drugs).forEach(([id, bs]) => bs.forEach(b => { const k = b.page + ':' + b.row; (rowShare[k] = rowShare[k] || []).push(id); }));
+    check(Object.values(rowShare).every(a => a.length === 1), 'each chart row belongs to one card');
+    const pgTxt = chartPages ? chartPages.map(t => t.replace(/\s+/g, '').toLowerCase()) : null;
+    if (pgTxt) check(Object.entries(EYB.drugs).every(([id, bs]) => bs.every(b => pgTxt[b.page - 1].includes(b.text.replace(/\s+/g, '').toLowerCase().replace(/–/g, '').slice(0, 14)))),
+      'every box\'s printed text is in the chart text of its page');
+  }
+  const ui = code('druglist_ui.js');
+  check(/Dermatology/.test(ui) && /Eye \(Exam 3\)/.test(ui) && /COURSE\.activeExam === 'exam3'/.test(ui), 'the tab has the Dermatology / Eye (Exam 3) switch and defaults to Eye while exam3 is active');
+}
+
 console.log('=== Storage and stub DOM ===');
 for (const f of ['druglist_data.js', 'druglist_ui.js', 'drugfacts.js']) {
-  const hits = code(f).match(/localStorage|sessionStorage|indexedDB|\.setItem\(|document\.cookie|caches\.open/g);
-  check(!hits, `${f} writes to no storage`, hits && hits.join(', '));
+  let c = code(f);
+  // druglist_ui.js keeps one thing on this device: the chosen list under <NS>:drugList (LKEY); nothing else
+  if (f === 'druglist_ui.js') {
+    const own = c.match(/localStorage\.(getItem|setItem)\(LKEY\(\)/g) || [];
+    check(own.length === 2, 'druglist_ui.js touches localStorage only for the list choice (LKEY: one read, one write)', String(own.length));
+    check(/':drugList'/.test(c), 'the list choice is kept under <NS>:drugList');
+    c = c.replace(/localStorage\.(getItem|setItem)\(LKEY\(\)(, nl\.key)?\)/g, '');
+  }
+  const hits = c.match(/localStorage|sessionStorage|indexedDB|\.setItem\(|document\.cookie|caches\.open/g);
+  check(!hits, `${f} writes to no storage${f === 'druglist_ui.js' ? ' (the list choice aside)' : ''}`, hits && hits.join(', '));
+}
+{
+  const hits = code('druglist_eye.js').match(/localStorage|sessionStorage|indexedDB|\.setItem\(|document\.cookie|caches\.open/g);
+  check(!hits, 'druglist_eye.js writes to no storage', hits && hits.join(', '));
 }
 const stub = {console, document: {getElementById: () => ({}), querySelector: () => null}, DRUGLIST: DL};
 vm.createContext(stub);

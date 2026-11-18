@@ -200,7 +200,7 @@ const LIKELY_MARKS_UI = (() => {
       let group = null; const groups = [];
       [...body.children].forEach(k => { if (k.matches('h2.gdeck')) { group = {h: k, els: []}; groups.push(group); } else if (group) group.els.push(k); });
       groups.forEach(g => {
-        const left = g.els.some(k => k.matches('section.gobj') && !k.hasAttribute('data-lkh'));
+        const left = g.els.some(k => (k.matches('section.gobj') && !k.hasAttribute('data-lkh')) || (k.matches('details.gdetails') && !!k.querySelector('section.gobj:not([data-lkh])')));   // a deck whose sections all sit in a slide-by-slide group (the eye deck, Exam 3) keeps that group while one of them stays
         hide(g.h, only.guide && !left);
         g.els.filter(k => !k.matches('section.gobj')).forEach(k => hide(k, only.guide && !left));
       });
