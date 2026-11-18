@@ -13,7 +13,7 @@
        are (Q.examMode).
      - renderTopics(): a card under the straight passes, "Starred questions",
        opens exactly the starred ids (all, Dr. Smith's, Dr. Sikazwe's or, from
-       Exam 2, Dr. Patel's; that row shows only when she has stars) with
+       Exam 2, Dr. Patel's; that row shows only when she has stars; and, from Exam 3, Dr. Smith's eye questions, in the order of likelihood) with
        the engine's own drillList().
    It says plainly that the stars are Claude's prediction from the professors'
    stated emphasis, not an official list.
@@ -40,7 +40,11 @@ const LIKELY_UI = (() => {
   };
 
   /* the starred questions that exist in this build, in bank order */
-  const pool = by => QUESTIONS.filter(q => BY[q.id] && (!by || (L.sources[BY[q.id].source] || {}).by === by));
+  const RANK = {}; L.items.forEach((x, i) => { RANK[x.id] = i; });
+  const pool = by => {
+    const r = QUESTIONS.filter(q => BY[q.id] && (!by || (by === 'eye' ? /Smith_Eye_/.test(q.cite) : (L.sources[BY[q.id].source] || {}).by === by)));
+    return by === 'eye' ? r.sort((a, b) => RANK[a.id] - RANK[b.id]) : r;   // the eye stars are listed most likely first
+  };
 
   /* ---------- the badge on the question card (no reason text: see the header) ---------- */
   function decorateQuiz(){
@@ -59,7 +63,7 @@ const LIKELY_UI = (() => {
   /* ---------- the card on Topics ---------- */
   function decorateTopics(){
     const v = document.getElementById('v-topics'); if (!v || v.querySelector('.lkcard')) return;
-    const all = pool(), sm = pool('smith'), sk = pool('sikazwe'), pa = pool('patel');
+    const all = pool(), sm = pool('smith'), sk = pool('sikazwe'), pa = pool('patel'), ey = pool('eye');
     if (!all.length) return;
     const d = document.createElement('div');
     d.className = 'topic lkcard';
@@ -72,13 +76,15 @@ const LIKELY_UI = (() => {
       <div class="subrow"><span class="sname">Dr. Sikazwe's starred questions<small>${sk.length} questions, on his assigned pages</small></span>
         <button type="button" class="ghost" data-lk="sikazwe">Start</button></div>${pa.length ? `
       <div class="subrow"><span class="sname">Dr. Patel's starred questions<small>${pa.length} questions, Exam 2</small></span>
-        <button type="button" class="ghost" data-lk="patel">Start</button></div>` : ''}
+        <button type="button" class="ghost" data-lk="patel">Start</button></div>` : ''}${ey.length ? `
+      <div class="subrow"><span class="sname">Dr. Smith's eye questions<small>${ey.length} questions, Exam 3, most likely first</small></span>
+        <button type="button" class="ghost" data-lk="eye">Start</button></div>` : ''}
     </div>`;
     const sweep = v.querySelector('.sweepcard');
     if (sweep) sweep.insertAdjacentElement('afterend', d); else v.appendChild(d);
     d.querySelectorAll('button[data-lk]').forEach(b => b.onclick = () => {
       const k = b.dataset.lk, list = k === 'all' ? all : pool(k);
-      drillList(list, k === 'all' ? '★ Likely on the exam' : k === 'smith' ? "★ Likely: Dr. Smith" : k === 'patel' ? '★ Likely: Dr. Patel' : '★ Likely: Dr. Sikazwe');
+      drillList(list, k === 'all' ? '★ Likely on the exam' : k === 'smith' ? "★ Likely: Dr. Smith" : k === 'patel' ? '★ Likely: Dr. Patel' : k === 'eye' ? '★ Likely: eye (Exam 3)' : '★ Likely: Dr. Sikazwe');
     });
   }
 

@@ -267,18 +267,28 @@ async function nsOf(browser) {
         check(await p.evaluate(() => VIEW) === 'gaps', `${w} px: Back returns to Weak spots`);
       } else check(false, `${w} px: the Weak spots review plan shows a "Read" chip after a wrong answer`);
 
-      // C3. a chip in a guide of the open Exam 2 folder, and Back to the same line
-      await p.evaluate(() => { RET.length = 0; backBtn(); show('guide'); });
+      // C3. a chip in a guide of an Exam 2 folder (opened by a jump: the eye guides of Exam 3 carry no chips), and Back to the same line
+      await p.evaluate(() => { RET.length = 0; backBtn(); show('topics'); jump('guide', 'gobj-p6-1'); RET.length = 0; backBtn(); });
       const g2 = p.locator('#rfold-guide-2 [data-jump^="ref:"]').first();
       await g2.scrollIntoViewIfNeeded();
       const a3 = (await g2.getAttribute('data-jump')).split(':')[1];
       const y3 = await p.evaluate(() => Math.round(scrollY)), s3 = await st(p, 'guide');
       await g2.click();
       wq = await where(p, a3);
-      check(wq.view === 'ref' && landed(wq), `${w} px: a chip in an Exam 2 guide lands on ref:${a3}`, wq);
+      check(wq.view === 'ref' && landed(wq), `${w} px: a chip in an Exam 2 guide (the folder opened by a jump) lands on ref:${a3}`, wq);
       await p.click('#backbtn');
       let bk = await p.evaluate(() => ({view: VIEW, y: Math.round(scrollY)}));
       check(bk.view === 'guide' && Math.abs(bk.y - y3) <= 2 && await st(p, 'guide') === s3, `${w} px: Back returns to the guide at the same scroll position`, {bk, y3, st: await st(p, 'guide')});
+
+      // C3b. jumps into the active exam's folder (Exam 3) land in it; Exam 1 and Exam 2 stay closed, nothing is stored
+      for (const [v3, a3b] of [['guide', 'gobj-ey-1'], ['ref', 'ref-ey-gl'], ['tell', 'tell-ey-dry']]) {
+        await p.evaluate(() => { RET.length = 0; backBtn(); show('topics'); });
+        await p.evaluate(([v3, a3b]) => jump(v3, a3b), [v3, a3b]);
+        wq = await where(p, a3b);
+        check(wq.view === v3 && landed(wq) && wq.fold === `rfold-${v3}-3` && await st(p, v3) === '1:false 2:false 3:true' && await stored(p) === null,
+          `${w} px: a jump to ${v3}:${a3b} lands in the Exam 3 folder below the pinned strip, Exam 1 and Exam 2 stay closed, nothing stored`, {wq, st: await st(p, v3)});
+      }
+      await p.evaluate(() => { RET.length = 0; backBtn(); });
 
       // C4. from a folder that only a jump opened: Back draws it open again, at the same line; nothing stored
       await p.evaluate(() => { RET.length = 0; backBtn(); show('topics'); jump('guide', 'gobj-l1-4'); });
@@ -303,7 +313,7 @@ async function nsOf(browser) {
       const y5 = await p.evaluate(() => Math.round(scrollY));
       await p.evaluate(() => jump('ref', 'ref-p5-ftu'));
       wq = await where(p, 'ref-p5-ftu');
-      check(landed(wq) && await st(p, 'ref') === '1:true 2:false 3:true', `${w} px: a jump from Exam 1 of Reference to an Exam 2 section keeps Exam 1 open`, {wq, st: await st(p, 'ref')});
+      check(landed(wq) && await st(p, 'ref') === '1:true 2:true 3:true', `${w} px: a jump from Exam 1 of Reference to an Exam 2 section keeps Exam 1 open and opens Exam 2 (Exam 3 stays as it was)`, {wq, st: await st(p, 'ref')});
       await p.click('#backbtn');
       bk = await p.evaluate(() => ({view: VIEW, y: Math.round(scrollY)}));
       check(bk.view === 'ref' && Math.abs(bk.y - y5) <= 2, `${w} px: Back returns to the first section's scroll position`, {bk, y5});
@@ -312,7 +322,7 @@ async function nsOf(browser) {
       await p.evaluate(() => { RET.length = 0; backBtn(); show('topics'); show('ref'); });
       const labs = await p.evaluate(() => { const nav = document.querySelector('#v-ref .refnav'); return [...nav.children].map(c => c.classList.contains('rfnavx') ? 'L:' + c.textContent : (document.getElementById(c.getAttribute('href').slice(1)).closest('.rfold') || {dataset: {}}).dataset.exam); });
       const seq = labs.join(',');
-      check(/^L:Exam 1 · [^,]+(,1)+,L:Exam 2 · [^,]+(,2)+$/.test(seq), `${w} px: the "Jump to a section" list names each exam in front of its links`, seq.slice(0, 200));
+      check(/^L:Exam 1 · [^,]+(,1)+,L:Exam 2 · [^,]+(,2)+,L:Exam 3 · [^,]+(,3)+$/.test(seq), `${w} px: the "Jump to a section" list names each exam in front of its links`, seq.slice(0, 200));
       await p.click('#v-ref .refnav-wrap > summary');
       await p.click('#v-ref .refnav a[href="#ref-l2"]');
       wq = await where(p, 'ref-l2');
@@ -405,16 +415,16 @@ async function nsOf(browser) {
       check(await st(p, 'guide') === '1:false 2:false 3:true', `${w} px: Guides keeps its own state (Exam 1 still closed there)`, await st(p, 'guide'));
       await p.evaluate(() => { show('topics'); show('ref'); });
       check(await st(p, 'ref') === '1:true 2:false 3:true', `${w} px: Reference drawn again keeps Exam 1 open`, await st(p, 'ref'));
-      await p.focus('#rfold-ref-2 > summary'); await p.keyboard.press('Enter');
-      check(await st(p, 'ref') === '1:true 2:false' && await stored(p) === '{"ref":{"1":true,"2":false}}', `${w} px: Enter on the focused Exam 2 header closes it, and that is stored`, [await st(p, 'ref'), await stored(p)]);
+      await p.focus('#rfold-ref-3 > summary'); await p.keyboard.press('Enter');
+      check(await st(p, 'ref') === '1:true 2:false 3:false' && await stored(p) === '{"ref":{"1":true,"3":false}}', `${w} px: Enter on the focused Exam 3 header closes it, and that is stored`, [await st(p, 'ref'), await stored(p)]);
       check(await p.evaluate(() => localStorage.getItem(NS + ':examOpen') === null && localStorage.getItem(NS + ':deckOpen') === null), `${w} px: the Topics folders' keys (examOpen, deckOpen) are not written`);
       // a jump into the folder the reader closed opens it for the visit only
-      await p.evaluate(() => { show('topics'); jump('ref', 'ref-p5-ftu'); });
-      check(await st(p, 'ref') === '1:true 2:false 3:true' && await stored(p) === '{"ref":{"1":true,"2":false}}', `${w} px: a jump into the folder the reader closed opens it and leaves the stored choice as it was`, [await st(p, 'ref'), await stored(p)]);
+      await p.evaluate(() => { show('topics'); jump('ref', 'ref-ey-gl'); });
+      check(await st(p, 'ref') === '1:true 2:false 3:true' && await stored(p) === '{"ref":{"1":true,"3":false}}', `${w} px: a jump into the folder the reader closed opens it and leaves the stored choice as it was`, [await st(p, 'ref'), await stored(p)]);
       await p.evaluate(() => { RET.length = 0; backBtn(); show('topics'); show('ref'); });
       await p.waitForTimeout(600);                      // the core writes the place 400 ms after the last move
       await p.reload(); await ready(p); await p.waitForTimeout(300);
-      check(await p.evaluate(() => VIEW) === 'ref' && await st(p, 'ref') === '1:true 2:false', `${w} px: after a reload Reference comes back with the reader's folders`, [await p.evaluate(() => VIEW), await st(p, 'ref')]);
+      check(await p.evaluate(() => VIEW) === 'ref' && await st(p, 'ref') === '1:true 2:false 3:false', `${w} px: after a reload Reference comes back with the reader's folders`, [await p.evaluate(() => VIEW), await st(p, 'ref')]);
       await p.evaluate(() => show('tell'));
       check(await st(p, 'tell') === '1:false 2:false 3:true', `${w} px: Tell apart is still at its usual folders`, await st(p, 'tell'));
       // a stored value that is not what this file wrote is read as nothing
@@ -448,8 +458,8 @@ async function nsOf(browser) {
       check(await stored(p) === null, `${w} px: and the folder is still not stored as the reader's choice`, await stored(p));
       check(!errs.length, `${w} px: no page error across the reload`, errs.slice(0, 4));
       await ctx.close();
-      // the usual case: reading in the open Exam 2 folder with Exam 1 closed above it
-      for (const [v, id] of [['ref', 'ref-p7-pso'], ['guide', 'gobj-p6-5']]) {
+      // the usual case: reading in the open Exam 3 folder with Exam 1 and Exam 2 closed above it
+      for (const [v, id] of [['ref', 'ref-ey-ac'], ['guide', 'gobj-ey-1']]) {
         const o = await open(browser, w);
         await o.p.evaluate(({v, id}) => { show(v); const t = document.getElementById(id); window.scrollTo(0, t.getBoundingClientRect().top + scrollY - 140); }, {v, id});
         await o.p.mouse.wheel(0, 120); await o.p.waitForTimeout(800);
@@ -457,20 +467,21 @@ async function nsOf(browser) {
           const pane = document.getElementById('v-' + pl.v), txt = el => (el.textContent || '').replace(/\s+/g, ' ').trim().slice(0, 80);
           const el = pl.a.id ? document.getElementById(pl.a.id) : [...pane.querySelectorAll(pl.a.tag)].filter(x => txt(x) === pl.a.txt)[pl.a.n];
           const f = el && el.closest('.rfold'); return {v: pl.v, a: pl.a.id || pl.a.tag + ' "' + pl.a.txt.slice(0, 40) + '"', fold: f ? f.id : null, open: f ? f.open : null, seen: !!el && el.checkVisibility(), top: el ? Math.round(el.getBoundingClientRect().top) : null, opened: pl.open}; });
-        check(rec.v === v && rec.fold === `rfold-${v}-2` && rec.open && rec.seen && rec.top >= 0 && rec.top < 844,
-          `${w} px: the line the core saves while reading Exam 2 of ${NAMES[v]} is one on screen, not a line of the closed Exam 1 folder`, rec);
+        check(rec.v === v && rec.fold === `rfold-${v}-3` && rec.open && rec.seen && rec.top >= 0 && rec.top < 844,
+          `${w} px: the line the core saves while reading Exam 3 of ${NAMES[v]} is one on screen, not a line of a closed Exam 1 or Exam 2 folder`, rec);
         const before = await o.p.evaluate(TOP);
         await o.p.reload(); await ready(o.p); await o.p.waitForTimeout(1500);
         const after = await o.p.evaluate(AT, before);
         check(await o.p.evaluate(() => VIEW) === v && after !== null && Math.abs(after - before.top) <= 4 && await st(o.p, v) === '1:false 2:false 3:true',
-          `${w} px: a reload while reading Exam 2 of ${NAMES[v]} comes back to the same line at the same height, Exam 1 still closed`, {before, after, st: await st(o.p, v)});
+          `${w} px: a reload while reading Exam 3 of ${NAMES[v]} comes back to the same line at the same height, Exam 1 and Exam 2 still closed`, {before, after, st: await st(o.p, v)});
         check(!o.errs.length, `${w} px: no page error across that reload`, o.errs.slice(0, 3));
         await o.ctx.close();
       }
       // records written before the folders existed (a reader who reloads into this version)
       for (const [label, rec, want] of [
         ['a line inside what is now Exam 1 of Reference', {v: 'ref', y: 900, a: {id: 'ref-l2', off: 120}, open: []}, {st: '1:true 2:false 3:true', id: 'ref-l2', top: 120}],
-        ['a line inside what is now Exam 2 of Guides', {v: 'guide', y: 5000, a: {id: 'gobj-p6-1', off: 200}, open: []}, {st: '1:false 2:false 3:true', id: 'gobj-p6-1', top: 200}],
+        ['a line inside what is now Exam 2 of Guides', {v: 'guide', y: 5000, a: {id: 'gobj-p6-1', off: 200}, open: []}, {st: '1:false 2:true 3:true', id: 'gobj-p6-1', top: 200}],
+        ['a line inside what is now Exam 3 of Guides', {v: 'guide', y: 9000, a: {id: 'gobj-ey-1', off: 150}, open: []}, {st: '1:false 2:false 3:true', id: 'gobj-ey-1', top: 150}],
         ['the top of Tell apart', {v: 'tell', y: 0, a: null, open: []}, {st: '1:false 2:false 3:true'}]]) {
         const seed = `try{ if(!sessionStorage.getItem('__seeded')){ var ns = ${JSON.stringify(await nsOf(browser))}; sessionStorage.setItem(ns + ':place', JSON.stringify(Object.assign(${JSON.stringify(rec)}, {at: Date.now()}))); sessionStorage.setItem('__seeded','1'); } }catch(e){}`;
         const o = await open(browser, w, {init: [seed]});
@@ -594,7 +605,7 @@ async function nsOf(browser) {
         for (const v of ['guide', 'ref', 'tell']) { show(v); const el = document.getElementById('v-' + v);
           out[v] = {folds: el.querySelectorAll('.rfold').length, top: el.querySelectorAll(':scope > h3, :scope > h2.gdeck').length, bars: el.querySelectorAll('.wkbar').length, index: !!el.querySelector('.wkindex'), nav: el.querySelectorAll('.refnav a').length,
             dz: el.querySelectorAll('.rfdz').length, first: document.getElementById({guide: 'gobj-l1-1', ref: 'ref-l1-classes', tell: 'tell-l1-diseases'}[v]).getClientRects().length > 0}; }
-        Element.prototype.appendChild = real; out.thrown = thrown;
+        Element.prototype.appendChild = real; out.thrown = thrown; out.tellN = Object.keys(EXAMFOLD_UI.map.tell).length;
         jump('ref', 'ref-p5-ftu'); const t = document.getElementById('ref-p5-ftu'); out.jump = {vis: t.getClientRects().length > 0, top: Math.round(t.getBoundingClientRect().top)};
         // the tab stays flat for the rest of the visit, and the table boxes of the drawings that were replaced are dropped
         RET.length = 0; backBtn(); show('topics'); show('ref');
@@ -603,7 +614,7 @@ async function nsOf(browser) {
         return out; });
       check(r.thrown >= 3 && r.guide.folds === 0 && r.guide.top > 5 && r.guide.bars > 0 && r.guide.index && r.guide.first && r.ref.folds === 0 && r.ref.top > 20 && r.ref.nav === r.ref.top && r.ref.first,
         `${w} px: when moving a section fails, the tab is drawn flat with everything else in place (walkthrough bars, index, jump list)`, r);
-      check(r.tell.folds === 0 && r.tell.top === 8 && r.tell.nav === r.tell.top && r.tell.first && r.tell.dz === 0, `${w} px: Tell apart too, with its ${r.tell.top} sections and without the list of Diseases comparisons`, r.tell);
+      check(r.tell.folds === 0 && r.tell.top === r.tellN && r.tell.nav === r.tell.top && r.tell.first && r.tell.dz === 0, `${w} px: Tell apart too, with its ${r.tell.top} sections and without the list of Diseases comparisons`, r.tell);
       check(r.jump.vis && r.jump.top >= 0 && r.jump.top < 300, `${w} px: and a jump still lands on its section`, r.jump);
       check(r.again.folds === 0 && r.again.top === r.ref.top, `${w} px: the tab is flat again the next time it is drawn`, r.again);
       check(r.boxes && r.boxes[0] > 0 && r.boxes[0] === r.boxes[1], `${w} px: the table boxes of the drawings that were replaced are dropped from the core's set (${r.boxes && r.boxes[0]} in it, ${r.boxes && r.boxes[1]} of them on the page)`, r.boxes);
@@ -752,9 +763,9 @@ async function nsOf(browser) {
     let s = await walk();
     check(s.id === id && s.playing && s.seen && s.handle && !s.handle.paused && await st(p, 'guide') === '1:true 2:false 3:true', `${w}x${h}: a walkthrough (${id}) plays in the Exam 1 folder of Guides, which the reader opened`, s);
     // another folder closed and opened: the walkthrough is not in it and plays on
-    await head(2); await head(2);
+    await head(3); await head(3);
     s = await walk();
-    check(s.playing && s.handle && !s.handle.paused && await st(p, 'guide') === '1:true 2:false 3:true', `${w}x${h}: closing and opening the Exam 2 header leaves it playing`, s);
+    check(s.playing && s.handle && !s.handle.paused && await st(p, 'guide') === '1:true 2:false 3:true', `${w}x${h}: closing and opening the Exam 3 header leaves it playing`, s);
     await head(1);
     await p.waitForTimeout(100);
     s = await walk();
@@ -914,19 +925,25 @@ async function nsOf(browser) {
       show('topics'); show('ref');
       out.back = {unassigned: EXAMFOLD_UI.unassigned().ref, crossAt: at(cross)};
       return out; });
-    check(r.cross && r.prevExam !== r.crossWas && r.crossAt === r.prevExam && r.firstAt === r.nextExam && r.n1 === r.n0 && r.outside === 0 && r.folds === 2,
+    check(r.cross && r.prevExam !== r.crossWas && r.crossAt === r.prevExam && r.firstAt === r.nextExam && r.n1 === r.n0 && r.outside === 0 && r.folds === 3,
       `390 px: a Reference section with no entry (${r.cross}) is drawn in the folder of the section written before it (${r.prev}, Exam ${r.prevExam}); the first section (${r.first}) with the next one; none is left outside`, r);
     check(JSON.stringify(r.unassigned) === JSON.stringify([r.first, r.cross]) && !r.back.unassigned.length && r.back.crossAt === r.crossWas, `390 px: both are reported as unassigned (part A fails on that), and with their entries back they are in their own folders`, r);
     const z = await p.evaluate(() => {
       const b = document.querySelector('#nav button[data-v="dz"]'), par = b.parentNode, nx = b.nextSibling; b.remove();
       show('topics'); show('tell');
       const fs = () => [...document.querySelectorAll('#v-tell > .rfold')].map(f => f.dataset.exam + ':' + f.open).join(' ');
-      const out = {without: fs(), list: document.querySelectorAll('#v-tell .rfdz').length, active: COURSE.activeExam, sections: document.querySelectorAll('#v-tell .rfbody > h3[id]').length, seen: document.getElementById('tell-l1-diseases').checkVisibility()};
+      const out = {without: fs(), list: document.querySelectorAll('#v-tell .rfdz').length, active: COURSE.activeExam, sections: document.querySelectorAll('#v-tell .rfbody > h3[id]').length, seen: document.getElementById('tell-ey-dry').checkVisibility()};
+      out.eyeFold = document.getElementById('tell-ey-dry').closest('.rfold').dataset.exam;
+      // with Exam 2 as the active exam there is no folder for it here: the latest folder before it (Exam 1) opens
+      const act = COURSE.activeExam; COURSE.activeExam = 'exam2'; show('topics'); show('tell'); out.noActiveFolder = fs(); COURSE.activeExam = 'exam1'; show('topics'); show('tell'); out.exam1Active = fs();
+      COURSE.activeExam = act;
       par.insertBefore(b, nx); show('topics'); show('tell');
       out.withIt = fs(); out.listBack = document.querySelectorAll('#v-tell .rfdz').length;
       return out; });
-    check(z.without === '1:true' && z.list === 0 && z.sections === 8 && z.seen && z.active === 'exam2',
-      `390 px: without the Diseases tab, Tell apart has the Exam 1 folder only, with its ${z.sections} sections and no list of comparisons; it is open (the active exam, ${z.active}, has no folder there)`, z);
+    check(z.without === '1:false 3:true' && z.list === 0 && z.sections === 13 && z.seen && z.active === 'exam3' && z.eyeFold === '3',
+      `390 px: without the Diseases tab, Tell apart has an Exam 1 and an Exam 3 folder (no Exam 2), with its ${z.sections} sections and no list of comparisons; Exam 3, the active exam (${z.active}), is open`, z);
+    check(z.noActiveFolder === '1:true 3:false' && z.exam1Active === '1:true 3:false',
+      `390 px: without the Diseases tab and with an active exam that has no folder there (Exam 2), the latest folder before it (Exam 1) is the open one, Exam 3 closed; with Exam 1 active the same`, z);
     check(z.withIt === '1:false 2:false 3:true' && z.listBack === 1 && await stored(p) === null, `390 px: with the tab back, both folders and the list are drawn as usual; nothing was stored`, [z, await stored(p)]);
     check(!errs.length, '390 px: no page error', errs.slice(0, 3));
     await ctx.close();

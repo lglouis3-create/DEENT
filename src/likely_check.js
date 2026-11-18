@@ -3,7 +3,8 @@
    ==========================================================================
    Reads the course's own source files in node (no build needed) and checks:
    - every starred id exists in the bank, once;
-   - every starred question is in an Exam 1 pool: not lowYield, not
+   - every starred question is in the pool of Exam 1, Exam 2 or Exam 3 (the eye stars of Exam 3, added 2026-11-18; its
+     lecture entry in course.js names the exam) and, for Exam 1, not lowYield, not
      unassigned, not in an optional topic, not one of the items held out of
      scored practice (reviews/OPEN_QUESTIONS.md);
    - one star per concept;
@@ -49,6 +50,12 @@ ids.filter(i => QB[i]).forEach(i => { (byConcept[QB[i].concept] = byConcept[QB[i
 const multi = Object.entries(byConcept).filter(([, v]) => v.length > 1);
 check(!multi.length, `one star per concept (${Object.keys(byConcept).length} concepts)`, multi.map(([k, v]) => k + ': ' + v.join('+')).join('; '));
 
+// the exam pool of each star: its lecture entry (the deck its cite names) gives the exam; an Exam 1 star must pass the Exam 1 pool
+// filters above; Exam 2 is Dr. Patel's; Exam 3 is Dr. Smith's eye lectures (L09, deck Smith_Eye_Glaucoma_AllergicConj_DryEye.pdf)
+const lecOf = q => (C.lectures || []).find(l => String(q.cite).includes(l.deck));
+const examOf = id => { const l = QB[id] && lecOf(QB[id]); return l ? l.exam : null; };
+const noPool = ids.filter(i => QB[i] && ![1, 2, 3].includes(examOf(i)));
+check(!noPool.length, 'every star is in the pool of Exam 1, Exam 2 or Exam 3 (its lecture entry names the exam)', noPool.join(', '));
 console.log('=== Reasons and sources ===');
 const noReason = L.items.filter(x => !x.reason || x.reason.trim().length < 12 || !x.ref);
 check(!noReason.length, 'every star has a reason and a reference', noReason.map(x => x.id).join(', '));
@@ -86,6 +93,13 @@ const badRef = sik.filter(i => { const x = L.items.find(y => y.id === i), p = re
   return !/\bT@?\s?\d|Polleve-\d/.test(x.ref) || !p.length || p.some(n => !ASSIGNED.has(n)); });
 check(!badRef.length, `each of Dr. Sikazwe's ${sik.length} stars names its transcript place or poll and only assigned deck pages`,
       badRef.map(i => i + ' (' + L.items.find(y => y.id === i).ref + ')').join('; '));
+
+const eye = ids.filter(i => examOf(i) === 3);
+const eyeBad = eye.filter(i => { const q = QB[i], x = L.items.find(y => y.id === i), sl = pagesOf(q.cite);
+  return q.prof !== 'Smith' || !/^ey-/.test(q.topic) || !sl.length || sl.some(n => n < 1 || n > 74) || !/\bT@?\s?\d+[^;]*11\/1[37]|slides? ?\d/.test(x.ref) || !/11\/1[37]|slides?\s*\d/.test(x.ref); });
+check(eye.length > 0 && !eyeBad.length, `the ${eye.length} Exam 3 stars are Dr. Smith's eye questions (topic ey-*), cite slides 1-74 of the eye deck and name a slide or a 11/13 or 11/17 transcript place`, eyeBad.join(', '));
+const eyeNoElig = eye.filter(i => !(QB[i] && !QB[i].lowYield && !QB[i].unassigned && !optionalTopics.has(QB[i].topic)));
+check(!eyeNoElig.length, 'no Exam 3 star is lowYield, unassigned or in an optional topic', eyeNoElig.join(', '));
 
 console.log('=== No answer in a reason ===');
 const STOP = new Set('the a an and or of to in on for with by from is are be as at it its this that these those which what who than then not no so do does into their they them about more most less less some each other only also both can may will would'.split(' '));

@@ -34,6 +34,14 @@ CUES = [
     (4, r"\bhint\b|need to know|have to know|memorize|make sure|I want you|pay attention|big thing|you will need"),
     (3, r"focus on|don't forget|do not forget|remember|calculation"),
 ]
+# Dr. Smith's eye lectures (Exam 3, 11/13 and 11/17; added 2026-11-18): her cue words are not the ones above, and the
+# quotes of those two lectures are scored with these in addition. Other lectures are scored exactly as before.
+EYE_LECS = ('M1113', 'M1117')
+EYE_CUES = [
+    (5, r"always like scary|picky|focus on pathophys|5 questions"),
+    (4, r"be sure|I need you|pay special attention|carefully monitored|significant (side effect|problem)|important counseling|really important|most important|know that"),
+    (3, r"importantly|a little scary|understand"),
+]
 # classroom logistics are never evidence
 LOGI = re.compile(r"\b(Friday|Monday|Tuesday|Wednesday|Thursday|[ap]\.m\.|office hours|e-?mail|canvas|zoom|break|lunch|coffee|restroom|bathroom|attendance|grades?|sorry|microphone|review session|exam review)\b", re.I)
 FILLER = re.compile(r"^(OK|Okay|So|Um|Uh|And|All right|Alright|Right|Yeah)[.,]?\s+", re.I)
@@ -70,9 +78,9 @@ def sentences(text):
     return out
 
 
-def score(sentence):
+def score(sentence, lec=None):
     best = 0
-    for w, pat in CUES:
+    for w, pat in CUES + (EYE_CUES if lec in EYE_LECS else []):
         if re.search(pat, sentence, re.I):
             best = max(best, w)
     return best
@@ -122,7 +130,7 @@ def best_snippet(quotes, kw, need, near=False):
                 ctx = ' '.join(raw[max(0, i - 1):i + 2])
                 if not (stems(ctx) & set(kw or [])):
                     continue
-            sc = score(c)
+            sc = score(c, lec)
             if sc == 0:
                 continue
             key = (sc, -abs(len(c) - 80))

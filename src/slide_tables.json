@@ -251,6 +251,21 @@
    "Eye",
    "ey",
    1
+  ],
+  [
+   "Sikazwe OOO",
+   "oo",
+   1
+  ],
+  [
+   "OOO",
+   "oo",
+   1
+  ],
+  [
+   "Otic/Oral/Ophthalmic",
+   "oo",
+   0
   ]
  ],
  "sections": [
@@ -566,6 +581,24 @@
    "tell-ey-",
    "ey",
    "Tell apart: Dr. Smith, Eye",
+   "sun"
+  ],
+  [
+   "gobj-oo-",
+   "oo",
+   "Guide: Dr. Sikazwe, Otic/Oral/Ophthalmic, slide by slide",
+   "sun"
+  ],
+  [
+   "ref-oo-",
+   "oo",
+   "Reference: Dr. Sikazwe, Otic/Oral/Ophthalmic",
+   "sun"
+  ],
+  [
+   "tell-oo-",
+   "oo",
+   "Tell apart: Dr. Sikazwe, Otic/Oral/Ophthalmic",
    "sun"
   ],
   [

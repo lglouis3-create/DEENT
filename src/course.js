@@ -174,6 +174,10 @@ const COURSE = {
     {id:'L09', deck:'Smith_Eye_Glaucoma_AllergicConj_DryEye.pdf',
      label:'Lectures 9–10: Eye anatomy, glaucoma, allergic conjunctivitis and dry eye (Smith, 11/13 and 11/17)',
      prof:'Smith', exam:3, module:'Exam 3: Lectures 9–13'},
+    // Dr. Sikazwe's medicinal chemistry of the ear, mouth and eye: 11/18 (slides 1-32) and 11/19 (the rest), one deck.
+    {id:'L11', deck:'Sikazwe_OOO_mc.pdf',
+     label:'Lectures 11–12: Otic, oral and ophthalmic medicinal chemistry (Sikazwe, 11/18 and 11/19)',
+     prof:'Sikazwe', exam:3, module:'Exam 3: Lectures 9–13'},
   ],
 
   exams: [
@@ -308,7 +312,9 @@ const COURSE = {
           // Lecture 8 points she stressed that had no question: Lyme neurologic/cardiac, scorpion stings, sunscreen expiration, snow and sand, stopping a reacting product, Fitzpatrick type, silicone for scars
           'q21_L08_gaps.js',
           // Dr. Smith, Lectures 9-10 (Exam 3): the eye (topics first, then the question files)
-          'q22_eye_topics.js', 'q23_eye_anat_patho.js', 'q24_eye_inflow.js', 'q25_eye_outflow.js', 'q26_eye_allergy_dry.js',
+          'q27_ooo_topics.js', 'q22_eye_topics.js', 'q23_eye_anat_patho.js', 'q24_eye_inflow.js', 'q25_eye_outflow.js', 'q26_eye_allergy_dry.js',
+          // Dr. Sikazwe, Lectures 11-12 (Exam 3): otic, oral, ophthalmic medicinal chemistry
+          'q28_ooo_otic_oral.js', 'q29_ooo_oph_a.js', 'q30_ooo_oph_b.js', 'q31_ooo_oph_c.js',
           // the step-throughs of moa_figs.js in the explanations of the matching Smith questions
           'moa_links.js',
           // Drug list tab (temporary course-level presentation, to be replaced by the kit's
