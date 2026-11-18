@@ -63,7 +63,7 @@ QUESTIONS.push(
 
 {id:"OA-006", skill:"chem", prof:'Sikazwe', tier:'new', topic:"oo-de", sub:"drugs", concept:"oo-de-lifitegrast-acid-vs-sulfonamide",
  tags:["hard", "two-facts"], source:"slide",
- stem:"The circled phenylalanine portion of lifitegrast carries which acidic functional group, and which group is on its ring as the sulfur-containing substituent?",
+ stem:"The phenylalanine portion of lifitegrast carries which acidic functional group, and which group is on its ring as the sulfur-containing substituent?",
  options:[
   {t:"Carboxylic acid; sulfonamide", correct:false, why:"A sulfonamide is SO2NH2 (the CAI group, slide 38); lifitegrast's sulfur is bonded to CH3."},
   {t:"Carboxylic acid; methyl sulfone", correct:true, why:"Slide 51: the circle contains the COOH; the ring substituent is S(=O)2 bonded to CH3, a sulfone."},
@@ -448,7 +448,7 @@ QUESTIONS.push(
 
 {id:"OA-042", skill:"chem", prof:'Sikazwe', tier:'new', topic:"oo-ac", sub:"gc", concept:"oo-ac-alpha-beta",
  tags:["hard", "two-facts"], source:"slide",
- stem:"In a steroid drawing, how is a 9α substituent shown and where does it lie?",
+ stem:"In a steroid structure, a 9α substituent is attached by which type of bond, and on which side of the ring plane does it lie?",
  options:[
   {t:"Wedge bond, above the plane of the ring", correct:false, why:"Slide 58: the wedge is β, above the plane."},
   {t:"Hashed bond, above the plane of the ring", correct:false, why:"Slide 58: the hashed bond lies below, not above."},
