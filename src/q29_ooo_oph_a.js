@@ -1,10 +1,11 @@
 /* q29_ooo_oph_a.js: Exam 3 (Dr. Sikazwe, Lecture 11), ophthalmic chemical classes, glaucoma, eye ADME, alpha 2 agonists, beta antagonists.
-   Sources: Sikazwe_OOO_mc.pdf slides 26-34 ("slide N" = PDF page); DEENT_Lecture_11.18_transcript.txt from "There are a whole bunch of
-   chemical classes" (T@37362) to the end of the SAR (T@50500); slides 33-34 are slide-only (taught 11/19, transcript not yet available).
-   Notes: the lecture's "Cell phone" is read as sulfone (slide 27 shows S(=O)2 between two methyls; T@37683 warns against "sulfoxide").
-   The lecture's "roclonidine" is apraclonidine (the amine analog of clonidine, T@47224). "Hypertension" at T@46852 is read as hypotension
-   (clonidine lowers blood pressure; he first says hypotension). Normal IOP is not asked (T@40076). Slide 32 prints "X=NH2"; slide 31
-   structures show NH, which is keyed. Half-lives (8 h, 3 to 4 h) are from the lecture only; slide 31 prints ClogP. */
+   Sources: Sikazwe_OOO_mc.pdf slides 27-34 ("slide N" = PDF page); DEENT_Lecture_11.18_transcript.txt from "There are a whole bunch of
+   chemical classes" (T@37527) to the end of the SAR (T@50500); slides 33-34 are slide-only (taught 11/19, transcript not yet available).
+   Notes: the lecture's "Cell phone" is read as sulfone; slide 27 shows S(=O)2 between two methyls, so the key rests on the slide.
+   The lecture's "roclonidine" is apraclonidine; items use the slide structure (H2N on the ring) and ClogP, not the spoken name.
+   Normal IOP is not asked (T@40076). Slide 32 prints "X=NH2"; the slide 31 structures show NH, which is keyed. No half-life item:
+   the transcript's half-lives (8 h, 3 to 4 h) cannot be tied to a drug from the slide. Items OP-025, OP-029, OP-037, OP-044
+   were removed as duplicates of OP-019/020, OP-028, OP-036, OP-043 (verification pass). */
 QUESTIONS.push(
 {id:"OP-001", skill:"class", prof:'Sikazwe', tier:'new', topic:"oo-oph", sub:"fg", concept:"oo-fg-aryloxypropanolamine",
  tags:["class", "naming"], source:"both",
@@ -13,20 +14,20 @@ QUESTIONS.push(
   {t:"Arylethanolamine", correct:false, why:"Slide 34: the arylethanolamines have the aromatic ring bonded directly to a two-carbon alcohol and amine chain, with no oxygen between."},
   {t:"Aryl imidazoline", correct:false, why:"Slide 31: the aryl imidazolines carry a five-membered ring with two nitrogens, not an alcohol and amine chain."},
   {t:"Aryl sulfonamide", correct:false, why:"The sulfonamide group is a sulfur with two oxygens and a nitrogen (slide 27); the described drug has no sulfur."},
-  {t:"Aryloxypropanolamine", correct:true, why:"Slide 27, slide 33 and T@38219: aryl (aromatic ring), oxy (the oxygen on the ring), propanolamine (three carbons with an alcohol and an amine)."}],
- teach:"The aryloxypropanolamines (slide 27, slide 33) are the beta antagonist class. The name is built from the parts: aryl = aromatic ring, oxy = the oxygen next to it, propanolamine = three carbons bearing an alcohol and an amine (T@38219).",
- cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slides 27, 33; T@38219 11/18"},
+  {t:"Aryloxypropanolamine", correct:true, why:"Slide 27, slide 33 and T@38474: aryl (aromatic ring), oxy (the oxygen on the ring), propanolamine (three carbons with an alcohol and an amine)."}],
+ teach:"The aryloxypropanolamines (slide 27, slide 33) are the beta antagonist class. The name is built from the parts: aryl = aromatic ring, oxy = the oxygen next to it, propanolamine = three carbons bearing an alcohol and an amine (T@38474).",
+ cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slides 27, 33; T@38474 11/18"},
 
 {id:"OP-002", skill:"class", prof:'Sikazwe', tier:'new', topic:"oo-oph", sub:"fg", concept:"oo-fg-name-parts",
  tags:["class", "naming"], source:"both",
  stem:"In the name aryloxypropanolamine, which structural features do the parts \"oxy\" and \"propanol\" stand for?",
  options:[
-  {t:"An oxygen on the ring; three carbons carrying the alcohol", correct:true, why:"T@38219: the oxygen is right next to the aromatic group (\"oxy\"); from there the three carbons carrying the alcohol and the amine are the propanolamine."},
-  {t:"An oxygen in the amine; two carbons carrying the alcohol", correct:false, why:"The amine is the nitrogen end of the chain; the oxygen of \"oxy\" sits on the aromatic ring, and the chain has three carbons, not two."},
+  {t:"An oxygen next to the aromatic ring; three carbons with the alcohol", correct:true, why:"T@38474: the oxygen sits right next to the aromatic group (\"oxy\"); the rest, three carbons carrying the alcohol and the amine, is the propanolamine."},
+  {t:"An oxygen inside the aromatic ring; three carbons carrying the alcohol", correct:false, why:"The oxygen of \"oxy\" is outside the ring, joining the ring to the chain (slide 27)."},
   {t:"An oxygen next to the aromatic ring; two carbons carrying the alcohol", correct:false, why:"Two carbons would be an ethanolamine (the arylethanolamines of slide 34); the class name says propanol, three carbons."},
-  {t:"An oxygen in the ring; three carbons with an amine but no alcohol", correct:false, why:"The oxygen of \"oxy\" is outside the ring, joining the ring to the chain, and the three-carbon chain carries both an alcohol and an amine."}],
- teach:"Aryl = aromatic ring; oxy = oxygen next to it; propanolamine = three carbons, with the alcohol and the amine (T@38478 to T@38807, slide 27).",
- cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slides 27, 33; T@38478 11/18"},
+  {t:"An oxygen next to the amine; three carbons carrying the alcohol", correct:false, why:"The oxygen sits next to the aromatic group, at the ring end of the chain, not at the amine (T@38474)."}],
+ teach:"Aryl = aromatic ring; oxy = oxygen next to it; propanolamine = three carbons, with the alcohol and the amine (T@38474, slide 27).",
+ cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slides 27, 33; T@38474 11/18"},
 
 {id:"OP-003", skill:"class", prof:'Sikazwe', tier:'new', topic:"oo-oph", sub:"fg", concept:"oo-fg-imidazoline",
  tags:["class"], source:"both",
@@ -44,11 +45,11 @@ QUESTIONS.push(
  stem:"A group has a sulfur atom carrying two oxygens, bonded to one carbon and to an N-H nitrogen. What is the functional group?",
  options:[
   {t:"Sulfone", correct:false, why:"A sulfone has the sulfur bonded to two carbons and no nitrogen (slide 27, second structure)."},
-  {t:"Sulfonamide", correct:true, why:"Slide 27 (third structure); T@37793: sulfonamide, \"very common\", like carboxylic acid and ester."},
+  {t:"Sulfonamide", correct:true, why:"Slide 27 (third structure); T@37746: sulfonamide, \"very common\", like carboxylic acid and ester."},
   {t:"Sulfoxide", correct:false, why:"A sulfoxide has one oxygen on the sulfur, not two."},
   {t:"Carbamate", correct:false, why:"A carbamate has a carbonyl carbon with N and O attached (slide 27), with no sulfur."}],
  teach:"Sulfonamide = S(=O)2 with a nitrogen; sulfone = S(=O)2 flanked by two carbons (slide 27).",
- cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slide 27; T@37793 11/18"},
+ cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slide 27; T@37746 11/18"},
 
 {id:"OP-005", skill:"class", prof:'Sikazwe', tier:'new', topic:"oo-oph", sub:"fg", concept:"oo-fg-sulfone",
  tags:["class"], source:"both",
@@ -62,37 +63,37 @@ QUESTIONS.push(
  cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slide 27; T@37653 11/18"},
 
 {id:"OP-006", skill:"class", prof:'Sikazwe', tier:'new', topic:"oo-oph", sub:"fg", concept:"oo-fg-carbamate",
- tags:["class"], source:"both",
+ tags:["class"], source:"slide",
  stem:"A group has a carbonyl carbon that carries an NH2 group and an O-CH3 group. What is the functional group?",
  options:[
-  {t:"Carbamate", correct:true, why:"Slide 27 (fifth structure, H2N-C(=O)-O-); T@38100 (\"Car Verm\" in the transcript, read as carbamate)."},
+  {t:"Carbamate", correct:true, why:"Slide 27: H2N-C(=O)-O-CH3, a carbonyl carbon bonded to a nitrogen and to O-alkyl."},
   {t:"Ester", correct:false, why:"An ester has the carbonyl carbon bonded to a carbon and to O-alkyl (slide 27, sixth structure); no nitrogen."},
-  {t:"Amide", correct:false, why:"An amide has the carbonyl carbon bonded to a nitrogen but no ring oxygen substituent."},
+  {t:"Amide", correct:false, why:"An amide has the carbonyl carbon bonded to a nitrogen but carries no O-alkyl group."},
   {t:"Carboxylic acid", correct:false, why:"A carboxylic acid carries an OH on the carbonyl carbon."}],
  teach:"Carbamate = N-C(=O)-O. Ester = C-C(=O)-O (slide 27).",
- cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slide 27; T@38100 11/18"},
+ cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slide 27"},
 
 {id:"OP-007", skill:"chem", prof:'Sikazwe', tier:'new', topic:"oo-oph", sub:"fg", concept:"oo-fg-carbamate-vs-ester",
- tags:["class", "reverse"], source:"both",
+ tags:["class", "reverse"], source:"slide",
  stem:"Compared with an ester, which change at the carbonyl carbon gives a carbamate?",
  options:[
   {t:"A sulfur replaces the oxygen of the alkoxy group", correct:false, why:"That would make a thioester, not a carbamate."},
   {t:"A hydroxyl replaces the alkoxy group", correct:false, why:"That would make a carboxylic acid."},
-  {t:"A nitrogen replaces the carbon on the carbonyl", correct:true, why:"Slide 27: the ester is C-C(=O)-O-alkyl and the carbamate is N-C(=O)-O-alkyl."},
-  {t:"A second oxygen is added to the carbonyl carbon", correct:false, why:"That would make a carbonate or acid derivative, not a carbamate."}],
+  {t:"A nitrogen replaces the carbon bonded to the carbonyl carbon", correct:true, why:"Slide 27: the ester is C-C(=O)-O-alkyl and the carbamate is N-C(=O)-O-alkyl."},
+  {t:"An oxygen replaces the carbon bonded to the carbonyl carbon", correct:false, why:"That would make a carbonate, not a carbamate."}],
  teach:"Carbamate (slide 27, H2N-C(=O)-O-CH3) and ester (CH3-C(=O)-O-CH3) differ by the atom bonded to the carbonyl carbon: N versus C.",
- cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slide 27; T@38100 11/18"},
+ cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slide 27"},
 
 {id:"OP-008", skill:"class", prof:'Sikazwe', tier:'new', topic:"oo-oph", sub:"fg", concept:"oo-fg-prostaglandin-skeleton",
  tags:["class"], source:"both",
  stem:"A skeleton has a single five-membered carbon ring with two long carbon chains on adjacent ring carbons. Which chemical class has this skeleton?",
  options:[
   {t:"Steroid", correct:false, why:"A steroid skeleton has four fused rings (slide 27, bottom right)."},
-  {t:"Prostaglandin", correct:true, why:"Slide 27 (cyclopentane with two chains); T@38219: \"prostaglandins\", the newer first-line agents."},
+  {t:"Prostaglandin", correct:true, why:"Slide 27 (cyclopentane with two chains); T@38276: \"prostaglandins\", the newer first-line agents."},
   {t:"Aryloxypropanolamine", correct:false, why:"This class has an aromatic ring and a propanolamine chain (slide 27)."},
   {t:"Imidazoline", correct:false, why:"The imidazoline is a five-membered ring with two nitrogens, not a carbon ring with chains."}],
- teach:"Prostaglandin skeleton: cyclopentane carrying two side chains (slide 27). T@38219 calls it the newer first-line class.",
- cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slide 27; T@38219 11/18"},
+ teach:"Prostaglandin skeleton: cyclopentane carrying two side chains (slide 27). T@38276 calls it the newer first-line class.",
+ cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slide 27; T@38276 11/18"},
 
 {id:"OP-009", skill:"class", prof:'Sikazwe', tier:'new', topic:"oo-oph", sub:"fg", concept:"oo-fg-steroid-skeleton",
  tags:["class"], source:"both",
@@ -125,7 +126,7 @@ QUESTIONS.push(
   {t:"Timolol", correct:true, why:"Slide 33: timolol, betaxolol, levobunolol and carteolol are all aryloxypropanolamines."},
   {t:"Apraclonidine", correct:false, why:"Slide 31: apraclonidine is an imidazoline."}],
  teach:"Aryloxypropanolamines (slide 33): timolol, betaxolol, levobunolol, carteolol. Imidazolines (slide 31): clonidine, apraclonidine, brimonidine.",
- cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slides 31, 33; T@38219 11/18"},
+ cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slides 31, 33; T@38474 11/18"},
 
 {id:"OP-012", skill:"class", prof:'Sikazwe', tier:'new', topic:"oo-oph", sub:"fg", concept:"oo-fg-same-class-clonidine",
  tags:["class"], source:"both",
@@ -166,10 +167,10 @@ QUESTIONS.push(
  options:[
   {t:"A fall in the production of aqueous humor", correct:false, why:"A fall in production would lower the pressure; the treatment goals decrease production (slide 28)."},
   {t:"A rise in the permeability of the conjunctiva", correct:false, why:"The conjunctiva is a route for drug absorption (slide 29), not the cause of raised pressure."},
-  {t:"Resistance to the outflow of aqueous humor", correct:true, why:"Slide 28: the problem is raised IOP; T@41008: if there is a blockade or resistance to the outflow, the pressure comes up."},
+  {t:"Resistance to the outflow of aqueous humor", correct:true, why:"Slide 28: the problem is raised IOP; T@40944: if there is a blockade or resistance to the outflow, the pressure comes up."},
   {t:"A rise in the outflow of aqueous humor", correct:false, why:"More outflow lowers the pressure; the goals include an increase in outflow (slide 28)."}],
- teach:"Slide 28: raised IOP is the problem. Pressure rises when aqueous humor is produced and cannot leave (T@41008).",
- cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slide 28; T@41008 11/18"},
+ teach:"Slide 28: raised IOP is the problem. Pressure rises when aqueous humor is produced and cannot leave (T@40944).",
+ cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slide 28; T@40944 11/18"},
 
 {id:"OP-016", skill:"mech", prof:'Sikazwe', tier:'new', topic:"oo-oph", sub:"gl", concept:"oo-gl-goals",
  tags:["mech"], source:"both",
@@ -179,8 +180,8 @@ QUESTIONS.push(
   {t:"Lower aqueous humor production, raise outflow, or do both", correct:true, why:"Slide 28: treatment goals are decreased aqueous humor production or increased outflow or both."},
   {t:"Lower aqueous humor production and also lower its outflow", correct:false, why:"A lower outflow would raise pressure; slide 28 lists increased outflow as the goal."},
   {t:"Raise aqueous humor production and also lower its outflow", correct:false, why:"Both changes would raise the pressure."}],
- teach:"Slide 28: decrease production, increase outflow, or both (T@41580).",
- cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slide 28; T@41580 11/18"},
+ teach:"Slide 28: decrease production, increase outflow, or both (T@41181).",
+ cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slide 28; T@41181 11/18"},
 
 {id:"OP-017", skill:"mech", prof:'Sikazwe', tier:'new', topic:"oo-oph", sub:"gl", concept:"oo-gl-adrenergic-pair",
  tags:["class"], source:"both",
@@ -199,7 +200,7 @@ QUESTIONS.push(
  options:[
   {t:"Brimonidine lowers production and raises outflow; timolol lowers production", correct:true, why:"Slide 31: alpha 2 agonists decrease intraocular fluid production and increase outflow; slide 33: beta antagonists decrease aqueous humor production."},
   {t:"Brimonidine lowers production; timolol raises outflow", correct:false, why:"Slide 33 gives timolol a decrease in production; slide 31 gives brimonidine both effects."},
-  {t:"Brimonidine raises outflow without changing production; timolol lowers production and raises outflow", correct:false, why:"Slide 31 and slide 33 give the opposite assignment: brimonidine does both, timolol lowers production."},
+  {t:"Brimonidine raises outflow without changing production; timolol lowers production and raises outflow", correct:false, why:"Slide 31 gives brimonidine a decrease in production as well as an increase in outflow; slide 33 gives timolol a decrease in production."},
   {t:"Both raise outflow without changing production", correct:false, why:"Both lower production (slides 31 and 33); brimonidine raises outflow as well."}],
  teach:"Alpha 2 agonists: production down and outflow up (slide 31). Beta antagonists: production down (slide 33).",
  cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slides 31, 33"},
@@ -211,7 +212,7 @@ QUESTIONS.push(
   {t:"Cornea", correct:false, why:"Slide 30: the cornea is the entry route for lipophilic drugs; T@45075: primary route for small lipophilic drugs."},
   {t:"Both equally", correct:false, why:"Slide 29: the cornea allows less drug entry and the conjunctiva more."},
   {t:"Conjunctiva", correct:true, why:"Slide 30: hydrophilic drugs enter via the conjunctiva; T@45075: the conjunctiva is the major route for large hydrophilic drugs."},
-  {t:"Neither; the drug cannot enter", correct:false, why:"Slide 30: hydrophilic drugs do enter, via the conjunctiva (T@45075)."}],
+  {t:"Sclera", correct:false, why:"Slide 29 gives the cornea and the conjunctiva as the absorption routes."}],
  teach:"Slide 30: lipophilic drugs enter via the cornea, hydrophilic drugs via the conjunctiva.",
  cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slides 29, 30; T@45075 11/18"},
 
@@ -232,8 +233,8 @@ QUESTIONS.push(
  options:[
   {t:"It has influx and efflux transporters that pump the drug back out of the eye", correct:false, why:"Slide 29 lists the transporters under the conjunctiva, not the cornea."},
   {t:"It has esterase and CYP enzymes that break the drug down before it enters", correct:false, why:"Slide 29 lists the esterase and CYP enzymes under the conjunctiva."},
-  {t:"It has a smaller blood supply than the lens, which limits how much enters", correct:false, why:"The slides give the layered structure as the reason, not a blood supply."},
-  {t:"Its lipid/water/lipid layers make the drug dissolve into each layer in turn", correct:true, why:"Slide 29: cornea = lipid/water/lipid sandwich, less drug entry; T@43104 walks through the dissolving steps."}],
+  {t:"It lacks a lipid layer, so lipophilic drugs cannot cross it", correct:false, why:"The cornea has lipid layers, and lipophilic drugs are the ones that enter through it (slides 29 and 30)."},
+  {t:"The drug must dissolve in each of its lipid/water/lipid layers in turn", correct:true, why:"Slide 29: cornea = lipid/water/lipid sandwich, less drug entry; T@43104 walks through the dissolving steps."}],
  teach:"Cornea: lipid/water/lipid sandwich, less entry (slide 29). Conjunctiva: transporters and enzymes, more entry (slide 29).",
  cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slide 29; T@43104 11/18"},
 
@@ -244,7 +245,7 @@ QUESTIONS.push(
   {t:"Influx and efflux transporters, and esterase and CYP enzymes", correct:true, why:"Slide 29, conjunctiva: influx and efflux transporters; esterase/CYP enzymes; more drug entry (T@44234)."},
   {t:"A lipid, water, lipid sandwich, together with efflux transporters", correct:false, why:"The sandwich belongs to the cornea (slide 29)."},
   {t:"A lipid, water, lipid sandwich, together with esterase enzymes", correct:false, why:"The sandwich belongs to the cornea (slide 29)."},
-  {t:"Tightly packed cells, together with influx transporters alone", correct:false, why:"The lecture places the tightly packed cells in the cornea route (T@43239)."}],
+  {t:"Tightly packed cells, together with influx transporters", correct:false, why:"The lecture places the tightly packed cells in the cornea route (T@43239)."}],
  teach:"Conjunctiva (slide 29): influx and efflux transporters, esterase and CYP enzymes, more drug entry.",
  cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slide 29; T@44234 11/18"},
 
@@ -252,9 +253,9 @@ QUESTIONS.push(
  tags:["pk", "prodrug"], source:"both",
  stem:"Why can an ester prodrug be effective when instilled in the eye?",
  options:[
-  {t:"The cornea hydrolyzes it into the active drug by lipid layering", correct:false, why:"Slide 29 lists the enzymes under the conjunctiva; the cornea feature is the lipid/water/lipid sandwich."},
+  {t:"Corneal lipid layers hydrolyze it into the active drug", correct:false, why:"Slide 29 lists the enzymes under the conjunctiva; the cornea feature is the lipid/water/lipid sandwich."},
   {t:"Efflux transporters in the cornea convert it", correct:false, why:"Transporters move drugs; they do not convert them, and slide 29 places them in the conjunctiva."},
-  {t:"Conjunctival esterases can hydrolyze it to the active drug", correct:true, why:"Slide 29: the conjunctiva has esterase/CYP enzymes; T@44312: prodrugs are instilled because conjunctival metabolism bioactivates them."},
+  {t:"Conjunctival esterases can hydrolyze it to the drug", correct:true, why:"Slide 29: the conjunctiva has esterase/CYP enzymes; T@44312: prodrugs are instilled because conjunctival metabolism bioactivates them."},
   {t:"The tear film removes the ester group", correct:false, why:"The slides give the conjunctival enzymes as the activating step."}],
  teach:"Conjunctival esterase and CYP enzymes can bioactivate a prodrug (slide 29, T@44312).",
  cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slide 29; T@44312 11/18"},
@@ -264,32 +265,21 @@ QUESTIONS.push(
  stem:"Which absorption route allows more drug entry into the eye, and why?",
  options:[
   {t:"The cornea, because its surface is larger than that of the conjunctiva", correct:false, why:"Slide 29: the cornea allows less drug entry."},
-  {t:"The conjunctiva, because its surface is larger", correct:true, why:"Slide 29: the conjunctiva allows more drug entry; T@43688: a larger surface where molecules can get in."},
+  {t:"The conjunctiva, because its surface is larger", correct:true, why:"Slide 29: the conjunctiva allows more drug entry; T@43940: a larger surface where molecules can get in."},
   {t:"The cornea, because the drug dissolves readily in its layers", correct:false, why:"Slide 29: the lipid/water/lipid sandwich limits entry (T@43104)."},
   {t:"The conjunctiva, because it has no enzymes or transporters", correct:false, why:"Slide 29: the conjunctiva has transporters and enzymes."}],
- teach:"More drug enters through the conjunctiva (slide 29), which provides a larger surface (T@43688).",
- cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slide 29; T@43688 11/18"},
-
-{id:"OP-025", skill:"pk", prof:'Sikazwe', tier:'new', topic:"oo-oph", sub:"adme", concept:"oo-adme-lipophilic-vs-hydrophilic-pair",
- tags:["pk", "two-facts"], source:"both",
- stem:"Two drugs are instilled: drug P is small and lipophilic, drug Q is large and hydrophilic. What route does each mainly use?",
- options:[
-  {t:"P through the conjunctiva; Q through the cornea", correct:false, why:"The assignment is reversed: lipophilic drugs use the cornea (slide 30)."},
-  {t:"Both P and Q through the cornea, since it is the main route", correct:false, why:"Slide 30 sends hydrophilic drugs through the conjunctiva."},
-  {t:"Both P and Q through the conjunctiva, since it is the main route", correct:false, why:"Slide 30 sends lipophilic drugs through the cornea."},
-  {t:"P through the cornea; Q through the conjunctiva", correct:true, why:"Slide 30: lipophilic drugs enter via the cornea, hydrophilic drugs via the conjunctiva (T@45075)."}],
- teach:"Cornea: small lipophilic. Conjunctiva: large hydrophilic (slide 30).",
- cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slide 30; T@45075 11/18"},
+ teach:"More drug enters through the conjunctiva (slide 29), which provides a larger surface (T@43940).",
+ cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slide 29; T@43940 11/18"},
 
 {id:"OP-026", skill:"chem", prof:'Sikazwe', tier:'new', topic:"oo-a2", sub:"class", concept:"oo-a2-why-brimonidine",
  tags:["chem", "pk"], source:"both",
  stem:"Why is brimonidine preferred over clonidine for glaucoma?",
  options:[
-  {t:"It is more potent, and its lower log P limits brain entry", correct:true, why:"Slide 31: ClogP clonidine 1.5, brimonidine 1.2; T@46562 to T@48263: clonidine is lipophilic enough to reach the brain; brimonidine is about 1,000-fold more potent, so a tiny drop works."},
+  {t:"It is more potent, and its lower log P limits brain entry", correct:true, why:"Slide 31: ClogP clonidine 1.5, brimonidine 1.2; T@46562 to T@48263: clonidine is lipophilic enough to reach the brain; brimonidine is about 1,000-fold more potent than the other two, so a tiny drop works."},
   {t:"It has a higher log P, so more drug crosses the cornea", correct:false, why:"Slide 31 gives brimonidine the lower ClogP (1.2 against 1.5)."},
   {t:"It acts on alpha 1 receptors, which control aqueous humor outflow", correct:false, why:"Brimonidine is an alpha 2 agonist, highly selective (slide 31, T@48186)."},
-  {t:"It has a longer half-life than clonidine, so dosing is less frequent", correct:false, why:"Brimonidine has a half-life of about 3 to 4 hours (T@48822), shorter than the about 8 hours of apraclonidine (T@47695)."}],
- teach:"Brimonidine: ClogP 1.2 against 1.5 for clonidine, alpha 2 selective, about 1,000-fold more potent than apraclonidine and clonidine (T@48263), so a small drop gives the effect with less CNS worry.",
+  {t:"It has an amino group on the ring, which lowers its log P", correct:false, why:"The ring amino group is on apraclonidine; brimonidine carries a bromine on a fused pyrazine ring (slide 31)."}],
+ teach:"Brimonidine: ClogP 1.2 against 1.5 for clonidine, alpha 2 selective, about 1,000-fold more potent than the other two (T@48263), so a small drop gives the effect with less CNS worry.",
  cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slide 31; T@48263 11/18"},
 
 {id:"OP-027", skill:"adverse", prof:'Sikazwe', tier:'new', topic:"oo-a2", sub:"class", concept:"oo-a2-clonidine-cns",
@@ -298,10 +288,10 @@ QUESTIONS.push(
  options:[
   {t:"It is too hydrophilic to enter the conjunctiva", correct:false, why:"Clonidine has the highest ClogP of the three (slide 31); the problem raised is CNS entry."},
   {t:"It cannot activate alpha 2 receptors in the eye", correct:false, why:"Clonidine is the alpha 2 agonist prototype (slide 31)."},
-  {t:"It enters the brain, causing CNS effects", correct:true, why:"Slide 31 (ClogP 1.5); T@46562 to T@46744: lipophilic enough to get into the brain, with several CNS effects, including hypotension."},
+  {t:"It enters the brain, causing CNS effects", correct:true, why:"Slide 31 (ClogP 1.5); T@46589: lipophilic enough to get into the brain, bringing several unwanted CNS effects."},
   {t:"It lacks the imidazoline ring found in the other two", correct:false, why:"Clonidine contains the imidazoline ring (slide 31)."}],
- teach:"Clonidine, ClogP 1.5, is lipophilic enough to enter the brain; its CNS effects include a fall in blood pressure (T@46744).",
- cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slide 31; T@46744 11/18"},
+ teach:"Clonidine, ClogP 1.5, is lipophilic enough to enter the brain; it is less desirable for glaucoma because of those CNS effects (T@46740).",
+ cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slide 31; T@46740 11/18"},
 
 {id:"OP-028", skill:"pk", prof:'Sikazwe', tier:'new', topic:"oo-a2", sub:"class", concept:"oo-a2-logp-order",
  tags:["pk", "numbers"], source:"slide",
@@ -314,27 +304,16 @@ QUESTIONS.push(
  teach:"Slide 31: clonidine 1.5 > brimonidine 1.2 > apraclonidine 0.87.",
  cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slide 31"},
 
-{id:"OP-029", skill:"pk", prof:'Sikazwe', tier:'new', topic:"oo-a2", sub:"class", concept:"oo-a2-lowest-logp",
- tags:["pk", "numbers"], source:"both",
- stem:"Which alpha 2 agonist has the lowest printed ClogP?",
- options:[
-  {t:"Clonidine", correct:false, why:"Clonidine has the highest, 1.5 (slide 31)."},
-  {t:"Brimonidine", correct:false, why:"Brimonidine is 1.2, between the other two (slide 31)."},
-  {t:"Timolol", correct:false, why:"Timolol is not an alpha 2 agonist; it is a beta antagonist with Log P 1.4 (slide 33)."},
-  {t:"Apraclonidine", correct:true, why:"Slide 31: apraclonidine ClogP 0.87; T@47224: less lipophilic, so it does not get into the brain well."}],
- teach:"Apraclonidine 0.87 is the lowest of the alpha 2 agonists (slide 31).",
- cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slide 31; T@47224 11/18"},
-
 {id:"OP-030", skill:"chem", prof:'Sikazwe', tier:'new', topic:"oo-a2", sub:"class", concept:"oo-a2-apraclonidine-change",
  tags:["chem", "reverse"], source:"both",
  stem:"What structural change turns clonidine into apraclonidine, and what does it do to the log P?",
  options:[
-  {t:"An amino group is added to the aromatic ring; log P falls", correct:true, why:"Slide 31: the amine analog of clonidine; ClogP 1.5 to 0.87 (T@47224)."},
+  {t:"An amino group is added to the aromatic ring; log P falls", correct:true, why:"Slide 31: apraclonidine has an H2N on the ring that clonidine lacks; ClogP 1.5 to 0.87 (T@47120)."},
   {t:"An amino group is added to the aromatic ring; log P rises sharply", correct:false, why:"An amino group increases polarity; slide 31 prints a lower value, 0.87."},
   {t:"A bromine replaces a chlorine; log P falls", correct:false, why:"Bromine appears in brimonidine (slide 31); apraclonidine keeps both chlorines and gains an amino group."},
   {t:"The imidazoline is replaced by an imidazole; log P rises", correct:false, why:"Apraclonidine keeps the imidazoline ring (slide 31)."}],
- teach:"Apraclonidine = clonidine plus an aromatic amino group (T@47224); ClogP 0.87 against 1.5.",
- cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slide 31; T@47224 11/18"},
+ teach:"Apraclonidine = clonidine plus an aromatic amino group (slide 31, T@47120); ClogP 0.87 against 1.5.",
+ cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slide 31; T@47120 11/18"},
 
 {id:"OP-031", skill:"chem", prof:'Sikazwe', tier:'new', topic:"oo-a2", sub:"class", concept:"oo-a2-brimonidine-ring",
  tags:["chem"], source:"both",
@@ -342,20 +321,20 @@ QUESTIONS.push(
  options:[
   {t:"A benzene ring with two chlorines and an amino group", correct:false, why:"That is apraclonidine (slide 31)."},
   {t:"A benzene ring with two chlorines", correct:false, why:"That is clonidine (slide 31)."},
-  {t:"A benzene ring fused to a pyrazine, with one bromine", correct:true, why:"Slide 31: brimonidine's ring contains two nitrogens (red) fused to the benzene and bears Br; T@48043: a pyrazine analog."},
+  {t:"A benzene ring fused to a pyrazine, with one bromine", correct:true, why:"Slide 31: brimonidine's ring contains two nitrogens (red) fused to the benzene and bears Br; T@47960: a pyrazine analog."},
   {t:"A benzene ring fused to a cyclohexanone, with an oxygen on the ring", correct:false, why:"That is the levobunolol ring system (slide 33)."}],
- teach:"Brimonidine: bromine-bearing benzo-fused pyrazine joined to the imidazoline through NH (slide 31, T@48043).",
- cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slide 31; T@48043 11/18"},
+ teach:"Brimonidine: bromine-bearing benzo-fused pyrazine joined to the imidazoline through NH (slide 31, T@47960).",
+ cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slide 31; T@47960 11/18"},
 
 {id:"OP-032", skill:"chem", prof:'Sikazwe', tier:'new', topic:"oo-a2", sub:"class", concept:"oo-a2-potency",
  tags:["chem", "numbers"], source:"both",
  stem:"Which alpha 2 agonist is the most potent and alpha 2 selective of the series, allowing a small drop to give the effect?",
  options:[
   {t:"Apraclonidine", correct:false, why:"Brimonidine is the most potent of the series (T@48263), not apraclonidine."},
-  {t:"Brimonidine", correct:true, why:"T@48080 to T@48263: the most potent of the series, highly selective for alpha 2, about 1,000-fold more potent than apraclonidine and clonidine."},
+  {t:"Brimonidine", correct:true, why:"T@48080 to T@48263: the most potent of the series, highly selective for alpha 2, about 1,000-fold more potent than the other two."},
   {t:"Clonidine", correct:false, why:"Clonidine is the reference molecule and the least desirable because of CNS effects (T@46744)."},
   {t:"Timolol", correct:false, why:"Timolol is a beta antagonist (slide 33)."}],
- teach:"Brimonidine is about 1,000-fold more potent than apraclonidine and clonidine (T@48263).",
+ teach:"Brimonidine is about 1,000-fold more potent than the other two (T@48263).",
  cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slide 31; T@48263 11/18"},
 
 {id:"OP-034", skill:"class", prof:'Sikazwe', tier:'new', topic:"oo-a2", sub:"class", concept:"oo-a2-brands",
@@ -376,7 +355,7 @@ QUESTIONS.push(
   {t:"Alpha 1 agonism", correct:false, why:"Slide 32: a CH2 linker gives alpha 1 agonists (T@50385)."},
   {t:"Beta 1 antagonism", correct:false, why:"Beta antagonists are the aryloxypropanolamines (slide 33)."},
   {t:"Alpha 2 agonism", correct:true, why:"Slide 32: linker X = NH gives alpha 2 agonists; T@50420: if amine, then alpha 2 selective."},
-  {t:"Beta 2 antagonism", correct:false, why:"Beta antagonists are the aryloxypropanolamines (slide 33)."}],
+  {t:"Alpha 2 antagonism", correct:false, why:"The aryl imidazoline SAR gives agonists, not antagonists (slide 32)."}],
  teach:"Aryl imidazoline core: X = NH gives alpha 2 agonists; X = CH2 gives alpha 1 agonists (slide 32). The slide prints the NH linker as NH2; the structures on slide 31 show NH.",
  cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slides 31, 32; T@50420 11/18"},
 
@@ -389,17 +368,6 @@ QUESTIONS.push(
   {t:"Alpha 2 antagonist", correct:false, why:"The SAR gives agonists, not antagonists (slide 32)."},
   {t:"Beta 1 antagonist", correct:false, why:"Beta antagonists are the aryloxypropanolamines (slide 33)."}],
  teach:"Linker atom decides the alpha subtype: CH2, alpha 1; NH, alpha 2 (slide 32).",
- cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slide 32; T@50385 11/18"},
-
-{id:"OP-037", skill:"chem", prof:'Sikazwe', tier:'new', topic:"oo-a2", sub:"sar", concept:"oo-a2-sar-swap",
- tags:["sar", "reverse"], source:"both",
- stem:"If the NH linker of an alpha 2 selective aryl imidazoline were replaced with CH2, which change would the SAR predict?",
- options:[
-  {t:"Selectivity moves from alpha 2 agonism to beta antagonism", correct:false, why:"Slide 32 gives only alpha subtypes for the linker; beta antagonists need the propanolamine chain (slide 33)."},
-  {t:"The compound loses the imidazoline ring", correct:false, why:"Replacing the linker atom leaves the imidazoline ring in place (slide 32)."},
-  {t:"Alpha 2 agonism increases", correct:false, why:"Alpha 2 agonism is assigned to the NH linker (slide 32)."},
-  {t:"Selectivity moves from alpha 2 to alpha 1 agonism", correct:true, why:"Slide 32: NH = alpha 2 agonist; CH2 = alpha 1 agonist."}],
- teach:"The linker atom, X, sets alpha 1 (CH2) versus alpha 2 (NH) agonism (slide 32).",
  cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slide 32; T@50385 11/18"},
 
 {id:"OP-038", skill:"chem", prof:'Sikazwe', tier:'new', topic:"oo-a2", sub:"sar", concept:"oo-a2-sar-min",
@@ -426,13 +394,13 @@ QUESTIONS.push(
 
 {id:"OP-040", skill:"class", prof:'Sikazwe', tier:'new', topic:"oo-bb", sub:"sar", concept:"oo-bb-moleculeX",
  tags:["class"], source:"slide",
- stem:"Molecule X has an aromatic ring bonded directly to a CH(OH)-CH2-NH chain, with no oxygen between the ring and the chain. What is its class?",
+ stem:"A compound has an aromatic ring bonded directly to a CH(OH)-CH2-NH chain, with no oxygen between the ring and the chain. What is its class?",
  options:[
   {t:"Aryloxypropanolamine", correct:false, why:"Slide 34: the aryloxypropanolamine has an oxygen between the ring and a three-carbon chain."},
-  {t:"Arylethanolamine", correct:true, why:"Slide 34: Molecule X is drawn in blue as the arylethanolamine pattern, ring-CH(OH)-CH2-NH-R."},
+  {t:"Arylethanolamine", correct:true, why:"Slide 34: the blue arylethanolamine pattern is ring-CH(OH)-CH2-NH-R, with no oxygen between the ring and the chain."},
   {t:"Aryl imidazoline", correct:false, why:"No imidazoline ring is present (slide 31)."},
   {t:"Prostaglandin", correct:false, why:"The prostaglandin skeleton is a carbon five-membered ring with two chains (slide 27)."}],
- teach:"Slide 34 contrasts the aryloxypropanolamine (green, with the oxygen and three carbons) and the arylethanolamine (blue, ring-CH(OH)-CH2-NH).",
+ teach:"Slide 34 contrasts the aryloxypropanolamine (green, with the oxygen and three carbons) and the arylethanolamine (blue, ring-CH(OH)-CH2-NH), the pattern drawn in the example labeled Molecule X.",
  cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slide 34"},
 
 {id:"OP-041", skill:"chem", prof:'Sikazwe', tier:'new', topic:"oo-bb", sub:"sar", concept:"oo-bb-potency",
@@ -466,17 +434,6 @@ QUESTIONS.push(
   {t:"Beta 1 antagonism", correct:true, why:"Slide 34: most p-aryloxypropanolamines (e.g., betaxolol) are beta 1 antagonists."},
   {t:"Alpha 1 agonism", correct:false, why:"Alpha 1 agonism belongs to the CH2-linked aryl imidazolines (slide 32)."}],
  teach:"Most aryloxypropanolamines have mixed beta 1 and beta 2 activity; most para-substituted ones, such as betaxolol, are beta 1 antagonists (slide 34).",
- cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slide 34"},
-
-{id:"OP-044", skill:"chem", prof:'Sikazwe', tier:'new', topic:"oo-bb", sub:"sar", concept:"oo-bb-mixed",
- tags:["sar", "two-facts"], source:"slide",
- stem:"Most aryloxypropanolamine beta antagonists act on both beta 1 and beta 2 receptors. Which subgroup is mostly beta 1 selective?",
- options:[
-  {t:"The arylethanolamines, such as Molecule X", correct:false, why:"Slide 34 does not give a beta 1 selectivity for the arylethanolamines."},
-  {t:"Para-substituted ones, such as betaxolol", correct:true, why:"Slide 34: most p-aryloxypropanolamines (e.g., betaxolol) are beta 1 antagonists."},
-  {t:"The aryl imidazolines, such as clonidine", correct:false, why:"The aryl imidazolines are alpha agonists (slide 32)."},
-  {t:"The R-OH isomers of the aryloxypropanolamines", correct:false, why:"Slide 34 prefers S-OH isomers."}],
- teach:"Mixed beta 1 and beta 2 for most; para-aryloxypropanolamines are mostly beta 1 (slide 34).",
  cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slide 34"},
 
 {id:"OP-045", skill:"pk", prof:'Sikazwe', tier:'new', topic:"oo-bb", sub:"class", concept:"oo-bb-logp-highest",
