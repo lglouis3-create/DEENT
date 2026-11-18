@@ -24,7 +24,7 @@ QUESTIONS.push(
   {t:"An oxygen on the ring; three carbons carrying the alcohol", correct:true, why:"T@38219: the oxygen is right next to the aromatic group (\"oxy\"); from there the three carbons carrying the alcohol and the amine are the propanolamine."},
   {t:"An oxygen in the amine; two carbons carrying the alcohol", correct:false, why:"The amine is the nitrogen end of the chain; the oxygen of \"oxy\" sits on the aromatic ring, and the chain has three carbons, not two."},
   {t:"An oxygen next to the aromatic ring; two carbons carrying the alcohol", correct:false, why:"Two carbons would be an ethanolamine (the arylethanolamines of slide 34); the class name says propanol, three carbons."},
-  {t:"An oxygen in the ring; three carbons carrying the amine only", correct:false, why:"The oxygen of \"oxy\" is outside the ring, joining the ring to the chain, and the three-carbon chain carries both an alcohol and an amine."}],
+  {t:"An oxygen in the ring; three carbons with an amine but no alcohol", correct:false, why:"The oxygen of \"oxy\" is outside the ring, joining the ring to the chain, and the three-carbon chain carries both an alcohol and an amine."}],
  teach:"Aryl = aromatic ring; oxy = oxygen next to it; propanolamine = three carbons, with the alcohol and the amine (T@38478 to T@38807, slide 27).",
  cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slides 27, 33; T@38478 11/18"},
 
@@ -199,8 +199,8 @@ QUESTIONS.push(
  options:[
   {t:"Brimonidine lowers production and raises outflow; timolol lowers production", correct:true, why:"Slide 31: alpha 2 agonists decrease intraocular fluid production and increase outflow; slide 33: beta antagonists decrease aqueous humor production."},
   {t:"Brimonidine lowers production; timolol raises outflow", correct:false, why:"Slide 33 gives timolol a decrease in production; slide 31 gives brimonidine both effects."},
-  {t:"Brimonidine raises outflow only; timolol lowers production and raises outflow", correct:false, why:"Slide 31 and slide 33 give the opposite assignment: brimonidine does both, timolol lowers production."},
-  {t:"Both raise outflow only", correct:false, why:"Both lower production (slides 31 and 33); brimonidine raises outflow as well."}],
+  {t:"Brimonidine raises outflow without changing production; timolol lowers production and raises outflow", correct:false, why:"Slide 31 and slide 33 give the opposite assignment: brimonidine does both, timolol lowers production."},
+  {t:"Both raise outflow without changing production", correct:false, why:"Both lower production (slides 31 and 33); brimonidine raises outflow as well."}],
  teach:"Alpha 2 agonists: production down and outflow up (slide 31). Beta antagonists: production down (slide 33).",
  cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slides 31, 33"},
 
@@ -452,7 +452,7 @@ QUESTIONS.push(
  options:[
   {t:"Lower", correct:false, why:"Slide 34 marks the aryloxypropanolamines as the more potent."},
   {t:"The same", correct:false, why:"Slide 34 prints a potency difference."},
-  {t:"Higher only at beta 2", correct:false, why:"Slide 34 states the potency difference without limiting it to a receptor."},
+  {t:"Higher at beta 2 receptors but not at beta 1", correct:false, why:"Slide 34 states the potency difference without limiting it to a receptor."},
   {t:"Higher", correct:true, why:"Slide 34: aryloxypropanolamines (> potent) versus arylethanolamines."}],
  teach:"Aryloxypropanolamines are more potent than the arylethanolamines (slide 34).",
  cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slide 34"},
@@ -497,7 +497,7 @@ QUESTIONS.push(
   {t:"Levobunolol", correct:false, why:"Slide 33 prints 2.2, below betaxolol (2.5)."},
   {t:"Timolol", correct:false, why:"Slide 33 prints 1.4 for timolol."},
   {t:"Carteolol", correct:false, why:"Slide 33 prints 1.4 for carteolol."},
-  {t:"Betaxolol", correct:true, why:"Slide 33 prints betaxolol Log P 2.5, the highest; levobunolol 2.2; timolol and carteolol 1.4."}],
+  {t:"Betaxolol", correct:true, why:"Slide 33 prints betaxolol Log P 2.5, the highest of the four beta antagonists drawn; levobunolol is 2.2, timolol and carteolol 1.4."}],
  teach:"Slide 33 Log P values: betaxolol 2.5, levobunolol 2.2, timolol 1.4, carteolol 1.4.",
  cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slide 33"},
 
@@ -505,9 +505,9 @@ QUESTIONS.push(
  tags:["pk", "numbers", "list"], source:"slide",
  stem:"Which two beta antagonists share the same printed Log P of 1.4? Select all that apply.",
  options:[
-  {t:"Betaxolol", correct:false, why:"Slide 33: betaxolol 2.5."},
+  {t:"Betaxolol", correct:false, why:"Slide 33 prints betaxolol Log P 2.5, not 1.4."},
   {t:"Timolol", correct:true, why:"Slide 33: timolol Log P = 1.4."},
-  {t:"Levobunolol", correct:false, why:"Slide 33: levobunolol 2.2."},
+  {t:"Levobunolol", correct:false, why:"Slide 33 prints levobunolol Log P 2.2, not 1.4."},
   {t:"Carteolol", correct:true, why:"Slide 33: carteolol LogP = 1.4."}],
  teach:"Timolol and carteolol, 1.4 each; betaxolol 2.5 and levobunolol 2.2 (slide 33).",
  cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slide 33"},
