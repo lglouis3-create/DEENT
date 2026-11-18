@@ -1,7 +1,7 @@
 /* examfold_test.js: browser checks of the exam folders in Guides, Tell apart and Reference (examfold_ui.js).
    NODE_PATH=$(npm root -g) node examfold_test.js      (reads ../preview/index.html; DRILL_PAGE overrides)
    At 390 px and 1280 px:
-   - each of the three tabs shows an Exam 1 folder (closed) and an Exam 2 folder (open: the active exam),
+   - each of the three tabs shows an Exam 1 and an Exam 2 folder (closed) and an Exam 3 folder (open: the active exam, COURSE.activeExam),
      with the Topics folders' title and the exam's date;
    - no section is outside a folder, none is dropped (the counts of headings, tables, rows and figures inside
      the folders equal those of the tab's own HTML), and every section has its own entry in the assignment;
@@ -36,7 +36,8 @@
    - N: the core's set of table boxes holds only boxes that are on the page after 42 redraws, and the count of DOM
      nodes after a forced garbage collection (Chromium's DevTools protocol) does not grow with them;
    - O: a section with no entry in the assignment goes with the section before it and is reported; without the
-     Diseases tab, Tell apart has one folder (Exam 1), open, and no list of comparisons. */
+     Diseases tab, Tell apart has no Exam 2 folder and no list of comparisons; with Exam 2 as the active exam (no folder
+     there) the latest folder before it (Exam 1) is the open one. */
 const path = require('path'), fs = require('fs');
 const NAME = 'examfold_test.js';
 let chromium;
@@ -150,22 +151,28 @@ async function nsOf(browser) {
             folds: folds.map(f => ({id: f.id, open: f.open, name: f.querySelector('.rfname').textContent, meta: f.querySelector('.rfmeta').textContent,
               list: [...f.querySelectorAll(':scope > .rfbody > ' + starts)].map(s => s.id), extra: f.querySelectorAll('.rfdz button').length})),
             counts, lost, wrong, unassigned: (EXAMFOLD_UI.unassigned()[v] || []),
+            eyeIn: v === 'guide' ? (document.getElementById('gey').closest('.rfold') || {}).id : null,
             dates: (COURSE.exams || []).map(x => x.date), active: COURSE.activeExam, summaryFocus: folds.every(f => f.querySelector('summary').tabIndex === 0),
           };
         }, v);
-        const f1 = r.folds.find(f => f.id === `rfold-${v}-1`), f2 = r.folds.find(f => f.id === `rfold-${v}-2`);
-        check(r.folds.length === 2 && f1 && f2, `${w} px, ${NAMES[v]}: an Exam 1 and an Exam 2 folder`, r.folds.map(f => f.id));
-        if (!f1 || !f2) continue;
-        check(!f1.open && f2.open && r.active === 'exam2', `${w} px, ${NAMES[v]}: Exam 1 starts closed and Exam 2 (the active exam) open`, {exam1: f1.open, exam2: f2.open, active: r.active});
-        check(/^Exam 1 · /.test(f1.name) && /^Exam 2 · /.test(f2.name) && f1.meta.indexOf(r.dates[0]) === 0 && f2.meta.indexOf(r.dates[1]) === 0,
-          `${w} px, ${NAMES[v]}: the headers read "${f1.name}" and "${f2.name}", each with its exam date`, [f1.meta, f2.meta]);
+        const f1 = r.folds.find(f => f.id === `rfold-${v}-1`), f2 = r.folds.find(f => f.id === `rfold-${v}-2`), f3 = r.folds.find(f => f.id === `rfold-${v}-3`);
+        check(r.folds.length === 3 && f1 && f2 && f3, `${w} px, ${NAMES[v]}: an Exam 1, an Exam 2 and an Exam 3 folder`, r.folds.map(f => f.id));
+        if (!f1 || !f2 || !f3) continue;
+        check(!f1.open && !f2.open && f3.open && r.active === 'exam3', `${w} px, ${NAMES[v]}: Exam 1 and Exam 2 start closed and Exam 3 (the active exam) open`, {exam1: f1.open, exam2: f2.open, exam3: f3.open, active: r.active});
+        check(/^Exam 1 · /.test(f1.name) && /^Exam 2 · /.test(f2.name) && /^Exam 3 · /.test(f3.name) && f1.meta.indexOf(r.dates[0]) === 0 && f2.meta.indexOf(r.dates[1]) === 0 && f3.meta.indexOf(r.dates[2]) === 0,
+          `${w} px, ${NAMES[v]}: the headers read "${f1.name}", "${f2.name}" and "${f3.name}", each with its exam date`, [f1.meta, f2.meta, f3.meta]);
         const allowed = ['h2', 'p.sub', 'div.lkbar', 'details.wkindex', 'details.refnav-wrap', 'details.rfold'];   // div.lkbar: the stars' legend and "Starred only" (likely_marks_ui.js)
-        check(r.top.every(t => allowed.includes(t)) && r.top.filter(t => t === 'details.rfold').length === 2,
-          `${w} px, ${NAMES[v]}: nothing but the title, the intro, the lists and the two folders at the top level`, r.top.filter(t => !allowed.includes(t)));
+        check(r.top.every(t => allowed.includes(t)) && r.top.filter(t => t === 'details.rfold').length === 3,
+          `${w} px, ${NAMES[v]}: nothing but the title, the intro, the lists and the three folders at the top level`, r.top.filter(t => !allowed.includes(t)));
         const off = Object.entries(r.counts).filter(([, [a, b]]) => a !== b);
         check(!off.length && !r.lost.length, `${w} px, ${NAMES[v]}: nothing dropped (${Object.entries(r.counts).map(([k, [a]]) => a + ' ' + k).join(', ')} in the folders, as in the tab's HTML)`, {off, lost: r.lost.slice(0, 8)});
         check(!r.unassigned.length && !r.wrong.length, `${w} px, ${NAMES[v]}: every section has its own entry and sits in that exam's folder`, {unassigned: r.unassigned, wrong: r.wrong});
-        check(v === 'tell' ? (f1.list.length > 0 && (f2.list.length > 0 || f2.extra > 0)) : (f1.list.length > 0 && f2.list.length > 0), `${w} px, ${NAMES[v]}: neither folder is empty`, [f1.list.length, f2.list.length, f2.extra]);
+        check(v === 'tell' ? (f1.list.length > 0 && (f2.list.length > 0 || f2.extra > 0) && f3.list.length > 0) : (f1.list.length > 0 && f2.list.length > 0 && f3.list.length > 0), `${w} px, ${NAMES[v]}: no folder is empty`, [f1.list.length, f2.list.length, f2.extra, f3.list.length]);
+        // Exam 3 holds the eye sections (and only those); the Diseases list of Tell apart stays in the Exam 2 folder
+        const eye = {guide: ['gdeck-eye'], tell: ['tell-ey-glaucoma', 'tell-ey-inflow', 'tell-ey-outflow', 'tell-ey-allergy', 'tell-ey-dry'], ref: ['ref-ey-tears', 'ref-ey-flow', 'ref-ey-gl', 'ref-ey-ac', 'ref-ey-de']}[v];
+        check(JSON.stringify(f3.list) === JSON.stringify(eye) && f3.extra === 0 && !f1.list.concat(f2.list).some(id => eye.includes(id)) && (v !== 'guide' || r.eyeIn === 'rfold-guide-3'),
+          `${w} px, ${NAMES[v]}: the Exam 3 folder holds the eye sections (${eye.join(', ')}) and nothing else; none of them is in Exam 1 or Exam 2`, {f3: f3.list, extra: f3.extra, eyeIn: r.eyeIn});
+        if (v === 'tell') check(f2.extra > 0 && f1.extra === 0, `${w} px, ${NAMES[v]}: the list of Diseases-tab comparisons is in the Exam 2 folder (${f2.extra} buttons), not in Exam 1 or Exam 3`, [f1.extra, f2.extra, f3.extra]);
         check(r.summaryFocus, `${w} px, ${NAMES[v]}: each header can take keyboard focus`);
         if (w === 390) r.folds.forEach(f => note(`${NAMES[v]} › ${f.name} (${f.meta}): ${f.list.join(', ')}${f.extra ? ' [' + f.extra + ' buttons to the Diseases tab]' : ''}`));
         await side(p, w, NAMES[v]);
