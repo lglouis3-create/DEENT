@@ -1,1 +1,505 @@
-/* q23_eye_anat_patho.js: written by the eye question build, 2026-11-18 (placeholder until the file is filled) */
+/* q23_eye_anat_patho.js: Exam 3 (Dr. Smith, Lectures 9-10), eye anatomy, tears, the autonomic effects in the eye and glaucoma pathophysiology.
+   Sources: Smith_Eye_Glaucoma_AllergicConj_DryEye.pdf slides 4 (anatomy), 5 (lacrimal system), 6 (tears), 7-8 (adrenergic and cholinergic
+   effects), 11 (objectives), 13 (what is glaucoma), 14 (aqueous humor inflow and outflow, open and closed angle), 15 (aqueous humor flow),
+   16 (receptors and enzymes); DEENT_Lecture_11.13_transcript.txt from the start to the break (T@ = character offset, 11/13).
+   Conflicts: none found. Notes: the transcript says "between the sclera and the ciliary body" once and "between the conjunctiva and the uvea"
+   once for the uveoscleral route; the options use "between the uvea and the sclera", which is the description she gave first and the slide labels.
+   Slide 16 also shows beta 2 receptors in the trabecular meshwork only as a possibility ("we think there might be some beta 2 receptors", T@38228); no item tests that. */
+(() => {
+QUESTIONS.push(
+{id:'EA-001', skill:'patho', prof:'Smith', tier:'new', topic:'ey-anat', sub:'struct', concept:'ey-struct-ciliary-body',
+ tags:['structure'], source:'both',
+ stem:'Which structure is a doughnut-shaped ring of smooth muscle behind the iris, is joined to the lens by suspensory ligaments, and produces aqueous humor?',
+ options:[
+  {t:'Iris', correct:false, why:'Slide 4 and T@5542 11/13: the iris is the colored ring in front of the lens that sets pupil size; it does not make aqueous humor or hold the lens by ligaments.'},
+  {t:'Ciliary body', correct:true, why:'Slide 4 labels the ciliary body; T@7290 11/13: smooth muscle covered by epithelial tissue, surrounding the lens, with ligaments holding the lens to it. Slide 7 and slide 14: it produces aqueous humor.'},
+  {t:'Choroid', correct:false, why:'Slide 4 and T@6717 11/13: the choroid is the blood-vessel-filled tissue lining the eyeball that feeds the retina.'},
+  {t:'Sclera', correct:false, why:'Slide 4 and T@5971 11/13: the sclera is the firm white outer coat, continuous with the cornea.'}],
+ teach:'The ciliary body is the muscular ring behind the iris. It holds the lens through suspensory ligaments and makes the aqueous humor (slides 4, 7, 14).',
+ cite:'Lectures 9–10 (Smith_Eye_Glaucoma_AllergicConj_DryEye.pdf) slides 4, 14; T@7290 11/13'},
+
+{id:'EA-002', skill:'patho', prof:'Smith', tier:'new', topic:'ey-anat', sub:'struct', concept:'ey-struct-choroid',
+ tags:['structure'], source:'both',
+ stem:'Rods and cones need a large blood supply to function and stay alive. Which tissue lining the eyeball is full of blood vessels and provides it?',
+ options:[
+  {t:'Sclera', correct:false, why:'Slide 4: the sclera is the firm white coat around the eye; the lecture does not give it the blood supply role.'},
+  {t:'Ciliary body', correct:false, why:'Slide 4 and T@7290 11/13: the ciliary body is smooth muscle and epithelium near the lens that makes aqueous humor.'},
+  {t:'Conjunctiva', correct:false, why:'Slide 4 and slide 6: the conjunctiva coats the front of the eye with the cornea, with goblet cells and accessory lacrimal glands; it is not the vascular lining behind the retina.'},
+  {t:'Choroid', correct:true, why:'T@6717 11/13: "the choroid. This is full of blood vessels, so the retina ... has a lot of blood flow to it ... the rods and cones in the retina need a lot of blood to function and stay alive." Slide 4 labels it.'}],
+ teach:'The choroid lines the eyeball and carries the blood the retina needs (T@6717 11/13).',
+ cite:'Lectures 9–10 (Smith_Eye_Glaucoma_AllergicConj_DryEye.pdf) slide 4; T@6717 11/13'},
+
+{id:'EA-003', skill:'patho', prof:'Smith', tier:'new', topic:'ey-anat', sub:'struct', concept:'ey-struct-cornea-sclera',
+ tags:['structure', 'two-facts'], source:'both',
+ stem:'Which description of the cornea fits what is known about it?',
+ options:[
+  {t:'Clear tissue like the sclera and continuous with it, but not opaque', correct:true, why:'T@6300 11/13: the cornea is "similar tissue to the sclera, it just has become not opaque"; it is considered continuous with the sclera.'},
+  {t:'Gelatinous liquid that fills the large back chamber of the eyeball behind the lens', correct:false, why:'That is the vitreous (slide 4; T@7915 11/13), not the cornea.'},
+  {t:'Pigmented ring of muscle in front of the lens that sets the size of the pupil', correct:false, why:'That is the iris (T@5542 11/13), which lies behind the cornea.'},
+  {t:'Layer of blood vessels lining the inside of the eyeball beneath the retina', correct:false, why:'That is the choroid (T@6717 11/13).'}],
+ teach:'Cornea: clear, extension of the sclera, protects the iris and lens (slide 4; T@5771, T@6300 11/13).',
+ cite:'Lectures 9–10 (Smith_Eye_Glaucoma_AllergicConj_DryEye.pdf) slide 4; T@5771, T@6300 11/13'},
+
+{id:'EA-004', skill:'patho', prof:'Smith', tier:'new', topic:'ey-anat', sub:'struct', concept:'ey-struct-vitreous',
+ tags:['structure'], source:'both',
+ stem:'Which description fits the vitreous humor?',
+ options:[
+  {t:'Thin liquid made by the ciliary body that fills the front chamber', correct:false, why:'That is aqueous humor: the front part of the eye is filled with a different, less gelatinous liquid made by the ciliary body (T@7915 11/13; slide 14).'},
+  {t:'Mixture of mucins that forms the posterior layer of tears', correct:false, why:'That is the posterior tear layer made by conjunctival goblet cells (slide 6).'},
+  {t:'Gelatinous liquid filling the back chamber of the eye', correct:true, why:'Slide 4 labels the vitreous chamber (posterior cavity); T@7915 11/13: the back chamber holds a gelatinous liquid, the vitreous.'},
+  {t:'Watery fluid made by the main lacrimal gland', correct:false, why:'That is the aqueous layer of tears (slide 6), not a fluid inside the eyeball.'}],
+ teach:'Back chamber: gelatinous vitreous. Front chamber: aqueous humor (slide 4; T@7915 11/13).',
+ cite:'Lectures 9–10 (Smith_Eye_Glaucoma_AllergicConj_DryEye.pdf) slides 4, 6; T@7915 11/13'},
+
+{id:'EA-005', skill:'patho', prof:'Smith', tier:'new', topic:'ey-anat', sub:'struct', concept:'ey-struct-retina-optic',
+ tags:['two-facts', 'structure'], source:'both',
+ stem:'Which pairing correctly names where light is sensed and where those signals leave the eye?',
+ options:[
+  {t:'Rods and cones in the choroid; nerves bundle into the optic nerve', correct:false, why:'The choroid is the vascular lining that supplies the retina (T@6717 11/13); the rods and cones are in the retina.'},
+  {t:'Rods and cones in the retina; nerves bundle into the ciliary body', correct:false, why:'Their nerves become the optic nerve (slide 4); the ciliary body is the muscular ring that makes aqueous humor.'},
+  {t:'Rods and cones in the sclera; nerves bundle into the optic nerve', correct:false, why:'The sclera is the firm white outer coat (slide 4), not the light-sensing layer.'},
+  {t:'Rods and cones in the retina; nerves bundle into the optic nerve', correct:true, why:'T@5298 11/13: rods and cones are the light-sensing receptors at the back of the eye in the retina, and their nerves bundle into the optic nerve, which sends the image to the brain. Slide 4 labels both.'}],
+ teach:'Retina: rods and cones. Optic nerve: carries the image to the brain (slide 4; T@5298 11/13).',
+ cite:'Lectures 9–10 (Smith_Eye_Glaucoma_AllergicConj_DryEye.pdf) slide 4; T@5298 11/13'},
+
+{id:'EA-006', skill:'patho', prof:'Smith', tier:'new', topic:'ey-anat', sub:'struct', concept:'ey-struct-lens-ligament',
+ tags:['structure'], source:'both',
+ stem:'How is the lens held in position in the eye?',
+ options:[
+  {t:'Suspensory ligaments attach it to the ciliary body', correct:true, why:'Slide 4 labels the zonular fibers of the suspensory ligament; T@7479 11/13: ligaments connect the ciliary body to the lens and hold it in place.'},
+  {t:'The iris grips the outer edge of the lens to hold it', correct:false, why:'The iris is a ring in front of the lens that sets pupil size (T@5542 11/13); the ligaments from the ciliary body hold the lens.'},
+  {t:'The sclera forms a firm socket around the lens that holds it', correct:false, why:'The sclera is the white outer coat of the whole eyeball (slide 4); it does not hold the lens.'},
+  {t:'The trabecular meshwork anchors it to the cornea', correct:false, why:'The trabecular meshwork is the spongy drainage tissue around Schlemm\'s canal (slide 15), not a lens attachment.'}],
+ teach:'The ciliary body and lens are joined by suspensory ligaments (slide 4; T@7479 11/13).',
+ cite:'Lectures 9–10 (Smith_Eye_Glaucoma_AllergicConj_DryEye.pdf) slide 4; T@7479 11/13'},
+
+{id:'EA-007', skill:'patho', prof:'Smith', tier:'new', topic:'ey-anat', sub:'lacr', concept:'ey-lacr-path',
+ tags:['order', 'structure'], source:'both',
+ stem:'After a blink, in which order do the tears that bathed the eye leave through the drainage system?',
+ options:[
+  {t:'Puncta, lacrimal sac, lacrimal canaliculi, nasolacrimal duct, back of the nose', correct:false, why:'The canaliculi carry tears from the puncta to the lacrimal sac (slide 5), so the sac cannot come before them.'},
+  {t:'Lacrimal canaliculi, puncta, nasolacrimal duct, lacrimal sac, back of the nose', correct:false, why:'The puncta are the openings where drainage begins (T@10329 11/13), and the sac comes before the nasolacrimal duct.'},
+  {t:'Puncta, lacrimal canaliculi, lacrimal sac, nasolacrimal duct, back of the nose', correct:true, why:'Slide 5 labels the puncta, canaliculi, sac and nasolacrimal duct; T@10329 and T@11300 11/13: tears are pushed into the puncta, flow into the lacrimal sac and the nasolacrimal duct, and empty into the back of the nose.'},
+  {t:'Puncta, lacrimal canaliculi, nasolacrimal duct, lacrimal sac, back of the nose', correct:false, why:'The tears reach the lacrimal sac first and then the nasolacrimal duct (slide 5; T@11300 11/13).'}],
+ teach:'Drainage: puncta, canaliculi, lacrimal sac, nasolacrimal duct, back of the nose (slide 5).',
+ cite:'Lectures 9–10 (Smith_Eye_Glaucoma_AllergicConj_DryEye.pdf) slide 5; T@10329, T@11300 11/13'},
+
+{id:'EA-008', skill:'pk', prof:'Smith', tier:'new', topic:'ey-anat', sub:'lacr', concept:'ey-lacr-systemic',
+ tags:['case', 'two-facts'], source:'both',
+ stem:'After dilating drops are placed in a patient\'s eyes, she feels light-headed and "strange" even before her vision changes. Which explanation fits?',
+ options:[
+  {t:'Drops pass back through the optic nerve and reach the brain directly', correct:false, why:'Nothing in the lecture carries drug along the optic nerve; the route given is drainage through the puncta and nasolacrimal duct to the nose (slide 5; T@15237 11/13).'},
+  {t:'Drops drain through the nasolacrimal duct to the vascular nasal mucosa and are absorbed', correct:true, why:'T@15237 11/13: tears drain through the nasolacrimal system, the nasal mucous membranes are highly vascularized, so drops put in the eye are likely absorbed systemically. Slide 5 shows the duct.'},
+  {t:'Drops enter the vitreous chamber and are carried away by the choroid blood vessels', correct:false, why:'The route given is tear drainage to the nasal mucosa (T@15237 11/13), not diffusion into the vitreous.'},
+  {t:'Drops are taken up by the meibomian glands and released into the blood', correct:false, why:'Meibomian glands make the lipid tear layer (slide 6); they are not the absorption route described.'}],
+ teach:'Tears drain through the nasolacrimal duct; the vascular nasal mucosa absorbs the drug, so topical eye drops can act systemically (T@15237 11/13).',
+ cite:'Lectures 9–10 (Smith_Eye_Glaucoma_AllergicConj_DryEye.pdf) slide 5; T@15237 11/13'},
+
+{id:'EA-009', skill:'counsel', prof:'Smith', tier:'new', topic:'ey-anat', sub:'lacr', concept:'ey-lacr-compress',
+ tags:['counseling'], source:'both',
+ stem:'Which instruction after instilling an eye drop reduces the amount of drug that reaches the bloodstream?',
+ options:[
+  {t:'Gently press on the inner corner of the eyelid next to the nose', correct:true, why:'Slide 5: compress the inner eyelid corner to reduce systemic absorption; T@16025 11/13: pushing there stops the medication draining into the duct.'},
+  {t:'Blink several times after the drop so that it spreads across the eye', correct:false, why:'T@10329 11/13: blinking pushes tears into the puncta and toward the drainage duct, which increases drainage rather than preventing it.'},
+  {t:'Gently press on the outer corner of the eye below the eyebrow', correct:false, why:'T@9792 11/13: the gland area is at the outer upper part of the eye; the drainage puncta are at the inner corner (slide 5), which is where pressure is applied.'},
+  {t:'Gently press on the tip of the nose for a few seconds after the drop', correct:false, why:'The compression point is the eyelid corner over the puncta (slide 5; T@16025 11/13), not the nose.'}],
+ teach:'Counseling point: compress the inner corner of the eyelid after eye drops to limit systemic absorption (slide 5; T@16025 11/13).',
+ cite:'Lectures 9–10 (Smith_Eye_Glaucoma_AllergicConj_DryEye.pdf) slide 5; T@16025 11/13'},
+
+{id:'EA-010', skill:'case', prof:'Smith', tier:'new', topic:'ey-anat', sub:'lacr', concept:'ey-lacr-stuffy',
+ tags:['case'], source:'transcript',
+ stem:'A patient notices her nose becomes congested and runs when she cries. Which anatomy explains it?',
+ options:[
+  {t:'Tears pass from the lacrimal gland ducts into the sinuses', correct:false, why:'The gland ducts release tears under the upper eyelid (T@9792 11/13); drainage is via the puncta to the nasolacrimal duct (slide 5).'},
+  {t:'Tears flow from the conjunctiva into Schlemm\'s canal and then into nasal veins', correct:false, why:'Schlemm\'s canal drains aqueous humor from the anterior chamber (slide 14), not tears.'},
+  {t:'Tears drain through the puncta and nasolacrimal duct into the back of the nose', correct:true, why:'T@11473 11/13: tears flow from the lacrimal sac into the nasolacrimal duct, which empties into the back of the nose, "one of the reasons why when we cry, our noses get all stuffy".'},
+  {t:'Tears are absorbed by the meibomian glands and secreted into the nose', correct:false, why:'Meibomian glands make the lipid layer at the eyelid margin (slide 6).'}],
+ teach:'Nasolacrimal duct empties into the back of the nose (slide 5; T@11473 11/13).',
+ cite:'Lectures 9–10 (Smith_Eye_Glaucoma_AllergicConj_DryEye.pdf) slide 5; T@11473 11/13'},
+
+{id:'EA-011', skill:'patho', prof:'Smith', tier:'new', topic:'ey-anat', sub:'tears', concept:'ey-tears-meibomian',
+ tags:['case'], source:'both',
+ stem:'Blockage of the meibomian glands along the eyelid margin would reduce which part of the tear film?',
+ options:[
+  {t:'The middle aqueous layer', correct:false, why:'Slide 6: the aqueous layer comes from the main and accessory lacrimal glands.'},
+  {t:'The anterior lipid layer', correct:true, why:'Slide 6: the anterior layer is composed primarily of lipids, produced by the meibomian glands at the eyelid margin (T@12547 11/13).'},
+  {t:'The posterior mucin layer', correct:false, why:'Slide 6: mucins come from goblet cells in the conjunctiva.'},
+  {t:'The aqueous output of the accessory lacrimal glands in the conjunctiva', correct:false, why:'Slide 6: the accessory lacrimal glands contribute to the aqueous layer, not the lipid layer.'}],
+ teach:'Anterior lipid layer: meibomian glands (slide 6).',
+ cite:'Lectures 9–10 (Smith_Eye_Glaucoma_AllergicConj_DryEye.pdf) slide 6; T@12547 11/13'},
+
+{id:'EA-012', skill:'patho', prof:'Smith', tier:'new', topic:'ey-anat', sub:'tears', concept:'ey-tears-layer-source',
+ tags:['two-facts'], source:'both',
+ stem:'Which tear layer do the meibomian glands produce, and what is it composed of?',
+ options:[
+  {t:'The middle layer, composed primarily of aqueous fluid', correct:false, why:'Slide 6: the middle aqueous layer comes from the main and accessory lacrimal glands.'},
+  {t:'The posterior layer, composed primarily of mucins', correct:false, why:'Slide 6: the posterior layer of mucins comes from conjunctival goblet cells.'},
+  {t:'The anterior layer, composed primarily of mucins', correct:false, why:'Slide 6: the anterior layer is lipid; mucins form the posterior layer.'},
+  {t:'The anterior layer, composed primarily of lipids', correct:true, why:'Slide 6 and T@12547 11/13: the anterior layer is composed primarily of lipids, produced by the meibomian glands at the eyelid margin.'}],
+ teach:'Lipid: meibomian glands. Aqueous: main and accessory lacrimal glands. Mucin: goblet cells (slide 6).',
+ cite:'Lectures 9–10 (Smith_Eye_Glaucoma_AllergicConj_DryEye.pdf) slide 6; T@12547 11/13'},
+
+{id:'EA-013', skill:'patho', prof:'Smith', tier:'new', topic:'ey-anat', sub:'tears', concept:'ey-tears-aqueous-98',
+ tags:['two-facts'], source:'both',
+ stem:'Which layer makes up about 98% of the tear film, and what produces it?',
+ options:[
+  {t:'Lipid layer, produced by the meibomian glands along the eyelid margin', correct:false, why:'Slide 6: the lipid layer is the anterior layer; the aqueous layer is the 98%.'},
+  {t:'Mucin layer, produced by goblet cells in the conjunctiva', correct:false, why:'Slide 6: the mucin layer is the posterior layer; the aqueous layer is the 98%.'},
+  {t:'Aqueous layer, produced by the main and accessory lacrimal glands', correct:true, why:'Slide 6: the middle aqueous layer, from the main lacrimal gland and accessory glands in the conjunctiva, is about 98% of the tear film; T@12921 11/13: the largest component.'},
+  {t:'Aqueous layer, produced by the meibomian glands along the eyelid margin', correct:false, why:'Slide 6: the aqueous layer is made by the lacrimal glands; meibomian glands make lipid.'}],
+ teach:'Aqueous layer: about 98% of tears, from the lacrimal glands (slide 6).',
+ cite:'Lectures 9–10 (Smith_Eye_Glaucoma_AllergicConj_DryEye.pdf) slide 6; T@12921 11/13'},
+
+{id:'EA-014', skill:'patho', prof:'Smith', tier:'new', topic:'ey-anat', sub:'tears', concept:'ey-tears-goblet',
+ tags:['case'], source:'both',
+ stem:'A patient has too few conjunctival goblet cells. Which component of the tear film is reduced?',
+ options:[
+  {t:'Mucins of the posterior layer', correct:true, why:'Slide 6 and T@13228 11/13: the posterior layer is a mixture of mucins produced by goblet cells in the conjunctiva.'},
+  {t:'Lipids of the anterior layer', correct:false, why:'Slide 6: lipids come from the meibomian glands.'},
+  {t:'Water of the aqueous layer', correct:false, why:'Slide 6: the aqueous layer comes from the lacrimal glands.'},
+  {t:'Water supplied by the accessory lacrimal glands', correct:false, why:'Slide 6: the accessory lacrimal glands contribute to the aqueous layer, not the mucins.'}],
+ teach:'Goblet cells make the mucin layer that lies against the conjunctiva and cornea (slide 6).',
+ cite:'Lectures 9–10 (Smith_Eye_Glaucoma_AllergicConj_DryEye.pdf) slide 6; T@13228 11/13'},
+
+{id:'EA-015', skill:'patho', prof:'Smith', tier:'new', topic:'ey-anat', sub:'tears', concept:'ey-tears-contents', multi:true,
+ tags:['list'], source:'both',
+ stem:'Tears coat the conjunctiva and cornea. Which of these do tears also contain to support and protect the cornea? Select all that apply.',
+ options:[
+  {t:'Aqueous humor from the ciliary body', correct:false, why:'Aqueous humor is made by the ciliary body and stays inside the eye in the anterior chamber (slide 14); it is not part of the tear film.'},
+  {t:'Enzymes', correct:true, why:'Slide 6 and T@13821 11/13.'},
+  {t:'Immunoglobulins', correct:true, why:'Slide 6 and T@13821 11/13: they help fight infection.'},
+  {t:'Nutrients', correct:true, why:'Slide 6: tears contain nutrients, enzymes and immunoglobulins to support and protect the cornea.'}],
+ teach:'Tears: nutrients, enzymes and immunoglobulins support the cornea (slide 6).',
+ cite:'Lectures 9–10 (Smith_Eye_Glaucoma_AllergicConj_DryEye.pdf) slide 6; T@13821 11/13'},
+
+{id:'EA-016', skill:'mech', prof:'Smith', tier:'new', topic:'ey-anat', sub:'auto', concept:'ey-auto-dilate',
+ tags:['receptor'], source:'slide',
+ stem:'Stimulation of which receptor on which muscle dilates the pupil?',
+ options:[
+  {t:'Muscarinic receptors on the dilator muscle', correct:false, why:'Slide 7: muscarinic stimulation acts on the pupillary sphincter muscles and constricts the pupil.'},
+  {t:'Alpha 1 receptors on the dilator muscle', correct:true, why:'Slide 7: adrenergic stimulation of alpha 1 receptors on the dilator muscle causes the pupil to dilate.'},
+  {t:'Beta 2 receptors on the pupillary sphincter muscle', correct:false, why:'Slide 7 gives the sphincter a muscarinic action (constriction), not a beta 2 dilating action.'},
+  {t:'Alpha 1 receptors on the pupillary sphincter muscle', correct:false, why:'Slide 7: alpha 1 receptors on the dilator muscle dilate; the sphincter responds to muscarinic stimulation by constricting.'}],
+ teach:'Slide 7: dilator muscle with alpha 1 gives mydriasis; pupillary sphincter with muscarinic receptors gives constriction.',
+ cite:'Lectures 9–10 (Smith_Eye_Glaucoma_AllergicConj_DryEye.pdf) slide 7'},
+
+{id:'EA-017', skill:'mech', prof:'Smith', tier:'new', topic:'ey-anat', sub:'auto', concept:'ey-auto-cholinergic',
+ tags:['two-facts'], source:'slide',
+ stem:'A cholinergic agonist is placed in the eye. Which pair of effects results?',
+ options:[
+  {t:'The pupil dilates and the ciliary muscle contracts, increasing accommodation', correct:false, why:'Slide 7: the pupil dilates with adrenergic alpha 1 stimulation, not cholinergic stimulation.'},
+  {t:'The pupil constricts and the ciliary muscle contracts, increasing accommodation', correct:true, why:'Slide 7: cholinergic stimulation of muscarinic receptors constricts the pupil (sphincter) and contracts the ciliary body, increasing accommodation.'},
+  {t:'The pupil constricts and the ciliary muscle relaxes, allowing far vision', correct:false, why:'Slide 7: ciliary muscle relaxation for far vision is the adrenergic effect.'},
+  {t:'The pupil dilates and the ciliary muscle relaxes, allowing far vision', correct:false, why:'Slide 7: both of these are adrenergic effects, not cholinergic ones.'}],
+ teach:'Cholinergic: constricts the pupil, contracts the ciliary muscle (accommodation). Adrenergic: dilates the pupil, relaxes the ciliary muscle (slide 7).',
+ cite:'Lectures 9–10 (Smith_Eye_Glaucoma_AllergicConj_DryEye.pdf) slide 7'},
+
+{id:'EA-018', skill:'mech', prof:'Smith', tier:'new', topic:'ey-anat', sub:'auto', concept:'ey-auto-adrenergic-cb',
+ tags:['two-facts', 'inflow'], source:'slide',
+ stem:'Which pair describes the effect of adrenergic stimulation on the ciliary body?',
+ options:[
+  {t:'The ciliary muscle contracts, increasing accommodation, and aqueous humor is produced', correct:false, why:'Slide 7: contraction and accommodation are the cholinergic effect; the adrenergic effect is relaxation.'},
+  {t:'The ciliary muscle relaxes, allowing far vision, and aqueous humor production is reduced', correct:false, why:'Slide 7 states that adrenergic stimulation produces aqueous humor.'},
+  {t:'The ciliary muscle contracts, increasing accommodation, and aqueous humor drainage increases', correct:false, why:'Slide 7 assigns contraction to cholinergic stimulation and lists aqueous humor production, not drainage, for adrenergic stimulation of the ciliary body.'},
+  {t:'The ciliary muscle relaxes, allowing far vision, and aqueous humor is produced', correct:true, why:'Slide 7: adrenergic stimulation causes ciliary muscle to relax, allowing for far vision, and produces aqueous humor.'}],
+ teach:'Adrenergic stimulation of the ciliary body relaxes the muscle and produces aqueous humor (slide 7).',
+ cite:'Lectures 9–10 (Smith_Eye_Glaucoma_AllergicConj_DryEye.pdf) slide 7'},
+
+{id:'EA-019', skill:'mech', prof:'Smith', tier:'new', topic:'ey-anat', sub:'auto', concept:'ey-auto-muscarinic-list', multi:true,
+ tags:['list'], source:'slide',
+ stem:'Which effects follow muscarinic (cholinergic) stimulation in the eye? Select all that apply.',
+ options:[
+  {t:'The ciliary muscle relaxes, allowing far vision', correct:false, why:'Slide 7: this is the adrenergic effect.'},
+  {t:'The ciliary body contracts, increasing accommodation', correct:true, why:'Slide 7: muscarinic stimulation contracts the ciliary body, increasing accommodation.'},
+  {t:'The pupil dilates', correct:false, why:'Slide 7: pupil dilation is adrenergic, through alpha 1 receptors on the dilator muscle.'},
+  {t:'The pupil constricts', correct:true, why:'Slide 7: muscarinic stimulation of the pupillary sphincter muscles constricts the pupil.'}],
+ teach:'Slide 7: muscarinic receptors constrict the pupil and contract the ciliary body.',
+ cite:'Lectures 9–10 (Smith_Eye_Glaucoma_AllergicConj_DryEye.pdf) slide 7'},
+
+{id:'EA-020', skill:'mech', prof:'Smith', tier:'new', topic:'ey-anat', sub:'auto', concept:'ey-auto-accommodation',
+ tags:['receptor'], source:'slide',
+ stem:'Near-vision accommodation results from contraction of the ciliary body. Which receptor stimulation causes it?',
+ options:[
+  {t:'Alpha 1 receptors', correct:false, why:'Slide 7: alpha 1 receptors are on the dilator muscle and dilate the pupil.'},
+  {t:'Beta 2 receptors', correct:false, why:'Slide 7: adrenergic stimulation relaxes the ciliary muscle, allowing far vision.'},
+  {t:'Muscarinic receptors', correct:true, why:'Slide 7: cholinergic stimulation of muscarinic receptors causes a contraction of the ciliary body, leading to increased accommodation.'},
+  {t:'Alpha 2 receptors', correct:false, why:'Slide 7 lists adrenergic stimulation as relaxing the ciliary muscle; accommodation is the muscarinic effect.'}],
+ teach:'Muscarinic stimulation contracts the ciliary body (accommodation); adrenergic stimulation relaxes it (slide 7).',
+ cite:'Lectures 9–10 (Smith_Eye_Glaucoma_AllergicConj_DryEye.pdf) slide 7'},
+
+{id:'EA-021', skill:'patho', prof:'Smith', tier:'new', topic:'ey-glpath', sub:'types', concept:'ey-pacg-case',
+ tags:['case', 'mechanism'], source:'both',
+ stem:'A man is struck in the eye. Within hours he has stabbing eye pain, the eye is swollen and his intraocular pressure rises very quickly. Which condition and mechanism fit?',
+ options:[
+  {t:'Primary open angle glaucoma; the angle is open but the meshwork drains slowly', correct:false, why:'Slide 13: POAG has gradual onset and no symptoms until visual field loss, not sudden pain.'},
+  {t:'Primary open angle glaucoma; the ciliary body makes too little aqueous humor', correct:false, why:'Slide 13: POAG is a drainage problem, and it is gradual and asymptomatic.'},
+  {t:'Primary angle closure glaucoma; the nasolacrimal duct that drains tears is blocked', correct:false, why:'Slide 14: the blockage is at the angle where aqueous humor leaves the anterior chamber; the nasolacrimal duct drains tears (slide 5).'},
+  {t:'Primary angle closure glaucoma; the angle is blocked so aqueous humor cannot drain', correct:true, why:'Slide 13: PACG is a medical emergency with significant pain and rapidly rising IOP; slide 14 panel C: forward bowing of the iris blocks trabecular meshwork drainage. T@23809 and T@28821 11/13: a blow to the eye and the swelling that follows can block the angle.'}],
+ teach:'PACG: blocked angle, rapid pressure rise, pain, emergency (slides 13-14; T@23470 11/13).',
+ cite:'Lectures 9–10 (Smith_Eye_Glaucoma_AllergicConj_DryEye.pdf) slides 13, 14; T@23470, T@23809 11/13'},
+
+{id:'EA-022', skill:'patho', prof:'Smith', tier:'new', topic:'ey-glpath', sub:'types', concept:'ey-poag-asymptomatic',
+ tags:['case'], source:'both',
+ stem:'A 62-year-old has no eye symptoms, but at her yearly exam the intraocular pressure is higher than her baseline and has been climbing from year to year. Which condition fits best?',
+ options:[
+  {t:'Primary open angle glaucoma, which is gradual and symptom-free until visual field loss', correct:true, why:'Slide 13: POAG is common in the United States with gradual onset, asymptomatic until visual field loss; T@21116 and T@22192 11/13: only yearly pressure checks reveal it.'},
+  {t:'Primary angle closure glaucoma, which is a gradual painless condition', correct:false, why:'Slide 13: PACG is a medical emergency with significant pain.'},
+  {t:'Dry eye, which raises the pressure as tear production falls', correct:false, why:'Dry eye is a tear-film disorder (slide 6), not a pressure disorder.'},
+  {t:'Primary angle closure glaucoma, which usually shows no symptoms until visual field loss', correct:false, why:'Slide 13 describes that time course for POAG; PACG is painful and an emergency.'}],
+ teach:'POAG: asymptomatic, found by pressure checks; this is why yearly eye exams matter (slide 13; T@21116 11/13).',
+ cite:'Lectures 9–10 (Smith_Eye_Glaucoma_AllergicConj_DryEye.pdf) slide 13; T@21116, T@22192 11/13'},
+
+{id:'EA-023', skill:'patho', prof:'Smith', tier:'new', topic:'ey-glpath', sub:'types', concept:'ey-tonometry',
+ tags:['measurement'], source:'transcript',
+ stem:'At an eye exam the pressure is measured with an air puff or a small filament that touches the cornea. What pressure does this reflect?',
+ options:[
+  {t:'Pressure in the vitreous chamber behind the lens', correct:false, why:'T@27865 11/13: the eye doctor measures the anterior chamber pressure through the cornea.'},
+  {t:'Pressure of tear flow through the nasolacrimal duct', correct:false, why:'The tonometer measures intraocular pressure, which is aqueous humor pressure in the anterior chamber, not tear drainage (slide 5).'},
+  {t:'Pressure in the anterior chamber', correct:true, why:'T@27865 11/13: "they\'re measuring the pressure in your anterior chamber. They\'re just touching the cornea here."'},
+  {t:'Pressure in the blood vessels of the choroid', correct:false, why:'The IOP check measures the anterior chamber, the fluid that glaucoma therapy aims to lower (slide 13).'}],
+ teach:'The IOP check touches the cornea and reflects anterior chamber pressure (T@27865 11/13).',
+ cite:'Lectures 9–10 (Smith_Eye_Glaucoma_AllergicConj_DryEye.pdf) slide 13; T@27865 11/13'},
+
+{id:'EA-024', skill:'patho', prof:'Smith', tier:'new', topic:'ey-glpath', sub:'types', concept:'ey-type-cause-pair',
+ tags:['two-facts'], source:'both',
+ stem:'Which type of glaucoma is more closely connected with the shape of the eye and how it sits in the socket, and what happens at the angle?',
+ options:[
+  {t:'Primary angle closure; the angle stays open but drains poorly', correct:false, why:'Slide 14 panel B: an open angle with trabecular meshwork dysfunction is primary open angle glaucoma.'},
+  {t:'Primary angle closure; the angle is blocked', correct:true, why:'Slide 13: PACG is more closely connected with the shape of the eye and how it sits in the eye socket (T@20439 11/13); slide 14 panel C: forward bowing of the iris blocks drainage.'},
+  {t:'Primary open angle; the angle is blocked', correct:false, why:'Slide 13: POAG is related to the drainage systems not working effectively (T@20586 11/13); a blocked angle is PACG.'},
+  {t:'Primary open angle; the angle stays open but the ciliary body overproduces', correct:false, why:'Slide 13: POAG is a drainage problem, "how the liquid in the eye is not draining out" (T@20586 11/13).'}],
+ teach:'PACG: eye shape, closed angle. POAG: drainage not working effectively through an open angle (slide 13).',
+ cite:'Lectures 9–10 (Smith_Eye_Glaucoma_AllergicConj_DryEye.pdf) slide 13; T@20439, T@20586 11/13'},
+
+{id:'EA-025', skill:'patho', prof:'Smith', tier:'new', topic:'ey-glpath', sub:'types', concept:'ey-open-meaning',
+ tags:['two-facts'], source:'both',
+ stem:'In primary open angle glaucoma, what does "open angle" mean?',
+ options:[
+  {t:'The drainage angle is not closed, but outflow through it is reduced', correct:true, why:'T@23216 11/13: "It\'s still open, but there\'s some aspect of your eye ... that the flow is not as good as it used to be." Slide 14 panel B: trabecular meshwork dysfunction with open angle.'},
+  {t:'The pupil stays open wide, which lets too much aqueous humor into the anterior chamber', correct:false, why:'Open angle refers to the drainage angle, not the pupil (T@23216 11/13).'},
+  {t:'The angle is closed by the iris, which stops aqueous humor from leaving', correct:false, why:'That describes primary angle closure (slide 14 panel C).'},
+  {t:'The lens has moved forward, which opens a second path for aqueous humor to drain', correct:false, why:'Not stated; the angle is the region where aqueous humor leaves the anterior chamber (slide 14; T@26399 11/13).'}],
+ teach:'Open angle glaucoma: the angle stays open but drainage through the meshwork is poor (slide 14).',
+ cite:'Lectures 9–10 (Smith_Eye_Glaucoma_AllergicConj_DryEye.pdf) slides 13, 14; T@23216 11/13'},
+
+{id:'EA-026', skill:'patho', prof:'Smith', tier:'new', topic:'ey-glpath', sub:'types', concept:'ey-goal-both',
+ tags:['goal'], source:'both',
+ stem:'What is the goal of treatment in both open angle and closed angle glaucoma?',
+ options:[
+  {t:'Lower intraocular pressure in open angle glaucoma and leave closed angle glaucoma untreated for pressure', correct:false, why:'Slide 13: for PACG, IOP must be decreased quickly; the goal applies to both types.'},
+  {t:'Reverse the visual field loss that has already occurred by regrowing the optic nerve', correct:false, why:'Slide 13 states the goal as delaying or preventing progression, not reversing damage.'},
+  {t:'Lower intraocular pressure to delay or prevent optic nerve damage', correct:true, why:'Slide 13: the goal of treatment is to decrease IOP, delaying or preventing disease progression; T@24168 11/13: it prevents the nerve damage.'},
+  {t:'Raise aqueous humor production so that the angle stays open', correct:false, why:'Slide 13: treatment decreases IOP; more production would raise the pressure (slide 14).'}],
+ teach:'Treatment goal in glaucoma: decrease IOP to delay or prevent optic nerve damage (slide 13).',
+ cite:'Lectures 9–10 (Smith_Eye_Glaucoma_AllergicConj_DryEye.pdf) slide 13; T@24168 11/13'},
+
+{id:'EA-027', skill:'patho', prof:'Smith', tier:'new', topic:'ey-glpath', sub:'types', concept:'ey-pacg-laser',
+ tags:['transcript-only'], source:'transcript',
+ stem:'To treat primary angle closure caused by a blocked angle, a laser is described that creates a hole. What does the opening accomplish?',
+ options:[
+  {t:'It stops the ciliary body from producing aqueous humor in the posterior chamber', correct:false, why:'The problem described is blocked outflow at the angle, not production (slide 14 panel C; T@29240 11/13).'},
+  {t:'It reopens a path for aqueous humor to leave the anterior chamber', correct:true, why:'T@29240 11/13: "they\'ll go in with a laser and drill a hole ... and open up that angle that\'s closed." Closed angle is blocked drainage (slide 14 panel C).'},
+  {t:'It lets vitreous humor drain out of the back chamber through the sclera', correct:false, why:'Aqueous humor drains from the anterior chamber at the angle; the vitreous is the gelatinous liquid of the back chamber (slide 4).'},
+  {t:'It widens the puncta so that tears drain into the nose faster', correct:false, why:'The puncta and nasolacrimal duct drain tears (slide 5); the laser opening is at the closed angle.'}],
+ teach:'The laser hole reopens the closed angle so aqueous humor can drain (T@29240 11/13).',
+ cite:'Lectures 9–10 (Smith_Eye_Glaucoma_AllergicConj_DryEye.pdf) slides 13, 14; T@29240 11/13'},
+
+{id:'EA-028', skill:'patho', prof:'Smith', tier:'new', topic:'ey-glpath', sub:'types', concept:'ey-pacg-vs-poag-pain',
+ tags:['two-facts', 'mechanism'], source:'both',
+ stem:'Why does primary angle closure glaucoma cause pain quickly while primary open angle glaucoma usually does not?',
+ options:[
+  {t:'Closed angle glaucoma makes more aqueous humor than open angle glaucoma, so pressure rises faster', correct:false, why:'Slide 13 and slide 14: the difference is blocked drainage at the angle, not greater production.'},
+  {t:'Open angle glaucoma raises the pressure in the vitreous chamber, which cannot cause pain', correct:false, why:'Both types raise IOP; the lecture explains the difference by speed of the rise and the blocked angle (slide 13).'},
+  {t:'Closed angle glaucoma blocks the nasolacrimal duct, so tears build up in the eye', correct:false, why:'The blockage is at the angle for aqueous humor drainage (slide 14), not in the tear drainage system.'},
+  {t:'Closing the angle blocks drainage abruptly, so pressure rises very quickly', correct:true, why:'Slide 13: PACG has significant pain and a rapid need to lower IOP; POAG is gradual and asymptomatic. T@28700 11/13: with closed angle the pressure elevates very, very quickly.'}],
+ teach:'Closed angle: abrupt drainage block, fast pressure rise, pain. Open angle: slow decline in outflow, no symptoms (slide 13).',
+ cite:'Lectures 9–10 (Smith_Eye_Glaucoma_AllergicConj_DryEye.pdf) slides 13, 14; T@28700 11/13'},
+
+{id:'EA-029', skill:'patho', prof:'Smith', tier:'new', topic:'ey-glpath', sub:'types', concept:'ey-pacg-list', multi:true,
+ tags:['list'], source:'both',
+ stem:'Which findings fit primary angle closure glaucoma? Select all that apply.',
+ options:[
+  {t:'IOP must be decreased quickly', correct:true, why:'Slide 13: "Must quickly decrease IOP."'},
+  {t:'It is related to the shape of the eye and how it sits in the socket', correct:true, why:'Slide 13: PACG is more closely connected with the shape of the eye and how it sits in the eye socket (T@20439 11/13).'},
+  {t:'Onset is gradual and asymptomatic until visual field loss', correct:false, why:'Slide 13: that is POAG; PACG has significant pain.'},
+  {t:'It is a medical emergency', correct:true, why:'Slide 13: PACG is a medical emergency.'}],
+ teach:'Slide 13: PACG is an emergency with significant pain, and IOP must be lowered quickly.',
+ cite:'Lectures 9–10 (Smith_Eye_Glaucoma_AllergicConj_DryEye.pdf) slide 13; T@23470 11/13'},
+
+{id:'EA-030', skill:'patho', prof:'Smith', tier:'new', topic:'ey-glpath', sub:'flow', concept:'ey-angle-def',
+ tags:['definition'], source:'both',
+ stem:'In glaucoma discussions, what is "the angle"?',
+ options:[
+  {t:'The region near the front of the eye where aqueous humor leaves the anterior chamber', correct:true, why:'T@26399 11/13: "This is the angle that we\'re talking about here. And this aqueous humor liquid drains out of that anterior chamber." Slide 14 marks the angle.'},
+  {t:'The opening between the lens and the iris that aqueous humor passes through on its way out of the pupil', correct:false, why:'Slide 14 and T@25697 11/13: that opening leads from the posterior chamber to the anterior chamber; the angle is where fluid leaves the anterior chamber.'},
+  {t:'The junction where the suspensory ligaments attach to the ciliary body', correct:false, why:'Slide 4: the ligaments hold the lens to the ciliary body; they are not the drainage region.'},
+  {t:'The bend of the nasolacrimal duct behind the nose', correct:false, why:'Slide 5: the nasolacrimal duct is part of tear drainage, not aqueous humor drainage.'}],
+ teach:'The angle is where the aqueous humor drains out of the anterior chamber (slide 14).',
+ cite:'Lectures 9–10 (Smith_Eye_Glaucoma_AllergicConj_DryEye.pdf) slide 14; T@26399 11/13'},
+
+{id:'EA-031', skill:'patho', prof:'Smith', tier:'new', topic:'ey-glpath', sub:'flow', concept:'ey-aqueous-path',
+ tags:['order', 'flow'], source:'both',
+ stem:'Which sequence describes the path of aqueous humor from where it is made until it reaches the drainage angle?',
+ options:[
+  {t:'Ciliary body, anterior chamber, through the pupil, posterior chamber, angle', correct:false, why:'The aqueous humor enters the posterior chamber first, then goes through the pupil to the anterior chamber (slide 14).'},
+  {t:'Ciliary body, vitreous chamber, through the pupil, anterior chamber, angle', correct:false, why:'The vitreous chamber is the gelatinous back chamber (slide 4) and is not on the aqueous flow path (slide 14).'},
+  {t:'Angle, anterior chamber, through the pupil, posterior chamber, ciliary body', correct:false, why:'This reverses the flow; the ciliary body is the source and the angle is the exit (slide 14).'},
+  {t:'Ciliary body, posterior chamber, through the pupil, anterior chamber, angle', correct:true, why:'Slide 14 arrows and T@25697 11/13: made by the ciliary body, flows into the posterior chamber, through the opening between lens and iris and out of the pupil into the anterior chamber, then drains at the angle.'}],
+ teach:'Aqueous humor: ciliary body, posterior chamber, pupil, anterior chamber, then out the angle (slide 14).',
+ cite:'Lectures 9–10 (Smith_Eye_Glaucoma_AllergicConj_DryEye.pdf) slide 14; T@25697 11/13'},
+
+{id:'EA-032', skill:'patho', prof:'Smith', tier:'new', topic:'ey-glpath', sub:'flow', concept:'ey-posterior-chamber',
+ tags:['structure'], source:'transcript',
+ stem:'Aqueous humor made by the ciliary body first enters a space between the lens and the iris before it passes out through the pupil. Which space is it?',
+ options:[
+  {t:'Anterior chamber', correct:false, why:'T@25697 11/13: the anterior chamber is the space in front of the iris, which the liquid reaches after passing through the pupil.'},
+  {t:'Posterior chamber', correct:true, why:'T@25697 11/13: the liquid "goes into this chamber, this posterior chamber ... between the lens and the iris." Slide 14 and slide 15 label it.'},
+  {t:'Vitreous chamber', correct:false, why:'Slide 4: the vitreous chamber is the posterior cavity behind the lens, filled with gelatinous vitreous humor.'},
+  {t:'Schlemm\'s canal', correct:false, why:'Slide 15: Schlemm\'s canal is a drainage channel at the angle, not a chamber between lens and iris.'}],
+ teach:'Posterior chamber lies between lens and iris; the anterior chamber lies in front of the iris (slides 14-15).',
+ cite:'Lectures 9–10 (Smith_Eye_Glaucoma_AllergicConj_DryEye.pdf) slides 14, 15; T@25697 11/13'},
+
+{id:'EA-033', skill:'patho', prof:'Smith', tier:'new', topic:'ey-glpath', sub:'flow', concept:'ey-always-made',
+ tags:['reasoning'], source:'transcript',
+ stem:'Why must aqueous humor drain from the eye continuously?',
+ options:[
+  {t:'The ciliary body stops making it when the pressure rises, so drainage restarts production', correct:false, why:'T@26658 11/13: the ciliary body does not stop making it.'},
+  {t:'The ciliary body keeps making it, so pressure rises if drainage falls behind', correct:true, why:'T@26658 11/13: "this aqueous humor is always being made ... the ciliary body doesn\'t stop making it, it just keeps being made, so you have to have that aqueous humor draining out."'},
+  {t:'The vitreous humor replaces it when it drains, so drainage keeps the back chamber full', correct:false, why:'Slide 4 and T@7915 11/13: the vitreous is a separate gelatinous liquid in the back chamber; the aqueous humor is made by the ciliary body.'},
+  {t:'Blinking removes it, so it must be refilled through the angle', correct:false, why:'Blinking moves tears into the puncta (T@10329 11/13), not aqueous humor, which leaves through the angle (slide 14).'}],
+ teach:'Constant production means drainage must keep pace or IOP rises (T@26658 11/13).',
+ cite:'Lectures 9–10 (Smith_Eye_Glaucoma_AllergicConj_DryEye.pdf) slide 14; T@26658 11/13'},
+
+{id:'EA-034', skill:'patho', prof:'Smith', tier:'new', topic:'ey-glpath', sub:'flow', concept:'ey-damage-path',
+ tags:['two-facts', 'mechanism'], source:'both',
+ stem:'Which sequence explains how poor drainage ends in vision loss?',
+ options:[
+  {t:'Vitreous humor builds up in the anterior chamber, and the pressure is transferred to the ciliary body', correct:false, why:'Slide 14: the buildup is of aqueous humor in the anterior chamber, and the damage is to the optic nerve.'},
+  {t:'Aqueous humor builds up in the vitreous chamber, and the pressure is transferred forward to the cornea', correct:false, why:'T@27165 11/13: the aqueous builds up in the front and pressure is transferred backward to the optic nerve.'},
+  {t:'Tears build up in the lacrimal sac, and the pressure is transferred to the retina', correct:false, why:'Tears drain by a separate system (slide 5); glaucoma involves aqueous humor and the optic nerve (slide 13).'},
+  {t:'Aqueous humor builds up in the anterior chamber and pressure is passed back to the optic nerve', correct:true, why:'T@27165 11/13: too much pressure in the front of the eye pushes back into the vitreous chamber and damages the optic nerve. Slide 13: progressive optic nerve damage causes vision loss.'}],
+ teach:'Poor outflow raises anterior chamber pressure; the pressure is transferred back and damages the optic nerve (slide 14; T@27165 11/13).',
+ cite:'Lectures 9–10 (Smith_Eye_Glaucoma_AllergicConj_DryEye.pdf) slides 13, 14; T@27165 11/13'},
+
+{id:'EA-035', skill:'patho', prof:'Smith', tier:'new', topic:'ey-glpath', sub:'flow', concept:'ey-inflow-vs-outflow',
+ tags:['inflow', 'outflow'], source:'both',
+ stem:'Which change would lower intraocular pressure by decreasing inflow?',
+ options:[
+  {t:'Less aqueous humor made by the ciliary body', correct:true, why:'T@28180 11/13: inflow is the production of aqueous humor; outflow is its drainage. Slide 11: classify drugs as production inhibitors or outflow enhancers.'},
+  {t:'More drainage through the trabecular meshwork and Schlemm\'s canal', correct:false, why:'Slide 14 and T@28318 11/13: drainage is outflow, not inflow.'},
+  {t:'More drainage through the uveoscleral route', correct:false, why:'Slide 14: the uveoscleral route is an outflow route.'},
+  {t:'A wider path for aqueous humor out of the anterior chamber', correct:false, why:'Slide 14: removing aqueous humor from the anterior chamber is outflow.'}],
+ teach:'Inflow = production by the ciliary body; outflow = drainage (slides 11, 14).',
+ cite:'Lectures 9–10 (Smith_Eye_Glaucoma_AllergicConj_DryEye.pdf) slides 11, 14; T@28180, T@28318 11/13'},
+
+{id:'EA-036', skill:'patho', prof:'Smith', tier:'new', topic:'ey-glpath', sub:'flow', concept:'ey-main-route',
+ tags:['outflow', 'two-facts'], source:'both',
+ stem:'Through which route does most aqueous humor leave the eye, and where does it go next?',
+ options:[
+  {t:'Through the space between the uvea and sclera, emptying into blood vessels', correct:false, why:'T@30529 11/13: the uveoscleral route is the smaller route and disperses between tissue layers; it does not empty into a canal.'},
+  {t:'Through the trabecular meshwork, then dispersing between the uvea and the sclera', correct:false, why:'The meshwork route continues into Schlemm\'s canal (slide 15); dispersal between tissue layers is the uveoscleral route.'},
+  {t:'Trabecular meshwork to Schlemm\'s canal, which empties into blood vessels', correct:true, why:'Slide 14 and slide 15; T@32688 11/13: the trabecular meshwork and Schlemm\'s canal are the most important outflow route; T@32402 11/13: the canal empties into blood vessels.'},
+  {t:'Through the lacrimal sac and nasolacrimal duct into the back of the nose', correct:false, why:'That path drains tears (slide 5), not aqueous humor.'}],
+ teach:'Main route: trabecular meshwork, Schlemm\'s canal, veins. Minor route: uveoscleral (slides 14-15).',
+ cite:'Lectures 9–10 (Smith_Eye_Glaucoma_AllergicConj_DryEye.pdf) slides 14, 15; T@32688, T@32402 11/13'},
+
+{id:'EA-037', skill:'patho', prof:'Smith', tier:'new', topic:'ey-glpath', sub:'flow', concept:'ey-uveoscleral',
+ tags:['outflow'], source:'both',
+ stem:'Which description fits the uveoscleral outflow route?',
+ options:[
+  {t:'The larger route, in which aqueous humor percolates through spongy meshwork into a canal', correct:false, why:'That is the trabecular meshwork and Schlemm\'s canal route (T@32688 11/13).'},
+  {t:'The smaller route, in which aqueous humor passes through the pupil into the anterior chamber', correct:false, why:'The pupil passage carries aqueous humor from the posterior to the anterior chamber (slide 14); it is not an outflow route.'},
+  {t:'The larger route, in which aqueous humor seeps between the uvea and the sclera', correct:false, why:'The uveoscleral route is the smaller route (T@32880 11/13).'},
+  {t:'The smaller route, in which aqueous humor seeps between the uvea and the sclera', correct:true, why:'Slide 14 and slide 16; T@30529 and T@32880 11/13: a little aqueous humor dribbles between the layers of the uvea and the sclera.'}],
+ teach:'Uveoscleral outflow is the minor route: liquid seeps between uvea and sclera (T@30529, T@32880 11/13).',
+ cite:'Lectures 9–10 (Smith_Eye_Glaucoma_AllergicConj_DryEye.pdf) slides 14, 16; T@30529, T@32880 11/13'},
+
+{id:'EA-038', skill:'patho', prof:'Smith', tier:'new', topic:'ey-glpath', sub:'flow', concept:'ey-meshwork-desc',
+ tags:['structure', 'outflow'], source:'both',
+ stem:'Which description fits the trabecular meshwork?',
+ options:[
+  {t:'Spongy tissue at the opening of Schlemm\'s canal that aqueous humor percolates through', correct:true, why:'T@30027 11/13: "think of it kind of like as a sponge ... surrounding the opening of this Schlemm\'s canal." Slide 15 labels it.'},
+  {t:'A ring of smooth muscle behind the iris that surrounds the lens and makes aqueous humor', correct:false, why:'That is the ciliary body (slide 4; T@7290 11/13).'},
+  {t:'A clear extension of the sclera that covers the front of the eye and protects the lens', correct:false, why:'That is the cornea (T@6300 11/13).'},
+  {t:'Gelatinous liquid that fills the posterior cavity behind the lens of the eye', correct:false, why:'That is the vitreous humor (slide 4).'}],
+ teach:'Trabecular meshwork: sponge-like tissue at the entrance to Schlemm\'s canal (slide 15; T@30027 11/13).',
+ cite:'Lectures 9–10 (Smith_Eye_Glaucoma_AllergicConj_DryEye.pdf) slide 15; T@30027 11/13'},
+
+{id:'EA-039', skill:'patho', prof:'Smith', tier:'new', topic:'ey-glpath', sub:'flow', concept:'ey-meshwork-blocked',
+ tags:['case', 'reasoning', 'outflow'], source:'both',
+ stem:'A patient\'s trabecular meshwork drains poorly and her pressure is high, even though the uveoscleral route is open. Why does the open uveoscleral route not bring the pressure down?',
+ options:[
+  {t:'It is the main route but shares the trabecular meshwork, so it is blocked too', correct:false, why:'Slide 14 and T@32688 11/13: the uveoscleral route runs between the uvea and sclera and is the smaller route.'},
+  {t:'It empties into Schlemm\'s canal, which cannot accept more fluid', correct:false, why:'T@30529 11/13: the uveoscleral route does not go through the canal; it disperses between tissue layers.'},
+  {t:'It carries a small share of the outflow, so it cannot replace the main route', correct:true, why:'T@32688 and T@32880 11/13: the trabecular meshwork and Schlemm\'s canal are the most important route; little outflow goes through the uveoscleral route, which is harder for liquid to pass.'},
+  {t:'It leads into the nasolacrimal duct, which cannot accept aqueous humor', correct:false, why:'Aqueous humor does not enter the tear drainage system (slide 5).'}],
+ teach:'Because the uveoscleral route is minor, it cannot make up for a poorly draining meshwork (T@32688 11/13).',
+ cite:'Lectures 9–10 (Smith_Eye_Glaucoma_AllergicConj_DryEye.pdf) slides 14, 16; T@32688, T@32880 11/13'},
+
+{id:'EA-040', skill:'patho', prof:'Smith', tier:'new', topic:'ey-glpath', sub:'recep', concept:'ey-recep-alpha1',
+ tags:['receptor'], source:'both',
+ stem:'In the ciliary body, which receptor is on the blood vessels rather than on the epithelial cells?',
+ options:[
+  {t:'Beta 1 receptor', correct:false, why:'Slide 16 and T@37757 11/13: beta 1 receptors are on the epithelial cells.'},
+  {t:'Alpha 1 receptor', correct:true, why:'Slide 16 labels the alpha 1 receptor on the ciliary blood supply; T@37937 11/13: the vasculature of the ciliary body has alpha 1 receptors.'},
+  {t:'Alpha 2 receptor', correct:false, why:'Slide 16 and T@37757 11/13: alpha 2 receptors are embedded in the epithelial cells.'},
+  {t:'Beta 2 receptor', correct:false, why:'Slide 16 and T@37757 11/13: beta 2 receptors are on the epithelium (and possibly in the meshwork), not on the vessels.'}],
+ teach:'Epithelium: beta 1, beta 2, alpha 2 and carbonic anhydrase. Vessels: alpha 1 (slide 16).',
+ cite:'Lectures 9–10 (Smith_Eye_Glaucoma_AllergicConj_DryEye.pdf) slide 16; T@37757, T@37937 11/13'},
+
+{id:'EA-041', skill:'patho', prof:'Smith', tier:'new', topic:'ey-glpath', sub:'recep', concept:'ey-recep-epithelium-list', multi:true,
+ tags:['list'], source:'both',
+ stem:'Which receptors are on the epithelial cells of the ciliary body that make aqueous humor? Select all that apply.',
+ options:[
+  {t:'Alpha 2 receptors', correct:true, why:'Slide 16 and T@37757 11/13.'},
+  {t:'Beta 1 receptors', correct:true, why:'Slide 16 and T@37757 11/13.'},
+  {t:'Alpha 1 receptors', correct:false, why:'Slide 16 and T@37937 11/13: alpha 1 receptors are on the blood vessels of the ciliary body.'},
+  {t:'Beta 2 receptors', correct:true, why:'Slide 16 and T@37757 11/13.'}],
+ teach:'Ciliary epithelium: beta 1, beta 2, alpha 2 and carbonic anhydrase; alpha 1 on the vessels (slide 16).',
+ cite:'Lectures 9–10 (Smith_Eye_Glaucoma_AllergicConj_DryEye.pdf) slide 16; T@37757, T@37937 11/13'},
+
+{id:'EA-042', skill:'patho', prof:'Smith', tier:'new', topic:'ey-glpath', sub:'recep', concept:'ey-recep-m3',
+ tags:['receptor', 'outflow'], source:'both',
+ stem:'Which receptor is found in the trabecular meshwork?',
+ options:[
+  {t:'Alpha 2 receptor', correct:false, why:'Slide 16: alpha 2 receptors are on the ciliary epithelial cells.'},
+  {t:'Beta 1 receptor', correct:false, why:'Slide 16 and T@37757 11/13: beta 1 receptors are on the ciliary epithelium.'},
+  {t:'Muscarinic M3 receptor', correct:true, why:'Slide 16 labels M3 at the trabecular meshwork; T@38228 11/13: there are muscarinic receptors in the trabecular meshwork.'},
+  {t:'Alpha 1 receptor', correct:false, why:'Slide 16: alpha 1 receptors are on the ciliary blood vessels.'}],
+ teach:'M3 receptors are in the trabecular meshwork; the other receptors listed are in the ciliary body (slide 16).',
+ cite:'Lectures 9–10 (Smith_Eye_Glaucoma_AllergicConj_DryEye.pdf) slide 16; T@38228 11/13'},
+
+{id:'EA-043', skill:'mech', prof:'Smith', tier:'new', topic:'ey-glpath', sub:'recep', concept:'ey-target-outflow',
+ tags:['target', 'outflow', 'two-facts'], source:'both',
+ stem:'A drug is meant to increase aqueous humor outflow through the main drainage route. Which target is located at that route?',
+ options:[
+  {t:'Carbonic anhydrase in the ciliary epithelial cells', correct:false, why:'Slide 16 and T@36851 11/13: carbonic anhydrase in the ciliary epithelium is involved in making aqueous humor (inflow).'},
+  {t:'M3 receptors in the trabecular meshwork', correct:true, why:'Slide 16 and T@38228 11/13: M3 receptors are in the trabecular meshwork, the main outflow route (slide 15).'},
+  {t:'Alpha 2 receptors on the ciliary epithelial cells', correct:false, why:'Slide 16: alpha 2 receptors are on the epithelium that produces aqueous humor (inflow).'},
+  {t:'Alpha 1 receptors on the ciliary blood vessels', correct:false, why:'Slide 16: alpha 1 receptors are on the vasculature of the ciliary body, which supplies the production site, not the meshwork.'}],
+ teach:'Outflow target: M3 in the trabecular meshwork. Inflow targets: ciliary epithelial receptors and carbonic anhydrase (slide 16).',
+ cite:'Lectures 9–10 (Smith_Eye_Glaucoma_AllergicConj_DryEye.pdf) slides 15, 16; T@38228 11/13'},
+
+{id:'EA-044', skill:'mech', prof:'Smith', tier:'new', topic:'ey-glpath', sub:'recep', concept:'ey-target-inflow',
+ tags:['target', 'inflow'], source:'both',
+ stem:'Which site is a target for a drug that decreases aqueous humor production?',
+ options:[
+  {t:'M3 receptors in the trabecular meshwork', correct:false, why:'Slide 16: M3 receptors are at the main outflow route, so they relate to drainage.'},
+  {t:'The uveoscleral route between the uvea and the sclera', correct:false, why:'Slide 14: the uveoscleral route is an outflow route.'},
+  {t:'Schlemm\'s canal', correct:false, why:'Slide 15: Schlemm\'s canal is part of the main outflow route.'},
+  {t:'Carbonic anhydrase in the ciliary epithelial cells', correct:true, why:'Slide 16 and T@36851 11/13: carbonic anhydrase is involved in making aqueous humor, and it and the epithelial receptors are drug targets for glaucoma.'}],
+ teach:'Ciliary epithelium (receptors and carbonic anhydrase) makes aqueous humor; the meshwork handles outflow (slide 16).',
+ cite:'Lectures 9–10 (Smith_Eye_Glaucoma_AllergicConj_DryEye.pdf) slide 16; T@36851 11/13'},
+
+{id:'EA-045', skill:'mech', prof:'Smith', tier:'new', topic:'ey-glpath', sub:'recep', concept:'ey-enzyme-ca',
+ tags:['enzyme', 'inflow'], source:'both',
+ stem:'Which enzyme in the ciliary epithelial cells is involved in making aqueous humor?',
+ options:[
+  {t:'Acetylcholinesterase', correct:false, why:'Slide 16 labels carbonic anhydrase, not acetylcholinesterase, in the epithelial cells that make aqueous humor.'},
+  {t:'Phosphodiesterase 4', correct:false, why:'Not shown on slide 16; the enzyme labeled in the ciliary epithelium is carbonic anhydrase.'},
+  {t:'Carbonic anhydrase', correct:true, why:'Slide 16 labels carbonic anhydrase in the ciliary epithelium; T@36851 11/13: there is a pretty good idea of how it is involved in making aqueous humor.'},
+  {t:'Calcineurin', correct:false, why:'Not shown on slide 16; calcineurin is a dry eye topic, not an enzyme of aqueous humor production.'}],
+ teach:'Carbonic anhydrase is the enzyme of the ciliary epithelium involved in producing aqueous humor (slide 16).',
+ cite:'Lectures 9–10 (Smith_Eye_Glaucoma_AllergicConj_DryEye.pdf) slide 16; T@36851 11/13'}
+);
+})();

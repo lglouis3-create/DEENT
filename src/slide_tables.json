@@ -236,6 +236,21 @@
    "WCC",
    "p8c",
    1
+  ],
+  [
+   "Smith Eye",
+   "ey",
+   1
+  ],
+  [
+   "Dr. Smith's Eye",
+   "ey",
+   0
+  ],
+  [
+   "Eye",
+   "ey",
+   1
   ]
  ],
  "sections": [
