@@ -14,7 +14,8 @@
    3. STEPPERS.md rules a script can see: every drawn shape has a data-k, data-k values are
       unique inside a step, no shape carries its own transform, opacity is set as an attribute
       only, and no colour is written into the markup. Every shape, and every text line by an
-      estimate of its width, sits inside the 360-wide panel and above the caption band.
+      estimate of its width, sits inside the 360-wide panel and above the caption band, and no
+      two text lines overlap (the same estimate).
    4. The figure opens with its Purpose line (the purpose_ui.js format: "Shows/Compares …, so
       you can …"), once.
    5. Content rules: the inflow/outflow sort as slides 16-41 and 11/13 give it; the CAI figure
@@ -34,11 +35,11 @@ const check = (ok, what, detail) => {
 };
 
 const PLAN = {
-  'ey-aqueous': {steps: 5, h: 400},
-  'ey-angle':   {steps: 3, h: 270},
-  'ey-cai':     {steps: 5, h: 340},
-  'ey-allergy': {steps: 4, h: 326},
-  'ey-dryeye':  {steps: 4, h: 404},
+  'ey-aqueous': {steps: 5, h: 414},
+  'ey-angle':   {steps: 3, h: 312},
+  'ey-cai':     {steps: 5, h: 360},
+  'ey-allergy': {steps: 4, h: 368},
+  'ey-dryeye':  {steps: 4, h: 430},
 };
 const GROUP = 'Eye: glaucoma, allergy and dry eye (Dr. Smith, Exam 3)';
 
@@ -105,7 +106,7 @@ for (const [k, plan] of Object.entries(PLAN)) {
     check(capLines.length >= 1 && capLines.length <= 2 && !/…$/.test(capText), `${k} step ${i + 1}: caption fits in two lines`, capLines.length);
     check(/\([^)]*slides? \d[^)]*\)\.?$/.test(capText), `${k} step ${i + 1}: caption ends with its source in parentheses`, capText.slice(-60));
     const bandTop = plan.h - 12 - capLines.length * 10 - 9;   // top of the "Step n of m" line
-    const keys = [], noKey = [], tf = [], out = [], styleOp = [], wide = [];
+    const keys = [], noKey = [], tf = [], out = [], styleOp = [], wide = [], tb = [];
     for (const m of s.matchAll(SHAPE)) {
       const a = m[2], cls = attr(a, 'class') || '';
       if (/\bcapt\b/.test(cls)) continue;
@@ -126,8 +127,16 @@ for (const [k, plan] of Object.entries(PLAN)) {
         const w = textW(m[3], size, /tb|tag|warn|chem/.test(cl)), an = attr(a, 'text-anchor') || 'start';
         const x0 = an === 'middle' ? x - w / 2 : an === 'end' ? x - w : x, x1 = x0 + w;
         if (x0 < 1 || x1 > 359) wide.push(dk + ' [' + Math.round(x0) + ',' + Math.round(x1) + ']');
+        const y = +attr(a, 'y');
+        tb.push([x0, x1, y - size * 0.72, y + size * 0.12, dk]);
       }
     }
+    const ov = [];
+    for (let p = 0; p < tb.length; p++) for (let q = p + 1; q < tb.length; q++) {
+      const A = tb[p], B = tb[q];
+      if (Math.min(A[1], B[1]) - Math.max(A[0], B[0]) > 1 && Math.min(A[3], B[3]) - Math.max(A[2], B[2]) > 1) ov.push(A[4] + '/' + B[4]);
+    }
+    check(!ov.length, `${k} step ${i + 1}: no two text lines overlap (estimate)`, ov.join(', '));
     const dup = keys.filter((x, j) => keys.indexOf(x) !== j);
     check(!noKey.length, `${k} step ${i + 1}: every shape has a data-k`, noKey.slice(0, 3).join('; '));
     check(!dup.length, `${k} step ${i + 1}: data-k values unique`, [...new Set(dup)].join(', '));

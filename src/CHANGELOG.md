@@ -8,6 +8,14 @@ characters.
 
 Every update adds its bullets here in the same commit that makes the change.
 
+## 2026-11-19 (cleaner reading tabs, Exam 3 diagrams)
+- Guides, Reference and Tell apart: status codes, notes about sources and repeated text removed; facts and qualifiers kept.
+- Tell apart: every row now names what separates the pair and gives a trap; duplicate rows merged.
+- Diagrams are in Exam 1, 2 and 3 folders, with a "Jump to a diagram" list above them.
+- Eleven Exam 3 diagrams: glaucoma inflow and outflow, angle closure, carbonic anhydrase, allergy, dry eye and more.
+- Dr. Sikazwe's Exam 3 questions are starred by how likely he is to ask them.
+- Arrows in drawn figures keep their heads when another figure is in a closed folder.
+
 ## 2026-11-18 (Exam 3: eye, ear, mouth)
 - Exam 3 practice: Dr. Smith's eye lectures and Dr. Sikazwe's ear, mouth and eye chemistry.
 - New Exam 3 folders in Guides, Reference and Tell apart, with every slide of both decks explained.
