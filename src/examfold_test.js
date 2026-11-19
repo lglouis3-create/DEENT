@@ -143,7 +143,7 @@ async function nsOf(browser) {
           const counts = {}; ['h2.gdeck', 'section.gobj', 'h3', 'h4', 'table', 'tr', 'figure', 'li'].forEach(sel => { counts[sel] = [flat.querySelectorAll(sel).length, inFolds(sel)]; });
           // ids the tab's own HTML carries: all present, all inside a folder
           const ids = [...flat.querySelectorAll('[id]')].map(e => e.id);
-          const lost = ids.filter(id => { const e = pane.querySelector('#' + CSS.escape(id)); return !e || !e.closest('.rfold'); });   // inside this tab: a figure's marker id repeats in other tabs
+          const lost = ids.filter(id => !/^arw$/.test(id)).filter(id => { const e = pane.querySelector('#' + CSS.escape(id)); return !e || !e.closest('.rfold'); });   // inside this tab: a figure's marker id repeats in other tabs; svgid_ui.js renames each figure's "arw" marker (2026-11-19)
           const starts = v === 'guide' ? 'h2.gdeck[id]' : 'h3[id]';
           const wrong = [...pane.querySelectorAll('.rfbody > ' + starts)].filter(s => { const want = v === 'guide' ? EXAMFOLD_UI.deckExam(s.id) : EXAMFOLD_UI.map[v][s.id]; return String(want) !== s.closest('.rfold').dataset.exam; }).map(s => s.id);
           return {
