@@ -9,7 +9,7 @@ characters.
 Every update adds its bullets here in the same commit that makes the change.
 
 ## 2026-11-19 (cleaner reading tabs, Exam 3 diagrams)
-- Guides, Reference and Tell apart: status codes, notes about sources and repeated text removed; facts and qualifiers kept.
+- Guides, Reference and Tell apart: status codes, source notes and repeated text removed; facts and qualifiers kept.
 - Tell apart: every row now names what separates the pair and gives a trap; duplicate rows merged.
 - Diagrams are in Exam 1, 2 and 3 folders, with a "Jump to a diagram" list above them.
 - Eleven Exam 3 diagrams: glaucoma inflow and outflow, angle closure, carbonic anhydrase, allergy, dry eye and more.
