@@ -289,6 +289,8 @@ const COURSE = {
           // Drawn step-throughs from the visuals evaluation, items 3-7 (fig-steroid, fig-il-axis,
           // fig-cni-nfat, fig-spf, fig-block-vs-screen; adds to DIA, DIA_NAMES and DIAGRAMS)
           'figs2.js',
+          // Exam 3 diagrams (Louis, 2026-11-19): Dr. Sikazwe's otic, oral and ophthalmic chemistry (adds to DIA, DIA_NAMES, DIAGRAMS)
+          'diagrams_oo.js',
           // Mechanism step-throughs from Dr. Smith's PCol slides (Louis, 2026-11-09): adds to DIA
           'moa_figs.js',
           'q1_topics.js', 'q2_L02.js', 'q3_L03a.js', 'q4_L03b.js', 'q5_L04.js', 'q6_L03c.js',
