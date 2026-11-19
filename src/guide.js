@@ -3169,7 +3169,7 @@ const GUIDE_HTML = `
 <div class="gbar"><span>What the lecture adds</span><b>Frame for the Outdoor Exposure lecture: her objectives, how she says she builds exam questions, and the fingertip-unit calculation she said has now returned three times</b><i>Patel Outdoor slide 1, 2, 3, 4, 5</i></div>
 <div class="gpt g2-block"><h5>Learning objectives: what each question can ask (Patel Outdoor slide 3)</h5>
 <p class="g2-p">Her seven objectives are the seven Objective sections above. Exam cue: she writes her exam questions from them.</p>
-<p class="g2-p">Exam 2 split (lecture, T@1377 11/12): her lectures are 70% of the exam, plus 5 questions from Dr. Sikazwe and 5 from Dr. Smith on Exam 1 material.</p>
+<p class="g2-p">Exam 2 split (lecture, T@1377 11/12): her lectures are 70% of the exam, plus 5 questions from Dr. Sikazwe and 5 from Dr. Smith on Exam 1 material. She counts 4 to 5 questions per lecture hour (T@1239 11/12).</p>
 <div class='g2-said'><span class='g2-k'>She said</span>
 <p>&ldquo;This is how I create my exam questions as well&rdquo; <span class='g2-src'>11/12 T@962</span></p></div>
 </div>
