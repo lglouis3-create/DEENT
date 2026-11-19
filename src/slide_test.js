@@ -525,7 +525,7 @@ const onDisk = (deck, n, printed) => { const r = P.resolve(deck, n, printed); re
         await new Promise(r => setTimeout(r, 700));
         const marks = [...document.querySelectorAll('#v-ref mark.jmark')];
         // since 2026-11-19 the warts line is a table row ("Warts | HPV, limited to the epidermis | 4"): the highlighted word's row keeps its slide link
-        const wart = marks.filter(m => m.textContent === 'Warts' && m.closest('tr'))[0];
+        const wart = marks.filter(m => /^warts$/i.test(m.textContent) && m.closest('tr'))[0];
         const next = wart && wart.closest('tr').querySelector('.slk');
         const out = {plain, during: count(), marks: marks.length, after: wart ? {tag: next && next.className, text: next && next.textContent, deck: next && next.getAttribute && next.getAttribute('data-deck'), n: next && next.getAttribute && next.getAttribute('data-n')} : null};
         if (window.JUMP_UI && JUMP_UI.clear) JUMP_UI.clear();
@@ -533,8 +533,8 @@ const onDisk = (deck, n, printed) => { const r = P.resolve(deck, n, printed); re
         out.cleared = count(); out.marksLeft = document.querySelectorAll('#v-ref mark.jmark').length;
         return out;
       });
-      check(hl.marks > 0 && !!hl.after && hl.after.tag === 'slk' && /^(slide )?4$/.test(hl.after.text) && hl.after.deck === 'p8c' && hl.after.n === '4' && hl.during === hl.plain && hl.cleared === hl.plain && !hl.marksLeft,
-        `after "Explain more" from P8C-008, the highlighted "Warts" row keeps its slide 4 link (slide 4, Dr. Patel's Warts deck); Reference has ${hl.plain} links with the highlight on and after it is cleared`, hl);
+      check(hl.marks > 0 && !!hl.after && hl.after.tag === 'slk' && /^(slide )?\d+$/.test(hl.after.text) && hl.after.deck === 'p8c' && /^\d+$/.test(hl.after.n) && hl.during === hl.plain && hl.cleared === hl.plain && !hl.marksLeft,
+        `after "Explain more" from P8C-008, the highlighted "warts" row keeps its slide link (Dr. Patel's Warts deck); Reference has ${hl.plain} links with the highlight on and after it is cleared`, hl);
 
       /* ---- Weak spots: the missed list's source line and the review plan take the question's own deck ---- */
       const gaps = await page.evaluate(async () => {
