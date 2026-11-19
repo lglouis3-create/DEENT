@@ -19,7 +19,7 @@ const PAGE = 'file://' + path.resolve(__dirname, process.env.DRILL_PAGE || '../p
 let fail = 0, n = 0;
 const check = (ok, label, detail) => { n++; if (!ok) fail++; console.log((ok ? '  ok    ' : '  FAIL  ') + label + (ok || !detail ? '' : '  — ' + String(detail).slice(0, 500))); };
 // the Atlas tab keeps its own two settings when it is opened; the search writes nothing, so the keys are compared without them
-const ls = p => p.evaluate(() => JSON.stringify(Object.keys(localStorage).filter(k => !/^phar4346-atlas:/.test(k)).sort().map(k => [k, localStorage.getItem(k).length])));
+const ls = p => p.evaluate(() => JSON.stringify(Object.keys(localStorage).filter(k => !/^phar4346-atlas:/.test(k) && !/:place:keep$/.test(k)).sort().map(k => [k, localStorage.getItem(k).length])));
 
 (async () => {
   const b = await chromium.launch();

@@ -57,6 +57,8 @@ DECKS = [
     ('p8s', 'Patel',   2, 'Patel_Sun-Exposure-Student.pdf', 'Patel_SunExposure.pdf', 'Dr. Patel, Sun Exposure', 'Slide'),
     ('p8w', 'Patel',   2, 'Patel_Wound-Care.pdf', 'Patel_WoundCare.pdf', 'Dr. Patel, Wound Care', 'Slide'),
     ('p8c', 'Patel',   2, 'Patel_Warts-Corns-Calluses.pdf', 'Patel_WartsCornsCalluses.pdf', 'Dr. Patel, Warts, Corns and Calluses', 'Slide'),
+    ('ey',  'Smith',   3, 'Smith_Eye_Glaucoma_AllergicConj_DryEye.pdf', 'SmithEye_Glaucoma_AllergicConj_DryEye.pdf', 'Dr. Smith, Eye: Glaucoma, Allergic Conjunctivitis, Dry Eye', 'Slide'),
+    ('oo',  'Sikazwe', 3, 'Sikazwe_OOO_mc.pdf', 'Sikazwe_OOO_mc_clean.pdf', 'Dr. Sikazwe, Otic/Oral/Ophthalmic Medicinal Chemistry', 'Slide'),
 ]
 
 # ---- hand-kept tables: src/slide_tables.json (slide_ui.js and slide_check.js read them from

@@ -168,6 +168,16 @@ const COURSE = {
     {id:'L08d', deck:'Patel_Warts-Corns-Calluses.pdf',
      label:'Lecture 8: Warts, corns and calluses (Patel, 11/12)',
      prof:'Patel', exam:2, module:'Exam 2: Lectures 5–8'},
+    // Exam 3 (syllabus p. 6: Lectures 9-13, Mon 11/23). Lectures 9-10 are Dr. Smith's eye lectures, 11/13 (ophthalmic
+    // physiology, 1.5 h) and 11/17 (ophthalmic and glaucoma pharmacology, 3 h), both taught from one deck. Dr. Sikazwe's
+    // medicinal chemistry (11/18-11/19) and Dr. Lam's therapeutics join as their own entries with exam:3.
+    {id:'L09', deck:'Smith_Eye_Glaucoma_AllergicConj_DryEye.pdf',
+     label:'Lectures 9–10: Eye anatomy, glaucoma, allergic conjunctivitis and dry eye (Smith, 11/13 and 11/17)',
+     prof:'Smith', exam:3, module:'Exam 3: Lectures 9–13'},
+    // Dr. Sikazwe's medicinal chemistry of the ear, mouth and eye: 11/18 (slides 1-32) and 11/19 (the rest), one deck.
+    {id:'L11', deck:'Sikazwe_OOO_mc.pdf',
+     label:'Lectures 11–12: Otic, oral and ophthalmic medicinal chemistry (Sikazwe, 11/18 and 11/19)',
+     prof:'Sikazwe', exam:3, module:'Exam 3: Lectures 9–13'},
   ],
 
   exams: [
@@ -227,10 +237,24 @@ const COURSE = {
        {key:'sikazwe', name:'Lectures 1–4, Dr. Sikazwe: 5 questions', marks:5, filter:{exam:1, prof:'Sikazwe', unassigned:undefined}},
        {key:'l58', name:'Lectures 5–8 (Dr. Patel): the other 40', marks:40, filter:{exam:2}},
      ]},
+    {id:'exam3', name:'Exam 3', date:'Mon 11/23, 9:00–10:30 AM', when:'2026-11-23T09:00',
+     questions:50, minutes:90, sata:null,
+     blurb:'Covers Lectures 9–13 (syllabus). Practice coverage so far: Dr. Smith\'s eye lectures (11/13, 11/17) and her cumulative Exam 1 material; Dr. Sikazwe and Dr. Lam join as their lectures are added. Five of the 50 questions are Dr. Smith\'s cumulative ones; no split by professor is announced for the rest.',
+     facts:[['Covers', 'Covers Lectures 9–13 (syllabus).'],
+            ['Practice coverage', 'So far Dr. Smith\'s eye lectures (11/13, 11/17) and her cumulative Exam 1 material; Dr. Sikazwe and Dr. Lam join as their lectures are added.'],
+            ['Dr. Smith (11/13)', '"I\'ve got 5 questions and they\'re cumulative, so everything that was on the first exam is fair game. So focus on pathophys and then focus on mechanisms." She likes scary side effects such as black box warnings.'],
+            ['Syllabus formats', 'The syllabus lists multiple-choice, select-all, short-answer, true/false and matching as possible formats and gives no count of each.']],
+     factsMain:['Covers', 'Practice coverage'],
+     pools:[
+       // Dr. Smith, 11/13: "I've got 5 questions and they're cumulative" (Exam 1 material); the paper has 50
+       // questions (syllabus), so the other 45 come from Exam 3 lectures. No split by professor within them is announced.
+       {key:'eye', name:'Lectures 9–13 so far', marks:45, filter:{exam:3}},
+       {key:'cum', name:'Dr. Smith, cumulative Exam 1 material', marks:5, filter:{exam:1, prof:'Smith', unassigned:undefined}},
+     ]},
   ],
   // Exam 1 was on Mon 11/09; the Exam view, the weighted pass and Weak spots follow Exam 2 from
   // 11/09 (the core draws papers for one exam, the active one). Exam 1's own entry above is kept.
-  activeExam: 'exam2',
+  activeExam: 'exam3',
 
   // What a question asks the student to do. The first four follow Dr. Smith, 11/03:
   // "what are these drugs targeting, why are they targeting it, and what makes them
@@ -288,13 +312,17 @@ const COURSE = {
           'q20_abcde.js',
           // Lecture 8 points she stressed that had no question: Lyme neurologic/cardiac, scorpion stings, sunscreen expiration, snow and sand, stopping a reacting product, Fitzpatrick type, silicone for scars
           'q21_L08_gaps.js',
+          // Dr. Smith, Lectures 9-10 (Exam 3): the eye (topics first, then the question files)
+          'q27_ooo_topics.js', 'q22_eye_topics.js', 'q23_eye_anat_patho.js', 'q24_eye_inflow.js', 'q25_eye_outflow.js', 'q26_eye_allergy_dry.js',
+          // Dr. Sikazwe, Lectures 11-12 (Exam 3): otic, oral, ophthalmic medicinal chemistry
+          'q28_ooo_otic_oral.js', 'q29_ooo_oph_a.js', 'q30_ooo_oph_b.js', 'q31_ooo_oph_c.js',
           // the step-throughs of moa_figs.js in the explanations of the matching Smith questions
           'moa_links.js',
           // Drug list tab (temporary course-level presentation, to be replaced by the kit's
           // Drug List feature): its data, then the tab itself (Louis, 2026-11-08)
           // (chart_boxes.js: the rows of the original chart pages in chart/, from render_chart.py;
           // drugfacts.js: bank questions mapped to Drug list facts, read-only, Phase 1 of the plan)
-          'chart_boxes.js', 'druglist_data.js', 'drugfacts.js', 'druglist_ui.js',
+          'chart_boxes.js', 'chart_boxes_eye.js', 'druglist_data.js', 'druglist_eye.js', 'drugfacts.js', 'druglist_ui.js',
           // the Diseases tab (Louis, 2026-11-13): cards per condition, drug panels, tell-apart sets (dz_build.py, dz_check.js)
           'dz_data.js', 'dz_ui.js',
           // the FTU tab (Louis, 2026-11-14): typed fingertip-unit practice with a body diagram and a record (ftu_test.js)

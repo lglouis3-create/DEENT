@@ -300,7 +300,7 @@ const measure = p => p.evaluate(() => { const r = e => e ? e.getBoundingClientRe
     {
       const p = await b.newPage({viewport: {width: 1366, height: 1024}});
       await p.goto(PAGE); await p.waitForTimeout(900);
-      await p.click('#nav button[data-v="guide"]'); await p.waitForTimeout(300);
+      await p.click('#nav button[data-v="ref"]'); await p.waitForTimeout(300);
       const s0 = await strip(p);
       await p.mouse.move(683, 620);
       await p.mouse.wheel(0, 700);

@@ -20,6 +20,20 @@
    options do not already show. The reason and source are not displayed
    (Louis, 2026-11-08: the card shows only a "★ Likely on the exam" badge); they
    are the audit record of each star, still written not to give the answer away.
+   Exam 3 (2026-11-18): the last block of `items` holds 41 stars for Dr. Smith's eye
+   questions (deck Smith_Eye_Glaucoma_AllergicConj_DryEye.pdf, Lectures 9-10; question
+   files q23-q26, ids EA-, EI-, EO-, EL-, ED-), listed most likely first. Ranking by the
+   evidence: (1) the points she told the class to understand or pay attention to (the
+   kidney explanation of the carbonic anhydrase inhibitors' acidosis, "be sure you can
+   categorize them" as inflow or outflow, which antihistamines stabilize mast cells,
+   the eyelid-corner counseling, the FKBP and cyclophilin question she said she was
+   picky about); (2) her 11/13 closing answer on Exam 3 ("5 questions and they're
+   cumulative ... focus on pathophys and then focus on mechanisms ... I always like
+   scary side effects like black box warnings"; no eye drug carries a black box warning
+   in the deck or the transcripts, so the scary-effect stars are the ones she called
+   significant or scary); (3) the objectives slides 3, 11, 47, 61; (4) time and
+   emphasis in the 11/13 and 11/17 transcripts. One star per concept. likely_check.js
+   accepts a star in an Exam 1 pool, an Exam 2 pool or the Exam 3 eye pool.
    ========================================================================== */
 const LIKELY = {
   sources: {
@@ -56,6 +70,14 @@ const LIKELY = {
                       detail:'A question Louis recalled from Exam 1 (2026-11-09 to 11-12; STYLE.md "Exam questions Louis recalls")'},
     'patel-cue':     {by:'patel',   label:'Dr. Patel stressed it in lecture',
                       detail:'Her words in class, 11/06 (lecture transcript)'},
+    'smith-ex3':     {by:'smith',   label:"Dr. Smith's Exam 3 remarks",
+                      detail:'Her closing answer to a student on 11/13 (DEENT_Lecture_11.13_transcript.txt, last paragraph): 5 questions, cumulative; "focus on pathophys and then focus on mechanisms"; "I always like scary side effects like black box warnings"'},
+    'smith-obj-eye': {by:'smith',   label:"Dr. Smith's learning objectives",
+                      detail:'Smith_Eye_Glaucoma_AllergicConj_DryEye.pdf, slides 3, 11, 47 and 61 (objectives of the eye anatomy, glaucoma, allergic conjunctivitis and dry eye sections)'},
+    'smith-eye-cue': {by:'smith',   label:'Dr. Smith stressed it in the eye lectures',
+                      detail:'Her words in the 11/13 or 11/17 lecture (DEENT_Lecture_11.13_transcript.txt, DEENT_Lecture_11.17_transcript.txt; character offsets T@n)'},
+    'smith-eye-room':{by:'smith',   label:'Dr. Smith put it to the class',
+                      detail:'11/17 (T@60798): she asked whether the class had seen the question before and said she was picky on it on purpose'},
   },
   items: [
     /* ---- Dr. Smith, Pathophysiology deck (10/29) ---- */
@@ -488,5 +510,47 @@ const LIKELY = {
     {id:'BP8O-001', source:'patel-cue', ref:"T@1737, T@96227 11/12 (slide 5)", reason:"\"It's come back 3 times now, so make sure you practice calculations.\" She said fill in the blank is calculations."},
     {id:'BP8O-002', source:'patel-cue', ref:"T@1737, T@96227 11/12 (slide 5)", reason:"Same cue: the fingertip-unit chart, adult only, with her fill-in-the-blank calculation statement."},
     {id:'BP8O-004', source:'patel-cue', ref:"T@15815, T@96227 11/12 (slide 29)", reason:"She gave the weight-based doses aloud and said fill in the blank is calculations."},
+    // Exam 3, Dr. Smith's eye lectures (added 2026-11-18): most likely first. Sources: smith-ex3, smith-obj-eye, smith-eye-cue, smith-eye-room.
+    {id:"EI-029", source:'smith-eye-cue', ref:"T@18418, T@18749 11/17 (slide 27)", reason:"\"I need you guys to understand\" how this side effect comes about; she said knowing why it occurs lets a pharmacist explain it to others."},
+    {id:"EI-028", source:'smith-eye-cue', ref:"T@18418 11/17 (slide 27)", reason:"Same cue: she wanted the class to follow the kidney explanation behind a lab finding in an oral-drug patient."},
+    {id:"EA-035", source:'smith-obj-eye', ref:"T@19464, T@60888 11/13 (slide 11)", reason:"Objective on slide 11 and her instruction to \"be sure you can categorize them\" by what they affect; she repeated it at the end of 11/13."},
+    {id:"EI-039", source:'smith-obj-eye', ref:"T@19464, T@60888 11/13 (slides 11, 18, 22, 26)", reason:"Same instruction: sort each drug class by what it affects; a stated objective of the glaucoma section."},
+    {id:"EO-046", source:'smith-obj-eye', ref:"T@19464, T@60888 11/13 (slides 11, 30)", reason:"Same instruction, from the other side of the sort; slide 11 asks the class to classify drugs."},
+    {id:"EI-031", source:'smith-eye-cue', ref:"T@60115 11/13 (slides 27, 29)", reason:"She called this a significant effect that \"needs to be carefully monitored in your patient\"."},
+    {id:"EA-021", source:'smith-ex3', ref:"T@23479 11/13 (slides 13-14)", reason:"She said to focus on pathophysiology; she called this type an emergency with stabbing pain and told the class to get to an emergency room."},
+    {id:"EA-022", source:'smith-ex3', ref:"T@21116, T@22192 11/13 (slide 13)", reason:"Pathophysiology focus; she stressed the yearly pressure check because the person would not otherwise know."},
+    {id:"EA-031", source:'smith-ex3', ref:"T@25697 11/13 (slides 14-15)", reason:"Pathophysiology focus; she traced the liquid's route stage by stage on the figure."},
+    {id:"EA-036", source:'smith-eye-cue', ref:"T@32692 11/13 (slides 14-15)", reason:"She called this \"the most important outflow route\" and gave it as a keyword to describe drainage."},
+    {id:"EA-034", source:'smith-ex3', ref:"T@27165 11/13 (slides 13-14)", reason:"Pathophysiology focus; she explained how the damage happens and why measuring pressure matters."},
+    {id:"EL-004", source:'smith-eye-cue', ref:"T@44825, T@45309 11/17 (slide 51)", reason:"She named this benefit in two separate passages and pointed out that many antihistamines have it."},
+    {id:"EL-008", source:'smith-eye-cue', ref:"T@48580, T@50365 11/17 (slides 53-54)", reason:"\"Pay special attention to which ones have mast cell stabilizing properties\"; she noted this one lacks a feature the others share."},
+    {id:"EL-042", source:'smith-eye-cue', ref:"T@48580 11/17 (slides 53-54)", reason:"Same cue: sort the antihistamines by this property."},
+    {id:"EL-006", source:'smith-eye-cue', ref:"T@45309, T@46586 11/17 (slides 51, 54)", reason:"She tied this property to starting treatment before the allergen season."},
+    {id:"EA-009", source:'smith-eye-cue', ref:"T@16550, T@48440 11/13 (slide 5)", reason:"She described it as a \"really important counseling point\" and said she does it herself after dilating drops."},
+    {id:"EI-014", source:'smith-eye-cue', ref:"T@49731, T@50544 11/13 (slide 22)", reason:"She listed what this drug does beyond lowering production and returned to one of those effects a second time."},
+    {id:"EI-023", source:'smith-eye-cue', ref:"T@53050 11/13 (slides 23-24)", reason:"\"Importantly\", she said for this drug, one reaction \"is a significant problem\"."},
+    {id:"EO-018", source:'smith-eye-cue', ref:"T@32283, T@34104 11/17 (slide 37)", reason:"She gave this class's route in her mechanism explanation and again when she summarized the class."},
+    {id:"EO-020", source:'smith-eye-cue', ref:"T@32283, T@34104 11/17 (slide 39)", reason:"She described a color change as a feature of this class and a clinical pattern in who responds."},
+    {id:"ED-008", source:'smith-eye-room', ref:"T@60798 11/17 (slide 66)", reason:"She asked if the class had seen this question and said she was \"picky\" about it on purpose."},
+    {id:"ED-009", source:'smith-eye-room', ref:"T@60798 11/17 (slide 66)", reason:"Same passage: the pairing of each drug with its binding protein, which she said returns in oncology."},
+    {id:"ED-007", source:'smith-obj-eye', ref:"T@58677 11/17 (slides 61, 64, 67)", reason:"Slide 61 objective: explain the mechanism of each dry eye drug discussed in class."},
+    {id:"EI-025", source:'smith-obj-eye', ref:"T@54759 11/13; T@5923 11/17 (slides 11, 26)", reason:"Slide 11 objective (mechanism of action) and the long explanation of the enzyme's role in making the fluid."},
+    {id:"EI-003", source:'smith-ex3', ref:"T@47078 11/13 (slides 19-20)", reason:"She likes the scary ones; she tied a breathing warning to a property of the drug."},
+    {id:"EO-033", source:'smith-ex3', ref:"T@37371 11/17 (slide 43)", reason:"She remarked that this adverse effect \"is always a little scary when you look in the mirror\"."},
+    {id:"ED-028", source:'smith-ex3', ref:"T@68262, T@68665 11/17 (slide 73)", reason:"She likes scary side effects; she stressed that this one can cost sight and is rare, not merely infrequent."},
+    {id:"EO-001", source:'smith-ex3', ref:"T@24390 11/17 (slide 32)", reason:"\"Focus on mechanisms\": the first drug of its section."},
+    {id:"EO-006", source:'smith-ex3', ref:"T@29179 11/17 (slide 34)", reason:"\"Focus on mechanisms\": she contrasted how this drug acts with the direct drugs."},
+    {id:"EO-017", source:'smith-ex3', ref:"T@31289 11/17 (slide 37)", reason:"\"Focus on mechanisms\": she walked the steps on the figure."},
+    {id:"EO-028", source:'smith-ex3', ref:"T@35104 11/17 (slide 41)", reason:"\"Focus on mechanisms\": the newest outflow class, which has a single drug."},
+    {id:"ED-021", source:'smith-eye-cue', ref:"T@65544 11/17 (slide 71)", reason:"\"An important counseling point about this medication\", she said, about the patients who wear lenses."},
+    {id:"EL-018", source:'smith-obj-eye', ref:"T@52180 11/17 (slides 47, 56)", reason:"Slide 47 objective: which medication class treats which symptom of allergic conjunctivitis."},
+    {id:"EA-017", source:'smith-obj-eye', ref:"T@14475 11/13 (slides 3, 7)", reason:"Slide 3 objective: describe what adrenergic and cholinergic stimulation does in the eye."},
+    {id:"EA-012", source:'smith-obj-eye', ref:"T@12547 11/13 (slides 3, 6)", reason:"Slide 3 objective on tears: what they are made of, because it matters in dry eye."},
+    {id:"EA-029", source:'smith-ex3', ref:"T@23470, T@29158 11/13 (slide 13)", reason:"Pathophysiology focus: the features she gave, item by item, for the blocked-angle type."},
+    {id:"EA-037", source:'smith-eye-cue', ref:"T@31149, T@33575 11/13 (slides 14-16)", reason:"She gave this as one of two keywords for drainage and said less of the liquid goes this way."},
+    {id:"EA-045", source:'smith-obj-eye', ref:"T@36851 11/13 (slide 16)", reason:"Slide 11 objective (mechanisms) and slide 16, where the enzymes in the ciliary body are listed."},
+    {id:"ED-018", source:'smith-obj-eye', ref:"T@64164 11/17 (slides 61, 71)", reason:"Slide 61 objective: the mechanism of each dry eye drug discussed in class."},
+    {id:"ED-024", source:'smith-obj-eye', ref:"T@67553, T@67641 11/17 (slides 61, 73)", reason:"Slide 61 objective; she called the mechanism \"interesting\" and spent a passage on the nerve route."},
+    {id:"EO-009", source:'smith-obj-eye', ref:"T@28186 11/17 (slides 11, 33)", reason:"Slide 11 objective: list the side effects of the glaucoma drugs."},
   ],
 };

@@ -75,7 +75,13 @@
    source of targets. Links use the engine's own drillList(), jump(),
    linksFor() and the RET/backBtn return stack.
 
-   Storage: none (the Chart view's page, zoom and highlight included). Nothing is written to localStorage, sessionStorage or
+   Two lists (Exam 3, 2026-11-18): a switch at the top of the tab, Dermatology or Eye (Exam 3), swaps the data the four views read
+   (DL: DRUGLIST or DRUGLIST_EYE, druglist_eye.js; chart images chart/eye-N.webp with CHART_BOXES_EYE, chart_boxes_eye.js). Each list
+   keeps its own filters, quiz and this visit's ratings while the page is open. The choice is the one thing kept on this device,
+   under `<NS>:drugList` ("derm" or "eye") with direct localStorage calls inside try/catch; without it the list follows the active
+   exam (exam3: Eye). With Dermatology selected the tab is as it was.
+
+   Storage: none otherwise (the Chart view's page, zoom and highlight included). Nothing else is written to localStorage, sessionStorage or
    IndexedDB, and nothing goes into the core's progress or history: quiz
    answers, the score, typed recall text and the Forgot / Partly / Knew
    ratings live in this page's memory only and are gone on reload. The
@@ -88,10 +94,24 @@ const DRUGLIST_UI = (() => {
              typeof document.getElementById === 'function' && document.getElementById('nav') &&
              typeof document.getElementById('nav').insertBefore === 'function';
   if (!ok) return null;
-  const DL = DRUGLIST, ID = 'drugs';
+  const ID = 'drugs';
+  const DERM = {key: 'derm', DL: DRUGLIST, CB: typeof CHART_BOXES !== 'undefined' ? CHART_BOXES : null};
+  const EYE = typeof DRUGLIST_EYE !== 'undefined' ? {key: 'eye', DL: DRUGLIST_EYE, CB: typeof CHART_BOXES_EYE !== 'undefined' ? CHART_BOXES_EYE : null} : null;
+  // the core's NS (COURSE.ns, plus '-preview' in /preview/); NS itself is not defined yet when this file loads
+  const LKEY = () => { let ns = (typeof COURSE !== 'undefined' && COURSE.ns) || 'drill'; try { if (BUILD.preview) ns += '-preview'; } catch (e) { /* not a preview */ } return ns + ':drugList'; };
+  const chosenList = () => {
+    let v = null;
+    try { v = localStorage.getItem(LKEY()); } catch (e) { /* this visit only */ }
+    if (v === 'derm' || (v === 'eye' && EYE)) return v;
+    try { return EYE && COURSE.activeExam === 'exam3' ? 'eye' : 'derm'; } catch (e) { return 'derm'; }
+  };
+  let LIST = chosenList() === 'eye' ? EYE : DERM;
+  let DL = LIST.DL;
+  const isEye = () => LIST === EYE;
+  const RF_EYE = ['target', 'mech', 'cls', 'use', 'chem', 'rx', 'brand'];
   const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g, c => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'}[c]));
   const NOFILTER = {q: '', dz: '', cls: '', page: '', status: '', boxed: false, photo: false, hasq: false};
-  const st = Object.assign({mode: 'browse', kinds: Object.assign(...Object.keys(DRUGLIST.KINDS).map(k => ({[k]: k === 'target' || k === 'cls'}))), rfield: 'target',
+  const st = Object.assign({mode: 'browse', kinds: Object.assign(...Object.keys(DL.KINDS).map(k => ({[k]: k === 'target' || k === 'cls'}))), rfield: 'target',
     cpage: 1, chit: null, cq: '', zoom: null, cfrom: null, gopen: {}, ropen: {}}, NOFILTER);
   // memory only, never stored
   const typed = {}, checked = new Set();
@@ -359,7 +379,7 @@ const DRUGLIST_UI = (() => {
         ${Q.own.length ? `<button type="button" class="chip" data-dl="drill" data-id="${esc(d.id)}">${Q.own.length} question${Q.own.length > 1 ? 's' : ''} on ${esc(d.name)}</button>` : '<span class="meta">no question in the bank names this drug</span>'}
         ${Q.cls.length ? `<button type="button" class="chip" data-dl="cdrill" data-id="${esc(d.id)}">${Q.cls.length} on the class</button>` : ''}</div>
       <div class="dlrow"><span class="meta">Read:</span>
-        <button type="button" class="chip" data-dl="ref" data-a="${esc(d.tgt)}">Reference: target table</button>
+        <button type="button" class="chip" data-dl="ref" data-a="${esc(isEye() ? ((targets()[d.tgt] || {}).anchor || 'ref-ey-gl') : d.tgt)}">${isEye() ? 'Reference: eye drug table' : 'Reference: target table'}</button>
         ${links.map(([v, a, t]) => `<button type="button" class="chip" data-jump="${esc(v)}:${esc(a)}">${esc(t)}</button>`).join('')}
         ${atlasKey(d) ? `<button type="button" class="chip" data-dl="atlas" data-key="${esc(atlasKey(d))}">Atlas: structure</button>` : ''}</div>`;
   }
@@ -405,8 +425,11 @@ const DRUGLIST_UI = (() => {
   }
 
   /* ---------- Browse by category: folder per chart category, band per class, one line per drug ---------- */
-  const CATS = [{id: 'sun', t: 'Sun protection and sunburn relief', pages: [1]}, {id: 'ad', t: 'Atopic dermatitis', pages: [2]},
+  const CATS_EYE = [{id: 'gl', t: 'Glaucoma treatment', pages: [1, 2]}, {id: 'ac', t: 'Allergic conjunctivitis treatment', pages: [3]}, {id: 'de', t: 'Dry eye treatment', pages: [4]}];
+  let CATS = isEye() ? CATS_EYE : null;
+  const CATS_DERM = [{id: 'sun', t: 'Sun protection and sunburn relief', pages: [1]}, {id: 'ad', t: 'Atopic dermatitis', pages: [2]},
     {id: 'acne', t: 'Acne', pages: [3]}, {id: 'pso', t: 'Psoriasis', pages: [4, 5]}, {id: 'ster', t: 'Topical steroids', pages: [6]}];
+  if (!CATS) CATS = CATS_DERM;
   const catOf = d => (CATS.find(c => c.pages.includes(d.page)) || CATS[CATS.length - 1]).id;
   const classText = d => d.chartClass || DL.CLASSES[d.cls] || '';
   /* the chemical class as the chart has it where it is aligned, the slide's word where the chart's cell is off */
@@ -503,6 +526,7 @@ const DRUGLIST_UI = (() => {
   function recallExample(){
     const f = st.rfield, on = new Set(filtered().map(d => d.id)), out = DL.D.filter(d => !on.has(d.id));
     const ex = (who, t) => `For example, ${esc(RFIELDS[f].toLowerCase())} of ${esc(who)}: <i>${esc(t)}</i>.`;
+    if (isEye() && ['cls', 'use', 'chem', 'rx', 'brand'].includes(f)) return `Type ${esc(RLABEL[f])} as the chart prints it.`;
     if (P7[f]) return ex(...P7[f]);
     if (f === 'potency') { const d = out.find(x => x.potency); return d ? ex(d.name.toLowerCase(), DL.POTENCY[d.potency[0]]) : 'Type a class from 1 (very high potency) to 7 (least potent).'; }
     for (const d of (f === 'why' || f === 'ae') ? [] : out) {
@@ -654,8 +678,9 @@ const DRUGLIST_UI = (() => {
   }
 
   /* ---------- Chart: the original pages, find and highlight ---------- */
-  const CB = typeof CHART_BOXES !== 'undefined' ? CHART_BOXES : null;
-  const CPAGES = Object.assign({}, DL.PAGES, {5: 'Psoriasis, continued from page 4', 7: 'Lice and scabies'});
+  let CB = LIST.CB;
+  const cpagesOf = () => isEye() ? Object.assign({}, DL.PAGES) : Object.assign({}, DL.PAGES, {5: 'Psoriasis, continued from page 4', 7: 'Lice and scabies'});
+  let CPAGES = cpagesOf();
   const ZOOMS = [1, 1.5, 2, 3];
   const chartBase = () => { try { return BUILD.preview ? '../' : ''; } catch (e) { return ''; } };
   const chartSrc = p => chartBase() + 'chart/' + CB.pages[p].file;
@@ -799,7 +824,7 @@ const DRUGLIST_UI = (() => {
           <div class="dlchips"><button type="button" class="btn sm" data-dl="back">Back to the filtered list</button></div></section>` : ''}`;
     } else if (st.mode === 'recall') {
       modebar = `<div class="dlmodebar"><div class="dlchips" role="radiogroup" aria-label="What to recall"><span class="lab">Recall:</span>
-        ${Object.entries(RFIELDS).map(([k, v]) => `<button type="button" class="chip" role="radio" data-dl="rfield" data-k="${k}" aria-checked="${st.rfield === k}" aria-pressed="${st.rfield === k}" tabindex="${st.rfield === k ? 0 : -1}">${esc(v)}</button>`).join('')}</div>
+        ${Object.entries(RFIELDS).filter(([k]) => !isEye() || RF_EYE.includes(k)).map(([k, v]) => `<button type="button" class="chip" role="radio" data-dl="rfield" data-k="${k}" aria-checked="${st.rfield === k}" aria-pressed="${st.rfield === k}" tabindex="${st.rfield === k ? 0 : -1}">${esc(v)}</button>`).join('')}</div>
         <p>Type what you remember in the box under each drug, then press Check (or Enter). <span id="dlrex">${recallExample()}</span> Spelling and wording don't matter: compare your words with the answer yourself, then choose Forgot, Partly or Knew (only that choice counts, for this visit only).</p>
         <div class="dlchips"><button type="button" class="btn sm ghost" data-dl="revealall">Check all</button>
         <button type="button" class="btn sm ghost" data-dl="hideall">Hide all answers</button>
@@ -807,12 +832,14 @@ const DRUGLIST_UI = (() => {
         <p class="dlsess" id="dlsess" aria-live="polite">${sessionLine()}</p></div>`;
     } else if (st.mode === 'chart') {
       modebar = `<div class="dlmodebar"><div class="dlfld"><label for="dlcq">Find a drug on the chart (generic or brand name, or class)</label>
-        <input type="search" id="dlcq" placeholder="e.g. tacrolimus or Protopic" value="${esc(st.cq)}" autocomplete="off" enterkeyhint="search"></div>
+        <input type="search" id="dlcq" placeholder="${isEye() ? 'e.g. timolol or Lumigan' : 'e.g. tacrolimus or Protopic'}" value="${esc(st.cq)}" autocomplete="off" enterkeyhint="search"></div>
         <div id="dlcres" aria-live="polite"></div></div>`;
     }
     const chart = st.mode === 'chart';
     return `<h2>Drug list</h2>
-    <p class="sub">Every drug on the dermatology drug chart, pp. 1–6 (${DL.D.length} drugs), with each line's source.</p>
+    ${EYE ? `<div class="dlmodes dllists" role="radiogroup" aria-label="Which drug list">${[[DERM, 'Dermatology'], [EYE, 'Eye (Exam 3)']].map(([L, t]) =>
+      `<button type="button" role="radio" data-dl="list" data-k="${L.key}" aria-checked="${LIST === L}" tabindex="${LIST === L ? 0 : -1}">${t}</button>`).join('')}</div>` : ''}
+    <p class="sub">${isEye() ? `Every drug on the ophthalmic drug chart, pp. 1–4 (${DL.D.length} drugs), with each line's source.` : `Every drug on the dermatology drug chart, pp. 1–6 (${DL.D.length} drugs), with each line's source.`}</p>
     <div class="dlmodes" role="radiogroup" aria-label="How to study the list">
       ${MODES.map(([k, l]) => `<button type="button" role="radio" data-dl="mode" data-k="${k}" aria-checked="${st.mode === k}" tabindex="${st.mode === k ? 0 : -1}">${esc(l)}</button>`).join('')}</div>
     <p class="dlhow" id="dlhow">${esc(mode[2])}</p>
@@ -826,16 +853,17 @@ const DRUGLIST_UI = (() => {
         ${sel('dldz', 'Disease', opt('', 'All diseases', st.dz) + Object.entries(DL.DISEASES).map(([k, v]) => opt(k, v, st.dz)).join(''))}
         ${sel('dlcls', 'Class', opt('', 'All classes', st.cls) + Object.entries(DL.CLASSES).map(([k, v]) => opt(k, v, st.cls)).join(''))}
         ${sel('dlpage', 'Chart page', opt('', 'All chart pages', st.page) + Object.entries(DL.PAGES).map(([k, v]) => opt(k, 'p. ' + k + ': ' + v, st.page)).join(''))}
-        ${sel('dlstatus', 'Scope', opt('', 'All scopes', st.status) + opt('exam', 'Exam 1 (taught + chart only)', st.status) + opt('taught', DL.SCOPES.taught, st.status) +
+        ${sel('dlstatus', 'Scope', isEye() ? opt('', 'All scopes', st.status) + opt('taught', DL.SCOPES.taught, st.status) + opt('chartonly', DL.SCOPES.chartonly, st.status)
+          : opt('', 'All scopes', st.status) + opt('exam', 'Exam 1 (taught + chart only)', st.status) + opt('taught', DL.SCOPES.taught, st.status) +
           opt('chartonly', DL.SCOPES.chartonly, st.status) + opt('optional', DL.SCOPES.optional, st.status))}
       </div>
       <div class="dlchips">
-        <button type="button" class="chip" data-dl="flag" data-f="boxed" aria-pressed="${st.boxed}">Has a boxed warning</button>
-        <button type="button" class="chip" data-dl="flag" data-f="photo" aria-pressed="${st.photo}">Photosensitizing</button>
+        ${isEye() ? '' : `<button type="button" class="chip" data-dl="flag" data-f="boxed" aria-pressed="${st.boxed}">Has a boxed warning</button>
+        <button type="button" class="chip" data-dl="flag" data-f="photo" aria-pressed="${st.photo}">Photosensitizing</button>`}
         <button type="button" class="chip" data-dl="flag" data-f="hasq" aria-pressed="${st.hasq}">Has bank questions</button>
       </div>
     </section>`}
-    <details class="dlnote"><summary>About this list and the chart</summary>
+    ${isEye() ? aboutEye() : `    <details class="dlnote"><summary>About this list and the chart</summary>
       <p>Each professor's slides and recording decide what is examinable for that professor's material (Dr. Smith's lectures; Dr. Sikazwe's assigned pages); the chart is a guide. Each line names its source: <span class="dlsrc smith">Dr. Smith · slide</span> <span class="dlsrc sikazwe">Dr. Sikazwe · DPAW page</span> <span class="dlsrc chart">Drug chart · page</span></p>
       <p>Targets and mechanisms come from Reference, "Drug targets: write it first, then check". Not here: the lice and scabies page (chart p. 7), which is not in the Exam 1 lectures (it is shown in Chart, the original pages). Brand names are practice only: Dr. Smith, 10/29: ${esc(DL.BRAND_QUOTE.t)} (T 618–621). Every question uses the generic name except the brand kind.</p>
       <p>Topical steroids: the chart's indication cell ends "numerous others", so a condition a steroid could plausibly treat (sunburn itch, for example) is never offered as a wrong option; the remaining options are false by the slides, with the reason shown after answering.</p>
@@ -843,10 +871,19 @@ const DRUGLIST_UI = (() => {
       <p>Scope: ${Object.entries(DL.SCOPE_WHY).map(([k, t]) => `<b>${esc(DL.SCOPES[k])}</b>: ${esc(t)}`).join(' ')}</p>
       <p>Your bank answers on each card: read from this profile's saved answers to the question bank (multiple choice, so recognition), through a reviewed map of which question tests which fact; the Drug list itself saves nothing.</p>
       <ul>${DL.CHART_NOTES.map(n => `<li>${esc(n)}</li>`).join('')}</ul>
-      <p>Quiz me coverage, per kind (of ${DL.D.length} drugs):</p><ul class="dlcov">${coverageList()}</ul></details>
+      <p>Quiz me coverage, per kind (of ${DL.D.length} drugs):</p><ul class="dlcov">${coverageList()}</ul></details>`}
     ${st.mode === 'browse' ? chartSummary() : ''}
     ${chart ? '<div id="dlcview"></div>' : `<p class="dlcount" id="dlcount" aria-live="polite"></p>
     <div id="dllist"></div>`}`;
+  }
+  function aboutEye(){
+    return `<details class="dlnote"><summary>About this list and the chart</summary>
+      <p>The ophthalmic drug chart (4 pages) is a guide; Dr. Smith's eye slides and recordings (Lectures 9–10) decide what is examinable. Every chart field (generic and brand names as printed, Rx/OTC, pharmacological class, chemical class, indication) is copied from the chart page; open Chart to see the page itself. Each line names its source: <span class="dlsrc smith">Dr. Smith · Reference section, slide</span> <span class="dlsrc chart">Drug chart · page</span>.</p>
+      <p>Targets and mechanisms are read from the Reference tab's eye tables (Glaucoma drugs by inflow and outflow; Allergic conjunctivitis drugs; Dry eye drugs). The Reference table's own words are the mechanism; the target is its short form. Carboxymethylcellulose, hydroxypropyl cellulose, artificial tears and loteprednol have no stated molecular target, so they get no Target question. Brand names are practice only: Dr. Smith, 10/29: ${esc(DL.BRAND_QUOTE.t)} (T 618–621).</p>
+      <p>Quiz me asks only what the cards state: a wrong option is another drug's value that is not also true for this drug (a combination product and its components are never each other's wrong options). An indication has only three values (glaucoma, allergic conjunctivitis, dry eye), so an Indication question has three options.</p>
+      <p>Scope: ${Object.entries(DL.SCOPE_WHY).map(([k, t]) => `<b>${esc(DL.SCOPES[k])}</b>: ${esc(t)}`).join(' ')}</p>
+      <ul>${DL.CHART_NOTES.map(n => `<li>${esc(n)}</li>`).join('')}</ul>
+      <p>Quiz me coverage, per kind (of ${DL.D.length} drugs):</p><ul class="dlcov">${coverageList()}</ul></details>`;
   }
   let COV = null;
   function coverageList(){
@@ -861,7 +898,8 @@ const DRUGLIST_UI = (() => {
   }
 
   /* ---------- Your bank answers: read-only status per drug and field (drugfacts.js) ---------- */
-  const DF = typeof DRUGFACTS !== 'undefined' ? DRUGFACTS : null;
+  const DF0 = typeof DRUGFACTS !== 'undefined' ? DRUGFACTS : null;
+  let DF = isEye() ? null : DF0;
   let QBYID = null;
   const qById = id => { if (!QBYID) { QBYID = {}; for (const q of QUESTIONS) QBYID[q.id] = q; } return QBYID[id]; };
   // the profile on screen: the core's in-memory progress (read, never written)
@@ -1023,6 +1061,29 @@ const DRUGLIST_UI = (() => {
       else if (t.classList.contains('dlrowd')) st.ropen[t.dataset.id] = t.open;
     }, true);
   }
+  /* the switch: each list keeps its own filters, quiz and this visit's ratings (page memory) while the other is shown */
+  const stash = {}, STKEYS = ['q', 'dz', 'cls', 'page', 'status', 'boxed', 'photo', 'hasq', 'kinds', 'rfield', 'cpage', 'chit', 'cq', 'cfrom', 'gopen', 'ropen', 'zoom'];
+  function setList(key, keep){
+    const nl = key === 'eye' && EYE ? EYE : DERM;
+    if (nl === LIST) return;
+    const o = {quiz, events: events.slice(), rated: Object.assign({}, rated), checked: [...checked], typed: Object.assign({}, typed)};
+    STKEYS.forEach(k => { o[k] = st[k]; });
+    stash[LIST.key] = o;
+    LIST = nl; DL = nl.DL; CB = nl.CB; CATS = isEye() ? CATS_EYE : CATS_DERM; CPAGES = cpagesOf(); DF = isEye() ? null : DF0;
+    TGT = null; QCACHE = null; COV = null; FCACHE = {};
+    events.length = 0; checked.clear(); Object.keys(rated).forEach(k => delete rated[k]); Object.keys(typed).forEach(k => delete typed[k]);
+    const s = stash[nl.key];
+    if (s) {
+      STKEYS.forEach(k => { st[k] = s[k]; });
+      quiz = s.quiz; s.events.forEach(e => events.push(e)); Object.assign(rated, s.rated); s.checked.forEach(k => checked.add(k)); Object.assign(typed, s.typed);
+    } else {
+      Object.assign(st, NOFILTER, {kinds: Object.assign(...Object.keys(DL.KINDS).map(k => ({[k]: k === 'target' || k === 'cls'}))), rfield: 'target',
+        cpage: 1, chit: null, cq: '', zoom: null, cfrom: null, gopen: {}, ropen: {}});
+      quiz = null;
+    }
+    if (isEye() && !RF_EYE.includes(st.rfield)) st.rfield = 'target';
+    if (!keep) try { localStorage.setItem(LKEY(), nl.key); } catch (e) { /* kept for this visit */ }
+  }
   function rerender(focusSel){
     const y = window.scrollY; render(pane); window.scrollTo(0, y);
     if (focusSel) { const f = pane.querySelector(focusSel); if (f) f.focus(); }
@@ -1031,6 +1092,7 @@ const DRUGLIST_UI = (() => {
     const b = e.target.closest('[data-dl]'); if (!b || b.tagName === 'INPUT' || b.disabled) return;
     const a = b.dataset.dl, id = b.dataset.id, d = id && DL.D.find(x => x.id === id);
     if (a === 'gall') { const o = b.dataset.o === '1'; CATS.forEach(c => { st.gopen[c.id] = o; }); pane.querySelectorAll('details.dlgrp').forEach(x => { x.open = o; }); return; }
+    if (a === 'list') { if (!LIST || LIST.key !== b.dataset.k) { setList(b.dataset.k); rerender(`[data-dl="list"][data-k="${LIST.key}"]`); window.scrollTo(0, 0); } return; }
     if (a === 'mode') { if (st.mode !== b.dataset.k) { st.mode = b.dataset.k; st.cfrom = null; rerender(`[data-dl="mode"][data-k="${st.mode}"]`); } }
     else if (a === 'rfield') { if (st.rfield !== b.dataset.k) { st.rfield = b.dataset.k; rerender(`[data-dl="rfield"][data-k="${st.rfield}"]`); } }
     else if (a === 'kind') { st.kinds[b.dataset.k] = !st.kinds[b.dataset.k]; if (!(quiz && quiz.frozen)) quiz = null; rerender(`[data-dl="kind"][data-k="${b.dataset.k}"]`); }
@@ -1182,6 +1244,7 @@ const DRUGLIST_UI = (() => {
   } catch (e) { console.error('The Drug list tab could not be added; the rest of the page is unaffected.', e); }
   /* the search box (search_ui.js) opens a drug in Browse: its folder and its line open, the filters cleared */
   function openDrug(id){
+    if (!DL.D.find(x => x.id === id)) { const other = isEye() ? DERM : EYE; if (other && other.DL.D.find(x => x.id === id)) setList(other.key, true); }
     const d = DL.D.find(x => x.id === id); if (!d || !pane) return false;
     Object.assign(st, NOFILTER, {mode: 'browse', q: d.name, cfrom: null});
     st.ropen[d.id] = true; st.gopen[catOf(d)] = true;

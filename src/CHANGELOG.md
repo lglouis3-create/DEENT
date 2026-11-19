@@ -8,6 +8,14 @@ characters.
 
 Every update adds its bullets here in the same commit that makes the change.
 
+## 2026-11-18 (Exam 3: eye, ear, mouth)
+- Exam 3 practice: Dr. Smith's eye lectures and Dr. Sikazwe's ear, mouth and eye chemistry.
+- New Exam 3 folders in Guides, Reference and Tell apart, with every slide of both decks explained.
+- Drug list: switch to the Eye list (42 drugs from the Ophthalmics chart) with quiz, recall and the chart pages.
+- Glossary: 246 new Exam 3 terms and an Exam 3 filter; eye questions starred by how likely Dr. Smith is to ask them.
+- Starred questions: pick an exam and a professor with two rows of buttons; Exam 2 includes its Exam 1 stars.
+- Exam 3 practice paper: 50 questions, 5 of them Dr. Smith's cumulative Exam 1 questions.
+
 ## 2026-11-13 (exam folders, slide links)
 - Guides, Tell apart and Reference are grouped in an Exam 1 and an Exam 2 folder; the current exam opens first.
 - Tell apart, Exam 2: one button for each comparison of the Diseases tab; Back returns to the list.
@@ -47,6 +55,7 @@ Every update adds its bullets here in the same commit that makes the change.
 - Number tiles say what each number measures; her polls open as self-tests.
 
 ## 2026-11-14 (questions reworded)
+- Fingertip-unit blanks now ask for the tube size to dispense, rounded up (60 g, 100 g, 60 g).
 - 128 questions reworded: patient cases and direct questions replace "which statement is correct".
 - No question or answer choice refers to a slide or the lecture any more.
 

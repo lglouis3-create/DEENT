@@ -6031,6 +6031,1220 @@ const GUIDE_HTML = `
 </div>
 </section>
 </details>
+
+<h2 class="gdeck" id="gdeck-eye">Eye: Glaucoma, Allergic Conjunctivitis and Dry Eye (Dr. Smith, 11/13 and 11/17; Exam 3)</h2>
+<details class="gdetails" id="gey">
+<summary>Dr. Smith: the eye lectures slide by slide, what the lecture adds (74 slides)</summary>
+<section class="gobj" id="gobj-ey-1">
+<h3>Dr. Smith, slide by slide &middot; Eye anatomy review and objectives &middot; slides 1&ndash;4</h3>
+<div class="gbar"><span>What the lecture adds (Eye 1&ndash;4)</span><b>The lecture limits the anatomy to what glaucoma, allergic conjunctivitis and dry eye need, and says the glaucoma pathophysiology cannot be followed without these structures</b><i>Eye slide 1, 2, 3, 4</i></div>
+<div class="gpt g2-block"><h5>The big picture: four topics (Eye slide 1)</h5>
+<p class="g2-status"><b>Status A</b> On the slide and complete; nothing added in lecture</p>
+</div>
+<div class="gpt g2-block"><h5>Section divider: eye anatomy review (Eye slide 2)</h5>
+<p class="g2-status"><b>Status A</b> On the slide and complete; nothing added in lecture</p>
+</div>
+<div class="gpt g2-block"><h5>Outline and objectives: why the anatomy is limited (Eye slide 3)</h5>
+<p class="g2-status"><b>Status E, B</b> Exam cue and reasoning added in lecture</p>
+<p>The slide lists three outline items (eye structure, tears, basic pharmacology) and three objectives. In lecture Dr. Smith explained the limits: there is far more eye anatomy than can be taught, so she covers only the structures that matter for the three diseases of this block, glaucoma, allergic conjunctivitis and dry eye. The structure objective is tied to glaucoma, because the pathophysiology is a story about where fluid is made and where it leaves. The tear objective is tied to dry eye: how tears are made and what they contain.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;So you do need to be able to describe these eye structures&rdquo; <span class='g2-src'>11/13 T@4338</span></p>
+<p>&ldquo;you understand this as we go into the pathology of glaucoma&rdquo; <span class='g2-src'>11/13 T@4467</span></p>
+<p>&ldquo;you need to understand how tears are made&rdquo; <span class='g2-src'>11/13 T@4568</span></p>
+<p>&ldquo;what they're made of, because that has importance in dry eye&rdquo; <span class='g2-src'>11/13 T@4615</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Anatomy of the eye: what each labeled structure does (Eye slide 4)</h5>
+<p class="g2-status"><b>Status B</b> Functions and shapes added; the slide only labels the figure</p>
+<p>The figure labels the sclera, choroid, retina, cornea, iris, pupil, lens, ciliary body, the anterior and posterior chambers, the vitreous chamber and the optic nerve. The lecture supplies what each does. The lens focuses light on the retina, where rods and cones sense it, and their nerve fibers bundle into the optic nerve, which carries the image to the brain. The choroid is full of blood vessels, so the retina has the blood supply it needs. The sclera is the firm white coat and continues forward as the clear cornea. The ciliary body is a ring behind the iris that holds the lens through suspensory ligaments (she said "suspension ligaments"; the slide label reads suspensory ligament). The back chamber holds gelatinous vitreous; the front chamber holds a thinner fluid that matters for glaucoma (Eye slide 14).</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;It's a muscular, it's made of smooth muscle covered by epithelial tissue&rdquo; <span class='g2-src'>11/13 T@7285</span></p>
+<p>&ldquo;the rods and cones in the retina need a lot of blood to function&rdquo; <span class='g2-src'>11/13 T@6864</span></p>
+<p>&ldquo;The cornea is really an extension of the sclera. It's just not opaque.&rdquo; <span class='g2-src'>11/13 T@8336</span></p>
+<p>&ldquo;the lens is, is being held in place by these ligaments&rdquo; <span class='g2-src'>11/13 T@7601</span></p>
+<p>&ldquo;how it's made and its importance in glaucoma&rdquo; <span class='g2-src'>11/13 T@8128</span></p></div>
+</div>
+</section>
+
+<section class="gobj" id="gobj-ey-2">
+<h3>Dr. Smith, slide by slide &middot; Lacrimal system and tears &middot; slides 5&ndash;6</h3>
+<div class="gbar"><span>What the lecture adds (Eye 5&ndash;6)</span><b>The lecture explains how tears are made, what they contain and where they drain, which later explains dry eye and why eye drops reach the bloodstream</b><i>Eye slide 5, 6</i></div>
+<div class="gpt g2-block"><h5>Anatomy of the lacrimal system: drainage and the counseling point (Eye slide 5)</h5>
+<p class="g2-status"><b>Status B, C</b> Reason for drainage and a counseling point added; the slide only labels the parts</p>
+<p>The slide labels the lacrimal gland parts, ducts, puncta, canaliculi, lacrimal sac and nasolacrimal duct. Tears are made all the time, released under the upper eyelid and spread by blinking. They leave the eye through the puncta, then the lacrimal sac and nasolacrimal duct, and empty into the back of the nose; this is why the nose runs or feels stuffy during crying. The same route explains why eye drops can act on the whole body: the drop drains into the nose, whose mucous membranes have a rich blood supply, so some drug is absorbed systemically. Her counseling point is to press gently at the inner corner of the eye, against the nose, after the drop, which blocks that drainage. It matters for glaucoma drugs with cardiovascular effects (Eye slide 20), because many glaucoma patients are older and may already have heart conditions.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;I don't need you to know all the different kinds of glands&rdquo; <span class='g2-src'>11/13 T@9483</span></p>
+<p>&ldquo;your mucous membranes of your nose are highly vascularized&rdquo; <span class='g2-src'>11/13 T@15423</span></p>
+<p>&ldquo;just gently push down, you will stop that drainage&rdquo; <span class='g2-src'>11/13 T@16079</span></p>
+<p>&ldquo;that's a, a really good counseling point when we give patients eye drops&rdquo; <span class='g2-src'>11/13 T@16254</span></p>
+<p>&ldquo;some of our older patients with glaucoma, they might have heart conditions already&rdquo; <span class='g2-src'>11/13 T@17809</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Tears: three layers, their sources and their job (Eye slide 6)</h5>
+<p class="g2-status"><b>Status B, C</b> Detail on each layer and the link to dry eye added</p>
+<p>The slide names three layers: a lipid layer from the meibomian glands at the eyelid margin, an aqueous layer (about 98% of the tear film) from the main and accessory lacrimal glands, and a mucin layer from conjunctival goblet cells. The lecture adds that the aqueous layer is the largest part of the tears, that tears coat the conjunctiva and cornea to keep the eye moist, and that their nutrients, enzymes and immunoglobulins keep those tissues healthy and help fight infection. The clinical link is dry eye: tear replacement products are built to mimic these components, and she said tear formation in dry eye would be covered later in the block. She named the lipid-producing glands with a garbled pronunciation; the slide spells meibomian.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;the anterior layer is composed mostly of lipids&rdquo; <span class='g2-src'>11/13 T@12547</span></p>
+<p>&ldquo;the largest component of our tears is this aqueous part of the tears&rdquo; <span class='g2-src'>11/13 T@13153</span></p>
+<p>&ldquo;help to fight infection, and keep our eyes lubricated&rdquo; <span class='g2-src'>11/13 T@13879</span></p>
+<p>&ldquo;we will use products for dry eye that are like tear replacements&rdquo; <span class='g2-src'>11/13 T@13479</span></p></div>
+</div>
+</section>
+
+<section class="gobj" id="gobj-ey-3">
+<h3>Dr. Smith, slide by slide &middot; Basic pharmacology of the eye &middot; slides 7&ndash;8</h3>
+<div class="gbar"><span>What the lecture adds (Eye 7&ndash;8)</span><b>The slides recap which eye structures respond to adrenergic and cholinergic stimulation and which drug classes act on the eye; the lecture treats them as a reminder and takes up only some of the drugs</b><i>Eye slide 7, 8</i></div>
+<div class="gpt g2-block"><h5>Adrenergic and cholinergic effects on the pupil and ciliary body (Eye slide 7)</h5>
+<p class="g2-status"><b>Status C</b> Clinical use added; the mechanisms are read from the slide</p>
+<p>The slide pairs each structure with its receptor effect: alpha-1 stimulation of the dilator muscle dilates the pupil; muscarinic stimulation of the pupillary sphincter constricts it; muscarinic stimulation contracts the ciliary body, increasing accommodation; adrenergic stimulation relaxes the ciliary muscle for far vision and produces aqueous humor. Dr. Smith did not walk through these effects. She presented the slide as a reminder of the adrenergic and cholinergic aspects of the eye and gave one clinical use: eye doctors use these drug actions to dilate the pupil. She also tied dilating drops to systemic absorption (see Eye slide 5). The last item, that adrenergic stimulation produces aqueous humor, connects to the receptors on the ciliary body shown at Eye slide 16.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;eye doctors will take advantage of to cause, you know, your eye dilation&rdquo; <span class='g2-src'>11/13 T@14328</span></p>
+<p>&ldquo;remind yourselves of the, the cholinergic and adrenergic&rdquo; <span class='g2-src'>11/13 T@14742</span></p>
+<p>&ldquo;you actually get some systemic absorption of medications given topically to the eye&rdquo; <span class='g2-src'>11/13 T@15237</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Pharmacology of the eye: the drug class chart (Eye slide 8)</h5>
+<p class="g2-status"><b>Status C</b> Scope added: only some of these drugs are taught</p>
+<p>The chart splits eye drugs into cholinergic and adrenergic, then into agonists and antagonists. Cholinergic agonists: echothiophate iodide (indirect, an acetylcholinesterase inhibitor); acetylcholine, carbachol and pilocarpine (direct). Cholinergic antagonists: atropine, homatropine, cyclopentolate and tropicamide. Adrenergic agonists: phenylephrine (alpha-1); brimonidine and apraclonidine (alpha-2); epinephrine and dipivefrin (alpha and beta). Adrenergic antagonists: beta blockers, nonselective (timolol, levobunolol, metipranolol, carteolol) and selective (betaxolol). The lecture adds only a scope statement: some of these drugs are covered, not all. The glaucoma drugs on the chart are the ones taught (Eye slide 19, Eye slide 23, Eye slide 28 and the outflow drugs after them). The transcripts do not discuss atropine, homatropine, cyclopentolate, tropicamide, epinephrine or dipivefrin.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;We're gonna be talking about some of these drugs, not all of them.&rdquo; <span class='g2-src'>11/13 T@14869</span></p>
+<p>&ldquo;And this table also is giving you an algorithm&rdquo; <span class='g2-src'>11/13 T@14674</span></p></div>
+</div>
+</section>
+
+<section class="gobj" id="gobj-ey-4">
+<h3>Dr. Smith, slide by slide &middot; Glaucoma: outline and objectives &middot; slides 9&ndash;11</h3>
+<div class="gbar"><span>What the lecture adds (Eye 9&ndash;11)</span><b>The objectives set the frame for the whole glaucoma topic: pathophysiology first, then mechanisms, side effects and sorting each drug as a production inhibitor or an outflow enhancer</b><i>Eye slide 9, 10, 11</i></div>
+<div class="gpt g2-block"><h5>Section divider: glaucoma (Eye slide 9)</h5>
+<p class="g2-status"><b>Status A</b> On the slide and complete; nothing added in lecture</p>
+</div>
+<div class="gpt g2-block"><h5>Glaucoma outline: why pathophysiology comes first (Eye slide 10)</h5>
+<p class="g2-status"><b>Status B</b> Reasoning for the order of the outline added</p>
+<p>The slide lists the pathophysiology and then the drug classes in order: beta receptor antagonists, alpha-2 agonists, M3 agonists and cholinesterase inhibitors, carbonic anhydrase inhibitors, prostaglandin agonists, a Rho kinase inhibitor and combination products. Dr. Smith said she starts with the disease because the reason for each drug can only be understood from the cause of the condition. She noted that there are quite a few classes with several drugs each, and she pointed students to the eye drug list used alongside the lecture. She said they would spend quite a bit of time on the pathophysiology.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;you really have to understand the pathology of the condition&rdquo; <span class='g2-src'>11/13 T@18997</span></p>
+<p>&ldquo;we know what drugs we have and why they work&rdquo; <span class='g2-src'>11/13 T@42408</span></p>
+<p>&ldquo;quite a few, uh, classes and several drugs within each class&rdquo; <span class='g2-src'>11/13 T@18334</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Glaucoma learning objectives: inflow and outflow, and what she tests (Eye slide 11)</h5>
+<p class="g2-status"><b>Status E, B</b> Exam cues and vocabulary added; the slide uses different words</p>
+<p>The slide asks students to classify drugs as production inhibitors or outflow enhancers. In lecture those two groups are called decreasing inflow and increasing outflow. Inflow is the production of aqueous humor; outflow is its drainage. She told students to be able to sort every drug into one of the two. At the end of the 11/13 lecture, answering a question about Exam 3, she said she has 5 questions<span class="g2-tonly" title="Transcript only: not on the slide">Transcript-only, verify against slide</span> and that they are cumulative, so Exam 1 material is included; the focus is pathophysiology and mechanisms. She also said she likes serious side effects such as black box warnings. Neither the deck nor the transcripts name a black box warning for any glaucoma drug.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;as you study your drugs, be sure you can categorize them&rdquo; <span class='g2-src'>11/13 T@19439</span></p>
+<p>&ldquo;Inflow is the technical term in the world of eyeballs&rdquo; <span class='g2-src'>11/13 T@28180</span></p>
+<p>&ldquo;outflow is the technical term talking about the drainage.&rdquo; <span class='g2-src'>11/13 T@28318</span></p>
+<p>&ldquo;So focus on pathophys and then focus on mechanisms.&rdquo; <span class='g2-src'>11/13 T@61120</span></p>
+<p>&ldquo;I always like scary side effects like black box warnings.&rdquo; <span class='g2-src'>11/13 T@61190</span></p></div>
+</div>
+</section>
+
+<section class="gobj" id="gobj-ey-5">
+<h3>Dr. Smith, slide by slide &middot; What glaucoma is: open-angle and angle-closure &middot; slides 12&ndash;14</h3>
+<div class="gbar"><span>What the lecture adds (Eye 12&ndash;14)</span><b>Pressure from fluid that cannot leave the eye damages the optic nerve; the goal of treatment is to lower the intraocular pressure</b><i>Eye slide 12, 13, 14</i></div>
+<div class="gpt g2-block"><h5>Section divider: pathophysiology of glaucoma (Eye slide 12)</h5>
+<p class="g2-status"><b>Status A</b> On the slide and complete; nothing added in lecture</p>
+</div>
+<div class="gpt g2-block"><h5>What is glaucoma? Open-angle versus angle-closure (Eye slide 13)</h5>
+<p class="g2-status"><b>Status B, C, D</b> Reasoning, clinical context and one wording difference</p>
+<p>Glaucoma raises the pressure inside the eyeball, and over time the pressure damages the optic nerve, so vision loss shows up late. Open-angle glaucoma (POAG) has no symptoms, so the pressure check at an eye exam finds it. If pressure climbs from the patient's baseline, the doctor shortens the recheck interval, for example to 6 months or 3 months <span class="g2-tonly" title="Transcript only: not on the slide">Transcript-only, verify against slide</span>. The angle is where aqueous humor leaves the front of the eye; in POAG it is open but drains less well. In angle-closure glaucoma (PACG) the exit is blocked, pressure rises very quickly and pain is severe, so it is a medical emergency. Both are treated by lowering the pressure.</p>
+<div class="g2-note"><span class="g2-k">What causes angle closure: slide wording versus lecture examples</span><p>Eye slide 13 ties PACG to the shape of the eye and how it sits in the socket, and she repeated it (11/13 T@20737). She then described a typical event as a blow to the eye with swelling, or a chemical exposure, after which the iris sticks and the exit closes (11/13 T@23787). An exam written from her lecture would key the shape of the eye as the cause, because she said it directly and the slide prints it; the injury is her example of how closure occurs.</p></div>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;It takes sometimes a while for the optic nerve damage to occur&rdquo; <span class='g2-src'>11/13 T@19868</span></p>
+<p>&ldquo;you don't usually feel anything with open-angle glaucoma&rdquo; <span class='g2-src'>11/13 T@21116</span></p>
+<p>&ldquo;all of us should be going to the eye doctor on an annual basis&rdquo; <span class='g2-src'>11/13 T@21200</span></p>
+<p>&ldquo;If they start seeing your pressure climbing from your baseline&rdquo; <span class='g2-src'>11/13 T@22372</span></p>
+<p>&ldquo;That's a medical emergency. People will often feel pain with that&rdquo; <span class='g2-src'>11/13 T@23470</span></p>
+<p>&ldquo;you've got to decrease that intraocular pressure&rdquo; <span class='g2-src'>11/13 T@24231</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Normal drainage, open-angle and angle-closure figure (Eye slide 14)</h5>
+<p class="g2-status"><b>Status B, C</b> The path of aqueous humor and the pressure injury sequence added</p>
+<p>Panel A of the figure shows normal drainage, panel B open-angle glaucoma (trabecular meshwork dysfunction with an open angle) and panel C angle-closure glaucoma (forward bowing of the iris blocking the meshwork). The lecture gives the sequence. The ciliary body makes aqueous humor continuously; it passes the lens, goes through the pupil into the anterior chamber and leaves at the angle. Because it is made without stopping, it must drain or pressure rises. Extra pressure in the front of the eye pushes back toward the vitreous chamber and the optic nerve, which is the injury. The eye doctor's pressure test touches the cornea to read the pressure of the anterior chamber. In angle closure, swelling or a displaced iris blocks the exit and pressure rises fast. She named a laser opening as the usual emergency treatment. Her explanation of the two drainage routes is written at Eye slide 15.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;The body, the ciliary body doesn't stop making it&rdquo; <span class='g2-src'>11/13 T@26726</span></p>
+<p>&ldquo;you have to have that aqueous humor draining out here&rdquo; <span class='g2-src'>11/13 T@26806</span></p>
+<p>&ldquo;transfer pressure to your optic nerve, damaging that nerve eventually&rdquo; <span class='g2-src'>11/13 T@27603</span></p>
+<p>&ldquo;that pressure elevates very, very quickly in that anterior chamber&rdquo; <span class='g2-src'>11/13 T@28686</span></p>
+<p>&ldquo;they'll go in with a laser and drill a hole&rdquo; <span class='g2-src'>11/13 T@29209</span></p>
+<p>&ldquo;it is um adhering to the lens right here&rdquo; <span class='g2-src'>11/13 T@28996</span></p></div>
+</div>
+</section>
+
+<section class="gobj" id="gobj-ey-6">
+<h3>Dr. Smith, slide by slide &middot; Aqueous humor flow and the receptors that control it &middot; slides 15&ndash;16</h3>
+<div class="gbar"><span>What the lecture adds (Eye 15&ndash;16)</span><b>Aqueous humor leaves by two routes, and the ciliary body, trabecular meshwork and their receptors and enzyme are the targets of the glaucoma drugs</b><i>Eye slide 15, 16</i></div>
+<div class="gpt g2-block"><h5>Aqueous humor flow: the two drainage routes (Eye slide 15)</h5>
+<p class="g2-status"><b>Status B, C</b> Which route is larger, where each one goes, and a correction to her wording</p>
+<p>This second figure labels the trabecular meshwork, Schlemm's canal, the aqueous flow, the ciliary body, iris, lens, sclera and chambers. She said she added it as another image in case it shows the structures better, and that no textbook figure shows the routes well. The lecture sorts the outflow into two routes. The main route passes through the spongy trabecular meshwork into Schlemm's canal, which empties into blood vessels. The minor route is uveoscleral: fluid seeps between the uvea (the ciliary body, its ligaments and the iris) and the sclera, and disperses through those tissues. The two do not drain into the same place. Her wording slipped in places: she said "tears" where she meant aqueous humor, and described the uveoscleral route once as between the sclera and the ciliary body and once as between the conjunctiva and the uvea. The slide labels, and her first description (uvea and sclera), agree.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;the most important outflow route is through that trabecular meshwork and Schlem's canal&rdquo; <span class='g2-src'>11/13 T@32688</span></p>
+<p>&ldquo;The Schlem's canal actually empties into, uh, uh, uh, blood vessels&rdquo; <span class='g2-src'>11/13 T@32398</span></p>
+<p>&ldquo;It's just kind of dribbling through where the tissues meet.&rdquo; <span class='g2-src'>11/13 T@31518</span></p>
+<p>&ldquo;No, no, they don't drain into the same place.&rdquo; <span class='g2-src'>11/13 T@32352</span></p>
+<p>&ldquo;There are actually two ways that our tears drain out of our eye&rdquo; [she said 'tears': aqueous humor] <span class='g2-src'>11/13 T@29450</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Receptors and enzymes involved in aqueous humor (Eye slide 16)</h5>
+<p class="g2-status"><b>Status B, E</b> Which structure carries which target, and the inflow versus outflow sort</p>
+<p>The figure zooms into the ciliary body and labels beta, alpha-2 and alpha-1 receptors, carbonic anhydrase, the ciliary blood supply, M3 and beta-2 receptors in the meshwork area, the uveoscleral outflow and the episcleral vein. In lecture: beta and alpha-2 receptors and carbonic anhydrase sit on the ciliary body epithelium, the cells that make aqueous humor; alpha-1 receptors are on the ciliary blood vessels; muscarinic M3 receptors, and possibly beta-2, are in the trabecular meshwork area. How the receptors produce aqueous humor is not well known, but the role of carbonic anhydrase is fairly well understood. All of them are drug targets. Blocking beta receptors, activating alpha-2 receptors and inhibiting carbonic anhydrase each lower production. The other group of drugs relaxes the stiff meshwork so more fluid flows out. She asked the class which group affects inflow and which outflow, and asked them to mark each drug on the drug table.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;how some of these receptors are working to produce aqueous humor&rdquo; <span class='g2-src'>11/13 T@36785</span></p>
+<p>&ldquo;these receptors and the carbonic anhydrase enzyme are targets for the drugs&rdquo; <span class='g2-src'>11/13 T@36962</span></p>
+<p>&ldquo;there's muscarinic receptors in this trabecular mesh meshwork and maybe some beta 2 receptors.&rdquo; <span class='g2-src'>11/13 T@38384</span></p>
+<p>&ldquo;make it less stiff, so that more of the aqueous humor can flow out&rdquo; <span class='g2-src'>11/13 T@39537</span></p>
+<p>&ldquo;you should probably mark on your drug table which drugs affect inflow&rdquo; <span class='g2-src'>11/13 T@40532</span></p></div>
+</div>
+</section>
+
+<section class="gobj" id="gobj-ey-7">
+<h3>Dr. Smith, slide by slide &middot; Beta receptor antagonists &middot; slides 17&ndash;20</h3>
+<div class="gbar"><span>What the lecture adds (Eye 17&ndash;20)</span><b>Beta receptor antagonists are inflow drugs: they lower aqueous humor production and have little effect on outflow, and because they reach the bloodstream their systemic effects matter</b><i>Eye slide 17, 18, 19, 20</i></div>
+<div class="gpt g2-block"><h5>Section divider: beta receptor antagonists (Eye slide 17)</h5>
+<p class="g2-status"><b>Status A</b> On the slide and complete; nothing added in lecture</p>
+</div>
+<div class="gpt g2-block"><h5>Beta receptor antagonists: mechanism and effect (Eye slide 18)</h5>
+<p class="g2-status"><b>Status B, C</b> How the effect was found and what is not known</p>
+<p>The slide says these drugs block the beta-adrenergic receptor on the ciliary body, reduce aqueous humor production and have not much effect on outflow, with the mechanism not fully understood. The lecture adds how the use was found: when researchers studying aqueous humor production stimulated these receptors they got more aqueous humor, and when they blocked them production fell, which suggested a glaucoma treatment. She also said the medications she was about to discuss are given topically; the oral carbonic anhydrase inhibitors (Eye slide 28) are the exception she described later. She states the outflow point more strongly than the slide: they do not affect outflow. They are therefore production (inflow) drugs, which is how she asks that each class be sorted (Eye slide 11).</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;All of these medications we're going to talk about are given topically.&rdquo; <span class='g2-src'>11/13 T@43602</span></p>
+<p>&ldquo;When they agonized these receptors, they got more aqueous humor&rdquo; <span class='g2-src'>11/13 T@44133</span></p>
+<p>&ldquo;they got a decrease in the production of aqueous humor&rdquo; <span class='g2-src'>11/13 T@44241</span></p>
+<p>&ldquo;They do not affect outflow, OK.&rdquo; <span class='g2-src'>11/13 T@44430</span></p>
+<p>&ldquo;the mechanism of action is really not fully understood, but that is OK&rdquo; <span class='g2-src'>11/13 T@44491</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Beta receptor antagonist examples: selectivity, equal effect and the gel (Eye slide 19)</h5>
+<p class="g2-status"><b>Status B, C</b> Choosing between the drugs and extra details added</p>
+<p>The slide groups the drugs by selectivity: timolol and levobunolol (which has some alpha-adrenergic effects) are nonspecific, betaxolol is relatively beta-1 selective, and carteolol is nonspecific with intrinsic sympathomimetic activity. The lecture says the groups do not differ in how well they lower pressure, so the choice may rest on side effects or what insurance covers. She added that levobunolol, because of its alpha-adrenergic effects, may work better after cataract surgery <span class="g2-tonly" title="Transcript only: not on the slide">Transcript-only, verify against slide</span>, and that timolol is available as a gel given once a day, easier for patients than drops needed several times a day <span class="g2-tonly" title="Transcript only: not on the slide">Transcript-only, verify against slide</span>. She also named a drug no longer used, which she pronounced "metopranolol"; the Eye slide 8 chart spells metipranolol.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;we don't see across this group of medications, a real difference in their effectiveness&rdquo; <span class='g2-src'>11/13 T@45418</span></p>
+<p>&ldquo;does the patient's insurance pay for it or not&rdquo; <span class='g2-src'>11/13 T@45748</span></p>
+<p>&ldquo;because it has some alpha adrenergic effects, it may be more effective&rdquo; <span class='g2-src'>11/13 T@45835</span></p>
+<p>&ldquo;Timolol, it comes in a gel formulation&rdquo; <span class='g2-src'>11/13 T@46338</span></p>
+<p>&ldquo;once a day, which is really nice for patients&rdquo; <span class='g2-src'>11/13 T@46475</span></p>
+<p>&ldquo;we used to have another one, metopranolol&rdquo; <span class='g2-src'>11/13 T@45239</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Beta receptor antagonist side effects: why a topical drop acts on the body (Eye slide 20)</h5>
+<p class="g2-status"><b>Status B, C</b> Mechanism of the systemic effects and what to do about them</p>
+<p>The slide lists the effects: ocular (stinging and burning, decreased corneal sensitivity, diplopia, blurred or cloudy vision, decreased night vision, ptosis); cardiac (bradycardia, hypotension); respiratory (bronchospasm in asthmatics); and other (headache, insomnia, taste perversion, depression, impotence). The lecture explains that the drug is given in the eye but still absorbed, so the nonspecific blockers act on beta receptors elsewhere: the heart effects and, through beta-2 blockade, bronchospasm. That is why she says to be careful which of these drugs an asthmatic receives. For a patient at cardiac risk she gave two options: a more selective drug, or pressing at the inner corner of the eye to cut absorption (Eye slide 5). She said headache and some other effects may be systemic or may come from altered vision.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;stinging and burning is probably the most common thing&rdquo; <span class='g2-src'>11/13 T@46823</span></p>
+<p>&ldquo;because they're not specific and they're going systemic&rdquo; <span class='g2-src'>11/13 T@47112</span></p>
+<p>&ldquo;some of these can cause some bradycardia and hypotension&rdquo; <span class='g2-src'>11/13 T@47054</span></p>
+<p>&ldquo;those could cause bronchospasms in your asthmatics&rdquo; <span class='g2-src'>11/13 T@47223</span></p>
+<p>&ldquo;Use a more selective drug, right?&rdquo; <span class='g2-src'>11/13 T@48238</span></p>
+<p>&ldquo;Really important counseling point.&rdquo; <span class='g2-src'>11/13 T@48433</span></p></div>
+</div>
+</section>
+
+<section class="gobj" id="gobj-ey-8">
+<h3>Dr. Smith, slide by slide &middot; Alpha-2 agonists &middot; slides 21&ndash;24</h3>
+<div class="gbar"><span>What the lecture adds (Eye 21&ndash;24)</span><b>Alpha-2 agonists are inflow drugs; brimonidine has two added effects, and apraclonidine and brimonidine are used differently</b><i>Eye slide 21, 22, 23, 24</i></div>
+<div class="gpt g2-block"><h5>Section divider: alpha-2 agonists (Eye slide 21)</h5>
+<p class="g2-status"><b>Status A</b> On the slide and complete; nothing added in lecture</p>
+</div>
+<div class="gpt g2-block"><h5>Alpha-2 agonists: mechanism and brimonidine's two added effects (Eye slide 22)</h5>
+<p class="g2-status"><b>Status B, C</b> Main effect and the two extra effects explained, with what is unknown</p>
+<p>The slide says these drugs bind alpha-2 receptors on the ciliary body, lower the rate of aqueous humor production, and that brimonidine also gives some increase in uveoscleral outflow and is neuroprotective. In lecture the main mechanism is decreased inflow, as with the beta receptor antagonists; why alpha-2 stimulation lowers production is not known. The two added effects are specific to brimonidine. It increases the uveoscleral route, one of few drugs that help that route, and it does not act on the trabecular meshwork pathway. She offered possible reasons, relaxed smooth muscle or compressed blood vessels, and said they do not know. It also seems to protect the optic nerve, seen in animal studies and assumed to occur in humans.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;We don't really know why, but we know it works&rdquo; <span class='g2-src'>11/13 T@48962</span></p>
+<p>&ldquo;this medication also seems to help increase the uveosclelero outflow&rdquo; <span class='g2-src'>11/13 T@49177</span></p>
+<p>&ldquo;Maybe it is causing a little bit of relaxation of the smooth muscle.&rdquo; <span class='g2-src'>11/13 T@49468</span></p>
+<p>&ldquo;This medication seems to protect somehow the health of the optic nerve.&rdquo; <span class='g2-src'>11/13 T@49748</span></p>
+<p>&ldquo;one of our few drugs that actually helps with the uveous scalero outflow&rdquo; [she said 'uveous scalero': uveoscleral] <span class='g2-src'>11/13 T@50435</span></p>
+<p>&ldquo;It doesn't affect the, the trabecular meshwork schlims canal pathway&rdquo; <span class='g2-src'>11/13 T@50353</span></p>
+<p>&ldquo;we are assuming it's happening in humans as well&rdquo; <span class='g2-src'>11/13 T@49869</span></p>
+<p>&ldquo;their main mechanism is decreasing inflow by agonizing the alpha 2 receptors&rdquo; <span class='g2-src'>11/13 T@52697</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Alpha-2 agonist examples: which one for which use (Eye slide 23)</h5>
+<p class="g2-status"><b>Status C, B</b> The slide lists two names; the lecture gives the use of each</p>
+<p>The slide lists apraclonidine and brimonidine. Dr. Smith separated their uses. Apraclonidine is used for treatment after eye surgery such as cataract surgery, because it keeps intraocular pressure low then. It is not used for long-term glaucoma treatment because it can cause an allergic-type response. Brimonidine is the better choice for chronic use, because it lacks that allergy profile and has the two added effects from Eye slide 22. Both still lower pressure mainly by decreasing inflow. She repeated this twice during the lecture and asked what brimonidine's two added effects were.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;we will often use apriclonidine, um, For postoperative treatment again&rdquo; [she said 'apriclonidine': apraclonidine] <span class='g2-src'>11/13 T@51227</span></p>
+<p>&ldquo;it's really good at helping with keeping intraocular pressure low after eye surgery&rdquo; <span class='g2-src'>11/13 T@51415</span></p>
+<p>&ldquo;because it seems to cause an allergic type response&rdquo; <span class='g2-src'>11/13 T@52199</span></p>
+<p>&ldquo;Brimonidine would be your better choice.&rdquo; <span class='g2-src'>11/13 T@51660</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Alpha-2 agonist side effects (Eye slide 24)</h5>
+<p class="g2-status"><b>Status B, C, D</b> Hallmark effects of each drug added; one placement difference</p>
+<p>The slide lists, for apraclonidine, ocular burning and stinging, blurred vision, foreign body sensation and pruritus, and systemic hypotension, oral dryness and allergic reaction; for brimonidine, ocular foreign body sensation and pruritus, and systemic oral dryness, dizziness, fatigue, somnolence and reduced blood pressure and pulse. The lecture calls foreign body sensation and itching a hallmark of brimonidine, though apraclonidine can cause them too, and the allergic reaction a significant problem with apraclonidine. The systemic effects are similar because both are alpha-2 agonists.</p>
+<div class="g2-note"><span class="g2-k">Where the allergic reaction is listed</span><p>Eye slide 24 lists "allergic reaction" under apraclonidine's systemic effects; in lecture she called it an allergic response in the eye (11/13 T@51344). Both tie it to apraclonidine, not brimonidine. An exam written from her lecture would key apraclonidine as the drug; she gave no statement that settles ocular versus systemic, so a category question would follow the slide list.</p></div>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;that allergic reaction is a significant problem&rdquo; <span class='g2-src'>11/13 T@53129</span></p>
+<p>&ldquo;That's a kind of a, a hallmark of brimonidine&rdquo; <span class='g2-src'>11/13 T@53332</span></p>
+<p>&ldquo;very similar to aproclonidine because they are both alpha 2 agonists&rdquo; [she said 'aproclonidine': apraclonidine] <span class='g2-src'>11/13 T@53660</span></p></div>
+</div>
+</section>
+
+<section class="gobj" id="gobj-ey-9">
+<h3>Dr. Smith, slide by slide &middot; Carbonic anhydrase inhibitors &middot; slides 25&ndash;29</h3>
+<div class="gbar"><span>What the lecture adds (Eye 25&ndash;29)</span><b>Carbonic anhydrase inhibitors are inflow drugs: they stop the enzyme that makes the solutes drawing water into the eye, and the same action in the kidney produces their main serious side effect</b><i>Eye slide 25, 26, 27, 28, 29</i></div>
+<div class="gpt g2-block"><h5>Section divider: carbonic anhydrase inhibitors (Eye slide 25)</h5>
+<p class="g2-status"><b>Status A</b> On the slide and complete; nothing added in lecture</p>
+</div>
+<div class="gpt g2-block"><h5>Carbonic anhydrase inhibitors: how aqueous humor is made and how the drugs stop it (Eye slide 26)</h5>
+<p class="g2-status"><b>Status B, D</b> The chain from enzyme to fluid added; one spoken version differs from the slide</p>
+<p>The slide says inhibiting carbonic anhydrase (CA) prevents conversion of CO2 and water to carbonic acid, reduces the sodium and bicarbonate available for secretion, and decreases ciliary body aqueous humor secretion. The lecture gives the chain. In the ciliary body cells the enzyme makes carbonic acid from carbon dioxide and water; bicarbonate then leaves the cells with sodium into the chamber, and water follows those solutes. That water flow is aqueous humor production, the inflow. Blocking the enzyme stops the first step, so less solute leaves and less water follows. She added that these drugs are also diuretics, to be covered again in the renal module in January <span class="g2-tonly" title="Transcript only: not on the slide">Transcript-only, verify against slide</span>.</p>
+<div class="g2-note"><span class="g2-k">What carbonic acid splits into: 11/13 versus 11/17 and the slides</span><p>On 11/13 she said carbonic acid dissociates into sodium and bicarbonate (11/13 T@55733). On 11/17 she said it dissociates to a hydrogen ion and bicarbonate (11/17 T@5420), and Eye slide 27 shows H+ and HCO3-. Eye slide 26 names sodium and bicarbonate as the solutes whose availability falls. An exam written from her lecture would key sodium and bicarbonate as the solutes that decrease (Eye slide 26) and hydrogen ion and bicarbonate as the products of the acid (Eye slide 27, 11/17); she called the 11/13 version very simplistic.</p></div>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;You know that because it's got AceC at the end of its name&rdquo; [she said 'AceC': -ase] <span class='g2-src'>11/13 T@54034</span></p>
+<p>&ldquo;it will convert carbon dioxide and water to carbonic acid&rdquo; <span class='g2-src'>11/13 T@54892</span></p>
+<p>&ldquo;you end up with water following those solutes&rdquo; <span class='g2-src'>11/13 T@55242</span></p>
+<p>&ldquo;OK, so that is how In a very simplistic view, aqueous humor is made.&rdquo; <span class='g2-src'>11/13 T@55289</span></p>
+<p>&ldquo;they're considered a diuretic&rdquo; <span class='g2-src'>11/13 T@54222</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>The proximal tubule figure: why these drugs cause metabolic acidosis (Eye slide 27)</h5>
+<p class="g2-status"><b>Status B, C, E</b> The kidney mechanism, which the slide shows but does not explain, and her emphasis</p>
+<p>The figure shows a proximal tubule cell with carbonic anhydrase IV on the lumen side and carbonic anhydrase II in the cell, both blocked by acetazolamide, plus the NHE3 exchanger and NBC1 cotransporter. She used it to explain a side effect. Normally bicarbonate made in the cell crosses to the blood side and buffers blood pH. With the enzyme blocked, no carbonic acid forms, so no bicarbonate reaches the blood and blood pH falls: metabolic acidosis. No hydrogen ion is available to exchange for sodium either, so sodium and water stay in the lumen and urine increases, which is the diuretic action. This risk is mainly with the oral drugs, and to a much lesser extent with topical ones. She said the transporter names are not needed. In the eye the same enzyme lowers aqueous humor, but the acidosis happens in the kidney.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;you can end up with a potentially serious side effect in your patients&rdquo; <span class='g2-src'>11/17 T@6865</span></p>
+<p>&ldquo;I always think of B in the basilateral membrane being on the blood side&rdquo; [she said 'basilateral': basolateral] <span class='g2-src'>11/17 T@7903</span></p>
+<p>&ldquo;This helps us maintain our blood pH.&rdquo; <span class='g2-src'>11/17 T@13092</span></p>
+<p>&ldquo;So a side effect of these carbonic anhydrase inhibitor medications is metabolic acidosis.&rdquo; <span class='g2-src'>11/17 T@17682</span></p>
+<p>&ldquo;Understanding why that side effect occurs is important for pharmacists.&rdquo; <span class='g2-src'>11/17 T@18704</span></p>
+<p>&ldquo;to a much lesser extent, but sometimes when we use them topically&rdquo; <span class='g2-src'>11/17 T@6785</span></p>
+<p>&ldquo;You do not need to today, for this th lecture, learn the names&rdquo; <span class='g2-src'>11/17 T@9848</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Carbonic anhydrase inhibitor examples: oral and ophthalmic (Eye slide 28)</h5>
+<p class="g2-status"><b>Status B, C</b> Which form is used first, from the lecture</p>
+<p>The slide lists acetazolamide and methazolamide as oral, and dorzolamide and brinzolamide as ophthalmic. The lecture adds the order of use. For most glaucoma patients the ophthalmic product is chosen first. An oral inhibitor is added later, when other therapy, including the combination products taught afterward, has not controlled the glaucoma. The reason given is that a drug should not be taken orally when topical treatment works. These are the oral exception to her earlier statement that the glaucoma drugs are given topically (Eye slide 18). She noted the class is used less than it used to be, with niche uses in the renal module. No doses or dosing intervals are given in the slide or the lecture (not in materials).</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;we're gonna opt for our ophthalmic products first&rdquo; <span class='g2-src'>11/13 T@59035</span></p>
+<p>&ldquo;If they're not well treated by the combinations that you'll learn about&rdquo; <span class='g2-src'>11/13 T@59296</span></p>
+<p>&ldquo;We don't want to use something orally if we can treat it successfully topically&rdquo; <span class='g2-src'>11/13 T@59457</span></p>
+<p>&ldquo;We used to use this category of drugs more than we do now.&rdquo; <span class='g2-src'>11/13 T@58861</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Carbonic anhydrase inhibitor side effects: ocular, oral and acidosis (Eye slide 29)</h5>
+<p class="g2-status"><b>Status B, C, D, E</b> Reasons for the oral effects added; two wording differences; her cue</p>
+<p>The slide lists ocular effects (burning or stinging, hypersensitivity, headache, bitter, sour or unusual taste, dry eye, foreign body sensation, blurred vision) and oral effects (altered taste and smell, dry mouth, excessive thirst, increased urination, systemic acidosis, depression). The lecture explains several oral effects. Increased urination follows from the diuretic action. Dry mouth with thirst can mean the patient is being over-diuresed. Systemic acidosis is the dangerous one, explained at Eye slide 27, and it needs careful monitoring. Depression occurs but its mechanism is not known, and altered taste and smell are described as an odd effect without a reason.</p>
+<div class="g2-note"><span class="g2-k">Taste and headache with eye drops: ocular on the slide, systemic in her words</span><p>Eye slide 29 lists headache and unusual taste under Ocular. On 11/13 she called them systemic effects of the topical products (11/13 T@59763). Both attach them to the eye drops. A category question written from her lecture would key systemic, her spoken statement; a question on which form causes them has the same answer either way.</p></div>
+<div class="g2-note"><span class="g2-k">Which route carries the acidosis risk</span><p>Eye slide 29 lists systemic acidosis under Oral. On 11/17 she said the risk is mainly oral and, to a much lesser extent, sometimes topical (11/17 T@6785). An exam written from her lecture would key the oral drugs as the main risk, as the slide lists.</p></div>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;increased urination because this is a diuretic&rdquo; <span class='g2-src'>11/13 T@60000</span></p>
+<p>&ldquo;maybe you're over diuresing them&rdquo; <span class='g2-src'>11/17 T@22513</span></p>
+<p>&ldquo;depression can actually occur as well. Don't know the mechanism of that.&rdquo; <span class='g2-src'>11/17 T@22639</span></p>
+<p>&ldquo;needs to be, um, carefully monitored in your patient&rdquo; <span class='g2-src'>11/13 T@60247</span></p>
+<p>&ldquo;Side effect to remember for sure is the systemic metabolic acidosis, OK?&rdquo; <span class='g2-src'>11/17 T@22924</span></p></div>
+</div>
+</section>
+
+<section class="gobj" id="gobj-ey-11">
+<h3>Dr. Smith, slide by slide &middot; Parasympathomimetics: M3 agonists &middot; slides 30&ndash;33</h3>
+<div class="gbar"><span>What the lecture adds (Eye 30&ndash;33)</span><b>These drugs lower eye pressure by increasing outflow, and she wants every glaucoma drug sorted as inflow or outflow</b><i>Eye slide 30, 31, 32, 33</i></div>
+<div class="gpt g2-block"><h5>Divider: glaucoma therapies, parasympathomimetics (Eye slide 30)</h5>
+<p class="g2-status"><b>Status A</b> On the slide and complete; nothing added in lecture</p>
+</div>
+<div class="gpt g2-block"><h5>Two kinds of parasympathomimetic and why one is used more (Eye slide 31)</h5>
+<p class="g2-status"><b>Status B, C</b> Reasoning and clinical choice added in lecture</p>
+<p>The slide lists the direct-acting M3 agonists (carbachol, pilocarpine) and one indirect-acting acetylcholinesterase (AChE) inhibitor (echothiophate). Direct-acting means the drug itself stimulates the M3 receptor. Indirect-acting means the drug blocks the enzyme that breaks down acetylcholine, so more acetylcholine stimulates the receptor. Both groups imitate the parasympathetic nervous system. Between the two agonists, she said carbachol is very potent and lasts longer than pilocarpine, and that carbachol is used more because pilocarpine carries a potential for an allergic reaction in the eye. Echothiophate is kept for patients who are refractory to other glaucoma drugs, and it is more allergenic than pilocarpine, so its use is limited. She said Dr. Lamb will cover how to choose among these drugs.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;are mimicking the parasympathetic nervous system&rdquo; <span class='g2-src'>11/17 T@24081</span></p>
+<p>&ldquo;its duration of action is longer than pilocarpine&rdquo; <span class='g2-src'>11/17 T@26457</span></p>
+<p>&ldquo;it causes a potential for an allergic reaction in the eye&rdquo; <span class='g2-src'>11/17 T@26625</span></p>
+<p>&ldquo;we often only use that when people are really refractory&rdquo; <span class='g2-src'>11/17 T@26915</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>M3 agonists: mechanism and effect on outflow (Eye slide 32)</h5>
+<p class="g2-status"><b>Status B, E</b> Mechanism reasoning added; she restated the outflow category</p>
+<p>The slide says the drug is an agonist at M3 receptors on the sphincter muscle and the trabecular meshwork, and that contraction increases outflow. The lecture supplies the reason. The trabecular meshwork is a mesh of smooth muscle through which aqueous humor leaves the eye. When the muscle contracts, the spaces in the meshwork open, so more fluid drains. She said the largest benefit comes from this action in the ciliary body and the meshwork, and that the muscle around the iris may add a small effect on movement of newly formed aqueous humor. The category to state for these drugs is outflow, increased, with no change in production.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;If you contract it, you're opening up the spaces in the meshwork&rdquo; <span class='g2-src'>11/17 T@24556</span></p>
+<p>&ldquo;the biggest place for using these parasympathetics&rdquo; <span class='g2-src'>11/17 T@27777</span></p>
+<p>&ldquo;you're increasing outflow with these drugs&rdquo; <span class='g2-src'>11/17 T@27973</span></p>
+<p>&ldquo;I'm going to use the words&rdquo; (inflow or outflow, at the start of glaucoma) <span class='g2-src'>11/13 T@19279</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>M3 agonists: side effects and how to reduce the systemic ones (Eye slide 33)</h5>
+<p class="g2-status"><b>Status B, C</b> Cause of the headache and a counseling step added</p>
+<p>The slide lists ocular effects (burning and stinging, painful ciliary muscle spasm with temporal or supraoptic headache, blurred vision, myopia, poor vision in dim light, floaters, lacrimation) and systemic effects (diarrhea, salivation, sweating, rhinorrhea). The lecture explains that the headache comes from the ciliary muscle contracting inside the eye, with the pain felt around the eye. The systemic effects occur because eye drops are absorbed into the body. For counseling, she said patients can put the drops in and hold the eye closed with pressure for a few minutes, which keeps the drug from draining toward the nose and into the bloodstream. She described this as the same method covered on 11/13. The slide gives no reason for poor dim-light vision, and the lecture gives none.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;contraction of the muscles in the eye kind of radiates the pain&rdquo; <span class='g2-src'>11/17 T@28415</span></p>
+<p>&ldquo;you can get that systemic absorption of these eye drops&rdquo; <span class='g2-src'>11/17 T@28680</span></p>
+<p>&ldquo;have them put the drops in and hold their eye&rdquo; <span class='g2-src'>11/17 T@30468</span></p></div>
+</div>
+</section>
+
+<section class="gobj" id="gobj-ey-12">
+<h3>Dr. Smith, slide by slide &middot; Parasympathomimetics: acetylcholinesterase inhibitor &middot; slides 34&ndash;35</h3>
+<div class="gbar"><span>What the lecture adds (Eye 34&ndash;35)</span><b>Echothiophate raises outflow by keeping acetylcholine from being broken down, and its cataract risk is why it is a late choice</b><i>Eye slide 34, 35</i></div>
+<div class="gpt g2-block"><h5>AChE inhibitor: mechanism and effect (Eye slide 34)</h5>
+<p class="g2-status"><b>Status B</b> Fact on slide, reasoning added in lecture</p>
+<p>The slide says the drug irreversibly inhibits acetylcholinesterase, which increases acetylcholine, which contracts the sphincter muscle and trabecular meshwork and increases outflow. The lecture links the steps. The enzyme is present in the ciliary body, so blocking it leaves more acetylcholine to stimulate M3 receptors there. The result is the same contraction of the meshwork that M3 agonists produce, and the category is the same: increased outflow. She stated that the inhibition is irreversible. The difference from pilocarpine and carbachol is that this drug acts on the enzyme and not on the receptor.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;They are irreversible inhibitors of the enzyme&rdquo; <span class='g2-src'>11/17 T@29170</span></p>
+<p>&ldquo;the enzyme is expressed in the ciliary body&rdquo; <span class='g2-src'>11/17 T@29229</span></p>
+<p>&ldquo;so by inhibiting that enzyme, you get more acetylcholine&rdquo; <span class='g2-src'>11/17 T@29283</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>AChE inhibitor: side effects and why use is limited (Eye slide 35)</h5>
+<p class="g2-status"><b>Status B, C</b> Reason for limited use added; cataracts and allergic-type reaction stressed</p>
+<p>The slide lists burning and stinging, blurred vision, eye pain, lacrimation, headache, brow-ache, twitching of eyelids, cataracts, and the same systemic effects as the M3 agonists (diarrhea, salivation, sweating, rhinorrhea). Cataracts are the effect the lecture ties to prescribing. Patients with glaucoma already have a damaged eye, so a drug that can cause cataracts is limited to patients whose pressure cannot be controlled otherwise. She also said the burning and stinging can be an allergic-type reaction, more than with pilocarpine. Every drug in this class can cause systemic effects because the drops are absorbed. The same compression method after instilling the drops applies here.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;this medication can cause cataracts&rdquo; <span class='g2-src'>11/17 T@29681</span></p>
+<p>&ldquo;another reason why we will limit the use&rdquo; <span class='g2-src'>11/17 T@29729</span></p>
+<p>&ldquo;it's more allergenic than even pilocarpine&rdquo; <span class='g2-src'>11/17 T@27101</span></p></div>
+</div>
+</section>
+
+<section class="gobj" id="gobj-ey-13">
+<h3>Dr. Smith, slide by slide &middot; Prostaglandin agonists: mechanism &middot; slides 36&ndash;37</h3>
+<div class="gbar"><span>What the lecture adds (Eye 36&ndash;37)</span><b>Prostaglandin agonists relax the ciliary muscle to open the uveoscleral route and do not change aqueous production</b><i>Eye slide 36, 37</i></div>
+<div class="gpt g2-block"><h5>Divider: glaucoma therapies, prostaglandin agonists (Eye slide 36)</h5>
+<p class="g2-status"><b>Status A</b> On the slide and complete; nothing added in lecture</p>
+</div>
+<div class="gpt g2-block"><h5>Prostaglandin agonists: PGF2 alpha receptor, uveoscleral outflow, eye color (Eye slide 37)</h5>
+<p class="g2-status"><b>Status B, C, D</b> Reasoning added; a clinical observation; one spoken category error</p>
+<p>The slide says these drugs are agonists at the PGF2a receptor, which relaxes the ciliary muscle, and that they lower pressure by increasing uveoscleral and, to a lesser extent, trabecular outflow, with no effect on production. The lecture explains how relaxation helps. Relaxing the ciliary muscle pulls it away from the sclera, which opens the space between them, and aqueous humor drains through that space. The action is the opposite of the M3 agonists, which contract muscle, yet both raise outflow. She added that these drugs seem more effective in hazel or brown eyes than in blue or green eyes, and that she does not know why.</p>
+<div class="g2-note"><span class="g2-k">Spoken wording versus slide</span><p>Slide 37 and her explanation say these drugs increase outflow and do not affect inflow. When she introduced the class she said "decrease outflow" (11/17 T@30865). A moment later she said they help with outflow and not inflow (T@31986). An exam written from her lecture would key increased outflow, mainly uveoscleral, because that is her explanation and the slide. On the lesser route, the slide says trabecular outflow also rises and she said "not so much the trabecular outflow" (T@31493); the shared point is that uveoscleral outflow is the main route.</p></div>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;relaxing this muscle enough to kind of pull it away from the sclera&rdquo; <span class='g2-src'>11/17 T@31250</span></p>
+<p>&ldquo;That space between the ciliary body and the sclera opens up&rdquo; <span class='g2-src'>11/17 T@31590</span></p>
+<p>&ldquo;they don't affect inflow&rdquo; <span class='g2-src'>11/17 T@31986</span></p>
+<p>&ldquo;a bit more effective in darker colored eyes&rdquo; <span class='g2-src'>11/17 T@32259</span></p></div>
+</div>
+</section>
+
+<section class="gobj" id="gobj-ey-14">
+<h3>Dr. Smith, slide by slide &middot; Prostaglandin agonists: examples and side effects &middot; slides 38&ndash;39</h3>
+<div class="gbar"><span>What the lecture adds (Eye 38&ndash;39)</span><b>One example adds nitric oxide, and the pigment and lash effects are what set this class apart</b><i>Eye slide 38, 39</i></div>
+<div class="gpt g2-block"><h5>Prostaglandin agonist examples, latanoprostene bunod (Eye slide 38)</h5>
+<p class="g2-status"><b>Status B</b> Extra mechanism of one drug added in lecture</p>
+<p>The slide lists bimatoprost, latanoprost, latanoprostene bunod, travaprost and tafluprost. The lecture adds that latanoprostene bunod does more than act at the prostaglandin receptor. When it is metabolized, it releases nitric oxide, which dilates blood vessels, and she said this adds to its mechanism of action. She called it one of the newest drugs in the class and said the drugs in the class are very similar. She said Dr. Sikazwe will cover the structural differences.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;it will be a donator of nitric oxide&rdquo; <span class='g2-src'>11/17 T@33151</span></p>
+<p>&ldquo;adds to its mechanism of action&rdquo; <span class='g2-src'>11/17 T@33440</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Prostaglandin agonists: side effects (Eye slide 39)</h5>
+<p class="g2-status"><b>Status B, C</b> Context added: pigment change and cosmetic use</p>
+<p>The slide lists blurred vision, burning and stinging, eye pain, lid edema, ocular hyperemia, increased brown pigmentation of the iris and eyelids, hypertrichosis and hyperpigmentation of the lashes (Latisse), hair growth in other areas, and few systemic effects. The lecture explains what these mean for a patient. The drug darkens the iris and eyelids, so brown eyes become browner. The lash effect is used on purpose: the class is sold as Latisse for eyelash thickening. Apart from hair growth in other areas, the class has few systemic effects, which is why it is used mainly for glaucoma and for this cosmetic purpose. She did not say which drug is sold as Latisse, and neither does the slide.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;you will actually get an increase in pigmentation of the iris and eyelids&rdquo; <span class='g2-src'>11/17 T@33786</span></p>
+<p>&ldquo;to help with eyelash thickening&rdquo; <span class='g2-src'>11/17 T@34112</span></p>
+<p>&ldquo;you don't have many other systemic side effects&rdquo; <span class='g2-src'>11/17 T@34207</span></p></div>
+</div>
+</section>
+
+<section class="gobj" id="gobj-ey-15">
+<h3>Dr. Smith, slide by slide &middot; Rho kinase inhibitor &middot; slides 40&ndash;43</h3>
+<div class="gbar"><span>What the lecture adds (Eye 40&ndash;43)</span><b>Netarsudil stops RhoA kinase from stiffening the trabecular meshwork, and its common red-eye effect follows from vasodilation</b><i>Eye slide 40, 41, 42, 43</i></div>
+<div class="gpt g2-block"><h5>Divider: glaucoma therapies, Rho kinase inhibitor (Eye slide 40)</h5>
+<p class="g2-status"><b>Status A</b> On the slide and complete; nothing added in lecture</p>
+</div>
+<div class="gpt g2-block"><h5>Rho kinase inhibitor: what RhoA does and how blocking it lowers resistance (Eye slide 41)</h5>
+<p class="g2-status"><b>Status B, D</b> Mechanism reasoning added; one wording difference from the slide</p>
+<p>The slide says the drug inhibits RhoA kinase activity, and that RhoA, a GTP-binding protein, regulates cell shape, motility, proliferation and apoptosis. In glaucoma, RhoA may stiffen the trabecular meshwork. The lecture explains the sequence: a kinase is an enzyme that adds phosphate to other molecules, RhoA kinase activity makes the meshwork stiffer, and blocking it lets the meshwork relax. Less fibrosis-related protein forms, so the meshwork is less stiff, and the permeability of the meshwork and Schlemm's canal rises. The category is increased outflow.</p>
+<div class="g2-note"><span class='g2-k'>Slide wording versus spoken wording</span><p>The slide says inhibition lowers resistance "by relaxing tone". She said the effect is "not a muscular relaxation": the meshwork relaxes because less fibrosis-related protein forms. An exam written from her lecture would key less stiffness and lower outflow resistance, which both versions share. She also located RhoA in the ciliary body, where the slide says trabecular meshwork.</p></div>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;making that meshwork stiffer&rdquo; <span class='g2-src'>11/17 T@35578</span></p>
+<p>&ldquo;not a muscular relaxation&rdquo; <span class='g2-src'>11/17 T@35770</span></p>
+<p>&ldquo;prevent the formation of fibrosis related proteins&rdquo; <span class='g2-src'>11/17 T@36417</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Rho kinase inhibitor example: netarsudil (Eye slide 42)</h5>
+<p class="g2-status"><b>Status C</b> Class membership added in lecture</p>
+<p>The slide lists netarsudil alone. She said it is the only Rho kinase inhibitor on the drug list, and that it has not been on the market for long.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;Our only real kindness inhibitor on our drug list&rdquo; (kindness: kinase) <span class='g2-src'>11/17 T@36700</span></p>
+<p>&ldquo;They haven't been on the market for very long&rdquo; <span class='g2-src'>11/17 T@37485</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Rho kinase inhibitor: side effects (Eye slide 43)</h5>
+<p class="g2-status"><b>Status B, C</b> Cause of the red eye and the hemorrhage concern added</p>
+<p>The slide lists conjunctival hyperemia as the most common effect (53%), described as an extension of the drug's action: relaxing vascular smooth muscle causes vasodilation. Other effects (about 20%) are corneal verticillata that did not change vision and mostly resolved after the drug was stopped, instillation site pain, and conjunctival hemorrhage. In lecture she tied the red eyes to vasodilation from relaxed vascular smooth muscle and singled out conjunctival hemorrhage, the bloodshot eye, as probably one of the worst. She did not discuss corneal verticillata.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;allowing some vasodilation&rdquo; <span class='g2-src'>11/17 T@36970</span></p>
+<p>&ldquo;probably one of the worst ones&rdquo; <span class='g2-src'>11/17 T@37103</span></p></div>
+</div>
+</section>
+
+<section class="gobj" id="gobj-ey-16">
+<h3>Dr. Smith, slide by slide &middot; Combination glaucoma products &middot; slides 44&ndash;45</h3>
+<div class="gbar"><span>What the lecture adds (Eye 44&ndash;45)</span><b>Combination products put two mechanisms in one bottle so patients with frequent dosing have fewer drops to give</b><i>Eye slide 44, 45</i></div>
+<div class="gpt g2-block"><h5>Divider: glaucoma therapies, combination products (Eye slide 44)</h5>
+<p class="g2-status"><b>Status A</b> On the slide and complete; nothing added in lecture</p>
+</div>
+<div class="gpt g2-block"><h5>Combination products and why they are used (Eye slide 45)</h5>
+<p class="g2-status"><b>Status B, C</b> Reason for combinations and the patient situation added</p>
+<p>The slide lists four combinations: timolol and dorzolamide, timolol and brimonidine, brinzolamide and brimonidine, and latanoprost and netarsudil. She said every component was already covered on the drug list: some are beta blockers, some are prostaglandins, and one involves netarsudil. Patients are often started on one drug, and because the disease can progress, pressure has to be kept from rising over time, so a second mechanism is added. Many of these drugs are dosed several times a day. A combination lets the patient give one product 3 or 4 times a day and not two products, which helps people who have trouble getting drops in or remembering doses.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;you often will start them on single therapy&rdquo; <span class='g2-src'>11/17 T@38186</span></p>
+<p>&ldquo;A lot of these drugs have to be used multiple times a day&rdquo; <span class='g2-src'>11/17 T@38429</span></p>
+<p>&ldquo;remembering to dose themselves that often&rdquo; <span class='g2-src'>11/17 T@38938</span></p></div>
+</div>
+</section>
+
+<section class="gobj" id="gobj-ey-21">
+<h3>Dr. Smith, slide by slide &middot; Allergic conjunctivitis: scope and histamine &middot; slides 46&ndash;49</h3>
+<div class="gbar"><span>What the lecture adds (Eye 46&ndash;49)</span><b>The lecture sets the scope (allergic conjunctivitis only) and explains how an allergen triggers histamine release, which is what every drug in this section works against</b><i>Eye slide 46, 47, 48, 49</i></div>
+<div class="gpt g2-block"><h5>Section title: Allergic conjunctivitis (Eye slide 46)</h5>
+<p class="g2-status"><b>Status A</b> On the slide and complete; nothing added in lecture</p>
+</div>
+<div class="gpt g2-block"><h5>Outline and objectives: what is and is not covered (Eye slide 47)</h5>
+<p class="g2-status"><b>Status C</b> Scope added in lecture</p>
+<p>The slide lists the outline (an introduction, antihistamines, alpha 2 agonists, combination products) and four objectives: symptoms, mechanism of each class, which class helps which symptom, and side effects. The lecture adds the limit of the topic. Allergic conjunctivitis means itching of the conjunctiva when the patient is exposed to something the body is allergic to, with cedar pollen as her example. Bacterial and viral conjunctivitis are separate conditions and are not covered. She also said this part of the lecture is short, because the pathology is simple and the drugs are few.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;which means itchiness of the conjunctiva of your eyes&rdquo; <span class='g2-src'>11/17 T@39515</span></p>
+<p>&ldquo;we're not going to talk about any of the pathogens&rdquo; <span class='g2-src'>11/17 T@39719</span></p>
+<p>&ldquo;this part of the lecture won't take very long&rdquo; <span class='g2-src'>11/17 T@40489</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Histamine release: how an allergen sets it off (Eye slide 48)</h5>
+<p class="g2-status"><b>Status B, C</b> Sequence behind the slide sentence; cedar pollen example</p>
+<p>The slide says histamine is released from storage granules when antigen meets IgE on the mast cell surface. The lecture supplies the sequence. The first time a mast cell meets an antigen, the immune response leads the mast cell to display IgE shaped to find that antigen. On the next exposure, such as cedar pollen reaching the eye, the antigen binds that IgE, the cell degranulates, and histamine is released along with other inflammatory cytokines. She called histamine release the biggest player in immediate hypersensitivity, so preventing histamine from acting is the goal of the drugs that follow.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;the mast cell will express IgE on its surface&rdquo; <span class='g2-src'>11/17 T@41462</span></p>
+<p>&ldquo;that stimulates the degranulization and the release of histamine&rdquo; <span class='g2-src'>11/17 T@41700</span></p>
+<p>&ldquo;So histamine is what we're going to try to prevent from having activity&rdquo; <span class='g2-src'>11/17 T@41906</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Effects of histamine release: why the eye is the focus (Eye slide 49)</h5>
+<p class="g2-status"><b>Status B, C</b> Location decides the effect; what matters for the eye</p>
+<p>The slide lists effects across the body: itching and nasal secretion, contraction of bronchial and gut smooth muscle (H1) with relaxation of other smooth muscle, gastric acid secretion, edema, and in the CNS H1 inhibition of appetite and increased wakefulness. The lecture explains that the effect depends on where the histamine receptors are, which is why one chemical produces such different responses. For allergic conjunctivitis the effects that matter are itchy eyes and the mucosal secretions of the nose. She tied the CNS effect to side effects of antihistamines taken systemically and said that bullet returns in the systemic allergy lecture.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;histamine is a chemical that has receptors throughout the body&rdquo; <span class='g2-src'>11/17 T@42282</span></p>
+<p>&ldquo;depending on where the receptors are, you will get these kinds of responses&rdquo; <span class='g2-src'>11/17 T@42350</span></p>
+<p>&ldquo;is the itchiness of the eyes and those mucosal secretions&rdquo; <span class='g2-src'>11/17 T@43124</span></p></div>
+</div>
+</section>
+
+<section class="gobj" id="gobj-ey-22">
+<h3>Dr. Smith, slide by slide &middot; Ophthalmic H1 inverse agonists (antihistamines) &middot; slides 50&ndash;52</h3>
+<div class="gbar"><span>What the lecture adds (Eye 50&ndash;52)</span><b>The lecture separates the two actions of these drugs, H1 inverse agonism and mast cell stabilization, and says why the second one matters for timing and for effectiveness</b><i>Eye slide 50, 51, 52</i></div>
+<div class="gpt g2-block"><h5>Section title: Ophthalmic H1 inverse agonists (antihistamines) (Eye slide 50)</h5>
+<p class="g2-status"><b>Status A</b> On the slide and complete; nothing added in lecture</p>
+</div>
+<div class="gpt g2-block"><h5>Two mechanisms: H1 inverse agonism and mast cell stabilization (Eye slide 51)</h5>
+<p class="g2-status"><b>Status B, C</b> Reasoning for each mechanism; prophylactic use</p>
+<p>H1 inverse agonism lowers the receptor's constitutive activity and competes with histamine, so histamine already released cannot bind the H1 receptors in the eye. Mast cell stabilization is a different action: the mast cell does not release histamine at all, which also lowers the cytokines that cause inflammation. She said the way these drugs stabilize mast cells is not known, and that it involves both H1 receptors and a non-receptor component. Drugs with both actions work better topically than those without stabilization, because two mechanisms are acting. She added that stabilizers are often started before the allergen season, because stopping itch after histamine is released is harder.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;They prevent the mast cells from releasing histamine&rdquo; <span class='g2-src'>11/17 T@44898</span></p>
+<p>&ldquo;We don't really know how these medications stabilize mast cells&rdquo; <span class='g2-src'>11/17 T@45806</span></p>
+<p>&ldquo;because you got two mechanisms of action going on&rdquo; <span class='g2-src'>11/17 T@46495</span></p>
+<p>&ldquo;use them prophylactically&rdquo; <span class='g2-src'>11/17 T@46857</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Pharmacological action: what the patient notices (Eye slide 52)</h5>
+<p class="g2-status"><b>Status B, C</b> Why prevention works better than rescue</p>
+<p>The slide lists the result: less edema, itch, inflammation and watery eyes. The lecture explains why starting before exposure is the better plan. Once histamine has been released it is harder to stop the itch, so a drug that prevents release (mast cell stabilization) comes first, and the H1 inverse agonism covers any histamine that is still released. This is also why she asked which drug in the group lacks stabilization: that one is not suggested for prophylactic use (see the examples on Eye slide 53).</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;It's harder to stop the itchiness when the histamines have already been released&rdquo; <span class='g2-src'>11/17 T@47308</span></p>
+<p>&ldquo;you get a reduction in edema, the itchiness, inflammation, and watery eyes&rdquo; <span class='g2-src'>11/17 T@47759</span></p></div>
+</div>
+</section>
+
+<section class="gobj" id="gobj-ey-23">
+<h3>Dr. Smith, slide by slide &middot; Ophthalmic antihistamine examples &middot; slides 53&ndash;54</h3>
+<div class="gbar"><span>What the lecture adds (Eye 53&ndash;54)</span><b>These two slides are the drug list for the class; she gave the details to tell the drugs apart, and said to pay attention to which ones have mast cell stabilization</b><i>Eye slide 53, 54</i></div>
+<div class="gpt g2-block"><h5>Alcaftadine, azelastine, bepotastine, cetirizine (Eye slide 53)</h5>
+<p class="g2-status"><b>Status B, C, E</b> Reasons behind the slide details; her cue to tell the drugs apart</p>
+<p><b>Alcaftadine.</b> The slide lists H4 antagonism. Histamine at the H4 receptor on eosinophils draws them into the allergic response, so blocking H4 may add to its effect; with little anticholinergic activity and little CNS penetration, it has few side effects. <b>Azelastine.</b> An older antihistamine with a little anticholinergic activity that does reach the CNS; she still uses it for itchy eyes and for allergic rhinitis, where it helps a stuffy nose. <b>Bepotastine.</b> Both an H1 inverse agonist and a mast cell stabilizer, which is the one thing she asked to remember. <b>Cetirizine.</b> Minimal anticholinergic effect, so no dry mouth, but it can still cause drowsiness in sensitive people, which she called unusual for a second-generation antihistamine. It has no mast cell stabilization, so it is the one not suggested for prophylactic use.</p>
+<div class='g2-said'><span class='g2-k'>She said (cue)</span>
+<p>&ldquo;Pay special attention to which ones have mast cell stabilizing properties&rdquo; <span class='g2-src'>11/17 T@48555</span></p>
+<p>&ldquo;differentiate between them when I give you those details&rdquo; <span class='g2-src'>11/17 T@54715</span></p>
+<p>&ldquo;which one does not have mast cell stabilizing activity? Yep, cetirizine&rdquo; <span class='g2-src'>11/17 T@51757</span></p></div>
+<div class='g2-said'><span class='g2-k'>She said (details)</span>
+<p>&ldquo;their eosinophil count will rise&rdquo; <span class='g2-src'>11/17 T@49382</span></p>
+<p>&ldquo;it does not penetrate the CNS very much&rdquo; <span class='g2-src'>11/17 T@49738</span></p>
+<p>&ldquo;It will cause some drowsiness for people that are sensitive&rdquo; <span class='g2-src'>11/17 T@50770</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Epinastine, ketotifen, olopatadine (Eye slide 54)</h5>
+<p class="g2-status"><b>Status B, C</b> Purpose of the extra H2 action; what to know about the other two</p>
+<p><b>Epinastine.</b> The slide adds H2 antagonism for eyelid edema. She explained the use: eyelid swelling is bothersome to patients, so epinastine is a choice for it as a topical treatment. <b>Ketotifen.</b> She had nothing to add beyond that it is a very good mast cell stabilizer. <b>Olopatadine.</b> Mast cell stabilization again, and, as the slide says, it also comes as a nasal spray for allergic rhinitis. Across the whole list, most of these drugs stabilize mast cells; cetirizine (Eye slide 53) is the exception.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;it's also an H2 antagonist&rdquo; <span class='g2-src'>11/17 T@50999</span></p>
+<p>&ldquo;reducing eyelid swelling&rdquo; <span class='g2-src'>11/17 T@51105</span></p>
+<p>&ldquo;it's a real good mast cell stabilizer&rdquo; <span class='g2-src'>11/17 T@51460</span></p></div>
+</div>
+</section>
+
+<section class="gobj" id="gobj-ey-24">
+<h3>Dr. Smith, slide by slide &middot; Alpha 2 agonists for allergic conjunctivitis &middot; slides 55&ndash;57</h3>
+<div class="gbar"><span>What the lecture adds (Eye 55&ndash;57)</span><b>The lecture explains why a vasoconstrictor helps an allergic eye (less redness and less swelling) and says the drugs on the list do not differ for this use</b><i>Eye slide 55, 56, 57</i></div>
+<div class="gpt g2-block"><h5>Section title: Alpha 2 agonists (Eye slide 55)</h5>
+<p class="g2-status"><b>Status A</b> On the slide and complete; nothing added in lecture</p>
+</div>
+<div class="gpt g2-block"><h5>Mechanism and action: vasoconstriction reduces redness (Eye slide 56)</h5>
+<p class="g2-status"><b>Status B, C</b> Why vasoconstriction helps; nasal use</p>
+<p>The slide says these drugs are adrenergic receptor agonists used as vasoconstrictors on the nasal mucosa or the eye, and that they reduce redness. The lecture gives the reasoning. Agonizing the adrenergic receptors constricts the blood vessels in the eye, which lowers the redness of an itchy eye. Constricted vessels also leak less fluid, and that leakage from capillaries during an allergic response contributes to the edema of allergic conjunctivitis. The same vasoconstriction in the nose is why many of these drugs are used for stuffy noses.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;they're going to cause vasoconstriction&rdquo; <span class='g2-src'>11/17 T@52404</span></p>
+<p>&ldquo;you're able to reduce that, that ugly redness&rdquo; <span class='g2-src'>11/17 T@52675</span></p>
+<p>&ldquo;that contributes to the edema of allergic conjunctivitis&rdquo; <span class='g2-src'>11/17 T@52885</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Alpha 2 agonist examples (Eye slide 57)</h5>
+<p class="g2-status"><b>Status B, C</b> No difference between the drugs for the eye; oxymetazoline returns next lecture</p>
+<p>The slide lists naphazoline, oxymetazoline, tetrahydrozoline, brimonidine tartrate and phenylephrine. The lecture adds that, used topically for allergic conjunctivitis, the drugs on this list do not differ from one another: they all constrict vessels, reduce redness and reduce swelling from leaking vessels. She said oxymetazoline has a feature when used as a nasal decongestant spray that she would cover in the next lecture on systemic allergies, so that detail is not in this lecture. She read the list the same way the slide prints it, phenylephrine included.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;there's not much difference between these drugs for allergic conjunctivitis&rdquo; <span class='g2-src'>11/17 T@53209</span></p>
+<p>&ldquo;hold that thought, we'll talk about that next week&rdquo; <span class='g2-src'>11/17 T@53478</span></p></div>
+</div>
+</section>
+
+<section class="gobj" id="gobj-ey-25">
+<h3>Dr. Smith, slide by slide &middot; Ophthalmic antihistamine and alpha 2 agonist combinations &middot; slides 58&ndash;59</h3>
+<div class="gbar"><span>What the lecture adds (Eye 58&ndash;59)</span><b>The lecture says what the combination product combines and why one drop is easier than two; she did not teach how to choose between products</b><i>Eye slide 58, 59</i></div>
+<div class="gpt g2-block"><h5>Section title: Ophthalmic antihistamine and alpha 2 agonist combinations (Eye slide 58)</h5>
+<p class="g2-status"><b>Status A</b> On the slide and complete; nothing added in lecture</p>
+</div>
+<div class="gpt g2-block"><h5>Naphazoline/pheniramine: what the combination does (Eye slide 59)</h5>
+<p class="g2-status"><b>Status B, C</b> What each component contributes; scope of choosing a product</p>
+<p>The slide shows one product, naphazoline/pheniramine. The lecture says what the combination is: an antihistamine together with an alpha 2 agonist. Naphazoline is on the alpha 2 agonist list (Eye slide 57), so it supplies the vessel constriction that lowers redness and swelling; pheniramine is the antihistamine side. She described the product as giving the vessel constriction and the antihistamine and mast cell stabilization approaches together, so one drop is easier than two different drops. The captions garble both product names, so the slide spelling is used here. She said choosing one drug over another for a patient is taught by the clinical faculty, not in this lecture.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;Makes it nice if your patient is wanting to use both approaches&rdquo; <span class='g2-src'>11/17 T@54166</span></p>
+<p>&ldquo;It's much easier to just use 1 eye drop rather than 2&rdquo; <span class='g2-src'>11/17 T@54340</span></p>
+<p>&ldquo;we use antihistamines and your alpha 2 agonists and have a few combo products&rdquo; <span class='g2-src'>11/17 T@54813</span></p></div>
+</div>
+</section>
+
+<section class="gobj" id="gobj-ey-26">
+<h3>Dr. Smith, slide by slide &middot; Dry eye: what it is &middot; slides 60&ndash;62</h3>
+<div class="gbar"><span>What the lecture adds (Eye 60&ndash;62)</span><b>The lecture names inflammation as the pathology of dry eye, which is why the drugs that follow are anti-inflammatory, and says the drugs covered are not first-line</b><i>Eye slide 60, 61, 62</i></div>
+<div class="gpt g2-block"><h5>Section title: Dry eye (Eye slide 60)</h5>
+<p class="g2-status"><b>Status A</b> On the slide and complete; nothing added in lecture</p>
+</div>
+<div class="gpt g2-block"><h5>Outline and objectives: prescription drugs, not first-line (Eye slide 61)</h5>
+<p class="g2-status"><b>Status C</b> Scope: first-line lubricants are not covered</p>
+<p>The slide's objectives are to explain what causes dry eye, the mechanism of the drugs discussed, and their side effects. The lecture adds what is left out. Lubricating drops are the usual first step for patients, but she did not cover them because they act only as a physical lubricant. The drugs in this part are the prescription medications, which are usually not first-line, so the patient has typically moved past artificial tears before reaching them.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;I will not talk about those&rdquo; <span class='g2-src'>11/17 T@55658</span></p>
+<p>&ldquo;not first line approaches to treating dry eye&rdquo; <span class='g2-src'>11/17 T@55892</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>What is dry eye: inflammation reduces tear production (Eye slide 62)</h5>
+<p class="g2-status"><b>Status B, C</b> Cause stated in lecture; drugs that can cause it; redness not required</p>
+<p>The slide gives the name, prevalence, risk factors, causative drugs and redness. The lecture adds the cause. Keratoconjunctivitis sicca involves inflammation, and inflammation in the lacrimal system (the glands that make tears and the ducts they drain through) reduces the eye's ability to make tears. That is why anti-inflammatory drugs are the key treatment. She said prevalence can be as high as 33% (the slide gives 7% to 33%), that it does not seem to be familial, and that constant exposure to allergens may contribute. Patient care points: antihistamines and decongestants, the two classes just covered for allergic eyes, can cause dry eye, and a patient with dry eye may have no redness.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;you get a reduction in tear production&rdquo; <span class='g2-src'>11/17 T@56212</span></p>
+<p>&ldquo;Medications that are anti-inflammatory are really key for helping to treat dry eye&rdquo; <span class='g2-src'>11/17 T@58184</span></p>
+<p>&ldquo;antihistamines can cause dry eyes&rdquo; <span class='g2-src'>11/17 T@57090</span></p>
+<p>&ldquo;don't expect to have red eyes if you've got dry eyes&rdquo; <span class='g2-src'>11/17 T@57358</span></p></div>
+</div>
+</section>
+
+<section class="gobj" id="gobj-ey-27">
+<h3>Dr. Smith, slide by slide &middot; Dry eye: calcineurin inhibitor (cyclosporine) &middot; slides 63&ndash;67</h3>
+<div class="gbar"><span>What the lecture adds (Eye 63&ndash;67)</span><b>The lecture reviews where calcineurin inhibitors act in T-cell signaling and what each drug binds, and gives the reason cyclosporine is used topically, not orally, for dry eye</b><i>Eye slide 63, 64, 65, 66, 67</i></div>
+<div class="gpt g2-block"><h5>Section title: Calcineurin inhibitor (Eye slide 63)</h5>
+<p class="g2-status"><b>Status A</b> On the slide and complete; nothing added in lecture</p>
+</div>
+<div class="gpt g2-block"><h5>Cyclosporine: a calcineurin inhibitor that raises tear production (Eye slide 64)</h5>
+<p class="g2-status"><b>Status B, C</b> Why an immunosuppressant treats dry eye; review of the class</p>
+<p>The slide says cyclosporine is a calcineurin inhibitor and an immunosuppressant that helps increase tear production when inflammation from keratoconjunctivitis sicca suppresses it. The lecture gives the link: dry eye is an inflammatory condition, so reducing the inflammation raises tear production. She asked the class to name the two calcineurin inhibitors already covered, cyclosporine and tacrolimus, and said that an earlier lecture covered a different formulation of tacrolimus (the captions garble its name) <span class="g2-tonly" title="Transcript only: not on the slide">Transcript-only, verify against slide</span>. For dry eye the drug used is cyclosporine.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;It helps increase tear production because you're reducing inflammation&rdquo; <span class='g2-src'>11/17 T@58677</span></p>
+<p>&ldquo;It's a different formulation of tac&rdquo; <span class='g2-src'>11/17 T@58561</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Calcineurin inhibitors and the CD4+ T-cell: signals 1, 2 and 3 (Eye slide 65)</h5>
+<p class="g2-status"><b>Status B</b> Where in the signaling the drugs act</p>
+<p>The slide defines three signals: signal 1 (antigen presented on MHC II binds the T-cell receptor), signal 2 (CD 80/86 on the antigen-presenting cell binds CD 28), and signal 3 (IL-2 binds CD25 and starts proliferation). Signals 1 and 2 start a cascade that leads to IL-2 transcription. The lecture adds the question the figure answers: calcineurin inhibitors act inside the cell, in the signal cascade, and not at signal 1 or signal 2. She noted that an earlier drug in the course acted specifically at signal 2, so the two are not the same kind of drug.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;they work in that signal cascade&rdquo; <span class='g2-src'>11/17 T@59177</span></p>
+<p>&ldquo;They're not working on signal 1&rdquo; <span class='g2-src'>11/17 T@59579</span></p>
+<p>&ldquo;they're not working on signal 2&rdquo; <span class='g2-src'>11/17 T@59616</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Mechanism of action: cyclophilin, FKBP, calcineurin and NFAT (Eye slide 66)</h5>
+<p class="g2-status"><b>Status B, E</b> Each drug binds a different protein; she said these return later</p>
+<p>The slide states that the drugs inhibit production of IL-2 needed for T-cell proliferation, and the figure shows each drug binding an intracellular protein: cyclosporine binds cyclophilin and tacrolimus binds FKBP. Either drug-protein complex then inhibits calcineurin. The lecture explains what calcineurin normally does: once calcium and calmodulin activate it, it dephosphorylates NFAT, and NFAT, a transcription factor, drives expression of IL-2. Blocking calcineurin therefore stops IL-2 expression. She referred to a question the class had seen before on this and said the detail was deliberate because these drugs return.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;Cyclosporin binds to cyclophyllin&rdquo; <span class='g2-src'>11/17 T@60561</span></p>
+<p>&ldquo;tacrolimus is binding to FKBP&rdquo; <span class='g2-src'>11/17 T@60651</span></p>
+<p>&ldquo;I did that on purpose&rdquo; <span class='g2-src'>11/17 T@60826</span></p>
+<p>&ldquo;we'll talk about these drugs again, including FKBP and oncology&rdquo; <span class='g2-src'>11/17 T@60857</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Topical cyclosporine: effect, side effects and why not oral (Eye slide 67)</h5>
+<p class="g2-status"><b>Status B, C</b> Reason for topical use; the side effects in patient terms</p>
+<p>The slide lists the pharmacodynamics (less IL-2, so less immune-driven inflammation in the eye) and the side effects: ocular burning, instillation site pain, hyperemia, discharge, epiphora, eye pain, foreign body sensation, pruritus, stinging and visual disturbances. The lecture adds why the drug is topical. Oral cyclosporine is a significant immunosuppressant, and she does not want to suppress the immune system and expose the patient to opportunistic infections for dry eye alone. She said oral use is sometimes seen but is extreme, and probably means more than dry eye is going on, such as uveitis or retinitis <span class="g2-tonly" title="Transcript only: not on the slide">Transcript-only, verify against slide</span>. The topical side effects can be quite significant for patients even though the drug works well.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;oral cyclosporin is a significant immunosuppressant&rdquo; <span class='g2-src'>11/17 T@62774</span></p>
+<p>&ldquo;We don't want to suppress the patient's immune system&rdquo; <span class='g2-src'>11/17 T@62827</span></p>
+<p>&ldquo;some of these ocular side effects are quite significant for patients&rdquo; <span class='g2-src'>11/17 T@62246</span></p></div>
+</div>
+</section>
+
+<section class="gobj" id="gobj-ey-28">
+<h3>Dr. Smith, slide by slide &middot; Dry eye: loteprednol and lifitegrast &middot; slides 68&ndash;71</h3>
+<div class="gbar"><span>What the lecture adds (Eye 68&ndash;71)</span><b>The lecture says why a corticosteroid fits dry eye, explains the new LFA-1 mechanism step by step, and gives the reason for the contact lens counseling</b><i>Eye slide 68, 69, 70, 71</i></div>
+<div class="gpt g2-block"><h5>Section title: Corticosteroid (Eye slide 68)</h5>
+<p class="g2-status"><b>Status A</b> On the slide and complete; nothing added in lecture</p>
+</div>
+<div class="gpt g2-block"><h5>Loteprednol: the corticosteroid for dry eye (Eye slide 69)</h5>
+<p class="g2-status"><b>Status B, E</b> Why a steroid fits; the one steroid to know</p>
+<p>The slide says loteprednol is used for its anti-inflammatory properties to treat dry eye. The lecture gives the reasoning: because dry eye is inflammatory, a corticosteroid fits. Steroids change gene expression, decreasing inflammatory genes and increasing anti-inflammatory genes, which lowers the immune response. She noted that not every corticosteroid from the skin lectures is used here; one particular drug is, and she had nothing more to say about it because it is a new product. She singled it out as the corticosteroid for dry eye.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;steroids will affect gene expression&rdquo; <span class='g2-src'>11/17 T@63199</span></p>
+<p>&ldquo;We don't use every corticosteroid&rdquo; <span class='g2-src'>11/17 T@63442</span></p>
+<p>&ldquo;Just remember that this one&rdquo; <span class='g2-src'>11/17 T@63768</span> [she said 'loopredinol': loteprednol on the slide] &ldquo;is your corticosteroid for dry eye&rdquo; <span class='g2-src'>11/17 T@63810</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Section title: LFA-1 antagonist (Eye slide 70)</h5>
+<p class="g2-status"><b>Status A</b> On the slide and complete; nothing added in lecture</p>
+</div>
+<div class="gpt g2-block"><h5>Lifitegrast: LFA-1 antagonist, dose, side effects and contact lenses (Eye slide 71)</h5>
+<p class="g2-status"><b>Status B, C</b> How blocking adhesion lowers inflammation; why lenses come out</p>
+<p>The slide gives the mechanism (lifitegrast binds LFA-1 on leukocytes and blocks its interaction with ICAM-1), the dose (one drop in each eye twice daily, about 12 hours apart), side effects (application site irritation and reduced visual acuity, each 5% to 25%) and the contact lens counseling. The lecture explains the mechanism in plain terms: ICAM-1 and similar adhesion molecules help white blood cells move to where inflammation is, so blocking LFA-1 keeps them from moving and adhering and lowers the cytokines they secrete. She called it an indirect way to reduce inflammation. The visual acuity loss may limit use for some patients. Contact lenses come out before the drop and go back in 15 minutes later, because this drug can discolor lenses and the drop needs time to be absorbed.</p>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;prevents the movement basically of your leukocytes&rdquo; <span class='g2-src'>11/17 T@64546</span></p>
+<p>&ldquo;a little bit of an indirect method in getting a reduction in inflammation&rdquo; <span class='g2-src'>11/17 T@64700</span></p>
+<p>&ldquo;might make it limiting for some people&rdquo; <span class='g2-src'>11/17 T@65373</span></p>
+<p>&ldquo;This medication will cause some discoloration of the contacts&rdquo; <span class='g2-src'>11/17 T@65788</span></p></div>
+</div>
+</section>
+
+<section class="gobj" id="gobj-ey-29">
+<h3>Dr. Smith, slide by slide &middot; Dry eye: intranasal varenicline &middot; slides 72&ndash;74</h3>
+<div class="gbar"><span>What the lecture adds (Eye 72&ndash;74)</span><b>The lecture explains why a nasal spray treats dry eye (it activates the trigeminal parasympathetic pathway that drives basal tear production) and how the drug came to be used for it</b><i>Eye slide 72, 73, 74</i></div>
+<div class="gpt g2-block"><h5>Section title: Nicotinic acetylcholine receptor agonist (Eye slide 72)</h5>
+<p class="g2-status"><b>Status A</b> On the slide and complete; nothing added in lecture</p>
+</div>
+<div class="gpt g2-block"><h5>Intranasal varenicline: mechanism, dose and rare visual side effects (Eye slide 73)</h5>
+<p class="g2-status"><b>Status B, C, D</b> Why the nose; how it was discovered; one frequency wording differs</p>
+<p>The slide says varenicline is a nicotinic acetylcholine receptor agonist whose effect in dry eye is thought to come from activating the trigeminal parasympathetic pathway, which increases basal tear film. The lecture explains the route: the receptors it binds are in the nasal cavity, next to the nerve that makes tears when activated, so the drug is sprayed into the nose. It was first marketed for smoking cessation, and patients using it for that seemed to get help with dry eyes, which led to the dry eye product. The dose is one spray in each nostril twice daily, about 12 hours apart. She called the retinal vascular disorder not a good condition, since problems with retinal blood vessels could cause vision loss.</p>
+<div class="g2-note"><span class="g2-k">Blurred vision: rare or infrequent?</span><p>Slide: acquired night blindness, retinal vascular disorder, subcapsular cataract and transient blindness are rare; blurred vision and visual disturbance are infrequent. Lecture: after naming night blindness (rare) she said "Other blurred vision, uh, retinal vascular disorders. Again, this is rare", which puts blurred vision with the rare group, then closed by saying plain visual disturbances are listed as infrequent and are more common (11/17 T@68262-68727). An exam written from her lecture would key the slide's labels, because she ended by saying the listed frequency for visual disturbances is infrequent and that these are more common than the rare effects.</p></div>
+<div class='g2-said'><span class='g2-k'>She said</span>
+<p>&ldquo;It was originally on the market to help with smoking cessation&rdquo; <span class='g2-src'>11/17 T@66865</span></p>
+<p>&ldquo;it was seeming to help with dry eyes&rdquo; <span class='g2-src'>11/17 T@67219</span></p>
+<p>&ldquo;Activating that nerve gets your tears to be produced&rdquo; <span class='g2-src'>11/17 T@68063</span></p>
+<p>&ldquo;you could cause some vision loss&rdquo; <span class='g2-src'>11/17 T@68559</span></p></div>
+</div>
+<div class="gpt g2-block"><h5>Questions? (Eye slide 74)</h5>
+<p class="g2-status"><b>Status A</b> On the slide and complete; nothing added in lecture</p>
+</div>
+</section>
+</details>
+
+<h2 class="gdeck" id="gdeck-ooo">Otic, Oral and Ophthalmic Medicinal Chemistry (Dr. Sikazwe, 11/18 and 11/19; Exam 3)</h2>
+<details class="gdetails" id="goo">
+<summary>Dr. Sikazwe: the otic, oral and ophthalmic deck slide by slide, what the lecture adds (68 slides)</summary>
+<section class="gobj" id="gobj-oo-1">
+<h3>Dr. Sikazwe, slide by slide &middot; Course frame and objectives &middot; slides 1&ndash;3</h3>
+<div class="gbar"><span>What the lecture adds (OOO 1&ndash;3)</span><b>Sets which parts of the otic, oral and ophthalmic material the questions come from: chemical classification, chemical basis of drug action, ADME and a few SAR slides.</b><i>OOO slide 1, 2, 3</i></div>
+<div class="gpt g2-block"><h5>Title: Otic, Oral, Ophthalmic (OOO slide 1)</h5>
+<p class="g2-status"><b>Status A</b> On the slide and complete; nothing added in lecture</p>
+</div>
+<div class="gpt g2-block"><h5>Objectives: assess and plan, and what he emphasizes (OOO slide 2)</h5>
+<p class="g2-status"><b>Status B, E</b> Objectives on the slide; the lecture says which ones carry the questions and how the amount of material maps to question count</p>
+<p>The slide lists what a pharmacist does with these drugs: identify the therapeutic target and the drug class (assess), then describe the chemical and pharmacological basis of drug action, the pharmacokinetic properties, the functional groups and SAR, and drug interactions (plan). In the lecture he named the parts he will emphasize for these three disease states: chemical classifications, chemical basis of drug action and ADME properties, with a few SAR slides.</p>
+<p>He also said the amount of material on a topic predicts the number of questions on it, and that the ophthalmic part has the most material.</p>
+<div class='g2-said'><span class='g2-k'>He said</span>
+<p>&ldquo;for my material, it's just what I assigned you&rdquo; <span class='g2-src'>11/18 T@544</span></p>
+<p>&ldquo;we are going to emphasize the chemical classifications, the chemical basis of drug action&rdquo; <span class='g2-src'>11/18 T@1869</span></p>
+<p>&ldquo;there are some slides with SAR&rdquo; <span class='g2-src'>11/18 T@2003</span></p>
+<p>&ldquo;where there's more information, know that there will be more questions&rdquo; <span class='g2-src'>11/18 T@1341</span></p>
+<p>&ldquo;there's perhaps more information on the, uh, um, ophthalmic part&rdquo; <span class='g2-src'>11/18 T@1120</span></p>
+</div>
+</div>
+<div class="gpt g2-block"><h5>Readings: lecture slides, with Foye as support (OOO slide 3)</h5>
+<p class="g2-status"><b>Status C</b> The lecture adds guidance on how much to rely on each reading</p>
+<p>The slide lists the lecture slides, peer-reviewed literature on these topics and Foye (9th edition), Chapter 30, Drugs Used to Treat Ocular and Nasal Disorders. In the lecture he said the readings are the lecture slides and that the textbook does not present these three disease states well, although its ocular and nasal chapter has some information. He also said he would not cover some ear disorders in detail because the OTC handbook does not cover them either, and that some will return in infectious disease.</p>
+<div class='g2-said'><span class='g2-k'>He said</span>
+<p>&ldquo;the readings are just going to be lecture slides&rdquo; <span class='g2-src'>11/18 T@2065</span></p>
+<p>&ldquo;doesn't do a good presentation of these three disease states&rdquo; [he said "FOI": Foye] <span class='g2-src'>11/18 T@2187</span></p>
+<p>&ldquo;because the OTC handbook doesn't even go there&rdquo; <span class='g2-src'>11/18 T@2617</span></p>
+</div>
+</div>
+</section>
+
+<section class="gobj" id="gobj-oo-2">
+<h3>Dr. Sikazwe, slide by slide &middot; Otic disorders: earwax and its agents &middot; slides 4&ndash;6</h3>
+<div class="gbar"><span>What the lecture adds (OOO 4&ndash;6)</span><b>Introduces earwax (cerumen) and the cerumenolytic agents, grouped by preparation, with the four marked agents (Colace, hydrogen peroxide, olive oil, Debrox) as the ones in current use.</b><i>OOO slide 4, 5, 6</i></div>
+<div class="gpt g2-block"><h5>Divider: Otic Disorders (OOO slide 4)</h5>
+<p class="g2-status"><b>Status A</b> On the slide and complete; nothing added in lecture</p>
+</div>
+<div class="gpt g2-block"><h5>Earwax: what it is and what a cerumenolytic has to do (OOO slide 5)</h5>
+<p class="g2-status"><b>Status B</b> Fact on slide, reasoning missing (lecture explains where cerumen comes from and why it is treated)</p>
+<p>Cerumen is earwax. Dead epithelial skin cells build up in the ear canal, and the buildup protects the skin of the canal from drying out; it becomes a problem only when there is too much. Cerumenolytics are the agents used for impacted or excessive wax. The slide names four mechanisms: soften, liquify, hydrate or disintegrate the cerumen. He added the purpose: once the wax is softened, loosened or broken apart, the canal can be irrigated and the wax washed out.</p>
+<div class='g2-said'><span class='g2-k'>He said</span>
+<p>&ldquo;the skin cells, right, are building up&rdquo; <span class='g2-src'>11/18 T@3118</span></p>
+<p>&ldquo;to prevent the skin inside the canal from drying out&rdquo; <span class='g2-src'>11/18 T@3319</span></p>
+<p>&ldquo;too much of it becomes a problem&rdquo; <span class='g2-src'>11/18 T@3417</span></p>
+<p>&ldquo;then the ear can be, the ear canal can be irrigated&rdquo; <span class='g2-src'>11/18 T@4007</span></p>
+</div>
+</div>
+<div class="gpt g2-block"><h5>Cerumenolytic preparations: water based, oil based, nonwater and nonoil based (OOO slide 6)</h5>
+<p class="g2-status"><b>Status B, E</b> Table on slide; the lecture says which agents are current and which he emphasizes</p>
+<p>The table groups preparations by what carries the agent. Water based: acetic acid, Colace (docusate sodium), hydrogen peroxide solution, sodium bicarbonate, sterile saline. Oil based: almond oil, arachis oil, Earex, olive oil, mineral oil/liquid petrolatum. Nonwater, nonoil based: Audax (choline salicylate, glycerine) and Debrox (carbamide peroxide, urea-hydrogen peroxide). The red bird marks the agents in current use: Colace, hydrogen peroxide, olive oil and Debrox; he called the others historical.</p>
+<p>He said the nonwater, nonoil agents are mostly dissolved in glycerol or propylene glycol <span class="g2-tonly" title="Transcript only: not on the slide">Transcript-only, verify against slide</span>, and that in this group he emphasizes Debrox. The slide gives no emphasis; this comes from the lecture.</p>
+<div class='g2-said'><span class='g2-k'>He said</span>
+<p>&ldquo;these are the agents that are currently available&rdquo; <span class='g2-src'>11/18 T@4412</span></p>
+<p>&ldquo;dissolved in either glycerol&rdquo; <span class='g2-src'>11/18 T@4722</span></p>
+<p>&ldquo;we are going to emphasize deep rocks&rdquo; [he said 'deep rocks': Debrox] <span class='g2-src'>11/18 T@5128</span></p>
+</div>
+</div>
+</section>
+
+<section class="gobj" id="gobj-oo-3">
+<h3>Dr. Sikazwe, slide by slide &middot; Otic disorders: docusate and carbamide peroxide &middot; slides 7&ndash;9</h3>
+<div class="gbar"><span>What the lecture adds (OOO 7&ndash;9)</span><b>The two agents he teaches in depth: docusate sodium as a surfactant that lets water into wax, and carbamide peroxide as a source of hydrogen peroxide that fizzes the wax apart.</b><i>OOO slide 7, 8, 9</i></div>
+<div class="gpt g2-block"><h5>Docusate sodium (Colace): an anionic surfactant that lets water into wax (OOO slide 7)</h5>
+<p class="g2-status"><b>Status B, E</b> Fact on slide, reasoning missing (lecture explains how it works and why it is not a systemic concern)</p>
+<p>The slide calls docusate Na an anionic surfactant with a -SO<sub>3</sub>H group that increases water entry to emulsify cerumen; its CBDA is lowering the surface tension between water and cerumen by dissolving in both media through lipophilic and hydrophilic functional groups. The drawn structure is the sodium salt of the sulfonate, with two ester groups and two branched hydrocarbon tails.</p>
+<p>Why it works: oil and water do not mix. The lipophilic tails sit in the cerumen and the hydrophilic head points toward the water, which breaks up the interface; water then seeps into the cracks and the loosened wax can be irrigated out. Why it is not a systemic concern: it is applied topically and is ionic, so it is not absorbed well through lipid membranes. He gave the mechanism and this reason as the points to take from the molecule.</p>
+<div class='g2-said'><span class='g2-k'>He said</span>
+<p>&ldquo;it lowers the surface tension&rdquo; <span class='g2-src'>11/18 T@5919</span></p>
+<p>&ldquo;the tail points to the uh to the cerumen&rdquo; <span class='g2-src'>11/18 T@6467</span></p>
+<p>&ldquo;it won't be absorbed well in the lipid membranes&rdquo; <span class='g2-src'>11/18 T@7228</span></p>
+<p>&ldquo;If you don't remember anything, it's an ionic molecule&rdquo; <span class='g2-src'>11/18 T@7360</span></p>
+<p>&ldquo;are some of the takeaways from this molecule&rdquo; <span class='g2-src'>11/18 T@7636</span></p>
+</div>
+</div>
+<div class="gpt g2-block"><h5>Carbamide peroxide (Debrox): a urea and hydrogen peroxide complex (OOO slide 8)</h5>
+<p class="g2-status"><b>Status B</b> Fact on slide, reasoning missing (lecture explains the three steps and the role of urea)</p>
+<p>The slide shows carbamide peroxide, a 1:1 urea&middot;H<sub>2</sub>O<sub>2</sub> complex, dissociating into urea and H<sub>2</sub>O<sub>2</sub>, then catalase acting to give O<sub>2</sub>; its CBDA is that Debrox dissociates to release H<sub>2</sub>O<sub>2</sub>. The lecture fills in the sequence. The complex releases hydrogen peroxide slowly. Catalase, an enzyme that is also present in earwax, breaks the hydrogen peroxide down to oxygen and two molecules of water. The oxygen bubbles, and the bubbling physically breaks up the wax, so a chemical release turns into a mechanical effect.</p>
+<p>Urea is there to stabilize the hydrogen peroxide. Without the complex, hydrogen peroxide would start to fizz at once; stabilized, it is released slowly. The active ingredient is the hydrogen peroxide, and carbamide peroxide is its source.</p>
+<div class='g2-said'><span class='g2-k'>He said</span>
+<p>&ldquo;It's a chemical complex&rdquo; <span class='g2-src'>11/18 T@7852</span></p>
+<p>&ldquo;that catalyst then facilitate the degradation of hydrogen peroxide into oxygen&rdquo; [he said 'catalyst': catalase] <span class='g2-src'>11/18 T@8525</span></p>
+<p>&ldquo;this is a mechanical effect from chemical to a mechanical effect&rdquo; <span class='g2-src'>11/18 T@9060</span></p>
+<p>&ldquo;this urea is just to stabilize what? Hydrogen peroxide&rdquo; <span class='g2-src'>11/18 T@9219</span></p>
+<p>&ldquo;is a source of hydrogen peroxide&rdquo; <span class='g2-src'>11/18 T@9647</span></p>
+</div>
+</div>
+<div class="gpt g2-block"><h5>Question: group the cerumenolytics by preparation (OOO slide 9)</h5>
+<p class="g2-status"><b>Status E</b> He turned the slide question into three things to be able to do</p>
+<p>The slide asks the class to group the cerumenolytic agents by preparation: water, oil, or nonwater and nonoil. In the lecture he gave the follow-up: group the agents by preparation (slide 6), go back over the three points he made about docusate (what class it is, how it works, why it is not a systemic concern), and for carbamide peroxide know what it releases and how it works. The answers are on slides 6 to 8.</p>
+<div class='g2-said'><span class='g2-k'>He said</span>
+<p>&ldquo;organize a little information&rdquo; <span class='g2-src'>11/18 T@9769</span></p>
+<p>&ldquo;Group these, uh, ceremonolytics by preparation&rdquo; <span class='g2-src'>11/18 T@9820</span></p>
+<p>&ldquo;Those 3 things I mentioned about dococet&rdquo; [he said 'dococet': docusate] <span class='g2-src'>11/18 T@9903</span></p>
+<p>&ldquo;what does it release and ultimately, how does it work&rdquo; <span class='g2-src'>11/18 T@9986</span></p>
+</div>
+</div>
+</section>
+
+<section class="gobj" id="gobj-oo-4">
+<h3>Dr. Sikazwe, slide by slide &middot; Otic disorders: FYI slides &middot; slides 10&ndash;13</h3>
+<div class="gbar"><span>What the lecture adds (OOO 10&ndash;13)</span><b>Otitis, ototoxicity and tinnitus are for information only; he said they will not be on the exam.</b><i>OOO slide 10, 11, 12, 13</i></div>
+<div class="gpt g2-block"><h5>Otitis: types of ear infection (OOO slide 10)</h5>
+<p class="g2-status"><b>Status A</b> FYI slides: he said they will not be on the exam</p>
+</div>
+<div class="gpt g2-block"><h5>Ototoxicity: hearing loss from drugs (OOO slide 11)</h5>
+<p class="g2-status"><b>Status A</b> FYI slides: he said they will not be on the exam</p>
+</div>
+<div class="gpt g2-block"><h5>Tinnitus: sounds and causes (OOO slide 12)</h5>
+<p class="g2-status"><b>Status A</b> FYI slides: he said they will not be on the exam</p>
+</div>
+<div class="gpt g2-block"><h5>Tinnitus: treatment (OOO slide 13)</h5>
+<p class="g2-status"><b>Status A</b> FYI slides: he said they will not be on the exam</p>
+</div>
+</section>
+
+<section class="gobj" id="gobj-oo-5">
+<h3>Dr. Sikazwe, slide by slide &middot; Oral disorders: tooth decay goals and causes &middot; slides 14&ndash;16</h3>
+<div class="gbar"><span>What the lecture adds (OOO 14&ndash;16)</span><b>Defines the goals of tooth decay therapy (remineralize, suppress bacteria, neutralize acid, numb pain, restore) and the causes each goal answers.</b><i>OOO slide 14, 15, 16</i></div>
+<div class="gpt g2-block"><h5>Divider: Oral Disorders (OOO slide 14)</h5>
+<p class="g2-status"><b>Status A</b> On the slide and complete; nothing added in lecture</p>
+</div>
+<div class="gpt g2-block"><h5>Tooth decay, gingivitis and pain: what each goal is for (OOO slide 15)</h5>
+<p class="g2-status"><b>Status B, C</b> Goals on the slide; the lecture says what is being replaced and why fillings are not drug therapy</p>
+<p>The slide lists the goals: remineralize enamel, suppress bacteria, neutralize acid, numb pain, plus restorative fillings. The lecture ties each goal to a cause. Enamel loses calcium and phosphate, so a remineralizing product restores them. Bacteria make some of the acid that removes those minerals, so they are a target, and neutralizing acid is a separate goal. A numbing agent covers pain. When the loss cannot be slowed, a filling physically replaces what is gone; he said this is restorative treatment, not pharmacotherapy.</p>
+<p>He also placed this at the counter: toothpastes and rinses are among the most bought items in a pharmacy, and patients may need help choosing.</p>
+<div class='g2-said'><span class='g2-k'>He said</span>
+<p>&ldquo;perhaps one of the most bought items in the pharmacy&rdquo; <span class='g2-src'>11/18 T@14138</span></p>
+<p>&ldquo;What minerals are we mostly concerned when it comes to enamel, calcium, and phosphate&rdquo; <span class='g2-src'>11/18 T@14814</span></p>
+<p>&ldquo;We may have a physical way of just replacing what is lost&rdquo; <span class='g2-src'>11/18 T@15394</span></p>
+<p>&ldquo;that is called restorative uh treatment&rdquo; <span class='g2-src'>11/18 T@15457</span></p>
+</div>
+</div>
+<div class="gpt g2-block"><h5>Causes of tooth decay: plaque bacteria, acid and habits (OOO slide 16)</h5>
+<p class="g2-status"><b>Status B, C</b> Causes on the slide; the lecture explains how each one ends in enamel loss</p>
+<p>The slide lists plaque bacteria, bacterial conversion of sugars to acids that erode enamel, acid drinks, smoking and substance use (meth, crack cocaine). The lecture adds the chain: bacteria in plaque act on sugars in the mouth and convert them into acids, which lowers the pH of saliva and promotes enamel erosion. The acids he named were lactic acid and propionic acid <span class="g2-tonly" title="Transcript only: not on the slide">Transcript-only, verify against slide</span>; he tied lactic acid to the alpha hydroxy acid class from an earlier discussion. Acid drinks lower the pH of saliva in the same way.</p>
+<p>Smoking alters saliva pH and encourages bacterial growth. With substance use, patients cannot keep up oral hygiene, so bacteria accumulate and enamel is lost. His summary of the response: go after the bacteria, go after the acids by raising pH, and address habits.</p>
+<div class='g2-said'><span class='g2-k'>He said</span>
+<p>&ldquo;it starts acting on these sugars to convert them into acids&rdquo; <span class='g2-src'>11/18 T@16558</span></p>
+<p>&ldquo;There's lactic acid. And there's also propionic acid&rdquo; <span class='g2-src'>11/18 T@16807</span></p>
+<p>&ldquo;Alpha hydroxy acid. So don't forget&rdquo; <span class='g2-src'>11/18 T@17004</span></p>
+<p>&ldquo;It alters saliva pH and also encourages what? bacterial growth&rdquo; <span class='g2-src'>11/18 T@17775</span></p>
+<p>&ldquo;We can go after. Bacteria, we can go after acids&rdquo; <span class='g2-src'>11/18 T@18172</span></p>
+</div>
+</div>
+</section>
+
+<section class="gobj" id="gobj-oo-6">
+<h3>Dr. Sikazwe, slide by slide &middot; Oral disorders: fluoride and non-fluoride toothpastes &middot; slides 17&ndash;19</h3>
+<div class="gbar"><span>What the lecture adds (OOO 17&ndash;19)</span><b>Explains how fluoride converts hydroxyapatite to fluorapatite, what else fluoride does and when too much harms, and which non-fluoride toothpastes remineralize or neutralize acid.</b><i>OOO slide 17, 18, 19</i></div>
+<div class="gpt g2-block"><h5>Fluoride toothpastes: hydroxyapatite becomes fluorapatite (OOO slide 17)</h5>
+<p class="g2-status"><b>Status B, E</b> Reaction on slide; the lecture explains the replacement and ends with questions he wants answerable</p>
+<p>The slide names fluoride sources (Na<sub>2</sub>PO<sub>3</sub>F, SnF<sub>2</sub>, NaF), says enamel hydroxyapatite is vulnerable to acid erosion, and shows Ca<sub>10</sub>(PO<sub>4</sub>)<sub>6</sub>(OH)<sub>2</sub> becoming Ca<sub>10</sub>(PO<sub>4</sub>)<sub>6</sub>F<sub>2</sub>. The lecture explains the change: fluoride takes the place of the hydroxyl group of hydroxyapatite, giving fluorapatite, which resists acid erosion better. The erosion comes from chronic acid exposure, so he stressed continuous, daily use rather than a single treatment. He named the sources as sodium fluorophosphate, tin fluoride and sodium fluoride <span class="g2-tonly" title="Transcript only: not on the slide">Transcript-only, verify against slide</span>.</p>
+<p>He closed this part with three questions: what enamel is made of, what forms with fluoride, and what the advantage is.</p>
+<div class='g2-said'><span class='g2-k'>He said</span>
+<p>&ldquo;our enamel is made up of this compound called hydroxy apatite&rdquo; <span class='g2-src'>11/18 T@18810</span></p>
+<p>&ldquo;So this floral apatite is more resistant to acid eros&rdquo; [he said 'floral apatite': fluorapatite] <span class='g2-src'>11/18 T@19447</span></p>
+<p>&ldquo;this needs to be a, a daily habit&rdquo; <span class='g2-src'>11/18 T@19652</span></p>
+<p>&ldquo;What is the advantage of fluoro appetite? It's more resistant to what? Acid erosion&rdquo; [he said 'fluoro appetite': fluorapatite] <span class='g2-src'>11/18 T@19865</span></p>
+<p>&ldquo;Key takeaways&rdquo; <span class='g2-src'>11/18 T@19950</span></p>
+</div>
+</div>
+<div class="gpt g2-block"><h5>Fluoride has three effects, and too much causes fluorosis (OOO slide 18)</h5>
+<p class="g2-status"><b>Status B, C</b> Three points on the slide; the lecture explains mineral deposition and what fluorosis looks like</p>
+<p>The slide lists three points: fluoride forms fluorapatite from hydroxyapatite, enhances mineral deposition (mineralization), and too much fluoride (above 2 mg/L) can cause enamel fluorosis. The lecture adds how deposition works: fluoride ions recruit calcium and phosphate ions from saliva onto the enamel, which is remineralization, separate from forming fluorapatite.</p>
+<p>On fluorosis he said it is mainly a problem in children because enamel is not fully developed. It starts as spotty white spots and can turn brown as stains get incorporated. He called the 2 mg/L figure a number from old literature and said CDC guidelines give how much toothpaste to put on a child's brush, where less is better.</p>
+<div class='g2-said'><span class='g2-k'>He said</span>
+<p>&ldquo;the fluoride ions themselves In the toothpaste, right? They start recruiting. Calcium. And phosphate&rdquo; <span class='g2-src'>11/18 T@20648</span></p>
+<p>&ldquo;too much of that can also lead to fluorosis&rdquo; <span class='g2-src'>11/18 T@21566</span></p>
+<p>&ldquo;fluorosis is just this spotty white spots&rdquo; <span class='g2-src'>11/18 T@21615</span></p>
+<p>&ldquo;This is a number from old literature&rdquo; <span class='g2-src'>11/18 T@21523</span></p>
+<p>&ldquo;the less, the better&rdquo; <span class='g2-src'>11/18 T@22356</span></p>
+</div>
+</div>
+<div class="gpt g2-block"><h5>Non-fluoride toothpastes: four options (OOO slide 19)</h5>
+<p class="g2-status"><b>Status B, C</b> Four agents on the slide; the lecture explains how each acts and why a patient might use one</p>
+<p>The slide lists sodium bicarbonate (an abrasive and pH-raising agent), nanohydroxyapatite (10% nHA, crystals of 50 to 1000 nm that bond to hydroxyapatite), calcium sodium phosphosilicate (CSPS, a bioactive glass that reacts with oral fluids to deposit crystalline hydroxycarbonate apatite, HCA) and amorphous calcium phosphate (ACP, a reactive salt mixture that releases Ca<sup>2+</sup> and PO<sub>4</sub> ions on contact with saliva).</p>
+<p>The lecture adds the reasoning. Sodium bicarbonate is gritty, so it removes plaque, and it neutralizes acid and raises pH, which prevents erosion. The other three are reactive remineralizers: nanohydroxyapatite bonds directly to hydroxyapatite, CSPS reacts with saliva to deposit a material that mimics hydroxyapatite, and ACP releases calcium and phosphate ions that remineralize enamel. He gave the reason to choose them: a patient who worries about fluorosis or reacts to fluoride.</p>
+<div class='g2-said'><span class='g2-k'>He said</span>
+<p>&ldquo;Most of these are abrasive in that they, they're gritty&rdquo; <span class='g2-src'>11/18 T@22728</span></p>
+<p>&ldquo;sodium bicarbonate can elevate or neutralize the acid&rdquo; <span class='g2-src'>11/18 T@22932</span></p>
+<p>&ldquo;think of this as a reactive uh remineralizer&rdquo; <span class='g2-src'>11/18 T@24025</span></p>
+<p>&ldquo;somebody reacts to fluoride, then. You have these non-fluoride options&rdquo; <span class='g2-src'>11/18 T@24561</span></p>
+</div>
+</div>
+</section>
+
+<section class="gobj" id="gobj-oo-7">
+<h3>Dr. Sikazwe, slide by slide &middot; Oral disorders: mouth rinses, antibacterial agents and fillings &middot; slides 20&ndash;22</h3>
+<div class="gbar"><span>What the lecture adds (OOO 20&ndash;22)</span><b>Shows how each rinse acts (pH, oxidation, antisepsis, anesthesia, cationic membrane disruption) and the one safety point to counsel on, benzocaine and methemoglobinemia.</b><i>OOO slide 20, 21, 22</i></div>
+<div class="gpt g2-block"><h5>Mouth rinses and benzocaine: what each rinse does, and the caution (OOO slide 20)</h5>
+<p class="g2-status"><b>Status B, C, E</b> List on slide; the lecture explains each action and adds a counseling caution for benzocaine</p>
+<p>The slide lists fluoride (remineralization, prevents caries), NaHCO<sub>3</sub> (raises saliva pH and lowers growth of acidic bacteria), carbamide peroxide 10% for canker sores, the thymol, eucalyptol, methyl salicylate and menthol in Listerine, and benzocaine, an anesthetic, with methemoglobinemia "rare BUT a concern". It also shows Cyps converting benzocaine to a hydroxyamine (an N-OH on the aromatic amine).</p>
+<p>The lecture adds why. Carbamide peroxide is a source of hydrogen peroxide, an oxidizing agent with antiseptic effect. Listerine is a mixture of antiseptic and anti-inflammatory ingredients, and he linked methyl salicylate to the anti-inflammatory action. Benzocaine numbs, but its hydroxyamine metabolite has been implicated in methemoglobinemia, which impairs the oxygen carrying capacity of blood. He said the literature advises against frequent use of these products, that a gel such as Anbesol (pictured on the slide) cannot be used every day, and that pharmacists must point this out.</p>
+<div class='g2-said'><span class='g2-k'>He said</span>
+<p>&ldquo;a source of what? Hydrogen peroxide&rdquo; <span class='g2-src'>11/18 T@25185</span></p>
+<p>&ldquo;a mixture of antiseptic and anti-inflammatory agents&rdquo; <span class='g2-src'>11/18 T@25785</span></p>
+<p>&ldquo;perhaps don't use these agents as often&rdquo; <span class='g2-src'>11/18 T@26576</span></p>
+<p>&ldquo;Carrying capacity of what? Blood&rdquo; <span class='g2-src'>11/18 T@26865</span></p>
+<p>&ldquo;Make sure you know that term&rdquo; <span class='g2-src'>11/18 T@26907</span></p>
+<p>&ldquo;It's up to you pharmacists to point this out&rdquo; <span class='g2-src'>11/18 T@27037</span></p>
+</div>
+</div>
+<div class="gpt g2-block"><h5>Chlorhexidine and cetylpyridinium: cations that open bacterial cell walls (OOO slide 21)</h5>
+<p class="g2-status"><b>Status B, E</b> Mechanism on slide; the lecture explains the charge, the binding and the tail</p>
+<p>The slide names chlorhexidine gluconate (a biguanide salt, cationic at physiological pH) and cetylpyridinium chloride (a pyridinium salt, cationic). Their shared CBDA is that they bind electrostatically to the bacterial cell wall and lipophilic tails insert into it and disrupt its integrity. The lecture explains each part. Chlorhexidine has two biguanide groups on each side of a six-carbon link; biguanides are highly basic and ionize at physiological pH, which makes the molecule cationic. In cetylpyridinium, the positively charged pyridine nitrogen is the pyridinium.</p>
+<p>The cell wall phospholipids are negatively charged, so the positive charge draws the molecule to the bacterial surface. The charged head stays on the surface and the lipophilic tail inserts, making holes so the contents leak and the bacteria die; at high concentration this is lysis. If some is swallowed, it stays ionic down the GI tract and is not absorbed much, so systemic toxicity is not the main concern.</p>
+<div class='g2-said'><span class='g2-k'>He said</span>
+<p>&ldquo;these guanides. are highly basic and at physiological pH they ionize&rdquo; [he said 'guanides': biguanides] <span class='g2-src'>11/18 T@28294</span></p>
+<p>&ldquo;Bacteria cell is made up, made up of phospholipids which are negatively charged&rdquo; <span class='g2-src'>11/18 T@29226</span></p>
+<p>&ldquo;Those lipophilic tails embed into what? The bacterial cell wall&rdquo; <span class='g2-src'>11/18 T@29620</span></p>
+<p>&ldquo;You can tell me which is the hydrophilic tail&rdquo; <span class='g2-src'>11/18 T@30623</span></p>
+<p>&ldquo;why? Because they are ionic&rdquo; <span class='g2-src'>11/18 T@31615</span></p>
+</div>
+</div>
+<div class="gpt g2-block"><h5>Metal amalgam fillings: why they declined (OOO slide 22)</h5>
+<p class="g2-status"><b>Status B</b> Fact on slide, reasoning missing (lecture gives the environmental and toxicity reasons)</p>
+<p>The slide says metal amalgams are now less common because of environmental and toxicity concerns. The lecture gives the reasons: amalgams contain a high degree of mercury, along with other metals <span class="g2-tonly" title="Transcript only: not on the slide">Transcript-only, verify against slide</span>. Metal toxicity is one concern. The other is disposal, because removed or collected dental material can leach into the water supply. Dental scientists therefore had to change course, and he said amalgams may still be available where they are still practiced. The move away from them led to the resin fillings on slide 23, which he described as coming from the evolution of polymer chemistry.</p>
+<div class='g2-said'><span class='g2-k'>He said</span>
+<p>&ldquo;a high degree of mercury in there&rdquo; <span class='g2-src'>11/18 T@33256</span></p>
+<p>&ldquo;worry also due to metal toxicity&rdquo; <span class='g2-src'>11/18 T@32777</span></p>
+<p>&ldquo;get into water supply&rdquo; <span class='g2-src'>11/18 T@32893</span></p>
+<p>&ldquo;the evolution of polymer chemistry&rdquo; <span class='g2-src'>11/18 T@33684</span></p>
+</div>
+</div>
+</section>
+
+<section class="gobj" id="gobj-oo-8">
+<h3>Dr. Sikazwe, slide by slide &middot; Oral disorders: resin fillings, whitening and a poll &middot; slides 23&ndash;25</h3>
+<div class="gbar"><span>What the lecture adds (OOO 23&ndash;25)</span><b>Explains how resin fillings form and break down (a polymer and an ester that is metabolized), what whiteners do, and the poll answer sodium bicarbonate.</b><i>OOO slide 23, 24, 25</i></div>
+<div class="gpt g2-block"><h5>Bis-GMA resin fillings: how they harden and why they wear out (OOO slide 23)</h5>
+<p class="g2-status"><b>Status B</b> Reaction and metabolism drawn on slide; the lecture explains the steps and which group is attacked</p>
+<p>The slide says the most common filling resin is Bis-GMA, a polymer of bisphenol A (BPA) and glycidyl methacrylate (GMA), formed with light (hv), and shows metabolism to Bis-HPPP. The lecture explains the steps. The dentist places the mixture on the tooth and shines a light, which causes rapid polymerization; the result is a hardened polymer that binds to enamel.</p>
+<p>The filling has a lifespan because it is gradually lost to metabolism in the mouth. He asked which functional group is attacked, and in the drawing Bis-GMA has two ester groups where Bis-HPPP has hydroxyl groups, so the metabolism is cleavage of the ester. His spoken answer was garbled in the caption ("Caboxyesteres"): read as ester. As the resin loses its effectiveness, the patient has to return for a touch-up.</p>
+<div class='g2-said'><span class='g2-k'>He said</span>
+<p>&ldquo;they shine what? To cause rapid polymerization&rdquo; <span class='g2-src'>11/18 T@34064</span></p>
+<p>&ldquo;a polymer, hardened polymer that binds to enamel&rdquo; <span class='g2-src'>11/18 T@34149</span></p>
+<p>&ldquo;that has a lifespan&rdquo; <span class='g2-src'>11/18 T@34488</span></p>
+<p>&ldquo;look at the functional groups now&rdquo; <span class='g2-src'>11/18 T@34912</span></p>
+<p>&ldquo;Caboxyesteres&rdquo; [garbled caption: ester] <span class='g2-src'>11/18 T@35128</span></p>
+</div>
+</div>
+<div class="gpt g2-block"><h5>Teeth whitening: several mechanisms, and carbamide peroxide as the example (OOO slide 24)</h5>
+<p class="g2-status"><b>Status B, E</b> Table on slide; the lecture explains the peroxide case and says what he will focus on</p>
+<p>The slide says whiteners remove stains by several mechanisms, from H<sub>2</sub>O<sub>2</sub> (oxidizes stains) to abrasives to surfactants, and shows carbamide peroxide (10% solution) releasing about 3% H<sub>2</sub>O<sub>2</sub>. Its table pairs each whitener with a mechanism, for example abrasives (mechanical removal of extrinsic stains), peroxides (oxidation of organic chromophores), enzymes/proteases (degradation of proteins by hydrolysis of peptide bonds) and surfactants (removal of hydrophobic compounds from the tooth surface).</p>
+<p>The lecture adds the reasoning for the peroxide case: carbamide peroxide is a source of hydrogen peroxide, which is a bleaching and oxidizing agent that bleaches out stains. He said he will not ask all of the table and will probably focus on the example he had just given, and that the point of the list is knowing there are multiple options.</p>
+<div class='g2-said'><span class='g2-k'>He said</span>
+<p>&ldquo;Carbonide peroxide is a source of what active ingredient&rdquo; [he said 'Carbonide': carbamide] <span class='g2-src'>11/18 T@35581</span></p>
+<p>&ldquo;So it will use that oxidizing agent to bleach out the stains&rdquo; <span class='g2-src'>11/18 T@35778</span></p>
+<p>&ldquo;I'll probably focus on this example&rdquo; <span class='g2-src'>11/18 T@36238</span></p>
+<p>&ldquo;you have multiple options&rdquo; <span class='g2-src'>11/18 T@36338</span></p>
+</div>
+</div>
+<div class="gpt g2-block"><h5>Poll: the active ingredient of alkaline toothpastes (OOO slide 25)</h5>
+<p class="g2-status"><b>Status E</b> Poll on slide; the lecture gives the answer</p>
+<p>The poll asks: "Alkaline or basic toothpastes contain what major active chemical ingredient?", with the choices carbamide peroxide, sodium fluoride, sodium bicarbonate and none of the above. He took the answer as sodium bicarbonate. The reasoning comes from slides 19 and 20: sodium bicarbonate raises saliva pH and neutralizes acid, which is why a basic toothpaste is sodium bicarbonate and not fluoride or carbamide peroxide.</p>
+<div class='g2-said'><span class='g2-k'>He said</span>
+<p>&ldquo;the question is, alkaline or basic toothpastes contain what major active chemical ingredient&rdquo; <span class='g2-src'>11/18 T@36534</span></p>
+<p>&ldquo;Sodium bicarbonate, right?&rdquo; <span class='g2-src'>11/18 T@36805</span></p>
+</div>
+</div>
+</section>
+
+<section class="gobj" id="gobj-oo-9">
+<h3>Dr. Sikazwe, slide by slide &middot; Ophthalmic disorders: functional groups and glaucoma basics &middot; slides 26&ndash;28</h3>
+<div class="gbar"><span>What the lecture adds (OOO 26&ndash;28)</span><b>Opens the eye material: the drug functional groups to recognize on sight, and what glaucoma is, why the pressure rises and which drug classes act on it.</b><i>OOO slide 26, 27, 28</i></div>
+<div class="gpt g2-block"><h5>Divider: Ophthalmic Disorders (glaucoma, dry eye, allergic conjunctivitis) (OOO slide 26)</h5>
+<p class="g2-status"><b>Status A</b> On the slide and complete; nothing added in lecture</p>
+</div>
+<div class="gpt g2-block"><h5>Drug functional groups: recognize the chemical class from the structure (OOO slide 27)</h5>
+<p class="g2-status"><b>Status B, E</b> Unlabeled structures on slide; the lecture names them and says the question is the class</p>
+<p>The slide shows eight structures under "Drug FGs" with no names. The lecture names the classes: imidazoline (a five-membered ring with two nitrogens), sulfone (sulfur with two oxygens bonded to two carbons; the caption garbles it as "cell phone"), sulfonamide, ester, carbamate (the caption garbles it as "Car Verm"; the drawing is an amide-like nitrogen on a carbonyl bonded to an oxygen), steroid, prostaglandin (the cyclopentane with two chains) and aryloxypropanolamine (a benzene ring, an oxygen next to it, and a three-carbon chain with an alcohol and an amine).</p>
+<p>He compared sulfonamide to the ester and carboxylic acid in how common it is in drug molecules. He said the question could be which chemical class a drug belongs to.</p>
+<div class='g2-said'><span class='g2-k'>He said</span>
+<p>&ldquo;There are a whole bunch of chemical classes that you need to contend with&rdquo; <span class='g2-src'>11/18 T@37361</span></p>
+<p>&ldquo;Please remember these things, OK, sulfonamide&rdquo; <span class='g2-src'>11/18 T@37758</span></p>
+<p>&ldquo;you need to know what they look like&rdquo; <span class='g2-src'>11/18 T@37947</span></p>
+<p>&ldquo;the question could be simply what chemical class does this drug belong to&rdquo; <span class='g2-src'>11/18 T@38953</span></p>
+</div>
+</div>
+<div class="gpt g2-block"><h5>Glaucoma: high eye pressure, the aqueous humor balance and the drug classes (OOO slide 28)</h5>
+<p class="g2-status"><b>Status B, C</b> Problem, goal and class list on slide; the lecture explains the pressure and adds a clinical number</p>
+<p>The slide says the problem is raised IOP (intraocular pressure), the goal is less aqueous humor production, more outflow, or both, and lists the classes: adrenergic agents (alpha 2 agonists, beta antagonists), carbonic anhydrase inhibitors (CAIs), cholinergic agents, prostaglandin receptor agonists, Rho kinase inhibitors, and cannabinoids (asterisked). The lecture explains the reasoning. The eye continuously produces aqueous humor, so a blockade or resistance to outflow raises the pressure, which damages the optic nerve. Glaucoma is progressive and becomes irreversible, so the goal is to manage and contain it.</p>
+<p>Each class fits the goal. The adrenergic agents act at alpha 2 and beta receptors; carbonic anhydrase is an enzyme involved in generating aqueous humor; prostaglandin receptor agents are in fashion as first line; Rho kinase inhibitors are new. He gave the pressure as above about 21 mm Hg <span class="g2-tonly" title="Transcript only: not on the slide">Transcript-only, verify against slide</span> as the worry point, but said not to expect questions on it.</p>
+<div class='g2-said'><span class='g2-k'>He said</span>
+<p>&ldquo;it's a progressive disease that becomes irreversible&rdquo; <span class='g2-src'>11/18 T@39158</span></p>
+<p>&ldquo;The eye is continuously producing what aqueous humor&rdquo; <span class='g2-src'>11/18 T@40729</span></p>
+<p>&ldquo;anything above 21, we are worried&rdquo; <span class='g2-src'>11/18 T@40188</span></p>
+<p>&ldquo;I'm not going to ask you questions on that&rdquo; <span class='g2-src'>11/18 T@40071</span></p>
+<p>&ldquo;what is in fashion right now, first line agents&rdquo; <span class='g2-src'>11/18 T@42155</span></p>
+</div>
+</div>
+</section>
+
+<section class="gobj" id="gobj-oo-10">
+<h3>Dr. Sikazwe, slide by slide &middot; Eye drug absorption: cornea and conjunctiva &middot; slides 29&ndash;30</h3>
+<div class="gbar"><span>What the lecture adds (OOO 29&ndash;30)</span><b>Explains the two routes into the eye and which drugs use which: small lipophilic drugs through the cornea, large hydrophilic drugs through the conjunctiva.</b><i>OOO slide 29, 30</i></div>
+<div class="gpt g2-block"><h5>Cornea and conjunctiva: why the cornea lets in less (OOO slide 29)</h5>
+<p class="g2-status"><b>Status B, C</b> Facts on slide; the lecture explains the barrier and the enzymes, and mentions prodrugs</p>
+<p>The slide says the cornea is a lipid/water/lipid sandwich with less drug entry, and the conjunctiva has influx and efflux transporters and esterase/CYP enzymes and gives more drug entry. The lecture explains why. A drug crossing the cornea must pass through tightly packed cells, dissolve in the lipid layer, move into the water layer, and then dissolve in a lipid layer again, so a lot of drugs will not get in that way. The conjunctiva is the white of the eye with a film that folds into the eyelid, which gives a larger surface, so the majority of drugs enter there.</p>
+<p>Because the conjunctiva has its own transporters and enzymes, some drugs are given as prodrugs that the conjunctiva metabolizes to the active drug.</p>
+<div class='g2-said'><span class='g2-k'>He said</span>
+<p>&ldquo;A lipid water lipid type of sandwich&rdquo; <span class='g2-src'>11/18 T@43101</span></p>
+<p>&ldquo;a larger surface now where drug molecules can actually get into the eye&rdquo; <span class='g2-src'>11/18 T@43953</span></p>
+<p>&ldquo;So the majority of the drugs will enter the I that way&rdquo; [he said 'I': eye] <span class='g2-src'>11/18 T@44026</span></p>
+<p>&ldquo;pro-drugs being instilled in the eye&rdquo; <span class='g2-src'>11/18 T@44311</span></p>
+<p>&ldquo;Which one is going to have more drug entry? Conjunctiva&rdquo; <span class='g2-src'>11/18 T@44571</span></p>
+</div>
+</div>
+<div class="gpt g2-block"><h5>Eye drug ADME: which drugs use which route (OOO slide 30)</h5>
+<p class="g2-status"><b>Status B, E</b> Routes on slide; the lecture states the take-home point</p>
+<p>The slide says lipophilic drugs enter via the cornea and hydrophilic drugs via the conjunctiva, and its flow chart gives ocular absorption as under 10% of the dose, the corneal route as primary for small lipophilic drugs, the conjunctival and scleral route for large hydrophilic drugs, and systemic absorption as over 50% of the dose, mainly through the conjunctiva of the eye and the nose. The lecture adds that absorption into the eye is very small, especially by the corneal route.</p>
+<p>He gave the take-home point: the cornea is the primary route for small lipophilic drugs and the conjunctiva the major route for large hydrophilic drugs, and both kinds of drug can be gotten into the eye. This does not conflict with slide 29: the conjunctiva takes in more drug overall, while each drug type has its preferred route.</p>
+<div class='g2-said'><span class='g2-k'>He said</span>
+<p>&ldquo;The absorption of the eye. Is going to be very small&rdquo; <span class='g2-src'>11/18 T@44802</span></p>
+<p>&ldquo;Cornea primary route for small lipophillic drugs&rdquo; <span class='g2-src'>11/18 T@45116</span></p>
+<p>&ldquo;The conjunctiva becomes the primary route for large hydrophilic drugs&rdquo; <span class='g2-src'>11/18 T@45166</span></p>
+<p>&ldquo;We can get both things into the eye&rdquo; <span class='g2-src'>11/18 T@45385</span></p>
+<p>&ldquo;That's the takeaway for this&rdquo; <span class='g2-src'>11/18 T@45603</span></p>
+</div>
+</div>
+</section>
+
+<section class="gobj" id="gobj-oo-11">
+<h3>Dr. Sikazwe, slide by slide &middot; Glaucoma: alpha 2 agonists (imidazolines) and their SAR &middot; slides 31&ndash;32</h3>
+<div class="gbar"><span>What the lecture adds (OOO 31&ndash;32)</span><b>Shows clonidine as the prototype imidazoline, how apraclonidine and brimonidine were designed to avoid its CNS effects, and the SAR that sets alpha 1 versus alpha 2.</b><i>OOO slide 31, 32</i></div>
+<div class="gpt g2-block"><h5>Clonidine, apraclonidine and brimonidine: lowering CNS entry and raising potency (OOO slide 31)</h5>
+<p class="g2-status"><b>Status B, C</b> Structures and ClogP on slide; the lecture explains the design logic and adds half-life and potency</p>
+<p>The slide shows three imidazolines that lower intraocular fluid production and raise outflow as alpha 2 agonists: clonidine (ClogP 1.5), apraclonidine HCl (Iopidine, ClogP 0.87) and brimonidine tartrate (Alphagan products, ClogP 1.2). Clonidine is the prototype, and the others were inspired by it, but it is lipophilic enough to enter the brain and cause CNS effects, which makes it less desirable for glaucoma.</p>
+<p>Apraclonidine is the amine analog of clonidine (an NH<sub>2</sub> on the ring); its lower logP means it does not enter the brain well. Brimonidine, with an added nitrogen-containing ring and a bromine, is the most potent and highly selective for alpha 2, about 1000-fold more potent than apraclonidine and clonidine <span class="g2-tonly" title="Transcript only: not on the slide">Transcript-only, verify against slide</span>, so a tiny drop is enough. Half-lives of about 8 hours and 3 to 4 hours <span class="g2-tonly" title="Transcript only: not on the slide">Transcript-only, verify against slide</span> mean more frequent instillation for the shorter one.</p>
+<div class="g2-note"><span class="g2-k">Wording in the lecture</span><p>He listed hypotension among clonidine's CNS effects. Later he said "We don't want to give the patient what? Hypertension", which is the opposite effect; the CNS effect of clonidine is hypotension (it lowers blood pressure). The slide itself does not print either word.</p></div>
+<div class='g2-said'><span class='g2-k'>He said</span>
+<p>&ldquo;They are all inspired by clonidine&rdquo; <span class='g2-src'>11/18 T@46182</span></p>
+<p>&ldquo;lipophilic enough to actually get into the brain&rdquo; <span class='g2-src'>11/18 T@46577</span></p>
+<p>&ldquo;the Amin. Analog&rdquo; [he said 'roclonidine': apraclonidine] <span class='g2-src'>11/18 T@47117</span></p>
+<p>&ldquo;This is the most potent of the series&rdquo; <span class='g2-src'>11/18 T@48067</span></p>
+<p>&ldquo;I can put a tiny drop in the eye&rdquo; <span class='g2-src'>11/18 T@48454</span></p>
+<p>&ldquo;In terms of frequent installation, more than this&rdquo; <span class='g2-src'>11/18 T@48885</span></p>
+</div>
+</div>
+<div class="gpt g2-block"><h5>SAR of the alpha 2 agonists: the aryl imidazoline core and its linker (OOO slide 32)</h5>
+<p class="g2-status"><b>Status B</b> SAR on slide; the lecture calls it the minimum structure and states the rule</p>
+<p>The slide shows an aryl imidazoline core: a benzene ring joined through a one-atom link, X, to an imidazoline ring. If X is CH<sub>2</sub> the agents are alpha 1 receptor agonists; if X is NH (the slide writes NH<sub>2</sub>) they are alpha 2 receptor agonists. The lecture says this is the minimum structure with activity: the aromatic ring joined to the imidazoline must be present, and the link atom decides the receptor, with carbon giving alpha 1 selectivity and an amine giving alpha 2 selectivity. In the three drugs on slide 31 the ring is joined to the imidazoline through an NH, matching the alpha 2 rule.</p>
+<div class='g2-said'><span class='g2-k'>He said</span>
+<p>&ldquo;That's the minimum structure um with activity&rdquo; <span class='g2-src'>11/18 T@49759</span></p>
+<p>&ldquo;If the linker atom is carbon&rdquo; <span class='g2-src'>11/18 T@50063</span></p>
+<p>&ldquo;If carbon, then these are alpha 1&rdquo; <span class='g2-src'>11/18 T@50384</span></p>
+<p>&ldquo;If amine, then these are alpha 2, selective&rdquo; <span class='g2-src'>11/18 T@50419</span></p>
+</div>
+</div>
+</section>
+
+<section class="gobj" id="gobj-oo-12">
+<h3>Dr. Sikazwe, slide by slide &middot; Glaucoma: beta antagonists (aryloxypropanolamines) &middot; slides 33&ndash;34</h3>
+<div class="gbar"><span>What the lecture adds (OOO 33&ndash;34)</span><b>Introduces the aryloxypropanolamine beta blockers and their SAR; the 11/19 lecture is not in the materials yet, so these two slides are read from the slide alone.</b><i>OOO slide 33, 34</i></div>
+<div class="gpt g2-block"><h5>Beta antagonists: timolol, betaxolol, levobunolol and carteolol (OOO slide 33)</h5>
+<p class="g2-status"><b>Status B</b> Slide only (11/19 lecture not in the materials); the 11/18 lecture explained the class name</p>
+<p>The slide names the class, aryloxypropanolamines, and says the beta antagonists lower aqueous humor production. It shows timolol maleate (Timoptic products, LogP 1.4), betaxolol HCl (Betoptic, LogP 2.5), levobunolol HCl (Betagan, LogP 2.2) and carteolol HCl (Ocupress, LogP 1.4). Each drawing has the same chain: an aromatic or heteroaromatic ring bonded to an oxygen, then a three-carbon chain carrying an alcohol and a secondary amine with a branched alkyl group on the nitrogen. The rings differ: timolol has a thiadiazole ring carrying a morpholine ring, betaxolol a benzene ring with an ether chain ending in a cyclopropyl group, levobunolol a ring system with a ketone, and carteolol a ring system with a cyclic amide.</p>
+<p>On 11/18 he explained the class name from slide 27: the aromatic group is the aryl, the oxygen right next to it is the oxy, and the three-carbon chain with an alcohol and an amine is the propanolamine.</p>
+<div class='g2-said'><span class='g2-k'>He said</span>
+<p>&ldquo;This is oxygen, right?&rdquo; <span class='g2-src'>11/18 T@38595</span></p>
+<p>&ldquo;Propanolamine because it's 123, carbon, alcohol&rdquo; <span class='g2-src'>11/18 T@38806</span></p>
+</div>
+</div>
+<div class="gpt g2-block"><h5>Beta antagonist SAR: aryloxypropanolamines versus arylethanolamines (OOO slide 34)</h5>
+<p class="g2-status"><b>Status B</b> Slide only (11/19 lecture not in the materials)</p>
+<p>The slide gives four SAR points. Aryloxypropanolamines are more potent than arylethanolamines. Most have mixed beta-1 and beta-2 activity. The S isomer of the OH group is preferred. Most para-aryloxypropanolamines, for example betaxolol, are beta-1 antagonists. The left drawings contrast the two types: Ar-O-CH<sub>2</sub>-CH(OH)-CH<sub>2</sub>-NH-R for an aryloxypropanolamine and Ar-CH(OH)-CH<sub>2</sub>-NH-R for an arylethanolamine, so the first has an extra oxygen and carbon between the ring and the alcohol. Betaxolol is drawn with ring positions 1 and 4 numbered, which are the two substituents on the benzene ring: the oxygen of the chain and the ether chain (para to each other). "Molecule X" is drawn as an arylethanolamine; the slide gives no name for it.</p>
+</div>
+</section>
+
+<section class="gobj" id="gobj-oo-21">
+<h3>Dr. Sikazwe, slide by slide &middot; Carbonic anhydrase inhibitors &middot; slides 35&ndash;39</h3>
+<div class="gbar"><span>What the lecture adds (OOO 35&ndash;39)</span><b>Carbonic anhydrase inhibitors (CAIs) lower intraocular fluid production by competitively blocking an enzyme that makes bicarbonate and H+, and the SO2NH2 group is the part that docks in the enzyme. The 11/19 lecture is not in the materials yet, so each block below is explained from the slide alone.</b><i>OOO slide 35, 36, 37, 38, 39</i></div>
+<div class="gpt g2-block"><h5>Carbonic anhydrase and its reaction (OOO slide 35)</h5>
+<p class="g2-status"><b>Status B</b> Fact on slide, reasoning not on the slide (explained from the deck; lecture not available)</p>
+<p>Carbonic anhydrase (CA) is the enzyme the CAIs act on, so the reaction on this slide is the starting point for slides 36 to 39. The slide writes CO2 + H2O to carbonic acid (H2CO3) to bicarbonate ion (HCO3-) + H+, with CA labeled over the first step, and calls CA a Zn-metalloenzyme that modulates aqueous humor production through pH changes. The slide does not spell out how the pH change leads to fluid production; the poll on OOO slide 39 asks which substance&rsquo;s gradient the CAIs slow, and the reaction here makes bicarbonate a product. The right-hand drawing labels the structures the aqueous humor passes through: posterior chamber, anterior chamber, ciliary body, angle and drainage canal.</p>
+</div>
+<div class="gpt g2-block"><h5>Zolamides: four sulfonamide CAIs (OOO slide 36)</h5>
+<p class="g2-status"><b>Status B</b> Fact on slide, reasoning not on the slide (explained from the deck; lecture not available)</p>
+<p>The four drugs on this slide are acetazolamide (Diamox, ClogP = -0.3), methazolamide (Neptazane, ClogP = 0.13), brinzolamide (Azopt, ClogP = 7) and dorzolamide HCl (Trusopt, ClogP = 2). The slide states that sulfonamides (zolamides) competitively inhibit CAs, which lowers intraocular fluid production. All four drawings carry an SO2NH2 group. Acetazolamide and methazolamide share a thiadiazole ring with an acyl group, and brinzolamide and dorzolamide share a fused two-ring system with a ring sulfone and an ethylamino group; a vertical line separates the first pair from the second. Brinzolamide has a methoxypropyl chain (blue) where dorzolamide has a methyl. The slide does not link the ClogP values to the entry routes on OOO slide 30 (lipophilic drugs through the cornea, hydrophilic drugs through the conjunctiva).</p>
+</div>
+<div class="gpt g2-block"><h5>Representative ADMET: N-deethylation of brinzolamide and dorzolamide (OOO slide 37)</h5>
+<p class="g2-status"><b>Status B</b> Fact on slide, reasoning not on the slide (explained from the deck; lecture not available)</p>
+<p>Brinzolamide and dorzolamide both undergo CYP N-deethylation, and the N-deethylated metabolites are active; the M of ADMET is highlighted on the slide because this is the metabolism step. N-deethylation removes the ethyl group from the nitrogen of the ethylamino (HN-ethyl) side group that both drawings carry. Because the metabolites are active, losing that ethyl group does not end CA inhibition; the slide gives no potency comparison. Both parents keep the SO2NH2 group that OOO slide 38 shows binding the enzyme.</p>
+</div>
+<div class="gpt g2-block"><h5>Chemical basis of drug action: SO2NH2 with Zn and Thr199 (OOO slide 38)</h5>
+<p class="g2-status"><b>Status B</b> Fact on slide, reasoning not on the slide (explained from the deck; lecture not available)</p>
+<p>The slide&rsquo;s chemical basis of drug action (CBDA) is that CAIs dock in the active site of CA (panel A) and the SO2NH2 group forms ionic and H-bond interactions (panel B) with Zn and Thr199. Panel A draws the catalytic site: Zn2+ held by His94, His96 and His119, with Thr199, Gln92, Asn244 and Glu117 nearby. Panel B draws a molecule with the dorzolamide pattern (methyl and ethylammonium on the ring system) in that site, with the SO2NH2 beside Zn2+ and hydrogen bonds to Thr199, and a dashed line from Gln92 to a ring sulfone oxygen. The slide text names only Zn and Thr199 as partners of the SO2NH2 group; the self-assessment question on OOO slide 65 asks for the functional group.</p>
+</div>
+<div class="gpt g2-block"><h5>Polleve-2: which gradient do CAIs slow? (OOO slide 39)</h5>
+<p class="g2-status"><b>Status B</b> Fact on slide, reasoning not on the slide (explained from the deck; lecture not available)</p>
+<p>The poll reads: CAIs influence aqueous humor movement by slowing the chemical gradient involving ______ production? The options are carbon dioxide, bicarbonate, proteins and oxygen (O2), and the slide shows the empty chart with no answer marked. The reaction on OOO slide 35 is CO2 + H2O to H2CO3 to HCO3- + H+ catalyzed by CA, so bicarbonate is the product of the enzyme the CAIs block, and that slide states that CA modulates aqueous humor production through pH changes. The answer is therefore read from OOO slide 35; the deck does not say how bicarbonate production drives fluid movement.</p>
+</div>
+</section>
+
+<section class="gobj" id="gobj-oo-22">
+<h3>Dr. Sikazwe, slide by slide &middot; Cholinergic agents &middot; slides 40&ndash;43</h3>
+<div class="gbar"><span>What the lecture adds (OOO 40&ndash;43)</span><b>Cholinergic agents raise fluid outflow, either by acting like acetylcholine (direct) or by inhibiting the enzyme that inactivates it (indirect), and the functional group sets the extent of that inhibition. The 11/19 lecture is not in the materials yet, so each block below is explained from the slide alone.</b><i>OOO slide 40, 41, 42, 43</i></div>
+<div class="gpt g2-block"><h5>Direct-acting cholinergics: carbamates, esters and their SAR (OOO slide 40)</h5>
+<p class="g2-status"><b>Status B</b> Fact on slide, reasoning not on the slide (explained from the deck; lecture not available)</p>
+<p>Direct-acting cholinergics increase fluid outflow. The slide shows acetylcholine (ACh, an ester), carbachol Cl (IsoptoCarbachol, a carbamate, noted as having weak indirect effects) and pilocarpine HCl (IsoptoCarpine). The SAR has four features: an acyloxy group for H-bonding to nicotinic and muscarinic receptors, an ionizable amine (N), N-methyl groups, and a 2-carbon spacer between O and N. In the drawings ACh and carbachol both show the O-C(=O) group, three methyls on the positive nitrogen and two carbons between O and N; carbachol has NH2 on the carbonyl where ACh has CH3. Pilocarpine is drawn with a ring ester and an N-methyl imidazole ring. The slide gives no mechanism for carbachol&rsquo;s indirect effect.</p>
+</div>
+<div class="gpt g2-block"><h5>Indirect-acting cholinergics: block acetylcholinesterase (OOO slide 41)</h5>
+<p class="g2-status"><b>Status A</b> On the slide and complete; nothing added in lecture</p>
+</div>
+<div class="gpt g2-block"><h5>Organophosphates and the extent of AChE inhibition (OOO slide 42)</h5>
+<p class="g2-status"><b>Status B</b> Fact on slide, reasoning not on the slide (explained from the deck; lecture not available)</p>
+<p>The slide ranks the functional groups by extent of acetylcholinesterase (AChE) inhibition as phosphoryl &gt; carbamate &gt; ester. Echothiophate iodide (Phospholine Iodide) is the organophosphate example, labeled an irreversible AChE inhibitor. The picture on the right shows the enzyme with a diethyl phosphate attached (inactive), then &ldquo;Aging&rdquo; with H2O and loss of C2H5-OH, ending as &ldquo;irreversibly inactive.&rdquo; OOO slide 68 asks which functional group gives irreversible inhibition; the extent ranking and the echothiophate label point to the phosphoryl (organophosphate) group. The slide gives the ranking and the aging picture but not the chemical steps behind them.</p>
+</div>
+<div class="gpt g2-block"><h5>Question-2: which functionality gives an intermediate duration? (OOO slide 43)</h5>
+<p class="g2-status"><b>Status B</b> Fact on slide, reasoning not on the slide (explained from the deck; lecture not available)</p>
+<p>The question asks, for cholinergics, what functionality provides an intermediate duration of AChE inhibition. No answer is printed on the slide. OOO slide 42 ranks the groups by extent of inhibition as phosphoryl &gt; carbamate &gt; ester, so the carbamate is the middle group, and the organophosphate is the one labeled irreversible. Reading &ldquo;intermediate duration&rdquo; as the middle of that ranking is an inference: the slide ranks extent, and the word duration appears only in this question.</p>
+</div>
+</section>
+
+<section class="gobj" id="gobj-oo-23">
+<h3>Dr. Sikazwe, slide by slide &middot; Prostaglandin (FP) agonists &middot; slides 44&ndash;46</h3>
+<div class="gbar"><span>What the lecture adds (OOO 44&ndash;46)</span><b>Prostaglandin analogs raise fluid outflow through the FP receptor; most are esters that are converted to the free acid, and the SAR marks the acid, chain, double-bond and C-15 positions. The 11/19 lecture is not in the materials yet, so each block below is explained from the slide alone.</b><i>OOO slide 44, 45, 46</i></div>
+<div class="gpt g2-block"><h5>Five prostaglandin drugs and the PGF2&alpha; parent (OOO slide 44)</h5>
+<p class="g2-status"><b>Status B</b> Fact on slide, reasoning not on the slide (explained from the deck; lecture not available)</p>
+<p>All the drugs here raise fluid outflow by activating the PGF (FP) receptor. The parent PGF2&alpha; is drawn with a COOH end and carbons 5, 6, 13 and 14 numbered. Bimatoprost (Lumigan) ends in an N-ethyl amide. Travoprost (Travatan Z), latanoprost (Xalatan) and tafluprost (Zioptan) end in isopropyl esters, and latanoprostene bunod (Vyzulta) ends in an ester with a nitrooxy (ONO2) butyl group. By the SAR on OOO slide 46, amides are active drugs and esters are pro-drugs. Tafluprost shows two fluorines where the others show the 15-OH. The end groups vary: CF3-phenoxy in travoprost, phenoxy in tafluprost and phenyl in the others.</p>
+</div>
+<div class="gpt g2-block"><h5>Prodrug activation: latanoprost to latanoprost acid (OOO slide 45)</h5>
+<p class="g2-status"><b>Status B</b> Fact on slide, reasoning not on the slide (explained from the deck; lecture not available)</p>
+<p>Latanoprost (prodrug) is converted by an esterase to latanoprost acid (active). In the drawing the isopropyl ester at the chain end becomes a carboxylic acid (COOH) and the rest of the molecule is drawn unchanged. This is the slide&rsquo;s worked example of the rule on OOO slide 46 that esters are pro-drugs and acids are active. The slide shows only latanoprost; it does not draw the same conversion for the other esters on OOO slide 44, and it does not say where in the eye the esterase acts.</p>
+</div>
+<div class="gpt g2-block"><h5>SAR of the prostaglandin analogs (OOO slide 46)</h5>
+<p class="g2-status"><b>Status B</b> Fact on slide, reasoning not on the slide (explained from the deck; lecture not available)</p>
+<p>The four numbers on the PGF2&alpha; drawing mark the four places the SAR addresses: 1, the acid end, where esters or amides are allowed; 2, the far chain, alkyl or phenyl; 3, the single or double bonds in the chain next to the ring; and 4, the C-15 OH. The printed rules are: acids (-COOH) and amides (-CONH-) are active drugs; esters are pro-drugs; and C-15 is OH or a halogen, where the slide gives the reason as preventing 15-OH oxidation. Tafluprost on OOO slide 44 is the halogen case. The slide gives no further reasoning.</p>
+</div>
+</section>
+
+<section class="gobj" id="gobj-oo-24">
+<h3>Dr. Sikazwe, slide by slide &middot; EP2 agonist and Rho kinase inhibitor &middot; slides 47&ndash;48</h3>
+<div class="gbar"><span>What the lecture adds (OOO 47&ndash;48)</span><b>Omidenepag isopropyl and netarsudil raise fluid outflow by two newer mechanisms, a selective EP2 receptor agonist and a Rho kinase inhibitor, and both are ester prodrugs that need esterase hydrolysis. The 11/19 lecture is not in the materials yet, so each block below is explained from the slide alone.</b><i>OOO slide 47, 48</i></div>
+<div class="gpt g2-block"><h5>Omidenepag isopropyl: a pyridine sulfonamide EP2 agonist prodrug (OOO slide 47)</h5>
+<p class="g2-status"><b>Status B</b> Fact on slide, reasoning not on the slide (explained from the deck; lecture not available)</p>
+<p>The title calls this a selective PGE2 or EP2 receptor agonist, a different receptor from the FP receptor of OOO slide 44. Omidenepag isopropyl (OMDI, ClogP = 3) increases fluid outflow and is an ester prodrug that requires esterase hydrolysis for activation. The drawing shows the isopropyl ester becoming a carboxylic acid in omidenepag (OMD), the active metabolite. The arrow is labeled CE, which the slide does not spell out, while the text says esterase hydrolysis. The sulfonamide here joins a pyridine ring to a substituted nitrogen (S(=O)2-N), unlike the SO2NH2 group of the CAIs on OOO slide 38.</p>
+</div>
+<div class="gpt g2-block"><h5>Netarsudil: an isoquinoline Rho kinase (ROCK) inhibitor prodrug (OOO slide 48)</h5>
+<p class="g2-status"><b>Status B</b> Fact on slide, reasoning not on the slide (explained from the deck; lecture not available)</p>
+<p>Netarsudil (ClogP = 5) increases fluid outflow and is an ester prodrug that requires esterase hydrolysis for activation. In the drawing the aryl ester on the left, a dimethyl-substituted benzoate, is removed to leave a CH2-OH on the benzene ring in netarsudil-M1, the active metabolite; the amide, the primary amine (H2N) and the isoquinoline stay. The arrow is labeled &ldquo;DMEs?&rdquo; with a question mark, which the slide does not define. The slide names the target class as Rho kinase (ROCK) inhibitors and gives no further reasoning.</p>
+</div>
+</section>
+
+<section class="gobj" id="gobj-oo-25">
+<h3>Dr. Sikazwe, slide by slide &middot; Dry eye disease &middot; slides 49&ndash;51</h3>
+<div class="gbar"><span>What the lecture adds (OOO 49&ndash;51)</span><b>Dry eye disease is treated by lowering T-cell activation, through calcineurin inhibition (cyclosporine) or by blocking ICAM-1 binding to integrin LFA-1 (lifitegrast), with topical corticosteroids for the inflammation. The 11/19 lecture is not in the materials yet, so each block below is explained from the slide alone.</b><i>OOO slide 49, 50, 51</i></div>
+<div class="gpt g2-block"><h5>Dry eye disease: multifactorial, three approaches (OOO slide 49)</h5>
+<p class="g2-status"><b>Status A</b> On the slide and complete; nothing added in lecture</p>
+</div>
+<div class="gpt g2-block"><h5>Cyclosporin (Restasis): calcineurin inhibitor with two blanks (OOO slide 50)</h5>
+<p class="g2-status"><b>Status B</b> Fact on slide, reasoning not on the slide (explained from the deck; lecture not available)</p>
+<p>Cyclosporin (Restasis) is shown as a cyclic peptide prodrug and a calcineurin inhibitor, which lowers T-cell activation; its LogP is 4. Two lines end in blanks: &ldquo;No metabolism in eye =&rdquo; and &ldquo;Low systemic exposure =&rdquo;. They use the same cause = consequence form as the calcineurin line, so each blank asks for a result of the property on its left, but the deck prints no answer and the lecture is not available, so the answers are not in the materials. The slide labels cyclosporin a prodrug yet shows no activation step. The drawing shows a ring of amide (peptide) bonds carrying N-methyl groups and side chains.</p>
+</div>
+<div class="gpt g2-block"><h5>Lifitegrast (Xiidra): a phenylalanine that blocks ICAM-1 binding to LFA-1 (OOO slide 51)</h5>
+<p class="g2-status"><b>Status B</b> Fact on slide, reasoning not on the slide (explained from the deck; lecture not available)</p>
+<p>Lifitegrast is a phenylalanine derivative (circled on the slide) that blocks intercellular adhesion molecule-1 (ICAM-1) from binding integrin LFA-1, which lowers T-cell activation. Its LogP is 4, the same as cyclosporin on OOO slide 50, and it is eliminated mostly unchanged, so the slide describes little metabolism. The circled part carries a COOH and a methylsulfonyl group (O=S=O with CH3), and it is joined through an amide to a chlorinated bicyclic ring with a nitrogen and a benzofuran. The summary on OOO slide 61 groups both dry eye drugs as indirect T-cell inhibitors.</p>
+</div>
+</section>
+
+<section class="gobj" id="gobj-oo-26">
+<h3>Dr. Sikazwe, slide by slide &middot; Allergic conjunctivitis: histamine and H1-antihistamines &middot; slides 52&ndash;54</h3>
+<div class="gbar"><span>What the lecture adds (OOO 52&ndash;54)</span><b>Allergic conjunctivitis is a histamine problem treated with five drug classes, and the first class, the H1-antihistamines, is shown here with its SAR deferred to the allergy lecture. The 11/19 lecture is not in the materials yet, so each block below is explained from the slide alone.</b><i>OOO slide 52, 53, 54</i></div>
+<div class="gpt g2-block"><h5>Allergic conjunctivitis: histamine and five drug classes (OOO slide 52)</h5>
+<p class="g2-status"><b>Status A</b> On the slide and complete; nothing added in lecture</p>
+</div>
+<div class="gpt g2-block"><h5>H1-antihistamines: first and second generation (OOO slide 53)</h5>
+<p class="g2-status"><b>Status A</b> On the slide and complete; nothing added in lecture</p>
+</div>
+<div class="gpt g2-block"><h5>Pheniramine, cetirizine and levocabastine structures (OOO slide 54)</h5>
+<p class="g2-status"><b>Status B</b> Fact on slide, reasoning not on the slide (explained from the deck; lecture not available)</p>
+<p>The SAR line reads &ldquo;Refer to the next lecture on Allergies,&rdquo; so the antihistamine SAR is not on this slide and is not in the materials provided. Pheniramine (first generation, in Opcon-A per OOO slide 53), cetirizine (Zerviate) and levocabastine (Livostin) are drawn with part of each structure in red, which the slide does not explain; in each the red part contains the basic nitrogen (the dimethylamino end of a three-carbon chain in pheniramine, a piperazine ring in cetirizine, a piperidine ring in levocabastine). Cetirizine ends in a carboxylic acid (O-CH2-COOH), and levocabastine carries a COOH and a CN group. The ionizable N and COOH are the groups OOO slide 57 names for the dual-acting agents.</p>
+</div>
+</section>
+
+<section class="gobj" id="gobj-oo-27">
+<h3>Dr. Sikazwe, slide by slide &middot; Decongestants, mast cell stabilizers and dual-acting agents &middot; slides 55&ndash;57</h3>
+<div class="gbar"><span>What the lecture adds (OOO 55&ndash;57)</span><b>Imidazoline decongestants act as alpha-1 and alpha-2 agonists, mast cell stabilizers inhibit histamine release from granules, and dual-acting agents combine both; only the first two have SAR statements, and they are brief. The 11/19 lecture is not in the materials yet, so each block below is explained from the slide alone.</b><i>OOO slide 55, 56, 57</i></div>
+<div class="gpt g2-block"><h5>Imidazoline decongestants: alpha-1 and alpha-2 agonists (OOO slide 55)</h5>
+<p class="g2-status"><b>Status B</b> Fact on slide, reasoning not on the slide (explained from the deck; lecture not available)</p>
+<p>The slide lists oxymetazoline HCl (Afrin products), xylometazoline HCl (Clear eyes products), tetrahydrometazoline HCl (Visine products) and naphazoline HCl (Otrivin products), as the slide spells them, with the mechanism of action as alpha-1/alpha-2 agonists. Each drawing has an aromatic ring joined by a CH2 to the red imidazoline ring. For the SAR, the slide says to refer to slide 33, but the aryl imidazoline core is on OOO slide 32, which gives X = CH2 as alpha-1 agonists and X = NH2 as alpha-2 agonists (printed NH2; the clonidine-type structures on slide 31 show NH), and slide 33 is the beta antagonists. The CH2 linker here matches the alpha-1 case, while the slide lists both alpha-1 and alpha-2.</p><div class="g2-note"><span class="g2-k">Brand pairings: slide versus drug chart</span><p>Slide 55 pairs xylometazoline with Clear eyes and naphazoline with Otrivin. The ophthalmic drug chart in the course files lists naphazoline (Clear Eyes) and tetrahydrozoline (Visine). The lecture that could settle this is not in the materials.</p></div>
+</div>
+<div class="gpt g2-block"><h5>Chromone and oxamic acid mast cell stabilizers (OOO slide 56)</h5>
+<p class="g2-status"><b>Status B</b> Fact on slide, reasoning not on the slide (explained from the deck; lecture not available)</p>
+<p>The mechanism on the slide is that these drugs inhibit granule histamine release from mast cells. Cromolyn Na (Opticrom) and nedocromil Na (Alocril) are the chromones, drawn as sodium salts of two fused carbonyl-bearing ring systems with carboxylates. Lodoxamide tromethamine (Alomide), with two oxamic acid groups on a benzene ring, and pemirolast K (Alamast), a potassium salt with a tetrazole, sit in a shaded box followed by &ldquo;??&rdquo;, which the slide does not explain. The SAR line reads &ldquo;Not clearly established,&rdquo; so no structural rule is given for this class.</p>
+</div>
+<div class="gpt g2-block"><h5>Dual-acting agents: antihistamine plus mast cell stabilizing (OOO slide 57)</h5>
+<p class="g2-status"><b>Status B</b> Fact on slide, reasoning not on the slide (explained from the deck; lecture not available)</p>
+<p>Six multi-cyclic drugs are shown: azelastine HCl (Astelin), ketotifen fumarate (Zaditor), epinastine (Elestat), olopatidine HCl (Patanol), bepotastine (Bepreve) and alcaftadine (Lastacaft), spelled as the slide spells them. The SAR is not clearly stated, but the slide says they are multi-cyclic agents with ionizable (N and COOH) functional groups. In the drawings every drug has a nitrogen, while only olopatidine and bepotastine show a COOH; alcaftadine shows an aldehyde, so the slide&rsquo;s N and COOH are the ionizable groups as a set, not a group that all six carry. The self-assessment question on OOO slide 64 asks for the commonest SAR groups of this class.</p>
+</div>
+</section>
+
+<section class="gobj" id="gobj-oo-28">
+<h3>Dr. Sikazwe, slide by slide &middot; Glucocorticoids and summary &middot; slides 58&ndash;61</h3>
+<div class="gbar"><span>What the lecture adds (OOO 58&ndash;61)</span><b>Glucocorticoid steroids act through the GR complex, and the slides give the steroid numbering and alpha/beta convention, six drugs and three SAR features that raise anti-inflammatory activity. The 11/19 lecture is not in the materials yet, so each block below is explained from the slide alone.</b><i>OOO slide 58, 59, 60, 61</i></div>
+<div class="gpt g2-block"><h5>Glucocorticoid MoA, steroid numbering and stereochemistry (OOO slide 58)</h5>
+<p class="g2-status"><b>Status B</b> Fact on slide, reasoning not on the slide (explained from the deck; lecture not available)</p>
+<p>The mechanism on the slide is that glucocorticoids activate the GR complex to produce proteins that in turn suppress pro-inflammatory proteins. The numbered skeleton is the template that the questions on OOO slides 59 and 63 use. Carbon 1 is in ring A; carbon 10 is the A/B junction carbon with methyl 19; carbon 13 carries methyl 18; carbon 17 carries the side chain, numbered 20 to 27, with 21 a branch on 20 and 26 and 27 the two ends at 25. The rings are lettered A, B, C and D, and the slide draws alpha with a hashed bond and beta with a wedge at the A/B junction. Numbering and orientation are two separate ideas.</p>
+</div>
+<div class="gpt g2-block"><h5>Slide states what to know: C-atom numbering, stereochemistry, anti-inflammatory SAR (OOO slide 59)</h5>
+<p class="g2-status"><b>Status A</b> On the slide and complete; nothing added in lecture</p>
+</div>
+<div class="gpt g2-block"><h5>Six glucocorticoids and the three SAR features (OOO slide 60)</h5>
+<p class="g2-status"><b>Status B</b> Fact on slide, reasoning not on the slide (explained from the deck; lecture not available)</p>
+<p>Anti-inflammatory activity is increased by a C1-C2 double bond, a 6&alpha;- or 9&alpha;-halogen (X), and an 11&beta;-OH; the small drawing shows them with 1, 9, 11 and 6 numbered, the HO on C11, and X at C9 and C6. The slide shows hydrocortisone, dexamethasone, fluorometholone, prednisolone, loteprednol and rimexolone. In the drawings all six carry the 11-HO, hydrocortisone shows a single double bond in ring A while the other five show two, and dexamethasone and fluorometholone carry a fluorine at C9; loteprednol carries a Cl on its side chain, not on the ring.</p>
+</div>
+<div class="gpt g2-block"><h5>Summary of otic, oral, glaucoma, dry eye and allergic conjunctivitis drug classes (OOO slide 61)</h5>
+<p class="g2-status"><b>Status A</b> On the slide and complete; nothing added in lecture</p>
+</div>
+</section>
+
+<section class="gobj" id="gobj-oo-29">
+<h3>Dr. Sikazwe, slide by slide &middot; Self-assessment questions 1-3 &middot; slides 62&ndash;65</h3>
+<div class="gbar"><span>What the lecture adds (OOO 62&ndash;65)</span><b>Self-assessment questions 1 to 3 ask for the steroid numbering, the commonest SAR groups of the dual-acting agents and the CAI functional group. The 11/19 lecture is not in the materials yet, so each block below is explained from the slide alone.</b><i>OOO slide 62, 63, 64, 65</i></div>
+<div class="gpt g2-block"><h5>Self-assessment divider (OOO slide 62)</h5>
+<p class="g2-status"><b>Status A</b> On the slide and complete; nothing added in lecture</p>
+</div>
+<div class="gpt g2-block"><h5>Question 1: identify and number the carbons (OOO slide 63)</h5>
+<p class="g2-status"><b>Status B</b> Fact on slide, reasoning not on the slide (explained from the deck; lecture not available)</p>
+<p>The drawing is the unnumbered steroid skeleton that OOO slide 58 shows numbered: four fused rings, a methyl on the A/B junction carbon and one on the C/D junction carbon, and an eight-carbon branched side chain on the five-membered ring. Using the numbering on slide 58, the ring carbons run 1 to 17, the methyl on C10 is 19, the methyl on C13 is 18, and the side chain is 20 to 27 (21 the branch on 20, 26 and 27 the two ends at 25). Counting gives 27 carbons in all. No answer is printed on the slide; the numbers above are read from slide 58.</p>
+</div>
+<div class="gpt g2-block"><h5>Question 2: commonest SAR groups of dual-acting agents (OOO slide 64)</h5>
+<p class="g2-status"><b>Status B</b> Fact on slide, reasoning not on the slide (explained from the deck; lecture not available)</p>
+<p>The slide gives &ldquo;1) Ar groups; 2) ........ ; 3) ........&rdquo; as the answer line and prints no answer for the blanks. OOO slide 57 states the SAR as multi-cyclic agents with ionizable (N and COOH) functional groups, so the blanks are filled from it by the ionizable nitrogen and the COOH group. The aromatic rings in all six drawings are the Ar groups, and the slide&rsquo;s multi-cyclic statement is the ring system itself. Not every drug on slide 57 has a COOH, so the three groups describe the class as a whole.</p>
+</div>
+<div class="gpt g2-block"><h5>Question 3: the CAI key functional group (OOO slide 65)</h5>
+<p class="g2-status"><b>Status B</b> Fact on slide, reasoning not on the slide (explained from the deck; lecture not available)</p>
+<p>The slide asks for the functional group at the center of the CAI chemical basis of drug action, with a blank answer line. OOO slide 38 states that the SO2NH2 group forms ionic and H-bond interactions with Zn and Thr199 in the active site of CA, so the group is the sulfonamide, SO2NH2. All four CAIs on OOO slide 36 carry it.</p>
+</div>
+</section>
+
+<section class="gobj" id="gobj-oo-30">
+<h3>Dr. Sikazwe, slide by slide &middot; Self-assessment questions 4 and 5 &middot; slides 66&ndash;68</h3>
+<div class="gbar"><span>What the lecture adds (OOO 66&ndash;68)</span><b>Self-assessment questions 4 and 5 ask the student to name a drawn functional group, say which drugs contain it, and name the group that gives irreversible AChE inhibition. The 11/19 lecture is not in the materials yet, so each block below is explained from the slide alone.</b><i>OOO slide 66, 67, 68</i></div>
+<div class="gpt g2-block"><h5>Question 4: name the drawn functionality (OOO slide 66)</h5>
+<p class="g2-status"><b>Status B</b> Fact on slide, reasoning not on the slide (explained from the deck; lecture not available)</p>
+<p>The drawing is a five-membered ring with two nitrogens, one NH, one C=N and two saturated carbons, which is the imidazoline ring that also appears first in the &ldquo;Drug FGs&rdquo; drawings of OOO slide 27. Part (ii) is left blank. The deck places the imidazoline in clonidine, apraclonidine and brimonidine (OOO slide 31) and in the four decongestants on OOO slide 55. The slide prints no answer; these are read from slides 31 and 55. The ring is not the aromatic imidazole, because two of its carbons are saturated.</p>
+</div>
+<div class="gpt g2-block"><h5>Question 5: identity of the indicated functionality (OOO slide 67)</h5>
+<p class="g2-status"><b>Status B</b> Fact on slide, reasoning not on the slide (explained from the deck; lecture not available)</p>
+<p>The drawing is a five-membered carbon ring with two long straight chains attached. No functionality is marked on the slide. The same drawing is among the &ldquo;Drug FGs&rdquo; on OOO slide 27, and the ring with two chains is the pattern of the prostaglandin drugs on OOO slide 44, so the identity is a cyclopentane ring with two chains and the drugs are the prostaglandins. No answer is printed on the slide. The deck does not name the group on slide 27 in words.</p>
+</div>
+<div class="gpt g2-block"><h5>Question 5 (second): the group with irreversible AChE inhibition (OOO slide 68)</h5>
+<p class="g2-status"><b>Status B</b> Fact on slide, reasoning not on the slide (explained from the deck; lecture not available)</p>
+<p>The slide asks which functional group in cholinergic drugs exhibits irreversible acetylcholinesterase inhibition, and it is numbered Question 5 a second time. OOO slide 42 labels echothiophate iodide, an organophosphate, as an irreversible AChE inhibitor, shows the phosphoryl-enzyme &ldquo;aging&rdquo; to an irreversibly inactive form, and ranks phosphoryl above carbamate above ester by extent of inhibition. The functional group is therefore the phosphoryl (organophosphate) group. No answer is printed on slide 68; it is read from slide 42.</p>
+</div>
+</section>
+</details>
 `;
 
 /* ==========================================================================

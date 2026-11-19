@@ -236,6 +236,36 @@
    "WCC",
    "p8c",
    1
+  ],
+  [
+   "Smith Eye",
+   "ey",
+   1
+  ],
+  [
+   "Dr. Smith's Eye",
+   "ey",
+   0
+  ],
+  [
+   "Eye",
+   "ey",
+   1
+  ],
+  [
+   "Sikazwe OOO",
+   "oo",
+   1
+  ],
+  [
+   "OOO",
+   "oo",
+   1
+  ],
+  [
+   "Otic/Oral/Ophthalmic",
+   "oo",
+   0
   ]
  ],
  "sections": [
@@ -452,6 +482,18 @@
    "sun"
   ],
   [
+   "gdeck-eye",
+   "ey",
+   "Guide heading: Dr. Smith, Eye",
+   "sun"
+  ],
+  [
+   "gdeck-ooo",
+   "oo",
+   "Guide heading: Dr. Sikazwe, Otic/Oral/Ophthalmic",
+   "sun"
+  ],
+  [
    "gdeck-p5",
    "p5",
    "Guide heading: Dr. Patel, Dermatitis",
@@ -527,6 +569,42 @@
    "gobj-mc-",
    "mc",
    "Guide: DPAW",
+   "sun"
+  ],
+  [
+   "gobj-ey-",
+   "ey",
+   "Guide: Dr. Smith, Eye, slide by slide",
+   "sun"
+  ],
+  [
+   "ref-ey-",
+   "ey",
+   "Reference: Dr. Smith, Eye",
+   "sun"
+  ],
+  [
+   "tell-ey-",
+   "ey",
+   "Tell apart: Dr. Smith, Eye",
+   "sun"
+  ],
+  [
+   "gobj-oo-",
+   "oo",
+   "Guide: Dr. Sikazwe, Otic/Oral/Ophthalmic, slide by slide",
+   "sun"
+  ],
+  [
+   "ref-oo-",
+   "oo",
+   "Reference: Dr. Sikazwe, Otic/Oral/Ophthalmic",
+   "sun"
+  ],
+  [
+   "tell-oo-",
+   "oo",
+   "Tell apart: Dr. Sikazwe, Otic/Oral/Ophthalmic",
    "sun"
   ],
   [
@@ -611,6 +689,24 @@
    "dzcases-dandruff",
    "p7",
    "Diseases: the practice patients of this card are Dr. Patel's cases from this deck",
+   "p8s"
+  ],
+  [
+   "dzcases-glaucoma",
+   "ey",
+   "Diseases: the practice patients of this card come from Dr. Smith's eye lectures (this deck)",
+   "p8s"
+  ],
+  [
+   "dzcases-allergic-conjunctivitis",
+   "ey",
+   "Diseases: the practice patients of this card come from Dr. Smith's eye lectures (this deck)",
+   "p8s"
+  ],
+  [
+   "dzcases-dry-eye",
+   "ey",
+   "Diseases: the practice patients of this card come from Dr. Smith's eye lectures (this deck)",
    "p8s"
   ],
   [

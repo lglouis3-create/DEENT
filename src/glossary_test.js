@@ -68,7 +68,7 @@ const check = (ok, label, detail) => { n++; if (!ok) fail++; console.log((ok ? '
     /* ---- the full data ---- */
     const fd = await p.evaluate(() => {
       const G = GLOSSARY_TERMS, wc = t => t.def.trim().split(/\s+/).length, labels = t => (t.def.match(/(?:Dr\. )?(?:Smith|Sikazwe|Patel)\s*:/g) || []).length;
-      const exam = x => x === 1 || x === 2 || (Array.isArray(x) && x.length === 2 && x[0] === 1 && x[1] === 2);
+      const exam = x => x === 1 || x === 2 || x === 3 || (Array.isArray(x) && x.length === 2 && x[0] === 1 && x[1] === 2);
       const bad = [];
       G.forEach(t => { for (const k of ['id', 'term', 'def', 'cite', 'kind', 'deck', 'prof']) if (typeof t[k] !== 'string' || !t[k].trim()) bad.push(t.id + ':' + k); if (!['slide', 'lecture', 'general'].includes(t.src)) bad.push(t.id + ':src'); if (!exam(t.exam)) bad.push(t.id + ':exam'); });
       const hasE = (t, n) => Array.isArray(t.exam) ? t.exam.includes(n) : t.exam === n;
@@ -77,14 +77,14 @@ const check = (ok, label, detail) => { n++; if (!ok) fail++; console.log((ok ? '
         merged: G.filter(t => labels(t) >= 2).length, mergedProf: G.filter(t => labels(t) >= 2 && !/\//.test(t.prof) && false).length,
         noUrl: G.filter(t => t.src === 'general' && !/https?:\/\//.test(t.cite)).map(t => t.id),
         bond: G.filter(t => /Sikazwe/.test(t.prof) && /(triple|double) bond/i.test(t.def)).map(t => t.id),
-        e1: G.filter(t => hasE(t, 1)).length, e2: G.filter(t => hasE(t, 2)).length, both: G.filter(t => hasE(t, 1) && hasE(t, 2)).length};
+        e1: G.filter(t => hasE(t, 1)).length, e2: G.filter(t => hasE(t, 2)).length, e3: G.filter(t => hasE(t, 3)).length, both: G.filter(t => hasE(t, 1) && hasE(t, 2)).length};
     });
     check(fd.n >= 700 && fd.uniq === fd.n, `${tag}: the glossary has 700+ entries and the ids are unique (${fd.n}, ${fd.uniq} ids)`, fd);
-    check(fd.bad.length === 0, `${tag}: every entry has id, term, def, cite, kind, deck, prof, a src of slide/lecture/general and an exam of 1, 2 or [1, 2]`, fd.bad.slice(0, 8));
+    check(fd.bad.length === 0, `${tag}: every entry has id, term, def, cite, kind, deck, prof, a src of slide/lecture/general and an exam of 1, 2, 3 or [1, 2]`, fd.bad.slice(0, 8));
     check(fd.long.length === 0, `${tag}: every definition is 35 words or fewer unless it carries one definition per professor named (${fd.merged} merged entries)`, fd.long);
     check(fd.noUrl.length === 0, `${tag}: every general entry's cite has an http link`, fd.noUrl.slice(0, 8));
     check(fd.bond.length === 0, `${tag}: no Sikazwe entry's definition says "double bond" or "triple bond" (functional groups, not bonds)`, fd.bond);
-    check(fd.e1 + fd.e2 - fd.both === fd.n && fd.e1 > 0 && fd.e2 > 0, `${tag}: the Exam 1 and Exam 2 counts add up (${fd.e1} + ${fd.e2} - ${fd.both} both = ${fd.n})`, fd);
+    check(fd.e1 + fd.e2 + fd.e3 - fd.both === fd.n && fd.e1 > 0 && fd.e2 > 0 && fd.e3 > 0, `${tag}: the Exam 1, Exam 2 and Exam 3 counts add up (${fd.e1} + ${fd.e2} + ${fd.e3} - ${fd.both} both = ${fd.n})`, fd);
     const real = await p.evaluate(() => ['P5-111', 'S4-046', 'L1-032'].map(id => {
       const q = QUESTIONS.find(x => x.id === id); if (!q) return {id, missing: true};
       const parts = []; const add = s => { if (typeof s === 'string' && s) parts.push(s.replace(/<[^>]+>/g, ' ')); };

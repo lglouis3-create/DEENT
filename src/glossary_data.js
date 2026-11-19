@@ -1,5 +1,5 @@
 /* glossary_data.js: the course glossary read by glossary_ui.js (2026-11-15).
-   763 entries from the slides of the eleven decks (Dr. Smith's Pathophysiology, PCol and Sun Exposure; Dr. Sikazwe's DPAW; Dr. Patel's
+   1009 entries from the slides of the eleven decks (Dr. Smith's Pathophysiology, PCol and Sun Exposure; Dr. Sikazwe's DPAW; Dr. Patel's
    Dermatitis, Acne, Scaly Dermatoses, Outdoor Exposures, Sun Exposure, Wound Care and Warts) and the Diseases tab's terms, each checked
    against its cited slide, or against the public source named in its cite when src is 'general' (a word the slides use without defining).
    Where the same term is taught by more than one professor the entry gives each definition under the professor's name, and parts lists them: [{prof, def, cite, src}], each with that professor's own cite; def and cite stay the joined text.
@@ -11838,5 +11838,3455 @@ const GLOSSARY_TERMS = [
 "src": "slide"
 }
 ]
+},
+{
+"id": "ey-sclera",
+"term": "sclera",
+"also": [],
+"def": "The white, firm outer membrane that protects the eye and goes all the way around the eyeball. At the front it continues as the cornea, which is the same tissue made clear.",
+"cite": "Eye slide 4, T@5971 11/13",
+"src": "slide",
+"deck": "ey",
+"prof": "Smith",
+"exam": 3,
+"kind": "anatomy"
+},
+{
+"id": "ey-cornea",
+"term": "cornea",
+"also": [],
+"def": "The clear tissue in front of the iris and lens that protects them. It is continuous with the sclera, similar tissue that is not opaque. Tears coat the cornea and the conjunctiva.",
+"cite": "Eye slide 4, Eye slide 6, T@6305 11/13",
+"src": "slide",
+"deck": "ey",
+"prof": "Smith",
+"exam": 3,
+"kind": "anatomy"
+},
+{
+"id": "ey-choroid",
+"term": "choroid",
+"also": [],
+"def": "The tissue that lines the whole eyeball. It is full of blood vessels, so the retina has a lot of blood flow, which the rods and cones need to function and stay alive.",
+"cite": "Eye slide 4, T@6670 11/13",
+"src": "slide",
+"deck": "ey",
+"prof": "Smith",
+"exam": 3,
+"kind": "anatomy"
+},
+{
+"id": "ey-retina",
+"term": "retina",
+"also": [],
+"def": "The tissue at the back of the eye that holds the rods and cones, the light-sensing receptors. The nerves of the rods and cones are bundled into the optic nerve.",
+"cite": "Eye slide 4, T@5431 11/13",
+"src": "slide",
+"deck": "ey",
+"prof": "Smith",
+"exam": 3,
+"kind": "anatomy"
+},
+{
+"id": "ey-optic-nerve",
+"term": "optic nerve",
+"also": [],
+"def": "The nerve formed from the bundled nerves of the rods and cones; it sends the vision image to the brain. Glaucoma is a progressive disease that can lead to vision loss through optic nerve damage.",
+"cite": "Eye slide 4, Eye slide 13, T@6553 11/13",
+"src": "slide",
+"deck": "ey",
+"prof": "Smith",
+"exam": 3,
+"kind": "anatomy"
+},
+{
+"id": "ey-lens",
+"term": "lens",
+"also": [],
+"def": "The structure through which light is refracted and concentrated toward the retina. Suspensory ligaments hold the lens in place and connect it to the ciliary body.",
+"cite": "Eye slide 4, T@5298 11/13",
+"src": "slide",
+"deck": "ey",
+"prof": "Smith",
+"exam": 3,
+"kind": "anatomy"
+},
+{
+"id": "ey-iris",
+"term": "iris",
+"also": [],
+"def": "The colored part of the eye, a ring in front of the lens. Aqueous humor passes through the opening between the lens and the iris on its way to the pupil.",
+"cite": "Eye slide 4, Eye slide 7, T@5771 11/13",
+"src": "slide",
+"deck": "ey",
+"prof": "Smith",
+"exam": 3,
+"kind": "anatomy"
+},
+{
+"id": "ey-pupil",
+"term": "pupil",
+"also": [],
+"def": "The opening of the iris, through which aqueous humor flows into the anterior chamber. Adrenergic stimulation of α1 receptors on the dilator muscle dilates it; muscarinic stimulation of the pupillary sphincter muscles constricts it.",
+"cite": "Eye slide 4, Eye slide 7, T@25840 11/13",
+"src": "slide",
+"deck": "ey",
+"prof": "Smith",
+"exam": 3,
+"kind": "anatomy"
+},
+{
+"id": "ey-conjunctiva",
+"term": "conjunctiva",
+"also": [],
+"def": "The tissue that tears coat together with the cornea. It holds the accessory lacrimal glands, which help make the aqueous layer of tears, and the goblet cells, which make the mucins of the posterior layer.",
+"cite": "Eye slide 4, Eye slide 6, Eye slide 15, T@13069 11/13",
+"src": "slide",
+"deck": "ey",
+"prof": "Smith",
+"exam": 3,
+"kind": "anatomy"
+},
+{
+"id": "ey-ciliary-body",
+"term": "ciliary body",
+"also": [],
+"def": "A doughnut-shaped structure of smooth muscle covered by epithelial tissue, behind the iris and around the lens. It makes aqueous humor, and suspensory ligaments connect it to the lens.",
+"cite": "Eye slide 4, Eye slide 7, Eye slide 14, T@7302 11/13",
+"src": "slide",
+"deck": "ey",
+"prof": "Smith",
+"exam": 3,
+"kind": "anatomy",
+"common": true
+},
+{
+"id": "ey-ciliary-muscle",
+"term": "ciliary muscle",
+"also": [
+"ciliary muscles"
+],
+"def": "The muscle of the ciliary body. Cholinergic muscarinic stimulation contracts it (accommodation); adrenergic stimulation relaxes it (far vision). Prostaglandin agonists relax it; parasympathomimetics can cause painful ciliary muscle spasm.",
+"cite": "Eye slide 7, Eye slide 15, Eye slide 33, Eye slide 37, T@31157 11/17",
+"src": "slide",
+"deck": "ey",
+"prof": "Smith",
+"exam": 3,
+"kind": "anatomy"
+},
+{
+"id": "ey-suspensory-ligaments",
+"term": "suspensory ligaments",
+"also": [
+"suspension ligaments",
+"zonular fibers",
+"zonular fibers of suspensory ligament"
+],
+"def": "The ligaments, labeled zonular fibers of the suspensory ligament, that hold the lens in place and connect it to the ciliary body.",
+"cite": "Eye slide 4, T@7560 11/13",
+"src": "slide",
+"deck": "ey",
+"prof": "Smith",
+"exam": 3,
+"kind": "anatomy"
+},
+{
+"id": "ey-dilator-muscle",
+"term": "dilator muscle",
+"also": [
+"pupillary dilator muscle"
+],
+"def": "The iris muscle on which adrenergic stimulation of α1 receptors acts; this causes the pupil to dilate.",
+"cite": "Eye slide 7",
+"src": "slide",
+"deck": "ey",
+"prof": "Smith",
+"exam": 3,
+"kind": "anatomy"
+},
+{
+"id": "ey-pupillary-sphincter",
+"term": "pupillary sphincter muscle",
+"also": [
+"sphincter muscle",
+"pupillary sphincter muscles",
+"sphincter muscles"
+],
+"def": "The iris muscle on which cholinergic stimulation of muscarinic receptors acts; this constricts the pupil. M3 agonists and the acetylcholinesterase inhibitor contract the sphincter muscle.",
+"cite": "Eye slide 7, Eye slide 32, Eye slide 34, T@27544 11/17",
+"src": "slide",
+"deck": "ey",
+"prof": "Smith",
+"exam": 3,
+"kind": "anatomy"
+},
+{
+"id": "ey-anterior-chamber",
+"term": "anterior chamber",
+"also": [],
+"def": "The open space at the front of the eye that aqueous humor fills after it flows through the pupil. The aqueous humor drains out of it at the angle.",
+"cite": "Eye slide 4, T@25956 11/13",
+"src": "slide",
+"deck": "ey",
+"prof": "Smith",
+"exam": 3,
+"kind": "anatomy"
+},
+{
+"id": "ey-posterior-chamber",
+"term": "posterior chamber",
+"also": [],
+"def": "The open space between the lens and the iris. The ciliary body makes aqueous humor into this chamber, and the liquid flows through the opening between the lens and the iris to the anterior chamber.",
+"cite": "Eye slide 4, T@26005 11/13",
+"src": "slide",
+"deck": "ey",
+"prof": "Smith",
+"exam": 3,
+"kind": "anatomy"
+},
+{
+"id": "ey-vitreous-humor",
+"term": "vitreous humor",
+"also": [
+"vitreous",
+"vitreous chamber",
+"vitreal chamber"
+],
+"def": "The gelatinous liquid in the chamber at the back of the eye (vitreous chamber, or posterior cavity). In glaucoma, rising pressure in the front of the eye pushes back and damages the optic nerve.",
+"cite": "Eye slide 4, T@7880 11/13",
+"src": "slide",
+"deck": "ey",
+"prof": "Smith",
+"exam": 3,
+"kind": "anatomy"
+},
+{
+"id": "ey-aqueous-humor",
+"term": "aqueous humor",
+"also": [
+"aqueous"
+],
+"def": "The liquid in the front of the eye, less gelatinous than the vitreous, that the ciliary body makes continuously. It leaves by drainage; if it does not drain, intraocular pressure rises.",
+"cite": "Eye slide 7, Eye slide 15, T@26661 11/13",
+"src": "slide",
+"deck": "ey",
+"prof": "Smith",
+"exam": 3,
+"kind": "anatomy",
+"common": true
+},
+{
+"id": "ey-angle",
+"term": "angle",
+"also": [
+"drainage angle",
+"angle of the eye"
+],
+"def": "The part of the eye near the front through which aqueous humor flows out of the anterior chamber. Open angle and angle closure glaucoma are named for whether this outflow route is open or closed.",
+"cite": "T@22812 11/13",
+"src": "lecture",
+"deck": "ey",
+"prof": "Smith",
+"exam": 3,
+"kind": "anatomy"
+},
+{
+"id": "ey-trabecular-meshwork",
+"term": "trabecular meshwork",
+"also": [
+"trabecular mesh",
+"meshwork"
+],
+"def": "The porous tissue around the opening of Schlemm's canal; aqueous humor flows through it into the canal, the major outflow route. M3 agonists contract it, opening its spaces; the Rho kinase inhibitor softens it.",
+"cite": "Eye slide 15, Eye slide 16, Eye slide 32, Eye slide 41, T@29958 11/13",
+"src": "slide",
+"deck": "ey",
+"prof": "Smith",
+"exam": 3,
+"kind": "anatomy"
+},
+{
+"id": "ey-schlemms-canal",
+"term": "Schlemm's canal",
+"also": [
+"canal of Schlemm",
+"Schlemms canal",
+"canal of Schlemm"
+],
+"def": "A duct next to the trabecular meshwork. Aqueous humor that passes through the meshwork drains into the canal and from it into the veins, so it leaves the eye through the blood flow.",
+"cite": "Eye slide 15, Eye slide 16, Eye slide 41, T@29647 11/13",
+"src": "slide",
+"deck": "ey",
+"prof": "Smith",
+"exam": 3,
+"kind": "anatomy"
+},
+{
+"id": "ey-uveoscleral-outflow",
+"term": "uveoscleral outflow",
+"also": [
+"uveoscleral route",
+"uveoscleral"
+],
+"def": "The second route of aqueous humor outflow, through the space where the uvea and the sclera meet. It carries less outflow than the trabecular route. Brimonidine and the prostaglandin agonists increase it.",
+"cite": "Eye slide 16, Eye slide 22, Eye slide 37, T@30529 11/13",
+"src": "slide",
+"deck": "ey",
+"prof": "Smith",
+"exam": 3,
+"kind": "anatomy"
+},
+{
+"id": "ey-uvea",
+"term": "uvea",
+"also": [],
+"def": "The structure of the eye that includes the ciliary body, the ligaments, the attachment to the lens and the iris. The uveoscleral outflow route runs between the uvea and the sclera.",
+"cite": "T@30729 11/13",
+"src": "lecture",
+"deck": "ey",
+"prof": "Smith",
+"exam": 3,
+"kind": "anatomy"
+},
+{
+"id": "ey-iop",
+"term": "intraocular pressure",
+"also": [
+"IOP",
+"ocular pressure",
+"intraocular eye pressure",
+"eye pressure"
+],
+"def": "The pressure in the eyeball. In glaucoma it rises when aqueous humor does not drain as fast as it is made, which can damage the optic nerve. Every glaucoma treatment aims to decrease it.",
+"cite": "Eye slide 13, T@19734 11/13",
+"src": "slide",
+"deck": "ey",
+"prof": "Smith",
+"exam": 3,
+"kind": "measure",
+"common": true
+},
+{
+"id": "ey-inflow",
+"term": "inflow",
+"also": [],
+"def": "The term used in glaucoma for the production of aqueous humor, which the ciliary body makes into the posterior chamber. Beta receptor antagonists, alpha 2 agonists and carbonic anhydrase inhibitors decrease inflow.",
+"cite": "T@28180 11/13",
+"src": "lecture",
+"deck": "ey",
+"prof": "Smith",
+"exam": 3,
+"kind": "pharmacology",
+"common": true
+},
+{
+"id": "ey-outflow",
+"term": "outflow",
+"also": [],
+"def": "The drainage of aqueous humor out of the eye, through the trabecular meshwork and Schlemm's canal and through the uveoscleral route. Parasympathomimetics, prostaglandin agonists and the Rho kinase inhibitor increase it.",
+"cite": "T@28318 11/13",
+"src": "lecture",
+"deck": "ey",
+"prof": "Smith",
+"exam": 3,
+"kind": "pharmacology",
+"common": true
+},
+{
+"id": "ey-production-inhibitors",
+"term": "production inhibitors",
+"also": [
+"aqueous humor production inhibitors"
+],
+"def": "The glaucoma drugs that decrease production of aqueous humor (inflow): beta receptor antagonists, alpha 2 agonists and carbonic anhydrase inhibitors. Slide 11 asks the student to classify drugs as production inhibitors or outflow enhancers.",
+"cite": "Eye slide 11, T@42974 11/13",
+"src": "slide",
+"deck": "ey",
+"prof": "Smith",
+"exam": 3,
+"kind": "class"
+},
+{
+"id": "ey-outflow-enhancers",
+"term": "outflow enhancers",
+"also": [],
+"def": "The glaucoma drugs that increase drainage of aqueous humor (outflow): parasympathomimetics, prostaglandin agonists and the Rho kinase inhibitor. Slide 11 asks the student to classify each drug as a production inhibitor or an outflow enhancer.",
+"cite": "Eye slide 11, T@23221 11/17",
+"src": "slide",
+"deck": "ey",
+"prof": "Smith",
+"exam": 3,
+"kind": "class"
+},
+{
+"id": "ey-lacrimal-system",
+"term": "lacrimal system",
+"also": [
+"lacrimal"
+],
+"def": "The part of the eye that makes and drains tears. Glands make them, ducts release them under the upper eyelid, and they drain through the puncta, canaliculi, lacrimal sac and nasolacrimal duct.",
+"cite": "Eye slide 5, T@9361 11/13",
+"src": "slide",
+"deck": "ey",
+"prof": "Smith",
+"exam": 3,
+"kind": "anatomy"
+},
+{
+"id": "ey-lacrimal-gland",
+"term": "lacrimal gland",
+"also": [
+"main lacrimal gland",
+"lacrimal glands"
+],
+"def": "The main gland that makes the aqueous middle layer of tears, about 98% of the tear film. It lies behind the eyebrow on the outer part of the eye.",
+"cite": "Eye slide 5, Eye slide 6, T@9575 11/13",
+"src": "slide",
+"deck": "ey",
+"prof": "Smith",
+"exam": 3,
+"kind": "anatomy"
+},
+{
+"id": "ey-accessory-lacrimal-glands",
+"term": "accessory lacrimal glands",
+"also": [],
+"def": "Glands located in the conjunctiva that, with the main lacrimal gland, produce the aqueous middle layer of tears.",
+"cite": "Eye slide 6, T@13069 11/13",
+"src": "slide",
+"deck": "ey",
+"prof": "Smith",
+"exam": 3,
+"kind": "anatomy"
+},
+{
+"id": "ey-puncta",
+"term": "puncta",
+"also": [
+"punctum",
+"lacrimal puncta"
+],
+"def": "The small openings on the upper and lower eyelids near the nose where tears drain. When a person blinks, tears are pushed into the puncta and flow into the canal system.",
+"cite": "Eye slide 5, T@10329 11/13",
+"src": "slide",
+"deck": "ey",
+"prof": "Smith",
+"exam": 3,
+"kind": "anatomy"
+},
+{
+"id": "ey-lacrimal-canaliculi",
+"term": "lacrimal canaliculi",
+"also": [
+"canaliculi"
+],
+"def": "The canals on slide 5 that start at the puncta and lead tears toward the lacrimal sac.",
+"cite": "Eye slide 5, T@10276 11/13",
+"src": "slide",
+"deck": "ey",
+"prof": "Smith",
+"exam": 3,
+"kind": "anatomy"
+},
+{
+"id": "ey-lacrimal-sac",
+"term": "lacrimal sac",
+"also": [],
+"def": "The part of the tear drainage canal system that receives tears from the canaliculi and passes them into the nasolacrimal duct.",
+"cite": "Eye slide 5, T@11385 11/13",
+"src": "slide",
+"deck": "ey",
+"prof": "Smith",
+"exam": 3,
+"kind": "anatomy"
+},
+{
+"id": "ey-nasolacrimal-duct",
+"term": "nasolacrimal duct",
+"also": [
+"nasolacrimal"
+],
+"def": "The duct that empties tears into the back of the nose. Eye drops drain through it into the vascular nasal mucosa, causing systemic absorption; pressing the inner corner of the eye after drops blocks this.",
+"cite": "Eye slide 5, T@11468 11/13",
+"src": "slide",
+"deck": "ey",
+"prof": "Smith",
+"exam": 3,
+"kind": "anatomy"
+},
+{
+"id": "ey-tears",
+"term": "tears",
+"also": [
+"tear film"
+],
+"def": "The fluid that coats the conjunctiva and cornea to keep the eye moist. Tears have three layers (lipid, aqueous, mucin) and contain nutrients, enzymes and immunoglobulins that support and protect the cornea.",
+"cite": "Eye slide 6, T@12421 11/13",
+"src": "slide",
+"deck": "ey",
+"prof": "Smith",
+"exam": 3,
+"kind": "anatomy",
+"common": true
+},
+{
+"id": "ey-lipid-layer",
+"term": "anterior layer of tears",
+"also": [
+"lipid layer of tears",
+"anterior (lipid) layer"
+],
+"def": "The outer layer of the tears, composed primarily of lipids made by the meibomian glands at the eyelid margin.",
+"cite": "Eye slide 6, T@12547 11/13",
+"src": "slide",
+"deck": "ey",
+"prof": "Smith",
+"exam": 3,
+"kind": "anatomy"
+},
+{
+"id": "ey-aqueous-layer",
+"term": "aqueous layer of tears",
+"also": [
+"middle layer of tears",
+"aqueous tear layer"
+],
+"def": "The middle layer of the tears, made by the main lacrimal gland and the accessory lacrimal glands. It is about 98% of the tear film.",
+"cite": "Eye slide 6, T@12921 11/13",
+"src": "slide",
+"deck": "ey",
+"prof": "Smith",
+"exam": 3,
+"kind": "anatomy"
+},
+{
+"id": "ey-mucin-layer",
+"term": "posterior layer of tears",
+"also": [
+"mucin layer",
+"mucin layer of tears"
+],
+"def": "The layer of the tears next to the eye, a mixture of mucins made by the goblet cells in the conjunctiva.",
+"cite": "Eye slide 6, T@13228 11/13",
+"src": "slide",
+"deck": "ey",
+"prof": "Smith",
+"exam": 3,
+"kind": "anatomy"
+},
+{
+"id": "ey-meibomian-glands",
+"term": "meibomian glands",
+"also": [
+"meibomian gland",
+"meibomian"
+],
+"def": "The glands along the eyelid margin that make the lipid anterior layer of the tears.",
+"cite": "Eye slide 6, T@12789 11/13",
+"src": "slide",
+"deck": "ey",
+"prof": "Smith",
+"exam": 3,
+"kind": "anatomy"
+},
+{
+"id": "ey-goblet-cells",
+"term": "goblet cells",
+"also": [
+"goblet cell"
+],
+"def": "The cells in the conjunctiva that produce the mucins of the posterior layer of the tears.",
+"cite": "Eye slide 6, T@13310 11/13",
+"src": "slide",
+"deck": "ey",
+"prof": "Smith",
+"exam": 3,
+"kind": "anatomy"
+},
+{
+"id": "ey-basal-tear-film",
+"term": "basal tear film",
+"also": [
+"basal tear production"
+],
+"def": "The tear film whose production intranasal varenicline is thought to increase by activating the trigeminal parasympathetic pathway.",
+"cite": "Eye slide 73, T@67779 11/17",
+"src": "slide",
+"deck": "ey",
+"prof": "Smith",
+"exam": 3,
+"kind": "anatomy"
+},
+{
+"id": "ey-adrenergic-stimulation",
+"term": "adrenergic stimulation",
+"also": [],
+"def": "Stimulation of adrenergic receptors in the eye. On α1 receptors of the dilator muscle it dilates the pupil; it relaxes the ciliary muscle, allowing far vision; and it produces aqueous humor.",
+"cite": "Eye slide 7",
+"src": "slide",
+"deck": "ey",
+"prof": "Smith",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "ey-cholinergic-stimulation",
+"term": "cholinergic stimulation",
+"also": [],
+"def": "Stimulation of muscarinic receptors in the eye. It constricts the pupil through the pupillary sphincter muscles and contracts the ciliary body, which increases accommodation.",
+"cite": "Eye slide 7",
+"src": "slide",
+"deck": "ey",
+"prof": "Smith",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "ey-alpha1-receptor",
+"term": "α1 receptor",
+"also": [
+"alpha 1 receptor",
+"alpha-1 receptor",
+"alpha1 receptor",
+"α1-receptor",
+"α1 receptors"
+],
+"def": "An adrenergic receptor. Stimulation of α1 receptors on the dilator muscle dilates the pupil, and the blood vessels of the ciliary body carry α1 receptors.",
+"cite": "Eye slide 7, Eye slide 16, T@37901 11/13",
+"src": "slide",
+"deck": "ey",
+"prof": "Smith",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "ey-beta-receptor",
+"term": "β receptor",
+"also": [
+"beta receptor",
+"beta receptors",
+"β1 and β2 receptors",
+"beta 1 receptor",
+"beta 2 receptor",
+"β1 receptor",
+"β2 receptor"
+],
+"def": "Adrenergic receptors (β1 and β2) in the epithelial cells of the ciliary body. Agonizing them produced more aqueous humor and antagonizing them produced less, which led to beta receptor antagonists for glaucoma.",
+"cite": "Eye slide 16, Eye slide 18, T@37757 11/13",
+"src": "slide",
+"deck": "ey",
+"prof": "Smith",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "ey-alpha2-receptor",
+"term": "α2 receptor",
+"also": [
+"alpha 2 receptor",
+"alpha-2 receptor",
+"alpha2 receptor",
+"α2 receptors"
+],
+"def": "An adrenergic receptor on the epithelial cells of the ciliary body. Agonizing it decreases the production of aqueous humor.",
+"cite": "Eye slide 16, Eye slide 22, T@48761 11/13",
+"src": "slide",
+"deck": "ey",
+"prof": "Smith",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "ey-m3-receptor",
+"term": "M3 receptor",
+"also": [
+"M3",
+"muscarinic receptor",
+"muscarinic receptors",
+"M3 receptors"
+],
+"def": "The muscarinic receptor in the eye, found on the pupillary sphincter muscle and in the trabecular meshwork. Agonizing it, or increasing acetylcholine with an acetylcholinesterase inhibitor, contracts the muscle and the meshwork and increases outflow.",
+"cite": "Eye slide 7, Eye slide 16, Eye slide 32, T@27544 11/17",
+"src": "slide",
+"deck": "ey",
+"prof": "Smith",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "ey-pgf2a-receptor",
+"term": "PGF2α receptor",
+"also": [
+"PGF2 alpha receptor",
+"PGF2a receptor",
+"PGF2α"
+],
+"def": "The receptor in the ciliary body that prostaglandin agonists act on. Agonizing it relaxes the ciliary muscle, which opens the space between the ciliary body and the sclera and increases uveoscleral outflow.",
+"cite": "Eye slide 37, T@31080 11/17",
+"src": "slide",
+"deck": "ey",
+"prof": "Smith",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "ey-h1-receptor",
+"term": "H1 receptor",
+"also": [
+"H1 receptors"
+],
+"def": "A histamine receptor. Histamine acting on H1 receptors causes bronchoconstriction and contraction of the gut, and in the CNS H1 activation inhibits appetite and increases wakefulness. The ophthalmic antihistamines are H1 inverse agonists.",
+"cite": "Eye slide 49, Eye slide 51, T@42717 11/17",
+"src": "slide",
+"deck": "ey",
+"prof": "Smith",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "ey-h4-receptor",
+"term": "H4 receptor",
+"also": [
+"H4 receptor antagonism",
+"H4"
+],
+"def": "A histamine receptor on the surface of eosinophils; when it is agonized, eosinophils join the allergic response. Alcaftadine also antagonizes it, which may explain its superiority in treating allergic conjunctivitis.",
+"cite": "Eye slide 53, T@49117 11/17",
+"src": "slide",
+"deck": "ey",
+"prof": "Smith",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "ey-nicotinic-receptor",
+"term": "nicotinic acetylcholine receptor",
+"also": [
+"nACh receptor",
+"nicotinic receptor",
+"nicotinic receptors",
+"nACh"
+],
+"def": "A receptor for acetylcholine that intranasal varenicline agonizes (heteromeric subtypes). Binding activates the trigeminal parasympathetic pathway and increases production of the basal tear film.",
+"cite": "Eye slide 73, T@68907 11/17",
+"src": "slide",
+"deck": "ey",
+"prof": "Smith",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "ey-trigeminal-nerve",
+"term": "trigeminal nerve",
+"also": [
+"trigeminal parasympathetic pathway",
+"trigeminal"
+],
+"def": "The nerve near the nasal cavity whose parasympathetic pathway is activated when intranasal varenicline binds nicotinic receptors in the nose. This increases tear production.",
+"cite": "Eye slide 73, T@67641 11/17",
+"src": "slide",
+"deck": "ey",
+"prof": "Smith",
+"exam": 3,
+"kind": "anatomy"
+},
+{
+"id": "ey-rhoa",
+"term": "RhoA",
+"also": [
+"Rho A",
+"RhoA kinase",
+"Rho-A"
+],
+"def": "A guanosine triphosphate (GTP)-binding protein that regulates cell shape, motility, proliferation and apoptosis. In glaucoma it may increase contractile tone and stiffness of the trabecular meshwork; netarsudil inhibits its kinase activity.",
+"cite": "Eye slide 41, T@35097 11/17",
+"src": "slide",
+"deck": "ey",
+"prof": "Smith",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "ey-rho-kinase",
+"term": "Rho kinase",
+"also": [
+"ROCK"
+],
+"def": "The enzyme (a kinase, which phosphorylates) that the Rho kinase inhibitor netarsudil inhibits. Inhibiting RhoA phosphorylation may lower trabecular outflow resistance by relaxing tone and decreasing fibrosis-related protein deposits.",
+"cite": "Eye slide 41, T@34778 11/17",
+"src": "slide",
+"deck": "ey",
+"prof": "Smith",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "ey-carbonic-anhydrase",
+"term": "carbonic anhydrase",
+"also": [
+"CAII",
+"CAIV",
+"carbonic anhydrase enzyme"
+],
+"def": "The enzyme that converts carbon dioxide and water to carbonic acid. In the ciliary body the acid dissociates, sodium and bicarbonate are secreted, and water follows to form aqueous humor. The kidney uses it too.",
+"cite": "Eye slide 16, Eye slide 26, Eye slide 27, T@54759 11/13",
+"src": "slide",
+"deck": "ey",
+"prof": "Smith",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "ey-proximal-convoluted-tubule",
+"term": "proximal convoluted tubule",
+"also": [
+"PCT",
+"proximal tubule"
+],
+"def": "The part of the nephron on slide 27 where carbonic anhydrase inhibitors act. Blocking the enzyme there keeps sodium and water in the lumen (diuretic effect) and less bicarbonate reaches the blood, risking metabolic acidosis.",
+"cite": "Eye slide 27, T@7585 11/17",
+"src": "slide",
+"deck": "ey",
+"prof": "Smith",
+"exam": 3,
+"kind": "anatomy"
+},
+{
+"id": "ey-diuretic",
+"term": "diuretic",
+"also": [
+"diuresis",
+"diurese"
+],
+"def": "A carbonic anhydrase inhibitor effect: sodium and water stay in the lumen of the nephron and more urine forms. In glaucoma it is not the goal; increased urination and thirst are oral-drug side effects.",
+"cite": "T@54222 11/13",
+"src": "lecture",
+"deck": "ey",
+"prof": "Smith",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "ey-acetylcholinesterase",
+"term": "acetylcholinesterase",
+"also": [
+"AChE",
+"cholinesterase"
+],
+"def": "The enzyme that breaks down acetylcholine. When it is inhibited, acetylcholine increases and agonizes M3 receptors, which contracts the trabecular meshwork and increases outflow.",
+"cite": "Eye slide 31, Eye slide 34, T@23940 11/17",
+"src": "slide",
+"deck": "ey",
+"prof": "Smith",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "ey-constitutive-activity",
+"term": "constitutive activity",
+"also": [],
+"def": "The receptor activity that H1 inverse agonists reduce. They also compete with histamine for binding to the receptor.",
+"cite": "Eye slide 51, T@44333 11/17",
+"src": "slide",
+"deck": "ey",
+"prof": "Smith",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "ey-inverse-agonist",
+"term": "inverse agonist",
+"also": [
+"inverse agonism",
+"inverse agonists",
+"inversely agonizing"
+],
+"def": "A drug that reduces the constitutive activity of a receptor. The ophthalmic H1 inverse agonists (traditionally called antihistamines) reduce H1 receptor activity and compete with histamine binding.",
+"cite": "Eye slide 51, T@43475 11/17",
+"src": "slide",
+"deck": "ey",
+"prof": "Smith",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "ey-mast-cell-stabilization",
+"term": "mast cell stabilization",
+"also": [
+"mast cell stabilizer",
+"mast cell stabilizers",
+"mast cell stabilizing",
+"mast-cell stabilizer"
+],
+"def": "An action of many ophthalmic antihistamines that reduces release of mast cell mediators in an allergic response. The mechanism is unclear. Drugs with it work better topically and are used before allergen exposure.",
+"cite": "Eye slide 51, T@44898 11/17",
+"src": "slide",
+"deck": "ey",
+"prof": "Smith",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "ey-degranulation",
+"term": "degranulation",
+"also": [
+"degranulization",
+"degranulate"
+],
+"def": "The release of histamine from the storage granules of a mast cell. It follows the interaction of antigen with IgE antibodies on the mast cell surface, and cytokines are probably released with it.",
+"cite": "Eye slide 48, T@41202 11/17",
+"src": "slide",
+"deck": "ey",
+"prof": "Smith",
+"exam": 3,
+"kind": "immunology"
+},
+{
+"id": "ey-anticholinergic-activity",
+"term": "anticholinergic activity",
+"also": [
+"anticholinergic",
+"anticholinergic effects"
+],
+"def": "A drug effect that blocks acetylcholine and causes dry mouth. Alcaftadine has very little, cetirizine has minimal, and azelastine has a little.",
+"cite": "Eye slide 53, T@49687 11/17",
+"src": "slide",
+"deck": "ey",
+"prof": "Smith",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "ey-vasoconstrictor",
+"term": "vasoconstrictor",
+"also": [
+"vasoconstriction"
+],
+"def": "A drug that narrows blood vessels. The alpha 2 agonists in allergic conjunctivitis are vasoconstrictors applied to the eye or nasal mucous membrane; this reduces redness and fluid leaking that contributes to edema.",
+"cite": "Eye slide 56, T@52404 11/17",
+"src": "slide",
+"deck": "ey",
+"prof": "Smith",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "ey-vasodilation",
+"term": "vasodilation",
+"also": [],
+"def": "The widening of blood vessels. It explains conjunctival hyperemia with netarsudil, and the nitric oxide donated by latanoprostene bunod adds a vasodilation effect.",
+"cite": "Eye slide 43, T@36938 11/17",
+"src": "slide",
+"deck": "ey",
+"prof": "Smith",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "ey-nonspecific-beta-blocker",
+"term": "nonspecific β-blocking agent",
+"also": [
+"nonspecific beta blocker",
+"nonselective beta blocker",
+"nonspecific β-blocker",
+"nonspecific beta-blocking agents"
+],
+"def": "A beta blocker that blocks beta receptors without selectivity. Timolol is the nonspecific example on slide 19; levobunolol and carteolol are too. Blocking β2 receptors can cause bronchospasm in asthmatics.",
+"cite": "Eye slide 19, T@44712 11/13",
+"src": "slide",
+"deck": "ey",
+"prof": "Smith",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "ey-neuroprotective",
+"term": "neuroprotective",
+"also": [
+"neuroprotection"
+],
+"def": "An extra effect of brimonidine: it seems to protect the health of the optic nerve. It has been seen in animal studies and is assumed to occur in humans, and the mechanism is not known.",
+"cite": "Eye slide 22, T@49682 11/13",
+"src": "slide",
+"deck": "ey",
+"prof": "Smith",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "ey-beta-antagonists",
+"term": "beta receptor antagonists",
+"also": [
+"beta blockers",
+"β receptor antagonists",
+"β-blockers",
+"beta-blocker",
+"beta blocker",
+"β blockers",
+"beta receptor antagonist",
+"β adrenoreceptor antagonists",
+"beta-receptor antagonists"
+],
+"def": "The first glaucoma class covered: they block the beta-adrenergic receptor on the ciliary body and reduce aqueous humor production (inflow). They do not affect outflow. Timolol, betaxolol and carteolol are on the slides.",
+"cite": "Eye slide 18, Eye slide 19, T@43567 11/13",
+"src": "slide",
+"deck": "ey",
+"prof": "Smith",
+"exam": 3,
+"kind": "class"
+},
+{
+"id": "ey-alpha2-agonists",
+"term": "alpha 2 agonists",
+"also": [
+"α2 agonists",
+"alpha-2 agonists",
+"alpha 2 agonist",
+"α2 agonist",
+"α2-agonists"
+],
+"def": "In glaucoma, drugs that bind α2 receptors on the ciliary body and decrease aqueous humor production (apraclonidine, brimonidine). In allergic conjunctivitis, adrenergic agonists used as vasoconstrictors to reduce redness.",
+"cite": "Eye slide 22, Eye slide 56, T@48483 11/13",
+"src": "slide",
+"deck": "ey",
+"prof": "Smith",
+"exam": 3,
+"kind": "class"
+},
+{
+"id": "ey-cai",
+"term": "carbonic anhydrase inhibitors",
+"also": [
+"carbonic anhydrase inhibitor",
+"CAIs",
+"CA inhibitors"
+],
+"def": "Drugs that inhibit carbonic anhydrase, so less sodium and bicarbonate is secreted and aqueous humor secretion (inflow) decreases. Acetazolamide and methazolamide are oral; dorzolamide and brinzolamide are ophthalmic. Oral drugs can cause metabolic acidosis.",
+"cite": "Eye slide 26, Eye slide 28, T@54586 11/13",
+"src": "slide",
+"deck": "ey",
+"prof": "Smith",
+"exam": 3,
+"kind": "class"
+},
+{
+"id": "ey-parasympathomimetics",
+"term": "parasympathomimetics",
+"also": [
+"parasympathomimetic",
+"cholinergics",
+"cholinergic agonists",
+"parasympathomimetics (M3 agonists, acetylcholinesterase inhibitor)"
+],
+"def": "Glaucoma drugs that mimic or add to the action of acetylcholine: the M3 agonists (carbachol, pilocarpine) and the acetylcholinesterase inhibitor (echothiophate). They contract the pupillary sphincter muscle and the trabecular meshwork and increase outflow.",
+"cite": "Eye slide 31, T@24085 11/17",
+"src": "slide",
+"deck": "ey",
+"prof": "Smith",
+"exam": 3,
+"kind": "class"
+},
+{
+"id": "ey-m3-agonists",
+"term": "M3 agonists",
+"also": [
+"M3 agonist",
+"direct acting products",
+"direct-acting M3 agonists"
+],
+"def": "Direct-acting parasympathomimetics (carbachol, pilocarpine) that agonize the M3 receptor on the sphincter muscle and trabecular meshwork. They contract those tissues, increase outflow and act like acetylcholine.",
+"cite": "Eye slide 31, Eye slide 32, T@23579 11/17",
+"src": "slide",
+"deck": "ey",
+"prof": "Smith",
+"exam": 3,
+"kind": "class"
+},
+{
+"id": "ey-ache-inhibitor",
+"term": "acetylcholinesterase inhibitor",
+"also": [
+"AChE inhibitors",
+"cholinesterase inhibitor",
+"cholinesterase inhibitors",
+"acetylcholinesterase inhibitors",
+"indirect acting products",
+"AChE inhibitor"
+],
+"def": "The indirect-acting parasympathomimetic echothiophate: an irreversible inhibitor of acetylcholinesterase that raises acetylcholine, which contracts the sphincter muscle and trabecular meshwork and increases outflow.",
+"cite": "Eye slide 31, Eye slide 34, T@29175 11/17",
+"src": "slide",
+"deck": "ey",
+"prof": "Smith",
+"exam": 3,
+"kind": "class"
+},
+{
+"id": "ey-prostaglandin-agonists",
+"term": "prostaglandin agonists",
+"also": [
+"prostaglandin agonist",
+"prostaglandin analogs",
+"prostaglandin analogues"
+],
+"def": "Glaucoma drugs that agonize the PGF2α receptor and relax the ciliary muscle. They reduce IOP by increasing uveoscleral outflow and, less so, trabecular outflow; they do not affect aqueous humor production.",
+"cite": "Eye slide 37, Eye slide 38, T@30960 11/17",
+"src": "slide",
+"deck": "ey",
+"prof": "Smith",
+"exam": 3,
+"kind": "class"
+},
+{
+"id": "ey-rho-kinase-inhibitor",
+"term": "Rho kinase inhibitor",
+"also": [
+"Rho kinase inhibitors",
+"ROCK inhibitor",
+"rokinase inhibitor"
+],
+"def": "The glaucoma class whose only drug on the list is netarsudil. It inhibits RhoA kinase activity and increases outflow through the trabecular meshwork.",
+"cite": "Eye slide 41, Eye slide 42, T@34723 11/17",
+"src": "slide",
+"deck": "ey",
+"prof": "Smith",
+"exam": 3,
+"kind": "class"
+},
+{
+"id": "ey-combination-products",
+"term": "combination products",
+"also": [
+"combination product"
+],
+"def": "Glaucoma products with two drugs in one bottle: timolol and dorzolamide, timolol and brimonidine, brinzolamide and brimonidine, latanoprost and netarsudil. They are chosen when one drug no longer controls IOP.",
+"cite": "Eye slide 45, T@37839 11/17",
+"src": "slide",
+"deck": "ey",
+"prof": "Smith",
+"exam": 3,
+"kind": "class"
+},
+{
+"id": "ey-h1-inverse-agonists",
+"term": "H1 inverse agonists",
+"also": [
+"H1 inverse agonist",
+"ophthalmic H1 inverse agonists",
+"ophthalmic antihistamines",
+"H1 inverse agonists (antihistamines)"
+],
+"def": "The ophthalmic class commonly called antihistamines. They reduce constitutive H1 receptor activity, compete with histamine, and many also stabilize mast cells; they reduce edema, itch, inflammation and watery eyes in allergic conjunctivitis.",
+"cite": "Eye slide 51, T@43382 11/17",
+"src": "slide",
+"deck": "ey",
+"prof": "Smith",
+"exam": 3,
+"kind": "class"
+},
+{
+"id": "ey-lfa1-antagonist",
+"term": "LFA-1 antagonist",
+"also": [
+"LFA1 antagonist",
+"LFA-1",
+"LFA1",
+"lymphocyte function-associated antigen 1",
+"lymphocyte function associated antigen 1"
+],
+"def": "Lymphocyte function-associated antigen 1 is a cell surface protein on leukocytes. An LFA-1 antagonist binds it and blocks its interaction with ICAM-1; lifitegrast is the one on the slides.",
+"cite": "Eye slide 70, Eye slide 71, T@64164 11/17",
+"src": "slide",
+"deck": "ey",
+"prof": "Smith",
+"exam": 3,
+"kind": "class"
+},
+{
+"id": "ey-icam1",
+"term": "ICAM-1",
+"also": [
+"ICAM1",
+"intercellular adhesion molecule-1",
+"intercellular adhesion molecule 1",
+"cell adhesion molecules"
+],
+"def": "Intercellular adhesion molecule-1, a cell adhesion molecule that LFA-1 interacts with. Lifitegrast blocks that interaction, which may inhibit T-cell adhesion to ICAM-1 and secretion of inflammatory cytokines.",
+"cite": "Eye slide 71, T@64354 11/17",
+"src": "slide",
+"deck": "ey",
+"prof": "Smith",
+"exam": 3,
+"kind": "immunology"
+},
+{
+"id": "ey-timolol",
+"term": "timolol",
+"also": [],
+"def": "A nonspecific beta blocker for glaucoma. It comes in a gel formulation that can be given once a day; slide 45 lists it combined with dorzolamide and with brimonidine.",
+"cite": "Eye slide 19, Eye slide 45, T@46338 11/13",
+"src": "slide",
+"deck": "ey",
+"prof": "Smith",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "ey-betaxolol",
+"term": "betaxolol",
+"also": [],
+"def": "A beta blocker for glaucoma that is relatively β1-selective. Its IOP-lowering effect is about the same as that of the nonspecific beta blockers.",
+"cite": "Eye slide 19, T@44816 11/13",
+"src": "slide",
+"deck": "ey",
+"prof": "Smith",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "ey-carteolol",
+"term": "carteolol",
+"also": [],
+"def": "A beta blocker for glaucoma that blocks beta receptors without selectivity but has intrinsic sympathomimetic activity.",
+"cite": "Eye slide 19, T@44993 11/13",
+"src": "slide",
+"deck": "ey",
+"prof": "Smith",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "ey-levobunolol",
+"term": "levobunolol",
+"also": [],
+"def": "A nonspecific beta blocker for glaucoma with some alpha adrenergic effects. It may be more effective than timolol and betaxolol after cataract surgery.",
+"cite": "Eye slide 8, T@45226 11/13",
+"src": "slide",
+"deck": "ey",
+"prof": "Smith",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "ey-apraclonidine",
+"term": "apraclonidine",
+"also": [],
+"def": "An alpha 2 agonist used to prevent IOP increases after eye surgery such as cataract surgery. It is not chosen for long-term use because it can cause an allergic response and systemic hypotension.",
+"cite": "Eye slide 23, Eye slide 24, T@52036 11/13",
+"src": "slide",
+"deck": "ey",
+"prof": "Smith",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "ey-brimonidine",
+"term": "brimonidine",
+"also": [
+"brimonidine tartrate"
+],
+"def": "An alpha 2 agonist that decreases aqueous humor production, increases uveoscleral outflow and is neuroprotective. It is the better alpha 2 agonist for long-term glaucoma treatment; brimonidine tartrate is also used in allergic conjunctivitis.",
+"cite": "Eye slide 22, Eye slide 23, Eye slide 24, Eye slide 57, T@52330 11/13",
+"src": "slide",
+"deck": "ey",
+"prof": "Smith",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "ey-acetazolamide",
+"term": "acetazolamide",
+"also": [],
+"def": "An oral carbonic anhydrase inhibitor that inhibits both isoforms of carbonic anhydrase. It is a diuretic, and its oral use can cause metabolic acidosis; oral drugs are used when topical products fail.",
+"cite": "Eye slide 28, Eye slide 27, T@14776 11/17",
+"src": "slide",
+"deck": "ey",
+"prof": "Smith",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "ey-methazolamide",
+"term": "methazolamide",
+"also": [],
+"def": "An oral carbonic anhydrase inhibitor used to treat glaucoma.",
+"cite": "Eye slide 28, T@58590 11/13",
+"src": "slide",
+"deck": "ey",
+"prof": "Smith",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "ey-dorzolamide",
+"term": "dorzolamide",
+"also": [],
+"def": "An ophthalmic carbonic anhydrase inhibitor; topical products are the first choice for glaucoma. Slide 45 lists it combined with timolol.",
+"cite": "Eye slide 28, Eye slide 45, T@58714 11/13",
+"src": "slide",
+"deck": "ey",
+"prof": "Smith",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "ey-brinzolamide",
+"term": "brinzolamide",
+"also": [],
+"def": "An ophthalmic carbonic anhydrase inhibitor. Slide 45 lists it combined with brimonidine.",
+"cite": "Eye slide 28, Eye slide 45, T@58714 11/13",
+"src": "slide",
+"deck": "ey",
+"prof": "Smith",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "ey-carbachol",
+"term": "carbachol",
+"also": [],
+"def": "A direct-acting M3 agonist for glaucoma. It is very potent, lasts longer than pilocarpine and is less allergenic, so it is used more.",
+"cite": "Eye slide 31, T@26432 11/17",
+"src": "slide",
+"deck": "ey",
+"prof": "Smith",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "ey-pilocarpine",
+"term": "pilocarpine",
+"also": [],
+"def": "A direct-acting M3 agonist for glaucoma. It is effective but can cause an allergic reaction in the eye.",
+"cite": "Eye slide 31, T@26578 11/17",
+"src": "slide",
+"deck": "ey",
+"prof": "Smith",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "ey-echothiophate",
+"term": "echothiophate",
+"also": [],
+"def": "The acetylcholinesterase inhibitor for glaucoma, an irreversible inhibitor. It is used only when patients are refractory to other drugs because it causes more eye irritation and allergic-type reaction than pilocarpine and can cause cataracts.",
+"cite": "Eye slide 31, Eye slide 34, T@23658 11/17",
+"src": "slide",
+"deck": "ey",
+"prof": "Smith",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "ey-bimatoprost",
+"term": "bimatoprost",
+"also": [],
+"def": "A prostaglandin agonist for glaucoma.",
+"cite": "Eye slide 38, T@32571 11/17",
+"src": "slide",
+"deck": "ey",
+"prof": "Smith",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "ey-latanoprost",
+"term": "latanoprost",
+"also": [],
+"def": "A prostaglandin agonist for glaucoma. Slide 45 lists it combined with netarsudil.",
+"cite": "Eye slide 38, Eye slide 45, T@32571 11/17",
+"src": "slide",
+"deck": "ey",
+"prof": "Smith",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "ey-latanoprostene-bunod",
+"term": "latanoprostene bunod",
+"also": [],
+"def": "A prostaglandin agonist that is also metabolized to a nitric oxide donor. Nitric oxide causes vasodilation, which adds to its mechanism of action.",
+"cite": "Eye slide 38, T@33164 11/17",
+"src": "slide",
+"deck": "ey",
+"prof": "Smith",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "ey-travoprost",
+"term": "travoprost",
+"also": [
+"travaprost"
+],
+"def": "A prostaglandin agonist for glaucoma; the slide spells it travaprost.",
+"cite": "Eye slide 38, T@32643 11/17",
+"src": "slide",
+"deck": "ey",
+"prof": "Smith",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "ey-tafluprost",
+"term": "tafluprost",
+"also": [],
+"def": "A prostaglandin agonist for glaucoma.",
+"cite": "Eye slide 38, T@32643 11/17",
+"src": "slide",
+"deck": "ey",
+"prof": "Smith",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "ey-netarsudil",
+"term": "netarsudil",
+"also": [],
+"def": "The Rho kinase inhibitor, the only one on the list. Its most common side effect is conjunctival hyperemia. Slide 45 lists it combined with latanoprost.",
+"cite": "Eye slide 42, Eye slide 45, T@36640 11/17",
+"src": "slide",
+"deck": "ey",
+"prof": "Smith",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "ey-alcaftadine",
+"term": "alcaftadine",
+"also": [],
+"def": "An H1 inverse agonist with mast cell stabilization and H4 receptor antagonism (which may explain its superiority in allergic conjunctivitis). It has little anticholinergic activity and little CNS penetration.",
+"cite": "Eye slide 53, T@49053 11/17",
+"src": "slide",
+"deck": "ey",
+"prof": "Smith",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "ey-azelastine",
+"term": "azelastine",
+"also": [],
+"def": "An H1 inverse agonist with mast cell stabilization; it is also used as a nasal spray for allergic rhinitis. It has a little anticholinergic activity and penetrates the CNS.",
+"cite": "Eye slide 53, T@49943 11/17",
+"src": "slide",
+"deck": "ey",
+"prof": "Smith",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "ey-bepotastine",
+"term": "bepotastine",
+"also": [],
+"def": "An H1 inverse agonist and mast cell stabilizer for allergic conjunctivitis.",
+"cite": "Eye slide 53, T@50240 11/17",
+"src": "slide",
+"deck": "ey",
+"prof": "Smith",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "ey-cetirizine",
+"term": "cetirizine",
+"also": [],
+"def": "An H1 inverse agonist without mast cell stabilization, so it is not suggested for prophylactic use. It has minimal anticholinergic effects and negligible CNS penetration but can still cause drowsiness.",
+"cite": "Eye slide 53, T@51813 11/17",
+"src": "slide",
+"deck": "ey",
+"prof": "Smith",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "ey-epinastine",
+"term": "epinastine",
+"also": [],
+"def": "An H1 inverse agonist with mast cell stabilization that is also an H2 antagonist, which may reduce eyelid edema.",
+"cite": "Eye slide 54, T@50970 11/17",
+"src": "slide",
+"deck": "ey",
+"prof": "Smith",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "ey-ketotifen",
+"term": "ketotifen",
+"also": [],
+"def": "An H1 inverse agonist and mast cell stabilizer for allergic conjunctivitis.",
+"cite": "Eye slide 54, T@51467 11/17",
+"src": "slide",
+"deck": "ey",
+"prof": "Smith",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "ey-olopatadine",
+"term": "olopatadine",
+"also": [],
+"def": "An H1 inverse agonist with mast cell stabilization; it is also used as a nasal spray for allergic rhinitis.",
+"cite": "Eye slide 54, T@51584 11/17",
+"src": "slide",
+"deck": "ey",
+"prof": "Smith",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "ey-naphazoline",
+"term": "naphazoline",
+"also": [],
+"def": "An alpha 2 agonist used as a vasoconstrictor for allergic conjunctivitis; slide 59 lists it combined with pheniramine.",
+"cite": "Eye slide 57, Eye slide 59, T@53958 11/17",
+"src": "slide",
+"deck": "ey",
+"prof": "Smith",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "ey-oxymetazoline",
+"term": "oxymetazoline",
+"also": [],
+"def": "An alpha 2 agonist used topically for allergic conjunctivitis; it is also used as a nasal decongestant spray.",
+"cite": "Eye slide 57, T@53290 11/17",
+"src": "slide",
+"deck": "ey",
+"prof": "Smith",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "ey-tetrahydrozoline",
+"term": "tetrahydrozoline",
+"also": [],
+"def": "An alpha 2 agonist used topically as a vasoconstrictor for allergic conjunctivitis.",
+"cite": "Eye slide 57, T@53027 11/17",
+"src": "slide",
+"deck": "ey",
+"prof": "Smith",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "ey-phenylephrine",
+"term": "phenylephrine",
+"also": [],
+"def": "Listed on slide 57 among the alpha 2 agonists for allergic conjunctivitis; slide 8 lists it among the α1 agonists. Topical alpha 2 agonists for itchy eyes differ little from each other.",
+"cite": "Eye slide 57, Eye slide 8, T@53045 11/17",
+"src": "slide",
+"deck": "ey",
+"prof": "Smith",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "ey-naphazoline-pheniramine",
+"term": "naphazoline/pheniramine",
+"also": [
+"pheniramine",
+"naphazoline and pheniramine"
+],
+"def": "The combination product for allergic conjunctivitis: an antihistamine plus an alpha 2 agonist, so one drop gives both vessel constriction and antihistamine effects.",
+"cite": "Eye slide 59, T@54104 11/17",
+"src": "slide",
+"deck": "ey",
+"prof": "Smith",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "ey-cyclosporine",
+"term": "cyclosporine",
+"also": [
+"cyclosporin",
+"ciclosporin"
+],
+"def": "A calcineurin inhibitor immunosuppressant for dry eye. It binds cyclophilin, the complex inhibits calcineurin, which blocks IL-2, reduces inflammation and increases tear production. It is used topically; oral cyclosporine carries a risk of opportunistic infection.",
+"cite": "Eye slide 64, Eye slide 65, Eye slide 66, Eye slide 67, T@58602 11/17",
+"src": "slide",
+"deck": "ey",
+"prof": "Smith",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "ey-loteprednol",
+"term": "loteprednol",
+"also": [],
+"def": "The topical corticosteroid used for dry eye for its anti-inflammatory properties.",
+"cite": "Eye slide 69, T@63638 11/17",
+"src": "slide",
+"deck": "ey",
+"prof": "Smith",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "ey-lifitegrast",
+"term": "lifitegrast",
+"also": [
+"lifetegrast"
+],
+"def": "An LFA-1 antagonist for dry eye, one drop in each eye twice daily. Side effects are application site irritation and reduced visual acuity; contact lenses come out before use and go back 15 minutes after.",
+"cite": "Eye slide 71, T@64296 11/17",
+"src": "slide",
+"deck": "ey",
+"prof": "Smith",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "ey-varenicline",
+"term": "intranasal varenicline",
+"also": [
+"varenicline"
+],
+"def": "A nicotinic acetylcholine receptor agonist, originally for smoking cessation, licensed in 2021 as a 0.03-mg nasal spray for dry eye: one spray in each nostril twice daily, about 12 hours apart.",
+"cite": "Eye slide 73, T@67350 11/17",
+"src": "slide",
+"deck": "ey",
+"prof": "Smith",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "ey-latisse",
+"term": "Latisse",
+"also": [],
+"def": "The cosmetic product made from a prostaglandin agonist that increases pigmentation and thickness of the lashes.",
+"cite": "Eye slide 39, T@34104 11/17",
+"src": "slide",
+"deck": "ey",
+"prof": "Smith",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "ey-poag",
+"term": "primary open-angle glaucoma",
+"also": [
+"POAG",
+"open angle glaucoma",
+"open-angle glaucoma"
+],
+"def": "Glaucoma related to drainage systems not working effectively, so aqueous humor cannot drain. It is common in the United States, onset is gradual, and there are no symptoms until visual field loss occurs.",
+"cite": "Eye slide 13, T@20586 11/13",
+"src": "slide",
+"deck": "ey",
+"prof": "Smith",
+"exam": 3,
+"kind": "disease"
+},
+{
+"id": "ey-pacg",
+"term": "primary angle-closure glaucoma",
+"also": [
+"PACG",
+"angle closure glaucoma",
+"closed angle glaucoma",
+"angle-closure glaucoma",
+"closed-angle glaucoma"
+],
+"def": "Glaucoma connected with the shape of the eye and how it sits in the eye socket. It is a medical emergency with significant pain; pressure must be decreased quickly because the closed angle blocks outflow.",
+"cite": "Eye slide 13, T@20737 11/13",
+"src": "slide",
+"deck": "ey",
+"prof": "Smith",
+"exam": 3,
+"kind": "disease"
+},
+{
+"id": "ey-allergic-conjunctivitis",
+"term": "allergic conjunctivitis",
+"also": [],
+"def": "Itchiness of the conjunctiva caused by an allergic response, which also involves redness and edema. Histamine released from mast cells is the biggest player; the treatments are H1 inverse agonists (antihistamines) and alpha 2 agonists.",
+"cite": "Eye slide 47, Eye slide 48, T@39490 11/17",
+"src": "slide",
+"deck": "ey",
+"prof": "Smith",
+"exam": 3,
+"kind": "disease"
+},
+{
+"id": "ey-ksc",
+"term": "keratoconjunctivitis sicca",
+"also": [
+"dry eye",
+"dry eye disease",
+"KCS",
+"keratoconjunctivitis sica",
+"dry eye syndrome"
+],
+"def": "Dry eye, in which inflammation reduces tear production. Risk factors are increasing age and female gender; antihistamines, decongestants, antidepressants and hormone replacement therapy can cause it. It can occur with or without red eyes.",
+"cite": "Eye slide 62, T@56122 11/17",
+"src": "slide",
+"deck": "ey",
+"prof": "Smith",
+"exam": 3,
+"kind": "disease",
+"common": true
+},
+{
+"id": "ey-conjunctival-hyperemia",
+"term": "conjunctival hyperemia",
+"also": [
+"ocular hyperemia",
+"hyperemia",
+"red eyes",
+"conjunctival hyperaemia"
+],
+"def": "Red eyes. It is the most common side effect of netarsudil (53%), an extension of its action that relaxes vascular smooth muscle and causes vasodilation. Ocular hyperemia is also a side effect of prostaglandin agonists.",
+"cite": "Eye slide 39, Eye slide 43, T@36839 11/17",
+"src": "slide",
+"deck": "ey",
+"prof": "Smith",
+"exam": 3,
+"kind": "sign"
+},
+{
+"id": "ey-conjunctival-hemorrhage",
+"term": "conjunctival hemorrhage",
+"also": [],
+"def": "Bloodshot eyes; one of the other side effects of netarsudil (about 20%).",
+"cite": "Eye slide 43, T@37156 11/17",
+"src": "slide",
+"deck": "ey",
+"prof": "Smith",
+"exam": 3,
+"kind": "sign"
+},
+{
+"id": "ey-corneal-verticillata",
+"term": "corneal verticillata",
+"also": [
+"corneal verticillate",
+"verticillata"
+],
+"def": "A side effect of netarsudil (about 20%) that did not change vision and in most cases resolved when the drug was stopped.",
+"cite": "Eye slide 43",
+"src": "slide",
+"deck": "ey",
+"prof": "Smith",
+"exam": 3,
+"kind": "sign"
+},
+{
+"id": "ey-metabolic-acidosis",
+"term": "metabolic acidosis",
+"also": [
+"systemic acidosis",
+"acidosis"
+],
+"def": "A fall in blood pH caused by carbonic anhydrase inhibitors, mainly the oral drugs. They block bicarbonate formation in the proximal convoluted tubule, so less bicarbonate buffer reaches the blood; patients must be monitored.",
+"cite": "Eye slide 27, Eye slide 29, T@17682 11/17",
+"src": "slide",
+"deck": "ey",
+"prof": "Smith",
+"exam": 3,
+"kind": "sign"
+},
+{
+"id": "ey-bradycardia",
+"term": "bradycardia",
+"also": [],
+"def": "A cardiac systemic side effect of the beta receptor antagonists, listed with hypotension. It occurs because nonspecific drops go systemic; for cardiac patients the lecture advises a more selective drug or inner-corner pressure.",
+"cite": "Eye slide 20, T@47054 11/13",
+"src": "slide",
+"deck": "ey",
+"prof": "Smith",
+"exam": 3,
+"kind": "sign"
+},
+{
+"id": "ey-bronchospasm",
+"term": "bronchospasm",
+"also": [],
+"def": "A respiratory side effect of beta receptor antagonists in asthmatics, caused by antagonizing β2 receptors.",
+"cite": "Eye slide 20, T@47223 11/13",
+"src": "slide",
+"deck": "ey",
+"prof": "Smith",
+"exam": 3,
+"kind": "sign"
+},
+{
+"id": "ey-ciliary-muscle-spasm",
+"term": "painful ciliary muscle spasm",
+"also": [
+"ciliary muscle spasm",
+"supraoptic headache",
+"brow-ache",
+"brow ache"
+],
+"def": "A side effect of the parasympathomimetics: contraction of the eye muscles makes pain radiate, which patients describe as a headache around or above the eyes. It can also cause temporal headache.",
+"cite": "Eye slide 33, Eye slide 35, T@28186 11/17",
+"src": "slide",
+"deck": "ey",
+"prof": "Smith",
+"exam": 3,
+"kind": "sign"
+},
+{
+"id": "ey-foreign-body-sensation",
+"term": "foreign body sensation",
+"also": [],
+"def": "The feeling that something is in the eye. It is a characteristic side effect of brimonidine with itching of the eyes, and also occurs with topical cyclosporine.",
+"cite": "Eye slide 24, Eye slide 67, T@53258 11/13",
+"src": "slide",
+"deck": "ey",
+"prof": "Smith",
+"exam": 3,
+"kind": "sign"
+},
+{
+"id": "ey-hypertrichosis",
+"term": "hypertrichosis",
+"also": [],
+"def": "Excess hair growth. Prostaglandin agonists cause hypertrichosis and hyperpigmentation of the lashes and hair growth in other areas.",
+"cite": "Eye slide 39, T@34149 11/17",
+"src": "slide",
+"deck": "ey",
+"prof": "Smith",
+"exam": 3,
+"kind": "sign"
+},
+{
+"id": "ey-iris-pigmentation",
+"term": "increased brown pigmentation of the iris",
+"also": [
+"iris pigmentation",
+"darkening of the eyelids",
+"pigmentation of the iris"
+],
+"def": "A side effect of prostaglandin agonists: brown pigmentation of the iris and eyelids increases.",
+"cite": "Eye slide 39, T@33811 11/17",
+"src": "slide",
+"deck": "ey",
+"prof": "Smith",
+"exam": 3,
+"kind": "sign"
+},
+{
+"id": "oo-cerumen",
+"term": "cerumen",
+"also": [
+"earwax",
+"ear wax"
+],
+"def": "Ear wax. Skin cells build up in the ear canal, which protects the canal skin from drying out, but too much becomes impacted or excessive wax, the first otic disorder on slide 5.",
+"cite": "OOO slide 5, T@3122 11/18",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "anatomy"
+},
+{
+"id": "oo-cerumenolytic",
+"term": "cerumenolytic",
+"also": [
+"cerumenolytics"
+],
+"def": "A drug that treats impacted ear wax by softening, liquefying, hydrating or disintegrating it; the canal is then irrigated. Slide 6 groups them as water based, oil based, or nonwater, nonoil based.",
+"cite": "OOO slide 5, OOO slide 6, T@4028 11/18",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "class"
+},
+{
+"id": "oo-water-based-cerumenolytic",
+"term": "water-based cerumenolytic preparations",
+"also": [
+"water based preparations"
+],
+"def": "Slide 6 water-based preparations: acetic acid, Colace (docusate sodium), hydrogen peroxide, sodium bicarbonate and sterile saline solution. Colace and hydrogen peroxide carry the red mark of agents in current use.",
+"cite": "OOO slide 6",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "class"
+},
+{
+"id": "oo-oil-based-cerumenolytic",
+"term": "oil-based cerumenolytic preparations",
+"also": [
+"oil based preparations"
+],
+"def": "Slide 6 oil-based preparations: almond oil, arachis oil, Earex, olive oil and mineral oil/liquid petrolatum. Olive oil carries the red mark of an agent in current use.",
+"cite": "OOO slide 6",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "class"
+},
+{
+"id": "oo-nonwater-nonoil-cerumenolytic",
+"term": "nonwater, nonoil based cerumenolytic preparations",
+"also": [
+"non-water non-oil based"
+],
+"def": "Slide 6 lists Audax (choline salicylate, glycerine) and Debrox (carbamide peroxide, urea-hydrogen peroxide). Dr. Sikazwe says these are mostly dissolved in glycerol or propylene glycol and emphasizes Debrox.",
+"cite": "OOO slide 6, T@4715 11/18",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "class"
+},
+{
+"id": "oo-docusate-na",
+"term": "docusate sodium",
+"also": [
+"docusate Na",
+"Colace"
+],
+"def": "Colace, also a stool softener; slide 7 calls it a -SO3H anionic surfactant. CBDA: it lowers surface tension between water and cerumen by dissolving in both. Being ionic, it is poorly absorbed systemically.",
+"cite": "OOO slide 7, T@7228 11/18",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "oo-surfactant",
+"term": "surfactant",
+"also": [
+"anionic surfactant",
+"surface-acting"
+],
+"def": "A surface-acting molecule with a lipophilic tail and a hydrophilic head. Docusate Na is an anionic surfactant (slide 7): the tail inserts into cerumen and the head faces water, so water enters.",
+"cite": "OOO slide 7, T@5648 11/18",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "chemistry"
+},
+{
+"id": "oo-surface-tension",
+"term": "surface tension",
+"also": [],
+"def": "The tension at the boundary between oil and water. Slide 7: docusate lowers it between water and cerumen, so water can seep into the wax.",
+"cite": "OOO slide 7, T@6035 11/18",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "chemistry"
+},
+{
+"id": "oo-emulsify",
+"term": "emulsify",
+"also": [
+"emulsion",
+"emulsification"
+],
+"def": "To mix wax and water into an emulsion. Slide 7: docusate increases water entry to emulsify cerumen, so the wax can be irrigated out.",
+"cite": "OOO slide 7, T@5762 11/18",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "other"
+},
+{
+"id": "oo-carbamide-peroxide",
+"term": "carbamide peroxide",
+"also": [
+"Debrox",
+"urea hydrogen peroxide",
+"Urea.H2O2"
+],
+"def": "Debrox, a 1:1 urea·H2O2 complex. CBDA (slide 8): it dissociates to release H2O2, which catalase converts to effervescing O2; the bubbling breaks up ear wax.",
+"cite": "OOO slide 8, T@7804 11/18",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "oo-hydrogen-peroxide",
+"term": "hydrogen peroxide",
+"also": [
+"H2O2"
+],
+"def": "The active agent released from carbamide peroxide (slide 8). It oxidizes stains in teeth whiteners (slide 24); Dr. Sikazwe calls it an oxidizing, antibacterial and bleaching agent.",
+"cite": "OOO slide 8, OOO slide 24, T@25310 11/18",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "oo-urea-in-complex",
+"term": "urea",
+"also": [],
+"def": "The partner of H2O2 in carbamide peroxide and a product of its dissociation (slide 8). Dr. Sikazwe says it stabilizes hydrogen peroxide so that H2O2 is released slowly.",
+"cite": "OOO slide 8, T@9219 11/18",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "chemistry"
+},
+{
+"id": "oo-catalase",
+"term": "catalase",
+"also": [],
+"def": "The enzyme labeled on slide 8 that converts H2O2 to O2. Dr. Sikazwe says it is an antioxidant enzyme also present in cerumen, so the reaction is rapid.",
+"cite": "OOO slide 8, T@8311 11/18",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "oo-effervescence",
+"term": "effervescence",
+"also": [
+"effervescing"
+],
+"def": "Fizzing from released oxygen. Slide 8: Debrox's H2O2 generates effervescing O2, and the effervescence breaks up ear wax, a chemical release with a mechanical effect.",
+"cite": "OOO slide 8, T@8776 11/18",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "other"
+},
+{
+"id": "oo-glycerol-propylene-glycol",
+"term": "glycerol and propylene glycol",
+"also": [
+"glycerine"
+],
+"def": "The solvents in which the nonwater, nonoil based cerumenolytics are mostly dissolved, as Dr. Sikazwe describes the slide 6 group; carbamide peroxide solution is in one of them.",
+"cite": "OOO slide 6, T@4735 11/18",
+"src": "lecture",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "other"
+},
+{
+"id": "oo-otitis",
+"term": "otitis",
+"also": [
+"otitis externa",
+"otitis media"
+],
+"def": "FYI: ear infection. Slide 10 lists topical and systemic antibiotics, analgesics, anti-inflammatories and antifungals. Dr. Sikazwe says it will not be on the exam.",
+"cite": "OOO slide 10, T@10354 11/18",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "disease"
+},
+{
+"id": "oo-tinnitus",
+"term": "tinnitus",
+"also": [],
+"def": "FYI: ringing, buzzing, hissing, grinding or roaring sounds in the ear. Slides 12-13: alcohol, caffeine and some NSAIDs worsen it, and no FDA-approved drugs exist. Dr. Sikazwe says no exam question.",
+"cite": "OOO slide 12, OOO slide 13, T@13889 11/18",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "disease"
+},
+{
+"id": "oo-caries",
+"term": "caries",
+"also": [
+"tooth decay",
+"cavities"
+],
+"def": "Tooth decay. Slide 16: bacteria turn sugars into acids that erode enamel and lead to cavities; slide 20 lists preventing caries as a goal of fluoride rinses.",
+"cite": "OOO slide 16, OOO slide 20",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "disease"
+},
+{
+"id": "oo-enamel",
+"term": "enamel",
+"also": [],
+"def": "The outer tooth surface. Slide 17: its hydroxyapatite is vulnerable to acid erosion, and fluoride converts that to fluorapatite. Slide 16 lists acid drinks and bacterial acids as causes of erosion.",
+"cite": "OOO slide 16, OOO slide 17, T@16731 11/18",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "anatomy"
+},
+{
+"id": "oo-remineralization",
+"term": "remineralization",
+"also": [
+"remineralize",
+"remineralizer",
+"remineralizers"
+],
+"def": "Restoring lost mineral to enamel, mostly calcium and phosphate. Slide 15 lists it as a goal; fluoride, nHA, CSPS and ACP act as remineralizers (slides 18-19).",
+"cite": "OOO slide 15, OOO slide 18, OOO slide 19, T@14779 11/18",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "oo-mineralization",
+"term": "mineralization",
+"also": [
+"mineral deposition"
+],
+"def": "Slide 18: fluoride ions enhance mineral deposition by recruiting calcium and phosphate ions from saliva onto enamel, in addition to forming fluorapatite.",
+"cite": "OOO slide 18, T@20843 11/18",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "oo-gingivitis",
+"term": "gingivitis",
+"also": [],
+"def": "Gum swelling. Slides 15 and 21 list it with tooth decay; Dr. Sikazwe says plaque forming on teeth and gums leads to it.",
+"cite": "OOO slide 15, OOO slide 21, T@16266 11/18",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "disease"
+},
+{
+"id": "oo-fluoride",
+"term": "fluoride ion",
+"also": [
+"fluoride",
+"fluoride toothpaste",
+"fluoride toothpastes"
+],
+"def": "The active ion of fluoride toothpastes, gels and rinses (slides 17-18, 20). It converts hydroxyapatite to fluorapatite, enhances mineralization, and in excess (>2 mg/L) causes enamel fluorosis.",
+"cite": "OOO slide 17, OOO slide 18, OOO slide 20, T@21065 11/18",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "oo-na2po3f",
+"term": "Na2PO3F",
+"also": [
+"sodium fluorophosphate"
+],
+"def": "A fluoride source in toothpastes and gels, listed on slide 17 with SnF2 and NaF; Dr. Sikazwe reads it as sodium fluorophosphate.",
+"cite": "OOO slide 17, T@18489 11/18",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "pharmacology",
+"cs": true
+},
+{
+"id": "oo-snf2",
+"term": "SnF2",
+"also": [
+"tin fluoride"
+],
+"def": "A fluoride source listed on slide 17 with Na2PO3F and NaF; Dr. Sikazwe reads it as tin fluoride.",
+"cite": "OOO slide 17, T@18654 11/18",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "pharmacology",
+"cs": true
+},
+{
+"id": "oo-naf",
+"term": "NaF",
+"also": [
+"sodium fluoride"
+],
+"def": "A fluoride source in toothpastes and gels, listed on slide 17 (and in its CBDA line) with Na2PO3F and SnF2; Dr. Sikazwe reads it as sodium fluoride.",
+"cite": "OOO slide 17, T@18671 11/18",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "pharmacology",
+"cs": true
+},
+{
+"id": "oo-hydroxyapatite",
+"term": "hydroxyapatite",
+"also": [
+"Ca10(PO4)6(OH)2"
+],
+"def": "Ca10(PO4)6(OH)2, the compound enamel is made of (slide 17). It is vulnerable to acid erosion; fluoride converts it into fluorapatite.",
+"cite": "OOO slide 17, T@18881 11/18",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "chemistry"
+},
+{
+"id": "oo-fluorapatite",
+"term": "fluorapatite",
+"also": [
+"fluoroapatite",
+"Ca10(PO4)6F2"
+],
+"def": "Ca10(PO4)6F2, formed when fluoride replaces hydroxyl in hydroxyapatite (slide 17). It resists acid erosion better, which is why fluoride is used continuously.",
+"cite": "OOO slide 17, T@19912 11/18",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "chemistry"
+},
+{
+"id": "oo-fluorosis",
+"term": "fluorosis",
+"also": [
+"enamel fluorosis"
+],
+"def": "Enamel damage from too much fluoride (>2 mg/L on slide 18). Dr. Sikazwe: it starts as white spots, especially in children, and can brown as stains are incorporated.",
+"cite": "OOO slide 18, T@21980 11/18",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "disease"
+},
+{
+"id": "oo-sodium-bicarbonate",
+"term": "sodium bicarbonate",
+"also": [
+"NaHCO3"
+],
+"def": "NaHCO3: an abrasive and pH-elevating agent in non-fluoride toothpastes (slide 19) and a rinse that raises saliva pH and slows acidic bacteria (slide 20).",
+"cite": "OOO slide 19, OOO slide 20, T@22932 11/18",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "oo-nha",
+"term": "nanohydroxyapatite",
+"also": [
+"nHA",
+"nano hydroxyapatite"
+],
+"def": "Non-fluoride toothpaste ingredient (10% nHA, slide 19): 50-1000 nm crystals that bond to hydroxyapatite in enamel.",
+"cite": "OOO slide 19, T@23217 11/18",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "oo-csps",
+"term": "calcium sodium phosphosilicate",
+"also": [
+"CSPS"
+],
+"def": "CSPS: a bioactive glass that reacts with oral fluids to deposit crystalline hydroxycarbonate apatite (HCA) on enamel (slide 19).",
+"cite": "OOO slide 19, T@23660 11/18",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "oo-hca",
+"term": "hydroxycarbonate apatite",
+"also": [
+"HCA"
+],
+"def": "The crystalline apatite that CSPS deposits after reacting with oral fluids (slide 19); Dr. Sikazwe says it mimics hydroxyapatite on the enamel.",
+"cite": "OOO slide 19, T@23807 11/18",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "chemistry"
+},
+{
+"id": "oo-acp",
+"term": "amorphous calcium phosphate",
+"also": [
+"ACP"
+],
+"def": "A reactive salt mixture that releases Ca2+ and PO4 ions on contact with saliva to remineralize enamel (slide 19).",
+"cite": "OOO slide 19, T@23945 11/18",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "oo-abrasive",
+"term": "abrasive",
+"also": [
+"abrasives"
+],
+"def": "A gritty agent. Sodium bicarbonate is an abrasive in toothpaste (slide 19); abrasives are also one whitening mechanism (slide 24).",
+"cite": "OOO slide 19, OOO slide 24, T@22769 11/18",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "other"
+},
+{
+"id": "oo-canker-sores",
+"term": "canker sores",
+"also": [],
+"def": "Mouth sores. Slide 20 lists a 10% carbamide peroxide mouth rinse for them.",
+"cite": "OOO slide 20, T@25416 11/18",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "disease"
+},
+{
+"id": "oo-listerine",
+"term": "Listerine",
+"also": [],
+"def": "Mouth rinse whose slide 20 ingredients are thymol, eucalyptol, methyl salicylate and menthol; Dr. Sikazwe calls it a mixture of antiseptic and anti-inflammatory agents.",
+"cite": "OOO slide 20, T@25675 11/18",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "oo-benzocaine",
+"term": "benzocaine",
+"also": [],
+"def": "An anesthetic in mouth gels and combination agents (slide 20). Cyps convert it to benzocaine hydroxyamine, tied to methemoglobinemia: rare but a concern, so Dr. Sikazwe cautions against frequent use.",
+"cite": "OOO slide 20, T@26576 11/18",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "oo-benzocaine-hydroxyamine",
+"term": "benzocaine hydroxyamine",
+"also": [],
+"def": "The metabolite formed from benzocaine by Cyps (slide 20) and labeled methemoglobinemia there; Dr. Sikazwe says it has been implicated in methemoglobinemia.",
+"cite": "OOO slide 20, T@26703 11/18",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "chemistry"
+},
+{
+"id": "oo-chlorhexidine",
+"term": "chlorhexidine gluconate",
+"also": [
+"chlorhexidine"
+],
+"def": "A biguanide salt mouth rinse, cationic at physiological pH (slide 21). CBDA: it binds bacterial cell walls electrostatically and its lipophilic tails disrupt them.",
+"cite": "OOO slide 21, T@27405 11/18",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "oo-cetylpyridinium",
+"term": "cetylpyridinium chloride",
+"also": [
+"cetylpyridinium"
+],
+"def": "A pyridinium salt mouth rinse, cationic (slide 21). Same CBDA as chlorhexidine: electrostatic binding to the bacterial cell wall, then lipophilic tail insertion.",
+"cite": "OOO slide 21",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "oo-biguanide",
+"term": "biguanide",
+"also": [
+"biguanides"
+],
+"def": "The chemical class of chlorhexidine (slide 21). Its guanide groups are highly basic and ionize at physiological pH, so the molecule is cationic.",
+"cite": "OOO slide 21, T@28314 11/18",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "class"
+},
+{
+"id": "oo-pyridinium",
+"term": "pyridinium",
+"also": [],
+"def": "Pyridine carrying a positive charge; cetylpyridinium chloride is a pyridinium salt (slide 21). Dr. Sikazwe: four groups on the nitrogen make it quaternary and cationic.",
+"cite": "OOO slide 21, T@28811 11/18",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "class"
+},
+{
+"id": "oo-quaternary-nitrogen",
+"term": "quaternary nitrogen",
+"also": [
+"quaternary ammonium",
+"quaternary"
+],
+"def": "A nitrogen bonded to four groups and positively charged. Dr. Sikazwe uses it for pyridinium; acetylcholine and carbachol are drawn with N+ (slides 40-41).",
+"cite": "OOO slide 21, OOO slide 40, OOO slide 41, T@28752 11/18",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "chemistry"
+},
+{
+"id": "oo-cationic",
+"term": "cationic",
+"also": [
+"catioionic"
+],
+"def": "Positively charged. Chlorhexidine and cetylpyridinium are cationic (slide 21); Dr. Sikazwe says their permanent charge keeps them from entering systemic circulation much.",
+"cite": "OOO slide 21, T@31388 11/18",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "chemistry"
+},
+{
+"id": "oo-lipophilic-tail",
+"term": "lipophilic tail",
+"also": [
+"lipophilic tails"
+],
+"def": "The nonpolar tail of chlorhexidine and cetylpyridinium. Slide 21: it inserts into the bacterial cell wall and disrupts its integrity, while the charged head stays at the surface.",
+"cite": "OOO slide 21, T@29626 11/18",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "chemistry"
+},
+{
+"id": "oo-electrostatic-binding",
+"term": "electrostatic binding",
+"also": [
+"electrostatically",
+"electrostatic interaction"
+],
+"def": "The CBDA step of the slide 21 rinses: the positive charge binds the negative phospholipids of the bacterial cell wall.",
+"cite": "OOO slide 21, T@29364 11/18",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "oo-amalgam",
+"term": "amalgam",
+"also": [
+"metal amalgam",
+"metal amalgams",
+"amalgams"
+],
+"def": "A metal filling. Slide 22: now less common because of environmental and toxicity concerns; Dr. Sikazwe notes its high mercury content.",
+"cite": "OOO slide 22, T@33258 11/18",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "other"
+},
+{
+"id": "oo-restorative-treatment",
+"term": "restorative treatment",
+"also": [
+"restoration",
+"fillings",
+"tooth fillings"
+],
+"def": "A physical, non-pharmacotherapy repair that replaces lost tooth (slide 15 fillings; slides 22-23). Fillings are metal amalgams or resins.",
+"cite": "OOO slide 15, OOO slide 22, OOO slide 23, T@15408 11/18",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "counseling"
+},
+{
+"id": "oo-resin",
+"term": "dental resin",
+"also": [
+"resin",
+"resins"
+],
+"def": "The filling material on slide 23; the most common resin is Bis-GMA. Light is shone on it to cause rapid polymerization into a hardened polymer on enamel.",
+"cite": "OOO slide 23, T@34069 11/18",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "other"
+},
+{
+"id": "oo-bis-gma",
+"term": "Bis-GMA",
+"also": [
+"bisphenol A-glycidyl methacrylate",
+"BisGMA"
+],
+"def": "Bisphenol A-Glycidyl methacrylate, the most common dental resin: a polymer of BPA + GMA formed with light (hv) (slide 23).",
+"cite": "OOO slide 23",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "chemistry"
+},
+{
+"id": "oo-bpa",
+"term": "BPA",
+"also": [
+"bisphenol A"
+],
+"def": "Bisphenol A, one of the two building blocks of Bis-GMA (with GMA) on slide 23.",
+"cite": "OOO slide 23",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "chemistry",
+"cs": true
+},
+{
+"id": "oo-gma",
+"term": "GMA",
+"also": [
+"glycidyl methacrylate"
+],
+"def": "Glycidyl methacrylate, the other building block of Bis-GMA (with BPA) on slide 23.",
+"cite": "OOO slide 23",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "chemistry",
+"cs": true
+},
+{
+"id": "oo-bis-hppp",
+"term": "Bis-HPPP",
+"also": [],
+"def": "The product drawn on slide 23 when Bis-GMA is metabolized in the mouth; Dr. Sikazwe says this metabolism gradually costs the filling its effectiveness.",
+"cite": "OOO slide 23, T@34616 11/18",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "chemistry"
+},
+{
+"id": "oo-whitener",
+"term": "teeth whitener",
+"also": [
+"whiteners",
+"teeth whitening"
+],
+"def": "Slide 24: whiteners remove stains by several mechanisms, from H2O2 (oxidizes stains) to abrasives to surfactants.",
+"cite": "OOO slide 24, T@35729 11/18",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "oo-lactic-acid",
+"term": "lactic acid",
+"also": [
+"propionic acid"
+],
+"def": "With propionic acid, the acids Dr. Sikazwe names that mouth bacteria make from sugar; they lower saliva pH and erode enamel (slide 16).",
+"cite": "OOO slide 16, T@16815 11/18",
+"src": "lecture",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "chemistry"
+},
+{
+"id": "oo-imidazoline",
+"term": "imidazoline",
+"also": [
+"imidazolines"
+],
+"def": "A drug FG and class (slides 27, 31): the α2 agonists clonidine, apraclonidine and brimonidine (slide 31) and the decongestants on slide 55 contain it.",
+"cite": "OOO slide 27, OOO slide 31, OOO slide 55, T@37526 11/18",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "class"
+},
+{
+"id": "oo-sulfone",
+"term": "sulfone",
+"also": [
+"sulfones"
+],
+"def": "The sulfur with two oxygens between two carbons, one of the Drug FGs on slide 27. Dr. Sikazwe says to call it a sulfone.",
+"cite": "OOO slide 27, T@37682 11/18",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "class"
+},
+{
+"id": "oo-sulfoxide",
+"term": "sulfoxide",
+"also": [],
+"def": "Not the name for the slide 27 sulfur-with-two-oxygens group: Dr. Sikazwe says saying sulfoxide there is wrong; it is a sulfone.",
+"cite": "OOO slide 27, T@37682 11/18",
+"src": "lecture",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "class"
+},
+{
+"id": "oo-so2nh2",
+"term": "SO2NH2",
+"also": [
+"sulfonamide group"
+],
+"def": "The sulfonamide FG of the CAIs. CBDA (slide 38): it docks in carbonic anhydrase's active site and forms ionic and H-bond interactions with Zn and Thr199.",
+"cite": "OOO slide 27, OOO slide 36, OOO slide 38, T@37792 11/18",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "chemistry",
+"cs": true
+},
+{
+"id": "oo-carbamate",
+"term": "carbamate",
+"also": [
+"carbamates"
+],
+"def": "A Drug FG on slide 27 (H2N-C(=O)-O-). Slide 40 lists carbamates and esters as direct-acting cholinergics; on slide 42 carbamates rank second in AChE inhibition.",
+"cite": "OOO slide 27, OOO slide 40, OOO slide 42",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "class"
+},
+{
+"id": "oo-aryloxypropanolamine",
+"term": "aryloxypropanolamine",
+"also": [
+"aryloxypropanolamines"
+],
+"def": "The class of the β-antagonists timolol, betaxolol, levobunolol and carteolol (slide 33). Dr. Sikazwe: aromatic ring, oxygen beside it, then propanolamine (three carbons, alcohol and amine).",
+"cite": "OOO slide 27, OOO slide 33, T@38806 11/18",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "class"
+},
+{
+"id": "oo-arylethanolamine",
+"term": "arylethanolamine",
+"also": [
+"arylethanolamines"
+],
+"def": "Slide 34 SAR: aryloxypropanolamines are more potent than arylethanolamines, which lack the oxygen between the aryl ring and the chain.",
+"cite": "OOO slide 34",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "class"
+},
+{
+"id": "oo-s-oh-isomer",
+"term": "S-OH isomer",
+"also": [],
+"def": "Slide 34 SAR for β-antagonists: the S configuration at the carbon bearing the OH is the preferred isomer.",
+"cite": "OOO slide 34",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "chemistry"
+},
+{
+"id": "oo-beta1-antagonist",
+"term": "β1-antagonist",
+"also": [
+"β1 antagonist"
+],
+"def": "Slide 34: most β-antagonists have mixed β1 + β2 activity, but most p-aryloxypropanolamines, such as betaxolol, are β1-antagonists.",
+"cite": "OOO slide 34",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "oo-fp-receptor",
+"term": "FP receptor",
+"also": [
+"PGF receptor",
+"PGF or FP receptor"
+],
+"def": "Slide 44: every glaucoma prostaglandin increases fluid outflow through PGF or FP receptor activation.",
+"cite": "OOO slide 44",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "oo-ep2-receptor",
+"term": "EP2 receptor",
+"also": [
+"PGE2 receptor",
+"selective PGE2 or EP2 receptor agonist"
+],
+"def": "Slide 47: the target of omidenepag isopropyl, a selective PGE2 or EP2 receptor agonist that increases fluid outflow.",
+"cite": "OOO slide 47",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "oo-prostaglandin-sar",
+"term": "prostaglandin SAR",
+"also": [
+"PG SAR"
+],
+"def": "Slide 46: acids (-COOH) and amides (-CONH-) are the active drugs; esters are prodrugs. Esters or amides attach at C-1; alkyl or phenyl ends the chain.",
+"cite": "OOO slide 46",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "chemistry"
+},
+{
+"id": "oo-c15-oh",
+"term": "C-15 OH",
+"also": [
+"15-OH",
+"C-15"
+],
+"def": "Slide 46 SAR: C-15 carries OH or halogens; halogens prevent 15-OH oxidation.",
+"cite": "OOO slide 46",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "chemistry"
+},
+{
+"id": "oo-latanoprost-acid",
+"term": "latanoprost acid",
+"also": [],
+"def": "The active acid made from the isopropyl ester prodrug latanoprost by esterase (slide 45).",
+"cite": "OOO slide 45",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "oo-esterase",
+"term": "esterase",
+"also": [
+"esterases"
+],
+"def": "The enzyme that hydrolyzes ester prodrugs to their active acids: latanoprost to latanoprost acid (slide 45), omidenepag isopropyl (slide 47), netarsudil (slide 48).",
+"cite": "OOO slide 45, OOO slide 47, OOO slide 48, T@44257 11/18",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "oo-omidenepag",
+"term": "omidenepag isopropyl",
+"also": [
+"OMDI",
+"omidenepag",
+"OMD"
+],
+"def": "A pyridine sulfonamide EP2 agonist (ClogP=3) that increases fluid outflow; an ester prodrug that esterase hydrolysis converts to the active metabolite omidenepag (OMD) (slide 47).",
+"cite": "OOO slide 47",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "oo-pyridine-sulfonamide",
+"term": "pyridine sulfonamide",
+"also": [
+"pyridine sulfonamides"
+],
+"def": "The chemical class of omidenepag isopropyl, the EP2 receptor agonist on slide 47.",
+"cite": "OOO slide 47",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "class"
+},
+{
+"id": "oo-isoquinoline",
+"term": "isoquinoline",
+"also": [
+"isoquinolines"
+],
+"def": "The chemical class of netarsudil, the Rho kinase (ROCK) inhibitor on slide 48.",
+"cite": "OOO slide 48",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "class"
+},
+{
+"id": "oo-netarsudil-m1",
+"term": "netarsudil-M1",
+"also": [],
+"def": "The active metabolite of netarsudil (slide 48), formed from the ester prodrug (ClogP=5) by esterase hydrolysis.",
+"cite": "OOO slide 48",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "oo-adrenergic-agents",
+"term": "adrenergic agents",
+"also": [],
+"def": "Slide 28 glaucoma treatment group: α2-agonists and β-antagonists. Dr. Sikazwe says they target adrenergic receptors such as α2 and β.",
+"cite": "OOO slide 28, T@41618 11/18",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "class"
+},
+{
+"id": "oo-cannabinoids",
+"term": "cannabinoids",
+"also": [],
+"def": "Listed with an asterisk among the glaucoma treatments on slide 28.",
+"cite": "OOO slide 28",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "class"
+},
+{
+"id": "oo-lipid-water-lipid",
+"term": "lipid/water/lipid sandwich",
+"also": [
+"lipid water lipid"
+],
+"def": "The cornea's structure (slide 29): a drug passes tightly packed cells, dissolves in the lipid layer, then water, then lipid again, so less drug enters.",
+"cite": "OOO slide 29, T@43103 11/18",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "anatomy"
+},
+{
+"id": "oo-transporters-eye",
+"term": "influx and efflux transporters",
+"also": [
+"influx transporters",
+"efflux transporters"
+],
+"def": "Slide 29: the conjunctiva has influx and efflux transporters and esterase/CYP enzymes; this is why prodrugs can be activated there.",
+"cite": "OOO slide 29, T@44209 11/18",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "oo-ocular-routes",
+"term": "ocular absorption routes",
+"also": [
+"corneal route",
+"conjunctival route"
+],
+"def": "Slide 30: lipophilic drugs enter through the cornea, hydrophilic drugs through the conjunctiva. Dr. Sikazwe: the conjunctiva admits more drug, and the cornea suits small lipophilic drugs.",
+"cite": "OOO slide 29, OOO slide 30, T@45074 11/18",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "oo-clonidine",
+"term": "clonidine",
+"also": [],
+"def": "The prototype imidazoline α2 agonist (ClogP = 1.5, slide 31). Dr. Sikazwe: lipophilic enough to reach the brain, causing CNS effects including hypotension, so analogs were made.",
+"cite": "OOO slide 31, T@46246 11/18",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "oo-aryl-imidazoline-core",
+"term": "aryl imidazoline core",
+"also": [
+"aryl imidazoline"
+],
+"def": "The minimum structure of slide 32 for activity: an aromatic ring connected to an imidazoline. Dr. Sikazwe says a true imidazoline must be present.",
+"cite": "OOO slide 32, T@49941 11/18",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "chemistry"
+},
+{
+"id": "oo-linker-atom",
+"term": "linker",
+"also": [
+"linker atom"
+],
+"def": "The atom X joining the aryl ring and imidazoline (slide 32): X=CH2 gives α1 agonists; X=NH2 gives α2 agonists. Dr. Sikazwe: carbon, α1 selective; amine, α2 selective.",
+"cite": "OOO slide 32, T@50070 11/18",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "chemistry"
+},
+{
+"id": "oo-zn-metalloenzyme",
+"term": "zinc metalloenzyme",
+"also": [
+"Zn-metalloenzyme",
+"Zn metalloenzyme"
+],
+"def": "Slide 35: carbonic anhydrase is a Zn-metalloenzyme that modulates aqueous humor production through pH changes.",
+"cite": "OOO slide 35",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "oo-carbonic-acid",
+"term": "carbonic acid",
+"also": [
+"H2CO3",
+"bicarbonate ion"
+],
+"def": "On slide 35, carbonic anhydrase converts CO2 + H2O to H2CO3, which gives bicarbonate ion and H+; that pH change modulates aqueous humor production.",
+"cite": "OOO slide 35",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "chemistry"
+},
+{
+"id": "oo-zolamides",
+"term": "zolamides",
+"also": [
+"Sulfonamides (Zolamides)"
+],
+"def": "Slide 36 sulfonamide CAIs: acetazolamide, methazolamide, brinzolamide and dorzolamide HCl. They competitively inhibit CAs and decrease intraocular fluid production.",
+"cite": "OOO slide 36",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "class"
+},
+{
+"id": "oo-n-deethylation",
+"term": "N-deethylation",
+"also": [
+"N-deethylations",
+"N-deethylated"
+],
+"def": "Slide 37: CYPs N-deethylate both brinzolamide and dorzolamide, and the N-deethylated metabolites are active.",
+"cite": "OOO slide 37",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "oo-thr199",
+"term": "Thr199",
+"also": [],
+"def": "The amino acid in carbonic anhydrase's active site that, with Zn, forms ionic and H-bond interactions with the CAI's SO2NH2 group (slide 38).",
+"cite": "OOO slide 38",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "chemistry"
+},
+{
+"id": "oo-direct-cholinergic",
+"term": "direct-acting cholinergics",
+"also": [
+"direct-acting cholinergic",
+"direct cholinergics"
+],
+"def": "Slide 40: carbamates and esters (carbachol Cl, pilocarpine HCl) that increase fluid outflow. SAR: acyloxy group, ionizable amine N, N-methyl groups, 2-carbon spacer between O and N.",
+"cite": "OOO slide 40",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "class"
+},
+{
+"id": "oo-indirect-cholinergic",
+"term": "indirect-acting cholinergics",
+"also": [
+"indirect-acting cholinergic",
+"indirect cholinergics"
+],
+"def": "Slide 41: they inhibit acetylcholinesterase, which inactivates ACh, so ACh levels rise and fluid outflow increases.",
+"cite": "OOO slide 41",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "class"
+},
+{
+"id": "oo-acetylcholine",
+"term": "acetylcholine",
+"also": [
+"ACh"
+],
+"def": "The reference molecule of slides 40-41. AChE hydrolyzes it to acetic acid and choline (slide 41); slide 40's SAR lists the features of direct cholinergics.",
+"cite": "OOO slide 40, OOO slide 41",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "chemistry"
+},
+{
+"id": "oo-acyloxy",
+"term": "acyloxy group",
+"also": [
+"acyloxy"
+],
+"def": "Slide 40 SAR for direct-acting cholinergics: the acyloxy group is needed for H-bonding to nicotinic/muscarinic receptors.",
+"cite": "OOO slide 40",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "chemistry"
+},
+{
+"id": "oo-two-carbon-spacer",
+"term": "2-carbon spacer",
+"also": [
+"two-carbon spacer"
+],
+"def": "Slide 40 SAR for direct-acting cholinergics: two carbons between the O and the N.",
+"cite": "OOO slide 40",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "chemistry"
+},
+{
+"id": "oo-organophosphate",
+"term": "organophosphate",
+"also": [
+"phosphoryl",
+"organophosphates",
+"phosphoryl group"
+],
+"def": "Indirect cholinergic FG (slide 42). Extent of AChE inhibition depends on the FG: phosphoryl > carbamate > ester. Slide 68 asks which FG gives irreversible inhibition.",
+"cite": "OOO slide 42, OOO slide 68",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "class"
+},
+{
+"id": "oo-integrin-lfa1",
+"term": "integrin LFA-1",
+"also": [],
+"def": "The receptor lifitegrast blocks ICAM-1 from binding (slide 51), which decreases T-cell activation; it is a DED target on slide 49.",
+"cite": "OOO slide 49, OOO slide 51",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "immunology"
+},
+{
+"id": "oo-phenylalanine",
+"term": "phenylalanine",
+"also": [],
+"def": "Lifitegrast is described on slide 51 as a phenylalanine; its phenylalanine part is circled in the structure.",
+"cite": "OOO slide 51",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "chemistry"
+},
+{
+"id": "oo-levocabastine",
+"term": "levocabastine HCl",
+"also": [
+"levocabastine",
+"Livostin"
+],
+"def": "A 2nd generation antihistamine for allergic conjunctivitis (Livostin, slide 53; structure on slide 54). Slide 54 sends the SAR to the allergy lecture.",
+"cite": "OOO slide 53, OOO slide 54",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "oo-imidazoline-decongestant",
+"term": "imidazoline decongestants",
+"also": [
+"imidazoline decongestant"
+],
+"def": "Slide 55: oxymetazoline HCl (Afrin), xylometazoline HCl (Clear eyes), tetrahydrometazoline HCl (Visine) and naphazoline HCl (Otrivin); MoA is α1/α2 agonism.",
+"cite": "OOO slide 55",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "class"
+},
+{
+"id": "oo-xylometazoline",
+"term": "xylometazoline HCl",
+"also": [
+"xylometazoline"
+],
+"def": "Imidazoline decongestant with a printed brand of Clear eyes products; MoA α1/α2 agonist (slide 55).",
+"cite": "OOO slide 55",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "oo-tetrahydrometazoline",
+"term": "tetrahydrometazoline HCl",
+"also": [
+"tetrahydrometazoline"
+],
+"def": "Imidazoline decongestant, spelled this way on slide 55, with a printed brand of Visine products; MoA α1/α2 agonist.",
+"cite": "OOO slide 55",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "oo-chromone",
+"term": "chromone",
+"also": [
+"chromones"
+],
+"def": "Slide 56 mast cell stabilizer class that inhibits granule histamine release: cromolyn Na (Opticrom) and nedocromil Na (Alocril).",
+"cite": "OOO slide 56",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "class"
+},
+{
+"id": "oo-oxamic-acid",
+"term": "oxamic acid",
+"also": [
+"oxamic acids"
+],
+"def": "Slide 56 mast cell stabilizer class, shown in red on lodoxamide tromethamine (Alomide), which has two oxamic acid groups.",
+"cite": "OOO slide 56",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "class"
+},
+{
+"id": "oo-cromolyn",
+"term": "cromolyn Na",
+"also": [
+"cromolyn",
+"Opticrom"
+],
+"def": "Chromone mast cell stabilizer (Opticrom, slide 56): two chromone rings joined through a hydroxy-propane linker; it inhibits granule histamine release.",
+"cite": "OOO slide 56",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "oo-nedocromil",
+"term": "nedocromil Na",
+"also": [
+"nedocromil",
+"Alocril"
+],
+"def": "Chromone mast cell stabilizer (Alocril, slide 56) that inhibits granule histamine release from mast cells.",
+"cite": "OOO slide 56",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "oo-lodoxamide",
+"term": "lodoxamide tromethamine",
+"also": [
+"lodoxamide",
+"Alomide"
+],
+"def": "Oxamic acid mast cell stabilizer (Alomide, slide 56) that inhibits histamine release from mast cells.",
+"cite": "OOO slide 56",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "oo-pemirolast",
+"term": "pemirolast K",
+"also": [
+"pemirolast",
+"Alamast"
+],
+"def": "Mast cell stabilizer printed on slide 56 as Pemirolast K (Alamast), beside lodoxamide; slide 56 says its SAR is not clearly established.",
+"cite": "OOO slide 56",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "oo-dual-acting",
+"term": "dual-acting agents",
+"also": [
+"dual acting agents",
+"dual-acting"
+],
+"def": "Slide 57 multi-cyclic drugs that are antihistamines plus mast cell stabilizers: azelastine, ketotifen, epinastine, olopatadine, bepotastine, alcaftadine.",
+"cite": "OOO slide 57",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "class"
+},
+{
+"id": "oo-multicyclic",
+"term": "multi-cyclic",
+"also": [
+"multicyclic"
+],
+"def": "Slide 57 SAR for dual-acting agents: they are multi-cyclic with ionizable N and COOH groups; slide 64 asks for the three commonest SAR groups.",
+"cite": "OOO slide 57, OOO slide 64",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "chemistry"
+},
+{
+"id": "oo-ionizable-fg",
+"term": "ionizable group",
+"also": [
+"ionizable FGs"
+],
+"def": "A group that can be charged: the N and COOH on dual-acting agents (slide 57), and the ionizable amine N in direct-acting cholinergics (slide 40).",
+"cite": "OOO slide 40, OOO slide 57",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "chemistry"
+},
+{
+"id": "oo-gr-complex",
+"term": "GR complex",
+"also": [
+"glucocorticoid receptor complex"
+],
+"def": "Slide 58: glucocorticoids activate the GR complex to produce proteins that in turn suppress pro-inflammatory proteins.",
+"cite": "OOO slide 58",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "oo-steroid-stereochemistry",
+"term": "steroid stereochemistry",
+"also": [
+"stereochemistry"
+],
+"def": "Slide 58 shows steroid templates, numbering and stereochemistry; slide 59 says glucocorticoid students must know the C-atom numbering, stereochemistry and anti-inflammatory SAR.",
+"cite": "OOO slide 58, OOO slide 59",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "chemistry"
+},
+{
+"id": "oo-hydrocortisone",
+"term": "hydrocortisone",
+"also": [],
+"def": "Glucocorticoid steroid listed on slide 60 with its structure for the SAR.",
+"cite": "OOO slide 60",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "oo-dexamethasone",
+"term": "dexamethasone",
+"also": [],
+"def": "Glucocorticoid steroid listed on slide 60; its structure is used for the anti-inflammatory SAR.",
+"cite": "OOO slide 60",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "oo-prednisolone",
+"term": "prednisolone",
+"also": [],
+"def": "Glucocorticoid steroid listed on slide 60; its structure is used for the anti-inflammatory SAR.",
+"cite": "OOO slide 60",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "oo-fluorometholone",
+"term": "fluorometholone",
+"also": [],
+"def": "Glucocorticoid steroid listed on slide 60; its structure is used for the anti-inflammatory SAR.",
+"cite": "OOO slide 60",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "oo-rimexolone",
+"term": "rimexolone",
+"also": [],
+"def": "Glucocorticoid steroid listed on slide 60; its structure is used for the anti-inflammatory SAR.",
+"cite": "OOO slide 60",
+"src": "slide",
+"deck": "oo",
+"prof": "Sikazwe",
+"exam": 3,
+"kind": "pharmacology"
 }
 ];

@@ -12,7 +12,7 @@
       and "PDE-4" is the same as "PDE4". At each word the longest form is tried first and its words are consumed, so a term inside a
       longer term is not listed again. A plain plural (s, es) of a form's last word matches. cs:true forms match only in the case
       written.
-   3. The Glossary tab (#v-gloss): search, All / Exam 2 / Exam 1 / My words, the list A to Z (drawn in parts when long), and
+   3. The Glossary tab (#v-gloss): search, All / Exam 3 / Exam 2 / Exam 1 / My words, the list A to Z (drawn in parts when long), and
       "Review my words".
       Each entry: the term as an h3 in a list item, a bookmark toggle named "I didn't know this: <term>" ("My words" shows beside it
       only while on), "Also:" with the first three forms and "+N more" (opened by a search that matches a hidden form), the definition,
@@ -384,7 +384,7 @@ const GLOSSARY_UI = (() => {
   function filtered(){
     const toks = norm(st.q).split(' ').filter(Boolean), mine = sync().w;
     return sorted().filter(t =>
-      (st.filter === 'all' || (st.filter === 'e1' && hasExam(t, 1)) || (st.filter === 'e2' && hasExam(t, 2)) || (st.filter === 'mine' && mine[t.id])) &&
+      (st.filter === 'all' || (st.filter === 'e1' && hasExam(t, 1)) || (st.filter === 'e2' && hasExam(t, 2)) || (st.filter === 'e3' && hasExam(t, 3)) || (st.filter === 'mine' && mine[t.id])) &&
       (!st.kind || t.kind === st.kind) && toks.every(k => t._n.indexOf(k) !== -1));
   }
   // the search opens the forms behind "+N more" when it matches one of them and nothing shown
@@ -431,7 +431,7 @@ const GLOSSARY_UI = (() => {
     return `<h2 class="gltitle">Glossary</h2>
 <p class="glquiet" id="glquiet"${st.unsaved ? '' : ' hidden'}>My words could not be saved on this device. They are kept until this page is closed.</p>
 <div class="gltop"><input type="search" id="glq" value="${esc(st.q)}" placeholder="Search terms and definitions" aria-label="Search the glossary" autocomplete="off" autocapitalize="off" spellcheck="false">
-<div class="glf" role="group" aria-label="Show">${fb('all', 'All')}${fb('e2', 'Exam 2')}${fb('e1', 'Exam 1')}${fb('mine', `My words (<span id="glmyn">${n}</span>)`)}${
+<div class="glf" role="group" aria-label="Show">${fb('all', 'All')}${fb('e3', 'Exam 3')}${fb('e2', 'Exam 2')}${fb('e1', 'Exam 1')}${fb('mine', `My words (<span id="glmyn">${n}</span>)`)}${
   k.length ? `<label class="glkind"><span class="gsr">Kind</span><select id="glkind" aria-label="Kind of term"><option value="">Every kind</option>${k.map(x => `<option value="${esc(x)}"${st.kind === x ? ' selected' : ''}>${esc(x.charAt(0).toUpperCase() + x.slice(1))}</option>`).join('')}</select></label>` : ''}</div></div>`;
   }
   function drawBody(){

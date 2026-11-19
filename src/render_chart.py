@@ -54,14 +54,17 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
 OUT = os.path.join(ROOT, 'chart')
 WIDTH, QUALITY = 1600, 75
+EYE = '--eye' in sys.argv      # the ophthalmic chart (4 pages) -> chart/eye-N.webp, src/chart_boxes_eye.js
+NPAGES = 4 if EYE else 7
 # how the chart itself spells a name that CHART_ROWS writes correctly (both disclosed
 # on the cards: "2-ethyhexyl salicylate", druglist_data.js octisalate; "Trimetoprim")
 CHART_TYPOS = {'trimethoprim': 'trimetoprim', 'ethylhexyl': 'ethyhexyl'}
 
 
 def chart_rows():
+    ext = "+fs.readFileSync('druglist_eye.js','utf8')" if EYE else ""
     js = ("const fs=require('fs'),vm=require('vm');const sb={};vm.createContext(sb);"
-          "vm.runInContext(fs.readFileSync('druglist_data.js','utf8')+';this.R=DRUGLIST.CHART_ROWS;',sb);"
+          "vm.runInContext(fs.readFileSync('druglist_data.js','utf8')" + ext + "+';this.R=" + ("DRUGLIST_EYE" if EYE else "DRUGLIST") + ".CHART_ROWS;',sb);"
           "process.stdout.write(JSON.stringify(sb.R))")
     r = subprocess.run(['node', '-e', js], cwd=HERE, capture_output=True, text=True)
     if r.returncode:
@@ -179,13 +182,13 @@ def main():
         sys.exit(__doc__)
     sheet = a[a.index('--sheet') + 1] if '--sheet' in a else None
     doc = pymupdf.open(a[0])
-    if doc.page_count != 7:
-        sys.exit(f'expected the 7-page chart, got {doc.page_count} pages')
+    if doc.page_count != NPAGES:
+        sys.exit(f'expected the {NPAGES}-page chart, got {doc.page_count} pages')
     rows_by_line = chart_rows()
     os.makedirs(OUT, exist_ok=True)
     pages, drugs, other, problems = {}, {}, [], []
     geo = {}
-    for pno in range(1, 8):
+    for pno in range(1, NPAGES + 1):
         page = doc[pno - 1]
         rows, left, right = page_rows(page)
         clip = clip_for(page, rows[0][0] - (40 if pno != 5 else 0), rows[-1][1], left, right, pno)
@@ -195,17 +198,22 @@ def main():
             clip.y0 = top_rule - 8
         zoom = WIDTH / clip.width
         pix = page.get_pixmap(matrix=pymupdf.Matrix(zoom, zoom), clip=clip, alpha=False)
-        name = f'chart-p{pno}.jpg'
-        pix.save(os.path.join(OUT, name), jpg_quality=QUALITY)
+        if EYE:
+            from PIL import Image
+            name = f'eye-{pno}.webp'
+            Image.frombytes('RGB', (pix.width, pix.height), pix.samples).save(os.path.join(OUT, name), 'WEBP', quality=QUALITY)
+        else:
+            name = f'chart-p{pno}.jpg'
+            pix.save(os.path.join(OUT, name), jpg_quality=QUALITY)
         pages[pno] = {'file': name, 'w': pix.width, 'h': pix.height}
         geo[pno] = (rows, left, right, clip)
-    cols = {pno: columns(doc[pno - 1], pno) for pno in range(1, 8)}
+    cols = {pno: columns(doc[pno - 1], pno) for pno in range(1, NPAGES + 1)}
     cell_text = lambda pno, r: re.sub(r'\s+', ' ', doc[pno - 1].get_textbox(pymupdf.Rect(*r))).strip()
     def frac(pno, r):
         c = geo[pno][3]
         return {'x0': round((r[0] - c.x0) / c.width, 4), 'y0': round((r[1] - c.y0) / c.height, 4),
                 'x1': round((r[2] - c.x0) / c.width, 4), 'y1': round((r[3] - c.y0) / c.height, 4)}
-    tb = {p: (min(y for c in cols[p] for y in c[3]), max(y for c in cols[p] for y in c[3])) for p in (4, 5)}
+    tb = {} if EYE else {p: (min(y for c in cols[p] for y in c[3]), max(y for c in cols[p] for y in c[3])) for p in (4, 5)}
     def cells_for(pno, top, bot):
         out = []
         for ci, col in enumerate(cols[pno]):
@@ -217,18 +225,18 @@ def main():
             c = dict(col=col[0], page=pno, **frac(pno, r), text=t, merged=(r[3] - r[1]) > (bot - top) + 1, cont=False)
             out.append(c)
             # a merged cell cut by the p. 4/5 page break: its part on the other page
-            if pno == 4 and abs(r[3] - tb[4][1]) < 1:
+            if not EYE and pno == 4 and abs(r[3] - tb[4][1]) < 1:
                 o = cell_at(cols[5][ci], tb[5][0] + 1)
                 if o and cell_text(5, o) == '':
                     out.append(dict(col=col[0], page=5, **frac(5, o), text='', merged=True, cont=True))
                     c['merged'] = True
-            if pno == 5 and abs(r[1] - tb[5][0]) < 1 and t == '':
+            if not EYE and pno == 5 and abs(r[1] - tb[5][0]) < 1 and t == '':
                 o = cell_at(cols[4][ci], tb[4][1] - 1)
                 if o:
                     out.append(dict(col=col[0], page=4, **frac(4, o), text=cell_text(4, o), merged=True, cont=True))
                     c['merged'] = True
         return out
-    for pno in range(1, 8):
+    for pno in range(1, NPAGES + 1):
         rows, left, right, clip = geo[pno]
         page = doc[pno - 1]
         at = 0
@@ -263,6 +271,18 @@ def main():
     if problems:
         sys.exit('rows not found or not verified:\n  ' + '\n  '.join(problems))
     body = json.dumps({'pages': pages, 'drugs': drugs, 'other': other}, indent=1, ensure_ascii=False)
+    if EYE:
+        with open(os.path.join(HERE, 'chart_boxes_eye.js'), 'w', encoding='utf-8') as fh:
+            fh.write('/* Generated by render_chart.py --eye from the ophthalmic drug chart (4 pages, MD5\n'
+                     '   fb54bd652217143c3453a9cbb7c30c70); do not edit by hand. The row of every\n'
+                     '   chart line in druglist_eye.js CHART_ROWS, as fractions of its page image\n'
+                     '   chart/eye-N.webp; checked by druglist_check.js. */\n'
+                     'const CHART_BOXES_EYE = ' + body + ';\n')
+        n = sum(len(v) for v in drugs.values())
+        print(f'{NPAGES} pages in chart/; {n} boxes on {len(drugs)} cards; every box verified')
+        if sheet:
+            contact(sheet, pages, drugs, other, rows_by_line)
+        return
     with open(os.path.join(HERE, 'chart_boxes.js'), 'w', encoding='utf-8') as fh:
         fh.write('/* Generated by render_chart.py from the dermatology drug chart (7 pages, MD5\n'
                  '   6d768218ff6de08f2e38790146b427bd); do not edit by hand. The row of every\n'
@@ -281,7 +301,7 @@ def contact(dest, pages, drugs, other, rows_by_line):
     os.makedirs(dest, exist_ok=True)
     ims = {p: Image.open(os.path.join(OUT, pages[p]['file'])).convert('RGB') for p in pages}
     allb = [(c, b) for c, bs in drugs.items() for b in bs] + [(None, b) for b in other]
-    for pno in range(1, 8):
+    for pno in range(1, NPAGES + 1):
         strips = []
         for c, b in sorted((x for x in allb if x[1]['page'] == pno), key=lambda x: x[1]['line']):
             for sp in sorted({x['page'] for x in b['cells']}, key=lambda q: (q != pno, q)):

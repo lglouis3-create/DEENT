@@ -1,6 +1,6 @@
 {
  "meta": {
-  "source": "analysis of 2026-11-15 (stars_map_smith.json): comb = 0.5*percentile(question-derived score) + 0.5*percentile(transcript emphasis); Dr. Smith rows re-scored from her transcripts of 10/29, 10/30, 11/03 and her sun-exposure recording.",
+  "source": "analysis of 2026-11-15 (stars_map_smith.json): comb = 0.5*percentile(question-derived score) + 0.5*percentile(transcript emphasis); Dr. Smith rows re-scored from her transcripts of 10/29, 10/30, 11/03 and her sun-exposure recording. Dr. Smith's eye rows (Exam 3, added 2026-11-18): same formula, comb = 0.5*(question-star score relative to the tab's best eye target; a star counts 1.3 minus its rank over the 41 eye stars) + 0.5*(transcript emphasis, 0 to 1, by the strength of her 11/13 and 11/17 cue words); lv 3 at 0.8, lv 2 at 0.6, else 1.",
   "lecture": {
    "P1106": [
     "Patel",
@@ -41,31 +41,39 @@
    "MSUN": [
     "Smith",
     "sun recording"
+   ],
+   "M1113": [
+    "Smith",
+    "11/13"
+   ],
+   "M1117": [
+    "Smith",
+    "11/17"
    ]
   },
   "chosen": {
-   "guide": 15,
-   "guideBlock": 41,
-   "reference": 8,
-   "tell": 22,
-   "dzCard": 9,
-   "dzTell": 6,
-   "dzPair": 8,
+   "guide": 21,
+   "guideBlock": 57,
+   "reference": 10,
+   "tell": 30,
+   "dzCard": 11,
+   "dzTell": 8,
+   "dzPair": 11,
    "drug": 15,
-   "dzDrug": 12,
-   "gloss": 154
+   "dzDrug": 17,
+   "gloss": 183
   },
   "total": {
-   "guide": 69,
-   "guideBlock": 189,
-   "reference": 31,
-   "tell": 102,
-   "dzCard": 23,
-   "dzTell": 15,
-   "dzPair": 23,
+   "guide": 93,
+   "guideBlock": 252,
+   "reference": 36,
+   "tell": 133,
+   "dzCard": 26,
+   "dzTell": 19,
+   "dzPair": 30,
    "drug": 79,
-   "dzDrug": 76,
-   "gloss": 763
+   "dzDrug": 94,
+   "gloss": 879
   },
   "override": "gobj-pc-3 kept (analysis dropped it because its transcript windows were absorbed by gobj-l1-4): lv 1, 11/03 T430"
  },
@@ -746,6 +754,185 @@
      "il12",
      "irrita",
      "pregna"
+    ]
+   },
+   "gobj-ey-9": {
+    "lv": 3,
+    "comb": 1.0,
+    "qStars": 4,
+    "ev": [
+     "EI-029:smith-eye-cue",
+     "EI-028:smith-eye-cue",
+     "EI-031:smith-eye-cue",
+     "EI-025:smith-obj-eye"
+    ],
+    "quotes": [
+     "M1117@18418: \"I need you guys to understand how does this potential for metabolic acidosis occur in these patients, because sometimes you will need to use this drug orally in patients with glaucoma.\"",
+     "M1113@60052: \"And then a side effect of using these, Um, orally, is they can cause some acidosis. So, that's a significant side effect that these medications can cause orally if you take them orally, and, um, needs to be, um, carefully monitored in your patient, OK?\""
+    ],
+    "title": "Dr. Smith, slide by slide Carbonic anhydrase inhibitors slides 25-29",
+    "kw": [
+     "carbon",
+     "anhydr",
+     "inhibi",
+     "acidos",
+     "metabo",
+     "bicarb",
+     "kidney",
+     "proxim",
+     "tubule",
+     "oral",
+     "acetaz",
+     "methaz",
+     "monito",
+     "diuret"
+    ]
+   },
+   "gobj-ey-4": {
+    "lv": 3,
+    "comb": 0.91,
+    "qStars": 3,
+    "ev": [
+     "EA-035:smith-obj-eye",
+     "EI-039:smith-obj-eye",
+     "EO-046:smith-obj-eye"
+    ],
+    "quotes": [
+     "M1113@19435: \"Uh, as you study your drugs, be sure you can categorize them of ones that affect inflow or outflow, OK? All right. So, pathophys of glaucoma. So, what is glaucoma? OK.\"",
+     "M1113@60876: \"It's again, memorizing, do they affect inflow, do they affect outflow, and then the pharmacological categories that they affect. Yes. Yeah.\""
+    ],
+    "title": "Dr. Smith, slide by slide Glaucoma: outline and objectives slides 9-11",
+    "kw": [
+     "inflow",
+     "outflo",
+     "glauco",
+     "drugs",
+     "classi",
+     "catego",
+     "produc",
+     "inhibi",
+     "enhanc",
+     "aqueou",
+     "humor",
+     "affect"
+    ]
+   },
+   "gobj-ey-22": {
+    "lv": 3,
+    "comb": 0.918,
+    "qStars": 4,
+    "ev": [
+     "EL-004:smith-eye-cue",
+     "EL-008:smith-eye-cue",
+     "EL-042:smith-eye-cue",
+     "EL-006:smith-eye-cue"
+    ],
+    "quotes": [
+     "M1117@48555: \"Pay special attention to which ones have mast cell stabilizing properties. Some of them are used for other indications, like azelastine is indicated for allergic rhinitis. Some of them get into the CNS more than others.\""
+    ],
+    "title": "Dr. Smith, slide by slide Ophthalmic H1 inverse agonists (antihistamines) slides 50-52",
+    "kw": [
+     "mast",
+     "cell",
+     "stabil",
+     "antihi",
+     "histam",
+     "invers",
+     "agonis",
+     "ketoti",
+     "olopat",
+     "epinas",
+     "azelas",
+     "alcaft",
+     "bepota",
+     "cetiri"
+    ]
+   },
+   "gobj-ey-5": {
+    "lv": 3,
+    "comb": 0.821,
+    "qStars": 4,
+    "ev": [
+     "EA-021:smith-ex3",
+     "EA-022:smith-ex3",
+     "EA-029:smith-ex3",
+     "EA-034:smith-ex3"
+    ],
+    "quotes": [
+     "M1113@61120: \"So focus on pathophys and then focus on mechanisms. \"",
+     "M1113@42351: \"We need to know what's causing the disease, because then we know what drugs we have and why they work.\""
+    ],
+    "title": "Dr. Smith, slide by slide What glaucoma is: open-angle and angle-closure slides 12-14",
+    "kw": [
+     "open",
+     "angle",
+     "closur",
+     "glauco",
+     "pressu",
+     "emerge",
+     "pain",
+     "optic",
+     "nerve",
+     "intrao",
+     "draina",
+     "pathop",
+     "pathol",
+     "mechan",
+     "diseas"
+    ]
+   },
+   "gobj-ey-13": {
+    "lv": 2,
+    "comb": 0.605,
+    "qStars": 3,
+    "ev": [
+     "EO-018:smith-eye-cue",
+     "EO-020:smith-eye-cue",
+     "EO-017:smith-ex3"
+    ],
+    "quotes": [],
+    "title": "Dr. Smith, slide by slide Prostaglandin agonists: mechanism slides 36-37",
+    "kw": [
+     "prosta",
+     "agonis",
+     "latano",
+     "bimato",
+     "travop",
+     "taflup",
+     "uveosc",
+     "eye",
+     "color",
+     "iris",
+     "darker",
+     "eyelas",
+     "outflo"
+    ]
+   },
+   "gobj-ey-27": {
+    "lv": 2,
+    "comb": 0.688,
+    "qStars": 3,
+    "ev": [
+     "ED-008:smith-eye-room",
+     "ED-009:smith-eye-room",
+     "ED-007:smith-obj-eye"
+    ],
+    "quotes": [
+     "M1117@60741: \"Did you guys see that question before? I know that I was picky on that question. But I did that on purpose, because we'll talk about these drugs again, including FKBP and oncology.\""
+    ],
+    "title": "Dr. Smith, slide by slide Dry eye: calcineurin inhibitor (cyclosporine) slides 63-67",
+    "kw": [
+     "cyclos",
+     "cyclop",
+     "tacrol",
+     "fkbp",
+     "calcin",
+     "nfat",
+     "dry",
+     "eye",
+     "inflam",
+     "tear",
+     "produc"
     ]
    }
   },
@@ -2333,6 +2520,423 @@
      "hydroc",
      "refere"
     ]
+   },
+   "gobj-ey-9#3": {
+    "lv": 3,
+    "comb": 0.85,
+    "qStars": 2,
+    "ev": [
+     "EI-029:smith-eye-cue",
+     "EI-028:smith-eye-cue"
+    ],
+    "quotes": [
+     "M1117@18418: \"I need you guys to understand how does this potential for metabolic acidosis occur in these patients, because sometimes you will need to use this drug orally in patients with glaucoma.\""
+    ],
+    "h5": "The proximal tubule figure: why these drugs cause metabolic acidosis (Eye slide 27)",
+    "kw": [
+     "carbon",
+     "anhydr",
+     "inhibi",
+     "acidos",
+     "metabo",
+     "bicarb",
+     "kidney",
+     "proxim",
+     "tubule",
+     "oral",
+     "acetaz",
+     "methaz",
+     "monito",
+     "diuret"
+    ]
+   },
+   "gobj-ey-4#3": {
+    "lv": 3,
+    "comb": 1.0,
+    "qStars": 3,
+    "ev": [
+     "EA-035:smith-obj-eye",
+     "EI-039:smith-obj-eye",
+     "EO-046:smith-obj-eye"
+    ],
+    "quotes": [
+     "M1113@19435: \"Uh, as you study your drugs, be sure you can categorize them of ones that affect inflow or outflow, OK? All right. So, pathophys of glaucoma. So, what is glaucoma? OK.\"",
+     "M1113@60876: \"It's again, memorizing, do they affect inflow, do they affect outflow, and then the pharmacological categories that they affect. Yes. Yeah.\""
+    ],
+    "h5": "Glaucoma learning objectives: inflow and outflow, and what she tests (Eye slide 11)",
+    "kw": [
+     "inflow",
+     "outflo",
+     "glauco",
+     "drugs",
+     "classi",
+     "catego",
+     "produc",
+     "inhibi",
+     "enhanc",
+     "aqueou",
+     "humor",
+     "affect"
+    ]
+   },
+   "gobj-ey-5#2": {
+    "lv": 2,
+    "comb": 0.796,
+    "qStars": 3,
+    "ev": [
+     "EA-021:smith-ex3",
+     "EA-022:smith-ex3",
+     "EA-029:smith-ex3"
+    ],
+    "quotes": [
+     "M1113@61120: \"So focus on pathophys and then focus on mechanisms. \""
+    ],
+    "h5": "What is glaucoma? Open-angle versus angle-closure (Eye slide 13)",
+    "kw": [
+     "open",
+     "angle",
+     "closur",
+     "glauco",
+     "pressu",
+     "emerge",
+     "pain",
+     "optic",
+     "nerve",
+     "intrao",
+     "draina",
+     "pathop",
+     "pathol",
+     "mechan",
+     "diseas"
+    ]
+   },
+   "gobj-ey-22#2": {
+    "lv": 2,
+    "comb": 0.749,
+    "qStars": 2,
+    "ev": [
+     "EL-004:smith-eye-cue",
+     "EL-042:smith-eye-cue"
+    ],
+    "quotes": [
+     "M1117@48555: \"Pay special attention to which ones have mast cell stabilizing properties. Some of them are used for other indications, like azelastine is indicated for allergic rhinitis. Some of them get into the CNS more than others.\""
+    ],
+    "h5": "Two mechanisms: H1 inverse agonism and mast cell stabilization (Eye slide 51)",
+    "kw": [
+     "mast",
+     "cell",
+     "stabil",
+     "antihi",
+     "histam",
+     "invers",
+     "agonis",
+     "ketoti",
+     "olopat",
+     "epinas",
+     "azelas",
+     "alcaft",
+     "bepota",
+     "cetiri"
+    ]
+   },
+   "gobj-ey-23#1": {
+    "lv": 2,
+    "comb": 0.72,
+    "qStars": 2,
+    "ev": [
+     "EL-008:smith-eye-cue",
+     "EL-042:smith-eye-cue"
+    ],
+    "quotes": [
+     "M1117@48555: \"Pay special attention to which ones have mast cell stabilizing properties. Some of them are used for other indications, like azelastine is indicated for allergic rhinitis. Some of them get into the CNS more than others.\""
+    ],
+    "h5": "Alcaftadine, azelastine, bepotastine, cetirizine (Eye slide 53)",
+    "kw": [
+     "mast",
+     "cell",
+     "stabil",
+     "antihi",
+     "histam",
+     "invers",
+     "agonis",
+     "ketoti",
+     "olopat",
+     "epinas",
+     "azelas",
+     "alcaft",
+     "bepota",
+     "cetiri"
+    ]
+   },
+   "gobj-ey-2#1": {
+    "lv": 1,
+    "comb": 0.577,
+    "qStars": 1,
+    "ev": [
+     "EA-009:smith-eye-cue"
+    ],
+    "quotes": [
+     "M1113@16540: \"I have to be sure that I'm compressing my eyelid corners. There's a word for that. I can't remember exactly what it is, but you compress this part of your eye, you stop s\""
+    ],
+    "h5": "Anatomy of the lacrimal system: drainage and the counseling point (Eye slide 5)",
+    "kw": [
+     "compre",
+     "eyelid",
+     "corner",
+     "lacrim",
+     "draina",
+     "absorp",
+     "counse",
+     "nasola",
+     "system"
+    ]
+   },
+   "gobj-ey-9#5": {
+    "lv": 1,
+    "comb": 0.56,
+    "qStars": 1,
+    "ev": [
+     "EI-031:smith-eye-cue"
+    ],
+    "quotes": [
+     "M1113@60052: \"And then a side effect of using these, Um, orally, is they can cause some acidosis. So, that's a significant side effect that these medications can cause orally if you take them orally, and, um, needs to be, um, carefully monitored in your patient, OK?\""
+    ],
+    "h5": "Carbonic anhydrase inhibitor side effects: ocular, oral and acidosis (Eye slide 29)",
+    "kw": [
+     "carbon",
+     "anhydr",
+     "inhibi",
+     "acidos",
+     "metabo",
+     "bicarb",
+     "kidney",
+     "proxim",
+     "tubule",
+     "oral",
+     "acetaz",
+     "methaz",
+     "monito",
+     "diuret"
+    ]
+   },
+   "gobj-ey-8#2": {
+    "lv": 1,
+    "comb": 0.499,
+    "qStars": 1,
+    "ev": [
+     "EI-014:smith-eye-cue"
+    ],
+    "quotes": [],
+    "h5": "Alpha-2 agonists: mechanism and brimonidine's two added effects (Eye slide 22)",
+    "kw": [
+     "brimon",
+     "alpha",
+     "agonis",
+     "uveosc",
+     "neurop",
+     "optic",
+     "nerve",
+     "apracl",
+     "allerg",
+     "hypote"
+    ]
+   },
+   "gobj-ey-6#1": {
+    "lv": 2,
+    "comb": 0.754,
+    "qStars": 3,
+    "ev": [
+     "EA-036:smith-eye-cue",
+     "EA-037:smith-eye-cue",
+     "EA-031:smith-ex3"
+    ],
+    "quotes": [
+     "M1113@32669: \"With that in mind, the most important outflow route is through that trabecular meshwork and Schlem's canal. Most of the liquid can get through that canal because it's like made, you know, it's like a canal, OK.\""
+    ],
+    "h5": "Aqueous humor flow: the two drainage routes (Eye slide 15)",
+    "kw": [
+     "aqueou",
+     "humor",
+     "trabec",
+     "meshwo",
+     "schlem",
+     "canal",
+     "uveosc",
+     "outflo",
+     "route",
+     "draina",
+     "poster",
+     "anteri",
+     "chambe"
+    ]
+   },
+   "gobj-ey-13#2": {
+    "lv": 1,
+    "comb": 0.581,
+    "qStars": 2,
+    "ev": [
+     "EO-018:smith-eye-cue",
+     "EO-020:smith-eye-cue"
+    ],
+    "quotes": [],
+    "h5": "Prostaglandin agonists: PGF2 alpha receptor, uveoscleral outflow, eye color (Eye slide 37)",
+    "kw": [
+     "prosta",
+     "agonis",
+     "latano",
+     "bimato",
+     "travop",
+     "taflup",
+     "uveosc",
+     "eye",
+     "color",
+     "iris",
+     "darker",
+     "eyelas",
+     "outflo"
+    ]
+   },
+   "gobj-ey-27#4": {
+    "lv": 2,
+    "comb": 0.642,
+    "qStars": 2,
+    "ev": [
+     "ED-008:smith-eye-room",
+     "ED-009:smith-eye-room"
+    ],
+    "quotes": [
+     "M1117@60741: \"Did you guys see that question before? I know that I was picky on that question. But I did that on purpose, because we'll talk about these drugs again, including FKBP and oncology.\""
+    ],
+    "h5": "Mechanism of action: cyclophilin, FKBP, calcineurin and NFAT (Eye slide 66)",
+    "kw": [
+     "cyclos",
+     "cyclop",
+     "tacrol",
+     "fkbp",
+     "calcin",
+     "nfat",
+     "dry",
+     "eye",
+     "inflam",
+     "tear",
+     "produc"
+    ]
+   },
+   "gobj-ey-14#2": {
+    "lv": 1,
+    "comb": 0.414,
+    "qStars": 1,
+    "ev": [
+     "EO-020:smith-eye-cue"
+    ],
+    "quotes": [],
+    "h5": "Prostaglandin agonists: side effects (Eye slide 39)",
+    "kw": [
+     "prosta",
+     "agonis",
+     "latano",
+     "bimato",
+     "travop",
+     "taflup",
+     "uveosc",
+     "eye",
+     "color",
+     "iris",
+     "darker",
+     "eyelas",
+     "outflo"
+    ]
+   },
+   "gobj-ey-28#4": {
+    "lv": 1,
+    "comb": 0.475,
+    "qStars": 2,
+    "ev": [
+     "ED-021:smith-eye-cue",
+     "ED-018:smith-obj-eye"
+    ],
+    "quotes": [
+     "M1117@65537: \"So, an important counseling point about this medication is, uh, if people are using contacts, um, they need to remove their contacts before they administer the drug, and then they have to wait a good 15 minutes before they put the\""
+    ],
+    "h5": "Lifitegrast: LFA-1 antagonist, dose, side effects and contact lenses (Eye slide 71)",
+    "kw": [
+     "lifite",
+     "contac",
+     "lenses",
+     "remove",
+     "wait",
+     "minute",
+     "counse",
+     "dry",
+     "eye"
+    ]
+   },
+   "gobj-ey-15#4": {
+    "lv": 1,
+    "comb": 0.394,
+    "qStars": 1,
+    "ev": [
+     "EO-033:smith-ex3"
+    ],
+    "quotes": [
+     "M1117@37328: \"But, um, conjunctival hemorrhage is always a little scary when you look in the mirror. So, uh, the rokinase inhibitors, uh, I think they're quite effective.\""
+    ],
+    "h5": "Rho kinase inhibitor: side effects (Eye slide 43)",
+    "kw": [
+     "netars",
+     "rho",
+     "kinase",
+     "conjun",
+     "hemorr",
+     "bloods",
+     "advers"
+    ]
+   },
+   "gobj-ey-29#2": {
+    "lv": 1,
+    "comb": 0.438,
+    "qStars": 2,
+    "ev": [
+     "ED-028:smith-ex3",
+     "ED-024:smith-obj-eye"
+    ],
+    "quotes": [],
+    "h5": "Intranasal varenicline: mechanism, dose and rare visual side effects (Eye slide 73)",
+    "kw": [
+     "vareni",
+     "intran",
+     "night",
+     "blindn",
+     "rare",
+     "retina",
+     "tear",
+     "nicoti",
+     "trigem"
+    ]
+   },
+   "gobj-ey-8#4": {
+    "lv": 1,
+    "comb": 0.42,
+    "qStars": 1,
+    "ev": [
+     "EI-023:smith-eye-cue"
+    ],
+    "quotes": [
+     "M1113@53046: \"Uh, importantly, for apriclonidine, you can get the systemic hypotension, and then that allergic reaction is a significant problem.\""
+    ],
+    "h5": "Alpha-2 agonist side effects (Eye slide 24)",
+    "kw": [
+     "brimon",
+     "alpha",
+     "agonis",
+     "uveosc",
+     "neurop",
+     "optic",
+     "nerve",
+     "apracl",
+     "allerg",
+     "hypote"
+    ]
    }
   },
   "reference": {
@@ -2702,6 +3306,79 @@
      "unknow",
      "smith",
      "check"
+    ]
+   },
+   "ref-ey-gl": {
+    "lv": 3,
+    "comb": 1.0,
+    "qStars": 6,
+    "ev": [
+     "EA-035:smith-obj-eye",
+     "EI-039:smith-obj-eye",
+     "EO-046:smith-obj-eye",
+     "EI-029:smith-eye-cue",
+     "EO-018:smith-eye-cue",
+     "EI-014:smith-eye-cue"
+    ],
+    "quotes": [
+     "M1113@19435: \"Uh, as you study your drugs, be sure you can categorize them of ones that affect inflow or outflow, OK? All right. So, pathophys of glaucoma. So, what is glaucoma? OK.\"",
+     "M1113@60876: \"It's again, memorizing, do they affect inflow, do they affect outflow, and then the pharmacological categories that they affect. Yes. Yeah.\"",
+     "M1117@18418: \"I need you guys to understand how does this potential for metabolic acidosis occur in these patients, because sometimes you will need to use this drug orally in patients with glaucoma.\""
+    ],
+    "title": "Glaucoma drugs by inflow and outflow, slides 17-45",
+    "kw": [
+     "inflow",
+     "outflo",
+     "glauco",
+     "drugs",
+     "classi",
+     "catego",
+     "produc",
+     "inhibi",
+     "enhanc",
+     "aqueou",
+     "humor",
+     "affect",
+     "carbon",
+     "acidos",
+     "prosta",
+     "brimon"
+    ]
+   },
+   "ref-ey-ac": {
+    "lv": 2,
+    "comb": 0.783,
+    "qStars": 5,
+    "ev": [
+     "EL-004:smith-eye-cue",
+     "EL-008:smith-eye-cue",
+     "EL-042:smith-eye-cue",
+     "EL-006:smith-eye-cue",
+     "EL-018:smith-obj-eye"
+    ],
+    "quotes": [
+     "M1117@48555: \"Pay special attention to which ones have mast cell stabilizing properties. Some of them are used for other indications, like azelastine is indicated for allergic rhinitis. Some of them get into the CNS more than others.\"",
+     "M1117@54654: \"So be sure that you learn all the drugs on the drug list and differentiate between them when I give you those details for the antihistamines.\""
+    ],
+    "title": "Allergic conjunctivitis drugs, slides 48-59",
+    "kw": [
+     "mast",
+     "cell",
+     "stabil",
+     "antihi",
+     "histam",
+     "invers",
+     "agonis",
+     "ketoti",
+     "olopat",
+     "epinas",
+     "azelas",
+     "alcaft",
+     "bepota",
+     "cetiri",
+     "allerg",
+     "conjun",
+     "alpha"
     ]
    }
   },
@@ -3452,6 +4129,230 @@
      "enzyme",
      "acid"
     ]
+   },
+   "tell-ey-glaucoma#r1": {
+    "lv": 2,
+    "comb": 0.789,
+    "qStars": 3,
+    "ev": [
+     "EA-021:smith-ex3",
+     "EA-022:smith-ex3",
+     "EA-029:smith-ex3"
+    ],
+    "quotes": [
+     "M1113@61120: \"So focus on pathophys and then focus on mechanisms. \""
+    ],
+    "label": "Primary open-angle glaucoma (POAG) vs primary angle-closure glaucoma (PACG)",
+    "kw": [
+     "open",
+     "angle",
+     "closur",
+     "glauco",
+     "pressu",
+     "emerge",
+     "pain",
+     "optic",
+     "nerve",
+     "intrao",
+     "draina",
+     "pathop",
+     "pathol",
+     "mechan",
+     "diseas"
+    ]
+   },
+   "tell-ey-glaucoma#r3": {
+    "lv": 2,
+    "comb": 0.642,
+    "qStars": 1,
+    "ev": [
+     "EA-035:smith-obj-eye"
+    ],
+    "quotes": [
+     "M1113@19435: \"Uh, as you study your drugs, be sure you can categorize them of ones that affect inflow or outflow, OK? All right. So, pathophys of glaucoma. So, what is glaucoma? OK.\"",
+     "M1113@60876: \"It's again, memorizing, do they affect inflow, do they affect outflow, and then the pharmacological categories that they affect. Yes. Yeah.\""
+    ],
+    "label": "Inflow vs outflow",
+    "kw": [
+     "inflow",
+     "outflo",
+     "glauco",
+     "drugs",
+     "classi",
+     "catego",
+     "produc",
+     "inhibi",
+     "enhanc",
+     "aqueou",
+     "humor",
+     "affect"
+    ]
+   },
+   "tell-ey-inflow#r6": {
+    "lv": 3,
+    "comb": 1.0,
+    "qStars": 3,
+    "ev": [
+     "EI-029:smith-eye-cue",
+     "EI-028:smith-eye-cue",
+     "EI-031:smith-eye-cue"
+    ],
+    "quotes": [
+     "M1117@18418: \"I need you guys to understand how does this potential for metabolic acidosis occur in these patients, because sometimes you will need to use this drug orally in patients with glaucoma.\"",
+     "M1113@60052: \"And then a side effect of using these, Um, orally, is they can cause some acidosis. So, that's a significant side effect that these medications can cause orally if you take them orally, and, um, needs to be, um, carefully monitored in your patient, OK?\""
+    ],
+    "label": "Carbonic anhydrase inhibitor in the eye vs in the kidney",
+    "kw": [
+     "carbon",
+     "anhydr",
+     "inhibi",
+     "acidos",
+     "metabo",
+     "bicarb",
+     "kidney",
+     "proxim",
+     "tubule",
+     "oral",
+     "acetaz",
+     "methaz",
+     "monito",
+     "diuret"
+    ]
+   },
+   "tell-ey-inflow#r4": {
+    "lv": 2,
+    "comb": 0.614,
+    "qStars": 2,
+    "ev": [
+     "EI-014:smith-eye-cue",
+     "EI-023:smith-eye-cue"
+    ],
+    "quotes": [
+     "M1113@53046: \"Uh, importantly, for apriclonidine, you can get the systemic hypotension, and then that allergic reaction is a significant problem.\""
+    ],
+    "label": "Apraclonidine vs brimonidine",
+    "kw": [
+     "brimon",
+     "alpha",
+     "agonis",
+     "uveosc",
+     "neurop",
+     "optic",
+     "nerve",
+     "apracl",
+     "allerg",
+     "hypote"
+    ]
+   },
+   "tell-ey-outflow#r4": {
+    "lv": 1,
+    "comb": 0.411,
+    "qStars": 1,
+    "ev": [
+     "EO-020:smith-eye-cue"
+    ],
+    "quotes": [],
+    "label": "Prostaglandin agonists vs Rho kinase inhibitor : side effects",
+    "kw": [
+     "prosta",
+     "agonis",
+     "latano",
+     "bimato",
+     "travop",
+     "taflup",
+     "uveosc",
+     "eye",
+     "color",
+     "iris",
+     "darker",
+     "eyelas",
+     "outflo"
+    ]
+   },
+   "tell-ey-allergy#r5": {
+    "lv": 3,
+    "comb": 0.878,
+    "qStars": 3,
+    "ev": [
+     "EL-004:smith-eye-cue",
+     "EL-008:smith-eye-cue",
+     "EL-042:smith-eye-cue"
+    ],
+    "quotes": [
+     "M1117@48555: \"Pay special attention to which ones have mast cell stabilizing properties. Some of them are used for other indications, like azelastine is indicated for allergic rhinitis. Some of them get into the CNS more than others.\""
+    ],
+    "label": "Mast cell stabilization: yes or no",
+    "kw": [
+     "mast",
+     "cell",
+     "stabil",
+     "antihi",
+     "histam",
+     "invers",
+     "agonis",
+     "ketoti",
+     "olopat",
+     "epinas",
+     "azelas",
+     "alcaft",
+     "bepota",
+     "cetiri"
+    ]
+   },
+   "tell-ey-allergy#r4": {
+    "lv": 1,
+    "comb": 0.559,
+    "qStars": 1,
+    "ev": [
+     "EL-008:smith-eye-cue"
+    ],
+    "quotes": [
+     "M1117@48555: \"Pay special attention to which ones have mast cell stabilizing properties. Some of them are used for other indications, like azelastine is indicated for allergic rhinitis. Some of them get into the CNS more than others.\""
+    ],
+    "label": "Epinastine vs cetirizine",
+    "kw": [
+     "mast",
+     "cell",
+     "stabil",
+     "antihi",
+     "histam",
+     "invers",
+     "agonis",
+     "ketoti",
+     "olopat",
+     "epinas",
+     "azelas",
+     "alcaft",
+     "bepota",
+     "cetiri"
+    ]
+   },
+   "tell-ey-dry#r1": {
+    "lv": 2,
+    "comb": 0.74,
+    "qStars": 3,
+    "ev": [
+     "ED-008:smith-eye-room",
+     "ED-009:smith-eye-room",
+     "ED-007:smith-obj-eye"
+    ],
+    "quotes": [
+     "M1117@60741: \"Did you guys see that question before? I know that I was picky on that question. But I did that on purpose, because we'll talk about these drugs again, including FKBP and oncology.\""
+    ],
+    "label": "Cyclosporine vs tacrolimus",
+    "kw": [
+     "cyclos",
+     "cyclop",
+     "tacrol",
+     "fkbp",
+     "calcin",
+     "nfat",
+     "dry",
+     "eye",
+     "inflam",
+     "tear",
+     "produc"
+    ]
    }
   },
   "dzCard": {
@@ -3622,6 +4523,75 @@
      "p8wsel",
      "p8wotc"
     ]
+   },
+   "glaucoma": {
+    "lv": 3,
+    "comb": 1.0,
+    "qStars": 6,
+    "ev": [
+     "EA-035:smith-obj-eye",
+     "EI-039:smith-obj-eye",
+     "EO-046:smith-obj-eye",
+     "EI-029:smith-eye-cue",
+     "EA-021:smith-ex3",
+     "EO-018:smith-eye-cue"
+    ],
+    "quotes": [
+     "M1113@19435: \"Uh, as you study your drugs, be sure you can categorize them of ones that affect inflow or outflow, OK? All right. So, pathophys of glaucoma. So, what is glaucoma? OK.\"",
+     "M1113@60876: \"It's again, memorizing, do they affect inflow, do they affect outflow, and then the pharmacological categories that they affect. Yes. Yeah.\"",
+     "M1117@18418: \"I need you guys to understand how does this potential for metabolic acidosis occur in these patients, because sometimes you will need to use this drug orally in patients with glaucoma.\""
+    ],
+    "kw": [
+     "inflow",
+     "outflo",
+     "glauco",
+     "drugs",
+     "classi",
+     "catego",
+     "produc",
+     "inhibi",
+     "enhanc",
+     "aqueou",
+     "humor",
+     "affect",
+     "acid",
+     "open",
+     "pg"
+    ]
+   },
+   "allergic-conjunctivitis": {
+    "lv": 2,
+    "comb": 0.772,
+    "qStars": 5,
+    "ev": [
+     "EL-004:smith-eye-cue",
+     "EL-008:smith-eye-cue",
+     "EL-042:smith-eye-cue",
+     "EL-006:smith-eye-cue",
+     "EL-018:smith-obj-eye"
+    ],
+    "quotes": [
+     "M1117@48555: \"Pay special attention to which ones have mast cell stabilizing properties. Some of them are used for other indications, like azelastine is indicated for allergic rhinitis. Some of them get into the CNS more than others.\"",
+     "M1117@54654: \"So be sure that you learn all the drugs on the drug list and differentiate between them when I give you those details for the antihistamines.\""
+    ],
+    "kw": [
+     "mast",
+     "cell",
+     "stabil",
+     "antihi",
+     "histam",
+     "invers",
+     "agonis",
+     "ketoti",
+     "olopat",
+     "epinas",
+     "azelas",
+     "alcaft",
+     "bepota",
+     "cetiri",
+     "allerg",
+     "conjun"
+    ]
    }
   },
   "dzTell": {
@@ -3724,6 +4694,63 @@
      "mnemon",
      "cancer",
      "diaper"
+    ]
+   },
+   "eye-inflow-outflow": {
+    "lv": 3,
+    "comb": 0.975,
+    "qStars": 3,
+    "ev": [
+     "EA-035:smith-obj-eye",
+     "EI-039:smith-obj-eye",
+     "EO-046:smith-obj-eye"
+    ],
+    "quotes": [
+     "M1113@19435: \"Uh, as you study your drugs, be sure you can categorize them of ones that affect inflow or outflow, OK? All right. So, pathophys of glaucoma. So, what is glaucoma? OK.\"",
+     "M1113@60876: \"It's again, memorizing, do they affect inflow, do they affect outflow, and then the pharmacological categories that they affect. Yes. Yeah.\""
+    ],
+    "kw": [
+     "inflow",
+     "outflo",
+     "glauco",
+     "drugs",
+     "classi",
+     "catego",
+     "produc",
+     "inhibi",
+     "enhanc",
+     "aqueou",
+     "humor",
+     "affect"
+    ]
+   },
+   "eye-allergy-classes": {
+    "lv": 3,
+    "comb": 0.861,
+    "qStars": 3,
+    "ev": [
+     "EL-004:smith-eye-cue",
+     "EL-008:smith-eye-cue",
+     "EL-042:smith-eye-cue"
+    ],
+    "quotes": [
+     "M1117@48555: \"Pay special attention to which ones have mast cell stabilizing properties. Some of them are used for other indications, like azelastine is indicated for allergic rhinitis. Some of them get into the CNS more than others.\""
+    ],
+    "kw": [
+     "mast",
+     "cell",
+     "stabil",
+     "antihi",
+     "histam",
+     "invers",
+     "agonis",
+     "ketoti",
+     "olopat",
+     "epinas",
+     "azelas",
+     "alcaft",
+     "bepota",
+     "cetiri"
     ]
    }
   },
@@ -3891,6 +4918,87 @@
      "agents"
     ],
     "title": "Anti-TNF or anti-IL: which caution goes with which?"
+   },
+   "pair-29": {
+    "lv": 3,
+    "comb": 0.975,
+    "qStars": 2,
+    "ev": [
+     "EI-031:smith-eye-cue",
+     "EI-028:smith-eye-cue"
+    ],
+    "quotes": [
+     "M1117@18418: \"I need you guys to understand how does this potential for metabolic acidosis occur in these patients, because sometimes you will need to use this drug orally in patients with glaucoma.\"",
+     "M1113@60052: \"And then a side effect of using these, Um, orally, is they can cause some acidosis. So, that's a significant side effect that these medications can cause orally if you take them orally, and, um, needs to be, um, carefully monitored in your patient, OK?\""
+    ],
+    "kw": [
+     "carbon",
+     "anhydr",
+     "inhibi",
+     "acidos",
+     "metabo",
+     "bicarb",
+     "kidney",
+     "proxim",
+     "tubule",
+     "oral",
+     "acetaz",
+     "methaz",
+     "monito",
+     "diuret"
+    ]
+   },
+   "pair-28": {
+    "lv": 2,
+    "comb": 0.655,
+    "qStars": 1,
+    "ev": [
+     "EL-008:smith-eye-cue"
+    ],
+    "quotes": [
+     "M1117@48555: \"Pay special attention to which ones have mast cell stabilizing properties. Some of them are used for other indications, like azelastine is indicated for allergic rhinitis. Some of them get into the CNS more than others.\""
+    ],
+    "kw": [
+     "mast",
+     "cell",
+     "stabil",
+     "antihi",
+     "histam",
+     "invers",
+     "agonis",
+     "ketoti",
+     "olopat",
+     "epinas",
+     "azelas",
+     "alcaft",
+     "bepota",
+     "cetiri"
+    ]
+   },
+   "pair-27": {
+    "lv": 2,
+    "comb": 0.751,
+    "qStars": 2,
+    "ev": [
+     "ED-008:smith-eye-room",
+     "ED-009:smith-eye-room"
+    ],
+    "quotes": [
+     "M1117@60741: \"Did you guys see that question before? I know that I was picky on that question. But I did that on purpose, because we'll talk about these drugs again, including FKBP and oncology.\""
+    ],
+    "kw": [
+     "cyclos",
+     "cyclop",
+     "tacrol",
+     "fkbp",
+     "calcin",
+     "nfat",
+     "dry",
+     "eye",
+     "inflam",
+     "tear",
+     "produc"
+    ]
    }
   },
   "drug": {
@@ -4344,6 +5452,148 @@
      "orenci"
     ],
     "name": "Abatacept"
+   },
+   "cai": {
+    "lv": 3,
+    "comb": 1.0,
+    "qStars": 4,
+    "ev": [
+     "EI-029:smith-eye-cue",
+     "EI-028:smith-eye-cue",
+     "EI-031:smith-eye-cue",
+     "EI-025:smith-obj-eye"
+    ],
+    "quotes": [
+     "M1117@18418: \"I need you guys to understand how does this potential for metabolic acidosis occur in these patients, because sometimes you will need to use this drug orally in patients with glaucoma.\"",
+     "M1113@60052: \"And then a side effect of using these, Um, orally, is they can cause some acidosis. So, that's a significant side effect that these medications can cause orally if you take them orally, and, um, needs to be, um, carefully monitored in your patient, OK?\""
+    ],
+    "name": "cai",
+    "kw": [
+     "carbon",
+     "anhydr",
+     "inhibi",
+     "acidos",
+     "metabo",
+     "bicarb",
+     "kidney",
+     "proxim",
+     "tubule",
+     "oral",
+     "acetaz",
+     "methaz",
+     "monito",
+     "diuret"
+    ]
+   },
+   "ophthalmic-h1": {
+    "lv": 3,
+    "comb": 0.811,
+    "qStars": 3,
+    "ev": [
+     "EL-004:smith-eye-cue",
+     "EL-008:smith-eye-cue",
+     "EL-042:smith-eye-cue"
+    ],
+    "quotes": [
+     "M1117@48555: \"Pay special attention to which ones have mast cell stabilizing properties. Some of them are used for other indications, like azelastine is indicated for allergic rhinitis. Some of them get into the CNS more than others.\""
+    ],
+    "name": "ophthalmic-h1",
+    "kw": [
+     "mast",
+     "cell",
+     "stabil",
+     "antihi",
+     "histam",
+     "invers",
+     "agonis",
+     "ketoti",
+     "olopat",
+     "epinas",
+     "azelas",
+     "alcaft",
+     "bepota",
+     "cetiri"
+    ]
+   },
+   "pg-agonists": {
+    "lv": 2,
+    "comb": 0.655,
+    "qStars": 3,
+    "ev": [
+     "EO-018:smith-eye-cue",
+     "EO-020:smith-eye-cue",
+     "EO-017:smith-ex3"
+    ],
+    "quotes": [],
+    "name": "pg-agonists",
+    "kw": [
+     "prosta",
+     "agonis",
+     "latano",
+     "bimato",
+     "travop",
+     "taflup",
+     "uveosc",
+     "eye",
+     "color",
+     "iris",
+     "darker",
+     "eyelas",
+     "outflo"
+    ]
+   },
+   "brimonidine": {
+    "lv": 1,
+    "comb": 0.575,
+    "qStars": 2,
+    "ev": [
+     "EI-014:smith-eye-cue",
+     "EI-023:smith-eye-cue"
+    ],
+    "quotes": [
+     "M1113@53046: \"Uh, importantly, for apriclonidine, you can get the systemic hypotension, and then that allergic reaction is a significant problem.\""
+    ],
+    "name": "brimonidine",
+    "kw": [
+     "brimon",
+     "alpha",
+     "agonis",
+     "uveosc",
+     "neurop",
+     "optic",
+     "nerve",
+     "apracl",
+     "allerg",
+     "hypote"
+    ]
+   },
+   "cetirizine-eye": {
+    "lv": 1,
+    "comb": 0.537,
+    "qStars": 1,
+    "ev": [
+     "EL-008:smith-eye-cue"
+    ],
+    "quotes": [
+     "M1117@48555: \"Pay special attention to which ones have mast cell stabilizing properties. Some of them are used for other indications, like azelastine is indicated for allergic rhinitis. Some of them get into the CNS more than others.\""
+    ],
+    "name": "cetirizine-eye",
+    "kw": [
+     "mast",
+     "cell",
+     "stabil",
+     "antihi",
+     "histam",
+     "invers",
+     "agonis",
+     "ketoti",
+     "olopat",
+     "epinas",
+     "azelas",
+     "alcaft",
+     "bepota",
+     "cetiri"
+    ]
    }
   },
   "gloss": {
@@ -6665,6 +7915,800 @@
     "term": "lactone",
     "kw": [
      "lacton"
+    ]
+   },
+   "ey-inflow": {
+    "lv": 3,
+    "comb": 0.83,
+    "qStars": 2,
+    "ev": [
+     "EA-035:smith-obj-eye",
+     "EI-039:smith-obj-eye"
+    ],
+    "quotes": [
+     "M1113@19435: \"Uh, as you study your drugs, be sure you can categorize them of ones that affect inflow or outflow, OK? All right. So, pathophys of glaucoma. So, what is glaucoma? OK.\"",
+     "M1113@60876: \"It's again, memorizing, do they affect inflow, do they affect outflow, and then the pharmacological categories that they affect. Yes. Yeah.\""
+    ],
+    "term": "inflow",
+    "kw": [
+     "inflow",
+     "outflo",
+     "glauco",
+     "drugs",
+     "classi",
+     "catego",
+     "produc",
+     "inhibi",
+     "enhanc",
+     "aqueou",
+     "humor",
+     "affect"
+    ]
+   },
+   "ey-outflow": {
+    "lv": 3,
+    "comb": 0.827,
+    "qStars": 2,
+    "ev": [
+     "EA-035:smith-obj-eye",
+     "EO-046:smith-obj-eye"
+    ],
+    "quotes": [
+     "M1113@19435: \"Uh, as you study your drugs, be sure you can categorize them of ones that affect inflow or outflow, OK? All right. So, pathophys of glaucoma. So, what is glaucoma? OK.\"",
+     "M1113@60876: \"It's again, memorizing, do they affect inflow, do they affect outflow, and then the pharmacological categories that they affect. Yes. Yeah.\""
+    ],
+    "term": "outflow",
+    "kw": [
+     "outflo",
+     "inflow",
+     "glauco",
+     "drugs",
+     "classi",
+     "catego",
+     "produc",
+     "inhibi",
+     "enhanc",
+     "aqueou",
+     "humor",
+     "affect"
+    ]
+   },
+   "ey-production-inhibitors": {
+    "lv": 2,
+    "comb": 0.613,
+    "qStars": 1,
+    "ev": [
+     "EI-039:smith-obj-eye"
+    ],
+    "quotes": [
+     "M1113@19435: \"Uh, as you study your drugs, be sure you can categorize them of ones that affect inflow or outflow, OK? All right. So, pathophys of glaucoma. So, what is glaucoma? OK.\"",
+     "M1113@60876: \"It's again, memorizing, do they affect inflow, do they affect outflow, and then the pharmacological categories that they affect. Yes. Yeah.\""
+    ],
+    "term": "production inhibitors",
+    "kw": [
+     "produc",
+     "inhibi",
+     "inflow",
+     "outflo",
+     "glauco",
+     "drugs",
+     "classi",
+     "catego",
+     "enhanc",
+     "aqueou",
+     "humor",
+     "affect"
+    ]
+   },
+   "ey-outflow-enhancers": {
+    "lv": 2,
+    "comb": 0.61,
+    "qStars": 1,
+    "ev": [
+     "EO-046:smith-obj-eye"
+    ],
+    "quotes": [
+     "M1113@19435: \"Uh, as you study your drugs, be sure you can categorize them of ones that affect inflow or outflow, OK? All right. So, pathophys of glaucoma. So, what is glaucoma? OK.\"",
+     "M1113@60876: \"It's again, memorizing, do they affect inflow, do they affect outflow, and then the pharmacological categories that they affect. Yes. Yeah.\""
+    ],
+    "term": "outflow enhancers",
+    "kw": [
+     "outflo",
+     "enhanc",
+     "inflow",
+     "glauco",
+     "drugs",
+     "classi",
+     "catego",
+     "produc",
+     "inhibi",
+     "aqueou",
+     "humor",
+     "affect"
+    ]
+   },
+   "ey-angle": {
+    "lv": 2,
+    "comb": 0.654,
+    "qStars": 2,
+    "ev": [
+     "EA-021:smith-ex3",
+     "EA-022:smith-ex3"
+    ],
+    "quotes": [
+     "M1113@61120: \"So focus on pathophys and then focus on mechanisms. \""
+    ],
+    "term": "angle",
+    "kw": [
+     "angle",
+     "open",
+     "closur",
+     "glauco",
+     "pressu",
+     "emerge",
+     "pain",
+     "optic",
+     "nerve",
+     "intrao",
+     "draina",
+     "pathop",
+     "pathol",
+     "mechan",
+     "diseas"
+    ]
+   },
+   "ey-poag": {
+    "lv": 1,
+    "comb": 0.55,
+    "qStars": 1,
+    "ev": [
+     "EA-022:smith-ex3"
+    ],
+    "quotes": [],
+    "term": "primary open-angle glaucoma",
+    "kw": [
+     "primar",
+     "open",
+     "angle",
+     "glauco",
+     "closur",
+     "pressu",
+     "emerge",
+     "pain",
+     "optic",
+     "nerve",
+     "intrao",
+     "draina",
+     "pathop",
+     "pathol",
+     "mechan",
+     "diseas"
+    ]
+   },
+   "ey-pacg": {
+    "lv": 2,
+    "comb": 0.613,
+    "qStars": 2,
+    "ev": [
+     "EA-021:smith-ex3",
+     "EA-029:smith-ex3"
+    ],
+    "quotes": [
+     "M1113@61120: \"So focus on pathophys and then focus on mechanisms. \""
+    ],
+    "term": "primary angle-closure glaucoma",
+    "kw": [
+     "primar",
+     "angle",
+     "closur",
+     "glauco",
+     "open",
+     "pressu",
+     "emerge",
+     "pain",
+     "optic",
+     "nerve",
+     "intrao",
+     "draina",
+     "pathop",
+     "pathol",
+     "mechan",
+     "diseas"
+    ]
+   },
+   "ey-trabecular-meshwork": {
+    "lv": 2,
+    "comb": 0.629,
+    "qStars": 2,
+    "ev": [
+     "EA-036:smith-eye-cue",
+     "EO-001:smith-ex3"
+    ],
+    "quotes": [
+     "M1113@32669: \"With that in mind, the most important outflow route is through that trabecular meshwork and Schlem's canal. Most of the liquid can get through that canal because it's like made, you know, it's like a canal, OK.\""
+    ],
+    "term": "trabecular meshwork",
+    "kw": [
+     "trabec",
+     "meshwo",
+     "aqueou",
+     "humor",
+     "schlem",
+     "canal",
+     "uveosc",
+     "outflo",
+     "route",
+     "draina",
+     "poster",
+     "anteri",
+     "chambe"
+    ]
+   },
+   "ey-uveoscleral-outflow": {
+    "lv": 1,
+    "comb": 0.546,
+    "qStars": 2,
+    "ev": [
+     "EA-037:smith-eye-cue",
+     "EO-018:smith-eye-cue"
+    ],
+    "quotes": [
+     "M1113@32669: \"With that in mind, the most important outflow route is through that trabecular meshwork and Schlem's canal. Most of the liquid can get through that canal because it's like made, you know, it's like a canal, OK.\""
+    ],
+    "term": "uveoscleral outflow",
+    "kw": [
+     "uveosc",
+     "outflo",
+     "aqueou",
+     "humor",
+     "trabec",
+     "meshwo",
+     "schlem",
+     "canal",
+     "route",
+     "draina",
+     "poster",
+     "anteri",
+     "chambe"
+    ]
+   },
+   "ey-aqueous-humor": {
+    "lv": 2,
+    "comb": 0.613,
+    "qStars": 2,
+    "ev": [
+     "EA-031:smith-ex3",
+     "EA-034:smith-ex3"
+    ],
+    "quotes": [
+     "M1113@32669: \"With that in mind, the most important outflow route is through that trabecular meshwork and Schlem's canal. Most of the liquid can get through that canal because it's like made, you know, it's like a canal, OK.\""
+    ],
+    "term": "aqueous humor",
+    "kw": [
+     "aqueou",
+     "humor",
+     "trabec",
+     "meshwo",
+     "schlem",
+     "canal",
+     "uveosc",
+     "outflo",
+     "route",
+     "draina",
+     "poster",
+     "anteri",
+     "chambe"
+    ]
+   },
+   "ey-iop": {
+    "lv": 1,
+    "comb": 0.391,
+    "qStars": 1,
+    "ev": [
+     "EA-034:smith-ex3"
+    ],
+    "quotes": [],
+    "term": "intraocular pressure",
+    "kw": [
+     "intrao",
+     "pressu",
+     "open",
+     "angle",
+     "closur",
+     "glauco",
+     "emerge",
+     "pain",
+     "optic",
+     "nerve",
+     "draina",
+     "pathop",
+     "pathol",
+     "mechan",
+     "diseas"
+    ]
+   },
+   "ey-carbonic-anhydrase": {
+    "lv": 2,
+    "comb": 0.601,
+    "qStars": 2,
+    "ev": [
+     "EI-025:smith-obj-eye",
+     "EA-045:smith-obj-eye"
+    ],
+    "quotes": [
+     "M1117@18418: \"I need you guys to understand how does this potential for metabolic acidosis occur in these patients, because sometimes you will need to use this drug orally in patients with glaucoma.\""
+    ],
+    "term": "carbonic anhydrase",
+    "kw": [
+     "carbon",
+     "anhydr",
+     "inhibi",
+     "acidos",
+     "metabo",
+     "bicarb",
+     "kidney",
+     "proxim",
+     "tubule",
+     "oral",
+     "acetaz",
+     "methaz",
+     "monito",
+     "diuret"
+    ]
+   },
+   "ey-metabolic-acidosis": {
+    "lv": 3,
+    "comb": 1.0,
+    "qStars": 3,
+    "ev": [
+     "EI-029:smith-eye-cue",
+     "EI-028:smith-eye-cue",
+     "EI-031:smith-eye-cue"
+    ],
+    "quotes": [
+     "M1117@18418: \"I need you guys to understand how does this potential for metabolic acidosis occur in these patients, because sometimes you will need to use this drug orally in patients with glaucoma.\"",
+     "M1113@60052: \"And then a side effect of using these, Um, orally, is they can cause some acidosis. So, that's a significant side effect that these medications can cause orally if you take them orally, and, um, needs to be, um, carefully monitored in your patient, OK?\""
+    ],
+    "term": "metabolic acidosis",
+    "kw": [
+     "metabo",
+     "acidos",
+     "carbon",
+     "anhydr",
+     "inhibi",
+     "bicarb",
+     "kidney",
+     "proxim",
+     "tubule",
+     "oral",
+     "acetaz",
+     "methaz",
+     "monito",
+     "diuret"
+    ]
+   },
+   "ey-proximal-convoluted-tubule": {
+    "lv": 1,
+    "comb": 0.598,
+    "qStars": 1,
+    "ev": [
+     "EI-029:smith-eye-cue"
+    ],
+    "quotes": [
+     "M1117@18418: \"I need you guys to understand how does this potential for metabolic acidosis occur in these patients, because sometimes you will need to use this drug orally in patients with glaucoma.\""
+    ],
+    "term": "proximal convoluted tubule",
+    "kw": [
+     "proxim",
+     "convol",
+     "tubule",
+     "carbon",
+     "anhydr",
+     "inhibi",
+     "acidos",
+     "metabo",
+     "bicarb",
+     "kidney",
+     "oral",
+     "acetaz",
+     "methaz",
+     "monito",
+     "diuret"
+    ]
+   },
+   "ey-cai": {
+    "lv": 2,
+    "comb": 0.662,
+    "qStars": 2,
+    "ev": [
+     "EI-039:smith-obj-eye",
+     "EI-025:smith-obj-eye"
+    ],
+    "quotes": [
+     "M1117@18418: \"I need you guys to understand how does this potential for metabolic acidosis occur in these patients, because sometimes you will need to use this drug orally in patients with glaucoma.\""
+    ],
+    "term": "carbonic anhydrase inhibitors",
+    "kw": [
+     "carbon",
+     "anhydr",
+     "inhibi",
+     "acidos",
+     "metabo",
+     "bicarb",
+     "kidney",
+     "proxim",
+     "tubule",
+     "oral",
+     "acetaz",
+     "methaz",
+     "monito",
+     "diuret"
+    ]
+   },
+   "ey-mast-cell-stabilization": {
+    "lv": 2,
+    "comb": 0.768,
+    "qStars": 2,
+    "ev": [
+     "EL-004:smith-eye-cue",
+     "EL-042:smith-eye-cue"
+    ],
+    "quotes": [
+     "M1117@48555: \"Pay special attention to which ones have mast cell stabilizing properties. Some of them are used for other indications, like azelastine is indicated for allergic rhinitis. Some of them get into the CNS more than others.\""
+    ],
+    "term": "mast cell stabilization",
+    "kw": [
+     "mast",
+     "cell",
+     "stabil",
+     "antihi",
+     "histam",
+     "invers",
+     "agonis",
+     "ketoti",
+     "olopat",
+     "epinas",
+     "azelas",
+     "alcaft",
+     "bepota",
+     "cetiri"
+    ]
+   },
+   "ey-inverse-agonist": {
+    "lv": 1,
+    "comb": 0.487,
+    "qStars": 1,
+    "ev": [
+     "EL-004:smith-eye-cue"
+    ],
+    "quotes": [
+     "M1117@48555: \"Pay special attention to which ones have mast cell stabilizing properties. Some of them are used for other indications, like azelastine is indicated for allergic rhinitis. Some of them get into the CNS more than others.\""
+    ],
+    "term": "inverse agonist",
+    "kw": [
+     "invers",
+     "agonis",
+     "mast",
+     "cell",
+     "stabil",
+     "antihi",
+     "histam",
+     "ketoti",
+     "olopat",
+     "epinas",
+     "azelas",
+     "alcaft",
+     "bepota",
+     "cetiri"
+    ]
+   },
+   "ey-cetirizine": {
+    "lv": 1,
+    "comb": 0.584,
+    "qStars": 1,
+    "ev": [
+     "EL-008:smith-eye-cue"
+    ],
+    "quotes": [
+     "M1117@48555: \"Pay special attention to which ones have mast cell stabilizing properties. Some of them are used for other indications, like azelastine is indicated for allergic rhinitis. Some of them get into the CNS more than others.\""
+    ],
+    "term": "cetirizine",
+    "kw": [
+     "cetiri",
+     "mast",
+     "cell",
+     "stabil",
+     "antihi",
+     "histam",
+     "invers",
+     "agonis",
+     "ketoti",
+     "olopat",
+     "epinas",
+     "azelas",
+     "alcaft",
+     "bepota"
+    ]
+   },
+   "ey-h1-inverse-agonists": {
+    "lv": 2,
+    "comb": 0.672,
+    "qStars": 2,
+    "ev": [
+     "EL-004:smith-eye-cue",
+     "EL-008:smith-eye-cue"
+    ],
+    "quotes": [
+     "M1117@48555: \"Pay special attention to which ones have mast cell stabilizing properties. Some of them are used for other indications, like azelastine is indicated for allergic rhinitis. Some of them get into the CNS more than others.\""
+    ],
+    "term": "H1 inverse agonists",
+    "kw": [
+     "h1",
+     "invers",
+     "agonis",
+     "mast",
+     "cell",
+     "stabil",
+     "antihi",
+     "histam",
+     "ketoti",
+     "olopat",
+     "epinas",
+     "azelas",
+     "alcaft",
+     "bepota",
+     "cetiri"
+    ]
+   },
+   "ey-iris-pigmentation": {
+    "lv": 1,
+    "comb": 0.536,
+    "qStars": 1,
+    "ev": [
+     "EO-020:smith-eye-cue"
+    ],
+    "quotes": [],
+    "term": "increased brown pigmentation of the iris",
+    "kw": [
+     "increa",
+     "brown",
+     "pigmen",
+     "of",
+     "the",
+     "iris",
+     "prosta",
+     "agonis",
+     "latano",
+     "bimato",
+     "travop",
+     "taflup",
+     "uveosc",
+     "eye",
+     "color",
+     "darker",
+     "eyelas",
+     "outflo"
+    ]
+   },
+   "ey-prostaglandin-agonists": {
+    "lv": 2,
+    "comb": 0.705,
+    "qStars": 3,
+    "ev": [
+     "EO-018:smith-eye-cue",
+     "EO-020:smith-eye-cue",
+     "EO-017:smith-ex3"
+    ],
+    "quotes": [],
+    "term": "prostaglandin agonists",
+    "kw": [
+     "prosta",
+     "agonis",
+     "latano",
+     "bimato",
+     "travop",
+     "taflup",
+     "uveosc",
+     "eye",
+     "color",
+     "iris",
+     "darker",
+     "eyelas",
+     "outflo"
+    ]
+   },
+   "ey-pgf2a-receptor": {
+    "lv": 1,
+    "comb": 0.415,
+    "qStars": 1,
+    "ev": [
+     "EO-018:smith-eye-cue"
+    ],
+    "quotes": [],
+    "term": "PGF2α receptor",
+    "kw": [
+     "pgf2",
+     "recept",
+     "prosta",
+     "agonis",
+     "latano",
+     "bimato",
+     "travop",
+     "taflup",
+     "uveosc",
+     "eye",
+     "color",
+     "iris",
+     "darker",
+     "eyelas",
+     "outflo"
+    ]
+   },
+   "ey-cyclosporine": {
+    "lv": 2,
+    "comb": 0.74,
+    "qStars": 3,
+    "ev": [
+     "ED-007:smith-obj-eye",
+     "ED-008:smith-eye-room",
+     "ED-009:smith-eye-room"
+    ],
+    "quotes": [
+     "M1117@60741: \"Did you guys see that question before? I know that I was picky on that question. But I did that on purpose, because we'll talk about these drugs again, including FKBP and oncology.\""
+    ],
+    "term": "cyclosporine",
+    "kw": [
+     "cyclos",
+     "cyclop",
+     "tacrol",
+     "fkbp",
+     "calcin",
+     "nfat",
+     "dry",
+     "eye",
+     "inflam",
+     "tear",
+     "produc"
+    ]
+   },
+   "ey-neuroprotective": {
+    "lv": 1,
+    "comb": 0.521,
+    "qStars": 1,
+    "ev": [
+     "EI-014:smith-eye-cue"
+    ],
+    "quotes": [],
+    "term": "neuroprotective",
+    "kw": [
+     "neurop",
+     "brimon",
+     "alpha",
+     "agonis",
+     "uveosc",
+     "optic",
+     "nerve",
+     "apracl",
+     "allerg",
+     "hypote"
+    ]
+   },
+   "ey-brimonidine": {
+    "lv": 1,
+    "comb": 0.471,
+    "qStars": 1,
+    "ev": [
+     "EI-014:smith-eye-cue"
+    ],
+    "quotes": [],
+    "term": "brimonidine",
+    "kw": [
+     "brimon",
+     "alpha",
+     "agonis",
+     "uveosc",
+     "neurop",
+     "optic",
+     "nerve",
+     "apracl",
+     "allerg",
+     "hypote"
+    ]
+   },
+   "ey-conjunctival-hemorrhage": {
+    "lv": 1,
+    "comb": 0.442,
+    "qStars": 1,
+    "ev": [
+     "EO-033:smith-ex3"
+    ],
+    "quotes": [
+     "M1117@37328: \"But, um, conjunctival hemorrhage is always a little scary when you look in the mirror. So, uh, the rokinase inhibitors, uh, I think they're quite effective.\""
+    ],
+    "term": "conjunctival hemorrhage",
+    "kw": [
+     "conjun",
+     "hemorr",
+     "netars",
+     "rho",
+     "kinase",
+     "bloods",
+     "advers"
+    ]
+   },
+   "ey-ciliary-muscle-spasm": {
+    "lv": 1,
+    "comb": 0.243,
+    "qStars": 1,
+    "ev": [
+     "EO-009:smith-obj-eye"
+    ],
+    "quotes": [],
+    "term": "painful ciliary muscle spasm",
+    "kw": [
+     "painfu",
+     "ciliar",
+     "muscle",
+     "spasm",
+     "compre",
+     "eyelid",
+     "corner",
+     "lacrim",
+     "draina",
+     "absorp",
+     "counse",
+     "nasola",
+     "system"
+    ]
+   },
+   "ey-bronchospasm": {
+    "lv": 1,
+    "comb": 0.295,
+    "qStars": 1,
+    "ev": [
+     "EI-003:smith-ex3"
+    ],
+    "quotes": [],
+    "term": "bronchospasm",
+    "kw": [
+     "bronch",
+     "compre",
+     "eyelid",
+     "corner",
+     "lacrim",
+     "draina",
+     "absorp",
+     "counse",
+     "nasola",
+     "system"
+    ]
+   },
+   "ey-m3-agonists": {
+    "lv": 1,
+    "comb": 0.329,
+    "qStars": 2,
+    "ev": [
+     "EO-001:smith-ex3",
+     "EO-009:smith-obj-eye"
+    ],
+    "quotes": [],
+    "term": "M3 agonists",
+    "kw": [
+     "m3",
+     "agonis",
+     "aqueou",
+     "humor",
+     "trabec",
+     "meshwo",
+     "schlem",
+     "canal",
+     "uveosc",
+     "outflo",
+     "route",
+     "draina",
+     "poster",
+     "anteri",
+     "chambe"
     ]
    }
   }
