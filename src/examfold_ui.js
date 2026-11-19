@@ -170,6 +170,9 @@ const EXAMFOLD_UI = (function examFoldUi(){
       cnt += pn.querySelectorAll('[data-dg]').length; box.appendChild(pn);
     });
     close();
+    // the key's exam lists in the folders' order (newest exam first)
+    const boxes = [...pane.querySelectorAll(':scope > details.dgkey')];
+    boxes.forEach(bx => head.after(bx));
   }
   const TABS = {
     guide: {start: 'h2.gdeck[id]', exam: el => deckExam(el.id),
@@ -320,6 +323,7 @@ const EXAMFOLD_UI = (function examFoldUi(){
     });
     (T.extra ? T.extra(runs.map(r => r.exam)) : []).forEach(x => runs.push({exam: x.exam, els: [x.el]}));
     const nums = [...new Set(runs.map(r => r.exam))].sort((a, b) => a - b);
+    if (view === 'diagrams') nums.reverse();   // Diagrams: the newest exam's folder first (its key is ordered the same way)
     addCss();
     const was = BACK && BACK.view === view ? BACK.open : SAME && SAME.view === view ? SAME.open : null;
     const want = WANT ? document.getElementById(WANT) : null;
