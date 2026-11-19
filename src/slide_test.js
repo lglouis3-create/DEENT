@@ -524,16 +524,17 @@ const onDisk = (deck, n, printed) => { const r = P.resolve(deck, n, printed); re
         const c = document.createElement('div'); c.className = 'tlcard'; c.dataset.tlq = 'P8C-008'; c.innerHTML = '<button type="button" data-jump="ref:ref-p8-wcc">x</button>'; document.body.appendChild(c); c.querySelector('button').click(); c.remove();
         await new Promise(r => setTimeout(r, 700));
         const marks = [...document.querySelectorAll('#v-ref mark.jmark')];
-        const wart = marks.filter(m => m.textContent === 'Warts' && m.nextSibling && /^\s*\($/.test(m.nextSibling.textContent || ''))[0];
-        const next = wart && wart.nextSibling && wart.nextSibling.nextSibling;
+        // since 2026-11-19 the warts line is a table row ("Warts | HPV, limited to the epidermis | 4"): the highlighted word's row keeps its slide link
+        const wart = marks.filter(m => m.textContent === 'Warts' && m.closest('tr'))[0];
+        const next = wart && wart.closest('tr').querySelector('.slk');
         const out = {plain, during: count(), marks: marks.length, after: wart ? {tag: next && next.className, text: next && next.textContent, deck: next && next.getAttribute && next.getAttribute('data-deck'), n: next && next.getAttribute && next.getAttribute('data-n')} : null};
         if (window.JUMP_UI && JUMP_UI.clear) JUMP_UI.clear();
         await new Promise(r => setTimeout(r, 400));
         out.cleared = count(); out.marksLeft = document.querySelectorAll('#v-ref mark.jmark').length;
         return out;
       });
-      check(hl.marks > 0 && !!hl.after && hl.after.tag === 'slk' && hl.after.text === 'slide 4' && hl.after.deck === 'p8c' && hl.after.n === '4' && hl.during === hl.plain && hl.cleared === hl.plain && !hl.marksLeft,
-        `after "Explain more" from P8C-008, "Warts (slide 4)" with Warts highlighted has its link (slide 4, Dr. Patel's Warts deck); Reference has ${hl.plain} links with the highlight on and after it is cleared`, hl);
+      check(hl.marks > 0 && !!hl.after && hl.after.tag === 'slk' && /^(slide )?4$/.test(hl.after.text) && hl.after.deck === 'p8c' && hl.after.n === '4' && hl.during === hl.plain && hl.cleared === hl.plain && !hl.marksLeft,
+        `after "Explain more" from P8C-008, the highlighted "Warts" row keeps its slide 4 link (slide 4, Dr. Patel's Warts deck); Reference has ${hl.plain} links with the highlight on and after it is cleared`, hl);
 
       /* ---- Weak spots: the missed list's source line and the review plan take the question's own deck ---- */
       const gaps = await page.evaluate(async () => {

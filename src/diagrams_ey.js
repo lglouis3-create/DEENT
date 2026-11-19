@@ -120,7 +120,7 @@ const DIAGRAMS_EY = (() => {
       ['Drugs that decrease inflow act on the ciliary body: β-blockers, α2 agonists and carbonic anhydrase inhibitors (slides 16, 18, 22, 26; 11/13 T@39934).', s3],
       ['Trabecular outflow up: M3 agonists and echothiophate contract the meshwork; netarsudil makes it less stiff (slides 32, 34, 41; 11/17 T@24556).', s4],
       ['Uveoscleral outflow rises: PG agonists relax the ciliary muscle (also some trabecular); brimonidine adds some (slides 22, 37; 11/17 T@31096).', s5],
-    ], 414, 'Drawn after Smith_Eye_Glaucoma_AllergicConj_DryEye.pdf slides 14–16, 18, 22, 26, 32, 34, 37 and 41 (Dr. Smith); lectures 11/13, ' +
+    ], 414, 'Drawn after Dr. Smith’s Smith_Eye_Glaucoma_AllergicConj_DryEye.pdf slides 14–16, 18, 22, 26, 32, 34, 37 and 41; lectures 11/13, ' +
       'T@19333 and T@28180 (inflow is production, outflow is drainage), T@43883–@60121, and 11/17, T@23400–@36600. β-blockers: “not much effect on ' +
       'outflow; MOA not fully understood” (slide 18). PG agonists “do not affect aqueous humor production” (slide 37). Netarsudil inhibits Rho kinase: less ' +
       'contractile tone and fewer fibrosis-related protein deposits in the meshwork, and a change in the permeability of the cells lining Schlemm’s canal (slide 41).');
