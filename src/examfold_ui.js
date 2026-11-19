@@ -127,11 +127,11 @@ const EXAMFOLD_UI = (function examFoldUi(){
   }
   /* the Diagrams tab (Louis, 2026-11-19: "categorize the diagrams in the exam folders as well. But a key above that allows
      the user to go to the diagram concept"): a group's exam comes from its figures' keys (ey-/oo- Exam 3; p5-p8 Exam 2;
-     else Exam 1). The sunblock/sunscreen figure is drawn from both Dr. Smith's (Exam 1) and Dr. Patel's (Exam 2) slides:
-     it sits in Exam 1 and the Exam 2 folder holds a link to it. The key stays above the folders, one block per exam. */
+     else Exam 1). ALSO lets another exam's folder link to a figure drawn in an earlier
+     folder. The key stays above the folders, one block per exam. */
   const diaGroups = () => { try { return typeof DIA_LIST === 'function' ? DIA_LIST() : (typeof DIAGRAMS !== 'undefined' ? DIAGRAMS : []); } catch (e) { return []; } };
   const groupExam = keys => keys.some(k => /^(ey|oo)-/.test(k)) ? 3 : keys.some(k => /^(p5|p6|p7|p8)/.test(k)) ? 2 : 1;
-  const ALSO = {'fig-block-vs-screen': 2};
+  const ALSO = {};   // figure key -> another exam whose folder links to it (none at present)
   function diaExtra(have){
     const out = [];
     Object.keys(ALSO).forEach(k => {
