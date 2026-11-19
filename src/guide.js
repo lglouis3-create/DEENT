@@ -5054,7 +5054,7 @@ const GUIDE_HTML = `
 <h3>Dr. Smith, slide by slide &middot; Prostaglandin agonists: examples and side effects &middot; slides 38&ndash;39</h3>
 <div class="gbar"><span>What the lecture adds (Eye 38&ndash;39)</span><b>One example adds nitric oxide, and the pigment and lash effects are what set this class apart</b><i>Eye slide 38, 39</i></div>
 <div class="gpt g2-block"><h5>Prostaglandin agonist examples, latanoprostene bunod (Eye slide 38)</h5>
-<p>The slide lists bimatoprost, latanoprost, latanoprostene bunod, travoprost and tafluprost (the drug chart spells travoprost; slide 38 prints "Travaprost"). The lecture adds that latanoprostene bunod does more than act at the prostaglandin receptor. When it is metabolized, it releases nitric oxide, which dilates blood vessels, and she said this adds to its mechanism of action. She said the drugs in the class are very similar; their structures: OOO slides 44&ndash;46 (Dr. Sikazwe).</p>
+<p>The slide lists bimatoprost, latanoprost, latanoprostene bunod, travoprost and tafluprost (the drug chart spells travoprost; slide 38 prints "Travaprost"). The lecture adds that latanoprostene bunod does more than act at the prostaglandin receptor. When it is metabolized, it releases nitric oxide, which dilates blood vessels, and she said this adds to its mechanism of action. She called it one of the newest in the class (11/17 T@32630) and said the drugs in the class are very similar; their structures: OOO slides 44&ndash;46 (Dr. Sikazwe).</p>
 <div class='g2-said'><span class='g2-k'>She said</span>
 <p>&ldquo;it will be a donator of nitric oxide&rdquo; <span class='g2-src'>11/17 T@33151</span></p>
 </div>
