@@ -125,6 +125,52 @@ const EXAMFOLD_UI = (function examFoldUi(){
       (pairs ? row('dz:', 'pairs', 'Drugs that get confused: ' + plural(pairs, 'pair')) : '') + '</ul>';
     return el;
   }
+  /* the Diagrams tab (Louis, 2026-11-19: "categorize the diagrams in the exam folders as well. But a key above that allows
+     the user to go to the diagram concept"): a group's exam comes from its figures' keys (ey-/oo- Exam 3; p5-p8 Exam 2;
+     else Exam 1). The sunblock/sunscreen figure is drawn from both Dr. Smith's (Exam 1) and Dr. Patel's (Exam 2) slides:
+     it sits in Exam 1 and the Exam 2 folder holds a link to it. The key stays above the folders, one block per exam. */
+  const diaGroups = () => { try { return typeof DIA_LIST === 'function' ? DIA_LIST() : (typeof DIAGRAMS !== 'undefined' ? DIAGRAMS : []); } catch (e) { return []; } };
+  const groupExam = keys => keys.some(k => /^(ey|oo)-/.test(k)) ? 3 : keys.some(k => /^(p5|p6|p7|p8)/.test(k)) ? 2 : 1;
+  const ALSO = {'fig-block-vs-screen': 2};
+  function diaExtra(have){
+    const out = [];
+    Object.keys(ALSO).forEach(k => {
+      const n = ALSO[k], el0 = document.getElementById('dg-' + k); if (!el0) return;
+      const nm = (typeof DIA_NAMES !== 'undefined' && DIA_NAMES[k]) || k;
+      const el = document.createElement('div'); el.className = 'rfdz'; el.id = 'dg-also-' + n + '-' + k;
+      el.innerHTML = '<p class="rfdzlab">Also for this exam (drawn in the Exam 1 folder)</p><ul role="list"><li><a href="#dg-' + esc(k) + '" data-dg="' + esc(k) + '">' + esc(nm) + '</a></li></ul>';
+      el.querySelector('a').onclick = e => { e.preventDefault(); scrollToEl(document.getElementById('dg-' + k)); };
+      out.push({exam: n, el});
+    });
+    const a = activeN();
+    if (a != null && !have.includes(a) && !out.some(x => x.exam === a)) {
+      const el = document.createElement('p'); el.className = 'sub'; el.id = 'dg-none-' + a;
+      el.textContent = 'No drawn diagrams for the Exam ' + a + ' lectures yet.';
+      out.push({exam: a, el});
+    }
+    return out;
+  }
+  function diaKey(pane){
+    const groups = diaGroups(), panels = [...pane.querySelectorAll(':scope > .panel')];
+    if (!panels.length || panels.length !== groups.length) return;
+    const head = document.createElement('h3'); head.className = 'dgkeyh'; head.textContent = 'Jump to a diagram';
+    panels[0].before(head);
+    // one closed list per exam (the active exam's open), so the folders below stay in view on a phone
+    let box = null, last = null, cnt = 0;
+    const close = () => { if (box) box.querySelector('summary small').textContent = ' · ' + plural(cnt, 'diagram'); };
+    panels.forEach((pn, i) => {
+      const n = groupExam(groups[i][1]);
+      if (n !== last) {
+        close(); cnt = 0;
+        const f = document.getElementById('rfold-diagrams-' + n);
+        box = document.createElement('details'); box.className = 'dgkey'; box.open = n === activeN();
+        box.innerHTML = '<summary><b>' + esc(f ? f.dataset.title : 'Exam ' + n) + '</b><small></small></summary>';
+        pn.before(box); last = n;
+      }
+      cnt += pn.querySelectorAll('[data-dg]').length; box.appendChild(pn);
+    });
+    close();
+  }
   const TABS = {
     guide: {start: 'h2.gdeck[id]', exam: el => deckExam(el.id),
             count: b => plural(direct(b, 'h2.gdeck'), 'lecture deck') + ' · ' + plural(direct(b, 'section.gobj'), 'section')},
@@ -133,6 +179,9 @@ const EXAMFOLD_UI = (function examFoldUi(){
             count: b => { const s = direct(b, 'h3'), d = b.querySelectorAll('.rfdz [data-rfdz="tell"]').length;
               return s || !d ? plural(s, 'section') : plural(d, 'comparison') + ' in the Diseases tab'; }},
     ref:   {start: 'h3[id]', exam: el => SECTION_EXAM.ref[el.id] || null, count: b => plural(direct(b, 'h3'), 'section')},
+    diagrams: {start: 'h3[id^="dgg-"]', exam: el => { const g = diaGroups()[+el.id.slice(4)]; return g ? groupExam(g[1]) : null; },
+            extra: have => diaExtra(have),
+            count: b => { const n = b.querySelectorAll('[id^="dg-"]:not([id^="dg-also"]):not([id^="dg-none"])').length; const l = b.querySelectorAll('[id^="dg-also"] a').length; return n ? plural(n, 'diagram') : l ? plural(l, 'diagram') + ' in the Exam 1 folder' : 'none drawn yet'; }},
   };
 
   /* ---------- the reader's own open and close, this device only ---------- */
@@ -159,6 +208,7 @@ const EXAMFOLD_UI = (function examFoldUi(){
 
   const CSS = `
 .rfold{margin:16px 0 0}
+.dgkeyh{margin:14px 0 4px}.dgkey{margin:8px 0}.dgkey>summary{cursor:pointer;min-height:44px;display:flex;align-items:center;gap:4px;padding:0 4px}.dgkey>summary small{color:var(--text-dim);font-weight:400}.dgkey>summary{list-style:none;border:1px solid var(--border,#d9deea);border-radius:var(--r,10px);padding:0 12px}.dgkey>summary::-webkit-details-marker{display:none}.dgkey>summary::after{content:'Show list \u203a';margin-left:auto;color:var(--accent);font-size:13px}.dgkey[open]>summary::after{content:'Hide list'}
 .rfold>summary{display:block;list-style:none;cursor:pointer;border-radius:var(--r,10px)}
 .rfold>summary::-webkit-details-marker{display:none}
 .rfold>summary:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
@@ -358,6 +408,7 @@ const EXAMFOLD_UI = (function examFoldUi(){
   if (typeof renderGuide === 'function') renderGuide = after(renderGuide, 'guide');
   if (typeof renderTell === 'function') renderTell = after(renderTell, 'tell');
   if (typeof renderRef === 'function') renderRef = after(renderRef, 'ref');
+  if (typeof renderDiagrams === 'function') { const rd = after(renderDiagrams, 'diagrams'); renderDiagrams = function(){ const r = rd.apply(this, arguments); try { diaKey(document.getElementById('v-diagrams')); } catch (e) { /* the key stays as drawn */ } return r; }; }
 
   /* ---------- everything that goes to a place inside a folder opens the folder first ---------- */
   // 1. scrollToEl(): the core's jump(), the "Jump to a section" links, walk_ui.js, druglist_ui.js.
