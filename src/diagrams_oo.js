@@ -99,7 +99,7 @@ const DIAGRAMS_OO = (() => {
     const diss = A('M50 90 L50 116', 'a1') + A('M145 90 L145 116', 'a2') + T(156, 107, 'slowly dissociates', 'dl', 'oo-k', 'start');
     const urea = R(10, 118, 80, 30, 'ub') + T(50, 138, 'Urea', 'ut', 'oo-t', 'middle');
     const hp = R(100, 118, 90, 30, 'hb', 'oo-act') + T(145, 138, 'H₂O₂', 'ht', 'oo-tb', 'middle');
-    const act = T(100, 164, 'the active ingredient', 'hact', 'oo-ts', 'middle');
+    const act = T(145, 164, 'the active ingredient', 'hact', 'oo-ts', 'middle');
     const s2 = cp + wax + diss + urea + hp + act;
 
     const cat = A('M192 133 L248 133', 'a3') + T(222, 98, 'catalase', 'ct1', 'oo-k', 'middle') + T(222, 112, '(in cerumen)', 'ct2', 'oo-ts', 'middle');
