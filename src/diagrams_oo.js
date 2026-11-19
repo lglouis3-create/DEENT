@@ -87,7 +87,7 @@ const DIAGRAMS_OO = (() => {
      stabilizes H2O2; H2O2 alone effervesces at once).
      --------------------------------------------------------------------- */
   const CERUMEN = (() => {
-    const h = 290;
+    const h = 312;
     const cp = R(10, 26, 220, 62, 'cpb') +
       T(20, 44, 'Carbamide peroxide (Debrox)', 'cp1', 'oo-tb') +
       T(20, 60, '1:1 urea · H₂O₂ complex', 'cp2') +
@@ -96,19 +96,19 @@ const DIAGRAMS_OO = (() => {
     const wax = R(196, 210, 150, 30, 'wax', 'oo-wax') + T(271, 230, 'cerumen (ear wax)', 'waxt', 'oo-t', 'middle');
     const s1 = cp + stab + wax;
 
-    const diss = A('M60 90 L60 116', 'a1') + A('M160 90 L160 116', 'a2') + T(110, 107, 'slowly dissociates', 'dl', 'oo-k', 'middle');
-    const urea = R(10, 118, 100, 30, 'ub') + T(60, 138, 'Urea', 'ut', 'oo-t', 'middle');
-    const hp = R(120, 118, 100, 30, 'hb', 'oo-act') + T(170, 138, 'H₂O₂', 'ht', 'oo-tb', 'middle');
-    const act = T(170, 162, 'the active ingredient', 'hact', 'oo-ts', 'middle');
+    const diss = A('M50 90 L50 116', 'a1') + A('M145 90 L145 116', 'a2') + T(156, 107, 'slowly dissociates', 'dl', 'oo-k', 'start');
+    const urea = R(10, 118, 80, 30, 'ub') + T(50, 138, 'Urea', 'ut', 'oo-t', 'middle');
+    const hp = R(100, 118, 90, 30, 'hb', 'oo-act') + T(145, 138, 'H₂O₂', 'ht', 'oo-tb', 'middle');
+    const act = T(100, 164, 'the active ingredient', 'hact', 'oo-ts', 'middle');
     const s2 = cp + wax + diss + urea + hp + act;
 
-    const cat = A('M222 133 L262 133', 'a3') + T(242, 112, 'catalase', 'ct1', 'oo-k', 'middle') + T(242, 125, '(in cerumen)', 'ct2', 'oo-ts', 'middle');
-    const prod = R(264, 118, 86, 30, 'pb') + T(307, 138, 'O₂ + water', 'pt', 'oo-tb', 'middle');
-    const fast = T(307, 162, 'a rapid reaction', 'fast', 'oo-ts', 'middle');
+    const cat = A('M192 133 L248 133', 'a3') + T(222, 98, 'catalase', 'ct1', 'oo-k', 'middle') + T(222, 112, '(in cerumen)', 'ct2', 'oo-ts', 'middle');
+    const prod = R(252, 118, 98, 30, 'pb') + T(301, 138, 'O₂ + water', 'pt', 'oo-tb', 'middle');
+    const fast = T(301, 164, 'a rapid reaction', 'fast', 'oo-ts', 'middle');
     const s3 = cp + wax + urea + hp + act + cat + prod + fast;
 
-    const bubbles = C(276, 186, 4, 'bu1') + C(292, 178, 5, 'bu2') + C(310, 188, 4, 'bu3') + C(326, 180, 5, 'bu4') + C(300, 198, 3, 'bu5') +
-      T(186, 190, 'O₂ bubbles', 'bt', 'oo-t', 'end');
+    const bubbles = C(276, 190, 4, 'bu1') + C(292, 182, 5, 'bu2') + C(310, 192, 4, 'bu3') + C(326, 184, 5, 'bu4') + C(300, 202, 3, 'bu5') +
+      T(186, 194, 'O₂ bubbles', 'bt', 'oo-t', 'end');
     const broken = R(196, 214, 44, 24, 'wx1', 'oo-wax') + R(250, 220, 40, 22, 'wx2', 'oo-wax') + R(300, 212, 46, 26, 'wx3', 'oo-wax') +
       T(186, 232, 'wax broken up', 'bk', 'oo-tb', 'end');
     const s4 = cp + urea + hp + act + cat + prod + bubbles + broken;
@@ -133,7 +133,7 @@ const DIAGRAMS_OO = (() => {
      propionic acid), T@18815-@22054.
      --------------------------------------------------------------------- */
   const FLUORIDE = (() => {
-    const h = 300;
+    const h = 340;
     const enamel = R(150, 30, 200, 56, 'en') +
       T(250, 48, 'Enamel: hydroxyapatite', 'en1', 'oo-tb', 'middle') +
       T(250, 70, 'Ca₁₀(PO₄)₆(OH)₂', 'en2', 'oo-f', 'middle');
@@ -154,8 +154,8 @@ const DIAGRAMS_OO = (() => {
     const res = T(250, 224, 'more resistant to acid erosion', 'rs', 'oo-ok', 'middle');
     const s3 = enamel + vuln + acid + hit + low + src + conv + fa + res;
 
-    const mine = Ls(10, 224, ['F⁻ also recruits Ca²⁺ and', 'phosphate from saliva', 'onto enamel (mineralization)'], 'mi', 'oo-t');
-    const flu = T(350, 240, 'F⁻ above 2 mg/L: fluorosis', 'fl', 'oo-w', 'end');
+    const mine = Ls(10, 246, ['F⁻ also recruits Ca²⁺ and phosphate from saliva', 'onto enamel (mineralization)'], 'mi', 'oo-t');
+    const flu = T(10, 278, 'Fluoride above 2 mg/L: enamel fluorosis', 'fl', 'oo-w', 'start');
     const s4 = enamel + vuln + src + conv + fa + res + mine + flu;
 
     return ooStepper('oo-fluoride', 'Fluoride and tooth enamel', [
@@ -179,7 +179,7 @@ const DIAGRAMS_OO = (() => {
      conjunctiva of eyes and nose); 11/18 T@43104-@45400.
      --------------------------------------------------------------------- */
   const ENTRY = (() => {
-    const h = 330;
+    const h = 350;
     const tear = `<ellipse class="box" data-k="tear" cx="180" cy="38" rx="96" ry="16"/>` + T(180, 42, 'Topical drug in tear', 'teart', 'oo-tb', 'middle');
     const oc = A('M140 56 L110 76', 'a1') + T(100, 90, 'Ocular absorption', 'oc1', 'oo-t', 'middle') + T(100, 104, 'under 10% of the dose', 'oc2', 'oo-w', 'middle');
     const sy = A('M220 56 L250 76', 'a2') + T(268, 90, 'Systemic absorption', 'sy1', 'oo-t', 'middle') + T(268, 104, 'over 50% of the dose', 'sy2', 'oo-w', 'middle') +
@@ -251,7 +251,7 @@ const DIAGRAMS_OO = (() => {
     const imid = L(pv[0], toward(pv[1], pv[0], 7), 'im01') + L(toward(pv[1], pv[2], 7), pv[2], 'im12') + L(pv[2], pv[3], 'im23') +
       L(pv[3], toward(pv[4], pv[3], 6), 'im34') + L(toward(pv[4], pv[0], 6), pv[0], 'im40') +
       inner(pv[0], toward(pv[4], pv[0], 6), pc, 'imdb') +
-      T(pv[1][0], pv[1][1] + 4, 'N', 'n1', 'oo-n', 'middle') + T(pv[1][0], pv[1][1] - 8, 'H', 'n1h', 'oo-n', 'middle') +
+      T(pv[1][0], pv[1][1] + 4, 'N', 'n1', 'oo-n', 'middle') + T(pv[1][0], pv[1][1] - 10, 'H', 'n1h', 'oo-n', 'middle') +
       T(pv[4][0], pv[4][1] + 5, 'N', 'n3', 'oo-n', 'middle');
     const xLbl = s => T(xPos[0], xPos[1] + 4, s, 'X', 'oo-x', 'middle');
     const core = benz + benzDb + bondX1 + bondX2 + imid;
@@ -269,18 +269,18 @@ const DIAGRAMS_OO = (() => {
       L(q[3], toward(q[4], q[3], 6), 'pz34') + L(toward(q[4], q[5], 6), q[5], 'pz45') +
       inner(q[2], q[3], c2, 'pzd1') + inner(toward(q[1], q[2], 6), q[2], c2, 'pzd2') +
       T(q[1][0], q[1][1] + 4, 'N', 'pn1', 'oo-n', 'middle') + T(q[4][0], q[4][1] + 4, 'N', 'pn4', 'oo-n', 'middle');
-    const name = s => T(180, 30, s, 'name', 'oo-tb', 'middle');
+    const name = s => T(10, 32, s, 'name', 'oo-tb', 'start');
     const parts = T(cx, 148, 'aryl', 'p1', 'oo-ts', 'middle') + T(xPos[0], 148, 'linker', 'p2', 'oo-ts', 'middle') +
       T(pc[0] + 4, 148, 'imidazoline', 'p3', 'oo-ts', 'middle');
 
     // the ClogP scale (slide 31): a vertical axis from 0.8 (bottom) to 1.6 (top)
-    const ax = 268, yv = c => 156 - (c - 0.8) / 0.8 * 104;
-    const axis = L([ax, yv(1.6)], [ax, yv(0.8)], 'axis', 'oo-axis') + T(ax, 44, 'ClogP', 'axt', 'oo-tb', 'middle') +
+    const ax = 230, yv = c => 152 - (c - 0.8) / 0.8 * 90;
+    const axis = L([ax, yv(1.6)], [ax, yv(0.8)], 'axis', 'oo-axis') + T(ax, 48, 'ClogP', 'axt', 'oo-tb', 'middle') +
       T(ax - 6, yv(1.6) + 4, '1.6', 'ax16', 'oo-ts', 'end') + T(ax - 6, yv(0.8) + 4, '0.8', 'ax08', 'oo-ts', 'end') +
       L([ax - 3, yv(1.6)], [ax + 3, yv(1.6)], 'tk16', 'oo-axis') + L([ax - 3, yv(0.8)], [ax + 3, yv(0.8)], 'tk08', 'oo-axis');
     const mk = (c, s, k) => C(ax, yv(c), 4, 'm' + k, 'oo-mk') + T(ax + 9, yv(c) + 4, s, 'mt' + k, 'oo-t', 'start');
     const mClo = mk(1.5, 'clonidine 1.5', 'c'), mBri = mk(1.2, 'brimonidine 1.2', 'b'), mApr = mk(0.87, 'apraclonidine 0.87', 'a');
-    const more = T(ax, 172, '↑ more lipophilic', 'axm', 'oo-ts', 'middle');
+    const more = T(ax + 9, 170, '↑ more lipophilic', 'axm', 'oo-ts', 'start');
 
     const s1 = name('Aryl imidazoline core') + core + xLbl('X') + parts +
       Ls(10, 190, ['An aromatic ring (aryl) joined through one linker', 'atom, X, to the imidazoline ring.'], 'd1');
@@ -320,15 +320,15 @@ const DIAGRAMS_OO = (() => {
      slide 32).
      --------------------------------------------------------------------- */
   const ACHE = (() => {
-    const h = 330;
+    const h = 360;
     const ach = R(10, 26, 140, 44, 'achb') + T(80, 44, 'Acetylcholine (ACh)', 'ach1', 'oo-tb', 'middle') + T(80, 61, 'an ester', 'ach2', 'oo-t', 'middle');
-    const arr = A('M154 48 L236 48', 'a1') + T(195, 41, 'AChE', 'enz', 'oo-k', 'middle');
+    const arr = A('M154 48 L236 48', 'a1') + T(195, 38, 'AChE', 'enz', 'oo-k', 'middle');
     const prod = R(240, 26, 110, 44, 'prb') + T(295, 44, 'acetic acid', 'pr1', 'oo-t', 'middle') + T(295, 61, '+ choline', 'pr2', 'oo-t', 'middle');
     const inact = T(195, 88, 'ACh is inactivated', 'ina', 'oo-ts', 'middle');
     const s1 = ach + arr + prod + inact;
 
-    const block = L([180, 34], [210, 62], 'x1', 'oo-x2') + L([210, 34], [180, 62], 'x2', 'oo-x2');
-    const up = T(195, 88, 'Inhibitor blocks AChE: ACh levels ↑', 'up1', 'oo-w', 'middle') + T(195, 104, '→ aqueous fluid outflow ↑', 'up2', 'oo-ok', 'middle');
+    const block = L([185, 42], [205, 60], 'x1', 'oo-x2') + L([205, 42], [185, 60], 'x2', 'oo-x2');
+    const up = T(195, 88, 'Inhibitor blocks AChE: ACh levels ↑', 'up1', 'oo-w', 'middle') + T(195, 104, '→ fluid outflow ↑', 'up2', 'oo-ok', 'middle');
     const s2 = ach + arr + prod + block + up;
 
     const head = T(180, 128, 'Extent of AChE inhibition depends on the group', 'hd', 'oo-tb', 'middle');
@@ -341,10 +341,10 @@ const DIAGRAMS_OO = (() => {
 
     const p1 = row(136, '1', 'Phosphoryl', 'R1O–P(=O)(R2)–OR3', 'most', 'p', 'oo-act');
     const echo = T(20, 190, 'Echothiophate iodide (an organophosphate):', 'ec1', 'oo-tb') +
-      R(10, 198, 160, 40, 'eb1') + T(90, 214, 'AChE–O–P(=O)(OC₂H₅)₂', 'ef1', 'oo-f2', 'middle') + T(90, 230, 'AChE inactive', 'ef2', 'oo-ts', 'middle') +
-      A('M172 218 L196 218', 'a2') + T(184, 252, 'H₂O, aging:', 'ag1', 'oo-k', 'middle') + T(184, 266, '− C₂H₅–OH', 'ag2', 'oo-k', 'middle') +
-      R(198, 198, 152, 40, 'eb2', 'oo-act') + T(274, 214, 'AChE–O–P(=O)(OC₂H₅)OH', 'ef3', 'oo-f3', 'middle') +
-      T(274, 230, 'irreversibly inactive', 'ef4', 'oo-w', 'middle');
+      R(10, 198, 140, 56, 'eb1') + T(80, 214, 'AChE–O–P(=O)', 'ef1', 'oo-f2', 'middle') + T(80, 229, '(OC₂H₅)₂', 'ef1b', 'oo-f2', 'middle') + T(80, 246, 'AChE inactive', 'ef2', 'oo-ts', 'middle') +
+      A('M152 226 L206 226', 'a2') + T(179, 218, 'H₂O', 'ag0', 'oo-k', 'middle') + T(179, 270, 'aging: loses', 'ag1', 'oo-k', 'middle') + T(179, 284, 'C₂H₅–OH', 'ag2', 'oo-k', 'middle') +
+      R(208, 198, 142, 56, 'eb2', 'oo-act') + T(279, 214, 'AChE–O–P(=O)', 'ef3', 'oo-f2', 'middle') + T(279, 229, '(OC₂H₅)OH', 'ef3b', 'oo-f2', 'middle') +
+      T(279, 246, 'irreversibly inactive', 'ef4', 'oo-w', 'middle');
     const s4 = ach + arr + prod + block + up + head + p1 + echo;
 
     return ooStepper('oo-ache', 'AChE inhibitors: ester, carbamate, phosphoryl', [
@@ -372,12 +372,12 @@ const DIAGRAMS_OO = (() => {
      --------------------------------------------------------------------- */
   const PG = (() => {
     const h = 340, b = 20;
-    // cyclopentane ring, its two HO groups, the upper (alpha) chain to C-1 and the lower chain through C-15
+    // cyclopentane ring, its two HO groups (C-9 and C-11, the ring carbons next to the two chains), the upper (alpha) chain to C-1 and the lower chain through C-15
     const pc = [52, 92], Rp = b / (2 * Math.sin(Math.PI / 5));
     const pv = [90, 18, -54, -126, 162].map(d => [pc[0] + Rp * Math.cos(d * Math.PI / 180), pc[1] - Rp * Math.sin(d * Math.PI / 180)]);
     const ring = [0, 1, 2, 3, 4].map(i => L(pv[i], pv[(i + 1) % 5], 'rg' + i)).join('');
     const ho = L(pv[4], [pv[4][0] - 10, pv[4][1] - 10], 'ho1b') + T(pv[4][0] - 10, pv[4][1] - 14, 'HO', 'ho1', 'oo-o', 'end') +
-      L(pv[3], [pv[3][0] - 10, pv[3][1] + 10], 'ho2b') + T(pv[3][0] - 10, pv[3][1] + 22, 'HO', 'ho2', 'oo-o', 'end');
+      L(pv[2], [pv[2][0], pv[2][1] + 12], 'ho2b') + T(pv[2][0], pv[2][1] + 25, 'HO', 'ho2', 'oo-o', 'middle');
     const zig = (start, n, dir, k) => {
       const pts = [start]; let up = dir;
       for (let i = 0; i < n; i++) { const p = pts[pts.length - 1]; pts.push([p[0] + b * Math.cos(Math.PI / 6), p[1] + (up ? -b / 2 : b / 2)]); up = !up; }
@@ -388,7 +388,7 @@ const DIAGRAMS_OO = (() => {
     const lower = zig(pv[1], 6, false, 'w');
     const c15 = lower.pts[3];
     const oh15 = L(c15, [c15[0], c15[1] + 14], 'oh15b') + T(c15[0], c15[1] + 27, 'OH', 'oh15', 'oo-o', 'middle') +
-      T(c15[0] - 8, c15[1] - 6, '15', 'n15', 'oo-num', 'middle');
+      T(c15[0], c15[1] - 8, '15', 'n15', 'oo-num', 'middle');
     const omega = T(lower.pts[6][0] + 6, lower.pts[6][1] + 4, 'alkyl or phenyl', 'om', 'oo-ts', 'start');
     const skel = ring + ho + upper.svg + lower.svg + oh15 + omega;
     const n1 = T(c1[0], c1[1] + 14, '1', 'n1', 'oo-num', 'middle');
@@ -399,8 +399,7 @@ const DIAGRAMS_OO = (() => {
       Ls(10, 172, ['All the FP agonists ↑ fluid outflow by activating', 'the PGF (FP) receptor.', 'Key places: C-1 (the acid) and C-15 (the OH).'], 'd1');
     const s2 = T(10, 30, 'Latanoprost (prodrug)', 'nm', 'oo-tb') + skel + n1 + end('COO–iPr', 'oo-o') + tag('isopropyl ester', 'oo-w') +
       Ls(10, 172, ['The C-1 acid is made an isopropyl ester: a prodrug.', 'Isopropyl esters also: travoprost, tafluprost;', 'latanoprostene bunod is an ester too.'], 'd2');
-    const s3 = T(10, 30, 'Latanoprost acid (active)', 'nm', 'oo-tb') + skel + n1 + end('COOH', 'oo-o') + tag('acid, active', 'oo-ok') +
-      T(190, 30, 'esterase', 'es', 'oo-k', 'start') + A('M246 26 L282 26', 'esa') +
+    const s3 = T(10, 30, 'Latanoprost acid (active)', 'nm', 'oo-tb') + skel + n1 + end('COOH', 'oo-o') + tag('acid, active (esterase)', 'oo-ok') +
       Ls(10, 172, ['An esterase hydrolyzes the ester back to the acid.', 'Slide 29 lists esterase among the', 'conjunctiva’s enzymes.'], 'd3');
     const s4 = T(10, 30, 'SAR (slide 46)', 'nm', 'oo-tb') + skel + n1 + end('COOH / CONH–', 'oo-o') + tag('acid or amide: active', 'oo-ok') +
       Ls(10, 172, ['Acids (–COOH) and amides (–CONH–) are active', 'drugs (bimatoprost is an amide); esters are', 'prodrugs. C-15: OH or halogens (tafluprost: two F)', 'prevent 15-OH oxidation.'], 'd4') +
@@ -431,10 +430,9 @@ const DIAGRAMS_OO = (() => {
       '.fig .oo-ts{fill:var(--text-dim);font-size:11.5px}.fig .oo-k{fill:var(--accent);font-size:11.5px;font-weight:700}' +
       '.fig .oo-w{fill:var(--bad);font-size:11.5px;font-weight:700}.fig .oo-ok{fill:var(--ok);font-size:11.5px;font-weight:700}' +
       '.fig .oo-f{fill:var(--text);font-size:14px;font-weight:600}.fig .oo-f2{fill:var(--text);font-size:11.5px;font-family:ui-monospace,Menlo,Consolas,monospace}' +
-      '.fig .oo-f3{fill:var(--text);font-size:11px;font-family:ui-monospace,Menlo,Consolas,monospace}' +
       '.fig .oo-n{fill:var(--at-n);font-size:12px;font-weight:600}.fig .oo-o{fill:var(--at-o);font-size:12px;font-weight:600}' +
       '.fig .oo-cl{fill:var(--at-x);font-size:12px;font-weight:600}.fig .oo-x{fill:var(--accent);font-size:12.5px;font-weight:700}' +
-      '.fig .oo-num{fill:var(--accent);font-size:11px;font-weight:700}' +
+      '.fig .oo-num{fill:var(--accent);font-size:11.5px;font-weight:700}' +
       '.fig .oo-bd{stroke:currentColor;stroke-width:1.5;fill:none;stroke-linecap:round}' +
       '.fig .oo-axis{stroke:var(--text-dim);stroke-width:1.2;fill:none}.fig .oo-mk{fill:var(--accent)}' +
       '.fig .oo-x2{stroke:var(--bad);stroke-width:3;fill:none;stroke-linecap:round}' +

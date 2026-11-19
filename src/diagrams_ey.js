@@ -103,12 +103,12 @@ const DIAGRAMS_EY = (() => {
     const s4 = s3 + tmDrugs;
     const s5 = s4 + uvDrugs;
     return stepper('ey-aqueous', 'Aqueous humor: inflow and outflow', [
-      ['Inflow: the ciliary body makes aqueous humor all the time; it flows from the posterior chamber through the pupil into the anterior chamber (slides 14–15; 11/13 T@25530).', s1],
-      ['Outflow at the angle: most drains through the trabecular meshwork and Schlemm’s canal into blood vessels; some by the uveoscleral route (slides 14–16; 11/13 T@29647–@32688).', s2],
+      ['Inflow: the ciliary body makes aqueous humor all the time; it flows through the pupil into the anterior chamber (slides 14–15; 11/13 T@25530).', s1],
+      ['Outflow: most drains through the trabecular meshwork and Schlemm’s canal; some by the uveoscleral route (slides 14–16; 11/13 T@32688).', s2],
       ['Drugs that decrease inflow act on the ciliary body: β-blockers, α2 agonists and carbonic anhydrase inhibitors (slides 16, 18, 22, 26; 11/13 T@39934).', s3],
-      ['Trabecular outflow rises: M3 agonists and echothiophate (AChE inhibitor) contract the meshwork; netarsudil makes it less stiff (slides 32, 34, 41; 11/17 T@24556).', s4],
+      ['Trabecular outflow up: M3 agonists and echothiophate contract the meshwork; netarsudil makes it less stiff (slides 32, 34, 41; 11/17 T@24556).', s4],
       ['Uveoscleral outflow rises: PG agonists relax the ciliary muscle (also some trabecular); brimonidine adds some (slides 22, 37; 11/17 T@31096).', s5],
-    ], 392, 'Drawn after Smith_Eye_Glaucoma_AllergicConj_DryEye.pdf slides 14–16, 18, 22, 26, 32, 34, 37 and 41 (Dr. Smith); lectures 11/13, ' +
+    ], 400, 'Drawn after Smith_Eye_Glaucoma_AllergicConj_DryEye.pdf slides 14–16, 18, 22, 26, 32, 34, 37 and 41 (Dr. Smith); lectures 11/13, ' +
       'T@19333 and T@28180 (inflow is production, outflow is drainage), T@43883–@60121, and 11/17, T@23400–@36600. β-blockers: “not much effect on ' +
       'outflow; MOA not fully understood” (slide 18). PG agonists “do not affect aqueous humor production” (slide 37). Netarsudil inhibits Rho kinase: less ' +
       'contractile tone and fewer fibrosis-related protein deposits in the meshwork, and a change in the permeability of the cells lining Schlemm’s canal (slide 41).');
@@ -213,8 +213,8 @@ const DIAGRAMS_EY = (() => {
       T(6, 292, 'mainly with oral CAIs; to a much lesser extent with drops', 'aci2', 'ey-t', 'start');
     return stepper('ey-cai', 'Carbonic anhydrase inhibitors: eye and kidney', [
       ['In the ciliary epithelium, carbonic anhydrase makes H₂CO₃; its HCO₃⁻ leaves with Na⁺ and water follows: aqueous humor (slide 26; 11/17 T@5420).', e1],
-      ['A CA inhibitor stops the enzyme: less HCO₃⁻ and Na⁺ leave, less water follows, so less aqueous humor (inflow falls) (slides 26, 28; 11/13 T@54881).', e2],
-      ['Kidney (slide 27): CA IV in the lumen and CA II in the cell make HCO₃⁻, which returns to the blood and buffers its pH (11/17 T@8731–@13223).', k3],
+      ['A CA inhibitor stops the enzyme: less HCO₃⁻ and Na⁺ leave, less water follows, so inflow falls (slides 26, 28; 11/13 T@54881).', e2],
+      ['Kidney: CA IV in the lumen and CA II in the cell make HCO₃⁻, which returns to the blood and buffers its pH (slide 27; 11/17 T@8731).', k3],
       ['Oral acetazolamide blocks CA IV and CA II: no H⁺ for NHE3, so Na⁺ and water stay in the lumen (diuresis, more urination) (slides 27, 29; 11/17 T@14835).', k4],
       ['No HCO₃⁻ returns to the blood, so the pH falls: metabolic acidosis, the side effect to watch with oral CAIs (slide 29; 11/17 T@17682, T@6785).', k5],
     ], 340, 'Drawn after Smith_Eye_Glaucoma_AllergicConj_DryEye.pdf slides 26–29 (slide 27: Golan, Principles of Pharmacology, Fig 20-6; Dr. Smith); ' +
@@ -255,7 +255,8 @@ const DIAGRAMS_EY = (() => {
       T(6, 228, 'and lowers the receptor’s constitutive activity', 'h1b', 'ey-t', 'start') +
       T(6, 242, 'Mast cell stabilizer (dashed ring): less histamine released;', 'msa', 'ey-tb', 'start') +
       T(6, 254, 'all but cetirizine; how it works is unclear; used before exposure', 'msb', 'ey-t', 'start') +
-      T(6, 268, 'Extras: alcaftadine also H4 (eosinophils); epinastine also H2 (lid edema)', 'ext', 'ey-t', 'start');
+      T(6, 268, 'Extras: alcaftadine also H4 (eosinophils);', 'ext', 'ey-t', 'start') +
+      T(6, 280, 'epinastine also H2 (eyelid edema)', 'ext2', 'ey-t', 'start');
     const s4 = mast + ige + allergen + gran([[52, 104], [74, 98], [94, 112], [50, 132], [214, 98], [226, 110]]) + granT + tissue + vessel(14) + h1d + stab +
       R(160, 196, 194, 14, 'a2d', 'ey-drug', 3) + T(257, 206, 'α2 agonist: vasoconstriction', 'a2T', 'ey-tb') +
       T(6, 230, 'α2 agonists (naphazoline, oxymetazoline, tetrahydrozoline,', 'a2a', 'ey-t', 'start') +
@@ -264,7 +265,7 @@ const DIAGRAMS_EY = (() => {
       T(6, 268, 'Combination: naphazoline/pheniramine (α2 agonist + antihistamine)', 'cmb', 'ey-t', 'start');
     return stepper('ey-allergy', 'Allergic conjunctivitis: histamine and the drugs', [
       ['A sensitized mast cell carries IgE on its surface; the allergen (antigen) binds that IgE (slide 48; 11/17 T@41462).', s1],
-      ['The mast cell releases histamine from its granules; at H1 receptors histamine causes the itch, edema, redness and watery eyes (slides 48–49, 52; 11/17 T@41705).', s2],
+      ['The mast cell releases histamine; at H1 receptors it causes itch, edema, redness and watery eyes (slides 48–49, 52; 11/17 T@41705).', s2],
       ['H1 inverse agonists block the receptor; most are also mast cell stabilizers, so less histamine is released (slides 51, 53–54; 11/17 T@44333–@46857).', s3],
       ['α2 agonists act on the blood vessels: vasoconstriction reduces the redness and the leak behind the edema (slides 56–57, 59; 11/17 T@52404).', s4],
     ], 326, 'Drawn after Smith_Eye_Glaucoma_AllergicConj_DryEye.pdf slides 48–49, 51–54, 56–57 and 59 (Dr. Smith); lecture 11/17, T@40500–@54200. ' +
@@ -287,7 +288,7 @@ const DIAGRAMS_EY = (() => {
     const act = NB(6, 176, 170, 40, 'ac', ['Calcineurin → NFAT', '→ IL-2: T cells multiply']);
     const a2i = P('M91 176 L91 154', 'a2i', 'ey-arr');
     const s1 = infl + i2g + gland + g2t + tears(true) +
-      TL(6, 244, ['Dry eye: inflammation in the lacrimal system lowers tear production.', 'Risks: older age, female; drugs such as antihistamines, decongestants,', 'antidepressants and hormone replacement therapy.'], 'why', 'ey-t', 'start');
+      TL(6, 244, ['Inflammation in the lacrimal system lowers tear production.', 'Risks: older age, female; drugs: antihistamines, decongestants,', 'antidepressants, hormone replacement therapy.'], 'why', 'ey-t', 'start');
     const lifi = BLK(64, 88, 118, 102, 'lblk') + R(6, 244, 348, 30, 'ldrug', 'ey-drug', 4) +
       TL(12, 256, ['Lifitegrast (drops): binds LFA-1 and blocks its interaction with', 'ICAM-1, so T cells adhere less and secrete fewer cytokines'], 'lT', 'ey-t', 'start');
     const s2 = infl + i2g + gland + g2t + tears(true) + tcell + t2i + lifi;
@@ -295,15 +296,15 @@ const DIAGRAMS_EY = (() => {
       TL(12, 290, ['Cyclosporine (drops): binds cyclophilin; the complex inhibits', 'calcineurin, so less IL-2 and less inflammation. Loteprednol', '(corticosteroid drops): anti-inflammatory'], 'cT', 'ey-t', 'start');
     const s3 = infl + i2g + gland + g2t + tears(true) + tcell + t2i + lifi + act + a2i + cyc;
     const nose = NB(206, 28, 148, 56, 'ns', ['Nasal cavity', 'nicotinic ACh receptor', '→ trigeminal nerve']);
-    const n2g = P('M280 84 L280 106', 'n2g', 'ey-flow') + T(286, 98, 'parasympathetic', 'n2gT', 'ey-ts', 'start');
+    const n2g = P('M280 84 L280 106', 'n2g', 'ey-flow') + T(274, 98, 'parasympathetic', 'n2gT', 'ey-ts', 'end');
     const vare = R(6, 324, 348, 30, 'vdrug', 'ey-drug', 4) +
-      TL(12, 336, ['Varenicline (nasal spray): agonist at nicotinic receptors in the nose;', 'the trigeminal parasympathetic pathway makes more basal tear film'], 'vT', 'ey-t', 'start');
+      TL(12, 336, ['Varenicline (nasal spray): nicotinic agonist in the nose; the', 'trigeminal parasympathetic pathway makes more basal tear film'], 'vT', 'ey-t', 'start');
     const s4 = infl + i2g + gland + g2t + tears(false) + tcell + t2i + lifi + act + a2i + cyc + nose + n2g + vare;
     return stepper('ey-dryeye', 'Dry eye: where each drug acts', [
       ['Dry eye (keratoconjunctivitis sicca): inflammation in the lacrimal system lowers tear production (slides 62, 64; 11/17 T@57918).', s1],
       ['Lifitegrast: LFA-1 on leukocytes binds ICAM-1; blocking it may inhibit T-cell adhesion and cytokine secretion (slide 71; 11/17 T@64155).', s2],
-      ['Cyclosporine works in the T cell’s signal cascade: with cyclophilin it inhibits calcineurin, so less IL-2 (slides 65–67; 11/17 T@60561); loteprednol (slide 69).', s3],
-      ['Varenicline works another way: nasal nicotinic receptors activate the trigeminal parasympathetic pathway, raising basal tear film (slide 73; 11/17 T@67641).', s4],
+      ['Cyclosporine binds cyclophilin; the complex inhibits calcineurin, so less IL-2; loteprednol is a corticosteroid (slides 65–67, 69; 11/17 T@60561).', s3],
+      ['Varenicline: nasal nicotinic receptors activate the trigeminal parasympathetic pathway: more basal tear film (slide 73; 11/17 T@67641).', s4],
     ], 404, 'Drawn after Smith_Eye_Glaucoma_AllergicConj_DryEye.pdf slides 62, 64–67, 69, 71 and 73 (Dr. Smith); lecture 11/17, T@57000–@68300. ' +
       'Slide 65: calcineurin inhibitors act in the signal cascade after signals 1 and 2, leading to IL-2 transcription; slide 66 (Golan Fig 44-5): cyclosporine binds ' +
       'cyclophilin, tacrolimus binds FKBP, and active calcineurin activates NFAT for the IL-2 gene. Oral cyclosporine is not used for dry eye: it is a significant ' +

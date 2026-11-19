@@ -83,7 +83,7 @@ console.log(`  (${kinds.quote} reasons quote the lecture; ${kinds.other} name th
 console.log('=== The counts are the analysis\'s ===');
 for (const tab of Object.keys(SRC.meta.chosen)) {
   const n = Object.keys(M[tab] || {}).length;
-  check(n === SRC.meta.chosen[tab], `${tab}: ${n} stars = ${SRC.meta.chosen[tab]} chosen by the analysis${tab === 'guide' ? ' (14 + the manual gobj-pc-3)' : ''}`);
+  check(n === SRC.meta.chosen[tab], `${tab}: ${n} stars = ${SRC.meta.chosen[tab]} chosen by the analysis${tab === 'guide' ? ' (with the manual gobj-pc-3 and gobj-pc-5)' : ''}`);
 }
 check(!!M.guide['gobj-pc-3'] && /human humanized/.test(M.guide['gobj-pc-3'].why), 'the guide section gobj-pc-3 keeps its star (Smith 11/03: "is it human humanized? Is it chimeric?")');
 
