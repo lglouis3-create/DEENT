@@ -130,7 +130,7 @@ const EXAMFOLD_UI = (function examFoldUi(){
      else Exam 1). ALSO lets another exam's folder link to a figure drawn in an earlier
      folder. The key stays above the folders, one block per exam. */
   const diaGroups = () => { try { return typeof DIA_LIST === 'function' ? DIA_LIST() : (typeof DIAGRAMS !== 'undefined' ? DIAGRAMS : []); } catch (e) { return []; } };
-  const groupExam = keys => keys.some(k => /^(ey|oo)-/.test(k)) ? 3 : keys.some(k => /^(p5|p6|p7|p8)/.test(k)) ? 2 : 1;
+  const groupExam = keys => keys.some(k => /^(ey|oo|lg)-/.test(k)) ? 3 : keys.some(k => /^(p5|p6|p7|p8)/.test(k)) ? 2 : 1;
   const ALSO = {};   // figure key -> another exam whose folder links to it (none at present)
   function diaExtra(have){
     const out = [];
