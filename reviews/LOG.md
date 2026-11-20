@@ -338,3 +338,12 @@
 - Test changes (test-side assumptions, not page defects): guide_pl_test (no status lines, Patel groups only), slide_test (215 bars, 26 cards, Eye/OOO abbreviations, warts row), examfold_test (renamed arrowhead ids), ux_test (a visible figure; candidate kit test fix), browser_test count pattern, search_test place:keep.
 - Checks on the final tree: run_checks 38 PASS, 0 FAIL, 1 REPORT; walk_test 92, slide_test 235, examfold_test 366, wide_test 109, search_test 114, likely_marks_test 130, likely_card_test, likely_check 24, likely_map_check 30, glossary_test 240, guide_pl_test 49, guide_sk_test 64, dz_test 59, ftu_test 121, place_keep_test 12, exam_all_test 24, diagrams_ey_check 311, diagrams_oo_check 311, slide_check 38, druglist_check 172, qualifier_check 14.
 - Disk filled twice (agents copying the repository into /tmp); guide_pl_test.js was emptied once and restored from git.
+
+- Release 33307d6 (Louis: "Yes publish", 2026-11-20): Pages deploy success; live page read: 1,819 questions, Diagrams folders Exam 3 (11 diagrams) and Exam 1 (42), eye and OOO figures present, no status codes or "verify against slide" in the Guides, 497 stars, no page errors.
+
+## 2026-11-20: Dr. Lam's glaucoma lecture, Sikazwe 11/19, search fix
+- Sources: 11/19 transcript (Lam from T@35,742), Lam_Glaucoma.pdf and handout, video frames (no handwriting or poll results visible), Sikazwe slides and notes.
+- Added: Lam questions LMA/LMB/LMC (182 after verification), guides, reference, tell apart, glossary, 34 stars, five diagrams; Sikazwe OB items; search button fix.
+- Not asked, by design: sig as such, risk factors, day-supply calculation, IOP numbers, PGA contraindications, CAI acidosis mechanism, PACG (Lam said not tested). Essay: guide prompts only.
+- Source conflicts kept: Latisse 0.03% vs slide; Simbrinza CAI printed two ways (class pair only); eyelid closure 1-2 min (speech) vs 2 min (handout).
+- run_checks first run: 35 PASS, 3 FAIL (browser_test: OB-009 and OB-031 stems promised a drawing; optional_test: two optional topics; state_check: CLAUDE.md older than L12), 1 REPORT. Fixed by rewording the two stems, making oo-beyond a non-optional low-yield topic, and updating CLAUDE.md.

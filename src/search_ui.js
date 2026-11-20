@@ -197,9 +197,16 @@ dialog.srch::backdrop{background:rgba(10,14,22,.55)}
 .srch .qrow{display:flex;gap:8px;align-items:flex-start}
 .srch .qrow .sh{flex:1 1 auto}
 .srch .sp{display:flex;gap:6px;flex-wrap:wrap;margin:6px 0}
-#btnSearch{display:inline-flex;align-items:center;gap:6px;margin-right:8px}
+#btnSearch{display:inline-flex;align-items:center;gap:6px;margin-right:8px;min-height:44px;min-width:44px;padding:0 12px}
+#srchfab{position:fixed;right:max(16px,env(safe-area-inset-right,0px));bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:40;display:inline-flex;align-items:center;gap:8px;min-height:52px;padding:0 18px;border-radius:999px;border:0;font:inherit;font-weight:600;font-size:15px;background:var(--accent,#2f5fa8);color:#fff;box-shadow:0 4px 14px rgba(0,0,0,.28);cursor:pointer}
+#srchfab svg{width:18px;height:18px}
+#srchfab[hidden]{display:none}
+#srchfab:focus-visible{outline:3px solid var(--text,#1d2330);outline-offset:2px}
+body.figbig #srchfab,body:has(#backbtn) #srchfab,body:has(#xback) #srchfab{display:none}
+@media (max-width:700px){#srchfab{width:56px;height:56px;min-height:56px;padding:0;justify-content:center}#srchfab span{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}}
+body.srchfab-on main{padding-bottom:88px}
 #btnSearch svg{width:16px;height:16px}
-@media print{dialog.srch,#btnSearch{display:none}}`;
+@media print{dialog.srch,#btnSearch,#srchfab{display:none}}`;
 
   let dlg = null, input = null, body = null, opener = null, last = null;
   const open = {};   // group name -> expanded (memory only)
@@ -253,6 +260,7 @@ dialog.srch::backdrop{background:rgba(10,14,22,.55)}
 
   function close(){
     if (!dlg) return;
+    setTimeout(fab, 0);
     try { if (dlg.open) dlg.close(); } catch (e) { dlg.removeAttribute('open'); }
     const o = opener; opener = null; if (o && o.focus && document.contains(o)) { try { o.focus({preventScroll: true}); } catch (e) {} }
   }
@@ -260,7 +268,8 @@ dialog.srch::backdrop{background:rgba(10,14,22,.55)}
     ensure();
     opener = from || document.activeElement;
     if (!dlg.open) { try { dlg.showModal(); } catch (e) { dlg.setAttribute('open', ''); } }
-    draw(); input.focus(); input.select();
+    draw(); body.scrollTop = 0; input.focus(); try { input.setSelectionRange(0, input.value.length); } catch (e) { input.select(); }
+    fab();
   }
 
   /* what a result does */
@@ -303,12 +312,14 @@ dialog.srch::backdrop{background:rgba(10,14,22,.55)}
   function ensure(){
     if (dlg) return;
     dlg = document.createElement('dialog'); dlg.className = 'srch'; dlg.setAttribute('aria-label', 'Search the drill');
-    dlg.innerHTML = `<div class="sbar"><input type="search" id="srchq" placeholder="Search drugs, diseases, terms, questions" aria-label="Search the drill" autocomplete="off" autocapitalize="off" spellcheck="false" enterkeyhint="search"><button type="button" class="btn ghost" id="srchx" aria-label="Close search">Close</button></div><div class="sbody" id="srchbody" aria-live="polite"></div>`;
+    dlg.innerHTML = `<div class="sbar"><input type="search" id="srchq" placeholder="Search drugs, diseases, terms, questions" aria-label="Search the drill" autocomplete="off" autocapitalize="off" spellcheck="false" enterkeyhint="search"><button type="button" class="btn ghost" id="srchclr" aria-label="Clear the search text">Clear</button><button type="button" class="btn ghost" id="srchx" aria-label="Close search">Close</button></div><div class="sbody" id="srchbody" aria-live="polite"></div>`;
     document.body.appendChild(dlg);
     input = dlg.querySelector('#srchq'); body = dlg.querySelector('#srchbody');
     let tm = null;
     input.addEventListener('input', () => { clearTimeout(tm); tm = setTimeout(draw, 120); });
     dlg.querySelector('#srchx').addEventListener('click', close);
+    // a tablet keyboard cannot select the old words for you: one tap empties the field and keeps the keyboard up
+    dlg.querySelector('#srchclr').addEventListener('click', () => { input.value = ''; draw(); input.focus(); });
     dlg.addEventListener('close', () => { const o = opener; opener = null; if (o && o.focus && document.contains(o)) { try { o.focus({preventScroll: true}); } catch (e) {} } });
     // a tap outside the box closes it; a press that began inside (a selection dragged out of the field) does not
     let downOnDlg = false;
@@ -354,9 +365,37 @@ dialog.srch::backdrop{background:rgba(10,14,22,.55)}
       else if (ev.key === '/' && !typing && !ev.ctrlKey && !ev.metaKey && !ev.altKey && !(dlg && dlg.open)) { ev.preventDefault(); openDialog(document.activeElement); }
     });
   }
+  /* A second Search button that floats at the bottom right once the header's button has scrolled out of view (Louis,
+     2026-11-20: after one search "it becomes difficult to use again": a result jumps into a tab, the header with its
+     button is then above the screen, and the keys "/" and Ctrl+K do not exist on a tablet). Hidden while the search is
+     open, while a figure is enlarged and on an exam paper. */
+  let fabBtn = null, headerSeen = true;
+  function fab(){
+    if (!fabBtn) return;
+    let exam = false; try { exam = !!(typeof Q !== 'undefined' && Q && Q.examMode && VIEW === 'exam'); } catch (e) {}
+    fabBtn.hidden = headerSeen || !!(dlg && dlg.open) || exam;
+    document.body.classList.toggle('srchfab-on', !fabBtn.hidden);   // the page's end can scroll out from under the button
+  }
+  function wireFab(){
+    if (document.getElementById('srchfab')) return;
+    fabBtn = document.createElement('button'); fabBtn.type = 'button'; fabBtn.id = 'srchfab'; fabBtn.hidden = true;
+    fabBtn.innerHTML = '<svg viewBox="0 0 20 20" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="8.5" cy="8.5" r="5.5"/><path d="M13 13l5 5"/></svg><span>Search</span>';
+    fabBtn.setAttribute('aria-label', 'Search the drill');
+    fabBtn.addEventListener('click', () => openDialog(fabBtn));
+    document.body.appendChild(fabBtn);
+    const hb = document.getElementById('btnSearch');
+    if (hb && typeof IntersectionObserver === 'function') {
+      new IntersectionObserver(es => { headerSeen = es.some(e => e.isIntersecting); fab(); }).observe(hb);
+    } else {
+      const on = () => { const r = hb ? hb.getBoundingClientRect() : null; headerSeen = !!r && r.bottom > 0 && r.top < innerHeight; fab(); };
+      window.addEventListener('scroll', on, {passive: true}); on();
+    }
+    document.addEventListener('click', () => setTimeout(fab, 0), true);
+  }
   const addCss = () => { if (document.getElementById('srchcss')) return; const st = document.createElement('style'); st.id = 'srchcss'; st.textContent = CSS; document.head.appendChild(st); };
   addCss();
   try { wire(); } catch (e) { console.error('The search button could not be added.', e); }
+  try { wireFab(); } catch (e) { console.error('The floating search button could not be added.', e); }
 
   return {open: openDialog, close, search: q => { try { return search(q); } catch (e) { return null; } }, size: () => { if (!IDX) build(); return IDX.length; }, expand, hit};
 })();

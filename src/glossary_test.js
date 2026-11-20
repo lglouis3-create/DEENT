@@ -405,7 +405,8 @@ const check = (ok, label, detail) => { n++; if (!ok) fail++; console.log((ok ? '
     const perf = await p.evaluate(async () => {
       const keep = GLOSSARY_UI.terms().slice(), syn = [];
       const A = 'acro bili cuta derm eryth fibro gluco hemo immuno kerat lipo melano neuro onycho patho'.split(' '), B = 'blast cyte genic lytic oma osis pathy plasia static trophy'.split(' ');
-      for (let i = 0; syn.length < 1500 - keep.length; i++) {
+      const want = Math.max(1500, keep.length + 600);
+      for (let i = 0; syn.length < want - keep.length; i++) {
         const a = A[i % A.length], c = B[(i / A.length | 0) % B.length], k = (i / 150 | 0);
         syn.push({id: 'syn' + i, term: a + c + (k ? ' type ' + k : ''), also: [a.slice(0, 2).toUpperCase() + c.slice(0, 1).toUpperCase() + i, a + ' ' + c + ' factor ' + i], def: 'Synthetic entry ' + i + ' for the timing test; ' + a + ' ' + c + '.', cite: 'Patel Acne slide ' + (1 + i % 40), src: 'slide', exam: 1 + i % 2, kind: 'term'});
       }
@@ -428,16 +429,16 @@ const check = (ok, label, detail) => { n++; if (!ok) fail++; console.log((ok ? '
       const nTyped = +document.getElementById('glcount').textContent.replace(/\D+/g, '');
       inp.value = ''; inp.dispatchEvent(new Event('input', {bubbles: true}));
       GLOSSARY_UI.setTerms(keep); GLOSSARY_UI.state.q = ''; GLOSSARY_UI.render();
-      return {total: keep.length + syn.length, build, worst, mean: sum / qs.length, found, rowDraw, first, all, nAll, typed, nTyped, chars: JSON.stringify(qs[0]).length};
+      return {want, total: keep.length + syn.length, build, worst, mean: sum / qs.length, found, rowDraw, first, all, nAll, typed, nTyped, chars: JSON.stringify(qs[0]).length};
     });
     await cdp.send('Emulation.setCPUThrottlingRate', {rate: 1});
     const f1 = x => Math.round(x * 10) / 10;
     console.log(`        ${tag} timing, 4x slower CPU, ${perf.total} terms: table built ${f1(perf.build)} ms; detection worst ${f1(perf.worst)} ms, mean ${f1(perf.mean)} ms over the 40 longest questions (longest ${perf.chars} characters); list first draw ${f1(perf.first)} ms, all ${perf.nAll} drawn after ${f1(perf.all)} ms; typed filter ${f1(perf.typed)} ms`);
-    check(perf.total === 1500 && perf.found === 'syn0,syn466,syn32,syn33', `${tag}: 1,500 terms: synthetic terms are found by name, numbered name, short form and long form`, perf.found);
+    check(perf.total === perf.want && perf.found === 'syn0,syn466,syn32,syn33', `${tag}: 1,500 terms: synthetic terms are found by name, numbered name, short form and long form`, perf.found);
     check(perf.worst < 30, `${tag}: 1,500 terms: detection for a question under 30 ms (worst ${f1(perf.worst)} ms)`);
     check(perf.build < 150, `${tag}: 1,500 terms: the table is built in under 150 ms (${f1(perf.build)} ms)`);
     check(perf.first < 150 && perf.typed < 150, `${tag}: 1,500 terms: first draw of the list and a typed filter under 150 ms (${f1(perf.first)}, ${f1(perf.typed)} ms)`);
-    check(perf.nAll === 1500 && perf.all < 4000 && perf.nTyped > 50, `${tag}: 1,500 terms: the whole list is drawn within 4 s (${Math.round(perf.all)} ms)`, perf);
+    check(perf.nAll === perf.want && perf.all < 4000 && perf.nTyped > 50, `${tag}: 1,500 terms: the whole list is drawn within 4 s (${Math.round(perf.all)} ms)`, perf);
 
     // another profile opened while the tab is showing: the list is drawn again from that profile's words
     const sw = await p.evaluate(() => { const me = PROFILE; GLOSSARY_UI.setTerms(GLOSSARY_UI.terms().length > 49 ? GLOSSARY_UI.terms().slice(0, 49) : GLOSSARY_UI.terms()); const id = GLOSSARY_UI.terms()[0].id;

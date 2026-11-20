@@ -1,5 +1,5 @@
 /* glossary_data.js: the course glossary read by glossary_ui.js (2026-11-15).
-   1009 entries from the slides of the eleven decks (Dr. Smith's Pathophysiology, PCol and Sun Exposure; Dr. Sikazwe's DPAW; Dr. Patel's
+   1078 entries from the slides of the eleven decks (Dr. Smith's Pathophysiology, PCol and Sun Exposure; Dr. Sikazwe's DPAW; Dr. Patel's
    Dermatitis, Acne, Scaly Dermatoses, Outdoor Exposures, Sun Exposure, Wound Care and Warts) and the Diseases tab's terms, each checked
    against its cited slide, or against the public source named in its cite when src is 'general' (a word the slides use without defining).
    Where the same term is taught by more than one professor the entry gives each definition under the professor's name, and parts lists them: [{prof, def, cite, src}], each with that professor's own cite; def and cite stay the joined text.
@@ -14072,8 +14072,8 @@ const GLOSSARY_TERMS = [
 "also": [
 "enamel fluorosis"
 ],
-"def": "Enamel damage from too much fluoride (>2 mg/L on slide 18). Dr. Sikazwe: it starts as white spots, especially in children, and can brown as stains are incorporated.",
-"cite": "OOO slide 18, T@21980 11/18",
+"def": "Enamel damage from too much fluoride (above 2 mg/L, slide 18). White spots, especially in children, can brown. He called it the new item added to slide 18 (11/19).",
+"cite": "OOO slide 18, T@21980 11/18, T@1828 11/19",
 "src": "slide",
 "deck": "oo",
 "prof": "Sikazwe",
@@ -14464,8 +14464,8 @@ const GLOSSARY_TERMS = [
 "also": [
 "imidazolines"
 ],
-"def": "A drug FG and class (slides 27, 31): the α2 agonists clonidine, apraclonidine and brimonidine (slide 31) and the decongestants on slide 55 contain it.",
-"cite": "OOO slide 27, OOO slide 31, OOO slide 55, T@37526 11/18",
+"def": "A drug FG and class (slides 27, 31): present in the alpha 2 agonists clonidine, apraclonidine and brimonidine (self-assessment question 4, answered 11/19). The decongestants on slide 55 are not on Exam 3.",
+"cite": "OOO slide 27, OOO slide 31, OOO slide 55, T@37526 11/18, T@34809 11/19",
 "src": "slide",
 "deck": "oo",
 "prof": "Sikazwe",
@@ -14533,8 +14533,8 @@ const GLOSSARY_TERMS = [
 "also": [
 "aryloxypropanolamines"
 ],
-"def": "The class of the β-antagonists timolol, betaxolol, levobunolol and carteolol (slide 33). Dr. Sikazwe: aromatic ring, oxygen beside it, then propanolamine (three carbons, alcohol and amine).",
-"cite": "OOO slide 27, OOO slide 33, T@38806 11/18",
+"def": "The class of the beta antagonists (slide 33): aryl ring, oxygen beside it, then propanolamine. Count the three carbons; with two it is no longer propanol. Duration 12 to 24 hours.",
+"cite": "OOO slide 27, OOO slide 33, T@38806 11/18, T@3813 11/19",
 "src": "slide",
 "deck": "oo",
 "prof": "Sikazwe",
@@ -14573,8 +14573,8 @@ const GLOSSARY_TERMS = [
 "also": [
 "β1 antagonist"
 ],
-"def": "Slide 34: most β-antagonists have mixed β1 + β2 activity, but most p-aryloxypropanolamines, such as betaxolol, are β1-antagonists.",
-"cite": "OOO slide 34",
+"def": "Slide 34: most beta antagonists have mixed beta 1 + beta 2 activity; most p-aryloxypropanolamines, such as betaxolol, are beta 1 antagonists (true para substitution).",
+"cite": "OOO slide 34, T@7099 11/19",
 "src": "slide",
 "deck": "oo",
 "prof": "Sikazwe",
@@ -14588,8 +14588,8 @@ const GLOSSARY_TERMS = [
 "PGF receptor",
 "PGF or FP receptor"
 ],
-"def": "Slide 44: every glaucoma prostaglandin increases fluid outflow through PGF or FP receptor activation.",
-"cite": "OOO slide 44",
+"def": "Slide 44: every glaucoma prostaglandin analog raises outflow through PGF (FP) receptor activation. The natural PGF2 alpha is too unstable, so analogs (log P above 3, potent) are used.",
+"cite": "OOO slide 44, T@23166 11/19",
 "src": "slide",
 "deck": "oo",
 "prof": "Sikazwe",
@@ -14603,8 +14603,8 @@ const GLOSSARY_TERMS = [
 "PGE2 receptor",
 "selective PGE2 or EP2 receptor agonist"
 ],
-"def": "Slide 47: the target of omidenepag isopropyl, a selective PGE2 or EP2 receptor agonist that increases fluid outflow.",
-"cite": "OOO slide 47",
+"def": "Slide 47: the target of omidenepag isopropyl, a selective PGE2 (EP2) receptor agonist that raises outflow; selectivity minimizes off-target activity.",
+"cite": "OOO slide 47, T@26608 11/19",
 "src": "slide",
 "deck": "oo",
 "prof": "Sikazwe",
@@ -14617,8 +14617,8 @@ const GLOSSARY_TERMS = [
 "also": [
 "PG SAR"
 ],
-"def": "Slide 46: acids (-COOH) and amides (-CONH-) are the active drugs; esters are prodrugs. Esters or amides attach at C-1; alkyl or phenyl ends the chain.",
-"cite": "OOO slide 46",
+"def": "Slide 46: acids and amides are active; esters are prodrugs (activated by CE). Positions: C-1 ester or amide, far chain alkyl or phenyl, C-15 OH or halogen, chain bond single or double.",
+"cite": "OOO slide 46, T@23780 11/19",
 "src": "slide",
 "deck": "oo",
 "prof": "Sikazwe",
@@ -14632,8 +14632,8 @@ const GLOSSARY_TERMS = [
 "15-OH",
 "C-15"
 ],
-"def": "Slide 46 SAR: C-15 carries OH or halogens; halogens prevent 15-OH oxidation.",
-"cite": "OOO slide 46",
+"def": "Slide 46 SAR: C-15 carries OH or a halogen; a halogen prevents oxidation of the 15-OH (which would give a ketone) and stabilizes the molecule.",
+"cite": "OOO slide 46, T@25877 11/19",
 "src": "slide",
 "deck": "oo",
 "prof": "Sikazwe",
@@ -14674,8 +14674,8 @@ const GLOSSARY_TERMS = [
 "omidenepag",
 "OMD"
 ],
-"def": "A pyridine sulfonamide EP2 agonist (ClogP=3) that increases fluid outflow; an ester prodrug that esterase hydrolysis converts to the active metabolite omidenepag (OMD) (slide 47).",
-"cite": "OOO slide 47",
+"def": "A pyridine sulfonamide EP2 agonist (FDA approved 2022; ClogP 3) that raises outflow; an ester prodrug that carboxylesterase converts to omidenepag (slide 47). EP2 selectivity minimizes off-target activity.",
+"cite": "OOO slide 47, T@26310 11/19",
 "src": "slide",
 "deck": "oo",
 "prof": "Sikazwe",
@@ -14702,8 +14702,8 @@ const GLOSSARY_TERMS = [
 "also": [
 "isoquinolines"
 ],
-"def": "The chemical class of netarsudil, the Rho kinase (ROCK) inhibitor on slide 48.",
-"cite": "OOO slide 48",
+"def": "The chemical class of netarsudil, the Rho kinase (ROCK) inhibitor of slide 48; an ester prodrug. Rho kinases are mostly two: ROCK1 and ROCK2.",
+"cite": "OOO slide 48, T@27850 11/19",
 "src": "slide",
 "deck": "oo",
 "prof": "Sikazwe",
@@ -14852,8 +14852,8 @@ const GLOSSARY_TERMS = [
 "H2CO3",
 "bicarbonate ion"
 ],
-"def": "On slide 35, carbonic anhydrase converts CO2 + H2O to H2CO3, which gives bicarbonate ion and H+; that pH change modulates aqueous humor production.",
-"cite": "OOO slide 35",
+"def": "On slide 35, carbonic anhydrase converts CO2 + H2O to H2CO3, giving bicarbonate and H+. Bicarbonate promotes osmotic water movement into the posterior chamber, adding to aqueous humor.",
+"cite": "OOO slide 35, T@9136 11/19",
 "src": "slide",
 "deck": "oo",
 "prof": "Sikazwe",
@@ -14866,8 +14866,8 @@ const GLOSSARY_TERMS = [
 "also": [
 "Sulfonamides (Zolamides)"
 ],
-"def": "Slide 36 sulfonamide CAIs: acetazolamide, methazolamide, brinzolamide and dorzolamide HCl. They competitively inhibit CAs and decrease intraocular fluid production.",
-"cite": "OOO slide 36",
+"def": "Slide 36 sulfonamide CAIs. First generation (acetazolamide, methazolamide): polar, oral, high doses. Second generation (brinzolamide, dorzolamide): lipophilic, topical, fewer systemic effects.",
+"cite": "OOO slide 36, T@11339 11/19",
 "src": "slide",
 "deck": "oo",
 "prof": "Sikazwe",
@@ -14881,8 +14881,8 @@ const GLOSSARY_TERMS = [
 "N-deethylations",
 "N-deethylated"
 ],
-"def": "Slide 37: CYPs N-deethylate both brinzolamide and dorzolamide, and the N-deethylated metabolites are active.",
-"cite": "OOO slide 37",
+"def": "Slide 37: CYPs remove the ethyl group from the nitrogen of brinzolamide and dorzolamide; the N-deethylated metabolites are active. He may ask what the product looks like.",
+"cite": "OOO slide 37, T@12940 11/19",
 "src": "slide",
 "deck": "oo",
 "prof": "Sikazwe",
@@ -14893,8 +14893,8 @@ const GLOSSARY_TERMS = [
 "id": "oo-thr199",
 "term": "Thr199",
 "also": [],
-"def": "The amino acid in carbonic anhydrase's active site that, with Zn, forms ionic and H-bond interactions with the CAI's SO2NH2 group (slide 38).",
-"cite": "OOO slide 38",
+"def": "The active-site amino acid that, with Zn, forms ionic and H-bond interactions with the CAI SO2NH2 group (slide 38, panel B: three H bonds, one ionic). Panel A is not needed.",
+"cite": "OOO slide 38, T@14462 11/19",
 "src": "slide",
 "deck": "oo",
 "prof": "Sikazwe",
@@ -14908,8 +14908,8 @@ const GLOSSARY_TERMS = [
 "direct-acting cholinergic",
 "direct cholinergics"
 ],
-"def": "Slide 40: carbamates and esters (carbachol Cl, pilocarpine HCl) that increase fluid outflow. SAR: acyloxy group, ionizable amine N, N-methyl groups, 2-carbon spacer between O and N.",
-"cite": "OOO slide 40",
+"def": "Slide 40: carbamates and esters (carbachol Cl, pilocarpine HCl) that mimic acetylcholine and raise outflow. Not on Exam 3: its SAR, which he removed on 11/19.",
+"cite": "OOO slide 40, T@17299 11/19",
 "src": "slide",
 "deck": "oo",
 "prof": "Sikazwe",
@@ -14951,8 +14951,8 @@ const GLOSSARY_TERMS = [
 "also": [
 "acyloxy"
 ],
-"def": "Slide 40 SAR for direct-acting cholinergics: the acyloxy group is needed for H-bonding to nicotinic/muscarinic receptors.",
-"cite": "OOO slide 40",
+"def": "Slide 40 SAR term for direct-acting cholinergics (H-bonding to the receptors). Not on Exam 3: he removed this SAR on 11/19.",
+"cite": "OOO slide 40, T@17299 11/19",
 "src": "slide",
 "deck": "oo",
 "prof": "Sikazwe",
@@ -14965,8 +14965,8 @@ const GLOSSARY_TERMS = [
 "also": [
 "two-carbon spacer"
 ],
-"def": "Slide 40 SAR for direct-acting cholinergics: two carbons between the O and the N.",
-"cite": "OOO slide 40",
+"def": "Slide 40 SAR term: two carbons between the O and the N of a direct-acting cholinergic. Not on Exam 3: he removed this SAR on 11/19.",
+"cite": "OOO slide 40, T@17299 11/19",
 "src": "slide",
 "deck": "oo",
 "prof": "Sikazwe",
@@ -14981,8 +14981,8 @@ const GLOSSARY_TERMS = [
 "organophosphates",
 "phosphoryl group"
 ],
-"def": "Indirect cholinergic FG (slide 42). Extent of AChE inhibition depends on the FG: phosphoryl > carbamate > ester. Slide 68 asks which FG gives irreversible inhibition.",
-"cite": "OOO slide 42, OOO slide 68",
+"def": "Indirect cholinergic FG (slide 42): phosphoryl longest duration, then carbamate, amide (his addition), ester. Irreversible: aging loses an ethyl group (O-deethylation); 2-PAM works only before aging.",
+"cite": "OOO slide 42, OOO slide 68, T@21483 11/19",
 "src": "slide",
 "deck": "oo",
 "prof": "Sikazwe",
@@ -15005,8 +15005,8 @@ const GLOSSARY_TERMS = [
 "id": "oo-phenylalanine",
 "term": "phenylalanine",
 "also": [],
-"def": "Lifitegrast is described on slide 51 as a phenylalanine; its phenylalanine part is circled in the structure.",
-"cite": "OOO slide 51",
+"def": "Lifitegrast is a phenylalanine (slide 51; the part circled). It is lipophilic with minimal systemic exposure, and what enters the circulation is eliminated unchanged (11/19).",
+"cite": "OOO slide 51, T@31164 11/19",
 "src": "slide",
 "deck": "oo",
 "prof": "Sikazwe",
@@ -15020,8 +15020,8 @@ const GLOSSARY_TERMS = [
 "levocabastine",
 "Livostin"
 ],
-"def": "A 2nd generation antihistamine for allergic conjunctivitis (Livostin, slide 53; structure on slide 54). Slide 54 sends the SAR to the allergy lecture.",
-"cite": "OOO slide 53, OOO slide 54",
+"def": "A 2nd generation antihistamine (Livostin, slides 53-54). Not on Exam 3: antihistamines were left to the antihistamine lecture (11/19).",
+"cite": "OOO slide 53, OOO slide 54, T@33467 11/19",
 "src": "slide",
 "deck": "oo",
 "prof": "Sikazwe",
@@ -15034,8 +15034,8 @@ const GLOSSARY_TERMS = [
 "also": [
 "imidazoline decongestant"
 ],
-"def": "Slide 55: oxymetazoline HCl (Afrin), xylometazoline HCl (Clear eyes), tetrahydrometazoline HCl (Visine) and naphazoline HCl (Otrivin); MoA is α1/α2 agonism.",
-"cite": "OOO slide 55",
+"def": "Slide 55: oxymetazoline, xylometazoline, tetrahydrometazoline and naphazoline; alpha 1/alpha 2 agonists. Not on Exam 3 (he ended the reading at slide 51 on 11/19).",
+"cite": "OOO slide 55, T@33467 11/19",
 "src": "slide",
 "deck": "oo",
 "prof": "Sikazwe",
@@ -15048,8 +15048,8 @@ const GLOSSARY_TERMS = [
 "also": [
 "xylometazoline"
 ],
-"def": "Imidazoline decongestant with a printed brand of Clear eyes products; MoA α1/α2 agonist (slide 55).",
-"cite": "OOO slide 55",
+"def": "Imidazoline decongestant, slide 55 (Clear eyes products as printed). Not on Exam 3 (reading ended at slide 51, 11/19).",
+"cite": "OOO slide 55, T@33467 11/19",
 "src": "slide",
 "deck": "oo",
 "prof": "Sikazwe",
@@ -15062,8 +15062,8 @@ const GLOSSARY_TERMS = [
 "also": [
 "tetrahydrometazoline"
 ],
-"def": "Imidazoline decongestant, spelled this way on slide 55, with a printed brand of Visine products; MoA α1/α2 agonist.",
-"cite": "OOO slide 55",
+"def": "Imidazoline decongestant, spelled this way on slide 55 (Visine products as printed). Not on Exam 3 (reading ended at slide 51, 11/19).",
+"cite": "OOO slide 55, T@33467 11/19",
 "src": "slide",
 "deck": "oo",
 "prof": "Sikazwe",
@@ -15076,8 +15076,8 @@ const GLOSSARY_TERMS = [
 "also": [
 "chromones"
 ],
-"def": "Slide 56 mast cell stabilizer class that inhibits granule histamine release: cromolyn Na (Opticrom) and nedocromil Na (Alocril).",
-"cite": "OOO slide 56",
+"def": "Slide 56 mast cell stabilizer class: cromolyn Na (Opticrom), nedocromil Na (Alocril). Not on Exam 3 (reading ended at slide 51, 11/19).",
+"cite": "OOO slide 56, T@33467 11/19",
 "src": "slide",
 "deck": "oo",
 "prof": "Sikazwe",
@@ -15090,8 +15090,8 @@ const GLOSSARY_TERMS = [
 "also": [
 "oxamic acids"
 ],
-"def": "Slide 56 mast cell stabilizer class, shown in red on lodoxamide tromethamine (Alomide), which has two oxamic acid groups.",
-"cite": "OOO slide 56",
+"def": "Slide 56 mast cell stabilizer class, shown on lodoxamide tromethamine (Alomide). Not on Exam 3 (reading ended at slide 51, 11/19).",
+"cite": "OOO slide 56, T@33467 11/19",
 "src": "slide",
 "deck": "oo",
 "prof": "Sikazwe",
@@ -15105,8 +15105,8 @@ const GLOSSARY_TERMS = [
 "cromolyn",
 "Opticrom"
 ],
-"def": "Chromone mast cell stabilizer (Opticrom, slide 56): two chromone rings joined through a hydroxy-propane linker; it inhibits granule histamine release.",
-"cite": "OOO slide 56",
+"def": "Chromone mast cell stabilizer (Opticrom, slide 56). Not on Exam 3 (reading ended at slide 51, 11/19).",
+"cite": "OOO slide 56, T@33467 11/19",
 "src": "slide",
 "deck": "oo",
 "prof": "Sikazwe",
@@ -15120,8 +15120,8 @@ const GLOSSARY_TERMS = [
 "nedocromil",
 "Alocril"
 ],
-"def": "Chromone mast cell stabilizer (Alocril, slide 56) that inhibits granule histamine release from mast cells.",
-"cite": "OOO slide 56",
+"def": "Chromone mast cell stabilizer (Alocril, slide 56). Not on Exam 3 (reading ended at slide 51, 11/19).",
+"cite": "OOO slide 56, T@33467 11/19",
 "src": "slide",
 "deck": "oo",
 "prof": "Sikazwe",
@@ -15135,8 +15135,8 @@ const GLOSSARY_TERMS = [
 "lodoxamide",
 "Alomide"
 ],
-"def": "Oxamic acid mast cell stabilizer (Alomide, slide 56) that inhibits histamine release from mast cells.",
-"cite": "OOO slide 56",
+"def": "Oxamic acid mast cell stabilizer (Alomide, slide 56). Not on Exam 3 (reading ended at slide 51, 11/19).",
+"cite": "OOO slide 56, T@33467 11/19",
 "src": "slide",
 "deck": "oo",
 "prof": "Sikazwe",
@@ -15150,8 +15150,8 @@ const GLOSSARY_TERMS = [
 "pemirolast",
 "Alamast"
 ],
-"def": "Mast cell stabilizer printed on slide 56 as Pemirolast K (Alamast), beside lodoxamide; slide 56 says its SAR is not clearly established.",
-"cite": "OOO slide 56",
+"def": "Mast cell stabilizer printed on slide 56 as Pemirolast K (Alamast). Not on Exam 3 (reading ended at slide 51, 11/19).",
+"cite": "OOO slide 56, T@33467 11/19",
 "src": "slide",
 "deck": "oo",
 "prof": "Sikazwe",
@@ -15165,8 +15165,8 @@ const GLOSSARY_TERMS = [
 "dual acting agents",
 "dual-acting"
 ],
-"def": "Slide 57 multi-cyclic drugs that are antihistamines plus mast cell stabilizers: azelastine, ketotifen, epinastine, olopatadine, bepotastine, alcaftadine.",
-"cite": "OOO slide 57",
+"def": "Slide 57: azelastine, ketotifen, epinastine, olopatadine, bepotastine, alcaftadine, antihistamines plus mast cell stabilizers. Not on Exam 3 (self-assessment question 2 skipped, 11/19).",
+"cite": "OOO slide 57, T@34124 11/19",
 "src": "slide",
 "deck": "oo",
 "prof": "Sikazwe",
@@ -15179,8 +15179,8 @@ const GLOSSARY_TERMS = [
 "also": [
 "multicyclic"
 ],
-"def": "Slide 57 SAR for dual-acting agents: they are multi-cyclic with ionizable N and COOH groups; slide 64 asks for the three commonest SAR groups.",
-"cite": "OOO slide 57, OOO slide 64",
+"def": "Slide 57 SAR term for dual-acting agents (multi-cyclic, ionizable N and COOH). Not on Exam 3: he skipped question 2 (slide 64) on 11/19.",
+"cite": "OOO slide 57, OOO slide 64, T@34124 11/19",
 "src": "slide",
 "deck": "oo",
 "prof": "Sikazwe",
@@ -15207,8 +15207,8 @@ const GLOSSARY_TERMS = [
 "also": [
 "glucocorticoid receptor complex"
 ],
-"def": "Slide 58: glucocorticoids activate the GR complex to produce proteins that in turn suppress pro-inflammatory proteins.",
-"cite": "OOO slide 58",
+"def": "Slide 58: glucocorticoids activate the GR complex to make proteins that suppress pro-inflammatory proteins. Not on Exam 3: he said the class is not focusing on steroids (11/19).",
+"cite": "OOO slide 58, T@33962 11/19",
 "src": "slide",
 "deck": "oo",
 "prof": "Sikazwe",
@@ -15221,8 +15221,8 @@ const GLOSSARY_TERMS = [
 "also": [
 "stereochemistry"
 ],
-"def": "Slide 58 shows steroid templates, numbering and stereochemistry; slide 59 says glucocorticoid students must know the C-atom numbering, stereochemistry and anti-inflammatory SAR.",
-"cite": "OOO slide 58, OOO slide 59",
+"def": "Slides 58-59: steroid numbering, stereochemistry and anti-inflammatory SAR. Not on Exam 3: he skipped self-assessment question 1 and the steroid slides on 11/19.",
+"cite": "OOO slide 58, OOO slide 59, T@33729 11/19",
 "src": "slide",
 "deck": "oo",
 "prof": "Sikazwe",
@@ -15233,8 +15233,8 @@ const GLOSSARY_TERMS = [
 "id": "oo-hydrocortisone",
 "term": "hydrocortisone",
 "also": [],
-"def": "Glucocorticoid steroid listed on slide 60 with its structure for the SAR.",
-"cite": "OOO slide 60",
+"def": "Glucocorticoid steroid on slide 60. Not on Exam 3 (he said to ignore the steroid slides, 11/19).",
+"cite": "OOO slide 60, T@33729 11/19",
 "src": "slide",
 "deck": "oo",
 "prof": "Sikazwe",
@@ -15245,8 +15245,8 @@ const GLOSSARY_TERMS = [
 "id": "oo-dexamethasone",
 "term": "dexamethasone",
 "also": [],
-"def": "Glucocorticoid steroid listed on slide 60; its structure is used for the anti-inflammatory SAR.",
-"cite": "OOO slide 60",
+"def": "Glucocorticoid steroid on slide 60. Not on Exam 3 (he said to ignore the steroid slides, 11/19).",
+"cite": "OOO slide 60, T@33729 11/19",
 "src": "slide",
 "deck": "oo",
 "prof": "Sikazwe",
@@ -15257,8 +15257,8 @@ const GLOSSARY_TERMS = [
 "id": "oo-prednisolone",
 "term": "prednisolone",
 "also": [],
-"def": "Glucocorticoid steroid listed on slide 60; its structure is used for the anti-inflammatory SAR.",
-"cite": "OOO slide 60",
+"def": "Glucocorticoid steroid on slide 60. Not on Exam 3 (he said to ignore the steroid slides, 11/19).",
+"cite": "OOO slide 60, T@33729 11/19",
 "src": "slide",
 "deck": "oo",
 "prof": "Sikazwe",
@@ -15269,8 +15269,8 @@ const GLOSSARY_TERMS = [
 "id": "oo-fluorometholone",
 "term": "fluorometholone",
 "also": [],
-"def": "Glucocorticoid steroid listed on slide 60; its structure is used for the anti-inflammatory SAR.",
-"cite": "OOO slide 60",
+"def": "Glucocorticoid steroid on slide 60. Not on Exam 3 (he said to ignore the steroid slides, 11/19).",
+"cite": "OOO slide 60, T@33729 11/19",
 "src": "slide",
 "deck": "oo",
 "prof": "Sikazwe",
@@ -15281,12 +15281,1009 @@ const GLOSSARY_TERMS = [
 "id": "oo-rimexolone",
 "term": "rimexolone",
 "also": [],
-"def": "Glucocorticoid steroid listed on slide 60; its structure is used for the anti-inflammatory SAR.",
-"cite": "OOO slide 60",
+"def": "Glucocorticoid steroid on slide 60. Not on Exam 3 (he said to ignore the steroid slides, 11/19).",
+"cite": "OOO slide 60, T@33729 11/19",
 "src": "slide",
 "deck": "oo",
 "prof": "Sikazwe",
 "exam": 3,
 "kind": "pharmacology"
+},
+{
+"id": "lg-iop",
+"term": "intraocular pressure (IOP)",
+"also": [
+"IOP",
+"eye pressure"
+],
+"def": "The pressure inside the eye; lowering it is the goal. A patient's own IOP reading need not be memorized; the 25-30% goal and the strongest classes must be known.",
+"cite": "Lam Glaucoma slide 14, 86, T@43663 11/19",
+"src": "lecture",
+"deck": "lg",
+"prof": "Lam",
+"exam": 3,
+"kind": "measure",
+"cs": true
+},
+{
+"id": "lg-poag",
+"term": "primary open-angle glaucoma (POAG)",
+"also": [
+"POAG",
+"open-angle glaucoma"
+],
+"def": "The glaucoma her objectives cover. It is asymptomatic until substantial visual field loss occurs, and drugs lower the IOP.",
+"cite": "Lam Glaucoma slide 2, 12, T@46345 11/19",
+"src": "slide",
+"deck": "lg",
+"prof": "Lam",
+"exam": 3,
+"kind": "disease",
+"cs": true
+},
+{
+"id": "lg-pacg",
+"term": "primary closed-angle glaucoma (PACG)",
+"also": [
+"PACG",
+"angle-closure glaucoma"
+],
+"def": "Not tested; she kept only which drugs can increase the risk: anticholinergics, antidepressants, alpha-1 agonists, beta-2 agonists. Acute symptoms are intense eye pain, halos, nausea and sudden vision loss.",
+"cite": "Lam Glaucoma slide 88, 89, 90, 91, T@94508 11/19",
+"src": "lecture",
+"deck": "lg",
+"prof": "Lam",
+"exam": 3,
+"kind": "disease",
+"cs": true
+},
+{
+"id": "lg-target-iop",
+"term": "target IOP",
+"also": [
+"IOP target",
+"IOP target level"
+],
+"def": "The IOP level set by an eye care professional. When baseline IOP is above 22 mm Hg, the initial target is a 25 to 30% decrease.",
+"cite": "Lam Glaucoma slide 14, T@47427 11/19",
+"src": "slide",
+"deck": "lg",
+"prof": "Lam",
+"exam": 3,
+"kind": "measure"
+},
+{
+"id": "lg-goal-of-therapy",
+"term": "goal of therapy",
+"also": [],
+"def": "For glaucoma: reduce intraocular pressure. The target level is determined by an eye care professional.",
+"cite": "Lam Glaucoma slide 13, 14",
+"src": "slide",
+"deck": "lg",
+"prof": "Lam",
+"exam": 3,
+"kind": "other"
+},
+{
+"id": "lg-mrp",
+"term": "medication-related problem",
+"also": [
+"MRP",
+"medication-related problems",
+"drug therapy problem"
+],
+"def": "A problem in one of four categories: indication, effectiveness, safety or adherence. She asks you to identify it in a case and design a plan to solve it.",
+"cite": "Lam Glaucoma slide 15, 16",
+"src": "slide",
+"deck": "lg",
+"prof": "Lam",
+"exam": 3,
+"kind": "other",
+"cs": true
+},
+{
+"id": "lg-elc",
+"term": "eyelid closure (ELC)",
+"also": [
+"ELC",
+"eyelid closure"
+],
+"def": "Closing the lids gently for 1 to 2 minutes after a drop. It decreases nasolacrimal drainage, systemic absorption and the severity of systemic side effects.",
+"cite": "Lam Glaucoma slide 72, 73, T@87190 11/19",
+"src": "slide",
+"deck": "lg",
+"prof": "Lam",
+"exam": 3,
+"kind": "counseling",
+"cs": true
+},
+{
+"id": "lg-bak",
+"term": "benzalkonium chloride (BAK)",
+"also": [
+"BAK",
+"benzalkonium chloride"
+],
+"def": "The common preservative in multi-dose eye drops. A reaction to it is a cause of intolerance, and it is damaging to the eyes when used with contact lenses.",
+"cite": "Lam Glaucoma slide 22, 83, T@54452 11/19",
+"src": "slide",
+"deck": "lg",
+"prof": "Lam",
+"exam": 3,
+"kind": "pharmacology",
+"cs": true
+},
+{
+"id": "lg-preservative-free",
+"term": "preservative-free",
+"also": [
+"non-preservative",
+"single-use bottle",
+"preservative free"
+],
+"def": "Products without preservative, in single-use individual bottles: latanoprost (Xelpros), tafluprost (Zioptan), Cosopt PF. She will say preservative-free in the exam stem.",
+"cite": "Lam Glaucoma slide 22, 35, 68, T@55501 11/19",
+"src": "lecture",
+"deck": "lg",
+"prof": "Lam",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "lg-pga",
+"term": "prostaglandin analog",
+"also": [
+"prostaglandin analogs",
+"prostaglandin analogues",
+"prost"
+],
+"def": "First-line class: increases aqueous humor outflow, lowers IOP up to 33%, once daily at night. Drug names contain prost. Intolerance: change formulation, switch class, or preservative-free.",
+"cite": "Lam Glaucoma slide 19, 20, 21",
+"src": "slide",
+"deck": "lg",
+"prof": "Lam",
+"exam": 3,
+"kind": "class"
+},
+{
+"id": "lg-beta-blocker",
+"term": "ophthalmic beta blocker",
+"also": [
+"beta blockers",
+"beta blocker",
+"-olol"
+],
+"def": "Decreases aqueous humor production, lowers IOP 20 to 30%, usually BID. Systemic effects: bradycardia, hypotension, bronchospasm. Names end in -olol.",
+"cite": "Lam Glaucoma slide 31, 32, 33",
+"src": "slide",
+"deck": "lg",
+"prof": "Lam",
+"exam": 3,
+"kind": "class"
+},
+{
+"id": "lg-alpha2",
+"term": "alpha-2 adrenergic agonist",
+"also": [
+"alpha-2 agonists",
+"alpha2 agonist"
+],
+"def": "Increases outflow and decreases aqueous humor production, lowers IOP 18 to 27%; brimonidine and apraclonidine. Precautions: cardiovascular and kidney disease, history of stroke.",
+"cite": "Lam Glaucoma slide 41, 42, 44",
+"src": "slide",
+"deck": "lg",
+"prof": "Lam",
+"exam": 3,
+"kind": "class"
+},
+{
+"id": "lg-cai",
+"term": "carbonic anhydrase inhibitor (CAI)",
+"also": [
+"CAI",
+"CAIs",
+"-zolamide",
+"zolamide"
+],
+"def": "Decreases aqueous humor production. Topical agents lower IOP 15 to 26% and are dosed TID; oral agents 25 to 40%. Names end in -zolamide.",
+"cite": "Lam Glaucoma slide 51, 53",
+"src": "slide",
+"deck": "lg",
+"prof": "Lam",
+"exam": 3,
+"kind": "class",
+"cs": true
+},
+{
+"id": "lg-oral-cai",
+"term": "oral carbonic anhydrase inhibitor",
+"also": [
+"acetazolamide and methazolamide",
+"oral CAI"
+],
+"def": "Acetazolamide and methazolamide: IOP reduction 25 to 40%, short-term use only because of systemic side effects; she rarely sees them used.",
+"cite": "Lam Glaucoma slide 53, T@75181 11/19",
+"src": "lecture",
+"deck": "lg",
+"prof": "Lam",
+"exam": 3,
+"kind": "class"
+},
+{
+"id": "lg-miotic",
+"term": "cholinergic agonist (miotic)",
+"also": [
+"cholinergic",
+"miotic",
+"miotics",
+"parasympathomimetic"
+],
+"def": "Increases aqueous humor outflow. Pilocarpine is the one she sees, QID; poor night vision and brow ache. Precautions: asthma, retinal detachment, corneal abrasion.",
+"cite": "Lam Glaucoma slide 57, 58, 59",
+"src": "slide",
+"deck": "lg",
+"prof": "Lam",
+"exam": 3,
+"kind": "class"
+},
+{
+"id": "lg-rock",
+"term": "Rho kinase inhibitor",
+"also": [
+"ROCK inhibitor",
+"Rho-kinase inhibitor"
+],
+"def": "Last class: increases outflow, decreases production and episcleral venous pressure, lowers IOP 20 to 30%. Netarsudil once daily in the evening; conjunctival hemorrhage in 51%.",
+"cite": "Lam Glaucoma slide 62",
+"src": "slide",
+"deck": "lg",
+"prof": "Lam",
+"exam": 3,
+"kind": "class"
+},
+{
+"id": "lg-salvage",
+"term": "salvage therapy",
+"also": [],
+"def": "Her description of the Rho kinase inhibitor: the last line agent, used when everything else has been tried.",
+"cite": "Lam Glaucoma slide 62, T@84060 11/19",
+"src": "lecture",
+"deck": "lg",
+"prof": "Lam",
+"exam": 3,
+"kind": "other"
+},
+{
+"id": "lg-combination",
+"term": "combination product",
+"also": [
+"combination products",
+"combination eye prescription"
+],
+"def": "One bottle with two drugs from different classes, to reduce the number of drops: Combigan BID, Cosopt BID, Simbrinza TID, Rocklatan once daily in the evening.",
+"cite": "Lam Glaucoma slide 69, T@86115 11/19",
+"src": "slide",
+"deck": "lg",
+"prof": "Lam",
+"exam": 3,
+"kind": "class"
+},
+{
+"id": "lg-suspension",
+"term": "ophthalmic suspension",
+"also": [
+"suspension",
+"suspensions"
+],
+"def": "Shake well before use; given after solutions, with 5 minutes between. Examples: brinzolamide 1% (Azopt), betaxolol (Betoptic-S). Retained longer in the tear film.",
+"cite": "Lam Glaucoma slide 74, 75, T@88186 11/19",
+"src": "slide",
+"deck": "lg",
+"prof": "Lam",
+"exam": 3,
+"kind": "counseling"
+},
+{
+"id": "lg-solution",
+"term": "ophthalmic solution",
+"also": [
+"solutions"
+],
+"def": "The first formulation in the order of application; wait 5 minutes before the next solution or a suspension.",
+"cite": "Lam Glaucoma slide 74, 75",
+"src": "slide",
+"deck": "lg",
+"prof": "Lam",
+"exam": 3,
+"kind": "counseling"
+},
+{
+"id": "lg-gel-forming",
+"term": "gel-forming solution",
+"also": [
+"ointment/gel-forming solution",
+"timolol gel",
+"gel formation"
+],
+"def": "Goes last in the order of application, with the ointments, and drops go at least 10 minutes before it. Timolol gel-forming solution is the example.",
+"cite": "Lam Glaucoma slide 74, 75, T@88661 11/19",
+"src": "lecture",
+"deck": "lg",
+"prof": "Lam",
+"exam": 3,
+"kind": "counseling"
+},
+{
+"id": "lg-wash-out",
+"term": "wash out",
+"also": [
+"washed out",
+"flushed away"
+],
+"def": "Why drops are separated: a second drop too soon flushes away or dilutes the first. The wait is 5 minutes for solutions, 10 before an ointment or gel.",
+"cite": "Lam Glaucoma slide 74, T@87847 11/19",
+"src": "lecture",
+"deck": "lg",
+"prof": "Lam",
+"exam": 3,
+"kind": "counseling"
+},
+{
+"id": "lg-rebound-redness",
+"term": "rebound redness",
+"also": [
+"rebound hyperemia",
+"rebound"
+],
+"def": "Redness returning after stopping an alpha-2 agonist used as a decongestant. She said rebound is low with the prescription for glaucoma and a concern with over-the-counter use.",
+"cite": "Lam Glaucoma slide 42, T@70330 11/19",
+"src": "lecture",
+"deck": "lg",
+"prof": "Lam",
+"exam": 3,
+"kind": "sign"
+},
+{
+"id": "lg-sig",
+"term": "sig abbreviations",
+"also": [
+"sig",
+"sig abbreviation"
+],
+"def": "The prescription directions written in abbreviations; she uses them in her case prescriptions: GTT, OD, OS, OU, QD, BID, TID, QID, QAM, QPM, QHS.",
+"cite": "Lam Glaucoma slide 4, T@40553 11/19",
+"src": "lecture",
+"deck": "lg",
+"prof": "Lam",
+"exam": 3,
+"kind": "abbreviation"
+},
+{
+"id": "lg-gtt",
+"term": "GTT",
+"also": [],
+"def": "Sig abbreviation: drop. A sig reading such as 1 gtt OU TID is 1 drop in both eyes three times a day.",
+"cite": "Lam Glaucoma slide 4",
+"src": "slide",
+"deck": "lg",
+"prof": "Lam",
+"exam": 3,
+"kind": "abbreviation",
+"cs": true
+},
+{
+"id": "lg-od",
+"term": "OD",
+"also": [],
+"def": "Sig abbreviation: right eye. Example: 1 gtt OD QID is one drop in the right eye four times a day.",
+"cite": "Lam Glaucoma slide 4",
+"src": "slide",
+"deck": "lg",
+"prof": "Lam",
+"exam": 3,
+"kind": "abbreviation",
+"cs": true
+},
+{
+"id": "lg-os",
+"term": "OS",
+"also": [],
+"def": "Sig abbreviation: left eye. Example: 1 gtt OS QAM is one drop in the left eye in the morning.",
+"cite": "Lam Glaucoma slide 4",
+"src": "slide",
+"deck": "lg",
+"prof": "Lam",
+"exam": 3,
+"kind": "abbreviation",
+"cs": true
+},
+{
+"id": "lg-ou",
+"term": "OU",
+"also": [],
+"def": "Sig abbreviation: both eyes. Example: bimatoprost 1 drop OU in the evening is both eyes.",
+"cite": "Lam Glaucoma slide 4",
+"src": "slide",
+"deck": "lg",
+"prof": "Lam",
+"exam": 3,
+"kind": "abbreviation",
+"cs": true
+},
+{
+"id": "lg-qd",
+"term": "QD",
+"also": [],
+"def": "Sig abbreviation: daily. Example: a once daily prostaglandin analog.",
+"cite": "Lam Glaucoma slide 4",
+"src": "slide",
+"deck": "lg",
+"prof": "Lam",
+"exam": 3,
+"kind": "abbreviation",
+"cs": true
+},
+{
+"id": "lg-bid",
+"term": "BID",
+"also": [],
+"def": "Sig abbreviation: twice daily. Beta blocker solutions and brimonidine are BID; Combigan and Cosopt are BID.",
+"cite": "Lam Glaucoma slide 4",
+"src": "slide",
+"deck": "lg",
+"prof": "Lam",
+"exam": 3,
+"kind": "abbreviation",
+"cs": true
+},
+{
+"id": "lg-tid",
+"term": "TID",
+"also": [],
+"def": "Sig abbreviation: three times a day. Dorzolamide, brinzolamide and Simbrinza are TID.",
+"cite": "Lam Glaucoma slide 4",
+"src": "slide",
+"deck": "lg",
+"prof": "Lam",
+"exam": 3,
+"kind": "abbreviation",
+"cs": true
+},
+{
+"id": "lg-qid",
+"term": "QID",
+"also": [],
+"def": "Sig abbreviation: four times a day. Pilocarpine is QID.",
+"cite": "Lam Glaucoma slide 4",
+"src": "slide",
+"deck": "lg",
+"prof": "Lam",
+"exam": 3,
+"kind": "abbreviation",
+"cs": true
+},
+{
+"id": "lg-qam",
+"term": "QAM",
+"also": [],
+"def": "Sig abbreviation: in the morning. Once, in the morning.",
+"cite": "Lam Glaucoma slide 4",
+"src": "slide",
+"deck": "lg",
+"prof": "Lam",
+"exam": 3,
+"kind": "abbreviation",
+"cs": true
+},
+{
+"id": "lg-qpm",
+"term": "QPM",
+"also": [],
+"def": "Sig abbreviation: in the evening. Once, in the evening.",
+"cite": "Lam Glaucoma slide 4",
+"src": "slide",
+"deck": "lg",
+"prof": "Lam",
+"exam": 3,
+"kind": "abbreviation",
+"cs": true
+},
+{
+"id": "lg-qhs",
+"term": "QHS",
+"also": [],
+"def": "Sig abbreviation: in the evening (handout). The handout also lists QHS as in the evening; netarsudil is QHS on the slide.",
+"cite": "Lam Glaucoma slide 4",
+"src": "slide",
+"deck": "lg",
+"prof": "Lam",
+"exam": 3,
+"kind": "abbreviation",
+"cs": true
+},
+{
+"id": "lg-bimatoprost",
+"term": "bimatoprost",
+"also": [
+"Lumigan"
+],
+"def": "Prostaglandin analog (Lumigan) 0.01%, 0.03%, once daily. Slightly more effective than latanoprost; switch to it for patients unresponsive to latanoprost.",
+"cite": "Lam Glaucoma slide 19, 23, T@71578 11/19",
+"src": "lecture",
+"deck": "lg",
+"prof": "Lam",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "lg-latisse",
+"term": "Latisse",
+"also": [],
+"def": "The brand of bimatoprost indicated for eyelash hypotrichosis (inadequate eyelash growth), not for glaucoma.",
+"cite": "Lam Glaucoma slide 19, T@50766 11/19",
+"src": "lecture",
+"deck": "lg",
+"prof": "Lam",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "lg-latanoprost",
+"term": "latanoprost",
+"also": [
+"Xalatan",
+"Xelpros"
+],
+"def": "Prostaglandin analog, once daily (Xalatan, Xelpros). Lower efficacy than bimatoprost. Xelpros is preservative-free. Refrigerate before opening; room temperature after.",
+"cite": "Lam Glaucoma slide 19, 22, 85",
+"src": "slide",
+"deck": "lg",
+"prof": "Lam",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "lg-latanoprostene",
+"term": "latanoprostene bunod",
+"also": [
+"Vyzulta"
+],
+"def": "Prostaglandin analog (Vyzulta), a prodrug of latanoprost. Refrigerate before opening; room temperature after.",
+"cite": "Lam Glaucoma slide 19, 85",
+"src": "slide",
+"deck": "lg",
+"prof": "Lam",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "lg-travoprost",
+"term": "travoprost",
+"also": [
+"Travatan Z",
+"Travatan"
+],
+"def": "Prostaglandin analog (Travatan Z), once daily; in her Ms. Lopez case, 1 drop OU daily.",
+"cite": "Lam Glaucoma slide 19, 37",
+"src": "slide",
+"deck": "lg",
+"prof": "Lam",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "lg-tafluprost",
+"term": "tafluprost",
+"also": [
+"Zioptan"
+],
+"def": "Prostaglandin analog (Zioptan), once daily; preservative-free. Refrigerate before opening; room temperature after.",
+"cite": "Lam Glaucoma slide 19, 22, 85",
+"src": "slide",
+"deck": "lg",
+"prof": "Lam",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "lg-timolol",
+"term": "timolol",
+"also": [
+"Timoptic",
+"Istalol"
+],
+"def": "Beta blocker (Timoptic, Istalol) 0.25%, 0.5%, BID; the beta blocker most dispensed. Comes as a gel (Timoptic-XE) and in Cosopt and Combigan.",
+"cite": "Lam Glaucoma slide 32, T@58687 11/19",
+"src": "lecture",
+"deck": "lg",
+"prof": "Lam",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "lg-timoptic-xe",
+"term": "Timoptic-XE",
+"also": [
+"timolol gel",
+"Timoptic XE"
+],
+"def": "Timolol gel, 1 drop daily. Fewer drops per day and decreased systemic effects compared with the solution; goes in the gel group of the order of application.",
+"cite": "Lam Glaucoma slide 32, 37, 75",
+"src": "slide",
+"deck": "lg",
+"prof": "Lam",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "lg-betaxolol",
+"term": "betaxolol",
+"also": [
+"Betoptic",
+"Betoptic-S"
+],
+"def": "Beta blocker (Betoptic 0.5%, Betoptic-S 0.25% suspension), BID. Less effective than timolol and levobunolol and rarely used; less risk with asthma or COPD precautions.",
+"cite": "Lam Glaucoma slide 32, 34, T@59480 11/19",
+"src": "lecture",
+"deck": "lg",
+"prof": "Lam",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "lg-carteolol",
+"term": "carteolol",
+"also": [
+"Ocupress"
+],
+"def": "Beta blocker 1% (Ocupress), BID; less risk with the beta blocker precautions.",
+"cite": "Lam Glaucoma slide 32, 34",
+"src": "slide",
+"deck": "lg",
+"prof": "Lam",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "lg-levobunolol",
+"term": "levobunolol",
+"also": [
+"Betagan"
+],
+"def": "Beta blocker 0.25%, 0.5% (Betagan), BID.",
+"cite": "Lam Glaucoma slide 32",
+"src": "slide",
+"deck": "lg",
+"prof": "Lam",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "lg-brimonidine",
+"term": "brimonidine",
+"also": [
+"Alphagan P",
+"Alphagan"
+],
+"def": "Alpha-2 agonist (Alphagan P), BID, various concentrations; in Combigan and Simbrinza. Her case: 0.1% solution 1 drop OU BID.",
+"cite": "Lam Glaucoma slide 42, 47",
+"src": "slide",
+"deck": "lg",
+"prof": "Lam",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "lg-lumify",
+"term": "Lumify",
+"also": [
+"brimonidine 0.025%",
+"OTC brimonidine"
+],
+"def": "Over-the-counter brimonidine 0.025% for ocular redness, not glaucoma. It is not therapeutic substitution for prescription brimonidine; rebound is the concern.",
+"cite": "Lam Glaucoma slide 42, 47, T@69314 11/19",
+"src": "lecture",
+"deck": "lg",
+"prof": "Lam",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "lg-apraclonidine",
+"term": "apraclonidine",
+"also": [
+"Iopidine"
+],
+"def": "Alpha-2 agonist (Iopidine) 0.5%, 1%, BID or TID; higher incidence of side effects. Decreasing the frequency is an intolerance step only for it.",
+"cite": "Lam Glaucoma slide 42, 45",
+"src": "slide",
+"deck": "lg",
+"prof": "Lam",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "lg-dorzolamide",
+"term": "dorzolamide",
+"also": [
+"Trusopt"
+],
+"def": "Topical CAI 2% (Trusopt), 1 drop TID; in Cosopt with timolol. Her day-supply example: 1 gtt OU TID.",
+"cite": "Lam Glaucoma slide 5, 51",
+"src": "slide",
+"deck": "lg",
+"prof": "Lam",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "lg-brinzolamide",
+"term": "brinzolamide",
+"also": [
+"Azopt"
+],
+"def": "Topical CAI 1% suspension (Azopt), TID; in Simbrinza with brimonidine. Shake the suspension; it goes after solutions.",
+"cite": "Lam Glaucoma slide 51, 69",
+"src": "slide",
+"deck": "lg",
+"prof": "Lam",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "lg-acetazolamide",
+"term": "acetazolamide and methazolamide",
+"also": [
+"acetazolamide",
+"methazolamide"
+],
+"def": "Oral carbonic anhydrase inhibitors: IOP reduction 25 to 40%, short term only. She rarely sees them, for quick IOP reduction or when vision is being lost.",
+"cite": "Lam Glaucoma slide 53, T@78192 11/19",
+"src": "lecture",
+"deck": "lg",
+"prof": "Lam",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "lg-pilocarpine",
+"term": "pilocarpine",
+"also": [
+"Isopto Carpine"
+],
+"def": "Cholinergic (Isopto Carpine) 1%, 2%, 4%, QID; the one she sees. Rarely used for efficacy and four times a day dosing. Brow ache from ciliary spasm.",
+"cite": "Lam Glaucoma slide 57, T@80784 11/19",
+"src": "lecture",
+"deck": "lg",
+"prof": "Lam",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "lg-carbachol",
+"term": "carbachol",
+"also": [
+"Miostat"
+],
+"def": "Cholinergic (Miostat), often used for surgery instead of glaucoma.",
+"cite": "Lam Glaucoma slide 57",
+"src": "slide",
+"deck": "lg",
+"prof": "Lam",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "lg-echothiophate",
+"term": "echothiophate",
+"also": [],
+"def": "Cholinergic with many serious ocular and systemic toxic effects, such as severe fibrinous iritis.",
+"cite": "Lam Glaucoma slide 57",
+"src": "slide",
+"deck": "lg",
+"prof": "Lam",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "lg-netarsudil",
+"term": "netarsudil",
+"also": [
+"Rhopressa"
+],
+"def": "Rho kinase inhibitor 0.02% (Rhopressa), once daily in the evening. Refrigerate before opening; room temperature less than 6 weeks after.",
+"cite": "Lam Glaucoma slide 62, 85",
+"src": "slide",
+"deck": "lg",
+"prof": "Lam",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "lg-combigan",
+"term": "Combigan",
+"also": [
+"brimonidine/timolol",
+"brimonidine tartrate/timolol maleate"
+],
+"def": "Alpha-2 agonist plus beta blocker, 1 drop BID.",
+"cite": "Lam Glaucoma slide 42, 69",
+"src": "slide",
+"deck": "lg",
+"prof": "Lam",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "lg-cosopt",
+"term": "Cosopt",
+"also": [
+"Cosopt PF",
+"dorzolamide/timolol"
+],
+"def": "CAI plus beta blocker, 1 drop BID; Cosopt PF is the preservative-free form.",
+"cite": "Lam Glaucoma slide 51, 69",
+"src": "slide",
+"deck": "lg",
+"prof": "Lam",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "lg-simbrinza",
+"term": "Simbrinza",
+"also": [
+"brinzolamide/brimonidine"
+],
+"def": "CAI plus alpha-2 agonist, 1 drop TID. The combination table names brinzolamide; slide 51 prints dorzolamide.",
+"cite": "Lam Glaucoma slide 42, 51, 69",
+"src": "slide",
+"deck": "lg",
+"prof": "Lam",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "lg-rocklatan",
+"term": "Rocklatan",
+"also": [
+"netarsudil plus latanoprost"
+],
+"def": "Netarsudil plus latanoprost, 1 drop once daily in the evening.",
+"cite": "Lam Glaucoma slide 19, 62",
+"src": "slide",
+"deck": "lg",
+"prof": "Lam",
+"exam": 3,
+"kind": "pharmacology"
+},
+{
+"id": "lg-conj-hemorrhage",
+"term": "conjunctival hemorrhage",
+"also": [
+"conjunctival hyperemia"
+],
+"def": "Local side effect of netarsudil, reported in 51% in clinical trials; she said this keeps it from being used often.",
+"cite": "Lam Glaucoma slide 62, T@83211 11/19",
+"src": "lecture",
+"deck": "lg",
+"prof": "Lam",
+"exam": 3,
+"kind": "sign"
+},
+{
+"id": "lg-brow-ache",
+"term": "brow ache",
+"also": [
+"frontal headache",
+"eyebrow ache"
+],
+"def": "Pilocarpine side effect from ciliary muscle spasm; the one patients most complain about.",
+"cite": "Lam Glaucoma slide 58, T@81887 11/19",
+"src": "lecture",
+"deck": "lg",
+"prof": "Lam",
+"exam": 3,
+"kind": "sign"
+},
+{
+"id": "lg-acidosis",
+"term": "systemic acidosis",
+"also": [
+"acidosis"
+],
+"def": "Side effect of oral CAIs: malaise, fatigue, anorexia, nausea, weight loss, altered taste. Know oral CAIs cause systemic acidosis and are last line; she would not test Dr. Smith's detail, with no guarantee.",
+"cite": "Lam Glaucoma slide 53, T@77815 11/19",
+"src": "lecture",
+"deck": "lg",
+"prof": "Lam",
+"exam": 3,
+"kind": "sign"
+},
+{
+"id": "lg-drug-induced",
+"term": "drug-induced glaucoma",
+"also": [
+"drug-induced glaucoma",
+"increased IOP from drugs"
+],
+"def": "Raised IOP from corticosteroids (ophthalmic highest risk, then systemic, then nasal) and anticholinergics. She said this is a very common question.",
+"cite": "Lam Glaucoma slide 8, 9, 10, 11, T@43926 11/19",
+"src": "lecture",
+"deck": "lg",
+"prof": "Lam",
+"exam": 3,
+"kind": "disease"
+},
+{
+"id": "lg-mydriasis",
+"term": "mydriasis",
+"also": [],
+"def": "Pupil dilation; the anticholinergic mechanism behind drug-induced glaucoma on her handout.",
+"cite": "Lam Glaucoma slide 8",
+"src": "slide",
+"deck": "lg",
+"prof": "Lam",
+"exam": 3,
+"kind": "sign"
+},
+{
+"id": "lg-hypotrichosis",
+"term": "eyelash hypotrichosis",
+"also": [
+"inadequate eyelash growth"
+],
+"def": "Inadequate growth of eyelashes; the indication of Latisse (bimatoprost).",
+"cite": "Lam Glaucoma slide 19",
+"src": "slide",
+"deck": "lg",
+"prof": "Lam",
+"exam": 3,
+"kind": "disease"
+},
+{
+"id": "lg-contact-lens-wait",
+"term": "contact lens wait",
+"also": [
+"15 minutes",
+"remove lenses"
+],
+"def": "Remove lenses before the drops and wait 15 minutes before reinserting; lenses trap drugs and preservatives against the eye. Especially important with BAK.",
+"cite": "Lam Glaucoma slide 83, T@91467 11/19",
+"src": "slide",
+"deck": "lg",
+"prof": "Lam",
+"exam": 3,
+"kind": "counseling"
+},
+{
+"id": "lg-adherence",
+"term": "adherence",
+"also": [
+"compliance",
+"nonadherence"
+],
+"def": "Whether the patient can and does use the drops: forgetting, cost, cannot administer, too many drops. More drops and higher frequency lower it.",
+"cite": "Lam Glaucoma slide 16, T@75564 11/19",
+"src": "slide",
+"deck": "lg",
+"prof": "Lam",
+"exam": 3,
+"kind": "other"
+},
+{
+"id": "lg-sequence",
+"term": "sequence of drugs",
+"also": [
+"drug sequence",
+"add-on order"
+],
+"def": "Order of classes added for a partial response: prostaglandin analog, beta blocker, alpha-2 agonist, topical CAI, cholinergic, Rho kinase inhibitor. At least one exam question.",
+"cite": "Lam Glaucoma slide 63, T@84448 11/19",
+"src": "lecture",
+"deck": "lg",
+"prof": "Lam",
+"exam": 3,
+"kind": "other"
 }
 ];

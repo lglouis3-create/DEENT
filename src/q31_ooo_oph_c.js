@@ -14,8 +14,8 @@ QUESTIONS.push(
   {t:"H1 receptor blockade and mast cell granule stabilization", correct:false, why:"Slides 52–56: these belong to allergic conjunctivitis, not dry eye disease."},
   {t:"Calcineurin inhibition and integrin LFA-1 receptor inhibition", correct:true, why:"Slide 49 lists exactly these two, then topical corticosteroids for the inflammation."},
   {t:"FP receptor activation and EP2 receptor activation", correct:false, why:"Slides 44–47: prostaglandin and EP2 agonists increase aqueous outflow in glaucoma."}],
- teach:"Slide 49: dry eye disease is multifactorial; pharmacotherapy is calcineurin inhibition (cyclosporine), integrin LFA-1 receptor inhibition (lifitegrast) and topical corticosteroids for the inflammation.",
- cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slide 49"},
+ teach:"Slide 49: dry eye disease is multifactorial; pharmacotherapy is calcineurin inhibition (cyclosporine), integrin LFA-1 receptor inhibition (lifitegrast) and topical corticosteroids for the inflammation. In lecture he framed these as anti-inflammatory approaches: calcineurin inhibition and the LFA-1 cascade (both lower T-cell activation), short-term steroids, and artificial tears if these fail (11/19).",
+ cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slide 49; T@28928 11/19"},
 
 {id:"OA-002", skill:"class", prof:'Sikazwe', tier:'new', topic:"oo-de", sub:"drugs", concept:"oo-de-cyclosporine-class",
  tags:["hard", "tell"], source:"slide",
@@ -25,8 +25,8 @@ QUESTIONS.push(
   {t:"Cyclic peptide", correct:true, why:"Slide 50 heads its entry \"Cyclic peptide\"."},
   {t:"Steroid", correct:false, why:"Slide 49 lists topical steroids as a separate approach, with a four-ring carbon nucleus that cyclosporine lacks."},
   {t:"Imidazoline", correct:false, why:"Slides 31 and 55: imidazolines are the alpha agonists and decongestants."}],
- teach:"Slide 50: cyclosporine (Restasis) is a cyclic peptide; its calcineurin inhibition lowers T-cell activation and its log P is 4.",
- cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slide 50"},
+ teach:"Slide 50: cyclosporine (Restasis) is a cyclic peptide; its calcineurin inhibition lowers T-cell activation and its log P is 4. Slide 50 also prints prodrug; in lecture he did not call it a prodrug and said it is not metabolized in the eye (11/19).",
+ cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slide 50; T@29641 11/19"},
 
 {id:"OA-003", skill:"chem", prof:'Sikazwe', tier:'new', topic:"oo-de", sub:"drugs", concept:"oo-de-lifitegrast-cbda",
  tags:["hard", "tell"], source:"slide",
@@ -37,7 +37,7 @@ QUESTIONS.push(
   {t:"Loteprednol", correct:false, why:"Slide 60: a glucocorticoid acts through the GR complex (slide 58)."},
   {t:"Nedocromil sodium", correct:false, why:"Slide 56: nedocromil inhibits histamine release from mast cell granules."}],
  teach:"Slide 51: lifitegrast (Xiidra) is a phenylalanine derivative that blocks ICAM-1 from binding integrin LFA-1, so T-cell activation falls.",
- cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slide 51"},
+ cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slide 51; T@31234 11/19"},
 
 {id:"OA-004", skill:"mech", prof:'Sikazwe', tier:'new', topic:"oo-de", sub:"drugs", concept:"oo-de-new-calcineurin",
  tags:["hard", "reasoning"], source:"slide",
@@ -48,7 +48,7 @@ QUESTIONS.push(
   {t:"Epinastine", correct:false, why:"Slide 57: a dual-acting antihistamine and mast cell stabilizer."},
   {t:"Cyclosporine", correct:true, why:"Slide 50: cyclosporine is a calcineurin inhibitor that lowers T-cell activation."}],
  teach:"Slides 49–51: both dry eye drugs lower T-cell activation (the summary calls them indirect T-cell inhibitors, slide 61): cyclosporine through calcineurin, lifitegrast through the ICAM-1 to LFA-1 interaction.",
- cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slides 49–51, 61"},
+ cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slides 49–51, 61; T@29694 11/19"},
 
 {id:"OA-005", skill:"chem", prof:'Sikazwe', tier:'new', topic:"oo-de", sub:"drugs", concept:"oo-de-lifitegrast-class",
  tags:["hard", "tell"], source:"slide",
@@ -59,7 +59,7 @@ QUESTIONS.push(
   {t:"Phenylalanine", correct:true, why:"Slide 51 labels lifitegrast \"A Phenylalanine\" and circles that portion with its carboxylic acid."},
   {t:"Tyrosine", correct:false, why:"Tyrosine would carry a phenol; the circled ring carries a methyl sulfone, and the slide names phenylalanine."}],
  teach:"Slide 51: lifitegrast (Xiidra) is a phenylalanine derivative, log P 4, eliminated mostly unchanged.",
- cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slide 51"},
+ cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slide 51; T@31164 11/19"},
 
 {id:"OA-006", skill:"chem", prof:'Sikazwe', tier:'new', topic:"oo-de", sub:"drugs", concept:"oo-de-lifitegrast-acid-vs-sulfonamide",
  tags:["hard", "two-facts"], source:"slide",
@@ -70,7 +70,7 @@ QUESTIONS.push(
   {t:"Phenol; methyl sulfone", correct:false, why:"No phenol is drawn on the circled portion; the acid is COOH."},
   {t:"Sulfonic acid; carboxylic acid", correct:false, why:"The ring substituent is a methyl sulfone, and the acidic group is the carboxylic acid."}],
  teach:"Slide 51: the circled portion has a carboxylic acid; its ring carries a methyl sulfone, not the SO2NH2 sulfonamide of the carbonic anhydrase inhibitors (slide 38).",
- cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slides 38, 51"},
+ cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slides 38, 51; T@31164 11/19"},
 
 {id:"OA-007", skill:"pk", prof:'Sikazwe', tier:'new', topic:"oo-de", sub:"drugs", concept:"oo-de-logp-vs-targets",
  tags:["hard", "two-facts"], source:"slide",
@@ -80,8 +80,8 @@ QUESTIONS.push(
   {t:"Equal log P; the same target", correct:false, why:"Slides 50-51: calcineurin and integrin LFA-1 are different targets."},
   {t:"Different log P; the same target", correct:false, why:"Both are log P 4, and the targets differ (calcineurin versus integrin LFA-1)."},
   {t:"Different log P; different targets", correct:false, why:"The targets differ, but both log P values are 4 on slides 50 and 51."}],
- teach:"Slides 50–51: cyclosporine and lifitegrast both have log P 4. Cyclosporine inhibits calcineurin; lifitegrast blocks ICAM-1 binding to integrin LFA-1.",
- cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slides 50–51"},
+ teach:"Slides 50–51: cyclosporine and lifitegrast both have log P 4. Cyclosporine inhibits calcineurin; lifitegrast blocks ICAM-1 binding to integrin LFA-1. He called both lipophilic, with minimal systemic exposure (11/19).",
+ cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slides 50–51; T@29798 11/19; T@31416 11/19"},
 
 {id:"OA-008", skill:"pk", prof:'Sikazwe', tier:'new', topic:"oo-de", sub:"drugs", concept:"oo-de-lifitegrast-elim",
  tags:["hard", "reasoning"], source:"slide",
@@ -91,8 +91,8 @@ QUESTIONS.push(
   {t:"Esterase hydrolysis of a prodrug", correct:false, why:"Slides 46–48: this activates ester prodrugs such as omidenepag isopropyl and netarsudil."},
   {t:"Glucuronidation of a phenol", correct:false, why:"Lifitegrast has no phenol and slide 51 states elimination mostly unchanged."},
   {t:"Mostly unchanged", correct:true, why:"Slide 51: \"Eliminated mostly unchanged\"."}],
- teach:"Slide 51: lifitegrast is eliminated mostly unchanged.",
- cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slide 51"},
+ teach:"Slide 51: lifitegrast is eliminated mostly unchanged. In lecture: whatever gets into the circulation gets out intact (11/19).",
+ cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slide 51; T@31563 11/19"},
 
 {id:"OA-009", skill:"class", prof:'Sikazwe', tier:'new', topic:"oo-de", sub:"drugs", concept:"oo-de-summary-group",
  tags:["hard", "tell"], source:"slide",
@@ -105,7 +105,7 @@ QUESTIONS.push(
  teach:"Slide 61: dry eye diseases are summarized as indirect T-cell inhibitors; glaucoma and allergic conjunctivitis have their own headings.",
  cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slide 61"},
 
-{id:"OA-010", skill:"class", prof:'Sikazwe', tier:'new', topic:"oo-ac", sub:"h1", concept:"oo-ac-pheniramine-gen",
+{id:"OA-010", skill:"class", prof:'Sikazwe', lowYield:true, tier:'new', topic:"oo-beyond", sub:"h1", note:"Not on Exam 3: on 11/19 he told the class to end the reading at slide 51 and left allergic conjunctivitis (antihistamines, decongestants, mast cell stabilizers, dual-acting agents) to the antihistamine lecture (T@32303, T@33467). Kept for optional practice.", concept:"oo-ac-pheniramine-gen",
  tags:["hard", "tell"], source:"slide",
  stem:"Opcon-A contains which H1 antihistamine, and to which generation does it belong?",
  options:[
@@ -116,7 +116,7 @@ QUESTIONS.push(
  teach:"Slide 53: first generation, pheniramine maleate (Opcon-A); second generation, cetirizine (Zerviate) and levocabastine HCl (Livostin).",
  cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slide 53"},
 
-{id:"OA-011", skill:"tell", prof:'Sikazwe', tier:'new', topic:"oo-ac", sub:"h1", concept:"oo-ac-livostin",
+{id:"OA-011", skill:"tell", prof:'Sikazwe', lowYield:true, tier:'new', topic:"oo-beyond", sub:"h1", note:"Not on Exam 3: on 11/19 he told the class to end the reading at slide 51 and left allergic conjunctivitis (antihistamines, decongestants, mast cell stabilizers, dual-acting agents) to the antihistamine lecture (T@32303, T@33467). Kept for optional practice.", concept:"oo-ac-livostin",
  tags:["hard", "tell"], source:"slide",
  stem:"Livostin is the brand of which H1 antihistamine?",
  options:[
@@ -127,7 +127,7 @@ QUESTIONS.push(
  teach:"Slide 53: Opcon-A, pheniramine maleate; Zerviate, cetirizine; Livostin, levocabastine HCl.",
  cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slide 53"},
 
-{id:"OA-012", skill:"tell", prof:'Sikazwe', tier:'new', topic:"oo-ac", sub:"h1", concept:"oo-ac-nitrile",
+{id:"OA-012", skill:"tell", prof:'Sikazwe', lowYield:true, tier:'new', topic:"oo-beyond", sub:"h1", note:"Not on Exam 3: on 11/19 he told the class to end the reading at slide 51 and left allergic conjunctivitis (antihistamines, decongestants, mast cell stabilizers, dual-acting agents) to the antihistamine lecture (T@32303, T@33467). Kept for optional practice.", concept:"oo-ac-nitrile",
  tags:["hard", "tell"], source:"slide",
  stem:"Which H1 antihistamine contains a nitrile functional group?",
  options:[
@@ -138,7 +138,7 @@ QUESTIONS.push(
  teach:"Slide 54: levocabastine carries a nitrile (CN), a fluorophenyl, a carboxylic acid and a piperidine.",
  cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slides 54, 57"},
 
-{id:"OA-013", skill:"chem", prof:'Sikazwe', tier:'new', topic:"oo-ac", sub:"h1", concept:"oo-ac-cetirizine-features",
+{id:"OA-013", skill:"chem", prof:'Sikazwe', lowYield:true, tier:'new', topic:"oo-beyond", sub:"h1", note:"Not on Exam 3: on 11/19 he told the class to end the reading at slide 51 and left allergic conjunctivitis (antihistamines, decongestants, mast cell stabilizers, dual-acting agents) to the antihistamine lecture (T@32303, T@33467). Kept for optional practice.", concept:"oo-ac-cetirizine-features",
  tags:["hard", "two-facts"], source:"slide",
  stem:"Which pair of functional groups does cetirizine have that pheniramine lacks?",
  options:[
@@ -149,7 +149,7 @@ QUESTIONS.push(
  teach:"Slide 54: pheniramine has a pyridine ring, a phenyl ring and a dimethylamino group. Cetirizine adds a carboxylic acid and an aryl chloride with a piperazine ring. The SAR is deferred to the allergy lecture.",
  cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slide 54"},
 
-{id:"OA-014", skill:"tell", prof:'Sikazwe', tier:'new', topic:"oo-ac", sub:"h1", concept:"oo-ac-acid-multi", multi:true,
+{id:"OA-014", skill:"tell", prof:'Sikazwe', lowYield:true, tier:'new', topic:"oo-beyond", sub:"h1", note:"Not on Exam 3: on 11/19 he told the class to end the reading at slide 51 and left allergic conjunctivitis (antihistamines, decongestants, mast cell stabilizers, dual-acting agents) to the antihistamine lecture (T@32303, T@33467). Kept for optional practice.", concept:"oo-ac-acid-multi", multi:true,
  tags:["hard", "tell"], source:"slide",
  stem:"Which of these antihistamines carry a carboxylic acid? Select all that apply.",
  options:[
@@ -160,7 +160,7 @@ QUESTIONS.push(
  teach:"Slides 54 and 57: of these four, cetirizine and levocabastine carry a COOH; pheniramine and ketotifen do not.",
  cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slides 54, 57"},
 
-{id:"OA-015", skill:"class", prof:'Sikazwe', tier:'new', topic:"oo-ac", sub:"dec", concept:"oo-ac-dec-class",
+{id:"OA-015", skill:"class", prof:'Sikazwe', lowYield:true, tier:'new', topic:"oo-beyond", sub:"dec", note:"Not on Exam 3: on 11/19 he told the class to end the reading at slide 51 and left allergic conjunctivitis (antihistamines, decongestants, mast cell stabilizers, dual-acting agents) to the antihistamine lecture (T@32303, T@33467). Kept for optional practice.", concept:"oo-ac-dec-class",
  tags:["hard", "tell"], source:"slide",
  stem:"Oxymetazoline, xylometazoline, tetrahydrometazoline and naphazoline share which functional group?",
  options:[
@@ -171,7 +171,7 @@ QUESTIONS.push(
  teach:"Slide 55: the four are aryl imidazolines (Afrin, Clear Eyes, Visine and Otrivin products as printed there).",
  cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slide 55"},
 
-{id:"OA-016", skill:"mech", prof:'Sikazwe', tier:'new', topic:"oo-ac", sub:"dec", concept:"oo-ac-dec-moa",
+{id:"OA-016", skill:"mech", prof:'Sikazwe', lowYield:true, tier:'new', topic:"oo-beyond", sub:"dec", note:"Not on Exam 3: on 11/19 he told the class to end the reading at slide 51 and left allergic conjunctivitis (antihistamines, decongestants, mast cell stabilizers, dual-acting agents) to the antihistamine lecture (T@32303, T@33467). Kept for optional practice.", concept:"oo-ac-dec-moa",
  tags:["hard", "tell"], source:"slide",
  stem:"What is the mechanism of action of the imidazoline decongestants?",
  options:[
@@ -182,18 +182,18 @@ QUESTIONS.push(
  teach:"Slide 55: imidazoline decongestants are α1/α2 agonists.",
  cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slides 33, 55–56"},
 
-{id:"OA-017", skill:"chem", prof:'Sikazwe', tier:'new', topic:"oo-ac", sub:"dec", concept:"oo-ac-dec-linker",
+{id:"OA-017", skill:"chem", prof:'Sikazwe', tier:'new', topic:"oo-a2", sub:"sar", concept:"oo-ac-dec-linker",
  tags:["hard", "reasoning"], source:"both",
  stem:"An aryl imidazoline has a CH2 linker between the aromatic ring and the imidazoline. Which receptor activity does the linker atom predict?",
  options:[
-  {t:"Alpha 1 agonism", correct:true, why:"T@49994 11/18 and slide 32: X = CH2 gives alpha 1 agonists (slide 55 prints the CH2-linked decongestants as alpha 1/alpha 2 agonists)."},
+  {t:"Alpha 1 agonism", correct:true, why:"T@49994 11/18 and slide 32: X = CH2 gives alpha 1 agonists."},
   {t:"Alpha 2 agonism", correct:false, why:"Slide 32: the amine linker gives alpha 2 agonists."},
   {t:"Beta 1 antagonism", correct:false, why:"Slide 34: beta antagonism belongs to the aryloxypropanolamines."},
   {t:"Muscarinic agonism", correct:false, why:"Slide 40: muscarinic agonists are the carbamates and esters."}],
- teach:"Slide 32 and T@49994 11/18: for an aryl imidazoline the linker atom is CH2 for alpha 1 agonists and an amine for alpha 2 agonists. The decongestants on slide 55 all have a CH2 linker, and slide 55 prints their mechanism as alpha 1 and alpha 2 agonism; slide 32 prints the linker as X = CH2 (alpha 1) and X = NH2 (alpha 2).",
- cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slides 32, 55; T@49994 11/18"},
+ teach:"Slide 32 and T@49994 11/18: for an aryl imidazoline the linker atom is CH2 for alpha 1 agonists and an amine for alpha 2 agonists. Slide 32 prints the linker as X = CH2 (alpha 1) and X = NH2 (alpha 2).",
+ cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slide 32; T@49994 11/18"},
 
-{id:"OA-018", skill:"chem", prof:'Sikazwe', tier:'new', topic:"oo-ac", sub:"dec", concept:"oo-ac-dec-new-nh",
+{id:"OA-018", skill:"chem", prof:'Sikazwe', tier:'new', topic:"oo-a2", sub:"sar", concept:"oo-ac-dec-new-nh",
  tags:["hard", "reasoning"], source:"both",
  stem:"A new compound has an aromatic ring joined to an imidazoline through an amine linker. Which receptor activity does its structure predict?",
  options:[
@@ -204,7 +204,7 @@ QUESTIONS.push(
  teach:"T@49994 11/18 and slide 32: the linker atom decides the selectivity of an aryl imidazoline: CH2, alpha 1; amine, alpha 2.",
  cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slides 31–32, 38; T@49994 11/18"},
 
-{id:"OA-019", skill:"tell", prof:'Sikazwe', tier:'new', topic:"oo-ac", sub:"dec", concept:"oo-ac-dec-phenol",
+{id:"OA-019", skill:"tell", prof:'Sikazwe', lowYield:true, tier:'new', topic:"oo-beyond", sub:"dec", note:"Not on Exam 3: on 11/19 he told the class to end the reading at slide 51 and left allergic conjunctivitis (antihistamines, decongestants, mast cell stabilizers, dual-acting agents) to the antihistamine lecture (T@32303, T@33467). Kept for optional practice.", concept:"oo-ac-dec-phenol",
  tags:["hard", "tell"], source:"slide",
  stem:"Which imidazoline decongestant has a phenolic hydroxyl on its aromatic ring?",
  options:[
@@ -215,7 +215,7 @@ QUESTIONS.push(
  teach:"Slide 55: oxymetazoline (OH, tert-butyl, two methyls) differs from xylometazoline only by the phenolic OH.",
  cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slide 55"},
 
-{id:"OA-020", skill:"tell", prof:'Sikazwe', tier:'new', topic:"oo-ac", sub:"dec", concept:"oo-ac-dec-naphthalene",
+{id:"OA-020", skill:"tell", prof:'Sikazwe', lowYield:true, tier:'new', topic:"oo-beyond", sub:"dec", note:"Not on Exam 3: on 11/19 he told the class to end the reading at slide 51 and left allergic conjunctivitis (antihistamines, decongestants, mast cell stabilizers, dual-acting agents) to the antihistamine lecture (T@32303, T@33467). Kept for optional practice.", concept:"oo-ac-dec-naphthalene",
  tags:["hard", "tell"], source:"slide",
  stem:"Which imidazoline decongestant has a naphthalene as its aryl group?",
  options:[
@@ -226,7 +226,7 @@ QUESTIONS.push(
  teach:"Slide 55: naphazoline carries the naphthalene ring; tetrahydrometazoline has a partially saturated bicyclic ring.",
  cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slide 55"},
 
-{id:"OA-021", skill:"chem", prof:'Sikazwe', tier:'new', topic:"oo-ac", sub:"dec", concept:"oo-ac-dec-tetrahydro",
+{id:"OA-021", skill:"chem", prof:'Sikazwe', lowYield:true, tier:'new', topic:"oo-beyond", sub:"dec", note:"Not on Exam 3: on 11/19 he told the class to end the reading at slide 51 and left allergic conjunctivitis (antihistamines, decongestants, mast cell stabilizers, dual-acting agents) to the antihistamine lecture (T@32303, T@33467). Kept for optional practice.", concept:"oo-ac-dec-tetrahydro",
  tags:["hard", "two-facts"], source:"slide",
  stem:"Tetrahydrometazoline differs from naphazoline in which structural way?",
  options:[
@@ -237,7 +237,7 @@ QUESTIONS.push(
  teach:"Slide 55: both have an imidazoline joined through CH2 to a bicyclic ring system; in tetrahydrometazoline one ring is saturated.",
  cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slide 55"},
 
-{id:"OA-022", skill:"tell", prof:'Sikazwe', tier:'new', topic:"oo-ac", sub:"dec", concept:"oo-ac-dec-oxy-xylo",
+{id:"OA-022", skill:"tell", prof:'Sikazwe', lowYield:true, tier:'new', topic:"oo-beyond", sub:"dec", note:"Not on Exam 3: on 11/19 he told the class to end the reading at slide 51 and left allergic conjunctivitis (antihistamines, decongestants, mast cell stabilizers, dual-acting agents) to the antihistamine lecture (T@32303, T@33467). Kept for optional practice.", concept:"oo-ac-dec-oxy-xylo",
  tags:["hard", "two-facts"], source:"slide",
  stem:"Which structural feature differs between oxymetazoline and xylometazoline?",
  options:[
@@ -248,7 +248,7 @@ QUESTIONS.push(
  teach:"Slide 55: the two share the tert-butyl, the methyls, the CH2 linker and the imidazoline; oxymetazoline adds the OH.",
  cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slide 55"},
 
-{id:"OA-023", skill:"class", prof:'Sikazwe', tier:'new', topic:"oo-ac", sub:"mcs", concept:"oo-ac-cromolyn-class",
+{id:"OA-023", skill:"class", prof:'Sikazwe', lowYield:true, tier:'new', topic:"oo-beyond", sub:"mcs", note:"Not on Exam 3: on 11/19 he told the class to end the reading at slide 51 and left allergic conjunctivitis (antihistamines, decongestants, mast cell stabilizers, dual-acting agents) to the antihistamine lecture (T@32303, T@33467). Kept for optional practice.", concept:"oo-ac-cromolyn-class",
  tags:["hard", "tell"], source:"slide",
  stem:"Cromolyn sodium (Opticrom) belongs to which chemical class of mast cell stabilizers?",
  options:[
@@ -259,7 +259,7 @@ QUESTIONS.push(
  teach:"Slide 56: chromone mast cell stabilizers are cromolyn Na (Opticrom) and nedocromil Na (Alocril); the oxamic acid is lodoxamide tromethamine (Alomide).",
  cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slides 48, 51, 56"},
 
-{id:"OA-024", skill:"class", prof:'Sikazwe', tier:'new', topic:"oo-ac", sub:"mcs", concept:"oo-ac-lodoxamide",
+{id:"OA-024", skill:"class", prof:'Sikazwe', lowYield:true, tier:'new', topic:"oo-beyond", sub:"mcs", note:"Not on Exam 3: on 11/19 he told the class to end the reading at slide 51 and left allergic conjunctivitis (antihistamines, decongestants, mast cell stabilizers, dual-acting agents) to the antihistamine lecture (T@32303, T@33467). Kept for optional practice.", concept:"oo-ac-lodoxamide",
  tags:["hard", "tell"], source:"slide",
  stem:"Which drug is the oxamic acid mast cell stabilizer?",
  options:[
@@ -270,7 +270,7 @@ QUESTIONS.push(
  teach:"Slide 56: lodoxamide (Alomide) carries two oxamic acid groups (HOOC–CO–NH–Ar).",
  cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slides 54, 56"},
 
-{id:"OA-025", skill:"chem", prof:'Sikazwe', tier:'new', topic:"oo-ac", sub:"mcs", concept:"oo-ac-chromone-salt",
+{id:"OA-025", skill:"chem", prof:'Sikazwe', lowYield:true, tier:'new', topic:"oo-beyond", sub:"mcs", note:"Not on Exam 3: on 11/19 he told the class to end the reading at slide 51 and left allergic conjunctivitis (antihistamines, decongestants, mast cell stabilizers, dual-acting agents) to the antihistamine lecture (T@32303, T@33467). Kept for optional practice.", concept:"oo-ac-chromone-salt",
  tags:["hard", "tell"], source:"slide",
  stem:"Cromolyn and nedocromil are supplied as sodium salts of which functional group?",
  options:[
@@ -281,7 +281,7 @@ QUESTIONS.push(
  teach:"Slide 56: both chromones carry two carboxylate groups as sodium salts.",
  cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slide 56"},
 
-{id:"OA-026", skill:"chem", prof:'Sikazwe', tier:'new', topic:"oo-ac", sub:"mcs", concept:"oo-ac-cromolyn-linker",
+{id:"OA-026", skill:"chem", prof:'Sikazwe', lowYield:true, tier:'new', topic:"oo-beyond", sub:"mcs", note:"Not on Exam 3: on 11/19 he told the class to end the reading at slide 51 and left allergic conjunctivitis (antihistamines, decongestants, mast cell stabilizers, dual-acting agents) to the antihistamine lecture (T@32303, T@33467). Kept for optional practice.", concept:"oo-ac-cromolyn-linker",
  tags:["hard", "reasoning"], source:"slide",
  stem:"Cromolyn consists of two chromone units joined through which kind of linker?",
  options:[
@@ -292,7 +292,7 @@ QUESTIONS.push(
  teach:"Slide 56: cromolyn sodium = two chromone-2-carboxylates linked through a hydroxypropane diether.",
  cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slides 54, 56"},
 
-{id:"OA-027", skill:"mech", prof:'Sikazwe', tier:'new', topic:"oo-ac", sub:"mcs", concept:"oo-ac-mcs-moa",
+{id:"OA-027", skill:"mech", prof:'Sikazwe', lowYield:true, tier:'new', topic:"oo-beyond", sub:"mcs", note:"Not on Exam 3: on 11/19 he told the class to end the reading at slide 51 and left allergic conjunctivitis (antihistamines, decongestants, mast cell stabilizers, dual-acting agents) to the antihistamine lecture (T@32303, T@33467). Kept for optional practice.", concept:"oo-ac-mcs-moa",
  tags:["hard", "tell"], source:"slide",
  stem:"Which drug inhibits the release of histamine from mast cell granules?",
  options:[
@@ -303,7 +303,7 @@ QUESTIONS.push(
  teach:"Slide 56: mast cell stabilizers (chromones and oxamic acid) inhibit granule histamine release.",
  cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slides 54–56, 58"},
 
-{id:"OA-028", skill:"chem", prof:'Sikazwe', tier:'new', topic:"oo-ac", sub:"mcs", concept:"oo-ac-mcs-sar",
+{id:"OA-028", skill:"chem", prof:'Sikazwe', lowYield:true, tier:'new', topic:"oo-beyond", sub:"mcs", note:"Not on Exam 3: on 11/19 he told the class to end the reading at slide 51 and left allergic conjunctivitis (antihistamines, decongestants, mast cell stabilizers, dual-acting agents) to the antihistamine lecture (T@32303, T@33467). Kept for optional practice.", concept:"oo-ac-mcs-sar",
  tags:["hard", "reasoning"], source:"slide",
  stem:"What is the status of the SAR of the chromone and oxamic acid mast cell stabilizers?",
  options:[
@@ -314,7 +314,7 @@ QUESTIONS.push(
  teach:"Slide 56: SAR not clearly established for these mast cell stabilizers; the SAR rules of other classes (slides 32, 40, 60) do not apply.",
  cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slides 32, 40, 56, 60"},
 
-{id:"OA-029", skill:"class", prof:'Sikazwe', tier:'new', topic:"oo-ac", sub:"dual", concept:"oo-ac-dual-def",
+{id:"OA-029", skill:"class", prof:'Sikazwe', lowYield:true, tier:'new', topic:"oo-beyond", sub:"dual", note:"Not on Exam 3: on 11/19 he told the class to end the reading at slide 51 and left allergic conjunctivitis (antihistamines, decongestants, mast cell stabilizers, dual-acting agents) to the antihistamine lecture (T@32303, T@33467). Kept for optional practice.", concept:"oo-ac-dual-def",
  tags:["hard", "tell"], source:"slide",
  stem:"Which two actions do the dual-acting agents of allergic conjunctivitis combine?",
  options:[
@@ -325,7 +325,7 @@ QUESTIONS.push(
  teach:"Slide 57: multi-cyclic dual-acting agents are antihistamines plus mast cell stabilizers: azelastine, ketotifen, epinastine, olopatidine, bepotastine, alcaftadine.",
  cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slides 50, 52, 57"},
 
-{id:"OA-030", skill:"chem", prof:'Sikazwe', tier:'new', topic:"oo-ac", sub:"dual", concept:"oo-ac-dual-sar",
+{id:"OA-030", skill:"chem", prof:'Sikazwe', lowYield:true, tier:'new', topic:"oo-beyond", sub:"dual", note:"Not on Exam 3: on 11/19 he skipped self-assessment question 2 because antihistamines come later (T@34124) and left the allergic conjunctivitis slides out (T@33467). Kept for optional practice.", concept:"oo-ac-dual-sar",
  tags:["hard", "reasoning"], source:"slide",
  stem:"Besides aromatic rings, which pair of ionizable functional groups is typical of the multi-cyclic dual-acting agents?",
  options:[
@@ -336,7 +336,7 @@ QUESTIONS.push(
  teach:"Slide 57: SAR not clearly stated, but the dual-acting agents are multi-cyclic with ionizable N and COOH functional groups.",
  cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slides 36, 42, 55, 57"},
 
-{id:"OA-032", skill:"tell", prof:'Sikazwe', tier:'new', topic:"oo-ac", sub:"dual", concept:"oo-ac-dual-cooh-multi", multi:true,
+{id:"OA-032", skill:"tell", prof:'Sikazwe', lowYield:true, tier:'new', topic:"oo-beyond", sub:"dual", note:"Not on Exam 3: on 11/19 he told the class to end the reading at slide 51 and left allergic conjunctivitis (antihistamines, decongestants, mast cell stabilizers, dual-acting agents) to the antihistamine lecture (T@32303, T@33467). Kept for optional practice.", concept:"oo-ac-dual-cooh-multi", multi:true,
  tags:["hard", "tell"], source:"slide",
  stem:"Which of these dual-acting agents carry a carboxylic acid? Select all that apply.",
  options:[
@@ -347,7 +347,7 @@ QUESTIONS.push(
  teach:"Slide 57: olopatidine and bepotastine carry COOH; ketotifen and epinastine have ionizable nitrogen only.",
  cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slide 57"},
 
-{id:"OA-033", skill:"tell", prof:'Sikazwe', tier:'new', topic:"oo-ac", sub:"dual", concept:"oo-ac-dual-azelastine",
+{id:"OA-033", skill:"tell", prof:'Sikazwe', lowYield:true, tier:'new', topic:"oo-beyond", sub:"dual", note:"Not on Exam 3: on 11/19 he told the class to end the reading at slide 51 and left allergic conjunctivitis (antihistamines, decongestants, mast cell stabilizers, dual-acting agents) to the antihistamine lecture (T@32303, T@33467). Kept for optional practice.", concept:"oo-ac-dual-azelastine",
  tags:["hard", "tell"], source:"slide",
  stem:"Which dual-acting agent has an aryl chlorine and no carboxylic acid?",
  options:[
@@ -358,7 +358,7 @@ QUESTIONS.push(
  teach:"Slide 57: azelastine (Astelin) carries the chlorine; bepotastine (Bepreve) carries chlorine and COOH.",
  cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slide 57"},
 
-{id:"OA-034", skill:"tell", prof:'Sikazwe', tier:'new', topic:"oo-ac", sub:"dual", concept:"oo-ac-dual-sulfur",
+{id:"OA-034", skill:"tell", prof:'Sikazwe', lowYield:true, tier:'new', topic:"oo-beyond", sub:"dual", note:"Not on Exam 3: on 11/19 he told the class to end the reading at slide 51 and left allergic conjunctivitis (antihistamines, decongestants, mast cell stabilizers, dual-acting agents) to the antihistamine lecture (T@32303, T@33467). Kept for optional practice.", concept:"oo-ac-dual-sulfur",
  tags:["hard", "tell"], source:"slide",
  stem:"Which dual-acting agent contains a sulfur atom in a ring?",
  options:[
@@ -369,7 +369,7 @@ QUESTIONS.push(
  teach:"Slide 57: ketotifen (Zaditor) is the dual-acting agent with a thiophene sulfur; olopatidine has a ring oxygen.",
  cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slide 57"},
 
-{id:"OA-035", skill:"tell", prof:'Sikazwe', tier:'new', topic:"oo-ac", sub:"dual", concept:"oo-ac-dual-nh2",
+{id:"OA-035", skill:"tell", prof:'Sikazwe', lowYield:true, tier:'new', topic:"oo-beyond", sub:"dual", note:"Not on Exam 3: on 11/19 he told the class to end the reading at slide 51 and left allergic conjunctivitis (antihistamines, decongestants, mast cell stabilizers, dual-acting agents) to the antihistamine lecture (T@32303, T@33467). Kept for optional practice.", concept:"oo-ac-dual-nh2",
  tags:["hard", "tell"], source:"slide",
  stem:"Which dual-acting agent has an NH2 group on its heterocycle?",
  options:[
@@ -380,7 +380,7 @@ QUESTIONS.push(
  teach:"Slide 57: epinastine (Elestat) bears the NH2.",
  cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slide 57"},
 
-{id:"OA-036", skill:"tell", prof:'Sikazwe', tier:'new', topic:"oo-ac", sub:"dual", concept:"oo-ac-dual-dimethylamino",
+{id:"OA-036", skill:"tell", prof:'Sikazwe', lowYield:true, tier:'new', topic:"oo-beyond", sub:"dual", note:"Not on Exam 3: on 11/19 he told the class to end the reading at slide 51 and left allergic conjunctivitis (antihistamines, decongestants, mast cell stabilizers, dual-acting agents) to the antihistamine lecture (T@32303, T@33467). Kept for optional practice.", concept:"oo-ac-dual-dimethylamino",
  tags:["hard", "two-facts"], source:"slide",
  stem:"Which dual-acting agent has both a carboxylic acid and a dimethylamino group?",
  options:[
@@ -391,7 +391,7 @@ QUESTIONS.push(
  teach:"Slide 57: olopatidine carries both groups; bepotastine has COOH with a ring nitrogen.",
  cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slide 57"},
 
-{id:"OA-037", skill:"mech", prof:'Sikazwe', tier:'new', topic:"oo-ac", sub:"gc", concept:"oo-ac-gc-moa",
+{id:"OA-037", skill:"mech", prof:'Sikazwe', lowYield:true, tier:'new', topic:"oo-beyond", sub:"gc", note:"Not on Exam 3: on 11/19 he said the class is not focusing on steroids and to ignore the steroid slides, and he skipped self-assessment question 1 (T@33962, T@33729, T@33995). Kept for optional practice.", concept:"oo-ac-gc-moa",
  tags:["hard", "tell"], source:"slide",
  stem:"What is the mechanism of action of the glucocorticoid steroids?",
  options:[
@@ -402,7 +402,7 @@ QUESTIONS.push(
  teach:"Slide 58: glucocorticoids activate the GR complex, producing proteins that suppress pro-inflammatory proteins.",
  cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slides 54–56, 58"},
 
-{id:"OA-038", skill:"chem", prof:'Sikazwe', tier:'new', topic:"oo-ac", sub:"gc", concept:"oo-ac-steroid-methyls",
+{id:"OA-038", skill:"chem", prof:'Sikazwe', lowYield:true, tier:'new', topic:"oo-beyond", sub:"gc", note:"Not on Exam 3: on 11/19 he said the class is not focusing on steroids and to ignore the steroid slides, and he skipped self-assessment question 1 (T@33962, T@33729, T@33995). Kept for optional practice.", concept:"oo-ac-steroid-methyls",
  tags:["hard", "reasoning"], source:"slide",
  stem:"In the steroid carbon numbering, which carbons bear the angular methyls numbered 18 and 19?",
  options:[
@@ -413,7 +413,7 @@ QUESTIONS.push(
  teach:"Slide 58: C19 is on C10 (rings A/B junction); C18 is on C13 (rings C/D junction); C17 carries the side chain C20–C27.",
  cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slides 58, 59, 63"},
 
-{id:"OA-039", skill:"chem", prof:'Sikazwe', tier:'new', topic:"oo-ac", sub:"gc", concept:"oo-ac-ring-d",
+{id:"OA-039", skill:"chem", prof:'Sikazwe', lowYield:true, tier:'new', topic:"oo-beyond", sub:"gc", note:"Not on Exam 3: on 11/19 he said the class is not focusing on steroids and to ignore the steroid slides, and he skipped self-assessment question 1 (T@33962, T@33729, T@33995). Kept for optional practice.", concept:"oo-ac-ring-d",
  tags:["hard", "reasoning"], source:"slide",
  stem:"Which carbons make up ring D of the steroid template?",
  options:[
@@ -424,7 +424,7 @@ QUESTIONS.push(
  teach:"Slide 58: ring A C1–C5 and C10; ring B C5–C10; ring C C8, C9, C11–C14; ring D C13–C17.",
  cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slides 58, 63"},
 
-{id:"OA-040", skill:"chem", prof:'Sikazwe', tier:'new', topic:"oo-ac", sub:"gc", concept:"oo-ac-side-chain",
+{id:"OA-040", skill:"chem", prof:'Sikazwe', lowYield:true, tier:'new', topic:"oo-beyond", sub:"gc", note:"Not on Exam 3: on 11/19 he said the class is not focusing on steroids and to ignore the steroid slides, and he skipped self-assessment question 1 (T@33962, T@33729, T@33995). Kept for optional practice.", concept:"oo-ac-side-chain",
  tags:["hard", "reasoning"], source:"slide",
  stem:"In the numbered steroid template, the side chain on C17 begins with C20. Which carbon of that side chain carries the two terminal methyls, C26 and C27?",
  options:[
@@ -435,7 +435,7 @@ QUESTIONS.push(
  teach:"Slide 58: C20 carries C21 (a methyl) and the chain C22–C25; C25 carries C26 and C27.",
  cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slides 58, 63"},
 
-{id:"OA-041", skill:"chem", prof:'Sikazwe', tier:'new', topic:"oo-ac", sub:"gc", concept:"oo-ac-highest-number",
+{id:"OA-041", skill:"chem", prof:'Sikazwe', lowYield:true, tier:'new', topic:"oo-beyond", sub:"gc", note:"Not on Exam 3: on 11/19 he said the class is not focusing on steroids and to ignore the steroid slides, and he skipped self-assessment question 1 (T@33962, T@33729, T@33995). Kept for optional practice.", concept:"oo-ac-highest-number",
  tags:["hard", "reasoning"], source:"slide",
  stem:"The numbered steroid template labels its four rings, two angular methyls and the side chain on C17. What is the highest carbon number in the template?",
  options:[
@@ -446,7 +446,7 @@ QUESTIONS.push(
  teach:"Slide 58: C1–C17 for the four rings, then C18 and C19 methyls and C20–C27 for the side chain.",
  cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slides 58, 63"},
 
-{id:"OA-042", skill:"chem", prof:'Sikazwe', tier:'new', topic:"oo-ac", sub:"gc", concept:"oo-ac-alpha-beta",
+{id:"OA-042", skill:"chem", prof:'Sikazwe', lowYield:true, tier:'new', topic:"oo-beyond", sub:"gc", note:"Not on Exam 3: on 11/19 he said the class is not focusing on steroids and to ignore the steroid slides, and he skipped self-assessment question 1 (T@33962, T@33729, T@33995). Kept for optional practice.", concept:"oo-ac-alpha-beta",
  tags:["hard", "two-facts"], source:"slide",
  stem:"In a steroid structure, a 9α substituent is attached by which type of bond, and on which side of the ring plane does it lie?",
  options:[
@@ -457,29 +457,29 @@ QUESTIONS.push(
  teach:"Slide 58: α is hashed and below the plane; β is a wedge and above the plane. The 11β-OH is a wedge; the 9α-F is hashed.",
  cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slides 58, 60"},
 
-{id:"OA-043", skill:"chem", prof:'Sikazwe', tier:'new', topic:"oo-ac", sub:"gc", concept:"oo-ac-sar-triple",
+{id:"OA-043", skill:"chem", prof:'Sikazwe', lowYield:true, tier:'new', topic:"oo-beyond", sub:"gc", note:"Not on Exam 3: on 11/19 he said the class is not focusing on steroids and to ignore the steroid slides, and he skipped self-assessment question 1 (T@33962, T@33729, T@33995). Kept for optional practice.", concept:"oo-ac-sar-triple",
  tags:["hard", "two-facts"], source:"slide",
  stem:"Which set of structural features raises glucocorticoid anti-inflammatory activity?",
  options:[
-  {t:"C1–C2 alkane, 6α- or 9α-X, 11β-OH", correct:false, why:"Slide 60: the C1–C2 double bond raises activity, not the saturated bond."},
+  {t:"C1–C2 alkane, 6α- or 9α-X, 11β-OH", correct:false, why:"Slide 60: the C1–C2 alkene raises activity, not the saturated alkane."},
   {t:"C1–C2 alkene, 6α- or 9α-X, 11β-OH", correct:true, why:"Slide 60 prints these three."},
   {t:"C1–C2 alkene, 6β- or 9β-X, 11β-OH", correct:false, why:"Slide 60: the X is α, below the plane."},
   {t:"C1–C2 alkene, 6α- or 9α-X, 11α-OH", correct:false, why:"Slide 60: the hydroxyl is 11β, above the plane."}],
- teach:"Slide 60: anti-inflammatory activity increases with a C1–C2 double bond, a 6α- or 9α-X and an 11β-OH.",
+ teach:"Slide 60: anti-inflammatory activity increases with a C1–C2 alkene, a 6α- or 9α-X and an 11β-OH.",
  cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slide 60"},
 
-{id:"OA-044", skill:"chem", prof:'Sikazwe', tier:'new', topic:"oo-ac", sub:"gc", concept:"oo-ac-pred-vs-hc",
+{id:"OA-044", skill:"chem", prof:'Sikazwe', lowYield:true, tier:'new', topic:"oo-beyond", sub:"gc", note:"Not on Exam 3: on 11/19 he said the class is not focusing on steroids and to ignore the steroid slides, and he skipped self-assessment question 1 (T@33962, T@33729, T@33995). Kept for optional practice.", concept:"oo-ac-pred-vs-hc",
  tags:["hard", "reasoning"], source:"slide",
  stem:"Prednisolone has which added feature compared with hydrocortisone that raises anti-inflammatory activity?",
  options:[
   {t:"A 9α-fluorine", correct:false, why:"Slide 60: prednisolone has no halogen; dexamethasone and fluorometholone have 9-F."},
   {t:"An 11β-hydroxyl", correct:false, why:"Slide 60: hydrocortisone already has the 11β-OH."},
-  {t:"An alkene between C1 and C2", correct:true, why:"Slide 60: prednisolone has the C1–C2 double bond that hydrocortisone lacks."},
+  {t:"An alkene between C1 and C2", correct:true, why:"Slide 60: prednisolone has the C1–C2 alkene that hydrocortisone lacks."},
   {t:"A 6α-halogen", correct:false, why:"Slide 60: prednisolone has no 6α substituent."}],
  teach:"Slide 60: hydrocortisone has the 11β-OH only; prednisolone adds the C1–C2 alkene.",
  cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slide 60"},
 
-{id:"OA-045", skill:"chem", prof:'Sikazwe', tier:'new', topic:"oo-ac", sub:"gc", concept:"oo-ac-dex-vs-pred",
+{id:"OA-045", skill:"chem", prof:'Sikazwe', lowYield:true, tier:'new', topic:"oo-beyond", sub:"gc", note:"Not on Exam 3: on 11/19 he said the class is not focusing on steroids and to ignore the steroid slides, and he skipped self-assessment question 1 (T@33962, T@33729, T@33995). Kept for optional practice.", concept:"oo-ac-dex-vs-pred",
  tags:["hard", "reasoning"], source:"slide",
  stem:"Which anti-inflammatory SAR feature does dexamethasone have that prednisolone lacks?",
  options:[
@@ -490,7 +490,7 @@ QUESTIONS.push(
  teach:"Slide 60: dexamethasone = prednisolone-type ring A (C1–C2 alkene) and 11β-OH, plus a 9α-F.",
  cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slide 60"},
 
-{id:"OA-046", skill:"tell", prof:'Sikazwe', tier:'new', topic:"oo-ac", sub:"gc", concept:"oo-ac-hc-none",
+{id:"OA-046", skill:"tell", prof:'Sikazwe', lowYield:true, tier:'new', topic:"oo-beyond", sub:"gc", note:"Not on Exam 3: on 11/19 he said the class is not focusing on steroids and to ignore the steroid slides, and he skipped self-assessment question 1 (T@33962, T@33729, T@33995). Kept for optional practice.", concept:"oo-ac-hc-none",
  tags:["hard", "tell"], source:"slide",
  stem:"Which glucocorticoid has an 11β-OH but neither a C1–C2 alkene nor a 6α- or 9α-halogen?",
  options:[
@@ -501,7 +501,7 @@ QUESTIONS.push(
  teach:"Slide 60: of the six drawn steroids, hydrocortisone is the one with the 11β-OH alone.",
  cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slide 60"},
 
-{id:"OA-047", skill:"tell", prof:'Sikazwe', tier:'new', topic:"oo-ac", sub:"gc", concept:"oo-ac-loteprednol",
+{id:"OA-047", skill:"tell", prof:'Sikazwe', lowYield:true, tier:'new', topic:"oo-beyond", sub:"gc", note:"Not on Exam 3: on 11/19 he said the class is not focusing on steroids and to ignore the steroid slides, and he skipped self-assessment question 1 (T@33962, T@33729, T@33995). Kept for optional practice.", concept:"oo-ac-loteprednol",
  tags:["hard", "tell"], source:"slide",
  stem:"Which glucocorticoid has a chlorine in a chloromethyl ester on C17 rather than a halogen on the ring?",
  options:[
@@ -512,7 +512,7 @@ QUESTIONS.push(
  teach:"Slide 60: loteprednol has C1–C2 alkene, 11β-OH, no ring halogen, and a chloromethyl ester at C17.",
  cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slide 60"},
 
-{id:"OA-048", skill:"tell", prof:'Sikazwe', tier:'new', topic:"oo-ac", sub:"gc", concept:"oo-ac-9f-multi", multi:true,
+{id:"OA-048", skill:"tell", prof:'Sikazwe', lowYield:true, tier:'new', topic:"oo-beyond", sub:"gc", note:"Not on Exam 3: on 11/19 he said the class is not focusing on steroids and to ignore the steroid slides, and he skipped self-assessment question 1 (T@33962, T@33729, T@33995). Kept for optional practice.", concept:"oo-ac-9f-multi", multi:true,
  tags:["hard", "tell"], source:"slide",
  stem:"Which of these glucocorticoids carry a 9α-fluorine? Select all that apply.",
  options:[
@@ -523,7 +523,7 @@ QUESTIONS.push(
  teach:"Slide 60: dexamethasone and fluorometholone have 9α-F; prednisolone and loteprednol do not.",
  cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slide 60"},
 
-{id:"OA-049", skill:"chem", prof:'Sikazwe', tier:'new', topic:"oo-ac", sub:"gc", concept:"oo-ac-new-steroid",
+{id:"OA-049", skill:"chem", prof:'Sikazwe', lowYield:true, tier:'new', topic:"oo-beyond", sub:"gc", note:"Not on Exam 3: on 11/19 he said the class is not focusing on steroids and to ignore the steroid slides, and he skipped self-assessment question 1 (T@33962, T@33729, T@33995). Kept for optional practice.", concept:"oo-ac-new-steroid",
  tags:["hard", "reasoning"], source:"slide",
  stem:"Four hypothetical steroids are compared. Steroid P has a C1–C2 alkene and an 11β-OH. Steroid Q has a C1–C2 alkane, a 9α-F and an 11β-OH. Steroid R has a C1–C2 alkene, a 9α-F and an 11β-OH. Steroid S has a C1–C2 alkene, a 9α-F and an 11α-OH. Which is predicted to have the highest anti-inflammatory activity?",
  options:[
@@ -542,19 +542,20 @@ QUESTIONS.push(
   {t:"Sulfonamide (SO2NH2)", correct:true, why:"Slide 38: the SO2NH2 group forms ionic and H-bond interactions with zinc and Thr199."},
   {t:"Imidazoline", correct:false, why:"Slide 31: the alpha 2 agonist group."},
   {t:"Carboxylic acid", correct:false, why:"Slide 46: the free acid form of the prostaglandin analogs."}],
- teach:"Slides 36–38: the zolamides are sulfonamides; the SO2NH2 group interacts with the zinc and Thr199 of carbonic anhydrase.",
- cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slides 36–38, 42, 46, 65"},
+ teach:"Slides 36–38: the zolamides are sulfonamides; the SO2NH2 group interacts with the zinc and Thr199 of carbonic anhydrase. On 11/19 he kept Question 3 and answered it: the sulfonamide.",
+ cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slides 36–38, 42, 46, 65; T@34223 11/19"},
 
 {id:"OA-051", skill:"class", prof:'Sikazwe', tier:'new', topic:"oo-ac", sub:"self", concept:"oo-ac-imidazoline-name",
- tags:["hard", "two-facts"], source:"slide",
- stem:"A five-membered ring has two nitrogens, one as C=N and one as NH, and its other ring carbons are saturated. Which functional group is this, and which drugs contain it?",
+ tags:["hard", "two-facts"], source:"both",
+ stem:"A five-membered ring has two nitrogens, one as C=N and one as NH, and its other ring carbons are saturated. Which functional group is this, and in which class of eye drugs is it present?",
  options:[
-  {t:"Imidazoline; naphazoline and clonidine", correct:true, why:"Slides 31 and 55: the imidazoline ring is in clonidine and the decongestants."},
-  {t:"Imidazole; naphazoline and clonidine", correct:false, why:"An imidazole ring is aromatic and unsaturated."},
-  {t:"Imidazoline; cromolyn and nedocromil", correct:false, why:"Slide 56: the chromones have no imidazoline."},
-  {t:"Imidazole; cetirizine and levocabastine", correct:false, why:"Slide 54: neither has this ring."}],
- teach:"Slides 31, 55 and 66: the imidazoline ring is present in the alpha 2 agonists (clonidine, apraclonidine, brimonidine) and the imidazoline decongestants.",
- cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slides 31, 54–56, 66"},
+  {t:"Imidazoline; alpha 2 agonists", correct:true, why:"Slides 31 and 66: the imidazoline ring is in clonidine, apraclonidine and brimonidine, the alpha 2 agonists; on 11/19 he answered Question 4 this way."},
+  {t:"Imidazole; alpha 2 agonists", correct:false, why:"An imidazole ring is aromatic and unsaturated; this ring has saturated carbons."},
+  {t:"Imidazoline; beta antagonists", correct:false, why:"Slide 33: the beta antagonists are aryloxypropanolamines."},
+  {t:"Imidazoline; prostaglandin receptor agonists", correct:false, why:"Slide 44: the prostaglandin receptor agonists have a cyclopentane core."}],
+ teach:"Slides 31 and 66: the imidazoline ring is present in the alpha 2 agonists (clonidine, apraclonidine, brimonidine). On 11/19 he asked this as Question 4: name the group, then the pharmacological class that contains it (alpha 2 agonists).",
+ cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slides 31, 66; T@34671 11/19"},
+
 
 {id:"OA-052", skill:"class", prof:'Sikazwe', tier:'new', topic:"oo-ac", sub:"self", concept:"oo-ac-cyclopentane-pg",
  tags:["hard", "reasoning"], source:"slide",
@@ -562,10 +563,10 @@ QUESTIONS.push(
  options:[
   {t:"Beta antagonists", correct:false, why:"Slide 33: the beta antagonists are aryloxypropanolamines."},
   {t:"Carbonic anhydrase inhibitors", correct:false, why:"Slide 36: the carbonic anhydrase inhibitors are sulfonamides."},
-  {t:"Prostaglandin analogs", correct:true, why:"Slides 44–46: the prostaglandin skeleton is a cyclopentane with two chains."},
+  {t:"Prostaglandin receptor agonists", correct:true, why:"Slides 44–46: the prostaglandin skeleton is a cyclopentane with two chains; on 11/19 he said it is present in the prostaglandin receptor agonists."},
   {t:"Direct-acting cholinergics", correct:false, why:"Slide 40: carbamates and esters."}],
- teach:"Slides 44–46 (slide 67 leaves its answer blank): PGF2α, latanoprost, bimatoprost, travoprost and tafluprost share the cyclopentane ring with an α chain and an ω chain.",
- cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slides 33, 36, 40, 44–46, 67"},
+ teach:"Slides 44–46 (slide 67 leaves its answer blank; on 11/19 he answered prostaglandin, present in the prostaglandin receptor agonists): PGF2α, latanoprost, bimatoprost, travoprost and tafluprost share the cyclopentane ring with an α chain and an ω chain.",
+ cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slides 33, 36, 40, 44–46, 67; T@34892 11/19"},
 
 {id:"OA-053", skill:"chem", prof:'Sikazwe', tier:'new', topic:"oo-ac", sub:"self", concept:"oo-ac-irrev-fg",
  tags:["hard", "tell"], source:"slide",
@@ -573,10 +574,10 @@ QUESTIONS.push(
  options:[
   {t:"Carbamate", correct:false, why:"Slide 43: the carbamate is the group with intermediate duration of AChE inhibition."},
   {t:"Ester", correct:false, why:"Slide 42: the least inhibition."},
-  {t:"Amide", correct:false, why:"Slide 42: an amide is not one of the three groups ranked."},
+  {t:"Amide", correct:false, why:"Slide 68 draws the amide, but in lecture it has a mild duration; the phosphoryl group is the irreversible one (11/19)."},
   {t:"Phosphoryl (organophosphate)", correct:true, why:"Slide 42: extent of AChE inhibition phosphoryl > carbamate > ester."}],
- teach:"Slide 42: the extent of AChE inhibition depends on the functional group; the phosphoryl group inhibits most, then the carbamate, then the ester.",
- cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slides 42–43, 68"},
+ teach:"Slide 42: the extent of AChE inhibition depends on the functional group; the phosphoryl group inhibits most, then the carbamate, then the ester. On 11/19 he answered with the group labeled Z on slide 68, the phosphoryl group.",
+ cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slides 42–43, 68; T@35098 11/19"},
 
 {id:"OA-054", skill:"chem", prof:'Sikazwe', tier:'new', topic:"oo-ac", sub:"self", concept:"oo-ac-rank",
  tags:["hard", "two-facts"], source:"slide",
@@ -586,6 +587,6 @@ QUESTIONS.push(
   {t:"Carbamate, phosphoryl, ester", correct:false, why:"Phosphoryl is greatest on slide 42."},
   {t:"Ester, carbamate, phosphoryl", correct:false, why:"This reverses the order printed on slide 42."},
   {t:"Phosphoryl, ester, carbamate", correct:false, why:"Slide 42 puts the carbamate above the ester."}],
- teach:"Slide 42: phosphoryl > carbamate > ester for extent of AChE inhibition.",
+ teach:"Slide 42: phosphoryl > carbamate > ester for extent of AChE inhibition. In lecture he added the amide as a mild duration between the carbamate and the ester (11/19); this item keeps to the three groups the slide ranks.",
  cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slides 42–43"}
 );

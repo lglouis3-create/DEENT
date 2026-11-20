@@ -62,7 +62,7 @@ const noReason = L.items.filter(x => !x.reason || x.reason.trim().length < 12 ||
 check(!noReason.length, 'every star has a reason and a reference', noReason.map(x => x.id).join(', '));
 const badSrc = L.items.filter(x => !L.sources[x.source] || !L.sources[x.source].label || !L.sources[x.source].detail);
 check(!badSrc.length, 'every star names a defined source', badSrc.map(x => x.id + '→' + x.source).join(', '));
-const PROF = {smith: 'Smith', sikazwe: 'Sikazwe', patel: 'Patel'};
+const PROF = {smith: 'Smith', sikazwe: 'Sikazwe', patel: 'Patel', lam: 'Lam'};
 const wrongProf = L.items.filter(x => QB[x.id] && L.sources[x.source] && PROF[L.sources[x.source].by] !== QB[x.id].prof);
 check(!wrongProf.length, "every star's source is the question's own professor", wrongProf.map(x => x.id).join(', '));
 const unused = Object.keys(L.sources).filter(k => !L.items.some(x => x.source === k));
@@ -96,8 +96,8 @@ check(!badRef.length, `each of Dr. Sikazwe's ${sik.length} Exam 1 stars names it
       badRef.map(i => i + ' (' + L.items.find(y => y.id === i).ref + ')').join('; '));
 
 const ex3 = ids.filter(i => examOf(i) === 3);
-const ex3Other = ex3.filter(i => !['Smith', 'Sikazwe'].includes(QB[i].prof));
-check(!ex3Other.length, "every Exam 3 star is Dr. Smith's (eye deck) or Dr. Sikazwe's (OOO deck)", ex3Other.join(', '));
+const ex3Other = ex3.filter(i => !['Smith', 'Sikazwe', 'Lam'].includes(QB[i].prof));
+check(!ex3Other.length, "every Exam 3 star is Dr. Smith's (eye deck), Dr. Sikazwe's (OOO deck) or Dr. Lam's (glaucoma deck)", ex3Other.join(', '));
 const eye = ex3.filter(i => QB[i].prof === 'Smith');
 const eyeBad = eye.filter(i => { const q = QB[i], x = L.items.find(y => y.id === i), sl = pagesOf(q.cite);
   return q.prof !== 'Smith' || !/^ey-/.test(q.topic) || !sl.length || sl.some(n => n < 1 || n > 74) || !/\bT@?\s?\d+[^;]*11\/1[37]|slides? ?\d/.test(x.ref) || !/11\/1[37]|slides?\s*\d/.test(x.ref); });
@@ -115,6 +115,16 @@ const oooBad = ooo.filter(i => { const q = QB[i], x = L.items.find(y => y.id ===
 check(!oooBad.length, `the ${ooo.length} Exam 3 stars of Dr. Sikazwe are his OOO questions (topic oo-*), cite slides 1-68 of Sikazwe_OOO_mc.pdf but none of the FYI slides 10-13, and name a slide or a 11/18 transcript place`, oooBad.join(', '));
 const oooSrc = ooo.filter(i => !/^sik-(ex3|q-ooo|know-ooo)$/.test(L.items.find(y => y.id === i).source));
 check(!oooSrc.length, "Dr. Sikazwe's Exam 3 stars use his Exam 3 sources (sik-ex3, sik-q-ooo, sik-know-ooo)", oooSrc.join(', '));
+// Dr. Lam's Exam 3 stars (added 2026-11-20): her glaucoma therapeutics questions (topic lm-*, deck Lam_Glaucoma.pdf, slides 1-93), each
+// reference names a place of the 11/19 transcript at or after T@35742 (T@n) and a slide of the deck or "slides" cite; never lowYield
+const lamIds = ex3.filter(i => QB[i].prof === 'Lam');
+const lamBad = lamIds.filter(i => { const q = QB[i], x = L.items.find(y => y.id === i), sl = pagesOf(q.cite);
+  const ts = (String(x.ref).match(/T@(\d+)/g) || []).map(t => +t.slice(2));
+  return !/^lm-/.test(q.topic) || !String(q.cite).includes('Lam_Glaucoma.pdf') || !sl.length || sl.some(n => n < 1 || n > 93) || q.lowYield ||
+         !ts.length || ts.some(t => t < 35742) || !/11\/19/.test(x.ref); });
+check(lamIds.length > 0 && !lamBad.length, `the ${lamIds.length} Exam 3 stars of Dr. Lam are her glaucoma questions (topic lm-*), cite slides 1-93 of Lam_Glaucoma.pdf, are not lowYield and name a place at or after T@35742 of the 11/19 transcript`, lamBad.join(', '));
+const lamSrc = lamIds.filter(i => !/^lam-(q|ex3)$/.test(L.items.find(y => y.id === i).source));
+check(!lamSrc.length, "Dr. Lam's stars use her sources (lam-q, lam-ex3)", lamSrc.join(', '));
 const eyeNoElig = ex3.filter(i => !(QB[i] && !QB[i].lowYield && !QB[i].unassigned && !optionalTopics.has(QB[i].topic)));
 check(!eyeNoElig.length, 'no Exam 3 star (Smith or Sikazwe) is lowYield, unassigned or in an optional topic', eyeNoElig.join(', '));
 

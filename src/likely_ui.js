@@ -70,8 +70,8 @@ const LIKELY_UI = (() => {
      already names its exam. Opens on the active exam. Chip choices are page memory only. */
   const EXAM_OF = {}; (COURSE.lectures || []).forEach(l => { EXAM_OF[l.id] = l.exam; });
   const examOf = q => { const l = (typeof lecOf === 'function' ? lecOf(q) : null) || q._lec; return EXAM_OF[l && l.id ? l.id : l]; };
-  const PROFS = [['all', 'All'], ['smith', 'Smith'], ['sikazwe', 'Sikazwe'], ['patel', 'Patel']];
-  const profOf = q => ((q.prof || '').toLowerCase().match(/smith|sikazwe|patel/) || [''])[0];
+  const PROFS = [['all', 'All'], ['smith', 'Smith'], ['sikazwe', 'Sikazwe'], ['patel', 'Patel'], ['lam', 'Lam']];
+  const profOf = q => ((q.prof || '').toLowerCase().match(/smith|sikazwe|patel|lam/) || [''])[0];
   const select = (exam, prof) => {
     let r = pool().filter(q => {
       const e = examOf(q);

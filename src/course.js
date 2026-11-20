@@ -178,6 +178,10 @@ const COURSE = {
     {id:'L11', deck:'Sikazwe_OOO_mc.pdf',
      label:'Lectures 11–12: Otic, oral and ophthalmic medicinal chemistry (Sikazwe, 11/18 and 11/19)',
      prof:'Sikazwe', exam:3, module:'Exam 3: Lectures 9–13'},
+    // Dr. Lam's glaucoma therapeutics (11/19, about two hours); her ophthalmic disorders lecture (11/20) joins as its own entry.
+    {id:'L12', deck:'Lam_Glaucoma.pdf',
+     label:'Lecture 12: Glaucoma therapeutics (Lam, 11/19)',
+     prof:'Lam', exam:3, module:'Exam 3: Lectures 9–13'},
   ],
 
   exams: [
@@ -239,17 +243,21 @@ const COURSE = {
      ]},
     {id:'exam3', name:'Exam 3', date:'Mon 11/23, 9:00–10:30 AM', when:'2026-11-23T09:00',
      questions:50, minutes:90, sata:null,
-     blurb:'Covers Lectures 9–13 (syllabus). Practice coverage so far: Dr. Smith\'s eye lectures (11/13, 11/17) and her cumulative Exam 1 material; Dr. Sikazwe and Dr. Lam join as their lectures are added. Five of the 50 questions are Dr. Smith\'s cumulative ones; no split by professor is announced for the rest.',
+     blurb:'Covers Lectures 9–13 (syllabus). Dr. Sikazwe 14 questions (28%), Dr. Smith 18 (36%, five of them cumulative with Exam 1) and Dr. Lam 18 (36%), as Dr. Sikazwe announced on 11/19. Practice coverage so far: Dr. Smith\'s eye lectures, Dr. Sikazwe\'s otic, oral and ophthalmic chemistry and Dr. Lam\'s glaucoma therapeutics; her ophthalmic disorders lecture (11/20) joins when taught.',
      facts:[['Covers', 'Covers Lectures 9–13 (syllabus).'],
-            ['Practice coverage', 'So far Dr. Smith\'s eye lectures (11/13, 11/17) and her cumulative Exam 1 material; Dr. Sikazwe and Dr. Lam join as their lectures are added.'],
+            ['The split (11/19)', 'Dr. Sikazwe, 11/19: "Exam 3 questions. 50 total. 28% from me ... 36 from Doctor Smith. And 36 from Doctor Lam." That is 14, 18 and 18 questions.'],
+            ['Dr. Lam (11/19)', 'She writes each question from a learning objective of her handout (the Word file); "cover the information up that is listed under each learning objective and try to write down as much as you remember", then practice the patient cases. One open-ended question, at least one on the sequence of drug classes, and application cases like Ms. Lopez. Not tested: risk factors to collect, the day supply calculation, prostaglandin contraindications, closed-angle glaucoma (except the drugs that raise its risk).'],
             ['Dr. Smith (11/13)', '"I\'ve got 5 questions and they\'re cumulative, so everything that was on the first exam is fair game. So focus on pathophys and then focus on mechanisms." She likes scary side effects such as black box warnings.'],
+            ['Dr. Sikazwe (11/19)', 'Focus on two diseases, glaucoma and dry eye. Allergic conjunctivitis is read only to slide 51 (the antihistamine slides 52-53 are in a later lecture); the steroid slides and self-assessment questions 1 and 2 are skipped; questions 3, 4 and 5 are in.'],
             ['Syllabus formats', 'The syllabus lists multiple-choice, select-all, short-answer, true/false and matching as possible formats and gives no count of each.']],
-     factsMain:['Covers', 'Practice coverage'],
+     factsMain:['Covers', 'The split (11/19)', 'Dr. Lam (11/19)'],
      pools:[
-       // Dr. Smith, 11/13: "I've got 5 questions and they're cumulative" (Exam 1 material); the paper has 50
-       // questions (syllabus), so the other 45 come from Exam 3 lectures. No split by professor within them is announced.
-       {key:'eye', name:'Lectures 9–13 so far', marks:45, filter:{exam:3}},
-       {key:'cum', name:'Dr. Smith, cumulative Exam 1 material', marks:5, filter:{exam:1, prof:'Smith', unassigned:undefined}},
+       // Dr. Sikazwe, 11/19: 28% / 36% / 36% of 50 questions = 14, 18 and 18 (14 + 18 + 18 = 50). Dr. Smith's 18 include her
+       // five cumulative questions (11/13 T@61120): 13 from the eye lectures and 5 from her Exam 1 material.
+       {key:'eye', name:'Dr. Smith: eye lectures', marks:13, filter:{exam:3, prof:'Smith'}},
+       {key:'cum', name:'Dr. Smith: cumulative Exam 1 material', marks:5, filter:{exam:1, prof:'Smith', unassigned:undefined}},
+       {key:'sik', name:'Dr. Sikazwe: otic, oral, ophthalmic chemistry', marks:14, filter:{exam:3, prof:'Sikazwe'}},
+       {key:'lam', name:'Dr. Lam: glaucoma therapeutics', marks:18, filter:{exam:3, prof:'Lam'}},
      ]},
   ],
   // Exam 1 was on Mon 11/09; the Exam view, the weighted pass and Weak spots follow Exam 2 from
@@ -291,6 +299,7 @@ const COURSE = {
           'figs2.js',
           // Exam 3 diagrams (Louis, 2026-11-19): Dr. Smith's eye figures, then Dr. Sikazwe's otic, oral and ophthalmic chemistry (each adds to DIA, DIA_NAMES, DIAGRAMS)
           'diagrams_ey.js',
+          'diagrams_lg.js',
           'diagrams_oo.js',
           // Mechanism step-throughs from Dr. Smith's PCol slides (Louis, 2026-11-09): adds to DIA
           'moa_figs.js',
@@ -316,9 +325,13 @@ const COURSE = {
           // Lecture 8 points she stressed that had no question: Lyme neurologic/cardiac, scorpion stings, sunscreen expiration, snow and sand, stopping a reacting product, Fitzpatrick type, silicone for scars
           'q21_L08_gaps.js',
           // Dr. Smith, Lectures 9-10 (Exam 3): the eye (topics first, then the question files)
-          'q27_ooo_topics.js', 'q22_eye_topics.js', 'q23_eye_anat_patho.js', 'q24_eye_inflow.js', 'q25_eye_outflow.js', 'q26_eye_allergy_dry.js',
+          'q27_ooo_topics.js', 'q22_eye_topics.js', 'q32_lam_topics.js', 'q23_eye_anat_patho.js', 'q24_eye_inflow.js', 'q25_eye_outflow.js', 'q26_eye_allergy_dry.js',
           // Dr. Sikazwe, Lectures 11-12 (Exam 3): otic, oral, ophthalmic medicinal chemistry
           'q28_ooo_otic_oral.js', 'q29_ooo_oph_a.js', 'q30_ooo_oph_b.js', 'q31_ooo_oph_c.js',
+          // Dr. Sikazwe, 11/19 (Exam 3): the questions on what he emphasized, written after the lecture (video and transcript)
+          'q36_ooo_1119.js',
+          // Dr. Lam, Lecture 12 (Exam 3): glaucoma therapeutics, by her learning objectives (topics first, in q32_lam_topics.js above)
+          'q33_lam_a.js', 'q34_lam_b.js', 'q35_lam_c.js',
           // the step-throughs of moa_figs.js in the explanations of the matching Smith questions
           'moa_links.js',
           // Drug list tab (temporary course-level presentation, to be replaced by the kit's

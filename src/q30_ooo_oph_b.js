@@ -16,7 +16,7 @@ QUESTIONS.push(
   {t:'A serine hydrolase; it changes pH', correct:false, why:'The enzyme is a Zn-metalloenzyme (slide 35); acetylcholinesterase is the enzyme that inactivates ACh (slide 41).'},
   {t:'A magnesium-dependent kinase; it changes pH', correct:false, why:'Slide 35: the metal is zinc, and the enzyme catalyzes CO2 hydration, not phosphorylation.'}],
  teach:'Slide 35: carbonic anhydrase (CA) is a Zn-metalloenzyme that modulates aqueous humor production through pH changes. CO2 + H2O gives carbonic acid (H2CO3), which gives bicarbonate (HCO3-) and H+.',
- cite:'Lectures 11–12 (Sikazwe_OOO_mc.pdf) slide 35'},
+ cite:'Lectures 11–12 (Sikazwe_OOO_mc.pdf) slide 35; T@8290 11/19'},
 
 {id:'OC-002', skill:'mech', prof:'Sikazwe', tier:'new', topic:'oo-cai', sub:'enz', concept:'oo-cai-rxn-carbonic-acid',
  tags:[], source:'slide',
@@ -27,7 +27,7 @@ QUESTIONS.push(
   {t:'Bicarbonate', correct:false, why:'Bicarbonate is the ion that forms from carbonic acid, so it is not the first product (slide 35).'},
   {t:'Carbonic acid', correct:true, why:'Slide 35: CO2 + H2O gives H2CO3 (carbonic acid), which gives HCO3- + H+.'}],
  teach:'Slide 35 reaction: CO2 + H2O (CA) to H2CO3 (carbonic acid), which gives HCO3- (bicarbonate ion) + H+.',
- cite:'Lectures 11–12 (Sikazwe_OOO_mc.pdf) slide 35'},
+ cite:'Lectures 11–12 (Sikazwe_OOO_mc.pdf) slide 35; T@8554 11/19'},
 
 {id:'OC-003', skill:'mech', prof:'Sikazwe', tier:'new', topic:'oo-cai', sub:'enz', concept:'oo-cai-polleve2-bicarbonate',
  tags:[], source:'slide',
@@ -37,8 +37,8 @@ QUESTIONS.push(
   {t:'Carbon dioxide', correct:false, why:'CO2 is the substrate of the reaction (slide 35), not its product.'},
   {t:'Proteins', correct:false, why:'Slide 35: the reaction involves CO2, water, carbonic acid, bicarbonate and H+; proteins are not formed.'},
   {t:'Oxygen (O2)', correct:false, why:'Oxygen is not part of the reaction on slide 35.'}],
- teach:'Slide 39 (Polleve-2) asks which production the CAIs slow; the options are carbon dioxide, bicarbonate, proteins and oxygen. The reaction on slide 35 ends in bicarbonate and H+ (slide 35 prints no key for the poll; the answer follows from the reaction).',
- cite:'Lectures 11–12 (Sikazwe_OOO_mc.pdf) slides 35, 39'},
+ teach:'Slide 39 (Polleve-2) asks which production the CAIs slow; the options are carbon dioxide, bicarbonate, proteins and oxygen. The reaction on slide 35 ends in bicarbonate and H+ (slide 35 prints no key for the poll; the answer follows from the reaction). In lecture (11/19) he explained that bicarbonate promotes osmotic water movement into the posterior chamber, which adds to aqueous humor production; the poll (96 percent) showed bicarbonate as the answer.',
+ cite:'Lectures 11–12 (Sikazwe_OOO_mc.pdf) slides 35, 39; T@9136 11/19'},
 
 {id:'OC-004', skill:'class', prof:'Sikazwe', tier:'new', topic:'oo-cai', sub:'sulf', concept:'oo-cai-sulfonamide-class',
  tags:[], source:'slide',
@@ -49,7 +49,7 @@ QUESTIONS.push(
   {t:'Sulfonamides', correct:true, why:'Slide 36: sulfonamides (zolamides), competitive inhibitors of CA that lower intraocular fluid production.'},
   {t:'Imidazolines', correct:false, why:'Imidazolines are the alpha 2 agonist class (clonidine, apraclonidine, brimonidine), not the CAIs.'}],
  teach:'Slide 36: the sulfonamides are named zolamides (acetazolamide, methazolamide, brinzolamide, dorzolamide HCl).',
- cite:'Lectures 11–12 (Sikazwe_OOO_mc.pdf) slide 36'},
+ cite:'Lectures 11–12 (Sikazwe_OOO_mc.pdf) slide 36; T@11755 11/19'},
 
 {id:'OC-005', skill:'chem', prof:'Sikazwe', tier:'new', topic:'oo-cai', sub:'sulf', concept:'oo-cai-sulfonamide-zinc-group',
  tags:['cbda'], source:'slide',
@@ -59,8 +59,8 @@ QUESTIONS.push(
   {t:'The carboxylic acid', correct:false, why:'The zolamides on slide 36 have no carboxylic acid; the binding group is SO2NH2 (slide 38).'},
   {t:'The sulfonamide, SO2NH2', correct:true, why:'Slide 38: the SO2NH2 group forms ionic and H-bond interactions with Zn and Thr199.'},
   {t:'The ester', correct:false, why:'The zolamides have no ester; the binding group is SO2NH2 (slide 38).'}],
- teach:'Slide 38 (CBDA): CAIs dock in the active site of CA and the SO2NH2 group forms ionic and H-bond interactions with Zn and Thr199.',
- cite:'Lectures 11–12 (Sikazwe_OOO_mc.pdf) slides 36, 38'},
+ teach:'Slide 38 (CBDA): CAIs dock in the active site of CA and the SO2NH2 group forms ionic and H-bond interactions with Zn and Thr199. He added that the group is not there for decoration: it is needed for binding and competitive inhibition (11/19).',
+ cite:'Lectures 11–12 (Sikazwe_OOO_mc.pdf) slides 36, 38; T@12023 11/19'},
 
 {id:'OC-006', skill:'chem', prof:'Sikazwe', tier:'new', topic:'oo-cai', sub:'sulf', concept:'oo-cai-sulfonamide-interactions',
  tags:['cbda'], source:'slide',
@@ -70,8 +70,8 @@ QUESTIONS.push(
   {t:'Hydrophobic and pi-stacking interactions', correct:false, why:'Slide 38 prints ionic and H-bond interactions.'},
   {t:'A covalent bond and hydrophobic interactions', correct:false, why:'Slide 38 prints ionic and H-bond interactions; the inhibition is competitive (slide 36).'},
   {t:'Dipole and van der Waals interactions', correct:false, why:'Slide 38 prints ionic and H-bond interactions.'}],
- teach:'Slide 38: the chemical basis of drug action of the CAIs is docking in the CA active site, with ionic and H-bond interactions from SO2NH2 to Zn and Thr199.',
- cite:'Lectures 11–12 (Sikazwe_OOO_mc.pdf) slide 38'},
+ teach:'Slide 38: the chemical basis of drug action of the CAIs is docking in the CA active site, with ionic and H-bond interactions from SO2NH2 to Zn and Thr199. In lecture he counted three hydrogen bonds plus one electrostatic (ionic) interaction with zinc (11/19).',
+ cite:'Lectures 11–12 (Sikazwe_OOO_mc.pdf) slide 38; T@14375 11/19'},
 
 {id:'OC-007', skill:'mech', prof:'Sikazwe', tier:'new', topic:'oo-cai', sub:'sulf', concept:'oo-cai-competitive-lower-production',
  tags:['tell'], source:'slide',
@@ -82,7 +82,7 @@ QUESTIONS.push(
   {t:'Irreversible inhibition; higher fluid outflow', correct:false, why:'Neither part matches slide 36: the inhibition is competitive and fluid production falls.'},
   {t:'Competitive inhibition; lower fluid production', correct:true, why:'Slide 36: sulfonamides competitively inhibit CAs and decrease intraocular fluid production.'}],
  teach:'Slide 36: the zolamides competitively inhibit CAs, so intraocular fluid production falls. Cholinergics, prostaglandin analogs, omidenepag and netarsudil raise outflow.',
- cite:'Lectures 11–12 (Sikazwe_OOO_mc.pdf) slides 36, 40, 44'},
+ cite:'Lectures 11–12 (Sikazwe_OOO_mc.pdf) slides 36, 40, 44; T@12191 11/19'},
 
 {id:'OC-008', skill:'pk', prof:'Sikazwe', tier:'new', topic:'oo-cai', sub:'sulf', concept:'oo-cai-clogp-highest',
  tags:[], source:'slide',
@@ -92,8 +92,8 @@ QUESTIONS.push(
   {t:'Brinzolamide', correct:true, why:'Slide 36: brinzolamide ClogP = 7.'},
   {t:'Methazolamide', correct:false, why:'Slide 36: methazolamide ClogP = 0.13.'},
   {t:'Acetazolamide', correct:false, why:'Slide 36: acetazolamide ClogP = -0.3.'}],
- teach:'Slide 36 ClogP values: acetazolamide -0.3, methazolamide 0.13, dorzolamide HCl 2, brinzolamide 7.',
- cite:'Lectures 11–12 (Sikazwe_OOO_mc.pdf) slide 36'},
+ teach:'Slide 36 ClogP values: acetazolamide -0.3, methazolamide 0.13, dorzolamide HCl 2, brinzolamide 7. In lecture the log P values separate the first-generation agents (polar, oral, high doses) from the second-generation agents (lipophilic, topical, small doses) (11/19).',
+ cite:'Lectures 11–12 (Sikazwe_OOO_mc.pdf) slide 36; T@10401 11/19'},
 
 {id:'OC-009', skill:'pk', prof:'Sikazwe', tier:'new', topic:'oo-cai', sub:'sulf', concept:'oo-cai-clogp-lowest',
  tags:[], source:'slide',
@@ -103,8 +103,8 @@ QUESTIONS.push(
   {t:'Methazolamide', correct:false, why:'Slide 36: methazolamide ClogP = 0.13, higher than acetazolamide.'},
   {t:'Dorzolamide HCl', correct:false, why:'Slide 36: dorzolamide ClogP = 2.'},
   {t:'Brinzolamide', correct:false, why:'Slide 36: brinzolamide ClogP = 7, the most lipophilic.'}],
- teach:'The lower the ClogP, the more hydrophilic the drug. Slide 36: acetazolamide -0.3, methazolamide 0.13, dorzolamide HCl 2, brinzolamide 7.',
- cite:'Lectures 11–12 (Sikazwe_OOO_mc.pdf) slide 36'},
+ teach:'The lower the ClogP, the more hydrophilic the drug. Slide 36: acetazolamide -0.3, methazolamide 0.13, dorzolamide HCl 2, brinzolamide 7. In lecture the log P values separate the first-generation agents (polar, oral, high doses) from the second-generation agents (lipophilic, topical, small doses) (11/19).',
+ cite:'Lectures 11–12 (Sikazwe_OOO_mc.pdf) slide 36; T@10401 11/19'},
 
 {id:'OC-010', skill:'pk', prof:'Sikazwe', tier:'new', topic:'oo-cai', sub:'sulf', concept:'oo-cai-cyp-deethylation-active',
  tags:['adme'], source:'slide',
@@ -114,8 +114,8 @@ QUESTIONS.push(
   {t:'Esterase hydrolysis; the metabolites are active', correct:false, why:'Esterase hydrolysis activates the ester prodrugs (slides 45, 47, 48); slide 37 gives CYP N-deethylation for these two.'},
   {t:'CYP N-deethylation; the metabolites are active', correct:true, why:'Slide 37: both undergo CYP N-deethylations; the N-deethylated metabolites are active.'},
   {t:'Glucuronidation; the metabolites are inactive', correct:false, why:'Slide 37 gives CYP N-deethylation, with active products.'}],
- teach:'Slide 37 (ADMET, the M): brinzolamide and dorzolamide both undergo CYP N-deethylation and the N-deethylated metabolites are active.',
- cite:'Lectures 11–12 (Sikazwe_OOO_mc.pdf) slide 37'},
+ teach:'Slide 37 (ADMET, the M): brinzolamide and dorzolamide both undergo CYP N-deethylation and the N-deethylated metabolites are active. He told the class to work out what the N-deethylation product looks like and said he could ask it (11/19).',
+ cite:'Lectures 11–12 (Sikazwe_OOO_mc.pdf) slide 37; T@12420 11/19'},
 
 {id:'OC-011', skill:'chem', prof:'Sikazwe', tier:'new', topic:'oo-cai', sub:'sulf', concept:'oo-cai-deethylation-site',
  tags:['adme'], source:'slide',
@@ -126,7 +126,7 @@ QUESTIONS.push(
   {t:'The sulfone oxygens on the ring', correct:false, why:'The step is an N-deethylation (slide 37), so the sulfone is not the part removed.'},
   {t:'The ethyl group on the secondary amine', correct:true, why:'N-deethylation removes the ethyl group from the nitrogen (slide 37); both drugs are drawn with an NH-ethyl (slide 36).'}],
  teach:'Slide 37: both drugs undergo CYP N-deethylation. The N-ethyl group sits on the secondary amine of each (slide 36); the products are active.',
- cite:'Lectures 11–12 (Sikazwe_OOO_mc.pdf) slides 36, 37'},
+ cite:'Lectures 11–12 (Sikazwe_OOO_mc.pdf) slides 36, 37; T@12940 11/19'},
 
 {id:'OC-012', skill:'class', prof:'Sikazwe', tier:'new', topic:'oo-cai', sub:'sulf', concept:'oo-cai-brand-cai',
  tags:[], source:'slide',
@@ -181,7 +181,7 @@ QUESTIONS.push(
   {t:'Carbonate', correct:false, why:'Slide 40 lists carbamates and esters for the direct-acting cholinergics.'},
   {t:'Carbamate', correct:true, why:'Slide 40: carbachol Cl is drawn with C(=O) bonded to O and NH2, a carbamate (compare slide 42); acetylcholine carries an ester.'}],
  teach:'Slide 40: direct-acting cholinergics are carbamates and esters. Acetylcholine has an ester (acyloxy) group; carbachol Cl has a carbamate.',
- cite:'Lectures 11–12 (Sikazwe_OOO_mc.pdf) slide 40'},
+ cite:'Lectures 11–12 (Sikazwe_OOO_mc.pdf) slide 40; T@17565 11/19'},
 
 {id:'OC-017', skill:'class', prof:'Sikazwe', tier:'new', topic:'oo-chol', sub:'dir', concept:'oo-chol-which-is-carbamate',
  tags:['tell'], source:'slide',
@@ -192,7 +192,7 @@ QUESTIONS.push(
   {t:'Echothiophate iodide', correct:false, why:'Slide 42: echothiophate iodide is an organophosphate.'},
   {t:'Latanoprost', correct:false, why:'Slide 44: latanoprost is a prostaglandin ester, not a cholinergic.'}],
  teach:'Slides 40 and 42: carbachol, carbamate; acetylcholine, ester; echothiophate, organophosphate (phosphoryl).',
- cite:'Lectures 11–12 (Sikazwe_OOO_mc.pdf) slides 40, 42, 44'},
+ cite:'Lectures 11–12 (Sikazwe_OOO_mc.pdf) slides 40, 42, 44; T@17565 11/19'},
 
 {id:'OC-018', skill:'mech', prof:'Sikazwe', tier:'new', topic:'oo-chol', sub:'dir', concept:'oo-chol-carbachol-weak-indirect',
  tags:['two-facts'], source:'slide',
@@ -203,9 +203,9 @@ QUESTIONS.push(
   {t:'Weak inhibition of Rho kinase', correct:false, why:'Rho kinase inhibition is the netarsudil mechanism (slide 48).'},
   {t:'Weak indirect effects through AChE', correct:true, why:'Slide 40: carbachol has weak indirect effects, meaning raised ACh through AChE (slide 41).'}],
  teach:'Slide 40: carbachol Cl (IsoptoCarbachol) has weak indirect effects. Slide 41: indirect-acting cholinergics inhibit acetylcholinesterase, raising ACh.',
- cite:'Lectures 11–12 (Sikazwe_OOO_mc.pdf) slides 40, 41'},
+ cite:'Lectures 11–12 (Sikazwe_OOO_mc.pdf) slides 40, 41; T@16294 11/19'},
 
-{id:'OC-019', skill:'chem', prof:'Sikazwe', tier:'new', topic:'oo-chol', sub:'dir', concept:'oo-chol-acyloxy-role',
+{id:'OC-019', skill:'chem', prof:'Sikazwe', lowYield:true, tier:'new', topic:'oo-beyond', sub:'dsar', note:'Not on Exam 3: on 11/19 he removed the slide 40 SAR and said not to expect a question on it (T@17299). Kept for optional practice.', concept:'oo-chol-acyloxy-role',
  tags:['cbda'], source:'slide',
  stem:'In the SAR of the direct-acting cholinergics, what is the role of the acyloxy group?',
  options:[
@@ -216,7 +216,7 @@ QUESTIONS.push(
  teach:'Slide 40 SAR: acyloxy group for H-bonding to nicotinic/muscarinic receptors; ionizable amine (N) group; N-methyl groups; 2-carbon spacer between O and N.',
  cite:'Lectures 11–12 (Sikazwe_OOO_mc.pdf) slide 40'},
 
-{id:'OC-020', skill:'chem', prof:'Sikazwe', tier:'new', topic:'oo-chol', sub:'dir', concept:'oo-chol-spacer-length',
+{id:'OC-020', skill:'chem', prof:'Sikazwe', lowYield:true, tier:'new', topic:'oo-beyond', sub:'dsar', note:'Not on Exam 3: on 11/19 he removed the slide 40 SAR and said not to expect a question on it (T@17299). Kept for optional practice.', concept:'oo-chol-spacer-length',
  tags:[], source:'slide',
  stem:'In the direct-acting cholinergic SAR, how are the oxygen and the nitrogen separated?',
  options:[
@@ -227,7 +227,7 @@ QUESTIONS.push(
  teach:'Slide 40: acetylcholine and carbachol both have O-CH2-CH2-N+; a 2-carbon spacer is part of the SAR.',
  cite:'Lectures 11–12 (Sikazwe_OOO_mc.pdf) slide 40'},
 
-{id:'OC-021', skill:'chem', prof:'Sikazwe', tier:'new', topic:'oo-chol', sub:'dir', concept:'oo-chol-nmethyl-spacer',
+{id:'OC-021', skill:'chem', prof:'Sikazwe', lowYield:true, tier:'new', topic:'oo-beyond', sub:'dsar', note:'Not on Exam 3: on 11/19 he removed the slide 40 SAR and said not to expect a question on it (T@17299). Kept for optional practice.', concept:'oo-chol-nmethyl-spacer',
  tags:['two-facts'], source:'slide',
  stem:'Which combination of features belongs to the SAR of the direct-acting cholinergics?',
  options:[
@@ -247,7 +247,7 @@ QUESTIONS.push(
   {t:'Dorzolamide HCl', correct:false, why:'Slide 36: dorzolamide is a carbonic anhydrase inhibitor.'},
   {t:'Latanoprost', correct:false, why:'Slide 44: latanoprost is a prostaglandin FP agonist.'}],
  teach:'Slide 40: direct-acting cholinergics (carbamates and esters) raise fluid outflow: acetylcholine, carbachol Cl, pilocarpine HCl.',
- cite:'Lectures 11–12 (Sikazwe_OOO_mc.pdf) slides 40, 42'},
+ cite:'Lectures 11–12 (Sikazwe_OOO_mc.pdf) slides 40, 42; T@16511 11/19'},
 
 {id:'OC-023', skill:'mech', prof:'Sikazwe', tier:'new', topic:'oo-chol', sub:'ind', concept:'oo-chol-ache-products',
  tags:['two-facts'], source:'slide',
@@ -258,7 +258,7 @@ QUESTIONS.push(
   {t:'Acetyl phosphate and choline', correct:false, why:'Slide 41 shows acetic acid as the first product.'},
   {t:'Acetic acid and choline', correct:true, why:'Slide 41: ACh with AChE gives acetic acid and choline.'}],
  teach:'Slide 41: acetylcholine plus AChE gives acetic acid and choline, so the ester of ACh is the site hydrolyzed.',
- cite:'Lectures 11–12 (Sikazwe_OOO_mc.pdf) slide 41'},
+ cite:'Lectures 11–12 (Sikazwe_OOO_mc.pdf) slide 41; T@18439 11/19'},
 
 {id:'OC-024', skill:'mech', prof:'Sikazwe', tier:'new', topic:'oo-chol', sub:'ind', concept:'oo-chol-indirect-mechanism',
  tags:['tell'], source:'slide',
@@ -269,7 +269,7 @@ QUESTIONS.push(
   {t:'They inhibit carbonic anhydrase, so less bicarbonate forms', correct:false, why:'That is the zolamide mechanism (slides 35, 36).'},
   {t:'They activate the FP receptor', correct:false, why:'That is the prostaglandin mechanism (slide 44).'}],
  teach:'Slide 41: AChE is a key enzyme that inactivates ACh; inhibiting it increases ACh levels and raises fluid outflow.',
- cite:'Lectures 11–12 (Sikazwe_OOO_mc.pdf) slide 41'},
+ cite:'Lectures 11–12 (Sikazwe_OOO_mc.pdf) slide 41; T@18603 11/19'},
 
 {id:'OC-025', skill:'chem', prof:'Sikazwe', tier:'new', topic:'oo-chol', sub:'ind', concept:'oo-chol-intermediate-carbamate',
  tags:['poll'], source:'slide',
@@ -278,9 +278,9 @@ QUESTIONS.push(
   {t:'Carbamate', correct:true, why:'Slide 42: phosphoryl > carbamate > ester in the extent of AChE inhibition, so the carbamate is intermediate (Question-2, slide 43).'},
   {t:'Phosphoryl', correct:false, why:'Slide 42: phosphoryl gives the greatest extent of inhibition.'},
   {t:'Ester', correct:false, why:'Slide 42: the ester gives the least extent of the three.'},
-  {t:'Amide', correct:false, why:'The amide is not one of the three groups ranked on slide 42.'}],
- teach:'Slide 42: the extent of AChE inhibition depends on the functional group present: phosphoryl > carbamate > ester. Question-2 (slide 43) offers phosphoryl, amide, ester and carbamate.',
- cite:'Lectures 11–12 (Sikazwe_OOO_mc.pdf) slides 42, 43'},
+  {t:'Amide', correct:false, why:'Slide 42 ranks three groups; in lecture he placed the amide below the carbamate, at a mild duration, so it is not the intermediate group (11/19).'}],
+ teach:'Slide 42: the extent of AChE inhibition depends on the functional group present: phosphoryl > carbamate > ester. Question-2 (slide 43) offers phosphoryl, amide, ester and carbamate. On 11/19 he answered this question with the carbamate (he said carbonate); on the slide he circled the carbamate.',
+ cite:'Lectures 11–12 (Sikazwe_OOO_mc.pdf) slides 42, 43; T@22201 11/19'},
 
 {id:'OC-026', skill:'chem', prof:'Sikazwe', tier:'new', topic:'oo-chol', sub:'ind', concept:'oo-chol-ache-rank-order',
  tags:[], source:'slide',
@@ -290,7 +290,7 @@ QUESTIONS.push(
   {t:'Ester, carbamate, phosphoryl', correct:false, why:'This reverses the order of slide 42.'},
   {t:'Phosphoryl, carbamate, ester', correct:true, why:'Slide 42: phosphoryl > carbamate > ester.'},
   {t:'Phosphoryl, ester, carbamate', correct:false, why:'Slide 42 places carbamate above ester.'}],
- teach:'Slide 42: extent of AChE inhibition: phosphoryl (organophosphate) > carbamate > ester.',
+ teach:'Slide 42: extent of AChE inhibition: phosphoryl (organophosphate) > carbamate > ester. In lecture he added the amide as a mild duration between the carbamate and the ester (11/19); this item keeps to the three groups the slide ranks.',
  cite:'Lectures 11–12 (Sikazwe_OOO_mc.pdf) slide 42'},
 
 {id:'OC-027', skill:'chem', prof:'Sikazwe', tier:'new', topic:'oo-chol', sub:'ind', concept:'oo-chol-irreversible-group',
@@ -302,7 +302,7 @@ QUESTIONS.push(
   {t:'Amide', correct:false, why:'The amide is not a cholinergic inhibitor group on slide 42.'},
   {t:'Phosphoryl', correct:true, why:'Slides 42 and 68: the organophosphate (phosphoryl) group; echothiophate is an irreversible AChE inhibitor.'}],
  teach:'Slide 42: echothiophate iodide, an organophosphate, is an irreversible AChE inhibitor. Slide 68 (Question 5) asks which functional group exhibits irreversible inhibition.',
- cite:'Lectures 11–12 (Sikazwe_OOO_mc.pdf) slides 42, 68'},
+ cite:'Lectures 11–12 (Sikazwe_OOO_mc.pdf) slides 42, 68; T@19056 11/19'},
 
 {id:'OC-028', skill:'mech', prof:'Sikazwe', tier:'new', topic:'oo-chol', sub:'ind', concept:'oo-chol-aging-step',
  tags:[], source:'slide',
@@ -312,8 +312,8 @@ QUESTIONS.push(
   {t:'Aging: loss of ethanol from the phosphorylated enzyme by water', correct:true, why:'Slide 42: H2O removes C2H5-OH from the diethyl phosphoryl enzyme (aging), leaving an irreversibly inactive AChE.'},
   {t:'Aging: loss of acetic acid from the phosphorylated enzyme', correct:false, why:'The group lost in the scheme is ethanol (C2H5-OH); acetic acid is a product of ACh hydrolysis (slide 41).'},
   {t:'Oxidation of the ethyl groups by CYP', correct:false, why:'The scheme on slide 42 shows hydrolysis with water (aging), not CYP oxidation.'}],
- teach:'Slide 42: AChE inactive (blocked by the phosphoryl group) then, with H2O and loss of C2H5-OH (aging), irreversibly inactive.',
- cite:'Lectures 11–12 (Sikazwe_OOO_mc.pdf) slide 42'},
+ teach:'Slide 42: AChE inactive (blocked by the phosphoryl group) then, with H2O and loss of C2H5-OH (aging), irreversibly inactive. He described aging as the loss of an ethyl group (a deethylation) that leaves a hydroxy group, a covalent and irreversible bond; the antidote must be given before it (11/19).',
+ cite:'Lectures 11–12 (Sikazwe_OOO_mc.pdf) slide 42; T@19719 11/19'},
 
 {id:'OC-029', skill:'class', prof:'Sikazwe', tier:'new', topic:'oo-chol', sub:'ind', concept:'oo-chol-which-organophosphate',
  tags:['tell'], source:'slide',
@@ -324,9 +324,9 @@ QUESTIONS.push(
   {t:'Echothiophate iodide', correct:true, why:'Slide 42: echothiophate iodide (phospholine iodide), an irreversible AChE inhibitor.'},
   {t:'Acetylcholine', correct:false, why:'Slide 41: acetylcholine is the substrate of AChE, not an inhibitor.'}],
  teach:'Slide 42: echothiophate iodide has a phosphoryl group with ethoxy groups and a thiocholine side chain; it is an organophosphate and an irreversible AChE inhibitor.',
- cite:'Lectures 11–12 (Sikazwe_OOO_mc.pdf) slides 40, 41, 42'},
+ cite:'Lectures 11–12 (Sikazwe_OOO_mc.pdf) slides 40, 41, 42; T@19166 11/19'},
 
-{id:'OC-030', skill:'tell', prof:'Sikazwe', tier:'new', topic:'oo-chol', sub:'dir', concept:'oo-chol-carbachol-from-features',
+{id:'OC-030', skill:'tell', prof:'Sikazwe', lowYield:true, tier:'new', topic:'oo-beyond', sub:'dsar', note:'Not on Exam 3: on 11/19 he removed the slide 40 SAR and said not to expect a question on it (T@17299). Kept for optional practice.', concept:'oo-chol-carbachol-from-features',
  tags:['two-facts'], source:'slide',
  stem:'Which drug has a trimethylammonium, a two-carbon spacer and a carbamate?',
  options:[
@@ -345,7 +345,7 @@ QUESTIONS.push(
   {t:'Carbamate', correct:true, why:'Slide 42: intermediate extent (Question-2, slide 43).'},
   {t:'Ester', correct:true, why:'Slide 42: the ester is the third group in the ranking, with the least extent.'},
   {t:'Sulfonamide', correct:false, why:'The sulfonamide is the carbonic anhydrase inhibitor group (slide 38), not a cholinergic group.'}],
- teach:'Slide 42: extent of AChE inhibition depends on the functional group: phosphoryl > carbamate > ester.',
+ teach:'Slide 42: extent of AChE inhibition depends on the functional group: phosphoryl > carbamate > ester. In lecture he also placed the amide (mild duration) between the carbamate and the ester (11/19).',
  cite:'Lectures 11–12 (Sikazwe_OOO_mc.pdf) slides 36, 42'},
 
 {id:'OC-032', skill:'mech', prof:'Sikazwe', tier:'new', topic:'oo-pg', sub:'pg', concept:'oo-pg-fp-receptor',
@@ -357,7 +357,7 @@ QUESTIONS.push(
   {t:'Muscarinic receptor', correct:false, why:'Muscarinic receptors are activated by the cholinergics (slide 40).'},
   {t:'Rho kinase', correct:false, why:'Rho kinase is the enzyme inhibited by netarsudil (slide 48), not a receptor of latanoprost.'}],
  teach:'Slide 44: prostaglandin analogs raise fluid outflow via PGF (FP) receptor activation; slide 47: omidenepag is a selective EP2 agonist.',
- cite:'Lectures 11–12 (Sikazwe_OOO_mc.pdf) slides 44, 47'},
+ cite:'Lectures 11–12 (Sikazwe_OOO_mc.pdf) slides 44, 47; T@22848 11/19'},
 
 {id:'OC-033', skill:'pk', prof:'Sikazwe', tier:'new', topic:'oo-pg', sub:'pg', concept:'oo-pg-esterase-activation',
  tags:[], source:'slide',
@@ -368,7 +368,7 @@ QUESTIONS.push(
   {t:'Alcohol dehydrogenases', correct:false, why:'Slide 45 names the esterase for the activation of latanoprost.'},
   {t:'Esterases', correct:true, why:'Slide 45: esterase converts latanoprost (prodrug) to latanoprost acid (active).'}],
  teach:'Slide 45: latanoprost (isopropyl ester, prodrug) with esterase gives latanoprost acid (active).',
- cite:'Lectures 11–12 (Sikazwe_OOO_mc.pdf) slide 45'},
+ cite:'Lectures 11–12 (Sikazwe_OOO_mc.pdf) slide 45; T@24379 11/19'},
 
 {id:'OC-034', skill:'chem', prof:'Sikazwe', tier:'new', topic:'oo-pg', sub:'pg', concept:'oo-pg-acid-formed',
  tags:[], source:'slide',
@@ -379,7 +379,7 @@ QUESTIONS.push(
   {t:'Aldehyde', correct:false, why:'Slide 45 shows a carboxylic acid, not an aldehyde.'},
   {t:'Isopropyl ester', correct:false, why:'The isopropyl ester is the prodrug form that is hydrolyzed (slide 45).'}],
  teach:'Slide 45: ester (isopropyl) to acid (COOH) on esterase hydrolysis. Slide 46: acids and amides are active drugs, esters are prodrugs.',
- cite:'Lectures 11–12 (Sikazwe_OOO_mc.pdf) slides 45, 46'},
+ cite:'Lectures 11–12 (Sikazwe_OOO_mc.pdf) slides 45, 46; T@24505 11/19'},
 
 {id:'OC-035', skill:'chem', prof:'Sikazwe', tier:'new', topic:'oo-pg', sub:'pg', concept:'oo-pg-sar-c1-groups',
  tags:['two-facts'], source:'slide',
@@ -390,7 +390,7 @@ QUESTIONS.push(
   {t:'Amides and esters are prodrugs; acids are active', correct:false, why:'Slide 46: amides are active drugs.'},
   {t:'Acids and amides are active; esters are prodrugs', correct:true, why:'Slide 46: acids (-COOH) and amides (-CONH-) are active drugs; esters are prodrugs.'}],
  teach:'Slide 46: C-1 (red, esters or amides): acids and amides are active, esters are pro-drugs. C-15 is OH or a halogen.',
- cite:'Lectures 11–12 (Sikazwe_OOO_mc.pdf) slide 46'},
+ cite:'Lectures 11–12 (Sikazwe_OOO_mc.pdf) slide 46; T@23780 11/19'},
 
 {id:'OC-036', skill:'class', prof:'Sikazwe', tier:'new', topic:'oo-pg', sub:'pg', concept:'oo-pg-bimatoprost-amide',
  tags:['tell'], source:'slide',
@@ -401,7 +401,7 @@ QUESTIONS.push(
   {t:'Travoprost', correct:false, why:'Slide 44: travoprost has an isopropyl ester, a prodrug (slide 46).'},
   {t:'Tafluprost', correct:false, why:'Slide 44: tafluprost has an isopropyl ester, a prodrug (slide 46).'}],
  teach:'Slides 44 and 46: bimatoprost is the amide among the FP agonists; amides are active drugs. Latanoprost, travoprost, tafluprost and latanoprostene bunod are esters (prodrugs).',
- cite:'Lectures 11–12 (Sikazwe_OOO_mc.pdf) slides 44, 46'},
+ cite:'Lectures 11–12 (Sikazwe_OOO_mc.pdf) slides 44, 46; T@23958 11/19'},
 
 {id:'OC-037', skill:'class', prof:'Sikazwe', tier:'new', topic:'oo-pg', sub:'pg', concept:'oo-pg-prodrug-which',
  tags:[], source:'slide',
@@ -412,7 +412,7 @@ QUESTIONS.push(
   {t:'Travoprost', correct:true, why:'Slide 44: travoprost is an isopropyl ester; slide 46: esters are prodrugs.'},
   {t:'Carbachol Cl', correct:false, why:'Slide 40: carbachol acts directly on receptors.'}],
  teach:'Slide 46: esters are prodrugs. Slides 47 and 48: omidenepag isopropyl and netarsudil are ester prodrugs too.',
- cite:'Lectures 11–12 (Sikazwe_OOO_mc.pdf) slides 36, 37, 40, 44, 46'},
+ cite:'Lectures 11–12 (Sikazwe_OOO_mc.pdf) slides 36, 37, 40, 44, 46; T@23780 11/19'},
 
 {id:'OC-038', skill:'class', prof:'Sikazwe', tier:'new', topic:'oo-pg', sub:'pg', concept:'oo-pg-prodrug-pair',
  tags:['two-facts'], source:'slide',
@@ -423,7 +423,7 @@ QUESTIONS.push(
   {t:'Latanoprost and netarsudil', correct:true, why:'Slides 45 and 48: latanoprost is an ester prodrug and netarsudil an ester prodrug requiring esterase hydrolysis.'},
   {t:'Omidenepag isopropyl and bimatoprost', correct:false, why:'Omidenepag isopropyl is an ester prodrug (slide 47), but bimatoprost is an active amide (slide 46).'}],
  teach:'Esterase-activated prodrugs: latanoprost and other FP agonist esters (slides 45, 46), omidenepag isopropyl (slide 47), netarsudil (slide 48).',
- cite:'Lectures 11–12 (Sikazwe_OOO_mc.pdf) slides 45, 46, 47, 48'},
+ cite:'Lectures 11–12 (Sikazwe_OOO_mc.pdf) slides 45, 46, 47, 48; T@23780 11/19'},
 
 {id:'OC-039', skill:'chem', prof:'Sikazwe', tier:'new', topic:'oo-pg', sub:'pg', concept:'oo-pg-c15-halogen',
  tags:['two-facts'], source:'slide',
@@ -434,7 +434,7 @@ QUESTIONS.push(
   {t:'Bimatoprost', correct:false, why:'Slide 44: bimatoprost keeps the C-15 hydroxyl.'},
   {t:'Travoprost', correct:false, why:'Slide 44: travoprost keeps the C-15 hydroxyl.'}],
  teach:'Slide 46 SAR: C-15 = OH or halogens (prevent 15-OH oxidation). Slide 44: tafluprost (Zioptan) has the two fluorines.',
- cite:'Lectures 11–12 (Sikazwe_OOO_mc.pdf) slides 44, 46'},
+ cite:'Lectures 11–12 (Sikazwe_OOO_mc.pdf) slides 44, 46; T@25722 11/19'},
 
 {id:'OC-040', skill:'chem', prof:'Sikazwe', tier:'new', topic:'oo-pg', sub:'pg', concept:'oo-pg-c15-oxidation',
  tags:[], source:'slide',
@@ -444,8 +444,8 @@ QUESTIONS.push(
   {t:'CYP N-deethylation', correct:false, why:'N-deethylation is the step of the zolamides (slide 37).'},
   {t:'Hydrolysis of the C-1 amide', correct:false, why:'Slide 46 links the C-15 feature to oxidation of the 15-OH, not to the amide.'},
   {t:'Oxidation of C-15 OH', correct:true, why:'Slide 46: C-15 = OH or halogens (prevent 15-OH oxidation).'}],
- teach:'Slide 46: C-15 is OH or a halogen (prevent 15-OH oxidation).',
- cite:'Lectures 11–12 (Sikazwe_OOO_mc.pdf) slide 46'},
+ teach:'Slide 46: C-15 is OH or a halogen (prevent 15-OH oxidation). He said oxidation of that hydroxy would give a ketone (11/19).',
+ cite:'Lectures 11–12 (Sikazwe_OOO_mc.pdf) slide 46; T@25722 11/19'},
 
 {id:'OC-041', skill:'class', prof:'Sikazwe', tier:'new', topic:'oo-pg', sub:'pg', concept:'oo-pg-bunod-ester',
  tags:['two-facts'], source:'slide',
@@ -456,7 +456,7 @@ QUESTIONS.push(
   {t:'An ester; an active drug', correct:false, why:'Slide 46: esters are prodrugs.'},
   {t:'A carboxylic acid; an active drug', correct:false, why:'The acid is the active form formed after hydrolysis (slides 45, 46); latanoprostene bunod is drawn as an ester (slide 44).'}],
  teach:'Slide 44: latanoprostene bunod (Vyzulta) is drawn with an ester at C-1; slide 46: esters are prodrugs.',
- cite:'Lectures 11–12 (Sikazwe_OOO_mc.pdf) slides 44, 46'},
+ cite:'Lectures 11–12 (Sikazwe_OOO_mc.pdf) slides 44, 46; T@23660 11/19'},
 
 {id:'OC-042', skill:'class', prof:'Sikazwe', tier:'new', topic:'oo-pg', sub:'pg', concept:'oo-pg-count-esters',
  tags:[], source:'slide',
@@ -467,7 +467,7 @@ QUESTIONS.push(
   {t:'Three', correct:false, why:'Slide 44 shows four esters.'},
   {t:'Five', correct:false, why:'Bimatoprost carries an amide (slide 44).'}],
  teach:'Slide 44: four esters and one amide (bimatoprost). Slide 46: esters are prodrugs; amides are active.',
- cite:'Lectures 11–12 (Sikazwe_OOO_mc.pdf) slides 44, 46'},
+ cite:'Lectures 11–12 (Sikazwe_OOO_mc.pdf) slides 44, 46; T@23660 11/19'},
 
 {id:'OC-043', skill:'mech', prof:'Sikazwe', tier:'new', topic:'oo-pg', sub:'ep2', concept:'oo-pg-ep2-receptor',
  tags:['tell'], source:'slide',
@@ -478,7 +478,7 @@ QUESTIONS.push(
   {t:'The EP2 receptor', correct:true, why:'Slide 47: a selective PGE2 or EP2 receptor agonist.'},
   {t:'The alpha 2 receptor', correct:false, why:'Alpha 2 agonists are the imidazoline drugs of the earlier slides, not omidenepag.'}],
  teach:'Slide 47: omidenepag isopropyl is a selective EP2 agonist that raises fluid outflow.',
- cite:'Lectures 11–12 (Sikazwe_OOO_mc.pdf) slides 44, 47'},
+ cite:'Lectures 11–12 (Sikazwe_OOO_mc.pdf) slides 44, 47; T@26386 11/19'},
 
 {id:'OC-044', skill:'class', prof:'Sikazwe', tier:'new', topic:'oo-pg', sub:'ep2', concept:'oo-pg-omdi-class',
  tags:['tell'], source:'slide',
@@ -489,7 +489,7 @@ QUESTIONS.push(
   {t:'Carbamates', correct:false, why:'Slide 40: carbamates are cholinergics such as carbachol.'},
   {t:'Pyridine sulfonamides', correct:true, why:'Slide 47: pyridine sulfonamides.'}],
  teach:'Slide 47: pyridine sulfonamides; omidenepag isopropyl (OMDI). Slide 48: isoquinolines; netarsudil.',
- cite:'Lectures 11–12 (Sikazwe_OOO_mc.pdf) slides 47, 48'},
+ cite:'Lectures 11–12 (Sikazwe_OOO_mc.pdf) slides 47, 48; T@26887 11/19'},
 
 {id:'OC-045', skill:'pk', prof:'Sikazwe', tier:'new', topic:'oo-pg', sub:'ep2', concept:'oo-pg-omdi-activation',
  tags:['two-facts'], source:'slide',
@@ -500,7 +500,7 @@ QUESTIONS.push(
   {t:'CYP N-deethylation; an active secondary amine', correct:false, why:'N-deethylation is the step of brinzolamide and dorzolamide (slide 37).'},
   {t:'Esterase hydrolysis; a primary amide', correct:false, why:'Slide 47 shows the carboxylic acid after hydrolysis.'}],
  teach:'Slide 47: omidenepag isopropyl (prodrug, ClogP = 3) requires esterase (CE) hydrolysis to omidenepag (OMD), the active metabolite.',
- cite:'Lectures 11–12 (Sikazwe_OOO_mc.pdf) slide 47'},
+ cite:'Lectures 11–12 (Sikazwe_OOO_mc.pdf) slide 47; T@27017 11/19'},
 
 {id:'OC-046', skill:'class', prof:'Sikazwe', tier:'new', topic:'oo-pg', sub:'rock', concept:'oo-pg-netarsudil-class-target',
  tags:['two-facts'], source:'slide',
@@ -511,7 +511,7 @@ QUESTIONS.push(
   {t:'Isoquinoline; Rho kinase inhibitor', correct:true, why:'Slide 48: isoquinolines; Rho kinase (ROCK) inhibitor.'},
   {t:'Pyridine sulfonamide; EP2 receptor agonist', correct:false, why:'Both parts describe omidenepag (slide 47), not netarsudil.'}],
  teach:'Slide 48: netarsudil, an isoquinoline and Rho kinase (ROCK) inhibitor that raises fluid outflow.',
- cite:'Lectures 11–12 (Sikazwe_OOO_mc.pdf) slides 47, 48'},
+ cite:'Lectures 11–12 (Sikazwe_OOO_mc.pdf) slides 47, 48; T@27582 11/19'},
 
 {id:'OC-047', skill:'pk', prof:'Sikazwe', tier:'new', topic:'oo-pg', sub:'rock', concept:'oo-pg-netarsudil-clogp',
  tags:[], source:'slide',
@@ -532,8 +532,8 @@ QUESTIONS.push(
   {t:'Esterase hydrolysis', correct:true, why:'Slide 48: an ester prodrug that requires esterase hydrolysis for activation.'},
   {t:'Hydrolysis of the amide', correct:false, why:'Slide 48 prints ester hydrolysis; the amide to the isoquinoline remains in netarsudil-M1.'},
   {t:'Aging by loss of ethanol', correct:false, why:'Aging is the step of the phosphorylated acetylcholinesterase (slide 42).'}],
- teach:'Slide 48: netarsudil (ClogP = 5) to netarsudil-M1 (active metabolite) by esterase hydrolysis; the isoquinoline amide remains.',
- cite:'Lectures 11–12 (Sikazwe_OOO_mc.pdf) slides 37, 42, 48'},
+ teach:'Slide 48: netarsudil (ClogP = 5) to netarsudil-M1 (active metabolite) by esterase hydrolysis; the isoquinoline amide remains. The slide arrow reads DMEs?; in lecture he said CE (carboxylesterase) hydrolysis gives the active metabolite (11/19).',
+ cite:'Lectures 11–12 (Sikazwe_OOO_mc.pdf) slides 37, 42, 48; T@27628 11/19'},
 
 {id:'OC-049', skill:'chem', prof:'Sikazwe', tier:'new', topic:'oo-pg', sub:'rock', concept:'oo-pg-m1-alcohol',
  tags:['two-facts'], source:'slide',
@@ -544,7 +544,7 @@ QUESTIONS.push(
   {t:'N-deethylated dorzolamide', correct:false, why:'Slide 37: this is a CYP product, not an esterase product.'},
   {t:'Netarsudil-M1', correct:true, why:'Slide 48: the active metabolite netarsudil-M1 is drawn with an HO group where the ester was.'}],
  teach:'Slides 45, 47, 48: esterase hydrolysis gives latanoprost acid (COOH), omidenepag (COOH) and netarsudil-M1 (HO).',
- cite:'Lectures 11–12 (Sikazwe_OOO_mc.pdf) slides 37, 45, 47, 48'},
+ cite:'Lectures 11–12 (Sikazwe_OOO_mc.pdf) slides 37, 45, 47, 48; T@27696 11/19'},
 
 {id:'OC-050', skill:'class', prof:'Sikazwe', tier:'new', topic:'oo-pg', sub:'pg', concept:'oo-pg-select-ester-prodrugs', multi:true,
  tags:[], source:'slide',
@@ -555,7 +555,7 @@ QUESTIONS.push(
   {t:'Netarsudil', correct:true, why:'Slide 48: ester prodrug requiring esterase hydrolysis.'},
   {t:'Bimatoprost', correct:false, why:'Slide 46: amides are active drugs.'}],
  teach:'Slides 45 to 48: latanoprost, omidenepag isopropyl and netarsudil are ester prodrugs; bimatoprost is an active amide.',
- cite:'Lectures 11–12 (Sikazwe_OOO_mc.pdf) slides 45, 46, 47, 48'},
+ cite:'Lectures 11–12 (Sikazwe_OOO_mc.pdf) slides 45, 46, 47, 48; T@27628 11/19'},
 
 {id:'OC-051', skill:'chem', prof:'Sikazwe', tier:'new', topic:'oo-pg', sub:'ep2', concept:'oo-pg-select-sulfonamides', multi:true,
  tags:[], source:'slide',
