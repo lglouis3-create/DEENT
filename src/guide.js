@@ -5683,6 +5683,613 @@ const GUIDE_HTML = `
 </div>
 </section>
 </details>
+
+<h2 class="gdeck" id="gdeck-lam">Glaucoma therapeutics (Dr. Lam, 11/19; Exam 3)</h2>
+
+<section class="gobj" id="gobj-lg-1">
+<h3>Dr. Lam, by learning objective · How Dr. Lam tests and how to study it · slides 2&ndash;3, 13, 17</h3>
+<div class="gbar"><span>Key point (Lam Glaucoma slide 2, 3, 13, 17)</span><b>She writes each question from a learning objective, and the questions are patient cases: spot the problem, pick the drug or fix, counsel, and name what comes next.</b><i>Lam Glaucoma slide 2, 3, 13, 17</i></div>
+<div class="gpt g2-block"><h5><span class="g2-num">1.</span> What each objective asks <span class="g2-src">(Lam Glaucoma slide 2, 3, 13, 17)</span></h5>
+<table class="g2-table g2-stack"><caption>Her five objectives</caption><thead><tr><th scope="col">Objective</th><th scope="col">The question asks you to</th><th scope="col">Content it draws on</th></tr></thead><tbody>
+<tr><th scope="row">Collect</th><td><span class="g2-lab">The question asks you to</span>Identify risk factors or possible etiologies for primary open-angle glaucoma (POAG) from a patient case</td><td><span class="g2-lab">Content it draws on</span>Drugs that cause or worsen glaucoma, by formulation</td></tr>
+<tr><th scope="row">Assess</th><td><span class="g2-lab">The question asks you to</span>List the treatment goals and decide whether the patient is meeting them; assess each medication for appropriateness, effectiveness, safety and patient adherence</td><td><span class="g2-lab">Content it draws on</span>Goal of therapy; the four medication-related problem categories</td></tr>
+<tr><th scope="row">Plan</th><td><span class="g2-lab">The question asks you to</span>Prescribe a patient-centered plan with drug, dose, frequency, route and duration; design a plan to solve medication-related problems; give brand and generic names, class, route, frequencies, duration and ADRs</td><td><span class="g2-lab">Content it draws on</span>The six classes, their drugs, doses, frequencies, side effects, and the sequence of classes</td></tr>
+<tr><th scope="row">Implement</th><td><span class="g2-lab">The question asks you to</span>List counseling points for a new, maintenance or transition-of-care medication: purpose or indication, administration instructions, efficacy and safety monitoring</td><td><span class="g2-lab">Content it draws on</span>Drop technique, waits, order, contact lenses, storage</td></tr>
+<tr><th scope="row">Follow up</th><td><span class="g2-lab">The question asks you to</span>Develop a monitoring and follow-up plan for efficacy and safety, with frequency and timeframes</td><td><span class="g2-lab">Content it draws on</span>What to monitor, 2 to 4 weeks, then every 3 to 4 months</td></tr>
+</tbody></table><div class="g2-said"><span class="g2-k">She said</span><p>&ldquo;The way I write my exam questions is I look at my learning objectives and based on that, make my exam questions.&rdquo; <span class="g2-src">T@37477 11/19</span></p></div>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">2.</span> The formats she used and promised <span class="g2-src">(Lam Glaucoma slide 9, 24, 25, 37, 47, 63, 64, 4)</span></h5>
+<table class="g2-table g2-stack"><caption>Question formats</caption><thead><tr><th scope="col">Format</th><th scope="col">What it looks like</th><th scope="col">Her cue</th></tr></thead><tbody>
+<tr><th scope="row">Best-answer application case</th><td><span class="g2-lab">What it looks like</span>Ms. Lopez, 68, newly diagnosed with POAG, followed through the lecture with a changing regimen; pick the most appropriate response or intervention from four options</td><td><span class="g2-lab">Her cue</span>&ldquo;I have patient cases throughout each of my lectures on how we&rsquo;re gonna apply the information&rdquo; <span class="g2-src">T@39432 11/19</span></td></tr>
+<tr><th scope="row">Select all</th><td><span class="g2-lab">What it looks like</span>Which drugs on a patient list are likely to cause or worsen glaucoma; the three she accepted were prednisolone eye drops, fluticasone nasal spray and diphenhydramine</td><td><span class="g2-lab">Her cue</span>&ldquo;This is a select all question.&rdquo; <span class="g2-src">T@45819 11/19</span></td></tr>
+<tr><th scope="row">One essay question</th><td><span class="g2-lab">What it looks like</span>One task: identify the medication-related problem, give the justification, then state the next step</td><td><span class="g2-lab">Her cue</span>&ldquo;And yes, there is one essay question on the examination.&rdquo; <span class="g2-src">T@57167 11/19</span> &ldquo;One task that you need to identify and give me justification why.&rdquo; <span class="g2-src">T@58023 11/19</span></td></tr>
+<tr><th scope="row">Drug sequence</th><td><span class="g2-lab">What it looks like</span>Given the regimen, name the class that comes next and pick the agent from that class</td><td><span class="g2-lab">Her cue</span>&ldquo;There is one question at least recognizing the sequence of drugs.&rdquo; <span class="g2-src">T@84448 11/19</span></td></tr>
+<tr><th scope="row">Dosing frequency</th><td><span class="g2-lab">What it looks like</span>Tell whether the written frequency fits the drug; fix a regimen to a once daily or combined form</td><td><span class="g2-lab">Her cue</span>&ldquo;you need to be able to memorize the dosing.&rdquo; <span class="g2-src">T@48452 11/19</span></td></tr>
+<tr><th scope="row">Prescription reading</th><td><span class="g2-lab">What it looks like</span>Sig abbreviations (GTT, OD, OS, OU, QD, BID, TID, QID, QAM, QPM, QHS) inside the case prescriptions</td><td><span class="g2-lab">Her cue</span>&ldquo;I will use these abbreviation.&rdquo; <span class="g2-src">T@40553 11/19</span></td></tr>
+</tbody></table>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">3.</span> Her way to study the material <span class="g2-src">(Lam Glaucoma slide 2, 3; T@39012 11/19)</span></h5>
+<p class="g2-p">She names two parts: memorizing each objective, and applying it in the patient cases.</p><div class="g2-said"><span class="g2-k">She said</span><p>&ldquo;cover the information up that is listed under each learning objective and try to write down as much as you remember regarding that learning objective.&rdquo; <span class="g2-src">T@39012 11/19</span></p></div><div class="g2-said"><span class="g2-k">She said</span><p>&ldquo;if you&rsquo;re able to answer this question, that means that you understand my material then.&rdquo; <span class="g2-src">T@90664 11/19</span></p></div><div class="g2-said"><span class="g2-k">She said</span><p>&ldquo;these are type of application questions that I will have.&rdquo; <span class="g2-src">T@90804 11/19</span></p></div>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">4.</span> What she said will not be tested <span class="g2-src">(Lam Glaucoma slide 7, 5, 21, 53, 54, 88)</span></h5>
+<table class="g2-table g2-stack"><caption>Her exclusions</caption><thead><tr><th scope="col">Topic</th><th scope="col">Her words</th><th scope="col">What is still on the slides</th></tr></thead><tbody>
+<tr><th scope="row">Risk factors for POAG</th><td><span class="g2-lab">Her words</span>&ldquo;I&rsquo;m not gonna test you on this&rdquo; <span class="g2-src">T@43047 11/19</span></td><td><span class="g2-lab">What is still on the slides</span>Older age, family history, high IOP, type 2 diabetes, myopia (slide 7)</td></tr>
+<tr><th scope="row">IOP numbers to memorize</th><td><span class="g2-lab">Her words</span>&ldquo;Do you need to memorize that for my portion? No.&rdquo; <span class="g2-src">T@43663 11/19</span></td><td><span class="g2-lab">What is still on the slides</span>The 25&ndash;30% goal and each class&rsquo;s percent reduction (slides 14, 20, 31, 41, 51, 62); she said &ldquo;we do need to know what drugs have the greatest potential in lowering intraocular pressure.&rdquo; <span class="g2-src">T@43834 11/19</span></td></tr>
+<tr><th scope="row">Day-supply calculation</th><td><span class="g2-lab">Her words</span>&ldquo;This is not going to be on your exam&rdquo; <span class="g2-src">T@42583 11/19</span></td><td><span class="g2-lab">What is still on the slides</span>Trusopt 2%, 1 gtt OU TID, 10 mL, 1 drop = 0.05 mL: 33 days (slide 5)</td></tr>
+<tr><th scope="row">Prostaglandin contraindications</th><td><span class="g2-lab">Her words</span>&ldquo;I&rsquo;m not going to test you on that. This is more of, uh, full information.&rdquo; <span class="g2-src">T@53365 11/19</span></td><td><span class="g2-lab">What is still on the slides</span>Macular edema; history of herpetic keratitis (slide 21)</td></tr>
+<tr><th scope="row">Acidosis from oral CAIs</th><td><span class="g2-lab">Her words</span>&ldquo;I&rsquo;m not gonna test you on that, to be honest. I can&rsquo;t guarantee&rdquo; <span class="g2-src">T@77815 11/19</span></td><td><span class="g2-lab">What is still on the slides</span>Systemic acidosis: malaise, fatigue, anorexia, nausea, weight loss, altered taste (slide 53)</td></tr>
+<tr><th scope="row">Sulfonamide cross-sensitivity</th><td><span class="g2-lab">Her words</span>&ldquo;This is more of an FYI for you guys.&rdquo; <span class="g2-src">T@78505 11/19</span></td><td><span class="g2-lab">What is still on the slides</span>Sulfa allergies (slide 54)</td></tr>
+<tr><th scope="row">Incidence of bronchospasm</th><td><span class="g2-lab">Her words</span>&ldquo;But I&rsquo;m not going to test you on that.&rdquo; <span class="g2-src">T@66494 11/19</span></td><td><span class="g2-lab">What is still on the slides</span>Asthma/COPD precaution for beta blockers (slide 34)</td></tr>
+<tr><th scope="row">Which timolol is preservative-free</th><td><span class="g2-lab">Her words</span>&ldquo;So I&rsquo;m not gonna test you on that. Um, if I do, I would say preservative-free Timolol then, OK?&rdquo; <span class="g2-src">T@62601 11/19</span></td><td><span class="g2-lab">What is still on the slides</span>Timolol, certain ones (slide 35)</td></tr>
+<tr><th scope="row">Brands that are preservative-free</th><td><span class="g2-lab">Her words</span>&ldquo;Do I expect you to know the brand, uh, that are non-preservative free? No.&rdquo; <span class="g2-src">T@55407 11/19</span></td><td><span class="g2-lab">What is still on the slides</span>Latanoprost (Xelpros), tafluprost (Zioptan), Cosopt PF (slides 22, 35, 55, 68)</td></tr>
+<tr><th scope="row">Primary closed-angle glaucoma</th><td><span class="g2-lab">Her words</span>&ldquo;Will I be testing you on it? No.&rdquo; <span class="g2-src">T@94631 11/19</span> She added &ldquo;Do you need to know it when you go on to practice? Oh, yes, you will.&rdquo; <span class="g2-src">T@94664 11/19</span></td><td><span class="g2-lab">What is still on the slides</span>Risk factors, drugs that worsen it, symptoms (slides 88&ndash;92)</td></tr>
+</tbody></table>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">5.</span> Her preservative-free hint <span class="g2-src">(Lam Glaucoma slide 22, 35, 55, 68)</span></h5>
+<div class="g2-said"><span class="g2-k">She said</span><p>&ldquo;on my examination, this one&rsquo;s preservative free, as a hint hint.&rdquo; <span class="g2-src">T@55501 11/19</span></p></div><p class="g2-p">She gave the way to recognize one: &ldquo;Look for the ones where they have individual little bottles and it says single use.&rdquo; <span class="g2-src">T@55285 11/19</span></p>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">6.</span> Write it first <span class="g2-src">(Lam Glaucoma slide 2, 3, 18)</span></h5>
+<div class="gpoll"><b>Cover the objectives, then write</b>
+<details class="g2-self"><summary>Write the five objectives and what each asks you to do. <span class="g2-tap">Show answer</span></summary><p>Collect: risk factors or etiologies from a case. Assess: goals, and each drug for appropriateness, effectiveness, safety, adherence. Plan: drug, dose, frequency, route, duration, and a plan for each medication-related problem. Implement: counseling on purpose, administration, monitoring. Follow up: monitoring plan with frequency and timeframes <span class="g2-src">(Lam Glaucoma slide 2, 3)</span>.</p></details>
+<details class="g2-self"><summary>Write the formats she named, then the one thing she said is certain to appear. <span class="g2-tap">Show answer</span></summary><p>Best-answer application cases, select all, one essay question, a drug-sequence question and dosing recall. The certain one: &ldquo;There is one question at least recognizing the sequence of drugs.&rdquo; <span class="g2-src">T@84448 11/19</span></p></details>
+<details class="g2-self"><summary>Write the topics she excluded. <span class="g2-tap">Show answer</span></summary><p>POAG risk factors, IOP numbers, day supply, prostaglandin contraindications, oral CAI acidosis, sulfonamide cross-sensitivity, bronchospasm incidence, brands of preservative-free products, primary closed-angle glaucoma <span class="g2-src">(Lam Glaucoma slide 7, 5, 21, 53, 54, 88)</span>.</p></details>
+</div>
+</div>
+</section>
+
+<section class="gobj" id="gobj-lg-2">
+<h3>Dr. Lam, by learning objective · Collect and Assess · slides 6&ndash;16</h3>
+<div class="gbar"><span>Key point (Lam Glaucoma slide 6&ndash;16)</span><b>Drugs raise eye pressure by formulation, the goal is a 25&ndash;30% IOP reduction when baseline is above 22 mm Hg, and each medication is checked for indication, effectiveness, safety and adherence.</b><i>Lam Glaucoma slide 8, 9, 10, 11, 13, 14, 15, 16</i></div>
+<div class="gpt g2-block"><h5><span class="g2-num">1.</span> Drugs that cause or worsen open-angle glaucoma <span class="g2-src">(Lam Glaucoma slide 8, 9, 10, 11)</span></h5>
+<table class="g2-table g2-stack"><caption>Drug-induced glaucoma (increased IOP)</caption><thead><tr><th scope="col">Class</th><th scope="col">Formulation, highest risk first</th><th scope="col">Mechanism line on the handout</th></tr></thead><tbody>
+<tr><th scope="row">Corticosteroids (chronic use)</th><td><span class="g2-lab">Formulation, highest risk first</span>Ophthalmic (highest risk), then systemic, then nasal or inhaled</td><td><span class="g2-lab">Mechanism line on the handout</span>Aqueous humor outflow through the trabecular meshwork</td></tr>
+<tr><th scope="row">Anticholinergics</th><td><span class="g2-lab">Formulation, highest risk first</span>Ophthalmic topical (for example atropine); systemic (for example an oral antihistamine)</td><td><span class="g2-lab">Mechanism line on the handout</span>Produce mydriasis</td></tr>
+</tbody></table><p class="g2-p">Steroids: &ldquo;ophthalmic, uh, corticosteroids has the highest risk.&rdquo; <span class="g2-src">T@44339 11/19</span> Nasal steroids are absorbed little, and the effect &ldquo;it can happen and it tends to occur in patients that are using these drugs chronically.&rdquo; <span class="g2-src">T@44656 11/19</span> She named diphenhydramine (Benadryl) as the antihistamine example. Dr. Smith taught the mechanisms.</p><div class="g2-said"><span class="g2-k">She said</span><p>&ldquo;What you will need to know are the drugs that can induce glaucoma, because that is a very common question that&rsquo;ll be asked.&rdquo; <span class="g2-src">T@43926 11/19</span></p></div>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">2.</span> Her select-all case: Ms. Lopez <span class="g2-src">(Lam Glaucoma slide 9, 10, 11)</span></h5>
+<div class="gpoll"><b>Ms. Lopez, 68, newly diagnosed with POAG</b>
+<details class="g2-self"><summary>Her medications: hydrochlorothiazide, sertraline, diphenhydramine, fluticasone nasal spray, atorvastatin, prednisolone eye drops. Which are likely to worsen intraocular pressure and should be discussed with the ordering provider? <span class="g2-tap">Show answer</span></summary><p>Prednisolone eye drops, fluticasone nasal spray and diphenhydramine <span class="g2-src">(Lam Glaucoma slide 9, 10, 11; T@45819 11/19)</span>.</p></details>
+</div>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">3.</span> Clinical presentation <span class="g2-src">(Lam Glaucoma slide 12)</span></h5>
+<p class="g2-p">Asymptomatic until substantial visual field loss occurs (slide 12). &ldquo;open angle glaucoma tends to be asymptomatic&rdquo; <span class="g2-src">T@46345 11/19</span></p>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">4.</span> Goal of therapy and the target <span class="g2-src">(Lam Glaucoma slide 13, 14)</span></h5>
+<table class="g2-table g2-kv"><caption>Goal of therapy</caption><tbody>
+<tr><th scope="row">Goal</th><td>Reduce intraocular pressure (IOP)</td></tr>
+<tr><th scope="row">IOP target level</th><td>Determined by an eye care professional</td></tr>
+<tr><th scope="row">Baseline above 22 mm Hg</th><td>Initial target: decrease IOP by 25&ndash;30%</td></tr>
+</tbody></table><div class="g2-tiles"><div class="g2-tile"><span class="g2-tile-label">Baseline IOP above 22 mm Hg: initial target is to lower IOP by</span><span class="g2-tile-num">25&ndash;30%</span><span class="g2-src">(Lam Glaucoma slide 14)</span></div><div class="g2-tile"><span class="g2-tile-label">Prostaglandin analogs lower IOP by</span><span class="g2-tile-num">up to 33%</span><span class="g2-src">(Lam Glaucoma slide 20)</span></div></div><div class="g2-said"><span class="g2-k">She said</span><p>&ldquo;our target goal is generally between 25 to 30&rdquo; <span class="g2-src">T@47427 11/19</span></p></div><p class="g2-p">Why the percent matters, in her words: &ldquo;we&rsquo;re gonna talk about the drugs and be able to list out the efficacy of the drug and balance out with the safety.&rdquo; <span class="g2-src">T@47513 11/19</span></p>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">5.</span> The four medication-related problem categories <span class="g2-src">(Lam Glaucoma slide 15, 16, 26, 27, 78, 79)</span></h5>
+<table class="g2-table g2-stack"><caption>Assess each medication for</caption><thead><tr><th scope="col">Category</th><th scope="col">Problems listed on the slides</th><th scope="col">Her example in the cases</th></tr></thead><tbody>
+<tr><th scope="row">Indication</th><td><span class="g2-lab">Problems listed on the slides</span>Unnecessary drug therapy (duplicate therapy; no medical indication currently; non-medication therapy is appropriate; treating an avoidable adverse medication reaction). Need additional therapy (prevention therapy; untreated condition; synergistic therapy)</td><td><span class="g2-lab">Her example in the cases</span>Add the next class when IOP is not at goal</td></tr>
+<tr><th scope="row">Effectiveness</th><td><span class="g2-lab">Problems listed on the slides</span>Suboptimal or ineffective drug; more effective medication available; condition is refractory to medication; dosage form is inappropriate; dose too low; frequency is inappropriate; incorrect administration; medication interaction; duration inappropriate</td><td><span class="g2-lab">Her example in the cases</span>Bimatoprost written BID: the frequency is too frequent and decreases efficacy</td></tr>
+<tr><th scope="row">Safety</th><td><span class="g2-lab">Problems listed on the slides</span>Adverse drug reaction (actual or potential); undesirable effect; unsafe medication for the patient; medication interaction; incorrect administration; allergic reaction; dosage increase or decrease too fast; dose too high; frequency inappropriate; duration inappropriate</td><td><span class="g2-lab">Her example in the cases</span>Side effects, and a drug whose precaution matches the patient&rsquo;s history</td></tr>
+<tr><th scope="row">Adherence</th><td><span class="g2-lab">Problems listed on the slides</span>Does not understand instructions; patients prefer not to take; patient forgets to take; medication product not available; cannot swallow or administer; cost (more cost-effective medication available; cannot afford medication)</td><td><span class="g2-lab">Her example in the cases</span>Forgetting the evening Timoptic dose; Medicare gap cost; too many drops to wait between</td></tr>
+</tbody></table><p class="g2-p">Her order of thinking: indication, effectiveness (&ldquo;Of the time it&rsquo;s either overdose or underdose drug.&rdquo; <span class="g2-src">T@48119 11/19</span>), safety, adherence.</p><div class="g2-said"><span class="g2-k">She said</span><p>&ldquo;I add medication adherence, but that one&rsquo;s a little bit hard to assess in examination, but I do want to stress that it is very important in clinical practice.&rdquo; <span class="g2-src">T@46793 11/19</span></p></div><p class="g2-p">Her figure: &ldquo;Only about 33% of your patients are going to be adherent to their eye drops&rdquo; <span class="g2-src">T@46952 11/19</span>. More drops lead to more non-adherence; &ldquo;Frequency, increase in frequency means decrease in compliance.&rdquo; <span class="g2-src">T@75564 11/19</span></p>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">6.</span> Write it first <span class="g2-src">(Lam Glaucoma slide 14, 15, 16)</span></h5>
+<div class="gpoll"><b>Cover the page, then write</b>
+<details class="g2-self"><summary>Write the goal of therapy and the initial target when baseline IOP is above 22 mm Hg. <span class="g2-tap">Show answer</span></summary><p>Reduce IOP; the target is set by an eye care professional; the initial target is a 25&ndash;30% decrease <span class="g2-src">(Lam Glaucoma slide 13, 14)</span>.</p></details>
+<details class="g2-self"><summary>Write the formulations of corticosteroids from highest to lowest risk of raising IOP. <span class="g2-tap">Show answer</span></summary><p>Ophthalmic, then systemic, then nasal or inhaled <span class="g2-src">(Lam Glaucoma slide 8; T@44339 11/19)</span>.</p></details>
+<details class="g2-self"><summary>Write the four medication-related problem categories. <span class="g2-tap">Show answer</span></summary><p>Indication, effectiveness, safety, adherence <span class="g2-src">(Lam Glaucoma slide 15, 16)</span>.</p></details>
+</div>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">7.</span> Application cases <span class="g2-src">(Lam Glaucoma slide 15, 16, 14)</span></h5>
+<div class="gpoll"><b>New patients</b>
+<details class="g2-self"><summary>A 71-year-old man with POAG says that his refill is too costly this month and he has been skipping his drops. Which medication-related problem category is this, and which entry on the list? <span class="g2-tap">Show answer</span></summary><p>Adherence: cost, and cannot afford medication <span class="g2-src">(Lam Glaucoma slide 16)</span>.</p></details>
+<details class="g2-self"><summary>A 76-year-old woman with arthritis tells the pharmacist she cannot squeeze the bottle to get the drop into her eye. Which category, and what did Dr. Lam name as the cause? <span class="g2-tap">Show answer</span></summary><p>Adherence: cannot administer the medication; she described arthritis making it hard to push on the bottle <span class="g2-src">(Lam Glaucoma slide 16; T@55958 11/19)</span>.</p></details>
+<details class="g2-self"><summary>A 66-year-old man with POAG takes an oral antihistamine for allergies and uses prednisolone eye drops. Which of his drugs has the highest-risk formulation for raising IOP? <span class="g2-tap">Show answer</span></summary><p>The prednisolone eye drops: ophthalmic corticosteroids carry the highest risk; the oral antihistamine is an anticholinergic example <span class="g2-src">(Lam Glaucoma slide 8, 9, 10, 11; T@44339 11/19)</span>.</p></details>
+<details class="g2-self"><summary>A patient with POAG has a baseline IOP above 22 mm Hg. Which class on her list is described as lowering IOP by up to 33% when given once daily? <span class="g2-tap">Show answer</span></summary><p>Prostaglandin analogs <span class="g2-src">(Lam Glaucoma slide 19, 20)</span>.</p></details>
+</div>
+</div>
+</section>
+
+<section class="gobj" id="gobj-lg-3">
+<h3>Dr. Lam, by learning objective · Plan: the six classes · slides 17&ndash;20, 31, 41, 51, 57, 62&ndash;63</h3>
+<div class="gbar"><span>Key point (Lam Glaucoma slide 18, 63)</span><b>Six classes, taught and added from most to least commonly prescribed: prostaglandin analog, beta blocker, alpha-2 agonist, topical carbonic anhydrase inhibitor, cholinergic, Rho kinase inhibitor; each step usually means a higher dosing frequency.</b><i>Lam Glaucoma slide 18, 19, 20, 31, 41, 51, 57, 62, 63</i></div>
+<div class="gpt g2-block"><h5><span class="g2-num">1.</span> The six classes in her order <span class="g2-src">(Lam Glaucoma slide 18, 63)</span></h5>
+<p class="g2-p">Her order of presentation: &ldquo;The way I organize my sequence is based on what is the most commonly prescribed drug to the least commonly prescribed drug.&rdquo; <span class="g2-src">T@47757 11/19</span></p><table class="g2-table g2-stack"><caption>Master table, in the order she teaches and adds</caption><thead><tr><th scope="col">Step</th><th scope="col">Class</th><th scope="col">Role</th><th scope="col">IOP reduction</th><th scope="col">Recognize it by</th><th scope="col">Dosing</th></tr></thead><tbody>
+<tr><th scope="row">1</th><td><span class="g2-lab">Class</span>Prostaglandin analogs</td><td><span class="g2-lab">Role</span>First line</td><td><span class="g2-lab">IOP reduction</span>Up to 33%</td><td><span class="g2-lab">Recognize it by</span>prost (&ldquo;It&rsquo;s really the pro part, OK?&rdquo; <span class="g2-src">T@50532 11/19</span>)</td><td><span class="g2-lab">Dosing</span>Once daily</td></tr>
+<tr><th scope="row">2</th><td><span class="g2-lab">Class</span>Beta blockers</td><td><span class="g2-lab">Role</span>Adjunctive or alternative</td><td><span class="g2-lab">IOP reduction</span>20&ndash;30%, less than prostaglandin analogs</td><td><span class="g2-lab">Recognize it by</span>-olol</td><td><span class="g2-lab">Dosing</span>BID (gel once daily)</td></tr>
+<tr><th scope="row">3</th><td><span class="g2-lab">Class</span>Alpha-2 adrenergic agonists</td><td><span class="g2-lab">Role</span>Adjunctive or alternative</td><td><span class="g2-lab">IOP reduction</span>18&ndash;27%</td><td><span class="g2-lab">Recognize it by</span>Brimonidine, apraclonidine</td><td><span class="g2-lab">Dosing</span>BID (apraclonidine BID or TID)</td></tr>
+<tr><th scope="row">4</th><td><span class="g2-lab">Class</span>Carbonic anhydrase inhibitors (topical; oral)</td><td><span class="g2-lab">Role</span>Slides title them last line</td><td><span class="g2-lab">IOP reduction</span>Topical 15&ndash;26%; oral 25&ndash;40%</td><td><span class="g2-lab">Recognize it by</span>-zolamide</td><td><span class="g2-lab">Dosing</span>Topical TID</td></tr>
+<tr><th scope="row">5</th><td><span class="g2-lab">Class</span>Cholinergic agonists (miotics)</td><td><span class="g2-lab">Role</span>Next added</td><td><span class="g2-lab">IOP reduction</span>Not printed</td><td><span class="g2-lab">Recognize it by</span>Pilocarpine</td><td><span class="g2-lab">Dosing</span>QID</td></tr>
+<tr><th scope="row">6</th><td><span class="g2-lab">Class</span>Rho kinase inhibitor</td><td><span class="g2-lab">Role</span>Last agent; salvage therapy</td><td><span class="g2-lab">IOP reduction</span>20&ndash;30%, like timolol</td><td><span class="g2-lab">Recognize it by</span>Netarsudil</td><td><span class="g2-lab">Dosing</span>Once daily in the evening</td></tr>
+</tbody></table><div class="g2-note"><span class="g2-k">Handout and lecture differ</span><p>Handout: slides 51 and 53 title the carbonic anhydrase inhibitors &ldquo;Last Line&rdquo;. Lecture: the order of the six classes runs 1 to 6, with the Rho kinase inhibitor as the last agent (T@84060 11/19). Key: use the numbered order of slide 63 for what to add next.</p></div>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">2.</span> Why each class sits where it does <span class="g2-src">(Lam Glaucoma slide 20, 31, 41, 51, 57, 62)</span></h5>
+<table class="g2-table g2-kv"><caption>Her reasons</caption><tbody>
+<tr><th scope="row">Prostaglandin analogs</th><td>Once daily dosing, so better adherence; reduces IOP about 33%, meeting the 25&ndash;30% goal; lower-cost generics on the market a long time; pretty good tolerance (T@51016 11/19, T@51508 11/19)</td></tr>
+<tr><th scope="row">Beta blockers</th><td>Pretty good reduction, slightly lower than prostaglandin analogs; timolol is the most commonly dispensed because it comes in a combination product and as a gel for once daily dosing</td></tr>
+<tr><th scope="row">Alpha-2 agonists</th><td>Third class: the patient is already on two; the frequency rises, so compliance falls, which is why the later drugs tend to come in combination</td></tr>
+<tr><th scope="row">Topical CAIs</th><td>Reduction not as great (15&ndash;26%); frequency rises to three times a day</td></tr>
+<tr><th scope="row">Cholinergics</th><td>Rarely used because of efficacy and four times a day dosing</td></tr>
+<tr><th scope="row">Rho kinase inhibitor</th><td>New on the market, so cost may be an issue; conjunctival hemorrhage; the side effect outweighs the efficacy</td></tr>
+</tbody></table>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">3.</span> The frequency ladder <span class="g2-src">(Lam Glaucoma slide 32, 42, 51, 57, 62)</span></h5>
+<div class="g2-tiles g2-wide"><div class="g2-tile"><span class="g2-tile-label">Prostaglandin analogs: frequency</span><span class="g2-tile-num">once daily</span><span class="g2-src">(Lam Glaucoma slide 19, 20)</span></div><div class="g2-tile"><span class="g2-tile-label">Beta blocker solutions (timolol, betaxolol, carteolol, levobunolol): frequency</span><span class="g2-tile-num">BID</span><span class="g2-src">(Lam Glaucoma slide 32)</span></div><div class="g2-tile"><span class="g2-tile-label">Brimonidine solution: frequency</span><span class="g2-tile-num">BID</span><span class="g2-src">(Lam Glaucoma slide 42)</span></div><div class="g2-tile"><span class="g2-tile-label">Dorzolamide 2% and brinzolamide 1%: frequency</span><span class="g2-tile-num">TID</span><span class="g2-src">(Lam Glaucoma slide 51)</span></div><div class="g2-tile"><span class="g2-tile-label">Pilocarpine: frequency</span><span class="g2-tile-num">QID</span><span class="g2-src">(Lam Glaucoma slide 57)</span></div><div class="g2-tile"><span class="g2-tile-label">Netarsudil: frequency</span><span class="g2-tile-num">daily in the evening</span><span class="g2-src">(Lam Glaucoma slide 62)</span></div></div><div class="g2-said"><span class="g2-k">She said</span><p>&ldquo;Frequency, increase in frequency means decrease in compliance.&rdquo; <span class="g2-src">T@75564 11/19</span></p></div><div class="g2-said"><span class="g2-k">She said</span><p>&ldquo;When you increase the frequency to more than once a day, it actually has a decrease in the efficacy of the drug.&rdquo; <span class="g2-src">T@51238 11/19</span></p></div>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">4.</span> Write it first <span class="g2-src">(Lam Glaucoma slide 18, 63)</span></h5>
+<div class="gpoll"><b>Cover the master table, then write</b>
+<details class="g2-self"><summary>Write the six classes in the order she adds them, with the dosing of each. <span class="g2-tap">Show answer</span></summary><p>1 prostaglandin analog, once daily. 2 beta blocker, BID (timolol gel once daily). 3 alpha-2 agonist, BID. 4 topical carbonic anhydrase inhibitor, TID. 5 cholinergic (pilocarpine), QID. 6 Rho kinase inhibitor (netarsudil), once daily in the evening <span class="g2-src">(Lam Glaucoma slide 18, 63)</span>.</p></details>
+<details class="g2-self"><summary>Write the IOP reduction of each class. <span class="g2-tap">Show answer</span></summary><p>Prostaglandin analogs up to 33%; beta blockers 20&ndash;30%; alpha-2 agonists 18&ndash;27%; topical CAIs 15&ndash;26% (oral 25&ndash;40%); Rho kinase inhibitor 20&ndash;30%; cholinergic not printed <span class="g2-src">(Lam Glaucoma slide 20, 31, 41, 51, 53, 62)</span>.</p></details>
+<details class="g2-self"><summary>Write the stem or ending that identifies each of the first four classes. <span class="g2-tap">Show answer</span></summary><p>Prost (prostaglandin), -olol (beta blocker), brimonidine and apraclonidine (alpha-2), -zolamide (carbonic anhydrase inhibitor) <span class="g2-src">(Lam Glaucoma slide 19, 32, 42, 51)</span>.</p></details>
+</div>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">5.</span> Application cases <span class="g2-src">(Lam Glaucoma slide 18, 20, 31)</span></h5>
+<div class="gpoll"><b>New patients</b>
+<details class="g2-self"><summary>A 62-year-old man is newly diagnosed with POAG with a baseline IOP above 22 mm Hg. Which class is started first, and name two reasons from her lecture. <span class="g2-tap">Show answer</span></summary><p>A prostaglandin analog. Once daily dosing, with up to 33% IOP reduction, meets the 25&ndash;30% goal; she also gave lower-cost generics and good tolerance <span class="g2-src">(Lam Glaucoma slide 19, 20)</span>.</p></details>
+<details class="g2-self"><summary>A prescription arrives for a drug ending in -zolamide, 1 drop in both eyes three times a day. Name the class and the sig in words. <span class="g2-tap">Show answer</span></summary><p>Topical carbonic anhydrase inhibitor; 1 drop in each eye, 3 times a day <span class="g2-src">(Lam Glaucoma slide 4, 51)</span>.</p></details>
+<details class="g2-self"><summary>Which class, given once daily at night, did she say to expect from a drug name with the stem prost? <span class="g2-tap">Show answer</span></summary><p>Prostaglandin analogs, dosed at night because of blurred vision <span class="g2-src">(Lam Glaucoma slide 21; T@53064 11/19)</span>.</p></details>
+</div>
+</div>
+</section>
+
+<section class="gobj" id="gobj-lg-4">
+<h3>Dr. Lam, by learning objective · Prostaglandin analogs · slides 19&ndash;25, 28</h3>
+<div class="gbar"><span>Key point (Lam Glaucoma slide 19&ndash;25)</span><b>Prostaglandin analogs are first line: once daily at night, up to 33% IOP reduction; more than once a day lowers efficacy, and an inadequate latanoprost response moves to bimatoprost.</b><i>Lam Glaucoma slide 19, 20, 21, 22, 23, 24, 25</i></div>
+<div class="gpt g2-block"><h5><span class="g2-num">1.</span> Drugs, brands and dosing <span class="g2-src">(Lam Glaucoma slide 19, 20)</span></h5>
+<table class="g2-table g2-stack"><caption>Prostaglandin analogs (prost = prostaglandin analog)</caption><thead><tr><th scope="col">Drug</th><th scope="col">Brand</th><th scope="col">On the handout</th></tr></thead><tbody>
+<tr><th scope="row">Bimatoprost 0.01%, 0.03%</th><td><span class="g2-lab">Brand</span>Lumigan</td><td><span class="g2-lab">On the handout</span>Brand Latisse 0.03%: indicated for eyelash hypotrichosis (inadequate growth of eyelashes)</td></tr>
+<tr><th scope="row">Latanoprost</th><td><span class="g2-lab">Brand</span>Xalatan, Xelpros</td><td><span class="g2-lab">On the handout</span>Plus netarsudil: Rocklatan</td></tr>
+<tr><th scope="row">Latanoprostene bunod</th><td><span class="g2-lab">Brand</span>Vyzulta</td><td><span class="g2-lab">On the handout</span>Prodrug of latanoprost</td></tr>
+<tr><th scope="row">Travoprost</th><td><span class="g2-lab">Brand</span>Travatan Z</td><td><span class="g2-lab">On the handout</span></td></tr>
+<tr><th scope="row">Tafluprost</th><td><span class="g2-lab">Brand</span>Zioptan</td><td><span class="g2-lab">On the handout</span></td></tr>
+</tbody></table><div class="g2-tiles"><div class="g2-tile"><span class="g2-tile-label">Prostaglandin analogs: dosing frequency</span><span class="g2-tile-num">once daily</span><span class="g2-src">(Lam Glaucoma slide 20)</span></div><div class="g2-tile"><span class="g2-tile-label">Prostaglandin analogs: IOP reduction</span><span class="g2-tile-num">up to 33%</span><span class="g2-src">(Lam Glaucoma slide 20)</span></div></div><p class="g2-p">Dose limit on the handout: do not exceed once-daily dosing, which can decrease efficacy. Timing: &ldquo;we tell patients to use it at night&rdquo; <span class="g2-src">T@53202 11/19</span> The case prescriptions say &ldquo;in the evening.&rdquo; &ldquo;What do we use lettis for? Eyelash&rdquo; <span class="g2-src">T@50766 11/19</span> Her point: the same drug has two indications depending on the brand and the concentration.</p><div class="g2-note"><span class="g2-k">Handout and lecture differ</span><p>Handout: Latisse 0.03%. Lecture: the slide prints Latisse 0.3% (slide 19) and she said it is for eyelash growth. Key: Latisse is bimatoprost for eyelash growth; the handout concentration is 0.03%.</p></div>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">2.</span> Why they are first line <span class="g2-src">(Lam Glaucoma slide 20)</span></h5>
+<table class="g2-table g2-kv"><caption>Advantages (slide 20)</caption><tbody>
+<tr><th scope="row">Dosing</th><td>Once daily</td></tr>
+<tr><th scope="row">IOP reduction</th><td>Up to 33%; better 24-hour IOP control</td></tr>
+<tr><th scope="row">Cost</th><td>Availability of lower-cost generics</td></tr>
+<tr><th scope="row">Tolerance</th><td>Good tolerance</td></tr>
+</tbody></table><div class="g2-said"><span class="g2-k">She said</span><p>&ldquo;When you increase the frequency to more than once a day, it actually has a decrease in the efficacy of the drug.&rdquo; <span class="g2-src">T@51238 11/19</span></p></div><div class="g2-said"><span class="g2-k">She said</span><p>&ldquo;So remember, the frequency of the drug is too frequent. It decreases the efficacy.&rdquo; <span class="g2-src">T@58180 11/19</span></p></div>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">3.</span> Side effects and what to tell the patient <span class="g2-src">(Lam Glaucoma slide 21)</span></h5>
+<table class="g2-table g2-stack"><caption>Two minutes recall: list four side effects</caption><thead><tr><th scope="col">Side effect</th><th scope="col">Counseling note</th></tr></thead><tbody>
+<tr><th scope="row">Blurred vision</th><td><span class="g2-lab">Counseling note</span>The reason for nightly dosing</td></tr>
+<tr><th scope="row">Stinging</th><td><span class="g2-lab">Counseling note</span></td></tr>
+<tr><th scope="row">Increased pigmentation of the iris and eyelashes</th><td><span class="g2-lab">Counseling note</span></td></tr>
+<tr><th scope="row">Eyelash growth and thickening</th><td><span class="g2-lab">Counseling note</span></td></tr>
+<tr><th scope="row">Foreign body sensation</th><td><span class="g2-lab">Counseling note</span></td></tr>
+</tbody></table><p class="g2-p">Why she wants you to know them: &ldquo;All of us are going to be doing counseling at one point.&rdquo; <span class="g2-src">T@52635 11/19</span></p><p class="g2-p">Contraindications on the slide: macular edema; history of herpetic keratitis. &ldquo;I&rsquo;m not going to test you on that. This is more of, uh, full information.&rdquo; <span class="g2-src">T@53365 11/19</span></p>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">4.</span> Intolerance and inadequate response <span class="g2-src">(Lam Glaucoma slide 22, 23)</span></h5>
+<table class="g2-table g2-stack"><caption>What to do</caption><thead><tr><th scope="col">Problem</th><th scope="col">Options</th></tr></thead><tbody>
+<tr><th scope="row">Intolerance to side effects (for example blurry vision, foreign body sensation)</th><td><span class="g2-lab">Options</span>Change formulation (solution to gel); switch to another drug class (for example beta blockers); check for a reaction to the preservative</td></tr>
+<tr><th scope="row">Reaction to the preservative (common preservative: benzalkonium chloride, BAK)</th><td><span class="g2-lab">Options</span>Preservative-free product: latanoprost (Xelpros), tafluprost (Zioptan); individual single-use bottles</td></tr>
+<tr><th scope="row">Inadequate response (IOP not lowering enough)</th><td><span class="g2-lab">Options</span>Ensure compliance; ensure proper eye administration technique; switch to another agent in the same class or add another agent</td></tr>
+<tr><th scope="row">Inadequate response to latanoprost</th><td><span class="g2-lab">Options</span>Bimatoprost is slightly more effective in lowering IOP; switch for patients unresponsive to latanoprost</td></tr>
+</tbody></table><div class="g2-said"><span class="g2-k">She said</span><p>&ldquo;Another common reason why a patient may have intolerance is really a reaction to the preservative.&rdquo; <span class="g2-src">T@54243 11/19</span></p></div><div class="g2-note"><span class="g2-k">Handout and lecture differ</span><p>Handout: bimatoprost is slightly more effective, switch for patients unresponsive to latanoprost. Lecture: she first mumbled the two names, then clarified: &ldquo;latanoprost has lower efficacy compared to&rdquo; <span class="g2-src">T@71578 11/19</span>. Key: unresponsive on latanoprost: switch to bimatoprost.</p></div>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">5.</span> Her case: the frequency problem <span class="g2-src">(Lam Glaucoma slide 24, 25, 28)</span></h5>
+<div class="gpoll"><b>Ms. Lopez, 68, newly diagnosed with POAG</b>
+<details class="g2-self"><summary>New prescription: bimatoprost 0.01% ophthalmic solution, instill 1 drop OU BID. What is the medication-related problem? Select the most appropriate pharmacist response: (A) the prescription is appropriate; dispense it; (B) incorrect because the frequency is too frequent; contact provider; (C) incorrect because the patient should use 2 drops instead of one; (D) incorrect because the frequency is too low. <span class="g2-tap">Show answer</span></summary><p>B. The frequency is incorrect: it needs to be once daily, and a higher frequency decreases efficacy. Next step: contact the provider and clarify the frequency for a new prescription <span class="g2-src">(Lam Glaucoma slide 24, 25, 28; T@57715 11/19)</span>.</p></details>
+</div>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">6.</span> Write it first <span class="g2-src">(Lam Glaucoma slide 19, 20, 21, 22, 23)</span></h5>
+<div class="gpoll"><b>Cover the page, then write</b>
+<details class="g2-self"><summary>Write the drugs with their brands, the dosing frequency and the IOP reduction. <span class="g2-tap">Show answer</span></summary><p>Bimatoprost (Lumigan), latanoprost (Xalatan, Xelpros), latanoprostene bunod (Vyzulta), travoprost (Travatan Z), tafluprost (Zioptan); once daily; up to 33% <span class="g2-src">(Lam Glaucoma slide 19, 20)</span>.</p></details>
+<details class="g2-self"><summary>Write four side effects and the one that explains night dosing. <span class="g2-tap">Show answer</span></summary><p>Blurred vision (night dosing), stinging, increased pigmentation of iris or eyelashes, eyelash growth, foreign body sensation <span class="g2-src">(Lam Glaucoma slide 21)</span>.</p></details>
+<details class="g2-self"><summary>Write what you do for intolerance and for inadequate response. <span class="g2-tap">Show answer</span></summary><p>Intolerance: change formulation, switch class, preservative-free product. Inadequate response: compliance, technique, another agent in the class or add one; bimatoprost if latanoprost is not working <span class="g2-src">(Lam Glaucoma slide 22, 23)</span>.</p></details>
+</div>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">7.</span> Application cases <span class="g2-src">(Lam Glaucoma slide 19, 20, 22, 23)</span></h5>
+<div class="gpoll"><b>New patients</b>
+<details class="g2-self"><summary>A 58-year-old man has used latanoprost 1 drop OU each evening for 3 months with good technique and good adherence, and his IOP is still above the target. Which change inside the class fits? <span class="g2-tap">Show answer</span></summary><p>Switch to bimatoprost, which is slightly more effective; the alternative is to add another agent <span class="g2-src">(Lam Glaucoma slide 23; T@71578 11/19)</span>.</p></details>
+<details class="g2-self"><summary>A 66-year-old woman develops burning and redness after each drop from her multi-dose latanoprost bottle. Her ophthalmologist suspects the preservative. Name the preservative and two options. <span class="g2-tap">Show answer</span></summary><p>Benzalkonium chloride (BAK). Options: a preservative-free single-use product (latanoprost Xelpros or tafluprost Zioptan), or another drug class such as a beta blocker <span class="g2-src">(Lam Glaucoma slide 22)</span>.</p></details>
+<details class="g2-self"><summary>A 63-year-old man brings latanoprost 1 gtt OU QHS. Read the sig and name the medication-related problem, if any. <span class="g2-tap">Show answer</span></summary><p>One drop in both eyes in the evening, once daily; the frequency fits the drug, so there is no frequency problem; dispense <span class="g2-src">(Lam Glaucoma slide 4, 20)</span>.</p></details>
+<details class="g2-self"><summary>A woman picks up bimatoprost under the brand name Latisse and asks whether it lowers eye pressure like Lumigan. What is the point to make? <span class="g2-tap">Show answer</span></summary><p>The same drug has two indications depending on brand and concentration; Latisse is indicated for eyelash hypotrichosis, Lumigan for glaucoma <span class="g2-src">(Lam Glaucoma slide 19)</span>.</p></details>
+</div>
+</div>
+</section>
+
+<section class="gobj" id="gobj-lg-5">
+<h3>Dr. Lam, by learning objective · Ophthalmic beta blockers · slides 31&ndash;40</h3>
+<div class="gbar"><span>Key point (Lam Glaucoma slide 31&ndash;37)</span><b>Beta blockers lower IOP 20&ndash;30%, usually BID, with timolol gel once daily; asthma, COPD, bradycardia, heart block and oral beta blockers are the precautions.</b><i>Lam Glaucoma slide 31, 32, 33, 34, 35, 36, 37</i></div>
+<div class="gpt g2-block"><h5><span class="g2-num">1.</span> Drugs, brands and dosing <span class="g2-src">(Lam Glaucoma slide 31, 32)</span></h5>
+<table class="g2-table g2-stack"><caption>Ophthalmic beta blockers (-olol)</caption><thead><tr><th scope="col">Drug</th><th scope="col">Brand</th><th scope="col">Dosing</th><th scope="col">On the handout</th></tr></thead><tbody>
+<tr><th scope="row">Timolol 0.25%, 0.5%</th><td><span class="g2-lab">Brand</span>Timoptic, Istalol</td><td><span class="g2-lab">Dosing</span>1 drop into the affected eye(s) BID</td><td><span class="g2-lab">On the handout</span></td></tr>
+<tr><th scope="row">Timolol gel</th><td><span class="g2-lab">Brand</span>Timoptic-XE</td><td><span class="g2-lab">Dosing</span>1 drop into the affected eye(s) once daily</td><td><span class="g2-lab">On the handout</span>Fewer drops per day; fewer systemic effects than aqueous solution</td></tr>
+<tr><th scope="row">Timolol plus dorzolamide</th><td><span class="g2-lab">Brand</span>Cosopt, Cosopt PF</td><td><span class="g2-lab">Dosing</span>BID</td><td><span class="g2-lab">On the handout</span>Combination product</td></tr>
+<tr><th scope="row">Timolol plus brimonidine</th><td><span class="g2-lab">Brand</span>Combigan</td><td><span class="g2-lab">Dosing</span>BID</td><td><span class="g2-lab">On the handout</span>Combination product</td></tr>
+<tr><th scope="row">Betaxolol</th><td><span class="g2-lab">Brand</span>Betoptic 0.5%, Betoptic-S 0.25%</td><td><span class="g2-lab">Dosing</span>BID</td><td><span class="g2-lab">On the handout</span>Less effective than timolol and levobunolol; Betoptic-S is a suspension with fewer systemic effects than the solution</td></tr>
+<tr><th scope="row">Carteolol 1%</th><td><span class="g2-lab">Brand</span>Ocupress</td><td><span class="g2-lab">Dosing</span>BID</td><td><span class="g2-lab">On the handout</span></td></tr>
+<tr><th scope="row">Levobunolol 0.25%, 0.5%</th><td><span class="g2-lab">Brand</span>Betagan</td><td><span class="g2-lab">Dosing</span>BID</td><td><span class="g2-lab">On the handout</span></td></tr>
+</tbody></table><div class="g2-tiles"><div class="g2-tile"><span class="g2-tile-label">Ophthalmic beta blockers: IOP reduction</span><span class="g2-tile-num">20&ndash;30%</span><span class="g2-src">(Lam Glaucoma slide 31)</span></div></div><p class="g2-p">Timolol is the one most dispensed: &ldquo;Timolol actually is available as a combination product&rdquo; <span class="g2-src">T@58687 11/19</span> and as a gel, so once daily dosing is possible. Betaxolol: &ldquo;I rarely see this actually being used&rdquo; <span class="g2-src">T@59406 11/19</span> &ldquo;It&rsquo;s less effective from IOP reduction&rdquo; <span class="g2-src">T@59480 11/19</span></p>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">2.</span> Side effects <span class="g2-src">(Lam Glaucoma slide 33)</span></h5>
+<table class="g2-table"><caption>Beta blocker side effects</caption><thead><tr><th scope="col">Local</th><th scope="col">Systemic</th></tr></thead><tbody>
+<tr><td>Stinging on application (especially with betaxolol solution); dry eyes; blepharitis; blurred vision</td><td>Bradycardia; hypotension; bronchospasm</td></tr>
+</tbody></table>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">3.</span> Precautions <span class="g2-src">(Lam Glaucoma slide 34)</span></h5>
+<table class="g2-table g2-kv"><caption>Precaution (less risk with betaxolol and carteolol)</caption><tbody>
+<tr><th scope="row">Lung</th><td>Asthma/COPD</td></tr>
+<tr><th scope="row">Heart</th><td>Bradycardia; second or third degree heart block; uncompensated cardiac failure</td></tr>
+<tr><th scope="row">Drugs</th><td>Oral beta-blocker therapy</td></tr>
+</tbody></table><p class="g2-p">Her qualifier: &ldquo;The precaution is related to patients that have uncontrolled, um, uncontrolled symptoms or uncontrolled disease state.&rdquo; <span class="g2-src">T@60379 11/19</span></p><p class="g2-p">Oral beta blocker (metoprolol, carvedilol): &ldquo;Can you use this drug in those patients? You can.&rdquo; <span class="g2-src">T@61486 11/19</span> The risk is an additive effect; she counsels &ldquo;check your blood pressure, check your heart rate, especially when you&rsquo;re started on this drug.&rdquo; <span class="g2-src">T@61773 11/19</span></p>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">4.</span> Intolerance and inadequate response <span class="g2-src">(Lam Glaucoma slide 35, 36)</span></h5>
+<table class="g2-table g2-stack"><caption>What to do</caption><thead><tr><th scope="col">Problem</th><th scope="col">Options</th></tr></thead><tbody>
+<tr><th scope="row">Intolerance due to side effects</th><td><span class="g2-lab">Options</span>Change formulation (solution to gel solution); switch to another agent in the same class or a different class (for example betaxolol to timolol)</td></tr>
+<tr><th scope="row">Reaction to the preservative</th><td><span class="g2-lab">Options</span>Preservative-free products: Cosopt PF; timolol, certain ones</td></tr>
+<tr><th scope="row">Inadequate or partial response</th><td><span class="g2-lab">Options</span>Ensure compliance; increase concentration (if possible); if one agent does not respond, switch to another drug class</td></tr>
+</tbody></table><div class="g2-said"><span class="g2-k">She said</span><p>&ldquo;hopefully you recognize the PF refers to preservative-free product.&rdquo; <span class="g2-src">T@62830 11/19</span></p></div>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">5.</span> Her case: the missed evening dose <span class="g2-src">(Lam Glaucoma slide 37, 38, 39, 40)</span></h5>
+<div class="gpoll"><b>Ms. Lopez, three months later</b>
+<details class="g2-self"><summary>She refills Timoptic 1 drop OU BID and Travatan Z 1 drop OU daily, and has trouble remembering the evening Timoptic dose. She asks for a once daily alternative. Select the most appropriate intervention: (A) change Timoptic to betaxolol; (B) discontinue Timoptic and Travatan Z; change to Combigan; (C) change Timoptic to Timoptic-XE gel; (D) discontinue Timoptic and Travatan Z; change to Cosopt. <span class="g2-tap">Show answer</span></summary><p>C. Her problem is the frequency of the Timoptic solution. Betaxolol, Combigan and Cosopt are each BID, so they do not fix it <span class="g2-src">(Lam Glaucoma slide 32, 37; T@64706 11/19)</span>.</p></details>
+</div>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">6.</span> Write it first <span class="g2-src">(Lam Glaucoma slide 31, 32, 33, 34, 35, 36)</span></h5>
+<div class="gpoll"><b>Cover the page, then write</b>
+<details class="g2-self"><summary>Write the beta blockers with their brands, frequency and IOP reduction. <span class="g2-tap">Show answer</span></summary><p>Timolol (Timoptic, Istalol) BID; Timoptic-XE gel once daily; betaxolol (Betoptic, Betoptic-S) BID; carteolol (Ocupress) BID; levobunolol (Betagan) BID; 20&ndash;30% <span class="g2-src">(Lam Glaucoma slide 31, 32)</span>.</p></details>
+<details class="g2-self"><summary>Write the local and systemic side effects and the four precautions. <span class="g2-tap">Show answer</span></summary><p>Local: stinging, dry eyes, blepharitis, blurred vision. Systemic: bradycardia, hypotension, bronchospasm. Precautions: asthma/COPD; bradycardia or second or third degree heart block; uncompensated cardiac failure; oral beta-blocker therapy <span class="g2-src">(Lam Glaucoma slide 33, 34)</span>.</p></details>
+<details class="g2-self"><summary>Write what to do for intolerance and for inadequate response. <span class="g2-tap">Show answer</span></summary><p>Intolerance: change formulation, switch agent or class, preservative-free product. Inadequate response: compliance, increase concentration, switch drug class <span class="g2-src">(Lam Glaucoma slide 35, 36)</span>.</p></details>
+</div>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">7.</span> Application cases <span class="g2-src">(Lam Glaucoma slide 32, 33, 34, 35)</span></h5>
+<div class="gpoll"><b>New patients</b>
+<details class="g2-self"><summary>A 74-year-old man with POAG takes metoprolol by mouth and is prescribed timolol drops. What is the concern, and what counseling does she give? <span class="g2-tap">Show answer</span></summary><p>Oral beta-blocker therapy is a precaution because of an additive effect; it can be used, and she counsels checking blood pressure and heart rate, especially when starting <span class="g2-src">(Lam Glaucoma slide 34; T@61773 11/19)</span>.</p></details>
+<details class="g2-self"><summary>A 69-year-old woman on bimatoprost has an IOP not at goal. Her asthma is uncontrolled, and she uses her short-acting inhaler often. The ophthalmologist suggests adding timolol. Which medication-related problem category applies? <span class="g2-tap">Show answer</span></summary><p>Safety: unsafe medication for the patient. Asthma/COPD is a beta blocker precaution, and bronchospasm is a systemic side effect <span class="g2-src">(Lam Glaucoma slide 16, 33, 34; T@81993 11/19)</span>.</p></details>
+<details class="g2-self"><summary>A 61-year-old man reports stinging with each drop of betaxolol solution. What are two options from her list? <span class="g2-tap">Show answer</span></summary><p>Change the formulation, or switch to another agent such as timolol <span class="g2-src">(Lam Glaucoma slide 33, 35)</span>.</p></details>
+<details class="g2-self"><summary>A 70-year-old woman takes timolol 0.5% 1 drop OU BID and cannot remember the evening drop. Name the product that gives once daily dosing and one advantage besides fewer drops. <span class="g2-tap">Show answer</span></summary><p>Timoptic-XE gel once daily; it decreases systemic effects compared with the aqueous solution <span class="g2-src">(Lam Glaucoma slide 32)</span>.</p></details>
+</div>
+</div>
+</section>
+
+<section class="gobj" id="gobj-lg-6">
+<h3>Dr. Lam, by learning objective · Alpha-2 adrenergic agonists · slides 41&ndash;50</h3>
+<div class="gbar"><span>Key point (Lam Glaucoma slide 41&ndash;47)</span><b>Alpha-2 agonists lower IOP 18&ndash;27% as the third class, mostly BID; cardiovascular disease, kidney disease and stroke are the precautions, and OTC brimonidine (Lumify) is for redness, not glaucoma.</b><i>Lam Glaucoma slide 41, 42, 43, 44, 45, 46, 47</i></div>
+<div class="gpt g2-block"><h5><span class="g2-num">1.</span> Drugs, brands and dosing <span class="g2-src">(Lam Glaucoma slide 41, 42)</span></h5>
+<table class="g2-table g2-stack"><caption>Alpha-2 adrenergic agonists</caption><thead><tr><th scope="col">Drug</th><th scope="col">Brand</th><th scope="col">Dosing</th><th scope="col">On the handout</th></tr></thead><tbody>
+<tr><th scope="row">Brimonidine solution, various concentrations</th><td><span class="g2-lab">Brand</span>Alphagan P</td><td><span class="g2-lab">Dosing</span>1 drop into the affected eye(s) BID</td><td><span class="g2-lab">On the handout</span></td></tr>
+<tr><th scope="row">Brimonidine plus timolol</th><td><span class="g2-lab">Brand</span>Combigan</td><td><span class="g2-lab">Dosing</span>BID</td><td><span class="g2-lab">On the handout</span>Combination product</td></tr>
+<tr><th scope="row">Brimonidine plus brinzolamide</th><td><span class="g2-lab">Brand</span>Simbrinza</td><td><span class="g2-lab">Dosing</span>TID</td><td><span class="g2-lab">On the handout</span>Combination product</td></tr>
+<tr><th scope="row">Brimonidine 0.025%</th><td><span class="g2-lab">Brand</span>Lumify (OTC)</td><td><span class="g2-lab">Dosing</span></td><td><span class="g2-lab">On the handout</span>Ocular redness; not for glaucoma</td></tr>
+<tr><th scope="row">Apraclonidine 0.5%, 1% solution</th><td><span class="g2-lab">Brand</span>Iopidine</td><td><span class="g2-lab">Dosing</span>BID or TID</td><td><span class="g2-lab">On the handout</span>Higher incidence of side effects (it stops upon discontinuation)</td></tr>
+</tbody></table><div class="g2-tiles"><div class="g2-tile"><span class="g2-tile-label">Alpha-2 agonists: IOP reduction</span><span class="g2-tile-num">18&ndash;27%</span><span class="g2-src">(Lam Glaucoma slide 41)</span></div></div><p class="g2-p">Other use: surgical purposes, 1 drop prior to the procedure. Why the later classes come in combination: &ldquo;This is your 3rd drug, and it has increase of frequency, which means your compliance is gonna get lower and lower.&rdquo; <span class="g2-src">T@68806 11/19</span></p>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">2.</span> Side effects <span class="g2-src">(Lam Glaucoma slide 43)</span></h5>
+<table class="g2-table"><caption>Alpha-2 agonist side effects</caption><thead><tr><th scope="col">Local (most common)</th><th scope="col">Systemic</th></tr></thead><tbody>
+<tr><td>Lid edema; eye discomfort; foreign-object sensation; itching</td><td>Dizziness; fatigue; somnolence; dry mouth; slight BP or HR reduction</td></tr>
+</tbody></table><div class="g2-note"><span class="g2-k">Handout and lecture differ</span><p>Handout: drowsiness is the most common systemic effect and the slight BP change is an increase or decrease of under 10%. Lecture: she named blood pressure and also heart rate reduction T@70785 11/19. Key: slide 43: slight BP or HR reduction; fatigue, somnolence and dry mouth appear on both.</p></div>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">3.</span> Precautions <span class="g2-src">(Lam Glaucoma slide 44)</span></h5>
+<table class="g2-table g2-kv"><caption>Precaution</caption><tbody>
+<tr><th scope="row">Disease</th><td>Cardiovascular and kidney disease; history of stroke</td></tr>
+<tr><th scope="row">Drugs</th><td>Antihypertensive agents, monoamine oxidase inhibitors, tricyclic antidepressants</td></tr>
+</tbody></table><p class="g2-p">Her reasoning: vasoconstriction if the drug reaches the blood; &ldquo;Patient with a history of a stroke&rdquo; <span class="g2-src">T@72809 11/19</span> She would tell the patient to &ldquo;check your blood pressure while you&rsquo;re on this drug&rdquo; <span class="g2-src">T@73085 11/19</span> With antihypertensives she worried about an additive effect or decreased efficacy of the antihypertensive.</p>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">4.</span> Intolerance and inadequate response <span class="g2-src">(Lam Glaucoma slide 45, 46)</span></h5>
+<table class="g2-table g2-stack"><caption>What to do</caption><thead><tr><th scope="col">Problem</th><th scope="col">Options</th></tr></thead><tbody>
+<tr><th scope="row">Intolerance</th><td><span class="g2-lab">Options</span>Reduce concentration (if possible); decrease frequency (only applicable to apraclonidine); switch to another agent in a different class</td></tr>
+<tr><th scope="row">Inadequate or partial response</th><td><span class="g2-lab">Options</span>Ensure compliance; increase concentration (if possible); add the next class of agent</td></tr>
+</tbody></table>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">5.</span> Prescription brimonidine versus the OTC product <span class="g2-src">(Lam Glaucoma slide 47, 48, 49, 50)</span></h5>
+<p class="g2-p">&ldquo;It is not therapeutic substitution, OK?&rdquo; <span class="g2-src">T@69314 11/19</span> &ldquo;it is not efficacious enough to help reduce your intraocular pressure.&rdquo; <span class="g2-src">T@69537 11/19</span></p><p class="g2-p">Rebound: &ldquo;for glaucoma purposes, uh, the rebound is actually quite low&rdquo; <span class="g2-src">T@70022 11/19</span> and &ldquo;prescription wise, it&rsquo;s not a concern, but over the counter wise&rdquo; <span class="g2-src">T@70330 11/19</span> (a decongestant for redness, short duration).</p><div class="gpoll"><b>Ms. Lopez on three drugs</b>
+<details class="g2-self"><summary>Regimen: bimatoprost 0.01% 1 drop OU in the evening; timolol 0.5% 1 drop OU twice daily; brimonidine 0.1% 1 drop OU BID. She asks whether over-the-counter brimonidine is an alternative to her prescription. Most appropriate response: (A) therapeutically equivalent, substitute without the prescriber; (B) use the OTC in addition for better IOP control; (C) no, the OTC product is formulated and indicated for eye redness relief, not for treating glaucoma; (D) no, because OTC brimonidine is contraindicated in patients with glaucoma. <span class="g2-tap">Show answer</span></summary><p>C <span class="g2-src">(Lam Glaucoma slide 42, 47)</span>.</p></details>
+<details class="g2-self"><summary>Her Medicare gap raises the cost of the prescription brimonidine, and she asks to switch to the OTC product. What do you say? <span class="g2-tap">Show answer</span></summary><p>No. It is not efficacious for glaucoma; the OTC product helps with redness of the eyes <span class="g2-src">(T@74663 11/19; T@74365 11/19)</span>.</p></details>
+</div>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">6.</span> Write it first <span class="g2-src">(Lam Glaucoma slide 41, 42, 43, 44, 45, 46)</span></h5>
+<div class="gpoll"><b>Cover the page, then write</b>
+<details class="g2-self"><summary>Write the alpha-2 agonists with brands, frequency and IOP reduction. <span class="g2-tap">Show answer</span></summary><p>Brimonidine (Alphagan P) BID; Combigan BID; Simbrinza TID; Lumify OTC for redness, not glaucoma; apraclonidine (Iopidine) BID or TID; 18&ndash;27% <span class="g2-src">(Lam Glaucoma slide 41, 42)</span>.</p></details>
+<details class="g2-self"><summary>Write the local and systemic side effects and the precautions. <span class="g2-tap">Show answer</span></summary><p>Local: lid edema, eye discomfort, foreign-object sensation, itching. Systemic: dizziness, fatigue, somnolence, dry mouth, slight BP or HR reduction. Precautions: cardiovascular and kidney disease, history of stroke, certain drugs <span class="g2-src">(Lam Glaucoma slide 43, 44)</span>.</p></details>
+<details class="g2-self"><summary>Write what to do for intolerance, including the step only apraclonidine allows. <span class="g2-tap">Show answer</span></summary><p>Reduce concentration; decrease frequency (apraclonidine only); switch to a different class <span class="g2-src">(Lam Glaucoma slide 45)</span>.</p></details>
+</div>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">7.</span> Application cases <span class="g2-src">(Lam Glaucoma slide 42, 44, 45, 47)</span></h5>
+<div class="gpoll"><b>New patients</b>
+<details class="g2-self"><summary>A 77-year-old man with a history of stroke is prescribed brimonidine as the third class. What precaution applies, and what monitoring does she suggest? <span class="g2-tap">Show answer</span></summary><p>History of stroke is a precaution: vasoconstriction is unwanted; she would tell him to check blood pressure while on the drug <span class="g2-src">(Lam Glaucoma slide 44; T@72809 11/19; T@73085 11/19)</span>.</p></details>
+<details class="g2-self"><summary>A patient on prescription brimonidine for glaucoma stops it and asks whether rebound redness will follow, as she was told for the OTC product. What is the answer? <span class="g2-tap">Show answer</span></summary><p>For glaucoma the rebound is quite low and not a concern with the prescription; rebound is the concern with the over-the-counter use <span class="g2-src">(T@70022 11/19)</span>.</p></details>
+<details class="g2-self"><summary>A 67-year-old woman on apraclonidine 1% BID has lid edema and itching. Which intolerance step is available only for this drug? <span class="g2-tap">Show answer</span></summary><p>Decrease the frequency <span class="g2-src">(Lam Glaucoma slide 45; T@73674 11/19)</span>.</p></details>
+<details class="g2-self"><summary>A 72-year-old man takes an antihypertensive agent and is started on brimonidine. What is the concern? <span class="g2-tap">Show answer</span></summary><p>Antihypertensive agents are a precaution: an additive effect, or decreased efficacy of the antihypertensive agent <span class="g2-src">(Lam Glaucoma slide 44)</span>.</p></details>
+</div>
+</div>
+</section>
+
+<section class="gobj" id="gobj-lg-7">
+<h3>Dr. Lam, by learning objective · Carbonic anhydrase inhibitors · slides 51&ndash;56</h3>
+<div class="gbar"><span>Key point (Lam Glaucoma slide 51&ndash;56)</span><b>Topical CAIs (-zolamide) lower IOP 15&ndash;26% and are dosed TID, with brief stinging and blur; oral agents lower IOP 25&ndash;40% but are short term because of systemic side effects.</b><i>Lam Glaucoma slide 51, 52, 53, 54, 55, 56</i></div>
+<div class="gpt g2-block"><h5><span class="g2-num">1.</span> Drugs, brands and dosing <span class="g2-src">(Lam Glaucoma slide 51, 53)</span></h5>
+<table class="g2-table g2-stack"><caption>Carbonic anhydrase inhibitors (-zolamide)</caption><thead><tr><th scope="col">Drug</th><th scope="col">Brand</th><th scope="col">Dosing</th><th scope="col">IOP reduction</th></tr></thead><tbody>
+<tr><th scope="row">Dorzolamide 2%</th><td><span class="g2-lab">Brand</span>Trusopt</td><td><span class="g2-lab">Dosing</span>1 drop in the affected eye(s) TID</td><td><span class="g2-lab">IOP reduction</span>Topical 15&ndash;26%</td></tr>
+<tr><th scope="row">Dorzolamide plus timolol</th><td><span class="g2-lab">Brand</span>Cosopt, Cosopt PF</td><td><span class="g2-lab">Dosing</span>BID</td><td><span class="g2-lab">IOP reduction</span>Topical 15&ndash;26%</td></tr>
+<tr><th scope="row">Combination with brimonidine</th><td><span class="g2-lab">Brand</span>Simbrinza</td><td><span class="g2-lab">Dosing</span>TID</td><td><span class="g2-lab">IOP reduction</span>Topical 15&ndash;26%</td></tr>
+<tr><th scope="row">Brinzolamide 1% suspension</th><td><span class="g2-lab">Brand</span>Azopt</td><td><span class="g2-lab">Dosing</span>TID</td><td><span class="g2-lab">IOP reduction</span>Topical 15&ndash;26%</td></tr>
+<tr><th scope="row">Acetazolamide, methazolamide (oral)</th><td><span class="g2-lab">Brand</span></td><td><span class="g2-lab">Dosing</span>Short-term use only because of systemic side effects</td><td><span class="g2-lab">IOP reduction</span>Oral 25&ndash;40%</td></tr>
+</tbody></table><p class="g2-p">Her recognition cue: the ending -zolamide. &ldquo;dorzolamide actually comes as a combination with Timolol&rdquo; <span class="g2-src">T@76056 11/19</span></p><div class="g2-note"><span class="g2-k">Handout and lecture differ</span><p>Handout: Simbrinza is brinzolamide/brimonidine in the combination table (slide 69), but the CAI list prints &ldquo;PLUS brimonidine (Simbrinza)&rdquo; under dorzolamide. Lecture: slide 51 reads &ldquo;Dorzolamide + brimonidine (Simbrinza)&rdquo; and she said the dorzolamide combination with brimonidine is TID. Key: the combination table names brinzolamide/brimonidine, TID; the TID dosing is the same in both readings.</p></div>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">2.</span> Side effects <span class="g2-src">(Lam Glaucoma slide 52)</span></h5>
+<table class="g2-table"><caption>Topical CAI side effects</caption><thead><tr><th scope="col">Local</th><th scope="col">Systemic</th></tr></thead><tbody>
+<tr><td>Stinging or burning; ocular discomfort; blurred vision; tearing</td><td>Minimal</td></tr>
+</tbody></table><div class="g2-said"><span class="g2-k">She said</span><p>&ldquo;So stinging and burning is common, but only for 1 or 2 minutes after they put that medication into their eye. Longer than that, they need to go see their eye doctor.&rdquo; <span class="g2-src">T@76727 11/19</span></p></div><div class="g2-said"><span class="g2-k">She said</span><p>&ldquo;the cloudiness is when the droplet is trying to settle into the eye. Once it settles in, that blurry vision does improve.&rdquo; <span class="g2-src">T@77064 11/19</span></p></div><p class="g2-p">Why she stresses the blur here: the drug is dosed three times a day, so the patient asks when vision improves. For comparison: &ldquo;Latanoprost, as I mentioned, also cause blurry vision. You take it at nighttime, they&rsquo;re sleeping.&rdquo; <span class="g2-src">T@77377 11/19</span></p>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">3.</span> Why oral agents come last <span class="g2-src">(Lam Glaucoma slide 53)</span></h5>
+<table class="g2-table g2-stack"><caption>Oral CAIs (acetazolamide, methazolamide)</caption><thead><tr><th scope="col">Point</th><th scope="col">Slide and handout</th></tr></thead><tbody>
+<tr><th scope="row">IOP reduction</th><td><span class="g2-lab">Slide and handout</span>25&ndash;40%</td></tr>
+<tr><th scope="row">Why last</th><td><span class="g2-lab">Slide and handout</span>Systemic acidosis: malaise, fatigue, anorexia, nausea, weight loss, altered taste</td></tr>
+<tr><th scope="row">Use</th><td><span class="g2-lab">Slide and handout</span>Short term use only due to systemic side effects</td></tr>
+<tr><th scope="row">Older adults</th><td><span class="g2-lab">Slide and handout</span>Do not tolerate CAIs as well as younger patients</td></tr>
+</tbody></table><div class="g2-said"><span class="g2-k">She said</span><p>&ldquo;We rarely rarely rarely use oral.&rdquo; <span class="g2-src">T@75181 11/19</span></p></div><p class="g2-p">When oral is dispensed: &ldquo;it&rsquo;s more of a temporary&rdquo; <span class="g2-src">T@78070 11/19</span> and &ldquo;maybe they&rsquo;re really losing vision&rdquo; <span class="g2-src">T@78192 11/19</span> &ldquo;Even though it has a really significant reduction in ILP&rdquo; <span class="g2-src">T@78355 11/19</span> the systemic side effect is the problem.</p>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">4.</span> Precautions <span class="g2-src">(Lam Glaucoma slide 54)</span></h5>
+<table class="g2-table g2-kv"><caption>Precaution</caption><tbody>
+<tr><th scope="row">Disease</th><td>Sickle cell disease; pulmonary disorders; electrolyte imbalance</td></tr>
+<tr><th scope="row">Allergy</th><td>Sulfa allergies (sulfonamide moieties); cross-sensitivity is very low</td></tr>
+</tbody></table><p class="g2-p">Sulfonamide: &ldquo;This is more of an FYI for you guys.&rdquo; <span class="g2-src">T@78505 11/19</span></p>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">5.</span> Intolerance and inadequate response <span class="g2-src">(Lam Glaucoma slide 55, 56)</span></h5>
+<table class="g2-table g2-stack"><caption>What to do</caption><thead><tr><th scope="col">Problem</th><th scope="col">Options</th></tr></thead><tbody>
+<tr><th scope="row">Intolerance due to side effects</th><td><span class="g2-lab">Options</span>If on topical, switch to oral; switch to another agent (different class)</td></tr>
+<tr><th scope="row">Preservative</th><td><span class="g2-lab">Options</span>Trusopt is preservative-free (slide 55); the compliance slide says certain brand names only</td></tr>
+<tr><th scope="row">Inadequate response</th><td><span class="g2-lab">Options</span>Ensure compliance; switch to another agent (same class) or add another therapy; if on topical, switch to oral</td></tr>
+</tbody></table><div class="g2-note"><span class="g2-k">Handout and lecture differ</span><p>Handout: intolerance: if on topical, switch to oral; Trusopt preservative-free. Lecture: she said &ldquo;And then if they&rsquo;re not tolerating this drug, we switch to another drug class.&rdquo; <span class="g2-src">T@79199 11/19</span>. Key: for intolerance use the different-class step; oral is the step for an inadequate topical response; if the stem says preservative-free, take it as given.</p></div>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">6.</span> Write it first <span class="g2-src">(Lam Glaucoma slide 51, 52, 53, 54, 55, 56)</span></h5>
+<div class="gpoll"><b>Cover the page, then write</b>
+<details class="g2-self"><summary>Write the topical CAIs with brands, frequency and IOP reduction. <span class="g2-tap">Show answer</span></summary><p>Dorzolamide 2% (Trusopt) TID; dorzolamide/timolol (Cosopt, Cosopt PF) BID; Simbrinza TID; brinzolamide 1% suspension (Azopt) TID; 15&ndash;26% <span class="g2-src">(Lam Glaucoma slide 51)</span>.</p></details>
+<details class="g2-self"><summary>Write the local side effects and what to tell the patient about stinging and blurring. <span class="g2-tap">Show answer</span></summary><p>Stinging or burning, ocular discomfort, blurred vision, tearing. Stinging resolves within 1 to 2 minutes; if longer, see the ophthalmologist. Blur is the drop settling and improves <span class="g2-src">(Lam Glaucoma slide 52; T@76727 11/19)</span>.</p></details>
+<details class="g2-self"><summary>Write why oral CAIs are last and the precautions. <span class="g2-tap">Show answer</span></summary><p>Oral reduces IOP 25&ndash;40% but systemic side effects are intolerable for most patients, so use is short term. Precautions: sickle cell disease, pulmonary disorders, electrolyte imbalance, sulfa allergies <span class="g2-src">(Lam Glaucoma slide 53, 54)</span>.</p></details>
+</div>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">7.</span> Application cases <span class="g2-src">(Lam Glaucoma slide 51, 52, 53, 55)</span></h5>
+<div class="gpoll"><b>New patients</b>
+<details class="g2-self"><summary>A 66-year-old woman starts brinzolamide 1% suspension and reports burning for about 5 minutes after each drop. What does she tell the patient? <span class="g2-tap">Show answer</span></summary><p>Stinging should resolve within 1 to 2 minutes; if it lasts longer she should see her ophthalmologist, who may switch the drug class <span class="g2-src">(Lam Glaucoma slide 52; T@76727 11/19)</span>.</p></details>
+<details class="g2-self"><summary>A 70-year-old man on dorzolamide 2% three times a day says his vision is cloudy right after each drop and asks if the drug is damaging his eyes. What is the counseling point? <span class="g2-tap">Show answer</span></summary><p>The cloudiness is the drop settling into the eye; it improves once it settles <span class="g2-src">(Lam Glaucoma slide 52; T@77064 11/19)</span>.</p></details>
+<details class="g2-self"><summary>A prescription for acetazolamide arrives for a 78-year-old woman with glaucoma. Name the class position and one reason it is rarely used. <span class="g2-tap">Show answer</span></summary><p>Oral carbonic anhydrase inhibitor, last line; the systemic side effects are intolerable for most patients, and older adults do not tolerate CAIs as well <span class="g2-src">(Lam Glaucoma slide 53)</span>.</p></details>
+<details class="g2-self"><summary>A patient on timolol, bimatoprost and brimonidine has a partial response. Which class is added next and which of its drugs does she give? <span class="g2-tap">Show answer</span></summary><p>Topical carbonic anhydrase inhibitor, for example dorzolamide or brinzolamide <span class="g2-src">(Lam Glaucoma slide 63, 64)</span>.</p></details>
+</div>
+</div>
+</section>
+
+<section class="gobj" id="gobj-lg-8">
+<h3>Dr. Lam, by learning objective · Cholinergic agonists (miotics) · slides 57&ndash;61</h3>
+<div class="gbar"><span>Key point (Lam Glaucoma slide 57&ndash;61)</span><b>Pilocarpine is the cholinergic you will see, QID; brow ache and poor night vision are the local effects, and asthma and retinal detachment or corneal abrasion are the precautions.</b><i>Lam Glaucoma slide 57, 58, 59, 60, 61</i></div>
+<div class="gpt g2-block"><h5><span class="g2-num">1.</span> Drugs and dosing <span class="g2-src">(Lam Glaucoma slide 57)</span></h5>
+<table class="g2-table g2-stack"><caption>Cholinergic agonists (miotics)</caption><thead><tr><th scope="col">Drug</th><th scope="col">Brand</th><th scope="col">Dosing and use</th></tr></thead><tbody>
+<tr><th scope="row">Pilocarpine 1%, 2%, 4%</th><td><span class="g2-lab">Brand</span>Isopto Carpine</td><td><span class="g2-lab">Dosing and use</span>1 drop in the affected eye(s) QID; may be used as initial management of acute angle-closure glaucoma</td></tr>
+<tr><th scope="row">Carbachol</th><td><span class="g2-lab">Brand</span>Miostat</td><td><span class="g2-lab">Dosing and use</span>Often used for surgery instead of glaucoma</td></tr>
+<tr><th scope="row">Echothiophate</th><td><span class="g2-lab">Brand</span></td><td><span class="g2-lab">Dosing and use</span>Many serious ocular and systemic toxic effects (severe fibrinous iritis)</td></tr>
+</tbody></table><div class="g2-said"><span class="g2-k">She said</span><p>&ldquo;Pilocarpine is probably the one that you will see the most administered within this drug class.&rdquo; <span class="g2-src">T@80688 11/19</span></p></div><div class="g2-said"><span class="g2-k">She said</span><p>&ldquo;It is a 4 times a day dosing.&rdquo; <span class="g2-src">T@80784 11/19</span></p></div><p class="g2-p">Why rarely used: &ldquo;because of its efficacy from IOP reduction and because of the 4 times a day dosing&rdquo; <span class="g2-src">T@81154 11/19</span></p>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">2.</span> Side effects <span class="g2-src">(Lam Glaucoma slide 58)</span></h5>
+<table class="g2-table"><caption>Cholinergic side effects</caption><thead><tr><th scope="col">Local (common)</th><th scope="col">Systemic</th></tr></thead><tbody>
+<tr><td>Poor night vision (pupil constriction); frontal headache or brow ache; stinging</td><td>Headache (1&ndash;10%, the most common); excessive sweating; nausea, vomiting, diarrhea; cramping; bronchospasm; heart block</td></tr>
+</tbody></table><p class="g2-p">The one patients complain about: brow ache, &ldquo;because of the ciliary, uh, muscle spasm&rdquo; <span class="g2-src">T@81555 11/19</span> and &ldquo;And it has to do with the muscle spasm.&rdquo; <span class="g2-src">T@81887 11/19</span></p>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">3.</span> Precautions <span class="g2-src">(Lam Glaucoma slide 59)</span></h5>
+<table class="g2-table g2-kv"><caption>Precaution</caption><tbody>
+<tr><th scope="row">Lung</th><td>Asthma</td></tr>
+<tr><th scope="row">Eye</th><td>Retinal detachments; corneal abrasion</td></tr>
+</tbody></table><p class="g2-p">Asthma, in her words: &ldquo;uncontrolled asthma will look like&rdquo; <span class="g2-src">T@81993 11/19</span> a patient using the short-acting inhaler often. Eye: the drug contracts the ciliary muscle and the pupil.</p>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">4.</span> Intolerance and inadequate response <span class="g2-src">(Lam Glaucoma slide 60, 61)</span></h5>
+<table class="g2-table g2-stack"><caption>What to do</caption><thead><tr><th scope="col">Problem</th><th scope="col">Options</th></tr></thead><tbody>
+<tr><th scope="row">Intolerance</th><td><span class="g2-lab">Options</span>Reduce concentration (if possible); switch to another agent in a different class</td></tr>
+<tr><th scope="row">Inadequate response</th><td><span class="g2-lab">Options</span>Ensure compliance; increase concentration (if possible); add another agent (different drug class)</td></tr>
+</tbody></table>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">5.</span> Write it first <span class="g2-src">(Lam Glaucoma slide 57, 58, 59, 60, 61)</span></h5>
+<div class="gpoll"><b>Cover the page, then write</b>
+<details class="g2-self"><summary>Write the drug, concentrations, brand and frequency. <span class="g2-tap">Show answer</span></summary><p>Pilocarpine 1%, 2%, 4% (Isopto Carpine) QID <span class="g2-src">(Lam Glaucoma slide 57)</span>.</p></details>
+<details class="g2-self"><summary>Write the local and systemic side effects. <span class="g2-tap">Show answer</span></summary><p>Local: poor night vision, frontal headache or brow ache, stinging. Systemic: headache, excessive sweating, nausea, vomiting, diarrhea, cramping, bronchospasm, heart block <span class="g2-src">(Lam Glaucoma slide 58)</span>.</p></details>
+<details class="g2-self"><summary>Write the precautions. <span class="g2-tap">Show answer</span></summary><p>Asthma; retinal detachments or corneal abrasion <span class="g2-src">(Lam Glaucoma slide 59)</span>.</p></details>
+</div>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">6.</span> Application cases <span class="g2-src">(Lam Glaucoma slide 57, 58, 59)</span></h5>
+<div class="gpoll"><b>New patients</b>
+<details class="g2-self"><summary>A 64-year-old man on pilocarpine 2% QID complains of a headache over his eyebrows after each dose. What explains it? <span class="g2-tap">Show answer</span></summary><p>Brow ache from ciliary muscle spasm, the most common complaint of the class <span class="g2-src">(Lam Glaucoma slide 58; T@81545 11/19)</span>.</p></details>
+<details class="g2-self"><summary>A 59-year-old woman on pilocarpine says she sees poorly when she drives at night. Which side effect, and why? <span class="g2-tap">Show answer</span></summary><p>Poor night vision, due to pupil constriction <span class="g2-src">(Lam Glaucoma slide 58)</span>.</p></details>
+<details class="g2-self"><summary>A prescription for pilocarpine arrives for a 71-year-old man who uses his short-acting inhaler often. What is the problem? <span class="g2-tap">Show answer</span></summary><p>Uncontrolled asthma is a precaution: the drug can cause bronchospasm if absorbed <span class="g2-src">(Lam Glaucoma slide 58, 59; T@81993 11/19)</span>.</p></details>
+<details class="g2-self"><summary>A 55-year-old woman with a history of retinal detachment is prescribed pilocarpine. Which precaution applies? <span class="g2-tap">Show answer</span></summary><p>Retinal detachments or corneal abrasion <span class="g2-src">(Lam Glaucoma slide 59)</span>.</p></details>
+</div>
+</div>
+</section>
+
+<section class="gobj" id="gobj-lg-9">
+<h3>Dr. Lam, by learning objective · Rho kinase inhibitor · slide 62, 85</h3>
+<div class="gbar"><span>Key point (Lam Glaucoma slide 62)</span><b>Netarsudil lowers IOP 20&ndash;30% once daily in the evening, but conjunctival hemorrhage (51%) and cost make it the last, salvage class; it is refrigerated until opened.</b><i>Lam Glaucoma slide 62, 63, 85</i></div>
+<div class="gpt g2-block"><h5><span class="g2-num">1.</span> Drug, dosing and IOP reduction <span class="g2-src">(Lam Glaucoma slide 62)</span></h5>
+<table class="g2-table g2-stack"><caption>Rho kinase (ROCK) inhibitor</caption><thead><tr><th scope="col">Drug</th><th scope="col">Brand</th><th scope="col">Dosing</th><th scope="col">IOP reduction</th></tr></thead><tbody>
+<tr><th scope="row">Netarsudil 0.02%</th><td><span class="g2-lab">Brand</span>Rhopressa</td><td><span class="g2-lab">Dosing</span>1 drop in the affected eye(s) daily in the evening (QHS)</td><td><span class="g2-lab">IOP reduction</span>20&ndash;30%, like timolol</td></tr>
+<tr><th scope="row">Netarsudil plus latanoprost</th><td><span class="g2-lab">Brand</span>Rocklatan</td><td><span class="g2-lab">Dosing</span>1 drop in the affected eye(s) once daily in the evening</td><td><span class="g2-lab">IOP reduction</span></td></tr>
+</tbody></table><p class="g2-p">Mechanism on the handout: increases aqueous humor outflow, decreases aqueous humor production, and decreases episcleral venous pressure. In her words: &ldquo;Multiple mechanism of lowering your IOP.&rdquo; <span class="g2-src">T@82920 11/19</span></p>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">2.</span> Local side effects and why it is last <span class="g2-src">(Lam Glaucoma slide 62)</span></h5>
+<table class="g2-table g2-kv"><caption>Local side effects</caption><tbody>
+<tr><th scope="row">Eye</th><td>Burning or eye pain; corneal disease</td></tr>
+<tr><th scope="row">Conjunctiva</th><td>Conjunctival hemorrhage or conjunctival hyperemia (excess blood vessels), reported in 51%</td></tr>
+</tbody></table><div class="g2-said"><span class="g2-k">She said</span><p>&ldquo;The incidence of this in clinical trial was as high as 51%.&rdquo; <span class="g2-src">T@83211 11/19</span></p></div><p class="g2-p">&ldquo;it&rsquo;s fairly new on the market&rdquo; <span class="g2-src">T@83004 11/19</span> so cost may be an issue; and &ldquo;even though it has very powerful IOP reduction, the side effect is going to outweigh the efficacy of this drug&rdquo; <span class="g2-src">T@83874 11/19</span></p><div class="g2-said"><span class="g2-k">She said</span><p>&ldquo;This is more of our salvage therapy&rdquo; <span class="g2-src">T@84060 11/19</span></p></div><div class="g2-said"><span class="g2-k">She said</span><p>&ldquo;This is your last line. You&rsquo;re not gonna add any more agents on, on top of this.&rdquo; <span class="g2-src">T@85858 11/19</span></p></div>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">3.</span> Storage <span class="g2-src">(Lam Glaucoma slide 85)</span></h5>
+<table class="g2-table g2-kv"><caption>Netarsudil</caption><tbody>
+<tr><th scope="row">Before opening</th><td>Refrigerator</td></tr>
+<tr><th scope="row">After opening</th><td>Room temperature, for less than 6 weeks</td></tr>
+</tbody></table><div class="g2-said"><span class="g2-k">She said</span><p>&ldquo;This is refrigerated before you open, but when it&rsquo;s open, you can keep it at room temperature, but at less than 6 weeks at a time.&rdquo; <span class="g2-src">T@92607 11/19</span></p></div>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">4.</span> Write it first <span class="g2-src">(Lam Glaucoma slide 62, 85)</span></h5>
+<div class="gpoll"><b>Cover the page, then write</b>
+<details class="g2-self"><summary>Write the drug, brand, frequency, IOP reduction and the main local side effect. <span class="g2-tap">Show answer</span></summary><p>Netarsudil 0.02% (Rhopressa), once daily in the evening, 20&ndash;30%; conjunctival hemorrhage reported in 51% <span class="g2-src">(Lam Glaucoma slide 62)</span>.</p></details>
+<details class="g2-self"><summary>Write why it is the last class and where it sits in the sequence. <span class="g2-tap">Show answer</span></summary><p>Sixth class: new and costly, conjunctival hemorrhage outweighs the efficacy, salvage therapy after everything else <span class="g2-src">(Lam Glaucoma slide 63; T@84060 11/19)</span>.</p></details>
+<details class="g2-self"><summary>Write the storage. <span class="g2-tap">Show answer</span></summary><p>Refrigerator before opening; room temperature for less than 6 weeks once opened <span class="g2-src">(Lam Glaucoma slide 85)</span>.</p></details>
+</div>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">5.</span> Application cases <span class="g2-src">(Lam Glaucoma slide 62, 63, 85)</span></h5>
+<div class="gpoll"><b>New patients</b>
+<details class="g2-self"><summary>A 75-year-old woman takes bimatoprost, timolol, brimonidine, dorzolamide and pilocarpine, and her IOP is still above goal despite adherence. Which class is next? <span class="g2-tap">Show answer</span></summary><p>Rho kinase inhibitor, netarsudil, the sixth and last class <span class="g2-src">(Lam Glaucoma slide 63)</span>.</p></details>
+<details class="g2-self"><summary>A 68-year-old man started on netarsudil notes a red patch on the white of his eye with no pain. What is the likely explanation? <span class="g2-tap">Show answer</span></summary><p>Conjunctival hemorrhage, a local side effect of the class, reported in 51% <span class="g2-src">(Lam Glaucoma slide 62)</span>.</p></details>
+<details class="g2-self"><summary>A patient keeps an opened bottle of Rhopressa at room temperature. For how long may it be kept, and how was it stored before opening? <span class="g2-tap">Show answer</span></summary><p>Less than 6 weeks at room temperature once opened; refrigerated before opening <span class="g2-src">(Lam Glaucoma slide 85)</span>.</p></details>
+<details class="g2-self"><summary>A patient has a prescription that combines netarsudil with latanoprost. Name the product and the dosing frequency. <span class="g2-tap">Show answer</span></summary><p>Rocklatan, once daily in the evening <span class="g2-src">(Lam Glaucoma slide 19, 62)</span>.</p></details>
+</div>
+</div>
+</section>
+
+<section class="gobj" id="gobj-lg-10">
+<h3>Dr. Lam, by learning objective · The sequence of classes and the combination products · slides 63&ndash;69, 76&ndash;81</h3>
+<div class="gbar"><span>Key point (Lam Glaucoma slide 63&ndash;69)</span><b>Add classes in the order prostaglandin analog, beta blocker, alpha-2 agonist, topical CAI, cholinergic, Rho kinase inhibitor; combinations are BID or TID, with Rocklatan once daily.</b><i>Lam Glaucoma slide 63, 64, 68, 69</i></div>
+<div class="gpt g2-block"><h5><span class="g2-num">1.</span> The sequence of classes <span class="g2-src">(Lam Glaucoma slide 63)</span></h5>
+<table class="g2-table g2-stack"><caption>Glaucoma: partial response, add in this order</caption><thead><tr><th scope="col">Step</th><th scope="col">Class</th><th scope="col">Example</th></tr></thead><tbody>
+<tr><th scope="row">1</th><td><span class="g2-lab">Class</span>Prostaglandin analog</td><td><span class="g2-lab">Example</span>Bimatoprost, latanoprost</td></tr>
+<tr><th scope="row">2</th><td><span class="g2-lab">Class</span>Beta-adrenergic antagonist</td><td><span class="g2-lab">Example</span>Timolol</td></tr>
+<tr><th scope="row">3</th><td><span class="g2-lab">Class</span>Alpha-2 adrenergic agonist</td><td><span class="g2-lab">Example</span>Brimonidine</td></tr>
+<tr><th scope="row">4</th><td><span class="g2-lab">Class</span>Topical carbonic anhydrase inhibitor</td><td><span class="g2-lab">Example</span>Dorzolamide, brinzolamide</td></tr>
+<tr><th scope="row">5</th><td><span class="g2-lab">Class</span>Cholinergic (parasympathomimetic)</td><td><span class="g2-lab">Example</span>Pilocarpine</td></tr>
+<tr><th scope="row">6</th><td><span class="g2-lab">Class</span>Rho kinase inhibitor</td><td><span class="g2-lab">Example</span>Netarsudil</td></tr>
+</tbody></table><div class="g2-said"><span class="g2-k">She said</span><p>&ldquo;There is one question at least recognizing the sequence of drugs.&rdquo; <span class="g2-src">T@84448 11/19</span></p></div>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">2.</span> How she works the question <span class="g2-src">(Lam Glaucoma slide 64)</span></h5>
+<p class="g2-p">&ldquo;So, how would you approach this question?&rdquo; <span class="g2-src">T@84716 11/19</span> Name the class of each drug in the regimen, find the last class, and add the next one in the sequence.</p><p class="g2-p">Keep or remove: &ldquo;if a patient is having a partial response, and they&rsquo;re tolerating the drug, we keep on adding.&rdquo; <span class="g2-src">T@85514 11/19</span> For a drug the patient cannot tolerate: &ldquo;We may remove it and just switch to the&rdquo; <span class="g2-src">T@85659 11/19</span></p><p class="g2-p">Rho kinase is the end: &ldquo;You&rsquo;re not gonna add any more agents on, on top of this.&rdquo; <span class="g2-src">T@85882 11/19</span></p>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">3.</span> Combination products <span class="g2-src">(Lam Glaucoma slide 69)</span></h5>
+<table class="g2-table g2-stack"><caption>Combination eye prescriptions</caption><thead><tr><th scope="col">Product</th><th scope="col">Classes</th><th scope="col">Dosing</th></tr></thead><tbody>
+<tr><th scope="row">Brimonidine tartrate/timolol maleate (Combigan)</th><td><span class="g2-lab">Classes</span>Alpha-2 agonist plus beta blocker</td><td><span class="g2-lab">Dosing</span>1 drop in the affected eye(s) BID</td></tr>
+<tr><th scope="row">Dorzolamide/timolol maleate (Cosopt, Cosopt PF)</th><td><span class="g2-lab">Classes</span>CAI plus beta blocker</td><td><span class="g2-lab">Dosing</span>1 drop in the affected eye(s) BID</td></tr>
+<tr><th scope="row">Brinzolamide/brimonidine tartrate (Simbrinza)</th><td><span class="g2-lab">Classes</span>CAI plus alpha-2 agonist</td><td><span class="g2-lab">Dosing</span>1 drop in the affected eye(s) TID</td></tr>
+</tbody></table><div class="g2-said"><span class="g2-k">She said</span><p>&ldquo;They&rsquo;re never going to be a once a day. It&rsquo;s either 2 times a day or 3 times a day.&rdquo; <span class="g2-src">T@86115 11/19</span></p></div><div class="g2-note"><span class="g2-k">Handout and lecture differ</span><p>Handout: Rocklatan (netarsudil plus latanoprost) is once daily in the evening (slides 19, 62). Lecture: her sentence about combinations being BID or TID follows the three-product table. Key: Combigan BID, Cosopt BID, Simbrinza TID; Rocklatan is the once daily combination of two classes (Rho kinase plus prostaglandin).</p></div>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">4.</span> Compliance: fewer drops <span class="g2-src">(Lam Glaucoma slide 68)</span></h5>
+<table class="g2-table g2-stack"><caption>Intolerance to side effects and to the preservative</caption><thead><tr><th scope="col">Problem</th><th scope="col">Option</th></tr></thead><tbody>
+<tr><th scope="row">Topical side effects</th><td><span class="g2-lab">Option</span>Reduce concentration (if possible); decrease frequency (apraclonidine only); switch to another agent (different class)</td></tr>
+<tr><th scope="row">Preservative</th><td><span class="g2-lab">Option</span>Preservative-free: latanoprost (Xelpros), tafluprost (Zioptan); timolol (certain ones); Trusopt (certain brand names only); Cosopt PF</td></tr>
+<tr><th scope="row">Multiple eye drops</th><td><span class="g2-lab">Option</span>Use combination products</td></tr>
+</tbody></table>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">5.</span> Her case: pick the next agent <span class="g2-src">(Lam Glaucoma slide 64, 65, 66, 67)</span></h5>
+<div class="gpoll"><b>Ms. Lopez, regimen on three classes</b>
+<details class="g2-self"><summary>Bimatoprost 0.01% 1 drop OU in the evening; timolol 0.5% 1 drop OU twice daily; brimonidine 0.1% 1 drop OU BID. IOP is still not at goal despite adherence. Which agent is the most appropriate addition? (A) latanoprost; (B) brinzolamide; (C) pilocarpine; (D) betaxolol. <span class="g2-tap">Show answer</span></summary><p>B. The drugs are a prostaglandin analog, a beta blocker and an alpha-2 agonist, so the fourth agent is a topical carbonic anhydrase inhibitor; latanoprost and betaxolol repeat classes, and pilocarpine is the fifth class <span class="g2-src">(Lam Glaucoma slide 63, 64)</span>.</p></details>
+</div>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">6.</span> Write it first <span class="g2-src">(Lam Glaucoma slide 63, 69)</span></h5>
+<div class="gpoll"><b>Cover the page, then write</b>
+<details class="g2-self"><summary>Write the sequence of the six classes. <span class="g2-tap">Show answer</span></summary><p>Prostaglandin analog, beta blocker, alpha-2 agonist, topical carbonic anhydrase inhibitor, cholinergic, Rho kinase inhibitor <span class="g2-src">(Lam Glaucoma slide 63)</span>.</p></details>
+<details class="g2-self"><summary>Write the three combination products with their classes and dosing. <span class="g2-tap">Show answer</span></summary><p>Combigan: alpha-2 agonist plus beta blocker, BID. Cosopt and Cosopt PF: CAI plus beta blocker, BID. Simbrinza: CAI plus alpha-2 agonist, TID <span class="g2-src">(Lam Glaucoma slide 69)</span>.</p></details>
+</div>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">7.</span> Application cases <span class="g2-src">(Lam Glaucoma slide 63, 69, 81)</span></h5>
+<div class="gpoll"><b>New patients</b>
+<details class="g2-self"><summary>A 70-year-old man uses bimatoprost in the evening, timolol 0.5% BID, brimonidine 0.1% BID and dorzolamide 2% TID. His IOP is above goal despite adherence. Which class is next, and how often is its usual drug given? <span class="g2-tap">Show answer</span></summary><p>Cholinergic, pilocarpine, QID <span class="g2-src">(Lam Glaucoma slide 57, 63)</span>.</p></details>
+<details class="g2-self"><summary>A 66-year-old woman uses tafluprost, timolol, brimonidine, dorzolamide and pilocarpine with a partial response. Which agent is next? <span class="g2-tap">Show answer</span></summary><p>Netarsudil, the Rho kinase inhibitor, once daily in the evening <span class="g2-src">(Lam Glaucoma slide 62, 63)</span>.</p></details>
+<details class="g2-self"><summary>A 73-year-old man uses bimatoprost 1 drop OU in the evening, timolol 0.5% 1 drop OU BID and dorzolamide 2% 1 drop OU TID and cannot manage the drops. What change cuts the number of products, with the complete regimen? <span class="g2-tap">Show answer</span></summary><p>Replace timolol and dorzolamide with dorzolamide/timolol (Cosopt), 1 drop OU BID; keep bimatoprost 1 drop OU in the evening <span class="g2-src">(Lam Glaucoma slide 69, 81; T@90121 11/19)</span>.</p></details>
+<details class="g2-self"><summary>Which product combines a carbonic anhydrase inhibitor with an alpha-2 agonist, and how often is it given? <span class="g2-tap">Show answer</span></summary><p>Simbrinza (brinzolamide/brimonidine), TID <span class="g2-src">(Lam Glaucoma slide 69)</span>.</p></details>
+</div>
+</div>
+</section>
+
+<section class="gobj" id="gobj-lg-11">
+<h3>Dr. Lam, by learning objective · Implement: counseling and administration · slides 70&ndash;85</h3>
+<div class="gbar"><span>Key point (Lam Glaucoma slide 70&ndash;85)</span><b>Counsel on avoiding contamination, closing the lids 1 to 2 minutes, 5 minutes between solutions, solution before suspension before gel, 10 minutes before gel, 15 minutes for contact lenses, and storage.</b><i>Lam Glaucoma slide 71, 72, 73, 74, 75, 83, 85</i></div>
+<div class="gpt g2-block"><h5><span class="g2-num">1.</span> Prevent contamination <span class="g2-src">(Lam Glaucoma slide 71)</span></h5>
+<p class="g2-p">Do not touch the dropper bottle tip with your eyes, hands, or any surface.</p><div class="g2-said"><span class="g2-k">She said</span><p>&ldquo;Do not touch the dropper, uh, bottle tip to the eye.&rdquo; <span class="g2-src">T@86335 11/19</span></p></div><div class="g2-said"><span class="g2-k">She said</span><p>&ldquo;Clean your hands first.&rdquo; <span class="g2-src">T@86951 11/19</span></p></div>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">2.</span> Eyelid closure (ELC) <span class="g2-src">(Lam Glaucoma slide 72, 73)</span></h5>
+<p class="g2-p">Purpose: decrease nasolacrimal drainage, which decreases systemic absorption and the severity of systemic side effects.</p><table class="g2-table g2-stack"><caption>Steps</caption><thead><tr><th scope="col">Step</th><th scope="col">Instruction</th></tr></thead><tbody>
+<tr><th scope="row">1</th><td><span class="g2-lab">Instruction</span>Wash hands and remove contacts, if applicable</td></tr>
+<tr><th scope="row">2</th><td><span class="g2-lab">Instruction</span>Tilt the head back; grasp the lower outer eyelid below the lashes; pull out to create a pouch</td></tr>
+<tr><th scope="row">3</th><td><span class="g2-lab">Instruction</span>Position the dropper over the eye while looking at the tip of the bottle, then look up; place a single drop in the eye</td></tr>
+<tr><th scope="row">4</th><td><span class="g2-lab">Instruction</span>Release the eyelid slowly as soon as the drop is applied</td></tr>
+<tr><th scope="row">5</th><td><span class="g2-lab">Instruction</span>Gently close the eyes and lightly press the inside corners of the eyes; lids closed, do not squeeze or rub</td></tr>
+<tr><th scope="row">6</th><td><span class="g2-lab">Instruction</span>Blot excess solution around the eye; recap the bottle and store it as instructed</td></tr>
+</tbody></table><div class="g2-tiles"><div class="g2-tile"><span class="g2-tile-label">Eyelid closure after the drop: how long</span><span class="g2-tile-num">1 to 2 minutes</span><span class="g2-src">(Lam Glaucoma slide 72; T@87190 11/19)</span></div></div><div class="g2-said"><span class="g2-k">She said</span><p>&ldquo;Press down on your corner of your eyelid for 1 or 2 minutes.&rdquo; <span class="g2-src">T@87190 11/19</span></p></div><div class="g2-said"><span class="g2-k">She said</span><p>&ldquo;Patient does not have to press down so hard that they&rsquo;re causing pain.&rdquo; <span class="g2-src">T@87251 11/19</span></p></div><div class="g2-note"><span class="g2-k">Handout and lecture differ</span><p>Handout: the lids are closed (do not squeeze or rub) for 2 minutes after instillation. Lecture: press down on the corner of the eyelid for 1 or 2 minutes, gently. Key: about 1 to 2 minutes; do not squeeze or rub.</p></div>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">3.</span> Waiting between products and the order of application <span class="g2-src">(Lam Glaucoma slide 74, 75)</span></h5>
+<table class="g2-table g2-stack"><caption>Waits</caption><thead><tr><th scope="col">Products</th><th scope="col">Wait</th><th scope="col">Order</th></tr></thead><tbody>
+<tr><th scope="row">Two or more solutions</th><td><span class="g2-lab">Wait</span>5 minutes before the next drop</td><td><span class="g2-lab">Order</span>Either one first</td></tr>
+<tr><th scope="row">Solution and suspension</th><td><span class="g2-lab">Wait</span>5 minutes</td><td><span class="g2-lab">Order</span>Solution first, then suspension (shake the suspension well before use)</td></tr>
+<tr><th scope="row">Solution and ointment or gel-forming solution</th><td><span class="g2-lab">Wait</span>Use the drops at least 10 minutes before the ointment</td><td><span class="g2-lab">Order</span>Drops first, then ointment or gel</td></tr>
+</tbody></table><table class="g2-table g2-kv"><caption>Order of application</caption><tbody>
+<tr><th scope="row">1</th><td>Solutions</td></tr>
+<tr><th scope="row">2</th><td>Suspensions</td></tr>
+<tr><th scope="row">3</th><td>Ointment or gel-forming solution</td></tr>
+</tbody></table><p class="g2-p">Why wait: the first drop is not flushed away or diluted by the second. &ldquo;The reason why we have to wait between products is you&rsquo;re preventing wash out of each other.&rdquo; <span class="g2-src">T@87847 11/19</span> The suspension goes last of the drops because of its prolonged retention time in the tear film.</p><div class="g2-said"><span class="g2-k">She said</span><p>&ldquo;gel forming solution falls under the ointment section&rdquo; <span class="g2-src">T@88661 11/19</span></p></div><p class="g2-p">Her example: latanoprost solution with timolol gel-forming solution; latanoprost goes first, then &ldquo;10 minutes&rdquo; <span class="g2-src">T@88320 11/19</span></p>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">4.</span> Contact lenses <span class="g2-src">(Lam Glaucoma slide 83)</span></h5>
+<table class="g2-table g2-stack"><caption>Counsel</caption><thead><tr><th scope="col">Point</th><th scope="col">Detail</th></tr></thead><tbody>
+<tr><th scope="row">Concern</th><td><span class="g2-lab">Detail</span>Lenses trap drugs and preservatives against the surface of the eye</td></tr>
+<tr><th scope="row">Counsel</th><td><span class="g2-lab">Detail</span>Remove lenses before using eye drops; wait 15 minutes after administration before reinserting</td></tr>
+<tr><th scope="row">Especially important</th><td><span class="g2-lab">Detail</span>Products that contain preservatives such as BAK, which is damaging to the eyes when used with contacts</td></tr>
+</tbody></table><div class="g2-said"><span class="g2-k">She said</span><p>&ldquo;Always remove the contact lenses before putting in the eye drop.&rdquo; <span class="g2-src">T@91057 11/19</span></p></div><div class="g2-said"><span class="g2-k">She said</span><p>&ldquo;wait 15 minutes before they put in the contact lens&rdquo; <span class="g2-src">T@91467 11/19</span></p></div><div class="g2-said"><span class="g2-k">She said</span><p>&ldquo;it doesn&rsquo;t exclude them from using any product.&rdquo; <span class="g2-src">T@91731 11/19</span></p></div>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">5.</span> Storage <span class="g2-src">(Lam Glaucoma slide 85)</span></h5>
+<table class="g2-table g2-stack"><caption>Storage by drug</caption><thead><tr><th scope="col">Drugs</th><th scope="col">Before opening</th><th scope="col">After opening</th></tr></thead><tbody>
+<tr><th scope="row">Latanoprost, latanoprostene bunod, tafluprost</th><td><span class="g2-lab">Before opening</span>Refrigerator</td><td><span class="g2-lab">After opening</span>Room temperature</td></tr>
+<tr><th scope="row">Netarsudil</th><td><span class="g2-lab">Before opening</span>Refrigerator</td><td><span class="g2-lab">After opening</span>Room temperature, less than 6 weeks</td></tr>
+</tbody></table><div class="g2-said"><span class="g2-k">She said</span><p>&ldquo;And it all has to do with the, how long the preservative is good for, actually.&rdquo; <span class="g2-src">T@92742 11/19</span></p></div>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">6.</span> Her cases <span class="g2-src">(Lam Glaucoma slide 76, 77, 80, 81, 82, 84)</span></h5>
+<div class="gpoll"><b>Ms. Lopez</b>
+<details class="g2-self"><summary>She struggles to wait between drops because she is on so many: bimatoprost 0.01% 1 drop OU in the evening; timolol 0.5% 1 drop OU twice daily; brimonidine 0.1% 1 drop OU BID; dorzolamide 2% 1 drop TID. What is the medication-related problem, and how would you modify the regimen to help adherence? <span class="g2-tap">Show answer</span></summary><p>Adherence: too many drops to wait between. Use combination products (for example dorzolamide with timolol, or dorzolamide with brimonidine as she said it), or switch timolol to the once daily gel; she said there is no one set answer <span class="g2-src">(Lam Glaucoma slide 76, 80, 81; T@89667 11/19)</span>.</p></details>
+<details class="g2-self"><summary>Give her counseling on administering the regimen: sequence of the drops, avoiding contamination and eyelid closure. <span class="g2-tap">Show answer</span></summary><p>Wash hands; do not touch the tip; make a pouch in the lower lid; place a single drop; close the lids 1 to 2 minutes gently; wait 5 minutes between solutions; solution before suspension; drops at least 10 minutes before gel <span class="g2-src">(Lam Glaucoma slide 71, 72, 73, 74, 75, 82)</span>.</p></details>
+<details class="g2-self"><summary>She wears contact lenses and uses bimatoprost 0.01% in the evening, dorzolamide 2% TID and brimonidine tartrate 0.2%/timolol maleate 0.5% BID. What additional counseling? <span class="g2-tap">Show answer</span></summary><p>Remove the lenses before drops; wait 15 minutes after the last morning drop before reinserting; at night the lenses are already out <span class="g2-src">(Lam Glaucoma slide 83, 84; T@91467 11/19)</span>.</p></details>
+</div>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">7.</span> Write it first <span class="g2-src">(Lam Glaucoma slide 71, 72, 74, 75, 83, 85)</span></h5>
+<div class="gpoll"><b>Cover the page, then write</b>
+<details class="g2-self"><summary>Write the purpose of eyelid closure and how long to close the lids. <span class="g2-tap">Show answer</span></summary><p>It decreases nasolacrimal drainage, systemic absorption and the severity of systemic side effects; close the lids gently for 1 to 2 minutes <span class="g2-src">(Lam Glaucoma slide 72, 73)</span>.</p></details>
+<details class="g2-self"><summary>Write the waits and the order of application. <span class="g2-tap">Show answer</span></summary><p>Solution to solution 5 minutes; solution then suspension 5 minutes; drops at least 10 minutes before ointment or gel-forming solution. Order: solution, suspension, ointment or gel-forming solution <span class="g2-src">(Lam Glaucoma slide 74, 75)</span>.</p></details>
+<details class="g2-self"><summary>Write the contact lens counseling and the storage. <span class="g2-tap">Show answer</span></summary><p>Remove lenses, wait 15 minutes, especially with BAK. Latanoprost, latanoprostene bunod, tafluprost: refrigerate before opening, room temperature after. Netarsudil: room temperature less than 6 weeks after opening <span class="g2-src">(Lam Glaucoma slide 83, 85)</span>.</p></details>
+</div>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">8.</span> Application cases <span class="g2-src">(Lam Glaucoma slide 74, 75, 83, 85)</span></h5>
+<div class="gpoll"><b>New patients</b>
+<details class="g2-self"><summary>At bedtime a 72-year-old man uses latanoprost solution, brinzolamide 1% suspension and timolol gel-forming solution (Timoptic-XE). Give the order and the waits. <span class="g2-tap">Show answer</span></summary><p>Latanoprost first; wait 5 minutes; shake and give the brinzolamide suspension; the gel-forming solution last, at least 10 minutes after the drops <span class="g2-src">(Lam Glaucoma slide 74, 75)</span>.</p></details>
+<details class="g2-self"><summary>A 60-year-old woman wears contact lenses, uses brimonidine 0.1% BID and timolol 0.5% BID in the morning, and takes out her lenses each night. Give the sequence of drops and the lens counseling. <span class="g2-tap">Show answer</span></summary><p>Remove the lenses; give one solution, wait 5 minutes, give the other; wait 15 minutes after the last drop before inserting the lenses <span class="g2-src">(Lam Glaucoma slide 74, 83)</span>.</p></details>
+<details class="g2-self"><summary>A new bottle of latanoprost arrives at the pharmacy. How is it stored before opening and after? <span class="g2-tap">Show answer</span></summary><p>Refrigerator before opening; room temperature once opened <span class="g2-src">(Lam Glaucoma slide 85)</span>.</p></details>
+<details class="g2-self"><summary>A 67-year-old woman asks why she should keep her eyes closed after each drop and how long. <span class="g2-tap">Show answer</span></summary><p>It decreases drainage down the nasolacrimal duct, so less drug is absorbed into the blood and systemic side effects are less severe; close the lids gently for 1 to 2 minutes <span class="g2-src">(Lam Glaucoma slide 72, 73)</span>.</p></details>
+</div>
+</div>
+</section>
+
+<section class="gobj" id="gobj-lg-12">
+<h3>Dr. Lam, by learning objective · Follow up · slides 86&ndash;87</h3>
+<div class="gbar"><span>Key point (Lam Glaucoma slide 86&ndash;87)</span><b>Monitor IOP for efficacy and side effects for safety: follow up 2&ndash;4 weeks after starting and every 3&ndash;4 months once at target, with the eye doctor measuring IOP.</b><i>Lam Glaucoma slide 86, 87</i></div>
+<div class="gpt g2-block"><h5><span class="g2-num">1.</span> What to monitor, when, and by whom <span class="g2-src">(Lam Glaucoma slide 86)</span></h5>
+<table class="g2-table g2-kv"><caption>Follow up</caption><tbody>
+<tr><th scope="row">Efficacy</th><td>IOP reduction</td></tr>
+<tr><th scope="row">Safety</th><td>The side effects listed for each class</td></tr>
+<tr><th scope="row">Timeframe</th><td>2&ndash;4 weeks after therapy initiation, and every 3&ndash;4 months once the target IOP is achieved</td></tr>
+</tbody></table><p class="g2-p">Who: &ldquo;they follow with their eye doctor.&rdquo; <span class="g2-src">T@93017 11/19</span> &ldquo;As pharmacists, our biggest role is going to be able to explain the patient the side effect that they may experience.&rdquo; <span class="g2-src">T@93275 11/19</span> &ldquo;they really should be seeing their eye&rdquo; <span class="g2-src">T@93481 11/19</span> doctor if the side effect is not a typical short one.</p><div class="g2-tiles"><div class="g2-tile"><span class="g2-tile-label">First follow up after starting therapy</span><span class="g2-tile-num">2&ndash;4 weeks</span><span class="g2-src">(Lam Glaucoma slide 86)</span></div><div class="g2-tile"><span class="g2-tile-label">Follow up once target IOP is achieved: every</span><span class="g2-tile-num">3&ndash;4 months</span><span class="g2-src">(Lam Glaucoma slide 86)</span></div></div>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">2.</span> Her case: design the monitoring <span class="g2-src">(Lam Glaucoma slide 87)</span></h5>
+<div class="gpoll"><b>Ms. Lopez, newly on brimonidine/timolol</b>
+<details class="g2-self"><summary>Regimen: bimatoprost 0.01% 1 drop OU in the evening; dorzolamide 2% 1 drop OU TID; brimonidine tartrate 0.2%/timolol maleate 0.5% 1 drop OU BID. What do you monitor for efficacy and when? What for safety, and whom does she contact? <span class="g2-tap">Show answer</span></summary><p>Efficacy: IOP, by the eye doctor at 2&ndash;4 weeks, then every 3&ndash;4 months once at target. Safety: the side effects of each drug (bimatoprost: blurred vision, stinging, iris or eyelash pigmentation, eyelash growth, foreign body sensation; dorzolamide: stinging, discomfort, blurred vision, tearing; brimonidine/timolol: lid edema, itching, fatigue, somnolence, dry mouth, BP or HR changes, bradycardia, bronchospasm). She contacts her eye doctor if an effect is not typical and brief <span class="g2-src">(Lam Glaucoma slide 21, 33, 43, 52, 86, 87)</span>.</p></details>
+</div>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">3.</span> Write it first <span class="g2-src">(Lam Glaucoma slide 86)</span></h5>
+<div class="gpoll"><b>Cover the page, then write</b>
+<details class="g2-self"><summary>Write what to monitor for efficacy and for safety, and the follow-up timeframes. <span class="g2-tap">Show answer</span></summary><p>Efficacy: IOP reduction. Safety: side effects. Follow up 2&ndash;4 weeks after initiation, then every 3&ndash;4 months once the target IOP is achieved <span class="g2-src">(Lam Glaucoma slide 86)</span>.</p></details>
+</div>
+</div>
+<div class="gpt g2-block"><h5><span class="g2-num">4.</span> Application cases <span class="g2-src">(Lam Glaucoma slide 52, 86)</span></h5>
+<div class="gpoll"><b>New patients</b>
+<details class="g2-self"><summary>A 66-year-old man on dorzolamide reports stinging that has lasted several minutes after each drop for a week. Who does she send him to? <span class="g2-tap">Show answer</span></summary><p>His eye doctor: stinging should resolve within 1&ndash;2 minutes, and longer is not typical, so a switch of class may be needed <span class="g2-src">(Lam Glaucoma slide 52; T@93481 11/19)</span>.</p></details>
+<details class="g2-self"><summary>A 70-year-old woman started a new glaucoma drug 3 weeks ago. Her IOP target was reached at the 4-week visit. When is the next follow up? <span class="g2-tap">Show answer</span></summary><p>Every 3&ndash;4 months after the target IOP is achieved <span class="g2-src">(Lam Glaucoma slide 86)</span>.</p></details>
+<details class="g2-self"><summary>Who measures IOP for efficacy, and why not the pharmacist? <span class="g2-tap">Show answer</span></summary><p>The eye doctor; as pharmacists, we do not measure it <span class="g2-src">(Lam Glaucoma slide 86; T@93017 11/19)</span>.</p></details>
+</div>
+</div>
+</section>
+
+<section class="gobj" id="gobj-lg-13">
+<h3>Dr. Lam, by learning objective · Primary closed-angle glaucoma (not tested) · slides 88&ndash;92</h3>
+<div class="gbar"><span>Key point (Lam Glaucoma slide 88&ndash;92)</span><b>She said she will not test primary closed-angle glaucoma; the one item she kept for practice is which drugs can increase the risk.</b><i>Lam Glaucoma slide 88, 89, 90, 91, 92</i></div>
+<div class="gpt g2-block"><h5><span class="g2-num">1.</span> Primary closed-angle glaucoma (PACG) <span class="g2-src">(Lam Glaucoma slide 88, 89, 90, 91, 92)</span></h5>
+<div class="g2-said"><span class="g2-k">She said</span><p>&ldquo;Will I be testing you on it? No.&rdquo; <span class="g2-src">T@94631 11/19</span></p></div><div class="g2-said"><span class="g2-k">She said</span><p>&ldquo;the only thing to remember is what drugs can increase that risk&rdquo; <span class="g2-src">T@94508 11/19</span></p></div><table class="g2-table g2-stack"><caption>PACG</caption><thead><tr><th scope="col">Item</th><th scope="col">On the slides</th></tr></thead><tbody>
+<tr><th scope="row">Risk factors</th><td><span class="g2-lab">On the slides</span>Female sex; older age; Asian ethnicity (Southeast Asian); first-degree relatives of patients with PACG</td></tr>
+<tr><th scope="row">Drugs that worsen it (pupillary dilation or ciliary body edema)</th><td><span class="g2-lab">On the slides</span>Topical and systemic anticholinergics (atropine, promethazine, ipratropium, tiotropium); antidepressants (SSRI, TCA); alpha-1 agonists (phenylephrine, ephedrine); beta-2 agonists (albuterol)</td></tr>
+<tr><th scope="row">Prodromal symptoms</th><td><span class="g2-lab">On the slides</span>Blurred or hazy vision; halos around lights; eye pain; headache</td></tr>
+<tr><th scope="row">Acute symptoms</th><td><span class="g2-lab">On the slides</span>Intense or severe eye pain; headache, nausea, vomiting; blurred or cloudy vision; colored halos around lights; sudden vision loss</td></tr>
+<tr><th scope="row">Plan</th><td><span class="g2-lab">On the slides</span>Refer to an ophthalmologist or optometrist</td></tr>
+</tbody></table><p class="g2-p">Her notes: it is an emergent issue, &ldquo;we sent them to the emergency room immediately&rdquo; <span class="g2-src">T@94893 11/19</span> &ldquo;Oftentimes you&rsquo;re going to do laser surgery&rdquo; <span class="g2-src">T@94973 11/19</span> Pilocarpine may be used as initial management of acute angle-closure glaucoma (handout).</p><div class="gpoll"><b>Write it first</b>
+<details class="g2-self"><summary>Write the drug groups that can increase the risk of angle closure. <span class="g2-tap">Show answer</span></summary><p>Anticholinergics, antidepressants (SSRI, TCA), alpha-1 agonists, beta-2 agonists <span class="g2-src">(Lam Glaucoma slide 90)</span>.</p></details>
+</div>
+</div>
+</section>
 `;
 
 /* ==========================================================================
