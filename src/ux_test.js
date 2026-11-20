@@ -289,7 +289,7 @@ const NAMES = ['Zylonol', 'Quarbate', 'Fenmorine'];
       const frac = await page.evaluate(async () => {
         const raf = () => new Promise(r => requestAnimationFrame(() => requestAnimationFrame(r)));
         show('diagrams'); await raf();
-        const figs = [...document.querySelectorAll('#v-diagrams figure')].filter(f => f.querySelector('[data-go="big"]'));
+        const figs = [...document.querySelectorAll('#v-diagrams figure')].filter(f => f.querySelector('[data-go="big"]') && !f.closest('details:not([open])'));   // a figure the reader can see (a course may fold some away)
         const fig = figs[figs.length - 1];
         if(!fig) return null;
         const oldH = fig.style.height;

@@ -34,6 +34,16 @@
    significant or scary); (3) the objectives slides 3, 11, 47, 61; (4) time and
    emphasis in the 11/13 and 11/17 transcripts. One star per concept. likely_check.js
    accepts a star in an Exam 1 pool, an Exam 2 pool or the Exam 3 eye pool.
+   Exam 3, Dr. Sikazwe (2026-11-19): the very last block holds 48 stars for his otic/oral/ophthalmic questions
+   (deck Sikazwe_OOO_mc.pdf, Lectures 11-12; files q28-q31, ids OT-, OR-, OP-, OC-, OA-), most likely first. Ranking:
+   (1) his own questions: Polleve-1 and -2 (slides 25, 39), the question slides 9 and 43 and the Self Assessment
+   (slides 62-68); (2) slide 59 "you must know" (steroid numbering, stereochemistry, anti-inflammatory SAR); (3) what he
+   stressed on 11/18 ("the question could be simply what chemical class does this drug belong to", "Please remember
+   these things", "Make sure you know that term", "If you don't remember anything", "takeaway", "key takeaways", "just
+   know this"), with the ophthalmic part first because "where there's more information, know that there will be more
+   questions" (T@1100); (4) the objectives slide 2 (classification, CBDA, ADMET). Slides 10-13 are FYI ("It won't be
+   on the exam", T@10343) and carry no star; slides 33-68 have no transcript yet and are starred only on printed
+   evidence (question slides, "you must know", Self Assessment).
    ========================================================================== */
 const LIKELY = {
   sources: {
@@ -78,6 +88,13 @@ const LIKELY = {
                       detail:'Her words in the 11/13 or 11/17 lecture (DEENT_Lecture_11.13_transcript.txt, DEENT_Lecture_11.17_transcript.txt; character offsets T@n)'},
     'smith-eye-room':{by:'smith',   label:'Dr. Smith put it to the class',
                       detail:'11/17 (T@60798): she asked whether the class had seen the question before and said she was picky on it on purpose'},
+    // Dr. Sikazwe, otic/oral/ophthalmic medicinal chemistry (Lectures 11-12, Exam 3; added 2026-11-19)
+    'sik-q-ooo':     {by:'sikazwe', label:"Dr. Sikazwe's own questions",
+                      detail:'Sikazwe_OOO_mc.pdf: Polleve-1 (slide 25) and Polleve-2 (slide 39), his question slides 9 and 43, and his Self Assessment questions (slides 62-68)'},
+    'sik-know-ooo':  {by:'sikazwe', label:'Dr. Sikazwe: "you must know"',
+                      detail:'Sikazwe_OOO_mc.pdf slide 59: "For Glucocortocoids, you must know: 1) Steroid C-atom numbering 2) Stereochemistry 3) Anti-inflammatory SAR"'},
+    'sik-ex3':       {by:'sikazwe', label:'Dr. Sikazwe stressed it in the OOO lecture',
+                      detail:'His words on 11/18 (DEENT_Lecture_11.18_transcript.txt, slides 1-32; character offsets T@n); slides 33-68 were taught 11/19, transcript not yet in'},
   },
   items: [
     /* ---- Dr. Smith, Pathophysiology deck (10/29) ---- */
@@ -552,5 +569,55 @@ const LIKELY = {
     {id:"ED-018", source:'smith-obj-eye', ref:"T@64164 11/17 (slides 61, 71)", reason:"Slide 61 objective: the mechanism of each dry eye drug discussed in class."},
     {id:"ED-024", source:'smith-obj-eye', ref:"T@67553, T@67641 11/17 (slides 61, 73)", reason:"Slide 61 objective; she called the mechanism \"interesting\" and spent a passage on the nerve route."},
     {id:"EO-009", source:'smith-obj-eye', ref:"T@28186 11/17 (slides 11, 33)", reason:"Slide 11 objective: list the side effects of the glaucoma drugs."},
+
+    // Exam 3, Dr. Sikazwe's otic/oral/ophthalmic lectures (added 2026-11-19): most likely first. Sources: sik-q-ooo, sik-know-ooo, sik-ex3.
+    {id:"OR-010", source:'sik-q-ooo', ref:"Polleve-1 slide 25; T@36552, T@36983 11/18 (slide 19)", reason:"His own poll, asked in class in these words; after the responses he said \"just know this\"."},
+    {id:"OC-003", source:'sik-q-ooo', ref:"Polleve-2 slide 39 (slides 35, 39)", reason:"His own poll on the enzyme's chemistry, placed right after the mechanism slides of this class."},
+    {id:"OC-025", source:'sik-q-ooo', ref:"Question-2 slide 43 (slides 42-43)", reason:"His own question slide asks this in nearly these words."},
+    {id:"OA-050", source:'sik-q-ooo', ref:"Self Assessment Question 3, slide 65", reason:"His Self Assessment question 3, nearly word for word."},
+    {id:"OA-051", source:'sik-q-ooo', ref:"Self Assessment Question 4, slide 66", reason:"His Self Assessment question 4: name the group drawn on the slide, then say where it is present."},
+    {id:"OA-052", source:'sik-q-ooo', ref:"Self Assessment Question 5, slide 67", reason:"His Self Assessment question 5: identify the indicated group and the drugs it is present in."},
+    {id:"OA-053", source:'sik-q-ooo', ref:"Self Assessment Question 5, slide 68", reason:"His Self Assessment question on slide 68, word for word."},
+    {id:"OA-030", source:'sik-q-ooo', ref:"Self Assessment Question 2, slide 64", reason:"His Self Assessment question 2 asks for the three commonest SAR groups of these drugs and gives the first."},
+    {id:"OA-038", source:'sik-q-ooo', ref:"Self Assessment Question 1, slide 63; slide 59", reason:"Self Assessment question 1 asks the class to number the carbons; slide 59 lists the numbering first under \"you must know\"."},
+    {id:"OP-001", source:'sik-ex3', ref:"T@38474, T@38887 11/18 (slide 27)", reason:"\"Remember these, practice these ... the question could be simply what chemical class does this drug belong to.\""},
+    {id:"OP-013", source:'sik-ex3', ref:"T@38887, T@49411 11/18 (slide 31)", reason:"He said a question could simply ask a drug's chemical class, and summed up the series by class and by mechanism."},
+    {id:"OA-043", source:'sik-know-ooo', ref:"slide 59; slide 60", reason:"Slide 59 \"you must know\", item 3: the anti-inflammatory SAR printed on slide 60."},
+    {id:"OA-042", source:'sik-know-ooo', ref:"slide 59; slide 60", reason:"Slide 59 \"you must know\", item 2: stereochemistry."},
+    {id:"OA-039", source:'sik-know-ooo', ref:"slide 59; Self Assessment slide 63", reason:"Slide 59 \"you must know\", item 1: the steroid C-atom numbering, which Self Assessment question 1 asks for."},
+    {id:"OA-049", source:'sik-know-ooo', ref:"slide 59; slide 60", reason:"Slide 59 \"you must know\": applying the slide 60 SAR to compounds not shown in class."},
+    {id:"OA-045", source:'sik-know-ooo', ref:"slide 59; slide 60", reason:"Slide 59 \"you must know\" the SAR; this compares two of the six drugs printed with it."},
+    {id:"OA-044", source:'sik-know-ooo', ref:"slide 59; slide 60", reason:"Slide 59 \"you must know\" the SAR; a second pair from the drugs of slide 60."},
+    {id:"OA-040", source:'sik-know-ooo', ref:"slide 59; Self Assessment slide 63", reason:"Slide 59 \"you must know\" the C-atom numbering; Self Assessment question 1 asks the class to number the template."},
+    {id:"OT-009", source:'sik-q-ooo', ref:"Question slide 9; T@9602 11/18 (slide 6)", reason:"His question slide 9 asks to group these agents by preparation; he gave it as \"a little study aid\"."},
+    {id:"OT-010", source:'sik-q-ooo', ref:"Question slide 9; T@9602 11/18 (slide 6)", reason:"Same slide 9 question, from another of its three groups."},
+    {id:"OT-011", source:'sik-q-ooo', ref:"Question slide 9; T@9602 11/18 (slide 6)", reason:"Same slide 9 question: sort the preparations into his three groups."},
+    {id:"OP-004", source:'sik-ex3', ref:"T@37591, T@37877 11/18 (slide 27)", reason:"\"Please remember these things ... very common in drug molecules ... you need to know what they look like.\""},
+    {id:"OP-005", source:'sik-ex3', ref:"T@37591 11/18 (slide 27)", reason:"He made the class name this group aloud and corrected a wrong answer from the room."},
+    {id:"OP-006", source:'sik-ex3', ref:"T@37952 11/18 (slide 27)", reason:"One of the groups he quizzed the room on (\"sure you can tell me this one\")."},
+    {id:"OP-036", source:'sik-ex3', ref:"T@49771, T@50385 11/18 (slide 32)", reason:"\"That's the SAR of these agents ... Got that, right?\"; he stated the linker rule twice."},
+    {id:"OP-035", source:'sik-ex3', ref:"T@50385, T@50420 11/18 (slides 31-32)", reason:"Same rule, other linker; he repeated both cases before closing the lecture."},
+    {id:"OP-038", source:'sik-ex3', ref:"T@49592, T@49771 11/18 (slide 32)", reason:"He called it \"the minimum structure\" with activity, then repeated what must be present."},
+    {id:"OP-020", source:'sik-ex3', ref:"T@44312, T@45075 11/18 (slides 29-30)", reason:"\"That's the take-home point here\"; he said the two routes and their drugs three times."},
+    {id:"OP-019", source:'sik-ex3', ref:"T@44312, T@45075 11/18 (slides 29-30)", reason:"Same take-home point, the other route: \"That's the takeaway for this.\""},
+    {id:"OP-024", source:'sik-ex3', ref:"T@43940, T@44312 11/18 (slide 29)", reason:"\"Take away a point\": he asked the room which route lets more drug in."},
+    {id:"OP-015", source:'sik-ex3', ref:"T@40944, T@41079 11/18 (slide 28)", reason:"\"This is a global thing that you need to know about this disease.\""},
+    {id:"OR-020", source:'sik-ex3', ref:"T@26843, T@26908 11/18 (slide 20)", reason:"\"Please look it up ... Make sure you know that term.\""},
+    {id:"OT-002", source:'sik-ex3', ref:"T@7335, T@7374 11/18 (slide 7)", reason:"\"If you don't remember anything\", he said, remember this property of the molecule."},
+    {id:"OP-026", source:'sik-ex3', ref:"T@46740, T@48263 11/18 (slide 31)", reason:"He compared the prototype with this drug at length and called the latter \"an overperforming drug\", the best of the series."},
+    {id:"OP-027", source:'sik-ex3', ref:"T@46740 11/18 (slide 31)", reason:"He listed the prototype's features, \"some are good, some are bad\", and dwelt on the bad ones."},
+    {id:"OP-023", source:'sik-ex3', ref:"T@44234, T@44312 11/18 (slide 29)", reason:"He explained why some drugs are given in a form that is bioactivated in the eye; ADMET is an objective (slide 2)."},
+    {id:"OT-001", source:'sik-ex3', ref:"T@5923, T@9602 11/18 (slide 7)", reason:"Study aid: \"look at the docusate, those 3 things I mentioned\"; he drew the molecule sitting at the interface."},
+    {id:"OT-003", source:'sik-ex3', ref:"T@9602 11/18 (slide 7)", reason:"One of the three things about docusate he told the class to look at (chemical classification, objective slide 2)."},
+    {id:"OT-005", source:'sik-ex3', ref:"T@8312, T@9602 11/18 (slide 8)", reason:"Study aid: \"look at carbamide peroxide ... what does it release and ultimately, how does it work.\""},
+    {id:"OR-006", source:'sik-ex3', ref:"T@18882, T@19951 11/18 (slide 17)", reason:"He asked the room this advantage, answered it, and labelled it \"Key takeaways\"."},
+    {id:"OR-004", source:'sik-ex3', ref:"T@18882, T@19563 11/18 (slide 17)", reason:"\"What is enamel made out of? What chemical com[position]\": he walked through the product formed, as key takeaways."},
+    {id:"OR-021", source:'sik-ex3', ref:"T@28277 11/18 (slide 21)", reason:"\"The key thing is\" how this molecule behaves at physiological pH; he simplified its class name for the class."},
+    {id:"OR-032", source:'sik-ex3', ref:"T@35500, T@36253 11/18 (slide 24)", reason:"\"Am I going to ask you all this? No, I'll probably focus on this example.\""},
+    {id:"OR-011", source:'sik-ex3', ref:"T@22699, T@22895 11/18 (slide 19)", reason:"He gave this ingredient's roles \"more importantly\", then asked it as Polleve-1."},
+    {id:"OR-019", source:'sik-ex3', ref:"T@26455, T@26843 11/18 (slide 20)", reason:"The metabolism behind the term he said to make sure you know (ADMET, objective slide 2)."},
+    {id:"OR-027", source:'sik-ex3', ref:"T@7374, T@31214 11/18 (slides 7, 21)", reason:"He used the same reasoning about systemic exposure for the ear agent and for the mouth rinse."},
+    {id:"OR-023", source:'sik-ex3', ref:"T@29365, T@29627 11/18 (slide 21)", reason:"The first step of the chemical basis of action he drew for the rinses (CBDA, objective slide 2)."},
+    {id:"OP-002", source:'sik-ex3', ref:"T@38474, T@38887 11/18 (slide 27)", reason:"He built the class name part by part, then said \"remember these, practice these\"."},
   ],
 };

@@ -289,6 +289,9 @@ const COURSE = {
           // Drawn step-throughs from the visuals evaluation, items 3-7 (fig-steroid, fig-il-axis,
           // fig-cni-nfat, fig-spf, fig-block-vs-screen; adds to DIA, DIA_NAMES and DIAGRAMS)
           'figs2.js',
+          // Exam 3 diagrams (Louis, 2026-11-19): Dr. Smith's eye figures, then Dr. Sikazwe's otic, oral and ophthalmic chemistry (each adds to DIA, DIA_NAMES, DIAGRAMS)
+          'diagrams_ey.js',
+          'diagrams_oo.js',
           // Mechanism step-throughs from Dr. Smith's PCol slides (Louis, 2026-11-09): adds to DIA
           'moa_figs.js',
           'q1_topics.js', 'q2_L02.js', 'q3_L03a.js', 'q4_L03b.js', 'q5_L04.js', 'q6_L03c.js',
@@ -349,6 +352,8 @@ const COURSE = {
           'dianarr_ui.js',
           // A "Purpose" sentence at the top of each drawn figure (Louis 2026-11-13); after the files that add to DIA
           'purpose_ui.js',
+          // one arrowhead definition per drawn figure, so an arrow keeps its head when another figure is in a closed folder
+          'svgid_ui.js',
           // Topics: the exam facts card (course-level, Louis 2026-11-08; the deck folders are in
           // guide.js with the deck grouping)
           'topics_ui.js',

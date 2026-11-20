@@ -29,7 +29,7 @@ const GROUP = {p5: 'gpl-p5', p6: 'gpl-p6', p7: 'gpl-p7', p8o: 'gpl-p8o', p8s: 'g
     // structure
     const st = await p.evaluate(() => {
       const secs = [...document.querySelectorAll('#v-guide section.gobj[id^="gobj-pl-"]')];
-      const groups = [...document.querySelectorAll('#v-guide details.gdetails')];
+      const groups = [...document.querySelectorAll('#v-guide details.gdetails[id^="gpl-"]')];
       return {ids: secs.map(s => s.id), groups: groups.map(g => ({id: g.id, open: g.open, title: g.querySelector(':scope > summary').textContent.trim(), n: g.querySelectorAll(':scope > section.gobj').length,
         blocks: g.querySelectorAll('.gpt').length, exam: ((g.closest('.rfold') || {}).dataset || {}).exam || '', foldOpen: g.closest('.rfold') ? g.closest('.rfold').open : null,
         deckHead: (() => { let e = g; while (e && !(e.matches && e.matches('h2.gdeck'))) e = e.previousElementSibling; return e ? e.id : ''; })()}))};
@@ -39,7 +39,7 @@ const GROUP = {p5: 'gpl-p5', p6: 'gpl-p6', p7: 'gpl-p7', p8o: 'gpl-p8o', p8s: 'g
     check(JSON.stringify(st.ids.slice().sort()) === JSON.stringify(want.slice().sort()), `${tag}: the ids are d1 1-7, d2 1-8, a 1-13, s 1-15, o 1-15, u 1-14, w 1-6, c 1-5`, st.ids.filter(i => !want.includes(i)).join(','));
     check(st.groups.length === 7 && Object.values(GROUP).every(g => st.groups.some(x => x.id === g)), `${tag}: seven groups, one per deck`, JSON.stringify(st.groups.map(g => g.id)));
     check(st.groups.every(g => !g.open), `${tag}: every group starts closed`);
-    check(st.groups.every(g => /^Dr\. Patel: .+ slide by slide, what the lecture adds \(\d+ slides\)$/.test(g.title) && +g.title.match(/\((\d+) slides\)/)[1] === g.blocks), `${tag}: each group is titled with its slide count`, st.groups.map(g => g.title + ' ' + g.blocks).join(' | '));
+    check(st.groups.every(g => /^Dr\. Patel: .+ slide by slide, what the lecture adds \(\d+ slides\)$/.test(g.title) && +g.title.match(/\((\d+) slides\)/)[1] >= g.blocks && g.blocks > 0), `${tag}: each group is titled with its deck's slide count (title, divider and Questions slides carry no block since 2026-11-19)`, st.groups.map(g => g.title + ' ' + g.blocks).join(' | '));
     check(st.groups.every(g => g.exam === '2' && /^gdeck-p/.test(g.deckHead)), `${tag}: each group is in the Exam 2 folder under its Patel deck`, JSON.stringify(st.groups.map(g => [g.exam, g.deckHead])));
     check(st.groups.every(g => g.deckHead === 'gdeck-' + g.id.slice(4)), `${tag}: and under its own deck heading`, JSON.stringify(st.groups.map(g => [g.id, g.deckHead])));
     check(st.groups.reduce((a, g) => a + g.n, 0) === 83, `${tag}: the groups hold the 83 sections`);
@@ -164,9 +164,9 @@ const GROUP = {p5: 'gpl-p5', p6: 'gpl-p6', p7: 'gpl-p7', p8o: 'gpl-p8o', p8s: 'g
 
     // the transcript-only mark keeps its words and gains a title
     const to = await p.evaluate(() => { const e = [...document.querySelectorAll('#v-guide .g2-tonly')]; return {n: e.length, titled: e.filter(x => /transcript only/i.test(x.title)).length, text: e.every(x => /^Transcript-only, verify against slide$/.test(x.textContent.trim())), dotted: e[0] ? getComputedStyle(e[0]).textDecorationStyle : ''}; });
-    check(to.n >= 50 && to.titled === to.n && to.text && to.dotted === 'dotted', `${tag}: transcript-only marks keep their words, carry a title and a dotted underline`, JSON.stringify(to));
-    const stl = await p.evaluate(() => { const e = document.querySelector('#v-guide .g2-status'), b = e.querySelector('b'); return {size: parseFloat(getComputedStyle(e).fontSize), bw: +getComputedStyle(b).fontWeight, tag: e.tagName}; });
-    check(stl.size <= 13 && stl.bw >= 600 && stl.tag === 'P', `${tag}: the status line is a small label with bold status letters`, JSON.stringify(stl));
+    check(to.n === 0 || (to.titled === to.n && to.dotted === 'dotted'), `${tag}: any transcript-only mark carries a title and a dotted underline`, JSON.stringify(to));
+    check(await p.evaluate(() => !/verify against slide/i.test(document.getElementById('v-guide').textContent)), `${tag}: no "verify against slide" note is left on the page (removed 2026-11-19)`);
+    check(await p.evaluate(() => !document.querySelector('#v-guide .g2-status')), `${tag}: no status-code line is left (Status A-E removed 2026-11-19)`);
 
     // layout
     const lay = await p.evaluate(() => {

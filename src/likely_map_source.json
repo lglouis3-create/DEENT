@@ -52,8 +52,8 @@
    ]
   },
   "chosen": {
-   "guide": 21,
-   "guideBlock": 57,
+   "guide": 22,
+   "guideBlock": 56,
    "reference": 10,
    "tell": 30,
    "dzCard": 11,
@@ -75,7 +75,7 @@
    "dzDrug": 94,
    "gloss": 879
   },
-  "override": "gobj-pc-3 kept (analysis dropped it because its transcript windows were absorbed by gobj-l1-4): lv 1, 11/03 T430"
+  "override": "gobj-pc-3 kept (analysis dropped it because its transcript windows were absorbed by gobj-l1-4): lv 1, 11/03 T430; gobj-pc-5: its block star became a section star when the section was rebuilt as one table (2026-11-19)"
  },
  "tabs": {
   "guide": {
@@ -933,6 +933,44 @@
      "inflam",
      "tear",
      "produc"
+    ]
+   },
+   "gobj-pc-5": {
+    "lv": 2,
+    "comb": 0.817,
+    "qStars": 2,
+    "ev": [
+     "L2H-012:smith-hints",
+     "L2-106:smith-room"
+    ],
+    "quotes": [],
+    "h5": "",
+    "kw": [
+     "cautio",
+     "pcol",
+     "pregna",
+     "infect",
+     "headac",
+     "pseudo",
+     "boxed",
+     "warnin",
+     "above",
+     "years",
+     "potenc",
+     "common",
+     "terato",
+     "burnin",
+     "mucous",
+     "membra",
+     "avoid",
+     "photos",
+     "blood",
+     "allerg",
+     "topica",
+     "potent",
+     "toxici",
+     "stop",
+     "nausea"
     ]
    }
   },
@@ -1885,44 +1923,6 @@
      "soaps"
     ]
    },
-   "gobj-pc-5#1": {
-    "lv": 2,
-    "comb": 0.817,
-    "qStars": 2,
-    "ev": [
-     "L2H-012:smith-hints",
-     "L2-106:smith-room"
-    ],
-    "quotes": [],
-    "h5": "",
-    "kw": [
-     "cautio",
-     "pcol",
-     "pregna",
-     "infect",
-     "headac",
-     "pseudo",
-     "boxed",
-     "warnin",
-     "above",
-     "years",
-     "potenc",
-     "common",
-     "terato",
-     "burnin",
-     "mucous",
-     "membra",
-     "avoid",
-     "photos",
-     "blood",
-     "allerg",
-     "topica",
-     "potent",
-     "toxici",
-     "stop",
-     "nausea"
-    ]
-   },
    "gobj-p6-1#2": {
     "lv": 2,
     "comb": 0.815,
@@ -2521,7 +2521,7 @@
      "refere"
     ]
    },
-   "gobj-ey-9#3": {
+   "gobj-ey-9#2": {
     "lv": 3,
     "comb": 0.85,
     "qStars": 2,
@@ -2550,7 +2550,7 @@
      "diuret"
     ]
    },
-   "gobj-ey-4#3": {
+   "gobj-ey-4#2": {
     "lv": 3,
     "comb": 1.0,
     "qStars": 3,
@@ -2579,7 +2579,7 @@
      "affect"
     ]
    },
-   "gobj-ey-5#2": {
+   "gobj-ey-5#1": {
     "lv": 2,
     "comb": 0.796,
     "qStars": 3,
@@ -2610,7 +2610,7 @@
      "diseas"
     ]
    },
-   "gobj-ey-22#2": {
+   "gobj-ey-22#1": {
     "lv": 2,
     "comb": 0.749,
     "qStars": 2,
@@ -2691,7 +2691,7 @@
      "system"
     ]
    },
-   "gobj-ey-9#5": {
+   "gobj-ey-9#4": {
     "lv": 1,
     "comb": 0.56,
     "qStars": 1,
@@ -2719,7 +2719,7 @@
      "diuret"
     ]
    },
-   "gobj-ey-8#2": {
+   "gobj-ey-8#1": {
     "lv": 1,
     "comb": 0.499,
     "qStars": 1,
@@ -2770,7 +2770,7 @@
      "chambe"
     ]
    },
-   "gobj-ey-13#2": {
+   "gobj-ey-13#1": {
     "lv": 1,
     "comb": 0.581,
     "qStars": 2,
@@ -2796,7 +2796,7 @@
      "outflo"
     ]
    },
-   "gobj-ey-27#4": {
+   "gobj-ey-27#3": {
     "lv": 2,
     "comb": 0.642,
     "qStars": 2,
@@ -2847,7 +2847,7 @@
      "outflo"
     ]
    },
-   "gobj-ey-28#4": {
+   "gobj-ey-28#2": {
     "lv": 1,
     "comb": 0.475,
     "qStars": 2,
@@ -2871,7 +2871,7 @@
      "eye"
     ]
    },
-   "gobj-ey-15#4": {
+   "gobj-ey-15#3": {
     "lv": 1,
     "comb": 0.394,
     "qStars": 1,
@@ -2892,7 +2892,7 @@
      "advers"
     ]
    },
-   "gobj-ey-29#2": {
+   "gobj-ey-29#1": {
     "lv": 1,
     "comb": 0.438,
     "qStars": 2,
@@ -2914,7 +2914,7 @@
      "trigem"
     ]
    },
-   "gobj-ey-8#4": {
+   "gobj-ey-8#3": {
     "lv": 1,
     "comb": 0.42,
     "qStars": 1,
@@ -3383,7 +3383,7 @@
    }
   },
   "tell": {
-   "tell-l2#r10": {
+   "tell-l2#r9": {
     "lv": 3,
     "comb": 0.922,
     "qStars": 4,
@@ -3503,7 +3503,7 @@
      "kerati"
     ]
    },
-   "tell-l2#r5": {
+   "tell-l2#r4": {
     "lv": 3,
     "comb": 0.871,
     "qStars": 7,
@@ -3843,7 +3843,7 @@
      "S1103@51213: \"nounce them, OK? Is it human or humanized, and what are they binding to? And therefore we know that you are decreasing the activity of IL 23, and on the last slide, what did we say IL 23 as well as IL-12 does? Why are we targeting those cytokines? They're decr\"",
      "S1103@51082: \"lrakizumab, A S M N N ASMN, it's also binding to that P19 subunit, OK? So, that's all you need to know. Their drug name, how to pronounce them, OK? Is it human or humanized, and what are they binding to? And therefore we know that you are decreasing the activi\""
     ],
-    "label": "Short t1/2 vs long DoA (hydrocortisone) (half-life; duration of action)",
+    "label": "Short half-life vs long duration of action (hydrocortisone)",
     "kw": [
      "short",
      "durati",
@@ -3973,7 +3973,7 @@
      "S1103@14754: \"i-inflammatory, um, It's associated a bit with an antibacterial action. Uh, the reason we know that is, um, you see that when we give, uh, dapsone, you see a decrease in the number of the acnes bacteria, but also we see, uh, to give us a hint of its anti-infla\"",
      "S1103@15265: \"ah. Don't go hiking and pet armadillos in Texas, OK. Um, uh, so the, uh, dapsone, I don't know how they figured out that dapsone might work for acne, but it's an interesting, uh, use for the drug. Uh, for acne, we use it usually as a topical gel. OK. All right\""
     ],
-    "label": "Benzoyl peroxide products",
+    "label": "Benzoic acid vs benzoyl radical (benzoyl peroxide)",
     "kw": [
      "benzoy",
      "26000",
@@ -4003,7 +4003,7 @@
      "M1030@11096: \"this after they've uh been instructed to start using contraceptives, OK? Because you guys know that the retinoids cause birth defects, OK. And definitely women that are pregnant should not be using this product. All right. As I mentioned a minute ago, um, for\"",
      "M1103@9464: \"lood in their stool, they need to stop taking these medications, OK? You probably already know this, but this class of antibiotics should not be used in young, young children, cause it'll discolor bone and affect teeth. Um, it also causes photosensitivity, pho\""
     ],
-    "label": "Adapalene vs tazarotene",
+    "label": "Adapalene vs tazarotene (sun)",
     "kw": [
      "stable",
      "adapal",
@@ -4041,7 +4041,7 @@
      "M1030@61095: \"ere some of our drugs work are right here in the ribosome. If you will read this caption, you will see that you've got chloramphenacol and then our macrolide antibiotics. They bind to this upper part, the 50S ribosomal subunit, and their activity is they preve\"",
      "M1103@7793: \"um. Um, I'm from, you're basically clinical pharmacology. So, um, read that again if you need to understand, but this is just showing you where in the scheme of a microbe making proteins, uh, does the antibiotic come in and affect the ability of that microbe\""
     ],
-    "label": "Tetracyclines vs clindamycin/macrolides",
+    "label": "Tetracyclines vs clindamycin/macrolides/chloramphenicol",
     "kw": [
      "clinda",
      "macrol",
@@ -4059,7 +4059,7 @@
      "swappe"
     ]
    },
-   "tell-l2#r9": {
+   "tell-l2#r8": {
     "lv": 1,
     "comb": 0.719,
     "qStars": 2,
@@ -4161,7 +4161,7 @@
      "diseas"
     ]
    },
-   "tell-ey-glaucoma#r3": {
+   "tell-ey-glaucoma#r2": {
     "lv": 2,
     "comb": 0.642,
     "qStars": 1,

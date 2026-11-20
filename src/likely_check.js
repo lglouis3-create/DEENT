@@ -3,7 +3,8 @@
    ==========================================================================
    Reads the course's own source files in node (no build needed) and checks:
    - every starred id exists in the bank, once;
-   - every starred question is in the pool of Exam 1, Exam 2 or Exam 3 (the eye stars of Exam 3, added 2026-11-18; its
+   - every starred question is in the pool of Exam 1, Exam 2 or Exam 3 (Dr. Smith's eye stars, added 2026-11-18, and
+     Dr. Sikazwe's otic/oral/ophthalmic stars, added 2026-11-19, never on his FYI slides 10-13; their
      lecture entry in course.js names the exam) and, for Exam 1, not lowYield, not
      unassigned, not in an optional topic, not one of the items held out of
      scored practice (reviews/OPEN_QUESTIONS.md);
@@ -77,9 +78,9 @@ const pagesOf = cite => {
     for (let n = r[0]; n <= (r[1] || r[0]); n++) out.push(n); });
   return out;
 };
-const sik = ids.filter(i => QB[i] && QB[i].prof === 'Sikazwe');
+const sik = ids.filter(i => QB[i] && QB[i].prof === 'Sikazwe' && examOf(i) === 1);   // his Exam 1 stars; his Exam 3 (OOO deck) stars are checked below
 const offPage = sik.filter(i => { const p = pagesOf(QB[i].cite); return !p.length || p.some(n => !ASSIGNED.has(n)); });
-check(!offPage.length, `Dr. Sikazwe's ${sik.length} stars cite only his assigned pages`, offPage.map(i => i + ' (' + pagesOf(QB[i].cite).join(',') + ')').join('; '));
+check(!offPage.length, `Dr. Sikazwe's ${sik.length} Exam 1 stars cite only his assigned pages`, offPage.map(i => i + ' (' + pagesOf(QB[i].cite).join(',') + ')').join('; '));
 // the reference of each of his stars names where he said it (11/03 transcript line "T n" or 11/04 offset "T@n", or a Polleve slide)
 // and the deck page(s) "p. n" / "pp. n, m", all of them assigned
 const refPages = ref => {
@@ -91,15 +92,31 @@ const refPages = ref => {
 };
 const badRef = sik.filter(i => { const x = L.items.find(y => y.id === i), p = refPages(x.ref);
   return !/\bT@?\s?\d|Polleve-\d/.test(x.ref) || !p.length || p.some(n => !ASSIGNED.has(n)); });
-check(!badRef.length, `each of Dr. Sikazwe's ${sik.length} stars names its transcript place or poll and only assigned deck pages`,
+check(!badRef.length, `each of Dr. Sikazwe's ${sik.length} Exam 1 stars names its transcript place or poll and only assigned deck pages`,
       badRef.map(i => i + ' (' + L.items.find(y => y.id === i).ref + ')').join('; '));
 
-const eye = ids.filter(i => examOf(i) === 3);
+const ex3 = ids.filter(i => examOf(i) === 3);
+const ex3Other = ex3.filter(i => !['Smith', 'Sikazwe'].includes(QB[i].prof));
+check(!ex3Other.length, "every Exam 3 star is Dr. Smith's (eye deck) or Dr. Sikazwe's (OOO deck)", ex3Other.join(', '));
+const eye = ex3.filter(i => QB[i].prof === 'Smith');
 const eyeBad = eye.filter(i => { const q = QB[i], x = L.items.find(y => y.id === i), sl = pagesOf(q.cite);
   return q.prof !== 'Smith' || !/^ey-/.test(q.topic) || !sl.length || sl.some(n => n < 1 || n > 74) || !/\bT@?\s?\d+[^;]*11\/1[37]|slides? ?\d/.test(x.ref) || !/11\/1[37]|slides?\s*\d/.test(x.ref); });
 check(eye.length > 0 && !eyeBad.length, `the ${eye.length} Exam 3 stars are Dr. Smith's eye questions (topic ey-*), cite slides 1-74 of the eye deck and name a slide or a 11/13 or 11/17 transcript place`, eyeBad.join(', '));
-const eyeNoElig = eye.filter(i => !(QB[i] && !QB[i].lowYield && !QB[i].unassigned && !optionalTopics.has(QB[i].topic)));
-check(!eyeNoElig.length, 'no Exam 3 star is lowYield, unassigned or in an optional topic', eyeNoElig.join(', '));
+// Dr. Sikazwe's Exam 3 stars (added 2026-11-19): his otic/oral/ophthalmic questions (topic oo-*, deck Sikazwe_OOO_mc.pdf,
+// slides 1-68), never slides 10-13 (the otitis and tinnitus slides he called FYI, "It won't be on the exam", 11/18 T@10343,
+// T@13909), and each reference names a slide of that deck or a 11/18 transcript place (T@n 11/18)
+const FYI = n => n >= 10 && n <= 13;
+const slidesIn = r => { const out = []; (String(r).match(/\bslides?\s+[0-9][0-9,–\-\s]*/g) || []).forEach(m => m.replace(/^slides?\s+/, '').split(',').forEach(p => {
+  const a = p.trim().split(/[–-]/).map(Number); if (!a[0]) return; for (let n = a[0]; n <= (a[1] || a[0]); n++) out.push(n); })); return out; };
+const ooo = ex3.filter(i => QB[i].prof === 'Sikazwe');
+const oooBad = ooo.filter(i => { const q = QB[i], x = L.items.find(y => y.id === i), sl = pagesOf(q.cite), rs = slidesIn(x.ref);
+  return !/^oo-/.test(q.topic) || !String(q.cite).includes('Sikazwe_OOO_mc.pdf') || !sl.length || sl.some(n => n < 1 || n > 68 || FYI(n)) ||
+         !(rs.length || /\bT@\d+[^;]*11\/18/.test(x.ref)) || rs.some(n => n < 1 || n > 68 || FYI(n)); });
+check(!oooBad.length, `the ${ooo.length} Exam 3 stars of Dr. Sikazwe are his OOO questions (topic oo-*), cite slides 1-68 of Sikazwe_OOO_mc.pdf but none of the FYI slides 10-13, and name a slide or a 11/18 transcript place`, oooBad.join(', '));
+const oooSrc = ooo.filter(i => !/^sik-(ex3|q-ooo|know-ooo)$/.test(L.items.find(y => y.id === i).source));
+check(!oooSrc.length, "Dr. Sikazwe's Exam 3 stars use his Exam 3 sources (sik-ex3, sik-q-ooo, sik-know-ooo)", oooSrc.join(', '));
+const eyeNoElig = ex3.filter(i => !(QB[i] && !QB[i].lowYield && !QB[i].unassigned && !optionalTopics.has(QB[i].topic)));
+check(!eyeNoElig.length, 'no Exam 3 star (Smith or Sikazwe) is lowYield, unassigned or in an optional topic', eyeNoElig.join(', '));
 
 console.log('=== No answer in a reason ===');
 const STOP = new Set('the a an and or of to in on for with by from is are be as at it its this that these those which what who than then not no so do does into their they them about more most less less some each other only also both can may will would'.split(' '));
