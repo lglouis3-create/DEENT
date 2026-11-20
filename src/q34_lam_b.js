@@ -68,7 +68,7 @@ QUESTIONS.push(
   {t:"It is dosed once daily as a solution and is preservative-free", correct:false, why:"Timolol solution is BID, and certain timolol products are preservative-free, so neither feature explains its wide use."},
   {t:"It causes fewer systemic effects than the other agents and is dosed QID", correct:false, why:"Betaxolol and carteolol carry less risk for the beta blocker precautions (slide 34), and ophthalmic beta blockers are not dosed four times daily (slide 32)."}],
  teach:"Timolol is dispensed most because its forms fit a patient's regimen. It is part of combination products, so one bottle covers two classes, and it comes as a gel, so dosing can be once daily with less systemic effect than the aqueous solution. Betaxolol is the suspension, but it lowers pressure less.",
- cite:"Lectures 12 (Lam_Glaucoma.pdf) slide 32; T@58687 11/19"},
+ cite:"Lectures 12 (Lam_Glaucoma.pdf) slide 32 and the handout; T@58687 11/19"},
 
 {id:"LMB-007", skill:"tell", prof:'Lam', tier:'new', topic:"lm-bb", sub:"drugs", concept:"lm-bb-betaxolol-why-rare",
  tags:["hard", "reasoning"], source:"both",
@@ -79,7 +79,7 @@ QUESTIONS.push(
   {t:"It lowers IOP less than timolol or levobunolol", correct:true, why:"Betaxolol lowers IOP less than timolol or levobunolol (slide 32), and that lower efficacy is the reason it is seldom used."},
   {t:"It is sold as a combination product with another class", correct:false, why:"Betaxolol (Betoptic, Betoptic-S) is a single agent. Timolol is the beta blocker sold in combination products (slide 32)."}],
  teach:"A drug that lowers pressure less is used less, even when it has a gentler systemic profile. Betaxolol is a suspension with less systemic effect, but its smaller IOP reduction compared with timolol and levobunolol is why Dr. Lam rarely sees it. Dosing is not the reason, since betaxolol is BID like timolol.",
- cite:"Lectures 12 (Lam_Glaucoma.pdf) slide 32; T@59395 11/19"},
+ cite:"Lectures 12 (Lam_Glaucoma.pdf) slide 32 and the handout; T@59395 11/19"},
 
 {id:"LMB-008", skill:"adverse", prof:'Lam', tier:'new', topic:"lm-bb", sub:"ae", concept:"lm-bb-betaxolol-stinging-suspension",
  tags:["hard", "case"], source:"slide",
@@ -90,7 +90,7 @@ QUESTIONS.push(
   {t:"Switch to Timoptic XE gel, 1 drop OU daily", correct:false, why:"Timoptic XE gel is timolol, a different drug. It keeps once daily dosing but replaces the betaxolol she wants to keep."},
   {t:"Increase the betaxolol solution to TID", correct:false, why:"Betaxolol is dosed BID (slide 32). A higher frequency adds drops without changing the solution that stings."}],
  teach:"Stinging on application is most notable with betaxolol solution, and the suspension, Betoptic-S, has less systemic effect than the solution. The cue is a patient who wants to stay on betaxolol, so the formulation changes and the drug stays. Intolerance to a beta blocker can be handled by a formulation change (slide 35).",
- cite:"Lectures 12 (Lam_Glaucoma.pdf) slides 32, 33; T@59520 11/19"},
+ cite:"Lectures 12 (Lam_Glaucoma.pdf) slides 32, 33 and the handout; T@59520 11/19"},
 
 {id:"LMB-009", skill:"case", prof:'Lam', tier:'new', topic:"lm-bb", sub:"drugs", concept:"lm-bb-gel-brady-adherence",
  tags:["hard", "two-facts", "case"], source:"both",
@@ -171,7 +171,7 @@ QUESTIONS.push(
   {t:"Combigan", correct:false, why:"Combigan contains timolol, so timolol's precautions apply (slides 32, 69)."},
   {t:"Betaxolol", correct:true, why:"Betaxolol is noted with carteolol for less risk with the beta blocker precautions (slide 34), so it carries the lower systemic risk with COPD."}],
  teach:"Betaxolol and carteolol carry less risk for the beta blocker precautions, so they are the ophthalmic beta blockers to consider when a precaution such as COPD applies. Timolol, levobunolol and Combigan, which contains timolol, keep the usual precautions. Betaxolol lowers IOP less than timolol.",
- cite:"Lectures 12 (Lam_Glaucoma.pdf) slide 34"},
+ cite:"Lectures 12 (Lam_Glaucoma.pdf) slide 34 and the handout"},
 
 {id:"LMB-016", skill:"case", prof:'Lam', tier:'new', topic:"lm-bb", sub:"prob", concept:"lm-bb-cosopt-pf-preservative",
  tags:["hard", "case"], source:"both",
@@ -193,7 +193,7 @@ QUESTIONS.push(
   {t:"Increase to timolol 0.5% BID", correct:true, why:"Slide 36 lists increasing the concentration if possible, and timolol comes as 0.25% and 0.5%."},
   {t:"Change to oral timolol", correct:false, why:"Slide 36 lists no oral beta blocker step. After compliance and concentration, the step is another drug class."}],
  teach:"Inadequate response is addressed in order: confirm compliance, increase the concentration if the drug comes in a higher strength, then switch or add a class. Timolol comes as 0.25% and 0.5%, so the case moves to 0.5%. Concentration is the lever here, not frequency.",
- cite:"Lectures 12 (Lam_Glaucoma.pdf) slide 36; T@63080 11/19"},
+ cite:"Lectures 12 (Lam_Glaucoma.pdf) slide 36 and the handout; T@63080 11/19"},
 
 {id:"LMB-018", skill:"dose", prof:'Lam', tier:'new', topic:"lm-bb", sub:"drugs", concept:"lm-bb-sig-recognition",
  tags:["hard", "sig"], source:"slide",
@@ -254,8 +254,8 @@ QUESTIONS.push(
  tags:["hard", "case"], source:"slide",
  stem:"A 67-year-old woman is dispensed Alphagan P (brimonidine), 1 drop OU daily. Her pressure is not at goal. Which medication-related problem should the pharmacist suspect first?",
  options:[
-  {t:"Frequency is too low; brimonidine is dosed QID", correct:false, why:"QID is the pilocarpine frequency (slide 57). Brimonidine is BID, so QID overshoots."},
-  {t:"Wrong class; brimonidine is a carbonic anhydrase inhibitor", correct:false, why:"Brimonidine is an alpha-2 agonist (slide 42), not a carbonic anhydrase inhibitor."},
+  {t:"Wrong drug; Alphagan P is a carbonic anhydrase inhibitor", correct:false, why:"Alphagan P is brimonidine, an alpha-2 agonist (slide 42)."},
+  {t:"No problem; brimonidine is dosed once daily", correct:false, why:"Brimonidine is dosed BID (slide 42), so once daily is too low."},
   {t:"Duplicate therapy with her prostaglandin analog", correct:false, why:"Different classes are added in sequence and are not duplicate therapy (slide 63)."},
   {t:"Frequency is inappropriate; brimonidine is dosed BID", correct:true, why:"Brimonidine is 1 drop BID (slide 42), so once daily is too low and affects effectiveness (slide 15)."}],
  teach:"Brimonidine is dosed BID, so once daily is a frequency that is too low, which she lists as an effectiveness problem. Pressure above goal is the cue to check whether the sig matches the drug before a class is added. Brimonidine is not a duplicate of her prostaglandin analog, since different classes are added in sequence.",
@@ -295,7 +295,7 @@ QUESTIONS.push(
   {t:"Asthma", correct:false, why:"Asthma is a cholinergic precaution (slide 59)."},
   {t:"History of stroke", correct:true, why:"History of stroke is listed because vessels should not be constricted after a stroke (slide 44)."},
   {t:"Retinal detachment", correct:false, why:"Retinal detachment is a cholinergic precaution (slide 59)."}],
- teach:"Alpha-2 precautions follow vasoconstriction: absorbed drug can narrow vessels and lower blood flow to heart, kidney and brain, so cardiovascular disease, kidney disease and prior stroke are listed, along with antihypertensives, MAOIs and tricyclic antidepressants. Sickle cell, asthma and retinal detachment belong to other classes.",
+ teach:"Alpha-2 precautions follow vasoconstriction, which she named as the reason: absorbed drug can narrow vessels and lower blood flow to heart, kidney and brain, so cardiovascular disease, kidney disease and prior stroke are listed, along with antihypertensives, MAOIs and tricyclic antidepressants. Sickle cell, asthma and retinal detachment belong to other classes.",
  cite:"Lectures 12 (Lam_Glaucoma.pdf) slide 44; T@72404 11/19"},
 
 {id:"LMB-027", skill:"case", prof:'Lam', tier:'new', topic:"lm-a2", sub:"ae", concept:"lm-a2-stroke-bp",
@@ -351,7 +351,7 @@ QUESTIONS.push(
   {t:"Confirm adherence and eye drop technique", correct:true, why:"Slide 46 lists ensure compliance first, so adherence and technique are checked before any change."},
   {t:"Switch to the over-the-counter brimonidine", correct:false, why:"The OTC product (Lumify) is for ocular redness and is not efficacious for glaucoma (slide 42)."}],
  teach:"With pressure above goal, check that the drops are used correctly before changing anything, because a missed dose or poor technique looks the same as a drug that does not work. Then raise the concentration or add the next class, which here is the topical CAI.",
- cite:"Lectures 12 (Lam_Glaucoma.pdf) slide 46; T@73838 11/19"},
+ cite:"Lectures 12 (Lam_Glaucoma.pdf) slide 46 and the handout; T@73838 11/19"},
 
 {id:"LMB-032", skill:"case", prof:'Lam', tier:'new', topic:"lm-a2", sub:"otc", concept:"lm-a2-rebound-otc",
  tags:["hard", "two-facts"], source:"both",
@@ -360,7 +360,7 @@ QUESTIONS.push(
   {t:"Prescription brimonidine used for glaucoma pressure control", correct:false, why:"For glaucoma, the rebound is quite low, so it is not a concern for the prescription use."},
   {t:"Over-the-counter brimonidine used for ocular redness", correct:true, why:"Rebound is a concern for the OTC decongestant use for redness, so that use is temporary."},
   {t:"Both uses to the same degree", correct:false, why:"The uses differ: rebound is low for glaucoma and a concern for the OTC redness use."},
-  {t:"Neither use", correct:false, why:"The OTC redness use carries a rebound concern, so neither is wrong."}],
+  {t:"Neither use", correct:false, why:"The OTC redness use carries a rebound concern, so \"neither use\" is wrong."}],
  teach:"Rebound redness after stopping brimonidine depends on the use. For glaucoma the rebound is quite low, but as an OTC decongestant for redness it is a concern, which is why that use is temporary. A redness complaint after stopping points to the OTC product, not the prescription.",
  cite:"Lectures 12 (Lam_Glaucoma.pdf) slide 42; T@70330 11/19"},
 
@@ -368,12 +368,12 @@ QUESTIONS.push(
  tags:["hard", "tell"], source:"slide",
  stem:"Which alpha-2 agonist for glaucoma has a higher incidence of side effects that stop on discontinuation?",
  options:[
-  {t:"Apraclonidine (Iopidine)", correct:true, why:"Apraclonidine has a higher incidence of side effects, which stop on discontinuation (slide 42)."},
-  {t:"Brimonidine (Alphagan P)", correct:false, why:"Brimonidine is not the agent described with the higher incidence. Apraclonidine is (slide 42)."},
+  {t:"Apraclonidine (Iopidine)", correct:true, why:"Apraclonidine has a higher incidence of side effects, which stop on discontinuation (handout)."},
+  {t:"Brimonidine (Alphagan P)", correct:false, why:"Brimonidine is not the agent described with the higher incidence. Apraclonidine is (handout)."},
   {t:"Brimonidine/timolol (Combigan)", correct:false, why:"Combigan is brimonidine plus timolol dosed BID (slide 69), not the agent with higher side effects."},
   {t:"Brimonidine 0.025% (Lumify)", correct:false, why:"Lumify is brimonidine 0.025% sold OTC for ocular redness (slide 42), not a glaucoma drug."}],
- teach:"Within the alpha-2 class, apraclonidine is the agent with more side effects, and they stop when the drug is stopped, which is why its frequency can be lowered for intolerance. Brimonidine, Combigan and Lumify are not described this way.",
- cite:"Lectures 12 (Lam_Glaucoma.pdf) slides 42, 45"},
+ teach:"Within the alpha-2 class, apraclonidine is the agent with more side effects, and they stop when the drug is stopped, as the handout states. Brimonidine, Combigan and Lumify are not described this way.",
+ cite:"Lectures 12 (Lam_Glaucoma.pdf) slide 42 and the handout alpha-2 section"},
 
 {id:"LMB-035", skill:"class", prof:'Lam', tier:'new', topic:"lm-a2", sub:"drugs", concept:"lm-a2-iop-and-surgery",
  tags:["hard", "two-facts"], source:"both",
@@ -482,7 +482,7 @@ QUESTIONS.push(
   {t:"Systemic acidosis from the CAI", correct:true, why:"Slide 53 lists these symptoms under systemic acidosis from CAIs."},
   {t:"Bronchospasm from the cholinergic agonist", correct:false, why:"Bronchospasm is a pilocarpine effect (slide 58). Her symptoms are malaise, nausea and taste change, and she takes a CAI."},
   {t:"Hypotension from the beta blocker", correct:false, why:"Hypotension is a beta blocker effect (slide 33). Her symptoms do not include it, and she takes a CAI."}],
- teach:"A cluster of whole-body symptoms in a patient on an oral CAI (malaise, fatigue, anorexia, nausea, weight loss, altered taste) matches systemic acidosis, which is why oral CAIs are last line. Older adults tolerate CAIs less well. Dr. Lam said the mechanism of acidosis is not tested.",
+ teach:"A cluster of whole-body symptoms in a patient on an oral CAI (malaise, fatigue, anorexia, nausea, weight loss, altered taste) matches systemic acidosis, which is why oral CAIs are last line. Older adults tolerate CAIs less well. She said she does not plan to test Dr. Smith's detail on the acidosis, though she could not guarantee it.",
  cite:"Lectures 12 (Lam_Glaucoma.pdf) slide 53; T@77664 11/19"},
 
 {id:"LMB-045", skill:"adverse", prof:'Lam', tier:'new', topic:"lm-cai", sub:"prob", concept:"lm-cai-precaution-set", multi:true,
@@ -632,7 +632,7 @@ QUESTIONS.push(
   {t:"Treatment of eyelash hypotrichosis", correct:false, why:"Eyelash hypotrichosis is treated with bimatoprost (Latisse)."},
   {t:"Over-the-counter redness relief", correct:false, why:"Over-the-counter redness relief is Lumify, brimonidine 0.025% (slide 42)."}],
  teach:"Pilocarpine is the cholinergic seen for glaucoma. Carbachol (Miostat) is often used for surgery instead of glaucoma, so a Miostat prescription points to a procedure, not chronic therapy. Echothiophate has serious ocular and systemic toxic effects (slide 57, handout).",
- cite:"Lectures 12 (Lam_Glaucoma.pdf) slide 57"},
+ cite:"Lectures 12 (Lam_Glaucoma.pdf) slide 57 and the handout"},
 
 {id:"LMB-058", skill:"case", prof:'Lam', tier:'new', topic:"lm-chol", sub:"ae", concept:"lm-chol-intolerance-reduce-concentration",
  tags:["hard", "case"], source:"both",
@@ -665,7 +665,7 @@ QUESTIONS.push(
   {t:"Rebound redness from the over-the-counter brimonidine", correct:false, why:"She is not on brimonidine, so rebound redness from OTC brimonidine does not apply (slide 42)."},
   {t:"Conjunctival hemorrhage, a known effect to report", correct:true, why:"Conjunctival hemorrhage or hyperemia is a local netarsudil effect, reported in as many as 51% in trials (slide 62, handout)."}],
  teach:"Conjunctival hemorrhage or hyperemia is a known local effect of netarsudil, reported in as many as 51% of trial patients, so a red patch on the white of the eye fits the drug and is not an unexpected reaction. Patients with a side effect that is not a typical short one are counseled to see the eye doctor.",
- cite:"Lectures 12 (Lam_Glaucoma.pdf) slide 62; T@83161 11/19"},
+ cite:"Lectures 12 (Lam_Glaucoma.pdf) slide 62 and the handout; T@83161 11/19"},
 
 {id:"LMB-061", skill:"tell", prof:'Lam', tier:'new', topic:"lm-rock", sub:"rock", concept:"lm-rock-why-last",
  tags:["hard", "reasoning"], source:"both",
@@ -676,7 +676,7 @@ QUESTIONS.push(
   {t:"It cannot be combined with a prostaglandin analog", correct:false, why:"Rocklatan combines netarsudil with latanoprost (slide 62), so the combination exists."},
   {t:"It lowers IOP less than topical carbonic anhydrase inhibitors", correct:false, why:"Netarsudil lowers IOP 20-30%, more than the 15-26% of topical CAIs (slides 51, 62)."}],
  teach:"A drug can lower pressure about as well as timolol (20-30%) and still be last line when its side effect and cost outweigh the benefit. Netarsudil causes conjunctival hemorrhage and is newer, so cost may be an issue, and it is used as salvage therapy after everything else. Its once daily evening dosing is not the problem.",
- cite:"Lectures 12 (Lam_Glaucoma.pdf) slide 62; T@83009 11/19"},
+ cite:"Lectures 12 (Lam_Glaucoma.pdf) slide 62 and the handout; T@83009 11/19"},
 
 {id:"LMB-062", skill:"case", prof:'Lam', tier:'new', topic:"lm-rock", sub:"rock", concept:"lm-rock-position-sequence",
  tags:["hard", "sequence"], source:"both",
@@ -702,13 +702,13 @@ QUESTIONS.push(
 
 {id:"LMB-064", skill:"class", prof:'Lam', tier:'new', topic:"lm-rock", sub:"rock", concept:"lm-rock-rocklatan",
  tags:["hard", "tell"], source:"slide",
- stem:"A pharmacist receives a prescription for Rocklatan. What does it contain, and how is it dosed?",
+ stem:"A pharmacist receives a prescription for Rocklatan. What does it contain?",
  options:[
-  {t:"Brimonidine plus timolol, 1 drop twice daily", correct:false, why:"Brimonidine plus timolol is Combigan, dosed BID (slide 69)."},
-  {t:"Dorzolamide plus timolol, 1 drop twice daily", correct:false, why:"Dorzolamide plus timolol is Cosopt, dosed BID (slide 69)."},
-  {t:"A carbonic anhydrase inhibitor plus brimonidine, 1 drop three times daily", correct:false, why:"A CAI plus brimonidine is Simbrinza, dosed TID (slide 69)."},
-  {t:"Netarsudil plus latanoprost, 1 drop in the evening", correct:true, why:"Rocklatan is netarsudil plus latanoprost, dosed QHS, once in the evening (slide 62)."}],
- teach:"Rocklatan combines a Rho kinase inhibitor, netarsudil, with a prostaglandin analog, latanoprost, in one evening drop. Combination names pair two classes, so Rocklatan is distinguished from Combigan, Cosopt and Simbrinza, which pair a beta blocker, alpha-2 agonist and CAI and are BID or TID.",
+  {t:"Brimonidine plus timolol", correct:false, why:"Brimonidine plus timolol is Combigan, dosed BID (slide 69)."},
+  {t:"Dorzolamide plus timolol", correct:false, why:"Dorzolamide plus timolol is Cosopt, dosed BID (slide 69)."},
+  {t:"A carbonic anhydrase inhibitor plus brimonidine", correct:false, why:"A CAI plus brimonidine is Simbrinza, dosed TID (slide 69)."},
+  {t:"Netarsudil plus latanoprost", correct:true, why:"Rocklatan is netarsudil plus latanoprost, dosed QHS, once in the evening (slide 62)."}],
+ teach:"Rocklatan combines a Rho kinase inhibitor, netarsudil, with a prostaglandin analog, latanoprost, in one evening drop. Rocklatan is distinguished from Combigan, Cosopt and Simbrinza, which pair a beta blocker, an alpha-2 agonist and a CAI.",
  cite:"Lectures 12 (Lam_Glaucoma.pdf) slide 62"},
 
 {id:"LMB-065", skill:"adverse", prof:'Lam', tier:'new', topic:"lm-rock", sub:"rock", concept:"lm-rock-local-set", multi:true,
@@ -803,7 +803,7 @@ QUESTIONS.push(
 
 {id:"LMB-073", skill:"case", prof:'Lam', tier:'new', topic:"lm-seq", sub:"seq", concept:"lm-seq-intolerance-skip-class",
  tags:["hard", "sequence", "case"], source:"both",
- stem:"A 65-year-old man on bimatoprost and timolol was started on brimonidine, but lid edema and itching forced him to stop it. His pressure is still above goal. Which agent is the most appropriate next step?",
+ stem:"A 65-year-old man on bimatoprost and timolol was started on brimonidine, but lid edema and itching forced him to stop it. His pressure is still above goal. In the usual class order, which agent is the most appropriate next step?",
  options:[
   {t:"Apraclonidine", correct:false, why:"Apraclonidine is the same alpha-2 class. Intolerance calls for a different class (slide 45)."},
   {t:"Pilocarpine", correct:false, why:"Pilocarpine is the fifth class, after the topical CAI (slide 63)."},
@@ -821,7 +821,7 @@ QUESTIONS.push(
   {t:"Switch to pilocarpine QID as the next class", correct:false, why:"Pilocarpine is a later class (slide 63) and QID (slide 57), so it is not the next step."},
   {t:"Increase bimatoprost to TID for a stronger effect", correct:false, why:"A higher frequency of a prostaglandin analog lowers efficacy (slide 20), so TID works against her."}],
  teach:"Look for a medication-related problem before adding a class, because a dosing error can mimic a drug failure. Prostaglandin analogs are once daily, and dosing them more often decreases efficacy, so BID bimatoprost is corrected to once daily before brimonidine is considered.",
- cite:"Lectures 12 (Lam_Glaucoma.pdf) slides 19, 63; T@51295 11/19"},
+ cite:"Lectures 12 (Lam_Glaucoma.pdf) slides 19, 63 and the handout; T@51295 11/19"},
 
 {id:"LMB-075", skill:"case", prof:'Lam', tier:'new', topic:"lm-seq", sub:"seq", concept:"lm-seq-keep-adding",
  tags:["hard", "sequence"], source:"both",
@@ -832,7 +832,7 @@ QUESTIONS.push(
   {t:"Keep the drugs and add the next class", correct:true, why:"With a partial response and good tolerance, the next class is added (slides 46, 63)."},
   {t:"Switch the three drops to one over-the-counter product", correct:false, why:"OTC brimonidine is not a glaucoma treatment (slide 42), so it cannot replace three drops."}],
  teach:"With a partial response on drugs the patient tolerates, keep the drugs and add the next class. A drug is removed when the patient cannot tolerate it. The cue is tolerance: a tolerated drug stays, and a higher frequency is not a step.",
- cite:"Lectures 12 (Lam_Glaucoma.pdf) slides 46, 63; T@85590 11/19"},
+ cite:"Lectures 12 (Lam_Glaucoma.pdf) slides 46, 63 and the handout; T@85590 11/19"},
 
 {id:"LMB-076", skill:"case", prof:'Lam', tier:'new', topic:"lm-seq", sub:"seq", concept:"lm-seq-order-subset", multi:true,
  tags:["list", "multi", "sequence"], source:"slide",
@@ -873,10 +873,10 @@ QUESTIONS.push(
  stem:"Which list gives the dosing frequency of Combigan, Cosopt and Simbrinza in that order?",
  options:[
   {t:"BID, BID, TID", correct:true, why:"Slide 69 gives Combigan BID, Cosopt BID and Simbrinza TID."},
-  {t:"Daily, BID, TID", correct:false, why:"Combination products are BID or TID and never once daily (slide 69)."},
+  {t:"Daily, BID, TID", correct:false, why:"The three combinations in the slide 69 table are BID or TID and never once daily."},
   {t:"BID, TID, TID", correct:false, why:"Cosopt is BID (slide 69), though dorzolamide alone is TID."},
   {t:"BID, BID, QID", correct:false, why:"Simbrinza is TID, not QID (slide 69)."}],
- teach:"Combination products are BID or TID, never once daily. Combigan (alpha-2 agonist plus beta blocker) and Cosopt (CAI plus beta blocker) are BID, and Simbrinza (CAI plus alpha-2 agonist) is TID. Cosopt is BID even though dorzolamide alone is TID.",
+ teach:"The three combinations in the slide 69 table are BID or TID, never once daily. Combigan (alpha-2 agonist plus beta blocker) and Cosopt (CAI plus beta blocker) are BID, and Simbrinza (CAI plus alpha-2 agonist) is TID. Cosopt is BID even though dorzolamide alone is TID.",
  cite:"Lectures 12 (Lam_Glaucoma.pdf) slide 69; T@86123 11/19"},
 
 {id:"LMB-080", skill:"class", prof:'Lam', tier:'new', topic:"lm-seq", sub:"combo", concept:"lm-seq-combo-class-pairs",
@@ -894,11 +894,11 @@ QUESTIONS.push(
  tags:["hard", "case", "sig"], source:"both",
  stem:"A 68-year-old man takes dorzolamide 2% TID OU and timolol 0.5% BID OU in separate bottles. His prescriber converts him to Cosopt. What is the correct sig?",
  options:[
-  {t:"1 gtt OU once daily", correct:false, why:"Combination products are never once daily (slide 69), so QD is wrong."},
+  {t:"1 gtt OU once daily", correct:false, why:"The slide 69 combinations are never once daily, so QD is wrong."},
   {t:"1 gtt OU BID", correct:true, why:"Cosopt is dosed BID (slide 69)."},
   {t:"1 gtt OU three times daily", correct:false, why:"TID is the frequency of dorzolamide alone and of Simbrinza (slides 51, 69), not of Cosopt."},
   {t:"1 gtt OU four times daily", correct:false, why:"QID is the pilocarpine frequency (slide 57)."}],
- teach:"When two drugs are converted to a combination, the sig follows the combination, not the components. Dorzolamide alone is TID, but Cosopt is BID, so the converted sig is BID. Combination products are never once daily.",
+ teach:"When two drugs are converted to a combination, the sig follows the combination, not the components. Dorzolamide alone is TID, but Cosopt is BID, so the converted sig is BID. The slide 69 combinations are never once daily.",
  cite:"Lectures 12 (Lam_Glaucoma.pdf) slides 51, 69; T@76056 11/19"},
 
 {id:"LMB-082", skill:"case", prof:'Lam', tier:'new', topic:"lm-seq", sub:"combo", concept:"lm-seq-combo-simbrinza-choice",
@@ -931,6 +931,6 @@ QUESTIONS.push(
   {t:"Each added class lowers IOP more than the one before", correct:false, why:"The reductions get lower down the list (slides 20, 31, 41, 51), so each added class lowers IOP less, not more."},
   {t:"More bottles and a higher dosing frequency", correct:true, why:"More bottles and a higher dosing frequency lower compliance, and patients are often on many drops."},
   {t:"Combination products are not available for the added classes", correct:false, why:"Combination products do exist for the added classes: Combigan, Cosopt and Simbrinza (slide 69)."}],
- teach:"Each added class is dosed more often and lowers pressure less, and the patient is on more bottles, so compliance falls. Dr. Lam said only about 33% of patients are adherent to their eye drops. Combination products and a once daily gel are the ways to simplify.",
+ teach:"From the prostaglandin analog through the topical CAI, each added class is dosed more often and lowers pressure less, and the patient is on more bottles, so compliance falls. Dr. Lam said only about 33% of patients are adherent to their eye drops. Combination products and a once daily gel are the ways to simplify.",
  cite:"Lectures 12 (Lam_Glaucoma.pdf) slide 68; T@75575 11/19"}
 );

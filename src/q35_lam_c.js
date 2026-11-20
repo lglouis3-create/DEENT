@@ -263,12 +263,12 @@ QUESTIONS.push(
  tags:["hard", "multi"], source:'both',
  stem:"Mr. Kowalski, 72, uses bimatoprost 1 drop OU in the evening, timolol 0.5% solution BID, brimonidine 0.1% BID and dorzolamide 2% TID, and cannot manage four bottles. Which individual changes are reasonable? Select all that apply.",
  options:[
-  {t:"Replace timolol and brimonidine with Combigan 1 drop OU BID", correct:true, why:"Combigan contains brimonidine and timolol, both in her regimen, dosed BID, so two bottles become one."},
+  {t:"Replace timolol and brimonidine with Combigan 1 drop OU BID", correct:true, why:"Combigan contains brimonidine and timolol, both in his regimen, dosed BID, so two bottles become one."},
   {t:"Increase bimatoprost to 1 drop OU BID", correct:false, why:"A prostaglandin analog given more than once daily has decreased efficacy, and it does not reduce the number of bottles."},
   {t:"Replace timolol and dorzolamide with Cosopt 1 drop OU BID", correct:true, why:"Cosopt is dorzolamide plus timolol, both in the regimen, dosed BID, so two bottles become one."},
   {t:"Replace timolol and dorzolamide with Cosopt 1 drop OU once daily", correct:false, why:"Cosopt is dosed BID. Once daily is the wrong frequency."},
   {t:"Replace timolol solution with timolol gel 1 drop OU once daily", correct:true, why:"Timolol gel is dosed once daily instead of BID, so it cuts doses each day and has fewer systemic effects than the solution."},
-  {t:"Add Simbrinza 1 drop OU TID to the current regimen", correct:false, why:"Simbrinza is a CAI plus an alpha-2 agonist. She already uses both drugs, so adding it repeats them."}],
+  {t:"Add Simbrinza 1 drop OU TID to the current regimen", correct:false, why:"Simbrinza is a CAI plus an alpha-2 agonist. He already uses both classes, so adding it repeats them."}],
  teach:"To cut bottles, combine drugs already in use or move to once daily dosing. Combigan replaces timolol plus brimonidine, Cosopt replaces timolol plus dorzolamide, and timolol gel replaces timolol solution once daily. Raising a prostaglandin analog to BID lowers efficacy, and a combination must not repeat a drug.",
  cite:"Lectures 12 (Lam_Glaucoma.pdf) slides 32, 69, 76-82; T@90121 11/19"},
 

@@ -137,7 +137,7 @@ QUESTIONS.push(
 
 {id:"LMA-011", skill:"case", prof:'Lam', tier:'new', topic:"lm-collect", sub:"drugs", concept:"lm-collect-reverse-ioprise",
  tags:["hard", "case"], source:"both",
- stem:"A 74-year-old woman with open-angle glaucoma used latanoprost 1 gtt OU QHS for a year with her IOP at target. Her IOP is now above target. She instills the latanoprost every evening with correct technique. Four months ago she began prednisolone eye drops after a corneal procedure. What is the best pharmacist response?",
+ stem:"A 74-year-old woman with open-angle glaucoma used latanoprost 1 gtt OU QHS for a year with her IOP at target. Her IOP is now above target. She instills the latanoprost every evening with correct technique. Four months ago she began prednisolone eye drops after a corneal procedure. What is the best pharmacist response before any change in her glaucoma regimen?",
  options:[
   {t:"Reassure her, since eye drops are the lowest-risk steroid form", correct:false, why:"Ophthalmic corticosteroids carry the highest risk of raising IOP, so the drops are a likely cause and not a safe form."},
   {t:"Discuss the prednisolone drops with the prescriber", correct:true, why:"IOP rose after a corticosteroid started while latanoprost was used correctly, which points to the steroid; drugs that worsen IOP are discussed with the prescriber."},
@@ -629,7 +629,7 @@ QUESTIONS.push(
   {t:"Switch to over-the-counter brimonidine", correct:false, why:"OTC brimonidine (Lumify) is formulated for eye redness and not for glaucoma."},
   {t:"Add timolol, the next class in the sequence", correct:true, why:"He already uses the more effective prostaglandin analog, so with adherence and technique confirmed the plan is to add another agent, and timolol is the next class."},
  ],
- teach:"Bimatoprost is the more effective of the two prostaglandin analogs, so a switch inside the class has no higher step left. After adherence and technique are confirmed, the plan is to add an agent from the next class in her sequence, the beta blocker. The nearest wrong option, latanoprost, is the lower-efficacy agent, which would be a step down.",
+ teach:"Bimatoprost is the more effective of the two prostaglandin analogs, of the two she compared, latanoprost and bimatoprost. After adherence and technique are confirmed, the plan is to add an agent from the next class in her sequence, the beta blocker. The nearest wrong option, latanoprost, is the lower-efficacy agent, which would be a step down.",
  cite:"Lecture 12 (Lam_Glaucoma.pdf) slide 23; T@71578, T@56607 11/19"},
 
 {id:"LMA-063", skill:"case", prof:'Lam', tier:'new', topic:"lm-pga", sub:"case", concept:"lm-pga-cost-generic",
