@@ -354,3 +354,8 @@
 - Louis's reviews: Lam feedback unhelpful, Explain more unrelated, drug lists in paragraphs, diagrams abstract and hard to match to slides. Done: five-objective Lam guide with colour cards and folded blocks; feedback rewritten (three writers, two skeptics, fixes applied); Explain more mapped per topic; shared diagram library and 8 redrawn figures plus ey-targets; his classmate's reference pictures used only for presentation ideas.
 - Sikazwe's email (readings list, practice questions): dry eye low-yield; 14 new questions; OPEN_QUESTIONS updated.
 - Checks on this state before the final run: style_check, test.js, likely_check, links_check, diagrams_ey/oo/fb/lg checks, stepper_test, blank_check pass. Full run_checks and course tests: see the next entry.
+
+## 2026-11-20 (evening): Smith Exam 3 hints
+- Hints recorded (STYLE.md, course.js facts); Louis: no cumulative Exam 1 on Exam 3, so Smith pool is 18 eye questions; exams[2] `typed: true, blanks: 3`.
+- Added EB-001..020 (fill-in, mechanism of action; 18 with dupOf), EG-001..012 (gaps: drug-table recall, histamine symptoms, dry-eye causes, side-effect sets); GAPS.md/STARS.md in the agent report: acidosis chain already covered (EI-028..031, EI-046..050). Stars 41 -> 47. Slides 8 and 9: no item cites them.
+- Open: EG-004 phenylephrine is listed as alpha 2 on slide 57 and the chart, alpha 1 on slide 8.
