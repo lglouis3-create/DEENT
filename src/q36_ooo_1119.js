@@ -297,7 +297,7 @@ QUESTIONS.push(
 
 {id:"OB-027", skill:"pk", prof:'Sikazwe', tier:'new', topic:"oo-de", sub:"drugs", concept:"oo-b-lifitegrast-fate",
  tags:["hard", "two-facts"], source:"both",
- stem:"Which statement about the systemic exposure of lifitegrast is correct?",
+ stem:"How much of lifitegrast reaches the circulation, and what happens to what does?",
  options:[
   {t:"It is minimal, and what enters the circulation is N-deethylated by CYP", correct:false, why:"N-deethylation is the metabolism of brinzolamide and dorzolamide (slide 37)."},
   {t:"It is high, and what enters the circulation is eliminated unchanged", correct:false, why:"The exposure is minimal."},
