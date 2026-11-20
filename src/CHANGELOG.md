@@ -15,6 +15,7 @@ Every update adds its bullets here in the same commit that makes the change.
 - Eleven Exam 3 diagrams: glaucoma inflow and outflow, angle closure, carbonic anhydrase, allergy, dry eye and more.
 - Dr. Sikazwe's Exam 3 questions are starred by how likely he is to ask them.
 - Arrows in drawn figures keep their heads when another figure is in a closed folder.
+- Search: a Search button stays at the bottom right once the header is scrolled away; a Clear button empties the box.
 
 ## 2026-11-18 (Exam 3: eye, ear, mouth)
 - Exam 3 practice: Dr. Smith's eye lectures and Dr. Sikazwe's ear, mouth and eye chemistry.
