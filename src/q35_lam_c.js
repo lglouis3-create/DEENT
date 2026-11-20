@@ -4,7 +4,7 @@
    that file, cited "11/19"; her part starts at 35742).
    Source notes: eyelid closure is "2 minutes" in the handout and "1 or 2 minutes" in the lecture, so items use "1 to 2 minutes". The lecture says combination
    products are "never once daily", but the handout lists netarsudil/latanoprost (Rocklatan) once daily in the evening; items key the three table products
-   (BID, BID, TID) and use Rocklatan only as a once-daily distractor for a TID question. Slides 80 and 84 name Combigan as brimonidine 0.2%/timolol 0.5%.
+   (BID, BID, TID) and use Rocklatan only as a once-daily distractor for a TID question. Slide 84 names Combigan as brimonidine 0.2%/timolol 0.5%. Slide 51 prints Simbrinza as "dorzolamide + brimonidine" while slide 69 and the handout print brinzolamide/brimonidine; items use brinzolamide/brimonidine. Slide 62 prints netarsudil as QHS (handout: in the evening).
    The lecture also says "dorzolamide and brimonidine" can be combined; the product in the handout is brinzolamide/brimonidine (Simbrinza), so no item keys
    a dorzolamide/brimonidine pairing. The wait between a suspension and a gel-forming solution is not stated, so no item keys it. The handout and lecture call
    the stinging with CAIs "1 to 2 minutes". Closed-angle items (lm-pacg) are lowYield: she said she would not test them except the drugs that raise the risk.
@@ -16,8 +16,8 @@ QUESTIONS.push(
  options:[
   {t:"The preservative is wiped off the tip, so the next drop is unpreserved", correct:false, why:"The concern is bacteria carried into the bottle, not loss of preservative."},
   {t:"The tip can warm the solution, so the drug loses potency", correct:false, why:"Nothing on the slides links the tip to warming. The concern is contamination of a multiple-dose bottle."},
-  {t:"Bacteria from the lid and skin can be carried into the multiple-dose bottle", correct:true, why:"The tip must not touch the eye, the hands or any surface. Skin and eyes carry bacteria, and the same bottle is used again, so contamination reaches later drops."},
-  {t:"The tip can scratch the cornea, so the drop must be given faster", correct:false, why:"Scratching is not the point made. The point is that the bottle tip must stay clean to keep the bottle free of bacteria."}],
+  {t:"Bacteria from the lid and skin can enter the multiple-dose bottle", correct:true, why:"The tip must not touch the eye, the hands or any surface. Skin and eyes carry bacteria, and the same bottle is used again, so contamination reaches later drops."},
+  {t:"The tip can scratch the cornea, so the drop should be given more quickly each time", correct:false, why:"Scratching is not the point made. The point is that the bottle tip must stay clean to keep the bottle free of bacteria."}],
  teach:"Do not touch the dropper tip to the eye, hands or any surface: skin and eyes carry bacteria that would contaminate a multiple-dose bottle.",
  cite:"Lectures 12 (Lam_Glaucoma.pdf) slide 71; T@86335, T@86388 11/19"},
 
@@ -48,8 +48,8 @@ QUESTIONS.push(
  stem:"Mr. Osei, 69, started dorzolamide. He presses hard on the corner of his eyelid for about 20 seconds after each drop, and it hurts. What should the pharmacist counsel?",
  options:[
   {t:"Press firmly for 5 minutes so that more of the drop stays in the eye", correct:false, why:"The lecture gives 1 to 2 minutes and gentle pressure, not firm pressure."},
-  {t:"Press gently, not hard enough to cause pain, and keep the lids closed for 1 to 2 minutes", correct:true, why:"The lecture: press on the corner of the eyelid for 1 or 2 minutes; the patient does not have to press hard enough to cause pain, only enough for the drug to stay in the eye."},
-  {t:"Stop pressing and blink for 10 seconds so the drop spreads over the eye", correct:false, why:"Closure for 1 to 2 minutes is the instruction; blinking does not reduce drainage."},
+  {t:"Press gently, without pain, and keep the lids closed for 1 to 2 minutes", correct:true, why:"The lecture: press on the corner of the eyelid for 1 or 2 minutes; the patient does not have to press hard enough to cause pain, only enough for the drug to stay in the eye."},
+  {t:"Stop pressing and blink for about 10 seconds so the drop spreads over the whole eye surface", correct:false, why:"Closure for 1 to 2 minutes is the instruction; blinking does not reduce drainage."},
   {t:"Press gently for 10 minutes so the drop is not absorbed systemically", correct:false, why:"Gentle pressure is right, but the time is 1 to 2 minutes, not 10 minutes."}],
  teach:"Gentle eyelid closure or pressure at the corner of the eyelid for 1 to 2 minutes; it should not hurt.",
  cite:"Lectures 12 (Lam_Glaucoma.pdf) slides 72-73; T@87251, T@87190 11/19"},
@@ -73,7 +73,7 @@ QUESTIONS.push(
  options:[
   {t:"Dab the tip with a clean tissue after each drop, and blink to spread the drop", correct:false, why:"The tip should touch nothing, and blinking does not reduce drainage."},
   {t:"Keep the tip from touching anything, and keep the lids closed instead of blinking", correct:true, why:"Two points: the tip must not touch the eye, hands or any surface, and eyelid closure for 1 to 2 minutes lowers systemic absorption."},
-  {t:"Touch the tip to the lid for the first drop only, and keep the lids closed for 15 minutes", correct:false, why:"The tip should touch nothing for any drop, and closure is 1 to 2 minutes; 15 minutes is the contact lens wait."},
+  {t:"Touch the tip to the lid for the first drop alone, and keep the lids closed for 15 minutes", correct:false, why:"The tip should touch nothing for any drop, and closure is 1 to 2 minutes; 15 minutes is the contact lens wait."},
   {t:"Hold the bottle closer to the eye for aim, and rub the closed lid for 2 minutes", correct:false, why:"Closeness invites contact with the tip, and the lids are not rubbed."}],
  teach:"Two basics at once: the tip touches nothing (bacteria), and the lids stay closed 1 to 2 minutes (systemic absorption).",
  cite:"Lectures 12 (Lam_Glaucoma.pdf) slides 71-73; T@86335, T@87190 11/19"},
@@ -82,10 +82,10 @@ QUESTIONS.push(
  tags:["hard", "case"], source:'both',
  stem:"Mr. Grant, 72, uses bimatoprost, timolol, brimonidine and dorzolamide solutions. He puts all four in within one minute each morning, and his eye pressure stays above goal although he takes each dose. What is the problem and the fix?",
  options:[
-  {t:"Dose too low: the prescriber should raise each product to 2 drops", correct:false, why:"The drops are standard doses; the loss comes from the second drop washing out the first."},
-  {t:"Incorrect administration: wait 5 minutes between solutions so one drop does not flush out the last", correct:true, why:"Slide 74: wait 5 minutes between two solutions so the first drop is not flushed away or diluted by the second."},
-  {t:"Frequency inappropriate: the four solutions should be given once daily", correct:false, why:"The doses follow each drug's usual frequency; frequency is not the error, and more frequent PGA dosing lowers efficacy."},
-  {t:"Dosage form inappropriate: the four solutions should be changed to suspensions", correct:false, why:"Suspensions also need a 5 minute wait after a solution, so changing the form does not address the timing."}],
+  {t:"Dose too low: the prescriber should raise each product to 2 drops per eye at each dose", correct:false, why:"The drops are standard doses; the loss comes from the second drop washing out the first."},
+  {t:"Incorrect administration: no 5 minute wait, so each drop flushes out the one before", correct:true, why:"Slide 74: wait 5 minutes between two solutions so the first drop is not flushed away or diluted by the second."},
+  {t:"Frequency inappropriate: the four solutions should be moved to once daily dosing at bedtime", correct:false, why:"The doses follow each drug's usual frequency; frequency is not the error, and more frequent PGA dosing lowers efficacy."},
+  {t:"Dosage form inappropriate: the four solutions should be changed to suspensions with longer retention", correct:false, why:"Suspensions also need a 5 minute wait after a solution, so changing the form does not address the timing."}],
  teach:"Two solutions: wait 5 minutes between them, so the first drop is not flushed away or diluted. Skipping the wait is an incorrect administration problem that lowers effectiveness.",
  cite:"Lectures 12 (Lam_Glaucoma.pdf) slide 74; T@87799, T@87898 11/19"},
 
@@ -126,9 +126,9 @@ QUESTIONS.push(
  tags:["hard", "case"], source:'both',
  stem:"Ms. Okoye, 60, uses brimonidine 0.1% solution and timolol gel-forming solution once daily, both in the morning. How should the pharmacist counsel her?",
  options:[
-  {t:"Brimonidine first, wait 5 minutes, then the timolol gel", correct:false, why:"5 minutes is the wait between two solutions or between a solution and a suspension."},
-  {t:"Timolol gel first, wait 10 minutes, then brimonidine", correct:false, why:"The gel-forming solution goes last."},
-  {t:"Timolol gel first, wait 5 minutes, then brimonidine", correct:false, why:"The gel-forming solution goes last, and the wait before it is 10 minutes."},
+  {t:"Brimonidine first, wait about 5 minutes, then the timolol gel-forming solution", correct:false, why:"5 minutes is the wait between two solutions or between a solution and a suspension."},
+  {t:"Timolol gel first, wait at least 10 minutes, then brimonidine solution", correct:false, why:"The gel-forming solution goes last."},
+  {t:"Timolol gel first, wait about 5 minutes, then the brimonidine solution", correct:false, why:"The gel-forming solution goes last, and the wait before it is 10 minutes."},
   {t:"Brimonidine first, wait at least 10 minutes, then the timolol gel", correct:true, why:"Slide 74: wait 10 minutes between a solution and an ointment or gel-forming solution; the solution goes first."}],
  teach:"Solution first, then at least 10 minutes before an ointment or gel-forming solution (such as timolol gel).",
  cite:"Lectures 12 (Lam_Glaucoma.pdf) slides 74-75; T@88303, T@88567 11/19"},
@@ -164,7 +164,7 @@ QUESTIONS.push(
   {t:"Shake a suspension well before use", correct:true, why:"The handout: shake suspensions well before use."},
   {t:"Wait 10 minutes between two solutions", correct:false, why:"Two solutions are 5 minutes apart; 10 minutes is the wait before an ointment or gel."},
   {t:"Use drops at least 10 minutes before a gel-forming solution", correct:true, why:"The handout: use drops at least 10 minutes before the ointment to ensure the efficacy of the drops."},
-  {t:"Use the suspension last among solution and suspension because it stays longer in the tear film", correct:true, why:"Slide 74: prolonged retention time in the tear film."}],
+  {t:"Instill the suspension after the solution because it stays longer in the tear film", correct:true, why:"Slide 74: prolonged retention time in the tear film."}],
  teach:"Solution to solution 5 minutes; solution to suspension 5 minutes (shake it); solution to ointment or gel 10 minutes.",
  cite:"Lectures 12 (Lam_Glaucoma.pdf) slides 74-75; T@87799, T@88303 11/19"},
 
@@ -249,12 +249,12 @@ QUESTIONS.push(
  tags:["hard", "case"], source:'both',
  stem:"Mr. Pruitt, 71, brings bimatoprost 1 drop OU in the evening, Combigan 1 drop OU BID, timolol 0.5% 1 drop OU BID from another prescriber, and dorzolamide 2% 1 drop OU TID. Which medication-related problem is most important?",
  options:[
-  {t:"Indication: duplicate therapy, since Combigan and timolol both contain timolol", correct:true, why:"Slide 78: unnecessary drug therapy includes duplicate therapy. Combigan is brimonidine/timolol (slide 69)."},
+  {t:"Indication: duplicate therapy, as Combigan already contains timolol", correct:true, why:"Slide 78: unnecessary drug therapy includes duplicate therapy. Combigan is brimonidine/timolol (slide 69)."},
   {t:"Effectiveness: frequency inappropriate, since Combigan should be given TID", correct:false, why:"Combigan is dosed BID."},
   {t:"Effectiveness: dose too low, since dorzolamide should be given QID", correct:false, why:"Dorzolamide is dosed TID."},
   {t:"Indication: need additional therapy, since pilocarpine is missing", correct:false, why:"Cholinergics are used later in the sequence; nothing here calls for adding a drug, while two products overlap."}],
  teach:"Check combination products for ingredients that repeat a drug already listed: duplicate therapy is an indication problem.",
- cite:"Lectures 12 (Lam_Glaucoma.pdf) slides 69, 78; T@76157 11/19"},
+ cite:"Lectures 12 (Lam_Glaucoma.pdf) slides 15, 69, 78; T@76157 11/19"},
 
 {id:"LMC-023", skill:"case", prof:'Lam', tier:'new', topic:"lm-impl", sub:"regim", concept:"lmc-asthma-two-drugs",
  tags:["hard", "case"], source:'both',
@@ -262,10 +262,10 @@ QUESTIONS.push(
  options:[
   {t:"Bimatoprost and brimonidine", correct:false, why:"Asthma is not a precaution for these two; brimonidine's precautions are cardiovascular disease, kidney disease and stroke."},
   {t:"Bimatoprost and timolol", correct:false, why:"Timolol is a precaution, but the prostaglandin analog is not."},
-  {t:"Timolol and pilocarpine", correct:true, why:"Slides 34 and 60: asthma is a precaution for both the beta blocker (bronchospasm) and the cholinergic agonist (bronchospasm)."},
+  {t:"Timolol and pilocarpine", correct:true, why:"Slides 34 and 59: asthma is a precaution for both the beta blocker (bronchospasm) and the cholinergic agonist (bronchospasm)."},
   {t:"Brimonidine and pilocarpine", correct:false, why:"Pilocarpine is a precaution, but brimonidine is not an asthma precaution."}],
  teach:"Uncontrolled asthma or COPD: beta blockers and pilocarpine can cause bronchospasm if absorbed; flag them.",
- cite:"Lectures 12 (Lam_Glaucoma.pdf) slides 33-34, 58-61; T@60994, T@81993 11/19"},
+ cite:"Lectures 12 (Lam_Glaucoma.pdf) slides 33-34, 58-59; T@60994, T@81993 11/19"},
 
 {id:"LMC-024", skill:"case", prof:'Lam', tier:'new', topic:"lm-impl", sub:"regim", concept:"lmc-pf-combination-cosopt-pf",
  tags:["hard", "case"], source:'both',
@@ -287,16 +287,16 @@ QUESTIONS.push(
   {t:"My eyes sting for about a minute after dorzolamide", correct:false, why:"This is an expected adverse reaction, a safety item (slide 79), and it resolves in 1 to 2 minutes."},
   {t:"I stopped my timolol because the copay is too high", correct:true, why:"Slide 79: cannot afford medication is an adherence (cost) problem."}],
  teach:"Adherence category: does not understand, prefers not to take, forgets, product not available, cannot administer, cost (cannot afford, more cost-effective drug available).",
- cite:"Lectures 12 (Lam_Glaucoma.pdf) slides 16, 79; T@74386 11/19"},
+ cite:"Lectures 12 (Lam_Glaucoma.pdf) slides 15-16, 78-79; T@74386 11/19"},
 
 {id:"LMC-026", skill:"case", prof:'Lam', tier:'new', topic:"lm-impl", sub:"regim", concept:"lmc-cost-single-use-pf",
  tags:["hard", "case"], source:'both',
  stem:"Mr. Silvestri, 74, was changed to single-use preservative-free tafluprost vials. He has no reaction to preservatives, and the copay is high. Which action addresses the problem?",
  options:[
-  {t:"Cost: ask the prescriber about a lower-cost generic prostaglandin analog in a multiple-dose bottle", correct:true, why:"Slide 79: a more cost-effective medication available. Prostaglandin analogs have lower-cost generics, and single-use vials cost a little more."},
-  {t:"Effectiveness: ask the prescriber to double the dose of tafluprost", correct:false, why:"Cost, not dose, is the problem, and a prostaglandin analog given more often loses efficacy."},
-  {t:"Safety: ask the prescriber to change tafluprost to an ointment", correct:false, why:"Nothing points to a safety problem, and ointments are a last group in order of application."},
-  {t:"Indication: stop tafluprost, because single-use vials have no indication", correct:false, why:"Tafluprost is a prostaglandin analog, first line; the problem is cost."}],
+  {t:"Cost: ask the prescriber about a lower-cost generic prostaglandin analog", correct:true, why:"Slide 79: a more cost-effective medication available. Prostaglandin analogs have lower-cost generics, and single-use vials cost a little more."},
+  {t:"Effectiveness: ask the prescriber to double the dose of tafluprost to improve control", correct:false, why:"Cost, not dose, is the problem, and a prostaglandin analog given more often loses efficacy."},
+  {t:"Safety: ask the prescriber to change tafluprost to an ointment form instead", correct:false, why:"Nothing points to a safety problem, and ointments are a last group in order of application."},
+  {t:"Indication: stop tafluprost, because single-use vials have no indication here", correct:false, why:"Tafluprost is a prostaglandin analog, first line; the problem is cost."}],
  teach:"Cost problems: look for a more cost-effective drug. Preservative-free single-use products are a little more expensive; generic prostaglandin analogs are low in cost.",
  cite:"Lectures 12 (Lam_Glaucoma.pdf) slides 20, 68, 79; T@54842, T@51810 11/19"},
 
@@ -305,7 +305,7 @@ QUESTIONS.push(
  stem:"Which combination product is dosed three times daily?",
  options:[
   {t:"Brimonidine/timolol (Combigan)", correct:false, why:"Combigan is dosed BID."},
-  {t:"Dorzolamide/timolol (Cosopt PF)", correct:false, why:"Cosopt and Cosopt PF are dosed BID."},
+  {t:"Dorzolamide/timolol (Cosopt or Cosopt PF)", correct:false, why:"Cosopt and Cosopt PF are dosed BID."},
   {t:"Brinzolamide/brimonidine (Simbrinza)", correct:true, why:"Slide 69: Simbrinza, CAI plus alpha-2 agonist, 1 drop TID."},
   {t:"Netarsudil/latanoprost (Rocklatan)", correct:false, why:"Rocklatan is one drop once daily in the evening."}],
  teach:"Combination table: Combigan BID, Cosopt/Cosopt PF BID, Simbrinza TID. Rocklatan (netarsudil/latanoprost) is once daily in the evening.",
@@ -353,7 +353,7 @@ QUESTIONS.push(
   {t:"Individual small containers labeled single use", correct:true, why:"The lecture: look for the individual little bottles labeled single use; those are preservative-free products."},
   {t:"A label saying to store the bottle in the refrigerator", correct:false, why:"Storage instructions do not tell whether a product contains preservative."},
   {t:"A name ending in -olol or -zolamide", correct:false, why:"The ending shows the drug class, not whether the product has preservative."},
-  {t:"A thick suspension that must be shaken", correct:false, why:"Shaking applies to suspensions; it does not signal a preservative-free product."}],
+  {t:"A thick suspension that is shaken before use", correct:false, why:"Shaking applies to suspensions; it does not signal a preservative-free product."}],
  teach:"Single-use individual containers are preservative-free (for example latanoprost Xelpros, tafluprost Zioptan, Cosopt PF); multiple-dose bottles contain a preservative such as BAK.",
  cite:"Lectures 12 (Lam_Glaucoma.pdf) slides 21, 68; T@55285 11/19"},
 
@@ -372,10 +372,10 @@ QUESTIONS.push(
  tags:["hard", "case"], source:'both',
  stem:"Mrs. Tanaka, 62, wears soft contact lenses all day and puts her morning timolol drop in with the lenses in. What should the pharmacist counsel?",
  options:[
-  {t:"Remove the lenses first and wait at least 15 minutes after the drop before reinserting", correct:true, why:"Slide 83: remove lenses, then wait 15 minutes; lenses trap drugs and preservatives against the eye."},
-  {t:"Remove the lenses first and reinsert them after 10 minutes", correct:false, why:"10 minutes is the wait before an ointment or gel; the lens wait is 15 minutes."},
-  {t:"Keep the lenses in and keep the lids closed for 1 to 2 minutes", correct:false, why:"Lenses are removed before the drop; closure of the lids is a separate counseling point."},
-  {t:"Remove the lenses first and reinsert them after 5 minutes", correct:false, why:"5 minutes is the wait between solutions, not the lens wait."}],
+  {t:"Remove the lenses first and reinsert them at least 15 minutes after the drop", correct:true, why:"Slide 83: remove lenses, then wait 15 minutes; lenses trap drugs and preservatives against the eye."},
+  {t:"Remove the lenses first and reinsert them after 10 minutes, once the drop has settled", correct:false, why:"10 minutes is the wait before an ointment or gel; the lens wait is 15 minutes."},
+  {t:"Keep the lenses in and keep the lids closed for 1 to 2 minutes after the drop", correct:false, why:"Lenses are removed before the drop; closure of the lids is a separate counseling point."},
+  {t:"Remove the lenses first and reinsert them after 5 minutes, as between two solutions", correct:false, why:"5 minutes is the wait between solutions, not the lens wait."}],
  teach:"Contact lenses: remove before the drop, wait at least 15 minutes before reinserting.",
  cite:"Lectures 12 (Lam_Glaucoma.pdf) slides 83-84; T@91467, T@91057 11/19"},
 
@@ -383,9 +383,9 @@ QUESTIONS.push(
  tags:["hard", "reasoning"], source:'both',
  stem:"Which concern explains the advice to remove contact lenses before using eye drops?",
  options:[
-  {t:"Lenses speed drainage of the drop through the nasolacrimal duct", correct:false, why:"Drainage is reduced by eyelid closure; lenses are not linked to faster drainage."},
-  {t:"Lenses trap the drug and the preservative against the surface of the eye", correct:true, why:"Slide 83: the concern is that lenses trap drugs and preservatives against the eye, which matters most with BAK."},
-  {t:"Lenses block the drop from reaching the cornea at all", correct:false, why:"The concern is trapping against the eye surface, not blocking the drop."},
+  {t:"Lenses speed drainage of the drop down through the nasolacrimal duct", correct:false, why:"Drainage is reduced by eyelid closure; lenses are not linked to faster drainage."},
+  {t:"Lenses trap the drug and preservative against the eye surface", correct:true, why:"Slide 83: the concern is that lenses trap drugs and preservatives against the eye, which matters most with BAK."},
+  {t:"Lenses block the drop from reaching the cornea completely", correct:false, why:"The concern is trapping against the eye surface, not blocking the drop."},
   {t:"Lenses make the drop wash out the next solution", correct:false, why:"Washout is the reason for the 5 minute wait between products."}],
  teach:"Lenses trap drugs and preservatives such as BAK against the eye, which can damage it.",
  cite:"Lectures 12 (Lam_Glaucoma.pdf) slide 83; T@91253 11/19"},
@@ -405,10 +405,10 @@ QUESTIONS.push(
  tags:["hard", "case"], source:'both',
  stem:"Mr. Ndlovu, 60, wears contact lenses and has been told that lens wearers cannot use glaucoma drops. Which response is correct?",
  options:[
-  {t:"He should ask for oral therapy, since lenses rule out eye drops", correct:false, why:"Lens wear does not rule out drops."},
-  {t:"He can use them: remove the lenses, instill the drops and wait at least 15 minutes before reinserting", correct:true, why:"The lecture: wearing lenses does not exclude a patient from any product; it changes how the drops are used."},
-  {t:"He can use them with the lenses in if he waits 5 minutes between drops", correct:false, why:"Lenses are removed before every drop; 5 minutes is the wait between products."},
-  {t:"He should remove the lenses only for products that contain BAK", correct:false, why:"BAK makes removal especially important, but lenses come out before any drop."}],
+  {t:"He should ask the prescriber for oral therapy, since lenses rule out eye drops", correct:false, why:"Lens wear does not rule out drops."},
+  {t:"He can use them: remove lenses, instill, and wait 15 minutes before reinserting", correct:true, why:"The lecture: wearing lenses does not exclude a patient from any product; it changes how the drops are used."},
+  {t:"He can use them with the lenses in, if he waits 5 minutes between each pair of drops", correct:false, why:"Lenses are removed before every drop; 5 minutes is the wait between products."},
+  {t:"He should remove the lenses just for products that contain BAK, and not for others", correct:false, why:"BAK makes removal especially important, but lenses come out before any drop."}],
  teach:"Contact lens wear does not exclude any product; remove lenses, give the drops, wait 15 minutes.",
  cite:"Lectures 12 (Lam_Glaucoma.pdf) slide 83; T@91731 11/19"},
 
@@ -431,8 +431,8 @@ QUESTIONS.push(
  options:[
   {t:"Remove lenses and wait 5 minutes after the drop, and ask the prescriber about a suspension", correct:false, why:"The lens wait is 15 minutes, and a suspension does not remove the preservative."},
   {t:"Keep the lenses in and give the drop at bedtime, and ask the prescriber about a preservative-free product", correct:false, why:"Lenses come out before the drop at any time of day."},
-  {t:"Remove lenses and wait at least 15 minutes after the drop, and ask the prescriber about a single-use preservative-free product", correct:true, why:"BAK is trapped by lenses and irritating; the lens routine is needed, and preservative-free products are the option for preservative intolerance."},
-  {t:"Remove lenses and wait 15 minutes, and add a second prostaglandin analog for comfort", correct:false, why:"Another prostaglandin analog does not address the preservative."}],
+  {t:"Remove lenses and wait 15 minutes, and ask about a single-use preservative-free product", correct:true, why:"BAK is trapped by lenses and irritating; the lens routine is needed, and preservative-free products are the option for preservative intolerance."},
+  {t:"Remove lenses and wait 15 minutes, and ask the prescriber to add a second prostaglandin analog for comfort", correct:false, why:"Another prostaglandin analog does not address the preservative."}],
  teach:"BAK plus lenses: remove lenses, wait 15 minutes, and consider a preservative-free product for preservative intolerance.",
  cite:"Lectures 12 (Lam_Glaucoma.pdf) slides 21, 68, 83; T@91253, T@55285 11/19"},
 
@@ -440,10 +440,10 @@ QUESTIONS.push(
  tags:["hard", "case"], source:'both',
  stem:"Ms. Rowe, 67, opened her netarsudil bottle 8 weeks ago, kept it at room temperature, and it still has liquid. What counseling is correct?",
  options:[
-  {t:"Keep using it; once opened it stays at room temperature until empty", correct:false, why:"That applies to latanoprost, latanoprostene bunod and tafluprost, which have no 6 week limit."},
-  {t:"Replace it: once opened, netarsudil is kept at room temperature for less than 6 weeks", correct:true, why:"Slide 85: netarsudil is refrigerated before opening and kept at room temperature for less than 6 weeks once opened."},
-  {t:"Move it to the refrigerator and keep using it until empty", correct:false, why:"Refrigeration is for the unopened bottle."},
-  {t:"Keep using it for 6 more weeks, then replace it", correct:false, why:"The 6 week limit counts from opening, and 8 weeks have passed."}],
+  {t:"Keep using it; once opened it stays at room temperature until the bottle is empty", correct:false, why:"That applies to latanoprost, latanoprostene bunod and tafluprost, which have no 6 week limit."},
+  {t:"Replace it: opened netarsudil lasts less than 6 weeks at room temperature", correct:true, why:"Slide 85: netarsudil is refrigerated before opening and kept at room temperature for less than 6 weeks once opened."},
+  {t:"Move it to the refrigerator and keep using it until the bottle is empty", correct:false, why:"Refrigeration is for the unopened bottle."},
+  {t:"Keep using it for another 6 weeks, then replace it with a new bottle", correct:false, why:"The 6 week limit counts from opening, and 8 weeks have passed."}],
  teach:"Netarsudil: refrigerate before opening; room temperature for less than 6 weeks after opening (it relates to how long the preservative lasts).",
  cite:"Lectures 12 (Lam_Glaucoma.pdf) slide 85; T@92709, T@92773 11/19"},
 
@@ -451,10 +451,10 @@ QUESTIONS.push(
  tags:["hard", "case"], source:'both',
  stem:"Mr. Kane receives new, unopened bottles of latanoprost and netarsudil. Which storage counseling is correct?",
  options:[
-  {t:"Refrigerate both until opened; once opened keep both at room temperature, using the netarsudil within 6 weeks", correct:true, why:"Slide 85: both are refrigerated before opening; after opening both are kept at room temperature, with netarsudil limited to less than 6 weeks."},
-  {t:"Refrigerate both before and after opening, using the netarsudil within 6 weeks", correct:false, why:"After opening, both are kept at room temperature."},
-  {t:"Keep both at room temperature from the start, using the netarsudil within 6 weeks", correct:false, why:"Both are refrigerated until opened."},
-  {t:"Refrigerate both until opened; once opened keep both at room temperature for 6 weeks", correct:false, why:"Only netarsudil has the 6 week limit."}],
+  {t:"Refrigerate both until opened, then keep at room temperature, netarsudil within 6 weeks", correct:true, why:"Slide 85: both are refrigerated before opening; after opening both are kept at room temperature, with netarsudil limited to less than 6 weeks."},
+  {t:"Refrigerate both before and after opening, using the netarsudil within 6 weeks of opening", correct:false, why:"After opening, both are kept at room temperature."},
+  {t:"Keep both at room temperature from the start, using the netarsudil within 6 weeks of opening", correct:false, why:"Both are refrigerated until opened."},
+  {t:"Refrigerate both until opened; once opened keep both at room temperature for up to 6 weeks", correct:false, why:"Only netarsudil has the 6 week limit."}],
  teach:"Unopened: refrigerator. Opened: room temperature (netarsudil less than 6 weeks).",
  cite:"Lectures 12 (Lam_Glaucoma.pdf) slide 85; T@92421, T@92709 11/19"},
 
@@ -475,7 +475,7 @@ QUESTIONS.push(
  options:[
   {t:"Keep latanoprost at room temperature before opening; instill the gel, wait 10 minutes, then latanoprost", correct:false, why:"Latanoprost is refrigerated before opening, and the gel goes last."},
   {t:"Refrigerate latanoprost before and after opening; instill latanoprost, wait 5 minutes, then the gel", correct:false, why:"It goes to room temperature once opened, and the wait before the gel is 10 minutes."},
-  {t:"Refrigerate the unopened latanoprost and keep it at room temperature once opened; instill latanoprost, wait 10 minutes, then the gel", correct:true, why:"Slide 85 for storage; slides 74-75 for order and the 10 minute wait before the gel."},
+  {t:"Refrigerate unopened latanoprost and keep it at room temperature once opened; instill latanoprost, wait 10 minutes, then the gel", correct:true, why:"Slide 85 for storage; slides 74-75 for order and the 10 minute wait before the gel."},
   {t:"Refrigerate the unopened latanoprost and keep it at room temperature once opened; instill the gel, wait 5 minutes, then latanoprost", correct:false, why:"Storage is right, but the gel goes last after 10 minutes."}],
  teach:"Two counseling points together: storage (fridge until opened) and order (solution, 10 minutes, then gel).",
  cite:"Lectures 12 (Lam_Glaucoma.pdf) slides 74-75, 85; T@92421, T@88303 11/19"},
@@ -495,10 +495,10 @@ QUESTIONS.push(
  tags:["hard", "case"], source:'both',
  stem:"Mr. Soto's eye pressure reached target at his 4-week visit. Which follow-up plan matches the usual schedule?",
  options:[
-  {t:"Eye doctor visit 3-4 months after starting, then every 2-4 weeks once at target", correct:false, why:"The intervals are reversed."},
-  {t:"Eye doctor visit 2-4 weeks after starting, then every 6 weeks once at target", correct:false, why:"The interval at target is 3-4 months."},
-  {t:"Eye doctor visit 3-4 months after starting, then yearly once at target", correct:false, why:"The first visit is 2-4 weeks after starting."},
-  {t:"Eye doctor visit 2-4 weeks after starting, then every 3-4 months once at target", correct:true, why:"Slide 86: 2-4 weeks after therapy initiation and 3-4 months once the target IOP is achieved."}],
+  {t:"Eye doctor visit 3-4 months after starting, then visits at 2-4 week intervals at target", correct:false, why:"The intervals are reversed."},
+  {t:"Eye doctor visit 2-4 weeks after starting, then visits at 6 week intervals at target", correct:false, why:"The interval at target is 3-4 months."},
+  {t:"Eye doctor visit 3-4 months after starting, then yearly visits once at target", correct:false, why:"The first visit is 2-4 weeks after starting."},
+  {t:"Eye doctor visit 2-4 weeks after starting, then visits at 3-4 month intervals at target", correct:true, why:"Slide 86: 2-4 weeks after therapy initiation and 3-4 months once the target IOP is achieved."}],
  teach:"Follow-up: 2-4 weeks after therapy starts; every 3-4 months once target IOP is achieved.",
  cite:"Lectures 12 (Lam_Glaucoma.pdf) slide 86; T@93065, T@93243 11/19"},
 
@@ -506,8 +506,8 @@ QUESTIONS.push(
  tags:["hard", "case"], source:'both',
  stem:"Mr. Bauer, 70, started dorzolamide 2% TID. He says each drop stings for about 10 minutes. What should the pharmacist do?",
  options:[
-  {t:"Send him to his eye doctor, since stinging should resolve in 1 to 2 minutes and another class may be needed", correct:true, why:"Slide 52 and the lecture: stinging or burning that lasts longer than 1 to 2 minutes should be reported to the eye doctor, who may switch the drug class."},
-  {t:"Reassure him that stinging for about 10 minutes is typical with dorzolamide", correct:false, why:"Typical stinging resolves within 1 to 2 minutes."},
+  {t:"Send him to his eye doctor, since stinging should clear within 1 to 2 minutes", correct:true, why:"Slide 52 and the lecture: stinging or burning that lasts longer than 1 to 2 minutes should be reported to the eye doctor, who may switch the drug class."},
+  {t:"Reassure him that stinging for about 10 minutes is typical with dorzolamide drops", correct:false, why:"Typical stinging resolves within 1 to 2 minutes."},
   {t:"Tell him to wait for his visit in 3-4 months and report it then", correct:false, why:"A side effect that is not brief should reach the eye doctor sooner."},
   {t:"Tell him to keep the lids closed for 15 minutes after each drop", correct:false, why:"Eyelid closure is 1 to 2 minutes and does not treat stinging."}],
  teach:"Common CAI stinging resolves in 1 to 2 minutes; longer means see the eye doctor, who may change the class.",
@@ -519,7 +519,7 @@ QUESTIONS.push(
  options:[
   {t:"The cloudiness shows the bottle is contaminated, so she should replace it", correct:false, why:"The cloudiness is an expected effect of the drop settling, not a sign of contamination."},
   {t:"Move the doses to bedtime, as with latanoprost, to avoid the blur", correct:false, why:"Dorzolamide is dosed TID; the bedtime timing belongs to latanoprost."},
-  {t:"The cloudiness is the drop settling in the eye and clears once it has settled", correct:true, why:"Slide 52 and the lecture: blurred vision is brief cloudiness as the drop settles; with TID dosing patients need to know it improves."},
+  {t:"The cloudiness is the drop settling in the eye and clears afterward", correct:true, why:"Slide 52 and the lecture: blurred vision is brief cloudiness as the drop settles; with TID dosing patients need to know it improves."},
   {t:"Stop the drops until the cloudiness has stopped for 2 weeks", correct:false, why:"The effect is brief and expected; stopping the drug is not the advice."}],
  teach:"CAI blur is brief cloudiness as the drop settles; with TID dosing, tell the patient it improves.",
  cite:"Lectures 12 (Lam_Glaucoma.pdf) slide 52; T@77064 11/19"},
@@ -528,8 +528,8 @@ QUESTIONS.push(
  tags:["hard", "case"], source:'both',
  stem:"Mrs. Haddad, 70, takes oral metoprolol and is started on timolol 0.5% drops BID. Which monitoring counseling is correct?",
  options:[
-  {t:"Stop metoprolol on the days she uses timolol", correct:false, why:"Both can be used together; the advice is to monitor the additive effect."},
-  {t:"Check her blood pressure and heart rate, especially when timolol is started", correct:true, why:"The lecture: drops can reach the bloodstream and add to the oral beta blocker, so check blood pressure and heart rate at the start."},
+  {t:"Stop the metoprolol on the days she uses the timolol drops", correct:false, why:"Both can be used together; the advice is to monitor the additive effect."},
+  {t:"Check her blood pressure and heart rate, especially at the start", correct:true, why:"The lecture: drops can reach the bloodstream and add to the oral beta blocker, so check blood pressure and heart rate at the start."},
   {t:"No checks are needed because eye drops do not reach the bloodstream", correct:false, why:"A small amount can reach the bloodstream; that is why this is a precaution."},
   {t:"Measure her eye pressure at home each day", correct:false, why:"IOP is measured by the eye doctor; it does not address the additive systemic effect."}],
  teach:"Ophthalmic beta blocker with an oral beta blocker is allowed with an additive risk: check blood pressure and heart rate, especially at the start.",
@@ -539,10 +539,10 @@ QUESTIONS.push(
  tags:["hard", "case"], source:'both',
  stem:"Mr. Ruiz, 74, has had a stroke and takes an antihypertensive. His eye doctor starts brimonidine. Which monitoring counseling fits?",
  options:[
-  {t:"Check his blood sugar before each dose", correct:false, why:"Blood sugar is not tied to brimonidine on the slides."},
-  {t:"Check his eye pressure at home each day", correct:false, why:"IOP is measured by the eye doctor."},
-  {t:"Monitor for iris darkening, which signals brimonidine is working", correct:false, why:"Iris pigmentation is a prostaglandin analog effect, not a sign of brimonidine response."},
-  {t:"Check his blood pressure, since absorbed drug can constrict vessels and change the effect of his antihypertensive", correct:true, why:"Slide 44 and the lecture: stroke and cardiovascular disease are precautions; check blood pressure, with a low chance of interaction with antihypertensives."}],
+  {t:"Check his blood sugar before each dose, since absorbed brimonidine can raise glucose", correct:false, why:"Blood sugar is not tied to brimonidine on the slides."},
+  {t:"Have him measure his own eye pressure at home each morning and bring the readings", correct:false, why:"IOP is measured by the eye doctor."},
+  {t:"Watch for darkening of the iris, which signals that brimonidine is working well", correct:false, why:"Iris pigmentation is a prostaglandin analog effect, not a sign of brimonidine response."},
+  {t:"Check his blood pressure, as stroke and antihypertensive use are precautions", correct:true, why:"Slide 44 and the lecture: stroke and cardiovascular disease are precautions; check blood pressure, with a low chance of interaction with antihypertensives."}],
  teach:"Alpha-2 agonist precautions: cardiovascular disease, kidney disease, stroke, and drugs that affect blood pressure; advise a blood pressure check.",
  cite:"Lectures 12 (Lam_Glaucoma.pdf) slides 44, 86; T@72782, T@73085 11/19"},
 
@@ -550,10 +550,10 @@ QUESTIONS.push(
  tags:["hard", "case"], source:'both',
  stem:"Ms. Ellis, 69, starts latanoprost in the evening and dorzolamide/timolol (Cosopt) BID. Which monitoring plan fits the pharmacist's role?",
  options:[
-  {t:"IOP at the pharmacy 2-4 weeks after starting; side effects go to her primary care provider", correct:false, why:"Pharmacists do not measure IOP, and the eye doctor is the contact."},
-  {t:"IOP at an eye doctor visit 3-4 months after starting; side effects are not reviewed until then", correct:false, why:"The first visit is 2-4 weeks after starting, and counseling on side effects starts at the first fill."},
-  {t:"IOP at an eye doctor visit 2-4 weeks after starting; the pharmacist counsels on side effects and sends her back for any that are not typical", correct:true, why:"Slide 86-87 and the lecture: efficacy is IOP by the eye doctor; the pharmacist's role is to explain side effects and refer those that are not brief."},
-  {t:"Her vision is checked at each refill; any side effect is stopped without contacting anyone", correct:false, why:"Open-angle glaucoma is silent, and side effects are reported to the eye doctor."}],
+  {t:"IOP is checked at the pharmacy 2-4 weeks after starting, and side effects go to her primary care provider", correct:false, why:"Pharmacists do not measure IOP, and the eye doctor is the contact."},
+  {t:"Eye doctor checks IOP 3-4 months after starting; the pharmacist leaves side effects for that visit to be raised then", correct:false, why:"The first visit is 2-4 weeks after starting, and counseling on side effects starts at the first fill."},
+  {t:"Eye doctor checks IOP 2-4 weeks after starting; pharmacist counsels on side effects and refers atypical ones", correct:true, why:"Slide 86-87 and the lecture: efficacy is IOP by the eye doctor; the pharmacist's role is to explain side effects and refer those that are not brief."},
+  {t:"Her vision is checked at each refill by the pharmacist; any side effect is handled by stopping the drug", correct:false, why:"Open-angle glaucoma is silent, and side effects are reported to the eye doctor."}],
  teach:"Monitoring plan: efficacy = IOP by the eye doctor (2-4 weeks, then 3-4 months at goal); safety = counsel on expected side effects and refer the atypical ones.",
  cite:"Lectures 12 (Lam_Glaucoma.pdf) slides 86-87; T@93275 11/19"},
 
@@ -573,10 +573,10 @@ QUESTIONS.push(
  tags:["hard", "reasoning"], source:'both',
  stem:"Which patient has the risk factors for primary angle-closure glaucoma?",
  options:[
-  {t:"A 72-year-old Southeast Asian woman whose mother had angle-closure glaucoma", correct:true, why:"Slide 89: female sex, older age, Southeast Asian ethnicity and first-degree relatives with PACG."},
+  {t:"A 72-year-old Southeast Asian woman whose mother had PACG", correct:true, why:"Slide 89: female sex, older age, Southeast Asian ethnicity and first-degree relatives with PACG."},
   {t:"A 72-year-old non-Hispanic white man with type 2 diabetes and myopia", correct:false, why:"These fit risk factors for open-angle glaucoma, not angle-closure (slides 7 and 89)."},
   {t:"A 35-year-old Southeast Asian man with no family history", correct:false, why:"He has one factor; the profile combines female sex, older age, ethnicity and family history."},
-  {t:"A 70-year-old woman with a thin central cornea and high eye pressure", correct:false, why:"Thin central corneal thickness and high IOP are open-angle glaucoma risk factors."}],
+  {t:"A 70-year-old non-Hispanic white man with a thin central cornea and high eye pressure", correct:false, why:"Thin central corneal thickness and high IOP are open-angle glaucoma risk factors."}],
  teach:"PACG risk factors: female sex, older age, Asian (Southeast Asian) ethnicity, first-degree relatives with PACG.",
  cite:"Lectures 12 (Lam_Glaucoma.pdf) slides 7, 89; T@93901 11/19"},
 
@@ -608,7 +608,7 @@ QUESTIONS.push(
  options:[
   {t:"Phenylephrine raises eye pressure in open-angle glaucoma by changing trabecular outflow", correct:false, why:"That mechanism belongs to corticosteroids, not phenylephrine."},
   {t:"Phenylephrine lowers the risk because it constricts the pupil", correct:false, why:"Alpha-1 agonists cause pupillary dilation."},
-  {t:"Alpha-1 agonists such as phenylephrine can dilate the pupil and raise the risk of angle closure", correct:true, why:"Slide 90 and the handout: alpha-1 agonists (phenylephrine, ephedrine) cause pupillary dilation and are on the list of drugs that worsen angle closure."},
+  {t:"Alpha-1 agonists such as phenylephrine can dilate the pupil and raise angle-closure risk", correct:true, why:"Slide 90 and the handout: alpha-1 agonists (phenylephrine, ephedrine) cause pupillary dilation and are on the list of drugs that worsen angle closure."},
   {t:"Phenylephrine is safe because it is not an anticholinergic", correct:false, why:"The list on slide 90 also includes alpha-1 agonists."}],
  teach:"Causes of pupillary dilation or ciliary body edema that raise angle-closure risk include anticholinergics, antidepressants, alpha-1 agonists and beta-2 agonists.",
  cite:"Lectures 12 (Lam_Glaucoma.pdf) slide 90; T@94538 11/19"},
@@ -622,18 +622,18 @@ QUESTIONS.push(
   {t:"One drop in both eyes four times a day", correct:false, why:"OU is both eyes; OS is the left."},
   {t:"One drop in the left eye once a day", correct:false, why:"QD is daily; QID is four times a day."}],
  teach:"Sig abbreviations: GTT drop; OD right; OS left; OU both; QD daily; BID twice; TID three times; QID four times; QAM morning; QPM evening.",
- cite:"Lectures 12 (Lam_Glaucoma.pdf) slide 5; T@80688 11/19"},
+ cite:"Lectures 12 (Lam_Glaucoma.pdf) slide 4; T@80688 11/19"},
 
 {id:"LMC-056", skill:"case", prof:'Lam', tier:'new', topic:"lm-impl", sub:"regim", concept:"lmc-sig-wrong-eye",
  tags:["hard", "case"], source:'both',
  stem:"Mrs. Rahman, 70, is diagnosed with open-angle glaucoma in both eyes. Her prescription reads latanoprost 1 gtt OD QPM. What should the pharmacist do?",
  options:[
-  {t:"Contact the prescriber: OD is the right eye only, and both eyes need treatment", correct:true, why:"OD is the right eye and OU is both; the evening once daily frequency is correct."},
-  {t:"Dispense it, since OD means both eyes", correct:false, why:"OU is both eyes; OD is the right eye."},
-  {t:"Contact the prescriber: the frequency should be BID", correct:false, why:"Latanoprost is dosed once daily; BID would lower efficacy."},
-  {t:"Dispense it, since QPM means twice daily", correct:false, why:"QPM means in the evening, once daily."}],
+  {t:"Contact the prescriber: OD is the right eye, and both eyes need drops", correct:true, why:"OD is the right eye and OU is both; the evening once daily frequency is correct."},
+  {t:"Dispense it as written, since OD stands for treatment of both eyes", correct:false, why:"OU is both eyes; OD is the right eye."},
+  {t:"Contact the prescriber: the frequency should be BID rather than once daily", correct:false, why:"Latanoprost is dosed once daily; BID would lower efficacy."},
+  {t:"Dispense it as written, since QPM stands for twice daily dosing", correct:false, why:"QPM means in the evening, once daily."}],
  teach:"Read eye and frequency separately: OD right, OS left, OU both; QPM is evening.",
- cite:"Lectures 12 (Lam_Glaucoma.pdf) slide 5; T@57583 11/19"},
+ cite:"Lectures 12 (Lam_Glaucoma.pdf) slide 4; T@57583 11/19"},
 
 {id:"LMC-057", skill:"dose", prof:'Lam', tier:'new', topic:"lm-impl", sub:"regim", concept:"lmc-sig-correct-frequency",
  tags:["hard", "reasoning"], source:'both',
@@ -663,10 +663,10 @@ QUESTIONS.push(
  tags:["hard", "case"], source:'both',
  stem:"A new prescription reads Combigan 1 gtt OU TID. What is the problem?",
  options:[
-  {t:"Frequency too low: Combigan should be dosed QID", correct:false, why:"Combigan is BID; TID is the Simbrinza frequency."},
-  {t:"Frequency too high: combination products here are dosed BID, so contact the prescriber", correct:true, why:"Slide 69: Combigan is 1 drop BID; a higher frequency is an effectiveness or safety problem."},
-  {t:"The eye is wrong: Combigan is used in one eye only", correct:false, why:"The sig reads OU, both eyes, which is acceptable."},
-  {t:"There is no problem: the combination is dosed TID", correct:false, why:"Only Simbrinza is dosed TID."}],
+  {t:"Frequency too low: Combigan should be dosed QID, so contact the prescriber", correct:false, why:"Combigan is BID; TID is the Simbrinza frequency."},
+  {t:"Frequency too high: Combigan is BID, so contact the prescriber", correct:true, why:"Slide 69: Combigan is 1 drop BID; a higher frequency is an effectiveness or safety problem."},
+  {t:"The eye is wrong: Combigan is used in a single eye, so contact the prescriber", correct:false, why:"The sig reads OU, both eyes, which is acceptable."},
+  {t:"There is no problem: the combination is dosed TID, so dispense it", correct:false, why:"Only Simbrinza is dosed TID."}],
  teach:"Combigan BID; Cosopt BID; Simbrinza TID. An out-of-range frequency is a medication-related problem to clarify with the prescriber.",
  cite:"Lectures 12 (Lam_Glaucoma.pdf) slide 69; T@86115 11/19"},
 
@@ -674,23 +674,23 @@ QUESTIONS.push(
  tags:["hard", "case"], source:'both',
  stem:"A prescription reads Simbrinza 1 gtt OU BID. Which statement is correct?",
  options:[
-  {t:"The frequency is correct: combination products are dosed BID", correct:false, why:"Simbrinza is the TID product."},
-  {t:"The frequency is too high: Simbrinza should be once daily", correct:false, why:"Combination products are not once daily."},
-  {t:"The eye is wrong: OU should be OD", correct:false, why:"OU means both eyes, which is acceptable."},
-  {t:"The frequency is too low: Simbrinza is dosed TID, so clarify with the prescriber", correct:true, why:"Slide 69: Simbrinza is brinzolamide/brimonidine 1 drop TID."}],
+  {t:"The frequency is correct: combination products are dosed BID, so dispense it", correct:false, why:"Simbrinza is the TID product."},
+  {t:"Frequency too high: Simbrinza should be given once daily, so clarify with the prescriber", correct:false, why:"Combination products are not once daily."},
+  {t:"The eye is wrong: OU should be OD, so clarify with the prescriber", correct:false, why:"OU means both eyes, which is acceptable."},
+  {t:"Frequency too low: Simbrinza is TID, so clarify with the prescriber", correct:true, why:"Slide 69: Simbrinza is brinzolamide/brimonidine 1 drop TID."}],
  teach:"Simbrinza is TID; Combigan and Cosopt are BID.",
  cite:"Lectures 12 (Lam_Glaucoma.pdf) slide 69; T@76212 11/19"},
 
 {id:"LMC-061", skill:"tell", prof:'Lam', tier:'new', topic:"lm-impl", sub:"regim", concept:"lmc-sig-netarsudil-qpm",
  tags:["hard", "case"], source:'both',
- stem:"A prescription reads netarsudil 0.02% 1 gtt OU QPM. Which reading is correct?",
+ stem:"A prescription reads netarsudil 0.02% 1 gtt OU QHS. Which reading is correct?",
  options:[
-  {t:"One drop in each eye in the evening", correct:true, why:"Slide 62: netarsudil 1 drop daily in the evening; OU both eyes."},
+  {t:"One drop in each eye in the evening", correct:true, why:"Slide 62 and the handout: netarsudil 1 drop daily in the evening (QHS); OU is both eyes."},
   {t:"One drop in the right eye in the evening", correct:false, why:"OD is the right eye; OU is both."},
-  {t:"One drop in each eye in the morning", correct:false, why:"QPM is in the evening; QAM is the morning."},
-  {t:"One drop in each eye four times a day", correct:false, why:"QID is four times a day; QPM is once, in the evening."}],
- teach:"Netarsudil is once daily in the evening; QPM is evening, OU both eyes.",
- cite:"Lectures 12 (Lam_Glaucoma.pdf) slides 5, 62; T@82920 11/19"},
+  {t:"One drop in each eye in the morning", correct:false, why:"QHS is in the evening; QAM is the morning."},
+  {t:"One drop in each eye four times a day", correct:false, why:"QID is four times a day; QHS is once, in the evening."}],
+ teach:"Netarsudil is once daily in the evening (QHS on slide 62, in the evening in the handout); OU is both eyes.",
+ cite:"Lectures 12 (Lam_Glaucoma.pdf) slides 4, 62; T@82920 11/19"},
 
 {id:"LMC-062", skill:"counsel", prof:'Lam', tier:'new', topic:"lm-impl", sub:"order", concept:"lmc-gel-lens-sequence",
  tags:["hard", "case"], source:'both',
