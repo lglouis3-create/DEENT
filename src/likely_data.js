@@ -48,7 +48,7 @@
    files q33-q35, ids LMA-, LMB-, LMC-), most likely first: (1) her own Ms. Lopez polls; (2) the sequence of drug classes ("there will
    be one exam question", T@84156); (3) dosing she said to memorize (T@48426); (4) the frequency-error and next-step cases;
    (5) counseling rules (eyelid closure, waits, order of application, contact lenses, storage); (6) intolerance and inadequate
-   response; (7) the precautions she repeated. Items she said are not tested are lowYield and never starred. The page now carries 537 stars.
+   response; (7) the precautions she repeated. Items she said are not tested are lowYield and never starred. The page now carries 577 stars.
    ========================================================================== */
 const LIKELY = {
   sources: {
@@ -105,6 +105,11 @@ const LIKELY = {
                       detail:'Lam_Glaucoma.pdf: her Ms. Lopez multiple-choice polls and patient cases (slides 9-11, 24-25, 37, 47, 64), put to the class on 11/19'},
     'lam-ex3':       {by:'lam',     label:'Dr. Lam said it would be tested',
                       detail:'Her words on 11/19 (DEENT_Lecture_11.19_transcript.txt from T@35742): she writes questions from her learning objectives, one essay question, at least one question on the sequence of drugs, "memorize the dosing", preservative-free as a hint; what she said is not tested is lowYield and carries no star'},
+    // Dr. Lam, ophthalmic, oral and otic disorders (Lecture 13, Exam 3; added 2026-11-20): 11/20 transcript, T@n = character offset
+    'lam-ex3b':      {by:'lam',     label:'Dr. Lam said it would be tested (11/20)',
+                      detail:'Her words on 11/20 (DEENT_Lecture_11.20_transcript.txt): the ophthalmic order of application and waits as "very high", differential diagnosis then whether she can treat then how, memorize the conjunctivitis differentiation, the word "severe" in tooth pain, what she would hint on the exam; what she said is not tested is lowYield and never starred'},
+    'lam-q2':        {by:'lam',     label:"Dr. Lam's own cases and polls (11/20)",
+                      detail:'Lam_OphthalmicDisorders.pdf slides 51-57 (itchy eyes after yard work, gritty eyes), Lam_OralDisorders_slides.pdf slides 20-23, 62-67 (toothache, sensitive teeth, cold sore cases) and 73-75 (dry mouth poll), worked aloud on 11/20'},
   },
   items: [
     /* ---- Dr. Smith, Pathophysiology deck (10/29) ---- */
@@ -675,5 +680,42 @@ const LIKELY = {
     {id:"LMB-014", source:"lam-ex3", ref:"T@60383, T@60531 11/19 (slide 34)", reason:"She went through the precautions of this class on the slide and repeated the ones she tied to the lungs and the pulse."},
     {id:"LMB-026", source:"lam-ex3", ref:"T@72404, T@72801 11/19 (slide 44)", reason:"She went through the precautions of this class and explained the reason for each in lecture."},
     {id:"LMB-027", source:"lam-ex3", ref:"T@72801, T@72824 11/19 (slide 44)", reason:"She explained the reasoning behind the vascular precautions of this class and what to tell the patient."},
+    /* ---- Dr. Lam, 11/20: ophthalmic, oral and otic disorders (Lecture 13), most likely first ---- */
+    {id:"LOD-057", source:"lam-ex3b", ref:"T@34316, T@34480 11/20 (slides 44, 45)", reason:"She said this order of products is the point she teaches twice and put its chance of appearing on the exam as very high."},
+    {id:"LOD-056", source:"lam-ex3b", ref:"T@34316, T@42107 11/20 (slides 44, 45)", reason:"Part of the order-of-application block she called very high in likelihood: the form of each item and the time between them."},
+    {id:"LOD-055", source:"lam-ex3b", ref:"T@34316, T@42051 11/20 (slide 44)", reason:"The gap between two products of the same form, part of the sequence she said is very likely to be asked."},
+    {id:"LOD-060", source:"lam-q2", ref:"T@41604, T@41757, T@41944 11/20 (slides 44, 45, 51, 54)", reason:"Her own case; she said to identify the formulation of each product first because that sets the order and the time between them."},
+    {id:"LOD-069", source:"lam-q2", ref:"T@41126, T@41454 11/20 (slide 54)", reason:"Her own poll on the sequence for her itchy-eyes patient who also uses a glaucoma product; she answered it by sorting the products by form."},
+    {id:"LOD-062", source:"lam-ex3b", ref:"T@35656, T@35748 11/20 (slide 46)", reason:"She covered what to do about lenses when the drop contains a preservative, in the same general-considerations block she called very high."},
+    {id:"LOD-063", source:"lam-ex3b", ref:"T@36394 11/20 (slides 48, 49)", reason:"She gave this administration step and why it matters in the technique part of the block she marked as very likely."},
+    {id:"LOD-065", source:"lam-ex3b", ref:"T@36979, T@38414 11/20 (slide 50)", reason:"She gave the rule for how long an opened bottle stays in use and what the printed date does not change."},
+    {id:"LOD-053", source:"lam-ex3b", ref:"T@33594, T@34146 11/20 (slide 43)", reason:"She said the fix for this irritation is a change in what is used, then counseled on hygiene with it."},
+    {id:"LOD-067", source:"lam-q2", ref:"T@39115, T@39379, T@39542 11/20 (slides 51, 52)", reason:"Her own first case after the yard work; she told the class to read the question first and look at the symptoms and exposures."},
+    {id:"LOD-068", source:"lam-q2", ref:"T@40364, T@40623 11/20 (slide 53)", reason:"Her own second question on the same patient; she said what each recommended product does for the patient."},
+    {id:"LOD-071", source:"lam-q2", ref:"T@43228, T@43108 11/20 (slides 55, 56)", reason:"Her own gritty-eye case; she said it has a risk factor on the medication list and fits a diagnosis she asked the class to name."},
+    {id:"LOD-072", source:"lam-q2", ref:"T@43441, T@43565 11/20 (slides 10, 57)", reason:"Her own question on what to start for the gritty-eye patient, besides referral; she explained that the other choices treat a different problem."},
+    {id:"LOR-006", source:"lam-q2", ref:"T@53195, T@53489, T@54320 11/20 (slides 22, 23)", reason:"Her own select-all practice case of sensitive teeth; she went through the options and said which step usually comes before a desensitizing product."},
+    {id:"LOR-003", source:"lam-q2", ref:"T@51849, T@52915 11/20 (slides 20, 21)", reason:"Her own toothache case; she asked whether any non-drug advice fits and said what the pharmacist can offer at this point."},
+    {id:"LOR-039", source:"lam-q2", ref:"T@82760, T@82953 11/20 (slides 62-64)", reason:"Her own lip-sore case; she named the condition from the location and triggers and gave her reason for the self-care decision."},
+    {id:"LOR-040", source:"lam-q2", ref:"T@83449, T@83569, T@84533 11/20 (slides 65-67)", reason:"Her own select-all cold sore case with the campus wellness visit; she judged each option and gave the reason for her self-care decision."},
+    {id:"LOR-058", source:"lam-q2", ref:"T@86505, T@87046 11/20 (slides 73-75)", reason:"Her select-all poll on a patient's medications and dry mouth; she confirmed from the list the ones with the property that dries the mouth."},
+    {id:"LOR-005", source:"lam-ex3b", ref:"T@55530, T@56064 11/20 (slide 11)", reason:"She said she will write the word \"severe\" on the exam when the pain is a reason to send the patient on."},
+    {id:"LOD-070", source:"lam-q2", ref:"T@42223, T@42420 11/20 (slide 51)", reason:"A student question on her glaucoma case; she separated what is fine from what worsens the disease."},
+    {id:"LOD-027", source:"lam-ex3b", ref:"T@21718, T@22420 11/20 (slides 28, 29)", reason:"She told the class to memorize the differentiation slides for the three kinds of conjunctivitis."},
+    {id:"LOD-030", source:"lam-ex3b", ref:"T@20762, T@22420 11/20 (slides 28, 29)", reason:"A case of the differentiation she said to memorize; she named the symptoms that separate the three kinds."},
+    {id:"LOR-053", source:"lam-ex3b", ref:"T@58338, T@73857 11/20 (slides 27, 47)", reason:"She compared the two sores aloud (site, look, trigger) and said to be able to tell them apart."},
+    {id:"LOR-055", source:"lam-ex3b", ref:"T@73857, T@77492 11/20 (slides 47, 51)", reason:"She said her questions run from the differential diagnosis to whether she can treat; what is asked for must match the diagnosis."},
+    {id:"LOT-030", source:"lam-ex3b", ref:"T@97351, T@97500 11/20 (slide 23)", reason:"She called the comparison slide of the three ear conditions the main thing in the otic lecture."},
+    {id:"LOT-032", source:"lam-ex3b", ref:"T@97351, T@97500, T@97767 11/20 (slides 8, 23)", reason:"A case on the three-way comparison slide she said is the main thing in the otic lecture."},
+    {id:"LOT-034", source:"lam-ex3b", ref:"T@97615, T@97716 11/20 (slide 23)", reason:"She went through the findings that point away from a condition the pharmacist can treat, on the comparison slide."},
+    {id:"LOR-004", source:"lam-ex3b", ref:"T@46304, T@46667, T@52915 11/20 (slides 9, 11)", reason:"She said that this kind of presentation cannot be helped by anything OTC at this stage and the patient is sent on."},
+    {id:"LOR-042", source:"lam-ex3b", ref:"T@78875, T@79161 11/20 (slide 53)", reason:"She marked the directions for this first-line cream as something to memorize."},
+    {id:"LOR-045", source:"lam-ex3b", ref:"T@78159, T@78410 11/20 (slides 52, 53)", reason:"She said this product's benefit is the reason it is first line, unlike the others for pain."},
+    {id:"LOT-014", source:"lam-ex3b", ref:"T@95175, T@95399 11/20 (slide 14)", reason:"She worked through the directions for the one product she recommends for wax, as a counseling point."},
+    {id:"LOT-015", source:"lam-ex3b", ref:"T@96243 11/20 (slide 16)", reason:"She gave the point at which a patient on this product is sent to the provider."},
+    {id:"LOD-036", source:"lam-ex3b", ref:"T@25827, T@26376 11/20 (slides 35, 36)", reason:"She presented the first-line plan for allergic eye symptoms and said what each part contributes."},
+    {id:"LOD-038", source:"lam-q2", ref:"T@40557, T@40623 11/20 (slides 35-37)", reason:"In her yard-work case she explained the separate purpose of each of the two recommended drops."},
+    {id:"LOR-007", source:"lam-ex3b", ref:"T@48832, T@53489 11/20 (slides 14, 15)", reason:"She said the first step in sensitive teeth is usually a change of brushing habits and tools, before any desensitizing product."},
+    {id:"LOD-047", source:"lam-ex3b", ref:"T@30060, T@30841 11/20 (slide 39)", reason:"She went through the precautions of the decongestant eye medicines and who should not use them for long."},
   ],
 };
