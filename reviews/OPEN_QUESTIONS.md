@@ -137,3 +137,8 @@ Resolved 2026-11-06 (Louis's direction): both drawings, with Compare structures;
 - His emailed reading list ends at slide 48 (slides 5-8; 15-21; 27-31; 33-48). On 11/19 he said the reading ended at slide 51; the email is later, so dry eye (slides 49-51) is now low-yield (topic oo-beyond, sub de). Ask him if he means to include it.
 - Slide 32 (alpha-2 SAR) is not in the emailed list, but self-assessment question 4 (slide 66) tests the NH linker, so its items stay in the pool.
 - His practice Q4 says fluoride "can erode teeth in children": the slides say fluorosis (staining), not erosion. Not keyed; ask him.
+
+## Louis's answers, 2026-11-20 (evening)
+- Dry eye (Sikazwe slides 49-51): keep the items as low-yield "just in case" (done: topic oo-beyond, sub de).
+- Smith star EA-009 (eyelid-corner counseling): stays unstarred (she did not stress it); the question stays in the bank.
+- Sikazwe practice Q4 ("fluoride ... can erode teeth in children"): reviewed against his slides 17-18, his 11/18 recording (T@21646: fluorosis shows as white spots, later brown stains) and Handbook of Nonprescription Drugs 20e Ch 31 ("a mottled appearance of the surface enamel"; severe cases "can result in pitting and surface defects"). Fluoride strengthens (fluorapatite resists acid erosion) and promotes mineral deposition: both supported. "Erode": not a word his slides use; read as acid erosion it is not supported (fluorapatite resists it); read as the damage of excess fluoride in children (fluorosis, pitting in severe cases) it is supported. Left unkeyed.
