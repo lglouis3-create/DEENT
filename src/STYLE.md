@@ -279,3 +279,7 @@ Readings: Otic/Oral/Ophthalmic slides 5-8; 15-21; 27-31; 33-48. Self-assessment 
 3. Hand draw the N-dealkylated products of brinzolamide and dorzolamide (both undergo CYP N-deethylation; the N-deethylated metabolites are active).
 4. TRUE/FALSE. Fluoride ions strengthen hydroxyapatite, promote calcium and phosphate deposition into enamel, and can erode teeth in children.
 Built on them: `src/q37_sik_practice.js` (OP2-001 to OP2-014). His Q4 is not keyed: the slides say fluorapatite resists acid erosion and excess fluoride (above 2 mg/L) causes fluorosis (white, later brown spots); "erode" is ambiguous (reviews/OPEN_QUESTIONS.md).
+
+
+## Dr. Smith: Exam 3 study hints (emailed to the class, pasted by Louis 2026-11-20)
+1 Answer the objectives listed in the slide deck. 2 Know the parts of the eye for glaucoma pathophysiology and tear production. 3 No need to memorize slides 8 or 9. 4 Understand the pathology of open angle glaucoma, the role of histamine in the symptoms of allergic conjunctivitis and the pathology of dry eye. 5 Memorize the drugs in the drug table. 6 Know all mechanisms of action in the deck and the small details given in class that differentiate drugs within a class. 7 List significant side effects and explain how metabolic acidosis occurs with carbonic anhydrase inhibitors. "I have three fill in the blank questions on this exam. They are questions regarding mechanism of action." Exam 3 sets `typed: true, blanks: 3` so papers carry three fill-in items; eye blank items in `q38_eye_blank.js`.
