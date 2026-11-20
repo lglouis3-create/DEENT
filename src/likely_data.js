@@ -44,6 +44,11 @@
    questions" (T@1100); (4) the objectives slide 2 (classification, CBDA, ADMET). Slides 10-13 are FYI ("It won't be
    on the exam", T@10343) and carry no star; slides 33-68 have no transcript yet and are starred only on printed
    evidence (question slides, "you must know", Self Assessment).
+   Exam 3, Dr. Lam (2026-11-20): the last block holds 34 stars for her glaucoma therapeutics questions (deck Lam_Glaucoma.pdf, Lecture 12;
+   files q33-q35, ids LMA-, LMB-, LMC-), most likely first: (1) her own Ms. Lopez polls; (2) the sequence of drug classes ("there will
+   be one exam question", T@84156); (3) dosing she said to memorize (T@48426); (4) the frequency-error and next-step cases;
+   (5) counseling rules (eyelid closure, waits, order of application, contact lenses, storage); (6) intolerance and inadequate
+   response; (7) the precautions she repeated. Items she said are not tested are lowYield and never starred. The page now carries 537 stars.
    ========================================================================== */
 const LIKELY = {
   sources: {
@@ -93,6 +98,11 @@ const LIKELY = {
                       detail:'Sikazwe_OOO_mc.pdf: Polleve-1 (slide 25) and Polleve-2 (slide 39), his question slides 9 and 43, and his Self Assessment questions (slides 62-68)'},
     'sik-ex3':       {by:'sikazwe', label:'Dr. Sikazwe stressed it in the OOO lecture',
                       detail:'His words on 11/18 (DEENT_Lecture_11.18_transcript.txt, slides 1-32; character offsets T@n); slides 33-68 were taught 11/19, transcript not yet in'},
+    // Dr. Lam, glaucoma therapeutics (Lecture 12, Exam 3; added 2026-11-20): 11/19 transcript, T@n = character offset
+    'lam-q':         {by:'lam',     label:"Dr. Lam's own questions (her polls and cases)",
+                      detail:'Lam_Glaucoma.pdf: her Ms. Lopez multiple-choice polls and patient cases (slides 9-11, 24-25, 37, 47, 64), put to the class on 11/19'},
+    'lam-ex3':       {by:'lam',     label:'Dr. Lam said it would be tested',
+                      detail:'Her words on 11/19 (DEENT_Lecture_11.19_transcript.txt from T@35742): she writes questions from her learning objectives, one essay question, at least one question on the sequence of drugs, "memorize the dosing", preservative-free as a hint; what she said is not tested is lowYield and carries no star'},
   },
   items: [
     /* ---- Dr. Smith, Pathophysiology deck (10/29) ---- */
@@ -624,5 +634,40 @@ const LIKELY = {
     {id:"OB-031", source:'sik-q-ooo', ref:"T@35098 11/19 (slide 68)", reason:"This is one of the self-assessment questions he kept; the answer is labeled on the slide."},
     {id:"OB-028", source:'sik-q-ooo', ref:"T@34223 11/19 (slide 65)", reason:"This is one of the self-assessment questions he kept and answered aloud."},
     {id:"OB-003", source:'sik-ex3', ref:"T@4031 11/19 (slide 33)", reason:"He wrote a figure on slide 33 and said it is what makes the drugs useful."},
+    // Exam 3, Dr. Lam, glaucoma therapeutics (Lecture 12; added 2026-11-20): 34 stars, most likely first. Evidence: her four Ms. Lopez polls, the exam question on the sequence of drugs she announced (T@84156), the dosing she said to memorize (T@48426), her counseling points and the precautions she repeated. T@n = offset into DEENT_Lecture_11.19_transcript.txt.
+    {id:"LMA-001", source:"lam-q", ref:"Poll 1 (Ms. Lopez), slides 8-11, T@44371, T@45850 11/19", reason:"Her own poll with the Ms. Lopez case, put to the class on a poll slide; she said what the pharmacist needs to know here."},
+    {id:"LMA-002", source:"lam-q", ref:"Poll 2 (Ms. Lopez), slides 24-25, T@57313, T@57715, T@57882 11/19", reason:"Her own poll with the Ms. Lopez case; she took the class through the answer and said her essay question will be built like it."},
+    {id:"LMB-001", source:"lam-q", ref:"Poll 3 (Ms. Lopez, three months later), slide 37, T@63623, T@64584 11/19", reason:"Her own poll, the Ms. Lopez refill case three months later; she took the class's answers aloud."},
+    {id:"LMB-002", source:"lam-q", ref:"Poll 4 (Ms. Lopez, OTC question), slide 47, T@74216, T@74594 11/19", reason:"Her own poll, a Ms. Lopez case she added late in the lecture; she answered it aloud with the reason."},
+    {id:"LMB-003", source:"lam-q", ref:"Poll 5 (Ms. Lopez, regimen question), slide 64, T@84495, T@84448 11/19", reason:"Her own regimen case; she said it is the kind of question that appears on the exam."},
+    {id:"LMB-077", source:"lam-ex3", ref:"T@84156, T@84262 11/19 (slide 63)", reason:"She said there will be an exam question on the order in which the drug classes are added, and told the class to cover the page and recall it."},
+    {id:"LMB-067", source:"lam-ex3", ref:"T@84156, T@84716 11/19 (slide 63)", reason:"The first step of the order she said will be examined; she repeated that the class must recognize the sequence of drugs."},
+    {id:"LMB-066", source:"lam-ex3", ref:"T@84156, T@84716 11/19 (slide 63)", reason:"A middle step of the order she said will be examined: she asked for the next agent in a regimen."},
+    {id:"LMB-071", source:"lam-ex3", ref:"T@84495, T@84716 11/19 (slides 32, 63)", reason:"She said at least one question gives a regimen and asks for the next agent; this one gives the products by brand name."},
+    {id:"LMA-055", source:"lam-ex3", ref:"T@54328, T@55459 11/19 (slide 22)", reason:"She said on her exam she will hint which one is the version without the additive, and walked through what to do for a patient who reacts to it."},
+    {id:"LMB-078", source:"lam-ex3", ref:"T@48426, T@51437 11/19 (slides 19, 32, 42, 51, 57)", reason:"She told the class they need to be able to memorize the dosing of each agent rather than look it up, and listed the frequency class by class."},
+    {id:"LMB-079", source:"lam-ex3", ref:"T@86099 11/19 (slide 69)", reason:"She said to recognize how the combination products are given and that this follows a pattern."},
+    {id:"LMB-050", source:"lam-ex3", ref:"T@80806, T@81230 11/19 (slide 57)", reason:"She said recognizing how often this drug is given is the only thing needed from its page."},
+    {id:"LMB-004", source:"lam-ex3", ref:"T@58960, T@59039 11/19 (slide 32)", reason:"She said every drug in this class as a solution follows one pattern in how often it is given, and that the others differ; this is the recall she asked for."},
+    {id:"LMA-039", source:"lam-ex3", ref:"T@51072, T@51437 11/19 (slides 20, 21)", reason:"She told the class to recognize the frequency when reading a prescription for this class, and why more drops do not help."},
+    {id:"LMB-036", source:"lam-ex3", ref:"T@77237, T@77266 11/19 (slide 51)", reason:"She used how often it is given to explain a counseling point, and said to know it for each drug."},
+    {id:"LMA-060", source:"lam-ex3", ref:"T@55782, T@55958 11/19 (slide 23)", reason:"She gave the order of steps for a patient whose pressure is still above goal and said what comes before changing the drug."},
+    {id:"LMB-074", source:"lam-ex3", ref:"T@57810, T@58307 11/19 (slides 19, 63)", reason:"She taught that an error of this kind is fixed by contacting the prescriber before anything is added, and asked it as a poll."},
+    {id:"LMC-022", source:"lam-ex3", ref:"T@85939, T@86099 11/19 (slides 15, 69)", reason:"She said to know the classes inside each combination; this asks the problem category that follows."},
+    {id:"LMA-022", source:"lam-ex3", ref:"T@46568, T@48119 11/19 (slides 13-16)", reason:"She said she will test each drug against the patient to decide whether it is appropriate, and named the categories used for that."},
+    {id:"LMC-002", source:"lam-ex3", ref:"T@86627, T@90641 11/19 (slides 72-73)", reason:"She said that if the class can answer this question they understand her material, and gave the reason in the lecture."},
+    {id:"LMC-008", source:"lam-ex3", ref:"T@87661, T@88090 11/19 (slides 74-75)", reason:"She taught the order of application with a worked case and said it is what a pharmacist does every day."},
+    {id:"LMC-011", source:"lam-ex3", ref:"T@88233, T@88567 11/19 (slides 74-75)", reason:"She asked the class the interval aloud, answered it, and said it is a counseling point for this product form."},
+    {id:"LMC-007", source:"lam-ex3", ref:"T@87661, T@87898 11/19 (slide 74)", reason:"She taught the minimum time between two items and the reason for it."},
+    {id:"LMC-033", source:"lam-ex3", ref:"T@91047, T@91646 11/19 (slides 83-84)", reason:"She said \"Main things to remember\" and \"key thing to remember\" about this counseling point."},
+    {id:"LMC-039", source:"lam-ex3", ref:"T@92421, T@92585 11/19 (slide 85)", reason:"She gave the storage rule and explained that it depends on how long its additive is good for."},
+    {id:"LMA-059", source:"lam-ex3", ref:"T@53848, T@62276 11/19 (slide 22)", reason:"She listed the options for a patient who cannot tolerate a product and said the choice depends on what is wrong."},
+    {id:"LMB-029", source:"lam-ex3", ref:"T@73674 11/19 (slide 45)", reason:"She gave the options for intolerance of this class and named the one that keeps the drug."},
+    {id:"LMB-058", source:"lam-ex3", ref:"T@82536 11/19 (slide 60)", reason:"She gave the options for intolerance of this class and named the one that keeps the drug."},
+    {id:"LMB-016", source:"lam-ex3", ref:"T@62661, T@62871 11/19 (slide 35)", reason:"She said \"PF\" in a product name is something the class should recognize, and that she may ask it that way."},
+    {id:"LMB-012", source:"lam-ex3", ref:"T@60531, T@60994 11/19 (slide 34)", reason:"She stressed what poorly controlled lung disease looks like and why it matters for a patient on this class."},
+    {id:"LMB-014", source:"lam-ex3", ref:"T@60383, T@60531 11/19 (slide 34)", reason:"She went through the precautions of this class on the slide and repeated the ones she tied to the lungs and the pulse."},
+    {id:"LMB-026", source:"lam-ex3", ref:"T@72404, T@72801 11/19 (slide 44)", reason:"She went through the precautions of this class and explained the reason for each in lecture."},
+    {id:"LMB-027", source:"lam-ex3", ref:"T@72801, T@72824 11/19 (slide 44)", reason:"She explained the reasoning behind the vascular precautions of this class and what to tell the patient."},
   ],
 };
