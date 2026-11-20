@@ -347,3 +347,5 @@
 - Not asked, by design: sig as such, risk factors, day-supply calculation, IOP numbers, PGA contraindications, CAI acidosis mechanism, PACG (Lam said not tested). Essay: guide prompts only.
 - Source conflicts kept: Latisse 0.03% vs slide; Simbrinza CAI printed two ways (class pair only); eyelid closure 1-2 min (speech) vs 2 min (handout).
 - run_checks first run: 35 PASS, 3 FAIL (browser_test: OB-009 and OB-031 stems promised a drawing; optional_test: two optional topics; state_check: CLAUDE.md older than L12), 1 REPORT. Fixed by rewording the two stems, making oo-beyond a non-optional low-yield topic, and updating CLAUDE.md.
+
+- Released 2026-11-20 as 0b69cbe (Louis: "Publish when completed"). Final run_checks: 0 FAIL, 1 REPORT; slide_test 235, examfold_test 366, glossary_test 240, wide_test 109, walk_test 92, search_test 114, dz_test 59. Skeptic fixes applied (Lam IOP/acidosis exclusions, Sikazwe wording); search button hides when Back button shows.
