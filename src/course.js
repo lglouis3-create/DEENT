@@ -328,7 +328,7 @@ const COURSE = {
           // Dr. Sikazwe, Lectures 11-12 (Exam 3): otic, oral, ophthalmic medicinal chemistry
           'q28_ooo_otic_oral.js', 'q29_ooo_oph_a.js', 'q30_ooo_oph_b.js', 'q31_ooo_oph_c.js',
           // Dr. Lam, Lecture 12 (Exam 3): glaucoma therapeutics, by her learning objectives (topics first, in q32_lam_topics.js above)
-          'q33_lam_a.js',
+          'q33_lam_a.js', 'q34_lam_b.js',
           // the step-throughs of moa_figs.js in the explanations of the matching Smith questions
           'moa_links.js',
           // Drug list tab (temporary course-level presentation, to be replaced by the kit's
