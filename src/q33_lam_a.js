@@ -7,7 +7,9 @@
    she said combination products are never once daily (her table lists only BID and TID products), so Rocklatan is asked only by what it contains;
    frequency inappropriate is listed under both effectiveness and safety (slides 15-16), so no item asks which of the two a too-frequent
    prostaglandin prescription is. Marked lowYield (she said she would not test them): risk factors, reading a sig on its own (she said it will not be on the test),
-   contraindications of prostaglandin analogs. */
+   contraindications of prostaglandin analogs.
+   Ids LMA-013, 015, 034, 038, 040, 041, 042, 044, 045, 049, 056 and 064 were removed after review (each asked a fact another item here asks, or had
+   distractors no source supports); ids are not renumbered. */
 QUESTIONS.push(
 {id:"LMA-001", skill:"case", prof:'Lam', tier:'new', topic:"lm-collect", sub:"drugs", concept:"lm-collect-lopez-poll", multi:true,
  tags:["poll", "multi", "case"], source:"both",
