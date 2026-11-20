@@ -17,7 +17,7 @@ QUESTIONS.push(
   {t:"Traps foreign material before it reaches the eardrum", correct:true, why:"Trapping foreign objects is a role of cerumen; she used insects entering the ear as her example."},
   {t:"Conducts sound to the middle ear", correct:false, why:"She gave sound conduction as the function of the ear structure she was describing, not as a role of earwax."},
   {t:"Its acidic pH inhibits bacterial and fungal growth", correct:true, why:"Cerumen has an acidic pH and antimicrobial substances that inhibit bacterial and fungal growth."}],
- teach:"Earwax protects the canal: it lubricates, traps foreign material, forms a waterproof barrier against pathogens and is acidic enough to slow bacterial and fungal growth. A patient who removes all of it with a swab loses that protection. Drying and sound conduction belong to other measures and structures, not to cerumen.",
+ teach:"Earwax protects the canal: it lubricates, traps foreign material, forms a waterproof barrier against pathogens and is acidic enough to slow bacterial and fungal growth. Drying and sound conduction belong to other measures and structures, not to cerumen.",
  cite:"Lecture 13 (Lam_OticDisorders_slides.pdf) slides 7; handout p. 2; T@91166, T@91417, T@91744 11/20"},
 
 {id:"LOT-002", skill:"epi", prof:'Lam', tier:'new', topic:"lt-cer", sub:"risk", concept:"lot-risk-habit",
@@ -40,7 +40,7 @@ QUESTIONS.push(
   {t:"Hearing aids or ear plugs irritating the canal", correct:true, why:"Irritation from foreign objects such as hearing aids or ear plugs is a listed risk factor."},
   {t:"Tympanostomy tubes", correct:false, why:"Tubes are an exclusion to self-care, not a risk factor for impacted cerumen."},
   {t:"Atrophy of the ceruminous glands in older adults", correct:true, why:"Gland atrophy in older adults is a listed risk factor."}],
- teach:"Risk factors for impaction involve anatomy (narrow or irregular canal, excess hair), irritation (hearing aids, swabs), aging glands and genetics. Swimming, sweating and humidity belong to water-clogged ears, and tubes are an exclusion. Sort each item by which condition it explains.",
+ teach:"Risk factors for impaction involve anatomy (narrow or irregular canal, excess hair), irritation (hearing aids, swabs), aging glands and genetics. Swimming, sweating and humidity belong to water-clogged ears, and tubes are an exclusion.",
  cite:"Lecture 13 (Lam_OticDisorders_slides.pdf) slides 7; handout p. 2; T@91893 11/20"},
 
 {id:"LOT-004", skill:"patho", prof:'Lam', tier:'new', topic:"lt-cer", sub:"risk", concept:"lot-child-flat",
@@ -83,7 +83,7 @@ QUESTIONS.push(
  stem:"Four patients come to the pharmacy with ear fullness and itching and no other findings. Which one should be referred rather than offered an OTC product?",
  options:[
   {t:"A 34-year-old who cleans with cotton swabs", correct:false, why:"An adult with risk-factor behavior and no exclusion can be treated; the swabs should stop."},
-  {t:"A 67-year-old who wears hearing aids", correct:false, why:"Hearing aids are a risk factor for impaction, not an exclusion."},
+  {t:"A 45-year-old with a long-standing narrow ear canal", correct:false, why:"A narrow canal is a risk factor, not an exclusion."},
   {t:"A 52-year-old with narrow ear canals", correct:false, why:"A narrow canal is a risk factor, not an exclusion."},
   {t:"An 8-year-old with a long cold", correct:true, why:"Children under 12 are an exclusion because the anatomy of their ears makes treatment difficult."}],
  teach:"Age under 12 is on the exclusion list because a child's canal anatomy makes treatment difficult. The other three patients each have a risk factor, which explains the symptoms but does not exclude them. The 8-year-old is referred to a doctor.",
@@ -116,10 +116,10 @@ QUESTIONS.push(
  stem:"Ms. Greene, 61, wants a non-drug way to keep wax from building up at the outer ear. Which measure is described?",
  options:[
   {t:"An ear candle placed at the ear opening and burned slowly once a week for several weeks", correct:false, why:"Ear candles are not recommended because of potential danger and injury and no scientific evidence."},
-  {t:"A damp washcloth over a finger, used daily on the outer ear", correct:true, why:"This is the described non-drug measure; the cloth over a finger prevents pushing wax inward."},
+  {t:"A damp washcloth over a finger, used daily on the outer ear", correct:true, why:"This is the described non-drug measure; daily outer-canal cleaning with a wrung-out cloth over a finger prevents impaction."},
   {t:"A cotton swab pushed gently into the ear canal each morning and night to lift the wax out", correct:false, why:"Cotton swabs are a listed risk factor for impaction because of improper removal."},
   {t:"A hair dryer on the lowest setting held near the ear", correct:false, why:"The dryer is a way to dry a water-clogged ear, not a way to remove cerumen."}],
- teach:"Remove cerumen from the outermost part of the canal with a wet, wrung-out cloth over a finger, so nothing is pushed inward. Swabs raise the risk of impaction, candles are not recommended, and a hair dryer is a drying method for water-clogged ears.",
+ teach:"Daily outer-canal cleaning with a wrung-out cloth over a finger prevents impaction. Swabs raise the risk of impaction, candles are not recommended, and a hair dryer is a drying method for water-clogged ears.",
  cite:"Lecture 13 (Lam_OticDisorders_slides.pdf) slides 13; handout p. 3; T@93959 11/20"},
 
 {id:"LOT-011", skill:"adverse", prof:'Lam', tier:'new', topic:"lt-cerrx", sub:"nonpharm", concept:"lot-tool-risk",
@@ -152,7 +152,7 @@ QUESTIONS.push(
   {t:"Almond oil or other oil-based drops", correct:false, why:"Oil-based agents are among the other cerumenolytics that are not recommended."},
   {t:"Carbamide peroxide 6.5% in anhydrous glycerin", correct:true, why:"This is Debrox, the FDA-approved nonprescription cerumenolytic that she named as the product to recommend."},
   {t:"Docusate sodium or other water-based drops used as a cerumenolytic", correct:false, why:"Water-based agents such as docusate sodium are not recommended anymore; they are not better than water."}],
- teach:"Carbamide peroxide 6.5% in anhydrous glycerin, sold as Debrox, is the product to recommend for impaction. Water-based and oil-based cerumenolytics are not recommended, and isopropyl alcohol belongs to water-clogged ears. Match each product to its condition.",
+ teach:"Carbamide peroxide 6.5% in anhydrous glycerin, sold as Debrox, is the product to recommend for impaction. Water-based and oil-based cerumenolytics are not recommended, and isopropyl alcohol belongs to water-clogged ears.",
  cite:"Lecture 13 (Lam_OticDisorders_slides.pdf) slides 14, 15; handout p. 4; T@94684 11/20"},
 
 {id:"LOT-014", skill:"dose", prof:'Lam', tier:'new', topic:"lt-cerrx", sub:"drug", concept:"lot-cp-directions",
@@ -163,7 +163,7 @@ QUESTIONS.push(
   {t:"4 to 5 drops in the affected ear, remaining several minutes, once daily until clear", correct:false, why:"This sounds like the isopropyl alcohol drops for a water-clogged ear and has no stated end point."},
   {t:"5 to 10 drops in the affected ear, remaining several minutes, twice daily for 7 days", correct:false, why:"The duration is up to 4 days; 7 days is the time she gave for referring a water-clogged ear."},
   {t:"5 to 10 drops in the ear, left several minutes, twice daily for up to 4 days", correct:true, why:"This matches the slide: 5-10 drops, several minutes in the canal, twice daily for up to 4 days."}],
- teach:"Carbamide peroxide is 5 to 10 drops in the affected ear, kept in for several minutes to soften the wax, twice daily for up to 4 days. The 4-to-5-drop dose belongs to the alcohol drops for a water-clogged ear. Use dose and duration together to tell the two products apart.",
+ teach:"Carbamide peroxide is 5 to 10 drops in the affected ear, kept in for several minutes to soften the wax, twice daily for up to 4 days. The 4-to-5-drop dose belongs to the alcohol drops for a water-clogged ear.",
  cite:"Lecture 13 (Lam_OticDisorders_slides.pdf) slides 14, 31; handout p. 4; T@95175, T@95399 11/20"},
 
 {id:"LOT-015", skill:"case", prof:'Lam', tier:'new', topic:"lt-cerrx", sub:"fu", concept:"lot-cp-4days",
@@ -217,7 +217,7 @@ QUESTIONS.push(
   {t:"Excessive hair growth in the ear canal", correct:true, why:"Hair holds moisture and is a listed cause of moisture retention."},
   {t:"Atrophy of the ceruminous glands", correct:false, why:"This is a risk factor for impaction in older adults."},
   {t:"Narrowing of the canal", correct:true, why:"Canal narrowing is a listed cause of moisture retention."},
-  {t:"Genetic overproduction of earwax", correct:false, why:"Genetics is listed as a risk factor for impacted cerumen."},
+  {t:"Cough or vertigo", correct:false, why:"These are not listed causes of moisture retention in the canal."},
   {t:"Swimming or heavy sweating", correct:true, why:"Excessive moisture from swimming, sweating or high humidity can become trapped in the ear."}],
  teach:"A water-clogged ear comes from retained moisture (hair, canal narrowing, wax or debris) and from excess moisture (swimming, sweating, humidity). Gland atrophy and genetics are cerumen risk factors. She said the hairs in the ear get fluffy when wet, as scalp hair does.",
  cite:"Lecture 13 (Lam_OticDisorders_slides.pdf) slides 20; handout p. 4; T@96605, T@96941 11/20"},
@@ -241,7 +241,7 @@ QUESTIONS.push(
   {t:"Offer water-absorbing earplugs, since he is older than 11", correct:false, why:"His age fits, but dizziness excludes self-care."},
   {t:"Advise a hair dryer on the lowest setting", correct:false, why:"A drying method is not enough when an exclusion is present."},
   {t:"Refer him to a physician because dizziness is an exclusion", correct:true, why:"Dizziness is listed in the exclusions and in the follow-up signs, so he is referred."}],
- teach:"Dizziness appears on the exclusion list for a water-clogged ear and among the follow-up signs, so the patient goes to a physician even though his age fits the products. Check the exclusions first, then choose a measure.",
+ teach:"Dizziness appears on the exclusion list for a water-clogged ear and among the follow-up signs, so the patient goes to a physician even though his age fits the products.",
  cite:"Lecture 13 (Lam_OticDisorders_slides.pdf) slides 26, 34; handout p. 6; T@97876 11/20"},
 
 {id:"LOT-022", skill:"counsel", prof:'Lam', tier:'new', topic:"lt-water", sub:"nonpharm", concept:"lot-wc-nondrug-multi", multi:true,
@@ -286,7 +286,7 @@ QUESTIONS.push(
   {t:"No, it absorbs trapped water but does not stop water entering", correct:true, why:"The handout states it will not prevent water entering; it removes trapped water."},
   {t:"Yes, once the plug has been coated with petroleum jelly before swimming", correct:false, why:"Petroleum-jelly cotton is a separate measure for short exposure."},
   {t:"No, because it works by drying the canal with isopropyl alcohol drops", correct:false, why:"It contains no alcohol; it absorbs water."}],
- teach:"A water-absorbing earplug treats water already in the canal; it does not prevent water from entering during bathing or swimming. For prevention, use regular earplugs or a bathing cap. Mixing up the two is the usual error.",
+ teach:"A water-absorbing earplug treats water already in the canal; it does not prevent water from entering during bathing or swimming. For prevention, use regular earplugs or a bathing cap.",
  cite:"Lecture 13 (Lam_OticDisorders_slides.pdf) slides 29, 30; handout p. 6"},
 
 {id:"LOT-026", skill:"class", prof:'Lam', tier:'new', topic:"lt-water", sub:"drug", concept:"lot-alcohol-id",
@@ -319,7 +319,7 @@ QUESTIONS.push(
   {t:"Follow the drops with gentle warm-water irrigation using a bulb syringe", correct:false, why:"Irrigation follows carbamide peroxide in impaction."},
   {t:"Contact your PCP if symptoms persist after 4 days", correct:false, why:"This is the follow-up point for impaction."},
   {t:"Instill 4 to 5 drops in the affected ear", correct:true, why:"This is the dose given for isopropyl alcohol on the water-clogged ear slide."}],
- teach:"Each condition has its own product and instructions: impaction uses 5 to 10 drops twice daily for up to 4 days, then irrigation, and a call to the PCP after 4 days. The water-clogged ear uses 4 to 5 drops of the drying agent. Match the details to the condition.",
+ teach:"Each condition has its own product and instructions: impaction uses 5 to 10 drops twice daily for up to 4 days, then irrigation, and a call to the PCP after 4 days. The water-clogged ear uses 4 to 5 drops of the drying agent.",
  cite:"Lecture 13 (Lam_OticDisorders_slides.pdf) slides 14, 16, 31; handout p. 4, 6; T@99431 11/20"},
 
 {id:"LOT-029", skill:"counsel", prof:'Lam', lowYield:true, tier:'new', topic:"lt-water", sub:"drug", concept:"lot-no-min-age",
@@ -413,7 +413,7 @@ QUESTIONS.push(
  note:"Slide 24 rows are lower priority: she said the main slide is 23 (T@97767).",
  cite:"Lecture 13 (Lam_OticDisorders_slides.pdf) slides 24; handout p. 5; T@97767 11/20"},
 
-{id:"LOT-037", skill:"counsel", prof:'Lam', tier:'new', topic:"lt-impl", sub:"drops", concept:"lot-adult-position",
+{id:"LOT-037", skill:"counsel", lowYield:true, prof:'Lam', tier:'new', topic:"lt-impl", sub:"drops", concept:"lot-adult-position",
  tags:["hard", "counsel"], source:"slide",
  stem:"Which technique should an adult use to instill ear drops?",
  options:[
@@ -424,7 +424,7 @@ QUESTIONS.push(
  teach:"For an adult, lie with the affected ear up, pull the earlobe out and up to straighten the canal, instill the drops and stay in place. Pulling the ear back and down is the child's technique for age under 3.",
  cite:"Lecture 13 (Lam_OticDisorders_slides.pdf) slides 33; handout p. 7; T@99534 11/20"},
 
-{id:"LOT-038", skill:"counsel", prof:'Lam', tier:'new', topic:"lt-impl", sub:"drops", concept:"lot-child-position",
+{id:"LOT-038", skill:"counsel", lowYield:true, prof:'Lam', tier:'new', topic:"lt-impl", sub:"drops", concept:"lot-child-position",
  tags:["hard", "case"], source:"both",
  stem:"A physician has prescribed ear drops for a 2-year-old. How should the pharmacist tell the parent to position the ear?",
  options:[
@@ -435,7 +435,7 @@ QUESTIONS.push(
  teach:"For a child under 3, the child lies with the affected ear up and the ear is pulled back and down. The adult technique pulls the lobe out and up. Keeping the child still afterwards, even with a video, helps the drops stay in the canal.",
  cite:"Lecture 13 (Lam_OticDisorders_slides.pdf) slides 33; handout p. 7; T@99685 11/20"},
 
-{id:"LOT-039", skill:"counsel", prof:'Lam', tier:'new', topic:"lt-impl", sub:"drops", concept:"lot-child-cotton",
+{id:"LOT-039", skill:"counsel", lowYield:true, prof:'Lam', tier:'new', topic:"lt-impl", sub:"drops", concept:"lot-child-cotton",
  tags:["hard", "counsel"], source:"both",
  stem:"A child will not stay still after drops. If a parent places cotton in the ear to keep the solution in, which advice is correct?",
  options:[
@@ -454,7 +454,7 @@ QUESTIONS.push(
   {t:"Switch to carbamide peroxide 6.5% twice daily for up to 4 days", correct:false, why:"Carbamide peroxide is for impacted cerumen."},
   {t:"See her PCP, since there is no benefit after 7 days", correct:true, why:"No benefit after 7 days of use is the follow-up point, so she is referred."},
   {t:"Burn an ear candle to finish drying the canal", correct:false, why:"Ear candles are not recommended."}],
- teach:"No benefit after 7 days of use means a visit to the PCP. Switching to another product or repeating the same one delays a diagnosis, and candles are not recommended. The printed follow-up is several days and she said 7, so the case uses 7.",
+ teach:"No benefit after 7 days of use means a visit to the PCP. Switching to another product or repeating the same one delays a diagnosis, and candles are not recommended. The printed follow-up reads several days; she said 7.",
  cite:"Lecture 13 (Lam_OticDisorders_slides.pdf) slides 34; handout p. 7; T@100232 11/20"},
 
 {id:"LOT-041", skill:"counsel", prof:'Lam', tier:'new', topic:"lt-impl", sub:"fu", concept:"lot-wc-refer-multi", multi:true,
@@ -471,7 +471,7 @@ QUESTIONS.push(
 
 {id:"LOT-042", skill:"case", prof:'Lam', lowYield:true, tier:'new', topic:"lt-cer", sub:"excl", concept:"lot-age-12",
  tags:["hard", "case"], source:"both",
- stem:"Priya, 12, has ear fullness and itching from wax, with no discharge, pain, tubes or surgery. A parent asks for carbamide peroxide. What does the course material support?",
+ stem:"Priya, 12, has ear fullness and itching from wax, with no discharge, pain, tubes or surgery. A parent asks for carbamide peroxide. According to slide 10 and the handout, what is the answer?",
  options:[
   {t:"Refer: children 12 years or under are not treated, as she said in class", correct:false, why:"She said she does not treat children 12 years or under."},
   {t:"Treat: slide excludes under 12 and handout says 12 and older", correct:true, why:"The slide lists less than 12 years as an exclusion and the handout gives 12 years and older."},
@@ -500,7 +500,7 @@ QUESTIONS.push(
   {t:"Water-absorbing single-use ear plugs to remove water after swimming", correct:false, why:"Earplugs do not address discharge and are not the answer."},
   {t:"Carbamide peroxide 6.5%", correct:false, why:"This is for impacted cerumen, not for wetness and discharge."},
   {t:"The mother should contact the pediatrician immediately.", correct:true, why:"Discharge and a tube history mean the patient is referred."}],
- teach:"This is her practice question as written. The right step is the referral, since ear discharge and tympanostomy tubes exclude self-care. The three products are for water-clogged ears, trapped water and wax, none of which is the problem here.",
+ teach:"The right step is the referral, since ear discharge and tympanostomy tubes exclude self-care. The three products treat wax or trapped water; none is appropriate because discharge and tubes exclude self-care.",
  cite:"Lecture 13 (Lam_OticDisorders_slides.pdf) slides 37; handout p. 8; T@100668 11/20"},
 
 {id:"LOT-045", skill:"case", prof:'Lam', tier:'new', topic:"lt-case", sub:"c1", concept:"lot-c1-new",
@@ -511,7 +511,7 @@ QUESTIONS.push(
   {t:"Carbamide peroxide 6.5%, 5 to 10 drops twice daily for 4 days, then irrigate", correct:false, why:"This is for impacted cerumen; her pattern is a water-clogged ear."},
   {t:"An ear candle placed at the ear opening to draw the water out of the canal", correct:false, why:"Ear candles are not recommended."},
   {t:"Towel-dry, then isopropyl alcohol drying drops, 4 to 5 drops", correct:true, why:"Her findings fit a water-clogged ear without exclusions; a towel and the drying agent are appropriate."}],
- teach:"Fullness or wetness with no pain, itching or discharge and no exclusion is a water-clogged ear; the drying agent is 4 to 5 drops, with towel drying, earplugs or a dryer on the lowest heat. Each step in her practice case came from checking exclusions first.",
+ teach:"Fullness or wetness with no pain, itching or discharge and no exclusion is a water-clogged ear; the drying agent is 4 to 5 drops, with towel drying, earplugs or a dryer on the lowest heat.",
  cite:"Lecture 13 (Lam_OticDisorders_slides.pdf) slides 23, 31; T@97351, T@99431 11/20"},
 
 {id:"LOT-046", skill:"case", prof:'Lam', tier:'new', topic:"lt-case", sub:"c2", concept:"lot-c2-type",
@@ -563,7 +563,7 @@ QUESTIONS.push(
  tags:["hard", "case", "two-facts"], source:"both",
  stem:"Mr. Weiss, 67, wears hearing aids and has ear itching, pressure and ringing for 6 days. He has no pain, discharge, dizziness or surgery history. He used cotton swabs daily and asks what to do. Which plan is most appropriate?",
  options:[
-  {t:"Refer immediately because hearing aids exclude him; no product or follow-up plan needed", correct:false, why:"Hearing aids are a risk factor for impaction, not an exclusion."},
+  {t:"Refer immediately because ringing alone excludes him; no product or follow-up plan needed", correct:false, why:"Ringing with no discharge, dizziness or surgery history is not on the exclusion list; the plan is to stop swabs and treat."},
   {t:"Stop swabs; isopropyl alcohol 4 to 5 drops; PCP if no benefit after 7 days", correct:false, why:"This is the water-clogged ear plan."},
   {t:"Keep the swabs; almond oil drops twice daily; PCP if no relief after 4 days", correct:false, why:"Swabs are a risk factor and oil-based agents are not recommended."},
   {t:"Stop swabs; carbamide peroxide 6.5% twice daily up to 4 days; PCP if no relief", correct:true, why:"This plan covers the product, the schedule and the follow-up for impaction."}],

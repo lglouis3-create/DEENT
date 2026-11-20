@@ -1,7 +1,7 @@
 /* Dr. Lam, oral disorders (Lecture 13, taught 11/20), Exam 3: tooth hypersensitivity versus toothache, canker sores, cold sores, cold sore versus canker sore, dry mouth. Ids LOR-*.
    Sources: Lam_OralDisorders_slides.pdf (slide N = PDF page, 84 slides), her handout Lam_OralDisorders_handout.pdf, and DEENT_Lecture_11.20_transcript.txt (T@n = character offset, cited "11/20").
    Source notes: the protectant disc time is 10-20 seconds on slide 37 and 10-20 minutes in the handout and recording, so only LOR-070 (lowYield) asks it. Benzocaine is 10-20% on slide 34 and
-   5-20% in the handout, and she gave no number, so no item keys a benzocaine strength. Oral hydrogen peroxide: 1.5% direct application and 3% mixed with equal water (slide and handout); she was unsure aloud, so no item asks the strength.
+   5-20% in the handout, and she gave no number, so no item keys a benzocaine strength. Oral hydrogen peroxide: 1.5% direct application and 3% mixed with equal water (handout p. 7; slide 35 prints 3% swished for one minute); she was unsure aloud, so no item asks the strength.
    Carbamide peroxide direct application is 1 minute on the slide and handout and 1 or 2 minutes aloud, so no item keys the minutes. The slide-79 dry mouth exclusion list is self-study (she did not read it) and is not asked.
    Slide 49 lists recurrence as an exclusion, but her second case (outbreak a year ago, already seen by a doctor) is a self-care candidate; items key only the exclusions that are not in doubt (no prior diagnosis, more than 14 days, systemic signs) and that case as she keyed it. */
 QUESTIONS.push(
@@ -139,7 +139,7 @@ QUESTIONS.push(
  teach:"Potassium nitrate 5% is the active she singled out: it is not for children under 12. For a 10-year-old, read the label and choose a product without potassium nitrate, after the first step of a soft brush with standard fluoride.",
  cite:"Lecture 13 (Lam_OralDisorders_slides.pdf) slides 15; T@49740 11/20"},
 
-{id:"LOR-013", skill:"mech", prof:'Lam', tier:'new', topic:"lr-tooth", sub:"pharm", concept:"lr-tooth-kno3-moa",
+{id:"LOR-013", skill:"mech", prof:'Lam', lowYield:true, tier:'new', topic:"lr-tooth", sub:"pharm", concept:"lr-tooth-kno3-moa",
  tags:["hard"], source:"slide",
  stem:"What is the mechanism of potassium nitrate 5% in a desensitizing toothpaste?",
  options:[
@@ -150,7 +150,7 @@ QUESTIONS.push(
  teach:"Her slide groups desensitizing actives by mechanism. Potassium nitrate (with the fluorides) depolarizes the excited nerves in the tubules. Arginine 8% seals the exposed dentin to minimize fluid flow. The mechanisms of cold sore and dry mouth products belong to other conditions.",
  cite:"Lecture 13 (Lam_OralDisorders_slides.pdf) slides 15"},
 
-{id:"LOR-014", skill:"mech", prof:'Lam', tier:'new', topic:"lr-tooth", sub:"pharm", concept:"lr-tooth-arginine-moa",
+{id:"LOR-014", skill:"mech", prof:'Lam', lowYield:true, tier:'new', topic:"lr-tooth", sub:"pharm", concept:"lr-tooth-arginine-moa",
  tags:["hard"], source:"slide",
  stem:"A patient asks which ingredient in a desensitizing paste seals exposed dentin so fluid flow in the tubules is minimized. Which is it?",
  options:[
@@ -158,7 +158,7 @@ QUESTIONS.push(
   {t:"Docosanol 10%", correct:false, why:"This is a cold sore antiviral cream, not a desensitizing toothpaste ingredient."},
   {t:"Arginine 8%", correct:true, why:"The slide lists arginine as the active that minimizes fluid flow by sealing exposed dentin."},
   {t:"Potassium nitrate 5%", correct:false, why:"Potassium nitrate depolarizes excited nerves and is not for children under 12."}],
- teach:"Two mechanisms on the slide: depolarizing the excited nerves in the tubules, and minimizing fluid flow by sealing the exposed dentin. Arginine 8% is the sealing active. Recognizing the active and its job lets you read any brand.",
+ teach:"Two mechanisms on the slide: depolarizing the excited nerves in the tubules, and minimizing fluid flow by sealing the exposed dentin. Arginine 8% is the sealing active.",
  cite:"Lecture 13 (Lam_OralDisorders_slides.pdf) slides 15"},
 
 {id:"LOR-015", skill:"counsel", prof:'Lam', tier:'new', topic:"lr-tooth", sub:"couns", concept:"lr-tooth-single-use",
@@ -223,7 +223,7 @@ QUESTIONS.push(
   {t:"The cause is unknown; trauma, nutrition and drugs are triggers", correct:true, why:"She said the exact cause is not known, but there are triggers: local trauma, systemic or immunologic conditions, nutritional conditions, medications and others."},
   {t:"They are caused by bacterial invasion of the tooth pulp", correct:false, why:"This is toothache. Canker sores are ulcers on the mouth lining."},
   {t:"They result from loss of enamel that exposes the dentin tubules", correct:false, why:"This is tooth hypersensitivity, a different condition."},
-  {t:"They are caused by HSV-1, which goes latent and then reactivates", correct:false, why:"This is the cause of a cold sore. Canker sores have no known infectious cause."}],
+  {t:"They are caused by HSV-1, which goes latent and then reactivates", correct:false, why:"This is the cause of a cold sore. Her answer for the cause of canker sores is that the exact cause is unknown."}],
  teach:"Canker sores (recurrent aphthous stomatitis) have no known exact cause. Precipitating factors are local trauma, systemic or immunologic disease, nutritional deficiency, medications and others. The cold sore is the one caused by HSV-1.",
  cite:"Lecture 13 (Lam_OralDisorders_slides.pdf) slides 26; T@57025 11/20"},
 
@@ -289,7 +289,7 @@ QUESTIONS.push(
  stem:"Which instruction about cold or heat for a canker sore is correct?",
  options:[
   {t:"Apply a warm compress for 20 minutes at a time to ease the pain", correct:false, why:"Heat is not used. The handout says heat may spread the infection."},
-  {t:"Apply ice after the lesion crusts over, the way a cold sore is managed", correct:false, why:"Crusting describes a cold sore. A canker sore is a gray ulcer, and ice can be used while it is painful."},
+  {t:"Rinse with a swish-and-swallow of the product after the lesion crusts over", correct:false, why:"Crusting describes a cold sore. A canker sore is a gray ulcer, and rinses for it are swished and spit out, not swallowed."},
   {t:"Apply ice for 10 minutes at a time, up to 20 minutes each hour", correct:true, why:"She said ice, not heat. Ice is applied 10 minutes at a time, for no longer than 20 minutes in each hour."},
   {t:"Apply ice continuously for 60 minutes in each hour", correct:false, why:"The limit is 10-minute increments and no more than 20 minutes in each hour."}],
  teach:"Non-drug care for canker sores: avoid spicy, acidic and sharp-textured foods, apply ice directly to the lesion for 10 minutes at a time and no more than 20 minutes each hour, avoid heat, and correct any nutritional deficiency to deter recurrence.",
@@ -344,12 +344,12 @@ QUESTIONS.push(
  tags:["hard"], source:"both",
  stem:"Which instruction for a topical oral protectant patch or disc is correct?",
  options:[
-  {t:"Use it before meals twice a day and rinse the mouth afterward to remove it", correct:false, why:"The protectant is used after meals and should not be rinsed off, since it needs time to adhere."},
+  {t:"Use it before meals twice a day and rinse the mouth afterward to remove it", correct:false, why:"The protectant is used after meals and does not need to be taken off; it dissolves."},
   {t:"Use it up to 5 times a day until the lesion heals, with no drinking for 30 minutes", correct:false, why:"Five times a day until healed is the docosanol schedule for cold sores."},
   {t:"Use it after meals and spit it out after 1 minute, with no drinking for 30 minutes", correct:false, why:"Spitting out after about a minute is for debriding agents. The protectant stays in place and dissolves."},
   {t:"Use it up to 3 to 4 times a day after meals, with no drinking for 30 minutes", correct:true, why:"That is 3 to 4 times a day after meals and no drinking for up to 30 minutes after, so the barrier can form. It dissolves in 8 to 12 hours."}],
  teach:"A protectant coats the sore for temporary relief. It is a paste, patch or disc, used 3 to 4 times a day after meals, dissolving in about 8 to 12 hours, with nothing to drink for 30 minutes. Her slide and handout differ on how long to hold the disc, so that time is not asked.",
- cite:"Lecture 13 (Lam_OralDisorders_slides.pdf) slides 37; handout (Lam_OralDisorders_handout.pdf); T@65892, T@65877 11/20"},
+ cite:"Lecture 13 (Lam_OralDisorders_slides.pdf) slides 37; handout (Lam_OralDisorders_handout.pdf); T@65892, T@65811 11/20"},
 
 {id:"LOR-032", skill:"counsel", prof:'Lam', tier:'new', topic:"lr-ras", sub:"rinse", concept:"lr-ras-homemade",
  tags:["hard"], source:"both",
@@ -357,7 +357,7 @@ QUESTIONS.push(
  options:[
   {t:"A saline rinse of 1 to 3 teaspoons of salt in 4 to 8 ounces of water", correct:true, why:"This is the saline rinse on slide 38. It is one of several options that all work, chosen to fit the patient."},
   {t:"An aspirin tablet held against the sore until it dissolves in the mouth", correct:false, why:"Aspirin should not be held in the mouth, because it can cause a chemical burn."},
-  {t:"An undiluted 3% hydrogen peroxide rinse swished for 1 minute and spit out", correct:false, why:"The 3% solution is mixed with an equal amount of water before rinsing."},
+  {t:"A 3% hydrogen peroxide rinse swished for 1 minute and then swallowed", correct:false, why:"The rinse is swished and spit out, not swallowed."},
   {t:"A baking soda paste left on the lesion for 30 minutes or longer", correct:false, why:"The paste is applied for a few minutes, up to 4 times a day."}],
  teach:"Homemade options: a saline rinse (1 to 3 teaspoons salt in 4 to 8 ounces warm water) or a baking soda paste applied for a few minutes up to 4 times a day. She said the guidelines give no order of choice, since the products work about equally.",
  cite:"Lecture 13 (Lam_OralDisorders_slides.pdf) slides 38, 39; handout (Lam_OralDisorders_handout.pdf); T@66527, T@66752 11/20"},
@@ -389,7 +389,7 @@ QUESTIONS.push(
  stem:"Which statement about the cause of cold sores is correct?",
  options:[
   {t:"They result from bacterial invasion that causes inflammation", correct:false, why:"This is the mechanism of toothache."},
-  {t:"They are caused by HSV-2, which also causes canker sores", correct:false, why:"HSV-2 is associated with genital sores and is covered in the ID module. Canker sores have no known infectious cause."},
+  {t:"They are caused by HSV-2, which also causes canker sores", correct:false, why:"HSV-2 is associated with genital sores and is covered in the ID module. Her answer for the cause of canker sores is that the exact cause is unknown."},
   {t:"They have no known cause, and certain triggers precipitate their appearance", correct:false, why:"This is the description of canker sores."},
   {t:"They are caused by HSV-1, which goes latent and then reactivates", correct:true, why:"Cold sores are caused by herpes simplex virus 1. After the first infection the virus goes latent, and triggers reactivate it."}],
  teach:"Cold sores (fever blisters, herpes simplex labialis) are caused by HSV-1, which is contagious by direct contact. After the first infection the virus goes latent and can reactivate. HSV-2 and genital herpes are covered by Dr. Beck in ID.",
@@ -493,7 +493,7 @@ QUESTIONS.push(
   {t:"It depolarizes the excited nerves so pain signals stop", correct:false, why:"This is the mechanism of potassium nitrate in desensitizing toothpaste."},
   {t:"It forms a barrier that coats and protects the sore from irritants", correct:false, why:"This is the purpose of a topical oral protectant for canker sores."},
   {t:"It replaces protective components that natural saliva lacks", correct:false, why:"This is the purpose of artificial saliva for dry mouth."}],
- teach:"Docosanol is a topical antiviral. It blocks fusion of the virus with the host cell membrane, so the virus cannot replicate. That is why it shortens the infection and is used at the first sign, before many cells are infected.",
+ teach:"Docosanol is a topical antiviral. It blocks fusion of the virus with the host cell membrane, so the virus cannot duplicate. It is used at the first sign.",
  cite:"Lecture 13 (Lam_OralDisorders_slides.pdf) slides 53; handout (Lam_OralDisorders_handout.pdf)"},
 
 {id:"LOR-045", skill:"tell", prof:'Lam', tier:'new', topic:"lr-hsl", sub:"analg", concept:"lr-hsl-analgesic-role",
@@ -590,7 +590,7 @@ QUESTIONS.push(
  tags:["hard"], source:"both",
  stem:"Which pairing of condition and presentation is correct?",
  options:[
-  {t:"Cold sore: a flat, crater-like ulcer on the tongue and soft palate", correct:false, why:"This is the major canker sore description, which occurs inside the mouth."},
+  {t:"Cold sore: a flat, crater-like ulcer on the tongue and soft palate", correct:false, why:"A flat ulcer is not a cold sore. The oval, flat ulcer describes a minor canker sore and the crateriform one a major canker sore; both are inside the mouth."},
   {t:"Canker sore: a gray, round ulcer inside the mouth on movable mucosa", correct:true, why:"The canker sore is an ulcer inside the mouth on non-keratinized mucosa such as the tongue, floor of the mouth and inside of the lips and cheeks."},
   {t:"Cold sore: a gray, round ulcer inside the cheek with a red halo", correct:false, why:"This is the canker sore presentation."},
   {t:"Canker sore: red fluid-filled vesicles at the junction of lip and skin", correct:false, why:"This is the cold sore presentation."}],
@@ -606,7 +606,7 @@ QUESTIONS.push(
   {t:"It appears outside the mouth, on or around the lips", correct:true, why:"She said cold sores are outside of the mouth or around the lips, canker sores inside."},
   {t:"It is contagious by direct contact", correct:true, why:"Cold sores are HSV-1 infections transmitted by direct contact."},
   {t:"It is a gray, oval ulcer with a red halo", correct:false, why:"This is the canker sore description."}],
- teach:"Cold sore: outside, around the lips; red fluid-filled vesicles that crust; HSV-1, contagious. Canker sore: inside the mouth; gray or yellow oval ulcer with a halo; no known infectious cause, not contagious as a cold sore is.",
+ teach:"Cold sore: outside, around the lips; red fluid-filled vesicles that crust; HSV-1, contagious. Canker sore: inside the mouth; gray or yellow oval ulcer with a halo; exact cause unknown, with triggers.",
  cite:"Lecture 13 (Lam_OralDisorders_slides.pdf) slides 43, 47; T@70970, T@73857 11/20"},
 
 {id:"LOR-055", skill:"case", prof:'Lam', tier:'new', topic:"lr-diff", sub:"treat", concept:"lr-diff-abreva-wrong",
@@ -617,7 +617,7 @@ QUESTIONS.push(
   {t:"Recommend a hydrocortisone 1% ointment on the ulcer twice a day", correct:false, why:"Hydrocortisone is not recommended for cold sores, and it is not a canker sore option."},
   {t:"Recommend triple antibiotic ointment three times a day on the ulcer", correct:false, why:"This is for a cold sore with suspected secondary infection, not for an ulcer inside the mouth."},
   {t:"Explain that docosanol is for cold sores; offer a canker sore product", correct:true, why:"The ulcer is a canker sore. Docosanol is a cold sore antiviral, and canker sores are treated for pain relief with the options on slides 33 to 38."}],
- teach:"Identify the condition before choosing a product. A canker sore needs pain relief and protection (anesthetic, debriding agent, protectant, rinse), while a cold sore needs docosanol at the first sign. Matching the product to the wrong condition is the usual trap.",
+ teach:"Identify the condition before choosing a product. A canker sore needs pain relief and protection (anesthetic, debriding agent, protectant, rinse), while a cold sore needs docosanol at the first sign.",
  cite:"Lecture 13 (Lam_OralDisorders_slides.pdf) slides 33, 47, 51; T@73857, T@77492 11/20"},
 
 {id:"LOR-056", skill:"case", prof:'Lam', tier:'new', topic:"lr-diff", sub:"treat", concept:"lr-diff-hsl-first-line",
@@ -640,7 +640,7 @@ QUESTIONS.push(
   {t:"Amitriptyline", correct:true, why:"A tricyclic antidepressant with anticholinergic action, on the handout list of drugs that reduce salivation."},
   {t:"Docosanol 10% cream", correct:false, why:"A topical antiviral for cold sores. It is not on her list of medications that cause dry mouth."},
   {t:"Risperidone", correct:true, why:"An antipsychotic, a class on the slide of medications that can cause dry mouth."}],
- teach:"Think in classes, as on slide 72: antihistamines, decongestants, antihypertensives, diuretics, antidepressants, antipsychotics and sedatives. The handout adds named drugs, such as amitriptyline, hydroxyzine, risperidone, oxybutynin and clonidine. Topical products from the other conditions are not on the list.",
+ teach:"The classes on slide 72 are antihistamines, decongestants, antihypertensives, diuretics, antidepressants, antipsychotics and sedatives. The handout adds named drugs, such as amitriptyline, hydroxyzine, risperidone, oxybutynin and clonidine. Topical products from the other conditions are not on the list.",
  cite:"Lecture 13 (Lam_OralDisorders_slides.pdf) slides 72; handout (Lam_OralDisorders_handout.pdf); T@85829, T@86368 11/20"},
 
 {id:"LOR-059", skill:"case", prof:'Lam', tier:'new', topic:"lr-dry", sub:"risk", concept:"lr-dry-which-med",
@@ -742,7 +742,7 @@ QUESTIONS.push(
   {t:"Use it 5 times a day until the dryness resolves, then stop", correct:false, why:"Five times a day until healed is the docosanol directions. Artificial saliva is used any time as needed."},
   {t:"Use a 1-inch strip on a soft brush twice daily for 4 to 6 weeks", correct:false, why:"This is the desensitizing toothpaste instruction."},
   {t:"Use it anytime, at least after meals and before bed", correct:true, why:"The instructions are to use it any time, at minimum after meals and before bed. The gel is a half-inch length spread through the mouth."}],
- teach:"Artificial saliva has simple directions: use it at any time, at least after meals and before bed. A gel is a half-inch length placed on the tongue and spread thoroughly through the mouth. It is a long-term comfort measure with evaluation at 5 to 7 days.",
+ teach:"Artificial saliva has simple directions: use it at any time, at least after meals and before bed. A gel is a half-inch length placed on the tongue and spread thoroughly through the mouth. Evaluation is at 5 to 7 days.",
  cite:"Lecture 13 (Lam_OralDisorders_slides.pdf) slides 82, 83; T@89837 11/20"},
 
 {id:"LOR-068", skill:"case", prof:'Lam', tier:'new', topic:"lr-dry", sub:"follow", concept:"lr-dry-followup",
@@ -770,7 +770,7 @@ QUESTIONS.push(
 
 {id:"LOR-070", skill:"counsel", prof:'Lam', tier:'new', topic:"lr-ras", sub:"prot", concept:"lr-ras-disc-adhere", lowYield:true,
  tags:["hard"], source:"both",
- note:"Held out of scored practice: slide 37 prints 'Disc placement - 10-20 seconds' while the handout (10-20 minutes to adhere) and her recording (T@65877, 'about 10 to 20 minutes') say minutes. She did not correct the slide aloud, so the key is not unambiguous.",
+ note:"Held out of scored practice: slide 37 prints 'Disc placement - 10-20 seconds' while the handout (10-20 minutes to adhere) and her recording (T@65811, 'about 10 to 20 minutes') say minutes. She did not correct the slide aloud, so the key is not unambiguous.",
  stem:"Per her handout and her recording, how long is a protectant disc placed against a canker sore so that it adheres?",
  options:[
   {t:"30 minutes", correct:false, why:"This is how long to avoid eating or drinking after placing the disc."},
@@ -778,4 +778,4 @@ QUESTIONS.push(
   {t:"10 to 20 minutes", correct:true, why:"Her handout and her spoken explanation give 10 to 20 minutes to adhere, after which a barrier forms and dissolves in 8 to 12 hours."},
   {t:"8 to 12 hours", correct:false, why:"This is how long the disc takes to dissolve, not how long it is held in place."}],
  teach:"Her three sources differ on the placement time: the slide prints 10 to 20 seconds, while the handout and her recording say 10 to 20 minutes. The dissolve time (8 to 12 hours) and the 30-minute wait for food and drink are the same in all three.",
- cite:"Lecture 13 (Lam_OralDisorders_slides.pdf) slides 37; handout (Lam_OralDisorders_handout.pdf); T@65877 11/20"});
+ cite:"Lecture 13 (Lam_OralDisorders_slides.pdf) slides 37; handout (Lam_OralDisorders_handout.pdf); T@65811 11/20"});

@@ -159,7 +159,7 @@ QUESTIONS.push(
   {t:"It has a lower viscosity that spreads across the eye, and it reduces tearing", correct:false, why:"The ointment is thicker, not thinner, than a drop."},
   {t:"Its higher viscosity gives a longer retention time, and it blurs vision", correct:true, why:"Higher viscosity keeps the product on the eye longer, and blurred vision is its main side effect."},
   {t:"It increases tear production, and it causes light sensitivity", correct:false, why:"She said lubricants do not make the eye produce more tears, and light sensitivity is an exclusion criterion."}],
- teach:"Viscosity decides how long a product stays: ointments are thickest, gels in between, drops thinnest. The same property blurs vision, and some patients react to the ointment. These lubricants add viscosity but do not make the eye produce more tears.",
+ teach:"Viscosity decides how long a product stays: ointments have a higher viscosity than drops. The same property blurs vision, and some patients react to the ointment. These lubricants add viscosity but do not make the eye produce more tears.",
  cite:"Lecture 13 (Lam_OphthalmicDisorders.pdf) slides 14, 15; T@10523, T@9428 11/20"},
 
 {id:"LOD-015", skill:"tell", prof:'Lam', tier:'new', topic:"lo-de-plan", sub:"oint", concept:"lo-de-gel-vs-ointment",
@@ -243,12 +243,12 @@ QUESTIONS.push(
  tags:["list", "multi"], source:"both",
  stem:"Which instructions are correct for using varenicline nasal spray (Tyrvaya)? Select all that apply.",
  options:[
-  {t:"Tilt the tip toward the ear on the same side as the nostril", correct:true, why:"The T in TEAR is tilt the tip toward the ear nearest that nostril."},
+  {t:"Press the applicator down completely to administer the spray", correct:true, why:"The A in TEAR is administer by pressing the applicator down."},
   {t:"Prime the pump by pressing it into the air away from the face", correct:true, why:"The pump is primed by pressing it 7 times into the air, away from the face."},
   {t:"Shake the bottle well before each use", correct:false, why:"She corrected herself: do not shake it. Shaking is the instruction for suspensions."},
-  {t:"Elevate the tongue to the roof of the mouth", correct:true, why:"The E in TEAR is elevate the tongue."},
-  {t:"Breathe in deeply while pressing the applicator", correct:false, why:"The R in TEAR is resist inhaling the mist, which prevents the coughing side effect."}],
- teach:"The company acronym is TEAR: tilt the tip, elevate the tongue, administer, resist inhaling. The pump is primed away from the face and the bottle is not shaken. Inhaling during the spray causes the cough patients complain of.",
+  {t:"Resist inhaling the mist while the spray is given", correct:true, why:"The R in TEAR is resist inhaling the mist, which prevents the coughing side effect."},
+  {t:"Breathe in deeply while pressing the applicator", correct:false, why:"Inhaling during the spray causes the cough; the instruction is to resist inhaling."}],
+ teach:"The company acronym is TEAR (tilt, elevate, administer, resist inhaling); the tilt direction and the tongue position are printed on the handout and were worded differently aloud, so only administer and resist inhaling are keyed here. The pump is primed away from the face and the bottle is not shaken. Inhaling during the spray causes the cough patients complain of.",
  cite:"Lecture 13 (Lam_OphthalmicDisorders.pdf) slide 22 and handout; T@16594, T@44594 11/20"},
 
 {id:"LOD-023", skill:"counsel", prof:'Lam', tier:'new', topic:"lo-de-rx", sub:"var", concept:"lo-de-varenicline-cough",
@@ -300,10 +300,10 @@ QUESTIONS.push(
  stem:"Which finding best separates allergic conjunctivitis from bacterial or viral conjunctivitis?",
  options:[
   {t:"Tearing", correct:false, why:"Everyone with conjunctivitis tears, because tears are how the body tries to remove what is in the eye."},
-  {t:"Eyelid crusting", correct:false, why:"Crusting comes from bacterial or viral byproducts. Its presence points away from allergy, but an allergic eye can be tested without it."},
+  {t:"Eyelid crusting", correct:false, why:"Crusting comes from bacterial or viral byproducts. Crusting points to bacterial or viral disease, but she named itching as the finding to memorize."},
   {t:"Itching", correct:true, why:"Allergen triggers histamine release from mast cells, which causes the itch. Infection does not."},
-  {t:"Pink or red conjunctiva", correct:false, why:"Redness is present in all types, since conjunctivitis is inflammation of the conjunctiva."}],
- teach:"The main point is itching: allergic conjunctivitis itches. Tearing and redness occur in every type, while crusting points to a bacterial or viral cause.",
+  {t:"Pink or red conjunctiva", correct:false, why:"Redness is a general sign of conjunctivitis, but she named itching as the finding that separates allergic from the rest."}],
+ teach:"The main point is itching: allergic conjunctivitis itches. Tearing occurs in every type, while crusting points to a bacterial or viral cause.",
  cite:"Lecture 13 (Lam_OphthalmicDisorders.pdf) slides 28, 29; T@21718, T@22420 11/20"},
 
 {id:"LOD-028", skill:"patho", prof:'Lam', tier:'new', topic:"lo-cj-collect", sub:"diff", concept:"lo-cj-itch-mechanism",
@@ -340,7 +340,7 @@ QUESTIONS.push(
  cite:"Lecture 13 (Lam_OphthalmicDisorders.pdf) slides 28, 29; T@20762, T@21450 11/20"},
 
 {id:"LOD-031", skill:"tell", prof:'Lam', tier:'new', topic:"lo-cj-collect", sub:"diff", concept:"lo-cj-case-gpc",
- tags:["case", "hard"], source:"slide",
+ tags:["case", "hard"], source:"slide", lowYield:true, note:"Tests the Condition column, which slide 28 and the handout head as FYI; she said to memorize allergic versus bacterial versus viral, mainly itching (T@22420).",
  stem:"Ms. Weber, 24, wears contact lenses daily. For two weeks her eyes have itched and been red, with mucous discharge, and she can no longer tolerate her lenses. Which type of conjunctivitis fits this pattern?",
  options:[
   {t:"Herpetic viral conjunctivitis", correct:false, why:"Herpetic is listed with tearing and an acute onset."},
@@ -502,7 +502,7 @@ QUESTIONS.push(
  options:[
   {t:"It is a decongestant that relieves the redness but not the itching of the allergy", correct:false, why:"The slides and handout teach it as an ophthalmic antihistamine option."},
   {t:"It blocks histamine alone, so it fits mild disease and is not a dual-acting agent", correct:true, why:"Cetirizine ophthalmic is an antihistamine alone and is generally used for mild allergic conjunctivitis."},
-  {t:"It is a mast cell stabilizer, so it works slowly and must be started before the season", correct:false, why:"Raising blood pressure with absorption is a decongestant concern."},
+  {t:"It is a mast cell stabilizer, so it works slowly and must be started before the season", correct:false, why:"Cetirizine ophthalmic is an antihistamine alone. Mast cell stabilization and use before the season belong to the dual-acting agents."},
   {t:"It can worsen dry eye by lowering tear production, as oral antihistamines can", correct:false, why:"That is said about oral antihistamines, which can dry the eye."}],
  teach:"Cetirizine ophthalmic reduces itching and redness but acts on histamine alone, so she limits it to mild allergic conjunctivitis, with frequent dosing a disadvantage. Dual-acting agents also stabilize mast cells and are easier to take.",
  cite:"Lecture 13 (Lam_OphthalmicDisorders.pdf) slide 38 and handout; T@29395 11/20"},
@@ -527,7 +527,7 @@ QUESTIONS.push(
   {t:"Increase to six times daily so the redness stays down throughout the day", correct:false, why:"More drug extends the exposure that causes rebound redness."},
   {t:"Stop it, because use past 72 hours causes rebound redness, and it can raise his blood pressure", correct:true, why:"Rebound hyperemia follows use past 72 hours, and absorbed drug can raise blood pressure."},
   {t:"Switch to prescription brimonidine drops, which are safer for long-term redness", correct:false, why:"Prescription brimonidine is a glaucoma drug, and she did not teach it as a redness product."}],
- teach:"Redness that returns when the decongestant is skipped is rebound conjunctival hyperemia, which follows use beyond 72 hours. Absorption can also raise blood pressure, which matters in hypertension. Stop it and use artificial tears.",
+ teach:"Redness that returns when the decongestant is skipped is rebound conjunctival hyperemia, which follows use beyond 72 hours. Absorption can also raise blood pressure, which matters in hypertension.",
  cite:"Lecture 13 (Lam_OphthalmicDisorders.pdf) slide 39 and handout; T@30841 11/20"},
 
 {id:"LOD-048", skill:"tell", prof:'Lam', tier:'new', topic:"lo-cj-plan", sub:"decon", concept:"lo-cj-decongestant-recognize-select", multi:true,
@@ -650,7 +650,7 @@ QUESTIONS.push(
   {t:"To let the preservative in the first drop evaporate", correct:false, why:"The wait is not about the preservative."},
   {t:"To allow the first drop to be absorbed into the contact lens", correct:false, why:"Drops should not go in with lenses in place, and waiting 15 minutes before reinserting is the lens rule."},
   {t:"To keep the second drop from washing out the first", correct:true, why:"The wait prevents the first drop from being flushed away or diluted by the second."}],
- teach:"A drop stays in the eye for a short time, and a second drop washes out and dilutes the first. Waiting 5 minutes between solutions, and 10 minutes before an ointment or gel, protects each dose. Eyelid closure is the separate step that reduces systemic absorption.",
+ teach:"A second drop washes out and dilutes the first. Waiting 5 minutes between solutions, and 10 minutes before an ointment or gel, protects each dose. Eyelid closure is the separate step that reduces systemic absorption.",
  cite:"Lecture 13 (Lam_OphthalmicDisorders.pdf) slide 44 and handout"},
 
 {id:"LOD-059", skill:"counsel", prof:'Lam', tier:'new', topic:"lo-gen", sub:"order", concept:"lo-gen-suspension-shake",
@@ -683,7 +683,7 @@ QUESTIONS.push(
   {t:"Timolol gel should be shaken before the ketotifen", correct:false, why:"Shaking applies to suspensions."},
   {t:"The ketotifen solution should go first, with the gel 10 minutes later", correct:true, why:"The solution goes before the gel, and the gel needs a 10-minute wait."},
   {t:"He waited too long between the products", correct:false, why:"He did not wait long enough for a gel and he used the wrong order."}],
- teach:"Reading the sequence backward: solutions go before ointments and gel-forming products, and the final product needs a 10-minute wait. A 5-minute gap between a solution and a gel is the typical mistake.",
+ teach:"Reading the sequence backward: solutions go before ointments and gel-forming products, and the final product needs a 10-minute wait.",
  cite:"Lecture 13 (Lam_OphthalmicDisorders.pdf) slides 44, 45, 54; T@41409 11/20"},
 
 {id:"LOD-062", skill:"counsel", prof:'Lam', tier:'new', topic:"lo-gen", sub:"lens", concept:"lo-gen-lens-wait",
@@ -705,7 +705,7 @@ QUESTIONS.push(
   {t:"To prepare the eye for the next product 5 minutes later", correct:false, why:"The 5-minute wait handles the next product. The closure reduces drainage."},
   {t:"To allow the preservative to settle on the surface of the lens", correct:false, why:"The step is about drainage, not the preservative."},
   {t:"To let the suspension re-mix inside the dropper bottle", correct:false, why:"Suspensions are shaken in the bottle before use."}],
- teach:"The drop drains through the corner of the eye into the nose and the blood. Gentle closure and corner pressure for 1 to 2 minutes limit that drainage and the systemic absorption. The same step applies to ointments.",
+ teach:"Gentle closure and corner pressure for 1 to 2 minutes limit that drainage and the systemic absorption. The same step applies to ointments.",
  cite:"Lecture 13 (Lam_OphthalmicDisorders.pdf) slides 48, 49; T@36394 11/20"},
 
 {id:"LOD-064", skill:"counsel", prof:'Lam', tier:'new', topic:"lo-gen", sub:"tech", concept:"lo-gen-ointment-length",
@@ -734,7 +734,7 @@ QUESTIONS.push(
  tags:["case"], source:"both",
  stem:"A patient tells you she often cannot tell whether a drop reached her eye. Which storage advice helps?",
  options:[
-  {t:"Press on the inside corner of the eye for 15 minutes after each drop", correct:false, why:"Freezing was not an option given."},
+  {t:"Press on the inside corner of the eye for 15 minutes after each drop", correct:false, why:"Pressing the corner for 1 to 2 minutes limits drainage. It does not show whether the drop landed, and 15 minutes is the contact lens wait."},
   {t:"Refrigerate her ophthalmic suspension after opening so the cold shows the drop landed", correct:false, why:"Suspensions cannot be refrigerated."},
   {t:"Warm the bottle in her hands first, so the drop feels warm when it lands", correct:false, why:"Warmth does not help her sense the drop."},
   {t:"Refrigerate the opened solution, if the label allows, so the cold shows it landed", correct:true, why:"Most solutions can be refrigerated after opening, and the cold sensation confirms the drop reached the eye."}],
@@ -780,7 +780,7 @@ QUESTIONS.push(
  options:[
   {t:"Antihistamine eye drops are contraindicated in glaucoma, so he should be referred to his eye doctor", correct:false, why:"She did not say they are contraindicated; the itch is the immediate problem."},
   {t:"Recommend an ophthalmic decongestant instead, because it is safe in glaucoma and treats the allergy", correct:false, why:"Decongestants can precipitate angle-closure glaucoma beyond 72 hours."},
-  {t:"Recommend the product to be used daily for the whole season, with no follow-up", correct:false, why:"She tied the risk to chronic use, so he should be followed and have his eye doctor involved."},
+  {t:"Recommend the product to be used daily for the whole season, with no follow-up", correct:false, why:"She tied the risk to chronic use. Recommending it daily for the whole season with no follow-up ignores that."},
   {t:"Short-term use is acceptable; chronic use of anticholinergic antihistamines is the concern", correct:true, why:"She said the concern is chronic use of anticholinergic antihistamines, and that short-term use of the products is acceptable."}],
  teach:"She weighed risk against need: the biggest problem now is itch, short-term use is acceptable, and some worsening may resolve. The risk she named is chronic use of antihistamines with anticholinergic properties.",
  cite:"Lecture 13 (Lam_OphthalmicDisorders.pdf) slide 51; T@42223 11/20"},
