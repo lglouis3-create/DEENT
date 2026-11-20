@@ -259,7 +259,7 @@ QUESTIONS.push(
  tags:['compare','take-home'], source:'both',
  stem:'Pimecrolimus and tacrolimus differ most in which property?',
  options:[
-  {t:'Absorption through the skin', correct:true, why:'"there are similarities in lipophilicity, structure, um, mechanism, but this is the biggest thing. They differ in this particular PK property, absorption through the skin" (T@5890–6070); slide 28 Notes.'},
+  {t:'Absorption through the skin', correct:true, why:'"there are similarities in lipophilicity, structure, mechanism, but this is the biggest thing. They differ in this particular PK property, absorption through the skin" (T@5890–6070); slide 28 Notes.'},
   {t:'Their lipophilicity (log P)', correct:false, why:'Their log P values are similar (cLogP 6.0 and 5.8, slide 28; T@4780).'},
   {t:'Their mechanism of action', correct:false, why:'Both are calcineurin inhibitors that lower cytokine release (slide 28).'},
   {t:'Their overall ring structure', correct:false, why:'The structures are similar; they differ at Cl vs OH and ethyl vs allyl (T@4645–4780).'}],
@@ -573,7 +573,7 @@ QUESTIONS.push(
   {t:'Peptidase breakdown in the stomach', correct:false, why:'Not the reason he gave for cyclosporine; he ascribed it to first-pass metabolism by 3A4 (T@12860–13060).'},
   {t:'Glucuronidation by UGT in the gut', correct:false, why:'Slide 33 and T@12824–13060 give first-pass metabolism by CYP3A4.'},
   {t:'Chelation with dietary calcium', correct:false, why:'Chelation with food cations lowers tetracycline absorption (slide 55).'}],
- teach:'"The or[al] bioavailability is uh. Very poor ... 30%. This is ascribed to first pass metabolism ... carried out by 3F4 [3A4]" (T@12824–13060). Slide 33 also lists log P = 4 and T1/2 = 19 h.',
+ teach:'"The or[al] bioavailability is very poor ... 30%. This is ascribed to first pass metabolism ... carried out by 3F4 [3A4]" (T@12824–13060). Slide 33 also lists log P = 4 and T1/2 = 19 h.',
  cite:S4+' slide 33; T@12824–13060'},
 
 {id:'S4-043', skill:'pk', prof:'Sikazwe', tier:'new', topic:'s4-sys', sub:'csa', concept:'csa-grapefruit',
@@ -881,7 +881,7 @@ QUESTIONS.push(
  stem:'Which are drawbacks of topical sulfur? Select all that apply.',
  options:[
   {t:'Allergies', correct:true, why:'"What are some of the drawbacks to using sulfur? Cause of allergies." (T@24170–24230).'},
-  {t:'Smell', correct:true, why:'"And some people just uh detest sulfur for what? Smell." (T@24230–24285).'},
+  {t:'Smell', correct:true, why:'"And some people just detest sulfur for what? Smell." (T@24230–24285).'},
   {t:'Teratogenicity', correct:false, why:'Teratogenicity is the retinoid limitation (slide 48).'},
   {t:'Tooth staining', correct:false, why:'Staining of bone and enamel is a tetracycline effect (slide 55).'}],
  teach:'Sulfur is used alone (e.g., in petrolatum) or in mixtures with sodium sulfacetamide or zinc oxide (slide 46; T@24760–24900).',
@@ -984,7 +984,7 @@ QUESTIONS.push(
  tags:['counsel'], source:'both',
  stem:'By which routes are tretinoin and isotretinoin used for acne?',
  options:[
-  {t:'Tretinoin topically; isotretinoin orally', correct:true, why:'Slide 49 notes "topical" (tretinoin) and "orally" (isotretinoin); "tretinoin is used, I think this is topical. And this one is used. Uh, orally." (T@27800–27920).'},
+  {t:'Tretinoin topically; isotretinoin orally', correct:true, why:'Slide 49 notes "topical" (tretinoin) and "orally" (isotretinoin); "tretinoin is used, I think this is topical. And this one is used. Orally." (T@27800–27920).'},
   {t:'Tretinoin orally; isotretinoin topically', correct:false, why:'The reverse of slide 49.'},
   {t:'Both are given by injection', correct:false, why:'Neither is injected; tretinoin is topical and isotretinoin oral (slide 49).'},
   {t:'Both orally, as ester prodrugs', correct:false, why:'Both are active acids (T@28470–28540); the ester prodrugs are etretinate and tazarotene.'}],

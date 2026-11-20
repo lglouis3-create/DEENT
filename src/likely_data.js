@@ -262,7 +262,7 @@ const LIKELY = {
     {id:'S4-075', source:'sik-cue',    ref:'11/04, T@27950–28700 (p. 49)', reason:'He showed the one point where these two drugs differ: "that\'s the only difference".'},
     {id:'S4-085', source:'sik-room',   ref:'11/04, T@32000–32100 (p. 53)', reason:'He asked the room this about the three drugs on the slide.'},
     {id:'S4-087', source:'sik-cue',    ref:'11/04, T@32723–33100 (p. 53)', reason:'"This is the take-home message from this slide."'},
-    {id:'S4-089', source:'sik-cue',    ref:'11/04, T@34051–34800 (p. 54)', reason:'"Here, you should be able to uh distinguish" the molecules of this slide by their structures.'},
+    {id:'S4-089', source:'sik-cue',    ref:'11/04, T@34051–34800 (p. 54)', reason:'"Here, you should be able to distinguish" the molecules of this slide by their structures.'},
     {id:'S4-092', source:'sik-cue',    ref:'11/04, T@35450–35900 (p. 55)', reason:'He named this as the worry with the class: "This is a limitation."'},
     {id:'S4-102', source:'sik-cue',    ref:'11/04, T@41158–41549 (p. 62)', reason:'"So, that gives you a point of distinction."'},
     {id:'S4-106', source:'sik-room',   ref:'11/04, T@42816–43400 (p. 64)', reason:'He asked the room: "What is the drawback to using this?"'},

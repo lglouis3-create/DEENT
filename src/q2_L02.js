@@ -93,7 +93,7 @@ QUESTIONS.push(
  tags:['counseling','cue','numbers'], source:'both',
  stem:'When should a patient starting a topical retinoid for acne expect optimal clinical improvement?',
  options:[
-  {t:'In 8–12 weeks', correct:true, why:'Slide 16; (T 28–30) "counsel your patients that you might not see optimal improvement for, you know, 8 to 12 weeks".'},
+  {t:'In 8–12 weeks', correct:true, why:'Slide 16; (T 28–30) "counsel your patients that you might not see optimal improvement for 8 to 12 weeks".'},
   {t:'In 1–2 weeks', correct:false, why:'Early weeks can look worse (slide 16; T 20–25).'},
   {t:'In 4–6 weeks', correct:false, why:'4–6 weeks is the period when more comedones may appear (slide 16).'},
   {t:'In 6–12 months', correct:false, why:'Slide 16 gives 8–12 weeks.'}],
@@ -386,7 +386,7 @@ QUESTIONS.push(
  tags:['room'], source:'transcript',
  stem:'Why are men enrolled in the iPLEDGE program for isotretinoin?',
  options:[
-  {t:'Sperm can be affected', correct:true, why:'Her answer to a student (T 130–132): "we have now found that uh sperm is affected as well ... men have to be enrolled as well, so they\'ve got to use their own protection".'},
+  {t:'Sperm can be affected', correct:true, why:'Her answer to a student (T 130–132): "we have now found that sperm is affected as well ... men have to be enrolled as well, so they\'ve got to use their own protection".'},
   {t:'Men have more hepatotoxicity', correct:false, why:'Hepatotoxicity is the added acitretin risk (slide 20), not a reason for enrollment.'},
   {t:'Men absorb more of the drug', correct:false, why:'Not the reason she gave (T 130–132).'},
   {t:'To watch for skeletal hyperostosis', correct:false, why:'Skeletal hyperostosis is a concern in children (slide 19).'}],
@@ -842,7 +842,7 @@ QUESTIONS.push(
  tags:['tell'], source:'both',
  stem:'For which skin condition is oral cyclosporine used?',
  options:[
-  {t:'Severe psoriasis', correct:true, why:'Slide 29: cyclosporine used to treat psoriasis; (T 385–386) "orally for treating uh bad psoriasis".'},
+  {t:'Severe psoriasis', correct:true, why:'Slide 29: cyclosporine used to treat psoriasis; (T 385–386) "orally for treating bad psoriasis".'},
   {t:'Mild acne', correct:false, why:'Not a cyclosporine use (slide 29).'},
   {t:'Warts and corns', correct:false, why:'High-strength salicylic acid (slide 40).'},
   {t:'Severe cystic acne', correct:false, why:'Oral isotretinoin (slide 19).'}],
@@ -921,7 +921,7 @@ QUESTIONS.push(
  tags:['tell','cue'], source:'both',
  stem:'Which adverse effect is specific to tacrolimus among the calcineurin inhibitors?',
  options:[
-  {t:'Neuropathies', correct:true, why:'Slide 30: tacrolimus only; (T 418–419) "tact causes uh neuropathies".'},
+  {t:'Neuropathies', correct:true, why:'Slide 30: tacrolimus only; (T 418–419) "tact causes neuropathies".'},
   {t:'Gingival hyperplasia', correct:false, why:'Slide 30: cyclosporine only.'},
   {t:'Upper respiratory tract infections', correct:false, why:'Slide 30: both drugs.'},
   {t:'Nephrotoxicity', correct:false, why:'Slide 30: both drugs.'}],
@@ -1146,7 +1146,7 @@ QUESTIONS.push(
  tags:['mechanism'], source:'both',
  stem:'What antibacterial effect does sulfur have in acne?',
  options:[
-  {t:'Bacteriostatic: it stops bacterial growth', correct:true, why:'Slide 38; (T 516–518) "it doesn\'t kill off the bacteria, but it helps prevent them from, uh, proliferating".'},
+  {t:'Bacteriostatic: it stops bacterial growth', correct:true, why:'Slide 38; (T 516–518) "it doesn\'t kill off the bacteria, but it helps prevent them from, proliferating".'},
   {t:'Bactericidal: it kills P. acnes', correct:false, why:'(T 517) "it doesn\'t kill off the bacteria".'},
   {t:'It binds the 50S subunit of the bacterial ribosome', correct:false, why:'That is chloramphenicol and the macrolides (slide 42).'},
   {t:'It binds the 30S ribosomal subunit', correct:false, why:'That is the tetracycline class (slide 42).'}],
@@ -1247,7 +1247,7 @@ QUESTIONS.push(
  tags:['room','adverse'], source:'both',
  stem:'What is salicylism?',
  options:[
-  {t:'Salicylate overdose', correct:true, why:'Slide 40; her question to the room (T 555–557): "the term we use for uh a salicylate um overdose ... That\'s a dangerous situation."'},
+  {t:'Salicylate overdose', correct:true, why:'Slide 40; her question to the room (T 555–557): "the term we use for a salicylate overdose ... That\'s a dangerous situation."'},
   {t:'Salicylate contact allergy', correct:false, why:'Allergic reactions are listed separately on slide 40.'},
   {t:'Deep peeling from salicylate', correct:false, why:'That is desquamation (T 541–545).'},
   {t:'Salicylate-induced ulceration', correct:false, why:'Ulceration with high concentrations is a separate side effect (slide 40).'}],

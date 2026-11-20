@@ -468,7 +468,7 @@ QUESTIONS.push(
   {t:'Dermis, epidermis, subcutis', correct:false, why:'The epidermis is the outer layer (slide 9).'},
   {t:'Epidermis, subcutis, dermis', correct:false, why:'The subcutis is the innermost layer (slide 9).'},
   {t:'Stratum corneum, dermis, epidermis', correct:false, why:'The stratum corneum is part of the epidermis, not a separate third layer.'}],
- teach:'"I don\'t need you to need to know anything, you know, but that" (T@6438): the barrier she discusses in AD is the epidermis (T@28865).',
+ teach:'"I don\'t need you to need to know anything but that" (T@6438): the barrier she discusses in AD is the epidermis (T@28865).',
  cite:P5+' slide 9; T@6049–6438'},
 
 /* ---- Goals, skin barrier, non-drug care, moisturizers, counseling --------- */
@@ -515,7 +515,7 @@ QUESTIONS.push(
   {t:'1 cup in a full tub of water', correct:false, why:'Twice the slide 31 amount.'},
   {t:'¼ cup in a full tub of water', correct:false, why:'Half the slide 31 amount.'},
   {t:'½ cup in a gallon of water', correct:false, why:'Slide 31 says a full tub; ½ cup in a gallon would be far stronger.'}],
- teach:'"The guidelines do recommend adding a very small amount of bleach to that water, tub full of water. Um, twice a week to prevent skin infections" (T@31505).',
+ teach:'"The guidelines do recommend adding a very small amount of bleach to that water, tub full of water. Twice a week to prevent skin infections" (T@31505).',
  cite:P5+' slide 31; T@31505'},
 
 {id:'P5-040', skill:'counsel', prof:'Patel', tier:'new', topic:'p5-care', sub:'bath', concept:'p5-bath-practice',

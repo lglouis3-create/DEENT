@@ -232,7 +232,7 @@ QUESTIONS.push(
  tags:['case','two-facts'], source:'both',
  stem:'A 20-year-old with no medical conditions has a common wart on the hand and asks which option is the most effective to start with. What should the pharmacist recommend?',
  options:[
-  {t:'Salicylic acid 17% liquid, 1–2 times a day', correct:true, why:'"In general, um, the salicylic acid is the most effective to treat the warts" (T@92731 11/12); slide 10 schedule.'},
+  {t:'Salicylic acid 17% liquid, 1–2 times a day', correct:true, why:'"In general, the salicylic acid is the most effective to treat the warts" (T@92731 11/12); slide 10 schedule.'},
   {t:'Duct tape, changed every 6 days for up to 2 months', correct:false, why:'A complementary therapy (slide 12): "it is available to use", but salicylic acid is the most effective (T@92571–92731 11/12).'},
   {t:'Dietary zinc 10 mg/kg/day', correct:false, why:'Slide 12: small study.'},
   {t:'Topical vitamin A once a day', correct:false, why:'Slide 12: case report only; no frequency is given.'}],

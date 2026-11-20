@@ -593,7 +593,7 @@ QUESTIONS.push(
  tags:['exam-style'], source:'both', dupOf:'S4-086',
  stem:'Spironolactone is the steroidal antiandrogen used in acne. How does it lower androgen effects?',
  options:[
-  {t:'It lowers testosterone synthesis', correct:true, why:'"spironolactone and ketoconazole. These Uh, Diminish Testosterone ... Biosynthesis ... that\'s the mechanism of action" (T@32000–32300; slide 53).'},
+  {t:'It lowers testosterone synthesis', correct:true, why:'"spironolactone and ketoconazole. These Diminish Testosterone ... Biosynthesis ... that\'s the mechanism of action" (T@32000–32300; slide 53).'},
   {t:'It blocks testosterone at its receptor', correct:false, why:'A real antiandrogen mechanism on the slide, but receptor blocking is flutamide\'s (slide 53; T@32700–32900).'},
   {t:'It acts as a strong CYP3A4 inhibitor', correct:false, why:'The warning for the other biosynthesis inhibitor on the slide: strong 3A4 inhibition belongs to the azole ketoconazole (T@32300–32640).'},
   {t:'It suppresses sebum as an estrogen', correct:false, why:'Lower sebum is the end result of every hormonal agent here (T@33140–33600), but the estrogenic route belongs to the oral contraceptives (slide 52; T@31200–31600).'}],

@@ -13,7 +13,7 @@
        ask for the lesser route.
    (3) Slide 41 says RhoA inhibition relaxes trabecular meshwork tone; the lecture (T@35676) says "not a muscular relaxation": the
        meshwork is less stiff because fibrosis-related proteins form less. Items use the shared wording (less stiff, lower resistance).
-   (4) Slide 33 says "temporal or supraoptic headache"; the transcript says "supra. Uh, optic headache, so around their eyes gets painful" (T@28186). Items say pain around the eyes and explain it as ciliary muscle spasm.
+   (4) Slide 33 says "temporal or supraoptic headache"; the transcript says "supra-optic headache, so around their eyes gets painful" (T@28186). Items say pain around the eyes and explain it as ciliary muscle spasm.
    (5) Slide 35 (AChE inhibitor) lists no floaters; slide 33 (M3 agonists) does. No item keys floaters for the AChE inhibitor.
    (6) Slide 38 and the lecture print "Travaprost"; the drug chart prints travoprost, used here (EO-025 notes the slide spelling).
    (7) Counseling on compressing the eyelid corner is handwriting on slide 5, not typed slide text; EO-011 cites the transcript (T@30444 11/17, T@48290 and T@16035 11/13).
