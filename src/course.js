@@ -398,7 +398,8 @@ const COURSE = {
           // Guides: the reading components of the objective sections (numbered blocks, tables, formula
           // line, step-care bands, number tiles with a label that says what the number measures,
           // tap-to-check polls). Styles only, under ".gobj .g2-" (Louis 2026-11-14)
-          'guide2_css.js', 'guide_pl_css.js', 'guide_drill_ui.js',
+          'guide2_css.js',
+          'g2nav_ui.js', 'guide_pl_css.js', 'guide_drill_ui.js',
           // Glossary tab, "Words in this question" under an answered question, My words (Louis, 2026-11-14)
           'glossary_data.js', 'glossary_ui.js',
           // Stars on the reading tabs: guide sections and blocks, reference sections, tell-apart rows, disease cards, drugs,
