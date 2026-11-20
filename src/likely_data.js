@@ -619,9 +619,7 @@ const LIKELY = {
     {id:"OR-023", source:'sik-ex3', ref:"T@29365, T@29627 11/18 (slide 21)", reason:"The first step of the chemical basis of action he drew for the rinses (CBDA, objective slide 2)."},
     {id:"OP-002", source:'sik-ex3', ref:"T@38474, T@38887 11/18 (slide 27)", reason:"He built the class name part by part, then said \"remember these, practice these\"."},
     // Exam 3, Dr. Sikazwe after the 11/19 lecture (added 2026-11-20): his emphasis in speech and handwriting, most likely first.
-    {id:"OB-025", source:'sik-ex3', ref:"T@30435 11/19 (slide 50)", reason:"He said \"this is just the key things that we are going to emphasize\" about slide 50 and filled its two blanks on the slide."},
     {id:"OB-001", source:'sik-ex3', ref:"T@3813 11/19 (slide 33)", reason:"He told the class to make sure they can count the carbons, and repeated how the drugs are classified."},
-    {id:"OB-022", source:'sik-ex3', ref:"T@28220 11/19 (slide 49)", reason:"He wrote the three components on slide 49 and said that understanding them is what makes the treatments make sense."},
     {id:"OB-008", source:'sik-ex3', ref:"T@12940 11/19 (slide 37)", reason:"He said \"I could have a small question like this for you\" and marked slide 37 with question marks."},
     {id:"OB-011", source:'sik-ex3', ref:"T@21483, T@22201 11/19 (slides 42-43)", reason:"He added a group to the ranking on slide 42 in his own writing and asked the same ordering as his own Question-2 on slide 43."},
     {id:"OB-012", source:'sik-ex3', ref:"T@19719 11/19 (slide 42)", reason:"He wrote on slide 42 and stressed the timing of the antidote."},

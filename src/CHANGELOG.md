@@ -9,6 +9,10 @@ characters.
 Every update adds its bullets here in the same commit that makes the change.
 
 ## 2026-11-20 (Dr. Lam's glaucoma lecture, Dr. Sikazwe 11/19, search)
+- Dr. Sikazwe's emailed Exam 3 readings: dry eye is now low-yield; 14 new questions on his practice questions.
+- Diagrams redrawn on the slides' eye pictures: aqueous flow, angle, drug targets, dry eye, eyelid, earwax, fluoride.
+- New diagram "Where each glaucoma drug class acts", one colour per class, with leaders to each site.
+- Dr. Lam's drug lists are one card per class with brand tags and class colours; long pages open one block at a time.
 - Dr. Lam's glaucoma lecture: 182 questions, five diagrams.
 - Dr. Lam's guide is five pages, one per objective: handout facts, what she added aloud, her cases.
 - Her 182 questions explain why, how to spot it in a case, and what separates the closest wrong option.

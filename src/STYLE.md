@@ -270,3 +270,12 @@ American spelling in everything a student reads: practice (noun and verb), recog
 
 ## Shortening a slide statement (Louis, 2026-11-15)
 A guide row, Reference line, Diseases card or glossary definition that shortens a slide keeps every qualifier the slide prints: the cause or source after "or" (slide 18: "dryness from cleansing/environment", not "dryness"), the hedge ("may", "postulated", "not fully known"), the group or scope ("in fair-skinned people", "mild to moderately severe facial acne"), the condition ("recalcitrant to standard therapies"), each list member or an explicit "e.g.", and the "or/and" relation. A claim that only the lecture makes is labelled as said in class, and a claim that only the other professor makes is not placed under this slide. A shortened row is read against the slide image, not only its text. `node qualifier_check.js` guards the rows found in the 2026-11-15 audit (reviews/LOG.md).
+
+
+## Dr. Sikazwe: Exam 3 readings and practice questions (emailed to the class, pasted by Louis 2026-11-20)
+Readings: Otic/Oral/Ophthalmic slides 5-8; 15-21; 27-31; 33-48. Self-assessment questions 3-5. His four practice questions:
+1. List all non-fluoride tooth paste active chemical ingredients and explain how they work.
+2. Draw by hand the key functional groups which form the basis for chemically classifying the anti-glaucoma drug molecules.
+3. Hand draw the N-dealkylated products of brinzolamide and dorzolamide (both undergo CYP N-deethylation; the N-deethylated metabolites are active).
+4. TRUE/FALSE. Fluoride ions strengthen hydroxyapatite, promote calcium and phosphate deposition into enamel, and can erode teeth in children.
+Built on them: `src/q37_sik_practice.js` (OP2-001 to OP2-014). His Q4 is not keyed: the slides say fluorapatite resists acid erosion and excess fluoride (above 2 mg/L) causes fluorosis (white, later brown spots); "erode" is ambiguous (reviews/OPEN_QUESTIONS.md).

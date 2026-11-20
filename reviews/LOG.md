@@ -349,3 +349,8 @@
 - run_checks first run: 35 PASS, 3 FAIL (browser_test: OB-009 and OB-031 stems promised a drawing; optional_test: two optional topics; state_check: CLAUDE.md older than L12), 1 REPORT. Fixed by rewording the two stems, making oo-beyond a non-optional low-yield topic, and updating CLAUDE.md.
 
 - Released 2026-11-20 as 0b69cbe (Louis: "Publish when completed"). Final run_checks: 0 FAIL, 1 REPORT; slide_test 235, examfold_test 366, glossary_test 240, wide_test 109, walk_test 92, search_test 114, dz_test 59. Skeptic fixes applied (Lam IOP/acidosis exclusions, Sikazwe wording); search button hides when Back button shows.
+
+## 2026-11-20 (later): Lam pages redesigned, diagrams redrawn, Sikazwe emailed scope
+- Louis's reviews: Lam feedback unhelpful, Explain more unrelated, drug lists in paragraphs, diagrams abstract and hard to match to slides. Done: five-objective Lam guide with colour cards and folded blocks; feedback rewritten (three writers, two skeptics, fixes applied); Explain more mapped per topic; shared diagram library and 8 redrawn figures plus ey-targets; his classmate's reference pictures used only for presentation ideas.
+- Sikazwe's email (readings list, practice questions): dry eye low-yield; 14 new questions; OPEN_QUESTIONS updated.
+- Checks on this state before the final run: style_check, test.js, likely_check, links_check, diagrams_ey/oo/fb/lg checks, stepper_test, blank_check pass. Full run_checks and course tests: see the next entry.

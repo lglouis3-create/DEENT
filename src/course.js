@@ -300,12 +300,14 @@ const COURSE = {
           // Exam 3 diagrams (Louis, 2026-11-19): Dr. Smith's eye figures, then Dr. Sikazwe's otic, oral and ophthalmic chemistry (each adds to DIA, DIA_NAMES, DIAGRAMS)
           'diagram_fx.js',
           'diagram_fx_fa.js',
+          'diagram_fx_fa2.js',
           'diagram_fx_fb.js',
           'diagram_fx_fc.js',
           'diagrams_ey.js',
           'diagrams_lg.js',
           'diagrams_oo.js',
           'diagrams_ey_fa.js',
+          'diagrams_ey_fa2.js',
           'diagrams_fb.js',
           'diagrams_oo_fc.js',
           // Mechanism step-throughs from Dr. Smith's PCol slides (Louis, 2026-11-09): adds to DIA
@@ -337,6 +339,7 @@ const COURSE = {
           'q28_ooo_otic_oral.js', 'q29_ooo_oph_a.js', 'q30_ooo_oph_b.js', 'q31_ooo_oph_c.js',
           // Dr. Sikazwe, 11/19 (Exam 3): the questions on what he emphasized, written after the lecture (video and transcript)
           'q36_ooo_1119.js',
+          'q37_sik_practice.js',
           // Dr. Lam, Lecture 12 (Exam 3): glaucoma therapeutics, by her learning objectives (topics first, in q32_lam_topics.js above)
           'q33_lam_a.js', 'q34_lam_b.js', 'q35_lam_c.js',
           // the step-throughs of moa_figs.js in the explanations of the matching Smith questions

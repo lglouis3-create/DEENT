@@ -6,7 +6,7 @@
    Notes: slide 55 says "SAR: Refer to slide #33" but the aryl imidazoline SAR is slide 32; slide 55 prints decongestant brands (Clear Eyes
    for xylometazoline, Otrivin for naphazoline) that differ from the drug chart, so no brand item is written for them; "Olopatidine" is the slide's spelling. */
 QUESTIONS.push(
-{id:"OA-001", skill:"class", prof:'Sikazwe', tier:'new', topic:"oo-de", sub:"drugs", concept:"oo-de-two-approaches",
+{id:"OA-001", skill:"class", prof:'Sikazwe', tier:'new', topic:"oo-beyond", sub:"de", lowYield:true, note:"Not on Exam 3: his emailed reading list for Exam 3 (11/20) ends at slide 48; dry eye disease is slides 49–51. Kept for optional practice.", concept:"oo-de-two-approaches",
  tags:["hard", "reasoning"], source:"slide",
  stem:"Which pair of drug actions is used in dry eye disease pharmacotherapy besides topical corticosteroids?",
  options:[
@@ -17,7 +17,7 @@ QUESTIONS.push(
  teach:"Slide 49: dry eye disease is multifactorial; pharmacotherapy is calcineurin inhibition (cyclosporine), integrin LFA-1 receptor inhibition (lifitegrast) and topical corticosteroids for the inflammation. In lecture he framed these as anti-inflammatory approaches: calcineurin inhibition and the LFA-1 cascade (both lower T-cell activation), short-term steroids, and artificial tears if these fail (11/19).",
  cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slide 49; T@28928 11/19"},
 
-{id:"OA-002", skill:"class", prof:'Sikazwe', tier:'new', topic:"oo-de", sub:"drugs", concept:"oo-de-cyclosporine-class",
+{id:"OA-002", skill:"class", prof:'Sikazwe', tier:'new', topic:"oo-beyond", sub:"de", lowYield:true, note:"Not on Exam 3: his emailed reading list for Exam 3 (11/20) ends at slide 48; dry eye disease is slides 49–51. Kept for optional practice.", concept:"oo-de-cyclosporine-class",
  tags:["hard", "tell"], source:"slide",
  stem:"Cyclosporine (Restasis) is placed in which chemical class?",
  options:[
@@ -28,7 +28,7 @@ QUESTIONS.push(
  teach:"Slide 50: cyclosporine (Restasis) is a cyclic peptide; its calcineurin inhibition lowers T-cell activation and its log P is 4. Slide 50 also prints prodrug; in lecture he did not call it a prodrug and said it is not metabolized in the eye (11/19).",
  cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slide 50; T@29641 11/19"},
 
-{id:"OA-003", skill:"chem", prof:'Sikazwe', tier:'new', topic:"oo-de", sub:"drugs", concept:"oo-de-lifitegrast-cbda",
+{id:"OA-003", skill:"chem", prof:'Sikazwe', tier:'new', topic:"oo-beyond", sub:"de", lowYield:true, note:"Not on Exam 3: his emailed reading list for Exam 3 (11/20) ends at slide 48; dry eye disease is slides 49–51. Kept for optional practice.", concept:"oo-de-lifitegrast-cbda",
  tags:["hard", "tell"], source:"slide",
  stem:"Blocking intercellular adhesion molecule-1 (ICAM-1) from binding integrin LFA-1 is the chemical basis of drug action of which drug?",
  options:[
@@ -39,7 +39,7 @@ QUESTIONS.push(
  teach:"Slide 51: lifitegrast (Xiidra) is a phenylalanine derivative that blocks ICAM-1 from binding integrin LFA-1, so T-cell activation falls.",
  cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slide 51; T@31234 11/19"},
 
-{id:"OA-004", skill:"mech", prof:'Sikazwe', tier:'new', topic:"oo-de", sub:"drugs", concept:"oo-de-new-calcineurin",
+{id:"OA-004", skill:"mech", prof:'Sikazwe', tier:'new', topic:"oo-beyond", sub:"de", lowYield:true, note:"Not on Exam 3: his emailed reading list for Exam 3 (11/20) ends at slide 48; dry eye disease is slides 49–51. Kept for optional practice.", concept:"oo-de-new-calcineurin",
  tags:["hard", "reasoning"], source:"slide",
  stem:"A new dry eye agent lowers T-cell activation by inhibiting calcineurin. Which existing drug shares its chemical basis of drug action?",
  options:[
@@ -50,7 +50,7 @@ QUESTIONS.push(
  teach:"Slides 49–51: both dry eye drugs lower T-cell activation (the summary calls them indirect T-cell inhibitors, slide 61): cyclosporine through calcineurin, lifitegrast through the ICAM-1 to LFA-1 interaction.",
  cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slides 49–51, 61; T@29694 11/19"},
 
-{id:"OA-005", skill:"chem", prof:'Sikazwe', tier:'new', topic:"oo-de", sub:"drugs", concept:"oo-de-lifitegrast-class",
+{id:"OA-005", skill:"chem", prof:'Sikazwe', tier:'new', topic:"oo-beyond", sub:"de", lowYield:true, note:"Not on Exam 3: his emailed reading list for Exam 3 (11/20) ends at slide 48; dry eye disease is slides 49–51. Kept for optional practice.", concept:"oo-de-lifitegrast-class",
  tags:["hard", "tell"], source:"slide",
  stem:"Lifitegrast is built on which amino acid?",
  options:[
@@ -61,7 +61,7 @@ QUESTIONS.push(
  teach:"Slide 51: lifitegrast (Xiidra) is a phenylalanine derivative, log P 4, eliminated mostly unchanged.",
  cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slide 51; T@31164 11/19"},
 
-{id:"OA-006", skill:"chem", prof:'Sikazwe', tier:'new', topic:"oo-de", sub:"drugs", concept:"oo-de-lifitegrast-acid-vs-sulfonamide",
+{id:"OA-006", skill:"chem", prof:'Sikazwe', tier:'new', topic:"oo-beyond", sub:"de", lowYield:true, note:"Not on Exam 3: his emailed reading list for Exam 3 (11/20) ends at slide 48; dry eye disease is slides 49–51. Kept for optional practice.", concept:"oo-de-lifitegrast-acid-vs-sulfonamide",
  tags:["hard", "two-facts"], source:"slide",
  stem:"The phenylalanine portion of lifitegrast carries which acidic functional group, and which group is on its ring as the sulfur-containing substituent?",
  options:[
@@ -72,7 +72,7 @@ QUESTIONS.push(
  teach:"Slide 51: the circled portion has a carboxylic acid; its ring carries a methyl sulfone, not the SO2NH2 sulfonamide of the carbonic anhydrase inhibitors (slide 38).",
  cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slides 38, 51; T@31164 11/19"},
 
-{id:"OA-007", skill:"pk", prof:'Sikazwe', tier:'new', topic:"oo-de", sub:"drugs", concept:"oo-de-logp-vs-targets",
+{id:"OA-007", skill:"pk", prof:'Sikazwe', tier:'new', topic:"oo-beyond", sub:"de", lowYield:true, note:"Not on Exam 3: his emailed reading list for Exam 3 (11/20) ends at slide 48; dry eye disease is slides 49–51. Kept for optional practice.", concept:"oo-de-logp-vs-targets",
  tags:["hard", "two-facts"], source:"slide",
  stem:"Cyclosporine and lifitegrast are compared on log P and on molecular target. Which pair of conclusions holds?",
  options:[
@@ -83,7 +83,7 @@ QUESTIONS.push(
  teach:"Slides 50–51: cyclosporine and lifitegrast both have log P 4. Cyclosporine inhibits calcineurin; lifitegrast blocks ICAM-1 binding to integrin LFA-1. He called both lipophilic, with minimal systemic exposure (11/19).",
  cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slides 50–51; T@29798 11/19; T@31416 11/19"},
 
-{id:"OA-008", skill:"pk", prof:'Sikazwe', tier:'new', topic:"oo-de", sub:"drugs", concept:"oo-de-lifitegrast-elim",
+{id:"OA-008", skill:"pk", prof:'Sikazwe', tier:'new', topic:"oo-beyond", sub:"de", lowYield:true, note:"Not on Exam 3: his emailed reading list for Exam 3 (11/20) ends at slide 48; dry eye disease is slides 49–51. Kept for optional practice.", concept:"oo-de-lifitegrast-elim",
  tags:["hard", "reasoning"], source:"slide",
  stem:"Lifitegrast is eliminated mostly by which route?",
  options:[
@@ -94,7 +94,7 @@ QUESTIONS.push(
  teach:"Slide 51: lifitegrast is eliminated mostly unchanged. In lecture: whatever gets into the circulation gets out intact (11/19).",
  cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slide 51; T@31563 11/19"},
 
-{id:"OA-009", skill:"class", prof:'Sikazwe', tier:'new', topic:"oo-de", sub:"drugs", concept:"oo-de-summary-group",
+{id:"OA-009", skill:"class", prof:'Sikazwe', tier:'new', topic:"oo-beyond", sub:"de", lowYield:true, note:"Not on Exam 3: his emailed reading list for Exam 3 (11/20) ends at slide 48; dry eye disease is slides 49–51. Kept for optional practice.", concept:"oo-de-summary-group",
  tags:["hard", "tell"], source:"slide",
  stem:"Cyclosporine and lifitegrast are grouped under which heading in the summary of the ophthalmic drug classes?",
  options:[

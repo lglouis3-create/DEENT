@@ -240,7 +240,7 @@ QUESTIONS.push(
  teach:"Slide 48: netarsudil (ClogP 5) is an ester prodrug needing esterase hydrolysis to netarsudil-M1. He said there are mostly two Rho kinases, ROCK1 and ROCK2. (The slide arrow reads DMEs?; he said CE enzymes.)",
  cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slide 48; T@27850 11/19; T@27628 11/19"},
 
-{id:"OB-022", skill:"patho", prof:'Sikazwe', tier:'new', topic:"oo-de", sub:"drugs", concept:"oo-b-ded-three-components",
+{id:"OB-022", skill:"patho", prof:'Sikazwe', tier:'new', topic:"oo-beyond", sub:"de", lowYield:true, note:"Not on Exam 3: his emailed reading list for Exam 3 (11/20) ends at slide 48; dry eye disease is slides 49–51. Kept for optional practice.", concept:"oo-b-ded-three-components",
  tags:["hard", "reasoning"], source:"both",
  stem:"Which three components make up dry eye disease?",
  options:[
@@ -251,7 +251,7 @@ QUESTIONS.push(
  teach:"Dry eye has three components: reduced tear production, increased tear evaporation and ocular surface inflammation; the treatments target those components (slides 49-51).",
  cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slides 49, 50, 51; T@28220 11/19"},
 
-{id:"OB-023", skill:"mech", prof:'Sikazwe', tier:'new', topic:"oo-de", sub:"drugs", concept:"oo-b-ded-target-component",
+{id:"OB-023", skill:"mech", prof:'Sikazwe', tier:'new', topic:"oo-beyond", sub:"de", lowYield:true, note:"Not on Exam 3: his emailed reading list for Exam 3 (11/20) ends at slide 48; dry eye disease is slides 49–51. Kept for optional practice.", concept:"oo-b-ded-target-component",
  tags:["hard", "two-facts"], source:"both",
  stem:"Cyclosporine and lifitegrast act on which component of dry eye disease, and with what effect on T cells?",
  options:[
@@ -262,7 +262,7 @@ QUESTIONS.push(
  teach:"Anti-inflammatory approaches in dry eye: calcineurin inhibition (cyclosporine) and the LFA-1 cascade (lifitegrast) both lead to less T-cell activation; short-term steroids are a third; artificial tears if these fail.",
  cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slides 49, 50, 51; T@29086 11/19"},
 
-{id:"OB-024", skill:"adverse", prof:'Sikazwe', tier:'new', topic:"oo-de", sub:"drugs", concept:"oo-b-ded-steroid-short-term",
+{id:"OB-024", skill:"adverse", prof:'Sikazwe', tier:'new', topic:"oo-beyond", sub:"de", lowYield:true, note:"Not on Exam 3: his emailed reading list for Exam 3 (11/20) ends at slide 48; dry eye disease is slides 49–51. Kept for optional practice.", concept:"oo-b-ded-steroid-short-term",
  tags:["hard", "reasoning"], source:"both",
  stem:"Where do topical steroids fit among the anti-inflammatory approaches to dry eye disease?",
  options:[
@@ -273,7 +273,7 @@ QUESTIONS.push(
  teach:"Dry eye approaches: calcineurin inhibition, the LFA-1 cascade, short-term steroids (not for prolonged use), then artificial tears if these fail (slide 49).",
  cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slide 49; T@29379 11/19"},
 
-{id:"OB-025", skill:"pk", prof:'Sikazwe', tier:'new', topic:"oo-de", sub:"drugs", concept:"oo-b-cyclosporine-chain",
+{id:"OB-025", skill:"pk", prof:'Sikazwe', tier:'new', topic:"oo-beyond", sub:"de", lowYield:true, note:"Not on Exam 3: his emailed reading list for Exam 3 (11/20) ends at slide 48; dry eye disease is slides 49–51. Kept for optional practice.", concept:"oo-b-cyclosporine-chain",
  tags:["hard", "two-facts"], source:"both",
  stem:"For cyclosporine, which pair of consequences follows from no metabolism in the eye and from low systemic exposure?",
  options:[
@@ -284,7 +284,7 @@ QUESTIONS.push(
  teach:"Slide 50, answered in lecture: no metabolism in the eye = enhanced local activity; low systemic exposure = minimal systemic side effects.",
  cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slide 50; T@30502 11/19"},
 
-{id:"OB-026", skill:"pk", prof:'Sikazwe', tier:'new', topic:"oo-de", sub:"drugs", concept:"oo-b-cyclosporine-penetrates-local",
+{id:"OB-026", skill:"pk", prof:'Sikazwe', tier:'new', topic:"oo-beyond", sub:"de", lowYield:true, note:"Not on Exam 3: his emailed reading list for Exam 3 (11/20) ends at slide 48; dry eye disease is slides 49–51. Kept for optional practice.", concept:"oo-b-cyclosporine-penetrates-local",
  tags:["hard", "reasoning"], source:"both",
  stem:"What follows for cyclosporine from a log P of 4 and no metabolism in the eye?",
  options:[
@@ -295,7 +295,7 @@ QUESTIONS.push(
  teach:"Cyclosporine is lipophilic (log P 4), so it can penetrate the eye; with no ocular metabolism it stays active locally and little reaches the circulation.",
  cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slide 50; T@29798 11/19"},
 
-{id:"OB-027", skill:"pk", prof:'Sikazwe', tier:'new', topic:"oo-de", sub:"drugs", concept:"oo-b-lifitegrast-fate",
+{id:"OB-027", skill:"pk", prof:'Sikazwe', tier:'new', topic:"oo-beyond", sub:"de", lowYield:true, note:"Not on Exam 3: his emailed reading list for Exam 3 (11/20) ends at slide 48; dry eye disease is slides 49–51. Kept for optional practice.", concept:"oo-b-lifitegrast-fate",
  tags:["hard", "two-facts"], source:"both",
  stem:"How much of lifitegrast reaches the circulation, and what happens to what does?",
  options:[

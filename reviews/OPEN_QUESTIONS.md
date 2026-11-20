@@ -131,3 +131,9 @@ Resolved 2026-11-06 (Louis's direction): both drawings, with Compare structures;
 1. **On practice papers?** The items are in Quiz, topic drills and the missed list only. `exams[].typed: true` (with `blanks: 5`) would put about 5 on each Exam 2 paper, but it also puts the 8 matching items on papers; Louis has not chosen (asked through the coordinating session). Nothing set until he does.
 2. **"Close: check the spelling" on real other terms.** Strict grading marks every one-letter difference wrong, but the core's hint calls some of them spelling slips when they are different terms: IL-17RA typed for IL-17A (BL3-007), IL-17A for the receptor (BL3-008), cystine for cysteine (BS4-005). The answer is still graded wrong and the accepted answer is shown; the hint wording is the kit's (core README "Fill in the blank", remaining risk).
 3. **Dropped candidates.** CYP2R1 (only in the assigned vitamin D reading, not said in his recording); "dupilumab: monoclonal antibody ___ antagonist" (IL-4 on Dr. Patel's slide 43, IL-4 receptor alpha and IL-13 on Dr. Smith's PC 64).
+
+
+## Sikazwe Exam 3 scope (2026-11-20)
+- His emailed reading list ends at slide 48 (slides 5-8; 15-21; 27-31; 33-48). On 11/19 he said the reading ended at slide 51; the email is later, so dry eye (slides 49-51) is now low-yield (topic oo-beyond, sub de). Ask him if he means to include it.
+- Slide 32 (alpha-2 SAR) is not in the emailed list, but self-assessment question 4 (slide 66) tests the NH linker, so its items stay in the pool.
+- His practice Q4 says fluoride "can erode teeth in children": the slides say fluorosis (staining), not erosion. Not keyed; ask him.
