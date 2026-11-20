@@ -202,7 +202,7 @@ dialog.srch::backdrop{background:rgba(10,14,22,.55)}
 #srchfab svg{width:18px;height:18px}
 #srchfab[hidden]{display:none}
 #srchfab:focus-visible{outline:3px solid var(--text,#1d2330);outline-offset:2px}
-body.figbig #srchfab{display:none}
+body.figbig #srchfab,body:has(#backbtn) #srchfab,body:has(#xback) #srchfab{display:none}
 @media (max-width:700px){#srchfab{width:56px;height:56px;min-height:56px;padding:0;justify-content:center}#srchfab span{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}}
 body.srchfab-on main{padding-bottom:88px}
 #btnSearch svg{width:16px;height:16px}
