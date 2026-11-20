@@ -298,9 +298,16 @@ const COURSE = {
           // fig-cni-nfat, fig-spf, fig-block-vs-screen; adds to DIA, DIA_NAMES and DIAGRAMS)
           'figs2.js',
           // Exam 3 diagrams (Louis, 2026-11-19): Dr. Smith's eye figures, then Dr. Sikazwe's otic, oral and ophthalmic chemistry (each adds to DIA, DIA_NAMES, DIAGRAMS)
+          'diagram_fx.js',
+          'diagram_fx_fa.js',
+          'diagram_fx_fb.js',
+          'diagram_fx_fc.js',
           'diagrams_ey.js',
           'diagrams_lg.js',
           'diagrams_oo.js',
+          'diagrams_ey_fa.js',
+          'diagrams_fb.js',
+          'diagrams_oo_fc.js',
           // Mechanism step-throughs from Dr. Smith's PCol slides (Louis, 2026-11-09): adds to DIA
           'moa_figs.js',
           'q1_topics.js', 'q2_L02.js', 'q3_L03a.js', 'q4_L03b.js', 'q5_L04.js', 'q6_L03c.js',

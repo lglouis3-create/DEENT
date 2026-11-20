@@ -35,9 +35,9 @@ const check = (ok, what, detail) => {
 };
 
 const PLAN = {
-  'ey-aqueous': {steps: 5, h: 414},
-  'ey-angle':   {steps: 3, h: 312},
-  'ey-cai':     {steps: 5, h: 360},
+  'ey-aqueous': {steps: 5, h: 458},
+  'ey-angle':   {steps: 3, h: 456},
+  'ey-cai':     {steps: 5, h: 392},
   'ey-allergy': {steps: 4, h: 368},
   'ey-dryeye':  {steps: 4, h: 430},
 };
@@ -49,14 +49,15 @@ try {
   vm.createContext(sbC);
   vm.runInContext(rd('course.js') + '\nthis.F = (typeof COURSE !== "undefined" ? COURSE : module.exports).files;', sbC);
   const F = sbC.F || [];
-  const di = F.indexOf('diagrams.js'), fi = F.indexOf('figs2.js'), ei = F.indexOf('diagrams_ey.js');
+  const di = F.indexOf('diagrams.js'), fi = F.indexOf('figs2.js'), ei = F.indexOf('diagrams_ey.js'), xi = F.indexOf('diagram_fx.js'), xa = F.indexOf('diagram_fx_fa.js'), ef = F.indexOf('diagrams_ey_fa.js');
+  check(xi > fi && xi < ei && xa > xi && xa < ei && ef > ei, 'course.js lists diagram_fx.js, diagram_fx_fa.js before diagrams_ey.js and diagrams_ey_fa.js after it', JSON.stringify([xi, xa, ei, ef]));
   if (ei < 0) console.log('NOTE: course.js files does not list diagrams_ey.js yet');
   else check(ei > di && ei > fi, 'course.js lists diagrams_ey.js after diagrams.js and figs2.js', JSON.stringify([di, fi, ei]));
 } catch (e) { console.log('NOTE: course.js not read (' + e.message + ')'); }
 
 const sb = {console};
 vm.createContext(sb);
-vm.runInContext(rd('diagrams.js') + '\n' + rd('diagrams_ey.js') +
+vm.runInContext(rd('diagrams.js') + '\n' + rd('diagram_fx.js') + '\n' + rd('diagram_fx_fa.js') + '\n' + rd('diagrams_ey.js') + '\n' + rd('diagrams_ey_fa.js') +
   '\nthis.X = {DIA, DIA_NAMES, DIAGRAMS, wrapLines, P: DIAGRAMS_EY_PURPOSE};', sb);
 const {DIA, DIA_NAMES, DIAGRAMS, wrapLines, P} = sb.X;
 const grp = DIAGRAMS.filter(([n]) => n === GROUP);
@@ -71,7 +72,7 @@ for (const k of Object.keys(PLAN)) {
 const SHAPE = /<(text|line|path|rect|circle|ellipse|polygon|polyline)\b([^>]*)>([^<]*)/g;
 const attr = (s, a) => { const m = s.match(new RegExp('\\b' + a + '="([^"]*)"')); return m ? m[1] : null; };
 /* font sizes of the classes used for text (diagrams_ey.js css and the shell's .lbl rules) */
-const css = (vm.runInContext('DIAGRAMS_EY.css', sb) || '');
+const css = (vm.runInContext('DIAGRAMS_EY.css', sb) || '') + (vm.runInContext('DIAGRAM_FX_FA_CSS', sb) || '');
 const FS = {};
 for (const m of css.matchAll(/\.fig \.([a-z0-9-]+)\{[^}]*font-size:([\d.]+)px/g)) FS[m[1]] = +m[2];
 const unescape = s => s.replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>');
@@ -101,11 +102,17 @@ for (const [k, plan] of Object.entries(PLAN)) {
   const svgOnly = html.replace(/<figcaption>[\s\S]*?<\/figcaption>/, '').replace(/aria-label="[^"]*"/, '');
   check(!/(fill|stroke|stop-color)="#|(fill|stroke)="(rgb|hsl)|style="[^"]*(#[0-9a-f]{3}|rgb\()/i.test(svgOnly), k + ': no colour written into the markup');
   steps.forEach((s, i) => {
-    const capLines = [...s.matchAll(/<text class="lbl xs capt"[^>]*>([^<]*)<\/text>/g)].map(m => m[1]);
+    const FA3 = ['ey-aqueous', 'ey-angle', 'ey-cai'].includes(k);          // redrawn: 11.5-unit caption, three lines
+    const capLines = [...s.matchAll(/<text class="lbl xs capt( fa-cap)?"[^>]*>([^<]*)<\/text>/g)].map(m => m[2]);
     const capText = capLines.join(' ');
-    check(capLines.length >= 1 && capLines.length <= 2 && !/…$/.test(capText), `${k} step ${i + 1}: caption fits in two lines`, capLines.length);
+    check(capLines.length >= 1 && capLines.length <= (FA3 ? 3 : 2) && !/…$/.test(capText), `${k} step ${i + 1}: caption fits in ${FA3 ? 'three' : 'two'} lines`, capLines.length);
+    if (FA3) {
+      check(/class="lbl xs capt fa-cap"/.test(s), `${k} step ${i + 1}: caption drawn at 11.5 units (fa-cap)`);
+      const anim = (s.match(/class="[^"]*\b(fx-flow|fx-drift|fx-pulse|fx-breathe)\b/g) || []).length;
+      check(anim <= 3, `${k} step ${i + 1}: at most 3 animated elements`, anim);
+    }
     check(/\([^)]*slides? \d[^)]*\)\.?$/.test(capText), `${k} step ${i + 1}: caption ends with its source in parentheses`, capText.slice(-60));
-    const bandTop = plan.h - 12 - capLines.length * 10 - 9;   // top of the "Step n of m" line
+    const bandTop = (['ey-aqueous', 'ey-angle', 'ey-cai'].includes(k) ? plan.h - 5 - capLines.length * 13 - 11 : plan.h - 12 - capLines.length * 10 - 9);   // top of the "Step n of m" line
     const keys = [], noKey = [], tf = [], out = [], styleOp = [], wide = [], tb = [];
     for (const m of s.matchAll(SHAPE)) {
       const a = m[2], cls = attr(a, 'class') || '';
@@ -152,13 +159,18 @@ const drawn = k => unescape((DIA[k] || '').replace(/<figcaption>[\s\S]*?<\/figca
   .replace(/<p class="dnpurpose">[\s\S]*?<\/p>/, '').replace(/<[^>]+>/g, ' '));
 const lastStep = k => { const s = (DIA[k] || '').split(/<g class="st[ "]/); return unescape(s[s.length - 1].replace(/<[^>]+>/g, ' ')); };
 {
-  const a = lastStep('ey-aqueous');
-  const inflow = a.slice(a.indexOf('↓ INFLOW'), a.indexOf('↑ OUTFLOW'));
-  for (const d of ['β-blockers', 'α2 agonists', 'CA inhibitors']) check(inflow.includes(d), 'ey-aqueous: ' + d + ' drawn under ↓ INFLOW');
-  const outflow = a.slice(a.indexOf('↑ OUTFLOW'));
-  for (const d of ['M3 agonists', 'echothiophate', 'netarsudil', 'PG agonists', 'brimonidine']) check(outflow.includes(d), 'ey-aqueous: ' + d + ' drawn under ↑ OUTFLOW');
-  for (const d of ['M3 agonists', 'echothiophate', 'netarsudil', 'PG agonists']) check(!inflow.includes(d), 'ey-aqueous: ' + d + ' not under inflow');
-  for (const w of ['Trabecular', 'Schlemm’s', 'Uveoscleral', 'MAIN route', 'smaller route', 'PGF2α']) check(a.includes(w), 'ey-aqueous: ' + w + ' drawn');
+  const stepText = (k, n) => { const sp = (DIA[k] || '').split(/<g class="st[ "]/).slice(1); const g = sp[n - 1] || ''; return unescape(g.slice(0, g.lastIndexOf('</g>') < 0 ? g.length : g.lastIndexOf('</g>')).replace(/<[^>]+>/g, ' ')); };
+  const s3 = stepText('ey-aqueous', 3), s4 = stepText('ey-aqueous', 4), s5 = stepText('ey-aqueous', 5), s2 = stepText('ey-aqueous', 2);
+  check(s3.includes('↓ INFLOW'), 'ey-aqueous step 3: the inflow header');
+  for (const d of ['β-blockers', 'α2 agonists', 'CA inhibitors']) check(s3.includes(d), 'ey-aqueous: ' + d + ' drawn under ↓ INFLOW (step 3)');
+  check(s4.includes('↑ OUTFLOW') && s5.includes('↑ OUTFLOW'), 'ey-aqueous steps 4 and 5: the outflow header');
+  for (const d of ['M3 agonists', 'echothiophate', 'netarsudil']) check(s4.includes(d), 'ey-aqueous: ' + d + ' drawn under ↑ OUTFLOW (step 4)');
+  for (const d of ['PG agonists', 'brimonidine']) check(s5.includes(d), 'ey-aqueous: ' + d + ' drawn under ↑ OUTFLOW (step 5)');
+  for (const d of ['M3 agonists', 'echothiophate', 'netarsudil', 'PG agonists']) check(!s3.includes(d), 'ey-aqueous: ' + d + ' not under inflow');
+  for (const d of ['β-blockers', 'α2 agonists', 'CA inhibitors']) check(!s4.includes(d) && !s5.includes(d), 'ey-aqueous: ' + d + ' not under outflow');
+  const a = [s2, s5].join(' ');
+  check(s2.includes('Trabecular') && s2.includes('Schlemm’s') && s2.includes('Uveoscleral'), 'ey-aqueous step 2: both routes named');
+for (const w of ['MAIN route', 'smaller route', 'PGF2α']) check(a.includes(w), 'ey-aqueous: ' + w + ' drawn');
 }
 {
   const c = drawn('ey-cai');
