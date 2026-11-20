@@ -9,7 +9,11 @@ characters.
 Every update adds its bullets here in the same commit that makes the change.
 
 ## 2026-11-20 (Dr. Lam's glaucoma lecture, Dr. Sikazwe 11/19, search)
-- Dr. Lam's glaucoma lecture: 182 questions, a Guide page per objective, five diagrams.
+- Dr. Lam's glaucoma lecture: 182 questions, five diagrams.
+- Dr. Lam's guide is five pages, one per objective: handout facts, what she added aloud, her cases.
+- Her 182 questions explain why, how to spot it in a case, and what separates the closest wrong option.
+- Explain more links only the page that covers the question.
+- Quotes from lectures no longer include "um" or "uh".
 - Dr. Lam's questions are starred, with her own polls and the drug-class order first; a Lam chip filters them.
 - Dr. Sikazwe's 11/19 lecture: new questions and pages; slides he left out are marked low-yield.
 - Search: a Search button stays at the bottom right once the header is scrolled away; a Clear button empties the box.

@@ -489,7 +489,7 @@ const GUIDE_HTML = `
 <p>The title line reads &ldquo;Glucocorticoid: CBDA: .......- bonding&rdquo; (the blank is hydrogen). The glucocorticoid sits in the glucocorticoid receptor (&ldquo;Key glucocorticoid receptor-ligand binding residues&rdquo;), joined by six dashed lines to Asn 564, Arg 611, Gln 570, Gln 642 and Thr 739.</p>
 <p>The C3 ketone takes two hydrogen bonds (Arg 611 and Gln 570); the 11-hydroxyl and the C21 hydroxyl each bond to Asn 564; the C20 ketone bonds to Thr 739; the 17-hydroxyl bonds to Gln 642. Every dashed line is a hydrogen bond, so the type of interaction is hydrogen bonding and the count is six <span class="g2-src">(11/03 T 1133-1135)</span>.</p>
 <div class="g2-said"><span class="g2-k">He said</span><ul>
-<li>&ldquo;So, the question might be just counting the number of hydrogen bonds, or do you see any uh non-hydrogen bonds involved here? These are all hydrogen bonds.&rdquo; <span class="g2-src">(11/03 T 1137-1139)</span></li>
+<li>&ldquo;So, the question might be just counting the number of hydrogen bonds, or do you see any non-hydrogen bonds involved here? These are all hydrogen bonds.&rdquo; <span class="g2-src">(11/03 T 1137-1139)</span></li>
 </ul></div>
 <p class="g2-sub">Practice</p>
 <div class="g2-btns"><button type="button" class="chip g2-primary" data-qids="BS3-004 S3-056 S3-064 S3-066 S3-074 S3-082 S3-083 S3-084 S3-100 S3-101 S3H-008 S3H-011" data-qlabel="DPAW slide 23">Practice these (12)</button></div>
@@ -555,7 +555,7 @@ const GUIDE_HTML = `
 <p>cLogP 6.0 for pimecrolimus and 5.8 for tacrolimus: both very lipophilic, with similar log P. Both share the same large ring, a six-membered ring containing a nitrogen, and a cyclohexyl ring. The differences: a chlorine on the cyclohexyl ring of pimecrolimus where tacrolimus has a hydroxyl, and an ethyl group where tacrolimus has an allyl group <span class="g2-src">(11/04 T@4610-4749)</span>.</p>
 <div class="g2-said"><span class="g2-k">He said</span><ul>
 <li>&ldquo;And because they are cyclic molecules, right? OK? So they have this. Group there We can call them, we can classify them chemically. Differently.&rdquo; <span class="g2-src">(11/04 T@6097-6241)</span></li>
-<li>&ldquo;So let's uh look at that question. It will come up.&rdquo; <span class="g2-src">(11/04 T@6276-6327)</span></li>
+<li>&ldquo;So let's look at that question. It will come up.&rdquo; <span class="g2-src">(11/04 T@6276-6327)</span></li>
 </ul></div>
 <p class="g2-sub">Practice</p>
 <div class="g2-btns"><button type="button" class="chip g2-primary" data-qids="BS4-003 KX-018 KX-019 S4-015 S4-016 S4-017 S4-018 S4-019 S4-020 S4-071 S4H-004 S4H-012 XS-007" data-qlabel="DPAW slide 28">Practice these (13)</button></div>
@@ -564,7 +564,7 @@ const GUIDE_HTML = `
 <p>His PollEv question: &ldquo;Due to the selected functionality, this Limus drug molecule may be chemically classified as a ........&rdquo; Options: (A) lactam, (B) lactone, (C) steroid, (D) pteridine. The drawing is the pimecrolimus macrocycle with the ester group in the ring circled.</p>
 <p>The reasoning has two steps. The circled group is an ester. An ester that is part of a ring is a cyclic ester, and cyclic esters are lactones. A lactam is the cyclic amide, a different group. A steroid is a four-ring skeleton and a pteridine is the ring system of methotrexate, so neither fits a macrocycle with an ester in it. The key is B, lactone, which agrees with the heading of slide 28, &ldquo;Macrolide or lactone immunosuppressants&rdquo;; he ends on lactones and rejects steroids <span class="g2-src">(11/04 T@11649-11749)</span>.</p>
 <div class="g2-said"><span class="g2-k">He said</span><ul>
-<li>&ldquo;I hinted on a question. If you had a molecule like this, and I circle a functional group, and I say, based on this circled feature, Uh, how can we chemically classify this?&rdquo; <span class="g2-src">(11/04 T@11267-11439)</span></li>
+<li>&ldquo;I hinted on a question. If you had a molecule like this, and I circle a functional group, and I say, based on this circled feature, how can we chemically classify this?&rdquo; <span class="g2-src">(11/04 T@11267-11439)</span></li>
 </ul></div>
 <p class="g2-sub">Practice</p>
 <div class="g2-btns"><button type="button" class="chip g2-primary" data-qids="S4-020 S4-021 S4H-012" data-qlabel="DPAW slide 32">Practice these (3)</button></div>
@@ -646,7 +646,7 @@ const GUIDE_HTML = `
 <p class="g2-p">Sulfur is used alone or in mixtures: sulfur with sodium sulfacetamide (Plexion, Avar) or sulfur with zinc oxide. The mechanism line is under CBDA (chemical basis of drug action): <b>thiolysis</b>. Sulfur reduces or breaks the disulfide (S-S) bonds in keratin, leaving free SH groups <span class="g2-src">(11/04 T@25122-25268)</span>.</p>
 <p class="g2-p">Keratin is a protein, and its disulfide bonds are between cysteine residues <span class="g2-src">(11/04 T@25475-25542)</span>. The evidence is anecdotal and the mechanism less clear. Particle size matters: it must be small, and large-particle sulfur is less effective <span class="g2-src">(11/04 T@24663-24748)</span>.</p>
 <div class="g2-said"><span class="g2-k">He said</span><ul>
-<li>&ldquo;Uh, what are some of the drawbacks to using sulfur? Cause of allergies. And some people just uh detest sulfur for what? Smell.&rdquo; <span class="g2-src">11/04 T@24147-24273</span></li>
+<li>&ldquo;What are some of the drawbacks to using sulfur? Cause of allergies. And some people just detest sulfur for what? Smell.&rdquo; <span class="g2-src">11/04 T@24147-24273</span></li>
 </ul></div>
 <p class="g2-sub">Practice</p>
 <div class="g2-btns"><button type="button" class="chip g2-primary" data-qids="BS4-005 S4-021 S4-065 S4-066 S4-067 S4-068 S4H-019 S4H-020" data-qlabel="DPAW slide 46">Practice these (8)</button></div>
@@ -4497,7 +4497,7 @@ const GUIDE_HTML = `
 <div class="gbar"><span>What the lecture adds</span><b>Her closing points on wound care: four stages, three phases, clean first, moist healing, appropriate dressings, and antiseptics and antibiotics only when indicated</b><i>Patel Wound slide 27, 28, 29</i></div>
 <div class="gpt g2-block"><h5>Conclusions: what she said to know (Patel Wound slide 27)</h5>
 <p>The slide gives six conclusions: four stages, three healing phases (inflammatory, proliferative, remodeling), clean water or saline as the first step, a moist healing environment, dressings appropriate to the wound, and antiseptics, antibiotics and anesthetics only when indicated. She added that prevention of infection is the most important point, together with what is safe and effective for the patient with no pain. This slide settles the first-step question raised on slide 15: cleansing with water or saline.</p>
-<div class='g2-said'><span class='g2-k'>She said</span><p>&ldquo;most importantly, Uh, prevention of infection&rdquo; <span class='g2-src'>(11/12 T@87615)</span></p><p>&ldquo;cleansing it with water or saline&rdquo; <span class='g2-src'>(11/12 T@87473)</span></p></div>
+<div class='g2-said'><span class='g2-k'>She said</span><p>&ldquo;most importantly, prevention of infection&rdquo; <span class='g2-src'>(11/12 T@87615)</span></p><p>&ldquo;cleansing it with water or saline&rdquo; <span class='g2-src'>(11/12 T@87473)</span></p></div>
 </div>
 </section>
 </details>
@@ -5364,7 +5364,7 @@ const GUIDE_HTML = `
 <p>The slide lists the goals: remineralize enamel, suppress bacteria, neutralize acid, numb pain, plus restorative fillings. The lecture ties each goal to a cause. Enamel loses calcium and phosphate, so a remineralizing product restores them. Bacteria make some of the acid that removes those minerals, so they are a target, and neutralizing acid is a separate goal. A numbing agent covers pain. When the loss cannot be slowed, a filling physically replaces what is gone; he said this is restorative treatment, not pharmacotherapy.</p>
 <div class='g2-said'><span class='g2-k'>He said</span>
 <p>&ldquo;What minerals are we mostly concerned when it comes to enamel, calcium, and phosphate&rdquo; <span class='g2-src'>11/18 T@14814</span></p>
-<p>&ldquo;that is called restorative uh treatment&rdquo; <span class='g2-src'>11/18 T@15457</span></p>
+<p>&ldquo;that is called restorative treatment&rdquo; <span class='g2-src'>11/18 T@15457</span></p>
 </div>
 </div>
 <div class="gpt g2-block"><h5>Causes of tooth decay: plaque bacteria, acid and habits (OOO slide 16)</h5>
@@ -5405,7 +5405,7 @@ const GUIDE_HTML = `
 <p>The slide lists sodium bicarbonate (an abrasive and pH-raising agent), nanohydroxyapatite (10% nHA, crystals of 50 to 1000 nm that bond to hydroxyapatite), calcium sodium phosphosilicate (CSPS, a bioactive glass that reacts with oral fluids to deposit crystalline hydroxycarbonate apatite, HCA) and amorphous calcium phosphate (ACP, a reactive salt mixture that releases Ca<sup>2+</sup> and PO<sub>4</sub> ions on contact with saliva).</p>
 <p>The lecture adds the reasoning. Sodium bicarbonate is gritty, so it removes plaque, and it neutralizes acid and raises pH, which prevents erosion. The other three are reactive remineralizers: nanohydroxyapatite bonds directly to hydroxyapatite, CSPS reacts with saliva to deposit a material that mimics hydroxyapatite, and ACP releases calcium and phosphate ions that remineralize enamel. He gave the reason to choose them: a patient who worries about fluorosis or reacts to fluoride.</p>
 <div class='g2-said'><span class='g2-k'>He said</span>
-<p>&ldquo;think of this as a reactive uh remineralizer&rdquo; <span class='g2-src'>11/18 T@24025</span></p>
+<p>&ldquo;think of this as a reactive remineralizer&rdquo; <span class='g2-src'>11/18 T@24025</span></p>
 <p>&ldquo;somebody reacts to fluoride, then. You have these non-fluoride options&rdquo; <span class='g2-src'>11/18 T@24561</span></p>
 </div>
 </div>
@@ -5522,7 +5522,7 @@ const GUIDE_HTML = `
 <div class="gpt g2-block"><h5>SAR of the alpha 2 agonists: the aryl imidazoline core and its linker (OOO slide 32)</h5>
 <p>The slide shows an aryl imidazoline core: a benzene ring joined through a one-atom link, X, to an imidazoline ring. If X is CH<sub>2</sub> the agents are alpha 1 receptor agonists; if X is NH (the slide writes NH<sub>2</sub>) they are alpha 2 receptor agonists. The lecture says this is the minimum structure with activity: the aromatic ring joined to the imidazoline must be present, and the link atom decides the receptor, with carbon giving alpha 1 selectivity and an amine giving alpha 2 selectivity. In the three drugs on slide 31 the ring is joined to the imidazoline through an NH, matching the alpha 2 rule.</p>
 <div class='g2-said'><span class='g2-k'>He said</span>
-<p>&ldquo;That's the minimum structure um with activity&rdquo; <span class='g2-src'>11/18 T@49759</span></p>
+<p>&ldquo;That's the minimum structure with activity&rdquo; <span class='g2-src'>11/18 T@49759</span></p>
 <p>&ldquo;If amine, then these are alpha 2, selective&rdquo; <span class='g2-src'>11/18 T@50419</span></p>
 </div>
 </div>
@@ -5685,7 +5685,7 @@ const GUIDE_HTML = `
 <div class='g2-said'><span class='g2-k'>He said</span>
 <p>&ldquo;3 points. The components. Of dry disease.&rdquo; <span class='g2-src'>11/19 T@28220</span></p>
 <p>&ldquo;You can&rsquo;t use this on a prolonged basis.&rdquo; <span class='g2-src'>11/19 T@29379</span></p>
-<p>&ldquo;If these fail, uh, then you can do artificial tears&rdquo; <span class='g2-src'>11/19 T@29524</span></p>
+<p>&ldquo;If these fail, then you can do artificial tears&rdquo; <span class='g2-src'>11/19 T@29524</span></p>
 </div>
 </div>
 <div class="gpt g2-block"><h5>Cyclosporin (Restasis): calcineurin inhibitor with two blanks (OOO slide 50)</h5>
