@@ -266,6 +266,21 @@
    "Otic/Oral/Ophthalmic",
    "oo",
    0
+  ],
+  [
+   "Lam Glaucoma",
+   "lg",
+   1
+  ],
+  [
+   "Dr. Lam's Glaucoma",
+   "lg",
+   0
+  ],
+  [
+   "Lam",
+   "lg",
+   1
   ]
  ],
  "sections": [
@@ -864,6 +879,30 @@
    "p8c",
    "Guide: Dr. Patel, Warts, corns and calluses, slide by slide",
    "p8s"
+  ],
+  [
+   "gdeck-lam",
+   "lg",
+   "Guide heading: Dr. Lam, Glaucoma",
+   "sun"
+  ],
+  [
+   "gobj-lg-",
+   "lg",
+   "Guide: Dr. Lam, Glaucoma, by learning objective",
+   "sun"
+  ],
+  [
+   "ref-lg-",
+   "lg",
+   "Reference: Dr. Lam, Glaucoma",
+   "sun"
+  ],
+  [
+   "tell-lg-",
+   "lg",
+   "Tell apart: Dr. Lam, Glaucoma",
+   "sun"
   ]
  ],
  "notes": [
