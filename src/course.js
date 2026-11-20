@@ -182,6 +182,15 @@ const COURSE = {
     {id:'L12', deck:'Lam_Glaucoma.pdf',
      label:'Lecture 12: Glaucoma therapeutics (Lam, 11/19)',
      prof:'Lam', exam:3, module:'Exam 3: Lectures 9–13'},
+    {id:'L13a', deck:'Lam_OphthalmicDisorders.pdf',
+     label:'Lecture 13: Ophthalmic disorders other than glaucoma (Lam, 11/20)',
+     prof:'Lam', exam:3, module:'Exam 3: Lectures 9–13'},
+    {id:'L13b', deck:'Lam_OralDisorders_slides.pdf',
+     label:'Lecture 13: Oral disorders (Lam, 11/20)',
+     prof:'Lam', exam:3, module:'Exam 3: Lectures 9–13'},
+    {id:'L13c', deck:'Lam_OticDisorders_slides.pdf',
+     label:'Lecture 13: Otic disorders (Lam, 11/20)',
+     prof:'Lam', exam:3, module:'Exam 3: Lectures 9–13'},
   ],
 
   exams: [
@@ -334,7 +343,7 @@ const COURSE = {
           // Lecture 8 points she stressed that had no question: Lyme neurologic/cardiac, scorpion stings, sunscreen expiration, snow and sand, stopping a reacting product, Fitzpatrick type, silicone for scars
           'q21_L08_gaps.js',
           // Dr. Smith, Lectures 9-10 (Exam 3): the eye (topics first, then the question files)
-          'q27_ooo_topics.js', 'q22_eye_topics.js', 'q32_lam_topics.js', 'q23_eye_anat_patho.js', 'q24_eye_inflow.js', 'q25_eye_outflow.js', 'q26_eye_allergy_dry.js',
+          'q27_ooo_topics.js', 'q22_eye_topics.js', 'q32_lam_topics.js', 'q43_lam2_topics.js', 'q23_eye_anat_patho.js', 'q24_eye_inflow.js', 'q25_eye_outflow.js', 'q26_eye_allergy_dry.js',
  'q38_eye_blank.js',
  'q39_eye_gaps.js',
           // Dr. Sikazwe, Lectures 11-12 (Exam 3): otic, oral, ophthalmic medicinal chemistry
@@ -344,6 +353,9 @@ const COURSE = {
           'q37_sik_practice.js',
           // Dr. Lam, Lecture 12 (Exam 3): glaucoma therapeutics, by her learning objectives (topics first, in q32_lam_topics.js above)
           'q33_lam_a.js', 'q34_lam_b.js', 'q35_lam_c.js',
+ 'q40_lam_oph.js',
+ 'q41_lam_oral.js',
+ 'q42_lam_otic.js',
           // the step-throughs of moa_figs.js in the explanations of the matching Smith questions
           'moa_links.js',
           // Drug list tab (temporary course-level presentation, to be replaced by the kit's

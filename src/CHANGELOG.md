@@ -9,7 +9,9 @@ characters.
 Every update adds its bullets here in the same commit that makes the change.
 
 ## 2026-11-20 (Dr. Lam's glaucoma lecture, Dr. Sikazwe 11/19, search)
-- Dr. Smith's Exam 3 hints: 20 fill-in questions on mechanisms, 12 new questions, stars re-ranked; 18 eye questions on the paper.
+- Dr. Lam's 11/20 lecture (dry eye, conjunctivitis, oral, otic): 192 questions, 14 study pages, 68 glossary terms.
+- Her slides open from the page links for the new eye, oral and ear pages.
+- Dr. Smith's Exam 3 hints: 20 fill-in and 12 new questions, stars re-ranked; her 18 questions are all eye.
 - Dr. Sikazwe's emailed Exam 3 readings: dry eye is now low-yield; 14 new questions on his practice questions.
 - Diagrams redrawn on the slides' eye pictures: aqueous flow, angle, drug targets, dry eye, eyelid, earwax, fluoride.
 - New diagram "Where each glaucoma drug class acts", one colour per class, with leaders to each site.

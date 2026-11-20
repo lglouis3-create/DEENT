@@ -56,7 +56,7 @@ QUESTIONS.push(
 
 {id:"OP2-005", skill:"class", prof:'Sikazwe', tier:'new', topic:"oo-oph", sub:"fg", concept:"oo-p-fg-slide27-set", multi:true,
  tags:["practice-q2", "select-all"], source:"both",
- stem:"Select all that apply. No partial credit will be given. Which of these are drawn on slide 27 as groups that classify the ophthalmic drugs?",
+ stem:"Select all that apply. No partial credit will be given. Which of these groups are used to classify ophthalmic drug molecules?",
  options:[
   {t:"Imidazoline", correct:true, why:"Drawn on slide 27: the five-membered ring with two nitrogens of clonidine, apraclonidine and brimonidine (slide 31)."},
   {t:"Biguanide", correct:false, why:"The class of chlorhexidine, a mouth-rinse agent (slide 21); it is not drawn on slide 27."},

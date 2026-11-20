@@ -16285,5 +16285,998 @@ const GLOSSARY_TERMS = [
 "prof": "Lam",
 "exam": 3,
 "kind": "other"
+},
+{
+ "id": "lo-artificial-tears",
+ "term": "artificial tears",
+ "also": [
+  "artificial tear",
+  "artificial teardrop"
+ ],
+ "def": "The OTC first-line lubricant for dry eye, used 1-2 drops once or twice daily, up to hourly, with no set duration. In allergic conjunctivitis they wash out the allergen but do not speed healing.",
+ "cite": "Lam Ophthalmic slide 14, 36, T@10376, T@26376 11/20",
+ "src": "slide",
+ "deck": "lo",
+ "prof": "Lam",
+ "exam": 3,
+ "kind": "pharmacology"
+},
+{
+ "id": "lo-ocular-lubricant",
+ "term": "ocular lubricant",
+ "also": [
+  "ocular lubricants"
+ ],
+ "def": "A product that adds viscosity to the eye: artificial tears, bland ointments and gels. It relieves dry eye; it does not make the eye produce more tears.",
+ "cite": "Lam Ophthalmic slide 14, 15, T@9428 11/20",
+ "src": "lecture",
+ "deck": "lo",
+ "prof": "Lam",
+ "exam": 3,
+ "kind": "class"
+},
+{
+ "id": "lo-bland-ointment",
+ "term": "bland ophthalmic ointment",
+ "also": [
+  "bland ointment",
+  "ophthalmic ointment",
+  "petrolatum ointment"
+ ],
+ "def": "A petrolatum, mineral oil or lanolin ointment that stays on the eye longer than drops. It blurs vision and can cause hypersensitivity, so it is often used at bedtime.",
+ "cite": "Lam Ophthalmic slide 15, T@10523 11/20",
+ "src": "slide",
+ "deck": "lo",
+ "prof": "Lam",
+ "exam": 3,
+ "kind": "pharmacology"
+},
+{
+ "id": "lo-bland-gel",
+ "term": "bland ophthalmic gel",
+ "also": [
+  "ophthalmic gel"
+ ],
+ "def": "A thicker lubricant than drops that is better tolerated than an ointment, with less blurry vision. It is an option when a patient needs longer relief.",
+ "cite": "Lam Ophthalmic slide 15, T@11084 11/20",
+ "src": "slide",
+ "deck": "lo",
+ "prof": "Lam",
+ "exam": 3,
+ "kind": "pharmacology"
+},
+{
+ "id": "lo-ocular-surface",
+ "term": "ocular surface",
+ "also": [],
+ "def": "The front of the eye that tears lubricate. Dry eye treatment aims to relieve dryness and prevent damage to it; conjunctivitis treatment aims to protect it.",
+ "cite": "Lam Ophthalmic slide 9, 31",
+ "src": "slide",
+ "deck": "lo",
+ "prof": "Lam",
+ "exam": 3,
+ "kind": "anatomy"
+},
+{
+ "id": "lo-eyelid-hygiene",
+ "term": "eyelid hygiene",
+ "also": [
+  "lid hygiene"
+ ],
+ "def": "Keeping the eyelids clean. With warm compresses and stopping offending agents, it is a non-drug measure that improves eyelid function and lipid production in dry eye.",
+ "cite": "Lam Ophthalmic slide 13",
+ "src": "slide",
+ "deck": "lo",
+ "prof": "Lam",
+ "exam": 3,
+ "kind": "counseling"
+},
+{
+ "id": "lo-warm-compress",
+ "term": "warm compress",
+ "also": [
+  "warm compresses"
+ ],
+ "def": "A non-drug dry eye measure that improves eyelid function and helps lipid production for the tear film.",
+ "cite": "Lam Ophthalmic slide 13, T@8363 11/20",
+ "src": "slide",
+ "deck": "lo",
+ "prof": "Lam",
+ "exam": 3,
+ "kind": "counseling"
+},
+{
+ "id": "lo-cold-compress",
+ "term": "cold compress",
+ "also": [
+  "cold compresses"
+ ],
+ "def": "A non-drug measure for allergic, bacterial and viral conjunctivitis: 3-4 times a day for allergic disease, reducing redness, itching and inflammation.",
+ "cite": "Lam Ophthalmic slide 33, 34, T@25325 11/20",
+ "src": "slide",
+ "deck": "lo",
+ "prof": "Lam",
+ "exam": 3,
+ "kind": "counseling"
+},
+{
+ "id": "lo-stye",
+ "term": "stye",
+ "also": [
+  "styes"
+ ],
+ "def": "The one sign of eyelid infection that does not exclude self-treatment. Red, thickened, scaling eyelids otherwise mean referral.",
+ "cite": "Lam Ophthalmic slide 11",
+ "src": "slide",
+ "deck": "lo",
+ "prof": "Lam",
+ "exam": 3,
+ "kind": "disease"
+},
+{
+ "id": "lo-lid-crusting",
+ "term": "lid crusting",
+ "also": [
+  "crustiness",
+  "crusted eyelids"
+ ],
+ "def": "Crusting of the eyelids with tearing: the pattern of bacterial or viral conjunctivitis, from byproducts of the infection. Allergic conjunctivitis itches instead.",
+ "cite": "Lam Ophthalmic slide 28, T@22037 11/20",
+ "src": "lecture",
+ "deck": "lo",
+ "prof": "Lam",
+ "exam": 3,
+ "kind": "sign"
+},
+{
+ "id": "lo-bacterial-conjunctivitis",
+ "term": "bacterial conjunctivitis",
+ "also": [
+  "bacterial pink eye"
+ ],
+ "def": "Acute: tearing and lid crusting. Chronic: lid crusting. Contagious; no OTC antibiotic exists, so the patient is referred, and cold compresses give comfort.",
+ "cite": "Lam Ophthalmic slide 28, T@20762 11/20",
+ "src": "slide",
+ "deck": "lo",
+ "prof": "Lam",
+ "exam": 3,
+ "kind": "disease"
+},
+{
+ "id": "lo-viral-conjunctivitis",
+ "term": "viral conjunctivitis",
+ "also": [
+  "adenoviral conjunctivitis",
+  "herpetic conjunctivitis",
+  "viral pink eye"
+ ],
+ "def": "Adenoviral: acute tearing and lid crusting on awakening. Herpetic: acute tearing. Contagious; no OTC antiviral exists, so the patient is referred.",
+ "cite": "Lam Ophthalmic slide 28, T@21450 11/20",
+ "src": "slide",
+ "deck": "lo",
+ "prof": "Lam",
+ "exam": 3,
+ "kind": "disease"
+},
+{
+ "id": "lo-vernal-conjunctivitis",
+ "term": "vernal conjunctivitis",
+ "also": [
+  "spring conjunctivitis"
+ ],
+ "def": "An allergic type that is seasonal (spring), with itching, mucous discharge and red eyes.",
+ "cite": "Lam Ophthalmic slide 29",
+ "src": "slide",
+ "deck": "lo",
+ "prof": "Lam",
+ "exam": 3,
+ "kind": "disease"
+},
+{
+ "id": "lo-giant-papillary-conjunctivitis",
+ "term": "giant papillary conjunctivitis",
+ "also": [
+  "GPC"
+ ],
+ "def": "An acute allergic type with itching, contact lens intolerance, mucous discharge and red eyes.",
+ "cite": "Lam Ophthalmic slide 29",
+ "src": "slide",
+ "deck": "lo",
+ "prof": "Lam",
+ "exam": 3,
+ "kind": "disease"
+},
+{
+ "id": "lo-dysgeusia",
+ "term": "dysgeusia",
+ "also": [
+  "taste distortion",
+  "distorted taste"
+ ],
+ "def": "Distortion of taste; the side effect patients on lifitegrast complain of. Closing the eyelid after the drop keeps drug in the eye.",
+ "cite": "Lam Ophthalmic slide 19, T@14576 11/20",
+ "src": "lecture",
+ "deck": "lo",
+ "prof": "Lam",
+ "exam": 3,
+ "kind": "sign"
+},
+{
+ "id": "lo-tear-technique",
+ "term": "TEAR",
+ "also": [
+  "tilt the tip",
+  "TEAR acronym"
+ ],
+ "def": "Varenicline nasal spray technique: Tilt the tip toward the ear, Elevate the tongue, Administer by pressing the applicator down, Resist inhaling the mist, which limits cough.",
+ "cite": "Lam Ophthalmic slide 22, T@16594 11/20",
+ "src": "lecture",
+ "deck": "lo",
+ "prof": "Lam",
+ "exam": 3,
+ "kind": "abbreviation"
+},
+{
+ "id": "lo-priming-the-pump",
+ "term": "priming the pump",
+ "also": [
+  "prime the pump"
+ ],
+ "def": "Pressing the varenicline pump 7 times into the air, away from the face, before use. The bottle is not shaken.",
+ "cite": "Lam Ophthalmic slide 22, T@44594 11/20",
+ "src": "lecture",
+ "deck": "lo",
+ "prof": "Lam",
+ "exam": 3,
+ "kind": "counseling"
+},
+{
+ "id": "lo-unit-dose-dispenser",
+ "term": "unit-dose dispenser",
+ "also": [
+  "single-use vial",
+  "unit-dose",
+  "single-use"
+ ],
+ "def": "The package for preservative-free eye drops. It costs more and contaminates more easily, so strict hygiene is advised and unused drops are discarded after use.",
+ "cite": "Lam Ophthalmic slide 43, T@33880 11/20",
+ "src": "slide",
+ "deck": "lo",
+ "prof": "Lam",
+ "exam": 3,
+ "kind": "other"
+},
+{
+ "id": "lo-order-of-application",
+ "term": "order of application",
+ "also": [
+  "sequence of application",
+  "administration sequence"
+ ],
+ "def": "Solution first, then suspension, then ointment or gel-forming solution; 5 minutes between solutions, 10 minutes before an ointment or gel. She called it very likely on the exam.",
+ "cite": "Lam Ophthalmic slide 44, 45, T@34480 11/20",
+ "src": "lecture",
+ "deck": "lo",
+ "prof": "Lam",
+ "exam": 3,
+ "kind": "counseling"
+},
+{
+ "id": "lo-candidate-for-self-care",
+ "term": "candidate for self-care",
+ "also": [
+  "self-care candidate"
+ ],
+ "def": "Whether the patient can be treated with OTC products or must be referred. For dry eye, a first episode is referred but artificial tears can be used meanwhile.",
+ "cite": "Lam Ophthalmic slide 10, 11, 30, T@5102 11/20",
+ "src": "slide",
+ "deck": "lo",
+ "prof": "Lam",
+ "exam": 3,
+ "kind": "other"
+},
+{
+ "id": "lo-therapeutic-substitution",
+ "term": "therapeutic substitution",
+ "also": [],
+ "def": "Replacing a prescribed drug with another. She said not to substitute OTC brimonidine (Lumify) for a patient's prescription glaucoma brimonidine.",
+ "cite": "Lam Ophthalmic slide 39, T@31952 11/20",
+ "src": "lecture",
+ "deck": "lo",
+ "prof": "Lam",
+ "exam": 3,
+ "kind": "other"
+},
+{
+ "id": "lo-second-gen-oral-antihistamine",
+ "term": "second-generation oral antihistamine",
+ "also": [
+  "loratadine",
+  "fexofenadine",
+  "oral antihistamine"
+ ],
+ "def": "Loratadine, fexofenadine and cetirizine by mouth. Added when ophthalmic products do not control allergic conjunctivitis; oral antihistamines can dry the eye.",
+ "cite": "Lam Ophthalmic slide 40, T@32442 11/20",
+ "src": "lecture",
+ "deck": "lo",
+ "prof": "Lam",
+ "exam": 3,
+ "kind": "class"
+},
+{
+ "id": "lo-ophthalmic-decongestant",
+ "term": "ophthalmic decongestant",
+ "also": [
+  "eye decongestant",
+  "redness reliever"
+ ],
+ "def": "Naphazoline, tetrahydrozoline or brimonidine 0.025% eye drops. They reduce redness and nothing else, are limited to 72 hours, and are not recommended for allergic conjunctivitis.",
+ "cite": "Lam Ophthalmic slide 39, T@30060 11/20",
+ "src": "lecture",
+ "deck": "lo",
+ "prof": "Lam",
+ "exam": 3,
+ "kind": "class"
+},
+{
+ "id": "lo-pupillary-dilation",
+ "term": "pupillary dilation",
+ "also": [
+  "mydriasis",
+  "dilated pupil"
+ ],
+ "def": "A side effect of pheniramine, which has anticholinergic properties, along with burning and stinging.",
+ "cite": "Lam Ophthalmic slide 37",
+ "src": "slide",
+ "deck": "lo",
+ "prof": "Lam",
+ "exam": 3,
+ "kind": "sign"
+},
+{
+ "id": "lo-epithelial-xerosis",
+ "term": "epithelial xerosis",
+ "also": [
+  "abnormal dryness of the eye"
+ ],
+ "def": "Abnormal dryness of the eye surface, one problem of decongestant use beyond 72 hours, with rebound redness.",
+ "cite": "Lam Ophthalmic slide 39",
+ "src": "slide",
+ "deck": "lo",
+ "prof": "Lam",
+ "exam": 3,
+ "kind": "sign"
+},
+{
+ "id": "lr-dentin-hypersensitivity",
+ "term": "tooth hypersensitivity (dentin hypersensitivity)",
+ "also": [
+  "tooth sensitivity",
+  "sensitive teeth"
+ ],
+ "def": "Brief, sharp pain when open dentin tubules meet heat, cold, pressure or acid. It stops when the stimulus stops, and the pharmacist treats it in steps.",
+ "cite": "Lam Oral slide 7, 9",
+ "src": "slide",
+ "deck": "lr",
+ "prof": "Lam",
+ "exam": 3,
+ "kind": "disease"
+},
+{
+ "id": "lr-dentin-tubules",
+ "term": "dentin tubules",
+ "also": [
+  "dentinal tubules"
+ ],
+ "def": "Fluid-filled channels in dentin. Loss of enamel or gum recession opens them to the mouth and the pulp, so stimuli reach the nerve and cause the pain.",
+ "cite": "Lam Oral slide 7",
+ "src": "slide",
+ "deck": "lr",
+ "prof": "Lam",
+ "exam": 3,
+ "kind": "anatomy"
+},
+{
+ "id": "lr-toothache",
+ "term": "toothache",
+ "also": [],
+ "def": "Constant, throbbing pain from bacterial invasion that remains without a stimulus. It is an exclusion to self-care, and nothing over the counter treats it.",
+ "cite": "Lam Oral slide 9, 11, T@46304 11/20",
+ "src": "slide",
+ "deck": "lr",
+ "prof": "Lam",
+ "exam": 3,
+ "kind": "disease"
+},
+{
+ "id": "lr-desensitizing-toothpaste",
+ "term": "desensitizing toothpaste",
+ "also": [
+  "sensitivity toothpaste"
+ ],
+ "def": "Step 2 of the plan, used with a soft brush after 7 days of standard fluoride fails. A 1-inch strip at least twice daily for 4-6 weeks; a single use does nothing.",
+ "cite": "Lam Oral slide 15, 17, T@50423 11/20",
+ "src": "slide",
+ "deck": "lr",
+ "prof": "Lam",
+ "exam": 3,
+ "kind": "class"
+},
+{
+ "id": "lr-potassium-nitrate",
+ "term": "potassium nitrate 5%",
+ "also": [
+  "KNO3"
+ ],
+ "def": "Desensitizing active that depolarizes the excited nerves in the dentin tubules. Not for children under 12 years old.",
+ "cite": "Lam Oral slide 15, T@49740 11/20",
+ "src": "slide",
+ "deck": "lr",
+ "prof": "Lam",
+ "exam": 3,
+ "kind": "pharmacology"
+},
+{
+ "id": "lr-arginine",
+ "term": "arginine 8%",
+ "also": [
+  "arginine calcium"
+ ],
+ "def": "Desensitizing active that seals the exposed dentin to minimize the flow of fluid in the tubules.",
+ "cite": "Lam Oral slide 15",
+ "src": "slide",
+ "deck": "lr",
+ "prof": "Lam",
+ "exam": 3,
+ "kind": "pharmacology"
+},
+{
+ "id": "lr-fluoride-actives",
+ "term": "sodium fluoride, stannous fluoride",
+ "also": [
+  "stannous fluoride",
+  "sodium fluoride"
+ ],
+ "def": "Two desensitizing actives listed with potassium nitrate on slide 15. She said to recognize them and gave no brand names.",
+ "cite": "Lam Oral slide 15, T@49358 11/20",
+ "src": "slide",
+ "deck": "lr",
+ "prof": "Lam",
+ "exam": 3,
+ "kind": "pharmacology"
+},
+{
+ "id": "lr-ras",
+ "term": "recurrent aphthous stomatitis (RAS)",
+ "also": [
+  "canker sore",
+  "RAS"
+ ],
+ "def": "Canker sore: a round or oval gray or yellow ulcer with a red halo inside the mouth. Cause unknown; heals in 7-14 days; treated for pain relief.",
+ "cite": "Lam Oral slide 26, 27, 29, T@57025 11/20",
+ "src": "slide",
+ "deck": "lr",
+ "prof": "Lam",
+ "exam": 3,
+ "kind": "disease"
+},
+{
+ "id": "lr-nonkeratinized",
+ "term": "non-keratinized mucosa",
+ "also": [
+  "movable mucosa"
+ ],
+ "def": "Lining of the movable mouth: tongue, floor of the mouth, soft palate, inside of the lips and cheeks. It is the usual site of a canker sore.",
+ "cite": "Lam Oral slide 27, T@58338 11/20",
+ "src": "slide",
+ "deck": "lr",
+ "prof": "Lam",
+ "exam": 3,
+ "kind": "anatomy"
+},
+{
+ "id": "lr-prodrome",
+ "term": "prodrome",
+ "also": [],
+ "def": "A burning or prickling sensation that comes before a sore appears: 2-48 hours before a canker sore. For a cold sore it is the cue to start docosanol.",
+ "cite": "Lam Oral slide 27, 53, T@58747 11/20",
+ "src": "slide",
+ "deck": "lr",
+ "prof": "Lam",
+ "exam": 3,
+ "kind": "sign"
+},
+{
+ "id": "lr-oral-debriding",
+ "term": "oral debriding agents",
+ "also": [
+  "oral wound-cleansing agents"
+ ],
+ "def": "Carbamide peroxide and hydrogen peroxide for canker sores. Use after meals 3-4 times a day for up to 7 days; no food or drink for 30 minutes.",
+ "cite": "Lam Oral slide 35, 36, T@64467 11/20",
+ "src": "slide",
+ "deck": "lr",
+ "prof": "Lam",
+ "exam": 3,
+ "kind": "class"
+},
+{
+ "id": "lr-black-hairy-tongue",
+ "term": "black hairy tongue",
+ "also": [
+  "hairy black tongue"
+ ],
+ "def": "Overgrowth of organisms after prolonged use of oral debriding agents, which over-cleanse the mouth. It is the reason for the 7-day limit.",
+ "cite": "Lam Oral slide 36, T@64645 11/20",
+ "src": "slide",
+ "deck": "lr",
+ "prof": "Lam",
+ "exam": 3,
+ "kind": "sign"
+},
+{
+ "id": "lr-oral-protectant",
+ "term": "topical oral protectant",
+ "also": [
+  "protectant patch",
+  "protectant disc"
+ ],
+ "def": "Paste, patch or disc that coats a canker sore. Used 3-4 times a day after meals; dissolves in 8-12 hours; no drinking for 30 minutes after.",
+ "cite": "Lam Oral slide 37, T@65877 11/20",
+ "src": "slide",
+ "deck": "lr",
+ "prof": "Lam",
+ "exam": 3,
+ "kind": "class"
+},
+{
+ "id": "lr-hsl",
+ "term": "herpes simplex labialis (HSL)",
+ "also": [
+  "cold sore",
+  "fever blister"
+ ],
+ "def": "Cold sore caused by HSV-1: red fluid-filled vesicles on or around the lips that crust when mature. Contagious by direct contact; heals in 10-14 days.",
+ "cite": "Lam Oral slide 43, 45, 47, T@70970 11/20",
+ "src": "slide",
+ "deck": "lr",
+ "prof": "Lam",
+ "exam": 3,
+ "kind": "disease"
+},
+{
+ "id": "lr-hsv1",
+ "term": "herpes simplex virus 1 (HSV-1)",
+ "also": [
+  "HSV-1"
+ ],
+ "def": "The virus that causes cold sores. After the first infection it goes latent, and triggers such as stress, sun, cold and fever reactivate it.",
+ "cite": "Lam Oral slide 43, 44, 45",
+ "src": "slide",
+ "deck": "lr",
+ "prof": "Lam",
+ "exam": 3,
+ "kind": "immunology"
+},
+{
+ "id": "lr-docosanol",
+ "term": "docosanol 10% (Abreva)",
+ "also": [
+  "Abreva"
+ ],
+ "def": "First-line cold sore antiviral. Start at the first sign, up to 5 times a day until healed, 10 days total; it reduces the duration and severity.",
+ "cite": "Lam Oral slide 53, T@79161 11/20",
+ "src": "slide",
+ "deck": "lr",
+ "prof": "Lam",
+ "exam": 3,
+ "kind": "pharmacology"
+},
+{
+ "id": "lr-camphor-menthol-limit",
+ "term": "camphor and menthol limits",
+ "also": [],
+ "def": "In cold sore analgesics, camphor above 3% and menthol above 1% are contraindicated. Vicks has about 5% camphor, so it is not used.",
+ "cite": "Lam Oral slide 54, T@79683 11/20",
+ "src": "slide",
+ "deck": "lr",
+ "prof": "Lam",
+ "exam": 3,
+ "kind": "measure"
+},
+{
+ "id": "lr-hsl-secondary",
+ "term": "secondary infection of a cold sore",
+ "also": [],
+ "def": "A cold sore that fails to crust and keeps a red border. Triple antibiotic ointment 3-4 times a day, with PCP follow-up.",
+ "cite": "Lam Oral slide 45, 56, T@80722 11/20",
+ "src": "slide",
+ "deck": "lr",
+ "prof": "Lam",
+ "exam": 3,
+ "kind": "sign"
+},
+{
+ "id": "lr-xerostomia",
+ "term": "xerostomia (dry mouth)",
+ "also": [
+  "dry mouth"
+ ],
+ "def": "Reduced saliva causing difficulty talking, chewing and swallowing, halitosis, thrush and more caries. Often drug-induced; remove the offender when possible.",
+ "cite": "Lam Oral slide 70, 72, 76, T@85458 11/20",
+ "src": "slide",
+ "deck": "lr",
+ "prof": "Lam",
+ "exam": 3,
+ "kind": "disease"
+},
+{
+ "id": "lr-xerostomia-drugs",
+ "term": "drugs that cause dry mouth",
+ "also": [
+  "dry mouth medications"
+ ],
+ "def": "Antihistamines, decongestants, antihypertensives, diuretics, antidepressants, antipsychotics and sedatives. She named diphenhydramine, tiotropium, clonidine and citalopram.",
+ "cite": "Lam Oral slide 72, 73, 74, 75, T@86509 11/20",
+ "src": "slide",
+ "deck": "lr",
+ "prof": "Lam",
+ "exam": 3,
+ "kind": "pharmacology"
+},
+{
+ "id": "lr-artificial-saliva",
+ "term": "artificial saliva",
+ "also": [
+  "saliva substitute"
+ ],
+ "def": "Replacement therapy, not a cure: sprays, gels, gums, toothpaste used anytime, at least after meals and before bed. Avoid sodium-containing products on a low-sodium diet.",
+ "cite": "Lam Oral slide 82, 83, T@89225 11/20",
+ "src": "slide",
+ "deck": "lr",
+ "prof": "Lam",
+ "exam": 3,
+ "kind": "class"
+},
+{
+ "id": "lt-cerumen",
+ "term": "cerumen (earwax)",
+ "also": [
+  "cerumen",
+  "earwax",
+  "ear wax"
+ ],
+ "def": "Lubricates the ear canal, traps foreign material and acts as a waterproof barrier to pathogens; its acidic pH and antimicrobial substances inhibit bacterial and fungal growth.",
+ "cite": "Lam Otic slide 7, T@91417 11/20",
+ "src": "slide",
+ "deck": "lt",
+ "prof": "Lam",
+ "exam": 3,
+ "kind": "anatomy"
+},
+{
+ "id": "lt-impaction",
+ "term": "impacted cerumen",
+ "also": [
+  "cerumen impaction",
+  "impaction",
+  "excess cerumen",
+  "earwax impaction"
+ ],
+ "def": "Excess or built-up earwax with fullness or pressure, itching, dull pain, tinnitus or hearing loss and no discharge. Treated with carbamide peroxide when no exclusion applies.",
+ "cite": "Lam Otic slide 5, 8, 23, T@92615 11/20",
+ "src": "slide",
+ "deck": "lt",
+ "prof": "Lam",
+ "exam": 3,
+ "kind": "disease"
+},
+{
+ "id": "lt-water-clogged",
+ "term": "water-clogged ear",
+ "also": [
+  "water-clogged ears",
+  "water clogged ear",
+  "trapped water in the ear"
+ ],
+ "def": "Retained water in the ear canal: hearing impairment and fullness or wetness with no pain, no itching and no discharge. Dried with isopropyl alcohol and non-drug measures.",
+ "cite": "Lam Otic slide 18, 20, 21, 23, T@97351 11/20",
+ "src": "slide",
+ "deck": "lt",
+ "prof": "Lam",
+ "exam": 3,
+ "kind": "disease"
+},
+{
+ "id": "lt-swimmers-ear",
+ "term": "external otitis (swimmer's ear)",
+ "also": [
+  "swimmer's ear",
+  "swimmers ear",
+  "external otitis"
+ ],
+ "def": "An infection with acute pain, itching, clear discharge, a swollen canal, fever and swollen lymph nodes. No OTC product treats it, so the patient is referred.",
+ "cite": "Lam Otic slide 23, T@97615 11/20",
+ "src": "slide",
+ "deck": "lt",
+ "prof": "Lam",
+ "exam": 3,
+ "kind": "disease"
+},
+{
+ "id": "lt-eac",
+ "term": "external auditory canal (EAC)",
+ "also": [
+  "ear canal",
+  "EAC",
+  "auditory canal"
+ ],
+ "def": "The ear canal where wax and water collect. Its job is to conduct sound toward the middle ear, and the goal in treatment is not to damage the eardrum.",
+ "cite": "Lam Otic slide 4, 7, T@91166 11/20",
+ "src": "slide",
+ "deck": "lt",
+ "prof": "Lam",
+ "exam": 3,
+ "kind": "anatomy",
+ "cs": true
+},
+{
+ "id": "lt-tm",
+ "term": "tympanic membrane",
+ "also": [
+  "eardrum",
+  "tympanic membrane",
+  "ear drum"
+ ],
+ "def": "The eardrum at the end of the ear canal. A ruptured membrane (abrupt hearing loss, sharp pain) excludes self-care, and an ear-cleaning tool pushed too far can injure it.",
+ "cite": "Lam Otic slide 4, 10, 13, 24, T@94176 11/20",
+ "src": "slide",
+ "deck": "lt",
+ "prof": "Lam",
+ "exam": 3,
+ "kind": "anatomy"
+},
+{
+ "id": "lt-tubes",
+ "term": "tympanostomy tube",
+ "also": [
+  "tympanostomy tubes",
+  "ear tubes",
+  "tympanic tubes"
+ ],
+ "def": "A tube placed in the eardrum. A patient with tubes present is excluded from self-care for impacted cerumen and for a water-clogged ear.",
+ "cite": "Lam Otic slide 10, 26, 36, T@93485 11/20",
+ "src": "slide",
+ "deck": "lt",
+ "prof": "Lam",
+ "exam": 3,
+ "kind": "other"
+},
+{
+ "id": "lt-tinnitus",
+ "term": "tinnitus",
+ "also": [
+  "ringing of the ears",
+  "ringing in the ear"
+ ],
+ "def": "Ringing in the ear; she listed it with impaction. Untreated foreign objects may also cause it (slide 25).",
+ "cite": "Lam Otic slide 8, 25, T@92615 11/20",
+ "src": "slide",
+ "deck": "lt",
+ "prof": "Lam",
+ "exam": 3,
+ "kind": "sign"
+},
+{
+ "id": "lt-vertigo",
+ "term": "vertigo",
+ "also": [
+  "vertigo"
+ ],
+ "def": "A spinning sensation listed in the presentation of impacted cerumen with dizziness. Dizziness is an exclusion on the water-clogged ear slide.",
+ "cite": "Lam Otic slide 8, 26",
+ "src": "slide",
+ "deck": "lt",
+ "prof": "Lam",
+ "exam": 3,
+ "kind": "sign"
+},
+{
+ "id": "lt-ceruminous",
+ "term": "ceruminous glands",
+ "also": [
+  "ceruminous gland"
+ ],
+ "def": "The glands that make cerumen. Their atrophy in older adults is a listed risk factor for impaction (handout).",
+ "cite": "Lam Otic slide 7",
+ "src": "slide",
+ "deck": "lt",
+ "prof": "Lam",
+ "exam": 3,
+ "kind": "anatomy"
+},
+{
+ "id": "lt-cerumenolytic",
+ "term": "cerumenolytic",
+ "also": [
+  "cerumenolytics",
+  "wax softener",
+  "wax-softening drop"
+ ],
+ "def": "A drop that softens earwax. Carbamide peroxide is the one recommended; water-based and oil-based agents are not recommended anymore.",
+ "cite": "Lam Otic slide 14, 15, T@95566 11/20",
+ "src": "slide",
+ "deck": "lt",
+ "prof": "Lam",
+ "exam": 3,
+ "kind": "class"
+},
+{
+ "id": "lt-carbamide",
+ "term": "carbamide peroxide (Debrox)",
+ "also": [
+  "carbamide peroxide",
+  "carbamide peroxide 6.5%",
+  "Debrox",
+  "carbonamide peroxide"
+ ],
+ "def": "The FDA-approved nonprescription cerumenolytic, 6.5% in anhydrous glycerin: 5-10 drops, several minutes in the canal, twice daily for up to 4 days, with or without warm-water irrigation.",
+ "cite": "Lam Otic slide 14, T@94684 11/20",
+ "src": "slide",
+ "deck": "lt",
+ "prof": "Lam",
+ "exam": 3,
+ "kind": "pharmacology"
+},
+{
+ "id": "lt-ipa",
+ "term": "isopropyl alcohol ear drops",
+ "also": [
+  "isopropyl alcohol",
+  "isopropyl alcohol drops",
+  "rubbing alcohol drops"
+ ],
+ "def": "The drying agent for a water-clogged ear, 4-5 drops in the affected ear; the slide prints 95% in anhydrous glycerin 5%, and she said 70%.",
+ "cite": "Lam Otic slide 31, T@99198 11/20",
+ "src": "slide",
+ "deck": "lt",
+ "prof": "Lam",
+ "exam": 3,
+ "kind": "pharmacology"
+},
+{
+ "id": "lt-drying",
+ "term": "drying agent",
+ "also": [
+  "drying agent"
+ ],
+ "def": "A product that dries the ear canal; isopropyl alcohol is the one she named for a water-clogged ear.",
+ "cite": "Lam Otic slide 31, T@99198 11/20",
+ "src": "slide",
+ "deck": "lt",
+ "prof": "Lam",
+ "exam": 3,
+ "kind": "class"
+},
+{
+ "id": "lt-bulb",
+ "term": "rubber otic bulb syringe",
+ "also": [
+  "bulb syringe",
+  "otic bulb syringe"
+ ],
+ "def": "The syringe used for gentle warm-water irrigation of remaining cerumen after carbamide peroxide; irrigation with warm sterile water is not well studied.",
+ "cite": "Lam Otic slide 13, 14, T@94256 11/20",
+ "src": "slide",
+ "deck": "lt",
+ "prof": "Lam",
+ "exam": 3,
+ "kind": "other"
+},
+{
+ "id": "lt-irrigation",
+ "term": "ear irrigation",
+ "also": [
+  "irrigation",
+  "warm-water irrigation"
+ ],
+ "def": "Gentle flushing of the canal with warm sterile water and a bulb syringe; she said it is not very well studied, and it may not work.",
+ "cite": "Lam Otic slide 13, 14, T@94327 11/20",
+ "src": "slide",
+ "deck": "lt",
+ "prof": "Lam",
+ "exam": 3,
+ "kind": "counseling"
+},
+{
+ "id": "lt-candles",
+ "term": "ear candles",
+ "also": [
+  "ear candle"
+ ],
+ "def": "Not recommended: potential for danger and injury and no scientific evidence of benefit.",
+ "cite": "Lam Otic slide 15, T@95719 11/20",
+ "src": "slide",
+ "deck": "lt",
+ "prof": "Lam",
+ "exam": 3,
+ "kind": "counseling"
+},
+{
+ "id": "lt-curette",
+ "term": "ear-cleaning tool (curette)",
+ "also": [
+  "curette",
+  "ear cleansing tool",
+  "ear-cleaning tool"
+ ],
+ "def": "A manual tool for removing earwax. Pushed too far it can injure the canal skin or the tympanic membrane.",
+ "cite": "Lam Otic slide 13, T@94016 11/20",
+ "src": "slide",
+ "deck": "lt",
+ "prof": "Lam",
+ "exam": 3,
+ "kind": "other"
+},
+{
+ "id": "lt-absorbing",
+ "term": "water-absorbing earplugs",
+ "also": [
+  "water-absorbing earplugs",
+  "water absorbing ear plugs"
+ ],
+ "def": "Earplugs that absorb water already in the canal, left in 5-10 minutes then discarded; slide 29 prints children older than 11. They do not prevent water entering when bathing or swimming.",
+ "cite": "Lam Otic slide 29, 30, T@98536 11/20",
+ "src": "slide",
+ "deck": "lt",
+ "prof": "Lam",
+ "exam": 3,
+ "kind": "counseling"
+},
+{
+ "id": "lt-otitis-media",
+ "term": "otitis media",
+ "also": [
+  "otitis media",
+  "middle ear infection"
+ ],
+ "def": "Sharp, steady, unilateral pain with a bulging eardrum, sometimes swollen lymph nodes and dizziness. An infection that is referred; slide 24 is lower priority than slide 23.",
+ "cite": "Lam Otic slide 24, T@97767 11/20",
+ "src": "slide",
+ "deck": "lt",
+ "prof": "Lam",
+ "exam": 3,
+ "kind": "disease"
+},
+{
+ "id": "lt-ruptured-tm",
+ "term": "ruptured tympanic membrane",
+ "also": [
+  "ruptured eardrum",
+  "ruptured tympanic membrane"
+ ],
+ "def": "Brief, severe pain with abrupt hearing loss; it excludes self-care. Slide 24 is lower priority than slide 23.",
+ "cite": "Lam Otic slide 10, 24, T@97767 11/20",
+ "src": "slide",
+ "deck": "lt",
+ "prof": "Lam",
+ "exam": 3,
+ "kind": "disease"
+},
+{
+ "id": "lt-otic",
+ "term": "otic",
+ "also": [
+  "otic",
+  "ear drops",
+  "eardrops"
+ ],
+ "def": "Relating to the ear. Eardrops: adults lie with the affected ear up and pull the lobe out and up; children under 3 have the ear pulled back and down.",
+ "cite": "Lam Otic slide 33, T@99534 11/20",
+ "src": "lecture",
+ "deck": "lt",
+ "prof": "Lam",
+ "exam": 3,
+ "kind": "other"
 }
 ];

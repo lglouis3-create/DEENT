@@ -359,3 +359,8 @@
 - Hints recorded (STYLE.md, course.js facts); Louis: no cumulative Exam 1 on Exam 3, so Smith pool is 18 eye questions; exams[2] `typed: true, blanks: 3`.
 - Added EB-001..020 (fill-in, mechanism of action; 18 with dupOf), EG-001..012 (gaps: drug-table recall, histamine symptoms, dry-eye causes, side-effect sets); GAPS.md/STARS.md in the agent report: acidosis chain already covered (EI-028..031, EI-046..050). Stars 41 -> 47. Slides 8 and 9: no item cites them.
 - Open: EG-004 phenylephrine is listed as alpha 2 on slide 57 and the chart, alpha 1 on slide 8.
+
+## 2026-11-20 (night): Dr. Lam 11/20 lecture
+- Analysis agent (LAM2_ANALYSIS): scope, her exam statements, cases, conflicts. Three writers (ophthalmic, oral, otic) produced questions, pages, glossary; otic keys rewritten so the key is not the longest option; 14 style flags fixed; LOR-057 removed.
+- Conflicts kept neutral on pages (otic alcohol 70% spoken vs 95% printed, cerumen age, protectant disc seconds vs minutes, cetirizine dose); the otic cases (slides 36-44) were not worked in class and are rebuilt.
+- Open: independent skeptic review of the new pages and questions; stars (agent running).

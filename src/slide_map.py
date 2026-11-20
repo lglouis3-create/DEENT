@@ -60,6 +60,9 @@ DECKS = [
     ('ey',  'Smith',   3, 'Smith_Eye_Glaucoma_AllergicConj_DryEye.pdf', 'SmithEye_Glaucoma_AllergicConj_DryEye.pdf', 'Dr. Smith, Eye: Glaucoma, Allergic Conjunctivitis, Dry Eye', 'Slide'),
     ('oo',  'Sikazwe', 3, 'Sikazwe_OOO_mc.pdf', 'Sikazwe_OOO_mc_clean.pdf', 'Dr. Sikazwe, Otic/Oral/Ophthalmic Medicinal Chemistry', 'Slide'),
     ('lg',  'Lam',     3, 'Lam_Glaucoma.pdf', 'Lam_Glaucoma_clean.pdf', 'Dr. Lam, Glaucoma', 'Slide'),
+    ('lo',  'Lam',     3, 'Lam_OphthalmicDisorders.pdf', 'Lam_OphthalmicDisorders_clean.pdf', 'Dr. Lam, Ophthalmic disorders', 'Slide'),
+    ('lr',  'Lam',     3, 'Lam_OralDisorders_slides.pdf', 'Lam_OralDisorders_clean.pdf', 'Dr. Lam, Oral disorders', 'Slide'),
+    ('lt',  'Lam',     3, 'Lam_OticDisorders_slides.pdf', 'Lam_OticDisorders_clean.pdf', 'Dr. Lam, Otic disorders', 'Slide'),
 ]
 
 # ---- hand-kept tables: src/slide_tables.json (slide_ui.js and slide_check.js read them from

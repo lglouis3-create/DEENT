@@ -97,7 +97,7 @@ check(!badRef.length, `each of Dr. Sikazwe's ${sik.length} Exam 1 stars names it
 
 const ex3 = ids.filter(i => examOf(i) === 3);
 const ex3Other = ex3.filter(i => !['Smith', 'Sikazwe', 'Lam'].includes(QB[i].prof));
-check(!ex3Other.length, "every Exam 3 star is Dr. Smith's (eye deck), Dr. Sikazwe's (OOO deck) or Dr. Lam's (glaucoma deck)", ex3Other.join(', '));
+check(!ex3Other.length, "every Exam 3 star is Dr. Smith's (eye deck), Dr. Sikazwe's (OOO deck) or Dr. Lam's (glaucoma, ophthalmic, oral and otic decks)", ex3Other.join(', '));
 const eye = ex3.filter(i => QB[i].prof === 'Smith');
 const eyeBad = eye.filter(i => { const q = QB[i], x = L.items.find(y => y.id === i), sl = pagesOf(q.cite);
   return q.prof !== 'Smith' || !/^ey-/.test(q.topic) || !sl.length || sl.some(n => n < 1 || n > 74) || !/\bT@?\s?\d+[^;]*11\/1[37]|slides? ?\d/.test(x.ref) || !/11\/1[37]|slides?\s*\d/.test(x.ref); });
@@ -115,16 +115,31 @@ const oooBad = ooo.filter(i => { const q = QB[i], x = L.items.find(y => y.id ===
 check(!oooBad.length, `the ${ooo.length} Exam 3 stars of Dr. Sikazwe are his OOO questions (topic oo-*), cite slides 1-68 of Sikazwe_OOO_mc.pdf but none of the FYI slides 10-13, and name a slide or a 11/18 transcript place`, oooBad.join(', '));
 const oooSrc = ooo.filter(i => !/^sik-(ex3|q-ooo|know-ooo)$/.test(L.items.find(y => y.id === i).source));
 check(!oooSrc.length, "Dr. Sikazwe's Exam 3 stars use his Exam 3 sources (sik-ex3, sik-q-ooo, sik-know-ooo)", oooSrc.join(', '));
-// Dr. Lam's Exam 3 stars (added 2026-11-20): her glaucoma therapeutics questions (topic lm-*, deck Lam_Glaucoma.pdf, slides 1-93), each
-// reference names a place of the 11/19 transcript at or after T@35742 (T@n) and a slide of the deck or "slides" cite; never lowYield
+// Dr. Lam's Exam 3 stars. Glaucoma (added 2026-11-20): her glaucoma therapeutics questions (topic lm-*, deck Lam_Glaucoma.pdf, slides 1-93), each
+// reference names a place of the 11/19 transcript at or after T@35742 (T@n) and a slide of the deck or "slides" cite; never lowYield.
+// Ophthalmic, oral and otic (added 2026-11-20, 11/20 lecture): topics lo-*, lr-*, lt-* in Lam_OphthalmicDisorders.pdf (58 slides),
+// Lam_OralDisorders_slides.pdf (84) and Lam_OticDisorders_slides.pdf (44); each reference names a place of the 11/20 transcript (T@n, "11/20",
+// within its 101,392 characters) and a slide of the deck; never lowYield; sources lam-ex3b and lam-q2.
 const lamIds = ex3.filter(i => QB[i].prof === 'Lam');
-const lamBad = lamIds.filter(i => { const q = QB[i], x = L.items.find(y => y.id === i), sl = pagesOf(q.cite);
+const LAM2 = {lo: ['Lam_OphthalmicDisorders.pdf', 58], lr: ['Lam_OralDisorders_slides.pdf', 84], lt: ['Lam_OticDisorders_slides.pdf', 44]};
+const lamKind = i => { const m = String(QB[i].topic).match(/^(lm|lo|lr|lt)-/); return m ? m[1] : null; };
+const lamGl = lamIds.filter(i => lamKind(i) === 'lm'), lamNew = lamIds.filter(i => ['lo', 'lr', 'lt'].includes(lamKind(i)));
+const lamOther = lamIds.filter(i => !lamKind(i));
+check(!lamOther.length, "every Exam 3 star of Dr. Lam is in a topic lm-*, lo-*, lr-* or lt-*", lamOther.join(', '));
+const lamBad = lamGl.filter(i => { const q = QB[i], x = L.items.find(y => y.id === i), sl = pagesOf(q.cite);
   const ts = (String(x.ref).match(/T@(\d+)/g) || []).map(t => +t.slice(2));
-  return !/^lm-/.test(q.topic) || !String(q.cite).includes('Lam_Glaucoma.pdf') || !sl.length || sl.some(n => n < 1 || n > 93) || q.lowYield ||
+  return !String(q.cite).includes('Lam_Glaucoma.pdf') || !sl.length || sl.some(n => n < 1 || n > 93) || q.lowYield ||
          !ts.length || ts.some(t => t < 35742) || !/11\/19/.test(x.ref); });
-check(lamIds.length > 0 && !lamBad.length, `the ${lamIds.length} Exam 3 stars of Dr. Lam are her glaucoma questions (topic lm-*), cite slides 1-93 of Lam_Glaucoma.pdf, are not lowYield and name a place at or after T@35742 of the 11/19 transcript`, lamBad.join(', '));
-const lamSrc = lamIds.filter(i => !/^lam-(q|ex3)$/.test(L.items.find(y => y.id === i).source));
-check(!lamSrc.length, "Dr. Lam's stars use her sources (lam-q, lam-ex3)", lamSrc.join(', '));
+check(lamGl.length > 0 && !lamBad.length, `the ${lamGl.length} Exam 3 stars of Dr. Lam are her glaucoma questions (topic lm-*), cite slides 1-93 of Lam_Glaucoma.pdf, are not lowYield and name a place at or after T@35742 of the 11/19 transcript`, lamBad.join(', '));
+const lamNewBad = lamNew.filter(i => { const q = QB[i], x = L.items.find(y => y.id === i), sl = pagesOf(q.cite), k = LAM2[lamKind(i)], rs = slidesIn(x.ref);
+  const ts = (String(x.ref).match(/T@(\d+)/g) || []).map(t => +t.slice(2));
+  return !String(q.cite).includes(k[0]) || !sl.length || sl.some(n => n < 1 || n > k[1]) || q.lowYield || !rs.length || rs.some(n => n < 1 || n > k[1]) ||
+         !ts.length || ts.some(t => t < 1 || t > 101392) || !/11\/20/.test(x.ref) || /11\/19/.test(x.ref); });
+check(lamNew.length > 0 && !lamNewBad.length, `the ${lamNew.length} Exam 3 stars of Dr. Lam's 11/20 lecture are her ophthalmic, oral and otic questions (topics lo-*, lr-*, lt-*), cite slides within the page count of their own PDF, are not lowYield and name a slide and a place of the 11/20 transcript`, lamNewBad.join(', '));
+const lamSrc = lamGl.filter(i => !/^lam-(q|ex3)$/.test(L.items.find(y => y.id === i).source));
+check(!lamSrc.length, "Dr. Lam's glaucoma stars use her sources (lam-q, lam-ex3)", lamSrc.join(', '));
+const lamSrc2 = lamNew.filter(i => !/^lam-(q2|ex3b)$/.test(L.items.find(y => y.id === i).source));
+check(!lamSrc2.length, "Dr. Lam's 11/20 stars use her sources (lam-q2, lam-ex3b)", lamSrc2.join(', '));
 const eyeNoElig = ex3.filter(i => !(QB[i] && !QB[i].lowYield && !QB[i].unassigned && !optionalTopics.has(QB[i].topic)));
 check(!eyeNoElig.length, 'no Exam 3 star (Smith or Sikazwe) is lowYield, unassigned or in an optional topic', eyeNoElig.join(', '));
 
