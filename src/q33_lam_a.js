@@ -504,7 +504,7 @@ QUESTIONS.push(
  options:[
   {t:"A contraindication to the drug, so he should stop it today", correct:false, why:"A foreign body sensation is a side effect, not a contraindication."},
   {t:"Bottle contamination, so he should discard the bottle now", correct:false, why:"It is a known side effect of prostaglandin analogs."},
-  {t:"A known side effect; call the eye doctor if intolerable", correct:true, why:"It is a known side effect; intolerance is handled by the prescriber."},
+  {t:"An expected side effect; call the eye doctor if intolerable", correct:true, why:"It is an expected side effect; intolerance is handled by the prescriber."},
   {t:"A sign the drug has started to work, so continue as is", correct:false, why:"The sensation is a side effect; it does not signal efficacy."},
  ],
  teach:"Foreign body sensation, stinging and blurred vision are common prostaglandin analog effects to counsel about; intolerance leads to a change.",
