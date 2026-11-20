@@ -327,6 +327,8 @@ const COURSE = {
           'q27_ooo_topics.js', 'q22_eye_topics.js', 'q32_lam_topics.js', 'q23_eye_anat_patho.js', 'q24_eye_inflow.js', 'q25_eye_outflow.js', 'q26_eye_allergy_dry.js',
           // Dr. Sikazwe, Lectures 11-12 (Exam 3): otic, oral, ophthalmic medicinal chemistry
           'q28_ooo_otic_oral.js', 'q29_ooo_oph_a.js', 'q30_ooo_oph_b.js', 'q31_ooo_oph_c.js',
+          // Dr. Sikazwe, 11/19 (Exam 3): the questions on what he emphasized, written after the lecture (video and transcript)
+          'q36_ooo_1119.js',
           // Dr. Lam, Lecture 12 (Exam 3): glaucoma therapeutics, by her learning objectives (topics first, in q32_lam_topics.js above)
           'q33_lam_a.js', 'q34_lam_b.js', 'q35_lam_c.js',
           // the step-throughs of moa_figs.js in the explanations of the matching Smith questions

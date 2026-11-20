@@ -15,8 +15,8 @@ QUESTIONS.push(
   {t:"Aryl imidazoline", correct:false, why:"Slide 31: the aryl imidazolines carry a five-membered ring with two nitrogens, not an alcohol and amine chain."},
   {t:"Aryl sulfonamide", correct:false, why:"The sulfonamide group is a sulfur with two oxygens and a nitrogen (slide 27); the described drug has no sulfur."},
   {t:"Aryloxypropanolamine", correct:true, why:"Slide 27, slide 33 and T@38474: aryl (aromatic ring), oxy (the oxygen on the ring), propanolamine (three carbons with an alcohol and an amine)."}],
- teach:"The aryloxypropanolamines (slide 27, slide 33) are the beta antagonist class. The name is built from the parts: aryl = aromatic ring, oxy = the oxygen next to it, propanolamine = three carbons bearing an alcohol and an amine (T@38474).",
- cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slides 27, 33; T@38474 11/18"},
+ teach:"The aryloxypropanolamines (slide 27, slide 33) are the beta antagonist class. The name is built from the parts: aryl = aromatic ring, oxy = the oxygen next to it, propanolamine = three carbons bearing an alcohol and an amine (T@38474). On 11/19 he repeated it: the ring joined to an oxygen is the oxy, the three-carbon chain with the alcohol is the propanol, and with two carbons it is no longer propanol.",
+ cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slides 27, 33; T@38474 11/18; T@3642 11/19; T@3813 11/19"},
 
 {id:"OP-002", skill:"class", prof:'Sikazwe', tier:'new', topic:"oo-oph", sub:"fg", concept:"oo-fg-name-parts",
  tags:["class", "naming"], source:"both",
@@ -26,8 +26,8 @@ QUESTIONS.push(
   {t:"An oxygen inside the aromatic ring; three carbons carrying the alcohol", correct:false, why:"The oxygen of \"oxy\" is outside the ring, joining the ring to the chain (slide 27)."},
   {t:"An oxygen next to the aromatic ring; two carbons carrying the alcohol", correct:false, why:"Two carbons would be an ethanolamine (the arylethanolamines of slide 34); the class name says propanol, three carbons."},
   {t:"An oxygen next to the amine; three carbons carrying the alcohol", correct:false, why:"The oxygen sits next to the aromatic group, at the ring end of the chain, not at the amine (T@38474)."}],
- teach:"Aryl = aromatic ring; oxy = oxygen next to it; propanolamine = three carbons, with the alcohol and the amine (T@38474, slide 27).",
- cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slides 27, 33; T@38474 11/18"},
+ teach:"Aryl = aromatic ring; oxy = oxygen next to it; propanolamine = three carbons, with the alcohol and the amine (T@38474, slide 27). Count the three carbons: with two carbons it is no longer propanol (11/19).",
+ cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slides 27, 33; T@38474 11/18; T@3642 11/19; T@3813 11/19"},
 
 {id:"OP-003", skill:"class", prof:'Sikazwe', tier:'new', topic:"oo-oph", sub:"fg", concept:"oo-fg-imidazoline",
  tags:["class"], source:"both",
@@ -159,7 +159,7 @@ QUESTIONS.push(
   {t:"Arylethanolamine; decreases aqueous humor production", correct:false, why:"The chain is attached through an oxygen and has three carbons, so the class is the aryloxypropanolamine (slide 34 defines the arylethanolamine)."},
   {t:"Imidazoline; decreases aqueous humor production", correct:false, why:"An imidazoline has no propanolamine chain (slide 31)."}],
  teach:"Slide 33: aryloxypropanolamines are beta antagonists that lower aqueous humor production; the heteroaryl ring of timolol counts as the aryl.",
- cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slides 33, 34"},
+ cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slides 33, 34; T@3086 11/19"},
 
 {id:"OP-015", skill:"mech", prof:'Sikazwe', tier:'new', topic:"oo-oph", sub:"gl", concept:"oo-gl-why-pressure",
  tags:["patho"], source:"both",
@@ -234,7 +234,7 @@ QUESTIONS.push(
   {t:"It has influx and efflux transporters that pump the drug back out of the eye", correct:false, why:"Slide 29 lists the transporters under the conjunctiva, not the cornea."},
   {t:"It has esterase and CYP enzymes that break the drug down before it enters", correct:false, why:"Slide 29 lists the esterase and CYP enzymes under the conjunctiva."},
   {t:"It lacks a lipid layer, so lipophilic drugs cannot cross it", correct:false, why:"The cornea has lipid layers, and lipophilic drugs are the ones that enter through it (slides 29 and 30)."},
-  {t:"The drug must dissolve in each of its lipid/water/lipid layers in turn", correct:true, why:"Slide 29: cornea = lipid/water/lipid sandwich, less drug entry; T@43104 walks through the dissolving steps."}],
+  {t:"The drug has to dissolve in each of its lipid/water/lipid layers in turn", correct:true, why:"Slide 29: cornea = lipid/water/lipid sandwich, less drug entry; T@43104 walks through the dissolving steps."}],
  teach:"Cornea: lipid/water/lipid sandwich, less entry (slide 29). Conjunctiva: transporters and enzymes, more entry (slide 29).",
  cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slide 29; T@43104 11/18"},
 
@@ -390,7 +390,7 @@ QUESTIONS.push(
   {t:"They decrease aqueous humor production", correct:true, why:"Slide 33: beta-antagonists lower aqueous humor production."},
   {t:"They inhibit an enzyme that makes the humor", correct:false, why:"Enzyme inhibition is the mechanism of the carbonic anhydrase inhibitors (slide 28)."}],
  teach:"Beta antagonists: aqueous humor production down (slide 33).",
- cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slide 33"},
+ cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slide 33; T@3086 11/19"},
 
 {id:"OP-040", skill:"class", prof:'Sikazwe', tier:'new', topic:"oo-bb", sub:"sar", concept:"oo-bb-moleculeX",
  tags:["class"], source:"slide",
@@ -400,8 +400,8 @@ QUESTIONS.push(
   {t:"Arylethanolamine", correct:true, why:"Slide 34: the blue arylethanolamine pattern is ring-CH(OH)-CH2-NH-R, with no oxygen between the ring and the chain."},
   {t:"Aryl imidazoline", correct:false, why:"No imidazoline ring is present (slide 31)."},
   {t:"Prostaglandin", correct:false, why:"The prostaglandin skeleton is a carbon five-membered ring with two chains (slide 27)."}],
- teach:"Slide 34 contrasts the aryloxypropanolamine (green, with the oxygen and three carbons) and the arylethanolamine (blue, ring-CH(OH)-CH2-NH), the pattern drawn in the example labeled Molecule X.",
- cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slide 34"},
+ teach:"Slide 34 contrasts the aryloxypropanolamine (green, with the oxygen and three carbons) and the arylethanolamine (blue, ring-CH(OH)-CH2-NH), the pattern drawn in the example labeled Molecule X. He called this series the ethanolamines: no oxygen and two carbons (11/19).",
+ cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slide 34; T@5949 11/19"},
 
 {id:"OP-041", skill:"chem", prof:'Sikazwe', tier:'new', topic:"oo-bb", sub:"sar", concept:"oo-bb-potency",
  tags:["sar"], source:"slide",
@@ -412,7 +412,7 @@ QUESTIONS.push(
   {t:"Higher at beta 2 receptors but not at beta 1", correct:false, why:"Slide 34 states the potency difference without limiting it to a receptor."},
   {t:"Higher", correct:true, why:"Slide 34: aryloxypropanolamines (> potent) versus arylethanolamines."}],
  teach:"Aryloxypropanolamines are more potent than the arylethanolamines (slide 34).",
- cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slide 34"},
+ cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slide 34; T@5432 11/19"},
 
 {id:"OP-042", skill:"chem", prof:'Sikazwe', tier:'new', topic:"oo-bb", sub:"sar", concept:"oo-bb-stereo",
  tags:["sar"], source:"slide",
@@ -423,7 +423,7 @@ QUESTIONS.push(
   {t:"A 50:50 mixture of R and S", correct:false, why:"Slide 34 states a preference for the S-OH isomer."},
   {t:"Neither; the carbon is not stereogenic", correct:false, why:"The carbon bearing the OH has four different groups; slide 34 states a stereochemical preference."}],
  teach:"Slide 34: S-OH isomers are preferred.",
- cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slide 34"},
+ cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slide 34; T@6865 11/19"},
 
 {id:"OP-043", skill:"chem", prof:'Sikazwe', tier:'new', topic:"oo-bb", sub:"sar", concept:"oo-bb-betaxolol-selectivity",
  tags:["sar"], source:"slide",
@@ -433,8 +433,8 @@ QUESTIONS.push(
   {t:"Alpha 2 agonism", correct:false, why:"Alpha 2 agonism belongs to the NH-linked aryl imidazolines (slide 32)."},
   {t:"Beta 1 antagonism", correct:true, why:"Slide 34: most p-aryloxypropanolamines (e.g., betaxolol) are beta 1 antagonists."},
   {t:"Alpha 1 agonism", correct:false, why:"Alpha 1 agonism belongs to the CH2-linked aryl imidazolines (slide 32)."}],
- teach:"Most aryloxypropanolamines have mixed beta 1 and beta 2 activity; most para-substituted ones, such as betaxolol, are beta 1 antagonists (slide 34).",
- cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slide 34"},
+ teach:"Most aryloxypropanolamines have mixed beta 1 and beta 2 activity; most para-substituted ones, such as betaxolol, are beta 1 antagonists (slide 34). He said a true para substitution tends to give better beta 1 selectivity (11/19).",
+ cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slide 34; T@7019 11/19"},
 
 {id:"OP-045", skill:"pk", prof:'Sikazwe', tier:'new', topic:"oo-bb", sub:"class", concept:"oo-bb-logp-highest",
  tags:["pk", "numbers"], source:"slide",
@@ -445,7 +445,7 @@ QUESTIONS.push(
   {t:"Carteolol", correct:false, why:"Slide 33 prints 1.4 for carteolol."},
   {t:"Betaxolol", correct:true, why:"Slide 33 prints betaxolol Log P 2.5, the highest of the four beta antagonists drawn; levobunolol is 2.2, timolol and carteolol 1.4."}],
  teach:"Slide 33 Log P values: betaxolol 2.5, levobunolol 2.2, timolol 1.4, carteolol 1.4.",
- cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slide 33"},
+ cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slide 33; T@4215 11/19"},
 
 {id:"OP-046", skill:"pk", prof:'Sikazwe', tier:'new', topic:"oo-bb", sub:"class", concept:"oo-bb-logp-pair", multi:true,
  tags:["pk", "numbers", "list"], source:"slide",
@@ -456,7 +456,7 @@ QUESTIONS.push(
   {t:"Levobunolol", correct:false, why:"Slide 33 prints levobunolol Log P 2.2, not 1.4."},
   {t:"Carteolol", correct:true, why:"Slide 33: carteolol LogP = 1.4."}],
  teach:"Timolol and carteolol, 1.4 each; betaxolol 2.5 and levobunolol 2.2 (slide 33).",
- cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slide 33"},
+ cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slide 33; T@4215 11/19"},
 
 {id:"OP-047", skill:"class", prof:'Sikazwe', tier:'new', topic:"oo-bb", sub:"class", concept:"oo-bb-brands",
  tags:["class", "names"], source:"slide",

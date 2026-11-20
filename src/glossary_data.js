@@ -14072,8 +14072,8 @@ const GLOSSARY_TERMS = [
 "also": [
 "enamel fluorosis"
 ],
-"def": "Enamel damage from too much fluoride (>2 mg/L on slide 18). Dr. Sikazwe: it starts as white spots, especially in children, and can brown as stains are incorporated.",
-"cite": "OOO slide 18, T@21980 11/18",
+"def": "Enamel damage from too much fluoride (above 2 mg/L, slide 18). White spots, especially in children, can brown. He called it the new item added to slide 18 (11/19).",
+"cite": "OOO slide 18, T@21980 11/18, T@1828 11/19",
 "src": "slide",
 "deck": "oo",
 "prof": "Sikazwe",
@@ -14464,8 +14464,8 @@ const GLOSSARY_TERMS = [
 "also": [
 "imidazolines"
 ],
-"def": "A drug FG and class (slides 27, 31): the α2 agonists clonidine, apraclonidine and brimonidine (slide 31) and the decongestants on slide 55 contain it.",
-"cite": "OOO slide 27, OOO slide 31, OOO slide 55, T@37526 11/18",
+"def": "A drug FG and class (slides 27, 31): present in the alpha 2 agonists clonidine, apraclonidine and brimonidine (self-assessment question 4, answered 11/19). The decongestants on slide 55 are not on Exam 3.",
+"cite": "OOO slide 27, OOO slide 31, OOO slide 55, T@37526 11/18, T@34809 11/19",
 "src": "slide",
 "deck": "oo",
 "prof": "Sikazwe",
@@ -14533,8 +14533,8 @@ const GLOSSARY_TERMS = [
 "also": [
 "aryloxypropanolamines"
 ],
-"def": "The class of the β-antagonists timolol, betaxolol, levobunolol and carteolol (slide 33). Dr. Sikazwe: aromatic ring, oxygen beside it, then propanolamine (three carbons, alcohol and amine).",
-"cite": "OOO slide 27, OOO slide 33, T@38806 11/18",
+"def": "The class of the beta antagonists (slide 33): aryl ring, oxygen beside it, then propanolamine. Count the three carbons; with two it is no longer propanol. Duration 12 to 24 hours.",
+"cite": "OOO slide 27, OOO slide 33, T@38806 11/18, T@3813 11/19",
 "src": "slide",
 "deck": "oo",
 "prof": "Sikazwe",
@@ -14573,8 +14573,8 @@ const GLOSSARY_TERMS = [
 "also": [
 "β1 antagonist"
 ],
-"def": "Slide 34: most β-antagonists have mixed β1 + β2 activity, but most p-aryloxypropanolamines, such as betaxolol, are β1-antagonists.",
-"cite": "OOO slide 34",
+"def": "Slide 34: most beta antagonists have mixed beta 1 + beta 2 activity; most p-aryloxypropanolamines, such as betaxolol, are beta 1 antagonists (true para substitution).",
+"cite": "OOO slide 34, T@7099 11/19",
 "src": "slide",
 "deck": "oo",
 "prof": "Sikazwe",
@@ -14588,8 +14588,8 @@ const GLOSSARY_TERMS = [
 "PGF receptor",
 "PGF or FP receptor"
 ],
-"def": "Slide 44: every glaucoma prostaglandin increases fluid outflow through PGF or FP receptor activation.",
-"cite": "OOO slide 44",
+"def": "Slide 44: every glaucoma prostaglandin analog raises outflow through PGF (FP) receptor activation. The natural PGF2 alpha is too unstable, so analogs (log P above 3, potent) are used.",
+"cite": "OOO slide 44, T@23166 11/19",
 "src": "slide",
 "deck": "oo",
 "prof": "Sikazwe",
@@ -14603,8 +14603,8 @@ const GLOSSARY_TERMS = [
 "PGE2 receptor",
 "selective PGE2 or EP2 receptor agonist"
 ],
-"def": "Slide 47: the target of omidenepag isopropyl, a selective PGE2 or EP2 receptor agonist that increases fluid outflow.",
-"cite": "OOO slide 47",
+"def": "Slide 47: the target of omidenepag isopropyl, a selective PGE2 (EP2) receptor agonist that raises outflow; selectivity minimizes off-target activity.",
+"cite": "OOO slide 47, T@26608 11/19",
 "src": "slide",
 "deck": "oo",
 "prof": "Sikazwe",
@@ -14617,8 +14617,8 @@ const GLOSSARY_TERMS = [
 "also": [
 "PG SAR"
 ],
-"def": "Slide 46: acids (-COOH) and amides (-CONH-) are the active drugs; esters are prodrugs. Esters or amides attach at C-1; alkyl or phenyl ends the chain.",
-"cite": "OOO slide 46",
+"def": "Slide 46: acids and amides are active; esters are prodrugs (activated by CE). Positions: C-1 ester or amide, far chain alkyl or phenyl, C-15 OH or halogen, chain bond single or double.",
+"cite": "OOO slide 46, T@23780 11/19",
 "src": "slide",
 "deck": "oo",
 "prof": "Sikazwe",
@@ -14632,8 +14632,8 @@ const GLOSSARY_TERMS = [
 "15-OH",
 "C-15"
 ],
-"def": "Slide 46 SAR: C-15 carries OH or halogens; halogens prevent 15-OH oxidation.",
-"cite": "OOO slide 46",
+"def": "Slide 46 SAR: C-15 carries OH or a halogen; a halogen prevents oxidation of the 15-OH (which would give a ketone) and stabilizes the molecule.",
+"cite": "OOO slide 46, T@25877 11/19",
 "src": "slide",
 "deck": "oo",
 "prof": "Sikazwe",
@@ -14674,8 +14674,8 @@ const GLOSSARY_TERMS = [
 "omidenepag",
 "OMD"
 ],
-"def": "A pyridine sulfonamide EP2 agonist (ClogP=3) that increases fluid outflow; an ester prodrug that esterase hydrolysis converts to the active metabolite omidenepag (OMD) (slide 47).",
-"cite": "OOO slide 47",
+"def": "A pyridine sulfonamide EP2 agonist (FDA approved 2022; ClogP 3) that raises outflow; an ester prodrug that carboxylesterase converts to omidenepag (slide 47). EP2 selectivity minimizes off-target activity.",
+"cite": "OOO slide 47, T@26310 11/19",
 "src": "slide",
 "deck": "oo",
 "prof": "Sikazwe",
@@ -14702,8 +14702,8 @@ const GLOSSARY_TERMS = [
 "also": [
 "isoquinolines"
 ],
-"def": "The chemical class of netarsudil, the Rho kinase (ROCK) inhibitor on slide 48.",
-"cite": "OOO slide 48",
+"def": "The chemical class of netarsudil, the Rho kinase (ROCK) inhibitor of slide 48; an ester prodrug. Rho kinases are mostly two: ROCK1 and ROCK2.",
+"cite": "OOO slide 48, T@27850 11/19",
 "src": "slide",
 "deck": "oo",
 "prof": "Sikazwe",
@@ -14852,8 +14852,8 @@ const GLOSSARY_TERMS = [
 "H2CO3",
 "bicarbonate ion"
 ],
-"def": "On slide 35, carbonic anhydrase converts CO2 + H2O to H2CO3, which gives bicarbonate ion and H+; that pH change modulates aqueous humor production.",
-"cite": "OOO slide 35",
+"def": "On slide 35, carbonic anhydrase converts CO2 + H2O to H2CO3, giving bicarbonate and H+. Bicarbonate promotes osmotic water movement into the posterior chamber, adding to aqueous humor.",
+"cite": "OOO slide 35, T@9136 11/19",
 "src": "slide",
 "deck": "oo",
 "prof": "Sikazwe",
@@ -14866,8 +14866,8 @@ const GLOSSARY_TERMS = [
 "also": [
 "Sulfonamides (Zolamides)"
 ],
-"def": "Slide 36 sulfonamide CAIs: acetazolamide, methazolamide, brinzolamide and dorzolamide HCl. They competitively inhibit CAs and decrease intraocular fluid production.",
-"cite": "OOO slide 36",
+"def": "Slide 36 sulfonamide CAIs. First generation (acetazolamide, methazolamide): polar, oral, high doses. Second generation (brinzolamide, dorzolamide): lipophilic, topical, fewer systemic effects.",
+"cite": "OOO slide 36, T@11339 11/19",
 "src": "slide",
 "deck": "oo",
 "prof": "Sikazwe",
@@ -14881,8 +14881,8 @@ const GLOSSARY_TERMS = [
 "N-deethylations",
 "N-deethylated"
 ],
-"def": "Slide 37: CYPs N-deethylate both brinzolamide and dorzolamide, and the N-deethylated metabolites are active.",
-"cite": "OOO slide 37",
+"def": "Slide 37: CYPs remove the ethyl group from the nitrogen of brinzolamide and dorzolamide; the N-deethylated metabolites are active. He may ask what the product looks like.",
+"cite": "OOO slide 37, T@12940 11/19",
 "src": "slide",
 "deck": "oo",
 "prof": "Sikazwe",
@@ -14893,8 +14893,8 @@ const GLOSSARY_TERMS = [
 "id": "oo-thr199",
 "term": "Thr199",
 "also": [],
-"def": "The amino acid in carbonic anhydrase's active site that, with Zn, forms ionic and H-bond interactions with the CAI's SO2NH2 group (slide 38).",
-"cite": "OOO slide 38",
+"def": "The active-site amino acid that, with Zn, forms ionic and H-bond interactions with the CAI SO2NH2 group (slide 38, panel B: three H bonds, one ionic). Panel A is not needed.",
+"cite": "OOO slide 38, T@14462 11/19",
 "src": "slide",
 "deck": "oo",
 "prof": "Sikazwe",
@@ -14908,8 +14908,8 @@ const GLOSSARY_TERMS = [
 "direct-acting cholinergic",
 "direct cholinergics"
 ],
-"def": "Slide 40: carbamates and esters (carbachol Cl, pilocarpine HCl) that increase fluid outflow. SAR: acyloxy group, ionizable amine N, N-methyl groups, 2-carbon spacer between O and N.",
-"cite": "OOO slide 40",
+"def": "Slide 40: carbamates and esters (carbachol Cl, pilocarpine HCl) that mimic acetylcholine and raise outflow. Not on Exam 3: its SAR, which he removed on 11/19.",
+"cite": "OOO slide 40, T@17299 11/19",
 "src": "slide",
 "deck": "oo",
 "prof": "Sikazwe",
@@ -14951,8 +14951,8 @@ const GLOSSARY_TERMS = [
 "also": [
 "acyloxy"
 ],
-"def": "Slide 40 SAR for direct-acting cholinergics: the acyloxy group is needed for H-bonding to nicotinic/muscarinic receptors.",
-"cite": "OOO slide 40",
+"def": "Slide 40 SAR term for direct-acting cholinergics (H-bonding to the receptors). Not on Exam 3: he removed this SAR on 11/19.",
+"cite": "OOO slide 40, T@17299 11/19",
 "src": "slide",
 "deck": "oo",
 "prof": "Sikazwe",
@@ -14965,8 +14965,8 @@ const GLOSSARY_TERMS = [
 "also": [
 "two-carbon spacer"
 ],
-"def": "Slide 40 SAR for direct-acting cholinergics: two carbons between the O and the N.",
-"cite": "OOO slide 40",
+"def": "Slide 40 SAR term: two carbons between the O and the N of a direct-acting cholinergic. Not on Exam 3: he removed this SAR on 11/19.",
+"cite": "OOO slide 40, T@17299 11/19",
 "src": "slide",
 "deck": "oo",
 "prof": "Sikazwe",
@@ -14981,8 +14981,8 @@ const GLOSSARY_TERMS = [
 "organophosphates",
 "phosphoryl group"
 ],
-"def": "Indirect cholinergic FG (slide 42). Extent of AChE inhibition depends on the FG: phosphoryl > carbamate > ester. Slide 68 asks which FG gives irreversible inhibition.",
-"cite": "OOO slide 42, OOO slide 68",
+"def": "Indirect cholinergic FG (slide 42): phosphoryl longest duration, then carbamate, amide (his addition), ester. Irreversible: aging loses an ethyl group (O-deethylation); 2-PAM works only before aging.",
+"cite": "OOO slide 42, OOO slide 68, T@21483 11/19",
 "src": "slide",
 "deck": "oo",
 "prof": "Sikazwe",
@@ -15005,8 +15005,8 @@ const GLOSSARY_TERMS = [
 "id": "oo-phenylalanine",
 "term": "phenylalanine",
 "also": [],
-"def": "Lifitegrast is described on slide 51 as a phenylalanine; its phenylalanine part is circled in the structure.",
-"cite": "OOO slide 51",
+"def": "Lifitegrast is a phenylalanine (slide 51; the part circled). It is lipophilic with minimal systemic exposure, and what enters the circulation is eliminated unchanged (11/19).",
+"cite": "OOO slide 51, T@31164 11/19",
 "src": "slide",
 "deck": "oo",
 "prof": "Sikazwe",
@@ -15020,8 +15020,8 @@ const GLOSSARY_TERMS = [
 "levocabastine",
 "Livostin"
 ],
-"def": "A 2nd generation antihistamine for allergic conjunctivitis (Livostin, slide 53; structure on slide 54). Slide 54 sends the SAR to the allergy lecture.",
-"cite": "OOO slide 53, OOO slide 54",
+"def": "A 2nd generation antihistamine (Livostin, slides 53-54). Not on Exam 3: antihistamines were left to the antihistamine lecture (11/19).",
+"cite": "OOO slide 53, OOO slide 54, T@33467 11/19",
 "src": "slide",
 "deck": "oo",
 "prof": "Sikazwe",
@@ -15034,8 +15034,8 @@ const GLOSSARY_TERMS = [
 "also": [
 "imidazoline decongestant"
 ],
-"def": "Slide 55: oxymetazoline HCl (Afrin), xylometazoline HCl (Clear eyes), tetrahydrometazoline HCl (Visine) and naphazoline HCl (Otrivin); MoA is α1/α2 agonism.",
-"cite": "OOO slide 55",
+"def": "Slide 55: oxymetazoline, xylometazoline, tetrahydrometazoline and naphazoline; alpha 1/alpha 2 agonists. Not on Exam 3 (he ended the reading at slide 51 on 11/19).",
+"cite": "OOO slide 55, T@33467 11/19",
 "src": "slide",
 "deck": "oo",
 "prof": "Sikazwe",
@@ -15048,8 +15048,8 @@ const GLOSSARY_TERMS = [
 "also": [
 "xylometazoline"
 ],
-"def": "Imidazoline decongestant with a printed brand of Clear eyes products; MoA α1/α2 agonist (slide 55).",
-"cite": "OOO slide 55",
+"def": "Imidazoline decongestant, slide 55 (Clear eyes products as printed). Not on Exam 3 (reading ended at slide 51, 11/19).",
+"cite": "OOO slide 55, T@33467 11/19",
 "src": "slide",
 "deck": "oo",
 "prof": "Sikazwe",
@@ -15062,8 +15062,8 @@ const GLOSSARY_TERMS = [
 "also": [
 "tetrahydrometazoline"
 ],
-"def": "Imidazoline decongestant, spelled this way on slide 55, with a printed brand of Visine products; MoA α1/α2 agonist.",
-"cite": "OOO slide 55",
+"def": "Imidazoline decongestant, spelled this way on slide 55 (Visine products as printed). Not on Exam 3 (reading ended at slide 51, 11/19).",
+"cite": "OOO slide 55, T@33467 11/19",
 "src": "slide",
 "deck": "oo",
 "prof": "Sikazwe",
@@ -15076,8 +15076,8 @@ const GLOSSARY_TERMS = [
 "also": [
 "chromones"
 ],
-"def": "Slide 56 mast cell stabilizer class that inhibits granule histamine release: cromolyn Na (Opticrom) and nedocromil Na (Alocril).",
-"cite": "OOO slide 56",
+"def": "Slide 56 mast cell stabilizer class: cromolyn Na (Opticrom), nedocromil Na (Alocril). Not on Exam 3 (reading ended at slide 51, 11/19).",
+"cite": "OOO slide 56, T@33467 11/19",
 "src": "slide",
 "deck": "oo",
 "prof": "Sikazwe",
@@ -15090,8 +15090,8 @@ const GLOSSARY_TERMS = [
 "also": [
 "oxamic acids"
 ],
-"def": "Slide 56 mast cell stabilizer class, shown in red on lodoxamide tromethamine (Alomide), which has two oxamic acid groups.",
-"cite": "OOO slide 56",
+"def": "Slide 56 mast cell stabilizer class, shown on lodoxamide tromethamine (Alomide). Not on Exam 3 (reading ended at slide 51, 11/19).",
+"cite": "OOO slide 56, T@33467 11/19",
 "src": "slide",
 "deck": "oo",
 "prof": "Sikazwe",
@@ -15105,8 +15105,8 @@ const GLOSSARY_TERMS = [
 "cromolyn",
 "Opticrom"
 ],
-"def": "Chromone mast cell stabilizer (Opticrom, slide 56): two chromone rings joined through a hydroxy-propane linker; it inhibits granule histamine release.",
-"cite": "OOO slide 56",
+"def": "Chromone mast cell stabilizer (Opticrom, slide 56). Not on Exam 3 (reading ended at slide 51, 11/19).",
+"cite": "OOO slide 56, T@33467 11/19",
 "src": "slide",
 "deck": "oo",
 "prof": "Sikazwe",
@@ -15120,8 +15120,8 @@ const GLOSSARY_TERMS = [
 "nedocromil",
 "Alocril"
 ],
-"def": "Chromone mast cell stabilizer (Alocril, slide 56) that inhibits granule histamine release from mast cells.",
-"cite": "OOO slide 56",
+"def": "Chromone mast cell stabilizer (Alocril, slide 56). Not on Exam 3 (reading ended at slide 51, 11/19).",
+"cite": "OOO slide 56, T@33467 11/19",
 "src": "slide",
 "deck": "oo",
 "prof": "Sikazwe",
@@ -15135,8 +15135,8 @@ const GLOSSARY_TERMS = [
 "lodoxamide",
 "Alomide"
 ],
-"def": "Oxamic acid mast cell stabilizer (Alomide, slide 56) that inhibits histamine release from mast cells.",
-"cite": "OOO slide 56",
+"def": "Oxamic acid mast cell stabilizer (Alomide, slide 56). Not on Exam 3 (reading ended at slide 51, 11/19).",
+"cite": "OOO slide 56, T@33467 11/19",
 "src": "slide",
 "deck": "oo",
 "prof": "Sikazwe",
@@ -15150,8 +15150,8 @@ const GLOSSARY_TERMS = [
 "pemirolast",
 "Alamast"
 ],
-"def": "Mast cell stabilizer printed on slide 56 as Pemirolast K (Alamast), beside lodoxamide; slide 56 says its SAR is not clearly established.",
-"cite": "OOO slide 56",
+"def": "Mast cell stabilizer printed on slide 56 as Pemirolast K (Alamast). Not on Exam 3 (reading ended at slide 51, 11/19).",
+"cite": "OOO slide 56, T@33467 11/19",
 "src": "slide",
 "deck": "oo",
 "prof": "Sikazwe",
@@ -15165,8 +15165,8 @@ const GLOSSARY_TERMS = [
 "dual acting agents",
 "dual-acting"
 ],
-"def": "Slide 57 multi-cyclic drugs that are antihistamines plus mast cell stabilizers: azelastine, ketotifen, epinastine, olopatadine, bepotastine, alcaftadine.",
-"cite": "OOO slide 57",
+"def": "Slide 57: azelastine, ketotifen, epinastine, olopatadine, bepotastine, alcaftadine, antihistamines plus mast cell stabilizers. Not on Exam 3 (self-assessment question 2 skipped, 11/19).",
+"cite": "OOO slide 57, T@34124 11/19",
 "src": "slide",
 "deck": "oo",
 "prof": "Sikazwe",
@@ -15179,8 +15179,8 @@ const GLOSSARY_TERMS = [
 "also": [
 "multicyclic"
 ],
-"def": "Slide 57 SAR for dual-acting agents: they are multi-cyclic with ionizable N and COOH groups; slide 64 asks for the three commonest SAR groups.",
-"cite": "OOO slide 57, OOO slide 64",
+"def": "Slide 57 SAR term for dual-acting agents (multi-cyclic, ionizable N and COOH). Not on Exam 3: he skipped question 2 (slide 64) on 11/19.",
+"cite": "OOO slide 57, OOO slide 64, T@34124 11/19",
 "src": "slide",
 "deck": "oo",
 "prof": "Sikazwe",
@@ -15207,8 +15207,8 @@ const GLOSSARY_TERMS = [
 "also": [
 "glucocorticoid receptor complex"
 ],
-"def": "Slide 58: glucocorticoids activate the GR complex to produce proteins that in turn suppress pro-inflammatory proteins.",
-"cite": "OOO slide 58",
+"def": "Slide 58: glucocorticoids activate the GR complex to make proteins that suppress pro-inflammatory proteins. Not on Exam 3: he said the class is not focusing on steroids (11/19).",
+"cite": "OOO slide 58, T@33962 11/19",
 "src": "slide",
 "deck": "oo",
 "prof": "Sikazwe",
@@ -15221,8 +15221,8 @@ const GLOSSARY_TERMS = [
 "also": [
 "stereochemistry"
 ],
-"def": "Slide 58 shows steroid templates, numbering and stereochemistry; slide 59 says glucocorticoid students must know the C-atom numbering, stereochemistry and anti-inflammatory SAR.",
-"cite": "OOO slide 58, OOO slide 59",
+"def": "Slides 58-59: steroid numbering, stereochemistry and anti-inflammatory SAR. Not on Exam 3: he skipped self-assessment question 1 and the steroid slides on 11/19.",
+"cite": "OOO slide 58, OOO slide 59, T@33729 11/19",
 "src": "slide",
 "deck": "oo",
 "prof": "Sikazwe",
@@ -15233,8 +15233,8 @@ const GLOSSARY_TERMS = [
 "id": "oo-hydrocortisone",
 "term": "hydrocortisone",
 "also": [],
-"def": "Glucocorticoid steroid listed on slide 60 with its structure for the SAR.",
-"cite": "OOO slide 60",
+"def": "Glucocorticoid steroid on slide 60. Not on Exam 3 (he said to ignore the steroid slides, 11/19).",
+"cite": "OOO slide 60, T@33729 11/19",
 "src": "slide",
 "deck": "oo",
 "prof": "Sikazwe",
@@ -15245,8 +15245,8 @@ const GLOSSARY_TERMS = [
 "id": "oo-dexamethasone",
 "term": "dexamethasone",
 "also": [],
-"def": "Glucocorticoid steroid listed on slide 60; its structure is used for the anti-inflammatory SAR.",
-"cite": "OOO slide 60",
+"def": "Glucocorticoid steroid on slide 60. Not on Exam 3 (he said to ignore the steroid slides, 11/19).",
+"cite": "OOO slide 60, T@33729 11/19",
 "src": "slide",
 "deck": "oo",
 "prof": "Sikazwe",
@@ -15257,8 +15257,8 @@ const GLOSSARY_TERMS = [
 "id": "oo-prednisolone",
 "term": "prednisolone",
 "also": [],
-"def": "Glucocorticoid steroid listed on slide 60; its structure is used for the anti-inflammatory SAR.",
-"cite": "OOO slide 60",
+"def": "Glucocorticoid steroid on slide 60. Not on Exam 3 (he said to ignore the steroid slides, 11/19).",
+"cite": "OOO slide 60, T@33729 11/19",
 "src": "slide",
 "deck": "oo",
 "prof": "Sikazwe",
@@ -15269,8 +15269,8 @@ const GLOSSARY_TERMS = [
 "id": "oo-fluorometholone",
 "term": "fluorometholone",
 "also": [],
-"def": "Glucocorticoid steroid listed on slide 60; its structure is used for the anti-inflammatory SAR.",
-"cite": "OOO slide 60",
+"def": "Glucocorticoid steroid on slide 60. Not on Exam 3 (he said to ignore the steroid slides, 11/19).",
+"cite": "OOO slide 60, T@33729 11/19",
 "src": "slide",
 "deck": "oo",
 "prof": "Sikazwe",
@@ -15281,8 +15281,8 @@ const GLOSSARY_TERMS = [
 "id": "oo-rimexolone",
 "term": "rimexolone",
 "also": [],
-"def": "Glucocorticoid steroid listed on slide 60; its structure is used for the anti-inflammatory SAR.",
-"cite": "OOO slide 60",
+"def": "Glucocorticoid steroid on slide 60. Not on Exam 3 (he said to ignore the steroid slides, 11/19).",
+"cite": "OOO slide 60, T@33729 11/19",
 "src": "slide",
 "deck": "oo",
 "prof": "Sikazwe",

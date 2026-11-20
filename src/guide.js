@@ -5288,6 +5288,12 @@ const GUIDE_HTML = `
 <p>&ldquo;for my material, it's just what I assigned you&rdquo; <span class='g2-src'>11/18 T@544</span></p>
 <p>&ldquo;where there's more information, know that there will be more questions&rdquo; <span class='g2-src'>11/18 T@1341</span></p>
 </div>
+<p>Exam 3 on 11/19: 50 questions in all, 28 percent his (14 questions), 36 percent Dr. Smith and 36 percent Dr. Lam. He will send a breakdown of what is on the exam. He asked the class to focus on a limited number of diseases; he did not name them, and glaucoma and dry eye disease are the two he taught in full.</p>
+<p>What he cut on 11/19: the allergic conjunctivitis slides (reading ends at slide 51), the steroid slides, self-assessment questions 1 and 2, and the SAR on slide 40. In the lecture video he also crossed out panel A of the carbonic anhydrase binding figure (slide 38) and kept panel B.</p>
+<div class='g2-said'><span class='g2-k'>He said</span>
+<p>&ldquo;28% from me&rdquo; <span class='g2-src'>11/19 T@703</span></p>
+<p>&ldquo;I want you to focus on maybe two limited number of diseases&rdquo; <span class='g2-src'>11/19 T@32549</span></p>
+</div>
 </div>
 <div class="gpt g2-block"><h5>Readings: lecture slides, with Foye as support (OOO slide 3)</h5>
 <p>The slide lists the lecture slides, peer-reviewed literature on these topics and Foye (9th edition), Chapter 30, Drugs Used to Treat Ocular and Nasal Disorders. Readings: the lecture slides; Foye ch. 30 is support only. Some ear disorders are not covered in detail (OOO 10&ndash;13); some return in infectious disease.</p>
@@ -5388,6 +5394,11 @@ const GUIDE_HTML = `
 <div class='g2-said'><span class='g2-k'>He said</span>
 <p>&ldquo;the fluoride ions themselves In the toothpaste, right? They start recruiting. Calcium. And phosphate&rdquo; <span class='g2-src'>11/18 T@20648</span></p>
 <p>&ldquo;This is a number from old literature&rdquo; <span class='g2-src'>11/18 T@21523</span></p>
+</div>
+<p>On 11/19 he came back to this slide: it summarizes the fluoride section, and fluorosis is the new item he added to it.</p>
+<div class='g2-said'><span class='g2-k'>He said</span>
+<p>&ldquo;This is like a summary.&rdquo; <span class='g2-src'>11/19 T@1639</span></p>
+<p>&ldquo;the new thing here that I added on is this fluorosis&rdquo; <span class='g2-src'>11/19 T@1828</span></p>
 </div>
 </div>
 <div class="gpt g2-block"><h5>Non-fluoride toothpastes: four options (OOO slide 19)</h5>
@@ -5523,9 +5534,22 @@ const GUIDE_HTML = `
 <div class="gpt g2-block"><h5>Beta antagonists: timolol, betaxolol, levobunolol and carteolol (OOO slide 33)</h5>
 <p>The slide names the class, aryloxypropanolamines, and says the beta antagonists lower aqueous humor production. It shows timolol maleate (Timoptic products, LogP 1.4), betaxolol HCl (Betoptic, LogP 2.5), levobunolol HCl (Betagan, LogP 2.2) and carteolol HCl (Ocupress, LogP 1.4). Each drawing has the same chain: an aromatic or heteroaromatic ring bonded to an oxygen, then a three-carbon chain carrying an alcohol and a secondary amine with a branched alkyl group on the nitrogen. The rings differ: timolol has a thiadiazole ring carrying a morpholine ring, betaxolol a benzene ring with an ether chain ending in a cyclopropyl group, levobunolol a ring system with a ketone, and carteolol a ring system with a cyclic amide.</p>
 <p>On 11/18 he explained the class name from slide 27: the aromatic group is the aryl, the oxygen right next to it is the oxy, and the three-carbon chain with an alcohol and an amine is the propanolamine.</p>
+<p>On 11/19 he added: they block beta 1 and beta 2 receptors in the ciliary body, where aqueous humor is made, so blocking them does the reverse of activation; most are mixed acting, with some selectivity in a few. They were once first line, but prostaglandins are first line now; the beta antagonists are still an option. Duration of action is 12 to 24 hours (he wrote DOA = 12-24 hrs on the slide), so drops are not needed often. Timolol and carteolol (log P 1.4) are less lipophilic than betaxolol and levobunolol, and all four reach the eye. Systemic absorption is unwanted because of other side effects.</p>
+<p>Classification, which he repeated: the aromatic ring attached to an oxygen is the oxy; the three-carbon chain with an alcohol is the propanol; the amine completes the name. Count the three carbons: with two carbons it is no longer propanol.</p>
+<div class='g2-said'><span class='g2-k'>He said</span>
+<p>&ldquo;Make sure you can count the 3 carbons&rdquo; <span class='g2-src'>11/19 T@3813</span></p>
+<p>&ldquo;these have succumbed to what is first line now, prostaglandins&rdquo; <span class='g2-src'>11/19 T@3377</span></p>
+<p>&ldquo;durations of action, ranging from 12 to 24 hours&rdquo; <span class='g2-src'>11/19 T@4031</span></p>
+</div>
 </div>
 <div class="gpt g2-block"><h5>Beta antagonist SAR: aryloxypropanolamines versus arylethanolamines (OOO slide 34)</h5>
 <p>The slide gives four SAR points. Aryloxypropanolamines are more potent than arylethanolamines. Most have mixed beta-1 and beta-2 activity. The S isomer of the OH group is preferred. Most para-aryloxypropanolamines, for example betaxolol, are beta-1 antagonists. The left drawings contrast the two types: Ar-O-CH<sub>2</sub>-CH(OH)-CH<sub>2</sub>-NH-R for an aryloxypropanolamine and Ar-CH(OH)-CH<sub>2</sub>-NH-R for an arylethanolamine, so the first has an extra oxygen and carbon between the ring and the alcohol. Betaxolol is drawn with ring positions 1 and 4 numbered, which are the two substituents on the benzene ring: the oxygen of the chain and the ether chain (para to each other). &ldquo;Molecule X&rdquo; is drawn as an arylethanolamine (unnamed).</p>
+<p>On 11/19: the ethanolamines have no oxygen between the aryl ring and the chain and only two carbons; the drawn bonds are exaggerated, so there are no extra carbons. Most are mixed beta 1 and beta 2. The carbon bearing the hydroxy group is chiral, and the S isomers are the more active ones. A true para substitution (positions 1 and 4, betaxolol) tends to give better beta 1 selectivity. He expects a SAR question to be simple and straightforward.</p>
+<div class='g2-said'><span class='g2-k'>He said</span>
+<p>&ldquo;the S Isomers are the more active ones&rdquo; <span class='g2-src'>11/19 T@6886</span></p>
+<p>&ldquo;tend to have better one selectivity&rdquo; <span class='g2-src'>11/19 T@7099</span></p>
+<p>&ldquo;If it is a SAR question, it should be simple and straightforward&rdquo; <span class='g2-src'>11/19 T@7390</span></p>
+</div>
 </div>
 </section>
 
@@ -5534,35 +5558,74 @@ const GUIDE_HTML = `
 <div class="gbar"><span>Key point (OOO 35&ndash;39)</span><b>Carbonic anhydrase inhibitors (CAIs) lower intraocular fluid production by competitively blocking an enzyme that makes bicarbonate and H+, and the SO2NH2 group is the part that docks in the enzyme.</b><i>OOO slide 35, 36, 37, 38, 39</i></div>
 <div class="gpt g2-block"><h5>Carbonic anhydrase and its reaction (OOO slide 35)</h5>
 <p>Carbonic anhydrase (CA) is the enzyme the CAIs act on, so the reaction on this slide is the starting point for slides 36 to 39. The slide writes CO2 + H2O to carbonic acid (H2CO3) to bicarbonate ion (HCO3-) + H+, with CA labeled over the first step, and calls CA a Zn-metalloenzyme that modulates aqueous humor production through pH changes.</p>
+<p>On 11/19 he explained the reaction: carbonic anhydrase couples CO2 and water to carbonic acid, which dissociates to bicarbonate and H+. The bicarbonate promotes osmotic water movement into the posterior chamber, so it adds to aqueous humor production; blocking the enzyme lowers it.</p>
+<div class='g2-said'><span class='g2-k'>He said</span>
+<p>&ldquo;Promotes or facilitates Osmotic. Water Movement&rdquo; <span class='g2-src'>11/19 T@9136</span></p>
+</div>
 </div>
 <div class="gpt g2-block"><h5>Zolamides: four sulfonamide CAIs (OOO slide 36)</h5>
 <p>The four drugs on this slide are acetazolamide (Diamox, ClogP = -0.3), methazolamide (Neptazane, ClogP = 0.13), brinzolamide (Azopt, ClogP = 7 as printed) and dorzolamide HCl (Trusopt, ClogP = 2). The slide states that sulfonamides (zolamides) competitively inhibit CAs, which lowers intraocular fluid production. All four drawings carry an SO2NH2 group. Acetazolamide and methazolamide share a thiadiazole ring with an acyl group, and brinzolamide and dorzolamide share a fused two-ring system with a ring sulfone and an ethylamino group. Brinzolamide has a methoxypropyl chain where dorzolamide has a methyl.</p>
+<p>On 11/19 he separated two generations by log P. First generation (acetazolamide, methazolamide): polar and hydrophilic, given by mouth in high doses, more systemic side effects (his slide notes: hydrophilic, oral, more systemic effects). Second generation (brinzolamide, dorzolamide): lipophilic, instilled as drops in tiny doses, fewer systemic side effects; this is what is mostly used now. All are sulfonamides, and the group is not there for decoration: it is needed for binding and for competitive inhibition.</p>
+<div class='g2-said'><span class='g2-k'>He said</span>
+<p>&ldquo;These are hydrophilic&rdquo; <span class='g2-src'>11/19 T@10509</span></p>
+<p>&ldquo;what you mostly encounter now is what? The 2nd gen&rdquo; <span class='g2-src'>11/19 T@11339</span></p>
+<p>&ldquo;that functional group is not there just for decorations&rdquo; <span class='g2-src'>11/19 T@12023</span></p>
+</div>
 </div>
 <div class="gpt g2-block"><h5>Representative ADMET: N-deethylation of brinzolamide and dorzolamide (OOO slide 37)</h5>
 <p>Brinzolamide and dorzolamide both undergo CYP N-deethylation, and the N-deethylated metabolites are active. N-deethylation removes the ethyl group from the nitrogen of the ethylamino (HN-ethyl) side group that both drawings carry. Because the metabolites are active, losing that ethyl group does not end CA inhibition. Both parents keep the SO2NH2 group that OOO slide 38 shows binding the enzyme.</p>
+<p>On 11/19 he told the class to work out what N-deethylation looks like for these two drugs and said he could ask it (four question marks on his slide). The N-deethylated metabolites are active and probably add to the activity of the parent drugs.</p>
+<div class='g2-said'><span class='g2-k'>He said</span>
+<p>&ldquo;these NDethylated metabolites are actually what, active&rdquo; <span class='g2-src'>11/19 T@12694</span></p>
+<p>&ldquo;I could have a small question like this for you to figure out&rdquo; <span class='g2-src'>11/19 T@12940</span></p>
+</div>
 </div>
 <div class="gpt g2-block"><h5>Chemical basis of drug action: SO2NH2 with Zn and Thr199 (OOO slide 38)</h5>
 <p>The slide&rsquo;s chemical basis of drug action (CBDA) is that CAIs dock in the active site of CA (panel A) and the SO2NH2 group forms ionic and H-bond interactions (panel B) with Zn and Thr199. Panel A draws the catalytic site: Zn2+ held by His94, His96 and His119, with Thr199, Gln92, Asn244 and Glu117 nearby. Panel B draws a molecule with the dorzolamide pattern (methyl and ethylammonium on the ring system) in that site, with the SO2NH2 beside Zn2+ and hydrogen bonds to Thr199, and a dashed line from Gln92 to a ring sulfone oxygen. OOO slide 65 asks for this group.</p>
+<p>On 11/19 he crossed out panel A (the catalytic site) in the lecture video and kept panel B. He counted three hydrogen bonds and one ionic (electrostatic) interaction with zinc in panel B: zinc is important for binding.</p>
+<div class='g2-said'><span class='g2-k'>He said</span>
+<p>&ldquo;that zinc is important for binding&rdquo; <span class='g2-src'>11/19 T@14462</span></p>
+</div>
 </div>
 <div class="gpt g2-block"><h5>Polleve-2: which gradient do CAIs slow? (OOO slide 39)</h5>
-<p>The poll reads: CAIs influence aqueous humor movement by slowing the chemical gradient involving ______ production? The options are carbon dioxide, bicarbonate, proteins and oxygen (O2) (no answer marked). The reaction on OOO slide 35 is CO2 + H2O to H2CO3 to HCO3- + H+ catalyzed by CA, so bicarbonate is the product of the enzyme the CAIs block, and that slide states that CA modulates aqueous humor production through pH changes. Answer: bicarbonate (from OOO slide 35).</p>
+<p>The poll reads: CAIs influence aqueous humor movement by slowing the chemical gradient involving ______ production? The options are carbon dioxide, bicarbonate, proteins and oxygen (O2) (no answer marked). The reaction on OOO slide 35 is CO2 + H2O to H2CO3 to HCO3- + H+ catalyzed by CA, so bicarbonate is the product of the enzyme the CAIs block, and that slide states that CA modulates aqueous humor production through pH changes. Answer: bicarbonate (from OOO slide 35). In the lecture the result page showed bicarbonate at 96 percent and he told the class to review it; he showed the poll before the binding slide.</p>
 </div>
 </section>
 
 <section class="gobj" id="gobj-oo-22">
 <h3>Dr. Sikazwe, slide by slide · Cholinergic agents · slides 40&ndash;43</h3>
-<div class="gbar"><span>Key point (OOO 40&ndash;43)</span><b>Cholinergic agents raise fluid outflow, either by acting like acetylcholine (direct) or by inhibiting the enzyme that inactivates it (indirect), and the functional group sets the extent of that inhibition.</b><i>OOO slide 40, 41, 42, 43</i></div>
+<div class="gbar"><span>Key point (OOO 40&ndash;43)</span><b>Cholinergic agents raise fluid outflow, either by acting like acetylcholine (direct) or by inhibiting the enzyme that inactivates it (indirect), and the functional group sets the extent of that inhibition. Not on Exam 3: the SAR block of slide 40 (he removed it on 11/19, T@17299).</b><i>OOO slide 40, 41, 42, 43</i></div>
 <div class="gpt g2-block"><h5>Direct-acting cholinergics: carbamates, esters and their SAR (OOO slide 40)</h5>
 <p>Direct-acting cholinergics increase fluid outflow. The slide shows acetylcholine (ACh, an ester), carbachol Cl (IsoptoCarbachol, a carbamate, noted as having weak indirect effects) and pilocarpine HCl (IsoptoCarpine). The SAR has four features: an acyloxy group for H-bonding to nicotinic and muscarinic receptors, an ionizable amine (N), N-methyl groups, and a 2-carbon spacer between O and N. In the drawings ACh and carbachol both show the O-C(=O) group, three methyls on the positive nitrogen and two carbons between O and N; carbachol has NH2 on the carbonyl where ACh has CH3. Pilocarpine is drawn with a ring ester and an N-methyl imidazole ring.</p>
+<p>Not on Exam 3 (he said 11/19, T@17299): the four-point SAR on this slide. He crossed it out. What he kept: acetylcholine cannot be the drug (it hydrolyzes at once, its charge slows its movement, and it acts everywhere); the direct-acting agents mimic it at the muscarinic receptors of the ciliary body and improve outflow; they are classed as carbamates (carbachol) and esters (acetylcholine, pilocarpine); carbachol also has weak indirect action.</p>
+<div class='g2-said'><span class='g2-k'>He said</span>
+<p>&ldquo;Don&rsquo;t expect a question on this SAR&rdquo; <span class='g2-src'>11/19 T@17299</span></p>
+</div>
 </div>
 <div class="gpt g2-block"><h5>Indirect-acting cholinergics: block acetylcholinesterase (OOO slide 41)</h5>
 <p>Indirect-acting cholinergics increase fluid outflow: they inhibit acetylcholinesterase (AChE, the key enzyme that inactivates acetylcholine to acetic acid and choline), thereby raising ACh levels.</p>
+<p>On 11/19: an irreversible inhibitor is useful for long activity.</p>
+<div class='g2-said'><span class='g2-k'>He said</span>
+<p>&ldquo;Long activity&rdquo; <span class='g2-src'>11/19 T@19056</span></p>
+</div>
 </div>
 <div class="gpt g2-block"><h5>Organophosphates and the extent of AChE inhibition (OOO slide 42)</h5>
 <p>The slide ranks the functional groups by extent of acetylcholinesterase (AChE) inhibition as phosphoryl &gt; carbamate &gt; ester. Echothiophate iodide (Phospholine Iodide) is the organophosphate example, labeled an irreversible AChE inhibitor. The picture on the right shows the enzyme with a diethyl phosphate attached (inactive), then &ldquo;Aging&rdquo; with H2O and loss of C2H5-OH, ending as &ldquo;irreversibly inactive.&rdquo;</p>
+<p>On 11/19 he described aging: one ethyl group is lost (O-deethylation) and a hydroxy group is left, a covalent and irreversible bond; he wrote 2-PAM beside it. 2-PAM, the antidote for organophosphate toxicity, works only before this aging. Echothiophate is the only drug of this kind.</p>
+<p>His ladder of duration: phosphoryl longest, carbamate intermediate, amide mild (he wrote Amide between the carbamate and the ester; the slide prints three groups), ester shortest.</p>
+<div class='g2-said'><span class='g2-k'>He said</span>
+<p>&ldquo;maturation process&rdquo; <span class='g2-src'>11/19 T@19719</span></p>
+<p>&ldquo;Not all demethylation, so this is an ethyl group here&rdquo; <span class='g2-src'>11/19 T@19817</span></p>
+<p>&ldquo;This is the only drug that they have working in this fashion&rdquo; <span class='g2-src'>11/19 T@20145</span></p>
+<p>&ldquo;Now, if we had an Amide&rdquo; <span class='g2-src'>11/19 T@21483</span></p>
+</div>
 </div>
 <div class="gpt g2-block"><h5>Question-2: which functionality gives an intermediate duration? (OOO slide 43)</h5>
 <p>The question asks, for cholinergics, what functionality provides an intermediate duration of AChE inhibition. Answer: the carbamate, the middle of the OOO slide 42 ranking (phosphoryl &gt; carbamate &gt; ester); the organophosphate is the one labeled irreversible. (Inferred: the slide ranks extent, not duration.)</p>
+<p>On 11/19 he answered it with the carbamate (he said carbonate) and circled the carbamate on the slide. He asked whether the class could identify these groups when given their structures.</p>
+<div class='g2-said'><span class='g2-k'>He said</span>
+<p>&ldquo;The esters, shortest&rdquo; <span class='g2-src'>11/19 T@21686</span></p>
+</div>
 </div>
 </section>
 
@@ -5571,12 +5634,23 @@ const GUIDE_HTML = `
 <div class="gbar"><span>Key point (OOO 44&ndash;46)</span><b>Prostaglandin analogs raise fluid outflow through the FP receptor; most are esters that are converted to the free acid, and the SAR marks the acid, chain, double-bond and C-15 positions.</b><i>OOO slide 44, 45, 46</i></div>
 <div class="gpt g2-block"><h5>Five prostaglandin drugs and the PGF2&alpha; parent (OOO slide 44)</h5>
 <p>All the drugs here raise fluid outflow by activating the PGF (FP) receptor. The parent PGF2&alpha; is drawn with a COOH end and carbons 5, 6, 13 and 14 numbered. Bimatoprost (Lumigan) ends in an N-ethyl amide. Travoprost (Travatan Z), latanoprost (Xalatan) and tafluprost (Zioptan) end in isopropyl esters, and latanoprostene bunod (Vyzulta) ends in an ester with a nitrooxy (ONO2) butyl group. By the SAR on OOO slide 46, amides are active drugs and esters are pro-drugs. Tafluprost shows two fluorines where the others show the 15-OH. The end groups vary: CF3-phenoxy in travoprost, phenoxy in tafluprost and phenyl in the others.</p>
+<p>On 11/19 he added: the natural PGF2&alpha; is too unstable, so analogs were made. Most are esters and are prodrugs; the amide (bimatoprost) is active as is. All the analogs have a log P above 3, so they are highly lipophilic, and they are potent. He wrote &ldquo;logP &gt; 3&rdquo; and &ldquo;agonists&rdquo; on the slide.</p>
+<div class='g2-said'><span class='g2-k'>He said</span>
+<p>&ldquo;Please note that down&rdquo; <span class='g2-src'>11/19 T@23780</span></p>
+<p>&ldquo;all these have a low P value greater than 3&rdquo; <span class='g2-src'>11/19 T@24050</span></p>
+<p>&ldquo;These are potent molecules now, quite potent.&rdquo; <span class='g2-src'>11/19 T@24176</span></p>
+<p>&ldquo;too unstable&rdquo; <span class='g2-src'>11/19 T@23166</span></p>
+</div>
 </div>
 <div class="gpt g2-block"><h5>Prodrug activation: latanoprost to latanoprost acid (OOO slide 45)</h5>
 <p>Latanoprost (prodrug) is converted by an esterase to latanoprost acid (active). In the drawing the isopropyl ester at the chain end becomes a carboxylic acid (COOH) and the rest of the molecule is drawn unchanged. This is the slide&rsquo;s worked example of the rule on OOO slide 46 that esters are pro-drugs and acids are active.</p>
 </div>
 <div class="gpt g2-block"><h5>SAR of the prostaglandin analogs (OOO slide 46)</h5>
 <p>The four numbers on the PGF2&alpha; drawing mark the four places the SAR addresses: 1, the acid end, where esters or amides are allowed; 2, the far chain, alkyl or phenyl; 3, the single or double bonds in the chain next to the ring; and 4, the C-15 OH. The printed rules are: acids (-COOH) and amides (-CONH-) are active drugs; esters are pro-drugs; and C-15 is OH or a halogen, where the slide gives the reason as preventing 15-OH oxidation. Tafluprost on OOO slide 44 is the halogen case.</p>
+<p>On 11/19 he named the four places that vary: the acid end (esters or amides), the far chain (alkyl or aromatic), the C-15 hydroxy (a halogen can replace it) and the chain bond (single or double). A halogen at C-15 prevents oxidation of the hydroxy to a ketone and stabilizes the molecule.</p>
+<div class='g2-said'><span class='g2-k'>He said</span>
+<p>&ldquo;you prevent that oxidation, you stabilize the molecule&rdquo; <span class='g2-src'>11/19 T@25877</span></p>
+</div>
 </div>
 </section>
 
@@ -5585,9 +5659,20 @@ const GUIDE_HTML = `
 <div class="gbar"><span>Key point (OOO 47&ndash;48)</span><b>Omidenepag isopropyl and netarsudil raise fluid outflow by two newer mechanisms, a selective EP2 receptor agonist and a Rho kinase inhibitor, and both are ester prodrugs that need esterase hydrolysis.</b><i>OOO slide 47, 48</i></div>
 <div class="gpt g2-block"><h5>Omidenepag isopropyl: a pyridine sulfonamide EP2 agonist prodrug (OOO slide 47)</h5>
 <p>The title calls this a selective PGE2 or EP2 receptor agonist, a different receptor from the FP receptor of OOO slide 44. Omidenepag isopropyl (OMDI, ClogP = 3) increases fluid outflow and is an ester prodrug that requires esterase hydrolysis for activation. The drawing shows the isopropyl ester becoming a carboxylic acid in omidenepag (OMD), the active metabolite. The sulfonamide here joins a pyridine ring to a substituted nitrogen (S(=O)2-N), unlike the SO2NH2 group of the CAIs on OOO slide 38.</p>
+<p>On 11/19: FDA approved it in 2022 (he wrote 2022 = FDA). It targets EP2, not the FP receptor; receptor selectivity minimizes off-target activity. It is no longer a prostaglandin structure but a pyridine sulfonamide, and its activation (carboxylesterase hydrolysis to the acid) is like that of the prostaglandins. It is also quite lipophilic.</p>
+<div class='g2-said'><span class='g2-k'>He said</span>
+<p>&ldquo;FDA approved this drug&rdquo; <span class='g2-src'>11/19 T@26310</span></p>
+<p>&ldquo;minimize zone one&rdquo; <span class='g2-src'>11/19 T@26608</span></p>
+<p>&ldquo;pyridine sulfonamide&rdquo; <span class='g2-src'>11/19 T@26894</span></p>
+</div>
 </div>
 <div class="gpt g2-block"><h5>Netarsudil: an isoquinoline Rho kinase (ROCK) inhibitor prodrug (OOO slide 48)</h5>
 <p>Netarsudil (ClogP = 5) increases fluid outflow and is an ester prodrug that requires esterase hydrolysis for activation. In the drawing the aryl ester on the left, a dimethyl-substituted benzoate, is removed to leave a CH2-OH on the benzene ring in netarsudil-M1, the active metabolite; the amide, the primary amine (H2N) and the isoquinoline stay. The slide names the target class as Rho kinase (ROCK) inhibitors.</p>
+<p>On 11/19: it is an isoquinoline and an ester prodrug; hydrolysis by CE enzymes gives the active metabolite. The slide arrow reads DMEs?; he said CE enzymes. Rho kinases: there are mostly two, ROCK1 and ROCK2. He thought netarsudil non-selective but was not sure.</p>
+<div class='g2-said'><span class='g2-k'>He said</span>
+<p>&ldquo;There are mostly 2.&rdquo; <span class='g2-src'>11/19 T@27850</span></p>
+<p>&ldquo;I think it&rsquo;s non-selective. I could be wrong.&rdquo; <span class='g2-src'>11/19 T@27963</span></p>
+</div>
 </div>
 </section>
 
@@ -5596,18 +5681,33 @@ const GUIDE_HTML = `
 <div class="gbar"><span>Key point (OOO 49&ndash;51)</span><b>Dry eye disease is treated by lowering T-cell activation, through calcineurin inhibition (cyclosporine) or by blocking ICAM-1 binding to integrin LFA-1 (lifitegrast), with topical corticosteroids for the inflammation.</b><i>OOO slide 49, 50, 51</i></div>
 <div class="gpt g2-block"><h5>Dry eye disease: multifactorial, three approaches (OOO slide 49)</h5>
 <p>Dry eye disease is multifactorial. Pharmacotherapy: calcineurin inhibition, integrin LFA-1 receptor inhibition, and steroids (topical corticosteroids may be used to treat the inflammation).</p>
+<p>On 11/19 he gave three components: reduced tear production, increased tear evaporation and ocular surface inflammation; he wrote them on the slide. The treatments target these components. Anti-inflammatory approaches: calcineurin inhibition, the LFA-1 cascade (both lead to less T-cell activation), and topical steroids for the short term only; artificial tears if these fail. He shared two drugs in depth.</p>
+<div class='g2-said'><span class='g2-k'>He said</span>
+<p>&ldquo;3 points. The components. Of dry disease.&rdquo; <span class='g2-src'>11/19 T@28220</span></p>
+<p>&ldquo;You can&rsquo;t use this on a prolonged basis.&rdquo; <span class='g2-src'>11/19 T@29379</span></p>
+<p>&ldquo;If these fail, uh, then you can do artificial tears&rdquo; <span class='g2-src'>11/19 T@29524</span></p>
+</div>
 </div>
 <div class="gpt g2-block"><h5>Cyclosporin (Restasis): calcineurin inhibitor with two blanks (OOO slide 50)</h5>
 <p>Cyclosporin (Restasis) is shown as a cyclic peptide prodrug and a calcineurin inhibitor, which lowers T-cell activation; its LogP is 4. Two lines end in blanks: &ldquo;No metabolism in eye =&rdquo; and &ldquo;Low systemic exposure =&rdquo;. They use the same cause = consequence form as the calcineurin line (answers not printed). The slide labels cyclosporin a prodrug yet shows no activation step. The drawing shows a ring of amide (peptide) bonds carrying N-methyl groups and side chains.</p>
+<p>Blanks answered on 11/19: no metabolism in the eye = enhanced local activity; low systemic exposure = minimal systemic side effects. With a log P of 4 it can penetrate the eye. The slide labels it a prodrug; he did not, and said it is not metabolized in the eye.</p>
+<div class='g2-said'><span class='g2-k'>He said</span>
+<p>&ldquo;this is just the key things that we are, we&rsquo;re going to emphasize&rdquo; <span class='g2-src'>11/19 T@30435</span></p>
+</div>
 </div>
 <div class="gpt g2-block"><h5>Lifitegrast (Xiidra): a phenylalanine that blocks ICAM-1 binding to LFA-1 (OOO slide 51)</h5>
 <p>Lifitegrast is a phenylalanine derivative (circled on the slide) that blocks intercellular adhesion molecule-1 (ICAM-1) from binding integrin LFA-1, which lowers T-cell activation. Its LogP is 4, the same as cyclosporin on OOO slide 50, and it is eliminated mostly unchanged, so the slide describes little metabolism. The circled part carries a COOH and a methylsulfonyl group (O=S=O with CH3), and it is joined through an amide to a chlorinated bicyclic ring with a nitrogen and a benzofuran. The summary on OOO slide 61 groups both dry eye drugs as indirect T-cell inhibitors.</p>
+<p>On 11/19: classified as a phenylalanine; it acts through a cascade (ICAM-1 and LFA-1) that lowers T-cell activation; it is lipophilic, with minimal systemic exposure, and what reaches the circulation is eliminated unchanged. He named loteprednol, varenicline and a film-forming agent only in passing.</p>
+<div class='g2-said'><span class='g2-k'>He said</span>
+<p>&ldquo;It&rsquo;s a lipophilic molecule as well.&rdquo; <span class='g2-src'>11/19 T@31409</span></p>
+<p>&ldquo;whatever gets in the system gets out intact&rdquo; <span class='g2-src'>11/19 T@31634</span></p>
+</div>
 </div>
 </section>
 
 <section class="gobj" id="gobj-oo-26">
 <h3>Dr. Sikazwe, slide by slide · Allergic conjunctivitis: histamine and H1-antihistamines · slides 52&ndash;54</h3>
-<div class="gbar"><span>Key point (OOO 52&ndash;54)</span><b>Allergic conjunctivitis is a histamine problem treated with five drug classes, and the first class, the H1-antihistamines, is shown here with its SAR deferred to the allergy lecture.</b><i>OOO slide 52, 53, 54</i></div>
+<div class="gbar"><span>Key point (OOO 52&ndash;54)</span><b>Allergic conjunctivitis is a histamine problem treated with five drug classes, and the first class, the H1-antihistamines, is shown here with its SAR deferred to the allergy lecture. Not on Exam 3 (he said 11/19, T@33467).</b><i>OOO slide 52, 53, 54</i></div>
 <div class="gpt g2-block"><h5>Allergic conjunctivitis: histamine and five drug classes (OOO slide 52)</h5>
 <p>The problem is histamine. Pharmacotherapy: antihistamines; decongestants (phenylephrine, asterisked); &ldquo;dual-acting&rdquo; agents (antihistamine + mast cell stabilizer); mast cell stabilizers; glucocorticoids (steroids).</p>
 </div>
@@ -5621,7 +5721,7 @@ const GUIDE_HTML = `
 
 <section class="gobj" id="gobj-oo-27">
 <h3>Dr. Sikazwe, slide by slide · Decongestants, mast cell stabilizers and dual-acting agents · slides 55&ndash;57</h3>
-<div class="gbar"><span>Key point (OOO 55&ndash;57)</span><b>Imidazoline decongestants act as alpha-1 and alpha-2 agonists, mast cell stabilizers inhibit histamine release from granules, and dual-acting agents combine both; only the first two have SAR statements, and they are brief.</b><i>OOO slide 55, 56, 57</i></div>
+<div class="gbar"><span>Key point (OOO 55&ndash;57)</span><b>Imidazoline decongestants act as alpha-1 and alpha-2 agonists, mast cell stabilizers inhibit histamine release from granules, and dual-acting agents combine both; only the first two have SAR statements, and they are brief. Not on Exam 3 (he said 11/19, T@33467).</b><i>OOO slide 55, 56, 57</i></div>
 <div class="gpt g2-block"><h5>Imidazoline decongestants: alpha-1 and alpha-2 agonists (OOO slide 55)</h5>
 <p>The slide lists oxymetazoline HCl (Afrin products), xylometazoline HCl (Clear eyes products), tetrahydrometazoline HCl (Visine products) and naphazoline HCl (Otrivin products), as the slide spells them, with the mechanism of action as alpha-1/alpha-2 agonists. Each drawing has an aromatic ring joined by a CH2 to the red imidazoline ring. SAR: the slide says see slide 33; the aryl imidazoline rule is on OOO slide 32 (X = CH2: alpha-1; X = NH2 as printed: alpha-2). The CH2 linker here fits alpha-1, while the slide lists both alpha-1 and alpha-2.</p><div class="g2-note"><span class="g2-k">Brand pairings: slide versus drug chart</span><p>Slide 55: xylometazoline (Clear eyes), naphazoline (Otrivin). Ophthalmic drug chart: naphazoline (Clear Eyes), tetrahydrozoline (Visine).</p></div>
 </div>
@@ -5635,9 +5735,13 @@ const GUIDE_HTML = `
 
 <section class="gobj" id="gobj-oo-28">
 <h3>Dr. Sikazwe, slide by slide · Glucocorticoids and summary · slides 58&ndash;61</h3>
-<div class="gbar"><span>Key point (OOO 58&ndash;61)</span><b>Glucocorticoid steroids act through the GR complex, and the slides give the steroid numbering and alpha/beta convention, six drugs and three SAR features that raise anti-inflammatory activity.</b><i>OOO slide 58, 59, 60, 61</i></div>
+<div class="gbar"><span>Key point (OOO 58&ndash;61)</span><b>Glucocorticoid steroids act through the GR complex, and the slides give the steroid numbering and alpha/beta convention, six drugs and three SAR features that raise anti-inflammatory activity. Not on Exam 3 (he said 11/19, T@33729).</b><i>OOO slide 58, 59, 60, 61</i></div>
 <div class="gpt g2-block"><h5>Glucocorticoid MoA, steroid numbering and stereochemistry (OOO slide 58)</h5>
 <p>The mechanism on the slide is that glucocorticoids activate the GR complex to produce proteins that in turn suppress pro-inflammatory proteins. The numbered skeleton is the template that the questions on OOO slides 59 and 63 use. Carbon 1 is in ring A; carbon 10 is the A/B junction carbon with methyl 19; carbon 13 carries methyl 18; carbon 17 carries the side chain, numbered 20 to 27, with 21 a branch on 20 and 26 and 27 the two ends at 25. That is 27 carbons in all. The rings are lettered A, B, C and D, and the slide draws alpha with a hashed bond and beta with a wedge at the A/B junction.</p>
+<p>He also said the class is not focusing on steroids on this exam.</p>
+<div class='g2-said'><span class='g2-k'>He said</span>
+<p>&ldquo;so, ignore all this steroids&rdquo; <span class='g2-src'>11/19 T@33729</span></p>
+</div>
 </div>
 <div class="gpt g2-block"><h5>Slide states what to know: C-atom numbering, stereochemistry, anti-inflammatory SAR (OOO slide 59)</h5>
 <p>Exam cue on the slide: for glucocorticoids you must know 1) steroid C-atom numbering (slide 58), 2) stereochemistry (slide 58) and 3) anti-inflammatory SAR (slide 60).</p>
@@ -5657,29 +5761,53 @@ const GUIDE_HTML = `
 
 <section class="gobj" id="gobj-oo-29">
 <h3>Dr. Sikazwe, slide by slide · Self-assessment questions 1-3 · slides 62&ndash;65</h3>
-<div class="gbar"><span>Key point (OOO 62&ndash;65)</span><b>Answers: steroid numbering as on OOO slide 58 (27 carbons); dual-acting SAR groups: Ar groups, ionizable N and COOH (slide 57); CAI group: SO2NH2 (slide 38).</b><i>OOO slide 62, 63, 64, 65</i></div>
+<div class="gbar"><span>Key point (OOO 62&ndash;65)</span><b>Questions 1 and 2 are not on Exam 3 (he skipped them on 11/19, T@33995 and T@34124). Question 3 is: the CAI group is the sulfonamide, SO2NH2 (slide 38).</b><i>OOO slide 62, 63, 64, 65</i></div>
 <div class="gpt g2-block"><h5>Question 1: identify and number the carbons (OOO slide 63)</h5>
 <p>The drawing is the unnumbered steroid skeleton of OOO slide 58. Answer: the numbering on OOO slide 58 (ring carbons 1&ndash;17, methyl 19 on C10, methyl 18 on C13, side chain 20&ndash;27; 27 carbons).</p>
+<p>Not on Exam 3: he said to skip it because steroids are not the focus.</p>
+<div class='g2-said'><span class='g2-k'>He said</span>
+<p>&ldquo;you can skip that question, right?&rdquo; <span class='g2-src'>11/19 T@33995</span></p>
+</div>
 </div>
 <div class="gpt g2-block"><h5>Question 2: commonest SAR groups of dual-acting agents (OOO slide 64)</h5>
 <p>The answer line reads &ldquo;1) Ar groups; 2) ........ ; 3) ........&rdquo;. Answer: 2) the ionizable nitrogen and 3) the COOH group (from OOO slide 57: multi-cyclic agents with ionizable N and COOH groups). Not every drug on slide 57 has a COOH, so the groups describe the class as a whole.</p>
+<p>Not on Exam 3: he said to skip it because antihistamines are not covered yet.</p>
+<div class='g2-said'><span class='g2-k'>He said</span>
+<p>&ldquo;you can skip question two&rdquo; <span class='g2-src'>11/19 T@34124</span></p>
+</div>
 </div>
 <div class="gpt g2-block"><h5>Question 3: the CAI key functional group (OOO slide 65)</h5>
 <p>The slide asks for the functional group at the center of the CAI chemical basis of drug action. Answer: the sulfonamide, SO2NH2 (from OOO slide 38); all four CAIs on OOO slide 36 carry it.</p>
+<p>He kept it and gave the answer on 11/19.</p>
+<div class='g2-said'><span class='g2-k'>He said</span>
+<p>&ldquo;The sulfonamide, right?&rdquo; <span class='g2-src'>11/19 T@34428</span></p>
+</div>
 </div>
 </section>
 
 <section class="gobj" id="gobj-oo-30">
 <h3>Dr. Sikazwe, slide by slide · Self-assessment questions 4 and 5 · slides 66&ndash;68</h3>
-<div class="gbar"><span>Key point (OOO 66&ndash;68)</span><b>Answers: imidazoline (clonidine, apraclonidine, brimonidine and the four decongestants); prostaglandin (the FP agonists); phosphoryl (organophosphate) for irreversible AChE inhibition.</b><i>OOO slide 66, 67, 68</i></div>
+<div class="gbar"><span>Key point (OOO 66&ndash;68)</span><b>Answers: imidazoline, present in the alpha 2 agonists (clonidine, apraclonidine, brimonidine); prostaglandin, present in the prostaglandin receptor agonists (the FP agonists); phosphoryl (organophosphate) for irreversible AChE inhibition. He kept all three on 11/19.</b><i>OOO slide 66, 67, 68</i></div>
 <div class="gpt g2-block"><h5>Question 4: name the drawn functionality (OOO slide 66)</h5>
-<p>The drawing is a five-membered ring with two nitrogens (one NH, one C=N) and two saturated carbons. Answer: imidazoline, the first of the &ldquo;Drug FGs&rdquo; on OOO slide 27; not the aromatic imidazole, because two of its carbons are saturated. Drugs (part ii): clonidine, apraclonidine and brimonidine (OOO slide 31) and the four decongestants (OOO slide 55).</p>
+<p>The drawing is a five-membered ring with two nitrogens (one NH, one C=N) and two saturated carbons. Answer: imidazoline, the first of the &ldquo;Drug FGs&rdquo; on OOO slide 27; not the aromatic imidazole, because two of its carbons are saturated. Part ii: he answered that the imidazoline is present in the alpha 2 agonists (clonidine, apraclonidine, brimonidine, OOO slide 31).</p>
+<p>On 11/19 he asked it as: name the functional group, then the pharmacological class that contains it.</p>
+<div class='g2-said'><span class='g2-k'>He said</span>
+<p>&ldquo;Alpha 2&rdquo; <span class='g2-src'>11/19 T@34809</span></p>
+</div>
 </div>
 <div class="gpt g2-block"><h5>Question 5: identity of the indicated functionality (OOO slide 67)</h5>
 <p>The drawing is a five-membered carbon ring with two long straight chains attached. Answer: prostaglandin (a cyclopentane with two chains; named in the 11/18 lecture at OOO slide 27, T@38276); drugs: the FP agonists on OOO slide 44.</p>
+<p>On 11/19 he answered prostaglandin, present in the prostaglandin receptor agonists.</p>
+<div class='g2-said'><span class='g2-k'>He said</span>
+<p>&ldquo;Prostaglandin agonists, receptor agonists&rdquo; <span class='g2-src'>11/19 T@34976</span></p>
+</div>
 </div>
 <div class="gpt g2-block"><h5>Question 5 (second): the group with irreversible AChE inhibition (OOO slide 68)</h5>
 <p>The slide asks which functional group in cholinergic drugs exhibits irreversible acetylcholinesterase inhibition (the slide repeats the number Question 5). Answer: the phosphoryl (organophosphate) group (from OOO slide 42: echothiophate iodide, an organophosphate, is the irreversible AChE inhibitor; the phosphoryl-enzyme &ldquo;ages&rdquo; to an irreversibly inactive form; extent ranking phosphoryl &gt; carbamate &gt; ester).</p>
+<p>On 11/19 he said it is the group labeled Z on the slide, the phosphoryl group (the slide also draws an amide, an ester and a carbamate).</p>
+<div class='g2-said'><span class='g2-k'>He said</span>
+<p>&ldquo;Z or Z&rdquo; <span class='g2-src'>11/19 T@35198</span></p>
+</div>
 </div>
 </section>
 </details>

@@ -8,7 +8,7 @@
    ========================================================================== */
 TOPIC_DECKS.push(
   {id:'ooo', exam:3, name:'Otic, oral and ophthalmic medicinal chemistry (Dr. Sikazwe)', file:'Sikazwe_OOO_mc.pdf', when:'taught 11/18, 11/19 (Exam 3)',
-   topics:['oo-otic', 'oo-oral', 'oo-oph', 'oo-a2', 'oo-bb', 'oo-cai', 'oo-chol', 'oo-pg', 'oo-de', 'oo-ac']});
+   topics:['oo-otic', 'oo-oral', 'oo-oph', 'oo-a2', 'oo-bb', 'oo-cai', 'oo-chol', 'oo-pg', 'oo-de', 'oo-ac', 'oo-beyond']});
 
 TOPICS.push(
  {id:'oo-otic', name:'Earwax: cerumenolytics (docusate, carbamide peroxide)', prof:'Sikazwe',
@@ -53,12 +53,16 @@ TOPICS.push(
  {id:'oo-de', name:'Dry eye disease: the chemistry of its drugs', prof:'Sikazwe',
   cite:'slides 49–51 · taught 11/19 (Lecture 12)', subs:[
    {id:'drugs', name:'Dry eye pharmacotherapy and lifitegrast', cite:'slides 49–51'}]},
- {id:'oo-ac', name:'Allergic conjunctivitis: the chemistry of its drugs', prof:'Sikazwe',
-  cite:'slides 52–60 · taught 11/19 (Lecture 12)', subs:[
-   {id:'h1',    name:'H1 antihistamines', cite:'slides 53–54'},
-   {id:'dec',   name:'Imidazoline decongestants', cite:'slide 55'},
-   {id:'mcs',   name:'Mast cell stabilizers', cite:'slide 56'},
-   {id:'dual',  name:'Dual-acting agents', cite:'slide 57'},
-   {id:'gc',    name:'Glucocorticoids and the steroid carbon numbering', cite:'slides 58–60'},
-   {id:'self',  name:'Self-assessment questions', cite:'slides 62–68'}]}
+ {id:'oo-ac', name:'Self-assessment questions he kept (Dr. Sikazwe)', prof:'Sikazwe',
+  cite:'slides 62–68 · questions 3, 4 and 5; taught 11/19 (Lecture 12)', subs:[
+   {id:'self',  name:'Self-assessment questions 3, 4 and 5', cite:'slides 65–68'}]},
+ {id:'oo-beyond', optional:true, name:'Not on Exam 3: allergic conjunctivitis, steroids, direct-acting cholinergic SAR (optional)', prof:'Sikazwe',
+  cite:'Dr. Sikazwe, 11/19: reading ends at slide 51 (allergic conjunctivitis goes to the antihistamine lecture), "we are not focusing on steroids", self-assessment questions 1 and 2 skipped, and "Don\'t expect a question on this SAR" (slide 40). Kept for optional practice; not on Exam 3 practice papers. Sikazwe_OOO_mc.pdf, slides 40, 52–60',
+  subs:[
+   {id:'h1',   name:'H1 antihistamines', cite:'slides 53–54'},
+   {id:'dec',  name:'Imidazoline decongestants', cite:'slide 55'},
+   {id:'mcs',  name:'Mast cell stabilizers', cite:'slide 56'},
+   {id:'dual', name:'Dual-acting agents (self-assessment question 2)', cite:'slides 57, 64'},
+   {id:'gc',   name:'Glucocorticoids and the steroid carbon numbering (self-assessment question 1)', cite:'slides 58–60, 63'},
+   {id:'dsar', name:'Direct-acting cholinergics: the slide 40 SAR', cite:'slide 40'}]}
 );
