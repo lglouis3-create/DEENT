@@ -86,7 +86,7 @@ const LIKELY = {
     'patel-cue':     {by:'patel',   label:'Dr. Patel stressed it in lecture',
                       detail:'Her words in class, 11/06 (lecture transcript)'},
     'smith-ex3':     {by:'smith',   label:"Dr. Smith's Exam 3 remarks",
-                      detail:'Her closing answer to a student on 11/13 (DEENT_Lecture_11.13_transcript.txt, last paragraph): 5 questions, cumulative; "focus on pathophys and then focus on mechanisms"; "I always like scary side effects like black box warnings"'},
+                      detail:'Her closing answer to a student on 11/13 (DEENT_Lecture_11.13_transcript.txt, last paragraph): "focus on pathophys and then focus on mechanisms"; "I always like scary side effects like black box warnings"'},
     'smith-obj-eye': {by:'smith',   label:"Dr. Smith's learning objectives",
                       detail:'Smith_Eye_Glaucoma_AllergicConj_DryEye.pdf, slides 3, 11, 47 and 61 (objectives of the eye anatomy, glaucoma, allergic conjunctivitis and dry eye sections)'},
     'smith-eye-cue': {by:'smith',   label:'Dr. Smith stressed it in the eye lectures',

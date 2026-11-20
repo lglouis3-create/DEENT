@@ -612,7 +612,7 @@ const REFERENCE_HTML = `
 </tbody></table>
 <p class="prose">Two points differ between slide and speech. Recurrent wart: slide 4 prints &ldquo;Recurrent or recalcitrant warts should be referred&rdquo;; she said &ldquo;if you see reoccurrence of the wart, that&rsquo;s when we need treatment&rdquo; (T@88519 11/12). Callus pain: slide 5 &ldquo;usually not painful&rdquo;; she first said &ldquo;corns and calluses can be painful&rdquo;, then &ldquo;corns, painful regardless, but callous, when a weight is applied&rdquo; (T@89136&ndash;89254 11/12). Key: the slide and her second sentence.</p>
 <h3 id="ref-ey-tears">Eye (Dr. Smith): structures and tears, slides 4&ndash;8</h3>
-<p class="prose">Exam 3 (T@61029 11/13): 5 questions, cumulative with Exam 1; focus on pathophysiology and mechanisms; she likes serious side effects such as boxed warnings.</p>
+<p class="prose">Exam 3 (T@61029 11/13): focus on pathophysiology and mechanisms; she likes serious side effects such as boxed warnings. Her 18 questions are all on the eye lectures.</p>
 <table class="reftab"><thead><tr><th style="width:24%">Structure (Eye slide 4 unless marked)</th><th>Function (lecture)</th></tr></thead><tbody>
 <tr><td><b>Sclera</b></td><td>The white part of the eye; firm; a membrane that goes all the way around the eyeball and protects it (T@6023 11/13)</td></tr>
 <tr><td><b>Cornea</b></td><td>Clear tissue in front of the iris that protects the iris and lens; an extension of the sclera, similar tissue but not opaque, continuous with the sclera (T@5827 11/13; T@8336 11/13)</td></tr>

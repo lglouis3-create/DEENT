@@ -10360,8 +10360,8 @@ const DZ = {
      "T@38604 11/17"
     ],
     [
-     "5 questions",
-     "on her part of Exam 3; cumulative with Exam 1",
+     "Exam 3 questions",
+     "on her part of Exam 3: 18, all on the eye lectures; no Exam 1 material",
      "T@61020 11/13"
     ]
    ]

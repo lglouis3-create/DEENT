@@ -1,6 +1,6 @@
 /* q26_eye_allergy_dry.js: allergic conjunctivitis (slides 46-59) and dry eye (slides 60-73), Dr. Smith, Lectures 9-10, Exam 3.
    Sources: Smith_Eye_Glaucoma_AllergicConj_DryEye.pdf (slide N = PDF page); DEENT_Lecture_11.17_transcript.txt (T@n = character offset
-   into that file, cited "11/17"). Exam 3 hint (11/13): five cumulative questions, "focus on pathophys and then focus on mechanisms", "I always
+   into that file, cited "11/17"). Exam 3 hint (11/13): "focus on pathophys and then focus on mechanisms", "I always
    like scary side effects like black box warnings." Ids EL-* allergic conjunctivitis (topic ey-ac), ED-* dry eye (topic ey-de).
    Notes on sources: slide 57 prints phenylephrine among the "alpha 2 agonists examples" (pharmacologically an alpha 1 agonist); no item keys or
    tests it, EL-020 uses naphazoline, oxymetazoline and brimonidine tartrate. Slide 59 prints only naphazoline/pheniramine; the lecture calls it the
@@ -649,7 +649,7 @@ QUESTIONS.push(
   {t:"Both bind cyclophilin, and that complex inhibits calcineurin", correct:false, why:"T@60536 11/17: only cyclosporine binds cyclophilin; tacrolimus binds FKBP (slide 66)."},
   {t:"Each binds its own protein, and that complex inhibits calcineurin", correct:true, why:"T@60536, T@60981 11/17: cyclosporine binds cyclophilin and tacrolimus binds FKBP (FKBP is printed on slide 66); either complex inhibits calcineurin."},
   {t:"Both block CD80/86 binding to CD28 and so reduce IL-2", correct:false, why:"That is signal 2 (slide 65); calcineurin inhibitors act in the signal cascade."}],
- teach:"Slide 66 and T@60536 11/17: the two calcineurin inhibitors use different immunophilins but the same final step. This is cumulative Exam 3 material from the skin lectures.",
+ teach:"Slide 66 and T@60536 11/17: the two calcineurin inhibitors use different immunophilins but the same final step. Tacrolimus was taught for dermatitis; here it is compared with cyclosporine.",
  cite:"Lectures 9–10 (Smith_Eye_Glaucoma_AllergicConj_DryEye.pdf) slide 66; T@58455, T@60536 11/17"},
 
 {id:"ED-042", skill:"tell", prof:'Smith', tier:"new", topic:"ey-de", sub:"lfa", concept:"ey-de-surface-target",
