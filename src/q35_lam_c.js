@@ -221,7 +221,7 @@ QUESTIONS.push(
   {t:"Bimatoprost 1 drop OU in the evening; brinzolamide/brimonidine (Simbrinza) 1 drop OU TID", correct:false, why:"Simbrinza drops her beta blocker and adds a CAI."},
   {t:"Bimatoprost 1 drop OU in the evening; brimonidine/timolol (Combigan) 1 drop OU BID", correct:true, why:"Combigan combines her alpha-2 agonist and beta blocker and is dosed BID (slide 69)."}],
  teach:"Match the combination to the classes in the regimen: Combigan = alpha-2 agonist + beta blocker, 1 drop BID.",
- cite:"Lectures 12 (Lam_Glaucoma.pdf) slide 69; T@89739 11/19"},
+ cite:"Lectures 12 (Lam_Glaucoma.pdf) slide 69; T@89739, T@89739 11/19"},
 
 {id:"LMC-020", skill:"case", prof:'Lam', tier:'new', topic:"lm-impl", sub:"regim", concept:"lmc-redesign-simbrinza",
  tags:["hard", "case"], source:'both',
@@ -265,7 +265,7 @@ QUESTIONS.push(
   {t:"Timolol and pilocarpine", correct:true, why:"Slides 34 and 60: asthma is a precaution for both the beta blocker (bronchospasm) and the cholinergic agonist (bronchospasm)."},
   {t:"Brimonidine and pilocarpine", correct:false, why:"Pilocarpine is a precaution, but brimonidine is not an asthma precaution."}],
  teach:"Uncontrolled asthma or COPD: beta blockers and pilocarpine can cause bronchospasm if absorbed; flag them.",
- cite:"Lectures 12 (Lam_Glaucoma.pdf) slides 33-34, 58-61; T@60994 11/19"},
+ cite:"Lectures 12 (Lam_Glaucoma.pdf) slides 33-34, 58-61; T@60994, T@81993 11/19"},
 
 {id:"LMC-024", skill:"case", prof:'Lam', tier:'new', topic:"lm-impl", sub:"regim", concept:"lmc-pf-combination-cosopt-pf",
  tags:["hard", "case"], source:'both',
@@ -434,7 +434,7 @@ QUESTIONS.push(
   {t:"Remove lenses and wait at least 15 minutes after the drop, and ask the prescriber about a single-use preservative-free product", correct:true, why:"BAK is trapped by lenses and irritating; the lens routine is needed, and preservative-free products are the option for preservative intolerance."},
   {t:"Remove lenses and wait 15 minutes, and add a second prostaglandin analog for comfort", correct:false, why:"Another prostaglandin analog does not address the preservative."}],
  teach:"BAK plus lenses: remove lenses, wait 15 minutes, and consider a preservative-free product for preservative intolerance.",
- cite:"Lectures 12 (Lam_Glaucoma.pdf) slides 21, 68, 83; T@55285 11/19"},
+ cite:"Lectures 12 (Lam_Glaucoma.pdf) slides 21, 68, 83; T@91253, T@55285 11/19"},
 
 {id:"LMC-039", skill:"counsel", prof:'Lam', tier:'new', topic:"lm-impl", sub:"store", concept:"lmc-store-netarsudil-6wk",
  tags:["hard", "case"], source:'both',
@@ -489,7 +489,7 @@ QUESTIONS.push(
   {t:"Her symptoms, which she reports to the pharmacist at each refill", correct:false, why:"POAG is asymptomatic until substantial visual field loss, so symptoms do not show efficacy."},
   {t:"Her blood pressure, measured by the pharmacist at each refill", correct:false, why:"Blood pressure is a safety check for some drugs, not the efficacy measure."}],
  teach:"Efficacy of glaucoma therapy is IOP reduction, checked by the eye doctor; open-angle glaucoma has no symptoms until substantial field loss.",
- cite:"Lectures 12 (Lam_Glaucoma.pdf) slides 12, 86; T@92967 11/19"},
+ cite:"Lectures 12 (Lam_Glaucoma.pdf) slides 12, 86; T@92967, T@46365 11/19"},
 
 {id:"LMC-044", skill:"counsel", prof:'Lam', tier:'new', topic:"lm-fu", sub:"mon", concept:"lmc-fu-timeline-after-target",
  tags:["hard", "case"], source:'both',
@@ -511,7 +511,7 @@ QUESTIONS.push(
   {t:"Tell him to wait for his visit in 3-4 months and report it then", correct:false, why:"A side effect that is not brief should reach the eye doctor sooner."},
   {t:"Tell him to keep the lids closed for 15 minutes after each drop", correct:false, why:"Eyelid closure is 1 to 2 minutes and does not treat stinging."}],
  teach:"Common CAI stinging resolves in 1 to 2 minutes; longer means see the eye doctor, who may change the class.",
- cite:"Lectures 12 (Lam_Glaucoma.pdf) slides 52, 86; T@76373 11/19"},
+ cite:"Lectures 12 (Lam_Glaucoma.pdf) slides 52, 86; T@76373, T@76855 11/19"},
 
 {id:"LMC-046", skill:"adverse", prof:'Lam', tier:'new', topic:"lm-fu", sub:"mon", concept:"lmc-fu-dorzolamide-blur",
  tags:["hard", "case"], source:'both',
