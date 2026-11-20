@@ -99,10 +99,10 @@ QUESTIONS.push(
 
 {id:"OB-009", skill:"chem", prof:'Sikazwe', tier:'new', topic:"oo-cai", sub:"sulf", concept:"oo-b-binding-counts",
  tags:["hard", "two-facts"], source:"both",
- stem:"In the drawing of a zolamide in the carbonic anhydrase active site, how many hydrogen bonds are drawn, and what other interaction is there?",
+ stem:"In the carbonic anhydrase active site, how many hydrogen bonds hold the sulfonamide group of a zolamide, and what other interaction does it make?",
  options:[
   {t:"Three hydrogen bonds; one ionic interaction with zinc", correct:true, why:"The SO2NH2 group is held by hydrogen bonds and by an ionic (electrostatic) interaction with Zn (slide 38; 11/19)."},
-  {t:"Two hydrogen bonds; one ionic interaction with zinc", correct:false, why:"Three hydrogen bonds are drawn, not two."},
+  {t:"Two hydrogen bonds; one ionic interaction with zinc", correct:false, why:"Three hydrogen bonds hold the group, not two."},
   {t:"Three hydrogen bonds; no ionic interaction with the zinc atom", correct:false, why:"The zinc interaction is ionic (electrostatic), and zinc is important for binding."},
   {t:"One hydrogen bond; three ionic interactions", correct:false, why:"This reverses the counts."}],
  teach:"Slide 38 panel B: three hydrogen bonds (to Gln92 and Thr199) and one ionic (electrostatic) interaction between the SO2NH2 group and Zn2+. Zinc is important for binding.",
@@ -341,7 +341,7 @@ QUESTIONS.push(
 
 {id:"OB-031", skill:"chem", prof:'Sikazwe', tier:'new', topic:"oo-ac", sub:"self", concept:"oo-b-selfassess-irreversible-rank",
  tags:["hard", "two-facts"], source:"both",
- stem:"Four groups are drawn: phosphoryl, amide, ester and carbamate. Which pairing names the group that gives irreversible acetylcholinesterase inhibition and its duration?",
+ stem:"Of the phosphoryl, amide, ester and carbamate groups, which pairing names the group that gives irreversible acetylcholinesterase inhibition and its duration?",
  options:[
   {t:"Carbamate; an intermediate duration", correct:false, why:"The carbamate is intermediate, but it is not irreversible."},
   {t:"Amide; a mild duration", correct:false, why:"The amide has a mild duration and is not irreversible."},

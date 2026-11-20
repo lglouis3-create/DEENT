@@ -56,8 +56,8 @@ TOPICS.push(
  {id:'oo-ac', name:'Self-assessment questions he kept (Dr. Sikazwe)', prof:'Sikazwe',
   cite:'slides 62–68 · questions 3, 4 and 5; taught 11/19 (Lecture 12)', subs:[
    {id:'self',  name:'Self-assessment questions 3, 4 and 5', cite:'slides 65–68'}]},
- {id:'oo-beyond', optional:true, name:'Not on Exam 3: allergic conjunctivitis, steroids, direct-acting cholinergic SAR (optional)', prof:'Sikazwe',
-  cite:'Dr. Sikazwe, 11/19: reading ends at slide 51 (allergic conjunctivitis goes to the antihistamine lecture), "we are not focusing on steroids", self-assessment questions 1 and 2 skipped, and "Don\'t expect a question on this SAR" (slide 40). Kept for optional practice; not on Exam 3 practice papers. Sikazwe_OOO_mc.pdf, slides 40, 52–60',
+ {id:'oo-beyond', name:'Not on Exam 3: allergic conjunctivitis, steroids, direct-acting cholinergic SAR', prof:'Sikazwe',
+  cite:'Dr. Sikazwe, 11/19: reading ends at slide 51 (allergic conjunctivitis goes to the antihistamine lecture), "we are not focusing on steroids", self-assessment questions 1 and 2 skipped, and "Don\'t expect a question on this SAR" (slide 40). Kept for practice; marked low-yield and left off Exam 3 practice papers. Sikazwe_OOO_mc.pdf, slides 40, 52–60',
   subs:[
    {id:'h1',   name:'H1 antihistamines', cite:'slides 53–54'},
    {id:'dec',  name:'Imidazoline decongestants', cite:'slide 55'},

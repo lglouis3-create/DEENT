@@ -340,3 +340,10 @@
 - Disk filled twice (agents copying the repository into /tmp); guide_pl_test.js was emptied once and restored from git.
 
 - Release 33307d6 (Louis: "Yes publish", 2026-11-20): Pages deploy success; live page read: 1,819 questions, Diagrams folders Exam 3 (11 diagrams) and Exam 1 (42), eye and OOO figures present, no status codes or "verify against slide" in the Guides, 497 stars, no page errors.
+
+## 2026-11-20: Dr. Lam's glaucoma lecture, Sikazwe 11/19, search fix
+- Sources: 11/19 transcript (Lam from T@35,742), Lam_Glaucoma.pdf and handout, video frames (no handwriting or poll results visible), Sikazwe slides and notes.
+- Added: Lam questions LMA/LMB/LMC (182 after verification), guides, reference, tell apart, glossary, 34 stars, five diagrams; Sikazwe OB items; search button fix.
+- Not asked, by design: sig as such, risk factors, day-supply calculation, IOP numbers, PGA contraindications, CAI acidosis mechanism, PACG (Lam said not tested). Essay: guide prompts only.
+- Source conflicts kept: Latisse 0.03% vs slide; Simbrinza CAI printed two ways (class pair only); eyelid closure 1-2 min (speech) vs 2 min (handout).
+- run_checks first run: 35 PASS, 3 FAIL (browser_test: OB-009 and OB-031 stems promised a drawing; optional_test: two optional topics; state_check: CLAUDE.md older than L12), 1 REPORT. Fixed by rewording the two stems, making oo-beyond a non-optional low-yield topic, and updating CLAUDE.md.

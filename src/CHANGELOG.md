@@ -8,6 +8,12 @@ characters.
 
 Every update adds its bullets here in the same commit that makes the change.
 
+## 2026-11-20 (Dr. Lam's glaucoma lecture, Dr. Sikazwe 11/19, search)
+- Dr. Lam's glaucoma lecture (Exam 3): 182 practice questions, a Guide page for each of her 13 objectives, and five diagrams.
+- Dr. Lam's questions are starred, with her own polls and the drug-class order first; a Lam chip filters them.
+- Dr. Sikazwe's 11/19 lecture: new questions, rewritten pages, and the slides he said are not on Exam 3 marked low-yield.
+- Search: a Search button stays at the bottom right once the header is scrolled away; a Clear button empties the box.
+
 ## 2026-11-19 (cleaner reading tabs, Exam 3 diagrams)
 - Guides, Reference and Tell apart: status codes, source notes and repeated text removed; facts and qualifiers kept.
 - Tell apart: every row now names what separates the pair and gives a trap; duplicate rows merged.
