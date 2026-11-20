@@ -21,8 +21,8 @@ QUESTIONS.push(
  options:[
   {t:"Yes, the OTC brimonidine product is therapeutically equivalent to the prescription product and can be substituted without consulting her prescriber.", correct:false, why:"Lumify is brimonidine 0.025% for ocular redness; it is a different indication, formulation and concentration, not a therapeutic substitution (slide 42)."},
   {t:"Yes, but the OTC brimonidine should be used in addition to her prescription brimonidine for better IOP control.", correct:false, why:"The OTC product is not efficacious enough to lower intraocular pressure, so adding it gives no glaucoma benefit."},
-  {t:"No, the OTC brimonidine product is formulated and indicated for eye redness relief, not for the treatment of glaucoma.", correct:true, why:"Slide 42 lists Lumify (0.025%) OTC for ocular redness, and the handout says NOT for glaucoma."},
-  {t:"No, because OTC brimonidine is contraindicated in all patients with glaucoma.", correct:false, why:"It is not contraindicated; it is simply not an effective glaucoma treatment, and it is not the reason she should avoid it."}],
+  {t:"No, the OTC brimonidine product is formulated and indicated for eye redness relief, not for the treatment of glaucoma.", correct:true, why:"Lumify (0.025%) is OTC for ocular redness and is not for glaucoma (slide 42)."},
+  {t:"No, because OTC brimonidine is contraindicated in all patients with glaucoma.", correct:false, why:"OTC brimonidine is not contraindicated; it is not efficacious enough to treat glaucoma (slide 42)."}],
  teach:"Brimonidine 0.025% (Lumify) is an over-the-counter redness product, not a glaucoma drug and not a therapeutic substitution for the prescription (slide 42).",
  cite:"Lectures 12 (Lam_Glaucoma.pdf) slide 47; slide 42; T@69314, T@74365 11/19"},
 
@@ -85,9 +85,9 @@ QUESTIONS.push(
  tags:["hard", "case"], source:"slide",
  stem:"A 58-year-old woman controls her pressure with betaxolol 0.5% solution but reports stinging on application each time, and she wants to stay on the same drug. Which change addresses the stinging and lowers systemic exposure?",
  options:[
-  {t:"Switch to timolol solution", correct:false, why:"Timolol is a different drug from the betaxolol she wants to keep, and it does not offer the suspension's lower systemic effect."},
-  {t:"Switch to the suspension, Betoptic-S 0.25%", correct:true, why:"Stinging is most notable with betaxolol solution, and the suspension has less systemic effect (slide 32-33)."},
-  {t:"Switch to Timoptic XE gel, 1 drop daily", correct:false, why:"The gel is timolol, a different drug from the betaxolol she wants to keep."},
+  {t:"Switch to timolol 0.5% solution, 1 drop BID", correct:false, why:"Timolol is a different drug from the betaxolol she wants to keep, and it does not offer the suspension's lower systemic effect."},
+  {t:"Switch to Betoptic-S 0.25% suspension", correct:true, why:"Stinging is most notable with betaxolol solution, and the suspension has less systemic effect (slide 32-33)."},
+  {t:"Switch to Timoptic XE gel, 1 drop OU daily", correct:false, why:"The gel is timolol, a different drug from the betaxolol she wants to keep."},
   {t:"Increase the betaxolol solution to TID", correct:false, why:"Betaxolol is dosed BID (slide 32), and a higher frequency does not address stinging."}],
  teach:"Betoptic-S is the betaxolol suspension (0.25%) with fewer systemic effects than the solution; stinging on application is most notable with betaxolol solution (slides 32, 33).",
  cite:"Lectures 12 (Lam_Glaucoma.pdf) slides 32, 33; T@59520 11/19"},
@@ -100,7 +100,7 @@ QUESTIONS.push(
   {t:"Timolol 0.25% solution, 1 drop OU BID", correct:false, why:"A lower concentration does not remove the evening dose."},
   {t:"Combigan, 1 drop OU BID", correct:false, why:"Combigan contains timolol and is BID, so both problems remain."},
   {t:"Timoptic XE gel, 1 drop OU daily", correct:true, why:"The gel is once daily and has decreased systemic effects compared with the aqueous solution (slide 32)."}],
- teach:"Timoptic XE gel: once daily, with decreased systemic effects compared with the aqueous solution (slide 32; lecture).",
+ teach:"Timoptic XE gel: once daily, with decreased systemic effects compared with the aqueous solution (slide 32).",
  cite:"Lectures 12 (Lam_Glaucoma.pdf) slide 32; T@59278 11/19"},
 
 {id:"LMB-010", skill:"adverse", prof:'Lam', tier:'new', topic:"lm-bb", sub:"ae", concept:"lm-bb-systemic-vs-local", multi:true,
@@ -278,10 +278,10 @@ QUESTIONS.push(
  tags:["hard", "reverse"], source:"slide",
  stem:"A 69-year-old man on a multi-drug glaucoma regimen reports daytime drowsiness, fatigue and dry mouth. Which of his drops best explains these effects?",
  options:[
-  {t:"Brimonidine", correct:true, why:"Dry mouth, fatigue and somnolence are systemic side effects of alpha-2 agonists (slide 43)."},
-  {t:"Latanoprost", correct:false, why:"Prostaglandin analogs cause eyelash and iris changes, blurred vision and stinging, not these."},
-  {t:"Dorzolamide", correct:false, why:"The systemic effects of topical carbonic anhydrase inhibitors are minimal (slide 52)."},
-  {t:"Pilocarpine", correct:false, why:"Its systemic effects are headache, sweating, nausea, cramping, bronchospasm and heart block."}],
+  {t:"Brimonidine (alpha-2 agonist)", correct:true, why:"Dry mouth, fatigue and somnolence are systemic side effects of alpha-2 agonists (slide 43)."},
+  {t:"Latanoprost (prostaglandin analog)", correct:false, why:"Prostaglandin analogs cause eyelash and iris changes, blurred vision and stinging, not these."},
+  {t:"Dorzolamide (carbonic anhydrase inhibitor)", correct:false, why:"The systemic effects of topical carbonic anhydrase inhibitors are minimal (slide 52)."},
+  {t:"Pilocarpine (cholinergic agonist)", correct:false, why:"Its systemic effects are headache, sweating, nausea, cramping, bronchospasm and heart block."}],
  teach:"Systemic alpha-2 effects: drowsiness, fatigue, somnolence, dry mouth, slight BP or HR reduction (slide 43).",
  cite:"Lectures 12 (Lam_Glaucoma.pdf) slides 43, 52, 58; T@70588 11/19"},
 
@@ -313,7 +313,7 @@ QUESTIONS.push(
  tags:["hard", "case"], source:"slide",
  stem:"A 65-year-old woman with open-angle glaucoma is about to start brimonidine. Which of her current medications is a precaution with this drop?",
  options:[
-  {t:"Levothyroxine", correct:false, why:"Thyroid replacement is not among the precaution drugs (antihypertensives, MAOIs, tricyclic antidepressants)."},
+  {t:"Levothyroxine sodium", correct:false, why:"Thyroid replacement is not among the precaution drugs (antihypertensives, MAOIs, tricyclic antidepressants)."},
   {t:"Amitriptyline", correct:true, why:"Tricyclic antidepressants are a precaution drug group with alpha-2 agonists (slide 44)."},
   {t:"Famotidine", correct:false, why:"An acid reducer is not among the precaution drugs."},
   {t:"Sertraline", correct:false, why:"An SSRI is not a tricyclic antidepressant or MAOI."}],
@@ -380,7 +380,7 @@ QUESTIONS.push(
  stem:"What IOP reduction do alpha-2 agonists produce, and what other use do they have?",
  options:[
   {t:"About 25-40%, and no use in surgery", correct:false, why:"25-40% is the oral carbonic anhydrase inhibitor range (slide 53), and alpha-2 agonists are used for surgical purposes."},
-  {t:"About 15-26%, and use before surgery", correct:false, why:"Surgical use is correct, but 15-26% is the topical CAI range (slide 51)."},
+  {t:"About 15-26%, and use before eye surgery", correct:false, why:"Surgical use is correct, but 15-26% is the topical CAI range (slide 51)."},
   {t:"About 18-27%, and use before surgery", correct:true, why:"Alpha-2 agonists reduce IOP 18-27% and are also used for surgical purposes (slide 41)."},
   {t:"Up to 33%, and first line use", correct:false, why:"Up to 33% and first line describe the prostaglandin analogs (slides 19-20)."}],
  teach:"Alpha-2 agonists: IOP reduction 18-27%; also used for surgical purposes (slide 41).",
@@ -505,7 +505,7 @@ QUESTIONS.push(
   {t:"He should take an oral CAI instead, since it avoids the eye", correct:false, why:"Oral agents are last line and also contain a sulfonamide group (slides 53-54)."},
   {t:"He should use double the frequency to offset the allergy", correct:false, why:"Dosing is not changed for allergy; dorzolamide is TID (slide 51)."},
   {t:"He can use the drop after waiting 15 minutes between doses", correct:false, why:"The 15 minute wait is for contact lenses, not for allergy."},
-  {t:"Cross-sensitivity is very low, so sulfa allergy is a precaution", correct:true, why:"Sulfa allergy is a CAI precaution, but cross-sensitivity is very low (slide 54)."}],
+  {t:"Cross-sensitivity is very low, so it is a precaution", correct:true, why:"Sulfa allergy is a CAI precaution, but cross-sensitivity is very low (slide 54)."}],
  teach:"Sulfa allergy is a CAI precaution but the cross-sensitivity is very low (slide 54).",
  cite:"Lectures 12 (Lam_Glaucoma.pdf) slide 54; T@78636 11/19"},
 
@@ -694,7 +694,7 @@ QUESTIONS.push(
  stem:"Netarsudil lowers IOP by about the same range as which drug?",
  options:[
   {t:"Latanoprost", correct:false, why:"Prostaglandin analogs reach up to 33%."},
-  {t:"Timolol", correct:true, why:"The handout and slide 62: 20-30%, like timolol."},
+  {t:"Timolol", correct:true, why:"Netarsudil lowers IOP 20-30%, like timolol (slide 62)."},
   {t:"Brimonidine", correct:false, why:"Alpha-2 agonists lower IOP 18-27%."},
   {t:"Dorzolamide", correct:false, why:"Topical CAIs lower IOP 15-26%."}],
  teach:"Rho kinase inhibitor: 20-30%, like timolol (slide 62).",
@@ -729,7 +729,7 @@ QUESTIONS.push(
  stem:"A 66-year-old man uses latanoprost each evening and timolol 0.5% BID. His pressure is above goal despite adherence and good technique. Which agent is the next addition in the usual order?",
  options:[
   {t:"Brimonidine", correct:true, why:"The third class is the alpha-2 agonist (slide 63)."},
-  {t:"Dorzolamide", correct:false, why:"The topical carbonic anhydrase inhibitor is the fourth class."},
+  {t:"Brinzolamide", correct:false, why:"The topical carbonic anhydrase inhibitor is the fourth class (slide 63)."},
   {t:"Pilocarpine", correct:false, why:"The cholinergic is the fifth class."},
   {t:"Netarsudil", correct:false, why:"The Rho kinase inhibitor is the last class."}],
  teach:"Prostaglandin analog, then beta blocker, then alpha-2 agonist (slide 63).",
@@ -796,7 +796,7 @@ QUESTIONS.push(
  options:[
   {t:"Timolol", correct:false, why:"Combigan already contains timolol."},
   {t:"Dorzolamide", correct:true, why:"Combigan covers the beta blocker and the alpha-2 agonist, so the fourth class is the topical CAI."},
-  {t:"Brimonidine", correct:false, why:"Combigan already contains brimonidine."},
+  {t:"Apraclonidine", correct:false, why:"Combigan already contains brimonidine, an alpha-2 agonist (slide 69)."},
   {t:"Netarsudil", correct:false, why:"The Rho kinase inhibitor is last, after the cholinergic."}],
  teach:"A combination product covers two classes (Combigan: alpha-2 agonist plus beta blocker). Count both before choosing the next class (slides 63, 69).",
  cite:"Lectures 12 (Lam_Glaucoma.pdf) slides 63, 69; T@86014 11/19"},
