@@ -15296,7 +15296,7 @@ const GLOSSARY_TERMS = [
 "IOP",
 "eye pressure"
 ],
-"def": "The pressure inside the eye; lowering it is the goal of therapy. She said the pharmacist does not measure it, the eye doctor does, and IOP numbers need not be memorized.",
+"def": "The pressure inside the eye; lowering it is the goal of therapy. She said the pharmacist does not measure it, the eye doctor does, and a patient's own IOP reading need not be memorized; the 25-30% goal and which classes lower IOP most must be known.",
 "cite": "Lam Glaucoma slide 14, 86, T@43663 11/19",
 "src": "lecture",
 "deck": "lg",
@@ -16192,7 +16192,7 @@ const GLOSSARY_TERMS = [
 "also": [
 "acidosis"
 ],
-"def": "Side effect of oral CAIs: malaise, fatigue, anorexia, nausea, weight loss, altered taste. She said she will not test the mechanism and cannot guarantee it.",
+"def": "Side effect of oral CAIs: malaise, fatigue, anorexia, nausea, weight loss, altered taste. She said to know that oral CAIs cause systemic acidosis and are last line; she would not test Dr. Smith's detail and could not guarantee it.",
 "cite": "Lam Glaucoma slide 53, T@77815 11/19",
 "src": "lecture",
 "deck": "lg",

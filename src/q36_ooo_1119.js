@@ -28,7 +28,7 @@ QUESTIONS.push(
   {t:"Conjunctiva; prostaglandin agonists", correct:false, why:"The conjunctiva is a route of drug entry (slide 29), not where aqueous humor is made."},
   {t:"Cornea; carbonic anhydrase inhibitors", correct:false, why:"The cornea is a route of drug entry (slide 29), and the carbonic anhydrase inhibitors are a separate class, not the replacement."},
   {t:"Ciliary body; prostaglandin agonists", correct:true, why:"The ciliary body makes aqueous humor and its beta receptors drive that production; prostaglandins are first line now, and the beta antagonists remain an option (11/19)."}],
- teach:"Beta receptors in the ciliary body promote aqueous humor production, so blocking them does the reverse. The beta antagonists were once all first line; prostaglandins have succumbed to that role, and the beta antagonists are still an option (slide 33).",
+ teach:"Beta receptors in the ciliary body promote aqueous humor production, so blocking them does the reverse. The beta antagonists were once all first line; they have given way to the prostaglandins, which are first line now, and they remain an option (slide 33).",
  cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slides 28, 33; T@2944 11/19; T@3377 11/19"},
 
 {id:"OB-003", skill:"pk", prof:'Sikazwe', tier:'new', topic:"oo-bb", sub:"class", concept:"oo-b-duration-12-24",
@@ -236,8 +236,8 @@ QUESTIONS.push(
   {t:"ROCK1 and ROCK2; CYP N-deethylation to the active metabolite", correct:false, why:"N-deethylation is the metabolism of brinzolamide and dorzolamide (slide 37)."},
   {t:"Carbonic anhydrase I and II; esterase hydrolysis to the active metabolite", correct:false, why:"Carbonic anhydrase is the zinc enzyme of the zolamides (slide 35), not the Rho kinase target."},
   {t:"ROCK1 and ROCK2; aging of a phosphorylated enzyme", correct:false, why:"Aging belongs to the organophosphate and acetylcholinesterase (slide 42)."},
-  {t:"ROCK1 and ROCK2; esterase hydrolysis to the active metabolite", correct:true, why:"He named the two known Rho kinases, ROCK1 and ROCK2, and said the ester prodrug is hydrolyzed by carboxylesterases to the active metabolite (slide 48; 11/19)."}],
- teach:"Slide 48: netarsudil (ClogP 5) is an ester prodrug needing esterase hydrolysis to netarsudil-M1. He said there are mostly two Rho kinases, ROCK1 and ROCK2. (The slide arrow reads DMEs?; he said carboxylesterases.)",
+  {t:"ROCK1 and ROCK2; esterase hydrolysis to the active metabolite", correct:true, why:"He named the two known Rho kinases, ROCK1 and ROCK2, and said the ester prodrug is hydrolyzed by CE enzymes to the active metabolite (slide 48; 11/19)."}],
+ teach:"Slide 48: netarsudil (ClogP 5) is an ester prodrug needing esterase hydrolysis to netarsudil-M1. He said there are mostly two Rho kinases, ROCK1 and ROCK2. (The slide arrow reads DMEs?; he said CE enzymes.)",
  cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slide 48; T@27850 11/19; T@27628 11/19"},
 
 {id:"OB-022", skill:"patho", prof:'Sikazwe', tier:'new', topic:"oo-de", sub:"drugs", concept:"oo-b-ded-three-components",
