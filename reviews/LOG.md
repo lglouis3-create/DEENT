@@ -367,3 +367,6 @@
 
 ## 2026-11-21 Release feb79be
 Louis: "Publish". Lam 11/20 pages and questions after three skeptic reviews (ophthalmic, oral, otic), 36 stars, full checks 39 PASS / 0 FAIL / 1 REPORT. Pages deploy success; live page: 2,270 questions, 374 Lam, 0 page errors.
+
+## 2026-11-21 Release 034b61d
+Louis: "Yes publish please". Dr. Lam's practice questions for Exam 3 compared with the bank; Simbrinza typo resolved (brinzolamide), LOT-051 added, LOT-037 no longer lowYield. Checks 39 PASS / 0 FAIL / 1 REPORT. Pages deploy success; live page: 2,271 questions, 375 Lam, 0 page errors.
