@@ -79,6 +79,7 @@ const LIKELY_MARKS_UI = (() => {
     if (on && !was) { el.setAttribute('data-lkh', ''); el.hidden = true; }
     else if (!on && was) { el.removeAttribute('data-lkh'); el.hidden = false; }
   };
+  const inScope = (tab, el) => { if (!(tab in examSel) || !examSel[tab]) return true; const f = el && el.closest && el.closest('.rfold'); const m = f && /-(\d)$/.exec(f.id || ''); return !m || +m[1] === examSel[tab]; };
   const isHidden = el => !!(el && el.closest && el.closest('[data-lkh]'));
 
   /* ---------- the star and its line ---------- */
@@ -153,6 +154,7 @@ const LIKELY_MARKS_UI = (() => {
     folders(tab).forEach(f => {
       if (!only[tab]) { hide(f, false); return; }
       const fx = +((/-(\d)$/.exec(f.id || '') || [])[1] || 0);
+      hide(f, false);   // measure the folder's stars as if it were shown, so a folder hidden for another exam comes back when its exam is chosen
       if (tab in examSel && examSel[tab] && fx && fx !== examSel[tab]) { hide(f, true); return; }   // another exam's folder
       const body = f.querySelector(':scope > .rfbody');
       const any = body && [...body.querySelectorAll('.lkstar')].some(s => !isHidden(s));
@@ -206,8 +208,8 @@ const LIKELY_MARKS_UI = (() => {
       p.querySelectorAll('.gpt[data-lkstar]').forEach(() => blkStar++);
     }
     // sections the reader can still see: starred ones, and ones that hold a starred block
-    const shownSecs = [...p.querySelectorAll('section.gobj')].filter(s => !s.hasAttribute('data-lkh')).length;
-    const shownBlks = [...p.querySelectorAll('.gpt[data-lkstar]')].filter(g => !isHidden(g)).length;
+    let shownSecs = [...p.querySelectorAll('section.gobj')].filter(s => !s.hasAttribute('data-lkh')).length;
+    let shownBlks = [...p.querySelectorAll('.gpt[data-lkstar]')].filter(g => !isHidden(g)).length;
     // deck headings and the notes after them go when no section of the deck is left
     (p.querySelectorAll('.rfbody').length ? [...p.querySelectorAll('.rfbody')] : [p]).forEach(body => {
       let group = null; const groups = [];
@@ -220,6 +222,12 @@ const LIKELY_MARKS_UI = (() => {
     });
     nav(p);
     foldVisibility('guide'); openFolders('guide', false);
+    if (examSel.guide) {   // counts for the exam chosen
+      const S = [...p.querySelectorAll('section.gobj')].filter(x => inScope('guide', x)), B = [...p.querySelectorAll('.gpt')].filter(x => inScope('guide', x));
+      secs = S.length; blk = B.length;
+      shownSecs = S.filter(x => !isHidden(x)).length; shownBlks = B.filter(x => x.dataset.lkstar && !isHidden(x)).length;
+      secStar = S.filter(x => x.dataset.lkself).length; blkStar = B.filter(x => x.dataset.lkstar).length;
+    }
     setCount('guide', only.guide
       ? 'Showing ' + shownSecs + ' of ' + secs + ' sections and ' + shownBlks + ' of ' + blk + ' blocks.'
       : plural(secStar, 'starred section') + ' and ' + plural(blkStar, 'starred block') + ' in this tab.');
@@ -258,6 +266,7 @@ const LIKELY_MARKS_UI = (() => {
     });
     nav(p);
     foldVisibility('ref'); openFolders('ref', false);
+    if (examSel.ref) { const G = groupsOf(p).filter(g => inScope('ref', g.h)); n = G.length; star = G.filter(g => MAP.reference[g.h.id]).length; }
     setCount('ref', only.ref ? 'Showing ' + star + ' of ' + n + ' sections.' : plural(star, 'starred section') + ' in this tab.');
   }
   function tell(){
@@ -270,7 +279,7 @@ const LIKELY_MARKS_UI = (() => {
       g.els.forEach(k => k.querySelectorAll && k.querySelectorAll('tbody tr').forEach(tr => { if (tr.firstElementChild && tr.firstElementChild.tagName !== 'TH') trs.push(tr); }));
       let any = false;
       trs.forEach((tr, i) => {
-        rows++;
+        if (inScope('tell', tr)) rows++;
         const m = MAP.tell[g.h.id + '#r' + (i + 1)];
         if (m) {
           const cell = tr.firstElementChild;
@@ -279,7 +288,7 @@ const LIKELY_MARKS_UI = (() => {
           tr.dataset.lkstar = '1'; any = true; star++;
         } else delete tr.dataset.lkstar;
         hide(tr, only.tell && !m);
-        if (!only.tell || m) shown++;
+        if ((!only.tell || m) && inScope('tell', tr)) shown++;
       });
       g.els.forEach(k => hide(k, only.tell && !any));
     });

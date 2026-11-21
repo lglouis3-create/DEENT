@@ -370,3 +370,6 @@ Louis: "Publish". Lam 11/20 pages and questions after three skeptic reviews (oph
 
 ## 2026-11-21 Release 034b61d
 Louis: "Yes publish please". Dr. Lam's practice questions for Exam 3 compared with the bank; Simbrinza typo resolved (brinzolamide), LOT-051 added, LOT-037 no longer lowYield. Checks 39 PASS / 0 FAIL / 1 REPORT. Pages deploy success; live page: 2,271 questions, 375 Lam, 0 page errors.
+
+## 2026-11-21 Diseases for Exam 3 (branch, not released)
+Exam chips and areas in the Diseases tab; 7 new cards and Lam/Sikazwe content on 3 eye cards (3 writers, 3 skeptics, 3 fixers); Lam Guides decks as closed folders; titles rewritten; starred view exam choice. Checks: dz_check 22, dz_test 67, slide_check 38, walk_test 92, wide_test 109, examfold_test 366, likely_marks_test 142, search_test 114 passed; full run_checks pending.
