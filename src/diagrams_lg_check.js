@@ -30,7 +30,7 @@ const check = (ok, what, detail) => {
   if (ok) passes++; else { fails++; console.log('FAIL: ' + what + (detail != null ? ' (' + detail + ')' : '')); }
 };
 
-const GROUP = 'Glaucoma therapeutics (Dr. Lam, Exam 3)';
+const GROUP = 'Glaucoma drugs and counseling (Dr. Lam)';
 const PLAN = {
   'lg-sequence':       {steps: 6, h: 372},
   'lg-administration': {steps: 5, h: 300},

@@ -463,7 +463,7 @@ if (DIAGRAMS_OO) {
       ? m[0] + '<p class="dnpurpose"><b>Purpose.</b> ' + esc(DIAGRAMS_OO_PURPOSE[k]) + '</p>' + h.slice(m[0].length) : h;
   });
   if (typeof DIA_NAMES !== 'undefined') Object.assign(DIA_NAMES, DIAGRAMS_OO.names);
-  if (typeof DIAGRAMS !== 'undefined') DIAGRAMS.push(['Otic, oral and ophthalmic chemistry (Dr. Sikazwe, Exam 3)', Object.keys(DIAGRAMS_OO.figs)]);
+  if (typeof DIAGRAMS !== 'undefined') DIAGRAMS.push(['Ear, mouth and eye drug chemistry (Dr. Sikazwe)', Object.keys(DIAGRAMS_OO.figs)]);
   if (typeof document !== 'undefined' && document.head && !document.getElementById('diagramsoocss')) {
     const s = document.createElement('style'); s.id = 'diagramsoocss';
     s.textContent = DIAGRAMS_OO.css + '.dnpurpose{margin:2px 0 8px;font-size:13.5px;line-height:1.45}';

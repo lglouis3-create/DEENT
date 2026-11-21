@@ -353,7 +353,7 @@ if (DIAGRAMS_LG) {
       ? m[0] + '<p class="dnpurpose"><b>Purpose.</b> ' + esc(DIAGRAMS_LG_PURPOSE[k]) + '</p>' + h.slice(m[0].length) : h;
   });
   if (typeof DIA_NAMES !== 'undefined') Object.assign(DIA_NAMES, DIAGRAMS_LG.names);
-  if (typeof DIAGRAMS !== 'undefined') DIAGRAMS.push(['Glaucoma therapeutics (Dr. Lam, Exam 3)', Object.keys(DIAGRAMS_LG.figs)]);
+  if (typeof DIAGRAMS !== 'undefined') DIAGRAMS.push(['Glaucoma drugs and counseling (Dr. Lam)', Object.keys(DIAGRAMS_LG.figs)]);
   if (typeof document !== 'undefined' && document.head && !document.getElementById('diagramslgcss')) {
     const s = document.createElement('style'); s.id = 'diagramslgcss';
     s.textContent = DIAGRAMS_LG.css + '.dnpurpose{margin:2px 0 8px;font-size:13.5px;line-height:1.45}';

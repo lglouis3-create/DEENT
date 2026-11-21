@@ -4,19 +4,36 @@
    "id": "glaucoma",
    "name": "Glaucoma",
    "group": "algorithm",
-   "lectures": "Smith 11/13, 11/17 (Exam 3)",
+   "lectures": "Smith 11/13, 11/17 · Sikazwe 11/18, 11/19 · Lam 11/19 (Exam 3)",
    "topics": [
     "ey-glpath",
     "ey-in",
     "ey-out",
-    "ey-anat"
+    "ey-anat",
+    "oo-oph",
+    "oo-a2",
+    "oo-bb",
+    "oo-cai",
+    "oo-chol",
+    "oo-pg",
+    "lm-collect",
+    "lm-assess",
+    "lm-pga",
+    "lm-bb",
+    "lm-a2",
+    "lm-cai",
+    "lm-chol",
+    "lm-rock",
+    "lm-seq",
+    "lm-impl",
+    "lm-fu"
    ],
    "short": [
-    "A progressive eye disease: the eye pressure rises and the optic nerve is damaged; the goal is to decrease the pressure.",
-    "Open angle: the aqueous humor does not drain well, and there are no symptoms at first. Angle closure: tied to the shape of the eye, painful, an emergency.",
-    "Inflow is the making of aqueous humor by the ciliary body; outflow is its drainage (trabecular meshwork and Schlemm’s canal, or uveoscleral).",
-    "Decrease inflow: beta receptor antagonists, alpha 2 agonists, carbonic anhydrase inhibitors. Increase outflow: M3 agonists, the acetylcholinesterase inhibitor, prostaglandin agonists, the Rho kinase inhibitor.",
-    "After an eye drop, press the inner corner of the eyelid so less drug is absorbed into the body."
+    "A progressive eye disease: the eye pressure rises and the optic nerve is damaged; the goal is to decrease the pressure. Open angle: the aqueous humor does not drain well, and there are no symptoms at first. Angle closure: tied to the shape of the eye, painful, an emergency.",
+    "Inflow is the making of aqueous humor by the ciliary body; outflow is its drainage. Decrease inflow: beta receptor antagonists, alpha 2 agonists, carbonic anhydrase inhibitors. Increase outflow: M3 agonists, the acetylcholinesterase inhibitor, prostaglandin agonists, the Rho kinase inhibitor.",
+    "Dr. Lam adds the classes in order from most to least commonly prescribed: prostaglandin analog (once daily), beta blocker, alpha-2 agonist, topical carbonic anhydrase inhibitor, cholinergic, Rho kinase inhibitor; the dosing frequency rises as the classes are added, and a higher frequency lowers adherence.",
+    "Between eye products wait 5 minutes (two solutions, or a solution then a suspension) or 10 minutes (before an ointment or gel). The order is solution, suspension, ointment or gel. Contact lenses come out first and go back in after 15 minutes.",
+    "After the drop, press the inner corner of the eyelid so less drug is absorbed into the body. The eye doctor measures the IOP, 2–4 weeks after a drug is started and every 3–4 months once the target is reached."
    ],
    "steps": [
     {
@@ -114,10 +131,11 @@
     {
      "title": "Aqueous humor: inflow and outflow",
      "profs": [
-      "sm"
+      "sm",
+      "sk"
      ],
-     "q": "Where is aqueous humor made, by which two routes does it leave, and which receptors and enzyme sit in the ciliary body?",
-     "src": "Eye slides 14–16; T@8949, T@25726, T@28180, T@32669 11/13",
+     "q": "Where is aqueous humor made, by which two routes does it leave, and which receptors and enzyme sit in the ciliary body? How does a drug get into the eye?",
+     "src": "Eye slides 14–16; T@8949, T@25726, T@28180, T@32669 11/13; Sikazwe OOO slides 28–30; T@40944, T@41181, T@44312, T@45075 11/18; Eye slides 4, 7; T@5300, T@6023, T@6726, T@7926, T@14392 11/13",
      "blocks": [
       {
        "rows": [
@@ -199,16 +217,121 @@
        ],
        "k": "pts",
        "p": "sm"
+      },
+      {
+       "k": "sub",
+       "p": "sm",
+       "text": "Parts of the eye (slide 4)"
+      },
+      {
+       "k": "facts",
+       "p": "sm",
+       "rows": [
+        [
+         "Lens",
+         "Light is refracted through the lens and concentrated onto the retina, where the rods and cones are the light-sensing receptors"
+        ],
+        [
+         "Iris",
+         "The colored part, in front of the lens"
+        ],
+        [
+         "Cornea",
+         "A clear tissue in front of the iris and lens that protects them; similar tissue to the sclera, but not opaque, and continuous with it"
+        ],
+        [
+         "Sclera",
+         "The firm white part that goes all the way around the eyeball"
+        ],
+        [
+         "Optic nerve",
+         "The nerves of the rods and cones are bundled into it; it sends the image to the brain"
+        ],
+        [
+         "Choroid",
+         "The tissue lining the eyeball, full of blood vessels, which supply the retina"
+        ],
+        [
+         "Ciliary body",
+         "Smooth muscle covered by epithelial tissue; a ring behind the iris around the lens. Suspension (zonular) ligaments hold the lens to it"
+        ],
+        [
+         "Chambers",
+         "The back part holds the gelatinous vitreous; the front part holds a less gelatinous liquid, the aqueous humor"
+        ]
+       ]
+      },
+      {
+       "k": "sub",
+       "p": "sm",
+       "text": "Autonomic effects in the eye (slide 7)"
+      },
+      {
+       "k": "facts",
+       "p": "sm",
+       "rows": [
+        [
+         "Dilator muscle",
+         "Adrenergic stimulation of alpha 1 receptors dilates the pupil"
+        ],
+        [
+         "Pupillary sphincter muscle",
+         "Cholinergic stimulation of muscarinic receptors constricts the pupil"
+        ],
+        [
+         "Ciliary body",
+         "Cholinergic stimulation of muscarinic receptors contracts it, which increases accommodation; adrenergic stimulation relaxes the ciliary muscle for far vision and produces aqueous humor"
+        ],
+        [
+         "In class",
+         "She let the students read slides 7 and 8 and noted that eye doctors use these effects to dilate the eyes (T@14392); her study hints say there is no need to memorize slides 8 or 9"
+        ]
+       ]
+      },
+      {
+       "k": "sub",
+       "p": "sk",
+       "text": "How an eye drug gets in (Dr. Sikazwe, slides 28–30)"
+      },
+      {
+       "k": "facts",
+       "p": "sk",
+       "rows": [
+        [
+         "Problem and goal",
+         "The problem is raised IOP; the treatment goal is to {{decrease aqueous humor production}} or increase outflow, or both (slide 28)"
+        ],
+        [
+         "Cornea",
+         "A lipid / water / lipid sandwich: less drug enters (slide 29)"
+        ],
+        [
+         "Conjunctiva",
+         "Influx and efflux transporters plus esterase and CYP enzymes: more drug enters (slide 29)"
+        ],
+        [
+         "Which drug goes where",
+         [
+          "{{Lipophilic}} drugs enter through the cornea; the cornea is the main route for small lipophilic drugs (slide 30; T@45075)",
+          "{{Hydrophilic}} drugs enter through the conjunctiva; it is the main route for large hydrophilic drugs (slide 30; T@45075)"
+         ]
+        ],
+        [
+         "Prodrugs",
+         "Conjunctival enzymes can bioactivate a prodrug placed in the eye (slide 29; T@44312)"
+        ]
+       ]
       }
      ]
     },
     {
      "title": "Treat it: does the drug decrease inflow or increase outflow?",
      "profs": [
-      "sm"
+      "sm",
+      "sk"
      ],
-     "q": "For each class, is it a production inhibitor or an outflow enhancer, and what does it act on?",
-     "src": "Eye slides 11, 17–45; T@39765, T@43081 11/13; T@23579, T@38097 11/17",
+     "q": "For each class, is it a production inhibitor or an outflow enhancer, and what does it act on? What functional group defines each class?",
+     "src": "Eye slides 11, 17–45; T@39765, T@43081 11/13; T@23579, T@38097 11/17; Sikazwe OOO slides 27, 31–48; T@38474, T@46740, T@48263 11/18; T@17315, T@19755 11/19",
      "blocks": [
       {
        "title": "Inflow or outflow",
@@ -381,6 +504,78 @@
         "Timolol/dorzolamide, timolol/brimonidine, brinzolamide/brimonidine, latanoprost/netarsudil",
         "Treatment often starts with one drug and moves to a combination as the disease progresses; one product replaces two"
        ]
+      },
+      {
+       "k": "map",
+       "p": "sk",
+       "title": "Chemical class of each drug group (Dr. Sikazwe)",
+       "rows": [
+        [
+         "Alpha 2 agonists",
+         [
+          "{{Imidazolines}}: clonidine, apraclonidine, brimonidine (slide 31)",
+          "Aryl imidazoline core: the linker atom decides the receptor, X = NH gives alpha 2 agonists and X = CH2 gives alpha 1 agonists (slide 32; the slide prints the linker as NH2, the slide 31 structures show NH)",
+          "Clonidine (ClogP 1.5) is lipophilic enough to enter the brain and cause CNS effects; brimonidine (ClogP 1.2) is about 1,000-fold more potent, so a tiny drop works (T@46740, T@48263 11/18)"
+         ]
+        ],
+        [
+         "Beta antagonists",
+         [
+          "{{Aryloxypropanolamines}}: timolol, betaxolol, levobunolol, carteolol (slide 33): an aromatic ring, the oxygen next to it, and three carbons carrying the alcohol and the amine (T@38474 11/18)",
+          "More potent than the arylethanolamines; most have mixed beta 1 and beta 2 activity; the S-OH isomers are preferred; most para aryloxypropanolamines such as betaxolol are beta 1 antagonists (slide 34)"
+         ]
+        ],
+        [
+         "Carbonic anhydrase inhibitors",
+         [
+          "{{Sulfonamides}} (zolamides): acetazolamide, methazolamide, brinzolamide, dorzolamide (slide 36)",
+          "Carbonic anhydrase is a Zn-metalloenzyme that modulates aqueous humor production through pH changes: CO2 + H2O gives carbonic acid (H2CO3), which gives bicarbonate (HCO3-) and H+ (slide 35)",
+          "The SO2NH2 group forms ionic and hydrogen bonds with the zinc and Thr199 of the enzyme (slide 38)",
+          "Brinzolamide and dorzolamide both undergo CYP N-deethylation; the N-deethylated metabolites are active (slide 37)"
+         ]
+        ],
+        [
+         "Direct-acting cholinergics",
+         "{{Carbamates and esters}}: acetylcholine (ester), carbachol (carbamate), pilocarpine (slide 40). He told the class not to expect a question on the slide 40 SAR (T@17315 11/19)"
+        ],
+        [
+         "Indirect-acting cholinergics",
+         [
+          "Inhibit acetylcholinesterase, so acetylcholine increases (slide 41)",
+          "Extent of inhibition by functional group: {{phosphoryl > carbamate > ester}} (slide 42)",
+          "Echothiophate is an organophosphate and is irreversible: aging, the loss of an ethyl group, leaves a hydroxy group covalently bound to the enzyme (T@19755 11/19)"
+         ]
+        ],
+        [
+         "Prostaglandin analogs",
+         [
+          "A cyclopentane ring with an alpha chain and an omega chain; they raise outflow by activating the PGF (FP) receptor (slides 44, 46)",
+          "At C-1, acids and amides are active and esters are prodrugs; C-15 is OH or a halogen (slide 46). Bimatoprost is the amide; latanoprost, travoprost, tafluprost and latanoprostene bunod are esters that esterase converts to the acid (slides 44–46)"
+         ]
+        ],
+        [
+         "EP2 agonist",
+         "Omidenepag isopropyl: a pyridine sulfonamide, a selective EP2 receptor agonist and an ester prodrug that esterase activates; outflow increases (slide 47)"
+        ],
+        [
+         "Rho kinase inhibitor",
+         "Netarsudil: an isoquinoline and an ester prodrug that esterase activates; outflow increases (slide 48)"
+        ],
+        [
+         "His self-assessment questions 3, 4, 5",
+         [
+          "Question 3 (slide 65): the key functional group in the chemical basis of action of the carbonic anhydrase inhibitors is the sulfonamide",
+          "Question 4 (slide 66): the drawn imidazoline is present in the alpha 2 agonists",
+          "Question 5 (slide 67): the drawn core is the prostaglandin skeleton, present in the prostaglandin receptor agonists; the slide leaves the answer blank and he answered it in class (11/19)",
+          "Question 5, second part (slide 68): the phosphoryl group gives irreversible acetylcholinesterase inhibition (T@19755 11/19)"
+         ]
+        ],
+        [
+         "Groups on slide 27",
+         "Imidazoline, sulfone, sulfonamide, aryloxypropanolamine, carbamate, ester, the prostaglandin skeleton (cyclopentane with two chains) and the steroid skeleton. His emailed practice question 2 asks for the key functional groups of the anti-glaucoma classes drawn by hand; question 3 asks for the N-deethylated products of brinzolamide and dorzolamide (STYLE.md)"
+        ]
+       ],
+       "src": "Sikazwe OOO slides 27, 31–48; practice questions emailed 11/20"
       }
      ]
     },
@@ -480,6 +675,541 @@
        ],
        "k": "pts",
        "p": "sm"
+      }
+     ]
+    },
+    {
+     "title": "Collect and assess (Dr. Lam): what raises the pressure, the goal, and the four checks",
+     "profs": [
+      "la"
+     ],
+     "q": "Which drug classes raise the eye pressure, what is the goal and the starting target, and what are the four checks on each drug?",
+     "src": "Lam Glaucoma slides 2, 3, 8–16, 88–92; handout; T@43926, T@44339, T@46542, T@47224, T@47427, T@94631 11/19",
+     "blocks": [
+      {
+       "k": "facts",
+       "p": "la",
+       "rows": [
+        [
+         "Drugs that raise IOP",
+         [
+          "{{Corticosteroids}} with chronic use: the ophthalmic form has the highest risk, then systemic, then nasal or inhaled (slide 8; T@44339)",
+          "{{Anticholinergics}}: ophthalmic (for example atropine) and systemic (for example an oral antihistamine such as Benadryl) (slide 8; handout; T@44966)"
+         ]
+        ],
+        [
+         "Exam weight",
+         "She said the drugs that can induce glaucoma are a very common question (T@43926). Dr. Smith covered the mechanism; she covers the formulation (T@44111)"
+        ],
+        [
+         "SSRIs",
+         "She said SSRIs have less anticholinergic activity than other antidepressants (T@45149)"
+        ],
+        [
+         "Presentation",
+         "Open-angle glaucoma is {{asymptomatic}} until substantial visual field loss occurs; patients may complain of visual disturbances or visual loss (slide 12, marked FYI; T@46345)"
+        ],
+        [
+         "Her words: not tested",
+         [
+          "Risk factors for POAG (T@43047)",
+          "A patient's own IOP value: a pharmacist will not have it (T@43663)",
+          "The day-supply calculation and the list of sig abbreviations; she will use the abbreviations in prescriptions (T@42583, T@40715)"
+         ]
+        ]
+       ]
+      },
+      {
+       "k": "sub",
+       "p": "la",
+       "text": "Goal of therapy (slides 13, 14)"
+      },
+      {
+       "k": "facts",
+       "p": "la",
+       "rows": [
+        [
+         "Goal",
+         "{{Reduce the IOP}}"
+        ],
+        [
+         "Who sets the target",
+         "An eye care professional: an ophthalmologist or optometrist (slide 14; T@47338)"
+        ],
+        [
+         "Initial target",
+         "When the baseline IOP is high (the handout says above 22 mm Hg), {{decrease the IOP by 25–30%}} (slide 14; T@47427)"
+        ],
+        [
+         "Adherence",
+         "She said only about {{33%}} of patients are adherent to their eye drops, and the more drugs and the higher the frequency, the lower the adherence (T@46952, T@47145, T@75564)"
+        ]
+       ]
+      },
+      {
+       "k": "sub",
+       "p": "la",
+       "text": "The four checks on each drug (slides 13, 15, 16)"
+      },
+      {
+       "k": "map",
+       "p": "la",
+       "title": "Medication-related problems as she lists them",
+       "rows": [
+        [
+         "Indication",
+         "Unnecessary drug therapy (duplicate therapy; no medical indication currently; non-medication therapy is appropriate; treating an avoidable adverse reaction). Need additional therapy (prevention; untreated condition; synergistic therapy)"
+        ],
+        [
+         "Effectiveness",
+         "Suboptimal or ineffective drug (a more effective drug is available; the condition is refractory; the dosage form is inappropriate). Dose too low (frequency inappropriate; incorrect administration; interaction; duration inappropriate)"
+        ],
+        [
+         "Safety",
+         "Adverse drug reaction (undesirable effect; unsafe for the patient; interaction; incorrect administration; allergic reaction; dosage changed too fast). Dose too high (frequency, duration or interaction)"
+        ],
+        [
+         "Adherence",
+         "Does not understand instructions; prefers not to take it; forgets; product not available; cannot administer it. Cost: a more cost-effective drug is available, or the patient cannot afford it"
+        ]
+       ],
+       "src": "Lam Glaucoma slides 15–16; handout"
+      },
+      {
+       "k": "pts",
+       "p": "la",
+       "items": [
+        "She tests each drug for appropriateness and effectiveness against the patient's risk factors, and the dosing must be known: an underdose is an effectiveness problem and an overdose is a safety problem (T@46542, T@48131, T@48434)",
+        "Her essay pattern is one task with a justification: identify the problem, then the next step, as in the first Ms. Lopez case (T@58023)"
+       ]
+      },
+      {
+       "k": "sub",
+       "p": "la",
+       "text": "Angle-closure glaucoma (slides 88–92): she said it is not tested"
+      },
+      {
+       "k": "facts",
+       "p": "la",
+       "rows": [
+        [
+         "Her words",
+         "\"Will I be testing you on it? No.\" She also said the one thing to know is which drugs can increase the risk, because that is a common question, and that in practice the patient is sent to the emergency room immediately (T@94508, T@94631)"
+        ],
+        [
+         "Risk factors",
+         "Female sex, older age, Asian (Southeast Asian) ethnicity, first-degree relatives of patients with PACG (slide 89)"
+        ],
+        [
+         "Drugs that worsen it",
+         "Topical and systemic anticholinergics, antidepressants, alpha-1 agonists, beta-2 agonists (slide 90; the handout gives the examples atropine, promethazine, ipratropium, tiotropium, SSRIs, TCAs, phenylephrine, ephedrine, albuterol)"
+        ],
+        [
+         "Presentation",
+         "Prodromal: blurred or hazy vision, halos around lights, eye pain, headache. Acute: intense eye pain, headache, nausea and vomiting, blurred or cloudy vision, colored halos, sudden vision loss (slide 91)"
+        ],
+        [
+         "Plan",
+         "Refer to an ophthalmologist or optometrist (slide 92)"
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Plan (Dr. Lam): the order of the six classes, the dose of each, and the combination products",
+     "profs": [
+      "la"
+     ],
+     "q": "In what order does she add the classes, how often is each dosed, and what are the side effects, precautions and fixes for each?",
+     "src": "Lam Glaucoma slides 17–69; handout; T@47757, T@51004, T@53365, T@77815, T@83004, T@83922, T@84272, T@84448, T@85514, T@85991 11/19",
+     "blocks": [
+      {
+       "k": "facts",
+       "p": "la",
+       "rows": [
+        [
+         "Her order",
+         "The classes go from the most commonly prescribed to the least commonly prescribed (T@47757). A patient with a partial response who tolerates the drug keeps getting drugs added; a patient who cannot tolerate one may be switched to another class (T@85514)"
+        ],
+        [
+         "On the exam",
+         "At least one question asks for the sequence of the drugs: \"if you can cover this page and be able to recognize what are the sequence, you at least get one question right\" (T@84272, T@84448)"
+        ],
+        [
+         "Rule of thumb",
+         "Name the class of each drug the patient takes; the next class is the one to add. The frequency rises as the classes are added (slide 63; T@75564)"
+        ]
+       ]
+      },
+      {
+       "k": "map",
+       "p": "la",
+       "title": "The six classes in her order (all 1 drop into the affected eye or eyes)",
+       "rows": [
+        [
+         "1 Prostaglandin analogs (-prost)",
+         "{{Once daily}} · up to 33% · bimatoprost 0.01%, 0.03% (Lumigan; Latisse is for eyelash hypotrichosis), latanoprost (Xalatan, Xelpros), latanoprostene bunod (Vyzulta, a prodrug of latanoprost), travoprost (Travatan Z), tafluprost (Zioptan)"
+        ],
+        [
+         "2 Beta blockers (-olol)",
+         "{{BID}}; timolol gel once daily · 20–30% · timolol 0.25%, 0.5% (Timoptic, Istalol), Timoptic-XE gel, betaxolol (Betoptic 0.5%, Betoptic-S 0.25%), carteolol 1% (Ocupress), levobunolol 0.25%, 0.5% (Betagan)"
+        ],
+        [
+         "3 Alpha-2 agonists",
+         "Brimonidine {{BID}}, apraclonidine BID or TID · 18–27% · brimonidine (Alphagan P), apraclonidine 0.5%, 1% (Iopidine)"
+        ],
+        [
+         "4 Topical carbonic anhydrase inhibitors (-zolamide)",
+         "{{TID}} · 15–26% · dorzolamide 2% (Trusopt), brinzolamide 1% suspension (Azopt). Oral acetazolamide and methazolamide: 25–40%, short-term use only"
+        ],
+        [
+         "5 Cholinergic agonists",
+         "Pilocarpine {{QID}} · IOP reduction not printed · pilocarpine 1%, 2%, 4% (Isopto Carpine), carbachol (Miostat), echothiophate"
+        ],
+        [
+         "6 Rho kinase inhibitor",
+         "Once daily in the evening · 20–30%, like timolol · netarsudil 0.02% (Rhopressa)"
+        ]
+       ],
+       "src": "Lam Glaucoma slides 19, 31, 32, 41, 42, 51, 53, 57, 62, 63; handout"
+      },
+      {
+       "k": "line",
+       "p": "la",
+       "label": "First",
+       "title": "Prostaglandin analogs",
+       "drugs": [
+        "pg-agonists"
+       ],
+       "pts": [
+        "Why first: once daily dosing gives better adherence; up to 33% IOP reduction meets the 25–30% goal; low-cost generics; good tolerance (slide 20; T@51004)",
+        "More than once daily decreases the efficacy, so a BID prescription is an error to fix with the prescriber (T@51238; handout)",
+        "Blurred vision is the reason for nightly dosing; other side effects are stinging, increased pigmentation of the iris or eyelashes, eyelash growth and thickening, and a foreign body sensation (slide 21)",
+        "Contraindications: macular edema; history of herpetic keratitis. She said she will not test them (slide 21; T@53365)"
+       ],
+       "pick": [
+        [
+         "Intolerance to side effects",
+         "Change the formulation (solution to gel), switch to another class, or for a reaction to the preservative use a preservative-free product (slide 22)"
+        ],
+        [
+         "A preservative-free prostaglandin analog",
+         "Latanoprost (Xelpros) or tafluprost (Zioptan) (handout). She said she will say in the stem when a product is preservative-free (T@55285)"
+        ],
+        [
+         "Inadequate response",
+         "Check compliance and administration technique; switch within the class or add another agent; bimatoprost is slightly more effective, so it is the switch when latanoprost does not work (slide 23; handout)"
+        ]
+       ],
+       "move": "Move to the next class when: the response is partial and the drug is tolerated; the beta blocker is added (T@85514)."
+      },
+      {
+       "k": "line",
+       "p": "la",
+       "label": "Next",
+       "title": "Beta blockers",
+       "drugs": [
+        "beta-blockers"
+       ],
+       "pts": [
+        "Decrease aqueous humor production; 20–30% IOP reduction, less than the prostaglandin analogs (slide 31; handout)",
+        "BID; timolol gel (Timoptic-XE) is once daily: fewer doses a day and fewer systemic effects than the solution (slide 32; handout)",
+        "Betaxolol is less effective than timolol and levobunolol; the suspension (Betoptic-S) has fewer systemic effects than the solution (handout)",
+        "Local: stinging on application (especially betaxolol solution), dry eyes, blepharitis, blurred vision. Systemic: bradycardia, hypotension, bronchospasm (slide 33)",
+        "Precautions: asthma or COPD; bradycardia or 2nd or 3rd degree heart block; uncompensated cardiac failure; oral beta-blocker therapy; less risk with betaxolol and carteolol (slide 34; handout). She said the precaution concerns uncontrolled disease (T@60379). She said she will not test the incidence of bronchospasm (T@66494)"
+       ],
+       "pick": [
+        [
+         "Intolerance to side effects",
+         "Change the formulation (solution to gel); switch agent or class (betaxolol to timolol); for a preservative reaction use a preservative-free product, for example Cosopt PF or certain timolol products (slide 35)"
+        ],
+        [
+         "Inadequate or partial response",
+         "Ensure compliance; increase the concentration if possible; if one agent does not work, switch to another class (slide 36)"
+        ],
+        [
+         "Forgets the evening dose",
+         "Timolol solution to Timoptic XE gel, 1 drop once daily (slides 32, 37; T@64545)"
+        ]
+       ]
+      },
+      {
+       "k": "line",
+       "p": "la",
+       "label": "Next",
+       "title": "Alpha-2 agonists",
+       "drugs": [
+        "brimonidine",
+        "apraclonidine"
+       ],
+       "pts": [
+        "Handout: increase outflow and decrease production; 18–27% IOP reduction; also used for surgical purposes, 1 drop before the procedure",
+        "Brimonidine (Alphagan P) BID; apraclonidine (Iopidine) BID or TID, with a higher incidence of side effects that stop on discontinuation (slide 42; handout)",
+        "Local, most common: lid edema, eye discomfort, foreign-object sensation, itching. Systemic: dizziness, fatigue, somnolence, dry mouth, slight blood pressure or heart rate change; the handout lists drowsiness as most common and a blood pressure change under 10% (slide 43)",
+        "Precautions: cardiovascular and kidney disease, history of stroke, certain drugs; the handout names antihypertensives, MAO inhibitors and tricyclic antidepressants (slide 44)",
+        "{{Lumify}} (brimonidine 0.025%) is OTC for ocular redness and is not for glaucoma; it is not a therapeutic substitute for prescription brimonidine, because it is not efficacious enough to reduce the IOP (slides 42, 47; T@69314, T@74606)"
+       ],
+       "pick": [
+        [
+         "Intolerance to side effects",
+         "Reduce the concentration if possible; decrease the frequency (apraclonidine only); switch to another class (slide 45)"
+        ],
+        [
+         "Inadequate or partial response",
+         "Ensure compliance; increase the concentration if possible; add the next class (slide 46)"
+        ]
+       ]
+      },
+      {
+       "k": "line",
+       "p": "la",
+       "label": "Then",
+       "title": "Topical carbonic anhydrase inhibitors",
+       "drugs": [
+        "cai"
+       ],
+       "pts": [
+        "TID; 15–26% IOP reduction; the reduction is smaller and the frequency higher than the earlier classes (slide 51; T@75437)",
+        "Local: stinging or burning that resolves within 1–2 minutes, ocular discomfort, blurred vision as the drop settles, tearing; systemic effects minimal (slide 52; handout; T@76727). Stinging that lasts longer than that goes to the ophthalmologist",
+        "Oral acetazolamide and methazolamide (25–40%): short-term use only, because of systemic acidosis (malaise, fatigue, anorexia, nausea, weight loss, altered taste). She said to know that the oral drugs cause systemic acidosis and are last line; Dr. Smith's detail on how acidosis occurs she would not test, though she did not guarantee it (slide 53; T@77616, T@77815)",
+        "Precautions: sickle cell disease, pulmonary disorders, electrolyte imbalance; sulfonamide allergy, where cross-sensitivity is very low (slide 54). She called the cross-sensitivity an FYI (T@78505)"
+       ],
+       "pick": [
+        [
+         "Intolerance to side effects",
+         "Switch from topical to oral; switch to another class; for a preservative reaction a preservative-free product (Trusopt preservative-free, in the handout: certain brand names only) (slide 55)"
+        ],
+        [
+         "Inadequate response",
+         "Ensure compliance; switch to another agent in the class or add another therapy; switch from topical to oral (slide 56)"
+        ]
+       ]
+      },
+      {
+       "k": "line",
+       "p": "la",
+       "label": "Then",
+       "title": "Cholinergic agonists (miotics)",
+       "drugs": [
+        "m3-agonists",
+        "echothiophate"
+       ],
+       "pts": [
+        "Pilocarpine 1%, 2%, 4% (Isopto Carpine) QID; carbachol (Miostat) is often used for surgery instead of glaucoma; echothiophate has serious ocular and systemic toxic effects (slide 57; handout)",
+        "Rarely used, because of the IOP reduction and the four-times-a-day dosing (T@81113). The handout adds that pilocarpine may be used as initial management of acute angle-closure glaucoma",
+        "Local: poor night vision, frontal headache or brow ache, stinging. Systemic: headache (the most common), sweating, nausea, vomiting, diarrhea, cramping, bronchospasm, heart block (slide 58)",
+        "Precautions: asthma; retinal detachment or corneal abrasion (slide 59)"
+       ],
+       "pick": [
+        [
+         "Intolerance to side effects",
+         "Reduce the concentration if possible; switch to a drug in a different class (slide 60)"
+        ],
+        [
+         "Inadequate response",
+         "Ensure compliance; increase the concentration if possible; add another agent (slide 61)"
+        ]
+       ]
+      },
+      {
+       "k": "line",
+       "p": "la",
+       "label": "Last",
+       "title": "Rho kinase inhibitor",
+       "drugs": [
+        "netarsudil"
+       ],
+       "pts": [
+        "Netarsudil 0.02% (Rhopressa) 1 drop once daily in the evening; with latanoprost it is Rocklatan, once daily in the evening; 20–30% IOP reduction, like timolol (slides 62; handout)",
+        "Local: burning or eye pain, corneal disease, conjunctival hemorrhage or hyperemia (slide 62)",
+        "She said it is new, so cost may be an issue, and conjunctival hemorrhage reached {{51%}} in the clinical trial; the side effect outweighs the efficacy, so it is the last-line agent: \"We have tried everything else\" (T@83004, T@83922)",
+        "Dr. Smith's slide 43 gives conjunctival hyperemia in 53% and corneal verticillata, instillation site pain and conjunctival hemorrhage in about 20%; the handout and her words give 51% for conjunctival hemorrhage or hyperemia"
+       ]
+      },
+      {
+       "k": "sub",
+       "p": "la",
+       "text": "Combination products (slide 69): recognize the classes and the dosing"
+      },
+      {
+       "k": "map",
+       "p": "la",
+       "title": "What she asks you to recognize",
+       "rows": [
+        [
+         "Brimonidine / timolol (Combigan)",
+         "Alpha-2 agonist and beta blocker · BID"
+        ],
+        [
+         "Dorzolamide / timolol (Cosopt, Cosopt PF)",
+         "Carbonic anhydrase inhibitor and beta blocker · BID"
+        ],
+        [
+         "Brinzolamide / brimonidine (Simbrinza)",
+         "Carbonic anhydrase inhibitor and alpha-2 agonist · TID"
+        ],
+        [
+         "Netarsudil / latanoprost (Rocklatan)",
+         "Rho kinase inhibitor and prostaglandin analog · once daily in the evening (slide 62)"
+        ]
+       ],
+       "src": "Lam Glaucoma slides 62, 69; T@85991, T@86115 11/19"
+      },
+      {
+       "k": "pts",
+       "p": "la",
+       "items": [
+        "She said: recognize the drug classes in each product and the dosing regimen; the three products on slide 69 are never once a day, they are two or three times a day (T@85991, T@86115)",
+        "A combination product replaces two bottles, so it answers a patient who cannot manage many drops (T@90121)"
+       ]
+      },
+      {
+       "k": "facts",
+       "p": "la",
+       "rows": [
+        [
+         "Conflict: Simbrinza",
+         "Slide 42 prints brimonidine plus brinzolamide and slide 69 prints brinzolamide/brimonidine; slide 51 prints dorzolamide plus brimonidine. Her 11/20 email calls slide 51 a typo: Simbrinza is {{brinzolamide and brimonidine}}"
+        ],
+        [
+         "Conflict: Latisse",
+         "The handout prints 0.03% and slide 19 prints 0.3% for Latisse; she did not give a number aloud, so both printed values stand"
+        ],
+        [
+         "Conflict: latanoprost and bimatoprost",
+         "At T@56932 she gave the two names in the wrong order (switch to latanoprost); at T@71578 she said latanoprost has lower efficacy than bimatoprost, and the handout says bimatoprost is slightly more effective and is the switch when latanoprost does not work"
+        ],
+        [
+         "Conflict: where last line falls",
+         "Slides 51 and 53 title the carbonic anhydrase inhibitors Last Line; slide 63 lists them fourth of six; she called the Rho kinase inhibitor the last-line agent (T@83813)"
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Implement and follow up (Dr. Lam): counseling, waits, order, lenses, storage and monitoring",
+     "profs": [
+      "la"
+     ],
+     "q": "What do you tell the patient about the bottle, the eyelid, the waits, the order, contact lenses and storage, and when does the eye doctor check the pressure?",
+     "src": "Lam Glaucoma slides 70–87; handout; T@86335–T@93610 11/19",
+     "blocks": [
+      {
+       "k": "facts",
+       "p": "la",
+       "rows": [
+        [
+         "Keep the bottle clean",
+         "Wash the hands and do not touch the dropper tip to the eye, the hands or any surface: skin and eyes carry bacteria (slide 71; T@86335)"
+        ],
+        [
+         "Eyelid closure",
+         [
+          "Purpose: decreases nasolacrimal drainage, so there is less systemic absorption and the systemic side effects are milder (slide 72)",
+          "Wash hands and remove contacts; tilt the head back and pull the lower outer eyelid out to make a pouch; look at the dropper; release the eyelid slowly once the drop is in; close the eyes gently and press lightly on the inside corners; blot the excess solution (slide 73)",
+          "How long: the handout says the lids stay closed, not squeezed or rubbed, for 2 minutes; she said 1 or 2 minutes, pressed gently without pain (T@87190)"
+         ]
+        ]
+       ]
+      },
+      {
+       "k": "map",
+       "p": "la",
+       "title": "Waits and order for more than one eye product",
+       "rows": [
+        [
+         "Two solutions",
+         "Wait {{5 minutes}}; either one first (slide 74; T@87799)"
+        ],
+        [
+         "Solution and suspension",
+         "Wait {{5 minutes}}; the solution first, then the suspension; shake the suspension well; the suspension goes last because it stays longer in the tear film (slide 74; handout; T@88154)"
+        ],
+        [
+         "Solution and ointment or gel-forming solution",
+         "Wait at least {{10 minutes}}; the drops first, then the ointment or gel (slide 74; T@88303)"
+        ],
+        [
+         "Order of application",
+         "1 solution, 2 suspension, 3 ointment or gel-forming solution; timolol gel counts as a gel (slide 75; T@88682)"
+        ]
+       ],
+       "src": "Lam Glaucoma slides 74–75; handout; T@87847 11/19: the wait stops the products washing each other out"
+      },
+      {
+       "k": "facts",
+       "p": "la",
+       "rows": [
+        [
+         "Contact lenses",
+         [
+          "Lenses trap the drug and the preservative against the surface of the eye (handout; T@91230)",
+          "Remove the lenses before the drop and wait {{15 minutes}} before reinserting, especially with products that contain BAK (slide 83; T@91057, T@91467)",
+          "Wearing lenses does not exclude a product (T@91692). Her answer to the case: after the last morning drop wait 15 minutes, then insert the lenses (T@92094)"
+         ]
+        ],
+        [
+         "Storage",
+         [
+          "Latanoprost, latanoprostene bunod and tafluprost: refrigerator before opening; room temperature once opened (slide 85)",
+          "Netarsudil: refrigerator before opening; room temperature for {{less than 6 weeks}} once opened (slide 85; T@92709). She said the times follow how long the preservative is good for"
+         ]
+        ],
+        [
+         "Preservative-free",
+         "A multi-dose bottle contains a preservative, most commonly BAK; the single-use product is the choice for a patient who reacts to it, and it can cost more (T@54480, T@54891; slides 22, 35, 55, 68)"
+        ]
+       ]
+      },
+      {
+       "k": "sub",
+       "p": "la",
+       "text": "Her purpose, efficacy and safety counseling"
+      },
+      {
+       "k": "pts",
+       "p": "la",
+       "items": [
+        "Purpose: bimatoprost Lumigan lowers IOP in glaucoma; Latisse is the same drug for eyelash hypotrichosis, and she said the indication depends on the brand and the concentration (slide 19; T@50822)",
+        "Prostaglandin analogs: blurred vision is why they are given at night (slide 21; T@53077)",
+        "Beta blockers: local side effects are a major counseling point; with an oral beta blocker, check the blood pressure and heart rate, especially when started (slides 33, 34; T@61773)",
+        "Alpha-2 agonists: check the blood pressure while on the drug (slides 43, 44; T@73085)",
+        "Topical carbonic anhydrase inhibitors: stinging or burning is common but lasts 1 or 2 minutes; longer than that, the patient sees the ophthalmologist (slide 52; T@76727)",
+        "Cholinergics: headache and brow ache from ciliary muscle spasm, and poor night vision (slide 58; T@81450)"
+       ]
+      },
+      {
+       "k": "sub",
+       "p": "la",
+       "text": "Follow up (slides 86–87)"
+      },
+      {
+       "k": "facts",
+       "p": "la",
+       "rows": [
+        [
+         "Efficacy",
+         "The IOP is measured by the patient's eye doctor; \"as pharmacists, we don't do that\" (slide 86; T@92885)"
+        ],
+        [
+         "Safety",
+         "The side effects of each drug in the regimen, as listed for its class; the pharmacist's biggest role is explaining the side effects the patient may have (slide 86; T@93275)"
+        ],
+        [
+         "When",
+         "{{2–4 weeks}} after therapy is started, and {{every 3–4 months}} once the target IOP is reached (slide 86; T@93052, T@93206)"
+        ],
+        [
+         "When to see the eye doctor sooner",
+         "A side effect that is not the typical short-lived kind: counsel the patient to see the eye doctor (T@93393)"
+        ],
+        [
+         "Her case",
+         "Ms. Lopez was recently started on brimonidine/timolol: the eye doctor follows her at 2–4 weeks, then every 3–4 months at target; each drug's listed side effects are monitored (slide 87)"
+        ]
+       ]
       }
      ]
     }
@@ -586,6 +1316,108 @@
       "Open-angle glaucoma: found at an eye exam as a slow rise in pressure": "Open-angle glaucoma is the one with gradual onset; this patient has pain from a closed angle.",
       "Angle-closure glaucoma: gradual onset, no symptoms at first": "Angle closure is painful and an emergency."
      }
+    },
+    {
+     "t": "A 71-year-old man is newly diagnosed with primary open-angle glaucoma. He brings a prescription for latanoprost, 1 drop in both eyes twice daily.",
+     "q": "What is the medication-related problem, and what is the next step?",
+     "o": [
+      "The frequency is too high for a prostaglandin analog, which is dosed once daily; contact the prescriber and get a new prescription",
+      "The frequency is too low; contact the prescriber and ask for 3 drops a day to lower the pressure further",
+      "The dose is too low; tell him to use 2 drops in each eye twice daily",
+      "The prescription is appropriate, so dispense it and counsel on the evening dose"
+     ],
+     "a": 0,
+     "w": "More than once daily decreases the efficacy of a prostaglandin analog, so the frequency is inappropriate: she answered with a call to the provider, clarification of the frequency and a new prescription (slides 24, 25; T@57782, T@57882).",
+     "x": {
+      "The frequency is too low; contact the prescriber and ask for 3 drops a day to lower the pressure further": "Twice daily is more than the once-daily dose, not less, and a higher frequency lowers the efficacy.",
+      "The dose is too low; tell him to use 2 drops in each eye twice daily": "More drops per dose is not the problem; the frequency is the problem.",
+      "The prescription is appropriate, so dispense it and counsel on the evening dose": "Dispensing would pass on the error; the class is once daily."
+     }
+    },
+    {
+     "t": "A woman takes travoprost in the evening, timolol twice daily and brimonidine twice daily. She is adherent and her IOP is still above the goal.",
+     "q": "Using her order of the classes, which addition is most appropriate?",
+     "o": [
+      "Brinzolamide, a topical carbonic anhydrase inhibitor",
+      "Tafluprost, another prostaglandin analog",
+      "Levobunolol, another beta blocker",
+      "Pilocarpine, a cholinergic miotic agent"
+     ],
+     "a": 0,
+     "w": "She takes classes 1, 2 and 3, so the next class is the 4th, the topical carbonic anhydrase inhibitor (slides 63, 64; T@84968).",
+     "x": {
+      "Tafluprost, another prostaglandin analog": "That repeats class 1, which she already takes.",
+      "Levobunolol, another beta blocker": "That repeats class 2, which she already takes.",
+      "Pilocarpine, a cholinergic miotic agent": "That is class 5 and skips class 4."
+     }
+    },
+    {
+     "t": "Mr. Reyes uses Timoptic solution 1 drop in both eyes twice daily and Lumigan at bedtime. He forgets the evening Timoptic and asks for a similar drug taken once daily.",
+     "q": "Which change fits?",
+     "o": [
+      "Change Timoptic to Timoptic XE gel, 1 drop once daily",
+      "Change Timoptic to Betoptic, 1 drop twice daily",
+      "Stop both drugs and start Combigan, 1 drop twice daily",
+      "Stop both drugs and start Cosopt, 1 drop twice daily"
+     ],
+     "a": 0,
+     "w": "The problem is that the evening dose is forgotten, so the frequency has to fall; timolol gel is once daily. Betaxolol, Combigan and Cosopt are all twice daily (slides 32, 37, 69; T@64545).",
+     "x": {
+      "Change Timoptic to Betoptic, 1 drop twice daily": "Betaxolol is also twice daily, so the evening dose remains.",
+      "Stop both drugs and start Combigan, 1 drop twice daily": "Combigan is twice daily, so the evening dose remains, and it replaces the prostaglandin analog he needs.",
+      "Stop both drugs and start Cosopt, 1 drop twice daily": "Cosopt is twice daily, so the evening dose remains, and it replaces the prostaglandin analog he needs."
+     }
+    },
+    {
+     "t": "A patient uses Alphagan P solution and Timoptic XE gel every morning.",
+     "q": "How should the pharmacist counsel the order and the wait?",
+     "o": [
+      "Alphagan P first, wait 10 minutes, then the gel",
+      "The gel first, wait 10 minutes, then Alphagan P",
+      "Alphagan P first, wait 5 minutes, then the gel",
+      "Either one first, wait 5 minutes"
+     ],
+     "a": 0,
+     "w": "A solution goes before a gel-forming product, and the wait before an ointment or gel is at least 10 minutes so the drop reaches the eye first (slides 74, 75; T@88303, T@41604).",
+     "x": {
+      "The gel first, wait 10 minutes, then Alphagan P": "The gel is given last: a solution applied after a gel is washed out or diluted.",
+      "Alphagan P first, wait 5 minutes, then the gel": "5 minutes is the wait between two solutions or a solution and a suspension; the gel needs 10.",
+      "Either one first, wait 5 minutes": "The free choice of order applies only to two solutions."
+     }
+    },
+    {
+     "t": "A woman wears contact lenses and uses dorzolamide three times a day and Combigan twice a day.",
+     "q": "What additional counseling does she need?",
+     "o": [
+      "Remove the lenses before each drop and wait 15 minutes before reinserting them",
+      "Stop wearing lenses, since lenses exclude her from these products",
+      "Wait 5 minutes after the drop, then reinsert the lenses",
+      "Leave the lenses in and press the eyelid corner for 2 minutes"
+     ],
+     "a": 0,
+     "w": "Lenses trap the drug and the preservative against the eye; the lens comes out, the drop goes in, and she waits 15 minutes. Wearing lenses does not exclude a product (slide 83; T@91467).",
+     "x": {
+      "Stop wearing lenses, since lenses exclude her from these products": "She said wearing lenses does not exclude a patient from any product.",
+      "Wait 5 minutes after the drop, then reinsert the lenses": "5 minutes is the wait between two solutions; the lens wait is 15 minutes.",
+      "Leave the lenses in and press the eyelid corner for 2 minutes": "The lenses come out before the drop; eyelid closure does not replace that."
+     }
+    },
+    {
+     "t": "A man starts Combigan today after seeing his ophthalmologist. He asks who checks whether it is working and when.",
+     "q": "What is the correct answer?",
+     "o": [
+      "His eye doctor measures the IOP, 2–4 weeks after the start",
+      "His pharmacist measures the IOP at the counter after 1 week",
+      "His eye doctor measures the IOP only every 3–4 months from today",
+      "No check is needed until a side effect appears"
+     ],
+     "a": 0,
+     "w": "Efficacy is the IOP, which pharmacists do not measure; the first follow-up is 2–4 weeks after the start, and every 3–4 months once the target is reached (slides 86, 87; T@92885, T@93052).",
+     "x": {
+      "His pharmacist measures the IOP at the counter after 1 week": "She said pharmacists do not measure the IOP; the eye doctor does.",
+      "His eye doctor measures the IOP only every 3–4 months from today": "3–4 months applies once the target IOP is achieved; the first visit after a start is at 2–4 weeks.",
+      "No check is needed until a side effect appears": "Efficacy is monitored by the IOP on a schedule, and safety through the side effects."
+     }
     }
    ],
    "numbers": [
@@ -628,23 +1460,47 @@
      "Exam 3 questions",
      "on her part of Exam 3: 18, all on the eye lectures; no Exam 1 material",
      "T@61020 11/13"
+    ],
+    [
+     "25–30%",
+     "her initial IOP reduction target when the baseline IOP is high (handout: above 22 mm Hg)",
+     "Lam Glaucoma slide 14; T@47427 11/19"
+    ],
+    [
+     "1 · 2 · 2 · 3 a day",
+     "prostaglandin analog · beta blocker (gel once) · alpha-2 agonist · topical carbonic anhydrase inhibitor",
+     "Lam Glaucoma slides 19, 32, 42, 51"
+    ],
+    [
+     "5 and 10 minutes",
+     "wait between two solutions or a solution and a suspension (5); before an ointment or gel (10)",
+     "Lam Glaucoma slide 74"
+    ],
+    [
+     "2–4 weeks; 3–4 months",
+     "first follow-up after a start; follow-up once the target IOP is reached",
+     "Lam Glaucoma slide 86"
     ]
    ]
   },
   {
    "id": "allergic-conjunctivitis",
    "name": "Allergic conjunctivitis",
-   "group": "algorithm",
-   "lectures": "Smith 11/13, 11/17 (Exam 3)",
+   "group": "selfcare",
+   "lectures": "Smith 11/17 · Lam 11/20 (Exam 3)",
    "topics": [
-    "ey-ac"
+    "ey-ac",
+    "lo-cj-collect",
+    "lo-cj-plan",
+    "lo-gen",
+    "lo-case"
    ],
    "short": [
-    "Antigen binds IgE on a [[mast-cell|mast cell]]; histamine is released and causes itching, swelling and redness.",
-    "Ophthalmic antihistamines are H1 inverse agonists; most also stabilize mast cells.",
-    "Mast cell stabilization prevents the release, so those drugs can be started before exposure; cetirizine does not have it.",
-    "Alpha 2 agonists are vasoconstrictors: they reduce redness and edema.",
-    "The combination product is naphazoline with pheniramine."
+    "Antigen binds IgE on a [[mast-cell|mast cell]]; histamine is released and causes itching, swelling and redness. Itching is the sign that separates allergic conjunctivitis from bacterial or viral conjunctivitis.",
+    "First line (Dr. Lam): artificial tears plus an OTC ophthalmic dual-acting agent (antihistamine and mast cell stabilizer). Ophthalmic antihistamines are H1 inverse agonists; most also stabilize mast cells; cetirizine does not.",
+    "Decongestants (alpha 2 agonists) reduce redness only, and are limited to 72 hours. An oral second-generation antihistamine is added when the ophthalmic products do not work.",
+    "Refer when pain, trauma, chemical exposure, heat exposure, blurred vision, light sensitivity or eyelid infection is present, or when there is no benefit after 72 hours of appropriate treatment.",
+    "Order of application: solution, suspension, ointment or gel; wait 5 minutes between solutions and 10 minutes before a gel; contact lenses out, back in after 15 minutes."
    ],
    "steps": [
     {
@@ -815,7 +1671,7 @@
       "sm"
      ],
      "q": "What do the alpha 2 agonists do in the eye, and which class treats which symptom?",
-     "src": "Eye slides 52, 56–59; T@52180, T@52690, T@53936 11/17",
+     "src": "Eye slides 52, 56–59; T@52180, T@52690, T@53936 11/17; Eye slide 8",
      "blocks": [
       {
        "rows": [
@@ -883,6 +1739,340 @@
        "p": "sm",
        "pts": [
         "The same drug that decreases inflow in glaucoma; here it is a vasoconstrictor that reduces redness"
+       ]
+      },
+      {
+       "k": "facts",
+       "p": "sm",
+       "rows": [
+        [
+         "Conflict: phenylephrine",
+         "Slide 57 lists phenylephrine among the alpha 2 agonists, as does the drug chart (p. 3, Altafrin); slide 8 lists it under alpha 1 agonists, with brimonidine and apraclonidine under alpha 2. She said there is no need to memorize slides 8 or 9 (STYLE.md hint 3)"
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Is it allergic? Self-care or refer, goals and non-drug measures (Dr. Lam)",
+     "profs": [
+      "la"
+     ],
+     "q": "What separates allergic from bacterial or viral conjunctivitis, when is the patient referred, and which non-drug measure fits which cause?",
+     "src": "Lam Ophthalmic slides 25–31, 33–34; handout; T@21143, T@21906, T@22420, T@22972, T@24910, T@43654 11/20",
+     "blocks": [
+      {
+       "k": "facts",
+       "p": "la",
+       "rows": [
+        [
+         "What it is",
+         "Conjunctivitis is inflammation of the conjunctiva (slide 26)"
+        ],
+        [
+         "Every type tears",
+         "Tearing is the body's way to get rid of whatever is in the eye: an allergen, a virus or bacteria (T@21143)"
+        ],
+        [
+         "The sign that separates them",
+         "{{Itching}} marks allergic conjunctivitis: the allergen causes histamine release and mast cell degranulation. Bacterial and viral conjunctivitis produce crusting instead. She told the class to memorize this difference, mainly the itch (slides 28, 29; T@21906, T@22420)"
+        ],
+        [
+         "Allergic types (slide 29)",
+         [
+          "Seasonal: itching, tearing, red eyes",
+          "Vernal (spring): itching, mucous discharge, red eyes",
+          "Giant papillary: itching, contact lens intolerance, mucous discharge, red eyes"
+         ]
+        ],
+        [
+         "What she treats",
+         "Allergic conjunctivitis is the one she can treat; bacterial and viral conjunctivitis go to a provider (T@21540)"
+        ]
+       ]
+      },
+      {
+       "k": "facts",
+       "p": "la",
+       "rows": [
+        [
+         "Refer, do not self-treat, if",
+         [
+          "Eye pain",
+          "Ocular trauma",
+          "{{Chemical exposure}}",
+          "Eye exposure to heat (not sun exposure)",
+          "Blurred vision not due to the use of eye ointments",
+          "{{Light sensitivity}}",
+          "Signs of eyelid infection (red, thickened, scaling eyelids), except a stye"
+         ]
+        ],
+        [
+         "Why",
+         "She said there is no OTC antibiotic or antiviral, and a patient who looks like they have an infection or damage to the eye needs the eye doctor (slide 30; T@22972, T@6147)"
+        ]
+       ]
+      },
+      {
+       "k": "facts",
+       "p": "la",
+       "rows": [
+        [
+         "Four treatment goals",
+         [
+          "{{Remove or avoid the allergen}}",
+          "Limit or reduce the severity of the allergic reaction",
+          "Provide symptomatic relief",
+          "Protect the ocular surface"
+         ]
+        ],
+        [
+         "Non-drug measures",
+         [
+          "Avoid the offending allergen, check the pollen count, keep doors and windows closed",
+          "Apply cold compresses {{3–4 times a day}} to reduce redness and itching (handout)",
+          "Hypoallergenic bedding, wash clothes frequently, bathe or shower before bed, run the air conditioning, use air filters, wear sunglasses outdoors (slide 33)"
+         ]
+        ],
+        [
+         "Match the measure to the cause",
+         "For a pet-dander allergy: wash the clothes frequently, filter the air (T@24910). She said she will not ask warm versus cold compress, but will ask about the non-drug measure that fits the cause of the symptom (T@43654)"
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Treat it (Dr. Lam): artificial tears plus a dual-acting agent, then the other options",
+     "profs": [
+      "la"
+     ],
+     "q": "What is first line, which OTC products and ages, what do decongestants do and for how long, and when is an oral antihistamine added or the patient referred?",
+     "src": "Lam Ophthalmic slides 35–41; handout; T@25400, T@26972, T@27165, T@27562, T@28491, T@29242, T@29723, T@30078, T@31818, T@32498, T@32648 11/20",
+     "blocks": [
+      {
+       "k": "facts",
+       "p": "la",
+       "rows": [
+        [
+         "First line",
+         "{{Artificial tears}} plus an ophthalmic [[dual-acting|dual-acting agent]] (slide 35)"
+        ],
+        [
+         "Artificial tears do",
+         "Wash out the allergen, give some symptom relief and protect the ocular surface (slide 36; T@25400)"
+        ],
+        [
+         "Artificial tears do not",
+         "Heal the eye faster, or reduce viral or bacterial activity (slide 36)"
+        ],
+        [
+         "The dual-acting agent",
+         "Gives symptom relief within minutes up to 30 minutes; it can be used when symptoms are present or chronically, and before the season starts because it takes time to prevent mast cell degranulation (handout; T@26972)"
+        ],
+        [
+         "Her emphasis",
+         "She spends most of the time on the OTC products because they are used most; know the active ingredient in each product, since many are combinations (T@27165, T@29242)"
+        ]
+       ]
+      },
+      {
+       "k": "map",
+       "p": "la",
+       "title": "OTC dual-acting agents (slide 37; strengths and ages from the handout)",
+       "rows": [
+        [
+         "Olopatadine (Pataday, Patanol)",
+         "Several strengths, some once daily and some twice daily; the higher 0.2% and 0.7% are once daily; ages {{2 years}} and older. She will not test which strength is which (T@27562)"
+        ],
+        [
+         "Alcaftadine 0.25%",
+         "1 drop once daily; relief within 3 minutes; ages {{2 years}} and older"
+        ],
+        [
+         "Ketotifen fumarate 0.025%",
+         "1 drop twice daily, about 8–12 hours apart; relief within minutes, often within 30; ages {{3 years}} and older"
+        ],
+        [
+         "Pheniramine / naphazoline (Naphcon-A)",
+         "1–2 drops up to 4 times a day; an antihistamine plus a decongestant; side effects are pupil dilation (anticholinergic), burning and stinging"
+        ],
+        [
+         "Prescription (recognize)",
+         "Azelastine, bepotastine, epinastine, each 1 drop twice daily; she rarely sees them dispensed (slide 37; T@28491)"
+        ]
+       ],
+       "src": "Lam Ophthalmic slide 37; handout"
+      },
+      {
+       "k": "line",
+       "p": "la",
+       "label": "First",
+       "title": "OTC dual-acting agents: pick by the active ingredient",
+       "drugs": [
+        "olopatadine",
+        "alcaftadine",
+        "ketotifen",
+        "naph-pheniramine",
+        "ophthalmic-h1"
+       ],
+       "pts": [
+        "Many OTC eye products are combinations, so the active ingredient decides which one to select (T@29242)",
+        "Pataday, Naphcon-A, alcaftadine and ketotifen are the products she named; ages 2 and older for olopatadine and alcaftadine, 3 and older for ketotifen (slide 37; handout)"
+       ]
+      },
+      {
+       "k": "line",
+       "p": "la",
+       "label": "Mild",
+       "title": "Ophthalmic cetirizine 0.24%",
+       "drugs": [
+        "cetirizine-eye"
+       ],
+       "pts": [
+        "Blocks histamine receptors only, so it is generally used for mild allergic conjunctivitis; it is not a dual-acting agent (slide 38; handout; T@29723)",
+        "It relieves itching and redness for a limited time and needs frequent dosing; prolonged use may cause eye irritation (handout)",
+        "Conflict: the handout gives 1 drop twice daily about 8 hours apart and also says frequent dosing, up to four times a day; she said it \"does require 4 times a day dosing\" (T@29723)"
+       ]
+      },
+      {
+       "k": "line",
+       "p": "la",
+       "label": "Redness",
+       "title": "Decongestants: recognize them",
+       "drugs": [
+        "alpha2-eye"
+       ],
+       "pts": [
+        "Role: reduce redness as local vasoconstrictors; they {{do not diminish the allergic response}}. She said: \"It reduces the redness. That's all it is\" (slide 39; handout; T@30078)",
+        "Naphazoline (OTC), tetrahydrozoline (Visine, OTC) and brimonidine 0.025% (Lumify, OTC). She said to recognize which drugs are decongestants (slide 39; T@31416)",
+        "Limit: about {{72 hours}}. Beyond 72 hours: rebound conjunctival hyperemia, allergic blepharitis, possible precipitation of angle-closure glaucoma, and epithelial [[xerosis|xerosis]] (slide 39)",
+        "Systemic absorption can raise the blood pressure; caution in hypertension, cardiovascular disease and diabetes (slide 39; handout)",
+        "Lumify at this strength is not for glaucoma (T@31626)",
+        "Conflict: the handout line under brimonidine reads \"dosed four times daily x 4 weeks\" and \"Do not use it for allergic conjunctivitis\"; slide 39 lists it among decongestants and she said \"You can only use it for 3 days\" (T@31818)"
+       ]
+      },
+      {
+       "k": "line",
+       "p": "la",
+       "label": "Systemic symptoms",
+       "title": "Second-generation oral antihistamines",
+       "drugs": [
+        "oral-antihistamines-eye"
+       ],
+       "pts": [
+        "Loratadine (Claritin), fexofenadine (Allegra), cetirizine (Zyrtec) (slide 40)",
+        "Slide 40 gives two reasons: systemic symptoms together with the eye symptoms, or symptoms that persist with a topical antihistamine or mast cell stabilizer. In speech and in the handout: when the patient is not responding to the ophthalmic solutions (T@32498)",
+        "Oral antihistamines can dry the eye (handout)"
+       ]
+      },
+      {
+       "k": "facts",
+       "p": "la",
+       "rows": [
+        [
+         "Refer when",
+         "The symptoms do not resolve after {{72 hours}} of appropriate treatment; she said \"if they use the products that you recommended correctly and still no benefit in 3 days, they should go see someone\" (slide 41; T@32648)"
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Giving eye products (Dr. Lam): order, waits, preservatives, lenses, technique and storage",
+     "profs": [
+      "la"
+     ],
+     "q": "In what order are eye products given, how long is the wait, and what do you tell a patient who uses a preservative product or wears contact lenses?",
+     "src": "Lam Ophthalmic slides 42–50; handout; T@33594, T@34146, T@34316, T@35692, T@41604 11/20",
+     "blocks": [
+      {
+       "k": "facts",
+       "p": "la",
+       "rows": [
+        [
+         "Exam weight",
+         "She said the sequence of solution, suspension, ointment or gel is repeated from the glaucoma lecture and is \"very high\" for the exam (T@34316)"
+        ],
+        [
+         "How to work it out",
+         "Identify the formulation first; that sets the order and the time between the products (T@41604)"
+        ]
+       ]
+      },
+      {
+       "k": "map",
+       "p": "la",
+       "title": "Waits and order",
+       "rows": [
+        [
+         "Two solutions",
+         "Wait {{5 minutes}}; either first (slide 44)"
+        ],
+        [
+         "Solution and suspension",
+         "Wait {{5 minutes}}; solution first; shake the suspension well; the suspension goes last because it stays longer in the tear film (slide 44; handout)"
+        ],
+        [
+         "Solution and ointment or gel-forming solution",
+         "Wait at least {{10 minutes}}; drops first, then the ointment or gel (slide 44; handout)"
+        ],
+        [
+         "Order of application",
+         "1 solution, 2 suspension, 3 ointment or gel-forming solution (slide 45)"
+        ],
+        [
+         "Her example",
+         "A patient uses Pataday and timolol gel: the Pataday first, wait 10 minutes because timolol is a gel, then the gel (T@41604)"
+        ]
+       ],
+       "src": "Lam Ophthalmic slides 44–45; handout: the wait stops the first drop being flushed away or diluted by the second"
+      },
+      {
+       "k": "facts",
+       "p": "la",
+       "rows": [
+        [
+         "Preservatives",
+         [
+          "Role: prevent or reduce bacterial growth in multi-dose products (slide 43)",
+          "[[bak|Benzalkonium chloride (BAK)]] is the most common; others are chlorhexidine, methylparaben, propylparaben, Purite and thimerosal (slide 43)",
+          "Side effect: ocular irritation; a burning sensation may be the preservative, and the fix is a preservative-free product in a unit-dose dispenser (handout; T@33594)"
+         ]
+        ],
+        [
+         "Preservative-free products",
+         "Less irritation, but more expensive and they contaminate more easily: counsel strict hygiene, wash the hands, do not touch the eyelid with the dropper, and discard what is left after use (handout; T@34146)"
+        ],
+        [
+         "Contact lenses",
+         [
+          "Lenses trap the drug and the preservative against the surface of the eye (slide 46; handout)",
+          "Remove the lenses before the drop and wait {{15 minutes}} before reinserting, especially with products that contain BAK (slide 46; T@35692)",
+          "Conflict: one handout line reads as an instruction to use BAK drops with lenses (\"It is imperative to use drops containing preservatives like BAK because it's damaging to the eyes when used with contacts\"); slide 46 and her speech say to wait 15 minutes"
+         ]
+        ]
+       ]
+      },
+      {
+       "k": "facts",
+       "p": "la",
+       "rows": [
+        [
+         "Eye drop",
+         "Wash the hands and remove the lenses; tilt the head back and pull the lower outer eyelid out to make a pouch; look at the dropper; release the eyelid slowly; close the eyes gently and press the inside corners; blot the excess (slide 48)"
+        ],
+        [
+         "Eye ointment",
+         "A strip of 1/4 to 1/2 inch inside the lower lid; keep the tube from touching the eye; release the lid slowly and keep the eyes closed 1–2 minutes (slide 49)"
+        ],
+        [
+         "Storage and expiration",
+         [
+          "Discard drops {{30 days}} after opening; the manufacturer's expiration date does not apply once opened (slide 50)",
+          "Handout: a solution can be refrigerated before instilling if the patient has trouble telling that it hits the eye (check the product); do not refrigerate suspensions"
+         ]
+        ]
        ]
       }
      ]
@@ -973,6 +2163,91 @@
       "Cetirizine": "Its CNS penetration is negligible, but it still causes drowsiness.",
       "Epinastine": "Its feature is the H2 antagonism that may reduce eyelid edema."
      }
+    },
+    {
+     "t": "A woman has itchy, watery eyes since sorting boxes in a dusty attic. No nasal congestion; she has tried nothing. She has glaucoma and uses Xalatan at bedtime and timolol gel each morning.",
+     "q": "What should she start?",
+     "o": [
+      "A dual-acting drop such as Pataday plus artificial tears",
+      "Lumify plus ketotifen",
+      "Alcaftadine plus an oral antihistamine such as Allegra",
+      "A physician referral instead of any OTC product"
+     ],
+     "a": 0,
+     "w": "Itching and watery eyes after an exposure point to allergic conjunctivitis; first line is artificial tears (wash out the allergen) plus a dual-acting agent (relieves the itch) (slides 35, 53; T@40364). She said antihistamine use for the short term is acceptable in glaucoma; the concern is chronic use of anticholinergic antihistamines (T@42416).",
+     "x": {
+      "Lumify plus ketotifen": "Lumify only reduces redness and is limited to 72 hours; it does not treat the itch.",
+      "Alcaftadine plus an oral antihistamine such as Allegra": "An oral antihistamine is added for systemic symptoms or when the ophthalmic drops do not work; she has neither yet.",
+      "A physician referral instead of any OTC product": "None of the exclusions is present (pain, trauma, chemical or heat exposure, blurred vision, light sensitivity, eyelid infection), so self-care is appropriate."
+     }
+    },
+    {
+     "t": "A man uses alcaftadine solution and timolol gel in the morning.",
+     "q": "How should the pharmacist counsel the order and the wait?",
+     "o": [
+      "Alcaftadine first, wait 10 minutes, then the gel",
+      "The gel first, wait 10 minutes, then alcaftadine",
+      "Alcaftadine first, wait 5 minutes, then the gel",
+      "The gel first, wait 5 minutes, then alcaftadine"
+     ],
+     "a": 0,
+     "w": "A solution goes before a gel-forming product and the wait is at least 10 minutes (slides 44, 45; T@41604).",
+     "x": {
+      "The gel first, wait 10 minutes, then alcaftadine": "The gel is last in the order of application.",
+      "Alcaftadine first, wait 5 minutes, then the gel": "5 minutes is the wait for two solutions or a solution and a suspension; before a gel it is at least 10.",
+      "The gel first, wait 5 minutes, then alcaftadine": "Both the order and the wait are wrong."
+     }
+    },
+    {
+     "t": "A man has itchy, red eyes for 2 days and says bright light hurts his eyes.",
+     "q": "What is the best action?",
+     "o": [
+      "Refer him to an eye doctor, because light sensitivity is an exclusion for self-treatment",
+      "Recommend Pataday and artificial tears, then refer after 72 hours",
+      "Recommend naphazoline/pheniramine, 1–2 drops up to 4 times a day",
+      "Recommend ophthalmic cetirizine and warm compresses"
+     ],
+     "a": 0,
+     "w": "Light sensitivity is one of the exclusions; she said there is nothing OTC to recommend for a patient with damage to the eye (slide 30; T@6147).",
+     "x": {
+      "Recommend Pataday and artificial tears, then refer after 72 hours": "The 72-hour rule applies to patients who qualify for self-care; he does not.",
+      "Recommend naphazoline/pheniramine, 1–2 drops up to 4 times a day": "He is excluded from self-treatment, so no OTC product starts.",
+      "Recommend ophthalmic cetirizine and warm compresses": "He is excluded from self-treatment, and the compress for allergic conjunctivitis is cold."
+     }
+    },
+    {
+     "t": "A woman has itchy, watery eyes and sneezing with a runny nose every spring.",
+     "q": "Which treatment is appropriate in addition to artificial tears?",
+     "o": [
+      "A dual-acting eye drop and an oral second-generation antihistamine",
+      "Naphazoline four times a day for two weeks to clear the redness",
+      "Ophthalmic cetirizine alone, without artificial tears, four times a day",
+      "Only warm compresses to the eyes until the season has ended"
+     ],
+     "a": 0,
+     "w": "Slide 40 lists systemic symptoms together with the eye symptoms as a reason for an oral second-generation antihistamine; the first line for the eyes is still artificial tears plus a dual-acting agent (slides 35, 40).",
+     "x": {
+      "Naphazoline four times a day for two weeks to clear the redness": "Decongestants are limited to about 72 hours and reduce redness only.",
+      "Ophthalmic cetirizine alone, without artificial tears, four times a day": "Cetirizine only blocks histamine receptors, is for mild disease, and artificial tears are part of first line.",
+      "Only warm compresses to the eyes until the season has ended": "The non-drug measure for allergic conjunctivitis is the cold compress, and drug therapy is first line when symptoms are present."
+     }
+    },
+    {
+     "t": "A man with hypertension has red eyes and asks to use Visine every 2 hours for a week.",
+     "q": "What should the pharmacist tell him?",
+     "o": [
+      "It only reduces redness, is limited to about 72 hours, and can raise blood pressure",
+      "He may use it for a week if he also uses artificial tears, since tears protect the eye",
+      "It treats the allergic reaction itself, so it can be used until the redness has cleared",
+      "Visine is safe for the eyes at any frequency, so only the time between doses matters"
+     ],
+     "a": 0,
+     "w": "Decongestants reduce redness without diminishing the allergic response; beyond 72 hours they cause rebound redness and other problems, and absorbed drug can raise the blood pressure (slide 39).",
+     "x": {
+      "He may use it for a week if he also uses artificial tears, since tears protect the eye": "Artificial tears do not remove the 72-hour limit.",
+      "It treats the allergic reaction itself, so it can be used until the redness has cleared": "They do not diminish the allergic response, and use beyond 72 hours causes rebound hyperemia.",
+      "Visine is safe for the eyes at any frequency, so only the time between doses matters": "The duration is the problem, and hypertension needs caution because of systemic absorption."
+     }
     }
    ],
    "numbers": [
@@ -1005,24 +2280,50 @@
      "1",
      "combination product: naphazoline/pheniramine",
      "Eye slide 59"
+    ],
+    [
+     "72 hours",
+     "limit for a decongestant; refer if there is no benefit after appropriate treatment",
+     "Lam Ophthalmic slides 39, 41"
+    ],
+    [
+     "2 years · 3 years",
+     "olopatadine and alcaftadine from age 2; ketotifen from age 3",
+     "Lam Ophthalmic slide 37; handout"
+    ],
+    [
+     "5 · 10 · 15 minutes",
+     "wait between solutions · before an ointment or gel · before reinserting contact lenses",
+     "Lam Ophthalmic slides 44–46"
+    ],
+    [
+     "30 days",
+     "discard eye drops this long after opening",
+     "Lam Ophthalmic slide 50"
     ]
    ]
   },
   {
    "id": "dry-eye",
    "name": "Dry eye",
-   "group": "algorithm",
-   "lectures": "Smith 11/13, 11/17 (Exam 3)",
+   "group": "selfcare",
+   "lectures": "Smith 11/13, 11/17 · Lam 11/20 (Exam 3)",
    "topics": [
     "ey-de",
-    "ey-anat"
+    "ey-anat",
+    "lo-de-collect",
+    "lo-de-assess",
+    "lo-de-plan",
+    "lo-de-rx",
+    "lo-gen",
+    "lo-case"
    ],
    "short": [
-    "[[ksc|Keratoconjunctivitis sicca]]: inflammation reduces tear production; common, with age and female gender as risk factors.",
-    "The prescription drugs are not first line; they act on the inflammation.",
-    "Cyclosporine: a calcineurin inhibitor; blocks IL-2 production. Loteprednol: a corticosteroid.",
-    "Lifitegrast: blocks LFA-1 binding to ICAM-1. Contact lenses out before the drop, back in after 15 minutes.",
-    "Intranasal varenicline: a nicotinic receptor agonist that increases tear production through the trigeminal nerve."
+    "[[ksc|Keratoconjunctivitis sicca]]: inflammation reduces tear production; common, with age and female gender as risk factors. It feels sandy or gritty, and the eye is normal or mildly red.",
+    "Dr. Lam: refer every patient with a first episode to an eye doctor; OTC artificial tears can be used while waiting. Exclusions: eye pain, trauma, chemical or heat exposure, blurred vision, light sensitivity, eyelid infection.",
+    "Find and remove the cause (dry air, screens, offending drugs). Artificial tears first line, with no set duration; a bland ointment or gel is the longer-lasting step, and it blurs vision.",
+    "Prescription drugs are not first line: cyclosporine (about 6 months), lifitegrast (about 12 weeks), a topical corticosteroid (very short term), varenicline nasal spray (about 4 weeks).",
+    "Cyclosporine: a calcineurin inhibitor; blocks IL-2 production. Lifitegrast: blocks LFA-1 binding to ICAM-1; contact lenses out before the drop, back in after 15 minutes. Varenicline: a nicotinic receptor agonist that increases tear production."
    ],
    "steps": [
     {
@@ -1229,6 +2530,286 @@
        "p": "sm"
       }
      ]
+    },
+    {
+     "title": "Collect and assess (Dr. Lam): what causes it, how it looks, and who is referred",
+     "profs": [
+      "la"
+     ],
+     "q": "Which drugs contribute to dry eye, how does it look and feel, what are the goals, and who is referred?",
+     "src": "Lam Ophthalmic slides 2–11; handout; T@3556, T@5102, T@5395, T@5640, T@6147, T@6344, T@43228 11/20",
+     "blocks": [
+      {
+       "k": "facts",
+       "p": "la",
+       "rows": [
+        [
+         "Risk factors",
+         [
+          "Older age; female",
+          "Environment: dry or dusty working situations, heating and air-conditioning that reduce humidity (handout)"
+         ]
+        ],
+        [
+         "Drugs behind it (most common; often chronic use)",
+         [
+          "{{Preservatives}} such as benzalkonium chloride: ocular surface irritation",
+          "Drugs with {{anticholinergic}} properties (antihistamines, certain antidepressants): abnormal tear production",
+          "Diuretics",
+          "Decongestants",
+          "Oral contraceptives or hormone-replacement agents",
+          "Corticosteroids, systemic or inhaled"
+         ]
+        ],
+        [
+         "In a medication review",
+         "Look at the inactive ingredients: the preservative can irritate the eye (T@3556)"
+        ],
+        [
+         "Not tested (her words)",
+         "Mild versus severe dry eye (T@5395). The comorbidities, deficiencies and surgery are marked FYI in the handout; the pathophysiology was Dr. Smith's"
+        ]
+       ]
+      },
+      {
+       "k": "facts",
+       "p": "la",
+       "rows": [
+        [
+         "How it looks and feels",
+         [
+          "Normal-appearing white sclera or a mildly red eye",
+          "A sandy, gritty feeling or a sensation of something in the eye (foreign body sensation)",
+          "Excessive tearing often shows first"
+         ]
+        ],
+        [
+         "Three goals",
+         [
+          "{{Alleviate dryness}}",
+          "Relieve irritation",
+          "Prevent damage"
+         ]
+        ]
+       ]
+      },
+      {
+       "k": "facts",
+       "p": "la",
+       "rows": [
+        [
+         "First episode",
+         "{{Refer every patient}} with suspected dry eye to an ophthalmologist or optometrist, especially with pain or visual disturbance; a patient with no eye doctor needs to establish one (slide 10; T@5102, T@5640)"
+        ],
+        [
+         "Meanwhile",
+         "{{OTC artificial tears}} can be recommended while the patient waits for the appointment (slide 10)"
+        ],
+        [
+         "Exclusions for self-treatment",
+         [
+          "Eye pain",
+          "Ocular trauma",
+          "Chemical exposure",
+          "Eye exposure to heat (not sun exposure)",
+          "Blurred vision not due to the use of eye ointments",
+          "Light sensitivity",
+          "Signs of eyelid infection (red, thickened, scaling eyelids), except a stye"
+         ]
+        ],
+        [
+         "Why",
+         "She said an artificial tear cannot fix damage to the eye; for intense eye pain, as in closed-angle glaucoma, the treatment is surgery, not medication (slide 11; T@6147, T@6344)"
+        ],
+        [
+         "Her case",
+         "A man has a first episode of gritty eyes with mild irritation that worsens at the end of the day, visual disturbances, mild redness, no lid swelling or infection, and takes Benadryl for seasonal allergic rhinitis. It is dry eye: the gritty sensation, the mild irritation and a risk factor, the anticholinergic antihistamine (slides 55, 56; T@43228)"
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Plan (Dr. Lam): find the cause, then lubricants: tears, ointment, gel",
+     "profs": [
+      "la"
+     ],
+     "q": "Which non-drug measure fits which cause, and how do artificial tears, ointments and gels differ?",
+     "src": "Lam Ophthalmic slides 12–16; handout; T@6948, T@8830, T@10376, T@11878, T@12073, T@12897 11/20",
+     "blocks": [
+      {
+       "k": "facts",
+       "p": "la",
+       "rows": [
+        [
+         "What she tests",
+         "What to recommend over the counter, and the non-drug measures; the non-drug measure depends on what is irritating the eye (T@6948)"
+        ],
+        [
+         "Find the cause first",
+         "\"Trying to figure out what is causing the issue, making recommendation to remove the root of the issue if possible\" (T@8830)"
+        ],
+        [
+         "Improve evaporation of the tear film",
+         [
+          "Avoid dry or dusty places and environments that increase evaporation",
+          "Use a humidifier",
+          "Move the workstation away from heating and air-conditioning vents",
+          "Avoid prolonged computer screens",
+          "Wear eye protection (sunglasses, goggles, blue light glasses) in windy, outdoor places"
+         ]
+        ],
+        [
+         "Improve eyelid function and lipid production",
+         [
+          "Apply {{warm compresses}}",
+          "Discontinue any offending agent, for example a switch to preservative-free drops",
+          "Keep good eyelid hygiene"
+         ]
+        ]
+       ]
+      },
+      {
+       "k": "line",
+       "p": "la",
+       "label": "First",
+       "title": "Artificial tears",
+       "drugs": [
+        "artificial-tears"
+       ],
+       "pts": [
+        "Dose: 1–2 drops once or twice a day, typically on waking and before bed; severe cases can use 3–4 times a day up to hourly (slide 14; handout)",
+        "Duration: as long as the patient responds, {{with no set limit}}: \"there is no limitation how long you have to be on artificial teardrops\" (T@10376)",
+        "Products vary by viscosity: a higher viscosity gives a longer contact time. {{Preservative-free}} is preferred for moderate to severe disease or a patient sensitive to preservatives (slide 14; handout)"
+       ]
+      },
+      {
+       "k": "line",
+       "p": "la",
+       "label": "Longer lasting",
+       "title": "Bland ointment or gel",
+       "drugs": [
+        "ophthalmic-ointment-gel"
+       ],
+       "pts": [
+        "Active ingredients: petrolatum, mineral oil, lanolin. The ointment has a longer retention time; the side effects are {{blurry vision}} (so it is generally given at bedtime) and hypersensitivity (slide 15; handout)",
+        "Hypersensitivity: change to a single-use or preservative-free product. Blur: combine the ointment with artificial tears to offset it (handout)",
+        "Gel: less blurry vision than the ointment, better tolerance (slide 15; handout). Instructions: as needed, twice daily or every few hours",
+        "Her exam pattern: a patient wants something that lasts longer than artificial tears; the options are to say no and continue the drops, or to use the ointment and give the counseling point (T@11878, T@12073)"
+       ]
+      },
+      {
+       "k": "facts",
+       "p": "la",
+       "rows": [
+        [
+         "Supplements",
+         "Omega fatty acid and antioxidants (slide 16). The handout says omega fatty acid inhibits proinflammatory cytokine production and T-lymphocyte proliferation and antioxidants prevent oxidative cellular injury; she said there is little literature on OTC and nutritional supplements (T@12897)"
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Implement (Dr. Lam): the prescription drugs, how long, side effects and how to use them",
+     "profs": [
+      "la"
+     ],
+     "q": "What dose, length of therapy and side effects go with cyclosporine, lifitegrast, a corticosteroid and varenicline, and what are the steps of TEAR?",
+     "src": "Lam Ophthalmic slides 17–22, 44–46; handout; T@13168, T@13596, T@15107, T@16231, T@44594 11/20",
+     "blocks": [
+      {
+       "k": "facts",
+       "p": "la",
+       "rows": [
+        [
+         "Her role",
+         "Pharmacists are often not choosing which drug the patient needs, but dispense it, check the dosing and counsel on what to expect (T@13168)"
+        ]
+       ]
+      },
+      {
+       "k": "map",
+       "p": "la",
+       "title": "Prescription drugs for dry eye",
+       "rows": [
+        [
+         "Cyclosporine, topical (Restasis, Cequa)",
+         "1 drop in each eye twice daily · about {{6 months}} or longer · burning, stinging, itching, foreign body sensation"
+        ],
+        [
+         "Lifitegrast (Xiidra)",
+         "1 drop in each eye twice daily · about {{12 weeks}} · dysgeusia (taste distortion), application site irritation, decreased visual acuity"
+        ],
+        [
+         "Topical corticosteroids (loteprednol, fluorometholone, dexamethasone, prednisolone)",
+         "Short term; the handout says usually up to two weeks · not with ocular hypertension, cataracts or active infection"
+        ],
+        [
+         "Varenicline nasal spray (Tyrvaya)",
+         "1 spray in each nostril twice daily · about {{4 weeks}} · cough, sneezing, throat irritation"
+        ]
+       ],
+       "src": "Lam Ophthalmic slides 17–21; handout; T@13596, T@15107"
+      },
+      {
+       "k": "pts",
+       "p": "la",
+       "items": [
+        "Cyclosporine interval: the handout says about 12 hours apart; she said an 8 to 12 hour difference (T@13596). The foreign body sensation it causes is the same feeling dry eye gives",
+        "Corticosteroids: the slide gives no dose; she said the only thing to know is that they are used for a very short time, because chronic use has serious side effects, glaucoma among them (slide 20; T@15107)"
+       ]
+      },
+      {
+       "k": "sub",
+       "p": "la",
+       "text": "Varenicline spray: TEAR (slide 22)"
+      },
+      {
+       "k": "facts",
+       "p": "la",
+       "rows": [
+        [
+         "Prime",
+         "Press the pump 7 times into the air, away from the face; do not spray into the eye or mouth"
+        ],
+        [
+         "T",
+         "{{Tilt}} the tip toward the ear nearest that nostril (handout); she said \"tilt towards the ear, away from the nostril\" (T@16231)"
+        ],
+        [
+         "E",
+         "{{Elevate}} the tongue to the roof of the mouth (handout); she said \"to the back of your mouth\" (T@16231)"
+        ],
+        [
+         "A",
+         "{{Administer}} by pressing the applicator down completely"
+        ],
+        [
+         "R",
+         "{{Resist}} inhaling the mist, which prevents the cough (T@16231)"
+        ],
+        [
+         "Shaking",
+         "She first said to shake it (T@16231), then corrected herself: do not shake it, pump it 7 times (T@44594). The handout says do not shake"
+        ]
+       ]
+      },
+      {
+       "k": "facts",
+       "p": "la",
+       "rows": [
+        [
+         "More than one eye product",
+         "Wait {{5 minutes}} between two solutions; 10 minutes before an ointment or gel; the order is solution, suspension, ointment or gel; contact lenses out and back in after 15 minutes (slides 44–46)"
+        ],
+        [
+         "Not on Exam 3",
+         "The compounding calculation (cyclosporine 2% in corn oil) and its day supply, slides 23–24 (T@20034)"
+        ]
+       ]
+      }
+     ]
     }
    ],
    "patients": [
@@ -1316,6 +2897,91 @@
       "The lipid layer from the meibomian glands": "The anterior lipid layer comes from the meibomian glands at the eyelid margin.",
       "The immunoglobulin layer on the cornea": "Immunoglobulins are contents of the tears, not a layer."
      }
+    },
+    {
+     "t": "A woman has gritty, mildly irritated eyes that worsen by evening, with some blurring. This has never happened before. Both eyes are mildly red with no lid swelling, nodules or infection. She takes Benadryl for seasonal allergies.",
+     "q": "What is she most likely experiencing?",
+     "o": [
+      "Dry eye, because of the gritty feeling and the anticholinergic antihistamine",
+      "Allergic conjunctivitis, because she has seasonal allergies",
+      "Viral conjunctivitis, because both eyes are red",
+      "Bacterial conjunctivitis, because the eyes are irritated"
+     ],
+     "a": 0,
+     "w": "A gritty sensation with mild irritation and a risk factor, an antihistamine with anticholinergic properties, is dry eye (slides 6, 7; T@43228).",
+     "x": {
+      "Allergic conjunctivitis, because she has seasonal allergies": "Allergic conjunctivitis itches and tears after an exposure; the picture here is gritty and irritated.",
+      "Viral conjunctivitis, because both eyes are red": "Viral conjunctivitis tears and may crust on waking; there are no signs of infection here.",
+      "Bacterial conjunctivitis, because the eyes are irritated": "Bacterial conjunctivitis produces tearing and lid crusting; there is none here."
+     }
+    },
+    {
+     "t": "The woman above is referred to her provider. In the meantime she asks what she can start.",
+     "q": "Which product is appropriate?",
+     "o": [
+      "Artificial tear solution",
+      "Topical antihistamine ophthalmic solution",
+      "Ophthalmic decongestant solution",
+      "A second-generation oral antihistamine"
+     ],
+     "a": 0,
+     "w": "Every first-time patient is referred, and artificial tears can be recommended in the meantime; she said all the other options treat an allergen (slides 10, 57; T@43654).",
+     "x": {
+      "Topical antihistamine ophthalmic solution": "It treats an allergen, and she takes an antihistamine that may be part of the cause.",
+      "Ophthalmic decongestant solution": "It reduces redness only and is limited to about 72 hours.",
+      "A second-generation oral antihistamine": "Oral antihistamines can dry the eye."
+     }
+    },
+    {
+     "t": "A man uses artificial tears every 15 minutes and wants something that lasts longer.",
+     "q": "What is the best advice?",
+     "o": [
+      "Use a bland ointment or gel, mainly at bedtime, and warn that an ointment blurs the vision",
+      "Continue the drops only, because an ointment is never appropriate",
+      "Start cyclosporine today and stop the drops",
+      "Switch to a decongestant, up to 4 times a day"
+     ],
+     "a": 0,
+     "w": "An ointment or gel lasts longer because of its retention time; the counseling point is the blurred vision, and a gel is better tolerated (slide 15; T@12073).",
+     "x": {
+      "Continue the drops only, because an ointment is never appropriate": "She named the ointment with its counseling point as an acceptable answer.",
+      "Start cyclosporine today and stop the drops": "A prescription drug is not first line and the patient is referred for it; the drops continue.",
+      "Switch to a decongestant, up to 4 times a day": "Decongestants reduce redness only and do not treat dry eye."
+     }
+    },
+    {
+     "t": "A man with dry eye also reports that light hurts his eyes.",
+     "q": "Which finding is an exclusion that sends him to an eye doctor instead of self-treatment?",
+     "o": [
+      "Light sensitivity",
+      "A gritty, sandy feeling",
+      "Excessive tearing",
+      "A mildly red eye"
+     ],
+     "a": 0,
+     "w": "Light sensitivity is on the exclusion list; a sandy feeling, tearing and a mildly red eye are the usual presentation of dry eye (slides 7, 11).",
+     "x": {
+      "A gritty, sandy feeling": "This is part of the usual clinical presentation.",
+      "Excessive tearing": "Excessive tearing often shows first in dry eye.",
+      "A mildly red eye": "A normal-appearing or mildly red eye is part of the presentation."
+     }
+    },
+    {
+     "t": "A patient is starting lifitegrast and asks how long to expect to use it.",
+     "q": "What is the expected length of therapy?",
+     "o": [
+      "About 12 weeks",
+      "About 4 weeks",
+      "About 6 months or longer",
+      "About 2 weeks"
+     ],
+     "a": 0,
+     "w": "Lifitegrast about 12 weeks, cyclosporine about 6 months or longer, varenicline nasal spray about 4 weeks (slides 18, 19, 21; handout).",
+     "x": {
+      "About 4 weeks": "That is the expected length for varenicline nasal spray.",
+      "About 6 months or longer": "That is the expected length for cyclosporine.",
+      "About 2 weeks": "Up to two weeks is the usual length of a topical corticosteroid in the handout, not of lifitegrast."
+     }
     }
    ],
    "numbers": [
@@ -1358,6 +3024,371 @@
      "2021",
      "FDA licensed the nasal spray for dry eye (final half of the year)",
      "Eye slide 73"
+    ],
+    [
+     "6 months · 12 weeks · 4 weeks",
+     "expected length of cyclosporine · lifitegrast · varenicline nasal spray",
+     "Lam Ophthalmic slides 18, 19, 21; handout"
+    ],
+    [
+     "1–2 drops, 1–2 times a day",
+     "artificial tears; up to 3–4 times daily or hourly in severe cases; no set limit",
+     "Lam Ophthalmic slide 14; T@10376 11/20"
+    ],
+    [
+     "7 times",
+     "pump presses to prime the varenicline nasal spray",
+     "Lam Ophthalmic slide 22; handout"
+    ]
+   ]
+  },
+  {
+   "id": "bacterial-viral-conjunctivitis",
+   "name": "Bacterial and viral conjunctivitis",
+   "group": "selfcare",
+   "lectures": "Lam 11/20 (Exam 3)",
+   "topics": [
+    "lo-cj-collect"
+   ],
+   "short": [
+    "Conjunctivitis is inflammation of the conjunctiva. Every type tears; allergic conjunctivitis itches; bacterial and viral conjunctivitis crust.",
+    "Bacterial: acute (tearing, lid crusting) or chronic (lid crusting). Viral: adenoviral (tearing, lid crusting on waking) or herpetic (tearing).",
+    "The same seven exclusions as dry eye send the patient to a physician; there is no OTC antibiotic or antiviral.",
+    "While the patient waits for the eye doctor: cold compresses. Refer if there is no benefit after 72 hours of appropriate treatment."
+   ],
+   "steps": [
+    {
+     "title": "What it is, and what every type shares",
+     "profs": [
+      "la",
+      "sm"
+     ],
+     "q": "What is conjunctivitis, which symptom do all types share, and why does allergic conjunctivitis itch while bacterial and viral conjunctivitis crust?",
+     "src": "Lam Ophthalmic slides 25–29; handout; T@21143, T@21540, T@21906 11/20; Smith T@39661 11/17",
+     "blocks": [
+      {
+       "k": "facts",
+       "p": "la",
+       "rows": [
+        [
+         "What it is",
+         "Conjunctivitis, \"pink eye\", is inflammation of the conjunctiva (slide 26; handout)"
+        ],
+        [
+         "Every type tears",
+         "{{Tearing}} is the body's way to get rid of whatever is in the eye, whether an allergen, a virus or bacteria (T@21143)"
+        ],
+        [
+         "Why bacterial and viral crust",
+         "The bacteria or the virus produce the crustiness as by-products, and the body makes more tears to get rid of it (T@21906)"
+        ],
+        [
+         "Why allergic itches",
+         "The allergen causes histamine release and mast cell degranulation, and that causes the {{itch}} (T@21906)"
+        ],
+        [
+         "What she can treat",
+         "{{Allergic conjunctivitis}}; bacterial and viral conjunctivitis are referred to the patient's eye doctor or provider (T@21540)"
+        ]
+       ]
+      },
+      {
+       "k": "facts",
+       "p": "sm",
+       "rows": [
+        [
+         "Dr. Smith",
+         "She named bacterial and viral conjunctivitis but did not cover them: her lecture covers allergic conjunctivitis only (T@39661 11/17)"
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Recognize it: what she told the class to memorize",
+     "profs": [
+      "la"
+     ],
+     "q": "Which symptom separates allergic from bacterial or viral conjunctivitis, and what does each type look like?",
+     "src": "Lam Ophthalmic slides 28–29; handout; T@22420, T@22586 11/20",
+     "blocks": [
+      {
+       "k": "facts",
+       "p": "la",
+       "rows": [
+        [
+         "The sign she stressed",
+         "{{Itching}}: allergic conjunctivitis itches; bacterial and viral conjunctivitis crust. She said what to memorize from the two slides is how to tell allergic from bacterial from viral, \"the main thing is going to be that itchiness that patient complains of\" (T@22420, T@22586)"
+        ],
+        [
+         "What was not stressed",
+         "The Condition column (acute, chronic, adenoviral, herpetic, vernal, giant papillary) is marked FYI on slide 28 and in the handout"
+        ]
+       ]
+      },
+      {
+       "k": "map",
+       "p": "la",
+       "title": "Bacterial and viral conjunctivitis (slide 28)",
+       "rows": [
+        [
+         "Bacterial, acute",
+         "Acute onset · tearing, {{lid crusting}} · symptomatic treatment; refer to the provider"
+        ],
+        [
+         "Bacterial, chronic",
+         "Chronic onset · lid crusting · symptomatic treatment; refer to the provider"
+        ],
+        [
+         "Viral, adenoviral",
+         "Acute onset · tearing, lid crusting upon awakening · symptomatic treatment; refer to the provider"
+        ],
+        [
+         "Viral, herpetic",
+         "Acute onset · tearing · symptomatic treatment; refer to the provider"
+        ]
+       ],
+       "src": "Lam Ophthalmic slide 28; handout"
+      },
+      {
+       "k": "map",
+       "p": "la",
+       "title": "Allergic conjunctivitis (slide 29)",
+       "rows": [
+        [
+         "Seasonal",
+         "Seasonal · {{itching}}, tearing, red eyes · symptomatic relief"
+        ],
+        [
+         "Vernal (spring)",
+         "Seasonal · itching, mucous discharge, red eyes · symptomatic relief"
+        ],
+        [
+         "Giant papillary",
+         "Acute · itching, contact lens intolerance, mucous discharge, red eyes · symptomatic relief"
+        ]
+       ],
+       "src": "Lam Ophthalmic slide 29; handout"
+      }
+     ]
+    },
+    {
+     "title": "Self-care or refer: exclusions and goals",
+     "profs": [
+      "la"
+     ],
+     "q": "Which findings send the patient to a provider, is there an OTC antibiotic or antiviral, and what are the four goals?",
+     "src": "Lam Ophthalmic slides 30, 31, 41; handout; T@6147, T@22586, T@22972, T@32648 11/20",
+     "blocks": [
+      {
+       "k": "facts",
+       "p": "la",
+       "rows": [
+        [
+         "Refer, do not self-treat, if",
+         [
+          "Eye pain",
+          "Ocular trauma",
+          "{{Chemical exposure}}",
+          "Eye exposure to heat (not sun exposure)",
+          "Blurred vision not due to the use of eye ointments",
+          "{{Light sensitivity}}",
+          "Signs of eyelid infection (red, thickened, scaling eyelids), except a stye"
+         ]
+        ],
+        [
+         "Same list as dry eye",
+         "She said it is the same exclusion criteria as for dry eye (slide 30; T@22586)"
+        ],
+        [
+         "No OTC treatment for infection",
+         "{{No OTC antibiotic or antiviral}}: \"We don't have over the counter antibiotic or we don't have antiviral medication to treat it\"; the signs of an infected eyelid are thickened, scaling, red lids (T@22972)"
+        ],
+        [
+         "Referral at 72 hours",
+         "If the symptoms do not resolve after {{72 hours}} of appropriate treatment, refer; she said that if the patient used the recommended products correctly and still has no benefit in 3 days, they should see a provider (slide 41; T@32648)"
+        ]
+       ]
+      },
+      {
+       "k": "facts",
+       "p": "la",
+       "rows": [
+        [
+         "Four goals of treatment for conjunctivitis (slide 31)",
+         [
+          "Remove or avoid the allergen",
+          "Limit or reduce the severity of the allergic reaction",
+          "Provide symptomatic relief",
+          "Protect the ocular surface"
+         ]
+        ],
+        [
+         "Note",
+         "The goals as printed name the allergen and the allergic reaction; slide 31 is the only goals slide of the conjunctivitis lecture"
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Treat it: what the pharmacist can do",
+     "profs": [
+      "la"
+     ],
+     "q": "What non-drug advice and OTC products fit bacterial or viral conjunctivitis, and what can not be treated over the counter?",
+     "src": "Lam Ophthalmic slides 34–36; handout; T@25350, T@25400, T@22972 11/20",
+     "blocks": [
+      {
+       "k": "line",
+       "p": "la",
+       "label": "Comfort",
+       "title": "Cold compresses",
+       "drugs": [],
+       "pts": [
+        "The only non-drug measure on slide 34 for viral or bacterial conjunctivitis is {{cold compresses}}",
+        "She said that while the patient waits to see the eye doctor, cold compresses reduce the inflammation in the eye and give a little relief (T@25350, T@25400)"
+       ]
+      },
+      {
+       "k": "line",
+       "p": "la",
+       "label": "Drops",
+       "title": "Artificial tears (and a dual-acting agent)",
+       "drugs": [
+        "artificial-tears",
+        "ophthalmic-h1"
+       ],
+       "pts": [
+        "Slide 35 gives {{artificial tears plus an ophthalmic dual-acting agent}} as first line for allergic, viral and bacterial conjunctivitis; the handout lists the dual-acting agent as first line for allergic conjunctivitis, with bacterial and viral in parentheses (+/-)",
+        "Artificial tears wash out the allergen and protect the ocular surface; they do not heal the eye faster and do not reduce viral or bacterial activity (slide 36)",
+        "Artificial tears do not treat an infection, so a patient with signs of infection is still referred (slides 28, 36)"
+       ]
+      },
+      {
+       "k": "line",
+       "p": "la",
+       "label": "Infection",
+       "title": "Antibiotic or antiviral: a provider's treatment",
+       "drugs": [],
+       "pts": [
+        "The handout lists an antibiotic for bacterial conjunctivitis; it is not an OTC product, and there is no OTC antiviral either (T@22972)",
+        "For bacterial and viral conjunctivitis the table on slide 28 says {{symptomatic treatment}} and refer to a provider"
+       ]
+      }
+     ]
+    }
+   ],
+   "patients": [
+    {
+     "t": "A man has tearing and crusted eyelids for 2 days. He says nothing itches.",
+     "q": "Which type of conjunctivitis fits best?",
+     "o": [
+      "Bacterial or viral conjunctivitis",
+      "Seasonal allergic conjunctivitis",
+      "Vernal (spring) allergic conjunctivitis",
+      "Giant papillary allergic conjunctivitis"
+     ],
+     "a": 0,
+     "w": "Itching marks allergic conjunctivitis; tearing with lid crusting marks bacterial or viral conjunctivitis (slides 28, 29; T@22420).",
+     "x": {
+      "Seasonal allergic conjunctivitis": "The allergic types itch; this patient does not itch.",
+      "Vernal (spring) allergic conjunctivitis": "Vernal conjunctivitis causes itching and a mucous discharge.",
+      "Giant papillary allergic conjunctivitis": "Giant papillary conjunctivitis causes itching and contact lens intolerance."
+     }
+    },
+    {
+     "t": "A woman has crusted eyelids and tearing and asks which OTC antibiotic eye drop she can buy.",
+     "q": "What is the best response?",
+     "o": [
+      "There is no OTC antibiotic or antiviral for it; she should see a provider, with cold compresses meanwhile",
+      "Naphazoline 4 times a day for 7 days, which will clear the infection and the redness together",
+      "A second-generation oral antihistamine, which will treat the infection from the inside",
+      "No referral is needed, because warm compresses for a week will clear an infected eye"
+     ],
+     "a": 0,
+     "w": "She said there is no OTC antibiotic or antiviral; bacterial and viral conjunctivitis are referred, and cold compresses give some relief meanwhile (slides 28, 34; T@22972, T@25400).",
+     "x": {
+      "Naphazoline 4 times a day for 7 days, which will clear the infection and the redness together": "A decongestant reduces redness only, is limited to about 72 hours and does not treat an infection.",
+      "A second-generation oral antihistamine, which will treat the infection from the inside": "Antihistamines treat allergic symptoms, not an infection.",
+      "No referral is needed, because warm compresses for a week will clear an infected eye": "Bacterial and viral conjunctivitis are referred to a provider, and slide 34 lists cold compresses."
+     }
+    },
+    {
+     "t": "A man has a red, watery eye the day after a cleaning solution splashed into it.",
+     "q": "What should the pharmacist do?",
+     "o": [
+      "Refer him to a physician, because chemical exposure is an exclusion for self-treatment",
+      "Recommend Pataday and artificial tears and refer if there is no benefit in 72 hours",
+      "Recommend cold compresses 3–4 times a day and no further care",
+      "Recommend ophthalmic cetirizine twice daily for mild symptoms"
+     ],
+     "a": 0,
+     "w": "Chemical exposure is on the exclusion list; she said anything that looks like damage to the eye cannot be solved with an artificial tear (slide 30; T@6147).",
+     "x": {
+      "Recommend Pataday and artificial tears and refer if there is no benefit in 72 hours": "The 72-hour rule applies to patients who qualify for self-care; he does not.",
+      "Recommend cold compresses 3–4 times a day and no further care": "He is excluded from self-treatment and needs a physician.",
+      "Recommend ophthalmic cetirizine twice daily for mild symptoms": "He is excluded from self-treatment, so no OTC product starts."
+     }
+    },
+    {
+     "t": "A student asks which symptom every type of conjunctivitis shares.",
+     "q": "What is the answer?",
+     "o": [
+      "Tearing",
+      "Itching",
+      "Lid crusting",
+      "Mucous discharge"
+     ],
+     "a": 0,
+     "w": "She said everyone with conjunctivitis tears, because tearing is the body's way to get rid of an allergen, a virus or bacteria (T@21143).",
+     "x": {
+      "Itching": "Itching marks allergic conjunctivitis only.",
+      "Lid crusting": "Crusting marks bacterial and viral conjunctivitis.",
+      "Mucous discharge": "On slide 29 it is listed only for vernal and giant papillary allergic conjunctivitis."
+     }
+    }
+   ],
+   "numbers": [
+    [
+     "Itching",
+     "marks allergic conjunctivitis; not listed for bacterial or viral",
+     "Lam Ophthalmic slides 28–29; T@22420 11/20"
+    ],
+    [
+     "Tearing",
+     "every type of conjunctivitis tears (her words)",
+     "T@21143 11/20"
+    ],
+    [
+     "Lid crusting",
+     "bacterial (acute, chronic) and adenoviral viral (on awakening)",
+     "Lam Ophthalmic slide 28"
+    ],
+    [
+     "Tearing only",
+     "herpetic viral conjunctivitis",
+     "Lam Ophthalmic slide 28"
+    ],
+    [
+     "7",
+     "exclusions for self-treatment, the same list as dry eye",
+     "Lam Ophthalmic slide 30"
+    ],
+    [
+     "0",
+     "OTC antibiotics or antivirals for it",
+     "T@22972 11/20"
+    ],
+    [
+     "Cold compresses",
+     "the only non-drug measure on slide 34; 3–4 times a day for allergic conjunctivitis",
+     "Lam Ophthalmic slides 33–34; handout"
+    ],
+    [
+     "72 hours",
+     "refer if no resolution after appropriate treatment",
+     "Lam Ophthalmic slide 41"
     ]
    ]
   }
@@ -1379,14 +3410,25 @@
    "counsel": [
     "After the drop, gently press the inner corner of the eyelid (by the nose) so the drug does not drain through the tear duct and is absorbed into the body.",
     "Timolol comes as a gel that is given once a day; the other drops are given several times a day.",
-    "Effectiveness is similar across the group; the choice can rest on side effects or insurance coverage."
+    "Effectiveness is similar across the group; the choice can rest on side effects or insurance coverage.",
+    "Local side effects (stinging, dry eyes, blepharitis, blurred vision) are a major counseling point. With an oral beta blocker, check the blood pressure and heart rate, especially when it is started.",
+    "A patient who forgets the evening dose can be changed from timolol solution to the once-daily gel."
    ],
-   "counselSrc": "Eye slide 20; T@16025, T@46338 11/13; T@30444 11/17",
+   "counselSrc": "Eye slide 20; T@16025, T@46338 11/13; T@30444 11/17; Lam Glaucoma slides 33–34, 37; T@61773, T@64545 11/19",
    "avoid": [
     "Asthma: beta 2 blockade can cause bronchospasm (slide 20)",
     "Cardiac patients: bradycardia and hypotension (slide 20); a more selective drug, or the eyelid compression (11/13)",
-    "Levobunolol may be more effective than timolol and betaxolol after cataract surgery (11/13)"
-   ]
+    "Levobunolol may be more effective than timolol and betaxolol after cataract surgery (11/13)",
+    "Asthma or COPD; bradycardia or 2nd or 3rd degree heart block; uncompensated cardiac failure; oral beta-blocker therapy; less risk with betaxolol and carteolol (Lam Glaucoma slide 34)"
+   ],
+   "la": {
+    "text": "Timolol 0.25% and 0.5% (Timoptic, Istalol): 1 drop in the affected eye or eyes twice daily. Timoptic-XE gel: once daily (fewer doses a day, fewer systemic effects than the solution). Betaxolol (Betoptic 0.5%, Betoptic-S 0.25%), carteolol 1% (Ocupress), levobunolol 0.25% and 0.5% (Betagan): twice daily. Betaxolol is less effective than timolol and levobunolol; the Betoptic-S suspension has fewer systemic effects than the solution. Combinations: timolol with dorzolamide (Cosopt, Cosopt PF) and with brimonidine (Combigan), both twice daily. IOP reduction 20–30%.",
+    "src": "Lam Glaucoma slides 31–32, 69; handout; T@58687 11/19"
+   },
+   "sk": {
+    "text": "Aryloxypropanolamines (an aromatic ring, the oxygen next to it, then three carbons carrying the alcohol and the amine): timolol maleate (Timoptic, Log P 1.4), betaxolol HCl (Betoptic, 2.5), levobunolol HCl (Betagan, 2.2), carteolol HCl (Ocupress, 1.4). They decrease aqueous humor production. SAR: more potent than the arylethanolamines; most have mixed beta 1 and beta 2 activity; the S-OH isomers are preferred; most para aryloxypropanolamines such as betaxolol are beta 1 antagonists.",
+    "src": "Sikazwe OOO slides 33–34; T@38474 11/18"
+   }
   },
   "apraclonidine": {
    "name": "Apraclonidine",
@@ -1408,7 +3450,15 @@
    "avoid": [
     "Allergic reaction in the eye (slide 24; 11/13)",
     "Systemic hypotension (slide 24)"
-   ]
+   ],
+   "la": {
+    "text": "Apraclonidine 0.5% and 1% (Iopidine): 1 drop in the affected eye or eyes twice or three times daily; also used for surgical purposes, 1 drop before the procedure. Higher incidence of side effects, which stop on discontinuation. Intolerance: decrease the frequency (this applies only to apraclonidine).",
+    "src": "Lam Glaucoma slides 42, 45; handout"
+   },
+   "sk": {
+    "text": "Apraclonidine HCl (Iopidine, ClogP 0.87) is clonidine plus an aromatic amino group; it is less lipophilic than clonidine (ClogP 1.5), so it does not enter the brain as well and the CNS effects of clonidine are avoided.",
+    "src": "Sikazwe OOO slide 31; T@47120 11/18"
+   }
   },
   "brimonidine": {
    "name": "Brimonidine",
@@ -1439,12 +3489,21 @@
    ],
    "counsel": [
     "Glaucoma: After the drop, gently press the inner corner of the eyelid (by the nose) so the drug does not drain through the tear duct and is absorbed into the body.",
-    "Allergic conjunctivitis: it constricts the blood vessels in the eye, which reduces redness."
+    "Allergic conjunctivitis: it constricts the blood vessels in the eye, which reduces redness.",
+    "Prescription brimonidine for glaucoma is not replaced by OTC Lumify (0.025%), which is for redness."
    ],
-   "counselSrc": "Eye slides 56–57; T@16025 11/13; T@52690 11/17",
+   "counselSrc": "Eye slides 56–57; T@16025 11/13; T@52690 11/17; Lam Glaucoma slide 47; T@74606 11/19",
    "avoid": [
     "Foreign body sensation and itching of the eyes are the notable ocular effects (11/13)"
-   ]
+   ],
+   "la": {
+    "text": "Alphagan P solution, various concentrations: 1 drop in the affected eye or eyes twice daily. Combinations: with timolol (Combigan) twice daily; with brinzolamide (Simbrinza) three times daily. Lumify 0.025% is OTC for ocular redness only: it is not for glaucoma and is not a substitute for prescription brimonidine (0.1% in her case; the handout gives 0.1%–0.2% for the prescription strength), because it is not efficacious enough to reduce the IOP. IOP reduction 18–27%.",
+    "src": "Lam Glaucoma slides 42, 47; handout; T@69314, T@74606 11/19; Lam Ophthalmic slide 39; handout"
+   },
+   "sk": {
+    "text": "Brimonidine tartrate (Alphagan products, ClogP 1.2): a bromine-bearing benzo-fused pyrazine joined to the imidazoline through NH; alpha 2 selective and the most potent of the series, about 1,000-fold more potent than clonidine, so a tiny drop in the eye works with little worry about brain entry.",
+    "src": "Sikazwe OOO slide 31; T@47960, T@48263 11/18"
+   }
   },
   "cai": {
    "name": "Carbonic anhydrase inhibitors (acetazolamide, methazolamide, dorzolamide, brinzolamide)",
@@ -1461,13 +3520,24 @@
    "figs": [],
    "counsel": [
     "After the drop, gently press the inner corner of the eyelid (by the nose) so the drug does not drain through the tear duct and is absorbed into the body.",
-    "The ophthalmic product comes first; an oral drug is added if the patient is refractory to other therapies."
+    "The ophthalmic product comes first; an oral drug is added if the patient is refractory to other therapies.",
+    "Stinging or burning right after the drop is common and resolves within 1–2 minutes; stinging that lasts longer goes to the ophthalmologist. Blurred vision is the drop settling.",
+    "Oral acetazolamide and methazolamide are short-term only: systemic acidosis (malaise, fatigue, anorexia, nausea, weight loss, altered taste)."
    ],
-   "counselSrc": "T@59086 11/13; T@30444 11/17",
+   "counselSrc": "T@59086 11/13; T@30444 11/17; Lam Glaucoma slides 52–53; handout; T@76727, T@77616 11/19",
    "avoid": [
     "Oral use: metabolic acidosis, a side effect to remember for sure; the blood pH must be watched (11/17)",
-    "Oral use: over-diuresis can show as dry mouth and thirst (11/17)"
-   ]
+    "Oral use: over-diuresis can show as dry mouth and thirst (11/17)",
+    "Sickle cell disease, pulmonary disorders, electrolyte imbalance; sulfonamide allergy, where cross-sensitivity is very low (Lam Glaucoma slide 54; she called it an FYI, T@78505 11/19)"
+   ],
+   "la": {
+    "text": "Topical: dorzolamide 2% (Trusopt) and brinzolamide 1% suspension (Azopt), 1 drop in the affected eye or eyes three times daily; shake the suspension. Combinations: dorzolamide/timolol (Cosopt, Cosopt PF) twice daily; brinzolamide/brimonidine (Simbrinza) three times daily. IOP reduction 15–26% topical, 25–40% oral. Oral acetazolamide and methazolamide: short-term use only, because of systemic acidosis. Stinging or burning lasts 1–2 minutes; blurred vision is the drop settling.",
+    "src": "Lam Glaucoma slides 51–56; handout; T@76727, T@77064 11/19"
+   },
+   "sk": {
+    "text": "Sulfonamides (zolamides) that competitively inhibit carbonic anhydrase, a Zn-metalloenzyme that modulates aqueous humor production through pH changes (CO2 + H2O gives H2CO3, then HCO3- and H+). ClogP: acetazolamide -0.3, methazolamide 0.13, dorzolamide HCl 2, brinzolamide 7 (the first-generation agents are polar, oral and high dose; the second-generation agents are lipophilic, topical and small dose). The SO2NH2 group forms ionic and hydrogen bonds with zinc and Thr199. Brinzolamide and dorzolamide both undergo CYP N-deethylation, and the N-deethylated metabolites are active. His practice question 3 asks for those two metabolites drawn.",
+    "src": "Sikazwe OOO slides 35–38; T@40944 11/18; practice question 3 (STYLE.md)"
+   }
   },
   "m3-agonists": {
    "name": "M3 agonists (carbachol, pilocarpine)",
@@ -1486,7 +3556,18 @@
     "After the drop, gently press the inner corner of the eyelid (by the nose) so the drug does not drain through the tear duct and is absorbed into the body.",
     "Systemic cholinergic effects (diarrhea, salivation, sweating, rhinorrhea) come from drug absorbed through the nose; the compression lowers this."
    ],
-   "counselSrc": "T@28776, T@30444 11/17"
+   "counselSrc": "T@28776, T@30444 11/17",
+   "la": {
+    "text": "Pilocarpine 1%, 2% and 4% (Isopto Carpine): 1 drop in the affected eye or eyes four times daily; the handout says it may be used as initial management of acute angle-closure glaucoma. Carbachol (Miostat) is often used for surgery instead of glaucoma. Rarely used for glaucoma because of the IOP reduction and the four-times-a-day dosing. Local: poor night vision (pupil constriction), frontal headache or brow ache, stinging. Systemic: headache, sweating, nausea, vomiting, diarrhea, cramping, bronchospasm, heart block.",
+    "src": "Lam Glaucoma slides 57–61; handout; T@81113, T@81450 11/19"
+   },
+   "sk": {
+    "text": "Direct-acting cholinergics are carbamates and esters: acetylcholine (ester), carbachol Cl (carbamate; weak indirect effects) and pilocarpine HCl raise fluid outflow. SAR on the slide: acyloxy group for hydrogen bonding to the nicotinic or muscarinic receptors, an ionizable amine, N-methyl groups, a 2-carbon spacer between O and N. He told the class not to expect a question on this SAR.",
+    "src": "Sikazwe OOO slide 40; T@17315 11/19"
+   },
+   "avoid": [
+    "Asthma; retinal detachment or corneal abrasion (Lam Glaucoma slide 59)"
+   ]
   },
   "echothiophate": {
    "name": "Echothiophate",
@@ -1508,7 +3589,15 @@
    "avoid": [
     "Can cause cataracts, a reason its use is limited in patients who already have glaucoma (11/17)",
     "More allergenic than pilocarpine (11/17)"
-   ]
+   ],
+   "la": {
+    "text": "Echothiophate has many serious ocular and systemic toxic effects (severe fibrinous iritis in the handout); it is in the class of cholinergic agonists, the fifth class she adds.",
+    "src": "Lam Glaucoma slide 57; handout"
+   },
+   "sk": {
+    "text": "An organophosphate (phosphoryl group): the extent of acetylcholinesterase inhibition is phosphoryl > carbamate > ester. It is irreversible: with time the enzyme-drug bond ages, an ethyl group is lost and a hydroxy group leaves the enzyme covalently and irreversibly bound; the antidote must be given before aging. It is the only drug working in this fashion. His self-assessment question 5 asks which functional group shows irreversible inhibition.",
+    "src": "Sikazwe OOO slides 41–43, 68; T@19755 11/19"
+   }
   },
   "pg-agonists": {
    "name": "Prostaglandin agonists (bimatoprost, latanoprost, latanoprostene bunod, travoprost, tafluprost)",
@@ -1525,9 +3614,21 @@
    "figs": [],
    "counsel": [
     "Expect darker pigmentation of the iris and eyelids and longer, thicker lashes.",
-    "After the drop, gently press the inner corner of the eyelid (by the nose) so the drug does not drain through the tear duct and is absorbed into the body."
+    "After the drop, gently press the inner corner of the eyelid (by the nose) so the drug does not drain through the tear duct and is absorbed into the body.",
+    "Give it in the evening: blurred vision is the reason for nightly dosing. Do not give it more than once a day, because a higher frequency decreases the effect."
    ],
-   "counselSrc": "Eye slide 39; T@33811, T@30444 11/17"
+   "counselSrc": "Eye slide 39; T@33811, T@30444 11/17; Lam Glaucoma slides 20–21; T@51238, T@53077 11/19",
+   "la": {
+    "text": "Bimatoprost 0.01% and 0.03% (Lumigan), latanoprost (Xalatan, Xelpros), latanoprostene bunod (Vyzulta, a prodrug of latanoprost), travoprost (Travatan Z), tafluprost (Zioptan): 1 drop in the affected eye or eyes once daily, in the evening; more than once daily decreases the efficacy. IOP reduction up to 33%. Latisse (bimatoprost) is for eyelash hypotrichosis (the handout prints 0.03%, slide 19 prints 0.3%). Storage: latanoprost, latanoprostene bunod and tafluprost in the refrigerator before opening, room temperature once opened. Preservative-free: latanoprost (Xelpros) and tafluprost (Zioptan).",
+    "src": "Lam Glaucoma slides 19–23, 85; handout; T@51004, T@51238, T@55285 11/19"
+   },
+   "sk": {
+    "text": "A cyclopentane ring with an alpha chain and an omega chain; activation of the PGF (FP) receptor raises outflow. At C-1, acids (COOH) and amides (CONH) are the active drugs and esters are prodrugs that esterase converts to the acid (latanoprost isopropyl ester to latanoprost acid); C-15 is OH or a halogen (halogens prevent oxidation of the 15-OH). Bimatoprost is the amide; latanoprost, travoprost, tafluprost and latanoprostene bunod are esters; tafluprost carries two fluorines.",
+    "src": "Sikazwe OOO slides 44–46"
+   },
+   "avoid": [
+    "Macular edema; history of herpetic keratitis (Lam Glaucoma slide 21; she will not test them, T@53365 11/19)"
+   ]
   },
   "netarsudil": {
    "name": "Netarsudil",
@@ -1546,7 +3647,15 @@
     "Red eyes (conjunctival hyperemia) are common; the cause is relaxation of vascular smooth muscle.",
     "After the drop, gently press the inner corner of the eyelid (by the nose) so the drug does not drain through the tear duct and is absorbed into the body."
    ],
-   "counselSrc": "Eye slide 43; T@36856 11/17"
+   "counselSrc": "Eye slide 43; T@36856 11/17",
+   "la": {
+    "text": "Netarsudil 0.02% (Rhopressa): 1 drop in the affected eye or eyes once daily in the evening; with latanoprost it is Rocklatan, once daily in the evening. IOP reduction 20–30%, like timolol. Refrigerate before opening; once opened, room temperature for less than 6 weeks. Conjunctival hemorrhage or hyperemia was reported in 51% (handout; T@83004); it is last-line because the side effect outweighs the efficacy.",
+    "src": "Lam Glaucoma slides 62, 85; handout; T@83004, T@83922, T@92709 11/19"
+   },
+   "sk": {
+    "text": "An isoquinoline Rho kinase (ROCK) inhibitor that raises fluid outflow. It is an ester prodrug: esterase hydrolysis gives the active metabolite netarsudil-M1. ClogP 5.",
+    "src": "Sikazwe OOO slide 48"
+   }
   },
   "glaucoma-combos": {
    "name": "Glaucoma combination products",
@@ -1563,9 +3672,14 @@
    "figs": [],
    "counsel": [
     "A drop that has to be used 3 or 4 times a day is easier to follow as one combination product than as two separate drops.",
-    "After the drop, gently press the inner corner of the eyelid (by the nose) so the drug does not drain through the tear duct and is absorbed into the body."
+    "After the drop, gently press the inner corner of the eyelid (by the nose) so the drug does not drain through the tear duct and is absorbed into the body.",
+    "A patient who has trouble waiting between many drops can use a combination product, so one bottle replaces two."
    ],
-   "counselSrc": "T@38097 11/17; T@16025 11/13"
+   "counselSrc": "T@38097 11/17; T@16025 11/13; Lam Glaucoma slides 69, 76–81; T@90121 11/19",
+   "la": {
+    "text": "Brimonidine/timolol (Combigan): alpha-2 agonist and beta blocker, twice daily. Dorzolamide/timolol (Cosopt, Cosopt PF): carbonic anhydrase inhibitor and beta blocker, twice daily. Brinzolamide/brimonidine (Simbrinza): carbonic anhydrase inhibitor and alpha-2 agonist, three times daily. Netarsudil/latanoprost (Rocklatan): once daily in the evening. She said to recognize the classes in each product and its dosing. Her 11/20 email corrects slide 51: Simbrinza is brinzolamide and brimonidine.",
+    "src": "Lam Glaucoma slides 42, 51, 62, 69; handout; T@85991, T@86115 11/19"
+   }
   },
   "ophthalmic-h1": {
    "name": "Ophthalmic H1 inverse agonists (antihistamines)",
@@ -1584,7 +3698,15 @@
     "A drug with mast cell stabilization can be started before the allergen season to prevent the release of histamine.",
     "Cetirizine is not the one to suggest for prophylactic use: it has no mast cell stabilization, and it can still cause drowsiness."
    ],
-   "counselSrc": "Eye slide 53; T@46866, T@51757 11/17"
+   "counselSrc": "Eye slide 53; T@46866, T@51757 11/17",
+   "la": {
+    "text": "OTC dual-acting agents: olopatadine (Pataday, Patanol), alcaftadine 0.25% and ketotifen fumarate 0.025%; prescription: azelastine, bepotastine and epinastine, each twice daily. Relief begins within minutes, up to 30 minutes. They can be used when symptoms are present or chronically, and before the season starts because preventing mast cell degranulation takes time. First line is artificial tears plus one of them.",
+    "src": "Lam Ophthalmic slides 35, 37; handout; T@26972, T@27165 11/20"
+   },
+   "sk": {
+    "text": "Not on his assigned pages (his Exam 3 readings end at slide 48): the dual-acting agents are multi-cyclic with ionizable N and COOH groups; the SAR is not clearly stated.",
+    "src": "Sikazwe OOO slide 57"
+   }
   },
   "alcaftadine": {
    "name": "Alcaftadine",
@@ -1598,7 +3720,16 @@
     "text": "H1 inverse agonist with mast cell stabilization, and H4 receptor antagonism (H4 is on eosinophils; this may explain its superiority in allergic conjunctivitis). Very little anticholinergic activity, little CNS penetration, low incidence of side effects.",
     "src": "Eye slide 53; T@49053 11/17"
    },
-   "figs": []
+   "figs": [],
+   "la": {
+    "text": "OTC: alcaftadine 0.25%, 1 drop in the affected eye or eyes once daily; relief within 3 minutes; ages 2 years and older. (Dr. Smith's drug chart lists alcaftadine, Lastacaft, as Rx; Dr. Lam lists it as OTC.)",
+    "src": "Lam Ophthalmic slide 37; handout; T@27562 11/20; Ophthalmics drug chart p. 3"
+   },
+   "counsel": [
+    "Once daily, 1 drop in the affected eye or eyes; relief begins within 3 minutes.",
+    "For ages 2 years and older."
+   ],
+   "counselSrc": "Lam Ophthalmic slide 37; handout"
   },
   "epinastine": {
    "name": "Epinastine",
@@ -1612,7 +3743,19 @@
     "text": "H1 inverse agonist with mast cell stabilization. Also an H2 antagonist, which may reduce eyelid edema.",
     "src": "Eye slide 54; T@51012 11/17"
    },
-   "figs": []
+   "figs": [],
+   "la": {
+    "text": "Prescription dual-acting agent (recognize): 1 drop in the affected eye or eyes twice daily; she rarely sees it dispensed.",
+    "src": "Lam Ophthalmic slide 37; handout; T@28491 11/20"
+   },
+   "sk": {
+    "text": "Not on his assigned pages (slide 57): a multi-cyclic dual-acting agent (Elestat).",
+    "src": "Sikazwe OOO slide 57"
+   },
+   "counsel": [
+    "Prescription; 1 drop in the affected eye or eyes twice daily."
+   ],
+   "counselSrc": "Lam Ophthalmic slide 37; handout"
   },
   "cetirizine-eye": {
    "name": "Cetirizine (ophthalmic)",
@@ -1630,7 +3773,15 @@
    "counsel": [
     "It is the ophthalmic antihistamine not suggested for prophylactic use, because it has no mast cell stabilization."
    ],
-   "counselSrc": "T@51757 11/17"
+   "counselSrc": "T@51757 11/17",
+   "la": {
+    "text": "Cetirizine 0.24%: for mild allergic conjunctivitis; it only blocks histamine receptors, so it is not a dual-acting agent. It relieves itching and redness for a limited time and needs frequent dosing, up to four times a day (handout and her speech); the handout also gives 1 drop twice daily about 8 hours apart. No systemic adverse effects; prolonged use may cause eye irritation.",
+    "src": "Lam Ophthalmic slide 38; handout; T@29723 11/20"
+   },
+   "sk": {
+    "text": "Not on his assigned pages (slides 53–54): cetirizine (Zerviate) is a 2nd-generation H1 antihistamine; the SAR is deferred to the allergy lecture.",
+    "src": "Sikazwe OOO slides 53–54"
+   }
   },
   "naph-pheniramine": {
    "name": "Naphazoline/pheniramine",
@@ -1644,7 +3795,20 @@
     "text": "An alpha 2 agonist (vasoconstrictor, reduces redness) combined with an H1 antihistamine; one drop instead of two covers both approaches.",
     "src": "Eye slide 59; T@53936, T@54340 11/17"
    },
-   "figs": []
+   "figs": [],
+   "la": {
+    "text": "Pheniramine maleate/naphazoline (Naphcon-A, OTC): 1–2 drops in the affected eye or eyes up to 4 times a day. Side effects: pupil dilation (anticholinergic properties), burning, stinging. She said many OTC eye products are combinations, so read the active ingredient.",
+    "src": "Lam Ophthalmic slide 37; handout; T@28491, T@29242 11/20"
+   },
+   "sk": {
+    "text": "Not on his assigned pages (slides 53–54): pheniramine maleate (in Opcon-A) is a first-generation H1 antihistamine with a pyridine ring, a phenyl ring and a dimethylamino group.",
+    "src": "Sikazwe OOO slides 53–54"
+   },
+   "counsel": [
+    "1–2 drops up to 4 times a day; it can dilate the pupil and cause burning and stinging.",
+    "It contains a decongestant as well as an antihistamine, so read the active ingredients of each OTC eye product."
+   ],
+   "counselSrc": "Lam Ophthalmic slide 37; handout; T@29242 11/20"
   },
   "alpha2-eye": {
    "name": "Alpha 2 agonist vasoconstrictors (naphazoline, oxymetazoline, tetrahydrozoline, brimonidine tartrate, phenylephrine)",
@@ -1658,7 +3822,20 @@
     "text": "Adrenergic receptor agonists: vasoconstrictors for local application to the nasal mucous membrane or the eye. They reduce redness, and less leaking from the capillaries reduces edema. Little difference between them for allergic conjunctivitis.",
     "src": "Eye slides 56–57; T@52180, T@52690, T@53209 11/17"
    },
-   "figs": []
+   "figs": [],
+   "la": {
+    "text": "Decongestants: naphazoline (OTC), tetrahydrozoline (Visine, OTC), brimonidine 0.025% (Lumify, OTC). They reduce ocular redness as local vasoconstrictors and do not diminish the allergic response. Dosing: generally four times a day, for up to 72 hours. Beyond 72 hours: rebound conjunctival hyperemia, allergic blepharitis, possible angle-closure glaucoma, epithelial xerosis. They can raise the blood pressure through systemic absorption. She said to recognize which drugs are decongestants, and that Lumify at this strength is not for glaucoma.",
+    "src": "Lam Ophthalmic slide 39; handout; T@30078, T@31416, T@31626, T@31818 11/20"
+   },
+   "sk": {
+    "text": "Not on his assigned pages (slide 55): the imidazoline decongestants (oxymetazoline, xylometazoline, tetrahydrozoline, naphazoline) are alpha 1 / alpha 2 agonists (his mechanism of action line); slide 52 lists phenylephrine among the decongestants.",
+    "src": "Sikazwe OOO slides 52, 55"
+   },
+   "counsel": [
+    "Use for about 72 hours at most: they reduce redness only; later use causes rebound redness and other problems.",
+    "They can raise the blood pressure; take care with hypertension, cardiovascular disease and diabetes."
+   ],
+   "counselSrc": "Lam Ophthalmic slide 39; handout"
   },
   "cyclosporine": {
    "name": "Cyclosporine",
@@ -1683,12 +3860,21 @@
    ],
    "counsel": [
     "Ocular burning, eye pain, a foreign body sensation and itching can be significant; they are the reasons patients struggle with the drops.",
-    "It is used as a drop, not a tablet, for dry eye alone."
+    "It is used as a drop, not a tablet, for dry eye alone.",
+    "Twice daily, about 12 hours apart (she said 8 to 12 hours); expect to use it for about 6 months or longer."
    ],
-   "counselSrc": "Eye slide 67; T@61900, T@62774 11/17",
+   "counselSrc": "Eye slide 67; T@61900, T@62774 11/17; Lam Ophthalmic slide 18; T@13596 11/20",
    "avoid": [
     "Oral use for dry eye alone: a significant immunosuppressant, with a risk of opportunistic infections (11/17)"
-   ]
+   ],
+   "la": {
+    "text": "Topical cyclosporine (Restasis, Cequa): 1 drop in each eye twice daily; the handout says about 12 hours apart and she said an 8 to 12 hour difference. Expected length of therapy: about 6 months or longer. Common side effects: ocular burning, stinging, itching and a foreign body sensation, the same feeling dry eye gives.",
+    "src": "Lam Ophthalmic slide 18; handout; T@13596 11/20"
+   },
+   "sk": {
+    "text": "Not on his assigned pages (slide 50): Cyclosporin (Restasis) is a cyclic peptide; the slide prints prodrug; calcineurin inhibitor, so T-cell activation falls; LogP 4. In lecture he did not call it a prodrug and said it is not metabolized in the eye.",
+    "src": "Sikazwe OOO slide 50; 11/19"
+   }
   },
   "loteprednol": {
    "name": "Loteprednol",
@@ -1702,7 +3888,20 @@
     "text": "A topical corticosteroid used for its anti-inflammatory properties to treat dry eye. Corticosteroids change gene expression: fewer inflammatory genes and more anti-inflammatory genes are expressed, so the immune response decreases.",
     "src": "Eye slide 69; T@63213, T@63574 11/17"
    },
-   "figs": []
+   "figs": [],
+   "la": {
+    "text": "Topical corticosteroids for dry eye (loteprednol, fluorometholone, dexamethasone, prednisolone): very short term; the slide gives no dose, and the handout says usually up to two weeks. Not for ocular hypertension, cataracts or active infection.",
+    "src": "Lam Ophthalmic slide 20; handout; T@15107 11/20"
+   },
+   "sk": {
+    "text": "Not on his assigned pages (slide 60): loteprednol has the C1–C2 alkene, 11-beta-OH, no ring halogen and a chloromethyl ester at C-17. He said he is not focusing on steroids.",
+    "src": "Sikazwe OOO slide 60; 11/19"
+   },
+   "counsel": [
+    "Topical corticosteroids for dry eye are used for a very short time (the handout says usually up to two weeks).",
+    "Not for patients with ocular hypertension, cataracts or an active infection."
+   ],
+   "counselSrc": "Lam Ophthalmic slide 20; handout; T@15107 11/20"
   },
   "lifitegrast": {
    "name": "Lifitegrast",
@@ -1722,7 +3921,15 @@
     "It can discolor contact lenses.",
     "Irritation of the eye and reduced visual acuity are the common effects; some patients may not like the effect on their vision."
    ],
-   "counselSrc": "Eye slide 71; T@65285, T@65648 11/17"
+   "counselSrc": "Eye slide 71; T@65285, T@65648 11/17",
+   "la": {
+    "text": "Lifitegrast (Xiidra): 1 drop in each eye twice daily; expected length of therapy about 12 weeks. Common side effects: dysgeusia (distortion of taste), application site irritation, decreased visual acuity.",
+    "src": "Lam Ophthalmic slide 19; handout"
+   },
+   "sk": {
+    "text": "Not on his assigned pages (slide 51): a phenylalanine derivative that blocks ICAM-1 from binding integrin LFA-1, so T-cell activation falls; LogP 4; eliminated mostly unchanged.",
+    "src": "Sikazwe OOO slide 51"
+   }
   },
   "varenicline": {
    "name": "Intranasal varenicline",
@@ -1741,7 +3948,144 @@
     "One spray in each nostril twice daily, about 12 hours apart.",
     "Acquired night blindness is rare; she said it is a reason for the patient to stop using it."
    ],
-   "counselSrc": "Eye slide 73; T@67438, T@68380 11/17"
+   "counselSrc": "Eye slide 73; T@67438, T@68380 11/17",
+   "la": {
+    "text": "Varenicline nasal spray (Tyrvaya): 1 spray in each nostril twice daily, about 12 hours apart; expected length of therapy about 4 weeks. Prime the pump 7 times into the air, away from the face; do not spray into the eye or mouth. TEAR: tilt the tip toward the ear (handout: nearest that nostril); elevate the tongue (handout: to the roof of the mouth; she said the back of the mouth); administer by pressing the applicator down completely; resist inhaling the mist, which prevents the cough. Side effects: cough, sneezing, throat irritation. She first said to shake it and then corrected herself: do not shake, pump 7 times.",
+    "src": "Lam Ophthalmic slides 21–22; handout; T@16231, T@44594 11/20"
+   }
+  },
+  "artificial-tears": {
+   "name": "Artificial tears (ocular lubricants)",
+   "brand": "Refresh, GenTeal, Systane",
+   "how": {
+    "p": "la",
+    "text": "Products vary by viscosity: a higher viscosity gives a longer contact time and better resistance to tear dilution. Buffering agents, preservatives and pH also vary.",
+    "src": "Lam Ophthalmic slide 14; handout"
+   },
+   "figs": [],
+   "la": {
+    "text": "First line for dry eye. 1–2 drops once or twice a day, typically on waking and before bed; severe cases can use 3–4 times a day up to hourly. May be continued with no set limit, depending on the response. Preservative-free is preferred for moderate to severe dry eye or a patient sensitive to preservatives. In allergic conjunctivitis they wash out the allergen and protect the ocular surface, and they are part of first line with a dual-acting agent.",
+    "src": "Lam Ophthalmic slides 14, 35, 36; handout; T@10376 11/20"
+   },
+   "counsel": [
+    "Use 1–2 drops once or twice a day; more often, even hourly, if the dryness is severe.",
+    "There is no limit on how long they can be used.",
+    "Choose a preservative-free product for moderate to severe dry eye or if the preservative irritates.",
+    "In allergic conjunctivitis they wash out the allergen; they do not heal the eye faster or reduce viral or bacterial activity."
+   ],
+   "counselSrc": "Lam Ophthalmic slides 14, 36; handout; T@10376 11/20",
+   "avoid": [
+    "Eye pain, ocular trauma, chemical exposure, heat exposure, blurred vision not due to an ointment, light sensitivity or eyelid infection (except a stye): refer instead of self-treating (Lam Ophthalmic slide 11)"
+   ]
+  },
+  "ophthalmic-ointment-gel": {
+   "name": "Bland ophthalmic ointment or gel",
+   "brand": "",
+   "how": {
+    "p": "la",
+    "text": "Active ingredients are petrolatum, mineral oil and lanolin. The ointment has a longer retention time in the eye, which enhances the integrity of the tear film.",
+    "src": "Lam Ophthalmic slide 15; handout"
+   },
+   "figs": [],
+   "la": {
+    "text": "Instructions depend on the patient's need: as needed, twice daily or every few hours; the ointment is generally given at bedtime. Place a strip of 1/4 to 1/2 inch inside the lower eyelid, avoid touching the tube to the eye, and keep the eyes closed 1–2 minutes. The gel causes less blurry vision than the ointment and is better tolerated. In the order of application an ointment or gel-forming product goes last, at least 10 minutes after drops.",
+    "src": "Lam Ophthalmic slides 15, 44, 45, 49; handout; T@12073 11/20"
+   },
+   "counsel": [
+    "Blurry vision is the main side effect, so it is generally given at bedtime.",
+    "Combine an ointment with artificial tears to offset the blur; a gel blurs less.",
+    "Hypersensitivity: change to a single-use or preservative-free product."
+   ],
+   "counselSrc": "Lam Ophthalmic slide 15; handout; T@10376 11/20",
+   "avoid": [
+    "Blurred vision not due to an ointment is an exclusion for self-treatment (Lam Ophthalmic slide 11)"
+   ]
+  },
+  "oral-antihistamines-eye": {
+   "name": "Second-generation oral antihistamines (loratadine, fexofenadine, cetirizine)",
+   "brand": "Claritin, Allegra, Zyrtec",
+   "how": {
+    "p": "la",
+    "text": "",
+    "src": "",
+    "none": true
+   },
+   "figs": [],
+   "la": {
+    "text": "Used for allergic conjunctivitis when systemic symptoms accompany the eye symptoms, or when symptoms persist with a topical antihistamine or mast cell stabilizer (slide 40); in her speech and the handout, when the patient is not responding to the ophthalmic solutions. Oral antihistamines can dry the eye.",
+    "src": "Lam Ophthalmic slide 40; handout; T@32498 11/20"
+   },
+   "counsel": [
+    "Use when the eye drops are not enough or when other allergy symptoms are present.",
+    "Oral antihistamines can dry the eyes.",
+    "If there is no benefit after 72 hours of appropriate treatment, see a provider."
+   ],
+   "counselSrc": "Lam Ophthalmic slides 40, 41; handout; T@32648 11/20"
+  },
+  "olopatadine": {
+   "name": "Olopatadine (Pataday, Patanol)",
+   "brand": "Pataday, Patanol",
+   "how": {
+    "p": "sm",
+    "text": "H1 inverse agonist and mast cell stabilization; also a nasal spray for allergic rhinitis.",
+    "src": "Smith Eye slide 54"
+   },
+   "figs": [],
+   "sm": {
+    "text": "H1 inverse agonist and mast cell stabilization; also a nasal spray for allergic rhinitis.",
+    "src": "Eye slide 54"
+   },
+   "la": {
+    "text": "OTC dual-acting agent. Several strengths: the 0.1% (Pataday Twice Daily Relief, Patanol) is 1 drop twice daily, 6–8 hours apart; the 0.2% and 0.7% (Pataday, Pataday Extra Strength) are once daily. Ages 2 years and older. She said she will not test which strength is which. (Dr. Smith's drug chart lists olopatadine, Pataday, as Rx; Dr. Lam lists it as OTC.)",
+    "src": "Lam Ophthalmic slide 37; handout; T@27562 11/20; Ophthalmics drug chart p. 3"
+   },
+   "counsel": [
+    "Some strengths are once a day and some twice a day; follow the label of the product chosen.",
+    "For ages 2 years and older.",
+    "If the patient also uses a gel such as timolol gel, put the Pataday in first and wait 10 minutes before the gel."
+   ],
+   "counselSrc": "Lam Ophthalmic slides 37, 44, 45; handout; T@27562, T@41604 11/20"
+  },
+  "ketotifen": {
+   "name": "Ketotifen fumarate",
+   "brand": "Alaway, Zaditor",
+   "how": {
+    "p": "sm",
+    "text": "H1 inverse agonist and mast cell stabilizer.",
+    "src": "Smith Eye slide 54"
+   },
+   "figs": [],
+   "sm": {
+    "text": "H1 inverse agonist and mast cell stabilizer.",
+    "src": "Eye slide 54"
+   },
+   "la": {
+    "text": "OTC dual-acting agent, ketotifen 0.025%: 1 drop in the affected eye or eyes twice daily, about 8–12 hours apart; relief within minutes, often within 30 minutes, and the effect may last up to 12 hours from one dose. Ages 3 years and older.",
+    "src": "Lam Ophthalmic slide 37; handout; T@28491 11/20; Ophthalmics drug chart p. 3 (brands)"
+   },
+   "sk": {
+    "text": "Not on his assigned pages (slide 57): ketotifen fumarate (Zaditor) is a multi-cyclic dual-acting agent.",
+    "src": "Sikazwe OOO slide 57"
+   },
+   "counsel": [
+    "Twice a day, about 8–12 hours apart.",
+    "For ages 3 years and older: not for a 2-year-old, unlike olopatadine and alcaftadine."
+   ],
+   "counselSrc": "Lam Ophthalmic slide 37; handout"
+  },
+  "omidenepag": {
+   "name": "Omidenepag isopropyl",
+   "brand": "",
+   "how": {
+    "p": "sk",
+    "text": "A selective prostaglandin E2 (EP2) receptor agonist that raises fluid outflow. It is an ester prodrug and requires esterase hydrolysis to omidenepag, the active metabolite.",
+    "src": "Sikazwe OOO slide 47"
+   },
+   "figs": [],
+   "sk": {
+    "text": "A pyridine sulfonamide (OMDI, ClogP 3). Esterase (CE) hydrolysis gives omidenepag (OMD). It is not on the drug chart or in the lectures of Dr. Smith or Dr. Lam.",
+    "src": "Sikazwe OOO slide 47"
+   }
   }
  },
  "terms": {
@@ -1799,6 +4143,21 @@
    "LFA-1",
    "Lymphocyte function-associated antigen 1: a cell surface protein on leukocytes that interacts with ICAM-1.",
    "Eye slide 71"
+  ],
+  "bak": [
+   "Benzalkonium chloride (BAK)",
+   "The most common preservative in multi-dose eye drops; it causes ocular irritation in some patients, and contact lenses trap it against the surface of the eye.",
+   "Lam Ophthalmic slides 43, 46; handout"
+  ],
+  "dual-acting": [
+   "Dual-acting agent",
+   "Her short name for an ophthalmic antihistamine, mast cell stabilizer and histamine type 1 receptor antagonist in one drop.",
+   "Lam Ophthalmic slide 35; T@25400 11/20"
+  ],
+  "xerosis": [
+   "Epithelial xerosis",
+   "Abnormal dryness of the surface of the eye.",
+   "Lam Ophthalmic slide 39"
   ]
  },
  "tell": [
@@ -2025,6 +4384,267 @@
     ]
    ],
    "src": "Eye slides 64–73; T@58455, T@63574, T@65117, T@67438 11/17"
+  },
+  {
+   "id": "eye-red-four",
+   "title": "Dry eye, allergic, bacterial or viral conjunctivitis",
+   "cols": [
+    "Dry eye",
+    "Allergic conjunctivitis",
+    "Bacterial conjunctivitis",
+    "Viral conjunctivitis"
+   ],
+   "path": [
+    {
+     "q": "Does the patient itch?",
+     "a": [
+      "Yes → **allergic conjunctivitis**",
+      "No → next question"
+     ]
+    },
+    {
+     "q": "Is there lid crusting with the tearing?",
+     "a": [
+      "Yes → **bacterial or viral conjunctivitis**: refer",
+      "No, and the eye feels gritty or sandy → **dry eye**: refer a first episode"
+     ]
+    }
+   ],
+   "rows": [
+    [
+     "Itching",
+     [
+      "Not listed",
+      "{{Itching}}",
+      "Not listed",
+      "Not listed"
+     ],
+     "Itching is the sign she told the class to memorize"
+    ],
+    [
+     "Gritty, sandy or foreign body feeling",
+     [
+      "{{Yes}}",
+      "Not listed",
+      "Not listed",
+      "Not listed"
+     ]
+    ],
+    [
+     "Tearing",
+     [
+      "Excessive tearing often shows first",
+      "Seasonal type: tearing",
+      "Acute type: tearing; chronic type: not listed",
+      "Adenoviral and herpetic: tearing"
+     ]
+    ],
+    [
+     "Lid crusting",
+     [
+      "Not listed",
+      "Not listed",
+      "{{Lid crusting}}",
+      "Adenoviral: on awakening; herpetic: not listed"
+     ]
+    ],
+    [
+     "What the pharmacist does",
+     [
+      "Refer a first episode; OTC artificial tears meanwhile",
+      "Artificial tears plus a dual-acting agent; cold compresses",
+      "Symptomatic care; refer to a provider; cold compresses",
+      "Symptomatic care; refer to a provider; cold compresses"
+     ]
+    ]
+   ],
+   "src": "Lam Ophthalmic slides 7, 10, 28, 29, 34, 35; T@22420 11/20"
+  },
+  {
+   "id": "eye-allergy-addons",
+   "title": "Dual-acting agent, decongestant or oral antihistamine?",
+   "cols": [
+    "Dual-acting agent (olopatadine, alcaftadine, ketotifen)",
+    "Decongestant (naphazoline, tetrahydrozoline, Lumify)",
+    "Second-generation oral antihistamine (loratadine, fexofenadine, cetirizine)"
+   ],
+   "path": [
+    {
+     "q": "Is the only problem redness?",
+     "a": [
+      "Yes → a **decongestant** reduces it, for about 72 hours at most",
+      "No → next question"
+     ]
+    },
+    {
+     "q": "Does the patient have systemic symptoms, or no response to the ophthalmic products?",
+     "a": [
+      "Yes → add an **oral second-generation antihistamine**",
+      "No → artificial tears plus a **dual-acting agent**"
+     ]
+    }
+   ],
+   "rows": [
+    [
+     "What it does",
+     [
+      "Symptom relief within minutes up to 30 minutes",
+      "Reduces redness only",
+      "Treats systemic allergy symptoms"
+     ]
+    ],
+    [
+     "Allergic response",
+     [
+      "Treats it (antihistamine and mast cell stabilizer)",
+      "{{Does not}} diminish it",
+      "Treats it systemically"
+     ]
+    ],
+    [
+     "Limit",
+     [
+      "Ages: olopatadine and alcaftadine 2 and older; ketotifen 3 and older",
+      "{{72 hours}}",
+      "Can dry the eye"
+     ]
+    ],
+    [
+     "Where it sits",
+     [
+      "First line, with artificial tears",
+      "Recognize only",
+      "Added when the ophthalmic products fail"
+     ]
+    ]
+   ],
+   "src": "Lam Ophthalmic slides 35, 37, 39, 40; handout; T@30078, T@31416, T@32498 11/20"
+  },
+  {
+   "id": "eye-lubricants",
+   "title": "Artificial tears, ointment or gel?",
+   "cols": [
+    "Artificial tears",
+    "Bland ointment",
+    "Bland gel"
+   ],
+   "path": [
+    {
+     "q": "Is the patient using tears every few hours and wants something that lasts longer?",
+     "a": [
+      "Yes → an **ointment or gel**, with the counseling point",
+      "No → **artificial tears** stay first line"
+     ]
+    },
+    {
+     "q": "Is blurred vision a problem?",
+     "a": [
+      "Yes, with the ointment → a **gel** blurs less, or combine the ointment with tears",
+      "No → either works"
+     ]
+    }
+   ],
+   "rows": [
+    [
+     "Where it sits",
+     [
+      "First line",
+      "Longer-lasting step",
+      "Longer-lasting step with better tolerance"
+     ]
+    ],
+    [
+     "Retention",
+     [
+      "Higher viscosity gives a longer contact time",
+      "{{Longer retention time}}",
+      "Not stated separately"
+     ]
+    ],
+    [
+     "Dose",
+     [
+      "1–2 drops once or twice a day; up to hourly in severe cases",
+      "As needed, twice daily or every few hours; generally at bedtime",
+      "As needed (handout: depends on clinical need)"
+     ]
+    ],
+    [
+     "Side effect",
+     [
+      "Preservative irritation; use preservative-free",
+      "{{Blurry vision}}, hypersensitivity",
+      "Less blurry vision"
+     ]
+    ]
+   ],
+   "src": "Lam Ophthalmic slides 14, 15; handout; T@10376, T@12073 11/20"
+  },
+  {
+   "id": "glaucoma-lam-order",
+   "title": "Glaucoma: which class is added next?",
+   "cols": [
+    "Prostaglandin analog (class 1)",
+    "Beta blocker (class 2)",
+    "Alpha-2 agonist (class 3)",
+    "Topical carbonic anhydrase inhibitor (class 4)"
+   ],
+   "path": [
+    {
+     "q": "Which classes does the patient take already?",
+     "a": [
+      "Only a prostaglandin analog → add a **beta blocker**",
+      "Prostaglandin analog and beta blocker → add an **alpha-2 agonist**",
+      "Those three → add a **topical carbonic anhydrase inhibitor**"
+     ]
+    },
+    {
+     "q": "Is the problem too many bottles, or a missed dose?",
+     "a": [
+      "Too many bottles → a **combination product**, or timolol gel",
+      "A missed dose → check the **frequency** of each class first"
+     ]
+    }
+   ],
+   "rows": [
+    [
+     "Name ending",
+     [
+      "-prost",
+      "-olol",
+      "Brimonidine, apraclonidine",
+      "-zolamide"
+     ]
+    ],
+    [
+     "Dose",
+     [
+      "{{Once daily}}",
+      "{{BID}}; timolol gel once daily",
+      "Brimonidine BID; apraclonidine BID or TID",
+      "{{TID}}"
+     ]
+    ],
+    [
+     "IOP reduction",
+     [
+      "Up to 33%",
+      "20–30%",
+      "18–27%",
+      "15–26%"
+     ]
+    ],
+    [
+     "Key problem",
+     [
+      "Blurred vision, darker iris and lashes",
+      "Bradycardia, hypotension, bronchospasm",
+      "Dizziness, fatigue, somnolence, dry mouth",
+      "Stinging or burning for 1–2 minutes"
+     ]
+    ]
+   ],
+   "src": "Lam Glaucoma slides 19, 31, 33, 41, 43, 51, 52, 63; handout; T@47757, T@84272 11/19"
   }
  ],
  "pairs": [
@@ -2151,6 +4771,138 @@
     [
      "sm",
      "Slides 28–29; T@58590, T@59086 11/13; T@22924 11/17."
+    ]
+   ]
+  },
+  {
+   "title": "Lumify or Alphagan P?",
+   "a": [
+    "Lumify (brimonidine 0.025%)",
+    "OTC; reduces ocular redness; not for glaucoma; a decongestant limited to about 72 hours"
+   ],
+   "b": [
+    "Alphagan P (brimonidine, prescription)",
+    "Glaucoma; 1 drop twice daily; the handout gives 0.1%–0.2% for the prescription strength"
+   ],
+   "same": "Both contain brimonidine, an alpha 2 agonist; the indication, formulation and concentration differ, so OTC Lumify is not a therapeutic substitute.",
+   "profs": [
+    [
+     "la",
+     "She said it is a different indication, formulation and concentration, and not efficacious enough to reduce the IOP (Lam Glaucoma T@69314, T@74606 11/19; Lam Ophthalmic slide 39)."
+    ],
+    [
+     "sm",
+     "Brimonidine is the better long-term glaucoma choice, with a foreign body sensation and itching as side effects (Eye slide 23; T@51660 11/13)."
+    ]
+   ]
+  },
+  {
+   "title": "Timoptic or Timoptic-XE?",
+   "a": [
+    "Timoptic (timolol solution)",
+    "1 drop in the affected eye or eyes twice daily"
+   ],
+   "b": [
+    "Timoptic-XE (timolol gel)",
+    "1 drop once daily; fewer doses a day and fewer systemic effects than the solution; it goes last in the order of application"
+   ],
+   "same": "Both are timolol, a beta blocker.",
+   "profs": [
+    [
+     "la",
+     "The answer to a patient who forgets the evening dose (Lam Glaucoma slides 32, 37; T@64545 11/19)."
+    ],
+    [
+     "sm",
+     "Timolol in its gel form is the once-a-day product (T@46338 11/13)."
+    ]
+   ]
+  },
+  {
+   "title": "Lumigan or Latisse?",
+   "a": [
+    "Lumigan (bimatoprost)",
+    "Lowers the IOP in glaucoma; 0.01% and 0.03% solutions"
+   ],
+   "b": [
+    "Latisse (bimatoprost)",
+    "Eyelash hypotrichosis (inadequate eyelash growth); the handout prints 0.03%, slide 19 prints 0.3%"
+   ],
+   "same": "Both are bimatoprost, a prostaglandin analog; she said the drug has two indications depending on the brand and the concentration.",
+   "profs": [
+    [
+     "la",
+     "Lam Glaucoma slide 19; handout; T@50822 11/19."
+    ],
+    [
+     "sm",
+     "Eyelash growth and thickening are prostaglandin agonist side effects, seen with Latisse (Eye slide 39)."
+    ]
+   ]
+  },
+  {
+   "title": "Simbrinza or Cosopt?",
+   "a": [
+    "Simbrinza",
+    "Brinzolamide and brimonidine: a carbonic anhydrase inhibitor and an alpha-2 agonist; 1 drop three times daily"
+   ],
+   "b": [
+    "Cosopt, Cosopt PF",
+    "Dorzolamide and timolol: a carbonic anhydrase inhibitor and a beta blocker; 1 drop twice daily; Cosopt PF is preservative-free"
+   ],
+   "same": "Each combines a carbonic anhydrase inhibitor with a second class in one bottle.",
+   "profs": [
+    [
+     "la",
+     "Slide 69; her 11/20 email corrects slide 51: Simbrinza is brinzolamide and brimonidine (Lam Glaucoma slides 42, 51, 69; T@85991 11/19)."
+    ],
+    [
+     "sm",
+     "Combination products on Eye slide 45: timolol/dorzolamide, timolol/brimonidine, brinzolamide/brimonidine, latanoprost/netarsudil (T@37948 11/17)."
+    ]
+   ]
+  },
+  {
+   "title": "Naphcon-A or Pataday?",
+   "a": [
+    "Naphcon-A (pheniramine/naphazoline)",
+    "An antihistamine plus a decongestant; 1–2 drops up to 4 times a day; pupil dilation, burning, stinging"
+   ],
+   "b": [
+    "Pataday (olopatadine)",
+    "A dual-acting agent: antihistamine and mast cell stabilizer; once or twice daily by strength; ages 2 and older"
+   ],
+   "same": "Both are OTC drops for allergic conjunctivitis and both contain an antihistamine.",
+   "profs": [
+    [
+     "la",
+     "Lam Ophthalmic slide 37; handout; T@28491, T@29242 11/20."
+    ],
+    [
+     "sm",
+     "Naphazoline/pheniramine is the combination that covers vessel constriction and antihistamine action (Eye slide 59; T@53936 11/17)."
+    ]
+   ]
+  },
+  {
+   "title": "Cyclosporine or lifitegrast: how long?",
+   "a": [
+    "Cyclosporine (Restasis, Cequa)",
+    "Calcineurin inhibitor; 1 drop twice daily; about 6 months or longer"
+   ],
+   "b": [
+    "Lifitegrast (Xiidra)",
+    "LFA-1 antagonist; 1 drop twice daily; about 12 weeks"
+   ],
+   "same": "Both are prescription eye drops for dry eye given twice daily to reduce inflammation, and neither is first line.",
+   "profs": [
+    [
+     "la",
+     "Lam Ophthalmic slides 18, 19; handout; T@13596 11/20."
+    ],
+    [
+     "sm",
+     "Cyclosporine blocks IL-2 through calcineurin; lifitegrast blocks LFA-1 binding to ICAM-1 (Eye slides 64–71; T@60561 11/17)."
     ]
    ]
   }

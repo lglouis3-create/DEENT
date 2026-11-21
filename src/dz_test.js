@@ -29,7 +29,7 @@ const check = (ok, label, detail) => { n++; if (!ok) fail++; console.log((ok ? '
     check(byExam[1].includes('acne') && !byExam[1].includes('lice') && !byExam[1].includes('glaucoma'), `${w} px: the Exam 1 chip lists Exam 1 conditions only`, JSON.stringify(byExam[1]));
     check(byExam[2].includes('lice') && byExam[2].includes('acne') && !byExam[2].includes('glaucoma'), `${w} px: the Exam 2 chip lists Exam 2 conditions only`, JSON.stringify(byExam[2]));
     check(byExam[3].includes('glaucoma') && byExam[3].includes('cerumen') && byExam[3].includes('cold-sore') && !byExam[3].includes('acne'), `${w} px: the Exam 3 chip lists the eye, ear and mouth conditions only`, JSON.stringify(byExam[3]));
-    const areas = await p.$$eval('#v-dz .dzsub', xs => xs.map(x => x.textContent));
+    const areas = await p.$$eval('#v-dz .dzbody > .dzsub', xs => xs.map(x => x.textContent));
     check(areas.join('|') === 'Eye|Ear|Mouth and teeth', `${w} px: Exam 3 groups conditions by body area`, areas.join('|'));
     await p.click('#v-dz .dzexam [data-exam="0"]');
     const wide = [];

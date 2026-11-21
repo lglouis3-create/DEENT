@@ -30,7 +30,7 @@ const check = (ok, what, detail) => {
   if (ok) passes++; else { fails++; console.log('FAIL: ' + what + (detail != null ? ' (' + detail + ')' : '')); }
 };
 
-const GROUP = 'Otic, oral and ophthalmic chemistry (Dr. Sikazwe, Exam 3)';
+const GROUP = 'Ear, mouth and eye drug chemistry (Dr. Sikazwe)';
 const PLAN = {
   'oo-cerumen':     {steps: 4, h: 356, slides: /slide 8/, lecture: true},
   'oo-fluoride':    {steps: 4, h: 344, slides: /slides 16–18/, lecture: true},

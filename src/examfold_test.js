@@ -393,7 +393,7 @@ async function nsOf(browser) {
       const hl9 = await p.evaluate(() => { const es = [...document.querySelectorAll('#v-ref .jline, #v-ref .jmark, #v-ref .jhit')].filter(e => e.checkVisibility()); const e = es.find(x => { const t = x.getBoundingClientRect().top; return t >= 0 && t < innerHeight; }) || es[0], r = e && e.getBoundingClientRect(); return r ? {top: Math.round(r.top), vis: e.checkVisibility(), in: !!e.closest('.rfold[open]'), n: es.length} : null; });
       check(a9 && wq.view === 'ref' && wq.vis && wq.open && ((wq.top >= 0 && wq.top < wq.vh) || (hl9 && hl9.vis && hl9.in && hl9.top >= wq.pin - 1 && hl9.top < wq.vh)), `${w} px: a Drug list card's "Reference: target table" shows its row (${a9}) in an open folder`, {wq, hl9});
       await p.evaluate(() => { RET.length = 0; backBtn(); show('dz'); });
-      const a10 = await p.evaluate(() => { const by = document.querySelector('#v-dz .dzviews [data-view="cards"]'); if (by) by.click();
+      const a10 = await p.evaluate(() => { const by = document.querySelector('#v-dz .dzviews [data-view="cards"]'); if (by) by.click(); const allx = document.querySelector('#v-dz .dzexam [data-exam="0"]'); if (allx) allx.click();
         const cards = [...document.querySelectorAll('#v-dz .dzpicker button')].map(b => b.dataset.card);
         for (const c of cards) { document.querySelector(`#v-dz .dzpicker button[data-card="${c}"]`).click(); const o = document.querySelector('#v-dz [data-dz="openall"]'); if (o && !/Close all/.test(o.textContent)) o.click();
           const b = document.querySelector('#v-dz .dzfig[data-jump^="guide:"]'); if (b) { b.click(); return b.dataset.jump.split(':')[1]; } }

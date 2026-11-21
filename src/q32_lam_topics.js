@@ -6,7 +6,7 @@
    11/20. Transcript: DEENT_Lecture_11.19_transcript.txt (her part starts at character 35742).
    ========================================================================== */
 TOPIC_DECKS.push(
-  {id:'lam', exam:3, name:'Glaucoma therapeutics (Dr. Lam)', file:'Lam_Glaucoma.pdf', when:'taught 11/19 (Exam 3)',
+  {id:'lam', exam:3, name:'Glaucoma drugs and counseling (Dr. Lam)', file:'Lam_Glaucoma.pdf', when:'taught 11/19 (Exam 3)',
    topics:['lm-collect', 'lm-assess', 'lm-pga', 'lm-bb', 'lm-a2', 'lm-cai', 'lm-chol', 'lm-rock', 'lm-seq', 'lm-impl', 'lm-fu', 'lm-pacg']});
 
 TOPICS.push(

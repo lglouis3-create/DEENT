@@ -1,0 +1,2300 @@
+{
+ "cards": [
+  {
+   "id": "tooth-sensitivity",
+   "name": "Tooth hypersensitivity or toothache",
+   "group": "selfcare",
+   "lectures": "Lam 11/20 (Exam 3) · Sikazwe 11/18 (fluoride)",
+   "topics": [
+    "lr-tooth"
+   ],
+   "short": [
+    "Hypersensitivity: open dentin tubules; a quick, sharp pain only while a stimulus (heat, cold, pressure, acid) is present. Toothache: bacterial invasion; the pain stays without a stimulus.",
+    "A toothache and severe pain are exclusions to self-care: nothing sold over the counter treats them and the dentist has to.",
+    "Order of treatment: soft-bristle toothbrush with standard fluoride toothpaste for 7 days; next, soft bristles with a desensitizing toothpaste.",
+    "Desensitizing actives: potassium nitrate 5% (not for children under 12), sodium fluoride, stannous fluoride, arginine 8%.",
+    "Counseling: 1-inch strip, at least twice daily, continuous use; dentist if pain persists, worsens or new symptoms appear after 4-6 weeks."
+   ],
+   "steps": [
+    {
+     "title": "Cause and timing: what makes the tooth hurt",
+     "profs": [
+      "la"
+     ],
+     "q": "What exposes the dentin tubules, and what turns a stimulus into pain?",
+     "src": "Lam oral slides 7, 9, 14; handout pp. 2-3; T@45500, T@47772, T@48413 11/20",
+     "blocks": [
+      {
+       "k": "facts",
+       "rows": [
+        [
+         "What goes wrong",
+         "{{Loss of enamel}} or {{gingival recession}} exposes dentin; the [[dentin-tubules|dentin tubules]] are open to both the oral cavity and the pulp (lesion initiation)"
+        ],
+        [
+         "How a stimulus becomes pain",
+         "Heat, cold, pressure or acid make the fluid in the tubules expand and shrink, which stimulates the pulp nerve fibres (handout table)"
+        ],
+        [
+         "Stimuli she named",
+         "Acidic juices and sodas; {{brushing too hard}}"
+        ],
+        [
+         "Acid reflux (GERD)",
+         "Stomach acid that reaches the mouth {{erodes enamel}}; treating the reflux prevents further erosion. The handout adds: avoid large meals and acidic or spicy foods"
+        ],
+        [
+         "Toothache",
+         "Cause is bacterial invasion; the inflammatory response to the bacteria stimulates free nerve endings in the pulp"
+        ]
+       ],
+       "p": "la"
+      }
+     ]
+    },
+    {
+     "title": "Recognise it: hypersensitivity or toothache",
+     "profs": [
+      "la"
+     ],
+     "q": "Which feature separates tooth hypersensitivity from toothache?",
+     "src": "Lam oral slide 9; handout pp. 2-3; T@46304, T@55389-T@56012 11/20",
+     "blocks": [
+      {
+       "k": "facts",
+       "rows": [
+        [
+         "Hypersensitivity: pain",
+         "A {{quick, fleeting, sharp or stabbing}} pain on exposure to thermal, chemical or physical stimuli; it {{stops}} after the stimulus is gone"
+        ],
+        [
+         "Hypersensitivity: cause",
+         "Exposed and open dentin tubules"
+        ],
+        [
+         "Toothache: pain",
+         "Pain that {{remains even in the absence of a stimulus}}"
+        ],
+        [
+         "Toothache: cause",
+         "Bacterial invasion"
+        ],
+        [
+         "Handout detail",
+         "Intermittent, short, sharp pain on stimulation may indicate reversible damage; continuous, dull, throbbing pain without stimulation usually indicates irreversible damage"
+        ],
+        [
+         "Mild or severe",
+         "The patient's own description (subjective). She said she will write {{very severe}} on the exam when the pain is a reason to see the dentist"
+        ]
+       ],
+       "p": "la"
+      },
+      {
+       "k": "pts",
+       "items": [
+        "She teaches the difference as: pain that occurs when the tooth is exposed to something (hypersensitivity) versus constant pain whatever the patient does (toothache)."
+       ],
+       "p": "la"
+      }
+     ]
+    },
+    {
+     "title": "Self-care or refer?",
+     "profs": [
+      "la"
+     ],
+     "q": "Name five exclusions to self-care and the follow-up time for a patient who is treated.",
+     "src": "Lam oral slides 11, 12, 18; handout p. 3; T@46516, T@50822, T@51140, T@55389 11/20",
+     "blocks": [
+      {
+       "k": "sub",
+       "text": "Exclusions to self-care (slide 11)",
+       "p": "la"
+      },
+      {
+       "k": "pts",
+       "items": [
+        "{{Toothache}}",
+        "Fever or swelling",
+        "Trauma to the mouth with bleeding, swelling and soreness",
+        "{{Loose teeth}}; broken or knocked-out teeth",
+        "{{Bleeding gums}}",
+        "Severe tooth pain triggered or worsened by hot, cold or chewing",
+        "Mouth soreness associated with poor-fitting dentures"
+       ],
+       "p": "la"
+      },
+      {
+       "k": "facts",
+       "rows": [
+        [
+         "Why a toothache is an exclusion",
+         "Nothing sold over the counter treats bacterial invasion; the dentist has to clean it out"
+        ],
+        [
+         "Severe pain with cold drinks",
+         "She said it usually means so much gum recession that the dentist must do a deep cleaning, which a pharmacist cannot do"
+        ],
+        [
+         "Treatment goals (slide 12)",
+         "Repair the damaged tooth surface with the appropriate toothpaste; minimize abrasion"
+        ],
+        [
+         "Refer to a dentist",
+         "If pain persists or worsens, or new symptoms develop after {{4-6 weeks}} (slide 18). She said \"after 4 weeks\" aloud (T@50822)"
+        ],
+        [
+         "Routine dental care",
+         "She said everyone should see a dentist at least every {{6 months}}"
+        ]
+       ],
+       "p": "la"
+      }
+     ]
+    },
+    {
+     "title": "Treat it: the guideline order",
+     "profs": [
+      "la"
+     ],
+     "q": "What is the first step, what is the next step, and which ingredient is not for children under 12?",
+     "src": "Lam oral slides 14, 15, 17, 22, 23; handout pp. 3-4; T@47772-T@54367 11/20",
+     "blocks": [
+      {
+       "k": "sub",
+       "text": "Non-drug care (slide 14)",
+       "p": "la"
+      },
+      {
+       "k": "pts",
+       "items": [
+        "Eliminate predisposing factors: acidic food and drinks, brushing too hard",
+        "Avoid brushing for {{30-60 minutes}} after acidic food or drinks",
+        "Use a low-abrasion toothbrush with standard fluoride toothpaste",
+        "Minimize GERD symptoms"
+       ],
+       "p": "la"
+      },
+      {
+       "k": "line",
+       "label": "First",
+       "title": "Soft-bristle toothbrush + standard fluoride toothpaste for 7 days",
+       "drugs": [
+        "standard-fluoride"
+       ],
+       "pts": [
+        "{{7 days}}: the first step for a patient who is not already doing it",
+        "Fluoride toothpaste helps the enamel surface; she said that is all it does",
+        "She said practice often skips this step, but the guideline she cited recommends it first"
+       ],
+       "p": "la",
+       "pick": [
+        [
+         "Acid drinks every day and a hard brush",
+         "Change the habits and the brush first; no desensitizing product yet (her 26-year-old case: \"Not yet\")"
+        ],
+        [
+         "Already on a soft brush and standard fluoride",
+         "Move to the next line"
+        ]
+       ],
+       "move": "Move to the next line when: the soft-bristle brush with standard fluoride has been used and the pain is not better after one week (T@54083)."
+      },
+      {
+       "k": "line",
+       "label": "Next",
+       "title": "Soft-bristle brush + desensitizing toothpaste",
+       "drugs": [
+        "potassium-nitrate",
+        "sodium-fluoride",
+        "stannous-fluoride",
+        "arginine"
+       ],
+       "pts": [
+        "{{Depolarizes the excited nerves in the tubules}}: potassium nitrate 5%, sodium fluoride, stannous fluoride",
+        "{{Seals the exposed dentin}} so less fluid flows: arginine 8% (the handout writes arginine calcium)",
+        "Choose by the active ingredient: she gives no brand names because brands change and carry different ingredients"
+       ],
+       "p": "la",
+       "warn": "Potassium nitrate 5%: not for children under 12 years; children swallow toothpaste, with a higher risk of electrolyte problems.",
+       "pick": [
+        [
+         "Child under 12",
+         "Not potassium nitrate"
+        ],
+        [
+         "Patient asks for a brand",
+         "Read the active ingredient on the label"
+        ]
+       ],
+       "move": "Refer to a dentist when: pain persists or worsens, or new symptoms develop after 4-6 weeks."
+      },
+      {
+       "k": "facts",
+       "rows": [
+        [
+         "Counseling for desensitizing toothpaste (slide 17)",
+         [
+          "A single application has no effect; it needs {{continuous use}}",
+          "Apply a {{1-inch}} strip to a soft-bristle brush and brush at least {{twice daily}}",
+          "Long-term use to relieve the symptoms: the handout says over 4-6 weeks; she said 4 to 6 weeks to see the benefit",
+          "Continue until the sensitivity subsides or as long as the dentist recommends"
+         ]
+        ]
+       ],
+       "p": "la"
+      }
+     ]
+    },
+    {
+     "title": "Fluoride and the chemistry of the tooth products (Dr. Sikazwe)",
+     "profs": [
+      "sk"
+     ],
+     "q": "How does fluoride protect enamel, and what do the non-fluoride products do?",
+     "src": "Sikazwe OOO slides 15-21 (assigned); slides 22-24 not on his assigned pages",
+     "blocks": [
+      {
+       "k": "prof",
+       "p": "sk",
+       "rows": [
+        [
+         "Causes of decay (slide 16)",
+         "Bacteria form plaque on teeth and gums; bacteria convert sugars into acids that erode enamel and lead to cavities; acid drinks also erode enamel; smoking alters saliva pH and promotes bacterial growth; substance use (meth, crack cocaine)"
+        ],
+        [
+         "Fluoride (slides 17-18)",
+         "Enamel's {{hydroxyapatite}} is vulnerable to acid erosion. Fluoride ions from toothpastes or gels (Na2PO3F, SnF2, NaF) convert it into [[fluorapatite|fluorapatite]], Ca10(PO4)6F2, which resists acid erosion, and they enhance mineral deposition"
+        ],
+        [
+         "Too much fluoride",
+         "More than {{2 mg/L}} can cause enamel fluorosis (slide 18)"
+        ],
+        [
+         "Non-fluoride toothpastes (slide 19)",
+         "Sodium bicarbonate: an abrasive and mouth pH elevating agent. Nanohydroxyapatite (10% nHA): crystals of 50-1000 nm that bond to hydroxyapatite. Calcium sodium phosphosilicate: a bioactive glass that deposits crystalline hydroxycarbonate apatite. Amorphous calcium phosphate: releases Ca2+ and PO4 ions on contact with saliva to remineralize enamel"
+        ],
+        [
+         "Rinses (slides 20-21)",
+         "Fluoride: promotes remineralization and prevents caries. NaHCO3: raises saliva pH and lowers growth of acidic bacteria. Chlorhexidine gluconate (a biguanide salt) and cetylpyridinium chloride (a pyridinium salt) are cationic: they bind the bacterial cell wall electrostatically and their lipophilic tails disrupt it"
+        ],
+        [
+         "Not on his assigned pages",
+         "Slide 22: amalgam fillings are less common because of environmental and toxicity concerns. Slide 23: the most common resin is Bis-GMA, a polymer of bisphenol A and glycidyl methacrylate. Slide 24: whiteners range from H2O2 (oxidizes stains) to abrasives to surfactants"
+        ]
+       ]
+      }
+     ]
+    }
+   ],
+   "patients": [
+    {
+     "t": "Mr. Alvarez, 61, has throbbing pain in a back tooth. It started three days ago and nothing makes it better or worse. His GERD is controlled with an OTC acid reducer, and he brushes once a day with a regular toothbrush.",
+     "q": "What is the most appropriate intervention?",
+     "o": [
+      "Counsel him on minimizing his GERD symptoms",
+      "A soft-bristle toothbrush with standard fluoride toothpaste",
+      "A toothpaste that contains potassium nitrate 5%",
+      "A referral to a dentist"
+     ],
+     "a": 3,
+     "w": "Throbbing pain that continues without a stimulus is a toothache from bacterial invasion. A toothache is an exclusion: nothing sold over the counter helps and the dentist has to clean it out (slides 9, 11; T@51849 11/20).",
+     "x": {
+      "Counsel him on minimizing his GERD symptoms": "GERD erodes enamel, but his pain is constant and not triggered; this does not treat a toothache.",
+      "A soft-bristle toothbrush with standard fluoride toothpaste": "This is the first step for hypersensitivity, which needs a stimulus; his pain has none.",
+      "A toothpaste that contains potassium nitrate 5%": "A desensitizing toothpaste treats open dentin tubules, not a bacterial toothache."
+     }
+    },
+    {
+     "t": "Ms. Rivera, 30, has a short, sharp tooth pain when she drinks hot or cold drinks. It is mild and started two days ago. She drinks lemonade with lunch and orange juice with breakfast, and brushes twice a day with a medium-bristle toothbrush and fluoride toothpaste. A dentist saw her a month ago with no concerns.",
+     "q": "What is the best first recommendation?",
+     "o": [
+      "Start a desensitizing toothpaste with potassium nitrate 5% right away",
+      "Use a stannous fluoride desensitizing toothpaste with her medium brush",
+      "Cut back on acidic drinks and use a soft brush with standard fluoride",
+      "Return to her dentist today because the pain started two days ago"
+     ],
+     "a": 2,
+     "w": "Her pain needs a stimulus, so it is hypersensitivity, and she has no exclusion. The first step is to remove the acid exposure and the abrasion with a soft-bristle brush and standard fluoride for 7 days; a desensitizing toothpaste comes only after that (slides 14, 15, 22; T@53195-T@54367 11/20).",
+     "x": {
+      "Start a desensitizing toothpaste with potassium nitrate 5% right away": "A desensitizing toothpaste is the next step, after one week of the first step.",
+      "Use a stannous fluoride desensitizing toothpaste with her medium brush": "Stannous fluoride is a desensitizing product, which comes after the first step, and the medium brush adds abrasion.",
+      "Return to her dentist today because the pain started two days ago": "Mild pain with a stimulus and a recent normal dental visit is not an exclusion."
+     }
+    },
+    {
+     "t": "Ms. Chen, 24, used a soft-bristle brush and standard fluoride toothpaste for 9 days and stopped her acidic drinks. She still has a sharp pain with cold air. It is mild, and she has no swelling.",
+     "q": "What is the next step?",
+     "o": [
+      "Repeat the same soft-brush step for another full week",
+      "Refer her to a dentist now because the first step did not work",
+      "Switch to a firmer brush so the teeth are cleaned better",
+      "Add a desensitizing toothpaste such as one with arginine 8%"
+     ],
+     "a": 3,
+     "w": "The first step has been done for more than a week without relief and she has no exclusion, so the next line is a soft-bristle brush with a desensitizing toothpaste (slide 15; T@54083 11/20).",
+     "x": {
+      "Repeat the same soft-brush step for another full week": "The first step is 7 days; she has already finished it.",
+      "Refer her to a dentist now because the first step did not work": "Referral is for exclusions, or pain that persists or worsens after 4-6 weeks of the desensitizing toothpaste.",
+      "Switch to a firmer brush so the teeth are cleaned better": "A firmer brush adds abrasion; one treatment goal is to minimize abrasion."
+     }
+    },
+    {
+     "t": "A father asks which desensitizing toothpaste to buy for his 11-year-old, who has mild pain with cold drinks and has finished the first step.",
+     "q": "Which active ingredient is not recommended for this child?",
+     "o": [
+      "Sodium fluoride",
+      "Potassium nitrate 5%",
+      "Stannous fluoride",
+      "Arginine 8%"
+     ],
+     "a": 1,
+     "w": "Potassium nitrate is not for children under 12 years because children swallow toothpaste, with a higher risk of electrolyte problems (slide 15; T@50194 11/20).",
+     "x": {
+      "Sodium fluoride": "Sodium fluoride is one of the listed desensitizing ingredients and carries no age limit on the slide.",
+      "Stannous fluoride": "Stannous fluoride carries no age limit on the slide.",
+      "Arginine 8%": "Arginine 8% carries no age limit on the slide."
+     }
+    },
+    {
+     "t": "Mr. Davis, 47, has a sharp pain with cold drinks. He also has bleeding gums and a loose lower tooth.",
+     "q": "What do you recommend?",
+     "o": [
+      "A desensitizing toothpaste with sodium fluoride",
+      "A hydrogen peroxide rinse for the gums",
+      "A soft-bristle brush with standard fluoride for 7 days",
+      "A referral to a dentist"
+     ],
+     "a": 3,
+     "w": "Bleeding gums and loose teeth are exclusions to self-care (slide 11); nothing OTC treats them.",
+     "x": {
+      "A desensitizing toothpaste with sodium fluoride": "A desensitizing toothpaste does not treat bleeding gums or a loose tooth, which are exclusions.",
+      "A hydrogen peroxide rinse for the gums": "A peroxide rinse is a canker sore product and can irritate teeth and soft tissue.",
+      "A soft-bristle brush with standard fluoride for 7 days": "The first step is for patients without an exclusion."
+     }
+    },
+    {
+     "t": "A patient has used a desensitizing toothpaste twice daily for 5 weeks. The cold pain is unchanged and a new burning area has appeared on the gum.",
+     "q": "What is the next step?",
+     "o": [
+      "Use a 2-inch strip of toothpaste each time",
+      "Continue the same toothpaste for 4 more weeks",
+      "Refer to a dentist for further evaluation",
+      "Stop the toothpaste and use ice on the gum"
+     ],
+     "a": 2,
+     "w": "Pain that persists, and new symptoms after 4-6 weeks, are the reasons to refer to a dentist (slide 18). A 1-inch strip is enough (T@50656 11/20).",
+     "x": {
+      "Use a 2-inch strip of toothpaste each time": "She said 1 inch is enough; more paste does not add effect.",
+      "Continue the same toothpaste for 4 more weeks": "Pain that persists after 4-6 weeks is the point to refer, not to extend.",
+      "Stop the toothpaste and use ice on the gum": "Ice is advice for a canker sore, and a new gum symptom needs evaluation."
+     }
+    }
+   ],
+   "numbers": [
+    [
+     "7 days",
+     "soft-bristle brush with standard fluoride toothpaste, the first step",
+     "Lam oral slide 15"
+    ],
+    [
+     "30-60 min",
+     "wait before brushing after acidic food or drinks",
+     "Lam oral slide 14"
+    ],
+    [
+     "5%",
+     "potassium nitrate in a desensitizing toothpaste",
+     "Lam oral slide 15"
+    ],
+    [
+     "Under 12 years",
+     "potassium nitrate is not recommended",
+     "Lam oral slide 15"
+    ],
+    [
+     "8%",
+     "arginine in a desensitizing toothpaste",
+     "Lam oral slide 15"
+    ],
+    [
+     "1 inch",
+     "strip of toothpaste, at least twice daily",
+     "Lam oral slide 17"
+    ],
+    [
+     "4-6 weeks",
+     "long-term use; dentist if pain persists or new symptoms appear",
+     "Lam oral slides 17-18; handout p. 4"
+    ],
+    [
+     "2 mg/L",
+     "fluoride above this can cause enamel fluorosis",
+     "Sikazwe OOO slide 18"
+    ]
+   ]
+  },
+  {
+   "id": "canker-sore",
+   "name": "Canker sore (recurrent aphthous stomatitis)",
+   "group": "selfcare",
+   "lectures": "Lam 11/20 (Exam 3) · Sikazwe 11/18 (carbamide peroxide, benzocaine)",
+   "topics": [
+    "lr-ras",
+    "lr-diff"
+   ],
+   "short": [
+    "Gray or yellowish oval ulcer with a red halo on the lining inside the mouth; the exact cause is unknown, so triggers are listed.",
+    "It heals by itself in 7-14 days; the goals are pain relief and preventing complications.",
+    "Refer if the lesion lasts over 14 days, recurs often, comes with systemic illness, or earlier self-care failed.",
+    "No product is first: topical anesthetic, debriding agent, protectant, rinse and systemic analgesic can each be used; she will ask for counseling on the product chosen.",
+    "Debriding agents: after meals, wait 30 minutes, at most 7 days (black hairy tongue). Ice, not heat."
+   ],
+   "steps": [
+    {
+     "title": "Cause and timing",
+     "profs": [
+      "la"
+     ],
+     "q": "Is the cause known, and what are the five groups of precipitating factors?",
+     "src": "Lam oral slides 26, 27; handout p. 5; T@57025-T@59651 11/20",
+     "blocks": [
+      {
+       "k": "facts",
+       "rows": [
+        [
+         "Cause",
+         "The exact cause is {{unknown}}; known triggers cause it"
+        ],
+        [
+         "Local trauma",
+         "Smoking, chemical irritation, biting the inside of the cheeks or lips, injury from toothbrushing or braces"
+        ],
+        [
+         "Systemic or immunologic",
+         "HIV/AIDS, inflammatory bowel diseases; she said a lowered immune system raises the chance"
+        ],
+        [
+         "Nutritional conditions",
+         "Gluten-sensitive enteropathy; deficiencies in {{iron}}, {{B vitamins}} and {{folic acid}}; she named celiac disease and short bowel syndrome"
+        ],
+        [
+         "Medications",
+         "Antibiotics, antiepileptics, diuretics, chemotherapy, antiretrovirals, anti-inflammatory drugs"
+        ],
+        [
+         "Others",
+         "Genetic and allergic factors, stress, hormonal changes, food"
+        ],
+        [
+         "Course",
+         "It resolves on its own in {{7-14 days}}"
+        ]
+       ],
+       "p": "la"
+      }
+     ]
+    },
+    {
+     "title": "Recognise it",
+     "profs": [
+      "la"
+     ],
+     "q": "Where does a canker sore appear, what does it look like, and what comes first?",
+     "src": "Lam oral slides 27, 47; handout pp. 5, 9; T@57025-T@59261 11/20",
+     "blocks": [
+      {
+       "k": "facts",
+       "rows": [
+        [
+         "Location",
+         "Non-keratinized mucosa of the movable mouth: tongue, floor of the mouth, soft palate, inside the lips and cheeks"
+        ],
+        [
+         "Looks",
+         "Round or oval ulcers; flat or crateriform (crater-like center); {{gray or grayish yellow}} with an {{erythematous halo}} of inflamed tissue"
+        ],
+        [
+         "Before the sore",
+         "Some patients feel a pricking or burning sensation, a [[prodrome|prodrome]], about {{2-48 hours}} before the lesion appears"
+        ],
+        [
+         "Symptoms",
+         "Pain that increases with eating and drinking; normal activities may be severely limited"
+        ]
+       ],
+       "p": "la"
+      },
+      {
+       "k": "sub",
+       "text": "Types (slide 47)",
+       "p": "la"
+      },
+      {
+       "k": "facts",
+       "rows": [
+        [
+         "Minor",
+         "Oval, flat ulcer with erythematous tissue around it; all areas except the gingiva, hard palate and vermilion border"
+        ],
+        [
+         "Major",
+         "Oval, ragged, gray or yellow, crateriform ulcers; lips, soft palate and throat"
+        ],
+        [
+         "Herpetiform",
+         "Small oval ulcers in crops, similar to minor RAS; any intraoral area"
+        ]
+       ],
+       "p": "la"
+      }
+     ]
+    },
+    {
+     "title": "Self-care or refer?",
+     "profs": [
+      "la"
+     ],
+     "q": "Name five exclusions to self-care and the three treatment-failure referral times.",
+     "src": "Lam oral slides 29, 30, 40; handout pp. 6, 8; T@59651-T@60326, T@69948 11/20",
+     "blocks": [
+      {
+       "k": "sub",
+       "text": "Exclusions to self-care (slide 29)",
+       "p": "la"
+      },
+      {
+       "k": "pts",
+       "items": [
+        "Lesions associated with underlying pathology",
+        "Lesions present {{more than 14 days}}: something else may be causing them",
+        "Frequently recurring lesions: look for a cause such as a nutritional deficiency",
+        "Symptoms of systemic illness: inflamed lymph nodes, fever, signs of infection",
+        "Failure of prior appropriate self-care treatment"
+       ],
+       "p": "la"
+      },
+      {
+       "k": "facts",
+       "rows": [
+        [
+         "Treatment goals (slide 30)",
+         "{{Pain relief}} and {{prevent complications}}, such as secondary infection; the handout adds deterring recurrence"
+        ],
+        [
+         "Refer to the PCP (slide 40)",
+         [
+          "Symptoms do not abate after {{7 days}} of treatment with oral debriding or wound-cleansing agents",
+          "The lesions do not heal in {{14 days}}",
+          "Symptoms worsen during self-treatment",
+          "Fever, rash or swelling develops"
+         ]
+        ],
+        [
+         "How she will ask it",
+         "Is the patient a candidate for self-care, or does the patient need a healthcare provider? Then: given this product, what are the key counseling points? She will not ask which product comes first"
+        ]
+       ],
+       "p": "la"
+      }
+     ]
+    },
+    {
+     "title": "Treat it: match the product to the need",
+     "profs": [
+      "la",
+      "sk"
+     ],
+     "q": "Which products relieve pain, which clean the sore, and what is the main counseling point for each?",
+     "src": "Lam oral slides 32-39; handout pp. 6-8; T@61228-T@69948 11/20; Sikazwe OOO slide 20",
+     "blocks": [
+      {
+       "k": "sub",
+       "text": "Non-drug care (slide 32)",
+       "p": "la"
+      },
+      {
+       "k": "pts",
+       "items": [
+        "Avoid spicy, acidic and sharp-textured food",
+        "Ice, not heat: {{10-minute}} periods, no longer than {{20 minutes}} in each hour; heat may spread the infection",
+        "Deter recurrence: eat more nutritious food if the cause is a nutritional deficiency"
+       ],
+       "p": "la"
+      },
+      {
+       "k": "line",
+       "label": "Pain",
+       "title": "Topical anesthetic: benzocaine or benzyl alcohol",
+       "drugs": [
+        "benzocaine-oral",
+        "benzyl-alcohol"
+       ],
+       "pts": [
+        "Gives temporary relief of pain; benzocaine {{10-20%}} and benzyl alcohol {{0.05-0.1%}} on slide 34",
+        "Apply to the sore up to {{4 times}} a day as needed (handout: age over 2 years)",
+        "Do not combine with menthol, phenol or camphor: tissue irritation and damage; she named lozenges, throat sprays and Vicks products as menthol sources"
+       ],
+       "p": "la",
+       "warn": "The handout prints benzocaine 5-20%, the slide 10-20%; she gave no number."
+      },
+      {
+       "k": "line",
+       "label": "Clean",
+       "title": "Oral debriding and wound-cleansing agent",
+       "drugs": [
+        "carbamide-peroxide-oral",
+        "hydrogen-peroxide"
+       ],
+       "pts": [
+        "Cleanses the mouth to prevent infection and gives symptomatic relief; carbamide peroxide {{10-15%}}, hydrogen peroxide {{1.5%}} or {{3%}}",
+        "Use after meals, 3-4 times a day; avoid eating or drinking for at least {{30 minutes}} after",
+        "Use for up to {{7 days}}: over-cleaning lets opportunistic organisms grow, causing black hairy tongue; prolonged use also causes tooth sensitivity and soft tissue irritation",
+        "Patient with sensitive teeth: use direct application to the sore, not the rinse"
+       ],
+       "p": "la",
+       "warn": "She said carbamide peroxide direct application sits 1 or 2 minutes; the slide and handout say 1 minute.",
+       "facts": [
+        [
+         "Directions (slide 35)",
+         [
+          "Carbamide peroxide, direct application: apply to the area, leave 1 minute, spit",
+          "Carbamide peroxide, rinse: a few drops on the tongue, mix with saliva, swish 1 minute",
+          "Hydrogen peroxide 1.5%: direct application, 1 minute, spit",
+          "Hydrogen peroxide 3%: swish for one minute (handout: mixed with an equal amount of water first)"
+         ]
+        ]
+       ]
+      },
+      {
+       "k": "line",
+       "label": "Coat",
+       "title": "Topical oral protectant (paste, patch or disc)",
+       "drugs": [
+        "protectant-disc"
+       ],
+       "pts": [
+        "Coats and protects the sore so it is not irritated; a barrier forms and dissolves in {{8-12 hours}}",
+        "Use up to 3-4 times a day after meals; avoid drinking for up to 30 minutes so the patch adheres"
+       ],
+       "p": "la",
+       "warn": "Placement time of the disc: slide 37 prints 10-20 seconds; the handout and her speech say 10-20 minutes."
+      },
+      {
+       "k": "line",
+       "label": "Rinse",
+       "title": "Saline rinse or baking soda paste",
+       "drugs": [
+        "saline-rinse"
+       ],
+       "pts": [
+        "Hastens healing and soothes the ulcers; use up to {{4 times}} a day",
+        "Saline: 1-3 teaspoons of salt in 4-8 ounces of warm water; any salt",
+        "Baking soda paste: apply to the lesion for a few minutes",
+        "The guideline gives no order: any of these products can be tried first, based on the patient's schedule or choice"
+       ],
+       "p": "la"
+      },
+      {
+       "k": "line",
+       "label": "Extra pain relief",
+       "title": "Systemic analgesic",
+       "drugs": [
+        "analgesic-oral-systemic"
+       ],
+       "pts": [
+        "NSAIDs or acetaminophen for additional relief",
+        "Aspirin is not held in the mouth: chemical burn"
+       ],
+       "p": "la"
+      },
+      {
+       "k": "prof",
+       "p": "sk",
+       "rows": [
+        [
+         "Carbamide peroxide 10% (slide 20)",
+         "Used as a mouth rinse for canker sores"
+        ],
+        [
+         "Benzocaine (slide 20)",
+         "An anesthetic agent in gels or combination agents; methemoglobinemia is rare but a concern: CYP enzymes convert benzocaine to benzocaine hydroxylamine, which causes it"
+        ]
+       ],
+       "src": "Sikazwe OOO slide 20"
+      }
+     ]
+    },
+    {
+     "title": "Follow up",
+     "profs": [
+      "la"
+     ],
+     "q": "When does a canker sore resolve, and when does the patient go to a provider?",
+     "src": "Lam oral slides 40; handout p. 8; T@69759-T@70079 11/20",
+     "blocks": [
+      {
+       "k": "pts",
+       "items": [
+        "Minor lesions are self-limiting and resolve within {{14 days}}; if symptoms resolve, stop the treatment",
+        "Symptoms still present after 7 days of debriding or cleansing agents: refer",
+        "Lesions not healed in 14 days: refer",
+        "Symptoms worse during self-treatment, or fever, rash or swelling: refer"
+       ],
+       "p": "la"
+      }
+     ]
+    }
+   ],
+   "patients": [
+    {
+     "t": "Ms. Park, 28, is stressed from exams. She has a gray-yellow oval ulcer with a red rim inside her lower lip. It is painful when she eats. She felt burning there the day before it appeared.",
+     "q": "What is the likely diagnosis?",
+     "o": [
+      "Canker sore (recurrent aphthous stomatitis)",
+      "Cold sore (herpes simplex labialis) on the lip",
+      "Toothache from bacterial invasion of the tooth",
+      "Tooth hypersensitivity from exposed dentin tubules"
+     ],
+     "a": 0,
+     "w": "A gray or yellow oval ulcer with a red halo inside the mouth, preceded by burning (a prodrome), is a canker sore. A cold sore is red, fluid-filled and on or around the lip (slides 27, 47).",
+     "x": {
+      "Cold sore (herpes simplex labialis) on the lip": "A cold sore is a red, fluid-filled lesion outside the mouth at the lip and skin junction.",
+      "Toothache from bacterial invasion of the tooth": "A toothache is a deep tooth pain that remains without a stimulus, not an ulcer.",
+      "Tooth hypersensitivity from exposed dentin tubules": "Hypersensitivity is a sharp pain on exposure to a stimulus, without a mouth ulcer."
+     }
+    },
+    {
+     "t": "A man has had a painful ulcer on his cheek lining for 3 weeks. He has tried a benzocaine gel and a saline rinse without relief.",
+     "q": "What do you recommend?",
+     "o": [
+      "Hydrogen peroxide 3% rinse for 7 more days",
+      "A protectant disc after meals",
+      "Referral to his PCP",
+      "Baking soda paste for a few minutes"
+     ],
+     "a": 2,
+     "w": "Lesions present more than 14 days, and failure of prior self-care, are exclusions to self-care (slide 29).",
+     "x": {
+      "Hydrogen peroxide 3% rinse for 7 more days": "A debriding agent is limited to 7 days and does not fit a lesion over 14 days.",
+      "A protectant disc after meals": "A protectant is a self-care product; he has two exclusions.",
+      "Baking soda paste for a few minutes": "Baking soda paste is a self-care rinse; self-care has failed."
+     }
+    },
+    {
+     "t": "A patient chooses hydrogen peroxide for a canker sore.",
+     "q": "Which counseling point is correct?",
+     "o": [
+      "Swish and swallow it with water after each meal so it keeps working",
+      "Use it for 3 weeks to keep the sore clean until it heals",
+      "Spit it out after each use and wait 30 minutes before eating",
+      "Hold it in the mouth for 10 minutes after each use of it"
+     ],
+     "a": 2,
+     "w": "Debriding agents are used after meals 3-4 times a day, spit out, followed by 30 minutes without food or drink, for up to 7 days (slides 35-36).",
+     "x": {
+      "Swish and swallow it with water after each meal so it keeps working": "The product is spit out, not swallowed.",
+      "Use it for 3 weeks to keep the sore clean until it heals": "Use is limited to 7 days; longer use can cause black hairy tongue.",
+      "Hold it in the mouth for 10 minutes after each use of it": "The contact time is 1 minute."
+     }
+    },
+    {
+     "t": "A patient with a canker sore also has sensitive teeth. She asks how to use hydrogen peroxide.",
+     "q": "What do you advise?",
+     "o": [
+      "Swish a 3% rinse twice as long to protect the teeth",
+      "Use direct application on the sore, not the rinse",
+      "Mix it with her toothpaste and brush",
+      "Use the rinse with ice in the mouth"
+     ],
+     "a": 1,
+     "w": "Hydrogen peroxide can irritate enamel and soft tissue; she said patients with sensitive teeth should use the applicator and not the rinse (T@65066, T@67096 11/20).",
+     "x": {
+      "Swish a 3% rinse twice as long to protect the teeth": "A longer swish increases the exposure, and prolonged use causes tooth sensitivity.",
+      "Mix it with her toothpaste and brush": "Mixing it into toothpaste is not a described use.",
+      "Use the rinse with ice in the mouth": "Ice is non-drug care for pain, not a way to use a peroxide rinse."
+     }
+    },
+    {
+     "t": "A man with a canker sore uses a benzocaine gel and a camphor-menthol rub on the same sore.",
+     "q": "What do you tell him?",
+     "o": [
+      "Keep both because the two together relieve pain better",
+      "Use the rub first and the gel second to lower irritation",
+      "Keep both but use them only before meals",
+      "Stop combining them: it irritates and damages tissue"
+     ],
+     "a": 3,
+     "w": "Benzocaine and benzyl alcohol are not combined with menthol, phenol or camphor because of tissue irritation (slide 34).",
+     "x": {
+      "Keep both because the two together relieve pain better": "The combination irritates the tissue; it does not add relief.",
+      "Use the rub first and the gel second to lower irritation": "The order does not remove the irritation.",
+      "Keep both but use them only before meals": "The problem is the combination, not the timing."
+     }
+    },
+    {
+     "t": "A patient asks what to do at home for a painful canker sore, without a product.",
+     "q": "Which advice is correct?",
+     "o": [
+      "Apply heat for 20 minutes in each hour to relax the area",
+      "Apply ice in 10-minute periods, up to 20 minutes in each hour",
+      "Eat spicy food so that the sore gets cleaned out",
+      "Apply ice for 30 minutes at a time until the pain stops"
+     ],
+     "a": 1,
+     "w": "Ice reduces swelling in 10-minute periods, up to 20 minutes in each hour; heat may spread the infection (handout p. 6; T@61228 11/20).",
+     "x": {
+      "Apply heat for 20 minutes in each hour to relax the area": "Heat is avoided because it may spread the infection.",
+      "Eat spicy food so that the sore gets cleaned out": "Spicy, acidic and sharp foods irritate the sore.",
+      "Apply ice for 30 minutes at a time until the pain stops": "Ice is limited to 10-minute periods and 20 minutes in each hour."
+     }
+    }
+   ],
+   "numbers": [
+    [
+     "7-14 days",
+     "a canker sore resolves on its own",
+     "Lam oral slide 40; T@59261 11/20"
+    ],
+    [
+     "2-48 hours",
+     "prodrome before the lesion",
+     "Lam handout p. 5"
+    ],
+    [
+     "More than 14 days",
+     "lesion present: refer",
+     "Lam oral slides 29, 40"
+    ],
+    [
+     "7 days",
+     "maximum use of a debriding agent; refer if not better",
+     "Lam oral slides 36, 40"
+    ],
+    [
+     "30 minutes",
+     "no eating or drinking after a product",
+     "Lam oral slides 34-37"
+    ],
+    [
+     "10-15%",
+     "carbamide peroxide for the mouth",
+     "Lam oral slide 35"
+    ],
+    [
+     "1.5% and 3%",
+     "hydrogen peroxide for the mouth",
+     "Lam oral slide 35"
+    ],
+    [
+     "10 and 20 minutes",
+     "ice, at a time and in each hour",
+     "Lam handout p. 6"
+    ],
+    [
+     "4 times",
+     "most products: up to 3-4 times a day after meals",
+     "Lam oral slides 34-38"
+    ]
+   ]
+  },
+  {
+   "id": "cold-sore",
+   "name": "Cold sore (herpes simplex labialis)",
+   "group": "selfcare",
+   "lectures": "Lam 11/20 (Exam 3)",
+   "topics": [
+    "lr-hsl",
+    "lr-diff"
+   ],
+   "short": [
+    "Herpes simplex virus 1: contagious by direct contact, then latent and reactivated by triggers (stress, sun, wind, cold, fever, injury).",
+    "It starts with tingling or burning, then red fluid-filled vesicles that merge and crust, on or around the lip.",
+    "Exclusions: no previous diagnosis, more than 14 days, increased frequency, immunocompromised, systemic signs, recurrence.",
+    "First line: docosanol 10% at the first sign, up to 5 times a day until healed, up to 10 days; a topical anesthetic is optional for pain.",
+    "Not recommended: topical steroids; tea tree oil, lysine and zinc have too little data."
+   ],
+   "steps": [
+    {
+     "title": "Cause and timing",
+     "profs": [
+      "la"
+     ],
+     "q": "What causes a cold sore, how is it spread, and what triggers it?",
+     "src": "Lam oral slides 43, 44; handout pp. 8-9; T@70941-T@72227 11/20",
+     "blocks": [
+      {
+       "k": "facts",
+       "rows": [
+        [
+         "Cause",
+         "Herpes simplex virus 1 ({{HSV-1}}); HSV-2 is associated with genital sores (infectious disease module)"
+        ],
+        [
+         "Spread",
+         "Contagious by {{direct contact}}; fluid in the vesicles holds live virus, which stays viable on surfaces for several hours"
+        ],
+        [
+         "After the first infection",
+         "The virus becomes [[latency|latent]] and reactivates when a stimulus triggers it"
+        ],
+        [
+         "Triggers",
+         "Ultraviolet light, stress, fatigue, cold, windburn, fever, injury, menstruation, dental work, infectious diseases and other factors that suppress the immune system"
+        ]
+       ],
+       "p": "la"
+      }
+     ]
+    },
+    {
+     "title": "Recognise it: the stages",
+     "profs": [
+      "la"
+     ],
+     "q": "What are the stages of a cold sore, and where is it located?",
+     "src": "Lam oral slides 45, 47; handout p. 9; T@72227-T@73857 11/20",
+     "blocks": [
+      {
+       "k": "facts",
+       "rows": [
+        [
+         "Location",
+         "Slide 47: junction of oral mucosa and skin of the lip and nose. She said outside the mouth, on or around the lips"
+        ],
+        [
+         "Before the lesion (prodrome)",
+         "{{2-48 hours}} of burning, itching, tingling or numbness; other signs may be pain, fever, localized bleeding, swollen lymph nodes and malaise"
+        ],
+        [
+         "Initial lesion",
+         "Small red papules of fluid-containing [[or-vesicle|vesicles]], 1-3 mm in diameter; many merge into a larger area; an erythematous, inflamed border"
+        ],
+        [
+         "Mature lesion",
+         "A {{crust}} often forms over the coalesced, burst vesicles; the base stays erythematous"
+        ],
+        [
+         "Secondary infection",
+         "The crust never forms, or the erythematous border persists"
+        ]
+       ],
+       "p": "la"
+      }
+     ]
+    },
+    {
+     "title": "Self-care or refer?",
+     "profs": [
+      "la"
+     ],
+     "q": "Which exclusions apply, and what counts as recurrence in her cases?",
+     "src": "Lam oral slides 48, 49, 59, 60, 62-67; handout pp. 10, 12; T@74417-T@75700, T@83053-T@84533 11/20",
+     "blocks": [
+      {
+       "k": "sub",
+       "text": "Exclusions to self-care (slide 49)",
+       "p": "la"
+      },
+      {
+       "k": "pts",
+       "items": [
+        "{{No previous diagnosis}} of a cold sore: the pharmacist has no scope to diagnose it",
+        "Lesions present {{more than 14 days}}",
+        "Increased frequency of outbreaks",
+        "{{Immunocompromised}}",
+        "Symptoms of systemic infection (fever, swollen lymph nodes, rash)",
+        "Recurrence"
+       ],
+       "p": "la"
+      },
+      {
+       "k": "facts",
+       "rows": [
+        [
+         "What recurrence means",
+         "Slide 49 prints \"recurrence\" without a time. She called an outbreak {{once a month}} reoccurring. Her second case, a lesion {{a year}} after the last outbreak and already seen by a provider, is a self-care candidate"
+        ],
+        [
+         "Treatment goals (slide 48)",
+         "Reduce the duration of the active infection; relieve pain and irritation while the sores heal; prevent secondary infection; curtail the spread"
+        ],
+        [
+         "Non-drug care (slide 50)",
+         [
+          "Avoid triggers: stress, fatigue, wind, excessive sun, local trauma",
+          "Sun exposure: sunscreen on the face and lips; the handout adds an SPF lip protectant",
+          "Keep the skin moist to prevent drying and cracking: cracks make a secondary infection easier",
+          "Keep lesions clean with gentle washing with mild soap, and wash the hands often"
+         ]
+        ],
+        [
+         "Refer to the PCP (slide 60)",
+         [
+          "The lesions do not heal in {{14 days}}",
+          "Lesions recur despite appropriate self-care",
+          "Self-treatment does not relieve discomfort",
+          "Fever, malaise, rash or swollen lymph glands",
+          "Symptoms change or worsen"
+         ]
+        ]
+       ],
+       "p": "la"
+      }
+     ]
+    },
+    {
+     "title": "Treat it: antiviral first, analgesic added",
+     "profs": [
+      "la"
+     ],
+     "q": "What is the first-line product and how is it used, and what is not recommended?",
+     "src": "Lam oral slides 51-58; handout pp. 10-12; T@77492-T@81994 11/20",
+     "blocks": [
+      {
+       "k": "line",
+       "label": "First",
+       "title": "Docosanol 10% cream (Abreva)",
+       "drugs": [
+        "docosanol"
+       ],
+       "pts": [
+        "Topical antiviral: {{reduces the duration and the severity}} of symptoms, so it is first line",
+        "Mechanism: it prevents the herpesvirus from fusing with the human cell plasma membrane, so the virus does not replicate",
+        "Apply at the {{first sign}} (the prodrome); it works best before the lesion appears but still helps afterwards",
+        "Up to {{5 times}} a day until the lesion heals, for up to {{10 days}}"
+       ],
+       "p": "la",
+       "pick": [
+        [
+         "Tingling or burning, no lesion yet",
+         "Start now"
+        ],
+        [
+         "Lesion already present",
+         "Start now; it still helps"
+        ]
+       ]
+      },
+      {
+       "k": "line",
+       "label": "Plus or minus",
+       "title": "Topical analgesic or anesthetic",
+       "drugs": [
+        "benzocaine-oral",
+        "camphor-menthol-hsl"
+       ],
+       "pts": [
+        "Relieves burning, itching and pain; it {{does not reduce the duration}} of the infection",
+        "Apply a thin layer after meals, 3-4 times a day; avoid eating or drinking for at least 30 minutes",
+        "Camphor above {{3%}} and menthol above {{1%}} are contraindicated: counterirritant effect; Vicks rub has about 5% camphor"
+       ],
+       "p": "la",
+       "facts": [
+        [
+         "Handout table",
+         [
+          "Benzocaine 5-20% (adults and children 2 years and older)",
+          "Dibucaine 0.25-1%",
+          "Dyclonine hydrochloride 0.5-1%",
+          "Benzyl alcohol 10-33%"
+         ]
+        ]
+       ]
+      },
+      {
+       "k": "line",
+       "label": "Pain",
+       "title": "Systemic analgesic",
+       "drugs": [
+        "analgesic-oral-systemic"
+       ],
+       "pts": [
+        "Aspirin, ibuprofen, naproxen or acetaminophen for pain only",
+        "Aspirin is not held on the lesion"
+       ],
+       "p": "la"
+      },
+      {
+       "k": "line",
+       "label": "Secondary infection",
+       "title": "Triple antibiotic ointment",
+       "drugs": [
+        "triple-antibiotic-hsl"
+       ],
+       "pts": [
+        "Only if the lesion is not forming a mature lesion: no crust and still red",
+        "Thin layer {{3-4 times}} a day; the patient follows up with the PCP"
+       ],
+       "p": "la"
+      },
+      {
+       "k": "sub",
+       "text": "Not recommended",
+       "p": "la"
+      },
+      {
+       "k": "pts",
+       "items": [
+        "<<topical-steroid-hsl|Topical steroids>>: the herpes virus does not respond to corticosteroids, and they are [[or-astringent|highly astringent]], which irritates the skin",
+        "<<complementary-hsl|Tea tree oil, lysine and zinc>>: not enough data; the guidelines do not recommend them to prevent or treat cold sores"
+       ],
+       "p": "la"
+      }
+     ]
+    },
+    {
+     "title": "Follow up",
+     "profs": [
+      "la"
+     ],
+     "q": "How long does a cold sore take to heal, and when does the patient go to the PCP?",
+     "src": "Lam oral slides 59, 60; handout p. 12; T@81994-T@82500 11/20",
+     "blocks": [
+      {
+       "k": "pts",
+       "items": [
+        "Cold sores are self-limiting; healing occurs within {{10-14 days}}",
+        "If symptoms have resolved, no further treatment is necessary",
+        "Refer for: no healing in 14 days, recurrence despite appropriate self-care, no relief, signs of systemic illness, changing or worsening symptoms"
+       ],
+       "p": "la"
+      }
+     ]
+    }
+   ],
+   "patients": [
+    {
+     "t": "A 42-year-old woman has an uncomfortable sore on her lip. She gets these often when she is stressed, about once a month. This one has been there for a month. It is crusted with fluid-filled pustules.",
+     "q": "Is she a candidate for self-care?",
+     "o": [
+      "Yes, start docosanol 10% five times a day",
+      "No, the lesion has lasted over 14 days and the outbreaks recur",
+      "No, because a lip sore is always a canker sore",
+      "Yes, with hydrocortisone 1% ointment as needed"
+     ],
+     "a": 1,
+     "w": "Lesions present more than 14 days, and frequent recurrence (she counted once a month as reoccurring), are exclusions (slide 49; T@83053-T@83449 11/20).",
+     "x": {
+      "Yes, start docosanol 10% five times a day": "Docosanol is first line, but she has exclusions.",
+      "No, because a lip sore is always a canker sore": "A canker sore is inside the mouth; her lesion is on the lip, crusted and fluid-filled.",
+      "Yes, with hydrocortisone 1% ointment as needed": "The herpes virus does not respond to corticosteroids."
+     }
+    },
+    {
+     "t": "A 21-year-old has a painful, small, red lesion outside the lower lip. Cold, windy weather always brings her outbreaks. Her last cold sore was a year ago, and the campus wellness center said she can use something over the counter. She takes a birth control pill.",
+     "q": "Is she a candidate for self-care?",
+     "o": [
+      "No, any recurrence at all is an exclusion to self-care",
+      "No, because she takes a birth control pill every day",
+      "Yes, because she cannot have any prior diagnosis of cold sores",
+      "Yes, an infrequent outbreak that a provider has already seen"
+     ],
+     "a": 3,
+     "w": "Her last outbreak was a year ago, which she did not count as reoccurring, and she already saw a provider. She is a candidate (T@83449-T@83700 11/20).",
+     "x": {
+      "No, any recurrence at all is an exclusion to self-care": "Slide 49 lists recurrence, but she called monthly outbreaks reoccurring, not one a year.",
+      "No, because she takes a birth control pill every day": "Nothing on the slides excludes the patient for a birth control pill.",
+      "Yes, because she cannot have any prior diagnosis of cold sores": "No previous diagnosis is the exclusion; she has a history of HSL."
+     }
+    },
+    {
+     "t": "The same 21-year-old needs a recommendation.",
+     "q": "Which choice is appropriate?",
+     "o": [
+      "Hydrocortisone 1% ointment as needed for the inflammation",
+      "Camphor 5% gel 3-4 times a day after meals for the pain",
+      "Docosanol 10% five times a day until healed",
+      "Tea tree oil and lysine taken together every day"
+     ],
+     "a": 2,
+     "w": "Docosanol 10% five times a day until healed is first line (slide 53). Steroids do not act on the virus, camphor above 3% is contraindicated, and tea tree oil, lysine and zinc have too little data (slides 54, 57, 58).",
+     "x": {
+      "Hydrocortisone 1% ointment as needed for the inflammation": "The herpes virus does not respond to corticosteroids, and they are highly astringent.",
+      "Camphor 5% gel 3-4 times a day after meals for the pain": "Camphor above 3% is contraindicated.",
+      "Tea tree oil and lysine taken together every day": "The guidelines do not recommend these for cold sores."
+     }
+    },
+    {
+     "t": "A man on day 5 of a cold sore has a lesion that has not crusted. The base and border are still red.",
+     "q": "What do you recommend in addition?",
+     "o": [
+      "Hydrocortisone 1% ointment applied twice a day to the lesion",
+      "Triple antibiotic ointment 3-4 times a day and PCP follow-up",
+      "Camphor 5% gel applied after each meal to the lesion",
+      "Hold an aspirin tablet against the sore until it dissolves"
+     ],
+     "a": 1,
+     "w": "No crust with persistent redness points to a secondary infection. Triple antibiotic ointment is used 3-4 times a day with PCP follow-up (slides 45, 56).",
+     "x": {
+      "Hydrocortisone 1% ointment applied twice a day to the lesion": "Steroids are not recommended for cold sores.",
+      "Camphor 5% gel applied after each meal to the lesion": "Camphor above 3% is contraindicated and does not treat infection.",
+      "Hold an aspirin tablet against the sore until it dissolves": "Aspirin held in the mouth or on the lesion causes a chemical burn."
+     }
+    },
+    {
+     "t": "A woman has never had a cold sore. She has a painful lip lesion, a fever and swollen lymph nodes.",
+     "q": "What do you recommend?",
+     "o": [
+      "Docosanol 10% five times a day",
+      "A benzocaine gel after meals",
+      "A triple antibiotic ointment",
+      "Referral to her PCP"
+     ],
+     "a": 3,
+     "w": "No previous diagnosis of a cold sore and symptoms of systemic infection are both exclusions (slide 49). She said a pharmacist has no scope to diagnose a first cold sore.",
+     "x": {
+      "Docosanol 10% five times a day": "Docosanol is for a patient who qualifies for self-care.",
+      "A benzocaine gel after meals": "An anesthetic treats pain only; she has exclusions.",
+      "A triple antibiotic ointment": "Triple antibiotic ointment is for a suspected secondary infection in a self-care patient."
+     }
+    },
+    {
+     "t": "A man feels burning and tingling at the corner of his lip. There is no blister yet. He has had cold sores before and has no exclusions.",
+     "q": "When does he start docosanol?",
+     "o": [
+      "Now, at the first sign",
+      "When the vesicles appear",
+      "When the crust forms",
+      "After 3 days of symptoms"
+     ],
+     "a": 0,
+     "w": "Docosanol works best when applied at the first sign, before the lesion occurs (slide 53; T@78879 11/20).",
+     "x": {
+      "When the vesicles appear": "It still helps once the lesion appears but works best before it.",
+      "When the crust forms": "Waiting until crusting loses the time when it works best.",
+      "After 3 days of symptoms": "She said the earlier it is applied, the better."
+     }
+    }
+   ],
+   "numbers": [
+    [
+     "5 times a day",
+     "docosanol 10%, until the lesion heals",
+     "Lam oral slide 53"
+    ],
+    [
+     "10 days",
+     "docosanol: use for up to 10 days",
+     "Lam oral slide 53; T@79234 11/20"
+    ],
+    [
+     "10-14 days",
+     "a cold sore heals",
+     "Lam oral slide 59"
+    ],
+    [
+     "More than 14 days",
+     "lesion present: refer",
+     "Lam oral slides 49, 60"
+    ],
+    [
+     "Camphor 3%, menthol 1%",
+     "above these, contraindicated in a cold sore",
+     "Lam oral slide 54"
+    ],
+    [
+     "3-4 times a day",
+     "topical anesthetic or triple antibiotic ointment",
+     "Lam oral slides 54, 56"
+    ],
+    [
+     "2-48 hours",
+     "prodrome before the lesion",
+     "Lam handout p. 9"
+    ],
+    [
+     "1-3 mm",
+     "diameter of the first vesicles",
+     "Lam handout p. 9"
+    ]
+   ]
+  },
+  {
+   "id": "dry-mouth",
+   "name": "Dry mouth (xerostomia)",
+   "group": "selfcare",
+   "lectures": "Lam 11/20 (Exam 3)",
+   "topics": [
+    "lr-dry"
+   ],
+   "short": [
+    "[[xerostomia|Xerostomia]]: often caused by medicines with anticholinergic activity or that deplete salivary flow, by radiation to the head and neck, and by some diseases.",
+    "It increases the risk of cavities and causes bad breath and thrush.",
+    "The goal: remove the offending medicine or condition if possible, relieve the discomfort and reduce the risk of dental decay.",
+    "Artificial saliva is replacement therapy, not a cure; sodium-containing products are avoided on a low-sodium diet.",
+    "Re-evaluate after 5-7 days; dryness worse or new symptoms: refer."
+   ],
+   "steps": [
+    {
+     "title": "Cause and timing: risk factors",
+     "profs": [
+      "la"
+     ],
+     "q": "Which medicine classes and conditions can cause dry mouth, and by which two mechanisms?",
+     "src": "Lam oral slides 72-75; handout pp. 13-14; T@86106-T@87063 11/20",
+     "blocks": [
+      {
+       "k": "facts",
+       "rows": [
+        [
+         "Mechanisms (her words)",
+         "A medicine has {{anticholinergic}} activity, or it {{depletes salivary flow volume}}"
+        ],
+        [
+         "Medicine classes (slide 72)",
+         "Antihistamines, decongestants, antihypertensives, diuretics, antidepressants, antipsychotics, sedatives"
+        ],
+        [
+         "Examples named",
+         "Diphenhydramine, hydroxyzine, amitriptyline, nortriptyline, oxybutynin, solifenacin, clonidine, long-acting muscarinic antagonists (tiotropium), haloperidol, risperidone, mirtazapine, bupropion, atomoxetine, duloxetine, venlafaxine, citalopram, trazodone, guanfacine"
+        ],
+        [
+         "Disease states",
+         "Sjögren's syndrome (an autoimmune condition in which the salivary glands are partly or entirely dysfunctional), diabetes mellitus, depression, Crohn's disease"
+        ],
+        [
+         "Other",
+         "Radiation therapy of the head and neck; older patients on multiple medicines"
+        ],
+        [
+         "Her poll (slides 73-75)",
+         "She confirmed diphenhydramine, tiotropium, clonidine and citalopram as medicines that can cause dry mouth; bupropion is in the handout list"
+        ]
+       ],
+       "p": "la"
+      }
+     ]
+    },
+    {
+     "title": "Recognise it",
+     "profs": [
+      "la"
+     ],
+     "q": "What are the signs and complications of dry mouth?",
+     "src": "Lam oral slide 76; handout p. 13; T@87063-T@87494 11/20",
+     "blocks": [
+      {
+       "k": "pts",
+       "items": [
+        "Difficulty talking, chewing and swallowing",
+        "Stomatitis; dry lips",
+        "Plaque accumulation",
+        "{{Halitosis}} (bad breath); loss of appetite and sense of taste",
+        "Increased risk of dental {{caries}}; the handout adds periodontal disease despite good oral hygiene",
+        "{{Thrush}}"
+       ],
+       "p": "la"
+      }
+     ]
+    },
+    {
+     "title": "Self-care or refer?",
+     "profs": [
+      "la"
+     ],
+     "q": "What are the goals, and when is the patient not a candidate?",
+     "src": "Lam oral slides 78, 79, 84; handout pp. 13-15; T@87494-T@87605, T@90270-T@90800 11/20",
+     "blocks": [
+      {
+       "k": "facts",
+       "rows": [
+        [
+         "Treatment goals",
+         "Slide 78: relieve the discomfort of dry mouth; reduce the risk of dental decay. Handout and speech add: remove the offending medicine or condition if possible"
+        ],
+        [
+         "Exclusions (slide 79; she did not read them aloud)",
+         [
+          "Sjögren's syndrome or a salivary gland stone",
+          "Bleeding and swelling, with or without trauma",
+          "Loose teeth, or tooth erosion or decay",
+          "Mouth soreness from poor-fitting dentures, or reduced denture wearing time",
+          "Fever and swollen lymph nodes",
+          "Candidiasis, gingivitis or periodontitis",
+          "Severe tooth pain triggered or worsened by hot, cold or chewing"
+         ]
+        ],
+        [
+         "Where to refer",
+         "Slide 84 and her speech: dryness that worsens, or new symptoms or complications, go to the {{PCP}} to find the cause. The handout (p. 15) says referral to dental for further evaluation. Both are stated"
+        ]
+       ],
+       "p": "la"
+      }
+     ]
+    },
+    {
+     "title": "Treat it: remove the cause, then relieve",
+     "profs": [
+      "la"
+     ],
+     "q": "What non-drug steps help, and how is artificial saliva used?",
+     "src": "Lam oral slides 81-84; handout pp. 14-15; T@87494-T@90547 11/20; Sikazwe OOO slide 17",
+     "blocks": [
+      {
+       "k": "sub",
+       "text": "Remove the offending agent or condition (slide 81)",
+       "p": "la"
+      },
+      {
+       "k": "pts",
+       "items": [
+        "Stop medicines and substances that reduce salivation where possible: tobacco (smoked and smokeless), alcohol including mouth rinses, caffeine, hot spicy foods",
+        "If a medicine contributes and cannot be stopped: take it {{1 hour before meals}}, because eating stimulates saliva (T@88526)"
+       ],
+       "p": "la"
+      },
+      {
+       "k": "sub",
+       "text": "Relieve the discomfort (slide 81)",
+       "p": "la"
+      },
+      {
+       "k": "pts",
+       "items": [
+        "Maintain oral hygiene: brush twice a day and see the dentist",
+        "Chew {{sugar-free gum}} (xylitol): it stimulates the salivary glands",
+        "Increase water intake, especially if fluoridated",
+        "A humidifier adds moisture to the air",
+        "A very soft toothbrush minimizes tissue abrasion"
+       ],
+       "p": "la"
+      },
+      {
+       "k": "line",
+       "label": "Replace",
+       "title": "Artificial saliva",
+       "drugs": [
+        "artificial-saliva"
+       ],
+       "pts": [
+        "{{Replacement therapy, not a cure}}: it lacks the protective components of the natural saliva",
+        "Sprays, gels, gums and toothpaste; gel: place a {{1/2-inch}} length on the tongue and spread it through the mouth",
+        "Use at any time: at a minimum after all meals and before going to bed",
+        "Patient on a {{low-sodium diet}}: avoid products that contain sodium (sodium carboxymethylcellulose, sodium monofluorophosphate)"
+       ],
+       "p": "la",
+       "pick": [
+        [
+         "Heart failure or a sodium-restricted diet",
+         "Avoid the starred sodium-containing ingredients"
+        ],
+        [
+         "Dryness lessened after 5-7 days",
+         "Continue artificial saliva, fluoride products and the non-drug measures"
+        ]
+       ],
+       "move": "Refer when: dryness becomes worse, or additional symptoms or complications develop."
+      }
+     ]
+    }
+   ],
+   "patients": [
+    {
+     "t": "Mr. Lewis, 70, has had a dry mouth for 3 weeks. He takes diphenhydramine each night for sleep and has a dry throat and dry lips.",
+     "q": "What best explains his dry mouth?",
+     "o": [
+      "Diphenhydramine has anticholinergic activity",
+      "His fluoride toothpaste is drying the saliva out",
+      "Humidity in his bedroom is drying out the mouth",
+      "A salivary gland stone caused by his age"
+     ],
+     "a": 0,
+     "w": "Antihistamines such as diphenhydramine have anticholinergic activity and reduce salivation (slide 72; T@86106-T@86368 11/20).",
+     "x": {
+      "His fluoride toothpaste is drying the saliva out": "Fluoride products are used to lower dental decay risk in dry mouth; they do not cause it.",
+      "Humidity in his bedroom is drying out the mouth": "A humidifier is a measure that relieves dry mouth.",
+      "A salivary gland stone caused by his age": "A stone is an exclusion for self-care, but nothing in the case points to one."
+     }
+    },
+    {
+     "t": "A woman is stable on an antipsychotic that causes her dry mouth. Her prescriber wants her to stay on it.",
+     "q": "Which timing change helps?",
+     "o": [
+      "Take the medicine one hour before meals",
+      "Stop the medicine on her own",
+      "Take the medicine one hour after meals",
+      "Take double the dose at night"
+     ],
+     "a": 0,
+     "w": "If a medicine contributes and cannot be stopped, take it one hour before meals, because eating stimulates saliva (T@88526 11/20).",
+     "x": {
+      "Stop the medicine on her own": "The point is to keep a medicine she cannot stop; she is not told to stop it herself.",
+      "Take the medicine one hour after meals": "The advice is before meals, not after.",
+      "Take double the dose at night": "Doubling a dose is not an advised step."
+     }
+    },
+    {
+     "t": "A man with heart failure on a sodium-restricted diet asks about an artificial saliva.",
+     "q": "Which ingredient should he avoid?",
+     "o": [
+      "Xylitol, a sugar alcohol sweetener",
+      "Isomalt, a sugar alcohol sweetener",
+      "Sodium carboxymethylcellulose",
+      "Glucose oxidase, an enzyme"
+     ],
+     "a": 2,
+     "w": "Sodium carboxymethylcellulose and sodium monofluorophosphate carry asterisks: avoid products with sodium on a sodium-restricted diet (slide 82).",
+     "x": {
+      "Xylitol, a sugar alcohol sweetener": "Xylitol is not a sodium compound.",
+      "Isomalt, a sugar alcohol sweetener": "Isomalt is not a sodium compound.",
+      "Glucose oxidase, an enzyme": "Glucose oxidase is not a sodium compound."
+     }
+    },
+    {
+     "t": "A man has dry mouth with a fever, swollen lymph nodes and white patches on his tongue.",
+     "q": "What do you recommend?",
+     "o": [
+      "Artificial saliva gel and a recheck in 5-7 days",
+      "Chew sugar-free gum after every meal each day",
+      "Use a humidifier in the bedroom at night",
+      "Referral for fever, swollen lymph nodes and candidiasis"
+     ],
+     "a": 3,
+     "w": "Fever and swollen lymph nodes, and candidiasis, are exclusions to self-care in dry mouth (slide 79).",
+     "x": {
+      "Artificial saliva gel and a recheck in 5-7 days": "Artificial saliva is for patients without an exclusion.",
+      "Chew sugar-free gum after every meal each day": "Sugar-free gum is a self-care step; he has exclusions.",
+      "Use a humidifier in the bedroom at night": "A humidifier is a self-care step; he has exclusions."
+     }
+    },
+    {
+     "t": "A patient used artificial saliva after meals and at bedtime for 6 days, and the dryness has lessened.",
+     "q": "What is the next step?",
+     "o": [
+      "Stop all of the measures because the dryness lessened",
+      "Continue artificial saliva, fluoride and non-drug measures",
+      "Refer to the PCP for further evaluation of the dryness",
+      "Add a second artificial saliva product to the first"
+     ],
+     "a": 1,
+     "w": "When dryness lessened after 5-7 days of self-treatment, the patient continues artificial saliva, fluoride products and the non-drug measures (slide 84).",
+     "x": {
+      "Stop all of the measures because the dryness lessened": "Stopping leaves the dryness untreated; artificial saliva is replacement, not a cure.",
+      "Refer to the PCP for further evaluation of the dryness": "Referral is for dryness that worsens or new symptoms.",
+      "Add a second artificial saliva product to the first": "Nothing in the case calls for a second product."
+     }
+    },
+    {
+     "t": "A pharmacist gives instructions for an artificial saliva gel.",
+     "q": "Which instruction is correct?",
+     "o": [
+      "Use it only once a day at bedtime before sleeping",
+      "Rub a 1-inch ribbon of it on the gums after meals",
+      "Put 1/2 inch on the tongue and spread it through the mouth",
+      "Swallow a 1/2-inch length of it after each meal"
+     ],
+     "a": 2,
+     "w": "Place a 1/2-inch length of gel on the tongue and spread it thoroughly in the mouth; use at any time, at a minimum after all meals and before bed (slides 82-83).",
+     "x": {
+      "Use it only once a day at bedtime before sleeping": "The use is at any time, at a minimum after meals and before bed.",
+      "Rub a 1-inch ribbon of it on the gums after meals": "The length is 1/2 inch and it goes on the tongue.",
+      "Swallow a 1/2-inch length of it after each meal": "It is spread in the mouth, not swallowed."
+     }
+    }
+   ],
+   "numbers": [
+    [
+     "5-7 days",
+     "evaluate after self-treatment",
+     "Lam oral slide 84"
+    ],
+    [
+     "1/2 inch",
+     "length of gel placed on the tongue",
+     "Lam oral slide 82"
+    ],
+    [
+     "1 hour",
+     "take a contributing medicine before meals",
+     "Lam handout p. 14; T@88526 11/20"
+    ],
+    [
+     "After meals and at bedtime",
+     "minimum use of artificial saliva",
+     "Lam handout p. 15"
+    ]
+   ]
+  }
+ ],
+ "drugs": {
+  "standard-fluoride": {
+   "name": "Standard fluoride toothpaste",
+   "brand": "",
+   "la": {
+    "text": "First step for tooth hypersensitivity: a soft-bristle toothbrush with standard fluoride toothpaste for 7 days. She said it helps the surface of the enamel.",
+    "src": "Lam oral slides 14, 15; T@48912 11/20"
+   },
+   "sk": {
+    "text": "Fluoride ions from toothpastes and gels (Na2PO3F, SnF2, NaF) convert enamel hydroxyapatite, Ca10(PO4)6(OH)2, into fluorapatite, Ca10(PO4)6F2, which is more resistant to acid erosion; they also enhance mineral deposition. More than 2 mg/L can cause enamel fluorosis.",
+    "src": "Sikazwe OOO slides 17-18"
+   },
+   "counsel": [
+    "Use a soft-bristle (low-abrasion) toothbrush with the standard fluoride toothpaste for 7 days.",
+    "Do not brush for 30-60 minutes after acidic food or drinks.",
+    "If the pain is not better after one week, the next step is a desensitizing toothpaste."
+   ],
+   "counselSrc": "Lam oral slides 14, 15; T@47988, T@54083 11/20",
+   "how": {
+    "p": "sk",
+    "text": "Fluoride ions convert hydroxyapatite into fluorapatite, which resists acid erosion, and enhance mineral deposition (remineralization).",
+    "src": "Sikazwe OOO slides 17-18"
+   },
+   "figs": []
+  },
+  "potassium-nitrate": {
+   "name": "Potassium nitrate 5% (desensitizing toothpaste)",
+   "brand": "",
+   "la": {
+    "text": "Desensitizing toothpaste active: depolarizes the excited nerves in the tubules. Not for children under 12 years: children swallow toothpaste, with a higher risk of electrolyte problems.",
+    "src": "Lam oral slide 15; handout p. 4; T@50194 11/20"
+   },
+   "counsel": [
+    "A single application has no effect: use it continuously.",
+    "Apply a 1-inch strip to a soft-bristle brush and brush at least twice daily.",
+    "It may take 4-6 weeks to see the benefit; continue until the sensitivity subsides or as long as the dentist recommends.",
+    "See a dentist if pain persists or worsens, or new symptoms develop after 4-6 weeks."
+   ],
+   "counselSrc": "Lam oral slides 17, 18; handout p. 4; T@50656-T@51140 11/20",
+   "avoid": [
+    "Children younger than 12 years"
+   ],
+   "how": {
+    "p": "la",
+    "text": "Depolarizes the excited nerves in the tubules.",
+    "src": "Lam oral slide 15"
+   },
+   "figs": []
+  },
+  "sodium-fluoride": {
+   "name": "Sodium fluoride (desensitizing toothpaste)",
+   "brand": "",
+   "la": {
+    "text": "Listed with potassium nitrate and stannous fluoride in the row that depolarizes the excited nerves in the tubules.",
+    "src": "Lam oral slide 15"
+   },
+   "sk": {
+    "text": "Fluoride ions from toothpastes and gels (Na2PO3F, SnF2, NaF) convert enamel hydroxyapatite, Ca10(PO4)6(OH)2, into fluorapatite, Ca10(PO4)6F2, which is more resistant to acid erosion; they also enhance mineral deposition. More than 2 mg/L can cause enamel fluorosis.",
+    "src": "Sikazwe OOO slides 17-18"
+   },
+   "counsel": [
+    "Same directions as every desensitizing toothpaste: 1-inch strip, at least twice daily, continuous use."
+   ],
+   "counselSrc": "Lam oral slide 17",
+   "how": {
+    "p": "la",
+    "text": "Depolarizes the excited nerves in the tubules (slide 15 row with potassium nitrate and stannous fluoride).",
+    "src": "Lam oral slide 15"
+   },
+   "figs": []
+  },
+  "stannous-fluoride": {
+   "name": "Stannous fluoride (desensitizing toothpaste)",
+   "brand": "",
+   "la": {
+    "text": "Listed with potassium nitrate and sodium fluoride in the row that depolarizes the excited nerves in the tubules.",
+    "src": "Lam oral slide 15"
+   },
+   "sk": {
+    "text": "SnF2 is one of the fluoride sources on his slide 17; the fluoride ion converts hydroxyapatite into fluorapatite.",
+    "src": "Sikazwe OOO slide 17"
+   },
+   "counsel": [
+    "Same directions as every desensitizing toothpaste: 1-inch strip, at least twice daily, continuous use."
+   ],
+   "counselSrc": "Lam oral slide 17",
+   "how": {
+    "p": "la",
+    "text": "Depolarizes the excited nerves in the tubules (slide 15 row with potassium nitrate and sodium fluoride).",
+    "src": "Lam oral slide 15"
+   },
+   "figs": []
+  },
+  "arginine": {
+   "name": "Arginine 8% (desensitizing toothpaste)",
+   "brand": "",
+   "la": {
+    "text": "Desensitizing toothpaste active: minimizes the flow of fluid by sealing the exposed dentin. The handout prints arginine calcium; slide 15 prints arginine 8%.",
+    "src": "Lam oral slide 15; handout p. 4"
+   },
+   "counsel": [
+    "Same directions as every desensitizing toothpaste: 1-inch strip, at least twice daily, continuous use."
+   ],
+   "counselSrc": "Lam oral slide 17",
+   "how": {
+    "p": "la",
+    "text": "Minimizes the flow of fluid by sealing the exposed dentin.",
+    "src": "Lam oral slide 15"
+   },
+   "figs": []
+  },
+  "benzocaine-oral": {
+   "name": "Benzocaine (oral and lip anesthetic)",
+   "brand": "",
+   "la": {
+    "text": "Canker sore: benzocaine 10-20% (slide 34; handout 5-20%), apply up to 4 times a day as needed, age over 2 years. Cold sore: 5-20% in the handout; her practice key counts benzocaine 5% gel, a thin layer 3-4 times after a meal, as right (she said plus or minus). It relieves pain only; it does not reduce the duration.",
+    "src": "Lam oral slides 34, 54; handout pp. 7, 11; T@62128, T@84973 11/20"
+   },
+   "sk": {
+    "text": "A local anesthetic in gels or combination agents. Methemoglobinemia is rare but a concern: CYP enzymes convert benzocaine to benzocaine hydroxylamine.",
+    "src": "Sikazwe OOO slide 20"
+   },
+   "counsel": [
+    "Apply to the sore after meals, up to 4 times a day as needed (cold sore: a thin layer, 3-4 times a day).",
+    "Avoid eating or drinking for at least 30 minutes after application.",
+    "Do not combine with menthol, phenol or camphor: tissue irritation and damage."
+   ],
+   "counselSrc": "Lam oral slides 34, 54; T@62128-T@62416, T@80308 11/20",
+   "avoid": [
+    "Combination with menthol, phenol or camphor (tissue irritation)",
+    "Children under 2 years (handout)"
+   ],
+   "how": {
+    "none": true
+   },
+   "figs": []
+  },
+  "benzyl-alcohol": {
+   "name": "Benzyl alcohol (oral anesthetic)",
+   "brand": "",
+   "la": {
+    "text": "Canker sore: 0.05-0.1% (slide 34 and handout), apply up to 4 times a day as needed, age over 2 years. The handout's cold sore table prints 10-33%.",
+    "src": "Lam oral slide 34; handout pp. 7, 11"
+   },
+   "counsel": [
+    "Apply to the sore up to 4 times a day as needed; avoid eating or drinking for 30 minutes.",
+    "Do not combine with menthol, phenol or camphor."
+   ],
+   "counselSrc": "Lam oral slide 34; T@62128 11/20",
+   "avoid": [
+    "Combination with menthol, phenol or camphor"
+   ],
+   "how": {
+    "none": true
+   },
+   "figs": []
+  },
+  "carbamide-peroxide-oral": {
+   "name": "Carbamide peroxide 10-15% (oral debriding agent)",
+   "brand": "",
+   "la": {
+    "text": "Cleanses the sore and relieves discomfort. Direct application: apply to the area, leave 1 minute, spit out. Rinse: a few drops on the tongue, mix with saliva, swish 1 minute. She said 1 or 2 minutes for direct application aloud.",
+    "src": "Lam oral slide 35; handout p. 7; T@63829 11/20"
+   },
+   "sk": {
+    "text": "Carbamide peroxide (10%) is used as a mouth rinse for canker sores.",
+    "src": "Sikazwe OOO slide 20"
+   },
+   "counsel": [
+    "Use after meals, 3-4 times a day.",
+    "Avoid eating or drinking for at least 30 minutes afterwards.",
+    "Use for up to 7 days: longer use lets opportunistic organisms grow (black hairy tongue); prolonged use causes tooth sensitivity and soft tissue irritation.",
+    "Patient with sensitive teeth: use direct application, not the rinse."
+   ],
+   "counselSrc": "Lam oral slide 36; handout p. 7; T@64264-T@65270 11/20",
+   "avoid": [
+    "Use beyond 7 days"
+   ],
+   "how": {
+    "none": true
+   },
+   "figs": []
+  },
+  "hydrogen-peroxide": {
+   "name": "Hydrogen peroxide 1.5% or 3% (oral debriding agent)",
+   "brand": "",
+   "la": {
+    "text": "1.5%: direct application to the sore, leave 1 minute, spit. 3%: swish for one minute (the handout adds: mix with an equal amount of water before rinsing). She mentioned a home-made 3% or 5% rinse and was unsure aloud.",
+    "src": "Lam oral slide 35; handout p. 7; T@63359 11/20"
+   },
+   "counsel": [
+    "Use after meals, 3-4 times a day; avoid eating or drinking for at least 30 minutes after.",
+    "Use for up to 7 days.",
+    "It can irritate enamel and soft tissue: with sensitive teeth, use the applicator, not the rinse."
+   ],
+   "counselSrc": "Lam oral slide 36; T@65066, T@67096 11/20",
+   "avoid": [
+    "Use beyond 7 days",
+    "Rinse in a patient with tooth hypersensitivity"
+   ],
+   "how": {
+    "none": true
+   },
+   "figs": []
+  },
+  "protectant-disc": {
+   "name": "Oral protectant (paste, patch or dissolving disc)",
+   "brand": "",
+   "la": {
+    "text": "Coats and protects the sore; a barrier forms and dissolves in 8-12 hours. Use up to 3-4 times a day after meals; avoid drinking for up to 30 minutes. Placement time: slide 37 prints 10-20 seconds; the handout and her speech say 10-20 minutes.",
+    "src": "Lam oral slide 37; handout p. 8; T@65817 11/20"
+   },
+   "counsel": [
+    "Place it against the sore long enough to adhere (slide 37: 10-20 seconds; handout and speech: 10-20 minutes).",
+    "It dissolves by itself in 8-12 hours; use up to 3-4 times a day after meals.",
+    "Avoid drinking for up to 30 minutes."
+   ],
+   "counselSrc": "Lam oral slide 37; handout p. 8; T@65817 11/20",
+   "how": {
+    "none": true
+   },
+   "figs": []
+  },
+  "saline-rinse": {
+   "name": "Saline rinse and baking soda paste",
+   "brand": "",
+   "la": {
+    "text": "Saline: 1-3 teaspoons of salt in 4-8 ounces of warm water; any salt. Baking soda paste: apply to the lesion for a few minutes. Use up to 4 times a day. An antiseptic rinse such as Listerine is another option.",
+    "src": "Lam oral slide 38; handout p. 8; T@66281-T@66756 11/20"
+   },
+   "sk": {
+    "text": "Listerine contains thymol, eucalyptol, methyl salicylate and menthol; sodium bicarbonate raises saliva pH and lowers growth of acidic bacteria.",
+    "src": "Sikazwe OOO slide 20"
+   },
+   "counsel": [
+    "Up to 4 times a day.",
+    "Use the saline rinse before topical applications of medicines (handout)."
+   ],
+   "counselSrc": "Lam oral slide 38; handout p. 8",
+   "how": {
+    "none": true
+   },
+   "figs": []
+  },
+  "analgesic-oral-systemic": {
+   "name": "NSAIDs or acetaminophen (systemic analgesics)",
+   "brand": "",
+   "la": {
+    "text": "For additional pain relief in canker sores and cold sores. Aspirin tablets are not held in the mouth or on the lesion: chemical burn with tissue damage.",
+    "src": "Lam oral slides 39, 55; handout pp. 8, 11; T@69759, T@80499 11/20"
+   },
+   "counsel": [
+    "Swallow the tablet; never hold aspirin against the sore."
+   ],
+   "counselSrc": "Lam oral slide 39; T@69759 11/20",
+   "avoid": [
+    "Aspirin held in the mouth: chemical burn"
+   ],
+   "how": {
+    "none": true
+   },
+   "figs": []
+  },
+  "docosanol": {
+   "name": "Docosanol 10% cream",
+   "brand": "Abreva",
+   "la": {
+    "text": "First-line topical antiviral for a cold sore: reduces the duration and severity of symptoms. Apply at the first sign (prodrome), up to 5 times a day until the lesion heals, up to 10 days.",
+    "src": "Lam oral slides 51-53; handout p. 11; T@78159-T@79314 11/20"
+   },
+   "counsel": [
+    "Start at the first tingling or burning, before a blister: the earlier, the better.",
+    "Apply up to 5 times a day until the lesion heals; use for up to 10 days.",
+    "It still helps once the lesion is present.",
+    "Keep the sore clean, wash the hands often and keep the skin moist."
+   ],
+   "counselSrc": "Lam oral slides 50, 53; T@78879-T@79314 11/20",
+   "how": {
+    "p": "la",
+    "text": "Inhibits direct fusion between the herpesvirus and the human cell plasma membrane, so the virus does not replicate (handout); she said it prevents the virus from attaching to the human cell.",
+    "src": "Lam handout p. 11; T@78454 11/20"
+   },
+   "figs": []
+  },
+  "camphor-menthol-hsl": {
+   "name": "Camphor and menthol (in topical analgesics)",
+   "brand": "",
+   "la": {
+    "text": "In a cold sore, camphor above 3% and menthol above 1% are contraindicated: counterirritant effect; irritating at higher concentration. Vicks rub has about 5% camphor. In a canker sore, anesthetics are not combined with menthol, phenol or camphor.",
+    "src": "Lam oral slides 34, 54; handout p. 11; T@79739-T@80226 11/20"
+   },
+   "avoid": [
+    "Camphor above 3% in a cold sore",
+    "Menthol above 1% in a cold sore"
+   ],
+   "how": {
+    "none": true
+   },
+   "figs": []
+  },
+  "triple-antibiotic-hsl": {
+   "name": "Triple antibiotic ointment",
+   "brand": "",
+   "la": {
+    "text": "Only for a suspected secondary bacterial infection: the lesion is not forming a mature lesion, with no crusting, and is still red.",
+    "src": "Lam oral slides 51, 56; handout p. 11; T@80604 11/20"
+   },
+   "counsel": [
+    "Apply a thin layer 3-4 times a day.",
+    "Follow up with the PCP."
+   ],
+   "counselSrc": "Lam oral slide 56; T@80604-T@81119 11/20",
+   "how": {
+    "none": true
+   },
+   "figs": []
+  },
+  "topical-steroid-hsl": {
+   "name": "Topical steroid (for a cold sore)",
+   "brand": "",
+   "la": {
+    "text": "Do not recommend: the herpes virus does not respond to corticosteroids (HSL is not a steroid-responsive dermatosis), and topical steroids are highly astringent. Her practice key leaves hydrocortisone 1% ointment out.",
+    "src": "Lam oral slide 58; handout p. 12; T@81857 11/20"
+   },
+   "avoid": [
+    "Cold sore: do not recommend"
+   ],
+   "how": {
+    "none": true
+   },
+   "figs": []
+  },
+  "complementary-hsl": {
+   "name": "Tea tree oil, lysine and zinc",
+   "brand": "",
+   "la": {
+    "text": "Not enough data to justify use; the guidelines do not recommend them to prevent or treat cold sores. Handout: tea tree oil has some in vitro activity against HSV; lysine may reduce the frequency of outbreaks, data conflicting; zinc cream and aloe vera gel have shown some efficacy.",
+    "src": "Lam oral slide 57; handout p. 11; T@81119-T@81468 11/20"
+   },
+   "avoid": [
+    "Not recommended for cold sores"
+   ],
+   "how": {
+    "none": true
+   },
+   "figs": []
+  },
+  "artificial-saliva": {
+   "name": "Artificial saliva",
+   "brand": "",
+   "la": {
+    "text": "Replacement therapy for dry mouth, not a cure: it lacks the protective components of the natural saliva. Sprays, gels, gums, toothpaste. Gel: place 1/2 inch on the tongue and spread it. Use at any time, at a minimum after meals and before bed. Ingredients: isomalt, xylitol, glucose oxidase, sodium carboxymethylcellulose*, sorbitol, sodium monofluorophosphate*; avoid * products on a sodium-restricted diet.",
+    "src": "Lam oral slides 82, 83; handout p. 15; T@89229-T@90208 11/20"
+   },
+   "sk": {
+    "text": "Sodium monofluorophosphate (Na2PO3F) is one of the fluoride sources on his slide 17.",
+    "src": "Sikazwe OOO slide 17"
+   },
+   "counsel": [
+    "Gel: place a 1/2-inch length on the tongue and spread it through the mouth.",
+    "Use at any time; at a minimum after all meals and before going to bed.",
+    "Low-sodium diet: avoid products that contain sodium.",
+    "Evaluate after 5-7 days; continue artificial saliva, fluoride products and non-drug measures if the dryness lessened."
+   ],
+   "counselSrc": "Lam oral slides 82-84; handout p. 15",
+   "avoid": [
+    "Products with sodium on a sodium-restricted diet (heart failure, high blood pressure)"
+   ],
+   "how": {
+    "none": true
+   },
+   "figs": []
+  }
+ },
+ "terms": {
+  "dentin-tubules": [
+   "Dentin tubules",
+   "Tiny fluid-filled channels in dentin through which sensation is transmitted to the pulp. When enamel is lost or the gum recedes they are open to the oral cavity and the pulp.",
+   "Lam oral slide 7; handout p. 2"
+  ],
+  "fluorapatite": [
+   "Fluorapatite",
+   "Ca10(PO4)6F2, formed when fluoride replaces the hydroxide in hydroxyapatite; it is more resistant to acid erosion.",
+   "Sikazwe OOO slide 17"
+  ],
+  "prodrome": [
+   "Prodrome",
+   "Symptoms a patient may feel before the lesion appears, such as burning, tingling or itching.",
+   "Lam oral slide 27; T@58338 11/20"
+  ],
+  "latency": [
+   "Latent",
+   "A herpesvirus infection that persists in the body without lesions and can reactivate later when a stimulus triggers it.",
+   "Lam oral slide 43; handout p. 8"
+  ],
+  "or-vesicle": [
+   "Vesicle",
+   "A small fluid-containing blister; in a cold sore the fluid holds live virus.",
+   "Lam handout p. 9"
+  ],
+  "or-astringent": [
+   "Highly astringent",
+   "The reason she gave against topical steroids on a cold sore: it irritates the skin.",
+   "Lam oral slide 58; T@81882 11/20"
+  ],
+  "xerostomia": [
+   "Xerostomia",
+   "Dry mouth, from reduced saliva.",
+   "Lam oral slide 70"
+  ]
+ },
+ "tell": [
+  {
+   "id": "oral-cold-vs-canker",
+   "title": "Cold sore or canker sore",
+   "cols": [
+    "Canker sore (RAS)",
+    "Cold sore (HSL)"
+   ],
+   "path": [
+    {
+     "q": "Is the sore inside the mouth or on and around the lip?",
+     "a": [
+      "Inside the mouth, a gray or yellow oval ulcer with a red halo → **canker sore**",
+      "On or around the lip → next question"
+     ]
+    },
+    {
+     "q": "Is it a red, fluid-filled lesion that merges and crusts?",
+     "a": [
+      "Yes → **cold sore**",
+      "No → reconsider the location and look"
+     ]
+    }
+   ],
+   "rows": [
+    [
+     "Cause",
+     [
+      "Exact cause unknown; triggers such as local trauma, immune or nutritional conditions, medicines, stress",
+      "Herpes simplex virus 1, latent and reactivated by triggers"
+     ],
+     "Slides 26, 43"
+    ],
+    [
+     "Location",
+     [
+      "Inside the mouth: tongue, floor of the mouth, soft palate, inside the lips and cheeks; minor RAS: not the gingiva, hard palate or vermilion border",
+      "Junction of oral mucosa and skin of the lip and nose; she said outside the mouth or around the lips"
+     ],
+     "Slide 47; the handout lists intraoral keratinized mucosa for HSL"
+    ],
+    [
+     "Look",
+     [
+      "Oval, flat ulcer; gray or yellow, crateriform when major; red tissue around it",
+      "Red, fluid-filled vesicles that coalesce; crusted when mature"
+     ],
+     "Slide 47"
+    ],
+    [
+     "Before it appears",
+     [
+      "A pricking or burning prodrome, 2-48 hours",
+      "Burning, itching, tingling or numbness, 2-48 hours"
+     ],
+     "Handout pp. 5, 9"
+    ],
+    [
+     "Course",
+     [
+      "Resolves on its own in 7-14 days",
+      "Self-limiting; heals in 10-14 days"
+     ],
+     "Slides 40, 59"
+    ],
+    [
+     "Products",
+     [
+      "No required order: anesthetic, debriding agent, protectant, rinse, systemic analgesic",
+      "Docosanol 10% first line, with or without an anesthetic; no topical steroid"
+     ],
+     "Slides 33, 51"
+    ],
+    [
+     "Refer when",
+     [
+      "More than 14 days; frequent recurrence; systemic illness; failed self-care; no relief after 7 days of a debriding agent",
+      "No previous diagnosis; more than 14 days; increased frequency; immunocompromised; systemic infection; recurrence"
+     ],
+     "Slides 29, 40, 49, 60"
+    ]
+   ],
+   "src": "Lam oral slides 26-27, 29, 33, 40, 43-49, 51, 59-60; handout pp. 5, 9; T@73857 11/20"
+  },
+  {
+   "id": "oral-tooth-vs-ache",
+   "title": "Tooth hypersensitivity or toothache",
+   "cols": [
+    "Tooth hypersensitivity",
+    "Toothache"
+   ],
+   "path": [
+    {
+     "q": "Does the pain stay when nothing touches the tooth?",
+     "a": [
+      "Yes → **toothache**, an exclusion: dentist",
+      "No, it comes with heat, cold, pressure or acid and stops → next question"
+     ]
+    },
+    {
+     "q": "Is the pain very severe, or are there other exclusions (swelling, loose teeth, bleeding gums)?",
+     "a": [
+      "Yes → dentist",
+      "No → **hypersensitivity**, a self-care candidate"
+     ]
+    }
+   ],
+   "rows": [
+    [
+     "Etiology",
+     [
+      "Exposed and open dentin tubules",
+      "Bacterial invasion"
+     ],
+     "Slide 9"
+    ],
+    [
+     "Pain",
+     [
+      "Quick, fleeting, sharp or stabbing on exposure; stops when the stimulus is gone",
+      "Remains even without a stimulus"
+     ],
+     "Slide 9"
+    ],
+    [
+     "Handout detail",
+     [
+      "Fluid in the tubules moves with the stimulus and stimulates the pulp nerves",
+      "Inflammatory response stimulates free nerve endings in the pulp; continuous, dull, throbbing pain usually means irreversible damage"
+     ],
+     "Handout pp. 2-3"
+    ],
+    [
+     "Self-care",
+     [
+      "Yes, if mild and no exclusion",
+      "No: an exclusion"
+     ],
+     "Slide 11"
+    ],
+    [
+     "Treatment",
+     [
+      "Soft-bristle brush with standard fluoride 7 days, then a desensitizing toothpaste",
+      "None over the counter; the dentist cleans it out"
+     ],
+     "Slides 15, 11; T@46516"
+    ]
+   ],
+   "src": "Lam oral slides 9, 11, 15; handout pp. 2-3; T@46304-T@46667, T@55389 11/20"
+  }
+ ],
+ "pairs": [
+  {
+   "title": "Carbamide peroxide in the mouth or in the ear",
+   "a": [
+    "Canker sore: 10-15%",
+    "Direct application: leave 1 minute, spit; or a few drops on the tongue, swish 1 minute; up to 7 days"
+   ],
+   "b": [
+    "Ear wax: 6.5% in anhydrous glycerin",
+    "5-10 drops in the ear, several minutes, twice daily for up to four days"
+   ],
+   "same": "Both are carbamide peroxide, an oxidizing cleanser, but the strength and the use differ.",
+   "profs": [
+    [
+     "la",
+     "Mouth: oral slide 35. Ear: otic slide 14 and her practice key (Q24-26)."
+    ],
+    [
+     "sk",
+     "Carbamide peroxide (10%) is a mouth rinse for canker sores (OOO slide 20)."
+    ]
+   ]
+  },
+  {
+   "title": "Hydrogen peroxide 1.5% or 3% in the mouth",
+   "a": [
+    "1.5%",
+    "Direct application to the sore, 1 minute, spit"
+   ],
+   "b": [
+    "3%",
+    "Swish for one minute; handout: mixed with an equal amount of water first"
+   ],
+   "same": "Both are debriding agents: after meals, 30 minutes without food or drink, up to 7 days.",
+   "profs": [
+    [
+     "la",
+     "Slide 35; handout p. 7; she was unsure aloud of a 3% or 5% home rinse."
+    ]
+   ]
+  },
+  {
+   "title": "Docosanol or benzocaine for a cold sore",
+   "a": [
+    "Docosanol 10%",
+    "Antiviral: reduces duration and severity; first line; apply at the first sign, up to 5 times a day for up to 10 days"
+   ],
+   "b": [
+    "Benzocaine",
+    "Anesthetic: relieves pain only; plus or minus; thin layer 3-4 times a day after a meal"
+   ],
+   "same": "Both are topical products for the lip lesion; neither is a steroid.",
+   "profs": [
+    [
+     "la",
+     "Slides 51-54; T@78117-T@78270, T@84973 11/20."
+    ]
+   ]
+  },
+  {
+   "title": "Benzocaine strength: which number",
+   "a": [
+    "Canker sore, slide 34",
+    "Benzocaine 10-20% and benzyl alcohol 0.05-0.1%"
+   ],
+   "b": [
+    "Cold sore, handout p. 11 and her key",
+    "Benzocaine 5-20% in the handout; her practice key keeps benzocaine 5% gel, a thin layer 3-4 times after a meal"
+   ],
+   "same": "She gave no benzocaine number aloud.",
+   "profs": [
+    [
+     "la",
+     "Slide 34; handout pp. 7, 11; practice Q21."
+    ]
+   ]
+  },
+  {
+   "title": "Potassium nitrate or arginine toothpaste",
+   "a": [
+    "Potassium nitrate 5%",
+    "Depolarizes the excited nerves in the tubules; not for children under 12"
+   ],
+   "b": [
+    "Arginine 8%",
+    "Seals the exposed dentin so less fluid flows"
+   ],
+   "same": "Both are desensitizing toothpastes used after 7 days of a soft brush with standard fluoride.",
+   "profs": [
+    [
+     "la",
+     "Slide 15; T@50194 11/20."
+    ]
+   ]
+  },
+  {
+   "title": "Debriding agent or protectant for a canker sore",
+   "a": [
+    "Debriding agent (carbamide or hydrogen peroxide)",
+    "Cleanses the sore; up to 7 days"
+   ],
+   "b": [
+    "Protectant (paste, patch or disc)",
+    "Coats the sore; dissolves in 8-12 hours"
+   ],
+   "same": "Both are used after meals, 3-4 times a day, with 30 minutes without food or drink.",
+   "profs": [
+    [
+     "la",
+     "Slides 35-37; T@63752-T@66281 11/20."
+    ]
+   ]
+  }
+ ],
+ "photos": []
+}

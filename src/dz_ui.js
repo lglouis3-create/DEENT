@@ -134,6 +134,7 @@ const DZ_UI = (() => {
   }
   function vCards(){
     const shown = DZ.cards.filter(inExam);
+    if (st.exam && !shown.some(x => x.id === st.card) && DZ.cards.some(x => x.id === st.card)) { st.exam = 0; return vCards(); }   // a jump to a condition of another exam shows every exam
     const c = shown.find(x => x.id === st.card) || shown[0] || DZ.cards.find(x => x.id === st.card) || DZ.cards[0];
     return examBar() + AREAS.map(([a, l]) => { const xs = shown.filter(x => x.area === a); return xs.length ? `<p class="dzsub">${l}</p><div class="dzpicker" role="group" aria-label="${l}">` +
       xs.map(x => `<button type="button" data-card="${esc(x.id)}" aria-pressed="${x.id === c.id}">${esc(x.name)}${!st.exam && (x.exams || []).length ? `<span class="ex">${(x.exams || []).map(e => 'E' + e).join(' ')}</span>` : ''}</button>`).join('') + '</div>' : ''; }).join('') + card(c);

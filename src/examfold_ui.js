@@ -115,13 +115,15 @@ const EXAMFOLD_UI = (function examFoldUi(){
   const DZ_EXAM = 2;
   function dzList(){
     if (typeof DZ === 'undefined' || !DZ || !Array.isArray(DZ.tell) || !DZ.tell.length) return null;
+    const tells = DZ.tell.filter(t => (t.exams || [DZ_EXAM]).includes(DZ_EXAM));
+    if (!tells.length) return null;
     if (typeof DZ_UI === 'undefined' || !DZ_UI || !DZ_UI.state || !document.querySelector('#nav button[data-v="dz"]')) return null;
     const row = (to, kind, text) => `<li><button type="button" data-jump="${esc(to)}" data-rfdz="${kind}">${esc(text)}</button></li>`;
-    const pairs = Array.isArray(DZ.pairs) ? DZ.pairs.length : 0;
+    const pairs = Array.isArray(DZ.pairs) ? DZ.pairs.filter(p => (p.exams || [DZ_EXAM]).includes(DZ_EXAM)).length : 0;
     const el = document.createElement('div');
     el.className = 'rfdz'; el.id = 'tell-x2-dz';
     el.innerHTML = '<p class="rfdzlab">In the Diseases tab</p><ul role="list">' +
-      DZ.tell.map(t => row('dz:dz-tell-' + t.id, 'tell', t.title)).join('') +
+      tells.map(t => row('dz:dz-tell-' + t.id, 'tell', t.title)).join('') +
       (pairs ? row('dz:', 'pairs', 'Drugs that get confused: ' + plural(pairs, 'pair')) : '') + '</ul>';
     return el;
   }
@@ -176,7 +178,7 @@ const EXAMFOLD_UI = (function examFoldUi(){
   }
   const TABS = {
     guide: {start: 'h2.gdeck[id]', exam: el => deckExam(el.id),
-            count: b => plural(direct(b, 'h2.gdeck'), 'lecture deck') + ' · ' + plural(direct(b, 'section.gobj'), 'section')},
+            count: b => plural(direct(b, 'h2.gdeck'), 'lecture deck')},
     tell:  {start: 'h3[id]', exam: el => SECTION_EXAM.tell[el.id] || null,
             extra: have => { if (have.includes(DZ_EXAM)) return []; const el = dzList(); return el ? [{exam: DZ_EXAM, el}] : []; },
             count: b => { const s = direct(b, 'h3'), d = b.querySelectorAll('.rfdz [data-rfdz="tell"]').length;
@@ -493,7 +495,7 @@ const EXAMFOLD_UI = (function examFoldUi(){
         const s = DZ_UI.state;
         DZWAS = {view: s.view, q: typeof s.q === 'string' ? s.q : '', to: dz.dataset.rfdz};
         setTimeout(() => { DZWAS = null; }, 0);          // for the jump this click makes, and no other
-        s.view = dz.dataset.rfdz; s.q = '';
+        s.view = dz.dataset.rfdz; s.q = ''; s.exam = DZ_EXAM;
       }
       // 6. a control inside a closed folder that code clicks (a reader cannot: it is not on screen), e.g. a walkthrough's bar
       if (t.closest('.rfold') && !t.closest('.rfhead')) reveal(t);
