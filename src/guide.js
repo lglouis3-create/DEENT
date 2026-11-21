@@ -5968,7 +5968,7 @@ const GUIDE_HTML = `
 </tbody></table><div class="g2-said"><span class="g2-k">She said</span><p>&ldquo;What you need to know: recognize the drug classes of each one in each product, and be able to recognize the dosing regimen.&rdquo; <span class="g2-src">T@85991 11/19</span></p></div><table class="g2-table g2-kv"><caption>Where the printed pages and her words differ</caption><tbody>
 <tr><th scope="row">Latisse concentration</th><td>Handout: 0.03%. Slide 19: 0.3%. </td></tr>
 <tr><th scope="row">Latanoprost against bimatoprost</th><td>She first gave the names in the wrong order <span class="g2-src">T@56932 11/19</span>; later she said that latanoprost has lower efficacy than bimatoprost <span class="g2-src">T@71578 11/19</span></td></tr>
-<tr><th scope="row">Simbrinza</th><td>Slides 42 and 69 print brinzolamide; slide 51 prints dorzolamide: a CAI paired with brimonidine</td></tr>
+<tr><th scope="row">Simbrinza</th><td>Brinzolamide and brimonidine. Slide 51 printed dorzolamide; her 11/20 email calls that a typo</td></tr>
 <tr><th scope="row">Rocklatan frequency</th><td>Slide 62 and the handout: once daily in the evening. Of the three products on slide 69 she said never once a day <span class="g2-src">T@86115 11/19</span></td></tr>
 <tr><th scope="row">Where "last line" falls</th><td>Slides 51 and 53 title the CAIs Last Line; slide 63 numbers them fourth of six; she called the Rho kinase inhibitor last line <span class="g2-src">T@83813 11/19</span></td></tr>
 </tbody></table>

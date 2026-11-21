@@ -305,8 +305,8 @@ const DIAGRAMS_LG = (() => {
       'Drawn after Lam_Glaucoma.pdf slide 69 (generic and brand name, pharmacologic class, dosing regimen of the three combination products) and her ' +
       'handout (the same table; “multiple eye drops: use combination products”); Dr. Lam, lecture 11/19, T@62830 (PF refers to the preservative-free ' +
       'product), T@85943–@86200 (recognize the classes of each product and the dosing; never once daily), T@89624–@90138 (combination products to ' +
-      'cut the number of drops). Her slides print the carbonic anhydrase inhibitor in Simbrinza two ways (brinzolamide on slides 42 and 69, ' +
-      'dorzolamide on slide 51), so the figure draws the class and does not name the drug.');
+      'cut the number of drops). Slide 51 prints dorzolamide for the carbonic anhydrase inhibitor in Simbrinza; her practice-question email of 11/20 corrects it ' +
+      'to brinzolamide (slides 42 and 69), and the figure draws the class.');
   })();
 
   return {
