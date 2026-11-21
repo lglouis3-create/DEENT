@@ -15,9 +15,8 @@
    Sources: Lam_Glaucoma.pdf (file page numbers), her handout (Lam_Glaucoma_doc) and the
    11/19 lecture transcript (T@ = character offset in DEENT_Lecture_11.19_transcript.txt;
    her part starts at @35742). Every label, number and claim comes from those places; her
-   qualifiers ("about", "if possible", "at least") are kept. Where her slides print one
-   fact two ways (the carbonic anhydrase inhibitor in Simbrinza), the figure draws the class
-   and does not name the drug.
+   qualifiers ("about", "if possible", "at least") are kept. Simbrinza is brinzolamide and
+   brimonidine (slides 42 and 69; her 11/20 email corrects slide 51's dorzolamide).
 
    Step markup is the one `stepper` writes (groups .st, dots, controls), built here with a
    larger caption (11.5 units, wrapped at 50 characters) because the figures are drawn about
@@ -162,7 +161,7 @@ const DIAGRAMS_LG = (() => {
       ['Solution, then suspension 5 minutes later; shake the suspension, which goes last (slides 74–75; T@88186).', r0 + r1_],
       ['Solution, then an ointment or gel-forming solution 10 minutes later, so the drop gets in first (slide 74; T@88233).', r0 + r1_ + r2],
       ['Order of application: solution, suspension, then ointment or gel-forming solution; timolol gel is in the last group (slide 75; T@88564).', ladder],
-      ['Contact lenses: remove them, instill the drops, wait 15 minutes, then reinsert them (slide 83; T@91057).', lens],
+      ['Contact lenses: remove them, instill the drops, wait at least 15 minutes, then reinsert them (slide 83; T@91057).', lens],
     ];
     return lgStepper('lg-administration', 'Order of eye drops and the waits between them', steps, h,
       'Drawn after Lam_Glaucoma.pdf slide 74 (solution to solution 5 min; solution to suspension 5 min; solution to ointment/gel-forming 10 min), ' +
@@ -257,7 +256,7 @@ const DIAGRAMS_LG = (() => {
     const steps = [
       ['Each medication is checked for indication, effectiveness, safety and adherence (slides 15–16, 78–79; T@47933).', g(-1)],
       ['Intolerance: change the formulation, switch class, or use a preservative-free product if BAK is the cause (slide 22; T@53873).', s2],
-      ['Inadequate response: check compliance and technique, raise the concentration, switch within the class or add one (slides 23, 36; T@55683).', s3],
+      ['Inadequate response: check compliance and technique, raise the concentration if possible, or switch class (slides 23, 36; T@55683).', s3],
       ['A new patient on bimatoprost twice daily: more than once daily lowers efficacy, so contact the provider (slides 24–25; T@57116).', s4],
       ['A patient who forgets the evening Timoptic dose: switch to the once-daily gel (slides 37, 32; T@63619).', s5],
     ];
@@ -279,9 +278,8 @@ const DIAGRAMS_LG = (() => {
      same table; "multiple eye drops: use combination products"); 11/19
      T@62830 (PF is preservative-free), @85943-@86200 (recognize the classes
      and the dosing; never once a day), @89624-@90138 (combination products
-     to cut the number of drops). Slide 69 and slides 42 and 51 print the
-     carbonic anhydrase inhibitor in Simbrinza two ways, so the figure draws
-     the class and does not name the drug.
+     to cut the number of drops). Simbrinza is brinzolamide and brimonidine
+     (slides 42 and 69; her 11/20 email corrects slide 51's dorzolamide).
      --------------------------------------------------------------------- */
   const COMBO = (() => {
     const h = 346;
@@ -297,9 +295,9 @@ const DIAGRAMS_LG = (() => {
     const s4 = nodes + eCombi + eCosopt + eSimb + Ls(8, 256, ['Simbrinza: CAI + alpha-2 agonist, TID.', 'Never once daily: twice or three times daily.'], 'n4', 'lg-t');
     const steps = [
       ['Combination products join two of three classes: beta blocker, alpha-2 agonist, CAI; fewer bottles help adherence (slide 69; T@89624).', s1],
-      ['Combigan: alpha-2 agonist + beta blocker, 1 drop twice daily, BID (slide 69; T@85943).', s2],
-      ['Cosopt and Cosopt PF (preservative-free): CAI + beta blocker, 1 drop twice daily, BID (slide 69; T@62830, T@85943).', s3],
-      ['Simbrinza: CAI + alpha-2 agonist, 1 drop three times daily, TID; combinations are never once daily (slide 69; T@86115).', s4],
+      ['Combigan: brimonidine (alpha-2 agonist) + timolol (beta blocker), 1 drop twice daily (slide 69; T@85943).', s2],
+      ['Cosopt and Cosopt PF (preservative-free): dorzolamide (CAI) + timolol (beta blocker), 1 drop twice daily (slide 69; T@62830, T@85943).', s3],
+      ['Simbrinza: brinzolamide (CAI) + brimonidine, 1 drop three times daily; none is once daily (slides 42, 69; T@86115).', s4],
     ];
     return lgStepper('lg-combos', 'Combination eye products: class pairs', steps, h,
       'Drawn after Lam_Glaucoma.pdf slide 69 (generic and brand name, pharmacologic class, dosing regimen of the three combination products) and her ' +

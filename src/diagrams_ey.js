@@ -279,14 +279,14 @@ const DIAGRAMS_EY = (() => {
       TL(6, 307, ['Extras: alcaftadine also H4 (eosinophils);', 'epinastine also H2 (eyelid edema)'], 'ext', 'ey-t', 'start');
     const s4 = cellPart + gran(PART) + vessel(12) + h1d + stab +
       R(150, 204, 204, 18, 'a2d', 'ey-drug', 4) + T(252, 217, 'α2 agonist: vasoconstriction', 'a2T', 'ey-tb') +
-      TL(6, 240, ['α2 agonists (naphazoline, oxymetazoline,', 'tetrahydrozoline, brimonidine tartrate,', 'phenylephrine) constrict the vessels: less',
-        'redness, less fluid leaks out (less edema)'], 'a2x', 'ey-t', 'start') +
+      TL(6, 240, ['α2 agonists (naphazoline, oxymetazoline,', 'tetrahydrozoline, brimonidine) and phenylephrine', '(α1) constrict the vessels: less redness,',
+        'less fluid leaks out (less edema)'], 'a2x', 'ey-t', 'start') +
       TL(6, 296, ['Combination: naphazoline/pheniramine', '(α2 agonist + antihistamine)'], 'cmb', 'ey-t', 'start');
     return stepper('ey-allergy', 'Allergic conjunctivitis: histamine and the drugs', [
       ['A sensitized mast cell carries IgE on its surface; the allergen (antigen) binds that IgE (slide 48; 11/17 T@41462).', s1],
       ['The mast cell releases histamine; at H1 receptors it causes itch, edema, redness and watery eyes (slides 48–49, 52; 11/17 T@41705).', s2],
       ['H1 inverse agonists block the receptor; most are also mast cell stabilizers, so less histamine is released (slides 51, 53–54; 11/17 T@44333).', s3],
-      ['α2 agonists act on the blood vessels: vasoconstriction reduces the redness and the leak behind the edema (slides 56–57, 59; 11/17 T@52404).', s4],
+      ['Vasoconstrictors (α2 agonists; phenylephrine is α1) act on the vessels: less redness and less leak behind the edema (slides 56–57, 59; 11/17 T@52404).', s4],
     ], 368, 'Drawn after Smith_Eye_Glaucoma_AllergicConj_DryEye.pdf slides 48–49, 51–54, 56–57 and 59 (Dr. Smith); lecture 11/17, T@40500–@54200. ' +
       'Slide 51: mast cell stabilization is “both H1 receptor dependent and independent; mechanisms still unclear”, and drugs with it “may be more effective” topically. ' +
       'Cetirizine is the one without mast cell stabilization (slide 53; 11/17 T@51757); use before the allergen season is from the lecture (11/17 T@46857).');

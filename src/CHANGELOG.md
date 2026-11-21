@@ -9,10 +9,13 @@ characters.
 Every update adds its bullets here in the same commit that makes the change.
 
 ## 2026-11-21 (Diseases for Exam 3, exam choice, plainer titles)
+- The 17 Exam 3 figures now have spoken step-by-step narration (Listen on each figure).
+- Long table cells in the Guides are now colour-coded cards and short lists.
 - Diseases: choose Exam 1, 2 or 3; Exam 3 adds eye, ear and mouth conditions from all three professors.
 - Guides, Reference and Tell apart: the starred view can show the stars of one exam.
 - Dr. Lam's four Guides decks open as closed folders like the others; deck and section titles now say what they cover.
 - Glaucoma "why each class sits where it does" is now short labelled tiles, not a table of sentences.
+- Structure atlas: 52 structures from Dr. Sikazwe's Exam 3 slides; every tile names its deck, slide and exam.
 
 ## 2026-11-21 (Dr. Lam's practice questions for Exam 3)
 - Simbrinza is brinzolamide and brimonidine, as her email says; carbamide peroxide steps added as a select-all question.

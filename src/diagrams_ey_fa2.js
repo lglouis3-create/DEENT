@@ -113,7 +113,7 @@ const DIAGRAMS_EY_FA2 = (() => {
       ['Outflow: most drains through the trabecular meshwork and Schlemm’s canal; some by the uveoscleral route (slides 14–16; 11/13 T@32688).', s3],
       ['Slide 16 zooms on a ciliary process: β-blockers act on the β receptor, α2 agonists on the α2 receptor, CA inhibitors on the enzyme (slides 16, 18, 22, 26).', s4],
       ['Drugs that decrease inflow act on the ciliary body: β-blockers, α2 agonists and carbonic anhydrase inhibitors (slides 16, 18, 22, 26; 11/13 T@39934).', s5],
-      ['Trabecular outflow up: M3 agonists and echothiophate contract the meshwork; netarsudil makes it less stiff (slides 32, 34, 41; 11/17 T@24556).', s6],
+      ['Trabecular outflow up: M3 agonists and echothiophate contract the sphincter and meshwork; netarsudil makes it less stiff (slides 32, 34, 41; 11/17 T@24556).', s6],
       ['Uveoscleral outflow rises: PG agonists relax the ciliary muscle (also some trabecular); brimonidine adds some (slides 22, 37; 11/17 T@31096).', s7],
     ], 458, 'Drawn after Dr. Smith’s Smith_Eye_Glaucoma_AllergicConj_DryEye.pdf slides 14–16, 18, 22, 26, 32, 34, 37 and 41; lectures 11/13, ' +
       'T@19333 and T@28180 (inflow is production, outflow is drainage), T@43883–@60121, and 11/17, T@23400–@36600. The eye is redrawn from slide 15 (labels: cornea, ' +
@@ -301,15 +301,15 @@ const DIAGRAMS_EY_FA2 = (() => {
     return fa.stepper('ey-cai', 'Carbonic anhydrase inhibitors: eye and kidney', [
       ['In the ciliary epithelium, carbonic anhydrase makes H₂CO₃; its HCO₃⁻ leaves with Na⁺ and water follows: aqueous humor (slide 26; 11/17 T@5420).', e1],
       ['A CA inhibitor stops the enzyme: less HCO₃⁻ and Na⁺ leave, less water follows, so inflow falls (slides 26, 28; 11/13 T@54881).', e2],
-      ['Kidney: CA IV in the lumen and CA II in the cell make HCO₃⁻, which returns to the blood and buffers its pH (slide 27; 11/17 T@8731).', k3],
+      ['Kidney: CA IV splits H₂CO₃ in the lumen; CA II makes H⁺ and HCO₃⁻ in the cell; HCO₃⁻ returns to the blood and buffers its pH (slide 27; 11/17 T@8731).', k3],
       ['Oral acetazolamide blocks CA IV and CA II: no H⁺ for NHE3, so Na⁺ and water stay in the lumen (diuresis) (slides 27, 29; 11/17 T@14835).', k4],
       ['No HCO₃⁻ returns to the blood, so the pH falls: metabolic acidosis, the side effect to watch with oral CAIs (slide 29; 11/17 T@17682).', k5],
     ], 392, 'Drawn after Smith_Eye_Glaucoma_AllergicConj_DryEye.pdf slides 26–29 (slide 27: Golan, Principles of Pharmacology, Fig 20-6; Dr. Smith); ' +
       'the eye is slide 15’s and the ciliary epithelium with its carbonic anhydrase is slide 16’s zoom; ' +
       'lectures 11/13, T@53959–@60121, and 11/17, T@4800–@22700. The Na⁺/K⁺ ATPase and vH⁺ ATPase on slide 27 are left out; she said the transporter names ' +
       'are not needed for this lecture (11/17 T@9398). Acidosis mainly with oral use, “to a much lesser extent” with drops (11/17 T@6785). In the eye, she said, ' +
-      'the movement of solutes “is not quite the same” as in the kidney (11/17 T@20105). On 11/13 (T@54881) she said carbonic acid dissociates “into sodium and ' +
-      'bicarbonate”; the figure follows slide 27 and 11/17 (T@5420): H⁺ + HCO₃⁻.');
+      'the movement of solutes “is not quite the same” as in the kidney (11/17 T@20105). ' +
+      'The figure follows slide 27 and 11/17 (T@5420): carbonic acid separates into H⁺ + HCO₃⁻.');
   })();
 
   const PURPOSE = {

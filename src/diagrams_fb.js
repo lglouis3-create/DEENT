@@ -142,7 +142,7 @@ const DIAGRAMS_FB = (() => {
       ['Tilt the head back and pull the lower lid down and out to form a pocket (slide 73; T@86951).', s2],
       ['Look at the dropper, place one drop in the pocket, then release the lid slowly (slide 73; T@86951).', s3],
       ['Close the eyes, do not squeeze or rub, and press the inner corner gently for 1–2 minutes (slides 72–73; T@87190).', s4],
-      ['Why: closing the lid lowers nasolacrimal drainage, so less drug is absorbed and systemic side effects are milder (slide 72).', s5],
+      ['Why: pressing the inner corner lowers nasolacrimal drainage, so systemic absorption falls and systemic side effects are milder (slide 72).', s5],
     ], h, 'Schematic of the front of one eye, drawn after Lam_Glaucoma.pdf slide 71 (do not touch the dropper bottle tip), slide 72 (eyelid closure lowers ' +
       'nasolacrimal drainage, systemic absorption and the severity of systemic side effects; the lacrimal system is redrawn from that slide’s picture) and slide 73 (wash hands and remove contacts; tilt back, ' +
       'pull out a pouch of the lower lid; place the drop looking at the dropper, release the lid slowly; close the eyes and lightly press the inside ' +
