@@ -32,8 +32,8 @@ const check = (ok, what, detail) => {
 
 const GROUP = 'Otic, oral and ophthalmic chemistry (Dr. Sikazwe, Exam 3)';
 const PLAN = {
-  'oo-cerumen':     {steps: 4, h: 312, slides: /slide 8/, lecture: true},
-  'oo-fluoride':    {steps: 4, h: 340, slides: /slides 16–18/, lecture: true},
+  'oo-cerumen':     {steps: 4, h: 356, slides: /slide 8/, lecture: true},
+  'oo-fluoride':    {steps: 4, h: 344, slides: /slides 16–18/, lecture: true},
   'oo-eye-entry':   {steps: 4, h: 350, slides: /slide 29/, lecture: true},
   'oo-imidazoline': {steps: 5, h: 350, slides: /slide 31/, lecture: true},
   'oo-ache':        {steps: 4, h: 360, slides: /slide 42/, lecture: false},
@@ -48,12 +48,17 @@ vm.runInContext(rd('course.js') + '\nthis.F = (typeof COURSE !== "undefined" ? C
 const F = sbC.F || [];
 const fi = F.indexOf('figs2.js'), oi = F.indexOf('diagrams_oo.js');
 check(oi > fi && fi >= 0, 'course.js files lists diagrams_oo.js after figs2.js', JSON.stringify([fi, oi]));
+{
+  const xi = F.indexOf('diagram_fx.js'), xf = F.indexOf('diagram_fx_fc.js'), ey = F.indexOf('diagrams_ey.js'), of = F.indexOf('diagrams_oo_fc.js');
+  check(xi >= 0 && xf > xi && xf < ey, 'course.js lists diagram_fx.js, then diagram_fx_fc.js, before diagrams_ey.js', JSON.stringify([xi, xf, ey]));
+  check(of > oi, 'course.js lists diagrams_oo_fc.js after diagrams_oo.js', JSON.stringify([oi, of]));
+}
 
 const sb = {console};
 vm.createContext(sb);
-vm.runInContext(rd('diagrams.js') + '\n' + rd('diagrams_oo.js') +
-  '\nthis.X = {DIA, DIA_NAMES, DIAGRAMS, P: DIAGRAMS_OO_PURPOSE, OO: DIAGRAMS_OO};', sb);
-const {DIA, DIA_NAMES, DIAGRAMS, P, OO} = sb.X;
+vm.runInContext(rd('diagrams.js') + '\n' + rd('diagram_fx.js') + '\n' + rd('diagram_fx_fc.js') + '\n' + rd('diagrams_oo.js') + '\n' + rd('diagrams_oo_fc.js') +
+  '\nthis.X = {DIA, DIA_NAMES, DIAGRAMS, P: DIAGRAMS_OO_PURPOSE, OO: DIAGRAMS_OO, FCCSS: DIAGRAM_FX_FC_CSS + DIAGRAM_FX_CSS};', sb);
+const {DIA, DIA_NAMES, DIAGRAMS, P, OO, FCCSS} = sb.X;
 const groups = DIAGRAMS.filter(([name]) => name === GROUP);
 check(groups.length === 1, 'one DIAGRAMS group named "' + GROUP + '"', groups.length);
 const grouped = DIAGRAMS.flatMap(([, keys]) => keys);
@@ -63,6 +68,7 @@ for (const k of Object.keys(PLAN)) {
   check(grouped.filter(x => x === k).length === 1 && groups[0] && groups[0][1].includes(k), k + ' is listed once, in the Exam 3 group');
 }
 check(Object.keys(OO.figs).every(k => /^oo-/.test(k) && PLAN[k]), 'every figure in the file has an oo- key and a plan', Object.keys(OO.figs).join(', '));
+check(typeof DIA['oo-cerumen'] === 'string' && /an-wax/.test(DIA['oo-cerumen']) && /an-enamel/.test(DIA['oo-fluoride']), 'oo-cerumen and oo-fluoride are the redrawn anatomical figures (diagrams_oo_fc.js replaced them)');
 
 // 2-3. each figure
 const SHAPE = /<(text|line|path|rect|circle|ellipse|polygon|polyline)\b([^>]*)>/g;
@@ -120,7 +126,7 @@ for (const [k, plan] of Object.entries(PLAN)) {
 }
 // captions not clipped: the source captions wrap to three lines or fewer at the file's width
 {
-  const src = rd('diagrams_oo.js');
+  const src = rd('diagrams_oo.js') + '\n' + rd('diagrams_oo_fc.js');
   const w = +(src.match(/CAP_W = (\d+)/) || [])[1];
   const capsSrc = [...src.matchAll(/^\s*\['([^']+)', s\d\],?$/gm)].map(m => m[1]);
   const over = [];
@@ -130,21 +136,22 @@ for (const [k, plan] of Object.entries(PLAN)) {
     out.push(cur.trim());
     if (out.filter(Boolean).length > 3) over.push(c.slice(0, 40));
   }
-  check(capsSrc.length === Object.values(PLAN).reduce((a, p) => a + p.steps, 0), 'every step caption found in the source', capsSrc.length);
+  /* diagrams_oo.js still holds the original captions of the two redrawn figures (8), which diagrams_oo_fc.js replaces */
+  check(capsSrc.length === Object.values(PLAN).reduce((a, p) => a + p.steps, 0) + 8, 'every step caption found in the sources (the redrawn figures’ originals counted too)', capsSrc.length);
   check(!over.length, 'no step caption is clipped at three lines', over.join(' | '));
 }
 
 // 4. text sizes
 {
-  const sizes = [...OO.css.matchAll(/([^{}]+)\{[^}]*font-size:([\d.]+)px/g)].map(m => [m[1].trim(), +m[2]]);
+  const sizes = [...(OO.css + FCCSS).matchAll(/([^{}]+)\{[^}]*font-size:([\d.]+)px/g)].map(m => [m[1].trim(), +m[2]]);
   const small = sizes.filter(([, v]) => v < 11);
   check(sizes.length >= 10, 'the CSS sets the figure text sizes', sizes.length);
   check(!small.length, 'every text size the file sets is at least 11 units', small.map(s => s.join(' ')).join('; '));
-  const used = new Set([...Object.values(OO.figs).join('').matchAll(/<text class="([^"]+)"/g)].flatMap(m => m[1].split(' ')));
+  const used = new Set([...Object.keys(PLAN).map(k => DIA[k]).join('').matchAll(/<text class="([^"]+)"/g)].flatMap(m => m[1].split(' ')));
   const sized = new Set(sizes.flatMap(([sel]) => [...sel.matchAll(/\.([a-z0-9-]+)/g)].map(m => m[1])));
   const unsized = [...used].filter(c => /^oo-/.test(c) && !sized.has(c));
   check(!unsized.length, 'every oo- text class has its own size', unsized.join(', '));
-  const plainLbl = Object.values(OO.figs).join('').match(/<text class="lbl(?: (?:sm|xs))?"/g);
+  const plainLbl = Object.keys(PLAN).map(k => DIA[k]).join('').match(/<text class="lbl(?: (?:sm|xs))?"/g);
   check(!plainLbl, 'no text left at the engine’s 8.5 or 10 unit label sizes', plainLbl && plainLbl.length);
 }
 

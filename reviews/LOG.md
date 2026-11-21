@@ -347,3 +347,20 @@
 - Not asked, by design: sig as such, risk factors, day-supply calculation, IOP numbers, PGA contraindications, CAI acidosis mechanism, PACG (Lam said not tested). Essay: guide prompts only.
 - Source conflicts kept: Latisse 0.03% vs slide; Simbrinza CAI printed two ways (class pair only); eyelid closure 1-2 min (speech) vs 2 min (handout).
 - run_checks first run: 35 PASS, 3 FAIL (browser_test: OB-009 and OB-031 stems promised a drawing; optional_test: two optional topics; state_check: CLAUDE.md older than L12), 1 REPORT. Fixed by rewording the two stems, making oo-beyond a non-optional low-yield topic, and updating CLAUDE.md.
+
+- Released 2026-11-20 as 0b69cbe (Louis: "Publish when completed"). Final run_checks: 0 FAIL, 1 REPORT; slide_test 235, examfold_test 366, glossary_test 240, wide_test 109, walk_test 92, search_test 114, dz_test 59. Skeptic fixes applied (Lam IOP/acidosis exclusions, Sikazwe wording); search button hides when Back button shows.
+
+## 2026-11-20 (later): Lam pages redesigned, diagrams redrawn, Sikazwe emailed scope
+- Louis's reviews: Lam feedback unhelpful, Explain more unrelated, drug lists in paragraphs, diagrams abstract and hard to match to slides. Done: five-objective Lam guide with colour cards and folded blocks; feedback rewritten (three writers, two skeptics, fixes applied); Explain more mapped per topic; shared diagram library and 8 redrawn figures plus ey-targets; his classmate's reference pictures used only for presentation ideas.
+- Sikazwe's email (readings list, practice questions): dry eye low-yield; 14 new questions; OPEN_QUESTIONS updated.
+- Checks on this state before the final run: style_check, test.js, likely_check, links_check, diagrams_ey/oo/fb/lg checks, stepper_test, blank_check pass. Full run_checks and course tests: see the next entry.
+
+## 2026-11-20 (evening): Smith Exam 3 hints
+- Hints recorded (STYLE.md, course.js facts); Louis: no cumulative Exam 1 on Exam 3, so Smith pool is 18 eye questions; exams[2] `typed: true, blanks: 3`.
+- Added EB-001..020 (fill-in, mechanism of action; 18 with dupOf), EG-001..012 (gaps: drug-table recall, histamine symptoms, dry-eye causes, side-effect sets); GAPS.md/STARS.md in the agent report: acidosis chain already covered (EI-028..031, EI-046..050). Stars 41 -> 47. Slides 8 and 9: no item cites them.
+- Open: EG-004 phenylephrine is listed as alpha 2 on slide 57 and the chart, alpha 1 on slide 8.
+
+## 2026-11-20 (night): Dr. Lam 11/20 lecture
+- Analysis agent (LAM2_ANALYSIS): scope, her exam statements, cases, conflicts. Three writers (ophthalmic, oral, otic) produced questions, pages, glossary; otic keys rewritten so the key is not the longest option; 14 style flags fixed; LOR-057 removed.
+- Conflicts kept neutral on pages (otic alcohol 70% spoken vs 95% printed, cerumen age, protectant disc seconds vs minutes, cetirizine dose); the otic cases (slides 36-44) were not worked in class and are rebuilt.
+- Open: independent skeptic review of the new pages and questions; stars (agent running).

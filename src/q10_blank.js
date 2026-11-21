@@ -254,7 +254,7 @@ QUESTIONS.push(
  tags:['blank'], source:'both', dupOf:'S3-099',
  stem:"The enzyme linking hydrocortisone and its major metabolite, cortisone, is ___.",
  accept:["11β-hydroxysteroid dehydrogenase", "11-beta-hydroxysteroid dehydrogenase", "11β-HSD", "11-beta-HSD", "11βHSD"],
- why:"Slide 26 and T 1190–1193: \"this is the major metabolite of uh hydrocortisone, and the enzyme involved in that is ... 11 beta hydrosteroid dehydrogenase, 11 beta HSD\", an oxidoreductase. Whether one isozyme works both ways is held out (OPEN_QUESTIONS).",
+ why:"Slide 26 and T 1190–1193: \"this is the major metabolite of hydrocortisone, and the enzyme involved in that is ... 11 beta hydrosteroid dehydrogenase, 11 beta HSD\", an oxidoreductase. Whether one isozyme works both ways is held out (OPEN_QUESTIONS).",
  cite:BQ_S3+" slide 26; T 1190–1193"},
 
 {id:'BS4-001', type:'blank', skill:'chem', prof:'Sikazwe', tier:'new', topic:'s4-mtx', sub:'mech', concept:'b-mtx-pteridine',

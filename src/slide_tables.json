@@ -273,6 +273,36 @@
    1
   ],
   [
+   "Lam Ophthalmic",
+   "lo",
+   1
+  ],
+  [
+   "Dr. Lam's Ophthalmic",
+   "lo",
+   0
+  ],
+  [
+   "Lam Oral",
+   "lr",
+   1
+  ],
+  [
+   "Dr. Lam's Oral",
+   "lr",
+   0
+  ],
+  [
+   "Lam Otic",
+   "lt",
+   1
+  ],
+  [
+   "Dr. Lam's Otic",
+   "lt",
+   0
+  ],
+  [
    "Dr. Lam's Glaucoma",
    "lg",
    0
@@ -902,6 +932,78 @@
    "tell-lg-",
    "lg",
    "Tell apart: Dr. Lam, Glaucoma",
+   "sun"
+  ],
+  [
+   "gdeck-lo",
+   "lo",
+   "Guide heading: Dr. Lam, Ophthalmic disorders",
+   "sun"
+  ],
+  [
+   "gobj-lo-",
+   "lo",
+   "Guide: Dr. Lam, Ophthalmic disorders, by learning objective",
+   "sun"
+  ],
+  [
+   "ref-lo-",
+   "lo",
+   "Reference: Dr. Lam, Ophthalmic disorders",
+   "sun"
+  ],
+  [
+   "tell-lo-",
+   "lo",
+   "Tell apart: Dr. Lam, Ophthalmic disorders",
+   "sun"
+  ],
+  [
+   "gdeck-lr",
+   "lr",
+   "Guide heading: Dr. Lam, Oral disorders",
+   "sun"
+  ],
+  [
+   "gobj-lr-",
+   "lr",
+   "Guide: Dr. Lam, Oral disorders, by learning objective",
+   "sun"
+  ],
+  [
+   "ref-lr-",
+   "lr",
+   "Reference: Dr. Lam, Oral disorders",
+   "sun"
+  ],
+  [
+   "tell-lr-",
+   "lr",
+   "Tell apart: Dr. Lam, Oral disorders",
+   "sun"
+  ],
+  [
+   "gdeck-lt",
+   "lt",
+   "Guide heading: Dr. Lam, Otic disorders",
+   "sun"
+  ],
+  [
+   "gobj-lt-",
+   "lt",
+   "Guide: Dr. Lam, Otic disorders, by learning objective",
+   "sun"
+  ],
+  [
+   "ref-lt-",
+   "lt",
+   "Reference: Dr. Lam, Otic disorders",
+   "sun"
+  ],
+  [
+   "tell-lt-",
+   "lt",
+   "Tell apart: Dr. Lam, Otic disorders",
    "sun"
   ]
  ],

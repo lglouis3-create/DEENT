@@ -8,7 +8,7 @@
    ========================================================================== */
 TOPIC_DECKS.push(
   {id:'ooo', exam:3, name:'Otic, oral and ophthalmic medicinal chemistry (Dr. Sikazwe)', file:'Sikazwe_OOO_mc.pdf', when:'taught 11/18, 11/19 (Exam 3)',
-   topics:['oo-otic', 'oo-oral', 'oo-oph', 'oo-a2', 'oo-bb', 'oo-cai', 'oo-chol', 'oo-pg', 'oo-de', 'oo-ac', 'oo-beyond']});
+   topics:['oo-otic', 'oo-oral', 'oo-oph', 'oo-a2', 'oo-bb', 'oo-cai', 'oo-chol', 'oo-pg', 'oo-ac', 'oo-beyond']});
 
 TOPICS.push(
  {id:'oo-otic', name:'Earwax: cerumenolytics (docusate, carbamide peroxide)', prof:'Sikazwe',
@@ -50,9 +50,6 @@ TOPICS.push(
    {id:'pg',    name:'Prostaglandins and prodrug activation', cite:'slides 44–46'},
    {id:'ep2',   name:'Omidenepag isopropyl', cite:'slide 47'},
    {id:'rock',  name:'Netarsudil (isoquinoline)', cite:'slide 48'}]},
- {id:'oo-de', name:'Dry eye disease: the chemistry of its drugs', prof:'Sikazwe',
-  cite:'slides 49–51 · taught 11/19 (Lecture 12)', subs:[
-   {id:'drugs', name:'Dry eye pharmacotherapy and lifitegrast', cite:'slides 49–51'}]},
  {id:'oo-ac', name:'Self-assessment questions he kept (Dr. Sikazwe)', prof:'Sikazwe',
   cite:'slides 62–68 · questions 3, 4 and 5; taught 11/19 (Lecture 12)', subs:[
    {id:'self',  name:'Self-assessment questions 3, 4 and 5', cite:'slides 65–68'}]},
@@ -64,5 +61,6 @@ TOPICS.push(
    {id:'mcs',  name:'Mast cell stabilizers', cite:'slide 56'},
    {id:'dual', name:'Dual-acting agents (self-assessment question 2)', cite:'slides 57, 64'},
    {id:'gc',   name:'Glucocorticoids and the steroid carbon numbering (self-assessment question 1)', cite:'slides 58–60, 63'},
-   {id:'dsar', name:'Direct-acting cholinergics: the slide 40 SAR', cite:'slide 40'}]}
+   {id:'dsar', name:'Direct-acting cholinergics: the slide 40 SAR', cite:'slide 40'},
+   {id:'de',   name:'Dry eye disease: the chemistry of its drugs', cite:'slides 49–51'}]}
 );

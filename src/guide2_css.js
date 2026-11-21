@@ -100,7 +100,50 @@
 .gobj .g2-table.g2-stack td:empty{display:none}
 .gobj .g2-table.g2-work.g2-stack td{display:inline-block;padding:8px 0 9px 10px;white-space:nowrap}
 .gobj .g2-table.g2-stack .g2-lab{display:inline;margin-right:6px;font-size:11.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--text-dim,#5A6878)}
-}`;
+}
+
+.gobj{--c1:#2f5fa8;--c2:#1f7a4d;--c3:#a85d00;--c4:#6d42b8;--c5:#b23a2e;--c6:#a02c72;--cl-ink:#fff}
+.gobj .g2-c1{--cl:var(--c1);--clr:47,95,168}.gobj .g2-c2{--cl:var(--c2);--clr:31,122,77}.gobj .g2-c3{--cl:var(--c3);--clr:168,93,0}
+.gobj .g2-c4{--cl:var(--c4);--clr:109,66,184}.gobj .g2-c5{--cl:var(--c5);--clr:178,58,46}.gobj .g2-c6{--cl:var(--c6);--clr:160,44,114}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .gobj{--c1:#8fb2f0;--c2:#6fcf9b;--c3:#f0b45e;--c4:#b99af0;--c5:#f09a8f;--c6:#f08fc4;--cl-ink:#10151c}
+:root:not([data-theme="light"]) .gobj .g2-c1{--clr:143,178,240}:root:not([data-theme="light"]) .gobj .g2-c2{--clr:111,207,155}:root:not([data-theme="light"]) .gobj .g2-c3{--clr:240,180,94}
+:root:not([data-theme="light"]) .gobj .g2-c4{--clr:185,154,240}:root:not([data-theme="light"]) .gobj .g2-c5{--clr:240,154,143}:root:not([data-theme="light"]) .gobj .g2-c6{--clr:240,143,196}}
+:root[data-theme="dark"] .gobj{--c1:#8fb2f0;--c2:#6fcf9b;--c3:#f0b45e;--c4:#b99af0;--c5:#f09a8f;--c6:#f08fc4;--cl-ink:#10151c}
+:root[data-theme="dark"] .gobj .g2-c1{--clr:143,178,240}:root[data-theme="dark"] .gobj .g2-c2{--clr:111,207,155}:root[data-theme="dark"] .gobj .g2-c3{--clr:240,180,94}
+:root[data-theme="dark"] .gobj .g2-c4{--clr:185,154,240}:root[data-theme="dark"] .gobj .g2-c5{--clr:240,154,143}:root[data-theme="dark"] .gobj .g2-c6{--clr:240,143,196}
+.gobj .g2-capline{margin:0 0 10px;font-size:13.5px;color:var(--text-dim,#5A6878)}
+.gobj .g2-clsgrid{display:grid;grid-template-columns:minmax(0,1fr);gap:12px;margin:0 0 12px}
+.gobj .g2-cls{border:1px solid var(--line,#D3DAE3);border-left:6px solid var(--cl);border-radius:10px;background:rgba(var(--clr),.08);padding:10px 12px 12px;min-width:0}
+.gobj .g2-cls-h{display:flex;align-items:center;flex-wrap:wrap;gap:6px 8px;margin:0 0 8px}
+.gobj .g2-cls-n{flex:none;width:26px;height:26px;border-radius:50%;background:var(--cl);color:var(--cl-ink);font-size:14px;font-weight:700;display:inline-flex;align-items:center;justify-content:center}
+.gobj .g2-cls-t{font-size:15.5px;font-weight:700;line-height:1.3;color:var(--text)}
+.gobj .g2-cls-sfx{font-size:12.5px;font-weight:600;color:var(--text-dim,#5A6878);border:1px solid var(--line,#D3DAE3);border-radius:10px;padding:1px 8px;background:var(--paper,#fff)}
+.gobj .g2-stats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin:0 0 10px}
+.gobj .g2-stat{background:var(--paper,#fff);border:1px solid var(--line,#D3DAE3);border-radius:8px;padding:6px 9px;min-width:0}
+.gobj .g2-stat-k{display:block;font-size:11px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--text-dim,#5A6878)}
+.gobj .g2-stat-v{display:block;font-size:14.5px;font-weight:700;line-height:1.3;color:var(--text)}
+.gobj .g2-drugs{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.gobj .g2-drugs li{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 8px;padding:6px 8px;background:var(--paper,#fff);border:1px solid var(--line,#D3DAE3);border-radius:8px;font-size:14.5px;line-height:1.35}
+.gobj .g2-dg{font-weight:700;color:var(--text)}
+.gobj .g2-str{font-size:13px;color:var(--text-dim,#5A6878);font-variant-numeric:tabular-nums}
+.gobj .g2-br{font-size:13px;font-weight:600;padding:1px 8px;border-radius:10px;background:rgba(var(--clr),.16);border:1px solid rgba(var(--clr),.5);color:var(--text)}
+.gobj .g2-tag{font-size:11.5px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;padding:1px 7px;border-radius:10px;background:var(--cl);color:var(--cl-ink)}
+.gobj .g2-dn{flex-basis:100%;font-size:13px;line-height:1.35;color:var(--text-dim,#5A6878)}
+.gobj tr[class*="g2-c"]>th{border-left:6px solid var(--cl)}
+.gobj .g2-tile[class*="g2-c"]{border-top:4px solid var(--cl)}
+.gobj .g2-jump{display:flex;flex-wrap:wrap;gap:6px;margin:12px 0 2px}
+.gobj .g2-jump button{min-height:44px;padding:6px 14px;border:1px solid var(--line,#D3DAE3);border-radius:22px;background:var(--paper,#fff);color:var(--accent,#2F5FA8);font:inherit;font-size:13.5px;font-weight:600;cursor:pointer}
+.gobj .g2-block>h5{scroll-margin-top:130px}
+.gobj .g2-fold{margin:0}
+.gobj .g2-fold>summary{list-style:none;cursor:pointer;min-height:44px;display:flex;align-items:center;padding:6px 14px;border:1px dashed var(--line,#D3DAE3);border-radius:10px;font-size:13.5px;font-weight:600;color:var(--accent,#2F5FA8)}
+.gobj .g2-fold>summary::-webkit-details-marker{display:none}
+.gobj .g2-fold[open]>summary{margin:0 0 10px}
+.gobj .g2-fold[open]>summary .g2-fold-s::before{content:"Hide this section";}
+.gobj .g2-fold[open]>summary .g2-fold-s{font-size:0}
+.gobj .g2-fold[open]>summary .g2-fold-s::before{font-size:13.5px}
+.gobj .g2-table.g2-stack tr[class*="g2-c"]{border-left:6px solid var(--cl)}
+@media (min-width:820px){.gobj .g2-clsgrid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+`;
   try {
     if (!document.getElementById('guide2css')) {
       const s = document.createElement('style'); s.id = 'guide2css'; s.textContent = CSS; document.head.appendChild(s);

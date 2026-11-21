@@ -182,6 +182,15 @@ const COURSE = {
     {id:'L12', deck:'Lam_Glaucoma.pdf',
      label:'Lecture 12: Glaucoma therapeutics (Lam, 11/19)',
      prof:'Lam', exam:3, module:'Exam 3: Lectures 9–13'},
+    {id:'L13a', deck:'Lam_OphthalmicDisorders.pdf',
+     label:'Lecture 13: Ophthalmic disorders other than glaucoma (Lam, 11/20)',
+     prof:'Lam', exam:3, module:'Exam 3: Lectures 9–13'},
+    {id:'L13b', deck:'Lam_OralDisorders_slides.pdf',
+     label:'Lecture 13: Oral disorders (Lam, 11/20)',
+     prof:'Lam', exam:3, module:'Exam 3: Lectures 9–13'},
+    {id:'L13c', deck:'Lam_OticDisorders_slides.pdf',
+     label:'Lecture 13: Otic disorders (Lam, 11/20)',
+     prof:'Lam', exam:3, module:'Exam 3: Lectures 9–13'},
   ],
 
   exams: [
@@ -242,20 +251,20 @@ const COURSE = {
        {key:'l58', name:'Lectures 5–8 (Dr. Patel): the other 40', marks:40, filter:{exam:2}},
      ]},
     {id:'exam3', name:'Exam 3', date:'Mon 11/23, 9:00–10:30 AM', when:'2026-11-23T09:00',
-     questions:50, minutes:90, sata:null,
-     blurb:'Covers Lectures 9–13 (syllabus). Dr. Sikazwe 14 questions (28%), Dr. Smith 18 (36%, five of them cumulative with Exam 1) and Dr. Lam 18 (36%), as Dr. Sikazwe announced on 11/19. Practice coverage so far: Dr. Smith\'s eye lectures, Dr. Sikazwe\'s otic, oral and ophthalmic chemistry and Dr. Lam\'s glaucoma therapeutics; her ophthalmic disorders lecture (11/20) joins when taught.',
+     questions:50, minutes:90, sata:null, typed:true, blanks:3,
+     blurb:'Covers Lectures 9–13 (syllabus). Dr. Sikazwe 14 questions (28%), Dr. Smith 18 (36%, three of them fill-in-the-blank on mechanism of action) and Dr. Lam 18 (36%), as Dr. Sikazwe announced on 11/19. Practice coverage so far: Dr. Smith\'s eye lectures, Dr. Sikazwe\'s otic, oral and ophthalmic chemistry and Dr. Lam\'s glaucoma therapeutics; her ophthalmic disorders lecture (11/20) joins when taught.',
      facts:[['Covers', 'Covers Lectures 9–13 (syllabus).'],
             ['The split (11/19)', 'Dr. Sikazwe, 11/19: "Exam 3 questions. 50 total. 28% from me ... 36 from Doctor Smith. And 36 from Doctor Lam." That is 14, 18 and 18 questions.'],
             ['Dr. Lam (11/19)', 'She writes each question from a learning objective of her handout (the Word file); "cover the information up that is listed under each learning objective and try to write down as much as you remember", then practice the patient cases. One open-ended question, at least one on the sequence of drug classes, and application cases like Ms. Lopez. Not tested: risk factors to collect, the day supply calculation, prostaglandin contraindications, closed-angle glaucoma (except the drugs that raise its risk).'],
-            ['Dr. Smith (11/13)', '"I\'ve got 5 questions and they\'re cumulative, so everything that was on the first exam is fair game. So focus on pathophys and then focus on mechanisms." She likes scary side effects such as black box warnings.'],
+            ['Dr. Smith (11/13)', '"Focus on pathophys and then focus on mechanisms." She likes scary side effects such as black box warnings. Her 18 questions are all on the eye lectures: no Exam 1 material is on Exam 3 (Louis, 11/20).'],
+            ['Dr. Smith (study hints, 11/20)', 'Answer the objectives in the slide deck; know the parts of the eye for glaucoma and for tear production; no need to memorize slides 8 or 9; understand open-angle glaucoma, histamine in allergic conjunctivitis and the pathology of dry eye; memorize the drugs in the drug table; know every mechanism of action and the small details that tell drugs in one class apart; list significant side effects and explain how metabolic acidosis occurs with carbonic anhydrase inhibitors. Three fill-in-the-blank questions, all on mechanism of action: "study to the details presented in class."'],
             ['Dr. Sikazwe (11/19)', 'Focus on two diseases, glaucoma and dry eye. Allergic conjunctivitis is read only to slide 51 (the antihistamine slides 52-53 are in a later lecture); the steroid slides and self-assessment questions 1 and 2 are skipped; questions 3, 4 and 5 are in.'],
             ['Syllabus formats', 'The syllabus lists multiple-choice, select-all, short-answer, true/false and matching as possible formats and gives no count of each.']],
-     factsMain:['Covers', 'The split (11/19)', 'Dr. Lam (11/19)'],
+     factsMain:['Covers', 'The split (11/19)', 'Dr. Smith (study hints, 11/20)', 'Dr. Lam (11/19)'],
      pools:[
-       // Dr. Sikazwe, 11/19: 28% / 36% / 36% of 50 questions = 14, 18 and 18 (14 + 18 + 18 = 50). Dr. Smith's 18 include her
-       // five cumulative questions (11/13 T@61120): 13 from the eye lectures and 5 from her Exam 1 material.
-       {key:'eye', name:'Dr. Smith: eye lectures', marks:13, filter:{exam:3, prof:'Smith'}},
-       {key:'cum', name:'Dr. Smith: cumulative Exam 1 material', marks:5, filter:{exam:1, prof:'Smith', unassigned:undefined}},
+       // Dr. Sikazwe, 11/19: 28% / 36% / 36% of 50 questions = 14, 18 and 18 (14 + 18 + 18 = 50). All 18 of Dr. Smith's
+       // questions are on the eye lectures (Louis, 2026-11-20: no Exam 1 material on Exam 3).
+       {key:'eye', name:'Dr. Smith: eye lectures', marks:18, filter:{exam:3, prof:'Smith'}},
        {key:'sik', name:'Dr. Sikazwe: otic, oral, ophthalmic chemistry', marks:14, filter:{exam:3, prof:'Sikazwe'}},
        {key:'lam', name:'Dr. Lam: glaucoma therapeutics', marks:18, filter:{exam:3, prof:'Lam'}},
      ]},
@@ -298,9 +307,18 @@ const COURSE = {
           // fig-cni-nfat, fig-spf, fig-block-vs-screen; adds to DIA, DIA_NAMES and DIAGRAMS)
           'figs2.js',
           // Exam 3 diagrams (Louis, 2026-11-19): Dr. Smith's eye figures, then Dr. Sikazwe's otic, oral and ophthalmic chemistry (each adds to DIA, DIA_NAMES, DIAGRAMS)
+          'diagram_fx.js',
+          'diagram_fx_fa.js',
+          'diagram_fx_fa2.js',
+          'diagram_fx_fb.js',
+          'diagram_fx_fc.js',
           'diagrams_ey.js',
           'diagrams_lg.js',
           'diagrams_oo.js',
+          'diagrams_ey_fa.js',
+          'diagrams_ey_fa2.js',
+          'diagrams_fb.js',
+          'diagrams_oo_fc.js',
           // Mechanism step-throughs from Dr. Smith's PCol slides (Louis, 2026-11-09): adds to DIA
           'moa_figs.js',
           'q1_topics.js', 'q2_L02.js', 'q3_L03a.js', 'q4_L03b.js', 'q5_L04.js', 'q6_L03c.js',
@@ -325,13 +343,19 @@ const COURSE = {
           // Lecture 8 points she stressed that had no question: Lyme neurologic/cardiac, scorpion stings, sunscreen expiration, snow and sand, stopping a reacting product, Fitzpatrick type, silicone for scars
           'q21_L08_gaps.js',
           // Dr. Smith, Lectures 9-10 (Exam 3): the eye (topics first, then the question files)
-          'q27_ooo_topics.js', 'q22_eye_topics.js', 'q32_lam_topics.js', 'q23_eye_anat_patho.js', 'q24_eye_inflow.js', 'q25_eye_outflow.js', 'q26_eye_allergy_dry.js',
+          'q27_ooo_topics.js', 'q22_eye_topics.js', 'q32_lam_topics.js', 'q43_lam2_topics.js', 'q23_eye_anat_patho.js', 'q24_eye_inflow.js', 'q25_eye_outflow.js', 'q26_eye_allergy_dry.js',
+ 'q38_eye_blank.js',
+ 'q39_eye_gaps.js',
           // Dr. Sikazwe, Lectures 11-12 (Exam 3): otic, oral, ophthalmic medicinal chemistry
           'q28_ooo_otic_oral.js', 'q29_ooo_oph_a.js', 'q30_ooo_oph_b.js', 'q31_ooo_oph_c.js',
           // Dr. Sikazwe, 11/19 (Exam 3): the questions on what he emphasized, written after the lecture (video and transcript)
           'q36_ooo_1119.js',
+          'q37_sik_practice.js',
           // Dr. Lam, Lecture 12 (Exam 3): glaucoma therapeutics, by her learning objectives (topics first, in q32_lam_topics.js above)
           'q33_lam_a.js', 'q34_lam_b.js', 'q35_lam_c.js',
+ 'q40_lam_oph.js',
+ 'q41_lam_oral.js',
+ 'q42_lam_otic.js',
           // the step-throughs of moa_figs.js in the explanations of the matching Smith questions
           'moa_links.js',
           // Drug list tab (temporary course-level presentation, to be replaced by the kit's
@@ -398,7 +422,8 @@ const COURSE = {
           // Guides: the reading components of the objective sections (numbered blocks, tables, formula
           // line, step-care bands, number tiles with a label that says what the number measures,
           // tap-to-check polls). Styles only, under ".gobj .g2-" (Louis 2026-11-14)
-          'guide2_css.js', 'guide_pl_css.js', 'guide_drill_ui.js',
+          'guide2_css.js',
+          'g2nav_ui.js', 'guide_pl_css.js', 'guide_drill_ui.js',
           // Glossary tab, "Words in this question" under an answered question, My words (Louis, 2026-11-14)
           'glossary_data.js', 'glossary_ui.js',
           // Stars on the reading tabs: guide sections and blocks, reference sections, tell-apart rows, disease cards, drugs,
