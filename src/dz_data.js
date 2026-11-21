@@ -944,7 +944,12 @@ const DZ = {
      "JAK inhibitors: older than this",
      "Patel Dermatitis slide 46"
     ]
-   ]
+   ],
+   "exams": [
+    1,
+    2
+   ],
+   "area": "skin"
   },
   {
    "id": "acne",
@@ -1811,7 +1816,12 @@ const DZ = {
      "wait after washing before a topical",
      "Patel Acne slide 42"
     ]
-   ]
+   ],
+   "exams": [
+    1,
+    2
+   ],
+   "area": "skin"
   },
   {
    "id": "psoriasis",
@@ -2558,7 +2568,12 @@ const DZ = {
      "contact the patient after starting treatment",
      "Patel Scaly slide 48; 11/11 lecture"
     ]
-   ]
+   ],
+   "exams": [
+    1,
+    2
+   ],
+   "area": "skin"
   },
   {
    "id": "diaper-dermatitis",
@@ -2904,7 +2919,11 @@ const DZ = {
      "FDA-approved skin protectant ingredients",
      "Patel Dermatitis slide 63"
     ]
-   ]
+   ],
+   "exams": [
+    2
+   ],
+   "area": "skin"
   },
   {
    "id": "dandruff",
@@ -3291,7 +3310,12 @@ const DZ = {
      "coal tar",
      "Patel Scaly slide 7"
     ]
-   ]
+   ],
+   "exams": [
+    1,
+    2
+   ],
+   "area": "skin"
   },
   {
    "id": "seborrheic-dermatitis",
@@ -3702,7 +3726,12 @@ const DZ = {
      "sulfur (dandruff and seborrheic dermatitis; not psoriasis)",
      "Patel Scaly slide 7"
     ]
-   ]
+   ],
+   "exams": [
+    1,
+    2
+   ],
+   "area": "skin"
   },
   {
    "id": "cradle-cap",
@@ -3966,7 +3995,11 @@ const DZ = {
      "where cradle cap is; the adult form is on the head, ears, face and trunk",
      "Patel Scaly slide 12; 11/10 lecture"
     ]
-   ]
+   ],
+   "exams": [
+    2
+   ],
+   "area": "skin"
   },
   {
    "id": "plant-dermatitis",
@@ -4352,7 +4385,11 @@ const DZ = {
      "no topical hydrocortisone",
      "Patel Outdoor slide 12"
     ]
-   ]
+   ],
+   "exams": [
+    2
+   ],
+   "area": "skin"
   },
   {
    "id": "insect-bites",
@@ -4663,7 +4700,11 @@ const DZ = {
      "topical diphenhydramine",
      "Patel Outdoor slide 12"
     ]
-   ]
+   ],
+   "exams": [
+    2
+   ],
+   "area": "skin"
   },
   {
    "id": "vector-borne",
@@ -5006,7 +5047,11 @@ const DZ = {
      "Lyme neurologic or cardiac / arthritic",
      "Patel Outdoor slide 29"
     ]
-   ]
+   ],
+   "exams": [
+    2
+   ],
+   "area": "skin"
   },
   {
    "id": "insect-stings",
@@ -5293,7 +5338,11 @@ const DZ = {
      "skin protectant, as needed",
      "Patel Outdoor slide 39"
     ]
-   ]
+   ],
+   "exams": [
+    2
+   ],
+   "area": "skin"
   },
   {
    "id": "lice",
@@ -5672,7 +5721,11 @@ const DZ = {
      "head lice are found this close to the scalp",
      "Patel Outdoor slide 42"
     ]
-   ]
+   ],
+   "exams": [
+    2
+   ],
+   "area": "skin"
   },
   {
    "id": "scabies",
@@ -5933,7 +5986,11 @@ const DZ = {
      "oral ivermectin, doses one week apart",
      "Patel Outdoor slide 51"
     ]
-   ]
+   ],
+   "exams": [
+    2
+   ],
+   "area": "skin"
   },
   {
    "id": "spider-bites",
@@ -6185,7 +6242,11 @@ const DZ = {
      "brown recluse and black widow (venomous, Texas)",
      "Patel Outdoor slide 52"
     ]
-   ]
+   ],
+   "exams": [
+    2
+   ],
+   "area": "skin"
   },
   {
    "id": "snake-bites",
@@ -6494,7 +6555,11 @@ const DZ = {
      "minimal, moderate, severe",
      "Patel Outdoor slide 58"
     ]
-   ]
+   ],
+   "exams": [
+    2
+   ],
+   "area": "skin"
   },
   {
    "id": "rabies",
@@ -6728,7 +6793,11 @@ const DZ = {
      "each vaccine dose, deltoid",
      "Patel Outdoor slide 63"
     ]
-   ]
+   ],
+   "exams": [
+    2
+   ],
+   "area": "skin"
   },
   {
    "id": "sun-protection",
@@ -7361,7 +7430,12 @@ const DZ = {
      "FDA plasma threshold for absorbed sunscreen ingredients; oxybenzone highest",
      "Patel Sun slide 20; Smith Sun slide 25"
     ]
-   ]
+   ],
+   "exams": [
+    1,
+    2
+   ],
+   "area": "skin"
   },
   {
    "id": "sunburn",
@@ -7713,7 +7787,12 @@ const DZ = {
      "not healed: refer",
      "Patel Sun slide 34"
     ]
-   ]
+   ],
+   "exams": [
+    1,
+    2
+   ],
+   "area": "skin"
   },
   {
    "id": "photoaging",
@@ -8174,7 +8253,12 @@ const DZ = {
      "fair North Americans show photodamage",
      "Patel Sun slide 39"
     ]
-   ]
+   ],
+   "exams": [
+    1,
+    2
+   ],
+   "area": "skin"
   },
   {
    "id": "wounds",
@@ -8606,7 +8690,11 @@ const DZ = {
      "flap necrosis at 1 / 2 packs per day",
      "Patel Wound slide 25"
     ]
-   ]
+   ],
+   "exams": [
+    2
+   ],
+   "area": "skin"
   },
   {
    "id": "burns",
@@ -8946,7 +9034,11 @@ const DZ = {
      "no improvement: primary care provider",
      "Patel Wound slide 20"
     ]
-   ]
+   ],
+   "exams": [
+    2
+   ],
+   "area": "skin"
   },
   {
    "id": "warts",
@@ -9376,7 +9468,12 @@ const DZ = {
      "size a wart may reach",
      "Patel Warts slide 5"
     ]
-   ]
+   ],
+   "exams": [
+    1,
+    2
+   ],
+   "area": "skin"
   },
   {
    "id": "corns-calluses",
@@ -9733,7 +9830,12 @@ const DZ = {
      "the wart limit, for contrast",
      "Patel Warts slide 10"
     ]
-   ]
+   ],
+   "exams": [
+    1,
+    2
+   ],
+   "area": "skin"
   },
   {
    "id": "glaucoma",
@@ -10364,7 +10466,11 @@ const DZ = {
      "on her part of Exam 3: 18, all on the eye lectures; no Exam 1 material",
      "T@61020 11/13"
     ]
-   ]
+   ],
+   "exams": [
+    3
+   ],
+   "area": "eye"
   },
   {
    "id": "allergic-conjunctivitis",
@@ -10741,7 +10847,11 @@ const DZ = {
      "combination product: naphazoline/pheniramine",
      "Eye slide 59"
     ]
-   ]
+   ],
+   "exams": [
+    3
+   ],
+   "area": "eye"
   },
   {
    "id": "dry-eye",
@@ -11094,7 +11204,11 @@ const DZ = {
      "FDA licensed the nasal spray for dry eye (final half of the year)",
      "Eye slide 73"
     ]
-   ]
+   ],
+   "exams": [
+    3
+   ],
+   "area": "eye"
   }
  ],
  "drugs": {
@@ -15332,7 +15446,10 @@ const DZ = {
      ""
     ]
    ],
-   "src": "Smith Pathophys slides 10, 13, 15, 17, 19–21, 28, 31–32, 35, 37–38; 10/29 lecture"
+   "src": "Smith Pathophys slides 10, 13, 15, 17, 19–21, 28, 31–32, 35, 37–38; 10/29 lecture",
+   "exams": [
+    1
+   ]
   },
   {
    "id": "acne-grades",
@@ -15433,7 +15550,10 @@ const DZ = {
     ]
    ],
    "photo": "acne-comedones",
-   "src": "Patel Acne slides 7–8, 20, 40; 11/10 lecture"
+   "src": "Patel Acne slides 7–8, 20, 40; 11/10 lecture",
+   "exams": [
+    2
+   ]
   },
   {
    "id": "ad-status",
@@ -15498,7 +15618,10 @@ const DZ = {
     ]
    ],
    "photo": "ad-status",
-   "src": "Patel Dermatitis slides 24, 49; 11/06 lecture"
+   "src": "Patel Dermatitis slides 24, 49; 11/06 lecture",
+   "exams": [
+    2
+   ]
   },
   {
    "id": "scaly3",
@@ -15603,7 +15726,10 @@ const DZ = {
     ]
    ],
    "photo": "scaly3",
-   "src": "Patel Scaly slides 6–9, 15–18, 21, 36; 11/10 lecture"
+   "src": "Patel Scaly slides 6–9, 15–18, 21, 36; 11/10 lecture",
+   "exams": [
+    2
+   ]
   },
   {
    "id": "pso-algorithms",
@@ -15689,7 +15815,10 @@ const DZ = {
      ]
     ]
    ],
-   "src": "Patel Scaly slides 31, 35, 37, 50; 11/11 lecture"
+   "src": "Patel Scaly slides 31, 35, 37, 50; 11/11 lecture",
+   "exams": [
+    2
+   ]
   },
   {
    "id": "bite-vs-sting",
@@ -15774,7 +15903,10 @@ const DZ = {
      ]
     ]
    ],
-   "src": "Patel Outdoor slides 20, 24–25, 31, 35–36, 40; 11/12 lecture"
+   "src": "Patel Outdoor slides 20, 24–25, 31, 35–36, 40; 11/12 lecture",
+   "exams": [
+    2
+   ]
   },
   {
    "id": "lice-types",
@@ -15845,7 +15977,10 @@ const DZ = {
     ]
    ],
    "photo": "lice-nits",
-   "src": "Patel Outdoor slide 42"
+   "src": "Patel Outdoor slide 42",
+   "exams": [
+    2
+   ]
   },
   {
    "id": "plant-wet-dry",
@@ -15914,7 +16049,10 @@ const DZ = {
      ]
     ]
    ],
-   "src": "Patel Outdoor slides 12–15; 11/12 polls"
+   "src": "Patel Outdoor slides 12–15; 11/12 polls",
+   "exams": [
+    2
+   ]
   },
   {
    "id": "spiders",
@@ -15978,7 +16116,10 @@ const DZ = {
     ]
    ],
    "photo": "spider-widow",
-   "src": "Patel Outdoor slides 52–53; 11/12 lecture"
+   "src": "Patel Outdoor slides 52–53; 11/12 lecture",
+   "exams": [
+    2
+   ]
   },
   {
    "id": "wart-corn-callus",
@@ -16073,7 +16214,10 @@ const DZ = {
     ]
    ],
    "photo": "corn-callus-foot",
-   "src": "Patel Warts slides 5, 10, 13, 17; 11/12 lecture T@88664–90006"
+   "src": "Patel Warts slides 5, 10, 13, 17; 11/12 lecture T@88664–90006",
+   "exams": [
+    2
+   ]
   },
   {
    "id": "burn-grades",
@@ -16144,7 +16288,10 @@ const DZ = {
      "\"Anything besides minor would be straight referral.\""
     ]
    ],
-   "src": "Patel Wound slides 7, 16–17; 11/12 lecture T@83577–84806"
+   "src": "Patel Wound slides 7, 16–17; 11/12 lecture T@83577–84806",
+   "exams": [
+    2
+   ]
   },
   {
    "id": "wound-stages",
@@ -16209,7 +16356,10 @@ const DZ = {
     ]
    ],
    "photo": "wound-stages",
-   "src": "Patel Wound slide 5; 11/12 lecture T@78420, T@79102"
+   "src": "Patel Wound slide 5; 11/12 lecture T@78420, T@79102",
+   "exams": [
+    2
+   ]
   },
   {
    "id": "sa-17-40",
@@ -16284,7 +16434,10 @@ const DZ = {
      ]
     ]
    ],
-   "src": "Patel Warts slides 10, 17; 11/12 lecture T@91458–91887, T@94581"
+   "src": "Patel Warts slides 10, 17; 11/12 lecture T@91458–91887, T@94581",
+   "exams": [
+    2
+   ]
   },
   {
    "id": "chem-phys-sunscreen",
@@ -16354,7 +16507,11 @@ const DZ = {
      ]
     ]
    ],
-   "src": "Patel Sun slides 16–18; T@53859, T@55166; Smith Sun slides 20–25; Sikazwe DPAW pages 61–65"
+   "src": "Patel Sun slides 16–18; T@53859, T@55166; Smith Sun slides 20–25; Sikazwe DPAW pages 61–65",
+   "exams": [
+    1,
+    2
+   ]
   },
   {
    "id": "abcde-two",
@@ -16418,7 +16575,10 @@ const DZ = {
     ]
    ],
    "photo": "abcde-two",
-   "src": "Patel Sun Exposure slide 28; Patel Dermatitis slide 62; 11/12 lecture: \"A B C D E rule applies here again, but a little different than diaper dermatitis\""
+   "src": "Patel Sun Exposure slide 28; Patel Dermatitis slide 62; 11/12 lecture: \"A B C D E rule applies here again, but a little different than diaper dermatitis\"",
+   "exams": [
+    2
+   ]
   },
   {
    "id": "eye-glaucoma-types",
@@ -16474,7 +16634,10 @@ const DZ = {
      "Both: the goal is to decrease the IOP to delay or prevent progression."
     ]
    ],
-   "src": "Eye slide 13; T@20737, T@23370 11/13"
+   "src": "Eye slide 13; T@20737, T@23370 11/13",
+   "exams": [
+    3
+   ]
   },
   {
    "id": "eye-inflow-outflow",
@@ -16529,7 +16692,10 @@ const DZ = {
      "Beta receptor antagonists have not much effect on outflow."
     ]
    ],
-   "src": "Eye slides 11, 18, 22, 26, 32, 34, 37, 41; T@43081, T@44430 11/13"
+   "src": "Eye slides 11, 18, 22, 26, 32, 34, 37, 41; T@43081, T@44430 11/13",
+   "exams": [
+    3
+   ]
   },
   {
    "id": "eye-allergy-classes",
@@ -16576,7 +16742,10 @@ const DZ = {
      ]
     ]
    ],
-   "src": "Eye slides 51–57, 59; T@46866, T@52690 11/17"
+   "src": "Eye slides 51–57, 59; T@46866, T@52690 11/17",
+   "exams": [
+    3
+   ]
   },
   {
    "id": "eye-dry-drugs",
@@ -16642,7 +16811,10 @@ const DZ = {
      ]
     ]
    ],
-   "src": "Eye slides 64–73; T@58455, T@63574, T@65117, T@67438 11/17"
+   "src": "Eye slides 64–73; T@58455, T@63574, T@65117, T@67438 11/17",
+   "exams": [
+    3
+   ]
   }
  ],
  "pairs": [
@@ -16670,6 +16842,10 @@ const DZ = {
      "sk",
      "Pimecrolimus cLogP 6.0 with high skin protein binding, so few systemic effects; tacrolimus cLogP 5.8 with low skin protein binding, so more systemic entry (DPAW pages 28, 32)."
     ]
+   ],
+   "exams": [
+    1,
+    2
    ]
   },
   {
@@ -16696,6 +16872,10 @@ const DZ = {
      "pa",
      "Crisaborole: third line, mild-to-moderate atopic dermatitis, from 3 months of age (Patel Dermatitis slides 41–42)."
     ]
+   ],
+   "exams": [
+    1,
+    2
    ]
   },
   {
@@ -16718,6 +16898,10 @@ const DZ = {
      "pa",
      "Her slide titles dupilumab an IL-4 antagonist (slide 43) and tralokinumab an IL-13 cytokine inhibitor, the alternative to dupilumab (slide 45)."
     ]
+   ],
+   "exams": [
+    1,
+    2
    ]
   },
   {
@@ -16740,6 +16924,10 @@ const DZ = {
      "sm",
      "Changing the vehicle, hydration or occlusion may alter absorption and effectiveness (PCol slide 11)."
     ]
+   ],
+   "exams": [
+    1,
+    2
    ]
   },
   {
@@ -16766,6 +16954,10 @@ const DZ = {
      "sk",
      "Tretinoin: first generation, all-trans retinoic acid. Adapalene: third generation, exposed COOH, directly active. Tazarotene: third generation, ethyl ester prodrug to tazarotenic acid (DPAW pages 29, 49, 51)."
     ]
+   ],
+   "exams": [
+    1,
+    2
    ]
   },
   {
@@ -16792,6 +16984,10 @@ const DZ = {
      "sk",
      "Doxycycline and minocycline are lipophilic and food does not cut their absorption, unlike tetracycline with dairy (DPAW page 55)."
     ]
+   ],
+   "exams": [
+    1,
+    2
    ]
   },
   {
@@ -16814,6 +17010,10 @@ const DZ = {
      "pa",
      "Secukinumab: avoid in Crohn’s disease. Brodalumab: boxed warning for suicide risk, REMS (Scaly slide 42)."
     ]
+   ],
+   "exams": [
+    1,
+    2
    ]
   },
   {
@@ -16836,6 +17036,10 @@ const DZ = {
      "pa",
      "Both groups: avoid in active TB, no live vaccines. Ustekinumab also: monitor cyclosporine and warfarin levels (Scaly slide 42)."
     ]
+   ],
+   "exams": [
+    1,
+    2
    ]
   },
   {
@@ -16862,6 +17066,10 @@ const DZ = {
      "pa",
      "Tazarotene is a first-line topical option (Scaly slide 36); acitretin is an oral systemic option that is not immunosuppressive, maximum response 3–6 months (Scaly slide 38)."
     ]
+   ],
+   "exams": [
+    1,
+    2
    ]
   },
   {
@@ -16884,6 +17092,10 @@ const DZ = {
      "pa",
      "Both are T-cell and cytokine suppressors and oral DMARDs on her slide 39. Methotrexate: not in pregnancy, cirrhosis or blood dyscrasias. Cyclosporine: not in untreated hypertension, systemic malignancy or infections."
     ]
+   ],
+   "exams": [
+    1,
+    2
    ]
   },
   {
@@ -16906,6 +17118,10 @@ const DZ = {
      "sm",
      "Selenium sulfide and zinc pyrithione: cytostatic and antifungal, mechanism unknown (PCol slide 57). Ketoconazole: azole antifungal (drug chart p. 5)."
     ]
+   ],
+   "exams": [
+    1,
+    2
    ]
   },
   {
@@ -16928,6 +17144,10 @@ const DZ = {
      "sm",
      "Hydrocortisone: glucocorticoid receptor (PCol slides 5–7). Sulfur: keratolytic, reduced to hydrogen sulfide in keratinocytes (PCol slide 38)."
     ]
+   ],
+   "exams": [
+    1,
+    2
    ]
   },
   {
@@ -16950,6 +17170,10 @@ const DZ = {
      "sm",
      "TNF-α inhibitors bind TNF-α and keep it from its receptors (PCol slides 70–74)."
     ]
+   ],
+   "exams": [
+    1,
+    2
    ]
   },
   {
@@ -16968,6 +17192,9 @@ const DZ = {
      "pa",
      "Lice table: Patel Outdoor slide 45. Scabies options: Patel Outdoor slide 51. Her slide prints no strength for Nix; the course drug chart lists permethrin 1%."
     ]
+   ],
+   "exams": [
+    2
    ]
   },
   {
@@ -16986,6 +17213,9 @@ const DZ = {
      "pa",
      "\"Highlight the age restriction for each of these products\" (11/12); Patel Outdoor slides 44–45. Her poll's first-line agent for a 10-year-old was permethrin."
     ]
+   ],
+   "exams": [
+    2
    ]
   },
   {
@@ -17004,6 +17234,9 @@ const DZ = {
      "pa",
      "\"We are not going to use a topical antihistamine\" for plant dermatitis; the oral form treats the entire body (11/12 poll); Patel Outdoor slides 12, 14."
     ]
+   ],
+   "exams": [
+    2
    ]
   },
   {
@@ -17022,6 +17255,9 @@ const DZ = {
      "pa",
      "\"Pay attention to what type of medication falls under what category, what derm condition are we using it for, and the comments\" (11/12); Patel Outdoor slide 13."
     ]
+   ],
+   "exams": [
+    2
    ]
   },
   {
@@ -17040,6 +17276,9 @@ const DZ = {
      "pa",
      "\"Pay attention to the hour, right? So 72 hours\"; she then reviewed the durations (11/12); Patel Outdoor slide 29."
     ]
+   ],
+   "exams": [
+    2
    ]
   },
   {
@@ -17062,6 +17301,10 @@ const DZ = {
      "sm",
      "Her drug chart lists the topical anesthetics as sodium channel blockers for sunburn relief (chart page 1); she did not cover sunburn treatment."
     ]
+   ],
+   "exams": [
+    1,
+    2
    ]
   },
   {
@@ -17084,6 +17327,10 @@ const DZ = {
      "sm",
      "Up to 40% for warts and corns; caution in diabetes and peripheral vascular disease (PCol slides 39–40)."
     ]
+   ],
+   "exams": [
+    1,
+    2
    ]
   },
   {
@@ -17102,6 +17349,9 @@ const DZ = {
      "pa",
      "Warts slide 11; T@92344–92487."
     ]
+   ],
+   "exams": [
+    2
    ]
   },
   {
@@ -17120,6 +17370,9 @@ const DZ = {
      "pa",
      "Wound slide 16. \"A minor BSA in an adult is less than 15%, in a child is less than 10%\" (T@83577)."
     ]
+   ],
+   "exams": [
+    2
    ]
   },
   {
@@ -17146,6 +17399,10 @@ const DZ = {
      "sk",
      "Avobenzone photodegrades with a half-life of about 2 hours: reapply every 2 hours (DPAW page 62)."
     ]
+   ],
+   "exams": [
+    1,
+    2
    ]
   },
   {
@@ -17164,6 +17421,9 @@ const DZ = {
      "sm",
      "Brimonidine is the better long-term choice (slide 23; T@51660 11/13)."
     ]
+   ],
+   "exams": [
+    3
    ]
   },
   {
@@ -17182,6 +17442,9 @@ const DZ = {
      "sm",
      "Slide 31 lists both; the differences are from lecture (T@26432, T@26752 11/17)."
     ]
+   ],
+   "exams": [
+    3
    ]
   },
   {
@@ -17200,6 +17463,9 @@ const DZ = {
      "sm",
      "Slides 31–35; T@23579, T@29170, T@29681 11/17."
     ]
+   ],
+   "exams": [
+    3
    ]
   },
   {
@@ -17218,6 +17484,9 @@ const DZ = {
      "sm",
      "Slide 19; T@45583, T@46338 11/13. Levobunolol has some alpha-adrenergic effects; carteolol has intrinsic sympathomimetic activity."
     ]
+   ],
+   "exams": [
+    3
    ]
   },
   {
@@ -17236,6 +17505,9 @@ const DZ = {
      "sm",
      "Slide 66; T@60561 11/17. She said she asked this on purpose because the proteins return in oncology."
     ]
+   ],
+   "exams": [
+    3
    ]
   },
   {
@@ -17254,6 +17526,9 @@ const DZ = {
      "sm",
      "Slides 53–54; T@51757 11/17."
     ]
+   ],
+   "exams": [
+    3
    ]
   },
   {
@@ -17272,6 +17547,9 @@ const DZ = {
      "sm",
      "Slides 28–29; T@58590, T@59086 11/13; T@22924 11/17."
     ]
+   ],
+   "exams": [
+    3
    ]
   }
  ],

@@ -6,7 +6,9 @@ import json, sys, os, glob, shutil
 src = sys.argv[1] if len(sys.argv) > 1 else 'dz_parts'
 ORDER = ['atopic-dermatitis', 'acne', 'psoriasis', 'diaper-dermatitis', 'dandruff', 'seborrheic-dermatitis', 'cradle-cap',
          'plant-dermatitis', 'insect-bites', 'vector-borne', 'insect-stings', 'lice', 'scabies', 'spider-bites', 'snake-bites', 'rabies',
-         'sun-protection', 'sunburn', 'photoaging', 'wounds', 'burns', 'warts', 'corns-calluses']
+         'sun-protection', 'sunburn', 'photoaging', 'wounds', 'burns', 'warts', 'corns-calluses',
+         'glaucoma', 'allergic-conjunctivitis', 'dry-eye', 'bacterial-viral-conjunctivitis', 'cerumen', 'water-clogged-ear',
+         'tooth-sensitivity', 'canker-sore', 'cold-sore', 'dry-mouth']
 out = {'cards': [], 'drugs': {}, 'terms': {}, 'tell': [], 'pairs': [], 'photos': [], 'rules': []}
 def uniq(a):
     seen, r = set(), []
@@ -48,6 +50,33 @@ for p in parts:
         o['counsel'] = uniq((o.get('counsel') or []) + (d.get('counsel') or []))
         o['avoid'] = uniq((o.get('avoid') or []) + (d.get('avoid') or []))
         if d.get('counselSrc') and d['counselSrc'] not in (o.get('counselSrc') or ''): o['counselSrc'] = '; '.join(x for x in [o.get('counselSrc'), d['counselSrc']] if x)
+# Which exam each card is studied for, and its body area (Louis, 2026-11-21: choose what to study for Exam 1, 2 or 3).
+# Exam 1 = Smith and Sikazwe, 10/29 to 11/04; Exam 2 = Patel, 11/06 to 11/12; Exam 3 = eye, ear and mouth, 11/13 to 11/20.
+EXAMS = {'atopic-dermatitis': [1, 2], 'acne': [1, 2], 'psoriasis': [1, 2], 'diaper-dermatitis': [2], 'dandruff': [1, 2],
+         'seborrheic-dermatitis': [1, 2], 'cradle-cap': [2], 'plant-dermatitis': [2], 'insect-bites': [2], 'vector-borne': [2],
+         'insect-stings': [2], 'lice': [2], 'scabies': [2], 'spider-bites': [2], 'snake-bites': [2], 'rabies': [2],
+         'sun-protection': [1, 2], 'sunburn': [1, 2], 'photoaging': [1, 2], 'wounds': [2], 'burns': [2], 'warts': [1, 2],
+         'corns-calluses': [1, 2],
+         'glaucoma': [3], 'allergic-conjunctivitis': [3], 'dry-eye': [3], 'bacterial-viral-conjunctivitis': [3],
+         'cerumen': [3], 'water-clogged-ear': [3],
+         'tooth-sensitivity': [3], 'canker-sore': [3], 'cold-sore': [3], 'dry-mouth': [3]}
+AREA = {3: {}}
+EYE = {'glaucoma', 'allergic-conjunctivitis', 'dry-eye', 'bacterial-viral-conjunctivitis'}
+EAR = {'cerumen', 'water-clogged-ear'}
+MOUTH = {'tooth-sensitivity', 'canker-sore', 'cold-sore', 'dry-mouth'}
+for c in out['cards']:
+    c['exams'] = EXAMS.get(c['id'], [])
+    c['area'] = 'eye' if c['id'] in EYE else 'ear' if c['id'] in EAR else 'mouth' if c['id'] in MOUTH else 'skin'
+def exams_of(x, origin):
+    if origin in ('E', 'F', 'G'): return [3]
+    t = (x.get('src') or '') + ' ' + json.dumps(x.get('profs') or [])
+    e = set()
+    if 'Patel' in t or '"pa"' in t: e.add(2)
+    if 'Smith' in t or 'Sikazwe' in t or '"sm"' in t or '"sk"' in t: e.add(1)
+    return sorted(e) or [1, 2]
+for p, f in zip(parts, sorted(glob.glob(os.path.join(src, 'part_*.json')))):
+    o = os.path.basename(f)[5]
+    for x in p.get('tell', []) + p.get('pairs', []): x['exams'] = exams_of(x, o)
 out['cards'].sort(key=lambda c: ORDER.index(c['id']) if c['id'] in ORDER else 99)
 rules = os.path.join(src, 'rules.json')
 if os.path.exists(rules): out['rules'] = json.load(open(rules, encoding='utf-8'))
