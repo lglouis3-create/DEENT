@@ -413,7 +413,7 @@ QUESTIONS.push(
  note:"Slide 24 rows are lower priority: she said the main slide is 23 (T@97767).",
  cite:"Lecture 13 (Lam_OticDisorders_slides.pdf) slides 24; handout p. 5; T@97767 11/20"},
 
-{id:"LOT-037", skill:"counsel", lowYield:true, prof:'Lam', tier:'new', topic:"lt-impl", sub:"drops", concept:"lot-adult-position",
+{id:"LOT-037", skill:"counsel", prof:'Lam', tier:'new', topic:"lt-impl", sub:"drops", concept:"lot-adult-position",
  tags:["hard", "counsel"], source:"slide",
  stem:"Which technique should an adult use to instill ear drops?",
  options:[
@@ -568,5 +568,16 @@ QUESTIONS.push(
   {t:"Keep the swabs; almond oil drops twice daily; PCP if no relief after 4 days", correct:false, why:"Swabs are a risk factor and oil-based agents are not recommended."},
   {t:"Stop swabs; carbamide peroxide 6.5% twice daily up to 4 days; PCP if no relief", correct:true, why:"This plan covers the product, the schedule and the follow-up for impaction."}],
  teach:"Itching, pressure and ringing with hearing aids and no exclusion is impacted cerumen. The plan is to stop swabs, use carbamide peroxide for up to 4 days and refer if symptoms persist. The alcohol plan uses a 7-day follow-up.",
- cite:"Lecture 13 (Lam_OticDisorders_slides.pdf) slides 8, 14, 16; T@92615, T@95175, T@96243 11/20"}
+ cite:"Lecture 13 (Lam_OticDisorders_slides.pdf) slides 8, 14, 16; T@92615, T@95175, T@96243 11/20"},
+{id:"LOT-051", skill:"counsel", prof:'Lam', tier:'new', topic:"lt-impl", sub:"drops", concept:"lot-carbamide-steps", multi:true,
+ tags:["list", "multi"], source:"both",
+ stem:"Which steps belong in the counseling for administering carbamide peroxide 6.5% otic drops? Select all that apply.",
+ options:[
+  {t:"Lay the head down on a folded towel with the affected ear up", correct:true, why:"Her practice answer starts with a folded towel on a counter and the head down with the affected ear up."},
+  {t:"Gently pull the earlobe out and up to straighten the canal", correct:true, why:"The earlobe is pulled out and up before the drops go in."},
+  {t:"Stay laid down for at least 2 minutes after the drops", correct:true, why:"Her practice answer keeps the patient lying down for at least 2 minutes."},
+  {t:"Sit upright with the affected ear facing down and pull the earlobe down", correct:false, why:"The affected ear is up so the drops run into the canal."},
+  {t:"Rise right after the drops so the liquid drains out and cleans the canal", correct:false, why:"The patient stays lying down so the liquid stays in the canal."}],
+ teach:"Her practice answer for carbamide peroxide: a folded towel, head down with the affected ear up, the earlobe pulled out and up, the recommended number of drops, a gentle push on the ear flap to move the liquid in, then at least 2 minutes lying down.",
+ cite:"Lecture 13 (Lam_OticDisorders_slides.pdf) slide 33; handout p. 7; her practice questions for Exam 3, Q26"}
 );

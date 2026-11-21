@@ -364,3 +364,6 @@
 - Analysis agent (LAM2_ANALYSIS): scope, her exam statements, cases, conflicts. Three writers (ophthalmic, oral, otic) produced questions, pages, glossary; otic keys rewritten so the key is not the longest option; 14 style flags fixed; LOR-057 removed.
 - Conflicts kept neutral on pages (otic alcohol 70% spoken vs 95% printed, cerumen age, protectant disc seconds vs minutes, cetirizine dose); the otic cases (slides 36-44) were not worked in class and are rebuilt.
 - Open: independent skeptic review of the new pages and questions; stars (agent running).
+
+## 2026-11-21 Release feb79be
+Louis: "Publish". Lam 11/20 pages and questions after three skeptic reviews (ophthalmic, oral, otic), 36 stars, full checks 39 PASS / 0 FAIL / 1 REPORT. Pages deploy success; live page: 2,270 questions, 374 Lam, 0 page errors.

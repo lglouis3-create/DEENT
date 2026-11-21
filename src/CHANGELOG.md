@@ -8,6 +8,9 @@ characters.
 
 Every update adds its bullets here in the same commit that makes the change.
 
+## 2026-11-21 (Dr. Lam's practice questions for Exam 3)
+- Simbrinza is brinzolamide and brimonidine, as her email says; carbamide peroxide steps added as a select-all question.
+
 ## 2026-11-20 (Dr. Lam's glaucoma lecture, Dr. Sikazwe 11/19, search)
 - Dr. Lam's 11/20 lecture (dry eye, conjunctivitis, oral, otic): 192 questions, 14 study pages, 68 glossary terms.
 - Her slides open from the page links for the new eye, oral and ear pages.
