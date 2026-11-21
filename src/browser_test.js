@@ -236,6 +236,7 @@ function sourceCounts(){
       if(!nx) return {err: 'no Next button at question ' + (n + 1)};
       nx.click(); n++;
     }
+    DB.answers.length = 0;   // local edit: the log is capped at 4000 and a bank of about 2,000 questions fills it in two sweeps, so later log checks saw no growth
     return {want, answered: n, distinct: seen.size, dup, ended: !!document.querySelector('#v-quiz .empty')};
   });
   check(!sweep.err, 'the full sweep starts from the topics view', sweep.err || '');

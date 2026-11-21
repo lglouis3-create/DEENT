@@ -300,9 +300,9 @@ QUESTIONS.push(
  stem:"Which finding best separates allergic conjunctivitis from bacterial or viral conjunctivitis?",
  options:[
   {t:"Tearing", correct:false, why:"Everyone with conjunctivitis tears, because tears are how the body tries to remove what is in the eye."},
-  {t:"Eyelid crusting", correct:false, why:"Crusting comes from bacterial or viral byproducts. Crusting points to bacterial or viral disease, but she named itching as the finding to memorize."},
+  {t:"Eyelid crusting", correct:false, why:"Crusting comes from bacterial or viral byproducts. Crusting points to bacterial or viral disease, but itching is the finding that separates allergic from the rest."},
   {t:"Itching", correct:true, why:"Allergen triggers histamine release from mast cells, which causes the itch. Infection does not."},
-  {t:"Pink or red conjunctiva", correct:false, why:"Redness is a general sign of conjunctivitis, but she named itching as the finding that separates allergic from the rest."}],
+  {t:"Pink or red conjunctiva", correct:false, why:"Redness is a general sign of conjunctivitis, but itching is the finding that separates allergic from the rest."}],
  teach:"The main point is itching: allergic conjunctivitis itches. Tearing occurs in every type, while crusting points to a bacterial or viral cause.",
  cite:"Lecture 13 (Lam_OphthalmicDisorders.pdf) slides 28, 29; T@21718, T@22420 11/20"},
 

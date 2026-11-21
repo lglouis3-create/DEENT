@@ -471,7 +471,7 @@ QUESTIONS.push(
 
 {id:"LOT-042", skill:"case", prof:'Lam', lowYield:true, tier:'new', topic:"lt-cer", sub:"excl", concept:"lot-age-12",
  tags:["hard", "case"], source:"both",
- stem:"Priya, 12, has ear fullness and itching from wax, with no discharge, pain, tubes or surgery. A parent asks for carbamide peroxide. According to slide 10 and the handout, what is the answer?",
+ stem:"Priya, 12, has ear fullness and itching from wax, with no discharge, pain, tubes or surgery. A parent asks for carbamide peroxide. One printed age rule excludes patients under 12 and another gives the product for ages 12 and older. What is the answer?",
  options:[
   {t:"Refer: children 12 years or under are not treated, as she said in class", correct:false, why:"She said she does not treat children 12 years or under."},
   {t:"Treat: slide excludes under 12 and handout says 12 and older", correct:true, why:"The slide lists less than 12 years as an exclusion and the handout gives 12 years and older."},
