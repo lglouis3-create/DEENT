@@ -95,6 +95,7 @@ const SLIDES = {
   ["gobj-sun-", "sun", "Guide: Dr. Smith's Sun Exposure", "sun"],
   ["gobj-mc-", "mc", "Guide: DPAW", "sun"],
   ["gobj-ey-", "ey", "Guide: Dr. Smith, Eye, slide by slide", "sun"],
+  ["gobj-sm-", "ey", "Guide: Dr. Smith, Eye, by learning objective", "sun"],
   ["ref-ey-", "ey", "Reference: Dr. Smith, Eye", "sun"],
   ["tell-ey-", "ey", "Tell apart: Dr. Smith, Eye", "sun"],
   ["gobj-oo-", "oo", "Guide: Dr. Sikazwe, Otic/Oral/Ophthalmic, slide by slide", "sun"],
