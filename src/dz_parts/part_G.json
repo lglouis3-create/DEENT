@@ -315,7 +315,7 @@
         ],
         [
          "3",
-         "Gently pull the {{earlobe out and up}} to straighten the auditory tube (her slide's words)"
+         "Gently pull the {{earlobe out and up}} to straighten the auditory tube"
         ],
         [
          "4",
@@ -382,16 +382,8 @@
          "Contact the primary care provider if symptoms persist after {{four days}} (slide 16)"
         ],
         [
-         "Pain, burning or irritation of the ear with the medicine",
-         "Refer (slide 34)"
-        ],
-        [
-         "Ear drainage or discharge, dizziness, or recent ear surgery",
-         "Refer (slide 34)"
-        ],
-        [
-         "Timing of the check",
-         "Slide 34: \"indicated after several days of use\""
+         "Slide 34 monitoring list",
+         "Printed after the water-clogged ear section (slides 31-33), not for cerumen: pain, burning or irritation with medication use; ear drainage or discharge, dizziness, or recent ear surgery. For cerumen, slide 16 gives only the four-day rule"
         ]
        ]
       }
@@ -438,16 +430,16 @@
      "q": "What do you recommend?",
      "o": [
       "Carbamide peroxide 6.5% twice daily for up to four days",
-      "Warm-water irrigation with a rubber bulb syringe",
-      "Refer to a clinician, because ear surgery within 6 weeks excludes self-care",
-      "A wet wrung-out washcloth over a finger on the outer canal daily"
+      "Warm-water irrigation with a rubber bulb syringe at home",
+      "Refer, because surgery within 6 weeks excludes self-care",
+      "A wet wrung-out washcloth over a finger on the outer canal"
      ],
      "a": 2,
      "w": "Ear surgery within 6 weeks is an exclusion (slide 10), so the patient is referred even without discharge.",
      "x": {
       "Carbamide peroxide 6.5% twice daily for up to four days": "The drops are for candidates; surgery within 6 weeks excludes self-care.",
-      "Warm-water irrigation with a rubber bulb syringe": "Irrigation is also self-care; the exclusion applies to it too.",
-      "A wet wrung-out washcloth over a finger on the outer canal daily": "The washcloth is a self-care measure; this patient is excluded from self-care."
+      "Warm-water irrigation with a rubber bulb syringe at home": "Irrigation is also self-care; the exclusion applies to it too.",
+      "A wet wrung-out washcloth over a finger on the outer canal": "The washcloth is a self-care measure; this patient is excluded from self-care."
      }
     },
     {
@@ -455,16 +447,16 @@
      "q": "What is the best response?",
      "o": [
       "Give 5-10 drops twice daily for up to four days",
-      "Refer the child, because age under 12 is an exclusion to self-care",
+      "Refer, because age under 12 excludes self-care",
       "Use warm-water irrigation at home with a bulb syringe",
-      "Recommend a cotton swab to remove the wax"
+      "Recommend a cotton swab to gently remove the wax"
      ],
      "a": 1,
      "w": "Under 12 years of age is an exclusion to self-care for cerumen (slide 10), and she said the ear anatomy in children makes treatment difficult (T@93413 11/20).",
      "x": {
       "Give 5-10 drops twice daily for up to four days": "That is the adult directions; the age exclusion applies.",
       "Use warm-water irrigation at home with a bulb syringe": "Irrigation is self-care; the age exclusion applies to the child.",
-      "Recommend a cotton swab to remove the wax": "Swabs are a listed risk factor for impaction, not a treatment (handout p. 2)."
+      "Recommend a cotton swab to gently remove the wax": "Swabs are a listed risk factor for impaction, not a treatment (handout p. 2)."
      }
     },
     {
@@ -488,17 +480,17 @@
      "t": "A 70-year-old will start carbamide peroxide drops in the right ear.",
      "q": "Which instructions are correct?",
      "o": [
-      "Lie with the right ear up on a folded towel, pull the earlobe out and up, give the drops, gently push the ear flap, stay down 2 minutes or more",
-      "Stand with the head tilted, pull the earlobe down, give the drops, then sit up at once",
-      "Lie with the right ear down on a folded towel, pull the earlobe out and up, give the drops, then stay down 1 minute",
-      "Sit upright, pull the earlobe back and down, give the drops, and push the ear flap firmly"
+      "Lie with the right ear up on a towel, pull the lobe out and up, give the drops, stay down 2 minutes",
+      "Stand with the head tilted to the side, pull the lobe out and up, give the drops, sit up at once",
+      "Lie with the right ear down on a towel, pull the lobe out and up, give the drops, stay down 1 minute",
+      "Lie with the right ear up on a towel, pull the lobe back and down, give the drops, stay down 2 minutes"
      ],
      "a": 0,
-     "w": "Slide 33: folded towel, affected ear up, earlobe out and up, drops, gentle push on the ear flap, at least 2 minutes lying down.",
+     "w": "Slide 33: folded towel, affected ear up, earlobe out and up, drops, at least 2 minutes lying down.",
      "x": {
-      "Stand with the head tilted, pull the earlobe down, give the drops, then sit up at once": "The ear must be up, and the patient stays down for at least 2 minutes (slide 33).",
-      "Lie with the right ear down on a folded towel, pull the earlobe out and up, give the drops, then stay down 1 minute": "The affected ear is up, and the stay is at least 2 minutes (slide 33).",
-      "Sit upright, pull the earlobe back and down, give the drops, and push the ear flap firmly": "Back and down is the pull for a child under 3; the adult position is lying down with the ear up (slide 33)."
+      "Lie with the right ear down on a towel, pull the lobe out and up, give the drops, stay down 1 minute": "The affected ear is up, and the stay is at least 2 minutes (slide 33).",
+      "Lie with the right ear up on a towel, pull the lobe back and down, give the drops, stay down 2 minutes": "Back and down is the pull for a child under 3; the adult pull is out and up (slide 33).",
+      "Stand with the head tilted to the side, pull the lobe out and up, give the drops, sit up at once": "The patient lies down with the ear up, and stays down for at least 2 minutes (slide 33)."
      }
     }
    ],
@@ -566,7 +558,7 @@
     "No pain, no itching, no discharge; hearing loss and a feeling of fullness or wetness.",
     "Prevent with a towel after bathing, a bathing cap or earplugs when swimming; dry with a hair dryer on the lowest setting.",
     "Isopropyl alcohol 95% in anhydrous glycerin 5%: 4-5 drops, no minimum age (spoken: 70%).",
-    "Discharge, pain, dizziness, tympanostomy tubes or ear surgery mean refer."
+    "Ear discharge, pain with discharge, dizziness, tympanostomy tubes or ear surgery mean refer."
    ],
    "steps": [
     {
@@ -718,7 +710,7 @@
         ],
         [
          "Age note",
-         "Slide 26 excludes under 12; slide 31 says isopropyl alcohol has no minimum age; slide 29 puts water-absorbing earplugs at children over 11. The slides print all three"
+         "Slide 26 excludes under 12 from self-care; slide 31 prints no minimum age for isopropyl alcohol; slide 29 prints water-absorbing earplugs for children > 11 years old (spoken: 11 years and older)"
         ]
        ]
       }
@@ -770,7 +762,7 @@
        "rows": [
         [
          "Water-absorbing earplugs",
-         "{{Children over 11}} (slide 29); insert into the canal and leave in {{5-10 minutes}} to absorb trapped water, then remove and discard; they absorb only a little water and do not prevent water from entering during bathing or swimming (handout; T@98558 11/20)"
+         "Slide 29 and handout p. 6 print {{children > 11 years old}}; she said \"children that are 11 years and older\" (T@98536 11/20). Insert into the canal and leave in {{5-10 minutes}} to absorb trapped water, then remove and discard; they absorb only a little water and do not prevent water from entering during bathing or swimming (handout; T@98558 11/20)"
         ],
         [
          "Pull the lobe",
@@ -827,7 +819,7 @@
         ],
         [
          "3",
-         "Gently pull the {{earlobe out and up}} to straighten the auditory tube (her slide's words)"
+         "Gently pull the {{earlobe out and up}} to straighten the auditory tube"
         ],
         [
          "4",
@@ -917,17 +909,17 @@
      "t": "A 25-year-old swimmer has fullness, wetness and muffled hearing after training. There is no pain, itching or discharge, and no ear tubes or surgery.",
      "q": "Which product fits?",
      "o": [
-      "Carbamide peroxide 6.5% in anhydrous glycerin",
+      "Carbamide peroxide 6.5% in anhydrous glycerin drops",
       "Isopropyl alcohol 95% in anhydrous glycerin 5%",
-      "An ear candle",
-      "A cotton swab dipped in water"
+      "An ear candle placed at the canal opening",
+      "A cotton swab dipped in warm water"
      ],
      "a": 1,
      "w": "No pain, no itching, hearing loss and fullness or wetness: a water-clogged ear; the drying drop is isopropyl alcohol (slides 23, 31).",
      "x": {
-      "Carbamide peroxide 6.5% in anhydrous glycerin": "That product removes cerumen; this patient has no itching or wax findings.",
-      "An ear candle": "Ear candles are not recommended (slide 15).",
-      "A cotton swab dipped in water": "A swab is not a listed treatment; swabs are a risk factor for impaction (handout p. 2)."
+      "Carbamide peroxide 6.5% in anhydrous glycerin drops": "That product removes cerumen; this patient has no itching or wax findings.",
+      "An ear candle placed at the canal opening": "Ear candles are not recommended (slide 15).",
+      "A cotton swab dipped in warm water": "A swab is not a listed treatment; swabs are a risk factor for impaction (handout p. 2)."
      }
     },
     {
@@ -936,15 +928,15 @@
      "o": [
       "Water-clogged ear; use isopropyl alcohol drops",
       "Cerumen impaction; use carbamide peroxide",
-      "Swimmer's ear (external otitis), an infection: refer",
-      "Foreign object; use irrigation"
+      "Swimmer's ear (an infection): refer",
+      "Foreign object in the canal; use irrigation"
      ],
      "a": 2,
      "w": "Acute onset pain, itching and clear discharge with a swollen canal and fever are external otitis (slide 23). It is an infection, so refer (T@92950 11/20).",
      "x": {
       "Water-clogged ear; use isopropyl alcohol drops": "A water-clogged ear has no pain, itching or discharge.",
       "Cerumen impaction; use carbamide peroxide": "Cerumen impaction has no discharge.",
-      "Foreign object; use irrigation": "Foreign objects are not described with clear discharge and fever; infection is not self-treated."
+      "Foreign object in the canal; use irrigation": "Foreign objects are not described with clear discharge and fever; infection is not self-treated."
      }
     },
     {
@@ -968,17 +960,17 @@
      "t": "A recreational swimmer gets water in the ears every summer and asks how to prevent it.",
      "q": "What do you advise?",
      "o": [
-      "Put carbamide peroxide drops in both ears before each swim session",
-      "Towel the ears dry after bathing, and wear a bathing cap or earplugs to swim",
-      "Burn an ear candle in each ear after every swim to draw the water out",
-      "Clean both ear canals with a cotton swab after every swim to remove water"
+      "Put carbamide peroxide drops in both ears before each swim",
+      "Towel the ears after bathing; use a bathing cap or earplugs to swim",
+      "Burn an ear candle in each ear after every swim to draw water out",
+      "Clean both ear canals with a cotton swab after each swim to dry them"
      ],
      "a": 1,
      "w": "Prevention (slide 29): towel after bathing or showering, bathing cap or earplugs when swimming.",
      "x": {
-      "Put carbamide peroxide drops in both ears before each swim session": "Carbamide peroxide is a cerumenolytic, not a preventive.",
-      "Burn an ear candle in each ear after every swim to draw the water out": "Ear candles are not recommended (slide 15) and are not a listed measure here.",
-      "Clean both ear canals with a cotton swab after every swim to remove water": "Swabs are not a listed measure; they are a risk factor for impaction (handout p. 2)."
+      "Put carbamide peroxide drops in both ears before each swim": "Carbamide peroxide is a cerumenolytic, not a preventive.",
+      "Burn an ear candle in each ear after every swim to draw water out": "Ear candles are not recommended (slide 15) and are not a listed measure here.",
+      "Clean both ear canals with a cotton swab after each swim to dry them": "Swabs are not a listed measure; they are a risk factor for impaction (handout p. 2)."
      }
     },
     {
@@ -1016,9 +1008,9 @@
      "Lam otic slide 31"
     ],
     [
-     "Over 11 years",
-     "water-absorbing earplugs (slide 29)",
-     "Lam otic slide 29"
+     "> 11 years (spoken: 11 and older)",
+     "water-absorbing earplugs: slide 29 and handout p. 6 print \"> 11\"; she said \"11 years and older\"",
+     "Lam otic slide 29; handout p. 6; T@98536 11/20"
     ],
     [
      "5-10 minutes",
@@ -1313,7 +1305,7 @@
      "q": "Is the patient a child under 3?",
      "a": [
       "Yes → pull the ear **back and down**",
-      "No → pull the earlobe **out and up**"
+      "No (adult) → pull the earlobe **out and up**; ages 3 and up are not printed on slide 33"
      ]
     },
     {
