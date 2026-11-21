@@ -344,17 +344,17 @@
      "t": "A father asks which desensitizing toothpaste to buy for his 11-year-old, who has mild pain with cold drinks and has finished the first step.",
      "q": "Which active ingredient is not recommended for this child?",
      "o": [
-      "Sodium fluoride",
+      "Sodium fluoride toothpaste",
       "Potassium nitrate 5%",
-      "Stannous fluoride",
-      "Arginine 8%"
+      "Stannous fluoride toothpaste",
+      "Arginine 8% toothpaste"
      ],
      "a": 1,
      "w": "Potassium nitrate is not for children under 12 years because children swallow toothpaste, with a higher risk of electrolyte problems (slide 15; T@50194 11/20).",
      "x": {
-      "Sodium fluoride": "Sodium fluoride is one of the listed desensitizing ingredients and carries no age limit on the slide.",
-      "Stannous fluoride": "Stannous fluoride carries no age limit on the slide.",
-      "Arginine 8%": "Arginine 8% carries no age limit on the slide."
+      "Sodium fluoride toothpaste": "Sodium fluoride is one of the listed desensitizing ingredients and carries no age limit on the slide.",
+      "Stannous fluoride toothpaste": "Stannous fluoride carries no age limit on the slide.",
+      "Arginine 8% toothpaste": "Arginine 8% carries no age limit on the slide."
      }
     },
     {
@@ -386,7 +386,7 @@
      "a": 2,
      "w": "Pain that persists, and new symptoms after 4-6 weeks, are the reasons to refer to a dentist (slide 18). A 1-inch strip is enough (T@50656 11/20).",
      "x": {
-      "Use a 2-inch strip of toothpaste each time": "She said 1 inch is enough; more paste does not add effect.",
+      "Use a 2-inch strip of toothpaste each time": "She said a 1-inch strip is enough, so a larger amount is not needed.",
       "Continue the same toothpaste for 4 more weeks": "Pain that persists after 4-6 weeks is the point to refer, not to extend.",
       "Stop the toothpaste and use ice on the gum": "Ice is advice for a canker sore, and a new gum symptom needs evaluation."
      }
@@ -556,7 +556,7 @@
      "profs": [
       "la"
      ],
-     "q": "Name five exclusions to self-care and the three treatment-failure referral times.",
+     "q": "Name five exclusions to self-care and the two treatment-failure referral times.",
      "src": "Lam oral slides 29, 30, 40; handout pp. 6, 8; T@59651-T@60326, T@69948 11/20",
      "blocks": [
       {
@@ -651,7 +651,7 @@
         "Cleanses the mouth to prevent infection and gives symptomatic relief; carbamide peroxide {{10-15%}}, hydrogen peroxide {{1.5%}} or {{3%}}",
         "Use after meals, 3-4 times a day; avoid eating or drinking for at least {{30 minutes}} after",
         "Use for up to {{7 days}}: over-cleaning lets opportunistic organisms grow, causing black hairy tongue; prolonged use also causes tooth sensitivity and soft tissue irritation",
-        "Patient with sensitive teeth: use direct application to the sore, not the rinse"
+        "Hydrogen peroxide only: a patient with sensitive teeth uses the applicator on the sore, not the rinse, because it can irritate the enamel and soft tissue (T@65066, T@67096 11/20)"
        ],
        "p": "la",
        "warn": "She said carbamide peroxide direct application sits 1 or 2 minutes; the slide and handout say 1 minute.",
@@ -838,16 +838,16 @@
      "q": "Which advice is correct?",
      "o": [
       "Apply heat for 20 minutes in each hour to relax the area",
-      "Apply ice in 10-minute periods, up to 20 minutes in each hour",
+      "Apply ice 10 minutes at a time, 20 minutes an hour",
       "Eat spicy food so that the sore gets cleaned out",
-      "Apply ice for 30 minutes at a time until the pain stops"
+      "Apply ice for 30 minutes at a time until pain stops"
      ],
      "a": 1,
      "w": "Ice reduces swelling in 10-minute periods, up to 20 minutes in each hour; heat may spread the infection (handout p. 6; T@61228 11/20).",
      "x": {
       "Apply heat for 20 minutes in each hour to relax the area": "Heat is avoided because it may spread the infection.",
       "Eat spicy food so that the sore gets cleaned out": "Spicy, acidic and sharp foods irritate the sore.",
-      "Apply ice for 30 minutes at a time until the pain stops": "Ice is limited to 10-minute periods and 20 minutes in each hour."
+      "Apply ice for 30 minutes at a time until pain stops": "Ice is limited to 10-minute periods and 20 minutes in each hour."
      }
     }
    ],
@@ -855,7 +855,7 @@
     [
      "7-14 days",
      "a canker sore resolves on its own",
-     "Lam oral slide 40; T@59261 11/20"
+     "Lam handout p. 5; T@59261 11/20 (slide 40 prints 7 days and 14 days)"
     ],
     [
      "2-48 hours",
@@ -1169,15 +1169,15 @@
      "t": "A 42-year-old woman has an uncomfortable sore on her lip. She gets these often when she is stressed, about once a month. This one has been there for a month. It is crusted with fluid-filled pustules.",
      "q": "Is she a candidate for self-care?",
      "o": [
-      "Yes, start docosanol 10% five times a day",
-      "No, the lesion has lasted over 14 days and the outbreaks recur",
+      "Yes, docosanol 10% five times a day until healed",
+      "No, a lesion beyond 14 days needs a provider",
       "No, because a lip sore is always a canker sore",
       "Yes, with hydrocortisone 1% ointment as needed"
      ],
      "a": 1,
      "w": "Lesions present more than 14 days, and frequent recurrence (she counted once a month as reoccurring), are exclusions (slide 49; T@83053-T@83449 11/20).",
      "x": {
-      "Yes, start docosanol 10% five times a day": "Docosanol is first line, but she has exclusions.",
+      "Yes, docosanol 10% five times a day until healed": "Docosanol is first line, but she has exclusions.",
       "No, because a lip sore is always a canker sore": "A canker sore is inside the mouth; her lesion is on the lip, crusted and fluid-filled.",
       "Yes, with hydrocortisone 1% ointment as needed": "The herpes virus does not respond to corticosteroids."
      }
@@ -1220,17 +1220,17 @@
      "t": "A man on day 5 of a cold sore has a lesion that has not crusted. The base and border are still red.",
      "q": "What do you recommend in addition?",
      "o": [
-      "Hydrocortisone 1% ointment applied twice a day to the lesion",
-      "Triple antibiotic ointment 3-4 times a day and PCP follow-up",
+      "Hydrocortisone 1% ointment twice a day on the lesion",
+      "Triple antibiotic ointment and a PCP follow-up",
       "Camphor 5% gel applied after each meal to the lesion",
-      "Hold an aspirin tablet against the sore until it dissolves"
+      "Hold an aspirin tablet on the sore until it melts"
      ],
      "a": 1,
      "w": "No crust with persistent redness points to a secondary infection. Triple antibiotic ointment is used 3-4 times a day with PCP follow-up (slides 45, 56).",
      "x": {
-      "Hydrocortisone 1% ointment applied twice a day to the lesion": "Steroids are not recommended for cold sores.",
+      "Hydrocortisone 1% ointment twice a day on the lesion": "Steroids are not recommended for cold sores.",
       "Camphor 5% gel applied after each meal to the lesion": "Camphor above 3% is contraindicated and does not treat infection.",
-      "Hold an aspirin tablet against the sore until it dissolves": "Aspirin held in the mouth or on the lesion causes a chemical burn."
+      "Hold an aspirin tablet on the sore until it melts": "Aspirin held in the mouth or on the lesion causes a chemical burn."
      }
     },
     {
@@ -1297,7 +1297,7 @@
     [
      "3-4 times a day",
      "topical anesthetic or triple antibiotic ointment",
-     "Lam oral slides 54, 56"
+     "Lam oral slide 56 (3-4 times per day); slide 54 says used after meals; handout p. 11 gives 3-4 times for the anesthetic"
     ],
     [
      "2-48 hours",
@@ -1383,7 +1383,7 @@
         "Plaque accumulation",
         "{{Halitosis}} (bad breath); loss of appetite and sense of taste",
         "Increased risk of dental {{caries}}; the handout adds periodontal disease despite good oral hygiene",
-        "{{Thrush}}"
+        "{{Thrush}} (slide 76 prints \"Thrust\"; candidiasis is an exclusion on slide 79, step 2)"
        ],
        "p": "la"
       }
@@ -1514,16 +1514,16 @@
      "q": "Which timing change helps?",
      "o": [
       "Take the medicine one hour before meals",
-      "Stop the medicine on her own",
-      "Take the medicine one hour after meals",
-      "Take double the dose at night"
+      "Stop the medicine on her own to see if it helps",
+      "Take the medicine one hour after each meal",
+      "Take double the usual dose once at night"
      ],
      "a": 0,
      "w": "If a medicine contributes and cannot be stopped, take it one hour before meals, because eating stimulates saliva (T@88526 11/20).",
      "x": {
-      "Stop the medicine on her own": "The point is to keep a medicine she cannot stop; she is not told to stop it herself.",
-      "Take the medicine one hour after meals": "The advice is before meals, not after.",
-      "Take double the dose at night": "Doubling a dose is not an advised step."
+      "Take the medicine one hour after each meal": "The advice is before meals, not after.",
+      "Stop the medicine on her own to see if it helps": "The point is to keep a medicine she cannot stop; she is not told to stop it herself.",
+      "Take double the usual dose once at night": "Doubling a dose is not an advised step."
      }
     },
     {
@@ -1549,15 +1549,15 @@
      "o": [
       "Artificial saliva gel and a recheck in 5-7 days",
       "Chew sugar-free gum after every meal each day",
-      "Use a humidifier in the bedroom at night",
-      "Referral for fever, swollen lymph nodes and candidiasis"
+      "Use a humidifier in the bedroom every night",
+      "Refer him to a provider for further evaluation"
      ],
      "a": 3,
-     "w": "Fever and swollen lymph nodes, and candidiasis, are exclusions to self-care in dry mouth (slide 79).",
+     "w": "Fever and swollen lymph nodes, and candidiasis, are exclusions to self-care in dry mouth, so he goes to a provider (slide 79).",
      "x": {
       "Artificial saliva gel and a recheck in 5-7 days": "Artificial saliva is for patients without an exclusion.",
       "Chew sugar-free gum after every meal each day": "Sugar-free gum is a self-care step; he has exclusions.",
-      "Use a humidifier in the bedroom at night": "A humidifier is a self-care step; he has exclusions."
+      "Use a humidifier in the bedroom every night": "A humidifier is a self-care step; he has exclusions."
      }
     },
     {
@@ -1565,7 +1565,7 @@
      "q": "What is the next step?",
      "o": [
       "Stop all of the measures because the dryness lessened",
-      "Continue artificial saliva, fluoride and non-drug measures",
+      "Continue saliva product, fluoride and non-drug care",
       "Refer to the PCP for further evaluation of the dryness",
       "Add a second artificial saliva product to the first"
      ],
@@ -1583,7 +1583,7 @@
      "o": [
       "Use it only once a day at bedtime before sleeping",
       "Rub a 1-inch ribbon of it on the gums after meals",
-      "Put 1/2 inch on the tongue and spread it through the mouth",
+      "Put 1/2 inch on the tongue and spread it around",
       "Swallow a 1/2-inch length of it after each meal"
      ],
      "a": 2,
@@ -1790,10 +1790,9 @@
    "counsel": [
     "Use after meals, 3-4 times a day.",
     "Avoid eating or drinking for at least 30 minutes afterwards.",
-    "Use for up to 7 days: longer use lets opportunistic organisms grow (black hairy tongue); prolonged use causes tooth sensitivity and soft tissue irritation.",
-    "Patient with sensitive teeth: use direct application, not the rinse."
+    "Use for up to 7 days: longer use lets opportunistic organisms grow (black hairy tongue); prolonged use causes tooth sensitivity and soft tissue irritation."
    ],
-   "counselSrc": "Lam oral slide 36; handout p. 7; T@64264-T@65270 11/20",
+   "counselSrc": "Lam oral slide 36; handout p. 7; T@64264-T@64900 11/20",
    "avoid": [
     "Use beyond 7 days"
    ],
