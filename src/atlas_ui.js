@@ -153,10 +153,11 @@ const ATLAS_UI = (() => {
       badge.textContent = LABEL[pr];
       badge.title = TITLE[pr];
       const pg = el('span', 'atpg');
-      // "Exam 1" only on core items from the assigned pages; an item outside
-      // them shows "Not on the assigned pages" in its place
+      // every tile shows its exam; a core item from the assigned pages is the one the exam covers,
+      // and an item outside them also shows "Not on the assigned pages"
       const onExam = pr === 'core' && m.assigned !== false;
-      pg.textContent = 'DPAW p. ' + it.slide + (onExam ? ' · ' + (m.exam || 'Exam 1') : '');
+      pg.textContent = (m.deck || 'DPAW') + ' p. ' + it.slide + ' · ' + (m.exam || 'Exam 1');   // every tile names its deck and its exam (Louis, 2026-11-21)
+      if (onExam) pg.classList.add('atonexam');
       row.append(badge, pg);
       if (m.assigned === false) {               // not on Dr. Sikazwe's assigned pages (11/06); names nothing, so it stays in Hide names
         const na = el('span', 'atunassigned');
