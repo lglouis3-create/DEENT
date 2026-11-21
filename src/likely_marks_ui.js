@@ -34,6 +34,8 @@ const LIKELY_MARKS_UI = (() => {
   const LEGEND = 'Stars mark what the professor stressed in lecture; tap a star for the reason.';
   const SPACE = {n: 0};
   const only = {guide: false, ref: false, tell: false, dz: false, drugs: false, gloss: false};   // page memory only
+  const examSel = {guide: 0, ref: 0, tell: 0};   // which exam's folders the starred view shows (0 = every exam); page memory only (Louis, 2026-11-21)
+  const EXAMCHIPS = [[0, 'All exams'], [1, 'Exam 1'], [2, 'Exam 2'], [3, 'Exam 3']];
 
   const CSS = `
 .lkstar{position:relative;z-index:0;display:inline-flex;align-items:center;justify-content:center;box-sizing:border-box;width:44px;height:44px;min-width:44px;margin:-9px -1px -9px -9px;padding:0;vertical-align:middle;
@@ -52,6 +54,7 @@ const LIKELY_MARKS_UI = (() => {
 .lkonly{box-sizing:border-box;min-height:44px;padding:6px 14px;font:inherit;font-size:14px;color:var(--text);background:var(--paper);border:1px solid var(--line);border-radius:999px;cursor:pointer}
 .lkonly[aria-pressed=true]{background:var(--accent);color:#fff;border-color:var(--accent)}
 .lkonly:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.lkx{min-height:44px}.lkexams{display:flex;flex-wrap:wrap;align-items:center;gap:8px}.lkexams .lklab{color:var(--text-dim);font-size:13px;margin-right:2px}
 .lkcount{flex:1 1 12rem;margin:0;color:var(--text-dim);font-size:13px}
 #v-gloss .lkbar{margin:6px 0}
 #v-gloss .glf .lkonly{font-size:14px}
@@ -111,8 +114,15 @@ const LIKELY_MARKS_UI = (() => {
     b = document.createElement('div'); b.className = 'lkbar'; b.dataset.lktab = tab;
     b.innerHTML = '<p class="lkleg"><span class="lkpill">★ Likely on the exam</span>' + esc(LEGEND) + '</p>' +
       '<button type="button" class="lkonly" aria-pressed="' + only[tab] + '">Starred only</button>' +
+      (tab in examSel ? '<div class="lkexams" role="group" aria-label="Starred items for which exam"><span class="lklab">For</span>' +
+        EXAMCHIPS.map(([k, l]) => '<button type="button" class="lkonly lkx" data-lkexam="' + k + '" aria-pressed="' + (examSel[tab] === k) + '">' + l + '</button>').join('') + '</div>' : '') +
       '<p class="lkcount" role="status"></p>';
     b.querySelector('.lkonly').addEventListener('click', () => toggle(tab));
+    b.querySelectorAll('[data-lkexam]').forEach(x => x.addEventListener('click', () => {
+      examSel[tab] = +x.dataset.lkexam;
+      b.querySelectorAll('[data-lkexam]').forEach(y => y.setAttribute('aria-pressed', String(+y.dataset.lkexam === examSel[tab])));
+      if (!only[tab]) toggle(tab); else { openFolders(tab, true); refresh(tab); }
+    }));
     if (where) where(b); else host.appendChild(b);
     return b;
   }
@@ -122,7 +132,7 @@ const LIKELY_MARKS_UI = (() => {
   function toggle(tab){
     only[tab] = !only[tab];
     const p = tabPane(tab);
-    if (p) p.querySelectorAll('.lkonly').forEach(x => x.setAttribute('aria-pressed', String(only[tab])));
+    if (p) p.querySelectorAll('.lkonly:not([data-lkexam])').forEach(x => x.setAttribute('aria-pressed', String(only[tab])));
     if (p) p.classList.toggle('lk-only', only[tab]);
     if (only[tab]) openFolders(tab, true);
     refresh(tab);
@@ -135,12 +145,15 @@ const LIKELY_MARKS_UI = (() => {
     folders(tab).forEach(f => {
       if (!force && f.dataset.lkseen) return;
       f.dataset.lkseen = '1';
-      if (only[tab] && f.querySelector('.lkstar') && !f.open) f.open = true;
+      const fx = +((/-(\d)$/.exec(f.id || '') || [])[1] || 0);
+      if (only[tab] && f.querySelector('.lkstar') && !f.open && !(tab in examSel && examSel[tab] && fx && fx !== examSel[tab])) f.open = true;
     });
   }
   function foldVisibility(tab){
     folders(tab).forEach(f => {
       if (!only[tab]) { hide(f, false); return; }
+      const fx = +((/-(\d)$/.exec(f.id || '') || [])[1] || 0);
+      if (tab in examSel && examSel[tab] && fx && fx !== examSel[tab]) { hide(f, true); return; }   // another exam's folder
       const body = f.querySelector(':scope > .rfbody');
       const any = body && [...body.querySelectorAll('.lkstar')].some(s => !isHidden(s));
       const list = body && body.querySelector('.rfdz li:not([data-lkh]) [data-rfdz]');

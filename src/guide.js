@@ -6285,7 +6285,7 @@ const GUIDE_HTML = `
 <summary>Five study pages: sensitive teeth, canker sores, cold sores, how to tell them apart, dry mouth</summary>
 
 <section class="gobj" id="gobj-lr-1">
-<h3>Sensitive teeth versus toothache: all five steps &middot; slides 6&ndash;23</h3>
+<h3>Sensitive teeth versus toothache: all five steps · slides 6&ndash;23</h3>
 <div class="gbar"><span>Key point (Lam Oral slide 7, 9, 11, 14, 15, 17, 18)</span><b>Hypersensitivity is brief pain on exposure from open dentin tubules and is treated in two steps: soft brush with standard fluoride for 7 days, then a desensitizing toothpaste. Toothache is constant pain from bacteria and goes to a dentist.</b><i>Lam Oral slide 6, 7, 9, 11, 12, 14, 15, 17, 18, 20, 21, 22, 23</i></div>
 <div class="g2-jump" role="navigation" aria-label="On this page"><button type="button" data-g2jump="lr1-1">Tell apart</button><button type="button" data-g2jump="lr1-2">Exclusions</button><button type="button" data-g2jump="lr1-3">The plan</button><button type="button" data-g2jump="lr1-4">She added</button><button type="button" data-g2jump="lr1-5">Dr. Lam&rsquo;s cases</button><button type="button" data-g2jump="lr1-6">Write it</button></div>
 <div class="gpt g2-block"><h5 id="lr1-1"><span class="g2-num">1.</span> Tooth hypersensitivity versus toothache <span class="g2-src">(Lam Oral slide 7, 9)</span></h5>
@@ -6350,7 +6350,7 @@ const GUIDE_HTML = `
 </section>
 
 <section class="gobj" id="gobj-lr-2">
-<h3>Canker sores: all five steps &middot; slides 24&ndash;40</h3>
+<h3>Canker sores: all five steps · slides 24&ndash;40</h3>
 <div class="gbar"><span>Key point (Lam Oral slide 26, 27, 29, 30, 32, 34, 35, 36, 37, 38, 39, 40)</span><b>Canker sore: unknown cause, ulcer inside the mouth, heals in 7&ndash;14 days; goal is pain relief. Products are chosen to suit the patient; she will give the product and ask for counseling points.</b><i>Lam Oral slide 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40</i></div>
 <div class="g2-jump" role="navigation" aria-label="On this page"><button type="button" data-g2jump="lr2-1">Cause and referral</button><button type="button" data-g2jump="lr2-2">Products</button><button type="button" data-g2jump="lr2-3">Non-drug</button><button type="button" data-g2jump="lr2-4">She added</button><button type="button" data-g2jump="lr2-5">Write it</button></div>
 <div class="gpt g2-block"><h5 id="lr2-1"><span class="g2-num">1.</span> Causes, presentation and when to refer <span class="g2-src">(Lam Oral slide 26, 27, 29, 30)</span></h5>
@@ -6393,7 +6393,7 @@ const GUIDE_HTML = `
 </section>
 
 <section class="gobj" id="gobj-lr-3">
-<h3>Cold sores: all five steps &middot; slides 41&ndash;67</h3>
+<h3>Cold sores: all five steps · slides 41&ndash;67</h3>
 <div class="gbar"><span>Key point (Lam Oral slide 43, 49, 53, 54, 56, 58, 60)</span><b>Cold sore: HSV-1 lesion on or around the lips. First line is docosanol 10% at the first sign, up to 5 times a day for 10 days; analgesics relieve pain only; steroids are not recommended.</b><i>Lam Oral slide 41, 42, 43, 44, 45, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 62, 63, 64, 65, 66, 67</i></div>
 <div class="g2-jump" role="navigation" aria-label="On this page"><button type="button" data-g2jump="lr3-1">Cause and exclusions</button><button type="button" data-g2jump="lr3-2">Products</button><button type="button" data-g2jump="lr3-3">Non-drug</button><button type="button" data-g2jump="lr3-4">She added</button><button type="button" data-g2jump="lr3-5">Dr. Lam&rsquo;s cases</button><button type="button" data-g2jump="lr3-6">Write it</button></div>
 <div class="gpt g2-block"><h5 id="lr3-1"><span class="g2-num">1.</span> Cause, triggers, stages and exclusions <span class="g2-src">(Lam Oral slide 43, 44, 45, 48, 49, 59, 60)</span></h5>
@@ -6440,7 +6440,7 @@ const GUIDE_HTML = `
 </section>
 
 <section class="gobj" id="gobj-lr-4">
-<h3>Cold sore versus canker sore: how to tell them apart &middot; slides 46&ndash;47</h3>
+<h3>Cold sore versus canker sore: how to tell them apart · slides 46&ndash;47</h3>
 <div class="gbar"><span>Key point (Lam Oral slide 27, 45, 47)</span><b>Location first, then look: canker sores are inside the mouth as gray, round or oval ulcers; cold sores are outside the mouth, around the lips, as red fluid-filled vesicles that crust. She said this is what you need to know to differentiate the two.</b><i>Lam Oral slide 27, 33, 45, 46, 47, 51, 53</i></div>
 <div class="gpt g2-block"><h5 id="lr4-1"><span class="g2-num">1.</span> Cold sore versus canker sore <span class="g2-src">(Lam Oral slide 27, 45, 47)</span></h5>
 <table class="g2-table g2-stack"><caption>Differentiation, slide 47 and handout</caption><thead><tr><th scope="col">Feature</th><th scope="col">Canker sore (RAS)</th><th scope="col">Cold sore (HSL)</th></tr></thead><tbody>
@@ -6458,7 +6458,7 @@ const GUIDE_HTML = `
 </section>
 
 <section class="gobj" id="gobj-lr-5">
-<h3>Dry mouth: all five steps &middot; slides 70&ndash;84</h3>
+<h3>Dry mouth: all five steps · slides 70&ndash;84</h3>
 <div class="gbar"><span>Key point (Lam Oral slide 72, 78, 81, 82, 83, 84)</span><b>Dry mouth: know the drug classes and the four drugs she named; remove the offender, relieve discomfort and reduce decay risk; artificial saliva is replacement, not a cure, and sodium-containing products are avoided on a low-sodium diet.</b><i>Lam Oral slide 70, 71, 72, 73, 74, 75, 76, 77, 78, 80, 81, 82, 83, 84</i></div>
 <div class="g2-jump" role="navigation" aria-label="On this page"><button type="button" data-g2jump="lr5-1">Causes</button><button type="button" data-g2jump="lr5-2">Presentation</button><button type="button" data-g2jump="lr5-3">Non-drug</button><button type="button" data-g2jump="lr5-4">Artificial saliva</button><button type="button" data-g2jump="lr5-5">Follow up</button><button type="button" data-g2jump="lr5-6">Her poll</button></div>
 <div class="gpt g2-block"><h5 id="lr5-1"><span class="g2-num">1.</span> Causes and risk factors <span class="g2-src">(Lam Oral slide 72, 73, 74, 75)</span></h5>
@@ -6528,7 +6528,7 @@ const GUIDE_HTML = `
 
 <!-- guide_pages.html: Dr. Lam, otic disorders (Lecture 13, 11/20), by learning objective. Deck name in source tags: Lam Otic (Lam_OticDisorders_slides.pdf); handout = Lam_OticDisorders_handout.pdf. -->
 <section class="gobj" id="gobj-lt-1">
-<h3>Collect: earwax and water-clogged ear, causes and signs &middot; slides 5&ndash;8, 18&ndash;21</h3>
+<h3>Collect: earwax and water-clogged ear, causes and signs · slides 5&ndash;8, 18&ndash;21</h3>
 <div class="gbar"><span>Key point (Lam Otic slide 7, 8, 20, 21)</span><b>Earwax lubricates, traps foreign material, and is an acidic, antimicrobial barrier; impaction comes from canal shape, hair, hearing aids, swabs and aging glands. A water-clogged ear is trapped water from hair, a narrow canal, debris, sweat, humidity or swimming.</b><i>Lam Otic slide 7, 8, 20, 21</i></div>
 <div class="g2-jump" role="navigation" aria-label="On this page"><button type="button" data-g2jump="lt1-1">Earwax</button><button type="button" data-g2jump="lt1-2">Water-clogged</button><button type="button" data-g2jump="lt1-3">She added</button><button type="button" data-g2jump="lt1-4">Write it</button></div>
 <div class="gpt g2-block"><h5 id="lt1-1"><span class="g2-num">1.</span> Earwax: role, risk factors and presentation <span class="g2-src">(Lam Otic slide 7, 8)</span> <span class="g2-src">(Lam Otic handout p. 2)</span></h5>
@@ -6565,7 +6565,7 @@ const GUIDE_HTML = `
 </section>
 
 <section class="gobj" id="gobj-lt-2">
-<h3>Assess: exclusions and goals for each condition &middot; slides 9&ndash;11, 22&ndash;27</h3>
+<h3>Assess: exclusions and goals for each condition · slides 9&ndash;11, 22&ndash;27</h3>
 <div class="gbar"><span>Key point (Lam Otic slide 10, 11, 23, 24, 25, 26, 27)</span><b>Slide 23 is the one to know: water-clogged ear has no pain and no itching; cerumen impaction often itches; swimmer&rsquo;s ear is an infection with acute pain and clear discharge. Infection, discharge, tubes or recent surgery exclude self-care.</b><i>Lam Otic slide 10, 11, 23, 24, 25, 26, 27</i></div>
 <div class="g2-jump" role="navigation" aria-label="On this page"><button type="button" data-g2jump="lt2-1">Compare three</button><button type="button" data-g2jump="lt2-2">Other disorders</button><button type="button" data-g2jump="lt2-3">Exclusions</button><button type="button" data-g2jump="lt2-4">Goals</button><button type="button" data-g2jump="lt2-5">She added</button><button type="button" data-g2jump="lt2-6">Dr. Lam&rsquo;s cases</button><button type="button" data-g2jump="lt2-7">Write it</button></div>
 <div class="gpt g2-block"><h5 id="lt2-1"><span class="g2-num">1.</span> Differentiating the three disorders (Lam Otic slide 22, 23)</h5>
@@ -6631,7 +6631,7 @@ const GUIDE_HTML = `
 </section>
 
 <section class="gobj" id="gobj-lt-3">
-<h3>Plan: products and non-drug measures &middot; slides 12&ndash;15, 28&ndash;31</h3>
+<h3>Plan: products and non-drug measures · slides 12&ndash;15, 28&ndash;31</h3>
 <div class="gbar"><span>Key point (Lam Otic slide 13, 14, 15, 29, 30, 31)</span><b>Impaction: carbamide peroxide 6.5% (Debrox), 5&ndash;10 drops twice daily for up to 4 days, then warm-water irrigation; water-clogged ear: isopropyl alcohol drying drops, 4&ndash;5 drops. Other cerumenolytics and ear candles are not recommended.</b><i>Lam Otic slide 13, 14, 15, 29, 30, 31</i></div>
 <div class="g2-jump" role="navigation" aria-label="On this page"><button type="button" data-g2jump="lt3-1">Products</button><button type="button" data-g2jump="lt3-2">Non-drug</button><button type="button" data-g2jump="lt3-3">Not recommended</button><button type="button" data-g2jump="lt3-4">She added</button><button type="button" data-g2jump="lt3-5">Dr. Lam&rsquo;s cases</button><button type="button" data-g2jump="lt3-6">Write it</button></div>
 <div class="gpt g2-block"><h5 id="lt3-1"><span class="g2-num">1.</span> Products, directions and duration (Lam Otic slide 14, 31)</h5>
@@ -6675,7 +6675,7 @@ const GUIDE_HTML = `
 </section>
 
 <section class="gobj" id="gobj-lt-4">
-<h3>Implement and follow up: ear-drop technique, counseling, when to refer &middot; slides 16, 32&ndash;35, 36&ndash;44</h3>
+<h3>Implement and follow up: ear-drop technique, counseling, when to refer · slides 16, 32&ndash;35, 36&ndash;44</h3>
 <div class="gbar"><span>Key point (Lam Otic slide 16, 33, 34)</span><b>Lie with the affected ear up, instill the drops and stay in position a few minutes; children under 3: pull the ear back and down. Refer for discharge, dizziness, recent ear surgery or pain, burning or irritation with the drops; impaction that persists after 4 days goes to the PCP.</b><i>Lam Otic slide 16, 33, 34</i></div>
 <div class="g2-jump" role="navigation" aria-label="On this page"><button type="button" data-g2jump="lt4-1">Ear drops</button><button type="button" data-g2jump="lt4-2">Follow up</button><button type="button" data-g2jump="lt4-3">She added</button><button type="button" data-g2jump="lt4-4">Dr. Lam&rsquo;s cases</button><button type="button" data-g2jump="lt4-5">Write it</button></div>
 <div class="gpt g2-block"><h5 id="lt4-1"><span class="g2-num">1.</span> Counseling on ear drops (Lam Otic slide 32, 33)</h5>

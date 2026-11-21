@@ -50,7 +50,7 @@ const measure = p => p.evaluate(() => { const r = e => e ? e.getBoundingClientRe
     const fold = await p.$('#v-topics .examfold .deckbtn, #v-topics .deckbtn'); if (fold) { await fold.click().catch(() => {}); }
     let m = await measure(p); check(m.sw <= m.iw, `${w}x${h}: Topics with a folder opened does not scroll sideways`, 'by ' + (m.sw - m.iw));
     if (tabs.includes('dz')) {
-      await p.click('#nav button[data-v="dz"]'); await p.click('#v-dz .dzpicker button[data-card="psoriasis"]');
+      await p.click('#nav button[data-v="dz"]'); await p.click('#v-dz .dzexam [data-exam="0"]'); await p.click('#v-dz .dzpicker button[data-card="psoriasis"]');
       const oa = await p.$('#v-dz [data-dz="openall"]'); if (oa) await oa.click();
       m = await measure(p); check(m.sw <= m.iw, `${w}x${h}: an open Diseases card does not scroll sideways`, 'by ' + (m.sw - m.iw));
       if (w >= 1300) {

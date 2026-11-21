@@ -365,15 +365,15 @@ async function nsOf(browser) {
 
       // C8. Tell apart, Exam 2: the comparisons of the Diseases tab (the Exam 2 folder is closed as drawn: opened for the visit, not stored)
       await p.evaluate(() => { show('topics'); show('tell'); EXAMFOLD_UI.reveal(document.getElementById('tell-x2-dz')); });
-      const dz = await p.evaluate(() => ({n: document.querySelectorAll('#rfold-tell-2 [data-rfdz="tell"]').length, want: DZ.tell.length, pairs: document.querySelectorAll('#rfold-tell-2 [data-rfdz="pairs"]').length,
-        titles: [...document.querySelectorAll('#rfold-tell-2 [data-rfdz="tell"]')].every((b, i) => b.textContent === DZ.tell[i].title), small: [...document.querySelectorAll('#rfold-tell-2 .rfdz button')].filter(b => b.getBoundingClientRect().height < 44).length}));
+      const dz = await p.evaluate(() => ({n: document.querySelectorAll('#rfold-tell-2 [data-rfdz="tell"]').length, want: DZ.tell.filter(t => (t.exams || [2]).includes(2)).length, pairs: document.querySelectorAll('#rfold-tell-2 [data-rfdz="pairs"]').length,
+        titles: [...document.querySelectorAll('#rfold-tell-2 [data-rfdz="tell"]')].every((b, i) => b.textContent === DZ.tell.filter(t => (t.exams || [2]).includes(2))[i].title), small: [...document.querySelectorAll('#rfold-tell-2 .rfdz button')].filter(b => b.getBoundingClientRect().height < 44).length}));
       check(dz.n === dz.want && dz.n > 0 && dz.titles && dz.pairs === 1 && !dz.small, `${w} px: Tell apart, Exam 2 lists the ${dz.want} comparisons of the Diseases tab by their titles, each at least 44 px tall`, dz);
       const last = p.locator('#rfold-tell-2 [data-rfdz="tell"]').nth(dz.n - 1);
       await last.scrollIntoViewIfNeeded();
       const y8 = await p.evaluate(() => Math.round(scrollY)), a8 = (await last.getAttribute('data-jump')).split(':')[1];
       await last.click();
       const d8 = await p.evaluate(a => { const el = document.getElementById(a), r = el && el.getBoundingClientRect(); return {view: VIEW, dzview: DZ_UI.state.view, found: !!el, vis: !!(el && el.getClientRects().length), top: r ? Math.round(r.top) : null,
-        pin: Math.round(JUMP_UI.pinnedOffset()), atEnd: scrollY >= document.documentElement.scrollHeight - innerHeight - 2, all: DZ.tell.every(t => !!document.getElementById('dz-tell-' + t.id)), back: (document.getElementById('backbtn') || {}).textContent}; }, a8);
+        pin: Math.round(JUMP_UI.pinnedOffset()), atEnd: scrollY >= document.documentElement.scrollHeight - innerHeight - 2, all: DZ.tell.filter(t => (t.exams || [2]).includes(2)).every(t => !!document.getElementById('dz-tell-' + t.id)), back: (document.getElementById('backbtn') || {}).textContent}; }, a8);
       check(d8.view === 'dz' && d8.dzview === 'tell' && d8.found && d8.vis && d8.all && (Math.abs(d8.top - d8.pin) <= 30 || d8.atEnd) && /tell apart/.test(d8.back || ''),
         `${w} px: its last button opens that comparison in the Diseases tab (${a8}), Back offered`, d8);
       await side(p, w, 'Diseases comparison');
