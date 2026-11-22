@@ -75,6 +75,17 @@ const sb = {console}; vm.createContext(sb);
 vm.runInContext(fs.readFileSync(path.join(SRC, 'atlas.js'), 'utf8') + '\nglobalThis.A = ATLAS;', sb);
 const A = sb.A;
 
+// 8. deck and exam labels (Exam 1 DPAW tiles and Exam 3 OOO tiles)
+const DECKS = vm.runInContext('ATLAS_DECKS', sb);
+const badDeck = items.filter(it => !DECKS[it.deck || 'DPAW']);
+badDeck.length ? fail(`item(s) whose deck is not in ATLAS_DECKS: ${badDeck.map(i => i.key + '=' + i.deck).join(', ')}`)
+               : ok(`every item has a deck in the registry (${Object.keys(DECKS).join(', ')})`);
+const badExam = items.filter(it => !['Exam 1', 'Exam 3'].includes(it.exam));
+badExam.length ? fail(`item(s) with an exam other than Exam 1 or Exam 3: ${badExam.map(i => i.key + '=' + i.exam).join(', ')}`)
+               : ok('every item is labelled Exam 1 or Exam 3');
+const badPair = items.filter(it => (it.deck || 'DPAW') === 'OOO' !== (it.exam === 'Exam 3'));
+badPair.length ? fail(`deck and exam disagree: ${badPair.map(i => i.key).join(', ')}`) : ok('OOO tiles are Exam 3, DPAW tiles Exam 1');
+
 // 3. comparisons
 const withLec = items.filter(it => it.lecture);
 for (const it of withLec) {
@@ -125,8 +136,14 @@ const uiSrc = fs.readFileSync(path.join(SRC, 'atlas_ui.js'), 'utf8');
   : fail('atlas_ui.js does not label tiles that are not on the assigned pages');
 /const HEAD = \{core: 'Core learning', reference: 'Reference', verify: 'Needs verification'\}/.test(uiSrc) &&
 /const onExam = pr === 'core' && m\.assigned !== false/.test(uiSrc)
-  ? ok(`tile headings follow the priority; "Exam 1" only on core items from the assigned pages (${items.filter(i => (i.priority || 'core') === 'core' && i.assigned).length} items)`)
+  ? ok(`tile headings follow the priority; every tile shows its deck and exam, and core items from the assigned pages are marked (${items.filter(i => (i.priority || 'core') === 'core' && i.assigned).length} items)`)
   : fail('atlas_ui.js: tile heading or "Exam 1" label does not follow the priority and assigned pages');
+
+// 8b. unassigned items are never used by scored questions (also checked in 7); count the Exam 3 reference tiles
+{
+  const e3 = items.filter(it => it.exam === 'Exam 3');
+  ok(`${e3.length} Exam 3 tile(s): ${e3.filter(i => i.priority === 'core').length} core, ${e3.filter(i => i.priority !== 'core').length} reference; ${e3.filter(i => i.assigned === false).length} not assigned`);
+}
 
 // 5. pre-answer drawings
 const leaks = Object.entries(A.FGQ).filter(([k, svg]) => /var\(--wash\)/.test(svg) || !/aria-label="Chemical structure to identify"/.test(svg));

@@ -25,6 +25,13 @@
    reference ("slide 7", "slides 48-49") or a transcript reference
    ("T 683–689, 665–668", "T@20426, T@20690", "11/04 T@2989–@3430, @4330–@4410").
    A leading "Slide 54: " is a citation too. Any other parenthesis stays. */
+/* The decks the tiles come from (each item's `deck`). Add a deck here before adding its items. */
+const ATLAS_DECKS = {
+  DPAW: {short: 'DPAW', label: 'DPAW deck (Dr. Sikazwe, dermatology)',
+         assignedNote: 'slides 7-9, 12, 15-22, 24-33, 42-54, 60-65 (list of 11/06)'},
+  OOO: {short: 'OOO', label: 'Otic/Oral/Ophthalmic deck (Dr. Sikazwe)',
+        assignedNote: 'slides 5-8, 15-21, 27-31, 33-48 (readings emailed 11/20)'}
+};
 const ATLAS_UI = (() => {
   const RNG = '@?\\d+(?:[–-]@?\\d+)?';
   const PART = new RegExp('^(?:slides? \\d+(?:[–-]\\d+)?|(?:\\d{2}/\\d{2} )?T ?' + RNG +
@@ -153,15 +160,17 @@ const ATLAS_UI = (() => {
       badge.textContent = LABEL[pr];
       badge.title = TITLE[pr];
       const pg = el('span', 'atpg');
-      // "Exam 1" only on core items from the assigned pages; an item outside
-      // them shows "Not on the assigned pages" in its place
+      // every tile shows its exam; a core item from the assigned pages is the one the exam covers,
+      // and an item outside them also shows "Not on the assigned pages"
       const onExam = pr === 'core' && m.assigned !== false;
-      pg.textContent = 'DPAW p. ' + it.slide + (onExam ? ' · ' + (m.exam || 'Exam 1') : '');
+      const dk = ATLAS_DECKS[m.deck] || ATLAS_DECKS.DPAW;
+      pg.textContent = dk.short + ' p. ' + it.slide + ' · ' + (m.exam || 'Exam 1');   // every tile names its deck and its exam (Louis, 2026-11-21)
+      if (onExam) pg.classList.add('atonexam');
       row.append(badge, pg);
       if (m.assigned === false) {               // not on Dr. Sikazwe's assigned pages (11/06); names nothing, so it stays in Hide names
         const na = el('span', 'atunassigned');
         na.textContent = 'Not on the assigned pages';
-        na.title = 'Outside Dr. Sikazwe\'s assigned pages for Exam 1 (list of 11/06: slides 7-9, 12, 15-22, 24-33, 42-54, 60-65, as numbered on the slides)';
+        na.title = 'Outside Dr. Sikazwe\'s assigned pages for ' + (m.exam || 'Exam 1') + ' (' + dk.assignedNote + ', as numbered on the slides)';
         row.append(na);
       }
       t.insertBefore(row, name);
@@ -199,7 +208,7 @@ const ATLAS_UI = (() => {
         btn.setAttribute('aria-expanded', 'false');
         const box = el('div', 'atcmp'); box.hidden = true;
         box.innerHTML = `<div class="atcmpgrid">
-            <figure>${c.lecture}<figcaption>As drawn in lecture (DPAW p. ${esc(c.slide)})${c.lecture_cid ? ': this drawing is PubChem CID ' + esc(c.lecture_cid) : ''}</figcaption></figure>
+            <figure>${c.lecture}<figcaption>As drawn in lecture (${esc(dk.short)} p. ${esc(c.slide)})${c.lecture_cid ? ': this drawing is PubChem CID ' + esc(c.lecture_cid) : ''}</figcaption></figure>
             <figure>${c.verified}<figcaption>Verified Drug Structure${m.pubchem ? ' (PubChem CID ' + esc(m.pubchem) + (m.chembl ? '; ChEMBL ' + esc(m.chembl) : '') + ')' : (m.chembl ? ' (ChEMBL ' + esc(m.chembl) + ')' : '')}</figcaption></figure>
           </div>
           <dl><dt>Lecture drawing</dt><dd>${esc(d.lecture_shows)}</dd>
@@ -224,7 +233,7 @@ const ATLAS_UI = (() => {
 
       // 6. sources and verification
       const rows = [];
-      rows.push(['Lecture', 'DPAW deck p. ' + esc(it.slide) + ' · ' + esc(m.exam || 'Exam 1') + ' lecture' +
+      rows.push(['Lecture', esc(dk.label) + ' p. ' + esc(it.slide) + ' · ' + esc(m.exam || 'Exam 1') + ' lecture' +
         (m.assigned === false ? '; not on the assigned pages' : '')]);
       if (cites.length) rows.push(['Cited in this tile', '<ul>' + cites.map(([part, x]) => '<li>' + esc(part) + ': ' + esc(x) + '</li>').join('') + '</ul>']);
       rows.push(['Priority', esc(LABEL[pr]) + (m.reason ? ': ' + esc(m.reason) : '') + (m.psrc ? ' (' + esc(m.psrc) + ')' : '')]);
@@ -255,7 +264,8 @@ const ATLAS_UI = (() => {
     const refBtn = el('button', 'chip'), shBtn = el('button', 'chip');
     refBtn.type = shBtn.type = 'button';
     const nRef = tiles.filter(t => t.classList.contains('is-ref')).length;
-    const legend = el('p', 'atlegend', '<b>Core</b>: taught or emphasized; study the structure. ' +
+    const legend = el('p', 'atlegend', 'Each tile\'s label gives its deck, slide number and exam (OOO is the otic, oral and ophthalmic deck, DPAW the dermatology deck); Exam 2 has no structures taught. ' +
+      '<b>Core</b>: taught or emphasized; study the structure. ' +
       '<b>Reference only</b>: shown to illustrate a concept; hidden by default, the concept stays examinable. ' +
       '<b>Needs verification</b>: on a slide but not confirmed as taught; kept out of questions.');
     const empty = el('p', 'atempty'); empty.hidden = true; empty.setAttribute('role', 'status');
@@ -328,7 +338,7 @@ const ATLAS_UI = (() => {
     if (ATLAS.EXCLUDED && ATLAS.EXCLUDED.length) {
       const p = el('p', 'atexcl');
       p.textContent = 'Not in the Atlas, by Dr. Sikazwe\'s instruction: ' +
-        ATLAS.EXCLUDED.map(x => x.item + ' (DPAW p. ' + x.page + ')').join('; ') + '.';
+        ATLAS.EXCLUDED.map(x => x.item + ' (' + (ATLAS_DECKS[x.deck] || ATLAS_DECKS.DPAW).short + ' p. ' + x.page + ')').join('; ') + '.';
       view.appendChild(p);
     }
   }

@@ -124,13 +124,28 @@ const noScroll = p => p.evaluate(() => document.documentElement.scrollWidth <= i
     const tf = await p.evaluate(() => [...document.querySelectorAll('#v-tell > details.rfold')].map(f => ({hidden: f.hasAttribute('data-lkh'), open: f.open, star: !!f.querySelector('.lkstar'), list: !!f.querySelector('.rfdz')})));
     check(tf.some(f => f.star && !f.hidden && f.open), `${tag}: Tell apart, starred only: the folder with starred rows is open`, JSON.stringify(tf));
     const dzl = await p.evaluate(() => { const li = [...document.querySelectorAll('#v-tell .rfdz li')]; return {all: li.length, shown: li.filter(x => !x.hasAttribute('data-lkh')).length}; });
-    check(dzl.all === 0 || dzl.shown === Object.keys(SRC.tabs.dzTell).length + 1, `${tag}: Tell apart, starred only: the Exam 2 list keeps the ${Object.keys(SRC.tabs.dzTell).length} starred comparisons and the pairs button`, JSON.stringify(dzl));
+    const dzWant = await p.evaluate(keys => DZ.tell.filter(t => (t.exams || [2]).includes(2) && keys.includes(t.id)).length + 1, Object.keys(SRC.tabs.dzTell));
+    check(dzl.all === 0 || dzl.shown === dzWant, `${tag}: Tell apart, starred only: the Exam 2 list keeps its ${dzWant - 1} starred comparisons and the pairs button`, JSON.stringify(dzl));
     check(await noScroll(p), `${tag}: Tell apart, starred only: no sideways scroll`);
     await only('tell');
     check(await p.evaluate(() => [...document.querySelectorAll('#v-tell tbody tr')].filter(t => t.closest('[data-lkh]')).length) === 0, `${tag}: Tell apart: off shows every row again`);
 
+    // ---------- the exam chips of the starred view (Louis, 2026-11-21) ----------
+    for (const [t, n] of [['guide', 'Guides'], ['ref', 'Reference'], ['tell', 'Tell apart']]) {
+      await go(t);
+      const nChips = await p.evaluate(t => document.querySelectorAll('#v-' + t + ' .lkbar [data-lkexam]').length, t);
+      check(nChips === 4, `${tag}: ${n}: the starred view offers All exams, Exam 1, Exam 2 and Exam 3`, nChips);
+      const res = {};
+      for (const e of [1, 2, 3, 0]) {
+        await p.click('#v-' + t + ' .lkbar [data-lkexam="' + e + '"]'); await p.waitForTimeout(150);
+        res[e] = await p.evaluate(t => [...document.querySelectorAll('#v-' + t + ' > details.rfold')].map(f => !f.hasAttribute('data-lkh')), t);
+      }
+      check(res[1][0] && !res[1][1] && !res[1][2] && !res[2][0] && res[2][1] && !res[2][2] && !res[3][0] && !res[3][1] && res[3][2] && res[0].every(Boolean), `${n}: each exam chip shows only that exam's folder, All exams shows all three`, JSON.stringify(res));
+      await only(t);
+    }
     // ---------- Diseases ----------
     await go('dz');
+    await p.click('#v-dz .dzexam [data-exam="0"]');   // the tab opens on the active exam; these checks count every exam
     check(/Stars mark what the professor stressed/.test(await text('#v-dz .lkleg')), `${tag}: Diseases has the legend`);
     check(await count('dz', '.dzpicker .lkpick') === N('dzCard'), `${tag}: Diseases: ${N('dzCard')} conditions carry a star in the picker`, await count('dz', '.dzpicker .lkpick'));
     check(await count('dz', '.dzcard .dzhead h2 > .lkstar') === 1, `${tag}: Diseases: the open card (atopic dermatitis) has its star`);
@@ -142,7 +157,8 @@ const noScroll = p => p.evaluate(() => document.documentElement.scrollWidth <= i
     await only('dz'); await p.waitForTimeout(400);
     const pk = await p.evaluate(() => ({shown: [...document.querySelectorAll('#v-dz .dzpicker button[data-card]')].filter(x => !x.hasAttribute('data-lkh')).length, card: (document.querySelector('#v-dz .dzcard') || {dataset: {}}).dataset.card, starred: !!document.querySelector('#v-dz .dzcard .dzhead h2 > .lkstar')}));
     check(pk.shown === N('dzCard') && pk.starred, `${tag}: Diseases, starred only: ${N('dzCard')} conditions in the picker; the open card is a starred one`, JSON.stringify(pk));
-    check(new RegExp('^Showing ' + N('dzCard') + ' of ' + SRC.meta.total.dzCard + ' conditions\\.$').test(await text('#v-dz .lkcount')), `${tag}: Diseases: the count says "Showing ${N('dzCard')} of ${SRC.meta.total.dzCard} conditions."`, await text('#v-dz .lkcount'));
+    const dzTotal = await p.evaluate(() => DZ.cards.length);
+    check(new RegExp('^Showing ' + N('dzCard') + ' of ' + dzTotal + ' conditions\\.$').test(await text('#v-dz .lkcount')), `${tag}: Diseases: the count says "Showing ${N('dzCard')} of ${dzTotal} conditions."`, await text('#v-dz .lkcount'));
     // tell-apart sets and pairs
     await p.evaluate(() => document.querySelector('#v-dz .dzviews button[data-view="tell"]').click()); await p.waitForTimeout(400);
     check(await count('dz', 'section.dztell > h2 > .lkstar') === N('dzTell') && await vis('dz', 'section.dztell') === N('dzTell'), `${tag}: Diseases, Tell apart view: ${N('dzTell')} sets starred and shown`, `${await count('dz', 'section.dztell > h2 > .lkstar')}/${await vis('dz', 'section.dztell')}`);

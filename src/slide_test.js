@@ -256,7 +256,7 @@ const onDisk = (deck, n, printed) => { const r = P.resolve(deck, n, printed); re
                      (b.firstElementChild ? ' has markup inside' : '')};
       }), sel);
       let all = [];
-      for (const v of ['ref', 'tell', 'guide', 'atlas', 'drugs', 'diagrams']) { await page.evaluate(v => show(v), v); await settle(800); const r = await sweep('#v-' + v + ' .slk'); r.forEach(x => { x.v = v; }); all = all.concat(r); }
+      for (const v of ['ref', 'tell', 'guide', 'atlas', 'drugs', 'diagrams']) { await page.evaluate(v => show(v), v); await settle(800); await page.waitForFunction(v => document.querySelectorAll('#v-' + v + ' .slk').length > 0, v, {timeout: 8000}).catch(() => {}); await settle(300); const r = await sweep('#v-' + v + ' .slk'); r.forEach(x => { x.v = v; }); all = all.concat(r); }
       const per = v => all.filter(x => x.v === v).length;
       await page.evaluate(() => show('dz'));
       const dz = await page.evaluate(() => ({cards: DZ.cards.map(c => [c.id, (c.patients || []).length]), drugs: Object.keys(DZ.drugs), terms: Object.keys(DZ.terms)}));
@@ -452,14 +452,16 @@ const onDisk = (deck, n, printed) => { const r = P.resolve(deck, n, printed); re
         /* the guides' objective bars */
         await page.evaluate(() => show('guide')); await settle(1300);
         const bars = await page.evaluate(() => [...document.querySelectorAll('#v-guide .gbar')].map(g => { const sec = g.closest('section.gobj'), i = g.querySelector('i');
-          return {id: sec ? sec.id : '', list: i ? i.textContent : '', inList: i ? [...i.querySelectorAll('.slk')].map(__sig) : [], got: [...g.querySelectorAll('.slk')].map(__sig)}; }));
-        check(bars.length === 234 && Object.keys(model.gbar).length === 234 && bars.every(x => same(x.got, model.gbar[x.id])), `guide objective bars (${bars.length}): each holds the links the model expects (${sum(model.gbar)} in all)`, diff(bars, model.gbar));
+          // a section can hold several bars: each is keyed "<section id>#<n>", n counting from 1 as slide_check.js does
+          const same = sec ? [...sec.querySelectorAll('.gbar')] : [g];
+          return {id: (sec ? sec.id : '') + '#' + (same.indexOf(g) + 1), list: i ? i.textContent : '', inList: i ? [...i.querySelectorAll('.slk')].map(__sig) : [], got: [...g.querySelectorAll('.slk')].map(__sig)}; }));
+        check(bars.length >= 234 && Object.keys(model.gbar).length === bars.length && bars.every(x => same(x.got, model.gbar[x.id])), `guide objective bars (${bars.length}): each holds the links the model expects (${sum(model.gbar)} in all)`, diff(bars, model.gbar));
         // the slide list on the right of a bar, read here on its own: "PCol 8–76; Sun 3; PP 17, 28, 37" (a part that is not a deck's list has no link)
-        const ABB = {Eye: 'ey', OOO: 'oo', PP: 'pp', PCol: 'pc', Sun: 'sun', DPAW: 'mc', DT: 'p5', AT: 'p6', SD: 'p7', OE: 'p8o', SE: 'p8s', WC: 'p8w', WCC: 'p8c', 'Patel Dermatitis': 'p5', 'Patel Acne': 'p6', 'Patel Scaly': 'p7', 'Patel Outdoor': 'p8o', 'Patel Sun Exposure': 'p8s', 'Patel Wound': 'p8w', 'Patel Warts': 'p8c', 'Lam Glaucoma': 'lg'};
-        const listOf = t => t.split(';').reduce((out, part) => { const m = /^(Eye|OOO|PP|PCol|Sun|DPAW|DT|AT|SD|OE|SE|WCC|WC|Patel Dermatitis|Patel Acne|Patel Scaly|Patel Outdoor|Patel Sun Exposure|Patel Wound|Patel Warts|Lam Glaucoma)(?: slides?)? (\d[\d, –-]*)$/.exec(part.trim());
+        const ABB = {Eye: 'ey', OOO: 'oo', PP: 'pp', PCol: 'pc', Sun: 'sun', DPAW: 'mc', DT: 'p5', AT: 'p6', SD: 'p7', OE: 'p8o', SE: 'p8s', WC: 'p8w', WCC: 'p8c', 'Patel Dermatitis': 'p5', 'Patel Acne': 'p6', 'Patel Scaly': 'p7', 'Patel Outdoor': 'p8o', 'Patel Sun Exposure': 'p8s', 'Patel Wound': 'p8w', 'Patel Warts': 'p8c', 'Lam Glaucoma': 'lg', 'Lam Ophthalmic': 'lo', 'Lam Oral': 'lr', 'Lam Otic': 'lt'};
+        const listOf = t => t.split(';').reduce((out, part) => { const m = /^(Eye|OOO|PP|PCol|Sun|DPAW|DT|AT|SD|OE|SE|WCC|WC|Patel Dermatitis|Patel Acne|Patel Scaly|Patel Outdoor|Patel Sun Exposure|Patel Wound|Patel Warts|Lam Glaucoma|Lam Ophthalmic|Lam Oral|Lam Otic)(?: slides?)? (\d[\d, –-]*)$/.exec(part.trim());
           return m ? out.concat(m[2].split(',').map(x => { const r = /^(\d+)(?:[–-](\d+))?$/.exec(x.trim()); return ABB[m[1]] + ' ' + r[1] + (r[2] ? '-' + r[2] : ''); })) : out; }, []);
         const barBad = bars.filter(x => !x.inList.length || !same(x.inList, listOf(x.list)));
-        check(!barBad.length, 'every one of the 234 bars has its whole slide list linked, each number to the deck its abbreviation names', barBad.slice(0, 4).map(x => `${x.id}: "${x.list}" has [${x.inList.join(', ')}]`).join(' | '));
+        check(!barBad.length, 'every one of the objective bars has its whole slide list linked, each number to the deck its abbreviation names', barBad.slice(0, 4).map(x => `${x.id}: "${x.list}" has [${x.inList.join(', ')}]`).join(' | '));
 
         /* Diseases: the steps of every card (the cards with more than one professor among them), the three other views, the drug panels */
         await page.evaluate(() => show('dz')); await settle(500);
@@ -471,7 +473,7 @@ const onDisk = (deck, n, printed) => { const r = P.resolve(deck, n, printed); re
         }
         const multiCards = cards.filter(x => multi.includes(x.id));
         check(multi.length >= 2 && multiCards.every(x => x.grp > 0 && same(x.got, model.dzstep[x.id])), `Diseases cards with more than one professor (${multi.length}: ${multi.join(', ')}): the steps hold the links the model expects (${multiCards.reduce((n, x) => n + x.got.length, 0)})`, diff(multiCards, model.dzstep));
-        check(cards.length === 26 && cards.every(x => same(x.got, model.dzstep[x.id])), `Diseases, all ${cards.length} cards: the steps hold the links the model expects (${sum(model.dzstep)})`, diff(cards, model.dzstep));
+        check(cards.length >= 33 && cards.every(x => same(x.got, model.dzstep[x.id])), `Diseases, all ${cards.length} cards: the steps hold the links the model expects (${sum(model.dzstep)})`, diff(cards, model.dzstep));
         const sunp = await page.evaluate(() => { const c = DZ.cards.find(x => x.id === 'sun-protection'); DZ_UI.state.card = c.id; c.steps.forEach((s, i) => { DZ_UI.state.open[c.id + ':' + i] = true; }); DZ_UI.render(); SLIDE_UI.relink();
           const inGrp = k => [...document.querySelectorAll('#v-dz ol.dzsteps .dzgrp.' + k + ' .slk')].map(b => b.textContent + '>' + __sig(b));
           return {sm: inGrp('sm'), pa: inGrp('pa'), sk: inGrp('sk')}; });

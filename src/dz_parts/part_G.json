@@ -1,0 +1,1399 @@
+{
+ "cards": [
+  {
+   "id": "cerumen",
+   "name": "Impacted cerumen (earwax)",
+   "group": "selfcare",
+   "lectures": "Lam 11/20 · Sikazwe 11/18 (Exam 3)",
+   "topics": [
+    "lt-cer",
+    "lt-cerrx",
+    "lt-impl",
+    "lt-diff"
+   ],
+   "short": [
+    "[[cerumen|Earwax]] normally lubricates the canal, traps foreign material and blocks pathogens; it builds up when it is overproduced or pushed in.",
+    "Itching, ear fullness and hearing loss with no discharge point to cerumen impaction; infection, discharge, tubes, surgery within 6 weeks or age under 12 mean refer.",
+    "Wet wrung-out washcloth over a finger on the outer canal daily prevents impaction; cotton swabs and ear candles are not recommended.",
+    "Carbamide peroxide 6.5% in anhydrous glycerin: 5-10 drops, twice daily, up to 4 days; the only nonprescription product she recommends.",
+    "No relief after 4 days: contact the primary care provider."
+   ],
+   "steps": [
+    {
+     "title": "Cause and timing: role of earwax and risk factors",
+     "profs": [
+      "la"
+     ],
+     "q": "What does earwax do, and who builds up too much?",
+     "src": "Lam Otic slides 4, 7; handout p. 2; T@90689, T@91343, T@91760, T@91937, T@92324 11/20",
+     "blocks": [
+      {
+       "k": "facts",
+       "p": "la",
+       "rows": [
+        [
+         "Where",
+         "The [[eac|external auditory canal]]; wax and water build up there, and the goal is not to damage the [[tm|eardrum]], which conducts sound to the middle ear (T@90689 11/20)"
+        ],
+        [
+         "Role of earwax",
+         [
+          "{{Lubricates}} the canal",
+          "{{Traps foreign material}}",
+          "Acts as a {{waterproof barrier}} to pathogen entry"
+         ]
+        ],
+        [
+         "Why infection is blocked",
+         "Its {{acidic pH}} and antimicrobial substances inhibit bacterial and fungal growth (handout p. 2; T@91760 11/20)"
+        ],
+        [
+         "How the canal clears itself",
+         "As cerumen collects debris, the canal moves it outward with jaw movements (handout p. 2)"
+        ],
+        [
+         "Why it builds up",
+         "Some people overproduce earwax, and some push things into the ear, such as cotton swabs (T@91937 11/20)"
+        ]
+       ]
+      },
+      {
+       "k": "sub",
+       "p": "la",
+       "text": "Risk factors (handout p. 2)"
+      },
+      {
+       "k": "pts",
+       "p": "la",
+       "items": [
+        "Narrow or irregularly shaped canal",
+        "{{Excessive hair growth}} in the canal",
+        "Irritation from foreign objects such as hearing aids or ear plugs",
+        "{{Inappropriate removal}} of wax, for example cotton swabs",
+        "Atrophy of the ceruminous glands in older adults",
+        "Genetics",
+        "Children: the canal is flat and slants downward with growth, so material drains less well in young children (T@92324 11/20)"
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Recognise it: what the patient reports",
+     "profs": [
+      "la"
+     ],
+     "q": "Which symptoms point to impacted cerumen, and which three findings separate it from the other ear disorders?",
+     "src": "Lam Otic slides 8, 23; handout p. 5; T@92615, T@97359 11/20",
+     "blocks": [
+      {
+       "k": "facts",
+       "p": "la",
+       "rows": [
+        [
+         "Symptoms (slide 8)",
+         [
+          "Ear {{fullness or pressure}}",
+          "Dull pain",
+          "{{Itching}}",
+          "Discomfort",
+          "Tinnitus",
+          "Dizziness and vertigo",
+          "Cough",
+          "{{Hearing loss}}, or hearing aid malfunction or feedback"
+         ]
+        ],
+        [
+         "Separates it from a water-clogged ear",
+         "{{Itching}} is often present (a water-clogged ear has none)"
+        ],
+        [
+         "Separates it from swimmer's ear",
+         "No discharge; pain is rare and dull if present (swimmer's ear has acute-onset pain and clear discharge)"
+        ]
+       ]
+      },
+      {
+       "k": "pts",
+       "p": "la",
+       "items": [
+        "Slide 23 columns for cerumen impaction: pain rare, dull if present; itching often; loss of hearing often; discharge none; sense of fullness or pressure in the ear"
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Self-care or refer?",
+     "profs": [
+      "la"
+     ],
+     "q": "Which findings exclude self-care, and what are the treatment goals?",
+     "src": "Lam Otic slides 10-11; handout p. 3; T@92950, T@93413, T@93449, T@93759 11/20",
+     "blocks": [
+      {
+       "k": "sub",
+       "p": "la",
+       "text": "Exclusions for self-care (slide 10): any one means refer"
+      },
+      {
+       "k": "pts",
+       "p": "la",
+       "items": [
+        "Signs of infection or ear discharge (irritation or rash)",
+        "Pain associated with ear discharge",
+        "Bleeding or signs of trauma",
+        "Presence of a ruptured tympanic membrane: abrupt hearing loss and sharp pain",
+        "{{Tympanostomy tube(s)}} present",
+        "{{Ear surgery within 6 weeks}}",
+        "{{<12 years of age}}",
+        "Worsening of the condition after attempted self-treatment",
+        "Incapable of following proper instructions"
+       ]
+      },
+      {
+       "k": "facts",
+       "p": "la",
+       "rows": [
+        [
+         "Age: three readings",
+         "Slide 10: {{<12 years of age}} excluded. Handout p. 3, under carbamide peroxide: {{twelve years and older only}}. Spoken: \"children under 12 ... we don't treat children 12 years or under\" (T@93413 11/20). A 12-year-old is read differently by the spoken words and the other two"
+        ],
+        [
+         "Her rule",
+         "If it looks like an infection, it is an infection, and the pharmacist has nothing to treat it with; the patient sees a doctor (T@92950 11/20)"
+        ],
+        [
+         "Dizziness",
+         "Slide 8 lists dizziness and vertigo as cerumen symptoms; slide 10 does not list dizziness as an exclusion (slide 26, for water-clogged ears, does)"
+        ],
+        [
+         "Treatment goals (slide 11)",
+         [
+          "{{Remove}} cerumen with safe and effective products",
+          "{{Prevent}} potential adverse events"
+         ]
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Treat it: match the product to the situation",
+     "profs": [
+      "la",
+      "sk"
+     ],
+     "q": "What does each non-drug measure do, and how is carbamide peroxide used?",
+     "src": "Lam Otic slides 13-15; handout pp. 3-4; Sikazwe OOO slides 5-8; T@93959, T@94028, T@94267, T@94692, T@95193, T@95428, T@95576, T@95719 11/20; T@4901, T@8076, T@8338 11/18",
+     "blocks": [
+      {
+       "k": "sub",
+       "p": "la",
+       "text": "Non-drug (slide 13; handout p. 3)"
+      },
+      {
+       "k": "facts",
+       "p": "la",
+       "rows": [
+        [
+         "Wet wrung-out washcloth",
+         "Remove cerumen from the {{outermost portion}} of the canal {{daily}}, with the cloth draped over a finger, to prevent impaction"
+        ],
+        [
+         "Ear-cleaning tool (curette)",
+         "Removes wax manually by insertion into the canal; the handout cautions: risk of trauma to the canal skin or the tympanic membrane. She said the tool is delicate and too deep damages the eardrum (T@94028 11/20)"
+        ],
+        [
+         "Irrigation",
+         "Warm sterile water with a {{bulb syringe}}; not well studied, and it may not work (handout p. 3; T@94267 11/20)"
+        ]
+       ]
+      },
+      {
+       "k": "line",
+       "p": "la",
+       "label": "Impacted cerumen",
+       "title": "Carbamide peroxide 6.5% in anhydrous glycerin",
+       "drugs": [
+        "carbamide-peroxide-otic"
+       ],
+       "pts": [
+        "FDA-approved nonprescription; the only product she recommends; brand {{Debrox}} (T@94692 11/20)",
+        "{{5-10 drops}} into the affected ear(s); remain in the canal for several minutes",
+        "{{Twice daily}} for up to {{four days}}",
+        "Alone or with warm-water irrigation; remaining cerumen is removed with gentle warm-water irrigation with a rubber otic bulb syringe"
+       ],
+       "pick": [
+        [
+         "Age 12 or older, no exclusion",
+         "Carbamide peroxide, per the handout (age rule: see the Self-care or refer step)"
+        ],
+        [
+         "Wax removed or loosened",
+         "Gentle warm-water irrigation with a rubber otic bulb syringe"
+        ]
+       ],
+       "move": "Move to the primary care provider when symptoms persist after 4 days (slide 16)."
+      },
+      {
+       "k": "line",
+       "p": "la",
+       "label": "Other cerumenolytics",
+       "title": "Not recommended: water-based and oil-based agents",
+       "drugs": [
+        "docusate-otic"
+       ],
+       "pts": [
+        "Handout p. 4: evidence suggests they are no more effective than water",
+        "Water-based examples printed: choline salicylate, docusate sodium, phenazole; oil-based: almond oil, benzocaine",
+        "She said they are not recommended anymore and are not as good as carbamide peroxide (T@95576 11/20)"
+       ]
+      },
+      {
+       "k": "line",
+       "p": "la",
+       "label": "Ear candles",
+       "title": "Not recommended",
+       "drugs": [],
+       "pts": [
+        "Handout p. 4: potential dangers and injuries, and no scientific evidence",
+        "She described hot wax dripping into the ear as not sounding good, and said United States guidelines point to carbamide peroxide (T@95719 11/20)"
+       ]
+      },
+      {
+       "k": "sub",
+       "p": "sk",
+       "text": "Dr. Sikazwe: how cerumenolytics work (slides 5-8)"
+      },
+      {
+       "k": "prof",
+       "p": "sk",
+       "rows": [
+        [
+         "Goal",
+         "Soften, liquefy, hydrate or disintegrate cerumen (slide 5)"
+        ],
+        [
+         "Grouped by preparation (slide 6)",
+         "Water based: acetic acid, Colace, hydrogen peroxide, sodium bicarbonate, sterile saline. Oil based: almond oil, arachis oil, Earex, olive oil, mineral oil. Nonwater, nonoil: Audax (choline salicylate, glycerine) and {{Debrox}} (carbamide peroxide)"
+        ],
+        [
+         "Debrox (slide 8)",
+         "A {{1:1 urea-hydrogen peroxide}} complex; it dissociates to release H2O2, which generates effervescing O2, and the effervescence breaks up the wax; catalase in cerumen breaks H2O2 into O2 and water (T@8338 11/18)"
+        ],
+        [
+         "Docusate sodium (slide 7)",
+         "An anionic surfactant (-SO3H on the slide) that increases water entry to emulsify cerumen by lowering surface tension between water and cerumen (T@5934 11/18)"
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Counsel and follow up",
+     "profs": [
+      "la"
+     ],
+     "q": "How are ear drops given, and when does the patient return?",
+     "src": "Lam Otic slides 14, 16, 33-34; handout p. 7; T@95193, T@96267, T@99554, T@99717 11/20; her Question 26 answer (emailed 11/20)",
+     "blocks": [
+      {
+       "k": "sub",
+       "p": "la",
+       "text": "Instilling ear drops, adult (slide 33, her Question 26 answer)"
+      },
+      {
+       "k": "facts",
+       "p": "la",
+       "rows": [
+        [
+         "1",
+         "Lay a {{folded towel}} on a kitchen or bathroom counter"
+        ],
+        [
+         "2",
+         "Lay the head on the towel with the {{affected ear up}}"
+        ],
+        [
+         "3",
+         "Gently pull the {{earlobe out and up}} to straighten the auditory tube"
+        ],
+        [
+         "4",
+         "Put the recommended number of drops into the ear canal"
+        ],
+        [
+         "5",
+         "Gently {{push on the ear flap}} to encourage the liquid into the ear"
+        ],
+        [
+         "6",
+         "Stay lying down for at least {{2 minutes}}"
+        ]
+       ]
+      },
+      {
+       "k": "sub",
+       "p": "la",
+       "text": "Children and a child who does not stay still"
+      },
+      {
+       "k": "facts",
+       "p": "la",
+       "rows": [
+        [
+         "Child under 3",
+         "Pull the ear {{back and down}} (slide 33); lie with the affected ear up (handout p. 7)"
+        ],
+        [
+         "Child will not stay still",
+         "Hold them down if possible and keep them still for a few minutes, because running around drips the solution out (T@99717 11/20)"
+        ],
+        [
+         "Cotton",
+         "A cotton ball over the ear keeps the solution in (T@99554 11/20); the handout: a piece of clean cotton, large enough to remove easily, in the ear for no longer than {{1 hour}} (handout p. 7)"
+        ]
+       ]
+      },
+      {
+       "k": "sub",
+       "p": "la",
+       "text": "Counseling on carbamide peroxide"
+      },
+      {
+       "k": "pts",
+       "p": "la",
+       "items": [
+        "Use {{5-10 drops}} twice a day for no more than {{4 days}}",
+        "Keep the drops in the canal for several minutes; a cotton ball may be recommended to keep them in place (T@95193 11/20)",
+        "Do not use cotton swabs or ear candles; swabs are listed as an inappropriate removal method (handout p. 2)"
+       ]
+      },
+      {
+       "k": "sub",
+       "p": "la",
+       "text": "Follow up"
+      },
+      {
+       "k": "facts",
+       "p": "la",
+       "rows": [
+        [
+         "Cerumen",
+         "Contact the primary care provider if symptoms persist after {{four days}} (slide 16)"
+        ],
+        [
+         "Slide 34 monitoring list",
+         "Printed after the water-clogged ear section (slides 31-33), not for cerumen: pain, burning or irritation with medication use; ear drainage or discharge, dizziness, or recent ear surgery. For cerumen, slide 16 gives only the four-day rule"
+        ]
+       ]
+      }
+     ]
+    }
+   ],
+   "patients": [
+    {
+     "t": "A 68-year-old reports fullness in the left ear, itching and slowly reduced hearing for 5 days after trying a cotton swab to clean it. There is no discharge, fever or trauma, and no earlier ear surgery.",
+     "q": "Which ear disorder is most likely?",
+     "o": [
+      "Water-clogged ear",
+      "External otitis (swimmer's ear)",
+      "Cerumen impaction",
+      "Ruptured tympanic membrane"
+     ],
+     "a": 2,
+     "w": "Itching is often present, loss of hearing is often present and there is no discharge: cerumen impaction (slide 23). The cotton swab is a listed risk factor (handout p. 2).",
+     "x": {
+      "Water-clogged ear": "A water-clogged ear has no itching (slide 23).",
+      "External otitis (swimmer's ear)": "External otitis has acute-onset pain and clear discharge, with a swollen canal and fever (slide 23).",
+      "Ruptured tympanic membrane": "A ruptured membrane gives brief severe pain and abrupt hearing loss, with no itching (slide 24)."
+     }
+    },
+    {
+     "t": "The patient above is 68, has no signs of infection or trauma, takes no medicine that matters here and has no allergies.",
+     "q": "What is the best recommendation?",
+     "o": [
+      "Isopropyl alcohol 95% in anhydrous glycerin 5%",
+      "Carbamide peroxide 6.5% in anhydrous glycerin",
+      "Ear candles",
+      "Seek treatment from the primary care provider now"
+     ],
+     "a": 1,
+     "w": "A candidate with cerumen impaction: the only nonprescription product she recommends is carbamide peroxide 6.5% (slides 14, 42).",
+     "x": {
+      "Isopropyl alcohol 95% in anhydrous glycerin 5%": "That is the drying drop for a water-clogged ear (slide 31).",
+      "Ear candles": "Ear candles are not recommended: dangers and no evidence (slide 15; handout p. 4).",
+      "Seek treatment from the primary care provider now": "Referral is for patients with an exclusion; this patient has none."
+     }
+    },
+    {
+     "t": "A 45-year-old has ear fullness and itching and thinks wax is the cause. They had ear surgery three weeks ago and deny discharge.",
+     "q": "What do you recommend?",
+     "o": [
+      "Carbamide peroxide 6.5% twice daily for up to four days",
+      "Warm-water irrigation with a rubber bulb syringe at home",
+      "Refer, because surgery within 6 weeks excludes self-care",
+      "A wet wrung-out washcloth over a finger on the outer canal"
+     ],
+     "a": 2,
+     "w": "Ear surgery within 6 weeks is an exclusion (slide 10), so the patient is referred even without discharge.",
+     "x": {
+      "Carbamide peroxide 6.5% twice daily for up to four days": "The drops are for candidates; surgery within 6 weeks excludes self-care.",
+      "Warm-water irrigation with a rubber bulb syringe at home": "Irrigation is also self-care; the exclusion applies to it too.",
+      "A wet wrung-out washcloth over a finger on the outer canal": "The washcloth is a self-care measure; this patient is excluded from self-care."
+     }
+    },
+    {
+     "t": "A mother asks for carbamide peroxide drops for her 9-year-old, who has itching and ear fullness.",
+     "q": "What is the best response?",
+     "o": [
+      "Give 5-10 drops twice daily for up to four days",
+      "Refer, because age under 12 excludes self-care",
+      "Use warm-water irrigation at home with a bulb syringe",
+      "Recommend a cotton swab to gently remove the wax"
+     ],
+     "a": 1,
+     "w": "Under 12 years of age is an exclusion to self-care for cerumen (slide 10), and she said the ear anatomy in children makes treatment difficult (T@93413 11/20).",
+     "x": {
+      "Give 5-10 drops twice daily for up to four days": "That is the adult directions; the age exclusion applies.",
+      "Use warm-water irrigation at home with a bulb syringe": "Irrigation is self-care; the age exclusion applies to the child.",
+      "Recommend a cotton swab to gently remove the wax": "Swabs are a listed risk factor for impaction, not a treatment (handout p. 2)."
+     }
+    },
+    {
+     "t": "A 55-year-old used carbamide peroxide 6.5% twice daily for 4 days. The fullness and hearing loss remain.",
+     "q": "What is the next step?",
+     "o": [
+      "Contact the primary care provider",
+      "Continue the drops for 4 more days",
+      "Switch to isopropyl alcohol 95% in glycerin 5%",
+      "Use an ear candle"
+     ],
+     "a": 0,
+     "w": "Symptoms that persist after four days mean contact the primary care provider (slide 16).",
+     "x": {
+      "Continue the drops for 4 more days": "The course is up to four days; the plan after that is referral.",
+      "Switch to isopropyl alcohol 95% in glycerin 5%": "Isopropyl alcohol dries a water-clogged ear; it is not a cerumenolytic (slide 31).",
+      "Use an ear candle": "Ear candles are not recommended (slide 15)."
+     }
+    },
+    {
+     "t": "A 70-year-old will start carbamide peroxide drops in the right ear.",
+     "q": "Which instructions are correct?",
+     "o": [
+      "Lie with the right ear up on a towel, pull the lobe out and up, give the drops, stay down 2 minutes",
+      "Stand with the head tilted to the side, pull the lobe out and up, give the drops, sit up at once",
+      "Lie with the right ear down on a towel, pull the lobe out and up, give the drops, stay down 1 minute",
+      "Lie with the right ear up on a towel, pull the lobe back and down, give the drops, stay down 2 minutes"
+     ],
+     "a": 0,
+     "w": "Slide 33: folded towel, affected ear up, earlobe out and up, drops, at least 2 minutes lying down.",
+     "x": {
+      "Lie with the right ear down on a towel, pull the lobe out and up, give the drops, stay down 1 minute": "The affected ear is up, and the stay is at least 2 minutes (slide 33).",
+      "Lie with the right ear up on a towel, pull the lobe back and down, give the drops, stay down 2 minutes": "Back and down is the pull for a child under 3; the adult pull is out and up (slide 33).",
+      "Stand with the head tilted to the side, pull the lobe out and up, give the drops, sit up at once": "The patient lies down with the ear up, and stays down for at least 2 minutes (slide 33)."
+     }
+    }
+   ],
+   "numbers": [
+    [
+     "6.5%",
+     "carbamide peroxide in anhydrous glycerin",
+     "Lam Otic slide 14"
+    ],
+    [
+     "5-10 drops",
+     "carbamide peroxide, into the affected ear(s)",
+     "Lam Otic slide 14"
+    ],
+    [
+     "Twice daily, up to 4 days",
+     "carbamide peroxide use",
+     "Lam Otic slide 14"
+    ],
+    [
+     "4 days",
+     "symptoms persist: contact the primary care provider",
+     "Lam Otic slide 16"
+    ],
+    [
+     "< 12 years",
+     "age exclusion on slide 10; handout says 12 and older only",
+     "Lam Otic slide 10; handout p. 3"
+    ],
+    [
+     "6 weeks",
+     "ear surgery within this time excludes self-care",
+     "Lam Otic slide 10"
+    ],
+    [
+     "At least 2 minutes",
+     "stay lying down after the drops",
+     "Lam Otic slide 33"
+    ],
+    [
+     "Under 3 years",
+     "pull the ear back and down",
+     "Lam Otic slide 33"
+    ],
+    [
+     "1 hour",
+     "longest time a clean cotton piece stays in the ear of a child who will not stay still",
+     "Lam handout p. 7"
+    ]
+   ]
+  },
+  {
+   "id": "water-clogged-ear",
+   "name": "Water-clogged ear",
+   "group": "selfcare",
+   "lectures": "Lam 11/20 (Exam 3)",
+   "topics": [
+    "lt-water",
+    "lt-impl",
+    "lt-diff",
+    "lt-case"
+   ],
+   "short": [
+    "Water stays in the [[eac|external auditory canal]] when moisture is retained (hair, narrow canal, wax) or when exposure is high (sweating, humidity, swimming).",
+    "No pain, no itching, no discharge; hearing loss and a feeling of fullness or wetness.",
+    "Prevent with a towel after bathing, a bathing cap or earplugs when swimming; dry with a hair dryer on the lowest setting.",
+    "Isopropyl alcohol 95% in anhydrous glycerin 5%: 4-5 drops, no minimum age (spoken: 70%).",
+    "Ear discharge, pain with discharge, dizziness, tympanostomy tubes or ear surgery mean refer."
+   ],
+   "steps": [
+    {
+     "title": "Cause and timing: why water stays in the canal",
+     "profs": [
+      "la"
+     ],
+     "q": "What retains moisture, and who gets it most?",
+     "src": "Lam Otic slide 20; handout p. 4; T@96557, T@96922 11/20",
+     "blocks": [
+      {
+       "k": "facts",
+       "p": "la",
+       "rows": [
+        [
+         "What it is",
+         "Retention of water within the canal"
+        ],
+        [
+         "Moisture retention",
+         [
+          "{{Excessive hair growth}}",
+          "Canal narrowing",
+          "Wax or debris buildup"
+         ]
+        ],
+        [
+         "Excessive moisture",
+         [
+          "{{Sweating}}",
+          "High humidity",
+          "{{Swimming}}"
+         ]
+        ],
+        [
+         "What she said",
+         "Hairs in the canal take on volume when exposed to even a small amount of water, which gives the feeling of fullness; it is most common with sweating, humidity and swimming, because the water exposure is constant (T@96557, T@96922 11/20)"
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Recognise it, and tell the ear disorders apart",
+     "profs": [
+      "la"
+     ],
+     "q": "Which findings make a water-clogged ear, and which make an infection?",
+     "src": "Lam Otic slides 21, 23-25; handout p. 5; T@97137, T@97359, T@97615 11/20",
+     "blocks": [
+      {
+       "k": "facts",
+       "p": "la",
+       "rows": [
+        [
+         "Symptoms (slide 21)",
+         [
+          "{{Hearing impairment}}",
+          "Discomfort",
+          "{{Fullness or wetness}}"
+         ]
+        ],
+        [
+         "Slide 23: water-clogged ear",
+         "Pain {{none}}; itching {{no}}; loss of hearing often; discharge none"
+        ],
+        [
+         "Versus cerumen",
+         "Cerumen impaction has {{itching}}; a water-clogged ear has none (T@97359 11/20)"
+        ],
+        [
+         "Versus swimmer's ear",
+         "[[swimmers-ear|Swimmer's ear]] is an infection with itching and discharge (T@97615 11/20)"
+        ]
+       ]
+      },
+      {
+       "k": "sub",
+       "p": "la",
+       "text": "Other ear disorders (slides 24-25): she said slide 23 is the main one"
+      },
+      {
+       "k": "facts",
+       "p": "la",
+       "rows": [
+        [
+         "Ruptured tympanic membrane",
+         "Pain brief, severe; no itching; hearing loss abrupt; discharge if associated with ear infection (otitis media)"
+        ],
+        [
+         "Otitis media",
+         "Pain sharp, steady, unilateral; no itching; hearing loss sometimes decreased; discharge maybe; bulging eardrum, sometimes swollen lymph nodes, dizziness"
+        ],
+        [
+         "Foreign object",
+         "Dull to severe pain with a sense of fullness; itching yes; hearing loss yes; discharge if associated with infection; if the obstruction is not removed, infection and tinnitus may occur"
+        ],
+        [
+         "Trauma to ear",
+         "Pain from sharp to steady to brief and severe; itching rare; hearing loss varies; discharge rarely; untreated hematomas may cause swelling"
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Self-care or refer?",
+     "profs": [
+      "la"
+     ],
+     "q": "Which findings exclude self-care, and what is the goal?",
+     "src": "Lam Otic slides 26-27, 36-37; handout pp. 5-6; T@97876 11/20",
+     "blocks": [
+      {
+       "k": "sub",
+       "p": "la",
+       "text": "Exclusions for self-care (slide 26): any one means refer"
+      },
+      {
+       "k": "pts",
+       "p": "la",
+       "items": [
+        "Signs of infection or ear discharge (irritation or rash)",
+        "Pain associated with ear discharge",
+        "{{Dizziness}}",
+        "Bleeding or signs of trauma",
+        "Presence of a ruptured tympanic membrane: abrupt hearing loss and sharp pain",
+        "{{Tympanostomy tube(s)}} present",
+        "Ear surgery within 6 weeks",
+        "Less than 12 years of age",
+        "Worsening of the condition after attempted self-treatment",
+        "Incapable of following proper instructions"
+       ]
+      },
+      {
+       "k": "facts",
+       "p": "la",
+       "rows": [
+        [
+         "Goal (slide 27)",
+         [
+          "{{Prevent}} recurrence or occurrence",
+          "Use a safe and effective agent"
+         ]
+        ],
+        [
+         "Her case (slides 36-37)",
+         "A 12-year-old with wetness, fullness and ear discharge after swimming lessons, with tympanostomy tubes placed at age 4: {{not a candidate}}; the mother contacts the pediatrician immediately"
+        ],
+        [
+         "Age note",
+         "Slide 26 excludes under 12 from self-care; slide 31 prints no minimum age for isopropyl alcohol; slide 29 prints water-absorbing earplugs for children > 11 years old (spoken: 11 years and older)"
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Treat it: prevent, dry, then use the drops",
+     "profs": [
+      "la"
+     ],
+     "q": "What prevents water from staying in the ear, and what dries water already there?",
+     "src": "Lam Otic slides 29-31; handout p. 6; T@98127, T@98398, T@98558, T@98781, T@98858, T@99315, T@99397, T@99431 11/20",
+     "blocks": [
+      {
+       "k": "sub",
+       "p": "la",
+       "text": "Prevent water from entering or staying (slide 29; handout p. 6)"
+      },
+      {
+       "k": "facts",
+       "p": "la",
+       "rows": [
+        [
+         "Towel",
+         "Wipe the ears well with a {{towel}} after bathing or showering"
+        ],
+        [
+         "Bathing cap or earplugs",
+         "A {{bathing cap}} or earplugs when swimming protect the ears from water (spoken: earplugs and bathing cap keep water out, T@98127 11/20)"
+        ],
+        [
+         "Cotton balls coated with petroleum jelly",
+         "Handout: for water exposure of less than 15 minutes; she said she knows no one who likes the feeling, but the guidelines allow it (T@98398 11/20)"
+        ],
+        [
+         "Earplugs, handout",
+         "Handout: for water exposure of more than 15 minutes"
+        ]
+       ]
+      },
+      {
+       "k": "sub",
+       "p": "la",
+       "text": "Dry water already in the canal (slide 30; handout p. 6)"
+      },
+      {
+       "k": "facts",
+       "p": "la",
+       "rows": [
+        [
+         "Water-absorbing earplugs",
+         "Slide 29 and handout p. 6 print {{children > 11 years old}}; she said \"children that are 11 years and older\" (T@98536 11/20). Insert into the canal and leave in {{5-10 minutes}} to absorb trapped water, then remove and discard; they absorb only a little water and do not prevent water from entering during bathing or swimming (handout; T@98558 11/20)"
+        ],
+        [
+         "Pull the lobe",
+         "Pull the lobe gently and tilt the head downward so the water drips out (handout; T@98781 11/20)"
+        ],
+        [
+         "Hair dryer",
+         "Blow dryer on the {{lowest heat}} setting to help dry the canal; not the highest setting (handout; T@98858 11/20)"
+        ]
+       ]
+      },
+      {
+       "k": "line",
+       "p": "la",
+       "label": "Water in the canal",
+       "title": "Isopropyl alcohol 95% in anhydrous glycerin 5%",
+       "drugs": [
+        "isopropyl-alcohol-glycerin"
+       ],
+       "pts": [
+        "An alcohol that acts as a {{drying agent}}",
+        "{{No minimum age}} printed (slide 31)",
+        "Instill {{4-5 drops}} in the affected ear",
+        "Conflict: slide 31 prints 95% alcohol in 5% anhydrous glycerin; she said \"it has to be 70% concentration\" (T@99315 11/20); the handout says concentrations greater than 70% alcohol are also effective skin disinfectants (handout p. 6)"
+       ],
+       "move": "Move to the primary care provider when there is no benefit after several days of use (slide 34); she said 7 days."
+      }
+     ]
+    },
+    {
+     "title": "Counsel and follow up",
+     "profs": [
+      "la"
+     ],
+     "q": "How are ear drops given, and when does the patient return?",
+     "src": "Lam Otic slides 33-34; handout p. 7; T@99554, T@99717, T@100235 11/20; her Question 26 answer (emailed 11/20)",
+     "blocks": [
+      {
+       "k": "sub",
+       "p": "la",
+       "text": "Instilling ear drops, adult (slide 33, her Question 26 answer)"
+      },
+      {
+       "k": "facts",
+       "p": "la",
+       "rows": [
+        [
+         "1",
+         "Lay a {{folded towel}} on a kitchen or bathroom counter"
+        ],
+        [
+         "2",
+         "Lay the head on the towel with the {{affected ear up}}"
+        ],
+        [
+         "3",
+         "Gently pull the {{earlobe out and up}} to straighten the auditory tube"
+        ],
+        [
+         "4",
+         "Put the recommended number of drops into the ear canal"
+        ],
+        [
+         "5",
+         "Gently {{push on the ear flap}} to encourage the liquid into the ear"
+        ],
+        [
+         "6",
+         "Stay lying down for at least {{2 minutes}}"
+        ]
+       ]
+      },
+      {
+       "k": "sub",
+       "p": "la",
+       "text": "Children and a child who does not stay still"
+      },
+      {
+       "k": "facts",
+       "p": "la",
+       "rows": [
+        [
+         "Child under 3",
+         "Pull the ear {{back and down}} (slide 33); lie with the affected ear up (handout p. 7)"
+        ],
+        [
+         "Child will not stay still",
+         "Hold them down if possible and keep them still for a few minutes, because running around drips the solution out (T@99717 11/20)"
+        ],
+        [
+         "Cotton",
+         "A cotton ball over the ear keeps the solution in (T@99554 11/20); the handout: a piece of clean cotton, large enough to remove easily, in the ear for no longer than {{1 hour}} (handout p. 7)"
+        ]
+       ]
+      },
+      {
+       "k": "sub",
+       "p": "la",
+       "text": "Follow up"
+      },
+      {
+       "k": "facts",
+       "p": "la",
+       "rows": [
+        [
+         "No benefit",
+         [
+          "Slide 34 and handout: referral is indicated {{after several days of use}}",
+          "Spoken: if there is no benefit after {{7 days}} of use, see the primary care provider (T@100235 11/20)"
+         ]
+        ],
+        [
+         "Develops pain, burning or irritation",
+         "Refer (slide 34)"
+        ],
+        [
+         "Ear drainage or discharge, dizziness, or recent ear surgery",
+         "Refer (slide 34)"
+        ]
+       ]
+      }
+     ]
+    }
+   ],
+   "patients": [
+    {
+     "t": "A mother brings her 14-year-old son. Since a swim meet he has wetness, fullness and ear discharge. He had tympanostomy tubes placed at age 3.",
+     "q": "What is the most appropriate intervention?",
+     "o": [
+      "Isopropyl alcohol 95% in anhydrous glycerin 5%, 4-5 drops",
+      "A water-absorbing single-use earplug for 5-10 minutes",
+      "Carbamide peroxide 6.5% twice daily",
+      "The mother should contact the pediatrician immediately"
+     ],
+     "a": 3,
+     "w": "Tympanostomy tubes and ear discharge are exclusions to self-care (slides 26, 36-37), so the answer is referral.",
+     "x": {
+      "Isopropyl alcohol 95% in anhydrous glycerin 5%, 4-5 drops": "The drying drops are for candidates; tubes and discharge exclude him.",
+      "A water-absorbing single-use earplug for 5-10 minutes": "The earplug is also self-care.",
+      "Carbamide peroxide 6.5% twice daily": "Carbamide peroxide is for cerumen and is self-care too."
+     }
+    },
+    {
+     "t": "A 25-year-old swimmer has fullness, wetness and muffled hearing after training. There is no pain, itching or discharge, and no ear tubes or surgery.",
+     "q": "Which product fits?",
+     "o": [
+      "Carbamide peroxide 6.5% in anhydrous glycerin drops",
+      "Isopropyl alcohol 95% in anhydrous glycerin 5%",
+      "An ear candle placed at the canal opening",
+      "A cotton swab dipped in warm water"
+     ],
+     "a": 1,
+     "w": "No pain, no itching, hearing loss and fullness or wetness: a water-clogged ear; the drying drop is isopropyl alcohol (slides 23, 31).",
+     "x": {
+      "Carbamide peroxide 6.5% in anhydrous glycerin drops": "That product removes cerumen; this patient has no itching or wax findings.",
+      "An ear candle placed at the canal opening": "Ear candles are not recommended (slide 15).",
+      "A cotton swab dipped in warm water": "A swab is not a listed treatment; swabs are a risk factor for impaction (handout p. 2)."
+     }
+    },
+    {
+     "t": "A 30-year-old has acute ear pain, itching, clear discharge, a swollen ear canal and a fever.",
+     "q": "Which disorder is this, and what is the plan?",
+     "o": [
+      "Water-clogged ear; use isopropyl alcohol drops",
+      "Cerumen impaction; use carbamide peroxide",
+      "Swimmer's ear (an infection): refer",
+      "Foreign object in the canal; use irrigation"
+     ],
+     "a": 2,
+     "w": "Acute onset pain, itching and clear discharge with a swollen canal and fever are external otitis (slide 23). It is an infection, so refer (T@92950 11/20).",
+     "x": {
+      "Water-clogged ear; use isopropyl alcohol drops": "A water-clogged ear has no pain, itching or discharge.",
+      "Cerumen impaction; use carbamide peroxide": "Cerumen impaction has no discharge.",
+      "Foreign object in the canal; use irrigation": "Foreign objects are not described with clear discharge and fever; infection is not self-treated."
+     }
+    },
+    {
+     "t": "A 40-year-old used isopropyl alcohol 95% in glycerin 5% for 10 days. The fullness and hearing loss remain.",
+     "q": "What is the next step?",
+     "o": [
+      "Use the drops for 10 more days",
+      "Switch to carbamide peroxide 6.5%",
+      "Use a hair dryer on the highest heat",
+      "See the primary care provider"
+     ],
+     "a": 3,
+     "w": "No benefit after several days of use (spoken: 7 days) means refer (slide 34; T@100235 11/20).",
+     "x": {
+      "Use the drops for 10 more days": "Ten days already exceeds both the printed and the spoken limits.",
+      "Switch to carbamide peroxide 6.5%": "Carbamide peroxide treats cerumen; the plan after no benefit is referral.",
+      "Use a hair dryer on the highest heat": "The dryer is used on the lowest heat setting (handout)."
+     }
+    },
+    {
+     "t": "A recreational swimmer gets water in the ears every summer and asks how to prevent it.",
+     "q": "What do you advise?",
+     "o": [
+      "Put carbamide peroxide drops in both ears before each swim",
+      "Towel the ears after bathing; use a bathing cap or earplugs to swim",
+      "Burn an ear candle in each ear after every swim to draw water out",
+      "Clean both ear canals with a cotton swab after each swim to dry them"
+     ],
+     "a": 1,
+     "w": "Prevention (slide 29): towel after bathing or showering, bathing cap or earplugs when swimming.",
+     "x": {
+      "Put carbamide peroxide drops in both ears before each swim": "Carbamide peroxide is a cerumenolytic, not a preventive.",
+      "Burn an ear candle in each ear after every swim to draw water out": "Ear candles are not recommended (slide 15) and are not a listed measure here.",
+      "Clean both ear canals with a cotton swab after each swim to dry them": "Swabs are not a listed measure; they are a risk factor for impaction (handout p. 2)."
+     }
+    },
+    {
+     "t": "A patient asks how to use a hair dryer to dry the ear canal.",
+     "q": "What do you tell them?",
+     "o": [
+      "Use the highest setting for a short time",
+      "Use the lowest heat setting",
+      "Hold it against the ear canal",
+      "Use it only after isopropyl alcohol drops"
+     ],
+     "a": 1,
+     "w": "The dryer is used on the lowest heat setting (handout p. 6; T@98858 11/20).",
+     "x": {
+      "Use the highest setting for a short time": "Do not use the highest setting (T@98858 11/20).",
+      "Hold it against the ear canal": "Holding it against the canal is not in her instructions.",
+      "Use it only after isopropyl alcohol drops": "The dryer and the drops are separate options."
+     }
+    }
+   ],
+   "numbers": [
+    [
+     "95% / 5%",
+     "isopropyl alcohol in anhydrous glycerin (spoken: 70%)",
+     "Lam Otic slide 31; T@99315 11/20"
+    ],
+    [
+     "4-5 drops",
+     "isopropyl alcohol, in the affected ear",
+     "Lam Otic slide 31"
+    ],
+    [
+     "No minimum age",
+     "isopropyl alcohol printed on the slide",
+     "Lam Otic slide 31"
+    ],
+    [
+     "> 11 years (spoken: 11 and older)",
+     "water-absorbing earplugs: slide 29 and handout p. 6 print \"> 11\"; she said \"11 years and older\"",
+     "Lam Otic slide 29; handout p. 6; T@98536 11/20"
+    ],
+    [
+     "5-10 minutes",
+     "water-absorbing earplug stays in the canal",
+     "Lam handout p. 6; T@98558 11/20"
+    ],
+    [
+     "15 minutes",
+     "petroleum jelly cotton balls: exposure under 15; earplugs: over 15 (handout)",
+     "Lam handout p. 6"
+    ],
+    [
+     "Lowest heat",
+     "hair dryer setting",
+     "Lam handout p. 6; T@98858 11/20"
+    ],
+    [
+     "Several days, spoken 7",
+     "follow up if no benefit",
+     "Lam Otic slide 34; T@100235 11/20"
+    ],
+    [
+     "At least 2 minutes",
+     "stay lying down after the drops",
+     "Lam Otic slide 33"
+    ]
+   ]
+  }
+ ],
+ "drugs": {
+  "carbamide-peroxide-otic": {
+   "name": "Carbamide peroxide 6.5% in anhydrous glycerin (ear drops)",
+   "brand": "Debrox",
+   "sk": {
+    "text": "A 1:1 urea-hydrogen peroxide complex. It dissociates to release H2O2, which generates effervescing O2; the effervescence breaks up the wax. Catalase, also present in cerumen, breaks H2O2 into O2 and water, and the urea stabilizes the H2O2. Listed on slide 6 under nonwater, nonoil based preparations.",
+    "src": "Sikazwe OOO slides 6, 8; T@8076, T@8338, T@9225 11/18"
+   },
+   "how": {
+    "p": "sk",
+    "text": "A 1:1 urea-hydrogen peroxide complex. It dissociates to release H2O2, which generates effervescing O2; the effervescence breaks up the wax. Catalase, also present in cerumen, breaks H2O2 into O2 and water, and the urea stabilizes the H2O2.",
+    "src": "Sikazwe OOO slide 8; T@8076, T@8338, T@9225 11/18"
+   },
+   "figs": [],
+   "la": {
+    "text": "FDA-approved nonprescription product for hardened or impacted cerumen. 5-10 drops into the affected ear(s), remaining in the canal for several minutes; twice daily for up to four days. Can be used alone or with warm-water irrigation; remaining cerumen is removed with gentle warm-water irrigation with a rubber otic bulb syringe. Contact the primary care provider if symptoms persist after four days.",
+    "src": "Lam Otic slide 14, 16; handout pp. 3-4; T@94692, T@95193, T@95428, T@96267 11/20"
+   },
+   "counsel": [
+    "Put 5-10 drops in the affected ear(s) and keep them in the canal for several minutes; a cotton ball may be recommended to keep the drops in place.",
+    "Use twice a day for up to 4 days.",
+    "Lie with the affected ear up on a folded towel, pull the earlobe out and up, give the drops, gently push the ear flap and stay lying down at least 2 minutes.",
+    "Loosened wax can be removed with gentle warm-water irrigation with a rubber otic bulb syringe.",
+    "If symptoms persist after 4 days, contact the primary care provider."
+   ],
+   "counselSrc": "Lam Otic slides 14, 16, 33; handout pp. 3-4, 7; T@95193 11/20",
+   "avoid": [
+    "Signs of infection or ear discharge, pain with discharge, bleeding or signs of trauma, a ruptured tympanic membrane (slide 10)",
+    "Tympanostomy tube(s) present; ear surgery within 6 weeks (slide 10)",
+    "Age: slide 10 excludes under 12; handout: twelve years and older only; spoken: 12 years or under are not treated",
+    "Worsening after attempted self-treatment; unable to follow instructions (slide 10)"
+   ]
+  },
+  "isopropyl-alcohol-glycerin": {
+   "name": "Isopropyl alcohol 95% in anhydrous glycerin 5% (ear drops)",
+   "brand": "",
+   "how": {
+    "p": "la",
+    "text": "An alcohol that acts as a drying agent in the ear canal.",
+    "src": "Lam Otic slide 31; handout p. 6; T@99315 11/20"
+   },
+   "figs": [],
+   "la": {
+    "text": "Drying drops for a water-clogged ear. Slide 31: isopropyl alcohol 95% in anhydrous glycerin 5%; no minimum age; instill 4-5 drops in the affected ear. She said 70% concentration (T@99315 11/20); the handout says concentrations greater than 70% alcohol are also effective skin disinfectants (p. 6). Adults lie down, drip, put cotton over the ear and leave it for a few minutes; children are held still for a few minutes so the solution does not drip out (T@99554, T@99717 11/20). Refer if there is no benefit after several days of use (slide 34); spoken: 7 days.",
+    "src": "Lam Otic slides 31, 33-34; handout pp. 6-7; T@99315, T@99397, T@99431, T@99554, T@100235 11/20"
+   },
+   "counsel": [
+    "Put 4-5 drops in the affected ear.",
+    "Lie with the affected ear up on a folded towel, pull the earlobe out and up, give the drops, gently push the ear flap and stay lying down at least 2 minutes (slide 33).",
+    "A cotton ball over the ear keeps the solution in.",
+    "See the primary care provider if there is no benefit after several days of use (spoken: 7 days).",
+    "Stop and see a provider for pain, burning or irritation with the medicine, ear drainage or discharge, dizziness or recent ear surgery (slide 34)."
+   ],
+   "counselSrc": "Lam Otic slides 31, 33-34; T@99554, T@100235 11/20",
+   "avoid": [
+    "Signs of infection or ear discharge, pain with discharge, dizziness, bleeding or signs of trauma, a ruptured tympanic membrane (slide 26)",
+    "Tympanostomy tube(s) present; ear surgery within 6 weeks (slide 26)",
+    "Under 12 years of age is excluded on slide 26; slide 31 prints no minimum age for the drops"
+   ]
+  },
+  "docusate-otic": {
+   "name": "Docusate sodium (Colace), water-based cerumenolytic",
+   "brand": "Colace",
+   "sk": {
+    "text": "A water-based cerumenolytic (slide 6). An anionic surfactant (-SO3H on the slide) that increases water entry to emulsify cerumen: it lowers surface tension between water and cerumen by dissolving in both media through lipophilic and hydrophilic functional groups (slide 7). It is a stool softener on the slide. It is a topical agent; an ionic molecule is not expected to be absorbed well, so systemic effects are not a worry (T@7059 11/18).",
+    "src": "Sikazwe OOO slides 6-7; T@4901, T@5934, T@7059 11/18"
+   },
+   "how": {
+    "p": "sk",
+    "text": "An anionic surfactant that increases water entry to emulsify cerumen by lowering surface tension between water and cerumen; it dissolves in both media through lipophilic and hydrophilic functional groups.",
+    "src": "Sikazwe OOO slide 7; T@5934 11/18"
+   },
+   "figs": [],
+   "la": {
+    "text": "Not recommended. Her handout lists docusate sodium among the water-based agents (with choline salicylate and phenazole) whose evidence suggests they are no more effective than water; she said the water-based and oil-based agents are not recommended anymore and carbamide peroxide is the only product to recommend.",
+    "src": "Lam handout p. 4; slide 15; T@95576 11/20"
+   },
+   "counsel": [
+    "Dr. Lam does not recommend water-based or oil-based cerumenolytics; the nonprescription product she recommends is carbamide peroxide 6.5% in anhydrous glycerin."
+   ],
+   "counselSrc": "Lam Otic slide 15; handout p. 4; T@95576 11/20",
+   "avoid": [
+    "Not recommended by Dr. Lam; Dr. Sikazwe's slide 6 groups choline salicylate (Audax) as nonwater, nonoil, while her handout lists choline salicylate as water-based"
+   ]
+  }
+ },
+ "terms": {
+  "cerumen": [
+   "Cerumen (earwax)",
+   "Lubricates the canal, traps foreign material and acts as a waterproof barrier to pathogen entry; its acidic pH and antimicrobial substances inhibit bacterial and fungal growth.",
+   "Lam Otic slide 7; handout p. 2; T@91343, T@91760 11/20"
+  ],
+  "eac": [
+   "External auditory canal (EAC)",
+   "The canal that leads from the outer ear to the tympanic membrane; wax and water build up there.",
+   "Lam Otic slides 4, 7; handout p. 2; T@90689 11/20"
+  ],
+  "tm": [
+   "Tympanic membrane (eardrum)",
+   "Conducts sound to the middle ear; the goal of treatment is not to damage it.",
+   "Lam Otic slide 4; handout p. 2; T@90689 11/20"
+  ],
+  "swimmers-ear": [
+   "Swimmer's ear (external otitis)",
+   "An ear infection with acute-onset pain (mild to severe), itching, clear discharge and a swollen ear canal; it is not treated with the self-care products.",
+   "Lam Otic slide 23; T@97615 11/20"
+  ]
+ },
+ "tell": [
+  {
+   "id": "otic-three",
+   "title": "Water-clogged ear, cerumen impaction or swimmer's ear",
+   "cols": [
+    "Water-clogged ear",
+    "Cerumen impaction",
+    "External otitis (swimmer's ear)"
+   ],
+   "path": [
+    {
+     "q": "Is there itching?",
+     "a": [
+      "No → **water-clogged ear** (no pain, no itching, no discharge)",
+      "Yes → next question"
+     ]
+    },
+    {
+     "q": "Is there discharge or acute-onset pain?",
+     "a": [
+      "Yes, clear discharge and acute pain → **swimmer's ear**, an infection: refer",
+      "No discharge, pain rare and dull → **cerumen impaction**"
+     ]
+    }
+   ],
+   "rows": [
+    [
+     "Pain",
+     [
+      "{{None}}",
+      "Rare; dull pain if present",
+      "Acute onset (mild to severe)"
+     ]
+    ],
+    [
+     "Itching",
+     [
+      "{{No}}",
+      "{{Often}}",
+      "{{Yes}}"
+     ],
+     "Itching separates the water-clogged ear from the other two."
+    ],
+    [
+     "Loss of hearing",
+     [
+      "{{Often}}",
+      "{{Often}}",
+      "Occasional"
+     ]
+    ],
+    [
+     "Discharge",
+     [
+      "None",
+      "None",
+      "{{Clear discharge}}"
+     ],
+     "Discharge makes it an infection: refer."
+    ],
+    [
+     "Other features",
+     [
+      "Sense of fullness or wetness",
+      "Sense of fullness or pressure in the ear",
+      "Swollen ear canal, stuffiness, fever, swollen lymph nodes"
+     ]
+    ]
+   ],
+   "src": "Lam Otic slide 23; handout p. 5; T@97359, T@97615 11/20"
+  },
+  {
+   "id": "otic-others",
+   "title": "Other ear disorders on slides 24 and 25",
+   "cols": [
+    "Ruptured tympanic membrane",
+    "Otitis media",
+    "Foreign object",
+    "Trauma to ear"
+   ],
+   "path": [
+    {
+     "q": "Is the hearing loss abrupt, with brief severe pain?",
+     "a": [
+      "Yes → **ruptured tympanic membrane**",
+      "No → next question"
+     ]
+    },
+    {
+     "q": "Is the pain sharp, steady and unilateral, with a bulging eardrum?",
+     "a": [
+      "Yes → **otitis media**",
+      "No → foreign object or trauma"
+     ]
+    }
+   ],
+   "rows": [
+    [
+     "Pain",
+     [
+      "Brief, severe",
+      "Sharp, steady, unilateral",
+      "Dull to severe with a sense of fullness",
+      "Sharp to steady to brief and severe"
+     ]
+    ],
+    [
+     "Itching",
+     [
+      "No",
+      "No",
+      "Yes",
+      "Rare"
+     ]
+    ],
+    [
+     "Loss of hearing",
+     [
+      "Abrupt",
+      "Sometimes decreased",
+      "Yes",
+      "Varies"
+     ]
+    ],
+    [
+     "Discharge",
+     [
+      "If associated with ear infection (otitis media)",
+      "Maybe",
+      "If associated with infection",
+      "Rarely"
+     ]
+    ],
+    [
+     "Other features",
+     [
+      "Not printed",
+      "Bulging eardrum, sometimes swollen lymph nodes, dizziness",
+      "If the obstruction is not removed, infection and tinnitus may occur",
+      "Untreated hematomas may cause swelling"
+     ]
+    ]
+   ],
+   "src": "Lam Otic slides 24-25; handout p. 5"
+  },
+  {
+   "id": "eardrops-adult-child",
+   "title": "Ear drops: adult steps or child under 3",
+   "cols": [
+    "Adult (slide 33)",
+    "Child under 3 (slide 33)"
+   ],
+   "path": [
+    {
+     "q": "Is the patient a child under 3?",
+     "a": [
+      "Yes → pull the ear **back and down**",
+      "No (adult) → pull the earlobe **out and up**; ages 3 and up are not printed on slide 33"
+     ]
+    },
+    {
+     "q": "Does the child stay still?",
+     "a": [
+      "No → hold them still for a few minutes; clean cotton may stay in the ear for no longer than 1 hour",
+      "Yes → give the drops and keep them lying down"
+     ]
+    }
+   ],
+   "rows": [
+    [
+     "Position",
+     [
+      "Folded towel on a counter, head on the towel, affected ear up",
+      "Lie with the affected ear up (handout p. 7)"
+     ]
+    ],
+    [
+     "Pull the ear",
+     [
+      "Earlobe {{out and up}}",
+      "Ear {{back and down}}"
+     ]
+    ],
+    [
+     "Drops",
+     [
+      "The recommended number into the ear canal",
+      "Not printed separately"
+     ]
+    ],
+    [
+     "After the drops",
+     [
+      "Gently push the ear flap; stay down at least {{2 minutes}}",
+      "Hold still for a few minutes so the solution does not drip out (T@99717 11/20)"
+     ]
+    ]
+   ],
+   "src": "Lam Otic slide 33; handout p. 7; T@99554, T@99717 11/20"
+  }
+ ],
+ "pairs": [
+  {
+   "title": "Carbamide peroxide or isopropyl alcohol ear drops?",
+   "a": [
+    "Carbamide peroxide 6.5% in anhydrous glycerin",
+    "impacted cerumen; 5-10 drops, twice daily, up to 4 days; follow up after 4 days"
+   ],
+   "b": [
+    "Isopropyl alcohol 95% in anhydrous glycerin 5%",
+    "water-clogged ear; 4-5 drops; no minimum age; follow up after several days (spoken: 7)"
+   ],
+   "same": "Both are nonprescription otic drops in anhydrous glycerin, given into the affected ear with the same lying-down steps.",
+   "profs": [
+    [
+     "la",
+     "Carbamide peroxide is the only nonprescription cerumenolytic she recommends (T@94692 11/20); isopropyl alcohol is a drying agent (slide 31)."
+    ],
+    [
+     "sk",
+     "Carbamide peroxide releases H2O2; catalase turns it into O2, and the effervescence breaks up the wax (slide 8)."
+    ]
+   ]
+  },
+  {
+   "title": "Debrox or Colace?",
+   "a": [
+    "Debrox (carbamide peroxide)",
+    "nonwater, nonoil based (Sikazwe slide 6); releases H2O2 then O2; the product she recommends"
+   ],
+   "b": [
+    "Colace (docusate sodium)",
+    "water based (Sikazwe slide 6); anionic surfactant that lets water into the wax; she does not recommend water-based agents"
+   ],
+   "same": "Both are cerumenolytics: they soften, liquefy, hydrate or disintegrate cerumen.",
+   "profs": [
+    [
+     "sk",
+     "Slides 5-8; Colace is a surfactant, Debrox an oxidizer that makes oxygen bubbles."
+    ],
+    [
+     "la",
+     "Handout p. 4 and slide 15: other cerumenolytics are not recommended; carbamide peroxide is the one to recommend."
+    ]
+   ]
+  }
+ ],
+ "photos": []
+}

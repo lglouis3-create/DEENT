@@ -623,6 +623,12 @@
    "sun"
   ],
   [
+   "gobj-sm-",
+   "ey",
+   "Guide: Dr. Smith, Eye, by learning objective",
+   "sun"
+  ],
+  [
    "ref-ey-",
    "ey",
    "Reference: Dr. Smith, Eye",
@@ -638,6 +644,12 @@
    "gobj-oo-",
    "oo",
    "Guide: Dr. Sikazwe, Otic/Oral/Ophthalmic, slide by slide",
+   "sun"
+  ],
+  [
+   "gobj-sk3-",
+   "oo",
+   "Guide: Dr. Sikazwe, Otic/Oral/Ophthalmic, by learning objective",
    "sun"
   ],
   [
@@ -738,20 +750,62 @@
   ],
   [
    "dzcases-glaucoma",
-   "ey",
-   "Diseases: the practice patients of this card come from Dr. Smith's eye lectures (this deck)",
+   null,
+   "Diseases: the practice patients of this card come from Dr. Smith's eye lectures and Dr. Lam's lectures (a mixed section)",
    "p8s"
   ],
   [
    "dzcases-allergic-conjunctivitis",
-   "ey",
-   "Diseases: the practice patients of this card come from Dr. Smith's eye lectures (this deck)",
+   null,
+   "Diseases: the practice patients of this card come from Dr. Smith's eye lectures and Dr. Lam's lectures (a mixed section)",
    "p8s"
   ],
   [
    "dzcases-dry-eye",
-   "ey",
-   "Diseases: the practice patients of this card come from Dr. Smith's eye lectures (this deck)",
+   null,
+   "Diseases: the practice patients of this card come from Dr. Smith's eye lectures and Dr. Lam's lectures (a mixed section)",
+   "p8s"
+  ],
+  [
+   "dzcases-bacterial-viral-conjunctivitis",
+   "lo",
+   "Diseases: the practice patients of this card are Dr. Lam's cases and keyed practice questions from this deck",
+   "p8s"
+  ],
+  [
+   "dzcases-cerumen",
+   "lt",
+   "Diseases: the practice patients of this card are Dr. Lam's cases and keyed practice questions from this deck",
+   "p8s"
+  ],
+  [
+   "dzcases-water-clogged-ear",
+   "lt",
+   "Diseases: the practice patients of this card are Dr. Lam's cases and keyed practice questions from this deck",
+   "p8s"
+  ],
+  [
+   "dzcases-tooth-sensitivity",
+   "lr",
+   "Diseases: the practice patients of this card are Dr. Lam's cases and keyed practice questions from this deck",
+   "p8s"
+  ],
+  [
+   "dzcases-canker-sore",
+   "lr",
+   "Diseases: the practice patients of this card are Dr. Lam's cases and keyed practice questions from this deck",
+   "p8s"
+  ],
+  [
+   "dzcases-cold-sore",
+   "lr",
+   "Diseases: the practice patients of this card are Dr. Lam's cases and keyed practice questions from this deck",
+   "p8s"
+  ],
+  [
+   "dzcases-dry-mouth",
+   "lr",
+   "Diseases: the practice patients of this card are Dr. Lam's cases and keyed practice questions from this deck",
    "p8s"
   ],
   [

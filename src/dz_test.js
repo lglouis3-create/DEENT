@@ -19,11 +19,19 @@ const check = (ok, label, detail) => { n++; if (!ok) fail++; console.log((ok ? '
     const p = await b.newPage({viewport: {width: w, height: 844}});
     p.on('pageerror', e => errs.push(e.message));
     await p.goto(PAGE); await p.waitForTimeout(1200);
-    await p.click('#nav button[data-v="dz"]'); await p.waitForTimeout(200);
+    await p.click('#nav button[data-v="dz"]'); await p.click('#v-dz .dzexam [data-exam="0"]'); await p.waitForTimeout(200);
     const over = async () => p.evaluate(() => document.documentElement.scrollWidth - innerWidth);
     const openAll = async () => { if (!(await p.$eval('#v-dz [data-dz="openall"]', x => /Close all/.test(x.textContent)))) await p.click('#v-dz [data-dz="openall"]'); };
     const cards = await p.$$eval('#v-dz .dzpicker button', bs => bs.map(x => x.dataset.card));
     check(cards.length >= 20, `${w} px: the picker lists ${cards.length} conditions`);
+    const byExam = {};
+    for (const e of [1, 2, 3]) { await p.click('#v-dz .dzexam [data-exam="' + e + '"]'); byExam[e] = await p.$$eval('#v-dz .dzpicker button', bs => bs.map(x => x.dataset.card)); }
+    check(byExam[1].includes('acne') && !byExam[1].includes('lice') && !byExam[1].includes('glaucoma'), `${w} px: the Exam 1 chip lists Exam 1 conditions only`, JSON.stringify(byExam[1]));
+    check(byExam[2].includes('lice') && byExam[2].includes('acne') && !byExam[2].includes('glaucoma'), `${w} px: the Exam 2 chip lists Exam 2 conditions only`, JSON.stringify(byExam[2]));
+    check(byExam[3].includes('glaucoma') && byExam[3].includes('cerumen') && byExam[3].includes('cold-sore') && !byExam[3].includes('acne'), `${w} px: the Exam 3 chip lists the eye, ear and mouth conditions only`, JSON.stringify(byExam[3]));
+    const areas = await p.$$eval('#v-dz .dzbody > .dzsub', xs => xs.map(x => x.textContent));
+    check(areas.join('|') === 'Eye|Ear|Mouth and teeth', `${w} px: Exam 3 groups conditions by body area`, areas.join('|'));
+    await p.click('#v-dz .dzexam [data-exam="0"]');
     const wide = [];
     for (const c of cards) {
       await p.click('#v-dz .dzpicker button[data-card="' + c + '"]');
@@ -65,7 +73,7 @@ const check = (ok, label, detail) => { n++; if (!ok) fail++; console.log((ok ? '
     check(!noDef.length, `${w} px: every underlined word on five cards opens its definition`, noDef.join(', '));
 
     // drug panel, practice patient, search
-    await p.click('#nav button[data-v="dz"]'); await p.click('#v-dz .dzpicker button[data-card="psoriasis"]'); await openAll();
+    await p.click('#nav button[data-v="dz"]'); await p.click('#v-dz .dzexam [data-exam="0"]'); await p.click('#v-dz .dzpicker button[data-card="psoriasis"]'); await openAll();
     await p.locator('#v-dz .dzcard .dzdrug').first().click();
     check(await p.$eval('#v-dz .dzdlg', d => d.open), `${w} px: a drug name opens its panel`);
     await p.click('#v-dz .dzdlg .x');
@@ -117,12 +125,12 @@ const check = (ok, label, detail) => { n++; if (!ok) fail++; console.log((ok ? '
     // every such button on every card: one entry each
     const multi = [];
     for (const c of cards) {
-      await p.click('#nav button[data-v="dz"]');
+      await p.click('#nav button[data-v="dz"]'); await p.click('#v-dz .dzexam [data-exam="0"]');
       await p.click('#v-dz .dzpicker button[data-card="' + c + '"]');
       await openAll();
       const count = await p.$$eval('#v-dz .dzcard .dzfig', x => x.length);
       for (let i = 0; i < count; i++) {
-        await p.click('#nav button[data-v="dz"]');
+        await p.click('#nav button[data-v="dz"]'); await p.click('#v-dz .dzexam [data-exam="0"]');
         const f = p.locator('#v-dz .dzcard .dzfig').nth(i); await f.scrollIntoViewIfNeeded(); await f.click(); await p.waitForTimeout(150);
         const r = await p.evaluate(() => RET.length);
         if (r !== 1) multi.push(c + ' #' + (i + 1) + ': ' + r);
@@ -132,7 +140,7 @@ const check = (ok, label, detail) => { n++; if (!ok) fail++; console.log((ok ? '
     check(!multi.length, `${w} px: every "Watch how it works" button on every card puts one entry on the Back stack`, multi.join('; '));
 
     // Practice: Back returns to Diseases in one press
-    await p.click('#nav button[data-v="dz"]'); await p.click('#v-dz .dzpicker button[data-card="lice"]');
+    await p.click('#nav button[data-v="dz"]'); await p.click('#v-dz .dzexam [data-exam="0"]'); await p.click('#v-dz .dzpicker button[data-card="lice"]');
     const pr = await p.$('#v-dz [data-dz="practise"]');
     check(!!pr, `${w} px: the lice card has a Practice button`);
     if (pr) {
@@ -149,7 +157,7 @@ const check = (ok, label, detail) => { n++; if (!ok) fail++; console.log((ok ? '
   const col = async scheme => {
     const p = await b.newPage({viewport: {width: 390, height: 844}, colorScheme: scheme});
     await p.goto(PAGE); await p.waitForTimeout(900);
-    await p.click('#nav button[data-v="dz"]'); await p.click('#v-dz .dzpicker button[data-card="psoriasis"]'); await p.click('#v-dz [data-dz="openall"]');
+    await p.click('#nav button[data-v="dz"]'); await p.click('#v-dz .dzexam [data-exam="0"]'); await p.click('#v-dz .dzpicker button[data-card="psoriasis"]'); await p.click('#v-dz [data-dz="openall"]');
     await p.locator('#v-dz .dzopt').first().click();
     const r = await p.evaluate(() => { const g = s => { const e = document.querySelector(s); return e ? getComputedStyle(e).backgroundColor + '/' + getComputedStyle(e).color : 'none'; };
       return [g('#v-dz .dztag.sm'), g('#v-dz .dztag.pa'), g('#v-dz .dzopt.good'), g('#v-dz .dzwarn')].join(' | '); });

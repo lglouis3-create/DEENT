@@ -7,7 +7,7 @@
    the otitis, ototoxicity and tinnitus slides are FYI ("it won't be on the exam"), so no question is written on slides 10-13.
    ========================================================================== */
 TOPIC_DECKS.push(
-  {id:'ooo', exam:3, name:'Otic, oral and ophthalmic medicinal chemistry (Dr. Sikazwe)', file:'Sikazwe_OOO_mc.pdf', when:'taught 11/18, 11/19 (Exam 3)',
+  {id:'ooo', exam:3, name:'Ear, mouth and eye drug chemistry (Dr. Sikazwe)', file:'Sikazwe_OOO_mc.pdf', when:'taught 11/18, 11/19 (Exam 3)',
    topics:['oo-otic', 'oo-oral', 'oo-oph', 'oo-a2', 'oo-bb', 'oo-cai', 'oo-chol', 'oo-pg', 'oo-ac', 'oo-beyond']});
 
 TOPICS.push(

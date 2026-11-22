@@ -1,11 +1,11 @@
 /* q43_lam2_topics.js: topics for Dr. Lam's 11/20 lecture (Lecture 13, Exam 3): ophthalmic disorders other than glaucoma (lo-*), oral disorders (lr-*), otic disorders (lt-*).
    Decks: Lam_OphthalmicDisorders.pdf (58 slides), Lam_OralDisorders_slides.pdf (84), Lam_OticDisorders_slides.pdf (44). Transcript DEENT_Lecture_11.20_transcript.txt. */
 TOPIC_DECKS.push(
-  {id:'lo', exam:3, name:'Ophthalmic disorders other than glaucoma (Dr. Lam)', file:'Lam_OphthalmicDisorders.pdf', when:'taught 11/20 (Exam 3)',
+  {id:'lo', exam:3, name:'Dry eye, conjunctivitis and eye-drop use (Dr. Lam)', file:'Lam_OphthalmicDisorders.pdf', when:'taught 11/20 (Exam 3)',
    topics:['lo-de-collect', 'lo-de-assess', 'lo-de-plan', 'lo-de-rx', 'lo-cj-collect', 'lo-cj-plan', 'lo-gen', 'lo-case']},
-  {id:'lr', exam:3, name:'Oral disorders (Dr. Lam)', file:'Lam_OralDisorders_slides.pdf', when:'taught 11/20 (Exam 3)',
+  {id:'lr', exam:3, name:'Mouth: sensitive teeth, canker sores, cold sores, dry mouth (Dr. Lam)', file:'Lam_OralDisorders_slides.pdf', when:'taught 11/20 (Exam 3)',
    topics:['lr-tooth', 'lr-ras', 'lr-hsl', 'lr-diff', 'lr-dry']},
-  {id:'lt', exam:3, name:'Otic disorders (Dr. Lam)', file:'Lam_OticDisorders_slides.pdf', when:'taught 11/20 (Exam 3)',
+  {id:'lt', exam:3, name:'Ear: earwax, water-clogged ear, ear drops (Dr. Lam)', file:'Lam_OticDisorders_slides.pdf', when:'taught 11/20 (Exam 3)',
    topics:['lt-cer', 'lt-cerrx', 'lt-water', 'lt-diff', 'lt-impl', 'lt-case']});
 
 TOPICS.push(

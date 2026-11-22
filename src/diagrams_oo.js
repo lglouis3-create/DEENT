@@ -351,7 +351,7 @@ const DIAGRAMS_OO = (() => {
       ['Acetylcholinesterase (AChE) hydrolyzes ACh, an ester, to acetic acid and choline, inactivating it (slide 41).', s1],
       ['Indirect-acting cholinergics inhibit AChE, so ACh levels rise and fluid outflow increases (slide 41).', s2],
       ['The extent of inhibition depends on the group: phosphoryl > carbamate > ester, so the carbamate is intermediate (slides 42–43).', s3],
-      ['Echothiophate’s phosphoryl group stays on AChE; aging (loss of ethanol) leaves it irreversibly inactive (slides 42, 68).', s4],
+      ['Echothiophate’s phosphoryl group binds AChE; aging (loss of an ethyl group as ethanol) leaves it irreversibly inactive (slide 42).', s4],
     ], h, 'Drawn after Sikazwe_OOO_mc.pdf slide 41 (ACh hydrolysis by AChE; indirect-acting cholinergics raise ACh and fluid outflow), slide 42 ' +
       '(echothiophate iodide, an irreversible AChE inhibitor; the aging scheme; phosphoryl > carbamate > ester in the extent of inhibition), ' +
       'slide 43 (Question-2: intermediate duration) and slide 68 (Question 5: irreversible inhibition). From the slides alone: the 11/18 lecture ' +
@@ -409,7 +409,7 @@ const DIAGRAMS_OO = (() => {
       ['PGF2α carries a carboxylic acid at C-1 and an OH at C-15; FP agonists raise fluid outflow (slides 44, 46).', s1],
       ['Latanoprost carries an isopropyl ester at C-1, so it is a prodrug (slides 44–46).', s2],
       ['An esterase hydrolyzes the ester to latanoprost acid, the active drug (slide 45; esterase, slide 29).', s3],
-      ['Acids and amides are active and esters are prodrugs; C-15 OH or halogens prevent 15-OH oxidation (slides 46–48).', s4],
+      ['Acids and amides are active, esters are prodrugs; a halogen for the C-15 OH stops oxidation to a ketone (slides 46–48).', s4],
     ], h, 'Drawn after Sikazwe_OOO_mc.pdf slide 44 (all FP agonists raise fluid outflow through the PGF/FP receptor; the five structures), slide 45 ' +
       '(latanoprost, prodrug, to latanoprost acid, active, by esterase), slide 46 (SAR: acids and amides active, esters prodrugs; C-15 OH or ' +
       'halogens), slides 47–48 (omidenepag isopropyl and netarsudil, ester prodrugs activated by esterase) and slide 29 (esterase among the ' +
@@ -463,7 +463,7 @@ if (DIAGRAMS_OO) {
       ? m[0] + '<p class="dnpurpose"><b>Purpose.</b> ' + esc(DIAGRAMS_OO_PURPOSE[k]) + '</p>' + h.slice(m[0].length) : h;
   });
   if (typeof DIA_NAMES !== 'undefined') Object.assign(DIA_NAMES, DIAGRAMS_OO.names);
-  if (typeof DIAGRAMS !== 'undefined') DIAGRAMS.push(['Otic, oral and ophthalmic chemistry (Dr. Sikazwe, Exam 3)', Object.keys(DIAGRAMS_OO.figs)]);
+  if (typeof DIAGRAMS !== 'undefined') DIAGRAMS.push(['Ear, mouth and eye drug chemistry (Dr. Sikazwe)', Object.keys(DIAGRAMS_OO.figs)]);
   if (typeof document !== 'undefined' && document.head && !document.getElementById('diagramsoocss')) {
     const s = document.createElement('style'); s.id = 'diagramsoocss';
     s.textContent = DIAGRAMS_OO.css + '.dnpurpose{margin:2px 0 8px;font-size:13.5px;line-height:1.45}';

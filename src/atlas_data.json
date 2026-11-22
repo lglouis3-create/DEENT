@@ -26,7 +26,8 @@
        "pubchem_checked": true,
        "pubchem_cid": 44591583,
        "verification_date": "2026-11-06",
-       "assigned": true
+       "assigned": true,
+       "deck": "DPAW"
       },
       {
        "key": "crisaborole benzyl alcohol metabolite",
@@ -44,7 +45,8 @@
        "pubchem_checked": true,
        "pubchem_cid": 135391074,
        "verification_date": "2026-11-06",
-       "assigned": true
+       "assigned": true,
+       "deck": "DPAW"
       },
       {
        "key": "crisaborole benzoic acid metabolite",
@@ -62,7 +64,8 @@
        "pubchem_checked": true,
        "pubchem_cid": 133080796,
        "verification_date": "2026-11-06",
-       "assigned": true
+       "assigned": true,
+       "deck": "DPAW"
       }
      ]
     },
@@ -87,7 +90,8 @@
        "pubchem_checked": true,
        "pubchem_cid": 25126798,
        "verification_date": "2026-11-06",
-       "assigned": true
+       "assigned": true,
+       "deck": "DPAW"
       },
       {
        "key": "upadacitinib",
@@ -107,7 +111,8 @@
        "pubchem_checked": true,
        "pubchem_cid": 58557659,
        "verification_date": "2026-11-06",
-       "assigned": true
+       "assigned": true,
+       "deck": "DPAW"
       }
      ]
     }
@@ -137,7 +142,8 @@
        "pubchem_checked": true,
        "pubchem_cid": 10913,
        "verification_date": "2026-11-06",
-       "assigned": true
+       "assigned": true,
+       "deck": "DPAW"
       }
      ]
     },
@@ -161,7 +167,8 @@
        "pubchem_checked": true,
        "pubchem_cid": 2202,
        "verification_date": "2026-11-06",
-       "assigned": true
+       "assigned": true,
+       "deck": "DPAW"
       },
       {
        "key": "methoxsalen",
@@ -181,7 +188,8 @@
        "pubchem_checked": true,
        "pubchem_cid": 4114,
        "verification_date": "2026-11-06",
-       "assigned": true
+       "assigned": true,
+       "deck": "DPAW"
       }
      ]
     }
@@ -211,7 +219,8 @@
        "pubchem_checked": true,
        "pubchem_cid": 10202,
        "verification_date": "2026-11-06",
-       "assigned": true
+       "assigned": true,
+       "deck": "DPAW"
       },
       {
        "key": "glucocorticoid sar",
@@ -231,7 +240,8 @@
        "pubchem_checked": true,
        "pubchem_cid": 444036,
        "verification_date": "2026-11-06",
-       "assigned": true
+       "assigned": true,
+       "deck": "DPAW"
       }
      ]
     },
@@ -282,7 +292,8 @@
          }
         ]
        },
-       "assigned": true
+       "assigned": true,
+       "deck": "DPAW"
       },
       {
        "key": "cortisone",
@@ -311,7 +322,8 @@
          }
         ]
        },
-       "assigned": true
+       "assigned": true,
+       "deck": "DPAW"
       },
       {
        "key": "5beta-dihydrocortisol",
@@ -329,7 +341,8 @@
        "pubchem_cid": 164838,
        "verification_date": "2026-11-06",
        "chembl_rejected": "CHEMBL1079111",
-       "assigned": true
+       "assigned": true,
+       "deck": "DPAW"
       },
       {
        "key": "urocortisol",
@@ -348,7 +361,8 @@
        "pubchem_checked": true,
        "pubchem_cid": 5864,
        "verification_date": "2026-11-06",
-       "assigned": true
+       "assigned": true,
+       "deck": "DPAW"
       }
      ]
     },
@@ -373,7 +387,8 @@
        "pubchem_checked": true,
        "pubchem_cid": 21800,
        "verification_date": "2026-11-06",
-       "assigned": true
+       "assigned": true,
+       "deck": "DPAW"
       },
       {
        "key": "clobetasol propionate",
@@ -410,7 +425,8 @@
        "pubchem_checked": true,
        "pubchem_cid": 32798,
        "verification_date": "2026-11-06",
-       "assigned": true
+       "assigned": true,
+       "deck": "DPAW"
       },
       {
        "key": "desonide",
@@ -429,7 +445,8 @@
        "pubchem_checked": true,
        "pubchem_cid": 5311066,
        "verification_date": "2026-11-06",
-       "assigned": false
+       "assigned": false,
+       "deck": "DPAW"
       },
       {
        "key": "fluticasone propionate",
@@ -448,7 +465,8 @@
        "pubchem_checked": true,
        "pubchem_cid": 444036,
        "verification_date": "2026-11-06",
-       "assigned": false
+       "assigned": false,
+       "deck": "DPAW"
       },
       {
        "key": "triamcinolone acetonide",
@@ -467,7 +485,8 @@
        "pubchem_checked": true,
        "pubchem_cid": 6436,
        "verification_date": "2026-11-06",
-       "assigned": false
+       "assigned": false,
+       "deck": "DPAW"
       }
      ]
     }
@@ -499,7 +518,8 @@
        "pubchem_checked": true,
        "pubchem_cid": 439423,
        "verification_date": "2026-11-06",
-       "assigned": true
+       "assigned": true,
+       "deck": "DPAW"
       },
       {
        "key": "cholecalciferol",
@@ -518,7 +538,8 @@
        "pubchem_checked": true,
        "pubchem_cid": 5280795,
        "verification_date": "2026-11-06",
-       "assigned": true
+       "assigned": true,
+       "deck": "DPAW"
       },
       {
        "key": "25-hydroxycholecalciferol",
@@ -537,7 +558,8 @@
        "pubchem_checked": true,
        "pubchem_cid": 5283731,
        "verification_date": "2026-11-06",
-       "assigned": true
+       "assigned": true,
+       "deck": "DPAW"
       },
       {
        "key": "calcitriol",
@@ -557,7 +579,8 @@
        "pubchem_checked": true,
        "pubchem_cid": 5280453,
        "verification_date": "2026-11-06",
-       "assigned": true
+       "assigned": true,
+       "deck": "DPAW"
       }
      ]
     },
@@ -582,7 +605,8 @@
        "pubchem_checked": true,
        "pubchem_cid": 5288783,
        "verification_date": "2026-11-06",
-       "assigned": true
+       "assigned": true,
+       "deck": "DPAW"
       }
      ]
     }
@@ -631,7 +655,8 @@
        "pubchem_checked": true,
        "pubchem_cid": 6509979,
        "verification_date": "2026-11-06",
-       "assigned": true
+       "assigned": true,
+       "deck": "DPAW"
       },
       {
        "key": "tacrolimus",
@@ -651,7 +676,8 @@
        "pubchem_checked": true,
        "pubchem_cid": 445643,
        "verification_date": "2026-11-06",
-       "assigned": true
+       "assigned": true,
+       "deck": "DPAW"
       }
      ]
     }
@@ -684,7 +710,8 @@
        "pubchem_checked": true,
        "pubchem_cid": 4112,
        "verification_date": "2026-11-06",
-       "assigned": true
+       "assigned": true,
+       "deck": "DPAW"
       },
       {
        "key": "folic acid",
@@ -704,7 +731,8 @@
        "pubchem_checked": true,
        "pubchem_cid": 3405,
        "verification_date": "2026-11-06",
-       "assigned": true
+       "assigned": true,
+       "deck": "DPAW"
       },
       {
        "key": "tetrahydrofolic acid",
@@ -723,7 +751,8 @@
        "pubchem_checked": true,
        "pubchem_cid": 1129,
        "verification_date": "2026-11-06",
-       "assigned": true
+       "assigned": true,
+       "deck": "DPAW"
       }
      ]
     },
@@ -747,7 +776,8 @@
        "pubchem_checked": true,
        "pubchem_cid": 5284373,
        "verification_date": "2026-11-06",
-       "assigned": true
+       "assigned": true,
+       "deck": "DPAW"
       },
       {
        "key": "apremilast",
@@ -766,7 +796,8 @@
        "pubchem_checked": true,
        "pubchem_cid": 11561674,
        "verification_date": "2026-11-06",
-       "assigned": true
+       "assigned": true,
+       "deck": "DPAW"
       },
       {
        "key": "tofacitinib",
@@ -786,7 +817,8 @@
        "pubchem_checked": true,
        "pubchem_cid": 9926791,
        "verification_date": "2026-11-06",
-       "assigned": false
+       "assigned": false,
+       "deck": "DPAW"
       }
      ]
     }
@@ -817,7 +849,8 @@
        "pubchem_checked": true,
        "pubchem_cid": 6509979,
        "verification_date": "2026-11-06",
-       "assigned": true
+       "assigned": true,
+       "deck": "DPAW"
       },
       {
        "key": "lactam",
@@ -836,7 +869,8 @@
        "pubchem_checked": true,
        "pubchem_cid": 5284373,
        "verification_date": "2026-11-06",
-       "assigned": true
+       "assigned": true,
+       "deck": "DPAW"
       }
      ]
     }
@@ -868,7 +902,8 @@
        "pubchem_checked": true,
        "pubchem_cid": 757,
        "verification_date": "2026-11-06",
-       "assigned": true
+       "assigned": true,
+       "deck": "DPAW"
       },
       {
        "key": "oxalic acid",
@@ -887,7 +922,8 @@
        "pubchem_checked": true,
        "pubchem_cid": 971,
        "verification_date": "2026-11-06",
-       "assigned": true
+       "assigned": true,
+       "deck": "DPAW"
       },
       {
        "key": "salicylic acid",
@@ -907,7 +943,8 @@
        "pubchem_checked": true,
        "pubchem_cid": 338,
        "verification_date": "2026-11-06",
-       "assigned": true
+       "assigned": true,
+       "deck": "DPAW"
       }
      ]
     },
@@ -932,7 +969,8 @@
        "pubchem_checked": true,
        "pubchem_cid": 875,
        "verification_date": "2026-11-06",
-       "assigned": true
+       "assigned": true,
+       "deck": "DPAW"
       },
       {
        "key": "isobutyric acid",
@@ -951,7 +989,8 @@
        "pubchem_checked": true,
        "pubchem_cid": 6590,
        "verification_date": "2026-11-06",
-       "assigned": true
+       "assigned": true,
+       "deck": "DPAW"
       },
       {
        "key": "polleve-4 cyclopropyl hydroxy diacid",
@@ -970,7 +1009,8 @@
        "pubchem_checked": true,
        "pubchem_cid": 85106660,
        "verification_date": "2026-11-06",
-       "assigned": true
+       "assigned": true,
+       "deck": "DPAW"
       },
       {
        "key": "2-hydroxycyclohexanecarboxylic acid",
@@ -989,7 +1029,8 @@
        "pubchem_checked": true,
        "pubchem_cid": 271816,
        "verification_date": "2026-11-06",
-       "assigned": true
+       "assigned": true,
+       "deck": "DPAW"
       }
      ]
     },
@@ -1014,7 +1055,8 @@
        "pubchem_checked": true,
        "pubchem_cid": 7187,
        "verification_date": "2026-11-06",
-       "assigned": true
+       "assigned": true,
+       "deck": "DPAW"
       },
       {
        "key": "benzoic acid",
@@ -1033,7 +1075,8 @@
        "pubchem_checked": true,
        "pubchem_cid": 243,
        "verification_date": "2026-11-06",
-       "assigned": true
+       "assigned": true,
+       "deck": "DPAW"
       },
       {
        "key": "benzoyl radical",
@@ -1051,7 +1094,8 @@
        "pubchem_checked": true,
        "pubchem_cid": 5359438,
        "verification_date": "2026-11-06",
-       "assigned": true
+       "assigned": true,
+       "deck": "DPAW"
       }
      ]
     }
@@ -1081,7 +1125,8 @@
        "pubchem_checked": true,
        "pubchem_cid": 445354,
        "verification_date": "2026-11-06",
-       "assigned": true
+       "assigned": true,
+       "deck": "DPAW"
       }
      ]
     },
@@ -1105,7 +1150,8 @@
        "pubchem_checked": true,
        "pubchem_cid": 444795,
        "verification_date": "2026-11-06",
-       "assigned": true
+       "assigned": true,
+       "deck": "DPAW"
       },
       {
        "key": "isotretinoin",
@@ -1124,7 +1170,8 @@
        "pubchem_checked": true,
        "pubchem_cid": 5282379,
        "verification_date": "2026-11-06",
-       "assigned": true
+       "assigned": true,
+       "deck": "DPAW"
       }
      ]
     },
@@ -1149,7 +1196,8 @@
        "pubchem_checked": true,
        "pubchem_cid": 5282375,
        "verification_date": "2026-11-06",
-       "assigned": true
+       "assigned": true,
+       "deck": "DPAW"
       },
       {
        "key": "acitretin",
@@ -1168,7 +1216,8 @@
        "pubchem_checked": true,
        "pubchem_cid": 5284513,
        "verification_date": "2026-11-06",
-       "assigned": true
+       "assigned": true,
+       "deck": "DPAW"
       }
      ]
     },
@@ -1192,7 +1241,8 @@
        "pubchem_checked": true,
        "pubchem_cid": 60164,
        "verification_date": "2026-11-06",
-       "assigned": true
+       "assigned": true,
+       "deck": "DPAW"
       },
       {
        "key": "trifarotene",
@@ -1211,7 +1261,8 @@
        "pubchem_checked": true,
        "pubchem_cid": 11518241,
        "verification_date": "2026-11-06",
-       "assigned": true
+       "assigned": true,
+       "deck": "DPAW"
       },
       {
        "key": "tazarotene",
@@ -1232,7 +1283,8 @@
        "pubchem_checked": true,
        "pubchem_cid": 5381,
        "verification_date": "2026-11-06",
-       "assigned": true
+       "assigned": true,
+       "deck": "DPAW"
       },
       {
        "key": "tazarotenic acid",
@@ -1251,7 +1303,8 @@
        "pubchem_checked": true,
        "pubchem_cid": 147525,
        "verification_date": "2026-11-06",
-       "assigned": true
+       "assigned": true,
+       "deck": "DPAW"
       }
      ]
     }
@@ -1281,7 +1334,8 @@
        "pubchem_checked": true,
        "pubchem_cid": 5991,
        "verification_date": "2026-11-06",
-       "assigned": true
+       "assigned": true,
+       "deck": "DPAW"
       },
       {
        "key": "norgestimate",
@@ -1300,7 +1354,8 @@
        "pubchem_checked": true,
        "pubchem_cid": 6540478,
        "verification_date": "2026-11-06",
-       "assigned": true
+       "assigned": true,
+       "deck": "DPAW"
       },
       {
        "key": "drospirenone",
@@ -1318,7 +1373,8 @@
        "pubchem_checked": true,
        "pubchem_cid": 68873,
        "verification_date": "2026-11-06",
-       "assigned": true
+       "assigned": true,
+       "deck": "DPAW"
       },
       {
        "key": "spironolactone",
@@ -1336,7 +1392,8 @@
        "pubchem_checked": true,
        "pubchem_cid": 5833,
        "verification_date": "2026-11-06",
-       "assigned": true
+       "assigned": true,
+       "deck": "DPAW"
       }
      ]
     },
@@ -1361,7 +1418,8 @@
        "pubchem_checked": true,
        "pubchem_cid": 3823,
        "verification_date": "2026-11-06",
-       "assigned": true
+       "assigned": true,
+       "deck": "DPAW"
       },
       {
        "key": "flutamide",
@@ -1379,7 +1437,8 @@
        "pubchem_checked": true,
        "pubchem_cid": 3397,
        "verification_date": "2026-11-06",
-       "assigned": true
+       "assigned": true,
+       "deck": "DPAW"
       }
      ]
     }
@@ -1410,7 +1469,8 @@
        "pubchem_checked": true,
        "pubchem_cid": 2266,
        "verification_date": "2026-11-06",
-       "assigned": true
+       "assigned": true,
+       "deck": "DPAW"
       },
       {
        "key": "clindamycin",
@@ -1428,7 +1488,8 @@
        "pubchem_checked": true,
        "pubchem_cid": 446598,
        "verification_date": "2026-11-06",
-       "assigned": true
+       "assigned": true,
+       "deck": "DPAW"
       },
       {
        "key": "erythromycin",
@@ -1464,7 +1525,8 @@
        "pubchem_checked": true,
        "pubchem_cid": 12560,
        "verification_date": "2026-11-06",
-       "assigned": true
+       "assigned": true,
+       "deck": "DPAW"
       }
      ]
     },
@@ -1489,7 +1551,8 @@
        "pubchem_checked": true,
        "pubchem_cid": 54675776,
        "verification_date": "2026-11-06",
-       "assigned": true
+       "assigned": true,
+       "deck": "DPAW"
       },
       {
        "key": "doxycycline",
@@ -1508,7 +1571,8 @@
        "pubchem_checked": true,
        "pubchem_cid": 54671203,
        "verification_date": "2026-11-06",
-       "assigned": true
+       "assigned": true,
+       "deck": "DPAW"
       },
       {
        "key": "minocycline",
@@ -1527,7 +1591,8 @@
        "pubchem_checked": true,
        "pubchem_cid": 54675783,
        "verification_date": "2026-11-06",
-       "assigned": true
+       "assigned": true,
+       "deck": "DPAW"
       }
      ]
     }
@@ -1557,7 +1622,8 @@
        "pubchem_checked": true,
        "pubchem_cid": 3007857,
        "verification_date": "2026-11-06",
-       "assigned": true
+       "assigned": true,
+       "deck": "DPAW"
       },
       {
        "key": "titanium dioxide",
@@ -1574,7 +1640,8 @@
        "exam": "Exam 1",
        "pubchem_checked": true,
        "verification_date": "2026-11-06",
-       "assigned": true
+       "assigned": true,
+       "deck": "DPAW"
       }
      ]
     },
@@ -1598,7 +1665,8 @@
        "pubchem_checked": true,
        "pubchem_cid": 51040,
        "verification_date": "2026-11-06",
-       "assigned": true
+       "assigned": true,
+       "deck": "DPAW"
       },
       {
        "key": "meradimate",
@@ -1618,7 +1686,8 @@
        "pubchem_checked": true,
        "pubchem_cid": 8633,
        "verification_date": "2026-11-06",
-       "assigned": true
+       "assigned": true,
+       "deck": "DPAW"
       }
      ]
     },
@@ -1642,7 +1711,8 @@
        "pubchem_checked": true,
        "pubchem_cid": 5355130,
        "verification_date": "2026-11-06",
-       "assigned": true
+       "assigned": true,
+       "deck": "DPAW"
       },
       {
        "key": "paba",
@@ -1660,7 +1730,8 @@
        "pubchem_checked": true,
        "pubchem_cid": 978,
        "verification_date": "2026-11-06",
-       "assigned": true
+       "assigned": true,
+       "deck": "DPAW"
       },
       {
        "key": "padimate o",
@@ -1695,7 +1766,8 @@
        "pubchem_checked": true,
        "pubchem_cid": 30541,
        "verification_date": "2026-11-06",
-       "assigned": true
+       "assigned": true,
+       "deck": "DPAW"
       }
      ]
     },
@@ -1719,7 +1791,8 @@
        "pubchem_checked": true,
        "pubchem_cid": 8362,
        "verification_date": "2026-11-06",
-       "assigned": true
+       "assigned": true,
+       "deck": "DPAW"
       },
       {
        "key": "octisalate",
@@ -1755,7 +1828,8 @@
        "pubchem_checked": true,
        "pubchem_cid": 8364,
        "verification_date": "2026-11-06",
-       "assigned": true
+       "assigned": true,
+       "deck": "DPAW"
       },
       {
        "key": "ensulizole",
@@ -1774,7 +1848,8 @@
        "pubchem_checked": true,
        "pubchem_cid": 33919,
        "verification_date": "2026-11-06",
-       "assigned": true
+       "assigned": true,
+       "deck": "DPAW"
       }
      ]
     },
@@ -1798,7 +1873,8 @@
        "pubchem_checked": true,
        "pubchem_cid": 4632,
        "verification_date": "2026-11-06",
-       "assigned": true
+       "assigned": true,
+       "deck": "DPAW"
       },
       {
        "key": "octocrylene",
@@ -1818,7 +1894,8 @@
        "pubchem_checked": true,
        "pubchem_cid": 22571,
        "verification_date": "2026-11-06",
-       "assigned": true
+       "assigned": true,
+       "deck": "DPAW"
       },
       {
        "key": "bemotrizinol",
@@ -1838,7 +1915,8 @@
        "pubchem_checked": true,
        "pubchem_cid": 135487856,
        "verification_date": "2026-11-06",
-       "assigned": true
+       "assigned": true,
+       "deck": "DPAW"
       }
      ]
     }
@@ -1868,7 +1946,8 @@
        "pubchem_checked": true,
        "pubchem_cid": 785,
        "verification_date": "2026-11-06",
-       "assigned": false
+       "assigned": false,
+       "deck": "DPAW"
       },
       {
        "key": "benzoquinone",
@@ -1886,7 +1965,8 @@
        "pubchem_checked": true,
        "pubchem_cid": 4650,
        "verification_date": "2026-11-06",
-       "assigned": false
+       "assigned": false,
+       "deck": "DPAW"
       }
      ]
     },
@@ -1911,7 +1991,8 @@
        "pubchem_checked": true,
        "pubchem_cid": 612,
        "verification_date": "2026-11-06",
-       "assigned": false
+       "assigned": false,
+       "deck": "DPAW"
       },
       {
        "key": "malic acid",
@@ -1930,7 +2011,8 @@
        "pubchem_checked": true,
        "pubchem_cid": 525,
        "verification_date": "2026-11-06",
-       "assigned": false
+       "assigned": false,
+       "deck": "DPAW"
       }
      ]
     },
@@ -1954,7 +2036,8 @@
        "pubchem_checked": true,
        "pubchem_cid": 5288907,
        "verification_date": "2026-11-06",
-       "assigned": false
+       "assigned": false,
+       "deck": "DPAW"
       }
      ]
     }
@@ -1985,7 +2068,8 @@
        "pubchem_checked": true,
        "pubchem_cid": 612,
        "verification_date": "2026-11-06",
-       "assigned": true
+       "assigned": true,
+       "deck": "DPAW"
       },
       {
        "key": "beta-hydroxy acid",
@@ -2004,7 +2088,8 @@
        "pubchem_checked": true,
        "pubchem_cid": 338,
        "verification_date": "2026-11-06",
-       "assigned": true
+       "assigned": true,
+       "deck": "DPAW"
       }
      ]
     },
@@ -2028,7 +2113,8 @@
        "pubchem_checked": true,
        "pubchem_cid": 54675776,
        "verification_date": "2026-11-06",
-       "assigned": true
+       "assigned": true,
+       "deck": "DPAW"
       },
       {
        "key": "steroid nucleus",
@@ -2047,7 +2133,8 @@
        "pubchem_checked": true,
        "pubchem_cid": 5991,
        "verification_date": "2026-11-06",
-       "assigned": true
+       "assigned": true,
+       "deck": "DPAW"
       }
      ]
     },
@@ -2071,7 +2158,8 @@
        "pubchem_checked": true,
        "pubchem_cid": 5282375,
        "verification_date": "2026-11-06",
-       "assigned": true
+       "assigned": true,
+       "deck": "DPAW"
       },
       {
        "key": "retinoid carboxylic acid",
@@ -2090,7 +2178,8 @@
        "pubchem_checked": true,
        "pubchem_cid": 60164,
        "verification_date": "2026-11-06",
-       "assigned": true
+       "assigned": true,
+       "deck": "DPAW"
       }
      ]
     },
@@ -2114,7 +2203,8 @@
        "pubchem_checked": true,
        "pubchem_cid": 7187,
        "verification_date": "2026-11-06",
-       "assigned": true
+       "assigned": true,
+       "deck": "DPAW"
       },
       {
        "key": "macrolide",
@@ -2133,7 +2223,1152 @@
        "pubchem_checked": true,
        "pubchem_cid": 12560,
        "verification_date": "2026-11-06",
-       "assigned": true
+       "assigned": true,
+       "deck": "DPAW"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "c-otic-oral",
+   "title": "Otic and oral agents (Exam 3)",
+   "intro": "Structures drawn on his otic and oral slides 7, 8, 20 and 21 (assigned: slides 5-8 and 15-21). Practice question 1 asks only for the non-fluoride toothpaste ingredients (named, not drawn), so these tiles support the chemical basis of drug action he states on each slide.",
+   "sections": [
+    {
+     "label": "Cerumenolytics",
+     "items": [
+      {
+       "key": "docusate sodium",
+       "name": "Docusate sodium (dioctyl sodium sulfosuccinate, Colace)",
+       "smiles": "CCCCC(CC)COC(=O)CC(C(=O)OCC(CC)CCCC)S(=O)(=O)[O-].[Na+]",
+       "slide": 7,
+       "tell": "The shaded sulfonate (-SO3-) makes docusate an anionic surfactant; its lipophilic tails and hydrophilic head dissolve in both water and cerumen and lower the surface tension between them (slide 7).",
+       "mark": "S(=O)(=O)[O-]",
+       "priority": "core",
+       "priority_reason": "Slide 7 states its chemical basis of drug action (anionic surfactant, CBDA) on an assigned slide.",
+       "priority_source": "p.7 (assigned 5-8)",
+       "exam": "Exam 3",
+       "deck": "OOO",
+       "assigned": true,
+       "pubchem_checked": true,
+       "pubchem_cid": 11338,
+       "verification": "exact",
+       "verification_note": "Atlas = PubChem CID 11338 = ChEMBL CHEMBL1905872 (full InChIKey).",
+       "verification_date": "2026-11-21",
+       "chembl_id": "CHEMBL1905872"
+      },
+      {
+       "key": "carbamide peroxide",
+       "name": "Carbamide peroxide (Debrox), a 1:1 urea-hydrogen peroxide complex",
+       "smiles": "NC(N)=O.OO",
+       "slide": 8,
+       "tell": "Carbamide peroxide is not one covalent molecule: urea and hydrogen peroxide are held together as a 1:1 complex. It dissociates to release H2O2, and catalase then turns H2O2 into effervescing O2 that breaks up the wax (slide 8).",
+       "eg": "Drawn on slide 8 as urea with H2O2 beside it, then a dissociation arrow (slide 8).",
+       "mark": "OO",
+       "priority": "core",
+       "priority_reason": "Slide 8 (assigned): CBDA is dissociation of the complex to release H2O2.",
+       "priority_source": "p.8 (assigned 5-8)",
+       "exam": "Exam 3",
+       "deck": "OOO",
+       "assigned": true,
+       "pubchem_checked": true,
+       "pubchem_cid": 31294,
+       "verification": "teaching-structure",
+       "verification_note": "Teaching structure (not forced onto a drug record). PubChem holds this exact structure as CID 31294.",
+       "verification_date": "2026-11-21"
+      },
+      {
+       "key": "urea",
+       "name": "Urea (product of carbamide peroxide dissociation)",
+       "smiles": "NC(N)=O",
+       "slide": 8,
+       "tell": "Urea is the carrier half that stays after the complex dissociates (slide 8).",
+       "priority": "reference",
+       "priority_reason": "Product drawn on slide 8.",
+       "priority_source": "p.8",
+       "exam": "Exam 3",
+       "deck": "OOO",
+       "assigned": true,
+       "pubchem_checked": true,
+       "pubchem_cid": 1176,
+       "verification": "exact",
+       "verification_note": "Atlas = PubChem CID 1176 = ChEMBL CHEMBL985 (full InChIKey).",
+       "verification_date": "2026-11-21",
+       "chembl_id": "CHEMBL985"
+      },
+      {
+       "key": "hydrogen peroxide",
+       "name": "Hydrogen peroxide (the active agent)",
+       "smiles": "OO",
+       "slide": 8,
+       "tell": "H2O2 is the active agent; catalase converts it to O2, which effervesces and breaks up ear wax (slide 8).",
+       "priority": "core",
+       "priority_reason": "The step that makes carbamide peroxide work, drawn on slide 8.",
+       "priority_source": "p.8",
+       "exam": "Exam 3",
+       "deck": "OOO",
+       "assigned": true,
+       "pubchem_checked": true,
+       "pubchem_cid": 784,
+       "verification": "exact",
+       "verification_note": "Atlas = PubChem CID 784 = ChEMBL CHEMBL71595 (full InChIKey).",
+       "verification_date": "2026-11-21",
+       "chembl_id": "CHEMBL71595"
+      }
+     ]
+    },
+    {
+     "label": "Oral anesthetic",
+     "items": [
+      {
+       "key": "benzocaine",
+       "name": "Benzocaine",
+       "smiles": "CCOC(=O)c1ccc(N)cc1",
+       "slide": 20,
+       "tell": "Benzocaine is an aryl ester local anesthetic (ethyl 4-aminobenzoate); the shaded aromatic amine is the part CYP enzymes oxidise (slide 20).",
+       "mark": "c[NH2]",
+       "priority": "core",
+       "priority_reason": "Slide 20 (assigned) draws it with its CYP metabolite to explain the methemoglobinemia warning.",
+       "priority_source": "p.20 (assigned 15-21)",
+       "exam": "Exam 3",
+       "deck": "OOO",
+       "assigned": true,
+       "pubchem_checked": true,
+       "pubchem_cid": 2337,
+       "verification": "exact",
+       "verification_note": "Atlas = PubChem CID 2337 = ChEMBL CHEMBL278172 (full InChIKey).",
+       "verification_date": "2026-11-21",
+       "chembl_id": "CHEMBL278172"
+      },
+      {
+       "key": "benzocaine hydroxylamine",
+       "name": "Benzocaine hydroxylamine (methemoglobinemia)",
+       "smiles": "CCOC(=O)c1ccc(NO)cc1",
+       "slide": 20,
+       "tell": "CYP oxidation turns the aromatic NH2 into the N-hydroxylamine shaded here; this metabolite is what the slide links to methemoglobinemia (slide 20).",
+       "mark": "c[NH][OH]",
+       "priority": "core",
+       "priority_reason": "Slide 20 (assigned): the metabolite he drew beside the drug.",
+       "priority_source": "p.20",
+       "exam": "Exam 3",
+       "deck": "OOO",
+       "assigned": true,
+       "pubchem_checked": true,
+       "pubchem_cid": 11622443,
+       "verification": "teaching-structure",
+       "verification_note": "Teaching structure (not forced onto a drug record). PubChem holds this exact structure as CID 11622443.",
+       "verification_date": "2026-11-21"
+      }
+     ]
+    },
+    {
+     "label": "Antiseptic mouth rinses",
+     "items": [
+      {
+       "key": "chlorhexidine gluconate",
+       "name": "Chlorhexidine gluconate (a biguanide salt)",
+       "smiles": "Clc1ccc(NC(=N)NC(=N)NCCCCCCNC(=N)NC(=N)Nc2ccc(Cl)cc2)cc1.C(O)[C@@H](O)[C@@H](O)[C@H](O)[C@@H](O)C(=O)O.C(O)[C@@H](O)[C@@H](O)[C@H](O)[C@@H](O)C(=O)O",
+       "slide": 21,
+       "tell": "Two shaded biguanide groups are cationic at physiological pH; they bind electrostatically to the bacterial cell wall and the lipophilic chain inserts and disrupts it. The gluconic acids are the counter-ion salt (slide 21).",
+       "mark": "[#7]~[#6](~[#7])~[#7]~[#6](~[#7])~[#7]",
+       "priority": "core",
+       "priority_reason": "Slide 21 (assigned) states the CBDA for both rinses.",
+       "priority_source": "p.21 (assigned 15-21)",
+       "exam": "Exam 3",
+       "deck": "OOO",
+       "assigned": true,
+       "pubchem_checked": true,
+       "pubchem_cid": 29089,
+       "verification": "exact",
+       "verification_note": "Atlas = PubChem CID 29089 = ChEMBL CHEMBL4297088 (full InChIKey). The Atlas draws another tautomer than PubChem (as the slide does); InChI treats the two as one molecule, so the keys agree.",
+       "verification_date": "2026-11-21",
+       "chembl_id": "CHEMBL4297088"
+      },
+      {
+       "key": "cetylpyridinium chloride",
+       "name": "Cetylpyridinium chloride (a pyridinium salt)",
+       "smiles": "CCCCCCCCCCCCCCCC[n+]1ccccc1.[Cl-]",
+       "slide": 21,
+       "tell": "The shaded pyridinium nitrogen is permanently cationic; as for chlorhexidine, the charge binds the cell wall and the 16-carbon tail inserts into it (slide 21).",
+       "mark": "[n+]",
+       "priority": "core",
+       "priority_reason": "Slide 21 (assigned): CBDA stated for both rinses.",
+       "priority_source": "p.21",
+       "exam": "Exam 3",
+       "deck": "OOO",
+       "assigned": true,
+       "pubchem_checked": true,
+       "pubchem_cid": 31239,
+       "verification": "exact",
+       "verification_note": "Atlas = PubChem CID 31239 = ChEMBL CHEMBL34833 (full InChIKey).",
+       "verification_date": "2026-11-21",
+       "chembl_id": "CHEMBL34833"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "c-fg",
+   "title": "Glaucoma drug functional groups (slide 27)",
+   "intro": "Slide 27 (\"Drug FGs\") shows the eight groups that classify the ophthalmic drugs. Practice question 2 asks him to hand-draw them; self-assessment questions 4 and 5 ask you to name them and say which drugs carry them (11/19 lecture). Each is drawn as the slide draws it.",
+   "sections": [
+    {
+     "label": "The groups on slide 27",
+     "items": [
+      {
+       "key": "imidazoline",
+       "name": "Imidazoline (4,5-dihydro-1H-imidazole)",
+       "smiles": "C1=NCCN1",
+       "slide": 27,
+       "tell": "A five-membered ring with one C=N and one NH: the group of the alpha-2 agonists and the imidazoline decongestants. Self-assessment question 4 shows this ring and asks you to name it and name the drugs that carry it (slide 27; slide 66).",
+       "mark": "C1=NCCN1",
+       "priority": "core",
+       "priority_reason": "Slide 27 FG set; self-assessment Q4 (assigned) is this drawing.",
+       "priority_source": "p.27, p.66; practice Q2, self-assessment Q4",
+       "exam": "Exam 3",
+       "deck": "OOO",
+       "assigned": true,
+       "pubchem_checked": true,
+       "pubchem_cid": 68156,
+       "verification": "teaching-structure",
+       "verification_note": "Teaching structure (not forced onto a drug record). PubChem holds this exact structure as CID 68156.",
+       "verification_date": "2026-11-21"
+      },
+      {
+       "key": "sulfone",
+       "name": "Sulfone (dimethyl sulfone shown)",
+       "smiles": "CS(C)(=O)=O",
+       "slide": 27,
+       "tell": "S with two double-bonded oxygens and two carbons: the sulfone in the ring of dorzolamide and brinzolamide (slide 27).",
+       "mark": "S(=O)(=O)",
+       "priority": "core",
+       "priority_reason": "Slide 27 FG set; practice Q2.",
+       "priority_source": "p.27",
+       "exam": "Exam 3",
+       "deck": "OOO",
+       "assigned": true,
+       "pubchem_checked": true,
+       "pubchem_cid": 6213,
+       "verification": "teaching-structure",
+       "verification_note": "Teaching structure (not forced onto a drug record). PubChem holds this exact structure as CID 6213.",
+       "verification_date": "2026-11-21"
+      },
+      {
+       "key": "sulfonamide fragment",
+       "name": "Sulfonamide (N-methylmethanesulfonamide shown)",
+       "smiles": "CNS(C)(=O)=O",
+       "slide": 27,
+       "tell": "S with two double-bonded oxygens, one carbon and one nitrogen. In the carbonic anhydrase inhibitors the sulfonamide is the group that binds zinc, and it is the answer to self-assessment question 3 (slide 27; slide 38; slide 65).",
+       "mark": "S(=O)(=O)N",
+       "priority": "core",
+       "priority_reason": "Slide 27 FG set; self-assessment Q3 answer is the sulfonamide.",
+       "priority_source": "p.27, p.38, p.65",
+       "exam": "Exam 3",
+       "deck": "OOO",
+       "assigned": true,
+       "pubchem_checked": true,
+       "pubchem_cid": 97632,
+       "verification": "teaching-structure",
+       "verification_note": "Teaching structure (not forced onto a drug record). PubChem holds this exact structure as CID 97632.",
+       "verification_date": "2026-11-21"
+      },
+      {
+       "key": "aryloxypropanolamine",
+       "name": "Aryloxypropanolamine (beta-blocker core)",
+       "smiles": "NCC(O)COc1ccccc1",
+       "slide": 27,
+       "tell": "An aromatic ring joined through an ether oxygen to a propanol chain that ends in an amine: the core of timolol, betaxolol, levobunolol and carteolol (slide 27; slide 33; slide 34).",
+       "mark": "cO[CH2][CH]([OH])[CH2][NH2]",
+       "priority": "core",
+       "priority_reason": "Slide 27 FG set; slide 34 SAR.",
+       "priority_source": "p.27, p.34",
+       "exam": "Exam 3",
+       "deck": "OOO",
+       "assigned": true,
+       "pubchem_checked": true,
+       "pubchem_cid": 2725073,
+       "verification": "teaching-structure",
+       "verification_note": "Teaching structure (not forced onto a drug record). PubChem holds this exact structure as CID 2725073.",
+       "verification_date": "2026-11-21"
+      },
+      {
+       "key": "carbamate",
+       "name": "Carbamate (methyl carbamate shown)",
+       "smiles": "NC(=O)OC",
+       "slide": 27,
+       "tell": "An ester and an amide on one carbon. Carbachol carries it; slide 42 ranks the cholinesterase-inhibiting groups phosphoryl > carbamate > ester by duration (slide 27; slide 40; slide 42).",
+       "mark": "NC(=O)O",
+       "priority": "core",
+       "priority_reason": "Slide 27 FG set; slide 42 ranks phosphoryl > carbamate > ester by duration.",
+       "priority_source": "p.27, p.42",
+       "exam": "Exam 3",
+       "deck": "OOO",
+       "assigned": true,
+       "pubchem_checked": true,
+       "pubchem_cid": 11722,
+       "verification": "teaching-structure",
+       "verification_note": "Teaching structure (not forced onto a drug record). PubChem holds this exact structure as CID 11722.",
+       "verification_date": "2026-11-21"
+      },
+      {
+       "key": "ester",
+       "name": "Ester (methyl acetate shown)",
+       "smiles": "CC(=O)OC",
+       "slide": 27,
+       "tell": "A carbon with =O and an alkoxy O: the group of acetylcholine, of the prostaglandin prodrugs (activated by esterase) and of netarsudil and omidenepag isopropyl (slide 27; slide 45; slide 47; slide 48).",
+       "mark": "C(=O)O",
+       "priority": "core",
+       "priority_reason": "Slide 27 FG set.",
+       "priority_source": "p.27",
+       "exam": "Exam 3",
+       "deck": "OOO",
+       "assigned": true,
+       "pubchem_checked": true,
+       "pubchem_cid": 6584,
+       "verification": "teaching-structure",
+       "verification_note": "Teaching structure (not forced onto a drug record). PubChem holds this exact structure as CID 6584.",
+       "verification_date": "2026-11-21"
+      },
+      {
+       "key": "prostane",
+       "name": "Prostane skeleton (cyclopentane with two chains)",
+       "smiles": "C1(CCCCCCC)C(CCCCCCCC)CCC1",
+       "slide": 27,
+       "tell": "A cyclopentane ring with a 7-carbon and an 8-carbon chain on neighbouring carbons is the carbon skeleton of the prostaglandins. Self-assessment question 5(i) shows this drawing and asks you to identify the group and the drugs (slide 27; slide 67).",
+       "mark": "C1CCCC1",
+       "priority": "core",
+       "priority_reason": "Slide 27 FG set; self-assessment Q5(i) (assigned) is this drawing.",
+       "priority_source": "p.27, p.67",
+       "exam": "Exam 3",
+       "deck": "OOO",
+       "assigned": true,
+       "pubchem_checked": true,
+       "pubchem_cid": 21961125,
+       "verification": "teaching-structure",
+       "verification_note": "Teaching structure (not forced onto a drug record). PubChem holds this exact structure as CID 21961125.",
+       "verification_date": "2026-11-21"
+      },
+      {
+       "key": "androstane",
+       "name": "Steroid nucleus (androstane shown)",
+       "smiles": "CC12CCCCC1CCC1C2CCC2(C)CCCC12",
+       "slide": 27,
+       "tell": "Four fused rings with methyls at C10 and C13. He said steroids are not a focus for Exam 3 (11/19: \"since we are not focusing on steroids, you can skip that question\"), so this tile is reference only.",
+       "priority": "reference",
+       "priority_reason": "Slide 27 shows it, but he told the class to skip the steroid self-assessment question (slide 63).",
+       "priority_source": "p.27, p.63",
+       "exam": "Exam 3",
+       "deck": "OOO",
+       "assigned": true,
+       "pubchem_checked": true,
+       "pubchem_cid": 123412,
+       "verification": "teaching-structure",
+       "verification_note": "Teaching structure (not forced onto a drug record). PubChem holds this exact structure as CID 123412.",
+       "verification_date": "2026-11-21"
+      }
+     ]
+    },
+    {
+     "label": "Cholinesterase-inhibitor groups (slides 42, 68)",
+     "items": [
+      {
+       "key": "phosphoryl",
+       "name": "Phosphoryl (phosphonate ester shown)",
+       "smiles": "COP(C)(=O)OC",
+       "slide": 42,
+       "tell": "P=O with ester oxygens: the group of echothiophate. It transfers to the serine of acetylcholinesterase and \"ages\" to an irreversible bond, so it gives the longest duration (slide 42; slide 68).",
+       "mark": "P(=O)",
+       "priority": "core",
+       "priority_reason": "Self-assessment Q5 (slide 68): which group inhibits acetylcholinesterase irreversibly (answer: phosphoryl).",
+       "priority_source": "p.42, p.68",
+       "exam": "Exam 3",
+       "deck": "OOO",
+       "assigned": true,
+       "pubchem_checked": true,
+       "pubchem_cid": 12958,
+       "verification": "teaching-structure",
+       "verification_note": "Teaching structure (not forced onto a drug record). PubChem holds this exact structure as CID 12958.",
+       "verification_date": "2026-11-21"
+      },
+      {
+       "key": "amide fragment",
+       "name": "Amide (N-methylacetamide shown, distractor on slide 68)",
+       "smiles": "CNC(C)=O",
+       "slide": 68,
+       "tell": "An N-H next to C=O: it is the amide in the distractor drawing B of question 5, not a cholinesterase-inhibitor group (slide 68).",
+       "mark": "C(=O)N",
+       "priority": "reference",
+       "priority_reason": "Distractor B on self-assessment Q5.",
+       "priority_source": "p.68",
+       "exam": "Exam 3",
+       "deck": "OOO",
+       "assigned": true,
+       "pubchem_checked": true,
+       "pubchem_cid": 6582,
+       "verification": "teaching-structure",
+       "verification_note": "Teaching structure (not forced onto a drug record). PubChem holds this exact structure as CID 6582.",
+       "verification_date": "2026-11-21"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "c-a2",
+   "title": "Alpha-2 agonists (Exam 3)",
+   "intro": "Imidazoline drugs of slides 31 and 32: lower aqueous humor production and increase outflow.",
+   "sections": [
+    {
+     "label": "Imidazoline alpha-2 agonists",
+     "items": [
+      {
+       "key": "clonidine",
+       "name": "Clonidine",
+       "smiles": "Clc1cccc(Cl)c1NC1=NCCN1",
+       "slide": 31,
+       "tell": "The imidazoline ring (shaded) is joined to the dichlorophenyl ring through an NH: the aryl imidazoline core with X = NH, which gives alpha-2 selectivity (slide 31; slide 32).",
+       "mark": "C1=NCCN1",
+       "priority": "core",
+       "priority_reason": "Slide 31 (assigned) names it as the prototype; Q4 asks which drugs carry the imidazoline.",
+       "priority_source": "p.31-32",
+       "exam": "Exam 3",
+       "deck": "OOO",
+       "assigned": true,
+       "pubchem_checked": true,
+       "pubchem_cid": 2803,
+       "verification": "exact",
+       "verification_note": "Atlas = PubChem CID 2803 = ChEMBL CHEMBL134 (full InChIKey).",
+       "verification_date": "2026-11-21",
+       "chembl_id": "CHEMBL134"
+      },
+      {
+       "key": "apraclonidine",
+       "name": "Apraclonidine (Iopidine)",
+       "smiles": "Nc1cc(Cl)c(NC2=NCCN2)c(Cl)c1",
+       "slide": 31,
+       "tell": "Clonidine with an extra aromatic NH2 (red on the slide); still an aryl imidazoline with X = NH (slide 31).",
+       "mark": "C1=NCCN1",
+       "priority": "core",
+       "priority_reason": "Slide 31 (assigned).",
+       "priority_source": "p.31",
+       "exam": "Exam 3",
+       "deck": "OOO",
+       "assigned": true,
+       "pubchem_checked": true,
+       "pubchem_cid": 2216,
+       "verification": "exact",
+       "verification_note": "Atlas = PubChem CID 2216 = ChEMBL CHEMBL647 (full InChIKey).",
+       "verification_date": "2026-11-21",
+       "chembl_id": "CHEMBL647"
+      },
+      {
+       "key": "brimonidine",
+       "name": "Brimonidine (Alphagan P)",
+       "smiles": "Brc1c(NC2=NCCN2)ccc2nccnc12",
+       "slide": 31,
+       "tell": "A quinoxaline in place of the dichlorophenyl ring, with the same NH-imidazoline link; the slide draws it as the tartrate salt (slide 31).",
+       "mark": "C1=NCCN1",
+       "priority": "core",
+       "priority_reason": "Slide 31 (assigned); the Lam deck also lists brimonidine.",
+       "priority_source": "p.31",
+       "exam": "Exam 3",
+       "deck": "OOO",
+       "assigned": true,
+       "pubchem_checked": true,
+       "pubchem_cid": 2435,
+       "verification": "exact",
+       "verification_note": "Atlas = PubChem CID 2435 = ChEMBL CHEMBL844 (full InChIKey).",
+       "verification_date": "2026-11-21",
+       "chembl_id": "CHEMBL844"
+      },
+      {
+       "key": "aryl imidazoline NH core",
+       "name": "Aryl imidazoline core, X = NH (alpha-2 agonists)",
+       "smiles": "c1ccccc1NC1=NCCN1",
+       "slide": 32,
+       "tell": "When the linker X between the ring and the imidazoline is NH, the compound is an alpha-2 agonist (slide 32).",
+       "mark": "c[NH]C=N",
+       "priority": "core",
+       "priority_reason": "Slide 32 SAR (assigned).",
+       "priority_source": "p.32",
+       "exam": "Exam 3",
+       "deck": "OOO",
+       "assigned": true,
+       "pubchem_checked": true,
+       "pubchem_cid": 137235,
+       "verification": "teaching-structure",
+       "verification_note": "Teaching structure (not forced onto a drug record). PubChem holds this exact structure as CID 137235.",
+       "verification_date": "2026-11-21"
+      },
+      {
+       "key": "tolazoline",
+       "name": "Aryl imidazoline core, X = CH2 (alpha-1 agonists), tolazoline",
+       "smiles": "C(c1ccccc1)C1=NCCN1",
+       "slide": 32,
+       "tell": "When X is CH2 the compound is an alpha-1 agonist; the decongestants naphazoline and oxymetazoline are of this type (slide 32; slide 55).",
+       "mark": "C1=NCCN1",
+       "priority": "core",
+       "priority_reason": "Slide 32 SAR (assigned).",
+       "priority_source": "p.32",
+       "exam": "Exam 3",
+       "deck": "OOO",
+       "assigned": true,
+       "pubchem_checked": true,
+       "pubchem_cid": 5504,
+       "verification": "exact",
+       "verification_note": "Atlas = PubChem CID 5504 = ChEMBL CHEMBL770 (full InChIKey).",
+       "verification_date": "2026-11-21",
+       "chembl_id": "CHEMBL770"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "c-beta",
+   "title": "Beta blockers (Exam 3)",
+   "intro": "Aryloxypropanolamines of slides 33 and 34: lower aqueous humor production.",
+   "sections": [
+    {
+     "label": "Aryloxypropanolamines",
+     "items": [
+      {
+       "key": "timolol",
+       "name": "Timolol (Timoptic)",
+       "smiles": "CC(C)(C)NC[C@H](O)COc1nsnc1N1CCOCC1",
+       "slide": 33,
+       "tell": "Aryloxypropanolamine (shaded) on a thiadiazole ring, with a tert-butylamine and the S-OH isomer that slide 34 says is preferred (slide 33; slide 34).",
+       "mark": "cO[CH2][CH]([OH])[CH2][NH]",
+       "priority": "core",
+       "priority_reason": "Slide 33 (assigned); also in Dr. Lam's drug list.",
+       "priority_source": "p.33",
+       "exam": "Exam 3",
+       "deck": "OOO",
+       "assigned": true,
+       "pubchem_checked": true,
+       "pubchem_cid": 33624,
+       "verification": "exact",
+       "verification_note": "Atlas = PubChem CID 33624 = ChEMBL CHEMBL499 (full InChIKey).",
+       "verification_date": "2026-11-21",
+       "chembl_id": "CHEMBL499"
+      },
+      {
+       "key": "betaxolol",
+       "name": "Betaxolol (Betoptic)",
+       "smiles": "CC(C)NCC(O)COc1ccc(CCOCC2CC2)cc1",
+       "slide": 33,
+       "tell": "A para-substituted aryloxypropanolamine, so beta-1 selective: slide 34 says most p-aryloxypropanolamines, e.g. betaxolol, are beta-1 antagonists (slide 34).",
+       "mark": "cO[CH2][CH]([OH])[CH2][NH]",
+       "priority": "core",
+       "priority_reason": "Slide 33 and the slide 34 SAR example.",
+       "priority_source": "p.33-34",
+       "exam": "Exam 3",
+       "deck": "OOO",
+       "assigned": true,
+       "pubchem_checked": true,
+       "pubchem_cid": 2369,
+       "verification": "exact",
+       "verification_note": "Atlas = PubChem CID 2369 = ChEMBL CHEMBL423 (full InChIKey).",
+       "verification_date": "2026-11-21",
+       "chembl_id": "CHEMBL423"
+      },
+      {
+       "key": "levobunolol",
+       "name": "Levobunolol (Betagan)",
+       "smiles": "CC(C)(C)NC[C@H](O)COc1cccc2C(=O)CCCc12",
+       "slide": 33,
+       "tell": "Aryloxypropanolamine on a tetralone ring; the S isomer (slide 33).",
+       "mark": "cO[CH2][CH]([OH])[CH2][NH]",
+       "priority": "core",
+       "priority_reason": "Slide 33 (assigned).",
+       "priority_source": "p.33",
+       "exam": "Exam 3",
+       "deck": "OOO",
+       "assigned": true,
+       "pubchem_checked": true,
+       "pubchem_cid": 39468,
+       "verification": "exact",
+       "verification_note": "Atlas = PubChem CID 39468 = ChEMBL CHEMBL1201237 (full InChIKey).",
+       "verification_date": "2026-11-21",
+       "chembl_id": "CHEMBL1201237"
+      },
+      {
+       "key": "carteolol",
+       "name": "Carteolol (Ocupress)",
+       "smiles": "CC(C)(C)NCC(O)COc1cccc2NC(=O)CCc12",
+       "slide": 33,
+       "tell": "Aryloxypropanolamine on a quinolinone ring: the ring carries a lactam (slide 33).",
+       "mark": "cO[CH2][CH]([OH])[CH2][NH]",
+       "priority": "core",
+       "priority_reason": "Slide 33 (assigned); Lam: carteolol has intrinsic sympathomimetic activity.",
+       "priority_source": "p.33",
+       "exam": "Exam 3",
+       "deck": "OOO",
+       "assigned": true,
+       "pubchem_checked": true,
+       "pubchem_cid": 2583,
+       "verification": "exact",
+       "verification_note": "Atlas = PubChem CID 2583 = ChEMBL CHEMBL839 (full InChIKey).",
+       "verification_date": "2026-11-21",
+       "chembl_id": "CHEMBL839"
+      }
+     ]
+    },
+    {
+     "label": "SAR contrast (slide 34)",
+     "items": [
+      {
+       "key": "arylethanolamine",
+       "name": "Arylethanolamine (weaker beta-blocker core)",
+       "smiles": "CNCC(O)c1ccccc1",
+       "slide": 34,
+       "tell": "Without the ether oxygen the core is an arylethanolamine; slide 34 says aryloxypropanolamines are more potent (slide 34).",
+       "priority": "core",
+       "priority_reason": "Slide 34 SAR (assigned).",
+       "priority_source": "p.34",
+       "exam": "Exam 3",
+       "deck": "OOO",
+       "assigned": true,
+       "pubchem_checked": true,
+       "pubchem_cid": 913,
+       "verification": "teaching-structure",
+       "verification_note": "Teaching structure (not forced onto a drug record). PubChem holds this exact structure as CID 913.",
+       "verification_date": "2026-11-21"
+      },
+      {
+       "key": "labetalol",
+       "name": "Labetalol (drawn as \"Molecule X\" on slide 34)",
+       "smiles": "CC(CCc1ccccc1)NCC(O)c1ccc(O)c(C(N)=O)c1",
+       "slide": 34,
+       "tell": "Slide 34 pairs betaxolol (aryloxypropanolamine) with this unnamed arylethanolamine; he can ask which one is which class (slide 34).",
+       "priority": "core",
+       "priority_reason": "Slide 34 shows it unnamed in the SAR box.",
+       "priority_source": "p.34",
+       "exam": "Exam 3",
+       "deck": "OOO",
+       "assigned": true,
+       "pubchem_checked": true,
+       "pubchem_cid": 3869,
+       "verification": "exact",
+       "verification_note": "Atlas = PubChem CID 3869 = ChEMBL CHEMBL429 (full InChIKey).",
+       "verification_date": "2026-11-21",
+       "chembl_id": "CHEMBL429"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "c-cai",
+   "title": "Carbonic anhydrase inhibitors (Exam 3)",
+   "intro": "Sulfonamides (\"zolamides\") of slides 36 to 38.",
+   "sections": [
+    {
+     "label": "Sulfonamide CAIs",
+     "items": [
+      {
+       "key": "acetazolamide",
+       "name": "Acetazolamide (Diamox)",
+       "smiles": "CC(=O)Nc1nnc(S(N)(=O)=O)s1",
+       "slide": 36,
+       "tell": "Oral CAI (the last-line agent in Dr. Lam's deck). The shaded sulfonamide SO2NH2 is the group that binds the zinc of carbonic anhydrase (slide 36; slide 38).",
+       "mark": "[SX4](=O)(=O)[NH2]",
+       "priority": "core",
+       "priority_reason": "Slide 36 (assigned); self-assessment Q3 is its sulfonamide.",
+       "priority_source": "p.36, p.38",
+       "exam": "Exam 3",
+       "deck": "OOO",
+       "assigned": true,
+       "pubchem_checked": true,
+       "pubchem_cid": 1986,
+       "verification": "exact",
+       "verification_note": "Atlas = PubChem CID 1986 = ChEMBL CHEMBL20 (full InChIKey).",
+       "verification_date": "2026-11-21",
+       "chembl_id": "CHEMBL20"
+      },
+      {
+       "key": "methazolamide",
+       "name": "Methazolamide (Neptazane)",
+       "smiles": "CC(=O)N=c1sc(S(N)(=O)=O)nn1C",
+       "slide": 36,
+       "tell": "Acetazolamide with an N-methyl on the ring (the green methyl on the slide); same SO2NH2 (slide 36).",
+       "mark": "[SX4](=O)(=O)[NH2]",
+       "priority": "core",
+       "priority_reason": "Slide 36 (assigned).",
+       "priority_source": "p.36",
+       "exam": "Exam 3",
+       "deck": "OOO",
+       "assigned": true,
+       "pubchem_checked": true,
+       "pubchem_cid": 4100,
+       "verification": "exact-pubchem",
+       "verification_note": "Atlas = PubChem CID 4100 (full InChIKey).",
+       "verification_date": "2026-11-21"
+      },
+      {
+       "key": "dorzolamide",
+       "name": "Dorzolamide (Trusopt)",
+       "smiles": "CCN[C@H]1C[C@H](C)S(=O)(=O)c2sc(S(N)(=O)=O)cc12",
+       "slide": 36,
+       "tell": "Topical CAI. Three groups to find: the ring sulfone, the thiophene sulfonamide (zinc binding) and the N-ethylamine that CYP removes (slide 36; slide 37).",
+       "mark": "[SX4](=O)(=O)[NH2]",
+       "priority": "core",
+       "priority_reason": "Slides 36-37 (assigned); practice Q3 asks for its N-deethylated product.",
+       "priority_source": "p.36-37",
+       "exam": "Exam 3",
+       "deck": "OOO",
+       "assigned": true,
+       "pubchem_checked": true,
+       "pubchem_cid": 5284549,
+       "verification": "exact",
+       "verification_note": "Atlas = PubChem CID 5284549 = ChEMBL CHEMBL218490 (full InChIKey).",
+       "verification_date": "2026-11-21",
+       "chembl_id": "CHEMBL218490"
+      },
+      {
+       "key": "brinzolamide",
+       "name": "Brinzolamide (Azopt)",
+       "smiles": "CCN[C@H]1CN(S(=O)(=O)C2=C1C=C(S2)S(=O)(=O)N)CCCOC",
+       "slide": 36,
+       "tell": "Topical CAI with the same N-ethylamine and thiophene sulfonamide as dorzolamide but a methoxypropyl on the ring nitrogen (slide 36; slide 37).",
+       "mark": "[SX4](=O)(=O)[NH2]",
+       "priority": "core",
+       "priority_reason": "Slides 36-37 (assigned); practice Q3.",
+       "priority_source": "p.36-37",
+       "exam": "Exam 3",
+       "deck": "OOO",
+       "assigned": true,
+       "smiles_source": "PubChem CID 68844 record (my first hand-written SMILES had other stereo centres; the drawing was then checked against the slide)",
+       "pubchem_checked": true,
+       "pubchem_cid": 68844,
+       "verification": "exact",
+       "verification_note": "Atlas = PubChem CID 68844 = ChEMBL CHEMBL220491 (full InChIKey).",
+       "verification_date": "2026-11-21",
+       "chembl_id": "CHEMBL220491"
+      }
+     ]
+    },
+    {
+     "label": "Practice question 3: N-deethylated metabolites",
+     "items": [
+      {
+       "key": "n-desethyl dorzolamide",
+       "name": "N-Desethyl dorzolamide (active metabolite)",
+       "smiles": "N[C@H]1C[C@H](C)S(=O)(=O)c2sc(S(N)(=O)=O)cc12",
+       "slide": 37,
+       "tell": "CYP N-deethylation removes the ethyl and leaves the primary amine shaded here; slide 37 says the N-deethylated metabolites are active (slide 37).",
+       "mark": "[CX4][NH2]",
+       "priority": "core",
+       "priority_reason": "Practice question 3 (his email): hand-draw the N-dealkylated products.",
+       "priority_source": "p.37; practice Q3",
+       "exam": "Exam 3",
+       "deck": "OOO",
+       "assigned": true,
+       "pubchem_checked": true,
+       "pubchem_cid": 3074858,
+       "verification": "teaching-structure",
+       "verification_note": "Teaching structure (not forced onto a drug record). PubChem holds this exact structure as CID 3074858.",
+       "verification_date": "2026-11-21"
+      },
+      {
+       "key": "n-desethyl brinzolamide",
+       "name": "N-Desethyl brinzolamide (active metabolite)",
+       "smiles": "N[C@@H]1CN(CCCOC)S(=O)(=O)c2sc(S(N)(=O)=O)cc12",
+       "slide": 37,
+       "tell": "Same N-deethylation: the ethylamine becomes a primary amine, the rest of the molecule is unchanged (slide 37).",
+       "mark": "[CX4][NH2]",
+       "priority": "core",
+       "priority_reason": "Practice question 3.",
+       "priority_source": "p.37; practice Q3",
+       "exam": "Exam 3",
+       "deck": "OOO",
+       "assigned": true,
+       "pubchem_checked": true,
+       "pubchem_cid": 124670435,
+       "verification": "teaching-structure",
+       "verification_note": "Teaching structure (not forced onto a drug record). PubChem holds this exact structure as CID 124670435.",
+       "verification_date": "2026-11-21"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "c-cholin",
+   "title": "Cholinergic agents (Exam 3)",
+   "intro": "Direct- and indirect-acting cholinergics, slides 40 to 42.",
+   "sections": [
+    {
+     "label": "Direct-acting (carbamates and esters)",
+     "items": [
+      {
+       "key": "acetylcholine",
+       "name": "Acetylcholine (ACh)",
+       "smiles": "CC(=O)OCC[N+](C)(C)C",
+       "slide": 40,
+       "tell": "Ester, two-carbon spacer, quaternary N-methyl amine: the SAR template (acyloxy group, ionizable amine, N-methyls, 2-carbon spacer between O and N) the slide asks you to know (slide 40).",
+       "mark": "C(=O)O",
+       "priority": "core",
+       "priority_reason": "Slide 40 (assigned).",
+       "priority_source": "p.40",
+       "exam": "Exam 3",
+       "deck": "OOO",
+       "assigned": true,
+       "pubchem_checked": true,
+       "pubchem_cid": 187,
+       "verification": "exact",
+       "verification_note": "Atlas = PubChem CID 187 = ChEMBL CHEMBL667 (full InChIKey).",
+       "verification_date": "2026-11-21",
+       "chembl_id": "CHEMBL667"
+      },
+      {
+       "key": "carbachol",
+       "name": "Carbachol (Isopto Carbachol)",
+       "smiles": "NC(=O)OCC[N+](C)(C)C",
+       "slide": 40,
+       "tell": "ACh with a carbamate in place of the ester, so cholinesterase breaks it down more slowly; slide 40 notes it also has weak indirect effects (slide 40).",
+       "mark": "NC(=O)O",
+       "priority": "core",
+       "priority_reason": "Slide 40 (assigned).",
+       "priority_source": "p.40",
+       "exam": "Exam 3",
+       "deck": "OOO",
+       "assigned": true,
+       "pubchem_checked": true,
+       "pubchem_cid": 2551,
+       "verification": "exact",
+       "verification_note": "Atlas = PubChem CID 2551 = ChEMBL CHEMBL965 (full InChIKey).",
+       "verification_date": "2026-11-21",
+       "chembl_id": "CHEMBL965"
+      },
+      {
+       "key": "pilocarpine",
+       "name": "Pilocarpine (Isopto Carpine)",
+       "smiles": "CC[C@H]1[C@@H](Cc2cncn2C)COC1=O",
+       "slide": 40,
+       "tell": "A natural-product lactone with an N-methyl imidazole; it mimics acetylcholine because the spacing between its key groups matches that of ACh (slide 40).",
+       "mark": "[C;R](=O)[O;R]",
+       "priority": "core",
+       "priority_reason": "Slide 40 (assigned).",
+       "priority_source": "p.40",
+       "exam": "Exam 3",
+       "deck": "OOO",
+       "assigned": true,
+       "pubchem_checked": true,
+       "pubchem_cid": 5910,
+       "verification": "exact",
+       "verification_note": "Atlas = PubChem CID 5910 = ChEMBL CHEMBL550 (full InChIKey).",
+       "verification_date": "2026-11-21",
+       "chembl_id": "CHEMBL550"
+      }
+     ]
+    },
+    {
+     "label": "Indirect-acting (cholinesterase inhibitors)",
+     "items": [
+      {
+       "key": "acetic acid",
+       "name": "Acetic acid (AChE product)",
+       "smiles": "CC(=O)O",
+       "slide": 41,
+       "tell": "AChE hydrolyses ACh to acetic acid and choline; the indirect agents block that step (slide 41).",
+       "priority": "reference",
+       "priority_reason": "Slide 41 product.",
+       "priority_source": "p.41",
+       "exam": "Exam 3",
+       "deck": "OOO",
+       "assigned": true,
+       "pubchem_checked": true,
+       "pubchem_cid": 176,
+       "verification": "exact",
+       "verification_note": "Atlas = PubChem CID 176 = ChEMBL CHEMBL539 (full InChIKey).",
+       "verification_date": "2026-11-21",
+       "chembl_id": "CHEMBL539"
+      },
+      {
+       "key": "choline",
+       "name": "Choline (AChE product)",
+       "smiles": "C[N+](C)(C)CCO",
+       "slide": 41,
+       "tell": "The other hydrolysis product of ACh (slide 41).",
+       "priority": "reference",
+       "priority_reason": "Slide 41 product.",
+       "priority_source": "p.41",
+       "exam": "Exam 3",
+       "deck": "OOO",
+       "assigned": true,
+       "pubchem_checked": true,
+       "pubchem_cid": 305,
+       "verification": "exact",
+       "verification_note": "Atlas = PubChem CID 305 = ChEMBL CHEMBL920 (full InChIKey).",
+       "verification_date": "2026-11-21",
+       "chembl_id": "CHEMBL920"
+      },
+      {
+       "key": "echothiophate",
+       "name": "Echothiophate (Phospholine Iodide)",
+       "smiles": "CCOP(=O)(OCC)SCC[N+](C)(C)C",
+       "slide": 42,
+       "tell": "An organophosphate: the shaded P=O group phosphorylates the serine of acetylcholinesterase, loses an ethyl group (\"aging\") and binds irreversibly (slide 42).",
+       "mark": "[PX4](=O)(O)(O)S",
+       "priority": "core",
+       "priority_reason": "Slide 42 (assigned); self-assessment Q5 asks which group inhibits irreversibly.",
+       "priority_source": "p.42",
+       "exam": "Exam 3",
+       "deck": "OOO",
+       "assigned": true,
+       "pubchem_checked": true,
+       "pubchem_cid": 10548,
+       "verification": "exact",
+       "verification_note": "Atlas = PubChem CID 10548 = ChEMBL CHEMBL1201341 (full InChIKey).",
+       "verification_date": "2026-11-21",
+       "chembl_id": "CHEMBL1201341"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "c-pg",
+   "title": "Prostaglandin analogs and the newer agents (Exam 3)",
+   "intro": "Slides 44 to 48: FP agonists, the EP2 agonist and the Rho kinase inhibitor. Esters are prodrugs; acids and amides are active.",
+   "sections": [
+    {
+     "label": "FP receptor agonists",
+     "items": [
+      {
+       "key": "pgf2a",
+       "name": "PGF2alpha",
+       "smiles": "CCCCC[C@@H](/C=C/[C@H]1[C@@H](C[C@@H]([C@@H]1C/C=C\\CCCC(=O)O)O)O)O",
+       "slide": 44,
+       "tell": "The natural ligand. Slide 46 marks the C1 acid, the C13-14 single or double bond, C15-OH and the chain end; ester = prodrug, acid or amide = active (slide 44; slide 46).",
+       "mark": "C(=O)[OH]",
+       "priority": "core",
+       "priority_reason": "Slides 44 and 46 (assigned).",
+       "priority_source": "p.44, p.46",
+       "exam": "Exam 3",
+       "deck": "OOO",
+       "assigned": true,
+       "smiles_source": "PubChem CID 5280363 record (my first hand-written SMILES had other stereo centres; the drawing was then checked against the slide)",
+       "pubchem_checked": true,
+       "pubchem_cid": 5280363,
+       "verification": "exact",
+       "verification_note": "Atlas = PubChem CID 5280363 = ChEMBL CHEMBL815 (full InChIKey).",
+       "verification_date": "2026-11-21",
+       "chembl_id": "CHEMBL815"
+      },
+      {
+       "key": "latanoprost",
+       "name": "Latanoprost (Xalatan), isopropyl ester prodrug",
+       "smiles": "CC(C)OC(=O)CCC/C=C\\C[C@H]1[C@H](C[C@H]([C@@H]1CC[C@H](CCC2=CC=CC=C2)O)O)O",
+       "slide": 44,
+       "tell": "An isopropyl ester: esterase hydrolysis gives the active acid. The phenyl ring replaces the end of the PGF2alpha chain (slide 44; slide 45).",
+       "mark": "C(=O)O[CH](C)C",
+       "priority": "core",
+       "priority_reason": "Slides 44-45 (assigned).",
+       "priority_source": "p.44-45",
+       "exam": "Exam 3",
+       "deck": "OOO",
+       "assigned": true,
+       "smiles_source": "PubChem CID 5311221 record (my first hand-written SMILES had other stereo centres; the drawing was then checked against the slide)",
+       "pubchem_checked": true,
+       "pubchem_cid": 5311221,
+       "verification": "exact",
+       "verification_note": "Atlas = PubChem CID 5311221 = ChEMBL CHEMBL1051 (full InChIKey).",
+       "verification_date": "2026-11-21",
+       "chembl_id": "CHEMBL1051"
+      },
+      {
+       "key": "latanoprost acid",
+       "name": "Latanoprost acid (active)",
+       "smiles": "C1[C@H]([C@@H]([C@H]([C@H]1O)C/C=C\\CCCC(=O)O)CC[C@H](CCC2=CC=CC=C2)O)O",
+       "slide": 45,
+       "tell": "Esterase removes the isopropyl and leaves the free carboxylic acid that activates the FP receptor (slide 45).",
+       "mark": "C(=O)[OH]",
+       "priority": "core",
+       "priority_reason": "Slide 45 (assigned): the prodrug activation drawing.",
+       "priority_source": "p.45",
+       "exam": "Exam 3",
+       "deck": "OOO",
+       "assigned": true,
+       "smiles_source": "PubChem CID 6441636 record (my first hand-written SMILES had other stereo centres; the drawing was then checked against the slide)",
+       "pubchem_checked": true,
+       "pubchem_cid": 6441636,
+       "verification": "exact",
+       "verification_note": "Atlas = PubChem CID 6441636 = ChEMBL CHEMBL1050 (full InChIKey).",
+       "verification_date": "2026-11-21",
+       "chembl_id": "CHEMBL1050"
+      },
+      {
+       "key": "bimatoprost",
+       "name": "Bimatoprost (Lumigan), an amide",
+       "smiles": "CCNC(=O)CCC/C=C\\C[C@H]1[C@H](C[C@H]([C@@H]1/C=C/[C@H](CCC2=CC=CC=C2)O)O)O",
+       "slide": 44,
+       "tell": "An N-ethyl amide at C1 (green on the slide): amides are active, so unlike the esters it is not a prodrug by that rule (slide 44; slide 46).",
+       "mark": "C(=O)N",
+       "priority": "core",
+       "priority_reason": "Slides 44, 46 (assigned).",
+       "priority_source": "p.44, p.46",
+       "exam": "Exam 3",
+       "deck": "OOO",
+       "assigned": true,
+       "smiles_source": "PubChem CID 5311027 record (my first hand-written SMILES had other stereo centres; the drawing was then checked against the slide)",
+       "pubchem_checked": true,
+       "pubchem_cid": 5311027,
+       "verification": "exact",
+       "verification_note": "Atlas = PubChem CID 5311027 = ChEMBL CHEMBL1200963 (full InChIKey).",
+       "verification_date": "2026-11-21",
+       "chembl_id": "CHEMBL1200963"
+      },
+      {
+       "key": "travoprost",
+       "name": "Travoprost (Travatan Z)",
+       "smiles": "CC(C)OC(=O)CCC/C=C\\C[C@H]1[C@H](C[C@H]([C@@H]1/C=C/[C@H](COC2=CC=CC(=C2)C(F)(F)F)O)O)O",
+       "slide": 44,
+       "tell": "Isopropyl ester prodrug with a CF3-phenoxy end group (slide 44).",
+       "mark": "C(=O)O[CH](C)C",
+       "priority": "core",
+       "priority_reason": "Slide 44 (assigned).",
+       "priority_source": "p.44",
+       "exam": "Exam 3",
+       "deck": "OOO",
+       "assigned": true,
+       "smiles_source": "PubChem CID 5282226 record (my first hand-written SMILES had other stereo centres; the drawing was then checked against the slide)",
+       "pubchem_checked": true,
+       "pubchem_cid": 5282226,
+       "verification": "exact",
+       "verification_note": "Atlas = PubChem CID 5282226 = ChEMBL CHEMBL1200799 (full InChIKey).",
+       "verification_date": "2026-11-21",
+       "chembl_id": "CHEMBL1200799"
+      },
+      {
+       "key": "tafluprost",
+       "name": "Tafluprost (Zioptan)",
+       "smiles": "CC(C)OC(=O)CCC/C=C\\C[C@H]1[C@H](C[C@H]([C@@H]1/C=C/C(COC2=CC=CC=C2)(F)F)O)O",
+       "slide": 44,
+       "tell": "Isopropyl ester prodrug; the two fluorines sit at C15 in place of the OH, so 15-OH oxidation cannot happen (slide 44; slide 46).",
+       "mark": "C(F)(F)",
+       "priority": "core",
+       "priority_reason": "Slides 44, 46 (assigned).",
+       "priority_source": "p.44, p.46",
+       "exam": "Exam 3",
+       "deck": "OOO",
+       "assigned": true,
+       "smiles_source": "PubChem CID 9868491 record (my first hand-written SMILES had other stereo centres; the drawing was then checked against the slide)",
+       "pubchem_checked": true,
+       "pubchem_cid": 9868491,
+       "verification": "exact",
+       "verification_note": "Atlas = PubChem CID 9868491 = ChEMBL CHEMBL1963683 (full InChIKey).",
+       "verification_date": "2026-11-21",
+       "chembl_id": "CHEMBL1963683"
+      },
+      {
+       "key": "latanoprostene bunod",
+       "name": "Latanoprostene bunod (Vyzulta)",
+       "smiles": "C1[C@H]([C@@H]([C@H]([C@H]1O)C/C=C\\CCCC(=O)OCCCCO[N+](=O)[O-])CC[C@H](CCC2=CC=CC=C2)O)O",
+       "slide": 44,
+       "tell": "Latanoprost acid esterified with a nitrate-bearing butyl group (NO2 on the slide), so it also releases nitric oxide (slide 44).",
+       "mark": "[N+](=O)[O-]",
+       "priority": "core",
+       "priority_reason": "Slide 44 (assigned).",
+       "priority_source": "p.44",
+       "exam": "Exam 3",
+       "deck": "OOO",
+       "assigned": true,
+       "smiles_source": "PubChem CID 11156438 record (my first hand-written SMILES had other stereo centres; the drawing was then checked against the slide)",
+       "pubchem_checked": true,
+       "pubchem_cid": 11156438,
+       "verification": "exact",
+       "verification_note": "Atlas = PubChem CID 11156438 = ChEMBL CHEMBL2364612 (full InChIKey).",
+       "verification_date": "2026-11-21",
+       "chembl_id": "CHEMBL2364612"
+      }
+     ]
+    },
+    {
+     "label": "EP2 agonist and Rho kinase inhibitor",
+     "items": [
+      {
+       "key": "omidenepag isopropyl",
+       "name": "Omidenepag isopropyl (OMDI)",
+       "smiles": "CC(C)OC(=O)CNc1cccc(CN(Cc2ccc(-n3cccn3)cc2)S(=O)(=O)c2cccnc2)n1",
+       "slide": 47,
+       "tell": "A pyridine sulfonamide (shaded) with an ester: an esterase (CE) prodrug of omidenepag, a selective EP2 agonist (slide 47).",
+       "mark": "S(=O)(=O)N",
+       "priority": "core",
+       "priority_reason": "Slide 47 (assigned).",
+       "priority_source": "p.47",
+       "exam": "Exam 3",
+       "deck": "OOO",
+       "assigned": true,
+       "pubchem_checked": true,
+       "pubchem_cid": 44230999,
+       "verification": "exact",
+       "verification_note": "Atlas = PubChem CID 44230999 = ChEMBL CHEMBL4297666 (full InChIKey).",
+       "verification_date": "2026-11-21",
+       "chembl_id": "CHEMBL4297666"
+      },
+      {
+       "key": "omidenepag",
+       "name": "Omidenepag (OMD), the active acid",
+       "smiles": "OC(=O)CNc1cccc(CN(Cc2ccc(-n3cccn3)cc2)S(=O)(=O)c2cccnc2)n1",
+       "slide": 47,
+       "tell": "Esterase leaves the carboxylic acid (red on the slide), the active metabolite (slide 47).",
+       "mark": "C(=O)[OH]",
+       "priority": "core",
+       "priority_reason": "Slide 47 (assigned).",
+       "priority_source": "p.47",
+       "exam": "Exam 3",
+       "deck": "OOO",
+       "assigned": true,
+       "pubchem_checked": true,
+       "pubchem_cid": 44230575,
+       "verification": "exact",
+       "verification_note": "Atlas = PubChem CID 44230575 = ChEMBL CHEMBL3707245 (full InChIKey).",
+       "verification_date": "2026-11-21",
+       "chembl_id": "CHEMBL3707245"
+      },
+      {
+       "key": "netarsudil",
+       "name": "Netarsudil (Rhopressa)",
+       "smiles": "Cc1ccc(C(=O)OCc2ccc(cc2)[C@@H](CN)C(=O)Nc2ccc3cnccc3c2)c(C)c1",
+       "slide": 48,
+       "tell": "An isoquinoline (shaded) and an ester: the ester is hydrolysed by esterase to the active metabolite (slide 48).",
+       "mark": "c1ccc2cnccc2c1",
+       "priority": "core",
+       "priority_reason": "Slide 48 (assigned).",
+       "priority_source": "p.48",
+       "exam": "Exam 3",
+       "deck": "OOO",
+       "assigned": true,
+       "pubchem_checked": true,
+       "pubchem_cid": 66599893,
+       "verification": "exact",
+       "verification_note": "Atlas = PubChem CID 66599893 = ChEMBL CHEMBL4594250 (full InChIKey).",
+       "verification_date": "2026-11-21",
+       "chembl_id": "CHEMBL4594250"
+      },
+      {
+       "key": "netarsudil-m1",
+       "name": "Netarsudil-M1 (active metabolite)",
+       "smiles": "OCc1ccc(cc1)[C@@H](CN)C(=O)Nc1ccc2cnccc2c1",
+       "slide": 48,
+       "tell": "The ester has been removed, leaving the benzyl alcohol (HO in red on the slide) (slide 48).",
+       "mark": "[CH2][OH]",
+       "priority": "core",
+       "priority_reason": "Slide 48 (assigned).",
+       "priority_source": "p.48",
+       "exam": "Exam 3",
+       "deck": "OOO",
+       "assigned": true,
+       "pubchem_checked": true,
+       "pubchem_cid": 134128281,
+       "verification": "exact",
+       "verification_note": "Atlas = PubChem CID 134128281 = ChEMBL CHEMBL4753043 (full InChIKey).",
+       "verification_date": "2026-11-21",
+       "chembl_id": "CHEMBL4753043"
       }
      ]
     }

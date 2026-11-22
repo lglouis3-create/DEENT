@@ -34,6 +34,8 @@ const LIKELY_MARKS_UI = (() => {
   const LEGEND = 'Stars mark what the professor stressed in lecture; tap a star for the reason.';
   const SPACE = {n: 0};
   const only = {guide: false, ref: false, tell: false, dz: false, drugs: false, gloss: false};   // page memory only
+  const examSel = {guide: 0, ref: 0, tell: 0};   // which exam's folders the starred view shows (0 = every exam); page memory only (Louis, 2026-11-21)
+  const EXAMCHIPS = [[0, 'All exams'], [1, 'Exam 1'], [2, 'Exam 2'], [3, 'Exam 3']];
 
   const CSS = `
 .lkstar{position:relative;z-index:0;display:inline-flex;align-items:center;justify-content:center;box-sizing:border-box;width:44px;height:44px;min-width:44px;margin:-9px -1px -9px -9px;padding:0;vertical-align:middle;
@@ -52,6 +54,7 @@ const LIKELY_MARKS_UI = (() => {
 .lkonly{box-sizing:border-box;min-height:44px;padding:6px 14px;font:inherit;font-size:14px;color:var(--text);background:var(--paper);border:1px solid var(--line);border-radius:999px;cursor:pointer}
 .lkonly[aria-pressed=true]{background:var(--accent);color:#fff;border-color:var(--accent)}
 .lkonly:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.lkx{min-height:44px}.lkexams{display:flex;flex-wrap:wrap;align-items:center;gap:8px}.lkexams .lklab{color:var(--text-dim);font-size:13px;margin-right:2px}
 .lkcount{flex:1 1 12rem;margin:0;color:var(--text-dim);font-size:13px}
 #v-gloss .lkbar{margin:6px 0}
 #v-gloss .glf .lkonly{font-size:14px}
@@ -76,6 +79,7 @@ const LIKELY_MARKS_UI = (() => {
     if (on && !was) { el.setAttribute('data-lkh', ''); el.hidden = true; }
     else if (!on && was) { el.removeAttribute('data-lkh'); el.hidden = false; }
   };
+  const inScope = (tab, el) => { if (!(tab in examSel) || !examSel[tab]) return true; const f = el && el.closest && el.closest('.rfold'); const m = f && /-(\d)$/.exec(f.id || ''); return !m || +m[1] === examSel[tab]; };
   const isHidden = el => !!(el && el.closest && el.closest('[data-lkh]'));
 
   /* ---------- the star and its line ---------- */
@@ -111,8 +115,15 @@ const LIKELY_MARKS_UI = (() => {
     b = document.createElement('div'); b.className = 'lkbar'; b.dataset.lktab = tab;
     b.innerHTML = '<p class="lkleg"><span class="lkpill">★ Likely on the exam</span>' + esc(LEGEND) + '</p>' +
       '<button type="button" class="lkonly" aria-pressed="' + only[tab] + '">Starred only</button>' +
+      (tab in examSel ? '<div class="lkexams" role="group" aria-label="Starred items for which exam"><span class="lklab">For</span>' +
+        EXAMCHIPS.map(([k, l]) => '<button type="button" class="lkonly lkx" data-lkexam="' + k + '" aria-pressed="' + (examSel[tab] === k) + '">' + l + '</button>').join('') + '</div>' : '') +
       '<p class="lkcount" role="status"></p>';
     b.querySelector('.lkonly').addEventListener('click', () => toggle(tab));
+    b.querySelectorAll('[data-lkexam]').forEach(x => x.addEventListener('click', () => {
+      examSel[tab] = +x.dataset.lkexam;
+      b.querySelectorAll('[data-lkexam]').forEach(y => y.setAttribute('aria-pressed', String(+y.dataset.lkexam === examSel[tab])));
+      if (!only[tab]) toggle(tab); else { openFolders(tab, true); refresh(tab); }
+    }));
     if (where) where(b); else host.appendChild(b);
     return b;
   }
@@ -122,7 +133,7 @@ const LIKELY_MARKS_UI = (() => {
   function toggle(tab){
     only[tab] = !only[tab];
     const p = tabPane(tab);
-    if (p) p.querySelectorAll('.lkonly').forEach(x => x.setAttribute('aria-pressed', String(only[tab])));
+    if (p) p.querySelectorAll('.lkonly:not([data-lkexam])').forEach(x => x.setAttribute('aria-pressed', String(only[tab])));
     if (p) p.classList.toggle('lk-only', only[tab]);
     if (only[tab]) openFolders(tab, true);
     refresh(tab);
@@ -135,12 +146,16 @@ const LIKELY_MARKS_UI = (() => {
     folders(tab).forEach(f => {
       if (!force && f.dataset.lkseen) return;
       f.dataset.lkseen = '1';
-      if (only[tab] && f.querySelector('.lkstar') && !f.open) f.open = true;
+      const fx = +((/-(\d)$/.exec(f.id || '') || [])[1] || 0);
+      if (only[tab] && f.querySelector('.lkstar') && !f.open && !(tab in examSel && examSel[tab] && fx && fx !== examSel[tab])) f.open = true;
     });
   }
   function foldVisibility(tab){
     folders(tab).forEach(f => {
       if (!only[tab]) { hide(f, false); return; }
+      const fx = +((/-(\d)$/.exec(f.id || '') || [])[1] || 0);
+      hide(f, false);   // measure the folder's stars as if it were shown, so a folder hidden for another exam comes back when its exam is chosen
+      if (tab in examSel && examSel[tab] && fx && fx !== examSel[tab]) { hide(f, true); return; }   // another exam's folder
       const body = f.querySelector(':scope > .rfbody');
       const any = body && [...body.querySelectorAll('.lkstar')].some(s => !isHidden(s));
       const list = body && body.querySelector('.rfdz li:not([data-lkh]) [data-rfdz]');
@@ -193,8 +208,8 @@ const LIKELY_MARKS_UI = (() => {
       p.querySelectorAll('.gpt[data-lkstar]').forEach(() => blkStar++);
     }
     // sections the reader can still see: starred ones, and ones that hold a starred block
-    const shownSecs = [...p.querySelectorAll('section.gobj')].filter(s => !s.hasAttribute('data-lkh')).length;
-    const shownBlks = [...p.querySelectorAll('.gpt[data-lkstar]')].filter(g => !isHidden(g)).length;
+    let shownSecs = [...p.querySelectorAll('section.gobj')].filter(s => !s.hasAttribute('data-lkh')).length;
+    let shownBlks = [...p.querySelectorAll('.gpt[data-lkstar]')].filter(g => !isHidden(g)).length;
     // deck headings and the notes after them go when no section of the deck is left
     (p.querySelectorAll('.rfbody').length ? [...p.querySelectorAll('.rfbody')] : [p]).forEach(body => {
       let group = null; const groups = [];
@@ -207,6 +222,12 @@ const LIKELY_MARKS_UI = (() => {
     });
     nav(p);
     foldVisibility('guide'); openFolders('guide', false);
+    if (examSel.guide) {   // counts for the exam chosen
+      const S = [...p.querySelectorAll('section.gobj')].filter(x => inScope('guide', x)), B = [...p.querySelectorAll('.gpt')].filter(x => inScope('guide', x));
+      secs = S.length; blk = B.length;
+      shownSecs = S.filter(x => !isHidden(x)).length; shownBlks = B.filter(x => x.dataset.lkstar && !isHidden(x)).length;
+      secStar = S.filter(x => x.dataset.lkself).length; blkStar = B.filter(x => x.dataset.lkstar).length;
+    }
     setCount('guide', only.guide
       ? 'Showing ' + shownSecs + ' of ' + secs + ' sections and ' + shownBlks + ' of ' + blk + ' blocks.'
       : plural(secStar, 'starred section') + ' and ' + plural(blkStar, 'starred block') + ' in this tab.');
@@ -245,6 +266,7 @@ const LIKELY_MARKS_UI = (() => {
     });
     nav(p);
     foldVisibility('ref'); openFolders('ref', false);
+    if (examSel.ref) { const G = groupsOf(p).filter(g => inScope('ref', g.h)); n = G.length; star = G.filter(g => MAP.reference[g.h.id]).length; }
     setCount('ref', only.ref ? 'Showing ' + star + ' of ' + n + ' sections.' : plural(star, 'starred section') + ' in this tab.');
   }
   function tell(){
@@ -257,7 +279,7 @@ const LIKELY_MARKS_UI = (() => {
       g.els.forEach(k => k.querySelectorAll && k.querySelectorAll('tbody tr').forEach(tr => { if (tr.firstElementChild && tr.firstElementChild.tagName !== 'TH') trs.push(tr); }));
       let any = false;
       trs.forEach((tr, i) => {
-        rows++;
+        if (inScope('tell', tr)) rows++;
         const m = MAP.tell[g.h.id + '#r' + (i + 1)];
         if (m) {
           const cell = tr.firstElementChild;
@@ -266,7 +288,7 @@ const LIKELY_MARKS_UI = (() => {
           tr.dataset.lkstar = '1'; any = true; star++;
         } else delete tr.dataset.lkstar;
         hide(tr, only.tell && !m);
-        if (!only.tell || m) shown++;
+        if ((!only.tell || m) && inScope('tell', tr)) shown++;
       });
       g.els.forEach(k => hide(k, only.tell && !any));
     });

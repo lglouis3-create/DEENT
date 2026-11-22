@@ -30,7 +30,7 @@ const check = (ok, what, detail) => {
   if (ok) passes++; else { fails++; console.log('FAIL: ' + what + (detail != null ? ' (' + detail + ')' : '')); }
 };
 
-const GROUP = 'Glaucoma therapeutics (Dr. Lam, Exam 3)';
+const GROUP = 'Glaucoma drugs and counseling (Dr. Lam)';
 const PLAN = {
   'lg-sequence':       {steps: 6, h: 372},
   'lg-administration': {steps: 5, h: 300},
@@ -168,7 +168,7 @@ const drawn = k => (DIA[k] || '').replace(/<figcaption>[\s\S]*?<\/figcaption>/, 
   for (const x of ['Indication', 'Effectiveness', 'Safety', 'Adherence', 'Intolerance (side effects)', 'Inadequate response', 'preservative-free', 'latanoprost to bimatoprost', 'Timoptic XE gel']) check(pb.includes(x), 'lg-problems: prints ' + x);
   const cb = drawn('lg-combos');
   for (const x of ['Combigan', 'Cosopt,', 'Cosopt PF', 'Simbrinza', 'twice daily', 'three times daily']) check(cb.includes(x), 'lg-combos: prints ' + x);
-  check(!/(brinzolamide|dorzolamide)/i.test(cb), 'lg-combos: no drug named for the CAI in Simbrinza (her slides print it two ways)');
+  check(/Simbrinza: brinzolamide \(CAI\) \+ brimonidine/.test(cb), 'lg-combos: Simbrinza is named as brinzolamide + brimonidine (her 11/20 email)');
   const last = cb.split(/<g class="st[ "]/).pop();
   check((last.match(/>twice daily</g) || []).length === 2 && (last.match(/>three times daily</g) || []).length === 1, 'lg-combos: two twice-daily products and one three-times-daily');
   const all = Object.keys(PLAN).map(k => DIA[k]).join('');

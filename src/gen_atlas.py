@@ -9,11 +9,12 @@ atlas_data.json holds the boards the tab shows:
 
     {"boards": [{"id", "title", "intro", "note"?,
                  "sections": [{"label", "items": [
-                     {"key", "name", "smiles", "slide", "tell", "eg"?,
+                     {"key", "name", "smiles", "slide", "tell", "eg"?, "exam"?, "deck"?,
                       "mark"?: "<SMARTS of the feature to shade>",
                       "deeper"?: {"text", "sources": [{"cite", "url"}]}}]}]}]}
 
-`key` is the name questions use (`fg:` and option texts); `name` is what the
+`exam` (default 'Exam 1') and `deck` (default 'DPAW'; a key of ATLAS_DECKS in
+atlas_ui.js) label the tile. `key` is the name questions use (`fg:` and option texts); `name` is what the
 tile prints; `tell` says what to look at and carries its source (slide or
 transcript); `slide` is the PDF page of the deck the drawing was checked
 against. Drawings come from the SMILES through RDKit and are written as SVG
@@ -178,6 +179,7 @@ def main():
                         'verification': it.get('verification', ''), 'chembl': it.get('chembl_id', ''),
                         'pubchem': it.get('pubchem_cid', ''), 'checked': it.get('verification_date', ''),
                         'exam': it.get('exam', 'Exam 1'),
+                        'deck': it.get('deck', 'DPAW'),
                         'psrc': it.get('priority_source', ''), 'vnote': it.get('verification_note', ''),
                         'note': it.get('note', ''),
                         'assigned': it.get('assigned', True)}

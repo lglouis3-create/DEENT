@@ -176,20 +176,20 @@ const COURSE = {
      prof:'Smith', exam:3, module:'Exam 3: Lectures 9–13'},
     // Dr. Sikazwe's medicinal chemistry of the ear, mouth and eye: 11/18 (slides 1-32) and 11/19 (the rest), one deck.
     {id:'L11', deck:'Sikazwe_OOO_mc.pdf',
-     label:'Lectures 11–12: Otic, oral and ophthalmic medicinal chemistry (Sikazwe, 11/18 and 11/19)',
+     label:'Lectures 11–12: Ear, mouth and eye drug chemistry (Sikazwe, 11/18 and 11/19)',
      prof:'Sikazwe', exam:3, module:'Exam 3: Lectures 9–13'},
     // Dr. Lam's glaucoma therapeutics (11/19, about two hours); her ophthalmic disorders lecture (11/20) joins as its own entry.
     {id:'L12', deck:'Lam_Glaucoma.pdf',
-     label:'Lecture 12: Glaucoma therapeutics (Lam, 11/19)',
+     label:'Lecture 12: Glaucoma drugs and counseling (Lam, 11/19)',
      prof:'Lam', exam:3, module:'Exam 3: Lectures 9–13'},
     {id:'L13a', deck:'Lam_OphthalmicDisorders.pdf',
-     label:'Lecture 13: Ophthalmic disorders other than glaucoma (Lam, 11/20)',
+     label:'Lecture 13: Dry eye, conjunctivitis and eye-drop use (Lam, 11/20)',
      prof:'Lam', exam:3, module:'Exam 3: Lectures 9–13'},
     {id:'L13b', deck:'Lam_OralDisorders_slides.pdf',
-     label:'Lecture 13: Oral disorders (Lam, 11/20)',
+     label:'Lecture 13: Mouth conditions (Lam, 11/20)',
      prof:'Lam', exam:3, module:'Exam 3: Lectures 9–13'},
     {id:'L13c', deck:'Lam_OticDisorders_slides.pdf',
-     label:'Lecture 13: Otic disorders (Lam, 11/20)',
+     label:'Lecture 13: Ear conditions (Lam, 11/20)',
      prof:'Lam', exam:3, module:'Exam 3: Lectures 9–13'},
   ],
 
@@ -377,10 +377,10 @@ const COURSE = {
           // clip manifest, then the player (walk_ui.js) and "Hear the why" (why_ui.js). When node
           // evaluates this file (build.py, the checks) a data file not yet written is left out, so
           // the build does not stop on it; the players draw nothing for data that is not there.
-          // dianarr_smith.js, dianarr_sik.js: spoken text for each step of the drawn step-throughs (Louis,
+          // dianarr_smith.js, dianarr_sik.js, dianarr_ey.js, dianarr_lg.js, dianarr_oo.js (the Exam 3 figures): spoken text for each step of the drawn step-throughs (Louis,
           // 2026-11-09: "can the diagram have narration explaining the steps of each as a walk through?")
           ...['walk_pp.js', 'walk_pc.js', 'walk_sun.js', 'walk_mc.js', 'walk_rd.js', 'why_data.js',
-              'dianarr_smith.js', 'dianarr_sik.js', 'audio_manifest.js']
+              'dianarr_smith.js', 'dianarr_sik.js', 'dianarr_ey.js', 'dianarr_lg.js', 'dianarr_oo.js', 'audio_manifest.js']
             .filter(f => { try { return typeof require !== 'function' || require('fs').existsSync(f); } catch (e) { return true; } }),
           // reaction figures for the why of mapped questions (why_figs.js, read by why_ui.js)
           'why_figs.js',

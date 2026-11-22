@@ -131,6 +131,7 @@ function htmlUnits(html, group, opts){
   opts = opts || {};
   const stack = [], tabs = [];            // open elements {tag, id, cls, col}; open tables {heads, inHead}
   let buf = '', skips = [], brks = [], headId = '', skipDepth = 0, skipStart = 0;
+  const gcount = {};
   const flush = () => {
     const text = buf, sk = skips, bk = brks; buf = ''; skips = []; brks = [];
     const top = stack[stack.length - 1], tab = tabs[tabs.length - 1];
@@ -149,8 +150,9 @@ function htmlUnits(html, group, opts){
       ctx.column = SLIDE_HEAD.test(head);
     }
     // a guide's objective bar: <div class="gbar"><span>Objective (PP 3)</span><b>…</b><i>PP 4–6</i></div>, one unit
-    const bar = stack.some(x => /\bgbar\b/.test(x.cls || ''));
-    units.push({group, where, text, ctx, skip: sk, breaks: bk, rule: rule ? rule.rule : '', kind: bar ? 'gbar' : '', key: bar ? where : ''});
+    // a section can hold more than one bar (an Objective bar, a Key point bar): each is its own place, "<section id>#<n>"
+    const bar = stack.find(x => x.barKey);
+    units.push({group, where, text, ctx, skip: sk, breaks: bk, rule: rule ? rule.rule : '', kind: bar ? 'gbar' : '', key: bar ? bar.barKey : ''});
   };
   const re = /<!--[\s\S]*?-->|<(\/?)([a-zA-Z][a-zA-Z0-9]*)((?:"[^"]*"|'[^']*'|[^'">])*)>|[^<]+/g;
   let m;
@@ -172,7 +174,10 @@ function htmlUnits(html, group, opts){
       if ((tag === 'h2' || tag === 'h3') && id) { headId = id; if (opts.sections && !P.sectionDeck(id)) noRule.push(group + ' #' + id); }
       if (tag === 'section' && id && /\bclass="[^"]*\bgobj\b/.test(attrs) && opts.sections && !P.sectionDeck(id)) noRule.push(group + ' #' + id);
       if (NOLINK.has(tag)) { if (!skipDepth) skipStart = buf.length; skipDepth++; }
-      if (!VOID.has(tag) && !/\/$/.test(attrs)) stack.push({tag, id, cls: (/\bclass="([^"]*)"/.exec(attrs) || [])[1] || '', col: c});
+      const cls = (/\bclass="([^"]*)"/.exec(attrs) || [])[1] || '';
+      let barKey = '';
+      if (/\bgbar\b/.test(cls)) { const w = opts.where || (stack.slice().reverse().find(x => x.id) || {}).id || headId || ''; gcount[w] = (gcount[w] || 0) + 1; barKey = w + '#' + gcount[w]; }
+      if (!VOID.has(tag) && !/\/$/.test(attrs)) stack.push({tag, id, cls, col: c, barKey});
     } else {
       const tab = tabs[tabs.length - 1];
       if (tag === 'thead' && tab) tab.inHead = false;
@@ -202,7 +207,9 @@ const cmpNames = q => {
   return right ? [right].concat(opts.filter(t => t !== right)) : opts;
 };
 const fgTell = k => { const it = ATLAS && ATLAS.item ? ATLAS.item(k) : null; if (!it) return ''; const plain = String(it.t).replace(/<[^>]+>/g, ''), stop = plain.search(/[.!?]/); return decode(stop > 0 ? plain.slice(0, stop + 1) : plain); };
-const stripOf = q => { const names = cmpNames(q); return names.length < 2 ? [] : names.map(fgTell); };
+const fgName = k => { const it = ATLAS && ATLAS.item ? ATLAS.item(k) : null; return it ? decode(String(it.n).replace(/<[^>]+>/g, '')) : ''; };
+// a caption is the group's name (<b>, may cite a slide: "distractor on slide 68") and the note: both are read
+const stripOf = q => { const names = cmpNames(q); return names.length < 2 ? [] : names.reduce((a, k) => a.concat([fgName(k), fgTell(k)]), []); };
 const atlasRow = P.sectionDeck('at-') || {decks: []}, atlasCtx = {decks: atlasRow.decks, sun: atlasRow.sun || null};
 
 /* questions: the source line, then what the page shows with it after the answer; the place is
@@ -479,7 +486,7 @@ check(read(BAR.join(''), ['pp']) === 'PP 3>pp 3' && read(BAR.join(''), {decks: [
   'where a new element\'s text starts, a deck name or "slide" starts a word although a letter stands before it in the joined text (a guide\'s objective bar)');
 const gbars = units.filter(u => u.kind === 'gbar'), barIn = gbars.filter(u => links.some(l => l.u === u && u.breaks.length && l.s >= u.breaks[u.breaks.length - 1]));
 const barSplit = refused.filter(x => /^split over/.test(x.why));
-check(gbars.length === 234 && barIn.length === gbars.length && !barSplit.length, `every objective bar of the guides (${gbars.length}) has links in its slide list, and no citation of the reading files is split by a tag`, gbars.filter(u => barIn.indexOf(u) < 0).map(u => u.where).concat(barSplit.map(x => x.u.where + ': ' + x.raw)).join(', '));
+check(gbars.length >= 234 && barIn.length === gbars.length && !barSplit.length, `every objective bar of the guides (${gbars.length}) has links in its slide list, and no citation of the reading files is split by a tag`, gbars.filter(u => barIn.indexOf(u) < 0).map(u => u.where).concat(barSplit.map(x => x.u.where + ': ' + x.raw)).join(', '));
 const strips = links.filter(l => l.u.kind === 'strip'), stripQ = [...new Set(units.filter(u => u.kind === 'strip').map(u => u.key))], stripOther = stripQ.filter(id => { const q = QUESTIONS.find(x => x.id === id); return q && q.prof !== 'Sikazwe'; });
 check(strips.length > 0 && strips.every(l => l.deck === 'mc') && stripOther.length >= 5, `the notes under the structures of an answered question (${stripQ.length} questions, ${stripOther.length} of another professor) are linked to Dr. Sikazwe's deck only (${strips.length} links)`, strips.filter(l => l.deck !== 'mc').slice(0, 6).map(l => l.u.where + ' ' + l.deck + ' ' + l.n).join(', '));
 const pairU = units.filter(u => u.kind === 'pair'), pairL = links.filter(l => l.u.kind === 'pair');

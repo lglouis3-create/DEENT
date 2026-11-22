@@ -25,7 +25,7 @@ const here = f => fs.readFileSync(path.join(SRC, f), 'utf8');
 const C = (() => { const sb = {console, window: {}}; vm.createContext(sb); vm.runInContext(here('course.js') + '\nthis.COURSE = COURSE;', sb); return sb.COURSE; })();
 const F = C.files, at = f => F.indexOf(f);
 console.log('=== course.js `files` ===');
-const data = ['dianarr_smith.js', 'dianarr_sik.js'].filter(f => fs.existsSync(path.join(SRC, f)));
+const data = ['dianarr_smith.js', 'dianarr_sik.js', 'dianarr_ey.js', 'dianarr_lg.js', 'dianarr_oo.js'].filter(f => fs.existsSync(path.join(SRC, f)));
 check(data.length >= 1 && data.every(f => at(f) >= 0), `the narration files on disk are in the page (${data.join(', ')})`, data.filter(f => at(f) < 0).join(', '));
 check(data.every(f => at(f) < at('walk_ui.js') && (at('audio_manifest.js') < 0 || at(f) < at('audio_manifest.js'))),
   'they come before audio_manifest.js and walk_ui.js');

@@ -40,7 +40,7 @@ check(!ns.length, 'every step carries a source', ns.join('; '));
 // whose content is it: every block names its professor, and the step's tags equal the professors of its blocks
 const np = [], sp = [];
 DZ.cards.forEach(c => (c.steps || []).forEach(s => {
-  (s.blocks || []).forEach((b, i) => { if (!['sm', 'sk', 'pa'].includes(b.p)) np.push(c.id + ' / ' + s.title + ' #' + (i + 1) + ' (' + b.k + ')'); });
+  (s.blocks || []).forEach((b, i) => { if (!['sm', 'sk', 'la', 'pa'].includes(b.p)) np.push(c.id + ' / ' + s.title + ' #' + (i + 1) + ' (' + b.k + ')'); });
   const a = [...new Set((s.blocks || []).map(b => b.p).filter(Boolean))].sort().join(','), d = [...new Set(s.profs || [])].sort().join(',');
   if (a !== d) sp.push(c.id + ' / ' + s.title + ': blocks ' + a + ' vs tags ' + d);
 }));
@@ -54,7 +54,7 @@ const idle = Object.keys(DZ.terms).filter(k => !usedT.has(k));
 check(!idle.length, 'every definition is used by an underlined term', idle.join(', '));
 const bad3 = Object.entries(DZ.terms).filter(([k, t]) => !(Array.isArray(t) && t.length === 3 && t[0] && t[1] && t[2])).map(([k]) => k);
 check(!bad3.length, 'every definition has a name, a meaning and a source', bad3.join(', '));
-const nh = Object.entries(DZ.drugs).filter(([k, d]) => !(d.how && (d.how.none === true || (d.how.text && d.how.src && ['sm', 'sk', 'pa'].includes(d.how.p))) && Array.isArray(d.figs))).map(([k]) => k);
+const nh = Object.entries(DZ.drugs).filter(([k, d]) => !(d.how && (d.how.none === true || (d.how.text && d.how.src && ['sm', 'sk', 'la', 'pa'].includes(d.how.p))) && Array.isArray(d.figs))).map(([k]) => k);
 check(!nh.length, 'every drug panel has "How it works" (a sourced mechanism or an explicit none) and a list of figures', nh.join(', '));
 const sf = [];
 DZ.cards.forEach(c => (c.steps || []).forEach(s => (s.blocks || []).forEach(b => { if (b.k === 'fig' && /how it works/i.test(b.label || '') && /fig-(cni|pde4|ribosome|folate|costim)/.test(b.jump || '')) sf.push(c.id + ': ' + b.label); })));

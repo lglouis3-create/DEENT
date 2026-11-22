@@ -26,8 +26,9 @@ const DZ_UI = (() => {
   if (!ok) return null;
   const ID = 'dz';
   const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g, c => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'}[c]));
-  const PROF = {sm: 'Dr. Smith', sk: 'Dr. Sikazwe', pa: 'Dr. Patel'};
-  const st = {view: 'cards', card: (DZ.cards[0] || {}).id, recall: false, filter: '', q: '', pt: {}, rate: {}, open: {}};
+  const PROF = {sm: 'Dr. Smith', sk: 'Dr. Sikazwe', la: 'Dr. Lam', pa: 'Dr. Patel'};
+  const examNow = (() => { try { const m = /(\d)/.exec(String(COURSE.activeExam || '')); return m ? +m[1] : 0; } catch (e) { return 0; } })();
+  const st = {view: 'cards', exam: examNow, card: (DZ.cards.find(x => !examNow || (x.exams || []).includes(examNow)) || DZ.cards[0] || {}).id, recall: false, filter: '', q: '', pt: {}, rate: {}, open: {}};
   const isOpen = (c, i) => st.recall || !!st.open[c.id + ':' + i];
   let pane = null;
 
@@ -75,7 +76,7 @@ const DZ_UI = (() => {
      the step has exactly one. Consecutive blocks of one professor form a group. On a card with more than one
      professor each group gets that professor's colour on its left edge, and in a step with more than one
      professor also the professor's name, so no row is left unattributed (Louis, 2026-11-13). */
-  const ORDER = ['sm', 'sk', 'pa'];
+  const ORDER = ['sm', 'sk', 'la', 'pa'];
   const profOf = (s, b) => (b.p && PROF[b.p]) ? b.p : ((s.profs || []).length === 1 ? s.profs[0] : '');
   const stepProfs = s => { const set = new Set((s.blocks || []).map(b => profOf(s, b)).filter(Boolean)); (s.profs || []).forEach(x => { if (!(s.blocks || []).some(b => b.p)) set.add(x); }); return ORDER.filter(x => set.has(x)); };
   function stepBody(s, cardMulti){
@@ -123,16 +124,25 @@ const DZ_UI = (() => {
       </aside></div>
     </article>`;
   }
-  const GROUPS = [['algorithm', 'Treatment by line'], ['selfcare', 'Self-care or refer, then treat by symptom']];
+  const AREAS = [['skin', 'Skin and hair'], ['eye', 'Eye'], ['ear', 'Ear'], ['mouth', 'Mouth and teeth']];
+  const inExam = x => !st.exam || (x.exams || []).includes(st.exam);
+  const EXAMLINE = {0: 'Every condition, with the exam each belongs to.', 1: 'Exam 1: Dr. Smith and Dr. Sikazwe, 10/29 to 11/04.', 2: 'Exam 2: Dr. Patel, 11/06 to 11/12. Lectures 1 to 4 return only as the cumulative questions.', 3: 'Exam 3: eye, ear and mouth, 11/13 to 11/20 (Dr. Smith, Dr. Sikazwe, Dr. Lam).'};
+  function examBar(){
+    return `<div class="dzexam" role="group" aria-label="Which exam are you studying for"><span class="lab">Study for</span>` +
+      [[0, 'All'], [1, 'Exam 1'], [2, 'Exam 2'], [3, 'Exam 3']].map(([k, l]) => `<button type="button" data-exam="${k}" aria-pressed="${st.exam === k}">${l}<span class="n">${DZ.cards.filter(x => !k || (x.exams || []).includes(k)).length}</span></button>`).join('') +
+      `</div><p class="dzsrc">${EXAMLINE[st.exam]}</p>`;
+  }
   function vCards(){
-    const c = DZ.cards.find(x => x.id === st.card) || DZ.cards[0];
-    return GROUPS.map(([g, l]) => `<p class="dzsub">${l}</p><div class="dzpicker" role="group" aria-label="${l}">` +
-      DZ.cards.filter(x => x.group === g).map(x => `<button type="button" data-card="${esc(x.id)}" aria-pressed="${x.id === c.id}">${esc(x.name)}</button>`).join('') + '</div>').join('') + card(c);
+    const shown = DZ.cards.filter(inExam);
+    if (st.exam && !shown.some(x => x.id === st.card) && DZ.cards.some(x => x.id === st.card)) { st.exam = 0; return vCards(); }   // a jump to a condition of another exam shows every exam
+    const c = shown.find(x => x.id === st.card) || shown[0] || DZ.cards.find(x => x.id === st.card) || DZ.cards[0];
+    return examBar() + AREAS.map(([a, l]) => { const xs = shown.filter(x => x.area === a); return xs.length ? `<p class="dzsub">${l}</p><div class="dzpicker" role="group" aria-label="${l}">` +
+      xs.map(x => `<button type="button" data-card="${esc(x.id)}" aria-pressed="${x.id === c.id}">${esc(x.name)}${!st.exam && (x.exams || []).length ? `<span class="ex">${(x.exams || []).map(e => 'E' + e).join(' ')}</span>` : ''}</button>`).join('') + '</div>' : ''; }).join('') + card(c);
   }
   function vTell(){
     return `<p class="dzintro">Conditions and products that look alike, one feature at a time. In Recall mode the answers are covered; tap each to check.</p>
       <div class="dzbar"><button type="button" class="btn sm ghost" data-dz="recall" aria-pressed="${st.recall}">${st.recall ? 'Show everything' : 'Recall mode'}</button></div>` +
-      (DZ.tell || []).map(t => `<section class="dztell${st.recall ? ' recall' : ''}" id="dz-tell-${esc(t.id)}"><h2>${esc(t.title)}</h2>
+      (DZ.tell || []).filter(inExam).map(t => `<section class="dztell${st.recall ? ' recall' : ''}" id="dz-tell-${esc(t.id)}"><h2>${esc(t.title)}</h2>
         ${(t.path || []).length ? `<div class="dzpath"><h3>How to decide</h3><ol>${t.path.map(p => `<li><b>${mk(p.q)}</b>${(p.a || []).map(a => '<br>' + mk(a)).join('')}</li>`).join('')}</ol></div>` : ''}
         ${t.photo ? photo(t.photo) : ''}
         ${(t.rows || []).map(r => `<div class="dzrow"><h3>${mk(r[0])}</h3><dl style="--n:${(t.cols || []).length || 1}">${(t.cols || []).map((cn, i) => `<div><dt>${esc(cn)}</dt><dd>${r[1][i] ? '<span class="dzcz" tabindex="0">' + mk(r[1][i]).replace(/<span class="dzcz" tabindex="0">|<\/span>/g, '') + '</span>' : '—'}</dd></div>`).join('')}</dl>${r[2] ? `<p class="key">${mk(r[2])}</p>` : ''}</div>`).join('')}
@@ -140,7 +150,7 @@ const DZ_UI = (() => {
   }
   function vPairs(){
     return '<p class="dzintro">Pairs that look alike on a question. Each states what the two share, then the one detail that separates them, by professor.</p>' +
-      (DZ.pairs || []).map(p => `<section class="dzbox dzpair"><h3>${mk(p.title)}</h3><div class="vs"><div><b>${mk(p.a[0])}</b>${mk(p.a[1])}</div><div><b>${mk(p.b[0])}</b>${mk(p.b[1])}</div></div>
+      (DZ.pairs || []).filter(inExam).map(p => `<section class="dzbox dzpair"><h3>${mk(p.title)}</h3><div class="vs"><div><b>${mk(p.a[0])}</b>${mk(p.a[1])}</div><div><b>${mk(p.b[0])}</b>${mk(p.b[1])}</div></div>
         ${(p.profs || []).map(x => `<div class="dzprof ${esc(x[0])}"><b class="t">${PROF[x[0]] || ''}</b><p>${mk(x[1])}</p></div>`).join('')}
         ${p.same ? `<p class="same">Shared: ${mk(p.same)}</p>` : ''}</section>`).join('');
   }
@@ -170,6 +180,7 @@ const DZ_UI = (() => {
       <label class="dzsearch"><span>Search conditions, drugs, terms and numbers</span><input type="search" id="dzq" value="${esc(st.q)}" placeholder="e.g. permethrin, 7 days, BSA" autocomplete="off"></label>
       ${res ? `<div class="dzres">${res.length ? res.map(h => `<button type="button" data-hit="${h[0]}" data-key="${esc(h[1])}"><b>${esc(h[2])}</b><span>${esc(h[3])}</span></button>`).join('') : '<p class="dzsrc">Nothing matches.</p>'}</div>` : ''}
       <div class="dzviews" role="tablist">${VIEWSET.map(([k, l]) => `<button type="button" role="tab" aria-selected="${st.view === k}" data-view="${k}">${l}</button>`).join('')}</div>
+      ${(st.view === 'tell' || st.view === 'pairs') ? examBar() : ''}
       <div class="dzbody v-${st.view}">${st.view === 'tell' ? vTell() : st.view === 'pairs' ? vPairs() : st.view === 'rules' ? vRules() : vCards()}</div>
       <dialog class="dzdlg"><div class="in"><button type="button" class="x" data-dz="close">Close</button><div class="body"></div></div></dialog>`;
   }
@@ -192,6 +203,7 @@ const DZ_UI = (() => {
         ${figs}</div>
       ${d.sm && how && how.p !== 'sm' ? `<div class="dzprof sm"><b class="t">Dr. Smith · target</b><p>${mk(d.sm.text)}</p><p class="dzsrc">${esc(d.sm.src || '')}</p></div>` : ''}
       ${d.sk && !(how && how.p === 'sk' && same(how.text, d.sk.text)) ? `<div class="dzprof sk"><b class="t">Dr. Sikazwe · chemistry</b><p>${mk(d.sk.text)}</p><p class="dzsrc">${esc(d.sk.src || '')}</p></div>` : ''}
+      ${d.la ? `<div class="dzprof la"><b class="t">Dr. Lam · how to use it</b><p>${mk(d.la.text)}</p><p class="dzsrc">${esc(d.la.src || '')}</p></div>` : ''}
       ${(d.pa || []).length ? `<div class="dzprof pa"><b class="t">Dr. Patel · where it is used</b>${d.pa.map(r => `<div class="use"><button type="button" class="dzgo" data-go="${esc(r.dz)}">${esc(name(r.dz))}</button><p><b>${mk(r.role || '')}</b>${r.how ? '<br>' + mk(r.how) : ''}</p><p class="dzsrc">${esc(r.src || '')}</p></div>`).join('')}</div>` : ''}
       ${(d.counsel || []).length ? `<div class="dzcounsel"><b class="t">What to tell the patient</b>${pts(d.counsel)}<p class="dzsrc">${esc(d.counselSrc || '')}</p></div>` : ''}
       ${(d.avoid || []).length ? `<div class="dzavoid"><b class="t">Who should not get it, and cautions</b>${pts(d.avoid)}</div>` : ''}`);
@@ -200,6 +212,7 @@ const DZ_UI = (() => {
     const t = e.target.closest('button, .dzcz'); if (!t || !pane.contains(t)) return;
     const c = DZ.cards.find(x => x.id === st.card) || DZ.cards[0];
     if (t.classList.contains('dzcz')) { if (t.closest('.recall')) t.classList.add('open'); return; }
+    if (t.dataset.exam != null && t.closest('.dzexam')) { st.exam = +t.dataset.exam; const sh = DZ.cards.filter(inExam); if (!sh.some(x => x.id === st.card) && sh[0]) st.card = sh[0].id; st.filter = ''; render(); return; }
     if (t.dataset.view) { st.view = t.dataset.view; render(); return; }
     if (t.dataset.card && t.closest('.dzpicker')) { st.card = t.dataset.card; st.filter = ''; render(); const el = pane.querySelector('.dzcard'); if (el && el.getBoundingClientRect().top > window.innerHeight * 0.6) { if (typeof scrollToEl === 'function') scrollToEl(el); else el.scrollIntoView(); } return; }
     if (t.dataset.drug) { drugPanel(t.dataset.drug); return; }
@@ -239,7 +252,7 @@ const DZ_UI = (() => {
   function rerenderCases(c){ const old = pane.querySelector('.dzcases'); if (!old) return; const d = document.createElement('div'); d.innerHTML = patients(c); old.replaceWith(d.firstChild); }
 
   const CSS = `
-#v-dz{--dz-sm:#7a3db8;--dz-smbg:#f1e8fb;--dz-sk:#b35a00;--dz-skbg:#fdf0e3;--dz-pa:#0f7a6b;--dz-pabg:#e3f5f2;--dz-star:#b8860b;--dz-bad:#b3261e;--dz-badbg:#fdecea}
+#v-dz{--dz-sm:#7a3db8;--dz-smbg:#f1e8fb;--dz-sk:#b35a00;--dz-skbg:#fdf0e3;--dz-pa:#0f7a6b;--dz-pabg:#e3f5f2;--dz-la:#1f5fa8;--dz-labg:#e6effa;--dz-star:#b8860b;--dz-bad:#b3261e;--dz-badbg:#fdecea}
 /* the page is light on every device (the core has no dark theme), so these colours do not follow the device's dark mode */
 #v-dz{overflow-wrap:anywhere}#v-dz dt,#v-dz dd,#v-dz li,#v-dz h3,#v-dz h4,#v-dz p{min-width:0}#v-dz .dzline,#v-dz .dzfacts,#v-dz .dzfacts>div,#v-dz .dzpick{min-width:0;max-width:100%}
 #v-dz .dztitle{margin:4px 0 2px}#v-dz .dzintro{color:var(--text-dim);margin:0 0 10px;font-size:14.5px}
@@ -263,7 +276,7 @@ const DZ_UI = (() => {
 #v-dz .dzbar{display:flex;gap:6px;flex-wrap:wrap;align-items:center;margin:10px 0;font-size:13.5px}
 #v-dz .dzbar button:not(.btn){font:inherit;font-size:13px;min-height:36px;border:1px solid var(--line);background:var(--paper);color:var(--text);border-radius:999px;padding:3px 11px}
 #v-dz .dzbar button[aria-pressed=true]:not(.btn){border-width:2px;font-weight:700}
-#v-dz .dzbar .fsm[aria-pressed=true]{border-color:var(--dz-sm);color:var(--dz-sm)}#v-dz .dzbar .fsk[aria-pressed=true]{border-color:var(--dz-sk);color:var(--dz-sk)}#v-dz .dzbar .fpa[aria-pressed=true]{border-color:var(--dz-pa);color:var(--dz-pa)}
+#v-dz .dzbar .fsm[aria-pressed=true]{border-color:var(--dz-sm);color:var(--dz-sm)}#v-dz .dzbar .fsk[aria-pressed=true]{border-color:var(--dz-sk);color:var(--dz-sk)}#v-dz .dzbar .fpa[aria-pressed=true]{border-color:var(--dz-pa);color:var(--dz-pa)}#v-dz .dzbar .fla[aria-pressed=true]{border-color:var(--dz-la);color:var(--dz-la)}
 #v-dz ol.dzsteps{list-style:none;margin:12px 0 0;padding:0;counter-reset:dz}
 #v-dz ol.dzsteps>li{counter-increment:dz;position:relative;padding:0 0 18px 40px;border-left:2px solid var(--line);margin-left:14px}
 #v-dz ol.dzsteps>li:last-child{border-left-color:transparent}
@@ -272,7 +285,8 @@ const DZ_UI = (() => {
 #v-dz .sh{display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin:0 0 6px;width:100%;min-height:36px;font:inherit;color:inherit;text-align:left;background:none;border:0;padding:0;cursor:pointer}#v-dz .sh h3{margin:0;font-size:16.5px}#v-dz .sh .chev{margin-left:auto;font-size:20px;color:var(--accent);width:28px;text-align:center}
 #v-dz ol.dzsteps>li:not(.open)>.stepbody{display:none}
 #v-dz .dztag{font-size:11.5px;border-radius:999px;padding:1px 8px}
-#v-dz .dztag.sm{background:var(--dz-smbg);color:var(--dz-sm)}#v-dz .dztag.sk{background:var(--dz-skbg);color:var(--dz-sk)}#v-dz .dztag.pa{background:var(--dz-pabg);color:var(--dz-pa)}
+#v-dz .dzexam{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:10px 0 4px}#v-dz .dzexam .lab{font-weight:600;margin-right:2px}#v-dz .dzexam button{min-height:44px;padding:6px 14px;border:1px solid var(--line,#c9c9d2);border-radius:999px;background:var(--card,#fff);color:inherit;font:inherit;cursor:pointer}#v-dz .dzexam button[aria-pressed=true]{background:var(--dz-la);border-color:var(--dz-la);color:#fff}#v-dz .dzexam .n{margin-left:6px;font-size:.85em;opacity:.8}#v-dz .dzpicker .ex{margin-left:6px;font-size:.75em;opacity:.7}
+#v-dz .dztag.sm{background:var(--dz-smbg);color:var(--dz-sm)}#v-dz .dztag.sk{background:var(--dz-skbg);color:var(--dz-sk)}#v-dz .dztag.pa{background:var(--dz-pabg);color:var(--dz-pa)}#v-dz .dztag.la{background:var(--dz-labg);color:var(--dz-la)}
 #v-dz .dzq{display:none;font-weight:600;margin:0 0 6px}#v-dz .recall .dzq{display:block}
 #v-dz .dzfacts{margin:4px 0 8px;display:grid}
 #v-dz .dzfacts>div{display:grid;grid-template-columns:128px 1fr;gap:10px;padding:6px 0;border-top:1px solid var(--line)}
@@ -284,14 +298,14 @@ const DZ_UI = (() => {
 #v-dz .dzpts{margin:4px 0;padding-left:20px}#v-dz .dzpts li{margin:2px 0}
 #v-dz .dzgrades{display:grid;gap:6px;margin:6px 0}#v-dz .dzgrades>div{display:flex;gap:10px;align-items:baseline}#v-dz .dzgrades .lvl{min-width:110px;font-weight:700}
 #v-dz .dzprof{border-left:3px solid;padding:2px 0 2px 10px;margin:8px 0}
-#v-dz .dzprof.sm{border-color:var(--dz-sm)}#v-dz .dzprof.sk{border-color:var(--dz-sk)}#v-dz .dzprof.pa{border-color:var(--dz-pa)}
+#v-dz .dzprof.sm{border-color:var(--dz-sm)}#v-dz .dzprof.sk{border-color:var(--dz-sk)}#v-dz .dzprof.pa{border-color:var(--dz-pa)}#v-dz .dzprof.la{border-color:var(--dz-la)}
 #v-dz .dzprof b.t,#v-dz .dzcounsel b.t,#v-dz .dzavoid b.t{font-size:12.5px;display:block}
-#v-dz .dzprof.sm b.t{color:var(--dz-sm)}#v-dz .dzprof.sk b.t{color:var(--dz-sk)}#v-dz .dzprof.pa b.t{color:var(--dz-pa)}
+#v-dz .dzprof.sm b.t{color:var(--dz-sm)}#v-dz .dzprof.sk b.t{color:var(--dz-sk)}#v-dz .dzprof.pa b.t{color:var(--dz-pa)}#v-dz .dzprof.la b.t{color:var(--dz-la)}
 #v-dz .dzprof p{margin:2px 0}
 #v-dz .dzgrp{border-left:4px solid var(--line);padding:2px 0 2px 12px;margin:10px 0;border-radius:0}
-#v-dz .dzgrp.sm{border-color:var(--dz-sm)}#v-dz .dzgrp.sk{border-color:var(--dz-sk)}#v-dz .dzgrp.pa{border-color:var(--dz-pa)}
+#v-dz .dzgrp.sm{border-color:var(--dz-sm)}#v-dz .dzgrp.sk{border-color:var(--dz-sk)}#v-dz .dzgrp.pa{border-color:var(--dz-pa)}#v-dz .dzgrp.la{border-color:var(--dz-la)}
 #v-dz .dzgrp>b.t{display:inline-block;font-size:12.5px;border-radius:999px;padding:1px 9px;margin:0 0 4px}
-#v-dz .dzgrp.sm>b.t{background:var(--dz-smbg);color:var(--dz-sm)}#v-dz .dzgrp.sk>b.t{background:var(--dz-skbg);color:var(--dz-sk)}#v-dz .dzgrp.pa>b.t{background:var(--dz-pabg);color:var(--dz-pa)}
+#v-dz .dzgrp.sm>b.t{background:var(--dz-smbg);color:var(--dz-sm)}#v-dz .dzgrp.sk>b.t{background:var(--dz-skbg);color:var(--dz-sk)}#v-dz .dzgrp.pa>b.t{background:var(--dz-pabg);color:var(--dz-pa)}#v-dz .dzgrp.la>b.t{background:var(--dz-labg);color:var(--dz-la)}
 #v-dz .dzgrp.dim{opacity:.25}
 #v-dz .dzgrp>:last-child{margin-bottom:0}
 #v-dz .dzline{border:1px solid var(--line);border-radius:10px;padding:8px 10px;background:var(--surface,transparent);margin:0 0 8px}
