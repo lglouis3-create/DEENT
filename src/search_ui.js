@@ -282,7 +282,10 @@ body.srchfab-on main{padding-bottom:88px}
         else if (e.type === 'sec') jump(e.view, e.anchor);
         else if (e.type === 'dia') jump('diagrams', 'dg-' + e.id);
         // the Atlas filter reads each tile's plain name and text, not its display title: the plain name always finds the tile
-        else if (e.type === 'atlas') { show('atlas'); const q = document.querySelector('#atq'); if (q) { q.value = e.id; q.dispatchEvent(new Event('input', {bubbles: true})); } window.scrollTo(0, 0); }
+        else if (e.type === 'atlas') { show('atlas'); const q = document.querySelector('#atq'); if (q) { q.value = e.id; q.dispatchEvent(new Event('input', {bubbles: true})); } window.scrollTo(0, 0);
+          // the Atlas opens the folder and board that hold the tile (atlas_ui.js); when the tile still sits below the window, bring it in
+          setTimeout(() => { try { if (typeof VIEW !== 'undefined' && VIEW !== 'atlas') return; const t = [...document.querySelectorAll('#v-atlas .attile')].find(x => !x.hidden && x.getClientRects().length && (!x.checkVisibility || x.checkVisibility()));
+            if (t && t.getBoundingClientRect().bottom > window.innerHeight) t.scrollIntoView({block: 'center'}); } catch (err) {} }, 80); }
         else if (e.type === 'topic') startQuiz(e.id, e.sid);
         else if (e.type === 'gterm') GLOSSARY_UI.open(e.id);
         else if (e.type === 'term') { openDialog(opener); const row = body.querySelector('[data-i="' + IDX.indexOf(e) + '"] .s'); if (row) row.textContent = e.text; }

@@ -15,7 +15,8 @@
    slip, or another receptor subtype, is wrong. `dupOf` names the multiple-choice item that tests the same fact. EB-003 and EB-015 have no
    multiple-choice item that keys the same fact (EI-003 and EI-007 test the carteolol neighbours, EL-012 gives the H4 receptor in its
    stem and keys the cell), so they stand alone with their own concepts.
-   Not duplicated here: tacrolimus binds FKBP and cyclosporine binds cyclophilin, because they already exist as BL2-004 and BL2-005 (the
+   EB-021..023 (2026-11-22) ask drug to target in the form of her Exam 1 blanks; EB-023 repeats BL2-005 for the Exam 3 pool.
+   Not duplicated here: tacrolimus binds FKBP, because it already exists as BL2-004; cyclosporine binds cyclophilin is BL2-005 (the
    same drawing as slide 66 of this deck; on 11/17, T@60682, she asked whether the class had seen the question and said she was picky on it).
    Conflicts and notes:
    (1) Slide 66 prints "Cyclophillin" (two l); the lecture says "cyclophyllin". Not asked in this file.
@@ -157,6 +158,25 @@ mk('EB-020','mech','ey-de','var','b-ey-varenicline-nachr','ED-024',
  'Intranasal varenicline increases tear production by agonizing ___ acetylcholine receptors in the nasal cavity.',
  ['nicotinic', 'nicotine', 'nicotinic acetylcholine', 'nAChR', 'nACh'],
  'Slide 73: a nicotinic acetylcholine receptor agonist that activates the trigeminal parasympathetic pathway. In class: "the nicotine receptors in the nasal cavity where the drug binds, agonizing those receptors, activates the trigeminal nerve" (T@67584 11/17).',
- 'slide 73; T@67584 11/17')
+ 'slide 73; T@67584 11/17'),
+
+// ---------- the drug-to-target form of her Exam 1 blanks ("Calcipotriene is a drug that binds to ___"), added 2026-11-22 ----------
+mk('EB-021','mech','ey-in','cai','b-ey-cai-enzyme','EB-006',
+ 'Dorzolamide and brinzolamide decrease aqueous humor production by inhibiting the enzyme ___.',
+ ['carbonic anhydrase', 'carbonic anhydrase enzyme', 'CA', 'carbonic anhydrase (CA)'],
+ 'Slide 26: "Inhibition of carbonic anhydrase (CA) will prevent the conversion of CO2 and water to carbonic acid", which reduces the sodium and bicarbonate available for secretion. Slide 28 lists dorzolamide and brinzolamide as the ophthalmic members of the class. In class: "it will convert carbon dioxide and water to carbonic acid" (T@54945 11/13).',
+ 'slides 26, 28; T@54945 11/13'),
+
+mk('EB-022','mech','ey-ac','h1','b-ey-h1-receptor','EB-013',
+ 'Ketotifen, olopatadine and the other ophthalmic antihistamines are inverse agonists at the histamine ___ receptor.',
+ ['H1', 'H1 receptor', 'histamine H1', 'histamine 1'],
+ 'Slide 51: "H1 inverse agonists (reduce constitutive activity of receptor and compete with histamine binding to the receptor)". Slides 53 and 54 give each listed drug as an H1 inverse agonist. In class: "that\'s the official pharmacological mechanism of these drugs, traditionally called antihistamines" (T@43646 11/17).',
+ 'slides 51, 53, 54; T@43646 11/17'),
+
+mk('EB-023','mech','ey-de','cni','b-ey-cyclosporine-cyclophilin','EB-017',
+ 'Cyclosporine binds the protein ___, and that complex inhibits calcineurin.',
+ ['cyclophilin', 'cyclophilins', 'cyclophillin', 'cyclophyllin'],
+ 'Slide 66 labels the protein ("Cyclophillin" as printed) in the T-cell figure. In class: "Cyclosporin binds to cyclophyllin, and that complex is what\'s inhibiting calcineurin, and tacrolimus is binding to FKBP" (T@60519 11/17); Dr. Smith added that she was picky on the FKBP question on purpose.',
+ 'slide 66; T@60519 11/17')
 );
 })();

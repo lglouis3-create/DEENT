@@ -12,7 +12,8 @@
 
    Data (plain JS, every one optional; a missing one means nothing is drawn):
      WALK_SECTIONS  walk_pp.js, walk_pc.js, walk_sun.js, walk_mc.js, walk_rd.js (an assigned
-                    reading: no deck of its own; parts show figures, a slide only from a lecture deck)
+                    reading: no deck of its own; parts show figures, a slide only from a lecture deck),
+                    and for Exam 3 walk_ey.js (deck ey), walk_oo.js (oo), walk_lam.js (lg, lo, lr, lt)
                     [{id, deck, guide:'gobj-…', title, topics, parts:[{text,
                     slide:'<deck>-<NN>' | null, fig:{id, step (1-based)} | null,
                     src}]}]; `src` is never spoken or shown; a part with both
@@ -21,8 +22,12 @@
                     recorded clip audio/gw-<id>-<n>.mp3 plays only while `h`
                     equals the first 12 hex of sha256(text); otherwise the
                     device voice (speechSynthesis) reads the text
-   Files beside the page: slides/<deck>-<NN>.jpg and audio/*.mp3 sit at the
-   repository root; the /preview/ build reaches them one folder up (BUILD.preview).
+   Files beside the page: slides/<deck>-<NN>.jpg (the Exam 1 decks pp, pc, sun,
+   mc: Louis's annotated copies) and audio/*.mp3 sit at the repository root; the
+   Exam 3 decks (ey, oo, lg, lo, lr, lt) show the clean deck pictures the slide
+   viewer uses, deck/<deck>/<NN>.webp (render_deck.py; slide_ui.js builds the
+   same path), for the same reference form '<deck>-<NN>'. The /preview/ build
+   reaches all of them one folder up (BUILD.preview).
    The service worker does not precache them (sw.js precaches only SITE.files).
 
    What it draws: under each guide objective section (section.gobj) that has
@@ -115,8 +120,10 @@ const NARR = (() => {
     let o = null;
     try { o = JSON.parse(localStorage.getItem(KEY()) || 'null'); } catch (e) { o = null; }
     o = o && typeof o === 'object' ? o : {};
+    // Louis, 2026-11-22: the narration "went really fast"; "Slower by default". The speed starts at 0.8, and a
+    // speed stored before that day is set to 0.8 once (`slow` marks that it was done); the Speed control changes it.
     ST = {pos: o.pos && typeof o.pos === 'object' && !Array.isArray(o.pos) ? o.pos : {},
-          rate: RATES.includes(+o.rate) ? +o.rate : 1, cont: o.cont !== false};
+          rate: o.slow === 1 && RATES.includes(+o.rate) ? +o.rate : 0.8, cont: o.cont !== false, slow: 1};
     return ST;
   };
   const save = () => { try { localStorage.setItem(KEY(), JSON.stringify(st())); } catch (e) { /* storage full or blocked: kept for this visit */ } };
@@ -259,7 +266,17 @@ const WALK_UI = (() => {
   const BY = {}; SECS.forEach(w => { BY[w.id] = w; });
   const DECKS = {pp: 'Skin Pathophysiology (Dr. Smith)', pc: 'Skin Pharmacology (Dr. Smith)',
                  sun: 'Sun exposure (Dr. Smith)', mc: 'Dermatologic medicinal chemistry (Dr. Sikazwe)',
-                 rd: 'Assigned reading: vitamin D (Dr. Sikazwe)'};
+                 rd: 'Assigned reading: vitamin D (Dr. Sikazwe)',
+                 // Exam 3 (the deck headings of guide.js, h2.gdeck, without their dates)
+                 ey: 'Eye: Glaucoma, Allergic Conjunctivitis, Dry Eye (Dr. Smith)',
+                 oo: 'Ear, Mouth and Eye Drug Chemistry (Dr. Sikazwe)',
+                 lg: 'Glaucoma Drugs and Counseling (Dr. Lam)',
+                 lo: 'Dry Eye, Conjunctivitis and Eye-Drop Use (Dr. Lam)',
+                 lr: 'Mouth: Sensitive Teeth, Canker Sores, Cold Sores, Dry Mouth (Dr. Lam)',
+                 lt: 'Ear: Earwax, Water-Clogged Ear, Ear Drops (Dr. Lam)'};
+  // decks whose pictures are the clean deck pages in deck/<deck>/<NN>.webp (the slide viewer's, slide_ui.js);
+  // every other deck's are the annotated slides/<deck>-<NN>.jpg
+  const CLEAN = ['ey', 'oo', 'lg', 'lo', 'lr', 'lt'];
   // the slides each deck's walkthroughs show, in page order: what "browse the slides" steps through
   const DECK_SLIDES = {};
   SECS.forEach(w => w.parts.forEach(p => {
@@ -267,7 +284,10 @@ const WALK_UI = (() => {
     (DECK_SLIDES[d] = DECK_SLIDES[d] || new Set()).add(p.slide);
   }));
   Object.keys(DECK_SLIDES).forEach(d => { DECK_SLIDES[d] = [...DECK_SLIDES[d]].sort((a, b) => +a.split('-')[1] - +b.split('-')[1]); });
-  const slideSrc = s => NARR.base() + 'slides/' + s + '.jpg';
+  const slideSrc = s => {
+    const [d, nn] = String(s).split('-');
+    return NARR.base() + (CLEAN.includes(d) ? 'deck/' + d + '/' + nn + '.webp' : 'slides/' + s + '.jpg');
+  };
   const clipKey = (id, i) => 'gw-' + id + '-' + (i + 1);
   const words = w => w.parts.reduce((n, p) => n + p.text.split(/\s+/).filter(Boolean).length, 0);
   const recorded = w => w.parts.every((p, i) => !!NARR.clipFor(clipKey(w.id, i), p.text));
@@ -328,8 +348,10 @@ const WALK_UI = (() => {
         return `<div class="wkbar" data-wk="${esc(w.id)}"><button type="button" class="btn ghost" data-wkopen="${esc(w.id)}" aria-expanded="false">${esc(barLabel(w.id))}</button>` +
           `<span class="wkmeta"><b>${esc(w.title || '')}</b> · ${w.parts.length} parts · about ${min} min · ${recorded(w) ? 'read by the narrator' : 'device voice'}</span></div>`;
       }).join('');
-      // under the objective banner when the section has one, else under its heading
-      const g = s.querySelector(':scope > .gbar'), h = s.querySelector(':scope > h3');
+      // under the objective banner when the section has one (under the last of them when two or more open the
+      // section, as Dr. Lam's Objective and Key point bars do), else under its heading
+      let g = s.querySelector(':scope > .gbar'); const h = s.querySelector(':scope > h3');
+      while (g && g.nextElementSibling && g.nextElementSibling.classList.contains('gbar')) g = g.nextElementSibling;
       if (g) g.insertAdjacentElement('afterend', box); else if (h) h.insertAdjacentElement('afterend', box); else s.prepend(box);
     });
     if (order.length) ORDER = order.concat(SECS.map(w => w.id).filter(id => !order.includes(id)));
@@ -562,7 +584,7 @@ const WALK_UI = (() => {
       return r;
     };
   } catch (e) { console.error('The walkthrough player could not be added; the rest of the page is unaffected.', e); }
-  return {SECS, BY, DECK_SLIDES, DECKS, order: () => ORDER.slice(), state: () => GW && {id: GW.id, i: GW.i, playing: GW.playing, mode: GW.h && GW.h.mode},
+  return {SECS, BY, DECK_SLIDES, DECKS, slideSrc, order: () => ORDER.slice(), state: () => GW && {id: GW.id, i: GW.i, playing: GW.playing, mode: GW.h && GW.h.mode},
           open: gwOpen, close: gwClose, play: gwPlay, pause: gwPause, stop: gwStop, show: gwShow, clipKey, pos: posOf, panel};
 })();
 

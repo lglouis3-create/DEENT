@@ -5,9 +5,12 @@
    it is there) over HTTP at 390 px and 1280 px, with a stand-in for the
    device voice (speechSynthesis) that says each sentence in a few
    milliseconds, and checks:
-   - one bar per walkthrough under its guide section; every walkthrough opens;
+   - one bar per walkthrough under its guide section (after the banners that
+     open the section, never between two of them); every walkthrough opens;
      every part's slide image loads (or its drawn step shows) as the parts are
-     stepped through, and the slide follows the part;
+     stepped through, and the slide follows the part; a slide of an Exam 1 deck
+     is slides/<deck>-<NN>.jpg and one of an Exam 3 deck (ey, oo, lg, lo, lr,
+     lt) the clean deck picture deck/<deck>/<NN>.webp;
    - playing advances part by part and the slide changes with it; pause holds
      the part, play resumes it; K and the arrow keys work inside the player;
    - "continue" opens and plays the next walkthrough; the resume position
@@ -17,7 +20,8 @@
    - "Hear the why" shows only after the question is answered, and on a
      finished paper's review; it stops a playing walkthrough;
    - no horizontal scroll, no script or console error;
-   - the preview page loads the slides from one folder up;
+   - the preview page loads the slides (and the Exam 3 deck pictures) from one
+     folder up;
    and, from the review of 2026-11-13 (course files this test owns the check for):
    - A-F5: each "Jump to a section" entry of Guides, Tell apart and Reference
      reads as its heading does (the Guides entries showed "&middot;");
@@ -96,10 +100,17 @@ function fakeVoice() {
       await page.evaluate(() => show('guide'));
       const bars = await page.evaluate(() => WALK_UI.SECS.map(w => !!document.querySelector(`#v-guide section.gobj#${w.guide} .wkbar[data-wk="${w.id}"]`)));
       L.check(bars.every(Boolean), `every walkthrough has its bar under its guide section (${bars.filter(Boolean).length} of ${bars.length})`);
+      // the bars follow the banner(s) that open the section (Dr. Lam's sections open with two: Objective, Key point), or its heading
+      const split = await page.evaluate(() => [...document.querySelectorAll('#v-guide section.gobj > .wkbars')].filter(b => {
+        const pv = b.previousElementSibling, nx = b.nextElementSibling;
+        return !pv || !(pv.classList.contains('gbar') || pv.tagName === 'H3') || (nx && nx.classList.contains('gbar') && pv.classList.contains('gbar'));
+      }).map(b => b.parentElement.id));
+      L.check(!split.length, 'each section\'s bars sit under its opening banner(s) or heading, never between two banners', split.join(', '));
 
       // every walkthrough opens; step through every part: its slide loads, or its drawn step shows
       const visits = await page.evaluate(async () => {
-        const out = {opened: 0, parts: 0, bad: [], follow: 0, wide: 0};
+        const out = {opened: 0, parts: 0, bad: [], follow: 0, wide: 0, clean: 0};
+        const CLEAN = ['ey', 'oo', 'lg', 'lo', 'lr', 'lt'];   // the Exam 3 decks: deck/<deck>/<NN>.webp (walk_ui.js slideSrc)
         const settle = () => new Promise(r => setTimeout(r, 0));
         const loaded = img => img.complete && img.naturalWidth > 0 ? Promise.resolve(true) :
           new Promise(r => { img.addEventListener('load', () => r(img.naturalWidth > 0), {once: true}); img.addEventListener('error', () => r(false), {once: true}); setTimeout(() => r(false), 8000); });
@@ -123,7 +134,9 @@ function fakeVoice() {
               last = 'fig';
             } else if (part.slide) {
               const img = f.querySelector('img');
-              if (!img || !img.src.endsWith('slides/' + part.slide + '.jpg')) out.bad.push(`${w.id} part ${i + 1}: slide ${part.slide} not shown`);
+              const [d, nn] = part.slide.split('-'), file = CLEAN.includes(d) ? 'deck/' + d + '/' + nn + '.webp' : 'slides/' + part.slide + '.jpg';
+              if (CLEAN.includes(d)) out.clean++;
+              if (!img || !img.src.endsWith('/' + file)) out.bad.push(`${w.id} part ${i + 1}: slide ${part.slide} (${file}) not shown`);
               else if (!(await loaded(img))) out.bad.push(`${w.id} part ${i + 1}: ${part.slide} did not load`);
               if (last && last !== part.slide) out.follow++;
               last = part.slide;
@@ -137,6 +150,7 @@ function fakeVoice() {
       L.check(visits.opened === info.n, `every walkthrough opens (${visits.opened} of ${info.n})`);
       L.check(!visits.bad.length, `every part (${visits.parts}) shows its own slide, loaded, or its drawn step`, visits.bad.slice(0, 5).join('; '));
       L.check(visits.follow > 0, `the slide changes with the part (${visits.follow} slide changes while stepping)`);
+      if (visits.clean) console.log(`  ${visits.clean} of the slides shown are Exam 3 deck pictures (deck/<deck>/<NN>.webp)`);
       L.check(!visits.wide, 'no horizontal scroll with a player open', `${visits.wide} parts wider than the screen`);
 
       // playing: parts advance on their own and the slide follows; pause holds; play resumes
@@ -533,6 +547,15 @@ function fakeVoice() {
           return {ok, src: img.getAttribute('src'), ns: NS};
         });
         L.check(r.ok && r.src.startsWith('../slides/'), `the preview loads its slide from ../slides/ (${r.src})`);
+        // an Exam 3 deck picture, when the page has such a walkthrough
+        const r3 = await page.evaluate(async () => {
+          const w = WALK_UI.SECS.find(w => /^(ey|oo|lg|lo|lr|lt)$/.test(w.deck) && w.parts[0].slide && !w.parts[0].fig); if (!w) return null;
+          WALK_UI.open(w.id, false);
+          const img = document.querySelector(`.wkpanel[data-wkp="${w.id}"] .wkvis img`);
+          const ok = await new Promise(res => { if (img.complete) return res(img.naturalWidth > 0); img.onload = () => res(img.naturalWidth > 0); img.onerror = () => res(false); });
+          return {ok, src: img.getAttribute('src')};
+        });
+        if (r3) L.check(r3.ok && r3.src.startsWith('../deck/'), `the preview loads an Exam 3 deck picture from ../deck/ (${r3.src})`);
         L.check(!errors.length, 'no script or console error on the preview', errors.slice(0, 3).join(' | '));
       }
       await ctx.close();

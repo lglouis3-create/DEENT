@@ -19,6 +19,15 @@
    toggle, a one-line legend, counts that follow search and filter, an empty
    search message, and, in "Hide names" mode, keyboard reveal and neutral
    labels so that no heading, label or hidden text names a structure.
+   Folders (Louis, 2026-11-22: "collapsed folders for the atlas section so its
+   easier to look at what the user wants and reduce the need to scroll"): the
+   boards sit in one closed folder per deck and exam (details.atfold; the
+   active exam's folder is open), and each board is a closed entry inside it
+   (details.atbfold in the board's section, which keeps its id at-<board>).
+   A search opens the folders and boards that hold a match and hides the
+   rest; clearing it puts back what the reader had open. What is open is
+   kept in page memory only. ATLAS_FOLD.reveal(el) opens the folders around
+   a board or tile; a jump to a board (data-jump="atlas:at-...") does so too.
    ========================================================================== */
 /* Citation parser, kept outside the page code so atlas_check.js can test it.
    A parenthesis is a citation when every ";"-separated part is a slide
@@ -27,9 +36,9 @@
    A leading "Slide 54: " is a citation too. Any other parenthesis stays. */
 /* The decks the tiles come from (each item's `deck`). Add a deck here before adding its items. */
 const ATLAS_DECKS = {
-  DPAW: {short: 'DPAW', label: 'DPAW deck (Dr. Sikazwe, dermatology)',
+  DPAW: {short: 'DPAW', label: 'DPAW deck (Dr. Sikazwe, dermatology)', fold: 'Dr. Sikazwe\'s dermatology deck',
          assignedNote: 'slides 7-9, 12, 15-22, 24-33, 42-54, 60-65 (list of 11/06)'},
-  OOO: {short: 'OOO', label: 'Otic/Oral/Ophthalmic deck (Dr. Sikazwe)',
+  OOO: {short: 'OOO', label: 'Otic/Oral/Ophthalmic deck (Dr. Sikazwe)', fold: 'Dr. Sikazwe\'s ear, mouth and eye deck',
         assignedNote: 'slides 5-8, 15-21, 27-31, 33-48 (readings emailed 11/20)'}
 };
 const ATLAS_UI = (() => {
@@ -131,10 +140,133 @@ const ATLAS_UI = (() => {
 .atcmp dt{font-weight:600;margin-top:4px}
 .atcmp dd{margin:0;color:var(--text-dim)}
 .atexcl{font-size:12.5px;color:var(--text-dim);margin-top:18px}
+.atfold{margin:14px 0;border:1px solid var(--line,#D3DAE3);border-radius:var(--r,10px);background:var(--paper,#fff);min-width:0}
+.atfold>summary{display:flex;align-items:center;gap:10px;min-height:44px;box-sizing:border-box;padding:10px 14px;cursor:pointer;list-style:none;font-weight:700;font-size:15.5px;line-height:1.35;color:var(--text)}
+.atfold>summary::-webkit-details-marker,.atbfold>summary::-webkit-details-marker{display:none}
+.atfold>summary::after,.atbfold>summary::after{content:'';flex:none;margin-left:auto;width:8px;height:8px;border-right:2px solid var(--accent,#2F5FA8);border-bottom:2px solid var(--accent,#2F5FA8);transform:rotate(45deg);transition:transform .15s}
+.atfold[open]>summary::after,.atbfold[open]>summary::after{transform:rotate(-135deg)}
+.atfold>summary:focus-visible,.atbfold>summary:focus-visible{outline:3px solid var(--accent,#2F5FA8);outline-offset:2px;border-radius:6px}
+.atfold[open]>summary{border-bottom:1px solid var(--line,#D3DAE3)}
+.atft{display:flex;flex-direction:column;gap:2px;min-width:0;overflow-wrap:anywhere}
+.atfn{font-weight:400;font-size:12.5px;color:var(--text-dim)}
+.atfbody{padding:6px 14px 10px;min-width:0}
+.atftools{display:flex;justify-content:flex-end;margin:0}
+.atftools .chip{min-height:44px}
+.atftools[hidden]{display:none}
+#v-atlas .atfold .atboard{margin:0;border-top:1px solid var(--line,#D3DAE3);scroll-margin-top:150px}
+#v-atlas .atfold .atftools:not([hidden])+.atboard{border-top:0}
+.atbfold>summary{display:flex;align-items:center;gap:10px;min-height:44px;box-sizing:border-box;padding:8px 2px;cursor:pointer;list-style:none}
+#v-atlas .atbfold>summary h3{border:0;padding:0;margin:0;font-size:15px;line-height:1.35;flex:1 1 auto;min-width:0;overflow-wrap:anywhere}
+.atbn{flex:none;font-size:12px;font-weight:400;color:var(--text-dim);white-space:nowrap}
+.atbbody{padding:6px 0 16px;min-width:0}
+@media (prefers-reduced-motion: reduce){.atfold>summary::after,.atbfold>summary::after{transition:none}}
 `;
 
   const el = (tag, cls, html) => { const e = document.createElement(tag); if (cls) e.className = cls; if (html !== undefined) e.innerHTML = html; return e; };
   const unparsed = [];
+
+  /* ---- folders: one per deck and exam, one entry per board ------------------
+     What is open lives in FOLD.user (page memory; nothing is stored). */
+  const FOLD = {view: null, folders: [], boards: [], user: new Map(), auto: new Set(), key: '', want: null};
+  const setOpen = (d, on) => { if (d.open !== on) { FOLD.auto.add(d); d.open = on; } };   // a change made here is not the reader's choice
+  const searching = () => { const q = FOLD.view && FOLD.view.querySelector('#atq'); return !!(q && q.value.trim()); };
+  const onToggle = d => {
+    if (FOLD.auto.has(d)) FOLD.auto.delete(d);
+    else if (!searching()) FOLD.user.set(d, d.open);
+    FOLD.folders.forEach(toolLabel);
+  };
+  const toolLabel = f => {
+    const live = f.boards.filter(b => !b.sec.classList.contains('at-none'));
+    const t = live.length && live.every(b => b.d.open) ? 'Close all boards' : 'Open all boards';
+    if (f.btn.textContent !== t) f.btn.textContent = t;
+  };
+  const setText = (n, t) => { if (n.textContent !== t) n.textContent = t; };
+  const plural = (n, w) => n + ' ' + w + (n === 1 ? '' : 's');
+  function fold(view) {
+    if (view.querySelector('details.atfold')) return;                 // already folded
+    const secs = [...view.children].filter(c => c.matches && c.matches('section.atboard'));
+    if (secs.length !== ATLAS.boards.length) return;
+    FOLD.view = view; FOLD.folders = []; FOLD.boards = []; FOLD.key = '';
+    const active = String((typeof COURSE !== 'undefined' && COURSE && COURSE.activeExam) || '').toLowerCase();
+    const byDeck = new Map();
+    secs.forEach((sec, i) => {
+      const first = ATLAS.boards[i].sections.map(s => s.items[0]).filter(Boolean)[0], m = (first && first.meta) || {};
+      const deck = ATLAS_DECKS[m.deck] ? m.deck : 'DPAW', exam = m.exam || 'Exam 1';
+      let f = byDeck.get(deck);
+      if (!f) {
+        const dk = ATLAS_DECKS[deck];
+        const d = el('details', 'atfold'); d.id = 'atfold-' + deck.toLowerCase(); d.dataset.deck = deck;
+        const sm = el('summary'), tt = el('span', 'atft'), nm = el('span', 'atfname'), n = el('span', 'atfn');
+        nm.textContent = exam + ' · ' + (dk.fold || dk.label);
+        tt.append(nm, n); sm.append(tt);
+        const body = el('div', 'atfbody'), tools = el('div', 'atftools'), btn = el('button', 'chip');
+        btn.type = 'button'; tools.append(btn); body.append(tools); d.append(sm, body);
+        f = {d, n, body, btn, boards: []};
+        btn.onclick = () => {
+          const live = f.boards.filter(b => !b.sec.classList.contains('at-none'));
+          const on = !(live.length && live.every(b => b.d.open));
+          live.forEach(b => { if (b.d.open !== on) { b.d.open = on; if (!searching()) FOLD.user.set(b.d, on); else FOLD.auto.add(b.d); } });
+          toolLabel(f);
+        };
+        d.addEventListener('toggle', () => onToggle(d));
+        FOLD.user.set(d, exam.replace(/\s+/g, '').toLowerCase() === active);   // the active exam's folder starts open
+        d.open = FOLD.user.get(d);
+        sec.before(d);
+        byDeck.set(deck, f); FOLD.folders.push(f);
+      }
+      // the board: its heading goes into the summary, the rest into the body
+      const bd = el('details', 'atbfold'), bs = el('summary'), bn = el('span', 'atbn'), bb = el('div', 'atbbody');
+      const h = sec.querySelector('h3');
+      while (sec.firstChild) { const c = sec.firstChild; if (c === h) bs.append(c); else bb.append(c); }
+      bs.append(bn); bd.append(bs, bb); sec.append(bd);
+      bd.addEventListener('toggle', () => onToggle(bd));
+      FOLD.user.set(bd, false);
+      const rec = {sec, d: bd, n: bn, tiles: [...bb.querySelectorAll('.attile')], f};
+      f.boards.push(rec); FOLD.boards.push(rec);
+      f.body.append(sec);
+    });
+  }
+  /* counts on the folders and boards; a search (or a change of the reference
+     filter during one) opens what holds a match, and clearing it restores the
+     reader's own open and closed folders. Writes only what changed. */
+  function foldUpdate(view, vis, term, refOff) {
+    if (FOLD.view !== view || !FOLD.folders.length || !FOLD.folders[0].d.isConnected) return;
+    const key = term ? term + '|' + refOff : '', force = key !== FOLD.key;
+    FOLD.key = key;
+    FOLD.folders.forEach(f => {
+      let shown = 0, avail = 0, liveB = 0, refHid = 0;
+      f.boards.forEach(b => {
+        const s = b.tiles.filter(vis).length, ref = refOff ? b.tiles.filter(t => t.classList.contains('is-ref')).length : 0, a = b.tiles.length - ref;
+        shown += s; avail += a; refHid += ref; if (s) liveB++;
+        setText(b.n, term ? s + ' of ' + a + (s === 1 ? ' matches' : ' match') : plural(s, 'structure'));
+        if (force) setOpen(b.d, term ? s > 0 : !!FOLD.user.get(b.d));
+      });
+      f.d.classList.toggle('at-none', !liveB);
+      setText(f.n, term ? liveB + ' of ' + plural(f.boards.length, 'board') + ' · ' + shown + ' of ' + plural(avail, 'structure') + (shown === 1 ? ' matches' : ' match')
+        : plural(liveB, 'board') + ' · ' + plural(shown, 'structure') + (refHid ? ' · ' + refHid + ' reference-only hidden' : ''));
+      if (force) setOpen(f.d, term ? liveB > 0 : !!FOLD.user.get(f.d));
+      if (f.btn.parentElement.hidden !== !!term) f.btn.parentElement.hidden = !!term;   // a search opens every board with a match itself
+      toolLabel(f);
+    });
+  }
+  /* open the folders around a board, a tile or anything inside one */
+  function reveal(target) {
+    const t = typeof target === 'string' ? document.getElementById(target) : target;
+    if (!t || !t.closest || !t.closest('#v-atlas')) return false;
+    for (let d = t.closest('details.atbfold, details.atfold'); d; d = d.parentElement && d.parentElement.closest('details.atbfold, details.atfold')) d.open = true;
+    if (t.matches('section.atboard')) { const d = t.querySelector(':scope > details.atbfold'); if (d) d.open = true; }
+    return true;
+  }
+  if (typeof window !== 'undefined') window.ATLAS_FOLD = {reveal};
+  /* a jump to a board (the core's data-jump="atlas:at-<id>"): open its folders
+     first, so the core scrolls to a board that is on screen. If the Atlas has
+     not been drawn yet, the board opens, and the page scrolls to it, once the
+     folders are made. */
+  if (typeof document.addEventListener === 'function') document.addEventListener('click', e => {
+    const j = e.target && e.target.closest && e.target.closest('[data-jump^="atlas:"]'); if (!j) return;
+    const id = j.dataset.jump.split(':')[1]; if (!id) return;
+    if (!reveal(id) || !FOLD.folders.length) FOLD.want = id;
+  }, true);
 
   function enhance(view) {
     if (view.dataset.deentAtlas === '1') return;
@@ -251,6 +383,8 @@ const ATLAS_UI = (() => {
     });
     if (unparsed.length) console.warn('Atlas: citations left in place on', unparsed.join('; '));
 
+    try { fold(view); } catch (e) { console.error('Atlas folders:', e); }
+
     // board headings: a neutral label replaces the name in Hide names mode
     view.querySelectorAll('.atboard').forEach((b, n, all) => {
       const h = b.querySelector('h3'); if (!h) return;
@@ -288,6 +422,7 @@ const ATLAS_UI = (() => {
       if (count$) count$.textContent = (shown === tiles.length ? tiles.length + ' structures' : shown + ' of ' + tiles.length + ' structures') +
         (refHid ? ' · ' + refHid + ' reference-only hidden' : '') + (namesOff ? ' · ' + revealed + ' revealed' : '');
       const term = q ? q.value.trim() : '';
+      foldUpdate(view, vis, term, refOff);
       empty.hidden = shown > 0;
       if (!shown) empty.textContent = (term ? 'No structure matches “' + term + '”.' : 'No structure is shown.') +
         (refHid ? ' ' + refHid + ' reference-only ' + (refHid === 1 ? 'structure matches' : 'structures match') + '; use “Show reference-only” to see ' + (refHid === 1 ? 'it' : 'them') + '.' : ' Clear the search to see all structures.');
@@ -334,6 +469,11 @@ const ATLAS_UI = (() => {
       Promise.resolve().then(() => { pending = false; sync(); }); })
       .observe(view, {attributes: true, attributeFilter: ['class'], subtree: true});
     sync();
+
+    if (FOLD.want) {            // a jump that arrived before the folders existed
+      const id = FOLD.want; FOLD.want = null;
+      if (reveal(id)) setTimeout(() => { const t = document.getElementById(id); if (t && typeof scrollToEl === 'function') scrollToEl(t); }, 0);
+    }
 
     if (ATLAS.EXCLUDED && ATLAS.EXCLUDED.length) {
       const p = el('p', 'atexcl');

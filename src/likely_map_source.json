@@ -1,6 +1,6 @@
 {
  "meta": {
-  "source": "analysis of 2026-11-15 (stars_map_smith.json): comb = 0.5*percentile(question-derived score) + 0.5*percentile(transcript emphasis); Dr. Smith rows re-scored from her transcripts of 10/29, 10/30, 11/03 and her sun-exposure recording. Dr. Smith's eye rows (Exam 3, added 2026-11-18): same formula, comb = 0.5*(question-star score relative to the tab's best eye target; a star counts 1.3 minus its rank over the 41 eye stars) + 0.5*(transcript emphasis, 0 to 1, by the strength of her 11/13 and 11/17 cue words); lv 3 at 0.8, lv 2 at 0.6, else 1.",
+  "source": "analysis of 2026-11-15 (stars_map_smith.json): comb = 0.5*percentile(question-derived score) + 0.5*percentile(transcript emphasis); Dr. Smith rows re-scored from her transcripts of 10/29, 10/30, 11/03 and her sun-exposure recording. Dr. Smith's eye rows (Exam 3, added 2026-11-18): same formula, comb = 0.5*(question-star score relative to the tab's best eye target; a star counts 1.3 minus its rank over the 41 eye stars) + 0.5*(transcript emphasis, 0 to 1, by the strength of her 11/13 and 11/17 cue words); lv 3 at 0.8, lv 2 at 0.6, else 1. Exam 3 rows of Dr. Lam, Dr. Sikazwe and Dr. Smith's objective pages (added 2026-11-22, each marked added): no transcript score; a target is starred from the starred Exam 3 practice questions that rest on it (the question's reading link, or its topic for the objective pages gobj-sm-* and gobj-sk3-*; Tell apart rows matched by reading each stem); lv 3 at 7 questions, lv 2 at 3, else 1, and at least lv 2 where one of them is the professor's own practice question; guide and reference sections need 2 linked questions (objective pages 1).",
   "lecture": {
    "P1106": [
     "Patel",
@@ -52,10 +52,10 @@
    ]
   },
   "chosen": {
-   "guide": 22,
+   "guide": 60,
    "guideBlock": 56,
-   "reference": 10,
-   "tell": 30,
+   "reference": 15,
+   "tell": 36,
    "dzCard": 11,
    "dzTell": 8,
    "dzPair": 11,
@@ -972,6 +972,557 @@
      "stop",
      "nausea"
     ]
+   },
+   "gobj-oo-21": {
+    "lv": 2,
+    "qStars": 4,
+    "ev": [
+     "OA-050:sik-q-ooo",
+     "OB-008:sik-ex3",
+     "OB-006:sik-ex3",
+     "OB-009:sik-ex3"
+    ],
+    "quotes": [],
+    "added": "2026-11-22",
+    "title": "Dr. Sikazwe, slide by slide · Carbonic anhydrase inhibitors · slides 35&ndash;39"
+   },
+   "gobj-oo-11": {
+    "lv": 3,
+    "qStars": 7,
+    "ev": [
+     "OA-051:sik-q-ooo",
+     "OP-013:sik-ex3",
+     "OP-036:sik-ex3",
+     "OP-035:sik-ex3",
+     "OP-038:sik-ex3",
+     "OP-026:sik-ex3",
+     "OP-027:sik-ex3"
+    ],
+    "quotes": [],
+    "added": "2026-11-22",
+    "title": "Dr. Sikazwe, slide by slide · Glaucoma: alpha 2 agonists (imidazolines) and their SAR · slides 31&ndash;32"
+   },
+   "gobj-oo-12": {
+    "lv": 2,
+    "qStars": 3,
+    "ev": [
+     "OA-052:sik-q-ooo",
+     "OB-001:sik-ex3",
+     "OB-003:sik-ex3"
+    ],
+    "quotes": [],
+    "added": "2026-11-22",
+    "title": "Dr. Sikazwe, slide by slide · Glaucoma: beta antagonists (aryloxypropanolamines) · slides 33&ndash;34"
+   },
+   "gobj-oo-22": {
+    "lv": 2,
+    "qStars": 3,
+    "ev": [
+     "OA-053:sik-q-ooo",
+     "OB-011:sik-ex3",
+     "OB-012:sik-ex3"
+    ],
+    "quotes": [],
+    "added": "2026-11-22",
+    "title": "Dr. Sikazwe, slide by slide · Cholinergic agents · slides 40&ndash;43"
+   },
+   "gobj-oo-9": {
+    "lv": 2,
+    "qStars": 6,
+    "ev": [
+     "OP-001:sik-ex3",
+     "OP-004:sik-ex3",
+     "OP-005:sik-ex3",
+     "OP-006:sik-ex3",
+     "OP-015:sik-ex3",
+     "OP-002:sik-ex3"
+    ],
+    "quotes": [],
+    "added": "2026-11-22",
+    "title": "Dr. Sikazwe, slide by slide · Ophthalmic disorders: functional groups and glaucoma basics · slides 26&ndash;28"
+   },
+   "gobj-oo-10": {
+    "lv": 2,
+    "qStars": 4,
+    "ev": [
+     "OP-020:sik-ex3",
+     "OP-019:sik-ex3",
+     "OP-024:sik-ex3",
+     "OP-023:sik-ex3"
+    ],
+    "quotes": [],
+    "added": "2026-11-22",
+    "title": "Dr. Sikazwe, slide by slide · Eye drug absorption: cornea and conjunctiva · slides 29&ndash;30"
+   },
+   "gobj-oo-30": {
+    "lv": 2,
+    "qStars": 3,
+    "ev": [
+     "OB-029:sik-q-ooo",
+     "OB-030:sik-q-ooo",
+     "OB-031:sik-q-ooo"
+    ],
+    "quotes": [],
+    "added": "2026-11-22",
+    "title": "Dr. Sikazwe, slide by slide · Self-assessment questions 4 and 5 · slides 66&ndash;68"
+   },
+   "gobj-lg-3": {
+    "lv": 3,
+    "qStars": 25,
+    "ev": [
+     "LMA-002:lam-q",
+     "LMB-001:lam-q",
+     "LMB-002:lam-q",
+     "LMB-003:lam-q",
+     "LMB-077:lam-ex3",
+     "LMB-067:lam-ex3",
+     "LMB-066:lam-ex3",
+     "LMB-071:lam-ex3",
+     "LMA-055:lam-ex3",
+     "LMB-078:lam-ex3",
+     "LMB-079:lam-ex3",
+     "LMB-050:lam-ex3",
+     "LMB-004:lam-ex3",
+     "LMA-039:lam-ex3",
+     "LMB-036:lam-ex3",
+     "LMA-060:lam-ex3",
+     "LMB-074:lam-ex3",
+     "LMA-059:lam-ex3",
+     "LMB-029:lam-ex3",
+     "LMB-058:lam-ex3",
+     "LMB-016:lam-ex3",
+     "LMB-012:lam-ex3",
+     "LMB-014:lam-ex3",
+     "LMB-026:lam-ex3",
+     "LMB-027:lam-ex3"
+    ],
+    "quotes": [],
+    "added": "2026-11-22",
+    "title": "Plan: the six drug classes in order, and combination products · slides 17&ndash;69"
+   },
+   "gobj-lg-4": {
+    "lv": 3,
+    "qStars": 7,
+    "ev": [
+     "LMC-022:lam-ex3",
+     "LMC-002:lam-ex3",
+     "LMC-008:lam-ex3",
+     "LMC-011:lam-ex3",
+     "LMC-007:lam-ex3",
+     "LMC-033:lam-ex3",
+     "LMC-039:lam-ex3"
+    ],
+    "quotes": [],
+    "added": "2026-11-22",
+    "title": "Implement: counseling, drop order, waits, contact lenses, storage · slides 70&ndash;85"
+   },
+   "gobj-lo-5": {
+    "lv": 3,
+    "qStars": 7,
+    "ev": [
+     "LOD-057:lam-ex3b",
+     "LOD-056:lam-ex3b",
+     "LOD-055:lam-ex3b",
+     "LOD-062:lam-ex3b",
+     "LOD-063:lam-ex3b",
+     "LOD-065:lam-ex3b",
+     "LOD-053:lam-ex3b"
+    ],
+    "quotes": [],
+    "added": "2026-11-22",
+    "title": "Eye drops in general: preservatives, order, lenses, technique, and her two cases · slides 42&ndash;50, 51&ndash;54"
+   },
+   "gobj-lo-4": {
+    "lv": 3,
+    "qStars": 8,
+    "ev": [
+     "LOD-060:lam-q2",
+     "LOD-069:lam-q2",
+     "LOD-067:lam-q2",
+     "LOD-068:lam-q2",
+     "LOD-070:lam-q2",
+     "LOD-038:lam-q2",
+     "LOD-036:lam-ex3b",
+     "LOD-047:lam-ex3b"
+    ],
+    "quotes": [],
+    "added": "2026-11-22",
+    "title": "Allergic conjunctivitis, plan and follow up: products and the 72-hour rule · slides 32&ndash;41"
+   },
+   "gobj-lo-2": {
+    "lv": 2,
+    "qStars": 2,
+    "ev": [
+     "LOD-071:lam-q2",
+     "LOD-072:lam-q2"
+    ],
+    "quotes": [],
+    "added": "2026-11-22",
+    "title": "Dry eye, plan and implement: tears, ointments, prescription drugs · slides 12&ndash;22"
+   },
+   "gobj-lr-1": {
+    "lv": 2,
+    "qStars": 5,
+    "ev": [
+     "LOR-006:lam-q2",
+     "LOR-003:lam-q2",
+     "LOR-005:lam-ex3b",
+     "LOR-004:lam-ex3b",
+     "LOR-007:lam-ex3b"
+    ],
+    "quotes": [],
+    "added": "2026-11-22",
+    "title": "Sensitive teeth versus toothache: all five steps · slides 6&ndash;23"
+   },
+   "gobj-lr-3": {
+    "lv": 2,
+    "qStars": 4,
+    "ev": [
+     "LOR-039:lam-q2",
+     "LOR-040:lam-q2",
+     "LOR-042:lam-ex3b",
+     "LOR-045:lam-ex3b"
+    ],
+    "quotes": [],
+    "added": "2026-11-22",
+    "title": "Cold sores: all five steps · slides 41&ndash;67"
+   },
+   "gobj-lo-3": {
+    "lv": 1,
+    "qStars": 2,
+    "ev": [
+     "LOD-027:lam-ex3b",
+     "LOD-030:lam-ex3b"
+    ],
+    "quotes": [],
+    "added": "2026-11-22",
+    "title": "Conjunctivitis, collect and assess: allergic, bacterial, viral · slides 25&ndash;31"
+   },
+   "gobj-lr-4": {
+    "lv": 1,
+    "qStars": 2,
+    "ev": [
+     "LOR-053:lam-ex3b",
+     "LOR-055:lam-ex3b"
+    ],
+    "quotes": [],
+    "added": "2026-11-22",
+    "title": "Cold sore versus canker sore: how to tell them apart · slides 46&ndash;47"
+   },
+   "gobj-lt-2": {
+    "lv": 2,
+    "qStars": 3,
+    "ev": [
+     "LOT-030:lam-ex3b",
+     "LOT-032:lam-ex3b",
+     "LOT-034:lam-ex3b"
+    ],
+    "quotes": [],
+    "added": "2026-11-22",
+    "title": "Assess: exclusions and goals for each condition · slides 9&ndash;11, 22&ndash;27"
+   },
+   "gobj-lt-3": {
+    "lv": 1,
+    "qStars": 2,
+    "ev": [
+     "LOT-014:lam-ex3b",
+     "LOT-015:lam-ex3b"
+    ],
+    "quotes": [],
+    "added": "2026-11-22",
+    "title": "Plan: products and non-drug measures · slides 12&ndash;15, 28&ndash;31"
+   },
+   "gobj-sm-2": {
+    "lv": 1,
+    "qStars": 1,
+    "ev": [
+     "EA-012:smith-obj-eye"
+    ],
+    "quotes": [],
+    "added": "2026-11-22",
+    "title": "Objective 2 · Tears: what they are made of and why they matter"
+   },
+   "gobj-sm-3": {
+    "lv": 1,
+    "qStars": 1,
+    "ev": [
+     "EA-017:smith-obj-eye"
+    ],
+    "quotes": [],
+    "added": "2026-11-22",
+    "title": "Objective 3 · Adrenergic and cholinergic stimulation in the eye"
+   },
+   "gobj-sm-4": {
+    "lv": 2,
+    "qStars": 6,
+    "ev": [
+     "EA-022:smith-hint-ex3",
+     "EA-031:smith-hint-ex3",
+     "EA-034:smith-hint-ex3",
+     "EA-036:smith-eye-cue",
+     "EA-021:smith-ex3",
+     "EA-035:smith-obj-eye"
+    ],
+    "quotes": [],
+    "added": "2026-11-22",
+    "title": "Objective 4 · Glaucoma: what goes wrong in the eye"
+   },
+   "gobj-sm-5": {
+    "lv": 3,
+    "qStars": 17,
+    "ev": [
+     "EB-008:smith-hint-ex3",
+     "EB-009:smith-hint-ex3",
+     "EB-010:smith-hint-ex3",
+     "EB-011:smith-hint-ex3",
+     "EB-004:smith-hint-ex3",
+     "EB-002:smith-hint-ex3",
+     "EB-003:smith-hint-ex3",
+     "EG-002:smith-hint-ex3",
+     "EO-001:smith-ex3",
+     "EO-006:smith-ex3",
+     "EO-017:smith-ex3",
+     "EO-028:smith-ex3",
+     "EI-014:smith-eye-cue",
+     "EO-003:smith-eye-cue",
+     "EI-003:smith-ex3",
+     "EI-025:smith-obj-eye",
+     "EO-046:smith-obj-eye"
+    ],
+    "quotes": [],
+    "added": "2026-11-22",
+    "title": "Objective 5 · How each glaucoma drug class works"
+   },
+   "gobj-sm-6": {
+    "lv": 2,
+    "qStars": 6,
+    "ev": [
+     "EI-029:smith-hint-ex3",
+     "EI-028:smith-eye-cue",
+     "EI-031:smith-eye-cue",
+     "EI-023:smith-eye-cue",
+     "EO-033:smith-ex3",
+     "EG-010:smith-ex3"
+    ],
+    "quotes": [],
+    "added": "2026-11-22",
+    "title": "Objective 6 · Side effects of the glaucoma drugs"
+   },
+   "gobj-sm-7": {
+    "lv": 1,
+    "qStars": 2,
+    "ev": [
+     "EG-007:smith-hint-ex3",
+     "EL-001:smith-hint-ex3"
+    ],
+    "quotes": [],
+    "added": "2026-11-22",
+    "title": "Objective 7 · Allergic conjunctivitis: the symptoms"
+   },
+   "gobj-sm-8": {
+    "lv": 2,
+    "qStars": 5,
+    "ev": [
+     "EG-003:smith-hint-ex3",
+     "EG-004:smith-hint-ex3",
+     "EL-008:smith-eye-cue",
+     "EL-042:smith-eye-cue",
+     "EL-004:smith-eye-cue"
+    ],
+    "quotes": [],
+    "added": "2026-11-22",
+    "title": "Objective 8 · Allergic conjunctivitis: how each drug class works"
+   },
+   "gobj-sm-11": {
+    "lv": 1,
+    "qStars": 2,
+    "ev": [
+     "EG-009:smith-hint-ex3",
+     "ED-005:smith-hint-ex3"
+    ],
+    "quotes": [],
+    "added": "2026-11-22",
+    "title": "Objective 11 · Dry eye: what causes it"
+   },
+   "gobj-sm-12": {
+    "lv": 2,
+    "qStars": 5,
+    "ev": [
+     "EB-019:smith-hint-ex3",
+     "EB-020:smith-hint-ex3",
+     "EB-017:smith-hint-ex3",
+     "ED-008:smith-eye-room",
+     "ED-009:smith-eye-room"
+    ],
+    "quotes": [],
+    "added": "2026-11-22",
+    "title": "Objective 12 · Dry eye: how each drug works"
+   },
+   "gobj-sm-13": {
+    "lv": 1,
+    "qStars": 2,
+    "ev": [
+     "ED-028:smith-ex3",
+     "EG-011:smith-ex3"
+    ],
+    "quotes": [],
+    "added": "2026-11-22",
+    "title": "Objective 13 · Dry eye: side effects of the drugs"
+   },
+   "gobj-sk3-2": {
+    "lv": 3,
+    "qStars": 10,
+    "ev": [
+     "OR-010:sik-q-ooo",
+     "OR-020:sik-ex3",
+     "OR-006:sik-ex3",
+     "OR-004:sik-ex3",
+     "OR-021:sik-ex3",
+     "OR-032:sik-ex3",
+     "OR-011:sik-ex3",
+     "OR-019:sik-ex3",
+     "OR-027:sik-ex3",
+     "OR-023:sik-ex3"
+    ],
+    "quotes": [],
+    "added": "2026-11-22",
+    "title": "Objective view · Oral: tooth decay, fluoride, toothpastes and rinses (slides 15–21)"
+   },
+   "gobj-sk3-6": {
+    "lv": 2,
+    "qStars": 4,
+    "ev": [
+     "OC-003:sik-q-ooo",
+     "OB-008:sik-ex3",
+     "OB-006:sik-ex3",
+     "OB-009:sik-ex3"
+    ],
+    "quotes": [],
+    "added": "2026-11-22",
+    "title": "Objective view · Glaucoma: carbonic anhydrase inhibitors (slides 35–39)"
+   },
+   "gobj-sk3-7": {
+    "lv": 2,
+    "qStars": 3,
+    "ev": [
+     "OC-025:sik-q-ooo",
+     "OB-011:sik-ex3",
+     "OB-012:sik-ex3"
+    ],
+    "quotes": [],
+    "added": "2026-11-22",
+    "title": "Objective view · Glaucoma: cholinergic agents, carbamate versus phosphoryl (slides 40–43)"
+   },
+   "gobj-sk3-9": {
+    "lv": 3,
+    "qStars": 8,
+    "ev": [
+     "OA-050:sik-q-ooo",
+     "OA-051:sik-q-ooo",
+     "OA-052:sik-q-ooo",
+     "OA-053:sik-q-ooo",
+     "OB-029:sik-q-ooo",
+     "OB-030:sik-q-ooo",
+     "OB-031:sik-q-ooo",
+     "OB-028:sik-q-ooo"
+    ],
+    "quotes": [],
+    "added": "2026-11-22",
+    "title": "Objective view · His self-assessment questions 3–5 and practice questions 1–4"
+   },
+   "gobj-sk3-3": {
+    "lv": 3,
+    "qStars": 10,
+    "ev": [
+     "OP-001:sik-ex3",
+     "OP-004:sik-ex3",
+     "OP-005:sik-ex3",
+     "OP-006:sik-ex3",
+     "OP-020:sik-ex3",
+     "OP-019:sik-ex3",
+     "OP-024:sik-ex3",
+     "OP-015:sik-ex3",
+     "OP-023:sik-ex3",
+     "OP-002:sik-ex3"
+    ],
+    "quotes": [],
+    "added": "2026-11-22",
+    "title": "Objective view · Ophthalmic: functional groups, glaucoma basics and eye absorption (slides 27–31)"
+   },
+   "gobj-sk3-4": {
+    "lv": 2,
+    "qStars": 6,
+    "ev": [
+     "OP-013:sik-ex3",
+     "OP-036:sik-ex3",
+     "OP-035:sik-ex3",
+     "OP-038:sik-ex3",
+     "OP-026:sik-ex3",
+     "OP-027:sik-ex3"
+    ],
+    "quotes": [],
+    "added": "2026-11-22",
+    "title": "Objective view · Glaucoma: alpha 2 agonists and the imidazoline SAR (slide 31)"
+   },
+   "gobj-sk3-1": {
+    "lv": 3,
+    "qStars": 7,
+    "ev": [
+     "OT-009:sik-q-ooo",
+     "OT-010:sik-q-ooo",
+     "OT-011:sik-q-ooo",
+     "OT-002:sik-ex3",
+     "OT-001:sik-ex3",
+     "OT-003:sik-ex3",
+     "OT-005:sik-ex3"
+    ],
+    "quotes": [],
+    "added": "2026-11-22",
+    "title": "Objective view · Otic: earwax agents (slides 5–8)"
+   },
+   "gobj-sk3-5": {
+    "lv": 1,
+    "qStars": 2,
+    "ev": [
+     "OB-001:sik-ex3",
+     "OB-003:sik-ex3"
+    ],
+    "quotes": [],
+    "added": "2026-11-22",
+    "title": "Objective view · Glaucoma: beta antagonists, the aryloxypropanolamines (slides 33&ndash;34)"
+   },
+   "gobj-sk3-8": {
+    "lv": 1,
+    "qStars": 2,
+    "ev": [
+     "OB-016:sik-ex3",
+     "OB-019:sik-ex3"
+    ],
+    "quotes": [],
+    "added": "2026-11-22",
+    "title": "Objective view · Glaucoma: prostaglandin FP agonists, EP2 agonist and Rho kinase inhibitor (slides 44–48)"
+   },
+   "gobj-sm-0": {
+    "lv": 3,
+    "qStars": 13,
+    "ev": [
+     "EB-004:smith-hint-ex3",
+     "EB-021:smith-hint-ex3",
+     "EB-008:smith-hint-ex3",
+     "EB-009:smith-hint-ex3",
+     "EB-010:smith-hint-ex3",
+     "EB-011:smith-hint-ex3",
+     "EB-022:smith-hint-ex3",
+     "EB-023:smith-hint-ex3",
+     "EB-017:smith-hint-ex3",
+     "EB-019:smith-hint-ex3",
+     "EB-020:smith-hint-ex3",
+     "EB-002:smith-hint-ex3",
+     "EB-003:smith-hint-ex3"
+    ],
+    "quotes": [],
+    "added": "2026-11-22",
+    "title": "Fill in the blank · The mechanism of action words Dr. Smith can ask you to write"
    }
   },
   "guideBlock": {
@@ -3380,6 +3931,111 @@
      "conjun",
      "alpha"
     ]
+   },
+   "ref-oo-glaucoma": {
+    "lv": 3,
+    "qStars": 13,
+    "ev": [
+     "OA-050:sik-q-ooo",
+     "OA-053:sik-q-ooo",
+     "OB-029:sik-q-ooo",
+     "OB-030:sik-q-ooo",
+     "OB-031:sik-q-ooo",
+     "OB-028:sik-q-ooo",
+     "OB-008:sik-ex3",
+     "OB-011:sik-ex3",
+     "OB-012:sik-ex3",
+     "OB-006:sik-ex3",
+     "OB-016:sik-ex3",
+     "OB-009:sik-ex3",
+     "OB-019:sik-ex3"
+    ],
+    "quotes": [],
+    "added": "2026-11-22"
+   },
+   "ref-oo-classes": {
+    "lv": 3,
+    "qStars": 20,
+    "ev": [
+     "OA-051:sik-q-ooo",
+     "OA-052:sik-q-ooo",
+     "OP-001:sik-ex3",
+     "OP-013:sik-ex3",
+     "OP-004:sik-ex3",
+     "OP-005:sik-ex3",
+     "OP-006:sik-ex3",
+     "OP-036:sik-ex3",
+     "OP-035:sik-ex3",
+     "OP-038:sik-ex3",
+     "OP-020:sik-ex3",
+     "OP-019:sik-ex3",
+     "OP-024:sik-ex3",
+     "OP-015:sik-ex3",
+     "OP-026:sik-ex3",
+     "OP-027:sik-ex3",
+     "OP-023:sik-ex3",
+     "OP-002:sik-ex3",
+     "OB-001:sik-ex3",
+     "OB-003:sik-ex3"
+    ],
+    "quotes": [],
+    "added": "2026-11-22"
+   },
+   "ref-lg-classes": {
+    "lv": 3,
+    "qStars": 17,
+    "ev": [
+     "LMA-002:lam-q",
+     "LMB-001:lam-q",
+     "LMB-002:lam-q",
+     "LMA-055:lam-ex3",
+     "LMB-050:lam-ex3",
+     "LMB-004:lam-ex3",
+     "LMA-039:lam-ex3",
+     "LMB-036:lam-ex3",
+     "LMA-060:lam-ex3",
+     "LMA-059:lam-ex3",
+     "LMB-029:lam-ex3",
+     "LMB-058:lam-ex3",
+     "LMB-016:lam-ex3",
+     "LMB-012:lam-ex3",
+     "LMB-014:lam-ex3",
+     "LMB-026:lam-ex3",
+     "LMB-027:lam-ex3"
+    ],
+    "quotes": [],
+    "added": "2026-11-22"
+   },
+   "ref-lg-combos": {
+    "lv": 3,
+    "qStars": 8,
+    "ev": [
+     "LMB-003:lam-q",
+     "LMB-077:lam-ex3",
+     "LMB-067:lam-ex3",
+     "LMB-066:lam-ex3",
+     "LMB-071:lam-ex3",
+     "LMB-078:lam-ex3",
+     "LMB-079:lam-ex3",
+     "LMB-074:lam-ex3"
+    ],
+    "quotes": [],
+    "added": "2026-11-22"
+   },
+   "ref-lg-admin": {
+    "lv": 3,
+    "qStars": 7,
+    "ev": [
+     "LMC-022:lam-ex3",
+     "LMC-002:lam-ex3",
+     "LMC-008:lam-ex3",
+     "LMC-011:lam-ex3",
+     "LMC-007:lam-ex3",
+     "LMC-033:lam-ex3",
+     "LMC-039:lam-ex3"
+    ],
+    "quotes": [],
+    "added": "2026-11-22"
    }
   },
   "tell": {
@@ -4353,6 +5009,70 @@
      "tear",
      "produc"
     ]
+   },
+   "tell-lg-glaucoma#r2": {
+    "lv": 2,
+    "qStars": 1,
+    "ev": [
+     "LMB-001:lam-q"
+    ],
+    "quotes": [],
+    "added": "2026-11-22",
+    "label": "Timolol solution vs Timoptic-XE gel"
+   },
+   "tell-lg-glaucoma#r3": {
+    "lv": 2,
+    "qStars": 1,
+    "ev": [
+     "LMB-002:lam-q"
+    ],
+    "quotes": [],
+    "added": "2026-11-22",
+    "label": "Prescription brimonidine vs Lumify (OTC)"
+   },
+   "tell-lg-glaucoma#r6": {
+    "lv": 1,
+    "qStars": 1,
+    "ev": [
+     "LMB-079:lam-ex3"
+    ],
+    "quotes": [],
+    "added": "2026-11-22",
+    "label": "Combigan vs Cosopt vs Simbrinza"
+   },
+   "tell-lg-glaucoma#r8": {
+    "lv": 2,
+    "qStars": 4,
+    "ev": [
+     "LMB-012:lam-ex3",
+     "LMB-014:lam-ex3",
+     "LMB-026:lam-ex3",
+     "LMB-027:lam-ex3"
+    ],
+    "quotes": [],
+    "added": "2026-11-22",
+    "label": "Beta blocker precaution vs alpha-2 precaution"
+   },
+   "tell-lg-glaucoma#r9": {
+    "lv": 1,
+    "qStars": 1,
+    "ev": [
+     "LMB-058:lam-ex3"
+    ],
+    "quotes": [],
+    "added": "2026-11-22",
+    "label": "Pilocarpine vs netarsudil side effects"
+   },
+   "tell-lg-glaucoma#r14": {
+    "lv": 1,
+    "qStars": 2,
+    "ev": [
+     "LMA-055:lam-ex3",
+     "LMB-016:lam-ex3"
+    ],
+    "quotes": [],
+    "added": "2026-11-22",
+    "label": "Preservative-free products by class"
    }
   },
   "dzCard": {

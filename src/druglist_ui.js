@@ -1197,6 +1197,8 @@ const DRUGLIST_UI = (() => {
         const t = view && view.querySelector(`.attile[data-key="${CSS.escape(key)}"]`);
         if (!t) { if (n < 10) setTimeout(() => go(n + 1), 60); return; }
         t.hidden = false; t.classList.add('dlhit'); setTimeout(() => t.classList.remove('dlhit'), 2600);
+        // the Atlas keeps its boards in closed folders (atlas_ui.js): open the ones around this tile before scrolling
+        for (let x = t.closest('details'); x; x = x.parentElement && x.parentElement.closest('details')) x.open = true;
         if (typeof scrollToEl === 'function') scrollToEl(t); else t.scrollIntoView();
       };
       go(0);

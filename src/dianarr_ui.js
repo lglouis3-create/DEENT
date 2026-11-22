@@ -51,7 +51,15 @@ const DIA_NARR_UI = (() => {
 .dnbtn[aria-pressed="true"]{border-color:var(--accent,#2b6cb0);font-weight:600}
 .dnbar{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:6px 0 2px}
 .dnbar .btn{padding:5px 12px;font-size:13px;min-height:44px;min-width:44px}
-.dnstop[hidden]{display:none}`;
+.dnstop[hidden]{display:none}
+.dnsay{margin:8px 0 4px;padding:10px 12px;border:1px solid var(--line,#D3DAE3);border-left:4px solid var(--accent,#2b6cb0);border-radius:8px;background:var(--paper,#fff);text-align:left}
+.dnsay[hidden]{display:none}
+.dnsay-h{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between;margin:0 0 6px;font-size:12.5px;font-weight:600;color:var(--text-dim,#5A6878)}
+.dnsay-t{margin:0;font-size:16px;line-height:1.6;max-width:none}
+.dnsay-t .dns{color:var(--text-dim,#5A6878)}
+.dnsay-t .dns.dnon{color:var(--text,#16202C);font-weight:600}
+figure.fig svg text.dnhl{paint-order:stroke;stroke:#ffd84d;stroke-width:6px;stroke-linejoin:round;font-weight:700}
+@media (prefers-color-scheme:dark){figure.fig svg text.dnhl{stroke:#8a6a00}}`;
   const addCss = () => {
     if (document.getElementById('dncss')) return;
     const s = document.createElement('style'); s.id = 'dncss'; s.textContent = css; document.head.appendChild(s);
@@ -88,6 +96,105 @@ const DIA_NARR_UI = (() => {
     });
   }
 
+  /* ---------- following along (Louis, 2026-11-22: "what's being said gets emphasized and highlighted in the
+     diagram to follow along better ... felt it went really fast") ----------
+     While a figure is narrated a panel under its controls shows the words of the current step; the sentence
+     being spoken is marked, and the labels of the drawing that the sentence names get a yellow outline. A
+     recorded clip has no word timings, so the sentence is placed by how far the clip has played against the
+     sentences' share of the text; the device voice reports each sentence as it starts. The panel carries the
+     speed control (walk_ui.js's stored speed). */
+  const STOPW = new Set('the and for with from that this into onto than then are was were has have its their there which when what where while also each more less most both does not but only over under after before between through they them these those can may will per via out off about more'.split(' '));
+  const NUMW = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine'];
+  const ALIAS = [[/α/g, ' alpha '], [/β/g, ' beta '], [/γ/g, ' gamma '], [/\bIOP\b/g, ' intraocular pressure '], [/\bCAIs?\b/g, ' carbonic anhydrase inhibitor '],
+    [/\bAChE\b/g, ' acetylcholinesterase '], [/\bACh\b/g, ' acetylcholine '], [/\bCO2\b/gi, ' carbon dioxide '], [/\bHCO3\b/gi, ' bicarbonate '],
+    [/\bH2CO3\b/gi, ' carbonic acid '], [/\bH2O\b/gi, ' water '], [/\bNa\+?(?=\s|$)/g, ' sodium '], [/\bBAK\b/g, ' benzalkonium chloride '], [/\bPGs?\b/g, ' prostaglandin ']];
+  const toks = t => {
+    let x = String(t); ALIAS.forEach(([re, r]) => { x = x.replace(re, r); });
+    x = x.replace(/\d/g, d => ' ' + NUMW[+d] + ' ').toLowerCase();
+    return (x.match(/[a-z]+/g) || []).filter(w => (w.length >= 3 && !STOPW.has(w))).map(w => w.length >= 7 ? w.slice(0, 6) : w.replace(/s$/, ''));
+  };
+  const shownText = (fig, el) => { const st = el.closest('.st'); return !st || st.closest('figure') !== fig || st.classList.contains('on'); };
+  /* One label at a time (Louis, 2026-11-22: the outline "is kind of helpful but distracting when everything is
+     highlighted at once"). The labels of the drawing are matched to the places in the step's text where they are
+     named; as the narration reaches a place, only the label named there is outlined, until the next one is named.
+     A label written on two lines is two <text> elements with the same x, the second starting in lower case: they count as one label. */
+  function labelsOf(fig) {
+    const out = []; let last = null;
+    fig.querySelectorAll('svg text').forEach(t => {
+      if (!shownText(fig, t)) return;
+      const x = t.getAttribute('x'), y = parseFloat(t.getAttribute('y'));
+      if (last && last.parent === t.parentNode && last.x === x && x != null && isFinite(y) && isFinite(last.y) && y - last.y > 6 && y - last.y < 24 && /^[a-z(]/.test(t.textContent.trim())) {
+        last.els.push(t); last.txt += ' ' + t.textContent; last.y = y;
+      } else { last = {els: [t], txt: t.textContent, x, y, parent: t.parentNode}; out.push(last); }
+    });
+    out.forEach(l => { l.tok = [...new Set(toks(l.txt))]; });
+    return out.filter(l => l.tok.length && l.tok.length <= 6);
+  }
+  // the places in `text` where a label is named: [{pos (character), els}], in order
+  function mentions(fig, text) {
+    const labels = labelsOf(fig); if (!labels.length) return [];
+    const words = []; const re = /\S+/g; let m;
+    while ((m = re.exec(text))) words.push({pos: m.index, tok: toks(m[0])});
+    const out = [];
+    for (let w = 0; w < words.length; w++) {
+      if (!words[w].tok.length) continue;
+      // the label's other words may stand up to four words before or after this one; the nearest wins a tie
+      const near = {}; for (let k = Math.max(0, w - 4); k < Math.min(words.length, w + 5); k++) words[k].tok.forEach(x => { const d = Math.abs(k - w); if (!(x in near) || d < near[x]) near[x] = d; });
+      let best = [], size = 0, dist = 1e9;
+      labels.forEach(l => {
+        if (!words[w].tok.some(x => l.tok.includes(x))) return;
+        const got = l.tok.filter(x => x in near), hit = got.length;
+        if (hit < (l.tok.length <= 2 ? l.tok.length : Math.ceil(l.tok.length * 0.6))) return;
+        const d = got.reduce((a, x) => a + near[x], 0);
+        if (hit > size || (hit === size && d < dist)) { best = [l]; size = hit; dist = d; } else if (hit === size && d === dist) best.push(l);
+      });
+      if (!best.length) continue;
+      const els = best.flatMap(l => l.els), prev = out[out.length - 1];
+      if (prev && prev.els.length === els.length && prev.els.every((e, k) => e === els[k])) continue;   // the same label, still being named
+      if (prev && words[w].pos - prev.pos < 12 && prev.size > size) continue;                              // a part of the label just named
+      out.push({pos: words[w].pos, els, size});
+    }
+    return out;
+  }
+  function markAt(fig, me, pos) {
+    const M = me.men || []; let k = -1;
+    for (let i = 0; i < M.length; i++) if (M[i].pos <= pos) k = i;
+    if (k === me.mk) return; me.mk = k;
+    fig.querySelectorAll('svg text.dnhl').forEach(t => t.classList.remove('dnhl'));
+    if (k >= 0) M[k].els.forEach(t => t.classList.add('dnhl'));
+  }
+  function panel(fig) {
+    let d = fig.querySelector(':scope > .dnsay');
+    if (!d) {
+      d = document.createElement('div'); d.className = 'dnsay'; d.hidden = true;
+      d.innerHTML = `<div class="dnsay-h"><span class="dnsay-n" aria-live="polite"></span>${NARR.rateSelect ? NARR.rateSelect() : ''}</div><p class="dnsay-t"></p>`;
+      // under the drawing: above the step controls of a step-through, below the Listen bar of a static figure
+      const ctl = fig.querySelector(':scope > [data-anim]'), bar = fig.querySelector(':scope > .dnbar');
+      if (ctl) ctl.before(d); else if (bar) bar.after(d); else fig.append(d);
+    }
+    return d;
+  }
+  function sayStep(fig, key, i, text) {
+    const d = panel(fig), n = Math.min(steps(key).length, figSteps(fig).length || 1);
+    d.querySelector('.dnsay-n').textContent = n > 1 ? `Being read: step ${i + 1} of ${n}` : 'Being read';
+    d.querySelector('.dnsay-t').innerHTML = NARR.sentHTML(text, 'dns');
+    d.hidden = false;
+  }
+  function saySent(fig, si) {
+    const d = fig.querySelector(':scope > .dnsay'); if (!d) return;
+    const all = [...d.querySelectorAll('.dns')]; if (!all.length) return;
+    const k = Math.max(0, Math.min(all.length - 1, si));
+    if (all[k].classList.contains('dnon')) return;
+    all.forEach((x, j) => x.classList.toggle('dnon', j === k));
+  }
+  function sayOff(fig) {
+    if (!fig) return;
+    const d = fig.querySelector(':scope > .dnsay'); if (d) d.hidden = true;
+    fig.querySelectorAll('svg text.dnhl').forEach(t => t.classList.remove('dnhl'));
+  }
+  // where each sentence starts, as a share of the step's text (a recorded clip is placed by this)
+  const cuts = text => { const ss = NARR.sentences(text), tot = ss.reduce((a, x) => a + x.length, 0) || 1; let a = 0; return ss.map(x => { const c = a / tot; a += x.length; return c; }); };
+
   /* ---------- playing ---------- */
   let P = null;          // {fig, key, i, h, gap}
   const figSteps = fig => [...fig.querySelectorAll('svg .st')].filter(s => s.closest('figure') === fig);
@@ -117,8 +224,9 @@ const DIA_NARR_UI = (() => {
   }
   function stop() {
     const p = P; if (!p) return; P = null;
-    clearTimeout(p.gap);
+    clearTimeout(p.gap); clearInterval(p.tick);
     if (p.h && !p.h.done) p.h.stop(true);
+    sayOff(p.fig);
     ui();
   }
   function play(fig, key, i) {
@@ -129,14 +237,24 @@ const DIA_NARR_UI = (() => {
     if (n > 1) show(fig, i);
     const me = P = P && P.fig === fig ? P : {fig, key};
     me.i = i; clearTimeout(me.gap);
-    const text = list[i].text;
+    const text = list[i].text, cut = cuts(text), sents = NARR.sentences(text);
+    sayStep(fig, key, i, text); saySent(fig, 0);
+    me.men = mentions(fig, text); me.mk = -2; markAt(fig, me, -1);
+    // the device voice reports only the start of each sentence: within it the place is estimated at 13 characters a second
+    clearInterval(me.tick);
+    const voiceAt = si => {
+      clearInterval(me.tick); let at = sents.slice(0, si).reduce((a, x) => a + x.length, 0); const t0 = Date.now();
+      me.tick = setInterval(() => { if (P !== me || !me.h || me.h.done) { clearInterval(me.tick); return; } if (!me.h.paused) markAt(fig, me, at + (Date.now() - t0) / 1000 * 13 * (NARR.st().rate || 1)); }, 250);
+    };
     me.h = NARR.say({clip: NARR.clipFor(clipKey(key, i), text), text, owner: 'dianarr',
+      onSent: si => { if (P === me) { saySent(fig, si); voiceAt(si); } },
+      onFrac: f => { if (P !== me) return; let k = 0; while (k + 1 < cut.length && f >= cut[k + 1]) k++; saySent(fig, k); markAt(fig, me, f * text.length + 4); },
       onEnd: () => {
         if (P !== me) return;
         if (!fig.isConnected || i + 1 >= Math.min(list.length, n)) { stop(); return; }
-        me.gap = setTimeout(() => { if (P === me) play(fig, key, i + 1); }, 450);
+        me.gap = setTimeout(() => { if (P === me) play(fig, key, i + 1); }, 1200);   // a pause between steps (was 450 ms)
       },
-      onStop: () => { if (P === me) { P = null; clearTimeout(me.gap); ui(); } },
+      onStop: () => { if (P === me) { P = null; clearTimeout(me.gap); clearInterval(me.tick); sayOff(fig); ui(); } },
       onState: ui});
     ui();
   }
