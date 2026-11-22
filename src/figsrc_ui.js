@@ -18,11 +18,13 @@ figure.fig figcaption.fsrc-closed .slk{font-size:0;display:inline-flex;align-ite
 figure.fig figcaption.fsrc-closed .slk::after{content:attr(data-fsrc-lab);font-size:13px;line-height:1.2;font-weight:600;color:var(--accent,#2F5FA8)}
 figure.fig figcaption.fsrc-closed .slk.fsrc-dup{display:none}
 figure.fig figcaption.fsrc-closed > *:not(.slk):not(.fsrc-t):not(.fsrc-t0){display:none}
-figure.fig figcaption.fsrc-off{font-size:0;line-height:0}
-figure.fig figcaption.fsrc-off > *:not(.fsrc-t0){display:none}
+/* collapsed is the look of a note that has neither state class, so it is collapsed from the first paint (before this
+   file has added its button) and nothing above a jump target changes height afterwards */
+figure.fig figcaption:not(.fsrc-closed):not(.fsrc-open){font-size:0;line-height:0;height:36px;overflow:hidden}
+figure.fig figcaption:not(.fsrc-closed):not(.fsrc-open) > *:not(.fsrc-t0){display:none}
 figure.fig figcaption .fsrc-t0{font-size:12.5px;line-height:1.2;min-height:36px;padding:0 12px;border:1px solid var(--line,#D3DAE3);border-radius:18px;background:transparent;color:var(--text-dim,#5A6878);cursor:pointer}
-figure.fig figcaption:not(.fsrc-off):not(.fsrc-closed) .fsrc-t0{display:block;width:max-content;margin:10px 0 0}
-figure.fig figcaption:not(.fsrc-off):not(.fsrc-closed) .fsrc-t{display:block;width:max-content;margin:8px 0 0}
+figure.fig figcaption.fsrc-open .fsrc-t0{display:block;width:max-content;margin:10px 0 0}
+figure.fig figcaption.fsrc-open .fsrc-t{display:block;width:max-content;margin:8px 0 0}
 figure.fig figcaption .fsrc-t0:focus-visible{outline:3px solid var(--accent,#2F5FA8);outline-offset:2px}
 figure.fig figcaption .fsrc-t{font-size:12.5px;line-height:1.2;min-height:36px;padding:0 12px;border:1px solid var(--line,#D3DAE3);border-radius:18px;background:transparent;color:var(--text-dim,#5A6878);cursor:pointer}
 figure.fig figcaption .fsrc-t:focus-visible{outline:3px solid var(--accent,#2F5FA8);outline-offset:2px}`;
@@ -57,7 +59,7 @@ figure.fig figcaption .fsrc-t:focus-visible{outline:3px solid var(--accent,#2F5F
     root.querySelectorAll('figure.fig figcaption').forEach(fc => {
       if (!fc.hasAttribute('data-fsrc')) {
         // closed: one button of fixed height, so the page does not move when slide_ui.js makes the note's links
-        fc.setAttribute('data-fsrc', '1'); fc.classList.add('fsrc-off');
+        fc.setAttribute('data-fsrc', '1');
         const b0 = document.createElement('button'); b0.type = 'button'; b0.className = 'fsrc-t0'; b0.setAttribute('aria-expanded', 'false'); b0.textContent = 'Slides and sources';
         const b = document.createElement('button'); b.type = 'button'; b.className = 'fsrc-t'; b.setAttribute('aria-expanded', 'false'); b.textContent = 'Source note';
         fc.appendChild(b0); fc.appendChild(b);
@@ -76,15 +78,16 @@ figure.fig figcaption .fsrc-t:focus-visible{outline:3px solid var(--accent,#2F5F
     const b0 = e.target && e.target.closest ? e.target.closest('.fsrc-t0') : null;
     if (b0) {                                   // closed <-> the slide buttons
       const fc = b0.closest('figcaption'); if (!fc) return;
-      const off = fc.classList.contains('fsrc-off');
-      fc.classList.toggle('fsrc-off', !off); fc.classList.toggle('fsrc-closed', off);
+      const off = !fc.classList.contains('fsrc-closed') && !fc.classList.contains('fsrc-open');
+      fc.classList.remove('fsrc-open'); fc.classList.toggle('fsrc-closed', off);
       b0.setAttribute('aria-expanded', off ? 'true' : 'false'); b0.textContent = off ? 'Hide' : 'Slides and sources';
       const b2 = fc.querySelector('.fsrc-t'); if (b2) { b2.setAttribute('aria-expanded', 'false'); b2.textContent = 'Source note'; }
       return;
     }
     const b = e.target && e.target.closest ? e.target.closest('.fsrc-t') : null; if (!b) return;
     const fc = b.closest('figcaption'); if (!fc) return;   // the slide buttons <-> the full note
-    const open = fc.classList.toggle('fsrc-closed') === false;
+    const open = fc.classList.contains('fsrc-closed');
+    fc.classList.toggle('fsrc-closed', !open); fc.classList.toggle('fsrc-open', open);
     b.setAttribute('aria-expanded', open ? 'true' : 'false'); b.textContent = open ? 'Slide buttons only' : 'Source note';
   });
   let queued = false;
