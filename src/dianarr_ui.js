@@ -61,7 +61,7 @@ const DIA_NARR_UI = (() => {
 figure.fig svg text.dnhl{paint-order:stroke;stroke:#ffd84d;stroke-width:6px;stroke-linejoin:round;font-weight:700}
 figure.fig svg .dn-el{transition:opacity .45s ease}
 figure.fig svg .dn-fut{opacity:0!important;pointer-events:none}
-figure.fig svg .dn-past{opacity:.38!important}
+figure.fig svg .dn-past{opacity:.5!important}
 figure.fig svg .dn-badges circle{fill:#fff;stroke:#c2410c;stroke-width:1.5}
 figure.fig svg .dn-badges text{fill:#c2410c;font:700 9.5px system-ui,sans-serif;text-anchor:middle}
 figure.fig svg .dn-badges .on circle{fill:#c2410c}
