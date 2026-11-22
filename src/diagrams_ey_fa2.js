@@ -198,6 +198,7 @@ const DIAGRAMS_EY_FA2 = (() => {
       T(30, 48, 'Cornea', 'lCo', 'fa-t') + lead(66, 45, 108, 63, 'lCol') +
       TL(180, 84, ['Anterior', 'chamber'], 'lAC', 'fa-t', 'middle') +
       T(236, 112, 'Iris', 'lIr', 'fa-t') + lead(241, 115, 241, 143, 'lIrl') +
+      T(180, 122, 'Pupil', 'lPu', 'fa-t', 'middle') + lead(180, 126, 180, 146, 'lPul') +
       T(180, 186, 'Lens', 'lLe', 'fa-t', 'middle') + T(180, 230, 'Vitreous humor', 'lVi', 'fa-t', 'middle') +
       TL(302, 170, ['Ciliary', 'body'], 'lCb', 'fa-t') + lead(300, 176, 266, 176, 'lCbl') +
       T(304, 214, 'Sclera', 'lSl', 'fa-t') + lead(302, 211, 288, 211, 'lSll') +
@@ -221,9 +222,12 @@ const DIAGRAMS_EY_FA2 = (() => {
       df(F.uvL, 'f-uvL', {dim: true}) + df(F.uvR, 'f-uvR', {dim: true}) +
       fa.blk(...p(268, 124), ...p(250, 150), 'blkC') +
       TL(298, 66, ['Forward', 'bowing of', 'iris blocks', 'trabecular', 'meshwork', 'drainage'], 'blkT', 'fa-w') + lead(322, 142, tmR[0] + 12, tmR[1] - 2, 'blkL') +
-      cards('Primary angle-closure glaucoma (PACG)', [['Angle', ['closed: the iris bows', 'forward over the meshwork']],
-        ['Linked to', ['the shape of the eye and', 'how it sits in the socket']],
-        ['Onset, pain', ['pressure rises very quickly;', 'significant pain']], ['Urgency', ['medical emergency: lower', 'the IOP quickly']]], 'c');
+      /* step 3's cards sit higher and in two columns of their own, so the two lines the narration adds (sentences 3 and 5) fit above the caption */
+      T(6, 264, 'Primary angle-closure glaucoma (PACG)', 'ch', 'fa-tb') +
+      fa.card(6, 270, 170, 'Angle', ['closed: the iris bows', 'forward over the meshwork'], 'c0') +
+      fa.card(184, 270, 170, 'Linked to', ['the shape of the eye and', 'how it sits in the socket', 'also: swelling after a blow', 'or chemical exposure'], 'c1') +
+      fa.card(184, 348, 170, 'Onset, pain', ['pressure rises very quickly;', 'significant pain'], 'c2') +
+      fa.card(6, 322, 170, 'Urgency', ['medical emergency: lower', 'the IOP quickly; a laser', 'opens the closed angle'], 'c3');
     return fa.stepper('ey-angle', 'Open-angle vs angle-closure glaucoma', [
       ['Normal: aqueous humor drains at the angle (circle), where the iris meets the cornea and sclera (slide 14 panel A; 11/13 T@26451).', s1],
       ['Open angle: the angle stays open but the trabecular meshwork drains poorly; gradual and silent (slides 13, 14 panel B; 11/13 T@29351).', s2],
@@ -260,50 +264,59 @@ const DIAGRAMS_EY_FA2 = (() => {
     const aqT = TL(300, 286, ['= aqueous', 'humor', '(INFLOW)'], 'esT5', 'fa-tb', 'middle', 13);
     const inCard = fa.R(156, 26, 200, 60, 'ink', 'fa-card') + T(164, 42, 'INFLOW', 'inkT', 'fa-k') +
       TL(164, 56, ['the ciliary epithelium makes', 'aqueous humor all the time'], 'inkL', 'fa-t');
-    const e1 = mini + cbL + zoomL + cell + cham + chem() + flows(false) + pcT() + aqT + inCard;
+    /* each formula's name in words, once (the narration's words) */
+    const names = [['CO₂', 'carbon dioxide'], ['H₂CO₃', 'carbonic acid'], ['H⁺', 'hydrogen ion'], ['HCO₃⁻', 'bicarbonate'], ['Na⁺', 'sodium']]
+      .map(([f, w], i) => T(226, 106 + i * 14, f, 'nmF' + i, 'fa-chem') + T(268, 106 + i * 14, w, 'nmW' + i, 'fa-t')).join('');
+    const e1 = mini + cbL + zoomL + cell + cham + chem() + flows(false) + pcT() + aqT + inCard + names;
     const drugs = fa.R(156, 26, 200, 92, 'drg', 'fa-card') + T(164, 42, 'CA inhibitors', 'drgT', 'fa-k') +
       T(164, 58, 'eye drops', 'drgE', 'fa-ts') + fa.chip(160, 63, 96, ['dorzolamide'], 'dz', 22, true) + fa.chip(160, 89, 96, ['brinzolamide'], 'bz', 22, true) +
       T(262, 58, 'oral', 'drgO', 'fa-ts') + fa.chip(258, 63, 96, ['acetazolamide'], 'az', 22, true) + fa.chip(258, 89, 96, ['methazolamide'], 'mz', 22, true);
     const e2 = mini + cbL + zoomL + cell + cham + chem(0.35) + flows(true) + pcT(0.35) + fa.blk(64, 253, 80, 253, 'eblk') +
       T(10, 259, 'blocked', 'eBl', 'fa-w') + T(300, 296, '↓ INFLOW', 'eDown', 'fa-w', 'middle') + drugs;
 
-    const KH = 210;
-    const kBase = fa.R(6, 26, 78, KH, 'lum', 'fa-lumen', 8) + fa.R(92, 26, 172, KH, 'kcell', 'fa-cell', 8) + fa.R(272, 26, 82, KH, 'bld', 'fa-blood', 8) +
-      TL(45, 42, ['Lumen', '(urine)'], 'lumT', 'fa-tb', 'middle') + TL(178, 42, ['Proximal tubule', 'cell'], 'kcT', 'fa-tb', 'middle') + T(313, 42, 'Blood', 'bldT', 'fa-tb', 'middle') +
-      T(178, 254, 'apical side: lumen · basolateral side: blood', 'sides', 'fa-ts', 'middle');
+    /* the kidney steps: a heading on top, so the boxes sit D lower than before; "lumen side" and "blood side" are written inside the cell */
+    const KH = 210, D = 14;
+    const kBase = T(6, 34, 'Why oral CA inhibitors can cause acidosis: the kidney', 'kwhy', 'fa-tb') +
+      fa.R(6, 26 + D, 78, KH, 'lum', 'fa-lumen', 8) + fa.R(92, 26 + D, 172, KH, 'kcell', 'fa-cell', 8) + fa.R(272, 26 + D, 82, KH, 'bld', 'fa-blood', 8) +
+      TL(45, 42 + D, ['Lumen', '(urine)'], 'lumT', 'fa-tb', 'middle') + T(178, 42 + D, 'Proximal tubule cell', 'kcT', 'fa-tb', 'middle') + T(313, 42 + D, 'Blood', 'bldT', 'fa-tb', 'middle') +
+      T(96, 56 + D, '← lumen side', 'sideL', 'fa-ts') + T(260, 56 + D, 'blood side →', 'sideR', 'fa-ts', 'end');
     const kChem = op =>
-      T(45, 152, 'H⁺+HCO₃⁻', 'k1', 'fa-chem', 'middle') + fa.arrow('M45 158 L45 172', 'ka1') + T(45, 186, 'H₂CO₃', 'k2', 'fa-chem', 'middle') +
-      fa.arrow('M30 192 L30 210', 'ka2') + T(46, 206, 'CA IV', 'kIV', 'fa-k', 'start') + T(45, 228, 'CO₂+H₂O', 'k3', 'fa-chem', 'middle') +
-      fa.arrow('M80 224 L128 224', 'ka3') + T(104, 218, 'passive', 'kpas', 'fa-ts', 'middle') +
-      T(166, 226, 'CO₂ + H₂O', 'k4', 'fa-chem', 'middle') + fa.arrow('M166 214 L166 194', 'ka4') + T(182, 208, 'CA II', 'kII', 'fa-k', 'start') +
-      T(166, 186, 'H₂CO₃', 'k5', 'fa-chem', 'middle', op) + fa.arrow('M166 174 L166 158', 'ka5', {op}) +
-      T(166, 150, 'H⁺ + HCO₃⁻', 'k6', 'fa-chem', 'middle', op);
+      T(45, 152 + D, 'H⁺+HCO₃⁻', 'k1', 'fa-chem', 'middle') + fa.arrow(`M45 ${158 + D} L45 ${172 + D}`, 'ka1') + T(45, 186 + D, 'H₂CO₃', 'k2', 'fa-chem', 'middle') +
+      fa.arrow(`M30 ${192 + D} L30 ${210 + D}`, 'ka2') + T(46, 206 + D, 'CA IV', 'kIV', 'fa-k', 'start') + T(45, 228 + D, 'CO₂+H₂O', 'k3', 'fa-chem', 'middle') +
+      fa.arrow(`M80 ${224 + D} L128 ${224 + D}`, 'ka3') + TL(96, 200 + D, ['enter', 'the cell'], 'kpas', 'fa-ts', 'start', 12) +
+      T(166, 226 + D, 'CO₂ + H₂O', 'k4', 'fa-chem', 'middle') + fa.arrow(`M166 ${214 + D} L166 ${194 + D}`, 'ka4') + T(182, 208 + D, 'CA II', 'kII', 'fa-k', 'start') +
+      T(166, 186 + D, 'H₂CO₃', 'k5', 'fa-chem', 'middle', op) + fa.arrow(`M166 ${174 + D} L166 ${158 + D}`, 'ka5', {op}) +
+      T(166, 150 + D, 'H⁺ + HCO₃⁻', 'k6', 'fa-chem', 'middle', op);
     const kTrans = dim => {
       const op = dim ? 0.35 : null, oa = op != null ? ` opacity="${op}"` : '';
-      return `<path class="fa-tr" data-k="nhe" d="${Anat.ell(92, 104, 15, 21)}"${oa}/>` + T(92, 76, 'NHE3', 'nheT', 'fa-tb', 'middle', op) +
-        fa.flow('M20 94 L150 94', 'kna', {dim}) + T(36, 88, 'Na⁺', 'knaT', 'fa-chem', 'middle', op) +
-        fa.flow('M136 140 C112 128 80 118 28 114', 'kh', {dim}) + T(56, 132, 'H⁺', 'khT', 'fa-chem', 'middle', op) +
-        `<path class="fa-tr" data-k="nbc" d="${Anat.ell(264, 146, 15, 17)}"${oa}/>` + T(264, 124, 'NBC1', 'nbcT', 'fa-tb', 'middle', op) +
-        fa.flow('M210 146 L306 146', 'kb', {dim}) + T(234, 178, 'HCO₃⁻, Na⁺', 'kbT', 'fa-chem', 'middle', op);
+      return `<path class="fa-tr" data-k="nhe" d="${Anat.ell(92, 104 + D, 15, 21)}"${oa}/>` + T(92, 74 + D, 'NHE3', 'nheT', 'fa-tb', 'middle', op) +
+        fa.flow(`M20 ${94 + D} L150 ${94 + D}`, 'kna', {dim}) + T(36, 88 + D, 'Na⁺', 'knaT', 'fa-chem', 'middle', op) +
+        fa.flow(`M136 ${140 + D} C112 ${128 + D} 80 ${118 + D} 28 ${114 + D}`, 'kh', {dim}) + T(56, 132 + D, 'H⁺', 'khT', 'fa-chem', 'middle', op) +
+        `<path class="fa-tr" data-k="nbc" d="${Anat.ell(264, 146 + D, 15, 17)}"${oa}/>` + T(264, 124 + D, 'NBC1', 'nbcT', 'fa-tb', 'middle', op) +
+        fa.flow(`M210 ${146 + D} L306 ${146 + D}`, 'kb', {dim}) + T(234, 178 + D, 'HCO₃⁻, Na⁺', 'kbT', 'fa-chem', 'middle', op);
     };
-    const buf = op => TL(313, 176, ['HCO₃⁻', 'buffers', 'blood pH'], 'buf', 'fa-t', 'middle', 13).replace(/<text /g, op != null ? `<text opacity="${op}" ` : '<text ');
+    const buf = op => TL(313, 176 + D, ['HCO₃⁻', 'buffers', 'blood pH'], 'buf', 'fa-t', 'middle', 13).replace(/<text /g, op != null ? `<text opacity="${op}" ` : '<text ');
     const t3 = T(6, 276, 'Normal: HCO₃⁻ returns to the blood', 'nrm', 'fa-tb') +
-      TL(6, 290, ['Lumen: CA IV makes CO₂ + H₂O, which enters the cell', 'Cell: CA II makes H₂CO₃, then H⁺ + HCO₃⁻', 'NHE3: H⁺ out, Na⁺ in · NBC1: HCO₃⁻ and Na⁺ out'], 'nrl', 'fa-t');
+      TL(6, 290, ['Lumen: CA IV makes CO₂ + H₂O, which enters the cell', 'Cell: CA II makes H₂CO₃, then H⁺ + HCO₃⁻', 'NHE3: H⁺ leaves in exchange for Na⁺', 'NBC1: HCO₃⁻ goes to the blood (with Na⁺)'], 'nrl', 'fa-t');
     const k3 = kBase + kChem() + kTrans(false) + buf() + t3;
-    const blocks = fa.blk(18, 200, 42, 200, 'kb4') + fa.blk(154, 202, 178, 202, 'kb2');
+    const blocks = fa.blk(18, 200 + D, 42, 200 + D, 'kb4') + fa.blk(154, 202 + D, 178, 202 + D, 'kb2');
+    /* the consequence is written in the drawing in red: Na⁺ stays in the lumen (step 4), no HCO₃⁻ returns to the blood (step 5) */
+    const stay = T(49, 88 + D, 'stays', 'kstay', 'fa-w');
     const t4 = T(6, 276, 'Acetazolamide (oral) blocks CA IV and CA II (bars)', 'drg4', 'fa-w') +
-      TL(6, 290, ['Lumen: no H⁺ to trade, so Na⁺ stays in the lumen', 'and water stays with it: more urine'], 'diu', 'fa-t');
-    const k4 = kBase + kChem(0.35) + kTrans(true) + buf(0.35) + blocks + t4;
-    const k5 = kBase + kChem(0.35) + kTrans(true) + buf(0.35) + blocks +
+      T(6, 290, 'Cell: no H₂CO₃, so no H⁺ to exchange for Na⁺', 'diu0', 'fa-t') +
+      T(6, 304, 'Lumen: Na⁺ and water stay: more urine', 'diu1', 'fa-w') + T(6, 318, '(diuresis)', 'diu2', 'fa-w');
+    const k4 = kBase + kChem(0.35) + kTrans(true) + buf(0.35) + blocks + stay + t4;
+    const k5 = kBase + kChem(0.35) + kTrans(true) + buf(0.35) + blocks + stay +
+      TL(313, 92, ['no HCO₃⁻', 'returns'], 'bno', 'fa-w', 'middle') + T(313, 118, 'pH falls', 'bph', 'fa-w', 'middle') +
       T(6, 276, 'Blood: no HCO₃⁻ goes back, so the pH falls:', 'aci', 'fa-t') +
       T(6, 290, 'METABOLIC ACIDOSIS', 'acw', 'fa-w') +
-      T(6, 304, 'mainly with oral CAIs; much less with eye drops', 'acq', 'fa-t');
+      T(6, 304, 'mainly with oral CA inhibitors; much less with eye drops', 'acq', 'fa-t');
     return fa.stepper('ey-cai', 'Carbonic anhydrase inhibitors: eye and kidney', [
       ['In the ciliary epithelium, carbonic anhydrase makes H₂CO₃; its HCO₃⁻ leaves with Na⁺ and water follows: aqueous humor (slide 26; 11/17 T@5420).', e1],
       ['A CA inhibitor stops the enzyme: less HCO₃⁻ and Na⁺ leave, less water follows, so inflow falls (slides 26, 28; 11/13 T@54881).', e2],
       ['Kidney: CA IV splits H₂CO₃ in the lumen; CA II makes H⁺ and HCO₃⁻ in the cell; HCO₃⁻ returns to the blood and buffers its pH (slide 27; 11/17 T@8731).', k3],
       ['Oral acetazolamide blocks CA IV and CA II: no H⁺ for NHE3, so Na⁺ and water stay in the lumen (diuresis) (slides 27, 29; 11/17 T@14835).', k4],
-      ['No HCO₃⁻ returns to the blood, so the pH falls: metabolic acidosis, the side effect to watch with oral CAIs (slide 29; 11/17 T@17682).', k5],
+      ['No HCO₃⁻ returns to the blood, so the pH falls: metabolic acidosis, the side effect to watch with oral CA inhibitors (slide 29; 11/17 T@17682).', k5],
     ], 392, 'Drawn after Smith_Eye_Glaucoma_AllergicConj_DryEye.pdf slides 26–29 (slide 27: Golan, Principles of Pharmacology, Fig 20-6; Dr. Smith); ' +
       'the eye is slide 15’s and the ciliary epithelium with its carbonic anhydrase is slide 16’s zoom; ' +
       'lectures 11/13, T@53959–@60121, and 11/17, T@4800–@22700. The Na⁺/K⁺ ATPase and vH⁺ ATPase on slide 27 are left out; she said the transporter names ' +

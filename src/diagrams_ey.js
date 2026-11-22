@@ -263,7 +263,7 @@ const DIAGRAMS_EY = (() => {
     const tissue = R(248, 56, 106, 92, 'tis', 'ey-cell', 6) + TL(301, 96, ['eye tissue', '(conjunctiva)'], 'tisT', 'ey-tb') +
       [70, 92, 114, 136].map((y, i) => `<path class="ey-rec" data-k="h1r${i}" d="M248 ${y - 6} Q 238 ${y} 248 ${y + 6}"/>`).join('') +
       T(244, 50, 'H1 receptors', 'h1T', 'ey-tag', 'end');
-    const vessel = h => R(150, 190 - h / 2, 204, h, 'ves', 'ey-blood', h / 2) + T(252, 194, 'small blood vessel', 'vesT', 'ey-t');
+    const vessel = (h, ty = 194) => R(150, 190 - h / 2, 204, h, 'ves', 'ey-blood', h / 2) + T(252, ty, 'small blood vessel', 'vesT', 'ey-t');   // ty: the label above the tube when it is narrowed
     const cellPart = mast + ige + allergen + granT + tissue;
     const s1 = cellPart + gran(IN) + vessel(26);
     const released = P('M122 112 L200 100', 'rel', 'ey-flow') + T(156, 94, 'release', 'relT', 'ey-ts');
@@ -274,10 +274,10 @@ const DIAGRAMS_EY = (() => {
       T(204, 164, 'H1 inverse agonist', 'h1lab', 'ey-tag');
     const stab = `<circle class="ey-stab" data-k="stab" cx="70" cy="122" r="57"/>`;
     const s3 = cellPart + gran(PART) + vessel(26) + h1d + stab +
-      TL(6, 234, ['H1 inverse agonist (“antihistamine”): competes', 'with histamine, lowers constitutive activity'], 'h1a', 'ey-t', 'start') +
-      TL(6, 264, ['Mast cell stabilizer (dashed ring): less histamine', 'released; all but cetirizine; how it works is', 'unclear; used before the allergen arrives'], 'msa', 'ey-t', 'start') +
-      TL(6, 307, ['Extras: alcaftadine also H4 (eosinophils);', 'epinastine also H2 (eyelid edema)'], 'ext', 'ey-t', 'start');
-    const s4 = cellPart + gran(PART) + vessel(12) + h1d + stab +
+      TL(6, 224, ['H1 inverse agonist (“antihistamine”): competes', 'with histamine, lowers constitutive activity'], 'h1a', 'ey-t', 'start') +
+      TL(6, 253, ['Mast cell stabilizer (dashed ring): less histamine', 'released; all but cetirizine; how it works is', 'unclear; used before the allergen arrives'], 'msa', 'ey-t', 'start') +
+      TL(6, 295, ['Extras: alcaftadine also H4 (eosinophils);', 'epinastine also H2 (eyelid edema)'], 'ext', 'ey-t', 'start');
+    const s4 = cellPart + gran(PART) + vessel(12, 180) + h1d + stab +
       R(150, 204, 204, 18, 'a2d', 'ey-drug', 4) + T(252, 217, 'α2 agonist: vasoconstriction', 'a2T', 'ey-tb') +
       TL(6, 240, ['α2 agonists (naphazoline, oxymetazoline,', 'tetrahydrozoline, brimonidine) and phenylephrine', '(α1) constrict the vessels: less redness,',
         'less fluid leaks out (less edema)'], 'a2x', 'ey-t', 'start') +

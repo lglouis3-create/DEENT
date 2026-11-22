@@ -391,7 +391,7 @@ const COURSE = {
           // "Listen" on each drawn step-through with narration (uses walk_ui.js's player)
           'dianarr_ui.js',
           // A "Purpose" sentence at the top of each drawn figure (Louis 2026-11-13); after the files that add to DIA
-          'purpose_ui.js',
+          'purpose_ui.js', 'figsrc_ui.js',
           // one arrowhead definition per drawn figure, so an arrow keeps its head when another figure is in a closed folder
           'svgid_ui.js',
           // Topics: the exam facts card (course-level, Louis 2026-11-08; the deck folders are in

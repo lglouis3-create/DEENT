@@ -47,8 +47,12 @@ const DIAGRAMS_FB = (() => {
      --------------------------------------------------------------------- */
   const DRYEYE = (() => {
     const h = 376;
-    const glandLab = {gland: {lines: ['Lacrimal glands and ducts'], at: [6, 12], to: [38, 24], from: [30, 16]}};
-    const tf = (thin) => Anat.tearFilm({x: 6, y: 240, thin, label: ['lipid', thin ? 'wthin' : 'wthick', 'mucin', 'cornea']});
+    const glandLab = {gland: {lines: ['Lacrimal glands and ducts'], at: [6, 12], to: [38, 24], from: [30, 16]}, nose: {lines: ['Nasal cavity'], at: [244, 224], anchor: 'middle'}};
+    /* the tear film stack, raised off the caption, with its heading and a leader from the eye surface (slide 6) */
+    const tf = (thin) => Anat.tearFilm({x: 6, y: 228, thin, label: ['lipid', thin ? 'wthin' : 'wthick', 'mucin', 'cornea']}) +
+      T(6, thin ? 246 : 229, 'Tear film (enlarged)', 'tfH', 'fb-tb') + LD(20, thin ? 233 : 216, 60, 137, 'tfL');
+    /* steps 1-3: what the tubes at the inner corner are (slide 5: nasolacrimal duct; 11/13 T@11468, T@15237) */
+    const drainLab = Ls(206, 167, ['tears drain', 'to the nose'], 'drn', 'fb-t', 'end', 13) + LD(208, 171, 223, 171, 'drnL');
     const zoomBox = R(242, 52, 114, 148, 'zb', 'an-tissue', 8);
     const zlead = LD(92, 48, 242, 60, 'zlead');
     /* a drug tag in the band: the name (bold) and what it does, as short lines */
@@ -59,37 +63,40 @@ const DIAGRAMS_FB = (() => {
     };
 
     /* step 1: inflammation in the lacrimal system lowers tear production */
-    const s1 = L({hi: ['gland'], dim: ['nose', 'ducts', 'can1', 'can2', 'pup1', 'pup2', 'sac', 'nld'], label: ['gland'], lab: glandLab}) + lfl('tear', 'f-tear', {drift: true, lane: false, head: false}) +
+    const s1 = L({hi: ['gland'], dim: ['nose', 'ducts', 'can1', 'can2', 'pup1', 'pup2', 'sac', 'nld'], label: ['gland', 'nose'], lab: glandLab}) + drainLab + lfl('tear', 'f-tear', {drift: true, lane: false, head: false}) +
       T(104, 52, 'Inflammation', 'inf0', 'fb-tb') + T(104, 65, 'T cells, cytokines', 'inf1', 'fb-t') +
-      T(40, 198, 'Tears (basal tear film)', 'tearT', 'fb-t') + LD(112, 186, 112, 164, 'tearL') +
+      T(48, 198, 'Tears (basal tear film)', 'tearT', 'fb-t') + LD(112, 186, 112, 164, 'tearL') +
       Ls(246, 62, ['Risks:', 'older age, female', 'Medications may', 'cause it:', 'antihistamines,', 'decongestants,', 'antidepressants,', 'hormone', 'replacement', 'therapy'], 'rk', 'fb-t', 'start', 13) +
       tf(true) + Ls(196, 276, ['Tear production', 'falls: DRY EYE'], 'dry', 'fb-w', 'start', 13);
 
     /* step 2: lifitegrast blocks LFA-1 binding ICAM-1 on the T cell */
-    const base2 = L({dim: dimExcept(['gland']), hi: ['gland'], label: ['gland'], lab: glandLab});
+    const base2 = L({dim: dimExcept(['gland']), hi: ['gland'], label: ['gland', 'nose'], lab: glandLab}) + drainLab;
     const tc = E(299, 82, 44, 20, 'tc') + T(299, 80, 'T cell', 'tc0', 'fb-tb', 'middle') + T(299, 93, '(leukocyte)', 'tc1', 'fb-t', 'middle');
     const lfa = P('M299 102 L299 144', 'lfa', 'fb-rec') + T(286, 118, 'LFA-1', 'lfaT', 'fb-t', 'end');
     const icam = R(258, 146, 82, 18, 'icam', 'fb-cell', 4) + T(299, 159, 'ICAM-1', 'icamT', 'fb-tb', 'middle');
     const blk = P('M283 130 L305 130', 'blk', 'fb-blk') + T(309, 134, 'blocked', 'blkT', 'fb-w');
     const s2 = base2 + zlead + zoomBox + tc + lfa + icam + blk + lpl(294, 116, 13, 'pl2', 13) +
       T(299, 182, 'LFA-1 binds ICAM-1:', 'adh0', 'fb-t', 'middle') + T(299, 195, 'adhesion, cytokines', 'adh1', 'fb-t', 'middle') +
-      drugBox(6, 348, ['binds LFA-1, blocks its interaction', 'with ICAM-1: T cells adhere less and', 'secrete fewer inflammatory cytokines'], 'l', ['Lifitegrast', '(drops)'], true);
+      drugBox(6, 348, ['binds LFA-1, blocks its interaction', 'with ICAM-1: T cells adhere less and', 'secrete fewer inflammatory cytokines'], 'l', ['Lifitegrast', '(drops)'], true) +
+      R(6, 188, 186, 62, 'lu', 'fb-drug', 5) + T(14, 202, '1 drop in each eye twice daily', 'lu0', 'fb-t') +
+      Ls(14, 214.5, ['Contact lenses out before the', 'drop, back in 15 minutes after:', 'the drug can discolor them'], 'lv', 'fb-t', 'start', 12.5);
 
     /* step 3: cyclosporine binds cyclophilin, the complex inhibits calcineurin; loteprednol is a corticosteroid */
     const pill = (y, t, k, c, op) => R(256, y, 100, 16, 'p' + k, c, 5, op) + T(306, y + 12, t, 'pt' + k, 'fb-t', 'middle', op);
-    const chain = pill(58, 'cyclosporine', 'a', 'fb-drug') + AR('M306 75 L306 84', 'ca1') +
-      pill(86, 'cyclophilin', 'b', 'fb-enz') + AR('M306 103 L306 122', 'ca2') + P('M294 112 L318 112', 'blk3', 'fb-blk') + T(290, 116, 'inhibits', 'inh', 'fb-w', 'end') +
-      pill(124, 'calcineurin', 'c', 'fb-enz') + AR('M306 141 L306 150', 'ca3') +
-      pill(152, 'NFAT', 'd', 'fb-enz', 0.5) + AR('M306 169 L306 178', 'ca4') + R(256, 180, 100, 16, 'pe', 'fb-cell', 5, 0.5) + T(306, 192, 'IL-2: T cells', 'pte', 'fb-t', 'middle', 0.5);
-    const s3 = L({dim: dimExcept(['gland']), hi: ['gland'], label: ['gland'], lab: glandLab}) + zlead + zoomBox + chain + lpl(306, 112, 15, 'pl3', 12) +
-      drugBox(6, 204, ['binds cyclophilin; the complex', 'inhibits calcineurin: less IL-2,', 'less inflammation'], 'c', ['Cyclosporine (drops)'], false) +
-      drugBox(216, 138, ['(corticosteroid', 'drops):', 'anti-inflammatory'], 'p', ['Loteprednol'], false);
+    const chain = pill(56, 'cyclosporine', 'a', 'fb-drug') + AR('M306 73 L306 80', 'ca1') +
+      pill(82, 'cyclophilin', 'b', 'fb-enz') + AR('M306 99 L306 116', 'ca2') + P('M294 107 L318 107', 'blk3', 'fb-blk') + T(290, 111, 'inhibits', 'inh', 'fb-w', 'end') +
+      pill(118, 'calcineurin', 'c', 'fb-enz') + AR('M306 135 L306 142', 'ca3') +
+      pill(144, 'NFAT', 'd', 'fb-enz', 0.5) + AR('M306 161 L306 168', 'ca4') + R(256, 170, 100, 28, 'pe', 'fb-cell', 5, 0.5) +
+      T(306, 181.5, 'IL-2 → T cells', 'pte', 'fb-t', 'middle', 0.5) + T(306, 193.5, 'multiply', 'pte2', 'fb-t', 'middle', 0.5);
+    const s3 = L({dim: dimExcept(['gland']), hi: ['gland'], label: ['gland', 'nose'], lab: glandLab}) + drainLab + zlead + zoomBox + chain + lpl(306, 107, 15, 'pl3', 12) +
+      drugBox(6, 232, ['binds cyclophilin; the complex', 'inhibits calcineurin: less IL-2,', 'less inflammation, more tear production'], 'c', ['Cyclosporine (drops)'], false) +
+      drugBox(244, 110, ['(corticosteroid', 'drops):', 'anti-inflammatory'], 'p', ['Loteprednol'], false);
 
     /* step 4: varenicline in the nose, the trigeminal parasympathetic pathway, more basal tear film */
     const nerve = Anat.flow('M290 208 C330 196 348 150 348 100 L348 46 L100 46', 'f-nerve', {hs: 1});
     const s4 = L({label: ['nose', 'gland'], lab: glandLab, dim: dimExcept(['nose', 'gland'])}) + nerve + lfl('tear', 'f-tear', {lane: false}) +
       Anat.pulse(248, 224, 56, 'pl4', {ry: 26}) + T(190, 40, 'parasympathetic', 'para', 'fb-t', 'middle') +
-      Ls(230, 156, ['nicotinic ACh', 'receptor →', 'trigeminal nerve'], 'nic', 'fb-t', 'start', 13) +
+      Ls(214, 174, ['nicotinic acetylcholine', 'receptor → trigeminal nerve'], 'nic', 'fb-t', 'end', 13) + LD(190, 191, 203, 213, 'nicL') +
       tf(false) + drugBox(196, 158, ['(nasal spray)', 'nicotinic agonist', 'in the nose'], 'v', ['Varenicline'], false);
 
     return Anat.fbStepper('ey-dryeye', 'Dry eye: where each drug acts', [
@@ -112,28 +119,35 @@ const DIAGRAMS_FB = (() => {
     const h = 366;
     const bottle = (x, y) => R(x, y, 34, 28, 'bt', 'fb-bot', 5) + P(`M${x + 10} ${y + 28} L${x + 24} ${y + 28} L${x + 21} ${y + 42} L${x + 13} ${y + 42} Z`, 'bn', 'fb-bot') +
       P(`M${x + 14} ${y + 42} L${x + 20} ${y + 42} L${x + 17} ${y + 52} Z`, 'tip', 'fb-bot');
-    const band = (lines, k) => Ls(6, 270, lines, k, 'fb-t');
+    const band = (lines, k, y = 270) => Ls(6, y, lines, k, 'fb-t');
     const all = dimExcept([]);
+    /* steps 1-3 name only the eye, the lid and the dropper: the lacrimal gland, canaliculi, lacrimal sac, nasolacrimal duct and
+       nasal cavity are left out there (they come in, labelled, with the press on the inner corner in step 4); the eye is drawn at
+       full strength and sits 42 units lower (frame y 56) so the panel has no empty band. The open eye of steps 1-3 and the closed lid of steps 4-5
+       have different keys, so nothing glides between the two positions. */
+    const noLac = s => s.replace(/<path class="[^"]*" data-k="an-(?:nose|gland|ducts\d|can1|can2|pup1|pup2|sac|nld)"[^>]*\/>/g, '');
+    const EY = 56;
+    const LABS = ['gland', 'can1', 'sac', 'nld', 'nose'], NOSE_LAB = {nose: {at: [246, 220]}};   // "Nasal cavity" clear of the oval's edge
     /* 1: wash hands, the tip touches nothing */
-    const s1 = L({dim: all}) + bottle(262, 28) + T(246, 98, 'dropper', 'btl', 'fb-tb') + T(246, 111, 'tip touches nothing', 'btl2', 'fb-w') +
-      band(['Wash your hands; remove contacts, if applicable.', 'The bottle tip touches nothing: not the eye,', 'the hands or any surface.'], 'a');
+    const s1 = noLac(L({y: EY})) + bottle(262, 50) + T(246, 120, 'dropper', 'btl', 'fb-tb') + T(246, 133, 'tip touches nothing', 'btl2', 'fb-w') +
+      band(['Wash your hands; remove contacts, if applicable.', 'The bottle tip touches nothing: not the eye,', 'the hands or any surface.'], 'a', 246);
     /* 2: pull the lower lid out into a pocket */
-    const s2 = L({pocket: true, dim: all.filter(p => p !== 'pocket' && p !== 'lidLp'), label: ['pocket']}) + bottle(262, 28) + T(246, 98, 'dropper', 'btl', 'fb-tb') +
-      AR('M72 168 L72 196', 'pa') + T(62, 188, 'pull down', 'pd', 'fb-k', 'end') +
-      band(['Tilt the head back. Pull the lower lid out', 'and down to form a pocket.'], 'b');
+    const s2 = noLac(L({y: EY, pocket: true, label: ['pocket']})) + bottle(262, 50) + T(246, 120, 'dropper', 'btl', 'fb-tb') +
+      AR('M72 212 L72 240', 'pa') + T(8, 258, 'pull down and out', 'pd', 'fb-k') +
+      band(['Tilt the head back. Pull the lower lid out', 'and down to form a pocket.'], 'b', 284);
     /* 3: look at the dropper, one drop in the pocket */
-    const s3 = L({pocket: true, dim: all.filter(p => p !== 'pocket' && p !== 'lidLp'), label: ['pocket'], lab: {pocket: {lines: ['one drop in the pocket'], at: [116, 184], anchor: 'middle'}}}) +
-      bottle(100, 22) + T(142, 44, 'dropper', 'btl', 'fb-tb') + T(142, 57, 'look at the tip', 'lk', 'fb-t') +
-      P('M116 164 C111 171 111 178 116 178 C121 178 121 171 116 164 Z', 'drop', 'fb-drop') +
-      band(['Look at the dropper and place one drop in the', 'pocket. Release the lid slowly.'], 'c');
-    /* 4: close the eyes, press the inner corner, do not squeeze or rub */
+    const s3 = noLac(L({y: EY, pocket: true, label: ['pocket'], lab: {pocket: {lines: ['one drop in the pocket'], at: [116, 184], anchor: 'middle'}}})) +
+      bottle(100, 54) + T(142, 76, 'dropper', 'btl', 'fb-tb') + T(142, 89, 'look at the tip', 'lk', 'fb-t') +
+      P('M116 206 C111 213 111 220 116 220 C121 220 121 213 116 206 Z', 'drop', 'fb-drop') +
+      band(['Look at the dropper and place one drop in the', 'pocket. Release the lid slowly.'], 'c', 284);
+    /* 4: close the eyes, press the inner corner, do not squeeze or rub; the drainage path at the inner corner, labelled as in step 5 */
     const pr = `<path class="fb-press" data-k="prs" d="${Anat.frame({x: 186, y: 130}).d(Anat.ell(0, 0, 10, 10))}"/>`;
-    const s4 = L({closed: true, dim: all.filter(p => p !== 'lidC' && p !== 'lash')}) + pr + T(128, 176, 'press gently', 'pr1', 'fb-k') + T(128, 189, '1–2 minutes', 'pr2', 'fb-k') + LD(164, 166, 180, 142, 'prl') +
+    const s4 = L({closed: true, dim: all.filter(p => p !== 'lidC' && p !== 'lash'), label: LABS, lab: NOSE_LAB}) + pr + T(128, 176, 'press gently', 'pr1', 'fb-k') + T(128, 189, '1–2 minutes', 'pr2', 'fb-k') + LD(164, 166, 180, 142, 'prl') +
       T(24, 214, 'do not squeeze or rub', 'nq', 'fb-w') +
       band(['Close the eyes and lightly press the inner corner', 'for 1 to 2 minutes. Blot excess solution.'], 'd');
     /* 5: why: lower nasolacrimal drainage, systemic absorption, severity of systemic side effects */
     const blk = P('M203 103 L203 119', 'blk1', 'fb-blk') + P('M205 139 L205 155', 'blk2', 'fb-blk');
-    const s5 = L({closed: true, hi: ['sac', 'nld'], label: ['gland', 'can1', 'sac', 'nld', 'nose']}) + pr + lfl('stub', 'f-stub', {lane: false, head: false}) + blk +
+    const s5 = L({closed: true, hi: ['sac', 'nld'], label: LABS, lab: NOSE_LAB}) + pr + lfl('stub', 'f-stub', {lane: false, head: false}) + blk +
       T(20, 214, '↓ nasolacrimal drainage', 'drl', 'fb-w') + LD(140, 206, 200, 158, 'drL') +
       R(6, 258, 348, 46, 'chn', 'fb-bag') +
       Ls(14, 273, ['pressed corner → ↓ nasolacrimal drainage', '→ ↓ systemic absorption', '→ ↓ severity of systemic side effects'], 'e', 'fb-tb');
