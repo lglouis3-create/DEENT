@@ -14,6 +14,7 @@ Every update adds its bullets here in the same commit that makes the change.
 - Three new typed blanks: carbonic anhydrase, the H1 receptor, and the protein cyclosporine binds.
 - Figure narration: the words being read show under the drawing; the label being named is outlined, one at a time.
 - Narration now starts at 0.8× speed, with a Speed control and a longer pause between figure steps.
+- Atlas: boards sit in closed folders by exam; a search opens the folders that hold a match.
 - Exam 3 walkthroughs: 41 guide pages of all three professors have a Listen player (device voice for now).
 - Exam 3 guide pages for all three professors now give the reason beside 44 rules that had none.
 
