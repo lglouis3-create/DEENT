@@ -204,8 +204,11 @@ const onDisk = (deck, n, printed) => { const r = P.resolve(deck, n, printed); re
       for (const [label, v, sel] of tabs) {
         await page.evaluate(v => show(v), v); await settle(900);
         await page.evaluate(() => document.querySelectorAll('details').forEach(d => { if (d.querySelector('.slk')) d.open = true; }));
+        // a figure's source note is closed until its "Slides and sources" button is pressed (figsrc_ui.js, 2026-11-22)
+        await page.evaluate(() => document.querySelectorAll('figcaption:not(.fsrc-closed):not(.fsrc-open) .fsrc-t0').forEach(b => b.click())); await settle(200);
         const o = await opens(label, pickIn(sel), width === 390 ? 'click' : 'key');
         if (o) await escape(label);
+        await page.evaluate(() => document.querySelectorAll('figcaption.fsrc-closed .fsrc-t0').forEach(b => b.click()));   // closed again: its height does not depend on the links
         check((await sideways()) <= 1, `${label}: the tab does not scroll sideways`);
       }
       const bold = await page.evaluate(() => { show('ref'); const b = document.querySelector('#v-ref h3 .slk'); return b ? getComputedStyle(b).fontWeight === getComputedStyle(b.parentElement).fontWeight : null; });
@@ -320,7 +323,9 @@ const onDisk = (deck, n, printed) => { const r = P.resolve(deck, n, printed); re
 
       /* ---- quiet when nothing changes; nothing stored ---- */
       for (const v of ['guide', 'atlas', 'drugs', 'dz']) {
-        await page.evaluate(v => show(v), v); await settle(1200);
+        // Guides is re-linked after every show; on this page (5,172 buttons) the last pass ends 0.8 to 1.5 s after it
+        // (measured 2026-11-22 on this build and on release 3eea9cc), so the idle window starts after 3 s
+        await page.evaluate(v => show(v), v); await settle(v === 'guide' ? 3000 : 1200);
         const idle = await page.evaluate(() => new Promise(r => { const a = SLIDE_UI.stats.runs; setTimeout(() => r(SLIDE_UI.stats.runs - a), 1200); }));
         check(idle === 0, `with ${v} open and nothing changing, the linkifier does not run`, idle + ' runs in 1.2 s');
       }

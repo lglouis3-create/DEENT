@@ -66,7 +66,7 @@
     const h = 356;
     const E = {x: 22, y: 34, s: 0.9};
     const DIM = ['bone', 'pinna', 'concha', 'fold', 'mid', 'coch'];
-    const ear = (o = {}) => Anat.ear(Object.assign({}, E, {dim: DIM}, o));
+    const ear = (o = {}) => Anat.ear(Object.assign({}, E, {dim: DIM, lab: {eust: {from: [93, 174]}}}, o));   // the leader starts above the label's last letters, not across them
     const Y = 226;                                      // top of the chemistry strip
 
     /* step 1: the complex, and the wax it will meet */
@@ -83,7 +83,7 @@
       Anat.flow('M244 88 L222 88', 'f-in', Object.assign({}, E, {hs: 0.8})) +
       Anat.lead(226, -5, 230, 82, 'dbx-l', E) + Anat.text(226, -8, 'Debrox', 'dbx-t', Object.assign({}, E, {anchor: 'middle'})) +
       cpS + Anat.flow(`M146 ${Y + 15} L172 ${Y + 15}`, 'f-dis', {lane: false, hs: 0.8}) +
-      R(178, Y, 62, 30, 'ub') + T(209, Y + 19, 'Urea', 'ut', 'oo-t', 'middle') +
+      R(178, Y, 62, 30, 'ub') + T(209, Y + 19, 'Urea', 'ut', 'oo-t', 'middle') + T(245, Y + 19, '+', 'plus', 'oo-tb', 'middle') +
       R(250, Y, 76, 30, 'hb', 'oo-act') + T(288, Y + 19, 'H₂O₂', 'ht', 'oo-tb', 'middle') +
       T(159, Y + 52, 'slowly dissociates', 'dl', 'oo-k', 'middle') + T(288, Y + 52, 'the active ingredient', 'hact', 'oo-ts', 'middle');
 
@@ -126,6 +126,12 @@
     const Y = 214;
     const zc = Anat.tooth.anchor('zoom', E), zb = Anat.tooth.anchor('zoomBottom', E);
     const zlab = (txt, k) => T(zc[0], zb[1] + 15, txt, k, 'oo-tb', 'middle');
+    /* step 3 keeps the OH marks until the narration says they are replaced: the F marks (the marks Anat.tooth draws, same keys) lie on
+       top of them, each on a disc (.oo-keep) that hides the OH mark and is not faded once its sentence has passed. Places as Anat.tooth: ten crystals round (236, 88). */
+    const FR = Anat.frame(E), HEX = [[-34, -34], [0, -34], [34, -34], [-51, -4], [-17, -4], [17, -4], [51, -4], [-34, 26], [0, 26], [34, 26]];
+    const fMarks = HEX.map(([dx, dy], i) => `<path class="oo-keep" data-k="an-cv${i}" d="${FR.d(Anat.ell(236 + dx, 88 + dy, 11.2, 11.2))}"/>`).join('') +
+      HEX.map(([dx, dy], i) => `<path class="fc-mkf" data-k="an-mk${i}F" d="${FR.d(Anat.ell(236 + dx, 88 + dy, 10, 10))}"/>` +
+        `<text class="fc-mt" data-k="an-mt${i}F" x="${FR.X(236 + dx)}" y="${FR.Y(88 + dy + 4)}" text-anchor="middle">F</text>`).join('');
 
     /* step 1 */
     const s1 = tooth({label: ['enamel', 'gum'], hi: ['enamel']}) + zlab('Hydroxyapatite', 'zl') +
@@ -137,12 +143,13 @@
     const s2 = tooth({label: ['enamel', 'plaque'], plaque: true, hi: ['plaque']}) + zlab('Hydroxyapatite', 'zl') +
       Anat.flow('M-48 62 C-34 62 -14 64 8 72', 'f-ac', Object.assign({}, E, {hs: 0.85})) + Anat.text(-52, 50, 'Acids', 'ac-t', Object.assign({}, E, {cls: 'oo-k'})) +
       R(10, Y, 150, 64, 'ac') + Ls(18, Y + 16, ['Bacteria convert', 'sugars into acids', '(lactic, propionic);', 'acid drinks'], 'ac') +
-      T(172, Y + 16, 'saliva pH falls', 'lo', 'oo-w') +
-      T(172, Y + 36, 'enamel erodes → cavities', 'er', 'oo-w') +
-      T(172, Y + 56, 'enamel: hydroxyapatite', 'en1', 'oo-ts');
+      Ls(172, Y + 12, ['Smoking alters saliva pH and', 'promotes bacterial growth'], 'sm') +
+      T(172, Y + 40, 'saliva pH falls', 'lo', 'oo-w') +
+      T(172, Y + 54, 'enamel erodes → cavities', 'er', 'oo-w') +
+      T(172, Y + 68, 'enamel: hydroxyapatite', 'en1', 'oo-ts');
 
     /* step 3 */
-    const s3 = tooth({label: ['enamel'], fluoride: true, hi: ['zoom']}) + zlab('Fluorapatite', 'zl') +
+    const s3 = tooth({label: ['enamel'], hi: ['zoom']}) + fMarks + zlab('Hydroxyapatite', 'zl') + T(zc[0], zb[1] + 28, '→ Fluorapatite', 'zl2', 'oo-tb', 'middle') +
       Anat.flow('M-48 62 C-34 62 -14 64 8 72', 'f-fl', Object.assign({}, E, {hs: 0.85})) + Anat.text(-52, 50, 'F⁻', 'fl-t', Object.assign({}, E, {cls: 'oo-k'})) +
       R(10, Y, 150, 62, 'fs', 'oo-act') + Ls(18, Y + 16, ['F⁻ from NaF,', 'SnF₂, Na₂PO₃F'], 'fs') + T(18, Y + 48, 'toothpaste or gel', 'fsg', 'oo-ts') +
       T(172, Y + 14, 'F⁻ replaces the OH groups', 'rep', 'oo-k') +
@@ -153,8 +160,10 @@
     const s4 = tooth({label: ['enamel'], fluoride: true, hi: ['enamel']}) + zlab('Fluorapatite', 'zl') +
       Anat.flow('M-48 40 C-34 42 -14 52 8 64', 'f-ca', Object.assign({}, E, {hs: 0.85, drift: true})) +
       Anat.text(-54, 22, 'Ca²⁺ and', 'ca-t', Object.assign({}, E, {cls: 'oo-k'})) + Anat.text(-54, 34, 'phosphate', 'ca-t2', Object.assign({}, E, {cls: 'oo-k'})) +
-      Ls(10, Y + 14, ['F⁻ also recruits Ca²⁺ and phosphate from saliva', 'onto enamel (mineralization)'], 'mi') +
-      T(10, Y + 54, 'Fluoride above 2 mg/L: enamel fluorosis', 'fl', 'oo-w');
+      Ls(10, Y + 12, ['F⁻ also recruits Ca²⁺ and phosphate from saliva', 'onto enamel (mineralization)'], 'mi') +
+      T(10, Y + 40, 'Fluoride above 2 mg/L: enamel fluorosis', 'fl', 'oo-w') +
+      T(10, Y + 54, 'mainly in children, whose enamel is still developing', 'flc') +
+      T(10, Y + 68, 'It starts as white spots that can turn brown.', 'fls');
 
     return fcStepper('oo-fluoride', 'Fluoride and tooth enamel', [
       ['Enamel is hydroxyapatite, Ca₁₀(PO₄)₆(OH)₂, which acid can erode (slide 17; T@18815).', s1],

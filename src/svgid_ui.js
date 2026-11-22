@@ -17,7 +17,9 @@ const SVGID_UI = (() => {
     svg.dataset.svgid = '1';
     svg.querySelectorAll('*').forEach(el => {
       ATTRS.forEach(a => { const v = el.getAttribute(a); const m = v && v.match(/url\(#([^)]+)\)/); if (m && map[m[1]]) el.setAttribute(a, `url(#${map[m[1]]})`); });
-      if (el.classList && el.classList.contains('f2-uv') && map.arw) el.style.markerEnd = `url(#${map.arw})`;
+      // .arrow gets its marker from the stylesheet rule `.fig .arrow{marker-end:url(#arw)}`, which no longer names an id once the
+      // markers are renamed: every reaction arrow lost its head (found 2026-11-22). Point those at the figure's own marker too.
+      if (el.classList && (el.classList.contains('f2-uv') || el.classList.contains('arrow')) && map.arw) el.style.markerEnd = `url(#${map.arw})`;
     });
   }
   const scan = root => { if (!root || !root.querySelectorAll) return; if (root.tagName === 'svg') fix(root); root.querySelectorAll('svg').forEach(fix); };

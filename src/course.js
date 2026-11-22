@@ -252,7 +252,7 @@ const COURSE = {
      ]},
     {id:'exam3', name:'Exam 3', date:'Mon 11/23, 9:00–10:30 AM', when:'2026-11-23T09:00',
      questions:50, minutes:90, sata:null, typed:true, blanks:3,
-     blurb:'Covers Lectures 9–13 (syllabus). Dr. Sikazwe 14 questions (28%), Dr. Smith 18 (36%, three of them fill-in-the-blank on mechanism of action) and Dr. Lam 18 (36%), as Dr. Sikazwe announced on 11/19. Practice coverage so far: Dr. Smith\'s eye lectures, Dr. Sikazwe\'s otic, oral and ophthalmic chemistry and Dr. Lam\'s glaucoma therapeutics; her ophthalmic disorders lecture (11/20) joins when taught.',
+     blurb:'Covers Lectures 9–13 (syllabus). Dr. Sikazwe 14 questions (28%), Dr. Smith 18 (36%, three of them fill-in-the-blank on mechanism of action) and Dr. Lam 18 (36%), as Dr. Sikazwe announced on 11/19. Practice coverage: Dr. Smith\'s eye lectures, Dr. Sikazwe\'s otic, oral and ophthalmic chemistry, and Dr. Lam\'s glaucoma, other eye disorders, mouth and ear lectures (11/19 and 11/20).',
      facts:[['Covers', 'Covers Lectures 9–13 (syllabus).'],
             ['The split (11/19)', 'Dr. Sikazwe, 11/19: "Exam 3 questions. 50 total. 28% from me ... 36 from Doctor Smith. And 36 from Doctor Lam." That is 14, 18 and 18 questions.'],
             ['Dr. Lam (11/19)', 'She writes each question from a learning objective of her handout (the Word file); "cover the information up that is listed under each learning objective and try to write down as much as you remember", then practice the patient cases. One open-ended question, at least one on the sequence of drug classes, and application cases like Ms. Lopez. Not tested: risk factors to collect, the day supply calculation, prostaglandin contraindications, closed-angle glaucoma (except the drugs that raise its risk).'],
@@ -391,7 +391,7 @@ const COURSE = {
           // "Listen" on each drawn step-through with narration (uses walk_ui.js's player)
           'dianarr_ui.js',
           // A "Purpose" sentence at the top of each drawn figure (Louis 2026-11-13); after the files that add to DIA
-          'purpose_ui.js',
+          'purpose_ui.js', 'figsrc_ui.js',
           // one arrowhead definition per drawn figure, so an arrow keeps its head when another figure is in a closed folder
           'svgid_ui.js',
           // Topics: the exam facts card (course-level, Louis 2026-11-08; the deck folders are in
@@ -407,7 +407,7 @@ const COURSE = {
           'tables_ui.js',
           // Quiz: "One at a time | All on one page" (course-level, Louis 2026-11-08, after his
           // Intro to Pharmacology drill's layout toggle; temporary until the kit has it)
-          'topic_list_ui.js',
+          'topic_list_ui.js', 'topicbar_ui.js',
           'gloss_ui.js',   // glossary.js entries marked cs:true (RARE) are glossed in their own case only (wraps the core's glossify)
           // "See it on the structure": annotated structure figures in the explanations of
           // Dr. Sikazwe's structure/SAR questions, shown after an answer (course-level, Louis

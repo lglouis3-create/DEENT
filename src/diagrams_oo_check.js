@@ -174,11 +174,15 @@ const drawn = k => (DIA[k] || '').replace(/<figcaption>[\s\S]*?<\/figcaption>/, 
   const ce = drawn('oo-cerumen');
   check(/1:1 urea · H₂O₂ complex/.test(ce) && /catalase/.test(ce) && /\(in cerumen\)/.test(ce) && /O₂ \+ water/.test(ce), 'oo-cerumen: complex, catalase in cerumen, O₂ and water');
   const ac = drawn('oo-ache');
-  const iP = ac.indexOf('1  Phosphoryl'), iC = ac.indexOf('2  Carbamate'), iE = ac.indexOf('3  Ester');
-  check(iP > 0 && iC > iP && iE > iC, 'oo-ache: ranked phosphoryl > carbamate > ester (slide 42)');
+  /* the rows carry no numerals (they clashed with the narration's sentence badges): the order is the rows' order with a ">" between each pair */
+  const iP = ac.indexOf('Phosphoryl'), iC = ac.indexOf('Carbamate'), iE = ac.indexOf('Ester');
+  check(iP > 0 && iC > iP && iE > iC && ac.slice(iP, iC).includes('>&gt;</text>') && ac.slice(iC, iE).includes('>&gt;</text>') && !/\b[123]  (Phosphoryl|Carbamate|Ester)/.test(ac),
+    'oo-ache: ranked phosphoryl > carbamate > ester (slide 42)');
+  check(ac.includes('R₁O–P(=O)(R₂)–OR₃') && ac.includes('R₁–NH–C(=O)–O–R₂') && ac.includes('R₁–C(=O)–O–R₂') && !/class="oo-f2"/.test(ac),
+    'oo-ache: group formulas with subscript R numbers, in the text face (not monospace)');
   check(/intermediate/.test(ac) && /irreversibly inactive/.test(ac) && /C₂H₅–OH/.test(ac), 'oo-ache: intermediate carbamate, aging to irreversibly inactive');
   const pg = drawn('oo-pg-prodrug');
-  check(/isopropyl ester/.test(pg) && /Latanoprost acid \(active\)/.test(pg) && /amides/.test(pg) && /prevent 15-OH oxidation/.test(pg), 'oo-pg-prodrug: ester prodrug, active acid, slide 46 SAR');
+  check(/isopropyl ester/.test(pg) && /Latanoprost acid \(active\)/.test(pg) && /amides/.test(pg) && /a halogen in place of the OH prevents oxidation/.test(pg) && /of the 15-OH to a ketone/.test(pg), 'oo-pg-prodrug: ester prodrug, active acid, slide 46 SAR');
   const all = Object.keys(PLAN).map(k => DIA[k]).join('');
   check(!/corneal esterase/i.test(all), 'no "corneal esterase": slide 29 lists esterase among the conjunctiva’s enzymes');
 }

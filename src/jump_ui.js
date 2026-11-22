@@ -53,7 +53,7 @@ tr.jline{outline:none}
 tr.jline>td{background-color:var(--jmp-strong)!important;box-shadow:inset 0 2px 0 var(--jmp-line),inset 0 -2px 0 var(--jmp-line)}
 tr.jline>td:first-child{box-shadow:inset 0 2px 0 var(--jmp-line),inset 0 -2px 0 var(--jmp-line),inset 3px 0 0 var(--jmp-line)}
 @media (max-width:700px){
-  table.reftab.cards tr.jline{outline:3px solid var(--jmp-line);outline-offset:0;background-color:var(--jmp-strong)!important}
+  table.reftab.cards tr.jline,table.reftab.cardsx tr.jline{outline:3px solid var(--jmp-line);outline-offset:0;background-color:var(--jmp-strong)!important}
   table.reftab.cards tr.jline>td{box-shadow:none;background-color:transparent!important}
   table.reftab.cards tr.jline>td.jcell{background-color:var(--jmp-strong)!important;box-shadow:inset 3px 0 0 var(--jmp-line);padding-left:8px}
 }

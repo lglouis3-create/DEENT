@@ -55,8 +55,9 @@ const DIAGRAMS_LG = (() => {
     out.push(cur.trim());
     return out.filter(Boolean);
   };
-  function lgStepper(key, title, steps, h, cap) {
-    let g = `<text class="title lg-title" x="${W / 2}" y="13" text-anchor="middle">${esc(title)}</text>`;
+  function lgStepper(key, title, steps, h, cap, sub) {
+    let g = `<text class="title lg-title" x="${W / 2}" y="13" text-anchor="middle">${esc(title)}</text>` +
+      (sub ? `<text class="lg-ts" x="${W / 2}" y="27" text-anchor="middle">${esc(sub)}</text>` : '');   // a key to the abbreviations, shown in every step
     steps.forEach((st, i) => {
       const lines = wrap(st[0]);
       if (lines.length > 3) lines.length = 3;          // diagrams_lg_check.js fails a caption over three lines
@@ -97,7 +98,7 @@ const DIAGRAMS_LG = (() => {
       ['Rho-kinase inhibitor', 'once daily, evening', 'IOP ↓ 20–30% · conjunctival hemorrhage'],
     ];
     const row = (i, isNew) => {
-      const y = 24 + i * 38;
+      const y = 34 + i * 37;                           // rows start under the key line (y 27)
       return R(6, y, 348, 34, 'r' + i, isNew ? 'lg-act' : 'box') +
         T(14, y + 15, String(i + 1), 'n' + i, 'lg-num') +
         T(30, y + 15, rows[i][0], 'nm' + i, 'lg-tb') +
@@ -106,12 +107,15 @@ const DIAGRAMS_LG = (() => {
         (isNew ? T(346, y + 29, 'just added', 'new', 'lg-k', 'end') : '');
     };
     const build = n => { let s = ''; for (let i = 0; i <= n; i++) s += row(i, i === n); return s; };
-    const look = R(6, 256, 348, 54, 'lookb', 'lg-act') +
-      Ls(14, 272, ['Lookup: she is on a prostaglandin analog, a beta blocker', 'and an alpha-2 agonist (rows 1–3), so the next agent', 'is row 4, a topical CAI such as brinzolamide.'], 'lk', 'lg-t');
+    const look = R(6, 258, 348, 52, 'lookb', 'lg-act') +
+      Ls(14, 273, ['Lookup: a patient on a prostaglandin analog, a beta', 'blocker and an alpha-2 agonist is on rows 1–3, so the', 'next agent is row 4, a topical CAI such as brinzolamide.'], 'lk', 'lg-t');
+    /* step 3, sentences 4-6: Lumify (slide 42: brimonidine 0.025% (Lumify) OTC, ocular redness), in the narration's words */
+    const lumify = R(6, 156, 348, 52, 'lumb', 'box') +
+      Ls(14, 171, ['Over-the-counter Lumify, brimonidine 0.025%: eye redness.', 'Not a substitute for prescription brimonidine.', 'Not effective enough to lower IOP.'], 'lum', 'lg-t');
     const steps = [
       ['Start with the prostaglandin analog: once daily, since more doses lower efficacy; IOP down up to 33% (slides 19–20; T@50184).', build(0)],
       ['Add a beta blocker: 20–30%, twice daily; timolol gel is once daily, so it saves a dose (slides 31–32; T@58386).', build(1)],
-      ['Add an alpha-2 agonist: 18–27%, twice daily; the third drop, so adherence falls and combinations follow (slides 41–42; T@68644).', build(2)],
+      ['Add an alpha-2 agonist: 18–27%, twice daily; the third drop, so adherence falls and combinations follow (slides 41–42; T@68644).', build(2) + lumify],
       ['Add a topical CAI: 15–26%, three times daily; each step adds doses, so compliance falls (slide 51; T@75315).', build(3)],
       ['Pilocarpine, four times daily, is the fifth class and is rarely used because of IOP efficacy and dosing (slide 57; T@80688).', build(4)],
       ['Rho-kinase inhibitor is last: hemorrhage (up to 51%) and cost. In order, “next agent” is a lookup (slides 62–64; T@82873).', build(5) + look],
@@ -122,7 +126,8 @@ const DIAGRAMS_LG = (() => {
       'inhibitor 20–30%, QHS) and 63–64 (the order; the “next agent” case, answer brinzolamide); Dr. Lam, lecture 11/19, T@47812 (her order is most ' +
       'to least commonly prescribed), T@50184–@52000 (once daily; more doses lower efficacy), T@58386–@59300, T@68644–@68900, T@75315–@75700 ' +
       '(frequency rises, compliance falls), T@80688, T@82873–@84138 (51% conjunctival hemorrhage; cost; salvage), T@84138–@85200 (one exam question: ' +
-      'recognize the sequence). The Rho-kinase inhibitor is once daily: it is last for its side effect and cost, not its frequency.');
+      'recognize the sequence). The Rho-kinase inhibitor is once daily: it is last for its side effect and cost, not its frequency.',
+      'IOP = intraocular pressure (eye pressure); ↓ = lowers');
   })();
 
   /* ---------------------------------------------------------------------
@@ -235,7 +240,9 @@ const DIAGRAMS_LG = (() => {
     const g = (hl) => {
       const b = (i, title, sub) => {
         const x = i % 2 ? 184 : 8, y = i > 1 ? 72 : 24;
-        return R(x, y, i % 2 ? 168 : 172, 44, 'g' + i, hl === i ? 'lg-act' : 'box') + T(x + 8, y + 17, title, 'gt' + i, 'lg-tb') + T(x + 8, y + 34, sub, 'gs' + i, 'lg-ts');
+        return R(x, y, i % 2 ? 168 : 172, 44, 'g' + i, 'box') +
+          (hl === i ? R(x, y, i % 2 ? 168 : 172, 44, 'ghl', 'lg-act') : '') +   // the highlight is its own element, so it can come in with the sentence that names the problem
+          T(x + 8, y + 17, title, 'gt' + i, 'lg-tb') + T(x + 8, y + 34, sub, 'gs' + i, 'lg-ts');
       };
       return b(0, 'Indication', 'needed or unnecessary?') + b(1, 'Effectiveness', 'dose, frequency') + b(2, 'Safety', 'side effect, dose too high') + b(3, 'Adherence', 'forgets, cost, understanding');
     };
@@ -244,14 +251,14 @@ const DIAGRAMS_LG = (() => {
       T(16, 166, '1  Change the formulation (solution to gel)', 'b1', 'lg-t') +
       T(16, 183, '2  Switch to another drug class', 'b2', 'lg-t') +
       T(16, 200, '3  Reaction to the preservative (BAK): preservative-free', 'b3', 'lg-t');
-    const s3 = g(-1) + R(8, 126, 344, 108, 'bx2', 'lg-act') + T(16, 143, 'Inadequate response (IOP not at goal)', 'ch', 'lg-tb') +
+    const s3 = g(-1) + R(8, 126, 344, 108, 'bx2', 'lg-act') + T(16, 143, 'Inadequate response (intraocular pressure not at goal)', 'ch', 'lg-tb') +
       T(16, 162, '1  Check compliance', 'c1', 'lg-t') + T(16, 179, '2  Check administration technique', 'c2', 'lg-t') +
       T(16, 196, '3  Increase the concentration, if possible', 'c3', 'lg-t') +
-      T(16, 213, '4  Same class: latanoprost to bimatoprost', 'c4', 'lg-t') + T(16, 230, '5  Or add the next class in the order', 'c5', 'lg-t');
+      T(16, 213, '4  Same class: latanoprost to bimatoprost', 'c4', 'lg-t') + T(16, 230, '5  Or move to the next class in the order', 'c5', 'lg-t');
     const stack = (a, b, c, k) => R(8, 124, 344, 28, 'sa' + k, 'box') + T(18, 142, a, 'ta' + k, 'lg-t') + A('M180 154 L180 166', 'ua' + k) +
       R(8, 168, 344, 28, 'sb' + k, 'lg-act') + T(18, 186, b, 'tb' + k, 'lg-tb') + A('M180 198 L180 210', 'ub' + k) +
       R(8, 212, 344, 28, 'sc' + k, 'box') + T(18, 230, c, 'tc' + k, 'lg-t');
-    const s4 = g(1) + stack('Bimatoprost 0.01%: 1 drop OU twice daily', 'Effectiveness: frequency too high', 'Contact the provider: once daily', 'p');
+    const s4 = g(1) + stack('Bimatoprost 0.01%: 1 drop in both eyes twice daily', 'Effectiveness: frequency too high', 'Contact the provider: once daily', 'p');
     const s5 = g(3) + stack('Timoptic solution twice daily: forgets evening', 'Adherence: twice-daily dosing', 'Change to Timoptic XE gel: once daily', 'q');
     const steps = [
       ['Each medication is checked for indication, effectiveness, safety and adherence (slides 15–16, 78–79; T@47933).', g(-1)],
@@ -290,9 +297,9 @@ const DIAGRAMS_LG = (() => {
     const eCosopt = L([220, 70], [290, 184], 'e2', 'lg-edge') + T(268, 106, 'Cosopt,', 'e2a', 'lg-k') + T(268, 120, 'Cosopt PF', 'e2b', 'lg-k') + T(268, 134, 'twice daily', 'e2c', 'lg-tb');
     const eSimb = L([124, 206], [226, 206], 'e3', 'lg-edge') + T(175, 197, 'Simbrinza', 'e3a', 'lg-k', 'middle') + T(175, 224, 'three times daily', 'e3b', 'lg-tb', 'middle');
     const s1 = nodes + Ls(8, 256, ['Each product pairs two of these three classes in', 'one bottle (slide 69).'], 'n1', 'lg-t');
-    const s2 = nodes + eCombi + Ls(8, 256, ['Combigan: alpha-2 agonist + beta blocker.', '1 drop in the affected eye(s) BID.'], 'n2', 'lg-t');
+    const s2 = nodes + eCombi + Ls(8, 256, ['Combigan: alpha-2 agonist + beta blocker.', '1 drop in the affected eye(s) twice daily.'], 'n2', 'lg-t');
     const s3 = nodes + eCombi + eCosopt + Ls(8, 256, ['Cosopt, Cosopt PF: CAI + beta blocker.', 'PF means preservative-free.'], 'n3', 'lg-t');
-    const s4 = nodes + eCombi + eCosopt + eSimb + Ls(8, 256, ['Simbrinza: CAI + alpha-2 agonist, TID.', 'Never once daily: twice or three times daily.'], 'n4', 'lg-t');
+    const s4 = nodes + eCombi + eCosopt + eSimb + Ls(8, 256, ['Simbrinza: CAI + alpha-2 agonist, three times daily.', 'Never once daily: twice or three times daily.'], 'n4', 'lg-t');
     const steps = [
       ['Combination products join two of three classes: beta blocker, alpha-2 agonist, CAI; fewer bottles help adherence (slide 69; T@89624).', s1],
       ['Combigan: brimonidine (alpha-2 agonist) + timolol (beta blocker), 1 drop twice daily (slide 69; T@85943).', s2],
