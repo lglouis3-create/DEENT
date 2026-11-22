@@ -51,7 +51,15 @@ const DIA_NARR_UI = (() => {
 .dnbtn[aria-pressed="true"]{border-color:var(--accent,#2b6cb0);font-weight:600}
 .dnbar{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:6px 0 2px}
 .dnbar .btn{padding:5px 12px;font-size:13px;min-height:44px;min-width:44px}
-.dnstop[hidden]{display:none}`;
+.dnstop[hidden]{display:none}
+.dnsay{margin:8px 0 4px;padding:10px 12px;border:1px solid var(--line,#D3DAE3);border-left:4px solid var(--accent,#2b6cb0);border-radius:8px;background:var(--paper,#fff);text-align:left}
+.dnsay[hidden]{display:none}
+.dnsay-h{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between;margin:0 0 6px;font-size:12.5px;font-weight:600;color:var(--text-dim,#5A6878)}
+.dnsay-t{margin:0;font-size:16px;line-height:1.6;max-width:none}
+.dnsay-t .dns{color:var(--text-dim,#5A6878)}
+.dnsay-t .dns.dnon{color:var(--text,#16202C);background:#ffe9a8;border-radius:4px;box-shadow:0 0 0 2px #ffe9a8;font-weight:600}
+figure.fig svg text.dnhl{paint-order:stroke;stroke:#ffd84d;stroke-width:6px;stroke-linejoin:round;font-weight:700}
+@media (prefers-color-scheme:dark){.dnsay-t .dns.dnon{background:#6b5200;box-shadow:0 0 0 2px #6b5200;color:#fff}figure.fig svg text.dnhl{stroke:#8a6a00}}`;
   const addCss = () => {
     if (document.getElementById('dncss')) return;
     const s = document.createElement('style'); s.id = 'dncss'; s.textContent = css; document.head.appendChild(s);
@@ -88,6 +96,68 @@ const DIA_NARR_UI = (() => {
     });
   }
 
+  /* ---------- following along (Louis, 2026-11-22: "what's being said gets emphasized and highlighted in the
+     diagram to follow along better ... felt it went really fast") ----------
+     While a figure is narrated a panel under its controls shows the words of the current step; the sentence
+     being spoken is marked, and the labels of the drawing that the sentence names get a yellow outline. A
+     recorded clip has no word timings, so the sentence is placed by how far the clip has played against the
+     sentences' share of the text; the device voice reports each sentence as it starts. The panel carries the
+     speed control (walk_ui.js's stored speed). */
+  const STOPW = new Set('the and for with from that this into onto than then are was were has have its their there which when what where while also each more less most both does not but only over under after before between through they them these those can may will per via out off about more'.split(' '));
+  const NUMW = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine'];
+  const ALIAS = [[/α/g, ' alpha '], [/β/g, ' beta '], [/γ/g, ' gamma '], [/\bIOP\b/g, ' intraocular pressure '], [/\bCAIs?\b/g, ' carbonic anhydrase inhibitor '],
+    [/\bAChE\b/g, ' acetylcholinesterase '], [/\bACh\b/g, ' acetylcholine '], [/\bCO2\b/gi, ' carbon dioxide '], [/\bHCO3\b/gi, ' bicarbonate '],
+    [/\bH2CO3\b/gi, ' carbonic acid '], [/\bH2O\b/gi, ' water '], [/\bNa\+?(?=\s|$)/g, ' sodium '], [/\bBAK\b/g, ' benzalkonium chloride '], [/\bPGs?\b/g, ' prostaglandin ']];
+  const toks = t => {
+    let x = String(t); ALIAS.forEach(([re, r]) => { x = x.replace(re, r); });
+    x = x.replace(/\d/g, d => ' ' + NUMW[+d] + ' ').toLowerCase();
+    return (x.match(/[a-z]+/g) || []).filter(w => (w.length >= 3 && !STOPW.has(w))).map(w => w.length >= 7 ? w.slice(0, 6) : w.replace(/s$/, ''));
+  };
+  const shownText = (fig, el) => { const st = el.closest('.st'); return !st || st.closest('figure') !== fig || st.classList.contains('on'); };
+  function markLabels(fig, sentence) {
+    fig.querySelectorAll('svg text.dnhl').forEach(t => t.classList.remove('dnhl'));
+    if (!sentence) return;
+    const S = new Set(toks(sentence)); if (!S.size) return;
+    fig.querySelectorAll('svg text').forEach(t => {
+      if (!shownText(fig, t)) return;
+      const L = [...new Set(toks(t.textContent))]; if (!L.length) return;
+      const hit = L.filter(w => S.has(w)).length;
+      if (hit >= (L.length <= 2 ? L.length : Math.ceil(L.length * 0.6))) t.classList.add('dnhl');
+    });
+  }
+  function panel(fig) {
+    let d = fig.querySelector(':scope > .dnsay');
+    if (!d) {
+      d = document.createElement('div'); d.className = 'dnsay'; d.hidden = true;
+      d.innerHTML = `<div class="dnsay-h"><span class="dnsay-n" aria-live="polite"></span>${NARR.rateSelect ? NARR.rateSelect() : ''}</div><p class="dnsay-t"></p>`;
+      // under the drawing: above the step controls of a step-through, below the Listen bar of a static figure
+      const ctl = fig.querySelector(':scope > [data-anim]'), bar = fig.querySelector(':scope > .dnbar');
+      if (ctl) ctl.before(d); else if (bar) bar.after(d); else fig.append(d);
+    }
+    return d;
+  }
+  function sayStep(fig, key, i, text) {
+    const d = panel(fig), n = Math.min(steps(key).length, figSteps(fig).length || 1);
+    d.querySelector('.dnsay-n').textContent = n > 1 ? `Being read: step ${i + 1} of ${n}` : 'Being read';
+    d.querySelector('.dnsay-t').innerHTML = NARR.sentHTML(text, 'dns');
+    d.hidden = false;
+  }
+  function saySent(fig, si) {
+    const d = fig.querySelector(':scope > .dnsay'); if (!d) return;
+    const all = [...d.querySelectorAll('.dns')]; if (!all.length) return;
+    const k = Math.max(0, Math.min(all.length - 1, si));
+    if (all[k].classList.contains('dnon')) return;
+    all.forEach((x, j) => x.classList.toggle('dnon', j === k));
+    markLabels(fig, all[k].textContent);
+  }
+  function sayOff(fig) {
+    if (!fig) return;
+    const d = fig.querySelector(':scope > .dnsay'); if (d) d.hidden = true;
+    fig.querySelectorAll('svg text.dnhl').forEach(t => t.classList.remove('dnhl'));
+  }
+  // where each sentence starts, as a share of the step's text (a recorded clip is placed by this)
+  const cuts = text => { const ss = NARR.sentences(text), tot = ss.reduce((a, x) => a + x.length, 0) || 1; let a = 0; return ss.map(x => { const c = a / tot; a += x.length; return c; }); };
+
   /* ---------- playing ---------- */
   let P = null;          // {fig, key, i, h, gap}
   const figSteps = fig => [...fig.querySelectorAll('svg .st')].filter(s => s.closest('figure') === fig);
@@ -119,6 +189,7 @@ const DIA_NARR_UI = (() => {
     const p = P; if (!p) return; P = null;
     clearTimeout(p.gap);
     if (p.h && !p.h.done) p.h.stop(true);
+    sayOff(p.fig);
     ui();
   }
   function play(fig, key, i) {
@@ -129,14 +200,17 @@ const DIA_NARR_UI = (() => {
     if (n > 1) show(fig, i);
     const me = P = P && P.fig === fig ? P : {fig, key};
     me.i = i; clearTimeout(me.gap);
-    const text = list[i].text;
+    const text = list[i].text, cut = cuts(text);
+    sayStep(fig, key, i, text); saySent(fig, 0);
     me.h = NARR.say({clip: NARR.clipFor(clipKey(key, i), text), text, owner: 'dianarr',
+      onSent: si => { if (P === me) saySent(fig, si); },
+      onFrac: f => { if (P !== me) return; let k = 0; while (k + 1 < cut.length && f >= cut[k + 1]) k++; saySent(fig, k); },
       onEnd: () => {
         if (P !== me) return;
         if (!fig.isConnected || i + 1 >= Math.min(list.length, n)) { stop(); return; }
-        me.gap = setTimeout(() => { if (P === me) play(fig, key, i + 1); }, 450);
+        me.gap = setTimeout(() => { if (P === me) play(fig, key, i + 1); }, 1200);   // a pause between steps (was 450 ms)
       },
-      onStop: () => { if (P === me) { P = null; clearTimeout(me.gap); ui(); } },
+      onStop: () => { if (P === me) { P = null; clearTimeout(me.gap); sayOff(fig); ui(); } },
       onState: ui});
     ui();
   }
