@@ -391,7 +391,10 @@ const SLIDE_UI = (() => {
     else {
       // after an answer: the explanation block and its source line; the exam review; the missed list
       view.querySelectorAll('.why').forEach(w => {
-        const c = w.querySelector('.cite'); const x = P.questionCtx(c ? txt(c) : ''); out.push([w, () => x]);
+        // the source line is inside the block, or (fill-in-the-blank items) the block's next sibling in the card
+        const own = w.querySelector('.cite'), sib = !own && w.parentElement ? w.parentElement.querySelector(':scope > .cite') : null;
+        const c = own || sib; const x = P.questionCtx(c ? txt(c) : ''); out.push([w, () => x]);
+        if (sib) out.push([sib, () => x]);
         // a matching question: the line under each pair stands in the table before the explanation block
         if (w.parentElement) w.parentElement.querySelectorAll(':scope > table.matchtab .stepwhy').forEach(e => out.push([e, () => x]));
       });
