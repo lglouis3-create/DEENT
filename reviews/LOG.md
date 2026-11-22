@@ -373,3 +373,6 @@ Louis: "Yes publish please". Dr. Lam's practice questions for Exam 3 compared wi
 
 ## 2026-11-21 Diseases for Exam 3 (branch, not released)
 Exam chips and areas in the Diseases tab; 7 new cards and Lam/Sikazwe content on 3 eye cards (3 writers, 3 skeptics, 3 fixers); Lam Guides decks as closed folders; titles rewritten; starred view exam choice. Checks: dz_check 22, dz_test 67, slide_check 38, walk_test 92, wide_test 109, examfold_test 366, likely_marks_test 142, search_test 114 passed; full run_checks pending.
+
+## 2026-11-22 Release 8003d97
+Louis: "if you want to publish what you have confirmed and is done you can". Exam 3 Diseases cards and exam choice, Smith and Sikazwe objective pages, Lam objective bars, narration (77 clips), 52 Atlas tiles, tiles for long tables, slide-link repair. run_checks 39 PASS / 0 FAIL / 1 REPORT; Pages deploy success; live page read (2,271 questions, 33 cards, 0 page errors). Open: examfold_test 1 unidentified failure of 366 on the pre-repair build; slide_test not rerun on the release build.
