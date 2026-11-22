@@ -15,7 +15,7 @@ Every update adds its bullets here in the same commit that makes the change.
 - Figure narration: the words being read show under the drawing; the label being named is outlined, one at a time.
 - Narration now starts at 0.8× speed, with a Speed control and a longer pause between figure steps.
 - Atlas: boards sit in closed folders by exam; a search opens the folders that hold a match.
-- Exam 3 walkthroughs: 41 guide pages of all three professors have a Listen player (device voice for now).
+- Exam 3 walkthroughs: 41 guide pages of all three professors have a narrated Listen player (220 parts).
 - Exam 3 guide pages for all three professors now give the reason beside 44 rules that had none.
 
 ## 2026-11-21 (Diseases for Exam 3, exam choice, plainer titles)
