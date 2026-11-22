@@ -379,3 +379,6 @@ Louis: "if you want to publish what you have confirmed and is done you can". Exa
 
 ## 2026-11-22 (later): release 9a29b4a
 Louis: "when we starred for exam 3, it only shows Smith's lecture"; "a section that test a learner on just the fill in the blanks"; "what's being said gets emphasized and highlighted in the diagram"; "collapsed folders for the atlas"; walkthroughs for Exam 3; "Then you can record and publish". Done and released: Exam 3 stars for Dr. Lam and Dr. Sikazwe in Guides, Reference and Tell apart; `gobj-sm-0` fill-in page and EB-021..023; 44 guide passages given their reasons; figure narration follow-along (one label at a time) and 0.8 default speed; 41 Exam 3 walkthroughs, 220 clips, 154,915 characters; Atlas folders. Checks: run_checks 39 PASS, 0 FAIL, 1 REPORT; browser tests listed in CLAUDE.md. Live page read at 390 and 1280 px.
+
+## 2026-11-22 (evening): release 7f1da5a
+Louis on the figure narration: "depicted better in the diagram of the steps happening as there discussed"; "The highlighting of the words in the diagram everytime isn't that helpful"; chose all three mock-ups together and the 17 Exam 3 figures. Released: sentence-to-part maps (`dianarr_sync_*.js`, 70 of 77 steps), engine in `dianarr_ui.js`, label outline off. Checks in CLAUDE.md.
