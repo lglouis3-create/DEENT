@@ -5,10 +5,15 @@
    - course.js `files` lists the narration data files (those on disk) before
      walk_ui.js, and walk_ui.js before why_ui.js;
    - WALK_SECTIONS: ids unique and of the form <deck>-<n>, deck one of pp, pc,
-     sun, mc; every guide id is a section.gobj id in guide.js; every part has
+     sun, mc, rd (Exam 1) and ey, oo, lg, lo, lr, lt (Exam 3: walk_ey.js,
+     walk_oo.js, walk_lam.js); every guide id is a section.gobj id in guide.js,
+     and for an Exam 3 deck one of that deck's own sections (ey: gobj-sm-* or
+     gobj-ey-*; oo: gobj-sk3-* or gobj-oo-*; lg, lo, lr, lt: gobj-<deck>-*);
+     every topic id is a topic of the bank; every part has
      text, a slide '<deck>-<NN>' of its own deck or null, a drawn step
      {id in DIA, step 1..its step count} or null, and a src; every slide file
-     slides/<slide>.jpg exists at the repository root;
+     exists at the repository root: slides/<deck>-<NN>.jpg for pp, pc, sun, mc
+     and the clean deck picture deck/<deck>/<NN>.webp for the Exam 3 decks;
    - WHY_AUDIO: every id is a question in the bank, not lowYield (off the exam
      papers: Dr. Sikazwe's unassigned pages among them) and not one of the
      items held out of scored practice; every entry has text and a tier;
@@ -19,7 +24,8 @@
      they touch is walk_ui.js's one key `<NS>:narration` (getItem and setItem
      inside try/catch); no sessionStorage, IndexedDB, cookies, Cache Storage or
      the core's `store`;
-   - the service worker the build writes precaches no slide or audio file.
+   - the service worker the build writes precaches no slide, deck picture or
+     audio file.
 
      node walk_check.js
    ========================================================================== */
@@ -37,7 +43,9 @@ console.log('=== course.js `files` ===');
 const data = F.filter(f => /^walk_(?!ui)[a-z0-9]+\.js$/.test(f) || f === 'why_data.js' || f === 'audio_manifest.js').filter(f => fs.existsSync(path.join(SRC, f)));
 check(at('walk_ui.js') >= 0 && at('why_ui.js') > at('walk_ui.js'), 'walk_ui.js and why_ui.js are listed, walk_ui.js first');
 check(data.every(f => at(f) < at('walk_ui.js')), `the narration data files on disk (${data.join(', ') || 'none'}) come before walk_ui.js`);
-const onDisk = fs.readdirSync(SRC).filter(f => /^walk_(pp|pc|sun|mc|rd)\.js$/.test(f) || f === 'why_data.js' || f === 'audio_manifest.js');
+// every walk_<name>.js on disk but the player, this check and the browser test (narration_hash.js reads the same set):
+// walk_pp, walk_pc, walk_sun, walk_mc, walk_rd, and for Exam 3 walk_ey, walk_oo, walk_lam
+const onDisk = fs.readdirSync(SRC).filter(f => (/^walk_[a-z0-9]+\.js$/.test(f) && !/^walk_(ui|check|test)\.js$/.test(f)) || f === 'why_data.js' || f === 'audio_manifest.js');
 check(onDisk.every(f => F.includes(f)), `every narration data file on disk is in the page (${onDisk.join(', ')})`, onDisk.filter(f => !F.includes(f)).join(', '));
 
 /* the bank, the guide and the figures, as the page has them, without the *_ui.js presentation files */
@@ -45,23 +53,34 @@ const sb = {console, window: {}};
 vm.createContext(sb);
 let src = here('course.js') + '\n';
 for (const f of F.filter(f => !/_ui\.js$/.test(f) && fs.existsSync(path.join(SRC, f)))) src += here(f) + '\n';
-src += here('guide.js') + '\nthis.X = {QUESTIONS, GUIDE_HTML, DIA: typeof DIA !== "undefined" ? DIA : {},' +
+src += here('guide.js') + '\nthis.X = {QUESTIONS, GUIDE_HTML, TOPICS: typeof TOPICS !== "undefined" ? TOPICS : [], DIA: typeof DIA !== "undefined" ? DIA : {},' +
   ' W: typeof WALK_SECTIONS !== "undefined" ? WALK_SECTIONS : [], Y: typeof WHY_AUDIO !== "undefined" ? WHY_AUDIO : {},' +
   ' CL: typeof AUDIO_CLIPS !== "undefined" ? AUDIO_CLIPS : {}, D: typeof DIA_NARR !== "undefined" ? DIA_NARR : {}};';
 vm.runInContext(src, sb);
-const {QUESTIONS, GUIDE_HTML, DIA, W, Y, CL, D} = sb.X;
+const {QUESTIONS, GUIDE_HTML, TOPICS, DIA, W, Y, CL, D} = sb.X;
 
 console.log('=== Walkthroughs (WALK_SECTIONS) ===');
-const DECKS = ['pp', 'pc', 'sun', 'mc', 'rd'];   // rd: an assigned reading, no slide deck of its own
+const CLEAN = ['ey', 'oo', 'lg', 'lo', 'lr', 'lt'];   // the Exam 3 decks: their pictures are the clean deck pages deck/<deck>/<NN>.webp
+const DECKS = ['pp', 'pc', 'sun', 'mc', 'rd'].concat(CLEAN);   // rd: an assigned reading, no slide deck of its own
+const ID = new RegExp('^(' + DECKS.join('|') + ')-[1-9]\\d*$');
+// the guide sections an Exam 3 deck's walkthroughs sit under (guide.js: Dr. Smith's eye objectives gobj-sm-*, Dr. Sikazwe's
+// Exam 3 objectives gobj-sk3-*, each with its slide-by-slide pages; Dr. Lam's four decks)
+const GUIDE = {ey: /^gobj-(sm|ey)-/, oo: /^gobj-(sk3|oo)-/, lg: /^gobj-lg-/, lo: /^gobj-lo-/, lr: /^gobj-lr-/, lt: /^gobj-lt-/};
+const slideFile = s => { const [d, nn] = s.split('-'); return CLEAN.includes(d) ? path.join('deck', d, nn + '.webp') : path.join('slides', s + '.jpg'); };
 const gobj = new Set([...GUIDE_HTML.matchAll(/<section class="gobj" id="([^"]+)"/g)].map(m => m[1]));
 const steps = k => { const h = DIA[k]; return typeof h === 'string' ? (h.match(/class="st[ "]/g) || []).length : 0; };
 const ids = W.map(w => w && w.id);
 check(new Set(ids).size === ids.length, `walkthrough ids are unique (${ids.length})`, ids.filter((x, i) => ids.indexOf(x) !== i).join(', '));
-const badSec = W.filter(w => !w || !/^(pp|pc|sun|mc|rd)-\d+$/.test(w.id) || !DECKS.includes(w.deck) || !w.id.startsWith(w.deck + '-') ||
+const badSec = W.filter(w => !w || !ID.test(w.id) || !DECKS.includes(w.deck) || !w.id.startsWith(w.deck + '-') ||
   typeof w.title !== 'string' || !w.title.trim() || !Array.isArray(w.parts) || !w.parts.length);
 check(!badSec.length, 'every walkthrough has id <deck>-<n>, its deck, a title and parts', badSec.map(w => w && w.id).join(', '));
 const noGuide = W.filter(w => !gobj.has(w.guide));
 check(!noGuide.length, `every walkthrough's guide id is a guide section (${gobj.size} sections in guide.js)`, noGuide.map(w => `${w.id} -> ${w.guide}`).join(', '));
+const offDeck = W.filter(w => w && GUIDE[w.deck] && gobj.has(w.guide) && !GUIDE[w.deck].test(w.guide));
+check(!offDeck.length, "every Exam 3 walkthrough sits under a guide section of its own deck (ey: gobj-sm-* or gobj-ey-*; oo: gobj-sk3-* or gobj-oo-*; lg, lo, lr, lt: gobj-<deck>-*)", offDeck.map(w => `${w.id} -> ${w.guide}`).join(', '));
+const tids = new Set(TOPICS.map(t => t.id));
+const badTopic = W.filter(w => w && (!Array.isArray(w.topics) || w.topics.some(t => !tids.has(t))));
+check(!badTopic.length, 'every walkthrough has a topics list, each id a topic of the bank (a Topics card then shows its Listen row)', badTopic.map(w => `${w.id}: ${JSON.stringify(w.topics)}`).join('; '));
 const parts = W.flatMap(w => (w.parts || []).map((p, i) => ({w, p, i})));
 const badPart = parts.filter(({w, p}) => !p || typeof p.text !== 'string' || !p.text.trim() || typeof p.src !== 'string' ||
   !(p.slide == null || (typeof p.slide === 'string' && new RegExp('^' + (w.deck === 'rd' ? '(pp|pc|sun|mc)' : w.deck) + '-\\d{2}$').test(p.slide))) ||   // a reading's part may point to a lecture slide
@@ -69,8 +88,8 @@ const badPart = parts.filter(({w, p}) => !p || typeof p.text !== 'string' || !p.
 check(!badPart.length, `every part (${parts.length}) has text, a src, a slide of its own deck or null, and a drawn step that exists (1-based; step 1 for a figure without steps) or null`,
   badPart.slice(0, 12).map(({w, i, p}) => `${w.id} part ${i + 1} (${JSON.stringify({slide: p && p.slide, fig: p && p.fig})})`).join('; '));
 const slides = [...new Set(parts.map(x => x.p && x.p.slide).filter(Boolean))].sort();
-const missing = slides.filter(s => !fs.existsSync(path.join(ROOT, 'slides', s + '.jpg')));
-check(!missing.length, `every slide a part names has its image in slides/ (${slides.length} slides)`, missing.join(', '));
+const missing = slides.filter(s => !fs.existsSync(path.join(ROOT, slideFile(s))));
+check(!missing.length, `every slide a part names has its image (slides/<deck>-<NN>.jpg; deck/<deck>/<NN>.webp for ${CLEAN.join(', ')}) (${slides.length} slides)`, missing.map(s => `${s} (${slideFile(s)})`).join(', '));
 const bare = parts.filter(({p}) => p && !p.slide && !(p.fig && p.fig.id));
 if (bare.length) console.log(`  note: ${bare.length} parts name no slide or figure; the player keeps the previous one on screen`);
 const wc = parts.map(({p}) => String(p && p.text || '').split(/\s+/).filter(Boolean).length);
@@ -120,6 +139,6 @@ check(!other && !/localStorage/.test(wy), 'no other storage: no sessionStorage, 
 console.log('=== Service worker ===');
 const sw = fs.existsSync(path.join(ROOT, 'sw.js')) ? fs.readFileSync(path.join(ROOT, 'sw.js'), 'utf8') : '';
 const site = (sw.match(/const SITE = (\{[^\n]*\});/) || [])[1] || '';
-check(site && !/slides\/|audio\/|\.mp3|\.jpg/.test(site), 'the built sw.js precaches no slide or audio file', site.slice(0, 160) || 'no built sw.js');
+check(site && !/slides\/|deck\/|audio\/|\.mp3|\.jpg|\.webp/.test(site), 'the built sw.js precaches no slide, deck picture or audio file', site.slice(0, 160) || 'no built sw.js');
 
 finish(NAME);

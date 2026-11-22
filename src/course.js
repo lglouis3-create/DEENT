@@ -379,7 +379,9 @@ const COURSE = {
           // the build does not stop on it; the players draw nothing for data that is not there.
           // dianarr_smith.js, dianarr_sik.js, dianarr_ey.js, dianarr_lg.js, dianarr_oo.js (the Exam 3 figures): spoken text for each step of the drawn step-throughs (Louis,
           // 2026-11-09: "can the diagram have narration explaining the steps of each as a walk through?")
-          ...['walk_pp.js', 'walk_pc.js', 'walk_sun.js', 'walk_mc.js', 'walk_rd.js', 'why_data.js',
+          // walk_ey.js (Dr. Smith's eye deck), walk_oo.js (Dr. Sikazwe's ear, mouth and eye chemistry) and walk_lam.js (Dr. Lam's
+          // four decks): the Exam 3 walkthroughs; their slides are the clean deck pictures deck/<id>/<NN>.webp
+          ...['walk_pp.js', 'walk_pc.js', 'walk_sun.js', 'walk_mc.js', 'walk_rd.js', 'walk_ey.js', 'walk_oo.js', 'walk_lam.js', 'why_data.js',
               'dianarr_smith.js', 'dianarr_sik.js', 'dianarr_ey.js', 'dianarr_lg.js', 'dianarr_oo.js', 'audio_manifest.js']
             .filter(f => { try { return typeof require !== 'function' || require('fs').existsSync(f); } catch (e) { return true; } }),
           // reaction figures for the why of mapped questions (why_figs.js, read by why_ui.js)
