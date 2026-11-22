@@ -57,9 +57,9 @@ const DIA_NARR_UI = (() => {
 .dnsay-h{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between;margin:0 0 6px;font-size:12.5px;font-weight:600;color:var(--text-dim,#5A6878)}
 .dnsay-t{margin:0;font-size:16px;line-height:1.6;max-width:none}
 .dnsay-t .dns{color:var(--text-dim,#5A6878)}
-.dnsay-t .dns.dnon{color:var(--text,#16202C);background:#ffe9a8;border-radius:4px;box-shadow:0 0 0 2px #ffe9a8;font-weight:600}
+.dnsay-t .dns.dnon{color:var(--text,#16202C);font-weight:600}
 figure.fig svg text.dnhl{paint-order:stroke;stroke:#ffd84d;stroke-width:6px;stroke-linejoin:round;font-weight:700}
-@media (prefers-color-scheme:dark){.dnsay-t .dns.dnon{background:#6b5200;box-shadow:0 0 0 2px #6b5200;color:#fff}figure.fig svg text.dnhl{stroke:#8a6a00}}`;
+@media (prefers-color-scheme:dark){figure.fig svg text.dnhl{stroke:#8a6a00}}`;
   const addCss = () => {
     if (document.getElementById('dncss')) return;
     const s = document.createElement('style'); s.id = 'dncss'; s.textContent = css; document.head.appendChild(s);
@@ -114,16 +114,54 @@ figure.fig svg text.dnhl{paint-order:stroke;stroke:#ffd84d;stroke-width:6px;stro
     return (x.match(/[a-z]+/g) || []).filter(w => (w.length >= 3 && !STOPW.has(w))).map(w => w.length >= 7 ? w.slice(0, 6) : w.replace(/s$/, ''));
   };
   const shownText = (fig, el) => { const st = el.closest('.st'); return !st || st.closest('figure') !== fig || st.classList.contains('on'); };
-  function markLabels(fig, sentence) {
-    fig.querySelectorAll('svg text.dnhl').forEach(t => t.classList.remove('dnhl'));
-    if (!sentence) return;
-    const S = new Set(toks(sentence)); if (!S.size) return;
+  /* One label at a time (Louis, 2026-11-22: the outline "is kind of helpful but distracting when everything is
+     highlighted at once"). The labels of the drawing are matched to the places in the step's text where they are
+     named; as the narration reaches a place, only the label named there is outlined, until the next one is named.
+     A label written on two lines is two <text> elements with the same x, the second starting in lower case: they count as one label. */
+  function labelsOf(fig) {
+    const out = []; let last = null;
     fig.querySelectorAll('svg text').forEach(t => {
       if (!shownText(fig, t)) return;
-      const L = [...new Set(toks(t.textContent))]; if (!L.length) return;
-      const hit = L.filter(w => S.has(w)).length;
-      if (hit >= (L.length <= 2 ? L.length : Math.ceil(L.length * 0.6))) t.classList.add('dnhl');
+      const x = t.getAttribute('x'), y = parseFloat(t.getAttribute('y'));
+      if (last && last.parent === t.parentNode && last.x === x && x != null && isFinite(y) && isFinite(last.y) && y - last.y > 6 && y - last.y < 24 && /^[a-z(]/.test(t.textContent.trim())) {
+        last.els.push(t); last.txt += ' ' + t.textContent; last.y = y;
+      } else { last = {els: [t], txt: t.textContent, x, y, parent: t.parentNode}; out.push(last); }
     });
+    out.forEach(l => { l.tok = [...new Set(toks(l.txt))]; });
+    return out.filter(l => l.tok.length && l.tok.length <= 6);
+  }
+  // the places in `text` where a label is named: [{pos (character), els}], in order
+  function mentions(fig, text) {
+    const labels = labelsOf(fig); if (!labels.length) return [];
+    const words = []; const re = /\S+/g; let m;
+    while ((m = re.exec(text))) words.push({pos: m.index, tok: toks(m[0])});
+    const out = [];
+    for (let w = 0; w < words.length; w++) {
+      if (!words[w].tok.length) continue;
+      // the label's other words may stand up to four words before or after this one; the nearest wins a tie
+      const near = {}; for (let k = Math.max(0, w - 4); k < Math.min(words.length, w + 5); k++) words[k].tok.forEach(x => { const d = Math.abs(k - w); if (!(x in near) || d < near[x]) near[x] = d; });
+      let best = [], size = 0, dist = 1e9;
+      labels.forEach(l => {
+        if (!words[w].tok.some(x => l.tok.includes(x))) return;
+        const got = l.tok.filter(x => x in near), hit = got.length;
+        if (hit < (l.tok.length <= 2 ? l.tok.length : Math.ceil(l.tok.length * 0.6))) return;
+        const d = got.reduce((a, x) => a + near[x], 0);
+        if (hit > size || (hit === size && d < dist)) { best = [l]; size = hit; dist = d; } else if (hit === size && d === dist) best.push(l);
+      });
+      if (!best.length) continue;
+      const els = best.flatMap(l => l.els), prev = out[out.length - 1];
+      if (prev && prev.els.length === els.length && prev.els.every((e, k) => e === els[k])) continue;   // the same label, still being named
+      if (prev && words[w].pos - prev.pos < 12 && prev.size > size) continue;                              // a part of the label just named
+      out.push({pos: words[w].pos, els, size});
+    }
+    return out;
+  }
+  function markAt(fig, me, pos) {
+    const M = me.men || []; let k = -1;
+    for (let i = 0; i < M.length; i++) if (M[i].pos <= pos) k = i;
+    if (k === me.mk) return; me.mk = k;
+    fig.querySelectorAll('svg text.dnhl').forEach(t => t.classList.remove('dnhl'));
+    if (k >= 0) M[k].els.forEach(t => t.classList.add('dnhl'));
   }
   function panel(fig) {
     let d = fig.querySelector(':scope > .dnsay');
@@ -148,7 +186,6 @@ figure.fig svg text.dnhl{paint-order:stroke;stroke:#ffd84d;stroke-width:6px;stro
     const k = Math.max(0, Math.min(all.length - 1, si));
     if (all[k].classList.contains('dnon')) return;
     all.forEach((x, j) => x.classList.toggle('dnon', j === k));
-    markLabels(fig, all[k].textContent);
   }
   function sayOff(fig) {
     if (!fig) return;
@@ -187,7 +224,7 @@ figure.fig svg text.dnhl{paint-order:stroke;stroke:#ffd84d;stroke-width:6px;stro
   }
   function stop() {
     const p = P; if (!p) return; P = null;
-    clearTimeout(p.gap);
+    clearTimeout(p.gap); clearInterval(p.tick);
     if (p.h && !p.h.done) p.h.stop(true);
     sayOff(p.fig);
     ui();
@@ -200,17 +237,24 @@ figure.fig svg text.dnhl{paint-order:stroke;stroke:#ffd84d;stroke-width:6px;stro
     if (n > 1) show(fig, i);
     const me = P = P && P.fig === fig ? P : {fig, key};
     me.i = i; clearTimeout(me.gap);
-    const text = list[i].text, cut = cuts(text);
+    const text = list[i].text, cut = cuts(text), sents = NARR.sentences(text);
     sayStep(fig, key, i, text); saySent(fig, 0);
+    me.men = mentions(fig, text); me.mk = -2; markAt(fig, me, -1);
+    // the device voice reports only the start of each sentence: within it the place is estimated at 13 characters a second
+    clearInterval(me.tick);
+    const voiceAt = si => {
+      clearInterval(me.tick); let at = sents.slice(0, si).reduce((a, x) => a + x.length, 0); const t0 = Date.now();
+      me.tick = setInterval(() => { if (P !== me || !me.h || me.h.done) { clearInterval(me.tick); return; } if (!me.h.paused) markAt(fig, me, at + (Date.now() - t0) / 1000 * 13 * (NARR.st().rate || 1)); }, 250);
+    };
     me.h = NARR.say({clip: NARR.clipFor(clipKey(key, i), text), text, owner: 'dianarr',
-      onSent: si => { if (P === me) saySent(fig, si); },
-      onFrac: f => { if (P !== me) return; let k = 0; while (k + 1 < cut.length && f >= cut[k + 1]) k++; saySent(fig, k); },
+      onSent: si => { if (P === me) { saySent(fig, si); voiceAt(si); } },
+      onFrac: f => { if (P !== me) return; let k = 0; while (k + 1 < cut.length && f >= cut[k + 1]) k++; saySent(fig, k); markAt(fig, me, f * text.length + 4); },
       onEnd: () => {
         if (P !== me) return;
         if (!fig.isConnected || i + 1 >= Math.min(list.length, n)) { stop(); return; }
         me.gap = setTimeout(() => { if (P === me) play(fig, key, i + 1); }, 1200);   // a pause between steps (was 450 ms)
       },
-      onStop: () => { if (P === me) { P = null; clearTimeout(me.gap); sayOff(fig); ui(); } },
+      onStop: () => { if (P === me) { P = null; clearTimeout(me.gap); clearInterval(me.tick); sayOff(fig); ui(); } },
       onState: ui});
     ui();
   }
