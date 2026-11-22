@@ -19,9 +19,11 @@ DIA_SYNC['ey-aqueous'] = [
                 3: [35, 36, 37, 48, 49, 50, 57, 58], 5: [59, 60, 61]},
    at: {2: [88, 236], 3: [268, 314], 5: [342, 350]}},
   /* 4 (the zoom circle and the process stay lit: every sentence is about them): 1 the process's own labels; 2 beta receptor; 4 alpha-2 receptor; 5 carbonic anhydrase; 6 M3 (and the "also marked" cards) */
-  {n: 70, seq: {1: [31, 35, 36, 37, 38, 39, 40, 41], 2: [28, 32, 33, 34],
-                4: [29, 42, 43, 44], 5: [30, 45, 46, 47, 48], 6: [17, 18, 19, 20, 57, 58, 59, 60, 61, 62, 63, 64, 65]},
-   at: {1: [78, 236], 2: [12, 193], 4: [345, 118], 5: [340, 184], 6: [12, 92]}},
+  /* the alpha-1 receptor (on slide 16; no sentence names it) comes with the "also marked on slide 16" group at sentence 6
+     (Louis, 2026-11-22: it sat beside badge 1 and read as part of the first sentence) */
+  {n: 70, seq: {1: [37, 38, 39, 40, 41], 2: [28, 32, 33, 34],
+                4: [29, 42, 43, 44], 5: [30, 45, 46, 47, 48], 6: [17, 18, 19, 20, 31, 35, 36, 57, 58, 59, 60, 61, 62, 63, 64, 65]},
+   at: {1: [86, 322], 2: [12, 193], 4: [345, 118], 5: [340, 184], 6: [12, 92]}},
   /* 5: one drawing (three chips on the ciliary body), all of it in sentence 1; sentences 2-4 draw nothing */
   null,
   /* 6: 1 the meshwork route lit; 2 M3 agonists; 3 echothiophate; 4 contraction; 5 netarsudil; 6 less stiff */
