@@ -169,7 +169,7 @@ mk('EB-021','mech','ey-in','cai','b-ey-cai-enzyme','EB-006',
 
 mk('EB-022','mech','ey-ac','h1','b-ey-h1-receptor','EB-013',
  'Ketotifen, olopatadine and the other ophthalmic antihistamines are inverse agonists at the histamine ___ receptor.',
- ['H1', 'H1 receptor', 'histamine H1', 'H 1', 'H-1', 'histamine 1'],
+ ['H1', 'H1 receptor', 'histamine H1', 'histamine 1'],
  'Slide 51: "H1 inverse agonists (reduce constitutive activity of receptor and compete with histamine binding to the receptor)". Slides 53 and 54 give each listed drug as an H1 inverse agonist. In class: "that\'s the official pharmacological mechanism of these drugs, traditionally called antihistamines" (T@43646 11/17).',
  'slides 51, 53, 54; T@43646 11/17'),
 
