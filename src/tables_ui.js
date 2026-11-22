@@ -74,8 +74,24 @@ table.reftab.cardsx td:not(:first-child) .ln.chain{list-style:none;margin-left:1
     const s = document.createElement('style'); s.id = 'tablesuicss'; s.textContent = CSS; document.head.appendChild(s);
   }
 
+  /* Transcript codes are not shown in Reference and Tell apart (Louis, 2026-11-22: "for the references and tell apart
+     don't forget to hide the T@ code"): "T@44702, T@45812 11/13" and "10/30 T 430–450" read "lecture 11/13" and
+     "lecture 10/30". The codes stay in reference.js and tell.js, where the checks read them. */
+  const TC = 'T@?\\s?\\d{2,6}(?:\\s*[–-]\\s*@?\\d+)?', TL = TC + '(?:\\s*[,;]\\s*' + TC + ')*';
+  const R1 = new RegExp('(\\d{1,2}\\/\\d{1,2}),?\\s+' + TL, 'g'), R2 = new RegExp(TL + ',?\\s+(\\d{1,2}\\/\\d{1,2})', 'g'), R3 = new RegExp(TL, 'g');
+  function hideCodes(root){
+    if (!root || typeof document.createTreeWalker !== 'function') return;
+    const w = document.createTreeWalker(root, 4 /* text */, null); let n; const list = [];
+    while ((n = w.nextNode())) if (/T@?\s?\d{2,6}/.test(n.nodeValue) && !(n.parentNode && /^(SCRIPT|STYLE)$/.test(n.parentNode.nodeName))) list.push(n);
+    list.forEach(t => {
+      let v = t.nodeValue.replace(R1, 'lecture $1').replace(R2, 'lecture $1').replace(R3, 'lecture');
+      v = v.replace(/(lecture \d{1,2}\/\d{1,2})(?:\s*[;,]\s*\1)+/g, '$1').replace(/lecture(?:\s*[;,]\s*lecture)+(?!\s*\d)/g, 'lecture');
+      if (v !== t.nodeValue) t.nodeValue = v;
+    });
+  }
   function cards(root){
     if (!root || !root.querySelectorAll) return;
+    try { hideCodes(root); } catch (e) { /* the codes stay visible */ }
     root.querySelectorAll('table.reftab').forEach(t => {
       const heads = [...t.querySelectorAll('thead th')];
       if (t.querySelector('[rowspan]:not([rowspan="1"]),[colspan]:not([colspan="1"])')) return;
