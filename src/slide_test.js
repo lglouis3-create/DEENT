@@ -204,8 +204,11 @@ const onDisk = (deck, n, printed) => { const r = P.resolve(deck, n, printed); re
       for (const [label, v, sel] of tabs) {
         await page.evaluate(v => show(v), v); await settle(900);
         await page.evaluate(() => document.querySelectorAll('details').forEach(d => { if (d.querySelector('.slk')) d.open = true; }));
+        // a figure's source note is closed until its "Slides and sources" button is pressed (figsrc_ui.js, 2026-11-22)
+        await page.evaluate(() => document.querySelectorAll('figcaption.fsrc-off .fsrc-t0').forEach(b => b.click())); await settle(200);
         const o = await opens(label, pickIn(sel), width === 390 ? 'click' : 'key');
         if (o) await escape(label);
+        await page.evaluate(() => document.querySelectorAll('figcaption.fsrc-closed .fsrc-t0').forEach(b => b.click()));   // closed again: its height does not depend on the links
         check((await sideways()) <= 1, `${label}: the tab does not scroll sideways`);
       }
       const bold = await page.evaluate(() => { show('ref'); const b = document.querySelector('#v-ref h3 .slk'); return b ? getComputedStyle(b).fontWeight === getComputedStyle(b.parentElement).fontWeight : null; });
