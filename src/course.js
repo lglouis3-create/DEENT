@@ -382,7 +382,8 @@ const COURSE = {
           // walk_ey.js (Dr. Smith's eye deck), walk_oo.js (Dr. Sikazwe's ear, mouth and eye chemistry) and walk_lam.js (Dr. Lam's
           // four decks): the Exam 3 walkthroughs; their slides are the clean deck pictures deck/<id>/<NN>.webp
           ...['walk_pp.js', 'walk_pc.js', 'walk_sun.js', 'walk_mc.js', 'walk_rd.js', 'walk_ey.js', 'walk_oo.js', 'walk_lam.js', 'why_data.js',
-              'dianarr_smith.js', 'dianarr_sik.js', 'dianarr_ey.js', 'dianarr_lg.js', 'dianarr_oo.js', 'audio_manifest.js']
+              'dianarr_smith.js', 'dianarr_sik.js', 'dianarr_ey.js', 'dianarr_lg.js', 'dianarr_oo.js',
+              'dianarr_sync_ey.js', 'dianarr_sync_lg.js', 'dianarr_sync_oo.js', 'audio_manifest.js']
             .filter(f => { try { return typeof require !== 'function' || require('fs').existsSync(f); } catch (e) { return true; } }),
           // reaction figures for the why of mapped questions (why_figs.js, read by why_ui.js)
           'why_figs.js',

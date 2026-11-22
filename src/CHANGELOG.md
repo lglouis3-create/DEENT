@@ -12,7 +12,8 @@ Every update adds its bullets here in the same commit that makes the change.
 - Starred only, Exam 3: Guides, Reference and Tell apart now star Dr. Lam's and Dr. Sikazwe's material too.
 - New Guides page: Dr. Smith's fill-in-the-blank mechanisms, 23 blanks to type, the 13 most likely starred.
 - Three new typed blanks: carbonic anhydrase, the H1 receptor, and the protein cyclosporine binds.
-- Figure narration: the words being read show under the drawing; the label being named is outlined, one at a time.
+- Exam 3 figures follow the narration: each part appears when its sentence is read, then fades back.
+- Numbers on the drawing match the numbered sentences under it (17 figures; the yellow outline is gone).
 - Narration now starts at 0.8× speed, with a Speed control and a longer pause between figure steps.
 - Atlas: boards sit in closed folders by exam; a search opens the folders that hold a match.
 - Exam 3 walkthroughs: 41 guide pages of all three professors have a narrated Listen player (220 parts).
