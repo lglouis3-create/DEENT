@@ -177,16 +177,19 @@ const DIAGRAMS_FB = (() => {
     const EO = {x: 6, y: 24};
     const eye = o => Anat.eyeFront(Object.assign({}, EO, o));
     const tear = E(110, 38, 94, 15, 'tear', 'box') + T(110, 42, 'Topical drug in tear', 'teart', 'fb-tb', 'middle');
-    const oc = T(84, 62, 'Ocular absorption', 'oc1', 'fb-t') + T(84, 75, 'under 10% of the dose', 'oc2', 'fb-w');
-    const bio = R(40, 246, 170, 24, 'bio', 'fb-bag') + T(125, 262, 'Ocular bioavailability', 'bioT', 'fb-tb', 'middle');
-    const corF = () => Anat.flow('M68 52 L68 244', 'f-cor', {});
-    const conF = () => Anat.flow('M28 50 L40 120', 'f-con', {}) + Anat.flow('M10 222 L40 244', 'f-con2', {});
-    const lab = {ah: {lines: ['Aqueous', 'humor'], at: [112, 116], anchor: 'middle'}};
+    const oc = T(110, 66, 'Ocular absorption', 'oc1', 'fb-t') + T(110, 79, 'under 10% of the dose', 'oc2', 'fb-w');
+    /* slide 30's last link, drawn under the eye: aqueous humor, then ocular bioavailability */
+    const bio = R(8, 258, 92, 24, 'ahb', 'box') + T(54, 274, 'Aqueous humor', 'ahbT', 'fb-t', 'middle') + AR('M103 270 L123 270', 'bioa') +
+      R(126, 258, 150, 24, 'bio', 'fb-bag') + T(201, 274, 'Ocular bioavailability', 'bioT', 'fb-tb', 'middle');
+    /* both routes end in the aqueous humor (slide 30): the corneal route through the cornea, the conjunctival route from the conjunctiva through the sclera */
+    const corF = () => Anat.flow('M101 54 L101 124', 'f-cor', {});
+    const conF = () => Anat.flow('M26 49 L26 138', 'f-con', {}) + Anat.flow('M30 143 L66 153', 'f-con2', {});
+    const lab = {ah: {lines: ['Aqueous', 'humor'], at: [95, 121], anchor: 'middle'}};
     /* step 1: the whole drop */
-    const s1 = eye({label: ['cornea', 'conj', 'sclera']}) + tear + oc + AR('M68 54 L68 106', 'a0') +
+    const s1 = eye({label: ['cornea', 'conj', 'sclera'], lab: {cornea: {lines: ['Cornea'], at: [22, 70], anchor: 'middle', bold: true, to: [62, 88], from: [36, 74]}}}) + tear + oc + AR('M101 54 L101 98', 'a0') +
       bio + AR('M186 160 L212 160', 'sya') + Ls(216, 142, ['Systemic absorption', 'over 50% of the dose'], 'sy', 'fb-tb', 'start', 13) + T(216, 180, 'mainly conjunctiva,', 'sy2', 'fb-t') + T(216, 193, 'nose', 'sy3', 'fb-t');
     /* step 2: the cornea */
-    const cb = Anat.cornea({x: 216, y: 98, hi: ['w'], label: ['l1', 'w', 'l2', 'top']});
+    const cb = Anat.cornea({x: 216, y: 98, label: ['l1', 'w', 'l2', 'top']}) + AR('M232 108 L232 181', 'thru');
     const s2 = bio + eye({hi: ['cornea'], label: ['ah'], lab}) + tear + oc + corF() + LD(134, 112, 216, 116, 'zl1') + LD(150, 128, 216, 178, 'zl2') + cb +
       Ls(216, 198, ['lipid / water / lipid', 'less drug entry', 'small, lipophilic drugs'], 'cn', 'fb-t', 'start', 13);
     /* step 3: the conjunctiva */
@@ -198,7 +201,7 @@ const DIAGRAMS_FB = (() => {
       T(216, 235, 'more drug entry', 'cj3', 'fb-ok') + T(216, 248, 'large, hydrophilic drugs', 'cj4', 'fb-tb');
     /* step 4: both routes lead to ocular bioavailability */
     const s4 = bio + eye({label: ['ah'], lab}) + tear + oc + corF() + conF() +
-      Ls(216, 116, ['Cornea:', 'primary route;', 'small, lipophilic', 'drugs'], 'r1', 'fb-t', 'start', 13) + Ls(216, 190, ['Conjunctiva:', 'large, hydrophilic', 'drugs; its enzymes', 'can activate a prodrug'], 'r2', 'fb-t', 'start', 13);
+      Ls(216, 116, ['Cornea:', 'primary route;', 'small, lipophilic drugs'], 'r1', 'fb-t', 'start', 13) + Ls(216, 177, ['Conjunctiva:', 'large, hydrophilic drugs;', 'its enzymes can', 'activate a prodrug'], 'r2', 'fb-t', 'start', 13);
     return Anat.fbStepper('oo-eye-entry', 'How an eye drop gets into the eye', [
       ['Of a drop in the tear film, under 10% of the dose is absorbed into the eye and over 50% systemically (slide 30).', s1],
       ['The cornea is a lipid / water / lipid sandwich: less drug gets in, and it is the route for small, lipophilic drugs (slides 29–30; T@43104).', s2],

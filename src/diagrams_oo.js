@@ -269,21 +269,23 @@ const DIAGRAMS_OO = (() => {
       L(q[3], toward(q[4], q[3], 6), 'pz34') + L(toward(q[4], q[5], 6), q[5], 'pz45') +
       inner(q[2], q[3], c2, 'pzd1') + inner(toward(q[1], q[2], 6), q[2], c2, 'pzd2') +
       T(q[1][0], q[1][1] + 4, 'N', 'pn1', 'oo-n', 'middle') + T(q[4][0], q[4][1] + 4, 'N', 'pn4', 'oo-n', 'middle');
+    const pyrLbl = T(c2[0] - 6, 47, 'pyrazine', 'pzl', 'oo-ts', 'middle');
     const name = s => T(10, 32, s, 'name', 'oo-tb', 'start');
     const parts = T(cx, 148, 'aryl', 'p1', 'oo-ts', 'middle') + T(xPos[0], 148, 'linker', 'p2', 'oo-ts', 'middle') +
       T(pc[0] + 4, 148, 'imidazoline', 'p3', 'oo-ts', 'middle');
 
     // the ClogP scale (slide 31): a vertical axis from 0.8 (bottom) to 1.6 (top)
-    const ax = 230, yv = c => 152 - (c - 0.8) / 0.8 * 90;
-    const axis = L([ax, yv(1.6)], [ax, yv(0.8)], 'axis', 'oo-axis') + T(ax, 48, 'ClogP', 'axt', 'oo-tb', 'middle') +
+    const ax = 230, yv = c => 164 - (c - 0.8) / 0.8 * 90;
+    const axis = L([ax, yv(1.6)], [ax, yv(0.8)], 'axis', 'oo-axis') + T(ax, 46, 'ClogP', 'axt', 'oo-tb', 'middle') +
       T(ax - 6, yv(1.6) + 4, '1.6', 'ax16', 'oo-ts', 'end') + T(ax - 6, yv(0.8) + 4, '0.8', 'ax08', 'oo-ts', 'end') +
       L([ax - 3, yv(1.6)], [ax + 3, yv(1.6)], 'tk16', 'oo-axis') + L([ax - 3, yv(0.8)], [ax + 3, yv(0.8)], 'tk08', 'oo-axis');
     const mk = (c, s, k) => C(ax, yv(c), 4, 'm' + k, 'oo-mk') + T(ax + 9, yv(c) + 4, s, 'mt' + k, 'oo-t', 'start');
     const mClo = mk(1.5, 'clonidine 1.5', 'c'), mBri = mk(1.2, 'brimonidine 1.2', 'b'), mApr = mk(0.87, 'apraclonidine 0.87', 'a');
-    const more = T(ax + 9, 170, '↑ more lipophilic', 'axm', 'oo-ts', 'start');
+    const more = T(354, 59, 'higher ClogP = more lipophilic', 'axm', 'oo-ts', 'end');
 
     const s1 = name('Aryl imidazoline core') + core + xLbl('X') + parts +
-      Ls(10, 190, ['An aromatic ring (aryl) joined through one linker', 'atom, X, to the imidazoline ring.'], 'd1');
+      Ls(10, 190, ['An aromatic ring (aryl) joined through one linker', 'atom, X, to the imidazoline ring.'], 'd1') +
+      T(10, 224, 'SAR: structure-activity relationship', 'd1s', 'oo-ts');
     const s2 = name('Aryl imidazoline core') + core + xLbl('X') + parts +
       T(10, 190, 'X = CH₂: most are α1-receptor agonists', 'd2a', 'oo-tb') +
       T(10, 210, 'X = NH: most are α2-receptor agonists', 'd2b', 'oo-tb') +
@@ -292,8 +294,8 @@ const DIAGRAMS_OO = (() => {
       Ls(10, 190, ['Lipophilic enough to get into the brain,', 'where it brings several CNS effects', '(unwanted when treating glaucoma).'], 'd3');
     const s4 = name('Apraclonidine: the amine analog') + core + xLbl('NH') + clUp + clDn + nh2 + axis + more + mClo + mApr +
       Ls(10, 190, ['The added amine (H₂N) lowers ClogP: less', 'lipophilic, so it gets into the brain less.', 'Half-life about 8 h.'], 'd4');
-    const s5 = name('Brimonidine: the pyrazine analog') + core + xLbl('NH') + br + pyr + axis + more + mClo + mApr + mBri +
-      Ls(10, 190, ['The most potent of the series and highly', 'α2-selective: about 1,000-fold more potent', 'than clonidine and apraclonidine (in class).', 'Half-life 3–4 h.'], 'd5');
+    const s5 = name('Brimonidine: the pyrazine analog') + core + xLbl('NH') + br + pyr + pyrLbl + axis + more + mClo + mApr + mBri +
+      Ls(10, 190, ['The most potent of the series and highly', 'α2-selective: about 1,000-fold more potent', 'than clonidine and apraclonidine (said in class).', 'Half-life 3–4 h.'], 'd5');
 
     return ooStepper('oo-imidazoline', 'Imidazoline α-agonists: SAR', [
       ['The SAR core: an aryl ring linked by one atom, X, to an imidazoline (slide 32; T@49986).', s1],
@@ -332,18 +334,19 @@ const DIAGRAMS_OO = (() => {
     const s2 = ach + arr + prod + block + up;
 
     const head = T(180, 128, 'Extent of AChE inhibition depends on the group', 'hd', 'oo-tb', 'middle');
-    const row = (y, n, name, form, note, k, cls) => R(10, y, 340, 34, 'rb' + k, cls) +
-      T(20, y + 14, n + '  ' + name, 'rn' + k, 'oo-tb') + T(20, y + 28, form, 'rf' + k, 'oo-f2') + T(342, y + 21, note, 'rt' + k, 'oo-ts', 'end');
-    const rows = row(136, '1', 'Phosphoryl', 'R1O–P(=O)(R2)–OR3', 'most', 'p', 'oo-act') + T(180, 184, '>', 'g1', 'oo-tb', 'middle') +
-      row(188, '2', 'Carbamate', 'R1–NH–C(=O)–O–R2', 'intermediate', 'c', 'box') + T(180, 236, '>', 'g2', 'oo-tb', 'middle') +
-      row(240, '3', 'Ester', 'R1–C(=O)–O–R2', 'least', 'e', 'box');
+    /* formulas in the figure's text face (in a monospace face the letter O read as a zero); R numbers as subscripts, as slide 42 prints them */
+    const row = (y, name, form, note, k, cls) => R(10, y, 340, 34, 'rb' + k, cls) +
+      T(20, y + 14, name, 'rn' + k, 'oo-tb') + T(20, y + 28, form, 'rf' + k, 'oo-t') + T(342, y + 21, note, 'rt' + k, 'oo-ts', 'end');
+    const rows = row(136, 'Phosphoryl', 'R₁O–P(=O)(R₂)–OR₃', 'most', 'p', 'oo-act') + T(180, 184, '>', 'g1', 'oo-tb', 'middle') +
+      row(188, 'Carbamate', 'R₁–NH–C(=O)–O–R₂', 'intermediate', 'c', 'box') + T(180, 236, '>', 'g2', 'oo-tb', 'middle') +
+      row(240, 'Ester', 'R₁–C(=O)–O–R₂', 'least', 'e', 'box');
     const s3 = ach + arr + prod + block + up + head + rows;
 
-    const p1 = row(136, '1', 'Phosphoryl', 'R1O–P(=O)(R2)–OR3', 'most', 'p', 'oo-act');
+    const p1 = row(136, 'Phosphoryl', 'R₁O–P(=O)(R₂)–OR₃', 'most', 'p', 'oo-act');
     const echo = T(20, 190, 'Echothiophate iodide (an organophosphate):', 'ec1', 'oo-tb') +
-      R(10, 198, 140, 56, 'eb1') + T(80, 214, 'AChE–O–P(=O)', 'ef1', 'oo-f2', 'middle') + T(80, 229, '(OC₂H₅)₂', 'ef1b', 'oo-f2', 'middle') + T(80, 246, 'AChE inactive', 'ef2', 'oo-ts', 'middle') +
+      R(10, 198, 140, 56, 'eb1') + T(80, 214, 'AChE–O–P(=O)', 'ef1', 'oo-t', 'middle') + T(80, 229, '(OC₂H₅)₂', 'ef1b', 'oo-t', 'middle') + T(80, 246, 'AChE inactive', 'ef2', 'oo-ts', 'middle') +
       A('M152 226 L206 226', 'a2') + T(179, 218, 'H₂O', 'ag0', 'oo-k', 'middle') + T(179, 270, 'aging: loses', 'ag1', 'oo-k', 'middle') + T(179, 284, 'C₂H₅–OH', 'ag2', 'oo-k', 'middle') +
-      R(208, 198, 142, 56, 'eb2', 'oo-act') + T(279, 214, 'AChE–O–P(=O)', 'ef3', 'oo-f2', 'middle') + T(279, 229, '(OC₂H₅)OH', 'ef3b', 'oo-f2', 'middle') +
+      R(208, 198, 142, 56, 'eb2', 'oo-act') + T(279, 214, 'AChE–O–P(=O)', 'ef3', 'oo-t', 'middle') + T(279, 229, '(OC₂H₅)OH', 'ef3b', 'oo-t', 'middle') +
       T(279, 246, 'irreversibly inactive', 'ef4', 'oo-w', 'middle');
     const s4 = ach + arr + prod + block + up + head + p1 + echo;
 
@@ -385,24 +388,38 @@ const DIAGRAMS_OO = (() => {
     };
     const upper = zig(pv[0], 7, true, 'u');           // ends at C-1
     const c1 = upper.pts[upper.pts.length - 1];
-    const lower = zig(pv[1], 6, false, 'w');
-    const c15 = lower.pts[3];
+    /* the second line of an alkene, beside the bond p-q (slide 44: C5-C6 in every molecule drawn here; C13-C14 in PGF2α only) */
+    const alk = (p, q, k) => {
+      const dx = q[0] - p[0], dy = q[1] - p[1], n = Math.hypot(dx, dy), ox = -dy / n * 3.2, oy = dx / n * 3.2, m = t => [p[0] + dx * t + ox, p[1] + dy * t + oy];
+      return L(m(0.14), m(0.86), k);
+    };
+    const alk56 = alk(upper.pts[2], upper.pts[3], 'a56');
+    /* lower chain, slide 44: PGF2α runs C-13 to C-20 with an alkene at C13-C14; latanoprost has C-13 to C-17, no alkene there, and a phenyl ring on C-17 */
+    const lowerF = zig(pv[1], 8, false, 'w'), lowerL = zig(pv[1], 5, false, 'w');
+    const c15 = lowerF.pts[3], c17 = lowerL.pts[5];
+    const alk1314 = alk(lowerF.pts[1], lowerF.pts[2], 'a1314');
+    const phR = 17, phC = [c17[0], c17[1] + b + phR];
+    const ph = [90, 30, -30, -90, -150, 150].map(d => [phC[0] + phR * Math.cos(d * Math.PI / 180), phC[1] - phR * Math.sin(d * Math.PI / 180)]);
+    const phIn = (p, q, k) => { const m = t => [p[0] + (q[0] - p[0]) * t, p[1] + (q[1] - p[1]) * t], s = m(0.2), e = m(0.8), f = 0.22;
+      return L([s[0] + (phC[0] - s[0]) * f, s[1] + (phC[1] - s[1]) * f], [e[0] + (phC[0] - e[0]) * f, e[1] + (phC[1] - e[1]) * f], k); };
+    const phenyl = L(c17, ph[0], 'phb') + [0, 1, 2, 3, 4, 5].map(i => L(ph[i], ph[(i + 1) % 6], 'ph' + i)).join('') +
+      phIn(ph[0], ph[1], 'phd0') + phIn(ph[2], ph[3], 'phd2') + phIn(ph[4], ph[5], 'phd4');
     const oh15 = L(c15, [c15[0], c15[1] + 14], 'oh15b') + T(c15[0], c15[1] + 27, 'OH', 'oh15', 'oo-o', 'middle') +
       T(c15[0], c15[1] - 8, '15', 'n15', 'oo-num', 'middle');
-    const omega = T(lower.pts[6][0] + 6, lower.pts[6][1] + 4, 'alkyl or phenyl', 'om', 'oo-ts', 'start');
-    const skel = ring + ho + upper.svg + lower.svg + oh15 + omega;
+    const skelF = ring + ho + upper.svg + alk56 + lowerF.svg + alk1314 + oh15;      // PGF2α (slides 44, 46)
+    const skelL = ring + ho + upper.svg + alk56 + lowerL.svg + phenyl + oh15;       // latanoprost and its acid (slides 44, 45)
     const n1 = T(c1[0], c1[1] + 14, '1', 'n1', 'oo-num', 'middle');
     const end = (s, cls) => L(c1, [c1[0] + 12, c1[1] - 7], 'endb') + T(c1[0] + 14, c1[1] - 6, s, 'end', cls, 'start');
     const tag = (s, cls) => T(c1[0] + 14, c1[1] + 10, s, 'endt', cls, 'start');
 
-    const s1 = T(10, 30, 'PGF2α', 'nm', 'oo-tb') + skel + n1 + end('COOH', 'oo-o') + tag('acid', 'oo-ok') +
+    const s1 = T(10, 30, 'PGF2α', 'nm', 'oo-tb') + skelF + n1 + end('COOH', 'oo-o') + tag('acid', 'oo-ok') +
       Ls(10, 172, ['All the FP agonists ↑ fluid outflow by activating', 'the PGF (FP) receptor.', 'Key places: C-1 (the acid) and C-15 (the OH).'], 'd1');
-    const s2 = T(10, 30, 'Latanoprost (prodrug)', 'nm', 'oo-tb') + skel + n1 + end('COO–iPr', 'oo-o') + tag('isopropyl ester', 'oo-w') +
+    const s2 = T(10, 30, 'Latanoprost (prodrug)', 'nm', 'oo-tb') + skelL + n1 + end('COO–iPr', 'oo-o') + tag('isopropyl ester', 'oo-w') +
       Ls(10, 172, ['The C-1 acid is made an isopropyl ester: a prodrug.', 'Isopropyl esters also: travoprost, tafluprost;', 'latanoprostene bunod is an ester too.'], 'd2');
-    const s3 = T(10, 30, 'Latanoprost acid (active)', 'nm', 'oo-tb') + skel + n1 + end('COOH', 'oo-o') + tag('acid, active (esterase)', 'oo-ok') +
+    const s3 = T(10, 30, 'Latanoprost acid (active)', 'nm', 'oo-tb') + skelL + n1 + end('COOH', 'oo-o') + tag('acid, active (esterase)', 'oo-ok') +
       Ls(10, 172, ['An esterase hydrolyzes the ester back to the acid.', 'Slide 29 lists esterase among the', 'conjunctiva’s enzymes.'], 'd3');
-    const s4 = T(10, 30, 'SAR (slide 46)', 'nm', 'oo-tb') + skel + n1 + end('COOH / CONH–', 'oo-o') + tag('acid or amide: active', 'oo-ok') +
-      Ls(10, 172, ['Acids (–COOH) and amides (–CONH–) are active', 'drugs (bimatoprost is an amide); esters are', 'prodrugs. C-15: OH or halogens (tafluprost: two F)', 'prevent 15-OH oxidation.'], 'd4') +
+    const s4 = T(10, 30, 'SAR (structure-activity relationship; slide 46)', 'nm', 'oo-tb') + skelF + n1 + end('COOH / CONH–', 'oo-o') + tag('acid or amide: active', 'oo-ok') +
+      Ls(10, 172, ['Acids (–COOH) and amides (–CONH–) are active drugs', '(bimatoprost is an amide). Esters are prodrugs.', 'C-15: a halogen in place of the OH prevents oxidation', 'of the 15-OH to a ketone (tafluprost: two F).'], 'd4') +
       Ls(10, 236, ['Omidenepag isopropyl and netarsudil are ester', 'prodrugs needing esterase too (slides 47–48).'], 'd5', 'oo-ts');
 
     return ooStepper('oo-pg-prodrug', 'Prostaglandin FP agonists: ester prodrugs', [
@@ -440,7 +457,9 @@ const DIAGRAMS_OO = (() => {
       '.fig .oo-wax{fill:var(--warn-bg);stroke:var(--warn);stroke-width:1.2}' +
       '.fig .oo-bub{fill:none;stroke:var(--accent);stroke-width:1.4}' +
       '.fig .oo-lip{fill:var(--surface);stroke:var(--at-s);stroke-width:1.4}.fig .oo-hyd{fill:var(--surface);stroke:var(--at-n);stroke-width:1.4}' +
-      '.fig .oo-lyl{fill:var(--warn-bg);stroke:var(--warn);stroke-width:0.8}.fig .oo-lyw{fill:var(--accent-bg);stroke:var(--accent);stroke-width:0.8}',
+      '.fig .oo-lyl{fill:var(--warn-bg);stroke:var(--warn);stroke-width:0.8}.fig .oo-lyw{fill:var(--accent-bg);stroke:var(--accent);stroke-width:0.8}' +
+      /* a disc that hides the mark under it (oo-fluoride step 3: OH under F); it stays opaque when the narration fades the parts of a sentence already read */
+      '.fig .oo-keep{fill:var(--paper);stroke:none}figure.fig svg .oo-keep.dn-past{opacity:1!important}',
   };
 })();
 
@@ -450,7 +469,7 @@ const DIAGRAMS_OO_PURPOSE = {
   'oo-cerumen': 'Shows how carbamide peroxide releases hydrogen peroxide in the ear and how catalase turns it into oxygen bubbles, so you can explain how Debrox breaks up ear wax.',
   'oo-fluoride': 'Shows enamel’s hydroxyapatite turning into fluorapatite with fluoride, so you can say why fluoride protects against acid erosion and when too much causes fluorosis.',
   'oo-eye-entry': 'Shows the two routes an eye drop takes into the eye, the cornea and the conjunctiva, so you can predict the route from a drug’s lipophilicity and size.',
-  'oo-imidazoline': 'Builds the aryl imidazoline SAR and the three α2 agonists with their ClogP values, so you can link the linker atom to α1 or α2 activity and lipophilicity to brain entry.',
+  'oo-imidazoline': 'Builds the aryl imidazoline SAR (structure-activity relationship) and the three α2 agonists with their ClogP values, so you can link the linker atom to α1 or α2 activity and lipophilicity to brain entry.',
   'oo-ache': 'Shows how acetylcholinesterase inhibitors raise acetylcholine and how the ester, carbamate and phosphoryl groups rank, so you can name the group behind each extent of inhibition.',
   'oo-pg-prodrug': 'Shows latanoprost as an isopropyl ester prodrug activated by esterase to the acid, so you can tell an active prostaglandin agonist from a prodrug by its C-1 group.'
 };
