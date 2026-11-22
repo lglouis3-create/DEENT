@@ -407,7 +407,7 @@ const COURSE = {
           'tables_ui.js',
           // Quiz: "One at a time | All on one page" (course-level, Louis 2026-11-08, after his
           // Intro to Pharmacology drill's layout toggle; temporary until the kit has it)
-          'topic_list_ui.js',
+          'topic_list_ui.js', 'topicbar_ui.js',
           'gloss_ui.js',   // glossary.js entries marked cs:true (RARE) are glossed in their own case only (wraps the core's glossify)
           // "See it on the structure": annotated structure figures in the explanations of
           // Dr. Sikazwe's structure/SAR questions, shown after an answer (course-level, Louis
