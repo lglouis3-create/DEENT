@@ -20,13 +20,16 @@ LEC = SRC['meta']['lecture']
 
 # source key (question evidence) -> words for a target that has no quote
 QSRC = {
+    'lam-q': "her own practice questions", 'lam-q2': "her own cases and polls", 'lam-ex3': "she said it would be tested", 'lam-ex3b': "she said it would be tested",
+    'sik-q-ooo': "his own practice questions", 'sik-ex3': "a point he stressed", 'smith-hint-ex3': "her Exam 3 study hints", 'smith-ex3': "her Exam 3 remarks",
+    'smith-obj-eye': "her learning objectives", 'smith-eye-cue': "a point she stressed", 'smith-eye-room': "a question she put to the room",
     'patel-poll': "her in-class poll", 'patel-cue': "a point she stressed", 'patel-obj': "her learning objectives",
     'patel-room': "a question she put to the room", 'smith-hints': "her Exam 1 hints", 'smith-cue': "a point she stressed",
     'smith-poll': "her in-class poll", 'smith-recall': "a recalled exam question", 'smith-obj-pp': "her learning objectives",
     'smith-obj-pc': "her learning objectives", 'smith-obj-sun': "her learning objectives", 'smith-room': "a question she put to the room",
     'sik-poll': "his in-class poll", 'sik-cue': "a point he stressed", 'sik-room': "a question he put to the room",
 }
-WHO = {'patel': 'Dr. Patel', 'smith': 'Dr. Smith', 'sik': 'Dr. Sikazwe'}
+WHO = {'lam': 'Dr. Lam', 'patel': 'Dr. Patel', 'smith': 'Dr. Smith', 'sik': 'Dr. Sikazwe'}
 
 # cue words: (weight, pattern). A sentence is used only when it carries one.
 CUES = [
@@ -155,7 +158,7 @@ def why_for(e, tab):
         k = kinds[0]
         who = WHO.get(k.split('-')[0], 'The professor')
         n = e.get('qStars') or len(ev)
-        extra = f'; {n} starred practice question{"s" if n != 1 else ""} use it' if n else ''
+        extra = f'; {n} starred practice question{"s use" if n != 1 else " uses"} it' if n else ''
         return {'why': f"{who} flagged it ({QSRC.get(k, 'in class')}){extra}.", 'kind': 'questions'}
     n = e.get('qStars') or 0
     if n:

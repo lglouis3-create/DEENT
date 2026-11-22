@@ -1,6 +1,6 @@
 /* guide_drill_ui.js: the "Practice these" buttons of the Guides sections (course-level, 2026-11-15).
    A button with data-qids (question ids, space separated) and data-qlabel (for example "DPAW slide 20")
-   starts a drill of those questions, labelled "Dr. Sikazwe: <qlabel>", and the Back button returns to
+   starts a drill of those questions, labelled "Dr. Sikazwe: <qlabel>" (or the name in data-qwho), and the Back button returns to
    the Guides at the same place. Unknown ids are skipped; with none left, nothing happens. Nothing
    happens while a practice exam is running. Also gives the star after a block heading
    (".g2-star", written in the section markup) the role "img" so its label "Likely on the exam" is read.
@@ -32,7 +32,7 @@
       if (k) r.rfold = open;
     } catch (e) {}
     RET.push(r);
-    drillList(qs, 'Dr. Sikazwe: ' + lab);
+    drillList(qs, (btn.getAttribute('data-qwho') || 'Dr. Sikazwe') + ': ' + lab);
     backBtn();
   };
   document.addEventListener('click', e => {

@@ -8,6 +8,11 @@ characters.
 
 Every update adds its bullets here in the same commit that makes the change.
 
+## 2026-11-22 (Exam 3 stars for all three professors, fill-in-the-blank mechanisms)
+- Starred only, Exam 3: Guides, Reference and Tell apart now star Dr. Lam's and Dr. Sikazwe's material too.
+- New Guides page: Dr. Smith's fill-in-the-blank mechanisms, 23 blanks to type, the 13 most likely starred.
+- Three new typed blanks: carbonic anhydrase, the H1 receptor, and the protein cyclosporine binds.
+
 ## 2026-11-21 (Diseases for Exam 3, exam choice, plainer titles)
 - The 17 Exam 3 figures now have spoken step-by-step narration (Listen on each figure).
 - Long table cells in the Guides are now colour-coded cards and short lists.
