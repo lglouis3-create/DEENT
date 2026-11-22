@@ -20,7 +20,7 @@
    Check: node diagrams_ey_check.js (and stepper_test.js for the motion).
    ========================================================================== */
 const DIAGRAMS_EY_FA2 = (() => {
-  if (typeof stepper !== 'function' || typeof Anat === 'undefined' || !Anat.fa2 || !Anat.fa) return null;
+  if (typeof stepper !== 'function' || typeof Anat === 'undefined' || !Anat.fa2 || !Anat.fa || !Anat.full) return null;
   const fa = Anat.fa, fa2 = Anat.fa2, T = fa.T, TL = fa.TL, C = fa2.cls, E0 = fa2.eye, FL = fa2.eye.flows, A = fa2.eye.A;
   const lead = (x1, y1, x2, y2, k) => Anat.lead(x1, y1, x2, y2, k);
   const pl = (cx, cy, r, k) => Anat.pulse(cx, cy, r, k);
@@ -31,107 +31,191 @@ const DIAGRAMS_EY_FA2 = (() => {
   const NT = s => s.replace(/class="fx-(glow|pulse)/g, 'class="fa-nt fx-$1');
 
   /* ---------------------------------------------------------------------
+     The full, two-sided view (Anat.full, diagram_fx_full.js) carries ey-aqueous, ey-targets and
+     ey-angle since 2026-11-22 (Louis: "the full image of an eye would be better than half of it";
+     "we mention pupil and iris but may not have it labeled"). Round 2, the same day ("I just don't
+     want learner to feel overwhelmed in seeing everything. We can always make it bigger if needed"):
+       * a step shows only the labels its sentences use, plus Cornea, Iris, Pupil and Lens;
+       * the colour key is gone (the structures carry their own labels);
+       * the eye is drawn in one frame (LOC) in every full-eye step, labels in the gutter to its
+         right (round 3: it does not change place or size between steps);
+       * steps about drainage add, under it, an enlarged view of one angle (Anat.full.zoom), where the dashed and
+         the dotted arrow, the drug marks, the red bar and the bowed iris are large enough to follow;
+       * chips and cards have 8 units of padding and at least 10 units between blocks.
+     All label and leader coordinates below are panel coordinates. ey-cai keeps slide 15's half view.
+     --------------------------------------------------------------------- */
+  const FU = Anat.full, FF = FU.flows, FA = FU.A, MX = FU.mx, AZ = FU.zoom, ZF = AZ.flows, ZA = AZ.A;
+  const r1 = v => Math.round(v * 10) / 10;
+  /* one frame for the eye in every full-eye step of the three glaucoma figures, so it never changes place or size between steps (round 3) */
+  const LOC = {x: -85.8, y: -17.5, s: 0.92};
+  /* label places were first set for a frame {x: -56.7, y: -18, s: 0.85}; LX and LY carry them to LOC */
+  const LX = x => r1((x + 56.7) / 0.85 * LOC.s + LOC.x), LY = y => r1((y + 18) / 0.85 * LOC.s + LOC.y);
+  const HID = ['conj', 'pp', 'epi', 'sph', 'dil', 'vein'];
+  const EYE = (F, o = {}) => FU(Object.assign({}, o, F, {omit: HID.filter(id => !(o.show || []).includes(id)).concat(o.omit || [])}));
+  const PT = (F, a) => [r1(F.x + F.s * a[0]), r1(F.y + F.s * a[1])];                 /* a point of the eye in panel coordinates */
+  const PR = (F, a) => PT(F, [MX(a[0]), a[1]]);                                        /* its mirror image (right side) */
+  const FLOW = (F, d, k, o = {}) => FU.flow(d, k, Object.assign({}, o, F));
+  /* a label: text lines (11.5 units, 13 apart) and a leader through the given points; keys fu-<id>-t<i>, fu-<id>-l */
+  const LB = (id, lines, x, y, pts, o = {}) =>
+    lines.map((t, i) => T(x, y + i * 13, t, `fu-${id}-t${i}`, o.cls || 'fa-t', o.anchor || 'start')).join('') +
+    (pts ? `<path class="an-lead" data-k="fu-${id}-l" d="M${pts.map(p => r1(p[0]) + ' ' + r1(p[1])).join(' L')}"/>` : '');
+  /* chips and cards with 8 units of padding */
+  const chip8 = (x, y, w, lines, k, c, plain) => fa.R(x, y, w, lines.length * 13 + 12, 'c' + k, c ? 'fa-chk' + c : 'fa-chip', 5) +
+    lines.map((s, i) => T(x + 8, y + 17 + i * 13, s, 'c' + k + 't' + i, i === 0 && !plain ? (c ? 'fa-tk' + c : 'fa-tb') : 'fa-t')).join('');
+  const chipH = n => n * 13 + 12;
+  /* a chip placed on the drawing: an opaque backing first, so no line shows through it */
+  const chipB = (x, y, w, lines, k, c) => fa.R(x, y, w, lines.length * 13 + 12, 'c' + k + 'bk', 'fu-back', 5) + chip8(x, y, w, lines, k, c);
+  const card8 = (x, y, w, head, lines, k) => fa.R(x, y, w, 26 + lines.length * 13, 'k' + k, 'fa-card', 6) + T(x + 8, y + 17, head, 'k' + k + 'h', 'fa-k') +
+    lines.map((s, i) => T(x + 8, y + 31 + i * 13, s, 'k' + k + 't' + i, 'fa-t')).join('');
+  const cardH = n => 26 + n * 13;
+  const dot2 = (F, a, k, c, r) => { const p = PT(F, a), q = PR(F, a); return C.dot(p[0], p[1], k + 'L', c, r || 3.4) + C.dot(q[0], q[1], k + 'R', c, r || 3.4); };
+  const cld = (x1, y1, x2, y2, k, c) => C.lead(r1(x1), r1(y1), r1(x2), r1(y2), k, c);
+
+  /* ---- the eye's constant orientation labels, per frame ---- */
+  const cxL = PT(LOC, [FU.CX, 0])[0];
+  const CONST_LOC = (o = {}) => LB('cornea', ['Cornea'], LX(204), LY(36), [[LX(202), LY(39)], PR(LOC, [163, 80])]) +
+    LB('pupil', ['Pupil'], cxL, LY(88), [[cxL, LY(92)], [cxL, PT(LOC, [0, 172])[1]]], {anchor: 'middle'}) +
+    (o.bowed ? LB('iris', ['Iris'], PT(LOC, [152, 0])[0], PT(LOC, [0, 162])[1], null)
+      : LB('iris', ['Iris'], LX(95), LY(116), [[LX(104), LY(118)], [LX(104), PT(LOC, [0, 168])[1]]])) +
+    LB('lens', ['Lens'], cxL, LY(178), null, {anchor: 'middle'});
+  const AC_LOC = () => LB('ac', ['Anterior', 'chamber'], cxL, LY(58), null, {anchor: 'middle'});
+  /* labels under the eye, at its left: the ciliary body (the steps about production) */
+  const CB_LOW = () => LB('cbody', ['Ciliary body'], 8, 248, [[30, 238], PT(LOC, [136, 246])]);
+  const GX = 244;                                                   /* the gutter right of the locator eye */
+  const gLab = (id, lines, y0, to, o) => { const y = LY(y0); return LB(id, lines, GX, y, [[GX - 3, y - 4], to], o); };
+
+  /* ---- the angle zoom: panel, title, the ring on the locator's left angle and its leader ---- */
+  const ZX = 8, ZY = 240;
+  const zp = a => [ZX + a[0], ZY + a[1]];
+  const angL = PT(LOC, [124, 157.5]);
+  const ZOOM = (o = {}) => AZ(Object.assign({x: ZX, y: ZY}, o)) + T(ZX + 8, ZY + 15, 'The angle, zoomed', 'az-ttl', 'fa-k');
+  const ZLINK = (ring) => (ring === false ? '' : fa.ring(angL[0], angL[1], 13, 'az-ring')) + `<path class="an-lead" data-k="az-link" d="M${angL[0] - 10} ${angL[1] + 9} L${ZX + 6} ${ZY}"/>`;
+  const ZFRAME = AZ.frame({x: ZX, y: ZY});
+  const ZL = (id, lines, x, y, pts, o) => LB('az-' + id, lines, ZX + x, ZY + y, pts && pts.map(zp), o);
+  const zflow = (d, k, o = {}) => AZ.flow(d, k, Object.assign({x: ZX, y: ZY}, o));
+  const zdot = (a, k, c, r) => C.dot(ZX + a[0], ZY + a[1], k, c, r || 4.2);
+  const zLab = {
+    tm: () => ZL('tm', ['Trabecular', 'meshwork'], 250, 26, [[248, 30], [152, 74]]),
+    tmLow: () => ZL('tm', ['Trabecular', 'meshwork'], 238, 84, [[236, 86], [155, 84]]),
+    sc: () => ZL('sc', ['Schlemm’s', 'canal'], 8, 48, [[64, 56], [117.5, 81]]),
+    vein: () => ZL('vein', ['into blood', 'vessels'], 8, 96, [[62, 100], [100, 124]]),
+    sclera: () => ZL('sclera', ['Sclera'], 8, 130, [[48, 128], [109, 146]]),
+    uv: () => ZL('uv', ['Uveoscleral', 'route'], 8, 152, [[76, 154], [124, 160]], {cls: 'fa-tb'}),
+    iris: () => ZL('iris', ['Iris'], 312, 126, null),
+    irisB: () => ZL('iris', ['Iris'], 172, 98, null),
+    cornea: () => ZL('cornea', ['Cornea'], 136, 16, [[162, 19], [172, 32]]),
+    musc: () => ZL('musc', ['Ciliary muscle'], 252, 146, [[250, 143], [164, 148]]),
+  };
+
+  /* ---------------------------------------------------------------------
      1. ey-aqueous. Slides 14-16 (flow, the two routes, receptors and enzymes), 18, 22, 26 (inflow
      drugs), 32, 34, 37, 41 (outflow drugs); 11/13 T@25530-@33000, T@39934-@40600, T@43883-@53260;
-     11/17 T@24556-@36600. The eye is slide 15's; step 4 is slide 16's zoom.
+     11/17 T@24556-@36600. Parts and labels are slide 15's (and slide 14's pupil-to-angle flow);
+     step 4 is slide 16's zoom.
      --------------------------------------------------------------------- */
   const AQUEOUS = (() => {
-    const BY = 334, K = fa2.key();
-    const inFlow = o => fa.flow(FL.inflow, 'f-in', o);
-    const outFlow = o => fa.flow(FL.out, 'f-out', o);
-    const uvFlow = o => fa.flow(FL.uv, 'f-uv', Object.assign({drift: true}, o));
-    const mainTag = T(4, 224, 'MAIN route', 'mainT', 'fa-k') + lead(66, 220, 133, 224, 'mainL');
-    const uvTag = T(160, 318, 'Uveoscleral route', 'uvT', 'fa-tb') + T(160, 331, 'smaller route', 'minT', 'fa-k') + lead(158, 314, 144, 296, 'uvL');
+    const BY = 430;
+    const PC_LAB = () => gLab('pc', ['Posterior', 'chamber'], 78, PR(LOC, [176, 198]));
+    /* step 1: name the parts, a group per sentence: ciliary body and what lies with it (2), the angle (3, in the zoom), the flow (4) */
+    const s1 = EYE(LOC, {show: ['epi']}) + CONST_LOC() +
+      gLab('proc', ['Ciliary processes'], 140, PR(LOC, [147, 189])) + gLab('musc', ['Ciliary muscle'], 160, PR(LOC, [128, 214])) +
+      gLab('cbody', ['Ciliary body'], 180, PR(LOC, [141, 232])) + gLab('epi', ['Ciliary epithelium'], 200, PR(LOC, [142, 250])) +
+      FLOW(LOC, FF.inflow, 'f-in', {dim: true}) + AC_LOC() + PC_LAB() +
+      ZOOM() + ZLINK() + zLab.tm() + zLab.sc() + zLab.cornea() + zLab.sclera() + zLab.iris() + ZFRAME +
+      T(8, BY, 'The flow, in the slide’s words:', 'ptT', 'fa-k') +
+      chip8(8, BY + 8, 100, ['Posterior', 'chamber'], 'p1') + fa.arrow(`M110 ${BY + 27} L128 ${BY + 27}`, 'par1') +
+      chip8(130, BY + 8, 100, ['Anterior', 'chamber'], 'p2') + fa.arrow(`M232 ${BY + 27} L250 ${BY + 27}`, 'par2') +
+      chip8(252, BY + 8, 100, ['Trabecular', 'meshwork'], 'p3');
 
-    /* step 1: name the parts */
-    const parts = T(6, BY, 'The flow, in the slide’s words:', 'ptT', 'fa-k') +
-      fa.chip(6, 342, 104, ['Posterior', 'chamber'], 'p1') + fa.arrow('M111 359 L125 359', 'par1') +
-      fa.chip(126, 342, 104, ['Anterior', 'chamber'], 'p2') + fa.arrow('M231 359 L245 359', 'par2') +
-      fa.chip(246, 342, 108, ['Trabecular', 'meshwork'], 'p3');
-    const s1 = EP({omit: ['vein'], label: ['cornea', 'ac', 'iris', 'lens', 'pc', 'proc', 'epi', 'musc', 'pp', 'sclera', 'conj', 'tm', 'sc', 'flow']}) +
-      fa.flow(FL.inflow, 'f-in', {dim: true}) + K + parts;
-
-    /* step 2: inflow */
+    /* step 2: inflow; the eye stays where it is in every step */
     const chain = (() => {
-      const cy = 362;
-      return T(6, BY, 'INFLOW:', 'inT', 'fa-k') + T(62, BY, 'made all the time', 'alw', 'fa-t') +
-        fa.chip(6, cy - 24, 112, ['Ciliary body', 'epithelium makes', 'aqueous humor'], 'i1') +
-        fa.chip(138, cy - 17.5, 94, ['Posterior', 'chamber'], 'i2') + fa.chip(252, cy - 24, 102, ['Pupil, then', 'anterior', 'chamber'], 'i3') +
-        fa.arrow(`M119 ${cy} L137 ${cy}`, 'ar1') + fa.arrow(`M233 ${cy} L251 ${cy}`, 'ar2');
+      const y = 280, cy = y + 25.5;
+      return T(8, 272, 'INFLOW:', 'inT', 'fa-k') + T(64, 272, 'made all the time', 'alw', 'fa-t') +
+        chip8(8, y, 116, ['Ciliary body', 'epithelium makes', 'aqueous humor'], 'i1') +
+        chip8(144, y + 6.5, 90, ['Posterior', 'chamber'], 'i2') + chip8(254, y, 98, ['Pupil, then', 'anterior', 'chamber'], 'i3') +
+        fa.arrow(`M125 ${cy} L143 ${cy}`, 'ar1') + fa.arrow(`M235 ${cy} L253 ${cy}`, 'ar2');
     })();
-    const s2 = E({hi: ['cbody'], omit: ['vein'], dim: ['sclera', 'tm', 'sc', 'vein', 'musc', 'muscl'], label: ['cbody', 'pc', 'ac', 'cornea', 'lens', 'pupil', 'sclera']}) +
-      inFlow() + K + chain;
+    const s2 = EYE(LOC, {hi: ['cbody'], dim: ['sclera', 'tm', 'sc', 'musc', 'muscl']}) + CONST_LOC() + AC_LOC() + CB_LOW() + PC_LAB() + FLOW(LOC, FF.inflow, 'f-in') + chain;
 
-    /* step 3: outflow */
-    const outCards = T(6, BY, 'OUTFLOW:', 'outT', 'fa-k') +
-      fa.R(6, 339, 170, 58, 'oc1', 'fa-card') + T(13, 353, 'MAIN route', 'oc1h', 'fa-k') +
-      TL(13, 366, ['Trabecular meshwork,', 'then Schlemm’s canal,', 'blood vessels'], 'oc1t') +
-      fa.R(184, 339, 170, 58, 'oc2', 'fa-card') + T(191, 353, 'smaller route', 'oc2h', 'fa-k') +
-      TL(191, 366, ['Uveoscleral: between the', 'uvea and the sclera,', 'spreads into the tissues'], 'oc2t');
-    const uvea = T(218, 276, 'Uvea:', 'uvaH', 'fa-tb') + T(254, 276, 'ciliary body,', 'uvaA') + TL(218, 289, ['its attachments to the', 'lens, iris'], 'uvaB');
-    const s3 = E({dim: ['lens', 'iris', 'proc1', 'proc2', 'proc3', 'proc4', 'zon'], label: ['tm', 'sc', 'vein', 'sclera']}) +
-      inFlow({dim: true}) + outFlow() + uvFlow() + K + mainTag + uvTag + outCards + uvea;
+    /* step 3: outflow: the locator eye with both routes pale on both sides; the arrows move in the zoom */
+    const uvea = T(GX, LY(124), 'Uvea:', 'uvaH', 'fa-tb') + TL(GX, LY(124) + 13, ['ciliary body,', 'its attachments', 'to the lens,', 'iris'], 'uvaB');
+    const outCards = T(8, BY, 'OUTFLOW:', 'outT', 'fa-k') +
+      card8(8, BY + 8, 167, 'MAIN route', ['Trabecular meshwork,', 'then Schlemm’s canal,', 'blood vessels'], 'oc1') +
+      card8(185, BY + 8, 167, 'smaller route', ['Uveoscleral: between the', 'uvea and the sclera,', 'spreads into the tissues'], 'oc2');
+    const s3 = EYE(LOC, {dim: ['lens', 'proc1', 'proc2', 'proc3', 'zon']}) + CONST_LOC() +
+      FLOW(LOC, FF.tmOut, 'f-out', {dim: true}) + FLOW(LOC, FF.uv, 'f-uv', {dim: true}) + uvea +
+      ZOOM() + ZLINK() + zflow(ZF.tm, 'z-tm') + zflow(ZF.uv, 'z-uv', {drift: true}) +
+      zLab.tm() + zLab.sc() + zLab.vein() + zLab.sclera() + zLab.uv() + zLab.iris() + T(ZX + 262, ZY + 58, 'MAIN route', 'mainT', 'fa-k') + ZFRAME + outCards;
 
-    /* step 4: slide 16's zoom on a ciliary process */
-    const TO = {x: -31.2, y: 66.4, s: 0.4};
-    const cx = 240, cy = 222, R = 104;
+    /* step 4: slide 16's zoom on a ciliary process, taken from the right-hand ciliary body of a small copy of the eye */
+    const TO = {x: -10, y: 22, s: 0.42};
+    const cx = 240, cy = 190, R = 104;
     const Z = fa2.proc(cx, cy, R, {cls: {b: 2, a2: 3, ca: 4}, a1op: 0.45});
     const P = Z.pts;
-    const pr = E0.anchor('proc', TO), tmP = E0.anchor('tm', TO), irP = E0.anchor('irisEnd', TO);
-    const mini = E({omit: ['sc', 'vein', 'sclera'], x: TO.x, y: TO.y, s: TO.s});
-    const cone = `<path class="an-lead" data-k="zl1" d="M${pr[0]} ${pr[1]} L141 190"/><path class="an-lead" data-k="zl2" d="M${pr[0]} ${pr[1]} L222 120"/>`;
-    const m3 = T(6, 112, 'M3', 'm3a', 'fa-m3') + lead(20, 115, tmP[0] - 1, tmP[1] - 1, 'm3al') +
-      T(72, 108, 'M3', 'm3b', 'fa-m3') + lead(86, 111, irP[0] - 1, irP[1] - 3, 'm3bl');
+    const pr = PR(TO, FA.proc), tmP = PT(TO, FA.tm), irP = PT(TO, FA.irisEnd);
+    const mini = EYE(TO);
+    const cone = `<path class="an-lead" data-k="zl1" d="M${pr[0]} ${pr[1]} L155 130"/><path class="an-lead" data-k="zl2" d="M${pr[0]} ${pr[1]} L222 88"/>`;
+    const m3 = T(2, 76, 'M3', 'm3a', 'fa-m3') + lead(24, 76, tmP[0] - 1.5, tmP[1] - 2, 'm3al') +
+      T(85, 66, 'M3', 'm3b', 'fa-m3', 'middle') + lead(82, 69, irP[0] + 0.5, irP[1] - 2.5, 'm3bl');
     const zl = (k, c, x1, y1, x2, y2) => C.lead(x1, y1, x2, y2, k, c);
     const zoomLabels =
-      TL(4, 214, ['β receptor'], 'zb', 'fa-t fa-halo') + T(4, 227, 'β-blockers', 'zbc', 'fa-tk2 fa-halo') + zl('zbl', 2, 64, 211, P.beta[0] - 7, P.beta[1] + 2) +
-      T(4, 255, 'α1 receptor', 'za1', 'fa-ts fa-halo') + Anat.lead(64, 252, P.a1[0] - 6, P.a1[1] + 1, 'za1l') +
-      TL(4, 284, ['ciliary', 'blood supply'], 'zv', 'fa-t fa-halo') + Anat.lead(64, 286, 232, 268, 'zvl') +
-      T(4, 316, 'ciliary body', 'zcb', 'fa-t fa-halo') + Anat.lead(60, 313, 218, 290, 'zcbl') +
-      T(262, 96, 'α2 receptor', 'za2', 'fa-t fa-halo') + T(262, 109, 'α2 agonists', 'za2c', 'fa-tk3 fa-halo') + zl('za2l', 3, 268, 113, P.a2[0] + 2, P.a2[1] - 6) +
-      TL(274, 190, ['carbonic', 'anhydrase', '(CA)'], 'zca', 'fa-t fa-halo') + TL(274, 229, ['CA', 'inhibitors'], 'zcac', 'fa-tk4 fa-halo') + zl('zcal', 4, 280, 176, 280, 181);
-    const zrow = (i, head, txt, k) => T(13, 355 + i * 13, head, k + 'h', 'fa-k') + T(84, 355 + i * 13, txt, k + 't', 'fa-t');
-    const zband = T(6, BY, 'Also marked on slide 16:', 'zbT', 'fa-k') + fa.R(6, 340, 348, 50, 'zm', 'fa-card') +
+      TL(8, 182, ['β receptor'], 'zb', 'fa-t fa-halo') + T(8, 195, 'β-blockers', 'zbc', 'fa-tk2 fa-halo') + zl('zbl', 2, 74, 179, P.beta[0] - 7, P.beta[1] + 2) +
+      T(8, 226, 'α1 receptor', 'za1', 'fa-ts fa-halo') + Anat.lead(78, 223, P.a1[0] - 6, P.a1[1] + 1, 'za1l') +
+      TL(8, 256, ['ciliary', 'blood supply'], 'zv', 'fa-t fa-halo') + Anat.lead(74, 262, 232, 236, 'zvl') +
+      T(8, 298, 'ciliary body', 'zcb', 'fa-t fa-halo') + Anat.lead(80, 295, 218, 262, 'zcbl') +
+      T(262, 64, 'α2 receptor', 'za2', 'fa-t fa-halo') + T(262, 77, 'α2 agonists', 'za2c', 'fa-tk3 fa-halo') + zl('za2l', 3, 268, 81, P.a2[0] + 2, P.a2[1] - 6) +
+      TL(274, 158, ['carbonic', 'anhydrase', '(CA)'], 'zca', 'fa-t fa-halo') + TL(274, 197, ['CA', 'inhibitors'], 'zcac', 'fa-tk4 fa-halo') + zl('zcal', 4, 280, 144, 280, 149);
+    const zrow = (i, head, txt, k) => T(16, 351 + i * 15, head, k + 'h', 'fa-k') + T(88, 351 + i * 15, txt, k + 't', 'fa-t');
+    const zband = T(8, 324, 'Also marked on slide 16:', 'zbT', 'fa-k') + fa.R(8, 332, 344, 60, 'zm', 'fa-card') +
       zrow(0, 'M3', 'on the iris and the meshwork (step 6)', 'zm3') +
       zrow(1, 'β2', 'written beside the β receptor label', 'zq') +
       zrow(2, 'α1 receptor', 'not a target of these three classes', 'za1n');
-    const s4 = mini + cone + m3 + Z.svg + zoomLabels + K + zband;
+    const s4 = mini + cone + m3 + Z.svg + zoomLabels + zband;
 
-    /* steps 5-7: the drug classes on the eye */
-    const inDrugs = T(6, BY, '↓ INFLOW:', 'inD', 'fa-w') +
-      C.chip(6, 340, 108, ['β-blockers', 'block β', 'receptors'], 'bb', 2) + C.chip(126, 340, 108, ['α2 agonists', 'act on α2', 'receptors'], 'a2', 3) +
-      C.chip(246, 340, 108, ['CA inhibitors', 'block carbonic', 'anhydrase'], 'ca', 4);
-    const tmDrugs = T(6, BY, '↑ OUTFLOW:', 'tmD', 'fa-w') +
-      C.chip(6, 340, 220, ['M3 agonists', 'echothiophate:', 'contract the sphincter muscle', 'and the meshwork'], 'm3', 5) + T(85, 354.5, '(carbachol, pilocarpine),', 'cm3n', 'fa-t') +
-      C.chip(234, 340, 120, ['netarsudil:', 'less stiff', 'meshwork'], 'rk', 6);
-    const sphL = T(322, 142, 'Sphincter muscle', 'sphT', 'fa-t', 'end') + T(322, 155, '(iris)', 'sphT2', 'fa-t', 'end') + lead(314, 158, 316, 174, 'sphL');
-    const uvDrugs = T(6, BY, '↑ OUTFLOW:', 'uvD', 'fa-w') +
-      C.chip(6, 340, 176, ['Prostaglandin (PG) agonists:', 'relax the ciliary muscle', '(PGF2α receptor)'], 'pg', 1) +
-      C.chip(190, 340, 164, ['brimonidine:', 'adds some uveoscleral', 'outflow'], 'br', 3);
+    /* steps 5-7: the drug classes */
+    const inDrugs = T(8, 272, '↓ INFLOW:', 'inD', 'fa-w') +
+      chip8(8, 280, 108, ['β-blockers', 'block β', 'receptors'], 'bb', 2) + chip8(126, 280, 108, ['α2 agonists', 'act on α2', 'receptors'], 'a2', 3) +
+      chip8(244, 280, 108, ['CA inhibitors', 'block carbonic', 'anhydrase'], 'ca', 4);
+    const prB = PT(LOC, FA.proc);
+    const s5 = EYE(LOC, {hi: ['cbody'], dim: ['sclera', 'tm', 'sc', 'musc', 'muscl']}) + CONST_LOC() + CB_LOW() +
+      FLOW(LOC, FF.inflow, 'f-in', {slow: true}) + pl(prB[0], prB[1], 18, 'pl1') + inDrugs;
+
+    const tmDrugs = T(8, BY, '↑ OUTFLOW:', 'tmD', 'fa-w') +
+      chip8(8, BY + 8, 222, ['M3 agonists', 'echothiophate:', 'contract the sphincter muscle', 'and the meshwork'], 'm3', 5) + T(89, BY + 25, '(carbachol, pilocarpine),', 'cm3n', 'fa-t') +
+      chip8(240, BY + 8, 112, ['netarsudil:', 'less stiff', 'meshwork'], 'rk', 6);
+    const sphR = PR(LOC, [195, 173]);
+    const sphLab = LB('sph', ['Sphincter muscle', '(iris)'], GX, LY(120), [[GX - 3, LY(120) + 4], [sphR[0] + 5, sphR[1]]]);
+    const ztm = zp(ZA.tm);
+    const s6 = EYE(LOC, {show: ['sph'], dim: ['cbody', 'musc', 'muscl', 'lens', 'proc1', 'proc2', 'proc3', 'zon']}) + CONST_LOC() +
+      FLOW(LOC, FF.tmOut, 'f-out', {dim: true}) + sphLab +
+      ZOOM({dim: ['cbody', 'musc', 'muscl', 'proc']}) + ZLINK() + zflow(ZF.tm, 'z-tm') + pl(ztm[0], ztm[1], 22, 'pl2') + zLab.tm() + zLab.sc() + zLab.iris() + ZFRAME + tmDrugs;
+
+    const uvDrugs = T(8, BY, '↑ OUTFLOW:', 'uvD', 'fa-w') +
+      chip8(8, BY + 8, 192, ['Prostaglandin (PG) agonists:', 'relax the ciliary muscle', '(PGF2α receptor)'], 'pg', 1) +
+      chip8(210, BY + 8, 142, ['brimonidine:', 'adds some', 'uveoscleral outflow'], 'br', 3);
     /* step 7, sentences 5-7: the three groups in one place (as ey-targets step 4) */
-    const sumAll = fa.R(6, 392, 348, 58, 'smc', 'fa-card') +
-      T(13, 406, '↓ INFLOW:', 'sm1h', 'fa-w') + T(92, 406, 'β-blockers, α2 agonists, CA inhibitors', 'sm1', 'fa-t') +
-      T(13, 419, '↑ OUTFLOW:', 'sm2h', 'fa-w') + T(92, 419, 'trabecular: M3 agonists, echothiophate,', 'sm2a', 'fa-t') + T(92, 432, 'netarsudil', 'sm2b', 'fa-t') +
-      T(92, 445, 'uveoscleral: PG agonists', 'sm3', 'fa-t');
-
-    const s5 = E({hi: ['cbody'], omit: ['vein'], dim: ['sclera', 'tm', 'sc', 'vein', 'musc', 'muscl'], label: ['cbody', 'pc']}) +
-      inFlow() + pl(222, 205, 22, 'pl1') + K + inDrugs;
-    const s6 = E({hiS: ['tm', 'sc'], dim: ['cbody', 'musc', 'muscl', 'lens', 'iris', 'proc1', 'proc2', 'proc3', 'proc4', 'zon'], label: ['tm', 'sc']}) +
-      inFlow() + outFlow() + pl(181, 151, 20, 'pl2') + K + tmDrugs + sphL;
-    const s7 = E({hi: ['musc'], omit: ['vein'], dim: ['tm', 'sc', 'vein', 'lens', 'iris', 'proc1', 'proc2', 'proc3', 'proc4', 'zon'], label: ['musc'], lab: {musc: {at: [4, 214], to: [166, 214], from: [80, 211]}}}) +
-      inFlow({dim: true}) + uvFlow() + pl(182, 222, 28, 'pl3') + K + uvTag + uvDrugs + sumAll;
+    const SY = BY + 8 + chipH(3) + 12;
+    const sumAll = fa.R(8, SY, 344, 68, 'smc', 'fa-card') +
+      T(16, SY + 17, '↓ INFLOW:', 'sm1h', 'fa-w') + T(96, SY + 17, 'β-blockers, α2 agonists, CA inhibitors', 'sm1', 'fa-t') +
+      T(16, SY + 32, '↑ OUTFLOW:', 'sm2h', 'fa-w') + T(96, SY + 32, 'trabecular: M3 agonists, echothiophate,', 'sm2a', 'fa-t') + T(96, SY + 45, 'netarsudil', 'sm2b', 'fa-t') +
+      T(96, SY + 60, 'uveoscleral: PG agonists', 'sm3', 'fa-t');
+    const zmu = zp(ZA.musc);
+    const s7 = EYE(LOC, {dim: ['tm', 'sc', 'lens', 'proc1', 'proc2', 'proc3', 'zon']}) + CONST_LOC() + FLOW(LOC, FF.uv, 'f-uv', {dim: true}) +
+      ZOOM({hi: ['musc'], dim: ['tm', 'sc', 'vein']}) + ZLINK() + zflow(ZF.uv, 'z-uv', {drift: true}) + pl(zmu[0], zmu[1], 15, 'pl3') +
+      zLab.musc() + zLab.sclera() + zLab.uv() + zLab.iris() + ZFRAME + uvDrugs + sumAll;
     return fa.stepper('ey-aqueous', 'Aqueous humor: inflow and outflow', [
-      ['The parts of the flow pathway, labelled as on slide 15; the colours in the key stay the same in every step (slides 14–15).', NT(s1)],
+      ['The parts of the flow pathway, labelled as on slide 15, a group at a time; the angle is shown enlarged (slides 14–15).', NT(s1)],
       ['Inflow: the ciliary body makes aqueous humor all the time; it flows through the pupil into the anterior chamber (slides 14–15; 11/13 T@25530).', NT(s2)],
       ['Outflow: most drains through the trabecular meshwork and Schlemm’s canal; some by the uveoscleral route (slides 14–16; 11/13 T@32688).', NT(s3)],
       ['Slide 16 zooms on a ciliary process: β-blockers act on the β receptor, α2 agonists on the α2 receptor, CA inhibitors on the enzyme (slides 16, 18, 22, 26).', NT(s4)],
       ['Drugs that decrease inflow act on the ciliary body: β-blockers, α2 agonists and carbonic anhydrase inhibitors (slides 16, 18, 22, 26; 11/13 T@39934).', NT(s5)],
       ['Trabecular outflow up: M3 agonists and echothiophate contract the sphincter and meshwork; netarsudil makes it less stiff (slides 32, 34, 41; 11/17 T@24556).', NT(s6)],
       ['Uveoscleral outflow rises: PG agonists relax the ciliary muscle (also some trabecular); brimonidine adds some (slides 22, 37; 11/17 T@31096).', NT(s7)],
-    ], 508, 'Drawn after Dr. Smith’s Smith_Eye_Glaucoma_AllergicConj_DryEye.pdf slides 14–16, 18, 22, 26, 32, 34, 37 and 41; lectures 11/13, ' +
-      'T@19333 and T@28180 (inflow is production, outflow is drainage), T@43883–@60121, and 11/17, T@23400–@36600. The eye is redrawn from slide 15 (labels: cornea, ' +
-      'trabecular meshwork, Schlemm’s canal, conjunctiva, anterior chamber, aqueous flow, iris, lens, sclera, pars plana, posterior chamber, ciliary processes, ciliary muscle, ' +
-      'ciliary epithelium); step 4 from slide 16 (β receptor with a β2 mark, α2 receptor, α1 receptor, carbonic anhydrase, ciliary blood supply, M3 marks). β-blockers: “not much effect on ' +
+    ], 632, 'Drawn after Dr. Smith’s Smith_Eye_Glaucoma_AllergicConj_DryEye.pdf slides 14–16, 18, 22, 26, 32, 34, 37 and 41; lectures 11/13, ' +
+      'T@19333 and T@28180 (inflow is production, outflow is drainage), T@43883–@60121, and 11/17, T@23400–@36600. The eye is an original schematic of the whole front of the eye, both sides ' +
+      '(slide 14 shows both sides, slide 15 one), and the enlarged angle is drawn the same way; the parts labelled are those of slide 15 that the narration names (cornea, ' +
+      'trabecular meshwork, Schlemm’s canal, anterior chamber, iris, lens, sclera, posterior chamber, ciliary processes, ciliary muscle, ' +
+      'ciliary epithelium), with the pupil named as in the lecture; slide 15’s conjunctiva and pars plana are not drawn. Step 4 is from slide 16 (β receptor with a β2 mark, α2 receptor, α1 receptor, carbonic anhydrase, ciliary blood supply, M3 marks). β-blockers: “not much effect on ' +
       'outflow; MOA not fully understood” (slide 18). PG agonists “do not affect aqueous humor production” (slide 37). Netarsudil inhibits Rho kinase: less ' +
       'contractile tone and fewer fibrosis-related protein deposits in the meshwork, and a change in the permeability of the cells lining Schlemm’s canal (slide 41).');
   })();
@@ -143,52 +227,61 @@ const DIAGRAMS_EY_FA2 = (() => {
      circled), 32 and 34 (M3 agonists and AChE inhibitors: the sphincter muscle and the trabecular
      meshwork, both circled as M3), 37 (PG agonists: the PGF2α receptor on the ciliary muscle),
      41 (Rho kinase inhibitor: the meshwork and the lining of Schlemm's canal);
-     11/13 T@39934; 11/17 T@24556, T@31096.
+     11/13 T@39934; 11/17 T@24556, T@31096. Inflow marks are on the ciliary processes of the eye
+     (both sides); the marks at the angle are in the zoom.
      --------------------------------------------------------------------- */
   const TARGETS = (() => {
-    const BY = 346;
-    const eyeT = (o = {}) => E(o);
-    const D = (x, y, k, c, r) => C.dot(x, y, k, c, r || 4.2);
-    const ld = (x1, y1, x2, y2, k, c) => C.lead(x1, y1, x2, y2, k, c);
-    /* inflow classes: three dots on the ciliary processes, three chips in a row under the eye */
-    const pD = [A.p1, A.p2, A.p3];
-    const inChip = (x, w, name, k, c, i) => C.chip(x, 308, w, [name], k, c) + ld(x + w / 2, 308, pD[i][0], pD[i][1], 'l' + k, c);
-    const inflowMarks = D(pD[0][0], pD[0][1], 'd-b', 2) + D(pD[1][0], pD[1][1], 'd-a', 3) + D(pD[2][0], pD[2][1], 'd-c', 4) +
-      inChip(62, 92, 'β-blockers', 'xb', 2, 0) + inChip(162, 92, 'α2 agonists', 'xa', 3, 1) + inChip(262, 94, 'CA inhibitors', 'xc', 4, 2);
-    const inBand = T(6, BY, '↓ INFLOW:', 'ibT', 'fa-w') + T(70, BY, 'each lowers aqueous humor production', 'ibU', 'fa-t') +
-      C.chip(6, 354, 108, ['β-blockers', 'block β', 'receptors'], 'bb', 2) + C.chip(126, 354, 108, ['α2 agonists', 'act on α2', 'receptors'], 'a2', 3) +
-      C.chip(246, 354, 108, ['CA inhibitors', 'block carbonic', 'anhydrase (CA)'], 'ca', 4);
-    /* trabecular classes: two chips in the anterior chamber, marks on the sphincter end of the iris, the meshwork and the canal */
-    const tmMarks = D(181, 143, 'd-m3t', 5) + D(A.irisEnd[0], A.irisEnd[1], 'd-m3i', 5) + D(178, 161, 'd-rkt', 6) + D(A.sc[0], A.sc[1], 'd-rks', 6);
-    const acChips = C.chip(4, 150, 100, ['Rho kinase', 'inhibitor'], 'rk', 6) + C.chip(240, 92, 104, ['M3 agonists,', 'echothiophate'], 'm3', 5) +
-      ld(104, 158, A.sc[0] - 4.5, A.sc[1] + 1, 'lrks', 6) + ld(104, 178, 174, 163, 'lrkt', 6) +
-      ld(240, 112, 185, 144, 'lm3t', 5) + ld(338, 126, A.irisEnd[0] + 2, A.irisEnd[1] - 4, 'lm3i', 5);
-    const sphL = T(318, 138, 'Sphincter muscle', 'sphT', 'fa-t', 'end') + T(318, 151, '(iris)', 'sphT2', 'fa-t', 'end') + lead(310, 154, 312, 173, 'sphL');
-    const trBand = T(6, BY, '↑ OUTFLOW, trabecular route:', 'trT', 'fa-w') +
-      C.chip(6, 354, 170, ['M3 agonists, echothiophate:', 'contract the sphincter muscle', 'and the meshwork'], 'xm3', 5) +
-      C.chip(184, 354, 170, ['netarsudil: less stiff', 'meshwork; changes the', 'canal lining’s permeability'], 'xrk', 6);
-    /* uveoscleral classes */
-    const uvMarks = D(186, 240, 'd-pg', 1) + D(168, 262, 'd-uv', 3);
-    const uvChips = C.chip(4, 196, 112, ['PG agonists', 'PGF2α receptor,', 'ciliary muscle'], 'pg', 1) + ld(116, 226, 182, 239, 'lpg', 1) +
-      C.chip(4, 254, 112, ['α2 agonists', 'brimonidine: some', 'uveoscleral'], 'br', 3) + ld(116, 274, 165, 264, 'lbr', 3);
-    const uvBand = T(6, BY, '↑ OUTFLOW, uveoscleral route:', 'uvT2', 'fa-w') +
-      C.chip(6, 354, 176, ['Prostaglandin (PG) agonists:', 'relax the ciliary muscle', '(PGF2α receptor)'], 'xpg', 1) +
-      C.chip(190, 354, 164, ['brimonidine (α2 agonist):', 'some increase in', 'uveoscleral outflow'], 'xbr', 3);
-    const allBand = T(6, BY, '↓ INFLOW:', 'ab1h', 'fa-w') + T(74, BY, 'β-blockers, α2 agonists,', 'ab1a', 'fa-t') + T(74, BY + 13, 'CA inhibitors (ciliary body)', 'ab1b', 'fa-t') +
-      T(6, BY + 30, '↑ OUTFLOW:', 'ab2h', 'fa-w') + T(90, BY + 30, 'trabecular route: M3 agonists,', 'ab2a', 'fa-t') + T(90, BY + 43, 'echothiophate, netarsudil', 'ab2b', 'fa-t') +
-      T(90, BY + 60, 'uveoscleral route: PG agonists,', 'ab3a', 'fa-t') + T(90, BY + 73, 'brimonidine', 'ab3b', 'fa-t');
-
-    const s1 = eyeT({hi: ['cbody'], omit: ['vein'], dim: ['sclera', 'tm', 'sc', 'musc', 'muscl'], label: ['cbody', 'cornea', 'lens']}) + inflowMarks + pl(220, 201, 20, 'pl1') + inBand;
-    const s2 = eyeT({hiS: ['tm', 'sc'], omit: ['vein'], dim: ['cbody', 'musc', 'muscl', 'proc1', 'proc2', 'proc3', 'proc4', 'zon'], label: ['tm', 'sc', 'cornea', 'lens']}) + acChips + tmMarks + pl(181, 151, 18, 'pl2') + trBand + sphL;
-    const s3 = eyeT({hi: ['musc'], omit: ['vein'], dim: ['tm', 'sc', 'lens', 'iris', 'proc1', 'proc2', 'proc3', 'proc4', 'zon'], label: ['cornea', 'lens']}) +
-      fa.flow(FL.uv, 'f-uv', {drift: true}) + uvMarks + uvChips + T(150, 324, 'Uveoscleral route', 'uvT', 'fa-tb') + lead(160, 318, 146, 298, 'uvL') + pl(186, 240, 26, 'pl3') + uvBand;
-    const s4 = eyeT({omit: ['vein'], dim: [], label: ['tm', 'sc', 'cornea', 'lens']}) + inflowMarks + tmMarks + acChips + uvMarks + uvChips + allBand + sphL;
+    const BY = 430;
+    const pD = [FA.p1, FA.p2, FA.p3];
+    const inDots = F => dot2(F, pD[0], 'd-b', 2, 3.4) + dot2(F, pD[1], 'd-a', 3, 3.4) + dot2(F, pD[2], 'd-c', 4, 3.4);
+    /* a class chip in the gutter with a leader to its mark on a ciliary process of the right side (steps 1 and 4: the same chips in the same place) */
+    const r1p = PR(LOC, pD[0]), r2p = PR(LOC, pD[1]), r3p = PR(LOC, pD[2]);
+    const gChip = (y0, name, k, c, p) => { const y = LY(y0); return chip8(GX - 2, y, 96, [name], k, c) + cld(GX - 2, y + 12.5, p[0] + 3.6, p[1] + 0.4, 'l' + k, c); };
+    const inChips = gChip(124, 'β-blockers', 'xb', 2, r1p) + gChip(159, 'α2 agonists', 'xa', 3, r2p) + gChip(194, 'CA inhibitors', 'xc', 4, r3p);
+    /* step 1: three marks on the ciliary processes, a chip for each; what each does is written under the eye */
+    const s1 = EYE(LOC, {hi: ['cbody'], dim: ['sclera', 'tm', 'sc', 'musc', 'muscl']}) + CONST_LOC() + CB_LOW() + inDots(LOC) + inChips +
+      pl(PT(LOC, FA.proc)[0], PT(LOC, FA.proc)[1], 18, 'pl1') + T(8, 272, '↓ INFLOW:', 'ibT', 'fa-w') +
+      chip8(8, 280, 108, ['β-blockers', 'block β', 'receptors'], 'bb', 2) + chip8(126, 280, 108, ['α2 agonists', 'act on α2', 'receptors'], 'a2', 3) +
+      chip8(244, 280, 108, ['CA inhibitors', 'block carbonic', 'anhydrase (CA)'], 'ca', 4) +
+      T(8, 280 + chipH(3) + 20, 'Each lowers aqueous humor production', 'ibU', 'fa-t');
+    /* the marks in the zoom */
+    const zm3 = zdot(ZA.tmU, 'z-m3', 5), zrkT = zdot(ZA.tmL, 'z-rkt', 6), zrkS = zdot(ZA.sc, 'z-rks', 6, 3.8), zpg = zdot(ZA.musc, 'z-pg', 1), zuv = zdot(ZA.uv, 'z-uv-d', 3);
+    const m3Chip = chipB(ZX + 240, ZY + 22, 98, ['M3 agonists,', 'echothiophate'], 'm3', 5) + cld(ZX + 240, ZY + 52, ZX + ZA.tmU[0] + 3.6, ZY + ZA.tmU[1] - 1.6, 'lm3t', 5);
+    const rkChip = chipB(ZX + 8, ZY + 92, 86, ['Rho kinase', 'inhibitor'], 'rk', 6) +
+      cld(ZX + 94, ZY + 100, ZX + ZA.sc[0] - 2.6, ZY + ZA.sc[1] + 2.8, 'lrks', 6) + cld(ZX + 94, ZY + 118, ZX + ZA.tmL[0] - 3.6, ZY + ZA.tmL[1] + 2.2, 'lrkt', 6);
+    const sphDots = dot2(LOC, FA.irisEnd, 'd-m3i', 5, 3.2);
+    const sphR = PR(LOC, FA.irisEnd);
+    const sphLab = y0 => { const y = LY(y0); return LB('sph', ['Sphincter muscle', '(iris)'], GX, y, [[GX - 3, y + 4], [sphR[0] + 4, sphR[1] - 0.5]]); };
+    const trBand = T(8, BY, '↑ OUTFLOW, trabecular route:', 'trT', 'fa-w') +
+      chip8(8, BY + 8, 167, ['M3 agonists,', 'echothiophate:', 'contract the sphincter', 'muscle and the meshwork'], 'xm3', 5) +
+      chip8(185, BY + 8, 167, ['netarsudil: less stiff', 'meshwork; changes the', 'canal lining’s permeability'], 'xrk', 6);
+    const ztm = zp(ZA.tm), zmu = zp(ZA.musc);
+    const s2 = EYE(LOC, {dim: ['cbody', 'musc', 'muscl', 'proc1', 'proc2', 'proc3', 'zon']}) + CONST_LOC() + sphDots + sphLab(120) +
+      ZOOM({dim: ['cbody', 'musc', 'muscl', 'proc']}) + ZLINK() + zLab.tmLow() + zLab.sc() + zLab.iris() + zm3 + zrkT + zrkS + m3Chip + rkChip + pl(ztm[0], ztm[1], 24, 'pl2') + ZFRAME + trBand;
+    /* the PG chip sits in the anterior chamber of the zoom (fluid only under it); its leader crosses the iris to the mark on the ciliary muscle */
+    const pgChip = chipB(ZX + 228, ZY + 24, 110, ['PG agonists', 'PGF2α receptor,', 'ciliary muscle'], 'pg', 1) + cld(ZX + 228, ZY + 66, ZX + ZA.musc[0] + 3.4, ZY + ZA.musc[1] - 2.6, 'lpg', 1);
+    const brChip = chipB(ZX + 8, ZY + 30, 86, ['α2 agonists', 'brimonidine:', 'some', 'uveoscleral'], 'br', 3) + cld(ZX + 94, ZY + 92, ZX + ZA.uv[0] - 2.4, ZY + ZA.uv[1] - 3.6, 'lbr', 3);
+    const uvBand = T(8, BY, '↑ OUTFLOW, uveoscleral route:', 'uvT2', 'fa-w') +
+      chip8(8, BY + 8, 167, ['Prostaglandin (PG)', 'agonists: relax the ciliary', 'muscle (PGF2α receptor)'], 'xpg', 1) +
+      chip8(185, BY + 8, 167, ['brimonidine (α2 agonist):', 'some increase in', 'uveoscleral outflow'], 'xbr', 3);
+    const s3 = EYE(LOC, {dim: ['tm', 'sc', 'lens', 'proc1', 'proc2', 'proc3', 'zon']}) + CONST_LOC() + FLOW(LOC, FF.uv, 'f-uv', {dim: true}) +
+      ZOOM({hi: ['musc'], dim: ['tm', 'sc', 'vein']}) + ZLINK() + zflow(ZF.uvShort, 'z-uv', {drift: true}) + zLab.uv() + zLab.iris() + zpg + zuv + pgChip + brChip + pl(zmu[0], zmu[1], 15, 'pl3') + ZFRAME + uvBand;
+    /* step 4: every class: inflow on the eye (chips in the gutter), outflow in the zoom */
+    const allBand = T(8, BY, '↓ INFLOW:', 'ab1h', 'fa-w') + T(76, BY, 'β-blockers, α2 agonists,', 'ab1a', 'fa-t') + T(76, BY + 13, 'CA inhibitors (ciliary body)', 'ab1b', 'fa-t') +
+      T(8, BY + 34, '↑ OUTFLOW:', 'ab2h', 'fa-w') + T(92, BY + 34, 'trabecular route: M3 agonists,', 'ab2a', 'fa-t') + T(92, BY + 47, 'echothiophate, netarsudil', 'ab2b', 'fa-t') +
+      T(92, BY + 68, 'uveoscleral route: PG agonists,', 'ab3a', 'fa-t') + T(92, BY + 81, 'brimonidine', 'ab3b', 'fa-t');
+    const s4 = EYE(LOC) + CONST_LOC() + inDots(LOC) + sphDots + sphLab(92) +
+      inChips +
+      ZOOM() + ZLINK() + zm3 + zrkT + zrkS + zpg + zuv + m3Chip + rkChip + zLab.iris() +
+      chipB(ZX + 240, ZY + 142, 98, ['PG agonists'], 'pg4', 1) + cld(ZX + 240, ZY + 155, ZX + ZA.musc[0] + 4.2, ZY + ZA.musc[1] + 0.4, 'lpg4', 1) +
+      chipB(ZX + 8, ZY + 142, 86, ['brimonidine'], 'br4', 3) + cld(ZX + 94, ZY + 155, ZX + ZA.uv[0] - 4.2, ZY + ZA.uv[1] + 0.2, 'lbr4', 3) + ZFRAME + allBand;
     return fa.stepper('ey-targets', 'Where each glaucoma drug class acts', [
       ['Inflow reducers act on the ciliary body: β-blockers on the β receptor, α2 agonists on the α2 receptor, CA inhibitors on the enzyme (slides 18, 22, 26).', NT(s1)],
       ['Trabecular route: M3 agonists and echothiophate act on the sphincter muscle and the meshwork; netarsudil on the meshwork and the canal (slides 32, 34, 41).', NT(s2)],
       ['Uveoscleral route: PG agonists act at the PGF2α receptor on the ciliary muscle; brimonidine adds some uveoscleral outflow (slides 22, 37; 11/17 T@31096).', NT(s3)],
       ['All the classes on one eye, one colour each: three lower inflow, three raise outflow by the routes shown (slides 18, 22, 26, 32, 34, 37, 41).', NT(s4)],
-    ], 484, 'Drawn after Dr. Smith’s Smith_Eye_Glaucoma_AllergicConj_DryEye.pdf slides 15, 18, 22, 26, 32, 34, 37 and 41: the eye of slide 15; sites as the drug slides mark them (slide 18 β receptor on the ciliary body; ' +
+    ], 586, 'Drawn after Dr. Smith’s Smith_Eye_Glaucoma_AllergicConj_DryEye.pdf slides 15, 18, 22, 26, 32, 34, 37 and 41: an original schematic of the whole front of the eye (both sides) with slide 15’s parts, and one angle enlarged; ' +
+      'sites as the drug slides mark them (slide 18 β receptor on the ciliary body; ' +
       'slide 22 α2 receptors on the ciliary body, “binds to the uveoscleral” and some uveoscleral increase with brimonidine; slide 26 carbonic anhydrase; slides 32 and 34 M3 on the ' +
       'sphincter muscle and the trabecular meshwork; slide 37 PGF2α receptor and the ciliary muscle; slide 41 Rho kinase: meshwork stiffness and the endothelial lining of Schlemm’s canal). ' +
       'Lectures 11/13, T@39934–@40600 (inflow and outflow drugs), and 11/17, T@24556 (meshwork) and T@31096 (PGF2α receptor, ciliary muscle, uveoscleral outflow). ' +
@@ -197,58 +290,43 @@ const DIAGRAMS_EY_FA2 = (() => {
 
   /* ---------------------------------------------------------------------
      3. ey-angle: open-angle vs angle-closure glaucoma. Slides 13-14 (panels A-C); 11/13 T@19603-@20900,
-     T@23500-@26600, T@28606-@29351. The picture is slide 14: the eye cut front to back, an angle on
-     each side; panel B (left angle) and panel C (right angle) as the slide draws them.
+     T@23500-@26600, T@28606-@29351. The whole front of the eye as the locator, both angles circled,
+     and one angle enlarged: panel A (normal), panel B (the meshwork resists) and panel C (the iris
+     bowed forward onto the meshwork).
      --------------------------------------------------------------------- */
   const ANGLE = (() => {
-    const F = fa2.domeFlows, p = fa2.dp, df = fa2.dflow;
-    const ringL = fa.ring(...p(76, 156), 15, 'ringL'), ringR = fa.ring(...p(284, 156), 15, 'ringR');
-    const tmL = p(76, 156), tmR = p(284, 156);
-    const dimR = ['sclR', 'cbR', 'procR', 'procR2', 'irisR', 'tmR', 'scR'], dimL = ['sclL', 'cbL', 'procL', 'procL2', 'irisL', 'tmL', 'scL'];
-    const flowsA = o => df(F.inL, 'f-inL', {dim: true}) + df(F.inR, 'f-inR', {dim: true}) + df(F.tmL, 'f-tmL', o) + df(F.tmR, 'f-tmR', o) +
-      df(F.uvL, 'f-uvL', {dim: true}) + df(F.uvR, 'f-uvR', {dim: true});
-    const labsA = TL(4, 92, ['Trabecular', 'meshwork'], 'lTM', 'fa-t') + lead(36, 106, tmL[0] + 1, tmL[1] - 2, 'lTMl') +
-      TL(4, 176, ['Schlemm’s', 'canal'], 'lSC', 'fa-t') + lead(38, 171, tmL[0] - 8, tmL[1] + 2, 'lSCl') +
-      T(30, 48, 'Cornea', 'lCo', 'fa-t') + lead(66, 45, 108, 63, 'lCol') +
-      TL(180, 84, ['Anterior', 'chamber'], 'lAC', 'fa-t', 'middle') +
-      T(236, 112, 'Iris', 'lIr', 'fa-t') + lead(241, 115, 241, 143, 'lIrl') +
-      T(180, 122, 'Pupil', 'lPu', 'fa-t', 'middle') + lead(180, 126, 180, 146, 'lPul') +
-      T(180, 186, 'Lens', 'lLe', 'fa-t', 'middle') + T(180, 230, 'Vitreous humor', 'lVi', 'fa-t', 'middle') +
-      TL(302, 170, ['Ciliary', 'body'], 'lCb', 'fa-t') + lead(300, 176, 266, 176, 'lCbl') +
-      T(304, 214, 'Sclera', 'lSl', 'fa-t') + lead(302, 211, 288, 211, 'lSll') +
-      T(4, 258, 'Uveoscleral route', 'lUv', 'fa-tb') + lead(50, 249, 84, 214, 'lUvl');
-    const cards = (head, rows, k) => {
-      let s = T(6, 284, head, k + 'h', 'fa-tb');
-      rows.forEach(([lab, txt], i) => { s += fa.card(6 + (i % 2) * 178, 292 + Math.floor(i / 2) * 52, 170, lab, txt, k + i); });
-      return s;
-    };
-    const s1 = fa2.dome({}) + ringL + ringR + flowsA({}) + labsA +
-      cards('Normal drainage', [['Made', ['by the ciliary body']], ['Flows', ['through the pupil into', 'the anterior chamber']],
-        ['Drains', ['at the angle (circle),', 'through the meshwork']], ['Goal in glaucoma', ['lower the pressure (IOP)', 'to protect the optic nerve']]], 'n');
-    const s2 = fa2.dome({tmL: 'bad', dim: dimR}) + ringL + df(F.inL, 'f-inL', {}) + df(F.inR, 'f-inR', {dim: true}) + df(F.tmL, 'f-tmL', {dim: true}) + df(F.tmR, 'f-tmR', {dim: true}) +
-      df(F.uvL, 'f-uvL', {dim: true}) + df(F.uvR, 'f-uvR', {dim: true}) +
-      fa.blk(...p(76, 140), ...p(92, 168), 'blkP') +
-      TL(4, 72, ['Trabecular', 'meshwork', 'dysfunction', 'with open', 'angle'], 'badT', 'fa-w') + lead(36, 138, tmL[0] - 3, tmL[1] - 8, 'badL') +
-      cards('Primary open-angle glaucoma (POAG)', [['Angle', ['open']], ['What fails', ['meshwork dysfunction:', 'drainage not effective']],
-        ['Onset', ['gradual; no symptoms until', 'the visual field is lost']], ['How common', ['common in the', 'United States']]], 'o');
-    const FR = 'M248 190 C232 178 218 170 200 162 C184 152 194 136 212 136 L236 134';
-    const s3 = fa2.dome({irisR: 'bowed', dim: dimL}) + ringR + df(F.inL, 'f-inL', {dim: true}) + df(FR, 'f-inR', {}) + df(F.tmL, 'f-tmL', {dim: true}) + df(F.tmR, 'f-tmR', {dim: true}) +
-      df(F.uvL, 'f-uvL', {dim: true}) + df(F.uvR, 'f-uvR', {dim: true}) +
-      fa.blk(...p(268, 124), ...p(250, 150), 'blkC') +
-      TL(298, 66, ['Forward', 'bowing of', 'iris blocks', 'trabecular', 'meshwork', 'drainage'], 'blkT', 'fa-w') + lead(322, 142, tmR[0] + 12, tmR[1] - 2, 'blkL') +
-      /* step 3's cards sit higher and in two columns of their own, so the two lines the narration adds (sentences 3 and 5) fit above the caption */
-      T(6, 264, 'Primary angle-closure glaucoma (PACG)', 'ch', 'fa-tb') +
-      fa.card(6, 270, 170, 'Angle', ['closed: the iris bows', 'forward over the meshwork'], 'c0') +
-      fa.card(184, 270, 170, 'Linked to', ['the shape of the eye and', 'how it sits in the socket', 'also: swelling after a blow', 'or chemical exposure'], 'c1') +
-      fa.card(184, 348, 170, 'Onset, pain', ['pressure rises very quickly;', 'significant pain'], 'c2') +
-      fa.card(6, 322, 170, 'Urgency', ['medical emergency: lower', 'the IOP quickly; a laser', 'opens the closed angle'], 'c3');
+    const H0 = 430, angR = PR(LOC, [124, 157.5]);
+    const ringR = fa.ring(angR[0], angR[1], 13, 'ringR');
+    const acL = AC_LOC();
+    const blk2 = (x1, y1, x2, y2, k) => { const a = PT(LOC, [x1, y1]), b = PT(LOC, [x2, y2]), c = PR(LOC, [x1, y1]), d = PR(LOC, [x2, y2]);
+      return fa.blk(a[0], a[1], b[0], b[1], k + 'L') + fa.blk(c[0], c[1], d[0], d[1], k + 'R'); };
+    const zblk = (x1, y1, x2, y2, k) => fa.blk(ZX + x1, ZY + y1, ZX + x2, ZY + y2, k);
+    const s1 = EYE(LOC) + CONST_LOC() + acL + ringR + FLOW(LOC, FF.inflow, 'f-in') + gLab('cbody', ['Ciliary body'], 184, PR(LOC, [141, 232])) +
+      ZOOM() + ZLINK() + zflow(ZF.tm, 'z-tm') + zflow(ZF.uv, 'z-uv', {drift: true}) + zLab.tm() + zLab.sc() + zLab.cornea() + zLab.sclera() + zLab.uv() + zLab.iris() + ZFRAME +
+      T(8, H0, 'Normal drainage', 'nh', 'fa-tb') +
+      card8(8, H0 + 8, 167, 'Made', ['by the ciliary body'], 'n0') + card8(185, H0 + 8, 167, 'Flows', ['through the pupil into', 'the anterior chamber'], 'n1') +
+      card8(8, H0 + 70, 167, 'Drains', ['at the angle (circle),', 'through the meshwork'], 'n2') + card8(185, H0 + 70, 167, 'Goal in glaucoma', ['lower the pressure', '(IOP) to protect the', 'optic nerve'], 'n3');
+    const s2 = EYE(LOC, {tm: 'bad'}) + CONST_LOC() + acL + ringR + FLOW(LOC, FF.inflow, 'f-in', {slow: true}) + blk2(121, 148, 131, 167, 'blkP') +
+      ZOOM({tm: 'bad'}) + ZLINK() + zflow(ZF.tmIn, 'z-tm', {slow: true}) + zflow(ZF.tmOut, 'z-out', {dim: true}) + zblk(136, 64, 152, 100, 'zblkP') +
+      ZL('bad', ['Trabecular', 'meshwork', 'dysfunction', 'with open', 'angle'], 8, 44, [[86, 70], [138, 80]], {cls: 'fa-w'}) + zLab.iris() + ZFRAME +
+      T(8, H0, 'Primary open-angle glaucoma (POAG)', 'oh', 'fa-tb') +
+      card8(8, H0 + 8, 167, 'Angle', ['open'], 'o0') + card8(185, H0 + 8, 167, 'What fails', ['meshwork dysfunction:', 'drainage not effective'], 'o1') +
+      card8(8, H0 + 70, 167, 'Onset', ['gradual; no symptoms until', 'the visual field is lost'], 'o2') + card8(185, H0 + 70, 167, 'How common', ['common in the', 'United States'], 'o3');
+    const s3 = EYE(LOC, {iris: 'bowed'}) + CONST_LOC({bowed: true}) + acL + ringR + FLOW(LOC, FF.stop, 'f-stop') + blk2(142, 114, 147, 130, 'blkC') +
+      ZOOM({iris: 'bowed'}) + ZLINK() + zflow(ZF.stop, 'z-stop') + zblk(184, 40, 191, 64, 'zblkC') +
+      ZL('blk', ['Forward', 'bowing of', 'iris blocks', 'trabecular', 'meshwork', 'drainage'], 8, 40, [[72, 70], [140, 80]], {cls: 'fa-w'}) + zLab.irisB() + ZFRAME +
+      T(8, H0, 'Primary angle-closure glaucoma (PACG)', 'ch', 'fa-tb') +
+      card8(8, H0 + 8, 167, 'Angle', ['closed: the iris bows', 'forward over the', 'meshwork'], 'c0') +
+      card8(185, H0 + 8, 167, 'Linked to', ['the shape of the eye and', 'how it sits in the socket', 'also: swelling after', 'a blow or chemical', 'exposure'], 'c1') +
+      card8(185, H0 + 8 + cardH(5) + 10, 167, 'Onset, pain', ['pressure rises very', 'quickly; significant pain'], 'c2') +
+      card8(8, H0 + 8 + cardH(3) + 10, 167, 'Urgency', ['medical emergency: lower', 'the IOP quickly; a laser', 'opens the closed angle'], 'c3');
     return fa.stepper('ey-angle', 'Open-angle vs angle-closure glaucoma', [
       ['Normal: aqueous humor drains at the angle (circle), where the iris meets the cornea and sclera (slide 14 panel A; 11/13 T@26451).', s1],
       ['Open angle: the angle stays open but the trabecular meshwork drains poorly; gradual and silent (slides 13, 14 panel B; 11/13 T@29351).', s2],
       ['Angle closure: the iris bows forward and blocks the meshwork; the pressure rises fast and hurts (slides 13, 14 panel C; 11/13 T@28606).', s3],
-    ], 456, 'Drawn after Smith_Eye_Glaucoma_AllergicConj_DryEye.pdf slides 13 and 14 (DiPiro’s Pharmacotherapy 13e, panels A–C; Dr. Smith): the eye cut front to back, ' +
-      'cornea, anterior chamber, iris, lens, ciliary body, sclera, vitreous humor, trabecular meshwork, Schlemm’s canal and the uveoscleral route, as in panel A; lecture 11/13, ' +
-      'T@19603–@20900 and T@23500–@29400. Both types: the goal of treatment is to decrease the IOP, delaying or preventing disease progression (slide 13). ' +
+    ], 652, 'Drawn after Smith_Eye_Glaucoma_AllergicConj_DryEye.pdf slides 13 and 14 (DiPiro’s Pharmacotherapy 13e, panels A–C; Dr. Smith): an original schematic of the whole front of the eye cut front to back, with one angle enlarged: ' +
+      'cornea, anterior chamber, iris, lens, ciliary body, sclera, trabecular meshwork, Schlemm’s canal and the uveoscleral route, as in panel A, with the pupil named as in the lecture; lecture 11/13, ' +
+      'T@19603–@20900 and T@23500–@29400. Panels B and C each show half an eye on the slide; here each condition is drawn at both angles of one eye and in the enlarged angle. Both types: the goal of treatment is to decrease the IOP, delaying or preventing disease progression (slide 13). ' +
       'On 11/13 (T@23500, T@28606) she gave a blow to the eye or swelling as a cause of a closed angle and a laser opening as the treatment.');
   })();
 
@@ -339,15 +417,85 @@ const DIAGRAMS_EY_FA2 = (() => {
       'The figure follows slide 27 and 11/17 (T@5420): carbonic acid separates into H⁺ + HCO₃⁻.');
   })();
 
+  /* ---------------------------------------------------------------------
+     5. ey-autonomic: adrenergic vs cholinergic stimulation in the eye. Slide 7 ("Basic pharmacology
+     for the eye", Lange Smart Charts: Pharmacology 2e) and nothing else: dilator muscle (adrenergic
+     stimulation of alpha-1 receptors: the pupil dilates), pupillary sphincter muscles (cholinergic
+     stimulation of muscarinic receptors: the pupils constrict), ciliary body (cholinergic stimulation
+     of muscarinic receptors: contraction of the ciliary body, increased accommodation; adrenergic
+     stimulation: the ciliary muscle relaxes, allowing far vision; produces aqueous humor).
+     Adrenergic is amber and cholinergic red, the colours the alpha-2 agonists and the M3 agonists
+     have in ey-targets. No narration is recorded for it (no DIA_NARR entry, no sentence map).
+     --------------------------------------------------------------------- */
+  const AUTONOMIC = (() => {
+    const AUT = {x: -91.2, y: -8, s: 1.2}, cx = 180, CY = 378;
+    const eye = (o = {}) => EYE(AUT, Object.assign({show: ['sph', 'dil']}, o));
+    const base = (word, c) => LB('cornea', ['Cornea'], 286, 40, [[284, 43], PR(AUT, [150, 90])]) +
+      LB('pupil', ['Pupil'], cx, 140, [[cx, word ? 157 : 144], [cx, PT(AUT, [0, 172])[1]]], {anchor: 'middle'}) +
+      (word ? T(cx, 153, word, 'pupw' + c, 'fa-tk' + c, 'middle') : '') +
+      LB('iris', ['Iris'], 96, 180, [[104, 182], [104, PT(AUT, [0, 167])[1]]]) + LB('lens', ['Lens'], cx, 262, null, {anchor: 'middle'});
+    const dilR = t => PR(AUT, [(140 + t - 10) / 2, 171.7]), sphL = t => PT(AUT, [t - 3, 173]), muL = PT(AUT, [129, 214]);
+    const dilLab = (t, extra) => LB('dil', ['Dilator muscle'].concat(extra ? [] : []), 208, 162, [[246, extra ? 179 : 166], [dilR(t)[0], dilR(t)[1] - (extra ? 4.4 : 1.6)]]) + (extra || '');
+    const sphLab = (t, extra) => LB('sph', ['Pupillary sphincter', 'muscle'], 8, 36, [[70, extra ? 66 : 53], [sphL(t)[0] - (extra ? 2.4 : 1), sphL(t)[1] - (extra ? 3.6 : 3.4)]]) + (extra || '');
+    const cbLab = (lines, to, extra) => LB('cbody', lines, 8, 338, [[30, 328], to]) + (extra || '');
+    /* the two-column card: rows filled only from slide 7 */
+    const X0 = 8, X1 = 74, X2 = 208, X3 = 352;
+    const rows = [
+      ['Pupil', ['α1 receptors on the', 'dilator muscle:', 'the pupil dilates'], ['muscarinic receptors', 'on the sphincter', 'muscles: constricts']],
+      ['Ciliary muscle', ['relaxes, allowing', 'far vision'], ['muscarinic receptors:', 'the ciliary body', 'contracts; increased', 'accommodation (focus', 'for near vision)']],
+      ['Aqueous humor', ['produces aqueous', 'humor'], ['not on slide 7']],
+    ];
+    const card = (() => {
+      let y = CY + 22, s = fa.R(X0, CY, X3 - X0, 22 + rows.reduce((a, r) => a + Math.max(r[1].length, r[2].length) * 13 + 12, 0), 'atc', 'fa-card') +
+        T(X1 + 8, CY + 15, 'Adrenergic', 'atAh', 'fa-tk3') + T(X2 + 8, CY + 15, 'Cholinergic', 'atCh', 'fa-tk5') +
+        `<path class="fu-rule" data-k="atv1" d="M${X1} ${CY + 4} L${X1} ${CY + 22 + rows.reduce((a, r) => a + Math.max(r[1].length, r[2].length) * 13 + 12, 0) - 4}"/>` +
+        `<path class="fu-rule" data-k="atv2" d="M${X2} ${CY + 4} L${X2} ${CY + 22 + rows.reduce((a, r) => a + Math.max(r[1].length, r[2].length) * 13 + 12, 0) - 4}"/>`;
+      rows.forEach((r, i) => {
+        const n = Math.max(r[1].length, r[2].length);
+        s += `<path class="fu-rule" data-k="ath${i}" d="M${X0 + 4} ${y} L${X3 - 4} ${y}"/>`;
+        s += r[0].split(' ').map((w, j) => T(X0 + 8, y + 15 + j * 13, w, `atr${i}n${j}`, 'fa-k')).join('');
+        s += r[1].map((t, j) => T(X1 + 8, y + 15 + j * 13, t, `atr${i}a${j}`, 'fa-t')).join('');
+        s += r[2].map((t, j) => T(X2 + 8, y + 15 + j * 13, t, `atr${i}c${j}`, r[2][0] === 'not on slide 7' ? 'fa-ts' : 'fa-t')).join('');
+        y += n * 13 + 12;
+      });
+      return s;
+    })();
+    const s1 = eye() + base() + dilLab(198) + sphLab(198) + cbLab(['Ciliary body'], PT(AUT, [138, 244])) +
+      TL(8, CY + 15, ['Slide 7 names three structures: the dilator muscle', 'and the pupillary sphincter muscles, both in the iris,', 'and the ciliary body. The next two steps show what', 'each kind of stimulation does to them.'], 'atI', 'fa-t');
+    const a1 = dilR(184), a1L = PT(AUT, [(140 + 174) / 2, 171.7]);
+    const s2 = eye({pupil: 'wide', hi: ['musc']}) + base('dilates', 3) +
+      C.dot(a1L[0], a1L[1], 'd-a1L', 3, 4) + C.dot(a1[0], a1[1], 'd-a1R', 3, 4) +
+      dilLab(184, T(208, 175, 'α1 receptors', 'dilA', 'fa-tk3')) +
+      cbLab(['Ciliary muscle'], muL, T(8, 351, 'relaxes: far vision', 'cbA', 'fa-tk3')) +
+      FLOW(AUT, 'M166 205 C172 198 178 193 188 190', 'f-aq', {hs: 0.8}) +
+      T(352, 338, 'produces aqueous humor', 'aqA', 'fa-tk3', 'end') + `<path class="an-lead" data-k="aqAl" d="M300 328 L${PR(AUT, [157, 215.5])[0]} ${PR(AUT, [157, 215.5])[1]}"/>` + card;
+    const sL = sphL(212), sR = PR(AUT, [209, 173]), mR = PR(AUT, [129, 214]);
+    const s3 = eye({pupil: 'narrow'}) + base('constricts', 5) +
+      C.dot(sL[0], sL[1], 'd-mL', 5, 4) + C.dot(sR[0], sR[1], 'd-mR', 5, 4) + C.dot(muL[0], muL[1], 'd-mcL', 5, 4) + C.dot(mR[0], mR[1], 'd-mcR', 5, 4) +
+      sphLab(212, T(8, 62, 'muscarinic receptors', 'sphC', 'fa-tk5')) +
+      cbLab(['Ciliary body'], [muL[0] - 3, muL[1] + 3], T(8, 351, 'muscarinic receptors: contracts', 'cbC', 'fa-tk5')) + card;
+    return fa.stepper('ey-autonomic', 'Adrenergic vs cholinergic stimulation in the eye', [
+      ['The three structures of slide 7: the dilator muscle and the pupillary sphincter muscles in the iris, and the ciliary body (slide 7).', NT(s1)],
+      ['Adrenergic stimulation: α1 receptors on the dilator muscle dilate the pupil; the ciliary muscle relaxes (far vision); produces aqueous humor (slide 7).', NT(s2)],
+      ['Cholinergic stimulation: muscarinic receptors constrict the pupil (sphincter) and contract the ciliary body: increased accommodation (slide 7).', NT(s3)],
+    ], 632, 'Drawn after Dr. Smith’s Smith_Eye_Glaucoma_AllergicConj_DryEye.pdf slide 7 (“Basic pharmacology for the eye”; Lange Smart Charts: Pharmacology, 2e), on an original schematic of the front of the eye. ' +
+      'Every statement is slide 7’s: adrenergic stimulation of α1-receptors on the dilator muscle causes the pupil to dilate; cholinergic stimulation of muscarinic receptors on the pupillary sphincter muscles ' +
+      'causes the pupils to constrict; cholinergic stimulation of muscarinic receptors causes a contraction of the ciliary body leading to increased accommodation; adrenergic stimulation causes the ciliary muscle ' +
+      'to relax, allowing for far vision, and produces aqueous humor. The slide says nothing about aqueous humor under cholinergic stimulation. Accommodation means focusing for near vision (word meaning). ' +
+      'Where the two muscles lie in the iris (sphincter at the pupil edge, dilator along the iris) is the drawing’s; the slide lists them without a picture. The lens and the ciliary muscle are drawn the same in every step.');
+  })();
+
   const PURPOSE = {
     'ey-aqueous': 'Shows where aqueous humor is made (inflow) and the two routes it drains by (outflow), on the eye as slide 15 draws it, with each glaucoma drug class placed on the part it changes, so you can sort a drug as an inflow reducer or an outflow enhancer and name its route.',
     'ey-targets': 'Shows the site on the eye where each glaucoma drug class acts, one colour for each class, so you can name the site of a class and sort it as an inflow reducer or an outflow enhancer.',
     'ey-angle': 'Compares open-angle and angle-closure glaucoma with normal drainage, on the eye as slide 14 draws it, so you can say what blocks the drainage in each, how each starts and why angle closure is an emergency.',
+    'ey-autonomic': 'Shows what adrenergic and cholinergic stimulation each do to the pupil, the ciliary muscle and aqueous humor, so you can tell the two apart.',
     'ey-cai': 'Shows what carbonic anhydrase does in the ciliary epithelium and in the kidney, so you can explain how a CA inhibitor lowers inflow and why an oral one can cause metabolic acidosis.',
   };
   return {
-    figs: {'ey-aqueous': AQUEOUS, 'ey-targets': TARGETS, 'ey-angle': ANGLE, 'ey-cai': CAI},
-    names: {'ey-aqueous': 'Glaucoma: inflow, outflow and where each drug acts',
+    figs: {'ey-autonomic': AUTONOMIC, 'ey-aqueous': AQUEOUS, 'ey-targets': TARGETS, 'ey-angle': ANGLE, 'ey-cai': CAI},
+    names: {'ey-autonomic': 'Adrenergic vs cholinergic stimulation in the eye',
+      'ey-aqueous': 'Glaucoma: inflow, outflow and where each drug acts',
       'ey-targets': 'Glaucoma drugs: where each class acts on the eye',
       'ey-angle': 'Open-angle vs angle-closure glaucoma',
       'ey-cai': 'Carbonic anhydrase inhibitors: eye and kidney (acidosis)'},
@@ -368,5 +516,7 @@ if (DIAGRAMS_EY_FA2) {
   if (typeof DIAGRAMS !== 'undefined') {
     const g = DIAGRAMS.find(x => x[0] === 'Eye: glaucoma, allergy and dry eye (Dr. Smith, Exam 3)');
     if (g && g[1].indexOf('ey-targets') < 0) g[1].splice(g[1].indexOf('ey-aqueous') + 1, 0, 'ey-targets');
+    /* ey-autonomic (slide 7) opens the group: it comes before the glaucoma slides */
+    if (g && g[1].indexOf('ey-autonomic') < 0) g[1].unshift('ey-autonomic');
   }
 }
