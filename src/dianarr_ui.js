@@ -59,6 +59,16 @@ const DIA_NARR_UI = (() => {
 .dnsay-t .dns{color:var(--text-dim,#5A6878)}
 .dnsay-t .dns.dnon{color:var(--text,#16202C);font-weight:600}
 figure.fig svg text.dnhl{paint-order:stroke;stroke:#ffd84d;stroke-width:6px;stroke-linejoin:round;font-weight:700}
+figure.fig svg .dn-el{transition:opacity .45s ease}
+figure.fig svg .dn-fut{opacity:0!important;pointer-events:none}
+figure.fig svg .dn-past{opacity:.38!important}
+figure.fig svg .dn-badges circle{fill:#fff;stroke:#c2410c;stroke-width:1.5}
+figure.fig svg .dn-badges text{fill:#c2410c;font:700 9.5px system-ui,sans-serif;text-anchor:middle}
+figure.fig svg .dn-badges .on circle{fill:#c2410c}
+figure.fig svg .dn-badges .on text{fill:#fff}
+.dnsay-t .dnnum{display:inline-block;min-width:1.35em;height:1.35em;line-height:1.35em;margin:0 .3em 0 .15em;border:1.5px solid #c2410c;border-radius:50%;color:#c2410c;font-size:.78em;font-weight:700;text-align:center;vertical-align:.08em}
+.dnsay-t .dnon .dnnum{background:#c2410c;color:#fff}
+@media (prefers-reduced-motion:reduce){figure.fig svg .dn-el{transition:none}}
 @media (prefers-color-scheme:dark){figure.fig svg text.dnhl{stroke:#8a6a00}}`;
   const addCss = () => {
     if (document.getElementById('dncss')) return;
@@ -163,6 +173,57 @@ figure.fig svg text.dnhl{paint-order:stroke;stroke:#ffd84d;stroke-width:6px;stro
     fig.querySelectorAll('svg text.dnhl').forEach(t => t.classList.remove('dnhl'));
     if (k >= 0) M[k].els.forEach(t => t.classList.add('dnhl'));
   }
+  /* ---------- the drawing follows the sentences (Louis, 2026-11-22: "depicted better in the diagram of the steps
+     happening as they are discussed"; he chose build-up, spotlight and numbered points together) ----------
+     DIA_SYNC (dianarr_sync_*.js): {'<DIA key>': [per step: null or {n, seq, at}]}. `n` is the number of direct
+     children of that step's <g class="st">: when the drawing has changed since the map was written the numbers
+     differ and the map is ignored. `seq` is {'<sentence number, 1-based>': [child indexes]}: those children are
+     the part of the drawing the sentence is about. While the step is narrated a part is hidden until its sentence
+     is read, at full strength while it is read, and faded once a later part is being read; children in no list
+     stay as drawn. Each part carries a number, the same number as its sentence in the text under the drawing.
+     `at` may give {'<sentence number>': [x, y]} for the number's place (drawing units); otherwise it sits at the
+     upper left of the part's first child. Outside narration (Back, Next, Stop, the end) the drawing is whole. */
+  const SYNC = (typeof DIA_SYNC !== 'undefined' && DIA_SYNC) || {};
+  function syncFor(fig, key, i) {
+    const s = SYNC[key] && SYNC[key][i], g = figSteps(fig)[i];
+    if (!s || !g || !s.seq || g.children.length !== s.n) return null;
+    const nums = Object.keys(s.seq).map(Number).filter(m => m >= 1 && Array.isArray(s.seq[m]) && s.seq[m].length).sort((a, b) => a - b);
+    if (!nums.length) return null;
+    const K = [...g.children];
+    return {g, nums, at: s.at || {}, els: m => s.seq[m].map(j => K[j]).filter(Boolean)};
+  }
+  function syncClear(fig) {
+    fig.querySelectorAll('svg .dn-el').forEach(e => e.classList.remove('dn-el', 'dn-fut', 'dn-past'));
+    fig.querySelectorAll('svg .dn-badges').forEach(e => e.remove());
+  }
+  function syncShow(fig, sy, si) {
+    const k = si + 1, svg = sy.g.ownerSVGElement; if (!svg) return;
+    let cur = 0; sy.nums.forEach(m => { if (m <= k) cur = m; });      // the newest part already read
+    sy.nums.forEach(m => sy.els(m).forEach(e => {
+      e.classList.add('dn-el'); e.classList.toggle('dn-fut', m > k); e.classList.toggle('dn-past', m < cur);
+    }));
+    let layer = svg.querySelector(':scope > .dn-badges');
+    if (!layer) { layer = document.createElementNS('http://www.w3.org/2000/svg', 'g'); layer.setAttribute('class', 'dn-badges'); layer.setAttribute('aria-hidden', 'true'); svg.appendChild(layer); }
+    const ctm = svg.getScreenCTM(), inv = ctm && ctm.inverse();
+    sy.nums.forEach((m, ord) => {
+      let b = layer.querySelector(`[data-m="${m}"]`);
+      if (m > k) { if (b) b.remove(); return; }
+      if (!b) {
+        let x, y; const at = sy.at[m];
+        if (Array.isArray(at)) { x = at[0]; y = at[1]; }
+        else {
+          const e = sy.els(m)[0]; if (!e || !inv) return;
+          const r = e.getBoundingClientRect(), pt = svg.createSVGPoint(); pt.x = r.left; pt.y = r.top;
+          const q = pt.matrixTransform(inv); x = q.x; y = q.y;
+        }
+        b = document.createElementNS('http://www.w3.org/2000/svg', 'g'); b.setAttribute('data-m', m);
+        b.innerHTML = `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="7.5"/><text x="${x.toFixed(1)}" y="${(y + 3.3).toFixed(1)}">${ord + 1}</text>`;
+        layer.appendChild(b);
+      }
+      b.setAttribute('class', m === cur ? 'on' : '');
+    });
+  }
+
   function panel(fig) {
     let d = fig.querySelector(':scope > .dnsay');
     if (!d) {
@@ -178,6 +239,8 @@ figure.fig svg text.dnhl{paint-order:stroke;stroke:#ffd84d;stroke-width:6px;stro
     const d = panel(fig), n = Math.min(steps(key).length, figSteps(fig).length || 1);
     d.querySelector('.dnsay-n').textContent = n > 1 ? `Being read: step ${i + 1} of ${n}` : 'Being read';
     d.querySelector('.dnsay-t').innerHTML = NARR.sentHTML(text, 'dns');
+    const sy = syncFor(fig, key, i);
+    if (sy) { const sp = d.querySelectorAll('.dns'); sy.nums.forEach((m, ord) => { const x = sp[m - 1]; if (x) x.insertAdjacentHTML('afterbegin', `<b class="dnnum">${ord + 1}</b>`); }); }
     d.hidden = false;
   }
   function saySent(fig, si) {
@@ -191,6 +254,7 @@ figure.fig svg text.dnhl{paint-order:stroke;stroke:#ffd84d;stroke-width:6px;stro
     if (!fig) return;
     const d = fig.querySelector(':scope > .dnsay'); if (d) d.hidden = true;
     fig.querySelectorAll('svg text.dnhl').forEach(t => t.classList.remove('dnhl'));
+    syncClear(fig);
   }
   // where each sentence starts, as a share of the step's text (a recorded clip is placed by this)
   const cuts = text => { const ss = NARR.sentences(text), tot = ss.reduce((a, x) => a + x.length, 0) || 1; let a = 0; return ss.map(x => { const c = a / tot; a += x.length; return c; }); };
@@ -239,7 +303,10 @@ figure.fig svg text.dnhl{paint-order:stroke;stroke:#ffd84d;stroke-width:6px;stro
     me.i = i; clearTimeout(me.gap);
     const text = list[i].text, cut = cuts(text), sents = NARR.sentences(text);
     sayStep(fig, key, i, text); saySent(fig, 0);
-    me.men = mentions(fig, text); me.mk = -2; markAt(fig, me, -1);
+    syncClear(fig); me.sy = syncFor(fig, key, i); me.ss = -1;
+    const onS = si => { if (me.sy && si !== me.ss) { me.ss = si; syncShow(fig, me.sy, si); } };
+    onS(0);
+    me.men = []; me.mk = -2;   // the outline on the label being named is off (Louis, 2026-11-22: "isn't that helpful")
     // the device voice reports only the start of each sentence: within it the place is estimated at 13 characters a second
     clearInterval(me.tick);
     const voiceAt = si => {
@@ -247,10 +314,11 @@ figure.fig svg text.dnhl{paint-order:stroke;stroke:#ffd84d;stroke-width:6px;stro
       me.tick = setInterval(() => { if (P !== me || !me.h || me.h.done) { clearInterval(me.tick); return; } if (!me.h.paused) markAt(fig, me, at + (Date.now() - t0) / 1000 * 13 * (NARR.st().rate || 1)); }, 250);
     };
     me.h = NARR.say({clip: NARR.clipFor(clipKey(key, i), text), text, owner: 'dianarr',
-      onSent: si => { if (P === me) { saySent(fig, si); voiceAt(si); } },
-      onFrac: f => { if (P !== me) return; let k = 0; while (k + 1 < cut.length && f >= cut[k + 1]) k++; saySent(fig, k); markAt(fig, me, f * text.length + 4); },
+      onSent: si => { if (P === me) { saySent(fig, si); onS(si); } },
+      onFrac: f => { if (P !== me) return; let k = 0; while (k + 1 < cut.length && f >= cut[k + 1]) k++; saySent(fig, k); onS(k); },
       onEnd: () => {
         if (P !== me) return;
+        syncClear(fig);
         if (!fig.isConnected || i + 1 >= Math.min(list.length, n)) { stop(); return; }
         me.gap = setTimeout(() => { if (P === me) play(fig, key, i + 1); }, 1200);   // a pause between steps (was 450 ms)
       },
@@ -300,5 +368,5 @@ figure.fig svg text.dnhl{paint-order:stroke;stroke:#ffd84d;stroke-width:6px;stro
     });
   }).observe(document.body, {childList: true, subtree: true});
   arm(document);
-  return {arm, stop, playing: () => P && {key: P.key, step: P.i + 1, paused: !!(P.h && P.h.paused)}, keys: () => Object.keys(N)};
+  return {arm, stop, syncPreview: (fig, key, i, si) => { syncClear(fig); if (si < 0) return false; const sy = syncFor(fig, key, i); if (sy) syncShow(fig, sy, si); return !!sy; }, playing: () => P && {key: P.key, step: P.i + 1, paused: !!(P.h && P.h.paused)}, keys: () => Object.keys(N)};
 })();
