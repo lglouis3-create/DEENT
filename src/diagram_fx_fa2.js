@@ -73,6 +73,7 @@ const DIAGRAM_FX_FA2_CSS = `
 .fig .fa-rc2{fill:var(--c2);fill-opacity:.25;stroke:var(--c2);stroke-width:1.6}
 .fig .fa-rc3{fill:var(--c3);fill-opacity:.25;stroke:var(--c3);stroke-width:1.6}
 .fig .fa-rc4{fill:var(--c4);fill-opacity:.25;stroke:var(--c4);stroke-width:1.6}
+.fig .fa-nt.fx-glow,.fig .fa-nt.fx-pulse{stroke:var(--text-dim)}
 `;
 if (typeof document !== 'undefined' && document.head && !document.getElementById('diagramFxFa2Css')) {
   const s = document.createElement('style'); s.id = 'diagramFxFa2Css'; s.textContent = DIAGRAM_FX_FA2_CSS; document.head.appendChild(s);
@@ -238,6 +239,7 @@ if (typeof document !== 'undefined' && document.head && !document.getElementById
      is a pink finger with a light core and four red vessels (ciliary blood supply); receptors sit on
      its crown and carbonic anhydrase on the surface; the alpha-1 receptor sits at the inner edge by
      the vessels. o.cls: {b: class number for the beta icon, a2: ..., ca: ...} (drug-class colours);
+     o.a1op: opacity of the alpha-1 icon (ey-aqueous step 4 draws it pale: no drug of that step acts on it);
      returns {svg, pts} where pts are the icon positions for leaders.
      ======================================================================= */
   fa2.proc = (cx, cy, R, o = {}) => {
@@ -256,7 +258,7 @@ if (typeof document !== 'undefined' && document.head && !document.getElementById
     const icon = (id, p, cls, rr = 6) => `<path class="${cls}" data-k="pz-${id}" d="${ell(p[0], p[1], rr, rr)}"/>`;
     const cc = o.cls || {};
     s += icon('beta', pts.beta, cc.b ? 'fa-rc' + cc.b : 'fa-rec') + icon('a2', pts.a2, cc.a2 ? 'fa-rc' + cc.a2 : 'fa-rec') +
-      icon('ca', pts.ca, cc.ca ? 'fa-rc' + cc.ca : 'fa-enz', 6.5) + icon('a1', pts.a1, 'fa-rec', 5.5);
+      icon('ca', pts.ca, cc.ca ? 'fa-rc' + cc.ca : 'fa-enz', 6.5) + icon('a1', pts.a1, 'fa-rec', 5.5).replace('/>', o.a1op != null ? ` opacity="${o.a1op}"/>` : '/>');
     return {svg: s, pts};
   };
 

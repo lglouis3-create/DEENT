@@ -16,6 +16,9 @@ Every update adds its bullets here in the same commit that makes the change.
 - Numbers on the drawing match the numbered sentences under it (17 figures; the yellow outline is gone).
 - Arrows in 33 figures have their arrowheads back (reaction and flow direction was not shown).
 - Figure narration: 21 steps retimed after a sentence-by-sentence review of all 17 Exam 3 figures.
+- Exam 3 figures: missing labels added, abbreviations written out, spoken points drawn where they were absent.
+- Prostaglandin figure: PGF2α and latanoprost now drawn with their alkenes as on Dr. Sikazwe's slide 44.
+- Figure captions no longer show transcript codes; the source note is a row of slide buttons, opened on tap.
 - Narration now starts at 0.8× speed, with a Speed control and a longer pause between figure steps.
 - Atlas: boards sit in closed folders by exam; a search opens the folders that hold a match.
 - Exam 3 walkthroughs: 41 guide pages of all three professors have a narrated Listen player (220 parts).

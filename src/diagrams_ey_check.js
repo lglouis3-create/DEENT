@@ -35,7 +35,7 @@ const check = (ok, what, detail) => {
 };
 
 const PLAN = {
-  'ey-aqueous': {steps: 7, h: 458},
+  'ey-aqueous': {steps: 7, h: 508},
   'ey-targets': {steps: 4, h: 484},
   'ey-angle':   {steps: 3, h: 456},
   'ey-cai':     {steps: 5, h: 392},
@@ -169,7 +169,9 @@ const lastStep = k => { const s = (DIA[k] || '').split(/<g class="st[ "]/); retu
   for (const w of ['Cornea', 'Trabecular', 'Schlemm’s', 'Conjunctiva', 'Anterior', 'Aqueous flow', 'Iris', 'Lens', 'Sclera', 'Pars plana', 'Posterior', 'Ciliary', 'processes', 'Ciliary muscle', 'epithelium'])
     check(s1.includes(w), 'ey-aqueous step 1 names the part ' + w + ' as slide 15 labels it');
   for (const st of [1, 2, 3, 4, 5, 6, 7]) { const t = stepText('ey-aqueous', st); for (const w of ['Lens', 'Ciliary body', 'Trabecular meshwork', 'Schlemm’s canal']) check(t.includes(w), 'ey-aqueous step ' + st + ': the fixed key has ' + w); }
-  for (const w of ['β receptor', 'α2 receptor', 'α1 receptor', 'carbonic', 'anhydrase', 'ciliary blood supply'.split(' ')[0], 'blood supply', 'M3', 'β-blockers', 'α2 agonists', 'CA inhibitors']) check(z.includes(w), 'ey-aqueous step 4 (slide 16): ' + w + ' drawn');
+  /* step 4 writes "CA" and "inhibitors" on two lines inside the zoom circle, so the text is compared with runs of spaces collapsed */
+  const zz = z.replace(/\s+/g, ' ');
+  for (const w of ['β receptor', 'α2 receptor', 'α1 receptor', 'carbonic', 'anhydrase', 'ciliary blood supply'.split(' ')[0], 'blood supply', 'M3', 'β-blockers', 'α2 agonists', 'CA inhibitors']) check(zz.includes(w), 'ey-aqueous step 4 (slide 16): ' + w + ' drawn');
   check(!/M3 agonists|netarsudil|PG agonists/.test(z), 'ey-aqueous step 4: only what slide 16 labels (no outflow drug names)');
   check(s3.includes('↓ INFLOW'), 'ey-aqueous step 5: the inflow header');
   for (const d of ['β-blockers', 'α2 agonists', 'CA inhibitors']) check(s3.includes(d), 'ey-aqueous: ' + d + ' drawn under ↓ INFLOW (step 5)');
@@ -177,7 +179,13 @@ const lastStep = k => { const s = (DIA[k] || '').split(/<g class="st[ "]/); retu
   for (const d of ['M3 agonists', 'echothiophate', 'netarsudil']) check(s4.includes(d), 'ey-aqueous: ' + d + ' drawn under ↑ OUTFLOW (step 6)');
   for (const d of ['PG agonists', 'brimonidine']) check(s5.includes(d), 'ey-aqueous: ' + d + ' drawn under ↑ OUTFLOW (step 7)');
   for (const d of ['M3 agonists', 'echothiophate', 'netarsudil', 'PG agonists']) check(!s3.includes(d), 'ey-aqueous: ' + d + ' not under inflow');
-  for (const d of ['β-blockers', 'α2 agonists', 'CA inhibitors']) check(!s4.includes(d) && !s5.includes(d), 'ey-aqueous: ' + d + ' not under outflow');
+  /* step 7 ends with a three-line summary of all classes: its "↓ INFLOW:" line is where the inflow classes belong; nowhere else in steps 6 and 7 */
+  const s5sum = (s5.match(/↓ INFLOW:[^↑]*/) || [''])[0], s5rest = s5.replace(/↓ INFLOW:[^↑]*/, '');
+  check((s5.match(/↓ INFLOW:/g) || []).length === 1 && s5.indexOf('↓ INFLOW:') > s5.indexOf('brimonidine'), 'ey-aqueous step 7: one summary line "↓ INFLOW:", after the outflow chips');
+  for (const d of ['β-blockers', 'α2 agonists', 'CA inhibitors']) check(s5sum.includes(d), 'ey-aqueous step 7 summary: ' + d + ' on the ↓ INFLOW line');
+  for (const d of ['M3 agonists', 'echothiophate', 'netarsudil', 'PG agonists']) check(!s5sum.includes(d) && s5rest.slice(s5rest.lastIndexOf('↑ OUTFLOW:')).includes(d), 'ey-aqueous step 7 summary: ' + d + ' on the ↑ OUTFLOW lines, not on the inflow line');
+  for (const d of ['β-blockers', 'α2 agonists', 'CA inhibitors']) check(!s4.includes(d) && !s5rest.includes(d), 'ey-aqueous: ' + d + ' not under outflow');
+  check(s4.includes('sphincter muscle') && s4.includes('Sphincter muscle') && s4.includes('(iris)'), 'ey-aqueous step 6: the sphincter muscle is named in the chip and labelled on the iris');
   const a = [s2, s5].join(' ');
   check(s2.includes('Trabecular') && s2.includes('Schlemm’s') && s2.includes('Uveoscleral'), 'ey-aqueous step 3: both routes named');
 for (const w of ['MAIN route', 'smaller route', 'PGF2α']) check(a.includes(w), 'ey-aqueous: ' + w + ' drawn');
@@ -189,6 +197,7 @@ for (const w of ['MAIN route', 'smaller route', 'PGF2α']) check(a.includes(w), 
   for (const w of ['Rho kinase', 'M3 agonists', 'echothiophate', 'netarsudil']) check(t2.includes(w) && t4.includes(w.replace('netarsudil', 'Rho kinase')), 'ey-targets: ' + w + ' in the trabecular step');
   for (const w of ['PG agonists', 'PGF2α', 'ciliary muscle', 'brimonidine', 'Uveoscleral route']) check(t3.includes(w), 'ey-targets: ' + w + ' in the uveoscleral step');
   for (const w of ['PG agonists', 'brimonidine', 'M3 agonists']) check(t4.includes(w), 'ey-targets step 4: ' + w);
+  check(t2.includes('Sphincter muscle') && t2.includes('(iris)') && t4.includes('Sphincter muscle'), 'ey-targets steps 2 and 4: the sphincter muscle labelled on the iris');
   check(!/M3 agonists|netarsudil|PG agonists/.test(t1), 'ey-targets step 1: no outflow class under inflow');
   check(!/β-blockers|CA inhibitors/.test(t2 + t3), 'ey-targets steps 2-3: no inflow class under outflow');
   const h = DIA['ey-targets'];
