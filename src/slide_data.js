@@ -99,6 +99,7 @@ const SLIDES = {
   ["ref-ey-", "ey", "Reference: Dr. Smith, Eye", "sun"],
   ["tell-ey-", "ey", "Tell apart: Dr. Smith, Eye", "sun"],
   ["gobj-oo-", "oo", "Guide: Dr. Sikazwe, Otic/Oral/Ophthalmic, slide by slide", "sun"],
+  ["gobj-sk3-", "oo", "Guide: Dr. Sikazwe, Otic/Oral/Ophthalmic, by learning objective", "sun"],
   ["ref-oo-", "oo", "Reference: Dr. Sikazwe, Otic/Oral/Ophthalmic", "sun"],
   ["tell-oo-", "oo", "Tell apart: Dr. Sikazwe, Otic/Oral/Ophthalmic", "sun"],
   ["gobj-sk-", "mc", "Guide: Dr. Sikazwe, assigned slides", "sun"],
