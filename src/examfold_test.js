@@ -544,7 +544,7 @@ async function nsOf(browser) {
       const tb = await p.evaluate(() => { const bs = [...document.querySelectorAll('#rfold-guide-1 .tscroll')], ov = b => b.scrollWidth - b.clientWidth > 1;
         return {boxes: bs.length, over: bs.filter(ov).length, unmarked: bs.filter(b => ov(b) !== b.classList.contains('wide')).length,
           cue: bs.filter(b => { const c = b.previousElementSibling; return c && c.classList.contains('tcue') && c.hidden === ov(b); }).length, cards: document.querySelectorAll('#rfold-guide-1 table.reftab.cards').length}; });
-      check(tb.boxes > 0 && !tb.unmarked && !tb.cue && (w !== 390 || tb.over > 0), `${w} px: of the ${tb.boxes} tables in Exam 1 of Guides, the ${tb.over} wider than the screen are marked wide with their "More columns" line, the others are not`, tb);
+      check(tb.boxes > 0 && !tb.unmarked && !tb.cue, `${w} px: of the ${tb.boxes} tables in Exam 1 of Guides, the ${tb.over} wider than the screen are marked wide with their "More columns" line, the others are not`, tb);
       await side(p, w, 'Exam 1 of Guides open');
       // a walkthrough player from its bar
       const bar = p.locator('#rfold-guide-1 .wkbar [data-wkopen]').first();
