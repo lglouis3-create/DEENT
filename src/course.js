@@ -347,6 +347,7 @@ const COURSE = {
           'q27_ooo_topics.js', 'q22_eye_topics.js', 'q32_lam_topics.js', 'q43_lam2_topics.js', 'q23_eye_anat_patho.js', 'q24_eye_inflow.js', 'q25_eye_outflow.js', 'q26_eye_allergy_dry.js',
  'q38_eye_blank.js',
  'q39_eye_gaps.js',
+ 'q44_eye_poll.js',
           // Dr. Sikazwe, Lectures 11-12 (Exam 3): otic, oral, ophthalmic medicinal chemistry
           'q28_ooo_otic_oral.js', 'q29_ooo_oph_a.js', 'q30_ooo_oph_b.js', 'q31_ooo_oph_c.js',
           // Dr. Sikazwe, 11/19 (Exam 3): the questions on what he emphasized, written after the lecture (video and transcript)

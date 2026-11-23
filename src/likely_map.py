@@ -21,7 +21,7 @@ LEC = SRC['meta']['lecture']
 # source key (question evidence) -> words for a target that has no quote
 QSRC = {
     'lam-q': "her own practice questions", 'lam-q2': "her own cases and polls", 'lam-ex3': "she said it would be tested", 'lam-ex3b': "she said it would be tested",
-    'sik-q-ooo': "his own practice questions", 'sik-ex3': "a point he stressed", 'smith-hint-ex3': "her Exam 3 study hints", 'smith-ex3': "her Exam 3 remarks",
+    'sik-q-ooo': "his own practice questions", 'sik-ex3': "a point he stressed", 'smith-hint-ex3': "her Exam 3 study hints", 'smith-poll-ex3': "her glaucoma poll questions", 'smith-ex3': "her Exam 3 remarks",
     'smith-obj-eye': "her learning objectives", 'smith-eye-cue': "a point she stressed", 'smith-eye-room': "a question she put to the room",
     'patel-poll': "her in-class poll", 'patel-cue': "a point she stressed", 'patel-obj': "her learning objectives",
     'patel-room': "a question she put to the room", 'smith-hints': "her Exam 1 hints", 'smith-cue': "a point she stressed",

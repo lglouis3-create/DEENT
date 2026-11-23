@@ -237,8 +237,8 @@ if (typeof document !== 'undefined' && document.head && !document.getElementById
   /* =======================================================================
      proc: Smith slide 16's zoom on a ciliary process. Circle centre (cx, cy), radius R. The process
      is a pink finger with a light core and four red vessels (ciliary blood supply); receptors sit on
-     its crown and carbonic anhydrase on the surface; the alpha-1 receptor sits at the inner edge by
-     the vessels. o.cls: {b: class number for the beta icon, a2: ..., ca: ...} (drug-class colours);
+     its crown and carbonic anhydrase on the surface; the alpha-1 receptor sits on the top red vessel
+     (slide 16 puts its leader on the vessel, Louis 2026-11-23). o.cls: {b: class number for the beta icon, a2: ..., ca: ...} (drug-class colours);
      o.a1op: opacity of the alpha-1 icon (ey-aqueous step 4 draws it pale: no drug of that step acts on it);
      returns {svg, pts} where pts are the icon positions for leaders.
      ======================================================================= */
@@ -253,7 +253,7 @@ if (typeof document !== 'undefined' && document.head && !document.getElementById
     const ves = [-0.2, 0.02, 0.24, 0.46];
     ves.forEach((v, i) => { const a = u(-0.08, v + 0.03), b = u(0.08, v - 0.03); s += `<path class="fa-vesl" data-k="pz-v${i}" d="M${a[0]} ${a[1]} L${b[0]} ${b[1]}" stroke-width="${r1(R * 0.07)}"/>`; });
     const pts = {
-      beta: u(-0.31, -0.5), a2: u(0.1, -0.76), ca: u(0.33, -0.48), a1: u(-0.3, 0.0), ves: u(0.04, 0.36), body: u(-0.2, 0.62),
+      beta: u(-0.31, -0.5), a2: u(0.1, -0.76), ca: u(0.33, -0.48), a1: u(-0.03, -0.2), ves: u(0.04, 0.36), body: u(-0.2, 0.62),
     };
     const icon = (id, p, cls, rr = 6) => `<path class="${cls}" data-k="pz-${id}" d="${ell(p[0], p[1], rr, rr)}"/>`;
     const cc = o.cls || {};

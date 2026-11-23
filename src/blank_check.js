@@ -50,6 +50,8 @@ const W = {
  'EB-009': ['carbonic anhydrase', 'acetylcholine', 'choline acetyltransferase'],
  'EB-010': ['PGE2', 'PGF1 alpha', 'EP receptor'],
  'EB-011': ['calcineurin', 'JAK', 'protein kinase C'],
+ 'EP-005': ['carbonic anhydrase', 'acetylcholinesterase', 'beta receptor'],
+ 'EP-006': ['brimonidine', 'pilocarpine', 'latanoprost'],
  'EB-012': ['nitrous oxide', 'carbon monoxide', 'nitroglycerin'],
  'EB-013': ['partial', 'competitive', 'neutral'],
  'EB-014': ['histamine', 'eosinophil', 'H4'],

@@ -47,7 +47,8 @@ const noScroll = p => p.evaluate(() => document.documentElement.scrollWidth <= i
     // each block star sits on the h5 the analysis recorded
     const blk = await p.evaluate(() => { const out = {}; document.querySelectorAll('#v-guide section.gobj').forEach(s => s.querySelectorAll('.gpt').forEach((g, i) => {
       if (g.querySelector(':scope > h5 > .lkstar, :scope > .lkgrp > .lkstar')) { const h = g.querySelector(':scope > h5'); out[s.id + '#' + (i + 1)] = h ? h.textContent.replace(/★/g, '').replace(/\s+/g, ' ').trim() : ''; } })); return out; });
-    const strip = s => String(s || '').toLowerCase().replace(/[^a-z0-9]+/g, '');
+    /* Guides show "lecture 11/13" where the source heading has a T@ code (tables_ui.js hideCodes, Louis 2026-11-23), so the codes are left out of both sides */
+    const strip = s => String(s || '').replace(/\bT@?\s?\d{2,6}(?:\s*[–-]\s*@?\d+)?/g, '').replace(/lecture(\s*\d{1,2}\/\d{1,2})?/gi, '').toLowerCase().replace(/[^a-z0-9]+/g, '');
     const wrong = Object.entries(SRC.tabs.guideBlock).filter(([id, e]) => strip(blk[id]) !== strip(e.h5)).map(([id]) => id);
     check(wrong.length === 0, `${tag}: each block star is on the block the analysis starred (h5 title matches)`, wrong.join(', '));
     // the first visible section star: label, expanded state, tap shows the line, a second tap hides it

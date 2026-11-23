@@ -93,6 +93,8 @@ const LIKELY = {
                       detail:'Her words in the 11/13 or 11/17 lecture (DEENT_Lecture_11.13_transcript.txt, DEENT_Lecture_11.17_transcript.txt; character offsets T@n)'},
     'smith-eye-room':{by:'smith',   label:'Dr. Smith put it to the class',
                       detail:'11/17 (T@60798): she asked whether the class had seen the question before and said she was picky on it on purpose'},
+    'smith-poll-ex3':{by:'smith',   label:"Dr. Smith's glaucoma poll questions",
+                      detail:'PollEvforGlaucoma.pptx, given to the class by Dr. Smith ("Examples of possible types of questions you might see on Exam 3"), uploaded by Louis on 2026-11-23: six polls on beta receptor antagonists, inflow, brimonidine and netarsudil'},
     'smith-hint-ex3':{by:'smith',   label:"Dr. Smith's Exam 3 study hints",
                       detail:'Her study hints emailed to the class and pasted by Louis on 2026-11-20: answer the slide-deck objectives; know the parts of the eye for glaucoma and for tears; no need to memorize slides 8 or 9; understand open angle glaucoma, histamine in allergic conjunctivitis and dry eye; memorize the drug table; know every mechanism and the small details that differentiate drugs within a class; list significant side effects and explain how metabolic acidosis occurs with carbonic anhydrase inhibitors; three fill-in-the-blank questions on mechanism of action (STYLE.md; course.js Exam 3 facts)'},
     // Dr. Sikazwe, otic/oral/ophthalmic medicinal chemistry (Lectures 11-12, Exam 3; added 2026-11-19)
@@ -543,6 +545,12 @@ const LIKELY = {
     {id:'BP8O-002', source:'patel-cue', ref:"T@1737, T@96227 11/12 (slide 5)", reason:"Same cue: the fingertip-unit chart, adult only, with her fill-in-the-blank calculation statement."},
     {id:'BP8O-004', source:'patel-cue', ref:"T@15815, T@96227 11/12 (slide 29)", reason:"She gave the weight-based doses aloud and said fill in the blank is calculations."},
     // Exam 3, Dr. Smith's eye lectures (rewritten 2026-11-20 after her study hints): most likely first. Sources: smith-hint-ex3, smith-ex3, smith-obj-eye, smith-eye-cue, smith-eye-room.
+    {id:"EP-001", source:'smith-poll-ex3', ref:"Her glaucoma poll file (PollEvforGlaucoma.pptx), poll 2; slide 20", reason:"The same poll question, with the same options, in the examples she gave for Exam 3."},
+    {id:"EP-002", source:'smith-poll-ex3', ref:"Her glaucoma poll file (PollEvforGlaucoma.pptx), poll 3; slide 18", reason:"Same poll file: which drug decreases inflow."},
+    {id:"EP-003", source:'smith-poll-ex3', ref:"Her glaucoma poll file (PollEvforGlaucoma.pptx), poll 4; slide 22", reason:"Same poll file: the mechanism of brimonidine."},
+    {id:"EP-004", source:'smith-poll-ex3', ref:"Her glaucoma poll file (PollEvforGlaucoma.pptx), poll 5; slide 19", reason:"Same poll file: which drug is a beta blocker."},
+    {id:"EP-005", source:'smith-poll-ex3', ref:"Her glaucoma poll file (PollEvforGlaucoma.pptx), poll 6; slide 41", reason:"Same poll file, free-text: what netarsudil targets; matches her fill-in remark."},
+    {id:"EP-006", source:'smith-poll-ex3', ref:"Her glaucoma poll file (PollEvforGlaucoma.pptx), poll 7; slide 19", reason:"Same poll file, free-text: a beta receptor antagonist; matches her fill-in remark."},
     {id:"EI-029", source:'smith-hint-ex3', ref:"Hint 7 (11/20); T@17631, T@18418 11/17 (slide 27)", reason:"Hint 7 asks the class to explain how this adverse effect arises; on 11/17 she redrew the kidney figure to show it and said that knowing why it occurs lets a pharmacist explain it to others."},
     {id:"EB-008", source:'smith-hint-ex3', ref:"Hint 6 and her remark on three fill-in questions (11/20); T@23508 11/17 (slide 32)", reason:"She wrote that three fill-in questions ask for the mechanism of action and to study the details given in class; she named the receptor subtype for the first class of this section and then gave details that tell its two members apart."},
     {id:"EB-009", source:'smith-hint-ex3', ref:"Hint 6 and her remark on three fill-in questions (11/20); T@29210 11/17 (slide 34)", reason:"Same fill-in remark; she contrasted how this drug reaches its effect with the direct drugs of the section and described its action as permanent."},
