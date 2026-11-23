@@ -27,6 +27,7 @@ Every update adds its bullets here in the same commit that makes the change.
 - The adrenergic versus cholinergic eye figure now has recorded narration (3 steps).
 - Glaucoma figures keep every drug target labelled on the whole eye, with the ciliary process zoom in view.
 - Dr. Smith's glaucoma poll questions (6, from her file of Exam 3 examples) added and starred.
+- Dr. Sikazwe's Exam 3 questions reworded to his style (single-fact stems, balanced options); slide 32 items set aside.
 - Step-through figures take the full width; the narration text sits beside the drawing, or stays pinned on a phone.
 - Guides no longer show transcript codes; they read "lecture 11/13" instead.
 - Narration now starts at 0.8× speed, with a Speed control and a longer pause between figure steps.

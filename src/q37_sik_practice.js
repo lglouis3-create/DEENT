@@ -11,7 +11,7 @@
 QUESTIONS.push(
 {id:"OP2-001", skill:"class", prof:'Sikazwe', tier:'new', topic:"oo-oral", sub:"nonf", concept:"oo-p-nf-list",
  tags:["practice-q1", "list"], source:"both",
- stem:"A student answers the practice question \"List the non-fluoride toothpaste active ingredients\" with four ingredients. Which list is correct?",
+ stem:"Which list gives the non-fluoride toothpaste active ingredients?",
  options:[
   {t:"Sodium bicarbonate, nanohydroxyapatite, calcium sodium phosphosilicate, chlorhexidine gluconate", correct:false, why:"Chlorhexidine gluconate is a biguanide mouth-rinse agent (slide 21), not a toothpaste ingredient on slide 19."},
   {t:"Sodium fluoride, nanohydroxyapatite, calcium sodium phosphosilicate, amorphous calcium phosphate", correct:false, why:"Sodium fluoride is a fluoride source (slide 17), so it is excluded from a non-fluoride list."},
@@ -27,10 +27,10 @@ QUESTIONS.push(
   {t:"Nanohydroxyapatite", correct:true, why:"Its 50–1000 nm crystals bond to the hydroxyapatite of the tooth (slide 19)."},
   {t:"Sodium bicarbonate", correct:false, why:"It is an abrasive and a pH-elevating agent (slide 19), not a remineralizer."},
   {t:"Calcium sodium phosphosilicate", correct:true, why:"A bioactive glass that reacts with oral fluids to deposit crystalline hydroxycarbonate apatite (slide 19)."},
-  {t:"Cetylpyridinium chloride", correct:false, why:"A cationic pyridinium salt of the mouth rinses that binds bacteria (slide 21), not a remineralizer."},
+  {t:"Carbamide peroxide", correct:false, why:"A source of hydrogen peroxide used in rinses for canker sores (slide 20); it acts by oxidation, not remineralization."},
   {t:"Amorphous calcium phosphate", correct:true, why:"A reactive salt mixture that releases Ca2+ and PO4 ions on contact with saliva to remineralize enamel (slide 19)."}],
- teach:"On slide 19 only sodium bicarbonate is labelled an abrasive and pH modifier; nanohydroxyapatite, calcium sodium phosphosilicate and amorphous calcium phosphate are the three reactive remineralizers. The cationic rinse agents act on bacteria instead (slide 21).",
- cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slides 19, 21; T@23218 11/18; T@23946 11/18"},
+ teach:"On slide 19 only sodium bicarbonate is labelled an abrasive and pH modifier; nanohydroxyapatite, calcium sodium phosphosilicate and amorphous calcium phosphate are the three reactive remineralizers. Carbamide peroxide, a rinse agent, acts by oxidation (slide 20).",
+ cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slides 19, 20; T@23218 11/18; T@23946 11/18"},
 
 {id:"OP2-003", type:'match', skill:"mech", prof:'Sikazwe', tier:'new', topic:"oo-oral", sub:"nonf", concept:"oo-p-nf-how",
  tags:["practice-q1", "match"], source:"both",
@@ -45,7 +45,7 @@ QUESTIONS.push(
 
 {id:"OP2-004", skill:"class", prof:'Sikazwe', tier:'new', topic:"oo-oral", sub:"rinse", concept:"oo-p-nf-rinse-only",
  tags:["practice-q1", "two-facts"], source:"both",
- stem:"Which ingredient is a mouth-rinse agent on slide 20 but is not one of the non-fluoride toothpaste ingredients on slide 19?",
+ stem:"Which of these is used in a mouth rinse but is not a non-fluoride toothpaste ingredient?",
  options:[
   {t:"Sodium bicarbonate", correct:false, why:"It appears on both slides: a toothpaste abrasive and pH modifier (slide 19) and a rinse that raises saliva pH (slide 20)."},
   {t:"Nanohydroxyapatite", correct:false, why:"A toothpaste remineralizer on slide 19; it is not among the rinses of slide 20."},
@@ -81,7 +81,7 @@ QUESTIONS.push(
 
 {id:"OP2-007", skill:"chem", prof:'Sikazwe', tier:'new', topic:"oo-oph", sub:"fg", concept:"oo-p-fg-draw-carbamate", img:"sk-fg-five",
  tags:["practice-q2", "structure"], source:"both",
- stem:"Five groups are drawn as on slide 27, with plain lines for the carbon ends. Which numbered group is the carbamate?",
+ stem:"Which numbered group is the carbamate?",
  options:[
   {t:"Group 1", correct:false, why:"Imidazoline: a five-membered ring with two nitrogens, one as C=N (slide 31)."},
   {t:"Group 2", correct:false, why:"Sulfone: sulfur with two oxygens and two carbon neighbors, no nitrogen on the sulfur."},
@@ -104,7 +104,7 @@ QUESTIONS.push(
 
 {id:"OP2-009", skill:"chem", prof:'Sikazwe', tier:'new', topic:"oo-cai", sub:"sulf", concept:"oo-p-deethyl-dorz-structure", img:"sk-dorz-meta",
  tags:["practice-q3", "structure"], source:"both",
- stem:"Dorzolamide (the parent drug drawn) undergoes the CYP reaction printed on slide 37. Which numbered structure is the N-deethylated metabolite?",
+ stem:"Which numbered structure is the N-deethylated metabolite of dorzolamide?",
  options:[
   {t:"Structure 1", correct:false, why:"The ethylamino group is intact; the methyl on the ring carbon next to the sulfone is missing, which is not the step on slide 37."},
   {t:"Structure 2", correct:false, why:"The nitrogen still carries a two-carbon chain, now ending in OH; this is hydroxylation of the ethyl group, not its removal."},
@@ -115,7 +115,7 @@ QUESTIONS.push(
 
 {id:"OP2-010", skill:"chem", prof:'Sikazwe', tier:'new', topic:"oo-cai", sub:"sulf", concept:"oo-p-deethyl-brinz-structure", img:"sk-brinz-meta",
  tags:["practice-q3", "structure", "hard"], source:"both",
- stem:"Brinzolamide (the parent drug drawn) carries an alkyl group on each of two nitrogens. Slide 37 gives CYP N-deethylation. Which numbered structure is its N-deethylated metabolite?",
+ stem:"Which numbered structure is the N-deethylated metabolite of brinzolamide?",
  options:[
   {t:"Structure 1", correct:false, why:"The methoxypropyl chain is missing from the ring nitrogen, while the ethylamino group is intact; slide 37 names the ethyl, not this chain."},
   {t:"Structure 2", correct:false, why:"The ethylamino group is intact; the SO2NH2 group is missing, and that group docks with zinc (slide 38)."},
@@ -128,16 +128,16 @@ QUESTIONS.push(
  tags:["practice-q3", "adme"], source:"both",
  stem:"The N-deethylated metabolites of dorzolamide and brinzolamide are active. What does that mean for the activity of the parent drugs?",
  options:[
-  {t:"The parent drugs are prodrugs that act only through the metabolites", correct:false, why:"The parent drugs are themselves the zolamide carbonic anhydrase inhibitors (slide 36); the prodrugs of slides 45–48 are the esters."},
-  {t:"The metabolites probably contribute to the overall activity of the parent drugs", correct:true, why:"Slide 37 prints that the N-deethylated metabolites are active; in lecture they probably contribute to the overall activity of the parent drugs (T@12769 11/19)."},
-  {t:"The metabolites compete with the parent drugs and lower the overall effect", correct:false, why:"Active metabolites add to the activity of the parent, as stated on slide 37 and in lecture."},
-  {t:"The metabolites are inactive and serve only to eliminate the parent drugs", correct:false, why:"Slide 37 prints the opposite: the N-deethylated metabolites are active."}],
+  {t:"The parent drugs are prodrugs and act only through the metabolites", correct:false, why:"The parent drugs are themselves the zolamide carbonic anhydrase inhibitors (slide 36); the prodrugs of slides 45-48 are the esters."},
+  {t:"The metabolites add to the activity of the parent drugs", correct:true, why:"Slide 37 prints that the N-deethylated metabolites are active; in lecture they probably contribute to the overall activity of the parent drugs (T@12769 11/19)."},
+  {t:"The metabolites compete with the parent drugs and lower the effect", correct:false, why:"Active metabolites add to the activity of the parent, as stated on slide 37 and in lecture."},
+  {t:"The metabolites are inactive and only speed elimination", correct:false, why:"Slide 37 prints the opposite: the N-deethylated metabolites are active."}],
  teach:"Slide 37 pairs two statements: both drugs undergo CYP N-deethylation, and the N-deethylated metabolites are active. In lecture the metabolites probably contribute to the overall activity of the parent drugs.",
  cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slide 37; T@12700 11/19; T@12769 11/19"},
 
 {id:"OP2-012", skill:"mech", prof:'Sikazwe', tier:'new', topic:"oo-oral", sub:"fluor", concept:"oo-p-fluoride-supported", multi:true,
  tags:["practice-q4", "select-all"], source:"both",
- stem:"Select all that apply. No partial credit will be given. Which statements about fluoride ions in toothpaste or gel do slides 17 and 18 support?",
+ stem:"Select all that apply. No partial credit will be given. Which statements about fluoride ions in toothpaste or gel are correct?",
  options:[
   {t:"They convert hydroxyapatite into fluorapatite", correct:true, why:"Slide 17: fluoride ions convert hydroxyapatite, Ca10(PO4)6(OH)2, into fluorapatite, Ca10(PO4)6F2."},
   {t:"They raise the pH of the mouth and neutralize acid", correct:false, why:"That role belongs to sodium bicarbonate (slide 19); fluoride acts on the mineral of enamel."},
@@ -160,7 +160,7 @@ QUESTIONS.push(
 
 {id:"OP2-014", skill:"mech", prof:'Sikazwe', tier:'new', topic:"oo-oral", sub:"fluor", concept:"oo-p-fluoride-not-supported",
  tags:["practice-q4", "two-facts"], source:"both",
- stem:"Which statement about fluoride toothpaste is NOT supported by slides 17 and 18?",
+ stem:"Which statement about fluoride toothpaste is false?",
  options:[
   {t:"Fluorapatite is more resistant to acid erosion than hydroxyapatite", correct:false, why:"Supported by slide 17."},
   {t:"Fluoride ions enhance the deposition of calcium and phosphate onto enamel", correct:false, why:"Supported by slide 18 (mineral deposition; T@20715 11/18)."},
