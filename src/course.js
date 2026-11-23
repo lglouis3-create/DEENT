@@ -310,6 +310,7 @@ const COURSE = {
           'diagram_fx.js',
           'diagram_fx_fa.js',
           'diagram_fx_fa2.js',
+          'diagram_fx_full.js',
           'diagram_fx_fb.js',
           'diagram_fx_fc.js',
           'diagrams_ey.js',
