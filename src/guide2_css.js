@@ -142,6 +142,15 @@
 .gobj .g2-fold[open]>summary .g2-fold-s{font-size:0}
 .gobj .g2-fold[open]>summary .g2-fold-s::before{font-size:13.5px}
 .gobj .g2-table.g2-stack tr[class*="g2-c"]{border-left:6px solid var(--cl)}
+/* One sentence per line where a paragraph was long (Louis, 2026-11-23: "I don't like for exam 3 how bunch of paragraphs are made"): the words are the paragraph's own, split at the end of each sentence. */
+.gobj .g2-l{display:block;position:relative;padding-left:14px}
+.gobj .g2-l+.g2-l{margin-top:4px}
+.gobj .g2-l::before{content:"";position:absolute;left:3px;top:.62em;width:5px;height:5px;border-radius:50%;background:var(--accent,#2F5FA8);opacity:.55}
+.gobj .g2-l.g2-lbl{padding-left:0;font-weight:600;color:var(--text)}
+.gobj .g2-l.g2-lbl::before{display:none}
+.gobj .g2-said .g2-l.g2-lbl{color:#2c4a94}
+.gobj .g2-stat-v .g2-l{font-weight:600;line-height:1.35}
+.gobj .g2-dn .g2-l{padding-left:12px}
 @media (min-width:820px){.gobj .g2-clsgrid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 `;
   try {

@@ -841,7 +841,7 @@ QUESTIONS.push(
   {t:'True; both autoxidize to cytotoxic radicals', correct:false, why:'8-MOP does not; its CBDA is DNA intercalation and crosslinking (slide 18).'},
   {t:'False; neither drug involves autoxidation', correct:false, why:'Anthralin does (slide 17; T 938–942).'}],
  teach:'Anthralin: spontaneous autoxidation to the anthranyl radical and superoxide anion (slide 17). 8-MOP: inserts between DNA base pairs and, with UVA, crosslinks them (slide 18).',
- note:'Polleve-2 (slide 19) is a two-choice TRUE/FALSE poll; the drill needs at least three options, so the true/false choice is kept with the reason attached. The poll as asked is kept verbatim in the notes for STYLE.md. The spoken answer is "We should say safe force, right?" (T 979), read as "false", which matches the reasoning that follows (T 979–980).',
+ note:'Polleve-2 (slide 19) is a two-choice TRUE/FALSE poll; the drill needs at least three options, so the true/false choice is kept with the reason attached. The spoken answer is "We should say safe force, right?" (T 979), read as "false", which matches the reasoning that follows (T 979–980).',
  quote:'Polleve, 11/03, slide 19',
  cite:S3+' slides 17–19; T 977–980'},
 

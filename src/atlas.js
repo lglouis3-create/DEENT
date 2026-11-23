@@ -3883,11 +3883,10 @@ const ATLAS_UI = (() => {
       if (m.pubchem) recs.push('PubChem CID <a href="https://pubchem.ncbi.nlm.nih.gov/compound/' + esc(m.pubchem) + '" target="_blank" rel="noopener">' + esc(m.pubchem) + '</a>');
       if (m.chembl) recs.push('ChEMBL <a href="https://www.ebi.ac.uk/chembl/explore/compound/' + esc(m.chembl) + '" target="_blank" rel="noopener">' + esc(m.chembl) + '</a>');
       if (recs.length) rows.push(['Records', recs.join(' · ')]);
-      if (m.verification) rows.push(['Verification', esc(STATUS[m.verification] || m.verification) +
-        (m.checked ? ', checked ' + esc(m.checked) : '') + (m.vnote ? '. ' + esc(m.vnote) : '')]);
+      // the record check (PubChem, ChEMBL) is a build-time check, not something a learner studies: no "Verification" row
       if (m.note) rows.push(['Drawing note', esc(m.note)]);
       const sd = el('details', 'atsrcs');
-      sd.innerHTML = '<summary>Sources and verification</summary><dl>' +
+      sd.innerHTML = '<summary>Sources</summary><dl>' +
         rows.map(([k, v]) => '<dt>' + k + '</dt><dd>' + v + '</dd>').join('') + '</dl>';
       t.appendChild(sd);
     });

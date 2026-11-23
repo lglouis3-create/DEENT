@@ -561,7 +561,7 @@ QUESTIONS.push(
   {t:'Pat dry after a bath or shower', correct:true, why:'Slide 51: pat dry after bath or shower; "We\'re patting it down. We\'re not scrubbing it" (T@31131).'},
   {t:'Wear snug clothing to hold moisturizer against the skin', correct:false, why:'Slide 51: do not wear tight clothing; slide 30: soft cotton clothing.'}],
  teach:'Slide 51 also: avoid factors that trigger allergic reactions; pat dry after bath or shower.',
- note:'Slide 51 advises remaining in areas with a moderate temperature and low humidity, while slide 20 lists low humidity as a trigger; no item keys the humidity advice (reviews/OPEN_QUESTIONS.md).',
+ note:'Slide 51 advises remaining in areas with a moderate temperature and low humidity, while slide 20 lists low humidity as a trigger; no item keys the humidity advice.',
  cite:P5+' slides 30, 51; T@62240–63496'},
 
 {id:'P5-044', skill:'tell', prof:'Patel', tier:'new', topic:'p5-care', sub:'moist', concept:'p5-moist-most-effective',

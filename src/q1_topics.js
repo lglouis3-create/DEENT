@@ -482,7 +482,7 @@ const QUESTIONS = [
   {t:'Inflammation', correct:true, why:'Slide 32: production of inflammation with release of inflammatory mediators.'},
   {t:'Skin barrier dysfunction from FLG variants', correct:false, why:'This is the AD mechanism (slide 15).'}],
  teach:'Slide 32 names four factors set off by androgens. In acne the keratinization is altered: the follicle cells stick together and fail to move up and shed (slide 33; T 426–427, 559–573).',
- note:'Slide 32 words the second factor as "alteration in the keratinization process and hyperproliferation of ductal epidermis". In class she said keratinocyte hyperproliferation "is not one of the components of acne. This is a feature of psoriasis" (T 573–577). The option is worded without "hyperproliferation"; the conflict is flagged in reviews/OPEN_QUESTIONS.md.',
+ note:'Slide 32 words the second factor as "alteration in the keratinization process and hyperproliferation of ductal epidermis". In class she said keratinocyte hyperproliferation "is not one of the components of acne. This is a feature of psoriasis" (T 573–577). The option is worded without "hyperproliferation".',
  cite:PP+' slides 15, 32; T 422–436'},
 
 {id:'L1-043', skill:'patho', prof:'Smith', tier:'new', topic:'acne', sub:'path', concept:'pacnes-lipase',

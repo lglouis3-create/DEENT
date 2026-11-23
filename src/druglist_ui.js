@@ -75,6 +75,12 @@
    source of targets. Links use the engine's own drillList(), jump(),
    linksFor() and the RET/backBtn return stack.
 
+   The List view (2026-11-23, the tab's first mode; modes are List | Quiz me | Recall | Chart): one list of every drug, the 79 skin
+   drugs, the 42 chart eye drugs and Dr. Lam's extra eye, ear and mouth drugs (druglist_dose.js), with a search over generic, brand,
+   class and use (one letter off is forgiven), exam and area chips (the active exam first), a colour tag for how often and, per row,
+   dose, limits and the key point where the course states them. An opened row shows its slides and the drug's full card from its own
+   chart. The Skin / Eye switch below applies to Quiz me, Recall and Chart. State: st.uq, uexam, uarea, ufreq (page memory only).
+
    Two lists (Exam 3, 2026-11-18): a switch at the top of the tab, Dermatology or Eye (Exam 3), swaps the data the four views read
    (DL: DRUGLIST or DRUGLIST_EYE, druglist_eye.js; chart images chart/eye-N.webp with CHART_BOXES_EYE, chart_boxes_eye.js). Each list
    keeps its own filters, quiz and this visit's ratings while the page is open. The choice is the one thing kept on this device,
@@ -111,7 +117,7 @@ const DRUGLIST_UI = (() => {
   const RF_EYE = ['target', 'mech', 'cls', 'use', 'chem', 'rx', 'brand'];
   const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g, c => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'}[c]));
   const NOFILTER = {q: '', dz: '', cls: '', page: '', status: '', boxed: false, photo: false, hasq: false};
-  const st = Object.assign({mode: 'browse', kinds: Object.assign(...Object.keys(DL.KINDS).map(k => ({[k]: k === 'target' || k === 'cls'}))), rfield: 'target',
+  const st = Object.assign({mode: 'list', uq: '', uexam: null, uarea: '', ufreq: '', kinds: Object.assign(...Object.keys(DL.KINDS).map(k => ({[k]: k === 'target' || k === 'cls'}))), rfield: 'target',
     cpage: 1, chit: null, cq: '', zoom: null, cfrom: null, gopen: {}, ropen: {}}, NOFILTER);
   // memory only, never stored
   const typed = {}, checked = new Set();
@@ -124,6 +130,7 @@ const DRUGLIST_UI = (() => {
   let TGT = null, QCACHE = null, pane = null;
 
   const MODES = [
+    ['list', 'List', 'One list of every drug: search by generic, brand, class or use; choose the exam and the area; each row shows the dose and frequency where the course states them. Tap a row to open it.'],
     ['browse', 'Browse', 'Every drug that matches the filters, shown in full: class, use, target, mechanism, cautions, each line with its source.'],
     ['quiz', 'Quiz me', 'Multiple choice on the drugs that match the filters, all on this page. Tap an answer to see if it is right, the correct answer and its source. Nothing is saved.'],
     ['recall', 'Recall', 'Each drug by name only. Type what you remember, press Check, and compare it yourself with the answer and its source. Not graded, not saved.'],
@@ -311,6 +318,50 @@ const DRUGLIST_UI = (() => {
 #v-drugs .dlsum{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 12px;margin:0 0 12px;font-size:14px;line-height:1.45}
 #v-drugs .dlsum p{margin:4px 0}
 #v-drugs .dlsum .dlchips{margin-top:6px}
+
+/* the single List view (2026-11-23): one row per drug, a colour tag for how often, the dose and the one thing to know */
+#v-drugs .dlu2{margin:0 0 10px}
+#v-drugs .dlu2 .dlchips .lab,#v-drugs .dlkey .lab{font-size:13px;color:var(--text-dim);margin-right:2px;min-width:44px}
+#v-drugs .dlu2 .dlchips .chip[aria-pressed="true"]{background:var(--ink);color:#fff;border-color:var(--ink)}
+#v-drugs .dlkey{display:flex;flex-wrap:wrap;gap:6px 8px;align-items:center;margin:8px 0 0}
+#v-drugs .dlkb{display:inline-flex;align-items:center;gap:6px;min-height:44px;padding:4px 10px 4px 6px;border:1px solid var(--line);border-radius:22px;background:var(--paper);color:var(--text);font:inherit;cursor:pointer}
+#v-drugs .dlkb small{font-size:12px;color:var(--text-dim)}
+#v-drugs .dlkb[aria-pressed="true"]{outline:3px solid var(--ink);outline-offset:1px}
+#v-drugs .dltag{display:inline-block;font-size:12.5px;font-weight:700;line-height:1;color:#fff;border-radius:11px;padding:5px 9px;white-space:nowrap;margin:0 4px 2px 0}
+#v-drugs .dlbrowse.dl2 .dlrowd>summary{grid-template-columns:minmax(150px,1.3fr) 44px minmax(130px,1.1fr) minmax(70px,.5fr) minmax(170px,1.6fr) minmax(150px,1.3fr)}
+#v-drugs .dlbrowse.dl2 .dlcols{grid-template-columns:minmax(150px,1.3fr) 44px minmax(130px,1.1fr) minmax(70px,.5fr) minmax(170px,1.6fr) minmax(150px,1.3fr)}
+#v-drugs .dlu>summary .dlcl i{font-style:normal;color:var(--text-dim)}
+#v-drugs .dlu>summary .dldo{font-size:13.5px;line-height:1.35}
+#v-drugs .dlu>summary .dldo em{display:block;font-style:normal;color:var(--text-dim);font-size:12.5px}
+#v-drugs .dlu>summary .dlpe{font-size:13px;line-height:1.35;color:var(--text)}
+#v-drugs .dlu>summary .dldo,#v-drugs .dlu>summary .dlpe,#v-drugs .dlu>summary .dlcl{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+#v-drugs .dlu[open]>summary .dldo,#v-drugs .dlu[open]>summary .dlpe,#v-drugs .dlu[open]>summary .dlcl{display:block;-webkit-line-clamp:unset;overflow:visible}
+#v-drugs .dlnone{font-size:12px;color:var(--text-dim)}
+#v-drugs .dlrx{font-size:12px;font-weight:700;color:var(--text-dim)}
+#v-drugs .dlrx.otc{color:var(--ok)} #v-drugs .dlrx.rxp{color:var(--ink)}
+#v-drugs .dlmore .dlf.f-dose{border-color:var(--accent);margin:8px 12px}
+#v-drugs .dlmore .dlf.f-dose>b{color:var(--accent)}
+#v-drugs .dlmore .dlf.f-dose li{margin:4px 0}
+#v-drugs .dlmore>.dlcard{border:0;border-radius:0 0 8px 8px}
+#v-drugs .dlmore>.dlcard>h3{display:none}
+#v-drugs .dlsrc.lam{border-color:var(--accent)}
+#v-drugs .dlhow2 summary{font-weight:600}
+@media (max-width:760px){
+  #v-drugs .dlbrowse.dl2 .dlrowd>summary{grid-template-columns:1fr auto;gap:4px 10px;padding:10px 12px}
+  #v-drugs .dlbrowse.dl2 .dlrowd>summary .dlfq{grid-column:1 / -1;grid-row:2}
+  #v-drugs .dlbrowse.dl2 .dlrowd>summary .dlfq:has(.dlnone){display:none}
+  #v-drugs .dlbrowse.dl2 .dlrowd>summary span[data-l]:not(.dln):not(.dlrx):not(.dlfq)::before{content:none}
+  #v-drugs .dlbrowse.dl2 .dlrowd>summary .dlcl{grid-row:3;font-size:13px;color:var(--text-dim)}
+  #v-drugs .dlbrowse.dl2 .dlrowd>summary .dlrx{grid-row:1;align-self:center}
+  #v-drugs .dlu>summary .dldo,#v-drugs .dlu>summary .dlpe{-webkit-line-clamp:4}
+  #v-drugs .dlu>summary .dlpe::before{content:'Key: ' !important;font-weight:600;color:var(--text-dim)}
+  #v-drugs .dlu>summary .dlpe:empty{display:none}
+  #v-drugs .dlu>summary .dldo:empty{display:none}
+  #v-drugs .dlu2 .dlchips,#v-drugs .dlu2 .dlkey{gap:6px;flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;padding-bottom:2px;scrollbar-width:thin}
+  #v-drugs .dlu2 .dlchips>*,#v-drugs .dlu2 .dlkey>*{flex:none}
+  #v-drugs .dlkb small{display:none}
+  #v-drugs .dlu2 .chip{padding:6px 11px}
+}
 `;
 
   /* ---------- data helpers ---------- */
@@ -325,7 +376,7 @@ const DRUGLIST_UI = (() => {
     return QCACHE[d.id];
   };
   const byName = {smith: 'Dr. Smith', sikazwe: 'Dr. Sikazwe', chart: 'Drug chart'};
-  const src = s => `<span class="dlsrc ${esc(s.by)}">${esc(byName[s.by] || s.by)} · ${esc(s.cite)}</span>`;
+  const src = s => `<span class="dlsrc ${esc(s.by)}">${esc(byName[s.by] || s.by)} · ${esc(String(s.cite).replace(/\bref-[a-z0-9-]+/g, 'Reference table'))}</span>`;
   const cap = t => String(t).charAt(0).toUpperCase() + String(t).slice(1);
   const li = s => `<li>${esc(cap(s.t))}${src(s)}</li>`;
   const field = (cls, label, items) => items && items.length ? `<div class="dlf ${cls}"><b>${esc(label)}</b><ul>${items.map(li).join('')}</ul></div>` : '';
@@ -478,6 +529,168 @@ const DRUGLIST_UI = (() => {
     return `<div class="dlbrowse"><p class="dlrow"><button type="button" class="btn sm ghost" data-dl="gall" data-o="1">Open all categories</button>` +
       `<button type="button" class="btn sm ghost" data-dl="gall" data-o="0">Close all</button></p>${h}</div>`;
   }
+  /* ---------- List: every drug of both charts and Dr. Lam's extra drugs in one list ---------- */
+  const DOSE = typeof DRUGLIST_DOSE !== 'undefined' ? DRUGLIST_DOSE : null;
+  const AREAS = {gl: 'Glaucoma', ac: 'Allergic conjunctivitis', de: 'Dry eye', ear: 'Ear', mouth: 'Mouth',
+    sun: 'Sun protection', ad: 'Atopic dermatitis', acne: 'Acne', pso: 'Psoriasis', ster: 'Topical steroids'};
+  const XCHIPS = [['3', 'Exam 3', ['gl', 'ac', 'de', 'ear', 'mouth']], ['12', 'Exams 1–2 (skin)', ['sun', 'ad', 'acne', 'pso', 'ster']], ['all', 'All', null]];
+  const AREA_NOTE = {'3': 'Eye, ear and mouth: Drs. Smith, Lam and Sikazwe', '12': 'Skin: Drs. Smith, Sikazwe and Patel'};
+  const SHORT_EYE = {beta: 'β-blocker', a2: 'α2 agonist', chol: 'Cholinergic agonist', ache: 'Cholinesterase inhibitor', ca: 'Carbonic anhydrase inhibitor',
+    pg: 'Prostaglandin analog', rho: 'Rho kinase inhibitor', comb: 'Combination', h1: 'H1 inverse agonist, some mast cell stabilizing', a2h1: 'α2 agonist / H1 inverse agonist',
+    calc: 'Calcineurin inhibitor', lube: 'Ocular lubricant', steroid: 'Steroid', lfa: 'LFA-1 antagonist', nach: 'Nicotinic ACh receptor agonist'};
+  const SHORT_ID = {'ey-timolol-dorz': 'CAI / beta-blocker', 'ey-timolol-brim': 'Alpha-2 agonist / beta-blocker', 'ey-brinz-brim': 'CAI / alpha-2 agonist', 'ey-lat-netars': 'ROCK inhibitor + prostaglandin analog'};
+  const SUBS_EYE = {comb: 'Combination eye prescriptions'};
+  const defaultExam = () => { try { return COURSE.activeExam === 'exam3' ? '3' : '12'; } catch (e) { return '3'; } };
+  const dermArea = d => (CATS_DERM.find(c => c.pages.includes(d.page)) || CATS_DERM[CATS_DERM.length - 1]).id;
+  const oneLine = t => String(t == null ? '' : t).replace(/\s+/g, ' ').trim();
+  let ITEMS = null;
+  function buildItems(){
+    const out = [];
+    const mk = (src, d) => {
+      const L = src === 'derm' ? DERM : EYE;
+      return withList(L, () => {
+        const T = targets(), ov = (DOSE && src === 'eye' && DOSE.OVERLAY[d.id]) || null;
+        const cls = src === 'eye' ? (SHORT_ID[d.id] || SHORT_EYE[d.cls] || classText(d)) : (d.chartClass || DL.CLASSES[d.cls] || '');
+        const row = (d.tgt && T[d.tgt] && T[d.tgt].parts.find(p => p.kind === 'tg'));
+        const tg = DL.hasTarget(d) && row ? row.t : '';
+        const use = src === 'eye' ? (d.chartUse && d.chartUse.length < 70 ? d.chartUse : (DL.DISEASES[d.dz] || '')) : useText(d);
+        const brands = (d.brands || []).concat(ov && ov.brands ? ov.brands : []).filter((b, i, a) => a.indexOf(b) === i);
+        const pearl = ov && ov.pearl ? ov.pearl : (d.boxed ? 'Boxed warning: ' + d.boxed.t : ((d.ae || [])[0] ? d.ae[0].t : ''));
+        const sub = src === 'eye' ? (SUBS_EYE[d.cls] || (DL.CLASSES[d.cls] && SHORT_EYE[d.cls]) || cls) : (DL.CLASSES[d.cls] || cls);
+        return {key: d.id, src, d, ov, area: src === 'eye' ? [].concat(d.dz)[0] : dermArea(d), exam: src === 'eye' ? '3' : '12', name: d.name.replace(/ \((glaucoma|allergic conjunctivitis), p\. \d\)/, ''),
+          alt: d.alt || [], brands, rx: (ov && ov.rx) || d.rx || '', cls, tg, use, freq: ov ? [].concat(ov.freq || []) : [], dose: ov ? ov.dose || '' : '', limit: ov ? ov.limit || '' : '',
+          pearl, sub, class2: DL.CLASSES[d.cls] || ''};
+      });
+    };
+    DERM.DL.D.forEach(d => out.push(mk('derm', d)));
+    if (EYE) EYE.DL.D.forEach(d => out.push(mk('eye', d)));
+    if (DOSE) DOSE.EXTRA.forEach(x => out.push({key: x.id, src: 'x', x, area: x.area, exam: '3', name: x.name, alt: x.alias || [], brands: x.brands || [], rx: x.rx || '', cls: x.cls, tg: '', use: x.use,
+      freq: [].concat(x.freq || []), dose: x.dose || '', limit: x.limit || '', pearl: x.pearl || '', sub: x.sub, class2: ''}));
+    out.forEach(it => {
+      it.hay = [it.name, it.alt.join(' '), it.brands.join(' '), it.cls, it.class2, it.use, it.tg, AREAS[it.area], it.sub, it.freq.map(f => DOSE.FREQ[f].label + ' ' + DOSE.FREQ[f].words).join(' ')].join(' ').toLowerCase();
+    });
+    return out;
+  }
+  const items = () => ITEMS || (ITEMS = buildItems());
+  /* run fn with the other list's data swapped in (the cards are written for one list at a time) */
+  const LCACHE = {};
+  function withList(L, fn){
+    if (L === LIST) return fn();
+    const sv = {LIST, DL, CB, CATS, DF, TGT, QCACHE, FCACHE, CPAGES, COV};
+    LCACHE[LIST.key] = {TGT, QCACHE, FCACHE, COV};
+    const c = LCACHE[L.key] || {};
+    LIST = L; DL = L.DL; CB = L.CB; CATS = isEye() ? CATS_EYE : CATS_DERM; DF = isEye() ? null : DF0; TGT = c.TGT || null; QCACHE = c.QCACHE || null; FCACHE = c.FCACHE || {}; COV = c.COV || null;
+    try { CPAGES = cpagesOf(); } catch (e) { /* chart pages are not needed here */ }
+    try { return fn(); }
+    finally {
+      LCACHE[L.key] = {TGT, QCACHE, FCACHE, COV};
+      LIST = sv.LIST; DL = sv.DL; CB = sv.CB; CATS = sv.CATS; DF = sv.DF; TGT = sv.TGT; QCACHE = sv.QCACHE; FCACHE = sv.FCACHE; CPAGES = sv.CPAGES; COV = sv.COV;
+    }
+  }
+  const listOf = it => it.src === 'derm' ? DERM : EYE;
+  const lev = (a, b) => {
+    const m = a.length, n = b.length; let prev = Array.from({length: n + 1}, (_, j) => j);
+    for (let i = 1; i <= m; i++) { const cur = [i]; for (let j = 1; j <= n; j++) cur[j] = Math.min(prev[j] + 1, cur[j - 1] + 1, prev[j - 1] + (a[i - 1] === b[j - 1] ? 0 : 1)); prev = cur; }
+    return prev[n];
+  };
+  let VOCAB = null;
+  const vocab = () => VOCAB || (VOCAB = [...new Set(items().flatMap(it => it.hay.split(/[^a-z0-9α-ω]+/)).filter(w => w.length >= 4))]);
+  /* a word of the search matches a word of the drug when it is a part of it, or is one letter off (two for long words) */
+  function tokens(q){
+    const out = [];
+    for (const t of q.toLowerCase().split(/[^a-z0-9α-ω]+/).filter(Boolean)) {
+      if (t.length < 4 || vocab().some(w => w.indexOf(t) !== -1)) { out.push([t]); continue; }
+      const lim = t.length >= 8 ? 2 : 1, near = vocab().filter(w => w[0] === t[0] && Math.abs(w.length - t.length) <= lim && lev(t, w) <= lim);
+      out.push(near.length ? near : [t]);
+    }
+    return out;
+  }
+  let FIX = '';
+  function ufiltered(){
+    const q = st.uq.trim(), tk = q ? tokens(q) : [];
+    FIX = tk.some((alts, i) => alts.length !== 1 || alts[0] !== q.toLowerCase().split(/[^a-z0-9α-ω]+/).filter(Boolean)[i]) ? tk.map(a => a[0]).join(' ') : '';
+    return items().filter(it => (st.uexam === 'all' || it.exam === st.uexam) && (!st.uarea || it.area === st.uarea) && (!st.ufreq || it.freq.includes(st.ufreq)) &&
+      tk.every(alts => alts.some(a => it.hay.indexOf(a) !== -1)));
+  }
+  const tagHtml = (f, big) => { const F = DOSE.FREQ[f]; return F ? `<span class="dltag${big ? ' big' : ''}" style="background:${F.c}" title="${esc(F.words)}">${esc(F.label)}</span>` : ''; };
+  const brandsOf = it => it.brands.length ? ' (' + it.brands.join(', ') + ')' : '';
+  function urow(it){
+    const open = !!st.ropen[it.key];
+    const rx = it.rx ? `<span class="dlrx ${/^OTC/.test(it.rx) ? 'otc' : 'rxp'}" data-l="Rx/OTC">${esc(it.rx)}</span>` : '<span class="dlrx" data-l="Rx/OTC"></span>';
+    const cls = esc(it.cls) + (it.tg ? `<i> · ${esc(it.tg)}</i>` : '');
+    return `<details class="dlrowd dlu" data-id="${esc(it.key)}" data-src="${it.src}"${open ? ' open' : ''}><summary>` +
+      `<span class="dln" data-l="Drug"><b>${esc(it.name)}</b><i>${esc(brandsOf(it))}</i></span>${rx}` +
+      `<span class="dlcl" data-l="Class">${cls}</span>` +
+      `<span class="dlfq" data-l="How often">${it.freq.map(f => tagHtml(f)).join('') || '<span class="dlnone">no frequency in the course material</span>'}</span>` +
+      `<span class="dldo" data-l="${it.dose ? 'Dose' : 'Use'}">${esc(oneLine(it.dose || (it.use ? 'Use: ' + it.use : '')))}${it.limit ? `<em>${esc(oneLine(it.limit))}</em>` : ''}</span>` +
+      `<span class="dlpe" data-l="Key point">${esc(oneLine(it.pearl))}</span></summary>${open ? umore(it) : ''}</details>`;
+  }
+  /* the opened row: dosing lines with their slides, then the drug's full card from its chart */
+  function umore(it){
+    const lines = [];
+    const cite = (it.ov && it.ov.cite) || (it.x && it.x.cite) || [];
+    const chips = cite.map(c => `<span class="dlsrc lam">${esc(c)}</span>`).join('');
+    let dose = '';
+    if (it.dose || it.limit || it.pearl || (it.x && it.x.more)) {
+      const li = (lab, t) => t ? `<li><b>${lab}</b> ${esc(t)}</li>` : '';
+      dose = `<div class="dlf f-dose"><b>Dose, limits and the one thing to know</b><ul>` +
+        `<li><b>Class</b> ${esc(it.cls)}${it.tg ? ' · ' + esc(it.tg) : ''}</li>` +
+        (it.use && it.src === 'x' ? li('Use', it.use) : '') +
+        (it.freq.length ? `<li><b>How often</b> ${it.freq.map(f => tagHtml(f) + ' ' + esc(DOSE.FREQ[f].words)).join(' ; ')}</li>` : '') +
+        li('Dose', it.dose) + li('Limit', it.limit) + li('Key point', it.pearl) +
+        ((it.x && it.x.more) || []).map(m => `<li>${esc(m)}</li>`).join('') +
+        ((it.ov && it.ov.note) ? `<li>${esc(it.ov.note)}</li>` : '') +
+        (chips ? `<li class="dlcites"><b>Source</b> ${chips} <span class="dlnotgt">Dr. Lam's slide; where the slide shows only a heading, her handout or the 11/20 lecture gives the line.</span></li>` : '') +
+        `</ul></div>`;
+    }
+    const card2 = it.d ? withList(listOf(it), () => card(it.d)) : '';
+    return `<div class="dlmore">${dose}${card2}</div>`;
+  }
+  function ulist(list){
+    if (!list.length) return '<p class="dlempty">No drug matches this search and these filters.</p>';
+    const groups = [];
+    for (const it of list) {
+      let g = groups.find(x => x.area === it.area);
+      if (!g) groups.push(g = {area: it.area, subs: []});
+      let sg = g.subs.find(x => x.sub === it.sub);
+      if (!sg) g.subs.push(sg = {sub: it.sub, rows: []});
+      sg.rows.push(it);
+    }
+    const order = ['gl', 'ac', 'de', 'ear', 'mouth', 'sun', 'ad', 'acne', 'pso', 'ster'];
+    groups.sort((a, b) => order.indexOf(a.area) - order.indexOf(b.area));
+    const one = groups.length === 1 && list.length <= 12;
+    return `<div class="dlbrowse dl2">` + groups.map(g => {
+      const n = g.subs.reduce((a, s) => a + s.rows.length, 0), open = st.gopen[g.area] !== undefined ? st.gopen[g.area] : true;
+      return `<details class="dlgrp" data-g="${g.area}"${open || one ? ' open' : ''}><summary><span>${esc(AREAS[g.area])}</span><span class="n">${n} drug${n === 1 ? '' : 's'}</span></summary>` +
+        `<div class="dlgbody"><div class="dlcols" aria-hidden="true"><span>Drug (brand)</span><span>Rx/OTC</span><span>Class</span><span>How often</span><span>Dose and limits</span><span>Key point</span></div>` +
+        g.subs.map(s => `<h4 class="dlsub">${esc(s.sub)}</h4>` + s.rows.map(urow).join('')).join('') + `</div></details>`;
+    }).join('') + `</div>`;
+  }
+  function ucontrols(){
+    const ex = XCHIPS.find(e => e[0] === st.uexam), areas = ex[2] || [].concat(XCHIPS[0][2], XCHIPS[1][2]);
+    const counts = k => items().filter(it => (st.uexam === 'all' || it.exam === st.uexam) && (k === '' || it.area === k)).length;
+    return `<section class="dlfilters dlu2" aria-label="Find a drug">
+      <div class="dlfld"><label for="dluq">Search by generic or brand name, class or use</label>
+        <input type="search" id="dluq" placeholder="e.g. timolol, Lumigan, beta-blocker, glaucoma" value="${esc(st.uq)}" autocomplete="off" enterkeyhint="search"></div>
+      <div class="dlchips" role="group" aria-label="Exam"><span class="lab">Exam</span>${XCHIPS.map(([k, l]) => `<button type="button" class="chip" data-dl="uexam" data-k="${k}" aria-pressed="${st.uexam === k}">${esc(l)}</button>`).join('')}</div>
+      <div class="dlchips" role="group" aria-label="Area"><span class="lab">Area</span>
+        <button type="button" class="chip" data-dl="uarea" data-k="" aria-pressed="${!st.uarea}">All (${counts('')})</button>
+        ${areas.map(a => `<button type="button" class="chip" data-dl="uarea" data-k="${a}" aria-pressed="${st.uarea === a}">${esc(AREAS[a])} (${counts(a)})</button>`).join('')}</div>
+      <div class="dlkey" role="group" aria-label="How often: tap a tag to show only those drugs"><span class="lab">How often <small>(tap a tag to filter)</small></span>
+        ${DOSE.FREQ_KEY.map(f => `<button type="button" class="dlkb" data-dl="ufreq" data-k="${f}" aria-pressed="${st.ufreq === f}" title="${esc(DOSE.FREQ[f].words)}">${tagHtml(f)}<small>${esc(DOSE.FREQ[f].words.replace(/ \(.*/, ''))}</small></button>`).join('')}</div>
+      <details class="dlnote dlhow2"><summary>How to read a row</summary>
+        <p>Each row, in this order: <b>drug</b> (brand names), <b>Rx</b> or <b>OTC</b>, <b>class</b> and target, <b>how often</b> (a colour tag), <b>dose and limits</b> (age, length of use, storage), the <b>key point</b> (a side effect or caution). Tap a row for the rest: its source slides, and for chart drugs the full card with the chart page, the questions on it and the Reference table.</p>
+        <p><span class="dltag" style="background:${DOSE.FREQ.qpm.c}">Daily PM</span> is once daily in the evening (QPM, QHS). <span class="dltag" style="background:${DOSE.FREQ.short.c}">Short term</span> means a short course only. <b>Where a row has no tag or no dose, the course material states none for that drug.</b></p>
+        <p>Doses, frequencies and durations for the eye, ear and mouth drugs come from Dr. Lam's slides (the slide is named on the row) and, where a slide shows only a heading, her handout or the 11/20 lecture. Dr. Smith's chart gives class, target and use. The skin drugs have no frequency in the course material, so they show class, target, use and the main caution.</p></details>
+      <p class="dlcount" id="dlcount" aria-live="polite"></p></section>`;
+  }
+  function udraw(){
+    const list = ufiltered(), out = pane.querySelector('#dllist'), cnt = pane.querySelector('#dlcount');
+    const ex = XCHIPS.find(e => e[0] === st.uexam)[1];
+    cnt.textContent = `${list.length} drug${list.length === 1 ? '' : 's'} · ${ex}${st.uarea ? ' · ' + AREAS[st.uarea] : ''}${st.ufreq ? ' · ' + DOSE.FREQ[st.ufreq].label : ''}` + (FIX ? ` · showing results for "${FIX}"` : '');
+    out.innerHTML = ulist(list);
+  }
+
   /* a chart page as a table with its column names: the pages after the first have no header row on the chart */
   function pageTable(p){
     const rows = DL.CHART_ROWS.map((r, i) => ({page: r[0], label: r[1], id: r[2], i})).filter(r => r.page === p && r.id);
@@ -516,7 +729,7 @@ const DRUGLIST_UI = (() => {
     if (f === 'potency') return d.potency ? field('f-note', 'Potency class', DL.potSrc(d, false)) : none('f-note', 'Potency class', 'No potency class: not a topical steroid (potency classes are on chart p. 6 only).');
     if (f === 'brand') return d.brands.length ? field('f-note', 'Brand', DL.brandSrc(d).concat([DL.BRAND_QUOTE])) : none('f-note', 'Brand', 'No brand on its chart line.');
     if (L.use.length) return field('f-use', 'Indication', L.use) + offChart(DL.OFF_CHART[d.id] || []);
-    return `<div class="dlf f-use"><b>Indication</b><ul><li>No indication on the chart line (chart p. 5 columns are misaligned; see About this list)${d.dz.length ? ': listed on the ' + esc(DL.PAGES[d.page]) + ' page' : ''}.</li></ul></div>` + offChart(DL.OFF_CHART[d.id] || []);
+    return `<div class="dlf f-use"><b>Indication</b><ul><li>No indication on the chart line (chart p. 5 columns are misaligned)${d.dz.length ? ': listed on the ' + esc(DL.PAGES[d.page]) + ' page' : ''}.</li></ul></div>` + offChart(DL.OFF_CHART[d.id] || []);
   }
   /* the worked example: a drug outside the current list, so it gives no cue (for the chart
      columns, a line of chart p. 7, which is never on the list) */
@@ -835,13 +1048,16 @@ const DRUGLIST_UI = (() => {
         <input type="search" id="dlcq" placeholder="${isEye() ? 'e.g. timolol or Lumigan' : 'e.g. tacrolimus or Protopic'}" value="${esc(st.cq)}" autocomplete="off" enterkeyhint="search"></div>
         <div id="dlcres" aria-live="polite"></div></div>`;
     }
-    const chart = st.mode === 'chart';
+    const chart = st.mode === 'chart', lm = st.mode === 'list' && DOSE;
+    if (lm && !st.uexam) st.uexam = defaultExam();
     return `<h2>Drug list</h2>
+    ${lm ? '<p class="sub">Every drug on the course charts and in Dr. Lam\'s lectures: eye, ear, mouth and skin. Search, pick the exam and area, tap a row.</p>' : ''}
+    <div class="dlmodes" role="radiogroup" aria-label="How to study the list">
+      ${MODES.filter(m => m[0] !== 'browse').map(([k, l]) => `<button type="button" role="radio" data-dl="mode" data-k="${k}" aria-checked="${(st.mode === 'browse' ? 'list' : st.mode) === k}" tabindex="${st.mode === k ? 0 : -1}">${esc(l)}</button>`).join('')}</div>
+    ${lm ? `${ucontrols()}<div id="dllist"></div>` : `
     ${EYE ? `<div class="dlmodes dllists" role="radiogroup" aria-label="Which drug list">${[[DERM, 'Dermatology'], [EYE, 'Eye (Exam 3)']].map(([L, t]) =>
       `<button type="button" role="radio" data-dl="list" data-k="${L.key}" aria-checked="${LIST === L}" tabindex="${LIST === L ? 0 : -1}">${t}</button>`).join('')}</div>` : ''}
     <p class="sub">${isEye() ? `Every drug on the ophthalmic drug chart, pp. 1–4 (${DL.D.length} drugs), with each line's source.` : `Every drug on the dermatology drug chart, pp. 1–6 (${DL.D.length} drugs), with each line's source.`}</p>
-    <div class="dlmodes" role="radiogroup" aria-label="How to study the list">
-      ${MODES.map(([k, l]) => `<button type="button" role="radio" data-dl="mode" data-k="${k}" aria-checked="${st.mode === k}" tabindex="${st.mode === k ? 0 : -1}">${esc(l)}</button>`).join('')}</div>
     <p class="dlhow" id="dlhow">${esc(mode[2])}</p>
     ${modebar}
     ${chart ? '' : `<section class="dlfilters" aria-labelledby="dlfh">
@@ -860,7 +1076,7 @@ const DRUGLIST_UI = (() => {
       <div class="dlchips">
         ${isEye() ? '' : `<button type="button" class="chip" data-dl="flag" data-f="boxed" aria-pressed="${st.boxed}">Has a boxed warning</button>
         <button type="button" class="chip" data-dl="flag" data-f="photo" aria-pressed="${st.photo}">Photosensitizing</button>`}
-        <button type="button" class="chip" data-dl="flag" data-f="hasq" aria-pressed="${st.hasq}">Has bank questions</button>
+        <button type="button" class="chip" data-dl="flag" data-f="hasq" aria-pressed="${st.hasq}">Has practice questions</button>
       </div>
     </section>`}
     ${isEye() ? aboutEye() : `    <details class="dlnote"><summary>About this list and the chart</summary>
@@ -869,12 +1085,11 @@ const DRUGLIST_UI = (() => {
       <p>Topical steroids: the chart's indication cell ends "numerous others", so a condition a steroid could plausibly treat (sunburn itch, for example) is never offered as a wrong option; the remaining options are false by the slides, with the reason shown after answering.</p>
       <p>Quiz me asks only what the cards state: a wrong option is another drug's value that is not also true for this drug. Drugs whose target is not known or not stated (sunscreens, sunburn anesthetics, keratolytics, tars, petrolatum, ketoconazole, spironolactone, dapsone, metronidazole, isotretinoin) get no target or mechanism question in Quiz me or Recall; their card reads "How it acts" (${esc(DL.NO_TARGET_WHY.toLowerCase().replace(/\.$/, ''))}).</p>
       <p>Scope: ${Object.entries(DL.SCOPE_WHY).map(([k, t]) => `<b>${esc(DL.SCOPES[k])}</b>: ${esc(t)}`).join(' ')}</p>
-      <p>Your bank answers on each card: read from this profile's saved answers to the question bank (multiple choice, so recognition), through a reviewed map of which question tests which fact; the Drug list itself saves nothing.</p>
-      <ul>${DL.CHART_NOTES.map(n => `<li>${esc(n)}</li>`).join('')}</ul>
-      <p>Quiz me coverage, per kind (of ${DL.D.length} drugs):</p><ul class="dlcov">${coverageList()}</ul></details>`}
+      <p>Your answers on each card come from the questions you have answered; the Drug list itself saves nothing.</p>
+    </details>`}
     ${st.mode === 'browse' ? chartSummary() : ''}
     ${chart ? '<div id="dlcview"></div>' : `<p class="dlcount" id="dlcount" aria-live="polite"></p>
-    <div id="dllist"></div>`}`;
+    <div id="dllist"></div>`}`}`;
   }
   function aboutEye(){
     return `<details class="dlnote"><summary>About this list and the chart</summary>
@@ -882,8 +1097,7 @@ const DRUGLIST_UI = (() => {
       <p>Targets and mechanisms are read from the Reference tab's eye tables (Glaucoma drugs by inflow and outflow; Allergic conjunctivitis drugs; Dry eye drugs). The Reference table's own words are the mechanism; the target is its short form. Carboxymethylcellulose, hydroxypropyl cellulose, artificial tears and loteprednol have no stated molecular target, so they get no Target question. Brand names are practice only: Dr. Smith, 10/29: ${esc(DL.BRAND_QUOTE.t)} (T 618–621).</p>
       <p>Quiz me asks only what the cards state: a wrong option is another drug's value that is not also true for this drug (a combination product and its components are never each other's wrong options). An indication has only three values (glaucoma, allergic conjunctivitis, dry eye), so an Indication question has three options.</p>
       <p>Scope: ${Object.entries(DL.SCOPE_WHY).map(([k, t]) => `<b>${esc(DL.SCOPES[k])}</b>: ${esc(t)}`).join(' ')}</p>
-      <ul>${DL.CHART_NOTES.map(n => `<li>${esc(n)}</li>`).join('')}</ul>
-      <p>Quiz me coverage, per kind (of ${DL.D.length} drugs):</p><ul class="dlcov">${coverageList()}</ul></details>`;
+    </details>`;
   }
   let COV = null;
   function coverageList(){
@@ -930,15 +1144,15 @@ const DRUGLIST_UI = (() => {
   function progBlock(d){
     const F = factsOf(d), v = visitOf(d), vis = Object.entries(v);
     const visit = vis.length ? `<p class="dlvisit"><b>This visit (not saved):</b> ${vis.map(([f, e]) => `${esc(SFIELD[f] || f)}: ${RATE_NAME[e.rating]} (${e.form === 'mc' ? 'multiple choice' : 'recall'})`).join(' · ')}</p>` : '';
-    if (!F.length) return `<div class="dlprog"><p class="dlprogh">Your bank answers: no bank question is mapped to this drug's facts.</p>${visit}</div>`;
+    if (!F.length) return `<div class="dlprog"><p class="dlprogh">Your answers: no practice question covers this drug's facts yet.</p>${visit}</div>`;
     const pr = F.filter(x => x.s.n).length, wk = F.filter(x => x.weak);
     const chips = F.map(x => `<li class="s-${SCLS[x.s.label]}${x.due ? ' s-due' : ''}"><b>${esc(x.label)}</b>: ${esc(x.s.label)}${x.due ? ' · Due for review' : ''}${x.s.n ? ` (${x.s.right}/${x.s.n})` : ''}</li>`).join('');
     const rows = F.map(x => `<tr><th scope="row">${esc(x.label)}</th><td>${esc(x.s.label)}${x.due ? '; due for review' : ''}<br>${x.s.n ? `${x.s.n} answer${x.s.n === 1 ? '' : 's'}, ${x.s.right} right · recognition (multiple choice) · last ${when(x.s.last)}` : 'no answer yet'}</td>
       <td><button type="button" class="chip" data-dl="pq" data-id="${esc(d.id)}" data-f="${esc(x.f)}">Practice (${x.qids.length})</button></td></tr>`).join('');
     const cw = classWeak(d.cls);
-    return `<div class="dlprog"><p class="dlprogh">Your bank answers (${esc(profileName() || 'no profile')}, saved, read-only): ${pr} of ${F.length} facts practiced${wk.length ? ` · ${wk.length} to review` : ''}</p>
+    return `<div class="dlprog"><p class="dlprogh">Your answers (${esc(profileName() || 'no profile')}, saved, read-only): ${pr} of ${F.length} facts practiced${wk.length ? ` · ${wk.length} to review` : ''}</p>
       <ul class="dlpchips">${chips}</ul>
-      <details><summary>Details and practice</summary><p class="dlnotgt">Scope: ${esc(DL.SCOPES[DL.scopeOf(d)])}. Each count is this profile's saved answers to the bank questions mapped to the fact.</p>
+      <details><summary>Details and practice</summary><p class="dlnotgt">Scope: ${esc(DL.SCOPES[DL.scopeOf(d)])}. Each count is your saved answers to the questions on that fact.</p>
         <table class="dlptab"><tbody>${rows}</tbody></table>
         <div class="dlchips">${wk.length ? `<button type="button" class="btn sm ghost" data-dl="pweak" data-id="${esc(d.id)}">Practice this drug's weak facts (${uniq(wk.flatMap(x => x.qids)).length})</button>` : ''}
         ${cw.length ? `<button type="button" class="btn sm ghost" data-dl="pclass" data-cls="${esc(d.cls)}">Weak facts in this class (${cw.length} questions)</button>` : ''}</div></details>${visit}</div>`;
@@ -955,9 +1169,9 @@ const DRUGLIST_UI = (() => {
     const all = chartFacts(), ex = all.filter(x => x.exam), pr = ex.filter(x => x.s.n), wk = ex.filter(x => x.weak);
     const opt = all.length - ex.length, drugs = uniq(ex.map(x => x.d.id)).length;
     const byF = {}; for (const x of wk) (byF[x.f] = byF[x.f] || []).push(...x.qids);
-    return `<section class="dlsum" aria-labelledby="dlsumh"><p id="dlsumh"><b>Your bank answers (${esc(profileName() || 'no profile')}):</b> ${pr.length} of ${ex.length} Exam 1 facts practiced (on ${drugs} drugs) · ${wk.length} need review (forgot, unsure or due)` +
+    return `<section class="dlsum" aria-labelledby="dlsumh"><p id="dlsumh"><b>Your answers (${esc(profileName() || 'no profile')}):</b> ${pr.length} of ${ex.length} Exam 1 facts practiced (on ${drugs} drugs) · ${wk.length} need review (forgot, unsure or due)` +
       `${opt ? ` · ${opt} optional fact${opt === 1 ? '' : 's'} not counted` : ''} · chart p. 7 excluded (not on Exam 1).</p>
-      <p class="dlnotgt">A fact is one field of one drug that has bank questions; read-only from your saved answers (recognition). Not practiced is never counted as weak.</p>
+      <p class="dlnotgt">A fact is one field of one drug that has practice questions; counted from your saved answers. Not practiced is never counted as weak.</p>
       ${wk.length ? `<div class="dlchips"><button type="button" class="btn sm" data-dl="pall">Practice my weak facts (${uniq(wk.flatMap(x => x.qids)).length} questions)</button>
         ${Object.entries(byF).map(([f, q]) => `<button type="button" class="btn sm ghost" data-dl="pfield" data-f="${esc(f)}">${esc(DF.FIELDS[f])} (${uniq(q).length})</button>`).join('')}</div>` : ''}</section>`;
   }
@@ -971,6 +1185,7 @@ const DRUGLIST_UI = (() => {
 
   function drawList(){
     FCACHE = {};
+    if (st.mode === 'list' && DOSE) { udraw(); return; }
     if (st.mode === 'chart') { drawChart(false); return; }
     const list = filtered(), out = pane.querySelector('#dllist'), cnt = pane.querySelector('#dlcount');
     const n = activeFilters(), fn = pane.querySelector('#dlfn'), cl = pane.querySelector('[data-dl="clear"]');
@@ -985,7 +1200,7 @@ const DRUGLIST_UI = (() => {
       if (!quiz || (!quiz.frozen && quiz.sig !== qsig())) buildQuiz();
       const sk = Object.entries(quiz.skipped).map(([k, v]) => `${DL.KIND_HEAD[k]}: ${v} drug${v === 1 ? '' : 's'} without a question`);
       cnt.textContent = quiz.frozen ? `Frozen set: ${quiz.list.length} item${quiz.list.length === 1 ? '' : 's'} · the filters (now ${drugs}) apply after it`
-        : `${drugs} · ${quiz.list.length} question${quiz.list.length === 1 ? '' : 's'}` + (sk.length ? ` (${sk.join(', ')}; see About this list)` : '');
+        : `${drugs} · ${quiz.list.length} question${quiz.list.length === 1 ? '' : 's'}` + (sk.length ? ` (${sk.join(', ')})` : '');
       out.innerHTML = quiz.list.length ? `<div class="dlqlist">${quiz.list.map(qblock).join('')}</div>`
         : '<p class="dlempty">Choose at least one kind under Ask about, or widen the filters.</p>';
       const sc = pane.querySelector('#dlscore'); if (sc) sc.textContent = scoreLine();
@@ -1012,7 +1227,8 @@ const DRUGLIST_UI = (() => {
     p.dataset.dlWired = '1';
     p.addEventListener('input', e => {
       const t = e.target;
-      if (t.id === 'dlq') { st.q = t.value; drawList(); }
+      if (t.id === 'dluq') { st.uq = t.value; udraw(); }
+      else if (t.id === 'dlq') { st.q = t.value; drawList(); }
       else if (t.id === 'dlcq') {
         st.cq = t.value;
         const m = chartMatches(st.cq);
@@ -1058,7 +1274,13 @@ const DRUGLIST_UI = (() => {
     p.addEventListener('toggle', e => {
       const t = e.target; if (!t || !t.classList) return;
       if (t.classList.contains('dlgrp')) st.gopen[t.dataset.g] = t.open;
-      else if (t.classList.contains('dlrowd')) st.ropen[t.dataset.id] = t.open;
+      else if (t.classList.contains('dlrowd')) {
+        st.ropen[t.dataset.id] = t.open;
+        if (t.open && t.classList.contains('dlu') && !t.querySelector(':scope > .dlmore')) {
+          const it = items().find(x => x.key === t.dataset.id);
+          if (it) t.insertAdjacentHTML('beforeend', umore(it));
+        }
+      }
     }, true);
   }
   /* the switch: each list keeps its own filters, quiz and this visit's ratings (page memory) while the other is shown */
@@ -1093,7 +1315,22 @@ const DRUGLIST_UI = (() => {
     const a = b.dataset.dl, id = b.dataset.id, d = id && DL.D.find(x => x.id === id);
     if (a === 'gall') { const o = b.dataset.o === '1'; CATS.forEach(c => { st.gopen[c.id] = o; }); pane.querySelectorAll('details.dlgrp').forEach(x => { x.open = o; }); return; }
     if (a === 'list') { if (!LIST || LIST.key !== b.dataset.k) { setList(b.dataset.k); rerender(`[data-dl="list"][data-k="${LIST.key}"]`); window.scrollTo(0, 0); } return; }
-    if (a === 'mode') { if (st.mode !== b.dataset.k) { st.mode = b.dataset.k; st.cfrom = null; rerender(`[data-dl="mode"][data-k="${st.mode}"]`); } }
+    if (a === 'uexam') { st.uexam = b.dataset.k; if (st.uarea && !(XCHIPS.find(e => e[0] === st.uexam)[2] || [st.uarea]).includes(st.uarea)) st.uarea = ''; rerender(`[data-dl="uexam"][data-k="${st.uexam}"]`); return; }
+    if (a === 'uarea') { st.uarea = b.dataset.k; rerender(`[data-dl="uarea"][data-k="${st.uarea}"]`); return; }
+    if (a === 'ufreq') { st.ufreq = st.ufreq === b.dataset.k ? '' : b.dataset.k; rerender(`[data-dl="ufreq"][data-k="${b.dataset.k}"]`); return; }
+    // a button inside an opened row of the single list acts on that row's own chart
+    const urowEl = b.closest && b.closest('details.dlu');
+    if (urowEl && urowEl.dataset.src && urowEl.dataset.src !== 'x' && !['mode', 'list'].includes(a)) {
+      const L = urowEl.dataset.src === 'eye' ? EYE : DERM;
+      if (a === 'only') { Object.assign(st, {uq: b.dataset.id ? (items().find(x => x.key === b.dataset.id) || {name: ''}).name : '', uarea: '', uexam: 'all', ufreq: ''}); rerender(); window.scrollTo(0, 0); return; }
+      if (a === 'cls') { Object.assign(st, {uq: (L.DL.CLASSES[b.dataset.cls] || ''), uarea: '', uexam: 'all', ufreq: ''}); rerender(); window.scrollTo(0, 0); return; }
+      if (a === 'chart') { st.ropen[b.dataset.id] = true; if (L !== LIST) { setList(L.key, true); return onClick(e); } }
+      else if (L !== LIST) { return withList(L, () => onClick(e)); }
+    }
+    if (a === 'mode') { if (st.mode !== b.dataset.k) {
+      st.mode = b.dataset.k; st.cfrom = null;
+      if (st.mode !== 'list' && st.uexam && st.uexam !== 'all') setList(st.uexam === '3' && EYE ? 'eye' : 'derm', true);
+      rerender(`[data-dl="mode"][data-k="${st.mode}"]`); } }
     else if (a === 'rfield') { if (st.rfield !== b.dataset.k) { st.rfield = b.dataset.k; rerender(`[data-dl="rfield"][data-k="${st.rfield}"]`); } }
     else if (a === 'kind') { st.kinds[b.dataset.k] = !st.kinds[b.dataset.k]; if (!(quiz && quiz.frozen)) quiz = null; rerender(`[data-dl="kind"][data-k="${b.dataset.k}"]`); }
     else if (a === 'newq' || a === 'back') { quiz = null; rerender(a === 'newq' ? '[data-dl="newq"]' : '#dlcount'); }
@@ -1248,6 +1485,15 @@ const DRUGLIST_UI = (() => {
   function openDrug(id){
     if (!DL.D.find(x => x.id === id)) { const other = isEye() ? DERM : EYE; if (other && other.DL.D.find(x => x.id === id)) setList(other.key, true); }
     const d = DL.D.find(x => x.id === id); if (!d || !pane) return false;
+    if (DOSE) {
+      const it = items().find(x => x.key === d.id);
+      Object.assign(st, NOFILTER, {mode: 'list', uq: '', uexam: it ? it.exam : defaultExam(), uarea: it ? it.area : '', ufreq: '', cfrom: null});
+      st.ropen[d.id] = true; if (it) st.gopen[it.area] = true;
+      rerender();
+      const row = pane.querySelector(`details.dlu[data-id="${CSS.escape(d.id)}"]`);
+      if (row) row.scrollIntoView({block: 'start'}); else window.scrollTo(0, 0);
+      return true;
+    }
     Object.assign(st, NOFILTER, {mode: 'browse', q: d.name, cfrom: null});
     st.ropen[d.id] = true; st.gopen[catOf(d)] = true;
     rerender(); window.scrollTo(0, 0);

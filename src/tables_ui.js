@@ -81,6 +81,8 @@ table.reftab.cardsx td:not(:first-child) .ln.chain{list-style:none;margin-left:1
   const R1 = new RegExp('(\\d{1,2}\\/\\d{1,2}),?\\s+' + TL, 'g'), R2 = new RegExp(TL + ',?\\s+(\\d{1,2}\\/\\d{1,2})', 'g'), R3 = new RegExp(TL, 'g');
   function hideCodes(root){
     if (!root || typeof document.createTreeWalker !== 'function') return;
+    // clean_ui.js (loaded after this file) is the one sanitizer; its observer also covers these views
+    if (window.CLEAN && typeof window.CLEAN.run === 'function') { window.CLEAN.run(root); return; }
     const w = document.createTreeWalker(root, 4 /* text */, null); let n; const list = [];
     while ((n = w.nextNode())) if (/\bT@?\s?\d{2,6}/.test(n.nodeValue) && !(n.parentNode && /^(SCRIPT|STYLE)$/.test(n.parentNode.nodeName))) list.push(n);
     list.forEach(t => {

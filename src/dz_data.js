@@ -53,7 +53,7 @@ const DZ = {
          [
           "Most common onset at {{3–6 months}} of age",
           "Majority by age {{one}}; up to {{90%}} by age 5",
-          "{{70–90%}} may have resolution by adulthood (slide; she gave the same figure in class, T@19746)",
+          "{{70–90%}} may have resolution by adulthood (slide; she gave the same figure in class",
           "Earlier onset = longer persistence"
          ]
         ],
@@ -2880,7 +2880,7 @@ const DZ = {
       "Keep every 4 hours and apply the protectant twice daily"
      ],
      "a": 0,
-     "w": "D: change every 2 hours and as soon as soiled (slide 62; her poll answer 'ABCDE, every 2 hours', T@82496); slide 57 gives infants every 3 to 4 hours. B: protectant liberally at each change (slide 62; her poll answer \"ABCDE, every 2 hours\").",
+     "w": "D: change every 2 hours and as soon as soiled (slide 62; her poll answer 'ABCDE, every 2 hours'; slide 57 gives infants every 3 to 4 hours. B: protectant liberally at each change (slide 62; her poll answer \"ABCDE, every 2 hours\").",
      "x": {
       "Keep every 4 hours and add miconazole cream": "Antifungals are not self-care products, and 4 hours is longer than her 2-hour answer.",
       "Change every 2 hours and stop the barrier product": "Barrier is applied liberally at each change.",
@@ -6825,7 +6825,7 @@ const DZ = {
       "pa"
      ],
      "q": "Which skin types are at highest risk, and which photosensitizing drugs did she name?",
-     "src": "Patel Sun slides 8–11, 13; 11/12 lecture T@49012–50187; Smith Sun slide 8; Smith PCol slides 18, 44, 54, 78",
+     "src": "Patel Sun slides 8–11, 13; 11/12 lecture ; Smith Sun slide 8; Smith PCol slides 18, 44, 54, 78",
      "blocks": [
       {
        "k": "facts",
@@ -6933,7 +6933,7 @@ const DZ = {
       "pa"
      ],
      "q": "What three things does Dr. Patel's sunscreen answer contain, and which two ingredients does she prefer?",
-     "src": "Patel Sun slides 14–20; 11/12 lecture T@53069–56238; Smith Sun slides 15–17, 20–25; Sikazwe DPAW pages 61–66",
+     "src": "Patel Sun slides 14–20; 11/12 lecture ; Smith Sun slides 15–17, 20–25; Sikazwe DPAW pages 61–66",
      "blocks": [
       {
        "k": "facts",
@@ -7076,7 +7076,7 @@ const DZ = {
       "pa"
      ],
      "q": "Which two groups are excluded from sunscreen, and what does an infant get instead?",
-     "src": "Patel Sun slides 13, 19; 11/12 lecture T@51824, T@66129–66269; Smith Sun slide 25",
+     "src": "Patel Sun slides 13, 19; 11/12 lecture ; Smith Sun slide 25",
      "blocks": [
       {
        "k": "facts",
@@ -7129,7 +7129,7 @@ const DZ = {
       "pa"
      ],
      "q": "How much sunscreen, how long before the sun, and how often is it reapplied (Dr. Patel's numbers, then Dr. Smith's)?",
-     "src": "Patel Sun slides 12, 21, 23, 36–37; 11/12 lecture T@66751; Smith Sun slides 17, 19, 21; Sikazwe DPAW pages 62, 64",
+     "src": "Patel Sun slides 12, 21, 23, 36–37; 11/12 lecture ; Smith Sun slides 17, 19, 21; Sikazwe DPAW pages 62, 64",
      "blocks": [
       {
        "k": "facts",
@@ -7378,7 +7378,7 @@ const DZ = {
     [
      "SPF ≥ 15",
      "Dr. Patel's minimum \"for exam purposes\"; prefer 30+",
-     "Patel Sun slide 15; T@53466"
+     "Patel Sun slide 15"
     ],
     [
      "93% / 97% / 98% / 99%",
@@ -7460,7 +7460,7 @@ const DZ = {
       "pa"
      ],
      "q": "When do sunburn symptoms start, when does the redness peak, and how long can it last?",
-     "src": "Patel Sun slide 24; 11/12 lecture T@58911–59161; Smith Sun slide 11",
+     "src": "Patel Sun slide 24; 11/12 lecture ; Smith Sun slide 11",
      "blocks": [
       {
        "k": "facts",
@@ -7506,7 +7506,7 @@ const DZ = {
       "pa"
      ],
      "q": "Name the exclusions for self-treatment of a sunburn.",
-     "src": "Patel Sun slides 30, 34; 11/12 lecture T@64695",
+     "src": "Patel Sun slides 30, 34; 11/12 lecture ",
      "blocks": [
       {
        "k": "pts",
@@ -7543,7 +7543,7 @@ const DZ = {
       "pa"
      ],
      "q": "What is given for pain, what for dryness and when does it start, and which two product classes are not recommended?",
-     "src": "Patel Sun slides 29, 31–33; 11/12 lecture T@61876–65406",
+     "src": "Patel Sun slides 29, 31–33; 11/12 lecture ",
      "blocks": [
       {
        "k": "facts",
@@ -7868,7 +7868,7 @@ const DZ = {
       "pa"
      ],
      "q": "Give the age range and wrinkle finding for each of the four types.",
-     "src": "Patel Sun slide 39; 11/12 lecture T@68961",
+     "src": "Patel Sun slide 39; 11/12 lecture ",
      "blocks": [
       {
        "k": "grades",
@@ -7912,7 +7912,7 @@ const DZ = {
       "pa"
      ],
      "q": "What treats hyperpigmentation and what are its limits? What treats wrinkles? Which treatment is not self-applied?",
-     "src": "Patel Sun slides 42–49; 11/12 lecture T@72287–76364; Sikazwe DPAW pages 67–70",
+     "src": "Patel Sun slides 42–49; 11/12 lecture ; Sikazwe DPAW pages 67–70",
      "blocks": [
       {
        "k": "line",
@@ -8024,7 +8024,7 @@ const DZ = {
       "pa"
      ],
      "q": "When is a retinoid applied and what goes on by day? When is a hydroxy acid applied? How long until results?",
-     "src": "Patel Sun slides 44, 53–54; 11/12 lecture T@74891, T@76707–76959",
+     "src": "Patel Sun slides 44, 53–54; 11/12 lecture ",
      "blocks": [
       {
        "k": "facts",
@@ -8079,7 +8079,7 @@ const DZ = {
       "pa"
      ],
      "q": "What does each letter of ABCDE stand for, and what is the diameter?",
-     "src": "Patel Sun slides 28, 37; 11/12 lecture T@60867, T@77076",
+     "src": "Patel Sun slides 28, 37; 11/12 lecture ",
      "blocks": [
       {
        "k": "facts",
@@ -8286,7 +8286,7 @@ const DZ = {
       "pa"
      ],
      "q": "What does each of the four wound stages involve, and what are the three healing phases?",
-     "src": "Patel Wound slides 4–6, 27; 11/12 lecture T@78420, T@79102, T@87265–87332",
+     "src": "Patel Wound slides 4–6, 27; 11/12 lecture ",
      "blocks": [
       {
        "k": "facts",
@@ -8355,7 +8355,7 @@ const DZ = {
       "pa"
      ],
      "q": "Name the exclusions for self-treatment of a minor wound or burn (\"I need you to know them\").",
-     "src": "Patel Wound slide 7; 11/12 lecture T@79459–80007",
+     "src": "Patel Wound slide 7; 11/12 lecture ",
      "blocks": [
       {
        "k": "pts",
@@ -8387,7 +8387,7 @@ const DZ = {
       "pa"
      ],
      "q": "What is the first step, when is the antibiotic applied, and where may an antiseptic go?",
-     "src": "Patel Wound slides 3, 8–15, 19–20, 27; 11/12 lecture T@80276–87786",
+     "src": "Patel Wound slides 3, 8–15, 19–20, 27; 11/12 lecture ",
      "blocks": [
       {
        "k": "facts",
@@ -8516,7 +8516,7 @@ const DZ = {
       "pa"
      ],
      "q": "Which two drug classes slow healing, and what does smoking 1 and 2 packs per day do?",
-     "src": "Patel Wound slides 21–25; 11/12 lecture T@85499–86431",
+     "src": "Patel Wound slides 21–25; 11/12 lecture ",
      "blocks": [
       {
        "k": "facts",
@@ -8720,7 +8720,7 @@ const DZ = {
       "pa"
      ],
      "q": "Give the BSA limits of a minor, moderate and major burn in an adult and in a child.",
-     "src": "Patel Wound slides 4, 16; 11/12 lecture T@83577–83938",
+     "src": "Patel Wound slides 4, 16; 11/12 lecture ",
      "blocks": [
       {
        "k": "facts",
@@ -8789,7 +8789,7 @@ const DZ = {
       "pa"
      ],
      "q": "Name the burn exclusions for self-treatment.",
-     "src": "Patel Wound slides 7, 17; 11/12 lecture T@84155–84806",
+     "src": "Patel Wound slides 7, 17; 11/12 lecture ",
      "blocks": [
       {
        "k": "pts",
@@ -8818,7 +8818,7 @@ const DZ = {
       "pa"
      ],
      "q": "What is used for a minor burn: non-drug, for pain, for the skin, and how often may an antibiotic and an anesthetic be applied?",
-     "src": "Patel Wound slides 18–20; 11/12 lecture T@84501–85399",
+     "src": "Patel Wound slides 18–20; 11/12 lecture ",
      "blocks": [
       {
        "k": "line",
@@ -9065,7 +9065,7 @@ const DZ = {
       "pa"
      ],
      "q": "Which virus causes warts, which skin layer is involved, and which subtype is on the feet?",
-     "src": "Patel Warts slides 4–5; 11/12 lecture T@88454",
+     "src": "Patel Warts slides 4–5; 11/12 lecture ",
      "blocks": [
       {
        "k": "facts",
@@ -9109,7 +9109,7 @@ const DZ = {
       "pa"
      ],
      "q": "Which two wart types are self-treatable, and which four are not?",
-     "src": "Patel Warts slides 5–6; 11/12 lecture T@90202",
+     "src": "Patel Warts slides 5–6; 11/12 lecture ",
      "blocks": [
       {
        "k": "facts",
@@ -9219,7 +9219,7 @@ const DZ = {
       "pa"
      ],
      "q": "Give the directions and the maximum duration for salicylic acid 40%, salicylic acid 17% and cryotherapy.",
-     "src": "Patel Warts slides 7–12; 11/12 lecture T@90398–92731; Smith PCol slides 39–40",
+     "src": "Patel Warts slides 7–12; 11/12 lecture ; Smith PCol slides 39–40",
      "blocks": [
       {
        "k": "facts",
@@ -9499,7 +9499,7 @@ const DZ = {
       "pa"
      ],
      "q": "What causes a corn, and what causes a callus?",
-     "src": "Patel Warts slides 5, 13; 11/12 lecture T@93710",
+     "src": "Patel Warts slides 5, 13; 11/12 lecture ",
      "blocks": [
       {
        "k": "facts",
@@ -9531,7 +9531,7 @@ const DZ = {
       "pa"
      ],
      "q": "How do a corn and a callus differ in borders, core, pain, size and site?",
-     "src": "Patel Warts slides 5, 13; 11/12 lecture T@89136–89254",
+     "src": "Patel Warts slides 5, 13; 11/12 lecture ",
      "blocks": [
       {
        "k": "facts",
@@ -9581,7 +9581,7 @@ const DZ = {
       "pa"
      ],
      "q": "Who should not use a salicylic acid corn or callus remover, and when is the patient referred?",
-     "src": "Patel Warts slides 16–17; 11/12 lecture T@94074, T@94630; Smith PCol slides 39–40",
+     "src": "Patel Warts slides 16–17; 11/12 lecture ; Smith PCol slides 39–40",
      "blocks": [
       {
        "k": "sub",
@@ -9629,7 +9629,7 @@ const DZ = {
       "pa"
      ],
      "q": "Give the directions for salicylic acid 17% and 40% on a corn or callus, and the maximum number of days and applications.",
-     "src": "Patel Warts slides 14–17; 11/12 lecture T@93238–95016",
+     "src": "Patel Warts slides 14–17; 11/12 lecture ",
      "blocks": [
       {
        "k": "facts",
@@ -9879,7 +9879,7 @@ const DZ = {
       "sm"
      ],
      "q": "What separates primary open-angle from primary angle-closure glaucoma, and what is the goal of treatment?",
-     "src": "Eye slides 11, 13; T@19603, T@23370 11/13",
+     "src": "Eye slides 11, 13; lecture 11/13",
      "blocks": [
       {
        "rows": [
@@ -9972,7 +9972,7 @@ const DZ = {
       "sk"
      ],
      "q": "Where is aqueous humor made, by which two routes does it leave, and which receptors and enzyme sit in the ciliary body? How does a drug get into the eye?",
-     "src": "Eye slides 14–16; T@8949, T@25726, T@28180, T@32669 11/13; Sikazwe OOO slides 28–30; T@40944, T@41181, T@44312, T@45075 11/18; Eye slides 4, 7; T@5300, T@6023, T@6726, T@7926, T@14392 11/13",
+     "src": "Eye slides 14–16; lecture 11/13; Sikazwe OOO slides 28–30; lecture 11/18; Eye slides 4, 7; lecture 11/13",
      "blocks": [
       {
        "rows": [
@@ -10121,7 +10121,7 @@ const DZ = {
         ],
         [
          "In class",
-         "She let the students read slides 7 and 8 and noted that eye doctors use these effects to dilate the eyes (T@14392); her study hints say there is no need to memorize slides 8 or 9"
+         "She let the students read slides 7 and 8 and noted that eye doctors use these effects to dilate the eyes; her study hints say there is no need to memorize slides 8 or 9"
         ]
        ]
       },
@@ -10149,13 +10149,13 @@ const DZ = {
         [
          "Which drug goes where",
          [
-          "{{Lipophilic}} drugs enter through the cornea; the cornea is the main route for small lipophilic drugs (slide 30; T@45075)",
-          "{{Hydrophilic}} drugs enter through the conjunctiva; it is the main route for large hydrophilic drugs (slide 30; T@45075)"
+          "{{Lipophilic}} drugs enter through the cornea; the cornea is the main route for small lipophilic drugs (slide 30",
+          "{{Hydrophilic}} drugs enter through the conjunctiva; it is the main route for large hydrophilic drugs (slide 30"
          ]
         ],
         [
          "Prodrugs",
-         "Conjunctival enzymes can bioactivate a prodrug placed in the eye (slide 29; T@44312)"
+         "Conjunctival enzymes can bioactivate a prodrug placed in the eye (slide 29"
         ]
        ]
       }
@@ -10168,7 +10168,7 @@ const DZ = {
       "sk"
      ],
      "q": "For each class, is it a production inhibitor or an outflow enhancer, and what does it act on? What functional group defines each class?",
-     "src": "Eye slides 11, 17–45; T@39765, T@43081 11/13; T@23579, T@38097 11/17; Sikazwe OOO slides 27, 31–48; T@38474, T@46740, T@48263 11/18; T@17315, T@19755 11/19",
+     "src": "Eye slides 11, 17–45; lecture 11/13; lecture 11/17; Sikazwe OOO slides 27, 31–48; lecture 11/18; lecture 11/19",
      "blocks": [
       {
        "title": "Inflow or outflow",
@@ -10352,13 +10352,13 @@ const DZ = {
          [
           "{{Imidazolines}}: clonidine, apraclonidine, brimonidine (slide 31)",
           "Aryl imidazoline core (slide 32, which is not on his assigned pages): the linker atom decides the receptor, X = NH gives alpha 2 agonists and X = CH2 gives alpha 1 agonists; the slide prints the linker as NH2, and the slide 31 structures show NH",
-          "Clonidine (ClogP 1.5) is lipophilic enough to enter the brain and cause CNS effects; brimonidine (ClogP 1.2) is about 1,000-fold more potent, so a tiny drop works (T@46740, T@48263 11/18)"
+          "Clonidine (ClogP 1.5) is lipophilic enough to enter the brain and cause CNS effects; brimonidine (ClogP 1.2) is about 1,000-fold more potent, so a tiny drop works (lecture 11/18)"
          ]
         ],
         [
          "Beta antagonists",
          [
-          "{{Aryloxypropanolamines}}: timolol, betaxolol, levobunolol, carteolol (slide 33): an aromatic ring, the oxygen next to it, and three carbons carrying the alcohol and the amine (T@38474 11/18)",
+          "{{Aryloxypropanolamines}}: timolol, betaxolol, levobunolol, carteolol (slide 33): an aromatic ring, the oxygen next to it, and three carbons carrying the alcohol and the amine (lecture 11/18)",
           "More potent than the arylethanolamines; most have mixed beta 1 and beta 2 activity; the S-OH isomers are preferred; most para aryloxypropanolamines such as betaxolol are beta 1 antagonists (slide 34)"
          ]
         ],
@@ -10373,14 +10373,14 @@ const DZ = {
         ],
         [
          "Direct-acting cholinergics",
-         "{{Carbamates and esters}}: acetylcholine (ester), carbachol (carbamate), pilocarpine (slide 40). He told the class not to expect a question on the slide 40 SAR (T@17315 11/19)"
+         "{{Carbamates and esters}}: acetylcholine (ester), carbachol (carbamate), pilocarpine (slide 40). He told the class not to expect a question on the slide 40 SAR (lecture 11/19)"
         ],
         [
          "Indirect-acting cholinergics",
          [
           "Inhibit acetylcholinesterase, so acetylcholine increases (slide 41)",
           "Extent of inhibition by functional group: {{phosphoryl > carbamate > ester}} (slide 42)",
-          "Echothiophate is an organophosphate and is irreversible: aging, the loss of an ethyl group, leaves a hydroxy group covalently bound to the enzyme (T@19755 11/19)"
+          "Echothiophate is an organophosphate and is irreversible: aging, the loss of an ethyl group, leaves a hydroxy group covalently bound to the enzyme (lecture 11/19)"
          ]
         ],
         [
@@ -10404,12 +10404,12 @@ const DZ = {
           "Question 3 (slide 65): the key functional group in the chemical basis of action of the carbonic anhydrase inhibitors is the sulfonamide",
           "Question 4 (slide 66): the drawn imidazoline is present in the alpha 2 agonists",
           "Question 5 (slide 67): the drawn core is the prostaglandin skeleton, present in the prostaglandin receptor agonists; the slide leaves the answer blank and he answered it in class (11/19)",
-          "Question 5, second part (slide 68): the phosphoryl group gives irreversible acetylcholinesterase inhibition (T@19755 11/19)"
+          "Question 5, second part (slide 68): the phosphoryl group gives irreversible acetylcholinesterase inhibition (lecture 11/19)"
          ]
         ],
         [
          "Groups on slide 27",
-         "Imidazoline, sulfone, sulfonamide, aryloxypropanolamine, carbamate, ester, the prostaglandin skeleton (cyclopentane with two chains) and the steroid skeleton. His emailed practice question 2 asks for the key functional groups of the anti-glaucoma classes drawn by hand; question 3 asks for the N-deethylated products of brinzolamide and dorzolamide (STYLE.md)"
+         "Imidazoline, sulfone, sulfonamide, aryloxypropanolamine, carbamate, ester, the prostaglandin skeleton (cyclopentane with two chains) and the steroid skeleton. His emailed practice question 2 asks for the key functional groups of the anti-glaucoma classes drawn by hand; question 3 asks for the N-deethylated products of brinzolamide and dorzolamide"
         ]
        ],
        "src": "Sikazwe OOO slides 27, 31–48; practice questions emailed 11/20"
@@ -10422,7 +10422,7 @@ const DZ = {
       "sm"
      ],
      "q": "Which side effect goes with each class, why does a carbonic anhydrase inhibitor cause metabolic acidosis, and what lowers systemic absorption?",
-     "src": "Eye slides 20, 24, 27, 29, 33, 35, 39, 43; T@16025, T@47241 11/13; T@17682, T@30444 11/17",
+     "src": "Eye slides 20, 24, 27, 29, 33, 35, 39, 43; lecture 11/13; lecture 11/17",
      "blocks": [
       {
        "title": "Side effect to know for each class",
@@ -10433,7 +10433,7 @@ const DZ = {
         ],
         [
          "Apraclonidine",
-         "Allergic reaction (slide 24 lists it under systemic side effects; in lecture she called it significant, T@53050 11/13); systemic hypotension (slide 24)"
+         "Allergic reaction (slide 24 lists it under systemic side effects; in lecture she called it significant, lecture 11/13); systemic hypotension (slide 24)"
         ],
         [
          "Brimonidine",
@@ -10521,7 +10521,7 @@ const DZ = {
       "la"
      ],
      "q": "Which drug classes raise the eye pressure, what is the goal and the starting target, and what are the four checks on each drug?",
-     "src": "Lam Glaucoma slides 2, 3, 8–16, 88–92; handout; T@43926, T@44339, T@46542, T@47224, T@47427, T@94631 11/19",
+     "src": "Lam Glaucoma slides 2, 3, 8–16, 88–92; handout; lecture 11/19",
      "blocks": [
       {
        "k": "facts",
@@ -10530,28 +10530,28 @@ const DZ = {
         [
          "Drugs that raise IOP",
          [
-          "{{Corticosteroids}} with chronic use: the ophthalmic form has the highest risk, then systemic, then nasal or inhaled (slide 8; T@44339)",
-          "{{Anticholinergics}}: ophthalmic (for example atropine) and systemic (for example an oral antihistamine such as Benadryl) (slide 8; handout; T@44966)"
+          "{{Corticosteroids}} with chronic use: the ophthalmic form has the highest risk, then systemic, then nasal or inhaled (slide 8",
+          "{{Anticholinergics}}: ophthalmic (for example atropine) and systemic (for example an oral antihistamine such as Benadryl) (slide 8; handout"
          ]
         ],
         [
          "Exam weight",
-         "She said the drugs that can induce glaucoma are a very common question (T@43926). Dr. Smith covered the mechanism; she covers the formulation (T@44111)"
+         "She said the drugs that can induce glaucoma are a very common question. Dr. Smith covered the mechanism; she covers the formulation"
         ],
         [
          "SSRIs",
-         "She said SSRIs have less anticholinergic activity than other antidepressants (T@45149)"
+         "She said SSRIs have less anticholinergic activity than other antidepressants"
         ],
         [
          "Presentation",
-         "Open-angle glaucoma is {{asymptomatic}} until substantial visual field loss occurs; patients may complain of visual disturbances or visual loss (slide 12, marked FYI; T@46345)"
+         "Open-angle glaucoma is {{asymptomatic}} until substantial visual field loss occurs; patients may complain of visual disturbances or visual loss (slide 12, marked FYI"
         ],
         [
          "Her words: not tested",
          [
-          "Risk factors for POAG (T@43047)",
-          "A patient's own IOP value: a pharmacist will not have it (T@43663)",
-          "The day-supply calculation and the list of sig abbreviations; she will use the abbreviations in prescriptions (T@42583, T@40715)"
+          "Risk factors for POAG",
+          "A patient's own IOP value: a pharmacist will not have it",
+          "The day-supply calculation and the list of sig abbreviations; she will use the abbreviations in prescriptions"
          ]
         ]
        ]
@@ -10571,15 +10571,15 @@ const DZ = {
         ],
         [
          "Who sets the target",
-         "An eye care professional: an ophthalmologist or optometrist (slide 14; T@47338)"
+         "An eye care professional: an ophthalmologist or optometrist (slide 14"
         ],
         [
          "Initial target",
-         "When the baseline IOP is high (the handout says above 22 mm Hg), {{decrease the IOP by 25–30%}} (slide 14; T@47427)"
+         "When the baseline IOP is high (the handout says above 22 mm Hg), {{decrease the IOP by 25–30%}} (slide 14"
         ],
         [
          "Adherence",
-         "She said only about {{33%}} of patients are adherent to their eye drops, and the more drugs and the higher the frequency, the lower the adherence (T@46952, T@47145, T@75564)"
+         "She said only about {{33%}} of patients are adherent to their eye drops, and the more drugs and the higher the frequency, the lower the adherence"
         ]
        ]
       },
@@ -10616,8 +10616,8 @@ const DZ = {
        "k": "pts",
        "p": "la",
        "items": [
-        "She tests each drug for appropriateness and effectiveness against the patient's risk factors, and the dosing must be known: an underdose is an effectiveness problem and an overdose is a safety problem (T@46542, T@48131, T@48434)",
-        "Her essay pattern is one task with a justification: identify the problem, then the next step, as in the first Ms. Lopez case (T@58023)"
+        "She tests each drug for appropriateness and effectiveness against the patient's risk factors, and the dosing must be known: an underdose is an effectiveness problem and an overdose is a safety problem",
+        "Her essay pattern is one task with a justification: identify the problem, then the next step, as in the first Ms. Lopez case"
        ]
       },
       {
@@ -10631,7 +10631,7 @@ const DZ = {
        "rows": [
         [
          "Her words",
-         "\"Will I be testing you on it? No.\" She also said the one thing to know is which drugs can increase the risk, because that is a common question, and that in practice the patient is sent to the emergency room immediately (T@94508, T@94631)"
+         "\"Will I be testing you on it? No.\" She also said the one thing to know is which drugs can increase the risk, because that is a common question, and that in practice the patient is sent to the emergency room immediately"
         ],
         [
          "Risk factors",
@@ -10659,7 +10659,7 @@ const DZ = {
       "la"
      ],
      "q": "In what order does she add the classes, how often is each dosed, and what are the side effects, precautions and fixes for each?",
-     "src": "Lam Glaucoma slides 17–69; handout; T@47757, T@51004, T@53365, T@77815, T@83004, T@83922, T@84272, T@84448, T@85514, T@85991 11/19",
+     "src": "Lam Glaucoma slides 17–69; handout; lecture 11/19",
      "blocks": [
       {
        "k": "facts",
@@ -10667,15 +10667,15 @@ const DZ = {
        "rows": [
         [
          "Her order",
-         "The classes go from the most commonly prescribed to the least commonly prescribed (T@47757). A patient with a partial response who tolerates the drug keeps getting drugs added; a patient who cannot tolerate one may be switched to another class (T@85514)"
+         "The classes go from the most commonly prescribed to the least commonly prescribed. A patient with a partial response who tolerates the drug keeps getting drugs added; a patient who cannot tolerate one may be switched to another class"
         ],
         [
          "Sequence question",
-         "At least one question asks for the sequence of the drugs (T@84272, T@84448)"
+         "At least one question asks for the sequence of the drugs"
         ],
         [
          "Next class",
-         "The next class to add is the one after the last class the patient takes in her order; the dosing frequency rises as the classes are added (slide 63; T@75564)"
+         "The next class to add is the one after the last class the patient takes in her order; the dosing frequency rises as the classes are added (slide 63"
         ]
        ]
       },
@@ -10720,10 +10720,10 @@ const DZ = {
         "pg-agonists"
        ],
        "pts": [
-        "Why first: once daily dosing gives better adherence; up to 33% IOP reduction meets the 25–30% goal; low-cost generics; good tolerance (slide 20; T@51004)",
-        "More than once daily decreases the efficacy, so a BID prescription is an error to fix with the prescriber (T@51238; handout)",
+        "Why first: once daily dosing gives better adherence; up to 33% IOP reduction meets the 25–30% goal; low-cost generics; good tolerance (slide 20",
+        "More than once daily decreases the efficacy, so a BID prescription is an error to fix with the prescriber; handout)",
         "Blurred vision is the reason for nightly dosing; other side effects are stinging, increased pigmentation of the iris or eyelashes, eyelash growth and thickening, and a foreign body sensation (slide 21)",
-        "Contraindications: macular edema; history of herpetic keratitis. She said she will not test them (slide 21; T@53365)"
+        "Contraindications: macular edema; history of herpetic keratitis. She said she will not test them (slide 21"
        ],
        "pick": [
         [
@@ -10732,14 +10732,14 @@ const DZ = {
         ],
         [
          "A preservative-free prostaglandin analog",
-         "Latanoprost (Xelpros) or tafluprost (Zioptan) (handout). She said she will say in the stem when a product is preservative-free (T@55285)"
+         "Latanoprost (Xelpros) or tafluprost (Zioptan) (handout). She said she will say in the stem when a product is preservative-free"
         ],
         [
          "Inadequate response",
          "Check compliance and administration technique, and switch to another agent (slide 23); switch within the class or add another agent, and bimatoprost is slightly more effective, so it is the switch when latanoprost does not work (handout)"
         ]
        ],
-       "move": "Move to the next class when: the response is partial and the drug is tolerated; the beta blocker is added (T@85514)."
+       "move": "Move to the next class when: the response is partial and the drug is tolerated; the beta blocker is added."
       },
       {
        "k": "line",
@@ -10754,7 +10754,7 @@ const DZ = {
         "BID; timolol gel (Timoptic-XE) is once daily: fewer doses a day and fewer systemic effects than the solution (slide 32; handout)",
         "Betaxolol is less effective than timolol and levobunolol; the suspension (Betoptic-S) has fewer systemic effects than the solution (handout)",
         "Local: stinging on application (especially betaxolol solution), dry eyes, blepharitis, blurred vision. Systemic: bradycardia, hypotension, bronchospasm (slide 33)",
-        "Precautions: asthma or COPD; bradycardia or 2nd or 3rd degree heart block; uncompensated cardiac failure; oral beta-blocker therapy; less risk with betaxolol and carteolol (slide 34; handout). She said the precaution concerns uncontrolled disease (T@60379). She said she will not test the incidence of bronchospasm (T@66494)"
+        "Precautions: asthma or COPD; bradycardia or 2nd or 3rd degree heart block; uncompensated cardiac failure; oral beta-blocker therapy; less risk with betaxolol and carteolol (slide 34; handout). She said the precaution concerns uncontrolled disease. She said she will not test the incidence of bronchospasm"
        ],
        "pick": [
         [
@@ -10767,7 +10767,7 @@ const DZ = {
         ],
         [
          "Forgets the evening dose",
-         "Timolol solution to Timoptic XE gel, 1 drop once daily (slides 32, 37; T@64545)"
+         "Timolol solution to Timoptic XE gel, 1 drop once daily (slides 32, 37"
         ]
        ]
       },
@@ -10785,7 +10785,7 @@ const DZ = {
         "Brimonidine (Alphagan P) BID; apraclonidine (Iopidine) BID or TID, with a higher incidence of side effects that stop on discontinuation (slide 42; handout)",
         "Local, most common: lid edema, eye discomfort, foreign-object sensation, itching. Systemic: dizziness, fatigue, somnolence, dry mouth, slight blood pressure or heart rate change; the handout lists drowsiness as most common and a blood pressure change under 10% (slide 43)",
         "Precautions: cardiovascular and kidney disease, history of stroke, certain drugs; the handout names antihypertensives, MAO inhibitors and tricyclic antidepressants (slide 44)",
-        "{{Lumify}} (brimonidine 0.025%) is OTC for ocular redness and is not for glaucoma; it is not a therapeutic substitute for prescription brimonidine, because it is not efficacious enough to reduce the IOP (slides 42, 47; T@69314, T@74606)"
+        "{{Lumify}} (brimonidine 0.025%) is OTC for ocular redness and is not for glaucoma; it is not a therapeutic substitute for prescription brimonidine, because it is not efficacious enough to reduce the IOP (slides 42, 47"
        ],
        "pick": [
         [
@@ -10807,10 +10807,10 @@ const DZ = {
         "cai"
        ],
        "pts": [
-        "TID; 15–26% IOP reduction; the reduction is smaller and the frequency higher than the earlier classes (slide 51; T@75437)",
-        "Local: stinging or burning that resolves within 1–2 minutes, ocular discomfort, blurred vision as the drop settles, tearing; systemic effects minimal (slide 52; handout; T@76727). Stinging that lasts longer than that goes to the ophthalmologist",
-        "Oral acetazolamide and methazolamide (25–40%): short-term use only, because of systemic acidosis (malaise, fatigue, anorexia, nausea, weight loss, altered taste). She said to know that the oral drugs cause systemic acidosis and are last line; Dr. Smith's detail on how acidosis occurs she would not test, though she did not guarantee it (slide 53; T@77616, T@77815)",
-        "Precautions: sickle cell disease, pulmonary disorders, electrolyte imbalance; sulfonamide allergy, where cross-sensitivity is very low (slide 54). She called the cross-sensitivity an FYI (T@78505)"
+        "TID; 15–26% IOP reduction; the reduction is smaller and the frequency higher than the earlier classes (slide 51",
+        "Local: stinging or burning that resolves within 1–2 minutes, ocular discomfort, blurred vision as the drop settles, tearing; systemic effects minimal (slide 52; handout. Stinging that lasts longer than that goes to the ophthalmologist",
+        "Oral acetazolamide and methazolamide (25–40%): short-term use only, because of systemic acidosis (malaise, fatigue, anorexia, nausea, weight loss, altered taste). She said to know that the oral drugs cause systemic acidosis and are last line; Dr. Smith's detail on how acidosis occurs she would not test, though she did not guarantee it (slide 53",
+        "Precautions: sickle cell disease, pulmonary disorders, electrolyte imbalance; sulfonamide allergy, where cross-sensitivity is very low (slide 54). She called the cross-sensitivity an FYI"
        ],
        "pick": [
         [
@@ -10834,7 +10834,7 @@ const DZ = {
        ],
        "pts": [
         "Pilocarpine 1%, 2%, 4% (Isopto Carpine) QID; carbachol (Miostat) is often used for surgery instead of glaucoma; echothiophate has serious ocular and systemic toxic effects (slide 57; handout)",
-        "Rarely used, because of the IOP reduction and the four-times-a-day dosing (T@81113). The handout adds that pilocarpine may be used as initial management of acute angle-closure glaucoma",
+        "Rarely used, because of the IOP reduction and the four-times-a-day dosing. The handout adds that pilocarpine may be used as initial management of acute angle-closure glaucoma",
         "Local: poor night vision, frontal headache or brow ache, stinging. Systemic: headache (the most common), sweating, nausea, vomiting, diarrhea, cramping, bronchospasm, heart block (slide 58)",
         "Precautions: asthma; retinal detachment or corneal abrasion (slide 59)"
        ],
@@ -10861,7 +10861,7 @@ const DZ = {
         "Netarsudil 0.02% (Rhopressa) 1 drop once daily in the evening; with latanoprost it is Rocklatan, once daily in the evening; 20–30% IOP reduction, like timolol (slides 62; handout)",
         "Mechanism: Dr. Lam's handout lists three effects: increase aqueous humor outflow, decrease aqueous humor production and decrease episcleral venous pressure; Dr. Smith's slides (41–43) give outflow only (handout; Eye slides 41–43)",
         "Local: burning or eye pain, corneal disease, conjunctival hemorrhage or hyperemia (slide 62)",
-        "She said it is new, so cost may be an issue, and conjunctival hemorrhage reached {{51%}} in the clinical trial; the side effect outweighs the efficacy, so it is the last-line agent: \"We have tried everything else\" (T@83004, T@83922)",
+        "She said it is new, so cost may be an issue, and conjunctival hemorrhage reached {{51%}} in the clinical trial; the side effect outweighs the efficacy, so it is the last-line agent: \"We have tried everything else\"",
         "Dr. Smith's slide 43 gives conjunctival hyperemia in 53% and corneal verticillata, instillation site pain and conjunctival hemorrhage in about 20%; the handout and her words give 51% for conjunctival hemorrhage or hyperemia"
        ]
       },
@@ -10892,14 +10892,14 @@ const DZ = {
          "Rho kinase inhibitor and prostaglandin analog · once daily in the evening (slide 62)"
         ]
        ],
-       "src": "Lam Glaucoma slides 62, 69; T@85991, T@86115 11/19"
+       "src": "Lam Glaucoma slides 62, 69; lecture 11/19"
       },
       {
        "k": "pts",
        "p": "la",
        "items": [
-        "She said: recognize the drug classes in each product and the dosing regimen; the three products on slide 69 are never once a day, they are two or three times a day (T@85991, T@86115)",
-        "A combination product replaces two bottles, so it answers a patient who cannot manage many drops (T@90121)"
+        "She said: recognize the drug classes in each product and the dosing regimen; the three products on slide 69 are never once a day, they are two or three times a day",
+        "A combination product replaces two bottles, so it answers a patient who cannot manage many drops"
        ]
       },
       {
@@ -10916,11 +10916,11 @@ const DZ = {
         ],
         [
          "Conflict: latanoprost and bimatoprost",
-         "At T@56932 she gave the two names in the wrong order (switch to latanoprost); at T@71578 she said latanoprost has lower efficacy than bimatoprost, and the handout says bimatoprost is slightly more effective and is the switch when latanoprost does not work"
+         "At  she gave the two names in the wrong order (switch to latanoprost); at  she said latanoprost has lower efficacy than bimatoprost, and the handout says bimatoprost is slightly more effective and is the switch when latanoprost does not work"
         ],
         [
          "Conflict: where last line falls",
-         "Slides 51 and 53 title the carbonic anhydrase inhibitors Last Line; slide 63 lists them fourth of six; she called the Rho kinase inhibitor the last-line agent (T@83813)"
+         "Slides 51 and 53 title the carbonic anhydrase inhibitors Last Line; slide 63 lists them fourth of six; she called the Rho kinase inhibitor the last-line agent"
         ]
        ]
       }
@@ -10932,7 +10932,7 @@ const DZ = {
       "la"
      ],
      "q": "What do you tell the patient about the bottle, the eyelid, the waits, the order, contact lenses and storage, and when does the eye doctor check the pressure?",
-     "src": "Lam Glaucoma slides 70–87; handout; T@86335–T@93610 11/19",
+     "src": "Lam Glaucoma slides 70–87; handout; lecture 11/19",
      "blocks": [
       {
        "k": "facts",
@@ -10940,14 +10940,14 @@ const DZ = {
        "rows": [
         [
          "Keep the bottle clean",
-         "Do not touch the dropper tip to the eye, the hands or any surface (slide 71); wash the hands first (slide 73), because skin and eyes carry bacteria (T@86335)"
+         "Do not touch the dropper tip to the eye, the hands or any surface (slide 71); wash the hands first (slide 73), because skin and eyes carry bacteria"
         ],
         [
          "Eyelid closure",
          [
           "Purpose: decreases nasolacrimal drainage, so there is less systemic absorption and the systemic side effects are milder (slide 72)",
           "Wash hands and remove contacts; tilt the head back and pull the lower outer eyelid out to make a pouch; look at the dropper; release the eyelid slowly once the drop is in; close the eyes gently and press lightly on the inside corners; blot the excess solution (slide 73)",
-          "How long: the handout says the lids stay closed, not squeezed or rubbed, for 2 minutes; she said 1 or 2 minutes, pressed gently without pain (T@87190)"
+          "How long: the handout says the lids stay closed, not squeezed or rubbed, for 2 minutes; she said 1 or 2 minutes, pressed gently without pain"
          ]
         ]
        ]
@@ -10959,22 +10959,22 @@ const DZ = {
        "rows": [
         [
          "Two solutions",
-         "Wait {{5 minutes}}; either one first (slide 74; T@87799)"
+         "Wait {{5 minutes}}; either one first (slide 74"
         ],
         [
          "Solution and suspension",
-         "Wait {{5 minutes}}; the solution first, then the suspension; shake the suspension well; the suspension goes last because it stays longer in the tear film (slide 74; handout; T@88154)"
+         "Wait {{5 minutes}}; the solution first, then the suspension; shake the suspension well; the suspension goes last because it stays longer in the tear film (slide 74; handout"
         ],
         [
          "Solution and ointment or gel-forming solution",
-         "Wait at least {{10 minutes}}; the drops first, then the ointment or gel (slide 74; T@88303)"
+         "Wait at least {{10 minutes}}; the drops first, then the ointment or gel (slide 74"
         ],
         [
          "Order of application",
-         "1 solution, 2 suspension, 3 ointment or gel-forming solution; timolol gel counts as a gel (slide 75; T@88682)"
+         "1 solution, 2 suspension, 3 ointment or gel-forming solution; timolol gel counts as a gel (slide 75"
         ]
        ],
-       "src": "Lam Glaucoma slides 74–75; handout; T@87847 11/19: the wait stops the products washing each other out"
+       "src": "Lam Glaucoma slides 74–75; handout; lecture 11/19: the wait stops the products washing each other out"
       },
       {
        "k": "facts",
@@ -10983,21 +10983,21 @@ const DZ = {
         [
          "Contact lenses",
          [
-          "Lenses trap the drug and the preservative against the surface of the eye (handout; T@91230)",
-          "Remove the lenses before the drop and wait {{15 minutes}} before reinserting, especially with products that contain BAK (slide 83; T@91057, T@91467)",
-          "Wearing lenses does not exclude a product (T@91692). Her answer to the case: after the last morning drop wait 15 minutes, then insert the lenses (T@92094)"
+          "Lenses trap the drug and the preservative against the surface of the eye (handout",
+          "Remove the lenses before the drop and wait {{15 minutes}} before reinserting, especially with products that contain BAK (slide 83",
+          "Wearing lenses does not exclude a product. Her answer to the case: after the last morning drop wait 15 minutes, then insert the lenses"
          ]
         ],
         [
          "Storage",
          [
           "Latanoprost, latanoprostene bunod and tafluprost: refrigerator before opening; room temperature once opened (slide 85)",
-          "Netarsudil: refrigerator before opening; room temperature for {{less than 6 weeks}} once opened (slide 85; T@92709). She said the times follow how long the preservative is good for"
+          "Netarsudil: refrigerator before opening; room temperature for {{less than 6 weeks}} once opened (slide 85. She said the times follow how long the preservative is good for"
          ]
         ],
         [
          "Preservative-free",
-         "A multi-dose bottle contains a preservative, most commonly BAK; the single-use product is the choice for a patient who reacts to it, and it can cost more (T@54480, T@54891; slides 22, 35, 55, 68)"
+         "A multi-dose bottle contains a preservative, most commonly BAK; the single-use product is the choice for a patient who reacts to it, and it can cost more; slides 22, 35, 55, 68)"
         ]
        ]
       },
@@ -11010,12 +11010,12 @@ const DZ = {
        "k": "pts",
        "p": "la",
        "items": [
-        "Purpose: bimatoprost Lumigan lowers IOP in glaucoma; Latisse is the same drug for eyelash hypotrichosis, and she said the indication depends on the brand and the concentration (slide 19; T@50822)",
-        "Prostaglandin analogs: blurred vision is why they are given at night (slide 21; T@53077)",
-        "Beta blockers: local side effects are a major counseling point; with an oral beta blocker, check the blood pressure and heart rate, especially when started (slides 33, 34; T@61773)",
-        "Alpha-2 agonists: check the blood pressure while on the drug (slides 43, 44; T@73085)",
-        "Topical carbonic anhydrase inhibitors: stinging or burning is common but lasts 1 or 2 minutes; longer than that, the patient sees the ophthalmologist (slide 52; T@76727)",
-        "Cholinergics: headache and brow ache from ciliary muscle spasm, and poor night vision (slide 58; T@81450)"
+        "Purpose: bimatoprost Lumigan lowers IOP in glaucoma; Latisse is the same drug for eyelash hypotrichosis, and she said the indication depends on the brand and the concentration (slide 19",
+        "Prostaglandin analogs: blurred vision is why they are given at night (slide 21",
+        "Beta blockers: local side effects are a major counseling point; with an oral beta blocker, check the blood pressure and heart rate, especially when started (slides 33, 34",
+        "Alpha-2 agonists: check the blood pressure while on the drug (slides 43, 44",
+        "Topical carbonic anhydrase inhibitors: stinging or burning is common but lasts 1 or 2 minutes; longer than that, the patient sees the ophthalmologist (slide 52",
+        "Cholinergics: headache and brow ache from ciliary muscle spasm, and poor night vision (slide 58"
        ]
       },
       {
@@ -11029,19 +11029,19 @@ const DZ = {
        "rows": [
         [
          "Efficacy",
-         "The IOP is measured by the patient's eye doctor; \"as pharmacists, we don't do that\" (slide 86; T@92885)"
+         "The IOP is measured by the patient's eye doctor; \"as pharmacists, we don't do that\" (slide 86"
         ],
         [
          "Safety",
-         "The side effects of each drug in the regimen, as listed for its class; the pharmacist's biggest role is explaining the side effects the patient may have (slide 86; T@93275)"
+         "The side effects of each drug in the regimen, as listed for its class; the pharmacist's biggest role is explaining the side effects the patient may have (slide 86"
         ],
         [
          "When",
-         "{{2–4 weeks}} after therapy is started, and {{every 3–4 months}} once the target IOP is reached (slide 86; T@93052, T@93206)"
+         "{{2–4 weeks}} after therapy is started, and {{every 3–4 months}} once the target IOP is reached (slide 86"
         ],
         [
          "When to see the eye doctor sooner",
-         "A side effect that is not the typical short-lived kind: counsel the patient to see the eye doctor (T@93393)"
+         "A side effect that is not the typical short-lived kind: counsel the patient to see the eye doctor"
         ],
         [
          "Her case",
@@ -11080,11 +11080,11 @@ const DZ = {
       "Press the inner corner of the eye after each drop"
      ],
      "a": 3,
-     "w": "Compressing the inner corner stops the drug draining through the tear duct into the nose, where it would be absorbed (11/13, 11/17). Dr. Lam teaches gentle eyelid closure for 1–2 minutes with light pressure on the inside corners for the same purpose (slides 72, 73; T@87190 11/19).",
+     "w": "Compressing the inner corner stops the drug draining through the tear duct into the nose, where it would be absorbed (11/13, 11/17). Dr. Lam teaches gentle eyelid closure for 1–2 minutes with light pressure on the inside corners for the same purpose (slides 72, 73; lecture 11/19).",
      "x": {
       "Blink several times right after each drop": "Blinking pushes tears into the puncta and down the tear duct, which carries the drug toward the nose.",
       "Take the drop at night instead of in the morning": "The lecture’s point is to stop the drainage through the duct; the time of day does not do that.",
-      "Squeeze the eye shut for a minute and then open it": "Gentle eyelid closure for 1–2 minutes also decreases nasolacrimal drainage in Dr. Lam's teaching (slide 72; handout; T@87190 11/19), but her handout says not to squeeze or rub; squeezing the eye shut and then opening it is taught by neither professor, and Dr. Smith teaches compressing the inner corner of the eye (11/13)."
+      "Squeeze the eye shut for a minute and then open it": "Gentle eyelid closure for 1–2 minutes also decreases nasolacrimal drainage in Dr. Lam's teaching (slide 72; handout; lecture 11/19), but her handout says not to squeeze or rub; squeezing the eye shut and then opening it is taught by neither professor, and Dr. Smith teaches compressing the inner corner of the eye (11/13)."
      }
     },
     {
@@ -11165,7 +11165,7 @@ const DZ = {
       "The prescription is appropriate for a new patient, so dispense it and counsel him on the evening dose of the drop"
      ],
      "a": 0,
-     "w": "More than once daily decreases the efficacy of a prostaglandin analog, so the frequency is inappropriate: she answered with a call to the provider, clarification of the frequency and a new prescription (slides 24, 25; T@57782, T@57882).",
+     "w": "More than once daily decreases the efficacy of a prostaglandin analog, so the frequency is inappropriate: she answered with a call to the provider, clarification of the frequency and a new prescription (slides 24, 25.",
      "x": {
       "The twice-daily frequency is too low for the class; contact the prescriber and ask for 3 drops a day to lower the pressure": "Twice daily is more than the once-daily dose, not less, and a higher frequency lowers the efficacy.",
       "The strength is too low for him, so tell him to use 2 drops in each eye twice daily until the pressure falls": "More drops per dose is not the problem; the frequency is the problem.",
@@ -11182,7 +11182,7 @@ const DZ = {
       "Pilocarpine, a cholinergic miotic agent that opens outflow"
      ],
      "a": 0,
-     "w": "She takes classes 1, 2 and 3, so the next class is the 4th, the topical carbonic anhydrase inhibitor (slides 63, 64; T@84968).",
+     "w": "She takes classes 1, 2 and 3, so the next class is the 4th, the topical carbonic anhydrase inhibitor (slides 63, 64.",
      "x": {
       "Tafluprost, another prostaglandin analog in the same class": "That repeats class 1, which she already takes.",
       "Levobunolol, another beta receptor antagonist in the same class": "That repeats class 2, which she already takes.",
@@ -11199,7 +11199,7 @@ const DZ = {
       "Stop both drugs and start Cosopt, 1 drop twice daily"
      ],
      "a": 0,
-     "w": "The problem is that the evening dose is forgotten, so the frequency has to fall; timolol gel is once daily. Betaxolol, Combigan and Cosopt are all twice daily (slides 32, 37, 69; T@64545).",
+     "w": "The problem is that the evening dose is forgotten, so the frequency has to fall; timolol gel is once daily. Betaxolol, Combigan and Cosopt are all twice daily (slides 32, 37, 69.",
      "x": {
       "Change Timoptic to Betoptic, 1 drop twice daily": "Betaxolol is also twice daily, so the evening dose remains.",
       "Stop both drugs and start Combigan, 1 drop twice daily": "Combigan is twice daily, so the evening dose remains, and it replaces the prostaglandin analog he needs.",
@@ -11216,7 +11216,7 @@ const DZ = {
       "Either one can go first, then wait 5 minutes between them"
      ],
      "a": 0,
-     "w": "A solution goes before a gel-forming product, and the wait before an ointment or gel is at least 10 minutes so the drop reaches the eye first (slides 74, 75; T@88303, T@41604).",
+     "w": "A solution goes before a gel-forming product, and the wait before an ointment or gel is at least 10 minutes so the drop reaches the eye first (slides 74, 75.",
      "x": {
       "The gel first, wait 10 minutes, then Alphagan P": "The gel is given last: a solution applied after a gel is washed out or diluted.",
       "Alphagan P first, wait 5 minutes, then the gel": "5 minutes is the wait between two solutions or a solution and a suspension; the gel needs 10.",
@@ -11233,7 +11233,7 @@ const DZ = {
       "Leave the lenses in, then close the lids and press the corner for 2 minutes"
      ],
      "a": 0,
-     "w": "Lenses trap the drug and the preservative against the eye; the lens comes out, the drop goes in, and she waits 15 minutes. Wearing lenses does not exclude a product (slide 83; T@91467).",
+     "w": "Lenses trap the drug and the preservative against the eye; the lens comes out, the drop goes in, and she waits 15 minutes. Wearing lenses does not exclude a product (slide 83.",
      "x": {
       "Stop wearing lenses, since wearing lenses excludes her from both of these products": "She said wearing lenses does not exclude a patient from any product.",
       "Wait 5 minutes after each drop and then reinsert the lenses she removed": "5 minutes is the wait between two solutions; the lens wait is 15 minutes.",
@@ -11250,7 +11250,7 @@ const DZ = {
       "No check is needed until a side effect appears"
      ],
      "a": 0,
-     "w": "Efficacy is the IOP, which pharmacists do not measure; the first follow-up is 2–4 weeks after the start, and every 3–4 months once the target is reached (slides 86, 87; T@92885, T@93052).",
+     "w": "Efficacy is the IOP, which pharmacists do not measure; the first follow-up is 2–4 weeks after the start, and every 3–4 months once the target is reached (slides 86, 87.",
      "x": {
       "His pharmacist measures the IOP at the counter after 1 week": "She said pharmacists do not measure the IOP; the eye doctor does.",
       "His eye doctor measures the IOP only every 3–4 months from today": "3–4 months applies once the target IOP is achieved; the first visit after a start is at 2–4 weeks.",
@@ -11267,12 +11267,12 @@ const DZ = {
     [
      "2 routes",
      "of outflow: trabecular meshwork to Schlemm’s canal (most), uveoscleral (a little)",
-     "T@32669 11/13"
+     "lecture 11/13"
     ],
     [
      "2 extra effects",
      "of brimonidine: increases uveoscleral outflow; neuroprotective",
-     "Eye slide 22; T@49059 11/13"
+     "Eye slide 22; lecture 11/13"
     ],
     [
      "53%",
@@ -11287,22 +11287,22 @@ const DZ = {
     [
      "Once a day",
      "timolol in its gel form (the other drops are given several times a day)",
-     "T@46338 11/13"
+     "lecture 11/13"
     ],
     [
      "3 or 4 times a day",
      "her example of dosing for a glaucoma drop; a combination product replaces two",
-     "T@38604 11/17"
+     "lecture 11/17"
     ],
     [
      "Exam 3 questions",
      "on her part of Exam 3: 18, all on the eye lectures, with no Exam 1 material (her emailed Exam 3 hints and the Exam 3 plan); on 11/13 she said 5 of her questions are cumulative, covering everything on the first exam",
-     "Her emailed Exam 3 hints (STYLE.md); T@61020 11/13"
+     "Her emailed Exam 3 hints; lecture 11/13"
     ],
     [
      "25–30%",
      "her initial IOP reduction target when the baseline IOP is high (handout: above 22 mm Hg)",
-     "Lam Glaucoma slide 14; T@47427 11/19"
+     "Lam Glaucoma slide 14; lecture 11/19"
     ],
     [
      "1 · 2 · 2 · 3 a day",
@@ -11351,7 +11351,7 @@ const DZ = {
       "sm"
      ],
      "q": "How does an allergen lead to itchy, red, swollen eyes?",
-     "src": "Eye slides 47–49; T@41030 11/17",
+     "src": "Eye slides 47–49; lecture 11/17",
      "blocks": [
       {
        "rows": [
@@ -11386,7 +11386,7 @@ const DZ = {
         ],
         [
          "Not covered",
-         "Bacterial and viral conjunctivitis; this lecture covers allergic conjunctivitis only (T@39661 11/17)"
+         "Bacterial and viral conjunctivitis; this lecture covers allergic conjunctivitis only (lecture 11/17)"
         ]
        ],
        "k": "facts",
@@ -11407,7 +11407,7 @@ const DZ = {
       "sm"
      ],
      "q": "What are the two mechanisms of these drugs, why does the second one matter, and which drug lacks it?",
-     "src": "Eye slides 51–54; T@44898, T@46866, T@51757 11/17",
+     "src": "Eye slides 51–54; lecture 11/17",
      "blocks": [
       {
        "rows": [
@@ -11513,7 +11513,7 @@ const DZ = {
       "sm"
      ],
      "q": "What do the alpha 2 agonists do in the eye, and which class treats which symptom?",
-     "src": "Eye slides 52, 56–59; T@52180, T@52690, T@53936 11/17; Eye slide 8",
+     "src": "Eye slides 52, 56–59; lecture 11/17; Eye slide 8",
      "blocks": [
       {
        "rows": [
@@ -11567,7 +11567,7 @@ const DZ = {
          "The combination: naphazoline/pheniramine"
         ]
        ],
-       "src": "Eye slides 52, 56, 59; T@52690 11/17",
+       "src": "Eye slides 52, 56, 59; lecture 11/17",
        "k": "map",
        "p": "sm"
       },
@@ -11589,7 +11589,7 @@ const DZ = {
        "rows": [
         [
          "Conflict: phenylephrine",
-         "Slide 57 lists phenylephrine among the alpha 2 agonists, as does the drug chart (p. 3, Altafrin); slide 8 lists it under alpha 1 agonists, with brimonidine and apraclonidine under alpha 2. She said there is no need to memorize slides 8 or 9 (STYLE.md hint 3)"
+         "Slide 57 lists phenylephrine among the alpha 2 agonists, as does the drug chart (p. 3, Altafrin); slide 8 lists it under alpha 1 agonists, with brimonidine and apraclonidine under alpha 2. She said there is no need to memorize slides 8 or 9"
         ]
        ]
       }
@@ -11601,7 +11601,7 @@ const DZ = {
       "la"
      ],
      "q": "What separates allergic from bacterial or viral conjunctivitis, when is the patient referred, and which non-drug measure fits which cause?",
-     "src": "Lam Ophthalmic slides 25–31, 33–34; handout; T@21143, T@21906, T@22420, T@22972, T@24910, T@43654 11/20",
+     "src": "Lam Ophthalmic slides 25–31, 33–34; handout; lecture 11/20",
      "blocks": [
       {
        "k": "facts",
@@ -11613,11 +11613,11 @@ const DZ = {
         ],
         [
          "Every type tears",
-         "Tearing is the body's way to get rid of whatever is in the eye: an allergen, a virus or bacteria (T@21143)"
+         "Tearing is the body's way to get rid of whatever is in the eye: an allergen, a virus or bacteria"
         ],
         [
          "The sign that separates them",
-         "{{Itching}} marks allergic conjunctivitis: the allergen causes histamine release and mast cell degranulation. Bacterial and viral conjunctivitis produce crusting instead. Itching is the finding that separates allergic from bacterial and viral conjunctivitis (slides 28, 29; T@21906, T@22420)"
+         "{{Itching}} marks allergic conjunctivitis: the allergen causes histamine release and mast cell degranulation. Bacterial and viral conjunctivitis produce crusting instead. Itching is the finding that separates allergic from bacterial and viral conjunctivitis (slides 28, 29"
         ],
         [
          "Allergic types (slide 29)",
@@ -11629,7 +11629,7 @@ const DZ = {
         ],
         [
          "What she treats",
-         "Allergic conjunctivitis is the one she can treat; bacterial and viral conjunctivitis go to a provider (T@21540)"
+         "Allergic conjunctivitis is the one she can treat; bacterial and viral conjunctivitis go to a provider"
         ]
        ]
       },
@@ -11651,7 +11651,7 @@ const DZ = {
         ],
         [
          "Why",
-         "She said there is no OTC antibiotic or antiviral, and a patient who looks like they have an infection or damage to the eye needs the eye doctor (slide 30; T@22972, T@6147)"
+         "She said there is no OTC antibiotic or antiviral, and a patient who looks like they have an infection or damage to the eye needs the eye doctor (slide 30"
         ]
        ]
       },
@@ -11678,7 +11678,7 @@ const DZ = {
         ],
         [
          "Match the measure to the cause",
-         "For a pet-dander allergy: wash the clothes frequently, filter the air (T@24910). She said she will not ask warm versus cold compress, but will ask about the non-drug measure that fits the cause of the symptom (T@43654)"
+         "For a pet-dander allergy: wash the clothes frequently, filter the air. She said she will not ask warm versus cold compress, but will ask about the non-drug measure that fits the cause of the symptom"
         ]
        ]
       }
@@ -11690,7 +11690,7 @@ const DZ = {
       "la"
      ],
      "q": "What is first line, which OTC products and ages, what do decongestants do and for how long, and when is an oral antihistamine added or the patient referred?",
-     "src": "Lam Ophthalmic slides 35–41; handout; T@25400, T@26972, T@27165, T@27562, T@28491, T@29242, T@29723, T@30078, T@31818, T@32498, T@32648 11/20",
+     "src": "Lam Ophthalmic slides 35–41; handout; lecture 11/20",
      "blocks": [
       {
        "k": "facts",
@@ -11702,7 +11702,7 @@ const DZ = {
         ],
         [
          "Artificial tears do",
-         "Wash out the allergen, give some symptom relief and protect the ocular surface (slide 36; T@25400)"
+         "Wash out the allergen, give some symptom relief and protect the ocular surface (slide 36"
         ],
         [
          "Artificial tears do not",
@@ -11710,11 +11710,11 @@ const DZ = {
         ],
         [
          "The dual-acting agent",
-         "Gives symptom relief within minutes up to 30 minutes; it can be used when symptoms are present or chronically, and before the season starts because it takes time to prevent mast cell degranulation (handout; T@26972)"
+         "Gives symptom relief within minutes up to 30 minutes; it can be used when symptoms are present or chronically, and before the season starts because it takes time to prevent mast cell degranulation (handout"
         ],
         [
          "Her emphasis",
-         "She spends most of the time on the OTC products because they are used most; know the active ingredient in each product, since many are combinations (T@27165, T@29242)"
+         "She spends most of the time on the OTC products because they are used most; know the active ingredient in each product, since many are combinations"
         ]
        ]
       },
@@ -11725,7 +11725,7 @@ const DZ = {
        "rows": [
         [
          "Olopatadine (Pataday, Patanol)",
-         "Several strengths, some once daily and some twice daily; the higher 0.2% and 0.7% are once daily; ages {{2 years}} and older. She will not test which strength is which (T@27562)"
+         "Several strengths, some once daily and some twice daily; the higher 0.2% and 0.7% are once daily; ages {{2 years}} and older. She will not test which strength is which"
         ],
         [
          "Alcaftadine 0.25%",
@@ -11741,7 +11741,7 @@ const DZ = {
         ],
         [
          "Prescription (recognize)",
-         "Azelastine, bepotastine, epinastine, each 1 drop twice daily; she rarely sees them dispensed (slide 37; T@28491)"
+         "Azelastine, bepotastine, epinastine, each 1 drop twice daily; she rarely sees them dispensed (slide 37"
         ]
        ],
        "src": "Lam Ophthalmic slide 37; handout"
@@ -11759,7 +11759,7 @@ const DZ = {
         "ophthalmic-h1"
        ],
        "pts": [
-        "Many OTC eye products are combinations, so the active ingredient decides which one to select (T@29242)",
+        "Many OTC eye products are combinations, so the active ingredient decides which one to select",
         "Pataday, Naphcon-A, alcaftadine and ketotifen are the products she named; ages 2 and older for olopatadine and alcaftadine, 3 and older for ketotifen (slide 37; handout)"
        ]
       },
@@ -11772,9 +11772,9 @@ const DZ = {
         "cetirizine-eye"
        ],
        "pts": [
-        "Blocks histamine receptors only, so it is generally used for mild allergic conjunctivitis; it is not a dual-acting agent (slide 38; handout; T@29723)",
+        "Blocks histamine receptors only, so it is generally used for mild allergic conjunctivitis; it is not a dual-acting agent (slide 38; handout",
         "It relieves itching and redness for a limited time and needs frequent dosing; prolonged use may cause eye irritation (handout)",
-        "Conflict: the handout gives 1 drop twice daily about 8 hours apart and also says frequent dosing, up to four times a day; she said it \"does require 4 times a day dosing\" (T@29723)"
+        "Conflict: the handout gives 1 drop twice daily about 8 hours apart and also says frequent dosing, up to four times a day; she said it \"does require 4 times a day dosing\""
        ]
       },
       {
@@ -11786,12 +11786,12 @@ const DZ = {
         "alpha2-eye"
        ],
        "pts": [
-        "Role: reduce redness as local vasoconstrictors; they {{do not diminish the allergic response}}. She said: \"It reduces the redness. That's all it is\" (slide 39; handout; T@30078)",
-        "Naphazoline (OTC), tetrahydrozoline (Visine, OTC) and brimonidine 0.025% (Lumify, OTC). She said to recognize which drugs are decongestants (slide 39; T@31416)",
+        "Role: reduce redness as local vasoconstrictors; they {{do not diminish the allergic response}}. She said: \"It reduces the redness. That's all it is\" (slide 39; handout",
+        "Naphazoline (OTC), tetrahydrozoline (Visine, OTC) and brimonidine 0.025% (Lumify, OTC). She said to recognize which drugs are decongestants (slide 39",
         "Limit: about {{72 hours}}. Beyond 72 hours: rebound conjunctival hyperemia, allergic blepharitis, possible precipitation of angle-closure glaucoma, and epithelial [[xerosis|xerosis]] (slide 39)",
         "Systemic absorption can raise the blood pressure; caution in hypertension, cardiovascular disease and diabetes (slide 39; handout)",
-        "Lumify at this strength is not for glaucoma (T@31626)",
-        "Conflict: the handout line under brimonidine reads \"dosed four times daily x 4 weeks\" and \"Do not use it for allergic conjunctivitis\"; slide 39 lists it among decongestants and she said \"You can only use it for 3 days\" (T@31818)"
+        "Lumify at this strength is not for glaucoma",
+        "Conflict: the handout line under brimonidine reads \"dosed four times daily x 4 weeks\" and \"Do not use it for allergic conjunctivitis\"; slide 39 lists it among decongestants and she said \"You can only use it for 3 days\""
        ]
       },
       {
@@ -11804,7 +11804,7 @@ const DZ = {
        ],
        "pts": [
         "Loratadine (Claritin), fexofenadine (Allegra), cetirizine (Zyrtec) (slide 40)",
-        "Slide 40 gives two reasons: systemic symptoms together with the eye symptoms, or symptoms that persist with a topical antihistamine or mast cell stabilizer. In speech and in the handout: when the patient is not responding to the ophthalmic solutions (T@32498)",
+        "Slide 40 gives two reasons: systemic symptoms together with the eye symptoms, or symptoms that persist with a topical antihistamine or mast cell stabilizer. In speech and in the handout: when the patient is not responding to the ophthalmic solutions",
         "Oral antihistamines can dry the eye (handout)"
        ]
       },
@@ -11814,7 +11814,7 @@ const DZ = {
        "rows": [
         [
          "Refer when",
-         "The symptoms do not resolve after {{72 hours}} of appropriate treatment; she said \"if they use the products that you recommended correctly and still no benefit in 3 days, they should go see someone\" (slide 41; T@32648)"
+         "The symptoms do not resolve after {{72 hours}} of appropriate treatment; she said \"if they use the products that you recommended correctly and still no benefit in 3 days, they should go see someone\" (slide 41"
         ]
        ]
       }
@@ -11826,7 +11826,7 @@ const DZ = {
       "la"
      ],
      "q": "In what order are eye products given, how long is the wait, and what do you tell a patient who uses a preservative product or wears contact lenses?",
-     "src": "Lam Ophthalmic slides 42–50; handout; T@33594, T@34146, T@34316, T@35692, T@41604 11/20",
+     "src": "Lam Ophthalmic slides 42–50; handout; lecture 11/20",
      "blocks": [
       {
        "k": "facts",
@@ -11834,11 +11834,11 @@ const DZ = {
        "rows": [
         [
          "Exam weight",
-         "She said the sequence of solution, suspension, ointment or gel is repeated from the glaucoma lecture and is \"very high\" for the exam (T@34316)"
+         "She said the sequence of solution, suspension, ointment or gel is repeated from the glaucoma lecture and is \"very high\" for the exam"
         ],
         [
          "How to work it out",
-         "Identify the formulation first; that sets the order and the time between the products (T@41604)"
+         "Identify the formulation first; that sets the order and the time between the products"
         ]
        ]
       },
@@ -11865,7 +11865,7 @@ const DZ = {
         ],
         [
          "Her example",
-         "A patient uses Pataday and timolol gel: the Pataday first, wait 10 minutes because timolol is a gel, then the gel (T@41604)"
+         "A patient uses Pataday and timolol gel: the Pataday first, wait 10 minutes because timolol is a gel, then the gel"
         ]
        ],
        "src": "Lam Ophthalmic slides 44–45; handout: the wait stops the first drop being flushed away or diluted by the second"
@@ -11879,18 +11879,18 @@ const DZ = {
          [
           "Role: prevent or reduce bacterial growth in multi-dose products (slide 43)",
           "[[bak|Benzalkonium chloride (BAK)]] is the most common; others are chlorhexidine, methylparaben, propylparaben, Purite and thimerosal (slide 43)",
-          "Side effect: ocular irritation; a burning sensation may be the preservative, and the fix is a preservative-free product in a unit-dose dispenser (handout; T@33594)"
+          "Side effect: ocular irritation; a burning sensation may be the preservative, and the fix is a preservative-free product in a unit-dose dispenser (handout"
          ]
         ],
         [
          "Preservative-free products",
-         "Less irritation, but more expensive and they contaminate more easily: counsel strict hygiene, wash the hands, do not touch the eyelid with the dropper, and discard what is left after use (handout; T@34146)"
+         "Less irritation, but more expensive and they contaminate more easily: counsel strict hygiene, wash the hands, do not touch the eyelid with the dropper, and discard what is left after use (handout"
         ],
         [
          "Contact lenses",
          [
           "Lenses trap the drug and the preservative against the surface of the eye (slide 46; handout)",
-          "Remove the lenses before the drop and wait {{15 minutes}} before reinserting, especially with products that contain BAK (slide 46; T@35692)",
+          "Remove the lenses before the drop and wait {{15 minutes}} before reinserting, especially with products that contain BAK (slide 46",
           "Conflict: one handout line reads as an instruction to use BAK drops with lenses (\"It is imperative to use drops containing preservatives like BAK because it's damaging to the eyes when used with contacts\"); slide 46 and her speech say to wait 15 minutes"
          ]
         ]
@@ -12016,7 +12016,7 @@ const DZ = {
       "A physician referral now instead of starting any OTC product"
      ],
      "a": 0,
-     "w": "Itching and watery eyes after an exposure point to allergic conjunctivitis; first line is artificial tears (wash out the allergen) plus a dual-acting agent (relieves the itch) (slides 35, 53; T@40364). She said antihistamine use for the short term is acceptable in glaucoma; the concern is chronic use of anticholinergic antihistamines (T@42416).",
+     "w": "Itching and watery eyes after an exposure point to allergic conjunctivitis; first line is artificial tears (wash out the allergen) plus a dual-acting agent (relieves the itch) (slides 35, 53. She said antihistamine use for the short term is acceptable in glaucoma; the concern is chronic use of anticholinergic antihistamines.",
      "x": {
       "Lumify drops alone, up to four times a day for the redness": "Lumify only reduces redness and is limited to 72 hours; it does not treat the itch.",
       "Alcaftadine plus an oral antihistamine such as Allegra": "An oral antihistamine is added for systemic symptoms or when the ophthalmic drops do not work; she has neither yet.",
@@ -12033,7 +12033,7 @@ const DZ = {
       "The gel first, wait 5 minutes, then alcaftadine solution"
      ],
      "a": 0,
-     "w": "A solution goes before a gel-forming product and the wait is at least 10 minutes (slides 44, 45; T@41604).",
+     "w": "A solution goes before a gel-forming product and the wait is at least 10 minutes (slides 44, 45.",
      "x": {
       "The gel first, wait 10 minutes, then alcaftadine": "The gel is last in the order of application.",
       "Alcaftadine first, wait 5 minutes, then the gel": "5 minutes is the wait for two solutions or a solution and a suspension; before a gel it is at least 10.",
@@ -12050,7 +12050,7 @@ const DZ = {
       "Recommend ophthalmic cetirizine twice daily and warm compresses over the closed eyes"
      ],
      "a": 0,
-     "w": "Light sensitivity is one of the exclusions; she said there is nothing OTC to recommend for a patient with damage to the eye (slide 30; T@6147).",
+     "w": "Light sensitivity is one of the exclusions; she said there is nothing OTC to recommend for a patient with damage to the eye (slide 30.",
      "x": {
       "Recommend Pataday and artificial tears, then refer him if the eyes are not better after 72 hours": "The 72-hour rule applies to patients who qualify for self-care; he does not.",
       "Recommend naphazoline/pheniramine, 1–2 drops up to 4 times a day, for up to 72 hours": "He is excluded from self-treatment, so no OTC product starts.",
@@ -12101,7 +12101,7 @@ const DZ = {
     [
      "1 of 7",
      "cetirizine has no mast cell stabilization",
-     "Eye slide 53; T@51757 11/17"
+     "Eye slide 53; lecture 11/17"
     ],
     [
      "H1 and H4",
@@ -12178,7 +12178,7 @@ const DZ = {
       "sm"
      ],
      "q": "What is the pathology of dry eye, who gets it, and what are the three layers of tears?",
-     "src": "Eye slides 6, 62; T@12551 11/13; T@56078, T@57864 11/17",
+     "src": "Eye slides 6, 62; lecture 11/13; lecture 11/17",
      "blocks": [
       {
        "rows": [
@@ -12256,7 +12256,7 @@ const DZ = {
       "sm"
      ],
      "q": "What does each prescription drug act on?",
-     "src": "Eye slides 64–73; T@58455, T@63213, T@64326, T@67641 11/17",
+     "src": "Eye slides 64–73; lecture 11/17",
      "blocks": [
       {
        "title": "What each drug acts on",
@@ -12344,7 +12344,7 @@ const DZ = {
       "sm"
      ],
      "q": "Which side effect and which counseling point goes with each drug?",
-     "src": "Eye slides 67, 71, 73; T@61900, T@65285, T@65648, T@68262 11/17",
+     "src": "Eye slides 67, 71, 73; lecture 11/17",
      "blocks": [
       {
        "title": "Side effects",
@@ -12383,7 +12383,7 @@ const DZ = {
       "la"
      ],
      "q": "Which drugs contribute to dry eye, how does it look and feel, what are the goals, and who is referred?",
-     "src": "Lam Ophthalmic slides 2–11; handout; T@3556, T@5102, T@5395, T@5640, T@6147, T@6344, T@43228 11/20",
+     "src": "Lam Ophthalmic slides 2–11; handout; lecture 11/20",
      "blocks": [
       {
        "k": "facts",
@@ -12409,11 +12409,11 @@ const DZ = {
         ],
         [
          "In a medication review",
-         "Look at the inactive ingredients: the preservative can irritate the eye (T@3556)"
+         "Look at the inactive ingredients: the preservative can irritate the eye"
         ],
         [
          "Not tested (her words)",
-         "Mild versus severe dry eye (T@5395). The comorbidities, deficiencies and surgery are marked FYI in the handout; the pathophysiology was Dr. Smith's"
+         "Mild versus severe dry eye. The comorbidities, deficiencies and surgery are marked FYI in the handout; the pathophysiology was Dr. Smith's"
         ]
        ]
       },
@@ -12445,7 +12445,7 @@ const DZ = {
        "rows": [
         [
          "First episode",
-         "{{Refer every patient}} with suspected dry eye to an ophthalmologist or optometrist, especially with pain or visual disturbance; a patient with no eye doctor needs to establish one (slide 10; T@5102, T@5640)"
+         "{{Refer every patient}} with suspected dry eye to an ophthalmologist or optometrist, especially with pain or visual disturbance; a patient with no eye doctor needs to establish one (slide 10"
         ],
         [
          "Meanwhile",
@@ -12465,11 +12465,11 @@ const DZ = {
         ],
         [
          "Why",
-         "She said an artificial tear cannot fix damage to the eye; for intense eye pain, as in closed-angle glaucoma, the treatment is surgery, not medication (slide 11; T@6147, T@6344)"
+         "She said an artificial tear cannot fix damage to the eye; for intense eye pain, as in closed-angle glaucoma, the treatment is surgery, not medication (slide 11"
         ],
         [
          "Her case",
-         "A man has a first episode of gritty eyes with mild irritation that worsens at the end of the day, visual disturbances, mild redness, no lid swelling or infection, and takes Benadryl for seasonal allergic rhinitis. It is dry eye: the gritty sensation, the mild irritation and a risk factor, the anticholinergic antihistamine (slides 55, 56; T@43228)"
+         "A man has a first episode of gritty eyes with mild irritation that worsens at the end of the day, visual disturbances, mild redness, no lid swelling or infection, and takes Benadryl for seasonal allergic rhinitis. It is dry eye: the gritty sensation, the mild irritation and a risk factor, the anticholinergic antihistamine (slides 55, 56"
         ]
        ]
       }
@@ -12481,7 +12481,7 @@ const DZ = {
       "la"
      ],
      "q": "Which non-drug measure fits which cause, and how do artificial tears, ointments and gels differ?",
-     "src": "Lam Ophthalmic slides 12–16; handout; T@6948, T@8830, T@10376, T@11878, T@12073, T@12897 11/20",
+     "src": "Lam Ophthalmic slides 12–16; handout; lecture 11/20",
      "blocks": [
       {
        "k": "facts",
@@ -12489,11 +12489,11 @@ const DZ = {
        "rows": [
         [
          "What she tests",
-         "What to recommend over the counter, and the non-drug measures; the non-drug measure depends on what is irritating the eye (T@6948)"
+         "What to recommend over the counter, and the non-drug measures; the non-drug measure depends on what is irritating the eye"
         ],
         [
          "Find the cause first",
-         "\"Trying to figure out what is causing the issue, making recommendation to remove the root of the issue if possible\" (T@8830)"
+         "\"Trying to figure out what is causing the issue, making recommendation to remove the root of the issue if possible\""
         ],
         [
          "Improve evaporation of the tear film",
@@ -12525,7 +12525,7 @@ const DZ = {
        ],
        "pts": [
         "Dose: 1–2 drops once or twice a day, typically on waking and before bed; severe cases can use 3–4 times a day up to hourly (slide 14; handout)",
-        "Duration: as long as the patient responds, {{with no set limit}}: \"there is no limitation how long you have to be on artificial teardrops\" (T@10376)",
+        "Duration: as long as the patient responds, {{with no set limit}}: \"there is no limitation how long you have to be on artificial teardrops\"",
         "Products vary by viscosity: a higher viscosity gives a longer contact time. {{Preservative-free}} is preferred for moderate to severe disease or a patient sensitive to preservatives (slide 14; handout)"
        ]
       },
@@ -12541,7 +12541,7 @@ const DZ = {
         "Active ingredients: petrolatum, mineral oil, lanolin. The ointment has a longer retention time; the side effects are {{blurry vision}} (so it is generally given at bedtime) and hypersensitivity (slide 15; handout)",
         "Hypersensitivity: change to a single-use or preservative-free product. Blur: combine the ointment with artificial tears to offset it (handout)",
         "Gel: less blurry vision than the ointment, better tolerance (slide 15; handout). Instructions: as needed, twice daily or every few hours",
-        "Her exam pattern: a patient wants something that lasts longer than artificial tears; the options are to say no and continue the drops, or to use the ointment and give the counseling point (T@11878, T@12073)"
+        "Her exam pattern: a patient wants something that lasts longer than artificial tears; the options are to say no and continue the drops, or to use the ointment and give the counseling point"
        ]
       },
       {
@@ -12550,7 +12550,7 @@ const DZ = {
        "rows": [
         [
          "Supplements",
-         "Omega fatty acid and antioxidants (slide 16). The handout says omega fatty acid inhibits proinflammatory cytokine production and T-lymphocyte proliferation and antioxidants prevent oxidative cellular injury; she said there is little literature on OTC and nutritional supplements (T@12897)"
+         "Omega fatty acid and antioxidants (slide 16). The handout says omega fatty acid inhibits proinflammatory cytokine production and T-lymphocyte proliferation and antioxidants prevent oxidative cellular injury; she said there is little literature on OTC and nutritional supplements"
         ]
        ]
       }
@@ -12562,7 +12562,7 @@ const DZ = {
       "la"
      ],
      "q": "What dose, length of therapy and side effects go with cyclosporine, lifitegrast, a corticosteroid and varenicline, and what are the steps of TEAR?",
-     "src": "Lam Ophthalmic slides 17–22, 44–46; handout; T@13168, T@13596, T@15107, T@16231, T@44594 11/20",
+     "src": "Lam Ophthalmic slides 17–22, 44–46; handout; lecture 11/20",
      "blocks": [
       {
        "k": "facts",
@@ -12570,7 +12570,7 @@ const DZ = {
        "rows": [
         [
          "Her role",
-         "Pharmacists are often not choosing which drug the patient needs, but dispense it, check the dosing and counsel on what to expect (T@13168)"
+         "Pharmacists are often not choosing which drug the patient needs, but dispense it, check the dosing and counsel on what to expect"
         ]
        ]
       },
@@ -12596,14 +12596,14 @@ const DZ = {
          "1 spray in each nostril twice daily · about {{4 weeks}} · cough, sneezing, throat irritation"
         ]
        ],
-       "src": "Lam Ophthalmic slides 17–21; handout; T@13596, T@15107"
+       "src": "Lam Ophthalmic slides 17–21; handout"
       },
       {
        "k": "pts",
        "p": "la",
        "items": [
-        "Cyclosporine interval: the handout says about 12 hours apart; she said an 8 to 12 hour difference (T@13596). The foreign body sensation it causes is the same feeling dry eye gives",
-        "Corticosteroids: the slide gives no dose; she said the only thing to know is that they are used for a very short time, because chronic use has serious side effects, glaucoma among them (slide 20; T@15107)"
+        "Cyclosporine interval: the handout says about 12 hours apart; she said an 8 to 12 hour difference. The foreign body sensation it causes is the same feeling dry eye gives",
+        "Corticosteroids: the slide gives no dose; she said the only thing to know is that they are used for a very short time, because chronic use has serious side effects, glaucoma among them (slide 20"
        ]
       },
       {
@@ -12621,11 +12621,11 @@ const DZ = {
         ],
         [
          "T",
-         "{{Tilt}} the tip toward the ear nearest that nostril (handout); she said \"tilt towards the ear, away from the nostril\" (T@16231)"
+         "{{Tilt}} the tip toward the ear nearest that nostril (handout); she said \"tilt towards the ear, away from the nostril\""
         ],
         [
          "E",
-         "{{Elevate}} the tongue to the roof of the mouth (handout); she said \"to the back of your mouth\" (T@16231)"
+         "{{Elevate}} the tongue to the roof of the mouth (handout); she said \"to the back of your mouth\""
         ],
         [
          "A",
@@ -12633,11 +12633,11 @@ const DZ = {
         ],
         [
          "R",
-         "{{Resist}} inhaling the mist, which prevents the cough (T@16231)"
+         "{{Resist}} inhaling the mist, which prevents the cough"
         ],
         [
          "Shaking",
-         "She first said to shake it (T@16231), then corrected herself: do not shake it, pump it 7 times (T@44594). The handout says do not shake"
+         "She first said to shake it, then corrected herself: do not shake it, pump it 7 times. The handout says do not shake"
         ]
        ]
       },
@@ -12651,7 +12651,7 @@ const DZ = {
         ],
         [
          "Not on Exam 3",
-         "The compounding calculation (cyclosporine 2% in corn oil) and its day supply, slides 23–24 (T@20034)"
+         "The compounding calculation (cyclosporine 2% in corn oil) and its day supply, slides 23–24"
         ]
        ]
       }
@@ -12754,7 +12754,7 @@ const DZ = {
       "Bacterial conjunctivitis, because the eyes are irritated and mildly red"
      ],
      "a": 0,
-     "w": "A gritty sensation with mild irritation and a risk factor, an antihistamine with anticholinergic properties, is dry eye (slides 6, 7; T@43228).",
+     "w": "A gritty sensation with mild irritation and a risk factor, an antihistamine with anticholinergic properties, is dry eye (slides 6, 7.",
      "x": {
       "Allergic conjunctivitis, because she has seasonal allergies and both eyes are mildly red": "Allergic conjunctivitis itches and tears after an exposure; the picture here is gritty and irritated.",
       "Viral conjunctivitis, because both eyes are red and the vision is blurred": "Viral conjunctivitis tears and may crust on waking; there are no signs of infection here.",
@@ -12771,7 +12771,7 @@ const DZ = {
       "A second-generation oral antihistamine"
      ],
      "a": 0,
-     "w": "Every first-time patient is referred, and artificial tears can be recommended in the meantime; she said all the other options treat an allergen (slides 10, 57; T@43654).",
+     "w": "Every first-time patient is referred, and artificial tears can be recommended in the meantime; she said all the other options treat an allergen (slides 10, 57.",
      "x": {
       "Topical antihistamine ophthalmic solution": "It treats an allergen, and she takes an antihistamine that may be part of the cause.",
       "Ophthalmic decongestant solution": "It reduces redness only and is limited to about 72 hours.",
@@ -12788,7 +12788,7 @@ const DZ = {
       "Switch to a decongestant eye drop, used up to 4 times a day, to keep the eyes comfortable"
      ],
      "a": 0,
-     "w": "An ointment or gel lasts longer because of its retention time; the counseling point is the blurred vision, and a gel is better tolerated (slide 15; T@12073).",
+     "w": "An ointment or gel lasts longer because of its retention time; the counseling point is the blurred vision, and a gel is better tolerated (slide 15.",
      "x": {
       "Continue the artificial tear drops only, because an ointment is never an appropriate product for dry eye": "She named the ointment with its counseling point as an acceptable answer.",
       "Start cyclosporine today and stop the artificial tears, since a prescription drug lasts longer": "A prescription drug is not first line and the patient is referred for it; the drops continue.",
@@ -12879,7 +12879,7 @@ const DZ = {
     [
      "1–2 drops, 1–2 times a day",
      "artificial tears; up to 3–4 times daily or hourly in severe cases; no set limit",
-     "Lam Ophthalmic slide 14; T@10376 11/20"
+     "Lam Ophthalmic slide 14; lecture 11/20"
     ],
     [
      "7 times",
@@ -12914,7 +12914,7 @@ const DZ = {
       "sm"
      ],
      "q": "What is conjunctivitis, which symptom do all types share, and why does allergic conjunctivitis itch while bacterial and viral conjunctivitis crust?",
-     "src": "Lam Ophthalmic slides 25–29; handout; T@21143, T@21540, T@21906 11/20; Smith T@39661 11/17",
+     "src": "Lam Ophthalmic slides 25–29; handout; lecture 11/20; Smith lecture 11/17",
      "blocks": [
       {
        "k": "facts",
@@ -12926,19 +12926,19 @@ const DZ = {
         ],
         [
          "Every type tears",
-         "{{Tearing}} is the body's way to get rid of whatever is in the eye, whether an allergen, a virus or bacteria (T@21143)"
+         "{{Tearing}} is the body's way to get rid of whatever is in the eye, whether an allergen, a virus or bacteria"
         ],
         [
          "Why bacterial and viral crust",
-         "The bacteria or the virus produce the crustiness as by-products, and the body makes more tears to get rid of it (T@21906)"
+         "The bacteria or the virus produce the crustiness as by-products, and the body makes more tears to get rid of it"
         ],
         [
          "Why allergic itches",
-         "The allergen causes histamine release and mast cell degranulation, and that causes the {{itch}} (T@21906)"
+         "The allergen causes histamine release and mast cell degranulation, and that causes the {{itch}}"
         ],
         [
          "What she can treat",
-         "{{Allergic conjunctivitis}}; bacterial and viral conjunctivitis are referred to the patient's eye doctor or provider (T@21540)"
+         "{{Allergic conjunctivitis}}; bacterial and viral conjunctivitis are referred to the patient's eye doctor or provider"
         ]
        ]
       },
@@ -12948,7 +12948,7 @@ const DZ = {
        "rows": [
         [
          "Dr. Smith",
-         "She named bacterial and viral conjunctivitis but did not cover them: her lecture covers allergic conjunctivitis only (T@39661 11/17)"
+         "She named bacterial and viral conjunctivitis but did not cover them: her lecture covers allergic conjunctivitis only (lecture 11/17)"
         ]
        ]
       }
@@ -12960,7 +12960,7 @@ const DZ = {
       "la"
      ],
      "q": "Which symptom separates allergic from bacterial or viral conjunctivitis, and what does each type look like?",
-     "src": "Lam Ophthalmic slides 28–29; handout; T@22420, T@22586 11/20",
+     "src": "Lam Ophthalmic slides 28–29; handout; lecture 11/20",
      "blocks": [
       {
        "k": "facts",
@@ -12968,7 +12968,7 @@ const DZ = {
        "rows": [
         [
          "The sign that separates them",
-         "{{Itching}}: allergic conjunctivitis itches; bacterial and viral conjunctivitis crust. Itching is the finding that separates allergic from bacterial and viral conjunctivitis: \"the main thing is going to be that itchiness that patient complains of\" (T@22420, T@22586)"
+         "{{Itching}}: allergic conjunctivitis itches; bacterial and viral conjunctivitis crust. Itching is the finding that separates allergic from bacterial and viral conjunctivitis: \"the main thing is going to be that itchiness that patient complains of\""
         ],
         [
          "What was not stressed",
@@ -13028,7 +13028,7 @@ const DZ = {
       "la"
      ],
      "q": "Which findings send the patient to a provider, is there an OTC antibiotic or antiviral, and what are the four goals?",
-     "src": "Lam Ophthalmic slides 30, 31, 41; handout; T@6147, T@22586, T@22972, T@32648 11/20",
+     "src": "Lam Ophthalmic slides 30, 31, 41; handout; lecture 11/20",
      "blocks": [
       {
        "k": "facts",
@@ -13048,15 +13048,15 @@ const DZ = {
         ],
         [
          "Same list as dry eye",
-         "She said it is the same exclusion criteria as for dry eye (slide 30; T@22586)"
+         "She said it is the same exclusion criteria as for dry eye (slide 30"
         ],
         [
          "No OTC treatment for infection",
-         "{{No OTC antibiotic or antiviral}}: \"We don't have over the counter antibiotic or we don't have antiviral medication to treat it\"; the signs of an infected eyelid are thickened, scaling, red lids (T@22972)"
+         "{{No OTC antibiotic or antiviral}}: \"We don't have over the counter antibiotic or we don't have antiviral medication to treat it\"; the signs of an infected eyelid are thickened, scaling, red lids"
         ],
         [
          "Referral at 72 hours",
-         "If the symptoms do not resolve after {{72 hours}} of appropriate treatment, refer; she said that if the patient used the recommended products correctly and still has no benefit in 3 days, they should see a provider (slide 41; T@32648)"
+         "If the symptoms do not resolve after {{72 hours}} of appropriate treatment, refer; she said that if the patient used the recommended products correctly and still has no benefit in 3 days, they should see a provider (slide 41"
         ]
        ]
       },
@@ -13087,7 +13087,7 @@ const DZ = {
       "la"
      ],
      "q": "What non-drug advice and OTC products fit bacterial or viral conjunctivitis, and what can not be treated over the counter?",
-     "src": "Lam Ophthalmic slides 34–36; handout; T@25350, T@25400, T@22972 11/20",
+     "src": "Lam Ophthalmic slides 34–36; handout; lecture 11/20",
      "blocks": [
       {
        "k": "line",
@@ -13097,7 +13097,7 @@ const DZ = {
        "drugs": [],
        "pts": [
         "The only non-drug measure on slide 34 for viral or bacterial conjunctivitis is {{cold compresses}}",
-        "She said that while the patient waits to see the eye doctor, cold compresses reduce the inflammation in the eye and give a little relief (T@25350, T@25400)"
+        "She said that while the patient waits to see the eye doctor, cold compresses reduce the inflammation in the eye and give a little relief"
        ]
       },
       {
@@ -13122,7 +13122,7 @@ const DZ = {
        "title": "Antibiotic or antiviral: a provider's treatment",
        "drugs": [],
        "pts": [
-        "The handout lists an antibiotic for bacterial conjunctivitis; it is not an OTC product, and there is no OTC antiviral either (T@22972)",
+        "The handout lists an antibiotic for bacterial conjunctivitis; it is not an OTC product, and there is no OTC antiviral either",
         "For bacterial and viral conjunctivitis the table on slide 28 says {{symptomatic treatment}} and refer to a provider"
        ]
       }
@@ -13140,7 +13140,7 @@ const DZ = {
       "Giant papillary allergic conjunctivitis"
      ],
      "a": 0,
-     "w": "Itching marks allergic conjunctivitis; tearing with lid crusting marks bacterial or viral conjunctivitis (slides 28, 29; T@22420).",
+     "w": "Itching marks allergic conjunctivitis; tearing with lid crusting marks bacterial or viral conjunctivitis (slides 28, 29.",
      "x": {
       "Seasonal allergic conjunctivitis": "The allergic types itch; this patient does not itch.",
       "Vernal (spring) allergic conjunctivitis": "Vernal conjunctivitis causes itching and a mucous discharge.",
@@ -13157,7 +13157,7 @@ const DZ = {
       "No referral is needed, because warm compresses used for a week will clear an infected eye completely"
      ],
      "a": 0,
-     "w": "She said there is no OTC antibiotic or antiviral; bacterial and viral conjunctivitis are referred, and cold compresses give some relief meanwhile (slides 28, 34; T@22972, T@25400).",
+     "w": "She said there is no OTC antibiotic or antiviral; bacterial and viral conjunctivitis are referred, and cold compresses give some relief meanwhile (slides 28, 34.",
      "x": {
       "Naphazoline 4 times a day for 7 days, which will clear the infection and the redness within a week": "A decongestant reduces redness only, is limited to about 72 hours and does not treat an infection.",
       "A second-generation oral antihistamine once a day, which will treat the infection from the inside": "Antihistamines treat allergic symptoms, not an infection.",
@@ -13174,7 +13174,7 @@ const DZ = {
       "Recommend ophthalmic cetirizine twice daily, since the symptoms are only mild so far"
      ],
      "a": 0,
-     "w": "Chemical exposure is on the exclusion list; she said anything that looks like damage to the eye cannot be solved with an artificial tear (slide 30; T@6147).",
+     "w": "Chemical exposure is on the exclusion list; she said anything that looks like damage to the eye cannot be solved with an artificial tear (slide 30.",
      "x": {
       "Recommend Pataday and artificial tears and refer if there is no benefit in 72 hours": "The 72-hour rule applies to patients who qualify for self-care; he does not.",
       "Recommend ophthalmic cetirizine twice daily, since the symptoms are only mild so far": "He is excluded from self-treatment, so no OTC product starts.",
@@ -13191,7 +13191,7 @@ const DZ = {
       "Mucous discharge"
      ],
      "a": 0,
-     "w": "She said everyone with conjunctivitis tears, because tearing is the body's way to get rid of an allergen, a virus or bacteria (T@21143).",
+     "w": "She said everyone with conjunctivitis tears, because tearing is the body's way to get rid of an allergen, a virus or bacteria.",
      "x": {
       "Itching": "Itching marks allergic conjunctivitis only.",
       "Lid crusting": "Crusting marks bacterial and viral conjunctivitis.",
@@ -13203,12 +13203,12 @@ const DZ = {
     [
      "Itching",
      "marks allergic conjunctivitis; not listed for bacterial or viral",
-     "Lam Ophthalmic slides 28–29; T@22420 11/20"
+     "Lam Ophthalmic slides 28–29; lecture 11/20"
     ],
     [
      "Tearing",
      "every type of conjunctivitis tears (her words)",
-     "T@21143 11/20"
+     "lecture 11/20"
     ],
     [
      "Lid crusting",
@@ -13228,7 +13228,7 @@ const DZ = {
     [
      "0",
      "OTC antibiotics or antivirals for it",
-     "T@22972 11/20"
+     "lecture 11/20"
     ],
     [
      "Cold compresses",
@@ -13271,7 +13271,7 @@ const DZ = {
       "la"
      ],
      "q": "What does earwax do, and who builds up too much?",
-     "src": "Lam Otic slides 4, 7; handout p. 2; T@90689, T@91343, T@91760, T@91937, T@92324 11/20",
+     "src": "Lam Otic slides 4, 7; handout p. 2; lecture 11/20",
      "blocks": [
       {
        "k": "facts",
@@ -13279,7 +13279,7 @@ const DZ = {
        "rows": [
         [
          "Where",
-         "The [[eac|external auditory canal]]; wax and water build up there, and the goal is not to damage the [[tm|eardrum]], which conducts sound to the middle ear (T@90689 11/20)"
+         "The [[eac|external auditory canal]]; wax and water build up there, and the goal is not to damage the [[tm|eardrum]], which conducts sound to the middle ear (lecture 11/20)"
         ],
         [
          "Role of earwax",
@@ -13291,7 +13291,7 @@ const DZ = {
         ],
         [
          "Why infection is blocked",
-         "Its {{acidic pH}} and antimicrobial substances inhibit bacterial and fungal growth (handout p. 2; T@91760 11/20)"
+         "Its {{acidic pH}} and antimicrobial substances inhibit bacterial and fungal growth (handout p. 2; lecture 11/20)"
         ],
         [
          "How the canal clears itself",
@@ -13299,7 +13299,7 @@ const DZ = {
         ],
         [
          "Why it builds up",
-         "Some people overproduce earwax, and some push things into the ear, such as cotton swabs (T@91937 11/20)"
+         "Some people overproduce earwax, and some push things into the ear, such as cotton swabs (lecture 11/20)"
         ]
        ]
       },
@@ -13318,7 +13318,7 @@ const DZ = {
         "{{Inappropriate removal}} of wax, for example cotton swabs",
         "Atrophy of the ceruminous glands in older adults",
         "Genetics",
-        "Children: the canal is flat and slants downward with growth, so material drains less well in young children (T@92324 11/20)"
+        "Children: the canal is flat and slants downward with growth, so material drains less well in young children (lecture 11/20)"
        ]
       }
      ]
@@ -13329,7 +13329,7 @@ const DZ = {
       "la"
      ],
      "q": "Which symptoms point to impacted cerumen, and which three findings separate it from the other ear disorders?",
-     "src": "Lam Otic slides 8, 23; handout p. 5; T@92615, T@97359 11/20",
+     "src": "Lam Otic slides 8, 23; handout p. 5; lecture 11/20",
      "blocks": [
       {
        "k": "facts",
@@ -13373,7 +13373,7 @@ const DZ = {
       "la"
      ],
      "q": "Which findings exclude self-care, and what are the treatment goals?",
-     "src": "Lam Otic slides 10-11; handout p. 3; T@92950, T@93413, T@93449, T@93759 11/20",
+     "src": "Lam Otic slides 10-11; handout p. 3; lecture 11/20",
      "blocks": [
       {
        "k": "sub",
@@ -13401,11 +13401,11 @@ const DZ = {
        "rows": [
         [
          "Age: three readings",
-         "Slide 10: {{<12 years of age}} excluded. Handout p. 3, under carbamide peroxide: {{twelve years and older only}}. Spoken: \"children under 12 ... we don't treat children 12 years or under\" (T@93413 11/20). A 12-year-old is read differently by the spoken words and the other two"
+         "Slide 10: {{<12 years of age}} excluded. Handout p. 3, under carbamide peroxide: {{twelve years and older only}}. Spoken: \"children under 12 ... we don't treat children 12 years or under\" (lecture 11/20). A 12-year-old is read differently by the spoken words and the other two"
         ],
         [
          "Her rule",
-         "If it looks like an infection, it is an infection, and the pharmacist has nothing to treat it with; the patient sees a doctor (T@92950 11/20)"
+         "If it looks like an infection, it is an infection, and the pharmacist has nothing to treat it with; the patient sees a doctor (lecture 11/20)"
         ],
         [
          "Dizziness",
@@ -13429,7 +13429,7 @@ const DZ = {
       "sk"
      ],
      "q": "What does each non-drug measure do, and how is carbamide peroxide used?",
-     "src": "Lam Otic slides 13-15; handout pp. 3-4; Sikazwe OOO slides 5-8; T@93959, T@94028, T@94267, T@94692, T@95193, T@95428, T@95576, T@95719 11/20; T@4901, T@8076, T@8338 11/18",
+     "src": "Lam Otic slides 13-15; handout pp. 3-4; Sikazwe OOO slides 5-8; lecture 11/20; lecture 11/18",
      "blocks": [
       {
        "k": "sub",
@@ -13446,11 +13446,11 @@ const DZ = {
         ],
         [
          "Ear-cleaning tool (curette)",
-         "Removes wax manually by insertion into the canal; the handout cautions: risk of trauma to the canal skin or the tympanic membrane. She said the tool is delicate and too deep damages the eardrum (T@94028 11/20)"
+         "Removes wax manually by insertion into the canal; the handout cautions: risk of trauma to the canal skin or the tympanic membrane. She said the tool is delicate and too deep damages the eardrum (lecture 11/20)"
         ],
         [
          "Irrigation",
-         "Warm sterile water with a {{bulb syringe}}; not well studied, and it may not work (handout p. 3; T@94267 11/20)"
+         "Warm sterile water with a {{bulb syringe}}; not well studied, and it may not work (handout p. 3; lecture 11/20)"
         ]
        ]
       },
@@ -13463,7 +13463,7 @@ const DZ = {
         "carbamide-peroxide-otic"
        ],
        "pts": [
-        "FDA-approved nonprescription; the only product she recommends; brand {{Debrox}} (T@94692 11/20)",
+        "FDA-approved nonprescription; the only product she recommends; brand {{Debrox}} (lecture 11/20)",
         "{{5-10 drops}} into the affected ear(s); remain in the canal for several minutes",
         "{{Twice daily}} for up to {{four days}}",
         "Alone or with warm-water irrigation; remaining cerumen is removed with gentle warm-water irrigation with a rubber otic bulb syringe"
@@ -13491,7 +13491,7 @@ const DZ = {
        "pts": [
         "Handout p. 4: evidence suggests they are no more effective than water",
         "Water-based examples printed: choline salicylate, docusate sodium, phenazole; oil-based: almond oil, benzocaine",
-        "She said they are not recommended anymore and are not as good as carbamide peroxide (T@95576 11/20)"
+        "She said they are not recommended anymore and are not as good as carbamide peroxide (lecture 11/20)"
        ]
       },
       {
@@ -13502,7 +13502,7 @@ const DZ = {
        "drugs": [],
        "pts": [
         "Handout p. 4: potential dangers and injuries, and no scientific evidence",
-        "She described hot wax dripping into the ear as not sounding good, and said United States guidelines point to carbamide peroxide (T@95719 11/20)"
+        "She described hot wax dripping into the ear as not sounding good, and said United States guidelines point to carbamide peroxide (lecture 11/20)"
        ]
       },
       {
@@ -13524,11 +13524,11 @@ const DZ = {
         ],
         [
          "Debrox (slide 8)",
-         "A {{1:1 urea-hydrogen peroxide}} complex; it dissociates to release H2O2, which generates effervescing O2, and the effervescence breaks up the wax; catalase in cerumen breaks H2O2 into O2 and water (T@8338 11/18)"
+         "A {{1:1 urea-hydrogen peroxide}} complex; it dissociates to release H2O2, which generates effervescing O2, and the effervescence breaks up the wax; catalase in cerumen breaks H2O2 into O2 and water (lecture 11/18)"
         ],
         [
          "Docusate sodium (slide 7)",
-         "An anionic surfactant (-SO3H on the slide) that increases water entry to emulsify cerumen by lowering surface tension between water and cerumen (T@5934 11/18)"
+         "An anionic surfactant (-SO3H on the slide) that increases water entry to emulsify cerumen by lowering surface tension between water and cerumen (lecture 11/18)"
         ]
        ]
       }
@@ -13540,7 +13540,7 @@ const DZ = {
       "la"
      ],
      "q": "How are ear drops given, and when does the patient return?",
-     "src": "Lam Otic slides 14, 16, 33-34; handout p. 7; T@95193, T@96267, T@99554, T@99717 11/20; her Question 26 answer (emailed 11/20)",
+     "src": "Lam Otic slides 14, 16, 33-34; handout p. 7; lecture 11/20; her Question 26 answer (emailed 11/20)",
      "blocks": [
       {
        "k": "sub",
@@ -13592,11 +13592,11 @@ const DZ = {
         ],
         [
          "Child will not stay still",
-         "Hold them down if possible and keep them still for a few minutes, because running around drips the solution out (T@99717 11/20)"
+         "Hold them down if possible and keep them still for a few minutes, because running around drips the solution out (lecture 11/20)"
         ],
         [
          "Cotton",
-         "A cotton ball over the ear keeps the solution in (T@99554 11/20); the handout: a piece of clean cotton, large enough to remove easily, in the ear for no longer than {{1 hour}} (handout p. 7)"
+         "A cotton ball over the ear keeps the solution in (lecture 11/20); the handout: a piece of clean cotton, large enough to remove easily, in the ear for no longer than {{1 hour}} (handout p. 7)"
         ]
        ]
       },
@@ -13610,7 +13610,7 @@ const DZ = {
        "p": "la",
        "items": [
         "Use {{5-10 drops}} twice a day for no more than {{4 days}}",
-        "Keep the drops in the canal for several minutes; a cotton ball may be recommended to keep them in place (T@95193 11/20)",
+        "Keep the drops in the canal for several minutes; a cotton ball may be recommended to keep them in place (lecture 11/20)",
         "Do not use cotton swabs or ear candles; swabs are listed as an inappropriate removal method (handout p. 2)"
        ]
       },
@@ -13698,7 +13698,7 @@ const DZ = {
       "Recommend a cotton swab to gently remove the wax"
      ],
      "a": 1,
-     "w": "Under 12 years of age is an exclusion to self-care for cerumen (slide 10), and she said the ear anatomy in children makes treatment difficult (T@93413 11/20).",
+     "w": "Under 12 years of age is an exclusion to self-care for cerumen (slide 10), and she said the ear anatomy in children makes treatment difficult (lecture 11/20).",
      "x": {
       "Give 5-10 drops twice daily for up to four days": "That is the adult directions; the age exclusion applies.",
       "Use warm-water irrigation at home with a bulb syringe": "Irrigation is self-care; the age exclusion applies to the child.",
@@ -13817,7 +13817,7 @@ const DZ = {
       "la"
      ],
      "q": "What retains moisture, and who gets it most?",
-     "src": "Lam Otic slide 20; handout p. 4; T@96557, T@96922 11/20",
+     "src": "Lam Otic slide 20; handout p. 4; lecture 11/20",
      "blocks": [
       {
        "k": "facts",
@@ -13845,7 +13845,7 @@ const DZ = {
         ],
         [
          "What she said",
-         "Hairs in the canal take on volume when exposed to even a small amount of water, which gives the feeling of fullness; it is most common with sweating, humidity and swimming, because the water exposure is constant (T@96557, T@96922 11/20)"
+         "Hairs in the canal take on volume when exposed to even a small amount of water, which gives the feeling of fullness; it is most common with sweating, humidity and swimming, because the water exposure is constant (lecture 11/20)"
         ]
        ]
       }
@@ -13857,7 +13857,7 @@ const DZ = {
       "la"
      ],
      "q": "Which findings make a water-clogged ear, and which make an infection?",
-     "src": "Lam Otic slides 21, 23-25; handout p. 5; T@97137, T@97359, T@97615 11/20",
+     "src": "Lam Otic slides 21, 23-25; handout p. 5; lecture 11/20",
      "blocks": [
       {
        "k": "facts",
@@ -13877,11 +13877,11 @@ const DZ = {
         ],
         [
          "Versus cerumen",
-         "Cerumen impaction has {{itching}}; a water-clogged ear has none (T@97359 11/20)"
+         "Cerumen impaction has {{itching}}; a water-clogged ear has none (lecture 11/20)"
         ],
         [
          "Versus swimmer's ear",
-         "[[swimmers-ear|Swimmer's ear]] is an infection with itching and discharge (T@97615 11/20)"
+         "[[swimmers-ear|Swimmer's ear]] is an infection with itching and discharge (lecture 11/20)"
         ]
        ]
       },
@@ -13920,7 +13920,7 @@ const DZ = {
       "la"
      ],
      "q": "Which findings exclude self-care, and what is the goal?",
-     "src": "Lam Otic slides 26-27, 36-37; handout pp. 5-6; T@97876 11/20",
+     "src": "Lam Otic slides 26-27, 36-37; handout pp. 5-6; lecture 11/20",
      "blocks": [
       {
        "k": "sub",
@@ -13972,7 +13972,7 @@ const DZ = {
       "la"
      ],
      "q": "What prevents water from staying in the ear, and what dries water already there?",
-     "src": "Lam Otic slides 29-31; handout p. 6; T@98127, T@98398, T@98558, T@98781, T@98858, T@99315, T@99397, T@99431 11/20",
+     "src": "Lam Otic slides 29-31; handout p. 6; lecture 11/20",
      "blocks": [
       {
        "k": "sub",
@@ -13989,11 +13989,11 @@ const DZ = {
         ],
         [
          "Bathing cap or earplugs",
-         "A {{bathing cap}} or earplugs when swimming protect the ears from water (spoken: earplugs and bathing cap keep water out, T@98127 11/20)"
+         "A {{bathing cap}} or earplugs when swimming protect the ears from water (spoken: earplugs and bathing cap keep water out, lecture 11/20)"
         ],
         [
          "Cotton balls coated with petroleum jelly",
-         "Handout: for water exposure of less than 15 minutes; she said she knows no one who likes the feeling, but the guidelines allow it (T@98398 11/20)"
+         "Handout: for water exposure of less than 15 minutes; she said she knows no one who likes the feeling, but the guidelines allow it (lecture 11/20)"
         ],
         [
          "Earplugs, handout",
@@ -14012,15 +14012,15 @@ const DZ = {
        "rows": [
         [
          "Water-absorbing earplugs",
-         "Slide 29 and handout p. 6 print {{children > 11 years old}}; she said \"children that are 11 years and older\" (T@98536 11/20). Insert into the canal and leave in {{5-10 minutes}} to absorb trapped water, then remove and discard; they absorb only a little water and do not prevent water from entering during bathing or swimming (handout; T@98558 11/20)"
+         "Slide 29 and handout p. 6 print {{children > 11 years old}}; she said \"children that are 11 years and older\" (lecture 11/20). Insert into the canal and leave in {{5-10 minutes}} to absorb trapped water, then remove and discard; they absorb only a little water and do not prevent water from entering during bathing or swimming (handout; lecture 11/20)"
         ],
         [
          "Pull the lobe",
-         "Pull the lobe gently and tilt the head downward so the water drips out (handout; T@98781 11/20)"
+         "Pull the lobe gently and tilt the head downward so the water drips out (handout; lecture 11/20)"
         ],
         [
          "Hair dryer",
-         "Blow dryer on the {{lowest heat}} setting to help dry the canal; not the highest setting (handout; T@98858 11/20)"
+         "Blow dryer on the {{lowest heat}} setting to help dry the canal; not the highest setting (handout; lecture 11/20)"
         ]
        ]
       },
@@ -14036,7 +14036,7 @@ const DZ = {
         "An alcohol that acts as a {{drying agent}}",
         "{{No minimum age}} printed (slide 31)",
         "Instill {{4-5 drops}} in the affected ear",
-        "Conflict: slide 31 prints 95% alcohol in 5% anhydrous glycerin; she said \"it has to be 70% concentration\" (T@99315 11/20); the handout says concentrations greater than 70% alcohol are also effective skin disinfectants (handout p. 6)"
+        "Conflict: slide 31 prints 95% alcohol in 5% anhydrous glycerin; she said \"it has to be 70% concentration\" (lecture 11/20); the handout says concentrations greater than 70% alcohol are also effective skin disinfectants (handout p. 6)"
        ],
        "move": "Move to the primary care provider when there is no benefit after several days of use (slide 34); she said 7 days."
       }
@@ -14048,7 +14048,7 @@ const DZ = {
       "la"
      ],
      "q": "How are ear drops given, and when does the patient return?",
-     "src": "Lam Otic slides 33-34; handout p. 7; T@99554, T@99717, T@100235 11/20; her Question 26 answer (emailed 11/20)",
+     "src": "Lam Otic slides 33-34; handout p. 7; lecture 11/20; her Question 26 answer (emailed 11/20)",
      "blocks": [
       {
        "k": "sub",
@@ -14100,11 +14100,11 @@ const DZ = {
         ],
         [
          "Child will not stay still",
-         "Hold them down if possible and keep them still for a few minutes, because running around drips the solution out (T@99717 11/20)"
+         "Hold them down if possible and keep them still for a few minutes, because running around drips the solution out (lecture 11/20)"
         ],
         [
          "Cotton",
-         "A cotton ball over the ear keeps the solution in (T@99554 11/20); the handout: a piece of clean cotton, large enough to remove easily, in the ear for no longer than {{1 hour}} (handout p. 7)"
+         "A cotton ball over the ear keeps the solution in (lecture 11/20); the handout: a piece of clean cotton, large enough to remove easily, in the ear for no longer than {{1 hour}} (handout p. 7)"
         ]
        ]
       },
@@ -14121,7 +14121,7 @@ const DZ = {
          "No benefit",
          [
           "Slide 34 and handout: referral is indicated {{after several days of use}}",
-          "Spoken: if there is no benefit after {{7 days}} of use, see the primary care provider (T@100235 11/20)"
+          "Spoken: if there is no benefit after {{7 days}} of use, see the primary care provider (lecture 11/20)"
          ]
         ],
         [
@@ -14182,7 +14182,7 @@ const DZ = {
       "Foreign object in the canal; use irrigation"
      ],
      "a": 2,
-     "w": "Acute onset pain, itching and clear discharge with a swollen canal and fever are external otitis (slide 23). It is an infection, so refer (T@92950 11/20).",
+     "w": "Acute onset pain, itching and clear discharge with a swollen canal and fever are external otitis (slide 23). It is an infection, so refer (lecture 11/20).",
      "x": {
       "Water-clogged ear; use isopropyl alcohol drops": "A water-clogged ear has no pain, itching or discharge.",
       "Cerumen impaction; use carbamide peroxide": "Cerumen impaction has no discharge.",
@@ -14199,7 +14199,7 @@ const DZ = {
       "See the primary care provider"
      ],
      "a": 3,
-     "w": "No benefit after several days of use (spoken: 7 days) means refer (slide 34; T@100235 11/20).",
+     "w": "No benefit after several days of use (spoken: 7 days) means refer (slide 34; lecture 11/20).",
      "x": {
       "Use the drops for 10 more days": "Ten days already exceeds both the printed and the spoken limits.",
       "Switch to carbamide peroxide 6.5%": "Carbamide peroxide treats cerumen; the plan after no benefit is referral.",
@@ -14233,9 +14233,9 @@ const DZ = {
       "Use it only after isopropyl alcohol drops"
      ],
      "a": 1,
-     "w": "The dryer is used on the lowest heat setting (handout p. 6; T@98858 11/20).",
+     "w": "The dryer is used on the lowest heat setting (handout p. 6; lecture 11/20).",
      "x": {
-      "Use the highest setting for a short time": "Do not use the highest setting (T@98858 11/20).",
+      "Use the highest setting for a short time": "Do not use the highest setting (lecture 11/20).",
       "Hold it against the ear canal": "Holding it against the canal is not in her instructions.",
       "Use it only after isopropyl alcohol drops": "The dryer and the drops are separate options."
      }
@@ -14245,7 +14245,7 @@ const DZ = {
     [
      "95% / 5%",
      "isopropyl alcohol in anhydrous glycerin (spoken: 70%)",
-     "Lam Otic slide 31; T@99315 11/20"
+     "Lam Otic slide 31; lecture 11/20"
     ],
     [
      "4-5 drops",
@@ -14260,12 +14260,12 @@ const DZ = {
     [
      "> 11 years (spoken: 11 and older)",
      "water-absorbing earplugs: slide 29 and handout p. 6 print \"> 11\"; she said \"11 years and older\"",
-     "Lam Otic slide 29; handout p. 6; T@98536 11/20"
+     "Lam Otic slide 29; handout p. 6; lecture 11/20"
     ],
     [
      "5-10 minutes",
      "water-absorbing earplug stays in the canal",
-     "Lam handout p. 6; T@98558 11/20"
+     "Lam handout p. 6; lecture 11/20"
     ],
     [
      "15 minutes",
@@ -14275,12 +14275,12 @@ const DZ = {
     [
      "Lowest heat",
      "hair dryer setting",
-     "Lam handout p. 6; T@98858 11/20"
+     "Lam handout p. 6; lecture 11/20"
     ],
     [
      "Several days, spoken 7",
      "follow up if no benefit",
-     "Lam Otic slide 34; T@100235 11/20"
+     "Lam Otic slide 34; lecture 11/20"
     ],
     [
      "At least 2 minutes",
@@ -14315,7 +14315,7 @@ const DZ = {
       "la"
      ],
      "q": "What exposes the dentin tubules, and what turns a stimulus into pain?",
-     "src": "Lam Oral slides 7, 9, 14; handout pp. 2-3; T@45500, T@47772, T@48413 11/20",
+     "src": "Lam Oral slides 7, 9, 14; handout pp. 2-3; lecture 11/20",
      "blocks": [
       {
        "k": "facts",
@@ -14351,7 +14351,7 @@ const DZ = {
       "la"
      ],
      "q": "Which feature separates tooth hypersensitivity from toothache?",
-     "src": "Lam Oral slide 9; handout pp. 2-3; T@46304, T@55389-T@56012 11/20",
+     "src": "Lam Oral slide 9; handout pp. 2-3; lecture 11/20",
      "blocks": [
       {
        "k": "facts",
@@ -14398,7 +14398,7 @@ const DZ = {
       "la"
      ],
      "q": "Name five exclusions to self-care and the follow-up time for a patient who is treated.",
-     "src": "Lam Oral slides 11, 12, 18; handout p. 3; T@46516, T@50822, T@51140, T@55389 11/20",
+     "src": "Lam Oral slides 11, 12, 18; handout p. 3; lecture 11/20",
      "blocks": [
       {
        "k": "sub",
@@ -14435,7 +14435,7 @@ const DZ = {
         ],
         [
          "Refer to a dentist",
-         "If pain persists or worsens, or new symptoms develop after {{4-6 weeks}} (slide 18). She said \"after 4 weeks\" aloud (T@50822)"
+         "If pain persists or worsens, or new symptoms develop after {{4-6 weeks}} (slide 18). She said \"after 4 weeks\" aloud"
         ],
         [
          "Routine dental care",
@@ -14452,7 +14452,7 @@ const DZ = {
       "la"
      ],
      "q": "What is the first step, what is the next step, and which ingredient is not for children under 12?",
-     "src": "Lam Oral slides 14, 15, 17, 22, 23; handout pp. 3-4; T@47772-T@54367 11/20",
+     "src": "Lam Oral slides 14, 15, 17, 22, 23; handout pp. 3-4; lecture 11/20",
      "blocks": [
       {
        "k": "sub",
@@ -14492,7 +14492,7 @@ const DZ = {
          "Move to the next line"
         ]
        ],
-       "move": "Move to the next line when: the soft-bristle brush with standard fluoride has been used and the pain is not better after one week (T@54083)."
+       "move": "Move to the next line when: the soft-bristle brush with standard fluoride has been used and the pain is not better after one week."
       },
       {
        "k": "line",
@@ -14592,7 +14592,7 @@ const DZ = {
       "A referral to a dentist"
      ],
      "a": 3,
-     "w": "Throbbing pain that continues without a stimulus is a toothache from bacterial invasion. A toothache is an exclusion: nothing sold over the counter helps and the dentist has to clean it out (slides 9, 11; T@51849 11/20).",
+     "w": "Throbbing pain that continues without a stimulus is a toothache from bacterial invasion. A toothache is an exclusion: nothing sold over the counter helps and the dentist has to clean it out (slides 9, 11; lecture 11/20).",
      "x": {
       "Counsel him on minimizing his GERD symptoms": "GERD erodes enamel, but his pain is constant and not triggered; this does not treat a toothache.",
       "A soft-bristle toothbrush with standard fluoride toothpaste": "This is the first step for hypersensitivity, which needs a stimulus; his pain has none.",
@@ -14609,7 +14609,7 @@ const DZ = {
       "Return to her dentist today because the pain started two days ago"
      ],
      "a": 2,
-     "w": "Her pain needs a stimulus, so it is hypersensitivity, and she has no exclusion. The first step is to remove the acid exposure and the abrasion with a soft-bristle brush and standard fluoride for 7 days; a desensitizing toothpaste comes only after that (slides 14, 15, 22; T@53195-T@54367 11/20).",
+     "w": "Her pain needs a stimulus, so it is hypersensitivity, and she has no exclusion. The first step is to remove the acid exposure and the abrasion with a soft-bristle brush and standard fluoride for 7 days; a desensitizing toothpaste comes only after that (slides 14, 15, 22; lecture 11/20).",
      "x": {
       "Start a desensitizing toothpaste with potassium nitrate 5% right away": "A desensitizing toothpaste is the next step, after one week of the first step.",
       "Use a stannous fluoride desensitizing toothpaste with her medium brush": "Stannous fluoride is a desensitizing product, which comes after the first step, and the medium brush adds abrasion.",
@@ -14626,7 +14626,7 @@ const DZ = {
       "Add a desensitizing toothpaste such as one with arginine 8%"
      ],
      "a": 3,
-     "w": "The first step has been done for more than a week without relief and she has no exclusion, so the next line is a soft-bristle brush with a desensitizing toothpaste (slide 15; T@54083 11/20).",
+     "w": "The first step has been done for more than a week without relief and she has no exclusion, so the next line is a soft-bristle brush with a desensitizing toothpaste (slide 15; lecture 11/20).",
      "x": {
       "Repeat the same soft-brush step for another full week": "The first step is 7 days; she has already finished it.",
       "Refer her to a dentist now because the first step did not work": "Referral is for exclusions, or pain that persists or worsens after 4-6 weeks of the desensitizing toothpaste.",
@@ -14643,7 +14643,7 @@ const DZ = {
       "Arginine 8% toothpaste"
      ],
      "a": 1,
-     "w": "Potassium nitrate is not for children under 12 years because children swallow toothpaste, with a higher risk of electrolyte problems (slide 15; T@50194 11/20).",
+     "w": "Potassium nitrate is not for children under 12 years because children swallow toothpaste, with a higher risk of electrolyte problems (slide 15; lecture 11/20).",
      "x": {
       "Sodium fluoride toothpaste": "Sodium fluoride is one of the listed desensitizing ingredients and carries no age limit on the slide.",
       "Stannous fluoride toothpaste": "Stannous fluoride carries no age limit on the slide.",
@@ -14677,7 +14677,7 @@ const DZ = {
       "Stop the toothpaste and use ice on the gum"
      ],
      "a": 2,
-     "w": "Pain that persists, and new symptoms after 4-6 weeks, are the reasons to refer to a dentist (slide 18). A 1-inch strip is enough (T@50656 11/20).",
+     "w": "Pain that persists, and new symptoms after 4-6 weeks, are the reasons to refer to a dentist (slide 18). A 1-inch strip is enough (lecture 11/20).",
      "x": {
       "Use a 2-inch strip of toothpaste each time": "She said a 1-inch strip is enough, so a larger amount is not needed.",
       "Continue the same toothpaste for 4 more weeks": "Pain that persists after 4-6 weeks is the point to refer, not to extend.",
@@ -14755,7 +14755,7 @@ const DZ = {
       "la"
      ],
      "q": "Is the cause known, and what are the five groups of precipitating factors?",
-     "src": "Lam Oral slides 26, 27; handout p. 5; T@57025-T@59651 11/20",
+     "src": "Lam Oral slides 26, 27; handout p. 5; lecture 11/20",
      "blocks": [
       {
        "k": "facts",
@@ -14799,7 +14799,7 @@ const DZ = {
       "la"
      ],
      "q": "Where does a canker sore appear, what does it look like, and what comes first?",
-     "src": "Lam Oral slides 27, 47; handout pp. 5, 9; T@57025-T@59261 11/20",
+     "src": "Lam Oral slides 27, 47; handout pp. 5, 9; lecture 11/20",
      "blocks": [
       {
        "k": "facts",
@@ -14854,7 +14854,7 @@ const DZ = {
       "la"
      ],
      "q": "Name five exclusions to self-care and the two treatment-failure referral times.",
-     "src": "Lam Oral slides 29, 30, 40; handout pp. 6, 8; T@59651-T@60326, T@69948 11/20",
+     "src": "Lam Oral slides 29, 30, 40; handout pp. 6, 8; lecture 11/20",
      "blocks": [
       {
        "k": "sub",
@@ -14904,7 +14904,7 @@ const DZ = {
       "sk"
      ],
      "q": "Which products relieve pain, which clean the sore, and what is the main counseling point for each?",
-     "src": "Lam Oral slides 32-39; handout pp. 6-8; T@61228-T@69948 11/20; Sikazwe OOO slide 20",
+     "src": "Lam Oral slides 32-39; handout pp. 6-8; lecture 11/20; Sikazwe OOO slide 20",
      "blocks": [
       {
        "k": "sub",
@@ -14948,7 +14948,7 @@ const DZ = {
         "Cleanses the mouth to prevent infection and gives symptomatic relief; carbamide peroxide {{10-15%}}, hydrogen peroxide {{1.5%}} or {{3%}}",
         "Use after meals, 3-4 times a day; avoid eating or drinking for at least {{30 minutes}} after",
         "Use for up to {{7 days}}: over-cleaning lets opportunistic organisms grow, causing black hairy tongue; prolonged use also causes tooth sensitivity and soft tissue irritation",
-        "Hydrogen peroxide only: a patient with sensitive teeth uses the applicator on the sore, not the rinse, because it can irritate the enamel and soft tissue (T@65066, T@67096 11/20)"
+        "Hydrogen peroxide only: a patient with sensitive teeth uses the applicator on the sore, not the rinse, because it can irritate the enamel and soft tissue (lecture 11/20)"
        ],
        "p": "la",
        "warn": "She said carbamide peroxide direct application sits 1 or 2 minutes; the slide and handout say 1 minute.",
@@ -15029,7 +15029,7 @@ const DZ = {
       "la"
      ],
      "q": "When does a canker sore resolve, and when does the patient go to a provider?",
-     "src": "Lam Oral slides 40; handout p. 8; T@69759-T@70079 11/20",
+     "src": "Lam Oral slides 40; handout p. 8; lecture 11/20",
      "blocks": [
       {
        "k": "pts",
@@ -15106,7 +15106,7 @@ const DZ = {
       "Use the rinse with ice in the mouth"
      ],
      "a": 1,
-     "w": "Hydrogen peroxide can irritate enamel and soft tissue; she said patients with sensitive teeth should use the applicator and not the rinse (T@65066, T@67096 11/20).",
+     "w": "Hydrogen peroxide can irritate enamel and soft tissue; she said patients with sensitive teeth should use the applicator and not the rinse (lecture 11/20).",
      "x": {
       "Swish a 3% rinse twice as long to protect the teeth": "A longer swish increases the exposure, and prolonged use causes tooth sensitivity.",
       "Mix it with her toothpaste and brush": "Mixing it into toothpaste is not a described use.",
@@ -15140,7 +15140,7 @@ const DZ = {
       "Apply ice for 30 minutes at a time until pain stops"
      ],
      "a": 1,
-     "w": "Ice reduces swelling in 10-minute periods, up to 20 minutes in each hour; heat may spread the infection (handout p. 6; T@61228 11/20).",
+     "w": "Ice reduces swelling in 10-minute periods, up to 20 minutes in each hour; heat may spread the infection (handout p. 6; lecture 11/20).",
      "x": {
       "Apply heat for 20 minutes in each hour to relax the area": "Heat is avoided because it may spread the infection.",
       "Eat spicy food so that the sore gets cleaned out": "Spicy, acidic and sharp foods irritate the sore.",
@@ -15152,7 +15152,7 @@ const DZ = {
     [
      "7-14 days",
      "a canker sore resolves on its own",
-     "Lam handout p. 5; T@59261 11/20 (slide 40 prints 7 days and 14 days)"
+     "Lam handout p. 5; lecture 11/20 (slide 40 prints 7 days and 14 days)"
     ],
     [
      "2-48 hours",
@@ -15223,7 +15223,7 @@ const DZ = {
       "la"
      ],
      "q": "What causes a cold sore, how is it spread, and what triggers it?",
-     "src": "Lam Oral slides 43, 44; handout pp. 8-9; T@70941-T@72227 11/20",
+     "src": "Lam Oral slides 43, 44; handout pp. 8-9; lecture 11/20",
      "blocks": [
       {
        "k": "facts",
@@ -15255,7 +15255,7 @@ const DZ = {
       "la"
      ],
      "q": "What are the stages of a cold sore, and where is it located?",
-     "src": "Lam Oral slides 45, 47; handout p. 9; T@72227-T@73857 11/20",
+     "src": "Lam Oral slides 45, 47; handout p. 9; lecture 11/20",
      "blocks": [
       {
        "k": "facts",
@@ -15291,7 +15291,7 @@ const DZ = {
       "la"
      ],
      "q": "Which exclusions apply, and what counts as recurrence in her cases?",
-     "src": "Lam Oral slides 48, 49, 59, 60, 62-67; handout pp. 10, 12; T@74417-T@75700, T@83053-T@84533 11/20",
+     "src": "Lam Oral slides 48, 49, 59, 60, 62-67; handout pp. 10, 12; lecture 11/20",
      "blocks": [
       {
        "k": "sub",
@@ -15351,7 +15351,7 @@ const DZ = {
       "la"
      ],
      "q": "What is the first-line product and how is it used, and what is not recommended?",
-     "src": "Lam Oral slides 51-58; handout pp. 10-12; T@77492-T@81994 11/20",
+     "src": "Lam Oral slides 51-58; handout pp. 10-12; lecture 11/20",
      "blocks": [
       {
        "k": "line",
@@ -15451,7 +15451,7 @@ const DZ = {
       "la"
      ],
      "q": "How long does a cold sore take to heal, and when does the patient go to the PCP?",
-     "src": "Lam Oral slides 59, 60; handout p. 12; T@81994-T@82500 11/20",
+     "src": "Lam Oral slides 59, 60; handout p. 12; lecture 11/20",
      "blocks": [
       {
        "k": "pts",
@@ -15476,7 +15476,7 @@ const DZ = {
       "Yes, with hydrocortisone 1% ointment as needed"
      ],
      "a": 1,
-     "w": "Lesions present more than 14 days, and frequent recurrence (she counted once a month as reoccurring), are exclusions (slide 49; T@83053-T@83449 11/20).",
+     "w": "Lesions present more than 14 days, and frequent recurrence (she counted once a month as reoccurring), are exclusions (slide 49; lecture 11/20).",
      "x": {
       "Yes, docosanol 10% five times a day until healed": "Docosanol is first line, but she has exclusions.",
       "No, because a lip sore is always a canker sore": "A canker sore is inside the mouth; her lesion is on the lip, crusted and fluid-filled.",
@@ -15493,7 +15493,7 @@ const DZ = {
       "Yes, an infrequent outbreak that a provider has already seen"
      ],
      "a": 3,
-     "w": "Her last outbreak was a year ago, which she did not count as reoccurring, and she already saw a provider. She is a candidate (T@83449-T@83700 11/20).",
+     "w": "Her last outbreak was a year ago, which she did not count as reoccurring, and she already saw a provider. She is a candidate (lecture 11/20).",
      "x": {
       "No, any recurrence at all is an exclusion to self-care": "Slide 49 lists recurrence, but she called monthly outbreaks reoccurring, not one a year.",
       "No, because she takes a birth control pill every day": "Nothing on the slides excludes the patient for a birth control pill.",
@@ -15561,7 +15561,7 @@ const DZ = {
       "After 3 days of symptoms"
      ],
      "a": 0,
-     "w": "Docosanol works best when applied at the first sign, before the lesion occurs (slide 53; T@78879 11/20).",
+     "w": "Docosanol works best when applied at the first sign, before the lesion occurs (slide 53; lecture 11/20).",
      "x": {
       "When the vesicles appear": "It still helps once the lesion appears but works best before it.",
       "When the crust forms": "Waiting until crusting loses the time when it works best.",
@@ -15578,7 +15578,7 @@ const DZ = {
     [
      "10 days",
      "docosanol: use for up to 10 days",
-     "Lam Oral slide 53; T@79234 11/20"
+     "Lam Oral slide 53; lecture 11/20"
     ],
     [
      "10-14 days",
@@ -15638,7 +15638,7 @@ const DZ = {
       "la"
      ],
      "q": "Which medicine classes and conditions can cause dry mouth, and by which two mechanisms?",
-     "src": "Lam Oral slides 72-75; handout pp. 13-14; T@86106-T@87063 11/20",
+     "src": "Lam Oral slides 72-75; handout pp. 13-14; lecture 11/20",
      "blocks": [
       {
        "k": "facts",
@@ -15678,7 +15678,7 @@ const DZ = {
       "la"
      ],
      "q": "What are the signs and complications of dry mouth?",
-     "src": "Lam Oral slide 76; handout p. 13; T@87063-T@87494 11/20",
+     "src": "Lam Oral slide 76; handout p. 13; lecture 11/20",
      "blocks": [
       {
        "k": "pts",
@@ -15700,7 +15700,7 @@ const DZ = {
       "la"
      ],
      "q": "What are the goals, and when is the patient not a candidate?",
-     "src": "Lam Oral slides 78, 79, 84; handout pp. 13-15; T@87494-T@87605, T@90270-T@90800 11/20",
+     "src": "Lam Oral slides 78, 79, 84; handout pp. 13-15; lecture 11/20",
      "blocks": [
       {
        "k": "facts",
@@ -15736,7 +15736,7 @@ const DZ = {
       "la"
      ],
      "q": "What non-drug steps help, and how is artificial saliva used?",
-     "src": "Sikazwe OOO slide 17; Lam Oral slides 81-84; handout pp. 14-15; T@87494-T@90547 11/20",
+     "src": "Sikazwe OOO slide 17; Lam Oral slides 81-84; handout pp. 14-15; lecture 11/20",
      "blocks": [
       {
        "k": "sub",
@@ -15747,7 +15747,7 @@ const DZ = {
        "k": "pts",
        "items": [
         "Stop medicines and substances that reduce salivation where possible: tobacco (smoked and smokeless), alcohol including mouth rinses, caffeine, hot spicy foods",
-        "If a medicine contributes and cannot be stopped: take it {{1 hour before meals}}, because eating stimulates saliva (T@88526)"
+        "If a medicine contributes and cannot be stopped: take it {{1 hour before meals}}, because eating stimulates saliva"
        ],
        "p": "la"
       },
@@ -15807,7 +15807,7 @@ const DZ = {
       "A salivary gland stone caused by his age"
      ],
      "a": 0,
-     "w": "Antihistamines such as diphenhydramine have anticholinergic activity and reduce salivation (slide 72; T@86106-T@86368 11/20).",
+     "w": "Antihistamines such as diphenhydramine have anticholinergic activity and reduce salivation (slide 72; lecture 11/20).",
      "x": {
       "His fluoride toothpaste is drying the saliva out": "Fluoride products are used to lower dental decay risk in dry mouth; they do not cause it.",
       "Humidity in his bedroom is drying out the mouth": "A humidifier is a measure that relieves dry mouth.",
@@ -15824,7 +15824,7 @@ const DZ = {
       "Take double the usual dose once at night"
      ],
      "a": 0,
-     "w": "If a medicine contributes and cannot be stopped, take it one hour before meals, because eating stimulates saliva (T@88526 11/20).",
+     "w": "If a medicine contributes and cannot be stopped, take it one hour before meals, because eating stimulates saliva (lecture 11/20).",
      "x": {
       "Take the medicine one hour after each meal": "The advice is before meals, not after.",
       "Stop the medicine on her own to see if it helps": "The point is to keep a medicine she cannot stop; she is not told to stop it herself.",
@@ -15914,7 +15914,7 @@ const DZ = {
     [
      "1 hour",
      "take a contributing medicine before meals",
-     "Lam handout p. 14; T@88526 11/20"
+     "Lam handout p. 14; lecture 11/20"
     ],
     [
      "After meals and at bedtime",
@@ -16440,7 +16440,7 @@ const DZ = {
      "dz": "sun-protection",
      "role": "Physical sunscreen: opaque, reflects and scatters UV radiation. GRASE and preferred; the choice for sensitive skin or a previous allergic reaction",
      "how": "Applied and reapplied like any sunscreen",
-     "src": "Patel Sun slides 16–18; T@55166"
+     "src": "Patel Sun slides 16–18"
     }
    ],
    "counsel": [
@@ -16763,7 +16763,7 @@ const DZ = {
     "Wart: may be used for up to 12 weeks. Corn or callus: no longer than 14 days (7 pads).",
     "Corn or callus: seek medical attention if the skin becomes red or irritated, or if it is not removed after 14 days."
    ],
-   "counselSrc": "Patel Acne slides 27, 29; Patel Scaly slides 15, 18, 36; 11/10 lecture; Patel Warts slides 10, 17; 11/12 lecture T@94581–95016",
+   "counselSrc": "Patel Acne slides 27, 29; Patel Scaly slides 15, 18, 36; 11/10 lecture; Patel Warts slides 10, 17; 11/12 lecture ",
    "avoid": [
     "Acne: frequent washing with it; excessive cleansing is discouraged (her Case 1 poll)",
     "Infants, except severe cases: thin skin, higher absorption, more irritation (11/10 lecture)",
@@ -17488,7 +17488,7 @@ const DZ = {
      "dz": "dry-eye",
      "role": "Dry eye (Dr. Smith, Exam 3): topical calcineurin inhibitor that increases tear production",
      "how": "Used topically; oral cyclosporine is a significant immunosuppressant (opportunistic infections).",
-     "src": "Eye slides 64, 67; T@62774 11/17"
+     "src": "Eye slides 64, 67; lecture 11/17"
     }
    ],
    "counsel": [
@@ -17500,7 +17500,7 @@ const DZ = {
     "Dry eye: it is used as a drop, not a tablet, for dry eye alone.",
     "Dry eye: twice daily, about 12 hours apart (she said 8 to 12 hours); expect to use it for about 6 months or longer."
    ],
-   "counselSrc": "Patel Scaly slides 39, 48; 11/11 lecture; Eye slide 67; T@61900, T@62774 11/17; Lam Ophthalmic slide 18; T@13596 11/20",
+   "counselSrc": "Patel Scaly slides 39, 48; 11/11 lecture; Eye slide 67; lecture 11/17; Lam Ophthalmic slide 18; lecture 11/20",
    "avoid": [
     "Psoriasis: untreated hypertension",
     "Psoriasis: systemic malignancy",
@@ -18248,7 +18248,7 @@ const DZ = {
      "dz": "sunburn",
      "role": "NOT recommended for routine use",
      "how": "If used: small areas (1–2% BSA) of intact skin, no more than 3 to 4 times a day",
-     "src": "Patel Sun slide 33; T@64451"
+     "src": "Patel Sun slide 33"
     }
    ],
    "counsel": [
@@ -18259,7 +18259,7 @@ const DZ = {
     "Wounds / Burns / Sunburn: relief lasts 15 to 45 minutes; the pain will return between doses, and more frequent use is not safe.",
     "Wounds / Burns / Sunburn: do not cover large areas."
    ],
-   "counselSrc": "Patel Outdoor slide 39; Patel Wound slide 20; 11/12 lecture T@85399",
+   "counselSrc": "Patel Outdoor slide 39; Patel Wound slide 20; 11/12 lecture ",
    "avoid": [
     "Poison ivy / Insect bites / Insect stings: children younger than 2 years",
     "Poison ivy / Insect bites / Insect stings: broken skin; under an occlusive dressing",
@@ -18272,7 +18272,7 @@ const DZ = {
    "how": {
     "p": "pa",
     "text": "Relieve pain and itching by numbing the skin (Wound Care slide 20, minor burns: relief lasts 15 to 45 minutes; continuous pain control cannot be achieved).",
-    "src": "Patel Outdoor slide 12; Wound slides 14, 20; 11/12 lecture T@83300"
+    "src": "Patel Outdoor slide 12; Wound slides 14, 20; 11/12 lecture "
    },
    "figs": []
   },
@@ -18446,7 +18446,7 @@ const DZ = {
      "dz": "wounds",
      "role": "Preventative; limited evidence of efficacy",
      "how": "After cleansing and before bandaging; 1 to 3 times a day",
-     "src": "Patel Wound slides 11, 20; T@81569"
+     "src": "Patel Wound slides 11, 20"
     },
     {
      "dz": "burns",
@@ -18458,7 +18458,7 @@ const DZ = {
      "dz": "sunburn",
      "role": "Not a pain treatment: a wrong option in her sunburn poll (topical bacitracin)",
      "how": "",
-     "src": "PollEv 11/12; T@65246"
+     "src": "PollEv 11/12"
     }
    ],
    "counsel": [
@@ -18469,7 +18469,7 @@ const DZ = {
     "Wounds / Burns / Sunburn: use it for a short time on a small area.",
     "Wounds / Burns / Sunburn: see a primary care provider if there is no improvement within 7 days."
    ],
-   "counselSrc": "Patel Outdoor slide 13; Patel Wound slides 11, 20; 11/12 lecture T@81569, T@82489",
+   "counselSrc": "Patel Outdoor slide 13; Patel Wound slides 11, 20; 11/12 lecture ",
    "avoid": [
     "Poison ivy / Insect bites: neomycin allergy (her bedbug case: neomycin worsened the rash)",
     "Wounds / Burns / Sunburn: toxicity risk rises with large areas of application",
@@ -18479,7 +18479,7 @@ const DZ = {
    "how": {
     "p": "pa",
     "text": "Ingredients with antibacterial properties: the product delivers a concentrated antimicrobial agent to the wound site, to prevent infection.",
-    "src": "Patel Wound slides 11–12; 11/12 lecture T@81400–81900"
+    "src": "Patel Wound slides 11–12; 11/12 lecture "
    },
    "figs": []
   },
@@ -18661,7 +18661,7 @@ const DZ = {
    "how": {
     "p": "pa",
     "text": "A wetting / occlusive agent. In class: it wets the lice, which dehydrates and kills them.",
-    "src": "Patel Outdoor slide 46; 11/12 lecture T@31043"
+    "src": "Patel Outdoor slide 46; 11/12 lecture "
    },
    "figs": []
   },
@@ -18971,7 +18971,7 @@ const DZ = {
      "dz": "sun-protection",
      "role": "Physical sunscreen, GRASE and preferred; with zinc oxide, the two ingredients she called most effective. Also in the broad-spectrum mixture for patients on photosensitizing drugs",
      "how": "Applied and reapplied like any sunscreen",
-     "src": "Patel Sun slides 16–18; T@55166"
+     "src": "Patel Sun slides 16–18"
     }
    ],
    "counsel": [
@@ -19005,7 +19005,7 @@ const DZ = {
      "dz": "sunburn",
      "role": "Recommended: decrease pain, erythema and edema; act longer than topical anesthetics. Her poll answer for pain and tenderness: oral ibuprofen",
      "how": "Use for the first 1–2 days. Slide 31: \"prefer one with anti-inflammatory properties (NSAIDs, APAP)\"; she said \"it could be Tylenol, it could be ibuprofen\"",
-     "src": "Patel Sun slide 31; T@65246"
+     "src": "Patel Sun slide 31"
     },
     {
      "dz": "burns",
@@ -19025,7 +19025,7 @@ const DZ = {
    "how": {
     "p": "pa",
     "text": "Systemic analgesics decrease pain, erythema and edema and act longer than topical anesthetics; her slide prefers one with anti-inflammatory properties.",
-    "src": "Patel Sun slide 31; 11/12 lecture T@61876"
+    "src": "Patel Sun slide 31; 11/12 lecture "
    },
    "figs": []
   },
@@ -19037,7 +19037,7 @@ const DZ = {
      "dz": "sunburn",
      "role": "Alternative treatment; may decrease pain by inhibiting bradykinin and the inflammatory process",
      "how": "Topically, on intact skin; look for pure aloe vera juice or gel on the label",
-     "src": "Patel Sun slide 32; T@64175"
+     "src": "Patel Sun slide 32"
     },
     {
      "dz": "burns",
@@ -19051,7 +19051,7 @@ const DZ = {
     "Choose a product labeled pure aloe vera juice or gel.",
     "Do not take it by mouth."
    ],
-   "counselSrc": "Patel Sun slide 32; 11/12 lecture T@64175",
+   "counselSrc": "Patel Sun slide 32; 11/12 lecture ",
    "avoid": [
     "Not FDA-approved for burn treatment",
     "Internal use: multiple drug interactions and adverse effects"
@@ -19075,7 +19075,7 @@ const DZ = {
      "dz": "photoaging",
      "role": "Depigmentation: reduces hyperpigmentation from sun exposure (melasma, lentigines). Her poll answer for hyperpigmentation",
      "how": "Combination products with hydroquinone 4%; limit use to three months; wear sunscreen",
-     "src": "Patel Sun slides 47–48; T@76234"
+     "src": "Patel Sun slides 47–48"
     }
    ],
    "counsel": [
@@ -19131,7 +19131,7 @@ const DZ = {
      "dz": "wounds",
      "role": "Only when indicated; may cause cytotoxicity that reduces wound healing",
      "how": "On intact skin at the wound edges, after debris is removed",
-     "src": "Patel Wound slides 15, 19, 27; T@83362"
+     "src": "Patel Wound slides 15, 19, 27"
     },
     {
      "dz": "burns",
@@ -19158,7 +19158,7 @@ const DZ = {
    "how": {
     "p": "pa",
     "text": "In class: they clean the skin of debris and help prevent infection of the wound. Her slide adds the harm: they may cause cytotoxicity, which reduces wound healing.",
-    "src": "11/12 lecture T@83292, T@85006; Patel Wound slides 15, 19"
+    "src": "11/12 lecture ; Patel Wound slides 15, 19"
    },
    "figs": []
   },
@@ -19170,14 +19170,14 @@ const DZ = {
      "dz": "wounds",
      "role": "Keep a moist healing environment with a dressing that fits the wound. \"Know the advantages, know the disadvantages\"",
      "how": "Gauze: cost effective, highly absorbent, nonocclusive; no moist environment alone, needs a secondary dressing and frequent changes, removal may bleed or hurt. Nonadherent gauze: less adherent. Adhesive bandage: cost effective, many shapes. Hydrocolloid: moist, long wear, occlusive, impermeable to fluids and bacteria, reduces pain; uninfected wounds only, hard to assess the wound, less cost effective. Transparent film: moist, semi-occlusive, gas-permeable, easy inspection; not absorptive, uninfected wounds only",
-     "src": "Patel Wound slides 8–9; T@80276"
+     "src": "Patel Wound slides 8–9"
     }
    ],
    "counsel": [
     "Cleanse first; apply an antibiotic only if indicated; then the dressing.",
     "Hydrocolloid and transparent film dressings are for uninfected wounds only."
    ],
-   "counselSrc": "Patel Wound slides 8–9, 27; 11/12 lecture T@82489",
+   "counselSrc": "Patel Wound slides 8–9, 27; 11/12 lecture ",
    "avoid": [
     "Hydrocolloid or film on an infected wound",
     "Film on a wound with a large amount of exudate (maceration)"
@@ -19216,7 +19216,7 @@ const DZ = {
    "how": {
     "p": "pa",
     "text": "Freezes the wart off: the product is held on the wart until a halo appears.",
-    "src": "11/12 lecture T@91042, T@91947; Patel Warts slide 11"
+    "src": "11/12 lecture ; Patel Warts slide 11"
    },
    "figs": []
   },
@@ -19225,12 +19225,12 @@ const DZ = {
    "brand": "",
    "sm": {
     "text": "Block the beta-adrenergic receptor on the ciliary body, so less aqueous humor is made (inflow falls); not much effect on outflow; the mechanism is not fully understood. Timolol and levobunolol: nonspecific beta blockers (levobunolol has some alpha-adrenergic effects). Betaxolol: relatively beta 1 selective. Carteolol: nonspecific with intrinsic sympathomimetic activity. Side effects: ocular stinging and burning, decreased corneal sensitivity, diplopia, blurred or cloudy vision, decreased night vision, ptosis; systemic bradycardia and hypotension, bronchospasm in asthmatics, headache, insomnia, taste perversion, depression, impotence.",
-    "src": "Eye slides 18–20; T@43883, T@45583 11/13"
+    "src": "Eye slides 18–20; lecture 11/13"
    },
    "how": {
     "p": "sm",
     "text": "Block the beta-adrenergic receptor on the ciliary body, so less aqueous humor is made (inflow falls); not much effect on outflow; the mechanism is not fully understood. Timolol and levobunolol: nonspecific beta blockers (levobunolol has some alpha-adrenergic effects). Betaxolol: relatively beta 1 selective. Carteolol: nonspecific with intrinsic sympathomimetic activity. Side effects: ocular stinging and burning, decreased corneal sensitivity, diplopia, blurred or cloudy vision, decreased night vision, ptosis; systemic bradycardia and hypotension, bronchospasm in asthmatics, headache, insomnia, taste perversion, depression, impotence.",
-    "src": "Eye slides 18–20; T@43883, T@45583 11/13"
+    "src": "Eye slides 18–20; lecture 11/13"
    },
    "figs": [],
    "counsel": [
@@ -19240,7 +19240,7 @@ const DZ = {
     "Local side effects (stinging, dry eyes, blepharitis, blurred vision) are a major counseling point. With an oral beta blocker, check the blood pressure and heart rate, especially when it is started.",
     "A patient who forgets the evening dose can be changed from timolol solution to the once-daily gel."
    ],
-   "counselSrc": "Eye slide 20; T@16025, T@46338 11/13; T@30444 11/17; Lam Glaucoma slides 33–34, 37; T@61773, T@64545 11/19",
+   "counselSrc": "Eye slide 20; lecture 11/13; lecture 11/17; Lam Glaucoma slides 33–34, 37; lecture 11/19",
    "avoid": [
     "Asthma: beta 2 blockade can cause bronchospasm (slide 20)",
     "Cardiac patients: bradycardia and hypotension (slide 20); a more selective drug, or the eyelid compression (11/13)",
@@ -19249,11 +19249,11 @@ const DZ = {
    ],
    "la": {
     "text": "Timolol 0.25% and 0.5% (Timoptic, Istalol): 1 drop in the affected eye or eyes twice daily. Timoptic-XE gel: once daily (fewer doses a day, fewer systemic effects than the solution). Betaxolol (Betoptic 0.5%, Betoptic-S 0.25%), carteolol 1% (Ocupress), levobunolol 0.25% and 0.5% (Betagan): twice daily. Betaxolol is less effective than timolol and levobunolol; the Betoptic-S suspension has fewer systemic effects than the solution. Combinations: timolol with dorzolamide (Cosopt, Cosopt PF) and with brimonidine (Combigan), both twice daily. IOP reduction 20–30%.",
-    "src": "Lam Glaucoma slides 31–32, 69; handout; T@58687 11/19"
+    "src": "Lam Glaucoma slides 31–32, 69; handout; lecture 11/19"
    },
    "sk": {
     "text": "Aryloxypropanolamines (an aromatic ring, the oxygen next to it, then three carbons carrying the alcohol and the amine): timolol maleate (Timoptic, Log P 1.4), betaxolol HCl (Betoptic, 2.5), levobunolol HCl (Betagan, 2.2), carteolol HCl (Ocupress, 1.4). They decrease aqueous humor production. SAR: more potent than the arylethanolamines; most have mixed beta 1 and beta 2 activity; the S-OH isomers are preferred; most para aryloxypropanolamines such as betaxolol are beta 1 antagonists.",
-    "src": "Sikazwe OOO slides 33–34; T@38474 11/18"
+    "src": "Sikazwe OOO slides 33–34; lecture 11/18"
    }
   },
   "apraclonidine": {
@@ -19261,20 +19261,20 @@ const DZ = {
    "brand": "",
    "sm": {
     "text": "An alpha 2 agonist: binds alpha 2 receptors on the ciliary body and decreases aqueous humor production (inflow). Used to prevent a rise in IOP after eye surgery such as cataract surgery; not used long term because of an allergic type response. Side effects: ocular burning and stinging, blurred vision, foreign body sensation, ocular pruritus; systemic hypotension, oral dryness, allergic reaction.",
-    "src": "Eye slides 22–24; T@52072, T@53050 11/13"
+    "src": "Eye slides 22–24; lecture 11/13"
    },
    "how": {
     "p": "sm",
     "text": "An alpha 2 agonist: binds alpha 2 receptors on the ciliary body and decreases aqueous humor production (inflow). Used to prevent a rise in IOP after eye surgery such as cataract surgery; not used long term because of an allergic type response. Side effects: ocular burning and stinging, blurred vision, foreign body sensation, ocular pruritus; systemic hypotension, oral dryness, allergic reaction.",
-    "src": "Eye slides 22–24; T@52072, T@53050 11/13"
+    "src": "Eye slides 22–24; lecture 11/13"
    },
    "figs": [],
    "counsel": [
     "After the drop, gently press the inner corner of the eyelid (by the nose) so the drug does not drain through the tear duct and is absorbed into the body."
    ],
-   "counselSrc": "T@16025 11/13; T@30444 11/17",
+   "counselSrc": "lecture 11/13; lecture 11/17",
    "avoid": [
-    "Allergic reaction: slide 24 lists it under systemic side effects, and in lecture she called it a significant problem in the eye (slide 24; T@53050 11/13)",
+    "Allergic reaction: slide 24 lists it under systemic side effects, and in lecture she called it a significant problem in the eye (slide 24; lecture 11/13)",
     "Systemic hypotension (slide 24)"
    ],
    "la": {
@@ -19283,7 +19283,7 @@ const DZ = {
    },
    "sk": {
     "text": "Apraclonidine HCl (Iopidine, ClogP 0.87) is clonidine plus an aromatic amino group; it is less lipophilic than clonidine (ClogP 1.5), so it does not enter the brain as well and the CNS effects of clonidine are avoided.",
-    "src": "Sikazwe OOO slide 31; T@47120 11/18"
+    "src": "Sikazwe OOO slide 31; lecture 11/18"
    }
   },
   "brimonidine": {
@@ -19291,12 +19291,12 @@ const DZ = {
    "brand": "",
    "sm": {
     "text": "An alpha 2 agonist: binds alpha 2 receptors on the ciliary body and decreases aqueous humor production (inflow). Two extra effects: it increases uveoscleral outflow and is neuroprotective (seen in animals, assumed in humans). The better choice for long-term glaucoma treatment. Side effects: foreign body sensation and itching of the eyes (a hallmark); systemic oral dryness, dizziness, fatigue, somnolence, lower blood pressure and pulse. For allergic conjunctivitis: an alpha 2 agonist vasoconstrictor that reduces redness (brimonidine tartrate).",
-    "src": "Eye slides 22–24, 57; T@49059, T@51660, T@53354 11/13"
+    "src": "Eye slides 22–24, 57; lecture 11/13"
    },
    "how": {
     "p": "sm",
     "text": "An alpha 2 agonist: binds alpha 2 receptors on the ciliary body and decreases aqueous humor production (inflow). Two extra effects: it increases uveoscleral outflow and is neuroprotective (seen in animals, assumed in humans). The better choice for long-term glaucoma treatment. Side effects: foreign body sensation and itching of the eyes (a hallmark); systemic oral dryness, dizziness, fatigue, somnolence, lower blood pressure and pulse. For allergic conjunctivitis: an alpha 2 agonist vasoconstrictor that reduces redness (brimonidine tartrate).",
-    "src": "Eye slides 22–24, 57; T@49059, T@51660, T@53354 11/13"
+    "src": "Eye slides 22–24, 57; lecture 11/13"
    },
    "figs": [],
    "pa": [
@@ -19304,13 +19304,13 @@ const DZ = {
      "dz": "glaucoma",
      "role": "Glaucoma (Dr. Smith, Exam 3): decreases aqueous humor production; also increases uveoscleral outflow; neuroprotective",
      "how": "The better long-term alpha 2 agonist than apraclonidine.",
-     "src": "Eye slides 22–24; T@51660 11/13"
+     "src": "Eye slides 22–24; lecture 11/13"
     },
     {
      "dz": "allergic-conjunctivitis",
      "role": "Allergic conjunctivitis (Dr. Smith, Exam 3): alpha 2 agonist vasoconstrictor; reduces redness",
      "how": "Brimonidine tartrate is on the list with naphazoline, oxymetazoline, tetrahydrozoline and phenylephrine.",
-     "src": "Eye slides 56–57; T@52690 11/17"
+     "src": "Eye slides 56–57; lecture 11/17"
     }
    ],
    "counsel": [
@@ -19318,17 +19318,17 @@ const DZ = {
     "Allergic conjunctivitis: it constricts the blood vessels in the eye, which reduces redness.",
     "Prescription brimonidine for glaucoma is not replaced by OTC Lumify (0.025%), which is for redness."
    ],
-   "counselSrc": "Eye slides 56–57; T@16025 11/13; T@52690 11/17; Lam Glaucoma slide 47; T@74606 11/19",
+   "counselSrc": "Eye slides 56–57; lecture 11/13; lecture 11/17; Lam Glaucoma slide 47; lecture 11/19",
    "avoid": [
     "Foreign body sensation and itching of the eyes are the notable ocular effects (11/13)"
    ],
    "la": {
     "text": "Alphagan P solution, various concentrations: 1 drop in the affected eye or eyes twice daily. Combinations: with timolol (Combigan) twice daily; with brinzolamide (Simbrinza) three times daily. Lumify 0.025% is OTC for ocular redness only: it is not for glaucoma and is not a substitute for prescription brimonidine (0.1% in her case; the handout gives 0.1%–0.2% for the prescription strength), because it is not efficacious enough to reduce the IOP. IOP reduction 18–27%.",
-    "src": "Lam Glaucoma slides 42, 47; handout; T@69314, T@74606 11/19; Lam Ophthalmic slide 39; handout"
+    "src": "Lam Glaucoma slides 42, 47; handout; lecture 11/19; Lam Ophthalmic slide 39; handout"
    },
    "sk": {
     "text": "Brimonidine tartrate (Alphagan products, ClogP 1.2): a bromine-bearing benzo-fused pyrazine joined to the imidazoline through NH; alpha 2 selective and the most potent of the series, about 1,000-fold more potent than clonidine, so a tiny drop in the eye works with little worry about brain entry.",
-    "src": "Sikazwe OOO slide 31; T@47960, T@48263 11/18"
+    "src": "Sikazwe OOO slide 31; lecture 11/18"
    }
   },
   "cai": {
@@ -19336,12 +19336,12 @@ const DZ = {
    "brand": "",
    "sm": {
     "text": "Inhibit carbonic anhydrase, which prevents the conversion of CO2 and water to carbonic acid; less sodium and bicarbonate are available for secretion, so the ciliary body makes less aqueous humor (inflow falls). Acetazolamide and methazolamide are oral; dorzolamide and brinzolamide are ophthalmic. Side effects of the drops: burning or stinging, hypersensitivity, headache, bitter, sour or unusual taste, dry eye, foreign body sensation, blurred vision. Oral: altered taste and smell, dry mouth, excessive thirst, increased urination, systemic acidosis, depression.",
-    "src": "Eye slides 26–29; T@54759, T@58590 11/13; T@5923, T@17682, T@22924 11/17"
+    "src": "Eye slides 26–29; lecture 11/13; lecture 11/17"
    },
    "how": {
     "p": "sm",
     "text": "Inhibit carbonic anhydrase, which prevents the conversion of CO2 and water to carbonic acid; less sodium and bicarbonate are available for secretion, so the ciliary body makes less aqueous humor (inflow falls). Acetazolamide and methazolamide are oral; dorzolamide and brinzolamide are ophthalmic. Side effects of the drops: burning or stinging, hypersensitivity, headache, bitter, sour or unusual taste, dry eye, foreign body sensation, blurred vision. Oral: altered taste and smell, dry mouth, excessive thirst, increased urination, systemic acidosis, depression.",
-    "src": "Eye slides 26–29; T@54759, T@58590 11/13; T@5923, T@17682, T@22924 11/17"
+    "src": "Eye slides 26–29; lecture 11/13; lecture 11/17"
    },
    "figs": [],
    "counsel": [
@@ -19350,19 +19350,19 @@ const DZ = {
     "Stinging or burning right after the drop is common and resolves within 1–2 minutes; stinging that lasts longer goes to the ophthalmologist. Blurred vision is the drop settling.",
     "Oral acetazolamide and methazolamide are short-term only: systemic acidosis (malaise, fatigue, anorexia, nausea, weight loss, altered taste)."
    ],
-   "counselSrc": "T@59086 11/13; T@30444 11/17; Lam Glaucoma slides 52–53; handout; T@76727, T@77616 11/19",
+   "counselSrc": "lecture 11/13; lecture 11/17; Lam Glaucoma slides 52–53; handout; lecture 11/19",
    "avoid": [
     "Oral use: metabolic acidosis; the blood pH must be watched (11/17)",
     "Oral use: over-diuresis can show as dry mouth and thirst (11/17)",
-    "Sickle cell disease, pulmonary disorders, electrolyte imbalance; sulfonamide allergy, where cross-sensitivity is very low (Lam Glaucoma slide 54; she called it an FYI, T@78505 11/19)"
+    "Sickle cell disease, pulmonary disorders, electrolyte imbalance; sulfonamide allergy, where cross-sensitivity is very low (Lam Glaucoma slide 54; she called it an FYI, lecture 11/19)"
    ],
    "la": {
     "text": "Topical: dorzolamide 2% (Trusopt) and brinzolamide 1% suspension (Azopt), 1 drop in the affected eye or eyes three times daily; shake the suspension. Combinations: dorzolamide/timolol (Cosopt, Cosopt PF) twice daily; brinzolamide/brimonidine (Simbrinza) three times daily. IOP reduction 15–26% topical, 25–40% oral. Oral acetazolamide and methazolamide: short-term use only, because of systemic acidosis. Stinging or burning lasts 1–2 minutes; blurred vision is the drop settling.",
-    "src": "Lam Glaucoma slides 51–56; handout; T@76727, T@77064 11/19"
+    "src": "Lam Glaucoma slides 51–56; handout; lecture 11/19"
    },
    "sk": {
     "text": "Sulfonamides (zolamides) that competitively inhibit carbonic anhydrase, a Zn-metalloenzyme that modulates aqueous humor production through pH changes (CO2 + H2O gives H2CO3, then HCO3- and H+). ClogP: acetazolamide -0.3, methazolamide 0.13, dorzolamide HCl 2, brinzolamide 7 (the first-generation agents are polar, oral and high dose; the second-generation agents are lipophilic, topical and small dose). The SO2NH2 group forms ionic and hydrogen bonds with zinc and Thr199. Brinzolamide and dorzolamide both undergo CYP N-deethylation, and the N-deethylated metabolites are active. His practice question 3 asks for those two metabolites drawn.",
-    "src": "Sikazwe OOO slides 35–38; T@40944 11/18; practice question 3 (STYLE.md)"
+    "src": "Sikazwe OOO slides 35–38; lecture 11/18; practice question 3"
    }
   },
   "m3-agonists": {
@@ -19370,26 +19370,26 @@ const DZ = {
    "brand": "",
    "sm": {
     "text": "Direct-acting parasympathomimetics: agonists at the M3 receptor on the sphincter muscle and the trabecular meshwork; contraction increases outflow. Carbachol is very potent and longer acting, and is used more often; pilocarpine has more potential for an allergic reaction in the eye. Side effects: burning and stinging; painful ciliary muscle spasm causing headache; blurred vision, myopia, poor vision in dim light, floaters, lacrimation; systemic diarrhea, salivation, sweating, rhinorrhea.",
-    "src": "Eye slides 31–33; T@23579, T@26432, T@28294 11/17"
+    "src": "Eye slides 31–33; lecture 11/17"
    },
    "how": {
     "p": "sm",
     "text": "Direct-acting parasympathomimetics: agonists at the M3 receptor on the sphincter muscle and the trabecular meshwork; contraction increases outflow. Carbachol is very potent and longer acting, and is used more often; pilocarpine has more potential for an allergic reaction in the eye. Side effects: burning and stinging; painful ciliary muscle spasm causing headache; blurred vision, myopia, poor vision in dim light, floaters, lacrimation; systemic diarrhea, salivation, sweating, rhinorrhea.",
-    "src": "Eye slides 31–33; T@23579, T@26432, T@28294 11/17"
+    "src": "Eye slides 31–33; lecture 11/17"
    },
    "figs": [],
    "counsel": [
     "After the drop, gently press the inner corner of the eyelid (by the nose) so the drug does not drain through the tear duct and is absorbed into the body.",
     "Systemic cholinergic effects (diarrhea, salivation, sweating, rhinorrhea) come from drug absorbed through the nose; the compression lowers this."
    ],
-   "counselSrc": "T@28776, T@30444 11/17",
+   "counselSrc": "lecture 11/17",
    "la": {
     "text": "Pilocarpine 1%, 2% and 4% (Isopto Carpine): 1 drop in the affected eye or eyes four times daily; the handout says it may be used as initial management of acute angle-closure glaucoma. Carbachol (Miostat) is often used for surgery instead of glaucoma. Rarely used for glaucoma because of the IOP reduction and the four-times-a-day dosing. Local: poor night vision (pupil constriction), frontal headache or brow ache, stinging. Systemic: headache, sweating, nausea, vomiting, diarrhea, cramping, bronchospasm, heart block.",
-    "src": "Lam Glaucoma slides 57–61; handout; T@81113, T@81450 11/19"
+    "src": "Lam Glaucoma slides 57–61; handout; lecture 11/19"
    },
    "sk": {
     "text": "Direct-acting cholinergics are carbamates and esters: acetylcholine (ester), carbachol Cl (carbamate; weak indirect effects) and pilocarpine HCl raise fluid outflow. SAR on the slide: acyloxy group for hydrogen bonding to the nicotinic or muscarinic receptors, an ionizable amine, N-methyl groups, a 2-carbon spacer between O and N. He told the class not to expect a question on this SAR.",
-    "src": "Sikazwe OOO slide 40; T@17315 11/19"
+    "src": "Sikazwe OOO slide 40; lecture 11/19"
    },
    "avoid": [
     "Asthma; retinal detachment or corneal abrasion (Lam Glaucoma slide 59)"
@@ -19400,18 +19400,18 @@ const DZ = {
    "brand": "",
    "sm": {
     "text": "An irreversible acetylcholinesterase inhibitor: more acetylcholine agonizes the M3 receptors, the sphincter muscle and trabecular meshwork contract, and outflow increases. Used when a patient is refractory to other medicines. Side effects: burning and stinging, blurred vision, eye pain, lacrimation, headache, brow ache, twitching of the eyelids, an allergic type reaction (more than pilocarpine), cataracts; systemic diarrhea, salivation, sweating, rhinorrhea.",
-    "src": "Eye slides 31, 34–35; T@26915, T@29170, T@29681 11/17"
+    "src": "Eye slides 31, 34–35; lecture 11/17"
    },
    "how": {
     "p": "sm",
     "text": "An irreversible acetylcholinesterase inhibitor: more acetylcholine agonizes the M3 receptors, the sphincter muscle and trabecular meshwork contract, and outflow increases. Used when a patient is refractory to other medicines. Side effects: burning and stinging, blurred vision, eye pain, lacrimation, headache, brow ache, twitching of the eyelids, an allergic type reaction (more than pilocarpine), cataracts; systemic diarrhea, salivation, sweating, rhinorrhea.",
-    "src": "Eye slides 31, 34–35; T@26915, T@29170, T@29681 11/17"
+    "src": "Eye slides 31, 34–35; lecture 11/17"
    },
    "figs": [],
    "counsel": [
     "After the drop, gently press the inner corner of the eyelid (by the nose) so the drug does not drain through the tear duct and is absorbed into the body."
    ],
-   "counselSrc": "T@16025 11/13; T@30444 11/17",
+   "counselSrc": "lecture 11/13; lecture 11/17",
    "avoid": [
     "Can cause cataracts, a reason its use is limited in patients who already have glaucoma (11/17)",
     "More allergenic than pilocarpine (11/17)"
@@ -19422,7 +19422,7 @@ const DZ = {
    },
    "sk": {
     "text": "An organophosphate (phosphoryl group): the extent of acetylcholinesterase inhibition is phosphoryl > carbamate > ester. It is irreversible: with time the enzyme-drug bond ages, an ethyl group is lost and a hydroxy group leaves the enzyme covalently and irreversibly bound; the antidote must be given before aging. It is the only drug working in this fashion. His self-assessment question 5 asks which functional group shows irreversible inhibition.",
-    "src": "Sikazwe OOO slides 41–43, 68; T@19755 11/19"
+    "src": "Sikazwe OOO slides 41–43, 68; lecture 11/19"
    }
   },
   "pg-agonists": {
@@ -19430,12 +19430,12 @@ const DZ = {
    "brand": "",
    "sm": {
     "text": "Agonists at the PGF2α receptor, which relaxes the ciliary muscle; IOP falls by increasing uveoscleral outflow and, to a lesser extent, trabecular outflow. They do not affect aqueous humor production. May be more effective in hazel or brown eyes than in blue or green eyes. Latanoprostene bunod is also a nitric oxide donor (vasodilation adds to its effect). Side effects: blurred vision, burning and stinging, eye pain, lid edema, ocular hyperemia; increased brown pigmentation of the iris and eyelids; hypertrichosis and hyperpigmentation of the lashes (Latisse); hair growth in other areas; few systemic effects.",
-    "src": "Eye slides 37–39; T@31096, T@32283, T@32596, T@33811 11/17"
+    "src": "Eye slides 37–39; lecture 11/17"
    },
    "how": {
     "p": "sm",
     "text": "Agonists at the PGF2α receptor, which relaxes the ciliary muscle; IOP falls by increasing uveoscleral outflow and, to a lesser extent, trabecular outflow. They do not affect aqueous humor production. May be more effective in hazel or brown eyes than in blue or green eyes. Latanoprostene bunod is also a nitric oxide donor (vasodilation adds to its effect). Side effects: blurred vision, burning and stinging, eye pain, lid edema, ocular hyperemia; increased brown pigmentation of the iris and eyelids; hypertrichosis and hyperpigmentation of the lashes (Latisse); hair growth in other areas; few systemic effects.",
-    "src": "Eye slides 37–39; T@31096, T@32283, T@32596, T@33811 11/17"
+    "src": "Eye slides 37–39; lecture 11/17"
    },
    "figs": [],
    "counsel": [
@@ -19443,17 +19443,17 @@ const DZ = {
     "After the drop, gently press the inner corner of the eyelid (by the nose) so the drug does not drain through the tear duct and is absorbed into the body.",
     "Give it in the evening: blurred vision is the reason for nightly dosing. Do not give it more than once a day, because a higher frequency decreases the effect."
    ],
-   "counselSrc": "Eye slide 39; T@33811, T@30444 11/17; Lam Glaucoma slides 20–21; T@51238, T@53077 11/19",
+   "counselSrc": "Eye slide 39; lecture 11/17; Lam Glaucoma slides 20–21; lecture 11/19",
    "la": {
     "text": "Bimatoprost 0.01% and 0.03% (Lumigan), latanoprost (Xalatan, Xelpros), latanoprostene bunod (Vyzulta, a prodrug of latanoprost), travoprost (Travatan Z), tafluprost (Zioptan): 1 drop in the affected eye or eyes once daily, in the evening; more than once daily decreases the efficacy. IOP reduction up to 33%. Latisse (bimatoprost) is for eyelash hypotrichosis (the handout prints 0.03%, slide 19 prints 0.3%). Storage: latanoprost, latanoprostene bunod and tafluprost in the refrigerator before opening, room temperature once opened. Preservative-free: latanoprost (Xelpros) and tafluprost (Zioptan).",
-    "src": "Lam Glaucoma slides 19–23, 85; handout; T@51004, T@51238, T@55285 11/19"
+    "src": "Lam Glaucoma slides 19–23, 85; handout; lecture 11/19"
    },
    "sk": {
     "text": "A cyclopentane ring with an alpha chain and an omega chain; activation of the PGF (FP) receptor raises outflow. At C-1, acids (COOH) and amides (CONH) are the active drugs and esters are prodrugs that esterase converts to the acid (latanoprost isopropyl ester to latanoprost acid); C-15 is OH or a halogen (halogens prevent oxidation of the 15-OH). Bimatoprost is the amide; latanoprost, travoprost, tafluprost and latanoprostene bunod are esters; tafluprost carries two fluorines.",
     "src": "Sikazwe OOO slides 44–46"
    },
    "avoid": [
-    "Macular edema; history of herpetic keratitis (Lam Glaucoma slide 21; she will not test them, T@53365 11/19)"
+    "Macular edema; history of herpetic keratitis (Lam Glaucoma slide 21; she will not test them, lecture 11/19)"
    ]
   },
   "netarsudil": {
@@ -19461,22 +19461,22 @@ const DZ = {
    "brand": "",
    "sm": {
     "text": "Inhibits RhoA kinase. RhoA is a GTP-binding protein that regulates cell shape, motility, proliferation and apoptosis; in glaucoma it may increase contractile tone and trabecular meshwork stiffness. Inhibiting it lowers outflow resistance (outflow only on Dr. Smith's slides): it relaxes the tone, decreases fibrosis-related protein deposits in the meshwork and changes the permeability of the cells lining Schlemm’s canal. The only Rho kinase inhibitor on the drug list. Side effects: conjunctival hyperemia (53%), from vasodilation; about 20%: corneal verticillata (vision unchanged, resolved on stopping in most cases), instillation site pain, conjunctival hemorrhage.",
-    "src": "Eye slides 41–43; T@34730, T@35809, T@36856 11/17"
+    "src": "Eye slides 41–43; lecture 11/17"
    },
    "how": {
     "p": "sm",
     "text": "Inhibits RhoA kinase. RhoA is a GTP-binding protein that regulates cell shape, motility, proliferation and apoptosis; in glaucoma it may increase contractile tone and trabecular meshwork stiffness. Inhibiting it lowers outflow resistance (outflow only on Dr. Smith's slides): it relaxes the tone, decreases fibrosis-related protein deposits in the meshwork and changes the permeability of the cells lining Schlemm’s canal. The only Rho kinase inhibitor on the drug list. Side effects: conjunctival hyperemia (53%), from vasodilation; about 20%: corneal verticillata (vision unchanged, resolved on stopping in most cases), instillation site pain, conjunctival hemorrhage.",
-    "src": "Eye slides 41–43; T@34730, T@35809, T@36856 11/17"
+    "src": "Eye slides 41–43; lecture 11/17"
    },
    "figs": [],
    "counsel": [
     "Red eyes (conjunctival hyperemia) are common; the cause is relaxation of vascular smooth muscle.",
     "After the drop, gently press the inner corner of the eyelid (by the nose) so the drug does not drain through the tear duct and is absorbed into the body."
    ],
-   "counselSrc": "Eye slide 43; T@36856 11/17",
+   "counselSrc": "Eye slide 43; lecture 11/17",
    "la": {
-    "text": "Netarsudil 0.02% (Rhopressa): 1 drop in the affected eye or eyes once daily in the evening; with latanoprost it is Rocklatan, once daily in the evening. IOP reduction 20–30%, like timolol. Mechanism in her handout: increased aqueous humor outflow, decreased aqueous humor production and decreased episcleral venous pressure (Dr. Smith's slides give outflow only). Refrigerate before opening; once opened, room temperature for less than 6 weeks. Conjunctival hemorrhage or hyperemia was reported in 51% (handout; T@83004); it is last-line because the side effect outweighs the efficacy.",
-    "src": "Lam Glaucoma slides 62, 85; handout; T@83004, T@83922, T@92709 11/19"
+    "text": "Netarsudil 0.02% (Rhopressa): 1 drop in the affected eye or eyes once daily in the evening; with latanoprost it is Rocklatan, once daily in the evening. IOP reduction 20–30%, like timolol. Mechanism in her handout: increased aqueous humor outflow, decreased aqueous humor production and decreased episcleral venous pressure (Dr. Smith's slides give outflow only). Refrigerate before opening; once opened, room temperature for less than 6 weeks. Conjunctival hemorrhage or hyperemia was reported in 51% (handout; it is last-line because the side effect outweighs the efficacy.",
+    "src": "Lam Glaucoma slides 62, 85; handout; lecture 11/19"
    },
    "sk": {
     "text": "An isoquinoline Rho kinase (ROCK) inhibitor that raises fluid outflow. It is an ester prodrug: esterase hydrolysis gives the active metabolite netarsudil-M1. ClogP 5.",
@@ -19488,12 +19488,12 @@ const DZ = {
    "brand": "",
    "sm": {
     "text": "Timolol and dorzolamide; timolol and brimonidine; brinzolamide and brimonidine; latanoprost and netarsudil. Treatment often starts with one drug and moves to a combination as the disease progresses. One product with both mechanisms replaces two bottles.",
-    "src": "Eye slide 45; T@37948, T@38097 11/17"
+    "src": "Eye slide 45; lecture 11/17"
    },
    "how": {
     "p": "sm",
     "text": "Each product joins two of the mechanisms above: a beta receptor antagonist, a carbonic anhydrase inhibitor, an alpha 2 agonist, a prostaglandin agonist or the Rho kinase inhibitor.",
-    "src": "Eye slide 45; T@37948, T@38097 11/17"
+    "src": "Eye slide 45; lecture 11/17"
    },
    "figs": [],
    "counsel": [
@@ -19501,10 +19501,10 @@ const DZ = {
     "After the drop, gently press the inner corner of the eyelid (by the nose) so the drug does not drain through the tear duct and is absorbed into the body.",
     "A patient who has trouble waiting between many drops can use a combination product, so one bottle replaces two."
    ],
-   "counselSrc": "T@38097 11/17; T@16025 11/13; Lam Glaucoma slides 69, 76–81; T@90121 11/19",
+   "counselSrc": "lecture 11/17; lecture 11/13; Lam Glaucoma slides 69, 76–81; lecture 11/19",
    "la": {
     "text": "Brimonidine/timolol (Combigan): alpha-2 agonist and beta blocker, twice daily. Dorzolamide/timolol (Cosopt, Cosopt PF): carbonic anhydrase inhibitor and beta blocker, twice daily. Brinzolamide/brimonidine (Simbrinza): carbonic anhydrase inhibitor and alpha-2 agonist, three times daily. Netarsudil/latanoprost (Rocklatan): once daily in the evening. She said to recognize the classes in each product and its dosing. Her 11/20 email corrects slide 51: Simbrinza is brinzolamide and brimonidine.",
-    "src": "Lam Glaucoma slides 42, 51, 62, 69; handout; T@85991, T@86115 11/19"
+    "src": "Lam Glaucoma slides 42, 51, 62, 69; handout; lecture 11/19"
    }
   },
   "ophthalmic-h1": {
@@ -19512,22 +19512,22 @@ const DZ = {
    "brand": "",
    "sm": {
     "text": "H1 inverse agonists: reduce the constitutive activity of the receptor and compete with histamine for it. Most also stabilize mast cells, which reduces the release of mast cell mediators and is anti-inflammatory (less cytokine secretion, less adhesion molecule expression, inhibition of eosinophil infiltration). Mast cell stabilization may make them more effective topically. They reduce edema, itch, inflammation and watery eyes. Examples: alcaftadine, azelastine, bepotastine, cetirizine, epinastine, ketotifen, olopatadine; cetirizine has no mast cell stabilization.",
-    "src": "Eye slides 51–54; T@44898, T@46395, T@51757 11/17"
+    "src": "Eye slides 51–54; lecture 11/17"
    },
    "how": {
     "p": "sm",
     "text": "H1 inverse agonists: reduce the constitutive activity of the receptor and compete with histamine for it. Most also stabilize mast cells, which reduces the release of mast cell mediators and is anti-inflammatory (less cytokine secretion, less adhesion molecule expression, inhibition of eosinophil infiltration). Mast cell stabilization may make them more effective topically. They reduce edema, itch, inflammation and watery eyes. Examples: alcaftadine, azelastine, bepotastine, cetirizine, epinastine, ketotifen, olopatadine; cetirizine has no mast cell stabilization.",
-    "src": "Eye slides 51–54; T@44898, T@46395, T@51757 11/17"
+    "src": "Eye slides 51–54; lecture 11/17"
    },
    "figs": [],
    "counsel": [
     "A drug with mast cell stabilization can be started before the allergen season to prevent the release of histamine.",
     "Cetirizine is not the one to suggest for prophylactic use: it has no mast cell stabilization, and it can still cause drowsiness."
    ],
-   "counselSrc": "Eye slide 53; T@46866, T@51757 11/17",
+   "counselSrc": "Eye slide 53; lecture 11/17",
    "la": {
     "text": "OTC dual-acting agents: olopatadine (Pataday, Patanol), alcaftadine 0.25% and ketotifen fumarate 0.025%; prescription: azelastine, bepotastine and epinastine, each twice daily. Relief begins within minutes, up to 30 minutes. They can be used when symptoms are present or chronically, and before the season starts because preventing mast cell degranulation takes time. First line is artificial tears plus one of them.",
-    "src": "Lam Ophthalmic slides 35, 37; handout; T@26972, T@27165 11/20"
+    "src": "Lam Ophthalmic slides 35, 37; handout; lecture 11/20"
    },
    "sk": {
     "text": "Not on his assigned pages (his Exam 3 readings end at slide 48): the dual-acting agents are multi-cyclic with ionizable N and COOH groups; the SAR is not clearly stated.",
@@ -19539,17 +19539,17 @@ const DZ = {
    "brand": "",
    "sm": {
     "text": "H1 inverse agonist with mast cell stabilization, and H4 receptor antagonism (H4 is on eosinophils; this may explain its superiority in allergic conjunctivitis). Very little anticholinergic activity, little CNS penetration, low incidence of side effects.",
-    "src": "Eye slide 53; T@49053 11/17"
+    "src": "Eye slide 53; lecture 11/17"
    },
    "how": {
     "p": "sm",
     "text": "H1 inverse agonist with mast cell stabilization, and H4 receptor antagonism (H4 is on eosinophils; this may explain its superiority in allergic conjunctivitis). Very little anticholinergic activity, little CNS penetration, low incidence of side effects.",
-    "src": "Eye slide 53; T@49053 11/17"
+    "src": "Eye slide 53; lecture 11/17"
    },
    "figs": [],
    "la": {
     "text": "OTC: alcaftadine 0.25%, 1 drop in the affected eye or eyes once daily; relief within 3 minutes; ages 2 years and older. (Dr. Smith's drug chart lists alcaftadine, Lastacaft, as Rx; Dr. Lam lists it as OTC.)",
-    "src": "Lam Ophthalmic slide 37; handout; T@27562 11/20; Ophthalmics drug chart p. 3"
+    "src": "Lam Ophthalmic slide 37; handout; lecture 11/20; Ophthalmics drug chart p. 3"
    },
    "counsel": [
     "Once daily, 1 drop in the affected eye or eyes; relief begins within 3 minutes.",
@@ -19562,17 +19562,17 @@ const DZ = {
    "brand": "",
    "sm": {
     "text": "H1 inverse agonist with mast cell stabilization. Also an H2 antagonist, which may reduce eyelid edema.",
-    "src": "Eye slide 54; T@51012 11/17"
+    "src": "Eye slide 54; lecture 11/17"
    },
    "how": {
     "p": "sm",
     "text": "H1 inverse agonist with mast cell stabilization. Also an H2 antagonist, which may reduce eyelid edema.",
-    "src": "Eye slide 54; T@51012 11/17"
+    "src": "Eye slide 54; lecture 11/17"
    },
    "figs": [],
    "la": {
     "text": "Prescription dual-acting agent (recognize): 1 drop in the affected eye or eyes twice daily; she rarely sees it dispensed.",
-    "src": "Lam Ophthalmic slide 37; handout; T@28491 11/20"
+    "src": "Lam Ophthalmic slide 37; handout; lecture 11/20"
    },
    "sk": {
     "text": "Not on his assigned pages (slide 57): a multi-cyclic dual-acting agent (Elestat).",
@@ -19588,21 +19588,21 @@ const DZ = {
    "brand": "",
    "sm": {
     "text": "H1 inverse agonist without mast cell stabilization. Minimal anticholinergic effects and negligible CNS penetration, but it still causes drowsiness.",
-    "src": "Eye slide 53; T@50365, T@51757 11/17"
+    "src": "Eye slide 53; lecture 11/17"
    },
    "how": {
     "p": "sm",
     "text": "H1 inverse agonist without mast cell stabilization. Minimal anticholinergic effects and negligible CNS penetration, but it still causes drowsiness.",
-    "src": "Eye slide 53; T@50365, T@51757 11/17"
+    "src": "Eye slide 53; lecture 11/17"
    },
    "figs": [],
    "counsel": [
     "It is the ophthalmic antihistamine not suggested for prophylactic use, because it has no mast cell stabilization."
    ],
-   "counselSrc": "T@51757 11/17",
+   "counselSrc": "lecture 11/17",
    "la": {
     "text": "Cetirizine 0.24%: for mild allergic conjunctivitis; it only blocks histamine receptors, so it is not a dual-acting agent. It relieves itching and redness for a limited time and needs frequent dosing, up to four times a day (handout and her speech); the handout also gives 1 drop twice daily about 8 hours apart. No systemic adverse effects; prolonged use may cause eye irritation.",
-    "src": "Lam Ophthalmic slide 38; handout; T@29723 11/20"
+    "src": "Lam Ophthalmic slide 38; handout; lecture 11/20"
    },
    "sk": {
     "text": "Not on his assigned pages (slides 53–54): cetirizine (Zerviate) is a 2nd-generation H1 antihistamine; the SAR is deferred to the allergy lecture.",
@@ -19614,17 +19614,17 @@ const DZ = {
    "brand": "",
    "sm": {
     "text": "An alpha 2 agonist (vasoconstrictor, reduces redness) combined with an H1 antihistamine; one drop instead of two covers both approaches.",
-    "src": "Eye slide 59; T@53936, T@54340 11/17"
+    "src": "Eye slide 59; lecture 11/17"
    },
    "how": {
     "p": "sm",
     "text": "An alpha 2 agonist (vasoconstrictor, reduces redness) combined with an H1 antihistamine; one drop instead of two covers both approaches.",
-    "src": "Eye slide 59; T@53936, T@54340 11/17"
+    "src": "Eye slide 59; lecture 11/17"
    },
    "figs": [],
    "la": {
     "text": "Pheniramine maleate/naphazoline (Naphcon-A, OTC): 1–2 drops in the affected eye or eyes up to 4 times a day. Side effects: pupil dilation (anticholinergic properties), burning, stinging. She said many OTC eye products are combinations, so read the active ingredient.",
-    "src": "Lam Ophthalmic slide 37; handout; T@28491, T@29242 11/20"
+    "src": "Lam Ophthalmic slide 37; handout; lecture 11/20"
    },
    "sk": {
     "text": "Not on his assigned pages (slides 53–54): pheniramine maleate (in Opcon-A) is a first-generation H1 antihistamine with a pyridine ring, a phenyl ring and a dimethylamino group.",
@@ -19634,24 +19634,24 @@ const DZ = {
     "1–2 drops up to 4 times a day; it can dilate the pupil and cause burning and stinging.",
     "It contains a decongestant as well as an antihistamine, so read the active ingredients of each OTC eye product."
    ],
-   "counselSrc": "Lam Ophthalmic slide 37; handout; T@29242 11/20"
+   "counselSrc": "Lam Ophthalmic slide 37; handout; lecture 11/20"
   },
   "alpha2-eye": {
    "name": "Alpha 2 agonist vasoconstrictors (naphazoline, oxymetazoline, tetrahydrozoline, brimonidine tartrate, phenylephrine)",
    "brand": "",
    "sm": {
     "text": "Adrenergic receptor agonists: vasoconstrictors for local application to the nasal mucous membrane or the eye. They reduce redness, and less leaking from the capillaries reduces edema. Little difference between them for allergic conjunctivitis.",
-    "src": "Eye slides 56–57; T@52180, T@52690, T@53209 11/17"
+    "src": "Eye slides 56–57; lecture 11/17"
    },
    "how": {
     "p": "sm",
     "text": "Adrenergic receptor agonists: vasoconstrictors for local application to the nasal mucous membrane or the eye. They reduce redness, and less leaking from the capillaries reduces edema. Little difference between them for allergic conjunctivitis.",
-    "src": "Eye slides 56–57; T@52180, T@52690, T@53209 11/17"
+    "src": "Eye slides 56–57; lecture 11/17"
    },
    "figs": [],
    "la": {
     "text": "Decongestants: naphazoline (OTC), tetrahydrozoline (Visine, OTC), brimonidine 0.025% (Lumify, OTC). They reduce ocular redness as local vasoconstrictors and do not diminish the allergic response. Dosing: generally four times a day, for up to 72 hours. Beyond 72 hours: rebound conjunctival hyperemia, allergic blepharitis, possible angle-closure glaucoma, epithelial xerosis. They can raise the blood pressure through systemic absorption. She said to recognize which drugs are decongestants, and that Lumify at this strength is not for glaucoma.",
-    "src": "Lam Ophthalmic slide 39; handout; T@30078, T@31416, T@31626, T@31818 11/20"
+    "src": "Lam Ophthalmic slide 39; handout; lecture 11/20"
    },
    "sk": {
     "text": "Not on his assigned pages (slides 52 and 55): slide 55 prints the imidazoline decongestants with the mechanism of action line a1/a2 - agonists: Oxymetazoline HCl (Afrin products), Xylometazoline HCl (Clear eyes products), Tetrahydrometazoline HCl (Visine products) and Naphazoline HCl (Otrivin products). Slide 52 lists phenylephrine among the decongestants.",
@@ -19668,17 +19668,17 @@ const DZ = {
    "brand": "",
    "sm": {
     "text": "A topical corticosteroid used for its anti-inflammatory properties to treat dry eye. Corticosteroids change gene expression: fewer inflammatory genes and more anti-inflammatory genes are expressed, so the immune response decreases.",
-    "src": "Eye slide 69; T@63213, T@63574 11/17"
+    "src": "Eye slide 69; lecture 11/17"
    },
    "how": {
     "p": "sm",
     "text": "A topical corticosteroid used for its anti-inflammatory properties to treat dry eye. Corticosteroids change gene expression: fewer inflammatory genes and more anti-inflammatory genes are expressed, so the immune response decreases.",
-    "src": "Eye slide 69; T@63213, T@63574 11/17"
+    "src": "Eye slide 69; lecture 11/17"
    },
    "figs": [],
    "la": {
     "text": "Topical corticosteroids for dry eye (loteprednol, fluorometholone, dexamethasone, prednisolone): very short term; the slide gives no dose, and the handout says usually up to two weeks. Not for ocular hypertension, cataracts or active infection.",
-    "src": "Lam Ophthalmic slide 20; handout; T@15107 11/20"
+    "src": "Lam Ophthalmic slide 20; handout; lecture 11/20"
    },
    "sk": {
     "text": "Not on his assigned pages (slide 60): loteprednol has the C1–C2 alkene, 11-beta-OH, no ring halogen and a chloromethyl ester at C-17. He said he is not focusing on steroids.",
@@ -19688,19 +19688,19 @@ const DZ = {
     "Topical corticosteroids for dry eye are used for a very short time (the handout says usually up to two weeks).",
     "Not for patients with ocular hypertension, cataracts or an active infection."
    ],
-   "counselSrc": "Lam Ophthalmic slide 20; handout; T@15107 11/20"
+   "counselSrc": "Lam Ophthalmic slide 20; handout; lecture 11/20"
   },
   "lifitegrast": {
    "name": "Lifitegrast",
    "brand": "",
    "sm": {
     "text": "A lymphocyte function-associated antigen 1 (LFA-1) antagonist. LFA-1 is a cell surface protein on leukocytes; lifitegrast binds it and blocks its interaction with intercellular adhesion molecule-1 (ICAM-1), which may inhibit T-cell adhesion to ICAM-1 and the secretion of inflammatory cytokines. 1 drop in each eye twice daily, about every 12 hours. Side effects: application site irritation (5% to 25%), reduced visual acuity (5% to 25%).",
-    "src": "Eye slide 71; T@64326, T@65117, T@65285 11/17"
+    "src": "Eye slide 71; lecture 11/17"
    },
    "how": {
     "p": "sm",
     "text": "A lymphocyte function-associated antigen 1 (LFA-1) antagonist. LFA-1 is a cell surface protein on leukocytes; lifitegrast binds it and blocks its interaction with intercellular adhesion molecule-1 (ICAM-1), which may inhibit T-cell adhesion to ICAM-1 and the secretion of inflammatory cytokines. 1 drop in each eye twice daily, about every 12 hours. Side effects: application site irritation (5% to 25%), reduced visual acuity (5% to 25%).",
-    "src": "Eye slide 71; T@64326, T@65117, T@65285 11/17"
+    "src": "Eye slide 71; lecture 11/17"
    },
    "figs": [],
    "counsel": [
@@ -19708,7 +19708,7 @@ const DZ = {
     "It can discolor contact lenses.",
     "Irritation of the eye and reduced visual acuity are the common effects; some patients may not like the effect on their vision."
    ],
-   "counselSrc": "Eye slide 71; T@65285, T@65648 11/17",
+   "counselSrc": "Eye slide 71; lecture 11/17",
    "la": {
     "text": "Lifitegrast (Xiidra): 1 drop in each eye twice daily; expected length of therapy about 12 weeks. Common side effects: dysgeusia (distortion of taste), application site irritation, decreased visual acuity.",
     "src": "Lam Ophthalmic slide 19; handout"
@@ -19723,22 +19723,22 @@ const DZ = {
    "brand": "",
    "sm": {
     "text": "A nicotinic acetylcholine receptor agonist. In dry eye its effect is thought to come from agonist activity at nicotinic receptors that activates the trigeminal parasympathetic pathway, so basal tear film increases. Originally a smoking cessation drug; the 0.03-mg intranasal spray was licensed for dry eye in the final half of 2021. One spray in each nostril twice daily, about 12 hours apart. Side effects: acquired night blindness (rare), blurred vision (infrequent), retinal vascular disorder (rare), subcapsular cataract (rare), transient blindness (rare), visual disturbance (infrequent).",
-    "src": "Eye slide 73; T@66872, T@67438, T@67641, T@68262 11/17"
+    "src": "Eye slide 73; lecture 11/17"
    },
    "how": {
     "p": "sm",
     "text": "A nicotinic acetylcholine receptor agonist. In dry eye its effect is thought to come from agonist activity at nicotinic receptors that activates the trigeminal parasympathetic pathway, so basal tear film increases. Originally a smoking cessation drug; the 0.03-mg intranasal spray was licensed for dry eye in the final half of 2021. One spray in each nostril twice daily, about 12 hours apart. Side effects: acquired night blindness (rare), blurred vision (infrequent), retinal vascular disorder (rare), subcapsular cataract (rare), transient blindness (rare), visual disturbance (infrequent).",
-    "src": "Eye slide 73; T@66872, T@67438, T@67641, T@68262 11/17"
+    "src": "Eye slide 73; lecture 11/17"
    },
    "figs": [],
    "counsel": [
     "One spray in each nostril twice daily, about 12 hours apart.",
     "Acquired night blindness is rare; she said it is a reason for the patient to stop using it."
    ],
-   "counselSrc": "Eye slide 73; T@67438, T@68380 11/17",
+   "counselSrc": "Eye slide 73; lecture 11/17",
    "la": {
     "text": "Varenicline nasal spray (Tyrvaya): 1 spray in each nostril twice daily, about 12 hours apart; expected length of therapy about 4 weeks. Prime the pump 7 times into the air, away from the face; do not spray into the eye or mouth. TEAR: tilt the tip toward the ear (handout: nearest that nostril); elevate the tongue (handout: to the roof of the mouth; she said the back of the mouth); administer by pressing the applicator down completely; resist inhaling the mist, which prevents the cough. Side effects: cough, sneezing, throat irritation. She first said to shake it and then corrected herself: do not shake, pump 7 times.",
-    "src": "Lam Ophthalmic slides 21–22; handout; T@16231, T@44594 11/20"
+    "src": "Lam Ophthalmic slides 21–22; handout; lecture 11/20"
    }
   },
   "artificial-tears": {
@@ -19752,7 +19752,7 @@ const DZ = {
    "figs": [],
    "la": {
     "text": "First line for dry eye. 1–2 drops once or twice a day, typically on waking and before bed; severe cases can use 3–4 times a day up to hourly. May be continued with no set limit, depending on the response. Preservative-free is preferred for moderate to severe dry eye or a patient sensitive to preservatives. In allergic conjunctivitis they wash out the allergen and protect the ocular surface, and they are part of first line with a dual-acting agent.",
-    "src": "Lam Ophthalmic slides 14, 35, 36; handout; T@10376 11/20"
+    "src": "Lam Ophthalmic slides 14, 35, 36; handout; lecture 11/20"
    },
    "counsel": [
     "Use 1–2 drops once or twice a day; more often, even hourly, if the dryness is severe.",
@@ -19760,7 +19760,7 @@ const DZ = {
     "Choose a preservative-free product for moderate to severe dry eye or if the preservative irritates.",
     "In allergic conjunctivitis they wash out the allergen; they do not heal the eye faster or reduce viral or bacterial activity."
    ],
-   "counselSrc": "Lam Ophthalmic slides 14, 36; handout; T@10376 11/20",
+   "counselSrc": "Lam Ophthalmic slides 14, 36; handout; lecture 11/20",
    "avoid": [
     "Eye pain, ocular trauma, chemical exposure, heat exposure, blurred vision not due to an ointment, light sensitivity or eyelid infection (except a stye): refer instead of self-treating (Lam Ophthalmic slide 11)"
    ]
@@ -19776,14 +19776,14 @@ const DZ = {
    "figs": [],
    "la": {
     "text": "Instructions depend on the patient's need: as needed, twice daily or every few hours; the ointment is generally given at bedtime. Place a strip of 1/4 to 1/2 inch inside the lower eyelid, avoid touching the tube to the eye, and keep the eyes closed 1–2 minutes. The gel causes less blurry vision than the ointment and is better tolerated. In the order of application an ointment or gel-forming product goes last, at least 10 minutes after drops.",
-    "src": "Lam Ophthalmic slides 15, 44, 45, 49; handout; T@12073 11/20"
+    "src": "Lam Ophthalmic slides 15, 44, 45, 49; handout; lecture 11/20"
    },
    "counsel": [
     "Blurry vision is the main side effect, so it is generally given at bedtime.",
     "Combine an ointment with artificial tears to offset the blur; a gel blurs less.",
     "Hypersensitivity: change to a single-use or preservative-free product."
    ],
-   "counselSrc": "Lam Ophthalmic slide 15; handout; T@10376 11/20",
+   "counselSrc": "Lam Ophthalmic slide 15; handout; lecture 11/20",
    "avoid": [
     "Blurred vision not due to an ointment is an exclusion for self-treatment (Lam Ophthalmic slide 11)"
    ]
@@ -19800,14 +19800,14 @@ const DZ = {
    "figs": [],
    "la": {
     "text": "Used for allergic conjunctivitis when systemic symptoms accompany the eye symptoms, or when symptoms persist with a topical antihistamine or mast cell stabilizer (slide 40); in her speech and the handout, when the patient is not responding to the ophthalmic solutions. Oral antihistamines can dry the eye.",
-    "src": "Lam Ophthalmic slide 40; handout; T@32498 11/20"
+    "src": "Lam Ophthalmic slide 40; handout; lecture 11/20"
    },
    "counsel": [
     "Use when the eye drops are not enough or when other allergy symptoms are present.",
     "Oral antihistamines can dry the eyes.",
     "If there is no benefit after 72 hours of appropriate treatment, see a provider."
    ],
-   "counselSrc": "Lam Ophthalmic slides 40, 41; handout; T@32648 11/20"
+   "counselSrc": "Lam Ophthalmic slides 40, 41; handout; lecture 11/20"
   },
   "olopatadine": {
    "name": "Olopatadine (Pataday, Patanol)",
@@ -19824,14 +19824,14 @@ const DZ = {
    },
    "la": {
     "text": "OTC dual-acting agent. Several strengths: the 0.1% (Pataday Twice Daily Relief, Patanol) is 1 drop twice daily, 6–8 hours apart; the 0.2% and 0.7% (Pataday, Pataday Extra Strength) are once daily. Ages 2 years and older. She said she will not test which strength is which. (Dr. Smith's drug chart lists olopatadine, Pataday, as Rx; Dr. Lam lists it as OTC.)",
-    "src": "Lam Ophthalmic slide 37; handout; T@27562 11/20; Ophthalmics drug chart p. 3"
+    "src": "Lam Ophthalmic slide 37; handout; lecture 11/20; Ophthalmics drug chart p. 3"
    },
    "counsel": [
     "Some strengths are once a day and some twice a day; follow the label of the product chosen.",
     "For ages 2 years and older.",
     "If the patient also uses a gel such as timolol gel, put the Pataday in first and wait 10 minutes before the gel."
    ],
-   "counselSrc": "Lam Ophthalmic slides 37, 44, 45; handout; T@27562, T@41604 11/20"
+   "counselSrc": "Lam Ophthalmic slides 37, 44, 45; handout; lecture 11/20"
   },
   "ketotifen": {
    "name": "Ketotifen fumarate",
@@ -19848,7 +19848,7 @@ const DZ = {
    },
    "la": {
     "text": "OTC dual-acting agent, ketotifen 0.025%: 1 drop in the affected eye or eyes twice daily, about 8–12 hours apart; relief within minutes, often within 30 minutes, and the effect may last up to 12 hours from one dose. Ages 3 years and older.",
-    "src": "Lam Ophthalmic slide 37; handout; T@28491 11/20; Ophthalmics drug chart p. 3 (brands)"
+    "src": "Lam Ophthalmic slide 37; handout; lecture 11/20; Ophthalmics drug chart p. 3 (brands)"
    },
    "sk": {
     "text": "Not on his assigned pages (slide 57): ketotifen fumarate (Zaditor) is a multi-cyclic dual-acting agent.",
@@ -19879,7 +19879,7 @@ const DZ = {
    "brand": "",
    "la": {
     "text": "First step for tooth hypersensitivity: a soft-bristle toothbrush with standard fluoride toothpaste for 7 days. She said it helps the surface of the enamel.",
-    "src": "Lam Oral slides 14, 15; T@48912 11/20"
+    "src": "Lam Oral slides 14, 15; lecture 11/20"
    },
    "sk": {
     "text": "Fluoride ions from toothpastes and gels (Na2PO3F, SnF2, NaF) convert enamel hydroxyapatite, Ca10(PO4)6(OH)2, into fluorapatite, Ca10(PO4)6F2, which is more resistant to acid erosion; they also enhance mineral deposition. More than 2 mg/L can cause enamel fluorosis.",
@@ -19890,7 +19890,7 @@ const DZ = {
     "Do not brush for 30-60 minutes after acidic food or drinks.",
     "If the pain is not better after one week, the next step is a desensitizing toothpaste."
    ],
-   "counselSrc": "Lam Oral slides 14, 15; T@47988, T@54083 11/20",
+   "counselSrc": "Lam Oral slides 14, 15; lecture 11/20",
    "how": {
     "p": "sk",
     "text": "Fluoride ions convert hydroxyapatite into fluorapatite, which resists acid erosion, and enhance mineral deposition (remineralization).",
@@ -19903,7 +19903,7 @@ const DZ = {
    "brand": "",
    "la": {
     "text": "Desensitizing toothpaste active: depolarizes the excited nerves in the tubules. Not for children under 12 years: children swallow toothpaste, with a higher risk of electrolyte problems.",
-    "src": "Lam Oral slide 15; handout p. 4; T@50194 11/20"
+    "src": "Lam Oral slide 15; handout p. 4; lecture 11/20"
    },
    "counsel": [
     "A single application has no effect: use it continuously.",
@@ -19911,7 +19911,7 @@ const DZ = {
     "It may take 4-6 weeks to see the benefit; continue until the sensitivity subsides or as long as the dentist recommends.",
     "See a dentist if pain persists or worsens, or new symptoms develop after 4-6 weeks."
    ],
-   "counselSrc": "Lam Oral slides 17, 18; handout p. 4; T@50656-T@51140 11/20",
+   "counselSrc": "Lam Oral slides 17, 18; handout p. 4; lecture 11/20",
    "avoid": [
     "Children younger than 12 years"
    ],
@@ -19989,7 +19989,7 @@ const DZ = {
    "brand": "",
    "la": {
     "text": "Canker sore: benzocaine 10-20% (slide 34; handout 5-20%), apply up to 4 times a day as needed, age over 2 years. Cold sore: 5-20% in the handout; her practice key counts benzocaine 5% gel, a thin layer 3-4 times after a meal, as right (she said plus or minus). It relieves pain only; it does not reduce the duration.",
-    "src": "Lam Oral slides 34, 54; handout pp. 7, 11; T@62128, T@84973 11/20"
+    "src": "Lam Oral slides 34, 54; handout pp. 7, 11; lecture 11/20"
    },
    "sk": {
     "text": "A local anesthetic in gels or combination agents. Methemoglobinemia is rare but a concern: CYP enzymes convert benzocaine to benzocaine hydroxylamine.",
@@ -20000,7 +20000,7 @@ const DZ = {
     "Avoid eating or drinking for at least 30 minutes after application.",
     "Do not combine with menthol, phenol or camphor: tissue irritation and damage."
    ],
-   "counselSrc": "Lam Oral slides 34, 54; T@62128-T@62416, T@80308 11/20",
+   "counselSrc": "Lam Oral slides 34, 54; lecture 11/20",
    "avoid": [
     "Combination with menthol, phenol or camphor (tissue irritation)",
     "Children under 2 years (handout)"
@@ -20021,7 +20021,7 @@ const DZ = {
     "Apply to the sore up to 4 times a day as needed; avoid eating or drinking for 30 minutes.",
     "Do not combine with menthol, phenol or camphor."
    ],
-   "counselSrc": "Lam Oral slide 34; T@62128 11/20",
+   "counselSrc": "Lam Oral slide 34; lecture 11/20",
    "avoid": [
     "Combination with menthol, phenol or camphor"
    ],
@@ -20035,7 +20035,7 @@ const DZ = {
    "brand": "",
    "la": {
     "text": "Cleanses the sore and relieves discomfort. Direct application: apply to the area, leave 1 minute, spit out. Rinse: a few drops on the tongue, mix with saliva, swish 1 minute. She said 1 or 2 minutes for direct application aloud.",
-    "src": "Lam Oral slide 35; handout p. 7; T@63829 11/20"
+    "src": "Lam Oral slide 35; handout p. 7; lecture 11/20"
    },
    "sk": {
     "text": "Carbamide peroxide (10%) is used as a mouth rinse for canker sores.",
@@ -20046,7 +20046,7 @@ const DZ = {
     "Avoid eating or drinking for at least 30 minutes afterwards.",
     "Use for up to 7 days: longer use lets opportunistic organisms grow (black hairy tongue); prolonged use causes tooth sensitivity and soft tissue irritation."
    ],
-   "counselSrc": "Lam Oral slide 36; handout p. 7; T@64264-T@64900 11/20",
+   "counselSrc": "Lam Oral slide 36; handout p. 7; lecture 11/20",
    "avoid": [
     "Use beyond 7 days"
    ],
@@ -20060,14 +20060,14 @@ const DZ = {
    "brand": "",
    "la": {
     "text": "1.5%: direct application to the sore, leave 1 minute, spit. 3%: swish for one minute (the handout adds: mix with an equal amount of water before rinsing). She mentioned a home-made 3% or 5% rinse and was unsure aloud.",
-    "src": "Lam Oral slide 35; handout p. 7; T@63359 11/20"
+    "src": "Lam Oral slide 35; handout p. 7; lecture 11/20"
    },
    "counsel": [
     "Use after meals, 3-4 times a day; avoid eating or drinking for at least 30 minutes after.",
     "Use for up to 7 days.",
     "It can irritate enamel and soft tissue: with sensitive teeth, use the applicator, not the rinse."
    ],
-   "counselSrc": "Lam Oral slide 36; T@65066, T@67096 11/20",
+   "counselSrc": "Lam Oral slide 36; lecture 11/20",
    "avoid": [
     "Use beyond 7 days",
     "Rinse in a patient with tooth hypersensitivity"
@@ -20082,14 +20082,14 @@ const DZ = {
    "brand": "",
    "la": {
     "text": "Coats and protects the sore; a barrier forms and dissolves in 8-12 hours. Use up to 3-4 times a day after meals; avoid drinking for up to 30 minutes. Placement time: slide 37 prints 10-20 seconds; the handout and her speech say 10-20 minutes.",
-    "src": "Lam Oral slide 37; handout p. 8; T@65817 11/20"
+    "src": "Lam Oral slide 37; handout p. 8; lecture 11/20"
    },
    "counsel": [
     "Place it against the sore long enough to adhere (slide 37: 10-20 seconds; handout and speech: 10-20 minutes).",
     "It dissolves by itself in 8-12 hours; use up to 3-4 times a day after meals.",
     "Avoid drinking for up to 30 minutes."
    ],
-   "counselSrc": "Lam Oral slide 37; handout p. 8; T@65817 11/20",
+   "counselSrc": "Lam Oral slide 37; handout p. 8; lecture 11/20",
    "how": {
     "none": true
    },
@@ -20100,7 +20100,7 @@ const DZ = {
    "brand": "",
    "la": {
     "text": "Saline: 1-3 teaspoons of salt in 4-8 ounces of warm water; any salt. Baking soda paste: apply to the lesion for a few minutes. Use up to 4 times a day. An antiseptic rinse such as Listerine is another option.",
-    "src": "Lam Oral slide 38; handout p. 8; T@66281-T@66756 11/20"
+    "src": "Lam Oral slide 38; handout p. 8; lecture 11/20"
    },
    "sk": {
     "text": "Listerine contains thymol, eucalyptol, methyl salicylate and menthol; sodium bicarbonate raises saliva pH and lowers growth of acidic bacteria.",
@@ -20121,12 +20121,12 @@ const DZ = {
    "brand": "",
    "la": {
     "text": "For additional pain relief in canker sores and cold sores. Aspirin tablets are not held in the mouth or on the lesion: chemical burn with tissue damage.",
-    "src": "Lam Oral slides 39, 55; handout pp. 8, 11; T@69759, T@80499 11/20"
+    "src": "Lam Oral slides 39, 55; handout pp. 8, 11; lecture 11/20"
    },
    "counsel": [
     "Swallow the tablet; never hold aspirin against the sore."
    ],
-   "counselSrc": "Lam Oral slide 39; T@69759 11/20",
+   "counselSrc": "Lam Oral slide 39; lecture 11/20",
    "avoid": [
     "Aspirin held in the mouth: chemical burn"
    ],
@@ -20140,7 +20140,7 @@ const DZ = {
    "brand": "Abreva",
    "la": {
     "text": "First-line topical antiviral for a cold sore: reduces the duration and severity of symptoms. Apply at the first sign (prodrome), up to 5 times a day until the lesion heals, up to 10 days.",
-    "src": "Lam Oral slides 51-53; handout p. 11; T@78159-T@79314 11/20"
+    "src": "Lam Oral slides 51-53; handout p. 11; lecture 11/20"
    },
    "counsel": [
     "Start at the first tingling or burning, before a blister: the earlier, the better.",
@@ -20148,11 +20148,11 @@ const DZ = {
     "It still helps once the lesion is present.",
     "Keep the sore clean, wash the hands often and keep the skin moist."
    ],
-   "counselSrc": "Lam Oral slides 50, 53; T@78879-T@79314 11/20",
+   "counselSrc": "Lam Oral slides 50, 53; lecture 11/20",
    "how": {
     "p": "la",
     "text": "Inhibits direct fusion between the herpesvirus and the human cell plasma membrane, so the virus does not replicate (handout); she said it prevents the virus from attaching to the human cell.",
-    "src": "Lam handout p. 11; T@78454 11/20"
+    "src": "Lam handout p. 11; lecture 11/20"
    },
    "figs": []
   },
@@ -20161,7 +20161,7 @@ const DZ = {
    "brand": "",
    "la": {
     "text": "In a cold sore, camphor above 3% and menthol above 1% are contraindicated: counterirritant effect; irritating at higher concentration. Vicks rub has about 5% camphor. In a canker sore, anesthetics are not combined with menthol, phenol or camphor.",
-    "src": "Lam Oral slides 34, 54; handout p. 11; T@79739-T@80226 11/20"
+    "src": "Lam Oral slides 34, 54; handout p. 11; lecture 11/20"
    },
    "avoid": [
     "Camphor above 3% in a cold sore",
@@ -20177,13 +20177,13 @@ const DZ = {
    "brand": "",
    "la": {
     "text": "Only for a suspected secondary bacterial infection: the lesion is not forming a mature lesion, with no crusting, and is still red.",
-    "src": "Lam Oral slides 51, 56; handout p. 11; T@80604 11/20"
+    "src": "Lam Oral slides 51, 56; handout p. 11; lecture 11/20"
    },
    "counsel": [
     "Apply a thin layer 3-4 times a day.",
     "Follow up with the PCP."
    ],
-   "counselSrc": "Lam Oral slide 56; T@80604-T@81119 11/20",
+   "counselSrc": "Lam Oral slide 56; lecture 11/20",
    "how": {
     "none": true
    },
@@ -20194,7 +20194,7 @@ const DZ = {
    "brand": "",
    "la": {
     "text": "Do not recommend: the herpes virus does not respond to corticosteroids (HSL is not a steroid-responsive dermatosis), and topical steroids are highly astringent. Her practice key leaves hydrocortisone 1% ointment out.",
-    "src": "Lam Oral slide 58; handout p. 12; T@81857 11/20"
+    "src": "Lam Oral slide 58; handout p. 12; lecture 11/20"
    },
    "avoid": [
     "Cold sore: do not recommend"
@@ -20209,7 +20209,7 @@ const DZ = {
    "brand": "",
    "la": {
     "text": "Not enough data to justify use; the guidelines do not recommend them to prevent or treat cold sores. Handout: tea tree oil has some in vitro activity against HSV; lysine may reduce the frequency of outbreaks, data conflicting; zinc cream and aloe vera gel have shown some efficacy.",
-    "src": "Lam Oral slide 57; handout p. 11; T@81119-T@81468 11/20"
+    "src": "Lam Oral slide 57; handout p. 11; lecture 11/20"
    },
    "avoid": [
     "Not recommended for cold sores"
@@ -20224,7 +20224,7 @@ const DZ = {
    "brand": "",
    "la": {
     "text": "Replacement therapy for dry mouth, not a cure: it lacks the protective components of the natural saliva. Sprays, gels, gums, toothpaste. Gel: place 1/2 inch on the tongue and spread it. Use at any time, at a minimum after meals and before bed. Ingredients: isomalt, xylitol, glucose oxidase, sodium carboxymethylcellulose*, sorbitol, sodium monofluorophosphate*; avoid * products on a sodium-restricted diet.",
-    "src": "Lam Oral slides 82, 83; handout p. 15; T@89229-T@90208 11/20"
+    "src": "Lam Oral slides 82, 83; handout p. 15; lecture 11/20"
    },
    "sk": {
     "text": "Sodium monofluorophosphate (Na2PO3F) is one of the fluoride sources on his slide 17.",
@@ -20250,17 +20250,17 @@ const DZ = {
    "brand": "Debrox",
    "sk": {
     "text": "A 1:1 urea-hydrogen peroxide complex. It dissociates to release H2O2, which generates effervescing O2; the effervescence breaks up the wax. Catalase, also present in cerumen, breaks H2O2 into O2 and water, and the urea stabilizes the H2O2. Listed on slide 6 under nonwater, nonoil based preparations.",
-    "src": "Sikazwe OOO slides 6, 8; T@8076, T@8338, T@9225 11/18"
+    "src": "Sikazwe OOO slides 6, 8; lecture 11/18"
    },
    "how": {
     "p": "sk",
     "text": "A 1:1 urea-hydrogen peroxide complex. It dissociates to release H2O2, which generates effervescing O2; the effervescence breaks up the wax. Catalase, also present in cerumen, breaks H2O2 into O2 and water, and the urea stabilizes the H2O2.",
-    "src": "Sikazwe OOO slide 8; T@8076, T@8338, T@9225 11/18"
+    "src": "Sikazwe OOO slide 8; lecture 11/18"
    },
    "figs": [],
    "la": {
     "text": "FDA-approved nonprescription product for hardened or impacted cerumen. 5-10 drops into the affected ear(s), remaining in the canal for several minutes; twice daily for up to four days. Can be used alone or with warm-water irrigation; remaining cerumen is removed with gentle warm-water irrigation with a rubber otic bulb syringe. Contact the primary care provider if symptoms persist after four days.",
-    "src": "Lam Otic slide 14, 16; handout pp. 3-4; T@94692, T@95193, T@95428, T@96267 11/20"
+    "src": "Lam Otic slide 14, 16; handout pp. 3-4; lecture 11/20"
    },
    "counsel": [
     "Put 5-10 drops in the affected ear(s) and keep them in the canal for several minutes; a cotton ball may be recommended to keep the drops in place.",
@@ -20269,7 +20269,7 @@ const DZ = {
     "Loosened wax can be removed with gentle warm-water irrigation with a rubber otic bulb syringe.",
     "If symptoms persist after 4 days, contact the primary care provider."
    ],
-   "counselSrc": "Lam Otic slides 14, 16, 33; handout pp. 3-4, 7; T@95193 11/20",
+   "counselSrc": "Lam Otic slides 14, 16, 33; handout pp. 3-4, 7; lecture 11/20",
    "avoid": [
     "Signs of infection or ear discharge, pain with discharge, bleeding or signs of trauma, a ruptured tympanic membrane (slide 10)",
     "Tympanostomy tube(s) present; ear surgery within 6 weeks (slide 10)",
@@ -20283,12 +20283,12 @@ const DZ = {
    "how": {
     "p": "la",
     "text": "An alcohol that acts as a drying agent in the ear canal.",
-    "src": "Lam Otic slide 31; handout p. 6; T@99315 11/20"
+    "src": "Lam Otic slide 31; handout p. 6; lecture 11/20"
    },
    "figs": [],
    "la": {
-    "text": "Drying drops for a water-clogged ear. Slide 31: isopropyl alcohol 95% in anhydrous glycerin 5%; no minimum age; instill 4-5 drops in the affected ear. She said 70% concentration (T@99315 11/20); the handout says concentrations greater than 70% alcohol are also effective skin disinfectants (p. 6). Adults lie down, drip, put cotton over the ear and leave it for a few minutes; children are held still for a few minutes so the solution does not drip out (T@99554, T@99717 11/20). Refer if there is no benefit after several days of use (slide 34); spoken: 7 days.",
-    "src": "Lam Otic slides 31, 33-34; handout pp. 6-7; T@99315, T@99397, T@99431, T@99554, T@100235 11/20"
+    "text": "Drying drops for a water-clogged ear. Slide 31: isopropyl alcohol 95% in anhydrous glycerin 5%; no minimum age; instill 4-5 drops in the affected ear. She said 70% concentration (lecture 11/20); the handout says concentrations greater than 70% alcohol are also effective skin disinfectants (p. 6). Adults lie down, drip, put cotton over the ear and leave it for a few minutes; children are held still for a few minutes so the solution does not drip out (lecture 11/20). Refer if there is no benefit after several days of use (slide 34); spoken: 7 days.",
+    "src": "Lam Otic slides 31, 33-34; handout pp. 6-7; lecture 11/20"
    },
    "counsel": [
     "Put 4-5 drops in the affected ear.",
@@ -20297,7 +20297,7 @@ const DZ = {
     "See the primary care provider if there is no benefit after several days of use (spoken: 7 days).",
     "Stop and see a provider for pain, burning or irritation with the medicine, ear drainage or discharge, dizziness or recent ear surgery (slide 34)."
    ],
-   "counselSrc": "Lam Otic slides 31, 33-34; T@99554, T@100235 11/20",
+   "counselSrc": "Lam Otic slides 31, 33-34; lecture 11/20",
    "avoid": [
     "Signs of infection or ear discharge, pain with discharge, dizziness, bleeding or signs of trauma, a ruptured tympanic membrane (slide 26)",
     "Tympanostomy tube(s) present; ear surgery within 6 weeks (slide 26)",
@@ -20308,23 +20308,23 @@ const DZ = {
    "name": "Docusate sodium (Colace), water-based cerumenolytic",
    "brand": "Colace",
    "sk": {
-    "text": "A water-based cerumenolytic (slide 6). An anionic surfactant (-SO3H on the slide) that increases water entry to emulsify cerumen: it lowers surface tension between water and cerumen by dissolving in both media through lipophilic and hydrophilic functional groups (slide 7). It is a stool softener on the slide. It is a topical agent; an ionic molecule is not expected to be absorbed well, so systemic effects are not a worry (T@7059 11/18).",
-    "src": "Sikazwe OOO slides 6-7; T@4901, T@5934, T@7059 11/18"
+    "text": "A water-based cerumenolytic (slide 6). An anionic surfactant (-SO3H on the slide) that increases water entry to emulsify cerumen: it lowers surface tension between water and cerumen by dissolving in both media through lipophilic and hydrophilic functional groups (slide 7). It is a stool softener on the slide. It is a topical agent; an ionic molecule is not expected to be absorbed well, so systemic effects are not a worry (lecture 11/18).",
+    "src": "Sikazwe OOO slides 6-7; lecture 11/18"
    },
    "how": {
     "p": "sk",
     "text": "An anionic surfactant that increases water entry to emulsify cerumen by lowering surface tension between water and cerumen; it dissolves in both media through lipophilic and hydrophilic functional groups.",
-    "src": "Sikazwe OOO slide 7; T@5934 11/18"
+    "src": "Sikazwe OOO slide 7; lecture 11/18"
    },
    "figs": [],
    "la": {
     "text": "Not recommended. Her handout lists docusate sodium among the water-based agents (with choline salicylate and phenazole) whose evidence suggests they are no more effective than water; she said the water-based and oil-based agents are not recommended anymore and carbamide peroxide is the only product to recommend.",
-    "src": "Lam handout p. 4; slide 15; T@95576 11/20"
+    "src": "Lam handout p. 4; slide 15; lecture 11/20"
    },
    "counsel": [
     "Dr. Lam does not recommend water-based or oil-based cerumenolytics; the nonprescription product she recommends is carbamide peroxide 6.5% in anhydrous glycerin."
    ],
-   "counselSrc": "Lam Otic slide 15; handout p. 4; T@95576 11/20",
+   "counselSrc": "Lam Otic slide 15; handout p. 4; lecture 11/20",
    "avoid": [
     "Not recommended by Dr. Lam; Dr. Sikazwe's slide 6 groups choline salicylate (Audax) as nonwater, nonoil, while her handout lists choline salicylate as water-based"
    ]
@@ -20789,32 +20789,32 @@ const DZ = {
   "iop": [
    "Intraocular pressure (IOP)",
    "The pressure inside the eyeball. In glaucoma it increases, and over time it can damage the optic nerve.",
-   "Eye slide 13; T@19603 11/13"
+   "Eye slide 13; lecture 11/13"
   ],
   "aqueous-humor": [
    "Aqueous humor",
    "The liquid the ciliary body makes all the time. It fills the anterior chamber and drains out of the eye through the angle.",
-   "T@26683 11/13"
+   "lecture 11/13"
   ],
   "ciliary-body": [
    "Ciliary body",
    "A ring behind the iris, with smooth muscle and blood vessels. It holds the lens by ligaments and makes the aqueous humor.",
-   "T@8949, T@24649 11/13"
+   "lecture 11/13"
   ],
   "trabecular-meshwork": [
    "Trabecular meshwork",
    "A spongy, porous tissue around the opening of Schlemm’s canal. Most aqueous humor leaves through it into the canal, and then the veins.",
-   "T@32669 11/13"
+   "lecture 11/13"
   ],
   "uveoscleral": [
    "Uveoscleral outflow",
    "The smaller outflow route: aqueous humor squeezes between the uvea (ciliary body, its ligaments and the iris) and the sclera.",
-   "T@30729 11/13"
+   "lecture 11/13"
   ],
   "mast-cell": [
    "Mast cell",
    "A cell that stores histamine in granules. Antigen interacting with IgE on its surface releases the histamine.",
-   "Eye slide 48; T@41030 11/17"
+   "Eye slide 48; lecture 11/17"
   ],
   "inverse-agonist": [
    "Constitutive activity",
@@ -20824,17 +20824,17 @@ const DZ = {
   "mcs": [
    "Mast cell stabilization",
    "Reduces the release of mast cell mediators during an allergic response and is anti-inflammatory. How it works is still unclear.",
-   "Eye slide 51; T@44898 11/17"
+   "Eye slide 51; lecture 11/17"
   ],
   "ksc": [
    "Keratoconjunctivitis sicca",
    "The name for dry eye: inflammation with reduced tear production.",
-   "Eye slide 62; T@56078 11/17"
+   "Eye slide 62; lecture 11/17"
   ],
   "cyclophilin": [
    "Cyclophilin",
    "The protein cyclosporine binds; the cyclosporine–cyclophilin complex inhibits calcineurin.",
-   "Eye slide 66; T@60561 11/17"
+   "Eye slide 66; lecture 11/17"
   ],
   "lfa-1": [
    "LFA-1",
@@ -20849,7 +20849,7 @@ const DZ = {
   "dual-acting": [
    "Dual-acting agent",
    "Her short name for an ophthalmic antihistamine, mast cell stabilizer and histamine type 1 receptor antagonist in one drop.",
-   "Lam Ophthalmic slide 35; T@25400 11/20"
+   "Lam Ophthalmic slide 35; lecture 11/20"
   ],
   "xerosis": [
    "Epithelial xerosis",
@@ -20869,7 +20869,7 @@ const DZ = {
   "prodrome": [
    "Prodrome",
    "Symptoms a patient may feel before the lesion appears, such as burning, tingling or itching.",
-   "Lam Oral slide 27; T@58338 11/20"
+   "Lam Oral slide 27; lecture 11/20"
   ],
   "latency": [
    "Latent",
@@ -20884,7 +20884,7 @@ const DZ = {
   "or-astringent": [
    "Highly astringent",
    "The reason she gave against topical steroids on a cold sore: it irritates the skin.",
-   "Lam Oral slide 58; T@81882 11/20"
+   "Lam Oral slide 58; lecture 11/20"
   ],
   "xerostomia": [
    "Xerostomia",
@@ -20894,22 +20894,22 @@ const DZ = {
   "cerumen": [
    "Cerumen (earwax)",
    "Lubricates the canal, traps foreign material and acts as a waterproof barrier to pathogen entry; its acidic pH and antimicrobial substances inhibit bacterial and fungal growth.",
-   "Lam Otic slide 7; handout p. 2; T@91343, T@91760 11/20"
+   "Lam Otic slide 7; handout p. 2; lecture 11/20"
   ],
   "eac": [
    "External auditory canal (EAC)",
    "The canal that leads from the outer ear to the tympanic membrane; wax and water build up there.",
-   "Lam Otic slides 4, 7; handout p. 2; T@90689 11/20"
+   "Lam Otic slides 4, 7; handout p. 2; lecture 11/20"
   ],
   "tm": [
    "Tympanic membrane (eardrum)",
    "Conducts sound to the middle ear; the goal of treatment is not to damage it.",
-   "Lam Otic slide 4; handout p. 2; T@90689 11/20"
+   "Lam Otic slide 4; handout p. 2; lecture 11/20"
   ],
   "swimmers-ear": [
    "Swimmer's ear (external otitis)",
    "An ear infection with acute-onset pain (mild to severe), itching, clear discharge and a swollen ear canal; it is not treated with the self-care products.",
-   "Lam Otic slide 23; T@97615 11/20"
+   "Lam Otic slide 23; lecture 11/20"
   ]
  },
  "tell": [
@@ -21761,7 +21761,7 @@ const DZ = {
     ]
    ],
    "photo": "corn-callus-foot",
-   "src": "Patel Warts slides 5, 10, 13, 17; 11/12 lecture T@88664–90006",
+   "src": "Patel Warts slides 5, 10, 13, 17; 11/12 lecture ",
    "exams": [
     2
    ]
@@ -21835,7 +21835,7 @@ const DZ = {
      "\"Anything besides minor would be straight referral.\""
     ]
    ],
-   "src": "Patel Wound slides 7, 16–17; 11/12 lecture T@83577–84806",
+   "src": "Patel Wound slides 7, 16–17; 11/12 lecture ",
    "exams": [
     2
    ]
@@ -21903,7 +21903,7 @@ const DZ = {
     ]
    ],
    "photo": "wound-stages",
-   "src": "Patel Wound slide 5; 11/12 lecture T@78420, T@79102",
+   "src": "Patel Wound slide 5; 11/12 lecture ",
    "exams": [
     2
    ]
@@ -21981,7 +21981,7 @@ const DZ = {
      ]
     ]
    ],
-   "src": "Patel Warts slides 10, 17; 11/12 lecture T@91458–91887, T@94581",
+   "src": "Patel Warts slides 10, 17; 11/12 lecture ",
    "exams": [
     2
    ]
@@ -22054,7 +22054,7 @@ const DZ = {
      ]
     ]
    ],
-   "src": "Patel Sun slides 16–18; T@53859, T@55166; Smith Sun slides 20–25; Sikazwe DPAW pages 61–65",
+   "src": "Patel Sun slides 16–18; Smith Sun slides 20–25; Sikazwe DPAW pages 61–65",
    "exams": [
     1,
     2
@@ -22181,7 +22181,7 @@ const DZ = {
      "Both: the goal is to decrease the IOP to delay or prevent progression."
     ]
    ],
-   "src": "Eye slide 13; T@20737, T@23370 11/13",
+   "src": "Eye slide 13; lecture 11/13",
    "exams": [
     3
    ]
@@ -22239,7 +22239,7 @@ const DZ = {
      "Beta receptor antagonists have not much effect on outflow."
     ]
    ],
-   "src": "Eye slides 11, 18, 22, 26, 32, 34, 37, 41; T@43081, T@44430 11/13",
+   "src": "Eye slides 11, 18, 22, 26, 32, 34, 37, 41; lecture 11/13",
    "exams": [
     3
    ]
@@ -22289,7 +22289,7 @@ const DZ = {
      ]
     ]
    ],
-   "src": "Eye slides 51–57, 59; T@46866, T@52690 11/17",
+   "src": "Eye slides 51–57, 59; lecture 11/17",
    "exams": [
     3
    ]
@@ -22358,7 +22358,7 @@ const DZ = {
      ]
     ]
    ],
-   "src": "Eye slides 64–73; T@58455, T@63574, T@65117, T@67438 11/17",
+   "src": "Eye slides 64–73; lecture 11/17",
    "exams": [
     3
    ]
@@ -22397,7 +22397,7 @@ const DZ = {
       "Not listed",
       "Not listed"
      ],
-     "Itching is the finding that separates allergic from bacterial and viral conjunctivitis (T@22420 11/20)"
+     "Itching is the finding that separates allergic from bacterial and viral conjunctivitis (lecture 11/20)"
     ],
     [
      "Gritty, sandy or foreign body feeling",
@@ -22436,7 +22436,7 @@ const DZ = {
      ]
     ]
    ],
-   "src": "Lam Ophthalmic slides 7, 10, 28, 29, 34, 35; T@22420 11/20",
+   "src": "Lam Ophthalmic slides 7, 10, 28, 29, 34, 35; lecture 11/20",
    "exams": [
     3
    ]
@@ -22499,7 +22499,7 @@ const DZ = {
      ]
     ]
    ],
-   "src": "Lam Ophthalmic slides 35, 37, 39, 40; handout; T@30078, T@31416, T@32498 11/20",
+   "src": "Lam Ophthalmic slides 35, 37, 39, 40; handout; lecture 11/20",
    "exams": [
     3
    ]
@@ -22562,7 +22562,7 @@ const DZ = {
      ]
     ]
    ],
-   "src": "Lam Ophthalmic slides 14, 15; handout; T@10376, T@12073 11/20",
+   "src": "Lam Ophthalmic slides 14, 15; handout; lecture 11/20",
    "exams": [
     3
    ]
@@ -22631,7 +22631,7 @@ const DZ = {
      ]
     ]
    ],
-   "src": "Lam Glaucoma slides 19, 31, 33, 41, 43, 51, 52, 63; handout; T@47757, T@84272 11/19",
+   "src": "Lam Glaucoma slides 19, 31, 33, 41, 43, 51, 52, 63; handout; lecture 11/19",
    "exams": [
     3
    ]
@@ -22717,7 +22717,7 @@ const DZ = {
      "Slides 29, 40, 49, 60"
     ]
    ],
-   "src": "Lam Oral slides 26-27, 29, 33, 40, 43-49, 51, 59-60; handout pp. 5, 9; T@73857 11/20",
+   "src": "Lam Oral slides 26-27, 29, 33, 40, 43-49, 51, 59-60; handout pp. 5, 9; lecture 11/20",
    "exams": [
     3
    ]
@@ -22784,10 +22784,10 @@ const DZ = {
       "Soft-bristle brush with standard fluoride 7 days, then a desensitizing toothpaste",
       "None over the counter; the dentist cleans it out"
      ],
-     "Slides 15, 11; T@46516"
+     "Slides 15, 11"
     ]
    ],
-   "src": "Lam Oral slides 9, 11, 15; handout pp. 2-3; T@46304-T@46667, T@55389 11/20",
+   "src": "Lam Oral slides 9, 11, 15; handout pp. 2-3; lecture 11/20",
    "exams": [
     3
    ]
@@ -22860,7 +22860,7 @@ const DZ = {
      ]
     ]
    ],
-   "src": "Lam Otic slide 23; handout p. 5; T@97359, T@97615 11/20",
+   "src": "Lam Otic slide 23; handout p. 5; lecture 11/20",
    "exams": [
     3
    ]
@@ -22991,11 +22991,11 @@ const DZ = {
      "After the drops",
      [
       "Gently push the ear flap; stay down at least {{2 minutes}}",
-      "Hold still for a few minutes so the solution does not drip out (T@99717 11/20)"
+      "Hold still for a few minutes so the solution does not drip out (lecture 11/20)"
      ]
     ]
    ],
-   "src": "Lam Otic slide 33; handout p. 7; T@99554, T@99717 11/20",
+   "src": "Lam Otic slide 33; handout p. 7; lecture 11/20",
    "exams": [
     3
    ]
@@ -23505,7 +23505,7 @@ const DZ = {
    "profs": [
     [
      "pa",
-     "Warts slide 10 against slide 17. \"Pay attention to how many days you're using the products for\" (T@94913)."
+     "Warts slide 10 against slide 17. \"Pay attention to how many days you're using the products for\"."
     ],
     [
      "sm",
@@ -23531,7 +23531,7 @@ const DZ = {
    "profs": [
     [
      "pa",
-     "Warts slide 11; T@92344–92487."
+     "Warts slide 11."
     ]
    ],
    "exams": [
@@ -23552,7 +23552,7 @@ const DZ = {
    "profs": [
     [
      "pa",
-     "Wound slide 16. \"A minor BSA in an adult is less than 15%, in a child is less than 10%\" (T@83577)."
+     "Wound slide 16. \"A minor BSA in an adult is less than 15%, in a child is less than 10%\"."
     ]
    ],
    "exams": [
@@ -23573,7 +23573,7 @@ const DZ = {
    "profs": [
     [
      "pa",
-     "Sun slides 21, 36. \"For her questions, pay attention to what she's focused on. For my questions, recommendation in terms of treatment\" (T@56238)."
+     "Sun slides 21, 36. \"For her questions, pay attention to what she's focused on. For my questions, recommendation in terms of treatment\"."
     ],
     [
      "sm",
@@ -23603,7 +23603,7 @@ const DZ = {
    "profs": [
     [
      "sm",
-     "Brimonidine is the better long-term choice (slide 23; T@51660 11/13)."
+     "Brimonidine is the better long-term choice (slide 23; lecture 11/13)."
     ]
    ],
    "exams": [
@@ -23624,7 +23624,7 @@ const DZ = {
    "profs": [
     [
      "sm",
-     "Slide 31 lists both; the differences are from lecture (T@26432, T@26752 11/17)."
+     "Slide 31 lists both; the differences are from lecture (lecture 11/17)."
     ]
    ],
    "exams": [
@@ -23645,7 +23645,7 @@ const DZ = {
    "profs": [
     [
      "sm",
-     "Slides 31–35; T@23579, T@29170, T@29681 11/17."
+     "Slides 31–35; lecture 11/17."
     ]
    ],
    "exams": [
@@ -23666,7 +23666,7 @@ const DZ = {
    "profs": [
     [
      "sm",
-     "Slide 19; T@45583, T@46338 11/13. Levobunolol has some alpha-adrenergic effects; carteolol has intrinsic sympathomimetic activity."
+     "Slide 19; lecture 11/13. Levobunolol has some alpha-adrenergic effects; carteolol has intrinsic sympathomimetic activity."
     ]
    ],
    "exams": [
@@ -23687,7 +23687,7 @@ const DZ = {
    "profs": [
     [
      "sm",
-     "Slide 66; T@60561 11/17. She said she asked this on purpose because the proteins return in oncology."
+     "Slide 66; lecture 11/17. She said she asked this on purpose because the proteins return in oncology."
     ]
    ],
    "exams": [
@@ -23708,7 +23708,7 @@ const DZ = {
    "profs": [
     [
      "sm",
-     "Slides 53–54; T@51757 11/17."
+     "Slides 53–54; lecture 11/17."
     ]
    ],
    "exams": [
@@ -23729,7 +23729,7 @@ const DZ = {
    "profs": [
     [
      "sm",
-     "Slides 28–29; T@58590, T@59086 11/13; T@22924 11/17."
+     "Slides 28–29; lecture 11/13; lecture 11/17."
     ]
    ],
    "exams": [
@@ -23750,11 +23750,11 @@ const DZ = {
    "profs": [
     [
      "la",
-     "She said it is a different indication, formulation and concentration, and not efficacious enough to reduce the IOP (Lam Glaucoma T@69314, T@74606 11/19; Lam Ophthalmic slide 39)."
+     "She said it is a different indication, formulation and concentration, and not efficacious enough to reduce the IOP (Lam Glaucoma lecture 11/19; Lam Ophthalmic slide 39)."
     ],
     [
      "sm",
-     "Brimonidine is the better long-term glaucoma choice, with a foreign body sensation and itching as side effects (Eye slide 23; T@51660 11/13)."
+     "Brimonidine is the better long-term glaucoma choice, with a foreign body sensation and itching as side effects (Eye slide 23; lecture 11/13)."
     ]
    ],
    "exams": [
@@ -23775,11 +23775,11 @@ const DZ = {
    "profs": [
     [
      "la",
-     "The answer to a patient who forgets the evening dose (Lam Glaucoma slides 32, 37; T@64545 11/19)."
+     "The answer to a patient who forgets the evening dose (Lam Glaucoma slides 32, 37; lecture 11/19)."
     ],
     [
      "sm",
-     "Timolol in its gel form is the once-a-day product (T@46338 11/13)."
+     "Timolol in its gel form is the once-a-day product (lecture 11/13)."
     ]
    ],
    "exams": [
@@ -23800,7 +23800,7 @@ const DZ = {
    "profs": [
     [
      "la",
-     "Lam Glaucoma slide 19; handout; T@50822 11/19."
+     "Lam Glaucoma slide 19; handout; lecture 11/19."
     ],
     [
      "sm",
@@ -23825,11 +23825,11 @@ const DZ = {
    "profs": [
     [
      "la",
-     "Slide 69; her 11/20 email corrects slide 51: Simbrinza is brinzolamide and brimonidine (Lam Glaucoma slides 42, 51, 69; T@85991 11/19)."
+     "Slide 69; her 11/20 email corrects slide 51: Simbrinza is brinzolamide and brimonidine (Lam Glaucoma slides 42, 51, 69; lecture 11/19)."
     ],
     [
      "sm",
-     "Combination products on Eye slide 45: timolol/dorzolamide, timolol/brimonidine, brinzolamide/brimonidine, latanoprost/netarsudil (T@37948 11/17)."
+     "Combination products on Eye slide 45: timolol/dorzolamide, timolol/brimonidine, brinzolamide/brimonidine, latanoprost/netarsudil (lecture 11/17)."
     ]
    ],
    "exams": [
@@ -23850,11 +23850,11 @@ const DZ = {
    "profs": [
     [
      "la",
-     "Lam Ophthalmic slide 37; handout; T@28491, T@29242 11/20."
+     "Lam Ophthalmic slide 37; handout; lecture 11/20."
     ],
     [
      "sm",
-     "Naphazoline/pheniramine is the combination that covers vessel constriction and antihistamine action (Eye slide 59; T@53936 11/17)."
+     "Naphazoline/pheniramine is the combination that covers vessel constriction and antihistamine action (Eye slide 59; lecture 11/17)."
     ]
    ],
    "exams": [
@@ -23875,11 +23875,11 @@ const DZ = {
    "profs": [
     [
      "la",
-     "Lam Ophthalmic slides 18, 19; handout; T@13596 11/20."
+     "Lam Ophthalmic slides 18, 19; handout; lecture 11/20."
     ],
     [
      "sm",
-     "Cyclosporine blocks IL-2 through calcineurin; lifitegrast blocks LFA-1 binding to ICAM-1 (Eye slides 64–71; T@60561 11/17)."
+     "Cyclosporine blocks IL-2 through calcineurin; lifitegrast blocks LFA-1 binding to ICAM-1 (Eye slides 64–71; lecture 11/17)."
     ]
    ],
    "exams": [
@@ -23946,7 +23946,7 @@ const DZ = {
    "profs": [
     [
      "la",
-     "Slides 51-54; T@78117-T@78270, T@84973 11/20."
+     "Slides 51-54; lecture 11/20."
     ]
    ],
    "exams": [
@@ -23988,7 +23988,7 @@ const DZ = {
    "profs": [
     [
      "la",
-     "Slide 15; T@50194 11/20."
+     "Slide 15; lecture 11/20."
     ]
    ],
    "exams": [
@@ -24009,7 +24009,7 @@ const DZ = {
    "profs": [
     [
      "la",
-     "Slides 35-37; T@63752-T@66281 11/20."
+     "Slides 35-37; lecture 11/20."
     ]
    ],
    "exams": [
@@ -24030,7 +24030,7 @@ const DZ = {
    "profs": [
     [
      "la",
-     "Carbamide peroxide is the only nonprescription cerumenolytic she recommends (T@94692 11/20); isopropyl alcohol is a drying agent (slide 31)."
+     "Carbamide peroxide is the only nonprescription cerumenolytic she recommends (lecture 11/20); isopropyl alcohol is a drying agent (slide 31)."
     ],
     [
      "sk",

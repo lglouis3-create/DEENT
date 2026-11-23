@@ -4,7 +4,7 @@
      give the focus back to the button; "/" and Ctrl+K open it (and "/" typed in a field does not);
    - a name finds its drug, a typo of it is corrected and says so, "vit d" and "pde4" find their drug and term, a nonsense word
      says there is no match, an empty field offers examples;
-   - each kind of result does what it says: a drug opens in Browse with its line open, a disease card opens, a section jumps to
+   - each kind of result does what it says: a drug opens in the Drug list with its line open, a disease card opens, a section jumps to
      it, a diagram jumps to it, a structure opens the Atlas filtered to it, a topic starts practice, a question starts one
      question, "Practice these" starts a set; a term shows its definition in place;
    - the arrow keys move through the results; nothing is stored (localStorage is the same before and after);
@@ -84,7 +84,7 @@ const ls = p => p.evaluate(() => JSON.stringify(Object.keys(localStorage).filter
     // each kind of result
     const go = async (query, kind, pick) => { await reopen(); await q(query); const sel = pick || `.srch .sh .k`; await p.evaluate(({kind, sel}) => { const b = [...document.querySelectorAll('.srch .sh')].find(x => new RegExp(kind, 'i').test((x.querySelector('.k') || {}).textContent || '')); if (!b) throw new Error('no ' + kind + ' result'); b.click(); }, {kind, sel}); await p.waitForTimeout(700); };
     await go('tacrolimus', 'Drug list');
-    check(await p.evaluate(() => VIEW === 'drugs' && !!document.querySelector('#v-drugs details.dlrowd[open]') && /Tacrolimus/i.test(document.querySelector('#v-drugs details.dlrowd[open]').textContent) && !document.querySelector('dialog.srch').open), `${tag}: a drug opens in Browse with its line open`);
+    check(await p.evaluate(() => VIEW === 'drugs' && !!document.querySelector('#v-drugs details.dlrowd[open]') && /Tacrolimus/i.test(document.querySelector('#v-drugs details.dlrowd[open]').textContent) && !document.querySelector('dialog.srch').open), `${tag}: a drug opens in the Drug list with its line open`);
     await go('atopic dermatitis', '^Disease');
     check(await p.evaluate(() => VIEW === 'dz' && DZ_UI.state.card === 'atopic-dermatitis' && [...document.querySelectorAll('#v-dz h2')].some(h => /Atopic dermatitis/i.test(h.textContent))), `${tag}: a disease opens its card`, await p.evaluate(() => VIEW));
     await go('fingertip unit', '^Reference');

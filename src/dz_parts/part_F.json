@@ -22,7 +22,7 @@
       "la"
      ],
      "q": "What exposes the dentin tubules, and what turns a stimulus into pain?",
-     "src": "Lam Oral slides 7, 9, 14; handout pp. 2-3; T@45500, T@47772, T@48413 11/20",
+     "src": "Lam Oral slides 7, 9, 14; handout pp. 2-3; lecture 11/20",
      "blocks": [
       {
        "k": "facts",
@@ -58,7 +58,7 @@
       "la"
      ],
      "q": "Which feature separates tooth hypersensitivity from toothache?",
-     "src": "Lam Oral slide 9; handout pp. 2-3; T@46304, T@55389-T@56012 11/20",
+     "src": "Lam Oral slide 9; handout pp. 2-3; lecture 11/20",
      "blocks": [
       {
        "k": "facts",
@@ -105,7 +105,7 @@
       "la"
      ],
      "q": "Name five exclusions to self-care and the follow-up time for a patient who is treated.",
-     "src": "Lam Oral slides 11, 12, 18; handout p. 3; T@46516, T@50822, T@51140, T@55389 11/20",
+     "src": "Lam Oral slides 11, 12, 18; handout p. 3; lecture 11/20",
      "blocks": [
       {
        "k": "sub",
@@ -142,7 +142,7 @@
         ],
         [
          "Refer to a dentist",
-         "If pain persists or worsens, or new symptoms develop after {{4-6 weeks}} (slide 18). She said \"after 4 weeks\" aloud (T@50822)"
+         "If pain persists or worsens, or new symptoms develop after {{4-6 weeks}} (slide 18). She said \"after 4 weeks\" aloud"
         ],
         [
          "Routine dental care",
@@ -159,7 +159,7 @@
       "la"
      ],
      "q": "What is the first step, what is the next step, and which ingredient is not for children under 12?",
-     "src": "Lam Oral slides 14, 15, 17, 22, 23; handout pp. 3-4; T@47772-T@54367 11/20",
+     "src": "Lam Oral slides 14, 15, 17, 22, 23; handout pp. 3-4; lecture 11/20",
      "blocks": [
       {
        "k": "sub",
@@ -199,7 +199,7 @@
          "Move to the next line"
         ]
        ],
-       "move": "Move to the next line when: the soft-bristle brush with standard fluoride has been used and the pain is not better after one week (T@54083)."
+       "move": "Move to the next line when: the soft-bristle brush with standard fluoride has been used and the pain is not better after one week."
       },
       {
        "k": "line",
@@ -299,7 +299,7 @@
       "A referral to a dentist"
      ],
      "a": 3,
-     "w": "Throbbing pain that continues without a stimulus is a toothache from bacterial invasion. A toothache is an exclusion: nothing sold over the counter helps and the dentist has to clean it out (slides 9, 11; T@51849 11/20).",
+     "w": "Throbbing pain that continues without a stimulus is a toothache from bacterial invasion. A toothache is an exclusion: nothing sold over the counter helps and the dentist has to clean it out (slides 9, 11; lecture 11/20).",
      "x": {
       "Counsel him on minimizing his GERD symptoms": "GERD erodes enamel, but his pain is constant and not triggered; this does not treat a toothache.",
       "A soft-bristle toothbrush with standard fluoride toothpaste": "This is the first step for hypersensitivity, which needs a stimulus; his pain has none.",
@@ -316,7 +316,7 @@
       "Return to her dentist today because the pain started two days ago"
      ],
      "a": 2,
-     "w": "Her pain needs a stimulus, so it is hypersensitivity, and she has no exclusion. The first step is to remove the acid exposure and the abrasion with a soft-bristle brush and standard fluoride for 7 days; a desensitizing toothpaste comes only after that (slides 14, 15, 22; T@53195-T@54367 11/20).",
+     "w": "Her pain needs a stimulus, so it is hypersensitivity, and she has no exclusion. The first step is to remove the acid exposure and the abrasion with a soft-bristle brush and standard fluoride for 7 days; a desensitizing toothpaste comes only after that (slides 14, 15, 22; lecture 11/20).",
      "x": {
       "Start a desensitizing toothpaste with potassium nitrate 5% right away": "A desensitizing toothpaste is the next step, after one week of the first step.",
       "Use a stannous fluoride desensitizing toothpaste with her medium brush": "Stannous fluoride is a desensitizing product, which comes after the first step, and the medium brush adds abrasion.",
@@ -333,7 +333,7 @@
       "Add a desensitizing toothpaste such as one with arginine 8%"
      ],
      "a": 3,
-     "w": "The first step has been done for more than a week without relief and she has no exclusion, so the next line is a soft-bristle brush with a desensitizing toothpaste (slide 15; T@54083 11/20).",
+     "w": "The first step has been done for more than a week without relief and she has no exclusion, so the next line is a soft-bristle brush with a desensitizing toothpaste (slide 15; lecture 11/20).",
      "x": {
       "Repeat the same soft-brush step for another full week": "The first step is 7 days; she has already finished it.",
       "Refer her to a dentist now because the first step did not work": "Referral is for exclusions, or pain that persists or worsens after 4-6 weeks of the desensitizing toothpaste.",
@@ -350,7 +350,7 @@
       "Arginine 8% toothpaste"
      ],
      "a": 1,
-     "w": "Potassium nitrate is not for children under 12 years because children swallow toothpaste, with a higher risk of electrolyte problems (slide 15; T@50194 11/20).",
+     "w": "Potassium nitrate is not for children under 12 years because children swallow toothpaste, with a higher risk of electrolyte problems (slide 15; lecture 11/20).",
      "x": {
       "Sodium fluoride toothpaste": "Sodium fluoride is one of the listed desensitizing ingredients and carries no age limit on the slide.",
       "Stannous fluoride toothpaste": "Stannous fluoride carries no age limit on the slide.",
@@ -384,7 +384,7 @@
       "Stop the toothpaste and use ice on the gum"
      ],
      "a": 2,
-     "w": "Pain that persists, and new symptoms after 4-6 weeks, are the reasons to refer to a dentist (slide 18). A 1-inch strip is enough (T@50656 11/20).",
+     "w": "Pain that persists, and new symptoms after 4-6 weeks, are the reasons to refer to a dentist (slide 18). A 1-inch strip is enough (lecture 11/20).",
      "x": {
       "Use a 2-inch strip of toothpaste each time": "She said a 1-inch strip is enough, so a larger amount is not needed.",
       "Continue the same toothpaste for 4 more weeks": "Pain that persists after 4-6 weeks is the point to refer, not to extend.",
@@ -458,7 +458,7 @@
       "la"
      ],
      "q": "Is the cause known, and what are the five groups of precipitating factors?",
-     "src": "Lam Oral slides 26, 27; handout p. 5; T@57025-T@59651 11/20",
+     "src": "Lam Oral slides 26, 27; handout p. 5; lecture 11/20",
      "blocks": [
       {
        "k": "facts",
@@ -502,7 +502,7 @@
       "la"
      ],
      "q": "Where does a canker sore appear, what does it look like, and what comes first?",
-     "src": "Lam Oral slides 27, 47; handout pp. 5, 9; T@57025-T@59261 11/20",
+     "src": "Lam Oral slides 27, 47; handout pp. 5, 9; lecture 11/20",
      "blocks": [
       {
        "k": "facts",
@@ -557,7 +557,7 @@
       "la"
      ],
      "q": "Name five exclusions to self-care and the two treatment-failure referral times.",
-     "src": "Lam Oral slides 29, 30, 40; handout pp. 6, 8; T@59651-T@60326, T@69948 11/20",
+     "src": "Lam Oral slides 29, 30, 40; handout pp. 6, 8; lecture 11/20",
      "blocks": [
       {
        "k": "sub",
@@ -607,7 +607,7 @@
       "sk"
      ],
      "q": "Which products relieve pain, which clean the sore, and what is the main counseling point for each?",
-     "src": "Lam Oral slides 32-39; handout pp. 6-8; T@61228-T@69948 11/20; Sikazwe OOO slide 20",
+     "src": "Lam Oral slides 32-39; handout pp. 6-8; lecture 11/20; Sikazwe OOO slide 20",
      "blocks": [
       {
        "k": "sub",
@@ -651,7 +651,7 @@
         "Cleanses the mouth to prevent infection and gives symptomatic relief; carbamide peroxide {{10-15%}}, hydrogen peroxide {{1.5%}} or {{3%}}",
         "Use after meals, 3-4 times a day; avoid eating or drinking for at least {{30 minutes}} after",
         "Use for up to {{7 days}}: over-cleaning lets opportunistic organisms grow, causing black hairy tongue; prolonged use also causes tooth sensitivity and soft tissue irritation",
-        "Hydrogen peroxide only: a patient with sensitive teeth uses the applicator on the sore, not the rinse, because it can irritate the enamel and soft tissue (T@65066, T@67096 11/20)"
+        "Hydrogen peroxide only: a patient with sensitive teeth uses the applicator on the sore, not the rinse, because it can irritate the enamel and soft tissue (lecture 11/20)"
        ],
        "p": "la",
        "warn": "She said carbamide peroxide direct application sits 1 or 2 minutes; the slide and handout say 1 minute.",
@@ -732,7 +732,7 @@
       "la"
      ],
      "q": "When does a canker sore resolve, and when does the patient go to a provider?",
-     "src": "Lam Oral slides 40; handout p. 8; T@69759-T@70079 11/20",
+     "src": "Lam Oral slides 40; handout p. 8; lecture 11/20",
      "blocks": [
       {
        "k": "pts",
@@ -809,7 +809,7 @@
       "Use the rinse with ice in the mouth"
      ],
      "a": 1,
-     "w": "Hydrogen peroxide can irritate enamel and soft tissue; she said patients with sensitive teeth should use the applicator and not the rinse (T@65066, T@67096 11/20).",
+     "w": "Hydrogen peroxide can irritate enamel and soft tissue; she said patients with sensitive teeth should use the applicator and not the rinse (lecture 11/20).",
      "x": {
       "Swish a 3% rinse twice as long to protect the teeth": "A longer swish increases the exposure, and prolonged use causes tooth sensitivity.",
       "Mix it with her toothpaste and brush": "Mixing it into toothpaste is not a described use.",
@@ -843,7 +843,7 @@
       "Apply ice for 30 minutes at a time until pain stops"
      ],
      "a": 1,
-     "w": "Ice reduces swelling in 10-minute periods, up to 20 minutes in each hour; heat may spread the infection (handout p. 6; T@61228 11/20).",
+     "w": "Ice reduces swelling in 10-minute periods, up to 20 minutes in each hour; heat may spread the infection (handout p. 6; lecture 11/20).",
      "x": {
       "Apply heat for 20 minutes in each hour to relax the area": "Heat is avoided because it may spread the infection.",
       "Eat spicy food so that the sore gets cleaned out": "Spicy, acidic and sharp foods irritate the sore.",
@@ -855,7 +855,7 @@
     [
      "7-14 days",
      "a canker sore resolves on its own",
-     "Lam handout p. 5; T@59261 11/20 (slide 40 prints 7 days and 14 days)"
+     "Lam handout p. 5; lecture 11/20 (slide 40 prints 7 days and 14 days)"
     ],
     [
      "2-48 hours",
@@ -922,7 +922,7 @@
       "la"
      ],
      "q": "What causes a cold sore, how is it spread, and what triggers it?",
-     "src": "Lam Oral slides 43, 44; handout pp. 8-9; T@70941-T@72227 11/20",
+     "src": "Lam Oral slides 43, 44; handout pp. 8-9; lecture 11/20",
      "blocks": [
       {
        "k": "facts",
@@ -954,7 +954,7 @@
       "la"
      ],
      "q": "What are the stages of a cold sore, and where is it located?",
-     "src": "Lam Oral slides 45, 47; handout p. 9; T@72227-T@73857 11/20",
+     "src": "Lam Oral slides 45, 47; handout p. 9; lecture 11/20",
      "blocks": [
       {
        "k": "facts",
@@ -990,7 +990,7 @@
       "la"
      ],
      "q": "Which exclusions apply, and what counts as recurrence in her cases?",
-     "src": "Lam Oral slides 48, 49, 59, 60, 62-67; handout pp. 10, 12; T@74417-T@75700, T@83053-T@84533 11/20",
+     "src": "Lam Oral slides 48, 49, 59, 60, 62-67; handout pp. 10, 12; lecture 11/20",
      "blocks": [
       {
        "k": "sub",
@@ -1050,7 +1050,7 @@
       "la"
      ],
      "q": "What is the first-line product and how is it used, and what is not recommended?",
-     "src": "Lam Oral slides 51-58; handout pp. 10-12; T@77492-T@81994 11/20",
+     "src": "Lam Oral slides 51-58; handout pp. 10-12; lecture 11/20",
      "blocks": [
       {
        "k": "line",
@@ -1150,7 +1150,7 @@
       "la"
      ],
      "q": "How long does a cold sore take to heal, and when does the patient go to the PCP?",
-     "src": "Lam Oral slides 59, 60; handout p. 12; T@81994-T@82500 11/20",
+     "src": "Lam Oral slides 59, 60; handout p. 12; lecture 11/20",
      "blocks": [
       {
        "k": "pts",
@@ -1175,7 +1175,7 @@
       "Yes, with hydrocortisone 1% ointment as needed"
      ],
      "a": 1,
-     "w": "Lesions present more than 14 days, and frequent recurrence (she counted once a month as reoccurring), are exclusions (slide 49; T@83053-T@83449 11/20).",
+     "w": "Lesions present more than 14 days, and frequent recurrence (she counted once a month as reoccurring), are exclusions (slide 49; lecture 11/20).",
      "x": {
       "Yes, docosanol 10% five times a day until healed": "Docosanol is first line, but she has exclusions.",
       "No, because a lip sore is always a canker sore": "A canker sore is inside the mouth; her lesion is on the lip, crusted and fluid-filled.",
@@ -1192,7 +1192,7 @@
       "Yes, an infrequent outbreak that a provider has already seen"
      ],
      "a": 3,
-     "w": "Her last outbreak was a year ago, which she did not count as reoccurring, and she already saw a provider. She is a candidate (T@83449-T@83700 11/20).",
+     "w": "Her last outbreak was a year ago, which she did not count as reoccurring, and she already saw a provider. She is a candidate (lecture 11/20).",
      "x": {
       "No, any recurrence at all is an exclusion to self-care": "Slide 49 lists recurrence, but she called monthly outbreaks reoccurring, not one a year.",
       "No, because she takes a birth control pill every day": "Nothing on the slides excludes the patient for a birth control pill.",
@@ -1260,7 +1260,7 @@
       "After 3 days of symptoms"
      ],
      "a": 0,
-     "w": "Docosanol works best when applied at the first sign, before the lesion occurs (slide 53; T@78879 11/20).",
+     "w": "Docosanol works best when applied at the first sign, before the lesion occurs (slide 53; lecture 11/20).",
      "x": {
       "When the vesicles appear": "It still helps once the lesion appears but works best before it.",
       "When the crust forms": "Waiting until crusting loses the time when it works best.",
@@ -1277,7 +1277,7 @@
     [
      "10 days",
      "docosanol: use for up to 10 days",
-     "Lam Oral slide 53; T@79234 11/20"
+     "Lam Oral slide 53; lecture 11/20"
     ],
     [
      "10-14 days",
@@ -1333,7 +1333,7 @@
       "la"
      ],
      "q": "Which medicine classes and conditions can cause dry mouth, and by which two mechanisms?",
-     "src": "Lam Oral slides 72-75; handout pp. 13-14; T@86106-T@87063 11/20",
+     "src": "Lam Oral slides 72-75; handout pp. 13-14; lecture 11/20",
      "blocks": [
       {
        "k": "facts",
@@ -1373,7 +1373,7 @@
       "la"
      ],
      "q": "What are the signs and complications of dry mouth?",
-     "src": "Lam Oral slide 76; handout p. 13; T@87063-T@87494 11/20",
+     "src": "Lam Oral slide 76; handout p. 13; lecture 11/20",
      "blocks": [
       {
        "k": "pts",
@@ -1395,7 +1395,7 @@
       "la"
      ],
      "q": "What are the goals, and when is the patient not a candidate?",
-     "src": "Lam Oral slides 78, 79, 84; handout pp. 13-15; T@87494-T@87605, T@90270-T@90800 11/20",
+     "src": "Lam Oral slides 78, 79, 84; handout pp. 13-15; lecture 11/20",
      "blocks": [
       {
        "k": "facts",
@@ -1431,7 +1431,7 @@
       "la"
      ],
      "q": "What non-drug steps help, and how is artificial saliva used?",
-     "src": "Sikazwe OOO slide 17; Lam Oral slides 81-84; handout pp. 14-15; T@87494-T@90547 11/20",
+     "src": "Sikazwe OOO slide 17; Lam Oral slides 81-84; handout pp. 14-15; lecture 11/20",
      "blocks": [
       {
        "k": "sub",
@@ -1442,7 +1442,7 @@
        "k": "pts",
        "items": [
         "Stop medicines and substances that reduce salivation where possible: tobacco (smoked and smokeless), alcohol including mouth rinses, caffeine, hot spicy foods",
-        "If a medicine contributes and cannot be stopped: take it {{1 hour before meals}}, because eating stimulates saliva (T@88526)"
+        "If a medicine contributes and cannot be stopped: take it {{1 hour before meals}}, because eating stimulates saliva"
        ],
        "p": "la"
       },
@@ -1502,7 +1502,7 @@
       "A salivary gland stone caused by his age"
      ],
      "a": 0,
-     "w": "Antihistamines such as diphenhydramine have anticholinergic activity and reduce salivation (slide 72; T@86106-T@86368 11/20).",
+     "w": "Antihistamines such as diphenhydramine have anticholinergic activity and reduce salivation (slide 72; lecture 11/20).",
      "x": {
       "His fluoride toothpaste is drying the saliva out": "Fluoride products are used to lower dental decay risk in dry mouth; they do not cause it.",
       "Humidity in his bedroom is drying out the mouth": "A humidifier is a measure that relieves dry mouth.",
@@ -1519,7 +1519,7 @@
       "Take double the usual dose once at night"
      ],
      "a": 0,
-     "w": "If a medicine contributes and cannot be stopped, take it one hour before meals, because eating stimulates saliva (T@88526 11/20).",
+     "w": "If a medicine contributes and cannot be stopped, take it one hour before meals, because eating stimulates saliva (lecture 11/20).",
      "x": {
       "Take the medicine one hour after each meal": "The advice is before meals, not after.",
       "Stop the medicine on her own to see if it helps": "The point is to keep a medicine she cannot stop; she is not told to stop it herself.",
@@ -1609,7 +1609,7 @@
     [
      "1 hour",
      "take a contributing medicine before meals",
-     "Lam handout p. 14; T@88526 11/20"
+     "Lam handout p. 14; lecture 11/20"
     ],
     [
      "After meals and at bedtime",
@@ -1625,7 +1625,7 @@
    "brand": "",
    "la": {
     "text": "First step for tooth hypersensitivity: a soft-bristle toothbrush with standard fluoride toothpaste for 7 days. She said it helps the surface of the enamel.",
-    "src": "Lam Oral slides 14, 15; T@48912 11/20"
+    "src": "Lam Oral slides 14, 15; lecture 11/20"
    },
    "sk": {
     "text": "Fluoride ions from toothpastes and gels (Na2PO3F, SnF2, NaF) convert enamel hydroxyapatite, Ca10(PO4)6(OH)2, into fluorapatite, Ca10(PO4)6F2, which is more resistant to acid erosion; they also enhance mineral deposition. More than 2 mg/L can cause enamel fluorosis.",
@@ -1636,7 +1636,7 @@
     "Do not brush for 30-60 minutes after acidic food or drinks.",
     "If the pain is not better after one week, the next step is a desensitizing toothpaste."
    ],
-   "counselSrc": "Lam Oral slides 14, 15; T@47988, T@54083 11/20",
+   "counselSrc": "Lam Oral slides 14, 15; lecture 11/20",
    "how": {
     "p": "sk",
     "text": "Fluoride ions convert hydroxyapatite into fluorapatite, which resists acid erosion, and enhance mineral deposition (remineralization).",
@@ -1649,7 +1649,7 @@
    "brand": "",
    "la": {
     "text": "Desensitizing toothpaste active: depolarizes the excited nerves in the tubules. Not for children under 12 years: children swallow toothpaste, with a higher risk of electrolyte problems.",
-    "src": "Lam Oral slide 15; handout p. 4; T@50194 11/20"
+    "src": "Lam Oral slide 15; handout p. 4; lecture 11/20"
    },
    "counsel": [
     "A single application has no effect: use it continuously.",
@@ -1657,7 +1657,7 @@
     "It may take 4-6 weeks to see the benefit; continue until the sensitivity subsides or as long as the dentist recommends.",
     "See a dentist if pain persists or worsens, or new symptoms develop after 4-6 weeks."
    ],
-   "counselSrc": "Lam Oral slides 17, 18; handout p. 4; T@50656-T@51140 11/20",
+   "counselSrc": "Lam Oral slides 17, 18; handout p. 4; lecture 11/20",
    "avoid": [
     "Children younger than 12 years"
    ],
@@ -1735,7 +1735,7 @@
    "brand": "",
    "la": {
     "text": "Canker sore: benzocaine 10-20% (slide 34; handout 5-20%), apply up to 4 times a day as needed, age over 2 years. Cold sore: 5-20% in the handout; her practice key counts benzocaine 5% gel, a thin layer 3-4 times after a meal, as right (she said plus or minus). It relieves pain only; it does not reduce the duration.",
-    "src": "Lam Oral slides 34, 54; handout pp. 7, 11; T@62128, T@84973 11/20"
+    "src": "Lam Oral slides 34, 54; handout pp. 7, 11; lecture 11/20"
    },
    "sk": {
     "text": "A local anesthetic in gels or combination agents. Methemoglobinemia is rare but a concern: CYP enzymes convert benzocaine to benzocaine hydroxylamine.",
@@ -1746,7 +1746,7 @@
     "Avoid eating or drinking for at least 30 minutes after application.",
     "Do not combine with menthol, phenol or camphor: tissue irritation and damage."
    ],
-   "counselSrc": "Lam Oral slides 34, 54; T@62128-T@62416, T@80308 11/20",
+   "counselSrc": "Lam Oral slides 34, 54; lecture 11/20",
    "avoid": [
     "Combination with menthol, phenol or camphor (tissue irritation)",
     "Children under 2 years (handout)"
@@ -1767,7 +1767,7 @@
     "Apply to the sore up to 4 times a day as needed; avoid eating or drinking for 30 minutes.",
     "Do not combine with menthol, phenol or camphor."
    ],
-   "counselSrc": "Lam Oral slide 34; T@62128 11/20",
+   "counselSrc": "Lam Oral slide 34; lecture 11/20",
    "avoid": [
     "Combination with menthol, phenol or camphor"
    ],
@@ -1781,7 +1781,7 @@
    "brand": "",
    "la": {
     "text": "Cleanses the sore and relieves discomfort. Direct application: apply to the area, leave 1 minute, spit out. Rinse: a few drops on the tongue, mix with saliva, swish 1 minute. She said 1 or 2 minutes for direct application aloud.",
-    "src": "Lam Oral slide 35; handout p. 7; T@63829 11/20"
+    "src": "Lam Oral slide 35; handout p. 7; lecture 11/20"
    },
    "sk": {
     "text": "Carbamide peroxide (10%) is used as a mouth rinse for canker sores.",
@@ -1792,7 +1792,7 @@
     "Avoid eating or drinking for at least 30 minutes afterwards.",
     "Use for up to 7 days: longer use lets opportunistic organisms grow (black hairy tongue); prolonged use causes tooth sensitivity and soft tissue irritation."
    ],
-   "counselSrc": "Lam Oral slide 36; handout p. 7; T@64264-T@64900 11/20",
+   "counselSrc": "Lam Oral slide 36; handout p. 7; lecture 11/20",
    "avoid": [
     "Use beyond 7 days"
    ],
@@ -1806,14 +1806,14 @@
    "brand": "",
    "la": {
     "text": "1.5%: direct application to the sore, leave 1 minute, spit. 3%: swish for one minute (the handout adds: mix with an equal amount of water before rinsing). She mentioned a home-made 3% or 5% rinse and was unsure aloud.",
-    "src": "Lam Oral slide 35; handout p. 7; T@63359 11/20"
+    "src": "Lam Oral slide 35; handout p. 7; lecture 11/20"
    },
    "counsel": [
     "Use after meals, 3-4 times a day; avoid eating or drinking for at least 30 minutes after.",
     "Use for up to 7 days.",
     "It can irritate enamel and soft tissue: with sensitive teeth, use the applicator, not the rinse."
    ],
-   "counselSrc": "Lam Oral slide 36; T@65066, T@67096 11/20",
+   "counselSrc": "Lam Oral slide 36; lecture 11/20",
    "avoid": [
     "Use beyond 7 days",
     "Rinse in a patient with tooth hypersensitivity"
@@ -1828,14 +1828,14 @@
    "brand": "",
    "la": {
     "text": "Coats and protects the sore; a barrier forms and dissolves in 8-12 hours. Use up to 3-4 times a day after meals; avoid drinking for up to 30 minutes. Placement time: slide 37 prints 10-20 seconds; the handout and her speech say 10-20 minutes.",
-    "src": "Lam Oral slide 37; handout p. 8; T@65817 11/20"
+    "src": "Lam Oral slide 37; handout p. 8; lecture 11/20"
    },
    "counsel": [
     "Place it against the sore long enough to adhere (slide 37: 10-20 seconds; handout and speech: 10-20 minutes).",
     "It dissolves by itself in 8-12 hours; use up to 3-4 times a day after meals.",
     "Avoid drinking for up to 30 minutes."
    ],
-   "counselSrc": "Lam Oral slide 37; handout p. 8; T@65817 11/20",
+   "counselSrc": "Lam Oral slide 37; handout p. 8; lecture 11/20",
    "how": {
     "none": true
    },
@@ -1846,7 +1846,7 @@
    "brand": "",
    "la": {
     "text": "Saline: 1-3 teaspoons of salt in 4-8 ounces of warm water; any salt. Baking soda paste: apply to the lesion for a few minutes. Use up to 4 times a day. An antiseptic rinse such as Listerine is another option.",
-    "src": "Lam Oral slide 38; handout p. 8; T@66281-T@66756 11/20"
+    "src": "Lam Oral slide 38; handout p. 8; lecture 11/20"
    },
    "sk": {
     "text": "Listerine contains thymol, eucalyptol, methyl salicylate and menthol; sodium bicarbonate raises saliva pH and lowers growth of acidic bacteria.",
@@ -1867,12 +1867,12 @@
    "brand": "",
    "la": {
     "text": "For additional pain relief in canker sores and cold sores. Aspirin tablets are not held in the mouth or on the lesion: chemical burn with tissue damage.",
-    "src": "Lam Oral slides 39, 55; handout pp. 8, 11; T@69759, T@80499 11/20"
+    "src": "Lam Oral slides 39, 55; handout pp. 8, 11; lecture 11/20"
    },
    "counsel": [
     "Swallow the tablet; never hold aspirin against the sore."
    ],
-   "counselSrc": "Lam Oral slide 39; T@69759 11/20",
+   "counselSrc": "Lam Oral slide 39; lecture 11/20",
    "avoid": [
     "Aspirin held in the mouth: chemical burn"
    ],
@@ -1886,7 +1886,7 @@
    "brand": "Abreva",
    "la": {
     "text": "First-line topical antiviral for a cold sore: reduces the duration and severity of symptoms. Apply at the first sign (prodrome), up to 5 times a day until the lesion heals, up to 10 days.",
-    "src": "Lam Oral slides 51-53; handout p. 11; T@78159-T@79314 11/20"
+    "src": "Lam Oral slides 51-53; handout p. 11; lecture 11/20"
    },
    "counsel": [
     "Start at the first tingling or burning, before a blister: the earlier, the better.",
@@ -1894,11 +1894,11 @@
     "It still helps once the lesion is present.",
     "Keep the sore clean, wash the hands often and keep the skin moist."
    ],
-   "counselSrc": "Lam Oral slides 50, 53; T@78879-T@79314 11/20",
+   "counselSrc": "Lam Oral slides 50, 53; lecture 11/20",
    "how": {
     "p": "la",
     "text": "Inhibits direct fusion between the herpesvirus and the human cell plasma membrane, so the virus does not replicate (handout); she said it prevents the virus from attaching to the human cell.",
-    "src": "Lam handout p. 11; T@78454 11/20"
+    "src": "Lam handout p. 11; lecture 11/20"
    },
    "figs": []
   },
@@ -1907,7 +1907,7 @@
    "brand": "",
    "la": {
     "text": "In a cold sore, camphor above 3% and menthol above 1% are contraindicated: counterirritant effect; irritating at higher concentration. Vicks rub has about 5% camphor. In a canker sore, anesthetics are not combined with menthol, phenol or camphor.",
-    "src": "Lam Oral slides 34, 54; handout p. 11; T@79739-T@80226 11/20"
+    "src": "Lam Oral slides 34, 54; handout p. 11; lecture 11/20"
    },
    "avoid": [
     "Camphor above 3% in a cold sore",
@@ -1923,13 +1923,13 @@
    "brand": "",
    "la": {
     "text": "Only for a suspected secondary bacterial infection: the lesion is not forming a mature lesion, with no crusting, and is still red.",
-    "src": "Lam Oral slides 51, 56; handout p. 11; T@80604 11/20"
+    "src": "Lam Oral slides 51, 56; handout p. 11; lecture 11/20"
    },
    "counsel": [
     "Apply a thin layer 3-4 times a day.",
     "Follow up with the PCP."
    ],
-   "counselSrc": "Lam Oral slide 56; T@80604-T@81119 11/20",
+   "counselSrc": "Lam Oral slide 56; lecture 11/20",
    "how": {
     "none": true
    },
@@ -1940,7 +1940,7 @@
    "brand": "",
    "la": {
     "text": "Do not recommend: the herpes virus does not respond to corticosteroids (HSL is not a steroid-responsive dermatosis), and topical steroids are highly astringent. Her practice key leaves hydrocortisone 1% ointment out.",
-    "src": "Lam Oral slide 58; handout p. 12; T@81857 11/20"
+    "src": "Lam Oral slide 58; handout p. 12; lecture 11/20"
    },
    "avoid": [
     "Cold sore: do not recommend"
@@ -1955,7 +1955,7 @@
    "brand": "",
    "la": {
     "text": "Not enough data to justify use; the guidelines do not recommend them to prevent or treat cold sores. Handout: tea tree oil has some in vitro activity against HSV; lysine may reduce the frequency of outbreaks, data conflicting; zinc cream and aloe vera gel have shown some efficacy.",
-    "src": "Lam Oral slide 57; handout p. 11; T@81119-T@81468 11/20"
+    "src": "Lam Oral slide 57; handout p. 11; lecture 11/20"
    },
    "avoid": [
     "Not recommended for cold sores"
@@ -1970,7 +1970,7 @@
    "brand": "",
    "la": {
     "text": "Replacement therapy for dry mouth, not a cure: it lacks the protective components of the natural saliva. Sprays, gels, gums, toothpaste. Gel: place 1/2 inch on the tongue and spread it. Use at any time, at a minimum after meals and before bed. Ingredients: isomalt, xylitol, glucose oxidase, sodium carboxymethylcellulose*, sorbitol, sodium monofluorophosphate*; avoid * products on a sodium-restricted diet.",
-    "src": "Lam Oral slides 82, 83; handout p. 15; T@89229-T@90208 11/20"
+    "src": "Lam Oral slides 82, 83; handout p. 15; lecture 11/20"
    },
    "sk": {
     "text": "Sodium monofluorophosphate (Na2PO3F) is one of the fluoride sources on his slide 17.",
@@ -2006,7 +2006,7 @@
   "prodrome": [
    "Prodrome",
    "Symptoms a patient may feel before the lesion appears, such as burning, tingling or itching.",
-   "Lam Oral slide 27; T@58338 11/20"
+   "Lam Oral slide 27; lecture 11/20"
   ],
   "latency": [
    "Latent",
@@ -2021,7 +2021,7 @@
   "or-astringent": [
    "Highly astringent",
    "The reason she gave against topical steroids on a cold sore: it irritates the skin.",
-   "Lam Oral slide 58; T@81882 11/20"
+   "Lam Oral slide 58; lecture 11/20"
   ],
   "xerostomia": [
    "Xerostomia",
@@ -2111,7 +2111,7 @@
      "Slides 29, 40, 49, 60"
     ]
    ],
-   "src": "Lam Oral slides 26-27, 29, 33, 40, 43-49, 51, 59-60; handout pp. 5, 9; T@73857 11/20"
+   "src": "Lam Oral slides 26-27, 29, 33, 40, 43-49, 51, 59-60; handout pp. 5, 9; lecture 11/20"
   },
   {
    "id": "oral-tooth-vs-ache",
@@ -2175,10 +2175,10 @@
       "Soft-bristle brush with standard fluoride 7 days, then a desensitizing toothpaste",
       "None over the counter; the dentist cleans it out"
      ],
-     "Slides 15, 11; T@46516"
+     "Slides 15, 11"
     ]
    ],
-   "src": "Lam Oral slides 9, 11, 15; handout pp. 2-3; T@46304-T@46667, T@55389 11/20"
+   "src": "Lam Oral slides 9, 11, 15; handout pp. 2-3; lecture 11/20"
   }
  ],
  "pairs": [
@@ -2236,7 +2236,7 @@
    "profs": [
     [
      "la",
-     "Slides 51-54; T@78117-T@78270, T@84973 11/20."
+     "Slides 51-54; lecture 11/20."
     ]
    ]
   },
@@ -2272,7 +2272,7 @@
    "profs": [
     [
      "la",
-     "Slide 15; T@50194 11/20."
+     "Slide 15; lecture 11/20."
     ]
    ]
   },
@@ -2290,7 +2290,7 @@
    "profs": [
     [
      "la",
-     "Slides 35-37; T@63752-T@66281 11/20."
+     "Slides 35-37; lecture 11/20."
     ]
    ]
   }

@@ -184,7 +184,8 @@ const noScroll = p => p.evaluate(() => document.documentElement.scrollWidth <= i
 
     // ---------- Drug list ----------
     await go('drugs');
-    await p.evaluate(() => { const b = [...document.querySelectorAll('#v-drugs [data-dl="list"]')].find(x => /^Dermatology/.test(x.textContent)); if (b && b.getAttribute('aria-checked') !== 'true') b.click(); }); await p.waitForTimeout(500);   // Exam 3: the Drug list opens on the Eye list; the stars of the reading tabs are the dermatology drug rows
+    // Exam 3: the Drug list opens on the Exam 3 chip; the stars of the reading tabs are the skin drug rows (the single List view's "Exams 1–2 (skin)" chip; the older Dermatology list switch otherwise)
+    await p.evaluate(() => { const c = document.querySelector('#v-drugs [data-dl="uexam"][data-k="12"]'); if (c) { c.click(); return; } const b = [...document.querySelectorAll('#v-drugs [data-dl="list"]')].find(x => /^Dermatology/.test(x.textContent)); if (b && b.getAttribute('aria-checked') !== 'true') b.click(); }); await p.waitForTimeout(500);
     check(/Stars mark what the professor stressed/.test(await text('#v-drugs .lkleg')), `${tag}: Drug list has the legend`);
     await p.evaluate(() => document.querySelectorAll('#v-drugs details.dlgrp').forEach(g => { g.open = true; })); await p.waitForTimeout(200);
     check(await count('drugs', 'details.dlrowd .dln > .lkstar') === N('drug'), `${tag}: Drug list: ${N('drug')} drug rows carry a star`, await count('drugs', 'details.dlrowd .dln > .lkstar'));

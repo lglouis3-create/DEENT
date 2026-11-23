@@ -364,7 +364,7 @@ const COURSE = {
           // Drug List feature): its data, then the tab itself (Louis, 2026-11-08)
           // (chart_boxes.js: the rows of the original chart pages in chart/, from render_chart.py;
           // drugfacts.js: bank questions mapped to Drug list facts, read-only, Phase 1 of the plan)
-          'chart_boxes.js', 'chart_boxes_eye.js', 'druglist_data.js', 'druglist_eye.js', 'drugfacts.js', 'druglist_ui.js',
+          'chart_boxes.js', 'chart_boxes_eye.js', 'druglist_data.js', 'druglist_eye.js', 'druglist_dose.js', 'drugfacts.js', 'druglist_ui.js',
           // the Diseases tab (Louis, 2026-11-13): cards per condition, drug panels, tell-apart sets (dz_build.py, dz_check.js)
           'dz_data.js', 'dz_ui.js',
           // the FTU tab (Louis, 2026-11-14): typed fingertip-unit practice with a body diagram and a record (ftu_test.js)
@@ -407,6 +407,8 @@ const COURSE = {
           // Reference and Tell apart tables: short lines inside cells and one card per row on
           // phones (course-level presentation, 2026-11-08)
           'tables_ui.js',
+          // one sanitizer for every view: no transcript codes, file names or working notes on screen (2026-11-23)
+          'clean_ui.js',
           // Quiz: "One at a time | All on one page" (course-level, Louis 2026-11-08, after his
           // Intro to Pharmacology drill's layout toggle; temporary until the kit has it)
           'topic_list_ui.js', 'topicbar_ui.js',

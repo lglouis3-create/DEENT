@@ -182,7 +182,7 @@ const FIGS2 = (() => {
       ['If you know where C1, C11 and C17 are, you can number the rest (T 1097–1099).', s6, 'self-test'],
     ], 320, 'Drawn after DPAW (f26-DEENT-DPAW-mc.pdf) slides 20, 21 and 23 (printed 20, 21, 22); Dr. Sikazwe, lecture 11/03, T 984–1139. ' +
       'Numbering 1–21 as slides 20 and 23 use it (slide 20 numbers a longer side chain on to C27). ' +
-      'Left out: the chlorine-numbering exercise on slide 21 (T 1074–1084), held in reviews/OPEN_QUESTIONS.md.');
+      'Left out: the chlorine-numbering exercise on slide 21 (T 1074–1084).');
   })();
 
   /* ---------------------------------------------------------------------
@@ -249,7 +249,7 @@ const FIGS2 = (() => {
       ['IL-12 and IL-23 bind IL-12 receptor β1 on CD4 T cells and NK cells; blocking them suppresses Th1 and Th17 cell formation (PCol 67; T 448–451, 478–480).', s4],
       ['Keratinocytes are the major IL-17 target. Secukinumab and ixekizumab bind the cytokine IL-17A; brodalumab binds its receptor, IL-17RA (PCol 65–66; T 399–428).', s5],
     ], 424, 'Drawn after Skin-PCol-Students-2026.pdf slides 64–69; Dr. Smith, lecture 11/03, T 365–486. The second chain of each IL-4 receptor complex and the second ' +
-      'subunit of IL-12 are left unnamed, as the slides do not name them. Not drawn: dupilumab in psoriasis (held in reviews/OPEN_QUESTIONS.md; slide 64 gives AD only).');
+      'subunit of IL-12 are left unnamed, as the slides do not name them. Not drawn: dupilumab in psoriasis (slide 64 gives AD only).');
   })();
 
   /* ---------------------------------------------------------------------
@@ -414,7 +414,7 @@ const FIGS2 = (() => {
       ['Sunscreen: organic chromophores absorb UV and convert it to heat (Sun 22; DPAW 62).', s3],
       ['The light a sunscreen absorbs also degrades it (photodegradation), so it has to be reapplied (DPAW 62; 11/04 T@39860–@40700).', s4],
     ], 380, 'Drawn after DEENT_Sun_Exposure_2026.pdf slides 8, 20 and 22 (Dr. Smith; recording 00:18:55–00:21:27) and DPAW slides 61–64 (printed 60–63; Dr. Sikazwe, ' +
-      'lecture 11/04, T@37900–@40700). Band limits stay each professor’s own: his slides 62–64 print 315 nm, and on 11/03 he said “315 or 320” (T 817–819), held in reviews/OPEN_QUESTIONS.md.');
+      'lecture 11/04, T@37900–@40700). Band limits stay each professor’s own: his slides 62–64 print 315 nm, and on 11/03 he said “315 or 320” (T 817–819); the printed limits are used here.');
   })();
 
   return {

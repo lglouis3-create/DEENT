@@ -214,7 +214,7 @@
     "crisaborole",
     "crisa_boronate"
    ],
-   "caption": "After DPAW slide 7 (its CBDA inset, from J Med Chem 2021;64(24):17706&ndash;17727, residues and dotted bonds as printed; the site outline is schematic). He: the boron group coordinates two cations, magnesium and zinc, in the PDE4 active site, &ldquo;that is the basis&rdquo; (11/03 T 712&ndash;719); intact drug binds the active site and stays there (T 786&ndash;793). The slide draws the negative charge on the bridging oxygen; RDKit puts it on the four-coordinate boron (same atoms and bonds)."
+   "caption": "After DPAW slide 7 (its CBDA inset, from J Med Chem 2021;64(24):17706&ndash;17727, residues and dotted bonds as printed; the site outline is schematic). He: the boron group coordinates two cations, magnesium and zinc, in the PDE4 active site, &ldquo;that is the basis&rdquo; (11/03 T 712&ndash;719); intact drug binds the active site and stays there (T 786&ndash;793). The slide draws the negative charge on the bridging oxygen; here it is drawn on the four-coordinate boron (same atoms and bonds)."
   },
   {
    "key": "cb-mtx",
@@ -285,7 +285,7 @@
     "ga",
     "sa"
    ],
-   "caption": "After DPAW slides 43&ndash;44 (slide 44 marks the &alpha; carbon and prints the SAR). He: &ldquo;This is the alpha carbon. This one is called the beta carbon. So this is a beta hydroxy acid ... 2 carbon removed from the carboxylic acid&rdquo; (11/04 T@22100&ndash;@22330). Polleve-4 (slide 45) is held and not drawn."
+   "caption": "After DPAW slides 43&ndash;44 (slide 44 marks the &alpha; carbon and prints the SAR). He: &ldquo;This is the alpha carbon. This one is called the beta carbon. So this is a beta hydroxy acid ... 2 carbon removed from the carboxylic acid&rdquo; (11/04 T@22100&ndash;@22330). Polleve-4 (slide 45) is not drawn."
   },
   {
    "key": "cb-antiandrogens",
@@ -300,7 +300,7 @@
     "ketoconazole",
     "flutamide"
    ],
-   "caption": "After DPAW slide 53 (steroidal and non-steroidal antiandrogens, with Louis&rsquo;s notes &ldquo;diminish testosterone biosynthesis&rdquo; and &ldquo;prevent testosterone from binding to its receptor&rdquo;). He: spironolactone and ketoconazole decrease testosterone biosynthesis; azole antifungals are strong 3A4 inhibitors; flutamide blocks testosterone from binding its receptor (11/04 T@32237&ndash;@33000)."
+   "caption": "After DPAW slide 53 (steroidal and non-steroidal antiandrogens, with the handwritten notes &ldquo;diminish testosterone biosynthesis&rdquo; and &ldquo;prevent testosterone from binding to its receptor&rdquo;). He: spironolactone and ketoconazole decrease testosterone biosynthesis; azole antifungals are strong 3A4 inhibitors; flutamide blocks testosterone from binding its receptor (11/04 T@32237&ndash;@33000)."
   },
   {
    "key": "cb-retinoids",
@@ -348,7 +348,7 @@
     "hydrocortisone",
     "clobetasol"
    ],
-   "caption": "After DPAW slide 25 (the dashed arrow and the changes it highlights; potency rests on structure, delivery vehicle and concentration) and slide 20 (SAR). Slide 25 draws clobetasol propionate with OH on C21; the marketed drug&rsquo;s 21-Cl is drawn here, as in the Atlas (reviews/OPEN_QUESTIONS.md notes the slide&rsquo;s drawing error). He: these derivative structures need not be memorized; structural changes, not metabolism, raise the potency (11/03 T 1152&ndash;1154, 1175&ndash;1179)."
+   "caption": "After DPAW slide 25 (the dashed arrow and the changes it highlights; potency rests on structure, delivery vehicle and concentration) and slide 20 (SAR). Slide 25 draws clobetasol propionate with OH on C21; the marketed drug&rsquo;s 21-Cl is drawn here, as in the Atlas (the slide&rsquo;s drawing has an error). He: these derivative structures need not be memorized; structural changes, not metabolism, raise the potency (11/03 T 1152&ndash;1154, 1175&ndash;1179)."
   }
  ]
 }
