@@ -438,7 +438,7 @@ for (const w of ['MAIN route', 'smaller route', 'PGF2α']) check(a.includes(w), 
   /* the sentence maps fit the markup */
   const sbS = {}; vm.createContext(sbS); vm.runInContext(rd('dianarr_sync_ey.js') + '\nthis.S = DIA_SYNC;', sbS);
   const sbN = {}; vm.createContext(sbN); vm.runInContext(rd('dianarr_ey.js') + '\nthis.N = DIA_NARR;', sbN);
-  check(!sbS.S['ey-autonomic'] && !sbN.N['ey-autonomic'], 'ey-autonomic: no narration entry and no sentence map (nothing is recorded for it)');
+  check(!sbS.S['ey-autonomic'] && sbN.N['ey-autonomic'] && sbN.N['ey-autonomic'].steps.length === 3, 'ey-autonomic: three narrated steps, no sentence map (the steps play whole)');
   for (const k of Object.keys(FULL).filter(k => k !== 'ey-autonomic')) {
     const sy = sbS.S[k], st = stepsOf(k), h = PLAN[k].h;
     check(Array.isArray(sy) && sy.length === st.length, `${k}: one sentence map per step`, sy && sy.length);

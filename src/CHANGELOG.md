@@ -24,6 +24,8 @@ Every update adds its bullets here in the same commit that makes the change.
 - Topics bars now count answered questions (right, wrong); the mastery bars moved to Weak spots.
 - Dr. Smith's glaucoma figures redrawn on a whole eye, with the pupil and iris labelled and a zoom of the angle.
 - New figure: adrenergic versus cholinergic stimulation in the eye (slide 7), with a side-by-side table.
+- The adrenergic versus cholinergic eye figure now has recorded narration (3 steps).
+- Guides no longer show transcript codes; they read "lecture 11/13" instead.
 - Narration now starts at 0.8× speed, with a Speed control and a longer pause between figure steps.
 - Atlas: boards sit in closed folders by exam; a search opens the folders that hold a match.
 - Exam 3 walkthroughs: 41 guide pages of all three professors have a narrated Listen player (220 parts).

@@ -77,12 +77,12 @@ table.reftab.cardsx td:not(:first-child) .ln.chain{list-style:none;margin-left:1
   /* Transcript codes are not shown in Reference and Tell apart (Louis, 2026-11-22: "for the references and tell apart
      don't forget to hide the T@ code"): "T@44702, T@45812 11/13" and "10/30 T 430–450" read "lecture 11/13" and
      "lecture 10/30". The codes stay in reference.js and tell.js, where the checks read them. */
-  const TC = 'T@?\\s?\\d{2,6}(?:\\s*[–-]\\s*@?\\d+)?', TL = TC + '(?:\\s*[,;]\\s*' + TC + ')*';
+  const TC = '\\bT@?\\s?\\d{2,6}(?:\\s*[–-]\\s*@?\\d+)?', TL = TC + '(?:\\s*[,;]\\s*' + TC + ')*';
   const R1 = new RegExp('(\\d{1,2}\\/\\d{1,2}),?\\s+' + TL, 'g'), R2 = new RegExp(TL + ',?\\s+(\\d{1,2}\\/\\d{1,2})', 'g'), R3 = new RegExp(TL, 'g');
   function hideCodes(root){
     if (!root || typeof document.createTreeWalker !== 'function') return;
     const w = document.createTreeWalker(root, 4 /* text */, null); let n; const list = [];
-    while ((n = w.nextNode())) if (/T@?\s?\d{2,6}/.test(n.nodeValue) && !(n.parentNode && /^(SCRIPT|STYLE)$/.test(n.parentNode.nodeName))) list.push(n);
+    while ((n = w.nextNode())) if (/\bT@?\s?\d{2,6}/.test(n.nodeValue) && !(n.parentNode && /^(SCRIPT|STYLE)$/.test(n.parentNode.nodeName))) list.push(n);
     list.forEach(t => {
       let v = t.nodeValue.replace(R1, 'lecture $1').replace(R2, 'lecture $1').replace(R3, 'lecture');
       v = v.replace(/(lecture \d{1,2}\/\d{1,2})(?:\s*[;,]\s*\1)+/g, '$1').replace(/lecture(?:\s*[;,]\s*lecture)+(?!\s*\d)/g, 'lecture');
@@ -122,6 +122,9 @@ table.reftab.cardsx td:not(:first-child) .ln.chain{list-style:none;margin-left:1
     catch (e) { console.error('Table cards could not be set up; the tables are shown as tables.', e); }
     return r;
   };
+  /* Guides too (Louis, 2026-11-23: hide the T@ codes in Guides): the same text change, no cards. */
+  const hideIn = (og, id) => function () { const r = og.apply(this, arguments); try { hideCodes(document.getElementById(id)); } catch (e) { /* the codes stay visible */ } return r; };
+  if (typeof renderGuide === 'function') renderGuide = hideIn(renderGuide, 'v-guide');
   if (typeof renderRef === 'function') renderRef = after(renderRef, 'v-ref');
   if (typeof renderTell === 'function') renderTell = after(renderTell, 'v-tell');
 })();

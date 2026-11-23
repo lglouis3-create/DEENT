@@ -804,3 +804,6 @@ AUDIO_CLIPS["gw-oo-9-6"] = {h:"95932310cad6", s:57.1};
 AUDIO_CLIPS["gw-oo-9-7"] = {h:"fe218acd60b9", s:51.6};
 AUDIO_CLIPS["gw-oo-9-8"] = {h:"3b33224b14fc", s:40.1};
 AUDIO_CLIPS["gw-oo-9-9"] = {h:"fb017f1f5148", s:39.2};
+AUDIO_CLIPS["dn-ey-autonomic-1"] = {h:"8023d56e9278", s:24.3};
+AUDIO_CLIPS["dn-ey-autonomic-2"] = {h:"c4bedb89216b", s:17.3};
+AUDIO_CLIPS["dn-ey-autonomic-3"] = {h:"b19b44772f0b", s:27.9};
