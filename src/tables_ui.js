@@ -69,7 +69,7 @@ table.reftab.cardsx td:not(:first-child) .ln+.ln{margin-top:4px}
 table.reftab.cardsx td:not(:first-child) .ln.chain{list-style:none;margin-left:1.15em}
 @media (max-width:900px){table.reftab.cardsx tr{grid-template-columns:repeat(min(var(--tcn,3),2),minmax(0,1fr))}}
 @media (max-width:600px){table.reftab.cardsx tr{grid-template-columns:minmax(0,1fr)}}
-@media (prefers-color-scheme:dark){table.reftab.cardsx td.ttrap{background:#3a1f25}}`;
+/* the page has one (light) theme whatever the device setting, so the trap tile has no dark variant (Louis, 2026-11-23: its text was unreadable on a dark-mode device) */`;
   if (!document.getElementById('tablesuicss')) {
     const s = document.createElement('style'); s.id = 'tablesuicss'; s.textContent = CSS; document.head.appendChild(s);
   }
