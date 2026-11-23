@@ -50,8 +50,8 @@ const check = (ok, what, detail) => {
 
 const PLAN = {
   'ey-autonomic': {steps: 3, h: 632},
-  'ey-aqueous': {steps: 7, h: 632},
-  'ey-targets': {steps: 4, h: 586},
+  'ey-aqueous': {steps: 7, h: 812},
+  'ey-targets': {steps: 4, h: 756},
   'ey-angle':   {steps: 3, h: 652},
   'ey-cai':     {steps: 5, h: 392},
   'ey-allergy': {steps: 4, h: 368},
@@ -174,12 +174,16 @@ for (const [k, plan] of Object.entries(PLAN)) {
 }
 
 // 5. content rules (drawn text only)
+/* round 4 (2026-11-23): every drug-target mark on the eye has its own label (receptor or enzyme, then the class: fu-g*-t0/t1) and the process inset has
+   its own labels (pz*); those name each class in every step, so the "class not under the wrong header" text checks below read the step without them */
+const noTgG = h => h.replace(/<text\b[^>]*data-k="fu-g[a-z0-9]+-t\d"[^>]*>[^<]*<\/text>/g, '');   /* only the labels on the eye */
+const noTg = h => h.replace(/<text\b[^>]*data-k="(?:fu-g[a-z0-9]+-t\d|pz[a-z0-9]*)"[^>]*>[^<]*<\/text>/g, '');
 const drawn = k => unescape((DIA[k] || '').replace(/<figcaption>[\s\S]*?<\/figcaption>/, '').replace(/aria-label="[^"]*"/, '')
   .replace(/<p class="dnpurpose">[\s\S]*?<\/p>/, '').replace(/<[^>]+>/g, ' '));
-const stepTextK = (k, n) => { const sp = (DIA[k] || '').split(/<g class="st[ "]/).slice(1); const g = sp[n - 1] || ''; return unescape(g.slice(0, g.lastIndexOf('</g>') < 0 ? g.length : g.lastIndexOf('</g>')).replace(/<[^>]+>/g, ' ')); };
+const stepTextK = (k, n) => { const sp = (DIA[k] || '').split(/<g class="st[ "]/).slice(1); const g = noTg(sp[n - 1] || ''); return unescape(g.slice(0, g.lastIndexOf('</g>') < 0 ? g.length : g.lastIndexOf('</g>')).replace(/<[^>]+>/g, ' ')); };
 const lastStep = k => { const s = (DIA[k] || '').split(/<g class="st[ "]/); return unescape(s[s.length - 1].replace(/<[^>]+>/g, ' ')); };
 {
-  const stepText = (k, n) => { const sp = (DIA[k] || '').split(/<g class="st[ "]/).slice(1); const g = sp[n - 1] || ''; return unescape(g.slice(0, g.lastIndexOf('</g>') < 0 ? g.length : g.lastIndexOf('</g>')).replace(/<[^>]+>/g, ' ')); };
+  const stepText = (k, n) => { const sp = (DIA[k] || '').split(/<g class="st[ "]/).slice(1); const g = noTg(sp[n - 1] || ''); return unescape(g.slice(0, g.lastIndexOf('</g>') < 0 ? g.length : g.lastIndexOf('</g>')).replace(/<[^>]+>/g, ' ')); };
   /* ey-aqueous now has 7 steps: 1 parts (slide 15), 2 inflow, 3 outflow, 4 slide-16 zoom, 5 inflow drugs, 6 trabecular drugs, 7 uveoscleral drugs */
   const s1 = stepText('ey-aqueous', 1), s2 = stepText('ey-aqueous', 3), s4 = stepText('ey-aqueous', 6), s5 = stepText('ey-aqueous', 7), s3 = stepText('ey-aqueous', 5), z = stepText('ey-aqueous', 4);
   const s1n = s1.replace(/\s+/g, ' ');
@@ -188,7 +192,7 @@ const lastStep = k => { const s = (DIA[k] || '').split(/<g class="st[ "]/); retu
     check(s1n.includes(w), 'ey-aqueous step 1 names the part ' + w + ' as slide 15 labels it');
   check(!/data-k="key-[st]\d/.test(DIA['ey-aqueous']), 'ey-aqueous: no colour key block (round 2: the structures carry their own labels)');
   /* step 4 writes "CA" and "inhibitors" on two lines inside the zoom circle, so the text is compared with runs of spaces collapsed */
-  const zz = z.replace(/\s+/g, ' ');
+  const zz = unescape(noTgG(((DIA['ey-aqueous'] || '').split(/<g class="st[ "]/).slice(1)[3] || '')).replace(/<[^>]+>/g, ' ')).replace(/\s+/g, ' ');
   for (const w of ['β receptor', 'α2 receptor', 'α1 receptor', 'carbonic', 'anhydrase', 'ciliary blood supply'.split(' ')[0], 'blood supply', 'M3', 'β-blockers', 'α2 agonists', 'CA inhibitors']) check(zz.includes(w), 'ey-aqueous step 4 (slide 16): ' + w + ' drawn');
   check(!/M3 agonists|netarsudil|PG agonists/.test(z), 'ey-aqueous step 4: only what slide 16 labels (no outflow drug names)');
   check(s3.includes('↓ INFLOW'), 'ey-aqueous step 5: the inflow header');
@@ -253,7 +257,7 @@ for (const w of ['MAIN route', 'smaller route', 'PGF2α']) check(a.includes(w), 
 }
 // 6. the full, two-sided view, the angle zoom and the layout rules of round 2
 {
-  const FULL = {'ey-autonomic': [1, 2, 3], 'ey-aqueous': [1, 2, 3, 5, 6, 7], 'ey-targets': [1, 2, 3, 4], 'ey-angle': [1, 2, 3]};
+  const FULL = {'ey-autonomic': [1, 2, 3], 'ey-aqueous': [1, 2, 3, 4, 5, 6, 7], 'ey-targets': [1, 2, 3, 4], 'ey-angle': [1, 2, 3]};   /* round 4: aq step 4 is on the whole eye too */
   const ZSTEPS = {'ey-aqueous': [1, 3, 6, 7], 'ey-targets': [2, 3, 4], 'ey-angle': [1, 2, 3]};
   const stepsOf = k => (DIA[k] || '').split(/<g class="st[ "]/).slice(1).map(s => s.slice(0, s.lastIndexOf('</g>')));
   const els = g => [...g.matchAll(/<(path|text|rect|polygon)\b([^>]*)>([^<]*)/g)].map(m => ({tag: m[1], a: m[2], k: attr(m[2], 'data-k'), cls: attr(m[2], 'class') || '', txt: m[3]}));
@@ -367,7 +371,8 @@ for (const w of ['MAIN route', 'smaller route', 'PGF2α']) check(a.includes(w), 
   check(has(aq[1], 'f-in', 'fx-flow') && !aq[1].some(e => /fx-drift/.test(e.cls)), 'ey-aqueous step 2: the inflow is the one moving flow');
   check(has(aq[2], 'z-tm', 'fx-flow') && has(aq[2], 'z-uv', 'fx-drift') && !has(aq[2], 'f-in'), 'ey-aqueous step 3: the trabecular route is the dashed arrow, the uveoscleral route the dotted arrow (both in the zoom), the inflow is still');
   check(has(aq[3], 'pz-beta', 'fa-rc2') && has(aq[3], 'pz-a2', 'fa-rc3') && has(aq[3], 'pz-ca', 'fa-rc4'), 'ey-aqueous step 4: β receptor green, α2 receptor amber, carbonic anhydrase purple');
-  check(aq[3].filter(e => e.tag === 'text' && e.txt === 'M3' && /fa-m3/.test(e.cls)).length === 2 && has(aq[3], 'zl1') && has(aq[3], 'zl2') && has(aq[3], 'pz-c'), 'ey-aqueous step 4: a zoom circle with a leader from the process, and two M3 marks (iris, meshwork)');
+  /* round 4: step 4 is drawn on the same whole eye as steps 5-7 (no small copy): a ring round the process on the eye, the process inset, and the two M3 marks (meshwork and sphincter, red, with their labels) */
+  check(has(aq[3], 'pz-ring') && has(aq[3], 'pz-c') && has(aq[3], 'd-m3tL', 'fa-dk5') && has(aq[3], 'd-m3tR', 'fa-dk5') && has(aq[3], 'd-m3iL', 'fa-dk5') && has(aq[3], 'd-m3iR', 'fa-dk5') && has(aq[3], 'fu-gm3-t0') && has(aq[3], 'fu-sph-t0'), 'ey-aqueous step 4: a ring on the eye round the process, the process inset, and the two M3 marks (meshwork, iris) on both sides with labels');
   check(has(aq[4], 'f-in', 'fu-slow'), 'ey-aqueous step 5: the inflow marches slowly (production decreased)');
   check(has(aq[5], 'z-tm', 'fx-flow') && !has(aq[5], 'f-in') && !has(aq[5], 'z-uv') && has(aq[5], 'fu-sphL') && has(aq[5], 'fu-sphR') && has(aq[5], 'fu-sph-t0'), 'ey-aqueous step 6: only the trabecular flow moves; the sphincter is marked on both irises and labelled');
   check(has(aq[6], 'z-uv', 'fx-drift') && has(aq[6], 'az-musc-hl') && !has(aq[6], 'f-in') && !has(aq[6], 'z-tm'), 'ey-aqueous step 7: only the uveoscleral flow moves; the ciliary muscle is highlighted');
@@ -391,7 +396,8 @@ for (const w of ['MAIN route', 'smaller route', 'PGF2α']) check(a.includes(w), 
       check(d[0] > sl.x0 && d[0] < pg[0] && d[0] - sl.x1 < 14, `ey-targets step ${i + 1}: the brimonidine mark sits between the ciliary muscle and the sclera (zoom)`);
     }
   }
-  check(!tg[2].some(e => /^d-a[LR]$/.test(e.k || '')) && tg[3].filter(e => /fa-dk3/.test(e.cls)).length === 3, 'ey-targets: step 3 shows the uveoscleral amber mark alone; step 4 both kinds of amber mark');
+  /* round 4: the eye carries every mark in every step, the marks of other steps faded (opacity .5); step 3's own amber mark is the one in the zoom */
+  check(tg[2].filter(e => /^d-a[LR]$/.test(e.k || '')).length === 2 && tg[2].filter(e => /^d-a[LR]$/.test(e.k || '')).every(e => /opacity="0.5"/.test(e.a)) && has(tg[2], 'z-uv-d', 'fa-dk3') && tg[3].filter(e => /fa-dk3/.test(e.cls)).length === 3, 'ey-targets: step 3 shows the uveoscleral amber mark at full strength (the α2 marks on the ciliary processes faded); step 4 both kinds of amber mark');
   check(has(an[0], 'ringR') && has(an[0], 'az-ring') && has(an[0], 'f-in', 'fx-flow') && has(an[0], 'z-tm', 'fx-flow') && has(an[0], 'z-uv', 'fx-drift'), 'ey-angle step 1: both angles circled; inflow on the eye, trabecular and uveoscleral flows in the zoom');
   check(has(an[1], 'fu-tm-bL', 'fa-tmbad') && has(an[1], 'fu-tm-bR', 'fa-tmbad') && has(an[1], 'az-tm-b', 'fa-tmbad') && has(an[1], 'blkPL', 'fa-blk') && has(an[1], 'blkPR', 'fa-blk') && has(an[1], 'zblkP', 'fa-blk') &&
     has(an[1], 'f-in', 'fu-slow') && has(an[1], 'z-tm', 'fu-slow') && !has(an[1], 'z-out') && !has(an[1], 'z-uv') && has(an[1], 'fu-irisL') && has(an[1], 'az-iris'),
@@ -457,6 +463,41 @@ for (const w of ['MAIN route', 'smaller route', 'PGF2α']) check(a.includes(w), 
       check(!hit.length, `${k} step ${i + 1}: no badge covers a label (estimate)`, hit.join(', '));
     });
   }
+}
+
+// 7. round 4 (2026-11-23): the targets stay on the whole eye in every drug step, with the process inset
+{
+  const stepsOf = k => (DIA[k] || '').split(/<g class="st[ "]/).slice(1).map(s => s.slice(0, s.lastIndexOf('</g>')));
+  const els = g => [...g.matchAll(/<(path|text|rect|polygon)\b([^>]*)>([^<]*)/g)].map(m => ({tag: m[1], a: m[2], k: attr(m[2], 'data-k'), cls: attr(m[2], 'class') || '', txt: m[3]}));
+  const GROUP = {b: ['d-b'], a: ['d-a'], c: ['d-c'], m3: ['d-m3t', 'd-m3i'], rk: ['d-rk'], pg: ['d-pg']};
+  const faded = e => /opacity="0.5"/.test(e.a);
+  /* step list: [figure, step number (1-based), groups at full strength, groups drawn] */
+  const PLANS = [['ey-aqueous', 4, ['b', 'a', 'c', 'm3'], ['b', 'a', 'c', 'm3']], ['ey-aqueous', 5, ['b', 'a', 'c'], null], ['ey-aqueous', 6, ['m3', 'rk'], null], ['ey-aqueous', 7, ['pg'], null],
+    ['ey-targets', 1, ['b', 'a', 'c'], null], ['ey-targets', 2, ['m3', 'rk'], null], ['ey-targets', 3, ['pg'], null], ['ey-targets', 4, ['b', 'a', 'c', 'm3', 'rk', 'pg'], null]];
+  const LBL = {b: 'fu-gb', a: 'fu-ga', c: 'fu-gc', m3: 'fu-gm3', rk: 'fu-grk', pg: 'fu-gpg'};
+  for (const [k, n, on, only] of PLANS) {
+    const E = els(stepsOf(k)[n - 1]), tag = `${k} step ${n}`;
+    const gs = only || Object.keys(GROUP);
+    for (const g of gs) {
+      const ok = GROUP[g].every(m => ['L', 'R'].every(sd => { const d = E.filter(e => e.k === m + sd); return d.length === 1 && (on.includes(g) ? !faded(d[0]) : faded(d[0])); }));
+      check(ok, `${tag}: the ${g} mark is on both sides of the eye, ${on.includes(g) ? 'at full strength' : 'faded (still drawn)'}`);
+      const lab = E.filter(e => e.tag === 'text' && (e.k === LBL[g] + '-t0' || e.k === LBL[g] + '-t1'));
+      check(lab.length === 2 && lab.every(e => on.includes(g) ? !faded(e) : faded(e)), `${tag}: the ${g} mark has its two-line label (receptor or enzyme, then the class), ${on.includes(g) ? 'full' : 'faded'}`);
+    }
+    check(E.some(e => e.k === 'fu-sph-t0') && E.some(e => e.k === 'pz-c'), `${tag}: the iris mark is labelled and the process inset is drawn`);
+    const cb = E.find(e => e.k === 'fu-cbodyL' || e.k === 'fu-cbody-bL');
+    check(cb && !/opacity=/.test(cb.a) && ['fu-cbodyR', 'fu-proc1L', 'fu-proc1R'].every(kk => E.some(e => e.k === kk && !/opacity=/.test(e.a))), `${tag}: both ciliary bodies and their processes are drawn at full strength`);
+    const insetOn = (n <= 5 && k === 'ey-aqueous') || (k === 'ey-targets' && n === 1);
+    const pc = E.find(e => e.k === 'pz-c'), pt = E.find(e => e.k === 'pzbc');
+    check(insetOn ? !/opacity=/.test(pc.a) && !/opacity=/.test(pt.a) : /opacity="0.4"/.test(pc.a) && /opacity="0.4"/.test(pt.a), `${tag}: the process inset is ${insetOn ? 'at full strength (the step is about inflow)' : 'dimmed (the step is about outflow)'}`);
+  }
+  /* the outflow steps keep the angle zoom beside (under) the inset; heights stay under 900 */
+  for (const [k, n] of [['ey-aqueous', 6], ['ey-aqueous', 7], ['ey-targets', 2], ['ey-targets', 3], ['ey-targets', 4]]) {
+    const E = els(stepsOf(k)[n - 1]);
+    const ztop = E.find(e => e.k === 'az-frm'), pzT = E.find(e => e.k === 'pzT');
+    check(ztop && pzT && +attr(pzT.a, 'y') > +attr(ztop.a, 'y') + +attr(ztop.a, 'height'), `${k} step ${n}: the process inset sits below the angle zoom, not over it`);
+  }
+  for (const k of ['ey-aqueous', 'ey-targets', 'ey-angle']) check(PLAN[k].h < 900, `${k}: taller than before but under 900 units`);
 }
 const FIGURATIVE = /\b(netting|fence|sponge|pop|orange)\b/i;
 for (const k of Object.keys(PLAN)) {

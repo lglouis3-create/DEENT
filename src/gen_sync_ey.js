@@ -22,25 +22,26 @@ const SPEC = {
     {seq: {2: [fl('z-tm'), fl('f-out'), zl('tm', 'sc', 'vein'), 'mainT', card('oc1')], 3: [fl('z-uv'), fl('f-uv'), zl('uv'), 'koc2', 'koc2h'],
       4: ['uvaH', pre('uvaB')], 5: [/^koc2t\d$/, zl('sclera')]},
       at: {2: [338, 244], 3: [70, 394], 4: [330, 120], 5: [340, 438]}},
-    {seq: {1: ['zl1', 'zl2'], 2: ['pz-beta', /^zb(0|c|l)$/], 4: ['pz-a2', pre('za2')], 5: ['pz-ca', pre('zca')], 6: [pre('m3'), 'zbT', 'zm', pre('zm3'), /^zq[ht]$/, /^za1n[ht]$/]},
-      at: {1: [178, 84], 2: [18, 162], 4: [344, 68], 5: [344, 150], 6: [14, 54]}, raw: true},
+    {seq: {1: ['pz-ring', 'pzT', 'pz-c', 'pz-body', 'pz-core', /^pz-v\d$/, 'pzv0', 'pzv1', 'pzvl', 'pzcb', 'pzcbl'], 2: ['pz-beta', pre('pzb'), pre('d-b'), lab('gb')], 4: ['pz-a2', pre('pza2'), pre('d-a'), lab('ga')], 5: ['pz-ca', pre('pzca'), pre('d-c'), lab('gc')],
+      6: [pre('d-m3'), lab('sph'), lab('gm3'), 'pz-a1', 'pza1', 'pza1l', 'zbT', 'zm', pre('zm3'), /^zq[ht]$/, /^za1n[ht]$/]},
+      at: {}, raw: true},
     null,
-    {seq: {1: [fl('z-tm'), fl('f-out'), zl('tm', 'sc'), 'pl2', 'tmD'], 2: ['cm3', 'cm3t0', 'cm3n'], 3: ['cm3t1'], 4: ['cm3t2', 'cm3t3', /^fu-sph[LR]$/, lab('sph')], 5: ['crk', 'crkt0'], 6: ['crkt1', 'crkt2']},
-      at: {1: [338, 244], 2: [150, 414], 3: [126, 452], 4: [202, 476], 5: [322, 439], 6: [322, 463]}},
-    {seq: {1: ['az-musc-hl', zl('musc'), 'pl3', chip('pg'), 'uvD'], 2: [fl('z-uv'), fl('f-uv'), zl('uv', 'sclera')], 4: [chip('br')], 5: ['smc', 'sm1h', 'sm1'], 6: ['sm2h', 'sm2a', 'sm2b'], 7: ['sm3']},
-      at: {1: [300, 390], 2: [70, 394], 4: [338, 440], 5: [340, 502], 6: [340, 523], 7: [246, 545]}},
+    {seq: {1: [fl('z-tm'), fl('f-out'), zl('tm', 'sc'), 'pl2', 'tmD'], 2: ['cm3', 'cm3t0', 'cm3n', pre('d-m3t'), lab('gm3')], 3: ['cm3t1'], 4: ['cm3t2', 'cm3t3', /^fu-sph[LR]$/, lab('sph'), pre('d-m3i')], 5: ['crk', 'crkt0', pre('d-rk'), lab('grk')], 6: ['crkt1', 'crkt2']},
+      at: {3: [150, 635]}, raw: true},
+    {seq: {1: ['az-musc-hl', zl('musc'), 'pl3', chip('pg'), 'uvD', pre('d-pg'), lab('gpg')], 2: [fl('z-uv'), fl('f-uv'), zl('uv', 'sclera')], 4: [chip('br')], 5: ['smc', 'sm1h', 'sm1'], 6: ['sm2h', 'sm2a', 'sm2b'], 7: ['sm3']},
+      at: {}, raw: true},
   ],
   'ey-targets': [
-    {raw: true, seq: {2: ['fu-cbody-hl', lab('cbody'), 'pl1', 'ibT'], 3: [pre('d-b'), chip('xb'), 'lxb', chip('bb')], 4: [pre('d-a'), chip('xa'), 'lxa', chip('a2')], 5: [pre('d-c'), chip('xc'), 'lxc', chip('ca')], 6: ['ibU']},
-      at: {2: [86, 244], 3: [346, 140], 4: [346, 178], 5: [346, 216], 6: [244, 347]}},
-    {seq: {1: [pre('d-m3i'), lab('sph'), 'z-m3', zl('tm'), 'pl2', 'trT'], 2: ['cm3', 'cm3bk', 'cm3t0', 'lm3t'], 3: ['cm3t1', 'cxm3', 'cxm3t0', 'cxm3t1'], 4: ['cxm3t2', 'cxm3t3'],
-      5: ['z-rkt', 'z-rks', chip('rk'), 'lrks', 'lrkt', zl('sc'), chip('xrk')]},
-      at: {1: [338, 100], 2: [330, 298], 3: [206, 414], 4: [166, 467], 5: [24, 312]}},
-    {seq: {1: ['z-pg', chip('pg'), 'lpg', 'az-musc-hl', 'pl3'], 2: [fl('z-uv'), fl('f-uv'), zl('uv'), chip('xpg'), 'uvT2'], 4: ['z-uv-d', chip('br'), 'lbr'], 5: [chip('xbr')]},
-      at: {1: [228, 262], 2: [210, 414], 4: [110, 268], 5: [338, 468]}},
-    {seq: {1: [/^d-[bac][LR]$/, chip('xb'), chip('xa'), chip('xc'), 'lxb', 'lxa', 'lxc', pre('ab1')],
-      2: [pre('d-m3i'), lab('sph'), 'z-m3', 'z-rkt', 'z-rks', 'z-pg', 'z-uv-d', chip('m3'), 'lm3t', chip('rk'), 'lrks', 'lrkt', chip('pg4'), 'lpg4', chip('br4'), 'lbr4', pre('ab2'), pre('ab3')]},
-      at: {1: [246, 420], 2: [290, 448]}},
+    {raw: true, seq: {2: ['fu-cbody-hl', lab('cbody'), 'pl1', 'ibT'], 3: [pre('d-b'), lab('gb'), 'pz-beta', pre('pzb'), chip('bb')], 4: [pre('d-a'), lab('ga'), 'pz-a2', pre('pza2'), chip('a2')], 5: [pre('d-c'), lab('gc'), 'pz-ca', pre('pzca'), chip('ca')], 6: ['ibU']},
+      at: {}},
+    {seq: {1: [pre('d-m3i'), pre('d-m3t'), lab('sph'), lab('gm3'), 'z-m3', zl('tm'), 'pl2', 'trT'], 2: ['cm3', 'cm3bk', 'cm3t0', 'lm3t'], 3: ['cm3t1', 'cxm3', 'cxm3t0', 'cxm3t1'], 4: ['cxm3t2', 'cxm3t3'],
+      5: ['z-rkt', 'z-rks', chip('rk'), 'lrks', 'lrkt', zl('sc'), chip('xrk'), pre('d-rk'), lab('grk')]},
+      at: {4: [164, 640]}, raw: true},
+    {seq: {1: ['z-pg', chip('pg'), 'lpg', 'az-musc-hl', 'pl3', pre('d-pg'), lab('gpg')], 2: [fl('z-uv'), fl('f-uv'), zl('uv'), chip('xpg'), 'uvT2'], 4: ['z-uv-d', chip('br'), 'lbr', chip('xbr')]},
+      at: {}, raw: true},
+    {seq: {1: [/^d-[bac][LR]$/, lab('gb'), lab('ga'), lab('gc'), pre('ab1')],
+      2: [pre('d-m3'), pre('d-rk'), pre('d-pg'), lab('sph'), lab('gm3'), lab('grk'), lab('gpg'), 'z-m3', 'z-rkt', 'z-rks', 'z-pg', 'z-uv-d', chip('m3'), 'lm3t', chip('rk'), 'lrks', 'lrkt', chip('pg4'), 'lpg4', chip('br4'), 'lbr4', pre('ab2'), pre('ab3')]},
+      at: {}, raw: true},
   ],
   'ey-angle': [
     {seq: {1: [fl('f-in'), lab('cbody'), lab('ac'), card('n0'), card('n1')], 2: ['ringR', ZALL, fl('z-tm'), zl('tm', 'sc', 'cornea', 'iris'), card('n2')],
@@ -62,7 +63,22 @@ for (const [key, steps] of Object.entries(SPEC)) {
   const gs = html.split(/<g class="st[ "]/).slice(1).map(s => s.slice(0, s.lastIndexOf('</g>')));
   if (gs.length !== steps.length) { console.log('FAIL', key, 'steps', gs.length, steps.length); bad++; }
   const rows = gs.map((g, i) => {
-    const kids = [...g.matchAll(/<(path|text|rect|polygon|circle|ellipse|line)\b([^>]*)>/g)].map(m => (m[2].match(/data-k="([^"]*)"/) || [, null])[1]);
+    const E = [...g.matchAll(/<(path|text|rect|polygon|circle|ellipse|line)\b([^>]*)>([^<]*)/g)];
+    const kids = E.map(m => (m[2].match(/data-k="([^"]*)"/) || [, null])[1]);
+    const at0 = (m, n) => (m[2].match(new RegExp('\\b' + n + '="([^"]*)"')) || [, null])[1];
+    /* a badge place for a part that has none: a spot beside its first element that is clear of every text line (7-unit margin) and inside the panel */
+    const H = +(html.match(/viewBox="0 0 360 (\d+)"/) || [, 800])[1];
+    const tboxes = E.filter(m => m[1] === 'text' && m[3].trim() && !/capt/.test(m[2])).map(m => { const x = +at0(m, 'x'), y = +at0(m, 'y'), w = m[3].length * 7.2, an = at0(m, 'text-anchor') || 'start'; const x0 = an === 'middle' ? x - w / 2 : an === 'end' ? x - w : x; return [x0, x0 + w, y - 9, y + 3]; });
+    const clear = (x, y) => x >= 10 && x <= 350 && y >= 10 && y <= H - 60 && !tboxes.some(b => x + 9 > b[0] && x - 9 < b[1] && y + 9 > b[2] && y - 9 < b[3]);
+    const autoAt = j => {
+      const m = E[j]; let bx, by, bw = 0;
+      if (m[1] === 'text') { bx = +at0(m, 'x'); by = +at0(m, 'y') - 4; bw = m[3].length * 6.6; }
+      else if (m[1] === 'rect') { bx = +at0(m, 'x'); by = +at0(m, 'y'); bw = +at0(m, 'width'); }
+      else { const n = (at0(m, 'd') || at0(m, 'points') || '').match(/-?[\d.]+/g) || []; bx = +n[0]; by = +n[1]; }
+      const off = [[-9, -9], [9, -9], [-9, 9], [9, 9], [0, -14], [0, 14], [-15, 0], [15, 0], [-20, -12], [20, -12], [-20, 12], [20, 12], [bw + 10, 0], [bw / 2, -14], [bw / 2, 14], [-26, 0], [26, 0], [0, -22], [0, 22], [bw + 16, -6], [bw + 16, 6], [-30, 0], [-30, -14], [-30, 14], [bw + 24, 0], [bw / 2, -26], [bw / 2, 26], [-40, 0], [bw + 36, 0]];
+      for (const [dx, dy] of off) { const x = Math.round(bx + dx), y = Math.round(by + dy); if (clear(x, y)) return [x, y]; }
+      return [Math.round(bx), Math.round(by)];
+    };
     const sp = steps[i]; if (!sp) return 'null';
     const used = {}, seq = {};
     for (const [sn, ms] of Object.entries(sp.seq)) {
@@ -76,6 +92,7 @@ for (const [key, steps] of Object.entries(SPEC)) {
     }
     const f = o => '{' + Object.entries(o).map(([k, v]) => k + ': [' + v.join(',') + ']').join(',') + '}';
     const at = {}; Object.entries(sp.at).forEach(([k, v]) => { at[k] = sp.raw ? v : MAP(v); });
+    Object.keys(sp.seq).forEach(sn => { if (!at[sn] && seq[sn].length) at[sn] = autoAt(seq[sn][0]); });
     return `{n: ${kids.length},seq: ${f(seq)},at: ${f(at)}}`;
   });
   out += `DIA_SYNC['${key}'] = [\n  ${rows.join(',\n  ')}\n];\n`;
