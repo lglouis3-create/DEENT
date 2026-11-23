@@ -691,7 +691,7 @@ function sourceCounts(){
     const keys = (typeof DIA === 'undefined' ? [] : Object.keys(DIA).filter(k => /data-anim/.test(DIA[k])));
     if(!keys.length) return {none: true};
     show('diagrams');
-    const fig = document.querySelector('#v-diagrams .fig');
+    const fig = document.querySelector('#v-diagrams .fig:has(.st)');   // the first step-through (the aqueous humor flow figure, ey-flow, comes first and has no steps)
     if(!fig) return {err: 'no figure rendered in the Diagrams tab'};
     const steps = fig.querySelectorAll('.st').length;
     const shownAt = () => [...fig.querySelectorAll('.st')].findIndex(s => s.classList.contains('on'));

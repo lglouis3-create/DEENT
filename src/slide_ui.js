@@ -387,7 +387,9 @@ const SLIDE_UI = (() => {
     if (id === 'v-ref' || id === 'v-tell' || id === 'v-guide' || id === 'v-atlas') out.push([view, u => sectionCtx(u, view)]);
     else if (id === 'v-drugs') out.push([view, drugCtx]);
     else if (id === 'v-dz') out.push([view, u => dzCtx(u, view)]);
-    else if (id === 'v-diagrams') view.querySelectorAll('figcaption').forEach(f => out.push([f, () => ({decks: []})]));
+    else if (id === 'v-diagrams') { view.querySelectorAll('figcaption').forEach(f => out.push([f, () => ({decks: []})]));
+      /* the "What this shows" line and the drug facts of the aqueous humor flow figure cite Dr. Smith's Eye slides by number only */
+      view.querySelectorAll('figure.efl .efl-what, figure.efl .efl-info').forEach(f => out.push([f, () => ({decks: P.decksNamed('Dr. Smith’s Eye')})])); }
     else {
       // after an answer: the explanation block and its source line; the exam review; the missed list
       view.querySelectorAll('.why').forEach(w => {

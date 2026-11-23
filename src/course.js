@@ -318,6 +318,8 @@ const COURSE = {
           'diagrams_oo.js',
           'diagrams_ey_fa.js',
           'diagrams_ey_fa2.js',
+          // "Watch aqueous humor flow": a living, realistic cross-section of the front of the eye, first in the Eye group (adds to DIA, DIA_NAMES, DIAGRAMS; animates itself on the page)
+          'eye_flow_ui.js',
           'diagrams_fb.js',
           'diagrams_oo_fc.js',
           // Mechanism step-throughs from Dr. Smith's PCol slides (Louis, 2026-11-09): adds to DIA
