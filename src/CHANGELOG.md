@@ -25,7 +25,7 @@ Every update adds its bullets here in the same commit that makes the change.
 - Dr. Smith's glaucoma figures redrawn on a whole eye, with the pupil and iris labelled and a zoom of the angle.
 - New figure: adrenergic versus cholinergic stimulation in the eye (slide 7), with a side-by-side table.
 - The adrenergic versus cholinergic eye figure now has recorded narration (3 steps).
-- Glaucoma figures: every drug target stays labelled on the whole eye in each step; the ciliary process zoom stays in view.
+- Glaucoma figures keep every drug target labelled on the whole eye, with the ciliary process zoom in view.
 - Step-through figures take the full width; the narration text sits beside the drawing, or stays pinned on a phone.
 - Guides no longer show transcript codes; they read "lecture 11/13" instead.
 - Narration now starts at 0.8× speed, with a Speed control and a longer pause between figure steps.
