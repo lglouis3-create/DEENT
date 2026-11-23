@@ -75,7 +75,7 @@ QUESTIONS.push(
 
 {id:"OP-007", skill:"chem", prof:'Sikazwe', tier:'new', topic:"oo-oph", sub:"fg", concept:"oo-fg-ester",
  tags:["class", "reverse"], source:"slide",
- stem:"Which functional group is drawn as CH3-C(=O)-O-CH3?",
+ stem:"Which functional group is CH3-C(=O)-O-CH3?",
  options:[
   {t:"Carbamate", correct:false, why:"A carbamate has a nitrogen on the carbonyl carbon: H2N-C(=O)-O-CH3 (slide 27)."},
   {t:"Carboxylic acid", correct:false, why:"A carboxylic acid carries an OH on the carbonyl carbon, with no O-alkyl group."},

@@ -37,7 +37,7 @@ const QRE = /^\{\s*"?id"?:\s*['"][^'"]+['"],(?:\s*"?(?:lowYield|dupOf|skill|type
 /* How many questions and images the sources hold, so the page can be compared
    against them instead of against a number written here. */
 function sourceCounts(){
-  const n = questionFiles().reduce((s, f) => s + (fs.readFileSync(f, 'utf8').match(QRE) || []).length + (fs.readFileSync(f, 'utf8').match(/^mk\('[A-Z0-9-]+',/gm) || []).length, 0);
+  const n = questionFiles().reduce((s, f) => s + (fs.readFileSync(f, 'utf8').match(QRE) || []).length + (fs.readFileSync(f, 'utf8').match(/^(?:mk|mc|bl)\('[A-Z0-9-]+',/gm) || []).length, 0);
   if(!n){ console.log('FAIL: browser_test.js: counted no questions in the sources — the count pattern is wrong'); process.exit(1); }
   return [n, Object.keys(JSON.parse(fs.readFileSync('images.json', 'utf8'))).length];
 }

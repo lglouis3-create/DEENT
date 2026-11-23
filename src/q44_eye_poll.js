@@ -59,7 +59,7 @@ mc('EP-004','class','bb','ey-poll-bb-drug',
 
 bl('EP-005','mech','ey-out','rock','b-ey-poll-netarsudil','EB-011',
  'Netarsudil targets ______ when used to treat glaucoma?',
- ['Rho kinase', 'RhoA kinase', 'Rho-kinase', 'ROCK', 'Rho kinase enzyme', 'RhoA', 'Rho'],
+ ['Rho kinase', 'RhoA kinase', 'ROCK', 'Rho kinase enzyme', 'RhoA', 'Rho'],
  'Slide 41: netarsudil "inhibits RhoA kinase activity"; inhibiting RhoA phosphorylation relaxes the trabecular meshwork, lowers fibrosis-related protein deposits and changes the permeability of the cells lining Schlemm\'s canal, so trabecular outflow resistance falls.',
  'slide 41; T@35051 11/17'),
 

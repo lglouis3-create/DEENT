@@ -28,7 +28,7 @@
   const RNG = '(?:\\s*[–-]\\s*@?\\d+)?';
   // one code: "T@123", "T@123–@456", "T@123–456", "T 123–456", "T123"; or a continuation "@456–@789"
   const FIRST = '(?:\\bT@\\s?' + NUM + RNG + '|\\bT\\s?\\d{3,6}' + RNG + '(?:\\s+\\d{1,4}\\s*[–-]\\s*\\d{1,4})?(?![\\d/])(?!\\s*(?:mg|mL|ml|mcg|g\\b|%|days?|hours?|h\\b|min|weeks?|mm)))';
-  const MORE = '(?:' + FIRST + '|(?<![\\w.])@' + NUM + RNG + ')';
+  const MORE = '(?:' + FIRST + '|@' + NUM + RNG + ')';
   const BARE = '\\d{3,6}(?:\\s*[–-]\\s*\\d+)?(?=\\s*(?:[,;.)]|$))';                                     // "665–668" after "T 683–689,"
   const LIST = FIRST + '(?:\\s*(?:[,;]|\\band\\b|,\\s*and\\b)\\s*(?:' + MORE + '|' + BARE + '))*';
   const DATE = '(\\d{1,2}\\/\\d{1,2})';
@@ -89,14 +89,14 @@
     ['DrugChart_Dermatology', 'the skin drug chart']
   ];
   const esc = s => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-  const DECK_RE = new RegExp('(?:^|(?<![\\w-]))(' + DECK.map(d => esc(d[0])).join('|') + ')(?:\\.(?:pdf|docx))?(?![\\w-])', 'gi');
+  const DECK_RE = new RegExp('(^|[^\\w-])(' + DECK.map(d => esc(d[0])).join('|') + ')(?:\\.(?:pdf|docx))?(?![\\w-])', 'gi');
   const DECK_MAP = {}; DECK.forEach(d => { DECK_MAP[d[0].toLowerCase()] = d[1]; });
   // any other "Name.pdf" / "Name.docx" that reaches the screen: the name without its extension, underscores as spaces
-  const ANY_FILE = /(?<![\w-])([A-Za-z0-9][\w.-]*?)\.(?:pdf|docx)\b/g;
+  const ANY_FILE = /(^|[^\w-])([A-Za-z0-9][\w.-]*?)\.(?:pdf|docx)\b/g;
 
   function files(v){
-    v = v.replace(DECK_RE, (m, k) => DECK_MAP[k.toLowerCase()] || m);
-    v = v.replace(ANY_FILE, (m, k) => k.replace(/[_-]+/g, ' ').replace(/\s+(clean|slides|handout|doc|mc)$/i, '').trim());
+    v = v.replace(DECK_RE, (m, pre, k) => DECK_MAP[k.toLowerCase()] ? pre + DECK_MAP[k.toLowerCase()] : m);
+    v = v.replace(ANY_FILE, (m, pre, k) => pre + k.replace(/[_-]+/g, ' ').replace(/\s+(clean|slides|handout|doc|mc)$/i, '').trim());
     // "Dr. Smith's Dr. Smith: eye" -> "Dr. Smith: eye"
     v = v.replace(/\b(Dr\. \w+)[’']s\s+(?=\1: )/g, '').replace(/\b(Dr\. \w+: [^()]*?)\s+\(\s*\1\s*\)/g, '$1');
     return v;
@@ -115,8 +115,8 @@
     [/\bReference ref-ey-de\b/g, 'Reference: dry eye drugs'],
     [/\b(?:ref-[a-z]{1,4}-[a-z0-9-]+|tell-[a-z]{2}-[a-z0-9-]+|gobj-[a-z0-9-]+|dzcases-[a-z0-9-]+)\b/g, ''],
     // the student's own name
-    [/(?<!St\. )\bLouis[’']s\b/g, 'the annotated slide’s'],
-    [/(?<!St\. )\bLouis\b/g, 'the annotated slide'],
+    [/(St\. )?\bLouis[’']s\b/g, (m, st) => st ? m : 'the annotated slide’s'],
+    [/(St\. )?\bLouis\b/g, (m, st) => st ? m : 'the annotated slide'],
     // the author
     [/\bClaude[’']s prediction from the professors[’'] stated emphasis, not an official list\./g, 'A prediction from the professors’ stated emphasis, not an official list.'],
     [/\bClaude[’']s\b/g, 'The site’s'],
@@ -127,7 +127,7 @@
     return v.replace(/\(\s*\)/g, '').replace(/\(\s*[;,]\s*/g, '(').replace(/\s+([;,.)])/g, '$1');
   }
 
-  const TEST = /T@?\s?\d{2,6}|(?:^|[\s(,;])@\d{4,6}|\.(?:pdf|docx)\b|(?<!St\. )\bLouis\b|\bClaude\b|OPEN_QUESTIONS|STYLE\.md|\b(?:reviews|src)\/\w|\b(?:ref-[a-z]{1,4}-|tell-[a-z]{2}-|gobj-|dzcases-)/;
+  const TEST = /T@?\s?\d{2,6}|(?:^|[\s(,;])@\d{4,6}|\.(?:pdf|docx)\b|\bLouis\b|\bClaude\b|OPEN_QUESTIONS|STYLE\.md|\b(?:reviews|src)\/\w|\b(?:ref-[a-z]{1,4}-|tell-[a-z]{2}-|gobj-|dzcases-)/;
   function text(s, noFiles){
     if (!TEST.test(s)) return s;
     let v = s;
@@ -193,7 +193,7 @@
 
   /* ---- what the learner has no use for, hidden: the build stamp and the list of changes ----------------------- */
   const css = document.createElement('style'); css.id = 'cleanuicss';
-  css.textContent = '#news,p.stamp,#changelog,#changelog + .panel{display:none!important}';
+  css.textContent = 'p.stamp,#changelog,#changelog + .panel{display:none!important}';
   document.head.appendChild(css);
   const hideBuild = () => {
     document.querySelectorAll('p.sub').forEach(p => { if (/^\s*Build\s/.test(p.textContent) && !p.hasAttribute('data-clean')) { p.setAttribute('data-clean', '1'); p.style.display = 'none'; } });
