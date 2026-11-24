@@ -193,11 +193,37 @@
 
   /* ---- what the learner has no use for, hidden: the build stamp and the list of changes ----------------------- */
   const css = document.createElement('style'); css.id = 'cleanuicss';
-  css.textContent = 'p.stamp,#changelog,#changelog + .panel{display:none!important}';
+  css.textContent = 'p.stamp{display:none!important}';
   document.head.appendChild(css);
   const hideBuild = () => {
     document.querySelectorAll('p.sub').forEach(p => { if (/^\s*Build\s/.test(p.textContent) && !p.hasAttribute('data-clean')) { p.setAttribute('data-clean', '1'); p.style.display = 'none'; } });
   };
+
+  /* "What's new" stays; the learner can switch it off (Louis, 2026-11-24: "with the user's option to hide it if needed").
+     "Got it" hides it until the next update (core); this adds a permanent switch on the card and a checkbox in Settings. */
+  const NEWS_OFF = () => (typeof NS === 'string' ? NS : 'drill') + ':newsOff';
+  const newsOff = () => { try { return store.get(NEWS_OFF()) === '1'; } catch (e) { return false; } };
+  const newsSet = off => { try { store.set(NEWS_OFF(), off ? '1' : '0'); } catch (e) { /* kept for this visit only */ } };
+  function newsOption(){
+    const card = document.getElementById('news');
+    if (card) {
+      if (newsOff()) { card.remove(); }
+      else if (!document.getElementById('newsoff')) {
+        const row = card.querySelector('.row:last-child') || card;
+        const b = document.createElement('button'); b.className = 'btn ghost'; b.id = 'newsoff'; b.type = 'button'; b.textContent = 'Hide What\u2019s new';
+        b.onclick = () => { newsSet(true); card.remove(); };
+        row.appendChild(b);
+      }
+    }
+    const h = document.getElementById('changelog');
+    if (h && !document.getElementById('newson')) {
+      const lab = document.createElement('label'); lab.id = 'newson'; lab.className = 'row'; lab.style.cssText = 'gap:8px;align-items:center;margin:0 0 10px;min-height:44px';
+      const cb = document.createElement('input'); cb.type = 'checkbox'; cb.checked = !newsOff();
+      cb.onchange = () => newsSet(!cb.checked);
+      lab.appendChild(cb); lab.appendChild(document.createTextNode(' Show What\u2019s new on the Topics tab'));
+      h.parentNode.insertBefore(lab, h);
+    }
+  }
 
   function take(recs){
     for (let i = 0; i < recs.length; i++) {
@@ -206,8 +232,8 @@
       else for (let j = 0; j < r.addedNodes.length; j++) collect(r.addedNodes[j]);
     }
   }
-  mo = new MutationObserver(recs => { take(recs); if (pending.size) soon(); hideBuild(); });
+  mo = new MutationObserver(recs => { take(recs); if (pending.size) soon(); hideBuild(); newsOption(); });
   mo.observe(document.body, OBS);
-  collect(document.body); hideBuild(); soon();
+  collect(document.body); hideBuild(); newsOption(); soon();
   window.CLEAN = {text, run, stats, codes, files, notes};
 })();

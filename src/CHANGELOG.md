@@ -32,6 +32,7 @@ Every update adds its bullets here in the same commit that makes the change.
 - New figure: watch aqueous humor flow in a normal, open-angle or angle-closure eye, with one drug at a time.
 - Drug list: one searchable list with filters and dose tags; Dr. Lam's doses added.
 - Transcript codes and file names hidden everywhere; Diseases and Guides text split into short lines.
+- What's new can be hidden with a button on its card and switched back on in Settings.
 - Step-through figures take the full width; the narration text sits beside the drawing, or stays pinned on a phone.
 - Guides no longer show transcript codes; they read "lecture 11/13" instead.
 - Narration now starts at 0.8× speed, with a Speed control and a longer pause between figure steps.
