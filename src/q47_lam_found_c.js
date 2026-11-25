@@ -247,7 +247,7 @@ QUESTIONS.push(
  teach:"Moisture retention comes from excessive hair growth, canal narrowing and wax or debris buildup.",
  cite:"Lecture 13 (Lam_OticDisorders_slides.pdf) slide 20 11/20"},
 
-{id:"FC-023", skill:"tell", prof:'Lam', tier:'new', topic:"lt-water", sub:"pres", concept:"fc-023",
+{id:"FC-023", skill:"tell", prof:'Lam', tier:'new', topic:"lt-water", sub:"cause", concept:"fc-023",
  tags:["foundation", "recall", "fact"], source:"both",
  stem:"Which symptom is a clinical presentation of a water-clogged ear?",
  options:[
@@ -258,7 +258,7 @@ QUESTIONS.push(
  teach:"A water-clogged ear brings hearing impairment, discomfort and a sense of fullness or wetness.",
  cite:"Lecture 13 (Lam_OticDisorders_slides.pdf) slide 21 and 23; T@97137 11/20"},
 
-{id:"FC-024", skill:"tell", prof:'Lam', tier:'new', topic:"lt-water", sub:"pres", concept:"fc-024",
+{id:"FC-024", skill:"tell", prof:'Lam', tier:'new', topic:"lt-water", sub:"cause", concept:"fc-024",
  tags:["foundation", "recall", "fact"], source:"both",
  stem:"Which finding is usually absent in a water-clogged ear?",
  options:[

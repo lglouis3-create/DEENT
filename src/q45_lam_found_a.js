@@ -59,7 +59,7 @@ QUESTIONS.push(
  teach:"Systemic anticholinergics such as oral antihistamines can induce or worsen glaucoma.",
  cite:"Lam_Glaucoma.pdf slide 8 and handout Lam_Glaucoma_doc.docx"},
 
-{id:"FA-005", skill:"fact", prof:'Lam', lowYield:true, tier:'new', topic:"lm-collect", sub:"pres", concept:"fa-lm-collect-005",
+{id:"FA-005", skill:"patho", prof:'Lam', lowYield:true, tier:'new', topic:"lm-collect", sub:"pres", concept:"fa-lm-collect-005",
  tags:["foundation", "recall", "fact"], source:"both",
  note:"Slide 12 is labelled FYI.",
  stem:"How does primary open-angle glaucoma usually present early in the disease?",
@@ -242,7 +242,7 @@ QUESTIONS.push(
  teach:"Prostaglandin analogs are dosed once daily, and exceeding once daily can decrease efficacy.",
  cite:"Lam_Glaucoma.pdf slide 20 and handout Lam_Glaucoma_doc.docx"},
 
-{id:"FA-020", skill:"fact", prof:'Lam', tier:'new', topic:"lm-pga", sub:"why", concept:"fa-lm-pga-021",
+{id:"FA-020", skill:"mech", prof:'Lam', tier:'new', topic:"lm-pga", sub:"why", concept:"fa-lm-pga-021",
  tags:["foundation", "recall", "fact"], source:"both",
  stem:"By up to what percent do prostaglandin analogs reduce IOP?",
  options:[
@@ -315,7 +315,7 @@ QUESTIONS.push(
  teach:"For inadequate response to latanoprost, bimatoprost is slightly more effective and is the within-class switch.",
  cite:"Lam_Glaucoma.pdf slide 23 and handout Lam_Glaucoma_doc.docx"},
 
-{id:"FA-026", skill:"fact", prof:'Lam', tier:'new', topic:"lm-pga", sub:"why", concept:"fa-lm-pga-027",
+{id:"FA-026", skill:"mech", prof:'Lam', tier:'new', topic:"lm-pga", sub:"why", concept:"fa-lm-pga-027",
  tags:["foundation", "recall", "fact"], source:"both",
  stem:"Latisse (bimatoprost) is indicated for which condition?",
  options:[
@@ -507,7 +507,7 @@ QUESTIONS.push(
  teach:"OTC Lumify is a redness reliever, not a glaucoma drug.",
  cite:"Lam_Glaucoma.pdf slide 42 and handout Lam_Glaucoma_doc.docx; T@69112 11.19"},
 
-{id:"FA-042", skill:"fact", prof:'Lam', tier:'new', topic:"lm-a2", sub:"drugs", concept:"fa-lm-a2-046",
+{id:"FA-042", skill:"class", prof:'Lam', tier:'new', topic:"lm-a2", sub:"drugs", concept:"fa-lm-a2-046",
  tags:["foundation", "recall", "fact"], source:"both",
  stem:"By what percent do alpha-2 agonists reduce IOP?",
  options:[
@@ -615,7 +615,7 @@ QUESTIONS.push(
  teach:"Azopt is a suspension (shake well; it goes in after solutions).",
  cite:"Lam_Glaucoma.pdf slide 51"},
 
-{id:"FA-051", skill:"fact", prof:'Lam', tier:'new', topic:"lm-cai", sub:"topical", concept:"fa-lm-cai-057",
+{id:"FA-051", skill:"class", prof:'Lam', tier:'new', topic:"lm-cai", sub:"topical", concept:"fa-lm-cai-057",
  tags:["foundation", "recall", "fact"], source:"both",
  stem:"By what percent do topical carbonic anhydrase inhibitors reduce IOP?",
  options:[
@@ -735,7 +735,7 @@ QUESTIONS.push(
  teach:"Pilocarpine is QID.",
  cite:"Lam_Glaucoma.pdf slide 57 and handout Lam_Glaucoma_doc.docx"},
 
-{id:"FA-061", skill:"fact", prof:'Lam', tier:'new', topic:"lm-chol", sub:"drugs", concept:"fa-lm-chol-068",
+{id:"FA-061", skill:"class", prof:'Lam', tier:'new', topic:"lm-chol", sub:"drugs", concept:"fa-lm-chol-068",
  tags:["foundation", "recall", "fact"], source:"both",
  stem:"Which miotic has many serious ocular and systemic toxic effects, including severe fibrinous iritis?",
  options:[
@@ -747,7 +747,7 @@ QUESTIONS.push(
  teach:"Echothiophate carries many serious ocular and systemic toxic effects.",
  cite:"Lam_Glaucoma.pdf slide 57 and handout Lam_Glaucoma_doc.docx"},
 
-{id:"FA-062", skill:"fact", prof:'Lam', tier:'new', topic:"lm-chol", sub:"drugs", concept:"fa-lm-chol-069",
+{id:"FA-062", skill:"class", prof:'Lam', tier:'new', topic:"lm-chol", sub:"drugs", concept:"fa-lm-chol-069",
  tags:["foundation", "recall", "fact"], source:"both",
  stem:"Pilocarpine may be used as initial management of which condition?",
  options:[
@@ -807,7 +807,7 @@ QUESTIONS.push(
  teach:"Netarsudil is dosed QHS (evening).",
  cite:"Lam_Glaucoma.pdf slide 62 and handout Lam_Glaucoma_doc.docx"},
 
-{id:"FA-067", skill:"fact", prof:'Lam', tier:'new', topic:"lm-rock", sub:"rock", concept:"fa-lm-rock-076",
+{id:"FA-067", skill:"mech", prof:'Lam', tier:'new', topic:"lm-rock", sub:"rock", concept:"fa-lm-rock-076",
  tags:["foundation", "recall", "fact"], source:"both",
  stem:"By what percent does netarsudil reduce IOP?",
  options:[
@@ -1072,7 +1072,7 @@ QUESTIONS.push(
  teach:"OD right eye, OS left eye, OU both eyes.",
  cite:"Lam_Glaucoma.pdf slide 24; sig key in handout"},
 
-{id:"FA-089", skill:"fact", prof:'Lam', tier:'new', topic:"lm-fu", sub:"mon", concept:"fa-lm-fu-102",
+{id:"FA-089", skill:"counsel", prof:'Lam', tier:'new', topic:"lm-fu", sub:"mon", concept:"fa-lm-fu-102",
  tags:["foundation", "recall", "fact"], source:"both",
  stem:"When is follow-up usually scheduled after glaucoma therapy is started?",
  options:[
@@ -1084,7 +1084,7 @@ QUESTIONS.push(
  teach:"First follow-up at 2-4 weeks.",
  cite:"Lam_Glaucoma.pdf slide 86"},
 
-{id:"FA-090", skill:"fact", prof:'Lam', tier:'new', topic:"lm-fu", sub:"mon", concept:"fa-lm-fu-103",
+{id:"FA-090", skill:"counsel", prof:'Lam', tier:'new', topic:"lm-fu", sub:"mon", concept:"fa-lm-fu-103",
  tags:["foundation", "recall", "fact"], source:"both",
  stem:"How often is follow-up once the target IOP is achieved?",
  options:[
@@ -1096,7 +1096,7 @@ QUESTIONS.push(
  teach:"After target IOP is reached, follow up every 3-4 months.",
  cite:"Lam_Glaucoma.pdf slide 86"},
 
-{id:"FA-091", skill:"fact", prof:'Lam', tier:'new', topic:"lm-fu", sub:"mon", concept:"fa-lm-fu-104",
+{id:"FA-091", skill:"counsel", prof:'Lam', tier:'new', topic:"lm-fu", sub:"mon", concept:"fa-lm-fu-104",
  tags:["foundation", "recall", "fact"], source:"both",
  stem:"What is monitored for efficacy of glaucoma therapy?",
  options:[
@@ -1108,7 +1108,7 @@ QUESTIONS.push(
  teach:"Efficacy is IOP reduction; safety is the side effects of the regimen.",
  cite:"Lam_Glaucoma.pdf slide 86 and handout Lam_Glaucoma_doc.docx"},
 
-{id:"FA-092", skill:"fact", prof:'Lam', tier:'new', topic:"lm-fu", sub:"mon", concept:"fa-lm-fu-105",
+{id:"FA-092", skill:"counsel", prof:'Lam', tier:'new', topic:"lm-fu", sub:"mon", concept:"fa-lm-fu-105",
  tags:["foundation", "recall", "fact"], source:"both",
  stem:"What is monitored for safety of glaucoma therapy?",
  options:[
@@ -1172,7 +1172,7 @@ QUESTIONS.push(
  teach:"Topical and systemic anticholinergics, antidepressants, alpha-1 agonists and beta-2 agonists can worsen PACG.",
  cite:"Lam_Glaucoma.pdf slide 90 and handout Lam_Glaucoma_doc.docx"},
 
-{id:"FA-097", skill:"fact", prof:'Lam', lowYield:true, tier:'new', topic:"lm-pacg", sub:"pacg", concept:"fa-lm-pacg-110",
+{id:"FA-097", skill:"patho", prof:'Lam', lowYield:true, tier:'new', topic:"lm-pacg", sub:"pacg", concept:"fa-lm-pacg-110",
  tags:["foundation", "recall", "fact"], source:"both",
  note:"Slide 88 topic is not tested.",
  stem:"Which symptom is a prodromal symptom of angle-closure glaucoma?",
@@ -1258,7 +1258,7 @@ QUESTIONS.push(
  teach:"Dry eye drug causes: BAK, anticholinergics, diuretics, decongestants, oral contraceptives or hormone replacement, systemic or inhaled corticosteroids.",
  cite:"Lam_OphthalmicDisorders.pdf slide 6 and handout Lam_OphthalmicDisorders_doc.docx"},
 
-{id:"FA-104", skill:"fact", prof:'Lam', tier:'new', topic:"lo-de-collect", sub:"pres", concept:"fa-lo-de-collect-117",
+{id:"FA-104", skill:"patho", prof:'Lam', tier:'new', topic:"lo-de-collect", sub:"pres", concept:"fa-lo-de-collect-117",
  tags:["foundation", "recall", "fact"], source:"both",
  stem:"Which sensation describes dry eye?",
  options:[
@@ -1270,7 +1270,7 @@ QUESTIONS.push(
  teach:"Dry eye feels sandy or gritty, like a foreign body, with a normal or mildly red eye.",
  cite:"Lam_OphthalmicDisorders.pdf slide 7 and handout Lam_OphthalmicDisorders_doc.docx"},
 
-{id:"FA-105", skill:"fact", prof:'Lam', tier:'new', topic:"lo-de-assess", sub:"goal", concept:"fa-lo-de-assess-119",
+{id:"FA-105", skill:"counsel", prof:'Lam', tier:'new', topic:"lo-de-assess", sub:"goal", concept:"fa-lo-de-assess-119",
  tags:["foundation", "recall", "fact"], source:"both",
  stem:"Which is a treatment goal in dry eye disease?",
  options:[
@@ -1596,7 +1596,7 @@ QUESTIONS.push(
  teach:"Eye pain, trauma, chemical or heat exposure, blurred vision, light sensitivity and eyelid infection exclude self-treatment.",
  cite:"Lam_OphthalmicDisorders.pdf slide 30 and handout Lam_OphthalmicDisorders_doc.docx"},
 
-{id:"FA-132", skill:"fact", prof:'Lam', tier:'new', topic:"lo-cj-collect", sub:"goal", concept:"fa-lo-cj-collect-149",
+{id:"FA-132", skill:"counsel", prof:'Lam', tier:'new', topic:"lo-cj-collect", sub:"goal", concept:"fa-lo-cj-collect-149",
  tags:["foundation", "recall", "fact"], source:"both",
  stem:"Which is a treatment goal for allergic conjunctivitis?",
  options:[
