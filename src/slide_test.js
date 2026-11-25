@@ -121,7 +121,7 @@ const onDisk = (deck, n, printed) => { const r = P.resolve(deck, n, printed); re
                 texts: bs.map(b => b.textContent), tr: bs.filter(b => /[@:]/.test(b.textContent) || /(?:^|[^A-Za-z])T[\s\xa0]?$/.test(b.previousSibling ? b.previousSibling.textContent : '')).length};
       });
       check(post.inCite >= 1 && post.inWhy > post.inCite && !post.inOpt, `after the answer: the source line has ${post.inCite} slide button(s), the explanation ${post.inWhy - post.inCite} more, the options none`, post);
-      check(/; T \d/.test(post.cite) && !post.tr && !post.texts.some(t => /^T\b/.test(t)), 'the transcript lines in that source line stay text', post.cite);
+      check(/; (?:T \d|lecture)/.test(post.cite) && !post.tr && !post.texts.some(t => /^T\b/.test(t)), 'the transcript lines in that source line stay text (clean_ui.js shows them as "lecture")', post.cite);
       const role = await page.evaluate(() => { const b = document.querySelector('#v-quiz .cite .slk'); return {role: b.getAttribute('role'), tab: b.tabIndex, label: b.getAttribute('aria-label'), title: b.getAttribute('title'), desc: b.getAttribute('aria-description'), text: b.textContent,
         labelled: document.querySelectorAll('.slk[aria-label], .slk[aria-labelledby]').length}; });
       check(role.role === 'button' && role.tab === 0 && role.label === null && !role.labelled && /^Open Dr\. Smith, Skin Pharmacology, slide \d+$/.test(role.title || '') && role.desc === role.title,
@@ -203,6 +203,8 @@ const onDisk = (deck, n, printed) => { const r = P.resolve(deck, n, printed); re
         ['Drug list card', 'drugs', '#v-drugs .dlcard .dlsrc .slk'], ['Atlas tile', 'atlas', '#v-atlas .attile .slk'], ['figure caption', 'diagrams', '#v-diagrams figcaption .slk']];
       for (const [label, v, sel] of tabs) {
         await page.evaluate(v => show(v), v); await settle(900);
+        // the Drug list opens a row to draw its card (druglist_ui.js, 2026-11-23): open the first 60 rows so their source lines exist
+        if (v === 'drugs') { await page.evaluate(() => document.querySelectorAll('#v-drugs details.dlrowd').forEach((d, i) => { if (i < 60) d.open = true; })); await settle(600); }
         await page.evaluate(() => document.querySelectorAll('details').forEach(d => { if (d.querySelector('.slk')) d.open = true; }));
         // a figure's source note is closed until its "Slides and sources" button is pressed (figsrc_ui.js, 2026-11-22)
         await page.evaluate(() => document.querySelectorAll('figcaption:not(.fsrc-closed):not(.fsrc-open) .fsrc-t0').forEach(b => b.click())); await settle(200);
@@ -259,7 +261,7 @@ const onDisk = (deck, n, printed) => { const r = P.resolve(deck, n, printed); re
                      (b.firstElementChild ? ' has markup inside' : '')};
       }), sel);
       let all = [];
-      for (const v of ['ref', 'tell', 'guide', 'atlas', 'drugs', 'diagrams']) { await page.evaluate(v => show(v), v); await settle(800); await page.waitForFunction(v => document.querySelectorAll('#v-' + v + ' .slk').length > 0, v, {timeout: 8000}).catch(() => {}); await settle(300); const r = await sweep('#v-' + v + ' .slk'); r.forEach(x => { x.v = v; }); all = all.concat(r); }
+      for (const v of ['ref', 'tell', 'guide', 'atlas', 'drugs', 'diagrams']) { await page.evaluate(v => show(v), v); await settle(800); if (v === 'drugs') { await page.evaluate(() => document.querySelectorAll('#v-drugs details.dlrowd').forEach((d, i) => { if (i < 60) d.open = true; })); await settle(600); } await page.waitForFunction(v => document.querySelectorAll('#v-' + v + ' .slk').length > 0, v, {timeout: 8000}).catch(() => {}); await settle(300); const r = await sweep('#v-' + v + ' .slk'); r.forEach(x => { x.v = v; }); all = all.concat(r); }
       const per = v => all.filter(x => x.v === v).length;
       await page.evaluate(() => show('dz'));
       const dz = await page.evaluate(() => ({cards: DZ.cards.map(c => [c.id, (c.patients || []).length]), drugs: Object.keys(DZ.drugs), terms: Object.keys(DZ.terms)}));
