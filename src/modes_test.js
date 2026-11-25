@@ -129,7 +129,7 @@ const check = (ok, label, detail) => { n++; if (!ok) fail++; console.log((ok ? '
       endFound = await p.evaluate(i => {
         if (document.querySelector('#v-quiz .mdadd2')) return true;
         if (!Q.current) return false;
-        const q = Q.current, bad = i % 2 === 0;
+        const q = Q.current, bad = i < 4;
         if ((q.type || 'mc') === 'mc' && !q.multi) answer(bad ? q.options.findIndex(o => !o.correct) : q.options.findIndex(o => o.correct));
         else { Q.revealed = true; Q.lastRight = true; renderQuiz(); }
         const nb = document.getElementById('btnNext'); if (nb) nb.click();

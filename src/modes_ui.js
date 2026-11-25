@@ -115,7 +115,7 @@ button.opt.mdx{opacity:.45;text-decoration:line-through;cursor:default}
     nextQuestion();
   }
   function navLabel() {
-    const b = document.querySelector('#nav button[data-v="gaps"]'); if (b) b.textContent = learn() ? 'Review next' : 'Weak spots';
+    const b = document.querySelector('#nav button[data-v="gaps"]'); if (b) { const t = learn() ? 'Review next' : 'Weak spots', l = b.querySelector('.xm-l'); if (l) l.textContent = t; else b.textContent = t; }
   }
 
   /* ---------- Topics: the switch above the topic list ---------- */

@@ -87,6 +87,7 @@ const MORE = {dz: 'Diseases', atlas: 'Atlas', diagrams: 'Diagrams', tell: 'Tell 
     L.check(chip.sf === 1 && chip.rows === before && chip.cards >= 1, tag('with a Professor chip on, the Start screen lists the same topics'), {before, chip});
     // open a topic of a different professor than the chip: the quiz opens, the chip stays
     const tid = await page.evaluate(p => (TOPICS.find(t => t.prof === p && QUESTIONS.some(q => q.topic === t.id)) || {}).id, target);
+    await page.evaluate(() => { window.__realHub = window.HUB_UI; window.HUB_UI = null; if (window.MODES_UI) MODES_UI.setMode('exam'); });  // the core quiz path: no topic hub, every question
     await page.click(`#sflist .sf-topic[data-sf-topic="${tid}"]`);
     const q1 = await page.evaluate(tid => ({view: VIEW, pool: Q && Q.pool.length, all: QUESTIONS.filter(q => q.topic === tid).length, chip: FILTER.prof}), tid);
     L.check(q1.view === 'quiz' && q1.pool === q1.all && q1.chip === other, tag('a topic opens its quiz with every question, and the chip is put back'), q1);
@@ -98,7 +99,7 @@ const MORE = {dz: 'Diseases', atlas: 'Atlas', diagrams: 'Diagrams', tell: 'Tell 
     await page.click(`#sflist .sf-topic[data-sf-topic="${tid}"]`);
     const hub = await page.evaluate(() => ({hub: window.__hub.slice(), view: VIEW}));
     L.check(hub.hub.length === 1 && hub.hub[0] === tid && hub.view === 'topics', tag('with HUB_UI present a topic calls HUB_UI.open(topicId)'), hub);
-    await page.evaluate(() => { delete window.HUB_UI; });
+    await page.evaluate(() => { window.HUB_UI = window.__realHub; });
 
     /* ---- Next best thing to review ---- */
     const miss = await page.evaluate(() => { const t = TOPICS.find(x => !x.optional && QUESTIONS.filter(q => q.topic === x.id).length > 3);

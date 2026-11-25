@@ -193,7 +193,7 @@
   }
 
   function openTopic(id) {
-    const hub = typeof HUB_UI !== 'undefined' ? HUB_UI : (typeof window !== 'undefined' ? window.HUB_UI : null);
+    const hub = (typeof window !== 'undefined' && window.HUB_UI !== undefined) ? window.HUB_UI : (typeof HUB_UI !== 'undefined' ? HUB_UI : null);
     if (hub && typeof hub.open === 'function') return hub.open(id);
     // the professor and format chips of the topic list stay as the student left them; they are set aside for this call
     const saved = {}; let f = null;
