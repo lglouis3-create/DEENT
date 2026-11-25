@@ -35,7 +35,7 @@ const text = (page, sel) => page.$eval(sel, el => el.textContent.replace(/\s+/g,
 // the core's own Start buttons on Topics (a feature module may add Starts of its own,
 // such as chained-problem-sets' fixed sets, which the filters do not apply to)
 const CORE_STARTS = '#v-topics button[data-t], #v-topics #sweepWeighted, #v-topics #sweepAll, #v-topics #sweepFiltered';
-const go = (page, v) => page.click(`#nav button[data-v="${v}"]`);
+const go = (page, v) => page.evaluate(s => document.querySelector(s).click(), `#nav button[data-v="${v}"]`);
 const qState = page => page.evaluate(() => Q ? {
   pool: Q.pool.map(q => q.id).sort(), sweep: Q.sweep ? Q.sweep.slice() : null,
   label: Q.label, current: Q.current ? Q.current.id : null} : null);

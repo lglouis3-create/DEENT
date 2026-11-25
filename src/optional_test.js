@@ -97,6 +97,7 @@ const ANSWER = right => {
     try {
       if(!check(b.code === 0, 'the scratch copy builds', b.out.split('\n').slice(-3).join(' | '))) return;
       const {ctx, page, errors} = await L.openPage(browser, b.page);
+      await page.evaluate(() => { if (window.MODES_UI && MODES_UI.setMode) MODES_UI.setMode('exam'); });  // Learn mode starts a topic with its foundation questions only; this test counts all
       const info = await page.evaluate(() => {
         const t = TOPICS.find(t => t.optional);
         if(!t) return null;

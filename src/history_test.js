@@ -118,7 +118,7 @@ const next = p => p.evaluate(() => { const b = document.getElementById('btnNext'
   }
 
   console.log('\n=== Export, Import, Erase ===');
-  await p.click('#nav button[data-v="settings"]');
+  await p.evaluate(s => document.querySelector(s).click(), '#nav button[data-v="settings"]');
   check(/answer history/.test(await p.textContent('#v-settings')), 'Settings says answers are kept in a history');
   const total = (await readLog(p)).length;
   const [dl] = await Promise.all([p.waitForEvent('download'), p.click('#btnExport')]);
@@ -127,13 +127,13 @@ const next = p => p.evaluate(() => { const b = document.getElementById('btnNext'
   check(Array.isArray(exported.log) && exported.log.length === total, 'Export includes the whole history', `${exported.log && exported.log.length} of ${total}`);
 
   const fresh = await L.openFile(browser);
-  await fresh.page.click('#nav button[data-v="settings"]');
+  await fresh.page.evaluate(s => document.querySelector(s).click(), '#nav button[data-v="settings"]');
   await fresh.page.setInputFiles('#fileIn', file);
   await fresh.page.waitForSelector('#importGo', {timeout: 5000}).then(b => b.click(), () => {});
   await fresh.page.waitForTimeout(600);
   check((await readLog(fresh.page)).length === total, 'Import brings the history across',
     JSON.stringify({imported: await readLog(fresh.page), exported: exported.log}));
-  await fresh.page.click('#nav button[data-v="settings"]');
+  await fresh.page.evaluate(s => document.querySelector(s).click(), '#nav button[data-v="settings"]');
   await fresh.page.setInputFiles('#fileIn', file);
   await fresh.page.waitForTimeout(600);
   check(!(await fresh.page.$('#importGo')) && /on this device already/.test(await fresh.page.textContent('#importPlan')),
@@ -146,7 +146,7 @@ const next = p => p.evaluate(() => { const b = document.getElementById('btnNext'
     const cut = await fresh.page.evaluate(() => { LOG[0] = LOG[0].slice(0, 7); saveLog(); return LOG[0].slice(); });
     const file2 = file + '.old.json';
     fs.writeFileSync(file2, JSON.stringify(Object.assign({}, exported, {log: [old, exported.log[0]]})));
-    await fresh.page.click('#nav button[data-v="settings"]');
+    await fresh.page.evaluate(s => document.querySelector(s).click(), '#nav button[data-v="settings"]');
     await fresh.page.setInputFiles('#fileIn', file2);
     await fresh.page.waitForSelector('#importGo', {timeout: 5000}).then(b => b.click(), () => {});
     await fresh.page.waitForTimeout(600);

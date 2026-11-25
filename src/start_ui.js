@@ -380,7 +380,7 @@
   // a tab another file adds later is left in the strip; one of the known tabs added later goes into the menu
   try {
     build();
-    new MutationObserver(() => { if (!more) build(); else late(); }).observe(nav, {childList: true});
+    if (typeof MutationObserver === "function") new MutationObserver(() => { if (!more) build(); else late(); }).observe(nav, {childList: true});
   } catch (e) { console.error('start_ui: the tab strip was left as it was', e); }
   function late() {
     GROUPS.forEach(([, items], gi) => items.forEach(([v, label, desc]) => {
