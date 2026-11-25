@@ -448,7 +448,7 @@ function fakeVoice() {
         try {
           const sel = how === 'open' ? `#v-guide [data-lrn="open"][data-wid="${id}"]` : `#v-topics [data-lrn="${how}"][data-wid="${id}"]`;
           if (how === 'open') { await page.evaluate(() => show('guide')); await page.waitForTimeout(400); }
-          const press = async (s, nth = 0) => { const l = page.locator(s).nth(nth); await l.scrollIntoViewIfNeeded(); if (size.tap) await l.tap(); else await l.click(); };
+          const press = async (s, nth = 0) => { const l = page.locator(s).nth(nth); await l.scrollIntoViewIfNeeded(); const pos = / > summary$/.test(s) ? {position: {x: 10, y: 10}} : undefined; if (size.tap) await l.tap(pos); else await l.click(pos); };  // a topic's summary also holds the hub's "Study this topic" button, so press its left edge
           // the folders around the button, outermost first: the Topics exam and deck folders (a header button), a topic card or the list (a summary)
           const folds = await page.evaluate(([sel, k]) => { const b = document.querySelectorAll(sel)[k], out = [];
             for (let e = b && b.parentElement; e; e = e.parentElement) {
