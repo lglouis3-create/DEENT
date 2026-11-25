@@ -96,7 +96,7 @@ const st = (p, v) => p.evaluate(v => [...document.querySelectorAll(`#v-${v} > .r
 const stored = p => p.evaluate(() => localStorage.getItem(EXAMFOLD_UI.key()));
 // a tap on a tab of the strip. wide_ui.js slides the strip away while the page rests scrolled down; at the top of the
 // page it is always shown, so the page goes there first (opening a tab does the same).
-const tabTap = async (p, v) => { await p.evaluate(() => window.scrollTo(0, 0)); await p.click(`#nav button[data-v="${v}"]`); };
+const tabTap = async (p, v) => { await p.evaluate(() => window.scrollTo(0, 0)); await p.evaluate(q => document.querySelector(q).click(), `#nav button[data-v="${v}"]`); };   // most tabs sit in the More menu, closed here
 const over = p => p.evaluate(() => document.documentElement.scrollWidth - innerWidth);
 // where an element is: on screen, in an open folder, how far below the pinned strip
 // (an element inside a closed <details> still reports its boxes in Chromium, so "on screen" is checkVisibility())

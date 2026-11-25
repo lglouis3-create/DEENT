@@ -516,6 +516,7 @@ const onDisk = (deck, n, printed) => { const r = P.resolve(deck, n, printed); re
       /* ---- the practice-exam clock starts no pass ---- */
       const tick = await page.evaluate(async () => {
         for (const v of ['ref', 'tell', 'guide', 'atlas', 'drugs', 'diagrams', 'dz', 'gaps', 'settings', 'topics']) { show(v); await new Promise(r => setTimeout(r, 250)); }
+        await new Promise(r => setTimeout(r, 4000));   // the last re-link of Guides ends 0.8 to 1.5 s after it is drawn; the exam clock is measured after that
         show('exam'); beginExam(); await new Promise(r => setTimeout(r, 1200));
         const c = document.getElementById('exClock'), t0 = c ? c.textContent : '', a = SLIDE_UI.stats.runs;
         await new Promise(r => setTimeout(r, 6000));
