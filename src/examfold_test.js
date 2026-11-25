@@ -387,6 +387,8 @@ async function nsOf(browser) {
 
       // C9. a Drug list card's "Reference: target table"; C10. the Diseases tab's "Watch how it works"
       await p.evaluate(() => { RET.length = 0; backBtn(); show('drugs'); }); await p.waitForTimeout(200);
+      // a Drug list row draws its card when it is opened (druglist_ui.js, 2026-11-23)
+      await p.evaluate(() => document.querySelectorAll('#v-drugs details.dlrowd').forEach((d, i) => { if (i < 5) d.open = true; })); await p.waitForTimeout(300);
       const a9 = await p.evaluate(() => { const b = document.querySelector('#v-drugs [data-dl="ref"]'); if (!b) return null; b.click(); return b.dataset.a; });
       wq = a9 ? await where(p, a9) : {found: false};
       // jump_ui.js lands on the first line about the drug when the section's heading would leave it below the fold, so the heading itself can be above the screen: the highlighted line must be on screen

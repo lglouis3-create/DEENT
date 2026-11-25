@@ -330,7 +330,8 @@ console.log('=== Quiz me (multiple choice) and Recall ===');
     // the Drug list never feeds the bank, Exam sim or progress
     const others = C.files.concat(['reference.js']).filter(f => !/^druglist_|^chart_boxes/.test(f) && fs.existsSync(path.join(__dirname, f)))
       // the search box (search_ui.js, 2026-11-14) reads the card list and opens a card; it never makes a Drug list question
-      .filter(f => f === 'search_ui.js' ? /makeQuestion/.test(code(f)) : /DRUGLIST|makeQuestion/.test(code(f)));
+      // the topic hub (hub_ui.js, 2026-11-25) lists a topic's drug rows and opens a card; it never makes a Drug list question either
+      .filter(f => (f === 'search_ui.js' || f === 'hub_ui.js') ? /makeQuestion/.test(code(f)) : /DRUGLIST|makeQuestion/.test(code(f)));
     const writesQ = ['druglist_data.js', 'druglist_ui.js'].filter(f => /QUESTIONS\s*(\.push|\.splice|\.unshift|=[^=])|EXAMS?\s*(\.push|=[^=])/.test(code(f)));
     check(!others.length && !writesQ.length, 'no other course file uses the Drug list questions, and the Drug list adds nothing to the bank or the exams (Exam sim draws only from the bank)',
       others.concat(writesQ).join(', '));

@@ -408,7 +408,9 @@ const EYE_FLOW = (() => {
       else { warm(I, 1.5); render(I, true); I.lastSay = 0; say(I, true); }
     });
     document.addEventListener('visibilitychange', () => { live.forEach(I => { if (document.hidden) stop(I); else kick(I); }); });
-    try { scan(document.body); new MutationObserver(recs => recs.forEach(r => r.addedNodes.forEach(scan))).observe(document.body, {childList: true, subtree: true}); } catch (e) { /* the static picture stays */ }
+    /* a figure that left the page (the Diagrams tab is drawn again) is let go: its frame loop, observers and the map entry would keep the whole drawing alive */
+    const sweep = () => { live.forEach(I => { if (!I.fig.isConnected) { stop(I); try { I.io && I.io.disconnect(); I.ro && I.ro.disconnect(); } catch (e) { /* gone anyway */ } live.delete(I); inst.delete(I.fig); } }); };
+    try { scan(document.body); new MutationObserver(recs => { recs.forEach(r => r.addedNodes.forEach(scan)); sweep(); }).observe(document.body, {childList: true, subtree: true}); } catch (e) { /* the static picture stays */ }
   }
 
   const stats = () => ({frames: statsAll.n, avgMs: statsAll.win.length ? statsAll.win.reduce((a, b) => a + b, 0) / statsAll.win.length : 0, maxMs: statsAll.win.length ? Math.max.apply(null, statsAll.win) : 0});

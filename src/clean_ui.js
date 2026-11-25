@@ -61,33 +61,7 @@
   }
 
   /* ---- 2. deck file names -------------------------------------------------------------------------------------- */
-  const DECK = [
-    ['Skin-Pathophys-Students-2026', 'Dr. Smith: skin pathophysiology'],
-    ['Skin-PCol-Students-2026', 'Dr. Smith: skin pharmacology'],
-    ['DEENT_Sun_Exposure_2026', 'Dr. Smith: sun exposure'],
-    ['f26-DEENT-DPAW-mc', 'Dr. Sikazwe: skin drug chemistry'],
-    ['Patel_Dermatitis-Therapeutics-Student', 'Dr. Patel: dermatitis'],
-    ['Patel_Acne-Therapeutics-Student', 'Dr. Patel: acne'],
-    ['Patel_Scaly-Dermatoses-Therapeutics-Student', 'Dr. Patel: scaly dermatoses'],
-    ['Patel_Outdoor-Exposures-Student', 'Dr. Patel: outdoor exposures'],
-    ['Patel_Sun-Exposure-Student', 'Dr. Patel: sun exposure'],
-    ['Patel_Wound-Care', 'Dr. Patel: wound care'],
-    ['Patel_Warts-Corns-Calluses', 'Dr. Patel: warts, corns and calluses'],
-    ['PollEV_Dr_Patel_11.12', 'Dr. Patel: poll questions (11/12)'],
-    ['PollEV_Dr_Patel', 'Dr. Patel: poll questions'],
-    ['Sikazwe_OOO_mc', 'Dr. Sikazwe: ear, mouth and eye'],
-    ['Smith_Eye_Glaucoma_AllergicConj_DryEye', 'Dr. Smith: eye'],
-    ['Lam_Glaucoma_doc', 'Dr. Lam: glaucoma handout'],
-    ['Lam_Glaucoma', 'Dr. Lam: glaucoma'],
-    ['Lam_OphthalmicDisorders_doc', 'Dr. Lam: other eye disorders handout'],
-    ['Lam_OphthalmicDisorders', 'Dr. Lam: other eye disorders'],
-    ['Lam_OralDisorders_slides', 'Dr. Lam: mouth'],
-    ['Lam_OralDisorders_handout', 'Dr. Lam: mouth handout'],
-    ['Lam_OticDisorders_slides', 'Dr. Lam: ear'],
-    ['Lam_OticDisorders_handout', 'Dr. Lam: ear handout'],
-    ['DrugChart_Ophthalmics', 'the eye drug chart'],
-    ['DrugChart_Dermatology', 'the skin drug chart']
-  ];
+  const DECK = (typeof window !== 'undefined' && window.CLEAN_DECK_NAMES) || [];
   const esc = s => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
   const DECK_RE = new RegExp('(^|[^\\w-])(' + DECK.map(d => esc(d[0])).join('|') + ')(?:\\.(?:pdf|docx))?(?![\\w-])', 'gi');
   const DECK_MAP = {}; DECK.forEach(d => { DECK_MAP[d[0].toLowerCase()] = d[1]; });
