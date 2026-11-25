@@ -118,6 +118,7 @@ table.reftab.cardsx td:not(:first-child) .ln.chain{list-style:none;margin-left:1
       t.classList.add(wordy ? 'cardsx' : 'cards');
     });
   }
+  window.TABLES_UI = {cards};   // the hub (hub_ui.js) lays out the long-cell tables it copies in the same way
   const after = (og, id) => function () {
     const r = og.apply(this, arguments);
     try { cards(document.getElementById(id)); }

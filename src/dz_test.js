@@ -7,6 +7,12 @@
      Diseases tab (Louis, 2026-11-13: it went to Guides first);
    - the tab's colours are the same in the device's dark mode (the page has no dark theme). */
 const path = require('path');
+
+/* start_ui.js moved nine tabs into the More menu (closed, so its buttons are not clickable): open the menu first, as a person does */
+async function openTab(p, v, how) {
+  if (await p.$(`#xmenu button[data-v="${v}"]`)) { await p.click('#xmore'); await p.waitForTimeout(80); }
+  return p[how || 'click'](`#nav button[data-v="${v}"]`);
+}
 const {chromium} = require('playwright');
 const PAGE = 'file://' + path.resolve(__dirname, process.env.DRILL_PAGE || '../preview/index.html');
 let fail = 0, n = 0;
@@ -19,7 +25,7 @@ const check = (ok, label, detail) => { n++; if (!ok) fail++; console.log((ok ? '
     const p = await b.newPage({viewport: {width: w, height: 844}});
     p.on('pageerror', e => errs.push(e.message));
     await p.goto(PAGE); await p.waitForTimeout(1200);
-    await p.click('#nav button[data-v="dz"]'); await p.click('#v-dz .dzexam [data-exam="0"]'); await p.waitForTimeout(200);
+    await openTab(p, 'dz'); await p.click('#v-dz .dzexam [data-exam="0"]'); await p.waitForTimeout(200);
     const over = async () => p.evaluate(() => document.documentElement.scrollWidth - innerWidth);
     const openAll = async () => { if (!(await p.$eval('#v-dz [data-dz="openall"]', x => /Close all/.test(x.textContent)))) await p.click('#v-dz [data-dz="openall"]'); };
     const cards = await p.$$eval('#v-dz .dzpicker button', bs => bs.map(x => x.dataset.card));
@@ -73,7 +79,7 @@ const check = (ok, label, detail) => { n++; if (!ok) fail++; console.log((ok ? '
     check(!noDef.length, `${w} px: every underlined word on five cards opens its definition`, noDef.join(', '));
 
     // drug panel, practice patient, search
-    await p.click('#nav button[data-v="dz"]'); await p.click('#v-dz .dzexam [data-exam="0"]'); await p.click('#v-dz .dzpicker button[data-card="psoriasis"]'); await openAll();
+    await openTab(p, 'dz'); await p.click('#v-dz .dzexam [data-exam="0"]'); await p.click('#v-dz .dzpicker button[data-card="psoriasis"]'); await openAll();
     await p.locator('#v-dz .dzcard .dzdrug').first().click();
     check(await p.$eval('#v-dz .dzdlg', d => d.open), `${w} px: a drug name opens its panel`);
     await p.click('#v-dz .dzdlg .x');
@@ -125,12 +131,12 @@ const check = (ok, label, detail) => { n++; if (!ok) fail++; console.log((ok ? '
     // every such button on every card: one entry each
     const multi = [];
     for (const c of cards) {
-      await p.click('#nav button[data-v="dz"]'); await p.click('#v-dz .dzexam [data-exam="0"]');
+      await openTab(p, 'dz'); await p.click('#v-dz .dzexam [data-exam="0"]');
       await p.click('#v-dz .dzpicker button[data-card="' + c + '"]');
       await openAll();
       const count = await p.$$eval('#v-dz .dzcard .dzfig', x => x.length);
       for (let i = 0; i < count; i++) {
-        await p.click('#nav button[data-v="dz"]'); await p.click('#v-dz .dzexam [data-exam="0"]');
+        await openTab(p, 'dz'); await p.click('#v-dz .dzexam [data-exam="0"]');
         const f = p.locator('#v-dz .dzcard .dzfig').nth(i); await f.scrollIntoViewIfNeeded(); await f.click(); await p.waitForTimeout(150);
         const r = await p.evaluate(() => RET.length);
         if (r !== 1) multi.push(c + ' #' + (i + 1) + ': ' + r);
@@ -140,7 +146,7 @@ const check = (ok, label, detail) => { n++; if (!ok) fail++; console.log((ok ? '
     check(!multi.length, `${w} px: every "Watch how it works" button on every card puts one entry on the Back stack`, multi.join('; '));
 
     // Practice: Back returns to Diseases in one press
-    await p.click('#nav button[data-v="dz"]'); await p.click('#v-dz .dzexam [data-exam="0"]'); await p.click('#v-dz .dzpicker button[data-card="lice"]');
+    await openTab(p, 'dz'); await p.click('#v-dz .dzexam [data-exam="0"]'); await p.click('#v-dz .dzpicker button[data-card="lice"]');
     const pr = await p.$('#v-dz [data-dz="practise"]');
     check(!!pr, `${w} px: the lice card has a Practice button`);
     if (pr) {
@@ -157,7 +163,7 @@ const check = (ok, label, detail) => { n++; if (!ok) fail++; console.log((ok ? '
   const col = async scheme => {
     const p = await b.newPage({viewport: {width: 390, height: 844}, colorScheme: scheme});
     await p.goto(PAGE); await p.waitForTimeout(900);
-    await p.click('#nav button[data-v="dz"]'); await p.click('#v-dz .dzexam [data-exam="0"]'); await p.click('#v-dz .dzpicker button[data-card="psoriasis"]'); await p.click('#v-dz [data-dz="openall"]');
+    await openTab(p, 'dz'); await p.click('#v-dz .dzexam [data-exam="0"]'); await p.click('#v-dz .dzpicker button[data-card="psoriasis"]'); await p.click('#v-dz [data-dz="openall"]');
     await p.locator('#v-dz .dzopt').first().click();
     const r = await p.evaluate(() => { const g = s => { const e = document.querySelector(s); return e ? getComputedStyle(e).backgroundColor + '/' + getComputedStyle(e).color : 'none'; };
       return [g('#v-dz .dztag.sm'), g('#v-dz .dztag.pa'), g('#v-dz .dzopt.good'), g('#v-dz .dzwarn')].join(' | '); });

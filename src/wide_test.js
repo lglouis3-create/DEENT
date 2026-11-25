@@ -16,6 +16,12 @@
    - "Hide the tab bar while reading" turned off in Settings is still off after a reload (the preview page keeps
      its settings under its own name). */
 const path = require('path');
+
+/* start_ui.js moved nine tabs into the More menu (closed, so its buttons are not clickable): open the menu first, as a person does */
+async function openTab(p, v, how) {
+  if (await p.$(`#xmenu button[data-v="${v}"]`)) { await p.click('#xmore'); await p.waitForTimeout(80); }
+  return p[how || 'click'](`#nav button[data-v="${v}"]`);
+}
 const {chromium} = require('playwright');
 const PAGE = 'file://' + path.resolve(__dirname, process.env.DRILL_PAGE || '../preview/index.html');
 let fail = 0, n = 0;
@@ -36,7 +42,7 @@ const measure = p => p.evaluate(() => { const r = e => e ? e.getBoundingClientRe
     const over = [], narrow = [], bar = [];
     const need = w <= 1728 ? 0.9 : w <= 1920 ? 0.85 : 0.6;
     for (const t of tabs) {
-      await p.click('#nav button[data-v="' + t + '"]'); await p.waitForTimeout(120);
+      await openTab(p, t); await p.waitForTimeout(120);
       const m = await measure(p);
       if (m.sw > m.iw) over.push(t + ' +' + (m.sw - m.iw));
       if (m.header !== m.iw || m.nav !== m.iw) bar.push(t + ' header ' + m.header + ' nav ' + m.nav);
@@ -50,7 +56,7 @@ const measure = p => p.evaluate(() => { const r = e => e ? e.getBoundingClientRe
     const fold = await p.$('#v-topics .examfold .deckbtn, #v-topics .deckbtn'); if (fold) { await fold.click().catch(() => {}); }
     let m = await measure(p); check(m.sw <= m.iw, `${w}x${h}: Topics with a folder opened does not scroll sideways`, 'by ' + (m.sw - m.iw));
     if (tabs.includes('dz')) {
-      await p.click('#nav button[data-v="dz"]'); await p.click('#v-dz .dzexam [data-exam="0"]'); await p.click('#v-dz .dzpicker button[data-card="psoriasis"]');
+      await openTab(p, 'dz'); await p.click('#v-dz .dzexam [data-exam="0"]'); await p.click('#v-dz .dzpicker button[data-card="psoriasis"]');
       const oa = await p.$('#v-dz [data-dz="openall"]'); if (oa) await oa.click();
       m = await measure(p); check(m.sw <= m.iw, `${w}x${h}: an open Diseases card does not scroll sideways`, 'by ' + (m.sw - m.iw));
       if (w >= 1300) {
@@ -67,7 +73,7 @@ const measure = p => p.evaluate(() => { const r = e => e ? e.getBoundingClientRe
   {
     const p = await b.newPage({viewport: {width: 746, height: 1000}});
     await p.goto(PAGE); await p.waitForTimeout(900);
-    await p.click('#nav button[data-v="tell"]');
+    await openTab(p, 'tell');
     await p.setViewportSize({width: 1376, height: 1032}); await p.waitForTimeout(500);
     let m = await measure(p);
     check(m.header === 1376 && m.nav === 1376 && m.main / m.iw >= 0.9 && m.sw === m.iw, 'a window widened from 746 to 1,376 px after loading is filled', JSON.stringify(m));
@@ -92,7 +98,7 @@ const measure = p => p.evaluate(() => { const r = e => e ? e.getBoundingClientRe
     p.on('pageerror', e => errs.push(e.message));
     await p.goto(PAGE); await p.waitForTimeout(900);
     const before = await p.$eval('meta[name="viewport"]', m => m.getAttribute('content'));
-    await p.click('#nav button[data-v="settings"]');
+    await openTab(p, 'settings');
     const btn = await p.$('#xRefit');
     check(!!btn, 'Settings has "Refit the page to the window"');
     if (btn) {
@@ -172,7 +178,7 @@ const measure = p => p.evaluate(() => { const r = e => e ? e.getBoundingClientRe
       check(!NUM.test(s.meta) && /width=device-width/.test(s.meta) && !/interactive-widget/.test(s.meta), 'the layout did not follow: the numeric width is taken back', s.meta);
       check(on && s.html === 984 && s.header === 984 && s.nav === 984, 'and the root is given the window width: the header and the tab strip span 984 px (layer 2)', JSON.stringify({on, html: s.html, header: s.header, nav: s.nav, css: s.css}));
       check(/^@media screen\{/.test(s.css || ''), 'the root width is a screen-only rule', s.css);
-      await p.click('#nav button[data-v="settings"]'); await p.click('details.xfit summary');
+      await openTab(p, 'settings'); await p.click('details.xfit summary');
       const line = await p.$eval('#xFitNow', e => e.textContent);
       check(/page width set to 984 px/.test(line), 'the Settings line says the page width is set', line);
       await p.click('#nav button[data-v="topics"]');
@@ -211,7 +217,7 @@ const measure = p => p.evaluate(() => { const r = e => e ? e.getBoundingClientRe
       await set(p, {w: 1300}); await p.waitForTimeout(4500); s = await state(p);
       check(s.css === null && s.meta === orig && s.log.length <= before + 1, 'and nothing more is written for the rest of the visit', JSON.stringify({css: s.css, meta: s.meta, writes: s.log.length - before}));
       // the Settings button starts the limits again
-      await p.click('#nav button[data-v="settings"]'); await p.evaluate(() => { document.querySelector('details.xfit').open = true; }); await p.click('#xRefit');
+      await openTab(p, 'settings'); await p.evaluate(() => { document.querySelector('details.xfit').open = true; }); await p.click('#xRefit');
       check(await rootIs(p, 1300), 'the Settings button tries once more');
       s = await state(p);
       check(!s.notice, 'no bar #xFitNotice ever existed (stale layout, 13 width changes)');
@@ -256,7 +262,7 @@ const measure = p => p.evaluate(() => { const r = e => e ? e.getBoundingClientRe
       for (const [label, touch, ua] of [['a desktop Mac (no touch points)', 0, IPAD_UA.replace(/CriOS\S+ Mobile\S+ /, 'Chrome/142.0.0.0 ')], ['a touch device that is not Apple\'s', 5, undefined]]) {
         const d = await open(touch, ua);
         await set(d.p, {w: 984}); await d.p.waitForTimeout(3800);
-        await d.p.click('#nav button[data-v="settings"]'); await d.p.click('details.xfit summary'); await d.p.click('#xRefit'); await d.p.waitForTimeout(1500);
+        await openTab(d.p, 'settings'); await d.p.click('details.xfit summary'); await d.p.click('#xRefit'); await d.p.waitForTimeout(1500);
         s = await state(d.p);
         check(!s.log.length && s.css === null && s.meta === d.orig && !s.notice && !d.errs.length, label + ' with the same widths: nothing is written, by itself or from the Settings button', JSON.stringify({log: s.log, css: s.css, errs: d.errs}));
         await d.ctx.close();
@@ -300,7 +306,7 @@ const measure = p => p.evaluate(() => { const r = e => e ? e.getBoundingClientRe
     {
       const p = await b.newPage({viewport: {width: 1366, height: 1024}});
       await p.goto(PAGE); await p.waitForTimeout(900);
-      await p.click('#nav button[data-v="ref"]'); await p.waitForTimeout(300);
+      await openTab(p, 'ref'); await p.waitForTimeout(300);
       const s0 = await strip(p);
       await p.mouse.move(683, 620);
       await p.mouse.wheel(0, 700);
@@ -338,14 +344,14 @@ const measure = p => p.evaluate(() => { const r = e => e ? e.getBoundingClientRe
     const p = await ctx.newPage();
     p.on('pageerror', e => errs.push(e.message));
     await p.goto(PAGE); await p.waitForTimeout(900);
-    await p.tap('#nav button[data-v="settings"]'); await p.waitForTimeout(300);
+    await openTab(p, 'settings', 'tap'); await p.waitForTimeout(300);
     const on0 = await p.evaluate(() => document.getElementById('xNavHide').checked);
     await p.locator('#xNavHide').scrollIntoViewIfNeeded();
     await p.tap('#xNavHide'); await p.waitForTimeout(200);
     const st = await p.evaluate(() => ({key: NS + ':navAutoHide', v: localStorage.getItem(NS + ':navAutoHide'), checked: document.getElementById('xNavHide').checked}));
     check(on0 && !st.checked && st.v === '0', 'Settings: the tab bar setting starts on, and a tap turns it off and stores "0"', JSON.stringify(st));
     await p.reload(); await p.waitForTimeout(900);
-    await p.tap('#nav button[data-v="settings"]'); await p.waitForTimeout(300);
+    await openTab(p, 'settings', 'tap'); await p.waitForTimeout(300);
     const after = await p.evaluate(() => ({v: localStorage.getItem(NS + ':navAutoHide'), checked: document.getElementById('xNavHide').checked}));
     check(after.v === '0' && !after.checked, 'after a reload the checkbox is still off', JSON.stringify(after));
     await p.tap('#nav button[data-v="guide"]'); await p.waitForTimeout(300);
@@ -355,7 +361,7 @@ const measure = p => p.evaluate(() => { const r = e => e ? e.getBoundingClientRe
     const s = await p.evaluate(() => { const nv = document.getElementById('nav'); return {hidden: nv.classList.contains('xhid'), pinned: nv.classList.contains('xpinned'), y: Math.round(scrollY)}; });
     check(!s.hidden && s.pinned && s.y > 300, 'after a reload with the setting off, a tap on a tab and a scroll down: the strip is still shown 4.5 s later', JSON.stringify(s));
     // turned on again, it is kept on and the strip hides
-    await p.tap('#nav button[data-v="settings"]'); await p.waitForTimeout(300);
+    await openTab(p, 'settings', 'tap'); await p.waitForTimeout(300);
     await p.locator('#xNavHide').scrollIntoViewIfNeeded();
     await p.tap('#xNavHide'); await p.waitForTimeout(200);
     await p.reload(); await p.waitForTimeout(900);
