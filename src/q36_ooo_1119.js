@@ -9,7 +9,7 @@
    Slide vs speech: slide 42 prints three groups (phosphoryl > carbamate > ester); the four-group order here (amide between the carbamate
    and the ester) is his speech. The slide 39 poll answer was not said aloud. */
 QUESTIONS.push(
-{id:"OB-001", skill:"tell", prof:'Sikazwe', tier:'new', topic:"oo-bb", sub:"class", concept:"oo-b-count-three-carbons",
+{id:"OB-001", skill:"tell", prof:'Sikazwe', tier:'new', topic:"oo-bb", sub:"class", concept:"oo-b-count-three-carbons", dupOf:"OP-001",
  tags:["hard", "tell"], source:"both",
  stem:"Four candidate beta antagonists are described by the atoms that link the aromatic ring to the amine nitrogen. Which one is an aryloxypropanolamine?",
  options:[
@@ -22,34 +22,34 @@ QUESTIONS.push(
 
 {id:"OB-002", skill:"mech", prof:'Sikazwe', tier:'new', topic:"oo-bb", sub:"class", concept:"oo-b-ciliary-first-line",
  tags:["hard", "two-facts"], source:"both",
- stem:"Timolol-type beta antagonists lower intraocular pressure by blocking receptors in which tissue, and which class of glaucoma drugs has replaced them as first line?",
+ stem:"Timolol and the other beta antagonists were once the first-line glaucoma drugs. Which class has replaced them as first line?",
  options:[
-  {t:"Ciliary body; alpha 2 agonists", correct:false, why:"The tissue is right, but the class that took over first-line use is the prostaglandins."},
-  {t:"Conjunctiva; prostaglandin agonists", correct:false, why:"The conjunctiva is a route of drug entry (slide 29), not where aqueous humor is made."},
-  {t:"Cornea; carbonic anhydrase inhibitors", correct:false, why:"The cornea is a route of drug entry (slide 29), and the carbonic anhydrase inhibitors are a separate class, not the replacement."},
-  {t:"Ciliary body; prostaglandin agonists", correct:true, why:"The ciliary body makes aqueous humor and its beta receptors drive that production; prostaglandins are first line now, and the beta antagonists remain an option (11/19)."}],
- teach:"Beta receptors in the ciliary body promote aqueous humor production, so blocking them does the reverse. The beta antagonists were once all first line; they have given way to the prostaglandins, which are first line now, and they remain an option (slide 33).",
- cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slides 28, 33; T@2944 11/19; T@3377 11/19"},
+  {t:"Prostaglandin (FP) agonists", correct:true, why:"He said the beta antagonists have succumbed to the prostaglandins, which are first line now; the beta antagonists remain an option (11/19, T@3377)."},
+  {t:"Alpha 2 agonists", correct:false, why:"The alpha 2 agonists are another class (slide 31), not the one that replaced the beta antagonists."},
+  {t:"Carbonic anhydrase inhibitors", correct:false, why:"The zolamides are a separate class (slide 36), not the replacement for the beta antagonists."},
+  {t:"Cholinergic agents", correct:false, why:"The cholinergic drugs are a separate class (slides 41-43), not first line."}],
+ teach:"The beta antagonists were once all first line; they have given way to the prostaglandins, which are first line now, and they remain an option (slide 33). Their beta receptors sit in the ciliary body, which makes aqueous humor.",
+ cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slides 28, 33; T@3377 11/19"},
 
 {id:"OB-003", skill:"pk", prof:'Sikazwe', tier:'new', topic:"oo-bb", sub:"class", concept:"oo-b-duration-12-24",
  tags:["hard", "reasoning"], source:"both",
- stem:"Which property of the aryloxypropanolamine beta antagonists lets a few drops be instilled without frequent dosing?",
+ stem:"What duration of action do the aryloxypropanolamine beta antagonists have?",
  options:[
-  {t:"A duration of action of 12 to 24 hours", correct:true, why:"He gave the duration of action of these drugs as 12 to 24 hours, so few drops are needed (11/19)."},
-  {t:"Covalent binding to the receptor that does not reverse", correct:false, why:"Irreversible covalent binding belongs to the organophosphate, which binds acetylcholinesterase (slide 42)."},
-  {t:"Activation by esterases in the conjunctiva to a longer-acting acid", correct:false, why:"Esterase activation is the route of the ester prodrugs, not of the beta antagonists (slides 45, 47, 48)."},
-  {t:"No metabolism in the eye, which keeps the drug local", correct:false, why:"That chain was given for cyclosporine (slide 50), not for the beta antagonists."}],
+  {t:"2 to 4 hours", correct:false, why:"The duration given was longer: 12 to 24 hours."},
+  {t:"6 to 8 hours", correct:false, why:"The duration given was longer: 12 to 24 hours."},
+  {t:"12 to 24 hours", correct:true, why:"He gave the duration of action of these drugs as 12 to 24 hours, so a few drops are enough (11/19; T@3642)."},
+  {t:"48 to 72 hours", correct:false, why:"The duration given was shorter: 12 to 24 hours."}],
  teach:"The beta antagonists have durations of action of 12 to 24 hours, which makes them useful with few drops. They also carry systemic side effects, so little should enter the circulation (slide 33).",
  cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slide 33; T@3997 11/19"},
 
 {id:"OB-004", skill:"chem", prof:'Sikazwe', tier:'new', topic:"oo-bb", sub:"sar", concept:"oo-b-mixed-s-isomer",
  tags:["hard", "two-facts"], source:"both",
- stem:"Which pair describes a typical aryloxypropanolamine beta antagonist before any para substituent is considered?",
+ stem:"Most aryloxypropanolamine beta antagonists act at which receptors, and which hydroxy isomer is more active?",
  options:[
-  {t:"Mixed beta 1 and beta 2 action; the R isomer is more active", correct:false, why:"The S isomers are the more active ones."},
-  {t:"Selective beta 1 action, as in betaxolol; the S isomer is more active", correct:false, why:"The beta 1 selectivity is tied to a true para substitution (betaxolol); most of the class is mixed acting."},
-  {t:"Mixed beta 1 and beta 2 action; the S isomer is more active", correct:true, why:"Most have mixed beta 1 and beta 2 activities, and the carbon bearing the hydroxy group is chiral with the S isomer the more active one (slide 34; 11/19)."},
-  {t:"Selective beta 2 action; the R isomer is more active", correct:false, why:"Neither part holds: the class is mostly mixed acting and the S isomer is preferred."}],
+  {t:"Beta 1 and beta 2; S isomer", correct:true, why:"Most are mixed acting at beta 1 and beta 2, and the S isomers of the hydroxy carbon are the more active ones (slide 34; T@6622)."},
+  {t:"Beta 1 and beta 2; R isomer", correct:false, why:"The mixed action is right, but the S isomers are the more active ones."},
+  {t:"Beta 1 only; R isomer", correct:false, why:"Most are mixed acting, and the S isomer is the active one."},
+  {t:"Beta 2 only; S isomer", correct:false, why:"The isomer is right, but most of the class is mixed beta 1 and beta 2 acting."}],
  teach:"Slide 34: most have mixed beta 1 plus beta 2 activities; S-OH isomers are preferred; a true para substitution (betaxolol, positions 1 and 4) tends to give better beta 1 selectivity.",
  cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slide 34; T@6622 11/19; T@6865 11/19"},
 
@@ -66,12 +66,12 @@ QUESTIONS.push(
 
 {id:"OB-006", skill:"pk", prof:'Sikazwe', tier:'new', topic:"oo-cai", sub:"sulf", concept:"oo-b-first-vs-second-gen",
  tags:["hard", "two-facts"], source:"both",
- stem:"Which statement correctly separates the older, first-generation carbonic anhydrase inhibitors from the second-generation ones?",
+ stem:"Acetazolamide and methazolamide differ from brinzolamide and dorzolamide in being ......",
  options:[
-  {t:"First generation: polar and given by mouth in high doses; second generation: lipophilic and instilled in small topical doses", correct:true, why:"He separated them by log P: the polar, hydrophilic agents are given orally at high doses and cause systemic side effects; the lipophilic ones are instilled with fewer systemic effects (slide 36; 11/19)."},
-  {t:"First generation: lipophilic and instilled in small topical doses; second generation: polar and given by mouth in high doses", correct:false, why:"This reverses the generations."},
-  {t:"First generation: polar and instilled in small topical doses; second generation: lipophilic and given by mouth in high doses with more systemic effects", correct:false, why:"Both pairings are crossed: the polar agents are the oral, high-dose ones."},
-  {t:"Both generations: polar and given by mouth, and they differ in the group that binds zinc", correct:false, why:"Both generations are sulfonamides, and the log P values separate them."}],
+  {t:"Polar and given orally in high doses", correct:true, why:"Their ClogP values are low (-0.3 and 0.13); they are polar, given orally at high doses and carry systemic side effects (slide 36; T@10401)."},
+  {t:"Lipophilic and given orally in high doses", correct:false, why:"The oral agents are the polar ones."},
+  {t:"Polar and instilled topically in small doses", correct:false, why:"The topical, small-dose agents are the lipophilic ones (ClogP 2 and 7)."},
+  {t:"Lipophilic and instilled topically in small doses", correct:false, why:"That describes brinzolamide and dorzolamide, not the older drugs."}],
  teach:"Log P separates the generations (slide 36): acetazolamide (-0.3) and methazolamide (0.13) are polar, oral, high-dose and carry systemic side effects; dorzolamide (2) and brinzolamide (7) are lipophilic, topical, small-dose and carry fewer. The second generation is what is mostly used now.",
  cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slide 36; T@10401 11/19"},
 
@@ -103,7 +103,7 @@ QUESTIONS.push(
  options:[
   {t:"Three hydrogen bonds; one ionic interaction with zinc", correct:true, why:"The SO2NH2 group is held by hydrogen bonds and by an ionic (electrostatic) interaction with Zn (slide 38; 11/19)."},
   {t:"Two hydrogen bonds; one ionic interaction with zinc", correct:false, why:"Three hydrogen bonds hold the group, not two."},
-  {t:"Three hydrogen bonds; no ionic interaction with the zinc atom", correct:false, why:"The zinc interaction is ionic (electrostatic), and zinc is important for binding."},
+  {t:"Three hydrogen bonds; one covalent bond to zinc", correct:false, why:"The zinc interaction is ionic (electrostatic), not covalent, and zinc is important for binding."},
   {t:"One hydrogen bond; three ionic interactions", correct:false, why:"This reverses the counts."}],
  teach:"Slide 38 panel B: three hydrogen bonds (to Gln92 and Thr199) and one ionic (electrostatic) interaction between the SO2NH2 group and Zn2+. Zinc is important for binding.",
  cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slide 38; T@14540 11/19"},
@@ -132,23 +132,23 @@ QUESTIONS.push(
 
 {id:"OB-012", skill:"mech", prof:'Sikazwe', tier:'new', topic:"oo-chol", sub:"ind", concept:"oo-b-aging-antidote",
  tags:["hard", "two-facts"], source:"both",
- stem:"Echothiophate inhibits acetylcholinesterase and then undergoes aging. Which change makes the bond irreversible, and what does it mean for 2-PAM?",
+ stem:"Aging of the echothiophate bond to acetylcholinesterase happens by which change?",
  options:[
-  {t:"An ethyl group is lost and a hydroxy group remains; 2-PAM can still reverse the bond afterward", correct:false, why:"After aging 2-PAM no longer reverses the bond."},
-  {t:"An ethyl group is added to the enzyme; 2-PAM no longer reverses the bond", correct:false, why:"Aging removes an ethyl group; it does not add one."},
-  {t:"The phosphoryl group is released from the enzyme; 2-PAM is not needed", correct:false, why:"The phosphoryl group stays bound; the enzyme remains tied up."},
-  {t:"An ethyl group is lost and a hydroxy group remains; 2-PAM no longer reverses the bond", correct:true, why:"Aging removes an ethyl group (O-deethylation) to leave a hydroxy group, a covalent and irreversible bond; 2-PAM, the antidote written on the slide, must be given before this maturation (11/19)."}],
+  {t:"O-deethylation, leaving a hydroxy group", correct:true, why:"An ethyl group is removed and a hydroxy group is left, a covalent and irreversibly bound enzyme (slide 42; T@19719)."},
+  {t:"O-demethylation, leaving a hydroxy group", correct:false, why:"He stressed O-deethylation, not O-demethylation: the group removed is an ethyl group."},
+  {t:"Hydrolysis of the bond to the enzyme, which frees the enzyme", correct:false, why:"The bond to the enzyme stays; aging makes it irreversible."},
+  {t:"Oxidation of an ethyl group to a carboxylic acid", correct:false, why:"Aging removes the ethyl group; it does not oxidize it."}],
  teach:"Slide 42: the phosphorylated enzyme loses C2H5-OH (aging) and becomes irreversibly inactive. He described it as removal of an ethyl group leaving a hydroxy group, and said the antidote for organophosphate toxicity (2-PAM, handwritten on the slide) works only before this maturation.",
  cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slide 42; T@19719 11/19; T@20270 11/19"},
 
 {id:"OB-013", skill:"mech", prof:'Sikazwe', tier:'new', topic:"oo-chol", sub:"ind", concept:"oo-b-irreversible-long-activity",
  tags:["hard", "reasoning"], source:"both",
- stem:"An organophosphate such as echothiophate is useful when long activity is wanted. Which reason does the chemistry give?",
+ stem:"Echothiophate, an organophosphate, is a long-acting indirect cholinergic. Why?",
  options:[
-  {t:"It is a prodrug that esterases release slowly in the conjunctiva", correct:false, why:"Esterase activation describes the ester prodrugs, not echothiophate (slides 45, 47, 48)."},
-  {t:"It is a direct agonist that stays on the receptor", correct:false, why:"It is an indirect-acting agent: it inhibits acetylcholinesterase."},
+  {t:"It is hydrolyzed by esterases to a long-lived metabolite", correct:false, why:"Esterase activation describes the ester prodrugs, not echothiophate (slides 45, 47, 48)."},
+  {t:"It binds the muscarinic receptor with high affinity", correct:false, why:"It is an indirect-acting agent: it inhibits acetylcholinesterase rather than binding the receptor."},
   {t:"Its zinc contact holds it in the enzyme", correct:false, why:"Zinc binding is the carbonic anhydrase inhibitor mechanism (slide 38)."},
-  {t:"It binds the enzyme covalently, and the bond does not reverse", correct:true, why:"The phosphoryl group forms a covalent bond that ages to an irreversible one, which gives long activity (slide 42; 11/19)."}],
+  {t:"It binds the enzyme covalently, and the bond ages to an irreversible one", correct:true, why:"The phosphoryl group forms a covalent bond that ages to an irreversible one, which gives long activity (slide 42; T@18998)."}],
  teach:"Irreversible inhibitors give long activity. The phosphoryl group of echothiophate forms a covalent bond with the enzyme that matures (ages) into an irreversible one (slide 42).",
  cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slides 41, 42; T@18998 11/19"},
 
@@ -187,12 +187,12 @@ QUESTIONS.push(
 
 {id:"OB-017", skill:"mech", prof:'Sikazwe', tier:'new', topic:"oo-pg", sub:"pg", concept:"oo-b-unstable-and-halogen",
  tags:["hard", "two-facts"], source:"both",
- stem:"Why were analogs made instead of using natural PGF2 alpha, and what does a halogen at C-15 add?",
+ stem:"Natural PGF2 alpha is too unstable for use, so analogs were made. What does a halogen at C-15 prevent?",
  options:[
-  {t:"PGF2 alpha is too unstable; the halogen blocks hydrolysis of the ester at C-1", correct:false, why:"The halogen protects the C-15 hydroxy from oxidation; esters are hydrolyzed for activation."},
-  {t:"PGF2 alpha is too unstable; the halogen blocks oxidation of the C-15 position", correct:true, why:"The natural prostaglandin is too unstable, so more stable analogs were made; a halogen in place of the C-15 hydroxy prevents its oxidation and stabilizes the molecule (11/19)."},
-  {t:"PGF2 alpha is too potent; the halogen blocks oxidation of the C-15 position", correct:false, why:"The reason given was instability, not excess potency."},
-  {t:"PGF2 alpha is too lipophilic; the halogen makes the molecule water soluble", correct:false, why:"The reason was instability, and the halogen is for stability."}],
+  {t:"Oxidation of the 15-OH to a ketone", correct:true, why:"C-15 is OH or a halogen; the halogen prevents oxidation of the 15-OH and stabilizes the molecule (slide 46; T@25877)."},
+  {t:"Hydrolysis of the C-1 ester", correct:false, why:"Esters are hydrolyzed for activation (slide 46); the halogen is at C-15, not C-1."},
+  {t:"Glucuronidation of the 15-OH", correct:false, why:"The halogen was described as preventing oxidation, not conjugation."},
+  {t:"Reduction of the chain double bond", correct:false, why:"The halogen at C-15 prevents oxidation of the 15-OH, not reduction of a double bond."}],
  teach:"Slide 46: C-15 is OH or a halogen (halogens prevent 15-OH oxidation). The natural PGF2 alpha was too unstable, so stable analogs were made.",
  cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slides 44, 46; T@23166 11/19; T@25877 11/19"},
 
@@ -209,12 +209,12 @@ QUESTIONS.push(
 
 {id:"OB-019", skill:"tell", prof:'Sikazwe', tier:'new', topic:"oo-pg", sub:"ep2", concept:"oo-b-ep2-vs-fp",
  tags:["hard", "two-facts"], source:"both",
- stem:"Which pair correctly contrasts omidenepag isopropyl with the PGF2 alpha analogs?",
+ stem:"Omidenepag isopropyl is chemically classified as a ......",
  options:[
-  {t:"It is selective for the EP2 receptor and is a pyridine sulfonamide, not a prostaglandin structure", correct:true, why:"Slides 44 and 47: the analogs act on the FP receptor; omidenepag isopropyl targets EP2 and has a pyridine sulfonamide structure (11/19)."},
-  {t:"It is selective for the EP2 receptor and still has a prostaglandin structure with a cyclopentane core", correct:false, why:"Its structure is a pyridine sulfonamide."},
-  {t:"It is selective for the FP receptor and is a pyridine sulfonamide", correct:false, why:"The FP receptor is the target of the PGF2 alpha analogs; this drug targets EP2."},
-  {t:"It is selective for the EP2 receptor and needs no activation", correct:false, why:"It is an ester prodrug that esterase hydrolysis activates (slide 47)."}],
+  {t:"Pyridine sulfonamide", correct:true, why:"With the chemical classification changing, it is no longer a prostaglandin; it is a pyridine sulfonamide (slide 47; T@26887)."},
+  {t:"Prostaglandin", correct:false, why:"The prostaglandin analogs are the PGF2 alpha derivatives; omidenepag is no longer a prostaglandin structure."},
+  {t:"Isoquinoline", correct:false, why:"Isoquinoline is the class of netarsudil (slide 48)."},
+  {t:"Imidazoline", correct:false, why:"The imidazolines are the alpha 2 agonists (slide 31)."}],
  teach:"Omidenepag isopropyl (approved in 2022) is a selective PGE2 (EP2) receptor agonist, a pyridine sulfonamide rather than a prostaglandin structure, and an ester prodrug activated by esterases to a carboxylic acid (slide 47).",
  cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slides 44, 47; T@26887 11/19"},
 
@@ -306,7 +306,7 @@ QUESTIONS.push(
  teach:"Slide 51: lifitegrast (a phenylalanine, log P 4) is eliminated mostly unchanged; in lecture, minimal systemic exposure, and whatever gets into the circulation gets out intact.",
  cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slide 51; T@31409 11/19"},
 
-{id:"OB-028", skill:"chem", prof:'Sikazwe', tier:'new', topic:"oo-ac", sub:"self", concept:"oo-b-selfassess-cai-zinc",
+{id:"OB-028", skill:"chem", prof:'Sikazwe', tier:'new', topic:"oo-ac", sub:"self", concept:"oo-b-selfassess-cai-zinc", dupOf:"OA-050",
  tags:["hard", "two-facts"], source:"both",
  stem:"A new carbonic anhydrase inhibitor should bind in the active site. Which group should its structure carry, and which metal does that group contact?",
  options:[
@@ -317,20 +317,20 @@ QUESTIONS.push(
  teach:"Self-assessment Question 3 (slide 65): the key functional group in the carbonic anhydrase inhibitor chemical basis of drug action is the sulfonamide.",
  cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slides 36, 38, 65; T@12023 11/19"},
 
-{id:"OB-029", skill:"class", prof:'Sikazwe', tier:'new', topic:"oo-ac", sub:"self", concept:"oo-b-selfassess-imidazoline-class",
+{id:"OB-029", skill:"class", prof:'Sikazwe', tier:'new', topic:"oo-ac", sub:"self", concept:"oo-b-selfassess-imidazoline-class", dupOf:"OA-051",
  tags:["hard", "two-facts"], source:"both",
- stem:"An imidazoline ring is joined through an NH linker to a halogenated aromatic ring. In which class of eye drug is this group present?",
+ stem:"An imidazoline ring is present in which class of eye drugs?",
  options:[
-  {t:"Alpha 2 agonists", correct:true, why:"The imidazoline is present in the alpha 2 agonists (clonidine, apraclonidine, brimonidine); the NH linker gives alpha 2 selectivity (slides 31, 32, 66; 11/19)."},
+  {t:"Alpha 2 agonists", correct:true, why:"The imidazoline is present in the alpha 2 agonists (clonidine, apraclonidine, brimonidine) (slides 31, 66; 11/19)."},
   {t:"Beta antagonists", correct:false, why:"The beta antagonists are aryloxypropanolamines (slide 33)."},
   {t:"Prostaglandin receptor agonists", correct:false, why:"The prostaglandins have a cyclopentane core (slide 44)."},
   {t:"Carbonic anhydrase inhibitors", correct:false, why:"The carbonic anhydrase inhibitors are sulfonamides (slide 36)."}],
- teach:"Self-assessment Question 4 (slide 66): the drawn imidazoline is present in the alpha 2 agonists. An NH linker (not CH2) goes with alpha 2 activity (slide 32).",
- cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slides 31, 32, 66; T@34671 11/19"},
+ teach:"Self-assessment Question 4 (slide 66): the drawn imidazoline is present in the alpha 2 agonists.",
+ cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slides 31, 66; T@34671 11/19"},
 
-{id:"OB-030", skill:"tell", prof:'Sikazwe', tier:'new', topic:"oo-ac", sub:"self", concept:"oo-b-selfassess-pg-core",
+{id:"OB-030", skill:"tell", prof:'Sikazwe', tier:'new', topic:"oo-ac", sub:"self", concept:"oo-b-selfassess-pg-core", dupOf:"OA-052",
  tags:["hard", "two-facts"], source:"both",
- stem:"A structure has a cyclopentane ring with two adjacent chains, one ending in a carboxylic acid. Which class has this core, and what do its members activate?",
+ stem:"A cyclopentane ring carries two adjacent chains. Which class has this core, and which receptor do its members activate?",
  options:[
   {t:"Prostaglandin; the muscarinic receptor", correct:false, why:"The prostaglandin analogs activate the FP receptor; the muscarinic receptor is the target of acetylcholine and its mimics."},
   {t:"Prostaglandin; the FP receptor", correct:true, why:"The prostaglandin core is a cyclopentane with two chains, and the analogs activate the PGF (FP) receptor (slides 44, 67; 11/19)."},
@@ -339,14 +339,14 @@ QUESTIONS.push(
  teach:"Self-assessment Question 5 (slide 67): the drawn core is the prostaglandin skeleton, present in the prostaglandin receptor agonists (slide 44).",
  cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slides 44, 67; T@34892 11/19"},
 
-{id:"OB-031", skill:"chem", prof:'Sikazwe', tier:'new', topic:"oo-ac", sub:"self", concept:"oo-b-selfassess-irreversible-rank",
+{id:"OB-031", skill:"chem", prof:'Sikazwe', tier:'new', topic:"oo-ac", sub:"self", concept:"oo-b-selfassess-irreversible-rank", dupOf:"OA-053",
  tags:["hard", "two-facts"], source:"both",
- stem:"Of the phosphoryl, amide, ester and carbamate groups, which pairing names the group that gives irreversible acetylcholinesterase inhibition and its duration?",
+ stem:"In cholinergic drugs, which functional group exhibits irreversible acetylcholinesterase inhibition?",
  options:[
-  {t:"Carbamate; an intermediate duration", correct:false, why:"The carbamate is intermediate, but it is not irreversible."},
-  {t:"Amide; a mild duration", correct:false, why:"The amide has a mild duration and is not irreversible."},
-  {t:"Phosphoryl; the longest duration", correct:true, why:"Slide 68 asks for the irreversible group, the phosphoryl group, which has the longest duration (11/19)."},
-  {t:"Ester; the shortest duration", correct:false, why:"The ester has the shortest duration and is not irreversible."}],
+  {t:"Carbamate", correct:false, why:"The carbamate has an intermediate duration; it is not irreversible."},
+  {t:"Ester", correct:false, why:"The ester has the shortest duration; it is not irreversible."},
+  {t:"Amide", correct:false, why:"The amide has a mild duration; it is not irreversible."},
+  {t:"Phosphoryl", correct:true, why:"Slide 68 asks for the irreversible group, the phosphoryl group (the one he called Z), which has the longest duration (11/19)."}],
  teach:"Self-assessment Question 5, second part (slide 68): the phosphoryl group (the one he called Z) gives irreversible inhibition; the other groups drawn are the amide, the ester and the carbamate.",
  cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slides 42, 68; T@35098 11/19"}
 );

@@ -24,7 +24,7 @@ const NAME = 'home_test.js';
 const {check} = L;
 L.PAGE.need(NAME);
 const text = (page, sel) => page.$eval(sel, el => el.textContent.replace(/\s+/g, ' ').trim()).catch(() => '');
-const go = (page, v) => page.click(`#nav button[data-v="${v}"]`);
+const go = (page, v) => page.evaluate(s => document.querySelector(s).click(), `#nav button[data-v="${v}"]`);
 const overflow = page => page.evaluate(() => document.documentElement.scrollWidth > window.innerWidth);
 const CARD = '#v-settings [data-hs]';
 // click only what is there, so a missing element fails its own check and the rest still run

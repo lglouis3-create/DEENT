@@ -69,7 +69,7 @@ table.reftab.cardsx td:not(:first-child) .ln+.ln{margin-top:4px}
 table.reftab.cardsx td:not(:first-child) .ln.chain{list-style:none;margin-left:1.15em}
 @media (max-width:900px){table.reftab.cardsx tr{grid-template-columns:repeat(min(var(--tcn,3),2),minmax(0,1fr))}}
 @media (max-width:600px){table.reftab.cardsx tr{grid-template-columns:minmax(0,1fr)}}
-@media (prefers-color-scheme:dark){table.reftab.cardsx td.ttrap{background:#3a1f25}}`;
+/* the page has one (light) theme whatever the device setting, so the trap tile has no dark variant (Louis, 2026-11-23: its text was unreadable on a dark-mode device) */`;
   if (!document.getElementById('tablesuicss')) {
     const s = document.createElement('style'); s.id = 'tablesuicss'; s.textContent = CSS; document.head.appendChild(s);
   }
@@ -81,6 +81,8 @@ table.reftab.cardsx td:not(:first-child) .ln.chain{list-style:none;margin-left:1
   const R1 = new RegExp('(\\d{1,2}\\/\\d{1,2}),?\\s+' + TL, 'g'), R2 = new RegExp(TL + ',?\\s+(\\d{1,2}\\/\\d{1,2})', 'g'), R3 = new RegExp(TL, 'g');
   function hideCodes(root){
     if (!root || typeof document.createTreeWalker !== 'function') return;
+    // clean_ui.js (loaded after this file) is the one sanitizer; its observer also covers these views
+    if (window.CLEAN && typeof window.CLEAN.run === 'function') { window.CLEAN.run(root); return; }
     const w = document.createTreeWalker(root, 4 /* text */, null); let n; const list = [];
     while ((n = w.nextNode())) if (/\bT@?\s?\d{2,6}/.test(n.nodeValue) && !(n.parentNode && /^(SCRIPT|STYLE)$/.test(n.parentNode.nodeName))) list.push(n);
     list.forEach(t => {
@@ -116,6 +118,7 @@ table.reftab.cardsx td:not(:first-child) .ln.chain{list-style:none;margin-left:1
       t.classList.add(wordy ? 'cardsx' : 'cards');
     });
   }
+  window.TABLES_UI = {cards};   // the hub (hub_ui.js) lays out the long-cell tables it copies in the same way
   const after = (og, id) => function () {
     const r = og.apply(this, arguments);
     try { cards(document.getElementById(id)); }

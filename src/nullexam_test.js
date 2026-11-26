@@ -132,7 +132,7 @@ const badWords = page => page.evaluate(src => {
         for(let i = 0; i < 6; i++){ await page.evaluate(ANSWER, i % 3 === 0); await page.waitForTimeout(150); }
         const views = await page.evaluate(() => [...document.querySelectorAll('#nav button[data-v]')].map(b => b.dataset.v));
         for(const v of views){
-          await page.click(`#nav button[data-v="${v}"]`);
+          await page.evaluate(s => document.querySelector(s).click(), `#nav button[data-v="${v}"]`);
           await page.waitForTimeout(200);
           await look(`the ${v} tab`);
         }
@@ -280,7 +280,7 @@ const badWords = page => page.evaluate(src => {
         }
 
         // Weak spots
-        await page.click('#nav button[data-v="gaps"]');
+        await page.evaluate(s => document.querySelector(s).click(), '#nav button[data-v="gaps"]');
         await page.waitForTimeout(200);
         const gaps = await page.evaluate(() => ({text: document.getElementById('v-gaps').innerText, unsetFile: typeof EXAM_UNSET !== 'undefined',
           pools: [...document.querySelectorAll('#v-gaps .nextcard .nexthead span')].map(s => s.textContent)}));

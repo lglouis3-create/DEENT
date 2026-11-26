@@ -254,7 +254,7 @@ QUESTIONS.push(
  tags:['blank'], source:'both', dupOf:'S3-099',
  stem:"The enzyme linking hydrocortisone and its major metabolite, cortisone, is ___.",
  accept:["11β-hydroxysteroid dehydrogenase", "11-beta-hydroxysteroid dehydrogenase", "11β-HSD", "11-beta-HSD", "11βHSD"],
- why:"Slide 26 and T 1190–1193: \"this is the major metabolite of hydrocortisone, and the enzyme involved in that is ... 11 beta hydrosteroid dehydrogenase, 11 beta HSD\", an oxidoreductase. Whether one isozyme works both ways is held out (OPEN_QUESTIONS).",
+ why:"Slide 26 and T 1190–1193: \"this is the major metabolite of hydrocortisone, and the enzyme involved in that is ... 11 beta hydrosteroid dehydrogenase, 11 beta HSD\", an oxidoreductase. Whether one isozyme works both ways is not asked here.",
  cite:BQ_S3+" slide 26; T 1190–1193"},
 
 {id:'BS4-001', type:'blank', skill:'chem', prof:'Sikazwe', tier:'new', topic:'s4-mtx', sub:'mech', concept:'b-mtx-pteridine',
@@ -451,7 +451,7 @@ QUESTIONS.push(
  tags:['blank'], source:'both', dupOf:'P5-102',
  stem:"Atopic dermatitis not resolved after ___ days on OTC hydrocortisone: consider seeking help.",
  accept:["7", "seven"],
- why:"Slide 36: \"Not resolved in 7 days consider seeking assistance, do not apply for longer than 2 weeks\"; her poll answer: \"So you got 7 days\" (T@68450). (Slide 33's 2–3 days is for self-care in general, not on a steroid; OPEN_QUESTIONS Lecture 5 item 2.)",
+ why:"Slide 36: \"Not resolved in 7 days consider seeking assistance, do not apply for longer than 2 weeks\"; her poll answer: \"So you got 7 days\" (T@68450). (Slide 33's 2–3 days is for self-care in general, not on a steroid.)",
  cite:BQ_P5+" slides 36, 52; T@68450"},
 
 {id:'BP5-023', type:'blank', skill:'counsel', prof:'Patel', tier:'new', topic:'p5-tcs', sub:'prof', concept:'b-tcs-2-weeks',
@@ -605,7 +605,7 @@ QUESTIONS.push(
  tags:['blank'], source:'both', dupOf:'P5-110',
  stem:"In the ABCDE of diaper dermatitis, D: change the diaper every ___ hours and as soon as it is soiled.",
  accept:["2", "two"],
- why:"Slide 62: \"Change the diaper frequently (every 2 hours) and as soon as it is soiled, if possible\" (T@75778). Slide 57's every 3 to 4 hours is for infants, which she said is not tested (OPEN_QUESTIONS Lecture 5 item 7).",
+ why:"Slide 62: \"Change the diaper frequently (every 2 hours) and as soon as it is soiled, if possible\" (T@75778). Slide 57's every 3 to 4 hours is for infants, which she said is not tested.",
  cite:BQ_P5+" slide 62; T@75778"},
 
 {id:'BP5-045', type:'blank', skill:'tell', prof:'Patel', tier:'new', topic:'p5-dd', sub:'tx', concept:'b-zinc-oxide-range',

@@ -37,7 +37,7 @@ const QRE = /^\{\s*"?id"?:\s*['"][^'"]+['"],(?:\s*"?(?:lowYield|dupOf|skill|type
 /* How many questions and images the sources hold, so the page can be compared
    against them instead of against a number written here. */
 function sourceCounts(){
-  const n = questionFiles().reduce((s, f) => s + (fs.readFileSync(f, 'utf8').match(QRE) || []).length + (fs.readFileSync(f, 'utf8').match(/^mk\('[A-Z0-9-]+',/gm) || []).length, 0);
+  const n = questionFiles().reduce((s, f) => s + (fs.readFileSync(f, 'utf8').match(QRE) || []).length + (fs.readFileSync(f, 'utf8').match(/^(?:mk|mc|bl)\((?:'[A-Z0-9-]+'|[A-Z]{4}),/gm) || []).length, 0);
   if(!n){ console.log('FAIL: browser_test.js: counted no questions in the sources — the count pattern is wrong'); process.exit(1); }
   return [n, Object.keys(JSON.parse(fs.readFileSync('images.json', 'utf8'))).length];
 }
@@ -691,7 +691,7 @@ function sourceCounts(){
     const keys = (typeof DIA === 'undefined' ? [] : Object.keys(DIA).filter(k => /data-anim/.test(DIA[k])));
     if(!keys.length) return {none: true};
     show('diagrams');
-    const fig = document.querySelector('#v-diagrams .fig');
+    const fig = document.querySelector('#v-diagrams .fig:has(.st)');   // the first step-through (the aqueous humor flow figure, ey-flow, comes first and has no steps)
     if(!fig) return {err: 'no figure rendered in the Diagrams tab'};
     const steps = fig.querySelectorAll('.st').length;
     const shownAt = () => [...fig.querySelectorAll('.st')].findIndex(s => s.classList.contains('on'));

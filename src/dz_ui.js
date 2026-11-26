@@ -29,7 +29,17 @@ const DZ_UI = (() => {
   const PROF = {sm: 'Dr. Smith', sk: 'Dr. Sikazwe', la: 'Dr. Lam', pa: 'Dr. Patel'};
   const examNow = (() => { try { const m = /(\d)/.exec(String(COURSE.activeExam || '')); return m ? +m[1] : 0; } catch (e) { return 0; } })();
   const st = {view: 'cards', exam: examNow, card: (DZ.cards.find(x => !examNow || (x.exams || []).includes(examNow)) || DZ.cards[0] || {}).id, recall: false, filter: '', q: '', pt: {}, rate: {}, open: {}};
-  const isOpen = (c, i) => st.recall || !!st.open[c.id + ':' + i];
+  const isOpen = (c, i) => { if (st.recall) return true; const v = st.open[c.id + ':' + i]; return v === undefined ? i === 0 : !!v; };
+  /* the colour of a step follows what the step is for (Collect, Assess, Refer, Plan, Implement) */
+  const KINDS = {collect: ['Collect', '#1f5fa8'], assess: ['Assess', '#b35a00'], refer: ['Refer', '#b3261e'], plan: ['Plan', '#0f7a6b'], implement: ['Implement', '#7a3db8']};
+  const kindOf = t => { t = plain(t || '').toLowerCase();
+    if (/^collect/.test(t)) return 'collect';
+    if (/implement|counsel|follow up|what to tell|giving eye|side effects/.test(t)) return 'implement';
+    if (/refer/.test(t)) return 'refer';
+    if (/treat it|^plan|mechanism|order of/.test(t)) return 'plan';
+    if (/recogni|assess|is it allergic|looks|graded|stages/.test(t)) return 'assess';
+    return 'collect'; };
+  const shortTitle = t => { const x = plain(t || '').split(/[:(,]/)[0].trim(); return x.length > 26 ? x.slice(0, 24).replace(/\s+\S*$/, '') + '…' : x; };
   let pane = null;
 
   /* inline marks: {{covered fact}}, [[term|shown]], <<drug|shown>>, **bold**, leading star */
@@ -43,32 +53,81 @@ const DZ_UI = (() => {
     return h;
   }
   const plain = s => String(s == null ? '' : s).replace(/<<[^|>]+\|([^>]+)>>/g, '$1').replace(/\[\[[^|\]]+\|([^\]]+)\]\]/g, '$1').replace(/\{\{([^}]+)\}\}/g, '$1').replace(/\*\*/g, '').replace(/★\s*/g, '');
-  const val = v => Array.isArray(v) ? '<ul>' + v.map(x => '<li>' + mk(x) + '</li>').join('') + '</ul>' : mk(v);
-  const facts = (rows, cls) => `<dl class="dzfacts${cls ? ' ' + cls : ''}">` + (rows || []).map(r => `<div><dt>${mk(r[0])}</dt><dd>${val(r[1])}</dd></div>`).join('') + '</dl>';
-  const pts = items => '<ul class="dzpts">' + (items || []).map(x => '<li>' + mk(x) + '</li>').join('') + '</ul>';
+  /* Layout only: a long string is shown as short lines, one sentence or clause each, with the same words
+     (no fact is added or changed). Splits never fall inside {{ }}, [[ ]], << >> or ( ). */
+  const ABBR = /(?:\bDr|\bvs|\be\.g|\bi\.e|\bapprox|\bRx|\bNo|\bSt|\bcf|\bpt|\bmg|\bmL)\.$/;
+  function cut(s, test){
+    const out = []; let st0 = 0, d = 0, par = 0;
+    for (let i = 0; i < s.length; i++) {
+      const two = s.substr(i, 2);
+      if (two === '{{' || two === '[[' || two === '<<') { d++; i++; continue; }
+      if (two === '}}' || two === ']]' || two === '>>') { d = Math.max(0, d - 1); i++; continue; }
+      const ch = s[i];
+      if (ch === '(') par++; else if (ch === ')') par = Math.max(0, par - 1);
+      if (d || par) continue;
+      if (test(s, i, ch)) { out.push(s.slice(st0, i + 1).trim()); st0 = i + 1; }
+    }
+    out.push(s.slice(st0).trim());
+    return out.filter(Boolean);
+  }
+  const sentEnd = (s, i, ch) => /[.!?]/.test(ch) && s[i + 1] === ' ' && /[A-Z★{\[<*(]/.test(s[i + 2] || '') && !ABBR.test(s.slice(0, i + 1)) && !/\b[A-Z]$/.test(s.slice(0, i));
+  const semi = (s, i, ch) => ch === ';' && s[i + 1] === ' ' && s.length - i > 20;
+  const CL = /^(.{28,}?), ((?:so|but|which|because|while|then|and|where|whereas|with|or) .{24,})$/s;
+  function piece(x){
+    x = String(x == null ? '' : x);
+    if (x.length < 70) return [x];
+    if (x.includes(' · ')) return x.split(' · ').flatMap(piece);
+    let parts = cut(x, sentEnd);
+    parts = parts.flatMap(p => p.length > 70 ? cut(p, semi) : [p]);
+    const paren = p => { const m = /^([^(]{3,60}) \(([^()]{50,})\)([^()]*)$/s.exec(p); if (!m || !m[2].includes('; ') || /[({\[<]/.test(m[1])) return null;
+      const inner = cut(m[2], semi), tail = m[3].replace(/^[.,;\s]+|[.\s]+$/g, ''); return inner.length > 1 ? [m[1] + ':'].concat(inner, tail ? [tail] : []) : null; };
+    const halve = p => { if (p.length <= 140) return [p];
+      const idx = []; cut(p, (t, i, ch) => { if ((ch === ',' || ch === ':') && t[i + 1] === ' ' && i > 40 && t.length - i > 40) idx.push(i); return false; });
+      if (!idx.length) return [p]; const mid = p.length / 2, i = idx.reduce((a, b) => Math.abs(b - mid) < Math.abs(a - mid) ? b : a);
+      return halve(p.slice(0, i).trim()).concat(halve(p.slice(i + 1).trim())); };
+    const clause = p => { if (p.length <= 110) return [p]; const m = CL.exec(p); if (m && !/[({\[<]/.test(m[1].slice(-30))) return clause(m[1]).concat(clause(m[2])); return [p]; };
+    parts = parts.flatMap(p => { if (p.length <= 110) return [p]; const c = /^([^:(\[{<]{3,45}:) (.{70,})$/s.exec(p); if (c) return [c[1]].concat(clause(c[2])); const pr = paren(p); return (pr || clause(p)).flatMap(halve); });
+    if (parts.length === 1 && x.length > 110 && !/[.;:]/.test(((t) => { let u = t.replace(/\{\{[^}]*\}\}/g, ''), v; do { v = u; u = u.replace(/\([^()]*\)/g, ''); } while (u !== v); return u; })(x))) {
+      const items = cut(x, (s, i, ch) => ch === ',' && s[i + 1] === ' ').map(p => p.replace(/,$/, ''));
+      if (items.length >= 4 && items.every(p => p.length <= 60)) return items;
+    }
+    return parts;
+  }
+  const flat = a => (a || []).flatMap(piece);
+  const lis = a => '<ul class="dzsp">' + a.map((x, i) => (/:$/.test(x) && a[i + 1] ? '<li class="hd">' : '<li>') + mk(x) + '</li>').join('') + '</ul>';
+  const bl = s => { const a = piece(s); return a.length > 1 ? lis(a) : mk(s); };
+  const sr = s => {   // source line: no transcript codes; the lecture dates are merged into one "lecture a, b"
+    let t = String(s == null ? '' : s).replace(/T@\d+(?:[–-]T?@?\d+)?(?:, T@\d+)*,? ?/g, '');
+    const dates = [...new Set((t.match(/lecture \d+\/\d+/g) || []).map(x => x.slice(8)))];
+    t = t.replace(/(?:; )?lecture \d+\/\d+/g, '').replace(/^; /, '').trim();
+    return esc(t + (dates.length ? (t ? '; ' : '') + 'lecture ' + dates.join(', ') : ''));
+  };
+  const val = v => Array.isArray(v) ? lis(flat(v)) : bl(v);
+  const facts = (rows, cls) => `<dl class="dzfacts${cls ? ' ' + cls : ''}">` + (rows || []).map(r => `<div${/^(refer|exclusions?|red flags?|when to refer|send to|do not|stop |warning)/i.test(plain(r[0])) ? ' class="ref"' : ''}><dt>${mk(r[0])}</dt><dd>${val(r[1])}</dd></div>`).join('') + '</dl>';
+  const pts = items => '<ul class="dzpts">' + flat(items).map(x => '<li>' + mk(x) + '</li>').join('') + '</ul>';
   const base = () => { try { return BUILD.preview ? '../' : ''; } catch (e) { return ''; } };
   const drugBtn = k => { const d = DZ.drugs[k]; return d ? `<button type="button" class="dzdrug" data-drug="${esc(k)}">${esc(d.name)}${d.brand ? ' (' + esc(d.brand) + ')' : ''}</button>` : `<span class="dzplain">${esc(k)}</span>`; };
   function photo(id){
     const p = (DZ.photos || []).find(x => x.id === id); if (!p) return '';
-    return `<figure class="dzphoto"><img loading="lazy" src="${base()}dz/${esc(p.file)}" alt="${esc(p.alt)}"><figcaption>${esc(p.alt)} <span class="dzsrc">${esc(p.src)}</span></figcaption></figure>`;
+    return `<figure class="dzphoto"><img loading="lazy" src="${base()}dz/${esc(p.file)}" alt="${esc(p.alt)}"><figcaption>${esc(p.alt)} <span class="dzsrc">${sr(p.src)}</span></figcaption></figure>`;
   }
   function block(b, framed){
     switch (b.k) {
       case 'facts': return facts(b.rows);
       case 'pts': return pts(b.items);
       case 'sub': return `<p class="dzsub">${mk(b.text)}</p>`;
-      case 'warn': return `<p class="dzwarn">${mk(b.text)}</p>`;
+      case 'warn': return `<div class="dzwarn">${bl(b.text)}</div>`;
       case 'grades': return '<div class="dzgrades">' + (b.rows || []).map(r => `<div><span class="lvl">${mk(r[0])}</span><span>${mk(r[1])}${r[2] ? ' <span class="dzsrc">' + mk(r[2]) + '</span>' : ''}</span></div>`).join('') + '</div>';
-      case 'prof': { const inner = `${b.rows ? facts(b.rows) : ''}${b.text ? '<p>' + mk(b.text) + '</p>' : ''}${b.src ? '<p class="dzsrc">' + esc(b.src) + '</p>' : ''}`;
+      case 'prof': { const inner = `${b.rows ? facts(b.rows) : ''}${b.text ? '<div class="dzbl">' + bl(b.text) + '</div>' : ''}${b.src ? '<p class="dzsrc">' + esc(b.src) + '</p>' : ''}`;
         return framed ? inner : `<div class="dzprof ${esc(b.p)}"><b class="t">${PROF[b.p] || ''}</b>${inner}</div>`; }
-      case 'map': return `<p class="dzsub">${mk(b.title || '')}</p>` + facts(b.rows, 'map') + (b.src ? `<p class="dzsrc">${esc(b.src)}</p>` : '');
+      case 'map': return `<p class="dzsub">${mk(b.title || '')}</p>` + facts(b.rows, 'map') + (b.src ? `<p class="dzsrc">${sr(b.src)}</p>` : '');
       case 'photo': return photo(b.id);
       case 'fig': return `<button type="button" class="dzfig" data-jump="${esc(b.jump)}">▶ ${esc(b.label)}</button>`;
       case 'line': return `<div class="dzline"><h4><span class="lbl">${mk(b.label || '')}</span> ${mk(b.title || '')}</h4>` +
         ((b.drugs || []).length ? '<div class="dzdrugs">' + b.drugs.map(drugBtn).join('') + '</div>' : '') +
-        (b.pts ? pts(b.pts) : '') + (b.warn ? `<p class="dzwarn">${mk(b.warn)}</p>` : '') + (b.facts ? facts(b.facts) : '') +
+        (b.pts ? pts(b.pts) : '') + (b.warn ? `<div class="dzwarn">${bl(b.warn)}</div>` : '') + (b.facts ? facts(b.facts) : '') +
         ((b.pick || []).length ? `<details class="dzpick"><summary>Pick by the patient</summary>${facts(b.pick)}</details>` : '') +
-        (b.move ? `<p class="dzmove">${mk(b.move)}</p>` : '') + '</div>';
+        (b.move ? `<div class="dzmove">${bl(b.move)}</div>` : '') + '</div>';
       default: return '';
     }
   }
@@ -96,9 +155,9 @@ const DZ_UI = (() => {
     const P = c.patients || []; if (!P.length) return '';
     const s = st.pt[c.id] = st.pt[c.id] || {k: 0, pick: null, right: 0};
     const p = P[s.k], done = s.pick != null;
-    return `<section class="dzbox dzcases"><h3>Practice patients</h3><p class="dzsrc">Patient ${s.k + 1} of ${P.length}</p><p>${mk(p.t)}</p><p class="q">${mk(p.q)}</p>` +
+    return `<section class="dzbox dzcases"><h3>Practice patients</h3><p class="dzsrc">Patient ${s.k + 1} of ${P.length}</p><div class="dzbl">${bl(p.t)}</div><p class="q">${mk(p.q)}</p>` +
       p.o.map((o, i) => `<button type="button" class="dzopt${done ? (i === p.a ? ' good' : i === s.pick ? ' bad' : '') : ''}" data-opt="${i}"${done ? ' disabled' : ''}>${mk(o)}</button>`).join('') +
-      (done ? `<p class="dzans"><b>${s.pick === p.a ? 'Correct.' : 'Not this one.'}</b> ${s.pick !== p.a && p.x && p.x[p.o[s.pick]] ? '<span class="whynot">Your choice: ' + mk(p.x[p.o[s.pick]]) + '</span> ' : ''}${mk(p.w)}</p>
+      (done ? `<div class="dzans"><b>${s.pick === p.a ? 'Correct.' : 'Not this one.'}</b> ${s.pick !== p.a && p.x && p.x[p.o[s.pick]] ? '<div class="whynot">Your choice: ' + bl(p.x[p.o[s.pick]]) + '</div> ' : ''}<div class="dzbl">${bl(p.w)}</div></div>
         <button type="button" class="btn sm" data-dz="nextpt">${s.k < P.length - 1 ? 'Next patient' : 'Start again (' + s.right + ' of ' + P.length + ' right)'}</button>` : '') + '</section>';
   }
   function card(c){
@@ -107,19 +166,20 @@ const DZ_UI = (() => {
     const n = qsOf(c).length;
     return `<article class="dzcard${st.recall ? ' recall' : ''}" data-card="${esc(c.id)}">
       <div class="dzhead"><h2>${esc(c.name)}</h2><button type="button" class="btn sm ghost" data-dz="recall" aria-pressed="${st.recall}">${st.recall ? 'Show everything' : 'Recall mode'}</button></div>
-      <p class="dzsrc">${esc(c.lectures || '')}</p>
-      ${(c.short || []).length ? `<div class="dzshort"><h3>The short version</h3><ol>${c.short.map(x => '<li>' + mk(x) + '</li>').join('')}</ol></div>` : ''}
+      <p class="dzsrc">${sr(c.lectures || '')}</p>
+      ${(c.short || []).length ? `<div class="dzshort"><h3>Quick clues</h3><ol>${(c.short || []).map(x => { const a = piece(x); return '<li>' + (a.length > 1 ? '<b class="dzh">' + mk(a[0]) + '</b>' + lis(a.slice(1)) : mk(x)) + '</li>'; }).join('')}</ol></div>` : ''}
       ${profs.length > 1 ? `<div class="dzbar" role="group" aria-label="Professor">Show: ${[['', 'All']].concat(profs.map(p => [p, PROF[p]])).map(([k, l]) => `<button type="button" class="f${k}" data-filter="${k}" aria-pressed="${st.filter === k}">${l}</button>`).join('')}</div>` : ''}
       <div class="dzcols"><div class="dzmain">
+      <nav class="dznav" aria-label="Jump to a step">${(c.steps || []).map((s, i) => `<button type="button" data-stepgo="${i}" style="--k:${KINDS[kindOf(s.title)][1]}"><b>${i + 1}</b> ${esc(shortTitle(s.title))}</button>`).join('')}${(c.patients || []).length ? '<button type="button" data-sidego="cases" class="side">Practice patients</button>' : ''}${(c.numbers || []).length ? '<button type="button" data-sidego="nums" class="side">Numbers</button>' : ''}</nav>
       <div class="dzbar"><button type="button" data-dz="openall">${(c.steps || []).every((s, i) => isOpen(c, i)) ? 'Close all steps' : 'Open all steps'}</button></div>
-      <ol class="dzsteps">${(c.steps || []).map((s, i) => `<li class="${st.filter && !stepProfs(s).includes(st.filter) ? 'dim' : ''}${isOpen(c, i) ? ' open' : ''}">
-        <button type="button" class="sh" data-step="${i}" aria-expanded="${isOpen(c, i)}"><h3>${mk(s.title)}</h3>${stepProfs(s).map(p => `<span class="dztag ${p}">${PROF[p].replace('Dr. ', '')}</span>`).join('')}<span class="chev" aria-hidden="true">${isOpen(c, i) ? '−' : '+'}</span></button>
+      <ol class="dzsteps">${(c.steps || []).map((s, i) => `<li data-k="${kindOf(s.title)}" id="dzs-${esc(c.id)}-${i}" style="--k:${KINDS[kindOf(s.title)][1]}" class="${st.filter && !stepProfs(s).includes(st.filter) ? 'dim' : ''}${isOpen(c, i) ? ' open' : ''}">
+        <button type="button" class="sh" data-step="${i}" aria-expanded="${isOpen(c, i)}"><span class="dzk">${KINDS[kindOf(s.title)][0]}</span><h3>${mk(s.title)}</h3>${stepProfs(s).map(p => `<span class="dztag ${p}">${PROF[p].replace('Dr. ', '')}</span>`).join('')}<span class="chev" aria-hidden="true">${isOpen(c, i) ? '−' : '+'}</span></button>
         <div class="stepbody">${s.q ? `<p class="dzq">${mk(s.q)}</p>` : ''}${stepBody(s, multi)}
-        ${s.src ? `<p class="dzsrc">${esc(s.src)}</p>` : ''}
+        ${s.src ? `<p class="dzsrc">${sr(s.src)}</p>` : ''}
         <div class="dzrate"><button type="button" data-rate="g" data-i="${i}" class="${st.rate[c.id + i] === 'g' ? 'on' : ''}">I had it</button><button type="button" data-rate="m" data-i="${i}" class="${st.rate[c.id + i] === 'm' ? 'on' : ''}">I missed some</button></div></div></li>`).join('')}</ol>
       </div><aside class="dzside">
       ${patients(c)}
-      ${(c.numbers || []).length ? `<section class="dzbox"><h3>Numbers to know</h3><dl class="dzfacts nums">${c.numbers.map(r => `<div><dt>${mk('{{' + r[0] + '}}')}</dt><dd>${mk(r[1])} <span class="dzsrc">${esc(r[2] || '')}</span></dd></div>`).join('')}</dl></section>` : ''}
+      ${(c.numbers || []).length ? `<section class="dzbox dznums"><h3>Numbers to know</h3><dl class="dzfacts nums">${c.numbers.map(r => `<div class="${String(r[0]).length > 30 ? 'wide' : ''}"><dt>${String(r[0]).length > 30 ? lis(piece(r[0]).map(x => '{{' + x + '}}')) : mk('{{' + r[0] + '}}')}</dt><dd>${mk(r[1])} <span class="dzsrc">${sr(r[2] || '')}</span></dd></div>`).join('')}</dl></section>` : ''}
       ${n ? `<button type="button" class="btn dzpractise" data-dz="practise">Practice ${esc(c.name.toLowerCase())}: ${n} questions</button>` : ''}
       </aside></div>
     </article>`;
@@ -146,7 +206,7 @@ const DZ_UI = (() => {
         ${(t.path || []).length ? `<div class="dzpath"><h3>How to decide</h3><ol>${t.path.map(p => `<li><b>${mk(p.q)}</b>${(p.a || []).map(a => '<br>' + mk(a)).join('')}</li>`).join('')}</ol></div>` : ''}
         ${t.photo ? photo(t.photo) : ''}
         ${(t.rows || []).map(r => `<div class="dzrow"><h3>${mk(r[0])}</h3><dl style="--n:${(t.cols || []).length || 1}">${(t.cols || []).map((cn, i) => `<div><dt>${esc(cn)}</dt><dd>${r[1][i] ? '<span class="dzcz" tabindex="0">' + mk(r[1][i]).replace(/<span class="dzcz" tabindex="0">|<\/span>/g, '') + '</span>' : '—'}</dd></div>`).join('')}</dl>${r[2] ? `<p class="key">${mk(r[2])}</p>` : ''}</div>`).join('')}
-        <p class="dzsrc">${esc(t.src || '')}</p></section>`).join('');
+        <p class="dzsrc">${sr(t.src || '')}</p></section>`).join('');
   }
   function vPairs(){
     return '<p class="dzintro">Pairs that look alike on a question. Each states what the two share, then the one detail that separates them, by professor.</p>' +
@@ -156,7 +216,7 @@ const DZ_UI = (() => {
   }
   function vRules(){
     return '<p class="dzintro">Rules Dr. Patel used in more than one lecture. Each is listed once, with every condition it applies to.</p>' +
-      (DZ.rules || []).map(r => `<section class="dzbox"><h3>${mk(r.title)}</h3>${r.rows ? facts(r.rows) : ''}${r.items ? pts(r.items) : ''}<p class="dzsrc">${esc(r.src || '')}</p></section>`).join('');
+      (DZ.rules || []).map(r => `<section class="dzbox"><h3>${mk(r.title)}</h3>${r.rows ? facts(r.rows) : ''}${r.items ? pts(r.items) : ''}<p class="dzsrc">${sr(r.src || '')}</p></section>`).join('');
   }
   function hits(q){
     const n = q.toLowerCase(), out = [], has = s => plain(s).toLowerCase().includes(n);
@@ -197,15 +257,15 @@ const DZ_UI = (() => {
     const figs = (d.figs || []).map(f => `<button type="button" class="dzfig" data-jump="${esc(f.jump)}">▶ ${esc(f.label)}</button>`).join('');
     dlg(`<h3>${esc(d.name)}${d.brand ? ' (' + esc(d.brand) + ')' : ''}</h3>
       <div class="dzhow"><b class="t">How it works</b>
-        ${how ? `<div class="dzprof ${esc(how.p)}"><b class="t">${PROF[how.p] || ''}</b><p>${mk(how.text)}</p>${how.p === 'sm' && d.sm && !same(how.text, d.sm.text) ? `<p class="tgt"><b>On her target list:</b> ${mk(d.sm.text)}</p>` : ''}<p class="dzsrc">${esc(how.src || '')}</p></div>`
-              : (d.sm ? `<div class="dzprof sm"><b class="t">Dr. Smith</b><p>${mk(d.sm.text)}</p><p class="dzsrc">${esc(d.sm.src || '')}</p></div>`
+        ${how ? `<div class="dzprof ${esc(how.p)}"><b class="t">${PROF[how.p] || ''}</b><div class="dzbl">${bl(how.text)}</div>${how.p === 'sm' && d.sm && !same(how.text, d.sm.text) ? `<p class="tgt"><b>On her target list:</b> ${mk(d.sm.text)}</p>` : ''}<p class="dzsrc">${sr(how.src || '')}</p></div>`
+              : (d.sm ? `<div class="dzprof sm"><b class="t">Dr. Smith</b><div class="dzbl">${bl(d.sm.text)}</div><p class="dzsrc">${sr(d.sm.src || '')}</p></div>`
                       : '<p class="dzsrc">The lectures give no mechanism for this product.</p>')}
         ${figs}</div>
-      ${d.sm && how && how.p !== 'sm' ? `<div class="dzprof sm"><b class="t">Dr. Smith · target</b><p>${mk(d.sm.text)}</p><p class="dzsrc">${esc(d.sm.src || '')}</p></div>` : ''}
-      ${d.sk && !(how && how.p === 'sk' && same(how.text, d.sk.text)) ? `<div class="dzprof sk"><b class="t">Dr. Sikazwe · chemistry</b><p>${mk(d.sk.text)}</p><p class="dzsrc">${esc(d.sk.src || '')}</p></div>` : ''}
-      ${d.la ? `<div class="dzprof la"><b class="t">Dr. Lam · how to use it</b><p>${mk(d.la.text)}</p><p class="dzsrc">${esc(d.la.src || '')}</p></div>` : ''}
-      ${(d.pa || []).length ? `<div class="dzprof pa"><b class="t">Dr. Patel · where it is used</b>${d.pa.map(r => `<div class="use"><button type="button" class="dzgo" data-go="${esc(r.dz)}">${esc(name(r.dz))}</button><p><b>${mk(r.role || '')}</b>${r.how ? '<br>' + mk(r.how) : ''}</p><p class="dzsrc">${esc(r.src || '')}</p></div>`).join('')}</div>` : ''}
-      ${(d.counsel || []).length ? `<div class="dzcounsel"><b class="t">What to tell the patient</b>${pts(d.counsel)}<p class="dzsrc">${esc(d.counselSrc || '')}</p></div>` : ''}
+      ${d.sm && how && how.p !== 'sm' ? `<div class="dzprof sm"><b class="t">Dr. Smith · target</b><div class="dzbl">${bl(d.sm.text)}</div><p class="dzsrc">${sr(d.sm.src || '')}</p></div>` : ''}
+      ${d.sk && !(how && how.p === 'sk' && same(how.text, d.sk.text)) ? `<div class="dzprof sk"><b class="t">Dr. Sikazwe · chemistry</b><div class="dzbl">${bl(d.sk.text)}</div><p class="dzsrc">${sr(d.sk.src || '')}</p></div>` : ''}
+      ${d.la ? `<div class="dzprof la"><b class="t">Dr. Lam · how to use it</b><div class="dzbl">${bl(d.la.text)}</div><p class="dzsrc">${sr(d.la.src || '')}</p></div>` : ''}
+      ${(d.pa || []).length ? `<div class="dzprof pa"><b class="t">Dr. Patel · where it is used</b>${d.pa.map(r => `<div class="use"><button type="button" class="dzgo" data-go="${esc(r.dz)}">${esc(name(r.dz))}</button><div class="dzbl"><b>${mk(r.role || '')}</b>${r.how ? bl(r.how) : ''}</div><p class="dzsrc">${sr(r.src || '')}</p></div>`).join('')}</div>` : ''}
+      ${(d.counsel || []).length ? `<div class="dzcounsel"><b class="t">What to tell the patient</b>${pts(d.counsel)}<p class="dzsrc">${sr(d.counselSrc || '')}</p></div>` : ''}
       ${(d.avoid || []).length ? `<div class="dzavoid"><b class="t">Who should not get it, and cautions</b>${pts(d.avoid)}</div>` : ''}`);
   }
   function onClick(e){
@@ -213,6 +273,8 @@ const DZ_UI = (() => {
     const c = DZ.cards.find(x => x.id === st.card) || DZ.cards[0];
     if (t.classList.contains('dzcz')) { if (t.closest('.recall')) t.classList.add('open'); return; }
     if (t.dataset.exam != null && t.closest('.dzexam')) { st.exam = +t.dataset.exam; const sh = DZ.cards.filter(inExam); if (!sh.some(x => x.id === st.card) && sh[0]) st.card = sh[0].id; st.filter = ''; render(); return; }
+    if (t.dataset.stepgo != null && t.closest('.dznav')) { st.open[c.id + ':' + t.dataset.stepgo] = true; render(); const el = document.getElementById('dzs-' + c.id + '-' + t.dataset.stepgo); if (el) { const y = el.getBoundingClientRect().top + window.scrollY - 96; window.scrollTo(0, y); } return; }
+    if (t.dataset.sidego && t.closest('.dznav')) { const el = pane.querySelector(t.dataset.sidego === 'cases' ? '.dzcases' : '.dznums'); if (el) window.scrollTo(0, el.getBoundingClientRect().top + window.scrollY - 96); return; }
     if (t.dataset.view) { st.view = t.dataset.view; render(); return; }
     if (t.dataset.card && t.closest('.dzpicker')) { st.card = t.dataset.card; st.filter = ''; render(); const el = pane.querySelector('.dzcard'); if (el && el.getBoundingClientRect().top > window.innerHeight * 0.6) { if (typeof scrollToEl === 'function') scrollToEl(el); else el.scrollIntoView(); } return; }
     if (t.dataset.drug) { drugPanel(t.dataset.drug); return; }
@@ -222,7 +284,7 @@ const DZ_UI = (() => {
         const host = t.closest('p, li, dd, div') || t.parentNode, old = host.parentNode.querySelector(':scope > .dzdef[data-for="' + t.dataset.term + '"]');
         if (old) { old.remove(); return; }
         const d = document.createElement('p'); d.className = 'dzdef'; d.dataset.for = t.dataset.term;
-        d.innerHTML = `<b>${esc(x[0])}:</b> ${mk(x[1])} <span class="dzsrc">${esc(x[2] || '')}</span>`; host.after(d); return;
+        d.innerHTML = `<b>${esc(x[0])}:</b> ${mk(x[1])} <span class="dzsrc">${sr(x[2] || '')}</span>`; host.after(d); return;
       }
       dlg(`<h3>${esc(x[0])}</h3><p>${mk(x[1])}</p><p class="dzsrc">Source: ${esc(x[2] || '')}</p>`); return;
     }
@@ -287,6 +349,18 @@ const DZ_UI = (() => {
 #v-dz .dztag{font-size:11.5px;border-radius:999px;padding:1px 8px}
 #v-dz .dzexam{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:10px 0 4px}#v-dz .dzexam .lab{font-weight:600;margin-right:2px}#v-dz .dzexam button{min-height:44px;padding:6px 14px;border:1px solid var(--line,#c9c9d2);border-radius:999px;background:var(--card,#fff);color:inherit;font:inherit;cursor:pointer}#v-dz .dzexam button[aria-pressed=true]{background:var(--dz-la);border-color:var(--dz-la);color:#fff}#v-dz .dzexam .n{margin-left:6px;font-size:.85em;opacity:.8}#v-dz .dzpicker .ex{margin-left:6px;font-size:.75em;opacity:.7}
 #v-dz .dztag.sm{background:var(--dz-smbg);color:var(--dz-sm)}#v-dz .dztag.sk{background:var(--dz-skbg);color:var(--dz-sk)}#v-dz .dztag.pa{background:var(--dz-pabg);color:var(--dz-pa)}#v-dz .dztag.la{background:var(--dz-labg);color:var(--dz-la)}
+#v-dz ol.dzsteps>li[data-k]{border-left-color:var(--k)}#v-dz ol.dzsteps>li[data-k]:last-child{border-left-color:transparent}#v-dz ol.dzsteps>li[data-k]::before{background:var(--k)}
+#v-dz .dzk{font-size:11.5px;font-weight:700;color:#fff;background:var(--k);border-radius:6px;padding:1px 8px;order:-1}
+#v-dz .sh{align-items:center}
+#v-dz .dznav{display:flex;gap:6px;overflow-x:auto;padding:6px 0;margin:8px 0 0;position:sticky;top:var(--nav-h,0px);z-index:3;background:var(--paper);border-bottom:1px solid var(--line);-webkit-overflow-scrolling:touch}
+#v-dz .dznav button{flex:0 0 auto;font:inherit;font-size:13px;min-height:40px;border:1px solid var(--k,var(--line));border-left-width:5px;background:var(--paper);color:var(--text);border-radius:8px;padding:2px 10px;white-space:nowrap}
+#v-dz .dznav button b{color:var(--k)}#v-dz .dznav button.side{--k:var(--accent);border-style:dashed;color:var(--accent)}
+#v-dz .dzsp li.hd{list-style:none;margin-left:-16px;font-weight:700}#v-dz .dznums dd .dzsrc{display:block}#v-dz .dzfacts.nums>div.wide{grid-template-columns:1fr;gap:1px}#v-dz .dzfacts.nums dt .dzsp{margin:0}
+#v-dz .dzsp{margin:2px 0;padding-left:18px}#v-dz .dzsp li{margin:3px 0}#v-dz .dzbl>.dzsp{padding-left:16px}
+#v-dz .dzfacts>div.ref{background:var(--dz-badbg);border-radius:8px;padding-left:8px;padding-right:8px;border-top-color:transparent}#v-dz .dzfacts>div.ref dt{color:var(--dz-bad)}
+#v-dz .dzwarn .dzsp{margin:0}#v-dz .dzmove .dzsp{margin:0}
+#v-dz .dzshort ol>li{margin:0 0 6px}#v-dz .dzshort .dzh{font-weight:600}#v-dz .dzshort .dzsp{padding-left:16px;margin:2px 0 0}
+#v-dz .dzfacts dd>.dzsp{padding-left:16px}
 #v-dz .dzq{display:none;font-weight:600;margin:0 0 6px}#v-dz .recall .dzq{display:block}
 #v-dz .dzfacts{margin:4px 0 8px;display:grid}
 #v-dz .dzfacts>div{display:grid;grid-template-columns:128px 1fr;gap:10px;padding:6px 0;border-top:1px solid var(--line)}

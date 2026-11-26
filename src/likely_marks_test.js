@@ -47,7 +47,8 @@ const noScroll = p => p.evaluate(() => document.documentElement.scrollWidth <= i
     // each block star sits on the h5 the analysis recorded
     const blk = await p.evaluate(() => { const out = {}; document.querySelectorAll('#v-guide section.gobj').forEach(s => s.querySelectorAll('.gpt').forEach((g, i) => {
       if (g.querySelector(':scope > h5 > .lkstar, :scope > .lkgrp > .lkstar')) { const h = g.querySelector(':scope > h5'); out[s.id + '#' + (i + 1)] = h ? h.textContent.replace(/★/g, '').replace(/\s+/g, ' ').trim() : ''; } })); return out; });
-    const strip = s => String(s || '').toLowerCase().replace(/[^a-z0-9]+/g, '');
+    /* Guides show "lecture 11/13" where the source heading has a T@ code (tables_ui.js hideCodes, Louis 2026-11-23), so the codes are left out of both sides */
+    const strip = s => String(s || '').replace(/\bT@?\s?\d{2,6}(?:\s*[–-]\s*@?\d+)?/g, '').replace(/lecture(\s*\d{1,2}\/\d{1,2})?/gi, '').toLowerCase().replace(/[^a-z0-9]+/g, '');
     const wrong = Object.entries(SRC.tabs.guideBlock).filter(([id, e]) => strip(blk[id]) !== strip(e.h5)).map(([id]) => id);
     check(wrong.length === 0, `${tag}: each block star is on the block the analysis starred (h5 title matches)`, wrong.join(', '));
     // the first visible section star: label, expanded state, tap shows the line, a second tap hides it
@@ -183,7 +184,8 @@ const noScroll = p => p.evaluate(() => document.documentElement.scrollWidth <= i
 
     // ---------- Drug list ----------
     await go('drugs');
-    await p.evaluate(() => { const b = [...document.querySelectorAll('#v-drugs [data-dl="list"]')].find(x => /^Dermatology/.test(x.textContent)); if (b && b.getAttribute('aria-checked') !== 'true') b.click(); }); await p.waitForTimeout(500);   // Exam 3: the Drug list opens on the Eye list; the stars of the reading tabs are the dermatology drug rows
+    // Exam 3: the Drug list opens on the Exam 3 chip; the stars of the reading tabs are the skin drug rows (the single List view's "Exams 1–2 (skin)" chip; the older Dermatology list switch otherwise)
+    await p.evaluate(() => { const c = document.querySelector('#v-drugs [data-dl="uexam"][data-k="12"]'); if (c) { c.click(); return; } const b = [...document.querySelectorAll('#v-drugs [data-dl="list"]')].find(x => /^Dermatology/.test(x.textContent)); if (b && b.getAttribute('aria-checked') !== 'true') b.click(); }); await p.waitForTimeout(500);
     check(/Stars mark what the professor stressed/.test(await text('#v-drugs .lkleg')), `${tag}: Drug list has the legend`);
     await p.evaluate(() => document.querySelectorAll('#v-drugs details.dlgrp').forEach(g => { g.open = true; })); await p.waitForTimeout(200);
     check(await count('drugs', 'details.dlrowd .dln > .lkstar') === N('drug'), `${tag}: Drug list: ${N('drug')} drug rows carry a star`, await count('drugs', 'details.dlrowd .dln > .lkstar'));

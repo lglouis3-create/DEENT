@@ -318,6 +318,8 @@ const COURSE = {
           'diagrams_oo.js',
           'diagrams_ey_fa.js',
           'diagrams_ey_fa2.js',
+          // "Watch aqueous humor flow": a living, realistic cross-section of the front of the eye, first in the Eye group (adds to DIA, DIA_NAMES, DIAGRAMS; animates itself on the page)
+          'eye_flow_ui.js',
           'diagrams_fb.js',
           'diagrams_oo_fc.js',
           // Mechanism step-throughs from Dr. Smith's PCol slides (Louis, 2026-11-09): adds to DIA
@@ -343,34 +345,45 @@ const COURSE = {
           'q20_abcde.js',
           // Lecture 8 points she stressed that had no question: Lyme neurologic/cardiac, scorpion stings, sunscreen expiration, snow and sand, stopping a reacting product, Fitzpatrick type, silicone for scars
           'q21_L08_gaps.js',
+          'q51_found_patel.js',
+          // foundation items for Dr. Smith's skin lectures: one direct fact each, written for the gaps of the coverage audit (2026-11-25)
+          'q48_found_smith_skin.js',
           // Dr. Smith, Lectures 9-10 (Exam 3): the eye (topics first, then the question files)
           'q27_ooo_topics.js', 'q22_eye_topics.js', 'q32_lam_topics.js', 'q43_lam2_topics.js', 'q23_eye_anat_patho.js', 'q24_eye_inflow.js', 'q25_eye_outflow.js', 'q26_eye_allergy_dry.js',
  'q38_eye_blank.js',
  'q39_eye_gaps.js',
+ 'q44_eye_poll.js',
+          // Foundation items for Dr. Smith's eye lectures: single-fact recall written from the coverage audit (found_smith_eye_check.js)
+ 'q49_found_smith_eye.js',
           // Dr. Sikazwe, Lectures 11-12 (Exam 3): otic, oral, ophthalmic medicinal chemistry
           'q28_ooo_otic_oral.js', 'q29_ooo_oph_a.js', 'q30_ooo_oph_b.js', 'q31_ooo_oph_c.js',
           // Dr. Sikazwe, 11/19 (Exam 3): the questions on what he emphasized, written after the lecture (video and transcript)
           'q36_ooo_1119.js',
           'q37_sik_practice.js',
+          // foundation items for Dr. Sikazwe's assigned slides (Exam 3 and Exam 1): one fact each, from the coverage audit
+          'q50_found_sikazwe.js',
           // Dr. Lam, Lecture 12 (Exam 3): glaucoma therapeutics, by her learning objectives (topics first, in q32_lam_topics.js above)
           'q33_lam_a.js', 'q34_lam_b.js', 'q35_lam_c.js',
+ 'q45_lam_found_a.js',
  'q40_lam_oph.js',
  'q41_lam_oral.js',
  'q42_lam_otic.js',
+ 'q46_lam_found_b.js',
+ 'q47_lam_found_c.js',
           // the step-throughs of moa_figs.js in the explanations of the matching Smith questions
           'moa_links.js',
           // Drug list tab (temporary course-level presentation, to be replaced by the kit's
           // Drug List feature): its data, then the tab itself (Louis, 2026-11-08)
           // (chart_boxes.js: the rows of the original chart pages in chart/, from render_chart.py;
           // drugfacts.js: bank questions mapped to Drug list facts, read-only, Phase 1 of the plan)
-          'chart_boxes.js', 'chart_boxes_eye.js', 'druglist_data.js', 'druglist_eye.js', 'drugfacts.js', 'druglist_ui.js',
+          'chart_boxes.js', 'chart_boxes_eye.js', 'druglist_data.js', 'druglist_eye.js', 'druglist_dose.js', 'drugfacts.js', 'druglist_ui.js',
           // the Diseases tab (Louis, 2026-11-13): cards per condition, drug panels, tell-apart sets (dz_build.py, dz_check.js)
           'dz_data.js', 'dz_ui.js',
           // the FTU tab (Louis, 2026-11-14): typed fingertip-unit practice with a body diagram and a record (ftu_test.js)
           'ftu_ui.js',
           // Slide links (Louis, 2026-11-13): a slide citation opens that slide from the clean decks in deck/
           // (slide_data.js: the page map and tables, written by slide_map.py; slide_check.js, slide_test.js)
-          'slide_data.js', 'slide_ui.js',
+          'slide_data.js', 'slide_alias.js', 'slide_ui.js',
           // "Likely on the exam" stars (course-level, Louis 2026-11-08): data, then presentation
           'likely_data.js', 'likely_ui.js',
           // Narration player (course-level, Louis 2026-11-08, path B of reviews/NARRATION_PLAN.md
@@ -406,9 +419,13 @@ const COURSE = {
           // Reference and Tell apart tables: short lines inside cells and one card per row on
           // phones (course-level presentation, 2026-11-08)
           'tables_ui.js',
+          // one sanitizer for every view: no transcript codes, file names or working notes on screen (2026-11-23)
+          'clean_ui.js',
           // Quiz: "One at a time | All on one page" (course-level, Louis 2026-11-08, after his
           // Intro to Pharmacology drill's layout toggle; temporary until the kit has it)
           'topic_list_ui.js', 'topicbar_ui.js',
+          // Topic hub (course-level, 2026-11-25): one page to study one topic (Learn, Check yourself, Challenge); data first, then the page; after topicbar_ui.js
+          'hub_data.js', 'hub_ui.js',
           'gloss_ui.js',   // glossary.js entries marked cs:true (RARE) are glossed in their own case only (wraps the core's glossify)
           // "See it on the structure": annotated structure figures in the explanations of
           // Dr. Sikazwe's structure/SAR questions, shown after an answer (course-level, Louis
@@ -433,8 +450,12 @@ const COURSE = {
           // Stars on the reading tabs: guide sections and blocks, reference sections, tell-apart rows, disease cards, drugs,
           // glossary terms (Louis, 2026-11-15; likely_map.js is written by likely_map.py from likely_map_source.json), and "Starred only"
           'likely_map.js', 'likely_marks_ui.js',
+          // Learn and Exam mode for practising: foundation questions first, hints, a prompt after a miss (2026-11-25)
+          'modes_ui.js',
           // Search box in the header (Louis, 2026-11-14): last of the content files, it reads their globals
           'search_ui.js',
+          // Start screen on Topics (professors, their topics, next thing to review) and the shorter tab strip with a More menu
+          'start_ui.js',
           // Browser-tab icon on the live page (brand.py wrote it into the <head> until 2026-11-09)
           'icon_ui.js'],
   // (figph_ui.js, the course-level Enlarge placeholder fix, left the list on 2026-11-09: kit

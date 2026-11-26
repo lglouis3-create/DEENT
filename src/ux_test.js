@@ -69,7 +69,7 @@ const NAMES = ['Zylonol', 'Quarbate', 'Fenmorine'];
         // the heading right before the whole-bank passes names them
         passHead: (() => { const hs = [...document.querySelectorAll('#v-topics h3')].filter(x => sweepAll && (x.compareDocumentPosition(sweepAll) & Node.DOCUMENT_POSITION_FOLLOWING));
           return hs.length ? hs[hs.length - 1].textContent.trim() : ''; })(),
-        onScreen: box.getBoundingClientRect().top < innerHeight,
+        onScreen: (document.getElementById('startflow') || box).getBoundingClientRect().top < innerHeight,
         sideways: document.documentElement.scrollWidth > innerWidth + 1};
     });
     check(!!s, `${w} px: the Topics tab has a Start here block`);

@@ -96,7 +96,7 @@ const st = (p, v) => p.evaluate(v => [...document.querySelectorAll(`#v-${v} > .r
 const stored = p => p.evaluate(() => localStorage.getItem(EXAMFOLD_UI.key()));
 // a tap on a tab of the strip. wide_ui.js slides the strip away while the page rests scrolled down; at the top of the
 // page it is always shown, so the page goes there first (opening a tab does the same).
-const tabTap = async (p, v) => { await p.evaluate(() => window.scrollTo(0, 0)); await p.click(`#nav button[data-v="${v}"]`); };
+const tabTap = async (p, v) => { await p.evaluate(() => window.scrollTo(0, 0)); await p.evaluate(q => document.querySelector(q).click(), `#nav button[data-v="${v}"]`); };   // most tabs sit in the More menu, closed here
 const over = p => p.evaluate(() => document.documentElement.scrollWidth - innerWidth);
 // where an element is: on screen, in an open folder, how far below the pinned strip
 // (an element inside a closed <details> still reports its boxes in Chromium, so "on screen" is checkVisibility())
@@ -387,6 +387,8 @@ async function nsOf(browser) {
 
       // C9. a Drug list card's "Reference: target table"; C10. the Diseases tab's "Watch how it works"
       await p.evaluate(() => { RET.length = 0; backBtn(); show('drugs'); }); await p.waitForTimeout(200);
+      // a Drug list row draws its card when it is opened (druglist_ui.js, 2026-11-23)
+      await p.evaluate(() => document.querySelectorAll('#v-drugs details.dlrowd').forEach((d, i) => { if (i < 5) d.open = true; })); await p.waitForTimeout(300);
       const a9 = await p.evaluate(() => { const b = document.querySelector('#v-drugs [data-dl="ref"]'); if (!b) return null; b.click(); return b.dataset.a; });
       wq = a9 ? await where(p, a9) : {found: false};
       // jump_ui.js lands on the first line about the drug when the section's heading would leave it below the fold, so the heading itself can be above the screen: the highlighted line must be on screen
@@ -672,6 +674,7 @@ async function nsOf(browser) {
     const chip = p.locator('#v-quiz [data-jump^="ref:"]').first();
     await chip.scrollIntoViewIfNeeded();
     const tgt = (await chip.getAttribute('data-jump')).split(':')[1], y1 = await p.evaluate(() => Math.round(scrollY));
+    await p.evaluate(() => { window.__yc = null; document.addEventListener('click', () => { if (window.__yc === null) window.__yc = Math.round(scrollY); }, true); });   // the scroll position when the tap lands (a real click may first scroll the page a little)
     await chip.click();
     let wq = await where(p, tgt);
     check(wq.view === 'ref' && landed(wq) && wq.fold === 'rfold-ref-1' && await st(p, 'ref') === '1:true 2:false 3:true' && await hit('ref'),
@@ -679,7 +682,8 @@ async function nsOf(browser) {
     check(await over(p) <= 0 && await stored(p) === null, `${w}x${h}: no sideways scroll there, and the folder is not stored as the reader's choice`, [await over(p), await stored(p)]);
     await p.click('#backbtn');
     let bk = await p.evaluate(() => ({view: VIEW, y: Math.round(scrollY)}));
-    check(bk.view === 'quiz' && Math.abs(bk.y - y1) <= 2, `${w}x${h}: Back returns to the question at the same scroll position`, {bk, y1});
+    const yc = await p.evaluate(() => window.__yc);
+    check(bk.view === 'quiz' && Math.abs(bk.y - yc) <= 2, `${w}x${h}: Back returns to the question at the same scroll position`, {bk, y1, yc});
     await strip('ref');
     check(await st(p, 'ref') === '1:false 2:false 3:true', `${w}x${h}: Reference opened from the tab strip has Exam 1 closed again`, await st(p, 'ref'));
 

@@ -26,7 +26,7 @@
       "pa"
      ],
      "q": "Which skin types are at highest risk, and which photosensitizing drugs did she name?",
-     "src": "Patel Sun slides 8–11, 13; 11/12 lecture T@49012–50187; Smith Sun slide 8; Smith PCol slides 18, 44, 54, 78",
+     "src": "Patel Sun slides 8–11, 13; 11/12 lecture ; Smith Sun slide 8; Smith PCol slides 18, 44, 54, 78",
      "blocks": [
       {
        "k": "facts",
@@ -134,7 +134,7 @@
       "pa"
      ],
      "q": "What three things does Dr. Patel's sunscreen answer contain, and which two ingredients does she prefer?",
-     "src": "Patel Sun slides 14–20; 11/12 lecture T@53069–56238; Smith Sun slides 15–17, 20–25; Sikazwe DPAW pages 61–66",
+     "src": "Patel Sun slides 14–20; 11/12 lecture ; Smith Sun slides 15–17, 20–25; Sikazwe DPAW pages 61–66",
      "blocks": [
       {
        "k": "facts",
@@ -277,7 +277,7 @@
       "pa"
      ],
      "q": "Which two groups are excluded from sunscreen, and what does an infant get instead?",
-     "src": "Patel Sun slides 13, 19; 11/12 lecture T@51824, T@66129–66269; Smith Sun slide 25",
+     "src": "Patel Sun slides 13, 19; 11/12 lecture ; Smith Sun slide 25",
      "blocks": [
       {
        "k": "facts",
@@ -330,7 +330,7 @@
       "pa"
      ],
      "q": "How much sunscreen, how long before the sun, and how often is it reapplied (Dr. Patel's numbers, then Dr. Smith's)?",
-     "src": "Patel Sun slides 12, 21, 23, 36–37; 11/12 lecture T@66751; Smith Sun slides 17, 19, 21; Sikazwe DPAW pages 62, 64",
+     "src": "Patel Sun slides 12, 21, 23, 36–37; 11/12 lecture ; Smith Sun slides 17, 19, 21; Sikazwe DPAW pages 62, 64",
      "blocks": [
       {
        "k": "facts",
@@ -579,7 +579,7 @@
     [
      "SPF ≥ 15",
      "Dr. Patel's minimum \"for exam purposes\"; prefer 30+",
-     "Patel Sun slide 15; T@53466"
+     "Patel Sun slide 15"
     ],
     [
      "93% / 97% / 98% / 99%",
@@ -656,7 +656,7 @@
       "pa"
      ],
      "q": "When do sunburn symptoms start, when does the redness peak, and how long can it last?",
-     "src": "Patel Sun slide 24; 11/12 lecture T@58911–59161; Smith Sun slide 11",
+     "src": "Patel Sun slide 24; 11/12 lecture ; Smith Sun slide 11",
      "blocks": [
       {
        "k": "facts",
@@ -702,7 +702,7 @@
       "pa"
      ],
      "q": "Name the exclusions for self-treatment of a sunburn.",
-     "src": "Patel Sun slides 30, 34; 11/12 lecture T@64695",
+     "src": "Patel Sun slides 30, 34; 11/12 lecture ",
      "blocks": [
       {
        "k": "pts",
@@ -739,7 +739,7 @@
       "pa"
      ],
      "q": "What is given for pain, what for dryness and when does it start, and which two product classes are not recommended?",
-     "src": "Patel Sun slides 29, 31–33; 11/12 lecture T@61876–65406",
+     "src": "Patel Sun slides 29, 31–33; 11/12 lecture ",
      "blocks": [
       {
        "k": "facts",
@@ -1059,7 +1059,7 @@
       "pa"
      ],
      "q": "Give the age range and wrinkle finding for each of the four types.",
-     "src": "Patel Sun slide 39; 11/12 lecture T@68961",
+     "src": "Patel Sun slide 39; 11/12 lecture ",
      "blocks": [
       {
        "k": "grades",
@@ -1103,7 +1103,7 @@
       "pa"
      ],
      "q": "What treats hyperpigmentation and what are its limits? What treats wrinkles? Which treatment is not self-applied?",
-     "src": "Patel Sun slides 42–49; 11/12 lecture T@72287–76364; Sikazwe DPAW pages 67–70",
+     "src": "Patel Sun slides 42–49; 11/12 lecture ; Sikazwe DPAW pages 67–70",
      "blocks": [
       {
        "k": "line",
@@ -1215,7 +1215,7 @@
       "pa"
      ],
      "q": "When is a retinoid applied and what goes on by day? When is a hydroxy acid applied? How long until results?",
-     "src": "Patel Sun slides 44, 53–54; 11/12 lecture T@74891, T@76707–76959",
+     "src": "Patel Sun slides 44, 53–54; 11/12 lecture ",
      "blocks": [
       {
        "k": "facts",
@@ -1270,7 +1270,7 @@
       "pa"
      ],
      "q": "What does each letter of ABCDE stand for, and what is the diameter?",
-     "src": "Patel Sun slides 28, 37; 11/12 lecture T@60867, T@77076",
+     "src": "Patel Sun slides 28, 37; 11/12 lecture ",
      "blocks": [
       {
        "k": "facts",
@@ -1472,7 +1472,7 @@
       "pa"
      ],
      "q": "What does each of the four wound stages involve, and what are the three healing phases?",
-     "src": "Patel Wound slides 4–6, 27; 11/12 lecture T@78420, T@79102, T@87265–87332",
+     "src": "Patel Wound slides 4–6, 27; 11/12 lecture ",
      "blocks": [
       {
        "k": "facts",
@@ -1541,7 +1541,7 @@
       "pa"
      ],
      "q": "Name the exclusions for self-treatment of a minor wound or burn (\"I need you to know them\").",
-     "src": "Patel Wound slide 7; 11/12 lecture T@79459–80007",
+     "src": "Patel Wound slide 7; 11/12 lecture ",
      "blocks": [
       {
        "k": "pts",
@@ -1573,7 +1573,7 @@
       "pa"
      ],
      "q": "What is the first step, when is the antibiotic applied, and where may an antiseptic go?",
-     "src": "Patel Wound slides 3, 8–15, 19–20, 27; 11/12 lecture T@80276–87786",
+     "src": "Patel Wound slides 3, 8–15, 19–20, 27; 11/12 lecture ",
      "blocks": [
       {
        "k": "facts",
@@ -1702,7 +1702,7 @@
       "pa"
      ],
      "q": "Which two drug classes slow healing, and what does smoking 1 and 2 packs per day do?",
-     "src": "Patel Wound slides 21–25; 11/12 lecture T@85499–86431",
+     "src": "Patel Wound slides 21–25; 11/12 lecture ",
      "blocks": [
       {
        "k": "facts",
@@ -1902,7 +1902,7 @@
       "pa"
      ],
      "q": "Give the BSA limits of a minor, moderate and major burn in an adult and in a child.",
-     "src": "Patel Wound slides 4, 16; 11/12 lecture T@83577–83938",
+     "src": "Patel Wound slides 4, 16; 11/12 lecture ",
      "blocks": [
       {
        "k": "facts",
@@ -1971,7 +1971,7 @@
       "pa"
      ],
      "q": "Name the burn exclusions for self-treatment.",
-     "src": "Patel Wound slides 7, 17; 11/12 lecture T@84155–84806",
+     "src": "Patel Wound slides 7, 17; 11/12 lecture ",
      "blocks": [
       {
        "k": "pts",
@@ -2000,7 +2000,7 @@
       "pa"
      ],
      "q": "What is used for a minor burn: non-drug, for pain, for the skin, and how often may an antibiotic and an anesthetic be applied?",
-     "src": "Patel Wound slides 18–20; 11/12 lecture T@84501–85399",
+     "src": "Patel Wound slides 18–20; 11/12 lecture ",
      "blocks": [
       {
        "k": "line",
@@ -2243,7 +2243,7 @@
       "pa"
      ],
      "q": "Which virus causes warts, which skin layer is involved, and which subtype is on the feet?",
-     "src": "Patel Warts slides 4–5; 11/12 lecture T@88454",
+     "src": "Patel Warts slides 4–5; 11/12 lecture ",
      "blocks": [
       {
        "k": "facts",
@@ -2287,7 +2287,7 @@
       "pa"
      ],
      "q": "Which two wart types are self-treatable, and which four are not?",
-     "src": "Patel Warts slides 5–6; 11/12 lecture T@90202",
+     "src": "Patel Warts slides 5–6; 11/12 lecture ",
      "blocks": [
       {
        "k": "facts",
@@ -2397,7 +2397,7 @@
       "pa"
      ],
      "q": "Give the directions and the maximum duration for salicylic acid 40%, salicylic acid 17% and cryotherapy.",
-     "src": "Patel Warts slides 7–12; 11/12 lecture T@90398–92731; Smith PCol slides 39–40",
+     "src": "Patel Warts slides 7–12; 11/12 lecture ; Smith PCol slides 39–40",
      "blocks": [
       {
        "k": "facts",
@@ -2672,7 +2672,7 @@
       "pa"
      ],
      "q": "What causes a corn, and what causes a callus?",
-     "src": "Patel Warts slides 5, 13; 11/12 lecture T@93710",
+     "src": "Patel Warts slides 5, 13; 11/12 lecture ",
      "blocks": [
       {
        "k": "facts",
@@ -2704,7 +2704,7 @@
       "pa"
      ],
      "q": "How do a corn and a callus differ in borders, core, pain, size and site?",
-     "src": "Patel Warts slides 5, 13; 11/12 lecture T@89136–89254",
+     "src": "Patel Warts slides 5, 13; 11/12 lecture ",
      "blocks": [
       {
        "k": "facts",
@@ -2754,7 +2754,7 @@
       "pa"
      ],
      "q": "Who should not use a salicylic acid corn or callus remover, and when is the patient referred?",
-     "src": "Patel Warts slides 16–17; 11/12 lecture T@94074, T@94630; Smith PCol slides 39–40",
+     "src": "Patel Warts slides 16–17; 11/12 lecture ; Smith PCol slides 39–40",
      "blocks": [
       {
        "k": "sub",
@@ -2802,7 +2802,7 @@
       "pa"
      ],
      "q": "Give the directions for salicylic acid 17% and 40% on a corn or callus, and the maximum number of days and applications.",
-     "src": "Patel Warts slides 14–17; 11/12 lecture T@93238–95016",
+     "src": "Patel Warts slides 14–17; 11/12 lecture ",
      "blocks": [
       {
        "k": "facts",
@@ -3084,7 +3084,7 @@
      "dz": "sun-protection",
      "role": "Physical sunscreen: opaque, reflects and scatters UV radiation. GRASE and preferred; the choice for sensitive skin or a previous allergic reaction",
      "how": "Applied and reapplied like any sunscreen",
-     "src": "Patel Sun slides 16–18; T@55166"
+     "src": "Patel Sun slides 16–18"
     }
    ],
    "counsel": [
@@ -3126,7 +3126,7 @@
      "dz": "sun-protection",
      "role": "Physical sunscreen, GRASE and preferred; with zinc oxide, the two ingredients she called most effective. Also in the broad-spectrum mixture for patients on photosensitizing drugs",
      "how": "Applied and reapplied like any sunscreen",
-     "src": "Patel Sun slides 16–18; T@55166"
+     "src": "Patel Sun slides 16–18"
     }
    ],
    "counsel": [
@@ -3160,7 +3160,7 @@
      "dz": "sunburn",
      "role": "Recommended: decrease pain, erythema and edema; act longer than topical anesthetics. Her poll answer for pain and tenderness: oral ibuprofen",
      "how": "Use for the first 1–2 days. Slide 31: \"prefer one with anti-inflammatory properties (NSAIDs, APAP)\"; she said \"it could be Tylenol, it could be ibuprofen\"",
-     "src": "Patel Sun slide 31; T@65246"
+     "src": "Patel Sun slide 31"
     },
     {
      "dz": "burns",
@@ -3180,7 +3180,7 @@
    "how": {
     "p": "pa",
     "text": "Systemic analgesics decrease pain, erythema and edema and act longer than topical anesthetics; her slide prefers one with anti-inflammatory properties.",
-    "src": "Patel Sun slide 31; 11/12 lecture T@61876"
+    "src": "Patel Sun slide 31; 11/12 lecture "
    },
    "figs": []
   },
@@ -3192,7 +3192,7 @@
      "dz": "sunburn",
      "role": "Alternative treatment; may decrease pain by inhibiting bradykinin and the inflammatory process",
      "how": "Topically, on intact skin; look for pure aloe vera juice or gel on the label",
-     "src": "Patel Sun slide 32; T@64175"
+     "src": "Patel Sun slide 32"
     },
     {
      "dz": "burns",
@@ -3206,7 +3206,7 @@
     "Choose a product labeled pure aloe vera juice or gel.",
     "Do not take it by mouth."
    ],
-   "counselSrc": "Patel Sun slide 32; 11/12 lecture T@64175",
+   "counselSrc": "Patel Sun slide 32; 11/12 lecture ",
    "avoid": [
     "Not FDA-approved for burn treatment",
     "Internal use: multiple drug interactions and adverse effects"
@@ -3271,7 +3271,7 @@
      "dz": "photoaging",
      "role": "Depigmentation: reduces hyperpigmentation from sun exposure (melasma, lentigines). Her poll answer for hyperpigmentation",
      "how": "Combination products with hydroquinone 4%; limit use to three months; wear sunscreen",
-     "src": "Patel Sun slides 47–48; T@76234"
+     "src": "Patel Sun slides 47–48"
     }
    ],
    "counsel": [
@@ -3417,7 +3417,7 @@
      "dz": "wounds",
      "role": "Preventative; limited evidence of efficacy",
      "how": "After cleansing and before bandaging; 1 to 3 times a day",
-     "src": "Patel Wound slides 11, 20; T@81569"
+     "src": "Patel Wound slides 11, 20"
     },
     {
      "dz": "burns",
@@ -3429,7 +3429,7 @@
      "dz": "sunburn",
      "role": "Not a pain treatment: a wrong option in her sunburn poll (topical bacitracin)",
      "how": "",
-     "src": "PollEv 11/12; T@65246"
+     "src": "PollEv 11/12"
     }
    ],
    "counsel": [
@@ -3438,7 +3438,7 @@
     "Use it for a short time on a small area.",
     "See a primary care provider if there is no improvement within 7 days."
    ],
-   "counselSrc": "Patel Wound slides 11, 20; 11/12 lecture T@81569, T@82489",
+   "counselSrc": "Patel Wound slides 11, 20; 11/12 lecture ",
    "avoid": [
     "Toxicity risk rises with large areas of application",
     "Neomycin: systemic toxicity",
@@ -3447,7 +3447,7 @@
    "how": {
     "p": "pa",
     "text": "Ingredients with antibacterial properties: the product delivers a concentrated antimicrobial agent to the wound site, to prevent infection.",
-    "src": "Patel Wound slides 11–12; 11/12 lecture T@81400–81900"
+    "src": "Patel Wound slides 11–12; 11/12 lecture "
    },
    "figs": []
   },
@@ -3475,7 +3475,7 @@
      "dz": "sunburn",
      "role": "NOT recommended for routine use",
      "how": "If used: small areas (1–2% BSA) of intact skin, no more than 3 to 4 times a day",
-     "src": "Patel Sun slide 33; T@64451"
+     "src": "Patel Sun slide 33"
     }
    ],
    "counsel": [
@@ -3483,7 +3483,7 @@
     "Relief lasts 15 to 45 minutes; the pain will return between doses, and more frequent use is not safe.",
     "Do not cover large areas."
    ],
-   "counselSrc": "Patel Wound slide 20; 11/12 lecture T@85399",
+   "counselSrc": "Patel Wound slide 20; 11/12 lecture ",
    "avoid": [
     "★ Overuse: systemic toxicity (lidocaine)",
     "Benzocaine absorbed systemically: methemoglobinemia (cyanosis, dyspnea, syncope, seizures, coma)",
@@ -3493,7 +3493,7 @@
    "how": {
     "p": "pa",
     "text": "Relieve pain and itching by numbing the skin; relief lasts 15 to 45 minutes.",
-    "src": "Patel Outdoor slide 12; Wound slides 14, 20; 11/12 lecture T@83300"
+    "src": "Patel Outdoor slide 12; Wound slides 14, 20; 11/12 lecture "
    },
    "figs": []
   },
@@ -3505,7 +3505,7 @@
      "dz": "wounds",
      "role": "Only when indicated; may cause cytotoxicity that reduces wound healing",
      "how": "On intact skin at the wound edges, after debris is removed",
-     "src": "Patel Wound slides 15, 19, 27; T@83362"
+     "src": "Patel Wound slides 15, 19, 27"
     },
     {
      "dz": "burns",
@@ -3532,7 +3532,7 @@
    "how": {
     "p": "pa",
     "text": "In class: they clean the skin of debris and help prevent infection of the wound. Her slide adds the harm: they may cause cytotoxicity, which reduces wound healing.",
-    "src": "11/12 lecture T@83292, T@85006; Patel Wound slides 15, 19"
+    "src": "11/12 lecture ; Patel Wound slides 15, 19"
    },
    "figs": []
   },
@@ -3544,14 +3544,14 @@
      "dz": "wounds",
      "role": "Keep a moist healing environment with a dressing that fits the wound. \"Know the advantages, know the disadvantages\"",
      "how": "Gauze: cost effective, highly absorbent, nonocclusive; no moist environment alone, needs a secondary dressing and frequent changes, removal may bleed or hurt. Nonadherent gauze: less adherent. Adhesive bandage: cost effective, many shapes. Hydrocolloid: moist, long wear, occlusive, impermeable to fluids and bacteria, reduces pain; uninfected wounds only, hard to assess the wound, less cost effective. Transparent film: moist, semi-occlusive, gas-permeable, easy inspection; not absorptive, uninfected wounds only",
-     "src": "Patel Wound slides 8–9; T@80276"
+     "src": "Patel Wound slides 8–9"
     }
    ],
    "counsel": [
     "Cleanse first; apply an antibiotic only if indicated; then the dressing.",
     "Hydrocolloid and transparent film dressings are for uninfected wounds only."
    ],
-   "counselSrc": "Patel Wound slides 8–9, 27; 11/12 lecture T@82489",
+   "counselSrc": "Patel Wound slides 8–9, 27; 11/12 lecture ",
    "avoid": [
     "Hydrocolloid or film on an infected wound",
     "Film on a wound with a large amount of exudate (maceration)"
@@ -3608,7 +3608,7 @@
     "Wart: may be used for up to 12 weeks. Corn or callus: no longer than 14 days (7 pads).",
     "Corn or callus: seek medical attention if the skin becomes red or irritated, or if it is not removed after 14 days."
    ],
-   "counselSrc": "Patel Warts slides 10, 17; 11/12 lecture T@94581–95016",
+   "counselSrc": "Patel Warts slides 10, 17; 11/12 lecture ",
    "avoid": [
     "Diabetes",
     "Poor blood circulation",
@@ -3659,7 +3659,7 @@
    "how": {
     "p": "pa",
     "text": "Freezes the wart off: the product is held on the wart until a halo appears.",
-    "src": "11/12 lecture T@91042, T@91947; Patel Warts slide 11"
+    "src": "11/12 lecture ; Patel Warts slide 11"
    },
    "figs": []
   }
@@ -3875,7 +3875,7 @@
     ]
    ],
    "photo": "corn-callus-foot",
-   "src": "Patel Warts slides 5, 10, 13, 17; 11/12 lecture T@88664–90006"
+   "src": "Patel Warts slides 5, 10, 13, 17; 11/12 lecture "
   },
   {
    "id": "burn-grades",
@@ -3946,7 +3946,7 @@
      "\"Anything besides minor would be straight referral.\""
     ]
    ],
-   "src": "Patel Wound slides 7, 16–17; 11/12 lecture T@83577–84806"
+   "src": "Patel Wound slides 7, 16–17; 11/12 lecture "
   },
   {
    "id": "wound-stages",
@@ -4011,7 +4011,7 @@
     ]
    ],
    "photo": "wound-stages",
-   "src": "Patel Wound slide 5; 11/12 lecture T@78420, T@79102"
+   "src": "Patel Wound slide 5; 11/12 lecture "
   },
   {
    "id": "sa-17-40",
@@ -4086,7 +4086,7 @@
      ]
     ]
    ],
-   "src": "Patel Warts slides 10, 17; 11/12 lecture T@91458–91887, T@94581"
+   "src": "Patel Warts slides 10, 17; 11/12 lecture "
   },
   {
    "id": "chem-phys-sunscreen",
@@ -4156,7 +4156,7 @@
      ]
     ]
    ],
-   "src": "Patel Sun slides 16–18; T@53859, T@55166; Smith Sun slides 20–25; Sikazwe DPAW pages 61–65"
+   "src": "Patel Sun slides 16–18; Smith Sun slides 20–25; Sikazwe DPAW pages 61–65"
   },
   {
    "id": "abcde-two",
@@ -4260,7 +4260,7 @@
    "profs": [
     [
      "pa",
-     "Warts slide 10 against slide 17. \"Pay attention to how many days you're using the products for\" (T@94913)."
+     "Warts slide 10 against slide 17. \"Pay attention to how many days you're using the products for\"."
     ],
     [
      "sm",
@@ -4282,7 +4282,7 @@
    "profs": [
     [
      "pa",
-     "Warts slide 11; T@92344–92487."
+     "Warts slide 11."
     ]
    ]
   },
@@ -4300,7 +4300,7 @@
    "profs": [
     [
      "pa",
-     "Wound slide 16. \"A minor BSA in an adult is less than 15%, in a child is less than 10%\" (T@83577)."
+     "Wound slide 16. \"A minor BSA in an adult is less than 15%, in a child is less than 10%\"."
     ]
    ]
   },
@@ -4318,7 +4318,7 @@
    "profs": [
     [
      "pa",
-     "Sun slides 21, 36. \"For her questions, pay attention to what she's focused on. For my questions, recommendation in terms of treatment\" (T@56238)."
+     "Sun slides 21, 36. \"For her questions, pay attention to what she's focused on. For my questions, recommendation in terms of treatment\"."
     ],
     [
      "sm",

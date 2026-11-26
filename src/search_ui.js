@@ -3,7 +3,7 @@
    --------------------------------------------------------------------------
    A Search button in the header (and the "/" key, or Ctrl/Cmd+K) opens a full-screen search. What is typed is looked
    for in every part of the drill and the matches come back grouped, the closest first:
-     Drugs            the Drug list's 79 drugs (generic, brand, class, indication) -> opens the drug in Browse
+     Drugs            the Drug list's 79 drugs (generic, brand, class, indication) -> opens the drug in the Drug list
      Diseases         the 23 disease cards (name, summary, step titles)             -> opens the card
      Sections         Reference, Guides and Tell apart sections                      -> jumps to the section
      Diagrams         the drawn figures, by name and by the Purpose sentence         -> jumps to the figure

@@ -387,8 +387,12 @@ const SLIDE_UI = (() => {
     if (id === 'v-ref' || id === 'v-tell' || id === 'v-guide' || id === 'v-atlas') out.push([view, u => sectionCtx(u, view)]);
     else if (id === 'v-drugs') out.push([view, drugCtx]);
     else if (id === 'v-dz') out.push([view, u => dzCtx(u, view)]);
-    else if (id === 'v-diagrams') view.querySelectorAll('figcaption').forEach(f => out.push([f, () => ({decks: []})]));
+    else if (id === 'v-diagrams') { view.querySelectorAll('figcaption').forEach(f => out.push([f, () => ({decks: []})]));
+      /* the "What this shows" line and the drug facts of the aqueous humor flow figure cite Dr. Smith's Eye slides by number only */
+      view.querySelectorAll('figure.efl .efl-what, figure.efl .efl-info').forEach(f => out.push([f, () => ({decks: P.decksNamed('Dr. Smith’s Eye')})])); }
     else {
+      // the topic hub (hub_ui.js) copies Guides, Tell apart and Reference sections into Topics: a copy says which section it is from
+      view.querySelectorAll('.hub [data-secid]').forEach(s => { const r = P.sectionDeck(s.getAttribute('data-secid')); const x = r ? {decks: r.decks, sun: r.sun} : {decks: []}; out.push([s, () => x]); });
       // after an answer: the explanation block and its source line; the exam review; the missed list
       view.querySelectorAll('.why').forEach(w => {
         // the source line is inside the block, or (fill-in-the-blank items) the block's next sibling in the card

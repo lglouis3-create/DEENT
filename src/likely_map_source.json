@@ -992,9 +992,6 @@
     "ev": [
      "OA-051:sik-q-ooo",
      "OP-013:sik-ex3",
-     "OP-036:sik-ex3",
-     "OP-035:sik-ex3",
-     "OP-038:sik-ex3",
      "OP-026:sik-ex3",
      "OP-027:sik-ex3"
     ],
@@ -1378,7 +1375,6 @@
      "OR-006:sik-ex3",
      "OR-004:sik-ex3",
      "OR-021:sik-ex3",
-     "OR-032:sik-ex3",
      "OR-011:sik-ex3",
      "OR-019:sik-ex3",
      "OR-027:sik-ex3",
@@ -1454,9 +1450,6 @@
     "qStars": 6,
     "ev": [
      "OP-013:sik-ex3",
-     "OP-036:sik-ex3",
-     "OP-035:sik-ex3",
-     "OP-038:sik-ex3",
      "OP-026:sik-ex3",
      "OP-027:sik-ex3"
     ],
@@ -3964,9 +3957,6 @@
      "OP-004:sik-ex3",
      "OP-005:sik-ex3",
      "OP-006:sik-ex3",
-     "OP-036:sik-ex3",
-     "OP-035:sik-ex3",
-     "OP-038:sik-ex3",
      "OP-020:sik-ex3",
      "OP-019:sik-ex3",
      "OP-024:sik-ex3",

@@ -11,7 +11,7 @@ QUESTIONS.push(
  tags:['tell'], source:'slide',
  stem:'Carbonic anhydrase modulates aqueous humor production. What kind of enzyme is it, and what does it change?',
  options:[
-  {t:'A zinc metalloenzyme; it changes osmolarity', correct:false, why:'Slide 35 names pH changes, not osmolarity.'},
+  {t:'A zinc metalloenzyme; it changes blood flow', correct:false, why:'Slide 35 names pH changes, not blood flow.'},
   {t:'A zinc metalloenzyme; it changes pH', correct:true, why:'Slide 35: a Zn-metalloenzyme that modulates aqueous humor production through pH changes.'},
   {t:'A serine hydrolase; it changes pH', correct:false, why:'The enzyme is a Zn-metalloenzyme (slide 35); acetylcholinesterase is the enzyme that inactivates ACh (slide 41).'},
   {t:'A magnesium-dependent kinase; it changes pH', correct:false, why:'Slide 35: the metal is zinc, and the enzyme catalyzes CO2 hydration, not phosphorylation.'}],
@@ -56,9 +56,9 @@ QUESTIONS.push(
  stem:'Which functional group of the zolamides docks with the zinc in the active site of carbonic anhydrase?',
  options:[
   {t:'The secondary amine, NH-ethyl', correct:false, why:'Slide 38 assigns the Zn and Thr199 interactions to SO2NH2.'},
-  {t:'The carboxylic acid', correct:false, why:'The zolamides on slide 36 have no carboxylic acid; the binding group is SO2NH2 (slide 38).'},
+  {t:'The sulfone, SO2 within the ring', correct:false, why:'The ring sulfone is drawn on the zolamides (slide 36), but the Zn and Thr199 interactions belong to SO2NH2 (slide 38).'},
   {t:'The sulfonamide, SO2NH2', correct:true, why:'Slide 38: the SO2NH2 group forms ionic and H-bond interactions with Zn and Thr199.'},
-  {t:'The ester', correct:false, why:'The zolamides have no ester; the binding group is SO2NH2 (slide 38).'}],
+  {t:'The sulfur atom of the thiophene ring', correct:false, why:'The ring sulfur is part of the scaffold (slide 36); the binding group is SO2NH2 (slide 38).'}],
  teach:'Slide 38 (CBDA): CAIs dock in the active site of CA and the SO2NH2 group forms ionic and H-bond interactions with Zn and Thr199. He added that the group is not there for decoration: it is needed for binding and competitive inhibition (11/19).',
  cite:'Lectures 11–12 (Sikazwe_OOO_mc.pdf) slides 36, 38; T@12023 11/19'},
 
@@ -122,22 +122,22 @@ QUESTIONS.push(
  stem:'CYP N-deethylation of brinzolamide and dorzolamide removes which part of the molecule?',
  options:[
   {t:'The sulfonamide group', correct:false, why:'The SO2NH2 group binds Zn and Thr199 (slide 38); the metabolites remain active (slide 37), so it is not the part removed.'},
-  {t:'The methyl or methoxypropyl chain on the other ring carbon', correct:false, why:'These chains differ between the two drugs (slide 36), while the step named on slide 37 is common to both and is an N-deethylation.'},
+  {t:'The methyl or methoxypropyl substituent on the ring', correct:false, why:'These chains differ between the two drugs (slide 36), while the step named on slide 37 is common to both and is an N-deethylation.'},
   {t:'The sulfone oxygens on the ring', correct:false, why:'The step is an N-deethylation (slide 37), so the sulfone is not the part removed.'},
   {t:'The ethyl group on the secondary amine', correct:true, why:'N-deethylation removes the ethyl group from the nitrogen (slide 37); both drugs are drawn with an NH-ethyl (slide 36).'}],
  teach:'Slide 37: both drugs undergo CYP N-deethylation. The N-ethyl group sits on the secondary amine of each (slide 36); the products are active.',
  cite:'Lectures 11–12 (Sikazwe_OOO_mc.pdf) slides 36, 37; T@12940 11/19'},
 
-{id:'OC-012', skill:'class', prof:'Sikazwe', tier:'new', topic:'oo-cai', sub:'sulf', concept:'oo-cai-brand-cai',
+{id:'OC-012', skill:'class', prof:'Sikazwe', tier:'new', topic:'oo-cai', sub:'sulf', concept:'oo-cai-which-is-cai',
  tags:[], source:'slide',
- stem:'Which brand name belongs to a carbonic anhydrase inhibitor?',
+ stem:'Which drug is a carbonic anhydrase inhibitor?',
  options:[
-  {t:'Lumigan', correct:false, why:'Slide 44: Lumigan is bimatoprost, a prostaglandin analog.'},
-  {t:'Trusopt', correct:true, why:'Slide 36: Trusopt is dorzolamide HCl.'},
-  {t:'IsoptoCarbachol', correct:false, why:'Slide 40: IsoptoCarbachol is carbachol Cl, a direct-acting cholinergic.'},
-  {t:'Xalatan', correct:false, why:'Slide 44: Xalatan is latanoprost, a prostaglandin analog.'}],
- teach:'Slide 36: Diamox (acetazolamide), Neptazane (methazolamide), Azopt (brinzolamide), Trusopt (dorzolamide HCl).',
- cite:'Lectures 11–12 (Sikazwe_OOO_mc.pdf) slides 36, 40, 44'},
+  {t:'Dorzolamide HCl', correct:true, why:'Slide 36: dorzolamide HCl is a zolamide, a sulfonamide carbonic anhydrase inhibitor.'},
+  {t:'Pilocarpine HCl', correct:false, why:'Slide 40: pilocarpine HCl is a direct-acting cholinergic.'},
+  {t:'Latanoprost', correct:false, why:'Slide 44: latanoprost is a prostaglandin analog.'},
+  {t:'Netarsudil', correct:false, why:'Slide 48: netarsudil is an isoquinoline, a Rho kinase inhibitor.'}],
+ teach:'Slide 36: acetazolamide, methazolamide, brinzolamide and dorzolamide HCl are the carbonic anhydrase inhibitors; each carries the sulfonamide.',
+ cite:'Lectures 11–12 (Sikazwe_OOO_mc.pdf) slides 36, 40, 44, 48'},
 
 {id:'OC-013', skill:'chem', prof:'Sikazwe', tier:'new', topic:'oo-cai', sub:'sulf', concept:'oo-cai-sulfonamide-shared-with-omdi',
  tags:[], source:'slide',
@@ -190,19 +190,19 @@ QUESTIONS.push(
   {t:'Acetylcholine', correct:false, why:'Slide 40: acetylcholine is the ester.'},
   {t:'Carbachol Cl', correct:true, why:'Slide 40: carbachol Cl, the carbamate among the direct-acting cholinergics.'},
   {t:'Echothiophate iodide', correct:false, why:'Slide 42: echothiophate iodide is an organophosphate.'},
-  {t:'Latanoprost', correct:false, why:'Slide 44: latanoprost is a prostaglandin ester, not a cholinergic.'}],
+  {t:'Pilocarpine HCl', correct:false, why:'Slide 40: pilocarpine HCl is drawn with a lactone (ester) and an imidazole, not a carbamate.'}],
  teach:'Slides 40 and 42: carbachol, carbamate; acetylcholine, ester; echothiophate, organophosphate (phosphoryl).',
- cite:'Lectures 11–12 (Sikazwe_OOO_mc.pdf) slides 40, 42, 44; T@17565 11/19'},
+ cite:'Lectures 11–12 (Sikazwe_OOO_mc.pdf) slides 40, 42; T@17565 11/19'},
 
 {id:'OC-018', skill:'mech', prof:'Sikazwe', tier:'new', topic:'oo-chol', sub:'dir', concept:'oo-chol-carbachol-weak-indirect',
  tags:['two-facts'], source:'slide',
- stem:'Carbachol Cl is a direct-acting cholinergic. What additional action does it have?',
+ stem:'Carbachol Cl is a direct-acting cholinergic. What else is printed about it?',
  options:[
-  {t:'Weak inhibition of carbonic anhydrase', correct:false, why:'Slide 40 prints weak indirect effects; CA inhibition belongs to the sulfonamides (slide 36).'},
-  {t:'Weak activation of the FP receptor', correct:false, why:'FP receptor activation is the prostaglandin mechanism (slide 44).'},
-  {t:'Weak inhibition of Rho kinase', correct:false, why:'Rho kinase inhibition is the netarsudil mechanism (slide 48).'},
-  {t:'Weak indirect effects through AChE', correct:true, why:'Slide 40: carbachol has weak indirect effects, meaning raised ACh through AChE (slide 41).'}],
- teach:'Slide 40: carbachol Cl (IsoptoCarbachol) has weak indirect effects. Slide 41: indirect-acting cholinergics inhibit acetylcholinesterase, raising ACh.',
+  {t:'It is a prodrug activated by esterases', correct:false, why:'Carbachol is not a prodrug; the prodrugs among the eye drugs are the prostaglandin esters (slide 46).'},
+  {t:'It has weak indirect effects', correct:true, why:'Slide 40 and T@16294 11/19: carbachol Cl has weak indirect effects.'},
+  {t:'It irreversibly inhibits AChE by aging', correct:false, why:'Aging is the fate of the organophosphate bond to AChE (slide 42), not a carbachol property.'},
+  {t:'It inhibits carbonic anhydrase', correct:false, why:'Carbonic anhydrase inhibition belongs to the sulfonamides (slide 36).'}],
+ teach:'Slide 40: carbachol Cl (IsoptoCarbachol) is a direct-acting carbamate and has weak indirect effects. Slide 41: the indirect-acting cholinergics inhibit acetylcholinesterase, raising ACh.',
  cite:'Lectures 11–12 (Sikazwe_OOO_mc.pdf) slides 40, 41; T@16294 11/19'},
 
 {id:'OC-019', skill:'chem', prof:'Sikazwe', lowYield:true, tier:'new', topic:'oo-beyond', sub:'dsar', note:'Not on Exam 3: on 11/19 he removed the slide 40 SAR and said not to expect a question on it (T@17299). Kept for optional practice.', concept:'oo-chol-acyloxy-role',
@@ -273,12 +273,12 @@ QUESTIONS.push(
 
 {id:'OC-025', skill:'chem', prof:'Sikazwe', tier:'new', topic:'oo-chol', sub:'ind', concept:'oo-chol-intermediate-carbamate',
  tags:['poll'], source:'slide',
- stem:'Among phosphoryl, carbamate, ester and amide groups, which cholinergic functional group gives an intermediate extent of AChE inhibition?',
+ stem:'For cholinergics, what functionality provides intermediate duration of AChE inhibition?',
  options:[
-  {t:'Carbamate', correct:true, why:'Slide 42: phosphoryl > carbamate > ester in the extent of AChE inhibition, so the carbamate is intermediate (Question-2, slide 43).'},
   {t:'Phosphoryl', correct:false, why:'Slide 42: phosphoryl gives the greatest extent of inhibition.'},
+  {t:'Amide', correct:false, why:'Slide 42 ranks three groups; in lecture he placed the amide below the carbamate, at a mild duration (11/19).'},
   {t:'Ester', correct:false, why:'Slide 42: the ester gives the least extent of the three.'},
-  {t:'Amide', correct:false, why:'Slide 42 ranks three groups; in lecture he placed the amide below the carbamate, at a mild duration, so it is not the intermediate group (11/19).'}],
+  {t:'Carbamate', correct:true, why:'Slide 42: phosphoryl > carbamate > ester, so the carbamate is intermediate (Question-2, slide 43).'}],
  teach:'Slide 42: the extent of AChE inhibition depends on the functional group present: phosphoryl > carbamate > ester. Question-2 (slide 43) offers phosphoryl, amide, ester and carbamate. On 11/19 he answered this question with the carbamate (he said carbonate); on the slide he circled the carbamate.',
  cite:'Lectures 11–12 (Sikazwe_OOO_mc.pdf) slides 42, 43; T@22201 11/19'},
 
@@ -344,7 +344,7 @@ QUESTIONS.push(
   {t:'Phosphoryl', correct:true, why:'Slide 42: greatest extent of inhibition.'},
   {t:'Carbamate', correct:true, why:'Slide 42: intermediate extent (Question-2, slide 43).'},
   {t:'Ester', correct:true, why:'Slide 42: the ester is the third group in the ranking, with the least extent.'},
-  {t:'Sulfonamide', correct:false, why:'The sulfonamide is the carbonic anhydrase inhibitor group (slide 38), not a cholinergic group.'}],
+  {t:'Ether', correct:false, why:'Slide 42 ranks phosphoryl, carbamate and ester; an ether is not among the groups ranked.'}],
  teach:'Slide 42: extent of AChE inhibition depends on the functional group: phosphoryl > carbamate > ester. In lecture he also placed the amide (mild duration) between the carbamate and the ester (11/19).',
  cite:'Lectures 11–12 (Sikazwe_OOO_mc.pdf) slides 36, 42'},
 
@@ -484,9 +484,9 @@ QUESTIONS.push(
  tags:['tell'], source:'slide',
  stem:'To which chemical class does omidenepag isopropyl belong?',
  options:[
-  {t:'Isoquinolines', correct:false, why:'Slide 48: isoquinolines are the class of netarsudil.'},
-  {t:'Imidazolines', correct:false, why:'Imidazolines are the alpha 2 agonist class, not omidenepag.'},
-  {t:'Carbamates', correct:false, why:'Slide 40: carbamates are cholinergics such as carbachol.'},
+  {t:'Isoquinoline derivatives', correct:false, why:'Slide 48: isoquinolines are the class of netarsudil.'},
+  {t:'Aryl imidazolines', correct:false, why:'Imidazolines are the alpha 2 agonist class (slide 31), not omidenepag.'},
+  {t:'Direct carbamates', correct:false, why:'Slide 40: carbamates are cholinergics such as carbachol.'},
   {t:'Pyridine sulfonamides', correct:true, why:'Slide 47: pyridine sulfonamides.'}],
  teach:'Slide 47: pyridine sulfonamides; omidenepag isopropyl (OMDI). Slide 48: isoquinolines; netarsudil.',
  cite:'Lectures 11–12 (Sikazwe_OOO_mc.pdf) slides 47, 48; T@26887 11/19'},
@@ -566,5 +566,16 @@ QUESTIONS.push(
   {t:'Dorzolamide HCl', correct:true, why:'Slide 36: a zolamide, SO2NH2.'},
   {t:'Netarsudil', correct:false, why:'Slide 48: an isoquinoline, not a sulfonamide.'}],
  teach:'Slides 36, 47: sulfonamides in the zolamides and in omidenepag isopropyl; netarsudil is an isoquinoline (slide 48).',
- cite:'Lectures 11–12 (Sikazwe_OOO_mc.pdf) slides 36, 47, 48'}
+ cite:'Lectures 11–12 (Sikazwe_OOO_mc.pdf) slides 36, 47, 48'},
+
+{id:'OC-052', skill:'class', prof:'Sikazwe', tier:'new', topic:'oo-a2', sub:'class', concept:'oo-a2-imidazoline-fg',
+ tags:['tell'], source:'slide',
+ stem:'Clonidine, apraclonidine and brimonidine share which functional group?',
+ options:[
+  {t:'Sulfonamide', correct:false, why:'Slide 38: the sulfonamide is the carbonic anhydrase inhibitor group.'},
+  {t:'Imidazoline', correct:true, why:'Slide 31: clonidine, apraclonidine HCl and brimonidine tartrate are imidazolines, the alpha 2 agonists; slide 66 asks for this group.'},
+  {t:'Carbamate', correct:false, why:'Slide 42: the carbamate is a cholinergic group.'},
+  {t:'Aryloxypropanolamine', correct:false, why:'Slide 33: aryloxypropanolamines are the beta antagonists.'}],
+ teach:'Slide 31: the imidazolines (clonidine, apraclonidine, brimonidine) are alpha 2 agonists that lower intraocular fluid production and raise outflow. Self-assessment question 4 (slide 66) asks for this ring and its class.',
+ cite:'Lectures 11–12 (Sikazwe_OOO_mc.pdf) slides 31, 66; T@34671 11/19'}
 );

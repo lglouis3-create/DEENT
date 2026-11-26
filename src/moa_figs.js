@@ -78,7 +78,7 @@
       ['cAMP frees the catalytic (C) subunits of its kinase, which phosphorylate substrate proteins (S) to give the response. She said this part of the figure is not the key point.', s3, 'slide figure'],
       ['A PDE4 inhibitor blocks the breakdown, so cAMP builds up. Crisaborole (topical, atopic dermatitis) and apremilast (oral, psoriasis) share this mechanism.', s4],
       ['More cAMP relaxes smooth muscle and inhibits inflammatory cells, so less cytokine and less inflammation: a nonsteroidal anti-inflammatory.', s5],
-    ], 262, 'After Skin-PCol-Students-2026.pdf slide 32 (Katzung, Basic &amp; Clinical Pharmacology 15e, ch. 2, redrawn as a schematic) and slides 33–34; lecture 10/30, T 430–472 (crisaborole and apremilast: T 448–466). PDE4 breaks down cAMP (Louis\'s note on slide 32).');
+    ], 262, 'After Skin-PCol-Students-2026.pdf slide 32 (Katzung, Basic &amp; Clinical Pharmacology 15e, ch. 2, redrawn as a schematic) and slides 33–34; lecture 10/30, T 430–472 (crisaborole and apremilast: T 448–466). PDE4 breaks down cAMP (the note on slide 32).');
   })();
 
   /* ---------- 2. Ribosome: where the antibiotics bind (PC 42-47) ----------
@@ -163,7 +163,7 @@
       ['Folate is needed to make purines, two of the DNA bases, so a cell without it cannot divide.', s3],
       ['Sulfonamides such as sulfamethoxazole compete with PABA and block the first step. Dapsone, for leprosy, acts like the sulfonamides.', s4],
       ['Trimethoprim inhibits bacterial dihydrofolate reductase. Two blocks in sequence: the combination is much more effective than either drug alone.', s5, 'sequential block'],
-    ], 322, 'After Skin-PCol-Students-2026.pdf slides 48–49 (Goodman &amp; Gilman 14e, ch. 57, figure and caption, redrawn) and slide 50 (dapsone in leprosy); lecture 11/03, T1103 73–98. Louis\'s note on slide 49: folic acid is for the production of purines, so cells can\'t divide. Methotrexate blocks the human enzyme: see “Methotrexate and the folate cycle”.',
+    ], 322, 'After Skin-PCol-Students-2026.pdf slides 48–49 (Goodman &amp; Gilman 14e, ch. 57, figure and caption, redrawn) and slide 50 (dapsone in leprosy); lecture 11/03, T1103 73–98. The handwritten note on slide 49: folic acid is for the production of purines, so cells can\'t divide. Methotrexate blocks the human enzyme: see “Methotrexate and the folate cycle”.',
       '<button type="button" class="chip" data-jump="guide:g-fig-folate-cycle">Methotrexate and the folate cycle</button>');
   })();
 
@@ -203,7 +203,7 @@
       ['Serine transhydroxymethylase (serine to glycine) makes N⁵,N¹⁰-methylenetetrahydrofolate, which goes on to the purines.', s3],
       ['Thymidylate synthase turns dUMP into dTMP for DNA synthesis, which gives dihydrofolate back: a cycle.', s4],
       ['Methotrexate, a folic acid analog, inhibits DHFR: less THF, fewer purines and less dTMP, so keratinocytes cannot keep proliferating.', s5],
-    ], 300, 'After Skin-PCol-Students-2026.pdf slide 60 (Katzung Fig 33-3, redrawn; its vitamin B12 loop is left out, as it was not discussed) and slide 59; lecture 11/03, T1103 212–236. Louis\'s notes on slide 60: dihydrofolate "from diet"; folate reductase is "where methotrexate is working". The same reduction in structures (Dr. Sikazwe): Guide, Medicinal Chemistry, "Folate reduction by DHFR".',
+    ], 300, 'After Skin-PCol-Students-2026.pdf slide 60 (Katzung Fig 33-3, redrawn; its vitamin B12 loop is left out, as it was not discussed) and slide 59; lecture 11/03, T1103 212–236. The handwritten notes on slide 60: dihydrofolate "from diet"; folate reductase is "where methotrexate is working". The same reduction in structures (Dr. Sikazwe): Guide, Medicinal Chemistry, "Folate reduction by DHFR".',
       '<button type="button" class="chip" data-jump="guide:rx-folate">Folate reduction by DHFR (structures)</button>');
   })();
 
@@ -248,7 +248,7 @@
       ['Negative signal 2: the same CD80/86 binds CTLA-4 on the T cell instead, and T-cell activation stops.', s3],
       ['Abatacept is a fusion protein: the extracellular part of CTLA-4 fused to human IgG Fc, which gives it structure. Made like CTLA-4, it probably binds CD80/86 more strongly than CD28 does.', s4],
       ['Abatacept occupies CD80/86, so CD28 cannot bind: no positive signal 2, no T-cell activation, no IL-2.', s5],
-    ], 270, 'After Skin-PCol-Students-2026.pdf slide 63 (Katzung Fig 55-7, redrawn with only the molecules she taught for it) and slide 25 (signals 1 and 2); lecture 11/03, T1103 269–357. Louis\'s notes on slide 63: CD80/86 with CD28 is a positive signal 2, with CTLA-4 a negative one; the CTLA-4 part gives "higher binding affinity", the Fc part is "to give it structure"; "inhibits the positive signal 2". The MHC class in signal 1 is not drawn (held, reviews/OPEN_QUESTIONS.md).');
+    ], 270, 'After Skin-PCol-Students-2026.pdf slide 63 (Katzung Fig 55-7, redrawn with only the molecules she taught for it) and slide 25 (signals 1 and 2); lecture 11/03, T1103 269–357. The handwritten notes on slide 63: CD80/86 with CD28 is a positive signal 2, with CTLA-4 a negative one; the CTLA-4 part gives "higher binding affinity", the Fc part is "to give it structure"; "inhibits the positive signal 2". The MHC class in signal 1 is not drawn.');
   })();
 
   const ADD = {'fig-pde4-camp': PDE4, 'fig-ribosome': RIBO, 'fig-folate-path': FOLP, 'fig-folate-cycle': FOLC, 'fig-costim': COSTIM};

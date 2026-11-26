@@ -330,7 +330,8 @@ console.log('=== Quiz me (multiple choice) and Recall ===');
     // the Drug list never feeds the bank, Exam sim or progress
     const others = C.files.concat(['reference.js']).filter(f => !/^druglist_|^chart_boxes/.test(f) && fs.existsSync(path.join(__dirname, f)))
       // the search box (search_ui.js, 2026-11-14) reads the card list and opens a card; it never makes a Drug list question
-      .filter(f => f === 'search_ui.js' ? /makeQuestion/.test(code(f)) : /DRUGLIST|makeQuestion/.test(code(f)));
+      // the topic hub (hub_ui.js, 2026-11-25) lists a topic's drug rows and opens a card; it never makes a Drug list question either
+      .filter(f => (f === 'search_ui.js' || f === 'hub_ui.js') ? /makeQuestion/.test(code(f)) : /DRUGLIST|makeQuestion/.test(code(f)));
     const writesQ = ['druglist_data.js', 'druglist_ui.js'].filter(f => /QUESTIONS\s*(\.push|\.splice|\.unshift|=[^=])|EXAMS?\s*(\.push|=[^=])/.test(code(f)));
     check(!others.length && !writesQ.length, 'no other course file uses the Drug list questions, and the Drug list adds nothing to the bank or the exams (Exam sim draws only from the bank)',
       others.concat(writesQ).join(', '));
@@ -810,4 +811,24 @@ vm.createContext(stub);
 let out;
 try { out = vm.runInContext(here('druglist_ui.js') + '\nDRUGLIST_UI;', stub); } catch (e) { out = e; }
 check(out === null, 'druglist_ui.js does nothing (returns null, throws nothing) in a stub DOM', String(out));
+console.log('=== Dosing data (druglist_dose.js: Dr. Lam\'s dose, frequency and duration lines) ===');
+{
+  const sbx = {}; vm.createContext(sbx);
+  const DD = vm.runInContext(here('druglist_dose.js') + '\nDRUGLIST_DOSE;', sbx);
+  const eyeIds = new Set(EY.D.map(d => d.id));
+  const decks = {Glaucoma: 93, Ophthalmic: 58, Oral: 84, Otic: 44};   // page counts of the four Lam decks
+  const bad = [];
+  const cites = [].concat(...Object.values(DD.OVERLAY).map(o => o.cite || []), ...DD.EXTRA.map(x => x.cite || []));
+  cites.forEach(c => { const m = /^Lam (Glaucoma|Ophthalmic|Oral|Otic) slide (\d+)$/.exec(c); if (!m || +m[2] < 1 || +m[2] > decks[m[1]]) bad.push(c); });
+  check(!bad.length, 'every dosing cite names one of Dr. Lam\'s four decks and a slide inside it', bad.join('; '));
+  check(Object.keys(DD.OVERLAY).every(id => eyeIds.has(id)), 'every dosing overlay belongs to a card of the ophthalmic chart', Object.keys(DD.OVERLAY).filter(id => !eyeIds.has(id)).join(', '));
+  const fk = [].concat(...Object.values(DD.OVERLAY).map(o => o.freq || []), ...DD.EXTRA.map(x => x.freq || [])).filter(Boolean);
+  check(fk.every(f => DD.FREQ[f]), 'every frequency tag is defined', fk.filter(f => !DD.FREQ[f]).join(', '));
+  check(Object.values(DD.OVERLAY).every(o => o.cite && o.cite.length && (o.dose || o.pearl)) && DD.EXTRA.every(x => x.cite && x.cite.length && x.name && x.area && x.sub && x.cls), 'every dosing line names its slide; every extra drug has name, area, group and class');
+  check(new Set(DD.EXTRA.map(x => x.id)).size === DD.EXTRA.length && DD.EXTRA.every(x => !eyeIds.has(x.id)), 'the extra drugs have their own ids, none of a chart card');
+  const text = JSON.stringify(DD.OVERLAY) + JSON.stringify(DD.EXTRA);
+  check(!/T@|\.pdf|\.js\b/.test(text), 'no transcript code or file name in the dosing text');
+  check(!/localStorage|sessionStorage|indexedDB|document\.cookie/.test(code('druglist_dose.js').replace(/\/\*[\s\S]*?\*\//g, '')), 'druglist_dose.js writes to no storage');
+  check(DD.EXTRA.every(x => ['gl', 'ac', 'de', 'ear', 'mouth'].includes(x.area)), 'every extra drug sits in an Exam 3 area');
+}
 finish(NAME);

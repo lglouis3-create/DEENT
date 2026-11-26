@@ -182,7 +182,7 @@ QUESTIONS.push(
  teach:"Slide 55: imidazoline decongestants are α1/α2 agonists.",
  cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slides 33, 55–56"},
 
-{id:"OA-017", skill:"chem", prof:'Sikazwe', tier:'new', topic:"oo-a2", sub:"sar", concept:"oo-ac-dec-linker",
+{id:"OA-017", skill:"chem", prof:'Sikazwe', tier:'new', topic:"oo-beyond", sub:"dec", lowYield:true, note:"Not on Exam 3: his emailed reading list for Exam 3 (11/20) skips slide 32, the aryl imidazoline SAR (slides 27-31 and 33-48 are assigned). Kept for optional practice.", concept:"oo-ac-dec-linker",
  tags:["hard", "reasoning"], source:"both",
  stem:"An aryl imidazoline has a CH2 linker between the aromatic ring and the imidazoline. Which receptor activity does the linker atom predict?",
  options:[
@@ -193,7 +193,7 @@ QUESTIONS.push(
  teach:"Slide 32 and T@49994 11/18: for an aryl imidazoline the linker atom is CH2 for alpha 1 agonists and an amine for alpha 2 agonists. Slide 32 prints the linker as X = CH2 (alpha 1) and X = NH2 (alpha 2).",
  cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slide 32; T@49994 11/18"},
 
-{id:"OA-018", skill:"chem", prof:'Sikazwe', tier:'new', topic:"oo-a2", sub:"sar", concept:"oo-ac-dec-new-nh",
+{id:"OA-018", skill:"chem", prof:'Sikazwe', tier:'new', topic:"oo-beyond", sub:"dec", lowYield:true, note:"Not on Exam 3: his emailed reading list for Exam 3 (11/20) skips slide 32, the aryl imidazoline SAR (slides 27-31 and 33-48 are assigned). Kept for optional practice.", concept:"oo-ac-dec-new-nh",
  tags:["hard", "reasoning"], source:"both",
  stem:"A new compound has an aromatic ring joined to an imidazoline through an amine linker. Which receptor activity does its structure predict?",
  options:[
@@ -243,7 +243,7 @@ QUESTIONS.push(
  options:[
   {t:"The tert-butyl group", correct:false, why:"Slide 55: both carry a tert-butyl group."},
   {t:"The imidazoline ring", correct:false, why:"Slide 55: both have the imidazoline."},
-  {t:"A phenolic hydroxyl on the aromatic ring", correct:true, why:"Slide 55: only oxymetazoline has the ring OH."},
+  {t:"A phenolic OH", correct:true, why:"Slide 55: only oxymetazoline has the ring OH."},
   {t:"The CH2 linker", correct:false, why:"Slide 55: both have a CH2 linker."}],
  teach:"Slide 55: the two share the tert-butyl, the methyls, the CH2 linker and the imidazoline; oxymetazoline adds the OH.",
  cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slide 55"},
@@ -283,12 +283,12 @@ QUESTIONS.push(
 
 {id:"OA-026", skill:"chem", prof:'Sikazwe', lowYield:true, tier:'new', topic:"oo-beyond", sub:"mcs", note:"Not on Exam 3: on 11/19 he told the class to end the reading at slide 51 and left allergic conjunctivitis (antihistamines, decongestants, mast cell stabilizers, dual-acting agents) to the antihistamine lecture (T@32303, T@33467). Kept for optional practice.", concept:"oo-ac-cromolyn-linker",
  tags:["hard", "reasoning"], source:"slide",
- stem:"Cromolyn consists of two chromone units joined through which kind of linker?",
+ stem:"Cromolyn consists of two chromone units joined by a chain that carries which functional group on its middle carbon?",
  options:[
-  {t:"A direct bond between the rings", correct:false, why:"Slide 56 shows a chain between the rings."},
-  {t:"A chain containing an amide", correct:false, why:"The cromolyn linker is ether oxygen and carbon with an OH, no amide (the amides are in lodoxamide)."},
-  {t:"A piperazine ring", correct:false, why:"Piperazine is the ring in cetirizine (slide 54)."},
-  {t:"A hydroxypropyl diether chain", correct:true, why:"Slide 56: the two chromones are joined by O–CH2–CH(OH)–CH2–O."}],
+  {t:"Amine", correct:false, why:"Slide 56: the chain has ether oxygens and an OH, no amine."},
+  {t:"Amide", correct:false, why:"The cromolyn chain has no amide (the amides are in lodoxamide)."},
+  {t:"Sulfonamide", correct:false, why:"The sulfonamide is the carbonic anhydrase inhibitor group (slide 38); it is not in the cromolyn chain."},
+  {t:"Hydroxyl", correct:true, why:"Slide 56: the two chromones are joined by O–CH2–CH(OH)–CH2–O; the middle carbon carries the OH."}],
  teach:"Slide 56: cromolyn sodium = two chromone-2-carboxylates linked through a hydroxypropane diether.",
  cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slides 54, 56"},
 
@@ -472,9 +472,9 @@ QUESTIONS.push(
  tags:["hard", "reasoning"], source:"slide",
  stem:"Prednisolone has which added feature compared with hydrocortisone that raises anti-inflammatory activity?",
  options:[
-  {t:"A 9α-fluorine", correct:false, why:"Slide 60: prednisolone has no halogen; dexamethasone and fluorometholone have 9-F."},
-  {t:"An 11β-hydroxyl", correct:false, why:"Slide 60: hydrocortisone already has the 11β-OH."},
-  {t:"An alkene between C1 and C2", correct:true, why:"Slide 60: prednisolone has the C1–C2 alkene that hydrocortisone lacks."},
+  {t:"A 9α-F", correct:false, why:"Slide 60: prednisolone has no halogen; dexamethasone and fluorometholone have 9-F."},
+  {t:"An 11β-OH", correct:false, why:"Slide 60: hydrocortisone already has the 11β-OH."},
+  {t:"A C1–C2 alkene", correct:true, why:"Slide 60: prednisolone has the C1–C2 alkene that hydrocortisone lacks."},
   {t:"A 6α-halogen", correct:false, why:"Slide 60: prednisolone has no 6α substituent."}],
  teach:"Slide 60: hydrocortisone has the 11β-OH only; prednisolone adds the C1–C2 alkene.",
  cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slide 60"},
@@ -536,10 +536,10 @@ QUESTIONS.push(
 
 {id:"OA-050", skill:"chem", prof:'Sikazwe', tier:'new', topic:"oo-ac", sub:"self", concept:"oo-ac-cai-key-fg",
  tags:["hard", "tell"], source:"slide",
- stem:"The chemical basis of drug action of the carbonic anhydrase inhibitors involves which key functional group?",
+ stem:"The carbonic anhydrase inhibitor chemical basis of drug action involves what key functional group?",
  options:[
   {t:"Carbamate", correct:false, why:"Slide 42: a cholinesterase inhibitor group."},
-  {t:"Sulfonamide (SO2NH2)", correct:true, why:"Slide 38: the SO2NH2 group forms ionic and H-bond interactions with zinc and Thr199."},
+  {t:"Sulfonamide", correct:true, why:"Slide 38: the SO2NH2 group forms ionic and H-bond interactions with zinc and Thr199."},
   {t:"Imidazoline", correct:false, why:"Slide 31: the alpha 2 agonist group."},
   {t:"Carboxylic acid", correct:false, why:"Slide 46: the free acid form of the prostaglandin analogs."}],
  teach:"Slides 36–38: the zolamides are sulfonamides; the SO2NH2 group interacts with the zinc and Thr199 of carbonic anhydrase. On 11/19 he kept Question 3 and answered it: the sulfonamide.",
@@ -547,7 +547,7 @@ QUESTIONS.push(
 
 {id:"OA-051", skill:"class", prof:'Sikazwe', tier:'new', topic:"oo-ac", sub:"self", concept:"oo-ac-imidazoline-name",
  tags:["hard", "two-facts"], source:"both",
- stem:"A five-membered ring has two nitrogens, one as C=N and one as NH, and its other ring carbons are saturated. Which functional group is this, and in which class of eye drugs is it present?",
+ stem:"A five-membered ring has two nitrogens, one an imine nitrogen and one an NH, and its other ring carbons are saturated. Name the functionality and the class of eye drugs that contains it.",
  options:[
   {t:"Imidazoline; alpha 2 agonists", correct:true, why:"Slides 31 and 66: the imidazoline ring is in clonidine, apraclonidine and brimonidine, the alpha 2 agonists; on 11/19 he answered Question 4 this way."},
   {t:"Imidazole; alpha 2 agonists", correct:false, why:"An imidazole ring is aromatic and unsaturated; this ring has saturated carbons."},
@@ -559,14 +559,14 @@ QUESTIONS.push(
 
 {id:"OA-052", skill:"class", prof:'Sikazwe', tier:'new', topic:"oo-ac", sub:"self", concept:"oo-ac-cyclopentane-pg",
  tags:["hard", "reasoning"], source:"slide",
- stem:"A cyclopentane ring carrying two adjacent side chains is the core of which class of eye drugs?",
+ stem:"A cyclopentane ring carries two adjacent side chains. Name the functionality and the class of eye drugs that contains it.",
  options:[
-  {t:"Beta antagonists", correct:false, why:"Slide 33: the beta antagonists are aryloxypropanolamines."},
-  {t:"Carbonic anhydrase inhibitors", correct:false, why:"Slide 36: the carbonic anhydrase inhibitors are sulfonamides."},
-  {t:"Prostaglandin receptor agonists", correct:true, why:"Slides 44–46: the prostaglandin skeleton is a cyclopentane with two chains; on 11/19 he said it is present in the prostaglandin receptor agonists."},
-  {t:"Direct-acting cholinergics", correct:false, why:"Slide 40: carbamates and esters."}],
+  {t:"Imidazoline; alpha 2 agonists", correct:false, why:"Slide 31: the imidazoline is a ring with two nitrogens, not a cyclopentane."},
+  {t:"Aryloxypropanolamine; beta antagonists", correct:false, why:"Slide 33: the beta antagonists are aryloxypropanolamines."},
+  {t:"Prostaglandin skeleton; prostaglandin receptor agonists", correct:true, why:"Slides 44–46: the prostaglandin skeleton is a cyclopentane with two chains; on 11/19 he said it is present in the prostaglandin receptor agonists."},
+  {t:"Sulfonamide; carbonic anhydrase inhibitors", correct:false, why:"Slide 36: the carbonic anhydrase inhibitors are sulfonamides, with no cyclopentane core."}],
  teach:"Slides 44–46 (slide 67 leaves its answer blank; on 11/19 he answered prostaglandin, present in the prostaglandin receptor agonists): PGF2α, latanoprost, bimatoprost, travoprost and tafluprost share the cyclopentane ring with an α chain and an ω chain.",
- cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slides 33, 36, 40, 44–46, 67; T@34892 11/19"},
+ cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slides 33, 36, 44–46, 67; T@34892 11/19"},
 
 {id:"OA-053", skill:"chem", prof:'Sikazwe', tier:'new', topic:"oo-ac", sub:"self", concept:"oo-ac-irrev-fg",
  tags:["hard", "tell"], source:"slide",
@@ -575,18 +575,18 @@ QUESTIONS.push(
   {t:"Carbamate", correct:false, why:"Slide 43: the carbamate is the group with intermediate duration of AChE inhibition."},
   {t:"Ester", correct:false, why:"Slide 42: the least inhibition."},
   {t:"Amide", correct:false, why:"Slide 68 draws the amide, but in lecture it has a mild duration; the phosphoryl group is the irreversible one (11/19)."},
-  {t:"Phosphoryl (organophosphate)", correct:true, why:"Slide 42: extent of AChE inhibition phosphoryl > carbamate > ester."}],
+  {t:"Phosphoryl", correct:true, why:"Slide 42: extent of AChE inhibition phosphoryl > carbamate > ester; the phosphoryl group is the irreversible one (organophosphate)."}],
  teach:"Slide 42: the extent of AChE inhibition depends on the functional group; the phosphoryl group inhibits most, then the carbamate, then the ester. On 11/19 he answered with the group labeled Z on slide 68, the phosphoryl group.",
  cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slides 42–43, 68; T@35098 11/19"},
 
-{id:"OA-054", skill:"chem", prof:'Sikazwe', tier:'new', topic:"oo-ac", sub:"self", concept:"oo-ac-rank",
- tags:["hard", "two-facts"], source:"slide",
- stem:"Which order of functional groups, from greatest to least extent of acetylcholinesterase inhibition, is correct?",
+{id:"OA-054", skill:"chem", prof:'Sikazwe', tier:'new', topic:"oo-ac", sub:"self", concept:"oo-ac-intermediate-group",
+ tags:["hard", "tell"], source:"slide",
+ stem:"For cholinergics, what functionality provides intermediate duration of AChE inhibition?",
  options:[
-  {t:"Phosphoryl, carbamate, ester", correct:true, why:"Slide 42: phosphoryl > carbamate > ester."},
-  {t:"Carbamate, phosphoryl, ester", correct:false, why:"Phosphoryl is greatest on slide 42."},
-  {t:"Ester, carbamate, phosphoryl", correct:false, why:"This reverses the order printed on slide 42."},
-  {t:"Phosphoryl, ester, carbamate", correct:false, why:"Slide 42 puts the carbamate above the ester."}],
- teach:"Slide 42: phosphoryl > carbamate > ester for extent of AChE inhibition. In lecture he added the amide as a mild duration between the carbamate and the ester (11/19); this item keeps to the three groups the slide ranks.",
- cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slides 42–43"}
+  {t:"Phosphoryl", correct:false, why:"Slide 42: phosphoryl gives the greatest extent of inhibition."},
+  {t:"Carbamate", correct:true, why:"Slides 42–43: phosphoryl > carbamate > ester, so the carbamate is intermediate."},
+  {t:"Ester", correct:false, why:"Slide 42: the ester gives the least extent of the three."},
+  {t:"Ether", correct:false, why:"Slide 42 ranks phosphoryl, carbamate and ester; an ether is not one of the groups."}],
+ teach:"Slide 42: phosphoryl > carbamate > ester for extent of AChE inhibition; Question-2 (slide 43) asks which group is intermediate. In lecture he added the amide as a mild duration between the carbamate and the ester (11/19); this item keeps to the three groups the slide ranks.",
+ cite:"Lectures 11–12 (Sikazwe_OOO_mc.pdf) slides 42–43; T@22201 11/19"}
 );

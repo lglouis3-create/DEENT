@@ -29,7 +29,7 @@ const LIKELY_UI = (() => {
   const L = LIKELY, BY = {};
   L.items.forEach(x => { BY[x.id] = x; });
   const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g, c => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'}[c]));
-  const NOTE = "Claude's prediction from the professors' stated emphasis, not an official list.";
+  const NOTE = "A prediction from the professors' stated emphasis, not an official list.";
 
   const css = `
 .lkchips{display:flex;flex-wrap:wrap;gap:8px;margin:4px 0 10px}.lklab{font-size:13px;color:var(--muted,#5b6475);margin-top:6px}

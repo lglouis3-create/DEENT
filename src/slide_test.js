@@ -121,7 +121,7 @@ const onDisk = (deck, n, printed) => { const r = P.resolve(deck, n, printed); re
                 texts: bs.map(b => b.textContent), tr: bs.filter(b => /[@:]/.test(b.textContent) || /(?:^|[^A-Za-z])T[\s\xa0]?$/.test(b.previousSibling ? b.previousSibling.textContent : '')).length};
       });
       check(post.inCite >= 1 && post.inWhy > post.inCite && !post.inOpt, `after the answer: the source line has ${post.inCite} slide button(s), the explanation ${post.inWhy - post.inCite} more, the options none`, post);
-      check(/; T \d/.test(post.cite) && !post.tr && !post.texts.some(t => /^T\b/.test(t)), 'the transcript lines in that source line stay text', post.cite);
+      check(!/T@|(?:^|[^A-Za-z])T \d/.test(post.cite) && !post.tr && !post.texts.some(t => /^T\b/.test(t)), 'the source line shows no transcript code and no slide button is made of one (clean_ui.js)', post.cite);
       const role = await page.evaluate(() => { const b = document.querySelector('#v-quiz .cite .slk'); return {role: b.getAttribute('role'), tab: b.tabIndex, label: b.getAttribute('aria-label'), title: b.getAttribute('title'), desc: b.getAttribute('aria-description'), text: b.textContent,
         labelled: document.querySelectorAll('.slk[aria-label], .slk[aria-labelledby]').length}; });
       check(role.role === 'button' && role.tab === 0 && role.label === null && !role.labelled && /^Open Dr\. Smith, Skin Pharmacology, slide \d+$/.test(role.title || '') && role.desc === role.title,
@@ -203,6 +203,8 @@ const onDisk = (deck, n, printed) => { const r = P.resolve(deck, n, printed); re
         ['Drug list card', 'drugs', '#v-drugs .dlcard .dlsrc .slk'], ['Atlas tile', 'atlas', '#v-atlas .attile .slk'], ['figure caption', 'diagrams', '#v-diagrams figcaption .slk']];
       for (const [label, v, sel] of tabs) {
         await page.evaluate(v => show(v), v); await settle(900);
+        // the Drug list opens a row to draw its card (druglist_ui.js, 2026-11-23): open the first 60 rows so their source lines exist
+        if (v === 'drugs') { await page.evaluate(() => document.querySelectorAll('#v-drugs details.dlrowd').forEach((d, i) => { if (i < 60) d.open = true; })); await settle(600); }
         await page.evaluate(() => document.querySelectorAll('details').forEach(d => { if (d.querySelector('.slk')) d.open = true; }));
         // a figure's source note is closed until its "Slides and sources" button is pressed (figsrc_ui.js, 2026-11-22)
         await page.evaluate(() => document.querySelectorAll('figcaption:not(.fsrc-closed):not(.fsrc-open) .fsrc-t0').forEach(b => b.click())); await settle(200);
@@ -218,6 +220,7 @@ const onDisk = (deck, n, printed) => { const r = P.resolve(deck, n, printed); re
         const out = {};
         for (const v of ['ref', 'tell', 'guide', 'atlas', 'drugs', 'diagrams']) {
           show(v); await new Promise(r => setTimeout(r, 700));
+          if (v === 'drugs') { document.querySelectorAll('#v-drugs details.dlrowd').forEach((d, i) => { if (i < 60) d.open = true; }); await new Promise(r => setTimeout(r, 500)); }
           const el = document.getElementById('v-' + v), h1 = el.getBoundingClientRect().height, n = el.querySelectorAll('.slk').length;
           el.querySelectorAll('.slk').forEach(b => { const p = b.parentNode; p.replaceChild(document.createTextNode(b.textContent), b); p.normalize(); });
           const h0 = el.getBoundingClientRect().height;
@@ -226,7 +229,9 @@ const onDisk = (deck, n, printed) => { const r = P.resolve(deck, n, printed); re
         }
         return out;
       });
-      check(Object.values(tall).every(x => x.n > 0 && x.back === x.n && x.d < 0.5), 'with the links taken out, every reading tab is exactly as tall (no line re-wraps), and they come back', tall);
+      // clean_ui.js shows deck file names as friendly names after the links are made, so a link whose deck came from such a name in a table heading or a figure note
+      // (about 3% of the Reference and Diagrams links) cannot be made again from the shown text; the pass over a fresh draw links them (the checks above)
+      check(Object.values(tall).every(x => x.n > 0 && x.back >= 0.95 * x.n && x.d < 0.5), 'with the links taken out, every reading tab is exactly as tall (no line re-wraps), and at least 95% of them come back', tall);
 
       /* ---- Diseases: a card, a practice patient, a drug panel (a dialog over a dialog) ---- */
       await page.evaluate(() => { show('dz'); const c = DZ.cards.find(x => x.id === 'acne'); DZ_UI.state.view = 'cards'; DZ_UI.state.card = c.id; c.steps.forEach((s, i) => { DZ_UI.state.open[c.id + ':' + i] = true; }); DZ_UI.render(); });
@@ -259,7 +264,7 @@ const onDisk = (deck, n, printed) => { const r = P.resolve(deck, n, printed); re
                      (b.firstElementChild ? ' has markup inside' : '')};
       }), sel);
       let all = [];
-      for (const v of ['ref', 'tell', 'guide', 'atlas', 'drugs', 'diagrams']) { await page.evaluate(v => show(v), v); await settle(800); await page.waitForFunction(v => document.querySelectorAll('#v-' + v + ' .slk').length > 0, v, {timeout: 8000}).catch(() => {}); await settle(300); const r = await sweep('#v-' + v + ' .slk'); r.forEach(x => { x.v = v; }); all = all.concat(r); }
+      for (const v of ['ref', 'tell', 'guide', 'atlas', 'drugs', 'diagrams']) { await page.evaluate(v => show(v), v); await settle(800); if (v === 'drugs') { await page.evaluate(() => document.querySelectorAll('#v-drugs details.dlrowd').forEach((d, i) => { if (i < 60) d.open = true; })); await settle(600); } await page.waitForFunction(v => document.querySelectorAll('#v-' + v + ' .slk').length > 0, v, {timeout: 8000}).catch(() => {}); await settle(300); const r = await sweep('#v-' + v + ' .slk'); r.forEach(x => { x.v = v; }); all = all.concat(r); }
       const per = v => all.filter(x => x.v === v).length;
       await page.evaluate(() => show('dz'));
       const dz = await page.evaluate(() => ({cards: DZ.cards.map(c => [c.id, (c.patients || []).length]), drugs: Object.keys(DZ.drugs), terms: Object.keys(DZ.terms)}));
@@ -511,11 +516,12 @@ const onDisk = (deck, n, printed) => { const r = P.resolve(deck, n, printed); re
       /* ---- the practice-exam clock starts no pass ---- */
       const tick = await page.evaluate(async () => {
         for (const v of ['ref', 'tell', 'guide', 'atlas', 'drugs', 'diagrams', 'dz', 'gaps', 'settings', 'topics']) { show(v); await new Promise(r => setTimeout(r, 250)); }
+        await new Promise(r => setTimeout(r, 4000));   // the last re-link of Guides ends 0.8 to 1.5 s after it is drawn; the exam clock is measured after that
         show('exam'); beginExam(); await new Promise(r => setTimeout(r, 1200));
         const c = document.getElementById('exClock'), t0 = c ? c.textContent : '', a = SLIDE_UI.stats.runs;
         await new Promise(r => setTimeout(r, 6000));
         const out = {runs: SLIDE_UI.stats.runs - a, clock: !!c, moved: !!c && c.textContent !== t0, drawn: document.querySelectorAll('main > section').length, inSkip: !!c && !!c.closest('.clock')};
-        show('ref'); await new Promise(r => setTimeout(r, 400)); const b = SLIDE_UI.stats.runs;
+        show('ref'); await new Promise(r => setTimeout(r, 2500)); const b = SLIDE_UI.stats.runs;   // the pass that links Reference after it is drawn ends within about 1.5 s
         await new Promise(r => setTimeout(r, 3000));
         out.away = SLIDE_UI.stats.runs - b;
         EX = null; show('topics');

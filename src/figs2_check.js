@@ -122,7 +122,7 @@ for (const s of ['93%', '97%', '98%', '370', 'UVB']) check(drawn('fig-spf').incl
   const sm = lineAfter('Dr. Smith (Sun 8):'), sk = lineAfter('Dr. Sikazwe (DPAW 62–64):');
   check(/UVB 290–320 nm, UVA 320–400 nm/.test(sm) && !/280|315/.test(sm), 'fig-block-vs-screen: Dr. Smith\'s line has her limits only');
   check(/UVB 280–315 nm, UVA 315–400 nm/.test(sk) && !/290|320/.test(sk), 'fig-block-vs-screen: Dr. Sikazwe\'s line has his printed limits only');
-  check(/315 or 320/.test(DIA['fig-block-vs-screen']) && /OPEN_QUESTIONS/.test(DIA['fig-block-vs-screen']), 'fig-block-vs-screen: his "315 or 320" is named as held');
+  check(/315 or 320/.test(DIA['fig-block-vs-screen']) && /printed limits are used here/.test(DIA['fig-block-vs-screen']), 'fig-block-vs-screen: his "315 or 320" is named, with the printed limits used (the note no longer points to a project file)');
 }
 
 // 5. Guide places and walkthrough references
