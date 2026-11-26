@@ -202,6 +202,7 @@
   function take(recs){
     for (let i = 0; i < recs.length; i++) {
       const r = recs[i];
+      { const el = r.target && (r.target.nodeType === 1 ? r.target : r.target.parentElement); if (el && el.closest && el.closest('.clock')) continue; }   // the practice-exam clock ticks every second and holds no code or file name
       if (r.type === 'characterData') { if (eligible(r.target)) pending.add(r.target); }
       else for (let j = 0; j < r.addedNodes.length; j++) collect(r.addedNodes[j]);
     }
