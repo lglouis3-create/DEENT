@@ -521,7 +521,7 @@ const onDisk = (deck, n, printed) => { const r = P.resolve(deck, n, printed); re
         const c = document.getElementById('exClock'), t0 = c ? c.textContent : '', a = SLIDE_UI.stats.runs;
         await new Promise(r => setTimeout(r, 6000));
         const out = {runs: SLIDE_UI.stats.runs - a, clock: !!c, moved: !!c && c.textContent !== t0, drawn: document.querySelectorAll('main > section').length, inSkip: !!c && !!c.closest('.clock')};
-        show('ref'); await new Promise(r => setTimeout(r, 400)); const b = SLIDE_UI.stats.runs;
+        show('ref'); await new Promise(r => setTimeout(r, 2500)); const b = SLIDE_UI.stats.runs;   // the pass that links Reference after it is drawn ends within about 1.5 s
         await new Promise(r => setTimeout(r, 3000));
         out.away = SLIDE_UI.stats.runs - b;
         EX = null; show('topics');
