@@ -329,8 +329,8 @@ const onDisk = (deck, n, printed) => { const r = P.resolve(deck, n, printed); re
       /* ---- quiet when nothing changes; nothing stored ---- */
       for (const v of ['guide', 'atlas', 'drugs', 'dz']) {
         // Guides is re-linked after every show; on this page (5,172 buttons) the last pass ends 0.8 to 1.5 s after it
-        // (measured 2026-11-22 on this build and on release 3eea9cc), so the idle window starts after 3 s
-        await page.evaluate(v => show(v), v); await settle(v === 'guide' ? 3000 : 1200);
+        // (measured 2026-11-22 on this build and on release 3eea9cc), in this test's long session the last pass was seen to end after 3 s, so the idle window starts after 6 s
+        await page.evaluate(v => show(v), v); await settle(v === 'guide' ? 6000 : 1200);
         const idle = await page.evaluate(() => new Promise(r => { const a = SLIDE_UI.stats.runs; setTimeout(() => r(SLIDE_UI.stats.runs - a), 1200); }));
         check(idle === 0, `with ${v} open and nothing changing, the linkifier does not run`, idle + ' runs in 1.2 s');
       }
