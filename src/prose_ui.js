@@ -78,5 +78,15 @@
     }).observe(view, {childList: true, subtree: true});
   }
   VIEWS.forEach(id => { const v = document.getElementById(id); if (v) watch(v); });
+  // a view is split before the caller goes on (Back puts the scroll position back right after show(), and the page must
+  // already have its final height then)
+  if (typeof show === 'function') {
+    const os = show;
+    show = function () {
+      const r = os.apply(this, arguments);
+      try { VIEWS.forEach(id => { const v = document.getElementById(id); if (v && !v.hidden && !v.classList.contains('hide')) scan(v); }); } catch (e) { /* the observer splits it */ }
+      return r;
+    };
+  }
   window.PROSE_UI = {scan, cuts};
 })();

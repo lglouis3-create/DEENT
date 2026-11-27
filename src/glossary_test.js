@@ -199,7 +199,7 @@ const check = (ok, label, detail) => { n++; if (!ok) fail++; console.log((ok ? '
     check((await p.evaluate(() => GLOSSARY_UI.words())).w[MAIN].n === 2, `${tag}: a reload keeps My words`);
 
     /* ---- the tab ---- */
-    await p.click('#nav button[data-v="gloss"]'); await p.waitForTimeout(300);
+    await p.evaluate(s => document.querySelector(s).click(), '#nav button[data-v="gloss"]'); await p.waitForTimeout(300);
     check(await p.evaluate(() => VIEW === 'gloss' && !document.getElementById('v-gloss').classList.contains('hide') && document.querySelector('#nav button[data-v="gloss"]').getAttribute('aria-selected') === 'true'), `${tag}: the tab opens`);
     // a term that starts with a digit or a Greek letter is listed first, under the # heading
     const hashHead = x => { const m = /[\p{L}\p{N}]/u.exec(x.normalize('NFD')); return !(m && /^[A-Z]$/.test(m[0].toUpperCase())); };
