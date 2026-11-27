@@ -66,7 +66,13 @@
 #v-topics .sf-earlier{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:10px 0 0;font-size:13.5px;color:var(--text-dim)}
 #v-topics .sf-earlier button{min-height:44px;padding:0 14px;font:inherit;font-size:14px;color:var(--text);background:var(--paper);border:1px solid var(--line);border-radius:99px;cursor:pointer}
 #v-topics .sf-earlier button[aria-pressed="true"]{border-color:var(--accent,#245aa8);background:var(--accent-soft,#eef4fb);font-weight:600}
-#v-topics .sf-steps{margin:12px 0 0;font-size:14px;color:var(--text-dim)}
+#v-topics .sf-steps{margin:4px 0 10px;font-size:14px;color:var(--text-dim)}
+#v-topics .sf-exams{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:0 0 10px;font-size:13.5px;color:var(--text-dim)}
+#v-topics .sf-exams button{min-height:44px;padding:0 14px;font:inherit;font-size:14px;color:var(--text);background:var(--paper);border:1px solid var(--line);border-radius:99px;cursor:pointer}
+#v-topics .sf-exams button[aria-pressed="true"]{border-color:var(--accent,#245aa8);background:var(--accent-soft,#eef4fb);font-weight:600}
+#startflow.sf-sel .sf-prof .sf-subj,#startflow.sf-sel .sf-prof .sf-meta{display:none}
+#startflow.sf-sel .sf-profs{grid-template-columns:repeat(auto-fit,minmax(104px,1fr))}
+#v-topics .sf-hint{margin:10px 0 0;font-size:14px;color:var(--text-dim)}
 #v-topics .sf-steps b{color:var(--text)}
 #v-topics .sf-list{margin:14px 0 0}
 #v-topics .sf-list h4{margin:0 0 4px;font-size:16px}
@@ -82,7 +88,7 @@
 #v-topics .sf-bar{display:flex;flex:0 0 84px;height:7px;border-radius:4px;background:var(--line-soft,#e6ebf1);overflow:hidden}
 #v-topics .sf-bar i{display:block;height:100%}
 #v-topics .sf-bar .r{background:var(--ok,#2e7d5b)}#v-topics .sf-bar .w{background:#c0392b}#v-topics .sf-bar .a{background:#8a97a8}
-#v-topics .sf-next{margin:16px 0 0;background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:12px 14px}
+#v-topics .sf-next{margin:0 0 14px;background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:12px 14px}
 #v-topics .sf-next h4{margin:0 0 4px;font-size:15px}
 #v-topics .sf-next p{margin:0 0 8px;font-size:14px}
 #v-topics .sf-next button{min-height:44px;padding:0 16px;font:inherit;font-weight:600;border-radius:10px;border:1px solid var(--ink);background:var(--ink);color:#fff;cursor:pointer}
@@ -127,16 +133,16 @@
 
   // professors with topics, in the course's order; the subject line from the decks of the active exam (or all)
   function professors(bt) {
-    const act = activeNo();
+    const act = curExam();
     const order = (COURSE.professors || []).slice();
     TOPICS.forEach(t => { if (t.prof && !order.includes(t.prof)) order.push(t.prof); });
     return order.map(p => {
       const ts = TOPICS.filter(t => t.prof === p && (bt[t.id] || []).length);
       if (!ts.length) return null;
       const core = ts.filter(t => !t.optional);
-      const onExam = core.some(t => examNo(t) === act);
+      const onExam = act == null ? core.length > 0 : core.some(t => examNo(t) === act);
       const dk = [], seen = new Set();
-      (onExam ? core.filter(t => examNo(t) === act) : core).forEach(t => { const d = deckOf(t); if (d && !seen.has(d.id)) { seen.add(d.id); dk.push(d); } });
+      (onExam && act != null ? core.filter(t => examNo(t) === act) : core).forEach(t => { const d = deckOf(t); if (d && !seen.has(d.id)) { seen.add(d.id); dk.push(d); } });
       let subject = '';
       if (dk.length === 1) subject = deckName(dk[0]);
       else if (dk.length > 1) subject = dk.map(d => deckName(d).split(':')[0]).join(', ');
@@ -146,12 +152,19 @@
   }
 
   let SEL = null;                       // the professor whose topics are listed (this visit only)
+  let EXN;                              // the exam chosen with the "Study for" chips (this visit only): undefined = the active exam, 0 = all exams
+  const curExam = () => (EXN === undefined ? activeNo() : (EXN === 0 ? null : EXN));
+  function examList(bt) {
+    const set = new Set();
+    TOPICS.forEach(t => { if (!t.optional && (bt[t.id] || []).length) { const n = examNo(t); if (n != null) set.add(n); } });
+    return [...set].sort((a, b) => b - a);
+  }
 
   function topicList(pf, bt, tally) {
-    const act = activeNo();
-    const rank = t => (t.optional ? 2 : examNo(t) === act ? 0 : 1);
+    const act = curExam(), ref = act == null ? activeNo() : act;      // with all exams listed, the active exam's topics still come first
+    const rank = t => (t.optional ? 2 : examNo(t) === ref ? 0 : 1);
     const groups = [];
-    pf.ts.forEach(t => {
+    pf.ts.filter(t => act == null || (!t.optional && examNo(t) === act)).forEach(t => {
       const key = t.optional ? '~optional' : (t.deck || '~');
       let g = groups.find(x => x.key === key);
       if (!g) { const d = deckOf(t); g = {key, d, rank: rank(t), ts: []}; groups.push(g); }
@@ -159,7 +172,7 @@
     });
     groups.sort((a, b) => a.rank - b.rank);        // stable: deck order inside a rank
     const row = t => {
-      const tl = tally(bt[t.id]), isAct = !t.optional && examNo(t) === act;
+      const tl = tally(bt[t.id]), isAct = !t.optional && examNo(t) === ref;
       const en = examNo(t);
       const tag = t.optional ? 'Optional' : (en != null ? 'Exam ' + en : '');
       return `<button type="button" class="sf-topic${isAct ? ' sf-act' : ''}" data-sf-topic="${esc(t.id)}">
@@ -205,31 +218,30 @@
   function html() {
     const bt = byTopic(), tally = tallies(), profs = professors(bt);
     if (!profs.length) return '';
-    const act = activeNo();
-    const main = profs.filter(p => p.onExam), earlier = profs.filter(p => !p.onExam);
-    const primary = main.length ? main : profs;
+    const primary = profs.filter(p => p.onExam);
+    if (SEL && !primary.some(p => p.name === SEL)) SEL = null;
     const card = p => {
       const tl = tally([].concat(...p.core.map(t => bt[t.id])));
       return `<button type="button" class="sf-prof" data-sf-prof="${esc(p.name)}" aria-pressed="${SEL === p.name}">
         <b>${esc(dr(p.name))}</b><span class="sf-subj">${esc(p.subject)}</span>
         <span class="sf-meta">${p.core.length} topics · ${p.nq} questions${tl.done ? ` · ${tl.done} answered` : ''}</span></button>`;
     };
-    const cur = SEL && profs.find(p => p.name === SEL);
+    const cur = SEL && primary.find(p => p.name === SEL);
     const nb = nextBest(bt);
-    const nbHtml = !nb
-      ? `<p class="sf-empty">Nothing to review yet. Pick a professor to begin.</p>`
-      : nb.none
-        ? `<p class="sf-empty">Everything you have answered is solid. Pick a professor to keep going.</p>`
-        : `<p><b>${esc(nb.name)}</b><br>${nb.qs.length} question${nb.qs.length === 1 ? '' : 's'} on ${nb.concepts} concept${nb.concepts === 1 ? '' : 's'} you missed or were unsure about.</p>
-           <button type="button" data-sf-review="1">Review these ${nb.qs.length}</button>`;
-    return `<section id="startflow" aria-label="Where to start">
+    const nbHtml = !nb || nb.none ? '' : `<div class="sf-next" id="sfnext"><h4>Next best thing to review</h4>
+        <p><b>${esc(nb.name)}</b><br>${nb.qs.length} question${nb.qs.length === 1 ? '' : 's'} on ${nb.concepts} concept${nb.concepts === 1 ? '' : 's'} you missed or were unsure about.</p>
+        <button type="button" data-sf-review="1">Review these ${nb.qs.length}</button></div>`;
+    const exams = examList(bt), ce = curExam();
+    const chips = exams.length > 1 ? `<div class="sf-exams" role="group" aria-label="Study for">
+        <span>Study for</span>${exams.map(n => `<button type="button" data-sf-exam="${n}" aria-pressed="${ce === n}">Exam ${n}</button>`).join('')}
+        <button type="button" data-sf-exam="0" aria-pressed="${ce == null}">All exams</button></div>` : '';
+    return `<section id="startflow" class="${cur ? 'sf-sel' : ''}" aria-label="Where to start">
+      ${nbHtml}
       <h3>Where do you want to start?</h3>
+      <p class="sf-steps">Pick a professor, then a topic. Each topic has three steps: <b>learn</b> it, <b>check yourself</b>, then <b>challenge</b> yourself.</p>
+      ${chips}
       <div class="sf-profs">${primary.map(card).join('')}</div>
-      ${main.length && earlier.length ? `<div class="sf-earlier"><span>Earlier exam${earlier.length === 1 ? '' : 's'}:</span>${earlier.map(p =>
-        `<button type="button" data-sf-prof="${esc(p.name)}" aria-pressed="${SEL === p.name}">${esc(dr(p.name))} · Exam ${p.exams.join(', ')}</button>`).join('')}</div>` : ''}
-      <p class="sf-steps">Each topic has three steps: <b>Learn</b> it (read or listen to the guide), <b>check yourself</b> with practice questions, then <b>challenge</b> yourself with a timed exam paper.</p>
-      ${cur ? topicList(cur, bt, tally) : ''}
-      <div class="sf-next" id="sfnext"><h4>Next best thing to review</h4>${nbHtml}</div>
+      ${cur ? topicList(cur, bt, tally) : (primary.length ? `<p class="sf-hint">Tap a professor to see the topics.</p>` : '')}
     </section>`;
   }
 
@@ -243,9 +255,14 @@
     const tmp = document.createElement('div'); tmp.innerHTML = h;
     const el = tmp.firstElementChild;
     if (h2) h2.insertAdjacentElement('afterend', el); else root.insertBefore(el, root.firstChild);
+    // the four quick routes of the core sit right under this block as the second choice, not as a second "Start here"
+    const sh = root.querySelector('#startHere');
+    if (sh) { el.insertAdjacentElement('afterend', sh); const hd = sh.querySelector('.starthead'); if (hd) hd.textContent = 'Or go straight to'; }
   }
   document.addEventListener('click', ev => {
     const t = ev.target && ev.target.closest ? ev.target.closest('#startflow') : null; if (!t) return;
+    const eb = ev.target.closest('[data-sf-exam]');
+    if (eb) { EXN = +eb.dataset.sfExam; paint(); const k = document.querySelector(`#startflow [data-sf-exam="${eb.dataset.sfExam}"]`); if (k && k.focus) k.focus({preventScroll: true}); return; }
     const pb = ev.target.closest('[data-sf-prof]');
     if (pb) { SEL = SEL === pb.dataset.sfProf ? null : pb.dataset.sfProf; paint(); const l = document.getElementById('sflist');
       const keep = document.querySelector(`#startflow [data-sf-prof="${CSS_ESC(SEL || pb.dataset.sfProf)}"]`); if (keep && keep.focus) keep.focus({preventScroll: true});

@@ -7291,6 +7291,13 @@ Ciliary body epithelium (the cells that make aqueous humor): beta and alpha-2 re
         fold.body.appendChild(cards[i]);
       });
       groupByExam(el, cards, shown, e);
+      // the optional topic is not part of any exam: it goes after the last exam folder, not between two of them
+      const folds = el.querySelectorAll('section.examfold');
+      if (folds.length) {
+        const last = folds[folds.length - 1];
+        const opt = cards.filter((c, i) => shown[i] && shown[i].optional);
+        for (let k = opt.length - 1; k >= 0; k--) last.after(opt[k]);
+      }
     } catch (err) { /* the list stays as the core drew it */ }
     return r;
   };

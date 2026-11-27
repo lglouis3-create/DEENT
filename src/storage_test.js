@@ -171,7 +171,7 @@ const answerOne = async page => {
     // so the wait below cannot end on it.
     await page.evaluate(() => { window.__before = 1; answerNow(); sessionStorage.setItem('__waiting', saveTimer && window.__stretched > 0 ? '1' : '0'); location.reload(); })
       .catch(e => { if(!/Execution context was destroyed|navigat/i.test(e.message)) throw e; });
-    await page.waitForFunction(() => !window.__before && document.querySelectorAll('#nav button').length > 3, null, {timeout: 15000});
+    await page.waitForFunction(() => !window.__before && typeof DB !== 'undefined' && document.querySelectorAll('#nav button').length > 3, null, {timeout: 15000});
     const {n, waiting} = await page.evaluate(() => ({n: DB.answers.length, waiting: sessionStorage.getItem('__waiting') === '1'}));
     check(waiting && n === 1, 'an answer followed at once by a reload is kept (it was still waiting to be saved)', {waiting, n});
     // an answer, then the tab closed at once, with page.close(), which waits for the page to close.

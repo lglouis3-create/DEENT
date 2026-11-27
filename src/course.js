@@ -420,6 +420,8 @@ const COURSE = {
           // phones (course-level presentation, 2026-11-08)
           'tables_ui.js',
           // one sanitizer for every view: no transcript codes, file names or working notes on screen (2026-11-23)
+          // a long paragraph in Guides, Reference and Tell apart shown one sentence to a line (Louis's layout rule, 2026-11-26)
+          'prose_ui.js',
           'clean_ui.js',
           // Quiz: "One at a time | All on one page" (course-level, Louis 2026-11-08, after his
           // Intro to Pharmacology drill's layout toggle; temporary until the kit has it)

@@ -36,7 +36,7 @@ const check = (ok, label, detail) => { n++; if (!ok) fail++; console.log((ok ? '
     check(await p.evaluate(() => document.querySelectorAll('#v-topics .mdbar .mdbtn').length === 2), `${tag}: Topics has the two-button switch`);
     check(await p.evaluate(() => { const bar = document.querySelector('#v-topics .mdbar'), t = document.querySelector('#v-topics details.topic'); return !!bar && !!t && !!(bar.compareDocumentPosition(t) & 4); }), `${tag}: the switch is above the topic list`);
     check(await p.evaluate(() => /quiz started from a topic or section/i.test(document.querySelector('#v-topics .mdbar .mdnote').textContent)), `${tag}: one line says what Learn affects`);
-    check(await p.evaluate(() => document.querySelector('#nav button[data-v="gaps"]').textContent === 'Review next'), `${tag}: the tab says Review next in Learn`);
+    check(await p.evaluate(() => (b => (b.querySelector(".xm-l") || b).textContent)(document.querySelector('#nav button[data-v="gaps"]')) === 'Review next'), `${tag}: the tab says Review next in Learn`);
     check(await noScroll(), `${tag}: no sideways scroll on Topics`);
 
     // the level function and the topic's pools
@@ -157,7 +157,7 @@ const check = (ok, label, detail) => { n++; if (!ok) fail++; console.log((ok ? '
     const examTopics = await p.evaluate(() => { const c = document.getElementById('v-topics').cloneNode(true); c.querySelectorAll('.mdbar').forEach(e => e.remove()); return c.innerHTML; });
     check(learnTopics === examTopics, `${tag}: the Topics list and the filter chips are the same in both modes`);
     check(await p.evaluate(f => JSON.stringify(FILTER) === f, filterBefore), `${tag}: the filter is untouched by the mode`);
-    check(await p.evaluate(() => document.querySelector('#nav button[data-v="gaps"]').textContent === 'Weak spots'), `${tag}: the tab says Weak spots in Exam`);
+    check(await p.evaluate(() => (b => (b.querySelector(".xm-l") || b).textContent)(document.querySelector('#nav button[data-v="gaps"]')) === 'Weak spots'), `${tag}: the tab says Weak spots in Exam`);
     await go('gaps');
     check(await p.evaluate(() => document.querySelector('#v-gaps h2').textContent.trim() === 'Weak spots'), `${tag}: Weak spots heading in Exam`);
 
