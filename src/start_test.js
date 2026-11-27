@@ -36,17 +36,23 @@ const MORE = {dz: 'Diseases', atlas: 'Atlas', diagrams: 'Diagrams', tell: 'Tell 
       const act = parseInt(String(EXAM.id).replace(/\D/g, ''), 10);
       const profsWith = [...new Set(TOPICS.filter(t => QUESTIONS.some(q => q.topic === t.id)).map(t => t.prof))];
       const onExam = [...new Set(TOPICS.filter(t => !t.optional && (TOPIC_DECKS.find(d => d.id === t.deck) || {}).exam === act).map(t => t.prof))];
-      return {head: (f.querySelector('h3') || {}).textContent, cards, earlier, profsWith, onExam,
+      return {act, head: (f.querySelector('h3') || {}).textContent, cards, earlier, profsWith, onExam,
         above: !!(h2 && h2.nextElementSibling === f), listStays: document.querySelectorAll('#v-topics details.topic').length > 5,
-        steps: /Learn/.test(f.querySelector('.sf-steps').textContent) && /check yourself/i.test(f.querySelector('.sf-steps').textContent) && /challenge/i.test(f.querySelector('.sf-steps').textContent),
+        steps: /learn/i.test(f.querySelector('.sf-steps').textContent) && /check yourself/i.test(f.querySelector('.sf-steps').textContent) && /challenge/i.test(f.querySelector('.sf-steps').textContent),
         next: (f.querySelector('#sfnext') || {}).textContent};
     });
     L.check(s0.head === 'Where do you want to start?' && s0.above, tag('the Start screen heads the Topics tab'), s0);
     L.check(JSON.stringify(s0.cards.slice().sort()) === JSON.stringify(s0.onExam.slice().sort()) && s0.cards.length >= 1, tag('one card per professor of the active exam'), s0);
-    L.check(s0.cards.length + s0.earlier.length === s0.profsWith.length, tag('professors of earlier exams are reachable'), s0);
+    const ex0 = await page.evaluate(() => ({chips: [...document.querySelectorAll('#startflow [data-sf-exam]')].map(b => b.dataset.sfExam + ':' + b.getAttribute('aria-pressed')),
+      want: [...new Set(TOPICS.filter(t => !t.optional && QUESTIONS.some(q => q.topic === t.id)).map(t => (TOPIC_DECKS.find(d => d.id === t.deck) || {}).exam).filter(n => n != null))].sort((a, b) => b - a)}));
+    L.check(ex0.chips.length === ex0.want.length + 1 && ex0.want.every((n, i) => ex0.chips[i] === n + ':' + (n === s0.act ? 'true' : 'false')) && ex0.chips[ex0.chips.length - 1] === '0:false', tag('a "Study for" chip per exam and one for all exams, the active exam pressed'), ex0);
+    await page.click('#startflow [data-sf-exam="0"]');
+    const allP = await page.evaluate(() => [...document.querySelectorAll('#startflow .sf-prof')].map(b => b.dataset.sfProf));
+    L.check(allP.length === s0.profsWith.length, tag('"All exams" lists every professor, those of the earlier exams included'), {allP, profsWith: s0.profsWith});
+    await page.click(`#startflow [data-sf-exam="${s0.act}"]`);
     L.check(s0.listStays, tag('the topic list is still below'));
     L.check(s0.steps, tag('the three steps are explained under the cards'));
-    L.check(/Nothing to review yet\. Pick a professor to begin\./.test(s0.next || ''), tag('Next best thing to review says so when nothing is answered'), s0.next);
+    L.check(!s0.next, tag('Next best thing to review is not shown when nothing is answered'), s0.next);
     await shot('a');
 
     /* ---- a professor's topics, every exam ---- */
@@ -54,6 +60,7 @@ const MORE = {dz: 'Diseases', atlas: 'Atlas', diagrams: 'Diagrams', tell: 'Tell 
       const ex = t => (TOPIC_DECKS.find(d => d.id === t.deck) || {}).exam;
       const p = [...new Set(TOPICS.filter(t => ex(t) === act).map(t => t.prof))].find(p => TOPICS.some(t => t.prof === p && !t.optional && ex(t) !== act && ex(t) != null)) || TOPICS[0].prof;
       return p; });
+    await page.click('#startflow [data-sf-exam="0"]');
     await page.click(`#startflow .sf-prof[data-sf-prof="${target}"]`);
     const l1 = await page.evaluate(p => {
       const rows = [...document.querySelectorAll('#sflist .sf-topic')];

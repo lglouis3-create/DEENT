@@ -60,9 +60,9 @@
     if (exact) {
       const top = Array.isArray(EXAM.factsMain) ? EXAM.factsMain : null;
       facts.forEach(f => (top && !top.includes(f[0]) ? more : main).push([f[0], e(f[1])]));
-    } else if (EXAM.blurb) main.push(['About', e(EXAM.blurb) + '.']);
+    } else if (EXAM.blurb) more.push(['About', e(EXAM.blurb) + '.']);   // the full paragraph sits under "More about this exam", closed
     const req = typeof requiredQs === 'function' ? requiredQs().length : QUESTIONS.length;
-    main.push(['Bank', `${QUESTIONS.length} questions across ${conceptsIn(QUESTIONS).length} concepts${
+    more.push(['Bank', `${QUESTIONS.length} questions across ${conceptsIn(QUESTIONS).length} concepts${
       req < QUESTIONS.length ? `, ${QUESTIONS.length - req} of them in optional topics outside ${e(EXAM.name)}` : ''}`]);
     return [main, more];
   }

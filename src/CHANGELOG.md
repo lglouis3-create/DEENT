@@ -8,6 +8,22 @@ characters.
 
 Every update adds its bullets here in the same commit that makes the change.
 
+## 2026-11-27
+
+- Topic names on the Start tab are shorter, so each fits on one or two lines.
+- Fourteen Sikazwe brand-name questions are removed; he does not ask that way.
+
+## 2026-11-26 (a clearer Start tab, Learn and Exam modes, hundreds of recall questions)
+- Start tab: choose Exam 3, Exam 2, Exam 1 or all exams, then a professor, then a topic.
+- Six tabs in the bar; Atlas, Diagrams, Reference, Tell apart, Diseases and the rest are under More.
+- Learn mode starts a topic with the facts the professor expects you to know; Exam mode keeps the harder questions.
+- About 500 new recall questions: brand and generic names, directions, counseling points and specific facts.
+- Each topic opens a study page with the guide, the easy questions and the challenge questions.
+- New drawing: watch aqueous humor flow through a realistic eye, step by step with narration.
+- Drug list and Diseases tabs reorganized; long Guide paragraphs split into short lines.
+- Dr. Smith's six glaucoma poll questions added and starred.
+- Lecture time codes and file names no longer show in the text; What's new can be hidden in Settings.
+
 ## 2026-11-22 (Exam 3 stars for all three professors, fill-in-the-blank mechanisms)
 - Starred only, Exam 3: Guides, Reference and Tell apart now star Dr. Lam's and Dr. Sikazwe's material too.
 - New Guides page: Dr. Smith's fill-in-the-blank mechanisms, 23 blanks to type, the 13 most likely starred.

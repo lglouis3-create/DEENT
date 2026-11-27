@@ -119,10 +119,10 @@ QUESTIONS.push(
  tags:["foundation", "recall", "fact"], source:"slide",
  stem:"What strength of carbamide peroxide is used as the ear-wax drop?",
  options:[
-  {t:"3%", correct:false, why:"The ear-wax product is 6.5%, not 3%."},
+  {t:"5%", correct:false, why:"The ear-wax product is 6.5%, not 5%."},
   {t:"6.5%", correct:true, why:"Slide 14 lists carbamide peroxide 6.5% in anhydrous glycerin."},
-  {t:"10%", correct:false, why:"The ear-wax product is 6.5%, not 10%."},
-  {t:"15%", correct:false, why:"The ear-wax product is 6.5%, not 15%."}],
+  {t:"6%", correct:false, why:"The ear-wax product is 6.5%, not 6%."},
+  {t:"7.5%", correct:false, why:"The ear-wax product is 6.5%, not 7.5%."}],
  teach:"The ear-wax product is carbamide peroxide 6.5% in anhydrous glycerin.",
  cite:"Lecture 13 (Lam_OticDisorders_slides.pdf) slide 14 11/20"},
 
@@ -273,7 +273,7 @@ QUESTIONS.push(
  tags:["foundation", "recall", "counsel"], source:"slide",
  stem:"What should a patient do after bathing or showering to prevent water-clogged ears?",
  options:[
-  {t:"Dry with a cotton swab", correct:false, why:"Swabs pushed into the canal are the wrong method and a risk factor for wax impaction."},
+  {t:"Dry with a cotton swab", correct:false, why:"Dr. Lam said not to put Q-tips or similar objects into the ear; slide 29 lists wiping the ears well with a towel."},
   {t:"Use an ear candle", correct:false, why:"Ear candles are not recommended."},
   {t:"Instill carbamide peroxide", correct:false, why:"Carbamide peroxide is for wax, not for water."},
   {t:"Wipe the ears with a towel", correct:true, why:"Slide 29 lists wiping the ears well with a towel after bathing or showering."}],

@@ -48,7 +48,7 @@ const BLANK = JSON.stringify({v: 1, skill: {}, reg: {}});
 
     check(!!(await p.$('#nav button[data-v="ftu"]')), `${tag}: the nav has an FTU tab`);
     check((await keyCount()) === 0, `${tag}: nothing is stored before an answer`);
-    await p.click('#nav button[data-v="ftu"]'); await p.waitForTimeout(300);
+    await p.evaluate(s => document.querySelector(s).click(), '#nav button[data-v="ftu"]'); await p.waitForTimeout(300);
     check(await p.evaluate(() => VIEW === 'ftu' && !document.getElementById('v-ftu').classList.contains('hide')), `${tag}: the tab opens`);
     check((await keyCount()) === 0, `${tag}: opening the tab stores nothing`);
 
@@ -203,7 +203,7 @@ const BLANK = JSON.stringify({v: 1, skill: {}, reg: {}});
     check(await p.evaluate(() => /^Answer the question first/.test(document.getElementById('ftutip').textContent)), `${tag}: before the answer a shape does not give its number away`);
 
     // reload keeps the record; a profile change gets its own
-    await p.reload(); await p.waitForTimeout(900); await p.click('#nav button[data-v="ftu"]'); await p.waitForTimeout(250);
+    await p.reload(); await p.waitForTimeout(900); await p.evaluate(s => document.querySelector(s).click(), '#nav button[data-v="ftu"]'); await p.waitForTimeout(250);
     const kept = await p.evaluate(() => FTU_UI.state.stats);
     check(kept.skill.region && kept.skill.region.r === 1 && kept.skill.region.w === 1 && kept.reg.arm.d === 1, `${tag}: the record survives a reload`, JSON.stringify(kept));
     const prof = await p.evaluate(() => { const was = PROFILE, a = JSON.stringify(FTU_UI.state.stats); PROFILE = was + '-other'; show('ftu'); const k = FTU_UI.key(), bl = JSON.stringify(FTU_UI.state.stats); PROFILE = was; show('ftu'); return [a, bl, k, JSON.stringify(FTU_UI.state.stats), was]; });
@@ -223,7 +223,7 @@ const BLANK = JSON.stringify({v: 1, skill: {}, reg: {}});
       on: document.querySelectorAll('.ftush.on').length, focus: document.activeElement === b, pressed: document.querySelector('.ftumodes [aria-pressed="true"]').dataset.mode}; });
     check(none.q === null && /^No misses to review/.test(none.text) && none.btn === 'Practice Mixed' && none.mode === 'all' && !none.form && none.on === 0 && none.focus && none.pressed === 'miss',
       `${tag}: right as many times as missed: nothing is owed, the view says so and offers Mixed`, JSON.stringify(none));
-    await p.reload(); await p.waitForTimeout(900); await p.click('#nav button[data-v="ftu"]'); await p.waitForTimeout(200); await p.click('.ftumodes [data-mode="miss"]'); await p.waitForTimeout(80);
+    await p.reload(); await p.waitForTimeout(900); await p.evaluate(s => document.querySelector(s).click(), '#nav button[data-v="ftu"]'); await p.waitForTimeout(200); await p.click('.ftumodes [data-mode="miss"]'); await p.waitForTimeout(80);
     check(await p.evaluate(() => !!document.getElementById('ftunone') && FTU_UI.state.stats.reg.arm.w === 2), `${tag}: after a reload nothing is owed still (the counts stay: 2 missed)`);
     await p.click('#ftunone button'); await p.waitForTimeout(80);
     check(await p.evaluate(() => FTU_UI.state.mode === 'all' && !!FTU_UI.state.q && !!document.getElementById('ftuin') && document.activeElement.id === 'ftuin'), `${tag}: its Mixed button gives a question`);
@@ -243,7 +243,7 @@ const BLANK = JSON.stringify({v: 1, skill: {}, reg: {}});
     let dm = [];
     for (const junk of ['not json', '{"v":1,"skill":{"region":{"r":"1","w":0}},"reg":{}}', '[1,2]', '{"v":1,"skill":{"region":{"r":1,"w":0,"d":0}},"reg":{"arm":7}}']) {
       await p.evaluate(j => localStorage.setItem(FTU_UI.key(), j), junk);
-      await p.reload(); await p.waitForTimeout(700); await p.click('#nav button[data-v="ftu"]'); await p.waitForTimeout(150);
+      await p.reload(); await p.waitForTimeout(700); await p.evaluate(s => document.querySelector(s).click(), '#nav button[data-v="ftu"]'); await p.waitForTimeout(150);
       const r = await p.evaluate(() => [JSON.stringify(FTU_UI.state.stats), !!document.getElementById('ftuin'), /NaN|undefined/.test(document.getElementById('v-ftu').textContent)]);
       if (r[0] !== BLANK || !r[1] || r[2]) dm.push(junk + ' -> ' + JSON.stringify(r));
     }
@@ -263,7 +263,7 @@ const BLANK = JSON.stringify({v: 1, skill: {}, reg: {}});
     await p.evaluate(() => { document.body.style.minHeight = '3000px'; window.scrollTo(0, 240); });
     const again = await p.evaluate(() => { const before = scrollY; show(VIEW); const i = document.getElementById('ftuin'); return [before, scrollY, i.value, document.activeElement === i, FTU_UI.state.q.regs[0]]; });
     check(again[0] === 240 && again[1] === 240 && again[2] === '7.' && again[3] && again[4] === 'leg', `${tag}: showing the tab again keeps the half-typed answer, the cursor and the scroll position`, JSON.stringify(again));
-    await p.click('#nav button[data-v="topics"]'); await p.waitForTimeout(150); await p.click('#nav button[data-v="ftu"]'); await p.waitForTimeout(150);
+    await p.evaluate(s => document.querySelector(s).click(), '#nav button[data-v="topics"]'); await p.waitForTimeout(150); await p.evaluate(s => document.querySelector(s).click(), '#nav button[data-v="ftu"]'); await p.waitForTimeout(150);
     const back = await p.evaluate(() => [document.getElementById('ftuin').value, FTU_UI.state.q.regs[0], scrollY]);
     check(back[0] === '7.' && back[1] === 'leg' && back[2] === 0, `${tag}: leaving for another tab and coming back keeps the half-typed answer (the page starts at the top, as every tab does)`, JSON.stringify(back));
     await p.click('.ftumodes [data-mode="region"]'); await p.waitForTimeout(80);
@@ -284,7 +284,7 @@ const BLANK = JSON.stringify({v: 1, skill: {}, reg: {}});
     const ctx = await b.newContext({viewport: {width: 390, height: 844}, colorScheme: 'dark'});
     const p = await ctx.newPage();
     p.on('pageerror', e => errs.push(e.message));
-    await p.goto(PAGE); await p.waitForTimeout(900); await p.click('#nav button[data-v="ftu"]'); await p.waitForTimeout(250);
+    await p.goto(PAGE); await p.waitForTimeout(900); await p.evaluate(s => document.querySelector(s).click(), '#nav button[data-v="ftu"]'); await p.waitForTimeout(250);
     const lum = c => { const [r, g, bl] = c.match(/[\d.]+/g).slice(0, 3).map(v => { v /= 255; return v <= 0.03928 ? v / 12.92 : Math.pow((v + 0.055) / 1.055, 2.4); }); return 0.2126 * r + 0.7152 * g + 0.0722 * bl; };
     const ratio = (a, c) => { const [x, y] = [lum(a), lum(c)].sort((m, k) => k - m); return (x + 0.05) / (y + 0.05); };
     const run = async wrong => {

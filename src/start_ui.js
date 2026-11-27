@@ -66,7 +66,13 @@
 #v-topics .sf-earlier{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:10px 0 0;font-size:13.5px;color:var(--text-dim)}
 #v-topics .sf-earlier button{min-height:44px;padding:0 14px;font:inherit;font-size:14px;color:var(--text);background:var(--paper);border:1px solid var(--line);border-radius:99px;cursor:pointer}
 #v-topics .sf-earlier button[aria-pressed="true"]{border-color:var(--accent,#245aa8);background:var(--accent-soft,#eef4fb);font-weight:600}
-#v-topics .sf-steps{margin:12px 0 0;font-size:14px;color:var(--text-dim)}
+#v-topics .sf-steps{margin:4px 0 10px;font-size:14px;color:var(--text-dim)}
+#v-topics .sf-exams{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:0 0 10px;font-size:13.5px;color:var(--text-dim)}
+#v-topics .sf-exams button{min-height:44px;padding:0 14px;font:inherit;font-size:14px;color:var(--text);background:var(--paper);border:1px solid var(--line);border-radius:99px;cursor:pointer}
+#v-topics .sf-exams button[aria-pressed="true"]{border-color:var(--accent,#245aa8);background:var(--accent-soft,#eef4fb);font-weight:600}
+#startflow.sf-sel .sf-prof .sf-subj,#startflow.sf-sel .sf-prof .sf-meta{display:none}
+#startflow.sf-sel .sf-profs{grid-template-columns:repeat(auto-fit,minmax(104px,1fr))}
+#v-topics .sf-hint{margin:10px 0 0;font-size:14px;color:var(--text-dim)}
 #v-topics .sf-steps b{color:var(--text)}
 #v-topics .sf-list{margin:14px 0 0}
 #v-topics .sf-list h4{margin:0 0 4px;font-size:16px}
@@ -82,7 +88,7 @@
 #v-topics .sf-bar{display:flex;flex:0 0 84px;height:7px;border-radius:4px;background:var(--line-soft,#e6ebf1);overflow:hidden}
 #v-topics .sf-bar i{display:block;height:100%}
 #v-topics .sf-bar .r{background:var(--ok,#2e7d5b)}#v-topics .sf-bar .w{background:#c0392b}#v-topics .sf-bar .a{background:#8a97a8}
-#v-topics .sf-next{margin:16px 0 0;background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:12px 14px}
+#v-topics .sf-next{margin:0 0 14px;background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:12px 14px}
 #v-topics .sf-next h4{margin:0 0 4px;font-size:15px}
 #v-topics .sf-next p{margin:0 0 8px;font-size:14px}
 #v-topics .sf-next button{min-height:44px;padding:0 16px;font:inherit;font-weight:600;border-radius:10px;border:1px solid var(--ink);background:var(--ink);color:#fff;cursor:pointer}
@@ -127,16 +133,16 @@
 
   // professors with topics, in the course's order; the subject line from the decks of the active exam (or all)
   function professors(bt) {
-    const act = activeNo();
+    const act = curExam();
     const order = (COURSE.professors || []).slice();
     TOPICS.forEach(t => { if (t.prof && !order.includes(t.prof)) order.push(t.prof); });
     return order.map(p => {
       const ts = TOPICS.filter(t => t.prof === p && (bt[t.id] || []).length);
       if (!ts.length) return null;
       const core = ts.filter(t => !t.optional);
-      const onExam = core.some(t => examNo(t) === act);
+      const onExam = act == null ? core.length > 0 : core.some(t => examNo(t) === act);
       const dk = [], seen = new Set();
-      (onExam ? core.filter(t => examNo(t) === act) : core).forEach(t => { const d = deckOf(t); if (d && !seen.has(d.id)) { seen.add(d.id); dk.push(d); } });
+      (onExam && act != null ? core.filter(t => examNo(t) === act) : core).forEach(t => { const d = deckOf(t); if (d && !seen.has(d.id)) { seen.add(d.id); dk.push(d); } });
       let subject = '';
       if (dk.length === 1) subject = deckName(dk[0]);
       else if (dk.length > 1) subject = dk.map(d => deckName(d).split(':')[0]).join(', ');
@@ -146,12 +152,96 @@
   }
 
   let SEL = null;                       // the professor whose topics are listed (this visit only)
+  let EXN;                              // the exam chosen with the "Study for" chips (this visit only): undefined = the active exam, 0 = all exams
+  const curExam = () => (EXN === undefined ? activeNo() : (EXN === 0 ? null : EXN));
+  function examList(bt) {
+    const set = new Set();
+    TOPICS.forEach(t => { if (!t.optional && (bt[t.id] || []).length) { const n = examNo(t); if (n != null) set.add(n); } });
+    return [...set].sort((a, b) => b - a);
+  }
 
+  const SHORT = {
+ "Alpha 2 agonists: imidazolines and their SAR": "Alpha 2 agonists",
+ "Assess: treatment goals and medication-related problems": "Assess: goals and drug problems",
+ "Carbonic anhydrase inhibitors: sulfonamides (zolamides)": "Carbonic anhydrase inhibitors",
+ "Case 1: itchy, watery eyes and three products": "Case: itchy, watery eyes",
+ "Cholinergic agents: carbamates, esters, organophosphates": "Cholinergic agents",
+ "Choosing the product for the right condition": "Choosing the right product",
+ "Collect: risk factors and drugs that raise eye pressure": "Collect: risk factors, drugs",
+ "Conjunctivitis: telling allergic, bacterial and viral apart": "Conjunctivitis: which type",
+ "Conjunctivitis: treatment of allergic conjunctivitis": "Allergic conjunctivitis: treatment",
+ "Direct-acting cholinergics: the slide 40 SAR": "Direct-acting cholinergics",
+ "Drug-induced glaucoma: corticosteroids and anticholinergics": "Drug-induced glaucoma",
+ "Drugs and preservatives that contribute to dry eye": "Drugs that worsen dry eye",
+ "Dry eye: non-drug measures and OTC lubricants": "Dry eye: non-drug and OTC",
+ "Dry eye: prescription drugs and their counseling": "Dry eye: prescription drugs",
+ "Dry eye: risk factors, drugs and presentation": "Dry eye: risks and presentation",
+ "Dual-acting agents (self-assessment question 2)": "Dual-acting agents",
+ "Ear drops: administration, counseling and follow up": "Ear drops: use and counseling",
+ "Earwax: cerumenolytics (docusate, carbamide peroxide)": "Earwax: cerumenolytics",
+ "Eye structure, tears and the pharmacology the eye shares with the body": "Eye structure and tears",
+ "Fluoride: hydroxyapatite to fluorapatite, remineralization, fluorosis": "Fluoride and remineralization",
+ "Glaucoma pathophysiology: aqueous humor, inflow and outflow": "Glaucoma: aqueous humor flow",
+ "Initial regimen and desensitizing ingredients": "Regimen and desensitizers",
+ "Instilling ear drops in adults and children": "Instilling ear drops",
+ "Mother and 12-year-old: wetness, fullness and discharge after swimming": "Case: mother and 12-year-old",
+ "Mouth rinses: fluoride, bicarbonate, peroxide, biguanides and quaternary ammoniums, benzocaine": "Mouth rinses",
+ "Netarsudil: IOP reduction, side effects, why last": "Netarsudil",
+ "Not on Exam 3: allergic conjunctivitis, steroids, direct-acting cholinergic SAR": "Not on Exam 3",
+ "Nuclear receptor binders: retinoid mechanism": "Retinoid mechanism",
+ "Nuclear receptor binders: corticosteroids": "Corticosteroid mechanism",
+ "Nuclear receptor binders: how they act": "Nuclear receptor binders",
+ "Ophthalmic drug classes, glaucoma and how eye drugs are absorbed": "Eye drug classes and absorption",
+ "Ophthalmic products in general: preservatives, order, lenses, technique, storage": "Eye products in general",
+ "Other ear disorders: ruptured eardrum, otitis media, foreign object, trauma": "Other ear disorders",
+ "Pathogenesis and drug mechanisms; medications for treating acne": "Acne: pathogenesis and drugs",
+ "Pathophysiology and how to tell them apart": "Pathophysiology and telling apart",
+ "Patient cases: referral and the stepwise plan": "Patient cases",
+ "PollEv: major pathology of AD, psoriasis and acne": "PollEv: major pathology",
+ "PollEv: the major pathology of each disease": "PollEv: major pathology",
+ "Primary closed-angle glaucoma (not tested)": "Closed-angle glaucoma (not tested)",
+ "Prostaglandin analogs, EP2 agonist and Rho kinase inhibitor": "Prostaglandin analogs and others",
+ "Refer every first-time patient, OTC tears meanwhile": "Referral and OTC tears",
+ "Risk factors, drugs that worsen it, presentation, plan": "Risks, presentation and plan",
+ "Self-assessment questions he kept (Dr. Sikazwe)": "Self-assessment questions",
+ "The itch rule and the differentiation table": "The itch rule",
+ "The sequence of drug classes and combination products": "Drug class sequence, combinations",
+ "Tooth decay, gingivitis and pain: toothpastes, rinses, fillings, whiteners": "Tooth decay, gingivitis, pain",
+ "Towel, earplugs, bathing cap, petroleum jelly cotton, hair dryer": "Non-drug swimmer's-ear measures",
+ "Triple antibiotic, complementary products and steroids": "Triple antibiotic and steroids",
+ "Waiting between products and the order of application": "Waiting and order of products",
+ "Waits between products and the order of application": "Waiting and order of products",
+ "Washcloth, ear-cleaning tool and irrigation": "Washcloth, tool, irrigation",
+ "Water-clogged ear: collect, assess and plan": "Water-clogged ear",
+ "What to monitor, who sees the patient, how often": "Monitoring and follow-up visits",
+ "Why carbonic anhydrase inhibitors cause metabolic acidosis": "CAIs and metabolic acidosis",
+ "Medications for treating atopic dermatitis": "Atopic dermatitis drugs",
+ "Cerumen: plan, implement and follow up": "Cerumen: plan and follow up",
+ "Implement: counseling and administration": "Implement: counseling, use",
+ "Cause, triggers and the lesion stages": "Cause, triggers, lesion stages",
+ "Discard after 30 days and refrigeration": "Discard after 30 days",
+ "Dry eye: goals, referral and exclusions": "Dry eye: goals and referral",
+ "Exclusions to self-care and severe pain": "Exclusions and severe pain",
+ "Non-drug measures matched to the cause": "Non-drug measures by cause",
+ "Review of skin anatomy: layers and sebum": "Skin anatomy review",
+ "Risk factors and drugs that cause it": "Risk factors and causing drugs",
+ "Topical agents, side effects and dosing": "Topical agents and dosing",
+ "Combination products and their dosing": "Combination products, dosing",
+ "Beta antagonists: aryloxypropanolamines": "Beta antagonists",
+ "Carbonic anhydrase inhibitors: last line": "CAIs: last line",
+ "Clonidine, apraclonidine, brimonidine": "Clonidine, apraclonidine, brimonidine",
+ "72-year-old with fullness and itching": "Case: 72-year-old",
+ "Follow up: monitoring efficacy and safety": "Follow up: efficacy and safety",
+ "Cold sores (herpes simplex labialis)": "Cold sores",
+ "Canker sores (recurrent aphthous stomatitis)": "Canker sores",
+ "Tooth hypersensitivity versus toothache": "Sensitivity versus toothache"
+};
+  const shortName = n => SHORT[n] || n;
   function topicList(pf, bt, tally) {
-    const act = activeNo();
-    const rank = t => (t.optional ? 2 : examNo(t) === act ? 0 : 1);
+    const act = curExam(), ref = act == null ? activeNo() : act;      // with all exams listed, the active exam's topics still come first
+    const rank = t => (t.optional ? 2 : examNo(t) === ref ? 0 : 1);
     const groups = [];
-    pf.ts.forEach(t => {
+    pf.ts.filter(t => act == null || (!t.optional && examNo(t) === act)).forEach(t => {
       const key = t.optional ? '~optional' : (t.deck || '~');
       let g = groups.find(x => x.key === key);
       if (!g) { const d = deckOf(t); g = {key, d, rank: rank(t), ts: []}; groups.push(g); }
@@ -159,11 +249,11 @@
     });
     groups.sort((a, b) => a.rank - b.rank);        // stable: deck order inside a rank
     const row = t => {
-      const tl = tally(bt[t.id]), isAct = !t.optional && examNo(t) === act;
+      const tl = tally(bt[t.id]), isAct = !t.optional && examNo(t) === ref;
       const en = examNo(t);
       const tag = t.optional ? 'Optional' : (en != null ? 'Exam ' + en : '');
       return `<button type="button" class="sf-topic${isAct ? ' sf-act' : ''}" data-sf-topic="${esc(t.id)}">
-        <span class="sf-tn">${esc(t.name)}</span>${tag ? `<span class="sf-tag">${esc(tag)}</span>` : '<span></span>'}
+        <span class="sf-tn" title="${esc(t.name)}">${esc(shortName(t.name))}</span>${tag ? `<span class="sf-tag">${esc(tag)}</span>` : '<span></span>'}
         <span class="sf-tl">${barHtml(tl)}<span>${bt[t.id].length} questions${tl.done ? ` · ${tl.done} answered, ${tl.r} right, ${tl.w} wrong` : ' · not started'}</span></span></button>`;
     };
     return `<div class="sf-list" id="sflist"><h4>${esc(dr(pf.name))}: pick a topic</h4>${groups.map(g =>
@@ -205,31 +295,30 @@
   function html() {
     const bt = byTopic(), tally = tallies(), profs = professors(bt);
     if (!profs.length) return '';
-    const act = activeNo();
-    const main = profs.filter(p => p.onExam), earlier = profs.filter(p => !p.onExam);
-    const primary = main.length ? main : profs;
+    const primary = profs.filter(p => p.onExam);
+    if (SEL && !primary.some(p => p.name === SEL)) SEL = null;
     const card = p => {
       const tl = tally([].concat(...p.core.map(t => bt[t.id])));
       return `<button type="button" class="sf-prof" data-sf-prof="${esc(p.name)}" aria-pressed="${SEL === p.name}">
         <b>${esc(dr(p.name))}</b><span class="sf-subj">${esc(p.subject)}</span>
         <span class="sf-meta">${p.core.length} topics · ${p.nq} questions${tl.done ? ` · ${tl.done} answered` : ''}</span></button>`;
     };
-    const cur = SEL && profs.find(p => p.name === SEL);
+    const cur = SEL && primary.find(p => p.name === SEL);
     const nb = nextBest(bt);
-    const nbHtml = !nb
-      ? `<p class="sf-empty">Nothing to review yet. Pick a professor to begin.</p>`
-      : nb.none
-        ? `<p class="sf-empty">Everything you have answered is solid. Pick a professor to keep going.</p>`
-        : `<p><b>${esc(nb.name)}</b><br>${nb.qs.length} question${nb.qs.length === 1 ? '' : 's'} on ${nb.concepts} concept${nb.concepts === 1 ? '' : 's'} you missed or were unsure about.</p>
-           <button type="button" data-sf-review="1">Review these ${nb.qs.length}</button>`;
-    return `<section id="startflow" aria-label="Where to start">
+    const nbHtml = !nb || nb.none ? '' : `<div class="sf-next" id="sfnext"><h4>Next best thing to review</h4>
+        <p><b>${esc(nb.name)}</b><br>${nb.qs.length} question${nb.qs.length === 1 ? '' : 's'} on ${nb.concepts} concept${nb.concepts === 1 ? '' : 's'} you missed or were unsure about.</p>
+        <button type="button" data-sf-review="1">Review these ${nb.qs.length}</button></div>`;
+    const exams = examList(bt), ce = curExam();
+    const chips = exams.length > 1 ? `<div class="sf-exams" role="group" aria-label="Study for">
+        <span>Study for</span>${exams.map(n => `<button type="button" data-sf-exam="${n}" aria-pressed="${ce === n}">Exam ${n}</button>`).join('')}
+        <button type="button" data-sf-exam="0" aria-pressed="${ce == null}">All exams</button></div>` : '';
+    return `<section id="startflow" class="${cur ? 'sf-sel' : ''}" aria-label="Where to start">
+      ${nbHtml}
       <h3>Where do you want to start?</h3>
+      <p class="sf-steps">Pick a professor, then a topic. Each topic has three steps: <b>learn</b> it, <b>check yourself</b>, then <b>challenge</b> yourself.</p>
+      ${chips}
       <div class="sf-profs">${primary.map(card).join('')}</div>
-      ${main.length && earlier.length ? `<div class="sf-earlier"><span>Earlier exam${earlier.length === 1 ? '' : 's'}:</span>${earlier.map(p =>
-        `<button type="button" data-sf-prof="${esc(p.name)}" aria-pressed="${SEL === p.name}">${esc(dr(p.name))} · Exam ${p.exams.join(', ')}</button>`).join('')}</div>` : ''}
-      <p class="sf-steps">Each topic has three steps: <b>Learn</b> it (read or listen to the guide), <b>check yourself</b> with practice questions, then <b>challenge</b> yourself with a timed exam paper.</p>
-      ${cur ? topicList(cur, bt, tally) : ''}
-      <div class="sf-next" id="sfnext"><h4>Next best thing to review</h4>${nbHtml}</div>
+      ${cur ? topicList(cur, bt, tally) : (primary.length ? `<p class="sf-hint">Tap a professor to see the topics.</p>` : '')}
     </section>`;
   }
 
@@ -243,9 +332,14 @@
     const tmp = document.createElement('div'); tmp.innerHTML = h;
     const el = tmp.firstElementChild;
     if (h2) h2.insertAdjacentElement('afterend', el); else root.insertBefore(el, root.firstChild);
+    // the four quick routes of the core sit right under this block as the second choice, not as a second "Start here"
+    const sh = root.querySelector('#startHere');
+    if (sh) { el.insertAdjacentElement('afterend', sh); const hd = sh.querySelector('.starthead'); if (hd) hd.textContent = 'Or go straight to'; }
   }
   document.addEventListener('click', ev => {
     const t = ev.target && ev.target.closest ? ev.target.closest('#startflow') : null; if (!t) return;
+    const eb = ev.target.closest('[data-sf-exam]');
+    if (eb) { EXN = +eb.dataset.sfExam; paint(); const k = document.querySelector(`#startflow [data-sf-exam="${eb.dataset.sfExam}"]`); if (k && k.focus) k.focus({preventScroll: true}); return; }
     const pb = ev.target.closest('[data-sf-prof]');
     if (pb) { SEL = SEL === pb.dataset.sfProf ? null : pb.dataset.sfProf; paint(); const l = document.getElementById('sflist');
       const keep = document.querySelector(`#startflow [data-sf-prof="${CSS_ESC(SEL || pb.dataset.sfProf)}"]`); if (keep && keep.focus) keep.focus({preventScroll: true});
