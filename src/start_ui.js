@@ -160,6 +160,83 @@
     return [...set].sort((a, b) => b - a);
   }
 
+  const SHORT = {
+ "Alpha 2 agonists: imidazolines and their SAR": "Alpha 2 agonists",
+ "Assess: treatment goals and medication-related problems": "Assess: goals and drug problems",
+ "Carbonic anhydrase inhibitors: sulfonamides (zolamides)": "Carbonic anhydrase inhibitors",
+ "Case 1: itchy, watery eyes and three products": "Case: itchy, watery eyes",
+ "Cholinergic agents: carbamates, esters, organophosphates": "Cholinergic agents",
+ "Choosing the product for the right condition": "Choosing the right product",
+ "Collect: risk factors and drugs that raise eye pressure": "Collect: risk factors, drugs",
+ "Conjunctivitis: telling allergic, bacterial and viral apart": "Conjunctivitis: which type",
+ "Conjunctivitis: treatment of allergic conjunctivitis": "Allergic conjunctivitis: treatment",
+ "Direct-acting cholinergics: the slide 40 SAR": "Direct-acting cholinergics",
+ "Drug-induced glaucoma: corticosteroids and anticholinergics": "Drug-induced glaucoma",
+ "Drugs and preservatives that contribute to dry eye": "Drugs that worsen dry eye",
+ "Dry eye: non-drug measures and OTC lubricants": "Dry eye: non-drug and OTC",
+ "Dry eye: prescription drugs and their counseling": "Dry eye: prescription drugs",
+ "Dry eye: risk factors, drugs and presentation": "Dry eye: risks and presentation",
+ "Dual-acting agents (self-assessment question 2)": "Dual-acting agents",
+ "Ear drops: administration, counseling and follow up": "Ear drops: use and counseling",
+ "Earwax: cerumenolytics (docusate, carbamide peroxide)": "Earwax: cerumenolytics",
+ "Eye structure, tears and the pharmacology the eye shares with the body": "Eye structure and tears",
+ "Fluoride: hydroxyapatite to fluorapatite, remineralization, fluorosis": "Fluoride and remineralization",
+ "Glaucoma pathophysiology: aqueous humor, inflow and outflow": "Glaucoma: aqueous humor flow",
+ "Initial regimen and desensitizing ingredients": "Regimen and desensitizers",
+ "Instilling ear drops in adults and children": "Instilling ear drops",
+ "Mother and 12-year-old: wetness, fullness and discharge after swimming": "Case: mother and 12-year-old",
+ "Mouth rinses: fluoride, bicarbonate, peroxide, biguanides and quaternary ammoniums, benzocaine": "Mouth rinses",
+ "Netarsudil: IOP reduction, side effects, why last": "Netarsudil",
+ "Not on Exam 3: allergic conjunctivitis, steroids, direct-acting cholinergic SAR": "Not on Exam 3",
+ "Nuclear receptor binders: retinoid mechanism": "Retinoid mechanism",
+ "Nuclear receptor binders: corticosteroids": "Corticosteroid mechanism",
+ "Nuclear receptor binders: how they act": "Nuclear receptor binders",
+ "Ophthalmic drug classes, glaucoma and how eye drugs are absorbed": "Eye drug classes and absorption",
+ "Ophthalmic products in general: preservatives, order, lenses, technique, storage": "Eye products in general",
+ "Other ear disorders: ruptured eardrum, otitis media, foreign object, trauma": "Other ear disorders",
+ "Pathogenesis and drug mechanisms; medications for treating acne": "Acne: pathogenesis and drugs",
+ "Pathophysiology and how to tell them apart": "Pathophysiology and telling apart",
+ "Patient cases: referral and the stepwise plan": "Patient cases",
+ "PollEv: major pathology of AD, psoriasis and acne": "PollEv: major pathology",
+ "PollEv: the major pathology of each disease": "PollEv: major pathology",
+ "Primary closed-angle glaucoma (not tested)": "Closed-angle glaucoma (not tested)",
+ "Prostaglandin analogs, EP2 agonist and Rho kinase inhibitor": "Prostaglandin analogs and others",
+ "Refer every first-time patient, OTC tears meanwhile": "Referral and OTC tears",
+ "Risk factors, drugs that worsen it, presentation, plan": "Risks, presentation and plan",
+ "Self-assessment questions he kept (Dr. Sikazwe)": "Self-assessment questions",
+ "The itch rule and the differentiation table": "The itch rule",
+ "The sequence of drug classes and combination products": "Drug class sequence, combinations",
+ "Tooth decay, gingivitis and pain: toothpastes, rinses, fillings, whiteners": "Tooth decay, gingivitis, pain",
+ "Towel, earplugs, bathing cap, petroleum jelly cotton, hair dryer": "Non-drug swimmer's-ear measures",
+ "Triple antibiotic, complementary products and steroids": "Triple antibiotic and steroids",
+ "Waiting between products and the order of application": "Waiting and order of products",
+ "Waits between products and the order of application": "Waiting and order of products",
+ "Washcloth, ear-cleaning tool and irrigation": "Washcloth, tool, irrigation",
+ "Water-clogged ear: collect, assess and plan": "Water-clogged ear",
+ "What to monitor, who sees the patient, how often": "Monitoring and follow-up visits",
+ "Why carbonic anhydrase inhibitors cause metabolic acidosis": "CAIs and metabolic acidosis",
+ "Medications for treating atopic dermatitis": "Atopic dermatitis drugs",
+ "Cerumen: plan, implement and follow up": "Cerumen: plan and follow up",
+ "Implement: counseling and administration": "Implement: counseling, use",
+ "Cause, triggers and the lesion stages": "Cause, triggers, lesion stages",
+ "Discard after 30 days and refrigeration": "Discard after 30 days",
+ "Dry eye: goals, referral and exclusions": "Dry eye: goals and referral",
+ "Exclusions to self-care and severe pain": "Exclusions and severe pain",
+ "Non-drug measures matched to the cause": "Non-drug measures by cause",
+ "Review of skin anatomy: layers and sebum": "Skin anatomy review",
+ "Risk factors and drugs that cause it": "Risk factors and causing drugs",
+ "Topical agents, side effects and dosing": "Topical agents and dosing",
+ "Combination products and their dosing": "Combination products, dosing",
+ "Beta antagonists: aryloxypropanolamines": "Beta antagonists",
+ "Carbonic anhydrase inhibitors: last line": "CAIs: last line",
+ "Clonidine, apraclonidine, brimonidine": "Clonidine, apraclonidine, brimonidine",
+ "72-year-old with fullness and itching": "Case: 72-year-old",
+ "Follow up: monitoring efficacy and safety": "Follow up: efficacy and safety",
+ "Cold sores (herpes simplex labialis)": "Cold sores",
+ "Canker sores (recurrent aphthous stomatitis)": "Canker sores",
+ "Tooth hypersensitivity versus toothache": "Sensitivity versus toothache"
+};
+  const shortName = n => SHORT[n] || n;
   function topicList(pf, bt, tally) {
     const act = curExam(), ref = act == null ? activeNo() : act;      // with all exams listed, the active exam's topics still come first
     const rank = t => (t.optional ? 2 : examNo(t) === ref ? 0 : 1);
@@ -176,7 +253,7 @@
       const en = examNo(t);
       const tag = t.optional ? 'Optional' : (en != null ? 'Exam ' + en : '');
       return `<button type="button" class="sf-topic${isAct ? ' sf-act' : ''}" data-sf-topic="${esc(t.id)}">
-        <span class="sf-tn">${esc(t.name)}</span>${tag ? `<span class="sf-tag">${esc(tag)}</span>` : '<span></span>'}
+        <span class="sf-tn" title="${esc(t.name)}">${esc(shortName(t.name))}</span>${tag ? `<span class="sf-tag">${esc(tag)}</span>` : '<span></span>'}
         <span class="sf-tl">${barHtml(tl)}<span>${bt[t.id].length} questions${tl.done ? ` · ${tl.done} answered, ${tl.r} right, ${tl.w} wrong` : ' · not started'}</span></span></button>`;
     };
     return `<div class="sf-list" id="sflist"><h4>${esc(dr(pf.name))}: pick a topic</h4>${groups.map(g =>

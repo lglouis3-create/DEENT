@@ -8,6 +8,11 @@ characters.
 
 Every update adds its bullets here in the same commit that makes the change.
 
+## 2026-11-27
+
+- Topic names on the Start tab are shorter, so each fits on one or two lines.
+- Fourteen Sikazwe brand-name questions are removed; he does not ask that way.
+
 ## 2026-11-26 (a clearer Start tab, Learn and Exam modes, hundreds of recall questions)
 - Start tab: choose Exam 3, Exam 2, Exam 1 or all exams, then a professor, then a topic.
 - Six tabs in the bar; Atlas, Diagrams, Reference, Tell apart, Diseases and the rest are under More.
